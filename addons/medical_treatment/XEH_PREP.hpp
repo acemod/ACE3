@@ -36,6 +36,10 @@ PREP(treatmentTourniquet);
 PREP(treatmentTourniquetLocal);
 PREP(treatmentTourniquetRemove);
 
+PREP(splint);
+PREP(splintCondition);
+PREP(splintLocal);
+
 // misc
 PREP(addToLog);
 PREP(addToTriageCard);
@@ -43,6 +47,7 @@ PREP(bodyCleanupLoop);
 PREP(calculateBlood);
 PREP(canAccessMedicalEquipment);
 PREP(canBandage);
+PREP(canStitch);
 PREP(findMostEffectiveWound);
 PREP(getBandageTime);
 PREP(getTriageStatus);

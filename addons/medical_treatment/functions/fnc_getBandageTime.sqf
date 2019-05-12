@@ -22,11 +22,13 @@ if (_partIndex < 0) exitWith { 0 };
 
 private _targetWound = [_patient, _bandage, _partIndex] call FUNC(findMostEffectiveWound);
 _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
+TRACE_3("findMostEffectiveWound",_wound,_woundIndex,_effectiveness);
 
 // Everything is patched up on this body part already
 if (_wound isEqualTo EMPTY_WOUND) exitWith { 0 };
 
-_wound params ["", "", "", "_amountOf", "_bloodloss", "_damage", "_category"];
+_wound params ["_classID", "", "_amountOf", "_bloodloss", "_damage"];
+private _category = (_classID % 10);
 
 // Base bandage time is based on wound size and remaining percentage
 private _bandageTime = ([

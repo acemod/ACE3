@@ -26,7 +26,7 @@ private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), [
 private _stitchedWounds = _target getVariable [QEGVAR(medical,stitchedWounds), []];
 
 //In case two people stitch up one patient and the last wound has already been closed we can stop already
-if (count _bandagedWounds == 0) exitWith { false };
+if (_bandagedWounds isEqualTo []) exitWith { false };
 
 //Has enough time elapsed that we can close another wound?
 if (_totalTime - _elapsedTime <= (count _bandagedWounds - 1) * 5) then {
@@ -34,6 +34,16 @@ if (_totalTime - _elapsedTime <= (count _bandagedWounds - 1) * 5) then {
     _stitchedWounds pushBack _treatedWound;
     _target setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
     _target setVariable [QEGVAR(medical,stitchedWounds), _stitchedWounds, true];
+    TRACE_3("stitched",_treatedWound,count _bandagedWounds,count _stitchedWounds);
+
+    // Check if we fixed limping from this treatment
+    if ((EGVAR(medical,limping) == 2) && {_target getVariable [QEGVAR(medical,isLimping), false]}) then {
+        _treatedWound params ["", "_partN"];
+        if (_partN > 3) then { // only for LEG wounds
+            TRACE_3("updating damage effects",_target,_partN,local _target);
+            [QEGVAR(medical_engine,updateDamageEffects), [_target], _target] call CBA_fnc_targetEvent;
+        };
+    };
 };
 
 true

@@ -23,7 +23,7 @@
 // #define DEBUG_TESTRESULTS
 
 params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_bodyPart", "", [""]], ["_typeOfDamage", "", [""]], ["_instigator", objNull, [objNull]]];
-TRACE_5("params",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator);
+TRACE_5("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator);
 
 private _bodyPartIndex = ALL_BODY_PARTS find (toLower _bodyPart);
 if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_1("addDamageToUnit - badUnit %1", _this); false};
@@ -34,8 +34,8 @@ if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1", 
 _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;
 
 if (!isNull _instigator) then {
-    _unit setVariable [QEGVAR(medical_engine,lastShooter), _instigator];
-    _unit setVariable [QEGVAR(medical_engine,lastInstigator), _instigator];
+    _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
+    _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 };
 
 #ifdef DEBUG_TESTRESULTS

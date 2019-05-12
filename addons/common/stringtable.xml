@@ -1000,6 +1000,7 @@
         </Key>
 		<Key ID="STR_ACE_Common_Always">
             <English>Always</English>
+            <Japanese>常に</Japanese>
         </Key>
 		<Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1075,8 +1076,13 @@
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Common_Never">
+        <Key ID="STR_ACE_Common_Confirm">
+            <English>Confirm</English>
+            <Japanese>確認</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
+            <Japanese>行わない</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>

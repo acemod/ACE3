@@ -14,5 +14,5 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_TREATMENT
 #endif
 
-#include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"

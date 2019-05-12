@@ -45,8 +45,8 @@ if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {_oldDa
 // This hitpoint is set to trigger last, evaluate all the stored damage values
 // to determine where wounds are applied
 if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
-    _unit setVariable [QGVAR(lastShooter), _shooter];
-    _unit setVariable [QGVAR(lastInstigator), _instigator];
+    _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
+    _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
     private _damageStructural = _unit getVariable [HIT_STRUCTURAL, 0];
 

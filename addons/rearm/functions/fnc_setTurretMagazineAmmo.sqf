@@ -30,7 +30,7 @@ private _magLoadedInWeapon = false;
 private _loadedWeapon = "";
 {
     private _currentlyLoadedMag = (weaponState [_vehicle, _turretPath, _x]) select 3;
-    
+
     if (_currentlyLoadedMag isEqualTo _magazineClass) exitWith {
         _magLoadedInWeapon = true;
         _loadedWeapon = _x;
@@ -47,37 +47,36 @@ if (!_magLoadedInWeapon) then {
     {
         _vehicle addMagazineTurret [_magazineClass, _turretPath, _x];
     } forEach _ammoCounts;
-    
 } else {
     /* Special hack case:
      * The magazine class was loaded into a weapon. If the weapon has more than one type of
      * magazine (e.g. AP and HEAT in a cannon), then removing all magazines would trigger the
      * weapon to load a different magazine type. For example, removing the HEAT shells while HEAT
      * is loaded makes the cannon switch to AP.
-     * 
+     *
      * To prevent that, we must remove all magazines that would fit into the weapon and then add
      * them back with the magazine-to-be-loaded being the first. */
 
-    private _allowedMagClassesInWeapon = getArray (configFile >> "CfgWeapons" >> _loadedWeapon >> "magazines");
-    
+    private _allowedMagClassesInWeapon = [_loadedWeapon] call CBA_fnc_compatibleMagazines;
+
     /* Current ammo counts of all allowed magazine classes in weapon.
      * Example: [["8Rnd_82mm_Mo_shells", [8, 8, 2]], ["8Rnd_82mm_Mo_Flare_white", [7]]] */
     private _ammoCountsByMagClass = _allowedMagClassesInWeapon apply {[_x, ([_vehicle, _turretPath, _x] call FUNC(getTurretMagazineAmmo))]};
-    
+
     // Removing all magazines that fit into the weapon.
     {
         _vehicle removeMagazinesTurret [_x, _turretPath];
     } forEach _allowedMagClassesInWeapon;
-    
+
     // Adding the mags of the given class first with updated ammo counts.
     {
         _vehicle addMagazineTurret [_magazineClass, _turretPath, _x];
     } forEach _ammoCounts;
-    
+
     // Adding back all other magazines with their original ammo counts.
     {
         _x params ["_loopMagClass", "_loopAmmoCounts"];
-        
+
         if (!(_loopMagClass isEqualTo _magazineClass)) then {
             {
                 _vehicle addMagazineTurret [_loopMagClass, _turretPath, _x];

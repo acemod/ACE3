@@ -6,7 +6,7 @@
             <French>Cacher</French>
             <German>Verstecken</German>
             <Polish>Ukryj</Polish>
-            <Japanese>非表示</Japanese>
+            <Japanese>隠す</Japanese>
             <Italian>Nascondere</Italian>
             <Korean>숨김</Korean>
             <Chinese>隱藏</Chinese>
@@ -39,7 +39,7 @@
             <French>Exporter</French>
             <German>Exportieren</German>
             <Polish>Eksportuj</Polish>
-            <Japanese>出力</Japanese>
+            <Japanese>エクスポート</Japanese>
             <Italian>Esporta</Italian>
             <Korean>내보내기</Korean>
             <Chinese>匯出</Chinese>
@@ -50,7 +50,7 @@
             <French>Importer</French>
             <German>Importieren</German>
             <Polish>Importuj</Polish>
-            <Japanese>取込</Japanese>
+            <Japanese>インポート</Japanese>
             <Italian>Importa</Italian>
             <Korean>가져오기</Korean>
             <Chinese>匯入</Chinese>
@@ -72,7 +72,7 @@
             <French>Aucun objet virtuel disponible</French>
             <German>Kein virtuelles Objekt verfügbar</German>
             <Polish>Brak dostępnych przedmiotów wirtualnych</Polish>
-            <Japanese>利用可能なバーチャル アイテムは無し</Japanese>
+            <Japanese>利用可能なバーチャル アイテムはありません</Japanese>
             <Italian>Nessun oggetto virtuale disponibile</Italian>
             <Korean>가상장비 사용 불가</Korean>
             <Chinese>沒有可用的虛擬物品</Chinese>
@@ -308,7 +308,7 @@
             <French>Liste d'équipements de base exportée dans le presse papier</French>
             <German>Standard-Ausrüstungen-Liste in die Zwischenablage exportiert</German>
             <Polish>Lista domyślnych zestawów została eksportowana do schowka</Polish>
-            <Japanese>標準の装備一欄はクリップボードへ出力されました</Japanese>
+            <Japanese>標準の装備一欄はクリップボードへエクスポートされました</Japanese>
             <Italian>La lista degli equipaggiamenti standard è stata esportata negli appunti</Italian>
             <Korean>클립보드에 기본 로드아웃 목록 내보내기</Korean>
             <Chinese>預設的裝備清單已匯出到剪貼簿中</Chinese>
@@ -341,7 +341,7 @@
             <French>Liste d'équipements de base importée depuis le presse papier</French>
             <German>Standard-Ausrüstungen-Liste aus der Zwischenablage importiert</German>
             <Polish>Lista domyślnych zestawów została importowana ze schowka</Polish>
-            <Japanese>標準の装備一欄はクリップボードから取込されました</Japanese>
+            <Japanese>標準の装備一欄はクリップボードからインポートされました</Japanese>
             <Italian>La lista degli equipaggiamenti standard è stata importata dagli appunti</Italian>
             <Korean>클립보드에서 기본 로드아웃 가져오기</Korean>
             <Chinese>預設的裝備清單已從剪貼簿中匯入</Chinese>
@@ -352,7 +352,7 @@
             <French>Équipement importé depuis le presse papier</French>
             <German>Ausrüstung aus der Zwischenablage importiert</German>
             <Polish>Zestaw został importowany ze schowka</Polish>
-            <Japanese>装備はクリップボードから取込されました</Japanese>
+            <Japanese>装備はクリップボードからインポートされました</Japanese>
             <Italian>Equipaggiamento importato dagli appunti</Italian>
             <Korean>클립보드에서 로드아웃을 가져왔습니다.</Korean>
             <Chinese>裝備已從剪貼簿中匯入</Chinese>
@@ -385,7 +385,7 @@
             <French>Le champ nom est vide !</French>
             <German>Das Feld "Name" ist leer!</German>
             <Polish>Pole nazwy jest puste!</Polish>
-            <Japanese>名前欄が空白です!</Japanese>
+            <Japanese>名前が空白です!</Japanese>
             <Italian>Il campo del nome è vuoto!</Italian>
             <Korean>이름칸이 비었습니다!</Korean>
             <Chinese>名稱欄位為空!</Chinese>
@@ -451,7 +451,7 @@
             <French>fut renommé en</French>
             <German>wurde umbenannt in</German>
             <Polish>zmienił nazwę na</Polish>
-            <Japanese>次の名前に改名されました</Japanese>
+            <Japanese>次の名前に変更されました</Japanese>
             <Italian>E' stato rinominato in</Italian>
             <Korean>이름이 다음과 같이 변경됨:</Korean>
             <Chinese>已被改名為</Chinese>
@@ -637,7 +637,7 @@
             <English>No loadouts to import.</English>
             <French>Aucun loadout à importer.</French>
             <German>Keine Ausrüstungen zum Importieren</German>
-            <Japanese>取り込みする装備がありません。</Japanese>
+            <Japanese>インポートする装備がありません。</Japanese>
             <Korean>가져올 로드 아웃이 없습니다.</Korean>
             <Chinese>沒有裝備被匯入</Chinese>
             <Chinesesimp>没有装备被汇入。</Chinesesimp>
@@ -698,7 +698,7 @@
             <French>Exporte l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯出當前/預設的裝備</Chinese>
             <Chinesesimp>汇出当前/预设的装备</Chinesesimp>
-            <Japanese>現在 / 標準装備を出力</Japanese>
+            <Japanese>現在/標準装備をエクスポートします</Japanese>
             <Italian>Esporta l'equipaggiamento attuale oppure la lista degli equipaggiamenti di base</Italian>
             <Polish>Eksportuj obecne / domyślne zestawy wyposażenia </Polish>
         </Key>
@@ -707,7 +707,7 @@
             <French>Importer l'équipement actuel ou la liste d'équipements de base</French>
             <Chinese>匯入當前/預設的裝備</Chinese>
             <Chinesesimp>汇入当前/预设的装备</Chinesesimp>
-            <Japanese>現在 / 標準装備を取込</Japanese>
+            <Japanese>現在/標準装備をインポートします</Japanese>
             <Italian>Importa l'equipaggiamento attuale oppure la lista degli equipaggiamenti di base</Italian>
             <Polish>Importuj obecne / domyślne zestawy wyposażenia</Polish>
         </Key>
@@ -739,7 +739,7 @@
         <Key ID="STR_ACE_Arsenal_statVisionMode">
             <English>Nightvision Support</English>
             <German>Nachtsicht Unterstützung</German>
-            <Japanese>暗視装置に対応</Japanese>
+            <Japanese>暗視装置への対応有無</Japanese>
             <Polish>Wsparcie noktowizyjne</Polish>
             <Italian>Supporto visore notturno</Italian>
         </Key>
@@ -801,7 +801,7 @@
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
             <French>Nom de classe exporté dans le presse papier</French>
-            <Japanese>クリップボードへクラスネームを出力</Japanese>
+            <Japanese>クリップボードへクラスネームをエクスポート</Japanese>
             <Chinesesimp>将种类复制到剪贴板</Chinesesimp>
             <Chinese>輸出 class name 到剪貼簿上</Chinese>
             <Italian>Copiato il nome della classe negli appunti</Italian>
@@ -863,26 +863,29 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
-            <Japanese>スクリプト用に現在のアイテム リストをアレイで出力します</Japanese>
+            <Japanese>スクリプト用に現在のアイテム リストをアレイでエクスポートします</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
             <Polish>Eksportuj obecną listę przedmiotów jako tablicę do wykorzystania w skryptach</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeImport_Tooltip">
             <English>Import items list array from clipboard (should be the same format as export)</English>
             <Polish>Zaimportuj listę przedmiotów ze schowka (lista musi być w tym samym formacie jak przy exporcie)</Polish>
+            <Japanese>クリップボードからアイテムリストをアレイでインポートします (エクスポートと同じフォーマットである必要があります)</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
             <English>Add Compatible Items</English>
             <Polish>Dodaj kompatybilne przedmioty</Polish>
+            <Japanese>対応アイテムを追加</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_Tooltip">
             <English>Will automatically add compatible attachments or magazines (based on selected category) for all weapons in current items list</English>
             <Polish>Automatycznie doda kompatybilne dodatki oraz magazynki (odpowiednio do każdej kategorii) dla wszystkich broni na liście</Polish>
+            <Japanese>現在のアイテム リスト内にある全武器に対応するアタッチメントと弾倉 (選択したカテゴリに基づき) を自動的に追加します</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statTTL">
             <English>Time to live</English>
             <French>Durée de vie</French>
-            <Japanese>生存時間</Japanese>
+            <Japanese>有効時間</Japanese>
             <Polish>Czas by żyć</Polish>
             <Italian>Scadenza (TTL)</Italian>
         </Key>

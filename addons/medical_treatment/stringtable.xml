@@ -4,24 +4,31 @@
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_treatment_subCategory">
                 <English>Treatment</English>
+                <Japanese>治療</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedBandages_DisplayName">
                 <English>Advanced Bandages</English>
+                <Japanese>アドバンスド包帯</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedBandages_Description">
                 <English>Enable advanced bandages (required for wound reopening)</English>
+                <Japanese>アドバンスド包帯を有効化 (アドバンスド負傷が必要です)</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_DisplayName">
                 <English>Advanced Diagnose</English>
+                <Japanese>アドバンスド診断</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_Description">
                 <English>Enable advanced diagnose</English>
+                <Japanese>アドバンスド診断を有効化</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedMedication_DisplayName">
                 <English>Advanced Medication</English>
+                <Japanese>アドバンスド医薬品</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedMedication_Description">
                 <English>Enable advanced medication</English>
+                <Japanese>アドバンスド医薬品を有効化</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_increaseTrainingInLocations_DisplayName">
                 <English>Locations boost training</English>
@@ -33,7 +40,7 @@
                 <Portuguese>Localização melhora treinamento</Portuguese>
                 <French>Le lieu améliore l'efficacité</French>
                 <Russian>Места ускоренного обучения</Russian>
-                <Japanese>衛生兵としての能力を与える場所</Japanese>
+                <Japanese>衛生兵能力を与える場所</Japanese>
                 <Korean>교육 증가 지역</Korean>
                 <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
                 <Chinese>受所在位置影響提升醫療能力</Chinese>
@@ -48,24 +55,28 @@
                 <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
                 <French>Améliore l'efficacité des soins dans les véhicules ou structures de soins [non formés deviennent médecins, médecins deviennent docteurs]</French>
                 <Russian>Улучшает медицинскую подготовку в мед. транспорте и около мед. строений [нетренированные становятся медиками, медики становятся врачами]</Russian>
-                <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなる (未訓練は衛生兵に、衛生兵は医師に)</Japanese>
+                <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなります (未訓練は衛生兵に、衛生兵は医師に)</Japanese>
                 <Korean>의무병의 수준이 주변의 차량이나 의료시설에 따라 증가합니다. [비교육자가 의무병이되고, 의무병이 의사가 됩니다]</Korean>
                 <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</Chinesesimp>
                 <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</Chinese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_allowSelfIV_DisplayName">
                 <English>Self IV Transfusion</English>
+                <Japanese>自己 IV 輸血</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_allowSelfIV_Description">
                 <English>Allows using IV Transfusions on yourself</English>
+                <Japanese>自ら IV 輸血することを許可します</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
                 <English>CPR creates pulse</English>
                 <German>HLW erzeugt einen Puls</German>
+                <Japanese>心肺蘇生による脈</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
                 <English>CPR will create a pulse for the patient while performing</English>
                 <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
+                <Japanese>心肺蘇生を行っている間は患者に脈を作ります</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_woundReopening_DisplayName">
                 <English>Enable Advanced wounds</English>
@@ -78,7 +89,7 @@
                 <French>Activer les plaies compliquées</French>
                 <Hungarian>Komplex sebek engedélyezése</Hungarian>
                 <Italian>Abilita ferite Avanzate</Italian>
-                <Japanese>アドバンスドな傷を有効化</Japanese>
+                <Japanese>アドバンスド負傷を有効化</Japanese>
                 <Korean>고급 부상 활성화</Korean>
                 <Chinesesimp>启用进阶伤口系统</Chinesesimp>
                 <Chinese>啟用進階傷口系統</Chinese>
@@ -118,6 +129,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_Description">
                 <English>Who can use Epinephrine?</English>
+                <Japanese>誰がアドレナリンを使えるようにしますか?</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_DisplayName">
                 <English>Allow PAK</English>
@@ -273,19 +285,22 @@
                 <Czech>Oblast k použití adrenalinu</Czech>
                 <Portuguese>Localizações de Epinefrina</Portuguese>
                 <Russian>Место использования адреналина</Russian>
-                <Japanese>アドレナリンをつかう場所</Japanese>
+                <Japanese>アドレナリンを使える場所</Japanese>
                 <Korean>에피네프린 사용 장소</Korean>
                 <Chinesesimp>肾上腺素使用地点</Chinesesimp>
                 <Chinese>腎上腺素使用地點</Chinese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_Epi_Description">
                 <English>Where can the Epinephrine be used?</English>
+                <Japanese>どこでアドレナリンを使用できる場所にしますか?</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_PAKTime">
                 <English>How long should PAK take to apply?</English>
+                <Japanese>応急処置キットの使用時間</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
                 <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
+                <Japanese>応急処置キットの使用時間を決定しますか? 0 で標準になります (ダメージに比例)</Japanese>
             </Key>
         </Container>
         <Container name="SettingsLitter">
@@ -313,7 +328,7 @@
                 <French>Activer la création de détrimus au début des traitements</French>
                 <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
                 <Italian>Abilita la creazione della barella dopo trattamento</Italian>
-                <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
+                <Japanese>治療を始めると、医療廃棄物の作成を有効化します</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_litterSimulationDetail">
                 <English>Litter Simulation Detail</English>
@@ -616,7 +631,7 @@
             <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale viene applicata su di essa una volta fermata l'emorragia.</Italian>
             <Portuguese>Uma curativo, material específico para cobrir um ferimento que é aplicado assim que o sangramento é estancando.</Portuguese>
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
-            <Japanese>緊急圧迫包帯は、傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
+            <Japanese>傷口を血液凝固剤で塞ぐようにできていて、使うと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
             <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止</Chinesesimp>
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
@@ -648,7 +663,7 @@
             <Italian>Usato su ferite medie o larghe per fermare emorragie.</Italian>
             <Portuguese>Usado para o preenchimento de cavidades geradas por ferimentos médios e grandes e estancar o sangramento.</Portuguese>
             <Czech>Používá se k zastavení středních až silnějších krvácení</Czech>
-            <Japanese>弾性包帯は粘着フィルム状で、普通から大きめなケガにつかい止血します。</Japanese>
+            <Japanese>粘着フィルム状で、普通から大きめなケガに使い止血します。</Japanese>
             <Korean>중형 또는 대형 상처를 채우고 출혈을 막기위해 쓰입니다</Korean>
             <Chinesesimp>用于包扎中到大型伤口, 并防止出血</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血</Chinese>
@@ -664,7 +679,7 @@
             <German>Ein Verband, um die Wunde abzudecken und die Wundheilung zu fördern. Wunden abdecken ist eine Option bei größeren Polytraumen</German>
             <Portuguese>Uma bandagem usada para preencher o ferimento para estancar o sangramento e facilitar a cicatrização. Preenchimento de feridas é uma opção em ferimentos de politrauma grandes.</Portuguese>
             <Czech>Tlakový obvaz se skládá se ze sterilní krycí vrstvy, na kterou je přiložena silná vrstva savého materiálu stlačující cévu v ráně a která je přitlačována k ráně a připevněna obinadlem. Slouží k zastavení silnějších krvácení.</Czech>
-            <Japanese>包帯をつかうと出血の原因を取りのぞき、それを促進させます。また大きめな多発性外傷にたいしても使えます。</Japanese>
+            <Japanese>包帯を使うと出血元を塞ぎ、怪我の治癒を促進させます。また大きめ多発性外傷に対しても使えます。</Japanese>
             <Korean>출혈을 막고 상처를 치유하기 위한 붕대. 다발성외상의 경우 상처를 채우는것도 한 가지 방법입니다.</Korean>
             <Chinesesimp>用于包扎中到大型伤口, 并防止出血, 为在大型多处性伤口的选项之一!</Chinesesimp>
             <Chinese>用於包紮中到大型傷口, 並防止出血, 為在大型多處性傷口的選項之一!</Chinese>
@@ -744,7 +759,7 @@
             <Italian>Rallenta la perdita di sangue in caso di sanguinamento</Italian>
             <Portuguese>Reduz a velocidade da perda de sangue</Portuguese>
             <Czech>Zpomaluje ztráty krve při krvácení</Czech>
-            <Japanese>出血しているときに、流れ出る量をへらします。</Japanese>
+            <Japanese>出血時に失血量を減らします。</Japanese>
             <Korean>출혈 시 혈액손실을 늦춰줍니다</Korean>
             <Chinesesimp>减缓失血的速度</Chinesesimp>
             <Chinese>減緩失血的速度</Chinese>
@@ -760,10 +775,16 @@
             <Italian>Un laccio emostatico usato per comprimere le vene e arterie per bloccare o rallentare la circolazione del sangue e quindi rallentare dissanguamenti.</Italian>
             <Portuguese>A aparelho que comprime as artérias e veias para diminuir a perda de sangue.</Portuguese>
             <Czech>Zařízení používané ke stlačení venózního a arteriálního oběhu. V důsledku dochází ke zpomalení toku krve a tedy i snížení ztrát krve.</Czech>
-            <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れをおそくし、失血を防ぎます。</Japanese>
+            <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れを遅し失血を防ぎます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
             <Chinesesimp>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的</Chinesesimp>
             <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_splint_Display">
+            <English>Splint</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_splint_Desc_Short">
+            <English>Stabilizes a fractured limb</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -792,7 +813,7 @@
             <Italian>Usato per combattere il dolore.</Italian>
             <Portuguese>Usado para combater dores moderadas e severas</Portuguese>
             <Czech>Slouží k tlumení středně těžkých a těžkých bolestí</Czech>
-            <Japanese>戦闘が収まったとき、痛みにたいしてつかいます。</Japanese>
+            <Japanese>戦闘が収まった時に痛みに対して使います。</Japanese>
             <Korean>심한 통증을 완화하는데 쓰입니다</Korean>
             <Chinesesimp>减低中度至重度的疼痛感</Chinesesimp>
             <Chinese>減低中度至重度的疼痛感</Chinese>
@@ -808,7 +829,7 @@
             <Italian>Un analgesico usato per combattere il dolore.</Italian>
             <Portuguese>Um analgésico usado para combater dores moderadas e fortes.</Portuguese>
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
-            <Japanese>戦闘が収まったとき、モルヒネを痛みにたいしてつかいます。</Japanese>
+            <Japanese>戦闘が収まった時にモルヒネを痛みに対して使います。</Japanese>
             <Korean>심한 통증을 완화하기 위해 쓰이는 진통제입니다.</Korean>
             <Chinesesimp>止痛药的一种, 用于减低中度至重度的疼痛感</Chinesesimp>
             <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感</Chinese>
@@ -838,7 +859,7 @@
             <Czech>Slouží jako protiváha Adrenalinu</Czech>
             <Portuguese>Usado para combater os efeitos da Epinefrina</Portuguese>
             <Russian>Используется для купирования эффектов адреналина</Russian>
-            <Japanese>アドレナリンの反対の効果としてつかいます。</Japanese>
+            <Japanese>アドレナリンの反対の効果として使います。</Japanese>
             <Korean>에피네프린 대응책으로 쓰입니다</Korean>
             <Chinesesimp>用来对付肾上腺素的影响</Chinesesimp>
             <Chinese>用來對付腎上腺素的影響</Chinese>
@@ -853,7 +874,7 @@
             <Czech>Droga používaná k tlumení efektu Adrenalinu</Czech>
             <Portuguese>Uma droga usada para combater os efeitos da Epinefrina</Portuguese>
             <Russian>Препарат используется для купирования эффектов адреналина</Russian>
-            <Japanese>つかうと、アドレナリンと反対の効果がでます。</Japanese>
+            <Japanese>使うとアドレナリンと反対の効果が出ます。</Japanese>
             <Korean>에피네프린에 대응용으로 쓰이는 약품</Korean>
             <Chinesesimp>一种药物用于减低肾上腺素的效果</Chinesesimp>
             <Chinese>一種藥物用於減低腎上腺素的效果</Chinese>
@@ -885,7 +906,7 @@
             <Italian>Usato in situazioni con gas nervino.</Italian>
             <Portuguese>Usado em casos de ataque QBRN</Portuguese>
             <Czech>Používá se v přítomnosti nervových plynů</Czech>
-            <Japanese>核・生物・化学兵器がつかわれている条件下にてつかいます。</Japanese>
+            <Japanese>核・生物・化学兵器による汚染環境下にて使います。</Japanese>
             <Korean>핵,생물,화학 상황에 쓰입니다</Korean>
             <Chinesesimp>使用于核生化污染的情况</Chinesesimp>
             <Chinese>使用於核生化汙染的情況</Chinese>
@@ -901,7 +922,7 @@
             <Italian>E' un farmaco usato in ambito militare in scenari con presenza di gas nervino.</Italian>
             <Portuguese>Uma droga usada por militares em casos de ataque QBRN.</Portuguese>
             <Czech>Atropin slouží jako protijed na otravu organofosfátovými insekticidy (diazinon) a nervovými plyny.</Czech>
-            <Japanese>核・生物・化学兵器がつかわれている条件下にてつかいます。</Japanese>
+            <Japanese>核・生物・化学兵器による汚染環境下にて使います。</Japanese>
             <Korean>핵,생물,화학 상황에 쓰이는 군용 약품</Korean>
             <Chinesesimp>军用神经解毒针, 用来应付核生化污染的情况.</Chinesesimp>
             <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
@@ -949,7 +970,7 @@
             <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
             <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
-            <Japanese>薬は気管支を拡張するよう交感神経を拡張させ、心拍数を増加させます。それにアレルギー反応を収める効果もあります（アナフィラキシー ショック）。得られる効果は少ないですが、心停止している場合などにつかわれます。</Japanese>
+            <Japanese>気管支を拡張するよう交感神経を拡張させ、心拍数を増加させます。それにアレルギー反応を収める効果もあります (アナフィラキシー ショック)。得られる効果は少ないですが、心停止している場合などにも使われます。</Japanese>
             <Korean>기관지를 확장시키는 교감 신경 반응을 이끌어내는 약물로써, 심박을 높이고 알러지 효과에 대응합니다(아나필락시스). 심폐가 정지하는 경우 호전이 되지않을때 사용합니다.</Korean>
             <Chinesesimp>俗称强心针, 为一种支气管扩张药物, 会增加心跳速率并减缓过敏反应(过敏性休克), 在心跳骤停时有恢复心跳的效果!</Chinesesimp>
             <Chinese>俗稱強心針, 為一種支氣管擴張藥物, 會增加心跳速率並減緩過敏反應(過敏性休克), 在心跳驟停時有恢復心跳的效果!</Chinese>
@@ -1237,7 +1258,7 @@
             <Italian>Bendaggio emostatico con coagulante che permette di arrestare perdite di sangue</Italian>
             <Portuguese>Bandagem Hemostática com coagulante que controla hemorragia médias e grandes com risco de vida.</Portuguese>
             <Czech>Hemostatický obvaz určený k zástavě krvácení</Czech>
-            <Japanese>血液凝固剤をふくむ包帯により、止血できます。</Japanese>
+            <Japanese>血液凝固剤を含む包帯により、止血できます。</Japanese>
             <Korean>지혈시 사용하는 붕대로 혈액 응고제를 포함하고있습니다.</Korean>
             <Chinesesimp>包含止血粉成分的止血绷带, 可用于止血</Chinesesimp>
             <Chinese>包含止血粉成分的止血繃帶, 可用於止血</Chinese>
@@ -1269,7 +1290,7 @@
             <Italian>Include vario materiale medico per trattamenti avanzati.</Italian>
             <Portuguese>Inclui vários tratamentos materiais para custura e tratamento avançado</Portuguese>
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných</Czech>
-            <Japanese>縫合や高度な処置に必要とされる、さまざまな治療器具が含まれています。</Japanese>
+            <Japanese>縫合や高度な処置に必要とされる、様々な治療器具が含まれています。</Japanese>
             <Korean>봉합및 고급 조치에 필요한 다양한 치료 도구가 있습니다.</Korean>
             <Chinesesimp>包含各种医疗套件, 以及进阶伤口系统需要的缝合用品</Chinesesimp>
             <Chinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品</Chinese>
@@ -1285,7 +1306,7 @@
             <Portuguese>Kit de primeiros socorros para sutura ou tratamentos avançados</Portuguese>
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných v poli</Czech>
             <Italian>Pronto soccorso personale da campo per mettersi i punti o per trattamenti avanzati.</Italian>
-            <Japanese>戦場で縫合や高度な処置に必要とされる、さまざまな治療器具が含まれています。</Japanese>
+            <Japanese>戦場で縫合や高度な処置に必要とされる、様々な治療器具が含まれています。</Japanese>
             <Korean>야전에서 봉합및 고급 조치를 위한 개인응급키트</Korean>
             <Chinesesimp>个人急救包可用于战地缝合手术或进阶伤口系统使用</Chinesesimp>
             <Chinese>個人急救包可用於戰地縫合手術或進階傷口系統使用</Chinese>
@@ -1301,7 +1322,7 @@
             <Portuguese>Usar o kit de primeiros socorros</Portuguese>
             <Czech>Použít osobní lékárničku (PAK)</Czech>
             <Italian>Usa il pronto soccorso personale</Italian>
-            <Japanese>応急処置キットをつかう</Japanese>
+            <Japanese>応急処置キットを使う</Japanese>
             <Korean>개인 응급 키트사용하기</Korean>
             <Chinesesimp>使用个人急救包</Chinesesimp>
             <Chinese>使用個人急救包</Chinese>
@@ -1333,7 +1354,7 @@
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
-            <Japanese>縫合キットは戦場で高度な処置をするためにつかわれます。</Japanese>
+            <Japanese>縫合キットは戦場で高度な処置をする為に使われます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
             <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统)</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統)</Chinese>
@@ -1349,7 +1370,7 @@
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo.</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
-            <Japanese>縫合キットは戦場で高度な処置をするためにつかわれます。</Japanese>
+            <Japanese>縫合キットは戦場で高度な処置をする為に使われます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
             <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统)</Chinesesimp>
             <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統)</Chinese>
@@ -1365,7 +1386,7 @@
             <Hungarian>Sebészeti készlet használata</Hungarian>
             <Czech>Použít chirurgickou sadu</Czech>
             <Portuguese>Usar kit cirúrgico</Portuguese>
-            <Japanese>縫合キットをつかう</Japanese>
+            <Japanese>縫合キットを使う</Japanese>
             <Korean>봉합키트 사용하기</Korean>
             <Chinesesimp>使用手术包</Chinesesimp>
             <Chinese>使用手術包</Chinese>
@@ -1397,7 +1418,7 @@
             <Italian>Una sacca nera per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
+            <Japanese>死体袋は死体を入れる為に使います。</Japanese>
             <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
             <Chinesesimp>用来装尸体用</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
@@ -1413,7 +1434,7 @@
             <Italian>Una sacca nera per trasportare cadaveri.</Italian>
             <Portuguese>Um saco para corpos mortos.</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
-            <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
+            <Japanese>死体袋は死体を入れる為に使います。</Japanese>
             <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
             <Chinesesimp>用来装尸体用</Chinesesimp>
             <Chinese>用來裝屍體用</Chinese>
@@ -1429,7 +1450,7 @@
             <Hungarian>Ezen a testrészen nincs sérülés...</Hungarian>
             <Czech>Žádné zranění na této části těla...</Czech>
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
-            <Japanese>この身体は怪我をしていません・・・</Japanese>
+            <Japanese>この部分には怪我をしていません・・・</Japanese>
             <Korean>이 부위에는 부상이 없습니다...</Korean>
             <Chinesesimp>此身体部位没有受伤</Chinesesimp>
             <Chinese>此身體部位沒有受傷</Chinese>
@@ -1891,7 +1912,7 @@
             <Hungarian>Pulzus ellenőrzése</Hungarian>
             <Italian>Controlla il polso</Italian>
             <Portuguese>Checar Pulso</Portuguese>
-            <Japanese>心拍数をはかる</Japanese>
+            <Japanese>心拍数を計る</Japanese>
             <Korean>맥박 확인</Korean>
             <Chinesesimp>检查脉搏</Chinesesimp>
             <Chinese>檢查脈搏</Chinese>
@@ -1907,7 +1928,7 @@
             <Hungarian>Vérnyomás megmérése</Hungarian>
             <Italian>Controlla pressionsa sanguigna</Italian>
             <Portuguese>Chegar Pressão Sanguínea</Portuguese>
-            <Japanese>血圧をはかる</Japanese>
+            <Japanese>血圧を計る</Japanese>
             <Korean>혈압 확인</Korean>
             <Chinesesimp>检查血压</Chinesesimp>
             <Chinese>檢查血壓</Chinese>
@@ -1955,10 +1976,16 @@
             <Hungarian>Érszorító leszedése</Hungarian>
             <Italian>Rimuovi laccio emostatico</Italian>
             <Portuguese>Remover Torniquete</Portuguese>
-            <Japanese>止血帯をはずす</Japanese>
+            <Japanese>止血帯を外す</Japanese>
             <Korean>지혈대 제거</Korean>
             <Chinesesimp>移除军用止血带</Chinesesimp>
             <Chinese>移除軍用止血帶</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_Apply_Splint">
+            <English>Apply Splint</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_treatment_Applying_Splint">
+            <English>Applying Splint...</English>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -2035,7 +2062,7 @@
             <Hungarian>Vér adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (1˙000ml)</Italian>
             <Portuguese>Administrar Sangue IV (1000ml)</Portuguese>
-            <Japanese>血液 IV (1000ml) をあたえる</Japanese>
+            <Japanese>血液 IV (1000ml) を投与</Japanese>
             <Korean>IV 혈액 수혈 (1000ml)</Korean>
             <Chinesesimp>输血液 (1000ml)</Chinesesimp>
             <Chinese>輸血液 (1000ml)</Chinese>
@@ -2051,7 +2078,7 @@
             <Hungarian>Vér adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (500ml)</Italian>
             <Portuguese>Administrar Sangue IV (500ml)</Portuguese>
-            <Japanese>血液 IV (500ml) をあたえる</Japanese>
+            <Japanese>血液 IV (500ml) を投与</Japanese>
             <Korean>IV 혈액 수혈 (500ml)</Korean>
             <Chinesesimp>输血液 (500ml)</Chinesesimp>
             <Chinese>輸血液 (500ml)</Chinese>
@@ -2067,7 +2094,7 @@
             <Hungarian>Vér adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (250ml)</Italian>
             <Portuguese>Administrar Sangue IV (250ml)</Portuguese>
-            <Japanese>血液 IV (250ml) をあたえる</Japanese>
+            <Japanese>血液 IV (250ml) を投与</Japanese>
             <Korean>IV 혈액 수혈 (250ml)</Korean>
             <Chinesesimp>输血液 (250ml)</Chinesesimp>
             <Chinese>輸血液 (250ml)</Chinese>
@@ -2083,7 +2110,7 @@
             <Hungarian>Vérplazma adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (1˙000ml)</Italian>
             <Portuguese>Administrar Plasma IV (1000ml)</Portuguese>
-            <Japanese>血しょう IV (1000ml) をあたえる</Japanese>
+            <Japanese>血しょう IV (1000ml) を投与</Japanese>
             <Korean>IV 혈장 수혈 (1000ml)</Korean>
             <Chinesesimp>输血浆 (1000ml)</Chinesesimp>
             <Chinese>輸血漿 (1000ml)</Chinese>
@@ -2099,7 +2126,7 @@
             <Hungarian>Vérplazma adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (500ml)</Italian>
             <Portuguese>Administrar Plasma IV (500ml)</Portuguese>
-            <Japanese>血しょう IV (500ml) をあたえる</Japanese>
+            <Japanese>血しょう IV (500ml) を投与</Japanese>
             <Korean>IV 혈장 수혈 (500ml)</Korean>
             <Chinesesimp>输血浆 (500ml)</Chinesesimp>
             <Chinese>輸血漿 (500ml)</Chinese>
@@ -2115,7 +2142,7 @@
             <Hungarian>Vérplazma adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (250ml)</Italian>
             <Portuguese>Administrar Plasma IV (250ml)</Portuguese>
-            <Japanese>血しょう IV (250ml) をあたえる</Japanese>
+            <Japanese>血しょう IV (250ml) を投与</Japanese>
             <Korean>IV 혈장 수혈 (250ml)</Korean>
             <Chinesesimp>输血浆 (250ml)</Chinesesimp>
             <Chinese>輸血漿 (250ml)</Chinese>
@@ -2131,7 +2158,7 @@
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (1˙000ml)</Italian>
             <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
-            <Japanese>生理食塩水 IV (1000ml) をあたえる</Japanese>
+            <Japanese>生理食塩水 IV (1000ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
             <Chinesesimp>注射生理食盐水 (1000ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (1000ml)</Chinese>
@@ -2147,7 +2174,7 @@
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (500ml)</Italian>
             <Portuguese>Administrar Soro IV (500ml)</Portuguese>
-            <Japanese>生理食塩水 IV (500ml) をあたえる</Japanese>
+            <Japanese>生理食塩水 IV (500ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
             <Chinesesimp>注射生理食盐水 (500ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (500ml)</Chinese>
@@ -2163,13 +2190,14 @@
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (250ml)</Italian>
             <Portuguese>Administrar Soro IV (250ml)</Portuguese>
-            <Japanese>生理食塩水 IV (250ml) をあたえる</Japanese>
+            <Japanese>生理食塩水 IV (250ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
             <Chinesesimp>注射生理食盐水 (250ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (250ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Triage_Status_Minimal">
             <English>Minimal</English>
+            <Japanese>軽処置群</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -2302,6 +2330,7 @@
         <Key ID="STR_ACE_Medical_treatment_Status_MildPain">
             <English>In mild pain</English>
             <German>Hat leichte Schmerzen</German>
+            <Japanese>中くらいの痛みがある</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Status_Pain">
             <English>In pain</English>
@@ -2322,6 +2351,7 @@
         <Key ID="STR_ACE_Medical_treatment_Status_SeverePain">
             <English>In severe pain</English>
             <German>Hat starke Schmerzen</German>
+            <Japanese>ひどい痛みがある</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -3022,7 +3052,7 @@
             <German>Du verbindest %1 (%2)</German>
             <Portuguese>Você aplica bandagem no paciente %1 (%2)</Portuguese>
             <Czech>Obvazuješ %1 (%2)</Czech>
-            <Japanese>%1 (%2) 包帯をつかった</Japanese>
+            <Japanese>%1 (%2) 包帯を使った</Japanese>
             <Korean>%1 (%2) 붕대를 감았다</Korean>
             <Chinesesimp>你正在对 %1 (%2) 包扎绷带中</Chinesesimp>
             <Chinese>你正在對 %1 (%2) 包紮繃帶中</Chinese>
@@ -3054,7 +3084,7 @@
             <Italian>Stai suturando le ferite di %1 (%2)</Italian>
             <Portuguese>Você começa a suturar os ferimentos do %1 (%2)</Portuguese>
             <Czech>Zašíváš rány %1 (%2)</Czech>
-            <Japanese>あなたは %1 (%2) の外傷へ縫合をはじめた</Japanese>
+            <Japanese>あなたは %1 (%2) の外傷へ縫合を始めた</Japanese>
             <Korean>나는 %1(%2) 상처로부터 봉합을 시작했다</Korean>
             <Chinesesimp>你正开始对 %1 (%2) 缝合伤口中</Chinesesimp>
             <Chinese>你正開始對 %1 (%2) 縫合傷口中</Chinese>
@@ -3293,7 +3323,7 @@
             <Italian>%1 ha usato %2</Italian>
             <Portuguese>%1 usou %2</Portuguese>
             <Czech>%1 použil %2</Czech>
-            <Japanese>%1 は %2 をつかった</Japanese>
+            <Japanese>%1 は %2 を使った</Japanese>
             <Korean>%1 (이)가 %2 을 썼다</Korean>
             <Chinesesimp>%1 已使用 %2</Chinesesimp>
             <Chinese>%1 已使用 %2</Chinese>
@@ -3340,7 +3370,7 @@
             <Italian>%1 ha usato Kit Pronto Soccorso Personale</Italian>
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
             <French>%1 a utilisé une trousse</French>
-            <Japanese>%1 は応急処置キットをつかった</Japanese>
+            <Japanese>%1 は応急処置キットを使った</Japanese>
             <Korean>%1 (이)가 개인응급키트를 사용했다</Korean>
             <Chinesesimp>%1 已使用了个人急救包</Chinesesimp>
             <Chinese>%1 已使用了個人急救包</Chinese>
@@ -3442,12 +3472,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_DisplayName">
             <English>Convert vanilla items</English>
+            <Japanese>標準アイテムを変換</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_Description">
             <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
+            <Japanese>有効化すると標準の治療アイテムは ACE 治療アイテムに変換され、無効化すると削除されます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_remove">
             <English>Just remove vanilla medical</English>
+            <Japanese>標準の治療アイテムを削除</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -3571,7 +3604,7 @@
             <French>Lieu d'utilisation des trousses chirurgicales</French>
             <Hungarian>Sebészkészlet (Fejlett) helyei</Hungarian>
             <Italian>Località Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットをつかう場所 (アド)</Japanese>
+            <Japanese>縫合キットを使う場所 (アド)</Japanese>
             <Korean>봉합키트 사용 장소 (고급)</Korean>
             <Chinesesimp>手术包使用地点 (进阶伤口)</Chinesesimp>
             <Chinese>手術包使用地點 (進階傷口)</Chinese>

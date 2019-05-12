@@ -36,6 +36,7 @@ class ACE_Medical_Injuries {
             pain = 0.8;
             minDamage = 0.1;
             causeLimping = 1;
+            causeFracture = 1;
         };
         // Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
         class Cut {
@@ -59,6 +60,7 @@ class ACE_Medical_Injuries {
             pain = 0.9;
             minDamage = 0.35;
             causeLimping = 1;
+            causeFracture = 1;
         };
         // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
         class PunctureWound {

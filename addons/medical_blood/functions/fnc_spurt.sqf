@@ -22,7 +22,6 @@
 #define OFFSET 0.25
 
 params ["_unit", "_dir", "_damage"];
-_damage = _damage min 1;
 
 private _distanceBetweenDrops = DISTANCE_BETWEEN_DROPS * _damage;
 private _offset = OFFSET + _distanceBetweenDrops;
