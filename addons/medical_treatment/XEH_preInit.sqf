@@ -53,4 +53,11 @@ GVAR(facilityClasses) = [
     "USMC_WarfareBFieldhHospital"
 ];
 
+// array of medical items to replace and their ACE equivalents
+GVAR(replacementItems) = [];
+
+{
+    GVAR(replacementItems) pushBack [configName _x, getArray _x];
+} forEach configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"];
+
 ADDON = true;

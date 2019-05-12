@@ -44,4 +44,4 @@ private _fnc_loop = if (GVAR(convertItems) == 0) then {
     }
 };
 
-_fnc_loop forEach (uiNamespace getVariable QGVAR(replacementItems));
+_fnc_loop forEach GVAR(replacementItems);
