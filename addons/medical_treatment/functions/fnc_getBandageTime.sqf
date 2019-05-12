@@ -12,13 +12,16 @@
  * Return Value:
  * Time in seconds <NUMBER>
  *
+ * Example:
+ * [player, cursorTarget, "Head", "FieldDressing"] call ace_medical_treatment_fnc_getBandageTime
+ *
  * Public: No
  */
 
 params ["_medic", "_patient", "_bodypart", "_bandage"];
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
-if (_partIndex < 0) exitWith { 0 };
+if (_partIndex < 0) exitWith { ERROR_1("invalid bodyPart %1",_bodyPart); };
 
 private _targetWound = [_patient, _bandage, _partIndex] call FUNC(findMostEffectiveWound);
 _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
@@ -48,4 +51,4 @@ if (_medic == _patient) then {
 };
 
 // Nobody can bandage instantly
-_bandageTime max 1
+_bandageTime max 2
