@@ -467,7 +467,7 @@
 {% endif %}
 
 {% if include.component == "winddeflection" %}
-`ace_weather`
+`ace_common`
 {% endif %}
 
 {% if include.component == "yardage450" %}

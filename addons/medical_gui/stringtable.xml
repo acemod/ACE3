@@ -3,12 +3,15 @@
     <Package name="Medical GUI">
         <Key ID="STR_ACE_Medical_GUI_Category">
             <English>ACE Medical GUI</English>
+            <Japanese>ACE 医療 GUI</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
             <English>Enable Medical Actions</English>
+            <Japanese>医療行為を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
+            <Japanese>インタラクション メニューから選択した表示方式で医療行為をできるようになります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Selections3D">
             <English>Selections (3D)</English>
@@ -21,7 +24,7 @@
             <Hungarian>Választékok (3D)</Hungarian>
             <Czech>3D výběr</Czech>
             <Italian>Selezione (3D)</Italian>
-            <Japanese>選択 (3d)</Japanese>
+            <Japanese>選択 (3D)</Japanese>
             <Korean>선택 (3d)</Korean>
             <Chinesesimp>选择 (3D)</Chinesesimp>
             <Chinese>選擇 (3D)</Chinese>
@@ -44,27 +47,35 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_DisplayName">
             <English>Enable Medical Self Actions</English>
+            <Japanese>自分への医療行為を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_Description">
             <English>Enables medical actions for the Self Interaction Menu.</English>
+            <Japanese>セルフ インタラクション メニューで医療行為をできるようになります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_DisplayName">
             <English>Enable Medical Menu</English>
+            <Japanese>医療メニューを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
+            <Japanese>割り当てられたキーかインタラクション メニューから医療メニューを使えるようになります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
             <English>Reopen Medical Menu</English>
+            <Japanese>医療メニューの再使用</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_Description">
             <English>Reopen the Medical Menu after successful treatment.</English>
+            <Japanese>治療が成功した後に、再度医療メニューを開きます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_DisplayName">
             <English>Maximum Distance</English>
+            <Japanese>最大距離</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
+            <Japanese>治療メニューを開いたままにできる最大距離を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -335,7 +346,7 @@
             <Portuguese>Arrastar / Carregar</Portuguese>
             <Czech>Táhnout / Nést</Czech>
             <Italian>Trascina / Trasporta</Italian>
-            <Japanese>引きずる / 運ぶ</Japanese>
+            <Japanese>引きずる/運ぶ</Japanese>
             <Korean>끌기 / 들기</Korean>
             <Chinesesimp>拖 / 背</Chinesesimp>
             <Chinese>拖 / 背</Chinese>
@@ -775,11 +786,18 @@
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Status_Fractured">
+            <English>Fractured</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
+            <English>Splint Applied</English>
+        </Key>
         <!--
             Strings above match Blood2 but seem to differ in some languages, determine which is best to use
         -->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
             <English>Lost some blood</English>
+            <Japanese>いくらか失血している</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
             <English>Lost a lot of blood</English>
@@ -799,9 +817,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood3">
             <English>Lost a large amount of blood</English>
+            <Japanese>かなり酷く大量失血している</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
+            <Japanese>致命的な程失血している</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>

@@ -20,7 +20,7 @@ params ["_unit"];
 private _tourniquets = GET_TOURNIQUETS(_unit);
 private _bodyPartBleeding = [0,0,0,0,0,0];
 {
-    _x params ["", "", "_bodyPart", "_amountOf", "_bleeeding"];
+    _x params ["", "_bodyPart", "_amountOf", "_bleeeding"];
     if (_tourniquets select _bodyPart == 0) then {
         _bodyPartBleeding set [_bodyPart, (_bodyPartBleeding select _bodyPart) + (_amountOf * _bleeeding)];
     };
