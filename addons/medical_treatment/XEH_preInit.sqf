@@ -54,10 +54,8 @@ GVAR(facilityClasses) = [
 ];
 
 // array of medical items to replace and their ACE equivalents
-GVAR(replacementItems) = [];
-
-{
-    GVAR(replacementItems) pushBack [configName _x, getArray _x];
-} forEach configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"];
+GVAR(replacementItems) = configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"] apply {
+    [configName _x, getArray _x]
+};
 
 ADDON = true;
