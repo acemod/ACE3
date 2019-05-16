@@ -39,13 +39,13 @@ if (GVAR(painEffectType) == 0) then {
     GVAR(ppPain) = [
         "ColorCorrections",
         13502,
-        [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+        [1, 1, 0, [1, 1, 1, 0], [1, 1, 1, 1], [0.33, 0.33, 0.33, 0], [0.55, 0.5, 0, 0, 0, 0, 4]]
     ] call _fnc_createEffect;
 } else {
     GVAR(ppPain) = [
         "RadialBlur", // "Will not do anything if RADIAL BLUR is disabled in Video Options."
         13502,
-        [0, 0, 0.3, 0.39]
+        [0, 0, 0.25, 0.25]
     ] call _fnc_createEffect;
 };
 TRACE_1("created pain",GVAR(ppPain));

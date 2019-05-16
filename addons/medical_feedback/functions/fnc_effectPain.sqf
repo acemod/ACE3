@@ -33,12 +33,12 @@ private _delayedAdjust = [];
 
 if (GVAR(painEffectType) == 0) then {
     _intensity     = linearConversion [0, 1, _intensity, 0, 0.6, true];
-    _initialAdjust = [1, 1, 0, [1, 1, 1, _intensity], [1, 1, 1, 1], [0.33, 0.33, 0.33, 0], [0.59, 0.64, 0, 0, 0, 0, 4]];
-    _delayedAdjust = [1, 1, 0, [1, 1, 1,          0], [1, 1, 1, 1], [0.33, 0.33, 0.33, 0], [0.59, 0.64, 0, 0, 0, 0, 4]];
+    _initialAdjust = [1, 1, 0, [1, 1, 1, _intensity], [1, 1, 1, 1], [0.33, 0.33, 0.33, 0], [0.55, 0.5, 0, 0, 0, 0, 4]];
+    _delayedAdjust = [1, 1, 0, [1, 1, 1,          0], [1, 1, 1, 1], [0.33, 0.33, 0.33, 0], [0.55, 0.5, 0, 0, 0, 0, 4]];
 } else {
     _intensity     = linearConversion [0, 1, _intensity, 0, 0.008, true];
-    _initialAdjust = [_intensity, _intensity, 0.3, 0.39];
-    _delayedAdjust = [         0,          0, 0.3, 0.39];
+    _initialAdjust = [_intensity, _intensity, 0.15, 0.15];
+    _delayedAdjust = [         0,          0, 0.25, 0.25];
 };
 
 GVAR(ppPain) ppEffectAdjust _initialAdjust;
