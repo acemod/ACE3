@@ -7,9 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_medical",
             "ace_common",
-            "ace_main",
             "A3_Anims_F_Config_Sdr",
             "A3_Anims_F_Config_Sdr_WeaponSwitching"
         };
