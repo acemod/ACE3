@@ -7,88 +7,88 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
         class ACE_LauncherProne: AmovPpneMstpSrasWlnrDnon {
             variantsAI[] = {};
             variantsPlayer[] = {};
-        	duty = -1.2;
+            duty = -1.2;
             showWeaponAim = 0;
-			disableWeapons = 0;
-			disableWeaponsLong = 0;
-			enableMissile = 1;
-			canPullTrigger = 1;
-			aimPrecision = 0.30000001;
-			speed = 1e+010;
-        	actions = "ACE_LauncherProneActions";
+            disableWeapons = 0;
+            disableWeaponsLong = 0;
+            enableMissile = 1;
+            canPullTrigger = 1;
+            aimPrecision = 0.30000001;
+            speed = 1e+010;
+            actions = "ACE_LauncherProneActions";
             file = QPATHTOF(anim\ACE_Launcher_Lying.rtm);
             interpolateFrom[] = {
                 "AmovPercMstpSrasWlnrDnon", 0.02,
                 "AmovPknlMstpSrasWlnrDnon", 0.02,
                 "AmovPpneMstpSrasWlnrDnon_turnL", 0.02,
-        		"AmovPpneMstpSrasWlnrDnon_turnR", 0.02,
+                "AmovPpneMstpSrasWlnrDnon_turnR", 0.02,
                 "AmovPpneMrunSrasWlnrDf", 0.02,
-        		"AmovPpneMrunSrasWlnrDfl", 0.02,
-        		"AmovPpneMrunSrasWlnrDl", 0.02,
-        		"AmovPpneMrunSrasWlnrDbl", 0.02,
-        		"AmovPpneMrunSrasWlnrDb", 0.02,
-        		"AmovPpneMrunSrasWlnrDbr", 0.02,
-        		"AmovPpneMrunSrasWlnrDr", 0.02,
-        		"AmovPpneMrunSrasWlnrDfr", 0.02
+                "AmovPpneMrunSrasWlnrDfl", 0.02,
+                "AmovPpneMrunSrasWlnrDl", 0.02,
+                "AmovPpneMrunSrasWlnrDbl", 0.02,
+                "AmovPpneMrunSrasWlnrDb", 0.02,
+                "AmovPpneMrunSrasWlnrDbr", 0.02,
+                "AmovPpneMrunSrasWlnrDr", 0.02,
+                "AmovPpneMrunSrasWlnrDfr", 0.02
             };
-        	connectTo[] = {};
-        	interpolateTo[] = {
-        		"AmovPpneMstpSrasWlnrDnon_turnL", 0.02,
-        		"AmovPpneMstpSrasWlnrDnon_turnR", 0.02,
+            connectTo[] = {};
+            interpolateTo[] = {
+                "AmovPpneMstpSrasWlnrDnon_turnL", 0.02,
+                "AmovPpneMstpSrasWlnrDnon_turnR", 0.02,
                 "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon", 0.02,
                 "AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon", 0.02,
-        		"AmovPpneMrunSrasWlnrDf", 0.02,
-        		"AmovPpneMrunSrasWlnrDfl", 0.02,
-        		"AmovPpneMrunSrasWlnrDl", 0.02,
-        		"AmovPpneMrunSrasWlnrDbl", 0.02,
-        		"AmovPpneMrunSrasWlnrDb", 0.02,
-        		"AmovPpneMrunSrasWlnrDbr", 0.02,
-        		"AmovPpneMrunSrasWlnrDr", 0.02,
-        		"AmovPpneMrunSrasWlnrDfr", 0.02,
-        		"AmovPpneMstpSrasWlnrDnon", 0.02,
-        		"Unconscious", 0.02,
-        		"Campaign_Base", 0.02
-        	};
+                "AmovPpneMrunSrasWlnrDf", 0.02,
+                "AmovPpneMrunSrasWlnrDfl", 0.02,
+                "AmovPpneMrunSrasWlnrDl", 0.02,
+                "AmovPpneMrunSrasWlnrDbl", 0.02,
+                "AmovPpneMrunSrasWlnrDb", 0.02,
+                "AmovPpneMrunSrasWlnrDbr", 0.02,
+                "AmovPpneMrunSrasWlnrDr", 0.02,
+                "AmovPpneMrunSrasWlnrDfr", 0.02,
+                "AmovPpneMstpSrasWlnrDnon", 0.02,
+                "Unconscious", 0.02,
+                "Campaign_Base", 0.02
+            };
         };
         //Prone Stopped Launcher Turn Left
         class AmovPpneMstpSrasWlnrDnon_turnL: AmovPpneMstpSrasWlnrDnon {
             actions = "ACE_LauncherProneActions";
             aimPrecision = 5;
-        	connectTo[] += {
+            connectTo[] += {
                 "AmovPpneMstpSrasWlnrDnon_turnL", 0.02
             };
-        	interpolateTo[] += {
-        		"AmovPpneMstpSrasWlnrDnon", 0.02
-        	};
+            interpolateTo[] += {
+                "AmovPpneMstpSrasWlnrDnon", 0.02
+            };
         };
         //Prone Stopped Launcher Turn Right
         class AmovPpneMstpSrasWlnrDnon_turnR: AmovPpneMstpSrasWlnrDnon {
             actions = "ACE_LauncherProneActions";
-        	aimPrecision = 5;
+            aimPrecision = 5;
             connectTo[] += {
                 "AmovPpneMstpSrasWlnrDnon_turnR", 0.02
             };
-        	interpolateTo[] += {
-        		"AmovPpneMstpSrasWlnrDnon", 0.02
-        	};
+            interpolateTo[] += {
+                "AmovPpneMstpSrasWlnrDnon", 0.02
+            };
         };
         //Prone Stopped Launcher -> Standing Stopped Launcher
         class AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon: TransAnimBase {
-			actions = "LauncherStandActions";
-			duty = 2;
-			enableOptics = 1;
-			reverse = "AmovPercMstpSrasWlnrDnon_AmovPpneMstpSrasWlnrDnon";
-			interpolateTo[] += {
+            actions = "LauncherStandActions";
+            duty = 2;
+            enableOptics = 1;
+            reverse = "AmovPercMstpSrasWlnrDnon_AmovPpneMstpSrasWlnrDnon";
+            interpolateTo[] += {
                 "AmovPercMstpSrasWlnrDnon", 0.02
             };
-		};
+        };
         class AmovPpneMrunSrasWlnrDf: AmovPpneMstpSrasWlnrDnon {
             speed = 0.600541;
             duty = 0.6;
             disableWeapons = true;
-			disableWeaponsLong = true;
-			enableMissile = false;
-			canPullTrigger = false;
+            disableWeaponsLong = true;
+            enableMissile = false;
+            canPullTrigger = false;
             actions = "ACE_LauncherProneActions";
         };
         class AmovPpneMrunSrasWlnrDfl: AmovPpneMrunSrasWlnrDf {
@@ -195,43 +195,43 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
             blockMobileSwitching = 0;
         };
         class LauncherProne_Reload_Start: AmovPpneMrunSrasWlnrDl {
-			actions = "ACE_LauncherProneActions";
+            actions = "ACE_LauncherProneActions";
             speed = 0.7375;
             duty = 0.6;
             disableWeapons = true;
-			disableWeaponsLong = true;
-			enableMissile = false;
-			canPullTrigger = false;
-			interpolateFrom[] = {
+            disableWeaponsLong = true;
+            enableMissile = false;
+            canPullTrigger = false;
+            interpolateFrom[] = {
                 "ACE_LauncherProne", 0.02
             };
             interpolateTo[] = {
                 "LauncherProne_Reload_Mid", 0.005
             };
-		};
+        };
         class LauncherProne_Reload_Mid: AmovPpneMrunSrasWlnrDr {
-			actions = "ACE_LauncherProneActions";
+            actions = "ACE_LauncherProneActions";
             speed = 0.7375;
             duty = 0.6;
             disableWeapons = true;
-			disableWeaponsLong = true;
-			enableMissile = false;
-			canPullTrigger = false;
+            disableWeaponsLong = true;
+            enableMissile = false;
+            canPullTrigger = false;
             interpolateTo[] = {
                 "LauncherProne_Reload_End", 0.005
             };
-		};
+        };
         class LauncherProne_Reload_End: AmovPpneMrunSrasWlnrDf {
-			actions = "ACE_LauncherProneActions";
+            actions = "ACE_LauncherProneActions";
             speed = 0.7375;
             duty = 0.6;
             disableWeapons = true;
-			disableWeaponsLong = true;
-			enableMissile = false;
-			canPullTrigger = false;
+            disableWeaponsLong = true;
+            enableMissile = false;
+            canPullTrigger = false;
             interpolateTo[] = {
                 "ACE_LauncherProne", 0.02
             };
-		};
+        };
     };
 };
