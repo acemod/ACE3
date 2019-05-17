@@ -17,7 +17,7 @@
 
 private _key = _this select 1;
 private _blockInput = false;
-if !(isNull objectParent ACE_Player) exitwith {_blockInput};
+if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {_blockInput};
 if (currentWeapon ACE_Player != secondaryWeapon ACE_Player) exitwith {_blockInput};
 switch (stance ACE_Player) do {
     case "STAND": {
