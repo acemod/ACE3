@@ -29,7 +29,7 @@ private _keysMoveDown = actionKeys "moveDown";
 private _keysMoveUp = actionKeys "moveUp";
 
 if (_stance in ["STAND", "CROUCH"] && {_key in _keysMoveDown}) exitWith {
-	ACE_player playMoveNow "ACE_LauncherProne";
+    ACE_player playMoveNow "ACE_LauncherProne";
     true
 };
 
