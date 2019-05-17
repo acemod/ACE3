@@ -6,11 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "ace_common",
-            "A3_Anims_F_Config_Sdr",
-            "A3_Anims_F_Config_Sdr_WeaponSwitching"
-        };
+        requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PiZZADOX"};
         url = ECSTRING(main,URL);

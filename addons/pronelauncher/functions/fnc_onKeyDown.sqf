@@ -1,48 +1,46 @@
 #include "script_component.hpp"
 /*
- * Author: PiZZADOX
+ * Author: PiZZADOX, Jonpas
  * Handles keyDown EH for overriding engine stance changes when in AT launcher stance.
  *
  * Arguments:
- * None
+ * 0: Control <CONTROL>
+ * 1: Key <NUMBER>
+ * 2: Shift <BOOL>
+ * 3: Ctrl <BOOL>
+ * 4: Alt <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * None
+ * [control, 5, false, true, false] call ace_pronelauncher_fnc_onKeyDown
  *
  * Public: No
  */
 
-private _key = _this select 1;
-private _blockInput = false;
-if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {_blockInput};
-if (currentWeapon ACE_Player != secondaryWeapon ACE_Player) exitwith {_blockInput};
-switch (stance ACE_Player) do {
-    case "STAND": {
-        if (_key in (actionKeys "moveDown")) then {
-            ACE_Player playMoveNow "ACE_LauncherProne";
-            _blockInput = true;
-        };
-    };
-    case "CROUCH": {
-        if (_key in (actionKeys "moveDown")) then {
-            ACE_Player playMoveNow "ACE_LauncherProne";
-            _blockInput = true;
-        };
-    };
-    case "PRONE": {
-        if (_key in (actionKeys "moveDown")) then {
-            ACE_Player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
-            _blockInput = true;
-        };
-        if (_key in (actionKeys "moveUp")) then {
-            ACE_Player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
-            _blockInput = true;
-        };
-};
-default {};
+params ["","_key"];
+
+if !(isNull objectParent ACE_player) exitWith {false};
+if (currentWeapon ACE_player != secondaryWeapon ACE_player) exitWith {false};
+
+private _stance = stance ACE_player;
+private _keysMoveDown = actionKeys "moveDown";
+private _keysMoveUp = actionKeys "moveUp";
+
+if (_stance in ["STAND", "CROUCH"] && {_key in _keysMoveDown}) exitWith {
+	ACE_player playMoveNow "ACE_LauncherProne";
+    true
 };
 
-_blockInput
+if (_stance isEqualTo "PRONE" && {_key in _keysMoveDown}) exitWith {
+    ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
+    true
+};
+
+if (_stance isEqualTo "PRONE" && {_key in _keysMoveUp}) exitWith {
+    ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
+    true
+};
+
+false
