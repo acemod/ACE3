@@ -193,6 +193,8 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
         };
         class AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon: TransAnimBase {
             blockMobileSwitching = 0;
+            ConnectTo[] = {};
+            InterpolateTo[] += {"AmovPknlMstpSrasWlnrDnon", 0.02};
         };
         class LauncherProne_Reload_Start: AmovPpneMrunSrasWlnrDl {
             actions = "ACE_LauncherProneActions";
