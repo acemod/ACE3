@@ -33,14 +33,16 @@ if (_stance in ["STAND", "CROUCH"] && {_key in _keysMoveDown}) exitWith {
     true
 };
 
-if (_stance isEqualTo "PRONE" && {_key in _keysMoveDown}) exitWith {
-    ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
-    true
-};
-
-if (_stance isEqualTo "PRONE" && {_key in _keysMoveUp}) exitWith {
-    ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
-    true
+if (_stance isEqualTo "PRONE") exitWith {
+    if (_key in _keysMoveDown) exitWith {
+        ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
+        true
+    };
+    if (_key in _keysMoveUp) exitWith {
+        ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
+        true
+    };
+    false
 };
 
 false
