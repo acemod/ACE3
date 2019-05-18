@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_medical_blood_subCategory">
             <English>Bleeding Effect</English>
             <Japanese>出血中の効果</Japanese>
+            <Russian>Эффекты кровотечения</Russian>
         </Key>
         <Key ID="STR_ACE_medical_blood_enabledFor_OnlyPlayers">
             <English>Only Players</English>
@@ -15,6 +16,7 @@
             <Italian>Solo Giocatori</Italian>
             <Chinesesimp>只有玩家</Chinesesimp>
             <Chinese>只有玩家</Chinese>
+            <Russian>Только игроки</Russian>
         </Key>
         <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_DisplayName">
             <English>Enable Blood Drops</English>
@@ -26,6 +28,7 @@
             <Italian>Abilita Perdite di Sangue</Italian>
             <Chinesesimp>开启血液滴落效果</Chinesesimp>
             <Chinese>開啟血液滴落效果</Chinese>
+            <Russian>Разрешить капли крови</Russian>
         </Key>
         <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_Description">
             <English>Enable or disable Blood Drops created on bleeding and taking damage</English>
@@ -37,6 +40,7 @@
             <Chinesesimp>开启后, 会让受伤时伤口有血液滴落的效果</Chinesesimp>
             <Chinese>開啟後, 會讓受傷時傷口有血液滴落的效果</Chinese>
             <Korean>출혈이나 부상을 입었을 때, 떨어지는 혈액을 활성화 하거나 비활성화 합니다.</Korean>
+            <Russian>Включает или отключает капли кровь при кровотечении и получении урона</Russian>
         </Key>
     </Package>
 </Project>

@@ -1027,12 +1027,14 @@
             <Chinese>爆炸範圍</Chinese>
             <Italian>Raggio di detonazione</Italian>
             <Polish>Zasięg wybuchu</Polish>
+            <Russian>Дальность взрывчатки</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
             <Italian>Timer di detonazione</Italian>
             <Japanese>爆発タイマー</Japanese>
             <Polish>Czasomierz Wybuchu</Polish>
+            <Russian>Таймер взрывчатки</Russian>
         </Key>
     </Package>
 </Project>

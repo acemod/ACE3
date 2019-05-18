@@ -11,6 +11,7 @@
             <German>AUSRÜSTUNG DES FLUGGERÄTS</German>
             <French>ÉQUIPEMENTS DE L'AÉRONEF</French>
             <Polish>WYPOSAŻENIE POJAZDU POWIETRZNEGO</Polish>
+            <Russian>СНАРЯЖЕНИЕ САМОЛЕТА</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_LoadoutsFor">
             <English>Loadouts for %1</English>
@@ -22,6 +23,7 @@
             <German>Ausrüstung für %1</German>
             <French>Équipements pour %1</French>
             <Polish>Wyposażenia dla %1</Polish>
+            <Russian>Снаряжение для %1</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylons">
             <English>Configure Pylons</English>
@@ -33,6 +35,7 @@
             <German>Konfiguriere Außenlaststationen</German>
             <French>Configurer les pylônes</French>
             <Polish>Konfiguruj Pylony</Polish>
+            <Russian>Настройка Пилонов</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_Category_Pylons">
             <English>ACE Pylons</English>
@@ -44,6 +47,7 @@
             <German>ACE Außenlaststationen</German>
             <French>ACE Pylônes</French>
             <Polish>Pylony ACE</Polish>
+            <Russian>ACE Пилоны</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_Empty">
             <English>&lt;empty&gt;</English>
@@ -55,6 +59,7 @@
             <German>&lt;leer&gt;</German>
             <French>&lt;vide&gt;</French>
             <Polish>&lt;puste&gt;</Polish>
+            <Russian>&lt;пусто&gt;</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_BannerText">
             <English>Pylons that are colored red will have to be manually rearmed.</English>
@@ -66,6 +71,7 @@
             <German>Außenlaststationen, die rot markiert sind, müssen manuell aufmunitioniert werden.</German>
             <French>Les pylônes colorés en rouge devront être réarmés manuellement.</French>
             <Polish>Pylony, które są w kolorze czerwonym muszą być manualnie dozbrojone.</Polish>
+            <Russian>Пилоны, окрашеные красным, должны быть переоборудованы вручную</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>
@@ -77,6 +83,7 @@
             <German>%1 konfiguriert dieses Fluggerät bereits!</German>
             <French>%1 est déjà en train de configurer cet aéronef !</French>
             <Polish>%1 już konfiguruje ten pojazd!</Polish>
+            <Russian>%1 уже настраивает эту авиатехнику!</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_ReplacingPylon">
             <English>Replacing pylon %1 out of %2...</English>
@@ -88,6 +95,7 @@
             <German>Ersetze Außenlaststation %1 von insgesamt %2</German>
             <French>Remplacement du pylône %1 sur %2 ...</French>
             <Polish>Wymiana pylonów %1 z %2...</Polish>
+            <Russian>Замена пилона %1 из %2...</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_Stopped">
             <English>Stopped at pylon %1!</English>
@@ -99,6 +107,7 @@
             <German>Gestoppt bei Außenlaststation %1</German>
             <French>Arrêté au pylône %1 !</French>
             <Polish>Zatrzymano na pylonie %1!</Polish>
+            <Russian>Остановлено на пилоне %1!</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_TooFar">
             <English>Vehicle too far</English>
@@ -110,6 +119,7 @@
             <German>Fahrzeug zu weit entfernt</German>
             <French>Véhicule trop éloigné</French>
             <Polish>Pojazd za daleko</Polish>
+            <Russian>Техника слишком далеко</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus">
             <English>Enable Pylons Menu for Zeus</English>
@@ -119,6 +129,7 @@
             <Japanese>Zeus でパイロン メニューを有効化</Japanese>
             <French>Activer le menu des pylônes (Zeus)</French>
             <Polish>Aktywuj Menu Pylonów dla Zeus'a</Polish>
+            <Russian>Активировать Меню пилонов для Зевса</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
             <English>Enables use of the zeus module.</English>
@@ -128,6 +139,7 @@
             <Japanese>Zeus モジュールでパイロン メニューを利用できます。</Japanese>
             <French>Autorise l'utilisation des modules Zeus</French>
             <Polish>Aktywuj wykorzystanie modułu zeus'a.</Polish>
+            <Russian>Позволяет использовать модуль Зевса</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
             <English>Enable Pylons Menu from Ammo Trucks</English>
@@ -137,6 +149,7 @@
             <Japanese>弾薬トラックからパイロン メニューを有効化</Japanese>
             <French>Activer le menu des pylônes (camion de munitions)</French>
             <Polish>Aktywuj Menu Pylonów dla Ciężarówek z amunicją</Polish>
+            <Russian>Меню пилонов из грузовика боеприпасов</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
             <English>Enables use of pylons menu from ammo trucks.</English>
@@ -146,6 +159,7 @@
             <Japanese>弾薬給弾トラックからパイロン メニューを利用できます。</Japanese>
             <French>Autorise l'utilisation du menu des pylônes depuis les camions de munitions.</French>
             <Polish>Aktywuj wykorzystanie menu pylonów z ciężarówek z amunicją.</Polish>
+            <Russian>Позволяет использовать меню пилонов из грузовика с боеприпасами</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
             <English>This aircraft doesn't have pylons</English>
@@ -155,6 +169,7 @@
             <Japanese>航空機にパイロンがありません</Japanese>
             <French>Cet aéronef n'a pas de pylônes</French>
             <Polish>Ten pojazd nie posiada pylonów</Polish>
+            <Russian>Эта авиатехника не имеет пилонов</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
             <English>Configure pylons module is disabled for zeus</English>
@@ -164,6 +179,7 @@
             <Japanese>Zeus のパイロン モジュールを無効化</Japanese>
             <French>La configuration de pylônes est désactivé pour Zeus</French>
             <Polish>Konfiguracja modułu pylonów jest wyłączona dla zeus'a</Polish>
+            <Russian>Модуль Настройка пилонов отключен для Zeus</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
@@ -175,6 +191,7 @@
             <German>Neue Außenlaststationen. aufmunitionieren</German>
             <French>Réarmer les nouveaux pylônes</French>
             <Polish>Dozbrój Nowe Pylony</Polish>
+            <Russian>Перевооружить Новые пилоны</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons_description">
             <English>Automatically rearm new pylons from the nearest rearm vehicle.</English>
@@ -186,6 +203,7 @@
             <German>Neue Außenlaststationen. automatisch vom nächsten Munitionsfahrzeug aufmunitionieren</German>
             <French>Réarmer automatiquement tout les nouveau pylônes depuis le véhicule de munitions le plus proche.</French>
             <Polish>Automatycznie dozbrajaj nowe pylony z najbliższego pojazdu dozbrajania.</Polish>
+            <Russian>Автоматически перевооружать пилоны из ближайшего грузовика с боеприпасами</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon">
             <English>Time Per Pylon</English>
@@ -197,6 +215,7 @@
             <German>Zeit pro Außenlaststation</German>
             <French>Durée par pylône</French>
             <Polish>Czas na Pylon</Polish>
+            <Russian>Время на пилон</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
             <English>The time it takes to replace each pylon (in seconds).</English>
@@ -208,6 +227,7 @@
             <German>Die benötigte Zeit, um einzelne Außenlaststationen zu ersetzen (in Sekunden).</German>
             <French>Le temps nécessaire pour remplacer chaque pylône (en secondes).</French>
             <Polish>Czas, jaki trwa wymiana każdego z pylonów (w sekundach).</Polish>
+            <Russian>Время для замены каждого пилона (в секундах)</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance">
             <English>Search Distance</English>
@@ -219,6 +239,7 @@
             <German>Suchdistanz</German>
             <French>Distance de recherche</French>
             <Polish>Dystans Szukania</Polish>
+            <Russian>Дальность поиска</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance_description">
             <English>The distance an aircraft needs to be from a rearm vehicle.</English>
@@ -230,6 +251,7 @@
             <German>Die Distanz, die ein Fahrzeug von einem Munitionsfahrzeug entfernt sein darf.</German>
             <French>La distance à laquelle un aéronef doit être d'un véhicule de munitions.</French>
             <Polish>Dystans, w jakim pojazd musi być od pojazdu dozbrajania.</Polish>
+            <Russian>Дальность от авиатехники до грузовика (пункта) с боеприпасами</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer">
             <English>Require Engineer</English>
@@ -241,6 +263,7 @@
             <German>Benötigt Pionier</German>
             <French>Requiert ingénieur</French>
             <Polish>Wymaga Mechanika</Polish>
+            <Russian>Требуется Инженер</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer_description">
             <English>Require an engineer.</English>
@@ -252,6 +275,7 @@
             <German>Benötigt einen Pionier.</German>
             <French>Requiert un ingénieur.</French>
             <Polish>Wymaga mechanika.</Polish>
+            <Russian>Требуется роль Инженера</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit">
             <English>Require Toolkit</English>
@@ -263,6 +287,7 @@
             <German>Benötigt Werkzeugkasten</German>
             <French>Requiert trousse à outils</French>
             <Polish>Wymaga Narzędzi</Polish>
+            <Russian>Требуется Набор инструментов</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit_description">
             <English>Require a toolkit in inventory.</English>
@@ -274,6 +299,7 @@
             <German>Benötigt einen Werkzeugkasten im Inventar.</German>
             <French>Requiert une trousse à outils dans l'inventaire.</French>
             <Polish>Wymaga narzędzi w ekwipunku.</Polish>
+            <Russian>Требуется наличие Набора инструментов в инвентаре</Russian>
         </Key>
     </Package>
 </Project>

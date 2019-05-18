@@ -9,6 +9,7 @@
             <Japanese>Zeus</Japanese>
             <Korean>제우스</Korean>
             <Polish>Zeus</Polish>
+            <Russian>Зевс</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>
@@ -273,6 +274,7 @@
             <Italian>Aggiorna Oggetti Modificabili</Italian>
             <Chinesesimp>更新可编辑的物件</Chinesesimp>
             <Chinese>更新可編輯的物件</Chinese>
+            <Russian>Обновить редактируемые объекты</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
@@ -280,6 +282,7 @@
             <Italian>Modalità per editare</Italian>
             <Japanese>編集モード</Japanese>
             <Polish>Tryb Edytowania</Polish>
+            <Russian>Режим редактирования</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
@@ -287,6 +290,7 @@
             <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
             <Japanese>Zeus から編集可能オブジェクトの追加と削除をする</Japanese>
             <Polish>Dodaj lub usuń edytowalne obiekty z Zeus'a</Polish>
+            <Russian>Добавить или удалить редактируемые объекты от Зевса</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
@@ -294,6 +298,7 @@
             <Italian>Aggiungi Oggetti</Italian>
             <Japanese>オブジェクト追加</Japanese>
             <Polish>Dodaj obiekty</Polish>
+            <Russian>Добавить объекты</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -305,6 +310,7 @@
             <Italian>Rimuovi Oggetti</Italian>
             <Chinesesimp>移除物件</Chinesesimp>
             <Chinese>移除物件</Chinese>
+            <Russian>Удалить объекты</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
@@ -316,6 +322,7 @@
             <Italian>Tutti i Moderatori</Italian>
             <Chinesesimp>所有编辑者</Chinesesimp>
             <Chinese>所有編輯者</Chinese>
+            <Russian>Все кураторы</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Apply changes to all curators</English>
@@ -327,18 +334,21 @@
             <Italian>Applica i cambiamenti a tutti i moderatori</Italian>
             <Chinesesimp>确认变更给所有编辑者</Chinesesimp>
             <Chinese>確認變更給所有編輯者</Chinese>
+            <Russian>Применить изменения ко всем кураторам</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
             <English>Additional Objects</English>
             <Italian>Oggetti aggiuntivi</Italian>
             <Japanese>オブジェクト増加</Japanese>
             <Polish>Dodatkowe obiekty</Polish>
+            <Russian>Доп. объекты</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
             <Italian>Oggetti aggiuntivi da includere nell'azione indipendentemente dal Raggio di Attività</Italian>
             <Japanese>タスク範囲に関係無くオブジェクトを更に増加させます</Japanese>
             <Polish>Dodatkowe obiekty do uwzględnienia w akcji niezależnie od zasięgu zadania</Polish>
+            <Russian>Дополнительные объекты для включения в действие, независимо от радиуса выполнения задачи</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -561,6 +571,7 @@
             <Italian>Aggiungi/Rimuovi FRIES</Italian>
             <Chinesesimp>增加/移除快速垂降进场撤离系统</Chinesesimp>
             <Chinese>增加/移除快速垂降進場撤離系統</Chinese>
+            <Russian>Добавить/Удалить FRIES</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
@@ -572,6 +583,7 @@
             <Italian>%1 non è compatibile con il fastrope.</Italian>
             <Chinesesimp>%1无法使用快速绳降系统</Chinesesimp>
             <Chinese>%1無法使用快速繩降系統</Chinese>
+            <Russian>%1 несовместим с быстрым спуском</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
             <English>Unable to remove FRIES, ropes are deployed.</English>
@@ -583,6 +595,7 @@
             <Italian>Impossibile rimuovere le FRIES, le corde sono ancora dispiegate</Italian>
             <Chinesesimp>无法移除快速绳降系统，因为绳索已被释放出来</Chinesesimp>
             <Chinese>無法移除快速繩降系統，因為繩索已被釋放出來</Chinese>
+            <Russian>Невозможно удалить FRIES, канаты развернуты.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
@@ -746,6 +759,7 @@
             <Italian>Attivatore Simulazione</Italian>
             <Chinesesimp>切换模拟</Chinesesimp>
             <Chinese>切換模擬</Chinese>
+            <Russian>Вкл/Выкл симуляцию</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -948,18 +962,21 @@
             <Italian>Niente</Italian>
             <Polish>Żadne</Polish>
             <Japanese>なし</Japanese>
+            <Russian>Нет</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
             <Italian>Giocatori</Italian>
             <Polish>Gracze</Polish>
             <Japanese>プレイヤー</Japanese>
+            <Russian>Игроки</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
             <Italian>Giocati e AI</Italian>
             <Polish>Gracze i SI</Polish>
             <Japanese>プレイヤーと AI</Japanese>
+            <Russian>Игроки и ИИ</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -1010,6 +1027,7 @@
             <Italian>Scegli il carico da scaricare</Italian>
             <Japanese>選択したカーゴを降ろす</Japanese>
             <Polish>Wybierz ładunek do wyładowania</Polish>
+            <Russian>Выберите груз для выгрузки</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1058,6 +1076,7 @@
             <Chinese>火力壓制</Chinese>
             <Polish>Ogień zaporowy</Polish>
             <Korean>엄호사격</Korean>
+            <Russian>Огоннь на подавление</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullArsenal_DisplayName">
             <English>Add Full Arsenal</English>
@@ -1069,6 +1088,7 @@
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
             <Polish>Dodaj Wirtualny Arsenał</Polish>
             <Korean>아스날 놓기</Korean>
+            <Russian>Добавить весь Арсенал</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveArsenal_DisplayName">
             <English>Remove Arsenal</English>
@@ -1080,6 +1100,7 @@
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
             <Polish>Usuń Wirtualny Arsenał</Polish>
             <Korean>아스날 제거</Korean>
+            <Russian>Убрать Арсенал</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
@@ -1090,6 +1111,7 @@
             <Chinesesimp>装载到货物中</Chinesesimp>
             <Korean>화물 싣기</Korean>
             <Polish>Załaduj do ładunku</Polish>
+            <Russian>Загрузить в отсек</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
@@ -1101,6 +1123,7 @@
             <Chinesesimp>切换夜视镜</Chinesesimp>
             <Korean>야시경 토글</Korean>
             <Polish>Przełącz NVG</Polish>
+            <Russian>Вкл/Выкл ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment">
             <English>NVG Equipment</English>
@@ -1112,6 +1135,7 @@
             <Chinesesimp>夜视镜装备</Chinesesimp>
             <Korean>야시경 장비</Korean>
             <Polish>Ekwipunek NVG</Polish>
+            <Russian>Приборы ночного видения</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment_tooltip">
             <English>Add or remove NVGs from units</English>
@@ -1123,6 +1147,7 @@
             <Chinesesimp>增加或移除单位的夜视镜</Chinesesimp>
             <Korean>야시경 추가/제거</Korean>
             <Polish>Dodaj lub usuń noktowizję z jednostek</Polish>
+            <Russian>Добавить/Убрать ПНВ у юнитов</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
@@ -1131,6 +1156,7 @@
             <Chinese>切換目標</Chinese>
             <Italian>Scambia obiettivo</Italian>
             <Polish>Przełącz cel</Polish>
+            <Russian>Переключить цель</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
@@ -1139,6 +1165,7 @@
             <Chinese>受切換所影響的單位</Chinese>
             <Italian>Unità influenzate dallo scambio</Italian>
             <Polish>Jednostki pod wpływem przełączenia</Polish>
+            <Russian>Юниты, к которым применяется переключение</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1150,6 +1177,7 @@
             <Chinesesimp>选择小队</Chinesesimp>
             <Korean>그룹 선택</Korean>
             <Polish>Wybrana grupa</Polish>
+            <Russian>Выбранная группа</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_DisplayName">
             <English>Toggle Flashlights</English>
@@ -1161,6 +1189,7 @@
             <Chinesesimp>切换手电筒</Chinesesimp>
             <Korean>손전등 토글</Korean>
             <Polish>Przełącz latarki</Polish>
+            <Russian>Вкл/Выкл Фонарики</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_Flashlights">
             <English>Flashlights</English>
@@ -1172,6 +1201,7 @@
             <Chinesesimp>手电筒</Chinesesimp>
             <Korean>손전등</Korean>
             <Polish>Latarki</Polish>
+            <Russian>Фонарики</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_AddGear">
             <English>Add Gear</English>
@@ -1183,6 +1213,7 @@
             <Chinesesimp>增加装备</Chinesesimp>
             <Korean>장비 추가</Korean>
             <Polish>Dodaj wyposażenie</Polish>
+            <Russian>Добавить снаряжение</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
             <English>Garrison Group</English>
@@ -1193,6 +1224,7 @@
             <Chinesesimp>布置驻军</Chinesesimp>
             <Korean>그룹 주둔</Korean>
             <Polish>Rozmieść grupę w garnizonie</Polish>
+            <Russian>Разместить группу в здании</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
             <English>Fill from top to bottom</English>
@@ -1203,6 +1235,7 @@
             <Chinesesimp>由上而下进行填满</Chinesesimp>
             <Korean>위에서부터 채우기</Korean>
             <Polish>Wypełnij od góry do dołu</Polish>
+            <Russian>Занять здание сверху до низу</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
@@ -1213,6 +1246,7 @@
             <Chinesesimp>从建筑物的最高点开始布置卫哨</Chinesesimp>
             <Korean>건물의 높은 위치부터 먼저 채움</Korean>
             <Polish>Wypełnij budynki zaczynając od najwyższej pozycji</Polish>
+            <Russian>Занять здание начиная с верхних позиций</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
             <English>Building filling mode</English>
@@ -1223,6 +1257,7 @@
             <Chinesesimp>驻军填充建筑物模式</Chinesesimp>
             <Korean>건물 채우기 모드</Korean>
             <Polish>Tryb wypełniania budynków</Polish>
+            <Russian>Режим заполнения здания</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
             <English>Even filling</English>
@@ -1233,6 +1268,7 @@
             <Chinesesimp>平均分配</Chinesesimp>
             <Korean>평균 채우기</Korean>
             <Polish>Równe wypełnienie</Polish>
+            <Russian>Равномерное заполнение</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
@@ -1243,6 +1279,7 @@
             <Chinesesimp>一栋填满后再换下一栋</Chinesesimp>
             <Korean>건물에서 건물로</Korean>
             <Polish>Budynek za budynkiem</Polish>
+            <Russian>Здание за зданием</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
             <English>Random filling</English>
@@ -1253,6 +1290,7 @@
             <Chinesesimp>随机分配</Chinesesimp>
             <Korean>무작위 채우기</Korean>
             <Polish>Losowe wypełnienie</Polish>
+            <Russian>Рандомно</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
@@ -1263,6 +1301,7 @@
             <Chinesesimp>传送</Chinesesimp>
             <Korean>순간이동</Korean>
             <Polish>Teleport</Polish>
+            <Russian>Телепорт</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison Group</English>
@@ -1273,6 +1312,7 @@
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>
             <Korean>주둔해제</Korean>
             <Polish>Cofnij rozmieszczenie grupu w garnizonie</Polish>
+            <Russian>Вывести группу из здания</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_noneFound">
             <English>No players found</English>
@@ -1489,6 +1529,7 @@
             <Chinese>增加完整的ACE軍火庫</Chinese>
             <Italian>Aggiungi l'arsenale ACE completo</Italian>
             <Polish>Dodaj pełny arsenał ACE</Polish>
+            <Russian>Добавить полный ACE Арсенал</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
@@ -1497,6 +1538,7 @@
             <Chinese>移除ACE軍火庫</Chinese>
             <Italian>Rimuovi l'arsenale ACE</Italian>
             <Polish>Usuń arsenał ACE</Polish>
+            <Russian>Убрать ACE Арсенал</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_CreateZeus">
             <English>Create Zeus</English>
@@ -1523,11 +1565,13 @@
             <English>Paradrop Cargo</English>
             <Japanese>カーゴを空中投下</Japanese>
             <Polish>Zrzut ładunku (cargo)</Polish>
+            <Russian>Десантировать груз</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
             <Japanese>カーゴは未積載</Japanese>
             <Polish>Niczego nie załadowano do cargo</Polish>
+            <Russian>Грузовой отсек пуст</Russian>
         </Key>
     </Package>
 </Project>
