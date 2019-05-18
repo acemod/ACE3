@@ -36,11 +36,6 @@ if (_unit == ACE_player) then {
     addCamShake [3, 5, _damage + random 10];
 };
 
-// play scream sound
-if (!isNil QEFUNC(medical,playInjuredSound)) then {
-    [_unit,_damage] call EFUNC(medical,playInjuredSound);
-};
-
 private _vehicle = vehicle _unit;
 
 // handle static weapons

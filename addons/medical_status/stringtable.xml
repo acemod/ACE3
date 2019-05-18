@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Medical_Status">
+        <Container name="Settings">
+            <Key ID="STR_ACE_Medical_Status_subCategory">
+                <English>Status</English>
+                <Japanese>状態</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_Status_bleedingCoefficient_DisplayName">
+                <English>Bleeding coefficient</English>
+                <Russian>Коэффициент кровопотери</Russian>
+                <Polish>Mnożnik krwawienia</Polish>
+                <Spanish>Coeficiente de sangrado</Spanish>
+                <German>Verblutungsmultiplikator</German>
+                <Czech>Koeficient krvácení</Czech>
+                <Portuguese>Coeficiente de sangramento</Portuguese>
+                <French>Coéfficient de saignement</French>
+                <Hungarian>Vérzési koefficiens</Hungarian>
+                <Italian>Coefficiente sanguinamento</Italian>
+                <Japanese>出血の係数</Japanese>
+                <Korean>출혈 계수</Korean>
+                <Chinesesimp>流血系数</Chinesesimp>
+                <Chinese>流血係數</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_Status_bleedingCoefficient_Description">
+                <English>Coefficient to modify the bleeding speed</English>
+                <Russian>Коэффициент, изменяющий скорость потери крови</Russian>
+                <Polish>Mnożnik modyfikujący prędkość wykrwawiania się</Polish>
+                <Spanish>Coeficiente para modificar la velocidad de sangrado</Spanish>
+                <German>Multiplikator um die Verblutungsgeschwindigkeit zu verändern</German>
+                <Czech>Koeficient rychlosti krvácení</Czech>
+                <Portuguese>Coeficiente para modificar a velocidade do sangramento</Portuguese>
+                <French>Modifie le débit des saignements</French>
+                <Hungarian>Egy szorzó a vérzés sebességének szabályozására</Hungarian>
+                <Italian>Coefficiente che modifica la velocità di sanguinamento</Italian>
+                <Japanese>この係数では出血速度を変更できます</Japanese>
+                <Korean>출혈의 속도를 계수만큼 변경합니다</Korean>
+                <Chinesesimp>修改流血速度</Chinesesimp>
+                <Chinese>修改流血速度</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_Status_painCoefficient_DisplayName">
+                <English>Pain coefficient</English>
+                <Russian>Коэффициент боли</Russian>
+                <Polish>Mnożnik bólu</Polish>
+                <Spanish>Coeficiente de dolor</Spanish>
+                <German>Schmerzmultiplikator</German>
+                <Czech>Koeficient bolesti</Czech>
+                <Portuguese>Coeficiente de dor</Portuguese>
+                <French>Coéfficient de douleur</French>
+                <Hungarian>Fájdalmi koefficiens</Hungarian>
+                <Italian>Coefficiente dolore</Italian>
+                <Japanese>痛みの係数</Japanese>
+                <Korean>고통 계수</Korean>
+                <Chinesesimp>疼痛系数</Chinesesimp>
+                <Chinese>疼痛係數</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_Status_painCoefficient_Description">
+                <English>Coefficient to modify the pain intensity</English>
+                <Russian>Коэффициент, изменяющий уровень боли</Russian>
+                <Polish>Mnożnik modyfikujący intensywność bólu</Polish>
+                <Spanish>Coeficiente para modificar la intensidad del dolor</Spanish>
+                <German>Multiplikator um die Schmerzintensität zu verändern</German>
+                <Czech>Koeficient intenzity bolesti</Czech>
+                <Portuguese>Coeficiente para modificar a instensidade de dor</Portuguese>
+                <French>Modifie l'intensité de la douleur</French>
+                <Hungarian>Egy szorzó a fájdalom erősségének szabályozására</Hungarian>
+                <Italian>Coefficiente che modifica l'intensità del dolore</Italian>
+                <Japanese>この係数では痛みの強さを変更できます</Japanese>
+                <Korean>고통의 정도를 계수만큼 변경합니다</Korean>
+                <Chinesesimp>修改疼痛强度的系数</Chinesesimp>
+                <Chinese>修改疼痛強度的係數</Chinese>
+            </Key>
+            <Key ID="STR_ACE_Medical_Status_ivFlowRate_DisplayName">
+                <English>IV Transfusion Flow Rate</English>
+                <Japanese>IV 輸血の流量</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Medical_Status_ivFlowRate_Description">
+                <English>Effects how quickly IV Bags will have effect</English>
+                <Japanese>IV による輸血速度を変更できます</Japanese>
+            </Key>
+        </Container>
+    </Package>
+</Project>

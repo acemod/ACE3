@@ -1,4 +1,6 @@
 class ACE_Settings {
+    //IGNORE_STRING_WARNING(STR_ACE_Common_SettingName);
+    //IGNORE_STRING_WARNING(STR_ACE_Common_SettingDescription);
     /*
      * class GVAR(sampleSetting) {
      *     value = 1; // Value

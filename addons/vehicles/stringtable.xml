@@ -67,5 +67,25 @@
             <Japanese>速度制限を減らす</Japanese>
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
         </Key>
+        <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
+            <English>Disable automatic engine shut-off</English>
+            <German>Motor nach Verlassen laufen lassen</German>
+            <Japanese>エンジン自動停止を無効化</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
+            <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
+            <German>Verhindere das automatische Abschalten des Motors beim Verlassen des Fahrzeugs.</German>
+            <Japanese>車両から降りた時のエンジンの自動停止を防ぎます。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_HideEjectAction">
+            <English>Hide Eject Action</English>
+            <German>Abspringen-Aktion verstecken</German>
+            <Polish>Ukryj akcję Wyskocz</Polish>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
+            <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
+            <German>Versteckt den Abspringen-Eintrag aus dem Aktionsmenü. Benötigt Neustart des Spiels.</German>
+            <Polish>Usuwa akcję Wyskocz z menu akcji. Wymaga restartu gry.</Polish>
+        </Key>
     </Package>
 </Project>
