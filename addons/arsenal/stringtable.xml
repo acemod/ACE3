@@ -629,7 +629,7 @@
             <German>Zeigt/Versteckt Mod-Symbole in der linken Leiste</German>
             <Chinese>在左面板中顯示/隱藏模組圖示</Chinese>
             <Chinesesimp>在左面板中显示/隐藏模组图示</Chinesesimp>
-            <Russian>Показать / Скрыть значки модов в левой панели</Russian>
+            <Russian>Показать / скрыть значки модов в левой панели</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_fontHeightTooltip">
             <English>Change the font height for text in the left / right panels</English>
