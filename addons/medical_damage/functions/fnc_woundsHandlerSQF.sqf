@@ -75,11 +75,11 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
 {
     _x params ["_thresholdMinDam", "_thresholdWoundCount"];
-    if (_thresholdMinDam <= _damage) exitWith {
+    if (_damage > _thresholdMinDam) exitWith {
         private _woundDamage = _damage / (_thresholdWoundCount max 1); // If the damage creates multiple wounds
         for "_i" from 1 to _thresholdWoundCount do {
             // Find the injury we are going to add. Format [ classID, allowdSelections, bleedingRate, injuryPain]
-            private _oldInjury = if (random 1 >= 0.85) then {
+            private _oldInjury = if (random 1 < 0.15) then {
                 _woundTypes select _highestPossibleSpot
             } else {
                 selectRandom _allPossibleInjuries
@@ -93,17 +93,22 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
 
-            // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
-            private _nastinessLikelihood = linearConversion [0, 20, (_woundDamage / _thresholdWoundCount), 0.5, 30, true];
-            private _bleedingModifier = 0.25 + 8 * exp ((random [-4.5, -5, -6]) / _nastinessLikelihood);
-            private _painModifier = 0.05 + 2 * exp (-2 / _nastinessLikelihood);
+            // Config specifies bleeding and pain for worst possible wound
+            // Worse wound correlates to higher damage, damage is not capped at 1
+            // Damage to limbs is scaled higher than body/torso by engine
+            // Anything above this is guaranteed worst wound possible
+            private _worstDamage = [2, 4] select (_bodyPartNToAdd > 1);
 
-            private _bleeding = _injuryBleedingRate * _bleedingModifier;
+            // More wounds means more likely to get nasty wound
+            private _bleedModifier = linearConversion [0.1, _worstDamage, _woundDamage * _i, 0.25, 1, true];
+            private _painModifier = random [0.25, _bleedModifier, 1]; // Pain isn't directly scaled to bleeding
+
+            private _bleeding = _injuryBleedingRate * _bleedModifier;
             private _pain = _injuryPain * _painModifier;
             _painLevel = _painLevel + _pain;
 
-            // wound category (minor [0..0.5], medium[0.5..1.0], large[1.0+])
-            private _category = floor linearConversion [0, 1, _bleedingModifier, 0, 2, true];
+            // wound category (minor [0.25-0.5], medium [0.5-0.75], large [0.75-1])
+            private _category = floor linearConversion [0.25, 1, _bleedModifier, 0, 2.999, true];
 
             private _classComplex = 10 * _woundClassIDToAdd + _category;
 
