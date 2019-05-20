@@ -93,14 +93,16 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
 
-            // Config specifies bleeding and pain for worst possible wound
-            // Worse wound correlates to higher damage, damage is not capped at 1
             // Damage to limbs is scaled higher than body/torso by engine
             // Anything above this is guaranteed worst wound possible
-            private _worstDamage = [2, 4] select (_bodyPartNToAdd > 1);
+            private _worstDamage = [1.8, 4] select (_bodyPartNToAdd > 1);
 
             // More wounds means more likely to get nasty wound
-            private _bleedModifier = linearConversion [0.1, _worstDamage, _woundDamage * _i, 0.25, 1, true];
+            private _countModifier = 1 + random(_i - 1);
+
+            // Config specifies bleeding and pain for worst possible wound
+            // Worse wound correlates to higher damage, damage is not capped at 1
+            private _bleedModifier = linearConversion [0.1, _worstDamage, _woundDamage * _countModifier, 0.25, 1, true];
             private _painModifier = (_bleedModifier * random [0.7, 1, 1.3]) min 1; // Pain isn't directly scaled to bleeding
 
             private _bleeding = _injuryBleedingRate * _bleedModifier;
