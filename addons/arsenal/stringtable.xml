@@ -365,7 +365,7 @@
             <Korean>잘못된 형식 입력됨</Korean>
             <Chinese>提供的格式錯誤</Chinese>
             <Chinesesimp>提供的格式错误</Chinesesimp>
-            <Russian>Указан неверный формат</Russian>
+            <Russian>Неверный формат импорта</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_importedDefault">
             <English>Default loadouts list imported from clipboard</English>
