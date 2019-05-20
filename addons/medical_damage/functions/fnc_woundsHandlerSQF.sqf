@@ -101,14 +101,14 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
             // More wounds means more likely to get nasty wound
             private _bleedModifier = linearConversion [0.1, _worstDamage, _woundDamage * _i, 0.25, 1, true];
-            private _painModifier = random [0.25, _bleedModifier, 1]; // Pain isn't directly scaled to bleeding
+            private _painModifier = (_bleedModifier * random [0.7, 1, 1.3]) min 1; // Pain isn't directly scaled to bleeding
 
             private _bleeding = _injuryBleedingRate * _bleedModifier;
             private _pain = _injuryPain * _painModifier;
             _painLevel = _painLevel + _pain;
 
-            // wound category (minor [0.25-0.5], medium [0.5-0.75], large [0.75-1])
-            private _category = floor linearConversion [0.25, 1, _bleedModifier, 0, 2.999, true];
+            // wound category (minor [0.25-0.5], medium [0.5-0.75], large [0.75+])
+            private _category = floor linearConversion [0.25, 0.75, _bleedModifier, 0, 2, true];
 
             private _classComplex = 10 * _woundClassIDToAdd + _category;
 
