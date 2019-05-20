@@ -425,7 +425,7 @@
             <Korean>이름칸이 비었습니다!</Korean>
             <Chinese>名稱欄位為空!</Chinese>
             <Chinesesimp>名称栏位为空!</Chinesesimp>
-            <Russian>Поле имени пусто!</Russian>
+            <Russian>Поле имени пустое!</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveAuthorError">
             <English>You are the author of this loadout</English>
