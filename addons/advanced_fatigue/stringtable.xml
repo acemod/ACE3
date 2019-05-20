@@ -151,7 +151,7 @@
             <Italian>Abilitato</Italian>
             <Chinese>啟用</Chinese>
             <Chinesesimp>启用</Chinesesimp>
-            <Russian>Включено</Russian>
+            <Russian>Включена</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
             <English>Enables/disables Advanced Fatigue.</English>
