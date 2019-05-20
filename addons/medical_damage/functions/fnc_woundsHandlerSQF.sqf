@@ -93,9 +93,9 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
 
-            // Damage to limbs is scaled higher than body/torso by engine
-            // Anything above this is guaranteed worst wound possible
-            private _worstDamage = [1.8, 4] select (_bodyPartNToAdd > 1);
+            // Damage to limbs/head is scaled higher than torso by engine
+            // Anything above this value is guaranteed worst wound possible
+            private _worstDamage = [2, 1, 4, 4, 4, 4] select _bodyPartNToAdd;
 
             // More wounds means more likely to get nasty wound
             private _countModifier = 1 + random(_i - 1);
