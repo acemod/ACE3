@@ -809,7 +809,7 @@
             <Japanese>暗視装置への対応有無</Japanese>
             <Polish>Wsparcie noktowizyjne</Polish>
             <Italian>Supporto visore notturno</Italian>
-            <Russian>Поддержка Ночного видения</Russian>
+            <Russian>Поддержка ночного видения</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
             <English>Primary supported</English>
