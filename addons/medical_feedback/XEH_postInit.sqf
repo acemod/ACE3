@@ -23,6 +23,11 @@ GVAR(heartBeatEffectRunning) = false;
 
     if (_unit != ACE_player) exitWith {};
 
+    if (_unconscious && {cameraView == "GUNNER"} && {(vehicle _unit) != _unit} &&  {cameraOn == vehicle _unit}) then {
+        TRACE_2("exiting gunner view",cameraOn,cameraView);
+        ACE_player switchCamera "INTERNAL";
+    };
+
     // Toggle unconscious player's ability to talk in radio addons
     if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
         _unit setVariable ["tf_voiceVolume", [1, 0] select _unconscious, true];
