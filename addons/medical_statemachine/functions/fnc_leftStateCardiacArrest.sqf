@@ -21,7 +21,7 @@ params ["_unit"];
 _unit setVariable [QGVAR(cardiacArrestTime), nil];
 _unit setVariable [QEGVAR(medical,cardiacArrestStart), nil];
 
-// Temporary fix for vitals loop on cardiac arrest exit
-_unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
+// Vitals loop is halted during cardiac arrest, so this resets the time tracking for it
+_unit setVariable [QEGVAR(medical_vitals,lastTimeUpdated), CBA_missionTime];
 
 [_unit, false] call EFUNC(medical_status,setCardiacArrest);
