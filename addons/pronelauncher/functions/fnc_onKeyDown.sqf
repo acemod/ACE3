@@ -22,7 +22,9 @@
 params ["","_key"];
 
 if !(isNull objectParent ACE_player) exitWith {false};
-if (currentWeapon ACE_player != secondaryWeapon ACE_player) exitWith {false};
+private _launcherWeapon = secondaryWeapon ACE_player;
+if (_launcherWeapon isEqualTo "") exitwith {false};
+if (currentWeapon ACE_player != _launcherWeapon) exitWith {false};
 
 private _stance = stance ACE_player;
 private _keysMoveDown = actionKeys "moveDown";
