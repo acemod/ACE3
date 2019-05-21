@@ -85,10 +85,10 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
         class AmovPpneMrunSrasWlnrDf: AmovPpneMstpSrasWlnrDnon {
             speed = 0.600541;
             duty = 0.6;
-            disableWeapons = true;
-            disableWeaponsLong = true;
-            enableMissile = false;
-            canPullTrigger = false;
+            disableWeapons = 1;
+            disableWeaponsLong = 1;
+            enableMissile = 0;
+            canPullTrigger = 0;
             actions = "ACE_LauncherProneActions";
         };
         class AmovPpneMrunSrasWlnrDfl: AmovPpneMrunSrasWlnrDf {
@@ -129,7 +129,7 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
         class ProneLauncher_To_ProneRifle: AmovPpneMrunSrasWlnrDl {
             speed = 0.9375;
             duty = 0.6;
-            disableWeapons = true;
+            disableWeapons = 1;
             actions = "ACE_LauncherProneActions";
             interpolateFrom[] = {
                 "ACE_LauncherProne", 0.015
@@ -141,7 +141,7 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
         class ProneLauncher_To_ProneRifle_End: AmovPpneMrunSrasWlnrDf {
             speed = 0.9375;
             duty = 0.6;
-            disableWeapons = true;
+            disableWeapons = 1;
             actions = "ACE_LauncherProneActions";
             interpolateTo[] = {
                 "AmovPpneMstpSrasWrflDnon", 0.02,
@@ -200,10 +200,10 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
             actions = "ACE_LauncherProneActions";
             speed = 0.7375;
             duty = 0.6;
-            disableWeapons = true;
-            disableWeaponsLong = true;
-            enableMissile = false;
-            canPullTrigger = false;
+            disableWeapons = 1;
+            disableWeaponsLong = 1;
+            enableMissile = 0;
+            canPullTrigger = 0;
             interpolateFrom[] = {
                 "ACE_LauncherProne", 0.02
             };
@@ -215,10 +215,10 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
             actions = "ACE_LauncherProneActions";
             speed = 0.7375;
             duty = 0.6;
-            disableWeapons = true;
-            disableWeaponsLong = true;
-            enableMissile = false;
-            canPullTrigger = false;
+            disableWeapons = 1;
+            disableWeaponsLong = 1;
+            enableMissile = 0;
+            canPullTrigger = 0;
             interpolateTo[] = {
                 "LauncherProne_Reload_End", 0.005
             };
@@ -227,10 +227,10 @@ class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in whic
             actions = "ACE_LauncherProneActions";
             speed = 0.7375;
             duty = 0.6;
-            disableWeapons = true;
-            disableWeaponsLong = true;
-            enableMissile = false;
-            canPullTrigger = false;
+            disableWeapons = 1;
+            disableWeaponsLong = 1;
+            enableMissile = 0;
+            canPullTrigger = 0;
             interpolateTo[] = {
                 "ACE_LauncherProne", 0.02
             };
