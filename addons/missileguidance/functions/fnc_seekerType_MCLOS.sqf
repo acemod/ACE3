@@ -27,6 +27,9 @@ if (isNil "_initialized") then {
     _seekerState pushBack true;
 };
 
+// Another missile was fired after this one, fly straight
+if (GVAR(mclosMissile) != _projectile) exitWith {[0, 1, 0]};
+
 private _vx = GVAR(mclosInput)#MCLOS_RIGHT - GVAR(mclosInput)#MCLOS_LEFT;
 private _vz = GVAR(mclosInput)#MCLOS_UP    - GVAR(mclosInput)#MCLOS_DOWN;
 private _steerVector = vectorNormalized [_vx, 1, _vz];
