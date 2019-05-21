@@ -279,7 +279,7 @@
             <Chinesesimp>夜视镜效果程度</Chinesesimp>
             <French>Intensité des effets</French>
             <Polish>Skala Efektów NVG</Polish>
-            <Russian>Степень еффектов ПНВ</Russian>
+            <Russian>Степень эффектов ПНВ</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>

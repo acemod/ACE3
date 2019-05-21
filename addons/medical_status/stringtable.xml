@@ -79,7 +79,7 @@
             <Key ID="STR_ACE_Medical_Status_ivFlowRate_Description">
                 <English>Effects how quickly IV Bags will have effect</English>
                 <Japanese>IV による輸血速度を変更できます</Japanese>
-                <Russian>Определяет, насколько быстро подействуют еффекты внутривенного переливания</Russian>
+                <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
             </Key>
         </Container>
     </Package>

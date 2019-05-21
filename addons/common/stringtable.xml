@@ -533,7 +533,7 @@
             <Japanese>許可リスト内の PBO を検査</Japanese>
             <Korean>검사 제외 PBO</Korean>
             <Polish>Sprawdź białą listę PBO</Polish>
-            <Russian>Проверить вайтлист PBO</Russian>
+            <Russian>Проверить белый список PBO</Russian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>

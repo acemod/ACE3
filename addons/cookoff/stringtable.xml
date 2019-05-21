@@ -119,7 +119,7 @@
             <Chinesesimp>殉爆发生机率系数</Chinesesimp>
             <French>Coefficient de probabilité du cook off</French>
             <Polish>Współczynnik prawdopodobieństwa samozapłonu</Polish>
-            <Russian>Коеффициент вероятности возгорания</Russian>
+            <Russian>Коэффициент вероятности возгорания</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
@@ -130,7 +130,7 @@
             <Chinesesimp>调整殉爆发生机率系数。值越高代表越容易发生殉爆。</Chinesesimp>
             <French>Multiplicateur pour la probabilité du cook off. Plus la valeur est élevée, plus la probabilité de cook off est haute.</French>
             <Polish>Mnożnik prawdopodobieństwa samozapłonu. Większa wartość oznacza większe prawdopodobieństwo samozapłonu</Polish>
-            <Russian>Множитель коеффициента вероятности возгорания. Чем выше значение, тем выше вероятность.</Russian>
+            <Russian>Множитель коэффициента вероятности возгорания. Чем выше значение, тем выше вероятность.</Russian>
         </Key>
     </Package>
 </Project>

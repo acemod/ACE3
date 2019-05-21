@@ -76,7 +76,7 @@
             <Chinese>載具已上鎖</Chinese>
             <Polish>Pojazd zablokowany</Polish>
             <Korean>차량 잠김</Korean>
-            <Russian>Техника закрыт</Russian>
+            <Russian>Техника закрыта</Russian>
         </Key>
         <Key ID="STR_ACE_QuickMount_Speed">
             <English>Maximum Speed (km/h)</English>

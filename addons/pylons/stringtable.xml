@@ -71,7 +71,7 @@
             <German>Außenlaststationen, die rot markiert sind, müssen manuell aufmunitioniert werden.</German>
             <French>Les pylônes colorés en rouge devront être réarmés manuellement.</French>
             <Polish>Pylony, które są w kolorze czerwonym muszą być manualnie dozbrojone.</Polish>
-            <Russian>Пилоны, окрашеные красным, должны быть переоборудованы вручную</Russian>
+            <Russian>Пилоны, окрашенные красным, должны быть переоборудованы вручную</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>
