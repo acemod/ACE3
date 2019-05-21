@@ -19,7 +19,7 @@
  * Public: No
  */
 
-params ["","_key"];
+params ["", "_key"];
 
 if !(isNull objectParent ACE_player) exitWith {false};
 private _launcherWeapon = secondaryWeapon ACE_player;
