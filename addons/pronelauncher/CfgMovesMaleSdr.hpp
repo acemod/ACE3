@@ -1,7 +1,7 @@
-class CfgMovesMaleSdr: CfgMovesBasic { // Override CfgMovesMaleSdr class in which all animation states and gestures are stored. You can also make your own class but you need to make sure your unit will be using it. . Usually leave as is.
-    class Default; // External class reference
-    class TransAnimBase; // External class reference
-    class AmovPpneMstpSrasWlnrDnon; // External class reference
+class CfgMovesMaleSdr: CfgMovesBasic {
+    class Default;
+    class TransAnimBase;
+    class AmovPpneMstpSrasWlnrDnon;
     class States {
         //Prone Stopped Launcher
         class ACE_LauncherProne: AmovPpneMstpSrasWlnrDnon {

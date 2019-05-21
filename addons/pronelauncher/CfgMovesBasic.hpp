@@ -1,19 +1,19 @@
 class CfgMovesBasic {
-    class Default;    // External class reference
-    class NoActions; // External class reference
+    class Default;
+    class NoActions;
     class Actions {
-        class CivilStandActions;    // External class reference
-        class CivilProneActions : CivilStandActions {
+        class CivilStandActions;
+        class CivilProneActions: CivilStandActions {
             SecondaryWeapon = "ACE_LauncherProne";
             weaponOn = "ACE_LauncherProne";
         };
-        class PistolStandActions;    // External class reference
-        class PistolProneActions : PistolStandActions {
+        class PistolStandActions;
+        class PistolProneActions: PistolStandActions {
             SecondaryWeapon = "ACE_LauncherProne";
             weaponOn = "ACE_LauncherProne";
         };
-        class RifleBaseStandActions;    // External class reference
-        class RifleProneActions : RifleBaseStandActions {
+        class RifleBaseStandActions;
+        class RifleProneActions: RifleBaseStandActions {
             SecondaryWeapon = "ACE_LauncherProne";
             weaponOn = "ACE_LauncherProne";
             weaponOff = "AmovPpneMstpSrasWrflDnon";
