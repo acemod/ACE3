@@ -21,6 +21,7 @@ _seekerParams params ["", "", "_seekerMaxRange", "_seekerMinRange"];
 
 private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance";
 private _maxCorrectableDistance = [_config >> "correctionDistance", "NUMBER", DEFAULT_CORRECTION_DISTANCE] call CBA_fnc_getConfigEntry;
+private _distanceAheadOfMissile = [_config >> "missileLeadDistance", "NUMBER", DEFAULT_LEAD_DISTANCE] call CBA_fnc_getConfigEntry;
 private _maxDistanceSqr = _seekerMaxRange * _seekerMaxRange;
 private _minDistanceSqr = _seekerMinRange * _seekerMinRange;
 
@@ -43,4 +44,5 @@ _attackProfileStateParams set [3, _crosshairOffset]; // crosshair offset
 _attackProfileStateParams set [4, _maxDistanceSqr]; // max distance squared used for wire cut
 _attackProfileStateParams set [5, _minDistanceSqr];
 _attackProfileStateParams set [6, _wireCutSource];
+_attackProfileStateParams set [7, _distanceAheadOfMissile];
 

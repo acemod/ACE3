@@ -140,7 +140,7 @@ if (_onFiredFunc != "") then {
 //      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo"];
 //          _targetLaunchParams params ["_target", "_targetPos", "_launchPos"];
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
-//      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange"];
+//      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
 [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 

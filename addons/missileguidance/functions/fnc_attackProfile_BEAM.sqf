@@ -19,11 +19,15 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "", "_wireCutSource"];
+_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_distanceAheadOfMissile"];
 
 private _projectilePos = getPosASL _projectile;
+private _shooterPos = getPosASL _shooter;
 
-if (((getPosASL _shooter) vectorDistanceSqr _projectilePos) > _seekerMaxRangeSqr || { _seekerTargetPos isEqualTo [0, 0, 0] }) exitWith {
+private _shooterDir = vectorNormalized(_seekerTargetPos vectorDiff _shooterPos);
+private _distanceToProjectile = _shooterPos vectorDistanceSqr _projectilePos;
+
+if (_distanceToProjectile > _seekerMaxRangeSqr || { _seekerTargetPos isEqualTo [0, 0, 0] } || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
     // return position 50m infront of projectile
     _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 0])
 };
@@ -37,7 +41,7 @@ private _fovImpulse = 1 min (_magnitude / _maxCorrectableDistance); // the simul
 // Adjust the impulse due to near-zero values creating wobbly missiles?
 private _correction = _fovImpulse;
 
+
 _relativeCorrection = (vectorNormalized _relativeCorrection) vectorMultiply _correction;
-
-_projectilePos vectorDiff (_projectile vectorModelToWorld _relativeCorrection);
-
+private _returnPos = _projectilePos vectorDiff (_projectile vectorModelToWorld _relativeCorrection);
+_returnPos vectorAdd (_shooterDir vectorMultiply _distanceAheadOfMissile)

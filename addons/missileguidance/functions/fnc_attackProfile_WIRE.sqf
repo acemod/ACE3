@@ -19,11 +19,15 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "", "_wireCutSource"];
+_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "_seekerMinRangeSqr", "_wireCutSource", "_distanceAheadOfMissile"];
 
 private _projectilePos = getPosASL _projectile;
+private _shooterPos = getPosASL _shooter;
 
-if ((((getPosASL _shooter) vectorDistanceSqr _projectilePos) > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
+private _shooterDir = vectorNormalized(_seekerTargetPos vectorDiff _shooterPos);
+private _distanceToProjectile = _shooterPos vectorDistanceSqr _projectilePos;
+
+if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
     // wire snap, random direction
     if (_randomVector isEqualTo [0, 0, 0]) then {
         _randomVector = RANDOM_VECTOR_3D vectorMultiply 300;
@@ -35,7 +39,7 @@ if ((((getPosASL _shooter) vectorDistanceSqr _projectilePos) > _seekerMaxRangeSq
     _projectilePos vectorAdd _randomVector
 };
 
-if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith {
+if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
     // cut wire if its caught on terrain
     /*if !(lineIntersectsSurfaces [getPosASL _shooter, _projectilePos, _shooter] isEqualTo []) then {
         _attackProfileStateParams set [1, true];
@@ -53,7 +57,7 @@ private _fovImpulse = 1 min (_magnitude / _maxCorrectableDistance); // the simul
 // Adjust the impulse due to near-zero values creating wobbly missiles?
 private _correction = _fovImpulse;
 
+
 _relativeCorrection = (vectorNormalized _relativeCorrection) vectorMultiply _correction;
-
-_projectilePos vectorDiff (_projectile vectorModelToWorld _relativeCorrection);
-
+private _returnPos = _projectilePos vectorDiff (_projectile vectorModelToWorld _relativeCorrection);
+_returnPos vectorAdd (_shooterDir vectorMultiply _distanceAheadOfMissile)

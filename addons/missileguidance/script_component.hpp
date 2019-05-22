@@ -24,6 +24,6 @@
     [_r * cos _theta, _r * sin _theta, _z]\
 })
 
-#define DEFAULT_CORRECTION_DISTANCE 10
-#define DEFAULT_LEAD_DISTANCE 50
+#define DEFAULT_CORRECTION_DISTANCE 2
+#define DEFAULT_LEAD_DISTANCE 5
 
