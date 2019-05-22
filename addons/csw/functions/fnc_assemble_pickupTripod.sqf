@@ -22,25 +22,25 @@
 
     private _tripodClassname = getText(configFile >> "CfgVehicles" >> (typeof _tripod) >> QUOTE(ADDON) >> "disassembleTo");
     private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _tripodClassname >> QUOTE(ADDON) >> "pickupTime");
-    
+
     private _onFinish = {
         params ["_args"];
         _args params ["_tripod", "_player", "_tripodClassname"];
         TRACE_3("assemble_pickupTripod finish",_tripod,_player,_tripodClassname);
-        
+
         deleteVehicle _tripod;
         _player addWeaponGlobal _tripodClassname;
         [_player, "PutDown"] call EFUNC(common,doGesture);
     };
-    
+
     private _condition = {
         params ["_args"];
         _args params ["_tripod", "_player"];
-        
+
         !(isNull _tripod) && { (secondaryWeapon _player) isEqualTo "" }
-        
+
     };
-    
+
     TRACE_3("",_pickupTime,typeOf _tripod,_tripodClassname);
     [TIME_PROGRESSBAR(_pickupTime), [_tripod, _player, _tripodClassname], _onFinish, {}, localize LSTRING(PickupTripod_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;

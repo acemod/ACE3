@@ -30,7 +30,7 @@ class GVAR(groups) {
         rhs_mag_100rnd_127x99_mag_Tracer_Yellow = 1;
         CUP_100Rnd_TE4_Yellow_Tracer_127x99_M = 1;
     };
-    
+
     // Soviet HMG (12.7x108mm)
     class GVAR(50Rnd_127x108_mag) {
         rhs_mag_127x108mm_50 = 1;
@@ -41,30 +41,35 @@ class GVAR(groups) {
         CUP_50Rnd_TE3_LRT5_127x107_DSHKM_M = 1; // not sure why cup uses 107 for the DSHKM?
         CUP_150Rnd_TE3_LRT5_127x107_DSHKM_M = 1;
     };
-    
+
     // A3 20mm GMG
     class GVAR(20Rnd_20mm_G_belt) {
         40Rnd_20mm_G_belt = 1;
         200Rnd_20mm_G_belt = 1;
     };
 
-    // A3 82mm mortar shells (Allows the normal mk6 to be reloaded from the mk6 ammo handling mags) 
+    // A3 82mm mortar shells (Allows the normal mk6 to be reloaded from the mk6 ammo handling mags)
     class ACE_1Rnd_82mm_Mo_HE {
+        ACE_1Rnd_82mm_Mo_HE = 1;
         8Rnd_82mm_Mo_shells = 1;
     };
     class ACE_1Rnd_82mm_Mo_Smoke {
+        ACE_1Rnd_82mm_Mo_Smoke = 1;
         8Rnd_82mm_Mo_Smoke_white = 1;
     };
     class ACE_1Rnd_82mm_Mo_Illum {
+        ACE_1Rnd_82mm_Mo_Illum = 1;
         8Rnd_82mm_Mo_Flare_white = 1;
     };
     class ACE_1Rnd_82mm_Mo_HE_Guided {
+        ACE_1Rnd_82mm_Mo_HE_Guided = 1;
         8Rnd_82mm_Mo_guided = 1;
     };
     class ACE_1Rnd_82mm_Mo_HE_LaserGuided {
+        ACE_1Rnd_82mm_Mo_HE_LaserGuided = 1;
         8Rnd_82mm_Mo_LG = 1;
     };
-    
+
     // A3 Titans (Spike) - just use handheld magazines
     class Titan_AT {
         1Rnd_GAT_missiles = 1;

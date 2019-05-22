@@ -19,37 +19,38 @@ params ["_staticWeapon"];
 private _typeOf = typeOf _staticWeapon;
 private _configEnabled = (getNumber (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "enabled")) == 1;
 private _assemblyConfig = _configEnabled && {(getText (configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "disassembleWeapon")) != ""};
-private _proxyWeapon = getText(configFile >> "CfgVehicles" >> _typeOf >> "ace_csw" >> "proxyWeapon");
-private _enableAmmoHandling = GVAR(ammoHandling) || GVAR(defaultAssemblyMode);
-TRACE_6("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig,_proxyWeapon,_enableAmmoHandling);
+TRACE_4("staticWeaponInit",_staticWeapon,_typeOf,_configEnabled,_assemblyConfig);
 
-if (_configEnabled) then {
+if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
+    TRACE_1("adding AI fired handler",_staticWeapon);
     _staticWeapon addEventHandler ["Fired", LINKFUNC(ai_handleFired)];
 };
 
-if (_configEnabled && {local _staticWeapon}) then { // need to wait a frame to allow setting object vars during assembly
-    [FUNC(staticWeaponInit_unloadExtraMags), [_staticWeapon]] call CBA_fnc_execNextFrame;
-
-    if (_enableAmmoHandling && { !(_proxyWeapon isEqualTo "") }) then {
-        // toDo: mk6 ammo handling compatiblity here (changes weapon based on settings)
-        // if ((!isNil _proxyWeapon) && {_proxyWeapon isEqualType {}}) then { _proxyWeapon = [_staticWeapon, _typeOf] call _proxyWeapon; }; ?
-
-        private _currentWeapon = _staticWeapon weaponsTurret [0] select 0;
-        TRACE_2("swapping weapon",_currentWeapon,_proxyWeapon);
-        _staticWeapon removeWeaponTurret [_currentWeapon, [0]];
-        _staticWeapon addWeaponTurret [_proxyWeapon, [0]];
-    };
+TRACE_2("",local _staticWeapon,_staticWeapon turretLocal [0]);
+if (_configEnabled && {_staticWeapon turretLocal [0]}) then { // if turret is local to us, then handle mags/weapon
+    [{
+        params ["_staticWeapon"];
+        if (!alive _staticWeapon) exitWith { TRACE_1("dead/deleted",_staticWeapon); };
+        private _assemblyMode = [false, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 2]);
+        TRACE_2("turretLocal",_staticWeapon,_assemblyMode);
+        [_staticWeapon, [0], _assemblyMode] call FUNC(proxyWeapon);
+        [_staticWeapon, _assemblyMode] call FUNC(staticWeaponInit_unloadExtraMags);
+    }, [_staticWeapon]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
 };
 
-if (_assemblyConfig) then { // Disable vanilla assembly if assemblyMode eanbled
-    private _assemblyMode = [false, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 2]);
-    _staticWeapon setVariable [QGVAR(assemblyMode), 0];
-    if (_assemblyMode) then {
-        _staticWeapon setVariable [QGVAR(assemblyMode), 1];
-        [QGVAR(disableVanillaAssembly), [_staticWeapon]] call CBA_fnc_localEvent;
-    };
+if (_assemblyConfig) then {
+    [{
+        params ["_staticWeapon"];
+        if (!alive _staticWeapon) exitWith { TRACE_1("dead/deleted",_staticWeapon); };
+        private _assemblyMode = [false, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 2]);
+        TRACE_2("assemblyConfig present",_staticWeapon,_assemblyMode);
+        if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode eanbled
+            [QGVAR(disableVanillaAssembly), [_staticWeapon]] call CBA_fnc_localEvent;
+        };
+    }, [_staticWeapon]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
 };
 
+// Add interactions for players
 if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     GVAR(initializedStaticTypes) pushBack _typeOf;
     TRACE_1("Adding Actions",_typeOf);
@@ -59,9 +60,12 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         [_typeOf, 0, ["ACE_MainActions"], _disassembleAction] call EFUNC(interact_menu,addActionToClass);
     };
 
+
+    private _ammoActionPath = [];
     private _magazineLocation = getText (configFile >> "CfgVehicles" >> _typeOf >> QUOTE(ADDON) >> "magazineLocation");
-    private _condition = {
-        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+    private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+        // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
+        if ((GVAR(ammoHandling) == 0) && {!([false, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 2]))}) exitWith { false };
         [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)
     };
     private _childenCode = {
@@ -70,18 +74,13 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         END_COUNTER(getActions);
         _ret
     };
-
-    private _ammoActionPath = [];
-    // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
-    if (_enableAmmoHandling) then {
-        if (_configEnabled && {_magazineLocation != ""}) then {
-            private _positionCode = compile _magazineLocation;
-            private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
-            _ammoActionPath = [_typeOf, 0, [], _ammoAction] call EFUNC(interact_menu,addActionToClass);
-        } else {
-            private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode] call EFUNC(interact_menu,createAction);
-            _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
-        };
+    if (_configEnabled && {_magazineLocation != ""}) then {
+        private _positionCode = compile _magazineLocation;
+        private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
+        _ammoActionPath = [_typeOf, 0, [], _ammoAction] call EFUNC(interact_menu,addActionToClass);
+    } else {
+        private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode] call EFUNC(interact_menu,createAction);
+        _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (["ACE_reload"] call EFUNC(common,isModLoaded)) then {

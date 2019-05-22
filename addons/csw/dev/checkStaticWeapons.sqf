@@ -3,7 +3,7 @@
 
 // Dev only function to search for weapons used by static weapons
 // and check if their magazinese are compatible
-TRACE_1("Checking static weapons");
+INFO("Checking static weapons");
 
 private _staticWeaponConfigs = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(configName _x) isKindOf 'StaticWeapon'}", true];
 private _staticPublic = _staticWeaponConfigs select {(getNumber (_x >> "scope")) == 2};
@@ -72,3 +72,5 @@ private _logAll = false;
     //IGNORE_PRIVATE_WARNING ["_key", "_value"];
     INFO_2("[%1] has no carry varient - Used in %2",_key,_value);
 }] call CBA_fnc_hashEachPair;
+
+INFO("------ End -------");

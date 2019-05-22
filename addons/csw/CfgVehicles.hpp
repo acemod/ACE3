@@ -46,7 +46,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(Tripod_displayName);
                 selection = "";
-                distance = 2;
+                distance = 2.5;
                 condition = "true";
                 class GVAR(pickUp) {
                     displayName = CSTRING(Pickup_displayName);
@@ -57,6 +57,7 @@ class CfgVehicles {
                     displayName = CSTRING(MountWeapon_displayName);
                     condition = QUOTE(call FUNC(assemble_canDeployWeapon));
                     statement = QUOTE(call FUNC(assemble_deployWeapon));
+                    modifierFunction = QUOTE(call FUNC(assemble_deployWeaponModifier));
                 };
             };
         };
@@ -194,7 +195,7 @@ class CfgVehicles {
             disassembleWeapon = QGVAR(staticAACarry); // carry weapon [CfgWeapons]
             disassembleTurret = QGVAR(m3Tripod); // turret [CfgVehicles]
             desiredAmmo = 40;
-            ammoLoadTime = 15; // 4 rounsd per minute
+            ammoLoadTime = 15; // 4 rounds per minute
             ammoUnloadTime = 10;
         };
     };

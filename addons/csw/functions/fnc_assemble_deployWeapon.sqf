@@ -45,6 +45,10 @@
             private _csw = createVehicle [_assembledClassname, [0, 0, 0], [], 0, "NONE"];
             _csw setVariable [QGVAR(assemblyMode), 1, true]; // Explicitly set advanced assembly mode and broadcast
             _csw setVariable [QGVAR(emptyWeapon), true, false]; // unload gun, shouldn't need broadcast for this as it will be local to us
+            if (!GVAR(defaultAssemblyMode)) then {
+                TRACE_1("global disableVanillaAssembly event",_csw); // handles it being assembled when setting is disabled
+                [QGVAR(disableVanillaAssembly), [_csw]] call CBA_fnc_globalEvent;
+            };
             _csw setDir _tripodDir;
             _csw setPosATL _tripodPos;
             _csw setVectorUp (surfaceNormal _tripodPos);

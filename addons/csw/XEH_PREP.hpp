@@ -8,11 +8,14 @@ PREP(assemble_canPickupTripod);
 PREP(assemble_canPickupWeapon);
 PREP(assemble_deployTripod);
 PREP(assemble_deployWeapon);
+PREP(assemble_deployWeaponModifier);
 PREP(assemble_pickupTripod);
 PREP(assemble_pickupWeapon);
 
 PREP(canGetIn);
 PREP(getIn);
+
+PREP(proxyWeapon);
 
 PREP(reload_actionsLoad);
 PREP(reload_actionsUnload);

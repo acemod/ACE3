@@ -2,31 +2,35 @@
 <Project name="ACE">
     <Package name="CSW">
         <Key ID="STR_ACE_CSW_displayName">
-            <English>CSW</English>
+            <English>Crew Served Weapons</English>
         </Key>
         <Key ID="STR_ACE_CSW_Tripod_displayName">
             <English>CSW Tripod</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_TripodFolded_displayName">
-            <English>CSW Deployable Tripod</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_TripodLowFolded_displayName">
-            <English>CSW Deployable Tripod (Low)</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
-            <English>Mk6 Mortar Baseplate</English>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
+            <Czech>Rozložit</Czech>
+            <French>Démonter</French>
+            <German>%1 demontieren</German>
+            <Italian>Disassemblare</Italian>
+            <Polish>Złóż</Polish>
+            <Portuguese>Desmontar</Portuguese>
+            <Russian>Разобрать</Russian>
+            <Spanish>Desmonta</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_GetIn_displayName">
             <English>Get In</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_AmmoHandling_displayName">
-            <English>Ammo handling</English>
+            <Czech>Nastup</Czech>
+            <French>Embarquer</French>
+            <German>Einsteigen</German>
+            <Italian>A bordo</Italian>
+            <Polish>Wsiadać</Polish>
+            <Portuguese>Entrar</Portuguese>
+            <Russian>Войти</Russian>
+            <Spanish>Entrar</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_loadX">
             <English>Load %1</English>
@@ -54,10 +58,34 @@
             <English>Link %1</English>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
-            <English>Advanced assembly default</English>
+            <English>Advanced assembly</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
+            <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save extra ammo</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
+            <English>Store extra magazines next to static weapon</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_ammoHandling_displayName">
+            <English>Ammo handling</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_ammoHandling_description">
+            <English>Allow loading and unloading magazines</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_aiReloading_displayName">
+            <English>AI Reloading</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_aiReloading_description">
+            <English>AI will attempt to reload static weapons with available ammo</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
+            <English>Interaction Time Coefficent</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
+            <English>Scales time required to assemble and reload static weapons</English>
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
@@ -94,6 +122,15 @@
         </Key>
         <Key ID="STR_ACE_CSW_genericDescription">
             <English>Used to reload crew served weapons</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_TripodFolded_displayName">
+            <English>[CSW] Deployable Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_TripodLowFolded_displayName">
+            <English>[CSW] Deployable Tripod (Low)</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
+            <English>[CSW] Mk6 Mortar Baseplate</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticMortarBag_displayName">
             <English>[CSW] Mk6 Mortar Tube</English>

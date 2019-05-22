@@ -24,5 +24,5 @@
 #ifdef FAST_PROGRESSBARS
     #define TIME_PROGRESSBAR(X) ((X) * 0.075)
 #else
-    #define TIME_PROGRESSBAR(X) (X)
+    #define TIME_PROGRESSBAR(X) ((X) * GVAR(progressBarTimeCoefficent))
 #endif

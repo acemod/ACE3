@@ -20,6 +20,6 @@ params ["_staticWeapon"];
 private _assemblyMode = [false, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 2]);
 private _crewed = (crew _staticWeapon) isEqualTo [];
 private _deadCrew = !(alive (gunner _staticWeapon)); // need to eject body???
- 
+
 _assemblyMode && {(!_crewed) || _deadCrew}
 
