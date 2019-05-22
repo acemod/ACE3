@@ -8,14 +8,12 @@ class CfgWeapons {
 
     class FirstAidKit: ItemCore {
         type = 0;
-        EGVAR(arsenal,hide) = 1;
         class ItemInfo: InventoryFirstAidKitItem_Base_F {
             mass = 4;
         };
     };
     class Medikit: ItemCore {
         type = 0;
-        EGVAR(arsenal,hide) = 1;
         class ItemInfo: MedikitItem {
             mass = 60;
         };
