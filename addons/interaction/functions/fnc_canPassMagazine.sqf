@@ -19,11 +19,12 @@
 params ["_player", "_target", "_weapon"];
 
 if (!GVAR(enableMagazinePassing)) exitWith {false};
+if (_weapon isEqualTo "") exitWith {false};
 if (((vehicle _target) != _target) && {(vehicle _target) != (vehicle _player)}) exitWith {false};
 
-private _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-{
+private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
+
+(magazinesAmmoFull _player) findIf {
     _x params ["_className", "", "_loaded"];
-    if ((_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}) exitWith {true};
-    false
-} foreach (magazinesAmmoFull _player);
+    (_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}
+} > -1

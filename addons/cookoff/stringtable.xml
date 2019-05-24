@@ -1,42 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CookOff">
-        <Key ID="STR_ACE_CookOff_displayName">
-            <English>Cook off</English>
-            <Italian>Esplosione</Italian>
-            <Chinese>殉爆效果</Chinese>
-            <Chinesesimp>殉爆效果</Chinesesimp>
-            <Japanese>誘爆</Japanese>
-            <Korean>쿡오프</Korean>
-            <German>Durchzündung</German>
-            <French>Cook off</French>
-            <Polish>Samozapłon</Polish>
+        <Key ID="STR_ACE_CookOff_category_displayName">
+            <English>ACE Cook off</English>
+            <Italian>ACE Esplosione</Italian>
+            <Chinese>ACE 殉爆效果</Chinese>
+            <Chinesesimp>ACE 殉爆效果</Chinesesimp>
+            <Japanese>ACE 誘爆</Japanese>
+            <Korean>ACE 쿡오프</Korean>
+            <German>ACE Durchzündung</German>
+            <French>ACE Cook off</French>
+            <Polish>ACE Samozapłon</Polish>
         </Key>
-        <Key ID="STR_ACE_CookOff_enable_name">
-            <English>Enable cook off</English>
-            <German>Durchzündung ermöglichen</German>
-            <Czech>Povolit explozi munice</Czech>
-            <Russian>Включить воспламенение</Russian>
-            <Japanese>誘爆を有効化</Japanese>
-            <Korean>쿡오프 현상 활성화</Korean>
-            <Polish>Aktywuj efekty samozapłonu amunicji</Polish>
-            <French>Activer le cook off</French>
-            <Italian>Abilita Esplosione</Italian>
-            <Chinese>開啟殉爆效果</Chinese>
-            <Chinesesimp>开启殉爆效果</Chinesesimp>
+        <Key ID="STR_ACE_CookOff_enable_hd_name">
+            <English>Damage handling and turret effects</English>
+            <Japanese>損傷処理と砲塔の効果</Japanese>
         </Key>
-        <Key ID="STR_ACE_CookOff_enable_tooltip">
-            <English>Enables cook off and related vehicle destruction effects.</English>
-            <German>Ermöglicht Durchzündung und zugehörige Fahrzeug-Zerstörungseffekte.</German>
-            <Czech>Povolí explozi munice a její následné ničivé efekty.</Czech>
-            <Russian>Включает воспламенение и сопутствующие эффекты повреждения техники.</Russian>
-            <Japanese>誘爆を有効化し、車両が誘爆によって破壊されていきます。</Japanese>
-            <Korean>쿡오프 현상을 활성화 하고 관련된 차량에 폭발 이펙트를 적용합니다.</Korean>
-            <Polish>Aktywuje efekt samozapłonu amunicji na zniszczonych pojazdach.</Polish>
-            <French>Active le cook-off (autocombustion des munitions) et les effets de destruction liés.</French>
-            <Italian>Abilita l'esplosione e i relativi effetti di distruzione del veicolo.</Italian>
-            <Chinese>開啟此功能後，將使有關載具在損毀時有殉爆的效果</Chinese>
-            <Chinesesimp>开启此功能后，将使有关载具在损毁时有殉爆的效果。</Chinesesimp>
+        <Key ID="STR_ACE_CookOff_enable_hd_tooltip">
+            <English>Changes damage handling for cook off and turret explosion effects</English>
+            <Japanese>誘爆の損傷処理と砲塔の爆発効果を変更します。</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <English>Wreck (Turret)</English>

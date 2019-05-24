@@ -19,8 +19,8 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
-["blockSprint", false, []] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
+["blockSprint", false, ["ace_advanced_fatigue", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
@@ -37,6 +37,11 @@
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setAnimSpeedCoef), {
+    params ["_object", "_set"];
+    _object setAnimSpeedCoef _set;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setCaptive), {
@@ -81,6 +86,11 @@
     params ["_vehicle", "_set"];
     _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
     _vehicle engineOn false;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setMass), {
+    params ["_object", "_mass"];
+    _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
@@ -135,8 +145,22 @@ if (isServer) then {
 [QGVAR(playActionNow), {(_this select 0) playActionNow (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
-[QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVanillaHitPointDamage), {
+    params ["_object", "_hitPointAnddamage"];
+    private _damageDisabled = !isDamageAllowed _object;
+
+    if (_damageDisabled) then {
+        _object allowDamage true;
+    };
+
+    _object setHitPointDamage _hitPointAnddamage;
+
+    if (_damageDisabled) then {
+        _object allowDamage false;
+    };
+}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
