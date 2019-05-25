@@ -755,7 +755,7 @@
             <Japanese>装備画面を開く</Japanese>
             <Italian>Apri la pagina degli equipaggiamenti</Italian>
             <Polish>Otwórz ekran zestawów</Polish>
-            <Russian>Открыть окно наборов снаряжения</Russian>
+            <Russian>Открыть окно комплектов экипировки</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
             <English>Export current / default loadouts</English>
