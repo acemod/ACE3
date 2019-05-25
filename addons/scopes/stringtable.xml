@@ -131,7 +131,7 @@
             <Italian>I mirini a lunga gittata verranno azzerrati a questa distanza</Italian>
             <Chinesesimp>高倍率瞄准镜将归零在这个距离上</Chinesesimp>
             <Chinese>高倍率瞄準鏡將歸零在這個距離上</Chinese>
-            <Russian>Дальность, на которую будуть пристреляны прицелы с высокой кратностью</Russian>
+            <Russian>Дальность, на которую будут пристреляны прицелы с высокой кратностью</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
             <English>Reference temperature</English>
@@ -179,7 +179,7 @@
             <Italian>Pressione barometrica a cui è stato azzerato il mirino</Italian>
             <Chinesesimp>武器参考多少大气压力来进行归零。</Chinesesimp>
             <Chinese>武器參考多少大氣壓力來進行歸零。</Chinese>
-            <Russian>Давление, при котором выполненапристрелка прицела</Russian>
+            <Russian>Давление, при котором выполнена пристрелка прицела</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>

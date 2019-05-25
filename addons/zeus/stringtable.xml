@@ -1076,7 +1076,7 @@
             <Chinese>火力壓制</Chinese>
             <Polish>Ogień zaporowy</Polish>
             <Korean>엄호사격</Korean>
-            <Russian>Огоннь на подавление</Russian>
+            <Russian>Огонь на подавление</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullArsenal_DisplayName">
             <English>Add Full Arsenal</English>
@@ -1156,7 +1156,7 @@
             <Chinese>切換目標</Chinese>
             <Italian>Scambia obiettivo</Italian>
             <Polish>Przełącz cel</Polish>
-            <Russian>Переключить цель</Russian>
+            <Russian>Кому переключить</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
@@ -1189,7 +1189,7 @@
             <Chinesesimp>切换手电筒</Chinesesimp>
             <Korean>손전등 토글</Korean>
             <Polish>Przełącz latarki</Polish>
-            <Russian>Вкл/Выкл Фонарики</Russian>
+            <Russian>Вкл/Выкл Фонари</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_Flashlights">
             <English>Flashlights</English>
@@ -1201,7 +1201,7 @@
             <Chinesesimp>手电筒</Chinesesimp>
             <Korean>손전등</Korean>
             <Polish>Latarki</Polish>
-            <Russian>Фонарики</Russian>
+            <Russian>Фонари</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_AddGear">
             <English>Add Gear</English>
@@ -1268,7 +1268,7 @@
             <Chinesesimp>平均分配</Chinesesimp>
             <Korean>평균 채우기</Korean>
             <Polish>Równe wypełnienie</Polish>
-            <Russian>Равномерное заполнение</Russian>
+            <Russian>Равномерно</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
@@ -1290,7 +1290,7 @@
             <Chinesesimp>随机分配</Chinesesimp>
             <Korean>무작위 채우기</Korean>
             <Polish>Losowe wypełnienie</Polish>
-            <Russian>Рандомно</Russian>
+            <Russian>Случайно</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
