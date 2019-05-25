@@ -197,7 +197,7 @@
             <Korean>내 로드아웃</Korean>
             <Chinese>我的裝備</Chinese>
             <Chinesesimp>我的装备</Chinesesimp>
-            <Russian>Мои наборы снаряжения</Russian>
+            <Russian>Мои комплекты</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsTooltip">
             <English>Loadouts saved in your profile</English>
@@ -293,7 +293,7 @@
             <Korean>선택한 로드아웃 공유 혹은 공유중지</Korean>
             <Chinese>開始/停止分享當前選擇的裝備</Chinese>
             <Chinesesimp>开始/停止分享当前选择的装备</Chinesesimp>
-            <Russian>Поделиться набором или закрыть общий доступ к нему</Russian>
+            <Russian>Открыть или закрыть общий доступ к комплекту экипировки</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSharePrivateText">
             <English>Private</English>
@@ -593,7 +593,7 @@
             <German>Sekundärmagazin</German>
             <Chinese>次要武器彈匣</Chinese>
             <Chinesesimp>次要武器弹匣</Chinesesimp>
-            <Russian>Вторичный магазин </Russian>
+            <Russian>Вторичный магазин</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_settingCategory">
             <English>ACE Arsenal</English>
