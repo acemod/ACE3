@@ -190,7 +190,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
-            <Russian>Максимальная дистанция следования за камерой от цели</Russian>
+            <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
@@ -333,7 +333,7 @@
             <Korean>보기 모드</Korean>
             <French>Mode de vision</French>
             <Polish>Tryb Wizji</Polish>
-            <Russian>Режим зрения</Russian>
+            <Russian>Режим видения</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>

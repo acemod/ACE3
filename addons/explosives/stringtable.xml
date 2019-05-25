@@ -1027,7 +1027,7 @@
             <Chinese>爆炸範圍</Chinese>
             <Italian>Raggio di detonazione</Italian>
             <Polish>Zasięg wybuchu</Polish>
-            <Russian>Дальность взрывчатки</Russian>
+            <Russian>Дальность подрыва</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>

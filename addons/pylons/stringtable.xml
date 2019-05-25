@@ -23,7 +23,7 @@
             <German>Ausrüstung für %1</German>
             <French>Équipements pour %1</French>
             <Polish>Wyposażenia dla %1</Polish>
-            <Russian>Снаряжение для %1</Russian>
+            <Russian>Оснащение %1</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylons">
             <English>Configure Pylons</English>
@@ -191,7 +191,7 @@
             <German>Neue Außenlaststationen. aufmunitionieren</German>
             <French>Réarmer les nouveaux pylônes</French>
             <Polish>Dozbrój Nowe Pylony</Polish>
-            <Russian>Перевооружить Новые пилоны</Russian>
+            <Russian>Перевооружать новые пилоны</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons_description">
             <English>Automatically rearm new pylons from the nearest rearm vehicle.</English>
@@ -203,7 +203,7 @@
             <German>Neue Außenlaststationen. automatisch vom nächsten Munitionsfahrzeug aufmunitionieren</German>
             <French>Réarmer automatiquement tout les nouveau pylônes depuis le véhicule de munitions le plus proche.</French>
             <Polish>Automatycznie dozbrajaj nowe pylony z najbliższego pojazdu dozbrajania.</Polish>
-            <Russian>Автоматически перевооружать пилоны из ближайшего грузовика с боеприпасами</Russian>
+            <Russian>Автоматически перевооружать новые пилоны из ближайшей техники с боеприпасами</Russian>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon">
             <English>Time Per Pylon</English>

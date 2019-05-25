@@ -294,7 +294,7 @@
             <Italian>Volo non Livellato</Italian>
             <Chinese>此架飛機並無保持水平飛行</Chinese>
             <Chinesesimp>此架飞机并无保持水平飞行</Chinesesimp>
-            <Russian>Неравномерный полет</Russian>
+            <Russian>Неподходящее положение</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coefficient</English>

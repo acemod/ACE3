@@ -23,7 +23,7 @@
             <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
             <Chinesesimp>高压影响的范围 [预设: 1]</Chinesesimp>
             <Chinese>高壓影響的範圍 [預設: 1]</Chinese>
-            <Russian>Степень избыточного давления [По умолчанию: 1]</Russian>
+            <Russian>Степень зависимости избыточного давления от расстояния [По умолчанию: 1]</Russian>
         </Key>
         <Key ID="STR_ACE_overpressure_statBackblastRange">
             <English>Backblast range</English>

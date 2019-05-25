@@ -16,12 +16,12 @@
         <Key ID="STR_ACE_CookOff_enable_hd_name">
             <English>Damage handling and turret effects</English>
             <Japanese>損傷処理と砲塔の効果</Japanese>
-            <Russian>Обработка повреждений и эффектов детонации</Russian>
+            <Russian>Обработка урона и эффектов срыва башни</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_tooltip">
             <English>Changes damage handling for cook off and turret explosion effects</English>
             <Japanese>誘爆の損傷処理と砲塔の爆発効果を変更します。</Japanese>
-            <Russian>Изменяет обработку урона при возгорания и эффектов детонации</Russian>
+            <Russian>Изменяет обработку урона для возгорания и эффекта срыва башни</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <English>Wreck (Turret)</English>
@@ -72,7 +72,7 @@
             <Italian>Abilita Esplosione munizioni</Italian>
             <Chinese>開啟彈藥殉爆效果</Chinese>
             <Chinesesimp>开启弹药殉爆效果</Chinesesimp>
-            <Russian>Разрешить детонацию боеприпасов</Russian>
+            <Russian>Разрешить детонацию боекомплекта</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
@@ -84,7 +84,7 @@
             <Chinese>開啟彈藥殉爆效果。當一台載有彈藥的載具起火時, 將會有殉爆的效果</Chinese>
             <Chinesesimp>开启弹药殉爆效果。当一台载有弹药的载具起火时, 将会有殉爆的效果。</Chinesesimp>
             <Korean>쿡오프 현상을 활성화 합니다. 이것은 탄약에 불이 붙어있는 동안 주변에 발사체를 발사합니다.</Korean>
-            <Russian>Включает возгорание и детонацию с разлетом боеприпасов в горящей технике</Russian>
+            <Russian>Активирует возгорание и детонацию боекомплекта в горящей технике</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammunition cook off duration</English>
@@ -96,7 +96,7 @@
             <Chinese>彈藥殉爆效果持續時間</Chinese>
             <Chinesesimp>弹药殉爆效果持续时间</Chinesesimp>
             <Korean>쿡오프 지속 시간</Korean>
-            <Russian>Время возгорания боеприпасов</Russian>
+            <Russian>Длительность возгорания боеприпасов</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>

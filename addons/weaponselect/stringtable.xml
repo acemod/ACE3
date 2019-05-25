@@ -377,7 +377,7 @@
             <Chinesesimp>切换碰撞灯</Chinesesimp>
             <Japanese>衝突防止灯を切り替え</Japanese>
             <Polish>Przełącz światła kolizyjne</Polish>
-            <Russian>Переключить Бортовые огни</Russian>
+            <Russian>Вкл/Выкл Бортовые огни</Russian>
         </Key>
     </Package>
 </Project>

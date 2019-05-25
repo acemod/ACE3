@@ -280,7 +280,7 @@
             <Chinesesimp>无法开启燃料喷嘴</Chinesesimp>
             <Korean>주유기를 켤 수 없습니다.</Korean>
             <Polish>Nie można włączyć dyszy paliwowej</Polish>
-            <Russian>Невозможно включить топливную форсунку</Russian>
+            <Russian>Не удалось включить топливный пистолет</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
