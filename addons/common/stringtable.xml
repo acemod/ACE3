@@ -513,7 +513,7 @@
             <Japanese>PBO 検査の挙動</Japanese>
             <Korean>PBO 검사</Korean>
             <Polish>Sprawdź akcję PBO</Polish>
-            <Russian>Проверить действия PBO</Russian>
+            <Russian>Действие при проверке PBO</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>

@@ -35,7 +35,7 @@
             <Italian>Influenza qualsiasi prestazione di tutti i giocatori smuniti di un fattore personalizzato. Maggiore significa migliore.</Italian>
             <Chinese>影響所有玩家的體力表現，值越高代表體力越好</Chinese>
             <Chinesesimp>影响所有玩家的体力表现，值越高代表体力越好</Chinesesimp>
-            <Russian>Влияет на общую производительность всех игроков, без учета специального коэффициента. Выше означает лучше</Russian>
+            <Russian>Влияет на общую производительность игроков, у которых не задано персональное значение.</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_EdenDescription">
             <English>Influences the overall performance of this unit. Higher means better.</English>
@@ -47,7 +47,7 @@
             <Italian>Influenza qualsiasi prestazione di questa unità. Maggiore significa migliore.</Italian>
             <Chinese>影響這個單位的體力表現，值越高代表體力越好</Chinese>
             <Chinesesimp>影响这个单位的体力表现，值越高代表体力越好</Chinesesimp>
-            <Russian>Влияет на общую производительность юнита. Выше означает лучше</Russian>
+            <Russian>Влияет на общую производительность юнита.</Russian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor">
             <English>Recovery Factor</English>

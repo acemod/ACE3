@@ -318,7 +318,7 @@
             <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
             <Korean>화물을 공중 투하 하는데 얼마나 걸리는 시간 설정</Korean>
-            <Russian>Модификатор времени, уходящего на десантирование груза</Russian>
+            <Russian>Модификатор времени, необходимого для десантирования груза</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>

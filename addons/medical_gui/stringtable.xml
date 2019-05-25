@@ -803,7 +803,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
-            <Russian>Наложен шина</Russian>
+            <Russian>Наложена шина</Russian>
         </Key>
         <!--
             Strings above match Blood2 but seem to differ in some languages, determine which is best to use

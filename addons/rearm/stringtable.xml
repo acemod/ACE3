@@ -610,7 +610,7 @@
             <Japanese>カーゴからの再武装 (-1 で無効化)</Japanese>
             <Polish>Ładunek do dozbrajania (-1 wyłączy)</Polish>
             <Italian>Il rifornimento delle munizioni (-1 per disabilitarlo)</Italian>
-            <Russian>Груз для перевооружения (-1 для отмены)</Russian>
+            <Russian>Объем боеприпасов для перевооружения (-1 для отмены)</Russian>
         </Key>
     </Package>
 </Project>
