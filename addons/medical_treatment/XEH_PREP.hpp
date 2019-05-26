@@ -40,8 +40,8 @@ PREP(splint);
 PREP(splintCondition);
 PREP(splintLocal);
 
+PREP(canSplint);
 PREP(splint);
-PREP(splintCondition);
 PREP(splintLocal);
 
 // misc
