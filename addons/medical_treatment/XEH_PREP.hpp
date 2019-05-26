@@ -36,10 +36,6 @@ PREP(tourniquet);
 PREP(tourniquetLocal);
 PREP(tourniquetRemove);
 
-PREP(splint);
-PREP(splintCondition);
-PREP(splintLocal);
-
 PREP(canSplint);
 PREP(splint);
 PREP(splintLocal);

@@ -35,6 +35,14 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine and Atropine.</English>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRCreatesPulse_DisplayName">
+            <English>CPR Creates Pulse</English>
+            <German>HLW erzeugt einen Puls</German>
+            <Japanese>心肺蘇生による脈</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRCreatesPulse_Description">
+            <English>Controls whether performing CPR creates a pulse for the patient.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
             <Czech>Místa pro vylepšení zkušeností</Czech>
@@ -241,19 +249,6 @@
         <Key ID="STR_ACE_Medical_treatment_VehiclesAndFacilities">
             <English>Vehicles &amp; Facilities</English>
         </Key>
-
-        <Container name="Settings">
-            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
-                <English>CPR creates pulse</English>
-                <German>HLW erzeugt einen Puls</German>
-                <Japanese>心肺蘇生による脈</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
-                <English>CPR will create a pulse for the patient while performing</English>
-                <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
-                <Japanese>心肺蘇生を行っている間は患者に脈を作ります</Japanese>
-            </Key>
-        </Container>
 
         <Key ID="STR_ACE_Medical_treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>

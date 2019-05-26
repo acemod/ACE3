@@ -38,6 +38,15 @@
     true
 ] call CBA_settings_fnc_init;
 
+[
+    QGVAR(cprCreatesPulse),
+    "CHECKBOX",
+    [LSTRING(CPRCreatesPulse_DisplayName), LSTRING(CPRCreatesPulse_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    true
+] call CBA_settings_fnc_init;
+
 // todo: should this setting differentiate between medical vehicles and facilities?
 [
     QGVAR(locationsBoostTraining),
@@ -182,31 +191,3 @@
     [-1, 3600, 600, 0],
     true
 ] call CBA_settings_fnc_init;
-
-/*
-
-private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subCategory)];
-
-// Ported Settings:
-
-[
-    QEGVAR(medical,CPRcreatesPulse), "CHECKBOX",
-    [LSTRING(CPRcreatesPulse), LSTRING(CPRcreatesPulse_Description)],
-    _categoryArray,
-    true,
-    true,
-    {[QEGVAR(medical,CPRcreatesPulse), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
-] call CBA_settings_fnc_init;
-
-[
-    QEGVAR(medical,PAKTime), "SLIDER",
-    [LSTRING(PAKTime), LSTRING(PAKTime_Description)],
-    _categoryArray,
-    [-1,5000,0,1],
-    true,
-    {[QEGVAR(medical,PAKTime), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
-] call CBA_settings_fnc_init;
-
-*/

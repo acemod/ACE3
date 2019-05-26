@@ -73,7 +73,7 @@ class CfgWeapons {
         scope = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(splint_Display);
-        picture = QPATHTOF(ui\items\tourniquet_x_ca.paa);
+        picture = QPATHTOF(ui\tourniquet_ca.paa);
         model = QPATHTOF(data\tourniquet.p3d);
         descriptionShort = CSTRING(splint_Desc_Short);
         class ItemInfo: CBA_MiscItem_ItemInfo {
