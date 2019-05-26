@@ -1,18 +1,18 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Can apply a splint to the patient
+ * Checks if a splint can be applied to the patient.
  *
  * Arguments:
- * 0: The medic <OBJECT>
- * 1: The patient <OBJECT>
- * 2: Body part <STRING>
+ * 0: Medic (not used) <OBJECT>
+ * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
  *
  * Return Value:
- * Nothing
+ * Can Splint <BOOL>
  *
  * Example:
- * [player, cursorObject, "LeftLeg"] call ace_medical_treatment_fnc_splintCondition
+ * [player, cursorObject, "LeftLeg"] call ace_medical_treatment_fnc_canSplint
  *
  * Public: No
  */
@@ -20,6 +20,5 @@
 params ["", "_patient", "_bodyPart"];
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
-private _fractures = _patient getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
 
-(_fractures select _partIndex) == 1
+(GET_FRACTURES(_patient) select _partIndex) == 1

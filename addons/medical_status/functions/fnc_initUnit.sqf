@@ -50,7 +50,7 @@ if (_isRespawn) then {
     _unit setVariable [QEGVAR(medical,bandagedWounds), [], true];
     _unit setVariable [QEGVAR(medical,stitchedWounds), [], true];
     _unit setVariable [QEGVAR(medical,isLimping), false, true];
-    _unit setVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0], true];
+    _unit setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 
     // - Misc ---------------------------------------------------------------------
     _unit setVariable [VAR_UNCON, false, true];

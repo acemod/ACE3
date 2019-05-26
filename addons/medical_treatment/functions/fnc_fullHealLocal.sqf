@@ -44,7 +44,7 @@ _patient setVariable [QEGVAR(medical,openWounds), [], true];
 _patient setVariable [QEGVAR(medical,bandagedWounds), [], true];
 _patient setVariable [QEGVAR(medical,stitchedWounds), [], true];
 _patient setVariable [QEGVAR(medical,isLimping), false, true];
-_patient setVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0], true];
+_patient setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 
 // Update wound bleeding
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
