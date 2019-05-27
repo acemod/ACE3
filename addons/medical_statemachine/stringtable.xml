@@ -50,7 +50,7 @@
             <Key ID="STR_ACE_Medical_statemachine_cardiacArrestTime_Description">
                 <English>Defines how long it takes to die from cardiac arrest?</English>
                 <Japanese>心停止がどのくらい続けば死亡するようにしますか?</Japanese>
-                <Russian>Определяет, сколько времени требуется, чтобы умереть от остановки сердца?</Russian>
+                <Russian>Определяет, сколько времени требуется, чтобы умереть от остановки сердца</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_statemachine_enableUnconsciousnessAI_DisplayName">
                 <English>AI Unconsciousness</English>

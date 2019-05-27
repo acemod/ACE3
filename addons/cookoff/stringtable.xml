@@ -108,7 +108,7 @@
             <Chinese>設定彈藥殉爆效果會持續多久時間 [輸入0來關閉殉爆效果]</Chinese>
             <Chinesesimp>设定弹药殉爆效果会持续多久时间 [输入0来关闭殉爆效果]</Chinesesimp>
             <Korean>쿡오프 지속 시간의 배수 [0 이면 비활성]</Korean>
-            <Russian>Множитель длительности возгорания [0 - отключае возгорание боеприпасов]</Russian>
+            <Russian>Множитель длительности возгорания [0 - отключает возгорание боеприпасов]</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
             <English>Cook-off probability coefficient</English>
