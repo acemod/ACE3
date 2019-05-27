@@ -1,5 +1,12 @@
 #include "script_component.hpp"
 
+[QGVAR(updateDamageEffects), LINKFUNC(updateDamageEffects)] call CBA_fnc_addEventHandler;
+["unit", {
+    params ["_new"];
+    [_new] call FUNC(updateDamageEffects); // Run on new controlled unit to update QGVAR(aimFracture)
+}, true] call CBA_fnc_addPlayerEventHandler;
+
+
 ["CAManBase", "init", {
     params ["_unit"];
 

@@ -56,7 +56,19 @@
     "dd_pletivo.p3d",\
     "plot_green_draty.p3d",\
     "plot_rust_draty.p3d",\
-    "wall_fen1_5_2.p3d"\
+    "wall_fen1_5_2.p3d",\
+    "gm_fence_border_gssz_70_600.p3d",\
+    "gm_fence_border_gssz_70_gate_350_r.p3d",\
+    "gm_fence_border_gssz_70_gate_350_w.p3d",\
+    "gm_fence_border_gz1_600.p3d",\
+    "gm_fence_border_gz1_gate_350_r.p3d",\
+    "gm_fence_border_gz1_gate_350_w.p3d",\
+    "gm_fence_wirefence_01_01.p3d",\
+    "gm_fence_wirefence_01_02.p3d",\
+    "gm_fence_wirefence_01_03.p3d",\
+    "gm_gc_g501_sm70_01.p3d",\
+    "gm_gc_g501_sm70_02.p3d",\
+    "gm_gc_g501_sm70_03.p3d"\
 ]
 
 #define SOUND_CLIP_TIME_SPACING 1.5

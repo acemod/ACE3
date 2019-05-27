@@ -457,9 +457,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
+            <Japanese>気絶から覚醒する可能性</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_Description">
             <English>Probablity that a unit with stable vitals will wake up from unconscious [Checked every 15 sec]</English>
+            <Japanese>安定状態にある人が覚醒する確率です。(15 秒毎に確認)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
@@ -480,6 +482,30 @@
             <Chinesesimp>关闭盖子</Chinesesimp>
             <Korean>뚜껑 닫기</Korean>
             <Polish>Zamknij pokrywę</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_setting_limping_DisplayName">
+            <English>Limping</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_setting_limping_Description">
+            <English>Limp when unit has leg wounds...(todo)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_setting_limping_limpOnOpenWounds">
+            <English>Limp on open wounds</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_setting_limping_limpRequiresStitching">
+            <English>Limp on open or bandaged wounds</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_setting_fractures_DisplayName">
+            <English>Fractues</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_setting_fractures_Description">
+            <English>Limp fractures... (todo)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_setting_fractures_splintHealsFully">
+            <English>Splints fully heal fractures</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_setting_fractures_splintHasEffects">
+            <English>Splints heal (but cannot sprint)</English>
         </Key>
     </Package>
 </Project>
