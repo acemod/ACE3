@@ -817,7 +817,7 @@
             <Japanese>プライマリが対応</Japanese>
             <Polish>Wspierane przez broń główną</Polish>
             <Italian>Primario supportato</Italian>
-            <Russian>Поддерживается полностью</Russian>
+            <Russian>Поддерживается осн. прицелом</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
             <English>Secondary supported</English>
@@ -833,7 +833,7 @@
             <Japanese>プライマリに内蔵</Japanese>
             <Polish>Zintegrowane z bronią główną</Polish>
             <Italian>Primario integrato</Italian>
-            <Russian>Интегрирован в прицел</Russian>
+            <Russian>Интегрирован в осн. прицел</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>

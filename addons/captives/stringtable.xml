@@ -225,7 +225,7 @@
             <German>Einheit in Handschellen legen</German>
             <Polish>Skuj jednostkę</Polish>
             <Portuguese>Fazer unidade algemada</Portuguese>
-            <Russian>Арестовать юнита</Russian>
+            <Russian>Связать юниту руки</Russian>
             <Czech>Spoutat jednotku</Czech>
             <Italian>Metti manette all'unità</Italian>
             <Spanish>Hacer que la unidad esté esposada</Spanish>
@@ -291,7 +291,7 @@
             <Portuguese>Pode algemar o próprio lado</Portuguese>
             <French>Peut capturer sa propre faction</French>
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
-            <Russian>Арестовывать союзников</Russian>
+            <Russian>Можно связывать руки союзникам</Russian>
             <Italian>Puoi ammanettare unità alleate</Italian>
             <Japanese>拘束ユニットを自陣営へ</Japanese>
             <Korean>자기편을 포박 할 수 있습니다.</Korean>
