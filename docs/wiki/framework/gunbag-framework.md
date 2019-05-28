@@ -24,7 +24,6 @@ The config entry `ace_gunbag` needs to be set to 1 to enable a backback to be a 
 ```cpp
 class Bag_Base;
 class ace_gunbag: Bag_Base {
-    _generalMacro = QUOTE(ADDON);
     author = "Ir0n1E";
     scope = 2;
     displayName = CSTRING(Displayname);
