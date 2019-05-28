@@ -47,7 +47,7 @@
             <Italian>Forza la regolazione delle torrette</Italian>
             <Chinesesimp>强制使用归零调节</Chinesesimp>
             <Chinese>強制使用歸零調節</Chinese>
-            <Russian>Включить регулировку прицелов</Russian>
+            <Russian>Включить регулировку ненастроенных прицелов</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustmet turrets on high powered scopes</English>
@@ -59,7 +59,7 @@
             <Italian>Forza l'uso della regolazione nei mirini a lunga gittata</Italian>
             <Chinesesimp>强制为高倍率瞄准镜开启归零调节</Chinesesimp>
             <Chinese>強制為高倍率瞄準鏡開啟歸零調節</Chinese>
-            <Russian>Принудительно использовать барабанчики ввода поправок для прицелов с высокой кратностью</Russian>
+            <Russian>Принудительно использовать барабанчики ввода поправок для ненастроенных прицелов с высокой кратностью</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_displayName">
             <English>Correct zeroing</English>
