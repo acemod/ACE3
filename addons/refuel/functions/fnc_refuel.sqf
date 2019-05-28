@@ -102,6 +102,7 @@ if (_maxFuel == 0) then {
     };
 
     if (_finished) exitWith {
+        [QGVAR(refuelStopped), [_source, _sink]] call CBA_fnc_localEvent;
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
     };
