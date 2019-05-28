@@ -3100,7 +3100,22 @@
             <Chinesesimp>将伤者背出</Chinesesimp>
             <Chinese>將傷者背出</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_treatment_loadedInto">
+        <Key ID="STR_ACE_Medical_Treatment_CanNotLoad">
+            <English>This person (%1) is awake and cannot be loaded</English>
+            <German>Diese Person (%1) ist wach und kann nicht verladen werden</German>
+            <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
+            <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
+            <Russian>Боец (%1) в сознании и не может быть погружен</Russian>
+            <Portuguese>Esta pessoa (%1) está acordada e não pode ser carregada</Portuguese>
+            <Czech>Tato osoba (%1) je vzhůru a nemůže být naložena</Czech>
+            <Italian>Questa persona (%1) è sveglia e non può essere caricata.</Italian>
+            <French>%1 est conscient et ne peut être embarqué.</French>
+            <Japanese>患者 (%1) は意識があり、積み込めない</Japanese>
+            <Korean>이 사람 (%1) 은(는) 의식이 있어 태우지 못합니다</Korean>
+            <Chinesesimp>此人(%1)是清醒且不能被装载</Chinesesimp>
+            <Chinese>此人(%1)是清醒且不能被裝載</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LoadedInto">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
             <Spanish>%1&lt;br/&gt;cargado en&lt;br/&gt;%2</Spanish>
             <French>%1&lt;br/&gt;chargé dans&lt;br/&gt;%2</French>
@@ -3337,9 +3352,6 @@
             <Chinesesimp>移除军用止血带中...</Chinesesimp>
             <Chinese>移除軍用止血帶中...</Chinese>
         </Key>
-
-
-
         <Key ID="STR_ACE_Medical_treatment_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
             <German>An diesem Körperteil befindet sich kein Tourniquet!</German>
@@ -3371,8 +3383,6 @@
             <Chinesesimp>何时可以使用个人急救包?</Chinesesimp>
             <Chinese>何時可以使用個人急救包?</Chinese>
         </Key>
-
-
         <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical Kit (Adv)</English>
             <German>Beding. für d. Operationskasten (erw.)</German>
@@ -3405,7 +3415,6 @@
             <Chinesesimp>何时可以使用手术工具包?</Chinesesimp>
             <Chinese>何時可以使用手術工具包?</Chinese>
         </Key>
-
         <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
             <German>Bedingungen für d. Erste-Hilfe-Set</German>

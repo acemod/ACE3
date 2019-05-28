@@ -250,10 +250,8 @@ class GVAR(actions) {
         medicRequired = 0;
         treatmentTime = 15;
         items[] = {"ACE_bodyBag"};
-        condition = "!alive _patient";
-        callbackSuccess = QFUNC(actionPlaceInBodyBag);
-        callbackFailure = "";
-        callbackProgress = "";
+        condition = QUOTE(!alive _patient);
+        callbackSuccess = QFUNC(placeInBodyBag);
         consumeItem = 1;
         litter[] = {};
     };

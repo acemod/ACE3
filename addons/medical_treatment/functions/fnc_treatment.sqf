@@ -112,6 +112,7 @@ if (vehicle _medic == _medic && {_medicAnim != ""}) then {
     private _animRatio = (_animDuration / _treatmentTime) min 3;
     TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);
     [QEGVAR(common,setAnimSpeedCoef), [_medic, _animRatio]] call CBA_fnc_globalEvent;
+
     if (!isNil QEGVAR(advanced_fatigue,setAnimExclusions)) then {
         EGVAR(advanced_fatigue,setAnimExclusions) pushBack QUOTE(ADDON);
     };

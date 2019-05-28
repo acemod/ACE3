@@ -39,6 +39,7 @@ if (!isNil "_endInAnim") then {
 
 // Reset medic animation speed coefficient
 [QEGVAR(common,setAnimSpeedCoef), [_medic, 1]] call CBA_fnc_globalEvent;
+
 if (!isNil QEGVAR(advanced_fatigue,setAnimExclusions)) then {
     EGVAR(advanced_fatigue,setAnimExclusions) deleteAt (EGVAR(advanced_fatigue,setAnimExclusions) find QUOTE(ADDON));
 };
