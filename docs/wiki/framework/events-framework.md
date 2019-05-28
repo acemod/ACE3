@@ -89,6 +89,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_wireCuttingStarted` | [_unit, _fence] | Global | Listen | Fence cutting started
 
+### 2.9 Refuel (`ace_refuel`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_refuel_refuelStarted` | [_source, _target] | Local | Listen | Refueling has started
+|`ace_refuel_refuelTick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick
+|`ace_refuel_refuelStopped` | [_source, _target] | Local | Listen | Refueling has stopped
+
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
