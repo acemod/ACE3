@@ -278,7 +278,6 @@ class GVAR(actions) {
         consumeItem = 0;
         litter[] = {};
     };
-
     class SurgicalKit: FieldDressing {
         displayName = CSTRING(Use_SurgicalKit);
         displayNameProgress = CSTRING(Stitching);
@@ -288,7 +287,7 @@ class GVAR(actions) {
         treatmentLocations = QGVAR(locationSurgicalKit);
         allowSelfTreatment = 0;
         medicRequired = QGVAR(medicSurgicalKit);
-        treatmentTime = QUOTE(count (_patient getVariable [ARR_2('EGVAR(medical,bandagedWounds)',[])]) * 5);
+        treatmentTime = QFUNC(getStitchTime);
         condition = QFUNC(canStitch);
         callbackSuccess = "";
         callbackProgress = QFUNC(surgicalKitProgress);
@@ -305,7 +304,7 @@ class GVAR(actions) {
         items[] = {"ACE_personalAidKit"};
         treatmentLocations = QGVAR(locationPAK);
         medicRequired = QGVAR(medicPAK);
-        treatmentTime = QUOTE(_patient call FUNC(getHealTime));
+        treatmentTime = QFUNC(getHealTime);
         callbackSuccess = QFUNC(fullHeal);
         consumeItem = QGVAR(consumePAK);
         animationMedic = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";

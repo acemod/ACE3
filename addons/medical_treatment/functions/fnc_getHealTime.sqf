@@ -4,7 +4,8 @@
  * Calculates the PAK treatment time based on the amount of damage to heal.
  *
  * Arguments:
- * 0: Patient <OBJECT>
+ * 0: Medic (not used) <OBJECT>
+ * 1: Patient <OBJECT>
  *
  * Return Value:
  * Treatment Time <NUMBER>
@@ -17,7 +18,7 @@
 
 #define DAMAGE_SCALING_FACTOR 5
 
-params ["_patient"];
+params ["", "_patient"];
 
 private _bodyPartDamage = 0;
 
