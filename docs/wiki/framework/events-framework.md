@@ -93,9 +93,9 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
-|`ace_refuel_refuelStarted` | [_source, _target] | Local | Listen | Refueling has started
-|`ace_refuel_refuelTick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick
-|`ace_refuel_refuelStopped` | [_source, _target] | Local | Listen | Refueling has stopped
+|`ace_refuel_started` | [_source, _target] | Local | Listen | Refueling has started
+|`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick
+|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refueling has stopped
 
 
 ## 3. Usage

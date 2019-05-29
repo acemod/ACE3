@@ -93,7 +93,7 @@ if (_maxFuel == 0) then {
         };
         _unit setVariable [QGVAR(tempFuel), _fuelInSink];
 
-        [QGVAR(refuelTick), [_source, _sink, _rateTime]] call CBA_fnc_localEvent;
+        [QGVAR(tick), [_source, _sink, _rateTime]] call CBA_fnc_localEvent;
 
         [QEGVAR(common,setFuel), [_sink, _fuelInSink], _sink] call CBA_fnc_targetEvent;
         [_source, _fuelInSource] call FUNC(setFuel);
