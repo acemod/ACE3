@@ -119,9 +119,11 @@ class CfgWeapons {
     };
     class SMG_02_base_F;
     class rhsusf_weap_MP7A1_base_f: SMG_02_base_F {
+        ACE_barrelLength = 180;
+        ACE_barrelTwist = 160;
+        ACE_IronSightBaseAngle = -0.286479; // 5 mRad POA = POI at the default discreteDistance 100 m, SMG_02_base_F default value 0.434847
+        ACE_RailBaseAngle = 0; // SMG_02_base_F default value 0.0217724
         ACE_RailHeightAboveBore = 5;
-        ACE_barrelTwist = 160.0;
-        ACE_barrelLength = 180.0;
     };
     // RHS pistols
     class hgun_ACPC2_F;
