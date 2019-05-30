@@ -141,13 +141,13 @@ class CfgAmmo {
         ACE_bulletLength = 21;
         ACE_bulletMass = 2.6;
         ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
-        ACE_ballisticCoefficients[] = {0.171};
+        ACE_ballisticCoefficients[] = {0.089};
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
-        ACE_dragModel = 1;
+        ACE_dragModel = 7;
         ACE_muzzleVelocities[] = {621}; // at 21°C, 620 m/s at 15°C according with the 4.6x30 FMJ magazine initSpeed
         ACE_barrelLengths[] = {180};
-        airFriction = -0.002556; // default RHS value -0.0027667
+        airFriction = -0.002635; // default RHS value -0.0027667
     };
     class rhs_ammo_46x30_JHP: rhs_ammo_46x30_FMJ { // RUAG Ammotec
         ACE_caliber = 4.65;
