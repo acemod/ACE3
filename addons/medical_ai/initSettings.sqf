@@ -1,6 +1,6 @@
 // CBA Settings [ADDON: ace_medical_ai]:
 
-private _categoryArray = [LELSTRING(medical,Category_DisplayName), localize "STR_TEAM_SWITCH_AI"];
+private _categoryArray = [LELSTRING(medical,Category), localize "STR_TEAM_SWITCH_AI"];
 
 [
     QGVAR(enabledFor), "LIST",

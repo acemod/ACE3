@@ -49,18 +49,18 @@ case (GET_WOUND_BLEEDING(_target) > 0): {
             _x params ["", "_index", "_amount", "_percentage"];
             if ((_amount * _percentage) > 0) exitWith { _selection = ALL_BODY_PARTS select _index; };
         } forEach _openWounds;
-        _treatmentAction = QEGVAR(medical_treatment,treatmentBandageLocal);
+        _treatmentAction = QEGVAR(medical_treatment,bandageLocal);
         _treatmentTime = 5;
-        _treatmentArgs = [_target, "FieldDressing", _selection];
+        _treatmentArgs = [_target, _selection, "FieldDressing"];
     };
 case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}): {
         private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
         if ((count _bloodBags) >= 2) exitWith {
             _treatmentAction = "#waitForBlood";
         };
-        _treatmentAction = QEGVAR(medical_treatment,treatmentIVLocal);
+        _treatmentAction = QEGVAR(medical_treatment,ivBagLocal);
         _treatmentTime = 5;
-        _treatmentArgs = [_target, "SalineIV", "leftarm"];
+        _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "SalineIV"];
     };
 case ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6): {
         _treatmentAction = "#tooManyMeds";
@@ -73,9 +73,9 @@ case (IS_UNCONSCIOUS(_target) || {_heartRate <= 50}): {
             _treatmentAction = "#waitForSlowerHeart";
         };
         _target setVariable [QGVAR(nextEpinephrine), CBA_missionTime + 10];
-        _treatmentAction = QEGVAR(medical_treatment,treatmentMedicationLocal);
+        _treatmentAction = QEGVAR(medical_treatment,medicationLocal);
         _treatmentTime = 2.5;
-        _treatmentArgs = [_target, "Epinephrine", 2];
+        _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "Epinephrine"];
     };
 case ((GET_PAIN_PERCEIVED(_target) > 0.25)  || {_heartRate >= 180}): {
         if (CBA_missionTime < (_target getVariable [QGVAR(nextMorphine), -1])) exitWith {
@@ -85,9 +85,9 @@ case ((GET_PAIN_PERCEIVED(_target) > 0.25)  || {_heartRate >= 180}): {
             _treatmentAction = "#waitForFasterHeart";
         };
         _target setVariable [QGVAR(nextMorphine), CBA_missionTime + 30];
-        _treatmentAction = QEGVAR(medical_treatment,treatmentMedicationLocal);
+        _treatmentAction = QEGVAR(medical_treatment,medicationLocal);
         _treatmentTime = 2.5;
-        _treatmentArgs = [_target, "Morphine", 2];
+        _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "Morphine"];
     };
 };
 
@@ -95,7 +95,7 @@ _healer setVariable [QGVAR(currentTreatment), [CBA_missionTime + _treatmentTime,
 
 // Play animation
 if ((_treatmentAction select [0,1]) != "#") then {
-    [_healer, _treatmentArgs param [1, ""], (_healer == _target)] call FUNC(playTreatmentAnim);
+    [_healer, _treatmentArgs param [2, ""], (_healer == _target)] call FUNC(playTreatmentAnim);
 };
 
 #ifdef DEBUG_MODE_FULL
