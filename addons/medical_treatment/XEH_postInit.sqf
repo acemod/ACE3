@@ -13,26 +13,26 @@
     [_unit] call FUNC(checkItems);
 }] call CBA_fnc_addEventHandler;
 
-["loadout", FUNC(checkItems)] call CBA_fnc_addPlayerEventHandler;
+["loadout", LINKFUNC(checkItems)] call CBA_fnc_addPlayerEventHandler;
 
 // Handle body removal and litter on server
 if (isServer) then {
-    [QGVAR(createLitterServer), FUNC(createLitterServer)] call CBA_fnc_addEventHandler;
-    ["ace_placedInBodyBag", FUNC(removeBody)] call CBA_fnc_addEventHandler;
+    [QGVAR(createLitterServer), LINKFUNC(createLitterServer)] call CBA_fnc_addEventHandler;
+    ["ace_placedInBodyBag", LINKFUNC(removeBody)] call CBA_fnc_addEventHandler;
 };
 
 // Treatment events
-[QGVAR(bandageLocal), FUNC(bandageLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(checkBloodPressureLocal), FUNC(checkBloodPressureLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(checkPulseLocal), FUNC(checkPulseLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(cprLocal), FUNC(cprLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(fullHealLocal), FUNC(fullHealLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(ivBagLocal), FUNC(ivBagLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(medicationLocal), FUNC(medicationLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(placeInBodyBag), FUNC(placeInBodyBag)] call CBA_fnc_addEventHandler;
-[QGVAR(splintLocal), FUNC(splintLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(tourniquetLocal), FUNC(tourniquetLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(bandageLocal), LINKFUNC(bandageLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(checkBloodPressureLocal), LINKFUNC(checkBloodPressureLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(checkPulseLocal), LINKFUNC(checkPulseLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(cprLocal), LINKFUNC(cprLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(fullHealLocal), LINKFUNC(fullHealLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(ivBagLocal), LINKFUNC(ivBagLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(medicationLocal), LINKFUNC(medicationLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(placeInBodyBag), LINKFUNC(placeInBodyBag)] call CBA_fnc_addEventHandler;
+[QGVAR(splintLocal), LINKFUNC(splintLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(tourniquetLocal), LINKFUNC(tourniquetLocal)] call CBA_fnc_addEventHandler;
 
 // Logging events
-[QGVAR(addToLog), FUNC(addToLog)] call CBA_fnc_addEventHandler;
-[QGVAR(addToTriageCard), FUNC(addToTriageCard)] call CBA_fnc_addEventHandler;
+[QGVAR(addToLog), LINKFUNC(addToLog)] call CBA_fnc_addEventHandler;
+[QGVAR(addToTriageCard), LINKFUNC(addToTriageCard)] call CBA_fnc_addEventHandler;
