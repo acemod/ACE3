@@ -27,7 +27,8 @@ _unit setVariable [VAR_UNCON, _active, true];
 if (_active) then {
     // Don't bother setting this if not used
     if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
-        _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
+        private _lastWakeUpCheck = _unit getVariable [QEGVAR(medical,lastWakeUpCheck), 0]; // could be set higher from ace_medical_fnc_setUnconscious
+        _unit setVariable [QEGVAR(medical,lastWakeUpCheck), _lastWakeUpCheck max CBA_missionTime];
     };
 
     if (_unit == ACE_player) then {
