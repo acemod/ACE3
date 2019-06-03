@@ -103,7 +103,7 @@ private _fnc_condition = {
       _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
    };
 
-   private _boundingBox = boundingBoxReal _trench;
+   private _boundingBox = 0 boundingBoxReal _trench;
    _boundingBox params ["_lbfc"];  //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
    _lbfc params ["", "", "_lbfcZ"];
 

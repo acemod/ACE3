@@ -85,7 +85,7 @@ GVAR(digPFH) = [{
         };
     };
 //    _basePos set [2, (_basePos select 2) + _minzoffset + _offset];
-    _basePos set [2, (_basePos select 2) + _minzoffset];
+    _basePos set [2, (_basePos select 2) + _minzoffset - 0.1];
     TRACE_2("",_minzoffset,_offset);
     _trench setPosASL _basePos;
     _trench setVectorDirAndUp [_v1, _v3];
