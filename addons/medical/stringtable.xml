@@ -504,7 +504,7 @@
             <Russian>Хромота при открытых или забинтованых ранах</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_fractures_DisplayName">
-            <English>Fractues</English>
+            <English>Fractures</English>
             <Russian>Переломы</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_fractures_Description">
