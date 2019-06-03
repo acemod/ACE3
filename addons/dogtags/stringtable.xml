@@ -85,6 +85,7 @@
             <Japanese>確認中のドッグタグを画面上で表示します</Japanese>
             <Italian>Display su schermo per il controllo delle piastrine</Italian>
             <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
+            <Russian>Экран для проверки жетонов</Russian>
         </Key>
     </Package>
 </Project>

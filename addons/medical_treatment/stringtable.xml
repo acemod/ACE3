@@ -5,30 +5,37 @@
             <Key ID="STR_ACE_Medical_treatment_subCategory">
                 <English>Treatment</English>
                 <Japanese>治療</Japanese>
+                <Russian>Лечение</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedBandages_DisplayName">
                 <English>Advanced Bandages</English>
                 <Japanese>アドバンスド包帯</Japanese>
+                <Russian>Расширенная Перевязка</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedBandages_Description">
                 <English>Enable advanced bandages (required for wound reopening)</English>
                 <Japanese>アドバンスド包帯を有効化 (アドバンスド負傷が必要です)</Japanese>
+                <Russian>Устанавливает расширенное использование бинтов (требуется для открывающихся ран)</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_DisplayName">
                 <English>Advanced Diagnose</English>
                 <Japanese>アドバンスド診断</Japanese>
+                <Russian>Расширенная Диагностика</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedDiagnose_Description">
                 <English>Enable advanced diagnose</English>
                 <Japanese>アドバンスド診断を有効化</Japanese>
+                <Russian>Устанавливает расширенную диагностику</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedMedication_DisplayName">
                 <English>Advanced Medication</English>
                 <Japanese>アドバンスド医薬品</Japanese>
+                <Russian>Расширенные Лекарства</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_advancedMedication_Description">
                 <English>Enable advanced medication</English>
                 <Japanese>アドバンスド医薬品を有効化</Japanese>
+                <Russian>Устанавливает расширенное использование лекарств</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_increaseTrainingInLocations_DisplayName">
                 <English>Locations boost training</English>
@@ -63,20 +70,24 @@
             <Key ID="STR_ACE_Medical_treatment_allowSelfIV_DisplayName">
                 <English>Self IV Transfusion</English>
                 <Japanese>自己 IV 輸血</Japanese>
+                <Russian>Внутривенное переливание на себе</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_allowSelfIV_Description">
                 <English>Allows using IV Transfusions on yourself</English>
                 <Japanese>自ら IV 輸血することを許可します</Japanese>
+                <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse">
                 <English>CPR creates pulse</English>
                 <German>HLW erzeugt einen Puls</German>
                 <Japanese>心肺蘇生による脈</Japanese>
+                <Russian>СЛР создаст пульс</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_CPRcreatesPulse_Description">
                 <English>CPR will create a pulse for the patient while performing</English>
                 <German>HLW erzeugt während der Behandlung beim Patienten einen Puls</German>
                 <Japanese>心肺蘇生を行っている間は患者に脈を作ります</Japanese>
+                <Russian>СЛР создаст пульс для пациента во время выполнения</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_woundReopening_DisplayName">
                 <English>Enable Advanced wounds</English>
@@ -130,6 +141,7 @@
             <Key ID="STR_ACE_Medical_treatment_medicSetting_Epi_Description">
                 <English>Who can use Epinephrine?</English>
                 <Japanese>誰がアドレナリンを使えるようにしますか?</Japanese>
+                <Russian>Кто может использовать Адреналин?</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_medicSetting_PAK_DisplayName">
                 <English>Allow PAK</English>
@@ -293,14 +305,17 @@
             <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_Epi_Description">
                 <English>Where can the Epinephrine be used?</English>
                 <Japanese>どこでアドレナリンを使用できる場所にしますか?</Japanese>
+                <Russian>Где можно использовать Адреналин?</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_PAKTime">
                 <English>How long should PAK take to apply?</English>
                 <Japanese>応急処置キットの使用時間</Japanese>
+                <Russian>Как долго занимает лечение Аптечкой?</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_treatment_PAKTime_Description">
                 <English>How long should PAK take to apply? Use 0 for default (based on damage)</English>
                 <Japanese>応急処置キットの使用時間を決定しますか? 0 で標準になります (ダメージに比例)</Japanese>
+                <Russian>Сколько времени занимает лечение Аптечкой? Используйте 0 для настроек по умолчанию (в зависимости от повреждений)</Russian>
             </Key>
         </Container>
         <Container name="SettingsLitter">
@@ -782,9 +797,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_treatment_splint_Display">
             <English>Splint</English>
+            <Russian>Шина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_splint_Desc_Short">
             <English>Stabilizes a fractured limb</English>
+            <Russian>Стабилизирует перелом конечности</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1983,9 +2000,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Apply_Splint">
             <English>Apply Splint</English>
+            <Russian>Наложить Шину</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Applying_Splint">
             <English>Applying Splint...</English>
+            <Russian>Накладывается Шина...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -2198,6 +2217,7 @@
         <Key ID="STR_ACE_Medical_treatment_Triage_Status_Minimal">
             <English>Minimal</English>
             <Japanese>軽処置群</Japanese>
+            <Russian>Минимально</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -2331,6 +2351,7 @@
             <English>In mild pain</English>
             <German>Hat leichte Schmerzen</German>
             <Japanese>中くらいの痛みがある</Japanese>
+            <Russian>Небольшая боль</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Status_Pain">
             <English>In pain</English>
@@ -2352,6 +2373,7 @@
             <English>In severe pain</English>
             <German>Hat starke Schmerzen</German>
             <Japanese>ひどい痛みがある</Japanese>
+            <Russian>Сильная боль</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -3473,14 +3495,17 @@
         <Key ID="STR_ACE_Medical_treatment_convertItems_DisplayName">
             <English>Convert vanilla items</English>
             <Japanese>標準アイテムを変換</Japanese>
+            <Russian>Конвертировать ванильные медикаменты</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_Description">
             <English>Enables or disables whether vanilla medical items are converted to ACE medical items or just removed</English>
             <Japanese>有効化すると標準の治療アイテムは ACE 治療アイテムに変換され、無効化すると削除されます。</Japanese>
+            <Russian>Позволяет преобразовать ванильные медсредства в медикаменты ACE, или удалить их вообще</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_convertItems_remove">
             <English>Just remove vanilla medical</English>
             <Japanese>標準の治療アイテムを削除</Japanese>
+            <Russian>Убрать ванильные аптечки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_treatment_MedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>

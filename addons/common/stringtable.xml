@@ -10,6 +10,7 @@
             <Chinesesimp>通用</Chinesesimp>
             <Korean>일반</Korean>
             <Polish>Ogólny</Polish>
+            <Russian>Общий</Russian>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -27,7 +28,7 @@
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Common_Advanced">
+        <Key ID="STR_ACE_Common_Advanced">
             <English>Advanced</English>
             <Russian>Усложненный</Russian>
             <Polish>Zaawansowany</Polish>
@@ -410,7 +411,7 @@
             <Chinese>未知的</Chinese>
             <Chinesesimp>未知的</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Common_Normal">
+        <Key ID="STR_ACE_Common_Normal">
             <English>Normal</English>
             <German>Normal</German>
             <Italian>Normale</Italian>
@@ -512,6 +513,7 @@
             <Japanese>PBO 検査の挙動</Japanese>
             <Korean>PBO 검사</Korean>
             <Polish>Sprawdź akcję PBO</Polish>
+            <Russian>Действие при проверке PBO</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -521,6 +523,7 @@
             <Japanese>PBO 全てを検査</Japanese>
             <Korean>모든 PBO 검사</Korean>
             <Polish>Sprawdź wszystkie PBO</Polish>
+            <Russian>Проверять все PBO</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -530,6 +533,7 @@
             <Japanese>許可リスト内の PBO を検査</Japanese>
             <Korean>검사 제외 PBO</Korean>
             <Polish>Sprawdź białą listę PBO</Polish>
+            <Russian>Белый список для проверки PBO</Russian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -998,11 +1002,12 @@
             <Chinese>啟用</Chinese>
             <Chinesesimp>启用</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Common_Always">
+        <Key ID="STR_ACE_Common_Always">
             <English>Always</English>
             <Japanese>常に</Japanese>
+            <Russian>Всегда</Russian>
         </Key>
-		<Key ID="STR_ACE_Common_Anywhere">
+        <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
             <Russian>Где угодно</Russian>
             <Polish>Wszędzie</Polish>
@@ -1016,7 +1021,7 @@
             <Japanese>どこでも</Japanese>
             <Korean>어디서나</Korean>
         </Key>
-		<Key ID="STR_ACE_Common_Basic">
+        <Key ID="STR_ACE_Common_Basic">
             <English>Basic</English>
             <Russian>Базовый</Russian>
             <Polish>Podstawowy</Polish>
@@ -1079,10 +1084,12 @@
         <Key ID="STR_ACE_Common_Confirm">
             <English>Confirm</English>
             <Japanese>確認</Japanese>
+            <Russian>Подтвердить</Russian>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
             <Japanese>行わない</Japanese>
+            <Russian>Никогда</Russian>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1260,6 +1267,7 @@
             <Japanese>音楽の音量低下を許可</Japanese>
             <Italian>Permesso di abbassare la musica</Italian>
             <Polish>Zezwól na przyciszanie muzyki</Polish>
+            <Russian>Разрешить приглушение музыки</Russian>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1270,6 +1278,7 @@
             <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
             <Italian>Permetti agli script di ACEdi abbassare la musica.</Italian>
             <Polish>Zezwól skrypty ACE na przyciszanie muzyki.</Polish>
+            <Russian>Позволить скриптам ACE приглушать музыку</Russian>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1278,6 +1287,7 @@
             <Italian>Bandiera (ACE - Nera)</Italian>
             <Japanese>旗 (ACE - 黒)</Japanese>
             <Polish>Flaga (ACE - Czarna)</Polish>
+            <Russian>Флаг (ACE - Черный)</Russian>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -1286,6 +1296,7 @@
             <Italian>Bandiera (ACE - Bianca)</Italian>
             <Japanese>旗 (ACE - 白)</Japanese>
             <Polish>Flaga (ACE - Biała)</Polish>
+            <Russian>Флаг (ACE - Белый)</Russian>
         </Key>
     </Package>
 </Project>

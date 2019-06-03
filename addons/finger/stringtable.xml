@@ -11,6 +11,7 @@
             <Korean>가리키기</Korean>
             <French>Pointage</French>
             <Polish>Wskazywanie</Polish>
+            <Russian>Указание пальцем</Russian>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
