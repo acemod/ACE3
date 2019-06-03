@@ -16,16 +16,19 @@
  */
 
 // Check if there is a config entry for the map
-if ((isText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath")) || ("surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]]))) exitWith {};
+if (
+        (isText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath")) ||
+        {"surfaceTexture" in (uiNamespace getVariable ["Intercept_cba_capabilities",[]])}
+    ) exitWith {};
 private _config = configfile >> "CfgWorldTexture" >> worldName >> "OutsideTerrain" >> "Layers" >> "Layer0" >> "texture";
 if !(isText (_config)) exitWith {
-   LOG("GRAD Trenches: Found no OutsideTerrain texture for Map %1, automatic file path not possible!");
+    LOG("GRAD Trenches: Found no OutsideTerrain texture for Map %1, automatic file path not possible!");
 };
 
 // Check if the path leads to A3 files
 private _path = getText (_config);
-if (_path find"A3\Map_Data\" >= -1) exitWith {
-   LOG("GRAD Trenches: Found OutsideTerrain texture not matching path for Map %1, automatic file path not possible!");
+if (_path find "A3\Map_Data\" >= -1) exitWith {
+    LOG("GRAD Trenches: Found OutsideTerrain texture not matching path for Map %1, automatic file path not possible!");
 };
 
 // Split the path and remove the texture
@@ -38,9 +41,9 @@ _path = _split joinString "\";
 
 // Check the path for the right ending
 private _suffix = ".paa";
-if ((_texture find "co.paa" >= -1)|| _texture find "ca.paa" >= -1) then {
-   _split = _texture splitString "_";
-   _suffix = _split select ((count _split) -1);
+if ((_texture find "co.paa" >= -1)|| {_texture find "ca.paa" >= -1}) then {
+    _split = _texture splitString "_";
+    _suffix = _split select ((count _split) -1);
 };
 
 // Setup the GVAR

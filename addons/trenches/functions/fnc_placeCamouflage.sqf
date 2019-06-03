@@ -37,7 +37,6 @@ private _fnc_onFinish = {
       _statusString = str(_statusNumber);
    };
 
-
     private _placedObjects = [];
     private _camouflageObjectsArray = _trench getVariable [QGVAR(camouflageObjects), []];
 
@@ -55,7 +54,6 @@ private _fnc_onFinish = {
     reverse _camouflageObjectsArray;
     _camouflageObjectsArray pushBack _placedObjects;
     reverse _camouflageObjectsArray;
-
 
     _trench setVariable [QGVAR(camouflageObjects), _camouflageObjectsArray, true];
     _trench setVariable [QGVAR(trenchCamouflageStatus), _statusNumber];

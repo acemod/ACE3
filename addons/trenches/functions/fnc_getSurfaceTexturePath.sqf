@@ -22,7 +22,7 @@ params [
 diag_log format ["ACE_TRENCHES Object: %1", _object];
 
 if (isNull _object) exitWith {};
-if !((isNil QGVAR(automaticFileSetup)) && (isText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath"))) exitWith {DEFAULT_TEXTURE};
+if !((isNil QGVAR(automaticFileSetup)) && {isText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath")}) exitWith {DEFAULT_TEXTURE};
 
 private _surfaceType = surfaceType (position _object);
 
