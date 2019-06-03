@@ -5,6 +5,7 @@
             <Key ID="STR_ACE_Medical_feedback_subCategory">
                 <English>Feedback</English>
                 <Japanese>フィードバック</Japanese>
+                <Russian>Реакция на ранения</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
@@ -56,10 +57,12 @@
         <Key ID="STR_ACE_Medical_feedback_painEffectType_whiteFlashing">
             <English>White flashing</English>
             <Japanese>白く点滅</Japanese>
+            <Russian>Белые вспышки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_feedback_painEffectType_pulsingBlur">
             <English>Pulsing blur</English>
             <Japanese>ボケの強弱</Japanese>
+            <Russian>Пульсирующее размытие</Russian>
         </Key>
     </Package>
 </Project>

@@ -443,10 +443,12 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
             <Japanese>気絶から覚醒する可能性</Japanese>
+            <Russian>Шанс очнуться при потере сознания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_Description">
             <English>Probablity that a unit with stable vitals will wake up from unconscious [Checked every 15 sec]</English>
             <Japanese>安定状態にある人が覚醒する確率です。(15 秒毎に確認)</Japanese>
+            <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания [Проверяется каждые 15 сек]</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
@@ -457,6 +459,7 @@
             <Chinesesimp>打开盖子</Chinesesimp>
             <Korean>뚜껑 열기</Korean>
             <Polish>Otwórz pokrywę</Polish>
+            <Russian>Открыть крышку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -467,30 +470,39 @@
             <Chinesesimp>关闭盖子</Chinesesimp>
             <Korean>뚜껑 닫기</Korean>
             <Polish>Zamknij pokrywę</Polish>
+            <Russian>Закрыть крышку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_limping_DisplayName">
             <English>Limping</English>
+            <Russian>Хромота</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_limping_Description">
             <English>Limp when unit has leg wounds...(todo)</English>
+            <Russian>Хромота, когда юнит имеет ранения ног...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_limping_limpOnOpenWounds">
             <English>Limp on open wounds</English>
+            <Russian>Хромота при открытых ранах</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_limping_limpRequiresStitching">
             <English>Limp on open or bandaged wounds</English>
+            <Russian>Хромота при открытых или забинтованых ранах</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_fractures_DisplayName">
-            <English>Fractues</English>
+            <English>Fractures</English>
+            <Russian>Переломы</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_fractures_Description">
             <English>Limp fractures... (todo)</English>
+            <Russian>Хромота при переломах...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_fractures_splintHealsFully">
             <English>Splints fully heal fractures</English>
+            <Russian>Шины полностью лечат перелом</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_setting_fractures_splintHasEffects">
             <English>Splints heal (but cannot sprint)</English>
+            <Russian>Шины вылечивают, но не дают бегать</Russian>
         </Key>
     </Package>
 </Project>

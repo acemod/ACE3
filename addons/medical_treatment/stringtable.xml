@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Treatment">
             <English>Treatment</English>
             <Japanese>治療</Japanese>
+            <Russian>Лечение</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Litter">
             <English>Litter</English>
@@ -11,6 +12,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
             <Japanese>アドバンスド診断</Japanese>
+            <Russian>Расширенная Диагностика</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.</English>
@@ -18,6 +20,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
             <Japanese>アドバンスド包帯</Japanese>
+            <Russian>Расширенная Перевязка</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
@@ -31,14 +34,17 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
             <Japanese>アドバンスド医薬品</Japanese>
+            <Russian>Расширенные Лекарства</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine and Atropine.</English>
+            <Russian>Устанавливает расширенное использование лекарств</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRCreatesPulse_DisplayName">
             <English>CPR Creates Pulse</English>
             <German>HLW erzeugt einen Puls</German>
             <Japanese>心肺蘇生による脈</Japanese>
+            <Russian>СЛР создаст пульс</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRCreatesPulse_Description">
             <English>Controls whether performing CPR creates a pulse for the patient.</English>
@@ -63,9 +69,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
+            <Russian>Внутривенное переливание на себе</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
             <English>Enables the use of IV Transfusions on oneself.</English>
+            <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
@@ -185,6 +193,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
+            <Russian>Конвертировать ванильные медикаменты</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
@@ -649,9 +658,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Display">
             <English>Splint</English>
+            <Russian>Шина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Desc_Short">
             <English>Stabilizes a fractured limb</English>
+            <Russian>Стабилизирует перелом конечности</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1850,9 +1861,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Apply_Splint">
             <English>Apply Splint</English>
+            <Russian>Наложить Шину</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Splint">
             <English>Applying Splint...</English>
+            <Russian>Накладывается Шина...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -2065,6 +2078,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Minimal">
             <English>Minimal</English>
             <Japanese>軽処置群</Japanese>
+            <Russian>Минимально</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -2198,6 +2212,7 @@
             <English>In mild pain</English>
             <German>Hat leichte Schmerzen</German>
             <Japanese>中くらいの痛みがある</Japanese>
+            <Russian>Небольшая боль</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Pain">
             <English>In pain</English>
@@ -2219,6 +2234,7 @@
             <English>In severe pain</English>
             <German>Hat starke Schmerzen</German>
             <Japanese>ひどい痛みがある</Japanese>
+            <Russian>Сильная боль</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -3376,7 +3392,7 @@
             <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
             <Hungarian>Mikor lehet az elsősegélycsomagot használni?</Hungarian>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
-            <Russian>Когда может использоваться аптечка?</Russian>
+            <Russian>Где может использоваться аптечка?</Russian>
             <Italian>Quando può essere usato il Kit Pronto Soccorso?</Italian>
             <Japanese>どこでも応急処置キットを使えるようにしますか?</Japanese>
             <Korean>언제 개인응급키트를 사용할 수 있습니까?</Korean>
@@ -3408,7 +3424,7 @@
             <Polish>Po spełnieniu jakich warunków zestaw chirurgiczny może zostać zastosowany na pacjencie?</Polish>
             <Hungarian>Mikor lehet a sebészkészletet használni?</Hungarian>
             <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
-            <Russian>Когда может использоваться хирургический набор?</Russian>
+            <Russian>Где может использоваться хирургический набор?</Russian>
             <Italian>Quando può essere usato il Kit Chirurgico?</Italian>
             <Japanese>いつでも縫合キットを使えるようにしますか?</Japanese>
             <Korean>언제 봉합키트를 사용할 수 있습니까?</Korean>
