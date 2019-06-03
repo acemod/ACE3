@@ -20,31 +20,28 @@ private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 if (_this select 0) then {
     {
-        if (ctrlIDC _x != 170) then {
-            private _string = ctrlText _x;
-            private _index = _string find ".paa";
+        private _control = _dlgVector displayCtrl _x;
+        private _string = ctrlText _control;
+        private _index = _string find ".paa";
 
-            if (_index != -1 && {_string find "_illum.paa" == -1}) then {
-                _string = toArray _string;
-                _string resize _index;
+        if (_index != -1 && {_string find "_illum.paa" == -1}) then {
+            _string = toArray _string;
+            _string resize _index;
 
-                _x ctrlSetText format ["%1_illum.paa", toString _string];
-            };
+            _control ctrlSetText format ["%1_illum.paa", toString _string];
         };
-    } forEach allControls _dlgVector;
+    } forEach ILLUM_CONTROLS;
 } else {
     {
-        if (ctrlIDC _x != 170) then {
-            private _string = ctrlText _x;
-            private _index = _string find "_illum.paa";
+        private _control = _dlgVector displayCtrl _x;
+        private _string = ctrlText _control;
+        private _index = _string find "_illum.paa";
 
-            if (_index != -1) then {
-                _string = toArray _string;
-                _string resize _index;
+        if (_index != -1) then {
+            _string = toArray _string;
+            _string resize _index;
 
-                _x ctrlSetText format ["%1.paa", toString _string];
-            };
-
+            _control ctrlSetText format ["%1.paa", toString _string];
         };
-    } forEach allControls _dlgVector;
+    } forEach ILLUM_CONTROLS;
 };

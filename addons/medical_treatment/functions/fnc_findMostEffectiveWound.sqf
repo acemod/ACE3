@@ -4,8 +4,8 @@
  * Finds the wound most effective to bandage on the given bodypart of the patient for the given bandage type.
  *
  * Arguments:
- * 0: The patient <OBJECT>
- * 1: Treatment class name <STRING>
+ * 0: Patient <OBJECT>
+ * 1: Treatment classname <STRING>
  * 2: Body part index <NUMBER>
  *
  * Return Value:

@@ -75,6 +75,7 @@ class CfgWeapons {
         ACE_barrelTwist = 228.6; // 1:9 inch twist
         ACE_barrelLength = 407;
         ACE_twistDirection = 1;
+        initSpeed = -1.083916; // 775 m/s according with the ACE_muzzleVelocities at 15°C, default BI value -1.1 (786 m/s)
         modes[] = {"Single"};
     };
     class SMG_03C_BASE: SMG_03_TR_BASE {

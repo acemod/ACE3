@@ -21,7 +21,7 @@ TRACE_3("playTreatmentAnim",_unit,_actionName,_isSelfTreatment);
 
 if (vehicle _unit != _unit) exitWith {};
 
-private _configProperty = "animationCaller";
+private _configProperty = "animationMedic";
 if (_isSelfTreatment) then {
     _configProperty = _configProperty + "Self";
 };
