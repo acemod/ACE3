@@ -4,13 +4,16 @@
  * Calculates the time to bandage a wound based on it's size, the patient and the medic.
  *
  * Arguments:
- * 0: The medic <OBJECT>
- * 1: The patient <OBJECT>
- * 2: Body part <STRING>
- * 3: Treatment class name <STRING>
+ * 0: Medic <OBJECT>
+ * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
+ * 3: Treatment <STRING>
  *
  * Return Value:
- * Time in seconds <NUMBER>
+ * Treatment Time <NUMBER>
+ *
+ * Example:
+ * [player, cursorTarget, "Head", "FieldDressing"] call ace_medical_treatment_fnc_getBandageTime
  *
  * Public: No
  */
@@ -48,4 +51,4 @@ if (_medic == _patient) then {
 };
 
 // Nobody can bandage instantly
-_bandageTime max 1
+_bandageTime max 2

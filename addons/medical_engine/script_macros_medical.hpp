@@ -2,7 +2,6 @@
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
 #define ALL_HITPOINTS ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
@@ -97,6 +96,8 @@
 
 #define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
 
+#define DEFAULT_FRACTURE_VALUES [0,0,0,0,0,0]
+
 // Triage colors, for consistency across UIs and functions
 #define TRIAGE_COLOR_NONE      0, 0, 0, 0.9
 #define TRIAGE_COLOR_MINIMAL   0, 0.5, 0, 0.9
@@ -110,25 +111,29 @@
 #define TRIAGE_TEXT_COLOR_IMMEDIATE 1, 1, 1, 1
 #define TRIAGE_TEXT_COLOR_DECEASED  1, 1, 1, 1
 
+// Medical activity logs
+#define MED_LOG_MAX_ENTRIES 8
+#define MED_LOG_VARNAME(type) (format [QEGVAR(medical,log_%1), type])
+
 // - Unit Variables ----------------------------------------------------
 // These variables get stored in object space and used across components
 // Defined here for easy consistency with GETVAR/SETVAR (also a list for reference)
-#define VAR_BLOOD_PRESS QEGVAR(medical,bloodPressure)
-#define VAR_BLOOD_VOL   QEGVAR(medical,bloodVolume)
+#define VAR_BLOOD_PRESS    QEGVAR(medical,bloodPressure)
+#define VAR_BLOOD_VOL      QEGVAR(medical,bloodVolume)
 #define VAR_WOUND_BLEEDING QEGVAR(medical,woundBleeding)
-#define VAR_CRDC_ARRST  QEGVAR(medical,inCardiacArrest)
-#define VAR_HEART_RATE  QEGVAR(medical,heartRate)
-#define VAR_PAIN        QEGVAR(medical,pain)
-#define VAR_PAIN_SUPP   QEGVAR(medical,painSuppress)
-#define VAR_PERIPH_RES  QEGVAR(medical,peripheralResistance)
-#define VAR_UNCON       "ACE_isUnconscious"
+#define VAR_CRDC_ARRST     QEGVAR(medical,inCardiacArrest)
+#define VAR_HEART_RATE     QEGVAR(medical,heartRate)
+#define VAR_PAIN           QEGVAR(medical,pain)
+#define VAR_PAIN_SUPP      QEGVAR(medical,painSuppress)
+#define VAR_PERIPH_RES     QEGVAR(medical,peripheralResistance)
+#define VAR_UNCON          "ACE_isUnconscious"
 // These variables track gradual adjustments (from medication, etc.)
-#define VAR_MEDICATIONS     QEGVAR(medical,medications)
+#define VAR_MEDICATIONS    QEGVAR(medical,medications)
 // These variables track the current state of status values above
-#define VAR_HEMORRHAGE      QEGVAR(medical,hemorrhage)
-#define VAR_IN_PAIN         QEGVAR(medical,inPain)
-#define VAR_TOURNIQUET      QEGVAR(medical,tourniquets)
-
+#define VAR_HEMORRHAGE     QEGVAR(medical,hemorrhage)
+#define VAR_IN_PAIN        QEGVAR(medical,inPain)
+#define VAR_TOURNIQUET     QEGVAR(medical,tourniquets)
+#define VAR_FRACTURES      QEGVAR(medical,fractures)
 
 // - Unit Functions ---------------------------------------------------
 // Retrieval macros for common unit values
@@ -140,6 +145,7 @@
 #define GET_PAIN(unit)              (unit getVariable [VAR_PAIN,0])
 #define GET_PAIN_SUPPRESS(unit)     (unit getVariable [VAR_PAIN_SUPP,0])
 #define GET_TOURNIQUETS(unit)       (unit getVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES])
+#define GET_FRACTURES(unit)         (unit getVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES])
 #define IN_CRDC_ARRST(unit)         (unit getVariable [VAR_CRDC_ARRST,false])
 #define IS_BLEEDING(unit)           (GET_WOUND_BLEEDING(unit) > 0)
 #define IS_IN_PAIN(unit)            (unit getVariable [VAR_IN_PAIN,false])

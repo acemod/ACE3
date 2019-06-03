@@ -1,14 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal
- * Check if unit has a tourniquet applied to the specified bodypart
+ * Checks if the unit has a tourniquet applied on the specified body part.
  *
  * Arguments:
- * 0: The Unit <OBJECT>
+ * 0: Unit <OBJECT>
  * 1: Body Part <STRING>
  *
  * Return Value:
- * Has tourniquet applied <BOOL>
+ * Has Tourniquet Been Applied <BOOL>
  *
  * Example:
  * [player, "leftleg"] call ace_medical_treatment_fnc_hasTourniquetAppliedTo
@@ -16,8 +16,8 @@
  * Public: No
  */
 
-params ["_target", "_bodyPart"];
+params ["_unit", "_bodyPart"];
 
 private _index = ALL_BODY_PARTS find toLower _bodyPart;
 
-_index >= 0 && {HAS_TOURNIQUET_APPLIED_ON(_target,_index)}
+_index >= 0 && {HAS_TOURNIQUET_APPLIED_ON(_unit,_index)}
