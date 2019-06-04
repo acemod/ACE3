@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Gunbag Framework
-description: Explains how to set-up gunbags
+description: Explains how to set up gunbags
 group: framework
 parent: wiki
 order: 7
@@ -14,12 +14,12 @@ version:
 
 ## 1. Overview
 
-ACE provides a gunbag thing that you can put any gun inside.
+ACE Gunbag provides a framework that allows users to enable putting a gun inside a backpack.
 
 
 ## 2. Config Values
 
-The config entry `ace_gunbag` needs to be set to 1 to enable a backback to be a gunbag
+The `ace_gunbag` config entry needs to be set to `1` to enable a backpack to be a gunbag.
 
 ```cpp
 class Bag_Base;
