@@ -114,9 +114,8 @@ if (_actualProgress == 0) then {
     _lbfc params ["", "", "_lbfcZ"];
 
     private _pos = getPosWorld _trench;
-    private _posDiff = ((abs((_trench getVariable [QGVAR(diggingSteps), 0]) + _lbfcZ)) * _diggerCount)/(_digTime*5);
+    private _posDiff = (_trench getVariable [QGVAR(diggingSteps), 0]) * _diggerCount;
     _pos set [2,(_pos select 2) + _posDiff];
-
     _trench setPosWorld _pos;
     _trench setVectorDirAndUp _vecDirAndUp;
 
@@ -127,7 +126,7 @@ if (_actualProgress == 0) then {
     // Save progress
     _trench setVariable [QGVAR(progress), _actualProgress + ((1/(_digTime *10)) * _diggerCount)];
 
-   if (GVAR(stopBuildingAtFatigueMax) && EGVAR(advanced_fatigue,anReserve) <= 0) exitWith {
+   if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
       _trench setVariable [QGVAR(digging), false, true];
       _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];

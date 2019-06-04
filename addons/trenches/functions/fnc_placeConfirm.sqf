@@ -41,8 +41,9 @@ private _pos = getPosWorld GVAR(trench);
 deleteVehicle GVAR(trench);
 
 private _trench = createVehicle [_trenchClass, _pos, [], 0, "CAN_COLLIDE"];
-_trench setObjectTextureGlobal [0, [_trench] call FUNC(getSurfaceTexturePath)];
 _trench setPosWorld _pos;
+_trench setVectorDirAndUp _vecDirAndUp;
+_trench setObjectTextureGlobal [0, [_trench] call FUNC(getSurfaceTexturePath)];
 
 private _boundingBox = 0 boundingBoxReal _trench;
 _boundingBox params ["_lbfc", "_rtbc"];                                         //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
@@ -53,7 +54,8 @@ private _posDiff = abs _lbfcZ + abs _rtbcZ;
 private _newPos = _trench modelToWorldWorld [0, 0, -_posDiff];
 _trench setPosWorld _newPos;
 
-_trench setVariable [QGVAR(diggingSteps), _posDiff/100,true];
+private _digTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(diggingDuration)), 20];
+_trench setVariable [QGVAR(diggingSteps), _posDiff/_digTime, true];
 _trench setVectorDirAndUp _vecDirAndUp;
 
 _trench setVariable [QGVAR(placeData), [_newPos, _vecDirAndUp], true];

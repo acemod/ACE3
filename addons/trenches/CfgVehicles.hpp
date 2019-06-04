@@ -59,7 +59,6 @@ class CfgVehicles {
         GVAR(removalDuration) = QGVAR(smallEnvelopeRemovalTime);
         GVAR(placementData)[] = {2,3,0.35};
         GVAR(grassCuttingPoints)[] = {{0,-0.5,0}};
-        GVAR(boundingBoxOffset) = 0.16;
 
         editorCategory = "EdCat_Things";
         editorSubcategory = "EdSubcat_Military";
@@ -136,7 +135,6 @@ class CfgVehicles {
         GVAR(removalDuration) = QGVAR(bigEnvelopeRemovalTime);
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
-        GVAR(boundingBoxOffset) = 0.197;
 
         class GVAR(camouflagePositions) {
             center[] = {-0.4, 0.4, 0.2};
@@ -152,7 +150,6 @@ class CfgVehicles {
         GVAR(placementData)[] = {15,1.1,0.40};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_huge.p3d);
-        GVAR(boundingBoxOffset) = 0.557;
 
         class GVAR(camouflagePositions) {
             left1[] = {-0.5, 0.3, 0.5};
@@ -169,7 +166,6 @@ class CfgVehicles {
         GVAR(placementData)[] = {6,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_vehicle.p3d);
-        GVAR(boundingBoxOffset) = 0.34;
 
         class GVAR(camouflagePositions) {};
         class Attributes {};
@@ -183,7 +179,6 @@ class CfgVehicles {
         GVAR(placementData)[] = {10,1.1,0.20};
         GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         model = QPATHTOF(data\trench_short.p3d);
-        GVAR(boundingBoxOffset) = 0.16;
 
         class GVAR(camouflagePositions) {
             right[] = {1.1,0.2,0.2};
