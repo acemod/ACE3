@@ -120,19 +120,19 @@ if (_actualProgress == 0) then {
     _trench setPosWorld _pos;
     _trench setVectorDirAndUp _vecDirAndUp;
 
-    //Fatigue impact
-    EGVAR(advanced_fatigue,anReserve) = EGVAR(advanced_fatigue,anReserve) - ((_digTime /12) * GVAR(buildFatigueFactor)) max 0;
-    EGVAR(advanced_fatigue,anFatigue) = EGVAR(advanced_fatigue,anFatigue) + (((_digTime/12) * GVAR(buildFatigueFactor))/1200) min 1;
+   //Fatigue impact
+   EGVAR(advanced_fatigue,anReserve) = EGVAR(advanced_fatigue,anReserve) - ((_digTime /1.2) * GVAR(buildFatigueFactor)) max 0;
+   EGVAR(advanced_fatigue,anFatigue) = EGVAR(advanced_fatigue,anFatigue) + (((_digTime/1.2) * GVAR(buildFatigueFactor))/1200) min 1;
 
     // Save progress
     _trench setVariable [QGVAR(progress), _actualProgress + ((1/(_digTime *10)) * _diggerCount)];
 
-    if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
-        [_handle] call CBA_fnc_removePerFrameHandler;
-        _trench setVariable [QGVAR(digging), false, true];
-        _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
-    };
-},0.1,[_trench, _unit, _digTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
+   if (GVAR(stopBuildingAtFatigueMax) && EGVAR(advanced_fatigue,anReserve) <= 0) exitWith {
+      [_handle] call CBA_fnc_removePerFrameHandler;
+      _trench setVariable [QGVAR(digging), false, true];
+      _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
+   };
+},1,[_trench, _unit, _digTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 
 // Play animation
 [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);

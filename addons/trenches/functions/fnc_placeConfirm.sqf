@@ -53,7 +53,7 @@ private _posDiff = abs _lbfcZ + abs _rtbcZ;
 private _newPos = _trench modelToWorldWorld [0, 0, -_posDiff];
 _trench setPosWorld _newPos;
 
-_trench setVariable [QGVAR(diggingSteps), _posDiff/1000,true];
+_trench setVariable [QGVAR(diggingSteps), _posDiff/100,true];
 _trench setVectorDirAndUp _vecDirAndUp;
 
 _trench setVariable [QGVAR(placeData), [_newPos, _vecDirAndUp], true];
