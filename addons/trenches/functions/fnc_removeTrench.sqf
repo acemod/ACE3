@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Trench <OBJECT>
  * 1: Unit <OBJECT>
+ * 2: SwitchingDigger <BOOLEAN>
  *
  * Return Value:
  * None
@@ -17,7 +18,7 @@
  */
 
 params ["_trench", "_unit", ["_switchingDigger", false, [true]]];
-TRACE_2("removeTrench", _trench, _unit);
+TRACE_2("removeTrench", _trench, _unit, _switchingDigger);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 0];
 if (_actualProgress <= 0) exitWith {};
@@ -36,7 +37,6 @@ if (_diggerCount > 0) then {
 };
 
 private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(removalDuration)), 20];
-
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
 _placeData params ["", "_vecDirAndUp"];
 
@@ -49,6 +49,7 @@ if (isNil "_vecDirAndUp") then {
 // Create progress bar
 private _fnc_onFinish = {
     (_this select 0) params ["_unit", "_trench"];
+    _trench setVariable [QGVAR(digging), false, true];
     _trench setVariable [QGVAR(diggingType), nil, true];
     [QGVAR(handleDiggingServer), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
 
@@ -62,11 +63,11 @@ private _fnc_onFailure = {
     (_this select 0) params ["_unit", "_trench"];
     _trench setVariable [QGVAR(digging), false, true];
     _trench setVariable [QGVAR(diggingType), nil, true];
-    [QGVAR(handleDiggingServer), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
 
     // Save progress global
     private _progress = _trench getVariable [QGVAR(progress), 0];
     _trench setVariable [QGVAR(progress), _progress, true];
+    [QGVAR(handleDiggingServer), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
 
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);
@@ -75,11 +76,11 @@ private _fnc_condition = {
     (_this select 0) params ["", "_trench"];
 
     if !(_trench getVariable [QGVAR(digging), false]) exitWith {false};
-    if (count (_trench getVariable [QGVAR(diggingPlayers), []]) <= 0) exitWith {false};
+    if (count (_trench getVariable [QGVAR(diggingPlayers),[]]) <= 0) exitWith {false};
     if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0})  exitWith {false};
     true
 };
-[[_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench), _fnc_condition, [], ((_trench getVariable [QGVAR(progress), 1]) <= 0)] call EFUNC(common,progressBar);
+[_removeTime, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench), _fnc_condition, [], ((_trench getVariable [QGVAR(progress), 1]) <= 0)] call EFUNC(common,progressBar);
 
 [{
     params ["_args", "_handle"];
@@ -119,14 +120,14 @@ private _fnc_condition = {
     EGVAR(advanced_fatigue,anFatigue) = (EGVAR(advanced_fatigue,anFatigue) + (((_removeTime /12) * GVAR(buildFatigueFactor))/1200)) min 1;
 
     // Save progress
-    _trench setVariable [QGVAR(progress), (_actualProgress - ((1/(_removeTime *10)) * _diggerCount)), true];
+    _trench setVariable [QGVAR(progress), (_actualProgress - ((1/_removeTime) * _diggerCount)), true];
 
     if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
         _trench setVariable [QGVAR(digging), false, true];
         _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
     };
-},0.1,[_trench, _unit, _removeTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
+},1,[_trench, _unit, _removeTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 
 // Play animation
 [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);

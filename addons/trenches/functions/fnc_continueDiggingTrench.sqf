@@ -18,10 +18,10 @@
  */
 
 params ["_trench", "_unit", ["_switchingDigger", false, [true]]];
-TRACE_2("continueDiggingTrench",_trench,_unit);
+TRACE_2("continueDiggingTrench", _trench, _unit, _switchingDigger);
 
 private _actualProgress = _trench getVariable [QGVAR(progress), 0];
-if (_actualProgress == 1) exitWith {};
+if (_actualProgress >= 1) exitWith {};
 
 // Mark trench as being worked on
 _trench setVariable [QGVAR(digging), true, true];
@@ -99,14 +99,15 @@ if (_actualProgress == 0) then {
     _args params ["_trench", "_unit", "_digTime", "_vecDirAndUp"];
     private _actualProgress = _trench getVariable [QGVAR(progress), 0];
     private _diggerCount =count (_trench getVariable [QGVAR(diggingPlayers), []]);
+
     if (
         !(_trench getVariable [QGVAR(digging), false]) ||
         {_diggerCount <= 0} ||
         {_actualProgress >= 1}
     ) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
-    _trench setVariable [QGVAR(digging), false, true];
-    _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers),[]] - [_unit], true];
+        _trench setVariable [QGVAR(digging), false, true];
+        _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers),[]] - [_unit], true];
     };
 
     private _boundingBox = 0 boundingBoxReal _trench;
@@ -116,6 +117,7 @@ if (_actualProgress == 0) then {
     private _pos = getPosWorld _trench;
     private _posDiff = (_trench getVariable [QGVAR(diggingSteps), 0]) * _diggerCount;
     _pos set [2,(_pos select 2) + _posDiff];
+
     _trench setPosWorld _pos;
     _trench setVectorDirAndUp _vecDirAndUp;
 
@@ -124,7 +126,7 @@ if (_actualProgress == 0) then {
    EGVAR(advanced_fatigue,anFatigue) = EGVAR(advanced_fatigue,anFatigue) + (((_digTime/1.2) * GVAR(buildFatigueFactor))/1200) min 1;
 
     // Save progress
-    _trench setVariable [QGVAR(progress), _actualProgress + ((1/(_digTime *10)) * _diggerCount)];
+    _trench setVariable [QGVAR(progress), _actualProgress + ((1/_digTime) * _diggerCount)];
 
    if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
