@@ -17,6 +17,7 @@
  * Public: No
  */
 
+systemChat str _this;
 params ["_trench", "_unit", ["_switchingDigger", false, [true]]];
 TRACE_2("removeTrench", _trench, _unit, _switchingDigger);
 
@@ -33,7 +34,7 @@ if (_diggerCount > 0) then {
         [_trench, _unit] call FUNC(addDigger);
     };
 } else {
-    _trench setVariable [QGVAR(diggingPlayers), [ACE_player],true];
+    _trench setVariable [QGVAR(diggingPlayers), [ACE_player], true];
 };
 
 private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(removalDuration)), 20];
@@ -104,10 +105,6 @@ private _fnc_condition = {
         _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
     };
 
-    private _boundingBox = 0 boundingBoxReal _trench;
-    _boundingBox params ["_lbfc"];  //_lbfc(Left Bottom Front Corner) _rtbc (Right Top Back Corner)
-    _lbfc params ["", "", "_lbfcZ"];
-
     private _pos = getPosWorld _trench;
     private _posDiff = (_trench getVariable [QGVAR(diggingSteps), 0]) * _diggerCount;
     _pos set [2,((_pos select 2) - _posDiff)];
@@ -118,9 +115,6 @@ private _fnc_condition = {
     //Fatigue impact
     EGVAR(advanced_fatigue,anReserve) = (EGVAR(advanced_fatigue,anReserve) - ((_removeTime /12) * GVAR(buildFatigueFactor))) max 0;
     EGVAR(advanced_fatigue,anFatigue) = (EGVAR(advanced_fatigue,anFatigue) + (((_removeTime /12) * GVAR(buildFatigueFactor))/1200)) min 1;
-
-    // Save progress
-    _trench setVariable [QGVAR(progress), (_actualProgress - ((1/_removeTime) * _diggerCount)), true];
 
     if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;

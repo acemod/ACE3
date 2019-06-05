@@ -34,7 +34,7 @@ if (_initiator) then {
                 _diggingPlayers = _diggingPlayers - [objNull];
 
                 if !(_diggingPlayers isEqualTo (_trench getVariable [QGVAR(diggingPlayers), []])) then {
-                    _trench setVariable [QGVAR(diggingPlayers), _diggingPlayers, true];
+                    _trench setVariable [QGVAR(diggingPlayers), [_diggingPlayers], true];
                 };
 
                 if (
@@ -44,9 +44,9 @@ if (_initiator) then {
                     [_handle] call CBA_fnc_removePerFrameHandler;
                 };
 
-                _trench setVariable [QGVAR(progress), (_trench getVariable [QGVAR(progress), 0]) + ((1/(_digTime *10)) * count _diggingPlayers)];
+                _trench setVariable [QGVAR(progress), (_trench getVariable [QGVAR(progress), 0]) + (1/_digTime) * count _diggingPlayers, true];
             },
-            0.1,
+            1,
             [
                 _trench,
                 missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(diggingDuration)), 20]

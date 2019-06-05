@@ -79,7 +79,7 @@ class CfgVehicles {
                 class GVAR(continueDigging) {
                     displayName = CSTRING(continueDiggingTrench);
                     condition = QUOTE(_this call FUNC(canContinueDiggingTrench));
-                    statement = QUOTE(_this call FUNC(continueDiggingTrench););
+                    statement = QUOTE(_this call FUNC(continueDiggingTrench));
                 };
                 class GVAR(helpDigging) {
                     displayName = CSTRING(HelpDigging);
@@ -88,8 +88,8 @@ class CfgVehicles {
                 };
                 class GVAR(remove) {
                     displayName = CSTRING(removeEnvelope);
-                    condition = QUOTE(_this call FUNC(canRemoveTrench));
-                    statement = QUOTE(_this call FUNC(removeTrench););
+                    condition =  QUOTE(_this call FUNC(canRemoveTrench));
+                    statement = QUOTE([ARR_3(_target, _player, false)] call FUNC(removeTrench));
                 };
                 class GVAR(placeCamouflage) {
                     displayName = CSTRING(placeCamouflage);
