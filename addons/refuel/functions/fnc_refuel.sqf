@@ -39,54 +39,50 @@ if (_maxFuel == 0) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
+    // Quit if target or fuel tank got destroyed
     if (!alive _source || {!alive _sink}) exitWith {
-        [objNull, _nozzle] call FUNC(dropNozzle);
-        _nozzle setVariable [QGVAR(isConnected), false, true];
-        if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), true, true]; };
-        _nozzle setVariable [QGVAR(sink), nil, true];
-        _sink setVariable [QGVAR(nozzle), nil, true];
+        [objNull, _nozzle] call FUNC(disconnect);
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
+
+    // Quit if hose distance was exceeded
     private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
     private _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > (_hoseLength - 2);
     if (_tooFar && {!(_nozzle getVariable [QGVAR(jerryCan), false])}) exitWith {
         [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
-
-        [objNull, _nozzle] call FUNC(dropNozzle);
-        _nozzle setVariable [QGVAR(isConnected), false, true];
-        if (_nozzle isKindOf "Land_CanisterFuel_F") then { _nozzle setVariable [QEGVAR(cargo,canLoad), true, true]; };
-        _nozzle setVariable [QGVAR(sink), nil, true];
-        _sink setVariable [QGVAR(nozzle), nil, true];
+        [objNull, _nozzle] call FUNC(disconnect);
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
+    // Main fueling process
     private _finished = false;
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
-        private _fuelInSource = [_source] call FUNC(getFuel);
-        if (_fuelInSource == 0) exitWith {
-            [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
-            _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
-            _nozzle setVariable [QGVAR(isRefueling), false, true];
-        };
-
         // Calculate rate using mission time to take time acceleration and pause into account
-        private _rateTime = _rate * (CBA_missionTime - (_nozzle getVariable [QGVAR(lastTickMissionTime), CBA_missionTime]));
+        private _addedFuel = _rate * (CBA_missionTime - (_nozzle getVariable [QGVAR(lastTickMissionTime), CBA_missionTime]));
         _nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime];
 
-        if !(_fuelInSource == REFUEL_INFINITE_FUEL) then {
-            _fuelInSource = _fuelInSource - _rateTime;
+        // Subtract fuel of source, quit if empty
+        private _fuelInSource = [_source] call FUNC(getFuel);
+        if (_fuelInSource != REFUEL_INFINITE_FUEL) then {
+            _fuelInSource = _fuelInSource - _addedFuel;
+
+            // Check if source is now empty
+            if (_fuelInSource <= 0) then {
+                _addedFuel = _addedFuel + _fuelInSource; // Cannot take more fuel than available from source
+                _fuelInSource = 0;
+                _finished = true;
+                [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
+            };
         } else {
-            _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _rateTime, true];
-        };
-        if (_fuelInSource < 0 && {_fuelInSource > REFUEL_INFINITE_FUEL}) then {
-            _fuelInSource = 0;
-            _finished = true;
-            [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
+            // For infinite fuel sources only increase counter
+            private _fuelCounter = _source getVariable [QGVAR(fuelCounter), 0];
+            _source setVariable [QGVAR(fuelCounter), _fuelCounter + _addedFuel, true];
         };
 
-        private _fuelInSink = (_unit getVariable [QGVAR(tempFuel), _startFuel])  + ( _rateTime / _maxFuel);
-        if (_fuelInSink > 1) then {
+        // Add fuel to target
+        private _fuelInSink = (_unit getVariable [QGVAR(tempFuel), _startFuel]) + (_addedFuel / _maxFuel);
+        if (_fuelInSink >= 1) then {
             _fuelInSink = 1;
             _finished = true;
             [LSTRING(Hint_Completed), 2, _unit] call EFUNC(common,displayTextStructured);
@@ -99,6 +95,7 @@ if (_maxFuel == 0) then {
         _unit setVariable [QGVAR(tempFuel), fuel _sink];
     };
 
+    // Reset variables when done
     if (_finished) exitWith {
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
