@@ -21,5 +21,8 @@ TRACE_1("params",_vehicle);
 if (_vehicle isKindOf "CAManBase") exitWith {false};
 
 // Value can be integer or boolean
-private _value = _vehicle getVariable ["ACE_isRepairVehicle", getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(canRepair))];
+private _value = _vehicle getVariable [
+    "ACE_isRepairVehicle",
+    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportRepair") > 0
+];
 _value in [1, true] // return

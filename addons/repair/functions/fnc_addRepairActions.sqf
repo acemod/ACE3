@@ -15,7 +15,7 @@
  * Public: No
  */
 
-if (!hasInterface) exitWith {};
+if (!hasInterface || !GVAR(enabled)) exitWith {};
 
 params ["_vehicle"];
 private _type = typeOf _vehicle;

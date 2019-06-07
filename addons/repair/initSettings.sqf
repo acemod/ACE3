@@ -1,4 +1,16 @@
-// CBA Settings [ADDON: ace_repair]:
+[
+    QGVAR(enabled),
+    "CHECKBOX",
+    ELSTRING(common,Enabled),
+    [LELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    true,
+    true,
+    {
+        parsingNamespace setVariable [QGVAR(actionEnabled), parseNumber !_this];
+        [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged);
+    },
+    true // Needs mission restart
+] call CBA_Settings_fnc_init;
 
 [
     QGVAR(displayTextOnRepair), "CHECKBOX",
@@ -11,7 +23,7 @@
 
 [
     QGVAR(engineerSetting_repair), "LIST",
-    [LSTRING(engineerSetting_Repair_name), LSTRING(engineerSetting_Repair_description)], 
+    [LSTRING(engineerSetting_Repair_name), LSTRING(engineerSetting_Repair_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
     [[0,1,2],[LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],1], // [values, titles, defaultIndex]
     true, // isGlobal
