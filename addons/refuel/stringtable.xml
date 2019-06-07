@@ -271,6 +271,10 @@
             <Chinesesimp>开始加油</Chinesesimp>
             <Chinese>開始加油</Chinese>
         </Key>
+        <Key ID="STR_ACE_Refuel_TurnOn_Container">
+            <English>Start fueling (container)</English>
+            <German>Betankung beginnen (Container)</German>
+        </Key>
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
             <German>Kann Zapfpistole nicht anschalten</German>

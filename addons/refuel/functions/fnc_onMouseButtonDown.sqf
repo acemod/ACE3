@@ -42,10 +42,16 @@ private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.
 if (cameraView == "EXTERNAL") then {
     _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
 };
+
+private _canReceive = _cursorObject getVariable [
+    QGVAR(jerryCan), // Jerry cans can always be refueled
+    getNumber (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> QGVAR(canReceive)) == 1
+];
+
 if (
     !isNull _cursorObject
     && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}
-    && {1 == getNumber (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> QGVAR(canReceive))}
+    && {_canReceive}
     && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}
     && {!lineIntersects [eyePos _unit, _virtualPosASL, _unit]}
 ) then {

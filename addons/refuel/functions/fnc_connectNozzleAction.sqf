@@ -111,7 +111,7 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _sink setVariable [QGVAR(nozzle), _nozzle, true];
 
-        _source = _nozzle getVariable QGVAR(source);
+        private _source = _nozzle getVariable QGVAR(source);
         private _fuel = [_source] call FUNC(getFuel);
         if (_fuel == REFUEL_INFINITE_FUEL) then {
             _source setVariable [QGVAR(fuelCounter), 0, true];
@@ -121,11 +121,30 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
 
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
 
-        if ([_unit, _nozzle] call FUNC(canTurnOn)) then {
-            _unit setVariable [QGVAR(tempFuel), nil];
-            [_unit, _nozzle] call FUNC(turnOn);
-        } else {
-            [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+        private _canReceive = getNumber (configFile >> "CfgVehicles" >> typeOf _sink >> QGVAR(canReceive)) == 1;
+        private _isContainer = !(isNil {_sink getVariable QGVAR(currentFuelCargo)})
+                               || {isNumber (configFile >> "CfgVehicles" >> typeOf _sink >> QGVAR(fuelCargo))};
+
+        // Decide if cargo or vehicle will be refueled
+        switch (true) do {
+            case (_canReceive && {!_isContainer || {_sink == _source}}): {
+                // is not a refueling vehicle or refueling vehicle tries to refuel itself
+                if ([_unit, _nozzle, false] call FUNC(canTurnOn)) then {
+                    [_unit, _nozzle, false] call FUNC(turnOn);
+                } else {
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+                };
+            };
+            case (!_canReceive && _isContainer): {
+                if ([_unit, _nozzle, true] call FUNC(canTurnOn)) then {
+                    [_unit, _nozzle, true] call FUNC(turnOn);
+                } else {
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+                };
+            };
+            default {
+                /* Target is a refueling vehicle, let user manually decide if he wants to refuel cargo or vehicle itself */
+            };
         };
     },
     "",
