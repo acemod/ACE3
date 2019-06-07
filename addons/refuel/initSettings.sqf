@@ -1,9 +1,18 @@
-// CBA Settings [ADDON: ace_refuel]:
+[
+    QGVAR(enabled),
+    "CHECKBOX",
+    ELSTRING(common,Enabled),
+    [LELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_refuel"],
+    true,
+    true,
+    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_Settings_fnc_init;
 
 [
     QGVAR(rate), "SLIDER",
     [LSTRING(RefuelSettings_speed_DisplayName), LSTRING(RefuelSettings_speed_Description)],
-    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_refuel"],
+    [LELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_refuel"],
     [0,25,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true, // isGlobal
     {[QGVAR(rate), _this] call EFUNC(common,cbaSettings_settingChanged)}
