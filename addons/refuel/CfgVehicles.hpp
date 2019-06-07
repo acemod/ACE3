@@ -1,44 +1,5 @@
 #define MACRO_NOZZLE_ACTIONS \
-    class ACE_Actions { \
-        class ACE_MainActions { \
-            displayName = CSTRING(Refuel); \
-            distance = REFUEL_ACTION_DISTANCE; \
-            position = "[0,-0.025,0.125]"; \
-            condition = "true"; \
-            statement = ""; \
-            exceptions[] = {INTERACT_EXCEPTIONS}; \
-            showDisabled = 0; \
-            icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            class GVAR(PickUpNozzle) { \
-                displayName = CSTRING(TakeNozzle); \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
-                statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeNozzle)); \
-                exceptions[] = {INTERACT_EXCEPTIONS_REFUELING}; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            }; \
-            class GVAR(TurnOn) { \
-                displayName = CSTRING(TurnOn); \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn)); \
-                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOn)); \
-                exceptions[] = {INTERACT_EXCEPTIONS}; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            }; \
-            class GVAR(TurnOff) { \
-                displayName = CSTRING(TurnOff); \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff)); \
-                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOff)); \
-                exceptions[] = {INTERACT_EXCEPTIONS}; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            }; \
-            class GVAR(Disconnect) { \
-                displayName = CSTRING(Disconnect); \
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
-                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
-                exceptions[] = {INTERACT_EXCEPTIONS_REFUELING}; \
-                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-            }; \
-        }; \
-    };
+
 
 class CBA_Extended_EventHandlers;
 
@@ -75,11 +36,58 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        MACRO_NOZZLE_ACTIONS
         displayName = QGVAR(fuelNozzle);
         scope = 1;
         scopeCurator = 1;
         model = QPATHTOF(data\nozzle.p3d);
+
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(Refuel);
+                distance = REFUEL_ACTION_DISTANCE;
+                position = "[0,-0.025,0.125]";
+                condition = "true";
+                statement = "";
+                exceptions[] = {INTERACT_EXCEPTIONS};
+                showDisabled = 0;
+                icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                class GVAR(PickUpNozzle) {
+                    displayName = CSTRING(TakeNozzle);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeNozzle));
+                    exceptions[] = {INTERACT_EXCEPTIONS_REFUELING};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+                class GVAR(TurnOn) {
+                    displayName = CSTRING(TurnOn);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn));
+                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOn));
+                    exceptions[] = {INTERACT_EXCEPTIONS};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+                class GVAR(TurnOn_Container) {
+                    displayName = CSTRING(TurnOn_Container);
+                    condition = QUOTE([ARR_3(_player,_target,true)] call FUNC(canTurnOn));
+                    statement = QUOTE([ARR_3(_player,_target,true)] call DFUNC(turnOn));
+                    exceptions[] = {INTERACT_EXCEPTIONS};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+                class GVAR(TurnOff) {
+                    displayName = CSTRING(TurnOff);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff));
+                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOff));
+                    exceptions[] = {INTERACT_EXCEPTIONS};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+                class GVAR(Disconnect) {
+                    displayName = CSTRING(Disconnect);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect));
+                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect));
+                    exceptions[] = {INTERACT_EXCEPTIONS_REFUELING};
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa);
+                };
+            };
+        };
     };
 
     class All;
