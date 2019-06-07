@@ -36,3 +36,7 @@
 #define SND_HEARBEAT_SLOW   (selectRandom ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"])
 
 #define VOL_UNCONSCIOUS 0.25
+
+#define FX_PAIN_WHITE_FLASH 0
+#define FX_PAIN_PULSATING_BLUR 1
+#define FX_PAIN_CHROMATIC_ABERRATION 2

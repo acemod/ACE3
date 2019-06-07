@@ -35,27 +35,45 @@ if (!isNil QGVAR(ppPain)) then {
     TRACE_1("delete pain",GVAR(ppPain));
     ppEffectDestroy GVAR(ppPain)
 };
-if (GVAR(painEffectType) == 0) then {
-    GVAR(ppPain) = [
-        "ColorCorrections",
-        13502,
-        [1, 1, 0, [1, 1, 1, 0], [1, 1, 1, 1], [0.33, 0.33, 0.33, 0], [0.55, 0.5, 0, 0, 0, 0, 4]]
-    ] call _fnc_createEffect;
-} else {
-    GVAR(ppPain) = [
-        "RadialBlur", // "Will not do anything if RADIAL BLUR is disabled in Video Options."
-        13502,
-        [0, 0, 0.25, 0.25]
+switch (GVAR(painEffectType)) do {
+    case FX_PAIN_WHITE_FLASH: {
+        GVAR(ppPain) = [
+            "ColorCorrections",
+            13502,
+            [1, 1, 0, [1, 1, 1, 0], [1, 1, 1, 1], [0.33, 0.33, 0.33, 0], [0.55, 0.5, 0, 0, 0, 0, 4]]
+        ] call _fnc_createEffect;
+    };
+    case FX_PAIN_PULSATING_BLUR: {
+        GVAR(ppPain) = [
+            "RadialBlur", // "Will not do anything if RADIAL BLUR is disabled in Video Options."
+            13502,
+            [0, 0, 0.25, 0.25]
+        ] call _fnc_createEffect;
+    };
+    case FX_PAIN_CHROMATIC_ABERRATION: {
+        GVAR(ppPain) = [
+            "ChromAberration",
+            13502,
+            [0, 0, false]
+        ] call _fnc_createEffect;
+    };
+};
+// Base blur on high pain
+if (isNil QGVAR(ppPainBlur)) then {
+    GVAR(ppPainBlur) = [
+        "DynamicBlur",
+        813, // 135xx does not work
+        [0]
     ] call _fnc_createEffect;
 };
-TRACE_1("created pain",GVAR(ppPain));
 
+TRACE_1("created pain",GVAR(ppPain));
 if (_justPain) exitWith {};
 
 // - Unconscious --------------------------------------------------------------
 GVAR(ppUnconsciousBlur) = [
     "DynamicBlur",
-    813, // 135xx does not work
+    814, // 135xx does not work
     [0]
 ] call _fnc_createEffect;
 
@@ -82,6 +100,6 @@ GVAR(ppIncapacitationGlare) = [
 
 GVAR(ppIncapacitationBlur) = [
     "DynamicBlur",
-    814, // 135xx does not work
+    815, // 135xx does not work
     [0]
 ] call _fnc_createEffect;

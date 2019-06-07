@@ -61,5 +61,8 @@
             <English>Pulsing blur</English>
             <Japanese>ボケの強弱</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_feedback_painEffectType_chromAberration">
+            <English>Chromatic Abberration</English>
+        </Key>
     </Package>
 </Project>

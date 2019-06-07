@@ -8,8 +8,8 @@ private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subC
     [localize LSTRING(painEffectType), "Selects the used pain effect type"], //@todo
     _categoryArray,
     [
-        [0, 1],
-        [LLSTRING(painEffectType_whiteFlashing), LLSTRING(painEffectType_pulsingBlur)],
+        [FX_PAIN_WHITE_FLASH, FX_PAIN_PULSATING_BLUR, FX_PAIN_CHROMATIC_ABERRATION],
+        [LLSTRING(painEffectType_whiteFlashing), LLSTRING(painEffectType_pulsingBlur), LLSTRING(painEffectType_chromAberration)],
         0
     ],
     false,
