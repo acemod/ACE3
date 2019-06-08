@@ -35,4 +35,4 @@ private _type   = GET_STRING(_ivConfig >> "type",getText (_defaultConfig >> "typ
 // Add IV bag to patient's ivBags array
 private _ivBags = _patient getVariable [QEGVAR(medical,ivBags), []];
 _ivBags pushBack [_volume, _type, _partIndex];
-_ivBags setVariable [QEGVAR(medical,ivBags), _ivBags, true];
+_patient setVariable [QEGVAR(medical,ivBags), _ivBags, true];
