@@ -3,6 +3,7 @@
     <Package name="Medical_Treatment">
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Treatment">
             <English>Treatment</English>
+            <German>Behandlung</German>
             <Japanese>治療</Japanese>
             <Russian>Лечение</Russian>
         </Key>
@@ -11,6 +12,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
+            <German>Erweiterte Diagnose</German>
             <Japanese>アドバンスド診断</Japanese>
             <Russian>Расширенная Диагностика</Russian>
         </Key>
@@ -19,6 +21,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
+            <German>Erweiterte Bandagen</German>
             <Japanese>アドバンスド包帯</Japanese>
             <Russian>Расширенная Перевязка</Russian>
         </Key>
@@ -33,6 +36,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
+            <German>Erweiterte Medikamente</German>
             <Japanese>アドバンスド医薬品</Japanese>
             <Russian>Расширенные Лекарства</Russian>
         </Key>
@@ -69,10 +73,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
+            <German>Eigennutzung von Bluttransfusionen</German>
             <Russian>Внутривенное переливание на себе</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
             <English>Enables the use of IV Transfusions on oneself.</English>
+            <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
@@ -193,10 +199,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
+            <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
             <Russian>Конвертировать ванильные медикаменты</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
+            <German>Legt fest, ob Standard Medic-Equipment in ACE-Equipment umgewandelt oder entfernt wird</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
             <English>Remove Only</English>
@@ -2077,6 +2085,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Minimal">
             <English>Minimal</English>
+            <German>Minimal</German>
             <Japanese>軽処置群</Japanese>
             <Russian>Минимально</Russian>
         </Key>

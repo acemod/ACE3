@@ -442,11 +442,13 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
+            <German>Wahrscheinlichkeit aufzuwachen</German>
             <Japanese>気絶から覚醒する可能性</Japanese>
             <Russian>Шанс очнуться при потере сознания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_Description">
             <English>Probablity that a unit with stable vitals will wake up from unconscious [Checked every 15 sec]</English>
+            <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht [Überprüfung alle 15 Sekunden]</German>
             <Japanese>安定状態にある人が覚醒する確率です。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания [Проверяется каждые 15 сек]</Russian>
         </Key>

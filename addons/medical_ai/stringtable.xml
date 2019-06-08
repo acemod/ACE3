@@ -3,11 +3,13 @@
     <Package name="medical_ai">
         <Key ID="STR_ACE_medical_ai_enableFor_title">
             <English>Medic AI</English>
+            <German>Sanitäts KI</German>
             <Japanese>AI 衛生兵</Japanese>
             <Russian>ИИ Медик</Russian>
         </Key>
         <Key ID="STR_ACE_medical_ai_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
+            <German>KI reagiert auf Verletzungen und Bewusstlosigkeit</German>
             <Japanese>AI が負傷者と気絶している人に対して行動するようになります。</Japanese>
             <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
         </Key>

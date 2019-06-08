@@ -3,6 +3,7 @@
     <Package name="ai">
         <Key ID="STR_ACE_ai_GarrisonInvalidPosition">
             <English>Invalid position provided.</English>
+            <German>Ungültige Position</German>
             <French>Position invalide fourni</French>
             <Japanese>位置が無効です。</Japanese>
             <Italian>Posizione invalida fornita.</Italian>
@@ -14,6 +15,7 @@
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNoUnits">
             <English>No units provided.</English>
+            <German>Keine Einheit ausgewählt</German>
             <French>Aucune unité fourni</French>
             <Japanese>ユニットがありません。</Japanese>
             <Italian>Nessuna unità fornita.</Italian>
@@ -25,6 +27,7 @@
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
+            <German>Es gibt nicht genug Positionen, um alle Einheiten zu platzieren</German>
             <French>Il n'y a pas assez de positions pour placer toutes les unités</French>
             <Japanese>全ユニットを置くために十分な位置がありません。</Japanese>
             <Italian>Non ci sono abbastanza posizioni per piazzare tutte le unità.</Italian>
@@ -36,6 +39,7 @@
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNoBuilding">
             <English>No building found.</English>
+            <German>Kein Gebäude gefunden</German>
             <French>Aucun bâtiment trouvé</French>
             <Japanese>建物がありません。</Japanese>
             <Italian>Nessun edificio trovato.</Italian>

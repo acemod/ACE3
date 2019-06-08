@@ -4,6 +4,7 @@
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_feedback_subCategory">
                 <English>Feedback</English>
+                <German>Feedback</German>
                 <Japanese>フィードバック</Japanese>
                 <Russian>Реакция на ранения</Russian>
             </Key>
@@ -56,11 +57,13 @@
         </Key>
         <Key ID="STR_ACE_Medical_feedback_painEffectType_whiteFlashing">
             <English>White flashing</English>
+            <German>Weißes blinken</German>
             <Japanese>白く点滅</Japanese>
             <Russian>Белые вспышки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_feedback_painEffectType_pulsingBlur">
             <English>Pulsing blur</English>
+            <German>Wiederkehrende Unschärfe</German>
             <Japanese>ボケの強弱</Japanese>
             <Russian>Пульсирующее размытие</Russian>
         </Key>
