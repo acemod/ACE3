@@ -36,6 +36,7 @@ isClass _config
     GET_FUNCTION(_condition,_config >> "condition");
 
     if (_condition isEqualType {}) then {
+        if (_condition isEqualTo {}) exitWith { _condition = true; };
         _condition = call _condition;
     };
 
