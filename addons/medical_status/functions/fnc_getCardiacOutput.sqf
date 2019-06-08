@@ -21,12 +21,12 @@
 */
 
 // to limit the amount of complex calculations necessary, we take a set modifier to calculate Stroke Volume.
-#define MODIFIER_CARDIAC_OUTPUT     19.04761
+#define MODIFIER_CARDIAC_OUTPUT     0.1904761
 
 params ["_unit"];
 
-private _bloodVolume = (GET_BLOOD_VOLUME(_unit) / DEFAULT_BLOOD_VOLUME) * 100;
+private _bloodVolumeRatio = (GET_BLOOD_VOLUME(_unit) / DEFAULT_BLOOD_VOLUME);
 private _heartRate = GET_HEART_RATE(_unit);
-private _cardiacOutput = ((_bloodVolume / MODIFIER_CARDIAC_OUTPUT) + ((_heartRate / DEFAULT_HEART_RATE) - 1)) / 60;
+private _cardiacOutput = ((_bloodVolumeRatio / MODIFIER_CARDIAC_OUTPUT) + ((_heartRate / DEFAULT_HEART_RATE) - 1)) / 60;
 
 (0 max _cardiacOutput)

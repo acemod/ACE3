@@ -16,4 +16,12 @@ PREP_RECOMPILE_END;
     _tube addTorque (vectorNormalized [1 - random 2, 1 - random 2, 1 - random 2] vectorMultiply 4);
 }] call CBA_fnc_addClassEventHandler;
 
+["ACE_SpottingScopeObject", "GetOut", {
+    params ["_vehicle", "", "_unit"];
+
+    if (local _unit) then {
+        _unit setDir getDir _vehicle;
+    };
+}] call CBA_fnc_addClassEventHandler;
+
 ADDON = true;

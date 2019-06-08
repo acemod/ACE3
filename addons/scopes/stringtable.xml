@@ -11,6 +11,7 @@
             <Italian>Mirini</Italian>
             <Chinesesimp>瞄准镜</Chinesesimp>
             <Chinese>瞄準鏡</Chinese>
+            <Russian>Прицелы</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_displayName">
             <English>Enable ACE Scope adjustment</English>
@@ -22,6 +23,7 @@
             <Italian>Abilita Regolazione mirino ACE</Italian>
             <Chinesesimp>开启ACE瞄准镜归零调节</Chinesesimp>
             <Chinese>開啟ACE瞄準鏡歸零調節</Chinese>
+            <Russian>Включить настройку прицелов ACE</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_description">
             <English>Enable adjustment turrets on high powered scopes</English>
@@ -33,6 +35,7 @@
             <Italian>Abilita la regolazione delle torrette nei mirini a lunga gittata</Italian>
             <Chinesesimp>开启高倍率瞄准镜归零调节</Chinesesimp>
             <Chinese>開啟高倍率瞄準鏡歸零調節</Chinese>
+            <Russian>Включает регулировочные барабанчики ввода поправок на прицелах с высокой кратностью</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_displayName">
             <English>Force adjustment turrets</English>
@@ -44,6 +47,7 @@
             <Italian>Forza la regolazione delle torrette</Italian>
             <Chinesesimp>强制使用归零调节</Chinesesimp>
             <Chinese>強制使用歸零調節</Chinese>
+            <Russian>Включить регулировку ненастроенных прицелов</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustmet turrets on high powered scopes</English>
@@ -55,6 +59,7 @@
             <Italian>Forza l'uso della regolazione nei mirini a lunga gittata</Italian>
             <Chinesesimp>强制为高倍率瞄准镜开启归零调节</Chinesesimp>
             <Chinese>強制為高倍率瞄準鏡開啟歸零調節</Chinese>
+            <Russian>Принудительно использовать барабанчики ввода поправок для ненастроенных прицелов с высокой кратностью</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_displayName">
             <English>Correct zeroing</English>
@@ -66,6 +71,7 @@
             <Italian>Correggi azzeramento</Italian>
             <Chinesesimp>修正归零</Chinesesimp>
             <Chinese>修正歸零</Chinese>
+            <Russian>Корректировать пристрелку</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_description">
             <English>Corrects the zeroing of all small arms sights</English>
@@ -77,6 +83,7 @@
             <Italian>Corregge l'azzeramento di tutti i mirini di bassa portata</Italian>
             <Chinesesimp>为所有小口径武器修正归零</Chinesesimp>
             <Chinese>為所有小口徑武器修正歸零</Chinese>
+            <Russian>Позволяет корректировать пристрелку для всех прицелов стрелкового оружия</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_displayName">
             <English>Overwrite zero distance</English>
@@ -88,6 +95,7 @@
             <Italian>Sovrascrivi la distanza zero</Italian>
             <Chinesesimp>覆写归零距离</Chinesesimp>
             <Chinese>覆寫歸零距離</Chinese>
+            <Russian>Перезаписать дальность пристрелки</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
@@ -99,6 +107,7 @@
             <Italian>Usa le impostazioni di "defaultZeroRange" (Portata Zero Predefinita) per sovrascrivere la portata zero dei mirini a lunga gittata </Italian>
             <Chinesesimp>使用'defaultZeroRange'来为高倍率瞄准镜覆写预设归零距离</Chinesesimp>
             <Chinese>使用'defaultZeroRange'來為高倍率瞄準鏡覆寫預設歸零距離</Chinese>
+            <Russian>Использует настройку 'defaultZeroRange' для перенастройки дальности пристрелки прицелов с высокой кратностью</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_displayName">
             <English>Default zero distance</English>
@@ -110,6 +119,7 @@
             <Italian>Distanza zero predefinita</Italian>
             <Chinesesimp>预设归零距离</Chinesesimp>
             <Chinese>預設歸零距離</Chinese>
+            <Russian>Дальность пристрелки по умолчанию</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_description">
             <English>High powered scopes will be zeroed at this distance</English>
@@ -121,6 +131,7 @@
             <Italian>I mirini a lunga gittata verranno azzerrati a questa distanza</Italian>
             <Chinesesimp>高倍率瞄准镜将归零在这个距离上</Chinesesimp>
             <Chinese>高倍率瞄準鏡將歸零在這個距離上</Chinese>
+            <Russian>Дальность, на которую будут пристреляны прицелы с высокой кратностью</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
             <English>Reference temperature</English>
@@ -132,6 +143,7 @@
             <Italian>Temperatura di riferimento</Italian>
             <Chinesesimp>参考温度</Chinesesimp>
             <Chinese>參考溫度</Chinese>
+            <Russian>Референсная температура</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_description">
             <English>Temperature at which the scope was zeroed</English>
@@ -143,6 +155,7 @@
             <Italian>Temperatura a cui è stato azzerato il mirino</Italian>
             <Chinesesimp>武器参考多少温度来进行归零.</Chinesesimp>
             <Chinese>武器參考多少溫度來進行歸零.</Chinese>
+            <Russian>Температура, при которой выполнена пристрелка прицела</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_displayName">
             <English>Reference barometric pressure</English>
@@ -154,6 +167,7 @@
             <Italian>Pressione barometrica di riferimento</Italian>
             <Chinesesimp>参考大气压力</Chinesesimp>
             <Chinese>參考大氣壓力</Chinese>
+            <Russian>Референсное давление</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_description">
             <English>Barometric pressure at which the scope was zeroed</English>
@@ -165,6 +179,7 @@
             <Italian>Pressione barometrica a cui è stato azzerato il mirino</Italian>
             <Chinesesimp>武器参考多少大气压力来进行归零。</Chinesesimp>
             <Chinese>武器參考多少大氣壓力來進行歸零。</Chinese>
+            <Russian>Давление, при котором выполнена пристрелка прицела</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
@@ -176,6 +191,7 @@
             <Italian>Umidità di riferimento</Italian>
             <Chinesesimp>参考湿度</Chinesesimp>
             <Chinese>參考濕度</Chinese>
+            <Russian>Референсная влажность</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_description">
             <English>Humidity at which the scope was zeroed</English>
@@ -187,6 +203,7 @@
             <Italian>Umidità a cui è stato azzerato il mirino</Italian>
             <Chinesesimp>武器参考多少湿度来进行归零。</Chinesesimp>
             <Chinese>武器參考多少濕度來進行歸零。</Chinese>
+            <Russian>Влажность, при которой выполнена пристрелка прицела</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
             <English>Deduce pressure from altitude</English>
@@ -198,6 +215,7 @@
             <Italian>Ricava la pressione dall'altitudine</Italian>
             <Chinesesimp>高度影响大气压力</Chinesesimp>
             <Chinese>高度影響大氣壓力</Chinese>
+            <Russian>Просчитать давление из высоты</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
             <English>Deduce the barometric pressure from the terrain altitude</English>
@@ -209,6 +227,7 @@
             <Italian>Ricava la pressione barometrica dall'altitudine del terreno</Italian>
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
+            <Russian>Давление определяется по высоте</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
             <English>Use legacy UI</English>
@@ -219,6 +238,7 @@
             <Japanese>昔の UI を使用</Japanese>
             <Korean>기존 UI 사용</Korean>
             <Polish>Wykorzystaj legacy UI</Polish>
+            <Russian>Использовать устаревший интерфейс</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_description">
             <English>Displays elevation and windage with signed numbers</English>
@@ -229,6 +249,7 @@
             <Japanese>印付きの数字で仰角と横風を表示</Japanese>
             <Korean>기존의 부호가 있는 숫자로 표고와 폭을 표시합니다.</Korean>
             <Polish>Wyświetla elewację i tarcie powietrza poprzez podpisane liczby</Polish>
+            <Russian>Отображает горизонтальные и вертикальные поправки с подписанными числами</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
             <English>Simplified zeroing</English>
@@ -239,6 +260,7 @@
             <Chinese>簡單歸零</Chinese>
             <Chinesesimp>简单归零</Chinesesimp>
             <Polish>Uproszczone zerowanie</Polish>
+            <Russian>Упрощенная пристрелка</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
@@ -249,12 +271,13 @@
             <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
             <Chinesesimp>使用原版的归零系统来取代ACE复杂的归零模拟。</Chinesesimp>
             <Polish>Replikuje system zerowania, dla celowników karabinowych, z domyślnej gry.</Polish>
+            <Russian>Использует ванильную систему прицеливания для прицелов</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
             <German>Kleine Korrektur hoch</German>
             <Polish>Zerowanie powoli w górę</Polish>
-            <Russian>Малая корректировка ВВЕРХ</Russian>
+            <Russian>Малая поправка ВВЕРХ</Russian>
             <Spanish>Ajuste menor arriba</Spanish>
             <Italian>Regola leggermente alzata in alto</Italian>
             <French>Hausse +</French>
@@ -270,7 +293,7 @@
             <English>Minor adjustment down</English>
             <German>Kleine Korrektur runter</German>
             <Polish>Zerowanie powoli w dół</Polish>
-            <Russian>Малая корректировка ВНИЗ</Russian>
+            <Russian>Малая поправка ВНИЗ</Russian>
             <Spanish>Ajuste menor abajo</Spanish>
             <Italian>Regola leggermente alzata in basso</Italian>
             <French>Hausse -</French>
@@ -286,7 +309,7 @@
             <English>Minor adjustment right</English>
             <German>Kleine Korrektur rechts</German>
             <Polish>Zerowanie powoli w prawo</Polish>
-            <Russian>Малая корректировка ВПРАВО</Russian>
+            <Russian>Малая поправка ВПРАВО</Russian>
             <Spanish>Ajuste menor derecha</Spanish>
             <Italian>Regola leggermente il tiro a destra</Italian>
             <French>Dérive +</French>
@@ -302,7 +325,7 @@
             <English>Minor adjustment left</English>
             <German>Kleine Korrektur links</German>
             <Polish>Zerowanie powoli w lewo</Polish>
-            <Russian>Малая корректировка ВЛЕВО</Russian>
+            <Russian>Малая поправка ВЛЕВО</Russian>
             <Spanish>Ajuste menor izquierda</Spanish>
             <Italian>Regola leggermete il tiro a sinistra</Italian>
             <French>Dérive -</French>
@@ -318,7 +341,7 @@
             <English>Major adjustment up</English>
             <German>Große Korrektur hoch</German>
             <Polish>Zerowanie w górę</Polish>
-            <Russian>Большая корректировка ВВЕРХ</Russian>
+            <Russian>Большая поправка ВВЕРХ</Russian>
             <Spanish>Ajuste mayor arriba</Spanish>
             <Italian>Regola l'alzata in alto</Italian>
             <French>Hausse +++</French>
@@ -334,7 +357,7 @@
             <English>Major adjustment down</English>
             <German>Große Korrektur runter</German>
             <Polish>Zerowanie w dół</Polish>
-            <Russian>Большая корректировка ВНИЗ</Russian>
+            <Russian>Большая поправка ВНИЗ</Russian>
             <Spanish>Ajuste mayor abajo</Spanish>
             <Italian>Regola l'alzata in basso</Italian>
             <French>Hausse - - -</French>
@@ -350,7 +373,7 @@
             <English>Major adjustment right</English>
             <German>Große Korrektur rechts</German>
             <Polish>Zerowanie w prawo</Polish>
-            <Russian>Большая корректировка ВПРАВО</Russian>
+            <Russian>Большая поправка ВПРАВО</Russian>
             <Spanish>Ajuste mayor derecha</Spanish>
             <Italian>Regola il tiro a destra</Italian>
             <French>Dérive +++</French>
@@ -366,7 +389,7 @@
             <English>Major adjustment left</English>
             <German>Große Korrektur links</German>
             <Polish>Zerowanie w lewo</Polish>
-            <Russian>Большая корректировка ВЛЕВО</Russian>
+            <Russian>Большая поправка ВЛЕВО</Russian>
             <Spanish>Ajuste mayor izquierda</Spanish>
             <Italian>Regola il tiro a sinistra</Italian>
             <French>Dérive - - -</French>
@@ -382,7 +405,7 @@
             <English>Set zero adjustment</English>
             <German>Nullung durchführen</German>
             <Polish>Ustaw wyzerowanie</Polish>
-            <Russian>Сбросить корректировку</Russian>
+            <Russian>Установить дальность пристрелки</Russian>
             <Spanish>Establecer ajuste a cero</Spanish>
             <Italian>Imposta i valori dell'azzeramento</Italian>
             <French>RAZ corrections</French>
@@ -403,6 +426,7 @@
             <Chinese>重設歸零</Chinese>
             <Chinesesimp>重设归零</Chinesesimp>
             <Polish>Zresetuj wyzerowanie</Polish>
+            <Russian>Сбросить дальность пристрелки</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
@@ -414,6 +438,7 @@
             <Italian>Questo modulo aggiunge lo spostamento dell'aria e la regolazione dell'elevazione delle torrette in mirini a lunga gittata</Italian>
             <Chinesesimp>此模块可为高倍率瞄准镜新增归零风偏，距离用的调整纽。</Chinesesimp>
             <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏，距離用的調整紐。</Chinese>
+            <Russian>Этот модуль добавляет барабанчики ввода горизонтальных и вертикальных поправок для прицелов с высокой кратностью</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentDown">
             <English>%1D</English>
@@ -425,6 +450,7 @@
             <Japanese>%1D</Japanese>
             <Korean>%1D</Korean>
             <Polish>%1D</Polish>
+            <Russian>%1D</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
             <English>%1L</English>
@@ -436,6 +462,7 @@
             <Japanese>%1L</Japanese>
             <Korean>%1L</Korean>
             <Polish>%1L</Polish>
+            <Russian>%1L</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
             <English>%1R</English>
@@ -447,6 +474,7 @@
             <Japanese>%1R</Japanese>
             <Korean>%1R</Korean>
             <Polish>%1R</Polish>
+            <Russian>%1R</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_statHorizontalLimits">
             <English>Horizontal limits</English>
@@ -455,6 +483,7 @@
             <Japanese>水平制限</Japanese>
             <Italian>Limite orrizontale</Italian>
             <Polish>Limit poziomy</Polish>
+            <Russian>Лимит по горизонтали</Russian>
         </Key>
         <Key ID="STR_ACE_Scopes_statVerticalLimits">
             <English>Vertical limits</English>
@@ -463,6 +492,7 @@
             <Japanese>垂直制限</Japanese>
             <Italian>Limite verticale</Italian>
             <Polish>Limit pionowy</Polish>
+            <Russian>Лимит по вертикали</Russian>
         </Key>
     </Package>
 </Project>

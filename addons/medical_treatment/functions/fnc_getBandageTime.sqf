@@ -4,13 +4,16 @@
  * Calculates the time to bandage a wound based on it's size, the patient and the medic.
  *
  * Arguments:
- * 0: The medic <OBJECT>
- * 1: The patient <OBJECT>
- * 2: Body part <STRING>
- * 3: Treatment class name <STRING>
+ * 0: Medic <OBJECT>
+ * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
+ * 3: Treatment <STRING>
  *
  * Return Value:
- * Time in seconds <NUMBER>
+ * Treatment Time <NUMBER>
+ *
+ * Example:
+ * [player, cursorTarget, "Head", "FieldDressing"] call ace_medical_treatment_fnc_getBandageTime
  *
  * Public: No
  */
@@ -22,11 +25,13 @@ if (_partIndex < 0) exitWith { 0 };
 
 private _targetWound = [_patient, _bandage, _partIndex] call FUNC(findMostEffectiveWound);
 _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
+TRACE_3("findMostEffectiveWound",_wound,_woundIndex,_effectiveness);
 
 // Everything is patched up on this body part already
 if (_wound isEqualTo EMPTY_WOUND) exitWith { 0 };
 
-_wound params ["", "", "", "_amountOf", "_bloodloss", "_damage", "_category"];
+_wound params ["_classID", "", "_amountOf", "_bloodloss", "_damage"];
+private _category = (_classID % 10);
 
 // Base bandage time is based on wound size and remaining percentage
 private _bandageTime = ([
@@ -46,4 +51,4 @@ if (_medic == _patient) then {
 };
 
 // Nobody can bandage instantly
-_bandageTime max 1
+_bandageTime max 2

@@ -11,6 +11,7 @@
             <Italian>Coefficente Distanza Sovrapressione</Italian>
             <Chinesesimp>高压影响距离系数</Chinesesimp>
             <Chinese>高壓影響距離係數</Chinese>
+            <Russian>Коэффициент избыточного давления</Russian>
         </Key>
         <Key ID="STR_ACE_overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect [Default: 1]</English>
@@ -22,6 +23,7 @@
             <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
             <Chinesesimp>高压影响的范围 [预设: 1]</Chinesesimp>
             <Chinese>高壓影響的範圍 [預設: 1]</Chinese>
+            <Russian>Степень зависимости избыточного давления от расстояния [По умолчанию: 1]</Russian>
         </Key>
         <Key ID="STR_ACE_overpressure_statBackblastRange">
             <English>Backblast range</English>
@@ -31,6 +33,7 @@
             <Chinese>後方尾焰的範圍</Chinese>
             <Italian>Raggio della fiammata [lanciarazzi]</Italian>
             <Polish>Zasięg backblast'u</Polish>
+            <Russian>Дальность реактивной струи</Russian>
         </Key>
         <Key ID="STR_ACE_overpressure_statBackblastAngle">
             <English>Backblast angle</English>
@@ -40,6 +43,7 @@
             <Chinese>後方尾焰的角度</Chinese>
             <Italian>Angolo della fiammata [lanciarazzi]</Italian>
             <Polish>Kąt backblast'u</Polish>
+            <Russian>Угол реактивной струи</Russian>
         </Key>
     </Package>
 </Project>

@@ -1,45 +1,38 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
- * Use Equipment if any is available. Priority: 1) Medic, 2) Patient. If in vehicle: 3) Crew
+ * Author: Glowbal, mharis001
+ * Uses one of the treatment items. Respects the priority defined by the allowSharedEquipment setting.
  *
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
- * 2: Item <STRING>
+ * 2: Items <ARRAY>
  *
- * ReturnValue:
- * 0: success <BOOL>
- * 1: Unit <OBJECT>
+ * Return Value:
+ * User and Item <ARRAY>
+ *
+ * Example:
+ * [player, cursorObject, ["bandage"]] call ace_medical_treatment_fnc_useItems
  *
  * Public: No
  */
 
-params ["_medic", "_patient", "_item"];
+params ["_medic", "_patient", "_items"];
 
-if (isNil QEGVAR(medical,setting_allowSharedEquipment)) then {
-    EGVAR(medical,setting_allowSharedEquipment) = true;
-};
+scopeName "Main";
 
-if (EGVAR(medical,setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {
-    ["ace_useItem", [_patient, _item], _patient] call CBA_fnc_targetEvent;
-    [true, _patient]
-};
+private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GVAR(allowSharedEquipment);
 
-if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
-    ["ace_useItem", [_medic, _item], _medic] call CBA_fnc_targetEvent;
-    [true, _medic]
-};
+{
+    private _unit      = _x;
+    private _unitItems = _x call EFUNC(common,uniqueItems);
 
-private _return = [false, objNull];
-
-if (vehicle _medic != _medic && {vehicle _medic call FUNC(isMedicalVehicle)}) then {
     {
-        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {[_x, _item] call EFUNC(common,hasItem)}) exitWith {
-            ["ace_useItem", [_x, _item], _x] call CBA_fnc_targetEvent;
-            _return = [true, _x];
+        if (_x in _unitItems) then {
+            _unit removeItem _x;
+            [_unit, _x] breakOut "Main";
         };
-    } forEach crew vehicle _medic;
-};
+    } forEach _items;
+} forEach _useOrder;
 
-_return
+[objNull, ""]

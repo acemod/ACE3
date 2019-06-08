@@ -11,6 +11,7 @@
             <Korean>관전자</Korean>
             <French>Spectateur</French>
             <Polish>Obserwator</Polish>
+            <Russian>Зритель</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -22,6 +23,7 @@
             <Chinese>ACE 旁觀者</Chinese>
             <Polish>Obserwator ACE</Polish>
             <Korean>ACE 관전자</Korean>
+            <Russian>ACE Зритель</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -48,6 +50,7 @@
             <Korean>AI 활성</Korean>
             <French>IA Activée</French>
             <Polish>SI Aktywowane</Polish>
+            <Russian>Разрешить для ИИ</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -59,6 +62,7 @@
             <Korean>관전자가 AI를 관전 할 수 있습니다.</Korean>
             <French>Rends les IA visibles en spectateur</French>
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
+            <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -180,6 +184,14 @@
             <Chinesesimp>热成像</Chinesesimp>
             <Chinese>熱成像</Chinese>
         </Key>
+        <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
+            <English>Max Follow Distance</English>
+            <Russian>Макс. дистанция следования</Russian>
+        </Key>
+        <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
+            <English>Maximum distance the follow camera can be from the target</English>
+            <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
+        </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
             <English>Engineer</English>
@@ -267,6 +279,7 @@
             <Korean>아이콘</Korean>
             <French>Icônes</French>
             <Polish>Ikony</Polish>
+            <Russian>Иконки</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -278,6 +291,7 @@
             <Korean>발사체</Korean>
             <French>Projectiles</French>
             <Polish>Pociski</Polish>
+            <Russian>Осколки</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -319,6 +333,7 @@
             <Korean>보기 모드</Korean>
             <French>Mode de vision</French>
             <Polish>Tryb Wizji</Polish>
+            <Russian>Режим видения</Russian>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -330,6 +345,7 @@
             <Korean>느린 속도</Korean>
             <French>Vitesse lente</French>
             <Polish>Wolna Prędkość</Polish>
+            <Russian>Замедление</Russian>
         </Key>
     </Package>
 </Project>

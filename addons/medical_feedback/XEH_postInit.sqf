@@ -23,6 +23,11 @@ GVAR(heartBeatEffectRunning) = false;
 
     if (_unit != ACE_player) exitWith {};
 
+    if (_unconscious && {cameraView == "GUNNER"} && {(vehicle _unit) != _unit} &&  {cameraOn == vehicle _unit}) then {
+        TRACE_2("exiting gunner view",cameraOn,cameraView);
+        ACE_player switchCamera "INTERNAL";
+    };
+
     // Toggle unconscious player's ability to talk in radio addons
     if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
         _unit setVariable ["tf_voiceVolume", [1, 0] select _unconscious, true];
@@ -56,8 +61,7 @@ GVAR(heartBeatEffectRunning) = false;
 // Update effects to match new unit's current status (this also handles respawn)
 ["unit", {
     params ["_new"];
-
-    private _status = _new getVariable ["ace_unconscious", false];
+    private _status = IS_UNCONSCIOUS(_new);
 
     if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
         _new setVariable ["tf_voiceVolume", [1, 0] select _status, true];
@@ -70,3 +74,24 @@ GVAR(heartBeatEffectRunning) = false;
     [_status, 0] call FUNC(effectUnconscious);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addPlayerEventHandler;
+
+
+// Kill vanilla bleeding feedback effects.
+#ifdef DISABLE_VANILLA_DAMAGE_EFFECTS
+TRACE_1("disabling vanilla bleeding feedback effects",_this);
+[{
+    {isNil _x} count [
+        "BIS_fnc_feedback_damageCC",
+        "BIS_fnc_feedback_damageRadialBlur",
+        "BIS_fnc_feedback_damageBlur"
+    ] == 0
+}, {
+    {
+        ppEffectDestroy _x;
+    } forEach [
+        BIS_fnc_feedback_damageCC,
+        BIS_fnc_feedback_damageRadialBlur,
+        BIS_fnc_feedback_damageBlur
+    ];
+}] call CBA_fnc_waitUntilAndExecute;
+#endif

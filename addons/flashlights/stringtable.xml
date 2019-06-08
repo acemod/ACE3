@@ -100,6 +100,7 @@
             <Chinese>地圖上使用手電筒的顏色</Chinese>
             <Italian>Colore della luce sulla mappa</Italian>
             <Polish>Kolor światła na mapie</Polish>
+            <Russian>Цвет подсветки карты</Russian>
         </Key>
     </Package>
 </Project>

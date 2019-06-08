@@ -538,6 +538,7 @@
             <Italian>Sfocatura nei bordi dello schermo</Italian>
             <Chinesesimp>在荧幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
+            <Russian>Затухание на границе экрана</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_playerNamesMaxAlpha">
             <English>Player tags transparency</English>
@@ -547,6 +548,7 @@
             <Chinese>玩家名稱透明度</Chinese>
             <Italian>Trasparenza Etichette Nome</Italian>
             <Polish>Przezroczystość etykiet gracza</Polish>
+            <Russian>Прозрачность меток игроков</Russian>
         </Key>
     </Package>
 </Project>
