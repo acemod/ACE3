@@ -6,6 +6,7 @@
             <Italian>Zeus</Italian>
             <Chinese>宙斯</Chinese>
             <Chinesesimp>宙斯</Chinesesimp>
+            <German>Zeus</German>
             <Japanese>Zeus</Japanese>
             <Korean>제우스</Korean>
             <Polish>Zeus</Polish>
@@ -280,6 +281,7 @@
             <English>Editing Mode</English>
             <Chinese>編輯模式</Chinese>
             <Italian>Modalità per editare</Italian>
+            <German>Bearbeitungsmodus</German>
             <Japanese>編集モード</Japanese>
             <Polish>Tryb Edytowania</Polish>
             <Russian>Режим редактирования</Russian>
@@ -287,6 +289,7 @@
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
             <Chinese>新增或移除可編輯物件給宙斯</Chinese>
+            <German>Aktiviere oder deaktiviere zu bearbeitende Objekte von Zeus</German>
             <Italian>Agguingi o rimuovi oggetti che Zeus può modificare</Italian>
             <Japanese>Zeus から編集可能オブジェクトの追加と削除をする</Japanese>
             <Polish>Dodaj lub usuń edytowalne obiekty z Zeus'a</Polish>
@@ -338,6 +341,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
             <English>Additional Objects</English>
+            <German>Zusätzliche Objekte</German>
             <Italian>Oggetti aggiuntivi</Italian>
             <Japanese>オブジェクト増加</Japanese>
             <Polish>Dodatkowe obiekty</Polish>
@@ -345,6 +349,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
+            <German>Zusätzliche Objekte unabhängig vom Aufgabenradius einbeziehen</German>
             <Italian>Oggetti aggiuntivi da includere nell'azione indipendentemente dal Raggio di Attività</Italian>
             <Japanese>タスク範囲に関係無くオブジェクトを更に増加させます</Japanese>
             <Polish>Dodatkowe obiekty do uwzględnienia w akcji niezależnie od zasięgu zadania</Polish>
@@ -959,6 +964,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
+            <German>Keiner</German>
             <Italian>Niente</Italian>
             <Polish>Żadne</Polish>
             <Japanese>なし</Japanese>
@@ -966,6 +972,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
+            <German>Spieler</German>
             <Italian>Giocatori</Italian>
             <Polish>Gracze</Polish>
             <Japanese>プレイヤー</Japanese>
@@ -973,6 +980,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
+            <German>Spieler und KI's</German>
             <Italian>Giocati e AI</Italian>
             <Polish>Gracze i SI</Polish>
             <Japanese>プレイヤーと AI</Japanese>
@@ -1023,6 +1031,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_SelectCargo">
             <English>Select cargo to unload</English>
+            <German>Ladung zum ausladen auswählen</German>
             <Chinese>選擇要卸載的貨物</Chinese>
             <Italian>Scegli il carico da scaricare</Italian>
             <Japanese>選択したカーゴを降ろす</Japanese>
@@ -1151,6 +1160,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
+            <German>Ziel umschalten</German>
             <Japanese>目標を切り替え</Japanese>
             <Chinesesimp>切换目标</Chinesesimp>
             <Chinese>切換目標</Chinese>
@@ -1160,6 +1170,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
+            <German>Betroffene Spieler beim umschalten</German>
             <Japanese>ユニットは切り替えに影響を受けます</Japanese>
             <Chinesesimp>被选单位受切换影响</Chinesesimp>
             <Chinese>受切換所影響的單位</Chinese>
@@ -1217,6 +1228,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
             <English>Garrison Group</English>
+            <German>Gebäude besetzen</German>
             <French>Garnir zone</French>
             <Japanese>歩哨グループ</Japanese>
             <Italian>Proteggi gruppo</Italian>
@@ -1228,6 +1240,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
             <English>Fill from top to bottom</English>
+            <German>Von oben nach unten befüllen</German>
             <French>Remplir de haut en bas</French>
             <Japanese>上から下まで占拠</Japanese>
             <Italian>Riempi dall'alto al basso</Italian>
@@ -1239,6 +1252,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
+            <German>Gebäude von der höchsten Position zuerst befüllen</German>
             <French>Remplir les bâtiments par la position la plus haute d'abord</French>
             <Japanese>建物を最も高い位置から占拠していきます</Japanese>
             <Italian>Riempi gli edifici dalla posizione più alta prima</Italian>
@@ -1250,6 +1264,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
             <English>Building filling mode</English>
+            <German>Gebäude befüllen</German>
             <French>Mode de remplissage de bâtiment</French>
             <Japanese>建物占拠モード</Japanese>
             <Italian>Modalità riempimento edifici</Italian>
@@ -1261,6 +1276,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
             <English>Even filling</English>
+            <German>Gleichmäßig befüllen</German>
             <French>Remplissage égal</French>
             <Japanese>均一に占拠</Japanese>
             <Italian>Riempimento uguale</Italian>
@@ -1272,6 +1288,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
+            <German>Gebäude nach Gebäude</German>
             <French>Bâtiment par bâtiment</French>
             <Japanese>建物から建物へ</Japanese>
             <Italian>Edificio per edificio</Italian>
@@ -1283,6 +1300,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
             <English>Random filling</English>
+            <German>Zufällig füllen</German>
             <French>Remplir au hasard</French>
             <Japanese>ランダムに占拠</Japanese>
             <Italian>Riempimento casuale</Italian>
@@ -1294,6 +1312,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
+            <German>Teleportieren</German>
             <French>Téléporter</French>
             <Japanese>テレポート</Japanese>
             <Italian>Teletrasporto</Italian>
@@ -1305,6 +1324,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison Group</English>
+            <German>Garnisionsgruppe auflösen</German>
             <French>Dégarnir zone</French>
             <Japanese>非歩哨グループ</Japanese>
             <Italian>Non proteggere gruppo</Italian>
@@ -1524,6 +1544,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
             <English>Add full ACE Arsenal</English>
+            <German>Vollständiges ACE Arsenal hinzufügen<</German>
             <Japanese>ACE 武器庫を追加</Japanese>
             <Chinesesimp>添加ACE模式军火库</Chinesesimp>
             <Chinese>增加完整的ACE軍火庫</Chinese>
@@ -1533,6 +1554,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
+            <German>ACE Arsenal entfernen<</German>
             <Japanese>ACE 武器庫を削除</Japanese>
             <Chinesesimp>删除ACE模式军火库</Chinesesimp>
             <Chinese>移除ACE軍火庫</Chinese>
@@ -1542,6 +1564,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_CreateZeus">
             <English>Create Zeus</English>
+            <German>Zeus erstellen<</German>
             <Russian>Создать Зевса</Russian>
             <Japanese>Zeus を作る</Japanese>
             <Polish>Stwórz Zeus'a</Polish>
@@ -1549,6 +1572,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
+            <German>Zeus löschen<</German>
             <Russian>Удалить Зевса</Russian>
             <Japanese>Zeus を消す</Japanese>
             <Polish>Usuń Zeus'a</Polish>
@@ -1556,6 +1580,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
+            <German>"%1" Menü<</German>
             <Russian>Меню "%1"</Russian>
             <Japanese>"%1" メニュー</Japanese>
             <Polish>"%1" menu</Polish>
@@ -1563,12 +1588,14 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
+            <German>Paradrop Ladung<</German>
             <Japanese>カーゴを空中投下</Japanese>
             <Polish>Zrzut ładunku (cargo)</Polish>
             <Russian>Десантировать груз</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
+            <German>Keine Ladung geladen</German>
             <Japanese>カーゴは未積載</Japanese>
             <Polish>Niczego nie załadowano do cargo</Polish>
             <Russian>Грузовой отсек пуст</Russian>

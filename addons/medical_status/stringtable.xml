@@ -4,6 +4,7 @@
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Status_subCategory">
                 <English>Status</English>
+                <German>Zustand</German>
                 <Japanese>状態</Japanese>
                 <Russian>Статус</Russian>
             </Key>
@@ -73,11 +74,13 @@
             </Key>
             <Key ID="STR_ACE_Medical_Status_ivFlowRate_DisplayName">
                 <English>IV Transfusion Flow Rate</English>
+                <German>Transfusions Fließrate</German>
                 <Japanese>IV 輸血の流量</Japanese>
                 <Russian>Скорость внутривенного переливания</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_Status_ivFlowRate_Description">
                 <English>Effects how quickly IV Bags will have effect</English>
+                <German>Wie schnell der Effekt der Transfusion eintritt</German>
                 <Japanese>IV による輸血速度を変更できます</Japanese>
                 <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
             </Key>
