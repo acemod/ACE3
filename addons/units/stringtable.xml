@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Units">
+        <Key ID="STR_ACE_Units_Module_DisplayName">
+            <English>Units</English>
+        </Key>
+
+        <Key ID="STR_ACE_Units_Speed_DisplayName">
+            <English>Speed</English>
+        </Key>
+        <Key ID="STR_ACE_Units_Speed_Description">
+            <English>Units used to display Speed</English>
+        </Key>
+
+        <Key ID="STR_ACE_Units_Alt_DisplayName">
+            <English>Altitude</English>
+        </Key>
+        <Key ID="STR_ACE_Units_Alt_Description">
+            <English>Units used to display Altitude</English>
+        </Key>
+
+        <Key ID="STR_ACE_Units_Land_DisplayName">
+            <English>Land Vehicles</English>
+        </Key>
+
+        <Key ID="STR_ACE_Units_Speed_KMH">
+            <English>km/h</English>
+        </Key>
+        <Key ID="STR_ACE_Units_Speed_MPH">
+            <English>mph</English>
+        </Key>
+        <Key ID="STR_ACE_Units_Speed_KNOT">
+            <English>kn</English>
+        </Key>
+        <Key ID="STR_ACE_Units_Speed_MS">
+            <English>m/s</English>
+        </Key>
+
+        <Key ID="STR_ACE_Units_Alt_M">
+            <English>Meters</English>
+        </Key>
+        <Key ID="STR_ACE_Units_Alt_F">
+            <English>Feet</English>
+        </Key>
+    </Package>
+</Project>
