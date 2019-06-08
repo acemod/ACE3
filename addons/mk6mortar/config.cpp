@@ -33,4 +33,3 @@ class RscActiveText;
 class RscStructuredText;
 
 #include "RscInGameUI.hpp"
-#include "RscRangeTable.hpp"
