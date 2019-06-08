@@ -34,11 +34,10 @@ _wound params ["_classID", "", "_amountOf", "_bloodloss", "_damage"];
 private _category = (_classID % 10);
 
 // Base bandage time is based on wound size and remaining percentage
-private _bandageTime = ([
-    BANDAGE_TIME_S,
-    BANDAGE_TIME_M,
-    BANDAGE_TIME_L
-] select _category) * _amountOf;
+private _bandageTime = [BANDAGE_TIME_S, BANDAGE_TIME_M, BANDAGE_TIME_L] select _category;
+
+// Scale bandage time based on amount left and effectiveness (less time if only a little wound left)
+_bandageTime = _bandageTime * (linearConversion [0, _effectiveness, _amountOf, 0.666, 1, true]);
 
 // Medics are more practised at applying bandages
 if ([_medic] call FUNC(isMedic)) then {
@@ -51,4 +50,4 @@ if (_medic == _patient) then {
 };
 
 // Nobody can bandage instantly
-_bandageTime max 2
+_bandageTime max 2.25
