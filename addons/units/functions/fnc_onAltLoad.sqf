@@ -10,7 +10,7 @@ private _altInfo = [_units select 0] call FUNC(altInfo);
 systemChat "alt time";
 
 ((ctrlParent _alt) displayCtrl 1005) ctrlSetText (_altInfo select 0);
-GVAR(ratio) = _altInfo select 1;
+GVAR(altRatio) = _altInfo select 1;
 
 private _settingEH = ["CBA_SettingChanged", {
     params ["_setting", "_value"];
@@ -18,7 +18,7 @@ private _settingEH = ["CBA_SettingChanged", {
     if (_setting isEqualTo _settingName) then {
         private _altInfo = [_value] call FUNC(altInfo);
         ((ctrlParent _alt) displayCtrl 1005) ctrlSetText (_altInfo select 0);
-        GVAR(ratio) = _altInfo select 1;
+        GVAR(altRatio) = _altInfo select 1;
     };
 }, [_units select 1, _alt]] call CBA_fnc_addEventHandlerArgs;
 
@@ -30,7 +30,7 @@ private _settingEH = ["CBA_SettingChanged", {
     };
     _ctrl ctrlSetFade 1;
     _ctrl ctrlCommit 0;
-    private _altValue = (((getPosATL vehicle ace_player) select 2) / GVAR(ratio));
+    private _altValue = (((getPosATL vehicle ace_player) select 2) / GVAR(altRatio));
     if (_altValue < 10) then {
         _altValue = _altValue toFixed 1;
     } else {
