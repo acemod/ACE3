@@ -117,6 +117,16 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_tourniquet,1);
         };
     };
+    class ACE_splintItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(splint_Display);
+        author = ECSTRING(common,ACETeam);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_splint,1);
+        };
+    };
     class ACE_morphineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -292,6 +302,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_packingBandage,25);
             MACRO_ADDITEM(ACE_elasticBandage,25);
             MACRO_ADDITEM(ACE_tourniquet,15);
+            MACRO_ADDITEM(ACE_splint,15);
             MACRO_ADDITEM(ACE_morphine,15);
             MACRO_ADDITEM(ACE_adenosine,15);
             MACRO_ADDITEM(ACE_atropine,15);

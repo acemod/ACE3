@@ -11,7 +11,8 @@ class EGVAR(medical,replacementItems) {
         {"ACE_epinephrine", 1},
         {"ACE_morphine", 1},
         {"ACE_salineIV_250", 1},
-        {"ACE_tourniquet", 1}
+        {"ACE_tourniquet", 1},
+        {"ACE_splint", 2}
     };
     // todo: add GM medical items
 };
