@@ -882,7 +882,7 @@
             <Polish>Mina M6 SLAM (atak od boku)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
             <French>Mine M6 SLAM (de flanc)</French>
-            <Italian>	STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName	M6 SLAM Mine (Bottom Attack)		Mine M6 SLAM (par le bas)	M6-SLAM-Mine (Bodenangriff)		Mina M6 SLAM (base)	Mina M6 SLAM (atak od dołu)			Mina M6 SLAM (Laterale)</Italian>
+            <Italian>Mina M6 SLAM (Laterale)</Italian>
             <Czech>M6 SLAM (Útok do strany)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Lateral)</Portuguese>
             <Russian>Мина M6 SLAM (направлена вбок)</Russian>
@@ -1009,7 +1009,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Description">
             <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
-            <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сгнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
+            <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сигнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
             <Japanese>種類: 仕掛け型照明地雷 - 発動したとき、非致死性の照明を発炎します。&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 地表</Japanese>
             <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
             <German>Typ: Stolperdraht-Leuchtrakete - Schießt bei Auslösung eine nicht-tödliche Leuchtrakete ab.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
@@ -1027,12 +1027,14 @@
             <Chinese>爆炸範圍</Chinese>
             <Italian>Raggio di detonazione</Italian>
             <Polish>Zasięg wybuchu</Polish>
+            <Russian>Дальность подрыва</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
             <Italian>Timer di detonazione</Italian>
             <Japanese>爆発タイマー</Japanese>
             <Polish>Czasomierz Wybuchu</Polish>
+            <Russian>Таймер взрывчатки</Russian>
         </Key>
     </Package>
 </Project>

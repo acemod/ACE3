@@ -23,7 +23,7 @@ if (!local _unit) exitWith { ERROR("Unit not local or null"); };
 private _isLimping = false;
 
 if (EGVAR(medical,fractures) > 0) then {
-    private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
+    private _fractures = GET_FRACTURES(_unit);
     TRACE_1("",_fractures);
     if (((_fractures select 4) == 1) || {(_fractures select 5) == 1}) then {
         TRACE_1("limping because of fracture",_fractures);

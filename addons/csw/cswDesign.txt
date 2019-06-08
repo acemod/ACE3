@@ -1,0 +1,53 @@
+Settings:
+
+    defaultBehaviour:
+        Normal - Untouched [full mags, normal backpack disassemble]
+        Advanced - [Realistic mags, side unloading]
+    handleExtraMagazines
+        Extra magazines on ground
+        Ignore extra magazines
+
+Vehicle:
+    3den attribute controls if [useSetting, normal or advanced]
+    
+configs:
+
+CfgWeapons:
+    class GVAR(m3CarryTripod): Launcher_Base_F {
+        class ADDON {
+            type = "mount";
+            deployTime = 3;
+            pickupTime = 3;
+            deploy = QGVAR(m3Tripod);
+        };
+
+    class GVAR(staticATCarry): Launcher_Base_F {
+        class ADDON {
+            type = "weapon";
+            deployTime = 8;
+            pickupTime = 15;
+            class assembleTo {
+                tripodCfgVehicle = staticCfgVehicle;
+            };
+        };
+
+
+
+
+CfgVehicles:
+    class GVAR(m3Tripod): // Tripod Example
+        class ADDON {
+            disassembleTo = QGVAR(m3CarryTripod);
+        
+        
+    class Mortar_01_base_F: // Static Weapon Example
+        class ADDON {
+            enabled = 1;
+            magazineLocation = "";
+            disassembleWeapon = ""; // secondary weapon classname
+            disassembleTurret = ""; // CfgVehicle
+            desiredAmmo = 100; //
+            ammoLoadTime = 5;
+            ammoUnloadTime = 5;
+
+            

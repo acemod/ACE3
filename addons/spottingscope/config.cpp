@@ -18,5 +18,8 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMoves.hpp"
+#include "CfgOpticsEffect.hpp"
 
-#include "RscInGameUI.hpp"
+class CBA_PIPItems {
+    GVAR(enable) = "-";
+};
