@@ -18,4 +18,5 @@
 
 params ["", "_patient"];
 
-!((_patient getVariable [QEGVAR(medical,bandagedWounds), []]) isEqualTo [])
+_patient call EFUNC(medical_status,isInStableCondition)
+&& {!((_patient getVariable [QEGVAR(medical,bandagedWounds), []]) isEqualTo [])}
