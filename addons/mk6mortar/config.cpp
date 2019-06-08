@@ -7,7 +7,7 @@ class CfgPatches {
             "ACE_Box_82mm_Mo_Illum","ACE_Box_82mm_Mo_Combo"};
         weapons[] = {"ACE_RangeTable_82mm","ace_mortar_82mm"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_interaction"};
+        requiredAddons[] = {"ace_csw"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror","Grey","VKing"};
         url = ECSTRING(main,URL);

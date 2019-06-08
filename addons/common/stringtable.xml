@@ -1298,5 +1298,37 @@
             <Polish>Flaga (ACE - Biała)</Polish>
             <Russian>Флаг (ACE - Белый)</Russian>
         </Key>
+        <Key ID="STR_ACE_Common_playerOnly">
+            <English>Players only</English>
+            <Russian>Игроков</Russian>
+            <Polish>Tylko dla graczy</Polish>
+            <Spanish>Solo jugadores</Spanish>
+            <German>Nur Spieler</German>
+            <Czech>Pouze hráči</Czech>
+            <Portuguese>Somente jogadores</Portuguese>
+            <French>Joueur uniquement</French>
+            <Hungarian>Csak játékosok</Hungarian>
+            <Italian>Solo giocatori</Italian>
+            <Japanese>プレイヤーのみ</Japanese>
+            <Korean>플레이어만</Korean>
+            <Chinesesimp>只限玩家</Chinesesimp>
+            <Chinese>只限玩家</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Common_playersAndAI">
+            <English>Players and AI</English>
+            <Russian>Игроков и ботов</Russian>
+            <Polish>Gracze oraz AI</Polish>
+            <Spanish>Jugadores e IA</Spanish>
+            <German>Spieler und KI</German>
+            <Czech>Hráči a AI</Czech>
+            <Portuguese>Jogadores e IA</Portuguese>
+            <French>Joueurs et IA</French>
+            <Hungarian>Játékosok és AI</Hungarian>
+            <Italian>Giocatori ed IA</Italian>
+            <Japanese>プレイヤーと AI</Japanese>
+            <Korean>플레이어 및 인공지능</Korean>
+            <Chinesesimp>玩家与AI</Chinesesimp>
+            <Chinese>玩家與AI</Chinese>
+        </Key>
     </Package>
 </Project>
