@@ -13,7 +13,6 @@ GVAR(speedRatio) = _speedInfo select 1;
 private _settingEH = ["CBA_SettingChanged", {
     params ["_setting", "_value"];
     _thisArgs params ["_settingName", "_speed"];
-    systemChat format ["%1 = %2", _setting, _value];
     if (_setting isEqualTo _settingName) then {
         private _speedInfo = [_value] call FUNC(speedInfo);
         ((ctrlParent _speed) displayCtrl 1004) ctrlSetText (_speedInfo select 0);
