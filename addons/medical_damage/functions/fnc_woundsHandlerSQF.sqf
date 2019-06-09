@@ -78,7 +78,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     if (_damage > _thresholdMinDam) exitWith {
         private _woundDamage = _damage / (_thresholdWoundCount max 1); // If the damage creates multiple wounds
         for "_i" from 1 to _thresholdWoundCount do {
-            // Find the injury we are going to add. Format [ classID, allowdSelections, bleedingRate, injuryPain]
+            // Find the injury we are going to add. Format [ classID, allowedSelections, bleedingRate, injuryPain]
             private _oldInjury = if (random 1 < 0.15) then {
                 _woundTypes select _highestPossibleSpot
             } else {
