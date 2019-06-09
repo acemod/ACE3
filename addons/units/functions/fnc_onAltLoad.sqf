@@ -32,7 +32,7 @@ private _settingEH = ["CBA_SettingChanged", {
     if (_altValue < 10) then {
         _altValue = _altValue toFixed 1;
     } else {
-        _altValue = str round _altValue;
+        _altValue = _altValue toFixed 0;
     };
     _alt ctrlSetText _altValue;
 }, 0, [_ctrl, _alt, _settingEH]] call CBA_fnc_addPerFrameHandler;
