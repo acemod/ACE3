@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
 
 class CfgPatches {
     class ADDON {
@@ -28,24 +29,24 @@ class RscInGameUI {
 
 class GVAR(alt): RscText {
     style = 1;
-    colorText[] = {"(profilenamespace getvariable ['IGUI_TEXT_RGB_R',0])","(profilenamespace getvariable ['IGUI_TEXT_RGB_G',1])","(profilenamespace getvariable ['IGUI_TEXT_RGB_B',1])","(profilenamespace getvariable ['IGUI_TEXT_RGB_A',0.8])"};
+    colorText[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_A',0.8])"};
     text = "9999";
-    x = "6.3 * (((safezoneW / safezoneH) min 1.2) / 40) + (profilenamespace getvariable [""IGUI_GRID_VEHICLE_X"", (safezoneX + 0.5 * (((safezoneW / safezoneH) min 1.2) / 40))])";
-    y = "2.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (profilenamespace getvariable [""IGUI_GRID_VEHICLE_Y"", (safezoneY + 0.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
-    w = "2 * (((safezoneW / safezoneH) min 1.2) / 40)";
-    h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-    sizeEx = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    x = 6.3 * GUI_GRID_W + (profileNamespace getVariable ["IGUI_GRID_VEHICLE_X", (safezoneX + 0.5 * GUI_GRID_W)]);
+    y = 2.3 * GUI_GRID_H + (profileNamespace getVariable [""IGUI_GRID_VEHICLE_Y"", (safezoneY + 0.5 * GUI_GRID_H)]);
+    w = 2 * GUI_GRID_W;
+    h = 1 * GUI_GRID_H;
+    sizeEx = 0.8 * GUI_GRID_H;
 };
 
 class GVAR(speed): RscText {
     style = 1;
-    colorText[] = {"(profilenamespace getvariable ['IGUI_TEXT_RGB_R',0])", "(profilenamespace getvariable ['IGUI_TEXT_RGB_G',1])", "(profilenamespace getvariable ['IGUI_TEXT_RGB_B',1])", "(profilenamespace getvariable ['IGUI_TEXT_RGB_A',0.8])"};
+    colorText[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])", "(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])", "(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])", "(profileNamespace getVariable ['IGUI_TEXT_RGB_A',0.8])"};
     text = "9999";
-    x = "6.3 * (((safezoneW / safezoneH) min 1.2) / 40) + (profilenamespace getvariable [""IGUI_GRID_VEHICLE_X"", (safezoneX + 0.5 * (((safezoneW / safezoneH) min 1.2) / 40))])";
-    y = "1.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (profilenamespace getvariable [""IGUI_GRID_VEHICLE_Y"", (safezoneY + 0.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
-    w = "2 * (((safezoneW / safezoneH) min 1.2) / 40)";
-    h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-    sizeEx = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    x = 6.3 * GUI_GRID_W + (profileNamespace getVariable ["IGUI_GRID_VEHICLE_X", (safezoneX + 0.5 * GUI_GRID_W)]);
+    y = 1.3 * GUI_GRID_H + (profileNamespace getVariable ["IGUI_GRID_VEHICLE_Y", (safezoneY + 0.5 * GUI_GRID_H)]);
+    w = 2 * GUI_GRID_W;
+    h = 1 * GUI_GRID_H;
+    sizeEx = 0.8 * GUI_GRID_H;
 };
 
 #include "CfgEventHandlers.hpp"

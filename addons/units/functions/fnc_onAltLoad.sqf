@@ -4,8 +4,8 @@ params ["_ctrl"];
 
 private _alt = (ctrlParent _ctrl) ctrlCreate [QGVAR(alt), -1];
 
-private _units = (vehicle ace_player) call FUNC(altUnits);
-private _altInfo = [_units select 0] call FUNC(altInfo);
+private _units = (vehicle ACE_player) call FUNC(altUnits);
+private _altInfo = _units call FUNC(altInfo);
 
 ((ctrlParent _alt) displayCtrl 1005) ctrlSetText (_altInfo select 0);
 GVAR(altRatio) = _altInfo select 1;
@@ -28,7 +28,7 @@ private _settingEH = ["CBA_SettingChanged", {
     };
     _ctrl ctrlSetFade 1;
     _ctrl ctrlCommit 0;
-    private _altValue = (((getPosATL vehicle ace_player) select 2) / GVAR(altRatio));
+    private _altValue = (((getPosATL vehicle ACE_player) select 2) / GVAR(altRatio));
     if (_altValue < 10) then {
         _altValue = _altValue toFixed 1;
     } else {
