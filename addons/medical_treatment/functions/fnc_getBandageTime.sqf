@@ -37,7 +37,9 @@ private _category = (_classID % 10);
 private _bandageTime = [BANDAGE_TIME_S, BANDAGE_TIME_M, BANDAGE_TIME_L] select _category;
 
 // Scale bandage time based on amount left and effectiveness (less time if only a little wound left)
-_bandageTime = _bandageTime * (linearConversion [0, _effectiveness, _amountOf, 0.666, 1, true]);
+if (GVAR(advancedBandages)) then { // basicBandage will have a very high effectiveness and can be ignored
+    _bandageTime = _bandageTime * (linearConversion [0, _effectiveness, _amountOf, 0.666, 1, true]);
+};
 
 // Medics are more practised at applying bandages
 if ([_medic] call FUNC(isMedic)) then {
