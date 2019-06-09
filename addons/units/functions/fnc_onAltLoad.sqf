@@ -7,8 +7,6 @@ private _alt = (ctrlParent _ctrl) ctrlCreate [QGVAR(alt), -1];
 private _units = (vehicle ace_player) call FUNC(altUnits);
 private _altInfo = [_units select 0] call FUNC(altInfo);
 
-systemChat "alt time";
-
 ((ctrlParent _alt) displayCtrl 1005) ctrlSetText (_altInfo select 0);
 GVAR(altRatio) = _altInfo select 1;
 
