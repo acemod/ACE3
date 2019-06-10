@@ -7,7 +7,7 @@
  * 0: The Unit <OBJECT>
  *
  * Return Value:
- * Total blood loss of unit <NUMBER>
+ * Total blood loss of unit (litres/second) <NUMBER>
  *
  * Example:
  * [player] call ace_medical_status_fnc_getBloodLoss
