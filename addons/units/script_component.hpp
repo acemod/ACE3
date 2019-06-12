@@ -16,8 +16,14 @@
 #define SPEED_KNOT 2
 #define SPEED_MS 3
 
+#define KMH_TO_MPH 1.609
+#define KMH_TO_KNOT 1.852
+#define KMH_TO_MS 3.6
+
 #define ALT_M 0
 #define ALT_F 1
+
+#define METERS_TO_FEET 0.3047999902464003
 
 #define MODE_ATL 0
 #define MODE_ASL 1

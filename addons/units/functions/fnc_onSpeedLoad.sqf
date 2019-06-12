@@ -5,18 +5,18 @@ params ["_ctrl"];
 private _speed = (ctrlParent _ctrl) ctrlCreate [QGVAR(speed), -1];
 
 private _units = (vehicle ACE_player) call FUNC(speedUnits);
-private _speedInfo = _units call FUNC(speedInfo);
+_units call FUNC(speedInfo) params ["_unitText", "_ratio"];
 
-((ctrlParent _speed) displayCtrl 1004) ctrlSetText (_speedInfo select 0);
-GVAR(speedRatio) = _speedInfo select 1;
+((ctrlParent _speed) displayCtrl 1004) ctrlSetText _unitText;
+GVAR(speedRatio) = _ratio;
 
 private _settingEH = ["CBA_SettingChanged", {
     params ["_setting", "_value"];
     _thisArgs params ["_settingName", "_speed"];
     if (_setting isEqualTo _settingName) then {
-        private _speedInfo = [_value] call FUNC(speedInfo);
-        ((ctrlParent _speed) displayCtrl 1004) ctrlSetText (_speedInfo select 0);
-        GVAR(speedRatio) = _speedInfo select 1;
+        [_value] call FUNC(speedInfo) params ["_unitText", "_ratio"];
+        ((ctrlParent _speed) displayCtrl 1004) ctrlSetText _unitText;
+        GVAR(speedRatio) = _ratio;
     };
 }, [_units select 1, _speed]] call CBA_fnc_addEventHandlerArgs;
 

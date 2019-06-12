@@ -5,18 +5,18 @@ params ["_ctrl"];
 private _alt = (ctrlParent _ctrl) ctrlCreate [QGVAR(alt), -1];
 
 private _units = (vehicle ACE_player) call FUNC(altUnits);
-private _altInfo = _units call FUNC(altInfo);
+_units call FUNC(altInfo) params ["_unitText", "_ratio"];
 
-((ctrlParent _alt) displayCtrl 1005) ctrlSetText (_altInfo select 0);
-GVAR(altRatio) = _altInfo select 1;
+((ctrlParent _alt) displayCtrl 1005) ctrlSetText _unitText;
+GVAR(altRatio) = _ratio;
 
 private _settingEH = ["CBA_SettingChanged", {
     params ["_setting", "_value"];
     _thisArgs params ["_settingName", "_alt"];
     if (_setting isEqualTo _settingName) then {
-        private _altInfo = [_value] call FUNC(altInfo);
-        ((ctrlParent _alt) displayCtrl 1005) ctrlSetText (_altInfo select 0);
-        GVAR(altRatio) = _altInfo select 1;
+        [_value] call FUNC(altInfo) params ["_unitText", "_ratio"];
+        ((ctrlParent _alt) displayCtrl 1005) ctrlSetText _unitText;
+        GVAR(altRatio) = _ratio;
     };
 }, [_units select 1, _alt]] call CBA_fnc_addEventHandlerArgs;
 
