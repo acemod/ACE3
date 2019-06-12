@@ -2,8 +2,9 @@
 #define GRID_3DEN_W (pixelW * pixelGrid * 0.5)
 #define GRID_3DEN_H (pixelH * pixelGrid * 0.5)
 
-#define DEFAULT_IS_MEDIC  (parseNumber (_this getUnitTrait 'medic'))
+#define DEFAULT_IS_MEDIC (parseNumber (_this getUnitTrait 'medic'))
 #define DEFAULT_IS_MEDICAL_VEHICLE (getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> 'attendant') > 0)
+#define DEFAULT_IS_MEDICAL_FACILITY (typeOf _this in GVAR(facilityClasses))
 
 class ctrlToolbox;
 
@@ -67,7 +68,7 @@ class Cfg3DEN {
                         property = QUOTE(ace_isMedicalFacility);
                         control = "Checkbox";
                         expression = QUOTE(_this setVariable [ARR_3(QQEGVAR(medical,isMedicalFacility),_value,true)];);
-                        defaultValue = "false";
+                        defaultValue = QUOTE(DEFAULT_IS_MEDICAL_FACILITY);
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";
                         typeName = "BOOL";
                     };
