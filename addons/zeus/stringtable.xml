@@ -1544,7 +1544,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullACEArsenal_DisplayName">
             <English>Add full ACE Arsenal</English>
-            <German>Vollständiges ACE Arsenal hinzufügen<</German>
+            <German>Vollständiges ACE Arsenal hinzufügen</German>
             <Japanese>ACE 武器庫を追加</Japanese>
             <Chinesesimp>添加ACE模式军火库</Chinesesimp>
             <Chinese>增加完整的ACE軍火庫</Chinese>
@@ -1554,7 +1554,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
-            <German>ACE Arsenal entfernen<</German>
+            <German>ACE Arsenal entfernen</German>
             <Japanese>ACE 武器庫を削除</Japanese>
             <Chinesesimp>删除ACE模式军火库</Chinesesimp>
             <Chinese>移除ACE軍火庫</Chinese>
@@ -1564,7 +1564,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_CreateZeus">
             <English>Create Zeus</English>
-            <German>Zeus erstellen<</German>
+            <German>Zeus erstellen</German>
             <Russian>Создать Зевса</Russian>
             <Japanese>Zeus を作る</Japanese>
             <Polish>Stwórz Zeus'a</Polish>
@@ -1572,7 +1572,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
-            <German>Zeus löschen<</German>
+            <German>Zeus löschen</German>
             <Russian>Удалить Зевса</Russian>
             <Japanese>Zeus を消す</Japanese>
             <Polish>Usuń Zeus'a</Polish>
@@ -1580,7 +1580,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
-            <German>"%1" Menü<</German>
+            <German>"%1" Menü</German>
             <Russian>Меню "%1"</Russian>
             <Japanese>"%1" メニュー</Japanese>
             <Polish>"%1" menu</Polish>
@@ -1588,7 +1588,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
-            <German>Paradrop Ladung<</German>
+            <German>Paradrop Ladung</German>
             <Japanese>カーゴを空中投下</Japanese>
             <Polish>Zrzut ładunku (cargo)</Polish>
             <Russian>Десантировать груз</Russian>
