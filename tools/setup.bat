@@ -1,6 +1,6 @@
 ;@Findstr -bv ;@F "%~f0" | powershell -command - & goto:eof
 
-$VERSION = "0.6.0"
+$VERSION = "0.6.1"
 $ARCH = if ([Environment]::Is64BitProcess) {"x86_64"} else {"i686"}
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
