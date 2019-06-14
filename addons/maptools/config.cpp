@@ -30,3 +30,4 @@ class RscEdit;
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgUIGrids.hpp"

@@ -22,3 +22,8 @@
 #define DIST_BOTTOM_TO_CENTER_PERC  -0.33
 #define DIST_TOP_TO_CENTER_PERC      0.65
 #define DIST_LEFT_TO_CENTER_PERC     0.30
+
+#define W_gps 0.4025
+#define H_gps 0.25
+#define X_gps_default safeZoneX + safeZoneW - 1.1 * W_gps
+#define Y_gps_default safeZoneY + safeZoneH - 1.65 * H_gps

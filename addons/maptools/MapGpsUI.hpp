@@ -7,10 +7,8 @@
 #define ST_RIGHT  0x01
 #define ST_CENTER 0x02
 
-#define W_gps 0.4025
-#define H_gps 0.25
-#define X_gps safeZoneX + safeZoneW - 1.1 * W_gps
-#define Y_gps safeZoneY + safeZoneH - 1.2 * H_gps
+#define X_gps (profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(vanillaGPS),X)', X_gps_default)])
+#define Y_gps (profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(vanillaGPS),Y)', Y_gps_default)])
 
 class RscTitles {
     class RscACE_MapGps {
@@ -41,7 +39,7 @@ class RscTitles {
                 colorText[] = {0.247,0.251,0.157,1};
                 shadowColo[] = {0,0,0,0};
                 // EtelkaNarrowMediumPro broke with 1.72 hotfix, can revert back to that font if fixed (following 3 uses of PuristaSemibold)
-                font = "PuristaSemibold"; 
+                font = "PuristaSemibold";
                 shadow = 0;
                 sizeEx = 0.042;
             };
