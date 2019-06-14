@@ -16,23 +16,9 @@ files = [
 headerexts = [
     "version={{git \"id 8\"}}"
 ]
-keyname = "ace_{{version}}"
+keyname = "{{prefix}}_{{version}}"
 signame = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 releasebuild = [
-    "!launchableoptionals",
     "@zip ace3_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
 ]
-
-[scripts]
-    [scripts.launchableoptionals]
-    steps_linux = [
-        #"if [ $(dirname {{target}}) == 'optionals' ]; then mkdir @ace_{{addon}}; mv {{target}} @ace_{{addon}}/{{target}}; fi"
-    ]
-    steps_windows = [
-
-    ]
-    show_output = true
-    foreach = true
-    #parallel = true
-
