@@ -30,7 +30,7 @@ if (_painLevel > 0) then {
 // Handle spontaneous wake up from unconsciousness
 if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
     if (_unit call EFUNC(medical_status,hasStableVitals)) then {
-        private _lastWakeUpCheck = _unit getVariable [QEGVAR(medical,lastWakeUpCheck);
+        private _lastWakeUpCheck = _unit getVariable QEGVAR(medical,lastWakeUpCheck);
 
         // Handle setting being changed mid-mission and still properly check
         // already unconscious units, should handle locality changes as well
