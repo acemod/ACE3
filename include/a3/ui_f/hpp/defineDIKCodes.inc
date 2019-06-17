@@ -186,5 +186,4 @@
 #define INPUT_ALT_OFFSET	2048
 
 
-#endif /* DIK_ESCAPE */
-
+#endif
