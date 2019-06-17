@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical GUI">
-        <Key ID="STR_ACE_Medical_GUI_Category">
-            <English>ACE Medical GUI</English>
-            <German>Sanitätsmenü</German>
-            <Japanese>ACE 医療 GUI</Japanese>
-            <Russian>ACE Медицина - Интерфейс</Russian>
+        <Key ID="STR_ACE_Medical_GUI_SubCategory">
+            <English>GUI</English>
+            <Japanese>GUI</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
             <English>Enable Medical Actions</English>
