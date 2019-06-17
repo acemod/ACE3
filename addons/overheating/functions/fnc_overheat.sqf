@@ -33,12 +33,12 @@ if (isNil "_energyIncrement") then {
         // If the bullet mass is not configured, estimate it
         _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
     };
-    
+
     // Projectile motion is roughly equal to Barrel heat
     // Ref: https://en.wikipedia.org/wiki/Physics_of_firearms
     // Muzzle Engergy = 1/2 * m * v^2 = (1/2 * 0.001 g/kg * bulletMass (grams) * v^2)
     // Multiple by 3 becase we only calc every 3rd bullet: (3 * 1/2 * 0.001) = 0.0015
-    private _energyIncrement = 0.0015 * _bulletMass * (vectorMagnitudeSqr velocity _projectile);
+    _energyIncrement = 0.0015 * _bulletMass * (vectorMagnitudeSqr velocity _projectile);
 
     GVAR(cacheAmmoData) setVariable [_ammo, _energyIncrement];
 };

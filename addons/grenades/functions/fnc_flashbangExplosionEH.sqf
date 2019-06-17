@@ -27,6 +27,7 @@ if (hasInterface) then {
     _light setLightAmbient [1,1,1];
     _light setLightColor [1,1,1];
     _light setLightDayLight true;
+    _light setLightAttenuation [0, 1, 5, 1000, 0, 20];
 
     // Reduce the light after 0.1 seconds
     [{
@@ -73,6 +74,9 @@ _affected = _affected - [ACE_player];
 
 // Affect local player, independently of distance
 if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
+    if ((getNumber (configFile >> "CfgVehicles" >> (typeOf ACE_player) >> "isPlayableLogic")) == 1) exitWith {
+        TRACE_1("skipping playable logic",typeOf ACE_player); // VirtualMan_F (placeable logic zeus / spectator)
+    };
     // Do effects for player
     // is there line of sight to the grenade?
     private _eyePos = eyePos ACE_player; //PositionASL

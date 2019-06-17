@@ -20,22 +20,22 @@ private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 private _color = [[1,0,0,0.5], [1,0,0,1]] select (_this select 0);
 
-(_dlgVector displayCtrl 1301) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1302) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1310) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1311) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1312) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1313) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1314) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1315) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1316) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1317) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1318) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1319) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1321) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1322) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1323) ctrlSetTextColor _color;
-(_dlgVector displayCtrl 1324) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_CENTER) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_CROSSHAIR) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_0) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_1) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_2) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_3) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_4) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_5) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_6) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_7) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_8) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_9) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_E1) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_E2) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_E3) ctrlSetTextColor _color;
+(_dlgVector displayCtrl IDC_DIGIT_E4) ctrlSetTextColor _color;
 
 GVAR(illuminate) = _this select 0;
 

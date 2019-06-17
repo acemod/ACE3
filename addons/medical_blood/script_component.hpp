@@ -14,6 +14,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_BLOOD
 #endif
 
+#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define MAX_BLOOD_OBJECTS 500
