@@ -18,4 +18,4 @@
 
 params ["", "_patient"];
 
-!((_patient getVariable [QEGVAR(medical,bandagedWounds), []]) isEqualTo [])
+!(GET_BANDAGED_WOUNDS(_patient) isEqualTo [])

@@ -46,9 +46,9 @@ if (EGVAR(medical,fractures) > 0) then {
 };
 
 if (!_isLimping && {EGVAR(medical,limping) > 0}) then {
-    private _woundsToCheck = _unit getVariable [QEGVAR(medical,openWounds), []];
+    private _woundsToCheck = GET_OPEN_WOUNDS(_unit);
     if (EGVAR(medical,limping) == 2) then {
-        _woundsToCheck = _woundsToCheck + (_unit getVariable [QEGVAR(medical,bandagedWounds), []]); // do not append
+        _woundsToCheck = _woundsToCheck + GET_BANDAGED_WOUNDS(_unit); // do not append
     };
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "", "_xDamage"];

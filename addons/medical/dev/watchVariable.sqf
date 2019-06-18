@@ -85,7 +85,7 @@
 
     // Wounds:
     _return pushBack "------- Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,openWounds), []];
+    private _wounds = GET_OPEN_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
@@ -93,7 +93,7 @@
 
     // Bandaged Wounds:
     _return pushBack "------- Bandaged Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,bandagedWounds), []];
+    private _wounds = GET_BANDAGED_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
@@ -101,7 +101,7 @@
 
     // Stitched Wounds:
     _return pushBack "------- Stitched Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,stitchedWounds), []];
+    private _wounds = GET_STITCHED_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
