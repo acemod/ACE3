@@ -49,6 +49,7 @@ if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
         };
     } else {
         // Unstable vitals, procrastinate the next wakeup check
-        _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
+        private _lastWakeUpCheck = _unit getVariable [QEGVAR(medical,lastWakeUpCheck), 0];
+        _unit setVariable [QEGVAR(medical,lastWakeUpCheck), _lastWakeUpCheck max CBA_missionTime];
     };
 };

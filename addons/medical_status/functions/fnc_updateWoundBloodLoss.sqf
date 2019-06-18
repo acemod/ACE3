@@ -2,6 +2,7 @@
 /*
  * Author: Glowbal
  * Update total wound bleeding based on open wounds and tourniquets
+ * Wound bleeding = percentage of cardiac output lost
  *
  * Arguments:
  * 0: The Unit <OBJECT>

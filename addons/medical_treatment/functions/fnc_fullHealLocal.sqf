@@ -16,6 +16,7 @@
  */
 
 params ["_patient"];
+TRACE_1("fullHealLocal",_patient);
 
 if (!alive _patient) exitWith {};
 
@@ -24,12 +25,6 @@ if (!alive _patient) exitWith {};
 if IN_CRDC_ARRST(_patient) then {
     TRACE_1("Exiting cardiac arrest",_patient);
     [QEGVAR(medical,CPRSucceeded), _patient] call CBA_fnc_localEvent;
-};
-
-if IS_UNCONSCIOUS(_patient) then {
-    TRACE_1("Waking up",_patient);
-    // Wake patient up first or unconscious variables will be reset
-    [QEGVAR(medical,WakeUp), _patient] call CBA_fnc_localEvent;
 };
 
 _patient setVariable [VAR_PAIN, 0, true];
@@ -59,9 +54,13 @@ _patient setVariable [QEGVAR(medical,ivBags), nil, true];
 
 // Damage storage
 _patient setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
-#ifdef DEBUG_TESTRESULTS
-_patient setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
-#endif
+
+// wakeup needs to be done after achieving stable vitals, but before manually reseting unconc var
+if IS_UNCONSCIOUS(_patient) then {
+    if (!([_patient] call EFUNC(medical_status,hasStableVitals))) then { WARNING_1("fullheal [%1] did not restore stable vitals",_patient); };
+    TRACE_1("Waking up",_patient);
+    [QEGVAR(medical,WakeUp), _patient] call CBA_fnc_localEvent;
+};
 
 // Generic medical admin
 _patient setVariable [VAR_CRDC_ARRST, false, true];
