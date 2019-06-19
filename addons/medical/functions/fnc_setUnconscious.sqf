@@ -2,7 +2,6 @@
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
- * For Public Use
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
@@ -14,10 +13,10 @@
  * Success? <BOOLEAN>
  *
  * Example:
- * [bob, true] call ace_medical_status__fnc_setUnconscious;
- * [player, true, 5, true] call ace_medical_status_fnc_setUnconscious;
+ * [bob, true] call ace_medical_fnc_setUnconscious;
+ * [player, true, 5, true] call ace_medical_fnc_setUnconscious;
  *
- * Public: yes
+ * Public: Yes
  */
 
 // only run this after the settings are initialized
@@ -25,7 +24,7 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
 };
 
-params ["_unit", ["_knockOut", true, [false]], ["_minWaitingTime", 0, [0]], ["_forcedWakup", false, [false]]];
+params [["_unit", objNull, [objNull]], ["_knockOut", true, [false]], ["_minWaitingTime", 0, [0]], ["_forcedWakup", false, [false]]];
 TRACE_4("setUnconscious",_unit,_knockOut,_minWaitingTime,_forcedWakup);
 
 if ((isNull _unit) || {!alive _unit} || {!(_unit isKindOf "CAManBase")}) exitWith {
@@ -34,7 +33,7 @@ if ((isNull _unit) || {!alive _unit} || {!(_unit isKindOf "CAManBase")}) exitWit
 };
 
 if (!local _unit) exitWith {
-    [QEGVAR(medical,setUnconscious), [_unit, _knockOut], _unit] call CBA_fnc_targetEvent;
+    [QEGVAR(medical,setUnconscious), _this, _unit] call CBA_fnc_targetEvent;
     true
 };
 

@@ -389,14 +389,14 @@ GVAR(InjuredMoanNamespace) setVariable ["Male08ENG", [[
     ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Mid_7",1.5848932,1,15],
     ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Mid_8",1.5848932,1,15]
 ], [
-    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_1",0.15848932,1,20],
-    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_2",0.15848932,1,20],
-    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_3",0.15848932,1,20],
-    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_4",0.15848932,1,20],
-    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_5",0.15848932,1,20],
-    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_6",0.15848932,1,20],
-    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_7",0.15848932,1,20],
-    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_8",0.15848932,1,20]
+    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_1",1.5848932,1,20],
+    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_2",1.5848932,1,20],
+    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_3",1.5848932,1,20],
+    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_4",1.5848932,1,20],
+    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_5",1.5848932,1,20],
+    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_6",1.5848932,1,20],
+    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_7",1.5848932,1,20],
+    ["A3\Sounds_F\characters\human-sfx\P01\Soundinjured_Max_8",1.5848932,1,20]
 ]]];
 
 GVAR(InjuredMoanNamespace) setVariable ["Male06ENG", [[

@@ -34,4 +34,18 @@ GVAR(animDurations) = [] call CBA_fnc_createNamespace;
     ["AinvPknlMstpSnonWnonDnon_medic1", 10]
 ];
 
+// class names of medical facilities (config case)
+GVAR(facilityClasses) = [];
+{
+    {
+        private _name = configName (configFile >> "CfgVehicles" >> _x);
+        if (_name != "") then { GVAR(facilityClasses) pushBackUnique _name; };
+    } forEach getArray _x;
+} forEach configProperties [configFile >> QEGVAR(medical,facilities), "isArray _x"];
+
+// array of medical items to replace and their ACE equivalents
+GVAR(replacementItems) = configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"] apply {
+    [configName _x, getArray _x]
+};
+
 ADDON = true;

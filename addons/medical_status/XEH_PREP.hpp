@@ -1,4 +1,4 @@
-PREP(addHeartRateAdjustment);
+PREP(addMedicationAdjustment);
 PREP(adjustPainLevel);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
@@ -12,3 +12,4 @@ PREP(isInStableCondition);
 PREP(setCardiacArrest);
 PREP(setDead);
 PREP(setUnconscious);
+PREP(updateWoundBloodLoss);

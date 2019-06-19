@@ -14,8 +14,8 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_FEEDBACK
 #endif
 
-#include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 
 #define EMPTY_SOUND {"A3\Sounds_F\dummysound.wss",1,1}
 #define NAMESPACE_NULL locationNull

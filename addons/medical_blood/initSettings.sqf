@@ -1,6 +1,6 @@
 // CBA Settings [ADDON: ace_medical_blood]:
 
-private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subCategory)];
+private _categoryArray = [LELSTRING(medical,Category), LLSTRING(subCategory)];
 
 [
     QGVAR(enabledFor), "LIST",

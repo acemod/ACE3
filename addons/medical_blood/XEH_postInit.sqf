@@ -30,13 +30,13 @@ if (isServer) then {
     if ((GVAR(enabledFor) == 1) && {!hasInterface}) exitWith {}; // 1: enabledFor_OnlyPlayers
 
     private _listcode = if (GVAR(enabledFor) == 1) then {
-        {[ACE_player]} // ace_player is only possible local player
+        {if (alive ACE_player) then {[ACE_player]} else {[]}} // ace_player is only possible local player
     } else {
         EFUNC(common,getLocalUnits) // filter all local units
     };
 
     private _stateMachine = [_listcode, true] call CBA_statemachine_fnc_create;
-    [_stateMachine, {call FUNC(onBleeding)}, {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
+    [_stateMachine, LINKFUNC(onBleeding), {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
 
     [QEGVAR(medical,woundReceived), FUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;

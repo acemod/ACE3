@@ -33,12 +33,14 @@
         </Key>
         <Key ID="STR_ACE_gforces_statGReduction">
             <English>G-force reduction</English>
+            <German>G-Kräfte Reduzierung</German>
             <French>Reduction des Gs</French>
             <Japanese>耐 G 性</Japanese>
             <Chinesesimp>减少G力</Chinesesimp>
             <Chinese>減少G力</Chinese>
             <Italian>Riduzione forza G</Italian>
             <Polish>Redukcja przeciążenia</Polish>
+            <Russian>Уменьшение перегрузок</Russian>
         </Key>
     </Package>
 </Project>

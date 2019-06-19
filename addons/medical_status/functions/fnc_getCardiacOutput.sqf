@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
+ * Author: Glowbal, SilentSpike
  * Get the cardiac output from the Heart, based on current Heart Rate and Blood Volume.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
  *
  * Return Value:
- * Current cardiac output (liter per second) <NUMBER>
+ * Current cardiac output (litre per second) <NUMBER>
  *
  * Example:
  * [player] call ace_medical_status_fnc_getCardiacOutput
@@ -20,13 +20,18 @@
     Source: http://en.wikipedia.org/wiki/Cardiac_output
 */
 
-// to limit the amount of complex calculations necessary, we take a set modifier to calculate Stroke Volume.
-#define MODIFIER_CARDIAC_OUTPUT     19.04761
+// Value taken from https://doi.org/10.1093%2Feurheartj%2Fehl336
+// as 94/95 ml ± 15 ml
+#define VENTRICLE_STROKE_VOL 95e-3
 
 params ["_unit"];
 
-private _bloodVolume = (GET_BLOOD_VOLUME(_unit) / DEFAULT_BLOOD_VOLUME) * 100;
+private _bloodVolumeRatio = GET_BLOOD_VOLUME(_unit) / DEFAULT_BLOOD_VOLUME;
 private _heartRate = GET_HEART_RATE(_unit);
-private _cardiacOutput = ((_bloodVolume / MODIFIER_CARDIAC_OUTPUT) + ((_heartRate / DEFAULT_HEART_RATE) - 1)) / 60;
 
-(0 max _cardiacOutput)
+// Blood volume ratio dictates how much is entering the ventricle (this is an approximation)
+private _entering = linearConversion [0.5, 1, _bloodVolumeRatio, 0, 1, true];
+
+private _cardiacOutput = (_entering * VENTRICLE_STROKE_VOL) * _heartRate / 60;
+
+0 max _cardiacOutput

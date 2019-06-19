@@ -24,8 +24,17 @@ if (!local _unit) exitWith {
 
 private _hitPointDamages = getAllHitPointsDamage _unit param [2, []];
 
+private _damageDisabled = !isDamageAllowed _unit;
+if (_damageDisabled) then {
+    _unit allowDamage true;
+};
+
 _unit setDamage _damage;
 
 {
     _unit setHitIndex [_forEachIndex, _x];
 } forEach _hitPointDamages;
+
+if (_damageDisabled) then {
+    _unit allowDamage false;
+};

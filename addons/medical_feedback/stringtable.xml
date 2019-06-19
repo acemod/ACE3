@@ -4,6 +4,9 @@
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_feedback_subCategory">
                 <English>Feedback</English>
+                <German>Feedback</German>
+                <Japanese>フィードバック</Japanese>
+                <Russian>Реакция на ранения</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
@@ -32,7 +35,7 @@
                 <French>Active les hurlements d'unités blessées</French>
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
                 <Italian>Abilita Grida da parte delle unità ferite</Italian>
-                <Japanese>負傷したユニットが叫ぶように</Japanese>
+                <Japanese>負傷したユニットが叫びだします。</Japanese>
                 <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
                 <Chinesesimp>启用伤者的尖叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
@@ -49,14 +52,20 @@
             <Hungarian>Fájdalom-effekt típusa</Hungarian>
             <Portuguese>Tipo do efeito de dor</Portuguese>
             <Czech>Typ bolesti - efekt</Czech>
-            <Japanese>痛みの種類</Japanese>
+            <Japanese>痛み効果の種類</Japanese>
             <Korean>고통 효과 종류</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_feedback_painEffectType_whiteFlashing">
             <English>White flashing</English>
+            <German>Weißes blinken</German>
+            <Japanese>白く点滅</Japanese>
+            <Russian>Белые вспышки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_feedback_painEffectType_pulsingBlur">
             <English>Pulsing blur</English>
+            <German>Wiederkehrende Unschärfe</German>
+            <Japanese>ボケの強弱</Japanese>
+            <Russian>Пульсирующее размытие</Russian>
         </Key>
     </Package>
 </Project>

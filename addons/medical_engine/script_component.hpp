@@ -1,10 +1,10 @@
 #define COMPONENT medical_engine
-#define COMPONENT_BEAUTIFIED Medical (Engine)
+#define COMPONENT_BEAUTIFIED Medical Engine
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
-//#define ENABLE_PERFORMANCE_COUNTERS
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_MEDICAL_ENGINE
     #define DEBUG_MODE_FULL
@@ -14,16 +14,16 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_ENGINE
 #endif
 
-#include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_config.hpp"
 
 #define PRELOAD_CLASS(class) \
-    diag_log format["Starting preload for ""%1""",class];\
+    INFO_1("Starting preload for (%1)",class);\
     [{\
         1 preloadObject _this;\
     }, {\
-        diag_log format ["Preload done for ""%1""",_this];\
+        INFO_1("Preload done for (%1)",_this);\
     }, class] call CBA_fnc_waitUntilAndExecute
 
 #define PRIORITY_HEAD       3
