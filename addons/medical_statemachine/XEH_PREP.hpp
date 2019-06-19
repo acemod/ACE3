@@ -3,6 +3,7 @@ PREP(conditionExecutionDeath);
 PREP(enteredStateCardiacArrest);
 PREP(enteredStateDeath);
 PREP(enteredStateFatalInjury);
+PREP(handleStateCardiacArrest);
 PREP(handleStateDefault);
 PREP(handleStateInjured);
 PREP(handleStateUnconscious);

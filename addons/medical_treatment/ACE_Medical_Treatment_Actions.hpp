@@ -264,10 +264,10 @@ class GVAR(actions) {
         allowedSelections[] = {"Body"};
         allowSelfTreatment = 0;
         medicRequired = 0;
-        treatmentTime = 15;
+        treatmentTime = 3; // do not pr this
         items[] = {};
         condition = QFUNC(canCPR);
-        callbackSuccess = QFUNC(cpr);
+        callbackSuccess = QFUNC(cprSuccess);
         callbackFailure = QFUNC(cprFailure);
         callbackProgress = QFUNC(cprProgress);
         callbackStart = QFUNC(cprStart);

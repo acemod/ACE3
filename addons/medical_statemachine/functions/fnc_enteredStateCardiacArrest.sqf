@@ -22,6 +22,8 @@ params ["_unit"];
 private _time = GVAR(cardiacArrestTime);
 _time = _time + random [_time*-0.1, 0, _time*0.1];
 
+TRACE_2("enteredStateCardiacArrest",_unit,_time);
+
 _unit setVariable [QGVAR(cardiacArrestTime), _time];
 _unit setVariable [QGVAR(cardiacArrestStart), CBA_missionTime];
 

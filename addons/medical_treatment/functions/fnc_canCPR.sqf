@@ -18,4 +18,6 @@
 
 params ["", "_patient"];
 
-!(_patient call EFUNC(common,isAwake)) && {!(_patient getVariable [QGVAR(isReceivingCPR), false])}
+!(_patient call EFUNC(common,isAwake))
+&& {IN_CRDC_ARRST(_patient)}
+&& {isNull (_patient getVariable [QEGVAR(medical,CPR_provider), objNull])}

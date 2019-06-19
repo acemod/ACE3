@@ -7,7 +7,7 @@
  * 0: The Unit <OBJECT>
  *
  * Return Value:
- * Current cardiac output (litre per second) <NUMBER>
+ * Current cardiac output (liter per second) <NUMBER>
  *
  * Example:
  * [player] call ace_medical_status_fnc_getCardiacOutput
@@ -16,7 +16,7 @@
  */
 
 /*
-    Cardiac output (Q or or CO ) is the volume of blood being pumped by the heart, in particular by a left or right ventricle in the CBA_missionTime interval of one second. CO may be measured in many ways, for example dm3/min (1 dm3 equals 1 litre).
+    Cardiac output (Q or or CO ) is the volume of blood being pumped by the heart, in particular by a left or right ventricle in the CBA_missionTime interval of one second. CO may be measured in many ways, for example dm3/min (1 dm3 equals 1 liter).
     Source: http://en.wikipedia.org/wiki/Cardiac_output
 */
 

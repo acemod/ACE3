@@ -22,7 +22,15 @@ params ["_unit", "_hrTargetAdjustment", "_deltaT", "_syncValue"];
 
 private _heartRate = GET_HEART_RATE(_unit);
 
-if !IN_CRDC_ARRST(_unit) then {
+if IN_CRDC_ARRST(_unit) then {
+    if (alive (_unit getVariable [QEGVAR(medical,CPR_provider), objNull])) then { // GVAR(cprCreatesPulse setting???
+        if (_heartRate == 0) then { _syncValue = true };
+        _heartRate = random [25, 30, 35];
+    } else {
+        if (_heartRate != 0) then { _syncValue = true };
+        _heartRate = 0
+    };
+} else {
     private _hrChange = 0;
     private _targetHR = 0;
     private _bloodVolume = GET_BLOOD_VOLUME(_unit);

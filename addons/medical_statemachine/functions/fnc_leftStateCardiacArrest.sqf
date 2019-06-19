@@ -17,11 +17,9 @@
  */
 
 params ["_unit"];
+TRACE_1("leftStateCardiacArrest",_unit);
 
 _unit setVariable [QGVAR(cardiacArrestTime), nil];
 _unit setVariable [QEGVAR(medical,cardiacArrestStart), nil];
-
-// Temporary fix for vitals loop on cardiac arrest exit
-_unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
 
 [_unit, false] call EFUNC(medical_status,setCardiacArrest);

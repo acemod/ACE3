@@ -17,9 +17,14 @@
  */
 
 params ["_medic", "_patient"];
+TRACE_2("cprLocal",_medic,_patient);
 
 [_patient, "activity", LSTRING(Activity_CPR), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
 if (random 1 >= 0.6) then {
+    TRACE_1("CPR random success",_this);
     [QEGVAR(medical,CPRSucceeded), _patient] call CBA_fnc_localEvent;
+} else {
+    TRACE_1("CPR random fail",_this);
 };
+
