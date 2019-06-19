@@ -27,6 +27,12 @@ isClass _config
 && {_medic != _patient || {GET_NUMBER_ENTRY(_config >> "allowSelfTreatment") == 1}}
 && {[_medic, GET_NUMBER_ENTRY(_config >> "medicRequired")] call FUNC(isMedic)}
 && {
+    // Handle holster settings
+    GVAR(holsterRequired) == 0
+    || {GVAR(holsterNoReqExamine) && getText (_config >> "category") == "examine"} // if examine bypass is on
+    || currentWeapon _medic == ""
+    || {GVAR(holsterRequired) == 1 && weaponLowered _medic} // if just lowered is allowed
+} && {
     private _selections = getArray (_config >> "allowedSelections") apply {toLower _x};
     "all" in _selections || {_bodyPart in _selections}
 } && {

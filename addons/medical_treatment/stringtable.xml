@@ -237,6 +237,18 @@
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
+            <English>Holster Required</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
+            <English>Controls whether weapons must be holstered / current weapon must be lowered in order to perform medical actions.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterNoReqExamine_DisplayName">
+            <English>Bypass Holster Required for Examination</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterNoReqExamine_Description">
+            <English>Allows examination actions (checking pulse, blood pressure, response) at all times regardless of Holster Required setting.</English>
+        </Key>
 
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
             <English>Anyone</English>
@@ -265,6 +277,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VehiclesAndFacilities">
             <English>Vehicles &amp; Facilities</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
+            <English>Lowered or Holstered</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
+            <English>Holstered only</English>
         </Key>
 
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">

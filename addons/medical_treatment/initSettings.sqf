@@ -191,3 +191,22 @@
     [-1, 3600, 600, 0],
     true
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(holsterRequired),
+    "LIST",
+    [LSTRING(HolsterRequired_DisplayName), LSTRING(HolsterRequired_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(HolsterRequired_Lowered), LSTRING(HolsterRequired_Holstered)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(holsterNoReqExamine),
+    "CHECKBOX",
+    [LSTRING(HolsterNoReqExamine_DisplayName), LSTRING(HolsterNoReqExamine_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    false,
+    true
+] call CBA_settings_fnc_init;
+
