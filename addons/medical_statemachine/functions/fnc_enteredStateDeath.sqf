@@ -15,11 +15,14 @@
  * Public: No
  */
 
-params ["_unit"];
+[{
+    params ["_unit"];
 
-// TODO: Probably also needs additional logic to deal with edge cases
+    // TODO: Probably also needs additional logic to deal with edge cases
 
-// Send a local event before death
-[QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
+    // Send a local event before death
+    [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
 
-[_unit] call EFUNC(medical_status,setDead);
+    private _deathReason = _unit getVariable [QGVAR(deathReason), nil];
+    [_unit, _deathReason] call EFUNC(medical_status,setDead);
+}, _this] call CBA_fnc_execNextFrame;

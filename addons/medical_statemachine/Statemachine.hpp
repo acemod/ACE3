@@ -48,6 +48,7 @@ class ACE_Medical_StateMachine {
         class DeathAI {
             targetState = "Dead";
             condition = QUOTE(!isPlayer _this && {GVAR(unconsciousConditionAI)});
+            onTransition = QUOTE(_this setVariable [ARR_2(QQGVAR(deathReason),'Unconscious (AI)')];);
         };
         class WakeUp {
             targetState = "Injured";
@@ -72,6 +73,7 @@ class ACE_Medical_StateMachine {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
             targetState = "Dead";
             condition = QUOTE(!isPlayer _this && {GVAR(fatalInjuryConditionAI)});
+            onTransition = QUOTE(_this setVariable [ARR_2(QQGVAR(deathReason),'Fatal Injury (AI)')];);
         };
         class SecondChance {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
@@ -83,6 +85,7 @@ class ACE_Medical_StateMachine {
             events[] = {QEGVAR(medical,FatalInjuryInstantTransition)};
             targetState = "Dead";
             condition = "true";
+            onTransition = QUOTE(_this setVariable [ARR_2(QQGVAR(deathReason),'Fatal Injury')];);
         };
     };
     class CardiacArrest {
@@ -91,10 +94,12 @@ class ACE_Medical_StateMachine {
         class DeathAI {
             targetState = "Dead";
             condition = QUOTE(!isPlayer _this && {GVAR(fatalInjuryConditionAI)});
+            onTransition = QUOTE(_this setVariable [ARR_2(QQGVAR(deathReason),'Cardiac Arrest (AI)')];);
         };
         class Timeout {
             targetState = "Dead";
             condition = QFUNC(conditionCardiacArrestTimer);
+            onTransition = QUOTE(_this setVariable [ARR_2(QQGVAR(deathReason),'Cardiac Arrest (Brain Damage)')];);
         };
         class Reanimation {
             targetState = "Unconscious";
@@ -104,10 +109,12 @@ class ACE_Medical_StateMachine {
             targetState = "Dead";
             condition = QFUNC(conditionExecutionDeath);
             events[] = {QEGVAR(medical,FatalInjury)};
+            onTransition = QUOTE(_this setVariable [ARR_2(QQGVAR(deathReason),'Fatal Injury (Execution)')];);
         };
         class Bleedout {
             targetState = "Dead";
             events[] = {QEGVAR(medical,Bleedout)};
+            onTransition = QUOTE(_this setVariable [ARR_2(QQGVAR(deathReason),'Bleedout')];);
         };
     };
     class Dead {
