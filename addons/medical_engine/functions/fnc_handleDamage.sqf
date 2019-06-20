@@ -17,6 +17,7 @@
 #define HIT_STRUCTURAL QGVAR($#structural)
 
 params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint"];
+diag_log text format ["HD - %1 - %2", diag_frameno, _this];
 
 // HD sometimes triggers for remote units - ignore.
 if !(local _unit) exitWith {nil};
@@ -137,7 +138,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             };
         };
     };
-
+    xxx = false;
     // No wounds for minor damage
     if (_receivedDamage > 1E-3) then {
         [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
@@ -154,7 +155,17 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         QGVAR($HitLeftArm),QGVAR($HitRightArm),QGVAR($HitLeftLeg),QGVAR($HitRightLeg)
     ];
 
-    0
+    if (xxx) then {
+        xxx = nil;
+        systemChat "9";
+        // _unit setHit ["head", 1];
+        _unit setDamage [1, true];
+        5
+    } else {
+        xxx = nil;
+        systemChat "0";
+        0
+    };
 };
 
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs

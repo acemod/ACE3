@@ -15,7 +15,7 @@
  * Public: No
  */
 
-[{
+// [{
     params ["_unit"];
 
     // TODO: Probably also needs additional logic to deal with edge cases
@@ -25,4 +25,4 @@
 
     private _deathReason = _unit getVariable [QGVAR(deathReason), nil];
     [_unit, _deathReason] call EFUNC(medical_status,setDead);
-}, _this] call CBA_fnc_execNextFrame;
+// }, _this] call CBA_fnc_execNextFrame;

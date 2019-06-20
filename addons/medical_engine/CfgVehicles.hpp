@@ -4,6 +4,10 @@ class CfgVehicles {
     class CAManBase: Man {
         // General
         class HitPoints {
+            // class HitNeck;
+            // class HitHead: HitNeck {
+                // depends = "HitFace max HitNeck max ACE_HDBracket";
+            // };
             ADD_ACE_HITPOINTS(1,1);
         };
     };

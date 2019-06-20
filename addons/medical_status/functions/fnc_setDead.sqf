@@ -14,13 +14,20 @@
  */
 
 params ["_unit", ["_reason", "unknown"]];
+TRACE_2("setDead",_unit,_reason);
 
 // No heart rate or blood pressure to measure when dead
 _unit setVariable [VAR_HEART_RATE, 0, true];
 _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
 
 // Kill the unit without changing visual apperance
-[_unit, 1] call EFUNC(medical_engine,setStructuralDamage);
+if (isNil "xxx") then {
+    TRACE_1("normal kill",_unit);
+    [_unit, 1] call EFUNC(medical_engine,setStructuralDamage);
+    } else {
+    TRACE_1("normal kill",_unit);
+    xxx = true;
+    };
 
 private _lastShooter = _unit getVariable [QEGVAR(medical,lastDamageSource), objNull];
 private _lastInstigator = _unit getVariable [QEGVAR(medical,lastInstigator), objNull];
