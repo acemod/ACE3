@@ -103,7 +103,9 @@ class GVAR(actions) {
         treatmentTime = 7;
         callbackSuccess = QFUNC(splint);
         condition = QFUNC(canSplint);
-        litter[] = {};
+        litter[] = {
+            {"ACE_MedicalLitter_splint"}, {}, {}
+        };
     };
 
     // - Syringes -------------------------------------------------------------
