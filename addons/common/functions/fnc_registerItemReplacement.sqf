@@ -76,8 +76,7 @@ private _fnc_replaceItems = {
 };
 
 // Setup on first run
-private _firstRun = isNil QGVAR(itemReplacements);
-if (_firstRun) then {
+if (isNil QGVAR(itemReplacements)) then {
     GVAR(itemReplacements) = [] call CBA_fnc_createNamespace;
     GVAR(inheritedReplacements) = [];
     GVAR(oldItems) = [];
@@ -104,7 +103,7 @@ _oldReplacements append _newItems;
 GVAR(itemReplacements) setVariable [_oldItem, _newItems];
 
 // Force item scan when new replacement was registered in PostInit
-if (!isNull ACE_player || _firstRun) then {
+if (!isNull ACE_player) then {
     GVAR(oldItems) = [];
 
     // Exec next frame to ensure full scan only runs once per frame
