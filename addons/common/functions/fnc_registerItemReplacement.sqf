@@ -85,7 +85,7 @@ if (_firstRun) then {
 };
 
 // Save item replacement
-// $ prefix is used for types (numbers) and replacements with inherition
+// $ prefix is used for types (numbers) and replacements with inheritance
 if (_replaceInherited) then {
     GVAR(inheritedReplacements) pushBack _oldItem;
     _oldItem = "$" + _oldItem;
