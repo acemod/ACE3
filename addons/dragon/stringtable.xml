@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="dragon">
+        <Key ID="STR_ACE_dragon_dragonNameCarry">
+            <English>[CSW] M47 Super-Dragon</English>
+        </Key>
         <Key ID="STR_ACE_dragon_dragonName">
             <English>M47 Super-Dragon</English>
         </Key>
