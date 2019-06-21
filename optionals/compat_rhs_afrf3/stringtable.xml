@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="compat_rhs_afrf3">
+        <Key ID="STR_ACE_compat_rhs_afrf3_2b14_tube">
+            <English>2B14 Tube Bag</English>
+        </Key>
+        <Key ID="STR_ACE_compat_rhs_afrf3_nsv_gun">
+            <English>NSV Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_compat_rhs_afrf3_kord_gun">
+            <English>KORD Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_compat_rhs_afrf3_ags30_gun">
+            <English>AGS-30 Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_compat_rhs_afrf3_spg9_tube">
+            <English>SPG-9 Launcher Bag</English>
+        </Key>
+        <Key ID="STR_ACE_compat_rhs_afrf3_spg9m_tube">
+            <English>SPG-9M Launcher</English>
+        </Key>
+        <Key ID="STR_ACE_compat_rhs_afrf3_metis_tube">
+            <English>9k115 Metis Launcher Bag</English>
+        </Key>
+        <Key ID="STR_ACE_compat_rhs_afrf3_kornet_launcher">
+            <English>9m113 Kornet Launcher</English>
+        </Key>
+    </Package>
+</Project>

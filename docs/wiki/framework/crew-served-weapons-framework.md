@@ -39,6 +39,7 @@ class CfgVehicles {
             disassembleTurret = QGVAR(m3TripodLow); // Which tripod will appear when weapon has been disassembled
             ammoLoadTime = 7; // How long it takes in seconds to load ammo into the weapon           
             ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
+            desiredAmmo = 69; // When the weapon is reloaded it will try and reload to this ammo capacity
             disassembleFunc = "myCoolFunction.sqf"; // A callback function for when the CSW gets disassembled. Arguments: [tripod, staticWeapon]
         };
     };
@@ -55,6 +56,7 @@ class CfgMagazines {
         type=256; // Must be 256 to show up in Arsenal
         count = 100; // How much ammo gets added per "Load Ammo" selection
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // default ammo box model
+        //ace_isbelt = 1; // Needed if your magazine has belt linking
     };
 };
 ```
@@ -63,22 +65,22 @@ class CfgMagazines {
 
 ```cpp
 class CfgWeapons {
-    class ace_csw_base_carry;
-    class banana_carry_weapon: ace_csw_base_carry {
-        class ace_csw_options {
-            assembleTo = "banana_csw"; // What the weapon will assemble into
-            baseTripod = "banana_tripod"; // The tripod which the weapon can be assembled onto (Default is "ace_csw_m3Tripod")
+    class Launcher_Base_F;
+    class banana_carry_weapon: Launcher_Base_F {
+        class ACE_CSW {
             type = "weapon"; // What type of carry it is. Must always be "weapon" for the carry weapon
+            deployTime = 4; // How long it takes to deploy the weapon onto the tripod
+            pickupTime = 4; // How long it takes to disassemble weapon from the tripod
+            class assembleTo {
+                ace_csw_m3Tripod = "banana_csw_mod1"; // What tripod can this weapon deploy onto, and what vehicle will it spawn when it is deployed
+                banana_tripod = "banana_csw";
+            };
         };
     };
     
     class HMG_Static;
-    class banana_weapon: HMG_Static {
-        class ace_csw_options {
-            deployTime = 10; // Time in seconds it takes to mount the weapon on the tripod
-            pickupTime = 12; // Time in seconds it takes to dismount the weapon from the tripod
-        };
-        magazines[] = { banana_ammo }; // You must have both the dummy and real ammunition
+    class banana_proxy_weapon: HMG_Static {
+        magazineReloadTime = 0.5; // Proxy weapons are spawned onto the CSW when it is assembled. Because ammo loading times use defined values in the magazine, this number needs to be low to ensure low latency
     };
 };
 ```
@@ -87,8 +89,8 @@ class CfgWeapons {
 
 ```cpp
     class ace_csw_groups { // Ammo that can be loaded into this CSW
-        class banana_ammo { // The magazine which will be loaded into the weapon
-            banana_dummy_ammo = 1; // Ammo that is loaded into the weapon as per CfgWeapons >> weapon >> magazines
+        class banana_ammo { // The magazine which the player can place into their inventory
+            banana_dummy_ammo = 1; // Magazine that is loaded into the weapon as per CfgWeapons >> weapon >> magazines
         };
         
         // Optional
@@ -99,6 +101,9 @@ class CfgWeapons {
         /*
           Ammo types already defined by CSW:
             - ace_csw_100Rnd_127x99_mag
+            - ace_csw_100Rnd_127x99_mag_red
+            - ace_csw_100Rnd_127x99_mag_green
+            - ace_csw_100Rnd_127x99_mag_yellow
             - ace_csw_50Rnd_127x108_mag
             - ace_csw_20Rnd_20mm_G_belt
             - ACE_1Rnd_82mm_Mo_HE
@@ -129,14 +134,14 @@ class CfgVehicles {
 
 ```cpp
 class CfgWeapons {
-    class ace_csw_base_carry;
-    class banana_carry_tripod: ace_csw_base_carry {
-        class GVAR(options) {
-                deployTime = 166; // How much time in seconds it takes to deploy the tripod
-                pickupTime = 12; // How much time in seconds it takes to pickup the tripod
-                type = "mount";  // What type of carry it is. Must always be "mount" for the carry tripod
-                deploy = "banana_tripod"; // What will be deployed when "Deploy Tripod" is selected
-            };
+    class Launcher_Base_F;
+    class banana_carry_tripod: Launcher_Base_F {
+        class ACE_CSW {
+            type = "mount"; // What type of carry it is. Must always be "mount" for the tripod
+            deployTime = 4; // How long it takes to deploy the tripod
+            pickupTime = 4; // How long it takes to pickup the tripod
+            deploy = "banana_tripod"; // what vehicle will spawn when the tripod is deployed
+        };
     };
 };
 ```

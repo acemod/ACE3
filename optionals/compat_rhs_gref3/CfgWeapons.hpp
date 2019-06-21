@@ -1,3 +1,4 @@
+#define CREATE_CSW_PROXY(weapon) class ##weapon; class GVAR(weapon): ##weapon { magazineReloadTime = 0.5; }
 
 class CfgWeapons {
     class rhs_weap_kar98k_Base_F;
@@ -80,5 +81,32 @@ class CfgWeapons {
     };
     class rhs_weap_mg42_base: Rifle_Base_F {
         ACE_Overheating_allowSwapBarrel = 1;
+    };
+    
+    CREATE_CSW_PROXY(rhs_weap_DSHKM);
+    
+    class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
+    };
+    class GVAR(dshkm_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m3Tripod) = "rhsgref_ins_DSHKM";
+                EGVAR(csw,m3TripodLow) = "rhsgref_ins_DSHKM_Mini_TriPod";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 740;
+        };
+        displayName = CSTRING(dshk_gun);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsafrf\addons\rhs_heavyweapons\data\mapico\icomap_DShKM_CA.paa";
     };
 };
