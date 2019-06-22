@@ -71,8 +71,8 @@ class CfgWeapons {
         scope = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(splint_Display);
-        picture = QPATHTOF(ui\tourniquet_ca.paa);
-        model = QPATHTOF(data\tourniquet.p3d);
+        picture = QPATHTOF(ui\splint_ca.paa);
+        model = QPATHTOF(data\splint.p3d);
         descriptionShort = CSTRING(splint_Desc_Short);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;

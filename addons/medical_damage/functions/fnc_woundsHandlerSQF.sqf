@@ -142,7 +142,6 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
                 };
             case (_causeFracture && {EGVAR(medical,fractures) > 0} && {_bodyPartNToAdd > 1} && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}): {
                     TRACE_1("limb fracture",_bodyPartNToAdd);
-                    // todo: play sound?
                     private _fractures = GET_FRACTURES(_unit);
                     _fractures set [_bodyPartNToAdd, 1];
                     _unit setVariable [VAR_FRACTURES, _fractures, true];
