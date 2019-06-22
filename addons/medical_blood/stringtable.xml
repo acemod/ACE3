@@ -2,10 +2,7 @@
 <Project name="ACE">
     <Package name="Medical_Blood">
         <Key ID="STR_ACE_Medical_Blood_SubCategory">
-            <English>Bleeding Effect</English>
-            <German>Blutungseffekt</German>
-            <Japanese>出血中の効果</Japanese>
-            <Russian>Эффекты кровотечения</Russian>
+            <English>Blood</English>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_DisplayName">
             <English>Enable Blood Drops</English>
@@ -21,6 +18,18 @@
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_Description">
             <English>Enables the creation of blood drops when units are bleeding or take damage.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
+            <English>Max Blood Objects</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
+            <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
+            <English>Blood Lifetime</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
+            <English>Controls the lifetime of blood drop objects.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
             <English>Only Players</English>
