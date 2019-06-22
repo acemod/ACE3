@@ -65,7 +65,7 @@ private _allPossibleInjuries = [];
 if (_highestPossibleSpot < 0) exitWith { TRACE_2("no wounds possible",_damage,_highestPossibleSpot); };
 
 // Administration for open wounds and ids
-private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
+private _openWounds = GET_OPEN_WOUNDS(_unit);
 
 private _updateDamageEffects = false;
 private _painLevel = 0;
@@ -187,7 +187,7 @@ if (_updateDamageEffects) then {
     [_unit] call EFUNC(medical_engine,updateDamageEffects);
 };
 
-_unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+_unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
@@ -200,4 +200,4 @@ if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call FUNC(handleIncapacitation);
 };
 
-TRACE_4("exit",_unit,_painLevel,GET_PAIN(_unit),_unit getVariable QEGVAR(medical,openWounds));
+TRACE_4("exit",_unit,_painLevel,GET_PAIN(_unit),GET_OPEN_WOUNDS(_unit));

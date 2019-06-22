@@ -20,4 +20,4 @@
 
 params ["", "_patient"];
 
-count (_patient getVariable [QEGVAR(medical,bandagedWounds), []]) * TIME_PER_WOUND
+count GET_BANDAGED_WOUNDS(_patient) * TIME_PER_WOUND
