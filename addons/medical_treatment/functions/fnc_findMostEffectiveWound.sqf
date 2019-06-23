@@ -29,7 +29,7 @@ if (isClass (_config >> _bandage)) then {
 };
 
 // Iterate over open wounds to find the most effective target
-private _openWounds = _patient getVariable [QEGVAR(medical,openWounds), []];
+private _openWounds = GET_OPEN_WOUNDS(_patient);
 if (_openWounds isEqualTo []) exitWith { [EMPTY_WOUND, -1, -1] };
 
 private _wound = EMPTY_WOUND;

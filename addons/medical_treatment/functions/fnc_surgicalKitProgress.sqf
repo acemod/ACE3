@@ -22,8 +22,8 @@
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["", "_patient"];
 
-private _bandagedWounds = _patient getVariable [QEGVAR(medical,bandagedWounds), []];
-private _stitchedWounds = _patient getVariable [QEGVAR(medical,stitchedWounds), []];
+private _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);
+private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
 
 // Stop treatment if there are no wounds that can be stitched remaining
 if (_bandagedWounds isEqualTo []) exitWith { false };
@@ -32,8 +32,8 @@ if (_bandagedWounds isEqualTo []) exitWith { false };
 if (_totalTime - _elapsedTime <= (count _bandagedWounds - 1) * 5) then {
     private _treatedWound = _bandagedWounds deleteAt 0;
     _stitchedWounds pushBack _treatedWound;
-    _patient setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
-    _patient setVariable [QEGVAR(medical,stitchedWounds), _stitchedWounds, true];
+    _patient setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
+    _patient setVariable [VAR_STITCHED_WOUNDS, _stitchedWounds, true];
     TRACE_3("stitched",_treatedWound,count _bandagedWounds,count _stitchedWounds);
 
     // Check if we fixed limping from this treatment

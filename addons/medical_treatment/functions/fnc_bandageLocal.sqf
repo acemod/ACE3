@@ -22,7 +22,7 @@ params ["_patient", "_bodyPart", "_bandage"];
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 if (_partIndex < 0) exitWith {false};
 
-private _openWounds = _patient getVariable [QEGVAR(medical,openWounds), []];
+private _openWounds = GET_OPEN_WOUNDS(_patient);
 if (_openWounds isEqualTo []) exitWith {false};
 
 // Figure out which injury for this bodypart is the best choice to bandage
@@ -40,7 +40,7 @@ _amountOf = _amountOf - _impact;
 _wound set [2, _amountOf];
 _openWounds set [_woundIndex, _wound];
 
-_patient setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+_patient setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
