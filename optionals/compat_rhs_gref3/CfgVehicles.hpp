@@ -12,7 +12,7 @@ class CfgVehicles {
             proxyWeapon = QGVAR(rhs_weap_DSHKM);
             magazineLocation = "_target selectionPosition 'otocvez'";
             disassembleWeapon = QGVAR(dshkm_carry);
-            disassembleTurret = QEGVAR(csw,m3Tripod);
+            disassembleTurret = QEGVAR(csw,kordTripod);
             desiredAmmo = 50;
             ammoLoadTime = 10;
             ammoUnloadTime = 8;
@@ -21,7 +21,7 @@ class CfgVehicles {
     class rhs_DSHkM_Mini_TriPod_base: rhs_DSHKM_base {
         class ACE_CSW: ACE_CSW {
             enabled = 1;
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = QEGVAR(csw,kordTripodLow);
         };
     };
 };

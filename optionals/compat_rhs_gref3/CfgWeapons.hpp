@@ -95,8 +95,8 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                EGVAR(csw,m3Tripod) = "rhsgref_ins_DSHKM";
-                EGVAR(csw,m3TripodLow) = "rhsgref_ins_DSHKM_Mini_TriPod";
+                EGVAR(csw,kordTripod) = "rhsgref_ins_DSHKM";
+                EGVAR(csw,kordTripodLow) = "rhsgref_ins_DSHKM_Mini_TriPod";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {

@@ -180,7 +180,7 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                EGVAR(csw,m3TripodLow) = "RHS_NSV_TriPod_MSV";
+                EGVAR(csw,kordTripodLow) = "RHS_NSV_TriPod_MSV";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -200,8 +200,8 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                EGVAR(csw,m3Tripod) = "rhs_KORD_high_MSV";
-                EGVAR(csw,m3TripodLow) = "rhs_KORD_MSV";
+                EGVAR(csw,kordTripod) = "rhs_KORD_high_MSV";
+                EGVAR(csw,kordTripodLow) = "rhs_KORD_MSV";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -221,11 +221,11 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                EGVAR(csw,m3TripodLow) = "RHS_AGS30_TriPod_MSV";
+                EGVAR(csw,sag30Tripod) = "RHS_AGS30_TriPod_MSV";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 350;
+            mass = 400; // https://odin.tradoc.army.mil/mediawiki/index.php/AGS-17_Russian_30mm_Automatic_Grenade_Launcher
         };
         displayName = CSTRING(ags30_gun);
         author = ECSTRING(common,ACETeam);
@@ -241,7 +241,7 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                EGVAR(csw,m3TripodLow) = "rhsgref_ins_SPG9";
+                EGVAR(csw,spg9Tripod) = "rhsgref_ins_SPG9";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -257,7 +257,7 @@ class CfgWeapons {
     class GVAR(spg9m_carry): GVAR(spg9_carry) {
         class ACE_CSW {
             class assembleTo {
-                EGVAR(csw,m3TripodLow) = "rhs_SPG9M_MSV";
+                EGVAR(csw,spg9Tripod) = "rhs_SPG9M_MSV";
             };
         };
         displayName = CSTRING(spg9m_tube);
@@ -265,12 +265,10 @@ class CfgWeapons {
         
     class GVAR(metis_carry): Launcher_Base_F {
         class ACE_CSW {
-            type = "weapon";
+            type = "mount";
             deployTime = 4;
             pickupTime = 4;
-            class assembleTo {
-                EGVAR(csw,m3TripodLow) = "rhs_Metis_9k115_2_msv";
-            };
+            deploy = "rhs_Metis_9k115_2_msv";
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 300;
@@ -285,12 +283,10 @@ class CfgWeapons {
     
     class GVAR(kornet_carry): Launcher_Base_F {
         class ACE_CSW {
-            type = "weapon";
+            type = "mount";
             deployTime = 4;
             pickupTime = 4;
-            class assembleTo {
-                EGVAR(csw,m3TripodLow) = "rhs_Kornet_9M133_2_msv";
-            };
+            deploy = "rhs_Kornet_9M133_2_msv";
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 600;

@@ -66,18 +66,55 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_m3_tripod.p3d);
-        displayName = CSTRING(Tripod_displayName);
+        displayName = CSTRING(m3Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(m3CarryTripod);
         };
     };
     class GVAR(m3TripodLow): GVAR(m3Tripod) {
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_m3_tripod.p3d);
-        displayName = CSTRING(Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(m3CarryTripodLow);
+        };
+    };
+    class GVAR(kordTripod): GVAR(baseTripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ace_csw_tripod_kord.p3d);
+        displayName = CSTRING(kordTripod_displayName);
+        class ADDON {
+            disassembleTo = QGVAR(kordCarryTripod);
+        };
+    };
+    class GVAR(kordTripodLow): GVAR(kordTripod) {
+        class ADDON {
+            disassembleTo = QGVAR(kordCarryTripod);
+        };
+    };
+    class GVAR(sag30Tripod): GVAR(m3Tripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ace_csw_tripod_ags30.p3d);
+        displayName = CSTRING(sag30Tripod_displayName);
+        class ADDON {
+            disassembleTo = QGVAR(sag30CarryTripod);
+        };
+    };
+    class GVAR(m220Tripod): GVAR(baseTripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ace_csw_tripod_m220.p3d);
+        displayName = CSTRING(m220Tripod_displayName);
+        class ADDON {
+            disassembleTo = QGVAR(m220CarryTripod);
+        };
+    };
+    class GVAR(spg9Tripod): GVAR(baseTripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ace_csw_tripod_spg9.p3d);
+        displayName = CSTRING(spg9Tripod_displayName);
+        class ADDON {
+            disassembleTo = QGVAR(spg9CarryTripod);
         };
     };
     class GVAR(mortarBaseplate): GVAR(m3Tripod) {

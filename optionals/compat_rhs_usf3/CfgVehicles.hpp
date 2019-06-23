@@ -355,7 +355,7 @@ class CfgVehicles {
             proxyWeapon = QGVAR(rhs_weap_TOW_Launcher_static);
             magazineLocation = "_target selectionPosition 'tube'";
             disassembleWeapon = QGVAR(tow_carry);
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = QEGVAR(csw,m220Tripod);
             desiredAmmo = 1;
             ammoLoadTime = 8;
             ammoUnloadTime = 5;

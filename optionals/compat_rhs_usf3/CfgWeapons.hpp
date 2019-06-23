@@ -495,7 +495,7 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                EGVAR(csw,m3TripodLow) = "RHS_TOW_TriPod_WD";
+                EGVAR(csw,m220Tripod) = "RHS_TOW_TriPod_WD";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {

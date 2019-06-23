@@ -238,7 +238,7 @@ class CfgVehicles {
             proxyWeapon = QGVAR(rhs_weap_SPG9);
             magazineLocation = "_target selectionPosition 'breach'";
             disassembleWeapon = QGVAR(spg9_carry);
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = QEGVAR(csw,spg9Tripod);
             desiredAmmo = 1;
             ammoLoadTime = 5;
             ammoUnloadTime = 3;
@@ -256,7 +256,7 @@ class CfgVehicles {
             proxyWeapon = QGVAR(rhs_weap_9K133_launcher);
             magazineLocation = "_target selectionPosition 'gun'";
             disassembleWeapon = QGVAR(kornet_carry);
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = "";
             desiredAmmo = 1;
             ammoLoadTime = 7;
             ammoUnloadTime = 5;
@@ -294,7 +294,7 @@ class CfgVehicles {
             proxyWeapon = QGVAR(rhs_weap_nsvt_effects);
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(nsv_carry);
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = QEGVAR(csw,kordTripodLow);
             desiredAmmo = 50;
             ammoLoadTime = 10;
             ammoUnloadTime = 8;
@@ -306,7 +306,7 @@ class CfgVehicles {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_KORD);
             disassembleWeapon = QGVAR(kord_carry);
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = QEGVAR(csw,kordTripodLow);
         };
     };
     
@@ -315,7 +315,7 @@ class CfgVehicles {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_KORD);
             disassembleWeapon = QGVAR(kord_carry);
-            disassembleTurret = QEGVAR(csw,m3Tripod);
+            disassembleTurret = QEGVAR(csw,kordTripod);
         };
     };
     
@@ -326,7 +326,7 @@ class CfgVehicles {
             proxyWeapon = QGVAR(rhs_weap_AGS30);
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = QGVAR(ags30_carry);
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = QEGVAR(csw,sag30Tripod);
             desiredAmmo = 30;
             ammoLoadTime = 10;
             ammoUnloadTime = 8;
@@ -346,7 +346,7 @@ class CfgVehicles {
             proxyWeapon = QGVAR(rhs_weap_9K115_2_launcher);
             magazineLocation = "_target selectionPosition 'gun'";
             disassembleWeapon = QGVAR(metis_carry);
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = "";
             desiredAmmo = 1;
             ammoLoadTime = 7;
             ammoUnloadTime = 5;
