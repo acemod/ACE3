@@ -25,9 +25,9 @@ if ([_this] call EFUNC(medical_treatment,isMedic) || {vehicle _this != _this}) e
 private _medic = objNull;
 {
     if ([_x] call EFUNC(medical_treatment,isMedic) && {!([_x] call EFUNC(common,isPlayer))} && {
-                _medic = _x;
-                (unitReady _medic)
-            }) exitWith {};
+        _medic = _x;
+        (unitReady _medic)
+    }) exitWith {};
 } forEach (units _this);
 
 _this setVariable [QGVAR(assignedMedic), _medic];

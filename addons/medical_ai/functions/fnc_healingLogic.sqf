@@ -42,9 +42,9 @@ private _treatmentEvent = "#none";
 private _treatmentArgs = [];
 private _treatmentTime = 6;
 switch (true) do {
-case (GET_WOUND_BLEEDING(_target) > 0): {
+    case (GET_WOUND_BLEEDING(_target) > 0): {
         // Select first bleeding wound and bandage it
-        private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
+        private _openWounds = GET_OPEN_WOUNDS(_target);
         private _selection = "?";
         {
             _x params ["", "_index", "_amount", "_percentage"];
@@ -54,7 +54,7 @@ case (GET_WOUND_BLEEDING(_target) > 0): {
         _treatmentTime = 5;
         _treatmentArgs = [_target, _selection, "FieldDressing"];
     };
-case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}): {
+    case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}): {
         private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
         if ((count _bloodBags) >= 2) exitWith {
             _treatmentEvent = "#waitForBlood";
@@ -63,20 +63,20 @@ case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE})
         _treatmentTime = 5;
         _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "SalineIV"];
     };
-case ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6): {
+    case ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6): {
         _treatmentEvent = "#tooManyMeds";
     };
-case ((_fractures select 4) == 1): {
+    case ((_fractures select 4) == 1): {
         _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
         _treatmentTime = 6;
         _treatmentArgs = [_healer, _target, "leftleg"];
-};
-case ((_fractures select 5) == 1): {
+    };
+    case ((_fractures select 5) == 1): {
         _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
         _treatmentTime = 6;
         _treatmentArgs = [_healer, _target, "rightleg"];
-};
-case (IS_UNCONSCIOUS(_target) || {_heartRate <= 50}): {
+    };
+    case (IS_UNCONSCIOUS(_target) || {_heartRate <= 50}): {
         if (CBA_missionTime < (_target getVariable [QGVAR(nextEpinephrine), -1])) exitWith {
             _treatmentEvent = "#waitForEpinephrineToTakeEffect";
         };
@@ -88,7 +88,7 @@ case (IS_UNCONSCIOUS(_target) || {_heartRate <= 50}): {
         _treatmentTime = 2.5;
         _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "Epinephrine"];
     };
-case ((GET_PAIN_PERCEIVED(_target) > 0.25)  || {_heartRate >= 180}): {
+    case ((GET_PAIN_PERCEIVED(_target) > 0.25)  || {_heartRate >= 180}): {
         if (CBA_missionTime < (_target getVariable [QGVAR(nextMorphine), -1])) exitWith {
             _treatmentEvent = "#waitForMorphineToTakeEffect";
         };
@@ -110,7 +110,6 @@ if ((_treatmentEvent select [0,1]) != "#") then {
     if (_treatmentEvent == QEGVAR(medical_treatment,splintLocal)) then { _treatmentClassname = "Splint" };
     [_healer, _treatmentClassname, (_healer == _target)] call FUNC(playTreatmentAnim);
 };
-
 
 #ifdef DEBUG_MODE_FULL
 TRACE_4("treatment started",_treatmentTime,_target,_treatmentEvent,_treatmentArgs);
