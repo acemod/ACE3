@@ -43,7 +43,7 @@ if (_mode == BLOOD_DISABLED || {_mode == BLOOD_ONLY_PLAYERS && {!hasInterface}})
     TRACE_1("Mode does not require any setup",_mode);
 };
 
-private _listCode = if (_mode == 1) then {
+private _listCode = if (_mode == BLOOD_ONLY_PLAYERS) then {
     // ACE_player is the only possible local player
     {
         if (alive ACE_player) then {
