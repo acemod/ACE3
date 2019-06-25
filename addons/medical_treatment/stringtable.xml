@@ -44,15 +44,6 @@
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine and Atropine.</English>
             <Russian>Устанавливает расширенное использование лекарств</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRCreatesPulse_DisplayName">
-            <English>CPR Creates Pulse</English>
-            <German>HLW erzeugt einen Puls</German>
-            <Japanese>心肺蘇生による脈</Japanese>
-            <Russian>СЛР создаст пульс</Russian>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRCreatesPulse_Description">
-            <English>Controls whether performing CPR creates a pulse for the patient.</English>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
             <Czech>Místa pro vylepšení zkušeností</Czech>
@@ -1938,6 +1929,12 @@
             <Korean>심폐소생중...</Korean>
             <Chinesesimp>进行心肺复苏术中...</Chinesesimp>
             <Chinese>進行心肺復甦術中...</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_DisplayName">
+            <English>CPR Success Chance</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_Description">
+            <English>Probability that cpr will be successful in restoring heart rhythm.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
