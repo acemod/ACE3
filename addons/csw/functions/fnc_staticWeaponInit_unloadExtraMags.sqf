@@ -5,33 +5,29 @@
  *
  * Arguments:
  * 0: Weapon <OBJECT>
+ * 1: Using advanced assembly <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [weapon] call ace_csw_fnc_staticWeaponInit_unloadExtraMags
+ * [cursorObject, false] call ace_csw_fnc_staticWeaponInit_unloadExtraMags
  *
  * Public: No
  */
 
-params ["_staticWeapon"];
-TRACE_1("staticWeaponInit_unloadExtraMags",_staticWeapon);
-if (!alive _staticWeapon) exitWith {TRACE_1("dead/deleted",alive _staticWeapon);};
-
-private _assemblyMode = [false, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 2]);
-private _emptyWeapon = _staticWeapon getVariable [QGVAR(emptyWeapon), false];
-TRACE_2("",_assemblyMode,_emptyWeapon);
-
+params ["_staticWeapon", "_assemblyMode"];
+TRACE_2("staticWeaponInit_unloadExtraMags",_staticWeapon,_assemblyMode);
 if (!_assemblyMode) exitWith {};
 
+private _emptyWeapon = _staticWeapon getVariable [QGVAR(emptyWeapon), false];
 private _desiredAmmo = getNumber (configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
 if (_emptyWeapon) then {
     _desiredAmmo = 0;
     _storeExtraMagazines = false;
 };
-TRACE_2("settings",_desiredAmmo,_storeExtraMagazines);
+TRACE_3("settings",_emptyWeapon,_desiredAmmo,_storeExtraMagazines);
 
 private _magsToRemove = [];
 private _loadedMagazineInfo = [];
