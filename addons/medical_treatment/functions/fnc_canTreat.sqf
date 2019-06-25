@@ -29,8 +29,10 @@ isClass _config
 && {
     // Handle holster settings
     GVAR(holsterRequired) == 0
+    || !(vehicle _medic isEqualTo _medic) // medic is in a vehicle, so weapon is considered holstered
+    || !(vehicle _patient isEqualTo _patient) // patient is in a vehicle, ^
     || {GVAR(holsterNoReqExamine) && getText (_config >> "category") == "examine"} // if examine bypass is on
-    || currentWeapon _medic == ""
+    || currentWeapon _medic isEqualTo "" // weapon is holstered
     || {GVAR(holsterRequired) == 1 && weaponLowered _medic} // if just lowered is allowed
 } && {
     private _selections = getArray (_config >> "allowedSelections") apply {toLower _x};
