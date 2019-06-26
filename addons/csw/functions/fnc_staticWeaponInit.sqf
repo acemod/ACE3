@@ -65,7 +65,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     private _magazineLocation = getText (configFile >> "CfgVehicles" >> _typeOf >> QUOTE(ADDON) >> "magazineLocation");
     private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
-        if ((GVAR(ammoHandling) == 0) && {!([false, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 2]))}) exitWith { false };
+        if ((GVAR(ammoHandling) == 0) && {!([false, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 2]))}) exitWith { false };
         [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)
     };
     private _childenCode = {

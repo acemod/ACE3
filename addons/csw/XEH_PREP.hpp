@@ -1,5 +1,7 @@
 TRACE_1("",QUOTE(ADDON));
 
+PREP(aceRearmGetCarryMagazines);
+
 PREP(ai_handleFired);
 
 PREP(assemble_canDeployTripod);
