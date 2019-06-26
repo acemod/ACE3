@@ -1,13 +1,13 @@
 #define ENABLE_CSW_ATTRIBUTE class Attributes { \
-        class GVAR(enableCSW) { \
-            property = QGVAR(enableCSW); \
-            control = "Checkbox"; \
+        class GVAR(assemblyMode) { \
+            property = QGVAR(assemblyMode); \
+            control = QGVAR(assemblyModeControl); \
             displayName = CSTRING(eden_enableCSW); \
             tooltip = CSTRING(eden_enableCSW_tooltip); \
-            expression = QUOTE(_this setVariable[ARR_3(QQGVAR(enableCSW), _value, true)];); \
-            typeName = "BOOL"; \
+            expression = QUOTE( if (_value != 3) then {_this setVariable [ARR_3('%s',_value,true)]} ); \
+            typeName = "NUMBER"; \
             condition = "objectVehicle"; \
-            defaultValue = true; \
+            defaultValue = 3; \
         }; \
     }
 
@@ -108,6 +108,7 @@ class CfgVehicles {
     class StaticMGWeapon: StaticWeapon {};
 
     class HMG_01_base_F: StaticMGWeapon {
+        ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(HMG_Static);
@@ -142,6 +143,7 @@ class CfgVehicles {
 
     class GMG_TriPod;
     class GMG_01_base_F: GMG_TriPod {
+        ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(GMG_20mm); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
@@ -175,6 +177,7 @@ class CfgVehicles {
 
 
     class AT_01_base_F: StaticMGWeapon {
+        ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(Titan_AT_Static);
@@ -188,6 +191,7 @@ class CfgVehicles {
     };
 
     class AA_01_base_F: StaticMGWeapon {
+        ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(Titan_AA_Static); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
@@ -203,6 +207,7 @@ class CfgVehicles {
 
     class StaticMortar: StaticWeapon {};
     class Mortar_01_base_F: StaticMortar {
+        ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             magazineLocation = "";

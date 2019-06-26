@@ -120,6 +120,9 @@
         <Key ID="STR_ACE_CSW_eden_enableCSW_tooltip">
             <English>Enables Crew Served ability on this weapon</English>
         </Key>
+        <Key ID="STR_ACE_CSW_eden_enableCSW_enableAndEmpty">
+            <English>Enabled and Leave Weapon Empty</English>
+        </Key>
         <Key ID="STR_ACE_CSW_genericDescription">
             <English>Used to reload crew served weapons</English>
         </Key>

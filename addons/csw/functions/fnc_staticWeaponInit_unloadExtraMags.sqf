@@ -16,11 +16,10 @@
  * Public: No
  */
 
-params ["_staticWeapon", "_assemblyMode"];
-TRACE_2("staticWeaponInit_unloadExtraMags",_staticWeapon,_assemblyMode);
+params ["_staticWeapon", "_assemblyMode", "_emptyWeapon"];
+TRACE_3("staticWeaponInit_unloadExtraMags",_staticWeapon,_assemblyMode,_emptyWeapon);
 if (!_assemblyMode) exitWith {};
 
-private _emptyWeapon = _staticWeapon getVariable [QGVAR(emptyWeapon), false];
 private _desiredAmmo = getNumber (configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
 if (_emptyWeapon) then {
