@@ -3,6 +3,16 @@
     <Package name="Medical_Blood">
         <Key ID="STR_ACE_Medical_Blood_SubCategory">
             <English>Blood</English>
+            <French>Sang</French>
+            <Spanish>Sangre</Spanish>
+            <Italian>Sangue</Italian>
+            <Polish>Krew</Polish>
+            <Russian>Кровь</Russian>
+            <German>Blut</German>
+            <Czech>Krev</Czech>
+            <Portuguese>Sangue</Portuguese>
+            <Korean>혈흔</Korean>
+            <Japanese>血</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_DisplayName">
             <English>Enable Blood Drops</English>
