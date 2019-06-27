@@ -3,7 +3,6 @@ class CfgAmmo {
     class Default;
     class Grenade: Default {
         GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\grenades\Grenade_PullPin.wss", 1.5, 1, 10};
-        impactGroundSoft[] = {};
     };
 
     class FlareCore;
