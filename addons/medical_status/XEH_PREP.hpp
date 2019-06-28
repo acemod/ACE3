@@ -4,6 +4,7 @@ PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
+PREP(getMedicationCount);
 PREP(hasStableVitals);
 PREP(initUnit);
 PREP(isBeingCarried);

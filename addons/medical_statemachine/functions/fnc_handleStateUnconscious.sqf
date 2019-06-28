@@ -32,7 +32,13 @@ if (_painLevel > 0) then {
 if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
     if (_unit call EFUNC(medical_status,hasStableVitals)) then {
         private _lastWakeUpCheck = _unit getVariable [QEGVAR(medical,lastWakeUpCheck), 0];
-        if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
+        private _timeMod = 1;
+        if (GVAR(epiBoostsSpontaneousWakeUp) > 1) then {
+            private _epiEffectiveness = [_unit, "Epinephrine", false] call EFUNC(medical_status,getMedicationCount);
+            _timeMod = linearConversion [0, 1, _epiEffectiveness, 1, 1 / GVAR(epiBoostsSpontaneousWakeUp), true];
+            TRACE_2("epiBoost",_epiEffectiveness,_timeMod);
+        };
+        if (CBA_missionTime - _lastWakeUpCheck > _timeMod * SPONTANEOUS_WAKE_UP_INTERVAL) then {
             TRACE_2("Checking for wake up",_unit,EGVAR(medical,spontaneousWakeUpChance));
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
             if ((random 1) < EGVAR(medical,spontaneousWakeUpChance)) then {

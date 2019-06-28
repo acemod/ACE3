@@ -41,3 +41,18 @@ private _categoryArray = [LELSTRING(medical,Category), LLSTRING(subCategory)];
     {[QGVAR(cardiacArrestTime), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_settings_fnc_init;
+
+
+
+
+
+
+[
+    QGVAR(epiBoostsSpontaneousWakeUp), "SLIDER",
+    [LSTRING(epiBoostsSpontaneousWakeUpDisplayName), LSTRING(epiBoostsSpontaneousWakeUp_Description)],
+    _categoryArray,
+    [1,15,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true, // isGlobal
+    {[QGVAR(epiBoostsSpontaneousWakeUp), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_settings_fnc_init;
