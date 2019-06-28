@@ -35,7 +35,7 @@ if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
         // Handle setting being changed mid-mission and still properly check
         // already unconscious units, should handle locality changes as well
         if (isNil "_lastWakeUpCheck") exitWith {
-            _unit setVariable [QGVAR(medical,lastWakeUpCheck), CBA_missionTime];
+            _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
         };
 
         if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
