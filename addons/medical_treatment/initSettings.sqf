@@ -38,15 +38,6 @@
     true
 ] call CBA_settings_fnc_init;
 
-[
-    QGVAR(cprCreatesPulse),
-    "CHECKBOX",
-    [LSTRING(CPRCreatesPulse_DisplayName), LSTRING(CPRCreatesPulse_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    true,
-    true
-] call CBA_settings_fnc_init;
-
 // todo: should this setting differentiate between medical vehicles and facilities?
 [
     QGVAR(locationsBoostTraining),
@@ -162,6 +153,15 @@
     [LSTRING(ConsumeSurgicalKit_DisplayName), LSTRING(ConsumeSurgicalKit_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(cprSuccessChance),
+    "SLIDER",
+    [LSTRING(cprSuccessChance_DisplayName), LSTRING(cprSuccessChance_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 1, 0.4, 2],
     true
 ] call CBA_settings_fnc_init;
 

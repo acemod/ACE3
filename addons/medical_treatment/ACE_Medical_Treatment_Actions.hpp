@@ -269,7 +269,7 @@ class GVAR(actions) {
         treatmentTime = 15;
         items[] = {};
         condition = QFUNC(canCPR);
-        callbackSuccess = QFUNC(cpr);
+        callbackSuccess = QFUNC(cprSuccess);
         callbackFailure = QFUNC(cprFailure);
         callbackProgress = QFUNC(cprProgress);
         callbackStart = QFUNC(cprStart);

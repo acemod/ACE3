@@ -22,4 +22,5 @@ if (_woundBleeding == 0) exitWith {0};
 
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
 
-(_woundBleeding * _cardiacOutput * EGVAR(medical,bleedingCoefficient))
+// even if heart stops blood will still flow slowly (gravity)
+(_woundBleeding * (_cardiacOutput max 0.05) * EGVAR(medical,bleedingCoefficient))

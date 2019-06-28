@@ -2,9 +2,6 @@ class ACE_Settings {
     class EGVAR(medical,allowLitterCreation) {
         movedToSqf = 1;
     };
-    class EGVAR(medical,CPRcreatesPulse) {
-        movedToSqf = 1;
-    };
     class EGVAR(medical,litterCleanUpDelay) {
         movedToSqf = 1;
     };
