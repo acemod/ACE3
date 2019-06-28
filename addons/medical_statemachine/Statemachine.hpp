@@ -47,7 +47,7 @@ class ACE_Medical_StateMachine {
         onStateEntered = QUOTE([ARR_2(_this,(true))] call EFUNC(medical_status,setUnconscious));
         class DeathAI {
             targetState = "Dead";
-            condition = QUOTE(!isPlayer _this && {GVAR(unconsciousConditionAI)});
+            condition = QUOTE(!GVAR(AIUnconsciousness) && {!isPlayer _this});
         };
         class WakeUp {
             targetState = "Injured";

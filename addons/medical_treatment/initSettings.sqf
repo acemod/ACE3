@@ -53,7 +53,7 @@
     "LIST",
     [LSTRING(AllowSelfIV_DisplayName), LSTRING(AllowSelfIV_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
     true
 ] call CBA_settings_fnc_init;
 
