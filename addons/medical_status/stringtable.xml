@@ -78,7 +78,7 @@
             <Russian>Скорость внутривенного переливания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
-            <English>Controls how quickly IV Bags will have an effect.</English>
+            <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
             <German>Wie schnell der Effekt der Transfusion eintritt</German>
             <Japanese>IV による輸血速度を変更できます</Japanese>
             <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
