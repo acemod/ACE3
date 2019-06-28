@@ -65,6 +65,17 @@ class CfgMovesBasic {
         class RifleLowStandActionsRunFR: RifleLowStandActionsNoAdjust {
             getOver = "ACE_AovrPercMrunSlowWrflDf";
         };
+
+        // jump animation - WEAPON LOWERED - SPRINTING
+        class RifleStandLowEvasiveActionsF: RifleLowStandActionsNoAdjust {
+            getOver = "ACE_AovrPercMrunSlowWrflDf";
+        };
+        class RifleStandLowEvasiveActionsFR: RifleLowStandActionsNoAdjust {
+            getOver = "ACE_AovrPercMrunSlowWrflDf";
+        };
+        class RifleStandLowEvasiveActionsFL: RifleLowStandActionsNoAdjust {
+            getOver = "ACE_AovrPercMrunSlowWrflDf";
+        };
     };
 };
 
