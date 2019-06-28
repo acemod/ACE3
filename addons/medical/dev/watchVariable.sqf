@@ -19,12 +19,16 @@
     _return pushBack "";
 
     // State:
-    private _hasStableVitals = [_unit] call EFUNC(medical_status,hasStableVitals);
     private _targetState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
     if (!local _unit) then {_targetState = "NotLocal";};
     private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33AA"}; default {"555555"}};
-    private _unconcFlag = if IS_UNCONSCIOUS(_unit) then {"[<t color='#FFFFFF'>U</t>]"} else {""};
-    _return pushBack format ["<t color='#%1'>State: %2</t> [StableVitals: %3] %4", _color, _targetState, _hasStableVitals, _unconcFlag];
+    _return pushBack format ["<t color='#%1'>State: %2</t>", _color, _targetState];
+    private _hasStableVitals = ["N", "Y"] select ([_unit] call EFUNC(medical_status,hasStableVitals));
+    private _hasStableCondition = ["N", "Y"] select ([_unit] call EFUNC(medical_status,isInStableCondition));
+    private _unconcFlag = if IS_UNCONSCIOUS(_unit) then {"[<t color='#BBFFBB'>U</t>]"} else {""};
+    private _timeLeft = _unit getVariable [QEGVAR(medical_statemachine,cardiacArrestTimeLeft), -1];
+    private _cardiactArrestFlag = if IN_CRDC_ARRST(_unit) then {format ["[<t color='#BBBBFF'>CA</t> %1]", _timeLeft toFixed 1]} else {""};
+    _return pushBack format ["[StableVitals: %1] [StableCon: %2] %3 %4", _hasStableVitals, _hasStableCondition, _unconcFlag, _cardiactArrestFlag];
 
     // Blood:
     private _bloodVolume = GET_BLOOD_VOLUME(_unit);
@@ -85,7 +89,7 @@
 
     // Wounds:
     _return pushBack "------- Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,openWounds), []];
+    private _wounds = GET_OPEN_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
@@ -93,7 +97,7 @@
 
     // Bandaged Wounds:
     _return pushBack "------- Bandaged Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,bandagedWounds), []];
+    private _wounds = GET_BANDAGED_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
@@ -101,7 +105,7 @@
 
     // Stitched Wounds:
     _return pushBack "------- Stitched Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,stitchedWounds), []];
+    private _wounds = GET_STITCHED_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];

@@ -86,6 +86,7 @@ class ACE_Medical_StateMachine {
         };
     };
     class CardiacArrest {
+        onState = QFUNC(handleStateCardiacArrest);
         onStateEntered = QFUNC(enteredStateCardiacArrest);
         onStateLeaving = QFUNC(leftStateCardiacArrest);
         class DeathAI {

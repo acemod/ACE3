@@ -35,9 +35,9 @@ _patient setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _patient setVariable [QGVAR(occludedMedications), nil, true];
 
 // Wounds and Injuries
-_patient setVariable [QEGVAR(medical,openWounds), [], true];
-_patient setVariable [QEGVAR(medical,bandagedWounds), [], true];
-_patient setVariable [QEGVAR(medical,stitchedWounds), [], true];
+_patient setVariable [VAR_OPEN_WOUNDS, [], true];
+_patient setVariable [VAR_BANDAGED_WOUNDS, [], true];
+_patient setVariable [VAR_STITCHED_WOUNDS, [], true];
 _patient setVariable [QEGVAR(medical,isLimping), false, true];
 _patient setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 

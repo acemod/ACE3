@@ -25,7 +25,7 @@ private _bodyPartBleeding = [0,0,0,0,0,0];
     if (_tourniquets select _bodyPart == 0) then {
         _bodyPartBleeding set [_bodyPart, (_bodyPartBleeding select _bodyPart) + (_amountOf * _bleeeding)];
     };
-} forEach (_unit getVariable [QEGVAR(medical,openWounds), []]);
+} forEach GET_OPEN_WOUNDS(_unit);
 
 if (_bodyPartBleeding isEqualTo [0,0,0,0,0,0]) then {
     TRACE_1("updateWoundBloodLoss-none",_unit);

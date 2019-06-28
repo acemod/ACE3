@@ -10,6 +10,14 @@
     [_unit, "moan", PAIN_TO_MOAN(_painLevel)] call FUNC(playInjuredSound);
 }] call CBA_fnc_addEventHandler;
 
+[QEGVAR(medical,fracture), {
+    params ["_unit"];
+
+    if (_unit == ACE_player) then {
+        playSound SND_FRACTURE;
+    };
+}] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 
 GVAR(nextFadeIn) = 0;
