@@ -14,6 +14,7 @@
  */
 
 params ["_unit", "_active"];
+TRACE_2("setCardiacArrest",_unit,_active);
 
 // No change to make
 if (_active isEqualTo IN_CRDC_ARRST(_unit)) exitWith {};
