@@ -1038,5 +1038,11 @@
             <Polish>Czasomierz Wybuchu</Polish>
             <Russian>Таймер взрывчатки</Russian>
         </Key>
+        <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
+            <English>Is EOD</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_IsEOD_Description">
+            <English>Controls whether the unit is an explosive specialist</English>
+        </Key>
     </Package>
 </Project>
