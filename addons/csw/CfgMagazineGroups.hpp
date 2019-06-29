@@ -36,7 +36,6 @@ class GVAR(groups) {
         rhs_mag_127x108mm_50 = 1;
         rhs_mag_127x108mm_100 = 1;
         rhs_mag_127x108mm_150 = 1;
-        rhs_mag_127x108mm_300 = 1;
         CUP_150Rnd_127x108_KORD_M = 1;
         CUP_50Rnd_127x108_KORD_M = 1;
         CUP_50Rnd_TE3_LRT5_127x107_DSHKM_M = 1; // not sure why cup uses 107 for the DSHKM?
@@ -53,18 +52,14 @@ class GVAR(groups) {
     class ACE_1Rnd_82mm_Mo_HE {
         ACE_1Rnd_82mm_Mo_HE = 1;
         8Rnd_82mm_Mo_shells = 1;
-        rhs_12Rnd_m821_HE = 1;
-        rhs_mag_3vo18_10 = 1;
     };
     class ACE_1Rnd_82mm_Mo_Smoke {
         ACE_1Rnd_82mm_Mo_Smoke = 1;
         8Rnd_82mm_Mo_Smoke_white = 1;
-        rhs_mag_d832du_10 = 1;
     };
     class ACE_1Rnd_82mm_Mo_Illum {
         ACE_1Rnd_82mm_Mo_Illum = 1;
         8Rnd_82mm_Mo_Flare_white = 1;
-        rhs_mag_3vs25m_10 = 1;
     };
     class ACE_1Rnd_82mm_Mo_HE_Guided {
         ACE_1Rnd_82mm_Mo_HE_Guided = 1;
@@ -74,7 +69,7 @@ class GVAR(groups) {
         ACE_1Rnd_82mm_Mo_HE_LaserGuided = 1;
         8Rnd_82mm_Mo_LG = 1;
     };
-    
+
     // A3 Titans (Spike) - just use handheld magazines
     class Titan_AT {
         1Rnd_GAT_missiles = 1;

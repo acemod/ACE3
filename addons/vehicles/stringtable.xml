@@ -38,6 +38,7 @@
             <Italian>Limite di velocità</Italian>
             <Japanese>速度制限</Japanese>
             <Polish>Ograniczenie prędkości</Polish>
+            <Russian>Ограничение скорости</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -46,7 +47,7 @@
             <Polish>Ogranicznik prędkości</Polish>
             <Czech>Omezovač rychlosti</Czech>
             <French>Limiteur de vitesse</French>
-            <Russian>Ограничение скорости</Russian>
+            <Russian>Ограничитель скорости</Russian>
             <Hungarian>Sebességkorlátozó</Hungarian>
             <Portuguese>Limitador de Velocidade</Portuguese>
             <Italian>Limitatore di Velocità</Italian>
@@ -60,32 +61,38 @@
             <Italian>Aumenta limite di velocità</Italian>
             <Japanese>速度制限を増やす</Japanese>
             <Polish>Zwiększ ograniczenie prędkości</Polish>
+            <Russian>Увеличить ограничение скорости</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
             <English>Decrease Speed Limit</English>
             <Italian>Diminuisce limite di velocità</Italian>
             <Japanese>速度制限を減らす</Japanese>
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
+            <Russian>Уменьшить ограничение скорости</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
             <English>Disable automatic engine shut-off</English>
             <German>Motor nach Verlassen laufen lassen</German>
             <Japanese>エンジン自動停止を無効化</Japanese>
+            <Russian>Убрать автовыключение двигателя</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
             <German>Verhindere das automatische Abschalten des Motors beim Verlassen des Fahrzeugs.</German>
             <Japanese>車両から降りた時のエンジンの自動停止を防ぎます。</Japanese>
+            <Russian>Запрещает автоматическое выключение двигателя при выходе из транспорта</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>
             <German>Abspringen-Aktion verstecken</German>
             <Polish>Ukryj akcję Wyskocz</Polish>
+            <Russian>Убрать действие 'Выпрыгнуть'</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
             <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
             <German>Versteckt den Abspringen-Eintrag aus dem Aktionsmenü. Benötigt Neustart des Spiels.</German>
             <Polish>Usuwa akcję Wyskocz z menu akcji. Wymaga restartu gry.</Polish>
+            <Russian>Убирает действие 'Выпрыгнуть' из меню. (Требует перезагрузки)</Russian>
         </Key>
     </Package>
 </Project>

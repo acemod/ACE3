@@ -18,8 +18,8 @@
  * Public: No
  */
 
-params ["_target", "_className", "_maxDosage", "_incompatabileMeds"];
-TRACE_4("onMedicationUsage",_target,_className,_maxDosage,_incompatabileMeds);
+params ["_target", "_className", "_maxDosage", "_incompatibleMedication"];
+TRACE_4("onMedicationUsage",_target,_className,_maxDosage,_incompatibleMedication);
 
 private _fnc_getMedicationCount = {
     params ["_target", "_medication"];
@@ -51,7 +51,7 @@ if (_currentDose >= floor (_maxDosage + round(random(2))) && {_maxDosage >= 1}) 
     if (_inSystem> _xLimit) then {
         _overdosedMedications pushBackUnique _xMed;
     };
-} forEach _incompatabileMeds;
+} forEach _incompatibleMedication;
 
 if !(_overdosedMedications isEqualTo []) then {
     private _medicationConfig = (configFile >> "ace_medical_treatment" >> "Medication");

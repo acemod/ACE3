@@ -58,10 +58,14 @@ switch (GET_HEMORRHAGE(_target)) do {
 if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
     _entries pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
-switch ((_target getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]]) select _selectionN) do {
-    case (1): {_entries pushBack [localize LSTRING(Status_Fractured), [1, 0, 0, 1]];};
-    case (-1): {
-        if (EGVAR(medical,fractures) == 2) then { // Ignore if the split has no effect
+
+// Indicate current body part fracture status
+switch (GET_FRACTURES(_target) select _selectionN) do {
+    case 1: {
+        _entries pushBack [localize LSTRING(Status_Fractured), [1, 0, 0, 1]];
+    };
+    case -1: {
+        if (EGVAR(medical,fractures) == 2) then { // Ignore if the splint has no effect
             _entries pushBack [localize LSTRING(Status_SplintApplied), [1, 1, 1, 1]];
         };
     };

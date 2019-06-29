@@ -5,6 +5,7 @@
             <Key ID="STR_ACE_Medical_Status_subCategory">
                 <English>Status</English>
                 <Japanese>状態</Japanese>
+                <Russian>Статус</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_Status_bleedingCoefficient_DisplayName">
                 <English>Bleeding coefficient</English>
@@ -73,10 +74,12 @@
             <Key ID="STR_ACE_Medical_Status_ivFlowRate_DisplayName">
                 <English>IV Transfusion Flow Rate</English>
                 <Japanese>IV 輸血の流量</Japanese>
+                <Russian>Скорость внутривенного переливания</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_Status_ivFlowRate_Description">
                 <English>Effects how quickly IV Bags will have effect</English>
                 <Japanese>IV による輸血速度を変更できます</Japanese>
+                <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
             </Key>
         </Container>
     </Package>

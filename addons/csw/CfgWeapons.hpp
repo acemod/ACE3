@@ -16,7 +16,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 440;
         };
-        displayName = CSTRING(m3TripodFolded_displayName);
+        displayName = CSTRING(TripodFolded_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
@@ -27,88 +27,8 @@ class CfgWeapons {
         class ADDON: ADDON {
             deploy = QGVAR(m3TripodLow);
         };
-        displayName = CSTRING(m3TripodLowFolded_displayName);
+        displayName = CSTRING(TripodLowFolded_displayName);
     };
-
-    class GVAR(kordCarryTripod): Launcher_Base_F {
-        class ADDON {
-            type = "mount";
-            deployTime = 4;
-            pickupTime = 4;
-            deploy = QGVAR(kordTripod);
-        };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 350;
-        };
-        displayName = CSTRING(kordTripodFolded_displayName);
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
-        modes[] = {};
-        picture = QPATHTOF(UI\Tripod_Icon.paa);
-    };
-    
-    class GVAR(kordCarryTripodLow): GVAR(kordCarryTripod) {
-        class ADDON {
-            deploy = QGVAR(kordTripodLow);
-        };
-        displayName = CSTRING(kordTripodFoldedLow_displayName);
-    };
-    
-    class GVAR(m220CarryTripod): Launcher_Base_F {
-        class ADDON {
-            type = "mount";
-            deployTime = 10;
-            pickupTime = 6;
-            deploy = QGVAR(m220Tripod);
-        };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 210;
-        };
-        displayName = CSTRING(m220TripodFolded_displayName);
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
-        modes[] = {};
-        picture = QPATHTOF(UI\Tripod_Icon.paa);
-    };
-    
-    class GVAR(spg9CarryTripod): Launcher_Base_F {
-        class ADDON {
-            type = "mount";
-            deployTime = 5;
-            pickupTime = 3;
-            deploy = QGVAR(spg9Tripod);
-        };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 260;
-        };
-        displayName = CSTRING(spg9TripodFolded_displayName);
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
-        modes[] = {};
-        picture = QPATHTOF(UI\Tripod_Icon.paa);
-    };
-    
-    class GVAR(sag30CarryTripod): Launcher_Base_F {
-        class ADDON {
-            type = "mount";
-            deployTime = 4;
-            pickupTime = 4;
-            deploy = QGVAR(sag30Tripod);
-        };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 260;
-        };
-        displayName = CSTRING(sag30TripodFolded_displayName);
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
-        modes[] = {};
-        picture = QPATHTOF(UI\Tripod_Icon.paa);
-    };
-    
     class GVAR(carryMortarBaseplate): Launcher_Base_F {
         class ADDON {
             type = "mount";
@@ -119,14 +39,13 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 290; // M3A1 baseblate weight
         };
-        displayName = CSTRING(m224MortarBaseplate_displayName);
+        displayName = CSTRING(mortarBaseplate_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\Tripod_Icon.paa); // todo
     };
-
 
 
     // Weapons:
@@ -225,7 +144,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 620; // M252 Mortar Weight
         };
-        displayName = CSTRING(m224MortarBag_displayName);
+        displayName = CSTRING(StaticMortarBag_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);

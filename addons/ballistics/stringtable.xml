@@ -2288,6 +2288,7 @@
             <Chinese>膛線扭度</Chinese>
             <Italian>Rigatura della canna</Italian>
             <Polish>Gwintowanie lufy</Polish>
+            <Russian>Нарезы ствола</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
@@ -2297,6 +2298,7 @@
             <Chinese>槍管長度</Chinese>
             <Italian>Lunghezza della canna</Italian>
             <Polish>Długość lufy</Polish>
+            <Russian>Длина ствола</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
@@ -2306,6 +2308,7 @@
             <Chinese>彈道係數</Chinese>
             <Italian>Coefficente balistico</Italian>
             <Polish>Współczynnik balistyczny</Polish>
+            <Russian>Баллистический коэффициент</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
@@ -2315,6 +2318,7 @@
             <Chinese>彈頭重量</Chinese>
             <Italian>Massa del proiettile</Italian>
             <Polish>Masa pocisku</Polish>
+            <Russian>Масса пули</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
@@ -2324,6 +2328,7 @@
             <Chinese>槍口初速</Chinese>
             <Italian>Velocità iniziale</Italian>
             <Polish>Prędkość wylotowa</Polish>
+            <Russian>Начальная скорость</Russian>
         </Key>
     </Package>
 </Project>

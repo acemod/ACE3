@@ -60,7 +60,7 @@
     _return pushBack format ["Hitpoints: [HHed:%1] [HBod: %2]", (_unit getHitPointDamage "HitHead") toFixed 2, (_unit getHitPointDamage "HitBody") toFixed 2];
     _return pushBack format ["[HHnd:%1] [HLeg: %2] %3", (_unit getHitPointDamage "HitHands") toFixed 2, (_unit getHitPointDamage "HitLegs") toFixed 2, _limping];
 
-    private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
+    private _fractures = GET_FRACTURES(_unit);
     private _canSprint = if (isSprintAllowed _unit) then {""} else {"[<t color ='#FFCC22'>Sprint Blocked</t>]"};
     _return pushBack format ["Fractures: %1 %2", _fractures, _canSprint];
 
@@ -75,7 +75,7 @@
             _return pushBack format ["%1 [Time On: %2]", ALL_SELECTIONS select _tPartNum, (CBA_missionTime - _x) toFixed 1];
         };
         {
-            _x params ["", "_medClassname", "_medPartNum"];
+            _x params ["_medPartNum", "_medClassname"];
             if (_medPartNum == _tPartNum) then {
                 _return pushBack format [" - Occluded Med: %1", _medClassname];
             };
@@ -154,4 +154,3 @@
     // Return:
     _return joinString "<br/>"
 }, [40]] call EFUNC(common,watchVariable);
-
