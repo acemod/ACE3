@@ -1,30 +1,34 @@
 #include "script_component.hpp"
 /*
- * Author: esteldunedain
- * update gps display
- *
- * Arguments:
- * Something
- *
- * Return Value:
- * None
- *
- * Example:
- * call ACE_maptools_fnc_openMapGpsUpdate
- *
- * Public: No
- */
+* Author: esteldunedain, PabstMirror
+* update gps display, called from main map's draw
+*
+* Arguments:
+* 0: Map display <DISPLAY>
+*
+* Return Value:
+* None
+*
+* Example:
+* [findDisplay 12] call ACE_maptools_fnc_openMapGpsUpdate
+*
+* Public: No
+*/
 
-if ((!("ItemGPS" in assigneditems ACE_player)) || {isNull (uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull])}) exitWith {
-    ("RscACE_MapGps" call BIS_fnc_rscLayer) cutText ["","PLAIN"];  // Close GPS RSC
-    [(_this select 1)] call CBA_fnc_removePerFrameHandler;  // Remove frameHandler
+params ["_mapCtrl"];
+private _mapDisplay = ctrlParent _mapCtrl;
+
+if ((!GVAR(mapGpsShow)) || {!(call FUNC(canUseMapGPS))}) exitWith {
+    (_mapDisplay displayCtrl 913589) ctrlShow false;
 };
-disableSerialization;
+(_mapDisplay displayCtrl 913589) ctrlShow true;
 
-private _mapGpsDisplay = uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull];
-private _ctrl = _mapGpsDisplay displayCtrl 913590;
+if (CBA_missionTime < GVAR(mapGpsNextUpdate)) exitWith {};
+GVAR(mapGpsNextUpdate) = CBA_missionTime + 0.5;
+
+private _ctrl = _mapDisplay displayCtrl 913590;
 _ctrl ctrlSetText str (round (getDir ACE_player));  // Set Heading
-_ctrl = _mapGpsDisplay displayCtrl 913591;
+_ctrl = _mapDisplay displayCtrl 913591;
 _ctrl ctrlSetText str (round ((getPosASL ACE_player) select 2) + EGVAR(common,mapAltitude)); // Set Altitude
-_ctrl = _mapGpsDisplay displayCtrl 913592;
+_ctrl = _mapDisplay displayCtrl 913592;
 _ctrl ctrlSetText mapGridPosition ACE_player; // Set grid cords
