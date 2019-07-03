@@ -27,7 +27,7 @@ if ([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo)) exitWith {
     ["There is already a tourniquet on this body part!", 1.5] call EFUNC(common,displayTextStructured); // todo: localize
 };
 
-[_patient, _usedItem] call FUNC(addToTraigeCard);
+[_patient, _usedItem] call FUNC(addToTriageCard);
 [_patient, "activity", LSTRING(Activity_appliedTourniquet), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
 [QGVAR(tourniquetLocal), [_patient, _bodyPart], _patient] call CBA_fnc_targetEvent;
