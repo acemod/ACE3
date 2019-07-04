@@ -17,9 +17,7 @@ class cfgMagazines {
     class RHS_mag_VOG30_30: VehicleMagazine {
         ace_isbelt = 1;
     };
-    class RHS_mag_GPD30_30: VehicleMagazine {
-        ace_isbelt = 1;
-    };
+    class RHS_mag_GPD30_30: RHS_mag_VOG30_30 {};
 
     // RHS magazines for crew handled ammo
     class rhs_mag_9M131M;

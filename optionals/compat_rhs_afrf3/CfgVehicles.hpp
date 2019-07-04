@@ -267,7 +267,7 @@ class CfgVehicles {
     class rhs_assault_umbts_engineer: rhs_assault_umbts {
         EGVAR(logistics_wirecutter,hasWirecutter) = 1;
     };
-    
+
     class StaticMortar: StaticWeapon {};
     class rhs_2b14_82mm_Base: StaticMortar {
         class ACE_Actions: ACE_Actions {
@@ -287,7 +287,7 @@ class CfgVehicles {
             ammoUnloadTime = 3;
         };
     };
-    
+
     class rhs_nsv_tripod_base: StaticMGWeapon {
         class ACE_CSW {
             enabled = 1;
@@ -300,7 +300,7 @@ class CfgVehicles {
             ammoUnloadTime = 8;
         };
     };
-    
+
     class RHS_KORD_Base: rhs_nsv_tripod_base {
         class ACE_CSW: ACE_CSW {
             enabled = 1;
@@ -309,8 +309,8 @@ class CfgVehicles {
             disassembleTurret = QEGVAR(csw,kordTripodLow);
         };
     };
-    
-    class RHS_KORD_high_base: rhs_nsv_tripod_base {
+
+    class RHS_KORD_high_base: RHS_KORD_Base {
         class ACE_CSW: ACE_CSW {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_KORD);
@@ -318,7 +318,7 @@ class CfgVehicles {
             disassembleTurret = QEGVAR(csw,kordTripod);
         };
     };
-    
+
     class StaticGrenadeLauncher: StaticWeapon {};
     class RHS_AGS30_TriPod_base: StaticGrenadeLauncher {
         class ACE_CSW {
@@ -332,14 +332,14 @@ class CfgVehicles {
             ammoUnloadTime = 8;
         };
     };
-    
+
     class rhs_SPG9M_base: rhs_SPG9_base {
         class ACE_CSW: ACE_CSW {
             enabled = 1;
             disassembleWeapon = QGVAR(spg9m_carry);
         };
     };
-    
+
     class rhs_Metis_Base: AT_01_base_F {
         class ACE_CSW {
             enabled = 1;
