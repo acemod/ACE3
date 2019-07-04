@@ -4,9 +4,6 @@
         <Key ID="STR_ACE_CSW_displayName">
             <English>Crew Served Weapons</English>
         </Key>
-        <Key ID="STR_ACE_CSW_Tripod_displayName">
-            <English>CSW Tripod</English>
-        </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
         </Key>
@@ -126,18 +123,6 @@
         <Key ID="STR_ACE_CSW_genericDescription">
             <English>Used to reload crew served weapons</English>
         </Key>
-        <Key ID="STR_ACE_CSW_TripodFolded_displayName">
-            <English>[CSW] Deployable Tripod</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_TripodLowFolded_displayName">
-            <English>[CSW] Deployable Tripod (Low)</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
-            <English>[CSW] Mk6 Mortar Baseplate</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticMortarBag_displayName">
-            <English>[CSW] Mk6 Mortar Tube</English>
-        </Key>
         <Key ID="STR_ACE_CSW_StaticATWeapon_displayName">
             <English>[CSW] Mini-Spike Launcher (AT)</English>
         </Key>
@@ -218,6 +203,48 @@
         </Key>
         <Key ID="STR_ACE_CSW_mag_127x108">
             <English>[CSW] 12.7 x 108 mm Ammo Belt</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m3Tripod_displayName">
+            <English>M3 Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_kordTripodFolded_displayName">
+            <English>[CSW] 6P57 Deployable Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_kordTripodFoldedLow_displayName">
+            <English>[CSW] 6P57 Deployable Tripod (Low)</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
+            <English>[CSW] M220 Deployable Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_spg9TripodFolded_displayName">
+            <English>[CSW] SPG-9 Deployable Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_sag30TripodFolded_displayName">
+            <English>[CSW] SAG-30 Deployable Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_kordTripod_displayName">
+            <English>6P57 Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_sag30Tripod_displayName">
+            <English>SAG-30 Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m220Tripod_displayName">
+            <English>M220 Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_spg9Tripod_displayName">
+            <English>SPG-9 Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m3TripodFolded_displayName">
+            <English>[CSW] M3 Deployable Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m3TripodLowFolded_displayName">
+            <English>[CSW] M3 Deployable Tripod (Low)</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m224MortarBaseplate_displayName">
+            <English>[CSW] M224 Mortar Baseplate</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m224MortarBag_displayName">
+            <English>[CSW] Mk6 Mortar Tube</English>
         </Key>
     </Package>
 </Project>

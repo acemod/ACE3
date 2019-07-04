@@ -1,3 +1,4 @@
+#define CREATE_CSW_PROXY(weapon) class ##weapon; class GVAR(weapon): ##weapon { magazineReloadTime = 0.5; }
 
 class CfgWeapons {
     class NVGoggles;
@@ -231,7 +232,10 @@ class CfgWeapons {
         };
     };
 
-    class Launcher_Base_F;
+    class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
+    };
     class rhs_weap_smaw: Launcher_Base_F {
         ace_reloadlaunchers_enabled = 1;
         ace_overpressure_angle = 45;
@@ -420,4 +424,91 @@ class CfgWeapons {
     class RHS_jetpilot_usaf: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
+    
+    CREATE_CSW_PROXY(rhs_mortar_81mm);
+    CREATE_CSW_PROXY(RHS_M2);
+    CREATE_CSW_PROXY(RHS_MK19);
+    CREATE_CSW_PROXY(Rhs_weap_TOW_Launcher_static);
+    
+    class GVAR(m252_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 20;
+            pickupTime = 25;
+            class assembleTo {
+                EGVAR(csw,mortarBaseplate) = "RHS_M252_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 620; // M252 Mortar Weight
+        };
+        displayName = CSTRING(m252_tube);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\mortar_m251_CA.paa";
+    };
+
+    class GVAR(m2_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m3Tripod) = "RHS_M2StaticMG_WD";
+                EGVAR(csw,m3TripodLow) = "RHS_M2StaticMG_MiniTripod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 840;
+        };
+        displayName = CSTRING(m2_gun);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_editorPreviews\data\rhs_M2StaticMG_D.paa";
+    };
+
+    class GVAR(mk19_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m3TripodLow) = "RHS_MK19_TriPod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 770;
+        };
+        displayName = CSTRING(mk19_gun);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\mk19_stat_CA.paa";
+    };
+    
+    class GVAR(tow_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m220Tripod) = "RHS_TOW_TriPod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 500;
+        };
+        displayName = CSTRING(tow_tube);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\Ico\tow_static_CA.paa";
+    };
 };
+

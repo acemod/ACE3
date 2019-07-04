@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="compat_rhs_gref3">
+        <Key ID="STR_ACE_compat_rhs_gref3_dshk_gun">
+            <English>DSHK Gun Bag</English>
+        </Key>
+    </Package>
+</Project>
