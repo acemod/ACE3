@@ -18,4 +18,5 @@ class CfgVehicles {
     class ACE_moduleAssignMedicRoles: ACE_moduleMedicalSettings {};
     class ACE_moduleAssignMedicVehicle: ACE_moduleMedicalSettings {};
     class ACE_moduleAssignMedicalFacility: ACE_moduleMedicalSettings {};
+    class ACE_moduleMedicalMenuSettings: ACE_moduleMedicalSettings {};
 };
