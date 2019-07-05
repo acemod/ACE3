@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "script_config_macros_csw.hpp"
 
 class CfgPatches {
     class ADDON {

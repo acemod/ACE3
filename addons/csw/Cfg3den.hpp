@@ -22,7 +22,7 @@ class Cfg3DEN {
                             value = 1;
                         };
                         class EnableAndEmpty {
-                            text = CSTRING(enableCSW_enableAndEmpty);
+                            text = CSTRING(eden_enableAndEmpty);
                             value = 2;
                         };
                         class Default {

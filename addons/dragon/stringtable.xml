@@ -7,12 +7,6 @@
         <Key ID="STR_ACE_dragon_dragonName">
             <English>M47 Super-Dragon</English>
         </Key>
-        <Key ID="STR_ACE_dragon_dragonNoSight">
-            <English>M47 Super-Dragon (No Sight)</English>
-        </Key>
-        <Key ID="STR_ACE_dragon_dragonSight">
-            <English>M47 Super-Dragon (With Sight)</English>
-        </Key>
         <Key ID="STR_ACE_dragon_attachSight">
             <English>Attach Sight</English>
         </Key>

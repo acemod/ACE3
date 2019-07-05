@@ -72,12 +72,6 @@
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
         </Key>
-        <Key ID="STR_ACE_CSW_aiReloading_displayName">
-            <English>AI Reloading</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_aiReloading_description">
-            <English>AI will attempt to reload static weapons with available ammo</English>
-        </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
         </Key>
@@ -87,9 +81,6 @@
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
         </Key>
-        <Key ID="STR_ACE_CSW_Move_displayName">
-            <English>Move Tripod</English>
-        </Key>
         <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
         </Key>
@@ -98,12 +89,6 @@
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_LoadingAmmo_progressBar">
-            <English>Loading Ammo...</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_UnloadingAmmo_progressBar">
-            <English>Unloading Ammo...</English>
         </Key>
         <Key ID="STR_ACE_CSW_PickupTripod_progressBar">
             <English>Picking Up Tripod...</English>
@@ -117,35 +102,17 @@
         <Key ID="STR_ACE_CSW_eden_enableCSW_tooltip">
             <English>Enables Crew Served ability on this weapon</English>
         </Key>
-        <Key ID="STR_ACE_CSW_eden_enableCSW_enableAndEmpty">
+        <Key ID="STR_ACE_CSW_eden_enableAndEmpty">
             <English>Enabled and Leave Weapon Empty</English>
         </Key>
-        <Key ID="STR_ACE_CSW_genericDescription">
-            <English>Used to reload crew served weapons</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticATWeapon_displayName">
-            <English>[CSW] Mini-Spike Launcher (AT)</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticAAWeapon_displayName">
-            <English>[CSW] Mini-Spike Launcher (AA)</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticHMGWeapon_displayName">
-            <English>[CSW] XM312</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticAutoHMGWeapon_displayName">
-            <English>[CSW] XM312A</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticHMGTallWeapon_displayName">
-            <English>[CSW] XM312 (High)</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticGMGWeapon_displayName">
-            <English>[CSW] XM307</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticAutoGMGWeapon_displayName">
-            <English>[CSW] XM307A</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticGMGTallWeapon_displayName">
-            <English>[CSW] XM307 (High)</English>
+        <Key ID="STR_ACE_CSW_genericTripod_displayName">
+          <English>Tripod</English>
+          <French>Trépied</French>
+          <Spanish>Trípode</Spanish>
+          <Italian>Treppiede</Italian>
+          <Polish>Trójnóg</Polish>
+          <German>Dreibein</German>
+          <Turkish>Üçayak</Turkish>
         </Key>
         <Key ID="STR_ACE_CSW_StaticATBag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AT)</English>
@@ -159,29 +126,11 @@
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
         </Key>
-        <Key ID="STR_ACE_CSW_StaticHMGTallBag_displayName">
-            <English>[CSW] Static XM312 Gun (High)</English>
-        </Key>
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[CSW] Static XM307 Gun</English>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[CSW] Static XM307 Gun (Autonomous)</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_StaticGMGTallBag_displayName">
-            <English>[CSW] Static XM307 Gun (High)</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_HMGStatic_displayName">
-            <English>[CSW] HMG Static</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_GMGStatic_displayName">
-            <English>[CSW] GMG Static</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_ATStatic_displayName">
-            <English>[CSW] AT Static</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_AAStatic_displayName">
-            <English>[CSW] AA Static</English>
         </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>
@@ -201,9 +150,6 @@
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[CSW] 20mm Grenade GMG Belt</English>
         </Key>
-        <Key ID="STR_ACE_CSW_mag_127x108">
-            <English>[CSW] 12.7 x 108 mm Ammo Belt</English>
-        </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>
         </Key>
@@ -215,9 +161,6 @@
         </Key>
         <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
             <English>[CSW] M220 Deployable Tripod</English>
-        </Key>
-        <Key ID="STR_ACE_CSW_spg9TripodFolded_displayName">
-            <English>[CSW] SPG-9 Deployable Tripod</English>
         </Key>
         <Key ID="STR_ACE_CSW_sag30TripodFolded_displayName">
             <English>[CSW] SAG-30 Deployable Tripod</English>
@@ -231,20 +174,65 @@
         <Key ID="STR_ACE_CSW_m220Tripod_displayName">
             <English>M220 Tripod</English>
         </Key>
-        <Key ID="STR_ACE_CSW_spg9Tripod_displayName">
-            <English>SPG-9 Tripod</English>
-        </Key>
         <Key ID="STR_ACE_CSW_m3TripodFolded_displayName">
             <English>[CSW] M3 Deployable Tripod</English>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodLowFolded_displayName">
             <English>[CSW] M3 Deployable Tripod (Low)</English>
         </Key>
-        <Key ID="STR_ACE_CSW_m224MortarBaseplate_displayName">
-            <English>[CSW] M224 Mortar Baseplate</English>
+        <Key ID="STR_ACE_CSW_mortarBaseplateBag_displayName">
+            <English>[CSW] Mortar Baseplate</English>
         </Key>
-        <Key ID="STR_ACE_CSW_m224MortarBag_displayName">
+        <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
+            <English>Mortar Baseplate</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_mk6MortarBag_displayName">
             <English>[CSW] Mk6 Mortar Tube</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m252_tube">
+            <English>[CSW] M252 Tube Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_m2_gun">
+            <English>[CSW] M2 Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_mk19_gun">
+            <English>[CSW] MK19 Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_tow_tube">
+            <English>[CSW] BGM-71 TOW Launcher Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_dshk_gun">
+            <English>[CSW] DSHK Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_2b14_tube">
+            <English>[CSW] 2B14 Tube Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_nsv_gun">
+            <English>[CSW] NSV Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_kord_gun">
+            <English>[CSW] KORD Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_ags30_gun">
+            <English>[CSW] AGS-30 Gun Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_metis_tube">
+            <English>[CSW] 9k115 Metis Launcher Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_kornet_launcher">
+            <English>[CSW] 9m113 Kornet Launcher</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_spg9_Tripod">
+            <English>SPG-9 Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_spg9_TripodFolded">
+            <English>[CSW] SPG-9 Deployable Tripod</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_spg9_tube">
+            <English>[CSW] SPG-9 Launcher Bag</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_spg9m_tube">
+            <English>[CSW] SPG-9M Launcher Bag</English>
         </Key>
     </Package>
 </Project>
