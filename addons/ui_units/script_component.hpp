@@ -1,14 +1,14 @@
-#define COMPONENT units
+#define COMPONENT ui_units
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 
-#ifdef DEBUG_ENABLED_UNITS
+#ifdef DEBUG_ENABLED_UI_UNITS
     #define DEBUG_MODE_FULL
 #endif
-    #ifdef DEBUG_SETTINGS_UNITS
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_UNITS
+    #ifdef DEBUG_SETTINGS_UI_UNITS
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_UI_UNITS
 #endif
 
 #define SPEED_KMH 0
