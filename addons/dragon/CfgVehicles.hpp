@@ -122,11 +122,13 @@ class CfgVehicles {
                     displayName = CSTRING(attachSight);
                     condition = QUOTE(call FUNC(sightCanAttach));
                     statement = QUOTE(call FUNC(sightAttach));
+                    icon = QPATHTOF(data\m47_daysight_interaction_attach.paa);
                 };
                 class GVAR(detachSight) {
                     displayName = CSTRING(detachSight);
                     condition = QUOTE(call FUNC(sightCanDetach));
                     statement = QUOTE(call FUNC(sightDetach));
+                    icon = QPATHTOF(data\m47_daysight_interaction_detach.paa);
                 };
             };
         };

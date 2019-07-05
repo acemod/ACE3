@@ -1,14 +1,12 @@
-#define CREATE_CSW_PROXY(weapon) class ##weapon; class GVAR(weapon): ##weapon { magazineReloadTime = 0.5; }
-
 class CfgWeapons {
-    
+
     class NVGoggles;
     class rhs_1PN138: NVGoggles { // Monocular
         modelOptics = "";
         EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_4096.paa);
         EGVAR(nightvision,bluRadius) = 0.13;
     };
-    
+
     class hgun_Rook40_F;
     class rhs_weap_pya: hgun_Rook40_F {
         ACE_barrelTwist = 254.0;
@@ -145,7 +143,7 @@ class CfgWeapons {
         ace_overpressure_range = 15;
         ace_overpressure_damage = 0.5;
     };
-    
+
     CREATE_CSW_PROXY(rhs_weap_2b14);
     CREATE_CSW_PROXY(rhs_weap_nsvt_effects);
     CREATE_CSW_PROXY(rhs_weap_KORD);
@@ -153,7 +151,7 @@ class CfgWeapons {
     CREATE_CSW_PROXY(rhs_weap_SPG9);
     CREATE_CSW_PROXY(rhs_weap_9K133_launcher);
     CREATE_CSW_PROXY(rhs_weap_9K115_2_launcher);
-    
+
     class GVAR(2b14_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "weapon";
@@ -166,14 +164,14 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 670; // 2B14 Mortar Weight
         };
-        displayName = CSTRING(2b14_tube);
+        displayName = ECSTRING(CSW,2b14_tube);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\podnos_2b14_ca.paa";
     };
-    
+
     class GVAR(nsv_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "weapon";
@@ -186,14 +184,14 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 550;
         };
-        displayName = CSTRING(nsv_gun);
+        displayName = ECSTRING(CSW,nsv_gun);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\mg\bis_kord\kord_CA.paa";
     };
-    
+
     class GVAR(kord_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "weapon";
@@ -207,14 +205,14 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 550;
         };
-        displayName = CSTRING(kord_gun);
+        displayName = ECSTRING(CSW,kord_gun);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\kord6u16sp_ca.paa";
     };
-    
+
     class GVAR(ags30_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "weapon";
@@ -227,14 +225,14 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 400; // https://odin.tradoc.army.mil/mediawiki/index.php/AGS-17_Russian_30mm_Automatic_Grenade_Launcher
         };
-        displayName = CSTRING(ags30_gun);
+        displayName = ECSTRING(CSW,ags30_gun);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\ags_static_CA.paa";
     };
-    
+
     class GVAR(spg9_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "weapon";
@@ -247,7 +245,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 1000;
         };
-        displayName = CSTRING(spg9_tube);
+        displayName = ECSTRING(csw,spg9_tube);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
@@ -260,9 +258,9 @@ class CfgWeapons {
                 EGVAR(csw,spg9Tripod) = "rhs_SPG9M_MSV";
             };
         };
-        displayName = CSTRING(spg9m_tube);
+        displayName = ECSTRING(csw,spg9m_tube);
     };
-        
+
     class GVAR(metis_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "mount";
@@ -273,14 +271,14 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 300;
         };
-        displayName = CSTRING(metis_tube);
+        displayName = ECSTRING(csw,metis_tube);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\metis_at13_CA.paa";
     };
-    
+
     class GVAR(kornet_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "mount";
@@ -291,7 +289,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 600;
         };
-        displayName = CSTRING(kornet_launcher);
+        displayName = ECSTRING(csw,kornet_launcher);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);

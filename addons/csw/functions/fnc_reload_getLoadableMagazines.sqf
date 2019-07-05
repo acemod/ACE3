@@ -43,7 +43,7 @@ private _return = [];
                 if (((getNumber (_carryGroup >> _x)) == 1) && {_loadInfo = [_vehicle, _turretPath, _carryMag, _player] call FUNC(reload_canLoadMagazine); _loadInfo select 0}) exitWith {
                     _return pushBack [_carryMag, _turretPath, _loadInfo];
                 };
-            } forEach (getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines"));
+            } forEach ([_weapon] call CBA_fnc_compatibleMagazines);
         } forEach _carriedMagazines;
     } forEach (_vehicle weaponsTurret _turretPath);
 } forEach (allTurrets _vehicle);

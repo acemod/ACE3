@@ -1,5 +1,3 @@
-#define CREATE_CSW_PROXY(weapon) class ##weapon; class GVAR(weapon): ##weapon { magazineReloadTime = 0.5; }
-
 class CfgWeapons {
     class NVGoggles;
     class rhsusf_ANPVS_14: NVGoggles { // Monocular
@@ -424,12 +422,12 @@ class CfgWeapons {
     class RHS_jetpilot_usaf: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
-    
+
     CREATE_CSW_PROXY(rhs_mortar_81mm);
     CREATE_CSW_PROXY(RHS_M2);
     CREATE_CSW_PROXY(RHS_MK19);
     CREATE_CSW_PROXY(Rhs_weap_TOW_Launcher_static);
-    
+
     class GVAR(m252_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "weapon";
@@ -442,7 +440,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 620; // M252 Mortar Weight
         };
-        displayName = CSTRING(m252_tube);
+        displayName = ECSTRING(CSW,m252_tube);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
@@ -463,7 +461,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 840;
         };
-        displayName = CSTRING(m2_gun);
+        displayName = ECSTRING(CSW,m2_gun);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
@@ -483,14 +481,14 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 770;
         };
-        displayName = CSTRING(mk19_gun);
+        displayName = ECSTRING(CSW,mk19_gun);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\mk19_stat_CA.paa";
     };
-    
+
     class GVAR(tow_carry): Launcher_Base_F {
         class ACE_CSW {
             type = "weapon";
@@ -503,7 +501,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 500;
         };
-        displayName = CSTRING(tow_tube);
+        displayName = ECSTRING(CSW,tow_tube);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);

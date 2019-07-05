@@ -1,5 +1,3 @@
-#define CREATE_CSW_PROXY(weapon) class ##weapon; class GVAR(weapon): ##weapon { magazineReloadTime = 0.5; }
-
 class CfgWeapons {
     class rhs_weap_kar98k_Base_F;
     class rhs_weap_kar98k: rhs_weap_kar98k_Base_F {
@@ -82,9 +80,9 @@ class CfgWeapons {
     class rhs_weap_mg42_base: Rifle_Base_F {
         ACE_Overheating_allowSwapBarrel = 1;
     };
-    
+
     CREATE_CSW_PROXY(rhs_weap_DSHKM);
-    
+
     class Launcher;
     class Launcher_Base_F: Launcher {
         class WeaponSlotsInfo;
@@ -102,7 +100,7 @@ class CfgWeapons {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 740;
         };
-        displayName = CSTRING(dshk_gun);
+        displayName = ECSTRING(csw,dshk_gun);
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);

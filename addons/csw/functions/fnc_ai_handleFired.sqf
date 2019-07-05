@@ -75,7 +75,7 @@ if (_bestAmmoToSend == -1) exitWith {ERROR("No ammo");};
 
 // Remove the mag from the source
 if (_reloadSource isKindOf "CaManBase") then {
-    [_reloadSource, _reloadMag, _bestAmmoToSend] call ace_common_fnc_removeSpecificMagazine;
+    [_reloadSource, _reloadMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
 } else {
     [_reloadSource, _reloadMag, 1, _bestAmmoToSend] call CBA_fnc_removeMagazineCargo;
 };

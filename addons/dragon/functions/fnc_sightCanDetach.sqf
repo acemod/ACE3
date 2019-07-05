@@ -15,9 +15,8 @@
  *
  * Public: No
  */
- 
+
 params ["_target", "_unit"];
 
 (alive _target)
-// && {!(_target getVariable [QGVAR(fired), false])}
 && {_target getVariable [QGVAR(sightAttached), ((typeOf _target) == QGVAR(staticAssembled))]}

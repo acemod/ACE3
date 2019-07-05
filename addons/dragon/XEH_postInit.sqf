@@ -19,10 +19,14 @@
     GVAR(pfID) = [{
         params ["_args"];
         (_this select 0) params ["_vehicle", "_lastView"];
-        
+
         if ((!alive _vehicle) || {!alive ACE_player} || {(vehicle ACE_player) != _vehicle}) exitWith {
             TRACE_1("exiting PFEH",GVAR(pfID));
             [GVAR(pfID)] call CBA_fnc_removePerFrameHandler;
+            if ((alive _vehicle) && {!alive gunner _vehicle}) then {
+                TRACE_1("reseting rest rotate anim",_vehicle);
+                _vehicle animate ["rest_rotate", -0.35];
+            };
         };
 
         if (cameraView in ["INTERNAL", "EXTERNAL"]) then {
