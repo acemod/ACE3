@@ -32,6 +32,12 @@
 
         // Create a tripod
         private _cswTripod = createVehicle [_tripodClassname, [0, 0, 0], [], 0, "NONE"];
+        // Because the tripod can be a "full weapon" we disable any data that will allow it to be loaded
+        _cswTripod setVariable [QGVAR(assemblyMode), 2, true]; // Explicitly set enabled&unload assembly mode and broadcast
+        if (!GVAR(defaultAssemblyMode)) then {
+            TRACE_1("global disableVanillaAssembly event",_cswTripod); // handles it being assembled when setting is disabled
+            [QGVAR(disableVanillaAssembly), [_cswTripod]] call CBA_fnc_globalEvent;
+        };
 
         private _posATL = _player getRelPos [2, 0];
         _posATL set [2, ((getPosATL _player) select 2) + 0.5];

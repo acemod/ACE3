@@ -1,17 +1,3 @@
-#define ENABLE_CSW_ATTRIBUTE class Attributes { \
-        class GVAR(enableCSW) { \
-            property = QGVAR(enableCSW); \
-            control = "Checkbox"; \
-            displayName = CSTRING(eden_enableCSW); \
-            tooltip = CSTRING(eden_enableCSW_tooltip); \
-            expression = QUOTE(_this setVariable[ARR_3(QQGVAR(enableCSW), _value, true)];); \
-            typeName = "BOOL"; \
-            condition = "objectVehicle"; \
-            defaultValue = true; \
-        }; \
-    }
-
-
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -37,14 +23,14 @@ class CfgVehicles {
         accuracy = 1000;
         destrType = "DestructDefault";
 
-        ace_dragging_canDrag = 1;
-        ace_dragging_dragPosition[] = {0, 2, 0};
-        ace_dragging_canCarry = 1;
-        ace_dragging_carryPosition[] = {0, 2, 0};
+        EGVAR(dragging,canDrag) = 1;
+        EGVAR(dragging,dragPosition)[] = {0, 2, 0};
+        EGVAR(dragging,canCarry) = 1;
+        EGVAR(dragging,carryPosition)[] = {0, 2, 0};
 
         class ACE_Actions {
             class ACE_MainActions {
-                displayName = CSTRING(Tripod_displayName);
+                displayName = CSTRING(genericTripod_displayName);
                 selection = "";
                 distance = 2.5;
                 condition = "true";
@@ -66,21 +52,58 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_m3_tripod.p3d);
-        displayName = CSTRING(Tripod_displayName);
+        displayName = CSTRING(m3Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(m3CarryTripod);
         };
     };
     class GVAR(m3TripodLow): GVAR(m3Tripod) {
-        author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_m3_tripod.p3d);
-        displayName = CSTRING(Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(m3CarryTripodLow);
         };
     };
-    class GVAR(mortarBaseplate): GVAR(m3Tripod) {
+    class GVAR(kordTripod): GVAR(baseTripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ace_csw_tripod_kord.p3d);
+        displayName = CSTRING(kordTripod_displayName);
+        class ADDON {
+            disassembleTo = QGVAR(kordCarryTripod);
+        };
+    };
+    class GVAR(kordTripodLow): GVAR(kordTripod) {
+        class ADDON {
+            disassembleTo = QGVAR(kordCarryTripod);
+        };
+    };
+    class GVAR(sag30Tripod): GVAR(baseTripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ace_csw_tripod_ags30.p3d);
+        displayName = CSTRING(sag30Tripod_displayName);
+        class ADDON {
+            disassembleTo = QGVAR(sag30CarryTripod);
+        };
+    };
+    class GVAR(m220Tripod): GVAR(baseTripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ace_csw_tripod_m220.p3d);
+        displayName = CSTRING(m220Tripod_displayName);
+        class ADDON {
+            disassembleTo = QGVAR(m220CarryTripod);
+        };
+    };
+    class GVAR(spg9Tripod): GVAR(baseTripod) {
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ace_csw_tripod_spg9.p3d);
+        displayName = CSTRING(spg9_Tripod);
+        class ADDON {
+            disassembleTo = QGVAR(spg9CarryTripod);
+        };
+    };
+    class GVAR(mortarBaseplate): GVAR(baseTripod) {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_mortarBaseplate.p3d);
@@ -108,6 +131,7 @@ class CfgVehicles {
     class StaticMGWeapon: StaticWeapon {};
 
     class HMG_01_base_F: StaticMGWeapon {
+        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(HMG_Static);
@@ -142,6 +166,7 @@ class CfgVehicles {
 
     class GMG_TriPod;
     class GMG_01_base_F: GMG_TriPod {
+        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(GMG_20mm); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
@@ -175,6 +200,7 @@ class CfgVehicles {
 
 
     class AT_01_base_F: StaticMGWeapon {
+        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(Titan_AT_Static);
@@ -188,6 +214,7 @@ class CfgVehicles {
     };
 
     class AA_01_base_F: StaticMGWeapon {
+        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(Titan_AA_Static); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
@@ -203,6 +230,7 @@ class CfgVehicles {
 
     class StaticMortar: StaticWeapon {};
     class Mortar_01_base_F: StaticMortar {
+        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             magazineLocation = "";

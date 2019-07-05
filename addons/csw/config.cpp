@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "script_config_macros_csw.hpp"
 
 class CfgPatches {
     class ADDON {
@@ -14,6 +15,7 @@ class CfgPatches {
     };
 };
 
+#include "Cfg3den.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

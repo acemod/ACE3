@@ -10,22 +10,22 @@ class CfgWeapons {
     class launch_Titan_F: launch_Titan_base {
         class WeaponSlotsInfo;
     };
-    
+
     class GVAR(super): launch_Titan_F {
         model = QPATHTOF(models\ace_m47_magazine.p3d);
         picture = QPATHTOF(data\m47_dragon_item_ca.paa);
         magazines[] = {};
-        displayName = CSTRING(dragonName);
+        displayName = CSTRING(dragonNameCarry); // add [CSW] prefix to make it clearer in arsenal that this is a deployable weapon
         descriptionShort = CSTRING(dragonDescription);
         scope = 2;
-        
+
         class ACE_CSW {
             type = "mount";
             deployTime = 2;
             pickupTime = 2;
             deploy = QGVAR(staticBase);
         };
-        
+
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 253;
         };
@@ -36,14 +36,14 @@ class CfgWeapons {
         EGVAR(overpressure,angle) = 90;
         EGVAR(overpressure,range) = 30;
         EGVAR(overpressure,damage) = 0.85;
-        
+
         initSpeed = 120;
-        
+
         displayName = CSTRING(dragonName);
         descriptionShort = CSTRING(dragonDescription);
         magazines[] = { QGVAR(super) };
-    };    
-    
+    };
+
     // need a weapon in order to rotate turret
     class GVAR(dummyStatic): Default {
         cursor = "";
@@ -55,7 +55,7 @@ class CfgWeapons {
         optics = 0;
         enableAttack = 0;
     };
-    
+
     class GVAR(sight): Binocular {
         displayName = CSTRING(sightName);
         model = QPATHTOF(models\ace_m47_optic.p3d);

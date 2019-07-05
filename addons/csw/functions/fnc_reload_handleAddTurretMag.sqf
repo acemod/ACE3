@@ -52,7 +52,7 @@ if (_canAdd) then {
             TRACE_1("Removing emtpy mag",_loadedMag);
             _vehicle removeMagazinesTurret [_loadedMag, _turret];
         };
-        [_vehicle, _turret, true] call FUNC(proxyWeapon); // Check if we need to add proxy weapon now
+        [_vehicle, _turret, true, false] call FUNC(proxyWeapon); // Check if we need to add proxy weapon now
         private _newMag = [_vehicle, _turret, _carryMag] call FUNC(reload_getVehicleMagazine);
         TRACE_2("Adding new mag",_newMag,_ammoUsed);
         _vehicle addMagazineTurret [_newMag, _turret, _ammoUsed];

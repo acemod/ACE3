@@ -2,7 +2,7 @@ class CfgAmmo {
     class ammo_Penetrator_Base;
     class M_Scalpel_AT;
     class Rocket_03_AP_F;
-    
+
     class GVAR(penetrator_super): ammo_Penetrator_Base {
         caliber = 60;
         warheadName = "HEAT";
@@ -25,7 +25,7 @@ class CfgAmmo {
         airFriction = 0.5;
         fuseDistance = 75;
         whistleDist = 2;
-        
+
         hit = 100;
         indirectHit = 9;
         indirectHitRange = 1;
@@ -34,7 +34,7 @@ class CfgAmmo {
         cost = 500;
         simulationStep = 0.005;
         maxControlRange = 1500;
-        
+
         class ace_missileguidance {
             minDeflection = 0;
             maxDeflection = 0;
@@ -59,7 +59,7 @@ class CfgAmmo {
             correctionDistance = 30;
             missileLeadDistance = 0;
             offsetFromCrosshair[] = { 0, 0, 0 };
-            
+
             serviceInterval = 0.33; // how many seconds between pops
             serviceCharges = 32; // how many charges are in this missile
             serviceChargeAcceleration = 6.5;
@@ -69,7 +69,7 @@ class CfgAmmo {
             attackProfiles[] = {"DRAGON"};
         };
     };
-    
+
     class GVAR(super) : GVAR(dragonBase) {
         submunitionAmmo = QGVAR(penetrator_super);
         submunitionDirectionType = "SubmunitionModelDirection";
@@ -96,7 +96,7 @@ class CfgAmmo {
 
             correctionDistance = 30;
             missileLeadDistance = 0;
-            
+
             serviceInterval = 0.33; // how many seconds between pops
             serviceCharges = 60; // how many charges are in this missile
             serviceChargeAcceleration = 6.5;
@@ -106,7 +106,7 @@ class CfgAmmo {
             attackProfiles[] = {"DRAGON"};
         };
     };
-    
+
     class ShellBase;
     class GVAR(serviceCharge) : ShellBase {
         hit = 1;

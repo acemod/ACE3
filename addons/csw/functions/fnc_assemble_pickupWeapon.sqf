@@ -25,7 +25,8 @@
     private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "pickupTime");
     TRACE_4("",typeOf _staticWeapon,_carryWeaponClassname,_turretClassname,_pickupTime);
     if (!isClass (configFile >> "CfgWeapons" >> _carryWeaponClassname)) exitWith {ERROR_1("bad weapon classname [%1]",_carryWeaponClassname);};
-    if (!isClass (configFile >> "CfgVehicles" >> _turretClassname)) exitWith {ERROR_1("bad turret classname [%1]",_turretClassname);};
+    // Turret classname can equal nothing if the deploy bag is the "whole" weapon. e.g Kornet, Metis, other ATGMs
+    if (!(_turretClassname isEqualTo "") && {!isClass (configFile >> "CfgVehicles" >> _turretClassname)}) exitWith {ERROR_1("bad turret classname [%1]",_turretClassname);};
 
     private _onFinish = {
         params ["_args"];
@@ -53,29 +54,33 @@
             };
         } forEach (magazinesAllTurrets _staticWeapon);
 
-        private _cswTripod = createVehicle [_turretClassname, [0, 0, 0], [], 0, "NONE"];
-        [_cswTripod, _staticWeapon] call (missionNamespace getVariable _onDisassembleFunc);
+        if !(_turretClassname isEqualTo "") then {
+            private _cswTripod = createVehicle [_turretClassname, [0, 0, 0], [], 0, "NONE"];
+            // Delay a frame so weapon has a chance to be deleted
+            [{
+                params ["_cswTripod", "_weaponDir", "_weaponPos"];
+                _cswTripod setDir _weaponDir;
+                _cswTripod setPosATL _weaponPos;
+                _cswTripod setVelocity [0, 0, -0.05];
+                _cswTripod setVectorUp (surfaceNormal _weaponPos);
+            }, [_cswTripod, _weaponDir, _weaponPos]] call CBA_fnc_execNextFrame;
+            [_cswTripod, _staticWeapon] call (missionNamespace getVariable _onDisassembleFunc);
+        };
 
-        LOG("delete weapon");
-        deleteVehicle _staticWeapon;
-
-        // Delay a frame so weapon has a chance to be deleted
         [{
-            params ["_player", "_cswTripod", "_weaponDir", "_weaponPos", "_carryWeaponClassname"];
-            _cswTripod setDir _weaponDir;
-            _cswTripod setPosATL _weaponPos;
-            _cswTripod setVelocity [0, 0, -0.05];
-            _cswTripod setVectorUp (surfaceNormal _weaponPos);
-
+            params ["_player", "_weaponPos", "_carryWeaponClassname"];
             if ((alive _player) && {(secondaryWeapon _player) == ""}) exitWith {
                 _player addWeapon _carryWeaponClassname;
             };
-            private _weaponRelPos = _cswTripod getRelPos RELATIVE_DIRECTION(90);
+            private _weaponRelPos = _weaponPos getPos RELATIVE_DIRECTION(90);
             private _weaponHolder = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
             _weaponHolder setDir random [0, 180, 360];
             _weaponHolder setPosATL [_weaponRelPos select 0, _weaponRelPos select 1, _weaponPos select 2];
             _weaponHolder addWeaponCargoGlobal [_carryWeaponClassname, 1];
-        }, [_player, _cswTripod, _weaponDir, _weaponPos, _carryWeaponClassname]] call CBA_fnc_execNextFrame;
+        }, [_player, _weaponPos, _carryWeaponClassname]] call CBA_fnc_execNextFrame;
+
+        LOG("delete weapon");
+        deleteVehicle _staticWeapon;
 
         LOG("end");
     };
