@@ -1,4 +1,5 @@
 class CfgVehicles {
+    // Backwards compatibility
     // Left as dumb modules so that old missions don't error about missing vehicles
     class Logic;
     class Module_F: Logic {
