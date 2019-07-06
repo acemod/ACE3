@@ -49,6 +49,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Description">
             <English>Allows AI to go unconscious instead of dying.</English>
+            <Russian>Позволяет ИИ оставаться без сознания вместо смерти.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>
@@ -58,6 +59,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_Description">
             <English>Controls how long it takes to die from cardiac arrest.</English>
+            <Russian>Контролирует, сколько времени требуется, чтобы умереть от остановки сердца.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_InCardiacArrest">
             <English>In Cardiac Arrest</English>

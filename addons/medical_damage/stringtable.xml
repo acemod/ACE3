@@ -3,15 +3,19 @@
     <Package name="Medical_Damage">
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_DisplayName">
             <English>Player Critical Damage Threshold</English>
+            <Russian>Порог критического урона игрока</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious.</English>
+            <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
+            <Russian>Порог критического урона AI</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
             <English>Sets the amount of damage an AI unit can receive before going unconscious.</English>
+            <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>

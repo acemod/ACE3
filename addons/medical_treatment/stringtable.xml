@@ -9,6 +9,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Litter">
             <English>Litter</English>
+            <Russian>Медицинский мусор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
@@ -18,6 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.</English>
+            <Russian>Включает действия «Проверить пульс», «Проверить давление» и «Проверить реакцию» вместо общего действия «Диагностика».</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -27,12 +29,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
+            <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
             <English>Wound Reopening</English>
+            <Russian>Повторное открытие ран</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
             <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
+            <Russian>Разрешает повторное открытие перевязанных ран. Требуются опция «Расширенная Перевязка».</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -61,6 +66,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
+            <Russian>Увеличивает уровень медподготовки при нахождении в медицинской технике или госпитале. Неподготовленный становится Медиком, Медик становится Доктором.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -74,15 +80,19 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
+            <Russian>Разрешить общие медикаменты</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
+            <Russian>Контролирует, можно ли разделить медикаменты между пациентом и врачом.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
+            <Russian>Сначала медикаменты пациента</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
+            <Russian>Сначала медикаменты врача</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -101,6 +111,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use Epinephrine.</English>
+            <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
             <English>Locations Epinephrine</English>
@@ -111,7 +122,7 @@
             <Italian>Ubicazione epinefrina</Italian>
             <Czech>Oblast k použití adrenalinu</Czech>
             <Portuguese>Localizações de Epinefrina</Portuguese>
-            <Russian>Место использования адреналина</Russian>
+            <Russian>Места использования Адреналина</Russian>
             <Japanese>アドレナリンをつかう場所</Japanese>
             <Korean>에피네프린 사용 장소</Korean>
             <Chinesesimp>肾上腺素使用地点</Chinesesimp>
@@ -119,10 +130,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where Epinephrine can be used.</English>
+            <Russian>Контролирует, где можно использовать Адреналин.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
-            <Russian>Использование аптечки</Russian>
+            <Russian>Использование Аптечки</Russian>
             <Polish>Ustawienie apteczek osobistych</Polish>
             <Spanish>Permitir EPA</Spanish>
             <German>Erlaube Erste-Hilfe-Set</German>
@@ -138,10 +150,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
+            <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
             <English>Locations PAK</English>
-            <Russian>Место использования аптечки</Russian>
+            <Russian>Где использовать Аптечку?</Russian>
             <Polish>Ograniczenie apteczek osobistych</Polish>
             <Spanish>Ubicaciones del EPA</Spanish>
             <German>Orte für Erste-Hilfe-Set</German>
@@ -157,48 +170,61 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
+            <Russian>Контролирует, где можно использовать Аптечку.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
             <English>Consume PAK</English>
+            <Russian>Израсходовать Аптечку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
+            <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
+            <Russian>Коеффициент быстроты применения Аптечки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
+            <Russian>Изменяет быстроту применения Аптечки. n\ Время лечения зависит от общего повреждения частей тела, умноженного на данный коэффициент (минимум 10 сек.).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
+            <Russian>Разрешить Хирургический набор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a Surgical Kit.</English>
+            <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
+            <Russian>Где использовать Хирургический набор?</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a Surgical Kit can be used.</English>
+            <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
+            <Russian>Израсходовать Хирургический набор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>Controls whether a Surgical Kit should be consumed after use.</English>
+            <Russian>Контролирует, следует ли израсходовать Хирургический набор после использования.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
-            <Russian>Конвертировать ванильные медикаменты</Russian>
+            <Russian>Преобразовать ванильные медикаменты</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
             <German>Legt fest, ob Standard Medic-Equipment in ACE-Equipment umgewandelt oder entfernt wird</German>
+            <Russian>Определяет, что делать с ванильными медикаментами: преобразовать в медикаменты ACE, удалить или проигнорировать.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
             <English>Remove Only</English>
+            <Russian>Удалять</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
             <English>Enable Litter</English>
@@ -215,20 +241,24 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
             <English>Enables the creation of litter upon treatment.</English>
+            <Russian>Позволяет создавать медицинский мусор после лечения.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
             <English>Max Litter Objects</English>
+            <Russian>Макс. кол-во мусора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
+            <Russian>Устанавливает максимальное количество создаваемых объектов мусора. Чрезмерное значение может вызвать задержку FPS.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
+            <Russian>Время жизни мусора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
+            <Russian>Управляет временем жизни объектов мусора в секундах. -1 означает Навсегда.</Russian>
         </Key>
-
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
             <English>Anyone</English>
             <Russian>Кем угодно</Russian>
@@ -247,17 +277,20 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Medics">
             <English>Medics</English>
+            <Russian>Медики</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Doctors">
             <English>Doctors</English>
+            <Russian>Доктора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicalFacilities">
             <English>Medical Facilities</English>
+            <Russian>Госпитали</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VehiclesAndFacilities">
             <English>Vehicles &amp; Facilities</English>
+            <Russian>Техника и госпитали</Russian>
         </Key>
-
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
@@ -1932,9 +1965,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_DisplayName">
             <English>CPR Success Chance</English>
+            <Russian>Шанс успешной реанимации</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_Description">
             <English>Probability that cpr will be successful in restoring heart rhythm.</English>
+            <Russian>Вероятность успешного проведения сердечно-лёгочной реанимации (СЛР).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
