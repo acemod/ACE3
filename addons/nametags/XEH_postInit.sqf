@@ -45,3 +45,36 @@ GVAR(showNamesTime) = -10;
 
 // civilians don't use military ranks
 ["CIV_F", ["","","","","","",""]] call FUNC(setFactionRankIcons);
+
+//Change ranks based on faction for all factions that have an entry in CfgFactionClasses
+{
+    private _pathArray = (str _x) splitString "\/";
+    private _faction = _pathArray select (count _pathArray - 1);
+    
+    private _private = if (isText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_private")) then {
+        getText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_private");
+    } else {"\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa"};
+    private _corporal = if (isText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_corporal")) then {
+        getText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_corporal");
+    } else {"\A3\Ui_f\data\GUI\Cfg\Ranks\corporal_gs.paa"};
+    private _sergeant = if (isText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_sergeant")) then {
+        getText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_sergeant");
+    } else {"\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"};
+    private _lieutenant = if (isText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_lieutenant")) then {
+        getText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_lieutenant");
+    } else {"\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa"};
+    private _captain = if (isText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_captain")) then {
+        getText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_captain");
+    } else {"\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa"};
+    private _major = if (isText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_major")) then {
+        getText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_major");
+    } else {"\A3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa"};
+    private _colonel = if (isText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_colonel")) then {
+        getText (configFile >> "CfgFactionClasses" >> _faction >> "ace_nametags_colonel");
+    } else {"\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa"};
+    
+    [_faction, [_private, _corporal, _sergeant, _lieutenant, _captain, _major, _colonel]] call FUNC(setFactionRankIcons);
+} forEach ("true" configClasses (configFile >> "CfgFactionClasses"));
+
+
+
