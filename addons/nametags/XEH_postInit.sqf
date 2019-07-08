@@ -75,6 +75,3 @@ GVAR(showNamesTime) = -10;
     
     [_faction, [_private, _corporal, _sergeant, _lieutenant, _captain, _major, _colonel]] call FUNC(setFactionRankIcons);
 } forEach ("true" configClasses (configFile >> "CfgFactionClasses"));
-
-
-
