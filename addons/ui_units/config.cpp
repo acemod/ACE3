@@ -29,7 +29,12 @@ class RscInGameUI {
 
 class GVAR(alt): RscText {
     style = 1;
-    colorText[] = {"(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])","(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])","(profileNamespace getVariable ['IGUI_TEXT_RGB_A',0.8])"};
+    colorText[] = {
+        "(profileNamespace getVariable ['IGUI_TEXT_RGB_R',0])",
+        "(profileNamespace getVariable ['IGUI_TEXT_RGB_G',1])",
+        "(profileNamespace getVariable ['IGUI_TEXT_RGB_B',1])",
+        "(profileNamespace getVariable ['IGUI_TEXT_RGB_A',0.8])"
+    };
     text = "9999";
     x = 6.3 * GUI_GRID_W + (profileNamespace getVariable ["IGUI_GRID_VEHICLE_X", (safezoneX + 0.5 * GUI_GRID_W)]);
     y = 2.3 * GUI_GRID_H + (profileNamespace getVariable ["IGUI_GRID_VEHICLE_Y", (safezoneY + 0.5 * GUI_GRID_H)]);
