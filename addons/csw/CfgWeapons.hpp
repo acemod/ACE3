@@ -49,7 +49,7 @@ class CfgWeapons {
     };
 
     class GVAR(kordCarryTripodLow): GVAR(kordCarryTripod) {
-        class ADDON {
+        class ADDON: ADDON {
             deploy = QGVAR(kordTripodLow);
         };
         displayName = CSTRING(kordTripodFoldedLow_displayName);

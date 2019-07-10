@@ -73,7 +73,7 @@ class CfgVehicles {
     };
     class GVAR(kordTripodLow): GVAR(kordTripod) {
         class ADDON {
-            disassembleTo = QGVAR(kordCarryTripod);
+            disassembleTo = QGVAR(kordCarryTripodLow);
         };
     };
     class GVAR(sag30Tripod): GVAR(baseTripod) {
