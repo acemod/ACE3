@@ -11,8 +11,6 @@
     }; \
 }
 
-class CBA_Extended_EventHandlers;
-
 class CfgVehicles {
     class LandVehicle;
     class Car: LandVehicle {
@@ -321,19 +319,13 @@ class CfgVehicles {
 
     class Items_base_F;
     class ACE_Explosives_Place: Items_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers;
-        };
         class ACE_Actions {
-            class ACE_MainActions {
-                class ACE_SetTrigger;
-                class ACE_PickUp;
-            };
+            class ACE_MainActions;
         };
     };
 
     class ACE_Explosives_Place_rhsusf_m112_DemoCharge: ACE_Explosives_Place {
-        displayName = "USAF Demo Charge";
+        displayName = "$STR_RHSUSF_M112_EXPLOSIVE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x1_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -343,7 +335,7 @@ class CfgVehicles {
     };
 
     class ACE_Explosives_Place_rhsusf_m112x4_DemoCharge: ACE_Explosives_Place {
-        displayName = "USAF Demo Charge (x4)";
+        displayName = "$STR_RHSUSF_M112X4_EXPLOSIVE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x4_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -353,7 +345,7 @@ class CfgVehicles {
     };
 
     class ACE_Explosives_Place_rhs_mine_M19_Mine: ACE_Explosives_Place {
-        displayName = "USAF AT Mine";
+        displayName = "$STR_RHSUSF_M19_ATMINE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m19_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -363,7 +355,7 @@ class CfgVehicles {
     };
 
     class ACE_Explosives_Place_rhsusf_mine_m14_mag_Mine: ACE_Explosives_Place {
-        displayName = "USAF AP Mine";
+        displayName = "$STR_RHSUSF_M14_APMINE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m14_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
