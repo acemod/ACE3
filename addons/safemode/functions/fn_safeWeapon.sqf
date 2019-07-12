@@ -1,25 +1,33 @@
 /*
  * Author: Brostrom.A
- * Safe the given weapon if unlocked.
+ * Safe or unsafe the given weapon based on weapon state; locked or unlocked.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  * 2: Muzzle <STRING>
+ * 3: State <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call ace_safemode_fnc_safeWeapon
+ * [ACE_player, currentWeapon ACE_player, currentMuzzle Ace_player, true] call ace_safemode_fnc_safeWeapon
  *
  * Public: yes
  */
 
-params ["_unit", "_weapon", "_muzzle"];
+params [
+    ["_unit", objNull, [objNull]], 
+    ["_weapon", objNull, [objNull]],
+    ["_muzzle", objNull, [objNull]],
+    ["_state", true, [true]]
+];
 
 private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
-if !(_weapon in _safedWeapons) then { 
+_weapon = configName (configFile >> "CfgWeapons" >> _weapon);
+
+if (((_state isEqualTo true) && ((_safedWeapons findIf {_weapon == _x}) == -1)) || ((_state isEqualTo false) && (!(_safedWeapons findIf {_weapon == _x}) == -1)))then {
     [_unit, _weapon, _muzzle] call FUNC(lockSafety);
 };
