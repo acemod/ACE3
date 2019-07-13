@@ -19,8 +19,8 @@
 
 params [
     ["_unit", objNull, [objNull]], 
-    ["_weapon", objNull, [objNull]],
-    ["_muzzle", objNull, [objNull]],
+    ["_weapon", "", [""]],
+    ["_muzzle", "", [""]],
     ["_state", true, [true]]
 ];
 
@@ -28,6 +28,6 @@ private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
 _weapon = configName (configFile >> "CfgWeapons" >> _weapon);
 
-if (((_state isEqualTo true) && ((_safedWeapons findIf {_weapon == _x}) == -1)) || ((_state isEqualTo false) && (!(_safedWeapons findIf {_weapon == _x}) == -1)))then {
+if ((_state && ((_safedWeapons findIf {_weapon == _x}) == -1)) || (!_state && (!(_safedWeapons findIf {_weapon == _x}) == -1)))then {
     [_unit, _weapon, _muzzle] call FUNC(lockSafety);
 };
