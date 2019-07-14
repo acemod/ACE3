@@ -28,6 +28,6 @@ private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
 _weapon = configName (configFile >> "CfgWeapons" >> _weapon);
 
-if ((_state && _weapon in _safedWeapons) || (!_state && _weapon in _safedWeapons)) then {
+if !(_state isEqualTo (_weapon in _safedWeapons)) then {
     [_unit, _weapon, _muzzle] call FUNC(lockSafety);
 };
