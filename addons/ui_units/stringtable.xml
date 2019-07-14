@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_ACE_UI_Units_Speed_MPH">
             <English>mph</English>
-             <German>mph</German>
+            <German>mph</German>
         </Key>
         <Key ID="STR_ACE_UI_Units_Speed_KNOT">
             <English>kn</English>
@@ -43,7 +43,7 @@
         </Key>
         <Key ID="STR_ACE_UI_Units_Speed_MS">
             <English>m/s</English>
-             <German>m/s</German>
+            <German>m/s</German>
         </Key>
 
         <Key ID="STR_ACE_UI_Units_Alt_M">
