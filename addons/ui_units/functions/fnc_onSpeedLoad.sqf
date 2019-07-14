@@ -28,5 +28,5 @@ private _settingEH = ["CBA_SettingChanged", {
     };
     _ctrl ctrlSetFade 1;
     _ctrl ctrlCommit 0;
-    _speed ctrlSetText ((speed vehicle ACE_player / GVAR(speedRatio)) toFixed 0);
+    _speed ctrlSetText ((abs (speed vehicle ACE_player / GVAR(speedRatio))) toFixed 0);
 }, 0, [_ctrl, _speed, _settingEH]] call CBA_fnc_addPerFrameHandler;

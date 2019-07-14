@@ -28,7 +28,9 @@ private _settingEH = ["CBA_SettingChanged", {
     };
     _ctrl ctrlSetFade 1;
     _ctrl ctrlCommit 0;
-    private _altValue = (((getPosATL vehicle ACE_player) select 2) / GVAR(altRatio));
+    private _vehicle = vehicle ACE_player;
+    private _rawAlt = ((getPosATL _vehicle) select 2) + (0 min (getTerrainHeightASL getPos _vehicle));
+    private _altValue = _rawAlt / GVAR(altRatio);
     if (_altValue < 10) then {
         _altValue = _altValue toFixed 1;
     } else {
