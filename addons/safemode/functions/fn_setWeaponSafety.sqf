@@ -4,29 +4,29 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Weapon <STRING>
- * 2: Muzzle <STRING>
  * 3: State <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [ACE_player, currentWeapon ACE_player, currentMuzzle Ace_player, true] call ace_safemode_fnc_safeWeapon
+ * [ACE_player, true] call ace_safemode_fnc_safeWeapon
  *
  * Public: yes
  */
 
 params [
     ["_unit", objNull, [objNull]], 
-    ["_weapon", "", [""]],
-    ["_muzzle", "", [""]],
     ["_state", true, [true]]
 ];
 
 private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
+private _weapon = currentWeapon _unit;
 _weapon = configName (configFile >> "CfgWeapons" >> _weapon);
+
+private _muzzle = currentMuzzle _unit;
+_muzzle = configName (configFile >> "CfgWeapons" >> _muzzle);
 
 if !(_state isEqualTo (_weapon in _safedWeapons)) then {
     [_unit, _weapon, _muzzle] call FUNC(lockSafety);
