@@ -128,7 +128,13 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - [ATragMX Framework]({{ site.baseurl }}/wiki/framework/atragmx.html)
 
- 
+### 3.7 Reseting the AtragMx `GunList`
+
+- Open the Eden Editor and the Extended Debug Console (Ctrl+D).
+- Execute `call ace_atragmx_fnc_clear_user_data` (LOCAL EXEC).
+- The original ACE3 `GunList` will be restored (all `Add New Gun` entries deleted).
+
+
 ## 4. Official References
 
 - [Official Manual]({{ site.ace.githubUrl }}/blob/master/extras/manual_Horus_ATrag-v385.pdf)
