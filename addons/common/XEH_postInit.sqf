@@ -121,8 +121,8 @@ if (isServer) then {
 [QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
 [QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
-["ace_loadPersonEvent", FUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
-["ace_unloadPersonEvent", FUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_loadPersonEvent", LINKFUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_unloadPersonEvent", LINKFUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];

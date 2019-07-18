@@ -15,6 +15,7 @@
  */
 
 params ["_unit", "_active"];
+TRACE_2("setUnconscious",_unit,_active);
 
 // No change to make
 if (_active isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {};

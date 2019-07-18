@@ -3153,6 +3153,22 @@
             <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
             <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_UnloadedFrom">
+            <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
+            <German>%1&lt;br/&gt;von&lt;br/&gt;%2 abgeladen</German>
+            <Spanish>Descargado/a&lt;br/&gt;%1 de&lt;br/&gt;%2</Spanish>
+            <French>Déchargé&lt;br/&gt;%1 de&lt;br/&gt;%2</French>
+            <Polish>%1&lt;br/&gt;rozładowano z&lt;br/&gt;%2</Polish>
+            <Czech>%1&lt;br/&gt;vyloženo z&lt;br/&gt;%2</Czech>
+            <Portuguese>%1&lt;br/&gt;descarregado de&lt;br/&gt;%2</Portuguese>
+            <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
+            <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
+            <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
+            <Japanese>&lt;br/&gt;%1が&lt;br/&gt;%2から降ろされました</Japanese>
+            <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에서 내려짐</Korean>
+            <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
+            <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBag">
             <English>Place body in bodybag</English>
             <Spanish>Colocar cuerpo en bolsa para cadáveres</Spanish>
