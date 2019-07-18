@@ -17,7 +17,7 @@
  */
 
 params [
-    ["_unit", objNull, [objNull]], 
+    ["_unit", objNull, [objNull]],
     ["_weapon", "", [""]],
     ["_state", true, [true]]
 ];
