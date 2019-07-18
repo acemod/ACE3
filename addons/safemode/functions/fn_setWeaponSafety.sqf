@@ -13,7 +13,7 @@
  * Example:
  * [ACE_player, true] call ace_safemode_fnc_setWeaponSafety
  *
- * Public: no
+ * Public: Yes
  */
 
 params [
