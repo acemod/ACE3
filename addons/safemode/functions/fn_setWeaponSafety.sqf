@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [ACE_player, true] call ace_safemode_fnc_setWeaponSafety
+ * [ACE_player, currentWeapon ACE_player, true] call ace_safemode_fnc_setWeaponSafety
  *
  * Public: Yes
  */
