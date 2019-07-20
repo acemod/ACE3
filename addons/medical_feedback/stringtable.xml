@@ -74,7 +74,8 @@
                 <German>Schmerzintensität</German>
             </Key>
             <Key ID="STR_ACE_Medical_feedback_PainIntensity_Description">
-                <English>Controls how intense the pain effect is</English>
+                <English>Controls intensity of the pain effect.</English>
+                <German>Steuert die Intensität des Schmerzeffekts.</German>
         </Container>
     </Package>
 </Project>
