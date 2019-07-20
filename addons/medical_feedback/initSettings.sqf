@@ -22,4 +22,4 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [0, 25, 0.6 , 2],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
