@@ -71,6 +71,7 @@
             </Key>
             <Key ID="STR_ACE_Medical_feedback_PainIntensity_DisplayName">
                 <English>Pain Intensity</English>
+                <German>Schmerzintensität</German>
             </Key>
             <Key ID="STR_ACE_Medical_feedback_PainIntensity_Description">
                 <English>Controls how intense the pain effect is</English>
