@@ -14,3 +14,12 @@
         [true] call FUNC(initEffects);
     }
 ] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(painIntensity),
+    "SLIDER",
+    [LSTRING(PainIntensity_DisplayName), LSTRING(PainIntensity_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [0, 25, 0.6 , 2],
+    true
+] call CBA_settings_fnc_init;
