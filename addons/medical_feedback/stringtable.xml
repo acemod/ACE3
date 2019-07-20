@@ -69,6 +69,11 @@
                 <Chinesesimp>启用伤者的尖叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
             </Key>
+            <Key ID="STR_ACE_Medical_feedback_PainIntensity_DisplayName">
+                <English>Pain Intensity</English>
+            </Key>
+            <Key ID="STR_ACE_Medical_feedback_PainIntensity_Description">
+                <English>Controls how intense the pain effect is</English>
         </Container>
     </Package>
 </Project>
