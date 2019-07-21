@@ -1,33 +1,26 @@
-// CBA Settings [ADDON: ace_medical_status]:
-
-private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subCategory)];
-
 [
-    QEGVAR(medical,bleedingCoefficient), "SLIDER",
-    [LSTRING(bleedingCoefficient_DisplayName), LSTRING(bleedingCoefficient_Description)],
-    _categoryArray,
-    [0,25,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QEGVAR(medical,bleedingCoefficient), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    QEGVAR(medical,bleedingCoefficient),
+    "SLIDER",
+    [LSTRING(BleedingCoefficient_DisplayName), LSTRING(BleedingCoefficient_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [0, 25, 1, 1],
+    true
 ] call CBA_settings_fnc_init;
 
 [
-    QEGVAR(medical,painCoefficient), "SLIDER",
-    [LSTRING(painCoefficient_DisplayName), LSTRING(painCoefficient_Description)],
-    _categoryArray,
-    [0,25,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QEGVAR(medical,painCoefficient), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    QEGVAR(medical,painCoefficient),
+    "SLIDER",
+    [LSTRING(PainCoefficient_DisplayName), LSTRING(PainCoefficient_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [0, 25, 1, 1],
+    true
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(ivFlowRate), "SLIDER",
-    [LSTRING(ivFlowRate_DisplayName), LSTRING(ivFlowRate_Description)],
-    _categoryArray,
-    [0,25,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QGVAR(ivFlowRate), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    QEGVAR(medical,ivFlowRate),
+    "SLIDER",
+    [LSTRING(IvFlowRate_DisplayName), LSTRING(IvFlowRate_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [0, 25, 1, 1],
+    true
 ] call CBA_settings_fnc_init;

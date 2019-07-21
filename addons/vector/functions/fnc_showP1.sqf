@@ -19,15 +19,15 @@ disableSerialization;
 private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 if (_this select 0) then {
-    (_dlgVector displayCtrl 1321) ctrlSetText QPATHTOF(rsc\vector_1.paa);
-    (_dlgVector displayCtrl 1322) ctrlSetText QPATHTOF(rsc\vector_minus.paa);
-    (_dlgVector displayCtrl 1323) ctrlSetText QPATHTOF(rsc\vector_p.paa);
-    (_dlgVector displayCtrl 1324) ctrlSetText "";
+    (_dlgVector displayCtrl IDC_DIGIT_E1) ctrlSetText QPATHTOF(rsc\vector_1.paa);
+    (_dlgVector displayCtrl IDC_DIGIT_E2) ctrlSetText QPATHTOF(rsc\vector_minus.paa);
+    (_dlgVector displayCtrl IDC_DIGIT_E3) ctrlSetText QPATHTOF(rsc\vector_p.paa);
+    (_dlgVector displayCtrl IDC_DIGIT_E4) ctrlSetText "";
 } else {
-    (_dlgVector displayCtrl 1321) ctrlSetText "";
-    (_dlgVector displayCtrl 1322) ctrlSetText "";
-    (_dlgVector displayCtrl 1323) ctrlSetText "";
-    (_dlgVector displayCtrl 1324) ctrlSetText "";
+    (_dlgVector displayCtrl IDC_DIGIT_E1) ctrlSetText "";
+    (_dlgVector displayCtrl IDC_DIGIT_E2) ctrlSetText "";
+    (_dlgVector displayCtrl IDC_DIGIT_E3) ctrlSetText "";
+    (_dlgVector displayCtrl IDC_DIGIT_E4) ctrlSetText "";
 };
 
 [GVAR(illuminate)] call FUNC(illuminate);

@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: 654wak654
- * Adds child actions to the "load patient" action for near vehicles.
+ * Returns children actions to the "Load Patient" action for nearby vehicles.
  *
  * Arguments:
  * 0: Patient <OBJECT>
  *
  * Return Value:
- * Child actions <ARRAY>
+ * Actions <ARRAY>
  *
  * Example:
- * [kevin] call ace_medical_treatment_fnc_addLoadPatientActions
+ * [cursorObject] call ace_medical_treatment_fnc_addLoadPatientActions
  *
  * Public: No
  */
@@ -19,7 +19,7 @@ params ["_target"];
 
 private _statement = {
     params ["_target", "_player", "_vehicle"];
-    [_player, _target, _vehicle] call FUNC(actionLoadUnit);
+    [_player, _target, _vehicle] call FUNC(loadUnit);
 };
 
 [_target call EFUNC(common,nearestVehiclesFreeSeat), _statement, _target] call EFUNC(interact_menu,createVehiclesActions)

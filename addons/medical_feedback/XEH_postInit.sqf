@@ -10,6 +10,14 @@
     [_unit, "moan", PAIN_TO_MOAN(_painLevel)] call FUNC(playInjuredSound);
 }] call CBA_fnc_addEventHandler;
 
+[QEGVAR(medical,fracture), {
+    params ["_unit"];
+
+    if (_unit == ACE_player) then {
+        playSound SND_FRACTURE;
+    };
+}] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 
 GVAR(nextFadeIn) = 0;
@@ -22,6 +30,11 @@ GVAR(heartBeatEffectRunning) = false;
     params ["_unit", "_unconscious"];
 
     if (_unit != ACE_player) exitWith {};
+
+    if (_unconscious && {cameraView == "GUNNER"} && {(vehicle _unit) != _unit} &&  {cameraOn == vehicle _unit}) then {
+        TRACE_2("exiting gunner view",cameraOn,cameraView);
+        ACE_player switchCamera "INTERNAL";
+    };
 
     // Toggle unconscious player's ability to talk in radio addons
     if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
@@ -56,8 +69,7 @@ GVAR(heartBeatEffectRunning) = false;
 // Update effects to match new unit's current status (this also handles respawn)
 ["unit", {
     params ["_new"];
-
-    private _status = _new getVariable ["ace_unconscious", false];
+    private _status = IS_UNCONSCIOUS(_new);
 
     if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
         _new setVariable ["tf_voiceVolume", [1, 0] select _status, true];

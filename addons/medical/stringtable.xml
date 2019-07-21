@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
-        <Key ID="STR_ACE_Medical_Category_DisplayName">
+        <Key ID="STR_ACE_Medical_Category">
             <English>ACE Medical</English>
             <Russian>ACE: медицина</Russian>
             <Polish>ACE Opcje medyczne</Polish>
@@ -17,117 +17,49 @@
             <Chinesesimp>ACE 医疗系统</Chinesesimp>
             <Chinese>ACE 醫療系統</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_level_DisplayName">
-            <English>Medical Level</English>
-            <Russian>Сложность медицины</Russian>
-            <Polish>Poziom medyczny</Polish>
-            <Spanish>Nivel médico</Spanish>
-            <German>Stufe des Sanitätssystem</German>
-            <Czech>Úroveň medického</Czech>
-            <Portuguese>Nível médico</Portuguese>
-            <French>Niveau de simulation médicale</French>
-            <Hungarian>Orvosi szint</Hungarian>
-            <Italian>Livello Medico</Italian>
-            <Japanese>医療レベル</Japanese>
-            <Korean>의료 수준</Korean>
-            <Chinesesimp>医疗等级</Chinesesimp>
-            <Chinese>醫療等級</Chinese>
+        <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
+            <English>Unconscious Wake Up Chance</English>
+            <German>Wahrscheinlichkeit aufzuwachen</German>
+            <Japanese>気絶から覚醒する可能性</Japanese>
+            <Russian>Шанс очнуться при потере сознания</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_level_Description">
-            <English>What is the medical simulation level?</English>
-            <Russian>Каков уровень сложности медицинской системы?</Russian>
-            <Polish>Jaki jest poziom symulacji medycznej?</Polish>
-            <Spanish>¿Cuál es el nivel de simulación médica?</Spanish>
-            <German>Wie hoch soll das medizinische Simulationslevel sein?</German>
-            <Czech>Jaká je úroveň lékařské simulace?</Czech>
-            <Portuguese>Qual o nível de simulação médica?</Portuguese>
-            <French>Quel niveau de simulation médicale choisissez-vous?</French>
-            <Hungarian>Milyen komplex legyen az orvosi szimuláció?</Hungarian>
-            <Italian>Qual'è il livello di simulazione medica?</Italian>
-            <Japanese>治療の再現度は?</Japanese>
-            <Korean>의료 시뮬레이션의 수준</Korean>
-            <Chinesesimp>选择需要的医疗模拟等级</Chinesesimp>
-            <Chinese>選擇需要的醫療模擬等級</Chinese>
+        <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
+            <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
+            <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht ()Überprüfung alle 15 Sekunden)</German>
+            <Japanese>安定状態にある人が覚醒する確率です。(15 秒毎に確認)</Japanese>
+            <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
-            <English>Disable medics</English>
-            <Russian>Отключить медиков</Russian>
-            <Polish>Wyłącz medyków</Polish>
-            <Spanish>Desactivar médicos</Spanish>
-            <German>Sanitäter deaktivieren</German>
-            <Czech>Zakázat zdravotníky</Czech>
-            <Portuguese>Desativar médicos</Portuguese>
-            <French>Désactiver les infirmiers</French>
-            <Hungarian>Orvosok letiltása</Hungarian>
-            <Italian>Disabilita medici</Italian>
-            <Japanese>衛生兵を無効化</Japanese>
-            <Korean>의무병 비활성화</Korean>
-            <Chinesesimp>关闭医护兵</Chinesesimp>
-            <Chinese>關閉醫護兵</Chinese>
+        <Key ID="STR_ACE_Medical_Limping_DisplayName">
+            <English>Limping</English>
+            <Russian>Хромота</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_DisplayName">
-            <English>Enable Litter</English>
-            <Russian>Включить мусор</Russian>
-            <Polish>Aktywuj odpadki</Polish>
-            <Spanish>Activar restos médicos</Spanish>
-            <German>Abfälle aktivieren</German>
-            <Czech>Povolit odpadky</Czech>
-            <Portuguese>Ativar lixo médico</Portuguese>
-            <French>Activer les détritus</French>
-            <Hungarian>Szemét engedélyezése</Hungarian>
-            <Italian>Abilita Barella</Italian>
-            <Japanese>医療廃棄物の表示を有効化</Japanese>
-            <Korean>의료폐기물 활성화</Korean>
-            <Chinesesimp>启用医疗废弃物</Chinesesimp>
-            <Chinese>啟用醫療廢棄物</Chinese>
+        <Key ID="STR_ACE_Medical_Limping_Description">
+            <English>Limp when unit has leg wounds...(todo)</English>
+            <Russian>Хромота, когда юнит имеет ранения ног...</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_Description">
-            <English>Enable litter being created upon treatment</English>
-            <Russian>Включить появление мусора после лечения</Russian>
-            <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
-            <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
-            <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
-            <Czech>Vytváří odpad zdravotnického materiálu pří léčení</Czech>
-            <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
-            <French>Activer la création de détrimus au début des traitements</French>
-            <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
-            <Italian>Abilita la creazione della barella dopo trattamento</Italian>
-            <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
-            <Korean>의료폐기물이 치료중 주변에 생성되는것을 활성화 합니다</Korean>
-            <Chinesesimp>本功能启用后，当每次医疗动作结束时，地上会产生相应的医疗废弃物</Chinesesimp>
-            <Chinese>本功能啟用後，當每次醫療動作結束時，地上會產生相應的醫療廢棄物</Chinese>
+        <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
+            <English>Limp on open wounds</English>
+            <Russian>Хромота при открытых ранах</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_DisplayName">
-            <English>Life time of litter objects</English>
-            <Russian>Время удаления мусора</Russian>
-            <Polish>Długość życia odpadków</Polish>
-            <Spanish>Tiempo de vida de los restos médicos</Spanish>
-            <German>Dauer des angezeigten Abfalls</German>
-            <Czech>Životnost pro odpadky</Czech>
-            <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
-            <French>Durée d'affichage des détritus</French>
-            <Hungarian>Szemétobjektumok élettartama</Hungarian>
-            <Italian>Tempo di vita delle barelle</Italian>
-            <Japanese>医療廃棄物の作成限界数を設定</Japanese>
-            <Korean>의료폐기물 시간제한</Korean>
-            <Chinesesimp>医疗废弃物存在时间</Chinesesimp>
-            <Chinese>醫療廢棄物存在時間</Chinese>
+        <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
+            <English>Limp on open or bandaged wounds</English>
+            <Russian>Хромота при открытых или забинтованых ранах</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_Description">
-            <English>How long should litter objects stay? In seconds. -1 is forever.</English>
-            <Russian>Как долго мусор будет оставаться на земле? В секундах. -1 означает бесконечное время.</Russian>
-            <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
-            <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
-            <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
-            <Czech>Za jak dlouho začnou odpadky mizet? V sekundách. -1 navždy.</Czech>
-            <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
-            <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
-            <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
-            <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
-            <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか? -1 は永遠です。</Japanese>
-            <Korean>얼마동안 폐기물이 존재합니까? 초 단위. -1 은 영구적.</Korean>
-            <Chinesesimp>定义医疗废弃物存在时间，以秒为单位，-1为永远存在。</Chinesesimp>
-            <Chinese>定義醫療廢棄物存在時間，以秒為單位，-1為永遠存在。</Chinese>
+        <Key ID="STR_ACE_Medical_Fractures_DisplayName">
+            <English>Fractures</English>
+            <Russian>Переломы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Fractures_Description">
+            <English>Limp fractures... (todo)</English>
+            <Russian>Хромота при переломах...</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
+            <English>Splints fully heal fractures</English>
+            <Russian>Шины полностью лечат перелом</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
+            <English>Splints heal (but cannot sprint)</English>
+            <Russian>Шины вылечивают, но не дают бегать</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -208,21 +140,6 @@
             <Korean>의료 시스템을 플레이어 및 인공지능에게 제공합니다.</Korean>
             <Chinesesimp>医疗系统将同时对玩家与AI发生作用</Chinesesimp>
             <Chinese>醫療系統將同時對玩家與AI發生作用</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
-            <English>Basic Medical Settings [ACE]</English>
-            <German>Standard Sanitätseinstellungen [ACE]</German>
-            <Polish>Podstawowe ustawienia medyczne</Polish>
-            <Spanish>Ajustes médicos básicos [ACE]</Spanish>
-            <French>Paramètres des soins basiques [ACE]</French>
-            <Italian>Impostazioni Mediche Di Base [ACE]</Italian>
-            <Czech>Základní zdravotnické nastavení [ACE]</Czech>
-            <Portuguese>Ajustes médicos básicos [ACE]</Portuguese>
-            <Russian>Настройки базовой медицины [ACE]</Russian>
-            <Japanese>ベーシック医療設定 [ACE]</Japanese>
-            <Korean>기본 의료 설정 [ACE]</Korean>
-            <Chinesesimp>基本医疗设定 [ACE]</Chinesesimp>
-            <Chinese>基本醫療設定 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -319,21 +236,6 @@
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
             <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
-            <English>Where can the Epinephrine be used? (Basic Medical)</English>
-            <German>Wo kann Epiniphrin verwendet werden? (Standard Sanitätseinstellungen)</German>
-            <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
-            <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
-            <French>Où peut être utilisé l'épinéphrine ? (Médical basique)</French>
-            <Italian>Dove si può usare l'epinefrina? (Sistema medico di base)</Italian>
-            <Czech>Kde může být použit adrenalin? (Pouze základní zdravotní systém)</Czech>
-            <Portuguese>Onde pode-se usar a Epinefrina? (Somente sistema médico básico)</Portuguese>
-            <Russian>Где может использоваться адреналин? (Базовая медицина)</Russian>
-            <Japanese>どこでもアドレナリンを使えるようにしますか? (ベーシック医療のみ)</Japanese>
-            <Korean>어디에서 에피네프린을 사용할 수 있습니까? (기본 의료)</Korean>
-            <Chinesesimp>在哪里可以使用肾上腺素? (基本医疗)</Chinesesimp>
-            <Chinese>在哪裡可以使用腎上腺素? (基本醫療)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Heal hitpoints</English>
@@ -440,27 +342,6 @@
             <Chinesesimp>设定当距离超过%1将不能使用治疗动作</Chinesesimp>
             <Chinese>設定當距離超過%1將不能使用治療動作</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_CanNotLoaded">
-            <English>This person (%1) is awake and cannot be loaded</English>
-            <German>Diese Person (%1) ist wach und kann nicht verladen werden</German>
-            <Polish>Ta osoba (%1) jest przytomna i nie może zostać załadowana</Polish>
-            <Spanish>Esta persona (%1) está despierto y no puede ser cargado</Spanish>
-            <Russian>Боец (%1) в сознании и не может быть погружен</Russian>
-            <Portuguese>Esta pessoa (%1) está acordada e não pode ser carregada</Portuguese>
-            <Czech>Tato osoba (%1) je vzhůru a nemůže být naložena</Czech>
-            <Italian>Questa persona (%1) è sveglia e non può essere caricata.</Italian>
-            <French>%1 est conscient et ne peut être embarqué.</French>
-            <Japanese>患者 (%1) は意識があり、積み込めない</Japanese>
-            <Korean>이 사람 (%1) 은(는) 의식이 있어 태우지 못합니다</Korean>
-            <Chinesesimp>此人(%1)是清醒且不能被装载</Chinesesimp>
-            <Chinese>此人(%1)是清醒且不能被裝載</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_DisplayName">
-            <English>Unconscious Wake Up Chance</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_spontaneousWakeUpChance_Description">
-            <English>Probablity that a unit with stable vitals will wake up from unconscious [Checked every 15 sec]</English>
-        </Key>
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
             <German>Deckel aufklappen</German>
@@ -470,6 +351,7 @@
             <Chinesesimp>打开盖子</Chinesesimp>
             <Korean>뚜껑 열기</Korean>
             <Polish>Otwórz pokrywę</Polish>
+            <Russian>Открыть крышку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -480,6 +362,7 @@
             <Chinesesimp>关闭盖子</Chinesesimp>
             <Korean>뚜껑 닫기</Korean>
             <Polish>Zamknij pokrywę</Polish>
+            <Russian>Закрыть крышку</Russian>
         </Key>
     </Package>
 </Project>

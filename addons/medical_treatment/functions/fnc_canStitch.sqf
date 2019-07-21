@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 /*
  * Author: Katalam
- * Prevents stitch actions from showing if the body is either fully stitched or has no open wounds.
+ * Checks if the patient can be stitched.
  *
  * Arguments:
- * 0: The medic <OBJECT>
- * 1: The patient <OBJECT>
+ * 0: Medic (not used) <OBJECT>
+ * 1: Patient <OBJECT>
  *
  * ReturnValue:
  * Can Stitch <BOOL>
@@ -18,4 +18,4 @@
 
 params ["", "_patient"];
 
-!((_patient getVariable [QEGVAR(medical,bandagedWounds), []]) isEqualTo [])
+!(GET_BANDAGED_WOUNDS(_patient) isEqualTo [])

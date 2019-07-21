@@ -59,6 +59,18 @@ if (HAS_TOURNIQUET_APPLIED_ON(_target,_selectionN)) then {
     _entries pushBack [localize LSTRING(Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
 
+// Indicate current body part fracture status
+switch (GET_FRACTURES(_target) select _selectionN) do {
+    case 1: {
+        _entries pushBack [localize LSTRING(Status_Fractured), [1, 0, 0, 1]];
+    };
+    case -1: {
+        if (EGVAR(medical,fractures) == 2) then { // Ignore if the splint has no effect
+            _entries pushBack [localize LSTRING(Status_SplintApplied), [1, 1, 1, 1]];
+        };
+    };
+};
+
 // Indicate the amount of pain the unit is in
 if ([_target] call EFUNC(common,isAwake)) then {
     private _pain = GET_PAIN_PERCEIVED(_target);
@@ -93,7 +105,9 @@ if (_totalIvVolume >= 1) then {
 private _woundEntries = [];
 
 private _fnc_getWoundDescription = {
-    private _className = EGVAR(medical_damage,woundsData) select _woundClassID select 6;
+    private _classIndex = _woundClassID / 10;
+    private _category = _woundClassID % 10;
+    private _className = EGVAR(medical_damage,woundsData) select _classIndex select 6;
     private _suffix = ["Minor", "Medium", "Large"] select _category;
     private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];
     if (_amountOf >= 1) then {
@@ -104,7 +118,7 @@ private _fnc_getWoundDescription = {
 };
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "", "", "_category"];
+    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
     if (_selectionN == _bodyPartN) then {
         if (_amountOf > 0) then {
             _woundEntries pushBack [call _fnc_getWoundDescription, [1, 1, 1, 1]];
@@ -114,21 +128,21 @@ private _fnc_getWoundDescription = {
             };
         };
     };
-} forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
+} forEach GET_OPEN_WOUNDS(_target);
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "", "", "_category"];
+    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
     if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
         _woundEntries pushBack [format ["[B] %1", call _fnc_getWoundDescription], [0.88, 0.7, 0.65, 1]];
     };
-} forEach (_target getVariable [QEGVAR(medical,bandagedWounds), []]);
+} forEach GET_BANDAGED_WOUNDS(_target);
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "", "", "_category"];
+    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
     if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
         _woundEntries pushBack [format ["[S] %1", call _fnc_getWoundDescription], [0.7, 0.7, 0.7, 1]];
     };
-} forEach (_target getVariable [QEGVAR(medical,stitchedWounds), []]);
+} forEach GET_STITCHED_WOUNDS(_target);
 
 // Handle no wound entries
 if (_woundEntries isEqualTo []) then {

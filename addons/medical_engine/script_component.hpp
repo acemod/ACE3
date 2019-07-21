@@ -1,5 +1,5 @@
 #define COMPONENT medical_engine
-#define COMPONENT_BEAUTIFIED Medical (Engine)
+#define COMPONENT_BEAUTIFIED Medical Engine
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

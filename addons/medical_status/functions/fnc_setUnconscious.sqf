@@ -24,10 +24,14 @@ _unit setVariable [VAR_UNCON, _active, true];
 // Toggle unit ragdoll state
 [_unit, _active] call EFUNC(medical_engine,setUnconsciousAnim);
 
+// Stop AI firing at unconscious units in most situations (global effect)
+[_unit, "setHidden", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
+
 if (_active) then {
     // Don't bother setting this if not used
     if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
-        _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
+        private _lastWakeUpCheck = _unit getVariable [QEGVAR(medical,lastWakeUpCheck), 0]; // could be set higher from ace_medical_fnc_setUnconscious
+        _unit setVariable [QEGVAR(medical,lastWakeUpCheck), _lastWakeUpCheck max CBA_missionTime];
     };
 
     if (_unit == ACE_player) then {

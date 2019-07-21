@@ -4,8 +4,8 @@
  * Finds the wound most effective to bandage on the given bodypart of the patient for the given bandage type.
  *
  * Arguments:
- * 0: The patient <OBJECT>
- * 1: Treatment class name <STRING>
+ * 0: Patient <OBJECT>
+ * 1: Treatment classname <STRING>
  * 2: Body part index <NUMBER>
  *
  * Return Value:
@@ -29,7 +29,7 @@ if (isClass (_config >> _bandage)) then {
 };
 
 // Iterate over open wounds to find the most effective target
-private _openWounds = _patient getVariable [QEGVAR(medical,openWounds), []];
+private _openWounds = GET_OPEN_WOUNDS(_patient);
 if (_openWounds isEqualTo []) exitWith { [EMPTY_WOUND, -1, -1] };
 
 private _wound = EMPTY_WOUND;
@@ -37,15 +37,14 @@ private _woundIndex = -1;
 private _effectivenessFound = -1;
 
 {
-    _x params ["", "_classID", "_partIndexN", "_amountOf", "_bleeding", "_damage", "_category"];
+    _x params ["_classID", "_partIndexN", "_amountOf", "_bleeding", "_damage"];
 
     // Ignore wounds on other bodyparts
     if (_partIndexN == _partIndex) then {
         private _woundEffectiveness = _effectiveness;
 
         // Select the classname from the wound classname storage
-        private _suffix = ["Minor", "Medium", "Large"] select _category;
-        private _className = format ["%1%2", EGVAR(medical_damage,woundClassNames) select _classID, _suffix];
+        private _className = EGVAR(medical_damage,woundClassNamesComplex) select _classID;
 
         // Get the effectiveness of the bandage on this wound type
         if (isClass (_config >> _className)) then {
