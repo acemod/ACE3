@@ -32,34 +32,42 @@
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
             <Russian>Хромота</Russian>
+            <Japanese>跛行</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Limp when unit has leg wounds...(todo)</English>
             <Russian>Хромота, когда юнит имеет ранения ног...</Russian>
+            <Japanese>足を負傷時に引きずって歩くようにします・・・(TODO)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on open wounds</English>
             <Russian>Хромота при открытых ранах</Russian>
+            <Japanese>創傷開放時に跛行</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on open or bandaged wounds</English>
             <Russian>Хромота при открытых или забинтованых ранах</Russian>
+            <Japanese>負傷時は引きずって歩くようにします</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
             <Russian>Переломы</Russian>
+            <Japanese>骨折</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Limp fractures... (todo)</English>
             <Russian>Хромота при переломах...</Russian>
+            <Japanese>骨折時は引きずって歩くようにします・・・ (TODO)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints fully heal fractures</English>
             <Russian>Шины полностью лечат перелом</Russian>
+            <Japanese>添え木で骨折完治</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
             <English>Splints heal (but cannot sprint)</English>
             <Russian>Шины вылечивают, но не дают бегать</Russian>
+            <Japanese>添え木で治療しますが、走れません</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -345,7 +353,7 @@
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
             <German>Deckel aufklappen</German>
-            <Japanese>フタをあける</Japanese>
+            <Japanese>フタを開ける</Japanese>
             <Italian>Apri lid</Italian>
             <Chinese>打開蓋子</Chinese>
             <Chinesesimp>打开盖子</Chinesesimp>
@@ -356,7 +364,7 @@
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
             <German>Deckel zuklappen</German>
-            <Japanese>フタをしめる</Japanese>
+            <Japanese>フタを閉める</Japanese>
             <Italian>Chiudi lid</Italian>
             <Chinese>關閉蓋子</Chinese>
             <Chinesesimp>关闭盖子</Chinesesimp>
