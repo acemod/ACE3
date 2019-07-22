@@ -90,12 +90,14 @@
             <German>Abspringen-Aktion verstecken</German>
             <Polish>Ukryj akcję Wyskocz</Polish>
             <Russian>Убрать действие 'Выпрыгнуть'</Russian>
+            <Japanese>脱出アクションを非表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
             <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
             <German>Versteckt den Abspringen-Eintrag aus dem Aktionsmenü. Benötigt Neustart des Spiels.</German>
             <Polish>Usuwa akcję Wyskocz z menu akcji. Wymaga restartu gry.</Polish>
             <Russian>Убирает действие 'Выпрыгнуть' из меню. (Требует перезагрузки)</Russian>
+            <Japanese>アクション メニューから脱出アクションを消します。ゲームの再起動が必要です。</Japanese>
         </Key>
     </Package>
 </Project>

@@ -138,7 +138,7 @@
             <Czech>Otevřít zdravotnickou nabídku</Czech>
             <Italian>Apri Menù Medico</Italian>
             <French>Ouvir le menu médical</French>
-            <Japanese>治療メニューをひらく</Japanese>
+            <Japanese>治療メニューを開く</Japanese>
             <Korean>의료 메뉴 열기</Korean>
             <Chinesesimp>开起医疗选单</Chinesesimp>
             <Chinese>開起醫療選單</Chinese>
@@ -366,7 +366,7 @@
             <Portuguese>Arrastar / Carregar</Portuguese>
             <Czech>Táhnout / Nést</Czech>
             <Italian>Trascina / Trasporta</Italian>
-            <Japanese>引きずる/運ぶ</Japanese>
+            <Japanese>引きずる / 担ぐ</Japanese>
             <Korean>끌기 / 들기</Korean>
             <Chinesesimp>拖 / 背</Chinesesimp>
             <Chinese>拖 / 背</Chinese>
@@ -809,10 +809,12 @@
         <Key ID="STR_ACE_Medical_GUI_Status_Fractured">
             <English>Fractured</English>
             <Russian>Перелом</Russian>
+            <Japanese>骨折している</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
             <Russian>Наложена шина</Russian>
+            <Japanese>添え木が当てている</Japanese>
         </Key>
         <!--
             Strings above match Blood2 but seem to differ in some languages, determine which is best to use

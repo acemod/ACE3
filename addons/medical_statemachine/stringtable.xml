@@ -49,6 +49,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Description">
             <English>Allows AI to go unconscious instead of dying.</English>
+            <Japanese>AI が即死ではなく気絶へ移行できるかどうか決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>
@@ -58,6 +59,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_Description">
             <English>Controls how long it takes to die from cardiac arrest.</English>
+            <Japanese>どのくらいの時間、心停止すると死亡するかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_InCardiacArrest">
             <English>In Cardiac Arrest</English>
