@@ -48,7 +48,7 @@ if (GETVAR(_unit,ACE_isUnconscious,false) && {GETMVAR(EGVAR(medical,moveUnitsFro
     {
         private _team = assignedTeam _x;
         [_x] joinSilent _newGroup;
-        _x assignTeam _team;
+        if (_team != "") then { _x assignTeam _team; };
     } forEach units _unit;
     deleteGroup _oldGroup;
 };
