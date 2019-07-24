@@ -37,7 +37,9 @@ uiNamespace setVariable [QGVAR(Grenades_ItemList), _grenades_ItemList];
 
 // generate list of medical items
 private _medical_ItemList = ["FirstAidKit", "Medikit"];
-
+{
+    _medical_ItemList pushBack configName _x;
+} forEach (configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x", true]);
 {
     _medical_ItemList append getArray (_x >> "items");
 } forEach ("true" configClasses (configFile >> QEGVAR(medical_treatment,Actions)));
