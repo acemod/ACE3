@@ -1,13 +1,14 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal
- * handle bleeding state (state machine)
+ * Handles periodically creating blood for a bleeding unit.
+ * Called from the medical_blood state machine.
  *
  * Arguments:
- * 0: unit <TYPE>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * is Bleeding <BOOL>
+ * None
  *
  * Example:
  * [player] call ace_medical_blood_fnc_onBleeding
@@ -17,20 +18,20 @@
 
 params ["_unit"];
 
-if (!([_unit] call FUNC(isBleeding))) exitWith {};
-if (((vehicle _unit) != _unit) && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
+// Nothing to do if unit is not bleeding
+if !(_unit call FUNC(isBleeding)) exitWith {};
+
+// Don't bleed on the ground if in a vehicle
+if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
 
 if (CBA_missionTime > (_unit getVariable [QGVAR(nextTime), -10])) then {
     private _bloodLoss = (if (GVAR(useAceMedical)) then {GET_BLOOD_LOSS(_unit) * 2.5} else {getDammage _unit * 2}) min 6;
-    TRACE_2("",_unit,_bloodLoss);
     _unit setVariable [QGVAR(nextTime), CBA_missionTime + 8 + random 2 - _bloodLoss];
 
+    TRACE_2("Creating blood drop for bleeding unit",_unit,_bloodLoss);
+
     private _position = getPosASL _unit;
-    _position = _position vectorAdd [
-        random 0.4 - 0.2,
-        random 0.4 - 0.2,
-        0
-    ];
+    _position = _position vectorAdd [random 0.4 - 0.2, random 0.4 - 0.2, 0];
     _position set [2, 0];
 
     private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss min 3);

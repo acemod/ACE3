@@ -39,7 +39,7 @@ if (GVAR(painEffectType) == 0) then {
     GVAR(ppPain) = [
         "ColorCorrections",
         13502,
-        [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+        [1, 1, 0, [1, 1, 1, 0], [1, 1, 1, 1], [0.33, 0.33, 0.33, 0], [0.59, 0.64, 0, 0, 0, 0, 4]]
     ] call _fnc_createEffect;
 } else {
     GVAR(ppPain) = [

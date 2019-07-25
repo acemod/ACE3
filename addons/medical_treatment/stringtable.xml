@@ -3,51 +3,52 @@
     <Package name="Medical_Treatment">
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Treatment">
             <English>Treatment</English>
+            <German>Behandlung</German>
             <Japanese>治療</Japanese>
             <Russian>Лечение</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Litter">
             <English>Litter</English>
+            <Japanese>廃棄物</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
+            <German>Erweiterte Diagnose</German>
             <Japanese>アドバンスド診断</Japanese>
             <Russian>Расширенная Диагностика</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.</English>
+            <Japanese>有効化すると通常の診断動作に代わり、心拍や血圧測定、反応を確認できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
+            <German>Erweiterte Bandagen</German>
             <Japanese>アドバンスド包帯</Japanese>
             <Russian>Расширенная Перевязка</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
+            <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
             <English>Wound Reopening</English>
+            <Japanese>創傷再開放</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
             <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
+            <Japanese>有効化すると治療をした創傷を再開放します。アドバンスド包帯を有効化している必要があります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
+            <German>Erweiterte Medikamente</German>
             <Japanese>アドバンスド医薬品</Japanese>
             <Russian>Расширенные Лекарства</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine and Atropine.</English>
             <Russian>Устанавливает расширенное использование лекарств</Russian>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRCreatesPulse_DisplayName">
-            <English>CPR Creates Pulse</English>
-            <German>HLW erzeugt einen Puls</German>
-            <Japanese>心肺蘇生による脈</Japanese>
-            <Russian>СЛР создаст пульс</Russian>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRCreatesPulse_Description">
-            <English>Controls whether performing CPR creates a pulse for the patient.</English>
+            <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンとアトロピンが利用可能になります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -59,33 +60,42 @@
             <Portuguese>Localização melhora treinamento</Portuguese>
             <French>Le lieu améliore l'efficacité</French>
             <Russian>Места ускоренного обучения</Russian>
-            <Japanese>衛生兵としての能力を与える場所</Japanese>
+            <Japanese>衛生能力の上昇位置</Japanese>
             <Korean>교육 증가 지역</Korean>
             <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
             <Chinese>受所在位置影響提升醫療能力</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
+            <Japanese>衛生車両か施設では衛生能力を上昇します。未訓練では衛生兵に、衛生兵では医師になります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
+            <German>Eigennutzung von Bluttransfusionen</German>
             <Russian>Внутривенное переливание на себе</Russian>
+            <Japanese>自己 IV 輸血</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
             <English>Enables the use of IV Transfusions on oneself.</English>
+            <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
+            <Japanese>自らに対して IV 輸血を可能にします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
+            <Japanese>装備共有を許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
+            <Japanese>患者と衛生兵との間で医療品の共有をするかどうかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
+            <Japanese>患者の装備を先に使用</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
+            <Japanese>衛生兵の装備を先に使用</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -104,6 +114,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use Epinephrine.</English>
+            <Japanese>アドレナリンの使用に訓練レベルを必要とさせます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
             <English>Locations Epinephrine</English>
@@ -115,13 +126,14 @@
             <Czech>Oblast k použití adrenalinu</Czech>
             <Portuguese>Localizações de Epinefrina</Portuguese>
             <Russian>Место использования адреналина</Russian>
-            <Japanese>アドレナリンをつかう場所</Japanese>
+            <Japanese>アドレナリンの使用可能場所</Japanese>
             <Korean>에피네프린 사용 장소</Korean>
             <Chinesesimp>肾上腺素使用地点</Chinesesimp>
             <Chinese>腎上腺素使用地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where Epinephrine can be used.</English>
+            <Japanese>アドレナリンが使える場所を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
@@ -141,6 +153,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
+            <Japanese>応急処置キットの使用に訓練レベルを必要とさせます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
             <English>Locations PAK</English>
@@ -153,53 +166,69 @@
             <French>Lieu d'utilisation da trousse sanitaire</French>
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
             <Italian>Locazioni Kit Pronto Soccorso</Italian>
-            <Japanese>応急処置キットを使う場所</Japanese>
+            <Japanese>応急処置キットの使用可能場所</Japanese>
             <Korean>개인응급키트 사용 장소</Korean>
             <Chinesesimp>个人急救包使用地点</Chinesesimp>
             <Chinese>個人急救包使用地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
+            <Japanese>応急処置キットが使える場所を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
             <English>Consume PAK</English>
+            <Japanese>応急処置キットの消費</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
+            <Japanese>応急処置キットの使用後に消費するかどうかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
+            <Japanese>応急処置キットの時間係数</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
+            <Japanese>応急処置キットの使用にかかる時間を変更できます。\n総治療時間は最低でも 10 秒間で、この係数と体全体に負ったダメージによって決まります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
+            <Japanese>縫合キットを許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a Surgical Kit.</English>
+            <Japanese>縫合キットの使用に訓練レベルを必要とさせます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
+            <Japanese>縫合キットの使用可能場所</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a Surgical Kit can be used.</English>
+            <Japanese>縫合キットが使える場所を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
+            <Japanese>縫合キットの消費</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>Controls whether a Surgical Kit should be consumed after use.</English>
+            <Japanese>縫合キットの使用後に消費するかどうかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
+            <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
             <Russian>Конвертировать ванильные медикаменты</Russian>
+            <Japanese>標準アイテムの変換</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
+            <German>Legt fest, ob Standard Medic-Equipment in ACE-Equipment umgewandelt oder entfernt wird</German>
+            <Japanese>ゲーム標準の医療アイテムを ACE 医療アイテムへ変換、削除、そのままにするかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
             <English>Remove Only</English>
+            <Japanese>削除</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
             <English>Enable Litter</English>
@@ -212,24 +241,28 @@
             <French>Activer les détritus</French>
             <Hungarian>Szemét engedélyezése</Hungarian>
             <Italian>Abilita Barella</Italian>
-            <Japanese>医療廃棄物の表示を有効化</Japanese>
+            <Japanese>廃棄物の有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
             <English>Enables the creation of litter upon treatment.</English>
+            <Japanese>治療後に廃棄物の生成を有効化します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
             <English>Max Litter Objects</English>
+            <Japanese>最大廃棄物数</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
+            <Japanese>生成される最大廃棄物数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
+            <Japanese>廃棄物寿命</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
+            <Japanese>廃棄物の寿命を秒で決定できます。-1 で永遠です。</Japanese>
         </Key>
-
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
             <English>Anyone</English>
             <Russian>Кем угодно</Russian>
@@ -248,17 +281,20 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Medics">
             <English>Medics</English>
+            <Japanese>衛生兵</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Doctors">
             <English>Doctors</English>
+            <Japanese>医師</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicalFacilities">
             <English>Medical Facilities</English>
+            <Japanese>医療施設</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VehiclesAndFacilities">
             <English>Vehicles &amp; Facilities</English>
+            <Japanese>車両 &amp; 施設</Japanese>
         </Key>
-
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
@@ -315,7 +351,7 @@
             <Czech>Lékařský výcvik</Czech>
             <Portuguese>Treino médico</Portuguese>
             <Russian>Медицинская подготовка</Russian>
-            <Japanese>治療の訓練</Japanese>
+            <Japanese>衛生訓練</Japanese>
             <Korean>의료 훈련</Korean>
             <Chinesesimp>医疗训练</Chinesesimp>
             <Chinese>醫療訓練</Chinese>
@@ -331,7 +367,7 @@
             <French>Est infirmier</French>
             <Hungarian>Orvos-e</Hungarian>
             <Italian>E' Medico</Italian>
-            <Japanese>衛生兵として</Japanese>
+            <Japanese>衛生兵に</Japanese>
             <Korean>의무병</Korean>
             <Chinesesimp>是医疗兵</Chinesesimp>
             <Chinese>是醫療兵</Chinese>
@@ -395,7 +431,7 @@
             <French>Véhicule médical</French>
             <Hungarian>Orvosi jármű-e</Hungarian>
             <Italian>E' Veicolo Medico</Italian>
-            <Japanese>医療車両として</Japanese>
+            <Japanese>医療車両に</Japanese>
             <Korean>의료 차량</Korean>
             <Chinesesimp>是医疗载具</Chinesesimp>
             <Chinese>是醫療載具</Chinese>
@@ -411,7 +447,7 @@
             <French>Est une installation médical</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
             <Italian>E' Struttura Medica</Italian>
-            <Japanese>医療施設として</Japanese>
+            <Japanese>医療施設に</Japanese>
             <Korean>의료시설</Korean>
             <Chinesesimp>是医疗设施</Chinesesimp>
             <Chinese>是醫療設施</Chinese>
@@ -491,7 +527,7 @@
             <Italian>Usato per coprire una ferita</Italian>
             <Portuguese>Usado para cobrir um ferimento</Portuguese>
             <Czech>Slouží k překrytí poranění</Czech>
-            <Japanese>傷口をおおう</Japanese>
+            <Japanese>傷口を覆います</Japanese>
             <Korean>상처를 덮을때 씁니다</Korean>
             <Chinesesimp>用于覆盖伤口</Chinesesimp>
             <Chinese>用於覆蓋傷口</Chinese>
@@ -659,10 +695,12 @@
         <Key ID="STR_ACE_Medical_Treatment_splint_Display">
             <English>Splint</English>
             <Russian>Шина</Russian>
+            <Japanese>添え木</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Desc_Short">
             <English>Stabilizes a fractured limb</English>
             <Russian>Стабилизирует перелом конечности</Russian>
+            <Japanese>骨折部位を安定させます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1862,10 +1900,12 @@
         <Key ID="STR_ACE_Medical_Treatment_Apply_Splint">
             <English>Apply Splint</English>
             <Russian>Наложить Шину</Russian>
+            <Japanese>添え木を当てる</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Splint">
             <English>Applying Splint...</English>
             <Russian>Накладывается Шина...</Russian>
+            <Japanese>添え木を当てています・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -1930,6 +1970,14 @@
             <Korean>심폐소생중...</Korean>
             <Chinesesimp>进行心肺复苏术中...</Chinesesimp>
             <Chinese>進行心肺復甦術中...</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_DisplayName">
+            <English>CPR Success Chance</English>
+            <Japanese>心肺蘇生の成功率</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_Description">
+            <English>Probability that cpr will be successful in restoring heart rhythm.</English>
+            <Japanese>心肺蘇生によって心拍を戻せる確率を決定できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -2077,6 +2125,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Minimal">
             <English>Minimal</English>
+            <German>Minimal</German>
             <Japanese>軽処置群</Japanese>
             <Russian>Минимально</Russian>
         </Key>
@@ -3063,7 +3112,7 @@
             <Hungarian>Cipelés</Hungarian>
             <Portuguese>Carregar</Portuguese>
             <Italian>Trasporta</Italian>
-            <Japanese>運ぶ</Japanese>
+            <Japanese>担ぐ</Japanese>
             <Korean>업다</Korean>
             <Chinesesimp>背起</Chinesesimp>
             <Chinese>背起</Chinese>

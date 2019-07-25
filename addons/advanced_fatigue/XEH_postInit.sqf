@@ -47,8 +47,8 @@ if (!hasInterface) exitWith {};
         [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
             linearConversion [0, 1, (_this getVariable [QEGVAR(medical,pain), 0]), 1, 1.1, true];
         }] call FUNC(addDutyFactor);
-        [QEGVAR(medical,bloodVolume), { // 100->1.0, 90->1.1, 80->1.2
-            linearConversion [6, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 100]), 1, 2, true];
+        [QEGVAR(medical,bloodVolume), { // 6->1.0, 5->1.167, 4->1.33
+            linearConversion [6, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 6]), 1, 2, true];
         }] call FUNC(addDutyFactor);
     };
     if (["ACE_Dragging"] call EFUNC(common,isModLoaded)) then {

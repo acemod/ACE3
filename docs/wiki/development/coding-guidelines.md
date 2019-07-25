@@ -126,7 +126,8 @@ These macros are allowed but are not enforced.
 |`GETVAR(player,MyVarName,false)` | `player getVariable ["MyVarName", false]` |
 |`GETMVAR(MyVarName,objNull)` | `missionNamespace getVariable ["MyVarName", objNull]` |
 |`GETUVAR(MyVarName,displayNull)` | `uiNamespace getVariable ["MyVarName", displayNull]` |
-|`SETVAR(player,MyVarName,127)` |  `player setVariable ["MyVarName", 127]  SETPVAR(player,MyVarName,127) player setVariable ["MyVarName", 127, true]` |
+|`SETVAR(player,MyVarName,127)` | `player setVariable ["MyVarName", 127]` |
+|`SETPVAR(player,MyVarName,127)` | `player setVariable ["MyVarName", 127, true]` |
 |`SETMVAR(MyVarName,player)` | `missionNamespace setVariable ["MyVarName", player]` |
 |`SETUVAR(MyVarName,_control)` | `uiNamespace setVariable ["MyVarName", _control]` |
 

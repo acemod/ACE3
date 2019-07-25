@@ -27,7 +27,7 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
 {
     _x params ["", "_bodyPartN", "_amountOf", "_bleeding"];
     _bodyPartBloodLoss set [_bodyPartN, (_bodyPartBloodLoss select _bodyPartN) + (_bleeding * _amountOf)];
-} forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
+} forEach GET_OPEN_WOUNDS(_target);
 
 {
     _x params ["_bodyPartIDC", ["_tourniquetIDC", -1], ["_fractureIDC", -1]];

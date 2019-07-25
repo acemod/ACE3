@@ -63,6 +63,11 @@ class CfgVehicles {
             ADD_ACE_HITPOINTS(1,1);
         };
     };
+    class B_Protagonist_VR_F: B_Soldier_base_F {
+        class HitPoints {
+            ADD_ACE_HITPOINTS(1,1);
+        };
+    };
     class O_Soldier_VR_F: O_Soldier_base_F {
         class HitPoints {
             ADD_ACE_HITPOINTS(1,1);
@@ -73,15 +78,25 @@ class CfgVehicles {
             ADD_ACE_HITPOINTS(1,1);
         };
     };
-
-    // Civilians
-    class C_man_1;
-    class C_Soldier_VR_F: C_man_1 {
+    class I_Protagonist_VR_F: I_Soldier_base_F {
         class HitPoints {
             ADD_ACE_HITPOINTS(1,1);
         };
     };
     class O_Protagonist_VR_F: O_Soldier_base_F {
+        class HitPoints {
+            ADD_ACE_HITPOINTS(1,1);
+        };
+    };
+    class C_man_1;
+    class C_Protagonist_VR_F: C_man_1 {
+        class HitPoints {
+            ADD_ACE_HITPOINTS(1,1);
+        };
+    };
+
+    // Civilians
+    class C_Soldier_VR_F: C_man_1 {
         class HitPoints {
             ADD_ACE_HITPOINTS(1,1);
         };

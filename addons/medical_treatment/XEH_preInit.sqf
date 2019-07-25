@@ -34,24 +34,14 @@ GVAR(animDurations) = [] call CBA_fnc_createNamespace;
     ["AinvPknlMstpSnonWnonDnon_medic1", 10]
 ];
 
-// class names of medical facilities
-// global variable so it can be accessed by mission makers
-GVAR(facilityClasses) = [
-    "TK_GUE_WarfareBFieldhHospital_Base_EP1",
-    "TK_GUE_WarfareBFieldhHospital_EP1",
-    "TK_WarfareBFieldhHospital_Base_EP1",
-    "TK_WarfareBFieldhHospital_EP1",
-    "US_WarfareBFieldhHospital_Base_EP1",
-    "US_WarfareBFieldhHospital_EP1",
-    "MASH_EP1",
-    "MASH",
-    "Land_A_Hospital",
-    "CDF_WarfareBFieldhHospital",
-    "GUE_WarfareBFieldhHospital",
-    "INS_WarfareBFieldhHospital",
-    "RU_WarfareBFieldhHospital",
-    "USMC_WarfareBFieldhHospital"
-];
+// class names of medical facilities (config case)
+GVAR(facilityClasses) = [];
+{
+    {
+        private _name = configName (configFile >> "CfgVehicles" >> _x);
+        if (_name != "") then { GVAR(facilityClasses) pushBackUnique _name; };
+    } forEach getArray _x;
+} forEach configProperties [configFile >> QEGVAR(medical,facilities), "isArray _x"];
 
 // array of medical items to replace and their ACE equivalents
 GVAR(replacementItems) = configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"] apply {

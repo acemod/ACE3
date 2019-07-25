@@ -1,23 +1,26 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Loop that cleans up blood
+ * Handles cleaning up blood objects that have reached the end of their lifetime.
  *
  * Arguments:
  * None
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_medical_blood_fnc_cleanupLoop
  *
  * Public: No
  */
-        
+
 (GVAR(bloodDrops) deleteAt 0) params ["", "_deletedBloodDrop"];
 deleteVehicle _deletedBloodDrop;
 
-// If we cleaned out the array, exit loop
+// Exit the loop if we have cleaned out the array
 if (GVAR(bloodDrops) isEqualTo []) exitWith {};
 
 // Wait until the next blood drop in the queue will expire
 (GVAR(bloodDrops) select 0) params ["_expireTime"];
-[FUNC(serverCleanupBlood), [], (_expireTime - CBA_missionTime)] call CBA_fnc_waitAndExecute;
+[FUNC(cleanupLoop), [], _expireTime - CBA_missionTime] call CBA_fnc_waitAndExecute;

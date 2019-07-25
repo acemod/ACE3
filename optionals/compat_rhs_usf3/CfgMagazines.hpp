@@ -51,7 +51,64 @@ class cfgMagazines {
         ammo = "ACE_Hellfire_AGM114N";
     };
 
-    // RHS magazines for crew handled ammo
+    class rhsusf_m112_mag: CA_Magazine {
+        ace_explosives_DelayTime = 1;
+        ace_explosives_Placeable = 1;
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhsusf_m112_DemoCharge";
+        useAction = 0;
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+            class DeadmanSwitch: Command {};
+        };
+    };
+
+    class rhsusf_m112x4_mag: CA_Magazine {
+        ace_explosives_DelayTime = 1;
+        ace_explosives_Placeable = 1;
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhsusf_m112x4_DemoCharge";
+        useAction = 0;
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+            class DeadmanSwitch: Command {};
+        };
+    };
+
+    class ATMine_Range_Mag;
+    class rhs_mine_M19_mag: ATMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_M19_Mine";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.075;
+            };
+        };
+    };
+
+    class rhsusf_mine_m14_mag: ATMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhsusf_mine_m14_mag_Mine";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.03;
+            };
+        };
+    };
+
+   // RHS magazines for crew handled ammo
     class rhs_mag_TOW;
     class GVAR(mag_TOW): rhs_mag_TOW {
         scope = 2;
@@ -151,5 +208,4 @@ class cfgMagazines {
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
         picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
     };
-
 };
