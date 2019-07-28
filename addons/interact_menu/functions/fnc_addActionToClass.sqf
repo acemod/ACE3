@@ -28,18 +28,21 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
 TRACE_4("params",_objectType,_typeNum,_parentPath,_action);
 
 if (param [4, false, [false]]) exitwith {
-    if (isNil QGVAR(inheritedActions)) then {GVAR(inheritedActions) = [];};
-    private _index = GVAR(inheritedActions) pushBack [[], _typeNum, _parentPath, _action];
-    private _initEH = compile format ['
-        params ["_object"];
-        private _typeOf = typeOf _object;
-        (GVAR(inheritedActions) select %1) params ["_addedClasses", "_typeNum", "_parentPath", "_action"];
-        if (_typeOf in _addedClasses) exitWith {};
-        _addedClasses pushBack _typeOf;
-        [_typeOf, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
-    ', _index];
-    TRACE_2("Added inheritable action",_objectType,_index);
-    [_objectType, "init", _initEH, true, [], true] call CBA_fnc_addClassEventHandler;
+    if (isNil QGVAR(inheritedActions)) then {
+        GVAR(inheritedActions) = [];
+    };
+
+    private _addedClasses = [];
+    GVAR(inheritedActions) pushBack [_addedClasses, _objectType, _typeNum, _parentPath, _action];
+
+    {
+        private _object = _x;
+        private _type = typeOf _object;
+
+        if (_object isKindOf _class && {_addedClasses pushBackUnique _type != -1}) then {
+            [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        };
+    } forEach entities [[_objectType], [], true, true];
 
     // Return the full path
     (_parentPath + [_action select 0])

@@ -74,4 +74,22 @@ GVAR(lastTimeSearchedActions) = -1000;
 // Init zeus menu
 [] call FUNC(compileMenuZeus);
 
+// Handle addActionToClass with Inheritance flag set
+if (isNil QGVAR(inheritedActions)) then {
+    GVAR(inheritedActions) = [];
+};
+
+["All", "InitPost", {
+    params ["_object"];
+    private _type = typeOf _object;
+
+    {
+        _x params ["_addedClasses", "_class", "_typeNum", "_parentPath", "_action"];
+
+        if (_object isKindOf _class && {_addedClasses pushBackUnique _type != -1}) then {
+            [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        };
+    } forEach GVAR(inheritedActions);
+}] call CBA_fnc_addClassEventHandler;
+
 ADDON = true;
