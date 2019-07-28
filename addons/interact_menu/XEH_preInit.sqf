@@ -84,9 +84,9 @@ if (isNil QGVAR(inheritedActions)) then {
     private _type = typeOf _object;
 
     {
-        _x params ["_addedClasses", "_class", "_typeNum", "_parentPath", "_action"];
+        _x params ["_addedClasses", "_objectType", "_typeNum", "_parentPath", "_action"];
 
-        if (_object isKindOf _class && {_addedClasses pushBackUnique _type != -1}) then {
+        if (_object isKindOf _objectType && {_addedClasses pushBackUnique _type != -1}) then {
             [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
         };
     } forEach GVAR(inheritedActions);
