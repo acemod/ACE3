@@ -39,7 +39,7 @@ if (param [4, false, [false]]) exitwith {
         private _object = _x;
         private _type = typeOf _object;
 
-        if (_object isKindOf _objectType && {_addedClasses pushBackUnique _type != -1}) then {
+        if (_addedClasses pushBackUnique _type != -1) then {
             [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
         };
     } forEach entities [[_objectType], [], true, true];
