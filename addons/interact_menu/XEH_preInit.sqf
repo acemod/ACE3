@@ -75,14 +75,20 @@ GVAR(lastTimeSearchedActions) = -1000;
 [] call FUNC(compileMenuZeus);
 
 // Handle addActionToClass with Inheritance flag set
-if (isNil QGVAR(inheritedActions)) then {
-    GVAR(inheritedActions) = [];
-};
+GVAR(inheritedActions) = [];
+GVAR(inheritedManActions) = []; // Actions only for CAManBase
+GVAR(inheritedManClasses) = [];
 
 ["All", "InitPost", {
     params ["_object"];
     private _type = typeOf _object;
 
+    if ((_object isKindOf "CaManBase") && {GVAR(inheritedManClasses) pushBackUnique _type != -1}) then {
+        {
+            _x params ["_typeNum", "_parentPath", "_action"];
+            [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        } forEach GVAR(inheritedManActions);
+    };
     {
         _x params ["_addedClasses", "_objectType", "_typeNum", "_parentPath", "_action"];
 

@@ -28,21 +28,24 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
 TRACE_4("params",_objectType,_typeNum,_parentPath,_action);
 
 if (param [4, false, [false]]) exitwith {
-    if (isNil QGVAR(inheritedActions)) then {
-        GVAR(inheritedActions) = [];
+    if (_objectType == "CaManBase") then {
+        GVAR(inheritedManActions) pushBack [_typeNum, _parentPath, _action];
+        {
+            [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        } forEach GVAR(inheritedManClasses);
+    } else {
+        private _addedClasses = [];
+        GVAR(inheritedActions) pushBack [_addedClasses, _objectType, _typeNum, _parentPath, _action];
+
+        {
+            private _object = _x;
+            private _type = typeOf _object;
+
+            if (_addedClasses pushBackUnique _type != -1) then {
+                [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+            };
+        } forEach entities [[_objectType], [], true, true];
     };
-
-    private _addedClasses = [];
-    GVAR(inheritedActions) pushBack [_addedClasses, _objectType, _typeNum, _parentPath, _action];
-
-    {
-        private _object = _x;
-        private _type = typeOf _object;
-
-        if (_addedClasses pushBackUnique _type != -1) then {
-            [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
-        };
-    } forEach entities [[_objectType], [], true, true];
 
     // Return the full path
     (_parentPath + [_action select 0])
