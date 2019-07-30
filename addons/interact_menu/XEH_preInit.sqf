@@ -83,7 +83,7 @@ GVAR(inheritedManClasses) = [];
     params ["_object"];
     private _type = typeOf _object;
 
-    if ((_object isKindOf "CaManBase") && {GVAR(inheritedManClasses) pushBackUnique _type != -1}) then {
+    if ((_object isKindOf "CAManBase") && {GVAR(inheritedManClasses) pushBackUnique _type != -1}) then {
         {
             _x params ["_typeNum", "_parentPath", "_action"];
             [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);

@@ -28,7 +28,7 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
 TRACE_4("params",_objectType,_typeNum,_parentPath,_action);
 
 if (param [4, false, [false]]) exitwith {
-    if (_objectType == "CaManBase") then {
+    if (_objectType == "CAManBase") then {
         GVAR(inheritedManActions) pushBack [_typeNum, _parentPath, _action];
         {
             [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
