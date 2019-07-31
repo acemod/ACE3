@@ -25,27 +25,24 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
     ERROR("Bad Params");
     []
 };
-TRACE_4("params",_objectType,_typeNum,_parentPath,_action);
+TRACE_4("addActionToClass",_objectType,_typeNum,_parentPath,_action);
 
 if (param [4, false, [false]]) exitwith {
+    BEGIN_COUNTER(addAction);
     if (_objectType == "CAManBase") then {
-        GVAR(inheritedManActions) pushBack [_typeNum, _parentPath, _action];
+        GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action];
         {
             [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
-        } forEach GVAR(inheritedManClasses);
+        } forEach GVAR(inheritedClassesMan);
     } else {
-        private _addedClasses = [];
-        GVAR(inheritedActions) pushBack [_addedClasses, _objectType, _typeNum, _parentPath, _action];
-
+        GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action];
         {
-            private _object = _x;
-            private _type = typeOf _object;
-
-            if (_addedClasses pushBackUnique _type != -1) then {
-                [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+            if (_x isKindOf _objectType) then {
+                [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
             };
-        } forEach entities [[_objectType], [], true, true];
+        } forEach GVAR(inheritedClassesAll);
     };
+    END_COUNTER(addAction);
 
     // Return the full path
     (_parentPath + [_action select 0])
