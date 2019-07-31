@@ -94,7 +94,7 @@ GVAR(inheritedClassesMan) = [];
         };
     } forEach GVAR(inheritedActionsAll);
     END_COUNTER(InitPost);
-}, true, ["CAManBase"]] call CBA_fnc_addClassEventHandler;
+}] call CBA_fnc_addClassEventHandler;
 ["CAManBase", "InitPost", {
     BEGIN_COUNTER(InitPost);
     params ["_object"];
