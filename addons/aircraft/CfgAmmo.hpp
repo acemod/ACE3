@@ -1,6 +1,6 @@
 class CfgAmmo {
     class BulletBase;
-    class B_20mm : BulletBase {
+    class B_20mm: BulletBase {
         hit = 80;
         indirectHit = 12;
         indirectHitRange = 2; //2;
@@ -15,8 +15,8 @@ class CfgAmmo {
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };
 
-    class ACE_20mm_HE : B_20mm {};
-    class ACE_20mm_AP : B_20mm {
+    class ACE_20mm_HE: B_20mm {};
+    class ACE_20mm_AP: B_20mm {
         hit = 50;
         indirectHit = 12;
         indirectHitRange = 0.3; //2;
@@ -64,16 +64,12 @@ class CfgAmmo {
         deflecting = 5;
     };
 
-    
     class SubmunitionBase;
-    class ACE_30mm_mix : SubmunitionBase {
+    class ACE_30mm_mix: SubmunitionBase {
         simulation = "shotSubmunitions";
         submunitionAmmo[] = {"Gatling_30mm_HE_Plane_CAS_03_F",0.8,"Cannon_30mm_HE_Plane_CAS_01_F",0.2};
         weaponType = "cannon";
         model = "\A3\Weapons_f\empty";
         triggerTime = 0.005;
     };
-    
-    
-    
 };
