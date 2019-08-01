@@ -61,7 +61,7 @@ class CfgAmmo {
         hit = 75; // default: 150
         indirectHit = 1; // default: 4
         indirectHitRange = 0.25; // default: 3
-        deflecting = 5
+        deflecting = 5;
     };
 
     
