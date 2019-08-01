@@ -2,7 +2,7 @@ class Mode_FullAuto;
 
 class CfgWeapons {
     class RocketPods;
-    class ACE_AIR_SAFETY : RocketPods {
+    class ACE_AIR_SAFETY: RocketPods {
         CanLock = 0;
         displayName = "SAFE";
         displayNameMagazine = "SAFE";
@@ -18,8 +18,8 @@ class CfgWeapons {
 
     class CannonCore;
     // Fix attrocious A-10 Cannon Dispersion
-    class Gatling_30mm_Plane_CAS_01_F : CannonCore {
-        class LowROF : Mode_FullAuto {
+    class Gatling_30mm_Plane_CAS_01_F: CannonCore {
+        class LowROF: Mode_FullAuto {
             burst = 1;
             reloadtime = 0.015;
             dispersion = 0.0028; //0.279508497 = 0.25 * sqrt(0.8^-1); (80%, 5mil. https://en.wikipedia.org/wiki/GAU-8_Avenger#Accuracy) - Luke
