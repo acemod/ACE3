@@ -39,9 +39,9 @@ class CfgAmmo {
 
     // also adjust tracer, "muh lightshow"; also adjust splash damage radius
     class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
-        hit = 80; // default: 180
+        hit = 40; // default: 180
         indirectHit = 12; // default: 4
-        indirectHitRange = 3; // default: 3
+        indirectHitRange = 4; // default: 3
         caliber = 1.4; // default: 5
         deflecting = 3; // default: 5
         fuseDistance = 3; // default: 10
@@ -51,8 +51,29 @@ class CfgAmmo {
 
     // adjust damage and splash damage, closer to bluefor gatling with same caliber
     class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {
-        hit = 70; // default: 150
-        indirectHit = 11; // default: 4
+        hit = 65; // default: 150
+        indirectHit = 10; // default: 4
         indirectHitRange = 3; // default: 3
     };
+
+    // adjust damage and splash damage, AP Rounds
+    class Cannon_30mm_HE_Plane_CAS_03_F: Gatling_30mm_HE_Plane_CAS_01_F {
+        hit = 75; // default: 150
+        indirectHit = 1; // default: 4
+        indirectHitRange = 0.25; // default: 3
+        deflecting = 5
+    };
+
+    
+    class SubmunitionBase;
+    class ACE_30mm_mix : SubmunitionBase {
+        simulation = "shotSubmunitions";
+        submunitionAmmo[] = {"Gatling_30mm_HE_Plane_CAS_03_F",0.8,"Cannon_30mm_HE_Plane_CAS_01_F",0.2};
+        weaponType = "cannon";
+        model = "\A3\Weapons_f\empty";
+        triggerTime = 0.005;
+    };
+    
+    
+    
 };
