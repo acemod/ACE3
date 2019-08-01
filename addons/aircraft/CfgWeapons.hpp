@@ -23,6 +23,7 @@ class CfgWeapons {
             burst = 1;
             reloadtime = 0.015;
             dispersion = 0.0028; //0.279508497 = 0.25 * sqrt(0.8^-1); (80%, 5mil. https://en.wikipedia.org/wiki/GAU-8_Avenger#Accuracy) - Luke
+            magazines[] = {"1000Rnd_Gatling_30mm_Plane_CAS_01_F", "ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM"};
         };
     };
     // bigger mag for comanche
