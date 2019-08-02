@@ -82,4 +82,4 @@ if (_sound find "." == -1) then {
     _sound = _sound + ".wss";
 };
 
-playSound3D [_sound, objNull, false, position _unit, _volume, _frequency, _distance];
+playSound3D [_sound, objNull, false, eyePos _unit, _volume, _frequency, _distance];
