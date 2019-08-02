@@ -5,7 +5,7 @@
 #include "\z\ace\addons\medical\script_component.hpp"
 
 // UAV-AI should get filtered by scope check
-private _mans = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(getNumber (_x >> 'scope')) == 2} && {configName _x isKindOf 'CaManBase'}", true];
+private _mans = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(getNumber (_x >> 'scope')) == 2} && {configName _x isKindOf 'CAManBase'}", true];
 INFO_1("Checking mans for medical hitpoints [%1 mans]",count _mans);
 
 private _testPass = true;
