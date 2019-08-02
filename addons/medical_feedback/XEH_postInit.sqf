@@ -3,6 +3,10 @@
 [QEGVAR(medical,injured), {
     params ["_unit", "_painLevel"];
     [_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call FUNC(playInjuredSound);
+
+    if (hasInterface) then {
+        [true] call FUNC(handleEffects);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QEGVAR(medical,moan), {
@@ -16,7 +20,8 @@ GVAR(nextFadeIn) = 0;
 GVAR(heartBeatEffectRunning) = false;
 
 [false] call FUNC(initEffects);
-[LINKFUNC(handleEffects), 1, []] call CBA_fnc_addPerFrameHandler;
+[true] call FUNC(handleEffects);
+[{[] call FUNC(handleEffects)}, 1, []] call CBA_fnc_addPerFrameHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];
@@ -31,10 +36,11 @@ GVAR(heartBeatEffectRunning) = false;
     if (["acre_main"] call EFUNC(common,isModLoaded)) then {
         _unit setVariable ["acre_sys_core_isDisabled", _unconscious, true];
     };
+
     // Greatly reduce player's hearing ability while unconscious (affects radio addons)
     [QUOTE(ADDON), VOL_UNCONSCIOUS, _unconscious] call EFUNC(common,setHearingCapability);
 
-    [_unconscious, 1] call FUNC(effectUnconscious);
+    [true] call FUNC(handleEffects);
     ["unconscious", _unconscious] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addEventHandler;
 
@@ -66,7 +72,7 @@ GVAR(heartBeatEffectRunning) = false;
         _new setVariable ["acre_sys_core_isDisabled", _status, true];
     };
     [QUOTE(ADDON), VOL_UNCONSCIOUS, _status] call EFUNC(common,setHearingCapability);
-    [_status, 0] call FUNC(effectUnconscious);
+    [true] call FUNC(handleEffects);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addPlayerEventHandler;
 

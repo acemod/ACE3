@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Enable effect <BOOL>
  * 1: Current bloodloss (in l/s) <NUMBER>
+ * 2: Instant change (optional, default false) <BOOL>
  *
  * Return Value:
  * None
@@ -16,7 +17,7 @@
  * Public: No
  */
 
-params ["_enable", "_bloodloss"];
+params ["_enable", "_bloodloss", ["_instant", false]];
 if (isNull findDisplay 46) exitWith {};
 
 private _controls = uiNamespace getVariable [QGVAR(bloodControls), [controlNull, controlNull]];
@@ -57,7 +58,7 @@ private _fade = linearConversion [0, 0.002, _bloodloss, 1, 0, true];
 private _switchBloodFadeInfo = missionNamespace getVariable [QGVAR(switchBloodFadeInfo), [0, 0]];
 _switchBloodFadeInfo params ["_tickCounter", "_lastBloodloss"];
 
-if (_tickCounter == 2) then {
+if (_tickCounter == 2 || _instant) then {
     if (ctrlFade _blood1 > ctrlFade _blood2) then {
         _blood1 ctrlSetFade _fade;
         _blood2 ctrlSetFade 1;
@@ -66,16 +67,17 @@ if (_tickCounter == 2) then {
         _blood2 ctrlSetFade _fade;
     };
 
-    _blood1 ctrlCommit 3;
-    _blood2 ctrlCommit 3;
+    if (_instant) then {
+        _blood1 ctrlCommit 0.3;
+        _blood2 ctrlCommit 0.3;
+    } else {
+        _blood1 ctrlCommit 3;
+        _blood2 ctrlCommit 3;
+    };
 
     GVAR(switchBloodFadeInfo) = [0, _bloodloss];
 } else {
     GVAR(switchBloodFadeInfo) = [_tickCounter + 1, _bloodloss];
 };
 
-// Speed up fade on sudden changes
-if (abs (_lastBloodloss - _bloodloss) > 0.001) then {
-    _blood1 ctrlCommit 1;
-    _blood2 ctrlCommit 1;
-};
+
