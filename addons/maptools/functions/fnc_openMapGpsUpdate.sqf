@@ -1,19 +1,19 @@
 #include "script_component.hpp"
 /*
-* Author: esteldunedain, PabstMirror
-* update gps display, called from main map's draw
-*
-* Arguments:
-* 0: Map display <DISPLAY>
-*
-* Return Value:
-* None
-*
-* Example:
-* [findDisplay 12] call ACE_maptools_fnc_openMapGpsUpdate
-*
-* Public: No
-*/
+ * Author: esteldunedain, PabstMirror
+ * update gps display, called from main map's draw
+ *
+ * Arguments:
+ * 0: Map ctrl <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [findDisplay 12] call ACE_maptools_fnc_openMapGpsUpdate
+ *
+ * Public: No
+ */
 
 params ["_mapCtrl"];
 private _mapDisplay = ctrlParent _mapCtrl;

@@ -1,6 +1,7 @@
 class RscDisplayMainMap {
     class objects {
         class GVAR(MapGpsDisplay): RscObject {
+            show = 0;
             idc = 913589;
             type = 82;
             model = QPATHTOF(data\MapGpsDisplay.p3d);
