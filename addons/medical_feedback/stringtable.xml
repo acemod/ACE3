@@ -64,5 +64,8 @@
         <Key ID="STR_ACE_Medical_feedback_painEffectType_chromAberration">
             <English>Chromatic Abberration</English>
         </Key>
+        <Key ID="STR_ACE_Medical_feedback_painEffectType_onlyBase">
+            <English>Only high pain effect</English>
+        </Key>
     </Package>
 </Project>

@@ -34,6 +34,8 @@ private _blurIntensity = linearConversion [0.8, 1, _intensity, 0, 1, true];
 GVAR(ppPainBlur) ppEffectAdjust [_blurIntensity];
 GVAR(ppPainBlur) ppEffectCommit 0.1;
 
+if (GVAR(painEffectType) == FX_PAIN_ONLY_BASE) exitWith {};
+
 private _initialAdjust = [];
 private _delayedAdjust = [];
 
