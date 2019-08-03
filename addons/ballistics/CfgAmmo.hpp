@@ -88,7 +88,6 @@ class CfgAmmo {
         hit = 0.09;
     };
 
-
     class B_556x45_Ball : BulletBase {
         airFriction=-0.00130094;
         tracerScale = 1;
