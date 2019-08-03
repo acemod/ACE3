@@ -6,6 +6,89 @@ class CfgAmmo {
         timeToLive=6;
     };
 
+    class B_12Gauge_Pellets_Submunition : BulletBase { //#00 Buckshot
+        //vanilla values have been left as comments for reference purposes
+        //cost = 1;
+        //hit = 20;
+        //simulationStep = 0.0001;
+        //cartridge = "";
+        //submunitionAmmo = "B_12Gauge_Pellets_Submunition_Deploy";
+        submunitionConeType[] = {"poissondisc", 9};  //#00 Buckshot generally has 9 pellets per shell
+        //submunitionConeType[] = {"poissondisc", 18};
+        //submunitionConeAngle = 0.8;
+        //triggerSpeedCoef[] = {0.85, 1};
+        triggerTime = 0.015; // Shot takes ~5-15 feet to start spreading out and the vanilla triggerTime is too short to allow that
+        //triggerTime = 0.001;
+    };
+    class B_12Gauge_Pellets_Submunition_Deploy : BulletBase {
+        airFriction = -0.0030;
+        //airFriction = -0.0067;
+        hit = 2.55; //vanilla hit is way too high
+        //hit = 6;
+        //indirectHit = 0;
+        //indirectHitRange = 0;
+        //typicalSpeed = 360;
+        //deflecting = 35;
+    };
+
+    class ACE_12Gauge_Pellets_Submunition_No0 : B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No0_Deploy";
+        submunitionConeType[] = {"poissondisc", 9};
+        submunitionConeAngle = 0.81;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No0_Deploy : B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0033;
+        hit = 2.27;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No1 : B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No1_Deploy";
+        submunitionConeType[] = {"poissondisc", 11};
+        submunitionConeAngle = 0.83;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No1_Deploy : B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0038;
+        hit = 1.86;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No2 : B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No2_Deploy";
+        submunitionConeType[] = {"poissondisc", 14};
+        submunitionConeAngle = 0.85;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No2_Deploy : B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0048;
+        hit = 1.46;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No3 : B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No3_Deploy";
+        submunitionConeType[] = {"poissondisc", 18};
+        submunitionConeAngle = 0.87;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No3_Deploy : B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0067;
+        hit = 1.13;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No4 : B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Deploy";
+        submunitionConeType[] = {"poissondisc", 21};
+        submunitionConeAngle = 0.89;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No4_Deploy : B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0085;
+        hit = 0.97;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No7 : B_12Gauge_Pellets_Submunition {
+        hit = 3;
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No7_Deploy";
+        submunitionConeType[] = {"poissondisc", 291};
+        submunitionConeAngle = 1.2;
+        triggerSpeedCoef[] = {0.7, 1};
+    };
+    class ACE_12Gauge_Pellets_Submunition_No7_Deploy : B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.1083;
+        hit = 0.09;
+    };
+
+
     class B_556x45_Ball : BulletBase {
         airFriction=-0.00130094;
         tracerScale = 1;
