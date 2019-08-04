@@ -17,7 +17,7 @@ class CfgAmmo {
         //submunitionConeType[] = {"poissondisc", 18};
         //submunitionConeAngle = 0.8;
         //triggerSpeedCoef[] = {0.85, 1};
-        triggerTime = 0.015; // Shot takes ~5-15 feet to start spreading out and the vanilla triggerTime is too short to allow that
+        triggerTime = 0.008; // Shot takes ~5-15 feet to start spreading out and the vanilla triggerTime is too short to allow that
         //triggerTime = 0.001;
     };
     class B_12Gauge_Pellets_Submunition_Deploy: BulletBase {
