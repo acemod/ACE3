@@ -48,31 +48,31 @@ class CfgAmmo {
         tracerStartTime = 0.02; // default: 0.1
         timeToLive = 40; // default: 6
     };
-	
+   
     // adjust damage and splash damage, AP Rounds
     class ACE_Gatling_30mm_AP_Plane_CAS_01_F: Gatling_30mm_HE_Plane_CAS_01_F {
         explosive = 0.05; // default: 0.4
-		hit = 110; // default: 180
+      hit = 110; // default: 180
         indirectHit = 2.5; // default: 4
         indirectHitRange = 1; // default: 3
-		fuseDistance = 0.2; // default: 10
+      fuseDistance = 0.2; // default: 10
         deflecting = 5;
     };
 
-	// adds submunition logic, enabling multiple rounds per frame
-	class ACE_Gatling_30mm_Sub_HEI: SubmunitionBullet {
+   // adds submunition logic, enabling multiple rounds per frame
+   class ACE_Gatling_30mm_Sub_HEI: SubmunitionBullet {
         submunitionAmmo = "Gatling_30mm_HE_Plane_CAS_01_F";
         weaponType = "cannon";
-		submunitionConeType[] = {"poissondisccenter", 3};
-		submunitionConeAngle = 0.056; // in degrees, 0.055 ~= 0.001 mils minute, but present
+      submunitionConeType[] = {"poissondisccenter", 3};
+      submunitionConeAngle = 0.056; // in degrees, 0.055 ~= 0.001 mils minute, but present
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red.p3d";
         triggerTime = 0.005;
-	};
+   };
 
-	class ACE_Gatling_30mm_Sub_AP: ACE_Gatling_30mm_Sub_HEI {
-		submunitionAmmo = "ACE_Gatling_30mm_AP_Plane_CAS_01_F";
-	};
-	
+   class ACE_Gatling_30mm_Sub_AP: ACE_Gatling_30mm_Sub_HEI {
+      submunitionAmmo = "ACE_Gatling_30mm_AP_Plane_CAS_01_F";
+   };
+   
     class ACE_Gatling_30mm_Sub_CM41: ACE_Gatling_30mm_Sub_HEI {
         submunitionAmmo[] = {"ACE_Gatling_30mm_AP_Plane_CAS_01_F",0.8,"Cannon_30mm_HE_Plane_CAS_01_F",0.2};
     };
