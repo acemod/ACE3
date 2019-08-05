@@ -58,7 +58,6 @@ class CfgAmmo {
        indirectHit = 2.5; // default: 4
        indirectHitRange = 1; // default: 3
        fuseDistance = 0.2; // default: 10
-       deflecting = 5;
     };
 
    // adds submunition logic, enabling multiple rounds per frame
