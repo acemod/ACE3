@@ -4,13 +4,13 @@
  * update gps display, called from main map's draw
  *
  * Arguments:
- * 0: Map ctrl <DISPLAY>
+ * 0: Map ctrl <CONTROL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [findDisplay 12] call ACE_maptools_fnc_openMapGpsUpdate
+ * [findDisplay 12 displayCtrl 51] call ACE_maptools_fnc_openMapGpsUpdate;
  *
  * Public: No
  */
