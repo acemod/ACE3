@@ -124,7 +124,7 @@ class CfgAmmo {
         GVAR(flashbang) = 1;
         GVAR(flashbangBangs) = 9;
         GVAR(flashbangInterval) = 0.5;
-        GVAR(flashbangIntervalStandardDeviation) = 0.1;
+        GVAR(flashbangIntervalMaxDeviation) = 0.35;
         model = QPATHTOF(models\ACE_CTS_9bang_thrown.p3d);
         explosionTime = 1.5;
         timeToLive = 10;
