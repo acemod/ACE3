@@ -63,6 +63,10 @@ class CfgVehicles {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
     };
+    class UGV_02_Base_F: Tank_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
 
     class Car_F;
     class Truck_F: Car_F {
