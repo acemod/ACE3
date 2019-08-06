@@ -35,6 +35,7 @@ if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
         // Handle setting being changed mid-mission and still properly check
         // already unconscious units, should handle locality changes as well
         if (isNil "_lastWakeUpCheck") exitWith {
+            TRACE_1("undefined lastWakeUpCheck: setting to current time",_lastWakeUpCheck);
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
         };
 

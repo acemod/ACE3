@@ -16,6 +16,7 @@
  */
 
 params ["_state"];
+TRACE_1("disableUserInput",_state);
 
 if (_state) then {
     disableSerialization;
