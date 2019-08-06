@@ -22,7 +22,7 @@ params ["_unit", "_active"];
 TRACE_2("setCardiacArrest",_unit,_active);
 
 // No change to make
-if (_active isEqualTo IN_CRDC_ARRST(_unit)) exitWith { { TRACE_2("no change",_active,IN_CRDC_ARRST(_unit)); };
+if (_active isEqualTo IN_CRDC_ARRST(_unit)) exitWith { TRACE_2("no change",_active,IN_CRDC_ARRST(_unit)); };
 
 // No heart rate in cardiac arrest, low heart rate if revived
 _unit setVariable [VAR_CRDC_ARRST, _active, true];
