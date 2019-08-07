@@ -36,6 +36,10 @@ private _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
 
 (GVAR(scopeAdjust) select _weaponIndex) params ["_maxVertical", "_verticalIncrement", "_maxHorizontal", "_horizontalIncrement"];
+if (_majorStep) then {
+    _verticalIncrement = _verticalIncrement * 10;
+    _horizontalIncrement = _horizontalIncrement * 10;
+};
 TRACE_4("",_maxVertical,_verticalIncrement,_maxHorizontal,_horizontalIncrement);
 
 switch (_turretAndDirection) do {
@@ -43,15 +47,6 @@ switch (_turretAndDirection) do {
     case ELEVATION_DOWN: { _elevation = _elevation - _verticalIncrement };
     case WINDAGE_LEFT:   { _windage = _windage - _horizontalIncrement };
     case WINDAGE_RIGHT:  { _windage = _windage + _horizontalIncrement };
-};
-
-if (_majorStep) then {
-    switch (_turretAndDirection) do {
-        case ELEVATION_UP:   { _elevation = ceil(_elevation) };
-        case ELEVATION_DOWN: { _elevation = floor(_elevation) };
-        case WINDAGE_LEFT:   { _windage = floor(_windage) };
-        case WINDAGE_RIGHT:  { _windage = ceil(_windage) };
-    };
 };
 
 _elevation = round(_elevation / MIN_INCREMENT) * MIN_INCREMENT;
