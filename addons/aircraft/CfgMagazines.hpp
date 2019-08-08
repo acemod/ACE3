@@ -2,8 +2,16 @@ class CfgMagazines {
     // shoot helper object to tripple rof
     class VehicleMagazine;
     class 1000Rnd_Gatling_30mm_Plane_CAS_01_F: VehicleMagazine {
-        ammo = "ACE_Gatling_30mm_Sub_HEI";
+        ammo = "ACE_Gatling_30mm_Sub_CM51";
+        displayName = CSTRING(GatlingDescriptionCM51);
+        displayNameShort = CSTRING(GatlingDescriptionShortCM51);
         count = 1170;
+    };
+
+    class 1000Rnd_Gatling_30mm_Plane_CAS_HEI: VehicleMagazine {
+        ammo = "ACE_Gatling_30mm_Sub_HEI";
+        displayName = CSTRING(GatlingDescriptionHEI);
+        displayNameShort = CSTRING(GatlingDescriptionShortHEI);
     };
 
     class ACE_1000Rnd_Gatling_30mm_Plane_CAS_AP: 1000Rnd_Gatling_30mm_Plane_CAS_01_F {
