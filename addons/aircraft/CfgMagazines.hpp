@@ -8,20 +8,20 @@ class CfgMagazines {
 
     class ACE_1000Rnd_Gatling_30mm_Plane_CAS_AP: 1000Rnd_Gatling_30mm_Plane_CAS_01_F {
         ammo = "ACE_Gatling_30mm_Sub_AP";
-        displayName = "30mm DU Armor Piercing";
-        displayNameShort = "30mm DUAP";
+        displayName = CSTRING(GatlingDescriptionAP);
+        displayNameShort = CSTRING(GatlingDescriptionShortAP);
     };
     
     class ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM41: 1000Rnd_Gatling_30mm_Plane_CAS_01_F {
         ammo = "ACE_Gatling_30mm_Sub_CM41";
-        displayName = "30mm Combat Mix 4:1 DU:HEI";
-        displayNameShort = "30mm 4:1 DU:HEI";
+        displayName = CSTRING(GatlingDescriptionCM41);
+        displayNameShort = CSTRING(GatlingDescriptionShortCM41);
     };
    
     class ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM51: 1000Rnd_Gatling_30mm_Plane_CAS_01_F {
         ammo = "ACE_Gatling_30mm_Sub_CM51";
-        displayName = "30mm Combat Mix 5:1 DU:HEI";
-        displayNameShort = "30mm 5:1 DU:HEI";
+        displayName = CSTRING(GatlingDescriptionCM51);
+        displayNameShort = CSTRING(GatlingDescriptionShortCM51);
     };
 
     // an extended magazine for the comanche
