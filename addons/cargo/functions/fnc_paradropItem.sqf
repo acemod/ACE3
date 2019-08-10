@@ -66,7 +66,8 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
 
     private _velocity = velocity _item;
 
-    _item attachTo [_parachute, [0,0,1]];
+    _item allowDamage false;
+    _item attachTo [_parachute, [0,0,3]];
     _parachute setVelocity _velocity;
 
     if ((GVAR(disableParadropEffectsClasstypes) findIf {_item isKindOf _x}) == -1) then {
@@ -89,6 +90,7 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
             private _smoke = "SmokeshellYellow" createVehicle [0,0,0];
             _smoke attachTo [_item, [0,0,0]];
         };
+        _item allowDamage true;
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
