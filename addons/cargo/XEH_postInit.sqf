@@ -50,6 +50,7 @@
 
     _item hideObjectGlobal false;
     _item setPosASL (AGLtoASL _emptyPosAGL);
+    _item setDamage 0;
 
     if ((getText (configFile >> "CfgVehicles" >> (typeOf _item) >> "simulation")) == "carx") then {
         TRACE_1("re-enabling car damage",_item);

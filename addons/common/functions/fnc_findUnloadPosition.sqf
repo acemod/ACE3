@@ -26,7 +26,7 @@
 //Manual collision tests (count and radius):
 #define COL_TEST_COUNT 12
 
-params ["_vehicle", "_cargo", ["_theUnloader", objNull], ["_maxDistance", 10], ["_checkVehicleIsStable", true]];
+params ["_vehicle", "_cargo", ["_theUnloader", objNull], ["_maxDistance", 50], ["_checkVehicleIsStable", true]];
 TRACE_5("params",_vehicle,_cargo,_theUnloader,_maxDistance,_checkVehicleIsStable);
 
 scopeName "main";
@@ -38,7 +38,7 @@ if (_checkVehicleIsStable) then {
     };
 };
 
-private _radiusOfItem = 1;
+private _radiusOfItem = 15;
 if (_cargo isKindOf "CAManBase") then {
     _radiusOfItem = 1.1;
 } else {
@@ -67,9 +67,9 @@ private _originAGL = ASLtoAGL _originASL;
 
 //Do a manual search for empty pos (handles underwater, buildings or piers)
 TRACE_2("Checking for unload",_originAGL,_radiusOfItem);
-private _rangeToCheck = 0;
+private _rangeToCheck = 25;
 while {_rangeToCheck < _maxDistance} do {
-    private _roundDistance = random _rangeToCheck;
+    private _roundDistance = (random _rangeToCheck) max 15;
     private _roundAngle = random 360;
     private _roundAGL = _originAGL vectorAdd [(cos _roundAngle) * _roundDistance, (sin _roundAngle) * _roundDistance, 0];
 
@@ -125,10 +125,10 @@ while {_rangeToCheck < _maxDistance} do {
         if (_roundPointIsValid) then {
             TRACE_3("Valid point found", _rangeToCheck,_roundAGL, (_originAGL distance _roundAGL));
             //Raise it slightly so we don't sink through the floor:
-            (_roundAGL vectorAdd [0,0,0.05]) breakOut "main";
+            (_roundAGL vectorAdd [0,0,0.1]) breakOut "main";
         };
     };
-    _rangeToCheck = _rangeToCheck + (_maxDistance / MAX_TESTS);
+    _rangeToCheck = _rangeToCheck + ((_maxDistance - _rangeToCheck) / MAX_TESTS);
 };
 
 TRACE_1("no valid spots found",_rangeToCheck);
