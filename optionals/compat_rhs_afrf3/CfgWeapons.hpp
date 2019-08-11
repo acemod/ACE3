@@ -85,7 +85,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_VerticalIncrement = 0.5;
         ACE_ScopeAdjust_HorizontalIncrement = 0.5;
     };
-    class rhs_acc_pso1m21: rhs_acc_sniper_base {
+    class rhs_acc_pso1m21: rhs_acc_pso1m2 {
         ACE_ScopeHeightAboveRail = 7.75566;
         ACE_ScopeAdjust_Vertical[] = {0, 0};
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};

@@ -69,7 +69,7 @@ class cfgMagazines {
         };
     };
 
-    class rhsusf_m112x4_mag: CA_Magazine {
+    class rhsusf_m112x4_mag: rhsusf_m112_mag {
         ace_explosives_DelayTime = 1;
         ace_explosives_Placeable = 1;
         ace_explosives_SetupObject = "ACE_Explosives_Place_rhsusf_m112x4_DemoCharge";
