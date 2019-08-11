@@ -31,21 +31,22 @@ TRACE_2("setSpace",_vehicle,_size);
 // Nothing to do here
 if (
     (isNil "_space") ||
-    {isNull _vehicle} ||
-    {_space == _vehicle getVariable [QGVAR(space), CARGO_SPACE(typeOf _vehicle)]}
+    {isNull _vehicle}
 ) exitWith {};
 
 // Apply new space globally
-// Necessary to update value, even if no space, as API could be used again
-_vehicle setVariable [QGVAR(hasCargo), _space > 0, true];
 // Account for cargo already in the vehicle
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
-private _totalCargo = 0;
+private _newSpace = _space;
 {
-    _totalCargo = _totalCargo + (_x call FUNC(getSizeItem))
+    _newSpace = _newSpace - ([_x] call FUNC(getSizeItem));
 } foreach _loaded;
-// Set the new space
-_vehicle setVariable [QGVAR(space), _space-_totalCargo, true];
+// If the new value is the same as the old, do nothing
+if (_newSpace == (_vehicle getVariable [QGVAR(space), CARGO_SPACE(typeOf _vehicle)])) exitwith {};
+// Update available space
+_vehicle setVariable [QGVAR(space), _newSpace, true];
+// Necessary to update value, even if no space, as API could be used again
+_vehicle setVariable [QGVAR(hasCargo), _space > 0, true];
 
 // If no cargo space no need for cargo menu
 if (_space <= 0) exitWith {};
