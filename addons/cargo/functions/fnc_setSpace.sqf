@@ -35,10 +35,18 @@ if (
     {_space == _vehicle getVariable [QGVAR(space), CARGO_SPACE(typeOf _vehicle)]}
 ) exitWith {};
 
+private ["_loaded", "_cargo"];
 // Apply new space globally
 // Necessary to update value, even if no space, as API could be used again
 _vehicle setVariable [QGVAR(hasCargo), _space > 0, true];
-_vehicle setVariable [QGVAR(space), _space, true];
+//Account for cargo already in the vehicle
+_loaded = _vehicle getVariable [QGVAR(loaded), []];
+_cargo = 0;
+{
+  _cargo += _x call FUNC(getSizeItem)
+} foreach _loaded;
+//Set the new space
+_vehicle setVariable [QGVAR(space), _space-_cargo, true];
 
 // If no cargo space no need for cargo menu
 if (_space <= 0) exitWith {};

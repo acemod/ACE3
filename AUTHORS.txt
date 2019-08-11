@@ -1,4 +1,4 @@
-# ACE3 CONTRIBUTOR LIST
+﻿# ACE3 CONTRIBUTOR LIST
 # If you contributed, but are not listed here, contact me:
 # koffeinflummi@gmail.com
 #
@@ -123,6 +123,7 @@ PiZZADOX <509thParachuteInfantry@gmail.com>
 Phyma <sethramstrom@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
+Pterolatypus <pterolatypus@gmail.com>
 QuickDagger
 rakowozz
 ramius86 <pasini86@hotmail.com>
