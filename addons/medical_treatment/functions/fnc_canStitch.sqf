@@ -18,7 +18,4 @@
 
 params ["", "_patient"];
 
-!(GET_BANDAGED_WOUNDS(_patient) isEqualTo []) && {
-    !(_patient isEqualTo ACE_player) ||
-    (GVAR(allowSelfStitch) == 1 && (_patient isEqualTo ACE_player))
-}
+!(GET_BANDAGED_WOUNDS(_patient) isEqualTo [])
