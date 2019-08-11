@@ -10,6 +10,7 @@
             <Korean>ACE 차량 잠금</Korean>
             <German>ACE Fahrzeugsperre</German>
             <Polish>ACE Zamknięcie Pojazdu</Polish>
+            <Russian>ACE Блокировка транспорта</Russian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>

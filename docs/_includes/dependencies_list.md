@@ -43,7 +43,7 @@
 {% endif %}
 
 {% if include.component == "captives" %}
-`ACE_Interaction`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "cargo" %}
@@ -71,7 +71,7 @@
 {% endif %}
 
 {% if include.component == "disarming" %}
-`ACE_Interaction`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "disposable" %}
@@ -219,19 +219,47 @@
 {% endif %}
 
 {% if include.component == "medical" %}
-`ace_interaction`, `ace_apl`
+`ace_medical_engine`
 {% endif %}
 
 {% if include.component == "medical_ai" %}
-`ace_medical`
+`ace_medical_treatment`
 {% endif %}
 
 {% if include.component == "medical_blood" %}
-`ace_main`
+`ace_medical_status`
 {% endif %}
 
-{% if include.component == "medical_menu" %}
-`ace_medical`
+{% if include.component == "medical_damage" %}
+`ace_medical_engine`
+{% endif %}
+
+{% if include.component == "medical_engine" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "medical_feedback" %}
+`ace_medical_status`
+{% endif %}
+
+{% if include.component == "medical_gui" %}
+`ace_medical_treatment`, `ace_interaction`
+{% endif %}
+
+{% if include.component == "medical_statemachine" %}
+`ace_medical_vitals`
+{% endif %}
+
+{% if include.component == "medical_status" %}
+`ace_medical_engine`
+{% endif %}
+
+{% if include.component == "medical_treatment" %}
+`ace_medical_status`, `ace_medical_damage`, `ace_apl`
+{% endif %}
+
+{% if include.component == "medical_vitals" %}
+`ace_medical_status`
 {% endif %}
 
 {% if include.component == "microdagr" %}
@@ -439,7 +467,7 @@
 {% endif %}
 
 {% if include.component == "winddeflection" %}
-`ace_weather`
+`ace_common`
 {% endif %}
 
 {% if include.component == "yardage450" %}
@@ -479,7 +507,7 @@
 {% endif %}
 
 {% if include.component == "compat_rhs_usf3" %}
-`ace_javelin`, `ace_rearm`, `ace_refuel`, `ace_repair`, `rhsusf_c_weapons`, `rhsusf_c_troops`, `rhsusf_c_m1a1`, `rhsusf_c_m1a2`, `RHS_US_A2_AirImport`, `rhsusf_c_m109`, `rhsusf_c_HEMTT_A4`, `rhsusf_c_hmmwv`, `rhsusf_c_rg33`, `rhsusf_c_fmtv`, `rhsusf_c_m113`, `RHS_US_A2Port_Armor`, `rhsusf_c_melb`
+`ace_explosives`, `ace_javelin`, `ace_rearm`, `ace_refuel`, `ace_repair`, `rhsusf_c_weapons`, `rhsusf_c_troops`, `rhsusf_c_m1a1`, `rhsusf_c_m1a2`, `RHS_US_A2_AirImport`, `rhsusf_c_m109`, `rhsusf_c_HEMTT_A4`, `rhsusf_c_hmmwv`, `rhsusf_c_rg33`, `rhsusf_c_fmtv`, `rhsusf_c_m113`, `RHS_US_A2Port_Armor`, `rhsusf_c_melb`
 {% endif %}
 
 {% if include.component == "compat_rksl_pm_ii" %}

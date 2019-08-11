@@ -1,39 +1,39 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal
- * handle bleeding state (state machine)
+ * Handles periodically creating blood for a bleeding unit.
+ * Called from the medical_blood state machine.
  *
  * Arguments:
- * 0: unit <TYPE>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * is Bleeding <BOOL>
+ * None
  *
  * Example:
- * [UNIT] call ace_medical_blood_fnc_onBleeding
+ * [player] call ace_medical_blood_fnc_onBleeding
  *
  * Public: No
  */
 
 params ["_unit"];
 
-if (!([_unit] call FUNC(isBleeding))) exitWith {};
-if (((vehicle _unit) != _unit) && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
+// Nothing to do if unit is not bleeding
+if !(_unit call FUNC(isBleeding)) exitWith {};
 
-private _lastTime = _unit getVariable [QGVAR(lastTime), -10];
-private _bloodLoss = (if (GVAR(useAceMedical)) then {([_unit] call EFUNC(medical,getBloodLoss)) * 2.5} else {getDammage _unit * 2}) min 6;
+// Don't bleed on the ground if in a vehicle
+if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
 
-if ((CBA_missionTime - _lastTime) + _bloodLoss >= 8 + random 2) then {
-    _unit setVariable [QGVAR(lastTime), CBA_missionTime];
+if (CBA_missionTime > (_unit getVariable [QGVAR(nextTime), -10])) then {
+    private _bloodLoss = (if (GVAR(useAceMedical)) then {GET_BLOOD_LOSS(_unit) * 2.5} else {getDammage _unit * 2}) min 6;
+    _unit setVariable [QGVAR(nextTime), CBA_missionTime + 8 + random 2 - _bloodLoss];
+
+    TRACE_2("Creating blood drop for bleeding unit",_unit,_bloodLoss);
 
     private _position = getPosASL _unit;
-    _position = _position vectorAdd [
-        random 0.4 - 0.2,
-        random 0.4 - 0.2,
-        0
-    ];
+    _position = _position vectorAdd [random 0.4 - 0.2, random 0.4 - 0.2, 0];
     _position set [2, 0];
 
     private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss min 3);
-    [_bloodDrop, _position, getDir _unit] call FUNC(createBlood);
+    [_bloodDrop, _position] call FUNC(createBlood);
 };

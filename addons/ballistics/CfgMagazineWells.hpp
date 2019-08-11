@@ -107,14 +107,14 @@ class CfgMagazineWells {
             "ACE_30Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65x47_Scenar_mag"
         };
-    };  
+    };
 
     class CBA_338LM_AI { //338 Lapua Magnum Accuracy International
         ADDON[] = {
             "ACE_10Rnd_338_300gr_HPBT_Mag",
             "ACE_10Rnd_338_API526_Mag"
         };
-    }; 
+    };
 
     class CBA_408CT_Inter {
         ADDON[] = {
@@ -122,13 +122,13 @@ class CfgMagazineWells {
         };
     };
 
-    class CBA_50BMG_M107 { 
+    class CBA_50BMG_M107 {
         ADDON[] = {
             "ACE_5Rnd_127x99_Mag",
             "ACE_5Rnd_127x99_API_Mag",
             "ACE_5Rnd_127x99_AMAX_Mag"
         };
-    }; 
+    };
 
     class CBA_9x19_P226 { // SIG P226
         ADDON[] = {
@@ -157,31 +157,6 @@ class CfgMagazineWells {
         };
     };
     class CBA_762x54R_SVD {
-        ADDON[] = {
-            "ACE_10Rnd_762x54_Tracer_mag"
-        };
-    };
-    class CBA_762x54R_Mosin {
-        ADDON[] = {
-            "ACE_10Rnd_762x54_Tracer_mag"
-        };
-    };
-    class CBA_762x54R_SVT {
-        ADDON[] = {
-            "ACE_10Rnd_762x54_Tracer_mag"
-        };
-    };
-    class CBA_762x54R_DPM {
-        ADDON[] = {
-            "ACE_10Rnd_762x54_Tracer_mag"
-        };
-    };
-    class CBA_762x54R_DT {
-        ADDON[] = {
-            "ACE_10Rnd_762x54_Tracer_mag"
-        };
-    };
-    class CBA_762x54R_Maxim {
         ADDON[] = {
             "ACE_10Rnd_762x54_Tracer_mag"
         };

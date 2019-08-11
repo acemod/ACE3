@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="medical_ai">
-        <Key ID="STR_ACE_medical_ai_enabledFor_DisplayName">
-            <English>Medical AI enabled for</English>
-            <Japanese>次に AI 治療を有効</Japanese>
-            <Chinesesimp>AI医疗启用</Chinesesimp>
-            <Chinese>AI醫療啟用</Chinese>
-            <Italian>AI medica abilitata per:</Italian>
-            <Polish>Medyczna SI aktywowana dla</Polish>
+        <Key ID="STR_ACE_medical_ai_enableFor_title">
+            <English>Medic AI</English>
+            <German>Sanitäts KI</German>
+            <Japanese>AI 衛生兵</Japanese>
+            <Russian>ИИ Медик</Russian>
         </Key>
-        <Key ID="STR_ACE_medical_ai_enabledFor_Description">
-            <English>Enable AI units to heal themselves and each other.</English>
-            <Japanese>AI ユニットの自己や相互治療を有効化します。</Japanese>
-            <Chinesesimp>使AI单位能够彼此治疗自己</Chinesesimp>
-            <Chinese>啟用AI能夠彼此醫療自己</Chinese>
-            <Italian>Permette alle unità AI di curare se stesse e fra di loro.</Italian>
-            <Polish>Zezwala jednostki SI do leczenia siebie samych i siebie nawzajem.</Polish>
+        <Key ID="STR_ACE_medical_ai_enableFor_desc">
+            <English>AI will respond to injury and unconsciousness</English>
+            <German>KI reagiert auf Verletzungen und Bewusstlosigkeit</German>
+            <Japanese>AI が負傷者と気絶している人に対して行動するようになります。</Japanese>
+            <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
         </Key>
         <Key ID="STR_ACE_medical_ai_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
             <German>Nur Server und HC</German>
             <Spanish>Sólo Server y HC</Spanish>
-            <Russian>Нур сервера унд HC</Russian>
+            <Russian>Только сервер и HC</Russian>
             <Japanese>サーバーと HC のみ</Japanese>
             <Polish>Tylko serwer i HC</Polish>
             <French>Seulement sur le server ou le HC</French>

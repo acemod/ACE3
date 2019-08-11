@@ -20,18 +20,18 @@ private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 switch (_this select 0) do {
     case ("azimuth"): {
-        (_dlgVector displayCtrl 1315) ctrlSetText "";
-        (_dlgVector displayCtrl 1316) ctrlSetText "";
-        (_dlgVector displayCtrl 1317) ctrlSetText "";
-        (_dlgVector displayCtrl 1318) ctrlSetText "";
-        (_dlgVector displayCtrl 1319) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_5) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_6) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_7) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_8) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_9) ctrlSetText "";
     };
 
     case ("distance"): {
-        (_dlgVector displayCtrl 1310) ctrlSetText "";
-        (_dlgVector displayCtrl 1311) ctrlSetText "";
-        (_dlgVector displayCtrl 1312) ctrlSetText "";
-        (_dlgVector displayCtrl 1313) ctrlSetText "";
-        (_dlgVector displayCtrl 1314) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_0) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_3) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_4) ctrlSetText "";
     };
 };

@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Namespace <OBJECT><LOCATION><MISSIONNAMESPACE>
  * 1: Number Set ID <STRING>
- * 2: Operation (sum, product, min, max, avg) <STRING>
+ * 2: Operation (sum, product, min, max, avg) (Case Sensitive) <STRING>
  *
  * Return Value:
  * Value <NUMBER>
@@ -19,11 +19,19 @@
  */
 
 params ["_namespace", "_setID", "_op"];
-TRACE_3("params",_namespace,_setID,_op);
+TRACE_3("arithmeticGetResult",_namespace,_setID,_op);
 
 private _data = (_namespace getVariable _setID) param [2, []];
 
 switch (_op) do {
+    case ("max"): {
+        private _result = -1e99;
+        {
+            _result = _result max (call _x);
+            nil
+        } count _data;
+        _result // return
+    };
     case ("sum"): {
         private _result = 0;
         {
@@ -44,14 +52,6 @@ switch (_op) do {
         private _result = 1e99;
         {
             _result = _result min (call _x);
-            nil
-        } count _data;
-        _result // return
-    };
-    case ("max"): {
-        private _result = -1e99;
-        {
-            _result = _result max (call _x);
             nil
         } count _data;
         _result // return

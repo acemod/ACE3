@@ -290,7 +290,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Berger_Hybrid_OTM : B_762x51_Ball {
-        airFriction=-0.00055262;
+        airFriction=-0.00053638;
         caliber=2.0;
         hit=19;
         typicalSpeed=853;
@@ -604,15 +604,17 @@ class CfgAmmo {
         ACE_barrelLengths[]={304.8, 406.4, 609.6};
     };
     class B_570x28_Ball: BulletBase {
-        ACE_caliber = 5.7;
+        ACE_caliber = 5.7; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf
         ACE_bulletLength = 21.6; // http://blog.thejustnation.org/2011/04/5-7x28mm-ammo-review/
         ACE_bulletMass = 2; // based on the SS190
-        ACE_ballisticCoefficients[] = {0.177}; //http://m.delphiforums.com/autogun/messages/5267/7
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.084}; // https://www.thefirearmblog.com/blog/2016/10/24/modern-personal-defense-weapon-calibers-4-6x30mm-hk/
         ACE_velocityBoundaries[] = {};
-        ACE_standardAtmosphere = "ASM"; // 50/50 chance to get it right
+        ACE_standardAtmosphere = "ICAO";
         ACE_dragModel = 7;
-        ACE_muzzleVelocities[] = {716,776};
-        ACE_barrelLengths[] = {264,407};
+        ACE_muzzleVelocities[] = {716, 776}; // at 21°C, 715-775 m/s at 15°C according with the 50Rnd_570x28_SMG_03 initSpeed
+        ACE_barrelLengths[] = {264, 407};
+        airFriction = -0.002619; // default BI value -0.001412
     };
     class B_19mm_HE: BulletBase {
         tracerScale = 1;
