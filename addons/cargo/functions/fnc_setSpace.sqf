@@ -42,10 +42,10 @@ _vehicle setVariable [QGVAR(hasCargo), _space > 0, true];
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 private _totalCargo = 0;
 {
-    _totalCargo += _x call FUNC(getSizeItem)
+    _totalCargo = _totalCargo + (_x call FUNC(getSizeItem))
 } foreach _loaded;
 // Set the new space
-_vehicle setVariable [QGVAR(space), _space-_cargo, true];
+_vehicle setVariable [QGVAR(space), _space-_totalCargo, true];
 
 // If no cargo space no need for cargo menu
 if (_space <= 0) exitWith {};
