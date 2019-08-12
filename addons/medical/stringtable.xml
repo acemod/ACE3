@@ -29,7 +29,7 @@
             <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht ()Überprüfung alle 15 Sekunden)</German>
             <Japanese>安定状態にある人が覚醒する確率です。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
-            <French>La probabilité pour qu'une unité inconsciente en état stable puisse reprendre conscience (état vérifié toutes les 15 secondes).</French>
+            <French>La probabilité pour qu'une unité en état stable puisse reprendre conscience (état vérifié toutes les 15 secondes).</French>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -41,7 +41,7 @@
             <English>Limp when unit has leg wounds...(todo)</English>
             <Russian>Хромота, когда юнит имеет ранения ног...</Russian>
             <Japanese>足を負傷時に引きずって歩くようにします・・・(TODO)</Japanese>
-            <French>Une unité boite si elle est blessée à la jambe...</French>
+            <French>Une unité boite si elle est blessée à la jambe... (TODO)</French>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on open wounds</English>
@@ -65,7 +65,7 @@
             <English>Limp fractures... (todo)</English>
             <Russian>Хромота при переломах...</Russian>
             <Japanese>骨折時は引きずって歩くようにします・・・ (TODO)</Japanese>
-            <French>Une unité boite en cas de fracture...</French>
+            <French>Une unité boite en cas de fracture... (TODO)</French>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints fully heal fractures</English>
@@ -119,7 +119,7 @@
             <German>Verhindere direkten Tod</German>
             <Czech>Zabránit okamžité smrti</Czech>
             <Portuguese>Previnir morte instantânea</Portuguese>
-            <French>Empêcher la mort subite</French>
+            <French>Empêcher la mort instantanée</French>
             <Hungarian>Azonnali halál kiiktatása</Hungarian>
             <Italian>Previeni morte istantanea</Italian>
             <Japanese>即死の防止</Japanese>
@@ -247,7 +247,7 @@
             <German>Verursacht ein Fahrzeugunfall Verletzungen</German>
             <Czech>Dostane jednotka poškození při autonehodě?</Czech>
             <Portuguese>As unidades recebem dano de uma batida de veículo?</Portuguese>
-            <French>Les unités subissent-elles des dégats en cas d'accidents en véhicule ?</French>
+            <French>Définit si les unités subissent des dégâts en cas d'accidents en véhicule.</French>
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
             <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか?</Japanese>
