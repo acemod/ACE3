@@ -327,6 +327,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
+            <German>Rolling-Shutter-Effekt</German>
             <Japanese>シャッター効果</Japanese>
             <Chinesesimp>快门效果</Chinesesimp>
             <Chinese>快門效果</Chinese>
@@ -337,6 +338,7 @@
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
+            <German>Rolling-Shutter-Effekt bei Müdungsfeuer</German>
             <Japanese>発射炎が作るローリング シャッター効果です</Japanese>
             <Chinesesimp>枪械开火时产生瞬间快门效果</Chinesesimp>
             <Chinese>槍開火時瞬間產生快門效果</Chinese>

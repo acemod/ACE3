@@ -1,77 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Damage">
-        <Container name="Settings">
-            <Key ID="STR_ACE_Medical_damage_subCategory">
-                <English>Damage Threshold</English>
-                <Japanese>損傷のしきい値</Japanese>
-                <Russian>Порог повреждения</Russian>
-            </Key>
-            <Key ID="STR_ACE_Medical_damage_playerDamageThreshold_DisplayName">
-                <English>Player Damage</English>
-                <Russian>Урон игроку</Russian>
-                <Polish>Próg obrażeń graczy</Polish>
-                <Spanish>Daño de jugador</Spanish>
-                <German>Spielerschaden</German>
-                <Czech>Poškození hráče</Czech>
-                <Portuguese>Dano do jogador</Portuguese>
-                <French>Dégats du joueur</French>
-                <Hungarian>Játékos sérülés</Hungarian>
-                <Italian>Danno Giocatore</Italian>
-                <Japanese>プレイヤーへの損傷</Japanese>
-                <Korean>플레이어 부상</Korean>
-                <Chinesesimp>玩家伤害</Chinesesimp>
-                <Chinese>玩家傷害</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_damage_playerDamageThreshold_Description">
-                <English>What is the damage a player can take before being killed?</English>
-                <Russian>Какой уровень урона необходим, чтобы убить игрока?</Russian>
-                <Polish>Jaki jest próg obrażeń, jakie gracz może otrzymać zanim zostanie zabity?</Polish>
-                <Spanish>¿Cuál es el daño que un jugador puede sufrir antes de morir?</Spanish>
-                <German>Wie viel Schaden kann ein Spieler erleiden, bevor er getötet wird?</German>
-                <Czech>Jaké poškození může hráč dostat než bude zabit?</Czech>
-                <Portuguese>Qal é o dano que um jogador pode sofrer antes de morrer?</Portuguese>
-                <French>Quels dégâts peut subir un joueur avant d'être tué</French>
-                <Hungarian>Mennyi sérülést szenvedhet el egy játékos, mielőtt meghal?</Hungarian>
-                <Italian>Quanto è il danno che un giocatore può sostenere prima di essere ucciso?</Italian>
-                <Japanese>プレイヤーが死に始める前に損傷を受けるようにしますか?</Japanese>
-                <Korean>얼마정도의 부상을 플레이어가 죽기 전까지 버틸 수 있습니까?</Korean>
-                <Chinesesimp>玩家死亡前所能承受的伤害程度</Chinesesimp>
-                <Chinese>玩家死亡前所能承受的傷害程度</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_damage_AIDamageThreshold_DisplayName">
-                <English>AI Damage</English>
-                <Russian>Урон ботам</Russian>
-                <Polish>Próg obrażeń AI</Polish>
-                <Spanish>Daño IA</Spanish>
-                <German>KI-Schaden</German>
-                <Czech>Poškození AI</Czech>
-                <Portuguese>Dano da IA</Portuguese>
-                <French>Dégâts des IA</French>
-                <Hungarian>AI sérülés</Hungarian>
-                <Italian>Danno AI</Italian>
-                <Japanese>AI への損傷</Japanese>
-                <Korean>인공지능 부상</Korean>
-                <Chinesesimp>AI伤害</Chinesesimp>
-                <Chinese>AI傷害</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_damage_AIDamageThreshold_Description">
-                <English>What is the damage an AI can take before being killed?</English>
-                <Russian>Какой уровень урона необходим, чтобы убить бота?</Russian>
-                <Polish>Jaki jest próg obrażeń, jakie AI może otrzymać zanim zostanie zabite?</Polish>
-                <Spanish>¿Cuál es el daño que la IA puede sufrir antes de morir?</Spanish>
-                <German>Wie viel Schaden kann eine KI erleiden, bis sie getötet wird?</German>
-                <Czech>Jaké poškození může AI dostat než bude zabito?</Czech>
-                <Portuguese>Qual é o dano que uma IA pode sofrer antes de morrer?</Portuguese>
-                <French>Quels dégâts peut subir une IA avant d'être tuée</French>
-                <Hungarian>Mennyi sérülést szenvedhet el egy AI, mielőtt meghal?</Hungarian>
-                <Italian>Quanto è il danno che un'IA può sostenere prima di essere uccisa?</Italian>
-                <Japanese>AI が死に始める前に損傷を受けるようにしますか?</Japanese>
-                <Korean>얼마정도의 부상을 인공지능이 죽기 전까지 버틸 수 있습니까?</Korean>
-                <Chinesesimp>AI 死亡前所能承受的伤害程度</Chinesesimp>
-                <Chinese>AI 死亡前所能承受的傷害程度</Chinese>
-            </Key>
-        </Container>
+        <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_DisplayName">
+            <English>Player Critical Damage Threshold</English>
+            <Japanese>プレイヤーのクリティカル ダメージしきい値</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
+            <English>Sets the amount of damage a player can receive before going unconscious.</English>
+            <Japanese>プレイヤーが気絶になる前に受けられるダメージ量を決定できます。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
+            <English>AI Critical Damage Threshold</English>
+            <Japanese>AI のクリティカル ダメージしきい値</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
+            <English>Sets the amount of damage an AI unit can receive before going unconscious.</English>
+            <Japanese>AI が気絶になる前に受けられるダメージ量を決定できます。</Japanese>
+        </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
             <German>Kratzer</German>

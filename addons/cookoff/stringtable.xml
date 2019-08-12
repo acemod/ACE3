@@ -15,11 +15,13 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_name">
             <English>Damage handling and turret effects</English>
+            <German>Schadensberechnung und Geschützturmeffekte</German>
             <Japanese>損傷処理と砲塔の効果</Japanese>
             <Russian>Обработка урона и эффектов срыва башни</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_tooltip">
             <English>Changes damage handling for cook off and turret explosion effects</English>
+            <German>Ändert die Schadensberechnung für die Durchzündung und die Explosionseffekte des Geschützturmes</German>
             <Japanese>誘爆の損傷処理と砲塔の爆発効果を変更します。</Japanese>
             <Russian>Изменяет обработку урона для возгорания и эффекта срыва башни</Russian>
         </Key>

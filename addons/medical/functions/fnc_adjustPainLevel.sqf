@@ -2,6 +2,7 @@
 /*
  * Author: PabstMirror
  * Public interface to allow external modules to safely adjust pain levels.
+ * Added pain can be positive or negative (Note: ignores painCoefficient setting)
  *
  * Arguments:
  * 0: The patient <OBJECT>

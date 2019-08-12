@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="medical_blood">
-        <Key ID="STR_ACE_medical_blood_subCategory">
-            <English>Bleeding Effect</English>
-            <Japanese>出血中の効果</Japanese>
-            <Russian>Эффекты кровотечения</Russian>
+    <Package name="Medical_Blood">
+        <Key ID="STR_ACE_Medical_Blood_SubCategory">
+            <English>Blood</English>
+            <French>Sang</French>
+            <Spanish>Sangre</Spanish>
+            <Italian>Sangue</Italian>
+            <Polish>Krew</Polish>
+            <Russian>Кровь</Russian>
+            <German>Blut</German>
+            <Czech>Krev</Czech>
+            <Portuguese>Sangue</Portuguese>
+            <Korean>혈흔</Korean>
+            <Japanese>血痕</Japanese>
         </Key>
-        <Key ID="STR_ACE_medical_blood_enabledFor_OnlyPlayers">
-            <English>Only Players</English>
-            <Japanese>プレイヤーのみ</Japanese>
-            <German>Nur Spieler</German>
-            <Korean>오직 플레이어만</Korean>
-            <Polish>Tylko gracze</Polish>
-            <French>Joueurs seulement</French>
-            <Italian>Solo Giocatori</Italian>
-            <Chinesesimp>只有玩家</Chinesesimp>
-            <Chinese>只有玩家</Chinese>
-            <Russian>Только игроки</Russian>
-        </Key>
-        <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_DisplayName">
+        <Key ID="STR_ACE_Medical_Blood_EnabledFor_DisplayName">
             <English>Enable Blood Drops</English>
             <Japanese>血痕を有効化</Japanese>
             <German>Aktiviere Blutspritzer</German>
@@ -30,17 +26,37 @@
             <Chinese>開啟血液滴落效果</Chinese>
             <Russian>Разрешить капли крови</Russian>
         </Key>
-        <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_Description">
-            <English>Enable or disable Blood Drops created on bleeding and taking damage</English>
-            <Japanese>ダメージを受けたり、出血していると出る血痕の有効か無効化</Japanese>
-            <German>Aktiviere oder deaktiviere Blutspritzer, die durch Blutungen oder bei Schadensnahme entstehen.</German>
-            <Polish>Włącz lub wyłącz pozostawianie śladów krwi na ziemi kiedy postać odnosi obrażenia bądź krwawi</Polish>
-            <French>(Dés)active les gouttes de sang lors d'un saignement ou de blessure</French>
-            <Italian>Abilita o disabilita la Perdite di Sangue create sanguinando e prendendo danno</Italian>
-            <Chinesesimp>开启后, 会让受伤时伤口有血液滴落的效果</Chinesesimp>
-            <Chinese>開啟後, 會讓受傷時傷口有血液滴落的效果</Chinese>
-            <Korean>출혈이나 부상을 입었을 때, 떨어지는 혈액을 활성화 하거나 비활성화 합니다.</Korean>
-            <Russian>Включает или отключает капли крови при кровотечении и получении урона</Russian>
+        <Key ID="STR_ACE_Medical_Blood_EnabledFor_Description">
+            <English>Enables the creation of blood drops when units are bleeding or take damage.</English>
+            <Japanese>ユニットが出血かダメージを受けた時に、血痕を残すようにします。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
+            <English>Max Blood Objects</English>
+            <Japanese>最大血痕数</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
+            <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
+            <Japanese>生成される血痕オブジェクト数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
+            <English>Blood Lifetime</English>
+            <Japanese>血痕の寿命</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
+            <English>Controls the lifetime of blood drop objects.</English>
+            <Japanese>血痕オブジェクトの寿命を決定します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
+            <English>Only Players</English>
+            <Japanese>プレイヤーのみ</Japanese>
+            <German>Nur Spieler</German>
+            <Korean>오직 플레이어만</Korean>
+            <Polish>Tylko gracze</Polish>
+            <French>Joueurs seulement</French>
+            <Italian>Solo Giocatori</Italian>
+            <Chinesesimp>只有玩家</Chinesesimp>
+            <Chinese>只有玩家</Chinese>
+            <Russian>Только игроки</Russian>
         </Key>
     </Package>
 </Project>
