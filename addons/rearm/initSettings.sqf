@@ -17,3 +17,12 @@
     true, // isGlobal
     {[QGVAR(supply), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(distance), "SLIDER",
+    [localize LSTRING(distance_DisplayName), localize LSTRING(distance_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize LSTRING(DisplayName)],
+    [10, 100, 20, 0],
+    true, // isGlobal
+    {[QGVAR(supply), _this] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;

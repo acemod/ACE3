@@ -612,5 +612,13 @@
             <Italian>Il rifornimento delle munizioni (-1 per disabilitarlo)</Italian>
             <Russian>Объем боеприпасов для перевооружения (-1 для отмены)</Russian>
         </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_distance_DisplayName">
+            <English>Rearm distance</English>
+            <French>Distance de réarmement</French>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_distance_Description">
+            <English>The maximum distance a vehicle can be rearmed at</English>
+            <French>Distance maximale à laquelle un véhicle peut être réarmé</French>
+        </Key>
     </Package>
 </Project>
