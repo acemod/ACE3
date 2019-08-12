@@ -36,10 +36,20 @@ private _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
 
 (GVAR(scopeAdjust) select _weaponIndex) params ["_maxVertical", "_verticalIncrement", "_maxHorizontal", "_horizontalIncrement"];
+
 if (_majorStep) then {
-    _verticalIncrement = _verticalIncrement * 10;
-    _horizontalIncrement = _horizontalIncrement * 10;
+    if(1/_verticalIncrement == floor(1/_verticalIncrement)) then {
+        _verticalIncrement = 1;
+    } else {
+        _verticalIncrement = _verticalIncrement * 5;
+    };
+    if(1/_horizontalIncrement == floor(1/_horizontalIncrement)) then {
+        _horizontalIncrement = 1;
+    } else {
+        _horizontalIncrement = _horizontalIncrement * 5;
+    };
 };
+
 TRACE_4("",_maxVertical,_verticalIncrement,_maxHorizontal,_horizontalIncrement);
 
 switch (_turretAndDirection) do {
