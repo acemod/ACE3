@@ -161,7 +161,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
             <English>Set Name</English>
-            <German>Setze Namen</German>
+            <German>Name der Diavorführung</German>
             <Polish>Ustaw nazwę</Polish>
             <Japanese>名前設定</Japanese>
             <French>Définir le nom</French>
@@ -214,6 +214,15 @@
             <Korean>매 슬라이드의 지속시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设:0 (自动换图已禁用)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_CoverImage_DisplayName">
+            <English>Slideshow Cover Image</English>
+            <German>Titelbild der Diavorführung</German>
+        </Key>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_CoverImage_Description">
+            <English>The Cover Image will be used as the first image to be displayed on the slideshow objects. When using multiple sets only the last one will be used.</English>
+            <German>Das Titelbild wird als erstes Bild auf der Projektionsfläche dargestellt. Wenn mehrere Diavorführungen für eine Steuereinheit definiert sind, wird nur das Letzte verwendet.</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>

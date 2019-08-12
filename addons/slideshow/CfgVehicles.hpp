@@ -47,6 +47,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 0;
             };
+            class CoverImage {
+                displayName = CSTRING(CoverImage_DisplayName);
+                description = CSTRING(CoverImage_Description);
+                typeName = "STRING";
+                defaultValue = "";
+            };
         };
         class ModuleDescription {
             description = CSTRING(Description);

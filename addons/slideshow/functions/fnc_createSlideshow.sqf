@@ -10,12 +10,13 @@
  * 3: Action Names <ARRAY>
  * 4: Slide Duration <NUMBER> (0 disables automatic transitions)
  * 5: Set Name <STRING> (default: localized "Slides")
+ * 6: Cover Image Path <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5, "My Slides"] call ace_slideshow_fnc_createSlideshow
+ * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5, "My Slides", "images\cover.paa"] call ace_slideshow_fnc_createSlideshow
  *
  * Public: Yes
  */
@@ -26,7 +27,8 @@ params [
     ["_images", [], [[]] ],
     ["_names", [], [[]] ],
     ["_duration", 0, [0]],
-    ["_setName", localize LSTRING(Interaction), [""]]
+    ["_setName", localize LSTRING(Interaction), [""]],
+    ["_coverImage", "", [""]]
 ];
 
 // Verify data
@@ -47,8 +49,9 @@ TRACE_5("Information",_objects,_controllers,_images,_names,_setName);
 if (isServer) then {
     // Default images on whiteboards (first image)
     {
-        _x setObjectTextureGlobal [0, _images select 0];
-    } count _objects;
+        private _image = [_coverImage, _images select 0] select {_coverImage != ""};
+        _x setObjectTextureGlobal [0, _image];
+    } forEach _objects;
 };
 
 // Number of slideshows (multiple modules support)
