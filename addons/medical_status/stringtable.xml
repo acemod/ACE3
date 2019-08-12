@@ -6,6 +6,7 @@
             <German>Zustand</German>
             <Japanese>状態</Japanese>
             <Russian>Статус</Russian>
+            <French>Statut</French>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
@@ -15,7 +16,7 @@
             <German>Verblutungsmultiplikator</German>
             <Czech>Koeficient krvácení</Czech>
             <Portuguese>Coeficiente de sangramento</Portuguese>
-            <French>Coéfficient de saignement</French>
+            <French>Coefficient de saignement</French>
             <Hungarian>Vérzési koefficiens</Hungarian>
             <Italian>Coefficiente sanguinamento</Italian>
             <Japanese>出血の係数</Japanese>
@@ -31,7 +32,7 @@
             <German>Multiplikator um die Verblutungsgeschwindigkeit zu verändern</German>
             <Czech>Koeficient rychlosti krvácení</Czech>
             <Portuguese>Coeficiente para modificar a velocidade do sangramento</Portuguese>
-            <French>Modifie le débit des saignements</French>
+            <French>Coefficient permettant de définir la vitesse du saignement.</French>
             <Hungarian>Egy szorzó a vérzés sebességének szabályozására</Hungarian>
             <Italian>Coefficiente che modifica la velocità di sanguinamento</Italian>
             <Japanese>この係数では出血速度を変更できます</Japanese>
@@ -47,7 +48,7 @@
             <German>Schmerzmultiplikator</German>
             <Czech>Koeficient bolesti</Czech>
             <Portuguese>Coeficiente de dor</Portuguese>
-            <French>Coéfficient de douleur</French>
+            <French>Coefficient de douleur</French>
             <Hungarian>Fájdalmi koefficiens</Hungarian>
             <Italian>Coefficiente dolore</Italian>
             <Japanese>痛みの係数</Japanese>
@@ -63,7 +64,7 @@
             <German>Multiplikator um die Schmerzintensität zu verändern</German>
             <Czech>Koeficient intenzity bolesti</Czech>
             <Portuguese>Coeficiente para modificar a instensidade de dor</Portuguese>
-            <French>Modifie l'intensité de la douleur</French>
+            <French>Coefficient permettant de définir l'intensité de la douleur.</French>
             <Hungarian>Egy szorzó a fájdalom erősségének szabályozására</Hungarian>
             <Italian>Coefficiente che modifica l'intensità del dolore</Italian>
             <Japanese>この係数では痛みの強さを変更できます</Japanese>
@@ -76,12 +77,14 @@
             <German>Transfusions Fließrate</German>
             <Japanese>IV 輸血の流量</Japanese>
             <Russian>Скорость внутривенного переливания</Russian>
+            <French>Débit de transfusion IV</French>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
             <German>Wie schnell der Effekt der Transfusion eintritt</German>
             <Japanese>IV による輸血速度を変更できます</Japanese>
             <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
+            <French>Définit la vitesse à laquelle le liquide s'écoule des poches de perfusion. La variation du volume de poche IV est calculée selon la  formule suivante :\n intervalle de temps (s) * variation IV par seconde (4,1667 ml/s) * débit (ce coefficient).</French>
         </Key>
     </Package>
 </Project>

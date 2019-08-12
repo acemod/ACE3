@@ -6,6 +6,7 @@
             <German>Feedback</German>
             <Japanese>フィードバック</Japanese>
             <Russian>Реакция на ранения</Russian>
+            <French>Réaction aux blessures</French>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -14,7 +15,7 @@
             <Russian>Визуальный эффект боли</Russian>
             <Italian>Pain Effect Type</Italian>
             <Spanish>Tipo de efecto de dolor</Spanish>
-            <French>Type d'effet de douleur</French>
+            <French>Effet de douleur</French>
             <Hungarian>Fájdalom-effekt típusa</Hungarian>
             <Portuguese>Tipo do efeito de dor</Portuguese>
             <Czech>Typ bolesti - efekt</Czech>
@@ -24,18 +25,21 @@
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
             <English>Selects the used pain effect type.</English>
             <Japanese>痛みの効果の種類を選択できます。</Japanese>
+            <French>Permet de choisir quel effet provoque la douleur.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
             <German>Weißes blinken</German>
             <Japanese>白く点滅</Japanese>
             <Russian>Белые вспышки</Russian>
+            <French>Flash blancs</French>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
             <German>Wiederkehrende Unschärfe</German>
             <Japanese>ボケの強弱</Japanese>
             <Russian>Пульсирующее размытие</Russian>
+            <French>Pulsations floues</French>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
@@ -46,7 +50,7 @@
                 <German>Schreie aktivieren</German>
                 <Czech>Povolit křik</Czech>
                 <Portuguese>Ativar gritos</Portuguese>
-                <French>Activer les hurlements</French>
+                <French>Activer les cris</French>
                 <Hungarian>Kiáltások engedélyezése</Hungarian>
                 <Italian>Abilita Grida</Italian>
                 <Japanese>叫びを有効化</Japanese>
@@ -62,7 +66,7 @@
                 <German>Aktiviere Schreie bei verletzten Einheiten</German>
                 <Czech>Povolit křičení zraněných jednotek</Czech>
                 <Portuguese>Ativa gritos para unidades feridas</Portuguese>
-                <French>Active les hurlements d'unités blessées</French>
+                <French>Si cette option est activée, les unités blessées crieront, voire hurleront sous l'effet de la douleur.</French>
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
                 <Italian>Abilita Grida da parte delle unità ferite</Italian>
                 <Japanese>負傷したユニットを叫ぶようにします。</Japanese>

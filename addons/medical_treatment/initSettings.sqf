@@ -157,15 +157,6 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(allowSelfStitch),
-    "LIST",
-    [LSTRING(AllowSelfStitch_DisplayName), LSTRING(AllowSelfStitch_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
-    true
-] call CBA_settings_fnc_init;
-
-[
     QGVAR(cprSuccessChance),
     "SLIDER",
     [LSTRING(cprSuccessChance_DisplayName), LSTRING(cprSuccessChance_Description)],

@@ -287,7 +287,7 @@ class GVAR(actions) {
         category = "advanced";
         items[] = {"ACE_surgicalKit"};
         treatmentLocations = QGVAR(locationSurgicalKit);
-        allowSelfTreatment = QGVAR(allowSelfStitch);
+        allowSelfTreatment = 0;
         medicRequired = QGVAR(medicSurgicalKit);
         treatmentTime = QFUNC(getStitchTime);
         condition = QFUNC(canStitch);
