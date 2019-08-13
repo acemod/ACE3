@@ -247,6 +247,14 @@
             <Japanese>縫合キットの使用後に消費するかどうかを決定します。</Japanese>
             <French>Définit si la trousse chirurgicale doit être à usage unique.</French>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
+            <English>Self Stitching</English>
+            <French>Suturer soi-même</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_Description">
+            <English>Enables the use of surgical kits to stitch oneself.</English>
+            <French>Autorise l'utilisation de la trousse chirugicale sur soi-même.</French>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
