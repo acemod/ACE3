@@ -619,6 +619,7 @@
         <Key ID="STR_ACE_Rearm_RearmSettings_distance_Description">
             <English>The maximum distance a vehicle can be rearmed at</English>
             <French>Distance maximale à laquelle un véhicle peut être réarmé</French>
+            <German>Die maximale Distanz, über die ein Fahrzeug Aufmunitioniert werden kann</German>
         </Key>
     </Package>
 </Project>
