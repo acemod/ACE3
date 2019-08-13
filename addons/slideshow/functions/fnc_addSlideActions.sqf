@@ -22,15 +22,12 @@
 params ["_objects", "_images", "_names", "_controller", "_currentSlideshow"];
 
 private _actions = [];
-
-// fix action order by going through the array backwards
-for "_i" from (count _images - 1) to 0 step -1 do
 {
     _actions pushBack
     [
         [
-            format [QGVAR(slideshow%1_slide%2), _currentSlideshow, _i + 1],
-            _names select _i,
+            format [QGVAR(slideshow%1_slide%2), _currentSlideshow, _forEachIndex + 1],
+            _names select _forEachIndex,
             "",
             {
                 (_this select 2) params ["_objects", "_image"];
@@ -45,7 +42,7 @@ for "_i" from (count _images - 1) to 0 step -1 do
         [],
         _controller
     ];
-};
+} forEach _images;
 
 TRACE_1("Children actions",_actions);
 
