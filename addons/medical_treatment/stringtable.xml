@@ -11,7 +11,7 @@
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Litter">
             <English>Litter</English>
             <Japanese>廃棄物</Japanese>
-            <French>Litre</French>
+            <French>Détritus</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
@@ -132,7 +132,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use Epinephrine.</English>
             <Japanese>アドレナリンの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Une formation médicale est requise pour pouvoir utiliser l'épinéphrine.</French>
+            <French>Une qualification médicale est requise pour pouvoir utiliser l'épinéphrine.</French>
             <Turkish>.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
@@ -174,7 +174,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
             <Japanese>応急処置キットの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Une formation médicale est requise pour pouvoir utiliser la trousse sanitaire.</French>
+            <French>Une qualification médicale est requise pour pouvoir utiliser la trousse sanitaire.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
             <English>Locations PAK</English>
@@ -225,7 +225,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a Surgical Kit.</English>
             <Japanese>縫合キットの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Une formation médicale est requise pour pouvoir utiliser une trousse chirurgicale.</French>
+            <French>Une qualification médicale est requise pour pouvoir utiliser une trousse chirurgicale.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
@@ -299,7 +299,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
             <Japanese>生成される最大廃棄物数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
-            <French>Définit le nombre maximal de détritus pouvant être affichées.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
+            <French>Définit le nombre maximal de détritus pouvant être affichés.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
@@ -399,7 +399,7 @@
             <Italian>Addestramento Medico</Italian>
             <German>Sanitätsausbildung</German>
             <Spanish>Entrenamiento médico</Spanish>
-            <French>Formation médicale</French>
+            <French>Qualification médicale</French>
             <Czech>Lékařský výcvik</Czech>
             <Portuguese>Treino médico</Portuguese>
             <Russian>Медицинская подготовка</Russian>
@@ -448,7 +448,7 @@
             <German>Keine</German>
             <Czech>Žádný</Czech>
             <Portuguese>Nada</Portuguese>
-            <French>Aucun</French>
+            <French>Aucune</French>
             <Hungarian>Nincs</Hungarian>
             <Italian>Nessuno</Italian>
             <Japanese>なし</Japanese>
@@ -528,7 +528,7 @@
             <German>Arzt (Nur erweitertes Sanitätssystem)</German>
             <Czech>Doktor (Pouze pokročilý zdravotníci)</Czech>
             <Portuguese>Doutor (Somente médicos avançados)</Portuguese>
-            <French>Médecin (seulement les médecins de haute formation)</French>
+            <French>Médecin (uniquement en médecine avancée)</French>
             <Hungarian>Doktor (csak fejlett orvosok)</Hungarian>
             <Italian>Dottore (Solo Medici Avanzati)</Italian>
             <Japanese>医師 (アドバンスド医療のみ)</Japanese>
@@ -732,7 +732,7 @@
             <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or slowing blood flow and therefore decreasing loss of blood.</English>
             <Russian>Жгут используется для прижатия сосудов к костным выступам, которое приводит к остановке или значительному уменьшению кровотечения</Russian>
             <Spanish>Dispositivo utilizado para eliminar el pulso distal y de ese modo controlar la pérdida de sangre</Spanish>
-            <French>Dispositif permettant de comprimer fortement les veines et artères, ce qui a pour effet de ralentir voire d'arrêter la circulation sanguine ; et donc de diminuer drastiquement les pertes de sang.</French>
+            <French>Dispositif permettant de comprimer fortement les veines et artères, ce qui a pour effet de ralentir, voire d'arrêter la circulation sanguine.\nDiminue donc drastiquement les pertes de sang.</French>
             <Polish>Opaska uciskowa CAT służy do tamowanie krwotoków w sytuacji zranienia kończyn z masywnym krwawieniem tętniczym lub żylnym.</Polish>
             <German>Ein Hilfsmittel, das Druck auf Venen und Arterien ausübt und so den Blutfluss verringert.</German>
             <Hungarian>Egy szűkítőeszköz, mely a vénás és artériás nyomás keringés helyi összenyomására szolgál, ezzel lelassítva vagy megállítva az adott területen a vérkeringést. Ez csökkenti a vérvesztés mértékét.</Hungarian>
@@ -933,7 +933,7 @@
             <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with decreasing positive outcomes.</English>
             <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты сердечных сокращений и купированию аллергических реакций (анафилактического шока). Применяется при остановке сердца с уменьшенной вероятностью благоприятного исхода.</Russian>
             <Spanish>Medicamento que dilata los bronquios, aumenta la frecuencia cardiaca y contrarresta los efectos de las reacciones alérgicas (anafilaxis). Se utiliza en caso de paros cardiacos repentinos.</Spanish>
-            <French>Médicament qui agit sur la réponse sympathique afin de dilater les bronches, d'augmenter le rythme cardiaque et contrer les effets provoqués par les réactions allergiques (anaphylaxie).\nUtilisé dans les scénarios d'arrêt cardiaque soudain avec des résultats décroissants.</French>
+            <French>Médicament qui agit sur la réponse sympathique afin de dilater les bronches, augmenter le rythme cardiaque et contrer les effets provoqués par les réactions allergiques (anaphylaxie).\nUtilisé dans les scénarios d'arrêt cardiaque soudain, avec des résultats décroissants.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
             <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen (Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
@@ -2444,7 +2444,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_1">
             <English>You find a blood pressure of %2/%3</English>
-            <French>Vous avez mesuré une tension de %2/%3</French>
+            <French>La tension est de %2/%3</French>
             <Russian>Артериальное давление %2/%3</Russian>
             <Spanish>La Presión Arterial es %2/%3</Spanish>
             <Hungarian>A vérnyomás %2/%3</Hungarian>
@@ -2460,7 +2460,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_2">
             <English>You find a low blood pressure</English>
-            <French>Tension basse</French>
+            <French>La tension est basse</French>
             <Russian>Давление низкое</Russian>
             <Spanish>La presión arterial es baja</Spanish>
             <Polish>Wyczuwasz niskie ciśnienie krwi</Polish>
@@ -2476,7 +2476,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
-            <French>Tension normale</French>
+            <French>La tension est normale</French>
             <Russian>Давление нормальное</Russian>
             <Spanish>La presión arterial es normal</Spanish>
             <Polish>Wyczuwasz normalne ciśnienie krwi</Polish>
@@ -2492,7 +2492,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
-            <French>Tension élevée</French>
+            <French>La tension est élevée</French>
             <Russian>Давление высокое</Russian>
             <Spanish>La presión arterial es alta</Spanish>
             <Polish>Wyczuwasz wysokie ciśnienie krwi</Polish>
@@ -2508,7 +2508,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
-            <French>Aucune tension</French>
+            <French>Il n'y a aucune pression sanguine</French>
             <Russian>Давления нет</Russian>
             <Spanish>No hay presión arterial</Spanish>
             <Polish>Nie wyczuwasz ciśnienia krwi</Polish>
@@ -2591,7 +2591,7 @@
             <German>Kein Blutdruck</German>
             <Italian>Nessuna Pressione Sanguigna</Italian>
             <Russian>Артериальное давление отсутствует</Russian>
-            <French>néant</French>
+            <French>Aucune pression sanguine</French>
             <Polish>Brak ciśnienia krwi</Polish>
             <Spanish>Sin presión arterial</Spanish>
             <Hungarian>Nincs vérnyomás</Hungarian>
@@ -2655,7 +2655,7 @@
             <German>%1 kontrollierte Herzfrequenz: %2</German>
             <Italian>%1 Controllata Frequenza Cardiaca: %2</Italian>
             <Russian>%1 проверил пульс: %2</Russian>
-            <French>%1 a vérifié le pouls de : %2</French>
+            <French>%1 a vérifié le pouls : %2</French>
             <Polish>%1 sprawdził tętno: %2</Polish>
             <Spanish>%1 verificado el ritmo cardíaco: %2</Spanish>
             <Hungarian>%1 ellenőrizte a szívverés-számot: %2</Hungarian>
@@ -2674,7 +2674,7 @@
             <German>Keine</German>
             <Czech>Žádný</Czech>
             <Portuguese>Nada</Portuguese>
-            <French>aucun</French>
+            <French>Aucun pouls</French>
             <Hungarian>Nincs</Hungarian>
             <Italian>Niente</Italian>
             <Japanese>なし</Japanese>
@@ -2687,7 +2687,7 @@
             <German>Schwach</German>
             <Italian>Lento</Italian>
             <Russian>Слабый</Russian>
-            <French>lent</French>
+            <French>Lent</French>
             <Polish>Słabe</Polish>
             <Spanish>Débil</Spanish>
             <Hungarian>Gyenge</Hungarian>
@@ -2703,7 +2703,7 @@
             <German>Normal</German>
             <Italian>Normale</Italian>
             <Russian>Нормальный</Russian>
-            <French>normal</French>
+            <French>Normal</French>
             <Polish>Normalne</Polish>
             <Spanish>Normal</Spanish>
             <Hungarian>Normális</Hungarian>
@@ -2719,7 +2719,7 @@
             <German>Stark</German>
             <Italian>Veloce</Italian>
             <Russian>Сильный</Russian>
-            <French>rapide</French>
+            <French>Rapide</French>
             <Polish>Silne</Polish>
             <Spanish>Fuerte</Spanish>
             <Hungarian>Erős</Hungarian>
@@ -2732,7 +2732,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_1">
             <English>You find a Heart Rate of %2</English>
-            <French>Vous mesurez un rythme cardiaque de %2 battements par minute</French>
+            <French>Le rythme cardiaque est de %2</French>
             <Russian>Пульс %2 уд./мин.</Russian>
             <Spanish>El ritmo cardíaco es de %2</Spanish>
             <Polish>Wyczuwasz tętno o wartości %2</Polish>
@@ -2748,7 +2748,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
-            <French>Vous mesurez un rythme cardiaque lent</French>
+            <French>Rythme cardiaque lent</French>
             <Russian>Пульс слабый</Russian>
             <Spanish>El ritmo cardíaco es débil</Spanish>
             <Polish>Wyczuwasz słabe tętno</Polish>
@@ -2764,7 +2764,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
-            <French>Vous mesurez un rythme cardiaque rapide</French>
+            <French>Rythme cardiaque rapide</French>
             <Russian>Пульс учащенный</Russian>
             <Spanish>El ritmo cardíaco está acelerado</Spanish>
             <Polish>Wyczuwasz silne tętno</Polish>
@@ -2780,7 +2780,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
-            <French>Vous mesurez un rythme cardiaque normal</French>
+            <French>Rythme cardiaque normal</French>
             <Russian>Пульс в норме</Russian>
             <Spanish>El ritmo cardíaco es bueno</Spanish>
             <Polish>Wyczuwasz normalne tętno</Polish>
@@ -2796,7 +2796,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
-            <French>Vous ne trouvez aucun pouls</French>
+            <French>Aucun pouls</French>
             <Russian>Пульс не прощупывается</Russian>
             <Spanish>No tiene ritmo cardíaco</Spanish>
             <Polish>Wyczuwasz brak tętna</Polish>
@@ -3087,7 +3087,7 @@
             <Russian>Наложение швов</Russian>
             <Spanish>Suturando</Spanish>
             <German>Nähen</German>
-            <French>Sutures</French>
+            <French>Suture</French>
             <Polish>Szycie</Polish>
             <Hungarian>Összevarrás</Hungarian>
             <Italian>Suturando</Italian>
@@ -3439,7 +3439,7 @@
             <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura hitpoints completamente bendati</Italian>
-            <French>Soigner les plaies entièrement bandées</French>
+            <French>Guérir les plaies entièrement bandées</French>
             <German>Heilt vollständig bandagierte Trefferpunkte</German>
             <Japanese>包帯は体力を完全に回復する</Japanese>
             <Korean>붕대를 감은후 체력을 회복함</Korean>

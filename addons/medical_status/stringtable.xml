@@ -84,7 +84,7 @@
             <German>Wie schnell der Effekt der Transfusion eintritt</German>
             <Japanese>IV による輸血速度を変更できます</Japanese>
             <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
-            <French>Définit la vitesse à laquelle le liquide s'écoule des poches de perfusion. La variation du volume de poche IV est calculée selon la  formule suivante :\n intervalle de temps (s) * variation IV par seconde (4,1667 ml/s) * débit (ce coefficient).</French>
+            <French>Définit la vitesse à laquelle le liquide s'écoule des poches de perfusion.\nLa variation du volume de poche IV est calculée selon la  formule suivante :\n intervalle de temps (s) * variation IV par seconde (4,1667 ml/s) * débit (ce coefficient).</French>
         </Key>
     </Package>
 </Project>

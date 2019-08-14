@@ -39,7 +39,7 @@
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
             <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
             <Japanese>生成される血痕オブジェクト数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
-            <French>Définit le nombre maximal de traces de sangs pouvant être affichées. Une quantité excessive peut engendrer une baisse de FPS.</French>
+            <French>Définit le nombre maximal de traces de sangs pouvant être affichées.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
             <English>Blood Lifetime</English>
