@@ -101,7 +101,7 @@ class CfgWorldTexture: CfgWorlds {
 
     //Livonia
     class Enoch {
-        surfaceTextureBasePath = "A3\Map_Enoch\Data\";
+        surfaceTextureBasePath = "A3\Map_Enoch\Data";
         suffix = "_co.paa";
     };
 
