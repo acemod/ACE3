@@ -99,6 +99,12 @@ class CfgWorldTexture: CfgWorlds {
         camouflageObjects[] = {"ca\plants_E\Clutter\c_Brush_Hard_EP1.p3d"};
     };
 
+    //Livonia
+    class Enoch {
+        surfaceTextureBasePath = "A3\Map_Enoch\Data\";
+        suffix = "_co.paa";
+    };
+
     //G.O.S Al Rayak
     class pja310 {
         surfaceTextureBasePath = "mak\projetA3-10\Data";
@@ -371,7 +377,7 @@ class CfgWorldTexture: CfgWorlds {
     //Isla Duala
     class isladuala3 {
         surfaceTextureBasePath = "ibr\isladuala3\data";
-        suffix = "detail_co.paa";
+        suffix = "_co.paa";
         camouflageObjects[] = {};
     };
 

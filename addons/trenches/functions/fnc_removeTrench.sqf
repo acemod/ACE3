@@ -17,7 +17,6 @@
  * Public: No
  */
 
-systemChat str _this;
 params ["_trench", "_unit", ["_switchingDigger", false, [true]]];
 TRACE_2("removeTrench", _trench, _unit, _switchingDigger);
 

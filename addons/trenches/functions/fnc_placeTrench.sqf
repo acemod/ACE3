@@ -58,7 +58,6 @@ GVAR(digPFH) = [{
     // Update trench position
     GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
     private _basePos = _unit modelToWorld [0,2,0];
-
     private _angle = GVAR(digDirection) + getDir _unit;
 
     // _v1 forward from the player, _v2 to the right, _v3 points away from the ground
@@ -84,8 +83,8 @@ GVAR(digPFH) = [{
             #endif
         };
     };
-//    _basePos set [2, (_basePos select 2) + _minzoffset + _offset - 0.1];
-    _basePos set [2, (_basePos select 2) + _minzoffset - 0.1];
+
+    _basePos set [2, (_basePos select 2) + _minzoffset + _offset - 0.1];
     TRACE_2("",_minzoffset,_offset);
     _trench setPosASL _basePos;
     _trench setVectorDirAndUp [_v1, _v3];
