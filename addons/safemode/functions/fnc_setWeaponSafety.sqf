@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Brostrom.A
  * Safe or unsafe the given weapon based on weapon state; locked or unlocked.
