@@ -356,23 +356,48 @@ class CfgWeapons {
 
     // AKS
     class arifle_AKS_base_F: Rifle_Base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 160.02;
-        ACE_barrelLength = 206.5;
+        initSpeed = -1; // 735 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 160;
+        ACE_barrelLength = 210;
     };
 
     // AKM
     class arifle_AKM_base_F: Rifle_Base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 199.898;
-        ACE_barrelLength = 414.02;
+        initSpeed = -1; // 715 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 240;
+        ACE_barrelLength = 415;
     };
 
-    // AK12
+    // AK15,AK15K,RPK (AK12)
     class arifle_AK12_base_F: Rifle_Base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 199.898;
-        ACE_barrelLength = 414.02;
+        initSpeed = -1; // 715 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 240;
+        ACE_barrelLength = 415;
+    };
+
+    class arifle_AK12U_base_F: arifle_AK12_base_F {
+        initSpeed = -0.937063; // 715*0.937063= 670 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 240;
+        ACE_barrelLength = 314;
+    };
+
+    class arifle_RPK12_base_F: arifle_AK12_base_F {
+        initSpeed = -1.041958; // 715*1.041958= 745 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 240;
+        ACE_barrelLength = 590;
+    };
+
+    // MSBS GROT (Promet)
+    class arifle_MSBS65_base_F: Rifle_Base_F {
+        initSpeed = -0.971576; // 774*0.971576= 752 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 228.6;
+        ACE_barrelLength = 406.4; // 16"
+    };
+
+    class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F {
+        initSpeed = -1.007752; // 774*1.007752= 780 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 228.6;
+        ACE_barrelLength = 508; // 20"
     };
 
     // QBZ-95-1
