@@ -3950,5 +3950,277 @@
             <Chinesesimp>口径: 5.7mm&lt;br /&gt;发数: 50&lt;br /&gt;使用于: P90</Chinesesimp>
             <Korean>구경: 5.7mm&lt;br /&gt;장탄수: 50&lt;br /&gt;사용됨: P90</Korean>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AKM">
+            <Chinese>AKM</Chinese>
+            <French>AKM</French>
+            <Spanish>AKM</Spanish>
+            <Italian>AKM</Italian>
+            <Polish>AKM</Polish>
+            <Russian>AKM</Russian>
+            <German>AKM</German>
+            <Czech>AKM</Czech>
+            <English>AKM</English>
+            <Portuguese>AKM</Portuguese>
+            <Korean>AKM</Korean>
+            <Chinesesimp>AKM</Chinesesimp>
+            <Japanese>AKM</Japanese>
+            <Turkish>AKM</Turkish>
+            <Hungarian>AKM</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AKS">
+            <Chinese>AKS-74U</Chinese>
+            <French>AKS-74U</French>
+            <Spanish>AKS-74U</Spanish>
+            <Italian>AKS-74U</Italian>
+            <Polish>AKS-74U</Polish>
+            <Russian>AKS-74U</Russian>
+            <German>AKS-74U</German>
+            <Czech>AKS-74U</Czech>
+            <English>AKS-74U</English>
+            <Portuguese>AKS-74U</Portuguese>
+            <Korean>AKS-74U</Korean>
+            <Chinesesimp>AKS-74U</Chinesesimp>
+            <Japanese>AKS-74U</Japanese>
+            <Turkish>AKS-74U</Turkish>
+            <Hungarian>AKS-74U</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12">
+            <Chinese>AK-15</Chinese>
+            <French>AK-15</French>
+            <Spanish>AK-15</Spanish>
+            <Italian>AK-15</Italian>
+            <Polish>AK-15</Polish>
+            <Russian>AK-15</Russian>
+            <German>AK-15</German>
+            <Czech>AK-15</Czech>
+            <English>AK-15</English>
+            <Portuguese>AK-15</Portuguese>
+            <Korean>AK-15</Korean>
+            <Chinesesimp>AK-15</Chinesesimp>
+            <Japanese>AK-15</Japanese>
+            <Turkish>AK-15</Turkish>
+            <Hungarian>AK-15</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_lush">
+            <Chinese>AK-15 (草木茂盛)</Chinese>
+            <French>AK-15 (Camo Forêt)</French>
+            <Spanish>AK-15 (exuberante)</Spanish>
+            <Italian>AK-15 (verdeggiante)</Italian>
+            <Polish>AK-15 (region z bujną roślinnością)</Polish>
+            <Russian>AK-15 (обильная растительность)</Russian>
+            <German>AK-15 (Grün)</German>
+            <Czech>AK-15 (bujný porost)</Czech>
+            <English>AK-15 (Lush)</English>
+            <Portuguese>AK-15 (Exuberante)</Portuguese>
+            <Korean>AK-15 (초목)</Korean>
+            <Chinesesimp>AK-15 (繁茂)</Chinesesimp>
+            <Japanese>AK-15 (緑地)</Japanese>
+            <Turkish>AK-15 (Gür)</Turkish>
+            <Hungarian>AK-15 (Lush)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_arid">
+            <Chinese>AK-15 (乾燥氣候)</Chinese>
+            <French>AK-15 (Camo Désert)</French>
+            <Spanish>AK-15 (árido)</Spanish>
+            <Italian>AK-15 (arido)</Italian>
+            <Polish>AK-15 (region suchy)</Polish>
+            <Russian>AK-15 (засушливая местность)</Russian>
+            <German>AK-15 (Trocken)</German>
+            <Czech>AK-15 (suchý porost)</Czech>
+            <English>AK-15 (Arid)</English>
+            <Portuguese>AK-15 (Árido)</Portuguese>
+            <Korean>AK-15 (건조)</Korean>
+            <Chinesesimp>AK-15 (干旱)</Chinesesimp>
+            <Japanese>AK-15 (乾燥地帯)</Japanese>
+            <Turkish>AK-15 (Kurak)</Turkish>
+            <Hungarian>AK-15 (Arid)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL">
+            <Chinese>AK-15 GL</Chinese>
+            <French>AK-15 GL</French>
+            <Spanish>AK-15 GL</Spanish>
+            <Italian>AK-15 GL</Italian>
+            <Polish>AK-15 GL</Polish>
+            <Russian>AK-15 GL</Russian>
+            <German>AK-15 GL</German>
+            <Czech>AK-15 GL</Czech>
+            <English>AK-15 GL</English>
+            <Portuguese>AK-15 GL</Portuguese>
+            <Korean>AK-15 GL</Korean>
+            <Chinesesimp>AK-15 GL</Chinesesimp>
+            <Japanese>AK-15 GL</Japanese>
+            <Turkish>AK-15 GL</Turkish>
+            <Hungarian>AK-15 GL</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_lush">
+            <Chinese>AK-15 GL (草木茂盛)</Chinese>
+            <French>AK-15 GL (Camo Forêt)</French>
+            <Spanish>AK-15 GL (exuberante)</Spanish>
+            <Italian>AK-15 GL (verdeggiante)</Italian>
+            <Polish>AK-15 GL (region z bujną roślinnością)</Polish>
+            <Russian>AK-15 GL (обильная растительность)</Russian>
+            <German>AK-15 GL (Grün)</German>
+            <Czech>AK-15 GL (bujný porost)</Czech>
+            <English>AK-15 GL (Lush)</English>
+            <Portuguese>AK-15 GL (Exuberante)</Portuguese>
+            <Korean>AK-15 GL (초목)</Korean>
+            <Chinesesimp>AK-15 GL (繁茂)</Chinesesimp>
+            <Japanese>AK-15 GL (緑地)</Japanese>
+            <Turkish>AK-15 GL (Gür)</Turkish>
+            <Hungarian>AK-15 GL (Lush)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_arid">
+            <Chinese>AK-15 GL (乾燥氣候)</Chinese>
+            <French>AK-15 GL (Camo Désert)</French>
+            <Spanish>AK-15 GL (árido)</Spanish>
+            <Italian>AK-15 GL (arido)</Italian>
+            <Polish>AK-15 GL (region suchy)</Polish>
+            <Russian>AK-15 GL (засушливая местность)</Russian>
+            <German>AK-15 GL (Trocken)</German>
+            <Czech>AK-15 GL (suchý porost)</Czech>
+            <English>AK-15 GL (Arid)</English>
+            <Portuguese>AK-15 GL (Árido)</Portuguese>
+            <Korean>AK-15 GL (건조)</Korean>
+            <Chinesesimp>AK-15 GL (干旱)</Chinesesimp>
+            <Japanese>AK-15 GL (乾燥地帯)</Japanese>
+            <Turkish>AK-15AK-15 GL (Kurak)</Turkish>
+            <Hungarian>AK-15 GL (Arid)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12U">
+            <Chinese>AK-15K</Chinese>
+            <French>AK-15K</French>
+            <Spanish>AK-15K</Spanish>
+            <Italian>AK-15K</Italian>
+            <Polish>AK-15K</Polish>
+            <Russian>AK-15K</Russian>
+            <German>AK-15K</German>
+            <Czech>AK-15K</Czech>
+            <English>AK-15K</English>
+            <Portuguese>AK-15K</Portuguese>
+            <Korean>AK-15K</Korean>
+            <Chinesesimp>AK-15K</Chinesesimp>
+            <Japanese>AK-15K</Japanese>
+            <Turkish>AK-15K</Turkish>
+            <Hungarian>AK-15K</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12U_lush">
+            <Chinese>AK-15K (草木茂盛)</Chinese>
+            <French>AK-15K (Camo Forêt)</French>
+            <Spanish>AK-15K (exuberante)</Spanish>
+            <Italian>AK-15K (verdeggiante)</Italian>
+            <Polish>AK-15K (region z bujną roślinnością)</Polish>
+            <Russian>AK-15K (обильная растительность)</Russian>
+            <German>AK-15K (Grün)</German>
+            <Czech>AK-15K (bujný porost)</Czech>
+            <English>AK-15K (Lush)</English>
+            <Portuguese>AK-15K (Exuberante)</Portuguese>
+            <Korean>AK-15K (초목)</Korean>
+            <Chinesesimp>AK-15K (繁茂)</Chinesesimp>
+            <Japanese>AK-15K (緑地)</Japanese>
+            <Turkish>AK-15K (Gür)</Turkish>
+            <Hungarian>AK-15K (Lush)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12U_arid">
+            <Chinese>AK-15K (乾燥氣候)</Chinese>
+            <French>AK-15K (Camo Désert)</French>
+            <Spanish>AK-15K (árido)</Spanish>
+            <Italian>AK-15K (arido)</Italian>
+            <Polish>AK-15K (region suchy)</Polish>
+            <Russian>AK-15K (засушливая местность)</Russian>
+            <German>AK-15K (Trocken)</German>
+            <Czech>AK-15K (suchý porost)</Czech>
+            <English>AK-15K (Arid)</English>
+            <Portuguese>AK-15K (Árido)</Portuguese>
+            <Korean>AK-15K (건조)</Korean>
+            <Chinesesimp>AK-15K (干旱)</Chinesesimp>
+            <Japanese>AK-15K (乾燥地帯)</Japanese>
+            <Turkish>AK-15K (Kurak)</Turkish>
+            <Hungarian>AK-15K (Arid)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_RPK12">
+            <Chinese>RPK</Chinese>
+            <French>RPK</French>
+            <Spanish>RPK</Spanish>
+            <Italian>RPK</Italian>
+            <Polish>RPK</Polish>
+            <Russian>RPK</Russian>
+            <German>RPK</German>
+            <Czech>RPK</Czech>
+            <English>RPK</English>
+            <Portuguese>RPK</Portuguese>
+            <Korean>RPK</Korean>
+            <Chinesesimp>RPK</Chinesesimp>
+            <Japanese>RPK</Japanese>
+            <Turkish>RPK</Turkish>
+            <Hungarian>RPK</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_RPK12_lush">
+            <Chinese>RPK (草木茂盛)</Chinese>
+            <French>RPK (Camo Forêt)</French>
+            <Spanish>RPK (exuberante)</Spanish>
+            <Italian>RPK (verdeggiante)</Italian>
+            <Polish>RPK (region z bujną roślinnością)</Polish>
+            <Russian>RPK (обильная растительность)</Russian>
+            <German>RPK (Grün)</German>
+            <Czech>RPK (bujný porost)</Czech>
+            <English>RPK (Lush)</English>
+            <Portuguese>RPK (Exuberante)</Portuguese>
+            <Korean>RPK (초목)</Korean>
+            <Chinesesimp>RPK (繁茂)</Chinesesimp>
+            <Japanese>RPK (緑地)</Japanese>
+            <Turkish>RPK (Gür)</Turkish>
+            <Hungarian>RPK (Lush)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_RPK12_arid">
+            <Chinese>RPK (乾燥氣候)</Chinese>
+            <French>RPK (Camo Désert)</French>
+            <Spanish>RPK (árido)</Spanish>
+            <Italian>RPK (arido)</Italian>
+            <Polish>RPK (region suchy)</Polish>
+            <Russian>RPK (засушливая местность)</Russian>
+            <German>RPK (Trocken)</German>
+            <Czech>RPK (suchý porost)</Czech>
+            <English>RPK (Arid)</English>
+            <Portuguese>RPK (Árido)</Portuguese>
+            <Korean>RPK (건조)</Korean>
+            <Chinesesimp>RPK (干旱)</Chinesesimp>
+            <Japanese>RPK (乾燥地帯)</Japanese>
+            <Turkish>RPK (Kurak)</Turkish>
+            <Hungarian>RPK (Arid)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_hunter">
+            <Chinese>M14 (Classic)</Chinese>
+            <French>M14 (Classique)</French>
+            <Spanish>M14 (Classic)</Spanish>
+            <Italian>M14 (Classic)</Italian>
+            <Polish>M14 (Classic)</Polish>
+            <Russian>M14 (Classic)</Russian>
+            <German>M14 (Classic)</German>
+            <Czech>M14 (Classic)</Czech>
+            <English>M14 (Classic)</English>
+            <Portuguese>M14 (Classic)</Portuguese>
+            <Korean>M14 (Classic)</Korean>
+            <Chinesesimp>M14 (Classic)</Chinesesimp>
+            <Japanese>M14 (Classic)</Japanese>
+            <Turkish>M14 (Classic)</Turkish>
+            <Hungarian>M14 (Classic)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_LMG_Mk200_black">
+            <Chinese>斯通納99輕機槍(黑色)</Chinese>
+            <French>Stoner 99 LMG (Noir)</French>
+            <Spanish>Stoner 99 LMG (negro)</Spanish>
+            <Italian>Stoner 99 LMG (nero)</Italian>
+            <Polish>Stoner 99 LMG (czarny)</Polish>
+            <Russian>Stoner 99 LMG (черный)</Russian>
+            <German>Stoner 99 LMG (Schwarz)</German>
+            <Czech>Stoner 99 LMG (černá)</Czech>
+            <English>Stoner 99 LMG (Black)</English>
+            <Portuguese>Stoner 99 LMG (preto)</Portuguese>
+            <Korean>Stoner 99 LMG (흑색)</Korean>
+            <Chinesesimp>斯通纳99轻机枪(黑色)</Chinesesimp>
+            <Japanese>ストーナー 99 LMG(黒)</Japanese>
+            <Turkish>Stoner 99 LMG (Siyah)</Turkish>
+            <Hungarian>Stoner 99 Könnyűgéppuska (Black)</Hungarian>
+        </Key>
     </Package>
 </Project>
