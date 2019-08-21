@@ -4,7 +4,7 @@ params ["_ctrl"];
 
 private _speed = (ctrlParent _ctrl) ctrlCreate [QGVAR(speed), -1];
 
-private _units = (vehicle ACE_player) call FUNC(speedUnits);
+private _units = cameraOn call FUNC(speedUnits);
 _units call FUNC(speedInfo) params ["_unitText", "_ratio"];
 
 ((ctrlParent _speed) displayCtrl 1004) ctrlSetText _unitText;
@@ -28,5 +28,5 @@ private _settingEH = ["CBA_SettingChanged", {
     };
     _ctrl ctrlSetFade 1;
     _ctrl ctrlCommit 0;
-    _speed ctrlSetText ((abs (speed vehicle ACE_player / GVAR(speedRatio))) toFixed 0);
+    _speed ctrlSetText ((abs (speed cameraOn / GVAR(speedRatio))) toFixed 0);
 }, 0, [_ctrl, _speed, _settingEH]] call CBA_fnc_addPerFrameHandler;

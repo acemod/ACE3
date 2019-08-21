@@ -4,7 +4,7 @@ params ["_ctrl"];
 
 private _alt = (ctrlParent _ctrl) ctrlCreate [QGVAR(alt), -1];
 
-private _units = (vehicle ACE_player) call FUNC(altUnits);
+private _units = cameraOn call FUNC(altUnits);
 _units call FUNC(altInfo) params ["_unitText", "_ratio"];
 
 ((ctrlParent _alt) displayCtrl 1005) ctrlSetText _unitText;
@@ -28,7 +28,7 @@ private _settingEH = ["CBA_SettingChanged", {
     };
     _ctrl ctrlSetFade 1;
     _ctrl ctrlCommit 0;
-    private _vehicle = vehicle ACE_player;
+    private _vehicle = cameraOn;
     private _rawAlt = ((getPosATL _vehicle) select 2) + (0 min (getTerrainHeightASL getPos _vehicle));
     private _altValue = _rawAlt / GVAR(altRatio);
     if (_altValue < 10) then {
