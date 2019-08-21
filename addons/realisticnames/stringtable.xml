@@ -4220,7 +4220,279 @@
             <Chinesesimp>斯通纳99轻机枪(黑色)</Chinesesimp>
             <Japanese>ストーナー 99 LMG(黒)</Japanese>
             <Turkish>Stoner 99 LMG (Siyah)</Turkish>
-            <Hungarian>Stoner 99 Könnyűgéppuska (Black)</Hungarian>
+            <Hungarian>Stoner 99 Könnyűgéppuska (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65">
+            <Chinese>MSBS Grot</Chinese>
+            <French>MSBS Grot</French>
+            <Spanish>MSBS Grot</Spanish>
+            <Italian>MSBS Grot</Italian>
+            <Polish>MSBS Grot</Polish>
+            <Russian>MSBS Grot</Russian>
+            <German>MSBS Grot</German>
+            <Czech>MSBS Grot</Czech>
+            <English>MSBS Grot</English>
+            <Portuguese>MSBS Grot</Portuguese>
+            <Korean>MSBS Grot</Korean>
+            <Chinesesimp>MSBS Grot</Chinesesimp>
+            <Japanese>MSBS Grot</Japanese>
+            <Turkish>MSBS Grot</Turkish>
+            <Hungarian>MSBS Grot</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_black">
+            <Chinese>MSBS Grot(黑色)</Chinese>
+            <French>MSBS Grot (Noir)</French>
+            <Spanish>MSBS Grot (negro)</Spanish>
+            <Italian>MSBS Grot (nero)</Italian>
+            <Polish>MSBS Grot (czarny)</Polish>
+            <Russian>MSBS Grot (черный)</Russian>
+            <German>MSBS Grot (Schwarz)</German>
+            <Czech>MSBS Grot (černá)</Czech>
+            <English>MSBS Grot (Black)</English>
+            <Portuguese>MSBS Grot (preto)</Portuguese>
+            <Korean>MSBS Grot (흑색)</Korean>
+            <Chinesesimp>MSBS Grot(黑色)</Chinesesimp>
+            <Japanese>MSBS Grot(黒)</Japanese>
+            <Turkish>MSBS Grot (Siyah)</Turkish>
+            <Hungarian>MSBS Grot (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_camo">
+            <Chinese>MSBS Grot(迷彩型)</Chinese>
+            <French>MSBS Grot (Camo)</French>
+            <Spanish>MSBS Grot (Camuflaje)</Spanish>
+            <Italian>MSBS Grot (Camo)</Italian>
+            <Polish>MSBS Grot (kamuflaż)</Polish>
+            <Russian>MSBS Grot (Камо)</Russian>
+            <German>MSBS Grot (Tarnmuster)</German>
+            <Czech>MSBS Grot (Kamufláž)</Czech>
+            <English>MSBS Grot (Camo)</English>
+            <Portuguese>MSBS Grot (Camo)</Portuguese>
+            <Korean>MSBS Grot (위장)</Korean>
+            <Chinesesimp>MSBS Grot(迷彩)</Chinesesimp>
+            <Japanese>MSBS Grot (カモフラージュ)</Japanese>
+            <Turkish>MSBS Grot (Kamuflaj)</Turkish>
+            <Hungarian>MSBS Grot (Terepmintás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_sand">
+            <Chinese>MSBS Grot(沙子)</Chinese>
+            <French>MSBS Grot (Sable)</French>
+            <Spanish>MSBS Grot (Arena)</Spanish>
+            <Italian>MSBS Grot (Sabbia)</Italian>
+            <Polish>MSBS Grot (piaskowy)</Polish>
+            <Russian>MSBS Grot (Песочный)</Russian>
+            <German>MSBS Grot (sandfarben)</German>
+            <Czech>MSBS Grot (Písková)</Czech>
+            <English>MSBS Grot (Sand)</English>
+            <Portuguese>MSBS Grot (Deserto)</Portuguese>
+            <Korean>MSBS Grot (모래)</Korean>
+            <Chinesesimp>MSBS Grot(沙色)</Chinesesimp>
+            <Japanese>MSBS Grot (砂地)</Japanese>
+            <Turkish>MSBS Grot (Kum)</Turkish>
+            <Hungarian>MSBS Grot (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL">
+            <Chinese>MSBS Grot GL</Chinese>
+            <French>MSBS Grot GL</French>
+            <Spanish>MSBS Grot GL</Spanish>
+            <Italian>MSBS Grot GL</Italian>
+            <Polish>MSBS Grot GL</Polish>
+            <Russian>MSBS Grot GL</Russian>
+            <German>MSBS Grot GL</German>
+            <Czech>MSBS Grot GL</Czech>
+            <English>MSBS Grot GL</English>
+            <Portuguese>MSBS Grot GL</Portuguese>
+            <Korean>MSBS Grot GL</Korean>
+            <Chinesesimp>MSBS Grot GL</Chinesesimp>
+            <Japanese>MSBS Grot GL</Japanese>
+            <Turkish>MSBS Grot GL</Turkish>
+            <Hungarian>MSBS Grot GL</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_black">
+            <Chinese>MSBS Grot GL(黑色)</Chinese>
+            <French>MSBS Grot GL (Noir)</French>
+            <Spanish>MSBS Grot GL (negro)</Spanish>
+            <Italian>MSBS Grot GL (nero)</Italian>
+            <Polish>MSBS Grot GL (czarny)</Polish>
+            <Russian>MSBS Grot GL (черный)</Russian>
+            <German>MSBS Grot GL (Schwarz)</German>
+            <Czech>MSBS Grot GL (černá)</Czech>
+            <English>MSBS Grot GL (Black)</English>
+            <Portuguese>MSBS Grot GL (preto)</Portuguese>
+            <Korean>MSBS Grot GL (흑색)</Korean>
+            <Chinesesimp>MSBS Grot GL(黑色)</Chinesesimp>
+            <Japanese>MSBS Grot GL(黒)</Japanese>
+            <Turkish>MSBS Grot GL (Siyah)</Turkish>
+            <Hungarian>MSBS Grot GL (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_camo">
+            <Chinese>MSBS Grot GL(迷彩型)</Chinese>
+            <French>MSBS Grot GL (Camo)</French>
+            <Spanish>MSBS Grot GL (Camuflaje)</Spanish>
+            <Italian>MSBS Grot GL (Camo)</Italian>
+            <Polish>MSBS Grot GL (kamuflaż)</Polish>
+            <Russian>MSBS Grot GL (Камо)</Russian>
+            <German>MSBS Grot GL (Tarnmuster)</German>
+            <Czech>MSBS Grot GL (Kamufláž)</Czech>
+            <English>MSBS Grot GL (Camo)</English>
+            <Portuguese>MSBS Grot GL (Camo)</Portuguese>
+            <Korean>MSBS Grot GL (위장)</Korean>
+            <Chinesesimp>MSBS Grot GL(迷彩)</Chinesesimp>
+            <Japanese>MSBS Grot GL (カモフラージュ)</Japanese>
+            <Turkish>MSBS Grot GL (Kamuflaj)</Turkish>
+            <Hungarian>MSBS Grot GL (Terepmintás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
+            <Chinese>MSBS Grot GL(沙子)</Chinese>
+            <French>MSBS Grot GL (Sable)</French>
+            <Spanish>MSBS Grot GL (Arena)</Spanish>
+            <Italian>MSBS Grot GL (Sabbia)</Italian>
+            <Polish>MSBS Grot GL (piaskowy)</Polish>
+            <Russian>MSBS Grot GL (Песочный)</Russian>
+            <German>MSBS Grot GL (sandfarben)</German>
+            <Czech>MSBS Grot GL (Písková)</Czech>
+            <English>MSBS Grot GL (Sand)</English>
+            <Portuguese>MSBS Grot GL (Deserto)</Portuguese>
+            <Korean>MSBS Grot GL (모래)</Korean>
+            <Chinesesimp>MSBS Grot GL(沙色)</Chinesesimp>
+            <Japanese>MSBS Grot GL (砂地)</Japanese>
+            <Turkish>MSBS Grot GL (Kum)</Turkish>
+            <Hungarian>MSBS Grot GL (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark">
+            <Chinese>MSBS Grot MR</Chinese>
+            <French>MSBS Grot MR</French>
+            <Spanish>MSBS Grot MR</Spanish>
+            <Italian>MSBS Grot MR</Italian>
+            <Polish>MSBS Grot MR</Polish>
+            <Russian>MSBS Grot MR</Russian>
+            <German>MSBS Grot MR</German>
+            <Czech>MSBS Grot MR</Czech>
+            <English>MSBS Grot MR</English>
+            <Portuguese>MSBS Grot MR</Portuguese>
+            <Korean>MSBS Grot MR</Korean>
+            <Chinesesimp>MSBS Grot MR</Chinesesimp>
+            <Japanese>MSBS Grot MR</Japanese>
+            <Turkish>MSBS Grot MR</Turkish>
+            <Hungarian>MSBS Grot MR</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_black">
+            <Chinese>MSBS Grot MR(黑色)</Chinese>
+            <French>MSBS Grot MR (Noir)</French>
+            <Spanish>MSBS Grot MR (negro)</Spanish>
+            <Italian>MSBS Grot MR (nero)</Italian>
+            <Polish>MSBS Grot MR (czarny)</Polish>
+            <Russian>MSBS Grot MR (черный)</Russian>
+            <German>MSBS Grot MR (Schwarz)</German>
+            <Czech>MSBS Grot MR (černá)</Czech>
+            <English>MSBS Grot MR (Black)</English>
+            <Portuguese>MSBS Grot MR (preto)</Portuguese>
+            <Korean>MSBS Grot MR (흑색)</Korean>
+            <Chinesesimp>MSBS Grot MR(黑色)</Chinesesimp>
+            <Japanese>MSBS Grot MR(黒)</Japanese>
+            <Turkish>MSBS Grot MR (Siyah)</Turkish>
+            <Hungarian>MSBS Grot MR (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_camo">
+            <Chinese>MSBS Grot MR(迷彩型)</Chinese>
+            <French>MSBS Grot MR (Camo)</French>
+            <Spanish>MSBS Grot MR (Camuflaje)</Spanish>
+            <Italian>MSBS Grot MR (Camo)</Italian>
+            <Polish>MSBS Grot MR (kamuflaż)</Polish>
+            <Russian>MSBS Grot MR (Камо)</Russian>
+            <German>MSBS Grot MR (Tarnmuster)</German>
+            <Czech>MSBS Grot MR (Kamufláž)</Czech>
+            <English>MSBS Grot MR (Camo)</English>
+            <Portuguese>MSBS Grot MR (Camo)</Portuguese>
+            <Korean>MSBS Grot MR (위장)</Korean>
+            <Chinesesimp>MSBS Grot MR(迷彩)</Chinesesimp>
+            <Japanese>MSBS Grot MR (カモフラージュ)</Japanese>
+            <Turkish>MSBS Grot MR (Kamuflaj)</Turkish>
+            <Hungarian>MSBS Grot MR (Terepmintás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_sand">
+            <Chinese>MSBS Grot MR(沙子)</Chinese>
+            <French>MSBS Grot MR (Sable)</French>
+            <Spanish>MSBS Grot MR (Arena)</Spanish>
+            <Italian>MSBS Grot MR (Sabbia)</Italian>
+            <Polish>MSBS Grot MR (piaskowy)</Polish>
+            <Russian>MSBS Grot MR (Песочный)</Russian>
+            <German>MSBS Grot MR (sandfarben)</German>
+            <Czech>MSBS Grot MR (Písková)</Czech>
+            <English>MSBS Grot MR (Sand)</English>
+            <Portuguese>MSBS Grot MR (Deserto)</Portuguese>
+            <Korean>MSBS Grot MR (모래)</Korean>
+            <Chinesesimp>MSBS Grot MR(沙色)</Chinesesimp>
+            <Japanese>MSBS Grot MR (砂地)</Japanese>
+            <Turkish>MSBS Grot MR (Kum)</Turkish>
+            <Hungarian>MSBS Grot MR (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS">
+            <Chinese>MSBS Grot SG</Chinese>
+            <French>MSBS Grot SG</French>
+            <Spanish>MSBS Grot SG</Spanish>
+            <Italian>MSBS Grot SG</Italian>
+            <Polish>MSBS Grot SG</Polish>
+            <Russian>MSBS Grot SG</Russian>
+            <German>MSBS Grot SG</German>
+            <Czech>MSBS Grot SG</Czech>
+            <English>MSBS Grot SG</English>
+            <Portuguese>MSBS Grot SG</Portuguese>
+            <Korean>MSBS Grot SG</Korean>
+            <Chinesesimp>MSBS Grot SG</Chinesesimp>
+            <Japanese>MSBS Grot SG</Japanese>
+            <Turkish>MSBS Grot SG</Turkish>
+            <Hungarian>MSBS Grot SG</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_black">
+            <Chinese>MSBS Grot SG(黑色)</Chinese>
+            <French>MSBS Grot SG (Noir)</French>
+            <Spanish>MSBS Grot SG (negro)</Spanish>
+            <Italian>MSBS Grot SG (nero)</Italian>
+            <Polish>MSBS Grot SG (czarny)</Polish>
+            <Russian>MSBS Grot SG (черный)</Russian>
+            <German>MSBS Grot SG (Schwarz)</German>
+            <Czech>MSBS Grot SG (černá)</Czech>
+            <English>MSBS Grot SG (Black)</English>
+            <Portuguese>MSBS Grot SG (preto)</Portuguese>
+            <Korean>MSBS Grot SG (흑색)</Korean>
+            <Chinesesimp>MSBS Grot SG(黑色)</Chinesesimp>
+            <Japanese>MSBS Grot SG(黒)</Japanese>
+            <Turkish>MSBS Grot SG (Siyah)</Turkish>
+            <Hungarian>MSBS Grot SG (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_camo">
+            <Chinese>MSBS Grot SG(迷彩型)</Chinese>
+            <French>MSBS Grot SG (Camo)</French>
+            <Spanish>MSBS Grot SG (Camuflaje)</Spanish>
+            <Italian>MSBS Grot SG (Camo)</Italian>
+            <Polish>MSBS Grot SG (kamuflaż)</Polish>
+            <Russian>MSBS Grot SG (Камо)</Russian>
+            <German>MSBS Grot SG (Tarnmuster)</German>
+            <Czech>MSBS Grot SG (Kamufláž)</Czech>
+            <English>MSBS Grot SG (Camo)</English>
+            <Portuguese>MSBS Grot SG (Camo)</Portuguese>
+            <Korean>MSBS Grot SG (위장)</Korean>
+            <Chinesesimp>MSBS Grot SG(迷彩)</Chinesesimp>
+            <Japanese>MSBS Grot SG (カモフラージュ)</Japanese>
+            <Turkish>MSBS Grot SG (Kamuflaj)</Turkish>
+            <Hungarian>MSBS Grot SG (Terepmintás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
+            <Chinese>MSBS Grot SG(沙子)</Chinese>
+            <French>MSBS Grot SG (Sable)</French>
+            <Spanish>MSBS Grot SG (Arena)</Spanish>
+            <Italian>MSBS Grot SG (Sabbia)</Italian>
+            <Polish>MSBS Grot SG (piaskowy)</Polish>
+            <Russian>MSBS Grot SG (Песочный)</Russian>
+            <German>MSBS Grot SG (sandfarben)</German>
+            <Czech>MSBS Grot SG (Písková)</Czech>
+            <English>MSBS Grot SG (Sand)</English>
+            <Portuguese>MSBS Grot SG (Deserto)</Portuguese>
+            <Korean>MSBS Grot SG (모래)</Korean>
+            <Chinesesimp>MSBS Grot SG(沙色)</Chinesesimp>
+            <Japanese>MSBS Grot SG (砂地)</Japanese>
+            <Turkish>MSBS Grot SG (Kum)</Turkish>
+            <Hungarian>MSBS Grot SG (Homok)</Hungarian>
         </Key>
     </Package>
 </Project>
