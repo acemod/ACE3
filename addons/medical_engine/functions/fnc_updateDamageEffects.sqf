@@ -23,7 +23,7 @@ if (!local _unit) exitWith { ERROR("Unit not local or null"); };
 private _isLimping = false;
 
 if (EGVAR(medical,fractures) > 0) then {
-    private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
+    private _fractures = GET_FRACTURES(_unit);
     TRACE_1("",_fractures);
     if (((_fractures select 4) == 1) || {(_fractures select 5) == 1}) then {
         TRACE_1("limping because of fracture",_fractures);
@@ -46,9 +46,9 @@ if (EGVAR(medical,fractures) > 0) then {
 };
 
 if (!_isLimping && {EGVAR(medical,limping) > 0}) then {
-    private _woundsToCheck = _unit getVariable [QEGVAR(medical,openWounds), []];
+    private _woundsToCheck = GET_OPEN_WOUNDS(_unit);
     if (EGVAR(medical,limping) == 2) then {
-        _woundsToCheck = _woundsToCheck + (_unit getVariable [QEGVAR(medical,bandagedWounds), []]); // do not append
+        _woundsToCheck = _woundsToCheck + GET_BANDAGED_WOUNDS(_unit); // do not append
     };
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "", "_xDamage"];

@@ -70,8 +70,6 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            onFired = QFUNC(onFired);
-
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 30;           // Angle from the shooter's view that can track the missile
             seekerAccuracy = 1;         // seeker accuracy multiplier

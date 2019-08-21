@@ -7,11 +7,11 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Triage info <ARRAY>
- *  0: Status ID <NUMBER>
- *  1: Name <STRING>
- *  2: Color <ARRAY>
- *  3: Text color <ARRAY>
+ * Triage Info <ARRAY>
+ *   0: Status ID <NUMBER>
+ *   1: Name <STRING>
+ *   2: Color <ARRAY>
+ *   3: Text Color <ARRAY>
  *
  * Example:
  * [player] call ace_medical_treatment_fnc_getTriageStatus

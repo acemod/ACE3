@@ -1,31 +1,32 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Apply a splint to the patient
+ * Local callback for applying a splint to a patient.
  *
  * Arguments:
- * 0: The medic <OBJECT>
- * 1: The patient <OBJECT>
- * 2: Body part index <NUMBER>
+ * 0: Medic <OBJECT>
+ * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player, cursorObject, 4] call ace_medical_treatment_fnc_splintLocal
+ * [player, cursorObject, "LeftLeg"] call ace_medical_treatment_fnc_splintLocal
  *
  * Public: No
  */
 
-params ["_caller", "_target", "_bodyPartNum"];
-TRACE_3("splintLocal",_caller,_target,_bodyPart);
+params ["_medic", "_patient", "_bodyPart"];
+TRACE_3("splintLocal",_medic,_patient,_bodyPart);
 
-// Place a tourniquet on the bodypart
-private _fractures = _target getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
-_fractures set [_bodyPartNum, -1];
-_target setVariable [QEGVAR(medical,fractures), _fractures, true];
+private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+
+private _fractures = GET_FRACTURES(_patient);
+_fractures set [_partIndex, -1];
+_patient setVariable [VAR_FRACTURES, _fractures, true];
 
 // Check if we fixed limping from this treatment
-[_target] call EFUNC(medical_engine,updateDamageEffects);
+[_patient] call EFUNC(medical_engine,updateDamageEffects);
 
-// toDo: AddToLog:
+// todo: add logging
