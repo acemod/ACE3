@@ -26,6 +26,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
         GVAR(cacheTankDuplicates) setVariable [_typeOf, _duplicateHitpoints];
     };
 
+    _vehicle setVariable [QGVAR(disableForAI), GVAR(disableForAI), true];
     _vehicle addEventHandler ["HandleDamage", {
         if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
             ["tank", _this] call FUNC(handleDamage);
@@ -52,6 +53,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
         GVAR(cacheTankDuplicates) setVariable [_typeOf, _duplicateHitpoints];
     };
 
+    _vehicle setVariable [QGVAR(disableForAI), GVAR(disableForAI), true];
     _vehicle addEventHandler ["HandleDamage", {
         if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
             ["tank", _this] call FUNC(handleDamage);
@@ -62,6 +64,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 ["Car", "init", {
     params ["_vehicle"];
 
+    _vehicle setVariable [QGVAR(disableForAI), GVAR(disableForAI), true];
     _vehicle addEventHandler ["HandleDamage", {
         if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
             ["car", _this] call FUNC(handleDamage);

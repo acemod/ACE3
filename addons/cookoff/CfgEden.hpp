@@ -14,16 +14,6 @@ class Cfg3DEN {
                         condition = "objectVehicle";
                         defaultValue = QUOTE(GETMVAR(QGVAR(enable),true));
                     };
-                    class GVAR(disableForAI) {
-                        property = QGVAR(disableForAI);
-                        control = "Checkbox";
-                        displayName = CSTRING(disableForAI_name);
-                        tooltip = CSTRING(disableForAI_tooltip);
-                        expression = QUOTE(if !(_value) then {_this setVariable [ARR_3('%s',_value,true)];};);
-                        typeName = "BOOL";
-                        condition = "objectVehicle";
-                        defaultValue = QUOTE(GETMVAR(QGVAR(disableForAI),false));
-                    };
                     class GVAR(enableAmmoCookoff) {
                         property = QGVAR(enableAmmoCookoff);
                         control = "Checkbox";
