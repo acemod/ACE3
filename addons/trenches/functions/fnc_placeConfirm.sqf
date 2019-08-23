@@ -40,7 +40,7 @@ private _vecDirAndUp = [vectorDir GVAR(trench), vectorUp GVAR(trench)];
 private _pos = getPosWorld GVAR(trench);
 deleteVehicle GVAR(trench);
 
-private _trench = createVehicle [_trenchClass, _pos, [], 0, "CAN_COLLIDE"];
+private _trench = createVehicle [_trenchClass, [0,0,0], [], 0, "CAN_COLLIDE"];
 _trench setPosWorld _pos;
 _trench setVectorDirAndUp _vecDirAndUp;
 _trench setObjectTextureGlobal [0, [_trench] call FUNC(getSurfaceTexturePath)];

@@ -34,7 +34,7 @@ if (_initiator) then {
                 _diggingPlayers = _diggingPlayers - [objNull];
 
                 if !(_diggingPlayers isEqualTo (_trench getVariable [QGVAR(diggingPlayers), []])) then {
-                    _trench setVariable [QGVAR(diggingPlayers), [_diggingPlayers], true];
+                    [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
                 };
 
                 if (

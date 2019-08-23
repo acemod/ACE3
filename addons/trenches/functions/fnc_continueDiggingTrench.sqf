@@ -33,7 +33,7 @@ if (_diggerCount > 0) then {
         [_trench, _unit] call FUNC(addDigger);
     };
 } else {
-    _trench setVariable [QGVAR(diggingPlayers), [ACE_player],true];
+    [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
 };
 
 private _digTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(diggingDuration)), 20];
@@ -51,7 +51,7 @@ private _fnc_onFinish = {
     (_this select 0) params ["_unit", "_trench"];
     _trench setVariable [QGVAR(digging), false, true];
     _trench setVariable [QGVAR(diggingType), nil, true];
-    _trench setVariable [QGVAR(diggingPlayers), [], true];
+    [QGVAR(addDigger), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
     [QGVAR(handleDiggingServer), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
 
     // Save progress global
@@ -65,7 +65,7 @@ private _fnc_onFailure = {
     (_this select 0) params ["_unit", "_trench"];
     _trench setVariable [QGVAR(digging), false, true];
     _trench setVariable [QGVAR(diggingType), nil, true];
-    _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers),[]] - [_unit], true];
+    [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;;
 
     // Save progress global
     private _progress = _trench getVariable [QGVAR(progress), 0];
@@ -109,7 +109,7 @@ if (_actualProgress == 0) then {
     ) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
         _trench setVariable [QGVAR(digging), false, true];
-        _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers),[]] - [_unit], true];
+        [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
     };
 
     if (_actualProgress >= 1) exitWith {
@@ -130,7 +130,7 @@ if (_actualProgress == 0) then {
    if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
       _trench setVariable [QGVAR(digging), false, true];
-      _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
+      [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
    };
 }, 1, [_trench, _unit, _digTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 

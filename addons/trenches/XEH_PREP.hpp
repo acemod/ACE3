@@ -9,6 +9,7 @@ PREP(canRemoveCamouflage);
 PREP(canRemoveTrench);
 PREP(continueDiggingTrench);
 PREP(deleteCamouflage);
+PREP(handleDiggerToGVAR);
 PREP(handleDiggingServer);
 PREP(handleInteractMenuOpened);
 PREP(handleKilled);

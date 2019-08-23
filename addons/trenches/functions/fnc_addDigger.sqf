@@ -26,7 +26,7 @@ if (
     [_trench, _unit] call FUNC(continueDiggingTrench);
 };
 
-_trench setVariable [QGVAR(diggingPlayers), _diggingPlayers pushBackUnique ACE_player, true];
+[QGVAR(addDigger), [_trench, _unit]] call CBA_fnc_serverEvent;
 
 private _finishCondition = {false};
 private _digTime = 0;
@@ -67,7 +67,7 @@ private _fnc_onFinish = {
 private _fnc_onFailure = {
     (_this select 0) params ["_unit", "_trench"];
 
-    _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers),[]] - [_unit], true];
+    [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
 
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);

@@ -90,7 +90,7 @@ GVAR(digPFH) = [{
     _trench setVectorDirAndUp [_v1, _v3];
 
     if (surfaceType position _trench != GVAR(currentSurface)) then {
-        GVAR(currentSurface) = surfaceType (position _trench);
+        GVAR(currentSurface) = surfaceType (getPosASL _trench);
         _trench setObjectTextureGlobal [0, [_trench] call FUNC(getSurfaceTexturePath)];
     };
 }, 0, [_unit, _trench]] call CBA_fnc_addPerFrameHandler;

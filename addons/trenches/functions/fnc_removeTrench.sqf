@@ -33,7 +33,7 @@ if (_diggerCount > 0) then {
         [_trench, _unit] call FUNC(addDigger);
     };
 } else {
-    _trench setVariable [QGVAR(diggingPlayers), [ACE_player], true];
+    [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
 };
 
 private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(removalDuration)), 20];
@@ -63,6 +63,7 @@ private _fnc_onFailure = {
     (_this select 0) params ["_unit", "_trench"];
     _trench setVariable [QGVAR(digging), false, true];
     _trench setVariable [QGVAR(diggingType), nil, true];
+    [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
 
     // Save progress global
     private _progress = _trench getVariable [QGVAR(progress), 0];
@@ -91,7 +92,7 @@ private _fnc_condition = {
     if (_actualProgress <= 0) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
         _trench setVariable [QGVAR(digging), false, true];
-        _trench setVariable [QGVAR(diggingPlayers), [], true];
+        [QGVAR(addDigger), [_trench, _unit, false, true]] call CBA_fnc_serverEvent;
         deleteVehicle _trench;
     };
 
@@ -101,7 +102,7 @@ private _fnc_condition = {
     ) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
         _trench setVariable [QGVAR(digging), false, true];
-        _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
+        [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
     };
 
     private _pos = getPosWorld _trench;
@@ -118,7 +119,7 @@ private _fnc_condition = {
     if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
         _trench setVariable [QGVAR(digging), false, true];
-        _trench setVariable [QGVAR(diggingPlayers), _trench getVariable [QGVAR(diggingPlayers), []] - [_unit], true];
+        [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
     };
 },1,[_trench, _unit, _removeTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 

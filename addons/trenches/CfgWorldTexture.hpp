@@ -51,6 +51,13 @@ class CfgWorldTexture: CfgWorlds {
         camouflageObjects[] = {"ca\plants2\clutter\c_weed3.p3d"};
     };
 
+    //Cham
+	class tem_cham {
+		surfaceTextureBasePath = "tem\tem_cham\data";
+        suffix = "co.paa";
+        camouflageObjects[] = {};
+    };
+
     //Chernarus
     class Chernarus {
         surfaceTextureBasePath = "ca\CHERNARUS\data";
@@ -393,5 +400,40 @@ class CfgWorldTexture: CfgWorlds {
       surfaceTextureBasePath = "momo\NapfWinter\data";
       suffix = "co.paa";
       camouflageObjects[] = {};
+    };
+
+    //Chernarus Redux
+    class chernarusredux {
+        surfaceTextureBasePath = "CHR\chernarusredux_data\data";
+        suffix = "_co.paa";
+        camouflageObjects[] = {};
+    };
+
+    //Weferlingen Summer
+    class gm_weferlingen_summer {
+        surfaceTextureBasePath = "gm\gm_worlds\gm_weferlingen_summer\data";
+        suffix = "co.paa";
+        camouflageObjects[] = {};
+    };
+
+    //Weferlingen Winter
+    class gm_weferlingen_winter {
+        surfaceTextureBasePath = "gm\gm_worlds\gm_weferlingen_winter\data";
+        suffix = "co.paa";
+        camouflageObjects[] = {};
+    };
+
+	//Weferlingen Winter
+    class vinjesvigen {
+        surfaceTextureBasePath = "gm\gm_worlds\gm_weferlingen_winter\data";
+        suffix = "co.paa";
+        camouflageObjects[] = {};
+    };
+
+    //Vinjesvingenc
+    class tem_vinjesvingenc {
+        surfaceTextureBasePath = "tem\tem_vinjesvingenc\data";
+        suffix = "co.paa";
+        camouflageObjects[] = {};
     };
 };

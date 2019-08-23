@@ -43,7 +43,7 @@ private _initTrench = {
 if (isNull _object) then {
     {
         if (IS_TRENCH(_x)) then {
-            [_x] call _initTrench;
+            _x call _initTrench;
         };
     } forEach (all3DENEntities select 0);
 } else {
