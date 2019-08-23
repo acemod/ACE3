@@ -21,6 +21,6 @@ params ["_trench", "_unit"];
 if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 if ((_trench getVariable [QGVAR(progress), 0]) >= 1) exitWith {false};
 if !(_trench getVariable [QGVAR(digging), false]) exitWith {false};
-if (count (_trench getVariable [QGVAR(diggingPlayers),[]]) < 1) exitWith {false};
+if (count (_trench getVariable [QGVAR(diggers),[]]) < 1) exitWith {false};
 
 true

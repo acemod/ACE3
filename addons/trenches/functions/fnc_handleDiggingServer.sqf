@@ -30,10 +30,10 @@ if (_initiator) then {
                 params ["_args", "_handle"];
                 _args params ["_trench", "_digTime"];
 
-                private _diggingPlayers = _trench getVariable [QGVAR(diggingPlayers), []];
+                private _diggingPlayers = _trench getVariable [QGVAR(diggers), []];
                 _diggingPlayers = _diggingPlayers - [objNull];
 
-                if !(_diggingPlayers isEqualTo (_trench getVariable [QGVAR(diggingPlayers), []])) then {
+                if !(_diggingPlayers isEqualTo (_trench getVariable [QGVAR(diggers), []])) then {
                     [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
                 };
 

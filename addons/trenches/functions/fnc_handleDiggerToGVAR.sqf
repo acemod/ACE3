@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: Salbei
- * Add or remove a unit to the GVAR
+ * Add or remove a unit to the global Variable.
  *
  * Arguments:
  * 0: Trench <OBJECT>
  * 1: Unit <OBJECT>
- * 2: State <BOOLEAN>
+ * 2: IsRemoveMode <BOOLEAN>
  * 3: RemoveAll <BOOLEAN>
  *
  * Return Value:
@@ -18,20 +18,18 @@
  * Public: No
  */
 
-params ["_trench", "_unit", "_state", ["_removeAll", false]];
+params ["_trench", "_unit", "_isRemoveMode", ["_removeAll", false]];
 
 if (_removeAll) exitWith {
-    _trench setVariable [QGVAR(diggingPlayers), [], true];
+    _trench setVariable [QGVAR(diggers), [], true];
 };
 
-if (_state) then {
-    private _diggingPlayers = _trench getVariable [QGVAR(diggingPlayers), []];
-    private _return = _diggingPlayers pushBackUnique _unit;
-    if (_return > -1) then {
-        _trench setVariable [QGVAR(diggingPlayers), _diggingPlayers, true];
-    };
-} else {
-    private _diggingPlayers = _trench getVariable [QGVAR(diggingPlayers), []];
+private _diggingPlayers = _trench getVariable [QGVAR(diggers), []];
+
+if (_isRemoveMode) then {
     _diggingPlayers - [_unit];
-    _trench setVariable [QGVAR(diggingPlayers), _diggingPlayers, true];
+} else {
+    _diggingPlayers pushBackUnique _unit;
 };
+
+_trench setVariable [QGVAR(diggers), _diggingPlayers, true];

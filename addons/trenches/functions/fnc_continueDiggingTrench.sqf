@@ -26,14 +26,14 @@ if (_actualProgress >= 1) exitWith {};
 // Mark trench as being worked on
 _trench setVariable [QGVAR(digging), true, true];
 _trench setVariable [QGVAR(diggingType), "UP", true];
-private _diggerCount = count (_trench getVariable [QGVAR(diggingPlayers), []]);
+private _diggerCount = count (_trench getVariable [QGVAR(diggers), []]);
 
 if (_diggerCount > 0) then {
     if !(_switchingDigger) then {
         [_trench, _unit] call FUNC(addDigger);
     };
 } else {
-    [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
+    [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
 };
 
 private _digTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(diggingDuration)), 20];
@@ -65,7 +65,7 @@ private _fnc_onFailure = {
     (_this select 0) params ["_unit", "_trench"];
     _trench setVariable [QGVAR(digging), false, true];
     _trench setVariable [QGVAR(diggingType), nil, true];
-    [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;;
+    [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;;
 
     // Save progress global
     private _progress = _trench getVariable [QGVAR(progress), 0];
@@ -79,7 +79,7 @@ private _fnc_condition = {
     (_this select 0) params ["", "_trench"];
 
     if !(_trench getVariable [QGVAR(digging), false]) exitWith {false};
-    if (count (_trench getVariable [QGVAR(diggingPlayers),[]]) <= 0) exitWith {false};
+    if (count (_trench getVariable [QGVAR(diggers),[]]) <= 0) exitWith {false};
     if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0})  exitWith {false};
     true
 };
@@ -101,7 +101,7 @@ if (_actualProgress == 0) then {
     params ["_args", "_handle"];
     _args params ["_trench", "_unit", "_digTime", "_vecDirAndUp"];
     private _actualProgress = _trench getVariable [QGVAR(progress), 0];
-    private _diggerCount = count (_trench getVariable [QGVAR(diggingPlayers), []]);
+    private _diggerCount = count (_trench getVariable [QGVAR(diggers), []]);
 
     if (
         !(_trench getVariable [QGVAR(digging), false]) ||
@@ -109,7 +109,7 @@ if (_actualProgress == 0) then {
     ) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
         _trench setVariable [QGVAR(digging), false, true];
-        [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
+        [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
     };
 
     if (_actualProgress >= 1) exitWith {
@@ -130,7 +130,7 @@ if (_actualProgress == 0) then {
    if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
       [_handle] call CBA_fnc_removePerFrameHandler;
       _trench setVariable [QGVAR(digging), false, true];
-      [QGVAR(addDigger), [_trench, _unit, false]] call CBA_fnc_serverEvent;
+      [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
    };
 }, 1, [_trench, _unit, _digTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 
