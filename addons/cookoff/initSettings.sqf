@@ -1,22 +1,12 @@
 // CBA Settings [ADDON: ace_cookoff]:
 
 [
-    QGVAR(enable), "CHECKBOX",
+    QGVAR(enable), "LIST",
     [LSTRING(enable_hd_name), LSTRING(enable_hd_tooltip)],
     LSTRING(category_displayName),
-    false, // default value
+    [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", "STR_A3_OPTIONS_ENABLED", LSTRING(enableForPlayers_name)], 0]
     true, // isGlobal
     {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
-] call CBA_settings_fnc_init;
-
-[
-    QGVAR(disableForAI), "CHECKBOX",
-    [LSTRING(disableForAI_name), LSTRING(disableForAI_tooltip)],
-    LSTRING(category_displayName),
-    false, // default value
-    true, // isGlobal
-    {[QGVAR(disableForAI), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_settings_fnc_init;
 

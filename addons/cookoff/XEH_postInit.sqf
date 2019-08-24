@@ -26,9 +26,8 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
         GVAR(cacheTankDuplicates) setVariable [_typeOf, _duplicateHitpoints];
     };
 
-    _vehicle setVariable [QGVAR(disableForAI), GVAR(disableForAI), true];
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
+        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)] !=0 ) then {
             ["tank", _this] call FUNC(handleDamage);
         };
     }];
@@ -53,9 +52,8 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
         GVAR(cacheTankDuplicates) setVariable [_typeOf, _duplicateHitpoints];
     };
 
-    _vehicle setVariable [QGVAR(disableForAI), GVAR(disableForAI), true];
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
+        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)] !=0 ) then {
             ["tank", _this] call FUNC(handleDamage);
         };
     }];
@@ -64,9 +62,8 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 ["Car", "init", {
     params ["_vehicle"];
 
-    _vehicle setVariable [QGVAR(disableForAI), GVAR(disableForAI), true];
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
+        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)] !=0 ) then {
             ["car", _this] call FUNC(handleDamage);
         };
     }];
@@ -92,7 +89,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 // blow off turret effect
 ["Tank", "killed", {
-    if ((_this select 0) getVariable [QGVAR(enable),GVAR(enable)]) then {
+    if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)] !=0 ) then {
         if (random 1 < 0.15) then {
             (_this select 0) call FUNC(blowOffTurret);
         };

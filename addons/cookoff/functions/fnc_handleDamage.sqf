@@ -22,8 +22,8 @@ _thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIn
 if (damage _vehicle >= 1) exitWith {};
 
 // Check for players and exit if none found and the disable for AI setting is true
-private _playerCrew = (fullCrew [_vehicle, "", false]) findIf {isPlayer (_x #0)};
-if (_vehicle getVariable [QGVAR(disableForAI), GVAR(disableForAI)] && _playerCrew isEqualTo -1) exitWith {};
+private _hasPlayerInCrew = fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} != -1;
+if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] isEqualTo 2 && !_hasPlayerInCrew) exitWith {};
 
 // get hitpoint name
 private _hitpoint = "#structural";
