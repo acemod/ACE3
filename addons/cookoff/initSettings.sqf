@@ -4,7 +4,7 @@
     QGVAR(enable), "LIST",
     [LSTRING(enable_hd_name), LSTRING(enable_hd_tooltip)],
     LSTRING(category_displayName),
-    [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", "STR_A3_OPTIONS_ENABLED", "STR_ACE_CookOff_enableForPlayers"], 0],
+    [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", "STR_A3_OPTIONS_ENABLED", LSTRING(enableForPlayers)], 0],
     true, // isGlobal
     {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
