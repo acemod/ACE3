@@ -4016,7 +4016,7 @@
             <Chinesesimp>AK-15 (繁茂)</Chinesesimp>
             <Japanese>AK-15 (緑地)</Japanese>
             <Turkish>AK-15 (Gür)</Turkish>
-            <Hungarian>AK-15 (Lush)</Hungarian>
+            <Hungarian>AK-15 (esőerdő)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_arid">
             <Chinese>AK-15 (乾燥氣候)</Chinese>
@@ -4033,7 +4033,7 @@
             <Chinesesimp>AK-15 (干旱)</Chinesesimp>
             <Japanese>AK-15 (乾燥地帯)</Japanese>
             <Turkish>AK-15 (Kurak)</Turkish>
-            <Hungarian>AK-15 (Arid)</Hungarian>
+            <Hungarian>AK-15 (sivatag)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL">
             <Chinese>AK-15 GL</Chinese>
@@ -4067,7 +4067,7 @@
             <Chinesesimp>AK-15 GL (繁茂)</Chinesesimp>
             <Japanese>AK-15 GL (緑地)</Japanese>
             <Turkish>AK-15 GL (Gür)</Turkish>
-            <Hungarian>AK-15 GL (Lush)</Hungarian>
+            <Hungarian>AK-15 GL (esőerdő)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_arid">
             <Chinese>AK-15 GL (乾燥氣候)</Chinese>
@@ -4084,7 +4084,7 @@
             <Chinesesimp>AK-15 GL (干旱)</Chinesesimp>
             <Japanese>AK-15 GL (乾燥地帯)</Japanese>
             <Turkish>AK-15AK-15 GL (Kurak)</Turkish>
-            <Hungarian>AK-15 GL (Arid)</Hungarian>
+            <Hungarian>AK-15 GL (sivatag)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12U">
             <Chinese>AK-15K</Chinese>
@@ -4118,7 +4118,7 @@
             <Chinesesimp>AK-15K (繁茂)</Chinesesimp>
             <Japanese>AK-15K (緑地)</Japanese>
             <Turkish>AK-15K (Gür)</Turkish>
-            <Hungarian>AK-15K (Lush)</Hungarian>
+            <Hungarian>AK-15K (esőerdő)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AK12U_arid">
             <Chinese>AK-15K (乾燥氣候)</Chinese>
@@ -4135,7 +4135,7 @@
             <Chinesesimp>AK-15K (干旱)</Chinesesimp>
             <Japanese>AK-15K (乾燥地帯)</Japanese>
             <Turkish>AK-15K (Kurak)</Turkish>
-            <Hungarian>AK-15K (Arid)</Hungarian>
+            <Hungarian>AK-15K (sivatag)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_RPK12">
             <Chinese>RPK</Chinese>
@@ -4169,7 +4169,7 @@
             <Chinesesimp>RPK (繁茂)</Chinesesimp>
             <Japanese>RPK (緑地)</Japanese>
             <Turkish>RPK (Gür)</Turkish>
-            <Hungarian>RPK (Lush)</Hungarian>
+            <Hungarian>RPK (esőerdő)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_RPK12_arid">
             <Chinese>RPK (乾燥氣候)</Chinese>
@@ -4186,24 +4186,24 @@
             <Chinesesimp>RPK (干旱)</Chinesesimp>
             <Japanese>RPK (乾燥地帯)</Japanese>
             <Turkish>RPK (Kurak)</Turkish>
-            <Hungarian>RPK (Arid)</Hungarian>
+            <Hungarian>RPK (sivatag)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_hunter">
-            <Chinese>M14 (Classic)</Chinese>
+            <Chinese>M14 (经典)</Chinese>
             <French>M14 (Classique)</French>
-            <Spanish>M14 (Classic)</Spanish>
-            <Italian>M14 (Classic)</Italian>
-            <Polish>M14 (Classic)</Polish>
-            <Russian>M14 (Classic)</Russian>
-            <German>M14 (Classic)</German>
-            <Czech>M14 (Classic)</Czech>
-            <English>M14 (Classic)</English>
-            <Portuguese>M14 (Classic)</Portuguese>
-            <Korean>M14 (Classic)</Korean>
-            <Chinesesimp>M14 (Classic)</Chinesesimp>
-            <Japanese>M14 (Classic)</Japanese>
-            <Turkish>M14 (Classic)</Turkish>
-            <Hungarian>M14 (Classic)</Hungarian>
+            <Spanish>M14 (clásico)</Spanish>
+            <Italian>M14 (classico)</Italian>
+            <Polish>M14 (klasyczny)</Polish>
+            <Russian>M14 (классический)</Russian>
+            <German>M14 (klassisch)</German>
+            <Czech>M14 (klasický)</Czech>
+            <English>M14 (classic)</English>
+            <Portuguese>M14 (clássico)</Portuguese>
+            <Korean>M14 (표준)</Korean>
+            <Chinesesimp>M14 (經典)</Chinesesimp>
+            <Japanese>M14 (クラシック)</Japanese>
+            <Turkish>M14 (klasik)</Turkish>
+            <Hungarian>M14 (klasszikus)</Hungarian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_black">
             <Chinese>斯通納99輕機槍(黑色)</Chinese>
