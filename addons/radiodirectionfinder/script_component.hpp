@@ -1,0 +1,40 @@
+#define COMPONENT radiodirectionfinder
+#define COMPONENT_BEAUTIFIED RadioDirectionFinder
+#include "\z\ace\addons\main\script_mod.hpp"
+
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+#define ENABLE_PERFORMANCE_COUNTERS
+
+#include "\z\ace\addons\main\script_macros.hpp"
+
+// GVAR(currentShowMode) enums
+#define DISPLAY_MODE_CLOSED 0
+#define DISPLAY_MODE_DISPLAY 1
+#define DISPLAY_MODE_DIALOG 2
+
+// IDCS
+#define IDC_OBJECT_SCREEN 1000
+#define IDC_SCREEN_GROUP 1001
+
+#define IDC_CLOCK_TEXT 1010
+#define IDC_MENU_BUTTON1 1011
+#define IDC_MENU_BG1 1021
+#define IDC_MENU_BUTTON2 1012
+#define IDC_MENU_BG2 1022
+#define IDC_MENU_BUTTON3 1013
+#define IDC_MENU_BG3 1023
+
+#define IDC_MODE1_GROUP 1100
+#define IDC_MODE1_CIRCLE_DOT 1102
+#define IDC_MODE1_CIRCLE_ARROW 1103
+#define IDC_MODE1_SCAN_INFO_TEXT 1104
+
+#define IDC_MODE2_GROUP 1200
+#define IDC_MODE2_FREQ_TEXT 1201
+#define IDC_MODE2_FREQ_SLIDER 1202
+#define IDC_MODE2_RESET_BACKGROUND 1203
+#define IDC_MODE2_SIGNAL_COUNT 1204
+
+#define IDC_MODE3_GROUP 1300
+#define IDC_MODE3_LIST 1301
