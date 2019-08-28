@@ -187,10 +187,12 @@
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
             <English>Max Follow Distance</English>
             <Russian>Макс. дистанция следования</Russian>
+            <Japanese>最大追随距離</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
             <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
+            <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">

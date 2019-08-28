@@ -82,6 +82,11 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     _allDamages sort false;
     (_allDamages select 0) params ["_receivedDamage", "", "_woundedHitPoint"];
+    if (_damageHead >= HEAD_DAMAGE_THRESHOLD) then {
+        TRACE_3("reporting fatal head damage instead of max",_damageHead,_receivedDamage,_woundedHitPoint);
+        _receivedDamage = _damageHead;
+        _woundedHitPoint = "Head";
+    };
 
     // We know it's structural when no specific hitpoint is damaged
     if (_receivedDamage == 0) then {
