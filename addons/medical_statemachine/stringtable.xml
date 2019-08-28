@@ -56,6 +56,7 @@
             <English>Allows AI to go unconscious instead of dying.</English>
             <Japanese>AI が即死ではなく気絶へ移行できるかどうか決定します。</Japanese>
             <French>Permet aux unités IA de perdre connaissance au lieu de mourir.</French>
+            <Russian>Позволяет ИИ оставаться без сознания вместо смерти.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>
@@ -68,6 +69,7 @@
             <English>Controls how long it takes to die from cardiac arrest.</English>
             <Japanese>どのくらいの時間、心停止すると死亡するかを決定します。</Japanese>
             <French>Définit le temps qu'il faut pour mourir d'un arrêt cardiaque.</French>
+            <Russian>Контролирует, сколько времени требуется, чтобы умереть от остановки сердца.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_InCardiacArrest">
             <English>In Cardiac Arrest</English>

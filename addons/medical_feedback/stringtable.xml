@@ -26,6 +26,7 @@
             <English>Selects the used pain effect type.</English>
             <Japanese>痛みの効果の種類を選択できます。</Japanese>
             <French>Permet de choisir quel effet provoque la douleur.</French>
+            <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
