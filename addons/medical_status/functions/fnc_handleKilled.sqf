@@ -28,7 +28,7 @@ if (_causeOfDeath != "#scripted") then {
     _killer = _unit getVariable [QEGVAR(medical,lastDamageSource), _killer]; // vehicle
     _instigator = _unit getVariable [QEGVAR(medical,lastInstigator), _instigator]; // unit in the turret
 
-    // Killed EH uses the same array, so we can modify it now to pass the correct killer/instigator
+    // All Killed EH uses the same array, so we can modify it now to pass the correct killer/instigator
     if (missionNamespace getVariable [QEGVAR(medical,modifyKilledArray), true]) then { // getVar so this can be disabled
         _this set [1, _killer];
         _this set [2, _instigator];

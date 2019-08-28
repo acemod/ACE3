@@ -15,20 +15,14 @@
  * Public: No
  */
 
-TRACE_4("enteredStateDeath",_this,_thisOrigin,_thisTransition,_thisTarget);
+//IGNORE_PRIVATE_WARNING ["_thisOrigin", "_thisTransition"]; // vars provided by CBA_statemachine
+TRACE_3("enteredStateDeath",_this,_thisOrigin,_thisTransition);
 
-// WIP:
-// Delay and only trigger EH once
-// But lose native kill (scoreboard / rating)
+params ["_unit"];
+if (isNull _unit) exitWith {};
 
-// [{ // Delay a frame to ensure that we are not killing the unit while still inside the handleDamage code block
-    [_this, _thisOrigin, _thisTransition] call {
-    params ["_unit", "_state", "_transition"];
-    if (isNull _unit) exitWith {};
+private _causeOfDeath = format ["%1:%2",_thisOrigin,_thisTransition];
+TRACE_2("enteredStateDeath",_unit,_causeOfDeath);
 
-    private _causeOfDeath = format ["%1:%2",_state,_transition];
-    TRACE_2("calling setDead",_unit,_causeOfDeath);
-
-    [_unit, _causeOfDeath] call EFUNC(medical_status,setDead);
-    };
-// }, [_this, _thisOrigin, _thisTransition]] call CBA_fnc_execNextFrame;
+// could delay a frame here to fix the double killed EH, but we lose it being a "native" kill (scoreboard / rating)
+[_unit, _causeOfDeath] call EFUNC(medical_status,setDead);
