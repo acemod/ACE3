@@ -12,12 +12,12 @@ class CfgFactionClasses {
     };
     class OPF_G_F {
         GVAR(rankIcons)[] = {
-            QPATHTOF(UI\icons_spain\private_gs.paa), 
-            QPATHTOF(UI\icons_spain\corporal_gs.paa), 
-            QPATHTOF(UI\icons_spain\sergeant_gs.paa), 
-            QPATHTOF(UI\icons_spain\lieutenant_gs.paa), 
-            QPATHTOF(UI\icons_spain\captain_gs.paa), 
-            QPATHTOF(UI\icons_spain\major_gs.paa), 
+            QPATHTOF(UI\icons_spain\private_gs.paa),
+            QPATHTOF(UI\icons_spain\corporal_gs.paa),
+            QPATHTOF(UI\icons_spain\sergeant_gs.paa),
+            QPATHTOF(UI\icons_spain\lieutenant_gs.paa),
+            QPATHTOF(UI\icons_spain\captain_gs.paa),
+            QPATHTOF(UI\icons_spain\major_gs.paa),
             QPATHTOF(UI\icons_spain\colonel_gs.paa)
         };
     };
@@ -67,12 +67,12 @@ class CfgFactionClasses {
     };
     class IND_G_F {
         GVAR(rankIcons)[] = {
-            QPATHTOF(UI\icons_spain\private_gs.paa), 
-            QPATHTOF(UI\icons_spain\corporal_gs.paa), 
-            QPATHTOF(UI\icons_spain\sergeant_gs.paa), 
-            QPATHTOF(UI\icons_spain\lieutenant_gs.paa), 
-            QPATHTOF(UI\icons_spain\captain_gs.paa), 
-            QPATHTOF(UI\icons_spain\major_gs.paa), 
+            QPATHTOF(UI\icons_spain\private_gs.paa),
+            QPATHTOF(UI\icons_spain\corporal_gs.paa),
+            QPATHTOF(UI\icons_spain\sergeant_gs.paa),
+            QPATHTOF(UI\icons_spain\lieutenant_gs.paa),
+            QPATHTOF(UI\icons_spain\captain_gs.paa),
+            QPATHTOF(UI\icons_spain\major_gs.paa),
             QPATHTOF(UI\icons_spain\colonel_gs.paa)
         };
     };
