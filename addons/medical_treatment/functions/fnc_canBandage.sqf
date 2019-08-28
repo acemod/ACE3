@@ -34,6 +34,6 @@ private _canBandage = false;
     if (_bodyPartN == _index && {_amountOf * _bleeding > 0}) exitWith {
         _canBandage = true;
     };
-} forEach (_patient getVariable [QEGVAR(medical,openWounds), []]);
+} forEach GET_OPEN_WOUNDS(_patient);
 
 _canBandage

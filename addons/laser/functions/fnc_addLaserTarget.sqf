@@ -31,7 +31,7 @@ _vehicle setVariable [QGVAR(targetObject), _targetObject, true];
 private _laserMethod = QFUNC(findLaserSource);
 
 private _vehicleSourceSelection = "";
-if (_vehicle isKindOf "CaManBase") then {
+if (_vehicle isKindOf "CAManBase") then {
     _vehicleSourceSelection = "pilot";
 } else {
     { // Go through turrets on vehicle and find the laser

@@ -18,5 +18,5 @@
 
 params ["", "_patient"];
 
-!((_patient getVariable [QEGVAR(medical,bandagedWounds), []]) isEqualTo [])
+!(GET_BANDAGED_WOUNDS(_patient) isEqualTo [])
 && {!GVAR(requireStableToStitch) || {_patient call EFUNC(medical_status,isInStableCondition)}}

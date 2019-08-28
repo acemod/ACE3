@@ -40,5 +40,5 @@
     [LSTRING(MaxDistance_DisplayName), LSTRING(MaxDistance_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [0, 10, 3, 1],
-    false
+    true
 ] call CBA_settings_fnc_init;

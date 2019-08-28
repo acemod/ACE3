@@ -103,7 +103,9 @@ class GVAR(actions) {
         treatmentTime = 7;
         callbackSuccess = QFUNC(splint);
         condition = QFUNC(canSplint);
-        litter[] = {};
+        litter[] = {
+            {"ACE_MedicalLitter_splint"}, {}, {}
+        };
     };
 
     // - Syringes -------------------------------------------------------------
@@ -267,12 +269,12 @@ class GVAR(actions) {
         treatmentTime = 15;
         items[] = {};
         condition = QFUNC(canCPR);
-        callbackSuccess = QFUNC(cpr);
+        callbackSuccess = QFUNC(cprSuccess);
         callbackFailure = QFUNC(cprFailure);
         callbackProgress = QFUNC(cprProgress);
         callbackStart = QFUNC(cprStart);
-        animationMedic = "AinvPknlMstpSlayW[wpn]Dnon_medic";
-        animationMedicProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
+        animationMedic = "AinvPknlMstpSnonWnonDr_medic0";
+        animationMedicProne = "AinvPknlMstpSnonWnonDr_medic0";
         animationMedicSelf = "";
         animationMedicSelfProne = "";
         consumeItem = 0;
@@ -285,7 +287,7 @@ class GVAR(actions) {
         category = "advanced";
         items[] = {"ACE_surgicalKit"};
         treatmentLocations = QGVAR(locationSurgicalKit);
-        allowSelfTreatment = 0;
+        allowSelfTreatment = QGVAR(allowSelfStitch);
         medicRequired = QGVAR(medicSurgicalKit);
         treatmentTime = QFUNC(getStitchTime);
         condition = QFUNC(canStitch);

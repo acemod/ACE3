@@ -22,6 +22,14 @@ TRACE_3("rearmEntireVehicleSuccessLocal",_truck,_vehicle,_turretPath);
 
 // Fetching all rearmable magazines in this turret
 private _magazines = ([_vehicle] call FUNC(getNeedRearmMagazines)) select {(_x select 1) isEqualTo _turretPath};
+if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
+    ([_vehicle, _turretPath] call EFUNC(csw,aceRearmGetCarryMagazines)) params ["_turretMagsCSW", "_allCarryMags"];
+    TRACE_1("skipping",_turretMagsCSW);
+    _magazines = _magazines select {
+        _x params ["_magazineClass"];
+        (_turretMagsCSW findIf {_x == _magazineClass}) == -1
+    };
+};
 {
     _x params ["_magazineClass", "_magTurretPath", "_isPylonMag", "_pylonIndex", "_maxMagazines", "_currentMagazines", "_maxRoundsPerMag", "_currentRounds"];
 

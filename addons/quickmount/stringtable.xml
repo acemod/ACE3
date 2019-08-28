@@ -124,6 +124,7 @@
         </Key>
         <Key ID="STR_ACE_QuickMount_ChangeSeat">
             <English>Change seat</English>
+            <German>Sitz wechseln</German>
             <Russian>Пересесть</Russian>
             <Japanese>席の変更</Japanese>
             <Polish>Zmień zajmowaną pozycję</Polish>

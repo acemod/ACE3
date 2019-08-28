@@ -16,13 +16,7 @@
  * Public: No
  */
 
-params ["", "_patient"];
+params ["_medic", "_patient"];
+TRACE_2("cprFailure",_medic,_patient);
 
-if (!(_patient call EFUNC(common,isAwake)) || {IN_CRDC_ARRST(_patient)}) then {
-    _patient setVariable [VAR_HEART_RATE, 0, true];
-};
-
-// Patient is no longer receiving CPR
-_patient setVariable [QGVAR(isReceivingCPR), false, true];
-
-_patient call FUNC(calculateBlood);
+_patient setVariable [QEGVAR(medical,CPR_provider), objNull, true];

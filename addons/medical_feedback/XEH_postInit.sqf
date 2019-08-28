@@ -10,6 +10,14 @@
     [_unit, "moan", PAIN_TO_MOAN(_painLevel)] call FUNC(playInjuredSound);
 }] call CBA_fnc_addEventHandler;
 
+[QEGVAR(medical,fracture), {
+    params ["_unit"];
+
+    if (_unit == ACE_player) then {
+        playSound SND_FRACTURE;
+    };
+}] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 
 GVAR(nextFadeIn) = 0;
@@ -22,6 +30,7 @@ GVAR(heartBeatEffectRunning) = false;
     params ["_unit", "_unconscious"];
 
     if (_unit != ACE_player) exitWith {};
+    TRACE_1("player unconscious eh",_unconscious);
 
     if (_unconscious && {cameraView == "GUNNER"} && {(vehicle _unit) != _unit} &&  {cameraOn == vehicle _unit}) then {
         TRACE_2("exiting gunner view",cameraOn,cameraView);

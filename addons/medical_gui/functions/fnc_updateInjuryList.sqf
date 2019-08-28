@@ -128,21 +128,21 @@ private _fnc_getWoundDescription = {
             };
         };
     };
-} forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
+} forEach GET_OPEN_WOUNDS(_target);
 
 {
     _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
     if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
         _woundEntries pushBack [format ["[B] %1", call _fnc_getWoundDescription], [0.88, 0.7, 0.65, 1]];
     };
-} forEach (_target getVariable [QEGVAR(medical,bandagedWounds), []]);
+} forEach GET_BANDAGED_WOUNDS(_target);
 
 {
     _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
     if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
         _woundEntries pushBack [format ["[S] %1", call _fnc_getWoundDescription], [0.7, 0.7, 0.7, 1]];
     };
-} forEach (_target getVariable [QEGVAR(medical,stitchedWounds), []]);
+} forEach GET_STITCHED_WOUNDS(_target);
 
 // Handle no wound entries
 if (_woundEntries isEqualTo []) then {

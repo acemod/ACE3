@@ -297,4 +297,23 @@ class CfgAmmo {
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;
     };
+
+    class PipeBombBase;
+    class rhsusf_m112_ammo: PipeBombBase {
+        ace_explosives_magazine = "rhsusf_m112_mag";
+        ace_explosives_Explosive = "rhsusf_m112_ammo_scripted";
+        ace_explosives_size = 0;
+        ace_explosives_defuseObjectPosition[] = {-0.155,0,0.01};
+        soundActivation[] = {"", 0, 0, 0};
+        soundDeactivation[] = {"", 0, 0, 0};
+    };
+
+    class rhsusf_m112x4_ammo: PipeBombBase {
+        ace_explosives_magazine = "rhsusf_m112x4_mag";
+        ace_explosives_Explosive = "rhsusf_m112x4_ammo_scripted";
+        ace_explosives_size = 0;
+        ace_explosives_defuseObjectPosition[] = {-0.155,0.025,0.01};
+        soundActivation[] = {"", 0, 0, 0};
+        soundDeactivation[] = {"", 0, 0, 0};
+    };
 };

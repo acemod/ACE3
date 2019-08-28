@@ -8,14 +8,12 @@ class CfgWeapons {
 
     class FirstAidKit: ItemCore {
         type = 0;
-        EGVAR(arsenal,hide) = 1;
         class ItemInfo: InventoryFirstAidKitItem_Base_F {
             mass = 4;
         };
     };
     class Medikit: ItemCore {
         type = 0;
-        EGVAR(arsenal,hide) = 1;
         class ItemInfo: MedikitItem {
             mass = 60;
         };
@@ -73,8 +71,8 @@ class CfgWeapons {
         scope = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(splint_Display);
-        picture = QPATHTOF(ui\tourniquet_ca.paa);
-        model = QPATHTOF(data\tourniquet.p3d);
+        picture = QPATHTOF(ui\splint_ca.paa);
+        model = QPATHTOF(data\splint.p3d);
         descriptionShort = CSTRING(splint_Desc_Short);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;

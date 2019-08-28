@@ -13,8 +13,8 @@ class CfgVehicles {
                 class GVAR(CheckAmmo) {
                     displayName = CSTRING(checkAmmo);
                     distance = 2.0;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmo));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(checkAmmo));
+                    condition = QUOTE(call FUNC(canCheckAmmo));
+                    statement = QUOTE(call FUNC(checkAmmo));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                 };
             };
@@ -28,8 +28,8 @@ class CfgVehicles {
                 class GVAR(CheckAmmo) {
                     displayName = CSTRING(checkAmmo);
                     distance = 2.0;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmo));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(checkAmmo));
+                    condition = QUOTE(call FUNC(canCheckAmmo));
+                    statement = QUOTE(call FUNC(checkAmmo));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                 };
             };
