@@ -6,9 +6,12 @@
             <German>Behandlung</German>
             <Japanese>治療</Japanese>
             <Russian>Лечение</Russian>
+            <French>Traitement</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Litter">
             <English>Litter</English>
+            <Japanese>廃棄物</Japanese>
+            <French>Détritus</French>
             <Russian>Медицинский мусор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
@@ -16,9 +19,12 @@
             <German>Erweiterte Diagnose</German>
             <Japanese>アドバンスド診断</Japanese>
             <Russian>Расширенная Диагностика</Russian>
+            <French>Diagnostic avancé</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.</English>
+            <Japanese>有効化すると通常の診断動作に代わり、心拍や血圧測定、反応を確認できます。</Japanese>
+            <French>Permet un diagnostic avancé, en permettant la vérification du pouls, de la pression sanguine, ainsi que la réponse du patient aux traitements.</French>
             <Russian>Включает действия «Проверить пульс», «Проверить давление» и «Проверить реакцию» вместо общего действия «Диагностика».</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
@@ -26,17 +32,24 @@
             <German>Erweiterte Bandagen</German>
             <Japanese>アドバンスド包帯</Japanese>
             <Russian>Расширенная Перевязка</Russian>
+            <French>Pansements avancés</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
+            <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
+            <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
             <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
             <English>Wound Reopening</English>
+            <Japanese>創傷再開放</Japanese>
+            <French>Réouverture des plaies</French>
             <Russian>Повторное открытие ран</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
             <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
+            <Japanese>有効化すると治療をした創傷を再開放します。アドバンスド包帯を有効化している必要があります。</Japanese>
+            <French>Permet la réouverture des plaies pansées.\nNécessite que l'option "pansements avancés" soit activée.</French>
             <Russian>Разрешает повторное открытие перевязанных ран. Требуются опция «Расширенная Перевязка».</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
@@ -44,10 +57,13 @@
             <German>Erweiterte Medikamente</German>
             <Japanese>アドバンスド医薬品</Japanese>
             <Russian>Расширенные Лекарства</Russian>
+            <French>Médication avancée</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine and Atropine.</English>
             <Russian>Устанавливает расширенное использование лекарств</Russian>
+            <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンとアトロピンが利用可能になります。</Japanese>
+            <French>Permet une manipulation étendue et plus appronfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine et d'atropine.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -59,39 +75,53 @@
             <Portuguese>Localização melhora treinamento</Portuguese>
             <French>Le lieu améliore l'efficacité</French>
             <Russian>Места ускоренного обучения</Russian>
-            <Japanese>衛生兵としての能力を与える場所</Japanese>
+            <Japanese>衛生能力の上昇位置</Japanese>
             <Korean>교육 증가 지역</Korean>
             <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
             <Chinese>受所在位置影響提升醫療能力</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
+            <Japanese>衛生車両か施設では衛生能力を上昇します。未訓練では衛生兵に、衛生兵では医師になります。</Japanese>
+            <French>Améliore les compétences médicales des unités en fonction du lieu où elles se trouvent ; notamment dans des véhicules ou des installations sanitaires.\nUn soldat non formé devient infirmier, un infirmier devient médecin.</French>
             <Russian>Увеличивает уровень медподготовки при нахождении в медицинской технике или госпитале. Неподготовленный становится Медиком, Медик становится Доктором.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
             <German>Eigennutzung von Bluttransfusionen</German>
             <Russian>Внутривенное переливание на себе</Russian>
+            <Japanese>自己 IV 輸血</Japanese>
+            <French>Autotransfusion d'IV</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
             <English>Enables the use of IV Transfusions on oneself.</English>
             <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
+            <Japanese>自らに対して IV 輸血を可能にします。</Japanese>
+            <French>Permet de poser des IV sur soi-même.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
+            <Japanese>装備共有を許可</Japanese>
+            <French>Autoriser partage matériel</French>
             <Russian>Разрешить общие медикаменты</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
+            <Japanese>患者と衛生兵との間で医療品の共有をするかどうかを決定します。</Japanese>
+            <French>Détermine si le matériel médical du médecin et du patient est partagé et mis en commun.</French>
             <Russian>Контролирует, можно ли разделить медикаменты между пациентом и врачом.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
+            <Japanese>患者の装備を先に使用</Japanese>
+            <French>L'équipement du patient d'abord</French>
             <Russian>Сначала медикаменты пациента</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
+            <Japanese>衛生兵の装備を先に使用</Japanese>
+            <French>L'équipement du médecin d'abord</French>
             <Russian>Сначала медикаменты врача</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
@@ -111,6 +141,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use Epinephrine.</English>
+            <Japanese>アドレナリンの使用に訓練レベルを必要とさせます。</Japanese>
+            <French>Une qualification médicale est requise pour pouvoir utiliser l'épinéphrine.</French>
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
@@ -118,18 +150,20 @@
             <German>Orte für Epiniphrin</German>
             <Spanish>Ubicaciones epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
-            <French>Utilisation de l'épinéphrine</French>
+            <French>Lieux épinéphrine</French>
             <Italian>Ubicazione epinefrina</Italian>
             <Czech>Oblast k použití adrenalinu</Czech>
             <Portuguese>Localizações de Epinefrina</Portuguese>
             <Russian>Места использования Адреналина</Russian>
-            <Japanese>アドレナリンをつかう場所</Japanese>
+            <Japanese>アドレナリンの使用可能場所</Japanese>
             <Korean>에피네프린 사용 장소</Korean>
             <Chinesesimp>肾上腺素使用地点</Chinesesimp>
             <Chinese>腎上腺素使用地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where Epinephrine can be used.</English>
+            <Japanese>アドレナリンが使える場所を決定します。</Japanese>
+            <French>Définit où l'épinéphrine peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Адреналин.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
@@ -140,7 +174,7 @@
             <German>Erlaube Erste-Hilfe-Set</German>
             <Czech>Povolit osobní lékárničky (PAK)</Czech>
             <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
-            <French>Activer la trousse sanitaire</French>
+            <French>Autoriser trousse sanitaire</French>
             <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
             <Italian>Consenti Kit di Pronto Soccorso</Italian>
             <Japanese>応急処置キットの許可</Japanese>
@@ -150,6 +184,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
+            <Japanese>応急処置キットの使用に訓練レベルを必要とさせます。</Japanese>
+            <French>Une qualification médicale est requise pour pouvoir utiliser la trousse sanitaire.</French>
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
@@ -160,70 +196,106 @@
             <German>Orte für Erste-Hilfe-Set</German>
             <Czech>Oblast k použití PAK</Czech>
             <Portuguese>Localizações do KPS</Portuguese>
-            <French>Lieu d'utilisation da trousse sanitaire</French>
+            <French>Lieux trousse sanitaire</French>
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
             <Italian>Locazioni Kit Pronto Soccorso</Italian>
-            <Japanese>応急処置キットを使う場所</Japanese>
+            <Japanese>応急処置キットの使用可能場所</Japanese>
             <Korean>개인응급키트 사용 장소</Korean>
             <Chinesesimp>个人急救包使用地点</Chinesesimp>
             <Chinese>個人急救包使用地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
+            <Japanese>応急処置キットが使える場所を決定します。</Japanese>
+            <French>Définit où la trousse sanitaire peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Аптечку.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
             <English>Consume PAK</English>
+            <Japanese>応急処置キットの消費</Japanese>
+            <French>Trousse sanitaire consommable</French>
             <Russian>Израсходовать Аптечку</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
+            <Japanese>応急処置キットの使用後に消費するかどうかを決定します。</Japanese>
+            <French>Définit si la trousse sanitaire doit être à usage unique.</French>
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
-            <Russian>Коеффициент быстроты применения Аптечки</Russian>
+            <Japanese>応急処置キットの時間係数</Japanese>
+            <French>Coef. temps trousse sanitaire</French>
+            <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
+            <Japanese>応急処置キットの使用にかかる時間を変更できます。\n総治療時間は最低でも 10 秒間で、この係数と体全体に負ったダメージによって決まります。</Japanese>
+            <French>Modifie le temps nécessaire à l'application de la trousse sanitaire.\nLa durée est calculée en multipliant ce coefficient par les dommages totaux du patient ; avec un minimum de 10 secondes.</French>
             <Russian>Изменяет быстроту применения Аптечки.\nВремя лечения зависит от общего повреждения частей тела, умноженного на данный коэффициент (минимум 10 сек.).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
+            <Japanese>縫合キットを許可</Japanese>
+            <French>Autoriser trousse chirurgicale</French>
             <Russian>Разрешить Хирургический набор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a Surgical Kit.</English>
+            <Japanese>縫合キットの使用に訓練レベルを必要とさせます。</Japanese>
+            <French>Une qualification médicale est requise pour pouvoir utiliser une trousse chirurgicale.</French>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
+            <Japanese>縫合キットの使用可能場所</Japanese>
+            <French>Lieux trousse chirurgicale</French>
             <Russian>Места использования Хирургического набора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a Surgical Kit can be used.</English>
+            <Japanese>縫合キットが使える場所を決定します。</Japanese>
+            <French>Définit où la trousse chirurgicale peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
+            <Japanese>縫合キットの消費</Japanese>
+            <French>Trousse chirurgicale consommable</French>
             <Russian>Израсходовать Хирургический набор</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>Controls whether a Surgical Kit should be consumed after use.</English>
+            <Japanese>縫合キットの使用後に消費するかどうかを決定します。</Japanese>
+            <French>Définit si la trousse chirurgicale doit être à usage unique.</French>
             <Russian>Контролирует, следует ли израсходовать Хирургический набор после использования.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
+            <English>Self Stitching</English>
+            <French>Suturer soi-même</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_Description">
+            <English>Enables the use of surgical kits to stitch oneself.</English>
+            <French>Autorise l'utilisation de la trousse chirugicale sur soi-même.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
             <Russian>Преобразовывать ванильные медикаменты</Russian>
+            <Japanese>標準アイテムの変換</Japanese>
+            <French>Convertir objets Vanilla</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
             <German>Legt fest, ob Standard Medic-Equipment in ACE-Equipment umgewandelt oder entfernt wird</German>
+            <Japanese>ゲーム標準の医療アイテムを ACE 医療アイテムへ変換、削除、そのままにするかを決定します。</Japanese>
+            <French>Détermine si les objets médicaux Vanilla sont convertis en objets médicaux ACE, s'ils sont simplement retirés, ou s'ils sont ignorés.</French>
             <Russian>Определяет, что делать с ванильными медикаментами: преобразовать в медикаменты ACE, удалить или проигнорировать.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
             <English>Remove Only</English>
+            <Japanese>削除</Japanese>
+            <French>Retirer uniquement</French>
             <Russian>Удалять</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
@@ -237,26 +309,36 @@
             <French>Activer les détritus</French>
             <Hungarian>Szemét engedélyezése</Hungarian>
             <Italian>Abilita Barella</Italian>
-            <Japanese>医療廃棄物の表示を有効化</Japanese>
+            <Japanese>廃棄物の有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
             <English>Enables the creation of litter upon treatment.</English>
+            <Japanese>治療後に廃棄物の生成を有効化します。</Japanese>
+            <French>Permet de laisser des détritus (emballages, pansements usagés...) suite à un traitement.</French>
             <Russian>Разрешает создание медицинского мусора при лечении.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
             <English>Max Litter Objects</English>
+            <Japanese>最大廃棄物数</Japanese>
+            <French>Nombre maximum détritus</French>
             <Russian>Макс. кол-во мусора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
+            <Japanese>生成される最大廃棄物数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
+            <French>Définit le nombre maximal de détritus pouvant être affichés.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
             <Russian>Устанавливает максимальное количество создаваемых объектов мусора. Чрезмерное значение может вызвать задержку FPS.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
+            <Japanese>廃棄物寿命</Japanese>
+            <French>Durée d'affichage détritus</French>
             <Russian>Время жизни мусора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
+            <Japanese>廃棄物の寿命を秒で決定できます。-1 で永遠です。</Japanese>
+            <French>Définit la durée d'affichage des détritus.</French>
             <Russian>Управляет временем жизни объектов мусора в секундах. -1 означает Навсегда.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
@@ -267,7 +349,7 @@
             <German>Jeder</German>
             <Czech>Kdokoliv</Czech>
             <Portuguese>Qualquer um</Portuguese>
-            <French>Tous</French>
+            <French>Tout le monde</French>
             <Hungarian>Akárki</Hungarian>
             <Italian>Chiunque</Italian>
             <Japanese>だれでも</Japanese>
@@ -277,18 +359,26 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Medics">
             <English>Medics</English>
+            <Japanese>衛生兵</Japanese>
+            <French>Infirmiers</French>
             <Russian>Медики</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Doctors">
             <English>Doctors</English>
+            <Japanese>医師</Japanese>
+            <French>Médecins</French>
             <Russian>Доктора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicalFacilities">
             <English>Medical Facilities</English>
+            <Japanese>医療施設</Japanese>
+            <French>Installations médicales</French>
             <Russian>Госпитали</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VehiclesAndFacilities">
             <English>Vehicles &amp; Facilities</English>
+            <Japanese>車両 &amp; 施設</Japanese>
+            <French>Véhicules &amp; installations médicales</French>
             <Russian>Техника и госпитали</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
@@ -343,11 +433,11 @@
             <Italian>Addestramento Medico</Italian>
             <German>Sanitätsausbildung</German>
             <Spanish>Entrenamiento médico</Spanish>
-            <French>Entraînement médical</French>
+            <French>Qualification médicale</French>
             <Czech>Lékařský výcvik</Czech>
             <Portuguese>Treino médico</Portuguese>
             <Russian>Медицинская подготовка</Russian>
-            <Japanese>治療の訓練</Japanese>
+            <Japanese>衛生訓練</Japanese>
             <Korean>의료 훈련</Korean>
             <Chinesesimp>医疗训练</Chinesesimp>
             <Chinese>醫療訓練</Chinese>
@@ -363,7 +453,7 @@
             <French>Est infirmier</French>
             <Hungarian>Orvos-e</Hungarian>
             <Italian>E' Medico</Italian>
-            <Japanese>衛生兵として</Japanese>
+            <Japanese>衛生兵に</Japanese>
             <Korean>의무병</Korean>
             <Chinesesimp>是医疗兵</Chinesesimp>
             <Chinese>是醫療兵</Chinese>
@@ -374,7 +464,7 @@
             <German>Dieses Modul legt fest, welche Einheiten Sanitäter sind.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
             <Portuguese>Este módulo determina qual unidade é um paramédico.</Portuguese>
-            <French>Ce module permet d'assigner la classe médicale à une unité sélectionnée</French>
+            <French>Ce module vous permet d'assigner une classe medicale aux unités sélectionnées.</French>
             <Hungarian>Ez a modul engedélyezi az orvosi jelző hozzárendelését kiválasztott egységekhez.</Hungarian>
             <Russian>Этот модуль позволяет назначить класс медика выбранным юнитам.</Russian>
             <Spanish>Este módulo permite asignar la clase médico a las unidades seleccionadas.</Spanish>
@@ -392,7 +482,7 @@
             <German>Keine</German>
             <Czech>Žádný</Czech>
             <Portuguese>Nada</Portuguese>
-            <French>Aucun</French>
+            <French>Aucune</French>
             <Hungarian>Nincs</Hungarian>
             <Italian>Nessuno</Italian>
             <Japanese>なし</Japanese>
@@ -424,10 +514,10 @@
             <German>Ist medizinisches Fahrzeug</German>
             <Czech>Zdravotnické vozidlo</Czech>
             <Portuguese>É um veículo médico</Portuguese>
-            <French>Véhicule médical</French>
+            <French>Véhicule sanitaire</French>
             <Hungarian>Orvosi jármű-e</Hungarian>
             <Italian>E' Veicolo Medico</Italian>
-            <Japanese>医療車両として</Japanese>
+            <Japanese>医療車両に</Japanese>
             <Korean>의료 차량</Korean>
             <Chinesesimp>是医疗载具</Chinesesimp>
             <Chinese>是醫療載具</Chinese>
@@ -440,10 +530,10 @@
             <German>Ist eine medizinische Einrichtung</German>
             <Czech>Zdravotnické zařízení</Czech>
             <Portuguese>É uma instalação médica</Portuguese>
-            <French>Est une installation médical</French>
+            <French>Est une installation médicale</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
             <Italian>E' Struttura Medica</Italian>
-            <Japanese>医療施設として</Japanese>
+            <Japanese>医療施設に</Japanese>
             <Korean>의료시설</Korean>
             <Chinesesimp>是医疗设施</Chinesesimp>
             <Chinese>是醫療設施</Chinese>
@@ -456,7 +546,7 @@
             <German>Definiert ein Objekt als medizinische Einrichtung</German>
             <Czech>Registruje objekt jako zdravotnické zařízení</Czech>
             <Portuguese>Registra um objeto como instalacão médica</Portuguese>
-            <French>Enregistrer un objet comme une installation médical</French>
+            <French>Définit un objet comme étant une installation médicale.</French>
             <Hungarian>Egy objektum orvosi létesítményként való regisztrálása</Hungarian>
             <Italian>Registra un oggetto come struttura medica</Italian>
             <Japanese>オブジェクトを医療施設として割り当てる</Japanese>
@@ -472,7 +562,7 @@
             <German>Arzt (Nur erweitertes Sanitätssystem)</German>
             <Czech>Doktor (Pouze pokročilý zdravotníci)</Czech>
             <Portuguese>Doutor (Somente médicos avançados)</Portuguese>
-            <French>Médecin (traitements avancés uniquement)</French>
+            <French>Médecin (uniquement en médecine avancée)</French>
             <Hungarian>Doktor (csak fejlett orvosok)</Hungarian>
             <Italian>Dottore (Solo Medici Avanzati)</Italian>
             <Japanese>医師 (アドバンスド医療のみ)</Japanese>
@@ -501,7 +591,7 @@
             <German>Bandage (Einfach)</German>
             <Russian>Повязка (обычная)</Russian>
             <Spanish>Vendaje (Básico)</Spanish>
-            <French>Pansement adhésif</French>
+            <French>Pansement individuel</French>
             <Polish>Bandaż (jałowy)</Polish>
             <Czech>Obvaz (Standartní)</Czech>
             <Hungarian>Kötszer (Általános)</Hungarian>
@@ -523,7 +613,7 @@
             <Italian>Usato per coprire una ferita</Italian>
             <Portuguese>Usado para cobrir um ferimento</Portuguese>
             <Czech>Slouží k překrytí poranění</Czech>
-            <Japanese>傷口をおおう</Japanese>
+            <Japanese>傷口を覆います</Japanese>
             <Korean>상처를 덮을때 씁니다</Korean>
             <Chinesesimp>用于覆盖伤口</Chinesesimp>
             <Chinese>用於覆蓋傷口</Chinese>
@@ -549,7 +639,7 @@
             <German>Mullbinde</German>
             <Russian>Тампонирующая повязка</Russian>
             <Spanish>Vendaje compresivo</Spanish>
-            <French>Bande extensible</French>
+            <French>Bande compressive</French>
             <Polish>Bandaż (uciskowy)</Polish>
             <Hungarian>Nyomókötszer</Hungarian>
             <Italian>Bendaggio compressivo</Italian>
@@ -565,7 +655,7 @@
             <German>Wird verwendet, um mittlere bis große Wunden abzudecken und Blutungen zu stoppen</German>
             <Russian>Для тампонирования ран среднего и большого размера и остановки кровотечения.</Russian>
             <Spanish>Se utiliza para vendar heridas medianas o grandes y detener el sangrado</Spanish>
-            <French>Utilisé pour couvrir des blessures moyennes et grandes, ralentit le saignement.</French>
+            <French>Utilisé pour panser les moyennes et grosses plaies, et freiner le saignement.</French>
             <Polish>Używany w celu opatrywania średnich i dużych ran oraz tamowania krwawienia. Dobrze radzi sobie z tamowaniem ran płatowych oraz postrzałowych.</Polish>
             <Hungarian>Közepestől nagyig terjedő sebek betakarására és vérzés elállítására használt kötszer</Hungarian>
             <Italian>Usato su ferite medie o larghe per fermare emorragie.</Italian>
@@ -580,7 +670,7 @@
             <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is an option in large polytrauma injuries.</English>
             <Russian>Повязка для тампонирования раны, остановки кровотечения и лучшего заживления. При тяжёлых сочетанных ранениях возможно тампонирование раны.</Russian>
             <Spanish>Se utiliza para detener la hemorragia de una herida y favorecer su cicatrización. Se usa en grandes lesiones o politraumatismos.</Spanish>
-            <French>Bandage servant à recouvrir les blessures pour arrêter les hémoragies et faciliter la guérison. Recouvrir une blessure est optionnel dans le cas de blessures polytraumatiques.</French>
+            <French>Pansement utilisé pour enrayer le saignement et faciliter la cicatrisation de la plaie.\nComprimer une blessure est une option intéressante en cas de grands polytraumatismes.</French>
             <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
             <Italian>Un bendaggio usato per coprire la ferita, fermare il sanguinamento e facilitarne la guarigione. Questa tecnica è opzionale su ferite multiple.</Italian>
@@ -597,7 +687,7 @@
             <German>Bandage (Elastisch)</German>
             <Russian>Повязка (давящая)</Russian>
             <Spanish>Vendaje (Elástico)</Spanish>
-            <French>Bande compressive</French>
+            <French>Bande extensible</French>
             <Polish>Bandaż (elastyczny)</Polish>
             <Czech>Obvaz (Elastický)</Czech>
             <Hungarian>Rögzító kötszer</Hungarian>
@@ -613,7 +703,7 @@
             <German>Elastische Binde (Kompressionsbinde)</German>
             <Russian>Давящая повязка</Russian>
             <Spanish>Kit de vendaje (Elástico)</Spanish>
-            <French>Bande compressive</French>
+            <French>Bande de crêpe extensible</French>
             <Polish>Bandaż elastyczny służy do opatrywania ran ciętych oraz kłutych. Dobrze radzi sobie również ze zgniecieniami tkanek miękkich oraz rozerwaniami powierzchni skóry.</Polish>
             <Hungarian>Rugalmas kötszercsomag, "rögzítő"</Hungarian>
             <Italian>Kit di bendaggio, elastico</Italian>
@@ -628,7 +718,7 @@
             <English>Allows an even compression and extra support to the injured area.</English>
             <German>Ermöglicht eine gleichmäßige Kompression und zusätzliche Unterstützung für den verletzten Bereich.</German>
             <Russian>Давящая повязка обеспечивает равномерное сжатие и дополнительную поддержку повреждённой области</Russian>
-            <French>Ce bandage peut être utilisé pour compresser la plaie afin de ralentir le saignement et assurer la tenue du bandage lors de mouvement.</French>
+            <French>Permet une compression uniforme et un maintien supplémentaire de la zone blessée.</French>
             <Polish>Elastyczna opaska podtrzymująca opatrunek oraz usztywniająca okolice stawów.</Polish>
             <Spanish>Brinda una compresión uniforme y ofrece soporte extra a una zona lesionada</Spanish>
             <Hungarian>Egyenletes nyomást és támogatást biztosít a sebesült felületnek.</Hungarian>
@@ -676,7 +766,7 @@
             <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or slowing blood flow and therefore decreasing loss of blood.</English>
             <Russian>Жгут используется для прижатия сосудов к костным выступам, которое приводит к остановке или значительному уменьшению кровотечения</Russian>
             <Spanish>Dispositivo utilizado para eliminar el pulso distal y de ese modo controlar la pérdida de sangre</Spanish>
-            <French>Un dispositif permettant de compresser les artères et veines afin de ralentir l'hémorragie.</French>
+            <French>Dispositif permettant de comprimer fortement les veines et artères, ce qui a pour effet de ralentir, voire d'arrêter la circulation sanguine.\nDiminue donc drastiquement les pertes de sang.</French>
             <Polish>Opaska uciskowa CAT służy do tamowanie krwotoków w sytuacji zranienia kończyn z masywnym krwawieniem tętniczym lub żylnym.</Polish>
             <German>Ein Hilfsmittel, das Druck auf Venen und Arterien ausübt und so den Blutfluss verringert.</German>
             <Hungarian>Egy szűkítőeszköz, mely a vénás és artériás nyomás keringés helyi összenyomására szolgál, ezzel lelassítva vagy megállítva az adott területen a vérkeringést. Ez csökkenti a vérvesztés mértékét.</Hungarian>
@@ -691,10 +781,14 @@
         <Key ID="STR_ACE_Medical_Treatment_splint_Display">
             <English>Splint</English>
             <Russian>Шина</Russian>
+            <Japanese>添え木</Japanese>
+            <French>Attelle</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Desc_Short">
             <English>Stabilizes a fractured limb</English>
             <Russian>Стабилизирует перелом конечности</Russian>
+            <Japanese>骨折部位を安定させます。</Japanese>
+            <French>Stabilise un membre fracturé</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -732,7 +826,7 @@
             <English>An analgesic used to combat moderate to severe pain experiences.</English>
             <Russian>Обезболивающее для снятия средних и сильных болевых ощущений.</Russian>
             <Spanish>Analgésico usado para combatir los estados dolorosos de moderados a severos.</Spanish>
-            <French>Un analgésique puissant servant à réduire les douleurs modérées à sévères.</French>
+            <French>Un analgésique puissant soulageant les douleurs modérées à sévères.</French>
             <Polish>Organiczny związek chemiczny z grupy alkaloidów. Ma silne działanie przeciwbólowe.</Polish>
             <German>Ein Schmerzmittel um mäßige bis starke Schmerzen zu behandeln</German>
             <Hungarian>Egy fájdalomcsillapító anyag, jellemzően mérsékelt vagy erős fájdalom esetén alkalmazandó.</Hungarian>
@@ -779,7 +873,7 @@
             <German>Ein Medikament, das die Symptome von Epiniphrin bekämpft.</German>
             <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
             <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
-            <French>Un composé utilisé pour contrer les effets de l'épinéphrine</French>
+            <French>Un composé utilisé pour contrer les effets de l'épinéphrine.</French>
             <Italian>Medicamento usato per contrastare l'effetto dell'epinefrina</Italian>
             <Czech>Droga používaná k tlumení efektu Adrenalinu</Czech>
             <Portuguese>Uma droga usada para combater os efeitos da Epinefrina</Portuguese>
@@ -809,7 +903,7 @@
             <English>Used in NBC scenarios</English>
             <Russian>Применяется для защиты от ОМП</Russian>
             <Spanish>Usado en escenarios NBQ</Spanish>
-            <French>Utilisé en cas d'attaque CBRN</French>
+            <French>Utilisé en cas d'attaque CBRN.</French>
             <Polish>Atropina. Stosowana jako lek rozkurczowy i środek rozszerzający źrenice.</Polish>
             <German>Verwendet bei ABC-Kontamination</German>
             <Hungarian>NBK helyzetek esetén használandó</Hungarian>
@@ -825,7 +919,7 @@
             <English>A drug used by the Military in NBC scenarios.</English>
             <Russian>Препарат, используемый в войсках для защиты от оружия массового поражения.</Russian>
             <Spanish>Medicamento usado por militares en escenarios NBQ</Spanish>
-            <French>Médicament utilisé par l'armée en cas d'attaque CBRN</French>
+            <French>Médicament utilisé par l'armée en cas d'attaque CBRN.</French>
             <Polish>Atropina. Stosowana jako lek rozkurczowy i środek rozszerzający źrenice. Środek stosowany w przypadku zagrożeń NBC.</Polish>
             <German>Ein Medikament, das vom Militär bei ABC-Kontamination verwendet wird.</German>
             <Hungarian>Egy instabil alkaloid, NBK helyzetek esetén a katonai szervezetek veszik használatba.</Hungarian>
@@ -857,7 +951,7 @@
             <English>Increase heart rate and counter effects given by allergic reactions</English>
             <Russian>Стимулирует работу сердца и купирует аллергические реакции</Russian>
             <Spanish>Aumenta la frecuencia cardiaca y contraresta los efectos de las reacciones alérgicas</Spanish>
-            <French>Augmente la fréquence cadiaque et annule les effets d'une réaction anaphylactique</French>
+            <French>Augmente la fréquence cadiaque et annule les effets d'une réaction anaphylactique.</French>
             <Polish>Adrenalina. Przyśpiesza tętno oraz zwiększa ciśnienie krwi a także przeciwdziała efektom wywołanym przez reakcje alergiczne.</Polish>
             <German>Steigert die Herzfrequenz und bekämpft Symptome von allergischen Reaktionen.</German>
             <Hungarian>Növeli a szívverést és ellenzi az allergiás reakciók hatásait</Hungarian>
@@ -873,7 +967,7 @@
             <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with decreasing positive outcomes.</English>
             <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты сердечных сокращений и купированию аллергических реакций (анафилактического шока). Применяется при остановке сердца с уменьшенной вероятностью благоприятного исхода.</Russian>
             <Spanish>Medicamento que dilata los bronquios, aumenta la frecuencia cardiaca y contrarresta los efectos de las reacciones alérgicas (anafilaxis). Se utiliza en caso de paros cardiacos repentinos.</Spanish>
-            <French>Medicament qui fonctionne sur le système nerveux sympathique créant une dilatation des bronches, augmente la fréquence cardiaque et annule les effets d'une réaction allergique (anaphylaxie). Utilisé lors d'arrêt cardio-respiratoire pour augmenter les chances de retrouver un pouls.</French>
+            <French>Médicament qui agit sur la réponse sympathique afin de dilater les bronches, augmenter le rythme cardiaque et contrer les effets provoqués par les réactions allergiques (anaphylaxie).\nUtilisé dans les scénarios d'arrêt cardiaque soudain, avec des résultats décroissants.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
             <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen (Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
@@ -905,7 +999,7 @@
             <English>A volume-expanding blood supplement.</English>
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
-            <French>Supplément sanguin visant à remplacer les volumes perdus.</French>
+            <French>Substitut sanguin visant à remplacer les volumes perdus.</French>
             <Polish>Składnik krwi, używany do zwiększenia jej objętości.</Polish>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
             <Italian>Aiuta ad aumentare il volume sanguigno.</Italian>
@@ -921,7 +1015,7 @@
             <English>A volume-expanding blood supplement.</English>
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <Spanish>Suplemento para expandir el volumen sanguíneo.</Spanish>
-            <French>Supplément visant à remplacer le volume sanguin perdu et remplace les plaquettes.</French>
+            <French>Substitut visant à remplacer le volume sanguin perdu.</French>
             <Polish>Składnik krwi, używany do zwiększenia jej objętości.</Polish>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
             <Italian>Aiuta ad aumentare il volume sanguigno.</Italian>
@@ -937,7 +1031,7 @@
             <English>Plasma IV (500ml)</English>
             <Russian>Плазма для в/в вливания (500 мл)</Russian>
             <Spanish>Plasma IV (500ml)</Spanish>
-            <French>Plasma IV (500ml)</French>
+            <French>Plasma IV (500 ml)</French>
             <Polish>Osocze IV (500ml)</Polish>
             <German>Plasma IV (500ml)</German>
             <Hungarian>Vérplazma-infúzió (500ml)</Hungarian>
@@ -953,7 +1047,7 @@
             <English>Plasma IV (250ml)</English>
             <Russian>Плазма для в/в вливания (250 мл)</Russian>
             <Spanish>Plasma IV (250ml)</Spanish>
-            <French>Plasma (250ml)</French>
+            <French>Plasma IV (250 ml)</French>
             <Polish>Osocze IV (250ml)</Polish>
             <German>Plasma IV (250ml)</German>
             <Hungarian>Vérplazma-infúzió (250ml)</Hungarian>
@@ -969,7 +1063,7 @@
             <English>Blood IV (1000ml)</English>
             <Russian>Кровь для переливания (1000 мл)</Russian>
             <Spanish>Sangre IV (1000ml)</Spanish>
-            <French>Culot sanguin IV (1000ml)</French>
+            <French>Culot sanguin IV (1000 ml)</French>
             <Polish>Krew IV (1000ml)</Polish>
             <German>Blut IV (1000ml)</German>
             <Hungarian>Vér-infúzió (1000ml)</Hungarian>
@@ -985,7 +1079,7 @@
             <English>Blood IV, for restoring a patients blood (keep cold)</English>
             <Russian>Пакет крови для возмещения объёма потерянной крови (хранить в холодильнике)</Russian>
             <Spanish>Sangre intravenosa, para restarurar el volumen sanguíneo (mantener frío)</Spanish>
-            <French>Culot sanguin O-, utilisé seulement lors de perte sanguine majeure afin de remplacer le volume sanguin perdu. Habituellement utilisé lors du transport ou dans un établissement de soins.</French>
+            <French>Culot sanguin pour transfustion IV, restaure le sang d'un patient (conserver au froid !)</French>
             <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta, trzymać w warunkach chłodniczych.</Polish>
             <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek (hidegen tárolandó)</Hungarian>
             <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue (conservare al fresco)</Italian>
@@ -1003,7 +1097,7 @@
             <Polish>Krew 0 Rh-, używana w rzadkich i szczególnych przypadkach do uzupełnienia krwi u pacjenta, zazwyczaj w trakcie fazie transportu rannej osoby do szpitala.</Polish>
             <Spanish>Utilice sólo durante gran pérdida de sangre para reemplazar el volumen de sangre perdida. Uso habitual durante el transporte de heridos.</Spanish>
             <Italian>Sangue 0 negativo usato per ripristinare sangue in pazienti in cui si è verificata una perdita di sangue.</Italian>
-            <French>Culot sanguin O- utilisé dans de rares et stricts cas pour compléter une perte de sang importante. Administré normalement lors d'un MEDEVAC.</French>
+            <French>Culot sanguin O-, utilisé en cas de perte de sang importante, afin de rétablir un volume normal.\nAdministré normalement lors d'un MEDEVAC.</French>
             <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
             <Portuguese>Sangue O- , utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento.</Portuguese>
             <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
@@ -1017,7 +1111,7 @@
             <English>Blood IV (500ml)</English>
             <Russian>Кровь для переливания (500 мл)</Russian>
             <Spanish>Sangre IV (500ml)</Spanish>
-            <French>Culot sanguin IV (500ml)</French>
+            <French>Culot sanguin IV (500 ml)</French>
             <Polish>Krew IV (500ml)</Polish>
             <German>Blut IV (500ml)</German>
             <Hungarian>Vér-infúzió (500ml)</Hungarian>
@@ -1033,7 +1127,7 @@
             <English>Blood IV (250ml)</English>
             <Russian>Кровь для переливания (250 мл)</Russian>
             <Spanish>Sangre IV (250ml)</Spanish>
-            <French>Culot sanguin IV (250ml)</French>
+            <French>Culot sanguin IV (250 ml)</French>
             <Polish>Krew IV (250ml)</Polish>
             <German>Blut IV (250ml)</German>
             <Hungarian>Vér-infúzió (250ml)</Hungarian>
@@ -1049,7 +1143,7 @@
             <English>Saline IV (1000ml)</English>
             <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
             <Spanish>Salino IV (1000ml)</Spanish>
-            <French>Solution saline IV (1000ml)</French>
+            <French>Solution saline IV (1000 ml)</French>
             <Polish>Sól fizjologiczna IV (1000ml)</Polish>
             <German>Kochsalzlösung (1000ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
@@ -1065,7 +1159,7 @@
             <English>Saline IV, for restoring a patients blood</English>
             <Russian>Пакет физраствора для возмещения объёма потерянной крови</Russian>
             <Spanish>Solución salina intravenosa, para restaurar el volumen sanguíneo</Spanish>
-            <French>Solution saline, pour rétablir temporairement la tension artérielle</French>
+            <French>Solution saline, pour rétablir en urgence le volume sanguin.</French>
             <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór elektrolitów, podawany dożylnie (IV).</Polish>
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
             <Italian>Soluzione salina, usata per ripristinare sangue nei pazienti.</Italian>
@@ -1081,7 +1175,7 @@
             <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.</English>
             <Russian>Пакет физиологического раствора для возмещения объёма потерянной крови путем внутривенного вливания</Russian>
             <Spanish>Suero fisiológico inoculado al torrente sanguíneo de forma intravenosa.</Spanish>
-            <French>Un remplacant temporaire pour rétablir la tension artérielle lors de perte sanguine, administré par intra-veineuse</French>
+            <French>Un agent médical permettant de reconstituer le volume sanguin.\nA administrer par perfusion intraveineuse.</French>
             <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór elektrolitów, podawany dożylnie (IV).</Polish>
             <Hungarian>Egy orvosi térfogat-helyreállító készítmény, melyet intravénás módon lehet a szervezetbe juttatni.</Hungarian>
             <Italian>Una soluzione medica per ripristinare il volume del sangue introdotta tramite trasfusione EV.</Italian>
@@ -1097,7 +1191,7 @@
             <English>Saline IV (500ml)</English>
             <Russian>Физраствор для в/в вливания (500 мл)</Russian>
             <Spanish>Salino IV (500ml)</Spanish>
-            <French>Solution saline IV (500ml)</French>
+            <French>Solution saline IV (500 ml)</French>
             <Polish>Sól fizjologiczna IV (500ml)</Polish>
             <German>Kochsalzlösung (500ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (500ml)</Hungarian>
@@ -1113,7 +1207,7 @@
             <English>Saline IV (250ml)</English>
             <Russian>Физраствор для в/в вливания (250 мл)</Russian>
             <Spanish>Salino IV (250ml)</Spanish>
-            <French>Solution saline IV (250ml)</French>
+            <French>Solution saline IV (250 ml)</French>
             <Polish>Sól fizjologiczna IV (250ml)</Polish>
             <German>Kochsalzlösung (250ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (250ml)</Hungarian>
@@ -1129,7 +1223,7 @@
             <English>Basic Field Dressing (QuikClot)</English>
             <Russian>Первичный перевязочный пакет (QuikClot)</Russian>
             <Spanish>Vendaje básico (QuickClot)</Spanish>
-            <French>Bandage basique (Hémostatique)</French>
+            <French>Pansement hémostatique (Quikclot)</French>
             <Polish>Opatrunek QuikClot ACS</Polish>
             <German>Verbandpäckchen (QuikClot)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
@@ -1145,7 +1239,7 @@
             <English>QuikClot bandage</English>
             <Russian>Гемостатический пакет QuikClot</Russian>
             <Spanish>Vendaje QuikClot</Spanish>
-            <French>Bandage hémostatique</French>
+            <French>Bande de gaze hémostatique</French>
             <Polish>Proszkowy opatrunek adsorbcyjny przeznaczony do tamowania zagrażających życiu krwawień średniej i dużej intensywności.</Polish>
             <German>Bandage mit Gerinnungsmittel</German>
             <Hungarian>QuikClot kötszer</Hungarian>
@@ -1160,7 +1254,7 @@
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Desc_Use">
             <English>Hemostatic bandage with coagulant that stops bleeding.</English>
             <Russian>Медицинский коагулянт для экстренной остановки кровотечения</Russian>
-            <French>Un bandage aidant à coaguler les saignements mineurs à moyens.</French>
+            <French>Bande de gaze hémostatique, impreignée d'un agent coagulant, afin de maitriser et stopper rapidement une hémorragie.</French>
             <Polish>Proszkowy opatrunek adsorpcyjny przeznaczony do tamowania zagrażających życiu krwawień średniej i dużej intensywności.</Polish>
             <Spanish>Vendaje hemostático con coagulante que detiene el sangrado.</Spanish>
             <German>Verband mit Gerinnungsmittel, um starke Blutung zu behandeln.</German>
@@ -1193,7 +1287,7 @@
             <English>Includes various treatment kit needed for stitching or advanced treatment</English>
             <Russian>Содержит различные материалы и инструменты для зашивания ран и оказания специальной медпомощи.</Russian>
             <Spanish>Incluye material médico para tratamientos avanzados</Spanish>
-            <French>Inclut du matériel medical pour les traitements délicats, tel les points de suture.</French>
+            <French>Contient tout le matériel médical requis pour la suture ou les traitements avancés</French>
             <Polish>Zestaw środków medycznych do opatrywania ran i dodatkowego leczenia po-urazowego.</Polish>
             <German>Beinhaltet medizinisches Material für fortgeschrittene Behandlung und zum Nähen.</German>
             <Hungarian>Változatos segédfelszereléseket tartalmaz sebvarráshoz és haladó elsősegélynyújtáshoz</Hungarian>
@@ -1210,7 +1304,7 @@
             <Polish>W znacznym stopniu poprawia stan pacjenta</Polish>
             <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
             <German>Persönliches Erste-Hilfe-Set zum ambulanten Nähen und fortgeschrittener Behandlung.</German>
-            <French>Inclut du matériel medical pour les traitements délicats, tel les points de suture.</French>
+            <French>A utiliser pour les sutures sur le terrain, ou pour les traitements avancés.</French>
             <Spanish>Equipo de primeros auxilios para sutura de campaña o tratamientos avanzados</Spanish>
             <Hungarian>Elsősegélycsomag, terepen való sebvarráshoz és haladó ellátáshoz</Hungarian>
             <Portuguese>Kit de primeiros socorros para sutura ou tratamentos avançados</Portuguese>
@@ -1255,7 +1349,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SurgicalKit_Desc_Short">
             <English>Surgical Kit for in field advanced medical treatment</English>
-            <French>Trousse chirurgicale pour le traitement sur le terrain</French>
+            <French>Trousse chirurgicale pour le traitement avancé sur le terrain</French>
             <Russian>Набор для хирургической помощи в полевых условиях</Russian>
             <Spanish>Kit quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
             <Polish>Zestaw pozwalający na zszywanie ran w polu</Polish>
@@ -1275,7 +1369,7 @@
             <Spanish>Kit quirúrgico para el tratamiento avanzado en el campo de batalla</Spanish>
             <Polish>Zestaw pozwalający na zszywanie ran w polu</Polish>
             <German>Operationsset für fortgeschrittene medizinische Feldversorgung</German>
-            <French>Trousse chirurgicale pour le traitement sur le terrain</French>
+            <French>Trousse chirurgicale pour le traitement sur le terrain.</French>
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
             <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo.</Portuguese>
@@ -1354,7 +1448,7 @@
             <German>Körperteil nicht verletzt...</German>
             <Italian>Non ci sono ferite in questa parte del corpo...</Italian>
             <Russian>Данная часть тела не повреждена...</Russian>
-            <French>Aucune blessures sur cette partie du corps...</French>
+            <French>Aucune blessure sur cette partie du corps...</French>
             <Polish>Brak obrażeń na tej części ciała...</Polish>
             <Spanish>Sin heridas en esta parte del cuerpo...</Spanish>
             <Hungarian>Ezen a testrészen nincs sérülés...</Hungarian>
@@ -1771,7 +1865,7 @@
             <Polish>Bandaż uciskowy</Polish>
             <Hungarian>Nyomókötszer</Hungarian>
             <Italian>Bendaggio compressivo</Italian>
-            <French>Bande extensible</French>
+            <French>Bandage compressif</French>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz Tlakový</Czech>
             <Japanese>弾性包帯</Japanese>
@@ -1786,7 +1880,7 @@
             <Russian>Давящая повязка</Russian>
             <Czech>Obavaz Elastický</Czech>
             <Polish>Bandaż elastyczny</Polish>
-            <French>Bande compressive</French>
+            <French>Bandage extensible</French>
             <Hungarian>Rögzitő kötszer</Hungarian>
             <Italian>Bendaggio elastico</Italian>
             <Portuguese>Bandagem Elástica</Portuguese>
@@ -1894,10 +1988,14 @@
         <Key ID="STR_ACE_Medical_Treatment_Apply_Splint">
             <English>Apply Splint</English>
             <Russian>Наложить Шину</Russian>
+            <Japanese>添え木を当てる</Japanese>
+            <French>Poser attelle</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Splint">
             <English>Applying Splint...</English>
             <Russian>Накладывается Шина...</Russian>
+            <Japanese>添え木を当てています・・・</Japanese>
+            <French>Retirer attelle</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -1920,7 +2018,7 @@
             <German>Diagnostizieren...</German>
             <Italian>Diagnosi in corso...</Italian>
             <Russian>Диагностика...</Russian>
-            <French>Diagnostic en cours</French>
+            <French>Diagnostic en cours...</French>
             <Polish>Diagnozowanie...</Polish>
             <Spanish>Diagnosticando...</Spanish>
             <Hungarian>Diagnózis folyamatban...</Hungarian>
@@ -1952,7 +2050,7 @@
             <German>HLW durchführen...</German>
             <Italian>Eseguendo RCP...</Italian>
             <Russian>Сердечно-лёгочная реанимация...</Russian>
-            <French>RCP en cours</French>
+            <French>RCP en cours...</French>
             <Polish>Przeprowadzanie RKO...</Polish>
             <Spanish>Realizando RCP...</Spanish>
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
@@ -1965,10 +2063,14 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_DisplayName">
             <English>CPR Success Chance</English>
+            <Japanese>心肺蘇生の成功率</Japanese>
+            <French>Chance de réussite du RCP</French>
             <Russian>Шанс успешной реанимации</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_Description">
             <English>Probability that cpr will be successful in restoring heart rhythm.</English>
+            <Japanese>心肺蘇生によって心拍を戻せる確率を決定できます。</Japanese>
+            <French>Probabilité de rétablir un rythme cardiaque suite à une RCP.</French>
             <Russian>Вероятность успешного проведения сердечно-лёгочной реанимации (СЛР).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Blood4_1000">
@@ -1977,7 +2079,7 @@
             <Spanish>Dar Sangre IV (1000ml)</Spanish>
             <Russian>Перелить пакет крови (1000 мл)</Russian>
             <Polish>Podaj krew IV (1000ml)</Polish>
-            <French>Sang en IV (1000ml)</French>
+            <French>Sang en IV (1000 ml)</French>
             <Czech>Podat krev. transfúzi (1000ml)</Czech>
             <Hungarian>Vér adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (1˙000ml)</Italian>
@@ -1993,7 +2095,7 @@
             <Spanish>Dar Sangre IV (500ml)</Spanish>
             <Russian>Перелить пакет крови (500 мл)</Russian>
             <Polish>Podaj krew IV (500ml)</Polish>
-            <French>Sang en IV (500ml)</French>
+            <French>Sang en IV (500 ml)</French>
             <Czech>Podat krev. transfúzi (500ml)</Czech>
             <Hungarian>Vér adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (500ml)</Italian>
@@ -2009,7 +2111,7 @@
             <Spanish>Dar Sangre IV (250ml)</Spanish>
             <Russian>Перелить пакет крови (250 мл)</Russian>
             <Polish>Podaj krew IV (250ml)</Polish>
-            <French>Sang en IV (250ml)</French>
+            <French>Sang en IV (250 ml)</French>
             <Czech>Podat krev. transfúzi (250ml)</Czech>
             <Hungarian>Vér adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione sangue EV (250ml)</Italian>
@@ -2025,7 +2127,7 @@
             <Spanish>Dar Plasma IV (1000ml)</Spanish>
             <Russian>Перелить пакет плазмы (1000 мл)</Russian>
             <Polish>Podaj osocze IV (1000ml)</Polish>
-            <French>Plasma en IV (1000ml)</French>
+            <French>Plasma en IV (1000 ml)</French>
             <Czech>Podat plazmu (1000ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (1˙000ml)</Italian>
@@ -2041,7 +2143,7 @@
             <Spanish>Dar Plasma IV (500ml)</Spanish>
             <Russian>Перелить пакет плазмы (500 мл)</Russian>
             <Polish>Podaj osocze IV (500ml)</Polish>
-            <French>Plasma en IV (500ml)</French>
+            <French>Plasma en IV (500 ml)</French>
             <Czech>Podat plazmu (500ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (500ml)</Italian>
@@ -2057,7 +2159,7 @@
             <Spanish>Dar Plasma IV (250ml)</Spanish>
             <Russian>Перелить пакет плазмы (250 мл)</Russian>
             <Polish>Podaj osocze IV (250ml)</Polish>
-            <French>Plasma en IV (250ml)</French>
+            <French>Plasma en IV (250 ml)</French>
             <Czech>Podat plazmu (250ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione plasma EV (250ml)</Italian>
@@ -2073,7 +2175,7 @@
             <Spanish>Dar Salino IV (1000ml)</Spanish>
             <Russian>Перелить пакет физраствора (1000 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (1000ml)</Polish>
-            <French>Solution saline en IV (1000ml)</French>
+            <French>Solution saline en IV (1000 ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (1˙000ml)</Italian>
@@ -2089,7 +2191,7 @@
             <Spanish>Dar Salino IV (500ml)</Spanish>
             <Russian>Перелить пакет физраствора (500 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (500ml)</Polish>
-            <French>Solution saline en IV (500ml)</French>
+            <French>Solution saline en IV (500 ml)</French>
             <Czech>Podaz fyz. roztok (500ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (500ml)</Italian>
@@ -2105,7 +2207,7 @@
             <Spanish>Dar Salino IV (250ml)</Spanish>
             <Russian>Перелить пакет физраствора (250 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (250ml)</Polish>
-            <French>Solution saline en IV (250ml)</French>
+            <French>Solution saline en IV (250 ml)</French>
             <Czech>Podaz fyz. roztok (250ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (250ml)</Italian>
@@ -2120,13 +2222,14 @@
             <German>Minimal</German>
             <Japanese>軽処置群</Japanese>
             <Russian>Минимально</Russian>
+            <French>Aucune urgence</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Delayed">
             <English>Delayed</English>
             <Spanish>Retrasado</Spanish>
             <Russian>Срочная помощь</Russian>
             <Polish>Opóźniony</Polish>
-            <French>Traitement urgent</French>
+            <French>Peut attendre</French>
             <German>Verzögert</German>
             <Czech>Odložitelný</Czech>
             <Hungarian>Késleltetett</Hungarian>
@@ -2142,7 +2245,7 @@
             <Spanish>Inmediato</Spanish>
             <Russian>Неотложная помощь</Russian>
             <Polish>Natychmiastowy</Polish>
-            <French>Traitement immédiat</French>
+            <French>Urgent</French>
             <German>Sofort</German>
             <Czech>Okamžitý</Czech>
             <Hungarian>Azonnali</Hungarian>
@@ -2221,7 +2324,7 @@
             <English>Difficult breathing</English>
             <Russian>Дыхание затруднено</Russian>
             <Spanish>Dificultad para respirar</Spanish>
-            <French>Difficulté respiratoire</French>
+            <French>Respiratoire difficile</French>
             <Polish>Trudności z oddychaniem</Polish>
             <German>Schwere Atmung</German>
             <Czech>Dýchá s obtížemi</Czech>
@@ -2238,7 +2341,7 @@
             <German>Beinahe keine Atmung</German>
             <Russian>Дыхание очень слабое</Russian>
             <Spanish>Casi sin respiración</Spanish>
-            <French>Respiration faible</French>
+            <French>Respiration très faible</French>
             <Polish>Prawie brak oddechu</Polish>
             <Czech>Skoro nedýchá</Czech>
             <Hungarian>Alig van légzés</Hungarian>
@@ -2254,6 +2357,7 @@
             <German>Hat leichte Schmerzen</German>
             <Japanese>中くらいの痛みがある</Japanese>
             <Russian>Небольшая боль</Russian>
+            <French>Légère douleur</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Pain">
             <English>In pain</English>
@@ -2276,6 +2380,7 @@
             <German>Hat starke Schmerzen</German>
             <Japanese>ひどい痛みがある</Japanese>
             <Russian>Сильная боль</Russian>
+            <French>Douleur intense</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -2327,7 +2432,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Content">
             <English>Checking Blood Pressure..</English>
-            <French>Prise de la tension...</French>
+            <French>Prise de tension...</French>
             <Russian>Проверка артериального давления...</Russian>
             <Spanish>Comprobando presión arterial...</Spanish>
             <Polish>Sprawdzanie ciśnienia krwi...</Polish>
@@ -2346,7 +2451,7 @@
             <German>%1 kontrollierte Blutdruck: %2</German>
             <Italian>%1 controllata pressione sanguigna: %2</Italian>
             <Russian>%1 проверил артериальное давление: %2</Russian>
-            <French>%1 a mesuré la tension: %2</French>
+            <French>%1 a mesuré la tension : %2</French>
             <Polish>%1 sprawdził ciśnienie krwi: %2</Polish>
             <Spanish>%1 verificada la presión arterial: %2</Spanish>
             <Hungarian>%1 ellenőrizte a vérnyomást: %2</Hungarian>
@@ -2375,7 +2480,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_1">
             <English>You find a blood pressure of %2/%3</English>
-            <French>Vous avez mesuré une tension de %2/%3</French>
+            <French>La tension est de %2/%3</French>
             <Russian>Артериальное давление %2/%3</Russian>
             <Spanish>La Presión Arterial es %2/%3</Spanish>
             <Hungarian>A vérnyomás %2/%3</Hungarian>
@@ -2391,7 +2496,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_2">
             <English>You find a low blood pressure</English>
-            <French>Tension basse</French>
+            <French>La tension est basse</French>
             <Russian>Давление низкое</Russian>
             <Spanish>La presión arterial es baja</Spanish>
             <Polish>Wyczuwasz niskie ciśnienie krwi</Polish>
@@ -2407,7 +2512,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
-            <French>Tension normale</French>
+            <French>La tension est normale</French>
             <Russian>Давление нормальное</Russian>
             <Spanish>La presión arterial es normal</Spanish>
             <Polish>Wyczuwasz normalne ciśnienie krwi</Polish>
@@ -2423,7 +2528,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
-            <French>Tension élevée</French>
+            <French>La tension est élevée</French>
             <Russian>Давление высокое</Russian>
             <Spanish>La presión arterial es alta</Spanish>
             <Polish>Wyczuwasz wysokie ciśnienie krwi</Polish>
@@ -2439,7 +2544,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
-            <French>Pas de tension</French>
+            <French>Il n'y a aucune pression sanguine</French>
             <Russian>Давления нет</Russian>
             <Spanish>No hay presión arterial</Spanish>
             <Polish>Nie wyczuwasz ciśnienia krwi</Polish>
@@ -2522,7 +2627,7 @@
             <German>Kein Blutdruck</German>
             <Italian>Nessuna Pressione Sanguigna</Italian>
             <Russian>Артериальное давление отсутствует</Russian>
-            <French>pas de tension</French>
+            <French>Aucune pression sanguine</French>
             <Polish>Brak ciśnienia krwi</Polish>
             <Spanish>Sin presión arterial</Spanish>
             <Hungarian>Nincs vérnyomás</Hungarian>
@@ -2586,7 +2691,7 @@
             <German>%1 kontrollierte Herzfrequenz: %2</German>
             <Italian>%1 Controllata Frequenza Cardiaca: %2</Italian>
             <Russian>%1 проверил пульс: %2</Russian>
-            <French>%1 a vérifié le pouls de : %2</French>
+            <French>%1 a vérifié le pouls : %2</French>
             <Polish>%1 sprawdził tętno: %2</Polish>
             <Spanish>%1 verificado el ritmo cardíaco: %2</Spanish>
             <Hungarian>%1 ellenőrizte a szívverés-számot: %2</Hungarian>
@@ -2605,7 +2710,7 @@
             <German>Keine</German>
             <Czech>Žádný</Czech>
             <Portuguese>Nada</Portuguese>
-            <French>aucun</French>
+            <French>Aucun pouls</French>
             <Hungarian>Nincs</Hungarian>
             <Italian>Niente</Italian>
             <Japanese>なし</Japanese>
@@ -2618,7 +2723,7 @@
             <German>Schwach</German>
             <Italian>Lento</Italian>
             <Russian>Слабый</Russian>
-            <French>lent</French>
+            <French>Lent</French>
             <Polish>Słabe</Polish>
             <Spanish>Débil</Spanish>
             <Hungarian>Gyenge</Hungarian>
@@ -2634,7 +2739,7 @@
             <German>Normal</German>
             <Italian>Normale</Italian>
             <Russian>Нормальный</Russian>
-            <French>normal</French>
+            <French>Normal</French>
             <Polish>Normalne</Polish>
             <Spanish>Normal</Spanish>
             <Hungarian>Normális</Hungarian>
@@ -2650,7 +2755,7 @@
             <German>Stark</German>
             <Italian>Veloce</Italian>
             <Russian>Сильный</Russian>
-            <French>rapide</French>
+            <French>Rapide</French>
             <Polish>Silne</Polish>
             <Spanish>Fuerte</Spanish>
             <Hungarian>Erős</Hungarian>
@@ -2663,7 +2768,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_1">
             <English>You find a Heart Rate of %2</English>
-            <French>%2 battements par minute</French>
+            <French>Le rythme cardiaque est de %2</French>
             <Russian>Пульс %2 уд./мин.</Russian>
             <Spanish>El ritmo cardíaco es de %2</Spanish>
             <Polish>Wyczuwasz tętno o wartości %2</Polish>
@@ -2679,7 +2784,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
-            <French>Poulslent</French>
+            <French>Rythme cardiaque lent</French>
             <Russian>Пульс слабый</Russian>
             <Spanish>El ritmo cardíaco es débil</Spanish>
             <Polish>Wyczuwasz słabe tętno</Polish>
@@ -2695,7 +2800,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
-            <French>pouls rapide</French>
+            <French>Rythme cardiaque rapide</French>
             <Russian>Пульс учащенный</Russian>
             <Spanish>El ritmo cardíaco está acelerado</Spanish>
             <Polish>Wyczuwasz silne tętno</Polish>
@@ -2711,7 +2816,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
-            <French>pouls normal</French>
+            <French>Rythme cardiaque normal</French>
             <Russian>Пульс в норме</Russian>
             <Spanish>El ritmo cardíaco es bueno</Spanish>
             <Polish>Wyczuwasz normalne tętno</Polish>
@@ -2727,7 +2832,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
-            <French>pas de pouls</French>
+            <French>Aucun pouls</French>
             <Russian>Пульс не прощупывается</Russian>
             <Spanish>No tiene ritmo cardíaco</Spanish>
             <Polish>Wyczuwasz brak tętna</Polish>
@@ -2759,7 +2864,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Content">
             <English>You check response of patient</English>
-            <French>Vous évaluez l'état de conscience</French>
+            <French>Vous évaluez l'état de conscience du patient</French>
             <Russian>Вы проверяете реакцию раненого</Russian>
             <Spanish>Compruebas si el paciente reacciona</Spanish>
             <Polish>Sprawdzasz przytomność pacjenta</Polish>
@@ -2875,7 +2980,7 @@
             <Spanish>Ha perdido un poco de sangre</Spanish>
             <Russian>Есть кровопотеря</Russian>
             <German>Er hat etwas Blut verloren</German>
-            <French>Il a perdu du sang</French>
+            <French>Il a perdu un peu de sang</French>
             <Polish>Stracił trochę krwi</Polish>
             <Hungarian>Valamennyi vért vesztett</Hungarian>
             <Czech>Ztratil trochu krve</Czech>
@@ -3018,7 +3123,7 @@
             <Russian>Наложение швов</Russian>
             <Spanish>Suturando</Spanish>
             <German>Nähen</German>
-            <French>Sutures</French>
+            <French>Suture</French>
             <Polish>Szycie</Polish>
             <Hungarian>Összevarrás</Hungarian>
             <Italian>Suturando</Italian>
@@ -3104,7 +3209,7 @@
             <Hungarian>Cipelés</Hungarian>
             <Portuguese>Carregar</Portuguese>
             <Italian>Trasporta</Italian>
-            <Japanese>運ぶ</Japanese>
+            <Japanese>担ぐ</Japanese>
             <Korean>업다</Korean>
             <Chinesesimp>背起</Chinesesimp>
             <Chinese>背起</Chinese>
@@ -3273,7 +3378,7 @@
             <Spanish>%1 ha puesto una IV</Spanish>
             <German>%1 hat eine Infusion verabreicht</German>
             <Polish>%1 podał IV</Polish>
-            <French>%1 a plaçé une IV</French>
+            <French>%1 a effectué une IV</French>
             <Hungarian>%1 infúziót adott</Hungarian>
             <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
@@ -3289,7 +3394,7 @@
             <Russian>%1 наложил жгут</Russian>
             <German>%1 hat ein Tourniquet angelegt</German>
             <Polish>%1 założył stazę</Polish>
-            <French>%1 a plaçé un garrot</French>
+            <French>%1 a posé un garrot</French>
             <Hungarian>%1 felhelyezett egy érszorítót</Hungarian>
             <Italian>%1 ha applicato un laccio emostatico</Italian>
             <Portuguese>%1 aplicou um torniquete</Portuguese>
@@ -3308,7 +3413,7 @@
             <Russian>%1 использовал аптечку</Russian>
             <Italian>%1 ha usato Kit Pronto Soccorso Personale</Italian>
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
-            <French>%1 a utilisé une trousse</French>
+            <French>%1 a utilisé une trousse sanitaire</French>
             <Japanese>%1 は応急処置キットを使った</Japanese>
             <Korean>%1 (이)가 개인응급키트를 사용했다</Korean>
             <Chinesesimp>%1 已使用了个人急救包</Chinesesimp>
@@ -3370,7 +3475,7 @@
             <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura hitpoints completamente bendati</Italian>
-            <French>Soigner les plaies entièrement bandées</French>
+            <French>Guérir les plaies entièrement bandées</French>
             <German>Heilt vollständig bandagierte Trefferpunkte</German>
             <Japanese>包帯は体力を完全に回復する</Japanese>
             <Korean>붕대를 감은후 체력을 회복함</Korean>
@@ -3398,7 +3503,7 @@
             <German>Tourniquet entfernen...</German>
             <Polish>Zdejmowanie stazy...</Polish>
             <Spanish>Quitando torniquete...</Spanish>
-            <French>Retire le garrot...</French>
+            <French>Retrait du garrot...</French>
             <Portuguese>Removendo torniquete...</Portuguese>
             <Hungarian>Érszorító eltávolítása...</Hungarian>
             <Czech>Sundavám škrtidlo...</Czech>
@@ -3429,7 +3534,7 @@
             <German>Wann kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kdy může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
-            <French>Quand peut être utilisé la trousse sanitaire?</French>
+            <French>Quand peut être utilisée la trousse sanitaire ?</French>
             <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
             <Hungarian>Mikor lehet az elsősegélycsomagot használni?</Hungarian>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
@@ -3445,7 +3550,7 @@
             <German>Beding. für d. Operationskasten (erw.)</German>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
-            <French>Conditions d'utilisation de la trousse chirurgicale (Av.)</French>
+            <French>Conditions d'utilisation de la trousse chirurgicale</French>
             <Polish>Warunek zestawu chirurgicznego</Polish>
             <Hungarian>Sebészkészlet állapot</Hungarian>
             <Portuguese>Condição do Kit Cirúrgico (Avançado)</Portuguese>
@@ -3461,7 +3566,7 @@
             <German>Wann kann der Operationskasten verwendet werden?</German>
             <Czech>Kde může být použita chirurgická souprava?</Czech>
             <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
-            <French>Quand peut être utilisé la trousse chirurgicale</French>
+            <French>Quand peut être utilisée la trousse chirurgicale ?</French>
             <Polish>Po spełnieniu jakich warunków zestaw chirurgiczny może zostać zastosowany na pacjencie?</Polish>
             <Hungarian>Mikor lehet a sebészkészletet használni?</Hungarian>
             <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
@@ -3477,7 +3582,7 @@
             <German>Bedingungen für d. Erste-Hilfe-Set</German>
             <Czech>Podmínky pro použití osobní lékárničky</Czech>
             <Spanish>Condición EPA</Spanish>
-            <French>Condition d'utilisation de la trousse sanitaire</French>
+            <French>Conditions d'utilisation de la trousse sanitaire</French>
             <Polish>Warunek apteczek</Polish>
             <Hungarian>Elsősegélycsomag állapot</Hungarian>
             <Portuguese>Condição do KPS</Portuguese>

@@ -31,7 +31,8 @@ GVAR(animDurations) = [] call CBA_fnc_createNamespace;
     ["AinvPknlMstpSlayWlnrDnon_medicOther", 9],
     ["AinvPknlMstpSlayWpstDnon_medicOther", 10],
     ["AinvPpneMstpSlayWpstDnon_medicOther", 8.5],
-    ["AinvPknlMstpSnonWnonDnon_medic1", 10]
+    ["AinvPknlMstpSnonWnonDnon_medic1", 10],
+    ["AinvPknlMstpSnonWnonDr_medic0", 12]
 ];
 
 // class names of medical facilities (config case)

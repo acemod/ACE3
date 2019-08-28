@@ -21,20 +21,6 @@ params ["_player", "_newVehicle"];
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
 
-// Run magazine handling initialization if enabled
-if (!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])) then {
-    // Make sure that mortar init is executed after settings init
-    [{
-        params ["_mortar"];
-        if (GVAR(useAmmoHandling) && {!(_mortar getVariable [QGVAR(initialized),false]) && !(_mortar getVariable [QGVAR(exclude),false])}) then {
-            //wait for proper turret locality change
-            [{
-                ["ace_initMortar", [_this], [_this]] call CBA_fnc_globalEvent;
-            }, _mortar, 0.05] call CBA_fnc_waitAndExecute;
-        };
-    }, _newVehicle] call EFUNC(common,runAfterSettingsInit);
-};
-
 private _tubeWeaponName = (weapons _newVehicle) select 0;
 private _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
 
