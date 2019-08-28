@@ -26,9 +26,13 @@ private _causeOfDeath = _unit getVariable [QEGVAR(medical,causeOfDeath), "#scrip
 // if undefined then it's a death not caused by ace's setDead (mission setDamage, disconnect)
 if (_causeOfDeath != "#scripted") then {
     _killer = _unit getVariable [QEGVAR(medical,lastDamageSource), _killer]; // vehicle
-    _this set [1, _killer];
     _instigator = _unit getVariable [QEGVAR(medical,lastInstigator), _instigator]; // unit in the turret
-    _this set [2, _instigator];
+
+    // Killed EH uses the same array, so we can modify it now to pass the correct killer/instigator
+    if (missionNamespace getVariable [QEGVAR(medical,modifyKilledArray), true]) then { // getVar so this can be disabled
+        _this set [1, _killer];
+        _this set [2, _instigator];
+    };
 };
 TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
 
