@@ -7,29 +7,17 @@
             <Japanese>状態</Japanese>
             <Russian>Состояния</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuryCondition_DisplayName">
-            <English>Fatal Injury Player</English>
-            <German>Tödliche Spielerverletzungen</German>
-            <Japanese>致命傷プレイヤー</Japanese>
-            <Russian>Смертельные ранения игрока</Russian>
+        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_DisplayName">
+            <English>Player Fatal Injuries</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuryCondition_Description">
-            <English>Controls when a player can receive a fatal injury.</English>
-            <German>Definiert wann ein Spieler tödliche Verletzungen bekommen kann</German>
-            <Japanese>プレイヤーが致命傷から蘇生できるかどうか決定します</Japanese>
-            <Russian>Определяет, когда игрок может получить смертельное ранение</Russian>
+        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_Description">
+            <English>Controls when players can receive fatal injuries. A fatal injury is caused by receiving an injury to the head or heart.</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuryConditionAI_DisplayName">
-            <English>AI Instant Death</English>
-            <German>Direkter Tod KI</German>
-            <Japanese>AI の即死</Japanese>
-            <Russian>Мгновенная смерть ИИ</Russian>
+        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
+            <English>AI Fatal Injuries</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuryConditionAI_Description">
-            <English>Controls if AI units are able to die instantly.</English>
-            <German>Legt fest, ob eine KI direkt sterben kann</German>
-            <Japanese>AI が即死できるかどうか決定します</Japanese>
-            <Russian>Определяет, сможет ли ИИ мгновенно умереть</Russian>
+        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_Description">
+            <English>Controls when AI can receive fatal injuries. A fatal injury is caused by receiving an injury to the head or heart.\nWhen set to "Always", this effectively produces "AI Instant Death" behaviour as AI will immediately die from any fatal injury.\nNOTE: Any mode other than "Always" requires AI Unconsciousness to be enabled.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_DisplayName">
             <English>AI Unconsciousness</English>
@@ -48,8 +36,7 @@
             <Chinese>AI無意識</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Description">
-            <English>Allows AI to go unconscious instead of dying.</English>
-            <Japanese>AI が即死ではなく気絶へ移行できるかどうか決定します。</Japanese>
+            <English>Controls whether AI can go unconscious instead of immediately dying.\nThis setting works together with the "AI Fatal Injuries" setting since, going into cardiac arrest requires that the unit is able to go unconscious.\nHowever, these settings are separated because units can go unconscious from critical vitals resulting from non-fatal injuries.\nIn essence, this means that in order to enable cardiac arrest for AI units, this setting must be enabled.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>
