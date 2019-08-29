@@ -218,11 +218,16 @@ class CfgWeapons {
     class Rifle_Short_Base_F: Rifle_Base_F {};
     class Rifle_Long_Base_F: Rifle_Base_F {};
 
+    class DMR_06_base_F: Rifle_Long_Base_F {
+        ACE_IronSightBaseAngle = 0.018227;
+        ACE_RailHeightAboveBore = 3.27488;
+    };
+
     class DMR_07_base_F: Rifle_Long_Base_F {
         ACE_RailHeightAboveBore = 5.07109;
         ACE_IronSightBaseAngle = -0.00160721;
     };
-    
+
     class arifle_MX_Base_F: Rifle_Base_F {
         class Single: Mode_SemiAuto {};
         class FullAuto: Mode_FullAuto {};
@@ -307,7 +312,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 5.75468;
         ACE_IronSightBaseAngle = 0.0863227;
     };
-    
+
     class arifle_MX_F: arifle_MX_Base_F {
         ACE_RailHeightAboveBore = 2.80201;
         ACE_IronSightBaseAngle = 0.19502;
@@ -375,6 +380,14 @@ class CfgWeapons {
         ACE_IronSightBaseAngle = -0.1532926;
     };
 
+    class arifle_MSBS65_base_F: Rifle_Base_F {
+        ACE_RailHeightAboveBore = 5.2;
+        ACE_IronSightBaseAngle = -0.028648;
+    };
+    class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F {
+        ACE_IronSightBaseAngle = -0.045837;
+    };
+
     class EBR_base_F: Rifle_Long_Base_F {};
     class LRR_base_F: Rifle_Long_Base_F {};
     class GM6_base_F: Rifle_Long_Base_F {};
@@ -383,7 +396,6 @@ class CfgWeapons {
     class DMR_03_base_F: Rifle_Long_Base_F {};
     class DMR_04_base_F: Rifle_Long_Base_F {};
     class DMR_05_base_F: Rifle_Long_Base_F {};
-    class DMR_06_base_F: Rifle_Long_Base_F {};
 
     class srifle_EBR_F: EBR_base_F {
         ACE_RailHeightAboveBore = 1.98812;
@@ -416,10 +428,6 @@ class CfgWeapons {
     class srifle_DMR_05_blk_F: DMR_05_base_F {
         ACE_RailHeightAboveBore = 3.91334;
         ACE_IronSightBaseAngle = 0.0123425;
-    };
-    class srifle_DMR_06_camo_F: DMR_06_base_F {
-        ACE_RailHeightAboveBore = 3.27488;
-        ACE_IronSightBaseAngle = 0.018227;
     };
 
     class MMG_01_base_F;
