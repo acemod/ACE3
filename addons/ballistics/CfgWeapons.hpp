@@ -143,11 +143,20 @@ class CfgWeapons {
 
     // M14
     class DMR_06_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 558.8;
+        ACE_barrelTwist = 304.8;
+        initSpeed = -0.999395;
         class Single: Mode_SemiAuto {
             dispersion = MOA_TO_RAD(0.81);
         };
 
         class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(0.81);
+        };
+    };
+
+    class DMR_06_hunter_base_F: DMR_06_base_F {
+        class Single: Single {
             dispersion = MOA_TO_RAD(0.81);
         };
     };
@@ -396,7 +405,6 @@ class CfgWeapons {
 
     class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F {
         initSpeed = -1.007752; // 774*1.007752= 780 m/s according with the ACE_muzzleVelocities at 15°C
-        ACE_barrelTwist = 228.6;
         ACE_barrelLength = 508; // 20"
     };
 
@@ -813,23 +821,6 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist = 359.918;
         ACE_barrelLength = 620.014;
-    };
-
-    // M14
-    class srifle_DMR_06_camo_F: DMR_06_base_F {
-        magazines[] = {
-            "20Rnd_762x51_Mag",
-            "ACE_20Rnd_762x51_Mag_Tracer",
-            "ACE_20Rnd_762x51_Mag_Tracer_Dim",
-            "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-            "ACE_20Rnd_762x51_M118LR_Mag",
-            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-            "ACE_20Rnd_762x51_M993_AP_Mag",
-            "ACE_20Rnd_762x51_Mag_SD"
-        };
-        initSpeed = -0.999395;
-        ACE_barrelTwist = 304.8;
-        ACE_barrelLength = 558.8;
     };
 
     // HK121
