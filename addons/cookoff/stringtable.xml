@@ -25,9 +25,6 @@
             <Japanese>誘爆の損傷処理と砲塔の爆発効果を変更します。</Japanese>
             <Russian>Изменяет обработку урона для возгорания и эффекта срыва башни</Russian>
         </Key>
-        <Key ID="STR_ACE_CookOff_enableForPlayers">
-            <English>Enable for player crewed vehicles</English>
-        </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <English>Wreck (Turret)</English>
             <French>Épave (tourelle)</French>
