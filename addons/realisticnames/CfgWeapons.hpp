@@ -940,7 +940,7 @@ class CfgWeapons {
         displayName = CSTRING(arifle_AKS);
     };
 
-    // Contact / Levonia
+    // Contact/Livonia
 
     // AK15 variants
     class arifle_AK12_base_F;
