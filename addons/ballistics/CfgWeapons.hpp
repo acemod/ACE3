@@ -270,11 +270,6 @@ class CfgWeapons {
 
     // Stoner 99 LMG
     class LMG_Mk200_F: Rifle_Long_Base_F {
-        magazines[] = {
-            "200Rnd_65x39_cased_Box",
-            "200Rnd_65x39_cased_Box_Tracer",
-            "ACE_200Rnd_65x39_cased_Box_Tracer_Dim"
-        };
         initSpeed = -0.999327;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 317.5;
