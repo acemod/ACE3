@@ -19,7 +19,7 @@ class CfgWeapons {
     class CannonCore;
     // Fix attrocious A-10 Cannon Dispersion; Add high ROF capability
     class Gatling_30mm_Plane_CAS_01_F: CannonCore {
-        magazines[] += {"ACE_1000Rnd_Gatling_30mm_Plane_CAS_AP","ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM41","ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM51"};
+        magazines[] += {"ACE_1000Rnd_Gatling_30mm_Plane_CAS_AP","ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM41","ACE_1000Rnd_Gatling_30mm_Plane_CAS_HEI"};
         class LowROF: Mode_FullAuto {
             multiplier = 3;
             burst = 1;
