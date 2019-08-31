@@ -68,10 +68,9 @@ GVAR(digPFH) = [{
     // Stick the trench to the ground
     _basePos set [2, getTerrainHeightASL _basePos];
     private _minzoffset = 0;
-    private _ix = 0;
-    private _iy = 0;
-    for [{_ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
-        for [{_iy = -_dy/2},{_iy <= _dy/2},{_iy = _iy + _dy/3}] do {
+
+    for "_ix" from (-_dx/2) to (_dx/2) step (_dx/3) do {
+        for "_iy" from (-_dy/2) to (_dy/2) step (_dy/3) do {
             private _pos = _basePos vectorAdd (_v2 vectorMultiply _ix)
                                     vectorAdd (_v1 vectorMultiply _iy);
             _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));
