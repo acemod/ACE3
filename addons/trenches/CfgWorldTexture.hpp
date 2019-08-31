@@ -2,9 +2,9 @@ class CfgWorlds {};
 class CfgWorldTexture: CfgWorlds {
     //Altis
     class Altis {
-      surfaceTextureBasePath = "a3\map_data";
-      suffix = "co.paa";
-      camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
+        surfaceTextureBasePath = "a3\map_data";
+        suffix = "co.paa";
+        camouflageObjects[] = {"A3\plants_f\Clutter\c_Thistle_Thorn_Brown.p3d"};
     };
 
     //Baranow

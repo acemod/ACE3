@@ -46,16 +46,16 @@ private _getTexturePath = {
 };
 
 private _result = if !(isNil QGVAR(automaticFileSetup)) then {
-   GVAR(automaticFileSetup) params ["_basePath", "_suffix"];
+    GVAR(automaticFileSetup) params ["_basePath", "_suffix"];
 
-   [_surfaceType, _basePath, _suffix] call _getTexturePath;
+    [_surfaceType, _basePath, _suffix] call _getTexturePath;
 } else {
-   private _basePath = getText (configFile >> "CfgWorldTexture" >> "Altis" >> "surfaceTextureBasePath");
-   if ((_surfaceType find "#Gdt" == -1) || {worldName == "Tanoa"} || {worldName == "Enoch"}) then {
-       _basePath = getText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath")
-   };
+    private _basePath = getText (configFile >> "CfgWorldTexture" >> "Altis" >> "surfaceTextureBasePath");
+    if ((_surfaceType find "#Gdt" == -1) || {worldName == "Tanoa"} || {worldName == "Enoch"}) then {
+        _basePath = getText (configFile >> "CfgWorldTexture" >> worldName >> "surfaceTextureBasePath")
+    };
 
-   [_surfaceType, _basePath, getText(configFile >> "CfgWorldTexture" >> worldName >> "suffix")] call _getTexturePath;
+    [_surfaceType, _basePath, getText(configFile >> "CfgWorldTexture" >> worldName >> "suffix")] call _getTexturePath;
 };
 
 _result

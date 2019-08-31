@@ -13,13 +13,13 @@ class CfgVehicles {
                     // icon = "z\ace\addons\trenches\UI\w_entrchtool_ca.paa";
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     class GVAR(digEnvelopeShort) {
-                       displayName = CSTRING(DigEnvelopeShort);
-                       condition = QUOTE(GVAR(allowDigging) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowShortEnvelope));
-                       //wait a frame to handle "Do When releasing action menu key" option
-                       statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_short')])] call CBA_fnc_execNextFrame);
-                       exceptions[] = {};
-                       showDisabled = 0;
-                       //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
+                        displayName = CSTRING(DigEnvelopeShort);
+                        condition = QUOTE(GVAR(allowDigging) && (_this call FUNC(canContinueDiggingTrench)) && GVAR(allowShortEnvelope));
+                        //wait a frame to handle "Do When releasing action menu key" option
+                        statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_short')])] call CBA_fnc_execNextFrame);
+                        exceptions[] = {};
+                        showDisabled = 0;
+                        //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                     };
                     class GVAR(digEnvelopeSmall): GVAR(digEnvelopeShort) {
                         displayName = CSTRING(DigEnvelopeSmall);

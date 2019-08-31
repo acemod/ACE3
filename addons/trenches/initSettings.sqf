@@ -70,12 +70,12 @@
 ] call CBA_Settings_fnc_init;
 
 [
-QGVAR(allowBigEnvelope),
-"CHECKBOX",
-[localize LSTRING(allowBigEnvelope_displayName),
-localize LSTRING(allowBigEnvelope_tooltip)],
-localize LSTRING(settingCategory),
-true
+    QGVAR(allowBigEnvelope),
+    "CHECKBOX",
+    [localize LSTRING(allowBigEnvelope_displayName),
+    localize LSTRING(allowBigEnvelope_tooltip)],
+    localize LSTRING(settingCategory),
+    true
 ] call CBA_Settings_fnc_init;
 
 [

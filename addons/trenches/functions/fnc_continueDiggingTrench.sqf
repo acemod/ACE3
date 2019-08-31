@@ -123,15 +123,15 @@ if (_actualProgress == 0) then {
     _trench setPosWorld _pos;
     _trench setVectorDirAndUp _vecDirAndUp;
 
-   //Fatigue impact
-   EGVAR(advanced_fatigue,anReserve) = EGVAR(advanced_fatigue,anReserve) - ((_digTime /1.2) * GVAR(buildFatigueFactor)) max 0;
-   EGVAR(advanced_fatigue,anFatigue) = EGVAR(advanced_fatigue,anFatigue) + (((_digTime/1.2) * GVAR(buildFatigueFactor))/1200) min 1;
+    //Fatigue impact
+    EGVAR(advanced_fatigue,anReserve) = EGVAR(advanced_fatigue,anReserve) - ((_digTime /1.2) * GVAR(buildFatigueFactor)) max 0;
+    EGVAR(advanced_fatigue,anFatigue) = EGVAR(advanced_fatigue,anFatigue) + (((_digTime/1.2) * GVAR(buildFatigueFactor))/1200) min 1;
 
-   if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
-      [_handle] call CBA_fnc_removePerFrameHandler;
-      _trench setVariable [QGVAR(digging), false, true];
-      [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
-   };
+    if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {
+        [_handle] call CBA_fnc_removePerFrameHandler;
+        _trench setVariable [QGVAR(digging), false, true];
+        [QGVAR(addDigger), [_trench, _unit, true]] call CBA_fnc_serverEvent;
+    };
 }, 1, [_trench, _unit, _digTime, _vecDirAndUp]] call CBA_fnc_addPerFrameHandler;
 
 // Play animation
