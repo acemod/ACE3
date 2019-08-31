@@ -8,7 +8,7 @@ class CfgMagazines {
         count = 1170;
     };
 
-    class 1000Rnd_Gatling_30mm_Plane_CAS_HEI: VehicleMagazine {
+    class ACE_1000Rnd_Gatling_30mm_Plane_CAS_HEI: 1000Rnd_Gatling_30mm_Plane_CAS_01_F {
         ammo = "ACE_Gatling_30mm_Sub_HEI";
         displayName = CSTRING(GatlingDescriptionHEI);
         displayNameShort = CSTRING(GatlingDescriptionShortHEI);
