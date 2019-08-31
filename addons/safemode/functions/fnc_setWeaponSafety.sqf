@@ -23,6 +23,8 @@ params [
     ["_state", true, [true]]
 ];
 
+if (_weapon == "") exitWith {};
+
 private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
 
 _weapon = configName (configFile >> "CfgWeapons" >> _weapon);
