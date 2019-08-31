@@ -75,7 +75,6 @@ private _fnc_onFailure = {
 private _fnc_condition = {
     (_this select 0) params ["", "_trench", "_handle"];
 
-    if (isNil "_handle") exitWith {false};
     if (count (_trench getVariable [QGVAR(diggers),[]]) <= 1) exitWith {false};
     if (GVAR(stopBuildingAtFatigueMax) && {QEGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {false};
     true
