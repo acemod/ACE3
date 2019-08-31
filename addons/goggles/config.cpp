@@ -35,7 +35,7 @@ class CfgGlasses {
     };
 
     class G_Blindfold_01_base_F: None {
-        ACE_Overlay = QPATHTOF(textures\HUD\Blindfold.paa);
+        ACE_Overlay = QPATHTOF(textures\HUD\blindfold_ca.paa);
         ACE_OverlayCracked = "";
         ACE_Resistance = 2;
         ACE_Protection = 1;
