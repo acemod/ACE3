@@ -6,8 +6,12 @@ class CfgAmmo {
         timeToLive=6;
     };
 
+    class ShotgunBase;
+
     class B_12Gauge_Pellets_Submunition: BulletBase { //#00 Buckshot
         //vanilla values have been left as comments for reference purposes
+        caliber = 0.525; //penetration of ~3mm RHA, ~9.6mm metal
+        //caliber = 1; //too high, ~5.7mm of RHA (380*1*15/1000=5.7), ~18.25 metal
         //cost = 1;
         //hit = 20;
         //simulationStep = 0.0001;
@@ -23,6 +27,7 @@ class CfgAmmo {
     class B_12Gauge_Pellets_Submunition_Deploy: BulletBase {
         airFriction = -0.0030;
         //airFriction = -0.0067;
+        caliber = 0.525;
         hit = 2.55; //vanilla hit is way too high
         //hit = 6;
         //indirectHit = 0;
@@ -31,52 +36,67 @@ class CfgAmmo {
         //deflecting = 35;
     };
 
+    class B_12Gauge_Pellets: ShotgunBase { //This doesn't seem to be used for anything, but I want to standardize the caliber with the other pellet classes.
+        caliber = 0.525; //3mm RHA, probably still too high though as RHA is hardened.
+    };
+
     class ACE_12Gauge_Pellets_Submunition_No0_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.5;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 9};
         submunitionConeAngle = 0.81;
     };
     class ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0033;
+        caliber = 0.5;
         hit = 2.27;
     };
     class ACE_12Gauge_Pellets_Submunition_No1_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.475;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 11};
         submunitionConeAngle = 0.83;
     };
     class ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0038;
+        caliber = 0.475;
         hit = 1.86;
     };
     class ACE_12Gauge_Pellets_Submunition_No2_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.45;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 14};
         submunitionConeAngle = 0.85;
     };
     class ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0048;
+        caliber = 0.45;
         hit = 1.46;
     };
     class ACE_12Gauge_Pellets_Submunition_No3_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.425;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 18};
         submunitionConeAngle = 0.87;
     };
     class ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0067;
+        caliber = 0.425;
         hit = 1.13;
     };
     class ACE_12Gauge_Pellets_Submunition_No4_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.4;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 21};
         submunitionConeAngle = 0.89;
     };
     class ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0085;
+        caliber = 0.4;
         hit = 0.97;
     };
     class ACE_12Gauge_Pellets_Submunition_No4_Bird: B_12Gauge_Pellets_Submunition {
+        caliber = 0.2;
         hit = 3;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy";
         submunitionConeType[] = {"poissondisc", 135};
@@ -84,8 +104,14 @@ class CfgAmmo {
         triggerSpeedCoef[] = {0.8, 1};
     };
     class ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        caliber = 0.2;
         airFriction = -0.0800;
         hit = 0.15;
+    };
+
+    class B_12Gauge_Slug: BulletBase {
+        //caliber = 3; //too high, ~20mm of RHA (450*3*15/1000=20), ~64mm metal
+        caliber = 1.037; //~7mm RHA, ~22.4mm metal, probably still too high though as RHA is hardened.
     };
 
     class B_556x45_Ball : BulletBase {
