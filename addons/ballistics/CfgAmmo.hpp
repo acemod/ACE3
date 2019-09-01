@@ -31,61 +31,61 @@ class CfgAmmo {
         //deflecting = 35;
     };
 
-    class ACE_12Gauge_Pellets_Submunition_No0: B_12Gauge_Pellets_Submunition {
-        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No0_Deploy";
+    class ACE_12Gauge_Pellets_Submunition_No0_Buck: B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 9};
         submunitionConeAngle = 0.81;
     };
-    class ACE_12Gauge_Pellets_Submunition_No0_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+    class ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0033;
         hit = 2.27;
     };
-    class ACE_12Gauge_Pellets_Submunition_No1: B_12Gauge_Pellets_Submunition {
-        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No1_Deploy";
+    class ACE_12Gauge_Pellets_Submunition_No1_Buck: B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 11};
         submunitionConeAngle = 0.83;
     };
-    class ACE_12Gauge_Pellets_Submunition_No1_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+    class ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0038;
         hit = 1.86;
     };
-    class ACE_12Gauge_Pellets_Submunition_No2: B_12Gauge_Pellets_Submunition {
-        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No2_Deploy";
+    class ACE_12Gauge_Pellets_Submunition_No2_Buck: B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 14};
         submunitionConeAngle = 0.85;
     };
-    class ACE_12Gauge_Pellets_Submunition_No2_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+    class ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0048;
         hit = 1.46;
     };
-    class ACE_12Gauge_Pellets_Submunition_No3: B_12Gauge_Pellets_Submunition {
-        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No3_Deploy";
+    class ACE_12Gauge_Pellets_Submunition_No3_Buck: B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 18};
         submunitionConeAngle = 0.87;
     };
-    class ACE_12Gauge_Pellets_Submunition_No3_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+    class ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0067;
         hit = 1.13;
     };
-    class ACE_12Gauge_Pellets_Submunition_No4: B_12Gauge_Pellets_Submunition {
-        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Deploy";
+    class ACE_12Gauge_Pellets_Submunition_No4_Buck: B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 21};
         submunitionConeAngle = 0.89;
     };
-    class ACE_12Gauge_Pellets_Submunition_No4_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+    class ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0085;
         hit = 0.97;
     };
-    class ACE_12Gauge_Pellets_Submunition_No7: B_12Gauge_Pellets_Submunition {
+    class ACE_12Gauge_Pellets_Submunition_No4_Bird: B_12Gauge_Pellets_Submunition {
         hit = 3;
-        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No7_Deploy";
-        submunitionConeType[] = {"poissondisc", 291};
-        submunitionConeAngle = 1.2;
-        triggerSpeedCoef[] = {0.7, 1};
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy";
+        submunitionConeType[] = {"poissondisc", 135};
+        submunitionConeAngle = 1.1;
+        triggerSpeedCoef[] = {0.8, 1};
     };
-    class ACE_12Gauge_Pellets_Submunition_No7_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
-        airFriction = -0.1083;
-        hit = 0.09;
+    class ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0800;
+        hit = 0.15;
     };
 
     class B_556x45_Ball : BulletBase {

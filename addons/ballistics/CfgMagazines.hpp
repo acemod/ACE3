@@ -5,95 +5,95 @@ class CfgMagazines {
     class VehicleMagazine;
 
     class 2Rnd_12Gauge_Pellets: CA_Magazine {
-        displayName = CSTRING(2Rnd_12Gauge_Pellets_00_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_00_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_00_Description);
+        displayName = CSTRING(2Rnd_12Gauge_Pellets_No00_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No00_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No00_Buck_Description);
     };
-    class ACE_2Rnd_12Gauge_Pellets_0: 2Rnd_12Gauge_Pellets {
+    class ACE_2Rnd_12Gauge_Pellets_No0_Buck: 2Rnd_12Gauge_Pellets {
         author = ECSTRING(common,ACETeam);
-        displayName = CSTRING(2Rnd_12Gauge_Pellets_0_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_0_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_0_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No0";
+        displayName = CSTRING(2Rnd_12Gauge_Pellets_No0_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No0_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No0_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No0_Buck";
     };
-    class ACE_2Rnd_12Gauge_Pellets_1: ACE_2Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(2Rnd_12Gauge_Pellets_1_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_1_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_1_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No1";
+    class ACE_2Rnd_12Gauge_Pellets_No1_Buck: ACE_2Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(2Rnd_12Gauge_Pellets_No1_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No1_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No1_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No1_Buck";
     };
-    class ACE_2Rnd_12Gauge_Pellets_2: ACE_2Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(2Rnd_12Gauge_Pellets_2_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_2_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_2_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No2";
+    class ACE_2Rnd_12Gauge_Pellets_No2_Buck: ACE_2Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(2Rnd_12Gauge_Pellets_No2_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No2_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No2_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No2_Buck";
     };
-    class ACE_2Rnd_12Gauge_Pellets_3: ACE_2Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(2Rnd_12Gauge_Pellets_3_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_3_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_3_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No3";
+    class ACE_2Rnd_12Gauge_Pellets_No3_Buck: ACE_2Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(2Rnd_12Gauge_Pellets_No3_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No3_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No3_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No3_Buck";
     };
-    class ACE_2Rnd_12Gauge_Pellets_4: ACE_2Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(2Rnd_12Gauge_Pellets_4_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_4_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_4_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No4";
+    class ACE_2Rnd_12Gauge_Pellets_No4_Buck: ACE_2Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(2Rnd_12Gauge_Pellets_No4_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No4_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No4_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No4_Buck";
     };
-    class ACE_2Rnd_12Gauge_Pellets_7: ACE_2Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(2Rnd_12Gauge_Pellets_7_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_7_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_7_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No7";
+    class ACE_2Rnd_12Gauge_Pellets_No4_Bird: ACE_2Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(2Rnd_12Gauge_Pellets_No4_Bird_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No4_Bird_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No4_Bird_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No4_Bird";
     };
 
     class 6Rnd_12Gauge_Pellets: 2Rnd_12Gauge_Pellets {
-        displayName = CSTRING(6Rnd_12Gauge_Pellets_00_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_00_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_00_Description);
+        displayName = CSTRING(6Rnd_12Gauge_Pellets_No00_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No00_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No00_Buck_Description);
     };
-    class ACE_6Rnd_12Gauge_Pellets_0: 6Rnd_12Gauge_Pellets {
+    class ACE_6Rnd_12Gauge_Pellets_No0_Buck: 6Rnd_12Gauge_Pellets {
         author = ECSTRING(common,ACETeam);
-        displayName = CSTRING(6Rnd_12Gauge_Pellets_0_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_0_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_0_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No0";
+        displayName = CSTRING(6Rnd_12Gauge_Pellets_No0_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No0_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No0_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No0_Buck";
     };
-    class ACE_6Rnd_12Gauge_Pellets_1: ACE_6Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(6Rnd_12Gauge_Pellets_1_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_1_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_1_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No1";
+    class ACE_6Rnd_12Gauge_Pellets_No1_Buck: ACE_6Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(6Rnd_12Gauge_Pellets_No1_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No1_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No1_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No1_Buck";
     };
-    class ACE_6Rnd_12Gauge_Pellets_2: ACE_6Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(6Rnd_12Gauge_Pellets_2_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_2_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_2_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No2";
+    class ACE_6Rnd_12Gauge_Pellets_No2_Buck: ACE_6Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(6Rnd_12Gauge_Pellets_No2_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No2_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No2_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No2_Buck";
     };
-    class ACE_6Rnd_12Gauge_Pellets_3: ACE_6Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(6Rnd_12Gauge_Pellets_3_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_3_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_3_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No3";
+    class ACE_6Rnd_12Gauge_Pellets_No3_Buck: ACE_6Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(6Rnd_12Gauge_Pellets_No3_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No3_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No3_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No3_Buck";
     };
-    class ACE_6Rnd_12Gauge_Pellets_4: ACE_6Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(6Rnd_12Gauge_Pellets_4_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_4_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_4_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No4";
+    class ACE_6Rnd_12Gauge_Pellets_No4_Buck: ACE_6Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(6Rnd_12Gauge_Pellets_No4_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No4_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No4_Buck_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No4_Buck";
     };
-    class ACE_6Rnd_12Gauge_Pellets_7: ACE_6Rnd_12Gauge_Pellets_0 {
-        displayName = CSTRING(6Rnd_12Gauge_Pellets_7_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_7_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_7_Description);
-        ammo = "ACE_12Gauge_Pellets_Submunition_No7";
+    class ACE_6Rnd_12Gauge_Pellets_No4_Bird: ACE_6Rnd_12Gauge_Pellets_No0_Buck {
+        displayName = CSTRING(6Rnd_12Gauge_Pellets_No4_Bird_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No4_Bird_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No4_Bird_Description);
+        ammo = "ACE_12Gauge_Pellets_Submunition_No4_Bird";
     };
 
     class 15Rnd_12Gauge_Pellets: 6Rnd_12Gauge_Pellets {
-        displayName = CSTRING(15Rnd_12Gauge_Pellets_00_Name);
-        displayNameShort = CSTRING(12Gauge_Pellets_00_NameShort);
-        descriptionShort = CSTRING(12Gauge_Pellets_00_Description);
+        displayName = CSTRING(15Rnd_12Gauge_Pellets_No00_Buck_Name);
+        displayNameShort = CSTRING(12Gauge_Pellets_No00_Buck_NameShort);
+        descriptionShort = CSTRING(12Gauge_Pellets_No00_Buck_Description);
     };
 
     class 30Rnd_580x42_Mag_F: CA_Magazine {
