@@ -80,14 +80,14 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
         {
             private _subIndex = _forEachIndex;
             {
-                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
+                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique toLower(configName (configFile >> "CfgMagazines" >> _x))
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
 
             // Magazine groups
             {
                 private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
                 private _magArray = [_magazineGroups, toLower _x] call CBA_fnc_hashGet;
-                {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
+                {((_compatibleMagazines select _index) select _subIndex) pushBackUnique toLower _x} forEach _magArray;
             } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
 
 
