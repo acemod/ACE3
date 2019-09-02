@@ -74,24 +74,15 @@ private _compatibleItems = [];
 private _compatibleMagazines = [[[], []], [[], []], [[], []]];
 {
     if (_x != "") then {
-        private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
         private _index = _forEachIndex;
 
         {
             private _subIndex = _forEachIndex;
+
             {
-                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique toLower(configName (configFile >> "CfgMagazines" >> _x))
-            } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
-
-            // Magazine groups
-            {
-                private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
-                private _magArray = [_magazineGroups, toLower _x] call CBA_fnc_hashGet;
-                {((_compatibleMagazines select _index) select _subIndex) pushBackUnique toLower _x} forEach _magArray;
-            } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
-
-
-        } foreach getArray (_weaponConfig >> "muzzles");
+                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique toLower _x;
+            } forEach ([_x] call CBA_fnc_compatibleMagazines);
+        } foreach ([_x] call CBA_fnc_getMuzzles);
     };
 } foreach [primaryWeapon GVAR(center), handgunWeapon GVAR(center), secondaryWeapon GVAR(center)];
 
