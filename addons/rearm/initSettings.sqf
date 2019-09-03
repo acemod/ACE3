@@ -20,7 +20,7 @@
 
 [
     QGVAR(distance), "SLIDER",
-    [localize LSTRING(distance_DisplayName), localize LSTRING(distance_Description)],
+    [localize LSTRING(RearmSettings_distance_DisplayName), localize LSTRING(RearmSettings_distance_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize LSTRING(DisplayName)],
     [10, 50, 20, 0],
     true, // isGlobal
