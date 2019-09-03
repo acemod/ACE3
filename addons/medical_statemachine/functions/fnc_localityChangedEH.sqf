@@ -40,11 +40,14 @@ if (_isLocal) then {
             TRACE_1("manually changing state to Unconscious",_currentState);
             [_unit, EGVAR(medical,STATE_MACHINE), _currentState, "Unconscious", {}, "LocalityChange"] call CBA_statemachine_fnc_manualTransition;
         };
-        // case (Injured?) - probably not needed, "Default" and "Injured" are the same
+        case (IS_BLEEDING(_unit) || {IS_IN_PAIN(_unit)}): {
+            if (_currentState == "Injured") exitWith {};
+            TRACE_1("manually changing state to Injured",_currentState);
+            [_unit, EGVAR(medical,STATE_MACHINE), _currentState, "Injured", {}, "LocalityChange"] call CBA_statemachine_fnc_manualTransition;
+        };
         default {
             // If locality transfers back and forth, we could be in an old state and should transfer back to default
-            if (_currentState == "Default") exitWith {};
-            if (_currentState == "Injured") exitWith {};
+            if (_currentState == "Default")) exitWith {};
             TRACE_1("manually changing state to Default",_currentState);
             [_unit, EGVAR(medical,STATE_MACHINE), _currentState, "Default", {}, "LocalityChange"] call CBA_statemachine_fnc_manualTransition;
         };
