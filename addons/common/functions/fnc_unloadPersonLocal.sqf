@@ -25,8 +25,14 @@ TRACE_3("unloadpersonLocal",_unit,_vehicle,_unloader);
 //This covers testing vehicle stability and finding a safe position
 private _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
 TRACE_1("findUnloadPosition",_emptyPos);
-if (_emptyPos isEqualTo []) then { _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition); TRACE_1("findUnloadPosition 2nd attempt",_emptyPos); };
-if (_emptyPos isEqualTo []) then { _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition); TRACE_1("findUnloadPosition 3rd attempt",_emptyPos); };
+if (_emptyPos isEqualTo []) then {
+    _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
+    TRACE_1("findUnloadPosition 2nd attempt",_emptyPos);
+};
+if (_emptyPos isEqualTo []) then {
+    _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
+    TRACE_1("findUnloadPosition 3rd attempt",_emptyPos);
+};
 
 if (count _emptyPos != 3) exitwith {
     WARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
