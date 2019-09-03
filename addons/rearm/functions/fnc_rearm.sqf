@@ -46,7 +46,7 @@ private _magazineDisplayName = _magazineClass call FUNC(getMagazineName);
     format [localize LSTRING(RearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName"), _magazineDisplayName],
     {
         param [0] params ["_target", "_unit"];
-        _player distance _vehicle <= GVAR(distance);
+        _player distance _target <= GVAR(distance);
     },
     ["isnotinside"]
 ] call EFUNC(common,progressBar);
