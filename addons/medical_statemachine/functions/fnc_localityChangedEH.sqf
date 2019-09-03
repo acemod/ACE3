@@ -47,7 +47,7 @@ if (_isLocal) then {
         };
         default {
             // If locality transfers back and forth, we could be in an old state and should transfer back to default
-            if (_currentState == "Default")) exitWith {};
+            if (_currentState == "Default") exitWith {};
             TRACE_1("manually changing state to Default",_currentState);
             [_unit, EGVAR(medical,STATE_MACHINE), _currentState, "Default", {}, "LocalityChange"] call CBA_statemachine_fnc_manualTransition;
         };
