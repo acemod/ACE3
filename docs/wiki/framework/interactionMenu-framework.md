@@ -21,7 +21,7 @@ Something the user would do to themselves or to their vehicle (eg. Put in ear pl
 - **Zeus** (`ACE_ZeusActions`)
 Available to Zeus
 
-`ACE_Actions` and `ACE_SelfActions` can be added via config or by calling functions. Be ware that the functions modify the UI, and therefore need to be executed on client-side to take effect.
+`ACE_Actions` and `ACE_SelfActions` can be added via config or by calling functions. Be aware that the functions modify the UI, and therefore need to be executed on client-side to take effect.
 
 The simplest action is just a condition and statement. The code to these are passed `[_target, _player, _actionParams]`. `_player` is `ace_player`; `_target` is the object being interacted with; and the 3rd argument is the optional action parameters (default `[]`).
 
