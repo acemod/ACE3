@@ -10,7 +10,7 @@
  * Can Open <BOOL>
  *
  * Example:
- * [bob, bob] call ace_artillerytables_fnc_interactMenuOpened
+ * [1] call ace_artillerytables_fnc_interactMenuOpened
  *
  * Public: No
  */

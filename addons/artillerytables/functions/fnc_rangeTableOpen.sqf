@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [] call ace_artillerytables_fnc_rangeTableOpen
+ * ["mortar_155mm_AMOS", -5, 80, true] call ace_artillerytables_fnc_rangeTableOpen
  *
  * Public: No
  */

@@ -18,7 +18,7 @@
 #include <chrono>
 #include <future>
 
- // ace libs:
+// ace libs:
 #include "vector.hpp"
 
 #ifndef TEST_EXE
@@ -226,17 +226,17 @@ std::string simulateCalcRangeTableLine(const double _rangeToHit, const double _m
 #ifndef ACE_FULL_VERSION_STR
 #define ACE_FULL_VERSION_STR "not defined"
 #endif
-void RVExtensionVersion(char* output, int outputSize) {
+void __stdcall RVExtensionVersion(char* output, int outputSize) {
     strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
 }
-void RVExtension(char* output, int outputSize, const char* function) {
+void __stdcall RVExtension(char* output, int outputSize, const char* function) {
     if (!strcmp(function, "version")) {
         RVExtensionVersion(output, outputSize);
         return;
     }
     strncpy_s(output, outputSize, "error", _TRUNCATE);
 }
-int RVExtensionArgs(char* output, int outputSize, const char* function, const char** args, int argsCnt) {
+int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function, const char** args, int argsCnt) {
     if (!strcmp(function, "version")) {
         RVExtensionVersion(output, outputSize);
         return 0;
@@ -266,7 +266,7 @@ int RVExtensionArgs(char* output, int outputSize, const char* function, const ch
         }
         const double loopStart = (bestDistance < 4000) ? 50 : 100;
         const double loopInc = (bestDistance < 5000) ? 50 : 100; // simplify when range gets high
-        const double loopMaxRange = std::min(bestDistance, 25000.0); // with no air resistance, max range could go higher than 60km
+        const double loopMaxRange = std::min(bestDistance, 30000.0); // with no air resistance, max range could go higher than 60km
 
         if (maxElev > minElev) { // don't bother if we can't hit anything (e.g. mortar in low mode)
             for (double range = loopStart; range < loopMaxRange; range += loopInc) {

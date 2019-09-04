@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * [player] call ace_artillerytables_fnc_turretChanged
+ * [player, [0]] call ace_artillerytables_fnc_turretChanged
  *
  * Public: No
  */

@@ -10,10 +10,11 @@
  * Nothing
  *
  * Example:
- * [[]] call ace_artillerytables_fnc_turretPFEH
+ * [[...]] call ace_artillerytables_fnc_turretPFEH
  *
  * Public: No
  */
+
 (_this select 0) params ["_vehicle", "_turret", "_fireModes", "_useAltElevation", "_turretAnimBody", "_invalidGunnerMem"];
 
 if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
@@ -89,9 +90,3 @@ GVAR(predictedAzimuth) = _realAzimuth;
 GVAR(predictedElevation) = _realElevation;
 
 END_COUNTER(pfeh);
-
-#ifdef DEBUG_MODE_FULL
-// private _lookVector = (AGLtoASL (positionCameraToWorld [0,0,0])) vectorFromTo (AGLtoASL (positionCameraToWorld [0,0,10]));
-// systemChat format ["AZ: %1 EL: %2", _realAzimuth toFixed 1, _realElevation toFixed 1];
-// systemChat format ["Slope: %1 - Look: %2 [%3]", (acos ((vectorUp _vehicle) select 2)) toFixed 1, ((_lookVector select 0) atan2 (_lookVector select 1)), ["GND","SKY"] select _useRealWeaponDir];
-#endif
