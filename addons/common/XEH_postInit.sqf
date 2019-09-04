@@ -312,7 +312,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         if (isNull player) exitWith {true};
         private _UAV = getConnectedUAV player;
         if (!alive player) then {_UAV = objNull;};
-        private _position = (UAVControl _UAV) param [1, ""];
+        private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
         switch (toLower _position) do {

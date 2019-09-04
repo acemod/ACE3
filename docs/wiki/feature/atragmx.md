@@ -89,7 +89,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ### 3.4 Example with overwritten zero distance
 
-- The `Default zero distance` can be overwritten with the [Scopes module]({{ site.baseurl }}/wiki/feature/scopes.html), the [Scopes Framework]({{ site.baseurl }}/wiki/framework/scopes-framework.html) or the [CBA Settings System](https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System).
+- The `Default zero distance` can be overwritten with the [Scopes Options]({{ site.baseurl }}/wiki/feature/scopes.html), the [Scopes Framework]({{ site.baseurl }}/wiki/framework/scopes-framework.html) or the [CBA Settings System](https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System).
 - In this case, the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) will be automatically updated, NOT the AtragMx.
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
@@ -128,12 +128,16 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - [ATragMX Framework]({{ site.baseurl }}/wiki/framework/atragmx.html)
 
- 
-## 4. Official Manual and Horus Videos
+### 3.7 Reseting the AtragMx `GunList`
+
+- Open the Eden Editor and the Extended Debug Console (Ctrl+D).
+- Execute `call ace_atragmx_fnc_clear_user_data` (LOCAL EXEC).
+- The original ACE3 `GunList` will be restored (all `Add New Gun` entries deleted).
+
+
+## 4. Official References
 
 - [Official Manual]({{ site.ace.githubUrl }}/blob/master/extras/manual_Horus_ATrag-v385.pdf)
-- [Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
-- [Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
 
 
 ## 5. Dependencies

@@ -20,7 +20,7 @@
             <German>Aktiviere Blutspritzer</German>
             <Korean>피흘리기 활성화</Korean>
             <Polish>Włącz ślady krwi na ziemi</Polish>
-            <French>Active les gouttes de sang</French>
+            <French>Activer gouttes de sang</French>
             <Italian>Abilita Perdite di Sangue</Italian>
             <Chinesesimp>开启血液滴落效果</Chinesesimp>
             <Chinese>開啟血液滴落效果</Chinese>
@@ -29,22 +29,32 @@
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_Description">
             <English>Enables the creation of blood drops when units are bleeding or take damage.</English>
             <Japanese>ユニットが出血かダメージを受けた時に、血痕を残すようにします。</Japanese>
+            <French>Si une unité saigne, elle laissera des traces de sang derrière elle.</French>
+            <Russian>Разрешает создание капель крови при кровотечении или получении урона</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
             <English>Max Blood Objects</English>
             <Japanese>最大血痕数</Japanese>
+            <French>Quantité sang affiché</French>
+            <Russian>Макс. кол-во капель крови</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
             <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
             <Japanese>生成される血痕オブジェクト数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
+            <French>Définit le nombre maximal de traces de sangs pouvant être affichées.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
+            <Russian>Задает макс. количество создаваемых объектов капель крови. Чрезмерное количество может вызвать задержку FPS</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
             <English>Blood Lifetime</English>
             <Japanese>血痕の寿命</Japanese>
+            <French>Durée d'affichage du sang</French>
+            <Russian>Время жизни капель крови</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
             <English>Controls the lifetime of blood drop objects.</English>
             <Japanese>血痕オブジェクトの寿命を決定します。</Japanese>
+            <French>Définit la durée d'affichage des traces de sang</French>
+            <Russian>Управляет временем жизни объектов капель крови.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
             <English>Only Players</English>
