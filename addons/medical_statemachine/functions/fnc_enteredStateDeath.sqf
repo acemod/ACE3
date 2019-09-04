@@ -21,7 +21,7 @@ if (isNull _unit) exitWith {};
 //IGNORE_PRIVATE_WARNING ["_thisOrigin", "_thisTransition"]; // vars provided by CBA_statemachine
 TRACE_3("enteredStateDeath",_this,_thisOrigin,_thisTransition);
 
-private _causeOfDeath = format ["%1:%2",_thisOrigin,_thisTransition];
+private _causeOfDeath = format ["%1:%2", _thisOrigin, _thisTransition];
 
 // could delay a frame here to fix the double killed EH, but we lose it being a "native" kill (scoreboard / rating)
 [_unit, _causeOfDeath] call EFUNC(medical_status,setDead);
