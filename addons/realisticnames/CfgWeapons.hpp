@@ -942,6 +942,16 @@ class CfgWeapons {
 
     // Contact/Livonia
 
+    // FNX-45 (Green)
+    class hgun_Pistol_heavy_01_green_F: hgun_Pistol_heavy_01_F {
+        displayName = CSTRING(hgun_Pistol_heavy_01_green_Name);
+    };
+
+    // RPG-32 (Green)
+    class launch_RPG32_green_F: launch_RPG32_F {
+        displayName = CSTRING(launch_RPG32_green_Name);
+    };
+
     // AK15 variants
     class arifle_AK12_base_F;
     class arifle_AK12_F: arifle_AK12_base_F {
@@ -984,13 +994,13 @@ class CfgWeapons {
         displayName = CSTRING(arifle_RPK12_arid);
     };
 
-    // M14
+    // M14 (Classic)
     class DMR_06_hunter_base_F;
     class srifle_DMR_06_hunter_F: DMR_06_hunter_base_F {
         displayName = CSTRING(srifle_DMR_06_hunter);
     };
 
-    // Stoner 99 LMG
+    // Stoner 99 LMG (Black)
     class LMG_Mk200_black_F: LMG_Mk200_F {
         displayName = CSTRING(LMG_Mk200_black);
     };
