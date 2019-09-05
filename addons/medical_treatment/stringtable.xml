@@ -3404,6 +3404,11 @@
             <Chinesesimp>%1 已经绑上止血带</Chinesesimp>
             <Chinese>%1 已經綁上止血帶</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Activity_appliedSplint">
+            <English>%1 applied a splint</English>
+            <Russian>%1 наложил Шина</Russian>
+            <French>%1 a posé un attelle</French>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
             <German>%1 hat das eigene Erste-Hilfe-Set verwendet</German>
