@@ -28,10 +28,10 @@ TRACE_1("findUnloadPosition",_emptyPos);
 if (_emptyPos isEqualTo []) then {
     _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
     TRACE_1("findUnloadPosition 2nd attempt",_emptyPos);
-};
-if (_emptyPos isEqualTo []) then {
-    _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
-    TRACE_1("findUnloadPosition 3rd attempt",_emptyPos);
+    if (_emptyPos isEqualTo []) then {
+        _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
+        TRACE_1("findUnloadPosition 3rd attempt",_emptyPos);
+    };
 };
 
 if (count _emptyPos != 3) exitwith {

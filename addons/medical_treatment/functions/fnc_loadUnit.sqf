@@ -34,20 +34,19 @@ if (_patient call EFUNC(medical_status,isBeingDragged)) then {
 
 private _vehicle = [_medic, _patient, _vehicle] call EFUNC(common,loadPerson);
 
-if (isNull _vehicle) then {
-    TRACE_1("no vehicle found",_vehicle);
-} else {
-    [{
-        params ["_unit", "_vehicle"];
-        (alive _unit) && {alive _vehicle} && {(vehicle _unit) == _vehicle}
-    }, {
-        params ["_unit", "_vehicle"];
-        TRACE_2("success",_unit,_vehicle);
-        private _patientName = [_unit, false, true] call EFUNC(common,getName);
-        private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
-        [[LSTRING(LoadedInto), _patientName, _vehicleName], 3] call EFUNC(common,displayTextStructured);
-    }, [_patient, _vehicle], 3, {
-        params ["_unit", "_emptyPos"];
-        WARNING_3("loadPerson failed to load %1[local %2] -> %3 ",_unit,local _unit,_vehicle);
-    }] call CBA_fnc_waitUntilAndExecute;
+if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
+
+[{
+    params ["_unit", "_vehicle"];
+    (alive _unit) && {alive _vehicle} && {(vehicle _unit) == _vehicle}
+}, {
+    params ["_unit", "_vehicle"];
+    TRACE_2("success",_unit,_vehicle);
+    private _patientName = [_unit, false, true] call EFUNC(common,getName);
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    [[LSTRING(LoadedInto), _patientName, _vehicleName], 3] call EFUNC(common,displayTextStructured);
+}, [_patient, _vehicle], 3, {
+    params ["_unit", "_emptyPos"];
+    WARNING_3("loadPerson failed to load %1[local %2] -> %3 ",_unit,local _unit,_vehicle);
+}] call CBA_fnc_waitUntilAndExecute;
 };
