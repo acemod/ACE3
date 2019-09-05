@@ -19,6 +19,7 @@
 params ["_unit", "_team"];
 
 ["CBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
+SETVAR(_unit, QGVAR(player_team), _team);
 
 // display message
 if (_unit == ACE_player) then {
