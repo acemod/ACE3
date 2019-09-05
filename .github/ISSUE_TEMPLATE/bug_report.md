@@ -7,15 +7,6 @@ assignees: ''
 
 ---
 
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: bug
-assignees: ''
-
----
-
 **Mods (complete and add to the following information):**
 - **Arma 3:** `x.xx` [e.g. 1.00 stable, rc,  dev]
 - **CBA:** `3.x.x` [e.g. 3.0.0 stable, commit hash]
