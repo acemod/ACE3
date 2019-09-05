@@ -49,4 +49,4 @@ if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
     params ["_unit", "_emptyPos"];
     WARNING_3("loadPerson failed to load %1[local %2] -> %3 ",_unit,local _unit,_vehicle);
 }] call CBA_fnc_waitUntilAndExecute;
-};
+
