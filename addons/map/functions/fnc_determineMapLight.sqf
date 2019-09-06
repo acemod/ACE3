@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko and esteldunedain
  * Calculates the current map illumination for a given unit
@@ -10,12 +11,10 @@
  * 1: Color of the overlay <ARRAY>
  *
  * Example:
- * call ACE_map_fnc_determineMapLight
+ * [player] call ACE_map_fnc_determineMapLight
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 

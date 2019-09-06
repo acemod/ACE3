@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Adds reactions to a unit that was hit. EH only runs where to unit is local. Adds screams, falling down, falling from ladders, ejecting from static weapons and camshake for players
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_firer", "_damage"];
 
@@ -34,11 +34,6 @@ if (_unit == ACE_player) then {
         openMap false;
     };
     addCamShake [3, 5, _damage + random 10];
-};
-
-// play scream sound
-if (!isNil QEFUNC(medical,playInjuredSound)) then {
-    [_unit] call EFUNC(medical,playInjuredSound);
 };
 
 private _vehicle = vehicle _unit;

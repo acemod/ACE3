@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Return all of the player entities who are currently in ace spectator
@@ -13,7 +14,5 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 allPlayers select { GETVAR(_x,GVAR(isSet),false) }

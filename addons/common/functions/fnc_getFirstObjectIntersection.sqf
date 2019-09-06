@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Returns the the first intersection with terrain between two positions. @todo rewrite using lineIntersectsSurfaces?
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_source", "_destination", "_accuracy"];
 

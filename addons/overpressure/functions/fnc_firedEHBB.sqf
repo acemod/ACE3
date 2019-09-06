@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: joko // Jonas
  * Handle fire of local launchers. Called from the unified fired EH only for the local player.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
@@ -51,7 +51,7 @@ if (_distance < _backblastRange) then {
     private _damage = _alpha * _beta * _backblastDamage;
     [_damage * 100] call BIS_fnc_bloodEffect;
 
-    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_unit] call EFUNC(medical,hasMedicalEnabled))}) then {
+    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical")) then {
         [_unit, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
     } else {
         TRACE_1("",isDamageAllowed _unit);

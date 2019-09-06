@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Check what kind of weapon the given class name is.
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_weapon"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Disables key input. ESC can still be pressed to open the menu.
@@ -13,9 +14,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_state"];
+TRACE_1("disableUserInput",_state);
 
 if (_state) then {
     disableSerialization;

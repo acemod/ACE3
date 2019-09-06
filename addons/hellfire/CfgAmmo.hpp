@@ -1,7 +1,7 @@
 class CfgAmmo {
-    class M_PG_AT;
+    class M_Scalpel_AT;
 
-    class ACE_Hellfire_AGM114K: M_PG_AT {
+    class ACE_Hellfire_AGM114K: M_Scalpel_AT {
         displayName = "AGM-114K";
         displayNameShort = "AGM-114K";
         description = "AGM-114K";
@@ -10,9 +10,6 @@ class CfgAmmo {
         model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
         proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
 
-        hit = 1400;
-        indirectHit = 71;
-        indirectHitRange = 4.5;
         effectsMissile = "missile2";
 
         irLock = 0;
@@ -47,7 +44,7 @@ class CfgAmmo {
             seekerAccuracy = 1;         // seeker accuracy multiplier
 
             seekerMinRange = 1;
-            seekerMaxRange = 5000;      // Range from the missile which the seeker can visually search
+            seekerMaxRange = 8000;      // Range from the missile which the seeker can visually search
 
             // Attack profile type selection
             defaultAttackProfile = "hellfire";
@@ -62,6 +59,7 @@ class CfgAmmo {
         hit = 200;
         indirectHit = 200;
         indirectHitRange = 12;
+        submunitionAmmo = "";
         explosionEffects = "BombExplosion";
         class ace_missileguidance: ace_missileguidance {
             enabled = 1; // Missile Guidance must be explicitly enabled

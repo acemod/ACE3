@@ -246,23 +246,23 @@ class CfgMagazines {
         displayNameShort = "125mm MP-T";
     };
 
-    class 32Rnd_120mm_APFSDS_shells;
-    class 24Rnd_125mm_APFSDS: 32Rnd_120mm_APFSDS_shells {
+    class 20Rnd_125mm_APFSDS;
+    class 24Rnd_125mm_APFSDS: 20Rnd_125mm_APFSDS {
         displayNameShort = "125mm AP";
     };
 
-    class 32Rnd_120mm_APFSDS_shells_Tracer_Red;
-    class 24Rnd_125mm_APFSDS_T_Red: 32Rnd_120mm_APFSDS_shells_Tracer_Red {
+    class 20Rnd_125mm_APFSDS_T_Red;
+    class 24Rnd_125mm_APFSDS_T_Red: 20Rnd_125mm_APFSDS_T_Red {
         displayNameShort = "125mm AP-T";
     };
 
-    class 32Rnd_120mm_APFSDS_shells_Tracer_Green;
-    class 24Rnd_125mm_APFSDS_T_Green: 32Rnd_120mm_APFSDS_shells_Tracer_Green {
+    class 20Rnd_125mm_APFSDS_T_Green;
+    class 24Rnd_125mm_APFSDS_T_Green: 20Rnd_125mm_APFSDS_T_Green {
         displayNameShort = "125mm AP-T";
     };
 
-    class 32Rnd_120mm_APFSDS_shells_Tracer_Yellow;
-    class 24Rnd_125mm_APFSDS_T_Yellow: 32Rnd_120mm_APFSDS_shells_Tracer_Yellow {
+    class 20Rnd_125mm_APFSDS_T_Yellow;
+    class 24Rnd_125mm_APFSDS_T_Yellow: 20Rnd_125mm_APFSDS_T_Yellow {
         displayNameShort = "125mm AP-T";
     };
 
@@ -396,6 +396,10 @@ class CfgMagazines {
         displayName = CSTRING(HandGrenade_Name);
         displayNameShort = "M67";
     };
+    class MiniGrenade: CA_Magazine {
+        displayName = CSTRING(MiniGrenade_Name);
+        displayNameShort = "V40";
+    };
     class SmokeShell: HandGrenade {
         displayName = CSTRING(SmokeShell_Name);
     };
@@ -418,6 +422,10 @@ class CfgMagazines {
         displayName = CSTRING(SmokeShellYellow_Name);
     };
 
+    class 50Rnd_570x28_SMG_03: CA_Magazine {
+        displayName = CSTRING(P90_Mag_Name);
+        descriptionShort = CSTRING(P90_Mag_DescriptionShort);
+    };
 
     // 1.70 Pylon Magazines (Should Match Weapon Name)
     class 2Rnd_Missile_AA_04_F;

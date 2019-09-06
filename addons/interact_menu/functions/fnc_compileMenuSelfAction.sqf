@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Compile the self action menu from config for an object's class
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target"];
 
@@ -37,7 +37,11 @@ private _recurseFnc = {
         if(isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
 
-            private _icon = getText (_entryCfg >> "icon");
+            private _icon = if (isArray (_entryCfg >> "icon")) then {
+                getArray (_entryCfg >> "icon");
+            } else {
+                [getText (_entryCfg >> "icon"), "#FFFFFF"];
+            };
             private _statement = compile (getText (_entryCfg >> "statement"));
 
             private _condition = getText (_entryCfg >> "condition");

@@ -63,6 +63,11 @@ class CfgVehicles {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
     };
+    class Tank_F: Tank {};
+    class UGV_02_Base_F: Tank_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
 
     class Car_F;
     class Truck_F: Car_F {
@@ -329,6 +334,9 @@ class CfgVehicles {
     class ReammoBox_F: ThingX {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
+    };
+    class Land_RepairDepot_01_base_F: ReammoBox_F { // TanksDLC - Repair Depo Thing (probably too big to safely unload)
+        GVAR(canLoad) = 0;
     };
     //"Supply Box" - Small Pallets
     class B_supplyCrate_F: ReammoBox_F {

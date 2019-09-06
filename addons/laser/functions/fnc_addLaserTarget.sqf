@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Adds a vanilla laser target to the tracker PFH and globaly turns it on
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_targetObject", "_vehicle"];
 TRACE_2("params",_targetObject,_vehicle);
@@ -31,7 +31,7 @@ _vehicle setVariable [QGVAR(targetObject), _targetObject, true];
 private _laserMethod = QFUNC(findLaserSource);
 
 private _vehicleSourceSelection = "";
-if (_vehicle isKindOf "CaManBase") then {
+if (_vehicle isKindOf "CAManBase") then {
     _vehicleSourceSelection = "pilot";
 } else {
     { // Go through turrets on vehicle and find the laser

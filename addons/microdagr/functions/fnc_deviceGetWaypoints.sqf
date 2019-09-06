@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets all waypoints from the "device"
@@ -14,6 +15,5 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 (ACE_player getVariable [QGVAR(waypoints), []])

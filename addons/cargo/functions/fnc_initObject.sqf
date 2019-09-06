@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, SilentSpike
  * Initializes variables for loadable objects. Called from init EH.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object"];
 private _type = typeOf _object;

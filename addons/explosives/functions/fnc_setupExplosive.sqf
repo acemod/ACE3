@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Starts the setup process for the passed explosive. Player only.
@@ -15,8 +16,6 @@
  *
  * Public: Yes
  */
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 
 #define PLACE_RANGE_MAX 1
 #define PLACE_RANGE_MIN 0.025
@@ -119,14 +118,15 @@ GVAR(TweakedAngle) = 0;
 
     private _virtualPosASL = _basePosASL vectorAdd (_lookDirVector vectorMultiply _distanceFromBase);
 
-    //Update mouse hint:
+    // Update mouse hint
+    private _ctrlTextLMB = (uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420;
     if (_badPosition) then {
-        ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(BlockedAction);
+        _ctrlTextLMB ctrlSetText localize LSTRING(BlockedAction);
     } else {
         if (isNull _attachVehicle) then {
-            ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(PlaceAction);
+            _ctrlTextLMB ctrlSetText localize LSTRING(PlaceAction);
         } else {
-            ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(AttachAction);
+            _ctrlTextLMB ctrlSetText localize LSTRING(AttachAction);
         };
     };
 
@@ -196,7 +196,7 @@ GVAR(TweakedAngle) = 0;
             //Show the model on the hud in aprox the same size/location as it will be placed:
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
 
-            private _realDistance = ((_virtualPosASL call EFUNC(common,ASLToPosition)) distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
+            private _realDistance = ((_virtualPosASL call EFUNC(common,ASLToPosition)) distance (positionCameraToWorld [0,0,0])) / (([] call CBA_fnc_getFov) select 1);
             _screenPos = [(_screenPos select 0), _realDistance, (_screenPos select 1)];
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
 

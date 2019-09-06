@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Jonpas
  * Fixes position of an object. E.g. moves object above ground and adjusts to terrain slope. Requires local object.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // setVectorUp requires local object
 if (!local _this) exitWith {};

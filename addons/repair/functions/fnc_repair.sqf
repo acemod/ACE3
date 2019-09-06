@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Starts the repair process.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);
@@ -139,12 +139,16 @@ if (_consumeItems > 0) then {
 // Parse the config for the progress callback
 private _callbackProgress = getText (_config >> "callbackProgress");
 if (_callbackProgress == "") then {
-    _callbackProgress = "true";
-};
-if (isNil _callbackProgress) then {
-    _callbackProgress = compile _callbackProgress;
+    _callbackProgress = {
+        (_this select 0) params ["", "_target"];
+        (alive _target) && {(abs speed _target) < 1} // make sure vehicle doesn't drive off
+    };
 } else {
-    _callbackProgress = missionNamespace getVariable _callbackProgress;
+    if (isNil _callbackProgress) then {
+        _callbackProgress = compile _callbackProgress;
+    } else {
+        _callbackProgress = missionNamespace getVariable _callbackProgress;
+    };
 };
 
 

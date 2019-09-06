@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Update the right panel (listnbox).
@@ -11,12 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
-
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeUpdateRightPanel = createProfileScope QFUNC(updateRightPanel);
-#endif
 
 params ["_control", "_maxLoad"];
 

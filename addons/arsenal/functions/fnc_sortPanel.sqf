@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe, Dedmen
  * Sort arsenal panel.
@@ -11,12 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
-
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeSortPanel = createProfileScope QFUNC(sortPanel);
-#endif
 
 params ["_control", "_mode"];
 
@@ -39,7 +35,16 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
         };
 
         case 2: {
+            for "_i" from 0 to (((lnbsize _panel) select 0) - 1) do {
+                _panel lnbSetText [[_i, 2], str (parseNumber (_panel lnbText [_i, 2]) / 1000)];
+            };
+
             _panel lnbSort [2, true];
+
+
+            for "_i" from 0 to (((lnbsize _panel) select 0) - 1) do {
+                _panel lnbSetText [[_i, 2], str (parseNumber (_panel lnbText [_i, 2]) * 1000)];
+            };
         };
     };
 

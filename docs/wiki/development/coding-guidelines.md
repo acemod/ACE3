@@ -126,7 +126,8 @@ These macros are allowed but are not enforced.
 |`GETVAR(player,MyVarName,false)` | `player getVariable ["MyVarName", false]` |
 |`GETMVAR(MyVarName,objNull)` | `missionNamespace getVariable ["MyVarName", objNull]` |
 |`GETUVAR(MyVarName,displayNull)` | `uiNamespace getVariable ["MyVarName", displayNull]` |
-|`SETVAR(player,MyVarName,127)` |  `player setVariable ["MyVarName", 127]  SETPVAR(player,MyVarName,127) player setVariable ["MyVarName", 127, true]` |
+|`SETVAR(player,MyVarName,127)` | `player setVariable ["MyVarName", 127]` |
+|`SETPVAR(player,MyVarName,127)` | `player setVariable ["MyVarName", 127, true]` |
 |`SETMVAR(MyVarName,player)` | `missionNamespace setVariable ["MyVarName", player]` |
 |`SETUVAR(MyVarName,_control)` | `uiNamespace setVariable ["MyVarName", _control]` |
 
@@ -780,17 +781,14 @@ while {true} do {
 ```
 
 ### 8.9 `waitUntil`
-The `waitUntil` command shall not be used. Instead, make use of a per-frame handler:
-
+The `waitUntil` command shall not be used. Instead, make use of CBA's `CBA_fnc_waitUntilAndExecute`
 ```js
 [{
-    params ["_args", "_id"];
-    _args params ["_unit"];
-
-    if (_unit getvariable [QGVAR(myVariable), false]) exitwith {
-        [_id] call CBA_fnc_removePerFrameHandler;
-
-        // Execute any code
-    };
-}, [_unit], 0] call CBA_fnc_addPerFrameHandler;
+    params ["_unit"];
+    _unit getVariable [QGVAR(myVariable), false]
+},
+{
+    params ["_unit"];
+    // Execute any code
+}, [_unit]] call CBA_fnc_waitUntilAndExecute;
 ```

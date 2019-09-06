@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 PabstMirror
  * Lets a unit surrender
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
@@ -47,7 +47,7 @@ if (_state) then {
     [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
 
     if (_unit == ACE_player) then {
-        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
+        ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHud);
     };
 
     [_unit] call EFUNC(common,fixLoweredRifleAnimation);
@@ -64,7 +64,7 @@ if (_state) then {
                 TRACE_1("removing animChanged EH",_animChangedEHID);
                 _unit removeEventHandler ["AnimChanged", _animChangedEHID];
             };
-            _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedSurrendered)];
+            _animChangedEHID = _unit addEventHandler ["AnimChanged", {call FUNC(handleAnimChangedSurrendered)}];
             _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
         };
     }, [_unit], 0.01] call CBA_fnc_waitAndExecute;

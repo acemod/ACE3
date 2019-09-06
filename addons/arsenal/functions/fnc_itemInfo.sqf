@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Update arsenal's info box.
@@ -13,12 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
-
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeItemInfo = createProfileScope QFUNC(itemInfo);
-#endif
 
 params ["_display", "_control", "_curSel" ,"_itemCfg"];
 

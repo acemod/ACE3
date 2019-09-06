@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Add a full ACE Arsenal to an object
@@ -10,7 +11,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 if (!local _logic) exitWith {};
@@ -29,6 +29,7 @@ switch (true) do {
         [LSTRING(OnlyAlive)] call FUNC(showMessage);
     };
     default {
+        [_object, true] call EFUNC(arsenal,removeBox);
         [_object, true, true] call EFUNC(arsenal,initBox);
     };
 };

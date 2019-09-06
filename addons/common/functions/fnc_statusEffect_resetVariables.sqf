@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Resets all effect numbers to 0 when an object respawns (but does not apply the effect event).
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_setObjectRef", false, [false]]];
 TRACE_2("params",_object,_setObjectRef);

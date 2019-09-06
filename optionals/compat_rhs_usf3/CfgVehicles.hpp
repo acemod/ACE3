@@ -44,30 +44,10 @@ class CfgVehicles {
         };
     };
 
-#define ERA(num) QUOTE(era_##num##_hitpoint)
-#define ERA_2_34 ERA(2), ERA(3), ERA(4), ERA(5), ERA(6), ERA(7), ERA(8), ERA(9), ERA(10), ERA(11), ERA(12), ERA(13), ERA(14), ERA(15), ERA(16), ERA(17), ERA(18), ERA(19), ERA(20), ERA(21), ERA(22), ERA(23), ERA(24), ERA(25), ERA(26), ERA(27), ERA(28), ERA(29), ERA(30), ERA(31), ERA(32), ERA(33), ERA(34)
-#define ERA_2_45 ERA_2_34, ERA(35), ERA(36), ERA(37), ERA(38), ERA(39), ERA(40), ERA(41), ERA(42), ERA(43), ERA(44), ERA(45)
-#define ERA_2_46 ERA_2_45, ERA(46)
-#define ERA_2_59 ERA_2_46, ERA(47), ERA(48), ERA(49), ERA(50), ERA(51), ERA(52), ERA(53), ERA(54), ERA(55), ERA(56), ERA(57), ERA(58), ERA(59)
-
     class MBT_01_base_F: Tank_F {};
     class rhsusf_m1a1tank_base: MBT_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1909;
     };
-    class rhsusf_m1a1aim_tuski_wd: rhsusf_m1a1tank_base {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_34}}};
-    };
-    class rhsusf_m1a2tank_base;
-    class rhsusf_m1a2sep1tuskid_usarmy: rhsusf_m1a2tank_base {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_34}}};
-    };
-    class rhsusf_m1a2sep1tuskiiwd_usarmy: rhsusf_m1a2sep1tuskid_usarmy {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_46}}};
-    };
-
     class Helicopter_Base_F: Helicopter {
         class Eventhandlers;
     };
@@ -109,11 +89,13 @@ class CfgVehicles {
         class Eventhandlers;
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {};
-    
+
     class RHS_MELB_base: Helicopter_Base_H {};
     class RHS_MELB_MH6M: RHS_MELB_base {
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{1.166, 0.79, -0.01}, {-1.166, 0.79, -0.01}};
+        EGVAR(fastroping,onCut) = QFUNC(onCut);
+        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
     };
     class RHS_UH60_Base: Heli_Transport_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1360;
@@ -196,23 +178,9 @@ class CfgVehicles {
         EGVAR(hellfire,addLaserDesignator) = 1;
     };
 
-    class RHS_AH1Z: RHS_AH1Z_base {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0; // Note: This is still required because of inheritance from Heli_Attack_01_base_F
-            };
-        };
-    };
     class RHS_AH64_base: Heli_Attack_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1420;
         EGVAR(hellfire,addLaserDesignator) = 1;
-    };
-    class RHS_AH64D: RHS_AH64_base {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0; // Note: This is still required because of inheritance from Heli_Attack_01_base_F
-            };
-        };
     };
 
     class MBT_01_arty_base_F;
@@ -306,20 +274,6 @@ class CfgVehicles {
     class RHS_M2A2_Base: APC_Tracked_03_base_F {
         EGVAR(refuel,fuelCapacity) = 746;
     };
-    class RHS_M2A2: RHS_M2A2_Base {};
-    class RHS_M2A2_BUSKI: RHS_M2A2 {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_45}}};
-    };
-    class RHS_M2A3: RHS_M2A2 {};
-    class RHS_M2A3_BUSKI: RHS_M2A3 {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_45}}};
-    };
-    class RHS_M2A3_BUSKIII: RHS_M2A3_BUSKI {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_59}}};
-    };
 
     class Plane_CAS_01_base_F;
     class RHS_A10: Plane_CAS_01_base_F {
@@ -331,5 +285,146 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 25704;
         EGVAR(cargo,space) = 4;
         EGVAR(cargo,hasCargo) = 1;
+    };
+
+    class StaticWeapon: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class StaticMortar: StaticWeapon {};
+    class RHS_M252_Base: StaticMortar {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "";
+                selection = "main_gun";
+            };
+        };
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            magazineLocation = "";
+            proxyWeapon = QGVAR(rhs_mortar_81mm);
+            disassembleWeapon = QGVAR(m252_carry); // carry weapon [CfgWeapons]
+            disassembleTurret = QEGVAR(csw,mortarBaseplate); // turret [CfgVehicles]
+            desiredAmmo = 1;
+            ammoLoadTime = 3;
+            ammoUnloadTime = 3;
+        };
+    };
+
+    class StaticMGWeapon: StaticWeapon {};
+
+    class rhs_m2staticmg_base: StaticMGWeapon {
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_M2);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(m2_carry);
+            disassembleTurret = QEGVAR(csw,m3Tripod);
+            desiredAmmo = 100;
+            ammoLoadTime = 10;
+            ammoUnloadTime = 8;
+        };
+    };
+
+    class RHS_M2StaticMG_MiniTripod_base: rhs_m2staticmg_base {
+        class ACE_CSW: ACE_CSW {
+            enabled = 1;
+            disassembleTurret = QEGVAR(csw,m3TripodLow);
+        };
+    };
+
+    class StaticGrenadeLauncher: StaticWeapon {};
+    class RHS_MK19_TriPod_base: StaticGrenadeLauncher {
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_MK19);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(mk19_carry);
+            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            desiredAmmo = 48;
+            ammoLoadTime = 10;
+            ammoUnloadTime = 8;
+        };
+    };
+
+    class StaticATWeapon: StaticWeapon {};
+    class RHS_TOW_TriPod_base: StaticATWeapon {
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_TOW_Launcher_static);
+            magazineLocation = "_target selectionPosition 'tube'";
+            disassembleWeapon = QGVAR(tow_carry);
+            disassembleTurret = QEGVAR(csw,m220Tripod);
+            desiredAmmo = 1;
+            ammoLoadTime = 8;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class rhsusf_infantry_usmc_base;
+    class rhsusf_usmc_marpat_wd_helipilot: rhsusf_infantry_usmc_base {
+        ace_gforcecoef = 0.55;
+    };
+
+    class rhsusf_infantry_army_base;
+    class rhsusf_army_ocp_helipilot: rhsusf_infantry_army_base {
+        ace_gforcecoef = 0.55;
+    };
+
+    class rhsusf_usmc_marpat_wd_rifleman_m4;
+    class rhsusf_airforce_jetpilot: rhsusf_usmc_marpat_wd_rifleman_m4 {
+        ace_gforcecoef = 0.55;
+    };
+
+    class Items_base_F;
+    class ACE_Explosives_Place: Items_base_F {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_m112_DemoCharge: ACE_Explosives_Place {
+        displayName = "$STR_RHSUSF_M112_EXPLOSIVE_DISPLAY_NAME";
+        model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x1_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.155,0,0.01]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_m112x4_DemoCharge: ACE_Explosives_Place {
+        displayName = "$STR_RHSUSF_M112X4_EXPLOSIVE_DISPLAY_NAME";
+        model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x4_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.155,0.025,0.01]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_M19_Mine: ACE_Explosives_Place {
+        displayName = "$STR_RHSUSF_M19_ATMINE_DISPLAY_NAME";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m19_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.011,0.011,0.045]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m14_mag_Mine: ACE_Explosives_Place {
+        displayName = "$STR_RHSUSF_M14_APMINE_DISPLAY_NAME";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m14_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.02,0.015,0.02]";
+            };
+        };
     };
 };
