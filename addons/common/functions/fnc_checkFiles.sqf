@@ -75,33 +75,33 @@ if (!isServer && {_platform in ["linux", "osx"]}) then {
     INFO("Operating system does not support extensions");
 } else {
     {
-        private _versionEx = _x callExtension "version";
+        private _extension = configName _x;
+        private _isWindows = _platform == "windows" && {getNumber (_x >> "windows") == 1};
+        private _isLinux = _platform == "linux" && {getNumber (_x >> "linux") == 1};
 
-        if (_versionEx == "") then {
-            private _extension = ".dll";
+        if (_isWindows || _isLinux) then {
+            private _versionEx = _extension callExtension "version";
+            if (_versionEx == "") then {
+                private _extensionFile = _extension;
+                if (productVersion select 7 == "x64") then {
+                    _extensionFile = format ["%1_x64", _extensionFile];
+                };
 
-            if (productVersion select 7 == "x64") then {
-                _extension = "_x64.dll";
+                private _platformExt = [".dll", ".so"] select (_platformExt == "linux");
+                _extensionFile = format ["%1%2", _platformExt];
+
+                private _errorMsg = format ["Extension %1 not found.", _extensionFile];
+                ERROR(_errorMsg);
+
+                if (hasInterface) then {
+                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+                };
+            } else {
+                // Print the current extension version
+                INFO_2("Extension version: %1: %2",_extension,_versionEx);
             };
-
-            // Linux server is 32-bit only
-            if (_platform == "linux") then {
-                _extension = ".so";
-            };
-
-            private _errorMsg = format ["Extension %1%2 not found.", _x, _extension];
-
-            ERROR(_errorMsg);
-
-            if (hasInterface) then {
-                ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
-            };
-        } else {
-            // Print the current extension version
-            INFO_2("Extension version: %1: %2",_x,_versionEx);
         };
-        false
-    } count getArray (configFile >> "ACE_Extensions" >> "extensions");
+    } forEach ("true" configClasses (configFile >> "ACE_Extensions"));
 };
 
 ///////////////

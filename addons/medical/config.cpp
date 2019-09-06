@@ -56,5 +56,8 @@ class ACE_newEvents {
 };
 
 class ACE_Extensions {
-    extensions[] += {"ace_medical"};
+    class ace_medical {
+        windows = 1;
+        linux = 1;
+    };
 };
