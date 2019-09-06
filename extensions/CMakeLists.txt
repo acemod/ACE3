@@ -18,6 +18,9 @@ option(USE_DIRECTX "USE_DIRECTX" OFF)
 option(USE_64BIT_BUILD "USE_64BIT_BUILD" OFF)
 option(USE_STATIC_LINKING "USE_STATIC_LINKING" ON)
 
+if(CMAKE_GENERATOR_PLATFORM MATCHES "x64")
+    set(USE_64BIT_BUILD ON)
+endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX)
     SET(CMAKE_CXX_FLAGS "-std=c++11 -pedantic -pedantic-errors -march=i686 -m32 -O2 -s -fPIC -fpermissive")
@@ -27,7 +30,13 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     message(ERROR "SUPPORT NOT COMPLETE")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     add_definitions(-D_CRT_SECURE_NO_WARNINGS) # Disable MSVC *_s function warnings
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /arch:SSE2 /Qpar-report:2")
+
+    if(USE_64BIT_BUILD)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /Qpar-report:2") # Default SSE2
+    else()
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /arch:SSE2 /Qpar-report:2")
+    endif()
+
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} /D _DEBUG /MTd /Zi /Ob0 /Od /RTC1")
     set(CMAKE_CXX_FLAGS_MINSIZEREL     "${CMAKE_CXX_FLAGS} /MT /O1 /Ob1 /D NDEBUG")
     set(CMAKE_CXX_FLAGS_RELEASE       "${CMAKE_CXX_FLAGS} /MT /O2 /Ob2 /D NDEBUG")
