@@ -50,15 +50,13 @@ class GVAR(dialog) {
     fadein = 0;
     fadeout = 0;
     onLoad = QUOTE(with uiNamespace do {GVAR(dialog) = _this select 0;};);
-    // onUnload = QUOTE(call FUNC());
     class objects {
         class GVAR(MapGpsDisplay): RscObject {
-            // show = 0;
             idc = IDC_OBJECT_SCREEN;
             type = 82;
             model = QPATHTOF(data\ace_handheldDeviceDisplay.p3d);
             // useGlobalLight = 1;
-            // minGlobalLightIntensity = -100;
+            // minGlobalLightIntensity = -100; // can't find any doc on this, seems to apply sun effects, but is too much
             /*
                 1.000 - normal model
                 memory - has 4 points in selection "deviceScreen" and then those 4 as individual "deviceScreen tl", "deviceScreen br", "deviceScreen b'", "deviceScreen br"
@@ -106,12 +104,9 @@ class RscTitles {
         class controls {};
         class objects {
             class GVAR(MapGpsDisplay): RscObject {
-                // show = 0;
                 idc = IDC_OBJECT_SCREEN;
                 type = 82;
                 model = QPATHTOF(data\ace_handheldDeviceDisplay.p3d);
-                // useGlobalLight = 1;
-                // minGlobalLightIntensity = -100;
                 /*
                 1.000 - normal model
                 memory - has 4 points in selection "deviceScreen" and then those 4 as individual "deviceScreen tl", "deviceScreen br", "deviceScreen b'", "deviceScreen br"

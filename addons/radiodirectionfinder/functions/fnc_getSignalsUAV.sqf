@@ -23,9 +23,13 @@ params ["_list"];
         [QGVAR(getUavFreq), [_x]] call CBA_fnc_serverEvent;
     } else {
         _list pushBack [getPosASL _x, _freqMhz, 10000];
-        private _unit = (UAVControl _x) param [0, objNull];
-        if (alive _unit) then {
-            _list pushBack [getPosASL _unit, _freqMhz, 10000];
+        private _unit1 = (UAVControl _x) param [0, objNull];
+        if (alive _unit1) then {
+            _list pushBack [getPosASL _unit1, _freqMhz, 10000];
+        };
+        private _unit2 = (UAVControl _x) param [2, objNull];
+        if (alive _unit2) then {
+            _list pushBack [getPosASL _unit2, _freqMhz, 10000];
         };
     };
 } forEach allUnitsUAV;

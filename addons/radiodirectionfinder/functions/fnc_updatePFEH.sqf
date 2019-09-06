@@ -28,14 +28,14 @@ _args params ["_deltaTime"];
 _deltaTime = CBA_missionTime - _deltaTime;
 _args set [0, CBA_missionTime];
 
-private _canShow = [_unit, objNull, ["isNotSitting"]] call EFUNC(common,canInteractWith);
+private _canShow = [_unit, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith);
 private _display = displayNull;
 private _shown = false;
 
 if (GVAR(currentShowMode) == DISPLAY_MODE_DISPLAY) then {
     _display = uiNamespace getVariable [QGVAR(display), displayNull];
     private _desiredPhase = if (_canShow && {cameraView != "GUNNER"} && {EGVAR(interact_menu,openedMenuType) < 0}) then {
-        if (weaponLowered _unit) then { 0.9 } else { 0.7 };
+        if (weaponLowered _unit) then { 0.9 } else { 0.75 };
     } else {
         0
     };
@@ -43,7 +43,7 @@ if (GVAR(currentShowMode) == DISPLAY_MODE_DISPLAY) then {
 } else {
     _display = uiNamespace getVariable [QGVAR(dialog), displayNull];
     if ((!_canShow) || {isNull _display}) exitWith { [DISPLAY_MODE_DISPLAY, 1] call FUNC(toggleDisplayMode); };
-    _shown = [_display, 1, _deltaTime * 2] call FUNC(updateDisplayAnim);
+    _shown = [_display, 1, _deltaTime] call FUNC(updateDisplayAnim);
 };
 if (!_shown) exitWith {};
 

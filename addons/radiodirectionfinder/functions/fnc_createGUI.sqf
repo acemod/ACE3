@@ -104,7 +104,7 @@ for "_i" from 0 to 9 do {
 _display setVariable [QGVAR(lines), _lines];
 
 private _ctrlText = _display ctrlCreate [QGVAR(structuredText), IDC_MODE1_SCAN_INFO_TEXT, _ctrlModeGroup1];
-_ctrlText ctrlSetPosition [0,_circleY+_circleH/4,1-_circleW,_circleH/2];
+_ctrlText ctrlSetPosition [0, _circleY+_circleH/4, 1 - 0.95*_circleW, _circleH/2];
 _ctrlText ctrlCommit 0;
 // _ctrlText ctrlSetBackgroundColor [0.1,0.1,0.1,0.5];
 

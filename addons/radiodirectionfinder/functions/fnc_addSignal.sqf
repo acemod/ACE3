@@ -1,18 +1,20 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- *
+ * Adds a scripted signal
  *
  * Arguments:
- * 0:
+ * 0: Source <ARRAY>or<OBJECT>
+ * 1: Frequency <NUMBER>
+ * 2: Power <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_radiodirectionfinder_fnc_addSignal
+ * [player, 2400, 50] call ace_radiodirectionfinder_fnc_addSignal
  *
- * Public: No
+ * Public: Yes
  */
 
 if (!isServer) exitWith {};

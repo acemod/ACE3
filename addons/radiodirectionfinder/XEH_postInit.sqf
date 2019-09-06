@@ -1,13 +1,14 @@
 #include "script_component.hpp"
 
-// debug
-["Q", "Q", "Q", {
-    systemChat "Q RECOMPILE";
-    [] call ACE_PREP_RECOMPILE;
-    [-1] call FUNC(toggleDisplayMode);
-    false
-}, {false}, [0x10, [false, false, false]], false] call CBA_fnc_addKeybind; // Q Key
-
+["ace_settingsInitialized", {
+    TRACE_2("ace_settingsInitialized",GVAR(showUAV),GVAR(showACRE));
+    if (GVAR(showUAV)) then {
+        GVAR(signalSourceFuncs) pushBack LINKFUNC(getSignalsUAV);
+    };
+    if ((isClass (configFile >> "CfgPatches" >> "acre_sys_core")) && GVAR(showACRE)) then {
+        GVAR(signalSourceFuncs) pushBack LINKFUNC(getSignalsACRE);
+    };
+}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     ["ACE_transmitter_base", "init", FUNC(beaconInit), true, [], true] call CBA_fnc_addClassEventHandler;
@@ -19,6 +20,7 @@ if (isServer) then {
         _uav setVariable [QGVAR(freqMhz), _randomFreq, true];
     }] call CBA_fnc_addEventHandler;
 };
+
 if (!hasInterface) exitWith {};
 
 GVAR(currentShowMode) = 0;
@@ -37,3 +39,16 @@ private _closeCode = {
 };
 // [(localize LSTRING(itemName)), QPATHTOF(images\x_item.paa), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
 ["RDF", "", _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+
+
+#ifdef DEBUG_MODE_FULL
+["Q", "Q", "Q", {
+    systemChat "Q RECOMPILE";
+    [] call ACE_PREP_RECOMPILE;
+    [-1] call FUNC(toggleDisplayMode);
+    false
+}, {false}, [0x10, [false, false, false]], false] call CBA_fnc_addKeybind; // Q Key
+
+
+
+#endif

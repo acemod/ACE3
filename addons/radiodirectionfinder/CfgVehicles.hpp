@@ -6,7 +6,7 @@ class CfgVehicles {
     class GVAR(backpack): Bag_Base {
         scope = 2;
         displayName = "PRD-13 Radio Direction Finder";
-        author = "PabstMirror";
+        author = ECSTRING(common,aceteam);
         model = "z\ace\addons\radiodirectionfinder\data\ace_antennaBackpack";
         maximumLoad = 50;
         mass = 100;
@@ -16,14 +16,14 @@ class CfgVehicles {
     class Items_base_F;
     class ACE_transmitter_base: Items_base_F {
         class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {}; // enable XEH
         };
         author = ECSTRING(common,aceteam);
         model = "\A3\Structures_F\Items\Tools\MultiMeter_F.p3d";
         scope = 1;
     };
     class ACE_transmitter_406MHz: ACE_transmitter_base {
-        displayName = "Transmitter 406MHz";
+        displayName = "[ACE] Transmitter 406MHz";
         GVAR(freq) = 406;
         GVAR(power) = 5000;
     };
@@ -33,16 +33,14 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class GVAR(open) {
-                    //Opens the dialog
+                class GVAR(open) { // Opens the dialog
                     // displayName = CSTRING(configure);
-                    displayName = "open";
+                    displayName = "RDF: Open";
                     condition = QUOTE(_player call FUNC(displayCondition));
-                    statement = QUOTE([DISPLAY_MODE_DIALOG] call FUNC(toggleDisplayMode));
+                    statement = QUOTE([ARR_2(FUNC(toggleDisplayMode),[DISPLAY_MODE_DIALOG])] call CBA_fnc_execNextFrame);
                     // icon = QPATHTOF(UI\icon_android.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
-                    class GVAR(show) {
-                        //Opens the mini map
+                    class GVAR(show) { // Opens the display
                         // displayName = CSTRING(show);
                         displayName = "Show";
                         condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_DISPLAY);
