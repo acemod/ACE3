@@ -254,7 +254,7 @@ double calculateAdvancedZero(double zeroRange, double muzzleVelocity, double bor
         double v = 0.0f;
 
         while (tof < 8.0f && px < zeroRange) {
-            lx = px; 
+            lx = px;
             ly = py;
 
             v = std::sqrt(vx*vx + vy*vy);
@@ -295,7 +295,7 @@ extern "C"
 
 void __stdcall RVExtensionVersion(char *output, int outputSize)
 {
-    strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
+    strncpy(output, ACE_FULL_VERSION_STR, outputSize);
 }
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function)
@@ -303,7 +303,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
     ZERO_OUTPUT();
     std::stringstream outputStr;
     if (!strcmp(function, "version")) {
-        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
         EXTENSION_RETURN();
     }
 
@@ -328,7 +328,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         // int n = sprintf(output,  "%f", retard);
 
         outputStr << retard;
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
 
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "atmosphericCorrection")) {
@@ -347,7 +347,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, humidity, atmosphereModel);
         //int n = sprintf(output,  "%f", ballisticCoefficient);
         outputStr << ballisticCoefficient;
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "new")) {
         unsigned int index = 0;
@@ -453,7 +453,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             bulletDatabase[index].randGenerator.seed(bulletDatabase[index].randSeed);
         }
 
-        strncpy_s(output, outputSize, "", _TRUNCATE);
+        strncpy(output, "", outputSize);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "simulate")) {
         // simulate:0:[-0.109985,542.529,-3.98301]:[3751.57,5332.23,214.252]:[0.598153,2.38829,0]:28.6:0:0.481542:0:215.16
@@ -567,7 +567,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
                 ace::vector3<double> offset(distribution(bulletDatabase[index].randGenerator), distribution(bulletDatabase[index].randGenerator), distribution(bulletDatabase[index].randGenerator));
                 double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
 
-                double trueSpeed = trueVelocity.magnitude();             
+                double trueSpeed = trueVelocity.magnitude();
                 trueVelocity += offset * coef;
                 trueVelocity = trueVelocity.normalize() * trueSpeed;
             };
@@ -622,7 +622,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].bulletVelocityPreviousFrame = bulletVelocityCurrentFrame + velocityOffset;
 
         outputStr << "[" << velocityOffset.x() << "," << velocityOffset.y() << "," << velocityOffset.z() << "]";
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "set")) {
         int height = 0;
@@ -637,7 +637,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridBuildingNums.push_back(numObjects);
         map->gridSurfaceIsWater.push_back(surfaceIsWater);
 
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "init")) {
         int mapSize = 0;
@@ -653,7 +653,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map = &mapDatabase[worldName];
         if (map->gridHeights.size() == gridCells) {
             outputStr << "Terrain already initialized";
-            strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+            strncpy(output, outputStr.str().c_str(), outputSize);
             EXTENSION_RETURN();
         }
 
@@ -666,7 +666,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridBuildingNums.reserve(gridCells);
         map->gridSurfaceIsWater.reserve(gridCells);
 
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "replicateVanillaZero")) {
         float zeroRange = strtof(strtok_s(NULL, ":", &next_token), NULL);
@@ -676,7 +676,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         float zeroAngle = replicateVanillaZero(zeroRange, initSpeed, airFriction);
 
         outputStr << DEGREES(zeroAngle);
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "calcZero")) {
         double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
@@ -687,7 +687,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double zeroAngle = calculateVanillaZero(zeroRange, initSpeed, airFriction, boreHeight);
 
         outputStr << DEGREES(zeroAngle);
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "calcZeroAB")) {
         double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
@@ -703,9 +703,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double zeroAngle = calculateAdvancedZero(zeroRange, muzzleVelocity, boreHeight, temperature, pressure, humidity, ballisticCoefficient, dragModel, atmosphereModel);
 
         outputStr << DEGREES(zeroAngle);
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
         EXTENSION_RETURN();
     }
-    strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+    strncpy(output, outputStr.str().c_str(), outputSize);
     EXTENSION_RETURN();
 }
