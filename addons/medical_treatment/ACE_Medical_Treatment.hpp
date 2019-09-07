@@ -297,7 +297,7 @@ class ADDON {
                 reopeningMaxDelay = 150;
             };
             class AbrasionMinor: Abrasion {
-                effectiveness = 43;
+                effectiveness = 4;
             };
             class AbrasionMedium: Abrasion {
                 effectiveness = 3;
