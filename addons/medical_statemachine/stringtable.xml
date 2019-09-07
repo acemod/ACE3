@@ -6,30 +6,35 @@
             <German>Zustände</German>
             <Japanese>状態</Japanese>
             <Russian>Состояния</Russian>
+            <French>États</French>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuryCondition_DisplayName">
             <English>Fatal Injury Player</English>
             <German>Tödliche Spielerverletzungen</German>
             <Japanese>致命傷プレイヤー</Japanese>
             <Russian>Смертельные ранения игрока</Russian>
+            <French>Blessure fatale des joueurs</French>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuryCondition_Description">
             <English>Controls when a player can receive a fatal injury.</English>
             <German>Definiert wann ein Spieler tödliche Verletzungen bekommen kann</German>
             <Japanese>プレイヤーが致命傷から蘇生できるかどうか決定します</Japanese>
             <Russian>Определяет, когда игрок может получить смертельное ранение</Russian>
+            <French>Définit quand un joueur peut recevoir une blessure fatale.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuryConditionAI_DisplayName">
             <English>AI Instant Death</English>
             <German>Direkter Tod KI</German>
             <Japanese>AI の即死</Japanese>
             <Russian>Мгновенная смерть ИИ</Russian>
+            <French>Mort instantanée de l'IA</French>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuryConditionAI_Description">
             <English>Controls if AI units are able to die instantly.</English>
             <German>Legt fest, ob eine KI direkt sterben kann</German>
             <Japanese>AI が即死できるかどうか決定します</Japanese>
             <Russian>Определяет, сможет ли ИИ мгновенно умереть</Russian>
+            <French>Définit si les unités IA peuvent mourir instantanément.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_DisplayName">
             <English>AI Unconsciousness</English>
@@ -49,21 +54,29 @@
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Description">
             <English>Allows AI to go unconscious instead of dying.</English>
+            <Japanese>AI が即死ではなく気絶へ移行できるかどうか決定します。</Japanese>
+            <French>Permet aux unités IA de perdre connaissance au lieu de mourir.</French>
+            <Russian>Позволяет ИИ оставаться без сознания вместо смерти.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>
             <German>Zeit bis zum Herzstillstand</German>
             <Japanese>心停止時間</Japanese>
             <Russian>Длительность остановки сердца</Russian>
+            <French>Durée de l'arrêt cardiaque</French>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_Description">
             <English>Controls how long it takes to die from cardiac arrest.</English>
+            <Japanese>どのくらいの時間、心停止すると死亡するかを決定します。</Japanese>
+            <French>Définit le temps qu'il faut pour mourir d'un arrêt cardiaque.</French>
+            <Russian>Контролирует, сколько времени требуется, чтобы умереть от остановки сердца.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_InCardiacArrest">
             <English>In Cardiac Arrest</English>
             <German>Herzstillstand</German>
             <Japanese>心停止中</Japanese>
             <Russian>При остановке сердца</Russian>
+            <French>En arrêt cardiaque</French>
         </Key>
     </Package>
 </Project>

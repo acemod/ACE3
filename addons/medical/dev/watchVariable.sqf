@@ -1,5 +1,8 @@
 #include "\z\ace\addons\medical\script_component.hpp"
 
+if (missionNamespace getVariable [QGVAR(dev_watchVariableRunning), false]) exitWith {};
+GVAR(dev_watchVariableRunning) = true;
+
 ["medical", {
 
     // Hide when patient display is up because they might overlap
@@ -151,6 +154,8 @@
     if (_unit isEqualTo ACE_player) then {
         _return pushBack format ["ACE_setCustomAimCoef: %1", [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult)];
     };
+
+    _return pushBack format ["%1 - %2",lifeState _unit, animationState _unit];
 
     // Footer:
     _return pushBack "</t>";

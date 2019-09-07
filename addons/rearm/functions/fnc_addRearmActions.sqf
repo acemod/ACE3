@@ -5,38 +5,44 @@
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
+ * 1: Player <OBJECT>
  *
  * Return Value:
  * ChildActions <ARRAY>
  *
  * Example:
- * [tank] call ace_rearm_fnc_addRearmActions
+ * [tank, player] call ace_rearm_fnc_addRearmActions
  *
  * Public: No
  */
 
-params ["_truck"];
+params ["_truck", "_player"];
 
-private _vehicles = nearestObjects [_truck, ["AllVehicles"], 20];
+private _vehicles = nearestObjects [_truck, ["AllVehicles"], GVAR(distance)];
 _vehicles = _vehicles select {(_x != _truck) && {!(_x isKindOf "CAManBase")} && {!(_x getVariable [QGVAR(disabled), false])}};
 
-if (missionNamespace getVariable [QEGVAR(mk6mortar,useAmmoHandling), false]) then {
-    _vehicles = _vehicles select {!(_x isKindOf "Mortar_01_base_F")};
-};
-
+private _cswCarryMagazines = [];
 private _vehicleActions = [];
 {
     private _vehicle = _x;
-    
+
     // Array of magazines that can be rearmed in the vehicle
     private _needRearmMags = ([_vehicle] call FUNC(getNeedRearmMagazines)) apply {_x select 0};
-    
+
     // _needRearmMags without duplicates
     private _magazineHelper = _needRearmMags arrayIntersect _needRearmMags;
 
     _magazineHelper = _magazineHelper select {[_truck, _x] call FUNC(hasEnoughSupply)};
+
+    if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
+        ([_vehicle] call EFUNC(csw,aceRearmGetCarryMagazines)) params ["_turretMagsCSW", "_allCarryMags"];
+        TRACE_3("csw compat",_vehicle,_turretMagsCSW,_allCarryMags);
+        _cswCarryMagazines append _allCarryMags;
+        _magazineHelper = _magazineHelper - _turretMagsCSW;
+    };
+
     TRACE_2("can add",_x,_magazineHelper);
-    
+
     if (!(_magazineHelper isEqualTo [])) then {
         private _icon = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Icon");
         if !((_icon select [0, 1]) == "\") then {
@@ -80,10 +86,29 @@ private _vehicleActions = [];
                 {},
                 []
             ] call EFUNC(interact_menu,createAction);
-            
+
             _vehicleActions pushBack [_action, _actions, _truck];
         };
     };
 } forEach _vehicles;
+
+if (!(_cswCarryMagazines isEqualTo [])) then {
+    _cswCarryMagazines = _cswCarryMagazines arrayIntersect _cswCarryMagazines;
+    _cswCarryMagazines = _cswCarryMagazines select {[_truck, _x] call FUNC(hasEnoughSupply)};
+    private _baseAction = [QGVAR(cswTake), "CSW", "", {}, {true}] call EFUNC(interact_menu,createAction);
+    private _subActions = _cswCarryMagazines apply {
+        private _action = [
+            _x,
+            _x call FUNC(getMagazineName),
+            getText(configFile >> "CfgMagazines" >> _x >> "picture"),
+            {_this call FUNC(takeAmmo)},
+            {true},
+            {},
+            [_x, _player]
+        ] call EFUNC(interact_menu,createAction);
+        [_action, [], _truck];
+    };
+    _vehicleActions pushBack [_baseAction, _subActions, _truck];
+};
 
 _vehicleActions

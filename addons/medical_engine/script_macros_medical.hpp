@@ -141,6 +141,7 @@
 // - Unit Functions ---------------------------------------------------
 // Retrieval macros for common unit values
 // Defined for easy consistency and speed
+#define GET_SM_STATE(_unit)         ([_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState)
 #define GET_BLOOD_VOLUME(unit)      (unit getVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME])
 #define GET_WOUND_BLEEDING(unit)    (unit getVariable [VAR_WOUND_BLEEDING, 0])
 #define GET_HEART_RATE(unit)        (unit getVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE])

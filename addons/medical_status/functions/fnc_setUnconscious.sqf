@@ -11,13 +11,17 @@
  * Return Value:
  * Success <BOOL>
  *
+ * Example:
+ * [player, true] call ace_medical_status_fnc_setUnconscious
+ *
  * Public: No
  */
 
 params ["_unit", "_active"];
+TRACE_2("setUnconscious",_unit,_active);
 
 // No change to make
-if (_active isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {};
+if (_active isEqualTo IS_UNCONSCIOUS(_unit)) exitWith { TRACE_2("no change",_active,IS_UNCONSCIOUS(_unit)); };
 
 _unit setVariable [VAR_UNCON, _active, true];
 
@@ -31,6 +35,7 @@ if (_active) then {
     // Don't bother setting this if not used
     if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
         private _lastWakeUpCheck = _unit getVariable [QEGVAR(medical,lastWakeUpCheck), 0]; // could be set higher from ace_medical_fnc_setUnconscious
+        TRACE_2("setting lastWakeUpCheck to max of",_lastWakeUpCheck,CBA_missionTime);
         _unit setVariable [QEGVAR(medical,lastWakeUpCheck), _lastWakeUpCheck max CBA_missionTime];
     };
 
