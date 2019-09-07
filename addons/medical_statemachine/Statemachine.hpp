@@ -86,7 +86,7 @@ class ACE_Medical_StateMachine {
             // If an AI unit reanimates, they will immediately die upon entering unconsciousness if AI Unconsciousness is disabled
             // As a result, we immediately kill the AI unit since cardiac arrest is effectively useless for it
             targetState = "Dead";
-            condition = QUOTE(!GVAR(AIUnconsciousness));
+            condition = QUOTE(!GVAR(AIUnconsciousness) && {!isPlayer _this});
         };
         class Timeout {
             targetState = "Dead";
