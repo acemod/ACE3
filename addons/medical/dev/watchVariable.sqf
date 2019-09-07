@@ -48,7 +48,7 @@ GVAR(dev_watchVariableRunning) = true;
     private _heartRate = GET_HEART_RATE(_unit);
     GET_BLOOD_PRESSURE(_unit) params ["_bpLow", "_bpHigh"];
     _return pushBack format ["CardiacOutput %1", _cardiacOutput toFixed 5];
-    _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpLow toFixed 1, _bpHigh toFixed 1];
+    _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpHigh toFixed 1, _bpLow toFixed 1];
 
     // Pain:
     private _pain = GET_PAIN(_unit);
