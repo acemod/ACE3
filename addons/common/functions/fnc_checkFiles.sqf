@@ -78,8 +78,10 @@ if (!isServer && {_platform in ["linux", "osx"]}) then {
         private _extension = configName _x;
         private _isWindows = _platform == "windows" && {getNumber (_x >> "windows") == 1};
         private _isLinux = _platform == "linux" && {getNumber (_x >> "linux") == 1};
+        private _isClient = hasInterface && {getNumber (_x >> "client") == 1};
+        private _isServer = !hasInterface && {getNumber (_x >> "server") == 1};
 
-        if (_isWindows || _isLinux) then {
+        if ((_isWindows || _isLinux) && {_isClient || _isServer}) then {
             private _versionEx = _extension callExtension "version";
             if (_versionEx == "") then {
                 private _extensionFile = _extension;

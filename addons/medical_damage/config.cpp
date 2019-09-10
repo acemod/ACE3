@@ -20,7 +20,6 @@ class CfgPatches {
 
 class ACE_Extensions {
     class ace_medical {
-        windows = 0;
-        linux = 0;
+        // Not yet used
     };
 };

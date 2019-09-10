@@ -30,6 +30,7 @@ class CfgPatches {
 class ACE_Extensions {
     class ace_fcs {
         windows = 1;
+        client = 1;
     };
 };
 

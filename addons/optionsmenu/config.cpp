@@ -32,6 +32,7 @@ class CfgAddons {
 class ACE_Extensions {
     class ace_clipboard {
         windows = 1;
+        client = 1;
     };
 };
 

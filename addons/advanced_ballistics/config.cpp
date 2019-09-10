@@ -22,5 +22,6 @@ class CfgPatches {
 class ACE_Extensions {
     class ace_advanced_ballistics {
         windows = 1;
+        client = 1;
     };
 };
