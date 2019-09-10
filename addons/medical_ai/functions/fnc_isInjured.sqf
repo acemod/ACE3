@@ -17,8 +17,10 @@
 
 if !(alive _this) exitWith {false};
 
-private _bloodLoss = GET_BLOOD_LOSS(_this);
-private _pain = GET_PAIN_PERCEIVED(_this);
-private _unconscious = IS_UNCONSCIOUS(_this);
-
-(_bloodLoss > 0) || {_pain > 0.2} || _unconscious
+(GET_WOUND_BLEEDING(_this) > 0)
+|| {GET_PAIN_PERCEIVED(_this) > 0.25}
+|| {IS_UNCONSCIOUS(_this)}
+|| {
+    private _fractures = GET_FRACTURES(_this);
+    ((_fractures select 4) == 1) || {(_fractures select 5) == 1}
+}

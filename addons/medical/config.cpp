@@ -17,3 +17,7 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_Tests {
+    medicalHitpoints = QPATHTOF(dev\test_hitpointConfigs.sqf);
+};

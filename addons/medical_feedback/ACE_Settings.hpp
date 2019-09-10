@@ -1,4 +1,5 @@
 class ACE_Settings {
+    /*
     // Not currently used anywhere
     class GVAR(enableScreams) {
         category = ECSTRING(medical,Category_Medical);
@@ -7,4 +8,5 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    */
 };

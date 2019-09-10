@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal, commy2
- * Handle wounds received event.
+ * Handles the wounds received event by triggering any needed blood creation.
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: bodyPart <String>
- * 2: damage <NUMBER>
- * 3: shooter <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Body Part (not used) <STRING>
+ * 2: Damage <NUMBER>
+ * 3: Shooter <OBJECT>
  *
  * Return Value:
  * None
@@ -20,16 +20,16 @@
 
 params ["_unit", "", "_damage", "_shooter"];
 
-if (GVAR(enabledFor) == 1 && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
-if (vehicle _unit != _unit && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
+// Don't bleed when players only and a non-player unit is wounded
+if (GVAR(enabledFor) == BLOOD_ONLY_PLAYERS && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
 
-_damage = _damage min 1;
+// Don't bleed on the ground if in a vehicle
+if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
 
-if (isNull _shooter) exitWith { // won't be able to calculate the direction properly, so instead we pick something at random
-    [QGVAR(spurt), [_unit, random 360, _damage]] call CBA_fnc_serverEvent;
+private _bulletDir = if (isNull _shooter) then {
+    random 360 // Cannot calculate the direction properly, pick a random direction
+} else {
+    _shooter getDir _unit // Calculate the bullet direction
 };
 
-// Calculate bulletDirection
-private _bulletDir = _shooter getDir _unit;
-
-[QGVAR(spurt), [_unit, _bulletDir, _damage]] call CBA_fnc_serverEvent;
+[QGVAR(spurt), [_unit, _bulletDir, _damage min 1]] call CBA_fnc_serverEvent;
