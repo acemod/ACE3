@@ -23,10 +23,6 @@
 #include <cstring>
 #include <istream>
 
-#ifndef _WIN32
-#define strncpy_s(dest, size, src, ignored) strncpy(dest, src, size)
-#endif
-
 #ifdef _DEBUG
 #define ZERO_OUTPUT()    { memset(output, 0x00, outputSize); }
 #define EXTENSION_RETURN() {output[outputSize-1] = 0x00; } return;
@@ -79,7 +75,7 @@ namespace ace {
 
     struct exception {
         exception(const uint32_t code_, const std::string & text_) : code(code_), text(text_) {}
-        
+
         exception & operator= (const exception& other) { code = other.code; text = other.text;  return *this; }
         bool operator == (const exception &r) const { return ( code == r.code ); }
 
@@ -89,11 +85,11 @@ namespace ace {
 }
 
 #ifndef _WIN32
-#define __stdcall 
+#define __stdcall
 #endif
 
 #if defined(_MSC_VER)
-    //  Microsoft 
+    //  Microsoft
     #define EXPORT __declspec(dllexport)
     #define IMPORT __declspec(dllimport)
 #elif defined(_GCC)
