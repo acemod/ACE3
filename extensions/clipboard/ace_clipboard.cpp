@@ -33,7 +33,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     }
 
     if (!strcmp(function, "version")) {
-        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
+        std::strncpy(output, ACE_FULL_VERSION_STR, outputSize);
         EXTENSION_RETURN();
     }
 
@@ -53,7 +53,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
                     result = "GlobalAlloc() failed, GetLastError=" + GetLastError();
                     EXTENSION_RETURN();
                 }
-                strncpy_s(pClipboardData, gClipboardData.length(), gClipboardData.c_str(), _TRUNCATE);
+                strncpy(pClipboardData, gClipboardData.c_str(), gClipboardData.length());
 
                 // if success, system owns the memory, if fail, free it from the heap
                 if (SetClipboardData(CF_TEXT, pClipboardData) == NULL) {
@@ -72,7 +72,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     }
 
     if (result.length() > 1) {
-        strncpy_s(output, outputSize, result.c_str(), _TRUNCATE);
+        strncpy(output, result.c_str(), outputSize);
     }
 
     #endif
