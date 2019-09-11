@@ -89,8 +89,8 @@ if (!isServer && {_platform in ["linux", "osx"]}) then {
                     _extensionFile = format ["%1_x64", _extensionFile];
                 };
 
-                private _platformExt = [".dll", ".so"] select (_platformExt == "linux");
-                _extensionFile = format ["%1%2", _platformExt];
+                private _platformExt = [".dll", ".so"] select (_platform == "linux");
+                _extensionFile = format ["%1%2", _extensionFile, _platformExt];
 
                 private _errorMsg = format ["Extension %1 not found.", _extensionFile];
                 ERROR(_errorMsg);
