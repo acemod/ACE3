@@ -26,10 +26,12 @@ if (!hasInterface) exitWith {};
 
 GVAR(nextFadeIn) = 0;
 GVAR(heartBeatEffectRunning) = false;
+GVAR(lastHeartBeatSound) = 0;
+GVAR(bloodTickCounter) = 0;
 
 [false] call FUNC(initEffects);
 [true] call FUNC(handleEffects);
-[{[] call FUNC(handleEffects)}, 1, []] call CBA_fnc_addPerFrameHandler;
+[FUNC(handleEffects), 1, false] call CBA_fnc_addPerFrameHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];

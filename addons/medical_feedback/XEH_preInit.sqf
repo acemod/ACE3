@@ -8,8 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
-GVAR(lastHeartBeatSound) = 0;
-
 // HitScream
 GVAR(HitScreamNamespace) = [] call CBA_fnc_createNamespace;
 GVAR(HitScreamNamespace) setVariable ["#default", "Male08ENG"];

@@ -55,10 +55,7 @@ if (isNull _blood1) then {
 
 private _fade = linearConversion [0, 0.002, _bloodloss, 1, 0, true];
 
-private _switchBloodFadeInfo = missionNamespace getVariable [QGVAR(switchBloodFadeInfo), [0, 0]];
-_switchBloodFadeInfo params ["_tickCounter", "_lastBloodloss"];
-
-if (_tickCounter == 2 || _instant) then {
+if (GVAR(bloodTickCounter) == 2 || _instant) then {
     if (ctrlFade _blood1 > ctrlFade _blood2) then {
         _blood1 ctrlSetFade _fade;
         _blood2 ctrlSetFade 1;
@@ -75,9 +72,7 @@ if (_tickCounter == 2 || _instant) then {
         _blood2 ctrlCommit 3;
     };
 
-    GVAR(switchBloodFadeInfo) = [0, _bloodloss];
+    GVAR(bloodTickCounter) = 0;
 } else {
-    GVAR(switchBloodFadeInfo) = [_tickCounter + 1, _bloodloss];
+    GVAR(bloodTickCounter) = GVAR(bloodTickCounter) + 1;
 };
-
-
