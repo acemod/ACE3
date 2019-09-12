@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ir0n1E
- * Check if client able to interact with gunbag.
+ * Check if client is able to interact with gunbag.
  *
  * Arguments:
  * 0: Unit <OBJECT>

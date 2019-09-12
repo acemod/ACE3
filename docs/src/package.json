@@ -2,10 +2,10 @@
   "name": "ACE3",
   "version": "0.1.0",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.13"
   },
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.4",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-uglify": "^4.0.0",

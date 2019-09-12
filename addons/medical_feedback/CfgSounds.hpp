@@ -34,4 +34,24 @@ class CfgSounds {
         sound[] = {QPATHTOF(sounds\slow_2.wav), "db+1", 1};
         titles[] = {};
     };
+    class ACE_fracture_1 {
+        name = "ACE_fracture_1";
+        sound[] = {QPATHTOF(sounds\fracture_1.wav), "db+1", 1};
+        titles[] = {};
+    };
+    class ACE_fracture_2 {
+        name = "ACE_fracture_2";
+        sound[] = {QPATHTOF(sounds\fracture_2.wav), "db+1", 1};
+        titles[] = {};
+    };
+    class ACE_fracture_3 {
+        name = "ACE_fracture_3";
+        sound[] = {QPATHTOF(sounds\fracture_3.wav), "db+1", 1};
+        titles[] = {};
+    };
+    class ACE_fracture_4 {
+        name = "ACE_fracture_4";
+        sound[] = {QPATHTOF(sounds\fracture_4.wav), "db+1", 1};
+        titles[] = {};
+    };
 };

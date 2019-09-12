@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
- * Condition for an execution caused death.
+ * Condition for an execution caused death (fatal injury received in cardiac arrest).
  *
  * Arguments:
- * 0: The Unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
@@ -17,4 +17,6 @@
 
 params ["_unit"];
 
-(GVAR(fatalInjuryCondition) < 2) && {!(_unit getVariable [QEGVAR(medical,deathBlocked), false])}
+(isPlayer _unit && {GVAR(fatalInjuriesPlayer) != FATAL_INJURIES_NEVER}
+|| {!isPlayer _unit && {GVAR(fatalInjuriesAI) != FATAL_INJURIES_NEVER}})
+&& {!(_unit getVariable [QEGVAR(medical,deathBlocked), false])}

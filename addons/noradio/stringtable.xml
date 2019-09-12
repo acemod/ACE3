@@ -9,6 +9,7 @@
             <Chinesesimp>玩家静音</Chinesesimp>
             <Japanese>プレイヤーをミュート</Japanese>
             <Polish>Wycisz Gracza</Polish>
+            <Russian>Заглушить игрока</Russian>
         </Key>
         <Key ID="STR_ACE_noradio_setting_tooltip">
             <English>Mutes the controlled player avatar.</English>
@@ -18,6 +19,7 @@
             <Chinesesimp>静音玩家所控制的角色。</Chinesesimp>
             <Japanese>プレイヤーに操作されているこのキャラをミュートします。</Japanese>
             <Polish>Wycisza awatar kontrolowany przez gracza</Polish>
+            <Russian>Заглушить контролируемого игрока</Russian>
         </Key>
     </Package>
 </Project>

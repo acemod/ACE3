@@ -13,7 +13,7 @@ if (!hasInterface) exitWith {};
     if (!isNull (ACE_controlledUAV param [0, objNull])) exitWith {false};
 
     // Statement
-    [ACE_player] call FUNC(checkAmmo);
+    [ACE_player, ACE_player] call FUNC(checkAmmo);
     true
 }, {false}, [19, [false, true, false]], false] call CBA_fnc_addKeybind;
 

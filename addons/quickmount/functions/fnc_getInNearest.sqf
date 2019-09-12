@@ -4,7 +4,7 @@
  * Mount the player in the vehicle they are directly looking at based on their distance.
  *
  * Arguments:
- * None
+ * 0: Target <OBJECT>(Optional)
  *
  * Return Value:
  * None
@@ -22,17 +22,27 @@ if (!GVAR(enabled) ||
     {ACE_player getVariable ["ace_unconscious", false]}
 ) exitWith {};
 
+params [["_interactionTarget", objNull, [objNull]]];
+TRACE_1("getInNearest",_interactionTarget);
+
 private _start = AGLtoASL (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
 private _end = (_start vectorAdd (getCameraViewDirection ACE_player vectorMultiply GVAR(distance)));
 private _objects = lineIntersectsSurfaces [_start, _end, ACE_player];
 private _target = (_objects param [0, []]) param [2, objNull];
+
+if ((isNull _target) && {alive _interactionTarget}) then {
+    _end = _start vectorAdd ((_start vectorFromTo (aimPos _interactionTarget)) vectorMultiply GVAR(distance));
+    _objects = lineIntersectsSurfaces [_start, _end, ACE_player];
+    TRACE_1("2nd ray attempt at interaction target aim pos",_objects);
+    _target = (_objects param [0, []]) param [2, objNull];
+};
 
 if (locked _target in [2,3]) exitWith {
     [localize LSTRING(VehicleLocked)] call EFUNC(common,displayTextStructured);
     true
 };
 
-TRACE_1("",_target);
+TRACE_2("",_target,typeOf _target);
 
 if (!isNull _target &&
         {alive _target} &&

@@ -1,21 +1,20 @@
-// CBA Settings [ADDON: ace_medical_feedback]:
-
-private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subCategory)];
-
 [
     QGVAR(painEffectType),
     "LIST",
-    [localize LSTRING(painEffectType), "Selects the used pain effect type"], //@todo
-    _categoryArray,
+    [LSTRING(PainEffectType_DisplayName), LSTRING(PainEffectType_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [
         [FX_PAIN_WHITE_FLASH, FX_PAIN_PULSATING_BLUR, FX_PAIN_CHROMATIC_ABERRATION, FX_PAIN_ONLY_BASE],
-        [LLSTRING(painEffectType_whiteFlashing), LLSTRING(painEffectType_pulsingBlur), LLSTRING(painEffectType_chromAberration), LLSTRING(painEffectType_onlyBase)],
+        [LSTRING(painEffectType_whiteFlashing), LSTRING(painEffectType_pulsingBlur), LSTRING(painEffectType_chromAberration), LSTRING(painEffectType_onlyBase)],
         0
     ],
     false,
     {
-        if (isNil QGVAR(ppPain)) exitWith {TRACE_1("Before Post-Init",_this)};
-        TRACE_1("reseting ppEffect type",_this);
+        if (isNil QGVAR(ppPain)) exitWith {
+            TRACE_1("painEffectType setting - before postInit",_this);
+        };
+
+        TRACE_1("painEffectType setting - resetting effect",_this);
         [true] call FUNC(initEffects);
     }
 ] call CBA_Settings_fnc_init;

@@ -58,7 +58,7 @@ class CfgMagazines {
     };
 
     class 30Rnd_545x39_Mag_F: CA_Magazine {
-        initSpeed = 735;
+        initSpeed = 735; // default BI value according with the ACE_muzzleVelocities at 15°C
     };
     
     class 30Rnd_556x45_Stanag: CA_Magazine {
@@ -120,7 +120,7 @@ class CfgMagazines {
     };
     
     class 30Rnd_762x39_Mag_F: CA_Magazine {
-        initSpeed = 716;
+        initSpeed = 715; // default BI value according with the ACE_muzzleVelocities at 15°C
     };
     
     class 20Rnd_762x51_Mag: CA_Magazine {

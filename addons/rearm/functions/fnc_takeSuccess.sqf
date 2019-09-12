@@ -8,25 +8,33 @@
  *   0: Unit <OBJECT>
  *   1: Magazine Classname <STRING>
  *   2: Ammo Truck <OBJECT>
+ *   3: Target Vehicle or Player <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[player, "500Rnd_127x99_mag_Tracer_Red"]] call ace_rearm_fnc_takeSuccess
+ * [[player, "500Rnd_127x99_mag_Tracer_Red", ammoTruck, targetVehicle]] call ace_rearm_fnc_takeSuccess
  *
  * Public: No
  */
 
 params ["_args"];
-_args params ["_unit", "_magazineClass", "_truck"];
-TRACE_3("takeSuccess",_unit,_magazineClass,_truck);
+_args params ["_unit", "_magazineClass", "_truck", "_vehicle"];
+TRACE_4("takeSuccess",_unit,_magazineClass,_truck,_vehicle);
 
 private _success = true;
 if (GVAR(supply) > 0) then {
     _success = [_truck, _magazineClass] call FUNC(removeMagazineFromSupply);
 };
 if !(_success) exitWith {WARNING_2("takeSuccess failed to take [%1] from [%2]",_magazineClass,_truck);};
+
+if (_vehicle == _unit) exitWith {
+    ([_magazineClass] call FUNC(getCaliber)) params ["", "_idx"];
+    private _rounds = (REARM_COUNT select _idx);
+    TRACE_4("passing to csw",_unit,_magazineClass,_idx,_rounds);
+    [_unit, _magazineClass, _rounds] call EFUNC(csw,reload_handleReturnAmmo);
+};
 
 [_unit, "forceWalk", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
 [_unit, "blockThrow", "ACE_rearm", true] call EFUNC(common,statusEffect_set);

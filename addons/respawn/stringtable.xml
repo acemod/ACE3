@@ -3,11 +3,13 @@
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_DisplayName">
             <English>Respawn</English>
+            <German>Wiedereinstieg</German>
             <Italian>Riapparizione</Italian>
             <Chinese>重生</Chinese>
             <Chinesesimp>重生</Chinesesimp>
             <Japanese>リスポン</Japanese>
             <Polish>Odrodzenie</Polish>
+            <Russian>Возрождение</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
@@ -283,11 +285,13 @@
         </Key>
         <Key ID="STR_ACE_Respawn_DeadBodyRemoveTimer">
             <English>Body remove timer</English>
+            <German>Zeit bis Körper entfernt werden</German>
             <Italian>Timer rimozione corpo</Italian>
             <Chinese>屍體移除計時器</Chinese>
             <Chinesesimp>尸体移除计时器</Chinesesimp>
             <Japanese>死体削除タイマー</Japanese>
             <Polish>Czas usunięcia ciała</Polish>
+            <Russian>Время удаления трупов</Russian>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>
