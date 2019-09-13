@@ -73,7 +73,7 @@ for "_index" from 0 to ((count _configPath) - 1) do {
     _actionMaxDistance = _actionMaxDistance + 0.1; //increase range slightly
 
     //extension ~4x as fast:
-    private _iconImage =  "ace_parse_imagepath" callExtension _actionDisplayNameDefault;
+    private _iconImage = ("ace_strings" callExtension ["getImagePath", [_actionDisplayNameDefault]]) select 0;
 
     private _actionOffset = [_actionPosition] call _fnc_getMemPointOffset;
     private _memPointIndex = _memPoints find _actionPosition;

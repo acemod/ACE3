@@ -11,18 +11,13 @@
  * String with line breaks
  */
 
-#include "shared.hpp"
+#include "ace_parse_imagepath.hpp"
 
-#include <stdlib.h>
 #include <sstream>
 #include <vector>
 #include <string>
 
 #define MAXCHARACTERS 14
-
-extern "C" {
-    EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
-}
 
 std::vector<std::string> splitString(const std::string & input) {
     std::istringstream ss(input);
@@ -59,14 +54,4 @@ std::string addLineBreaks(const std::vector<std::string> &words) {
     }
 
     return sstream.str();
-}
-
-void __stdcall RVExtension(char *output, int outputSize, const char *function) {
-    ZERO_OUTPUT();
-    if (!strcmp(function, "version")) {
-        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
-    } else {
-        strncpy(output, addLineBreaks(splitString(function)).c_str(), outputSize);
-    }
-    EXTENSION_RETURN();
 }
