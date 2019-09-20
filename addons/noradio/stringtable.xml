@@ -10,6 +10,7 @@
             <Japanese>プレイヤーをミュート</Japanese>
             <Polish>Wycisz Gracza</Polish>
             <Russian>Заглушить игрока</Russian>
+            <Portuguese>Silenciar Jogador</Portuguese>
         </Key>
         <Key ID="STR_ACE_noradio_setting_tooltip">
             <English>Mutes the controlled player avatar.</English>
@@ -20,6 +21,7 @@
             <Japanese>プレイヤーに操作されているこのキャラをミュートします。</Japanese>
             <Polish>Wycisza awatar kontrolowany przez gracza</Polish>
             <Russian>Заглушить контролируемого игрока</Russian>
+            <Portuguese>Silencia o avatar do Jogador controlado</Portuguese>
         </Key>
     </Package>
 </Project>

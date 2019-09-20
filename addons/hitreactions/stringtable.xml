@@ -11,6 +11,7 @@
             <German>Mindestschaden, um Sturz auszulösen</German>
             <Polish>Minimalne obrażenie, żeby aktywować spadanie</Polish>
             <Russian>Минимальный урон для активации падения</Russian>
+            <Portuguese>Dano Mínimo para ativar queda</Portuguese>
         </Key>
     </Package>
 </Project>

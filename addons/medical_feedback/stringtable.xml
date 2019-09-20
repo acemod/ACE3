@@ -7,6 +7,7 @@
             <Japanese>フィードバック</Japanese>
             <Russian>Реакция на ранения</Russian>
             <French>Réaction aux blessures</French>
+            <Portuguese>Reação a Lesões</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -27,6 +28,7 @@
             <Japanese>痛みの効果の種類を選択できます。</Japanese>
             <French>Permet de choisir quel effet provoque la douleur.</French>
             <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
+            <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -34,6 +36,7 @@
             <Japanese>白く点滅</Japanese>
             <Russian>Белые вспышки</Russian>
             <French>Flash blancs</French>
+            <Portuguese>Flashes Brancos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -41,6 +44,7 @@
             <Japanese>ボケの強弱</Japanese>
             <Russian>Пульсирующее размытие</Russian>
             <French>Pulsations floues</French>
+            <Portuguese>Borrão Pulsante</Portuguese>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">

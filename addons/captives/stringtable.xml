@@ -11,6 +11,7 @@
             <Korean>포로설정</Korean>
             <Polish>Jeńcy</Polish>
             <Russian>Пленные</Russian>
+            <Portuguese>Prisioneiros</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
@@ -320,7 +321,7 @@
             <Spanish>Permitir rendición</Spanish>
             <Czech>Povolit vzdávání</Czech>
             <German>Kapitulation erlauben</German>
-            <Portuguese>Permite rendição</Portuguese>
+            <Portuguese>Permitir Rendição</Portuguese>
             <French>Permettre la reddition</French>
             <Hungarian>Kapituláció engedélyezése</Hungarian>
             <Russian>Разрешить сдаваться</Russian>
@@ -416,6 +417,7 @@
             <Korean>커서의 병력을 포박합니다.</Korean>
             <Polish>Ustawia jednostkę pod kursorem jako jeniec.</Polish>
             <Russian>Арестовывает указанный курсором юнит</Russian>
+            <Portuguese>Torna a unidade sob o cursor um prisioneiro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
@@ -427,6 +429,7 @@
             <Korean>AI 항복 필요</Korean>
             <Polish>Wymaga poddania się przez SI</Polish>
             <Russian>Требовать ИИ сдаться для ареста</Russian>
+            <Portuguese>Requer rendição da IA</Portuguese>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
@@ -438,6 +441,7 @@
             <Korean>포박하기 전에 먼저 AI가 투항해야만 합니다.</Korean>
             <Polish>Wymaga poddania się przez SI zanim aresztowanie będzie możliwe</Polish>
             <Russian>Требовать для ареста, чтобы ИИ вначале сдавались</Russian>
+            <Portuguese>Requer que a IA se renda antes que seja presa</Portuguese>
         </Key>
     </Package>
 </Project>

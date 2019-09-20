@@ -12,6 +12,7 @@
             <Chinese>隱藏</Chinese>
             <Chinesesimp>隐藏</Chinesesimp>
             <Russian>Спрятать</Russian>
+            <Portuguese>Ocultar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonHideTooltip">
             <English>Hide interface</English>
@@ -24,6 +25,7 @@
             <Chinese>隱藏介面</Chinese>
             <Chinesesimp>隐藏介面</Chinesesimp>
             <Russian>Скрыть интерфейс</Russian>
+            <Portuguese>Oculta a Interface</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsText">
             <English>Loadouts</English>
@@ -36,6 +38,7 @@
             <Chinese>裝備</Chinese>
             <Chinesesimp>装备</Chinesesimp>
             <Russian>Комплекты</Russian>
+            <Portuguese>Loadouts</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportText">
             <English>Export</English>
@@ -48,6 +51,7 @@
             <Chinese>匯出</Chinese>
             <Chinesesimp>汇出</Chinesesimp>
             <Russian>Экспорт</Russian>
+            <Portuguese>Exportar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonImportText">
             <English>Import</English>
@@ -60,6 +64,7 @@
             <Chinese>匯入</Chinese>
             <Chinesesimp>汇入</Chinesesimp>
             <Russian>Импорт</Russian>
+            <Portuguese>Importar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonCloseText">
             <English>Close</English>
@@ -72,6 +77,7 @@
             <Chinese>關閉</Chinese>
             <Chinesesimp>关闭</Chinesesimp>
             <Russian>Закрыть</Russian>
+            <Portuguese>Fechar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_noVirtualItems">
             <English>No virtual item available</English>
@@ -84,6 +90,7 @@
             <Chinese>沒有可用的虛擬物品</Chinese>
             <Chinesesimp>没有可用的虚拟物品</Chinesesimp>
             <Russian>Виртуальный предмет недоступен</Russian>
+            <Portuguese>Nenhum item virtual disponível</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveText">
             <English>Save</English>
@@ -96,6 +103,7 @@
             <Chinese>保存</Chinese>
             <Chinesesimp>保存</Chinesesimp>
             <Russian>Сохранить</Russian>
+            <Portuguese>Salvar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip">
             <English>Save the current loadout</English>
@@ -108,12 +116,14 @@
             <Chinese>保存當前的裝備</Chinese>
             <Chinesesimp>保存当前的装备</Chinesesimp>
             <Russian>Сохранить текущий комплект экипировки</Russian>
+            <Portuguese>Salva o loadout atual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip_shiftClick">
             <English>[Shift+Click to save to mission defaults]</English>
             <Japanese>[Shift + クリック] でミッション標準として保存します</Japanese>
             <Polish>Shift + Klik aby zapisac jako domyślne dla misji </Polish>
             <Russian>[Shift+Клик, чтобы сохранить в настройках по умолчанию]</Russian>
+            <Portuguese>[Shift+Clique para salvar nos padrões da missão]</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
             <English>Rename</English>
@@ -126,6 +136,7 @@
             <Chinese>重新命名</Chinese>
             <Chinesesimp>重新命名</Chinesesimp>
             <Russian>Переименовать</Russian>
+            <Portuguese>Renomear</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
@@ -138,6 +149,7 @@
             <Chinese>重新命名當前選擇的裝備</Chinese>
             <Chinesesimp>重新命名当前选择的装备</Chinesesimp>
             <Russian>Переименовать выбранный комплект экипировки</Russian>
+            <Portuguese>Renomeia o loadout selecionado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadText">
             <English>Load</English>
@@ -150,6 +162,7 @@
             <Chinese>載入</Chinese>
             <Chinesesimp>载入</Chinesesimp>
             <Russian>Загрузить</Russian>
+            <Portuguese>Carregar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadTooltip">
             <English>Load the selected loadout</English>
@@ -162,6 +175,7 @@
             <Chinese>載入當前選擇的裝備</Chinese>
             <Chinesesimp>载入当前选择的装备</Chinesesimp>
             <Russian>Загрузить выбранный комплект экипировки</Russian>
+            <Portuguese>Carrega o loadout selecionado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteText">
             <English>Delete</English>
@@ -174,6 +188,7 @@
             <Chinese>刪除</Chinese>
             <Chinesesimp>删除</Chinesesimp>
             <Russian>Удалить</Russian>
+            <Portuguese>Apagar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteTooltip">
             <English>Delete the selected loadout</English>
@@ -186,6 +201,7 @@
             <Chinese>刪除當前選擇的裝備</Chinese>
             <Chinesesimp>删除当前选择的装备</Chinesesimp>
             <Russian>Удалить выбранный комплект экипировки</Russian>
+            <Portuguese>Apaga o loadout selecionado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsText">
             <English>My loadouts</English>
@@ -198,6 +214,7 @@
             <Chinese>我的裝備</Chinese>
             <Chinesesimp>我的装备</Chinesesimp>
             <Russian>Мои комплекты</Russian>
+            <Portuguese>Meus loadouts</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsTooltip">
             <English>Loadouts saved in your profile</English>
@@ -210,6 +227,7 @@
             <Chinese>裝備已保存到你的設定檔中</Chinese>
             <Chinesesimp>装备已保存到你的设定档中</Chinesesimp>
             <Russian>Комплекты экипировки, сохраненные в вашем профиле</Russian>
+            <Portuguese>Loadouts salvos em seu perfil</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsText">
             <English>Default loadouts</English>
@@ -222,6 +240,7 @@
             <Chinese>預設裝備</Chinese>
             <Chinesesimp>预设装备</Chinesesimp>
             <Russian>По умолчанию</Russian>
+            <Portuguese>Loadouts padrões</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsTooltip">
             <English>Loadouts made available by the mission maker</English>
@@ -234,6 +253,7 @@
             <Chinese>任務作者提供的預設裝備</Chinese>
             <Chinesesimp>任务作者提供的预设装备</Chinesesimp>
             <Russian>Комплекты экипировки, предоставляемые создателем миссии</Russian>
+            <Portuguese>Loadouts definidos pelo criador da missão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
             <English>Public loadouts</English>
@@ -246,6 +266,7 @@
             <Chinese>公用裝備</Chinese>
             <Chinesesimp>公用装备</Chinesesimp>
             <Russian>Публичные комплекты</Russian>
+            <Portuguese>Loadouts públicos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsTooltip">
             <English>Loadouts shared by you and other players</English>
@@ -258,6 +279,7 @@
             <Chinese>由你與其他玩家分享的裝備配置</Chinese>
             <Chinesesimp>由你与其他玩家分享的装备配置</Chinesesimp>
             <Russian>Комплекты экипировки, опубликованные вами и другими игроками</Russian>
+            <Portuguese>Loadouts compartilhados por você ou outros jogadores</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByWeightText">
             <English>Sort by weight</English>
@@ -270,6 +292,7 @@
             <Chinese>以重量排序</Chinese>
             <Chinesesimp>以重量排序</Chinesesimp>
             <Russian>Сортировка по весу</Russian>
+            <Portuguese>Ordenar por peso</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAmountText">
             <English>Sort by amount</English>
@@ -282,6 +305,7 @@
             <Chinese>以數量排序</Chinese>
             <Chinesesimp>以数量排序</Chinesesimp>
             <Russian>Сортировка по количеству</Russian>
+            <Portuguese>Ordenar por quantidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -294,6 +318,7 @@
             <Chinese>開始/停止分享當前選擇的裝備</Chinese>
             <Chinesesimp>开始/停止分享当前选择的装备</Chinesesimp>
             <Russian>Открыть или закрыть общий доступ к комплекту экипировки</Russian>
+            <Portuguese>Compartilhar ou parar de compartilhar o loadout selecionado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSharePrivateText">
             <English>Private</English>
@@ -306,6 +331,7 @@
             <Chinese>私用</Chinese>
             <Chinesesimp>私用</Chinesesimp>
             <Russian>Приватный</Russian>
+            <Portuguese>Privado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSharePublicText">
             <English>Public</English>
@@ -318,6 +344,7 @@
             <Chinese>公用</Chinese>
             <Chinesesimp>公用</Chinesesimp>
             <Russian>Публичный</Russian>
+            <Portuguese>Público</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefaultError">
             <English>The default loadouts list is empty!</English>
@@ -330,6 +357,7 @@
             <Chinese>沒有預設的裝備清單!</Chinese>
             <Chinesesimp>没有预设的装备清单!</Chinesesimp>
             <Russian>Список комплекта экипировки пуст!</Russian>
+            <Portuguese>A lista de loadouts padrões está vazia!</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefault">
             <English>Default loadouts list exported to clipboard</English>
@@ -342,6 +370,7 @@
             <Chinese>預設的裝備清單已匯出到剪貼簿中</Chinese>
             <Chinesesimp>预设的装备清单已汇出到剪贴簿中</Chinesesimp>
             <Russian>Список комплекта экипировки по умолчанию экспортирован в буфер</Russian>
+            <Portuguese>A lista de loadouts padrões foi exportada pra área de transferência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportCurrent">
             <English>Current loadout exported to clipboard</English>
@@ -354,6 +383,7 @@
             <Chinese>當前的裝備已匯出到剪貼簿中</Chinese>
             <Chinesesimp>当前的装备已汇出到剪贴簿中</Chinesesimp>
             <Russian>Текущий список комплекта экипировки экспортирован в буфер</Russian>
+            <Portuguese>Loadout atual foi exportado pra área de transferência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_importFormatError">
             <English>Wrong format provided</English>
@@ -366,6 +396,7 @@
             <Chinese>提供的格式錯誤</Chinese>
             <Chinesesimp>提供的格式错误</Chinesesimp>
             <Russian>Неверный формат импорта</Russian>
+            <Portuguese>Format incorreto fornecido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_importedDefault">
             <English>Default loadouts list imported from clipboard</English>
@@ -378,6 +409,7 @@
             <Chinese>預設的裝備清單已從剪貼簿中匯入</Chinese>
             <Chinesesimp>预设的装备清单已从剪贴簿中汇入</Chinesesimp>
             <Russian>Список комплекта экипировки по умолчанию импортирован из буфера</Russian>
+            <Portuguese>A lista de loadouts padrões foi importada da área de transferência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_importedCurrent">
             <English>Loadout imported from clipboard</English>
@@ -390,6 +422,7 @@
             <Chinese>裝備已從剪貼簿中匯入</Chinese>
             <Chinesesimp>装备已从剪贴簿中汇入</Chinesesimp>
             <Russian>Список комплекта экипировки импортирован из буфера</Russian>
+            <Portuguese>Loadout importado da área de transferência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutDeleted">
             <English>The following loadout was deleted:</English>
@@ -402,6 +435,7 @@
             <Chinese>以下的裝備已被刪除:</Chinese>
             <Chinesesimp>以下的装备已被删除:</Chinesesimp>
             <Russian>Удален комплект экипировки:</Russian>
+            <Portuguese>O seguinte loadout foi apagado:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutUnshared">
             <English>The following loadout is not public anymore:</English>
@@ -414,6 +448,7 @@
             <Chinese>以下的裝備已不再被分享:</Chinese>
             <Chinesesimp>以下的装备已不再被分享:</Chinesesimp>
             <Russian>Этот комплект экипировки больше не публичный:</Russian>
+            <Portuguese>O seguinte loadout não é mais público:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveEmptyNameBox">
             <English>The name field is empty!</English>
@@ -426,6 +461,7 @@
             <Chinese>名稱欄位為空!</Chinese>
             <Chinesesimp>名称栏位为空!</Chinesesimp>
             <Russian>Поле имени пустое!</Russian>
+            <Portuguese>O nome não pode estar vazio!</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveAuthorError">
             <English>You are the author of this loadout</English>
@@ -438,6 +474,7 @@
             <Chinese>你是這個裝備的作者</Chinese>
             <Chinesesimp>你是这个装备的作者</Chinesesimp>
             <Russian>Вы автор этого комплекта экипировки</Russian>
+            <Portuguese>Você é o autor desse loadout</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveSharedError">
             <English>A loadout of yours with the same name is public</English>
@@ -450,6 +487,7 @@
             <Chinese>已有相同名稱的裝備在公用分享區</Chinese>
             <Chinesesimp>已有相同名称的装备在公用分享区</Chinesesimp>
             <Russian>Ваш комплект экипировки с таким же именем является публичным</Russian>
+            <Portuguese>Um loadout seu com o mesmo nome é público</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutSaved">
             <English>The following loadout was saved:</English>
@@ -462,6 +500,7 @@
             <Chinese>以下的裝備已被保存:</Chinese>
             <Chinesesimp>以下的装备已被保存:</Chinesesimp>
             <Russian>Сохранен комплект экипировки:</Russian>
+            <Portuguese>O seguinte loadout foi salvo:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutLoaded">
             <English>The following loadout was loaded:</English>
@@ -474,6 +513,7 @@
             <Chinese>以下的裝備已被載入:</Chinese>
             <Chinesesimp>以下的装备已被载入:</Chinesesimp>
             <Russian>Загружен комплект экипировки:</Russian>
+            <Portuguese>O seguinte loadout foi carregado:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_renameExistError">
             <English>A loadout with the same name already exist!</English>
@@ -486,6 +526,7 @@
             <Chinese>已有相同名稱的裝備!</Chinese>
             <Chinesesimp>已有相同名称的装备!</Chinesesimp>
             <Russian>Комплект с таким именем уже существует!</Russian>
+            <Portuguese>Um loadout com o mesmo nome já existe!</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutRenamed">
             <English>was renamed to</English>
@@ -498,6 +539,7 @@
             <Chinese>已被改名為</Chinese>
             <Chinesesimp>已被改名为</Chinesesimp>
             <Russian>был переименован в</Russian>
+            <Portuguese>foi renameado para</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_invertCameraSetting">
             <English>Invert camera controls</English>
@@ -510,6 +552,7 @@
             <Chinese>反轉攝影機控制</Chinese>
             <Chinesesimp>反转摄影机控制</Chinesesimp>
             <Russian>Инвертировать управление камерой</Russian>
+            <Portuguese>Inverter controles da câmera</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_modIconsSetting">
             <English>Enable mod icons</English>
@@ -522,6 +565,7 @@
             <Chinese>啟用模組圖示</Chinese>
             <Chinesesimp>启用模组图示</Chinesesimp>
             <Russian>Включить иконки модов</Russian>
+            <Portuguese>Ativar ícones de mods</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_fontHeightSetting">
             <English>Panel font height</English>
@@ -534,6 +578,7 @@
             <Chinese>面板字體高度</Chinese>
             <Chinesesimp>面板字体高度</Chinesesimp>
             <Russian>Размер шрифта панели</Russian>
+            <Portuguese>Altura da fonte do painel</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_allowDefaultLoadoutsSetting">
             <English>Allow default loadouts</English>
@@ -546,6 +591,7 @@
             <Chinese>允許預設裝備</Chinese>
             <Chinesesimp>允许预设装备</Chinesesimp>
             <Russian>Разрешить комплекты по умолчанию</Russian>
+            <Portuguese>Permitir loadouts padrões</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_allowSharingSetting">
             <English>Allow loadout sharing</English>
@@ -558,6 +604,7 @@
             <Chinese>允許分享裝備</Chinese>
             <Chinesesimp>允许分享装备</Chinesesimp>
             <Russian>Разрешить публикацию комплектов</Russian>
+            <Portuguese>Permitir compartilhar loadouts</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_printToRPTSetting">
             <English>Log missing / unavailable items</English>
@@ -570,6 +617,7 @@
             <Chinese>記錄遺失/無法使用的項目</Chinese>
             <Chinesesimp>记录遗失/无法使用的项目</Chinesesimp>
             <Russian>Вести журнал недоступных предметов</Russian>
+            <Portuguese>Registrar em log itens indisponíveis/não encontrados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonCurrentMagTooltip">
             <English>Primary magazine</English>
@@ -582,6 +630,7 @@
             <Chinese>主要武器彈匣</Chinese>
             <Chinesesimp>主要武器弹匣</Chinesesimp>
             <Russian>Основной магазин</Russian>
+            <Portuguese>Carregador Primário</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonCurrentMag2Tooltip">
             <English>Secondary magazine</English>
@@ -594,6 +643,7 @@
             <Chinese>次要武器彈匣</Chinese>
             <Chinesesimp>次要武器弹匣</Chinesesimp>
             <Russian>Вторичный магазин</Russian>
+            <Portuguese>Carregador Secundário</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_settingCategory">
             <English>ACE Arsenal</English>
@@ -606,6 +656,7 @@
             <Chinese>ACE虛擬軍火庫</Chinese>
             <Chinesesimp>ACE虚拟军火库</Chinesesimp>
             <Russian>ACE Арсенал</Russian>
+            <Portuguese>ACE Arsenal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultLoadoutsTooltip">
             <English>Allow the use of the default loadouts tab</English>
@@ -618,6 +669,7 @@
             <Chinese>允許使用預設的裝備</Chinese>
             <Chinesesimp>允许使用预设的装备</Chinesesimp>
             <Russian>Разрешить использование вкладки комплектов экипировки по умолчанию</Russian>
+            <Portuguese>Permite o uso da aba de loadouts padrões</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_modIconsTooltip">
             <English>Show / hide mod icons for the left panel</English>
@@ -630,6 +682,7 @@
             <Chinese>在左面板中顯示/隱藏模組圖示</Chinese>
             <Chinesesimp>在左面板中显示/隐藏模组图示</Chinesesimp>
             <Russian>Показать / скрыть значки модов в левой панели</Russian>
+            <Portuguese>Mostra / Esconde os ícones de mods no painel esquerdo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_fontHeightTooltip">
             <English>Change the font height for text in the left / right panels</English>
@@ -642,6 +695,7 @@
             <Chinese>變更左/右面板中的字體高度</Chinese>
             <Chinesesimp>变更左/右面板中的字体高度</Chinesesimp>
             <Russian>Изменить размер шрифта для текста в левой / правой панелях</Russian>
+            <Portuguese>Muda o tamanho da fonte para os textos nos painéis esquerdo e direito</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_printToRPTTooltip">
             <English>Log missing / unavailable items in the RPT</English>
@@ -654,6 +708,7 @@
             <Chinese>記錄遺失/無法使用的項目到RPT檔案中</Chinese>
             <Chinesesimp>记录遗失/无法使用的项目到RPT档案中</Chinesesimp>
             <Russian>Вести журнал отсутствующих / недоступных предметов в RPT</Russian>
+            <Portuguese>Registrar em log itens indisponíveis no RPT</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_CantOpenDisplay">
             <English>Unable to open ACE arsenal</English>
@@ -666,6 +721,7 @@
             <Chinesesimp>无法开启ACE虚拟军火库</Chinesesimp>
             <Polish>Nie można otworzyć arsenału ACE</Polish>
             <Russian>Невозможно открыть ACE Арсенал</Russian>
+            <Portuguese>Não foi possível abrir o ACE Arsenal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsText">
             <English>Import BI VA loadouts to ACE Arsenal</English>
@@ -678,6 +734,7 @@
             <Italian>Importa l'arsenale virtuale BI nell'arsenale ACE</Italian>
             <Polish>Importuj zestawy wyposażenia z wirtualnego arsenału BI do arsenału ACE</Polish>
             <Russian>Импорт комплектов из Арсенала BI в Арсенал ACE</Russian>
+            <Portuguese>Importar loadouts do BIS Arsenal para o ACE Arsenal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsPlayerError">
             <English>No player unit available! Place a unit and mark it as "Player".</English>
@@ -690,6 +747,7 @@
             <Italian>Non ci sono giocatori! Poisziona una unità e impostala come "Giocatore".</Italian>
             <Polish>Brak dostępnych jednostek gracza! Postaw jednostkę i oznacz ją jako "Gracz".</Polish>
             <Russian>Нет доступных игроков! Разместите юнит и отметьте его как «Игрок»</Russian>
+            <Portuguese>Nenhuma unidade de jogador disponível! Coloque uma unidade e marque como "Player".</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsLoadoutError">
             <English>No loadouts to import.</English>
@@ -702,6 +760,7 @@
             <Italian>Non ci sono equipaggiamenti da importare.</Italian>
             <Polish>Brak zestawów wyposażenia do zaimportowania.</Polish>
             <Russian>Нет комплектов для импорта</Russian>
+            <Portuguese>Nenhum loadout para importar.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission">
             <English>ACE Arsenal</English>
@@ -713,6 +772,7 @@
             <Italian>Arsenale ACE</Italian>
             <Polish>Arsenał ACE</Polish>
             <Russian>ACE Арсенал</Russian>
+            <Portuguese>ACE Arsenal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_ReturnToArsenal">
             <English>Return to ACE Arsenal.</English>
@@ -724,6 +784,7 @@
             <Italian>Torna all'arsenale ACE</Italian>
             <Polish>Wróć do arsenału ACE.</Polish>
             <Russian>Вернуться в ACE Арсенал</Russian>
+            <Portuguese>Voltar para o ACE Arsenal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_tooltip">
             <English>Use ACE Arsenal to try out different weapons and equipment.</English>
@@ -735,6 +796,7 @@
             <Italian>Usa l'arsenale ACE per provare armi ed equipaggiamenti vari.</Italian>
             <Polish>Skorzystaj z arsenału ACE by wypróbować broń i ekwipunek.</Polish>
             <Russian>Используйте ACE Arsenal, чтобы опробовать различное оружие и снаряжение.</Russian>
+            <Portuguese>Use o ACE Arsenal para experimentar diferentes armas e equipamentos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_overview">
             <English>Try weapons and equipment and create your own loadouts.</English>
@@ -746,6 +808,7 @@
             <Italian>Prova armi ed equipaggiamenti e creai i tuoi equipaggiamenti personalizzati.</Italian>
             <Polish>Wypróbuj broń i ekwipunek i stwórz swoje własne zestawy wyposażenia.</Polish>
             <Russian>Опробуйте оружие и снаряжение, создавайте собственные комплекты экипировки.</Russian>
+            <Portuguese>Experimente armas e equipamentos e crie seus próprios loadouts.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
             <English>Open the loadouts screen</English>
@@ -757,6 +820,7 @@
             <Italian>Apri la pagina degli equipaggiamenti</Italian>
             <Polish>Otwórz ekran zestawów</Polish>
             <Russian>Открыть окно комплектов экипировки</Russian>
+            <Portuguese>Abre a tela de loadouts</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
             <English>Export current / default loadouts</English>
@@ -768,6 +832,7 @@
             <Italian>Esporta l'equipaggiamento attuale oppure la lista degli equipaggiamenti di base</Italian>
             <Polish>Eksportuj obecne / domyślne zestawy wyposażenia </Polish>
             <Russian>Экспорт комплектов экипировки</Russian>
+            <Portuguese>Exporta loadout atual / loadouts padrões</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonImportTooltip">
             <English>Import current / default loadouts</English>
@@ -779,6 +844,7 @@
             <Italian>Importa l'equipaggiamento attuale oppure la lista degli equipaggiamenti di base</Italian>
             <Polish>Importuj obecne / domyślne zestawy wyposażenia</Polish>
             <Russian>Импорт комплектов экипировки</Russian>
+            <Portuguese>Importa loadout atual / loadouts padrões</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statPotassium">
             <English>Potassium levels</English>
@@ -789,6 +855,7 @@
             <Italian>Ilvello di potassio</Italian>
             <Polish>Poziomy potasu</Polish>
             <Russian>Уровень Калия</Russian>
+            <Portuguese>Níveis de Potássio</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
             <English>Magnification</English>
@@ -800,7 +867,7 @@
             <Russian>Увеличение</Russian>
             <German>Vergrößerung</German>
             <Czech>Zvětšení</Czech>
-            <Portuguese>Aumentox</Portuguese>
+            <Portuguese>Aumento</Portuguese>
             <Korean>배율</Korean>
             <Chinesesimp>放大倍数</Chinesesimp>
             <Japanese>拡大倍率</Japanese>
@@ -813,6 +880,7 @@
             <Polish>Wsparcie noktowizyjne</Polish>
             <Italian>Supporto visore notturno</Italian>
             <Russian>Поддержка ночного видения</Russian>
+            <Portuguese>Suporte de Visão Noturna</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
             <English>Primary supported</English>
@@ -821,6 +889,7 @@
             <Polish>Wspierane przez broń główną</Polish>
             <Italian>Primario supportato</Italian>
             <Russian>Поддерживается осн. прицелом</Russian>
+            <Portuguese>Primária suportada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
             <English>Secondary supported</English>
@@ -829,6 +898,7 @@
             <Polish>Wspierane przez broń drugorzędną</Polish>
             <Italian>Secondario supportato</Italian>
             <Russian>Поддерживается доп. прицелом</Russian>
+            <Portuguese>Secundária suportada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
             <English>Primary integrated</English>
@@ -837,6 +907,7 @@
             <Polish>Zintegrowane z bronią główną</Polish>
             <Italian>Primario integrato</Italian>
             <Russian>Интегрирован в осн. прицел</Russian>
+            <Portuguese>Primária integrada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
@@ -845,6 +916,7 @@
             <Polish>Nie wspierane</Polish>
             <Italian>Non supportato</Italian>
             <Russian>Не поддерживается</Russian>
+            <Portuguese>Não suportado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
@@ -856,6 +928,7 @@
             <Italian>Pagina</Italian>
             <Polish>Strona</Polish>
             <Russian>Стр.</Russian>
+            <Portuguese>Página</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
@@ -867,6 +940,7 @@
             <Italian>Abilita volti, voci e insegne</Italian>
             <Polish>Aktywuj zakładki twarz / głos / insygnia</Polish>
             <Russian>Включить вкладки Лиц / Голосов / Знаков различия</Russian>
+            <Portuguese>Ativar as abas de rostos / vozes / insígnias</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonClearContainerTooltip">
             <English>Empty the selected container</English>
@@ -878,6 +952,7 @@
             <Italian>Svuota il contenitore selezionato</Italian>
             <Polish>Opróżnij wybrany pojemnik</Polish>
             <Russian>Очистить контейнер</Russian>
+            <Portuguese>Esvaziar o cointâiner selecionado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportedClassnameText">
             <English>Exported class name to clipboard</English>
@@ -889,6 +964,7 @@
             <Italian>Copiato il nome della classe negli appunti</Italian>
             <Polish>Wyeksportowano nazwę klasy do schowka</Polish>
             <Russian>Имя класса, экспортированного в буфер</Russian>
+            <Portuguese>O nome da classe foi exportado para a área de transferência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mode">
             <English>Mode</English>
@@ -912,7 +988,7 @@
             <Spanish>Lista blanca</Spanish>
             <German>Whitelist</German>
             <Czech>Seznam povolených</Czech>
-            <Portuguese>Lista branca</Portuguese>
+            <Portuguese>Lista Branca</Portuguese>
             <French>Liste blanche</French>
             <Hungarian>Fehérlista</Hungarian>
             <Russian>Вайтлист</Russian>
@@ -929,6 +1005,7 @@
             <Italian>Lista Nera</Italian>
             <Polish>Czarna lista (lista wykluczeń)</Polish>
             <Russian>Чёрный список</Russian>
+            <Portuguese>Lista Negra</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
@@ -952,6 +1029,7 @@
             <Japanese>スクリプト用に現在のアイテム リストをアレイでエクスポートします</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
             <Polish>Eksportuj obecną listę przedmiotów jako tablicę do wykorzystania w skryptach</Polish>
+            <Portuguese>Exportar a lista atual de itens como uma matriz para usar em scripts</Portuguese>
             <Russian>Экспорт текущего списка предметов в виде массива для использования в скриптах</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeImport_Tooltip">
@@ -960,6 +1038,7 @@
             <Polish>Zaimportuj listę przedmiotów ze schowka (lista musi być w tym samym formacie jak przy exporcie)</Polish>
             <Japanese>クリップボードからアイテムリストをアレイでインポートします (エクスポートと同じフォーマットである必要があります)</Japanese>
             <Russian>Импорт массива списка предметов из буфера (должен иметь тот же формат, что при экспорте)</Russian>
+            <Portuguese>Importar lista de itens da área de transferência (deve estar no mesmo formato que uma lista exportada)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
             <English>Add Compatible Items</English>
@@ -967,6 +1046,7 @@
             <Polish>Dodaj kompatybilne przedmioty</Polish>
             <Japanese>対応アイテムを追加</Japanese>
             <Russian>Добавить совместимые предметы</Russian>
+            <Portuguese>Adicionar itens compatíveis</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_Tooltip">
             <English>Will automatically add compatible attachments or magazines (based on selected category) for all weapons in current items list</English>
@@ -974,6 +1054,7 @@
             <Polish>Automatycznie doda kompatybilne dodatki oraz magazynki (odpowiednio do każdej kategorii) dla wszystkich broni na liście</Polish>
             <Japanese>現在のアイテム リスト内にある全武器に対応するアタッチメントと弾倉 (選択したカテゴリに基づき) を自動的に追加します</Japanese>
             <Russian>Добавляет совместимые приспособления или магазины (в зависимости от выбранной категории) для всего оружия в текущем списке предметов</Russian>
+            <Portuguese>Irá automaticamente adicionar acessórios ou carregadores (baseado na categoria selecionada) para todas as armas na lista de itens atual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statTTL">
             <English>Time to live</English>
@@ -983,6 +1064,7 @@
             <Polish>Czas by żyć</Polish>
             <Italian>Scadenza (TTL)</Italian>
             <Russian>Время действия</Russian>
+            <Portuguese>Time to live</Portuguese>
         </Key>
     </Package>
 </Project>

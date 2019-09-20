@@ -11,6 +11,7 @@
             <Korean>탄약 채우기</Korean>
             <Polish>Przepakowywanie magazynków</Polish>
             <Russian>Перепаковка Магазинов</Russian>
+            <Portuguese>Preenchimento de Carregador</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
@@ -22,6 +23,7 @@
             <Korean>구경 당 시간</Korean>
             <Polish>Czas na nabój</Polish>
             <Russian>Время на патрон</Russian>
+            <Portuguese>Tempo por projétil</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
@@ -33,6 +35,7 @@
             <Korean>탄창 당 시간</Korean>
             <Polish>Czas na magazynek</Polish>
             <Russian>Время на магазин</Russian>
+            <Portuguese>Tempo por carregador</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
@@ -44,6 +47,7 @@
             <Korean>탄약띠 당 시간</Korean>
             <Polish>Czas na taśmę</Polish>
             <Russian>Время на звено ленты</Russian>
+            <Portuguese>Tempo por carregador de cinto</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
             <English>Repack Magazines</English>
