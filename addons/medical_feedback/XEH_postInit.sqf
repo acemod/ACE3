@@ -92,6 +92,24 @@ GVAR(bloodTickCounter) = 0;
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addPlayerEventHandler;
 
+// Forced say3D
+[QGVAR(forceSay3D), {
+    params ["_unit", "_sound", "_distance"];
+
+    if (ACE_player distance _unit > _distance) exitWith {};
+
+    if (vehicle _unit == _unit) then {
+        // say3D waits for the previous sound to finish, so use a dummy instead
+        private _dummy = "#dynamicsound" createVehicleLocal [0, 0, 0];
+        _dummy attachTo [_unit, [0, 0, 0], "camera"];
+        _dummy say3D [_sound, _distance, 1, false];
+
+        [{deleteVehicle _this}, _dummy, 5] call CBA_fnc_waitAndExecute;
+    } else {
+        // Fallback: attachTo doesn't work within vehicles
+        _unit say3D [_sound, _distance, 1, false];
+    };
+}] call CBA_fnc_addEventHandler;
 
 // Kill vanilla bleeding feedback effects.
 #ifdef DISABLE_VANILLA_DAMAGE_EFFECTS
