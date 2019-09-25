@@ -33,7 +33,7 @@
             <Japanese>個別の因数を設定されていない、全てのプレイヤーのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
             <Polish>Wpływa na ogólną wydolność organizmu u wszystkich graczy bez ustawionego niestandardowego współczynnika. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 임의로 설정된 값 없이 영향받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
-            <French>Influence les performances générales de tous les joueurs sans facteurs personalisés. Une valeur plus élevée implique de meilleures performances.</French>
+            <French>Impacte la performance globale de tous les joueurs n'ayant pas de facteur personnalisé.\nPlus la valeur est élevée, plus le joueur est performant.</French>
             <Italian>Influenza qualsiasi prestazione di tutti i giocatori smuniti di un fattore personalizzato. Maggiore significa migliore.</Italian>
             <Chinese>影響所有玩家的體力表現，值越高代表體力越好</Chinese>
             <Chinesesimp>影响所有玩家的体力表现，值越高代表体力越好</Chinesesimp>
@@ -46,7 +46,7 @@
             <Japanese>このユニットのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
             <Polish>Wpływa na ogólną wydolność tej jednostki. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 이 단위로 영향을 받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
-            <French>Influence les performances générales de cette unité. Une valeur plus élevée implique de meilleures performances.</French>
+            <French>Impacte la performance globale de cette unité.\nPlus la valeur est élevée, plus le joueur est performant.</French>
             <Italian>Influenza qualsiasi prestazione di questa unità. Maggiore significa migliore.</Italian>
             <Chinese>影響這個單位的體力表現，值越高代表體力越好</Chinese>
             <Chinesesimp>影响这个单位的体力表现，值越高代表体力越好</Chinesesimp>
@@ -72,7 +72,7 @@
             <Japanese>プレイヤーが休憩をとる際に、どのくらいの速度でスタミナ回復するかを設定します。 値が高ければ高いほど、早くなります。</Japanese>
             <Polish>Wpływa na czas regeneracji podczas postoju. Więcej znaczy szybciej.</Polish>
             <Korean>얼마나 빨리 회복하는지를 바꿉니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
-            <French>Change la vitesse à laquelle les joueurs récupèrent leur endurance lorsqu'ils se reposent. Une valeur plus élevée implique une récupération plus rapide.</French>
+            <French>Modifie la vitesse à laquelle le joueur récupère lorsqu'il se repose.\nPlus la valeur est élevée, plus la récupération est rapide.</French>
             <Italian>Determina in quanto tempo il giocatore recupera quando rilassato. Maggiore significa migliore.</Italian>
             <Chinese>決定玩家休息多久就能回復體力，值越高恢復越快</Chinese>
             <Chinesesimp>决定玩家休息多久就能回复体力，值越高恢复越快</Chinesesimp>
@@ -85,7 +85,7 @@
             <Japanese>重量因数</Japanese>
             <Polish>Współczynnik masy ekwipunku</Polish>
             <Korean>부담 요인</Korean>
-            <French>Facteur d'encombrement</French>
+            <French>Facteur de charge</French>
             <Italian>Fattore Caricamento</Italian>
             <Chinese>負重量</Chinese>
             <Chinesesimp>负重量</Chinesesimp>
@@ -98,7 +98,7 @@
             <Japanese>装備重量がプレイヤーのパフォーマンスにもたらす影響を増減させます。 値をゼロに設定した場合、装備重量はパフォーマンスに影響を与えません。</Japanese>
             <Polish>Zmniejsza lub zwiększa wpływ ciężaru ekwipunku na wydolność gracza. Zero oznacza kompletny brak wpływu na wydolność.</Polish>
             <Korean>플레이어가 무게에 따라 얼마나 영향받는지를 증가시키거나 감소시킵니다. 0의 경우 플레이어가 장비 무게에 영향받지 않습니다.</Korean>
-            <French>Augmente ou réduit l'influence que le poids à sur les performances des joueurs. Zéro implique que le poids de l'équipement n'a pas d'influence sur les performances.</French>
+            <French>Augmente ou diminue l'influence du poids sur les performances du joueur.\nUne valeur nulle indique que le poids de l'équipement n'a aucun impact sur les performances.</French>
             <Italian>Incrementa o decrementa quanto il peso influenza le prestazioni dei giocatori. Zero significa che il peso dell'equipaggiamento non ha alcuna influenza nelle prestazioni.</Italian>
             <Chinese>增加或降低玩家所能承受的負重量. 如設定值為0, 代表裝備的重量將不會影響到玩家的體力表現</Chinese>
             <Chinesesimp>增加或降低玩家所能承受的负重量. 如设定值为0, 代表装备的重量将不会影响到玩家的体力表现</Chinesesimp>
@@ -124,7 +124,7 @@
             <Japanese>急勾配の地形がどれだけスタミナ消費を増大させるかを設定します。 値が高ければ高いほど、スタミナ消費が大きくなります。</Japanese>
             <Polish>Wpływa na to w jakim stopniu stromy teren wpływa na utratę wytrzymałości. Więcej oznacza szybszą utratę wytrzymałości.</Polish>
             <Korean>경사도에 따라 얼마나 피로해지는지를 정합니다.  값이 클수록 더 많은 피로를 유발합니다.</Korean>
-            <French>Configure l'influence de l'inclinaison du terrain sur la perte d'endurance. Une valeur plus élevée implique une perte d'endurance plus importante.</French>
+            <French>Définit à quel point un terrain escarpé réduit d'endurance du joueur.\nPlus la valeur est élevée, moins le joueur est endurant.</French>
             <Italian>Stabilisce quanto la pendenza del terreno incrementa la perdita della stamina. Maggiore significa più stamina persa.</Italian>
             <Chinese>設定陡峭的地形將會影響多少體力的流失，值越高代表體力流失越快</Chinese>
             <Chinesesimp>设定陡峭的地形将会影响多少体力的流，失值越高代表体力流失越快</Chinesesimp>
@@ -137,7 +137,7 @@
             <Japanese>手ぶれ因数</Japanese>
             <Chinesesimp>抖动因数</Chinesesimp>
             <Chinese>抖動因素</Chinese>
-            <French>Facteur de stabilisation</French>
+            <French>Facteur d'oscillation</French>
             <Italian>Fattore di oscillazione</Italian>
             <Polish>Czynnik kołysania</Polish>
             <Russian>Фактор колебания прицела</Russian>
@@ -149,7 +149,7 @@
             <Japanese>武器を持つ手のぶれ度合いを設定します。 値が高ければ高いほど、手ぶれが強くなります。</Japanese>
             <Chinesesimp>影响手持武器的晃动程度,数值越高,抖动的越厉害.</Chinesesimp>
             <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
-            <French>Influence les mouvements de l'arme, une valeur plus élevée signifie plus de mouvements</French>
+            <French>Influe sur la quantité de mouvement involontaire de l'arme (sway).\nPlus la valeur est élevée, plus l'arme oscillera.</French>
             <Italian>Influenza l'ammontare di oscillazione dell'arma. Maggiore significa più oscillazione.</Italian>
             <Polish>Wpływa na poziom kołysania broni. Większa ilość znaczy większe kołysanie.</Polish>
             <Russian>Влияет на колебания прицела оружия. Чем выше - тем больше.</Russian>
