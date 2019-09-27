@@ -3669,5 +3669,23 @@
             <Chinesesimp>个人急救包使用条件</Chinesesimp>
             <Chinese>個人急救包使用條件</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_clearTraumaAfterBandage_DisplayName">
+            <English>Clear Trauma After Bandage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_clearTraumaAfterBandage_Description">
+            <English>Heal fully bandaged hitpoints</English>
+            <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
+            <Spanish>Curar miembros totalmente vendados</Spanish>
+            <Russian>Исцелять полностью перебинтованные части тела</Russian>
+            <Portuguese>Curar pontos de vida totalmente enfaixados</Portuguese>
+            <Czech>Heal fully bandaged hitpoints</Czech>
+            <Italian>Cura hitpoints completamente bendati</Italian>
+            <French>Soigner les plaies entièrement bandées</French>
+            <German>Heilt vollständig bandagierte Trefferpunkte</German>
+            <Japanese>包帯は体力を完全に回復する</Japanese>
+            <Korean>붕대를 감은후 체력을 회복함</Korean>
+            <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
+            <Chinese>完全醫療包紮的部位至痊癒</Chinese>
+        </Key>
     </Package>
 </Project>
