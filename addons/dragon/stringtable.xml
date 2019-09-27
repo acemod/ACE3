@@ -4,30 +4,37 @@
         <Key ID="STR_ACE_dragon_dragonNameCarry">
             <English>[CSW] M47 Super-Dragon</English>
             <Portuguese>[CSW] M47 Super-Dragon</Portuguese>
+            <French>[CSW] M47 Super-Dragon</French>
         </Key>
         <Key ID="STR_ACE_dragon_dragonName">
             <English>M47 Super-Dragon</English>
             <Portuguese>M47 Super-Dragon</Portuguese>
+            <French>M47 Super-Dragon</French>
         </Key>
         <Key ID="STR_ACE_dragon_attachSight">
             <English>Attach Sight</English>
             <Portuguese>Colocar Mira</Portuguese>
+            <French>Monter le viseur</French>
         </Key>
         <Key ID="STR_ACE_dragon_detachSight">
             <English>Detach Sight</English>
             <Portuguese>Remover Mira</Portuguese>
+            <French>Démonter le viseur</French>
         </Key>
         <Key ID="STR_ACE_dragon_sightName">
             <English>SU-36/P Daysight</English>
             <Portuguese>SU-36/P Daysight</Portuguese>
+            <French>SU-36/P Daysight</French>
         </Key>
         <Key ID="STR_ACE_dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
             <Portuguese>Uma mira leve e comum utilizada para operações de dia. Contêm o computador de orientação para todo o sistema.</Portuguese>
+            <French>Un viseur léger et bon marché utilisé pour les opérations de jour.\nContient l'ordinateur de guidage pour tout le système.</French>
         </Key>
         <Key ID="STR_ACE_dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
             <Portuguese>Um míssil SACLOS, guiado por fio com uma característica única de vôo</Portuguese>
+            <French>Un missile filoguidé SACLOS, présentant une caractéristique de vol exceptionnelle.</French>
         </Key>
     </Package>
 </Project>
