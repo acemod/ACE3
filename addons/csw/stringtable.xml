@@ -4,10 +4,12 @@
         <Key ID="STR_ACE_CSW_displayName">
             <English>Crew Served Weapons</English>
             <Portuguese>Crew Served Weapons (CSW)</Portuguese>
+            <French>Armes lourdes</French>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
             <Portuguese>Montar Tripé</Portuguese>
+            <French>Placer le trépied</French>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -23,7 +25,7 @@
         <Key ID="STR_ACE_CSW_GetIn_displayName">
             <English>Get In</English>
             <Czech>Nastup</Czech>
-            <French>Embarquer</French>
+            <French>Entrer</French>
             <German>Einsteigen</German>
             <Italian>A bordo</Italian>
             <Polish>Wsiadać</Polish>
@@ -36,7 +38,7 @@
             <German>Lade %1</German>
             <Spanish>Load %1</Spanish>
             <Czech>Nabít %1</Czech>
-            <French>Load %1</French>
+            <French>Charger %1</French>
             <Polish>Załaduj %1</Polish>
             <Italian>Load %1</Italian>
             <Russian>Загрузить %1</Russian>
@@ -48,7 +50,7 @@
             <German>Entlade %1</German>
             <Spanish>Unload %1</Spanish>
             <Czech>Vytáhnout zásobník z %1</Czech>
-            <French>Unload %1</French>
+            <French>Décharger %1</French>
             <Polish>Rozładuj %1</Polish>
             <Italian>Unload %1</Italian>
             <Russian>Разгрузить %1</Russian>
@@ -58,82 +60,102 @@
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
             <Portuguese>Conectar %1</Portuguese>
+            <French>Connecter %1</French>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
             <English>Advanced assembly</English>
             <Portuguese>Montagem Avançada</Portuguese>
+            <French>Assemblage avancé</French>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
             <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
             <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas. Munição carregada é reduzida para um único carregador.</Portuguese>
+            <French>Utilise ACE pour l'assemblage / le désassemblage des armes statiques supportées.\nLes munitions chargées sont réduites à un seul chargeur.</French>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save extra ammo</English>
             <Portuguese>Economizar munição extra</Portuguese>
+            <French>Économiser les munitions supplémentaires</French>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
             <English>Store extra magazines next to static weapon</English>
             <Portuguese>Carregar munições extras próximo à arma estática</Portuguese>
+            <French>Range les chargeurs supplémentaires à côté de l'arme statique.</French>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
             <Portuguese>Manipulação de Munições</Portuguese>
+            <French>Manipulation des munitions</French>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
             <Portuguese>Permite carregamento e descarregamento de munições</Portuguese>
+            <French>Permet le chargement et le déchargement des chargeurs.</French>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
             <Portuguese>Coeficiente de tempo para a interação</Portuguese>
+            <French>Coefficient du temps d'interaction</French>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
             <Portuguese>Escala o tempo requerido para montar e recarregar armas estáticas.</Portuguese>
+            <French>Définit l'échelle de temps nécessaire à l'assemblage et au rechargement des armes statiques.</French>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_displayName">
             <English>Drag tripods after deploying</English>
             <Portuguese>Arrastar tripés após montar</Portuguese>
+            <French>Glisser trépied après déploiement</French>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_description">
             <English>After deploying a tripod, start dragging it to a precise location</English>
             <Portuguese>Assim que montar um tripé, automaticamente começa a arrastá-lo para um posicionamento mais preciso</Portuguese>
+            <French>Aussitôt après avoir déployé un trépied, le joueur commence automatiquement à le glisser pour le positionner plus précisément.</French>
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
             <Portuguese>Carregar Tripé</Portuguese>
+            <French>Ramasser Trépied</French>
         </Key>
         <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
             <Portuguese>Montar Arma</Portuguese>
+            <French>Monter Arme</French>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>
             <Portuguese>Desmontando Arma...</Portuguese>
+            <French>Désassemblage de l'arme...</French>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
             <Portuguese>Montando Arma...</Portuguese>
+            <French>Assemblage de l'arme...</French>
         </Key>
         <Key ID="STR_ACE_CSW_PickupTripod_progressBar">
             <English>Picking Up Tripod...</English>
             <Portuguese>Carregando Tripé...</Portuguese>
+            <French>Ramassage du trépied...</French>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
             <Portuguese>Montando Tripé...</Portuguese>
+            <French>Installation du trépied...</French>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW">
             <English>Enable CSW</English>
             <Portuguese>Ativar CSW</Portuguese>
+            <French>Activer CSW</French>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW_tooltip">
             <English>Enables Crew Served ability on this weapon</English>
             <Portuguese>Ativar funções de CSW nessa arma</Portuguese>
+            <French>Active les fonctions CSW sur cette arme.</French>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableAndEmpty">
             <English>Enabled and Leave Weapon Empty</English>
             <Portuguese>Ativado e deixar arma vazia</Portuguese>
+            <French>Activer et laisser l'arme vide</French>
         </Key>
         <Key ID="STR_ACE_CSW_genericTripod_displayName">
             <English>Tripod</English>
@@ -148,162 +170,202 @@
         <Key ID="STR_ACE_CSW_StaticATBag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AT)</English>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AT)</Portuguese>
+            <French>[CSW] Lanceur Statique Mini-Spike (AT)</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AA)</English>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AA)</Portuguese>
+            <French>[CSW] Lanceur Statique Mini-Spike (AA)</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
             <English>[CSW] Static XM312 Gun</English>
             <Portuguese>[CSW] Arma Estática - XM312</Portuguese>
+            <French>[CSW] Mitrailleuse Statique XM312</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
             <Portuguese>[CSW] Arma Estática - XM312 (Autônoma)</Portuguese>
+            <French>[CSW] Mitrailleuse Statique XM312 (Autonome)</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[CSW] Static XM307 Gun</English>
             <Portuguese>[CSW] Arma Estática - XM307</Portuguese>
+            <French>[CSW] Mitrailleuse Statique XM307</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[CSW] Static XM307 Gun (Autonomous)</English>
             <Portuguese>[CSW] Arma Estática - XM307 (Autônoma)</Portuguese>
+            <French>[CSW] Mitrailleuse Statique XM307 (Autonome)</French>
         </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x108mm HMG</Portuguese>
+            <French>[CSW] Bande 12.7x108mm HMG</French>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_displayName">
             <English>[CSW] 12.7x99mm HMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG</Portuguese>
+            <French>[CSW] Bande 12.7x99mm HMG</French>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Red)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Vermelho)</Portuguese>
+            <French>[CSW] Bande 12.7x99mm HMG Traçantes (Rouges)</French>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Green)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Verde)</Portuguese>
+            <French>[CSW] Bande 12.7x99mm HMG Traçantes (Vertes)</French>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Amarelo)</Portuguese>
+            <French>[CSW] Bande 12.7x99mm HMG Traçantes (Jaunes)</French>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[CSW] 20mm Grenade GMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - Granada 20mm GMG</Portuguese>
+            <French>[CSW] Bande Grenades 20mm GMG</French>
         </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>
             <Portuguese>M3 Tripé</Portuguese>
+            <French>Trépied M3</French>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFolded_displayName">
             <English>[CSW] 6P57 Deployable Tripod</English>
             <Portuguese>[CSW] 6P57 Tripé Ajustável</Portuguese>
+            <French>[CSW] 6P57 Trépied déployable</French>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFoldedLow_displayName">
             <English>[CSW] 6P57 Deployable Tripod (Low)</English>
             <Portuguese>[CSW] 6P57 Tripé Ajustável (Baixo)</Portuguese>
+            <French>[CSW] 6P57 Trépied déployable (Bas)</French>
         </Key>
         <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
             <English>[CSW] M220 Deployable Tripod</English>
             <Portuguese>[CSW] M220 Tripé Ajustável</Portuguese>
+            <French>[CSW] M220 Trépied déployable</French>
         </Key>
         <Key ID="STR_ACE_CSW_sag30TripodFolded_displayName">
             <English>[CSW] SAG-30 Deployable Tripod</English>
             <Portuguese>[CSW] SAG-30 Tripé Ajustável</Portuguese>
+            <French>[CSW] SAG-30 Trépied déployable</French>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripod_displayName">
             <English>6P57 Tripod</English>
             <Portuguese>Tripé 6P57</Portuguese>
+            <French>Trépied 6P57</French>
         </Key>
         <Key ID="STR_ACE_CSW_sag30Tripod_displayName">
             <English>SAG-30 Tripod</English>
             <Portuguese>Tripe SAG-30</Portuguese>
+            <French>Trépied SAG-30</French>
         </Key>
         <Key ID="STR_ACE_CSW_m220Tripod_displayName">
             <English>M220 Tripod</English>
             <Portuguese>Tripé M220</Portuguese>
+            <French>Trépied M220</French>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodFolded_displayName">
             <English>[CSW] M3 Deployable Tripod</English>
             <Portuguese>[CSW] M3 Tripe Ajustável</Portuguese>
+            <French>[CSW] M3 Trépied déployable</French>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodLowFolded_displayName">
             <English>[CSW] M3 Deployable Tripod (Low)</English>
             <Portuguese>[CSW] M3 Tripe Ajustável (Baixo)</Portuguese>
+            <French>[CSW] M3 Trépied déployable (Bas)</French>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplateBag_displayName">
             <English>[CSW] Mortar Baseplate</English>
             <Portuguese>[CSW] Placa base de Morteiro</Portuguese>
+            <French>[CSW] Plaque de base pour Mortier</French>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
             <English>Mortar Baseplate</English>
             <Portuguese>Placa base de Morteiro</Portuguese>
+            <French>Plaque de base pour Mortier</French>
         </Key>
         <Key ID="STR_ACE_CSW_mk6MortarBag_displayName">
             <English>[CSW] Mk6 Mortar Tube</English>
             <Portuguese>[CSW] Tubo de Morteiro - Mk6</Portuguese>
+            <French>[CSW] Tube Mortier Mk6</French>
         </Key>
         <Key ID="STR_ACE_CSW_m252_tube">
             <English>[CSW] M252 Tube Bag</English>
             <Portuguese>[CSW] Tubo de Morteiro - M252</Portuguese>
+            <French>[CSW] Sac Tube M252</French>
         </Key>
         <Key ID="STR_ACE_CSW_m2_gun">
             <English>[CSW] M2 Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - M2</Portuguese>
+            <French>[CSW] Sac M2</French>
         </Key>
         <Key ID="STR_ACE_CSW_mk19_gun">
             <English>[CSW] MK19 Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - MK19</Portuguese>
+            <French>[CSW] Sac MK19</French>
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - BGM-71 TOW</Portuguese>
+            <French>[CSW] Sac Lanceur BGM-71 TOW</French>
         </Key>
         <Key ID="STR_ACE_CSW_dshk_gun">
             <English>[CSW] DSHK Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - DSHK</Portuguese>
+            <French>[CSW] Sac DSHK</French>
         </Key>
         <Key ID="STR_ACE_CSW_2b14_tube">
             <English>[CSW] 2B14 Tube Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - 2B14</Portuguese>
+            <French>[CSW] Sac Tube 2B14</French>
         </Key>
         <Key ID="STR_ACE_CSW_nsv_gun">
             <English>[CSW] NSV Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - NSV</Portuguese>
+            <French>[CSW] Sac NSV</French>
         </Key>
         <Key ID="STR_ACE_CSW_kord_gun">
             <English>[CSW] KORD Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - KORD</Portuguese>
+            <French>[CSW] Sac KORD</French>
         </Key>
         <Key ID="STR_ACE_CSW_ags30_gun">
             <English>[CSW] AGS-30 Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - AGS-30</Portuguese>
+            <French>[CSW] Sac AGS-30</French>
         </Key>
         <Key ID="STR_ACE_CSW_metis_tube">
             <English>[CSW] 9k115 Metis Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - 9k115 Metis</Portuguese>
+            <French>[CSW] Sac Lanceur 9K115 Metis</French>
         </Key>
         <Key ID="STR_ACE_CSW_kornet_launcher">
             <English>[CSW] 9m113 Kornet Launcher</English>
             <Portuguese>[CSW] Bolsa de Arma - 9m113 Kornet</Portuguese>
+            <French>[CSW] Sac Lanceur 9M113 Kornet</French>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_Tripod">
             <English>SPG-9 Tripod</English>
             <Portuguese>Tripé SPG-9</Portuguese>
+            <French>Trépied SPG-9</French>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_TripodFolded">
             <English>[CSW] SPG-9 Deployable Tripod</English>
             <Portuguese>[CSW] SPG-9 Tripe Ajustável (Baixo)</Portuguese>
+            <French>[CSW] SPG-9 Trépied déployable</French>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_tube">
             <English>[CSW] SPG-9 Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - SPG-9</Portuguese>
+            <French>[CSW] Sac Lanceur SPG-9</French>
         </Key>
         <Key ID="STR_ACE_CSW_spg9m_tube">
             <English>[CSW] SPG-9M Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - SPG-9M</Portuguese>
+            <French>[CSW] Sac Lanceur SPG-9M</French>
         </Key>
     </Package>
 </Project>
