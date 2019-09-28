@@ -42,11 +42,6 @@
     true
 ] call CBA_settings_fnc_init;
 
-
-
-
-
-
 [
     QGVAR(epiBoostsSpontaneousWakeUp), "SLIDER",
     [LSTRING(epiBoostsSpontaneousWakeUpDisplayName), LSTRING(epiBoostsSpontaneousWakeUp_Description)],
