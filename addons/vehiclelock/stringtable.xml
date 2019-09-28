@@ -11,6 +11,7 @@
             <German>ACE Fahrzeugsperre</German>
             <Polish>ACE Zamknięcie Pojazdu</Polish>
             <Russian>ACE Блокировка транспорта</Russian>
+            <Portuguese>ACE Trancar Veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>

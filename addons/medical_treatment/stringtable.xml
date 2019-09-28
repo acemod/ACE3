@@ -7,12 +7,14 @@
             <Japanese>治療</Japanese>
             <Russian>Лечение</Russian>
             <French>Traitement</French>
+            <Portuguese>Tratamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Litter">
             <English>Litter</English>
             <Japanese>廃棄物</Japanese>
             <French>Détritus</French>
             <Russian>Медицинский мусор</Russian>
+            <Portuguese>Lixo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
@@ -20,12 +22,14 @@
             <Japanese>アドバンスド診断</Japanese>
             <Russian>Расширенная Диагностика</Russian>
             <French>Diagnostic avancé</French>
+            <Portuguese>Diagnóstico Avançado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.</English>
             <Japanese>有効化すると通常の診断動作に代わり、心拍や血圧測定、反応を確認できます。</Japanese>
             <French>Permet un diagnostic avancé, en permettant la vérification du pouls, de la pression sanguine, ainsi que la réponse du patient aux traitements.</French>
             <Russian>Включает действия «Проверить пульс», «Проверить давление» и «Проверить реакцию» вместо общего действия «Диагностика».</Russian>
+            <Portuguese>Ativa as opções de Verificar Pulso, Verificar Pressão Sanguínea e Verificar Resposta, ao invés do diagnóstico geral.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -33,24 +37,28 @@
             <Japanese>アドバンスド包帯</Japanese>
             <Russian>Расширенная Перевязка</Russian>
             <French>Pansements avancés</French>
+            <Portuguese>Ataduras Avançadas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
             <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
             <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
             <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
+            <Portuguese>Ativa o uso de tipos diferentes de ataduras ao invés de apenas a atadura básica.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
             <English>Wound Reopening</English>
             <Japanese>創傷再開放</Japanese>
             <French>Réouverture des plaies</French>
             <Russian>Повторное открытие ран</Russian>
+            <Portuguese>Reabrir Feridas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
             <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
             <Japanese>有効化すると治療をした創傷を再開放します。アドバンスド包帯を有効化している必要があります。</Japanese>
             <French>Permet la réouverture des plaies pansées.\nNécessite que l'option "pansements avancés" soit activée.</French>
             <Russian>Разрешает повторное открытие перевязанных ран. Требуются опция «Расширенная Перевязка».</Russian>
+            <Portuguese>Permite que ferimentos atados possam reabrir. Requer Ataduras Avançadas para funcionar.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -58,12 +66,14 @@
             <Japanese>アドバンスド医薬品</Japanese>
             <Russian>Расширенные Лекарства</Russian>
             <French>Médication avancée</French>
+            <Portuguese>Medicação Avançada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine and Atropine.</English>
             <Russian>Устанавливает расширенное использование лекарств</Russian>
             <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンとアトロピンが利用可能になります。</Japanese>
             <French>Permet une manipulation étendue et plus appronfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine et d'atropine.</French>
+            <Portuguese>Ativa a manipulação avançada de medicações. Também permite o uso de Adenosina e Atropina.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -85,6 +95,7 @@
             <Japanese>衛生車両か施設では衛生能力を上昇します。未訓練では衛生兵に、衛生兵では医師になります。</Japanese>
             <French>Améliore les compétences médicales des unités en fonction du lieu où elles se trouvent ; notamment dans des véhicules ou des installations sanitaires.\nUn soldat non formé devient infirmier, un infirmier devient médecin.</French>
             <Russian>Увеличивает уровень медподготовки при нахождении в медицинской технике или госпитале. Неподготовленный становится Медиком, Медик становится Доктором.</Russian>
+            <Portuguese>Aumenta a qualidade do tratamento quando dentro de veículos ou instalações médicas. Destreinados se tornam médicos, médicos se tornam doutores.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -92,6 +103,7 @@
             <Russian>Внутривенное переливание на себе</Russian>
             <Japanese>自己 IV 輸血</Japanese>
             <French>Autotransfusion d'IV</French>
+            <Portuguese>Autotransfusão de IV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
             <English>Enables the use of IV Transfusions on oneself.</English>
@@ -99,30 +111,35 @@
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
             <Japanese>自らに対して IV 輸血を可能にします。</Japanese>
             <French>Permet de poser des IV sur soi-même.</French>
+            <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
             <Japanese>装備共有を許可</Japanese>
             <French>Autoriser partage matériel</French>
             <Russian>Разрешить общие медикаменты</Russian>
+            <Portuguese>Permitir Compartilhar Itens Médicos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
             <Japanese>患者と衛生兵との間で医療品の共有をするかどうかを決定します。</Japanese>
             <French>Détermine si le matériel médical du médecin et du patient est partagé et mis en commun.</French>
             <Russian>Контролирует, можно ли разделить медикаменты между пациентом и врачом.</Russian>
+            <Portuguese>Controla se um item médico pode ser compartilhado entre médico e paciente.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
             <Japanese>患者の装備を先に使用</Japanese>
             <French>L'équipement du patient d'abord</French>
             <Russian>Сначала медикаменты пациента</Russian>
+            <Portuguese>Usar do Paciente Primeiro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
             <Japanese>衛生兵の装備を先に使用</Japanese>
             <French>L'équipement du médecin d'abord</French>
             <Russian>Сначала медикаменты врача</Russian>
+            <Portuguese>Usar do Médico Primeiro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -144,6 +161,7 @@
             <Japanese>アドレナリンの使用に訓練レベルを必要とさせます。</Japanese>
             <French>Une qualification médicale est requise pour pouvoir utiliser l'épinéphrine.</French>
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
+            <Portuguese>É necessária uma qualificação médica para usar epinefrina.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
             <English>Locations Epinephrine</English>
@@ -165,6 +183,7 @@
             <Japanese>アドレナリンが使える場所を決定します。</Japanese>
             <French>Définit où l'épinéphrine peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Адреналин.</Russian>
+            <Portuguese>Controla onde Epinefrina pode ser utilizada.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
@@ -173,7 +192,7 @@
             <Spanish>Permitir EPA</Spanish>
             <German>Erlaube Erste-Hilfe-Set</German>
             <Czech>Povolit osobní lékárničky (PAK)</Czech>
-            <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
+            <Portuguese>Permitir Kit de Primeiros Socorros (KPS)</Portuguese>
             <French>Autoriser trousse sanitaire</French>
             <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
             <Italian>Consenti Kit di Pronto Soccorso</Italian>
@@ -187,6 +206,7 @@
             <Japanese>応急処置キットの使用に訓練レベルを必要とさせます。</Japanese>
             <French>Une qualification médicale est requise pour pouvoir utiliser la trousse sanitaire.</French>
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
+            <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
             <English>Locations PAK</English>
@@ -209,74 +229,87 @@
             <Japanese>応急処置キットが使える場所を決定します。</Japanese>
             <French>Définit où la trousse sanitaire peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Аптечку.</Russian>
+            <Portuguese>Controla onde o KPS pode ser utilizado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
             <English>Consume PAK</English>
             <Japanese>応急処置キットの消費</Japanese>
             <French>Trousse sanitaire consommable</French>
             <Russian>Израсходовать Аптечку</Russian>
+            <Portuguese>KPS Descartável</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
             <Japanese>応急処置キットの使用後に消費するかどうかを決定します。</Japanese>
             <French>Définit si la trousse sanitaire doit être à usage unique.</French>
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
+            <Portuguese>Controla se o KPS deve ser descartado/consumido após o uso.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
             <Japanese>応急処置キットの時間係数</Japanese>
             <French>Coef. temps trousse sanitaire</French>
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
+            <Portuguese>Coeficiente de Tempo do KPS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
             <Japanese>応急処置キットの使用にかかる時間を変更できます。\n総治療時間は最低でも 10 秒間で、この係数と体全体に負ったダメージによって決まります。</Japanese>
             <French>Modifie le temps nécessaire à l'application de la trousse sanitaire.\nLa durée est calculée en multipliant ce coefficient par les dommages totaux du patient ; avec un minimum de 10 secondes.</French>
             <Russian>Изменяет быстроту применения Аптечки.\nВремя лечения зависит от общего повреждения частей тела, умноженного на данный коэффициент (минимум 10 сек.).</Russian>
+            <Portuguese>Modifica quanto tempo o KPS leva para ser aplicado.\nO tempo de tratamento é baseado no total de dano do corpo, multiplicado por esse coeficiente, com um mínimo de 10 segundos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
             <Japanese>縫合キットを許可</Japanese>
             <French>Autoriser trousse chirurgicale</French>
             <Russian>Разрешить Хирургический набор</Russian>
+            <Portuguese>Permitir Kit Cirúrgico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a Surgical Kit.</English>
             <Japanese>縫合キットの使用に訓練レベルを必要とさせます。</Japanese>
             <French>Une qualification médicale est requise pour pouvoir utiliser une trousse chirurgicale.</French>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
+            <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
             <Japanese>縫合キットの使用可能場所</Japanese>
             <French>Lieux trousse chirurgicale</French>
             <Russian>Места использования Хирургического набора</Russian>
+            <Portuguese>Locais para Kit Cirúrgico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a Surgical Kit can be used.</English>
             <Japanese>縫合キットが使える場所を決定します。</Japanese>
             <French>Définit où la trousse chirurgicale peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
+            <Portuguese>Controle onde o Kit Cirúrgico pode ser utilizado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
             <Japanese>縫合キットの消費</Japanese>
             <French>Trousse chirurgicale consommable</French>
             <Russian>Израсходовать Хирургический набор</Russian>
+            <Portuguese>Kit Cirúrgico Consumível</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>Controls whether a Surgical Kit should be consumed after use.</English>
             <Japanese>縫合キットの使用後に消費するかどうかを決定します。</Japanese>
             <French>Définit si la trousse chirurgicale doit être à usage unique.</French>
             <Russian>Контролирует, следует ли израсходовать Хирургический набор после использования.</Russian>
+            <Portuguese>Controla se o Kit Cirúrgico deve ser descartado/consumido após o uso.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
             <French>Suturer soi-même</French>
+            <Portuguese>Auto-Cirurgia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_Description">
             <English>Enables the use of surgical kits to stitch oneself.</English>
             <French>Autorise l'utilisation de la trousse chirugicale sur soi-même.</French>
+            <Portuguese>Permite o uso de Kit Cirúrgico em si mesmo.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -284,6 +317,7 @@
             <Russian>Преобразовывать ванильные медикаменты</Russian>
             <Japanese>標準アイテムの変換</Japanese>
             <French>Convertir objets Vanilla</French>
+            <Portuguese>Converter itens vanilla</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
@@ -291,12 +325,14 @@
             <Japanese>ゲーム標準の医療アイテムを ACE 医療アイテムへ変換、削除、そのままにするかを決定します。</Japanese>
             <French>Détermine si les objets médicaux Vanilla sont convertis en objets médicaux ACE, s'ils sont simplement retirés, ou s'ils sont ignorés.</French>
             <Russian>Определяет, что делать с ванильными медикаментами: преобразовать в медикаменты ACE, удалить или проигнорировать.</Russian>
+            <Portuguese>Controla se itens médicos vanilla serão convertidos para itens do ACE, removidos ou ignorados.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
             <English>Remove Only</English>
             <Japanese>削除</Japanese>
             <French>Retirer uniquement</French>
             <Russian>Удалять</Russian>
+            <Portuguese>Apenas Remover</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
             <English>Enable Litter</English>
@@ -305,7 +341,7 @@
             <Spanish>Activar restos médicos</Spanish>
             <German>Abfälle aktivieren</German>
             <Czech>Povolit odpadky</Czech>
-            <Portuguese>Ativar lixo médico</Portuguese>
+            <Portuguese>Permitir Lixo Médico</Portuguese>
             <French>Activer les détritus</French>
             <Hungarian>Szemét engedélyezése</Hungarian>
             <Italian>Abilita Barella</Italian>
@@ -316,30 +352,35 @@
             <Japanese>治療後に廃棄物の生成を有効化します。</Japanese>
             <French>Permet de laisser des détritus (emballages, pansements usagés...) suite à un traitement.</French>
             <Russian>Разрешает создание медицинского мусора при лечении.</Russian>
+            <Portuguese>Permite a criação de lixo médico durante o tratamento.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
             <English>Max Litter Objects</English>
             <Japanese>最大廃棄物数</Japanese>
             <French>Nombre maximum détritus</French>
             <Russian>Макс. кол-во мусора</Russian>
+            <Portuguese>Máximo de Objetos de Lixo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
             <Japanese>生成される最大廃棄物数を設定できます。極端に増やすと FPS ラグを引き起こします。</Japanese>
             <French>Définit le nombre maximal de détritus pouvant être affichés.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
             <Russian>Устанавливает максимальное количество создаваемых объектов мусора. Чрезмерное значение может вызвать задержку FPS.</Russian>
+            <Portuguese>Define o limite máximo de objetos de lixo que podem ser criados, quantidade excessivas podem causar lag de FPS.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
             <Japanese>廃棄物寿命</Japanese>
             <French>Durée d'affichage détritus</French>
             <Russian>Время жизни мусора</Russian>
+            <Portuguese>Duração de Lixo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
             <Japanese>廃棄物の寿命を秒で決定できます。-1 で永遠です。</Japanese>
             <French>Définit la durée d'affichage des détritus.</French>
             <Russian>Управляет временем жизни объектов мусора в секундах. -1 означает Навсегда.</Russian>
+            <Portuguese>Controla o tempo de vida de objetos de lixo criados em segundos. -1 é para sempre.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
             <English>Anyone</English>
@@ -362,24 +403,28 @@
             <Japanese>衛生兵</Japanese>
             <French>Infirmiers</French>
             <Russian>Медики</Russian>
+            <Portuguese>Médicos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Doctors">
             <English>Doctors</English>
             <Japanese>医師</Japanese>
             <French>Médecins</French>
             <Russian>Доктора</Russian>
+            <Portuguese>Doutores</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicalFacilities">
             <English>Medical Facilities</English>
             <Japanese>医療施設</Japanese>
             <French>Installations médicales</French>
             <Russian>Госпитали</Russian>
+            <Portuguese>Instalações Médicas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VehiclesAndFacilities">
             <English>Vehicles &amp; Facilities</English>
             <Japanese>車両 &amp; 施設</Japanese>
             <French>Véhicules &amp; installations médicales</French>
             <Russian>Техника и госпитали</Russian>
+            <Portuguese>Veículos e Instalações Médicas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
@@ -783,12 +828,14 @@
             <Russian>Шина</Russian>
             <Japanese>添え木</Japanese>
             <French>Attelle</French>
+            <Portuguese>Tala</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Desc_Short">
             <English>Stabilizes a fractured limb</English>
             <Russian>Стабилизирует перелом конечности</Russian>
             <Japanese>骨折部位を安定させます。</Japanese>
             <French>Stabilise un membre fracturé</French>
+            <Portuguese>Estabiliza um membro fraturado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1990,12 +2037,14 @@
             <Russian>Наложить Шину</Russian>
             <Japanese>添え木を当てる</Japanese>
             <French>Poser attelle</French>
+            <Portuguese>Aplicar Tala</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Splint">
             <English>Applying Splint...</English>
             <Russian>Накладывается Шина...</Russian>
             <Japanese>添え木を当てています・・・</Japanese>
             <French>Retirer attelle</French>
+            <Portuguese>Aplicando Tala...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -2066,12 +2115,14 @@
             <Japanese>心肺蘇生の成功率</Japanese>
             <French>Chance de réussite du RCP</French>
             <Russian>Шанс успешной реанимации</Russian>
+            <Portuguese>Chance de ter sucesso com SBV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_Description">
             <English>Probability that cpr will be successful in restoring heart rhythm.</English>
             <Japanese>心肺蘇生によって心拍を戻せる確率を決定できます。</Japanese>
             <French>Probabilité de rétablir un rythme cardiaque suite à une RCP.</French>
             <Russian>Вероятность успешного проведения сердечно-лёгочной реанимации (СЛР).</Russian>
+            <Portuguese>Probabilidade que um SBV restaurará o batimento cardíaco.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -2223,6 +2274,7 @@
             <Japanese>軽処置群</Japanese>
             <Russian>Минимально</Russian>
             <French>Aucune urgence</French>
+            <Portuguese>Mínimo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -2358,6 +2410,7 @@
             <Japanese>中くらいの痛みがある</Japanese>
             <Russian>Небольшая боль</Russian>
             <French>Légère douleur</French>
+            <Portuguese>Com dor leve</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Pain">
             <English>In pain</English>
@@ -2381,6 +2434,7 @@
             <Japanese>ひどい痛みがある</Japanese>
             <Russian>Сильная боль</Russian>
             <French>Douleur intense</French>
+            <Portuguese>Com dor intensa</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -3424,6 +3478,7 @@
             <English>%1 applied a splint</English>
             <Russian>%1 наложил Шина</Russian>
             <French>%1 a posé un attelle</French>
+            <Portuguese>%1 aplicou uma Tala</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>

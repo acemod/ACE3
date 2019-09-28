@@ -17,4 +17,8 @@
 
 params ["_unit"];
 
-isPlayer _unit && {GVAR(fatalInjuriesPlayer) != FATAL_INJURIES_ALWAYS} || {!isPlayer _unit && {GVAR(fatalInjuriesAI) != FATAL_INJURIES_ALWAYS}}
+if (isPlayer _unit) then {
+    GVAR(fatalInjuriesPlayer) != FATAL_INJURIES_ALWAYS
+} else {
+    GVAR(fatalInjuriesAI) != FATAL_INJURIES_ALWAYS
+}
