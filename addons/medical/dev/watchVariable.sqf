@@ -91,7 +91,7 @@ GVAR(dev_watchVariableRunning) = true;
 
 
     // Wounds:
-    _return pushBack "------- Wounds: -------";
+    _return pushBack "------- Open Wounds: -------";
     private _wounds = GET_OPEN_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
