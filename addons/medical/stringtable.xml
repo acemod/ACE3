@@ -41,21 +41,17 @@
             <Portuguese>Mancando</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
-            <English>Limp when unit has leg wounds...(todo)</English>
-            <Russian>Хромота, когда юнит имеет ранения ног...</Russian>
-            <Japanese>足を負傷時に引きずって歩くようにします・・・(TODO)</Japanese>
-            <French>Une unité boite si elle est blessée à la jambe... (TODO)</French>
-            <Portuguese>Mancar quando a unidade possuir ferimentos nas pernas... (TODO)</Portuguese>
+            <English>Controls whether open or bandaged wounds cause a person to limp.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
-            <English>Limp on open wounds</English>
+            <English>Limp on Open Wounds</English>
             <Russian>Хромота при открытых ранах</Russian>
             <Japanese>創傷開放時に跛行</Japanese>
             <French>Boiter si plaies ouvertes</French>
             <Portuguese>Mancar se possuir feridas abertas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
-            <English>Limp on open or bandaged wounds</English>
+            <English>Limp on Open or Bandaged Wounds</English>
             <Russian>Хромота при открытых или забинтованых ранах</Russian>
             <Japanese>負傷時は引きずって歩くようにします</Japanese>
             <French>Boiter si plaies ouvertes ou pansées</French>
@@ -69,21 +65,17 @@
             <Portuguese>Fraturas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
-            <English>Limp fractures... (todo)</English>
-            <Russian>Хромота при переломах...</Russian>
-            <Japanese>骨折時は引きずって歩くようにします・・・ (TODO)</Japanese>
-            <French>Une unité boite en cas de fracture... (TODO)</French>
-            <Portuguese>Mancar Fraturas (TODO)</Portuguese>
+            <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
-            <English>Splints fully heal fractures</English>
+            <English>Splints Fully Heal Fractures</English>
             <Russian>Шины полностью лечат перелом</Russian>
             <Japanese>添え木で骨折完治</Japanese>
             <French>Les attelles guérissent complètement les fractures</French>
             <Portuguese>Tala cura fraturas completamente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
-            <English>Splints heal (but cannot sprint)</English>
+            <English>Splints Heal, but Cannot Sprint</English>
             <Russian>Шины вылечивают, но не дают бегать</Russian>
             <Japanese>添え木で治療しますが、走れません</Japanese>
             <French>Les attelles guérissent les fractures, mais empêchent de courir</French>
