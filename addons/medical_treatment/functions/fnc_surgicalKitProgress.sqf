@@ -37,7 +37,7 @@ private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
 private _treatedWound = _bandagedWounds deleteAt (_bandagedWounds find (_stitchableWounds select 0));
 _treatedWound params ["_treatedID", "_treatedBodyPartN", "_treatedAmountOf"];
 
-// Check if we need to add a new stitched wound or increase the amount of an exiting one
+// Check if we need to add a new stitched wound or increase the amount of an existing one
 private _woundIndex = _stitchedWounds findIf {
     _x params ["_classID", "_bodyPartN"];
 
