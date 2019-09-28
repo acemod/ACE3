@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Katalam
+ * Author: Katalam, mharis001
  * Checks if the patient can be stitched.
  *
  * Arguments:
@@ -18,5 +18,4 @@
 
 params ["", "_patient"];
 
-!(GET_BANDAGED_WOUNDS(_patient) isEqualTo [])
-&& {!GVAR(requireStableToStitch) || {_patient call EFUNC(medical_status,isInStableCondition)}}
+!(_patient call FUNC(getStitchableWounds) isEqualTo [])

@@ -157,15 +157,6 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(requireStableToStitch),
-    "CHECKBOX",
-    [LSTRING(RequireStableToStitch_DisplayName), LSTRING(RequireStableToStitch_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    false,
-    true
-] call CBA_settings_fnc_init;
-
-[
     QGVAR(allowSelfStitch),
     "LIST",
     [LSTRING(AllowSelfStitch_DisplayName), LSTRING(AllowSelfStitch_Description)],

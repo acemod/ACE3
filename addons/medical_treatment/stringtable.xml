@@ -278,12 +278,6 @@
             <English>Enables the use of surgical kits to stitch oneself.</English>
             <French>Autorise l'utilisation de la trousse chirugicale sur soi-même.</French>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_RequireStableToStitch_DisplayName">
-            <English>Require Stable To Stitch</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_RequireStableToStitch_Description">
-            <English>Controls whether the patient must be in stable condition before they can be stitched.</English>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
