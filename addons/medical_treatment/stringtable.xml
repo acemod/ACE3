@@ -25,7 +25,7 @@
             <Portuguese>Diagnóstico Avançado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
-            <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.</English>
+            <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.\nWhen disabled, the CPR action will only be shown when performing CPR is appropriate.\nThe actions this setting enables are needed to determine whether a person is unconscious or in cardiac arrest.</English>
             <Japanese>有効化すると通常の診断動作に代わり、心拍や血圧測定、反応を確認できます。</Japanese>
             <French>Permet un diagnostic avancé, en permettant la vérification du pouls, de la pression sanguine, ainsi que la réponse du patient aux traitements.</French>
             <Russian>Включает действия «Проверить пульс», «Проверить давление» и «Проверить реакцию» вместо общего действия «Диагностика».</Russian>
