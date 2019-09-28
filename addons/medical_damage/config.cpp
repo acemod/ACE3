@@ -19,5 +19,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 
 class ACE_Extensions {
-    extensions[] += {"ace_medical"};
+    class ace_medical {
+        // Not yet used
+    };
 };
