@@ -20,8 +20,8 @@ class CfgPatches {
 
 /*
 class ACE_Extensions {
-    // class ace_medical {
+    class ace_medical {
         // Not yet used
-    // };
+    };
 };
  */
