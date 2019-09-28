@@ -72,7 +72,7 @@ switch (GET_FRACTURES(_target) select _selectionN) do {
 };
 
 // Indicate the amount of pain the unit is in
-if ([_target] call EFUNC(common,isAwake)) then {
+if (_target call EFUNC(common,isAwake)) then {
     private _pain = GET_PAIN_PERCEIVED(_target);
     if (_pain > 0) then {
         private _painText = switch (true) do {
@@ -113,7 +113,7 @@ private _fnc_getWoundDescription = {
     if (_amountOf >= 1) then {
         format ["%1x %2", ceil _amountOf, _woundName];
     } else {
-        format ["Partial %1", _woundName];
+        format [localize LSTRING(PartialX), _woundName];
     };
 };
 
@@ -156,7 +156,8 @@ lbClear _ctrl;
 
 {
     _x params ["_text", "_color"];
-    private _index = _ctrl lbAdd _text;
-    _ctrl lbSetColor [_index, _color];
-    _ctrl lbSetSelectColor [_index, _color];
+
+    _ctrl lbSetColor [_ctrl lbAdd _text, _color];
 } forEach _entries;
+
+_ctrl lbSetCurSel -1;
