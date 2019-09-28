@@ -10,6 +10,5 @@ PREP(handleStateInjured);
 PREP(handleStateUnconscious);
 PREP(leftStateCardiacArrest);
 PREP(localityChangedEH);
-PREP(localityTransfer);
 PREP(resetStateDefault);
 PREP(transitionSecondChance);
