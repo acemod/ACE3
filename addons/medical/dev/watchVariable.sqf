@@ -1,5 +1,8 @@
 #include "\z\ace\addons\medical\script_component.hpp"
 
+if (missionNamespace getVariable [QGVAR(dev_watchVariableRunning), false]) exitWith {};
+GVAR(dev_watchVariableRunning) = true;
+
 ["medical", {
 
     // Hide when patient display is up because they might overlap
@@ -45,7 +48,7 @@
     private _heartRate = GET_HEART_RATE(_unit);
     GET_BLOOD_PRESSURE(_unit) params ["_bpLow", "_bpHigh"];
     _return pushBack format ["CardiacOutput %1", _cardiacOutput toFixed 5];
-    _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpLow toFixed 1, _bpHigh toFixed 1];
+    _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpHigh toFixed 1, _bpLow toFixed 1];
 
     // Pain:
     private _pain = GET_PAIN(_unit);
@@ -151,6 +154,8 @@
     if (_unit isEqualTo ACE_player) then {
         _return pushBack format ["ACE_setCustomAimCoef: %1", [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult)];
     };
+
+    _return pushBack format ["%1 - %2",lifeState _unit, animationState _unit];
 
     // Footer:
     _return pushBack "</t>";

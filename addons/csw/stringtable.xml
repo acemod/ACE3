@@ -78,6 +78,12 @@
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
         </Key>
+        <Key ID="STR_ACE_CSW_dragAfterDeploy_displayName">
+            <English>Drag tripods after deploying</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_dragAfterDeploy_description">
+            <English>After deploying a tripod, start dragging it to a precise location</English>
+        </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
         </Key>

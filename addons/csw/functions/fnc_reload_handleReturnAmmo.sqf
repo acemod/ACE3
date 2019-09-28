@@ -51,7 +51,7 @@ if (isNull _container) then {
     _weaponRelPos set [2, ((getPosATL _unloadTo) select 2) + 0.05];
     _container = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
     // ToDo: Unload to ammo box??
-    _unloadTo setVariable [QGVAR(container), container, true];
+    _unloadTo setVariable [QGVAR(container), _container, true];
     _container setDir random [0, 180, 360];
     _container setPosATL _weaponRelPos;
     if ((_weaponRelPos select 2) < 0.5) then {

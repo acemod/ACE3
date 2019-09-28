@@ -1,5 +1,6 @@
 PREP(conditionCardiacArrestTimer);
 PREP(conditionExecutionDeath);
+PREP(conditionSecondChance);
 PREP(enteredStateCardiacArrest);
 PREP(enteredStateDeath);
 PREP(enteredStateFatalInjury);
