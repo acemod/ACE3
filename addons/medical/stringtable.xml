@@ -33,6 +33,12 @@
             <French>La probabilité pour qu'une unité en état stable puisse reprendre conscience (état vérifié toutes les 15 secondes).</French>
             <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
+            <English>Epinephrine Increases Wake Up Chance</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
+            <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
             <Russian>Хромота</Russian>

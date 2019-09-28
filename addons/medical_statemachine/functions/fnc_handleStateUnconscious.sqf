@@ -39,13 +39,13 @@ if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
         };
 
-        private _timeMod = 1;
-        if (GVAR(epiBoostsSpontaneousWakeUp) > 1) then {
+        private _wakeUpCheckInterval = SPONTANEOUS_WAKE_UP_INTERVAL;
+        if (EGVAR(medical,spontaneousWakeUpEpinephrineBoost) > 1) then {
             private _epiEffectiveness = [_unit, "Epinephrine", false] call EFUNC(medical_status,getMedicationCount);
-            _timeMod = linearConversion [0, 1, _epiEffectiveness, 1, 1 / GVAR(epiBoostsSpontaneousWakeUp), true];
-            TRACE_2("epiBoost",_epiEffectiveness,_timeMod);
+            _wakeUpCheckInterval = _wakeUpCheckInterval * linearConversion [0, 1, _epiEffectiveness, 1, 1 / EGVAR(medical,spontaneousWakeUpEpinephrineBoost), true];
+            TRACE_2("epiBoost",_epiEffectiveness,_wakeUpCheckInterval);
         };
-        if (CBA_missionTime - _lastWakeUpCheck > _timeMod * SPONTANEOUS_WAKE_UP_INTERVAL) then {
+        if (CBA_missionTime - _lastWakeUpCheck > _wakeUpCheckInterval) then {
             TRACE_2("Checking for wake up",_unit,EGVAR(medical,spontaneousWakeUpChance));
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
 
