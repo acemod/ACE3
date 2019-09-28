@@ -34,7 +34,6 @@
     "SLIDER",
     [LSTRING(spontaneousWakeUpEpinephrineBoost_DisplayName), LSTRING(spontaneousWakeUpEpinephrineBoost_Description)],
     LSTRING(Category),
-    [1,30,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QGVAR(spontaneousWakeUpEpinephrineBoost), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    [1, 30, 1, 1],
+    true
 ] call CBA_settings_fnc_init;
