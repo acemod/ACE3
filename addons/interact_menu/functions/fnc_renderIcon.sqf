@@ -41,7 +41,7 @@ if (_iconFile isEqualTo "") then {
 _text = if (GVAR(UseListMenu)) then {
     format ["<img image='%1' align='left' color='%2'/><t %3>%4</t>", _iconFile, _iconColor, _textSettings, _text]
 } else {
-    format ["<img image='%1' align='center' color='%2'/><br/><t %3 align='center'>%4</t>", _iconFile, _iconColor, _textSettings, ("ace_break_line" callExtension ["breakLine", [_text]]) select 0];
+    format ["<img image='%1' align='center' color='%2'/><br/><t %3 align='center'>%4</t>", _iconFile, _iconColor, _textSettings, ("ace_strings" callExtension ["breakLine", [_text]]) select 0];
 };
 
 [_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
