@@ -6,7 +6,7 @@ on:
     - master
   pull_request:
 
-jobs:  
+jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
@@ -16,13 +16,10 @@ jobs:
       run: python3 tools/sqf_validator.py
     - name: Validate Config
       run: python3 tools/config_style_checker.py
-    - name: Validate String tables
+    - name: Validate String Tables
       run: python3 tools/check_strings.py
-    # Currently broken
-    #- name: Check for BOM
-    #  uses: arma-actions/bom-check@master
-    #  with:
-    #    path: 'addons'
+    - name: Check for BOM
+      uses: arma-actions/bom-check@master
 
   lint:
     runs-on: ubuntu-latest
@@ -44,5 +41,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@master
       with:
-        name: ace3-nobin
+        name: ace3-${{ github.sha }}-nobin
         path: '@ace'
