@@ -19,19 +19,19 @@ void __stdcall RVExtension(char* output, int outputSize, const char* function) {
         RVExtensionVersion(output, outputSize);
         return;
     }
-    strncpy(output, "error", outputSize);
+    strncpy(output, "error - use args version of callExtension", outputSize);
 }
 
 int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function, const char** args, int argsCnt) {
     if (!strcmp(function, "breakLine")) {
-        if (argsCnt != 1) { return -1002; } // Error: wrong arg count
+        if (argsCnt != 1) { return RETURN_WRONG_ARG_COUNT; }
         const char* input = args[0];
         std::string outputStr = addLineBreaks(splitString(input));
         strncpy(output, outputStr.c_str(), outputSize);
         return 0;
     };
     if (!strcmp(function, "getImagePath")) {
-        if (argsCnt != 1) { return -1002; } // Error: wrong arg count
+        if (argsCnt != 1) { return RETURN_WRONG_ARG_COUNT; }
         const char* input = args[0];
         std::string outputStr = getImagePathFromStructuredText(input);
         strncpy(output, outputStr.c_str(), outputSize);
@@ -42,5 +42,5 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
         return 0;
     }
     strncpy(output, "invalid function", outputSize);
-    return -1001; // bad function
+    return RETURN_INVALID_FUNCTION;
 };

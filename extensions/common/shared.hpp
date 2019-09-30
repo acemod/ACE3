@@ -1,5 +1,8 @@
 #pragma once
 
+#define RETURN_INVALID_FUNCTION     -1001
+#define RETURN_WRONG_ARG_COUNT      -1002
+
 //_USE_MATH_DEFINES + cmath needs to be first or M_PI won't be defined in VS2015
 #define _USE_MATH_DEFINES
 #include <cmath>
