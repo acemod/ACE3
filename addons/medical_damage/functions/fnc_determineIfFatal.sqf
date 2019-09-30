@@ -40,14 +40,14 @@ if (EGVAR(medical,fatalDamageSource) in [0, 2]) then {
 if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     // Sum of trauma to critical areas can be fatal (e.g. many small hits)
     private _damageThreshold = if (isPlayer _unit) then { EGVAR(medical,playerDamageThreshold) } else { EGVAR(medical,AIDamageThreshold) };
-    private _headThreashhold = 1.25 * _damageThreshold;
-    private _bodyThreashhold = 1.5 * _damageThreshold;
+    private _headThreshhold = 1.25 * _damageThreshold;
+    private _bodyThreshhold = 1.5 * _damageThreshold;
 
     _bodyPartDamage params ["_headDamage", "_bodyDamage"];
 
     private _chanceFatal = 0;
-    if (_headDamage > _headThreashhold) then { _chanceFatal = _chanceFatal + 0.95 * (_headDamage - _headThreashhold); };
-    if (_bodyDamage > _bodyThreashhold) then { _chanceFatal = _chanceFatal + 0.75 * (_bodyDamage - _bodyThreashhold); };
+    if (_headDamage > _headThreshhold) then { _chanceFatal = _chanceFatal + 0.95 * (_headDamage - _headThreshhold); };
+    if (_bodyDamage > _bodyThreshhold) then { _chanceFatal = _chanceFatal + 0.75 * (_bodyDamage - _bodyThreshhold); };
     TRACE_2("",_chanceFatal,_bodyPartDamage);
 
     if (_chanceFatal > random 1) exitWith {

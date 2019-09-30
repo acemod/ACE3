@@ -1,7 +1,7 @@
 [
     QEGVAR(medical,fatalDamageSource),
     "LIST",
-    [LSTRING(fatalDamageSource_DisplayName), LSTRING(fatalDamageSourceDescription)],
+    [LSTRING(fatalDamageSource_DisplayName), LSTRING(fatalDamageSource_Description)],
     [ELSTRING(medical,Category)],
     [[0, 1, 2], [LSTRING(fatalDamageSource_vitalShotsOnly), LSTRING(fatalDamageSource_trauma), LSTRING(fatalDamageSource_both)], 0],
     true

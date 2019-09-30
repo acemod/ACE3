@@ -480,11 +480,11 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_DisplayName">
             <English>Fatal Damage Source</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_fatalDamageSourceDescription">
-            <English>Determines how damage can be fatal</English>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
+            <English>Determines what damage can be fatal</English>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
-            <English>Vital organs only</English>
+            <English>Only large hits to vital organs</English>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
             <English>Sum of trauma</English>
