@@ -13,7 +13,7 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@master
       with:
-        ref: ci-docs
+        ref: ci-docs # Temp: https://github.com/actions/checkout/issues/49
     - name: Install Python packages
       run: |
         pip3 install wheel
