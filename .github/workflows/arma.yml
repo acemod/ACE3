@@ -13,11 +13,11 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@master
     - name: Validate SQF
-      run: python tools/sqf_validator.py
+      run: python3 tools/sqf_validator.py
     - name: Validate Config
-      run: python tools/config_style_checker.py
+      run: python3 tools/config_style_checker.py
     - name: Validate String tables
-      run: python tools/check_strings.py
+      run: python3 tools/check_strings.py
     #- name: Check for BOM
     #  uses: arma-actions/bom-check@master
 
@@ -28,5 +28,4 @@ jobs:
       uses: actions/checkout@master
     - name: Lint (sqflint)
       uses: arma-actions/sqflint@master
-      with:
-        args: --directory addons # No failure due to many false-positives
+      continue-on-error: true # No failure due to many false-positives
