@@ -1,4 +1,4 @@
-name: Extensions CI
+name: Extensions
 
 on:
   pull_request:
