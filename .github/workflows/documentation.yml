@@ -14,6 +14,7 @@ jobs:
       uses: actions/checkout@master
     - name: Install Python packages
       run: |
+        pip3 install setuptools
         pip3 install pygithub
         pip3 install pygithub3
     - name: Update documentation and translation statistics
