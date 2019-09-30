@@ -46,7 +46,7 @@ def update_dependencies(repo):
         sha = repo.get_contents(DEPENDENCIESPATH, ref=BRANCH).sha
         repo.update_file(
             path="{}".format(DEPENDENCIESPATH),
-            message="[Docs] Update component dependencies\nAutomatically committed through Travis CI.\n\n[ci skip]",
+            message="[Docs] Update component dependencies\nAutomatically committed through CI.\n\n[ci skip]",
             content=dependencies, sha=sha, committer=InputGitAuthor("ace3mod", "ace3mod@gmail.com"), branch=BRANCH
         )
         print("Dependencies successfully updated.")
