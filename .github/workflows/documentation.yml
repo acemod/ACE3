@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - master
+    - ci-docs # Debug - to be removed
 
 jobs:
   update:
