@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
+    - name: Install Pygithub3
+      run: pip install pygithub3
     - name: Update documentation and translation statistics
       if: github.repository == 'acemod/ACE3' && ! contains(github.event.head_commit.message, '[ci skip]')
       env:
