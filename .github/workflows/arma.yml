@@ -38,4 +38,4 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@master
     - name: Build (armake)
-      runs: armake --version && make -j4
+      run: armake --version && make -j4
