@@ -3,7 +3,11 @@ name: Extensions CI
 on:
   pull_request:
     paths:
-    - extensions/**
+    - 'extensions/**'
+      #- 'extensions/*/*'
+      #- 'extensions/*/*/*'
+      #- 'extensions/*/*/*/*'
+      #- 'extensions/*/*/*/*/*'
 
 jobs:
   build:
