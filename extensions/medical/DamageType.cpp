@@ -5,6 +5,7 @@ ace::medical::injuries::DamageType::DamageType(std::string aTypeName, double min
 {
 }
 
+
 ace::medical::injuries::DamageType::~DamageType()
 {
 }
