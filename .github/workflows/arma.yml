@@ -18,10 +18,11 @@ jobs:
       run: python3 tools/config_style_checker.py
     - name: Validate String tables
       run: python3 tools/check_strings.py
-    - name: Check for BOM
-      uses: arma-actions/bom-check@master
-      with:
-        path: 'addons'
+    # Currently broken
+    #- name: Check for BOM
+    #  uses: arma-actions/bom-check@master
+    #  with:
+    #    path: 'addons'
 
   lint:
     runs-on: ubuntu-latest
@@ -40,3 +41,8 @@ jobs:
       uses: actions/checkout@master
     - name: Build (armake)
       run: armake --version && make -j4
+    - name: Upload Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: ace3-nobin
+        path: @ace
