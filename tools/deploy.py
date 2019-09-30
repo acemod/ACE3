@@ -27,7 +27,7 @@ REPOUSER = "acemod"
 REPONAME = "ACE3"
 REPOPATH = "{}/{}".format(REPOUSER,REPONAME)
 
-BRANCH = "ci-docs" # "master"
+BRANCH = "ci-docs"  # "master"
 
 
 def update_translations(repo):
@@ -37,6 +37,7 @@ def update_translations(repo):
     issue.edit(body=TRANSLATIONBODY.format(diag))
 
 def update_dependencies(repo):
+    print("Deps start")
     dependencies = sp.check_output(["python3", "tools/extract_dependencies.py", "--markdown"])
     print("Dep1", dependencies)  # Debug
     dependencies = str(dependencies, "utf-8")
@@ -46,6 +47,7 @@ def update_dependencies(repo):
     diff = str(diff, "utf-8")
     print("Diff2", diff)  # Debug
 
+    print("Deps mid")
     if diff != "":
         sha = repo.get_contents(DEPENDENCIESPATH, ref=BRANCH).sha
         repo.update_file(
