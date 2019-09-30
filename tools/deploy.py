@@ -38,12 +38,13 @@ def update_translations(repo):
 
 def update_dependencies(repo):
     dependencies = sp.check_output(["python3", "tools/extract_dependencies.py", "--markdown"])
+    print("Dep1", dependencies)  # Debug
     dependencies = str(dependencies, "utf-8")
-    print(dependencies)  # Debug
+    print("Dep2", dependencies)  # Debug
     diff = sp.check_output(["git", "diff", "--name-only", DEPENDENCIESPATH])
-    print(diff)  # Debug
+    print("Diff1", diff)  # Debug
     diff = str(diff, "utf-8")
-    print(diff)  # Debug
+    print("Diff2", diff)  # Debug
 
     if diff != "":
         sha = repo.get_contents(DEPENDENCIESPATH, ref=BRANCH).sha
