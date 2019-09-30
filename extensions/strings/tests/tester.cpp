@@ -39,7 +39,7 @@ namespace test_ace_strings {
         char function[] = "blah";
         int extReturn = RVExtensionArgs(output, 256, function, nullptr, 0);
         std::cout << "InvalidFunc: " << output << "\n";
-        ASSERT_EQ(extReturn, -1001);
+        ASSERT_EQ(extReturn, RETURN_INVALID_FUNCTION);
         ASSERT_STREQ(output, "invalid function");
     }
 
@@ -62,7 +62,7 @@ namespace test_ace_strings {
         char function[] = "getImagePath";
         int extReturn = RVExtensionArgs(output, 256, function, nullptr, 0);
         std::cout << "extension_wrongArgCount: " << output << "\n";
-        ASSERT_EQ(extReturn, -1002);
+        ASSERT_EQ(extReturn, RETURN_WRONG_ARG_COUNT);
     }
     // breakLine
 
@@ -93,7 +93,7 @@ namespace test_ace_strings {
         char function[] = "breakLine";
         int extReturn = RVExtensionArgs(output, 256, function, nullptr, 0);
         std::cout << "extension_wrongArgCount: " << output << "\n";
-        ASSERT_EQ(extReturn, -1002);
+        ASSERT_EQ(extReturn, RETURN_WRONG_ARG_COUNT);
     }
 
 
