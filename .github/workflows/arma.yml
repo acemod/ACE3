@@ -18,8 +18,8 @@ jobs:
       run: python tools/config_style_checker.py
     - name: Validate String tables
       run: python tools/check_strings.py
-    - name: Check for BOM
-      uses: arma-actions/bom-check@master
+    #- name: Check for BOM
+    #  uses: arma-actions/bom-check@master
 
   lint:
     runs-on: ubuntu-latest
@@ -28,3 +28,5 @@ jobs:
       uses: actions/checkout@master
     - name: Lint (sqflint)
       uses: arma-actions/sqflint@master
+      with:
+        args: --directory addons # No failure due to many false-positives
