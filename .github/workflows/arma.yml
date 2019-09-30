@@ -33,6 +33,7 @@ jobs:
       continue-on-error: true # No failure due to many false-positives
 
   build:
+    runs-on: ubuntu-latest
     container: acemod/armake:master
     steps:
     - name: Checkout the source code
