@@ -1,0 +1,26 @@
+name: Extensions CI
+
+on:
+  pull_request:
+    paths:
+    - extensions/**
+
+jobs:
+  build:
+    runs-on: ${{ matrix. os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Build
+      run: |
+        cd extensions/build
+        cmake .. && cmake --build .
+    - name: Upload Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: ace3_extensions-${{ matrix.os }}
+        path: extensions/build
