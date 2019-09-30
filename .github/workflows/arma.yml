@@ -18,8 +18,10 @@ jobs:
       run: python3 tools/config_style_checker.py
     - name: Validate String tables
       run: python3 tools/check_strings.py
-    #- name: Check for BOM
-    #  uses: arma-actions/bom-check@master
+    - name: Check for BOM
+      uses: arma-actions/bom-check@master
+      with:
+        path: 'addons'
 
   lint:
     runs-on: ubuntu-latest
@@ -29,3 +31,11 @@ jobs:
     - name: Lint (sqflint)
       uses: arma-actions/sqflint@master
       continue-on-error: true # No failure due to many false-positives
+
+  build:
+    container: acemod/armake:master
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Build (armake)
+      runs: armake --version && make -j4
