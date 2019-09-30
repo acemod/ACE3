@@ -3,7 +3,7 @@ name: Documentation
 on:
   push:
     branches:
-    #- master
+    - master
     - ci-docs # Debug - to be removed
 
 jobs:
@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
+      with:
+        ref: ci-docs
     - name: Install Python packages
       run: |
         pip3 install wheel
