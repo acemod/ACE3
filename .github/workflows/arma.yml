@@ -1,0 +1,30 @@
+name: Arma
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+
+jobs:  
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Validate SQF
+      run: python tools/sqf_validator.py
+    - name: Validate Config
+      run: python tools/config_style_checker.py
+    - name: Validate String tables
+      run: python tools/check_strings.py
+    - name: Check for BOM
+      uses: arma-actions/bom-check@master
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Lint (sqflint)
+      uses: arma-actions/sqflint@master
