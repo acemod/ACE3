@@ -102,6 +102,7 @@ class CfgWeapons {
             mass = 2;
         };
     };
+    /*
     class ACE_atropine: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);
@@ -114,6 +115,7 @@ class CfgWeapons {
             mass = 2;
         };
     };
+    */
     class ACE_epinephrine: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);

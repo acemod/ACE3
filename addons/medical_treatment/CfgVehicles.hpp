@@ -62,9 +62,11 @@ class CfgVehicles {
     class ACE_MedicalLitter_adenosine: ACE_MedicalLitterBase {
         model = QPATHTOF(data\littergeneric_adenosine.p3d);
     };
+    /*
     class ACE_MedicalLitter_atropine: ACE_MedicalLitterBase {
         model = QPATHTOF(data\littergeneric_atropine.p3d);
     };
+    */
     class ACE_MedicalLitter_epinephrine: ACE_MedicalLitterBase {
         model = QPATHTOF(data\littergeneric_epinephrine.p3d);
     };
@@ -150,6 +152,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_adenosine,1);
         };
     };
+    /*
     class ACE_atropineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -159,7 +162,7 @@ class CfgVehicles {
         class TransportItems {
             MACRO_ADDITEM(ACE_atropine,1);
         };
-    };
+    };*/
     class ACE_epinephrineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -308,7 +311,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_splint,15);
             MACRO_ADDITEM(ACE_morphine,15);
             MACRO_ADDITEM(ACE_adenosine,15);
-            MACRO_ADDITEM(ACE_atropine,15);
+            //MACRO_ADDITEM(ACE_atropine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
             MACRO_ADDITEM(ACE_plasmaIV,7);
             MACRO_ADDITEM(ACE_plasmaIV_500,7);
