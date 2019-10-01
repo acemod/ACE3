@@ -1,33 +1,14 @@
 /*
- * ace_artillerytables.cpp
+ * artillerytables.hpp
  * Author: PabstMirror
  */
 
-//#define TEST_EXE
-
-#define _USE_MATH_DEFINES
-#include <cmath>
-#include <vector>
-#include <string>
-#include <sstream>
-#include <iostream>
 #include <iomanip>
-#include <fstream>
-#include <tuple>
-#include <algorithm>
-#include <chrono>
 #include <future>
+#include <sstream>
 
-// ace libs:
-#include "vector.hpp"
+#include "artillerytables.hpp"
 
-#ifndef TEST_EXE
-extern "C" {
-    __declspec(dllexport) void __stdcall RVExtension(char* output, int outputSize, const char* function);
-    __declspec(dllexport) int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function, const char** argv, int argc);
-    __declspec(dllexport) void __stdcall RVExtensionVersion(char* output, int outputSize);
-}
-#endif
 
 // Constants
 static const double timeStep = 1.0 / 60;
@@ -223,18 +204,15 @@ std::string simulateCalcRangeTableLine(const double _rangeToHit, const double _m
     return (returnSS.str());
 }
 
-#ifndef ACE_FULL_VERSION_STR
-#define ACE_FULL_VERSION_STR "not defined"
-#endif
 void __stdcall RVExtensionVersion(char* output, int outputSize) {
-    strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
+    strncpy(output, ACE_FULL_VERSION_STR, outputSize);
 }
 void __stdcall RVExtension(char* output, int outputSize, const char* function) {
     if (!strcmp(function, "version")) {
         RVExtensionVersion(output, outputSize);
         return;
     }
-    strncpy_s(output, outputSize, "error", _TRUNCATE);
+    strncpy(output, "error - use args version of callExtension", outputSize);
 }
 int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function, const char** args, int argsCnt) {
     if (!strcmp(function, "version")) {
@@ -276,7 +254,7 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
 
         std::stringstream outputStr; // debug max distance and thead count
         outputStr << "[" << bestDistance << "," << fWorkers.size() << "]";
-        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        strncpy(output, outputStr.str().c_str(), outputSize);
         return 0;
     }
 
@@ -296,68 +274,10 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
             result = fWorkers[getLineIndex].get();
             getLineIndex++;
         }
-        strncpy_s(output, outputSize, result.c_str(), _TRUNCATE);
+        strncpy(output, result.c_str(), outputSize);
         return 1;
     }
 
-    return -1; // Error: function not valid
+    strncpy(output, "error - invalid function", outputSize);
+    return RETURN_INVALID_FUNCTION; // Error: function not valid
 }
-
-
-#ifdef TEST_EXE
-int main() {
-    /*
-    double x1, x2, y1, y2, tof1, tof2;
-    std::tie(x1, y1, tof1) = simulateFindSolution(5000, 0, 810, 0, 0, 45 * (M_PI / 180.0), false);
-    std::tie(x2, y2, tof2) = simulateFindSolution(5000, 0, 810, -0.00000000000000000001, 0, 45 * (M_PI / 180.0), false);
-    printf("calc %f, %f, %f\n", x1, y1, tof1);
-    printf("sim  %f, %f, %f\n", x2, y2, tof2);
-    printf("sim diff %f, %f, %f\n", (x2 - x1), (y2 - y1), (tof2 - tof1));
-
-    //std::string r = simulateCalcRangeTableLine(4000, 810, );
-    //printf("result: [%s]\n", r.c_str());
-    */
-
-    // Determine realistic air firiction values
-    /*
-    double mv = 241;
-    printf(" %f m/s\n", mv);
-    double range;
-    for (double ar = 0; ar > -0.00015; ar -= 0.00001) {
-        std::tie(std::ignore, range) = findMaxAngle(mv, ar);
-        printf("[%f] = %f\n", ar, range);
-    }
-    */
-
-    // test callExtension
-    char output[256];
-    char function1[] = "start";
-    //const char* args1[] = { "200", "0", "-5", "80", "false" };
-    //const char* args1[] = { "153.9", "-0.00005", "-5", "80", "false" };
-    const char* args1[] = { "810", "-0.00005", "-5", "80", "false" };
-    //const char* args1[] = { "810", "0", "-5", "80", "true" };
-    auto t1 = std::chrono::high_resolution_clock::now();
-    int ret = RVExtensionArgs(output, 256, function1, args1, 5);
-    auto t2 = std::chrono::high_resolution_clock::now();
-    std::printf("ret: %d - %s\n", ret, output);
-    std::printf("func %s: %1.1f ms\n", function1, std::chrono::duration<double, std::milli>(t2 - t1).count());
-
-    int lines = 0;
-    auto t3 = std::chrono::high_resolution_clock::now();
-    char function2[] = "getline";
-    int ret2 = 0;
-    while (ret2 != 3) { // dumb spin
-        ret2 = RVExtensionArgs(output, 256, function2, NULL, 0);
-        if (ret2 == 1) {
-            lines++;
-            // std::printf("ret: %d - %s\n", ret2, output);
-        }
-    }
-    auto t4 = std::chrono::high_resolution_clock::now();
-    std::printf("func %s: %1.1f ms with %d lines\n", function2, std::chrono::duration<double, std::milli>(t4 - t3).count(), lines);
-
-    std::printf("callExtensions finished in %1.1f ms\n", std::chrono::duration<double, std::milli>(t4 - t1).count());
-
-
-}
-#endif
