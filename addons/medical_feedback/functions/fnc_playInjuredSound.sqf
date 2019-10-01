@@ -40,7 +40,7 @@ if (_speaker == "ACE_NoVoice") then {
 };
 
 // Fallback if speaker has no associated scream/moan sound
-if (isNull (configFile >> "CfgSounds" >> format ["ACE_moan_%1_low_1"])) then {
+if (isNull (configFile >> "CfgSounds" >> format ["ACE_moan_%1_low_1", _speaker])) then {
     _speaker = "Male08ENG";
 };
 
@@ -51,10 +51,10 @@ private _distance = if (_type == "hit") then {
 } else {
     [10, 15, 20] select _severity;
 };
-private _filter = format ["(configName _x) find 'ACE_%1_%2_%3' == 0", _type, _speaker, _variation];
+private _filter = toLower format ["(toLower configName _x) find 'ACE_%1_%2_%3' == 0", _type, _speaker, _variation];
 private _sounds = _filter configClasses (configFile >> "CfgSounds");
 private _sound = configName selectRandom _sounds;
 
 // Limit network traffic by only sending the event to players who can potentially hear it
-private _targets = (ASLToAGL getPosASL _unit) nearEntities ["CAManBase", _distance];
+private _targets = _unit nearEntities ["CAManBase", _distance];
 [QGVAR(forceSay3D), [_unit, _sound, _distance], _targets] call CBA_fnc_targetEvent;
