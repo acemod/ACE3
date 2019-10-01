@@ -1,18 +1,26 @@
 [
-    QGVAR(fatalInjuryCondition),
+    QGVAR(fatalInjuriesPlayer),
     "LIST",
-    [LSTRING(FatalInjuryCondition_DisplayName), LSTRING(FatalInjuryCondition_Description)],
+    [LSTRING(FatalInjuriesPlayer_DisplayName), LSTRING(FatalInjuriesPlayer_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [[0, 1, 2], [ELSTRING(common,Always), LSTRING(InCardiacArrest), ELSTRING(common,Never)], 0],
+    [
+        [FATAL_INJURIES_ALWAYS, FATAL_INJURIES_CRDC_ARRST, FATAL_INJURIES_NEVER],
+        [ELSTRING(common,Always), LSTRING(InCardiacArrest), ELSTRING(common,Never)],
+        0
+    ],
     true
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(fatalInjuryConditionAI),
-    "CHECKBOX",
-    [LSTRING(FatalInjuryConditionAI_DisplayName), LSTRING(FatalInjuryConditionAI_Description)],
+    QGVAR(fatalInjuriesAI),
+    "LIST",
+    [LSTRING(FatalInjuriesAI_DisplayName), LSTRING(FatalInjuriesAI_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    true,
+    [
+        [FATAL_INJURIES_ALWAYS, FATAL_INJURIES_CRDC_ARRST, FATAL_INJURIES_NEVER],
+        [ELSTRING(common,Always), LSTRING(InCardiacArrest), ELSTRING(common,Never)],
+        0
+    ],
     true
 ] call CBA_settings_fnc_init;
 

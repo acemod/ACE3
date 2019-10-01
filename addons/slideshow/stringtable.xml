@@ -170,6 +170,7 @@
             <Chinesesimp>设定名称</Chinesesimp>
             <Korean>이름 설정</Korean>
             <Russian>Установить имя</Russian>
+            <Portuguese>Definir Nome</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
@@ -182,6 +183,7 @@
             <Chinesesimp>设定该幻灯片的标题名称 (用来区分多个不同标题的幻灯片) 预设名称: "幻灯片"</Chinesesimp>
             <Korean>상위 상호작용 이름 (여러개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
             <Russian>Имя, которое будет использоваться для основных взаимодействий (для различения нескольких слайдов). По умолчанию: «Slides»</Russian>
+            <Portuguese>Nome que será usado para a entrada principal de interação (para separar vários slideshows). Padrão: "Slides"</Portuguese>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>

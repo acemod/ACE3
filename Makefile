@@ -82,7 +82,7 @@ push: commit
 release: clean version commit
 	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  ZIP  $(ZIP)_$(VERSION_S).zip"
-	@cp *.dll mod.cpp README.md docs/README_DE.md docs/README_PL.md AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp $(BIN)
+	@cp *.dll *.so mod.cpp README.md docs/README_DE.md docs/README_PL.md AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp $(BIN)
 	@zip -qr $(ZIP)_$(VERSION_S).zip $(BIN)
 
 clean:

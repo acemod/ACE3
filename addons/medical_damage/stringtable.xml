@@ -6,24 +6,28 @@
             <Japanese>プレイヤーのクリティカル ダメージしきい値</Japanese>
             <French>Seuil de dégât critique du joueur</French>
             <Russian>Порог критического урона игрока</Russian>
+            <Portuguese>Limite de Dano Crítico do Jogador</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious.</English>
             <Japanese>プレイヤーが気絶になる前に受けられるダメージ量を決定できます。</Japanese>
             <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance.</French>
             <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
+            <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
             <Japanese>AI のクリティカル ダメージしきい値</Japanese>
             <French>Seuil de dégât critique de l'IA</French>
             <Russian>Порог критического урона AI</Russian>
+            <Portuguese>Limite de Dano Crítico da IA</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
             <English>Sets the amount of damage an AI unit can receive before going unconscious.</English>
             <Japanese>AI が気絶になる前に受けられるダメージ量を決定できます。</Japanese>
             <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance.</French>
             <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
+            <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>

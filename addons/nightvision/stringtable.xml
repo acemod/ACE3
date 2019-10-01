@@ -11,6 +11,7 @@
             <French>ACE Vision Nocturne</French>
             <Polish>ACE Noktowizja</Polish>
             <Russian>ACE ПНВ</Russian>
+            <Portuguese>ACE Visão Noturna</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
             <English>NV Goggles (Gen1)</English>
@@ -258,6 +259,7 @@
             <French>Épaisseur du brouillard (JVN)</French>
             <Polish>Skala Mgły NVG</Polish>
             <Russian>Степень размытия ПНВ</Russian>
+            <Portuguese>Escala de Névoa na NVG</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_Description">
             <English>Fog is used to limit visibility.</English>
@@ -269,6 +271,7 @@
             <French>Le brouillard est utilisé pour limiter la visibilité</French>
             <Polish>Mgła jest wykorzystywana do ograniczenia widoczności.</Polish>
             <Russian>Туман используется для ограничения видимости</Russian>
+            <Portuguese>Névoa é usada para limitar visibilidade.</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
             <English>NVG Effect Scale</English>
@@ -280,6 +283,7 @@
             <French>Intensité des effets</French>
             <Polish>Skala Efektów NVG</Polish>
             <Russian>Степень эффектов ПНВ</Russian>
+            <Portuguese>Intensidade de efeito da Visão Noturna</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
@@ -291,6 +295,7 @@
             <French>Effets de flou et de luminosité [Règler cette option sur 0 désactivera TOUS les effets de vision nocturne]</French>
             <Polish>Efekty rozmazania i jasności [Ustawienie na 0 wyłączy WSZYSTKIE efekty noktowizji]</Polish>
             <Russian>Эффекты размытия и яркости [Установка на 0 отключит ВСЕ эффекты ПНВ]</Russian>
+            <Portuguese>Efeitos de borrão e brilho [Definir 0 desativa TODOS os efeitos da Visão Noturna]</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
@@ -302,6 +307,7 @@
             <Italian>Blur durante la mira</Italian>
             <Polish>Rozmazanie podczas celowania z narządów celowniczych</Polish>
             <Russian>Размытие при опущеном прицеле</Russian>
+            <Portuguese>Borrão ao mirar</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_DisplayName">
             <English>NVG Noise Scale</English>
@@ -313,6 +319,7 @@
             <Italian>Fattore di Disturbo del NVG</Italian>
             <Polish>Skala Szumu NVG</Polish>
             <Russian>Степень шума ПНВ</Russian>
+            <Portuguese>Intensidade de Ruído/Efeito Granulado</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
@@ -324,6 +331,7 @@
             <Italian>Intensità del disturbo dell'immagine quando i NVG sono equipaggiati</Italian>
             <Polish>Intensywność efektu szumu podczas noszenia gogli noktowizyjnych</Polish>
             <Russian>Интенсивность шума при использовании ПНВ</Russian>
+            <Portuguese>Intensidade de Ruído de Imagem ao utilizar Visão Noturna</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
@@ -335,6 +343,7 @@
             <Italian>Effetti lampeggianti</Italian>
             <Polish>Efekt Shutter</Polish>
             <Russian>Эффекты затвора</Russian>
+            <Portuguese>Efeito de Obturador</Portuguese>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
@@ -346,6 +355,7 @@
             <Italian>Effetto lampeggiante dato dal lampo dello sparo</Italian>
             <Polish>Efekt rolling shutter z błysków wylotowych</Polish>
             <Russian>Эффект затвора при вспышках выстрелов</Russian>
+            <Portuguese>Efeito de rolamento de Obturador de flashes de focinho</Portuguese>
         </Key>
     </Package>
 </Project>

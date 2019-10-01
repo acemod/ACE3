@@ -7,6 +7,7 @@
             <Japanese>状態</Japanese>
             <Russian>Статус</Russian>
             <French>Statut</French>
+            <Portuguese>Status</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
@@ -78,6 +79,7 @@
             <Japanese>IV 輸血の流量</Japanese>
             <Russian>Скорость внутривенного переливания</Russian>
             <French>Débit de transfusion IV</French>
+            <Portuguese>Velocidade de Transferência de Sangue</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
@@ -85,6 +87,7 @@
             <Japanese>IV による輸血速度を変更できます</Japanese>
             <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания</Russian>
             <French>Définit la vitesse à laquelle le liquide s'écoule des poches de perfusion.\nLa variation du volume de poche IV est calculée selon la  formule suivante :\n intervalle de temps (s) * variation IV par seconde (4,1667 ml/s) * débit (ce coefficient).</French>
+            <Portuguese>Controla o quão rápido flúidos são extraídos de bolsas de IV. A mudança no volume da bolsa d IV é calculado assim:\nIntervalo de tempo (s) * mudança de iv por segundo (4.1667 mL/s) * Velocidade de transferência (esse valor)</Portuguese>
         </Key>
     </Package>
 </Project>

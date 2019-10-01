@@ -10,6 +10,7 @@
             <Japanese>リスポン</Japanese>
             <Polish>Odrodzenie</Polish>
             <Russian>Возрождение</Russian>
+            <Portuguese>Ressurgimento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
@@ -292,6 +293,7 @@
             <Japanese>死体削除タイマー</Japanese>
             <Polish>Czas usunięcia ciała</Polish>
             <Russian>Время удаления трупов</Russian>
+            <Portuguese>Tempo para remover corpo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>

@@ -379,6 +379,7 @@
             <Japanese>衝突防止灯を切り替え</Japanese>
             <Polish>Przełącz światła kolizyjne</Polish>
             <Russian>Вкл/Выкл Бортовые огни</Russian>
+            <Portuguese>Alternar Luzes de Colisão</Portuguese>
         </Key>
     </Package>
 </Project>
