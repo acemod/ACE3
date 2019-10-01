@@ -47,7 +47,7 @@ private _allPossibleInjuries = [];
     // Check if the damage is higher as the min damage for the specific injury
     if (_damage >= _minDamage && {_damage <= _maxDamage || _maxDamage < 0}) then {
         // Check if the injury can be applied to the given selection name
-        if ("All" in _selections || {_bodyPart in _selections}) then { // @todo, this is case sensitive!
+        // if ("All" in _selections || {_bodyPart in _selections}) then { // @todo, this is case sensitive! [we have no injuries that use this, disabled for now]
 
             // Find the wound which has the highest minimal damage, so we can use this later on for adding the correct injuries
             if (_minDamage > _highestPossibleDamage) then {
@@ -57,7 +57,7 @@ private _allPossibleInjuries = [];
 
             // Store the valid possible injury for the damage type, damage amount and selection
             _allPossibleInjuries pushBack _x;
-        };
+        // };
     };
 } forEach _woundTypes;
 
