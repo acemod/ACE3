@@ -10,6 +10,8 @@
             <Chinesesimp>通用</Chinesesimp>
             <Korean>일반</Korean>
             <Polish>Ogólny</Polish>
+            <Russian>Общий</Russian>
+            <Portuguese>Comum</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -27,7 +29,7 @@
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Common_Advanced">
+        <Key ID="STR_ACE_Common_Advanced">
             <English>Advanced</English>
             <Russian>Усложненный</Russian>
             <Polish>Zaawansowany</Polish>
@@ -410,7 +412,7 @@
             <Chinese>未知的</Chinese>
             <Chinesesimp>未知的</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Common_Normal">
+        <Key ID="STR_ACE_Common_Normal">
             <English>Normal</English>
             <German>Normal</German>
             <Italian>Normale</Italian>
@@ -506,30 +508,39 @@
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
             <English>Check PBO Action</English>
+            <German>PBO Überprüfung</German>
             <Italian>Controlla Azioni PBO</Italian>
             <Chinese>檢查PBO動作</Chinese>
             <Chinesesimp>检查PBO动作</Chinesesimp>
             <Japanese>PBO 検査の挙動</Japanese>
             <Korean>PBO 검사</Korean>
             <Polish>Sprawdź akcję PBO</Polish>
+            <Russian>Действие при проверке PBO</Russian>
+            <Portuguese>Ação de Checar PBO</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
+            <German>Alle PBOs überprüfen</German>
             <Italian>Controlla Tutti i PBO</Italian>
             <Chinese>檢查所有PBO</Chinese>
             <Chinesesimp>检查所有PBO</Chinesesimp>
             <Japanese>PBO 全てを検査</Japanese>
             <Korean>모든 PBO 검사</Korean>
             <Polish>Sprawdź wszystkie PBO</Polish>
+            <Russian>Проверять все PBO</Russian>
+            <Portuguese>Checar Todos os PBOs</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
+            <German>PBO Whitelist</German>
             <Italian>Controlla Whitelist PBO</Italian>
             <Chinese>檢查PBO白名單</Chinese>
             <Chinesesimp>检查PBO白名单</Chinesesimp>
             <Japanese>許可リスト内の PBO を検査</Japanese>
             <Korean>검사 제외 PBO</Korean>
             <Polish>Sprawdź białą listę PBO</Polish>
+            <Russian>Белый список для проверки PBO</Russian>
+            <Portuguese>Lista Branca de PBO</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -669,6 +680,7 @@
             <Chinese>保持武器雷射/手電筒的狀態</Chinese>
             <Chinesesimp>保持武器雷射/手电筒的状态</Chinesesimp>
             <Polish>Trwały znacznik laserowy/latarka</Polish>
+            <Portuguese>Luz da lanterna/laser da arma persistente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -680,6 +692,7 @@
             <Chinese>保存武器雷射/手電筒的開關狀態，使玩家切換武器或進出載具時能保持之前的的狀態</Chinese>
             <Chinesesimp>保存武器雷射/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的的状态。</Chinesesimp>
             <Polish>Aktywuj znacznik laserowy/latarkę po zmianie broni lub wejściu/wyjściu z pojazdu, jeśli był on poprzednio włączony.</Polish>
+            <Portuguese>Ativa a luz da arma ao trocar de arma, entrar/sair de um veículo. Caso tenha sido acesa anteriormente.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -998,11 +1011,14 @@
             <Chinese>啟用</Chinese>
             <Chinesesimp>启用</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Common_Always">
+        <Key ID="STR_ACE_Common_Always">
             <English>Always</English>
+            <German>Immer</German>
             <Japanese>常に</Japanese>
+            <Russian>Всегда</Russian>
+            <Portuguese>Sempre</Portuguese>
         </Key>
-		<Key ID="STR_ACE_Common_Anywhere">
+        <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
             <Russian>Где угодно</Russian>
             <Polish>Wszędzie</Polish>
@@ -1010,13 +1026,13 @@
             <German>Überall</German>
             <Czech>Kdekoliv</Czech>
             <Portuguese>Qualquer lugar</Portuguese>
-            <French>PArtout</French>
+            <French>Partout</French>
             <Hungarian>Akárhol</Hungarian>
             <Italian>Ovunque</Italian>
             <Japanese>どこでも</Japanese>
             <Korean>어디서나</Korean>
         </Key>
-		<Key ID="STR_ACE_Common_Basic">
+        <Key ID="STR_ACE_Common_Basic">
             <English>Basic</English>
             <Russian>Базовый</Russian>
             <Polish>Podstawowy</Polish>
@@ -1031,7 +1047,7 @@
             <Korean>기본</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Vehicle">
-            <English>Medical vehicles</English>
+            <English>Medical Vehicles</English>
             <Russian>В медицинском транспорте</Russian>
             <Polish>Pojazdy medyczne</Polish>
             <Spanish>Vehiculos médicos</Spanish>
@@ -1079,10 +1095,16 @@
         <Key ID="STR_ACE_Common_Confirm">
             <English>Confirm</English>
             <Japanese>確認</Japanese>
+            <German>Bestätigen</German>
+            <Russian>Подтвердить</Russian>
+            <Portuguese>Confirmar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
             <Japanese>行わない</Japanese>
+            <German>Nie</German>
+            <Russian>Никогда</Russian>
+            <Portuguese>Nunca</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1260,6 +1282,8 @@
             <Japanese>音楽の音量低下を許可</Japanese>
             <Italian>Permesso di abbassare la musica</Italian>
             <Polish>Zezwól na przyciszanie muzyki</Polish>
+            <Russian>Разрешить приглушение музыки</Russian>
+            <Portuguese>Permite diminuir volume da música</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1270,22 +1294,62 @@
             <Japanese>ACE スプリントへ音量低下を許可します。</Japanese>
             <Italian>Permetti agli script di ACEdi abbassare la musica.</Italian>
             <Polish>Zezwól skrypty ACE na przyciszanie muzyki.</Polish>
+            <Russian>Позволить скриптам ACE приглушать музыку</Russian>
+            <Portuguese>Permite que Scripts do ACE diminuam o volume da música.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
+            <German>Flagge (Ace - Schwarz)</German>
             <Chinesesimp>旗帜(ACE-黑色):</Chinesesimp>
             <Chinese>旗幟(ACE-黑色)</Chinese>
             <Italian>Bandiera (ACE - Nera)</Italian>
             <Japanese>旗 (ACE - 黒)</Japanese>
             <Polish>Flaga (ACE - Czarna)</Polish>
+            <Russian>Флаг (ACE - Черный)</Russian>
+            <Portuguese>Bandeira (ACE - Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
+            <German>Flagge (Ace - Weiß)</German>
             <Chinesesimp>旗帜(ACE-白色):</Chinesesimp>
             <Chinese>旗幟(ACE-白色)</Chinese>
             <Italian>Bandiera (ACE - Bianca)</Italian>
             <Japanese>旗 (ACE - 白)</Japanese>
             <Polish>Flaga (ACE - Biała)</Polish>
+            <Russian>Флаг (ACE - Белый)</Russian>
+            <Portuguese>Bandeira (ACE - Branco)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_playerOnly">
+            <English>Players only</English>
+            <Russian>Игроков</Russian>
+            <Polish>Tylko dla graczy</Polish>
+            <Spanish>Solo jugadores</Spanish>
+            <German>Nur Spieler</German>
+            <Czech>Pouze hráči</Czech>
+            <Portuguese>Somente jogadores</Portuguese>
+            <French>Joueur uniquement</French>
+            <Hungarian>Csak játékosok</Hungarian>
+            <Italian>Solo giocatori</Italian>
+            <Japanese>プレイヤーのみ</Japanese>
+            <Korean>플레이어만</Korean>
+            <Chinesesimp>只限玩家</Chinesesimp>
+            <Chinese>只限玩家</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Common_playersAndAI">
+            <English>Players and AI</English>
+            <Russian>Игроков и ботов</Russian>
+            <Polish>Gracze oraz AI</Polish>
+            <Spanish>Jugadores e IA</Spanish>
+            <German>Spieler und KI</German>
+            <Czech>Hráči a AI</Czech>
+            <Portuguese>Jogadores e IA</Portuguese>
+            <French>Joueurs et IA</French>
+            <Hungarian>Játékosok és AI</Hungarian>
+            <Italian>Giocatori ed IA</Italian>
+            <Japanese>プレイヤーと AI</Japanese>
+            <Korean>플레이어 및 인공지능</Korean>
+            <Chinesesimp>玩家与AI</Chinesesimp>
+            <Chinese>玩家與AI</Chinese>
         </Key>
     </Package>
 </Project>

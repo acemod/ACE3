@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="dragon">
+        <Key ID="STR_ACE_dragon_dragonNameCarry">
+            <English>[CSW] M47 Super-Dragon</English>
+            <Portuguese>[CSW] M47 Super-Dragon</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_dragon_dragonName">
+            <English>M47 Super-Dragon</English>
+            <Portuguese>M47 Super-Dragon</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_dragon_attachSight">
+            <English>Attach Sight</English>
+            <Portuguese>Colocar Mira</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_dragon_detachSight">
+            <English>Detach Sight</English>
+            <Portuguese>Remover Mira</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_dragon_sightName">
+            <English>SU-36/P Daysight</English>
+            <Portuguese>SU-36/P Daysight</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_dragon_sightDescription">
+            <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
+            <Portuguese>Uma mira leve e comum utilizada para operações de dia. Contêm o computador de orientação para todo o sistema.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_dragon_dragonDescription">
+            <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
+            <Portuguese>Um míssil SACLOS, guiado por fio com uma característica única de vôo</Portuguese>
+        </Key>
+    </Package>
+</Project>

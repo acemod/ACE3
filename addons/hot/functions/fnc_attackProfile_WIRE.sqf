@@ -19,7 +19,7 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
-_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "_wireCutSource"];
+_attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_randomVector", "_crosshairOffset", "_seekerMaxRangeSqr", "", "_wireCutSource"];
 
 private _projectilePos = getPosASL _projectile;
 

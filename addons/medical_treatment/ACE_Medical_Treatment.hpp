@@ -297,7 +297,7 @@ class ADDON {
                 reopeningMaxDelay = 150;
             };
             class AbrasionMinor: Abrasion {
-                effectiveness = 43;
+                effectiveness = 4;
             };
             class AbrasionMedium: Abrasion {
                 effectiveness = 3;
@@ -582,7 +582,7 @@ class ADDON {
             timeInSystem = 1800;
             timeTillMaxEffect = 30;
             maxDose = 4;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
             viscosityChange = -10;
         };
         class Epinephrine {
@@ -593,7 +593,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 10;
             maxDose = 10;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
         };
         class Adenosine {
             painReduce = 0;
@@ -603,7 +603,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 15;
             maxDose = 6;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
         };
         class Atropine {
             painReduce = 0;
@@ -613,14 +613,14 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 15;
             maxDose = 6;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
         };
         class PainKillers {
             painReduce = 0.1;
             timeInSystem = 600;
             timeTillMaxEffect = 60;
             maxDose = 10;
-            inCompatableMedication[] = {};
+            incompatibleMedication[] = {};
             viscosityChange = 5;
         };
     };

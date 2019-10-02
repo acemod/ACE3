@@ -2283,47 +2283,62 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelTwist">
             <English>Barrel twist</English>
+            <German>Dralllänge</German>
             <Japanese>銃身の転度</Japanese>
             <Chinesesimp>膛线缠距</Chinesesimp>
             <Chinese>膛線扭度</Chinese>
             <Italian>Rigatura della canna</Italian>
             <Polish>Gwintowanie lufy</Polish>
+            <Russian>Нарезы ствола</Russian>
+            <Portuguese>Barrel Twist</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
+            <German>Lauflänge</German>
             <French>Longueur du canon</French>
             <Japanese>銃身長</Japanese>
             <Chinesesimp>身管长度</Chinesesimp>
             <Chinese>槍管長度</Chinese>
             <Italian>Lunghezza della canna</Italian>
             <Polish>Długość lufy</Polish>
+            <Russian>Длина ствола</Russian>
+            <Portuguese>Comprimento do cano</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
+            <German>Ballistischer Koeffizient</German>
             <French>Coefficient ballistique</French>
             <Japanese>弾道係数</Japanese>
             <Chinesesimp>弹道系数</Chinesesimp>
             <Chinese>彈道係數</Chinese>
             <Italian>Coefficente balistico</Italian>
             <Polish>Współczynnik balistyczny</Polish>
+            <Russian>Баллистический коэффициент</Russian>
+            <Portuguese>Coeficiente balístico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
+            <German>Projektilgewicht</German>
             <French>Masse d'une balle</French>
             <Japanese>弾丸重量</Japanese>
             <Chinesesimp>弹头重量</Chinesesimp>
             <Chinese>彈頭重量</Chinese>
             <Italian>Massa del proiettile</Italian>
             <Polish>Masa pocisku</Polish>
+            <Russian>Масса пули</Russian>
+            <Portuguese>Massa do projétil</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
+            <German>Mündungsgeschwindigkeit</German>
             <French>Vitesse à la bouche</French>
             <Japanese>銃口初速</Japanese>
             <Chinesesimp>枪口初速</Chinesesimp>
             <Chinese>槍口初速</Chinese>
             <Italian>Velocità iniziale</Italian>
             <Polish>Prędkość wylotowa</Polish>
+            <Russian>Начальная скорость</Russian>
+            <Portuguese>Velocidade de Saída</Portuguese>
         </Key>
     </Package>
 </Project>

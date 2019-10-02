@@ -1,7 +1,7 @@
 ace_medical_blood
-===============
+=================
 
-Adds blood visual effect on the ground near a bleeding player.
+Creates blood drops on the ground near bleeding units.
 
 ## Maintainers
 

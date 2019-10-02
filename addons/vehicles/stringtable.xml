@@ -35,9 +35,12 @@
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
+            <German>Geschwindigkeitsbegrenzung</German>
             <Italian>Limite di velocità</Italian>
             <Japanese>速度制限</Japanese>
             <Polish>Ograniczenie prędkości</Polish>
+            <Russian>Ограничение скорости</Russian>
+            <Portuguese>Limite de Velocidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -46,7 +49,7 @@
             <Polish>Ogranicznik prędkości</Polish>
             <Czech>Omezovač rychlosti</Czech>
             <French>Limiteur de vitesse</French>
-            <Russian>Ограничение скорости</Russian>
+            <Russian>Ограничитель скорости</Russian>
             <Hungarian>Sebességkorlátozó</Hungarian>
             <Portuguese>Limitador de Velocidade</Portuguese>
             <Italian>Limitatore di Velocità</Italian>
@@ -57,35 +60,51 @@
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>
+            <German>Maximale Geschwindigkeit erhöhen</German>
             <Italian>Aumenta limite di velocità</Italian>
             <Japanese>速度制限を増やす</Japanese>
             <Polish>Zwiększ ograniczenie prędkości</Polish>
+            <Russian>Увеличить ограничение скорости</Russian>
+            <Portuguese>Aumentar Limite de Velocidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
             <English>Decrease Speed Limit</English>
+            <German>Maximale Geschwindigkeit verringern</German>
             <Italian>Diminuisce limite di velocità</Italian>
             <Japanese>速度制限を減らす</Japanese>
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
+            <Russian>Уменьшить ограничение скорости</Russian>
+            <Portuguese>Diminuir Limite de Velocidade</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
             <English>Disable automatic engine shut-off</English>
             <German>Motor nach Verlassen laufen lassen</German>
             <Japanese>エンジン自動停止を無効化</Japanese>
+            <Russian>Убрать автовыключение двигателя</Russian>
+            <Portuguese>Desativar desligamento automático do motor</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
             <German>Verhindere das automatische Abschalten des Motors beim Verlassen des Fahrzeugs.</German>
             <Japanese>車両から降りた時のエンジンの自動停止を防ぎます。</Japanese>
+            <Russian>Запрещает автоматическое выключение двигателя при выходе из транспорта</Russian>
+            <Portuguese>Previne que o motor do veículo seja desligado automaticamente quando o motorista sair.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>
             <German>Abspringen-Aktion verstecken</German>
             <Polish>Ukryj akcję Wyskocz</Polish>
+            <Russian>Убрать действие 'Выпрыгнуть'</Russian>
+            <Japanese>脱出アクションを非表示</Japanese>
+            <Portuguese>Ocultar opção de Ejetar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
             <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
             <German>Versteckt den Abspringen-Eintrag aus dem Aktionsmenü. Benötigt Neustart des Spiels.</German>
             <Polish>Usuwa akcję Wyskocz z menu akcji. Wymaga restartu gry.</Polish>
+            <Russian>Убирает действие 'Выпрыгнуть' из меню. (Требует перезагрузки)</Russian>
+            <Japanese>アクション メニューから脱出アクションを消します。ゲームの再起動が必要です。</Japanese>
+            <Portuguese>Oculta a opção de interação para ejetar. Requer que o jogo seja reiniciado.</Portuguese>
         </Key>
     </Package>
 </Project>

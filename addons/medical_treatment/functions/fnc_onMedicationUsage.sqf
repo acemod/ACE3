@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The patient <OBJECT>
  * 1: Medication Treatment classname <STRING>
- * 2: Max dosage <NUMBER>
+ * 2: Max dosage (0 to ignore) <NUMBER>
  * 3: Incompatable medication <ARRAY<STRING>>
  *
  * Return Value:
@@ -18,40 +18,28 @@
  * Public: No
  */
 
-params ["_target", "_className", "_maxDosage", "_incompatabileMeds"];
-TRACE_4("onMedicationUsage",_target,_className,_maxDosage,_incompatabileMeds);
-
-private _fnc_getMedicationCount = {
-    params ["_target", "_medication"];
-    private _return = 0;
-    {
-        _x params ["_xMed", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem"];
-        if (_xMed == _medication) then {
-            private _timeInSystem = CBA_missionTime - _timeAdded;
-            _return = _return + linearConversion [_timeTillMaxEffect, _maxTimeInSystem, _timeInSystem, 1, 0, true];
-        };
-    } forEach (_target getVariable [VAR_MEDICATIONS, []]);
-    TRACE_2("getMedicationCount",_medication,_return);
-    _return
-};
+params ["_target", "_className", "_maxDosage", "_incompatibleMedication"];
+TRACE_4("onMedicationUsage",_target,_className,_maxDosage,_incompatibleMedication);
 
 private _overdosedMedications = [];
 
 // Check for overdose from current medication
-private _currentDose = [_target, _className] call _fnc_getMedicationCount;
-if (_currentDose >= floor (_maxDosage + round(random(2))) && {_maxDosage >= 1}) then {
-    TRACE_1("exceeded max dose",_currentDose);
-    _overdosedMedications pushBackUnique _className;
+if (_maxDosage > 0) then {
+    private _currentDose = [_target, _className] call EFUNC(medical_status,getMedicationCount);
+    if (_currentDose >= floor (_maxDosage + round(random(2)))) then {
+        TRACE_1("exceeded max dose",_currentDose);
+        _overdosedMedications pushBackUnique _className;
+    };
 };
 
 // Check incompatible medication (format [med,limit])
 {
     _x params ["_xMed", "_xLimit"];
-    private _inSystem = [_target, _xMed] call _fnc_getMedicationCount;
+    private _inSystem = [_target, _xMed] call EFUNC(medical_status,getMedicationCount);
     if (_inSystem> _xLimit) then {
         _overdosedMedications pushBackUnique _xMed;
     };
-} forEach _incompatabileMeds;
+} forEach _incompatibleMedication;
 
 if !(_overdosedMedications isEqualTo []) then {
     private _medicationConfig = (configFile >> "ace_medical_treatment" >> "Medication");

@@ -188,6 +188,7 @@
             <Italian>Ruota Strumenti di Mappatura</Italian>
             <Chinesesimp>选转地图工具的按键</Chinesesimp>
             <Chinese>選轉地圖工具的按鍵</Chinese>
+            <Portuguese>Tecla para girar Ferramentas de Mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
@@ -200,6 +201,7 @@
             <Italian>Tasto modifica per consentire strumenti di mappatura rotanti</Italian>
             <Chinesesimp>修改旋转地图工具的按键</Chinesesimp>
             <Chinese>修改旋轉地圖工具的按鍵</Chinese>
+            <Portuguese>Tecla de Modificador para permitir girar as ferramentas de mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_displayName">
             <English>Draw straight lines with maptools</English>
@@ -211,6 +213,8 @@
             <Italian>Disegna linee dritte con gli strumenti di mappatura</Italian>
             <Chinesesimp>使用地图工具来绘制直线</Chinesesimp>
             <Chinese>使用地圖工具來繪製直線</Chinese>
+            <Russian>Прямые линии с инструментами карты</Russian>
+            <Portuguese>Desenhar linhas retas com as ferramentas de mapa</Portuguese>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
@@ -222,6 +226,8 @@
             <Italian>Disegna sul bordo degli strumenti di mappatura per disegnare linee dritte. Nota: Deve spostarsi al centro per essere cancellato.</Italian>
             <Chinesesimp>使用地图工具的边缘来绘制直线。备注: 要删除直线时，请把滑鼠移动到该线条的中央即可删除该线。</Chinesesimp>
             <Chinese>使用地圖工具的邊緣來繪製直線。備註: 要刪除直線時，請把滑鼠移動到該線條的中央即可刪除該線</Chinese>
+            <Russian>Рисуйте по краю инструмента карты, чтобы провести прямые линии. Примечание: при удалении линии размещайте курсор над ее серединой</Russian>
+            <Portuguese>Desenhe no canto da ferramenta de mapa para desenhar linhas retas. Observação: Sobreponha o meio com o mouse para deletar.</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -121,8 +121,8 @@ if (isServer) then {
 [QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
 [QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
-["ace_loadPersonEvent", FUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
-["ace_unloadPersonEvent", FUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_loadPersonEvent", LINKFUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_unloadPersonEvent", LINKFUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
@@ -312,7 +312,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         if (isNull player) exitWith {true};
         private _UAV = getConnectedUAV player;
         if (!alive player) then {_UAV = objNull;};
-        private _position = (UAVControl _UAV) param [1, ""];
+        private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
         switch (toLower _position) do {

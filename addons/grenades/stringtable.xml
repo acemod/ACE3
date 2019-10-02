@@ -136,7 +136,7 @@
             <French>Aussi connu en tant que "Flashbang". Explose en causant cécité, surdité, bourdonnements d'oreilles et perturbation de l'oreille interne. </French>
             <Polish>Znany też jako flashbang. Powoduje natychmiastową tymczasową ślepotę, głuchotę, dzwonienie w uszach i inne zaburzenia ucha wewnętrznego.</Polish>
             <Czech>Omračující granát je taktická nesmrtící zbraň používaná při záchraně rukojmí a zvládání davu.</Czech>
-            <Russian>XM84 (M84) - граната нелетального действия, и предназначена для отвлечения и временного вывода из строя, либо дезориентации противника. Основное использование нашла при освобождении заложников, захвате преступников и террористов, а также проведении диверсионных миссий.</Russian>
+            <Russian>XM84 (M84) - граната нелетального действия, предназначена для отвлечения и временного вывода из строя, либо дезориентации противника. Основное использование нашла при освобождении заложников, захвате преступников и террористов, а также проведении диверсионных миссий.</Russian>
             <Hungarian>Villanógránát néven is ismert. Azonnali villanási vakságot, süketséget, fülzúgást, és belső füli zavart okoz.</Hungarian>
             <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
             <Portuguese>Também conhecida como flashbang. Causa uma clarão imediato, cegueira, surdez, zumbido e distúrbio no tímpano.</Portuguese>
@@ -201,7 +201,7 @@
             <Italian>M127A1 Bengala (Giallo)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (żółta)</Polish>
             <Portuguese>M127A1 Sinalizador (Amarelo)</Portuguese>
-            <Russian>M127A1 Фальшфейер (Жёлтые)</Russian>
+            <Russian>M127A1 Фальшфейер (Жёлтый)</Russian>
             <Spanish>Bengala M127A1 (Amarilla)</Spanish>
             <French>M127A1 Feux à main (Jaune)</French>
             <Japanese>M127A1 信号弾 (黄)</Japanese>
@@ -265,7 +265,7 @@
             <Italian>Bengala (Giallo)</Italian>
             <Polish>Flara ręczna (żółta)</Polish>
             <Portuguese>Sinalizador de Mão (Amarelo)</Portuguese>
-            <Russian>Фальшфейер (Жёлтые)</Russian>
+            <Russian>Фальшфейер (Жёлтый)</Russian>
             <Spanish>Bengala (Amarilla)</Spanish>
             <French>Feux à main (Jaune)</French>
             <Japanese>黄の手持ち式信号弾</Japanese>
@@ -330,7 +330,7 @@
             <Italian>M127A1 (Giallo)</Italian>
             <Polish>M127A1 (żółta)</Polish>
             <Portuguese>M127A1 (Amarelo)</Portuguese>
-            <Russian>M127A1 (Жёлтые)</Russian>
+            <Russian>M127A1 (Жёлтый)</Russian>
             <Spanish>M127A1 (Amarilla)</Spanish>
             <Japanese>M127A1 (黄)</Japanese>
             <Korean>M127A1 (노랑)</Korean>
@@ -348,6 +348,7 @@
             <Italian>AN-M14 Granata Incendiaria</Italian>
             <Chinesesimp>AN-M14 燃烧手榴弹</Chinesesimp>
             <Chinese>AN-M14 燃燒手榴彈</Chinese>
+            <Portuguese>Granada Incendiária AN-M14</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_NameShort">
             <English>AN-M14</English>
@@ -360,6 +361,7 @@
             <Italian>AN-M14</Italian>
             <Chinesesimp>AN-M14</Chinesesimp>
             <Chinese>AN-M14</Chinese>
+            <Portuguese>AN-M14</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Description">
             <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
@@ -372,42 +374,55 @@
             <Italian>Granata incendiaria usata per distruggere armi, munizioni e altri equipaggiamenti.</Italian>
             <Chinesesimp>燃烧手榴弹是用来摧毁武器，弹药以及其他装备的好帮手。</Chinesesimp>
             <Chinese>燃燒手榴彈是用來摧毀武器，彈藥以及其他裝備的好幫手</Chinese>
+            <Portuguese>Granada Incendiária utilizada para destruir armas, munições e outros equipamentos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_description">
             <English>Type: Star Parachute Flare</English>
             <Polish>Typ: Gwiezdna Flara Spadochronowa</Polish>
             <Italian>Tipo: Granata a paracadute con bengala</Italian>
             <Japanese>種類: パラシュート式照明弾 (星弾)</Japanese>
+            <Russian>Тип: Осветительная ракета - звезда на парашюте</Russian>
+            <Portuguese>Tipo: Sinalizador de pára-quedas estrela</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
             <Polish>M583 Flara oświetlająca (Biała)</Polish>
             <Italian>M583 Granata con bengala (Bianca)</Italian>
             <Japanese>M583 照明弾 (白)</Japanese>
+            <Russian>M583 Осветит. ракета (Белая)</Russian>
+            <Portuguese>M583 Sinalizador de Iluminação (Branco)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
             <Polish>M662 Flara oświetlająca (Czerwona)</Polish>
             <Italian>M662 Granata con bengala (Rossa)</Italian>
             <Japanese>M662 照明弾 (赤)</Japanese>
+            <Russian>M662 Осветит. ракета (Красная)</Russian>
+            <Portuguese>M662 Sinalizador de Iluminação (Vermelho)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
             <Polish>M661 Flara oświetlająca (Zielona)</Polish>
             <Italian>M661 Granata con bengala (Verde)</Italian>
             <Japanese>M661 照明弾 (緑)</Japanese>
+            <Russian>M661 Осветит. ракета (Зеленая)</Russian>
+            <Portuguese>M661 Sinalizador de Iluminação (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
             <Polish>Typ: Spadochronowa Flara IR</Polish>
             <Italian>Tipo: Granata a paracadute con infrarosso</Italian>
             <Japanese>種類: パラシュート式赤外線照明弾</Japanese>
+            <Russian>Тип: ИК-осветительная ракета на парашюте</Russian>
+            <Portuguese>Tipo: Sinalizador Infravermelho de Pára-quedas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
             <Polish>M992 Oświetlająca flara IR</Polish>
             <Italian>M992 Granata con infrarosso</Italian>
             <Japanese>M992 赤外線照明弾</Japanese>
+            <Russian>M992 ИК-осветительная ракета</Russian>
+            <Portuguese>M992 Sinalizador de Iluminação Infravermelho</Portuguese>
         </Key>
     </Package>
 </Project>

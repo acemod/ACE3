@@ -122,7 +122,7 @@ private _actions = [_actionsCfg, 0] call _recurseFnc;
 
 // ace_interaction_fnc_addPassengerAction expects ACE_MainActions to be first
 // Other mods can change the order that configs are added, so we should verify this now and resort if needed
-if (_objectType isKindOf "CaManBase") then {
+if (_objectType isKindOf "CAManBase") then {
     if ((((_actions select 0) select 0) select 0) != "ACE_MainActions") then {
         INFO_1("ACE_MainActions not first for man [%1]",_objectType);
         private _mainActions = [];

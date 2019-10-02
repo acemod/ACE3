@@ -88,7 +88,7 @@ class CfgAmmo {
     class B_338_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
 
     class B_338_NM_Ball: BulletBase {model = PATHTOF(ace_TracerRed2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_red
-    class ACE_338_NM_Ball_red : B_338_NM_Ball {model = PATHTOF(ace_TracerRed2.p3d);};
+    class ACE_338_NM_Ball_green : B_338_NM_Ball {model = PATHTOF(ace_TracerGreen2.p3d);};
     class ACE_338_NM_Ball_yellow : B_338_NM_Ball {model = PATHTOF(ace_TracerYellow2.p3d);};
 
     class B_127x54_Ball: BulletBase {model = PATHTOF(ace_TracerGreen2.p3d);}; //Replaces \A3\Weapons_f\Data\bullettracer\tracer_green

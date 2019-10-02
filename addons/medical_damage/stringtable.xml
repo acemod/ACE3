@@ -1,82 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Damage">
-        <Container name="Settings">
-            <Key ID="STR_ACE_Medical_damage_subCategory">
-                <English>Damage Threshold</English>
-                <Japanese>損傷のしきい値</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_damage_playerDamageThreshold_DisplayName">
-                <English>Player Damage</English>
-                <Russian>Урон игроку</Russian>
-                <Polish>Próg obrażeń graczy</Polish>
-                <Spanish>Daño de jugador</Spanish>
-                <German>Spielerschaden</German>
-                <Czech>Poškození hráče</Czech>
-                <Portuguese>Dano do jogador</Portuguese>
-                <French>Dégats du joueur</French>
-                <Hungarian>Játékos sérülés</Hungarian>
-                <Italian>Danno Giocatore</Italian>
-                <Japanese>プレイヤーへの損傷</Japanese>
-                <Korean>플레이어 부상</Korean>
-                <Chinesesimp>玩家伤害</Chinesesimp>
-                <Chinese>玩家傷害</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_damage_playerDamageThreshold_Description">
-                <English>What is the damage a player can take before being killed?</English>
-                <Russian>Какой уровень урона необходим, чтобы убить игрока?</Russian>
-                <Polish>Jaki jest próg obrażeń, jakie gracz może otrzymać zanim zostanie zabity?</Polish>
-                <Spanish>¿Cuál es el daño que un jugador puede sufrir antes de morir?</Spanish>
-                <German>Wie viel Schaden kann ein Spieler erleiden, bevor er getötet wird?</German>
-                <Czech>Jaké poškození může hráč dostat než bude zabit?</Czech>
-                <Portuguese>Qal é o dano que um jogador pode sofrer antes de morrer?</Portuguese>
-                <French>Quels dégâts peut subir un joueur avant d'être tué</French>
-                <Hungarian>Mennyi sérülést szenvedhet el egy játékos, mielőtt meghal?</Hungarian>
-                <Italian>Quanto è il danno che un giocatore può sostenere prima di essere ucciso?</Italian>
-                <Japanese>プレイヤーが死に始める前に損傷を受けるようにしますか?</Japanese>
-                <Korean>얼마정도의 부상을 플레이어가 죽기 전까지 버틸 수 있습니까?</Korean>
-                <Chinesesimp>玩家死亡前所能承受的伤害程度</Chinesesimp>
-                <Chinese>玩家死亡前所能承受的傷害程度</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_damage_AIDamageThreshold_DisplayName">
-                <English>AI Damage</English>
-                <Russian>Урон ботам</Russian>
-                <Polish>Próg obrażeń AI</Polish>
-                <Spanish>Daño IA</Spanish>
-                <German>KI-Schaden</German>
-                <Czech>Poškození AI</Czech>
-                <Portuguese>Dano da IA</Portuguese>
-                <French>Dégâts des IA</French>
-                <Hungarian>AI sérülés</Hungarian>
-                <Italian>Danno AI</Italian>
-                <Japanese>AI への損傷</Japanese>
-                <Korean>인공지능 부상</Korean>
-                <Chinesesimp>AI伤害</Chinesesimp>
-                <Chinese>AI傷害</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_damage_AIDamageThreshold_Description">
-                <English>What is the damage an AI can take before being killed?</English>
-                <Russian>Какой уровень урона необходим, чтобы убить бота?</Russian>
-                <Polish>Jaki jest próg obrażeń, jakie AI może otrzymać zanim zostanie zabite?</Polish>
-                <Spanish>¿Cuál es el daño que la IA puede sufrir antes de morir?</Spanish>
-                <German>Wie viel Schaden kann eine KI erleiden, bis sie getötet wird?</German>
-                <Czech>Jaké poškození může AI dostat než bude zabito?</Czech>
-                <Portuguese>Qual é o dano que uma IA pode sofrer antes de morrer?</Portuguese>
-                <French>Quels dégâts peut subir une IA avant d'être tuée</French>
-                <Hungarian>Mennyi sérülést szenvedhet el egy AI, mielőtt meghal?</Hungarian>
-                <Italian>Quanto è il danno che un'IA può sostenere prima di essere uccisa?</Italian>
-                <Japanese>AI が死に始める前に損傷を受けるようにしますか?</Japanese>
-                <Korean>얼마정도의 부상을 인공지능이 죽기 전까지 버틸 수 있습니까?</Korean>
-                <Chinesesimp>AI 死亡前所能承受的伤害程度</Chinesesimp>
-                <Chinese>AI 死亡前所能承受的傷害程度</Chinese>
-            </Key>
-        </Container>
+        <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_DisplayName">
+            <English>Player Critical Damage Threshold</English>
+            <Japanese>プレイヤーのクリティカル ダメージしきい値</Japanese>
+            <French>Seuil de dégât critique du joueur</French>
+            <Russian>Порог критического урона игрока</Russian>
+            <Portuguese>Limite de Dano Crítico do Jogador</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
+            <English>Sets the amount of damage a player can receive before going unconscious.</English>
+            <Japanese>プレイヤーが気絶になる前に受けられるダメージ量を決定できます。</Japanese>
+            <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance.</French>
+            <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
+            <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
+            <English>AI Critical Damage Threshold</English>
+            <Japanese>AI のクリティカル ダメージしきい値</Japanese>
+            <French>Seuil de dégât critique de l'IA</French>
+            <Russian>Порог критического урона AI</Russian>
+            <Portuguese>Limite de Dano Crítico da IA</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
+            <English>Sets the amount of damage an AI unit can receive before going unconscious.</English>
+            <Japanese>AI が気絶になる前に受けられるダメージ量を決定できます。</Japanese>
+            <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance.</French>
+            <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
+            <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
+        </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
             <German>Kratzer</German>
             <Italian>Scorticatura</Italian>
             <Russian>Ссадина</Russian>
-            <French>Eraflure</French>
+            <French>Écorchure</French>
             <Polish>Draśnięcie</Polish>
             <Spanish>Arañazo</Spanish>
             <Hungarian>Horzsolás</Hungarian>
@@ -90,7 +48,7 @@
             <German>Kleiner Kratzer</German>
             <Italian>Minima Scorticatura</Italian>
             <Russian>Малая ссадина</Russian>
-            <French>Petite éraflure</French>
+            <French>Petite écorchure</French>
             <Polish>Pomniejsze draśnięcie</Polish>
             <Spanish>Arañazo menor</Spanish>
             <Hungarian>Kis horzsolás</Hungarian>
@@ -104,7 +62,7 @@
             <German>Mittlerer Kratzer</German>
             <Italian>Media Scorticatura</Italian>
             <Russian>Средняя ссадина</Russian>
-            <French>Moyenne éraflure</French>
+            <French>Moyenne écorchure</French>
             <Polish>Średnie draśnięcie</Polish>
             <Spanish>Arañazo medio</Spanish>
             <Hungarian>Közepes horzsolás</Hungarian>
@@ -118,7 +76,7 @@
             <German>Großer Kratzer</German>
             <Italian>Alta Scorticatura</Italian>
             <Russian>Большая ссадина</Russian>
-            <French>Grande éraflure</French>
+            <French>Grande écorchure</French>
             <Polish>Duże draśnięcie</Polish>
             <Spanish>Arañazo severo</Spanish>
             <Hungarian>Nagy horzsolás</Hungarian>
@@ -216,7 +174,7 @@
             <German>Mittlere Prellung</German>
             <Italian>Media Contusione</Italian>
             <Russian>Средний ушиб</Russian>
-            <French>Hématome moyen</French>
+            <French>Moyen hématome</French>
             <Polish>Średnie stłuczenie</Polish>
             <Spanish>Contusión media</Spanish>
             <Hungarian>Közepes zúzódás</Hungarian>
@@ -230,7 +188,7 @@
             <German>Große Prellung</German>
             <Italian>Alta Contusione</Italian>
             <Russian>Большой ушиб</Russian>
-            <French>Hématome important</French>
+            <French>Grand Hématome</French>
             <Polish>Duże stłuczenie</Polish>
             <Spanish>Contusión severa</Spanish>
             <Hungarian>Nagy zúzódás</Hungarian>
@@ -258,7 +216,7 @@
             <German>Kleine Quetschverletzung</German>
             <Italian>Minimo Tessuto Schiacciato</Italian>
             <Russian>Малая компрессионная травма</Russian>
-            <French>Tissu écrasé léger</French>
+            <French>Tissu légèrement écrasé</French>
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado menor</Spanish>
             <Hungarian>Kis zúzott szövet</Hungarian>
@@ -272,7 +230,7 @@
             <German>Mittlere Quetschverletzung</German>
             <Italian>Medio Tessuto Schiacciato</Italian>
             <Russian>Средняя компрессионная травма</Russian>
-            <French>Tissu écrasé moyen</French>
+            <French>Tissu moyennement écrasé</French>
             <Polish>Średnie zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado medio</Spanish>
             <Hungarian>Közepes zúzott szövet</Hungarian>
@@ -286,7 +244,7 @@
             <German>Große Quetschverletzung</German>
             <Italian>Alto Tessuto Schiacciato</Italian>
             <Russian>Большая компрессионная травма</Russian>
-            <French>Tissu écrasé large</French>
+            <French>Tissu fortement écrasé</French>
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado severo</Spanish>
             <Hungarian>Nagy zúzött szövet</Hungarian>
@@ -331,7 +289,7 @@
             <Polish>Średnia rana cięta</Polish>
             <Spanish>Corte mediano</Spanish>
             <Hungarian>Közepes vágás</Hungarian>
-            <French>Moyenne coupure</French>
+            <French>Coupure moyenne</French>
             <Portuguese>Corte médio</Portuguese>
             <Czech>Střední řezná rána</Czech>
             <Japanese>中くらいの切り傷</Japanese>
@@ -357,7 +315,7 @@
             <Italian>Strappo</Italian>
             <Russian>Рваная рана</Russian>
             <Polish>Rozerwanie skóry</Polish>
-            <French>Déchirure</French>
+            <French>Lacération</French>
             <Spanish>Desgarro</Spanish>
             <Hungarian>Szakadás</Hungarian>
             <Portuguese>Ruptura</Portuguese>
@@ -371,7 +329,7 @@
             <Italian>Piccolo Strappo</Italian>
             <Russian>Малая рваная рана</Russian>
             <Polish>Pomniejsze rozerwanie skóry</Polish>
-            <French>Petite Déchirure</French>
+            <French>Petite lacération</French>
             <Spanish>Desgarro menor</Spanish>
             <Hungarian>Kis szakadás</Hungarian>
             <Portuguese>Ruptura leve</Portuguese>
@@ -387,7 +345,7 @@
             <Polish>Średnie rozerwanie skóry</Polish>
             <Spanish>Desgarro medio</Spanish>
             <Hungarian>Közepes szakadás</Hungarian>
-            <French>Moyenne déchirure</French>
+            <French>Moyenne lacération</French>
             <Portuguese>Ruptura média</Portuguese>
             <Czech>Střední tržná rána</Czech>
             <Japanese>中くらいの裂傷</Japanese>
@@ -401,7 +359,7 @@
             <Polish>Duże rozerwanie skóry</Polish>
             <Spanish>Desgarro severo</Spanish>
             <Hungarian>Nagy szakadás</Hungarian>
-            <French>Large déchirure</French>
+            <French>Grande lacération</French>
             <Portuguese>Ruptura grave</Portuguese>
             <Czech>Velká tržná rána</Czech>
             <Japanese>大きな裂傷</Japanese>
@@ -413,7 +371,7 @@
             <Italian>Velocità Ferita</Italian>
             <Russian>Огнестрельная рана</Russian>
             <Polish>Rana postrzałowa</Polish>
-            <French>Blessure de vélocité</French>
+            <French>Plaie pénétrante</French>
             <Spanish>Herida de bala</Spanish>
             <Hungarian>Lőtt seb</Hungarian>
             <Portuguese>Ferimento por projétil de arma de fogo</Portuguese>
@@ -429,7 +387,7 @@
             <Polish>Pomniejsza rana postrzałowa</Polish>
             <Spanish>Herida de bala menor</Spanish>
             <Hungarian>Kis lőtt seb</Hungarian>
-            <French>Petite blessure de vélocité</French>
+            <French>Petite plaie pénétrante</French>
             <Portuguese>Ferimento leve por projétil de arma de fogo</Portuguese>
             <Czech>Malé střelné poranění</Czech>
             <Japanese>小さな銃創</Japanese>
@@ -443,7 +401,7 @@
             <Polish>Średnia rana postrzałowa</Polish>
             <Spanish>Herida de bala media</Spanish>
             <Hungarian>Közepes lőtt seb</Hungarian>
-            <French>Moyenne blessure de vélocité</French>
+            <French>Plaie moyenne pénétrante</French>
             <Portuguese>Ferimento médio por projétil de arma de fogo</Portuguese>
             <Czech>Střední střelné poranění</Czech>
             <Japanese>中くらいの銃創</Japanese>
@@ -457,7 +415,7 @@
             <Polish>Duża rana postrzałowa</Polish>
             <Spanish>Herida de bala severa</Spanish>
             <Hungarian>Nagy lőtt seb</Hungarian>
-            <French>Large blessure de vélocité</French>
+            <French>Grande plaie pénétrante</French>
             <Portuguese>Ferimento grave por projétil de arma de fogo</Portuguese>
             <Czech>Velké střelné poranění</Czech>
             <Japanese>大きな銃創</Japanese>
@@ -469,7 +427,7 @@
             <Italian>Puntura Ferita</Italian>
             <Russian>Колотая рана</Russian>
             <Polish>Rana kłuta</Polish>
-            <French>Blessure de perforation</French>
+            <French>Blessure par perforation</French>
             <Spanish>Herida punzante</Spanish>
             <Hungarian>Szúrt seb</Hungarian>
             <Portuguese>Ferimento por perfuração</Portuguese>
@@ -485,7 +443,7 @@
             <Polish>Pomniejsza rana kłuta</Polish>
             <Spanish>Herida punzante menor</Spanish>
             <Hungarian>Kis szúrt seb</Hungarian>
-            <French>Légère blessure de perforation</French>
+            <French>Petite perforation</French>
             <Portuguese>Ferimento leve por perfuração</Portuguese>
             <Czech>Malá bodná rána</Czech>
             <Japanese>小さな刺し傷</Japanese>
@@ -499,7 +457,7 @@
             <Polish>Średnia rana kłuta</Polish>
             <Spanish>Herida punzante media</Spanish>
             <Hungarian>Közepes szúrt seb</Hungarian>
-            <French>Moyenne blessure de perforation</French>
+            <French>Moyenne perforation</French>
             <Portuguese>Ferimento médio por perfuração</Portuguese>
             <Czech>Střední bodná rána</Czech>
             <Japanese>中くらいの刺し傷</Japanese>
@@ -513,7 +471,7 @@
             <Polish>Duża rana kłuta</Polish>
             <Spanish>Herida punzante severa</Spanish>
             <Hungarian>Nagy szúrt seb</Hungarian>
-            <French>Large blessure de perforation</French>
+            <French>Grande perforation</French>
             <Portuguese>Ferimento grave por perfuração</Portuguese>
             <Czech>Velká bodná rána</Czech>
             <Japanese>大きな刺し傷</Japanese>
