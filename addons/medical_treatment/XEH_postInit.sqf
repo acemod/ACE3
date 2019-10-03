@@ -9,11 +9,7 @@
     } forEach (_unit getVariable [QEGVAR(medical,allLogs), []]);
 
     _unit setVariable [QEGVAR(medical,allLogs), [], true];
-
-    [_unit] call FUNC(checkItems);
 }] call CBA_fnc_addEventHandler;
-
-["loadout", LINKFUNC(checkItems)] call CBA_fnc_addPlayerEventHandler;
 
 // Handle body removal and litter on server
 if (isServer) then {

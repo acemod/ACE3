@@ -12,7 +12,6 @@ PREP(canTreat);
 PREP(canTreatCached);
 PREP(checkBloodPressure);
 PREP(checkBloodPressureLocal);
-PREP(checkItems);
 PREP(checkPulse);
 PREP(checkPulseLocal);
 PREP(checkResponse);
