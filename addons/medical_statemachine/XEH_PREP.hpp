@@ -1,5 +1,6 @@
 PREP(conditionCardiacArrestTimer);
 PREP(conditionExecutionDeath);
+PREP(conditionSecondChance);
 PREP(enteredStateCardiacArrest);
 PREP(enteredStateDeath);
 PREP(enteredStateFatalInjury);
@@ -9,6 +10,5 @@ PREP(handleStateInjured);
 PREP(handleStateUnconscious);
 PREP(leftStateCardiacArrest);
 PREP(localityChangedEH);
-PREP(localityTransfer);
 PREP(resetStateDefault);
 PREP(transitionSecondChance);

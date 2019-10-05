@@ -61,7 +61,7 @@ private _effectivenessFound = -1;
         };
 
         // Track most effective found so far
-        if (_woundEffectiveness * _amountOf * _bleeding > _effectivenessFound * (_wound select 3) * (_wound select 4)) then {
+        if (_woundEffectiveness * _amountOf * _bleeding > _effectivenessFound * (_wound select 2) * (_wound select 3)) then {
             _effectivenessFound = _woundEffectiveness;
             _woundIndex = _forEachIndex;
             _wound = _x;

@@ -13,6 +13,7 @@
             <Italian>Piastrina</Italian>
             <Chinese>兵籍牌</Chinese>
             <Chinesesimp>兵籍牌</Chinesesimp>
+            <Portuguese>Dog Tag</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
@@ -26,6 +27,7 @@
             <Italian>Controlla Piastrina</Italian>
             <Chinese>檢查兵籍牌</Chinese>
             <Chinesesimp>检查兵籍牌</Chinesesimp>
+            <Portuguese>Verificar Dog Tag</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
@@ -39,6 +41,7 @@
             <Italian>Controlla</Italian>
             <Chinese>檢查</Chinese>
             <Chinesesimp>检查</Chinesesimp>
+            <Portuguese>Verificar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
@@ -52,6 +55,7 @@
             <Italian>Prendi</Italian>
             <Chinese>拿取</Chinese>
             <Chinesesimp>拿取</Chinesesimp>
+            <Portuguese>Pegar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dogtag taken from %1...</English>
@@ -65,6 +69,7 @@
             <Italian>Piastrina presa da %1...</Italian>
             <Chinese>從%1身上拿取兵籍牌...</Chinese>
             <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
+            <Portuguese>Dogtag pego de %1...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the dogtag...</English>
@@ -78,6 +83,7 @@
             <Italian>Qualcun altro ha già preso la piastrina...</Italian>
             <Chinese>已經有人把他的兵籍牌拿走了...</Chinese>
             <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
+            <Portuguese>Alguém já pegou essa dogtag...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Dogtags_IGUI_Description">
             <English>Onscreen display for checking dogtags</English>
@@ -87,6 +93,7 @@
             <Italian>Display su schermo per il controllo delle piastrine</Italian>
             <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
             <Russian>Экран для проверки жетонов</Russian>
+            <Portuguese>Tela de Exibição para verificar dogtags</Portuguese>
         </Key>
     </Package>
 </Project>

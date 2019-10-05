@@ -30,6 +30,7 @@ GVAR(heartBeatEffectRunning) = false;
     params ["_unit", "_unconscious"];
 
     if (_unit != ACE_player) exitWith {};
+    TRACE_1("player unconscious eh",_unconscious);
 
     if (_unconscious && {cameraView == "GUNNER"} && {(vehicle _unit) != _unit} &&  {cameraOn == vehicle _unit}) then {
         TRACE_2("exiting gunner view",cameraOn,cameraView);

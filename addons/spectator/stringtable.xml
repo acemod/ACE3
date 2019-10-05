@@ -12,6 +12,7 @@
             <French>Spectateur</French>
             <Polish>Obserwator</Polish>
             <Russian>Зритель</Russian>
+            <Portuguese>Espectador</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -24,6 +25,7 @@
             <Polish>Obserwator ACE</Polish>
             <Korean>ACE 관전자</Korean>
             <Russian>ACE Зритель</Russian>
+            <Portuguese>ACE Espectador</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -51,6 +53,7 @@
             <French>IA Activée</French>
             <Polish>SI Aktywowane</Polish>
             <Russian>Разрешить для ИИ</Russian>
+            <Portuguese>IA Ativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -63,6 +66,7 @@
             <French>Rends les IA visibles en spectateur</French>
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
             <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
+            <Portuguese>Permite que IA seja visivel no espectador</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -187,10 +191,14 @@
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
             <English>Max Follow Distance</English>
             <Russian>Макс. дистанция следования</Russian>
+            <Japanese>最大追随距離</Japanese>
+            <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
             <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
+            <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
+            <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
@@ -280,6 +288,7 @@
             <French>Icônes</French>
             <Polish>Ikony</Polish>
             <Russian>Иконки</Russian>
+            <Portuguese>Ícones</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -292,6 +301,7 @@
             <French>Projectiles</French>
             <Polish>Pociski</Polish>
             <Russian>Осколки</Russian>
+            <Portuguese>Projéteis</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -334,6 +344,7 @@
             <French>Mode de vision</French>
             <Polish>Tryb Wizji</Polish>
             <Russian>Режим видения</Russian>
+            <Portuguese>Modo de Visão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -346,6 +357,7 @@
             <French>Vitesse lente</French>
             <Polish>Wolna Prędkość</Polish>
             <Russian>Замедление</Russian>
+            <Portuguese>Velocidade Lenta</Portuguese>
         </Key>
     </Package>
 </Project>

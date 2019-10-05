@@ -13,12 +13,13 @@ This page describes how you can setup your development environment for ACE3, all
 ## 1. Requirements
 
 - Arma 3
-- A proper installation of the Arma 3 Tools (available on Steam)
-- A properly setup P-drive
+- Arma 3 Tools (available on Steam)
+- P-drive
 - Run Arma 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - [Python 3.x](https://www.python.org/)
-- [Mikero Tools](https://armaservices.maverick-applications.com/Products/MikerosDosTools/FileBrowserFree): DePbo, DeRap, DeOgg, Rapify, MakePbo, PboProject >=1.70
-- `*.hpp` removed from PboProject's "Exclude From Pbo" list
+- [Mikero Tools](https://mikero.bytex.digital/Downloads): DePbo, DeOgg, Rapify, MakePbo, PboProject >=1.70
+  - `*.hpp` removed from PboProject's "Exclude From Pbo" list
+  - `-F rebuild RequiredAddons` disabled
 - Python, Mikero Tools and Git in PATH environment variable
 - [CBA](https://github.com/CBATeam/CBA_A3/releases/latest) mod (release or development version)
 
