@@ -1,4 +1,4 @@
-﻿---
+---
 layout: wiki
 title: M47 Dragon Missile
 description: M47 Dragon
