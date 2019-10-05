@@ -605,18 +605,6 @@ class ADDON {
             maxDose = 6;
             incompatibleMedication[] = {};
         };
-        /*
-        class Atropine {
-            painReduce = 0;
-            hrIncreaseLow[] = {-2, -5};
-            hrIncreaseNormal[] = {-10, -15};
-            hrIncreaseHigh[] = {-5, -20};
-            timeInSystem = 120;
-            timeTillMaxEffect = 15;
-            maxDose = 6;
-            incompatibleMedication[] = {};
-        };
-        */
         class PainKillers {
             painReduce = 0.1;
             timeInSystem = 600;
