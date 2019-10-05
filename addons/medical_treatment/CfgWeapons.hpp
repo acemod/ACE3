@@ -103,7 +103,7 @@ class CfgWeapons {
         };
     };
     class ACE_atropine: ACE_ItemCore {
-        scope = 2;
+        scope = 1;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Atropine_Display);
         picture = QPATHTOF(ui\atropine_ca.paa);
