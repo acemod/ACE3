@@ -8,18 +8,19 @@
  * 1: Name Of Body Part <STRING>
  * 2: Amount Of Damage <NUMBER>
  * 3: Type of the damage done <STRING>
+ * 4: Weighted array of damaged selections <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "Body", 0.5, "bullet"] call ace_medical_damage_fnc_woundsHandlerSQF
+ * [player, "Body", 0.5, "bullet", [1, 1]] call ace_medical_damage_fnc_woundsHandlerSQF
  *
  * Public: No
  */
 
-params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
-TRACE_4("woundsHandlerSQF",_unit,_bodyPart,_damage,_typeOfDamage);
+params ["_unit", "_bodyPart", "_damage", "_typeOfDamage", "_damageSelectionArray"];
+TRACE_5("woundsHandlerSQF",_unit,_bodyPart,_damage,_typeOfDamage,_damageSelectionArray);
 
 // Convert the selectionName to a number and ensure it is a valid selection.
 private _bodyPartN = ALL_BODY_PARTS find toLower _bodyPart;
@@ -87,7 +88,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
             _oldInjury params ["_woundClassIDToAdd", "", "_injuryBleedingRate", "_injuryPain", "", "", "", "_causeLimping", "_causeFracture"];
 
-            private _bodyPartNToAdd = [floor random 6, _bodyPartN] select _isSelectionSpecific; // 6 == count ALL_BODY_PARTS
+            private _bodyPartNToAdd = if (_isSelectionSpecific) then {_bodyPartN} else {selectRandomWeighted _damageSelectionArray};
 
             _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
