@@ -113,6 +113,7 @@ switch (true) do {
         TRACE_3("BloodVolume Fatal",_unit,BLOOD_VOLUME_FATAL,_bloodVolume);
         [QEGVAR(medical,Bleedout), _unit] call CBA_fnc_localEvent;
     };
+    case (IN_CRDC_ARRST(_unit)): {}; // if in cardiac arrest just break now to avoid throwing unneeded events
     case (_hemorrhage == 4): {
         TRACE_3("Class IV Hemorrhage",_unit,_hemorrhage,_bloodVolume);
         [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;

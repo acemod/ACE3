@@ -13,6 +13,7 @@
             <Italian>Borsa per Armi</Italian>
             <Chinesesimp>枪袋</Chinesesimp>
             <Chinese>槍袋</Chinese>
+            <Portuguese>Bolsa de Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
             <English>Gunbag (Tan)</English>
@@ -26,6 +27,7 @@
             <Italian>Borsa per Armi (Tan)</Italian>
             <Chinesesimp>枪袋 (黄褐色)</Chinesesimp>
             <Chinese>槍袋 (黃褐色)</Chinese>
+            <Portuguese>Bolsa de Arma (Bege)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
@@ -39,6 +41,7 @@
             <Italian>Metti l'arma nella borsa per armi</Italian>
             <Chinesesimp>将武器放置枪袋</Chinesesimp>
             <Chinese>將武器放置槍袋</Chinese>
+            <Portuguese>Colocar arma na Bosla de Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
@@ -52,6 +55,7 @@
             <Italian>Prendi l'arma dalla borsa per armi</Italian>
             <Chinesesimp>将武器拿出枪袋</Chinesesimp>
             <Chinese>將武器拿出槍袋</Chinese>
+            <Portuguese>Retirar arma da Bolsa de Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>
@@ -65,6 +69,7 @@
             <Italian>Stato</Italian>
             <Chinesesimp>状态</Chinesesimp>
             <Chinese>狀態</Chinese>
+            <Portuguese>Status</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
@@ -78,6 +83,7 @@
             <Italian>Borsa per armi vuota</Italian>
             <Chinesesimp>枪袋为空</Chinesesimp>
             <Chinese>槍袋為空</Chinese>
+            <Portuguese>Bolsa de Arma Vazia</Portuguese>
         </Key>
     </Package>
 </Project>

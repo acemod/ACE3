@@ -297,7 +297,7 @@ class ADDON {
                 reopeningMaxDelay = 150;
             };
             class AbrasionMinor: Abrasion {
-                effectiveness = 43;
+                effectiveness = 4;
             };
             class AbrasionMedium: Abrasion {
                 effectiveness = 3;
@@ -600,16 +600,6 @@ class ADDON {
             hrIncreaseLow[] = {-7, -10};
             hrIncreaseNormal[] = {-15, -30};
             hrIncreaseHigh[] = {-15, -35};
-            timeInSystem = 120;
-            timeTillMaxEffect = 15;
-            maxDose = 6;
-            incompatibleMedication[] = {};
-        };
-        class Atropine {
-            painReduce = 0;
-            hrIncreaseLow[] = {-2, -5};
-            hrIncreaseNormal[] = {-10, -15};
-            hrIncreaseHigh[] = {-5, -20};
             timeInSystem = 120;
             timeTillMaxEffect = 15;
             maxDose = 6;

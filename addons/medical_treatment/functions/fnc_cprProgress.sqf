@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- *   0: Medic (not used) <OBJECT>
+ *   0: Medic <OBJECT>
  *   1: Patient <OBJECT>
  *
  * Return Value:
@@ -18,12 +18,10 @@
  */
 
 params ["_args"];
-_args params ["", "_patient"];
+_args params ["_medic", "_patient"];
 
-// Cancel CPR is patient wakes up
-if (_patient getVariable EFUNC(common,isAwake) || {!IN_CRDC_ARRST(_patient)}) exitWith {false};
+// Cancel CPR if patient wakes up
 
-// Calculate blood volume, if there is no pulse nothing happens
-_patient call FUNC(calculateBlood);
-
-true
+!(_patient call EFUNC(common,isAwake))
+&& {(GVAR(advancedDiagnose)) || {IN_CRDC_ARRST(_patient)}} // if basic diagnose, then only show action if appropriate (they can't tell difference between uncon/ca)
+&& {_medic == (_patient getVariable [QEGVAR(medical,CPR_provider), objNull])}

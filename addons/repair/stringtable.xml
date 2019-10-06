@@ -1138,6 +1138,7 @@
             <Polish>Tylko zaawansowani mechanicy</Polish>
             <Korean>고급 정비공만</Korean>
             <Russian>Только продвинутые инженеры</Russian>
+            <Portuguese>Somente engenheiro avançado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1465,6 +1466,7 @@
             <Polish>Zaaw. mechanik</Polish>
             <Korean>고급 정비공</Korean>
             <Russian>Продв. Инженер</Russian>
+            <Portuguese>Engenheiro Avançado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
@@ -1835,6 +1837,7 @@
             <Chinesesimp>备用履带</Chinesesimp>
             <Polish>Zapasowe Gąsienice</Polish>
             <Russian>Запасные траки</Russian>
+            <Portuguese>Esteiras Reservas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
@@ -1845,6 +1848,7 @@
             <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
             <Polish>Liczba zapasowych gąsienic w ładunku.</Polish>
             <Russian>Количество запасных траков в грузовом отсеке</Russian>
+            <Portuguese>Número de esteiras reservas na Carga</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
@@ -1855,6 +1859,7 @@
             <Chinesesimp>备用轮胎</Chinesesimp>
             <Polish>Zapasowe Koła</Polish>
             <Russian>Запасные колеса</Russian>
+            <Portuguese>Pneus Reservas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
@@ -1865,6 +1870,7 @@
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
             <Polish>Liczba zapasowych kół w ładunku.</Polish>
             <Russian>Количество запасных колес в грузовом отсеке</Russian>
+            <Portuguese>Número de pneus reservas na Carga</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
@@ -1875,6 +1881,7 @@
             <Italian>Motore spento automaticamente durante la riparazione</Italian>
             <Polish>Automatycznie wyłącz silnik podczas napraw</Polish>
             <Russian>Автоотключение двигателя при ремонте</Russian>
+            <Portuguese>Desligar motor automaticamente enquanto reparar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
@@ -1885,6 +1892,7 @@
             <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
             <Polish>Automatycznie wyłącz silnik podczas napraw.</Polish>
             <Russian>Автоматически отключать двигатель при выполнении ремонта</Russian>
+            <Portuguese>Automaticamente desliga o motor quando iniciar o reparo do veículo.</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -164,7 +164,7 @@ class CfgAmmo {
     class ACE_IEDLandSmall_Command_Ammo: IEDLandSmall_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
     };
-    class ACE_IEDLandSmall_Range_Ammo: IEDLandBig_Remote_Ammo {
+    class ACE_IEDLandSmall_Range_Ammo: IEDLandSmall_Remote_Ammo {
         mineTrigger = "RangeTriggerShort";
     };
 

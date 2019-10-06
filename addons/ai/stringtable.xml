@@ -12,6 +12,7 @@
             <Korean>위치가 잘못되었습니다.</Korean>
             <Polish>Podano błędną pozycję.</Polish>
             <Russian>Указана неверная позиция</Russian>
+            <Portuguese>Posição inválida fornecida.</Portuguese>
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNoUnits">
             <English>No units provided.</English>
@@ -24,6 +25,7 @@
             <Korean>병력이 없습니다.</Korean>
             <Polish>Nie podano żadnych jednostek.</Polish>
             <Russian>Не указаны юниты</Russian>
+            <Portuguese>Nenhuma unidade fornecida.</Portuguese>
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
@@ -36,6 +38,7 @@
             <Korean>모든 병력을 배치 할 공간이 없습니다.</Korean>
             <Polish>Nie ma wystarczającej ilości pozycji, aby umieścić wszystkie jednostki.</Polish>
             <Russian>Недостаточно позиций для размещения всех юнитов</Russian>
+            <Portuguese>Não há posições suficientes para colocar todas as unidades.</Portuguese>
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNoBuilding">
             <English>No building found.</English>
@@ -48,6 +51,7 @@
             <Korean>건물이 없습니다.</Korean>
             <Polish>Nie znaleziono budynku.</Polish>
             <Russian>Здание не найдено</Russian>
+            <Portuguese>Nenhuma construção encontrada.</Portuguese>
         </Key>
     </Package>
 </Project>

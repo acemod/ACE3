@@ -13,16 +13,17 @@
  * Public: No
  */
 
-params ["_unit", ["_reason", "unknown"]];
+params ["_unit", ["_reason", "#setDead"]];
+TRACE_2("setDead",_unit,_reason);
 
 // No heart rate or blood pressure to measure when dead
 _unit setVariable [VAR_HEART_RATE, 0, true];
 _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
 
+_unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
+
+// Send a local event before death
+[QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
+
 // Kill the unit without changing visual apperance
 [_unit, 1] call EFUNC(medical_engine,setStructuralDamage);
-
-private _lastShooter = _unit getVariable [QEGVAR(medical,lastDamageSource), objNull];
-private _lastInstigator = _unit getVariable [QEGVAR(medical,lastInstigator), objNull];
-
-["ace_killed", [_unit, _reason, _lastShooter, _lastInstigator]] call CBA_fnc_globalEvent;
