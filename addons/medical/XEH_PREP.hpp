@@ -1,3 +1,5 @@
+PREP(addCustomPain);
 PREP(addDamageToUnit);
-PREP(adjustPainLevel);
+PREP(getCustomPain);
+PREP(setCustomPain);
 PREP(setUnconscious);

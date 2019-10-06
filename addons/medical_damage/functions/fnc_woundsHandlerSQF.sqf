@@ -114,8 +114,8 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
             private _classComplex = 10 * _woundClassIDToAdd + _category;
 
-            // Create a new injury. Format [0:classComplex, 1:bodypart, 2:amountOf, 3:bleedingRate, 4:woundDamage]
-            private _injury = [_classComplex, _bodyPartNToAdd, 1, _bleeding, _woundDamage];
+            // Create a new injury. Format [0:classComplex, 1:bodypart, 2:amountOf, 3:bleedingRate, 4:woundDamage, 5:pain]
+            private _injury = [_classComplex, _bodyPartNToAdd, 1, _bleeding, _woundDamage, _painLevel];
 
             if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_woundDamage > PENETRATION_THRESHOLD}}) then {
                 _critialDamage = true;
@@ -156,7 +156,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             // if possible merge into existing wounds
             private _createNewWound = true;
             {
-                _x params ["_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
+                _x params ["_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage", "_oldPainLevel"];
                 if (
                         (_classComplex == _classID) &&
                         {_bodyPartNToAdd == _bodyPartN} &&
@@ -170,6 +170,8 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
                     _x set [3, _newBleeding];
                     private _newDamage = (_oldAmountOf * _oldDamage + _woundDamage) / _newAmountOf;
                     _x set [4, _newDamage];
+                    private _newPainLevel = _painLevel max _oldPainLevel;
+                    _x set [5, _newPainLevel];
                     _createNewWound = false;
                 };
             } forEach _openWounds;
@@ -192,8 +194,6 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
 
 _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
-
-[QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call FUNC(handleIncapacitation);

@@ -1,4 +1,6 @@
+PREP(getCustomPain);
 PREP(handleUnitVitals);
+PREP(setCustomPain);
 PREP(updateHeartRate);
-PREP(updatePainSuppress);
+PREP(updatePain);
 PREP(updatePeripheralResistance);

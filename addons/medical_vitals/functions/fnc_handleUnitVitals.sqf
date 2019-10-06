@@ -58,18 +58,6 @@ if !(_inPain isEqualTo IS_IN_PAIN(_unit)) then {
     _unit setVariable [VAR_IN_PAIN, _inPain, true];
 };
 
-// Handle pain due tourniquets, that have been applied more than 120 s ago
-private _tourniquetPain = 0;
-private _tourniquets = GET_TOURNIQUETS(_unit);
-{
-    if (_x > 0 && {CBA_missionTime - _x > 120}) then {
-        _tourniquetPain = _tourniquetPain max (CBA_missionTime - _x - 120) * 0.001;
-    };
-} forEach _tourniquets;
-if (_tourniquetPain > 0) then {
-    [_unit, _tourniquetPain] call EFUNC(medical_status,adjustPainLevel);
-};
-
 // Get Medication Adjustments:
 private _hrTargetAdjustment = 0;
 private _painSupressAdjustment = 0;
@@ -99,7 +87,7 @@ if !(_adjustments isEqualTo []) then {
 };
 
 private _heartRate = [_unit, _hrTargetAdjustment, _deltaT, _syncValues] call FUNC(updateHeartRate);
-[_unit, _painSupressAdjustment, _deltaT, _syncValues] call FUNC(updatePainSuppress);
+[_unit, _painSupressAdjustment, _deltaT, _syncValues] call FUNC(updatePain);
 [_unit, _peripheralResistanceAdjustment, _deltaT, _syncValues] call FUNC(updatePeripheralResistance);
 
 private _bloodPressure = GET_BLOOD_PRESSURE(_unit);
