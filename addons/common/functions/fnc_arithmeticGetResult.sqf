@@ -21,7 +21,7 @@
 params ["_namespace", "_setID", "_operation"];
 TRACE_3("arithmeticGetResult",_namespace,_setID,_operation);
 
-private _data = (_namespace getVariable _setID) param [2, []];
+private _data = (_namespace getVariable _setID) param [2, [{0}]];
 
 switch (_operation) do {
     case "max": {
