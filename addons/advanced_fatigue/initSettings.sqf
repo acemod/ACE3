@@ -23,15 +23,15 @@
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(solidStaminaBar),
+    QGVAR(fadeStaminaBar),
     "CHECKBOX",
-    [LSTRING(SolidStaminaBar), LSTRING(SolidStaminaBar_Description)],
+    [LSTRING(FadeStaminaBar), LSTRING(FadeStaminaBar_Description)],
     LSTRING(DisplayName),
-    false,
+    true,
     false, {
         if (!_this) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-            _staminaBarContainer ctrlSetFade 1;
+            _staminaBarContainer ctrlSetFade 0;
             _staminaBarContainer ctrlCommit 0;
         };
     }
