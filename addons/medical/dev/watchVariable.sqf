@@ -91,7 +91,7 @@ GVAR(dev_watchVariableRunning) = true;
 
 
     // Wounds:
-    _return pushBack "------- Wounds: -------";
+    _return pushBack "------- Open Wounds: -------";
     private _wounds = GET_OPEN_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
@@ -127,17 +127,11 @@ GVAR(dev_watchVariableRunning) = true;
     private _hrTargetAdjustment = 0;
     private _painSupressAdjustment = 0;
     private _peripheralResistanceAdjustment = 0;
-    private _medicationCounts = [];
+    private _uniqueMedications = [];
     private _rawMedications = (_unit getVariable [VAR_MEDICATIONS, []]) apply {
         _x params ["_medication", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust"];
+        _uniqueMedications pushBackUnique _medication;
         private _timeInSystem = CBA_missionTime - _timeAdded;
-        private _index = _medicationCounts find _medication;
-        if (_index < 0) then {
-            _index = _medicationCounts pushBack _medication;
-            _medicationCounts pushBack 0
-        };
-        _medicationCounts set [(_index + 1), (_medicationCounts select (_index + 1)) + linearConversion [_timeTillMaxEffect, _maxTimeInSystem, _timeInSystem, 1, 0, true]];
-
         private _effectRatio = (((_timeInSystem / _timeTillMaxEffect) ^ 2) min 1) * (_maxTimeInSystem - _timeInSystem) / _maxTimeInSystem;
         _hrTargetAdjustment = _hrTargetAdjustment + _hrAdjust * _effectRatio;
         _painSupressAdjustment = _painSupressAdjustment + _painAdjust * _effectRatio;
@@ -145,9 +139,11 @@ GVAR(dev_watchVariableRunning) = true;
         format ["%1 [%2 / %3][%4][%5,%6,%7]",_medication,_timeInSystem toFixed 0,_maxTimeInSystem toFixed 0, _effectRatio toFixed 2, _hrAdjust toFixed 1, _painAdjust toFixed 2, _flowAdjust toFixed 1];
     };
     _return pushBack format ["Adjusts: [HR %1][PS %2][PR %3]", _hrTargetAdjustment toFixed 2, _painSupressAdjustment toFixed 2, _peripheralResistanceAdjustment toFixed 2];
-    for "_i" from 0 to (count _medicationCounts) - 1 step 2 do {
-        _return pushBack format ["-%1: %2", _medicationCounts select _i, _medicationCounts select _i + 1];
-    };
+    {
+        private _medicationCount = [_unit, _x, true] call EFUNC(medical_status,getMedicationCount);
+        private _medicationEffectiveness = [_unit, _x, false] call EFUNC(medical_status,getMedicationCount);
+        _return pushBack format ["-%1: C: %2 - E: %3", _x, _medicationCount toFixed 2, _medicationEffectiveness toFixed 2];
+    } forEach _uniqueMedications;
     _return pushBack "------- Medications Raw: -------";
     _return append _rawMedications;
 
