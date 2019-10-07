@@ -165,13 +165,13 @@
             <Chinese>顯示體力條</Chinese>
             <Chinesesimp>显示体力条</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Advanced_Fatigue_SolidStaminaBar">
-            <English>Solid stamina bar</English>
-            <German>Zeige Ausdauerleiste als deckendes Element</German>
+        <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar">
+            <English>Fade Stamina bar automatically</English>
+            <German>Blende Ausdauerleiste automatisch aus</German>
         </Key>
-        <Key ID="STR_ACE_Advanced_Fatigue_SolidStaminaBar_Description">
-            <English>Shows the stamina bar as solid, regardless of stamina status.</English>
-            <German>Zeigt die Ausdauerleiste als nichttransparentes Element an, unabhängig vom Ausdauerstatus.</German>
+        <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
+            <English>Adjusts transparency of the bar based on stamina status.</English>
+            <German>Passt die Transparenz der Ausdauerleiste abhängig vom Ausdauerstatus an.</German>
         </Key>
     </Package>
 </Project>
