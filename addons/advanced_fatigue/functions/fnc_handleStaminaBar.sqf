@@ -25,7 +25,7 @@ _posAndSize set [2, _stamina * GVAR(staminaBarWidth)];
 _staminaBarContainer ctrlSetPosition _posAndSize;
 
 // - Opacity ------------------------------------------------------------------
-if (!GVAR(solidStaminaBar)) then { 
+if (GVAR(fadeStaminaBar)) then { 
     if (_stamina >= 0.8) then {
         _staminaBarContainer ctrlSetFade (0.9 + 0.1 * (_stamina - 0.8) / 0.2);
     } else {
