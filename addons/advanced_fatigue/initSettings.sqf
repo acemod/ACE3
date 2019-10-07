@@ -29,7 +29,7 @@
     LSTRING(DisplayName),
     true,
     false, {
-        if (!_this) then {
+        if (!_this && GVAR(enableStaminaBar)) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
             _staminaBarContainer ctrlSetFade 0;
             _staminaBarContainer ctrlCommit 0;
