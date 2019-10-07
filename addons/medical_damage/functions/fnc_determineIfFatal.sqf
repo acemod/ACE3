@@ -18,6 +18,9 @@
  * Public: No
  */
 
+#define WEIBULL_K 6.5625
+#define WEIBULL_L 0.704523
+
 params ["_unit", "_part", "_bodyPartDamage", "_woundDamage"];
 
 if (_part > 1) exitWith { false };
@@ -45,10 +48,9 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
 
     _bodyPartDamage params ["_headDamage", "_bodyDamage"];
 
-    private _chanceFatal = 0;
-    if (_headDamage > _headThreshhold) then { _chanceFatal = _chanceFatal + 0.95 * (_headDamage - _headThreshhold); };
-    if (_bodyDamage > _bodyThreshhold) then { _chanceFatal = _chanceFatal + 0.75 * (_bodyDamage - _bodyThreshhold); };
-    TRACE_2("",_chanceFatal,_bodyPartDamage);
+    private _vitalDamage = ((_headDamage - _headThreshhold) max 0) + ((_bodyDamage - _bodyThreshhold) max 0);
+    private _chanceFatal = 1 - exp -((_vitalDamage/WEIBULL_L)^WEIBULL_K);
+    TRACE_3("",_bodyPartDamage,_vitalDamage,_chanceFatal);
 
     if (_chanceFatal > random 1) exitWith {
         TRACE_1("determineIfFatal: lethal trauma",_woundDamage);
