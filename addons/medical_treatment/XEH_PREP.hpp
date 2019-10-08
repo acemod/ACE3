@@ -10,6 +10,7 @@ PREP(canSplint);
 PREP(canStitch);
 PREP(canTreat);
 PREP(canTreatCached);
+PREP(canTreat_holsterCheck);
 PREP(checkBloodPressure);
 PREP(checkBloodPressureLocal);
 PREP(checkItems);

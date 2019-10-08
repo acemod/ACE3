@@ -426,6 +426,24 @@
             <Russian>Техника и госпитали</Russian>
             <Portuguese>Veículos e Instalações Médicas</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
+            <English>Holster Required</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
+            <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam - Allows examination actions (checking pulse, blood pressure, response) at all times regardless of Holster Required setting.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
+            <English>Lowered or Holstered</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
+            <English>Lowered or Holstered (Except Exam)</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
+            <English>Holstered only</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
+            <English>Holstered only (Except Exam)</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
