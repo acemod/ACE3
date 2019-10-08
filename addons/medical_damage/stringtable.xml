@@ -477,5 +477,20 @@
             <Japanese>大きな刺し傷</Japanese>
             <Korean>대형 관통상</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_DisplayName">
+            <English>Fatal Damage Source</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
+            <English>Determines what damage can be fatal</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
+            <English>Only large hits to vital organs</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
+            <English>Sum of trauma</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
+            <English>Either</English>
+        </Key>
     </Package>
 </Project>

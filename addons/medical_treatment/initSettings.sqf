@@ -30,6 +30,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(clearTraumaAfterBandage),
+    "CHECKBOX",
+    [LSTRING(clearTraumaAfterBandage_DisplayName), LSTRING(clearTraumaAfterBandage_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    false,
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(advancedMedication),
     "CHECKBOX",
     [LSTRING(AdvancedMedication_DisplayName), LSTRING(AdvancedMedication_Description)],

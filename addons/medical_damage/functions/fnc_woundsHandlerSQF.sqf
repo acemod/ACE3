@@ -121,26 +121,16 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_woundDamage > PENETRATION_THRESHOLD}}) then {
                 _critialDamage = true;
             };
+            if ([_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)) then {
+                TRACE_1("determineIfFatal returned true",_woundDamage);
+                [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+            };
 
             #ifdef DEBUG_MODE_FULL
             systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, _woundDamage toFixed 2, _woundDamage > PENETRATION_THRESHOLD, _bleeding toFixed 3, _pain toFixed 3];
             #endif
 
-            // Emulate damage to vital organs
             switch (true) do {
-                // Fatal damage to the head is guaranteed death
-            case (_bodyPartNToAdd == 0 && {_woundDamage >= HEAD_DAMAGE_THRESHOLD}): {
-                    TRACE_1("lethal headshot",_woundDamage toFixed 2);
-                    [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
-                };
-                // Fatal damage to torso has various results based on organ hit
-            case (_bodyPartNToAdd == 1 && {_woundDamage >= ORGAN_DAMAGE_THRESHOLD}): {
-                    // Heart shot is lethal
-                    if (random 1 < HEART_HIT_CHANCE) then {
-                        TRACE_1("lethal heartshot",_woundDamage toFixed 2);
-                        [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
-                    };
-                };
             case (_causeFracture && {EGVAR(medical,fractures) > 0} && {_bodyPartNToAdd > 1} && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}): {
                     TRACE_1("limb fracture",_bodyPartNToAdd);
                     private _fractures = GET_FRACTURES(_unit);
