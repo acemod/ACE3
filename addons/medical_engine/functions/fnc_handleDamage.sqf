@@ -81,7 +81,10 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     TRACE_2("incoming",_allDamages,_damageStructural);
 
     // represents all incoming damage for selecting a non-selectionSpecific wound location, (used for selectRandomWeighted [value1,weight1,value2....])
-    private _damageSelectionArray = [0, _damageHead, 1, _damageBody, 2, _damageLeftArm, 3, _damageRightArm, 4, _damageLeftLeg, 5, _damageRightLeg];
+    private _damageSelectionArray = [
+        HITPOINT_INDEX_HEAD, _damageHead, HITPOINT_INDEX_BODY, _damageBody, HITPOINT_INDEX_LARM, _damageLeftArm, 
+        HITPOINT_INDEX_RARM, _damageRightArm, HITPOINT_INDEX_LLEG, _damageLeftLeg, HITPOINT_INDEX_RLEG, _damageRightLeg
+    ];
 
     _allDamages sort false;
     (_allDamages select 0) params ["_receivedDamage", "", "_woundedHitPoint"];
@@ -178,7 +181,7 @@ if (
     {getOxygenRemaining _unit <= 0.5} &&
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
-    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning", [1, 1]]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning", [HITPOINT_INDEX_BODY, 1]]] call CBA_fnc_localEvent;
     TRACE_5("Drowning",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
@@ -194,7 +197,11 @@ if (
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
-    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash", [0, 1, 1, 1, 2, 1, 3, 1, 4, 1, 5, 1]]] call CBA_fnc_localEvent;
+    private _damageSelectionArray = [
+        HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1, 
+        HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1
+    ];
+    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
