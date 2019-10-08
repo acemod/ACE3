@@ -4,7 +4,7 @@
     params ["_unit", "_painLevel"];
     [_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call FUNC(playInjuredSound);
 
-    if (hasInterface) then {
+    if (hasInterface && {_unit == ace_player}) then {
         [true] call FUNC(handleEffects);
     };
 }] call CBA_fnc_addEventHandler;

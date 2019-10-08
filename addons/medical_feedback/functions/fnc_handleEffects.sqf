@@ -45,7 +45,7 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
     true, linearConversion [BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE, _bloodVolume, 0, 1, true]
 ] call FUNC(effectBloodVolume);
 
-[!_unconscious, _pain, _manualUpdate] call FUNC(effectPain);
+[!_unconscious, _pain] call FUNC(effectPain);
 [!_unconscious, _bleedingStrength, _manualUpdate] call FUNC(effectBleeding);
 
 END_COUNTER(handleEffects);
