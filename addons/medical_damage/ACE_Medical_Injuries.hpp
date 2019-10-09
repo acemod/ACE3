@@ -47,7 +47,6 @@ class ACE_Medical_Injuries {
         };
         // Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
         class Laceration {
-            selections[] = {"All"};
             causes[] = {"vehiclecrash", "collision", "punch"};
             bleeding = 0.05;
             pain = 0.2;
@@ -94,11 +93,11 @@ class ACE_Medical_Injuries {
             selectionSpecific = 0;
         };
         class vehiclecrash {
-            thresholds[] = {{0.5, 5}, {0.3, 2}, {0.05, 1}};
+            thresholds[] = {{1.5, 3}, {1, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
         };
         class collision {
-            thresholds[] = {{0.5, 5}, {0.3, 2}, {0.05, 1}};
+            thresholds[] = {{1.5, 3}, {1, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
         };
         class backblast {
@@ -114,8 +113,8 @@ class ACE_Medical_Injuries {
             selectionSpecific = 1;
         };
         class falling {
-            thresholds[] = {{0.6, 4}, {0.35, 2}, {0.1, 1}};
-            selectionSpecific = 1;
+            thresholds[] = {{1.5, 3}, {1, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            selectionSpecific = 0;
         };
         class ropeburn {
             thresholds[] = {{0.1, 1}};

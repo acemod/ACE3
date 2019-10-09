@@ -25,10 +25,12 @@
 params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_bodyPart", "", [""]], ["_typeOfDamage", "", [""]], ["_instigator", objNull, [objNull]]];
 TRACE_5("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator);
 
-private _bodyPartIndex = ALL_BODY_PARTS find (toLower _bodyPart);
-if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_1("addDamageToUnit - badUnit %1", _this); false};
-if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this); false};
+_bodyPart = toLower _bodyPart;
+private _bodyPartIndex = ALL_BODY_PARTS find _bodyPart;
+if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }; // 2nd attempt with selection names ("hand_l", "hand_r", "leg_l", "leg_r") 
 if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1", _this); false};
+if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]", _this, local _unit); false};
+if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this); false};
 
 // Extension is case sensitive and expects this format (different from ALL_BODY_PARTS)
 _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;

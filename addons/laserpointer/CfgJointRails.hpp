@@ -7,7 +7,6 @@ class asdg_FrontSideRail: asdg_SlotInfo {
     };
 };
 
-class PointerSlot;
 class PointerSlot_Rail: PointerSlot {
     class compatibleItems {
         ACE_acc_pointer_red = 1;

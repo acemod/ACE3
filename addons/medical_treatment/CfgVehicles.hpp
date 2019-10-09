@@ -151,8 +151,8 @@ class CfgVehicles {
         };
     };
     class ACE_atropineItem: Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
+        scope = 1;
+        scopeCurator = 1;
         displayName = CSTRING(Atropine_Display);
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
@@ -308,7 +308,6 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_splint,15);
             MACRO_ADDITEM(ACE_morphine,15);
             MACRO_ADDITEM(ACE_adenosine,15);
-            MACRO_ADDITEM(ACE_atropine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
             MACRO_ADDITEM(ACE_plasmaIV,7);
             MACRO_ADDITEM(ACE_plasmaIV_500,7);
