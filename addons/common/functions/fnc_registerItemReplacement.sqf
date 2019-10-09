@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Item or item type ID to replace <STRING or NUMBER>
  * 1: Item or list of items <STRING or ARRAY>
- * 2: Replace items that inherit from original item (only if 0 is STRING) <BOOL>
+ * 2: Replace items that inherit from original item (only if 0 is STRING) (Optional)<BOOL>
  *
  * Return Value:
  * None
@@ -17,7 +17,8 @@
  *
  * Public: Yes
  */
-params ["_oldItem", "_newItems", ["_replaceInherited", false]];
+params [["_oldItem", "", [0,""]], ["_newItems", "", ["", []]], ["_replaceInherited", false, [false]]];
+TRACE_3("registerItemReplacement",_oldItem,_newItems,_replaceInherited);
 
 // CBA player event handler function
 private _fnc_replaceItems = {
@@ -32,15 +33,13 @@ private _fnc_replaceItems = {
     };
 
     _newItems sort true; // Sort so all items of current class can be replaced at once
-    private _replacements = [];
     private _cfgWeapons = configFile >> "CfgWeapons"; // Microoptimization
 
     for "_i" from 0 to count _newItems - 1 do {
         private _item = _newItems#_i;
 
         // Determine replacement items: direct replacements, ...
-        private _directReplacement = GVAR(itemReplacements) getVariable [_item, []];
-        _replacements append _directReplacement;
+         private _replacements = GVAR(itemReplacements) getVariable [_item, []];
 
         // ... item type replacements ...
         private _type = getNumber (_cfgWeapons >> _item >> "ItemInfo" >> "type");
@@ -50,20 +49,21 @@ private _fnc_replaceItems = {
         // ... and inherited replacements
         {
             if (_item isKindOf [_x, _cfgWeapons]) then {
-                private _inheritedReplacements = GVAR(itemReplacements) getVariable ["$" + _x, []];
+                private _inheritedReplacements = GVAR(itemReplacements) getVariable [_x, []];
                 _replacements append _inheritedReplacements;
             };
         } forEach GVAR(inheritedReplacements);
 
         // Skip lookup for all following items of this class
         private _count = 1;
-        while {_newItems#(_i + 1) == _item} do {
+        while {_newItems#(_i + 1) == _item} do { // (i+1) can be out of bounds, but should fail safely
             _count = _count + 1;
             _i = _i + 1;
         };
 
         // Replace all items of current class in list
         if !(_replacements isEqualTo []) then {
+            TRACE_3("replace",_item,_count,_replacements);
             _unit removeItems _item;
 
             for "_j" from 1 to _count do {
@@ -86,16 +86,14 @@ if (isNil QGVAR(itemReplacements)) then {
 // Save item replacement
 // $ prefix is used for types (numbers) and replacements with inheritance
 if (_replaceInherited) then {
-    GVAR(inheritedReplacements) pushBack _oldItem;
     _oldItem = "$" + _oldItem;
+    GVAR(inheritedReplacements) pushBack _oldItem;
 };
 if (_oldItem isEqualType 0) then {
     _oldItem = "$" + str _oldItem;
 };
 if (_newItems isEqualType "") then {
-    _newItems = [toLower _newItems];
-} else {
-    _newItems = _newItems apply {toLower _x};
+    _newItems = [_newItems];
 };
 
 private _oldReplacements = GVAR(itemReplacements) getVariable [_oldItem, []];

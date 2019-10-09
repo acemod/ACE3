@@ -44,27 +44,4 @@ GVAR(facilityClasses) = [];
     } forEach getArray _x;
 } forEach configProperties [configFile >> QEGVAR(medical,facilities), "isArray _x"];
 
-// replace medical items with their ACE equivalents
-configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"] apply {
-    // turn [["stuff", 2], ...] into ["stuff", "stuff", ...]
-    private _replacements = [];
-    {
-        _x params ["_item", "_count"];
-        for "_i" from 1 to _count do {
-            _replacements pushBack _item;
-        };
-    } forEach getArray _x;
-
-    // check if replacement is for item type or class name
-    private _configName = configName _x;
-    private _toReplace = if (_configName find "ItemType_" == 0) then {
-        parseNumber (_configName select [9])
-    } else {
-        _configName
-    };
-
-    // register replacement
-    [_toReplace, _replacements] call EFUNC(common,registerItemReplacement);
-};
-
 ADDON = true;
