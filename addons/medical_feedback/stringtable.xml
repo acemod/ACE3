@@ -8,6 +8,7 @@
             <Russian>Реакция на ранения</Russian>
             <French>Réaction aux blessures</French>
             <Portuguese>Reação a Lesões</Portuguese>
+            <Turkish>geri bildirim</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -22,6 +23,7 @@
             <Czech>Typ bolesti - efekt</Czech>
             <Japanese>痛み効果の種類</Japanese>
             <Korean>고통 효과 종류</Korean>
+            <Turkish>Ağrı etkisi türü</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
             <English>Selects the used pain effect type.</English>
@@ -29,6 +31,7 @@
             <French>Permet de choisir quel effet provoque la douleur.</French>
             <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
             <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
+            <Turkish>Kullanılan ağrı efekti türünü seçer.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -37,6 +40,7 @@
             <Russian>Белые вспышки</Russian>
             <French>Flash blancs</French>
             <Portuguese>Flashes Brancos</Portuguese>
+            <Turkish>Yanıp Sönen Beyaz</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -45,6 +49,7 @@
             <Russian>Пульсирующее размытие</Russian>
             <French>Pulsations floues</French>
             <Portuguese>Borrão Pulsante</Portuguese>
+            <Turkish>Darbe Bulanıklığı</Turkish>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
@@ -62,6 +67,7 @@
                 <Korean>비명 활성화</Korean>
                 <Chinesesimp>启用尖叫</Chinesesimp>
                 <Chinese>啟用尖叫</Chinese>
+                <Turkish>Çığlıkları Etkinleştir</Turkish>
             </Key>
             <Key ID="STR_ACE_Medical_feedback_enableScreams_Description">
                 <English>Enable screaming by injured units</English>
@@ -78,6 +84,7 @@
                 <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
                 <Chinesesimp>启用伤者的尖叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
+                <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
             </Key>
         </Container>
     </Package>

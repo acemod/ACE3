@@ -14,6 +14,7 @@
             <Russian>Указана неверная позиция</Russian>
             <Portuguese>Posição inválida fornecida.</Portuguese>
             <Spanish>Posición no válida proporcionada</Spanish>
+            <Turkish>Geçersiz konum sağlandı.</Turkish>
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNoUnits">
             <English>No units provided.</English>
@@ -28,6 +29,7 @@
             <Russian>Не указаны юниты</Russian>
             <Portuguese>Nenhuma unidade fornecida.</Portuguese>
             <Spanish>No hay unidades proporcionadas.</Spanish>
+            <Turkish>Sağlanan birim yok.</Turkish>
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
@@ -42,6 +44,7 @@
             <Russian>Недостаточно позиций для размещения всех юнитов</Russian>
             <Portuguese>Não há posições suficientes para colocar todas as unidades.</Portuguese>
             <Spanish>No hay suficientes posiciones para colocar todas las unidades.</Spanish>
+            <Turkish>Tüm birimleri yerleştirmek için yeterli pozisyon yok.</Turkish>
         </Key>
         <Key ID="STR_ACE_ai_GarrisonNoBuilding">
             <English>No building found.</English>
@@ -56,6 +59,7 @@
             <Russian>Здание не найдено</Russian>
             <Portuguese>Nenhuma construção encontrada.</Portuguese>
             <Spanish>No se encontró edificio.</Spanish>
+            <Turkish>Bina bulunamadı.</Turkish>
         </Key>
     </Package>
 </Project>

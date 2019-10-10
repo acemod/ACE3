@@ -16,6 +16,7 @@
             <Korean>XM301</Korean>
             <Chinese>XM301</Chinese>
             <Chinesesimp>XM301</Chinesesimp>
+            <Turkish>XM301</Turkish>
         </Key>
         <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
             <English>Open Cargo Door</English>
@@ -32,6 +33,7 @@
             <Korean>화물칸 개방</Korean>
             <Chinese>開啟貨艙門</Chinese>
             <Chinesesimp>开启货舱门</Chinesesimp>
+            <Turkish>Kargo Kapısını Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
             <English>Close Cargo Door</English>
@@ -48,6 +50,7 @@
             <Korean>화물칸 폐쇄</Korean>
             <Chinese>關閉貨艙門</Chinese>
             <Chinesesimp>关闭货舱门</Chinesesimp>
+            <Turkish>Kargo Kapısını Kapat</Turkish>
         </Key>
     </Package>
 </Project>
