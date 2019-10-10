@@ -644,6 +644,7 @@
             <Chinesesimp>传送玩家</Chinesesimp>
             <Chinese>傳送玩家</Chinese>
             <Portuguese>Teleportar Jogadores</Portuguese>
+            <Spanish>Teletransportadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
             <English>Player</English>
@@ -658,6 +659,7 @@
             <Chinesesimp>玩家</Chinesesimp>
             <Chinese>玩家</Chinese>
             <Portuguese>Jogador</Portuguese>
+            <Spanish>Player</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
             <English>Teleport selected player to module position</English>
@@ -700,6 +702,7 @@
             <Chinesesimp>传送全部小队成员</Chinesesimp>
             <Chinese>傳送全部小隊成員</Chinese>
             <Portuguese>Teleporta todas as unidades do grupo</Portuguese>
+            <Spanish>Teletransporta todas las unidades en grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -730,6 +733,7 @@
             <Chinesesimp>搜索区域</Chinesesimp>
             <Chinese>搜索區域</Chinese>
             <Portuguese>Procurar Área</Portuguese>
+            <Spanish>Área de búsqueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
@@ -744,6 +748,7 @@
             <Chinesesimp>搜索附近的建筑物</Chinesesimp>
             <Chinese>搜索附近的建築物</Chinese>
             <Portuguese>Procurar construções próximas</Portuguese>
+            <Spanish>Buscar edificio cercano</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -802,6 +807,7 @@
             <Chinese>切換模擬</Chinese>
             <Russian>Вкл/Выкл симуляцию</Russian>
             <Portuguese>Alternar Simulação</Portuguese>
+            <Spanish>Simulación de alternancia</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -954,6 +960,7 @@
             <Chinesesimp>单位必须属于一个合适的一边</Chinesesimp>
             <Chinese>單位必須屬於一個合適的一邊</Chinese>
             <Portuguese>Unidade deve pertencer á um lado apropriado</Portuguese>
+            <Spanish>La unidad debe pertenecer a un lado apropiado</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
@@ -968,6 +975,7 @@
             <Chinesesimp>最近的房子离太远了</Chinesesimp>
             <Chinese>最近的房子離太遠了</Chinese>
             <Portuguese>A construção mais próxima está longe demais</Portuguese>
+            <Spanish>El edificio más cercano está muy lejos.</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -1009,6 +1017,7 @@
             <Japanese>なし</Japanese>
             <Russian>Нет</Russian>
             <Portuguese>Nenhum</Portuguese>
+            <Spanish>Ninguno</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
@@ -1018,6 +1027,7 @@
             <Japanese>プレイヤー</Japanese>
             <Russian>Игроки</Russian>
             <Portuguese>Jogadores</Portuguese>
+            <Spanish>Jugadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
@@ -1027,6 +1037,7 @@
             <Japanese>プレイヤーと AI</Japanese>
             <Russian>Игроки и ИИ</Russian>
             <Portuguese>Jogadores e IA</Portuguese>
+            <Spanish>Jugadores e IA</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -1094,6 +1105,7 @@
             <Chinesesimp>目标半径</Chinesesimp>
             <Chinese>目標半徑</Chinese>
             <Portuguese>Área da tarefa</Portuguese>
+            <Spanish>Radio de tarea</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_Tooltip">
             <English>Radius to perform the task within</English>
@@ -1134,6 +1146,7 @@
             <Korean>엄호사격</Korean>
             <Russian>Огонь на подавление</Russian>
             <Portuguese>Fogo de Supressão</Portuguese>
+            <Spanish>Fuego supresivo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullArsenal_DisplayName">
             <English>Add Full Arsenal</English>
@@ -1222,6 +1235,7 @@
             <Polish>Przełącz cel</Polish>
             <Russian>Кому переключить</Russian>
             <Portuguese>Alternar alvo</Portuguese>
+            <Spanish>Objetivo de palanca</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
@@ -1259,6 +1273,7 @@
             <Polish>Przełącz latarki</Polish>
             <Russian>Вкл/Выкл Фонари</Russian>
             <Portuguese>Alternar Lanternas</Portuguese>
+            <Spanish>Alternar linternas</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_Flashlights">
             <English>Flashlights</English>
@@ -1272,6 +1287,7 @@
             <Polish>Latarki</Polish>
             <Russian>Фонари</Russian>
             <Portuguese>Lanternas</Portuguese>
+            <Spanish>Linternas</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_AddGear">
             <English>Add Gear</English>
@@ -1389,6 +1405,7 @@
             <Polish>Teleport</Polish>
             <Russian>Телепорт</Russian>
             <Portuguese>Teleportar</Portuguese>
+            <Spanish>Teletransporte</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison Group</English>
@@ -1621,6 +1638,7 @@
             <Polish>Dodaj pełny arsenał ACE</Polish>
             <Russian>Добавить полный ACE Арсенал</Russian>
             <Portuguese>Adicionar Arsenal ACE Completo</Portuguese>
+            <Spanish>Añadir ACE Arsenal completo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
             <English>Remove ACE Arsenal</English>
@@ -1632,6 +1650,7 @@
             <Polish>Usuń arsenał ACE</Polish>
             <Russian>Убрать ACE Арсенал</Russian>
             <Portuguese>Remover Arsenal ACE</Portuguese>
+            <Spanish>Eliminar ACE Arsenal</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_CreateZeus">
             <English>Create Zeus</English>
@@ -1641,6 +1660,7 @@
             <Polish>Stwórz Zeus'a</Polish>
             <Italian>Crea Zeus</Italian>
             <Portuguese>Criar Zeus</Portuguese>
+            <Spanish>Crear Zeus</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
@@ -1650,6 +1670,7 @@
             <Polish>Usuń Zeus'a</Polish>
             <Italian>Cancella Zeus</Italian>
             <Portuguese>Apagar Zeus</Portuguese>
+            <Spanish>Eliminar Zeus</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
@@ -1675,6 +1696,7 @@
             <Polish>Niczego nie załadowano do cargo</Polish>
             <Russian>Грузовой отсек пуст</Russian>
             <Portuguese>Nenhuma carga carregada</Portuguese>
+            <Spanish>No hay carga cargada</Spanish>
         </Key>
     </Package>
 </Project>

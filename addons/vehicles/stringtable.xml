@@ -41,6 +41,7 @@
             <Polish>Ograniczenie prędkości</Polish>
             <Russian>Ограничение скорости</Russian>
             <Portuguese>Limite de Velocidade</Portuguese>
+            <Spanish>Límite de velocidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -66,6 +67,7 @@
             <Polish>Zwiększ ograniczenie prędkości</Polish>
             <Russian>Увеличить ограничение скорости</Russian>
             <Portuguese>Aumentar Limite de Velocidade</Portuguese>
+            <Spanish>Aumentar límite de velocidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
             <English>Decrease Speed Limit</English>
@@ -75,6 +77,7 @@
             <Polish>Zmniejsz ograniczenie prędkości</Polish>
             <Russian>Уменьшить ограничение скорости</Russian>
             <Portuguese>Diminuir Limite de Velocidade</Portuguese>
+            <Spanish>Disminuir límite de velocidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
             <English>Disable automatic engine shut-off</English>
@@ -82,6 +85,7 @@
             <Japanese>エンジン自動停止を無効化</Japanese>
             <Russian>Убрать автовыключение двигателя</Russian>
             <Portuguese>Desativar desligamento automático do motor</Portuguese>
+            <Spanish>Desactivar apagado automático del motor</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
@@ -89,6 +93,7 @@
             <Japanese>車両から降りた時のエンジンの自動停止を防ぎます。</Japanese>
             <Russian>Запрещает автоматическое выключение двигателя при выходе из транспорта</Russian>
             <Portuguese>Previne que o motor do veículo seja desligado automaticamente quando o motorista sair.</Portuguese>
+            <Spanish>Evite el apagado automático del motor al salir de los vehículos.</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>
@@ -97,6 +102,7 @@
             <Russian>Убрать действие 'Выпрыгнуть'</Russian>
             <Japanese>脱出アクションを非表示</Japanese>
             <Portuguese>Ocultar opção de Ejetar</Portuguese>
+            <Spanish>Ocultar acción de expulsión</Spanish>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
             <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
@@ -105,6 +111,7 @@
             <Russian>Убирает действие 'Выпрыгнуть' из меню. (Требует перезагрузки)</Russian>
             <Japanese>アクション メニューから脱出アクションを消します。ゲームの再起動が必要です。</Japanese>
             <Portuguese>Oculta a opção de interação para ejetar. Requer que o jogo seja reiniciado.</Portuguese>
+            <Spanish>Oculta la entrada Expulsar del menú de acciones. Requiere un reinicio del juego.</Spanish>
         </Key>
     </Package>
 </Project>
