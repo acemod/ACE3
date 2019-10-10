@@ -12,6 +12,7 @@
             <Polish>Ogólny</Polish>
             <Russian>Общий</Russian>
             <Portuguese>Comum</Portuguese>
+            <Spanish>Común</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -517,6 +518,7 @@
             <Polish>Sprawdź akcję PBO</Polish>
             <Russian>Действие при проверке PBO</Russian>
             <Portuguese>Ação de Checar PBO</Portuguese>
+            <Spanish>Comprobar PBO</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -529,6 +531,7 @@
             <Polish>Sprawdź wszystkie PBO</Polish>
             <Russian>Проверять все PBO</Russian>
             <Portuguese>Checar Todos os PBOs</Portuguese>
+            <Spanish>Comprobar PBO todo</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -541,6 +544,7 @@
             <Polish>Sprawdź białą listę PBO</Polish>
             <Russian>Белый список для проверки PBO</Russian>
             <Portuguese>Lista Branca de PBO</Portuguese>
+            <Spanish>Comprobar PBO lista blanca</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -1017,6 +1021,7 @@
             <Japanese>常に</Japanese>
             <Russian>Всегда</Russian>
             <Portuguese>Sempre</Portuguese>
+            <Spanish>Siempre</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1098,6 +1103,7 @@
             <German>Bestätigen</German>
             <Russian>Подтвердить</Russian>
             <Portuguese>Confirmar</Portuguese>
+            <Spanish>Confirmar</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1105,6 +1111,7 @@
             <German>Nie</German>
             <Russian>Никогда</Russian>
             <Portuguese>Nunca</Portuguese>
+            <Spanish>Nunca</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
