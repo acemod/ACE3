@@ -37,7 +37,7 @@ if (isServer) then {
 ["ace_settingsInitialized", {
     TRACE_1("ace_settingsInitialized EH",GVAR(convertItems)); // 0: Enabled 1: RemoveOnly 2:Disabled
     if (GVAR(convertItems) == 2) exitWith {};
-    configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"] apply {
+    {
         // turn [["stuff", 2], ...] into ["stuff", "stuff", ...]
         private _replacements = [];
         if (GVAR(convertItems) == 0) then {
@@ -59,5 +59,5 @@ if (isServer) then {
 
         // register replacement
         [_toReplace, _replacements] call EFUNC(common,registerItemReplacement);
-    };
+    } forEach (configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"]);
 }] call CBA_fnc_addEventHandler;
