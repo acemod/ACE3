@@ -48,7 +48,7 @@ if (_target isKindOf "CAManBase") then {
     [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
     [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);
 
-    _timer = CBA_missionTime + 15;
+    _timer = CBA_missionTime + 10;
 
 } else {
 

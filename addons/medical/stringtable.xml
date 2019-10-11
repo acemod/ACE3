@@ -23,6 +23,7 @@
             <Japanese>気絶から覚醒する可能性</Japanese>
             <Russian>Шанс очнуться при потере сознания</Russian>
             <French>Chance de reprendre connaissance</French>
+            <Portuguese>Chance de recuperar consciência</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
@@ -30,54 +31,61 @@
             <Japanese>安定状態にある人が覚醒する確率です。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
             <French>La probabilité pour qu'une unité en état stable puisse reprendre conscience (état vérifié toutes les 15 secondes).</French>
+            <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
+            <English>Epinephrine Increases Wake Up Chance</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
+            <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
             <Russian>Хромота</Russian>
             <Japanese>跛行</Japanese>
             <French>Boitement</French>
+            <Portuguese>Mancando</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
-            <English>Limp when unit has leg wounds...(todo)</English>
-            <Russian>Хромота, когда юнит имеет ранения ног...</Russian>
-            <Japanese>足を負傷時に引きずって歩くようにします・・・(TODO)</Japanese>
-            <French>Une unité boite si elle est blessée à la jambe... (TODO)</French>
+            <English>Controls whether open or bandaged wounds cause a person to limp.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
-            <English>Limp on open wounds</English>
+            <English>Limp on Open Wounds</English>
             <Russian>Хромота при открытых ранах</Russian>
             <Japanese>創傷開放時に跛行</Japanese>
             <French>Boiter si plaies ouvertes</French>
+            <Portuguese>Mancar se possuir feridas abertas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
-            <English>Limp on open or bandaged wounds</English>
+            <English>Limp on Open or Bandaged Wounds</English>
             <Russian>Хромота при открытых или забинтованых ранах</Russian>
             <Japanese>負傷時は引きずって歩くようにします</Japanese>
             <French>Boiter si plaies ouvertes ou pansées</French>
+            <Portuguese>Mancar se possuir feridas abertas ou atadas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
             <Russian>Переломы</Russian>
             <Japanese>骨折</Japanese>
             <French>Fractures</French>
+            <Portuguese>Fraturas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
-            <English>Limp fractures... (todo)</English>
-            <Russian>Хромота при переломах...</Russian>
-            <Japanese>骨折時は引きずって歩くようにします・・・ (TODO)</Japanese>
-            <French>Une unité boite en cas de fracture... (TODO)</French>
+            <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
-            <English>Splints fully heal fractures</English>
+            <English>Splints Fully Heal Fractures</English>
             <Russian>Шины полностью лечат перелом</Russian>
             <Japanese>添え木で骨折完治</Japanese>
             <French>Les attelles guérissent complètement les fractures</French>
+            <Portuguese>Tala cura fraturas completamente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
-            <English>Splints heal (but cannot sprint)</English>
+            <English>Splints Heal, but Cannot Sprint</English>
             <Russian>Шины вылечивают, но не дают бегать</Russian>
             <Japanese>添え木で治療しますが、走れません</Japanese>
             <French>Les attelles guérissent les fractures, mais empêchent de courir</French>
+            <Portuguese>Talas curam (mas não consegue correr)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -371,6 +379,7 @@
             <Polish>Otwórz pokrywę</Polish>
             <Russian>Открыть крышку</Russian>
             <French>Ouvrir le couvercle</French>
+            <Portuguese>Abrir Tampa</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -383,6 +392,7 @@
             <Polish>Zamknij pokrywę</Polish>
             <Russian>Закрыть крышку</Russian>
             <French>Fermer le couvercle</French>
+            <Portuguese>Fechar Tampa</Portuguese>
         </Key>
     </Package>
 </Project>

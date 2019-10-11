@@ -27,6 +27,8 @@ REPOUSER = "acemod"
 REPONAME = "ACE3"
 REPOPATH = "{}/{}".format(REPOUSER,REPONAME)
 
+BRANCH = "master"
+
 
 def update_translations(repo):
     diag = sp.check_output(["python3", "tools/stringtablediag.py", "--markdown"])
@@ -41,14 +43,11 @@ def update_dependencies(repo):
     diff = str(diff, "utf-8")
 
     if diff != "":
-        sha = repo.get_contents(DEPENDENCIESPATH
-            #, ref="travisForDocs" # Debug
-        ).sha
+        sha = repo.get_contents(DEPENDENCIESPATH, ref=BRANCH).sha
         repo.update_file(
-            path="/{}".format(DEPENDENCIESPATH),
-            message="[Docs] Update component dependencies\nAutomatically committed through Travis CI.\n\n[ci skip]",
-            content=dependencies, sha=sha, committer=InputGitAuthor("ace3mod", "ace3mod@gmail.com")
-            #, branch="travisForDocs" # Debug
+            path="{}".format(DEPENDENCIESPATH),
+            message="[Docs] Update component dependencies\nAutomatically committed through CI.\n\n[ci skip]",
+            content=dependencies, sha=sha, committer=InputGitAuthor("ace3mod", "ace3mod@gmail.com"), branch=BRANCH
         )
         print("Dependencies successfully updated.")
     else:

@@ -6,6 +6,13 @@
 #define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
 #define ALL_HITPOINTS ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
 
+#define HITPOINT_INDEX_HEAD 0
+#define HITPOINT_INDEX_BODY 1
+#define HITPOINT_INDEX_LARM 2
+#define HITPOINT_INDEX_RARM 3
+#define HITPOINT_INDEX_LLEG 4
+#define HITPOINT_INDEX_RLEG 5
+
 // Damage threshold above which fatal organ damage can occur
 #define HEAD_DAMAGE_THRESHOLD 1
 #define ORGAN_DAMAGE_THRESHOLD 0.6
@@ -93,6 +100,9 @@
 #define DEFAULT_BANDAGE_REOPENING_CHANCE 0.1
 #define DEFAULT_BANDAGE_REOPENING_MIN_DELAY 120
 #define DEFAULT_BANDAGE_REOPENING_MAX_DELAY 200
+
+// Time it takes to stitch one wound
+#define WOUND_STITCH_TIME 5
 
 #define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
 

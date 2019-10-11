@@ -28,3 +28,12 @@
     [0, 1, 0.05, 2],
     true
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(spontaneousWakeUpEpinephrineBoost),
+    "SLIDER",
+    [LSTRING(spontaneousWakeUpEpinephrineBoost_DisplayName), LSTRING(spontaneousWakeUpEpinephrineBoost_Description)],
+    LSTRING(Category),
+    [1, 30, 1, 1],
+    true
+] call CBA_settings_fnc_init;

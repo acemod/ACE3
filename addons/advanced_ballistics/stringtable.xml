@@ -92,6 +92,7 @@
             <French>Activer les variations de la vitesse initiale</French>
             <Polish>Aktywuj wariację prędkości wylotowej</Polish>
             <Russian>Вкл. вариацию начальной скорости</Russian>
+            <Portuguese>Ativar Variação de Velocidade no Freio de boca (muzzle)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
@@ -104,6 +105,7 @@
             <French>Simule les légères variations</French>
             <Polish>Symuluje lekkie zmiany w prędkości wylotowej między każdym strzałem</Polish>
             <Russian>Имитирует небольшие изменения начальной скорости при каждом выстреле</Russian>
+            <Portuguese>Simula pequenas variações na velocidade do Freio de Boca entre cada tiro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>

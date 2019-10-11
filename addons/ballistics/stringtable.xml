@@ -2290,6 +2290,7 @@
             <Italian>Rigatura della canna</Italian>
             <Polish>Gwintowanie lufy</Polish>
             <Russian>Нарезы ствола</Russian>
+            <Portuguese>Barrel Twist</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
@@ -2301,6 +2302,7 @@
             <Italian>Lunghezza della canna</Italian>
             <Polish>Długość lufy</Polish>
             <Russian>Длина ствола</Russian>
+            <Portuguese>Comprimento do cano</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
@@ -2312,6 +2314,7 @@
             <Italian>Coefficente balistico</Italian>
             <Polish>Współczynnik balistyczny</Polish>
             <Russian>Баллистический коэффициент</Russian>
+            <Portuguese>Coeficiente balístico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
@@ -2323,6 +2326,7 @@
             <Italian>Massa del proiettile</Italian>
             <Polish>Masa pocisku</Polish>
             <Russian>Масса пули</Russian>
+            <Portuguese>Massa do projétil</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
@@ -2334,6 +2338,7 @@
             <Italian>Velocità iniziale</Italian>
             <Polish>Prędkość wylotowa</Polish>
             <Russian>Начальная скорость</Russian>
+            <Portuguese>Velocidade de Saída</Portuguese>
         </Key>
     </Package>
 </Project>

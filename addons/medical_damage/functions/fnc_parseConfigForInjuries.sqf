@@ -76,6 +76,7 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 
     GVAR(allDamageTypesData) setVariable [_className, [_thresholds, _selectionSpecific > 0, _woundTypes]];
 
+    /*
     // extension loading
     private _minDamageThresholds = (_thresholds apply {str (_x select 0)}) joinString ":";
     private _amountThresholds = (_thresholds apply {str (_x select 1)}) joinString ":";
@@ -93,8 +94,10 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 
     // private _extensionRes = "ace_medical" callExtension _extensionArgs;
     // TRACE_1("",_extensionRes);
+    */
 } forEach configProperties [_damageTypesConfig, "isClass _x"];
 
+/*
 // extension loading
 {
     _x params ["_classID", "_selections", "_bleedingRate", "_pain", "_damageExtrema", "_causes", "_displayName"];
@@ -128,3 +131,4 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 } forEach GVAR(woundsData);
 
 // "ace_medical" callExtension "ConfigComplete";
+*/

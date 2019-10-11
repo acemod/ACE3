@@ -17,6 +17,9 @@
 
 params ["_unit"];
 
-(isPlayer _unit && {GVAR(fatalInjuriesPlayer) != FATAL_INJURIES_NEVER}
-|| {!isPlayer _unit && {GVAR(fatalInjuriesAI) != FATAL_INJURIES_NEVER}})
+(if (isPlayer _unit) then {
+    GVAR(fatalInjuriesPlayer) != FATAL_INJURIES_NEVER
+} else {
+    GVAR(fatalInjuriesAI) != FATAL_INJURIES_NEVER
+})
 && {!(_unit getVariable [QEGVAR(medical,deathBlocked), false])}
