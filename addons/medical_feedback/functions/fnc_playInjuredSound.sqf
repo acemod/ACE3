@@ -51,9 +51,17 @@ private _distance = if (_type == "hit") then {
 } else {
     [10, 15, 20] select _severity;
 };
-private _filter = toLower format ["(toLower configName _x) find 'ACE_%1_%2_%3' == 0", _type, _speaker, _variation];
-private _sounds = _filter configClasses (configFile >> "CfgSounds");
+
+private _cfgSounds = configFile >> "CfgSounds";
+private _targetClass = format ["ACE_%1_%2_%3_", _type, _speaker, _variation];
+private _index = 1;
+private _sounds = [];
+while {isClass (_cfgSounds >> (_targetClass + str _index))} do {
+    _sounds pushBack (_cfgSounds >> (_targetClass + str _index));
+    _index = _index + 1;
+};
 private _sound = configName selectRandom _sounds;
+if (isNil "_sound") exitWith { WARNING_1("no sounds for target [%1]",_targetClass); };
 
 // Limit network traffic by only sending the event to players who can potentially hear it
 private _targets = _unit nearEntities ["CAManBase", _distance];
