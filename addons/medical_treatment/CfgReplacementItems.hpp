@@ -18,6 +18,6 @@ class EGVAR(medical,replacementItems) {
         {"ACE_splint", 2}
     };
     ACE_atropine[] = {
-        {"ACE_epinephrine", 1}
+        {"ACE_adenosine", 1}
     };
 };
