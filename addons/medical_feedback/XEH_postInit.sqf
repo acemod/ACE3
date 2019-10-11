@@ -103,7 +103,10 @@ GVAR(bloodTickCounter) = 0;
         _dummy attachTo [_unit, [0, 0, 0], "camera"];
         _dummy say3D [_sound, _distance, 1, false];
 
-        [{deleteVehicle _this}, _dummy, 5] call CBA_fnc_waitAndExecute;
+        [{
+            detach _this;
+            deleteVehicle _this;
+        }, _dummy, 5] call CBA_fnc_waitAndExecute;
     } else {
         // Fallback: attachTo doesn't work within vehicles
         _unit say3D [_sound, _distance, 1, false];
