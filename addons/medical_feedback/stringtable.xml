@@ -46,6 +46,25 @@
             <French>Pulsations floues</French>
             <Portuguese>Borrão Pulsante</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
+            <English>Chromatic Aberration</English>
+            <German>Chromatische Aberration</German>
+            <Polish>Aberracja chromatyczna</Polish>
+            <Russian>Хроматическая аберрация</Russian>
+            <Italian>Aberrazione cromatica</Italian>
+            <Spanish>Aberración cromática</Spanish>
+            <French>Aberration chromatique</French>
+            <Hungarian>Kromatikus aberráció</Hungarian>
+            <Czech>Chromatická aberace</Czech>
+            <Portuguese>Aberração cromática</Portuguese>
+            <Japanese>色の収差</Japanese>
+            <Korean>색수차</Korean>
+            <Chinesesimp>色差</Chinesesimp>
+            <Chinese>色差</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
+            <English>Only high pain effect</English>
+        </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
