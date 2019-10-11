@@ -14,12 +14,20 @@
 #define HITPOINT_INDEX_RLEG 5
 
 // Damage threshold above which fatal organ damage can occur
-#define HEAD_DAMAGE_THRESHOLD 1
-#define ORGAN_DAMAGE_THRESHOLD 0.6
+#define HEAD_DAMAGE_THRESHOLD EGVAR(medical,const_headDamageThreshold)
+#define HEAD_DAMAGE_THRESHOLD_DEFAULT 1
+#define ORGAN_DAMAGE_THRESHOLD EGVAR(medical,const_organDamageThreshold)
+#define ORGAN_DAMAGE_THRESHOLD_DEFAULT 0.6
+// Consts for determineIfFatal: sum of damage
+#define FATAL_SUM_DAMAGE_WEIBULL_K EGVAR(medical,const_fatalSumDamageWeibull_K)
+#define FATAL_SUM_DAMAGE_WEIBULL_K_DEFAULT 6.5625
+#define FATAL_SUM_DAMAGE_WEIBULL_L EGVAR(medical,const_fatalSumDamageWeibull_L)
+#define FATAL_SUM_DAMAGE_WEIBULL_L_DEFAULT 0.704523
 
 // Chance to hit heart based on ratio of 70kg (approx. 70L) body to 70mL stroke volume of heart
 // Assuming torso is 50% of the body volume (35L)
-#define HEART_HIT_CHANCE 0.05
+#define HEART_HIT_CHANCE EGVAR(medical,const_heartHitChance)
+#define HEART_HIT_CHANCE_DEFAULT 0.05
 
 #define MEDICAL_ACTION_DISTANCE 1.75
 
@@ -53,10 +61,12 @@
 #define IV_CHANGE_PER_SECOND 4.1667 // in milliliters per second
 
 // Minimum amount of damage required for penetrating wounds (also minDamage for velocity wounds)
-#define PENETRATION_THRESHOLD 0.35
+#define PENETRATION_THRESHOLD EGVAR(medical,const_penetrationThreshold)
+#define PENETRATION_THRESHOLD_DEFAULT 0.35
 
 // To be replaced by a proper blood pressure calculation
-#define BLOOD_LOSS_KNOCK_OUT_THRESHOLD 0.5 // 50% of cardiac output
+#define BLOOD_LOSS_KNOCK_OUT_THRESHOLD EGVAR(medical,const_bloodLossKnockOutThreshold)
+#define BLOOD_LOSS_KNOCK_OUT_THRESHOLD_DEFAULT 0.5 // 50% of cardiac output
 
 // Used to color interaction icons and body image selections
 #define BLOOD_LOSS_RED_THRESHOLD 0.5
@@ -65,10 +75,12 @@
 #define DAMAGE_TOTAL_COLORS 10
 
 // --- pain
-#define PAIN_UNCONSCIOUS 0.5
+#define PAIN_UNCONSCIOUS EGVAR(medical,const_painUnconscious)
+#define PAIN_UNCONSCIOUS_DEFAULT 0.5
 
 // Pain fade out time (time it takes until pain is guaranteed to be completly gone)
-#define PAIN_FADE_TIME 900
+#define PAIN_FADE_TIME EGVAR(medical,const_painFadeTime)
+#define PAIN_FADE_TIME_DEFAULT 900
 
 // Only relevant when advanced medication is disabled
 // Morphine pain suppression fade out time (time it takes until pain suppression is guaranteed to be completly gone)
@@ -78,10 +90,12 @@
 #define SPONTANEOUS_WAKE_UP_INTERVAL 15
 
 // Minimum leg damage required for limping
-#define LIMPING_DAMAGE_THRESHOLD 0.30
+#define LIMPING_DAMAGE_THRESHOLD EGVAR(medical,const_limpingDamageThreshold)
+#define LIMPING_DAMAGE_THRESHOLD_DEFAULT 0.30
 
 // Minimum limb damage required for fracture
-#define FRACTURE_DAMAGE_THRESHOLD 0.50
+#define FRACTURE_DAMAGE_THRESHOLD EGVAR(medical,const_fractureDamageThreshold)
+#define FRACTURE_DAMAGE_THRESHOLD_DEFAULT 0.50
 
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
