@@ -43,7 +43,7 @@ class ACE_Medical_StateMachine {
     };
     class Unconscious {
         onState = QFUNC(handleStateUnconscious);
-        onStateEntered = QUOTE([ARR_2(_this,true)] call EFUNC(medical_status,setUnconscious));
+        onStateEntered = QUOTE([ARR_2(_this,true)] call EFUNC(medical_status,setUnconsciousState));
         class DeathAI {
             targetState = "Dead";
             condition = QUOTE(!GVAR(AIUnconsciousness) && {!isPlayer _this});
@@ -52,7 +52,7 @@ class ACE_Medical_StateMachine {
             targetState = "Injured";
             condition = QEFUNC(medical_status,hasStableVitals);
             events[] = {QEGVAR(medical,WakeUp)};
-            onTransition = QUOTE([ARR_2(_this,false)] call EFUNC(medical_status,setUnconscious));
+            onTransition = QUOTE([ARR_2(_this,false)] call EFUNC(medical_status,setUnconsciousState));
         };
         class FatalTransitions {
             targetState = "CardiacArrest";
