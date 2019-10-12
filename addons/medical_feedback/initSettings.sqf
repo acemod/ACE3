@@ -18,3 +18,12 @@
         [true] call FUNC(initEffects);
     }
 ] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(painScreamFrequency),
+    "SLIDER",
+    [LSTRING(painScreamFrequency_DisplayName), LSTRING(painScreamFrequency_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [0, 2, 1, 2],
+    true
+] call CBA_settings_fnc_init;

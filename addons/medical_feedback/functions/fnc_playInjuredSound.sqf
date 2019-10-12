@@ -29,8 +29,9 @@ if (!local _unit) exitWith {
 if !(_unit call EFUNC(common,isAwake)) exitWith {};
 
 // Handle timeout
-private _timeOut = [TIME_OUT_HIT, TIME_OUT_MOAN] select (_type == "moan");
 if (_unit getVariable [QGVAR(soundTimeout) + _type, -1] > CBA_missionTime) exitWith {};
+private _timeOut = TIME_OUT_HIT;
+if ((_type == "moan") && {(GVAR(painScreamFrequency) == 0) || {_timeOut = TIME_OUT_MOAN / GVAR(painScreamFrequency); false}}) exitWith {};
 _unit setVariable [QGVAR(soundTimeout) + _type, CBA_missionTime + _timeOut];
 
 // Get units speaker
