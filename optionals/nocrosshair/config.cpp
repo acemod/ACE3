@@ -15,4 +15,4 @@ class CfgPatches {
     };
 };
 
-#include "CfgInGameUI.hpp"
+#include "CfgWeaponCursors.hpp"

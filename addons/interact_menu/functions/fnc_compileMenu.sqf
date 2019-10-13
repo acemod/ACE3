@@ -26,6 +26,15 @@ private _namespace = GVAR(ActNamespace);
 // Exit if the action menu is already compiled for this class
 if !(isNil {_namespace getVariable _objectType}) exitWith {};
 
+if ((_objectType isKindOf "CAManBase") && {!isNil QGVAR(cacheManActions)}) exitWith {
+    _namespace setVariable [_objectType, +GVAR(cacheManActions)]; // copy
+};
+
+if ((getNumber (configFile >> "CfgVehicles" >> _objectType >> "isPlayableLogic")) == 1) exitWith {
+    TRACE_1("skipping playable logic",_objectType);
+    _namespace setVariable [_objectType, []];
+};
+
 private _recurseFnc = {
     params ["_actionsCfg", "_parentDistance"];
     private _actions = [];
@@ -106,11 +115,6 @@ private _recurseFnc = {
     _actions
 };
 
-if ((getNumber (configFile >> "CfgVehicles" >> _objectType >> "isPlayableLogic")) == 1) exitWith {
-    TRACE_1("skipping playable logic",_objectType);
-    _namespace setVariable [_objectType, []];
-};
-
 private _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
 
 TRACE_1("Building ACE_Actions",_objectType);
@@ -118,7 +122,7 @@ private _actions = [_actionsCfg, 0] call _recurseFnc;
 
 // ace_interaction_fnc_addPassengerAction expects ACE_MainActions to be first
 // Other mods can change the order that configs are added, so we should verify this now and resort if needed
-if (_objectType isKindOf "CaManBase") then {
+if (_objectType isKindOf "CAManBase") then {
     if ((((_actions select 0) select 0) select 0) != "ACE_MainActions") then {
         INFO_1("ACE_MainActions not first for man [%1]",_objectType);
         private _mainActions = [];

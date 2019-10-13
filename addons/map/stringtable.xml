@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Map">
         <Key ID="STR_ACE_Map_Module_DisplayName">
@@ -512,6 +512,8 @@
             <Italian>Disablita BFT</Italian>
             <Chinesesimp>关闭友军踪迹</Chinesesimp>
             <Chinese>關閉友軍蹤跡</Chinese>
+            <Russian>Отключить BFT</Russian>
+            <Portuguese>Desativar BFT</Portuguese>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT_description">
             <English>Always disable Blue Force Tracking for this group.</English>
@@ -523,6 +525,8 @@
             <Italian>Disabilita sempre il Blue Force Tracking per questo gruppo.</Italian>
             <Chinesesimp>对此小队永远关闭友军踪迹显示</Chinesesimp>
             <Chinese>對此小隊永遠關閉友軍蹤跡顯示</Chinese>
+            <Russian>Всегда отключать Blue Force Tracking для этой группы</Russian>
+            <Portuguese>Sempre desativar Rastreio Blue Force (BFT) para esse grupo.</Portuguese>
         </Key>
     </Package>
 </Project>

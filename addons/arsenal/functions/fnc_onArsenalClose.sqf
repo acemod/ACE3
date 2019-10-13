@@ -66,6 +66,11 @@ if (is3DEN) then {
 deleteVehicle GVAR(cameraHelper);
 camDestroy GVAR(camera);
 
+if (!isNil QGVAR(moduleUsed)) then {
+    GVAR(moduleUsed) = nil;
+    objNull remoteControl GVAR(center);
+};
+
 if (isMultiplayer) then {
 
     [QGVAR(broadcastFace), [GVAR(center), GVAR(currentFace)], QGVAR(center) + "_face"] call CBA_fnc_globalEventJIP;

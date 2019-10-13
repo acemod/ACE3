@@ -9,6 +9,7 @@
  * 2: Required Item <STRING>
  * 3: Textures Paths <ARRAY>
  * 4: Icon Path <STRING> (default: "")
+ * 5: Material Paths <ARRAY> (optional)
  *
  * Return Value:
  * Sucessfully Added Tag <BOOL>
@@ -24,7 +25,8 @@ params [
     ["_displayName", "", [""]],
     ["_requiredItem", "", [""]],
     ["_textures", [], [[]]],
-    ["_icon", "", [""]]
+    ["_icon", "", [""]],
+    ["_materials", [], [[]]]
 ];
 
 // Verify
@@ -48,7 +50,6 @@ if (_textures isEqualTo []) exitWith {
 };
 
 _identifier = [_identifier] call CBA_fnc_removeWhitespace;
-_requiredItem = toLower _requiredItem;
 
 // Add
-[QGVAR(applyCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon]] call CBA_fnc_globalEventJIP;
+[QGVAR(applyCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon, _materials]] call CBA_fnc_globalEventJIP;

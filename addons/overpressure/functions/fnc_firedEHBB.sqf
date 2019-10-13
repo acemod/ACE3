@@ -51,7 +51,7 @@ if (_distance < _backblastRange) then {
     private _damage = _alpha * _beta * _backblastDamage;
     [_damage * 100] call BIS_fnc_bloodEffect;
 
-    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical") && {([_unit] call EFUNC(medical,hasMedicalEnabled))}) then {
+    if (isClass (configFile >> "CfgPatches" >> "ACE_Medical")) then {
         [_unit, _damage, "body", "backblast"] call EFUNC(medical,addDamageToUnit);
     } else {
         TRACE_1("",isDamageAllowed _unit);

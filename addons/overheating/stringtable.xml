@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
         <Key ID="STR_ACE_Overheating_DisplayName">
@@ -8,6 +8,9 @@
             <Chinese>過熱</Chinese>
             <Chinesesimp>过热</Chinesesimp>
             <Japanese>過熱</Japanese>
+            <Polish>Przegrzewanie</Polish>
+            <Russian>Перегрев</Russian>
+            <Portuguese>Super Aquecimento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>

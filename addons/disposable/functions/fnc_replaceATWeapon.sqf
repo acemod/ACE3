@@ -18,11 +18,14 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-if (!local _unit || {_weapon != secondaryWeapon _unit})  exitWith {};
+if (!local _unit || {_weapon != secondaryWeapon _unit} || {_weapon != _muzzle}) exitWith {};
 
 private _replacementTube = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_UsedTube");
 if (_replacementTube == "") exitWith {}; //If no replacement defined just exit
 
+// Save magazine of spotting muzzle (should be re-added to replacement weapon)
+(((getUnitLoadout _unit) select 1) select 5) params [["_spottingMag", ""], ["_spottingRnds", 0]];
+if (_spottingMag != "") then { _unit addMagazine [_spottingMag, _spottingRnds]; };
 //Save array of items attached to launcher
 private _items = secondaryWeaponItems _unit;
 //Replace the orginal weapon with the 'usedTube' weapon

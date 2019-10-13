@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="VehicleLock">
         <Key ID="STR_ACE_VehicleLock_DisplayName">
@@ -9,6 +9,9 @@
             <Japanese>ACE 車両の施錠</Japanese>
             <Korean>ACE 차량 잠금</Korean>
             <German>ACE Fahrzeugsperre</German>
+            <Polish>ACE Zamknięcie Pojazdu</Polish>
+            <Russian>ACE Блокировка транспорта</Russian>
+            <Portuguese>ACE Trancar Veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>

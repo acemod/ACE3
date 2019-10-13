@@ -22,20 +22,16 @@ TRACE_2("params",_unit,_veh);
 if (isNull _unit) exitWith {ERROR("null unit"); false};
 if (isNull _veh) exitWith {ERROR("null vehicle"); false};
 
-private _returnValue = false;
-
 //Master can open anything "no matter what"
 private _items = _unit call EFUNC(common,uniqueItems);
-if ("ACE_key_master" in _items) then {_returnValue = true};
+if ("ACE_key_master" in _items) exitWith {true};
 
 //Check side key
 private _sideKeyName = [_veh] call FUNC(getVehicleSideKey);
-if (_sideKeyName in _items) then {_returnValue = true};
+if (_sideKeyName in _items) exitWith {true};
 
 //Check custom keys
 private _customKeys = _veh getVariable [QGVAR(customKeys), []];
-{
-    if (_x in (magazinesDetail _unit)) then {_returnValue = true;};
-} forEach _customKeys;
+private _magazines = magazinesDetail _unit;
 
-_returnValue
+(_customKeys findIf {_x in _magazines}) != -1

@@ -334,11 +334,11 @@ def copy_important_files(source_dir,destination_dir):
         print_error("COPYING IMPORTANT FILES.")
         raise
 
-    # Copy all extension DLL's
+    # Copy all extensions
     try:
         os.chdir(os.path.join(source_dir))
         print_blue("\nSearching for DLLs in {}".format(os.getcwd()))
-        filenames = glob.glob("*.dll")
+        filenames = glob.glob("*.dll") + glob.glob("*.so")
 
         if not filenames:
             print ("Empty SET")

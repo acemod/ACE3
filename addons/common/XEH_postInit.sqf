@@ -19,8 +19,8 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
-["blockSprint", false, []] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
+["blockSprint", false, ["ace_advanced_fatigue", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
@@ -37,6 +37,11 @@
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setAnimSpeedCoef), {
+    params ["_object", "_set"];
+    _object setAnimSpeedCoef _set;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setCaptive), {
@@ -83,6 +88,11 @@
     _vehicle engineOn false;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setMass), {
+    params ["_object", "_mass"];
+    _object setMass _mass;
+}] call CBA_fnc_addEventHandler;
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {
@@ -111,8 +121,8 @@ if (isServer) then {
 [QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
 [QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
-["ace_loadPersonEvent", FUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
-["ace_unloadPersonEvent", FUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_loadPersonEvent", LINKFUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_unloadPersonEvent", LINKFUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
@@ -135,8 +145,22 @@ if (isServer) then {
 [QGVAR(playActionNow), {(_this select 0) playActionNow (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
-[QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVanillaHitPointDamage), {
+    params ["_object", "_hitPointAnddamage"];
+    private _damageDisabled = !isDamageAllowed _object;
+
+    if (_damageDisabled) then {
+        _object allowDamage true;
+    };
+
+    _object setHitPointDamage _hitPointAnddamage;
+
+    if (_damageDisabled) then {
+        _object allowDamage false;
+    };
+}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
@@ -266,21 +290,13 @@ TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
     GVAR(uniqueItemsCache) = nil;
 }] call CBA_fnc_addPlayerEventHandler;
 
+// Backwards compatiblity for old ace event
 GVAR(OldIsCamera) = false;
-
-[{
-    BEGIN_COUNTER(stateChecker);
-
-    // "activeCameraChanged" event
-    private _data = call FUNC(isfeatureCameraActive);
-    if !(_data isEqualTo GVAR(OldIsCamera)) then {
-        // Raise ACE event locally
-        GVAR(OldIsCamera) = _data;
-        ["ace_activeCameraChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    END_COUNTER(stateChecker);
-}, 0.5, []] call CBA_fnc_addPerFrameHandler;
+["featureCamera", {
+    params ["_player", "_cameraName"];
+    GVAR(OldIsCamera) = _cameraName != "";
+    ["ace_activeCameraChanged", [_player, GVAR(OldIsCamera)]] call CBA_fnc_localEvent;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 // Add event handler for UAV control change
 ACE_controlledUAV = [objNull, objNull, [], ""];
@@ -296,7 +312,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         if (isNull player) exitWith {true};
         private _UAV = getConnectedUAV player;
         if (!alive player) then {_UAV = objNull;};
-        private _position = (UAVControl _UAV) param [1, ""];
+        private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
         switch (toLower _position) do {

@@ -39,22 +39,30 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     private _size = [_object] call FUNC(getSizeItem);
 
     [
-        5 * _size,
+        GVAR(loadTimeCoefficient) * _size,
         [_object, _vehicle],
         {
+            TRACE_1("load finish",_this); 
             [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
             ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
         },
-        {[objNull, _this select 0 select 0, true] call EFUNC(common,claim)},
+        {
+            TRACE_1("load fail",_this);
+            [objNull, _this select 0 select 0, true] call EFUNC(common,claim)
+        },
         localize LSTRING(LoadingItem),
-        {true},
+        {
+            (_this select 0) params ["_item", "_target"];
+            (alive _target) && {locked _target < 2} && {alive _item}
+                && {([_item, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+        },
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
     _return = true;
 } else {
     private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
 
-    [[LSTRING(LoadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
+    [[LSTRING(LoadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };
 
 _return

@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
- * 2: Ignore interaction distance <BOOL>
+ * 2: Ignore interaction distance and stability checks <BOOL>
  *
  * Return Value:
  * Object loaded <BOOL>
