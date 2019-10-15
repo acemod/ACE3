@@ -18,11 +18,9 @@
 #define HEAD_DAMAGE_THRESHOLD_DEFAULT 1
 #define ORGAN_DAMAGE_THRESHOLD EGVAR(medical,const_organDamageThreshold)
 #define ORGAN_DAMAGE_THRESHOLD_DEFAULT 0.6
-// Consts for determineIfFatal: sum of damage
+// Consts for determineIfFatal: sum of damage (values are calcualted at runtime in preInit)
 #define FATAL_SUM_DAMAGE_WEIBULL_K EGVAR(medical,const_fatalSumDamageWeibull_K)
-#define FATAL_SUM_DAMAGE_WEIBULL_K_DEFAULT 6.5625
 #define FATAL_SUM_DAMAGE_WEIBULL_L EGVAR(medical,const_fatalSumDamageWeibull_L)
-#define FATAL_SUM_DAMAGE_WEIBULL_L_DEFAULT 0.704523
 
 // Chance to hit heart based on ratio of 70kg (approx. 70L) body to 70mL stroke volume of heart
 // Assuming torso is 50% of the body volume (35L)
