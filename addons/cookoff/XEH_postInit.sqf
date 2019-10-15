@@ -83,7 +83,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 // blow off turret effect
 ["Tank", "killed", {
-    if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)] !=0) then {
+    if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)] in [1, 2, true]) then {
         if (random 1 < 0.15) then {
             (_this select 0) call FUNC(blowOffTurret);
         };
