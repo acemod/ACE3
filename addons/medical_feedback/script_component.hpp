@@ -37,3 +37,8 @@
 #define SND_FRACTURE        (selectRandom ["ACE_fracture_1", "ACE_fracture_2", "ACE_fracture_3", "ACE_fracture_4"])
 
 #define VOL_UNCONSCIOUS 0.25
+
+#define FX_PAIN_WHITE_FLASH 0
+#define FX_PAIN_PULSATING_BLUR 1
+#define FX_PAIN_CHROMATIC_ABERRATION 2
+#define FX_PAIN_ONLY_BASE 3

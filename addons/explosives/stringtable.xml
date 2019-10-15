@@ -1042,5 +1042,13 @@
             <Russian>Таймер взрывчатки</Russian>
             <Portuguese>Timer de explosão</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
+            <English>Is EOD</English>
+            <German>Kampfmittelbeseitigung</German>
+        </Key>
+        <Key ID="STR_ACE_Explosives_IsEOD_Description">
+            <English>Controls whether the unit is an explosive specialist.</English>
+            <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
+        </Key>
     </Package>
 </Project>
