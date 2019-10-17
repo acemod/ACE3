@@ -1,23 +1,26 @@
-// CBA Settings [ADDON: ace_medical_damage]:
-
-private _categoryArray = [LELSTRING(medical,Category_DisplayName), LLSTRING(subCategory)];
-
 [
-    QEGVAR(medical,playerDamageThreshold), "SLIDER",
-    [LSTRING(playerDamageThreshold_DisplayName), LSTRING(playerDamageThreshold_Description)],
-    _categoryArray,
-    [0,25,1,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QEGVAR(medical,playerDamageThreshold), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    QEGVAR(medical,fatalDamageSource),
+    "LIST",
+    [LSTRING(fatalDamageSource_DisplayName), LSTRING(fatalDamageSource_Description)],
+    [ELSTRING(medical,Category)],
+    [[0, 1, 2], [LSTRING(fatalDamageSource_vitalShotsOnly), LSTRING(fatalDamageSource_trauma), LSTRING(fatalDamageSource_both)], 0],
+    true
 ] call CBA_settings_fnc_init;
 
 [
-    QEGVAR(medical,AIDamageThreshold), "SLIDER",
+    QEGVAR(medical,playerDamageThreshold),
+    "SLIDER",
+    [LSTRING(PlayerDamageThreshold_DisplayName), LSTRING(PlayerDamageThreshold_Description)],
+    ELSTRING(medical,Category),
+    [0, 25, 1, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QEGVAR(medical,AIDamageThreshold),
+    "SLIDER",
     [LSTRING(AIDamageThreshold_DisplayName), LSTRING(AIDamageThreshold_Description)],
-    _categoryArray,
-    [0,25,1,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QEGVAR(medical,AIDamageThreshold), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    ELSTRING(medical,Category),
+    [0, 25, 1, 2],
+    true
 ] call CBA_settings_fnc_init;

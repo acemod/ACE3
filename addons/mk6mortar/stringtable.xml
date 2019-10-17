@@ -74,6 +74,8 @@
             <Japanese>Mk6 迫撃砲</Japanese>
             <French>Mortier Mk6</French>
             <Polish>Moździerz Mk6</Polish>
+            <Russian>Миномет Mk6</Russian>
+            <Portuguese>Morteiro Mk6</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>

@@ -5,6 +5,7 @@ class EGVAR(missileguidance,AttackProfiles) {
         description = CSTRING(missileType_Description);
 
         functionName = QFUNC(attackProfile_WIRE);
+        onFired = QFUNC(wire_onFired);
     };
 };
 class EGVAR(missileguidance,SeekerTypes) {
@@ -14,6 +15,7 @@ class EGVAR(missileguidance,SeekerTypes) {
         description = CSTRING(SACLOS_Description);
 
         functionName = QFUNC(seekerType_SACLOS);
+        onFired = QFUNC(SACLOS_onFired);
     };
 };
 

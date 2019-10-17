@@ -15,7 +15,7 @@
  * Public: No
  */
 
-#define MIN_ARRAY_SIZE 50
+#define MIN_ARRAY_SIZE 100
 
 private _outputText = {
     diag_log text (_this select 0);
@@ -24,8 +24,7 @@ private _outputText = {
 };
 
 private _text = format ["~~~~~~~~~ACE Debug~~~~~~~~~
-time = %1
-
+%1
 ------Performance------
 diag_fps = %2
 count cba_common_waitAndExecArray = %3
@@ -34,11 +33,11 @@ count cba_common_perFrameHandlerArray = %5 (max %6)
 count diag_activeSQFScripts = %7
 count diag_activeSQSScripts = %8
 count diag_activeMissionFSMs = %9",
-time,
+format ["[Time: %1] [CBA_missionTime: %2] [tickTime: %3]", time toFixed 1, CBA_missionTime toFixed 1, diag_tickTime toFixed 1],
 diag_fps,
 count cba_common_waitAndExecArray,
 count cba_common_waitUntilAndExecArray,
-{!isNil "_x"} count cba_common_perFrameHandlerArray, count cba_common_perFrameHandlerArray,
+count cba_common_perFrameHandlerArray, count cba_common_PFHhandles,
 count diag_activeSQFScripts,
 count diag_activeSQSScripts,
 count diag_activeMissionFSMs];
@@ -54,16 +53,20 @@ if (isNull ace_player) then {"null"} else {animationState ace_player}];
 [_text] call _outputText;
 
 
-_text = format ["
-------ACE's CBA Settings------"];
-[_text] call _outputText;
-
 private _aceSettings = cba_settings_allSettings select {((_x select [0,4]) == "ace_") || {(_x select [0,5]) == "acex_"}};
 _aceSettings sort true;
+_text = format ["
+------ACE's CBA Settings [%1 Total] [Only Non-Defaults]------", count _aceSettings];
+[_text] call _outputText;
+
 {
-    _var = missionNamespace getVariable [_x, "ERROR: Not Defined"];
-    _text = format ["%1 - %2", _x, _var];
-    [_text] call _outputText;
+    private _currentValue = missionNamespace getVariable [_x, "$"];
+    private _defaultValue = (cba_settings_default getVariable [_x, []]) param [0, "#"];
+    if (_currentValue isEqualTo _defaultValue) then {
+        // [format ["%1 - %2 - DEFAULT", _x, _currentValue]] call _outputText;
+    } else {
+        [format ["%1 - %2", _x, _currentValue]] call _outputText;
+    };
 } forEach _aceSettings;
 
 

@@ -24,11 +24,11 @@ _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightA
 
 // Exclude non penetrating body damage
 {
-    _x params ["", "", "_bodyPartN", "_amountOf", "", "_damage"];
+    _x params ["", "_bodyPartN", "_amountOf", "", "_damage"];
     if (_bodyPartN == 1 && {_damage < PENETRATION_THRESHOLD}) then {
         _bodyDamage = _bodyDamage - (_amountOf * _damage);
     };
-} forEach (_unit getVariable [QEGVAR(medical,openWounds), []]);
+} forEach GET_OPEN_WOUNDS(_unit);
 
 private _damageThreshold = [
     EGVAR(medical,AIDamageThreshold),

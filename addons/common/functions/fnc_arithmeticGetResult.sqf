@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets arithmetic result from a set.
+ * Returns the arithmetic result of performing the given operation on a set.
  *
  * Arguments:
- * 0: Namespace <OBJECT><LOCATION><MISSIONNAMESPACE>
+ * 0: Namespace <OBJECT|LOCATION|NAMESPACE>
  * 1: Number Set ID <STRING>
- * 2: Operation (sum, product, min, max, avg) <STRING>
+ * 2: Operation (max, min, sum, product, avg) (Case Sensitive) <STRING>
  *
  * Return Value:
  * Value <NUMBER>
@@ -18,51 +18,44 @@
  * Public: Yes
  */
 
-params ["_namespace", "_setID", "_op"];
-TRACE_3("params",_namespace,_setID,_op);
+params ["_namespace", "_setID", "_operation"];
+TRACE_3("arithmeticGetResult",_namespace,_setID,_operation);
 
-private _data = (_namespace getVariable _setID) param [2, []];
+private _data = (_namespace getVariable _setID) param [2, [{0}]];
 
-switch (_op) do {
-    case ("sum"): {
-        private _result = 0;
-        {
-            _result = _result + (call _x);
-            nil
-        } count _data;
-        _result // return
+switch (_operation) do {
+    case "max": {
+        selectMax (_data apply {call _x})
     };
-    case ("product"): {
+    case "min": {
+        selectMin (_data apply {call _x})
+    };
+    case "sum": {
+        private _result = 0;
+
+        {
+            _result = _result + call _x;
+        } forEach _data;
+
+        _result
+    };
+    case "product": {
         private _result = 1;
+
         {
-            _result = _result * (call _x);
-            nil
-        } count _data;
-        _result // return
+            _result = _result * call _x;
+        } forEach _data;
+
+        _result
     };
-    case ("min"): {
-        private _result = 1e99;
-        {
-            _result = _result min (call _x);
-            nil
-        } count _data;
-        _result // return
-    };
-    case ("max"): {
-        private _result = -1e99;
-        {
-            _result = _result max (call _x);
-            nil
-        } count _data;
-        _result // return
-    };
-    case ("avg"): {
+    case "avg": {
         private _result = 0;
+
         {
-            _result = _result + (call _x);
-            nil
-        } count _data;
-        _result / (count _data); // return
+            _result = _result + call _x;
+        } forEach _data;
+
+        _result / count _data
     };
     default {3735928559};
 };

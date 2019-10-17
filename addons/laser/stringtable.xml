@@ -11,6 +11,8 @@
             <Italian>Contatore di Simulazione della Dispersione del Laser</Italian>
             <Chinesesimp>雷射散射模拟计算</Chinesesimp>
             <Chinese>雷射散射模擬計算</Chinese>
+            <Russian>Число симуляций рассеивания лазерного луча</Russian>
+            <Portuguese>Contador da Simulação de Dispersão de Laser</Portuguese>
         </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>

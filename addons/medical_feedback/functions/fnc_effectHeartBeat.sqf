@@ -34,7 +34,6 @@ switch (true) do {
     case (_heartRate < 60): {
         playSound SND_HEARBEAT_SLOW;
         [FUNC(effectHeartBeat), [], _waitTime] call CBA_fnc_waitAndExecute;
-
     };
     default {
         TRACE_1("Ending heart beat effect - normal",_heartRate);

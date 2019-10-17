@@ -9,6 +9,8 @@
             <Chinesesimp>过热</Chinesesimp>
             <Japanese>過熱</Japanese>
             <Polish>Przegrzewanie</Polish>
+            <Russian>Перегрев</Russian>
+            <Portuguese>Super Aquecimento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>

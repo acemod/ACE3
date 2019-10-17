@@ -448,11 +448,14 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelectorColor">
             <English>Selector Color</English>
+            <German>Farbauswahl</German>
             <Japanese>セレクターの色</Japanese>
             <Chinesesimp>选择器颜色</Chinesesimp>
             <Chinese>選單的顏色</Chinese>
             <Italian>Controllo Settore</Italian>
             <Polish>Kolor wybierającego</Polish>
+            <Russian>Цвет селектора</Russian>
+            <Portuguese>Cor do Seletor</Portuguese>
         </Key>
     </Package>
 </Project>

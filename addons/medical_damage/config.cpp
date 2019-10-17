@@ -18,6 +18,10 @@ class CfgPatches {
 #include "ACE_Medical_Injuries.hpp"
 #include "CfgEventHandlers.hpp"
 
+/*
 class ACE_Extensions {
-    extensions[] += {"ace_medical"};
+    class ace_medical {
+        // Not yet used
+    };
 };
+ */

@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical GUI">
-        <Key ID="STR_ACE_Medical_GUI_Category">
-            <English>ACE Medical GUI</English>
+        <Key ID="STR_ACE_Medical_GUI_SubCategory">
+            <English>GUI</English>
+            <Japanese>GUI</Japanese>
+            <French>GUI</French>
+            <Russian>Медицинский интерфейс</Russian>
+            <Portuguese>GUI</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
             <English>Enable Medical Actions</English>
+            <German>Aktiviere Sanitätsaktionen</German>
+            <Japanese>医療行為を有効化</Japanese>
+            <Russian>Разрешить Медицинские действия</Russian>
+            <French>Activer actions médicales</French>
+            <Portuguese>Ativar Ações Médicas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
+            <German>Aktiviert die Sanitätsaktionen für das Interaktionsmenü und legt das Aussehen fest</German>
+            <Japanese>インタラクション メニューから選択した表示方式で医療行為をできるようになります。</Japanese>
+            <Russian>Включает медицинские действия для меню взаимодействия и выбирает их стиль.</Russian>
+            <French>Permet d'afficher les actions médicales dans le menu d'interaction, ainsi que de choisir le style visuel.</French>
+            <Portuguese>Ativa as ações médicas para o menu de interação e seleciona seus estilos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Selections3D">
             <English>Selections (3D)</English>
@@ -21,7 +35,7 @@
             <Hungarian>Választékok (3D)</Hungarian>
             <Czech>3D výběr</Czech>
             <Italian>Selezione (3D)</Italian>
-            <Japanese>選択 (3d)</Japanese>
+            <Japanese>選択 (3D)</Japanese>
             <Korean>선택 (3d)</Korean>
             <Chinesesimp>选择 (3D)</Chinesesimp>
             <Chinese>選擇 (3D)</Chinese>
@@ -44,27 +58,67 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_DisplayName">
             <English>Enable Medical Self Actions</English>
+            <German>Medizinische Selbst-Interaktionen anzeigen</German>
+            <Japanese>自分への医療行為を有効化</Japanese>
+            <Russian>Разрешить Медицинские действия на себе</Russian>
+            <French>Activer actions médicales sur soi-même</French>
+            <Portuguese>Ativar ações médicas em si mesmo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_Description">
             <English>Enables medical actions for the Self Interaction Menu.</English>
+            <German>Medizinische Interaktionen bei Selbst-Interaktionen anzeigen</German>
+            <Japanese>セルフ インタラクション メニューで医療行為をできるようになります。</Japanese>
+            <Russian>Включает медицинские действия для меню взаимодействия с собой.</Russian>
+            <French>Active les actions médicales du menu d'interaction personnel.</French>
+            <Portuguese>Ativa as ações médicas do menu de interação pessoal.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_DisplayName">
             <English>Enable Medical Menu</English>
+            <German>Aktiviere das Sanitätsmenü</German>
+            <Japanese>医療メニューを有効化</Japanese>
+            <Russian>Разрешить Медицинское меню</Russian>
+            <French>Activer menu médical</French>
+            <Portuguese>Ativar Menu Médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
+            <German>Aktiviere die Nutzung des Sanitätsmenüs durch eine Tastenkombination oder durch das Interaktionsmenü</German>
+            <Japanese>割り当てられたキーかインタラクション メニューから医療メニューを使えるようになります。</Japanese>
+            <Russian>Позволяет использовать Медицинское меню через связку клавиш или меню взаимодействия.</Russian>
+            <French>Permet l'utilisation du menu médical via une touche, ou via le menu d'interaction.</French>
+            <Portuguese>Ativa o uso do Menu Médico atráves da Tecla ou Menu de Interação.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
             <English>Reopen Medical Menu</English>
+            <German>Sanitätsmenü wieder öffnen</German>
+            <Japanese>医療メニューの再使用</Japanese>
+            <Russian>Открывать меню после лечения</Russian>
+            <French>Rouvrir le menu médical</French>
+            <Portuguese>Reabrir Menu Médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_Description">
             <English>Reopen the Medical Menu after successful treatment.</English>
+            <German>Öffne das Sanitätsmenü nach einer Behandlung</German>
+            <Japanese>治療が成功した後に、再度医療メニューを開きます。</Japanese>
+            <Russian>Открывает Медицинское меню после успешного лечения</Russian>
+            <French>Réouvre le menu médical suite à l'application d'un soin.</French>
+            <Portuguese>Reabrir Menu Médico após um tratamento com sucesso</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_DisplayName">
             <English>Maximum Distance</English>
+            <German>Maximale Entfernung</German>
+            <Japanese>最大距離</Japanese>
+            <Russian>Макс. дистанция</Russian>
+            <French>Distance maximale</French>
+            <Portuguese>Distância Máxima</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
+            <German>Maximale Entfernung, um das Sanitätsmenü zu öffnen.</German>
+            <Japanese>治療メニューを開いたままにできる最大距離を決定します。</Japanese>
+            <Russian>Максимальное расстояние, с которого можно открыть Медицинское меню.</Russian>
+            <French>Définit la distance (en mètres) à partir de laquelle il n'est plus possible d'activer le menu médical pour traiter un patient.</French>
+            <Portuguese>A Distância máxima do paciente para que o Menu Médico possa ser aberto.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -86,7 +140,7 @@
             <English>Medical Menu</English>
             <German>Sanitätsmenü</German>
             <Polish>Menu medyczne</Polish>
-            <Portuguese>Menu médico</Portuguese>
+            <Portuguese>Menu Médico</Portuguese>
             <Russian>Медицинское меню</Russian>
             <Spanish>Menú médico</Spanish>
             <Czech>Zdravotnikcá nabídka</Czech>
@@ -107,7 +161,7 @@
             <Czech>Otevřít zdravotnickou nabídku</Czech>
             <Italian>Apri Menù Medico</Italian>
             <French>Ouvir le menu médical</French>
-            <Japanese>治療メニューをひらく</Japanese>
+            <Japanese>治療メニューを開く</Japanese>
             <Korean>의료 메뉴 열기</Korean>
             <Chinesesimp>开起医疗选单</Chinesesimp>
             <Chinese>開起醫療選單</Chinese>
@@ -134,7 +188,7 @@
             <Russian>Выгрузить пациента</Russian>
             <German>Patient ausladen</German>
             <Polish>Wyładuj pacjenta</Polish>
-            <French>Le patient débarque</French>
+            <French>Débarquer le patient</French>
             <Hungarian>Sebesült kihúzása</Hungarian>
             <Italian>Scarica il paziente</Italian>
             <Portuguese>Descarregar Paciente</Portuguese>
@@ -240,7 +294,7 @@
             <German>Zeige Triagekarte</German>
             <Russian>Смотреть первичную карточку</Russian>
             <Spanish>Ver Triage</Spanish>
-            <French>Voir Carte de Triage</French>
+            <French>Voir Fiche de Triage</French>
             <Polish>Pokaż kartę segregacyjną</Polish>
             <Portuguese>Ver cartão de triagem</Portuguese>
             <Czech>Zkontrolovat štítek</Czech>
@@ -335,7 +389,7 @@
             <Portuguese>Arrastar / Carregar</Portuguese>
             <Czech>Táhnout / Nést</Czech>
             <Italian>Trascina / Trasporta</Italian>
-            <Japanese>引きずる / 運ぶ</Japanese>
+            <Japanese>引きずる / 担ぐ</Japanese>
             <Korean>끌기 / 들기</Korean>
             <Chinesesimp>拖 / 背</Chinesesimp>
             <Chinese>拖 / 背</Chinese>
@@ -344,7 +398,7 @@
             <English>Toggle (Self)</English>
             <German>Umschalter (Selbst)</German>
             <Russian>Лечить себя/другого раненого</Russian>
-            <French>Basculer (soi)</French>
+            <French>Basculer (soi-même)</French>
             <Polish>Przełącz (na siebie)</Polish>
             <Spanish>Alternar</Spanish>
             <Portuguese>Alternar (Si mesmo)</Portuguese>
@@ -585,7 +639,7 @@
             <German>Er hat %2 offene Wunden (%1)</German>
             <Russian>%2 открытые раны %1</Russian>
             <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
-            <French>Il y a %2 %1 blessure(s) ouverte(s)</French>
+            <French>Il y a %2 blessures ouvertes (%1)</French>
             <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
@@ -600,7 +654,7 @@
             <German>Er hat 1 offene Wunde (%1)</German>
             <Russian>Открытая рана %1</Russian>
             <Spanish>Hay 1 Herida Abierta %1</Spanish>
-            <French>Il y a 1 blessure ouverte %1</French>
+            <French>Il y a 1 blessure ouverte (%1)</French>
             <Polish>Widzisz 1 otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 %1 ferimento aberto</Portuguese>
             <Czech>Je zde 1 %1 otevřená rána</Czech>
@@ -615,7 +669,7 @@
             <German>Er hat eine zum Teil offene Wunde (%1)</German>
             <Russian>Частично открытая рана %1</Russian>
             <Spanish>Hay una herida parcial abierta %1</Spanish>
-            <French>Il y a une blessure partiellement ouverte %1</French>
+            <French>Il y a une blessure partiellement ouverte (%1)</French>
             <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
             <Czech>Je zde částečně %1 otevřená rána</Czech>
@@ -630,7 +684,7 @@
             <German>Er hat %2 verbundene Wunden (%1)</German>
             <Russian>%2 перевязанные раны %1</Russian>
             <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
-            <French>Il y a %2 %1 blessure(s) bandée(s)</French>
+            <French>Il y a %2 blessures pansées (%1)</French>
             <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
             <Czech>Jsou zde %2 %1 ovázané rány</Czech>
@@ -645,7 +699,7 @@
             <German>Er hat 1 verbundene Wunde (%1)</German>
             <Russian>1 перевязанная рана %1</Russian>
             <Spanish>Hay 1 Herida Vendada %1</Spanish>
-            <French>Il y a 1 %1 blessure bandée</French>
+            <French>Il y a 1 blessure pansée (%1)</French>
             <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 ferimento %1 tratado</Portuguese>
             <Czech>Je zde 1 %1 ovázaná rána</Czech>
@@ -660,7 +714,7 @@
             <German>Er hat eine zum Teil verbundene Wunde (%1)</German>
             <Russian>Частично перевязанная рана %1</Russian>
             <Spanish>Hay una Herida parcial %1 Vendada</Spanish>
-            <French>Il y a %1 blessure partiellement bandée</French>
+            <French>Il y a 1 blessure partiellement bandée (%1)</French>
             <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
             <Czech>Je zde částěčně %1 ovázaná rána</Czech>
@@ -720,7 +774,7 @@
             <German>Beinahe keine Atmung</German>
             <Russian>Дыхания почти нет</Russian>
             <Spanish>Casi sin respirar</Spanish>
-            <French>Respiration faible</French>
+            <French>Respiration très faible</French>
             <Polish>Prawie brak oddechu</Polish>
             <Portuguese>Quase sem respiração</Portuguese>
             <Czech>Téměř nedýchá</Czech>
@@ -775,11 +829,30 @@
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Status_Fractured">
+            <English>Fractured</English>
+            <Russian>Перелом</Russian>
+            <Japanese>骨折している</Japanese>
+            <French>Fracturé</French>
+            <Portuguese>Fraturado</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
+            <English>Splint Applied</English>
+            <Russian>Наложена шина</Russian>
+            <Japanese>添え木が当てている</Japanese>
+            <French>Attelle appliquée</French>
+            <Portuguese>Tala Aplicada</Portuguese>
+        </Key>
         <!--
             Strings above match Blood2 but seem to differ in some languages, determine which is best to use
         -->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
             <English>Lost some blood</English>
+            <German>Hat etwas Blut verloren</German>
+            <Japanese>いくらか失血している</Japanese>
+            <Russian>Небольшая кровопотеря</Russian>
+            <French>A perdu un peu de sang</French>
+            <Portuguese>Perdeu um pouco de Sangue</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
             <English>Lost a lot of blood</English>
@@ -799,9 +872,19 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood3">
             <English>Lost a large amount of blood</English>
+            <German>Hat eine sehr große Menge Blut verloren</German>
+            <Japanese>かなり酷く大量失血している</Japanese>
+            <Russian>Огромная кровопотеря</Russian>
+            <French>A perdu une grande quantité de sang</French>
+            <Portuguese>Perdeu uma quantidade grande de sangue</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
+            <German>Hat eine kritische Menge an Blut verloren</German>
+            <Japanese>致命的な程失血している</Japanese>
+            <Russian>Фатальная кровопотеря</Russian>
+            <French>Exsanguination</French>
+            <Portuguese>Perdeu uma quantidade fatal de sangue</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -823,7 +906,7 @@
             <German>Nasen-Rachen-Rohr</German>
             <Russian>Назотрахеальная трубка</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
-            <French>Canule Naseaupharyngée [NPA]</French>
+            <French>Canule Nasopharyngée [NPA]</French>
             <Polish>Rurka nosowo-gardłowa [NPA]</Polish>
             <Portuguese>Tubo nasofaríngeo [NPA]</Portuguese>
             <Czech>Nasofaryngeální trubice [NPA]</Czech>
@@ -848,6 +931,9 @@
             <Korean>부상자 분류 카드</Korean>
             <Chinesesimp>检伤分类卡</Chinesesimp>
             <Chinese>檢傷分類卡</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PartialX">
+            <English>Partial %1</English>
         </Key>
     </Package>
 </Project>

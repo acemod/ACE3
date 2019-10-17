@@ -21,7 +21,7 @@ params ["_ctrl", "_logs"];
 lbClear _ctrl;
 
 {
-    _x params ["_message", "_moment", "", "_arguments"];
+    _x params ["_message", "_timeStamp", "_arguments"];
 
     // Localize message and arguments
     if (isLocalized _message) then {
@@ -33,5 +33,5 @@ lbClear _ctrl;
     // Format message with arguments
     _message = format ([_message] + _arguments);
 
-    _ctrl lbAdd format ["%1 %2", _moment, _message];
+    _ctrl lbAdd format ["%1 %2", _timeStamp, _message];
 } forEach _logs;

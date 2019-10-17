@@ -27,7 +27,7 @@
             <Czech>MicroDAGR pokročílá GPS příjímač</Czech>
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
             <Italian>Ricevitore GPS avanzato MicroDAGR</Italian>
-            <Portuguese>Recepitor GPS avançado MicroDAGR</Portuguese>
+            <Portuguese>Receptor GPS avançado MicroDAGR</Portuguese>
             <Japanese>MicroDAGR は改良された GPS 受信機です</Japanese>
             <Korean>MicroDAGR 고급 위성항법 수신기</Korean>
             <Chinesesimp>微型军用高级防御GPS接收器</Chinesesimp>
@@ -139,7 +139,7 @@
             <Czech>Napiš souřadnice:</Czech>
             <Hungarian>Add meg a rácskoordinátákat:</Hungarian>
             <Italian>Introduci griglia coordinate:</Italian>
-            <Portuguese>Digite as Ccords. do Grid</Portuguese>
+            <Portuguese>Digite as Coords. do Grid</Portuguese>
             <Japanese>座標を入力:</Japanese>
             <Chinesesimp>输入网格座标:</Chinesesimp>
             <Chinese>輸入網格座標:</Chinese>
@@ -503,6 +503,8 @@
             <Italian>MicroDAGR - Precisione del Waypoint</Italian>
             <Japanese>MicroDAGR - ウェイポイントの精度</Japanese>
             <Polish>MicroDAGR - Precyzja PT</Polish>
+            <Russian>MicroDAGR - Точность маршрутных точек</Russian>
+            <Portuguese>MicroDAGR - Precisão de Waypoint</Portuguese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>
@@ -510,6 +512,8 @@
             <Italian>Controlla quanto precisamente può essere visualizzato il waypoint a distanza</Italian>
             <Japanese>表示されるウェイポイントの精度を設定します</Japanese>
             <Polish>Kontroluje jak precyzyjnie może być wyświetlany dystans PT</Polish>
+            <Russian>Управляет точностью отображения расстояний маршрутных точек</Russian>
+            <Portuguese>Controla o quão preciso pode exibir o waypoint de distância</Portuguese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
@@ -517,6 +521,8 @@
             <Italian>100m</Italian>
             <Japanese>100m</Japanese>
             <Polish>100m</Polish>
+            <Russian>100 м</Russian>
+            <Portuguese>100m</Portuguese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -524,6 +530,8 @@
             <Italian>10m</Italian>
             <Japanese>10m</Japanese>
             <Polish>10m</Polish>
+            <Russian>10 м</Russian>
+            <Portuguese>10m</Portuguese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -531,6 +539,8 @@
             <Italian>1m</Italian>
             <Japanese>1m</Japanese>
             <Polish>1m</Polish>
+            <Russian>1 м</Russian>
+            <Portuguese>1m</Portuguese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>
