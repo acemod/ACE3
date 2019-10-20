@@ -118,10 +118,10 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             */
             if (_shooter == _unit && {(velocity _unit select 2) < -2}) then {
                 _ammo = "#falling"; // non-selectionSpecific so only _damageSelectionArray matters
-                _damageSelectionArray = [4, 1, 5, 1]; // selectRandom ["RightLeg", "LeftLeg"];
+                _damageSelectionArray = [HITPOINT_INDEX_RLEG, 1, HITPOINT_INDEX_LLEG, 1];
                 TRACE_5("Fall",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
-                _damageSelectionArray = [2, 1, 3, 1, 4, 1, 5, 1]; // selectRandom ["RightArm", "LeftArm", "RightLeg", "LeftLeg"];
+                _damageSelectionArray = [HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1];
                 TRACE_5("Collision",_unit,_shooter,_instigator,_damage,_receivedDamage);
             };
 
@@ -138,7 +138,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             };
         } else {
             // Anything else is almost guaranteed to be fire damage
-            _damageSelectionArray = [1, 1, 4, 1, 5, 1]; // selectRandom ["Body", "LeftLeg", "RightLeg"];
+            _damageSelectionArray = [HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1];;
             _ammo = "#unknown"; // non-selectionSpecific so only _damageSelectionArray matters
 
             // Fire damage can occur as lots of minor damage events
