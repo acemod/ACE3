@@ -26,9 +26,9 @@ if (isNull _projectile) then {
 private _config = configFile >> "CfgAmmo" >> _ammo;
 
 // fix smoke bounce
-if (isText (_config >> QGVAR(attachedAmmo)) && {local _unit}) then {
+if (isText (_config >> QGVAR(attachedAmmo))) then {
     private _attachedAmmo = getText (_config >> QGVAR(attachedAmmo));
-    private _attachedProjectile = _attachedAmmo createVehicle [0,0,0];
+    private _attachedProjectile = _attachedAmmo createVehicleLocal [0,0,0];
     _attachedProjectile attachTo [_projectile, [0,0,0]];
 };
 
