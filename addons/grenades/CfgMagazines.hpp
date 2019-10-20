@@ -1,4 +1,3 @@
-
 class CfgMagazines {
     class HandGrenade;
     class ACE_HandFlare_Base: HandGrenade {
@@ -119,5 +118,29 @@ class CfgMagazines {
         ammo = "ACE_40mm_Flare_ir";
         displayName = CSTRING(40mm_flare_ir);
         descriptionShort = CSTRING(parachute_flare_ir_description);
+    };
+
+    // fix smoke bounce
+    class 1Rnd_HE_Grenade_shell;
+    class 1Rnd_Smoke_Grenade_shell: 1Rnd_HE_Grenade_shell {
+        ammo = "ACE_G_40mm_Smoke";
+    };
+    class 1Rnd_SmokeRed_Grenade_shell: 1Rnd_Smoke_Grenade_shell {
+        ammo = "ACE_G_40mm_SmokeRed";
+    };
+    class 1Rnd_SmokeGreen_Grenade_shell: 1Rnd_Smoke_Grenade_shell {
+        ammo = "ACE_G_40mm_SmokeGreen";
+    };
+    class 1Rnd_SmokeYellow_Grenade_shell: 1Rnd_Smoke_Grenade_shell {
+        ammo = "ACE_G_40mm_SmokeYellow";
+    };
+    class 1Rnd_SmokePurple_Grenade_shell: 1Rnd_Smoke_Grenade_shell {
+        ammo = "ACE_G_40mm_SmokePurple";
+    };
+    class 1Rnd_SmokeBlue_Grenade_shell: 1Rnd_Smoke_Grenade_shell {
+        ammo = "ACE_G_40mm_SmokeBlue";
+    };
+    class 1Rnd_SmokeOrange_Grenade_shell: 1Rnd_Smoke_Grenade_shell {
+        ammo = "ACE_G_40mm_SmokeOrange";
     };
 };

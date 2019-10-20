@@ -18,14 +18,21 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-if (_weapon != "Throw") exitWith {};
-
 // http://feedback.arma3.com/view.php?id=12340
 if (isNull _projectile) then {
     _projectile = nearestObject [_unit, _ammo];
 };
 
 private _config = configFile >> "CfgAmmo" >> _ammo;
+
+// fix smoke bounce
+if (isText (_config >> QGVAR(attachedAmmo)) && {local _unit}) then {
+    private _attachedAmmo = getText (_config >> QGVAR(attachedAmmo));
+    private _attachedProjectile = _attachedAmmo createVehicle [0,0,0];
+    _attachedProjectile attachTo [_projectile, [0,0,0]];
+};
+
+if (_weapon != "Throw") exitWith {};
 
 // handle special grenades and sounds
 if (local _unit) then {

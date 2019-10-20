@@ -1,4 +1,3 @@
-
 class CfgWeapons {
     class GrenadeLauncher;
     class Throw: GrenadeLauncher {

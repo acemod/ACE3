@@ -1,4 +1,3 @@
-
 class CfgAmmo {
     class Default;
     class Grenade: Default {
@@ -160,5 +159,76 @@ class CfgAmmo {
         effectsSmoke = "ACE_Incendiary";
         whistleDist = 0;    // no BIS explosion effects
         whistleOnFire = 0;  // no BIS firing effects
+    };
+
+    // fix smoke bounce
+    class G_40mm_Smoke;
+    class ACE_G_40mm_Smoke: G_40mm_Smoke {
+        GVAR(attachedAmmo) = QGVAR(G_40mm_Smoke_invisible);
+        simulation = "shotDeploy";
+        deflectionSlowDown = 0.3;
+    };
+    class GVAR(G_40mm_Smoke_invisible): G_40mm_Smoke {
+        model = "\A3\weapons_f\empty.p3d";
+    };
+
+    class G_40mm_SmokeRed;
+    class ACE_G_40mm_SmokeRed: G_40mm_SmokeRed {
+        GVAR(attachedAmmo) = QGVAR(G_40mm_SmokeRed_invisible);
+        simulation = "shotDeploy";
+        deflectionSlowDown = 0.3;
+    };
+    class GVAR(G_40mm_SmokeRed_invisible): G_40mm_SmokeRed {
+        model = "\A3\weapons_f\empty.p3d";
+    };
+
+    class G_40mm_SmokeGreen;
+    class ACE_G_40mm_SmokeGreen: G_40mm_SmokeGreen {
+        GVAR(attachedAmmo) = QGVAR(G_40mm_SmokeGreen_invisible);
+        simulation = "shotDeploy";
+        deflectionSlowDown = 0.3;
+    };
+    class GVAR(G_40mm_SmokeGreen_invisible): G_40mm_SmokeGreen {
+        model = "\A3\weapons_f\empty.p3d";
+    };
+
+    class G_40mm_SmokeYellow;
+    class ACE_G_40mm_SmokeYellow: G_40mm_SmokeYellow {
+        GVAR(attachedAmmo) = QGVAR(G_40mm_SmokeYellow_invisible);
+        simulation = "shotDeploy";
+        deflectionSlowDown = 0.3;
+    };
+    class GVAR(G_40mm_SmokeYellow_invisible): G_40mm_SmokeYellow {
+        model = "\A3\weapons_f\empty.p3d";
+    };
+
+    class G_40mm_SmokePurple;
+    class ACE_G_40mm_SmokePurple: G_40mm_SmokePurple {
+        GVAR(attachedAmmo) = QGVAR(G_40mm_SmokePurple_invisible);
+        simulation = "shotDeploy";
+        deflectionSlowDown = 0.3;
+    };
+    class GVAR(G_40mm_SmokePurple_invisible): G_40mm_SmokePurple {
+        model = "\A3\weapons_f\empty.p3d";
+    };
+
+    class G_40mm_SmokeBlue;
+    class ACE_G_40mm_SmokeBlue: G_40mm_SmokeBlue {
+        GVAR(attachedAmmo) = QGVAR(G_40mm_SmokeBlue_invisible);
+        simulation = "shotDeploy";
+        deflectionSlowDown = 0.3;
+    };
+    class GVAR(G_40mm_SmokeBlue_invisible): G_40mm_SmokeBlue {
+        model = "\A3\weapons_f\empty.p3d";
+    };
+
+    class G_40mm_SmokeOrange;
+    class ACE_G_40mm_SmokeOrange: G_40mm_SmokeOrange {
+        GVAR(attachedAmmo) = QGVAR(G_40mm_SmokeOrange_invisible);
+        simulation = "shotDeploy";
+        deflectionSlowDown = 0.3;
+    };
+    class GVAR(G_40mm_SmokeOrange_invisible): G_40mm_SmokeOrange {
+        model = "\A3\weapons_f\empty.p3d";
     };
 };
