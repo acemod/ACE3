@@ -66,10 +66,10 @@
             <English>Only high pain effect</English>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_painScreamFrequency_DisplayName">
-            <English>Pain scream frequency</English>
+            <English>Pain Scream Frequency</English>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_painScreamFrequency_Description">
-            <English>How often a unit screams from being in pain</English>
+            <English>Controls how often a unit will scream from being in pain.</English>
         </Key>
     </Package>
 </Project>
