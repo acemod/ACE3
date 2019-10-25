@@ -37,7 +37,7 @@ class ACE_Repair {
             requiredEngineer = QGVAR(engineerSetting_Repair);
             repairingTime = 15;
             callbackSuccess = QUOTE(call FUNC(doRepair));
-            items[] = {"ToolKit"};
+            items = QGVAR(miscRepairRequiredItems);
             itemConsumed = QGVAR(consumeItem_ToolKit);
             claimObjects[] = {};
         };
@@ -74,6 +74,7 @@ class ACE_Repair {
             repairingTime = 30;
             condition = "-1 != ((getAllHitPointsDamage _target param [2,[]]) findIf {_x > 0})";
             callbackSuccess = QUOTE(call FUNC(doFullRepair));
+            items = QGVAR(fullRepairRequiredItems);
             itemConsumed = QGVAR(consumeItem_ToolKit);
         };
     };
