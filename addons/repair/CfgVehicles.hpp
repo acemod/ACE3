@@ -100,7 +100,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class wheelRepairRequiredItems {
-                displayName = CSTRING(wheelRepairRequiredItems_name);
+                displayName = CSTRING(WheelRepairRequiredItems_DisplayName);
                 description = CSTRING(wheelRepairRequiredItems_description);
                 typeName = "NUMBER";
                 class values {
