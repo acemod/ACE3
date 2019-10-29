@@ -54,9 +54,19 @@ switch (true) do {
         _treatmentTime = 5;
         _treatmentArgs = [_target, _selection, "FieldDressing"];
     };
+    case (IN_CRDC_ARRST(_target)): {
+        _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
+        _treatmentTime = 15;
+        _treatmentArgs = [_healer,_target];    
+    };
     case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}): {
-        private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
-        if ((count _bloodBags) >= 2) exitWith {
+        //check if patient volume + currentIV volume is enough to allow the patient to wake up
+        private _totalIvVolume = 0; //in ml
+        {
+            _x params ["_volumeRemaining"];
+            _totalIvVolume = _totalIvVolume + _volumeRemaining;
+        } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);        
+        if ((GET_BLOOD_VOLUME(_target) + (_totalIvVolume/1000)) > BLOOD_VOLUME_CLASS_2_HEMORRHAGE) exitWith {
             _treatmentEvent = "#waitForBlood";
         };
         _treatmentEvent = QEGVAR(medical_treatment,ivBagLocal);
