@@ -60,7 +60,7 @@ switch (true) do {
         _treatmentArgs = [_healer, _target];    
     };
     case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}): {
-        //check if patient volume + currentIV volume is enough to allow the patient to wake up
+        // Check if patient's blood volume + remaining IV volume is enough to allow the patient to wake up
         private _totalIvVolume = 0; //in ml
         {
             _x params ["_volumeRemaining"];
