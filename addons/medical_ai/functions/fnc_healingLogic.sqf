@@ -57,7 +57,7 @@ switch (true) do {
     case (IN_CRDC_ARRST(_target)): {
         _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
         _treatmentTime = 15;
-        _treatmentArgs = [_healer,_target];    
+        _treatmentArgs = [_healer, _target];    
     };
     case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}): {
         //check if patient volume + currentIV volume is enough to allow the patient to wake up
