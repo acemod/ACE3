@@ -38,7 +38,7 @@ if (!GVAR(advancedMedication)) exitWith {
         };
     };
 };
-TRACE_1("Running treatmentMedicationLocal with Advanced configuration for", _target);
+TRACE_1("Running treatmentMedicationLocal with Advanced configuration for",_patient);
 
 
 // Handle tourniquet on body part blocking blood flow at injection site

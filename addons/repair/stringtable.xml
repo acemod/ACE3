@@ -1138,6 +1138,7 @@
             <Polish>Tylko zaawansowani mechanicy</Polish>
             <Korean>고급 정비공만</Korean>
             <Russian>Только продвинутые инженеры</Russian>
+            <Portuguese>Somente engenheiro avançado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1465,6 +1466,7 @@
             <Polish>Zaaw. mechanik</Polish>
             <Korean>고급 정비공</Korean>
             <Russian>Продв. Инженер</Russian>
+            <Portuguese>Engenheiro Avançado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
@@ -1781,8 +1783,8 @@
             <Chinesesimp>选择的备件数量</Chinesesimp>
             <Chinese>選擇的備件數量</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
-            <English>Wheel repair requirements</English>
+        <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_DisplayName">
+            <English>Wheel Repair Requirements</English>
             <German>Erfordernisse zur Reifenreperatur</German>
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
@@ -1796,8 +1798,8 @@
             <Chinesesimp>维修轮胎限制</Chinesesimp>
             <Chinese>維修輪胎限制</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
-            <English>Items required to remove/replace wheels</English>
+        <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_Description">
+            <English>Items required to remove/replace wheels.</English>
             <German>Gegenstänge, die zum Entfernen/Austauschen eines Reifens benötigt werden</German>
             <Polish>Przedmioty potrzebne do wymiany kół</Polish>
             <Spanish>Elementos necesarios para quitar/cambiar ruedas</Spanish>
@@ -1810,6 +1812,18 @@
             <Korean>바퀴를 제거/교체하는데 필요한 물건</Korean>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
+            <English>Misc Repair Requirements</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
+            <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
+            <English>Full Repair Requirements</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
+            <English>Items required to perform a full vehicle repair.</English>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
@@ -1835,6 +1849,7 @@
             <Chinesesimp>备用履带</Chinesesimp>
             <Polish>Zapasowe Gąsienice</Polish>
             <Russian>Запасные траки</Russian>
+            <Portuguese>Esteiras Reservas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
@@ -1845,6 +1860,7 @@
             <Chinesesimp>设定载具在货舱内携带的备用履带数量。</Chinesesimp>
             <Polish>Liczba zapasowych gąsienic w ładunku.</Polish>
             <Russian>Количество запасных траков в грузовом отсеке</Russian>
+            <Portuguese>Número de esteiras reservas na Carga</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
@@ -1855,6 +1871,7 @@
             <Chinesesimp>备用轮胎</Chinesesimp>
             <Polish>Zapasowe Koła</Polish>
             <Russian>Запасные колеса</Russian>
+            <Portuguese>Pneus Reservas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
@@ -1865,6 +1882,7 @@
             <Chinesesimp>设定载具在货舱内携带的备用轮胎数量。</Chinesesimp>
             <Polish>Liczba zapasowych kół w ładunku.</Polish>
             <Russian>Количество запасных колес в грузовом отсеке</Russian>
+            <Portuguese>Número de pneus reservas na Carga</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
@@ -1875,6 +1893,7 @@
             <Italian>Motore spento automaticamente durante la riparazione</Italian>
             <Polish>Automatycznie wyłącz silnik podczas napraw</Polish>
             <Russian>Автоотключение двигателя при ремонте</Russian>
+            <Portuguese>Desligar motor automaticamente enquanto reparar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
@@ -1885,6 +1904,7 @@
             <Italian>Spegne automaticamente il motore quando si fanno riparazioni.</Italian>
             <Polish>Automatycznie wyłącz silnik podczas napraw.</Polish>
             <Russian>Автоматически отключать двигатель при выполнении ремонта</Russian>
+            <Portuguese>Automaticamente desliga o motor quando iniciar o reparo do veículo.</Portuguese>
         </Key>
     </Package>
 </Project>

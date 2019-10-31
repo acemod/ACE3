@@ -539,6 +539,7 @@
             <Chinesesimp>在荧幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
             <Russian>Затухание на границе экрана</Russian>
+            <Portuguese>Ocultar na borda da tela</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_playerNamesMaxAlpha">
             <English>Player tags transparency</English>
@@ -549,6 +550,7 @@
             <Italian>Trasparenza Etichette Nome</Italian>
             <Polish>Przezroczystość etykiet gracza</Polish>
             <Russian>Прозрачность меток игроков</Russian>
+            <Portuguese>Transparência da etiqueta de nome</Portuguese>
         </Key>
     </Package>
 </Project>

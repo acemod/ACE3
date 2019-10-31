@@ -3,7 +3,11 @@
     "LIST",
     [LSTRING(PainEffectType_DisplayName), LSTRING(PainEffectType_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [[0, 1], [LSTRING(PainEffectType_WhiteFlashing), LSTRING(PainEffectType_PulsingBlur)], 0],
+    [
+        [FX_PAIN_WHITE_FLASH, FX_PAIN_PULSATING_BLUR, FX_PAIN_CHROMATIC_ABERRATION, FX_PAIN_ONLY_BASE],
+        [LSTRING(painEffectType_whiteFlashing), LSTRING(painEffectType_pulsingBlur), LSTRING(painEffectType_chromAberration), LSTRING(painEffectType_onlyBase)],
+        0
+    ],
     false,
     {
         if (isNil QGVAR(ppPain)) exitWith {

@@ -19,7 +19,7 @@
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 License">
     </a>
     <a href="https://slackin.ace3mod.com/">
-        <img src="https://slackin.ace3mod.com/badge.svg?style=flat-square&label=Slack" alt="ACE3 Slack">
+        <img src="https://img.shields.io/badge/Slack-Join-darkviolet.svg?style=flat-square" alt="ACE3 Slack">
     </a>
     <a href="https://circleci.com/gh/acemod/ACE3">
         <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">

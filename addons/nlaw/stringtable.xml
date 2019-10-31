@@ -11,6 +11,7 @@
             <Polish>Śledzenie Celu NLAW (Przytrzymaj)</Polish>
             <Korean>NLAW 목표 추적 (누름유지)</Korean>
             <Russian>NLAW наведение на цель (Удерживать)</Russian>
+            <Portuguese>NLAW Rastrear Alvo (Segurar)</Portuguese>
         </Key>
         <Key ID="STR_ACE_NLAW_directAttack">
             <English>Direct Attack</English>
@@ -22,6 +23,7 @@
             <Polish>Bezpośredni atak</Polish>
             <Korean>직접 사격</Korean>
             <Russian>Прямая атака</Russian>
+            <Portuguese>Ataque Direto</Portuguese>
         </Key>
         <Key ID="STR_ACE_NLAW_overflyTopAttack">
             <English>Overfly Top Attack</English>
@@ -33,6 +35,7 @@
             <Polish>Atak z góry</Polish>
             <Korean>탑어택</Korean>
             <Russian>Атака сверху</Russian>
+            <Portuguese>Ataque por cima</Portuguese>
         </Key>
     </Package>
 </Project>

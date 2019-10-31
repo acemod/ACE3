@@ -35,10 +35,17 @@ if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
         // Handle setting being changed mid-mission and still properly check
         // already unconscious units, should handle locality changes as well
         if (isNil "_lastWakeUpCheck") exitWith {
+            TRACE_1("undefined lastWakeUpCheck: setting to current time",_lastWakeUpCheck);
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
         };
 
-        if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
+        private _wakeUpCheckInterval = SPONTANEOUS_WAKE_UP_INTERVAL;
+        if (EGVAR(medical,spontaneousWakeUpEpinephrineBoost) > 1) then {
+            private _epiEffectiveness = [_unit, "Epinephrine", false] call EFUNC(medical_status,getMedicationCount);
+            _wakeUpCheckInterval = _wakeUpCheckInterval * linearConversion [0, 1, _epiEffectiveness, 1, 1 / EGVAR(medical,spontaneousWakeUpEpinephrineBoost), true];
+            TRACE_2("epiBoost",_epiEffectiveness,_wakeUpCheckInterval);
+        };
+        if (CBA_missionTime - _lastWakeUpCheck > _wakeUpCheckInterval) then {
             TRACE_2("Checking for wake up",_unit,EGVAR(medical,spontaneousWakeUpChance));
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
 
