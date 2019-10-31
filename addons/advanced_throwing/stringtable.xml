@@ -13,6 +13,7 @@
             <Chinese>進階投擲</Chinese>
             <Chinesesimp>进阶投掷</Chinesesimp>
             <Portuguese>Arremesso Avançado</Portuguese>
+            <Czech>Pokročilé házení</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
             <English>Allows changing advanced throwing behaviour.</English>
@@ -26,6 +27,7 @@
             <Chinese>允許使用更多不同的投擲方式</Chinese>
             <Chinesesimp>允许使用更多不同的投掷方式</Chinesesimp>
             <Portuguese>Permite mudar o comportamento do arremesso avançado.</Portuguese>
+            <Czech>Umožňuje změnit pokročilé chování při házení.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
@@ -39,6 +41,7 @@
             <Chinese>啟用進階投擲</Chinese>
             <Chinesesimp>启用进阶投掷</Chinesesimp>
             <Portuguese>Ativa o Arremesso Avançado</Portuguese>
+            <Czech>Povolit pokročilé házení</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>
@@ -52,6 +55,7 @@
             <Chinese>啟用進階投擲系統</Chinese>
             <Chinesesimp>启用进阶投掷系统</Chinesesimp>
             <Portuguese>Ativa o sistema de Arremesso Avançado.</Portuguese>
+            <Czech>Umožňuje pokročilý systém házení.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
@@ -65,6 +69,7 @@
             <Chinese>顯示投擲軌道</Chinese>
             <Chinesesimp>显示投掷轨道</Chinesesimp>
             <Portuguese>Mostrar o Arco de Arremesso</Portuguese>
+            <Czech>Zobrazit oblouk vrhu </Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_Description">
             <English>Enables visualization of the throw arc (where throwable will fly).</English>

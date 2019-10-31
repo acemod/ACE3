@@ -13,6 +13,7 @@
             <Polish>Wskazywanie</Polish>
             <Russian>Указание пальцем</Russian>
             <Portuguese>Apontando</Portuguese>
+            <Czech>Ukazování </Czech>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
