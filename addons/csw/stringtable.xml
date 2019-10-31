@@ -4,10 +4,12 @@
         <Key ID="STR_ACE_CSW_displayName">
             <English>Crew Served Weapons</English>
             <Portuguese>Crew Served Weapons (CSW)</Portuguese>
+            <Japanese>共用火器 (CSW)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
             <Portuguese>Montar Tripé</Portuguese>
+            <Japanese>三脚を設置</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -19,6 +21,7 @@
             <Portuguese>Desmontar</Portuguese>
             <Russian>Разобрать</Russian>
             <Spanish>Desmonta</Spanish>
+            <Japanese>解体</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_GetIn_displayName">
             <English>Get In</English>
@@ -30,6 +33,7 @@
             <Portuguese>Entrar</Portuguese>
             <Russian>Войти</Russian>
             <Spanish>Entrar</Spanish>
+            <Japanese>乗る</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_loadX">
             <English>Load %1</English>
@@ -42,6 +46,7 @@
             <Russian>Загрузить %1</Russian>
             <Hungarian>Load %1</Hungarian>
             <Portuguese>Carregar %1</Portuguese>
+            <Japanese>%1 を装填</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_unloadX">
             <English>Unload %1</English>
@@ -54,86 +59,107 @@
             <Russian>Разгрузить %1</Russian>
             <Hungarian>Unload %1</Hungarian>
             <Portuguese>Descarregar %1</Portuguese>
+            <Japanese>%1 を除去</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
             <Portuguese>Conectar %1</Portuguese>
+            <Japanese>%1 を接続</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
             <English>Advanced assembly</English>
             <Portuguese>Montagem Avançada</Portuguese>
+            <Japanese>アドバンスド設置</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
             <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
             <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas. Munição carregada é reduzida para um único carregador.</Portuguese>
+            <Japanese>対応している設置型火器に ACE3 の設置と解体を使用します。装填済みの弾倉は 1 つの弾倉に減少します。</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save extra ammo</English>
             <Portuguese>Economizar munição extra</Portuguese>
+            <Japanese>過剰弾薬を保持</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
             <English>Store extra magazines next to static weapon</English>
             <Portuguese>Carregar munições extras próximo à arma estática</Portuguese>
+            <Japanese>次の設置型火器用に過剰弾薬を保持します。</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
             <Portuguese>Manipulação de Munições</Portuguese>
+            <Japanese>弾薬の処理</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
             <Portuguese>Permite carregamento e descarregamento de munições</Portuguese>
+            <Japanese>弾薬の装填と除去を許可します。</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
             <Portuguese>Coeficiente de tempo para a interação</Portuguese>
+            <Japanese>インタラクション時間係数</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
             <Portuguese>Escala o tempo requerido para montar e recarregar armas estáticas.</Portuguese>
+            <Japanese>設置型火器の設置と再装填時間を管理できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_displayName">
             <English>Drag tripods after deploying</English>
             <Portuguese>Arrastar tripés após montar</Portuguese>
+            <Japanese>設置後に三脚を引きずる</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_description">
             <English>After deploying a tripod, start dragging it to a precise location</English>
             <Portuguese>Assim que montar um tripé, automaticamente começa a arrastá-lo para um posicionamento mais preciso</Portuguese>
+            <Japanese>三脚を設置後、動かせるよう三脚を引きずるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
             <Portuguese>Carregar Tripé</Portuguese>
+            <Japanese>三脚を拾う</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
             <Portuguese>Montar Arma</Portuguese>
+            <Japanese>火器を乗せる</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>
             <Portuguese>Desmontando Arma...</Portuguese>
+            <Japanese>火器を解体中です・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
             <Portuguese>Montando Arma...</Portuguese>
+            <Japanese>火器を設置中です・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_PickupTripod_progressBar">
             <English>Picking Up Tripod...</English>
             <Portuguese>Carregando Tripé...</Portuguese>
+            <Japanese>三脚を取得中です・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
             <Portuguese>Montando Tripé...</Portuguese>
+            <Japanese>三脚を設置中です・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW">
             <English>Enable CSW</English>
             <Portuguese>Ativar CSW</Portuguese>
+            <Japanese>CSW 有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW_tooltip">
             <English>Enables Crew Served ability on this weapon</English>
             <Portuguese>Ativar funções de CSW nessa arma</Portuguese>
+            <Japanese>この火器で共用火器を有効化します。</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableAndEmpty">
             <English>Enabled and Leave Weapon Empty</English>
             <Portuguese>Ativado e deixar arma vazia</Portuguese>
+            <Japanese>火器有効化し空を維持</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_genericTripod_displayName">
             <English>Tripod</English>
@@ -144,166 +170,207 @@
             <German>Dreibein</German>
             <Turkish>Üçayak</Turkish>
             <Portuguese>Tripé</Portuguese>
+            <Japanese>三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticATBag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AT)</English>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AT)</Portuguese>
+            <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AT)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AA)</English>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AA)</Portuguese>
+            <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AA)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
             <English>[CSW] Static XM312 Gun</English>
             <Portuguese>[CSW] Arma Estática - XM312</Portuguese>
+            <Japanese>[CSW] 設置型 XM312</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
             <Portuguese>[CSW] Arma Estática - XM312 (Autônoma)</Portuguese>
+            <Japanese>[CSW] 設置型 XM312 (自律型)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[CSW] Static XM307 Gun</English>
             <Portuguese>[CSW] Arma Estática - XM307</Portuguese>
+            <Japanese>[CSW] 設置型 XM307</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[CSW] Static XM307 Gun (Autonomous)</English>
             <Portuguese>[CSW] Arma Estática - XM307 (Autônoma)</Portuguese>
+            <Japanese>[CSW] 設置型 XM307 (自律型)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x108mm HMG</Portuguese>
+            <Japanese>[CSW] 12.7x108 mm HMG ベルト</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_displayName">
             <English>[CSW] 12.7x99mm HMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG</Portuguese>
+            <Japanese>[CSW] 12.7x99 mm HMG ベルト</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Red)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Vermelho)</Portuguese>
+            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Green)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Verde)</Portuguese>
+            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Amarelo)</Portuguese>
+            <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (黄)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[CSW] 20mm Grenade GMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - Granada 20mm GMG</Portuguese>
+            <Japanese>[CSW] 20 mm てき弾 GMG ベルト</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>
             <Portuguese>M3 Tripé</Portuguese>
+            <Japanese>M3 三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFolded_displayName">
             <English>[CSW] 6P57 Deployable Tripod</English>
             <Portuguese>[CSW] 6P57 Tripé Ajustável</Portuguese>
+            <Japanese>[CSW] 6P57 設置型三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFoldedLow_displayName">
             <English>[CSW] 6P57 Deployable Tripod (Low)</English>
             <Portuguese>[CSW] 6P57 Tripé Ajustável (Baixo)</Portuguese>
+            <Japanese>[CSW] 6P57 設置型三脚 (低座)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
             <English>[CSW] M220 Deployable Tripod</English>
             <Portuguese>[CSW] M220 Tripé Ajustável</Portuguese>
+            <Japanese>[CSW] M220 設置型三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_sag30TripodFolded_displayName">
             <English>[CSW] SAG-30 Deployable Tripod</English>
             <Portuguese>[CSW] SAG-30 Tripé Ajustável</Portuguese>
+            <Japanese>[CSW] SAG-30 設置型三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripod_displayName">
             <English>6P57 Tripod</English>
             <Portuguese>Tripé 6P57</Portuguese>
+            <Japanese>6P57 三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_sag30Tripod_displayName">
             <English>SAG-30 Tripod</English>
             <Portuguese>Tripe SAG-30</Portuguese>
+            <Japanese>SAG-30 三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_m220Tripod_displayName">
             <English>M220 Tripod</English>
             <Portuguese>Tripé M220</Portuguese>
+            <Japanese>M220 三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodFolded_displayName">
             <English>[CSW] M3 Deployable Tripod</English>
             <Portuguese>[CSW] M3 Tripe Ajustável</Portuguese>
+            <Japanese>[CSW] M3 設置型三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodLowFolded_displayName">
             <English>[CSW] M3 Deployable Tripod (Low)</English>
             <Portuguese>[CSW] M3 Tripe Ajustável (Baixo)</Portuguese>
+            <Japanese>[CSW] M3 設置型三脚 (低座)</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplateBag_displayName">
             <English>[CSW] Mortar Baseplate</English>
             <Portuguese>[CSW] Placa base de Morteiro</Portuguese>
+            <Japanese>[CSW] 迫撃砲基盤</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
             <English>Mortar Baseplate</English>
             <Portuguese>Placa base de Morteiro</Portuguese>
+            <Japanese>迫撃砲基盤</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_mk6MortarBag_displayName">
             <English>[CSW] Mk6 Mortar Tube</English>
             <Portuguese>[CSW] Tubo de Morteiro - Mk6</Portuguese>
+            <Japanese>[CSW] Mk6 迫撃砲発射筒</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_m252_tube">
             <English>[CSW] M252 Tube Bag</English>
             <Portuguese>[CSW] Tubo de Morteiro - M252</Portuguese>
+            <Japanese>[CSW] M252 発射筒バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_m2_gun">
             <English>[CSW] M2 Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - M2</Portuguese>
+            <Japanese>[CSW] M2 バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_mk19_gun">
             <English>[CSW] MK19 Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - MK19</Portuguese>
+            <Japanese>[CSW] Mk19 バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - BGM-71 TOW</Portuguese>
+            <Japanese>[CSW] BGM-71 TOW ランチャー バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_dshk_gun">
             <English>[CSW] DSHK Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - DSHK</Portuguese>
+            <Japanese>[CSW] DShK バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_2b14_tube">
             <English>[CSW] 2B14 Tube Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - 2B14</Portuguese>
+            <Japanese>[CSW] 2B14 発射筒バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_nsv_gun">
             <English>[CSW] NSV Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - NSV</Portuguese>
+            <Japanese>[CSW] NSV バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_kord_gun">
             <English>[CSW] KORD Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - KORD</Portuguese>
+            <Japanese>[CSW] KORD バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_ags30_gun">
             <English>[CSW] AGS-30 Gun Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - AGS-30</Portuguese>
+            <Japanese>[CSW] AGS-30 バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_metis_tube">
             <English>[CSW] 9k115 Metis Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - 9k115 Metis</Portuguese>
+            <Japanese>[CSW] 9K115 メティス ランチャー バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_kornet_launcher">
             <English>[CSW] 9m113 Kornet Launcher</English>
             <Portuguese>[CSW] Bolsa de Arma - 9m113 Kornet</Portuguese>
+            <Japanese>[CSW] 9M113 コルネット ランチャー バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_Tripod">
             <English>SPG-9 Tripod</English>
             <Portuguese>Tripé SPG-9</Portuguese>
+            <Japanese>SPG-9 三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_TripodFolded">
             <English>[CSW] SPG-9 Deployable Tripod</English>
             <Portuguese>[CSW] SPG-9 Tripe Ajustável (Baixo)</Portuguese>
+            <Japanese>[CSW] SPG-9 設置型三脚</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_tube">
             <English>[CSW] SPG-9 Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - SPG-9</Portuguese>
+            <Japanese>[CSW] SPG-9 ランチャー バッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_spg9m_tube">
             <English>[CSW] SPG-9M Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - SPG-9M</Portuguese>
+            <Japanese>[CSW] SPG-9M ランチャー バッグ</Japanese>
         </Key>
     </Package>
 </Project>
