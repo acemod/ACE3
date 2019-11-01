@@ -934,6 +934,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PartialX">
             <English>Partial %1</English>
+            <Japanese>部分的な%1</Japanese>
         </Key>
     </Package>
 </Project>
