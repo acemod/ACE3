@@ -94,24 +94,24 @@ GVAR(dev_watchVariableRunning) = true;
     _return pushBack "------- Open Wounds: -------";
     private _wounds = GET_OPEN_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage", "_xPain"];
+        _return pushBack format ["%1: [%2] [x%3] [B: %4] [D: %5] [P: %6]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2, _xPain toFixed 2];
     } forEach _wounds;
 
     // Bandaged Wounds:
     _return pushBack "------- Bandaged Wounds: -------";
     private _wounds = GET_BANDAGED_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage", "_xPain"];
+        _return pushBack format ["%1: [%2] [x%3] [B: %4] [D: %5] [P: %6]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2, _xPain toFixed 2];
     } forEach _wounds;
 
     // Stitched Wounds:
     _return pushBack "------- Stitched Wounds: -------";
     private _wounds = GET_STITCHED_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage", "_xPain"];
+        _return pushBack format ["%1: [%2] [x%3] [B: %4] [D: %5] [P: %6]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2, _xPain toFixed 2];
     } forEach _wounds;
 
     // IVs:

@@ -13,14 +13,12 @@
  * None
  *
  * Example:
- * [player, 0, 1, false] call ace_medical_vitals_fnc_updatePainSuppress
+ * [player, 0, 1, false] call ace_medical_vitals_fnc_updatePain
  *
  * Public: No
  */
 
 params ["_unit", "_painSupressAdjustment", "_deltaT", "_syncValue"];
-
-_unit setVariable [VAR_PAIN_SUPP, 0 max _painSupressAdjustment, _syncValue];
 
 // Pain value formula: maximum of
 // - most painful open wound * (1 + 0.1 * count of open wounds)
@@ -79,7 +77,9 @@ private _customPain = _unit getVariable [QGVAR(customPain), []];
 
 
 // Handles simple medication pain supppression
-if (isNil QEGVAR(medical_treatment,advancedMedication) || {!EGVAR(medical_treatment,advancedMedication)}) then {
+if (missionNamespace getVariable [QEGVAR(medical_treatment,advancedMedication), false]) then {
+    _unit setVariable [VAR_PAIN_SUPP, 0 max _painSupressAdjustment, _syncValue];
+} else {
     private _painSupress = _unit getVariable [VAR_PAIN_SUPP, 0];
     _painSupress = _painSupress - _deltaT / PAIN_SUPPRESSION_FADE_TIME;
     _unit setVariable [VAR_PAIN_SUPP, 0 max _painSupress, _syncValue];
