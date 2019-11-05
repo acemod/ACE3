@@ -44,6 +44,7 @@
             <Korean>참호 - 소형</Korean>
             <Chinesesimp>掩体 - 小</Chinesesimp>
             <Chinese>掩體 - 小</Chinese>
+            <Czech>Obálka - Malá</Czech>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -88,6 +89,7 @@
             <Korean>참호 -  대형</Korean>
             <Chinesesimp>掩体 - 大</Chinesesimp>
             <Chinese>掩體 - 大</Chinese>
+            <Czech>Obálka - Velká</Czech>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>

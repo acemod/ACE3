@@ -92,6 +92,7 @@
             <Polish>Poszerza istniejącą pogodę o temperaturę, wilgotność i ciśnienie powietrza.</Polish>
             <Russian>Расширяет текущие возможности погоды с учетом температуры, влажности и давления</Russian>
             <Portuguese>Expande o clima existente com temperatura, humidade e pressão do ar.</Portuguese>
+            <Czech>Rozšiřuje stávající počasí o teplotu, vlhkost a tlak vzduchu.</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -136,6 +137,7 @@
             <Polish>Symulacja Wiatru (bazowana na mapie)</Polish>
             <Russian>Симуляция ветра (на основе местности)</Russian>
             <Portuguese>Simulação de Vento (baseado no mapa)</Portuguese>
+            <Czech>Simulace větru (podle mapy)</Czech>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_Description">
             <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
@@ -148,6 +150,7 @@
             <Polish>Aktywuje symulację wiatru bazującą na mapie (nadpisuje wind z domyślnej wersji gry)</Polish>
             <Russian>Включает симуляцию ветра на основе текущей местности (переписывает ванильный ветер)</Russian>
             <Portuguese>Ativar a simulação de vento dos mapas. (sobrepõe vento vanilla)</Portuguese>
+            <Czech>Povoluje simulaci větru založenou na mapě (přepíše původní vítr)</Czech>
         </Key>
     </Package>
 </Project>

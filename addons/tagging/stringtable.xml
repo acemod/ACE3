@@ -13,6 +13,7 @@
             <Chinesesimp>喷漆</Chinesesimp>
             <Chinese>噴漆</Chinese>
             <Portuguese>Marcação</Portuguese>
+            <Czech>Označování</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
@@ -26,6 +27,7 @@
             <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
             <Chinese>定義噴漆系統預設設定</Chinese>
             <Portuguese>Configura como o sistema de Marcação funcionará como padrão. (Tagging)</Portuguese>
+            <Czech>Nakonfigurujte, jak bude systém značkování ve výchozím nastavení fungovat.</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Spray Paint - Quick Tag</English>
@@ -39,6 +41,7 @@
             <Chinesesimp>快速喷漆</Chinesesimp>
             <Chinese>快速噴漆</Chinese>
             <Portuguese>Lata de Tinta - Marcação Rápida</Portuguese>
+            <Czech>Stříkací barva - Rychlá značka</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
@@ -52,6 +55,7 @@
             <Chinesesimp>直接喷漆在互动选单瞄准的点上。</Chinesesimp>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
             <Portuguese>Ação executada no ponto principal de marcação</Portuguese>
+            <Czech>Akce prováděná v hlavním bodě značky interakce.</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
@@ -65,6 +69,7 @@
             <Chinesesimp>上次最后使用</Chinesesimp>
             <Chinese>上次最後使用</Chinese>
             <Portuguese>Último usado</Portuguese>
+            <Czech>Naposledy použitý</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
@@ -78,6 +83,7 @@
             <Chinesesimp>随机X标记</Chinesesimp>
             <Chinese>隨機X標記</Chinese>
             <Portuguese>Aleatório X</Portuguese>
+            <Czech>Náhodné X</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
@@ -91,6 +97,7 @@
             <Chinesesimp>随机</Chinesesimp>
             <Chinese>隨機</Chinese>
             <Portuguese>Aleatório</Portuguese>
+            <Czech>Náhodný</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
