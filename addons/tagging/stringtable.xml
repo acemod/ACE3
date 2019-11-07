@@ -175,7 +175,7 @@
             <Chinese>藍色X標記</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
-            <English>Spray paint (Black)</English>
+            <English>Spray Paint (Black)</English>
             <German>Sprühfarbe (Schwarz)</German>
             <Spanish>Pintura negra</Spanish>
             <Polish>Czarna farba w sprayu</Polish>
@@ -190,7 +190,7 @@
             <Chinese>黑色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
-            <English>Spray paint (Red)</English>
+            <English>Spray Paint (Red)</English>
             <German>Sprühfarbe (Rot)</German>
             <Spanish>Pintura roja</Spanish>
             <Polish>Czerwona farba w sprayu</Polish>
@@ -205,7 +205,7 @@
             <Chinese>紅色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
-            <English>Spray paint (Green)</English>
+            <English>Spray Paint (Green)</English>
             <German>Sprühfarbe (Grün)</German>
             <Spanish>Pintura verde</Spanish>
             <Polish>Zielona farba w sprayu</Polish>
@@ -220,7 +220,7 @@
             <Chinese>綠色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
-            <English>Spray paint (Blue)</English>
+            <English>Spray Paint (Blue)</English>
             <German>Sprühfarbe (Blau)</German>
             <Spanish>Pintura azul</Spanish>
             <Polish>Niebieska farba w sprayu</Polish>
