@@ -55,9 +55,14 @@ switch (true) do {
         _treatmentArgs = [_target, _selection, "FieldDressing"];
     };
     case (IN_CRDC_ARRST(_target)): {
-        _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
+        if(EGVAR(medical_treatment,cprSuccessChance) == 0) then {
+            _treatmentEvent = '#WaitForHeartRate';
+            [QEGVAR(medical,CPRSucceeded), _target] call CBA_fnc_localEvent;
+        } else {
+            _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
+            _treatmentArgs = [_healer, _target];
+        };
         _treatmentTime = 15;
-        _treatmentArgs = [_healer, _target];    
     };
     case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}): {
         // Check if patient's blood volume + remaining IV volume is enough to allow the patient to wake up
