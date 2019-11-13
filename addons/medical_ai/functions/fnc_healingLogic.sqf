@@ -70,7 +70,8 @@ switch (true) do {
         {
             _x params ["_volumeRemaining"];
             _totalIvVolume = _totalIvVolume + _volumeRemaining;
-        } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);        
+        } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
+        
         if (GET_BLOOD_VOLUME(_target) + (_totalIvVolume / 1000) > BLOOD_VOLUME_CLASS_2_HEMORRHAGE) exitWith {
             _treatmentEvent = "#waitForBlood";
         };
