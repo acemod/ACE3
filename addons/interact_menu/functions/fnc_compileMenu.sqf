@@ -26,7 +26,7 @@ private _namespace = GVAR(ActNamespace);
 // Exit if the action menu is already compiled for this class
 if !(isNil {_namespace getVariable _objectType}) exitWith {};
 
-if ((getNumber (configFile >> "CfgVehicles" >> _objectType >> "isPlayableLogic")) == 1) exitWith {
+if (_objectType isKindOf "VirtualMan_F") exitWith { // these have config: isPlayableLogic = 1
     TRACE_1("skipping playable logic",_objectType);
     _namespace setVariable [_objectType, []];
 };
