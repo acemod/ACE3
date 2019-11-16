@@ -17,7 +17,7 @@
  * Example:
  * [bob, flag, true, "claimReturn"] call ace_common_fnc_claimSafeServer
  *
- * Public: No
+ * Public: Yes
  */
 
 params ["_unit", "_target", ["_lockTarget", false], ["_returnEvent", ""]];
