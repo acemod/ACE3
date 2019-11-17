@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="trenches">
+    <Package name="Trenches">
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
             <English>Entrenching Tool</English>
             <German>Klappspaten</German>

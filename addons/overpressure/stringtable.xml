@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="overpressure">
-        <Key ID="STR_ACE_overpressure_distanceCoefficient_displayName">
+    <Package name="Overpressure">
+        <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">
             <English>Overpressure Distance Coefficient</English>
             <German>Überdruckentfernungskoeffizient</German>
             <Japanese>過圧の距離係数</Japanese>
@@ -14,7 +14,7 @@
             <Russian>Коэффициент избыточного давления</Russian>
             <Portuguese>Coeficiente de Distância de Sobrepressão</Portuguese>
         </Key>
-        <Key ID="STR_ACE_overpressure_distanceCoefficient_toolTip">
+        <Key ID="STR_ACE_Overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect [Default: 1]</English>
             <German>Stellt den Koeffizient für die Überdruckentfernung ein [Standard: 1]</German>
             <Japanese>過圧効果の範囲 [標準: 1]</Japanese>
@@ -27,7 +27,7 @@
             <Russian>Степень зависимости избыточного давления от расстояния [По умолчанию: 1]</Russian>
             <Portuguese>Escala o efeito de sobrepressão [Padrão: 1]</Portuguese>
         </Key>
-        <Key ID="STR_ACE_overpressure_statBackblastRange">
+        <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
             <German>Rückstoßbereich</German>
             <Japanese>後方噴射の範囲</Japanese>
@@ -38,7 +38,7 @@
             <Russian>Дальность реактивной струи</Russian>
             <Portuguese>Alcance do Sopro de Disparo</Portuguese>
         </Key>
-        <Key ID="STR_ACE_overpressure_statBackblastAngle">
+        <Key ID="STR_ACE_Overpressure_statBackblastAngle">
             <English>Backblast angle</English>
             <German>Rückstoßwinkel</German>
             <Japanese>後方噴射の角度</Japanese>

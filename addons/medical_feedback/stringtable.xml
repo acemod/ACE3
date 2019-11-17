@@ -66,7 +66,7 @@
             <English>Only high pain effect</English>
         </Key>
         <Container name="Settings">
-            <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
+            <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
                 <Russian>Включить крики</Russian>
                 <Polish>Aktywuj wrzaski</Polish>
@@ -82,7 +82,7 @@
                 <Chinesesimp>启用尖叫</Chinesesimp>
                 <Chinese>啟用尖叫</Chinese>
             </Key>
-            <Key ID="STR_ACE_Medical_feedback_enableScreams_Description">
+            <Key ID="STR_ACE_Medical_Feedback_enableScreams_Description">
                 <English>Enable screaming by injured units</English>
                 <Russian>Включить крики раненных бойцов</Russian>
                 <Polish>Aktywuj wrzeszczenie z bólu przez ranne jednostki</Polish>
