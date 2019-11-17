@@ -1,60 +1,8 @@
 class CfgWeapons {
+    // PIP scopes
     class ItemCore;
     class InventoryOpticsItem_Base_F;
-    class Default;
 
-    class Binocular: Default {
-        forceOptics = 0;             // Allow using compass with Binocular
-        opticsZoomMin = 0.056889;     // 5.25x power
-        opticsZoomMax = 0.056889;     // 9 px/mil
-        modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7 degrees horizontal field of view
-        visionMode[] = {"Normal"}; // Can't use nvgs with binoculars any more than you can with scopes
-        // Fix AI using Binocs on short range - #18737
-        // minRange = 300; // 300 = uses Rangefinder often (runs a few meters, stops, uses RF, repeats)
-        minRange = 500; //500 = seem almost never use it..?
-        minRangeProbab = 0.001;
-        midRange = 1000;
-        midRangeProbab = 0.01;
-        maxRange = 5000;
-        maxRangeProbab = 0.01;
-    };
-
-    // zooming reticle scopes
-    class optic_DMS: ItemCore {
-        class ItemInfo: InventoryOpticsItem_Base_F {
-            class OpticsModes {
-                class Snip;
-                class Iron;
-            };
-        };
-    };
-
-    /*class ACE_optic_DMS: optic_DMS {
-        author = ECSTRING(common,ACETeam);
-        _generalMacro = "ACE_optic_DMS";
-        scope = 1;
-        displayName = "LOCALIZE ACE DMS";
-        //descriptionShort = "$STR_A3_CFGWEAPONS_ACC_DMS1";
-        weaponInfoType = "ACE_RscWeaponZeroing";
-
-        class ItemInfo: ItemInfo {
-            modelOptics = QPATHTOF(models\ace_shortdot_optics.p3d);
-
-            class OpticsModes: OpticsModes {
-                class Snip: Snip {
-                    opticsZoomMin = 0.05;
-                    opticsZoomMax = 0.3;
-                    opticsZoomInit = 0.3;
-                    discretefov[] = {};
-                    modelOptics[] = {};
-                };
-
-                class Iron: Iron {};
-            };
-        };
-    };*/
-
-    // PIP scopes
     class optic_Hamr: ItemCore {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
@@ -65,30 +13,31 @@ class CfgWeapons {
     };
 
     class ACE_optic_Hamr_2D: optic_Hamr {
-        GVAR(BodyDay) = QPATHTOF(reticles\hamr-body_ca.paa);
-        GVAR(BodyNight) = QPATHTOF(reticles\hamr-bodyNight_ca.paa);
-        GVAR(ReticleDay) = QPATHTOF(reticles\hamr-reticle65_ca.paa);
-        GVAR(ReticleNight) = QPATHTOF(reticles\hamr-reticle65Illum_ca.paa);
-
         author = ECSTRING(common,ACETeam);
-        _generalMacro = "ACE_optic_Hamr_2D";
+        scope = 2;
         displayName = CSTRING(hamr);
-        weaponInfoType = "ACE_RscWeapon_Hamr";
+
+        // optional class, scripted 2d reticle data
+        class CBA_ScriptedOptic {
+            opticsPPEffects[] = {"ACE_OpticsRadBlur1"};
+
+            reticleTexture = QPATHTOF(reticles\hamr-reticle65_ca.paa);
+            reticleTextureNight = QPATHTOF(reticles\hamr-reticle65Illum_ca.paa);
+            reticleTextureSize = 1;
+
+            bodyTexture = QPATHTOF(reticles\hamr-body_ca.paa);
+            bodyTextureNight = QPATHTOF(reticles\hamr-bodyNight_ca.paa);
+            bodyTextureSize = 1.95;
+        };
+        weaponInfoType = "CBA_ScriptedOptic";
 
         class ItemInfo: ItemInfo {
-            modelOptics = QPATHTOF(models\ace_optics_reticle90.p3d);
+            modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
 
             class OpticsModes: OpticsModes {
                 class Hamr2Collimator: Hamr2Collimator {};
-
                 class Hamr2Scope: Hamr2Scope {
                     useModelOptics = 1;
-                    opticsZoomInit = 0.0872664626;
-                    opticsZoomMax = 0.0872664626;
-                    opticsZoomMin = 0.0872664626;
-                    opticsPPEffects[] = {"OpticsCHAbera5", "OpticsBlur5", "ACE_OpticsRadBlur1"};
-                    opticsDisablePeripherialVision = 0;
-                    visionMode[] = {"Normal", "NVG"};
                 };
             };
         };
@@ -96,14 +45,27 @@ class CfgWeapons {
 
     class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
         author = ECSTRING(common,ACETeam);
-        _generalMacro = "ACE_optic_Hamr_PIP";
-        //scopeArsenal = 1;
-        displayName = CSTRING(hamr_pip);
+        scope = 1;
 
         class ItemInfo: ItemInfo {
-            modelOptics = QPATHTOF(models\ace_optics_pip.p3d);
+            modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";
         };
     };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
     class optic_Arco: ItemCore {
         class ItemInfo: InventoryOpticsItem_Base_F {
@@ -305,6 +267,58 @@ class CfgWeapons {
                 };
             };
         };
+    };
+
+
+
+
+
+
+
+
+    // zooming reticle scopes
+    /*class optic_DMS: ItemCore {
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class Snip;
+                class Iron;
+            };
+        };
+    };
+
+    class ACE_optic_DMS: optic_DMS {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ACE_optic_DMS";
+        scope = 1;
+        displayName = "LOCALIZE ACE DMS";
+        //descriptionShort = "$STR_A3_CFGWEAPONS_ACC_DMS1";
+        weaponInfoType = "ACE_RscWeaponZeroing";
+
+        class ItemInfo: ItemInfo {
+            modelOptics = QPATHTOF(models\ace_shortdot_optics.p3d);
+
+            class OpticsModes: OpticsModes {
+                class Snip: Snip {
+                    opticsZoomMin = 0.05;
+                    opticsZoomMax = 0.3;
+                    opticsZoomInit = 0.3;
+                    discretefov[] = {};
+                    modelOptics[] = {};
+                };
+
+                class Iron: Iron {};
+            };
+        };
+    };*/
+
+
+
+    class Default;
+    class Binocular: Default {
+        forceOptics = 0;             // Allow using compass with Binocular
+        opticsZoomMin = 0.056889;     // 5.25x power
+        opticsZoomMax = 0.056889;     // 9 px/mil
+        modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7 degrees horizontal field of view
     };
 };
 
