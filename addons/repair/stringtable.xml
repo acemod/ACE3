@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="repair">
+    <Package name="Repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
             <English>Spare Track</English>
             <German>Ersatzkette</German>

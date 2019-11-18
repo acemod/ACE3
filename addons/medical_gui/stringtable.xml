@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Medical GUI">
+    <Package name="Medical_GUI">
         <Key ID="STR_ACE_Medical_GUI_SubCategory">
             <English>GUI</English>
             <Japanese>GUI</Japanese>
