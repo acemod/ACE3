@@ -12,6 +12,7 @@
             <Polish>Przełącz Jednostki</Polish>
             <Russian>Переключение юнитов</Russian>
             <Portuguese>Trocar Unidades</Portuguese>
+            <Czech>Přepnout jednotky</Czech>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>

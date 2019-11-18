@@ -13,6 +13,7 @@
             <Polish>ACE Zaawansowane Zmęczenie</Polish>
             <Russian>ACE Продвинутая усталость</Russian>
             <Portuguese>ACE Fadiga Avançada</Portuguese>
+            <Czech>ACE Pokročilá únava</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
             <English>Performance Factor</English>
@@ -26,6 +27,7 @@
             <Chinesesimp>体力值</Chinesesimp>
             <Russian>Фактор производительности</Russian>
             <Portuguese>Fator de Performance</Portuguese>
+            <Czech>Faktor výkonu</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_Description">
             <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
@@ -39,6 +41,7 @@
             <Chinesesimp>影响所有玩家的体力表现，值越高代表体力越好</Chinesesimp>
             <Russian>Влияет на общую производительность игроков, у которых не задано персональное значение.</Russian>
             <Portuguese>Influencia na performance geral de todos os jogadores sem nenhum fator personalizado. Quanto maior, melhor.</Portuguese>
+            <Czech>Ovlivňuje celkový výkon všech hráčů bez vlastního faktoru. Vyšší znamená lépe.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_EdenDescription">
             <English>Influences the overall performance of this unit. Higher means better.</English>
@@ -52,6 +55,7 @@
             <Chinesesimp>影响这个单位的体力表现，值越高代表体力越好</Chinesesimp>
             <Russian>Влияет на общую производительность юнита.</Russian>
             <Portuguese>Influencia na performance geral dessa unidade. Quanto maior, melhor.</Portuguese>
+            <Czech>Ovlivňuje celkový výkon této jednotky. Vyšší znamená lépe.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor">
             <English>Recovery Factor</English>
@@ -65,6 +69,7 @@
             <Chinesesimp>回复值</Chinesesimp>
             <Russian>Фактор восстановления</Russian>
             <Portuguese>Fator de Recuperação</Portuguese>
+            <Czech>Faktor zotavení</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_Description">
             <English>Changes how fast the player recovers when resting. Higher is faster.</English>
@@ -78,6 +83,7 @@
             <Chinesesimp>决定玩家休息多久就能回复体力，值越高恢复越快</Chinesesimp>
             <Russian>Изменяет скорость восстановления игрока во время отдыха. Чем выше, тем быстрее.</Russian>
             <Portuguese>Altera o quão rápido um jogador recupera quando descansando. Quanto maior, mais rápido.</Portuguese>
+            <Czech>Mění, jak rychle se hráč zotaví, když odpočívá. Vyšší je rychlejší.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor">
             <English>Load Factor</English>
@@ -91,6 +97,7 @@
             <Chinesesimp>负重量</Chinesesimp>
             <Russian>Фактор нагрузки</Russian>
             <Portuguese>Fator de Carga</Portuguese>
+            <Czech>Faktor zatížení</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_Description">
             <English>Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.</English>
@@ -104,6 +111,7 @@
             <Chinesesimp>增加或降低玩家所能承受的负重量. 如设定值为0, 代表装备的重量将不会影响到玩家的体力表现</Chinesesimp>
             <Russian>Увеличивает или уменьшает вес, влияющий на производительность игроков. Ноль означает, что вес снаряжения не влияет на производительность</Russian>
             <Portuguese>Aumenta ou diminui o quanto o peso influencia a performance do jogador. Zero significa que o peso não tem impacto algum na performance.</Portuguese>
+            <Czech>Zvyšuje nebo snižuje, jak velká váha ovlivňuje výkon hráče. Nulová hodnota znamená, že hmotnost zařízení nemá žádný vliv na výkon.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor">
             <English>Terrain Gradient Factor</English>
@@ -117,6 +125,7 @@
             <Chinesesimp>地形陡峭影响值</Chinesesimp>
             <Russian>Фактор местности</Russian>
             <Portuguese>Fator de Inclinação do Terreno</Portuguese>
+            <Czech>Faktor stoupání terénu</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_Description">
             <English>Sets how much steep terrain increases stamina loss. Higher means higher stamina loss.</English>
@@ -130,6 +139,7 @@
             <Chinesesimp>设定陡峭的地形将会影响多少体力的流，失值越高代表体力流失越快</Chinesesimp>
             <Russian>Устанавливает, насколько крутая местность увеличивает потерю выносливости. Чем выше, тем быстрее теряется выносливость.</Russian>
             <Portuguese>Define o quanto que um terreno íngrime aumenta na perda de estamina. Quanto maior, maior a perda de estamina.</Portuguese>
+            <Czech>Nastavuje, o kolik strmý terén zvyšuje ztrátu výdrže. Vyšší znamená vyšší ztrátu výdrže.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor">
             <English>Sway factor</English>
@@ -142,6 +152,7 @@
             <Polish>Czynnik kołysania</Polish>
             <Russian>Фактор колебания прицела</Russian>
             <Portuguese>Fator de Balanço de Mira</Portuguese>
+            <Czech>Faktor kývání</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_SwayFactor_Description">
             <English>Influences the amount of weapon sway. Higher means more sway.</English>
@@ -154,6 +165,7 @@
             <Polish>Wpływa na poziom kołysania broni. Większa ilość znaczy większe kołysanie.</Polish>
             <Russian>Влияет на колебания прицела оружия. Чем выше - тем больше.</Russian>
             <Portuguese>Influencia a quantidade de balanço da mira da arma. Quanto maior, mais balanço.</Portuguese>
+            <Czech>Ovlivňuje množství kývání zbraní. Vyšší znamená více kývání.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
@@ -167,6 +179,7 @@
             <Chinesesimp>启用</Chinesesimp>
             <Russian>Включена</Russian>
             <Portuguese>Ativado</Portuguese>
+            <Czech>Povoleno</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
             <English>Enables/disables Advanced Fatigue.</English>
@@ -180,6 +193,7 @@
             <Chinesesimp>启用/关闭进阶体力.</Chinesesimp>
             <Russian>Включает / Отключает Продвинутую усталость</Russian>
             <Portuguese>Ativa/Desativa Fadiga Avançada.</Portuguese>
+            <Czech>Aktivuje / deaktivuje Pokročilou únavu.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar">
             <English>Show stamina bar</English>
@@ -193,6 +207,7 @@
             <Chinesesimp>显示体力条</Chinesesimp>
             <Russian>Показать шкалу усталости</Russian>
             <Portuguese>Exibir barra de estamina</Portuguese>
+            <Czech>Zobrazit lištu výdrže</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar_Description">
             <English>Shows the stamina bar.</English>
@@ -206,6 +221,7 @@
             <Chinesesimp>显示体力条</Chinesesimp>
             <Russian>Показывает шкалу усталости.</Russian>
             <Portuguese>Exibe a barra de estamina.</Portuguese>
+            <Czech>Zobrazuje lištu výdrže</Czech>
         </Key>
     </Package>
 </Project>

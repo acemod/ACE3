@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="map_gestures">
-        <Key ID="STR_ACE_map_gestures_moduleSettings_displayName">
+    <Package name="Map_Gestures">
+        <Key ID="STR_ACE_Map_Gestures_moduleSettings_displayName">
             <English>Map Gestures</English>
             <Portuguese>Gestos no mapa</Portuguese>
             <Polish>Gesty na mapie</Polish>
@@ -16,7 +16,7 @@
             <Chinesesimp>地图标识器</Chinesesimp>
             <Chinese>地圖指示器</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_enabled_displayName">
+        <Key ID="STR_ACE_Map_Gestures_enabled_displayName">
             <English>Enabled</English>
             <Portuguese>Ativado</Portuguese>
             <Polish>Aktywne</Polish>
@@ -31,7 +31,7 @@
             <Chinesesimp>启用</Chinesesimp>
             <Chinese>啟用</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_maxRange_displayName">
+        <Key ID="STR_ACE_Map_Gestures_maxRange_displayName">
             <English>Map Gesture Max Range</English>
             <Portuguese>Distância para gestos no mapa</Portuguese>
             <Polish>Maks. zasięg gestów</Polish>
@@ -46,7 +46,7 @@
             <Chinesesimp>地图标识器最大范围</Chinesesimp>
             <Chinese>地圖指示器最大範圍</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_maxRange_description">
+        <Key ID="STR_ACE_Map_Gestures_maxRange_description">
             <English>Max range between players to show the map gesture indicator [default: 7 meters]</English>
             <Portuguese>Distância max. entre os jogadores para mostrar o indicador de gesto no mapa [padrão: 7 metros]</Portuguese>
             <Polish>Maksymalny zasięg, w obrębie którego gesty będą widoczne dla graczy [domyślnie: 7 metrów]</Polish>
@@ -61,7 +61,7 @@
             <Chinesesimp>设定地图标识器显示的最大范围距离 [预设: 7公尺]</Chinesesimp>
             <Chinese>設定地圖指示器顯示的最大範圍距離 [預設: 7公尺]</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
+        <Key ID="STR_ACE_Map_Gestures_defaultLeadColor_displayName">
             <English>Lead Default Color</English>
             <Portuguese>Cor padrão para o líder</Portuguese>
             <Polish>Domyślny kolor lidera</Polish>
@@ -76,7 +76,7 @@
             <Chinesesimp>队长预设颜色</Chinesesimp>
             <Chinese>隊長預設顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadColor_description">
+        <Key ID="STR_ACE_Map_Gestures_defaultLeadColor_description">
             <English>Fallback Color value for group leaders when there is no group setting. [Module: leave blank to not force on clients]</English>
             <Portuguese>Valor de cor alternativa para líderes de grupo</Portuguese>
             <Polish>Domyślny kolor dla liderów grup.</Polish>
@@ -90,7 +90,7 @@
             <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
+        <Key ID="STR_ACE_Map_Gestures_defaultColor_displayName">
             <English>Default Color</English>
             <Portuguese>Cor padrão</Portuguese>
             <Polish>Kolor domyślny</Polish>
@@ -105,7 +105,7 @@
             <Chinesesimp>预设颜色</Chinesesimp>
             <Chinese>預設顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_defaultColor_description">
+        <Key ID="STR_ACE_Map_Gestures_defaultColor_description">
             <English>Fallback Color value when there is no group setting. [Module: leave blank to not force on clients]</English>
             <Portuguese>Valor alternativo de cor</Portuguese>
             <Polish>Kolor domyślny</Polish>
@@ -119,7 +119,7 @@
             <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_leadColor_displayName">
+        <Key ID="STR_ACE_Map_Gestures_leadColor_displayName">
             <English>Lead Color</English>
             <Portuguese>Cor do líder</Portuguese>
             <Polish>Kolor lidera</Polish>
@@ -134,7 +134,7 @@
             <Chinesesimp>队长颜色</Chinesesimp>
             <Chinese>隊長顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_leadColor_description">
+        <Key ID="STR_ACE_Map_Gestures_leadColor_description">
             <English>Color value for group leaders of groups synced with this module.</English>
             <Portuguese>Valor de cor para líderes de grupo sincronizados com este módulo.</Portuguese>
             <Polish>Kolor dla liderów grup zsynchronizowanych z tym modułem.</Polish>
@@ -148,7 +148,7 @@
             <Chinesesimp>改变与此同步小队队长的标识器颜色。</Chinesesimp>
             <Chinese>改變與此同步小隊隊長的指示器顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_color_displayName">
+        <Key ID="STR_ACE_Map_Gestures_color_displayName">
             <English>Color</English>
             <Portuguese>Cor</Portuguese>
             <Polish>Kolor</Polish>
@@ -163,7 +163,7 @@
             <Chinesesimp>颜色</Chinesesimp>
             <Chinese>顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_color_description">
+        <Key ID="STR_ACE_Map_Gestures_color_description">
             <English>Color value for group members of groups synced with this module.</English>
             <Portuguese>Valor de cor para membros de grupo sincronizados com este módulo.</Portuguese>
             <Polish>Kolor dla członków grup zsynchronizowanych z tym modułem.</Polish>
@@ -177,7 +177,7 @@
             <Chinesesimp>改变与此同步小队队员的标识器颜色</Chinesesimp>
             <Chinese>改變與此同步小隊隊員的指示器顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_moduleGroupSettings_displayName">
+        <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>
             <Portuguese>Gestos no mapa - Definições de Grupo</Portuguese>
             <Polish>Gesty na mapie - ustawienia grup</Polish>
@@ -192,7 +192,7 @@
             <Chinesesimp>地图标识器 - 队伍设定</Chinesesimp>
             <Chinese>地圖指示器 - 隊伍設定</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_interval_displayName">
+        <Key ID="STR_ACE_Map_Gestures_interval_displayName">
             <English>Update Interval</English>
             <Portuguese>Intervalo de atualizações</Portuguese>
             <Polish>Interwał aktualizacji</Polish>
@@ -207,7 +207,7 @@
             <Chinesesimp>更新间隔</Chinesesimp>
             <Chinese>更新間隔</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_interval_description">
+        <Key ID="STR_ACE_Map_Gestures_interval_description">
             <English>Time between data updates.</English>
             <Portuguese>Tempo entre atualização de dados</Portuguese>
             <Polish>Odstęp pomiędzy aktualizacjami danych</Polish>
@@ -222,7 +222,7 @@
             <Chinesesimp>定义每次更新数据的时间.</Chinesesimp>
             <Chinese>定義每次更新數據的時間</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_enabled_description">
+        <Key ID="STR_ACE_Map_Gestures_enabled_description">
             <English>Enables the Map Gestures.</English>
             <Portuguese>Ativa os gestos no mapa</Portuguese>
             <Polish>Aktywuje gesty na mapie.</Polish>
@@ -237,7 +237,7 @@
             <Chinesesimp>启用地图标识器</Chinesesimp>
             <Chinese>啟用地圖指示器</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_nameTextColor_displayName">
+        <Key ID="STR_ACE_Map_Gestures_nameTextColor_displayName">
             <English>Name Text Color</English>
             <Portuguese>Cor do texto do nome</Portuguese>
             <Polish>Kolor nazw</Polish>
@@ -252,7 +252,7 @@
             <Chinesesimp>名称文字颜色</Chinesesimp>
             <Chinese>名稱文字顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_nameTextColor_description">
+        <Key ID="STR_ACE_Map_Gestures_nameTextColor_description">
             <English>Color of the name tag text besides the map gestures mark.</English>
             <Portuguese>Cor do texto da etiqueta de nome que fica embaixo da marcação de gestos no mapa.</Portuguese>
             <Polish>Kolor nazwy gracza obok markera gestu mapy.</Polish>
@@ -266,7 +266,7 @@
             <Chinesesimp>定义名称文字颜色。使其与地图标识器颜色有所区别。</Chinesesimp>
             <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_mapGestures_category">
+        <Key ID="STR_ACE_Map_Gestures_mapGestures_category">
             <English>Map Gestures</English>
             <Portuguese>Gestos no mapa</Portuguese>
             <Polish>Gesty na mapie</Polish>

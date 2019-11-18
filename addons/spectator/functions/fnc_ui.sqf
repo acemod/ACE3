@@ -187,4 +187,7 @@ if (_init) then {
 
     // Ensure chat is shown again
     showChat true;
+
+    // Restore HUD
+    [] call EFUNC(common,showHud);
 };

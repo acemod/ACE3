@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="repair">
+    <Package name="Repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
             <English>Spare Track</English>
             <German>Ersatzkette</German>
@@ -1783,8 +1783,8 @@
             <Chinesesimp>选择的备件数量</Chinesesimp>
             <Chinese>選擇的備件數量</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
-            <English>Wheel repair requirements</English>
+        <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_DisplayName">
+            <English>Wheel Repair Requirements</English>
             <German>Erfordernisse zur Reifenreperatur</German>
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
@@ -1798,8 +1798,8 @@
             <Chinesesimp>维修轮胎限制</Chinesesimp>
             <Chinese>維修輪胎限制</Chinese>
         </Key>
-        <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
-            <English>Items required to remove/replace wheels</English>
+        <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_Description">
+            <English>Items required to remove/replace wheels.</English>
             <German>Gegenstänge, die zum Entfernen/Austauschen eines Reifens benötigt werden</German>
             <Polish>Przedmioty potrzebne do wymiany kół</Polish>
             <Spanish>Elementos necesarios para quitar/cambiar ruedas</Spanish>
@@ -1812,6 +1812,18 @@
             <Korean>바퀴를 제거/교체하는데 필요한 물건</Korean>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
             <Chinese>需要特定物品來移除/更換車輪</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
+            <English>Misc Repair Requirements</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
+            <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
+            <English>Full Repair Requirements</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
+            <English>Items required to perform a full vehicle repair.</English>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
