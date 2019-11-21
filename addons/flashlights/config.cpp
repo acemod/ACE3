@@ -7,12 +7,13 @@ class CfgPatches {
         weapons[] = {
             "ACE_Flashlight_MX991",
             "ACE_Flashlight_KSF1",
-            "ACE_Flashlight_XL50"
+            "ACE_Flashlight_XL50",
+            "ACE_Flashlight_Maglite_ML300L"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"voiper, bux"};
+        authors[] = {"voiper", "bux"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
