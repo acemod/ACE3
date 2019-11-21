@@ -24,8 +24,8 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(KSF1_DisplayName);
         descriptionShort = CSTRING(KSF1_Description);
-        model = QPATHTOF(data\KSF_1.p3d);
-        picture = QPATHTOF(UI\ksf1_ca.paa);
+        model = QPATHTOF(data\ksf_1.p3d);
+        picture = QPATHTOF(UI\ksf_1_ca.paa);
         scope = 2;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
