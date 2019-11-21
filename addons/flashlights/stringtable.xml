@@ -103,5 +103,13 @@
             <Russian>Цвет подсветки карты</Russian>
             <Portuguese>Cor da lanterna no mapa</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Flashlights_Maglite_ML300L_DisplayName">
+            <English>Maglite ML300L</English>
+            <German>Maglite ML300L</German>
+        </Key>
+        <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
+            <English>Powerful LED flashlight.</English>
+            <German>Stark leuchtende LED Taschenlampe.</German>
+        </Key>
     </Package>
 </Project>
