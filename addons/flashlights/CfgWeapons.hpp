@@ -7,8 +7,8 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(MX991_DisplayName);
         descriptionShort = CSTRING(MX991_Description);
-        model = QPATHTOF(data\MX_991.p3d);
-        picture = QPATHTOF(UI\mx991_ca.paa);
+        model = QPATHTOF(data\mx_991.p3d);
+        picture = QPATHTOF(UI\mx_991_ca.paa);
         scope = 2;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
