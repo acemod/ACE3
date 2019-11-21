@@ -11,27 +11,27 @@ class CfgWeapons {
 
         magazines[] = {};
         recoil = "";
-		recoilProne = "";
-		distanceZoomMin = 50;
-		distanceZoomMax = 50;
+        recoilProne = "";
+        distanceZoomMin = 50;
+        distanceZoomMax = 50;
         autoFire = 0;
 
         class FlashLight
-		{
-			color[] = {180,180,190};
+        {
+            color[] = {180,180,190};
             ambient[] = {0.9,0.81,0.7};
             intensity = 85;
             size = 1;
             innerAngle = 5;
             outerAngle = 60;
             coneFadeCoef = 8;
-			position = "flash dir";
+            position = "flash dir";
             direction = "flash";
-			useFlare = 1;
-			flareSize = 1.4;
+            useFlare = 1;
+            flareSize = 1.4;
             flareMaxDistance = 100;
             dayLight = 1;
-			class Attenuation {
+            class Attenuation {
                 start = 0;
                 constant = 0.7;
                 linear = 0.5;
@@ -40,7 +40,7 @@ class CfgWeapons {
                 hardLimitEnd = 60;
             };
             scale[] = {0};
-		};
+        };
     };
 
 
