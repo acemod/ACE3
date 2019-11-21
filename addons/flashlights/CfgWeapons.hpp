@@ -41,8 +41,8 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(XL50_DisplayName);
         descriptionShort = CSTRING(XL50_Description);
-        model = QPATHTOF(data\Maglite.p3d);
-        picture = QPATHTOF(UI\xl50_ca.paa);
+        model = QPATHTOF(data\maglite_xl50.p3d);
+        picture = QPATHTOF(UI\maglite_xl50_ca.paa);
         scope = 2;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
