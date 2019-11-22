@@ -20,7 +20,7 @@ if (underwater ACE_player) exitWith { false };
 if (!("ACE_Kestrel4500" in (uniformItems ACE_player)) && !("ACE_Kestrel4500" in (vestItems ACE_player))) exitWith { false };
 
 GVAR(Overlay) = false;
-(QGVAR(Layer) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+QGVAR(Layer) cutText ["", "PLAIN"];
 
 GVAR(Kestrel4500) = true;
 createDialog 'Kestrel4500_Display';
