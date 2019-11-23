@@ -27,7 +27,7 @@ REPOUSER = "acemod"
 REPONAME = "ACE3"
 REPOPATH = "{}/{}".format(REPOUSER,REPONAME)
 
-BRANCH = "master"
+BRANCH = "ci-docs"  # "master"
 
 
 def update_translations(repo):

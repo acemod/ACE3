@@ -3,7 +3,7 @@ name: Documentation
 on:
   push:
     branches:
-    - master
+    - ci-docs  # master
 
 jobs:
   update:
