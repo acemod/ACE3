@@ -38,7 +38,7 @@
 
 if (GVAR(Overlay)) exitWith {
     GVAR(Overlay) = false;
-    3 cutText ["", "PLAIN"];
+    QGVAR(Layer) cutText ["", "PLAIN"];
     true
 };
 if (underwater ACE_player) exitWith { true };
@@ -55,7 +55,7 @@ GVAR(Overlay) = true;
     // abort condition
     if (!GVAR(Overlay) || {!(("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player)))}) exitWith {
         GVAR(Overlay) = false;
-        3 cutText ["", "PLAIN"];
+        QGVAR(Layer) cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
@@ -64,7 +64,7 @@ GVAR(Overlay) = true;
 
         private _outputData = [] call FUNC(generateOutputData);
 
-        3 cutRsc ["RscKestrel4500", "PLAIN", 1, false];
+        QGVAR(Layer) cutRsc ["RscKestrel4500", "PLAIN", 1, false];
         _outputData params [
             "_ctrlTop",
             "_ctrlCenterBig",
