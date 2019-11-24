@@ -16,6 +16,11 @@ class CfgWeapons {
         distanceZoomMax = 50;
         autoFire = 0;
 
+        // Binarized version is just for testing purposes when using build.py aka makepbo
+        // rtms need to be binarized to work properly
+        // switch out for non binarized version and remove binarized rtm
+        handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\maglite_ml300l_binarized.rtm)};
+
         class FlashLight
         {
             color[] = {180,180,190};
