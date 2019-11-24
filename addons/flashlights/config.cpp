@@ -13,7 +13,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"voiper", "bux"};
+        authors[] = {"voiper", "bux", "HorribleGoat"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
