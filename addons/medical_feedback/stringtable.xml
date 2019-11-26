@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_Medical_Feedback_SubCategory">
             <English>Feedback</English>
             <German>Feedback</German>
-            <Japanese>フィードバック</Japanese>
+            <Japanese>感触</Japanese>
             <Russian>Реакция на ранения</Russian>
             <French>Réaction aux blessures</French>
             <Portuguese>Reação a Lesões</Portuguese>
@@ -64,6 +64,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
             <English>Only high pain effect</English>
+            <Japanese>強い痛みの時のみ</Japanese>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">

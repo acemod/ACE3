@@ -644,7 +644,7 @@
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
-            <Japanese>開いている傷口が %2 %1 ほどあるようだ</Japanese>
+            <Japanese>開いている傷口が %2 %1 ほどある</Japanese>
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
             <Chinesesimp>有 %2 %1 开放性伤口</Chinesesimp>
             <Chinese>有 %2 %1 開放性傷口</Chinese>
@@ -934,6 +934,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PartialX">
             <English>Partial %1</English>
+            <Japanese>部分的な%1</Japanese>
         </Key>
     </Package>
 </Project>

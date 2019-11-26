@@ -437,7 +437,7 @@
             <Italian>30mm HEI</Italian>
             <Spanish>30mm HEI</Spanish>
             <French>30mm HEI</French>
-            <Japanese>30mm 焼夷りゅう弾</Japanese>
+            <Japanese>30mm HEI</Japanese>
             <Korean>30mm 고폭소이탄</Korean>
             <Chinesesimp>30mm 高爆燃烧弹</Chinesesimp>
             <Chinese>30mm 高爆燃燒彈</Chinese>
@@ -452,7 +452,7 @@
             <Italian>30mm HEI-T</Italian>
             <Spanish>30mm HEI-T</Spanish>
             <French>30mm HEI-T</French>
-            <Japanese>30mm 焼夷曳光りゅう弾</Japanese>
+            <Japanese>30mm HEI-T</Japanese>
             <Korean>30mm 고폭소이예광탄</Korean>
             <Chinesesimp>30mm 高爆燃烧曳光弹</Chinesesimp>
             <Chinese>30mm 高爆燃燒曳光彈</Chinese>
@@ -527,7 +527,7 @@
             <Italian>Hydra 70 HE</Italian>
             <Spanish>Hydra 70 HE</Spanish>
             <French>Hydra 70 HE</French>
-            <Japanese>ハイドラ 70 りゅう弾</Japanese>
+            <Japanese>ハイドラ 70 HE</Japanese>
             <Korean>Hydra 70 고폭탄</Korean>
             <Chinesesimp>九头蛇 70 高爆弹</Chinesesimp>
             <Chinese>九頭蛇 70 高爆彈</Chinese>
@@ -542,7 +542,7 @@
             <Italian>S-8 HE</Italian>
             <Spanish>S-8 HE</Spanish>
             <French>S-8 HE</French>
-            <Japanese>S-8 りゅう弾</Japanese>
+            <Japanese>S-8 HE</Japanese>
             <Korean>S-8 고폭탄</Korean>
             <Chinesesimp>S-8 高爆弹</Chinesesimp>
             <Chinese>S-8 高爆彈</Chinese>
@@ -572,7 +572,7 @@
             <Italian>S-8 AP</Italian>
             <Spanish>S-8 AP</Spanish>
             <French>S-8 AP</French>
-            <Japanese>S-8 徹甲弾</Japanese>
+            <Japanese>S-8 AP</Japanese>
             <Korean>S-8 철갑탄</Korean>
             <Chinesesimp>S-8 反人员弹</Chinesesimp>
             <Chinese>S-8 反人員彈</Chinese>
@@ -630,12 +630,14 @@
             <French>Distance de réarmement</French>
             <German>Aufrüstbereich</German>
             <Portuguese>Distância para Rearmar</Portuguese>
+            <Japanese>再武装距離</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_distance_Description">
             <English>The maximum distance a vehicle can be rearmed at</English>
             <French>Distance maximale à laquelle un véhicle peut être réarmé</French>
             <German>Die maximale Distanz, über die ein Fahrzeug Aufmunitioniert werden kann</German>
             <Portuguese>A distância máxima que um veículo pode ser rearmado/municiado.</Portuguese>
+            <Japanese>車両から再武装できる範囲を決定します。</Japanese>
         </Key>
     </Package>
 </Project>

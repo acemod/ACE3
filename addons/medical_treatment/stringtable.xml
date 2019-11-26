@@ -305,11 +305,13 @@
             <English>Self Stitching</English>
             <French>Suturer soi-même</French>
             <Portuguese>Auto-Cirurgia</Portuguese>
+            <Japanese>自己縫合</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_Description">
             <English>Enables the use of surgical kits to stitch oneself.</English>
             <French>Autorise l'utilisation de la trousse chirugicale sur soi-même.</French>
             <Portuguese>Permite o uso de Kit Cirúrgico em si mesmo.</Portuguese>
+            <Japanese>縫合キットを使い自らを縫合できるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -428,21 +430,27 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
+            <Japanese>武器の扱い</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam - Allows examination actions (checking pulse, blood pressure, response) at all times regardless of Holster Required setting.</English>
+            <Japanese>何らかの治療をするには武器を下げるか収めるかどうかを決定します。\nなお次の診断行動は設定で例外できます: 心拍確認、血圧測定、反応確認</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
+            <Japanese>下げるか収める</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
             <English>Lowered or Holstered (Except Exam)</English>
+            <Japanese>下げるか収める (診断行動は除外)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
             <English>Holstered only</English>
+            <Japanese>収めた時のみ</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
             <English>Holstered only (Except Exam)</English>
+            <Japanese>収めた時のみ (診断行動は除外)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
@@ -1151,7 +1159,7 @@
             <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
             <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.(Manter frio)</Portuguese>
             <Czech>Krevní transfuze pro doplnění pacientovi krve (skladujte v chladu)</Czech>
-            <Japanese>血液 IV は、患者へ血液を補給します。（要低温保存）</Japanese>
+            <Japanese>血液 IV は、患者へ血液を補給します。(要低温保存)</Japanese>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다. (차갑게 할것)</Korean>
             <Chinesesimp>血液, 用于补充伤者流失的血液 (需冷藏)</Chinesesimp>
             <Chinese>血液, 用於補充傷者流失的血液 (需冷藏)</Chinese>
@@ -1519,7 +1527,7 @@
             <Hungarian>Ezen a testrészen nincs sérülés...</Hungarian>
             <Czech>Žádné zranění na této části těla...</Czech>
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
-            <Japanese>この部分には怪我をしていません・・・</Japanese>
+            <Japanese>この部分に怪我をしていません・・・</Japanese>
             <Korean>이 부위에는 부상이 없습니다...</Korean>
             <Chinesesimp>此身体部位没有受伤</Chinesesimp>
             <Chinese>此身體部位沒有受傷</Chinese>
@@ -3689,6 +3697,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_clearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
+            <Japanese>治療後に外傷を削除</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_clearTraumaAfterBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
