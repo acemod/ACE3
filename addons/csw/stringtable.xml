@@ -149,7 +149,7 @@
             <English>Disassembling Gun...</English>
             <Portuguese>Desmontando Arma...</Portuguese>
             <Japanese>火器を解体中です・・・</Japanese>
-            <Chinese>拆裝武器中...hinese>
+            <Chinese>拆裝武器中...</Chinese>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
