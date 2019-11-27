@@ -336,6 +336,7 @@
             <Italian>Coefficente Tempo Caricamento</Italian>
             <Russian>Коэффициент времени погрузки</Russian>
             <Portuguese>Fator de tempo para carregar</Portuguese>
+            <Chinese>裝載時間係數</Chinese>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
@@ -345,6 +346,7 @@
             <Italian>Modifica quanto tempo ci impiega a caricare o scaricare gli oggetti.\n Tempo, in secondi, è la dimensione dell'oggetto moltiplicata per questo valore</Italian>
             <Russian>Изменяет время для загрузки/выгрузки предметов. \n Время (сек) - это размер предмета, умноженный на это значение.</Russian>
             <Portuguese>Coeficiente de quanto tempo leva para carregar/descarregar itens.\nTempo, em segundos, é o tamanho do objeto multiplicado por esse valor.</Portuguese>
+            <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
         </Key>
     </Package>
 </Project>
