@@ -124,6 +124,7 @@
             <Polish>Shift + Klik aby zapisac jako domyślne dla misji </Polish>
             <Russian>[Shift+Клик, чтобы сохранить в настройках по умолчанию]</Russian>
             <Portuguese>[Shift+Clique para salvar nos padrões da missão]</Portuguese>
+            <Chinese>[Shift+左鍵來保存至任務預設]</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
             <English>Rename</English>
@@ -881,6 +882,7 @@
             <Italian>Supporto visore notturno</Italian>
             <Russian>Поддержка ночного видения</Russian>
             <Portuguese>Suporte de Visão Noturna</Portuguese>
+            <Chinese>夜視鏡支援</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
             <English>Primary supported</English>
@@ -890,6 +892,7 @@
             <Italian>Primario supportato</Italian>
             <Russian>Поддерживается осн. прицелом</Russian>
             <Portuguese>Primária suportada</Portuguese>
+            <Chinese>主武器支援</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
             <English>Secondary supported</English>
@@ -899,6 +902,7 @@
             <Italian>Secondario supportato</Italian>
             <Russian>Поддерживается доп. прицелом</Russian>
             <Portuguese>Secundária suportada</Portuguese>
+            <Chinese>次要武器支援</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
             <English>Primary integrated</English>
@@ -908,6 +912,7 @@
             <Italian>Primario integrato</Italian>
             <Russian>Интегрирован в осн. прицел</Russian>
             <Portuguese>Primária integrada</Portuguese>
+            <Chinese>整合主武器</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
@@ -917,6 +922,7 @@
             <Italian>Non supportato</Italian>
             <Russian>Не поддерживается</Russian>
             <Portuguese>Não suportado</Portuguese>
+            <Chinese>不支援</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
             <English>Page</English>
@@ -1006,6 +1012,7 @@
             <Polish>Czarna lista (lista wykluczeń)</Polish>
             <Russian>Чёрный список</Russian>
             <Portuguese>Lista Negra</Portuguese>
+            <Chinese>黑名單</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_Items">
             <English>Items</English>
@@ -1031,6 +1038,7 @@
             <Polish>Eksportuj obecną listę przedmiotów jako tablicę do wykorzystania w skryptach</Polish>
             <Portuguese>Exportar a lista atual de itens como uma matriz para usar em scripts</Portuguese>
             <Russian>Экспорт текущего списка предметов в виде массива для использования в скриптах</Russian>
+            <Chinese>匯出目前的物品列表為陣列用於腳本編寫</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeImport_Tooltip">
             <English>Import items list array from clipboard (should be the same format as export)</English>
@@ -1039,6 +1047,7 @@
             <Japanese>クリップボードからアイテムリストをアレイでインポートします (エクスポートと同じフォーマットである必要があります)</Japanese>
             <Russian>Импорт массива списка предметов из буфера (должен иметь тот же формат, что при экспорте)</Russian>
             <Portuguese>Importar lista de itens da área de transferência (deve estar no mesmo formato que uma lista exportada)</Portuguese>
+            <Chinese>從剪貼簿匯入物品列表之陣列（應該與匯出的格式一樣）</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
             <English>Add Compatible Items</English>
@@ -1047,6 +1056,7 @@
             <Japanese>対応アイテムを追加</Japanese>
             <Russian>Добавить совместимые предметы</Russian>
             <Portuguese>Adicionar itens compatíveis</Portuguese>
+            <Chinese>增加相容的物品</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_Tooltip">
             <English>Will automatically add compatible attachments or magazines (based on selected category) for all weapons in current items list</English>
@@ -1055,6 +1065,7 @@
             <Japanese>現在のアイテム リスト内にある全武器に対応するアタッチメントと弾倉 (選択したカテゴリに基づき) を自動的に追加します</Japanese>
             <Russian>Добавляет совместимые приспособления или магазины (в зависимости от выбранной категории) для всего оружия в текущем списке предметов</Russian>
             <Portuguese>Irá automaticamente adicionar acessórios ou carregadores (baseado na categoria selecionada) para todas as armas na lista de itens atual</Portuguese>
+            <Chinese>將會自動增加相容的配件以及彈匣（基於選擇的類型）至妳目前物品列表中的全部武器</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statTTL">
             <English>Time to live</English>
@@ -1065,6 +1076,7 @@
             <Italian>Scadenza (TTL)</Italian>
             <Russian>Время действия</Russian>
             <Portuguese>Time to live</Portuguese>
+            <Chinese>有效時間</Chinese>
         </Key>
     </Package>
 </Project>
