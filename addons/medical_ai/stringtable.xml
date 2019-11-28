@@ -8,6 +8,7 @@
             <Russian>ИИ Медик</Russian>
             <French>Médecine IA</French>
             <Portuguese>IA Médico</Portuguese>
+            <Chinese>AI軍醫</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
@@ -16,6 +17,7 @@
             <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
             <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
+            <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
