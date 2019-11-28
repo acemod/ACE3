@@ -1816,18 +1816,22 @@
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
             <Japanese>部分修理条件</Japanese>
+            <Chinese>額外修理條件</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
             <Japanese>車両の特定コンポーネントか履帯の除去/交換にアイテムを必要とします。</Japanese>
+            <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
             <Japanese>完全修理条件</Japanese>
+            <Chinese>完整修復條件</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
             <Japanese>車両の完全修理にアイテムを必要とします。</Japanese>
+            <Chinese>是否需要物品來完整修復載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
