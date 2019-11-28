@@ -727,7 +727,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsText">
             <English>Import BI VA loadouts to ACE Arsenal</English>
-            <French>Importer les sets BI VA dans l'Arsenal ACE</French>
+            <French>Importer les sets BI VA dans l'arsenal ACE</French>
             <German>Importiert die BI-VA-Ausrüstungen in das ACE-Arsenal</German>
             <Japanese>標準の VA 装備から ACE 武器庫へ取り込み</Japanese>
             <Korean>바닐라 로드아웃을 ace 아스날로 가져오기</Korean>
