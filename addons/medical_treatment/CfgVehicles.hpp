@@ -151,8 +151,8 @@ class CfgVehicles {
         };
     };
     class ACE_atropineItem: Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
+        scope = 1;
+        scopeCurator = 1;
         displayName = CSTRING(Atropine_Display);
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
@@ -258,6 +258,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = QPATHTOF(data\ace_medcrate.p3d);
+        editorPreview = QPATHTOF(data\ACE_medicalSupplyCrate.jpg);
         author = ECSTRING(common,ACETeam);
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,50);
@@ -308,7 +309,6 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_splint,15);
             MACRO_ADDITEM(ACE_morphine,15);
             MACRO_ADDITEM(ACE_adenosine,15);
-            MACRO_ADDITEM(ACE_atropine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
             MACRO_ADDITEM(ACE_plasmaIV,7);
             MACRO_ADDITEM(ACE_plasmaIV_500,7);

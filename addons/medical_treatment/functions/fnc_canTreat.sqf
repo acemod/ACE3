@@ -26,6 +26,7 @@ isClass _config
 && {_patient isKindOf "CAManBase"}
 && {_medic != _patient || {GET_NUMBER_ENTRY(_config >> "allowSelfTreatment") == 1}}
 && {[_medic, GET_NUMBER_ENTRY(_config >> "medicRequired")] call FUNC(isMedic)}
+&& {[_medic, _patient, _config] call FUNC(canTreat_holsterCheck)}
 && {
     private _selections = getArray (_config >> "allowedSelections") apply {toLower _x};
     "all" in _selections || {_bodyPart in _selections}

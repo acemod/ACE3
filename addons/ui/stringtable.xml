@@ -41,6 +41,7 @@
             <Italian>Questo modulo consente di commutare parti di interfaccia utente visibili.</Italian>
             <Chinesesimp>此模块允许你调整使用者介面的任何一个元件</Chinesesimp>
             <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
+            <Czech>Tento modul umožňuje přepínání viditelných částí uživatelského rozhraní.</Czech>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI">
             <English>Allow Selective UI</English>
@@ -575,6 +576,7 @@
             <Italian>Impossibile modificare un elemento forzato d' Interfaccia Utente.</Italian>
             <Chinesesimp>无法编辑已被锁定的使用者介面元件</Chinesesimp>
             <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
+            <Czech>Nelze upravit prvek vynuceného uživatelského rozhraní.</Czech>
         </Key>
     </Package>
 </Project>

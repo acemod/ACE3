@@ -12,18 +12,22 @@
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_DisplayName">
             <English>Player Fatal Injuries</English>
             <Portuguese>Lesões Fatais do Jogador</Portuguese>
+            <Japanese>プレイヤーの致命傷</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_Description">
             <English>Controls when players can receive fatal injuries. A fatal injury is caused by significant damage to the head or body.</English>
             <Portuguese>Controla quando os jogadores podem receber lesões fatais. Uma lesão fatal é causada por um dano significante na cabeça ou corpo.</Portuguese>
+            <Japanese>プレイヤーが致命傷を受けた時の挙動を管理できます。頭部や胴体に受ける大きなダメージは致命傷になります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
             <English>AI Fatal Injuries</English>
             <Portuguese>Lesões Fatais da IA</Portuguese>
+            <Japanese>AI の致命傷</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_Description">
             <English>Controls when AI can receive fatal injuries. A fatal injury is caused by significant damage to the head or body.\nWhen set to "Always", this effectively produces "AI Instant Death" behaviour as AI will immediately die from any fatal injury.\nNOTE: Any mode other than "Always" requires AI Unconsciousness to be enabled.</English>
             <Portuguese>Controla quando a IA pode receber lesões fatais. Uma lesão fatal é causada por um dano significante na cabeça ou corpo.\nQuando definido para "Sempre", isso efetivamente causa a "Morte Instantânea da IA", pois a IA irá imediatamente morrer para qualquer lesão fatal.\nNOTA: Qualquer opção além de "Sempre" requer que Inconsciência de IA esteja ativada.</Portuguese>
+            <Japanese>AI が致命傷を受けた時の挙動を管理できます。頭部や胴体に受ける大きなダメージは致命傷になります。\n"常に"に設定されていると、いかなる致命傷でも "AI の即死" 効果が生まれます。\n注: "常に"以外のモードでは AI の無意識化を有効化させる必要があります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_DisplayName">
             <English>AI Unconsciousness</English>
@@ -44,6 +48,7 @@
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Description">
             <English>Controls whether AI can go unconscious instead of immediately dying.\nThis setting works together with the "AI Fatal Injuries" setting since, going into cardiac arrest requires that the unit is able to go unconscious.\nHowever, these settings are separated because units can go unconscious from critical vitals resulting from non-fatal injuries.\nIn essence, this means that in order to enable cardiac arrest for AI units, this setting must be enabled.</English>
             <Portuguese>Controla se a IA pode ficar inconsciente ao invés de morrer imediatamente.\nEssa configuração funciona com "Lesões Fatais de IA", pois para uma unidade ter uma parada cardíaca é necessário que a IA possa fica inconsciente.\nContudo, essas configurações são separadas pois unidades podem ficar inconscientes por vitais críticos causados por ferimentos não-fatais.\nEssencialmente, isso significa que para ativar uma parada cardíaca em IA, essa configuração precisa estar ativa.</Portuguese>
+            <Japanese>AI が即死する代わりに気絶するかどうかを決定できます。\nこれは "AI の致命傷" 設定と連動します。これは AI の進呈しを起こすにはユニットが気絶する必要がある為です。\nしかしながら、これらの設定はユニットが非致死性の負傷により重体となって気絶できるよう分離されています。\n本質的にはこの設定は AI ユニットの心停止を可能にするものであり、有効化されておくべきです。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>

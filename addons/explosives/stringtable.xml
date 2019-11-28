@@ -1043,5 +1043,15 @@
             <Portuguese>Timer de explosão</Portuguese>
             <French>Minuteur de détonation</French>
         </Key>
+        <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
+            <English>Is EOD</English>
+            <German>Kampfmittelbeseitigung</German>
+            <Japanese>EOD に</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_IsEOD_Description">
+            <English>Controls whether the unit is an explosive specialist.</English>
+            <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
+            <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
+        </Key>
     </Package>
 </Project>

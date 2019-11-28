@@ -52,6 +52,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_m3_tripod.p3d);
+        editorPreview = QPATHTOF(data\ace_csw_m3Tripod.jpg);
         displayName = CSTRING(m3Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(m3CarryTripod);
@@ -66,6 +67,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ace_csw_tripod_kord.p3d);
+        editorPreview = QPATHTOF(data\ace_csw_kordTripod.jpg);
         displayName = CSTRING(kordTripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(kordCarryTripod);
@@ -80,6 +82,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ace_csw_tripod_ags30.p3d);
+        editorPreview = QPATHTOF(data\ace_csw_sag30Tripod.jpg);
         displayName = CSTRING(sag30Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(sag30CarryTripod);
@@ -89,6 +92,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ace_csw_tripod_m220.p3d);
+        editorPreview = QPATHTOF(data\ace_csw_m220Tripod.jpg);
         displayName = CSTRING(m220Tripod_displayName);
         class ADDON {
             disassembleTo = QGVAR(m220CarryTripod);
@@ -98,6 +102,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ace_csw_tripod_spg9.p3d);
+        editorPreview = QPATHTOF(data\ace_csw_spg9Tripod.jpg);
         displayName = CSTRING(spg9_Tripod);
         class ADDON {
             disassembleTo = QGVAR(spg9CarryTripod);
@@ -107,6 +112,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_mortarBaseplate.p3d);
+        editorPreview = QPATHTOF(data\ace_csw_mortarBaseplate.jpg);
         displayName = CSTRING(mortarBaseplate_displayName);
         class ADDON {
             disassembleTo = QGVAR(carryMortarBaseplate);

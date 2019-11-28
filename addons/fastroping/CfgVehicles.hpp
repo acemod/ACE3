@@ -279,6 +279,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(Ropesupply);
         model = "\A3\Weapons_F\AmmoBoxes\Box_NATO_AmmoVeh_F.p3d";
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_AmmoVeh_F.jpg";
         author = "Pokertour";
         class TransportItems {
             MACRO_ADDITEM(ACE_rope12,15);

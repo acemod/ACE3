@@ -13,6 +13,7 @@
             <Polish>Obserwator</Polish>
             <Russian>Зритель</Russian>
             <Portuguese>Espectador</Portuguese>
+            <Czech>Divák</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -26,6 +27,7 @@
             <Korean>ACE 관전자</Korean>
             <Russian>ACE Зритель</Russian>
             <Portuguese>ACE Espectador</Portuguese>
+            <Czech>ACE Divák</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -54,6 +56,7 @@
             <Polish>SI Aktywowane</Polish>
             <Russian>Разрешить для ИИ</Russian>
             <Portuguese>IA Ativado</Portuguese>
+            <Czech>AI povoleno</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -289,6 +292,7 @@
             <Polish>Ikony</Polish>
             <Russian>Иконки</Russian>
             <Portuguese>Ícones</Portuguese>
+            <Czech>Ikony</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -302,6 +306,7 @@
             <Polish>Pociski</Polish>
             <Russian>Осколки</Russian>
             <Portuguese>Projéteis</Portuguese>
+            <Czech>Projektily</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -358,6 +363,7 @@
             <Polish>Wolna Prędkość</Polish>
             <Russian>Замедление</Russian>
             <Portuguese>Velocidade Lenta</Portuguese>
+            <Czech>Pomalá rychlost</Czech>
         </Key>
     </Package>
 </Project>

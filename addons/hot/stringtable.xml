@@ -9,6 +9,7 @@
             <Japanese>ワイヤ有線誘導</Japanese>
             <Russian>Проводное управление</Russian>
             <Portuguese>Guiado por Fio</Portuguese>
+            <Chinese>有線制導</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_SACLOS_Description">
             <English>Semi-automatic command to line of sight</English>
@@ -18,6 +19,7 @@
             <Japanese>半自動指令照準線一致誘導方式</Japanese>
             <Russian>Полуавтоматическое командное наведение по линии визирования (SACLOS)</Russian>
             <Portuguese>Comando semi-automático para a linha de visão (SACLOS)</Portuguese>
+            <Chinese>視線內半自動指令</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description">
             <English>Wire-Guided Missile</English>
@@ -27,6 +29,7 @@
             <Japanese>ワイヤ有線誘導ミサイル</Japanese>
             <Russian>Ракета с проводным управлением</Russian>
             <Portuguese>Míssil Guiado por Fio</Portuguese>
+            <Chinese>有線制導飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hotMissile">
             <English>HOT Missile</English>
@@ -36,6 +39,7 @@
             <Japanese>HOT ミサイル</Japanese>
             <Russian>Ракета HOT</Russian>
             <Portuguese>Míssil HOT</Portuguese>
+            <Chinese>高次音速(HOT)飛彈</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot1">
             <English>HOT 1</English>
@@ -81,6 +85,7 @@
             <Japanese>ワイヤ有線誘導ミサイル (対人)</Japanese>
             <Russian>Ракета с проводным управлением (Противопехотная)</Russian>
             <Portuguese>Míssil Guiado por Fio (Anti-Pessoal)</Portuguese>
+            <Chinese>有線制導飛彈（反步兵）</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_1">
             <English>1x HOT 1 [ACE]</English>
