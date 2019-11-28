@@ -15,7 +15,7 @@
             <Japanese>82mm 射表</Japanese>
             <Korean>82mm 사거리표</Korean>
             <Chinesesimp>82mm迫击炮射表</Chinesesimp>
-            <Chinese>82mm迫擊炮射表</Chinese>
+            <Chinese>82毫米迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the Mk6 82mm Mortar</English>
@@ -31,7 +31,7 @@
             <Japanese>Mk6 82mm 迫撃砲の射表</Japanese>
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
             <Chinesesimp>MK6 82mm迫击炮射表</Chinesesimp>
-            <Chinese>MK6 82mm迫擊炮射表</Chinese>
+            <Chinese>MK6 82毫米迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -47,7 +47,7 @@
             <Japanese>82mm 射表を開く</Japanese>
             <Korean>82mm 사거리표 열기</Korean>
             <Chinesesimp>开启82mm迫击炮射表</Chinesesimp>
-            <Chinese>開啟82mm迫擊炮射表</Chinese>
+            <Chinese>開啟82毫米迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_charge">
             <English>Charge</English>
@@ -379,7 +379,7 @@
             <Japanese>82mm りゅう弾</Japanese>
             <Korean>82mm 고폭탄</Korean>
             <Chinesesimp>82mm高爆弹</Chinesesimp>
-            <Chinese>82mm高爆彈</Chinese>
+            <Chinese>82毫米高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
@@ -394,7 +394,7 @@
             <Japanese>82mm 発煙弾</Japanese>
             <Korean>82mm 연막탄</Korean>
             <Chinesesimp>82mm烟雾弹</Chinesesimp>
-            <Chinese>82mm煙霧彈</Chinese>
+            <Chinese>82毫米煙霧彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
@@ -409,7 +409,7 @@
             <Japanese>82mm 照明弾</Japanese>
             <Korean>82mm 조명탄</Korean>
             <Chinesesimp>82mm照明弹</Chinesesimp>
-            <Chinese>82mm照明彈</Chinese>
+            <Chinese>82毫米照明彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
@@ -424,7 +424,7 @@
             <Japanese>82mm 誘導りゅう弾</Japanese>
             <Korean>82mm 유도 고폭탄</Korean>
             <Chinesesimp>82mm导引高爆弹</Chinesesimp>
-            <Chinese>82mm導引高爆彈</Chinese>
+            <Chinese>82毫米導引高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
@@ -439,7 +439,7 @@
             <Japanese>82mm レーザ誘導りゅう弾</Japanese>
             <Korean>82mm 레이저 유도 고폭탄</Korean>
             <Chinesesimp>82mm雷射导引高爆弹</Chinesesimp>
-            <Chinese>82mm雷射導引高爆彈</Chinese>
+            <Chinese>82毫米雷射導引高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
@@ -469,7 +469,7 @@
             <Japanese>[ACE] 82mm りゅう弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 고폭탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm高爆弹药箱</Chinesesimp>
-            <Chinese>[ACE] 82mm高爆彈藥箱</Chinese>
+            <Chinese>[ACE] 82毫米高爆彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
@@ -484,7 +484,7 @@
             <Japanese>[ACE] 82mm 発煙弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 연막탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm烟雾弹药箱</Chinesesimp>
-            <Chinese>[ACE] 82mm煙霧彈藥箱</Chinese>
+            <Chinese>[ACE] 82毫米煙霧彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
@@ -499,7 +499,7 @@
             <Japanese>[ACE] 82mm 照明弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 조명탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm照明弹药箱</Chinesesimp>
-            <Chinese>[ACE] 82mm照明彈藥箱</Chinese>
+            <Chinese>[ACE] 82毫米照明彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
@@ -514,7 +514,7 @@
             <Japanese>[ACE] 82mm 保管箱</Japanese>
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
             <Chinesesimp>[ACE] 82mm预设弹药箱</Chinesesimp>
-            <Chinese>[ACE] 82mm預設彈藥箱</Chinese>
+            <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>
         </Key>
     </Package>
 </Project>
