@@ -1047,11 +1047,13 @@
             <English>Is EOD</English>
             <German>Kampfmittelbeseitigung</German>
             <Japanese>EOD に</Japanese>
+            <French>Est un spécialiste en explosifs</French>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
             <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
             <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
+            <French>Contrôle si l'unité est un spécialiste en explosifs.</French>
         </Key>
     </Package>
 </Project>
