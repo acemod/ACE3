@@ -160,7 +160,7 @@
             <Japanese>武器を持つ手のぶれ度合いを設定します。 値が高ければ高いほど、手ぶれが強くなります。</Japanese>
             <Chinesesimp>影响手持武器的晃动程度,数值越高,抖动的越厉害.</Chinesesimp>
             <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
-            <French>Influe sur la quantité de mouvement involontaire de l'arme (sway).\nPlus la valeur est élevée, plus l'arme oscillera.</French>
+            <French>Influe sur l'amplitude du tremblement de l'arme, une valeur plus élevée signifie plus de tremblement.</French>
             <Italian>Influenza l'ammontare di oscillazione dell'arma. Maggiore significa più oscillazione.</Italian>
             <Polish>Wpływa na poziom kołysania broni. Większa ilość znaczy większe kołysanie.</Polish>
             <Russian>Влияет на колебания прицела оружия. Чем выше - тем больше.</Russian>
