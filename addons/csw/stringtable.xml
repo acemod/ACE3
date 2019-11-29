@@ -226,42 +226,42 @@
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AT)</Portuguese>
             <French>[CSW] Lanceur Statique Mini-Spike (AT)</French>
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AT)</Japanese>
-            <Chinese>[CSW] 固定型 小型尖刺發射器（對地）</Chinese>
+            <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對地）</Chinese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AA)</English>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AA)</Portuguese>
             <French>[CSW] Lanceur Statique Mini-Spike (AA)</French>
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AA)</Japanese>
-            <Chinese>[CSW] 固定型 小型尖刺發射器（對空）</Chinese>
+            <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對空）</Chinese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
             <English>[CSW] Static XM312 Gun</English>
             <Portuguese>[CSW] Arma Estática - XM312</Portuguese>
             <French>[CSW] Mitrailleuse Statique XM312</French>
             <Japanese>[CSW] 設置型 XM312</Japanese>
-            <Chinese>[CSW] 固定型 XM312</Chinese>
+            <Chinese>[CSW] 固定型 XM312重機槍</Chinese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
             <Portuguese>[CSW] Arma Estática - XM312 (Autônoma)</Portuguese>
             <French>[CSW] Mitrailleuse Statique XM312 (Autonome)</French>
             <Japanese>[CSW] 設置型 XM312 (自律型)</Japanese>
-            <Chinese>[CSW] 固定型 XM312（自主型）</Chinese>
+            <Chinese>[CSW] 固定型 XM312重機槍（自主型）</Chinese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[CSW] Static XM307 Gun</English>
             <Portuguese>[CSW] Arma Estática - XM307</Portuguese>
             <French>[CSW] Mitrailleuse Statique XM307</French>
             <Japanese>[CSW] 設置型 XM307</Japanese>
-            <Chinese>[CSW] 固定型XM307</Chinese>
+            <Chinese>[CSW] 固定型XM307榴彈機槍</Chinese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[CSW] Static XM307 Gun (Autonomous)</English>
             <Portuguese>[CSW] Arma Estática - XM307 (Autônoma)</Portuguese>
             <French>[CSW] Mitrailleuse Statique XM307 (Autonome)</French>
             <Japanese>[CSW] 設置型 XM307 (自律型)</Japanese>
-            <Chinese>[CSW] 固定型 XM307（自主型）</Chinese>
+            <Chinese>[CSW] 固定型 XM307榴彈機槍（自主型）</Chinese>
         </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>

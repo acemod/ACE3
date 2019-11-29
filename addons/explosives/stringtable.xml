@@ -78,7 +78,7 @@
             <Japanese>爆破コード: %1</Japanese>
             <Korean>폭파 코드: %1</Korean>
             <Chinesesimp>炸药代码: %1</Chinesesimp>
-            <Chinese>炸藥代碼: %1</Chinese>
+            <Chinese>炸藥代號: %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceAction">
             <English>Place</English>
@@ -1042,18 +1042,21 @@
             <Russian>Таймер взрывчатки</Russian>
             <Portuguese>Timer de explosão</Portuguese>
             <French>Minuteur de détonation</French>
+            <Chinese>引爆倒數</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
             <German>Kampfmittelbeseitigung</German>
             <Japanese>EOD に</Japanese>
             <French>Est un spécialiste en explosifs</French>
+            <Chinese>是EOD</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
             <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
             <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
             <French>Contrôle si l'unité est un spécialiste en explosifs.</French>
+            <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
         </Key>
     </Package>
 </Project>

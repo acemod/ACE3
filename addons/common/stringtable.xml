@@ -42,6 +42,7 @@
             <Italian>Avanzato</Italian>
             <Japanese>アドバンスド</Japanese>
             <Korean>고급</Korean>
+            <Chinese>進階</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
@@ -425,6 +426,7 @@
             <Portuguese>Normal</Portuguese>
             <Japanese>通常</Japanese>
             <Korean>보통</Korean>
+            <Chinese>普通</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -439,7 +441,7 @@
             <Portuguese>Sem voz</Portuguese>
             <Japanese>音声なし</Japanese>
             <Korean>무음</Korean>
-            <Chinese>沒聲音</Chinese>
+            <Chinese>無語音</Chinese>
             <Chinesesimp>没声音</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
@@ -959,6 +961,7 @@
             <Russian>Всегда</Russian>
             <Portuguese>Sempre</Portuguese>
             <French>Toujours</French>
+            <Chinese>一直</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -973,6 +976,7 @@
             <Italian>Ovunque</Italian>
             <Japanese>どこでも</Japanese>
             <Korean>어디서나</Korean>
+            <Chinese>任何地方</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Basic">
             <English>Basic</English>
@@ -987,6 +991,7 @@
             <Italian>Basico</Italian>
             <Japanese>ベーシック</Japanese>
             <Korean>기본</Korean>
+            <Chinese>基礎</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Vehicle">
             <English>Medical Vehicles</English>
@@ -1001,6 +1006,7 @@
             <Italian>Veicoli medici</Italian>
             <Japanese>医療車両のみ</Japanese>
             <Korean>의료차량</Korean>
+            <Chinese>醫療載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Yes">
             <English>Yes</English>
@@ -1041,6 +1047,7 @@
             <Russian>Подтвердить</Russian>
             <Portuguese>Confirmar</Portuguese>
             <French>Confirmer</French>
+            <Chinese>確認</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1049,6 +1056,7 @@
             <Russian>Никогда</Russian>
             <Portuguese>Nunca</Portuguese>
             <French>Jamais</French>
+            <Chinese>從不</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>

@@ -21,6 +21,7 @@
             <Russian>Обработка урона и эффектов срыва башни</Russian>
             <Portuguese>Manipulação de dano e efeitos de torre</Portuguese>
             <French>Gestion des effets et des dommages de tourelle</French>
+            <Chinese>傷害控制及炮塔效果</Chinese>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_tooltip">
             <English>Changes damage handling for cook off and turret explosion effects</English>
@@ -29,6 +30,7 @@
             <Russian>Изменяет обработку урона для возгорания и эффекта срыва башни</Russian>
             <Portuguese>Modifica a manipulação de dano para o cozinhamento de munição e efeitos de explosão da torre</Portuguese>
             <French>Modifie la gestion des dégâts pour les effets d'auto-inflammation et d'explosion de tourelle</French>
+            <Chinese>更改殉爆以及炮塔爆炸之傷害控制</Chinese>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <English>Wreck (Turret)</English>
