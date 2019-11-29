@@ -455,7 +455,6 @@
             <Polish>Sprawdź akcję PBO</Polish>
             <Russian>Действие при проверке PBO</Russian>
             <Portuguese>Ação de Checar PBO</Portuguese>
-            <Chinese>檢查PBO之動作</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
