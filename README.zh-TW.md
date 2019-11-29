@@ -31,7 +31,7 @@
     在以下社群網站拜訪我們 <a href="https://twitter.com/ACE3Mod">推特</a> | <a href="https://www.facebook.com/ACE3Mod">臉書</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup>
 </p>
 
-**進階戰鬥環境3(ACE3)** 是由 **進階戰鬥環境2(ACE2)**, **可靠性遊戲模改(AGM)** 以及 **戰鬥空間強化(CSE)**的幕後團隊人員精心打造，用於改善武裝突襲三裡面的真實與可靠性。
+**進階戰鬥環境3(ACE3)** 是由 **進階戰鬥環境2(ACE2)**, **可靠性遊戲模改(AGM)** 以及 **戰鬥空間強化(CSE)**的幕後團隊人員精心打造，用於改善武裝行動三裡面的真實與可靠性。
 
 這整個項目是 **開放原始碼**並且樂意接受任何的維護。若要歡迎你建立維護你自訂版本的ACE3，只要你所做的向公眾所做更改是有遵守著「GNU通用公眾授權條款」 ([GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE)).
 
@@ -76,7 +76,7 @@
 
 ## 新手起步
 
-ACE3需要最新版本的武裝突襲3以及最新版本的 <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>模組。以下的網頁可用於幫助以及提供安裝ACE3上的資訊。
+ACE3需要最新版本的武裝行動3以及最新版本的 <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>模組。以下的網頁可用於幫助以及提供安裝ACE3上的資訊。
 - [安裝指南-英文](https://ace3mod.com/wiki/user/installation-guide.html)
 - [資訊中心-英文](https://ace3mod.com/wiki/user/information-center.html)
 
