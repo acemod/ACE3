@@ -28,7 +28,7 @@
 
 <p align="center">
     <sup><strong>需要最新版本之 <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>.<br/>
-    Visit us on <a href="https://twitter.com/ACE3Mod">推特</a> | <a href="https://www.facebook.com/ACE3Mod">臉書</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup>
+    在以下社群網站拜訪我們 <a href="https://twitter.com/ACE3Mod">推特</a> | <a href="https://www.facebook.com/ACE3Mod">臉書</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup>
 </p>
 
 **進階戰鬥環境3(ACE3)** 是由 **進階戰鬥環境2(ACE2)**, **可靠性遊戲模改(AGM)** 以及 **戰鬥空間強化(CSE)**的幕後團隊人員精心打造，用於改善武裝突襲三裡面的真實與可靠性。
@@ -118,7 +118,7 @@ ACE3需要最新版本的武裝突襲3以及最新版本的 <a href="https://git
   </tr>
 
   <tr>
-    <td><a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">Bohemia Forum</a></td>
+    <td><a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">波希米亞論壇</a></td>
     <td>我們在波希米亞互動論壇上也有專門的ACE3之文章</td>
   </tr>  
 </table>
