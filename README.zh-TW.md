@@ -92,13 +92,13 @@ ACE3需要最新版本的武裝突襲3以及最新版本的 <a href="https://git
 
 麻煩，請使用我們的 [問題追蹤](https://github.com/acemod/ACE3/issues)來回報漏洞，想要的功能，或者建議調整目前已有的功能，也請到以下參閱:
 - [如何回報問題-英文](https://ace3mod.com/wiki/user/how-to-report-an-issue.html)
-- [如何申請功能](https://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
+- [如何申請功能-英文](https://ace3mod.com/wiki/user/how-to-make-a-feature-request.html)
 
 ### 測試與建構。
 
 若要幫助我們測試最新的開發版所造成的更改，下載我們的主分支([直接下載](https://github.com/acemod/ACE3/archive/master.zip),或者 [git](https://help.github.com/articles/fetching-a-remote/))，然後用於編譯組建:
 
-- [設置開發環境](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html) –一步一步的引導如何為了測試目的來正確的建構ACE3
+- [設置開發環境-英文](https://ace3mod.com/wiki/development/setting-up-the-development-environment.html) –一步一步的引導如何為了測試目的來正確的建構ACE3
 
 ### 聯繫
 
