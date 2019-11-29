@@ -13,6 +13,7 @@
             <Portuguese>Sangue</Portuguese>
             <Korean>혈흔</Korean>
             <Japanese>血痕</Japanese>
+            <Chinese>血跡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_DisplayName">
             <English>Enable Blood Drops</English>
@@ -33,6 +34,7 @@
             <French>Si une unité saigne, elle laissera des traces de sang derrière elle.</French>
             <Russian>Разрешает создание капель крови при кровотечении или получении урона</Russian>
             <Portuguese>Permitir a criação de gotas de sangue quando as unidades recebem ferimentos ou estão sangrando.</Portuguese>
+            <Chinese>啟用出血效果當單位失血或受傷的時候。</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
             <English>Max Blood Objects</English>
@@ -40,6 +42,7 @@
             <French>Quantité sang affiché</French>
             <Russian>Макс. кол-во капель крови</Russian>
             <Portuguese>Limite de objetos de sangue</Portuguese>
+            <Chinese>最大血跡數</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
             <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
@@ -47,6 +50,7 @@
             <French>Définit le nombre maximal de traces de sangs pouvant être affichées.\nUne quantité excessive peut engendrer une baisse de FPS.</French>
             <Russian>Задает макс. количество создаваемых объектов капель крови. Чрезмерное количество может вызвать задержку FPS</Russian>
             <Portuguese>Define o limite máximo de objetos de gota de sangue que podem ser criados, quantidades excessivas podem causar lag de FPS.</Portuguese>
+            <Chinese>設定最大可存在的血跡數量。太極端的數量會導致幀數低落或卡頓</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
             <English>Blood Lifetime</English>
@@ -54,6 +58,7 @@
             <French>Durée d'affichage du sang</French>
             <Russian>Время жизни капель крови</Russian>
             <Portuguese>Duração do Sangue</Portuguese>
+            <Chinese>血跡時長</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
             <English>Controls the lifetime of blood drop objects.</English>
@@ -61,6 +66,7 @@
             <French>Définit la durée d'affichage des traces de sang</French>
             <Russian>Управляет временем жизни объектов капель крови.</Russian>
             <Portuguese>Controla o tempo de vida que um objeto de gota de sangue tem.</Portuguese>
+            <Chinese>控制血跡在地上的時長</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
             <English>Only Players</English>
