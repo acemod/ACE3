@@ -365,6 +365,7 @@
             <Russian>Доп. объекты</Russian>
             <Portuguese>Objetos adicionais</Portuguese>
             <Czech>Další objekty</Czech>
+            <Chinese>額外物件</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
@@ -375,6 +376,7 @@
             <Russian>Дополнительные объекты для включения в действие, независимо от радиуса выполнения задачи</Russian>
             <Portuguese>Objetos adicionais para incluir na ação, ignorando a distância da tarefa</Portuguese>
             <Czech>Další objekty, které mají být zahrnuty do akce, bez ohledu na poloměr úlohy</Czech>
+            <Chinese>無論任務範圍何處，都在行動中包含著額外的物件</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>

@@ -49,6 +49,7 @@
             <Japanese>HOT 1</Japanese>
             <Russian>HOT 1</Russian>
             <Portuguese>HOT 1</Portuguese>
+            <Chinese>HOT 1</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot2">
             <English>HOT 2</English>
@@ -58,6 +59,7 @@
             <Japanese>HOT 2</Japanese>
             <Russian>HOT 2</Russian>
             <Portuguese>HOT 2</Portuguese>
+            <Chinese>HOT 2</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp">
             <English>HOT 2MP</English>
@@ -67,6 +69,7 @@
             <Japanese>HOT 2MP</Japanese>
             <Russian>HOT 2MP</Russian>
             <Portuguese>HOT 2MP</Portuguese>
+            <Chinese>HOT 2MP</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot3">
             <English>HOT 3</English>
@@ -76,6 +79,7 @@
             <Japanese>HOT 3</Japanese>
             <Russian>HOT 3</Russian>
             <Portuguese>HOT 3</Portuguese>
+            <Chinese>HOT 3</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description_AP">
             <English>Wire-Guided Missile (Anti-Personnel)</English>
@@ -95,6 +99,7 @@
             <Japanese>1x HOT 1 [ACE]</Japanese>
             <Russian>1x HOT 1 [ACE]</Russian>
             <Portuguese>1x HOT 1 [ACE]</Portuguese>
+            <Chinese>1x HOT 1 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_3">
             <English>3x HOT 1 [ACE]</English>
@@ -104,6 +109,7 @@
             <Japanese>3x HOT 1 [ACE]</Japanese>
             <Russian>3x HOT 1 [ACE]</Russian>
             <Portuguese>3x HOT 1 [ACE]</Portuguese>
+            <Chinese>3x HOT 1 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_4">
             <English>4x HOT 1 [ACE]</English>
@@ -113,6 +119,7 @@
             <Japanese>4x HOT 1 [ACE]</Japanese>
             <Russian>4x HOT 1 [ACE]</Russian>
             <Portuguese>4x HOT 1 [ACE]</Portuguese>
+            <Chinese>4x HOT 1 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_1">
             <English>1x HOT 2 [ACE]</English>
@@ -122,6 +129,7 @@
             <Japanese>1x HOT 2 [ACE]</Japanese>
             <Russian>1x HOT 2 [ACE]</Russian>
             <Portuguese>1x HOT 2 [ACE]</Portuguese>
+            <Chinese>1x HOT 2 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_3">
             <English>3x HOT 2 [ACE]</English>
@@ -131,6 +139,7 @@
             <Japanese>3x HOT 2 [ACE]</Japanese>
             <Russian>3x HOT 2 [ACE]</Russian>
             <Portuguese>3x HOT 2 [ACE]</Portuguese>
+            <Chinese>3x HOT 2 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_4">
             <English>4x HOT 2 [ACE]</English>
@@ -140,6 +149,7 @@
             <Japanese>4x HOT 2 [ACE]</Japanese>
             <Russian>4x HOT 2 [ACE]</Russian>
             <Portuguese>4x HOT 2 [ACE]</Portuguese>
+            <Chinese>4x HOT 2 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_1">
             <English>1x HOT 2MP [ACE]</English>
@@ -149,6 +159,7 @@
             <Japanese>1x HOT 2MP [ACE]</Japanese>
             <Russian>1x HOT 2MP [ACE]</Russian>
             <Portuguese>1x HOT 2MP [ACE]</Portuguese>
+            <Chinese>1x HOT 2MP [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_3">
             <English>3x HOT 2MP [ACE]</English>
@@ -158,6 +169,7 @@
             <Japanese>3x HOT 2MP [ACE]</Japanese>
             <Russian>3x HOT 2MP [ACE]</Russian>
             <Portuguese>3x HOT 2MP [ACE]</Portuguese>
+            <Chinese>3x HOT 2MP [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_4">
             <English>4x HOT 2MP [ACE]</English>
@@ -167,6 +179,7 @@
             <Japanese>4x HOT 2MP [ACE]</Japanese>
             <Russian>4x HOT 2MP [ACE]</Russian>
             <Portuguese>4x HOT 2MP [ACE]</Portuguese>
+            <Chinese>4x HOT 2MP [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_1">
             <English>1x HOT 3 [ACE]</English>
@@ -176,6 +189,7 @@
             <Japanese>1x HOT 3 [ACE]</Japanese>
             <Russian>1x HOT 3 [ACE]</Russian>
             <Portuguese>1x HOT 3 [ACE]</Portuguese>
+            <Chinese>1x HOT 3 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_4">
             <English>4x HOT 3 [ACE]</English>
@@ -185,6 +199,7 @@
             <Japanese>4x HOT 3 [ACE]</Japanese>
             <Russian>4x HOT 3 [ACE]</Russian>
             <Portuguese>4x HOT 3 [ACE]</Portuguese>
+            <Chinese>4x HOT 3 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_3">
             <English>3x HOT 3 [ACE]</English>
@@ -194,6 +209,7 @@
             <Japanese>3x HOT 3 [ACE]</Japanese>
             <Russian>3x HOT 3 [ACE]</Russian>
             <Portuguese>3x HOT 3 [ACE]</Portuguese>
+            <Chinese>3x HOT 3 [ACE]</Chinese>
         </Key>
     </Package>
 </Project>
