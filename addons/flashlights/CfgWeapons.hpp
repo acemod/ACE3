@@ -1,34 +1,36 @@
 class CfgWeapons {
+    class Pistol;
+    class Pistol_Base_F: Pistol {
+        class WeaponSlotsInfo;
+    };
 
-    class Pistol_Base_F;
     class ACE_Flashlight_Maglite_ML300L: Pistol_Base_F {
         author = ECSTRING(common,ACETeam);
+        scope = 2;
         displayName = CSTRING(Maglite_ML300L_DisplayName);
         descriptionShort = CSTRING(Maglite_ML300L_Description);
         model = QPATHTOF(data\maglite_ml300l.p3d);
         picture = QPATHTOF(UI\maglite_ml300l_ca.paa);
-        scope = 2;
 
-        magazines[] = {};
-        recoil = "";
-        recoilProne = "";
-        distanceZoomMin = 50;
-        distanceZoomMax = 50;
-        autoFire = 0;
-
-        // Binarized version is just for testing purposes when using build.py aka makepbo
-        // rtms need to be binarized to work properly
-        // switch out for non binarized version and remove binarized rtm
+        // Binarized version is just for testing purposes when using build.py aka makepbo.
+        // RTMs need to be binarized to work properly.
+        // Switch out for non binarized version and remove binarized RTM.
         handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\maglite_ml300l_binarized.rtm)};
+        muzzlePos = "flash";
+        muzzleEnd = "flash dir";
 
-        class FlashLight
-        {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            holsterScale = 0; // Item does not fit a pistol holster, so hide it.
+            mass = 20;
+        };
+
+        class FlashLight {
             color[] = {180,180,190};
             ambient[] = {0.9,0.81,0.7};
             intensity = 85;
             size = 1;
             innerAngle = 5;
-            outerAngle = 60;
+            outerAngle = 80;
             coneFadeCoef = 8;
             position = "flash dir";
             direction = "flash";
@@ -36,6 +38,7 @@ class CfgWeapons {
             flareSize = 1.4;
             flareMaxDistance = 100;
             dayLight = 1;
+
             class Attenuation {
                 start = 0;
                 constant = 0.7;
@@ -44,23 +47,25 @@ class CfgWeapons {
                 hardLimitStart = 45;
                 hardLimitEnd = 60;
             };
+
             scale[] = {0};
         };
     };
-
 
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
 
     class ACE_Flashlight_MX991: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
+        scope = 2;
         displayName = CSTRING(MX991_DisplayName);
         descriptionShort = CSTRING(MX991_Description);
         model = QPATHTOF(data\mx_991.p3d);
         picture = QPATHTOF(UI\mx_991_ca.paa);
-        scope = 2;
+
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 4;
+
             class FlashLight {
                 ACE_Flashlight_Colour = "red";
                 ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_red_ca.paa);
@@ -71,13 +76,15 @@ class CfgWeapons {
 
     class ACE_Flashlight_KSF1: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
+        scope = 2;
         displayName = CSTRING(KSF1_DisplayName);
         descriptionShort = CSTRING(KSF1_Description);
         model = QPATHTOF(data\ksf_1.p3d);
         picture = QPATHTOF(UI\ksf_1_ca.paa);
-        scope = 2;
+
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 4;
+
             class FlashLight {
                 ACE_Flashlight_Colour = "red";
                 ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_red_ca.paa);
@@ -88,13 +95,15 @@ class CfgWeapons {
 
     class ACE_Flashlight_XL50: ACE_ItemCore {
         author = ECSTRING(common,ACETeam);
+        scope = 2;
         displayName = CSTRING(XL50_DisplayName);
         descriptionShort = CSTRING(XL50_Description);
         model = QPATHTOF(data\maglite_xl50.p3d);
         picture = QPATHTOF(UI\maglite_xl50_ca.paa);
-        scope = 2;
+
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 3;
+
             class FlashLight {
                 ACE_Flashlight_Colour = "white";
                 ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_white_ca.paa);
