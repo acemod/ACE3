@@ -71,6 +71,7 @@
             <English>Only high pain effect</English>
             <Japanese>強い痛みの時のみ</Japanese>
             <Chinese>只有在強烈疼痛時使用</Chinese>
+            <French>Juste un fort effet douloureux</French>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">

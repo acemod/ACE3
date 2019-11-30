@@ -527,7 +527,7 @@
             <Polish>100m</Polish>
             <Russian>100 м</Russian>
             <Portuguese>100m</Portuguese>
-            <French>100m</French>
+            <French>100 m</French>
             <Chinese>一百公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
@@ -538,7 +538,7 @@
             <Polish>10m</Polish>
             <Russian>10 м</Russian>
             <Portuguese>10m</Portuguese>
-            <French>10m</French>
+            <French>10 m</French>
             <Chinese>十公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
@@ -549,7 +549,7 @@
             <Polish>1m</Polish>
             <Russian>1 м</Russian>
             <Portuguese>1m</Portuguese>
-            <French>1m</French>
+            <French>1 m</French>
             <Chinese>一公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
