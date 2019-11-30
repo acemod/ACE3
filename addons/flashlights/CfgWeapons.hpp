@@ -18,11 +18,20 @@ class CfgWeapons {
         handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\maglite_ml300l_binarized.rtm)};
         muzzlePos = "flash";
         muzzleEnd = "flash dir";
+        magazines[] = {"FakeMagazine"};
+        textureType = "default"; // empty texture
+        weaponInfoType = "RscWeaponEmpty";
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
             holsterScale = 0; // Item does not fit a pistol holster, so hide it.
             mass = 20;
+
+            class MuzzleSlot {};
+            class CowsSlot {};
         };
+
+        inertia = 0.2;
+        dexterity = 1.8;
 
         class FlashLight {
             color[] = {180,180,190};
