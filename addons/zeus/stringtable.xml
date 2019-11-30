@@ -1019,6 +1019,7 @@
             <Japanese>なし</Japanese>
             <Russian>Нет</Russian>
             <Portuguese>Nenhum</Portuguese>
+            <Chinese>無</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
@@ -1028,6 +1029,7 @@
             <Japanese>プレイヤー</Japanese>
             <Russian>Игроки</Russian>
             <Portuguese>Jogadores</Portuguese>
+            <Chinese>玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
@@ -1037,6 +1039,7 @@
             <Japanese>プレイヤーと AI</Japanese>
             <Russian>Игроки и ИИ</Russian>
             <Portuguese>Jogadores e IA</Portuguese>
+            <Chinese>玩家與AI</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -1651,6 +1654,7 @@
             <Polish>Stwórz Zeus'a</Polish>
             <Italian>Crea Zeus</Italian>
             <Portuguese>Criar Zeus</Portuguese>
+            <Chinese>新增宙斯</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
@@ -1660,6 +1664,7 @@
             <Polish>Usuń Zeus'a</Polish>
             <Italian>Cancella Zeus</Italian>
             <Portuguese>Apagar Zeus</Portuguese>
+            <Chinese>刪除宙斯</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
@@ -1669,6 +1674,7 @@
             <Polish>"%1" menu</Polish>
             <Italian>menu "%1"</Italian>
             <Portuguese>Menu "%1"</Portuguese>
+            <Chinese>選單 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
@@ -1677,6 +1683,7 @@
             <Polish>Zrzut ładunku (cargo)</Polish>
             <Russian>Десантировать груз</Russian>
             <Portuguese>Soltar carga de paraquedas</Portuguese>
+            <Chinese>空投貨物</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
@@ -1685,6 +1692,7 @@
             <Polish>Niczego nie załadowano do cargo</Polish>
             <Russian>Грузовой отсек пуст</Russian>
             <Portuguese>Nenhuma carga carregada</Portuguese>
+            <Chinese>沒有貨物裝載</Chinese>
         </Key>
     </Package>
 </Project>

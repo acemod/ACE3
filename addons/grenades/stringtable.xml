@@ -383,6 +383,7 @@
             <Japanese>種類: パラシュート式照明弾 (星弾)</Japanese>
             <Russian>Тип: Осветительная ракета - звезда на парашюте</Russian>
             <Portuguese>Tipo: Sinalizador de pára-quedas estrela</Portuguese>
+            <Chinese>類型：星式帶傘照明彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
@@ -391,6 +392,7 @@
             <Japanese>M583 照明弾 (白)</Japanese>
             <Russian>M583 Осветит. ракета (Белая)</Russian>
             <Portuguese>M583 Sinalizador de Iluminação (Branco)</Portuguese>
+            <Chinese>M583 照明彈（白色）</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
@@ -399,6 +401,7 @@
             <Japanese>M662 照明弾 (赤)</Japanese>
             <Russian>M662 Осветит. ракета (Красная)</Russian>
             <Portuguese>M662 Sinalizador de Iluminação (Vermelho)</Portuguese>
+            <Chinese>M662 照明彈（紅色）</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
@@ -407,6 +410,7 @@
             <Japanese>M661 照明弾 (緑)</Japanese>
             <Russian>M661 Осветит. ракета (Зеленая)</Russian>
             <Portuguese>M661 Sinalizador de Iluminação (Verde)</Portuguese>
+            <Chinese>M661 照明彈（綠色）</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
@@ -415,6 +419,7 @@
             <Japanese>種類: パラシュート式赤外線照明弾</Japanese>
             <Russian>Тип: ИК-осветительная ракета на парашюте</Russian>
             <Portuguese>Tipo: Sinalizador Infravermelho de Pára-quedas</Portuguese>
+            <Chinese>類型：帶傘型紅外線照明彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
@@ -423,6 +428,7 @@
             <Japanese>M992 赤外線照明弾</Japanese>
             <Russian>M992 ИК-осветительная ракета</Russian>
             <Portuguese>M992 Sinalizador de Iluminação Infravermelho</Portuguese>
+            <Chinese>M992 紅外線照明彈</Chinese>
         </Key>
     </Package>
 </Project>

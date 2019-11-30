@@ -363,7 +363,7 @@
 {% endif %}
 
 {% if include.component == "realisticweights" %}
-`ace_common`
+`ace_common`, `ace_disposable`
 {% endif %}
 
 {% if include.component == "rearm" %}

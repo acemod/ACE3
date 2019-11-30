@@ -20,5 +20,5 @@ jobs:
     - name: Deploy
       if: github.repository == 'acemod/ACE3' && ! contains(github.event.head_commit.message, '[ci skip]')
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.DOCS_TOKEN }}
       run: python3 tools/deploy.py
