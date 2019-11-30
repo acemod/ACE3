@@ -18,7 +18,7 @@ class CfgWeapons {
         handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\maglite_ml300l_binarized.rtm)};
         muzzlePos = "flash";
         muzzleEnd = "flash dir";
-        magazines[] = {"FakeMagazine"};
+        magazines[] = {"FakeMagazine"}; // Required for the weapon info box to work correctly.
         textureType = "default"; // empty texture
         weaponInfoType = "RscWeaponEmpty";
 
