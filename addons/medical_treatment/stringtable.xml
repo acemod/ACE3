@@ -3572,6 +3572,7 @@
             <Russian>%1 наложил Шина</Russian>
             <French>%1 a posé un attelle</French>
             <Portuguese>%1 aplicou uma Tala</Portuguese>
+            <Chinese>%1 已套用固定板</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
