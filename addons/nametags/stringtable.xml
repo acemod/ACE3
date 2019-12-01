@@ -22,7 +22,7 @@
             <German>Spielernamen anzeigen</German>
             <Spanish>Mostrar nombres de jugadores</Spanish>
             <Polish>Pokaż imiona graczy</Polish>
-            <French>Afficher les nom des joueurs</French>
+            <French>Afficher les noms des joueurs</French>
             <Hungarian>Játékosnevek mutatása</Hungarian>
             <Czech>Zobrazit jména hráčů</Czech>
             <Portuguese>Mostrar nomes de jogadores</Portuguese>
@@ -104,7 +104,7 @@
             <Russian>Показывать имена ботов</Russian>
             <Czech>Zobrazit jména AI</Czech>
             <Polish>Wyświetl imiona jednostek AI</Polish>
-            <French>Afficher les noms des IA</French>
+            <French>Afficher les noms des unités IA</French>
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
             <Italian>Mostra i nomi delle le unità AI</Italian>
             <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
@@ -200,7 +200,7 @@
             <German>Zeige KI-Namen?</German>
             <Czech>Zobrazit jmenovky pro AI?</Czech>
             <Portuguese>Mostrar nomes para IA?</Portuguese>
-            <French>Afficher les noms pour les IA?</French>
+            <French>Afficher les noms pour les IA ?</French>
             <Hungarian>Névcímkék megjelenítése AI-nál?</Hungarian>
             <Russian>Показывать имена ботов?</Russian>
             <Italian>Mostra etichette nomi per IA?</Italian>
@@ -216,7 +216,7 @@
             <German>Zeige den Namen und Rang für freundliche KI-Einheiten? Standard: nicht erzwingen</German>
             <Czech>Zobrazit jména a hodnosti pro spřátelené AI jednotky? Výchozí: Nevynucovat</Czech>
             <Portuguese>Mostra o nome e patente para unidades IA aliadas? Padrão: Não forçar</Portuguese>
-            <French>Affiche le nom et le rang pour les IA alliées? Défaut : ne pas forcer</French>
+            <French>Afficher le nom et le rang des IA alliées? Défaut : ne pas forcer</French>
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать имена и звания дружественных ботов? По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
@@ -232,7 +232,7 @@
             <German>Verstecken erzwingen</German>
             <Czech>Vynuceno skrýt</Czech>
             <Portuguese>Ocultar forçado</Portuguese>
-            <French>Forcer la désactivation</French>
+            <French>Forcer le masquage</French>
             <Hungarian>Erőltetett rejtett</Hungarian>
             <Russian>Обязательно: Скрывать</Russian>
             <Italian>Forza Nascosto</Italian>
@@ -280,7 +280,7 @@
             <German>Zeige Status der Fahrzeugbesatzung oder erlaube Spielern ihn auszuwählen. Standard: nicht erzwingen.</German>
             <Czech>Zobrazit informace o posádce, nebo nechat aby si hráč vybral sám. Výchozí: Nevynucovat </Czech>
             <Portuguese>Mostrar informações de tripulação ou por padrão permitir a escolha dos jogadores. Padrão: Não forçar.</Portuguese>
-            <French>Afficher les informations sur l'équipage d'un véhicule. Défaut: ne pas forcer</French>
+            <French>Afficher les informations sur l'équipage d'un véhicule. Défaut : ne pas forcer</French>
             <Hungarian>A legénységi adatok mutatása, alapértelmezett esetben a játékos által kiválasztható. Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать информацию об экипаже техники, или по-умолчанию, позволяет игрокам выбрать свою настройку. По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra informazioni sull'equipaggio del veicolo, oppure consenti di default di lasciare che siano i giocatori a scegliere. Default: Non Forzare</Italian>
@@ -313,7 +313,7 @@
             <Czech>Zobrazit jmenovky pro velitele vozidla (pouze pokud má klient jmenovky povolené). Výchozí: Ne</Czech>
             <Portuguese>Mostrar o nome no cursor para o comandante do veículo (somente se o cliente tiver etiquetas de nomes ativada). Padrão: Não</Portuguese>
             <Russian>Показывать имя командира техники (только, если клиент включил отображение имен). По-умолчанию: Нет</Russian>
-            <French>Afficher les étiquettes de nom pour les commandants de véhicule (uniquement si l'affichage est activé pour le client). Défaut: non</French>
+            <French>Afficher les étiquettes de nom pour les commandants de véhicule (uniquement si l'affichage est activé pour le client). Défaut : non</French>
             <Italian>Mostra il nome sul cursore per il comandante del veicolo (solo se il client ha le Etichette Nomi attive) Default: No</Italian>
             <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準: 無効</Japanese>
             <Korean>차량의 사령관의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화 할시에만 보입니다) 기본설정: 아니요</Korean>
@@ -471,7 +471,7 @@
             <Czech>Zobrazit jména hráčů a nastavit jejich aktivaci. Výchozí: Povoleno</Czech>
             <German>Erlaubt das Anzeigen von Spielernamen und stellt ein, ob sie standardmäßig aktiviert oder deaktiviert sind. Standard: aktiviert</German>
             <Portuguese>Mostrar os nomes dos jogadores e definir sua ativação. Padrão: Ativado</Portuguese>
-            <French>Afficher les noms des joueurs et paramètre son activation. Défaut: activé</French>
+            <French>Affiche les noms des joueurs et définir leur activation. Défaut : activé</French>
             <Hungarian>Mutassa a játékosok nevét és kezelje az aktivációjukat. Alapértelmezett: Engedélyezve</Hungarian>
             <Russian>Показывать имена игроков и установить их активацию. По-умолчанию: Включено</Russian>
             <Italian>Mostra nomi giocatori ed imposta la loro attivazione. Default: Abilitato</Italian>
@@ -487,7 +487,7 @@
             <Czech>Efekt zvukových vln nad hlavami hráčů když mluví skrz PTT klávesu. Tato volba funguje s TFAR a ACRE2.</Czech>
             <German>Es wird ein Schallwellensymbol über den Köpfen von sprechenden Spielern angezeigt, die ihre Push-to-Talk-Taste drücken. Diese Option funktioniert mit "TFAR" und "ACRE2".</German>
             <Portuguese>Efeito de ondas sonoras acima das cabeças dos jogadores que falam depois mantendo pressionada a tecla PTT. Esta opção funciona com TFAR e ACRE2.</Portuguese>
-            <French>Icone au dessus de la tête du joueur qui parle après avoir utilisé la touche de PTT. Option compatible avec ACRE2 et TFAR</French>
+            <French>Effet d'onde sonore, qui s'anime au-dessus de la tête des joueurs ; lorsqu'ils parlent en maintenant la touche de PTT enfoncée. Cette option fonctionne avec TFAR et ACRE2.</French>
             <Hungarian>Hanghullám-effekt a beszélő játékosok feje felett a PTT-gomb lenyomásakor. Ez a beállítás TFAR és ACRE2 alatt működik.</Hungarian>
             <Russian>Эффект звуковой волны над головами говорящих игроков при удерживании кнопки push-to-talk. Эта опация работает также с рациями TFAR и ACRE2.</Russian>
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
@@ -551,6 +551,7 @@
             <Polish>Przezroczystość etykiet gracza</Polish>
             <Russian>Прозрачность меток игроков</Russian>
             <Portuguese>Transparência da etiqueta de nome</Portuguese>
+            <French>Transparence des noms</French>
         </Key>
     </Package>
 </Project>
