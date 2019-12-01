@@ -8,7 +8,7 @@
             <Russian>Проверять боезапас при перезарядке</Russian>
             <Czech>Zkontrolovat munici při nabití</Czech>
             <Polish>Sprawdź stan amunicji przy przeładowaniu broni</Polish>
-            <French>Vérification des munitions au rechargement</French>
+            <French>Vérifier les munitions au rechargement</French>
             <Hungarian>Lőszer ellenőrzése a fegyver újratöltésekor</Hungarian>
             <Italian>Controlla le munizioni durante il ricaricamento</Italian>
             <Portuguese>Conferir munição ao recarregar a arma</Portuguese>
@@ -24,7 +24,7 @@
             <Russian>Проверяет количество патронов в новом магазине при перезарядке.</Russian>
             <Czech>Kontroluje munice při nabití nového zásobníku.</Czech>
             <Polish>Pokaż stan amunicji w nowym magazynku przy przeładowaniu broni</Polish>
-            <French>Vérification du nombre de munition au rechargement</French>
+            <French>Vérifie les munitions du nouveau chargeur lors du rechargement de l'arme.</French>
             <Hungarian>A lőszer ellenőrzése az új tárad behelyezésekor újratöltés közben.</Hungarian>
             <Italian>Controlla le munizioni rimanenti nel caricatore in fase di cambio caricatore.</Italian>
             <Portuguese>Confere a munição no seu novo carregador ao recarregar a arma</Portuguese>
@@ -38,7 +38,7 @@
             <German>Munition prüfen</German>
             <Spanish>Comprobar munición</Spanish>
             <Polish>Sprawdź amunicję</Polish>
-            <French>Vérifier Munitions</French>
+            <French>Vérifier les munitions</French>
             <Hungarian>Lőszerellenőrzés</Hungarian>
             <Czech>Zkontrolovat Munici</Czech>
             <Italian>Controlla le munizioni</Italian>
@@ -83,7 +83,7 @@
         </Key>
         <Key ID="STR_ACE_Reload_LinkingBelt">
             <English>Linking belt...</English>
-            <French>Attache d'une bande...</French>
+            <French>Attachage d'une bande...</French>
             <Spanish>Enlazando cinta...</Spanish>
             <Russian>Сцепка лент...</Russian>
             <Czech>Spojuji pás...</Czech>

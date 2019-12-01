@@ -7,7 +7,7 @@
             <Japanese>過圧の距離係数</Japanese>
             <Korean>초과압력 거리 계수</Korean>
             <Polish>Mnożnik dystansu nadciśnienia</Polish>
-            <French>Coéfficient de distance pour la surpression</French>
+            <French>Coefficient de distance pour la surpression</French>
             <Italian>Coefficente Distanza Sovrapressione</Italian>
             <Chinesesimp>高压影响距离系数</Chinesesimp>
             <Chinese>高壓影響距離係數</Chinese>
@@ -20,7 +20,7 @@
             <Japanese>過圧効果の範囲 [標準: 1]</Japanese>
             <Korean>초과압력의 효과 크기 [기본설정: 1]</Korean>
             <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
-            <French>Échelonne les effets de la surpression [Par défaut : 1]</French>
+            <French>Ajuste l'effet de surpression [Défaut : 1]</French>
             <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
             <Chinesesimp>高压影响的范围 [预设: 1]</Chinesesimp>
             <Chinese>高壓影響的範圍 [預設: 1]</Chinese>
@@ -37,6 +37,7 @@
             <Polish>Zasięg backblast'u</Polish>
             <Russian>Дальность реактивной струи</Russian>
             <Portuguese>Alcance do Sopro de Disparo</Portuguese>
+            <French>Portée du backblast</French>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastAngle">
             <English>Backblast angle</English>
@@ -48,6 +49,7 @@
             <Polish>Kąt backblast'u</Polish>
             <Russian>Угол реактивной струи</Russian>
             <Portuguese>Ângulo do Sopro de Disparo</Portuguese>
+            <French>Angle du backblast</French>
         </Key>
     </Package>
 </Project>
