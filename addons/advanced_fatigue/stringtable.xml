@@ -133,7 +133,7 @@
             <Japanese>急勾配の地形がどれだけスタミナ消費を増大させるかを設定します。 値が高ければ高いほど、スタミナ消費が大きくなります。</Japanese>
             <Polish>Wpływa na to w jakim stopniu stromy teren wpływa na utratę wytrzymałości. Więcej oznacza szybszą utratę wytrzymałości.</Polish>
             <Korean>경사도에 따라 얼마나 피로해지는지를 정합니다.  값이 클수록 더 많은 피로를 유발합니다.</Korean>
-            <French>Définit à quel point un terrain escarpé réduit d'endurance du joueur.\nPlus la valeur est élevée, moins le joueur est endurant.</French>
+            <French>Définit à quel point un terrain escarpé réduit l'endurance du joueur.\nPlus la valeur est élevée, moins le joueur est endurant.</French>
             <Italian>Stabilisce quanto la pendenza del terreno incrementa la perdita della stamina. Maggiore significa più stamina persa.</Italian>
             <Chinese>設定陡峭的地形將會影響多少體力的流失，值越高代表體力流失越快</Chinese>
             <Chinesesimp>设定陡峭的地形将会影响多少体力的流，失值越高代表体力流失越快</Chinesesimp>
