@@ -44,17 +44,17 @@ class CfgWeapons {
             position = "flash dir";
             direction = "flash";
             useFlare = 1;
-            flareSize = 1.4;
+            flareSize = 0.8;
             flareMaxDistance = 100;
             dayLight = 1;
 
             class Attenuation {
-                start = 0;
-                constant = 0.7;
-                linear = 0.5;
-                quadratic = 0.6;
-                hardLimitStart = 45;
-                hardLimitEnd = 60;
+                start = 0.25;
+                constant = 0;
+                linear = 0;
+                quadratic = 1;
+                hardLimitStart = 140;
+                hardLimitEnd = 150;
             };
 
             scale[] = {0};
