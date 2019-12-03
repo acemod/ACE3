@@ -1,5 +1,8 @@
 #include "\z\ace\addons\medical\script_component.hpp"
 
+if (missionNamespace getVariable [QGVAR(dev_watchVariableRunning), false]) exitWith {};
+GVAR(dev_watchVariableRunning) = true;
+
 ["medical", {
 
     // Hide when patient display is up because they might overlap
@@ -19,12 +22,16 @@
     _return pushBack "";
 
     // State:
-    private _hasStableVitals = [_unit] call EFUNC(medical_status,hasStableVitals);
     private _targetState = [_unit, EGVAR(medical,STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
     if (!local _unit) then {_targetState = "NotLocal";};
     private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33AA"}; default {"555555"}};
-    private _unconcFlag = if IS_UNCONSCIOUS(_unit) then {"[<t color='#FFFFFF'>U</t>]"} else {""};
-    _return pushBack format ["<t color='#%1'>State: %2</t> [StableVitals: %3] %4", _color, _targetState, _hasStableVitals, _unconcFlag];
+    _return pushBack format ["<t color='#%1'>State: %2</t>", _color, _targetState];
+    private _hasStableVitals = ["N", "Y"] select ([_unit] call EFUNC(medical_status,hasStableVitals));
+    private _hasStableCondition = ["N", "Y"] select ([_unit] call EFUNC(medical_status,isInStableCondition));
+    private _unconcFlag = if IS_UNCONSCIOUS(_unit) then {"[<t color='#BBFFBB'>U</t>]"} else {""};
+    private _timeLeft = _unit getVariable [QEGVAR(medical_statemachine,cardiacArrestTimeLeft), -1];
+    private _cardiactArrestFlag = if IN_CRDC_ARRST(_unit) then {format ["[<t color='#BBBBFF'>CA</t> %1]", _timeLeft toFixed 1]} else {""};
+    _return pushBack format ["[StableVitals: %1] [StableCon: %2] %3 %4", _hasStableVitals, _hasStableCondition, _unconcFlag, _cardiactArrestFlag];
 
     // Blood:
     private _bloodVolume = GET_BLOOD_VOLUME(_unit);
@@ -41,7 +48,7 @@
     private _heartRate = GET_HEART_RATE(_unit);
     GET_BLOOD_PRESSURE(_unit) params ["_bpLow", "_bpHigh"];
     _return pushBack format ["CardiacOutput %1", _cardiacOutput toFixed 5];
-    _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpLow toFixed 1, _bpHigh toFixed 1];
+    _return pushBack format [" - [HR: %1] [BP: %2 / %3]", _heartRate toFixed 1, _bpHigh toFixed 1, _bpLow toFixed 1];
 
     // Pain:
     private _pain = GET_PAIN(_unit);
@@ -54,7 +61,7 @@
     // Damage:
     private _damage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
     private _limping = if (_unit getVariable [QEGVAR(medical,isLimping), false]) then {"[<t color ='#FFCC22'> Limping </t>]"} else {""};
-    _return pushBack format ["Damage: [H: %1] [B: %2] %3", (_damage select 0) toFixed 2, (_damage select 1) toFixed 2];
+    _return pushBack format ["BodyPartDamage: [H: %1] [B: %2]", (_damage select 0) toFixed 2, (_damage select 1) toFixed 2];
     _return pushBack format ["[LA:%1] [RA: %2] [LL:%3] [RL: %4]", (_damage select 2) toFixed 2, (_damage select 3) toFixed 2, (_damage select 4) toFixed 2, (_damage select 5) toFixed 2];
 
     _return pushBack format ["Hitpoints: [HHed:%1] [HBod: %2]", (_unit getHitPointDamage "HitHead") toFixed 2, (_unit getHitPointDamage "HitBody") toFixed 2];
@@ -84,8 +91,8 @@
 
 
     // Wounds:
-    _return pushBack "------- Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,openWounds), []];
+    _return pushBack "------- Open Wounds: -------";
+    private _wounds = GET_OPEN_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
@@ -93,7 +100,7 @@
 
     // Bandaged Wounds:
     _return pushBack "------- Bandaged Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,bandagedWounds), []];
+    private _wounds = GET_BANDAGED_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
@@ -101,7 +108,7 @@
 
     // Stitched Wounds:
     _return pushBack "------- Stitched Wounds: -------";
-    private _wounds = _unit getVariable [QEGVAR(medical,stitchedWounds), []];
+    private _wounds = GET_STITCHED_WOUNDS(_unit);
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
         _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
@@ -120,17 +127,11 @@
     private _hrTargetAdjustment = 0;
     private _painSupressAdjustment = 0;
     private _peripheralResistanceAdjustment = 0;
-    private _medicationCounts = [];
+    private _uniqueMedications = [];
     private _rawMedications = (_unit getVariable [VAR_MEDICATIONS, []]) apply {
         _x params ["_medication", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust"];
+        _uniqueMedications pushBackUnique _medication;
         private _timeInSystem = CBA_missionTime - _timeAdded;
-        private _index = _medicationCounts find _medication;
-        if (_index < 0) then {
-            _index = _medicationCounts pushBack _medication;
-            _medicationCounts pushBack 0
-        };
-        _medicationCounts set [(_index + 1), (_medicationCounts select (_index + 1)) + linearConversion [_timeTillMaxEffect, _maxTimeInSystem, _timeInSystem, 1, 0, true]];
-
         private _effectRatio = (((_timeInSystem / _timeTillMaxEffect) ^ 2) min 1) * (_maxTimeInSystem - _timeInSystem) / _maxTimeInSystem;
         _hrTargetAdjustment = _hrTargetAdjustment + _hrAdjust * _effectRatio;
         _painSupressAdjustment = _painSupressAdjustment + _painAdjust * _effectRatio;
@@ -138,15 +139,19 @@
         format ["%1 [%2 / %3][%4][%5,%6,%7]",_medication,_timeInSystem toFixed 0,_maxTimeInSystem toFixed 0, _effectRatio toFixed 2, _hrAdjust toFixed 1, _painAdjust toFixed 2, _flowAdjust toFixed 1];
     };
     _return pushBack format ["Adjusts: [HR %1][PS %2][PR %3]", _hrTargetAdjustment toFixed 2, _painSupressAdjustment toFixed 2, _peripheralResistanceAdjustment toFixed 2];
-    for "_i" from 0 to (count _medicationCounts) - 1 step 2 do {
-        _return pushBack format ["-%1: %2", _medicationCounts select _i, _medicationCounts select _i + 1];
-    };
+    {
+        private _medicationCount = [_unit, _x, true] call EFUNC(medical_status,getMedicationCount);
+        private _medicationEffectiveness = [_unit, _x, false] call EFUNC(medical_status,getMedicationCount);
+        _return pushBack format ["-%1: C: %2 - E: %3", _x, _medicationCount toFixed 2, _medicationEffectiveness toFixed 2];
+    } forEach _uniqueMedications;
     _return pushBack "------- Medications Raw: -------";
     _return append _rawMedications;
 
     if (_unit isEqualTo ACE_player) then {
         _return pushBack format ["ACE_setCustomAimCoef: %1", [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult)];
     };
+
+    _return pushBack format ["%1 - %2",lifeState _unit, animationState _unit];
 
     // Footer:
     _return pushBack "</t>";

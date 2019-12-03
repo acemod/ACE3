@@ -4,7 +4,7 @@
  * Handles starting the CPR treatment.
  *
  * Arguments:
- * 0: Medic (not used) <OBJECT>
+ * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
  *
  * Return Value:
@@ -16,14 +16,7 @@
  * Public: No
  */
 
-params ["", "_patient"];
+params ["_medic", "_patient"];
+TRACE_2("cprStart",_medic,_patient);
 
-// Prevent others from performing CPR
-_patient setVariable [QGVAR(isReceivingCPR), true, true];
-
-// Create a random pulse based on setting
-if (GVAR(cprCreatesPulse) && {GET_HEART_RATE(_patient) == 0}) then {
-    _patient setVariable [VAR_HEART_RATE, round random [25, 30, 35], true];
-};
-
-_patient setVariable [QEGVAR(medical,lastTimeUpdated), CBA_missionTime, true];
+_patient setVariable [QEGVAR(medical,CPR_provider), _medic, true];

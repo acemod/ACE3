@@ -11,6 +11,7 @@
             <Korean>일반</Korean>
             <Polish>Ogólny</Polish>
             <Russian>Общий</Russian>
+            <Portuguese>Comum</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -41,6 +42,7 @@
             <Italian>Avanzato</Italian>
             <Japanese>アドバンスド</Japanese>
             <Korean>고급</Korean>
+            <Chinese>進階</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
@@ -424,6 +426,7 @@
             <Portuguese>Normal</Portuguese>
             <Japanese>通常</Japanese>
             <Korean>보통</Korean>
+            <Chinese>普通</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -438,72 +441,8 @@
             <Portuguese>Sem voz</Portuguese>
             <Japanese>音声なし</Japanese>
             <Korean>무음</Korean>
-            <Chinese>沒聲音</Chinese>
+            <Chinese>無語音</Chinese>
             <Chinesesimp>没声音</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
-            <English>Accept Requests</English>
-            <German>Anfrage akzeptieren</German>
-            <Spanish>Aceptar peticiones</Spanish>
-            <Polish>Akceptuj prośby</Polish>
-            <Czech>Přijmout žádost</Czech>
-            <French>Accepter requête</French>
-            <Russian>Принять запросы</Russian>
-            <Hungarian>Kérések elfogadása</Hungarian>
-            <Portuguese>Aceitar Pedido</Portuguese>
-            <Italian>Accetta la richiesta</Italian>
-            <Japanese>要求を受け入れ</Japanese>
-            <Korean>요청 수락</Korean>
-            <Chinese>接受請求</Chinese>
-            <Chinesesimp>接受请求</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
-            <English>Decline Requests</English>
-            <German>Anfrage ablehnen</German>
-            <Spanish>Rechazar peticiones</Spanish>
-            <Polish>Ignoruj prośby</Polish>
-            <Czech>Zamítnout žádost</Czech>
-            <Russian>Отклонить запросы</Russian>
-            <French>Rejeter requête</French>
-            <Hungarian>Kérések elutasítása</Hungarian>
-            <Portuguese>Rejeitar pedido</Portuguese>
-            <Italian>Rifiuta la richiesta</Italian>
-            <Japanese>要求を拒否</Japanese>
-            <Korean>요청 거부</Korean>
-            <Chinese>拒絕請求</Chinese>
-            <Chinesesimp>拒绝请求</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
-            <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
-            <German>Anfragen werden von anderen Mitspielen gestellt. Diese können Anfragen u.a. zum Teilen/Verwenden von Ausrüstungsgegenständen, oder auch zum Ausführen von Handlungen sein. </German>
-            <Spanish>Acepta peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
-            <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
-            <Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
-            <Czech>Přijimutí žádosti poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
-            <Russian>Принять запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
-            <French>Accepter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalisation d'actions.</French>
-            <Hungarian>Más játékosok általi kérések elfogadása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
-            <Portuguese>Aceitar pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
-            <Japanese>他プレイヤからの要求を許可します。他プレイヤは装備を共有し、使うなど特定の動作を行えます。</Japanese>
-            <Korean>다른 플레이어가 보내온 요청을 수락합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
-            <Chinese>接受由其他玩家送出的請求。包含使用/共享裝備與執行特定動作</Chinese>
-            <Chinesesimp>接受由其他玩家送出的请求。包含使用/共享装备与执行特定动作。</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
-            <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
-            <German>Anfragen werden von anderen Mitspielen gestellt. Diese können Anfragen u.a. zum Teilen/Verwenden von Ausrüstungsgegenständen, oder auch zum Ausführen von Handlungen sein. </German>
-            <Spanish>Rechazar peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
-            <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
-            <Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
-            <Czech>Zamítnutí žádostii poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
-            <Russian>Отклонить запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
-            <French>Rejeter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalisation d'actions.</French>
-            <Hungarian>Más játékosok általi kérések elutasítása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
-            <Portuguese>Rejeita pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
-            <Japanese>他プレイヤからの要求を拒否します。他プレイヤは装備を共有し、使うなど特定の動作をできません。</Japanese>
-            <Korean>다른 플레이어가 보내온 요청을 거부합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
-            <Chinese>拒絕由其他玩家送出的請求。包含使用/共享裝備與執行特定動作</Chinese>
-            <Chinesesimp>拒绝由其他玩家送出的请求。包含使用/共享装备与执行特定动作。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
             <English>Check PBO Action</English>
@@ -515,6 +454,7 @@
             <Korean>PBO 검사</Korean>
             <Polish>Sprawdź akcję PBO</Polish>
             <Russian>Действие при проверке PBO</Russian>
+            <Portuguese>Ação de Checar PBO</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -526,6 +466,7 @@
             <Korean>모든 PBO 검사</Korean>
             <Polish>Sprawdź wszystkie PBO</Polish>
             <Russian>Проверять все PBO</Russian>
+            <Portuguese>Checar Todos os PBOs</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -537,6 +478,7 @@
             <Korean>검사 제외 PBO</Korean>
             <Polish>Sprawdź białą listę PBO</Polish>
             <Russian>Белый список для проверки PBO</Russian>
+            <Portuguese>Lista Branca de PBO</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -676,6 +618,7 @@
             <Chinese>保持武器雷射/手電筒的狀態</Chinese>
             <Chinesesimp>保持武器雷射/手电筒的状态</Chinesesimp>
             <Polish>Trwały znacznik laserowy/latarka</Polish>
+            <Portuguese>Luz da lanterna/laser da arma persistente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -687,6 +630,7 @@
             <Chinese>保存武器雷射/手電筒的開關狀態，使玩家切換武器或進出載具時能保持之前的的狀態</Chinese>
             <Chinesesimp>保存武器雷射/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的的状态。</Chinesesimp>
             <Polish>Aktywuj znacznik laserowy/latarkę po zmianie broni lub wejściu/wyjściu z pojazdu, jeśli był on poprzednio włączony.</Polish>
+            <Portuguese>Ativa a luz da arma ao trocar de arma, entrar/sair de um veículo. Caso tenha sido acesa anteriormente.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -1010,6 +954,8 @@
             <German>Immer</German>
             <Japanese>常に</Japanese>
             <Russian>Всегда</Russian>
+            <Portuguese>Sempre</Portuguese>
+            <Chinese>一直</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1019,11 +965,12 @@
             <German>Überall</German>
             <Czech>Kdekoliv</Czech>
             <Portuguese>Qualquer lugar</Portuguese>
-            <French>PArtout</French>
+            <French>Partout</French>
             <Hungarian>Akárhol</Hungarian>
             <Italian>Ovunque</Italian>
             <Japanese>どこでも</Japanese>
             <Korean>어디서나</Korean>
+            <Chinese>任何地方</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Basic">
             <English>Basic</English>
@@ -1038,6 +985,7 @@
             <Italian>Basico</Italian>
             <Japanese>ベーシック</Japanese>
             <Korean>기본</Korean>
+            <Chinese>基礎</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Vehicle">
             <English>Medical Vehicles</English>
@@ -1052,6 +1000,7 @@
             <Italian>Veicoli medici</Italian>
             <Japanese>医療車両のみ</Japanese>
             <Korean>의료차량</Korean>
+            <Chinese>醫療載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Yes">
             <English>Yes</English>
@@ -1090,12 +1039,16 @@
             <Japanese>確認</Japanese>
             <German>Bestätigen</German>
             <Russian>Подтвердить</Russian>
+            <Portuguese>Confirmar</Portuguese>
+            <Chinese>確認</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
             <Japanese>行わない</Japanese>
             <German>Nie</German>
             <Russian>Никогда</Russian>
+            <Portuguese>Nunca</Portuguese>
+            <Chinese>從不</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1274,6 +1227,7 @@
             <Italian>Permesso di abbassare la musica</Italian>
             <Polish>Zezwól na przyciszanie muzyki</Polish>
             <Russian>Разрешить приглушение музыки</Russian>
+            <Portuguese>Permite diminuir volume da música</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1285,6 +1239,7 @@
             <Italian>Permetti agli script di ACEdi abbassare la musica.</Italian>
             <Polish>Zezwól skrypty ACE na przyciszanie muzyki.</Polish>
             <Russian>Позволить скриптам ACE приглушать музыку</Russian>
+            <Portuguese>Permite que Scripts do ACE diminuam o volume da música.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1295,6 +1250,7 @@
             <Japanese>旗 (ACE - 黒)</Japanese>
             <Polish>Flaga (ACE - Czarna)</Polish>
             <Russian>Флаг (ACE - Черный)</Russian>
+            <Portuguese>Bandeira (ACE - Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -1305,6 +1261,39 @@
             <Japanese>旗 (ACE - 白)</Japanese>
             <Polish>Flaga (ACE - Biała)</Polish>
             <Russian>Флаг (ACE - Белый)</Russian>
+            <Portuguese>Bandeira (ACE - Branco)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_playerOnly">
+            <English>Players only</English>
+            <Russian>Игроков</Russian>
+            <Polish>Tylko dla graczy</Polish>
+            <Spanish>Solo jugadores</Spanish>
+            <German>Nur Spieler</German>
+            <Czech>Pouze hráči</Czech>
+            <Portuguese>Somente jogadores</Portuguese>
+            <French>Joueur uniquement</French>
+            <Hungarian>Csak játékosok</Hungarian>
+            <Italian>Solo giocatori</Italian>
+            <Japanese>プレイヤーのみ</Japanese>
+            <Korean>플레이어만</Korean>
+            <Chinesesimp>只限玩家</Chinesesimp>
+            <Chinese>只限玩家</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Common_playersAndAI">
+            <English>Players and AI</English>
+            <Russian>Игроков и ботов</Russian>
+            <Polish>Gracze oraz AI</Polish>
+            <Spanish>Jugadores e IA</Spanish>
+            <German>Spieler und KI</German>
+            <Czech>Hráči a AI</Czech>
+            <Portuguese>Jogadores e IA</Portuguese>
+            <French>Joueurs et IA</French>
+            <Hungarian>Játékosok és AI</Hungarian>
+            <Italian>Giocatori ed IA</Italian>
+            <Japanese>プレイヤーと AI</Japanese>
+            <Korean>플레이어 및 인공지능</Korean>
+            <Chinesesimp>玩家与AI</Chinesesimp>
+            <Chinese>玩家與AI</Chinese>
         </Key>
     </Package>
 </Project>

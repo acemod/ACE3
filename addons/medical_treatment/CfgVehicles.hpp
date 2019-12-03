@@ -74,6 +74,9 @@ class CfgVehicles {
     class ACE_MedicalLitter_QuickClot: ACE_MedicalLitterBase {
         model = QPATHTOF(data\littergeneric_Quikclot.p3d);
     };
+    class ACE_MedicalLitter_splint: ACE_MedicalLitterBase {
+        model = QPATHTOF(data\littergeneric_splint.p3d);
+    };
 
     // Treatment items
     class Item_Base_F;
@@ -117,6 +120,16 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_tourniquet,1);
         };
     };
+    class ACE_splintItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(splint_Display);
+        author = ECSTRING(common,ACETeam);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_splint,1);
+        };
+    };
     class ACE_morphineItem: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -138,8 +151,8 @@ class CfgVehicles {
         };
     };
     class ACE_atropineItem: Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
+        scope = 1;
+        scopeCurator = 1;
         displayName = CSTRING(Atropine_Display);
         author = ECSTRING(common,ACETeam);
         vehicleClass = "Items";
@@ -245,6 +258,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = QPATHTOF(data\ace_medcrate.p3d);
+        editorPreview = QPATHTOF(data\ACE_medicalSupplyCrate.jpg);
         author = ECSTRING(common,ACETeam);
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,50);
@@ -292,9 +306,9 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_packingBandage,25);
             MACRO_ADDITEM(ACE_elasticBandage,25);
             MACRO_ADDITEM(ACE_tourniquet,15);
+            MACRO_ADDITEM(ACE_splint,15);
             MACRO_ADDITEM(ACE_morphine,15);
             MACRO_ADDITEM(ACE_adenosine,15);
-            MACRO_ADDITEM(ACE_atropine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
             MACRO_ADDITEM(ACE_plasmaIV,7);
             MACRO_ADDITEM(ACE_plasmaIV_500,7);

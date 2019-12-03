@@ -138,6 +138,7 @@ PREP(positionToASL);
 PREP(progressBar);
 PREP(readSettingFromModule);
 PREP(receiveRequest);
+PREP(registerItemReplacement);
 PREP(removeCanInteractWithCondition);
 PREP(removeSpecificMagazine);
 PREP(requestCallback);

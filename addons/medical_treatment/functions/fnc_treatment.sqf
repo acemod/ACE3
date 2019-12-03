@@ -74,6 +74,10 @@ if (_medicAnim == "AinvPknlMstpSlayWlnrDnon_medic") then {
 
 // Determine the animation length
 private _animDuration = GVAR(animDurations) getVariable _medicAnim;
+if (isNil "_animDuration") then {
+    WARNING_2("animation [%1] for [%2] has no duration defined",_medicAnim,_classname);
+    _animDuration = 10;
+};
 
 // These animations have transitions that take a bit longer...
 if (weaponLowered _medic) then {

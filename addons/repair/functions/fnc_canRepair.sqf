@@ -37,16 +37,11 @@ private _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 };
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
 
-//Items can be an array of required items or a string to a ACE_Setting array
+// Items can be an array of required items or a string to a missionNamespace variable
 private _items = if (isArray (_config >> "items")) then {
     getArray (_config >> "items");
 } else {
-    private _settingName = getText (_config >> "items");
-    private _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
-    if ((isNil _settingName) || {(missionNamespace getVariable _settingName) >= (count _settingItemsArray)}) exitWith {
-        ERROR("bad setting"); ["BAD"]
-    };
-    _settingItemsArray select (missionNamespace getVariable _settingName);
+    missionNamespace getVariable [getText (_config >> "items"), []]
 };
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 

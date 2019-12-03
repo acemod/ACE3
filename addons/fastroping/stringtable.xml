@@ -56,6 +56,7 @@
             <Korean>패스트 로프 시스템 보관</Korean>
             <Polish>Schowaj system zjazdu na linach</Polish>
             <Russian>Спрятать систему спуска</Russian>
+            <Portuguese>Recolher o sistema de descida rápida</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -152,6 +153,8 @@
             <Japanese>12m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 12 m.</Polish>
             <Russian>Выпустить 12 м канат</Russian>
+            <Portuguese>Jogar cordar (12m)</Portuguese>
+            <Chinese>部屬12公尺長之繩索</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
             <English>Deploy 15m ropes</English>
@@ -160,6 +163,8 @@
             <Japanese>15m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 15 m.</Polish>
             <Russian>Выпустить 15 м канат</Russian>
+            <Portuguese>Jogar cordar (15m)</Portuguese>
+            <Chinese>部屬15公尺長之繩索</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
             <English>Deploy 18m ropes</English>
@@ -168,6 +173,8 @@
             <Japanese>18m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 18 m.</Polish>
             <Russian>Выпустить 18 м канат</Russian>
+            <Portuguese>Jogar cordar (18m)</Portuguese>
+            <Chinese>部屬18公尺長之繩索</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
             <English>Deploy 27m ropes</English>
@@ -176,6 +183,8 @@
             <Japanese>27m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 27 m.</Polish>
             <Russian>Выпустить 27 м канат</Russian>
+            <Portuguese>Jogar cordar (27m)</Portuguese>
+            <Chinese>部屬27公尺長之繩索</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
             <English>Deploy 36m ropes</English>
@@ -184,6 +193,8 @@
             <Japanese>36m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 36 m.</Polish>
             <Russian>Выпустить 36 м канат</Russian>
+            <Portuguese>Jogar cordar (36m)</Portuguese>
+            <Chinese>部屬36公尺長之繩索</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Ropesupply">
             <English>[ACE] Ropes Supply crate</English>
@@ -192,6 +203,8 @@
             <Japanese>[ACE] ロープ収納箱</Japanese>
             <Polish>Skrzynia z linami ACE</Polish>
             <Russian>[ACE] Ящик с канатами</Russian>
+            <Portuguese>[ACE] Suprimento de cordas</Portuguese>
+            <Chinese>[ACE] 繩索補充箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_descriptionShort">
             <English>Used to do deploy ropes from a compatibile helicopter</English>
@@ -200,6 +213,8 @@
             <Japanese>対応するヘリコプターからロープを展開する為に使用されます</Japanese>
             <Polish>Używane do opuszczania lin z kompatybilnych smigłowców</Polish>
             <Russian>Используется для выпуска канатов с совместимого вертолета</Russian>
+            <Portuguese>Usado para fazer descida rápida de corda em helicópteros compatíveis com FRIES</Portuguese>
+            <Chinese>在可相容的直升機上部屬繩索</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_12_Display">
             <English>Rope 12.2 meters</English>
@@ -208,6 +223,8 @@
             <Japanese>ロープ (12.2 メートル)</Japanese>
             <Polish>Lina, długość 12,2 m.</Polish>
             <Russian>Канат 12.2 метров</Russian>
+            <Portuguese>Corda (12.2m)</Portuguese>
+            <Chinese>繩索（12.2公尺長）</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_15_Display">
             <English>Rope 15.2 meters</English>
@@ -216,6 +233,8 @@
             <Japanese>ロープ (15.2 メートル)</Japanese>
             <Polish>Lina, długość 15,2 m.</Polish>
             <Russian>Канат 15.2 метров</Russian>
+            <Portuguese>Corda (15.2m)</Portuguese>
+            <Chinese>繩索（15.2公尺長）</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_18_Display">
             <English>Rope 18.3 meters</English>
@@ -224,6 +243,8 @@
             <Japanese>ロープ (18.3 メートル)</Japanese>
             <Polish>Lina, długość 18,3 m.</Polish>
             <Russian>Канат 18.3 метров</Russian>
+            <Portuguese>Corda (18.3m)</Portuguese>
+            <Chinese>繩索（18.3公尺長）</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_27_Display">
             <English>Rope 27.4 meters</English>
@@ -232,6 +253,8 @@
             <Japanese>ロープ (27.4 メートル)</Japanese>
             <Polish>Lina, długość 27,4 m.</Polish>
             <Russian>Канат 27.4 метров</Russian>
+            <Portuguese>Corda (27.4m)</Portuguese>
+            <Chinese>繩索（27.4公尺長）</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_36_Display">
             <English>Rope 36.6 meters</English>
@@ -240,6 +263,8 @@
             <Japanese>ロープ (36.6 メートル)</Japanese>
             <Polish>Lina, długość 36,6 m.</Polish>
             <Russian>Канат 36.6 метров</Russian>
+            <Portuguese>Corda (36.6m)</Portuguese>
+            <Chinese>繩索（36.6公尺長）</Chinese>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -248,6 +273,8 @@
             <Japanese>展開にはロープ アイテムを必須に</Japanese>
             <Polish>Wymaga przedmiotu typu lina </Polish>
             <Russian>Требуется канат</Russian>
+            <Portuguese>Requer uma corda para jogar</Portuguese>
+            <Chinese>需要繩索來部屬</Chinese>
         </Key>
     </Package>
 </Project>

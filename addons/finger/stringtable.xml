@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="finger">
-        <Key ID="STR_ACE_finger_DisplayName">
+    <Package name="Finger">
+        <Key ID="STR_ACE_Finger_DisplayName">
             <English>Pointing</English>
             <German>Fingerzeig</German>
             <Italian>Puntamento</Italian>
@@ -12,8 +12,10 @@
             <French>Pointage</French>
             <Polish>Wskazywanie</Polish>
             <Russian>Указание пальцем</Russian>
+            <Portuguese>Apontando</Portuguese>
+            <Czech>Ukazování </Czech>
         </Key>
-        <Key ID="STR_ACE_finger_indicatorForSelf_name">
+        <Key ID="STR_ACE_Finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
             <German>Zeigersymbol einem selbst anzeigen</German>
             <Russian>Индикатор пальца для показывающего</Russian>
@@ -29,7 +31,7 @@
             <Chinesesimp>在自己身边显示指向标记</Chinesesimp>
             <Chinese>顯示指向指示器給自己</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_indicatorForSelf_description">
+        <Key ID="STR_ACE_Finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
             <German>Zeigt das eigene Zeigersymbol an. Diese Einstellung beeinflusst jedoch nicht andere Spieler, welche das Zeigersymbol sehen können.</German>
             <Russian>Отображать индикатор указания пальцем для показывающего игрока. Эта настройка не влияет на то, будут ли другие игроки видеть индикатор</Russian>
@@ -45,7 +47,7 @@
             <Chinesesimp>显示指向标记给玩家自己。此选项设定并不影响其他玩家能否看到指示标记</Chinesesimp>
             <Chinese>顯示指向指示器給玩家自己。此選項設定並不影響其他玩家能否看到指示器</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_indicatorColor_name">
+        <Key ID="STR_ACE_Finger_indicatorColor_name">
             <English>Pointing indicator</English>
             <German>Zeigersymbol</German>
             <Russian>Индикатор указания пальцем</Russian>
@@ -61,7 +63,7 @@
             <Chinesesimp>指向标记</Chinesesimp>
             <Chinese>指向指示器</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_indicatorColor_description">
+        <Key ID="STR_ACE_Finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
             <German>Farbe des Zeigersymbols</German>
             <Russian>Цвет индикатора указания пальцем</Russian>
@@ -77,7 +79,7 @@
             <Chinesesimp>指向标记颜色</Chinesesimp>
             <Chinese>指向指示器顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_keyComb">
+        <Key ID="STR_ACE_Finger_keyComb">
             <English>Action "point a finger at"</English>
             <German>Aktion: "Zeige Finger auf"</German>
             <Russian>Действие "показать пальцем на"</Russian>
@@ -93,7 +95,7 @@
             <Chinesesimp>使"手指指向在"</Chinesesimp>
             <Chinese>使"手指指向在"</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_keyComb_description">
+        <Key ID="STR_ACE_Finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
             <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
             <French>Montre, et affiche un marqueur virtuel là ou vous regardez aux unités proches. Peut être maintenu.</French>
@@ -109,7 +111,7 @@
             <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
             <Chinese>當按下此按鍵後，你附近的單位即可看見一個虛擬圖示，標明你正在指向的位置。此按鍵可以被按住來持續顯示。</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_moduleSettings_displayName">
+        <Key ID="STR_ACE_Finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
             <German>Zeigen Einstellungen</German>
             <French>Options de pointage</French>
@@ -125,7 +127,7 @@
             <Chinesesimp>指向设定</Chinesesimp>
             <Chinese>指向設定</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_enabled_displayName">
+        <Key ID="STR_ACE_Finger_enabled_displayName">
             <English>Pointing Enabled</English>
             <German>Zeigen aktiviert</German>
             <French>Pointage activé</French>
@@ -141,7 +143,7 @@
             <Chinesesimp>指向系统启动</Chinesesimp>
             <Chinese>指向系統啟動</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_maxRange_displayName">
+        <Key ID="STR_ACE_Finger_maxRange_displayName">
             <English>Pointing Max Range</English>
             <German>Maximale Zeigerreichweite</German>
             <French>Distance maximale de pointage</French>
@@ -157,7 +159,7 @@
             <Chinesesimp>指向标记最大显示距离</Chinesesimp>
             <Chinese>指向指示器最大顯示距離</Chinese>
         </Key>
-        <Key ID="STR_ACE_finger_maxRange_description">
+        <Key ID="STR_ACE_Finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
             <German>Maximale Reichweite zwischen Spielern, welche das Zeigesymbol des jeweils anderen sehen können. (Standard: 4 Meter).</German>
             <French>Distance maximale entre joueurs pour afficher l'indicateur (défaut: 4 mètres)</French>

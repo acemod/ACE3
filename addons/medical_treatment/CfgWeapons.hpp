@@ -28,7 +28,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Bandage_Basic_Desc_Short);
         descriptionUse = CSTRING(Bandage_Basic_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
     class ACE_packingBandage: ACE_ItemCore {
@@ -40,7 +40,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Packing_Bandage_Desc_Short);
         descriptionUse = CSTRING(Packing_Bandage_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
     class ACE_elasticBandage: ACE_ItemCore {
@@ -52,7 +52,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Bandage_Elastic_Desc_Short);
         descriptionUse = CSTRING(Bandage_Elastic_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
     class ACE_tourniquet: ACE_ItemCore {
@@ -64,15 +64,15 @@ class CfgWeapons {
         descriptionShort = CSTRING(Tourniquet_Desc_Short);
         descriptionUse = CSTRING(Tourniquet_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
     class ACE_splint: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(splint_Display);
-        picture = QPATHTOF(ui\tourniquet_ca.paa);
-        model = QPATHTOF(data\tourniquet.p3d);
+        picture = QPATHTOF(ui\splint_ca.paa);
+        model = QPATHTOF(data\splint.p3d);
         descriptionShort = CSTRING(splint_Desc_Short);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
@@ -87,7 +87,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Morphine_Desc_Short);
         descriptionUse = CSTRING(Morphine_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
     class ACE_adenosine: ACE_ItemCore {
@@ -99,11 +99,11 @@ class CfgWeapons {
         descriptionShort = CSTRING(adenosine_Desc_Short);
         descriptionUse = CSTRING(adenosine_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
     class ACE_atropine: ACE_ItemCore {
-        scope = 2;
+        scope = 1;
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Atropine_Display);
         picture = QPATHTOF(ui\atropine_ca.paa);
@@ -111,7 +111,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Atropine_Desc_Short);
         descriptionUse = CSTRING(Atropine_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
     class ACE_epinephrine: ACE_ItemCore {
@@ -123,7 +123,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Epinephrine_Desc_Short);
         descriptionUse = CSTRING(Epinephrine_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
 
@@ -226,7 +226,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(QuikClot_Desc_Short);
         descriptionUse = CSTRING(QuikClot_Desc_Use);
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+            mass = 1;
         };
     };
     class ACE_personalAidKit: ACE_ItemCore {

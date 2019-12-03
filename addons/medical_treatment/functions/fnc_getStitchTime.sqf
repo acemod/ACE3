@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mharis001
- * Calculates the Surgical Kit treatment time based on the amount of bandaged wounds.
+ * Calculates the Surgical Kit treatment time based on the amount of stitchable wounds.
  *
  * Arguments:
  * 0: Medic (not used) <OBJECT>
@@ -16,8 +16,6 @@
  * Public: No
  */
 
-#define TIME_PER_WOUND 5
-
 params ["", "_patient"];
 
-count (_patient getVariable [QEGVAR(medical,bandagedWounds), []]) * TIME_PER_WOUND
+count (_patient call FUNC(getStitchableWounds)) * WOUND_STITCH_TIME

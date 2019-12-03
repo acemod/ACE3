@@ -17,7 +17,6 @@ class CfgPatches {
 #include "ACE_Medical_Treatment.hpp"
 #include "ACE_Medical_Treatment_Actions.hpp"
 #include "ACE_Medical_Facilities.hpp"
-#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgReplacementItems.hpp"
 #include "CfgVehicles.hpp"

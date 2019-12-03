@@ -108,7 +108,7 @@ private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
     params ["", "", "", "", "_unit"];
     TRACE_2("Unit:",_unit,_this);
 
-    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
+    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 5, 1, 15];
 
     // Tell the server to create the tag and handle its destruction
     [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
