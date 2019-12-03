@@ -34,14 +34,16 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    container: acemod/armake:master
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
-    - name: Build (armake)
-      run: armake --version && make -j4
-    - name: Upload Artifact
-      uses: actions/upload-artifact@master
+    - name: Build using HEMTT
+      uses: arma-actions/hemtt@master
       with:
-        name: ace3-${{ github.sha }}-nobin
-        path: '@ace'
+        command: build --release --ci
+    # https://github.com/actions/upload-artifact/issues/3#issuecomment-524442814
+    # - name: Upload Artifact
+    #   uses: actions/upload-artifact@master
+    #   with:
+    #     name: ace3-${{ github.sha }}-nobin
+    #     path: '@ace'
