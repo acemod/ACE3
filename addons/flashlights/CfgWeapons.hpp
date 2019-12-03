@@ -11,11 +11,14 @@ class CfgWeapons {
         descriptionShort = CSTRING(Maglite_ML300L_Description);
         model = QPATHTOF(data\maglite_ml300l.p3d);
         picture = QPATHTOF(UI\maglite_ml300l_ca.paa);
+        cursor = "";
+        cursorAim = "";
 
         // Binarized version is just for testing purposes when using build.py aka makepbo.
         // RTMs need to be binarized to work properly.
         // Switch out for non binarized version and remove binarized RTM.
         handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\maglite_ml300l_binarized.rtm)};
+        recoil = "empty";
         muzzlePos = "flash";
         muzzleEnd = "flash dir";
         magazines[] = {"FakeMagazine"}; // Required for the weapon info box to work correctly.
