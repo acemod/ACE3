@@ -4,8 +4,6 @@ release/*
 releases/*
 hemtt
 hemtt.exe
-tools/hemtt*.tar.gz*
-tools/hemtt*.zip*
 tools/temp
 *.cache
 *.pbo
