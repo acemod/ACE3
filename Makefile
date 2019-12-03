@@ -3,7 +3,7 @@ PREFIX = ace
 BIN = @ace
 ZIP = ace3
 FLAGS = -i include -w unquoted-string -w redefinition-wo-undef
-VERSION_FILES = README.md docs/README_DE.md docs/README_PL.md mod.cpp
+VERSION_FILES = README.md docs/README_DE.md docs/README_PL.md README.zh-TW.md mod.cpp
 
 MAJOR = $(word 1, $(subst ., ,$(VERSION)))
 MINOR = $(word 2, $(subst ., ,$(VERSION)))
