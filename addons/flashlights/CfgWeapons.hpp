@@ -14,10 +14,8 @@ class CfgWeapons {
         cursor = "";
         cursorAim = "";
 
-        // Binarized version is just for testing purposes when using build.py aka makepbo.
-        // RTMs need to be binarized to work properly.
-        // Switch out for non binarized version and remove binarized RTM.
-        handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\maglite_ml300l_binarized.rtm)};
+        // binarized rtm, animation in "extras/assets/maglite"
+        handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\maglite_ml300l.rtm)};
         recoil = "empty";
         muzzlePos = "flash";
         muzzleEnd = "flash dir";
