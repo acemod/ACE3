@@ -1405,7 +1405,7 @@
             <Spanish>Es un ingeniero</Spanish>
             <Czech>Inženýr</Czech>
             <Italian>E' Geniere</Italian>
-            <French>Est ingénieur</French>
+            <French>Qualification technique</French>
             <Japanese>工兵とする</Japanese>
             <Korean>은 정비공이다</Korean>
             <Chinesesimp>是工兵</Chinesesimp>
@@ -1435,7 +1435,7 @@
             <Czech>Nikdo</Czech>
             <Spanish>Ningún</Spanish>
             <Italian>Nessuna</Italian>
-            <French>Aucun</French>
+            <French>Aucune</French>
             <Japanese>なし</Japanese>
             <Korean>없음</Korean>
             <Chinesesimp>无</Chinesesimp>
@@ -1468,7 +1468,7 @@
             <Korean>고급 정비공</Korean>
             <Russian>Продв. Инженер</Russian>
             <Portuguese>Engenheiro Avançado</Portuguese>
-            <French>Ingénieur avancé</French>
+            <French>Ing. avancé</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
