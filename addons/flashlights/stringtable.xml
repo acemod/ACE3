@@ -106,10 +106,12 @@
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_DisplayName">
             <English>Maglite ML300L</English>
             <German>Maglite ML300L</German>
+            <Polish>Maglite ML300L</Polish>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
             <English>Powerful LED flashlight.</English>
             <German>Leistungsstarke LED-Taschenlampe.</German>
+            <Polish>Mocna latarka LED.</Polish>
         </Key>
     </Package>
 </Project>
