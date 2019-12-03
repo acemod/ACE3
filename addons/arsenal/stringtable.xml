@@ -16,7 +16,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonHideTooltip">
             <English>Hide interface</English>
-            <French>Cache l'interface</French>
+            <French>Masque l'interface</French>
             <German>Oberfläche verstecken</German>
             <Polish>Ukryj interfejs</Polish>
             <Japanese>インターフェイスを隠す</Japanese>
@@ -124,7 +124,7 @@
             <Polish>Shift + Klik aby zapisac jako domyślne dla misji </Polish>
             <Russian>[Shift+Клик, чтобы сохранить в настройках по умолчанию]</Russian>
             <Portuguese>[Shift+Clique para salvar nos padrões da missão]</Portuguese>
-            <French>[Shift+Clic pour sauvegarder les valeurs comme paramètres par défaut pour la mission]</French>
+            <French>[Shift+Clic pour enregistrer en tant qu'équipement prédéfini]</French>
             <Chinese>[Shift+左鍵來保存至任務預設]</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
@@ -207,7 +207,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_tabMyLoadoutsText">
             <English>My loadouts</English>
-            <French>Mes sets</French>
+            <French>Mes équipements</French>
             <German>Meine Ausrüstungen</German>
             <Polish>Moje zestawy</Polish>
             <Japanese>自分の装備</Japanese>
@@ -233,7 +233,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsText">
             <English>Default loadouts</English>
-            <French>Sets de base</French>
+            <French>Équipements prédéfinis</French>
             <German>Standard-Ausrüstungen</German>
             <Polish>Domyślne zestawy</Polish>
             <Japanese>標準の装備</Japanese>
@@ -246,7 +246,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsTooltip">
             <English>Loadouts made available by the mission maker</English>
-            <French>Sets d'équipement créés par l'auteur de la mission</French>
+            <French>Sets d'équipement mis à disposition par le créateur de mission</French>
             <German>Ausrüstungen, die durch den Missionsersteller zur Verfügung gestellt worden sind</German>
             <Polish>Zestawy udostępnione przez twórcę misji</Polish>
             <Japanese>装備はミッション著者によって利用できます</Japanese>
@@ -259,7 +259,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
             <English>Public loadouts</English>
-            <French>Sets publics</French>
+            <French>Équipements publics</French>
             <German>Veröffentlichte Ausrüstungen</German>
             <Polish>Publiczne zestawy</Polish>
             <Japanese>公開装備</Japanese>
@@ -272,7 +272,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsTooltip">
             <English>Loadouts shared by you and other players</English>
-            <French>Sets d'équipement partagés par vous ou par d'autres joueurs</French>
+            <French>Sets d'équipement partagés par vous-même ou par d'autres joueurs</French>
             <German>Ausrüstungen, die von dir und anderen Spielern geteilt wurden</German>
             <Polish>Zestawy udostępnione przez Ciebie i innych graczy</Polish>
             <Japanese>自分か他人によって共有された装備です</Japanese>
@@ -350,7 +350,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefaultError">
             <English>The default loadouts list is empty!</English>
-            <French>La liste des sets de base est vide !</French>
+            <French>La liste des équipements prédéfinis est vide !</French>
             <German>Die Standard-Ausrüstungen-Liste ist leer!</German>
             <Polish>Lista domyślnych zestawów jest pusta!</Polish>
             <Japanese>標準の装備一欄が空です!</Japanese>
@@ -363,7 +363,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_exportDefault">
             <English>Default loadouts list exported to clipboard</English>
-            <French>Liste des sets de base exportée dans le presse-papier</French>
+            <French>Liste des équipements prédéfinis exportée dans le presse-papier</French>
             <German>Standard-Ausrüstungen-Liste in die Zwischenablage exportiert</German>
             <Polish>Lista domyślnych zestawów została eksportowana do schowka</Polish>
             <Japanese>標準の装備一欄はクリップボードへエクスポートされました</Japanese>
@@ -402,7 +402,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_importedDefault">
             <English>Default loadouts list imported from clipboard</English>
-            <French>Liste des sets de base importée depuis le presse-papier</French>
+            <French>Liste des équipements prédéfinis importée depuis le presse-papier</French>
             <German>Standard-Ausrüstungen-Liste aus der Zwischenablage importiert</German>
             <Polish>Lista domyślnych zestawów została importowana ze schowka</Polish>
             <Japanese>標準の装備一欄はクリップボードからインポートされました</Japanese>
@@ -584,7 +584,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_allowDefaultLoadoutsSetting">
             <English>Allow default loadouts</English>
-            <French>Activer l'onglet 'Sets de base'</French>
+            <French>Autoriser les équipements prédéfinis</French>
             <German>Erlaubt die Benutzung der Standardausrüstungen</German>
             <Polish>Zezwól na użycie domyślnych zestawów</Polish>
             <Japanese>標準の装備を許可</Japanese>
@@ -662,7 +662,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultLoadoutsTooltip">
             <English>Allow the use of the default loadouts tab</English>
-            <French>Autorise l'usage de l'onglet 'Sets de base'</French>
+            <French>Active l'onglet `Équipements prédéfinis`</French>
             <Polish>Zezwól na użycie zakładki domyślnych zestawów</Polish>
             <Japanese>標準の装備タブの使用を許可します</Japanese>
             <Italian>Consenti l'uso della sezione per gli equipaggiamenti standard</Italian>
@@ -675,7 +675,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_modIconsTooltip">
             <English>Show / hide mod icons for the left panel</English>
-            <French>Montrer / cacher les icones de mod du panneau gauche</French>
+            <French>Affiche / masque les icônes de mod du panneau gauche</French>
             <Polish>Pokaż / ukryj ikony modów w lewym panelu</Polish>
             <Japanese>左パネルにある MOD アイコンの表示 / 非表示をします</Japanese>
             <Italian>Mostra / nascondi le icone delle mod dal pannello sinistro</Italian>
@@ -753,7 +753,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_portLoadoutsLoadoutError">
             <English>No loadouts to import.</English>
-            <French>Aucun set à importer.</French>
+            <French>Aucun équipement à importer.</French>
             <German>Keine Ausrüstungen zum Importieren</German>
             <Japanese>インポートする装備がありません。</Japanese>
             <Korean>가져올 로드 아웃이 없습니다.</Korean>
@@ -819,7 +819,7 @@
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsTooltip">
             <English>Open the loadouts screen</English>
             <German>Öffnet das Ausrüstungsmenü</German>
-            <French>Afficher les sets d'équipement</French>
+            <French>Affiche les sets d'équipement</French>
             <Chinese>開啟裝備選單</Chinese>
             <Chinesesimp>开启装备选单</Chinesesimp>
             <Japanese>装備画面を開く</Japanese>
@@ -831,7 +831,7 @@
         <Key ID="STR_ACE_Arsenal_buttonExportTooltip">
             <English>Export current / default loadouts</English>
             <German>Exportiert aktuelles / standard Loadout</German>
-            <French>Exporte le set d'équipement actuel / par défaut</French>
+            <French>Exporte le set d'équipement actuel / les sets prédéfinis</French>
             <Chinese>匯出當前/預設的裝備</Chinese>
             <Chinesesimp>汇出当前/预设的装备</Chinesesimp>
             <Japanese>現在/標準装備をエクスポートします</Japanese>
@@ -843,7 +843,7 @@
         <Key ID="STR_ACE_Arsenal_buttonImportTooltip">
             <English>Import current / default loadouts</English>
             <German>Importiert aktuelles / standard Loadout</German>
-            <French>Importe le set d'équipement actuel / par défaut</French>
+            <French>Importe le set d'équipement actuel / les sets prédéfinis</French>
             <Chinese>匯入當前/預設的裝備</Chinese>
             <Chinesesimp>汇入当前/预设的装备</Chinesesimp>
             <Japanese>現在/標準装備をインポートします</Japanese>
@@ -931,7 +931,7 @@
             <Italian>Non supportato</Italian>
             <Russian>Не поддерживается</Russian>
             <Portuguese>Não suportado</Portuguese>
-            <French>Non supportée</French>
+            <French>Non supporté</French>
             <Chinese>不支援</Chinese>
         </Key>
         <Key ID="STR_ACE_Arsenal_page">
