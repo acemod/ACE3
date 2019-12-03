@@ -1116,7 +1116,7 @@
             <English>Plasma IV (1000ml)</English>
             <Russian>Плазма для в/в вливания (1000 мл)</Russian>
             <Spanish>Plasma IV (1000ml)</Spanish>
-            <French>Plasma IV (1000ml)</French>
+            <French>Plasma IV (1000 ml)</French>
             <Polish>Osocze IV (1000ml)</Polish>
             <German>Plasma IV (1000ml)</German>
             <Hungarian>Vérplazma-infúzió (1000ml)</Hungarian>
@@ -3570,7 +3570,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Activity_appliedSplint">
             <English>%1 applied a splint</English>
             <Russian>%1 наложил Шина</Russian>
-            <French>%1 a posé un attelle</French>
+            <French>%1 a posé une attelle</French>
             <Portuguese>%1 aplicou uma Tala</Portuguese>
             <Chinese>%1 已套用固定板</Chinese>
         </Key>
