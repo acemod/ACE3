@@ -36,7 +36,7 @@
             <Polish>Szybkie tagowanie</Polish>
             <German>Schnelle Markierung (Spraydose)</German>
             <Korean>빠른 뿌리기</Korean>
-            <French>Marquage rapide</French>
+            <French>Peinture en spray - Marquage rapide</French>
             <Italian>Marcamento Rapido</Italian>
             <Chinesesimp>快速喷漆</Chinesesimp>
             <Chinese>快速噴漆</Chinese>
@@ -50,7 +50,7 @@
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
-            <French>Action réalisé au point de marquage principal.</French>
+            <French>Type de marquage à appliquer au point d'interaction visé</French>
             <Italian>Azione eseguita sul punto di interazione dei tag principali.</Italian>
             <Chinesesimp>直接喷漆在互动选单瞄准的点上。</Chinesesimp>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
@@ -78,7 +78,7 @@
             <Polish>Losowy X</Polish>
             <German>Zufällig X</German>
             <Korean>무작위 X</Korean>
-            <French>Aléatoire X</French>
+            <French>X aléatoire</French>
             <Italian>Random X</Italian>
             <Chinesesimp>随机X标记</Chinesesimp>
             <Chinese>隨機X標記</Chinese>
@@ -179,7 +179,7 @@
             <German>Sprühfarbe (Schwarz)</German>
             <Spanish>Pintura negra</Spanish>
             <Polish>Farba w Sprayu (Czarna)</Polish>
-            <French>Peinture pulvérisée noire</French>
+            <French>Peinture en spray (Noire)</French>
             <Italian>Bomboletta spray nera</Italian>
             <Czech>Černý sprej</Czech>
             <Portuguese>Spray de tinta preta</Portuguese>
@@ -194,7 +194,7 @@
             <German>Sprühfarbe (Rot)</German>
             <Spanish>Pintura roja</Spanish>
             <Polish>Farba w Sprayu (Czerwona)</Polish>
-            <French>Peinture pulvérisée rouge</French>
+            <French>Peinture en spray (Rouge)</French>
             <Italian>Bomboletta spray rossa</Italian>
             <Czech>Červený sprej</Czech>
             <Portuguese>Spray de tinta vermelha</Portuguese>
@@ -209,7 +209,7 @@
             <German>Sprühfarbe (Grün)</German>
             <Spanish>Pintura verde</Spanish>
             <Polish>Farba w Sprayu (Zielona)</Polish>
-            <French>Peinture pulvérisée verte</French>
+            <French>Peinture en spray (Verte)</French>
             <Italian>Bomboletta spray verde</Italian>
             <Czech>Zelený sprej</Czech>
             <Portuguese>Spray de tinta verde</Portuguese>
@@ -224,7 +224,7 @@
             <German>Sprühfarbe (Blau)</German>
             <Spanish>Pintura azul</Spanish>
             <Polish>Farba w Sprayu (Niebieska)</Polish>
-            <French>Peinture pulvérisée bleue</French>
+            <French>Peinture en spray (Bleue)</French>
             <Italian>Bomboletta spray blu</Italian>
             <Czech>Modrý sprej</Czech>
             <Portuguese>Spray de tinta azul</Portuguese>
@@ -239,7 +239,7 @@
             <German>Eine Farbsprühdose um Wände zu markieren.</German>
             <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
-            <French>Un spray de peinture pour marquer les murs.</French>
+            <French>Une bombe de peinture en spray pour tagger les murs.</French>
             <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
