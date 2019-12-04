@@ -52,7 +52,7 @@
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
             <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt wird. Werden ggf. durch Kommata getrennt.</German>
-            <French>Noms des objets (pouvant aussi être des objets synchronisés) sur lesquels le diaporama sera affiché ; séparés par des virgules s'ils sont plusieurs.</French>
+            <French>Noms des objets (pouvant aussi être des objets synchronisés) sur lesquels le diaporama sera affiché, séparés par des virgules s'ils sont plusieurs.</French>
             <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1.</Polish>
             <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva.</Hungarian>
             <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um.</Portuguese>
