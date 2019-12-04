@@ -22,7 +22,7 @@
             <German>Spielernamen anzeigen</German>
             <Spanish>Mostrar nombres de jugadores</Spanish>
             <Polish>Pokaż imiona graczy</Polish>
-            <French>Afficher les noms des joueurs</French>
+            <French>Afficher le nom des joueurs</French>
             <Hungarian>Játékosnevek mutatása</Hungarian>
             <Czech>Zobrazit jména hráčů</Czech>
             <Portuguese>Mostrar nomes de jogadores</Portuguese>
@@ -70,7 +70,7 @@
             <German>Spielerränge anzeigen (benötigt Spielernamen)</German>
             <Polish>Pokaż rangi graczy (wymagana opcja Pokaż imiona graczy)</Polish>
             <Spanish>Mostrar rango de los jugadores (requiere Mostrar nombres de jugadores)</Spanish>
-            <French>Grade des joueurs  (si noms affichés)</French>
+            <French>Grade des joueurs (si noms affichés)</French>
             <Czech>Zobrazit hodnosti hráčů (vyžaduje jména hráčů)</Czech>
             <Italian>Mostra i gradi (insieme ai nomi)</Italian>
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
@@ -104,7 +104,7 @@
             <Russian>Показывать имена ботов</Russian>
             <Czech>Zobrazit jména AI</Czech>
             <Polish>Wyświetl imiona jednostek AI</Polish>
-            <French>Afficher les noms des unités IA</French>
+            <French>Afficher le nom des unités IA</French>
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
             <Italian>Mostra i nomi delle le unità AI</Italian>
             <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
@@ -168,7 +168,7 @@
             <German>Sichtweite der Spielernamen</German>
             <Czech>Vzdálenost zobrazení jména hráčů</Czech>
             <Portuguese>Distância de visão dos nomes dos jogadores</Portuguese>
-            <French>Distance de vue des noms de joueurs</French>
+            <French>Distance visible des noms de joueurs</French>
             <Hungarian>Játékosok nevének látótávja</Hungarian>
             <Russian>Дистанция отображения имен</Russian>
             <Italian>Distanza Visiva Etichette Nomi</Italian>
@@ -487,7 +487,7 @@
             <Czech>Efekt zvukových vln nad hlavami hráčů když mluví skrz PTT klávesu. Tato volba funguje s TFAR a ACRE2.</Czech>
             <German>Es wird ein Schallwellensymbol über den Köpfen von sprechenden Spielern angezeigt, die ihre Push-to-Talk-Taste drücken. Diese Option funktioniert mit "TFAR" und "ACRE2".</German>
             <Portuguese>Efeito de ondas sonoras acima das cabeças dos jogadores que falam depois mantendo pressionada a tecla PTT. Esta opção funciona com TFAR e ACRE2.</Portuguese>
-            <French>Effet d'onde sonore, qui s'anime au-dessus de la tête des joueurs ; lorsqu'ils parlent en maintenant la touche de PTT enfoncée. Cette option fonctionne avec TFAR et ACRE2.</French>
+            <French>Effet d'onde sonore, qui s'anime au-dessus de la tête des joueurs lorsqu'ils parlent en maintenant la touche PTT enfoncée. Cette option fonctionne avec TFAR et ACRE2.</French>
             <Hungarian>Hanghullám-effekt a beszélő játékosok feje felett a PTT-gomb lenyomásakor. Ez a beállítás TFAR és ACRE2 alatt működik.</Hungarian>
             <Russian>Эффект звуковой волны над головами говорящих игроков при удерживании кнопки push-to-talk. Эта опация работает также с рациями TFAR и ACRE2.</Russian>
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
