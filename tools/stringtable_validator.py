@@ -112,13 +112,8 @@ def check_stringtable(filepath):
             count = key_ids.count(id)
 
             if count > 1:
-                print("  ERROR: Key '{}' is duplicated {} time(s).".format(id, count))
+                print("  ERROR: Key '{}' is defined {} times.".format(id, count))
                 errors += 1
-
-    if errors == 0:
-        print("No errors found.")
-    else:
-        print("Found {} error(s).".format(errors))
 
     return errors
 
@@ -133,15 +128,26 @@ def main():
         root_dir = "."
 
     # Check all stringtable.xml files in the project directory
-    bad_count = 0
+    stringtable_files = []
 
     for root, _, files in os.walk(root_dir):
         for file in fnmatch.filter(files, "stringtable.xml"):
-            filepath = os.path.join(root, file)
+            stringtable_files.append(os.path.join(root, file))
 
-            print("\nChecking {}:".format(os.path.relpath(filepath, root_dir)))
+    stringtable_files.sort()
 
-            bad_count += check_stringtable(filepath)
+    bad_count = 0
+
+    for filepath in stringtable_files:
+        print("\nChecking {}:".format(os.path.relpath(filepath, root_dir)))
+
+        errors = check_stringtable(filepath)
+
+        if errors == 0:
+            print("No errors found.")
+        else:
+            print("Found {} error(s).".format(errors))
+            bad_count += 1
 
     print()
 
@@ -153,5 +159,5 @@ def main():
     return bad_count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.exit(main())
