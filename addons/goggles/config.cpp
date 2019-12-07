@@ -34,6 +34,13 @@ class CfgGlasses {
         ACE_DustPath = QPATHTOF(textures\fx\dust\%1.paa);
     };
 
+    class G_Blindfold_01_base_F: None {
+        ACE_Overlay = QPATHTOF(textures\HUD\blindfold_ca.paa);
+        ACE_OverlayCracked = "";
+        ACE_Resistance = 2;
+        ACE_Protection = 1;
+    };
+
     class G_Combat:None {
         COMBAT_GOGGLES
     };
