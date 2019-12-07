@@ -106,6 +106,6 @@ GVAR(inheritedClassesMan) = [];
         [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
     } forEach GVAR(inheritedActionsMan);
     END_COUNTER(InitPost);
-}] call CBA_fnc_addClassEventHandler;
+}, true, ["VirtualMan_F"]] call CBA_fnc_addClassEventHandler;
 
 ADDON = true;
