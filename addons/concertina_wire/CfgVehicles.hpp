@@ -74,7 +74,7 @@ class CfgVehicles {
     };
     class ACE_ConcertinaWire: ACE_ConcertinaWireNoGeo {
         scope = 2;
-        displayName = CSTRING(concertinaWire);
+        displayName = CSTRING(DisplayName);
         model = QPATHTOF(data\ACE_ConcertinaWire.p3d);
         EGVAR(logistics_wirecutter,isFence) = 1;
         class ACE_Actions {
@@ -84,7 +84,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Dismount {
                     selection = "";
-                    displayName = CSTRING(unrollWire);
+                    displayName = CSTRING(UnrollWire);
                     distance = 5;
                     condition = "alive _target";
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(dismount));
@@ -103,7 +103,7 @@ class CfgVehicles {
         };
 
         scope = 2;
-        displayName = CSTRING(concertinaWireCoil);
+        displayName = CSTRING(Coil_DisplayName);
         model = QPATHTOF(data\ACE_ConcertinaWireCoil.p3d);
         mapsize = 0.5;
         animated = 0;
@@ -129,7 +129,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Deploy {
                     selection = "";
-                    displayName = CSTRING(rollWire);
+                    displayName = CSTRING(RollWire);
                     distance = 4;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
