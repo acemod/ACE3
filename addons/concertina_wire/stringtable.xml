@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="concertina_wire">
-        <Key ID="STR_ACE_Concertina_Wire_concertinaWire">
+    <Package name="Concertina_Wire">
+        <Key ID="STR_ACE_Concertina_Wire_DisplayName">
             <English>Concertina Wire</English>
             <German>NATO-Draht</German>
             <Russian>Колючая проволока</Russian>
@@ -17,7 +17,7 @@
             <Chinese>鐵絲網</Chinese>
             <Chinesesimp>铁丝网</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Concertina_Wire_concertinaWireCoil">
+        <Key ID="STR_ACE_Concertina_Wire_Coil_DisplayName">
             <English>Concertina Wire Coil</English>
             <German>NATO-Draht Rolle</German>
             <Russian>Колючая проволока (моток)</Russian>
@@ -33,7 +33,7 @@
             <Chinese>鐵絲網捲</Chinese>
             <Chinesesimp>铁丝网卷</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Concertina_Wire_unrollWire">
+        <Key ID="STR_ACE_Concertina_Wire_UnrollWire">
             <English>Dismount Concertina Wire</English>
             <German>NATO-Draht abbauen</German>
             <Russian>Демонтировать колючую проволоку</Russian>
@@ -49,7 +49,7 @@
             <Chinese>卸下鐵絲網</Chinese>
             <Chinesesimp>卸下铁丝网</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Concertina_Wire_rollWire">
+        <Key ID="STR_ACE_Concertina_Wire_RollWire">
             <English>Deploy Concertina Wire</English>
             <German>NATO-Draht verlegen</German>
             <Russian>Монтировать колючую проволоку</Russian>
