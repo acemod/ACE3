@@ -36,7 +36,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
-            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 20</French>
+            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: QBU-88</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: QBU-88</Spanish>
             <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 20</Polish>
             <Russian>Калибр: 6,5x47 мм (экспансивные Scenar)&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: QBU-88</Russian>
@@ -459,7 +459,7 @@
             <Hungarian>7,62mm Nyomjelző</Hungarian>
             <German>7,62mm Leuchtspur</German>
             <Spanish>7,62mm Trazadora</Spanish>
-            <French>7,62mm Traçantes</French>
+            <French>7,62mm Traçante</French>
             <Polish>7,62mm Smugacz</Polish>
             <Czech>7.62mm Svítící</Czech>
             <Portuguese>7,62mm Traçante</Portuguese>
@@ -475,7 +475,7 @@
             <Hungarian>Kaliber: 7,62x51mm Nyomjelző&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm Leuchtspur&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51mm Trazadora&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51mm Traçantes&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: EBR</French>
+            <French>Calibre: 7,62x51mm Traçante&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
             <Polish>Kaliber: 7,62x51mm Smugacz&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51mm Svítící&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51mm Traçante&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
@@ -523,7 +523,7 @@
             <Hungarian>Kaliber: 7,62x51mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51mm Trazadoras IR-DIM&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: EBR</French>
+            <French>Calibre: 7,62x51mm Traçante IR-DIM&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
             <Polish>Kaliber: 7,62x51mm Smugacz IR-DIM&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51mm Svítící IR-DIM&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51mm Traçante IR-DIM&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
@@ -571,7 +571,7 @@
             <Hungarian>Kaliber: 7,62x51mm Halk&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm SD&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51mm SD&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51mm SD&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: EBR</French>
+            <French>Calibre: 7,62x51mm SD&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
             <Polish>Kaliber: 7,62x51mm SD&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51mm SD&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51mm SD&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
@@ -587,7 +587,7 @@
             <English>.338 NM 130Rnd Tracer Belt</English>
             <German>.338 NM 130-Patronen-Gurt Leuchtspur</German>
             <Polish>Taśma .338 NM 130rd Smugacz</Polish>
-            <French>Bande .338 NM 130Cps Traçante</French>
+            <French>Bande .338 NM 130Cps Traçantes</French>
             <Spanish>Cinta de 130 balas trazadoras de .338 NM</Spanish>
             <Russian>Лента из 130-ти .338 NM трассирующих</Russian>
             <Italian>.338 NM 130Rnd Tracciante Belt</Italian>
@@ -732,7 +732,7 @@
             <English>9.3mm 10Rnd Tracer Mag</English>
             <German>9,3mm 10-Patronen-Magazin Leuchtspur</German>
             <Polish>Magazynek 9.3mm 10rd Smugacz</Polish>
-            <French>Ch. 9,3mm 10Cps Traçante</French>
+            <French>Ch. 9,3mm 10Cps Traçantes</French>
             <Spanish>Cargador de 10 balas trazadoras de 9.3mm</Spanish>
             <Russian>Магазин из 10-ти 9,3 мм трассирующих</Russian>
             <Italian>9.3mm 10Rnd Tracer Mag</Italian>
@@ -780,7 +780,7 @@
             <English>9.3mm 10Rnd Tracer IR-DIM Mag</English>
             <German>9,3mm 10-Patronen-Magazin Leuchtspur IR-DIM</German>
             <Polish>Magazynek 9,3mm 10rd Smugacz IR-DIM</Polish>
-            <French>Ch. 9,3mm 10Cps Traçante IR-DIM</French>
+            <French>Ch. 9,3mm 10Cps Traçantes IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 9.3mm</Spanish>
             <Russian>Магазин из 10-ти 9,3 мм ИК-трассирующих</Russian>
             <Italian>9.3mm 10Rnd Tracciante IR-DIM Mag</Italian>
@@ -829,7 +829,7 @@
             <English>9.3mm 150Rnd Tracer Belt</English>
             <German>9,3mm 150-Patronen-Gurt Leuchtspur</German>
             <Polish>Taśma 9,3mm 150rd Smugacz</Polish>
-            <French>Bande 9,3mm 150Cps Traçante</French>
+            <French>Bande 9,3mm 150Cps Traçantes</French>
             <Spanish>Cinta de 150 balas trazadoras de 9.3mm</Spanish>
             <Russian>Лента из 150-ти 9,3 мм трассирующих</Russian>
             <Italian>9.3mm 150Rnd Tracer Belt</Italian>
@@ -861,7 +861,7 @@
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
             <German>Kaliber: 9,3x64mm Leuchtspur&lt;br /&gt;Patronen: 150&lt;br /&gt;Eingesetzt von: Navid</German>
             <Polish>Kaliber: 9,3x64mm Smugacz&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
-            <French>Calibre: 9,3x64mm Traçante&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé avec: Navid</French>
+            <French>Calibre: 9,3x64mm Traçantes&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé avec: Navid</French>
             <Spanish>Calibre: 9.3x64mm trazadora&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
             <Russian>Калибр: 9,3x64 мм трассирующие&lt;br /&gt;Патронов: 150&lt;br /&gt;Используются с: Навид</Russian>
             <Italian>Calibro: 9.3x64mm Tracciante&lt;br /&gt;Munizioni: 150&lt;br /&gt;In uso su: Navid</Italian>
@@ -877,7 +877,7 @@
             <English>9.3mm 150Rnd Tracer IR-DIM Belt</English>
             <German>9,3mm 150-Patronen-Gurt Leuchtspur IR-DIM</German>
             <Polish>Taśma 9,3mm 150rd Smugacz IR-DIM</Polish>
-            <French>Bande 9,3mm 150Cps Traçante IR-DIM</French>
+            <French>Bande 9,3mm 150Cps Traçantes IR-DIM</French>
             <Spanish>Cinta de 150 balas trazadoras IR-DIM de 9.3mm</Spanish>
             <Russian>Лента из 150-ти 9,3 мм ИК-трассирующих</Russian>
             <Italian>9.3mm 150Rnd Tracciante IR-DIM Belt</Italian>
@@ -1068,7 +1068,7 @@
         <Key ID="STR_ACE_Ballistics_10Rnd_762x54_Tracer_mag_Name">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
             <Polish>Magazynek 7,62x54mm 10rd Smugacz</Polish>
-            <French>Ch. 7,62x54mm 10Cps Traçante</French>
+            <French>Ch. 7,62x54mm 10Cps Traçantes</French>
             <Spanish>Cargador de 10 balas trazadoras de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
             <German>7,62x54mm 10-Patronen-Magazin Leuchtspur</German>
@@ -1100,7 +1100,7 @@
         <Key ID="STR_ACE_Ballistics_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
             <Polish>Magazynek 7,62x54mm 10rd Smugacz</Polish>
-            <French>Ch. 7,62x54mm 10Cps Traçante</French>
+            <French>Ch. 7,62x54mm 10Cps Traçantes</French>
             <Spanish>Cargador de 10 balas trazadoras de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
             <German>7,62x54mm 10-Patronen-Magazin Leuchtspur</German>
@@ -1116,7 +1116,7 @@
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
-            <French>Ch. 6,5mm 100Cps Traçante IR-DIM</French>
+            <French>Ch. 6,5mm 100Cps Traçantes IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 100-Patronen-Magazin IR-DIM Leuchtspur</German>
@@ -1148,7 +1148,7 @@
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX LSW</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
-            <French>Ch. 6,5mm 100Cps Traçante IR-DIM&lt;br /&gt;Cartouches: 100&lt;br /&gt;Utilisé avec: MX LSW</French>
+            <French>Ch. 6,5mm 100Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 100&lt;br /&gt;Utilisé avec: MX LSW</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 100-Patronen-Magazin IR-DIM Leuchtspur&lt;br /&gt;Patronen: 100&lt;br /&gt;Eingesetzt von: MXLSW</German>
@@ -1164,7 +1164,7 @@
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimName">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
-            <French>Bande 6,5mm 200Cps Traçante IR-DIM</French>
+            <French>Bande 6,5mm 200Cps Traçantes IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 200-Patronen-Gurt IR-DIM Leuchtspur</German>
@@ -1196,7 +1196,7 @@
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimDescription">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
-            <French>Bande 6.5mm 200Cps Traçante IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
+            <French>Bande 6.5mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 200-Patronen-Gurt IR-DIM Leuchtspur&lt;br /&gt;Patronen: 200&lt;br /&gt;Eingesetzt von: Stoner 99 LMG</German>
@@ -1915,7 +1915,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
-            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
+            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: MXM</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
             <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
             <Russian>Калибр: 6,5x47 мм (экспансивные Scenar)&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MXM</Russian>
@@ -2291,6 +2291,7 @@
             <Polish>Gwintowanie lufy</Polish>
             <Russian>Нарезы ствола</Russian>
             <Portuguese>Barrel Twist</Portuguese>
+            <French>Pas du canon</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
@@ -2307,7 +2308,7 @@
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
             <German>Ballistischer Koeffizient</German>
-            <French>Coefficient ballistique</French>
+            <French>Coefficient balistique</French>
             <Japanese>弾道係数</Japanese>
             <Chinesesimp>弹道系数</Chinesesimp>
             <Chinese>彈道係數</Chinese>
@@ -2331,7 +2332,7 @@
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
             <German>Mündungsgeschwindigkeit</German>
-            <French>Vitesse à la bouche</French>
+            <French>Vitesse initiale</French>
             <Japanese>銃口初速</Japanese>
             <Chinesesimp>枪口初速</Chinesesimp>
             <Chinese>槍口初速</Chinese>

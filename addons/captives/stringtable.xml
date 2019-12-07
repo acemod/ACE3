@@ -12,12 +12,13 @@
             <Polish>Jeńcy</Polish>
             <Russian>Пленные</Russian>
             <Portuguese>Prisioneiros</Portuguese>
+            <French>Prisonniers</French>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
             <German>Gefangen nehmen</German>
             <Spanish>Tomar prisionero</Spanish>
-            <French>Prendre le prisonnier</French>
+            <French>Capturer le prisonnier</French>
             <Polish>Aresztuj</Polish>
             <Czech>Zajmout osobu</Czech>
             <Italian>Arresta il prigioniero</Italian>
@@ -274,7 +275,7 @@
             <Czech>Toto kontroluje nastavení kapitulace a pout</Czech>
             <German>Einstellungen zur Kapitulation und Kabelbindern</German>
             <Portuguese>Controla as configurações de rendição e abraçadeiras</Portuguese>
-            <French>Contrôle les paramètres de la reddition et des Serflex</French>
+            <French>Contrôle les paramètres de la reddition et des Serflex.</French>
             <Hungarian>Szabályozza a kapituláció és bilincselés beállításait</Hungarian>
             <Russian>Управляет настройками ареста и сдачи в плен</Russian>
             <Italian>Controlla le impostazioni per la resa e le manette</Italian>
@@ -306,7 +307,7 @@
             <Czech>Mohou hráči spoutat jednotky na své straně</Czech>
             <German>Spieler können eigene Einheiten fesseln</German>
             <Portuguese>Os jogadores podem algemar unidades do seu lado</Portuguese>
-            <French>Les joueurs peuvent utiliser les Serflex sur leur propre camp</French>
+            <French>Les joueurs peuvent utiliser les Serflex sur leur propre camp.</French>
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
             <Russian>Разрешить игрокам арестовывать юнитов своей стороны</Russian>
             <Italian>I giocatori possono ammanettare unità alleate</Italian>
@@ -338,7 +339,7 @@
             <Czech>Hráč se může vzdát poté, co si skryje zbraň</Czech>
             <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben.</German>
             <Portuguese>Jogadores podem se render depois de guardar sua arma</Portuguese>
-            <French>Les joueurs peuvent se rendre après avoir rangé leur arme</French>
+            <French>Les joueurs peuvent se rendre après avoir rangé leur arme.</French>
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
             <Russian>Игроки могут сдаваться после того, как уберут оружие</Russian>
             <Italian>I giocatori possono arrendersi dopo aver messo via le proprie armi</Italian>
@@ -371,7 +372,7 @@
             <Spanish>Requiere que los Jugadores se rindan antes de arrestarlos</Spanish>
             <Czech>Vyžaduje, aby se hráč nejdříve vzdal, poté může být spoután</Czech>
             <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
-            <French>Requiert la capitulation des joueurs avant qu'ils ne puissent être arrêtés</French>
+            <French>Requiert la capitulation des joueurs avant qu'ils ne puissent être arrêtés.</French>
             <Japanese>プレイヤーは拘束される前に、投降する必要があります。</Japanese>
             <Korean>체포하기 전에 먼저 플레이어가 투항을 해야만 합니다</Korean>
             <Chinese>玩家須先要求目標投降，才可以進行逮捕</Chinese>
@@ -418,6 +419,7 @@
             <Polish>Ustawia jednostkę pod kursorem jako jeniec.</Polish>
             <Russian>Арестовывает указанный курсором юнит</Russian>
             <Portuguese>Torna a unidade sob o cursor um prisioneiro</Portuguese>
+            <French>Capture l'unité sous le curseur.</French>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
@@ -430,6 +432,7 @@
             <Polish>Wymaga poddania się przez SI</Polish>
             <Russian>Требовать ИИ сдаться для ареста</Russian>
             <Portuguese>Requer rendição da IA</Portuguese>
+            <French>Requiert la reddition de l'IA</French>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
@@ -442,6 +445,7 @@
             <Polish>Wymaga poddania się przez SI zanim aresztowanie będzie możliwe</Polish>
             <Russian>Требовать для ареста, чтобы ИИ вначале сдавались</Russian>
             <Portuguese>Requer que a IA se renda antes que seja presa</Portuguese>
+            <French>Requiert la capitulation des unités IA avant qu'elles ne puissent être arrêtées.</French>
         </Key>
     </Package>
 </Project>

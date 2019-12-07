@@ -35,7 +35,7 @@
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDescription">
             <English>Used to show height, descent rate and the time.</English>
-            <French>Affiche la hauteur, le taux de descente et l'heure.</French>
+            <French>Permet d'afficher la hauteur, la vitesse de chute et l'heure.</French>
             <German>Zeigt Höhe, Fallgeschwindigkeit und Uhrzeit.</German>
             <Czech>Používané k zjištění výšky, rychlosti sestupu a času.</Czech>
             <Polish>Używany przez spadochroniarzy, pokazuje wysokość, prędkość opadania oraz czas.</Polish>
@@ -107,6 +107,7 @@
             <Polish>Schowaj wysokościomierz podczas swobodnego opadania</Polish>
             <Russian>Убрать высотомер при падении</Russian>
             <Portuguese>Esconder Altímetro de queda livre</Portuguese>
+            <French>Masquer l'altimètre en chute libre</French>
         </Key>
         <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
             <English>Hides the altitude and speed shown while free falling or parachuting.</English>
@@ -118,6 +119,7 @@
             <Polish>Chowa wysokość i prędkość pokazywaną podczas swobodnego opadania lub spadania ze spadochronem.</Polish>
             <Russian>Скрывает показания высоты и скорости при свободном падении или прыжках с парашютом.</Russian>
             <Portuguese>Esconde a altitude e velocidade enquanto estiver em queda livre ou saltando de paraquedas.</Portuguese>
+            <French>Cache l'altitude et la vitesse affichées, lors d'une chute libre ou d'un parachutage.</French>
         </Key>
     </Package>
 </Project>

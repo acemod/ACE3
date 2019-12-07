@@ -203,7 +203,7 @@
             <German>Große Prellung</German>
             <Italian>Alta Contusione</Italian>
             <Russian>Большой ушиб</Russian>
-            <French>Grand Hématome</French>
+            <French>Grand hématome</French>
             <Polish>Duże stłuczenie</Polish>
             <Spanish>Contusión severa</Spanish>
             <Hungarian>Nagy zúzódás</Hungarian>
@@ -517,26 +517,31 @@
             <English>Fatal Damage Source</English>
             <Japanese>致命傷の原因</Japanese>
             <Chinese>致命傷來源</Chinese>
+            <French>Cause de blessure mortelle</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
             <English>Determines what damage can be fatal</English>
             <Japanese>致命傷となるダメージの種類を決定します。</Japanese>
             <Chinese>決定何種傷害為致命</Chinese>
+            <French>Détermine le type de blessures pouvant être fatales</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
             <Japanese>重要器官に大きなダメージを受けた時のみ</Japanese>
             <Chinese>只有重要器官之重傷</Chinese>
+            <French>Grosses blessures sur organes vitaux</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
             <English>Sum of trauma</English>
             <Japanese>外傷の数</Japanese>
             <Chinese>外部創傷累計</Chinese>
+            <French>Somme des traumatismes</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
             <English>Either</English>
             <Japanese>両方</Japanese>
             <Chinese>兩者都是</Chinese>
+            <French>Les deux</French>
         </Key>
     </Package>
 </Project>

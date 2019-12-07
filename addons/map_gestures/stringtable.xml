@@ -10,7 +10,7 @@
             <Italian>Gesti Mappa</Italian>
             <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
-            <French>Gestes de carte</French>
+            <French>Pointage sur carte</French>
             <Japanese>マップ ジェスチャ</Japanese>
             <Korean>지도 신호</Korean>
             <Chinesesimp>地图标识器</Chinesesimp>
@@ -25,7 +25,7 @@
             <Italian>Abilita</Italian>
             <German>Aktiviert</German>
             <Spanish>Activado</Spanish>
-            <French>Activer</French>
+            <French>Activé</French>
             <Japanese>有効化</Japanese>
             <Korean>켜기</Korean>
             <Chinesesimp>启用</Chinesesimp>
@@ -40,7 +40,7 @@
             <Italian>Distanza Massima Gesti Mappa</Italian>
             <German>Maximale Reichweite der Kartenzeichen</German>
             <Spanish>Máx. dist. para gestos en mapa</Spanish>
-            <French>Distance max. des gestes de carte</French>
+            <French>Portée du pointage sur carte</French>
             <Japanese>マップ ジェスチャの最大範囲</Japanese>
             <Korean>지도 신호 최대 거리</Korean>
             <Chinesesimp>地图标识器最大范围</Chinesesimp>
@@ -55,7 +55,7 @@
             <Italian>Distanza massima tra giocatori per mostrare i gesti in mappa [default: 7 metri]</Italian>
             <German>Maximale Reichweite zwischen Spielern um Kartenzeichen anzuzeigen (Standard: 7 Meter)</German>
             <Spanish>Máxima distancia a la cual pueden verse el indicador de gestos [defecto: 7 m]</Spanish>
-            <French>Distance max. entre les joueurs pour montrer le pointage sur carte. (Défaut : 7m)</French>
+            <French>Définit le rayon au-delà duquel les joueurs ne verront plus l'indicateur de pointage de leurs alliés [Défaut : 7 mètres]</French>
             <Japanese>プレイヤのマップ ジェスチャによる表示範囲を設定します [標準：7 メートル]</Japanese>
             <Korean>플레이어간에 지도 신호 표시거리를 설정합니다. [기본: 7 미터]</Korean>
             <Chinesesimp>设定地图标识器显示的最大范围距离 [预设: 7公尺]</Chinesesimp>
@@ -70,7 +70,7 @@
             <Italian>Colore Default Caposquadra</Italian>
             <German>Gruppenführer-Standardfarbe</German>
             <Spanish>Color por defecto para el lider</Spanish>
-            <French>Couleur principale de commandement.</French>
+            <French>Couleur de commandement par défaut</French>
             <Japanese>リーダー用標準の色</Japanese>
             <Korean>리더 기본 색상</Korean>
             <Chinesesimp>队长预设颜色</Chinesesimp>
@@ -84,7 +84,7 @@
             <Italian>Colore di riserva dei capisquadra quando non c'è nessuna impostazione gruppo. [Modulo: lascia vuoto per non forzare su clients]</Italian>
             <German>Ersatz-Farbwert für Gruppenführer wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
             <Spanish>Color por defecto para líderes cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
-            <French>Couleur par défaut pour les chefs de groupe quand il n'y a pas de réglage pour le groupe. (Module : laisser vide pour ne pas forcer chez les clients)</French>
+            <French>Couleur par défaut pour les chefs de groupe quand il n'y a pas de réglage de groupe. [Module : laisser vide pour ne pas forcer chez les clients]</French>
             <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
             <Korean>그룹 설정이 없는 경우 리더의 예비 색상 값입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
@@ -142,7 +142,7 @@
             <Italian>Colore dei Caposquadra per gruppi sincronizzati con questo modulo.</Italian>
             <German>Farbwert für Gruppenführer, die mit diesem Modul synchronisiert werden.</German>
             <Spanish>Color para los líderes de los grupos sincronizados al módulo.</Spanish>
-            <French>Couleur pour les chefs de groupe des groupes synchronisés avec le module.</French>
+            <French>Couleur pour les chefs des groupes synchronisés avec ce module.</French>
             <Japanese>モジュールで同期されたグループのリーダー用に色の値を決定します。</Japanese>
             <Korean>그룹이 이 모듈에 동기화 됐을때의 리더 색상입니다.</Korean>
             <Chinesesimp>改变与此同步小队队长的标识器颜色。</Chinesesimp>
@@ -171,7 +171,7 @@
             <Italian>Colore per membri di gruppi sincronizzati con questo modulo.</Italian>
             <German>Farbwert für Gruppenmitglieder, die mit diesem Modul synchronisiert werden.</German>
             <Spanish>Color para los miembros de los grupos sincronizados al módulo.</Spanish>
-            <French>Couleur pour les membres du groupe synchronisé avec ce module.</French>
+            <French>Couleur pour les membres des groupes synchronisés avec ce module.</French>
             <Japanese>モジュールで同期されたグループのメンバ用に色の値を決定します。</Japanese>
             <Korean>그룹이 이 모듈에 동기화 됐을때의 멤버 색상입니다.</Korean>
             <Chinesesimp>改变与此同步小队队员的标识器颜色</Chinesesimp>
@@ -186,7 +186,7 @@
             <Italian>Gesti Mappa - Impostazioni Gruppi</Italian>
             <German>Kartenzeichen - Gruppeneinstellungen</German>
             <Spanish>Gestos en mapas - Configuración de grupos</Spanish>
-            <French>Gestes de carte - réglages de groupe</French>
+            <French>Pointage sur carte - réglages de groupe</French>
             <Japanese>マップ ジェスチャ - グループ設定</Japanese>
             <Korean>지도 신호 - 그룹 설정</Korean>
             <Chinesesimp>地图标识器 - 队伍设定</Chinesesimp>
@@ -216,7 +216,7 @@
             <Italian>Intervallo tra aggiornamenti dati.</Italian>
             <German>Zeit zwischen Datenupdates.</German>
             <Spanish>Tiempo entre actualizaciones sucesivas.</Spanish>
-            <French>Temps entre les actualisations de données</French>
+            <French>Temps entre les actualisations des données</French>
             <Japanese>データの更新間隔</Japanese>
             <Korean>데이터 갱신 간격</Korean>
             <Chinesesimp>定义每次更新数据的时间.</Chinesesimp>
@@ -231,7 +231,7 @@
             <Italian>Abilita i Gesti Mappa</Italian>
             <German>Aktiviert die Kartenzeichen.</German>
             <Spanish>Activar Gestos en Mapa</Spanish>
-            <French>Activer les gestes de carte</French>
+            <French>Active le pointage sur carte</French>
             <Japanese>マップ ジェスチャを有効化</Japanese>
             <Korean>지도 신호 활성화</Korean>
             <Chinesesimp>启用地图标识器</Chinesesimp>
@@ -260,7 +260,7 @@
             <Italian>Colore del testo dei nametag oltre a quello dei Gesti Mappa</Italian>
             <German>Farbe der Namenstexte neben der Kartenzeichen-Markierung.</German>
             <Spanish>Color de los nombres dibujados al lado del marcados de gestos.</Spanish>
-            <French>Couleur des tags de nom à côté de marqueur de pointage sur carte.</French>
+            <French>Couleur du texte pour le nom à côté du marqueur de pointage sur carte.</French>
             <Japanese>マップ ジェスチャに表示される、名前の色を決定します。</Japanese>
             <Korean>지도 색상에 표시되는 이름의 색상을 결정합니다.</Korean>
             <Chinesesimp>定义名称文字颜色。使其与地图标识器颜色有所区别。</Chinesesimp>
@@ -275,7 +275,7 @@
             <Italian>Gesti Mappa</Italian>
             <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
-            <French>Gestes de carte</French>
+            <French>Pointage sur carte</French>
             <Japanese>マップ ジェスチャ</Japanese>
             <Korean>지도 신호</Korean>
             <Chinesesimp>地图标识器</Chinesesimp>
