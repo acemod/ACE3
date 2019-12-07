@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="tripod">
+    <Package name="Tripod">
         <Key ID="STR_ACE_Tripod_DisplayName">
             <English>SSWT Kit</English>
             <German>Scharfschützendreibein</German>
@@ -88,7 +88,7 @@
             <Czech>regulace</Czech>
             <German>anpassen</German>
             <Portuguese>ajuste</Portuguese>
-            <French>régler</French>
+            <French>Régler</French>
             <Hungarian>szabályzás</Hungarian>
             <Russian>подстройка</Russian>
             <Italian>regola</Italian>

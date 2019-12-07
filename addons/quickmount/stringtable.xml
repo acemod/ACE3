@@ -12,6 +12,7 @@
             <Korean>빠른 탑승</Korean>
             <Russian>Быстрая посадка</Russian>
             <Portuguese>Entrada Rápida</Portuguese>
+            <French>Entrée rapide</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindName">
             <English>Vehicle quick mount</English>
@@ -24,6 +25,7 @@
             <Korean>빠른 차량 탑승</Korean>
             <Russian>Быстрая посадка в технику</Russian>
             <Portuguese>Entrada Rápida em Veículo</Portuguese>
+            <French>Entrée rapide véhicules</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindDescription">
             <English>Quickly enter the vehicle you are directly looking at.</English>
@@ -36,6 +38,7 @@
             <Korean>빠르게 당신이 보고 있는 가까운 차량에 탑승합니다. </Korean>
             <Russian>Позволяет быстро сесть в технику, на которую вы смотрите</Russian>
             <Portuguese>Rapidamente entra no veículo que você está olhando diretamente.</Portuguese>
+            <French>Permet d'entrer rapidement dans un véhicule que vous regardez.</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleFull">
             <English>Vehicle Full</English>
@@ -48,6 +51,7 @@
             <Korean>만차</Korean>
             <Russian>Мест нет</Russian>
             <Portuguese>Veículo cheio</Portuguese>
+            <French>Véhicule plein</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
@@ -60,6 +64,7 @@
             <Korean>거리</Korean>
             <Russian>Дистанция</Russian>
             <Portuguese>Distância</Portuguese>
+            <French>Distance</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_DistanceDescription">
             <English>Maximum distance to check for vehicles.</English>
@@ -72,6 +77,7 @@
             <Korean>탑승 가능한 차량과의 거리</Korean>
             <Russian>Максимальная дистанция для техники</Russian>
             <Portuguese>Distância máxima para checar por veículos.</Portuguese>
+            <French>Distance de vérification maximale des véhicules.</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleLocked">
             <English>Vehicle Locked</English>
@@ -84,6 +90,7 @@
             <Korean>차량 잠김</Korean>
             <Russian>Техника закрыта</Russian>
             <Portuguese>Veículo Trancado</Portuguese>
+            <French>Véhicule verrouillé</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_Speed">
             <English>Maximum Speed (km/h)</English>
@@ -96,6 +103,7 @@
             <Korean>최대 속도 (km/h)</Korean>
             <Russian>Макс. скорость (км/ч)</Russian>
             <Portuguese>Velocidade Máxima (km/h)</Portuguese>
+            <French>Vitesse maximale (km/h)</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_SpeedDescription">
             <English>Maximum vehicle speed (km/h) allowed for player entry</English>
@@ -108,6 +116,7 @@
             <Korean>플레이어가 탑승 가능한 목표 차량의 최대 속도</Korean>
             <Russian>Макс. скорость техники для посадки игрока (км/ч)</Russian>
             <Portuguese>Velocidade máxima que o veículo pode estar para permitr entrada rápida.</Portuguese>
+            <French>Vitesse maximale d'un véhicule (km/h) pour qu'un joueur puisse y entrer.</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
             <English>Prioritize Seat</English>
@@ -120,6 +129,7 @@
             <Korean>좌석 우선순위 지정</Korean>
             <Russian>Приоритет мест</Russian>
             <Portuguese>Priorizar Assento</Portuguese>
+            <French>Priorité place assise</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_PriorityDescription">
             <English>Seat priority on entry</English>
@@ -132,6 +142,7 @@
             <Korean>탑승할 좌석의 우선순위를 지정합니다.</Korean>
             <Russian>Приоритет мест при посадке</Russian>
             <Portuguese>Define qual o assento que vai priorizar a Entrada Rápida</Portuguese>
+            <French>S'asseoir en priorité lors de l'embarquement</French>
         </Key>
         <Key ID="STR_ACE_QuickMount_ChangeSeat">
             <English>Change seat</English>
@@ -141,6 +152,8 @@
             <Polish>Zmień zajmowaną pozycję</Polish>
             <Italian>Cambia posto</Italian>
             <Portuguese>Mudar de Assento</Portuguese>
+            <Chinese>換座位</Chinese>
+            <French>Changer de place</French>
         </Key>
     </Package>
 </Project>

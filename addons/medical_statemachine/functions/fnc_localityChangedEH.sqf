@@ -29,14 +29,14 @@ if (_isLocal) then {
     switch (true) do {
         case (IN_CRDC_ARRST(_unit)): {
             if (_currentState == "CardiacArrest") exitWith {};
-            _unit setVariable [VAR_CRDC_ARRST, false]; // force reset vars so setCardiacArrest can run (enteredStateCardiacArrest will also be called)
+            _unit setVariable [VAR_CRDC_ARRST, false]; // force reset vars so setCardiacArrestState can run (enteredStateCardiacArrest will also be called)
             _unit setVariable [VAR_UNCON, false];
             TRACE_1("manually changing state to CardiacArrest",_currentState);
             [_unit, EGVAR(medical,STATE_MACHINE), _currentState, "CardiacArrest", {}, "LocalityChange"] call CBA_statemachine_fnc_manualTransition;
         };
         case (IS_UNCONSCIOUS(_unit)): {
             if (_currentState == "Unconscious") exitWith {};
-            _unit setVariable [VAR_UNCON, false]; // force reset var so ace_medical_status_fnc_setUnconscious can run
+            _unit setVariable [VAR_UNCON, false]; // force reset var so ace_medical_status_fnc_setUnconsciousState can run
             TRACE_1("manually changing state to Unconscious",_currentState);
             [_unit, EGVAR(medical,STATE_MACHINE), _currentState, "Unconscious", {}, "LocalityChange"] call CBA_statemachine_fnc_manualTransition;
         };

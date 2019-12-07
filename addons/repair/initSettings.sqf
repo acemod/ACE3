@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_repair]:
-
 [
     QGVAR(displayTextOnRepair), "CHECKBOX",
     [LSTRING(SettingDisplayTextName), LSTRING(SettingDisplayTextDesc)],
@@ -11,7 +9,7 @@
 
 [
     QGVAR(engineerSetting_repair), "LIST",
-    [LSTRING(engineerSetting_Repair_name), LSTRING(engineerSetting_Repair_description)], 
+    [LSTRING(engineerSetting_Repair_name), LSTRING(engineerSetting_Repair_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
     [[0,1,2],[LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],1], // [values, titles, defaultIndex]
     true, // isGlobal
@@ -83,12 +81,30 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(wheelRepairRequiredItems), "LIST",
-    [LSTRING(wheelRepairRequiredItems_name), LSTRING(wheelRepairRequiredItems_description)],
+    QGVAR(wheelRepairRequiredItems),
+    "LIST",
+    [LSTRING(WheelRepairRequiredItems_DisplayName), LSTRING(WheelRepairRequiredItems_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [[0,1],["None", "ToolKit"],0], // [values, titles, defaultIndex]
-    true, // isGlobal
-    {[QGVAR(wheelRepairRequiredItems), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    [[[], ["ToolKit"]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(miscRepairRequiredItems),
+    "LIST",
+    [LSTRING(MiscRepairRequiredItems_DisplayName), LSTRING(MiscRepairRequiredItems_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [[[], ["ToolKit"]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(fullRepairRequiredItems),
+    "LIST",
+    [LSTRING(FullRepairRequiredItems_DisplayName), LSTRING(FullRepairRequiredItems_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [[[], ["ToolKit"]], ["STR_A3_None", "STR_A3_CfgWeapons_Toolkit0"], 1],
+    true
 ] call CBA_settings_fnc_init;
 
 [

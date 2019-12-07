@@ -12,6 +12,7 @@
             <Russian>Перегрев</Russian>
             <Portuguese>Super Aquecimento</Portuguese>
             <Hungarian>Túlmelegedés</Hungarian>
+            <French>Surchauffe</French>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
@@ -20,7 +21,7 @@
             <Russian>Показывать текст, когда клинит оружие</Russian>
             <Czech>Zobrazit upozornění při zaseknutí</Czech>
             <Polish>Wyświetl tekst przy zacięciu broni</Polish>
-            <French>Affiche texte si enrayé</French>
+            <French>Afficher texte si enrayé</French>
             <Hungarian>Szöveges értesítés kijelzése a fegyver elakadásakor</Hungarian>
             <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
             <Italian>Visualizza testo in caso di inceppamento</Italian>
@@ -36,7 +37,7 @@
             <Russian>Показывать уведомление каждый раз, когда клинит Ваше оружие.</Russian>
             <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
             <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
-            <French>Affiche une notification lors d'un enrayement</French>
+            <French>Affiche une notification lorsque votre arme est enrayée</French>
             <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
             <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
             <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
@@ -51,7 +52,7 @@
             <Polish>Efekty cząsteczkowe przegrzania</Polish>
             <Italian>Effetti Particelle Surriscaldamento</Italian>
             <Spanish>Efectos de partículas</Spanish>
-            <French>Effet de surchauffe</French>
+            <French>Surchauffe - Effets de particules </French>
             <Czech>Částicové efekty přehřívání</Czech>
             <Portuguese>Efeito de parícula de superaquecimento</Portuguese>
             <Russian>Эффект частиц при перегреве</Russian>
@@ -67,7 +68,7 @@
             <Polish>Pokaż efekty cząsteczkowe kiedy broń się przegrzeje</Polish>
             <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
-            <French>Montrer les effets lorsque l'arme surchauffe.</French>
+            <French>Affiche des effets de particules lorsqu'une arme surchauffe.</French>
             <Portuguese>Mostra efeitos de párticula quando a arma superaquece</Portuguese>
             <Russian>Показывать эффект частиц, когда оружие перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
@@ -83,7 +84,7 @@
             <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
             <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
             <Spanish>Efectos de partículas para todos</Spanish>
-            <French>Effets de surchauffe pour tout le monde.</French>
+            <French>Surchauffe - Effets de particules pour tout le monde</French>
             <Czech>Částicové efekty přehřívání pro všechny</Czech>
             <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
             <Russian>Эффект частиц при перегреве для всех</Russian>
@@ -99,7 +100,7 @@
             <Polish>Pokazuje efekty cząsteczkowe kiedy broń innego gracza się przegrzeje</Polish>
             <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
-            <French>Montrer les effets de surchauffe des autres joueurs.</French>
+            <French>Affiche les effets de particules lorsque les armes des autres joueurs surchauffent</French>
             <Portuguese>Mostra efeito de partículas quando a arma de outros jogadores superaquece</Portuguese>
             <Russian>Показывать эффект частиц, когда оружие других игроков перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
@@ -115,7 +116,7 @@
             <Polish>Wpływ na rozrzut</Polish>
             <Italian>Dispersione Surriscaldamento</Italian>
             <Spanish>Dispersión</Spanish>
-            <French>Disperssion dûe à la surchauffe</French>
+            <French>Surchauffe - Dispersion</French>
             <Portuguese>Disperção de superaquecimento</Portuguese>
             <Russian>Разброс при перегреве</Russian>
             <Czech>Důsledky přehřátí zbraně</Czech>
@@ -131,7 +132,7 @@
             <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
             <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applica per tutti i giocatori.</Italian>
             <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
-            <French>Les armes en surchauffe seront moins précises et auront une vitesse en sortie de bouche plus faible. S'applique pour tous les joueurs.</French>
+            <French>Les armes surchauffées seront moins précises et auront une vitesse initiale moins élevée. S'applique à tous les joueurs.</French>
             <Portuguese>Armas superaquecidas irão ser menos precisas e ter velocidade de disparo reduzidas. Aplica a todos os jogadores.</Portuguese>
             <Russian>Перегретое оружие будет менее точным, а дульная скорость будет снижена. Применяется ко всем игрокам.</Russian>
             <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
@@ -146,7 +147,7 @@
             <German>Behebt Ladehemmung beim Nachladen</German>
             <Spanish>Desencasquillar el arma al recargar.</Spanish>
             <Polish>Usuń zacięcie przy przeładowaniu</Polish>
-            <French>Des-enrayer l'arme au rechargement.</French>
+            <French>Désenrayer l'arme au rechargement</French>
             <Italian>Disinceppa l'arma quando si ricarica</Italian>
             <Czech>Uvolnit zbraň při přebití</Czech>
             <Portuguese>Desemperrar arma no recarregamento</Portuguese>
@@ -162,7 +163,7 @@
             <German>Nachladen behebt eine Ladehemmung.</German>
             <Spanish>Recargar el arma la desencasquilla.</Spanish>
             <Polish>Przeładowywanie usuwa zacięcie</Polish>
-            <French>Recharger vide la chambre de l'arme</French>
+            <French>Les armes se désenrayent lors d'un rechargement.</French>
             <Italian>L'arma si disinceppa quando si ricarica</Italian>
             <Czech>Přebití uvolní zaseknutou zbraň.</Czech>
             <Portuguese>Recarregar desemperra arma.</Portuguese>
@@ -178,7 +179,7 @@
             <German>Wahrscheinlichkeit, dass Ladehemmung nicht behoben wird</German>
             <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
             <Polish>Szansa na porażkę usuw. zacięcia</Polish>
-            <French>Chance de rater le des-enrayement</French>
+            <French>Risque d'échec du désenrayement</French>
             <Italian>Probabilità di sbagliare a disinceppare l'arma</Italian>
             <Czech>Šance, že uvolnění zbraně selže</Czech>
             <Portuguese>Chance de falha de desemperramento</Portuguese>
@@ -194,7 +195,7 @@
             <German>Wahrscheinlichkeit, dass der Versuch eine Ladehemmung zu beheben fehl schlägt und erneut durchgeführt werden muss.</German>
             <Spanish>Probabilidad de que el proceso de desencasquille falle, teniendo que repetirlo.</Spanish>
             <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
-            <French>Probabilité qu'une action de des-enrayement échoue, nécessitant de recommencer.</French>
+            <French>Probabilité qu'une action de désenrayement échoue, nécessitant de recommencer.</French>
             <Italian>Probabilità che si possa sbagliare a caso a disinceppare l'arma. Richiede di ripetere.</Italian>
             <Portuguese>Probabilidade que uma ação de desemperramento falhe, tendo que ser repetida</Portuguese>
             <Russian>Вертоятность того, что устранение заклинивания не сработает, и его придется повторить.</Russian>
@@ -243,7 +244,7 @@
             <Spanish>Arma encasquillada!</Spanish>
             <Polish>Zacięcie!</Polish>
             <Czech>Zbraň se zasekla!</Czech>
-            <French>Arme enrayée</French>
+            <French>Arme enrayée !</French>
             <Russian>Оружие заклинило!</Russian>
             <Hungarian>Megakadt a fegyver!</Hungarian>
             <Portuguese>Arma travada!</Portuguese>
@@ -306,7 +307,7 @@
             <Spanish>Cambiar el cañón</Spanish>
             <Polish>Wymień lufę</Polish>
             <Czech>Vyměnit hlaveň</Czech>
-            <French>Changer de canon</French>
+            <French>Remplacer le canon</French>
             <Russian>Сменить ствол</Russian>
             <Hungarian>Cső cserélése</Hungarian>
             <Portuguese>Substituir cano</Portuguese>
@@ -322,7 +323,7 @@
             <Spanish>Cambiando el cañón...</Spanish>
             <Polish>Wymienianie lufy...</Polish>
             <Czech>Měním hlaveň...</Czech>
-            <French>Changement du canon...</French>
+            <French>Remplacement du canon...</French>
             <Russian>Смена ствола...</Russian>
             <Hungarian>Cső kicserélése folyamatban...</Hungarian>
             <Portuguese>Substituindo cano...</Portuguese>
@@ -338,7 +339,7 @@
             <Spanish>Cañón cambiado</Spanish>
             <Polish>Lufa wymieniona</Polish>
             <Czech>Hlaveň vyměněna</Czech>
-            <French>Canon changé</French>
+            <French>Canon remplacé</French>
             <Russian>Ствол заменён</Russian>
             <Hungarian>Cső kicserélve</Hungarian>
             <Portuguese>Cano substituído</Portuguese>
@@ -443,7 +444,7 @@
         <Key ID="STR_ACE_Overheating_BarrelCool">
             <English>Cool Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
-            <French>Canon(s) de rechange froid</French>
+            <French>Canon(s) de rechange froid(s)</French>
             <Russian>Прохладные</Russian>
             <Czech>Studená náhrandí hlaveň</Czech>
             <Japanese>予備銃身は冷たい</Japanese>
@@ -457,7 +458,7 @@
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
-            <French>Canon(s) de rechange tiède</French>
+            <French>Canon(s) de rechange tiède(s)</French>
             <Russian>Теплые</Russian>
             <Czech>Teplá náhrandí hlaveň</Czech>
             <Japanese>予備銃身は温かい</Japanese>
@@ -471,7 +472,7 @@
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
-            <French>Canon(s) de rechange chaud</French>
+            <French>Canon(s) de rechange chaud(s)</French>
             <Russian>Горячие</Russian>
             <Czech>Horká náhrandí hlaveň</Czech>
             <Japanese>予備銃身は熱い</Japanese>
@@ -485,7 +486,7 @@
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
-            <French>Canon(s) de rechange très chaud</French>
+            <French>Canon(s) de rechange très chaud(s)</French>
             <Russian>Очень горячие</Russian>
             <Czech>Velmi horká náhrandí hlaveň</Czech>
             <Japanese>予備銃身はとても熱い</Japanese>
@@ -499,7 +500,7 @@
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
-            <French>Canon(s) de rechange extrêmement chaud</French>
+            <French>Canon(s) de rechange extrêmement chaud(s)</French>
             <Russian>Запредельно горячие</Russian>
             <Czech>Extrémně horká náhrandí hlaveň</Czech>
             <Japanese>予備銃身は極めて熱い</Japanese>
