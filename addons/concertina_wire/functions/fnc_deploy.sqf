@@ -77,7 +77,7 @@ GVAR(deployPFH) = [{
     } count WIRE_FAST;
 }, 0, [_wireNoGeo, _wireNoGeoPos, _unit]] call CBA_fnc_addPerFrameHandler;
 
-[LLSTRING(rollWire), "", ""] call EFUNC(interaction,showMouseHint);
+[LLSTRING(RollWire), "", ""] call EFUNC(interaction,showMouseHint);
 
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
