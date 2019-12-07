@@ -223,5 +223,13 @@
             <Portuguese>Exibe a barra de estamina.</Portuguese>
             <Czech>Zobrazuje lištu výdrže</Czech>
         </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar">
+            <English>Fade Stamina bar automatically</English>
+            <German>Blende Ausdauerleiste automatisch aus</German>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
+            <English>Adjusts transparency of the bar based on stamina status.</English>
+            <German>Passt die Transparenz der Ausdauerleiste abhängig vom Ausdauerstatus an.</German>
+        </Key>
     </Package>
 </Project>
