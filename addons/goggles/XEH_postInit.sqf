@@ -80,7 +80,7 @@ if (!hasInterface) exitWith {};
     };
 
     ["cameraView", _fnc_checkGoggles] call CBA_fnc_addPlayerEventHandler;
-    ["ace_activeCameraChanged", _fnc_checkGoggles] call CBA_fnc_addEventHandler;
+    ["featureCamera", _fnc_checkGoggles] call CBA_fnc_addPlayerEventHandler;
 
 
 

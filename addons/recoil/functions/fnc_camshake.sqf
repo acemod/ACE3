@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Orginal by Ryan Schultz, edited by KoffeinFlummi, commy2
  * Adds camera shake when firing. Called from the unified fired EH only for the local player.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
@@ -69,6 +69,6 @@ private _camshake = [
     BASE_FREQ
 ];
 
-TRACE_4("addCamShake",_recoil,_powerCoef,_powerMod,_camshake);\
+TRACE_4("addCamShake",_recoil,_powerCoef,_powerMod,_camshake);
 
 addCamShake _camshake;

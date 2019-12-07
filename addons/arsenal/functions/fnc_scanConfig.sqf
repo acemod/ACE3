@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dedmen
  * Cache an array of all the compatible items for arsenal.
@@ -10,7 +11,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 private _cargo = [
     [[], [], []], // Weapons 0, primary, secondary, handgun
@@ -57,7 +57,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         case (_itemInfoType == TYPE_HEADGEAR): {
             (_cargo select 3) pushBackUnique _className;
         };
-        /* Uniform */\
+        /* Uniform */
         case (_itemInfoType == TYPE_UNIFORM): {
             (_cargo select 4) pushBackUnique _className;
         };
@@ -142,7 +142,8 @@ private _putList = [];
     switch true do {
         // Rifle, handgun, secondary weapons mags
         case (
-                (getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) &&
+                ((getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) ||
+                {(getNumber (_x >> QGVAR(hide))) == -1}) &&
                 {!(_className in _grenadeList)} &&
                 {!(_className in _putList)}
             ): {

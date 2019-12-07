@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Sets a vehicle lock state because of a "ace_vehiclelock_setVehicleLock" event
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_veh", "_isLocked"];
 TRACE_2("params",_veh,_isLocked);

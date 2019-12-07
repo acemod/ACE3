@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing
  * Causes the unit to detonate all passed explosives.
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_range", "_explosivesList", "_triggerClassname"];
 TRACE_4("Params",_unit,_range,_explosivesList,_triggerClassname);

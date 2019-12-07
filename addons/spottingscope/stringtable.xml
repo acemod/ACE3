@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="tripod">
+    <Package name="SpottingScope">
         <Key ID="STR_ACE_SpottingScope_DisplayName">
             <English>Spotting Scope</English>
             <German>Teleskop</German>
             <Russian>Зрительная труба</Russian>
             <Polish>Teleskop</Polish>
             <Spanish>Telescopio</Spanish>
-            <French>Téléscope de visée</French>
+            <French>Longue-vue</French>
             <Czech>Zaměřovací dalekohled</Czech>
-            <Italian>Spotting Scope</Italian>
+            <Italian>Cannocchiale</Italian>
             <Hungarian>Megfigyelő távcső</Hungarian>
             <Portuguese>Luneta de observador</Portuguese>
             <Japanese>観測用スコープ</Japanese>
@@ -23,9 +23,9 @@
             <Russian>Поднять зрительная трубу</Russian>
             <Polish>Zabierz teleskop</Polish>
             <Spanish>Coger telescopio</Spanish>
-            <French>Prendre téléscope de visée</French>
+            <French>Récupérer la longue-vue</French>
             <Czech>Zvednout zaměřovací dalekohled</Czech>
-            <Italian>Raccogli spottingscope</Italian>
+            <Italian>Raccogli Cannocchiale</Italian>
             <Hungarian>Mefgigy. távcső felvétele</Hungarian>
             <Portuguese>Pegar luneta de observador</Portuguese>
             <Japanese>観測用スコープを拾う</Japanese>
@@ -39,9 +39,9 @@
             <Russian>Установить зрительная трубу</Russian>
             <Polish>Ustaw teleskop</Polish>
             <Spanish>Colocar telescopio</Spanish>
-            <French>Placer téléscope de visée</French>
+            <French>Placer la longue-vue</French>
             <Czech>Položit zaměřovací dalekohled</Czech>
-            <Italian>Posiziona spottingscope</Italian>
+            <Italian>Posiziona Cannocchiale</Italian>
             <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
             <Portuguese>Colocar luneta de observador</Portuguese>
             <Japanese>観測用スコープを置く</Japanese>

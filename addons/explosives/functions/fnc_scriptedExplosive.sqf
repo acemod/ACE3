@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing
  * Detonate explosives via script, for use in triggers or mission scripts to detonate editor-placed explosives.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_explosiveArr", [], [[], objNull]], ["_fuzeTime", 0, [0]], ["_triggerClassname", "#scripted", [""]]];
 

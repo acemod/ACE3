@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Authors: Ruthberg
  * Tests if the Range Card can be shown
@@ -13,6 +14,5 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 (GVAR(ammoClass) != "" && GVAR(magazineClass) != "" && GVAR(weaponClass) != "" && !GVAR(RangeCardOpened) && ("ACE_RangeCard" in (uniformItems ACE_player)) || ("ACE_RangeCard" in (vestItems ACE_player)))

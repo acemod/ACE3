@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Saves the selected pylon configuration to profileNamespace.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _loadoutName = ctrlText ID_EDIT_LOADOUTNAME;
 private _aircraftLoadouts = profileNamespace getVariable [QGVAR(aircraftLoadouts), []];

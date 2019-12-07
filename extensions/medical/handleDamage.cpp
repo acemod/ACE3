@@ -34,7 +34,7 @@ namespace ace {
                 double painToAdd = 0;
                 wounds = GetInjuryInfoFor(typeOfDamage, amountOfDamage, selectionN, woundID);
 
-                stream << "_woundsCreated = [";
+                stream << "[[";
                 for (int i = 0; i < wounds.size(); ++i)
                 {
                     stream << wounds.at(i).AsString();
@@ -45,9 +45,9 @@ namespace ace {
 
                     painToAdd += wounds.at(i).pain;
                 }
-                stream << "];";
+                stream << "],";
 
-                stream << "_painToAdd = " << painToAdd << ";";
+                stream << painToAdd << "]";
 
                 return stream.str();
             }
@@ -78,7 +78,7 @@ namespace ace {
                         }
                     }
                     if (highestSpot == NULL) {
-                        break; 
+                        break;
                     }
 
                     int c = 0;
@@ -94,10 +94,10 @@ namespace ace {
                                 {
                                     injuryToAdd = highestSpot;
                                 }
-                                else 
-                                { 
+                                else
+                                {
                                     int indexNewInjuryToAdd = rand() % information.size();
-                                    injuryToAdd = information.at(indexNewInjuryToAdd); 
+                                    injuryToAdd = information.at(indexNewInjuryToAdd);
                                 }
 
                                 int bodyPartID = selection;
@@ -105,7 +105,7 @@ namespace ace {
                                 {
                                     bodyPartID = rand() % 6;
                                 }
-                                
+
                                 injuries::OpenWound newWound(woundID++, injuryToAdd->ID, bodyPartID, 1, injuryToAdd->bloodLoss, injuryToAdd->pain);
                                 injuriesToAdd.push_back(newWound);
                             }
@@ -202,14 +202,14 @@ namespace ace {
             }
         }
 
-        int handleDamage::SelectionToNumber(const std::string& selectionName)
+        int handleDamage::SelectionToNumber(const std::string& hitpointName)
         {
             // TODO use dynamic selections instead
-            std::vector<std::string> selections = { "head", "body", "hand_l", "hand_r", "leg_l", "leg_r" };
-            std::vector<std::string>::iterator it = find(selections.begin(), selections.end(), selectionName);
-            if (it != selections.end())
+            std::vector<std::string> hitpoints = { "Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg" };
+            std::vector<std::string>::iterator it = find(hitpoints.begin(), hitpoints.end(), hitpointName);
+            if (it != hitpoints.end())
             {
-                return it - selections.begin();
+                return it - hitpoints.begin();
             }
             else
             {

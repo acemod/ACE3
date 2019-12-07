@@ -13,6 +13,7 @@
             <Italian>Borsa per Armi</Italian>
             <Chinesesimp>枪袋</Chinesesimp>
             <Chinese>槍袋</Chinese>
+            <Portuguese>Bolsa de Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
             <English>Gunbag (Tan)</English>
@@ -26,11 +27,12 @@
             <Italian>Borsa per Armi (Tan)</Italian>
             <Chinesesimp>枪袋 (黄褐色)</Chinesesimp>
             <Chinese>槍袋 (黃褐色)</Chinese>
+            <Portuguese>Bolsa de Arma (Bege)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
             <German>Lege Waffe in Waffentasche</German>
-            <French>Placer l'arme dans la housse d'arme</French>
+            <French>Ranger l'arme dans la housse</French>
             <Russian>Зачехлить оружие</Russian>
             <Czech>Vložit zbraň do pouzdra</Czech>
             <Japanese>ガンバッグへ武器を入れる</Japanese>
@@ -39,11 +41,12 @@
             <Italian>Metti l'arma nella borsa per armi</Italian>
             <Chinesesimp>将武器放置枪袋</Chinesesimp>
             <Chinese>將武器放置槍袋</Chinese>
+            <Portuguese>Colocar arma na Bosla de Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
             <German>Hole Waffe aus Waffentasche</German>
-            <French>Sortir l'arme hors de la housse</French>
+            <French>Extraire l'arme de la housse</French>
             <Russian>Расчехлить оружие</Russian>
             <Czech>Vytáhnout zbraň z pouzdra</Czech>
             <Japanese>ガンバッグから武器を出す</Japanese>
@@ -52,11 +55,12 @@
             <Italian>Prendi l'arma dalla borsa per armi</Italian>
             <Chinesesimp>将武器拿出枪袋</Chinesesimp>
             <Chinese>將武器拿出槍袋</Chinese>
+            <Portuguese>Retirar arma da Bolsa de Arma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>
             <German>Status</German>
-            <French>Status</French>
+            <French>Statut</French>
             <Russian>Статус</Russian>
             <Czech>Status</Czech>
             <Japanese>中身</Japanese>
@@ -65,6 +69,7 @@
             <Italian>Stato</Italian>
             <Chinesesimp>状态</Chinesesimp>
             <Chinese>狀態</Chinese>
+            <Portuguese>Status</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
@@ -78,6 +83,7 @@
             <Italian>Borsa per armi vuota</Italian>
             <Chinesesimp>枪袋为空</Chinesesimp>
             <Chinese>槍袋為空</Chinese>
+            <Portuguese>Bolsa de Arma Vazia</Portuguese>
         </Key>
     </Package>
 </Project>

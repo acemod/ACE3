@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the inventory opening.
@@ -14,19 +15,18 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_container"];
 TRACE_2("params",_unit,_container);
 
 //Only check for player:
-if (_unit != ace_player) exitWith {};
+if (_unit != ACE_player) exitWith {};
 
 if (GVAR(LockVehicleInventory) && //if setting not enabled
-        {(vehicle ace_player) == ace_player} && //Player dismounted
-        {(_container isKindOf "Car") || (_container isKindOf "Tank") || (_container isKindOf "Helicopter")} && //container is a lockable veh
+        {(vehicle ACE_player) == ACE_player} && //Player dismounted
+        {(_container isKindOf "Car") || {(_container isKindOf "Tank") || {_container isKindOf "Helicopter"}}} && //container is a lockable veh
         {(locked _container) in [2,3]} && //Vehicle is locked
-        {!([ace_player, _container] call FUNC(hasKeyForVehicle))} //player doesn't have key
+        {!([ACE_player, _container] call FUNC(hasKeyForVehicle))} //player doesn't have key
         ) then {
     //Give feedback that vehicle is locked
     playSound "ACE_Sound_Click";
@@ -41,8 +41,7 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
         (findDisplay 602) closeDisplay 0;
         [{
             TRACE_1("Opening Player Inventory", _this);
-            ACE_player action ["Gear", objNull]
+            ACE_player action ["Gear", objNull];
         }, []] call CBA_fnc_execNextFrame;
-    },
-    []] call CBA_fnc_waitUntilAndExecute;
+    }, []] call CBA_fnc_waitUntilAndExecute;
 };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2, based on KK_fnc_playerWeaponMulfunction from KillzoneKid
  * Jam the weapon
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon"];
 TRACE_2("params",_unit,_weapon);

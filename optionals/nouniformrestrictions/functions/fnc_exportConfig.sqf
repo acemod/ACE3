@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut, 654wak654
  * Generates the CfgVehicles config to allow uniform usage on all sides.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 private _modifyClasses = [];
 private _baseClasses = [];

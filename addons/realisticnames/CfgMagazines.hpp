@@ -396,6 +396,10 @@ class CfgMagazines {
         displayName = CSTRING(HandGrenade_Name);
         displayNameShort = "M67";
     };
+    class MiniGrenade: CA_Magazine {
+        displayName = CSTRING(MiniGrenade_Name);
+        displayNameShort = "V40";
+    };
     class SmokeShell: HandGrenade {
         displayName = CSTRING(SmokeShell_Name);
     };
@@ -418,6 +422,10 @@ class CfgMagazines {
         displayName = CSTRING(SmokeShellYellow_Name);
     };
 
+    class 50Rnd_570x28_SMG_03: CA_Magazine {
+        displayName = CSTRING(P90_Mag_Name);
+        descriptionShort = CSTRING(P90_Mag_DescriptionShort);
+    };
 
     // 1.70 Pylon Magazines (Should Match Weapon Name)
     class 2Rnd_Missile_AA_04_F;

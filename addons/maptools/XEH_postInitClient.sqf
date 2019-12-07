@@ -6,6 +6,7 @@ if (!hasInterface) exitWith {};
 
 // Init variables
 GVAR(mapGpsShow) = true;
+GVAR(mapGpsNextUpdate) = -1;
 
 GVAR(mapTool_Shown) = 0;
 GVAR(mapTool_pos) = [0,0];
@@ -19,18 +20,12 @@ GVAR(mapTool_isRotating) = false;
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseMoving", {_this call FUNC(handleMouseMove);}];
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(updateMapToolMarkers);}];
+    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {call FUNC(updateMapToolMarkers); call FUNC(openMapGpsUpdate);}];
 }, []] call CBA_fnc_waitUntilAndExecute;
 
 ["visibleMap", {
     params ["", "_mapOn"];
-    if (_mapOn) then {
-        // Show GPS if required
-        [GVAR(mapGpsShow)] call FUNC(openMapGps);
-    } else {
-        // Hide GPS
-        [false] call FUNC(openMapGps);
-
+    if (!_mapOn) then {
         // Handle closing map in middle of line drawing (it's never created)
         GVAR(freedrawing) = false;
     };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rosuto
  * DAGR waypoint output loop
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 

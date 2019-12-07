@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WeaponSelect">
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
@@ -371,11 +371,16 @@
         </Key>
         <Key ID="STR_ACE_WeaponSelect_CollisionLights">
             <English>Toggle Collision Lights</English>
+            <German>Kollisionslichter an/ausschalten</German>
             <Italian>Attiva Luci di Collisione</Italian>
             <Korean>충돌 표시등 토글</Korean>
             <Chinese>切換碰撞燈</Chinese>
             <Chinesesimp>切换碰撞灯</Chinesesimp>
             <Japanese>衝突防止灯を切り替え</Japanese>
+            <Polish>Przełącz światła kolizyjne</Polish>
+            <Russian>Вкл/Выкл Бортовые огни</Russian>
+            <Portuguese>Alternar Luzes de Colisão</Portuguese>
+            <Czech>Přepnout kolizní světla</Czech>
         </Key>
     </Package>
 </Project>

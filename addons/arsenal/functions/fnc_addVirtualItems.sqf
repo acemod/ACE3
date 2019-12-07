@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe, Dedmen
  * Add virtual items to the provided target.
@@ -16,8 +18,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params [["_object", objNull, [objNull]], ["_items", [], [true, []]], ["_global", false, [false]]];
 
@@ -193,7 +193,8 @@ if (_items isEqualType true) then {
                     switch true do {
                         // Rifle, handgun, secondary weapons mags
                         case (
-                                (getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) &&
+                                ((getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) ||
+                                {(getNumber (configFile >> "CfgMagazines" >> _x >> QGVAR(hide))) == -1}) &&
                                 {!(_x in _grenadeList)} &&
                                 {!(_x in _putList)}
                             ): {

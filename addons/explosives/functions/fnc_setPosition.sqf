@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Sets the Dir and pitch of passed object
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_explosive", "_direction", "_pitch"];
 TRACE_3("params",_explosive,_direction,_pitch);

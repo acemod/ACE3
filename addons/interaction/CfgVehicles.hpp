@@ -342,6 +342,11 @@ class CfgVehicles {
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
             };
+            class GVAR(smashWindshield) {
+                displayName = CSTRING(SmashWindshield);
+                condition = QUOTE(_player == driver _target && {private _damage = _target getHitPointDamage 'HitGlass1'; _damage > 0.5 && {_damage < 1}});
+                statement = QUOTE(playSound3D [ARR_2('A3\Sounds_F\weapons\hits\glass_2.wss',_target)]; _target setHitPointDamage [ARR_2('HitGlass1',1)];);
+            };
         };
     };
 
@@ -696,6 +701,30 @@ class CfgVehicles {
                     icon = "\A3\ui_f\data\igui\cfg\actions\ico_cpt_land_OFF_ca.paa";
                     condition = QUOTE(alive _target && isCollisionLightOn _target);
                     statement = QUOTE([ARR_3(QQGVAR(setCollisionLight),[ARR_2(_target,false)],_target)] call CBA_fnc_targetEvent);
+                };
+            };
+        };
+    };
+
+    class Land_Camping_Light_off_F: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 2;
+
+                // to make "Camping Lantern (Off)" be turned on we replace it with "Camping Lantern"
+                class GVAR(TurnOn) {
+                    displayName = CSTRING(TurnOn);
+                    icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
+                    condition = QUOTE(alive _target);
+                    statement = QUOTE(\
+                        private _position = getPosATL _target;\
+                        private _vectorDirAndUp = [ARR_2(vectorDir _target,vectorUp _target)];\
+                        deleteVehicle _target;\
+                        private _newLamp = 'Land_Camping_Light_F' createVehicle [ARR_3(0,0,0)];\
+                        _newLamp setPosATL _position;\
+                        _newLamp setVectorDirAndUp _vectorDirAndUp;\
+                    );
                 };
             };
         };

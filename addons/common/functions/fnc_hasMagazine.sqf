@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if given unit has a magazine of given classname
@@ -16,7 +17,6 @@
  *
  * Note: Case sensitive
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
 

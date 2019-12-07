@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Fill right panel.
@@ -11,8 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display", "_control"];
 
@@ -78,7 +78,7 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
         private _index = _forEachIndex;
 
         {
-            private _subIndex = _forEachIndex;
+            private _subIndex = _forEachIndex min 1;
             {
                 ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nic547, commy2
  * Handcuffs a unit.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_state"];
 TRACE_2("params",_unit,_state);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Rate of fire text statement.
@@ -10,11 +11,10 @@
  *  2.2: Evaluate as a logarithmic number (BOOL)
  *
  * Return Value:
- * Number
+ * String
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_stat", "_config", "_args"];
 _args params ["_statMinMax", "_configExtremeBool"];
@@ -29,4 +29,5 @@ private _fireRate = [];
 _fireRate sort true;
 _fireRate = _fireRate param [0, 0];
 
+if (_fireRate == 0) exitWith {"PEWPEWPEW"};
 format ["%1 rpm", round (60 / _fireRate)]
