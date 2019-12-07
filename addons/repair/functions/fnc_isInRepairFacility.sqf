@@ -15,7 +15,7 @@
  * Public: Yes
  */
 
-params ["_object"];
+params [["_object", objNull, [objNull]]];
 TRACE_1("params",_object);
 
 private _position = getPosASL _object;
