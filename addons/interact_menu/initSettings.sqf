@@ -58,7 +58,7 @@
     "CHECKBOX",
     [LSTRING(cursorKeepCentered), LSTRING(cursorKeepCenteredDescription)],
     [format ["ACE %1", LLSTRING(Category_InteractionMenu)], LELSTRING(Interaction,InteractionMenuSelf)],
-    true,
+    false,
     false
 ] call CBA_settings_fnc_init;
 
