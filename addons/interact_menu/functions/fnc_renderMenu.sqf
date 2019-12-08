@@ -89,11 +89,8 @@ if (_numChildren == 1) then {
 // Scale menu based on the amount of children
 private _scaleX = 1;
 private _scaleY = 1;
-
-if (
-    (GVAR(keyDownSelfAction) && {GVAR(useListMenuSelf)}) ||
-    {!(GVAR(keyDownSelfAction)) && {GVAR(useListMenu)}}
-) then {
+private _useListMenu = [GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction);
+if (_useListMenu) then {
     private _textSize = [0.75, 0.875, 1, 1.2, 1.4] select GVAR(textSize);
     _scaleX = _textSize * 0.17 * 1.1;
     _scaleY = 0.17 * 0.30 * 4/3;
@@ -115,10 +112,7 @@ private _player = ACE_player;
 //END_COUNTER(children);
 private _angle = _centerAngle - _angleSpan / 2;
 {
-    private _newPos =  if (
-        (GVAR(keyDownSelfAction) && {GVAR(useListMenuSelf)}) ||
-        {!(GVAR(keyDownSelfAction)) && {GVAR(useListMenu)}}
-    ) then {
+    private _newPos = if (_useListMenu) then {
         [(_sPos select 0) + _scaleX,
          (_sPos select 1) + _scaleY * (_forEachIndex - _numChildren/2 + 0.5)];
     } else {
