@@ -1,4 +1,19 @@
 class ACE_Settings {
+    class GVAR(alwaysUseCursorSelfInteraction) {
+        movedToSQF = 1;
+    };
+    class GVAR(cursorKeepCentered) {
+        movedToSQF = 1;
+    };
+    class GVAR(alwaysUseCursorInteraction) {
+        movedToSQF = 1;
+    };
+    class GVAR(useListMenu) {
+        movedToSQF = 1;
+    };
+    class GVAR(menuBackground) {
+        movedToSQF = 1;
+    };
     class GVAR(colorTextMax) {
         value[] = {1, 1, 1, 1};
         typeName = "COLOR";
