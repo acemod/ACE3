@@ -27,6 +27,7 @@ PREP(changeProjectileDirection);
 PREP(checkFiles);
 PREP(checkPBOs);
 PREP(claim);
+PREP(claimSafeServer);
 PREP(codeToString);
 PREP(createOrthonormalReference);
 PREP(currentChannel);

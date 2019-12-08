@@ -74,7 +74,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
         };
         private _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
-        private _lineInterection = lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player];
+        private _lineInterection = !((lineIntersectsSurfaces [eyePos ACE_player, _virtualPosASL, ACE_player]) isEqualTo []);
 
         //Don't allow placing in a bad position:
         if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};

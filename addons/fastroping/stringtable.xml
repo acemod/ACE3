@@ -5,7 +5,7 @@
             <English>Equip FRIES</English>
             <German>Rüste FRIES aus</German>
             <Polish>Wyposaż FRIES</Polish>
-            <French>Equiper le FRIES</French>
+            <French>Équiper le FRIES</French>
             <Spanish>Equipar FRIES</Spanish>
             <Italian>Equipaggia il FRIES</Italian>
             <Czech>Vybavit FRIES</Czech>
@@ -20,7 +20,7 @@
             <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
             <German>Rüstet kompatible Helikopter mit einem Fast Rope Insertion Extraction System aus.</German>
             <Polish>Wyposaża kompatybilne helikoptery w zestaw Fast Rope Insertion Extraction System.</Polish>
-            <French>Equipe les hélicoptères compatibles avec un Module Fast Rope Insertion Extraction System.</French>
+            <French>Équipe les hélicoptères compatibles avec un FRIES (Fast Rope Insertion Extraction System).</French>
             <Spanish>Equipar helicoptero compatible con un Sistema de Inserción Extracción Fast Rope.</Spanish>
             <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
@@ -35,7 +35,7 @@
             <English>Prepare fast roping system</English>
             <German>Bereite "Fast Roping"-System vor</German>
             <Polish>Przygotuj system zjazdu na linach</Polish>
-            <French>Préparer le système de corde lisse</French>
+            <French>Préparer le système de descente rapide</French>
             <Spanish>Preparar el sistema fast roping</Spanish>
             <Italian>Prepara le corde</Italian>
             <Czech>Připravit systém slaňování</Czech>
@@ -57,6 +57,7 @@
             <Polish>Schowaj system zjazdu na linach</Polish>
             <Russian>Спрятать систему спуска</Russian>
             <Portuguese>Recolher o sistema de descida rápida</Portuguese>
+            <French>Arrimer le système de descente rapide</French>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -77,7 +78,7 @@
             <English>Fast rope</English>
             <German>Abseilen</German>
             <Polish>Zjedź na linie</Polish>
-            <French>Descendre à la corde</French>
+            <French>Descente rapide</French>
             <Spanish>Descender por la cuerda</Spanish>
             <Italian>Scendi dalla corda</Italian>
             <Czech>SLANIT</Czech>
@@ -92,7 +93,7 @@
             <English>Cut ropes</English>
             <German>Seile abwerfen</German>
             <Polish>Odetnij liny</Polish>
-            <French>Détacher les cordes</French>
+            <French>Couper les cordes</French>
             <Spanish>Cortar cuerdas</Spanish>
             <Italian>Taglia le corde</Italian>
             <Czech>Odříznout lano</Czech>
@@ -107,7 +108,7 @@
             <English>Equip helicopter with FRIES</English>
             <German>Rüste Helicopter mit FRIES aus</German>
             <Polish>Wyposaż helikopter w FRIES</Polish>
-            <French>Equiper l'hélicoptère avec le FRIES</French>
+            <French>Équiper l'hélicoptère avec le FRIES</French>
             <Spanish>Equipar helicoptero con FRIES</Spanish>
             <Italian>Equipaggia l'elicottero con il FRIES</Italian>
             <Czech>Vybavit vrtulník pomocí FRIES</Czech>
@@ -269,7 +270,7 @@
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
             <German>Seil-Item zum aufbauen benötigt</German>
-            <French>Exiger une corde pour déployer</French>
+            <French>Nécessite une corde pour le déploiement</French>
             <Japanese>展開にはロープ アイテムを必須に</Japanese>
             <Polish>Wymaga przedmiotu typu lina </Polish>
             <Russian>Требуется канат</Russian>

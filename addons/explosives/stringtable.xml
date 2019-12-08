@@ -308,7 +308,7 @@
             <German>Erlaubt die Entschärfung von Sprengstoffen</German>
             <Spanish>Permite desactivar explosivos</Spanish>
             <Polish>Umożliwia rozbrajanie ładunków wybuchowych</Polish>
-            <French>Permet de désamorçer des explosifs</French>
+            <French>Outils nécessaires au désamorçage des explosifs.</French>
             <Czech>Dovoluje zneškodňování výbušnin</Czech>
             <Italian>Consente la disattivazione degli ordigni esplosivi</Italian>
             <Hungarian>Robbanóanyagok hatástalanítását teszi lehetővé</Hungarian>
@@ -324,7 +324,7 @@
             <German>Zur Schnellauswahl hinzufügen</German>
             <Spanish>Añadir a marcado rápido</Spanish>
             <Polish>Dodaj do szybkiego wybierania</Polish>
-            <French>Ajouter à la composition rapide</French>
+            <French>Ajouter à la numérotation rapide</French>
             <Czech>Přidat jako rychlou volbu</Czech>
             <Italian>Aggiungi alla selezione rapida</Italian>
             <Hungarian>Hozzáadás a gyorstárcsázóhoz</Hungarian>
@@ -452,7 +452,7 @@
             <German>Entschärfen</German>
             <Spanish>Desactivar</Spanish>
             <Polish>Rozbrój</Polish>
-            <French>Désamorçer</French>
+            <French>Désamorcer</French>
             <Czech>Zneškodnit</Czech>
             <Italian>Disinnesca</Italian>
             <Hungarian>Hatástalanítás</Hungarian>
@@ -468,7 +468,7 @@
             <German>Entschärfe Sprengstoff...</German>
             <Spanish>Desactivando explosivo...</Spanish>
             <Polish>Rozbrajanie ładunku...</Polish>
-            <French>Désamorçage des explosifs...</French>
+            <French>Désamorçage de l'explosif...</French>
             <Czech>Zneškodňuji Výbušninu...</Czech>
             <Italian>Esposivo in fase di disattivazione...</Italian>
             <Hungarian>Robbanóanyag hatástalanítása...</Hungarian>
@@ -532,7 +532,7 @@
             <German>Wähle einen Zünder</German>
             <Spanish>Seleccionar un detonador</Spanish>
             <Polish>Wybierz zapalnik</Polish>
-            <French>Sélectionner une mise à feu</French>
+            <French>Sélectionner un déclencheur</French>
             <Czech>Zvolit detonátor</Czech>
             <Italian>Seleziona un attivatore</Italian>
             <Hungarian>Gyújtóeszköz kiválasztása</Hungarian>
@@ -580,7 +580,7 @@
             <Polish>Linka naciągu</Polish>
             <Spanish>Cable trampa</Spanish>
             <German>Stolperdraht</German>
-            <French>Fil de détente</French>
+            <French>Fil piège</French>
             <Czech>Nástražný drát</Czech>
             <Italian>Filo a inciampo</Italian>
             <Hungarian>Botlódrót</Hungarian>
@@ -612,7 +612,7 @@
             <Polish>Brak dostępnych zapalników dla %1</Polish>
             <Spanish>No hay detonadores disponibles para %1</Spanish>
             <German>Keine Auslöser für %1 vorhanden</German>
-            <French>Pas de détonateur disponible pour %1</French>
+            <French>Pas de déclencheur disponible pour %1</French>
             <Czech>Žádný detonátor k dispozici pro %1</Czech>
             <Italian>Nessun attivatore disponibile per %1</Italian>
             <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
@@ -742,7 +742,7 @@
             <German>Benötigt Sprengstoffexperten?</German>
             <Czech>Vyžadovat specialistu?</Czech>
             <Portuguese>Requer especialista?</Portuguese>
-            <French>Requiert un spécialiste ?</French>
+            <French>Spécialiste requis</French>
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
@@ -758,7 +758,7 @@
             <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
             <Czech>Vyžadovat specialistu na zneškodnění výbušniny? Výchozí: Ne</Czech>
             <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
-            <French>Le désarmoçage d'explosif requiert un spécialiste ? Défaut : non</French>
+            <French>Seul un spécialiste peut désamorcer des explosifs.</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
@@ -774,7 +774,7 @@
             <German>Bestrafe Nicht-Sprengstoffexperten?</German>
             <Czech>Potrestat, pokud není specialista?</Czech>
             <Portuguese>Punir não especialistas?</Portuguese>
-            <French>Punir les non-spécialistes ?</French>
+            <French>Pénaliser les non-spécialistes</French>
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
@@ -790,7 +790,7 @@
             <German>Entschärfungszeit für Nicht-Sprengstoffexperten erhöhen? Standard: Ja</German>
             <Czech>Zvýšit čas potřebný k dokončení akce pokud není specialista? Výchozí: Ano</Czech>
             <Portuguese>Aumentar o tempo necessário para completar ações por não especialistas? Padrão: Sim</Portuguese>
-            <French>Augmenter le temps nécessaire au désarmoçage pour les non-spécialistes ? Défaut : oui</French>
+            <French>Augmente le temps nécessaire au désamorçage pour les unités non spécialisées.</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
@@ -806,7 +806,7 @@
             <Polish>Eksplozja przy rozbrajaniu?</Polish>
             <Czech>Explodovat při zneškodňování?</Czech>
             <Spanish>Explotar al desactivar?</Spanish>
-            <French>Explosion au désamorçage ?</French>
+            <French>Explosion au désamorçage</French>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
@@ -822,7 +822,7 @@
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
-            <French>Permet à certains explosifs d'exploser au désamorçage ? Défaut : oui</French>
+            <French>Permet à certains explosifs d'exploser durant le désamorçage.</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
@@ -1002,7 +1002,7 @@
             <Polish>Flara na linkę</Polish>
             <German>Stolperdraht-Leuchtrakete</German>
             <Korean>조명지뢰</Korean>
-            <French>Fusée éclairante avec fil de détente</French>
+            <French>Fusée éclairante avec fil piège</French>
             <Italian>Cavo d'innesco</Italian>
             <Chinesesimp>绊线闪光地雷</Chinesesimp>
             <Chinese>絆線閃光地雷</Chinese>
@@ -1015,7 +1015,7 @@
             <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
             <German>Typ: Stolperdraht-Leuchtrakete - Schießt bei Auslösung eine nicht-tödliche Leuchtrakete ab.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
             <Korean>종류: 조명지뢰 - 작동시 무해한 조명을 사출합니다.&lt;br /&gt;장탄수: 1&lt;br /&gt;사용처: 지면</Korean>
-            <French>Type : Fusée éclairante avec fil de détente - Allume une fusée éclairante lorsque déclenché. &lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
+            <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée. &lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
             <Italian>Tipo: Cavo d'innesco - Sfocio un abbaglio non letale quanto attivato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
             <Chinesesimp>类型: 绊线闪光地雷 - 触发后产生非致命性的强光.&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 地面</Chinesesimp>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
@@ -1041,18 +1041,21 @@
             <Polish>Czasomierz Wybuchu</Polish>
             <Russian>Таймер взрывчатки</Russian>
             <Portuguese>Timer de explosão</Portuguese>
+            <French>Minuteur de détonation</French>
             <Chinese>引爆倒數</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
             <German>Kampfmittelbeseitigung</German>
             <Japanese>EOD に</Japanese>
+            <French>Est un spécialiste en explosifs</French>
             <Chinese>是EOD</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
             <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
             <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
+            <French>Contrôle si l'unité est un spécialiste en explosifs.</French>
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
         </Key>
     </Package>

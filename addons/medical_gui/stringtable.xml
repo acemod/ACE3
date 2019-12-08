@@ -214,7 +214,7 @@
             <German>Untersuchung &amp; Behandlung</German>
             <Russian>ОСМОТР И ЛЕЧЕНИЕ</Russian>
             <Spanish>EXAMINAR &amp; TRATAMIENTO</Spanish>
-            <French>EXAMINER &amp; TRAITEMENTS</French>
+            <French>EXAMENS &amp; TRAITEMENTS</French>
             <Polish>BADANIE &amp; LECZENIE</Polish>
             <Portuguese>EXAMINAR &amp; TRATAMENTO</Portuguese>
             <Czech>VYŠETŘENÍ &amp; LÉČBA</Czech>
@@ -335,7 +335,7 @@
             <German>Bandagen / Brüche</German>
             <Russian>Раны / переломы</Russian>
             <Spanish>Vendajes/Fracturas </Spanish>
-            <French>Bandages / Fractures</French>
+            <French>Bandages / Attelles</French>
             <Polish>Bandaże / Złamania</Polish>
             <Portuguese>Bandagens / Fraturas</Portuguese>
             <Czech>Bandáž / Zlomeniny</Czech>
@@ -350,7 +350,7 @@
             <German>Medikamentation</German>
             <Russian>Медикаменты</Russian>
             <Spanish>Medicación</Spanish>
-            <French>Médications</French>
+            <French>Médication</French>
             <Polish>Leki</Polish>
             <Portuguese>Medicação</Portuguese>
             <Czech>Léky</Czech>
@@ -952,6 +952,7 @@
             <English>Partial %1</English>
             <Japanese>部分的な%1</Japanese>
             <Chinese>部分 %1</Chinese>
+            <French>Partiel %1</French>
         </Key>
     </Package>
 </Project>

@@ -478,31 +478,37 @@
             <English>Holster Required</English>
             <Japanese>武器の扱い</Japanese>
             <Chinese>需要放下武器</Chinese>
+            <French>Rengainer obligatoirement</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam - Allows examination actions (checking pulse, blood pressure, response) at all times regardless of Holster Required setting.</English>
             <Japanese>何らかの治療をするには武器を下げるか収めるかどうかを決定します。\nなお次の診断行動は設定で例外できます: 心拍確認、血圧測定、反応確認</Japanese>
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
+            <French>Définit si les armes doivent être rengainées ou abaissées avant de pouvoir effectuer des actes médicaux.\n"Sauf examens" - autorise les examens (vérification du pouls, de la tension artérielle, de l'état de conscience) en toutes circonstances.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
             <Japanese>下げるか収める</Japanese>
             <Chinese>放下或者放入武器套</Chinese>
+            <French>Abaisser ou rengainer</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
             <English>Lowered or Holstered (Except Exam)</English>
             <Japanese>下げるか収める (診断行動は除外)</Japanese>
             <Chinese>放下或者放入武器套（除了診斷）</Chinese>
+            <French>Abaisser ou rengainer (sauf examens)</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
             <English>Holstered only</English>
             <Japanese>収めた時のみ</Japanese>
             <Chinese>只能放入武器套</Chinese>
+            <French>Rengainer seulement</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
             <English>Holstered only (Except Exam)</English>
             <Japanese>収めた時のみ (診断行動は除外)</Japanese>
             <Chinese>只能放入武器套（除了診斷）</Chinese>
+            <French>Rengainer seulement (sauf examens)</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
@@ -556,7 +562,7 @@
             <Italian>Addestramento Medico</Italian>
             <German>Sanitätsausbildung</German>
             <Spanish>Entrenamiento médico</Spanish>
-            <French>Qualification médicale</French>
+            <French>Niveau de qualification médicale</French>
             <Czech>Lékařský výcvik</Czech>
             <Portuguese>Treino médico</Portuguese>
             <Russian>Медицинская подготовка</Russian>
@@ -573,7 +579,7 @@
             <German>Ist Sanitäter</German>
             <Czech>Je zdravotník</Czech>
             <Portuguese>É médico</Portuguese>
-            <French>Est infirmier</French>
+            <French>Qualification médicale</French>
             <Hungarian>Orvos-e</Hungarian>
             <Italian>E' Medico</Italian>
             <Japanese>衛生兵に</Japanese>
@@ -587,7 +593,7 @@
             <German>Dieses Modul legt fest, welche Einheiten Sanitäter sind.</German>
             <Czech>Tento modul určuje, která jednotka je zdravotník.</Czech>
             <Portuguese>Este módulo determina qual unidade é um paramédico.</Portuguese>
-            <French>Ce module vous permet d'assigner une classe medicale aux unités sélectionnées.</French>
+            <French>Ce module vous permet d'assigner une classe médicale aux unités sélectionnées.</French>
             <Hungarian>Ez a modul engedélyezi az orvosi jelző hozzárendelését kiválasztott egységekhez.</Hungarian>
             <Russian>Этот модуль позволяет назначить класс медика выбранным юнитам.</Russian>
             <Spanish>Este módulo permite asignar la clase médico a las unidades seleccionadas.</Spanish>
@@ -778,7 +784,7 @@
             <German>Wird verwendet, um mittlere bis große Wunden abzudecken und Blutungen zu stoppen</German>
             <Russian>Для тампонирования ран среднего и большого размера и остановки кровотечения.</Russian>
             <Spanish>Se utiliza para vendar heridas medianas o grandes y detener el sangrado</Spanish>
-            <French>Utilisé pour panser les moyennes et grosses plaies, et freiner le saignement.</French>
+            <French>Utilisée pour panser les moyennes et grosses plaies, et freiner le saignement.</French>
             <Polish>Używany w celu opatrywania średnich i dużych ran oraz tamowania krwawienia. Dobrze radzi sobie z tamowaniem ran płatowych oraz postrzałowych.</Polish>
             <Hungarian>Közepestől nagyig terjedő sebek betakarására és vérzés elállítására használt kötszer</Hungarian>
             <Italian>Usato su ferite medie o larghe per fermare emorragie.</Italian>
@@ -1110,7 +1116,7 @@
             <English>Plasma IV (1000ml)</English>
             <Russian>Плазма для в/в вливания (1000 мл)</Russian>
             <Spanish>Plasma IV (1000ml)</Spanish>
-            <French>Plasma IV (1000ml)</French>
+            <French>Plasma IV (1000 ml)</French>
             <Polish>Osocze IV (1000ml)</Polish>
             <German>Plasma IV (1000ml)</German>
             <Hungarian>Vérplazma-infúzió (1000ml)</Hungarian>
@@ -3564,7 +3570,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Activity_appliedSplint">
             <English>%1 applied a splint</English>
             <Russian>%1 наложил Шина</Russian>
-            <French>%1 a posé un attelle</French>
+            <French>%1 a posé une attelle</French>
             <Portuguese>%1 aplicou uma Tala</Portuguese>
             <Chinese>%1 已套用固定板</Chinese>
         </Key>
@@ -3761,6 +3767,7 @@
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>
             <Chinese>包紮即痊癒</Chinese>
+            <French>Effacer trauma après pansement</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_clearTraumaAfterBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
