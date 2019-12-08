@@ -21,7 +21,7 @@ GVAR(cacheManActions) = +(GVAR(ActNamespace) getVariable ["CAManBase", []]); // 
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {
-    if (GVAR(cursorKeepCentered)) then {
+    if ([GVAR(cursorKeepCentered), GVAR(cursorKeepCenteredSelfInteraction)] select GVAR(keyDownSelfAction)) then {
         GVAR(cursorPos) = GVAR(cursorPos) vectorAdd [_this select 1, _this select 2, 0] vectorDiff [0.5, 0.5, 0];
         setMousePosition [0.5, 0.5];
     } else {
