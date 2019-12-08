@@ -44,7 +44,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
     };
 } else {
     if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
-        INFO("TFR Detected.");
+        INFO("TFAR Detected.");
         DFUNC(isSpeaking) =     {
             params ["_unit"];
             (_unit getVariable ["tf_isSpeaking", false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}

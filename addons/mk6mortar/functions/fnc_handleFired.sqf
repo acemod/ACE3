@@ -23,13 +23,6 @@
 
 params ["_vehicle", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
 
-if (GVAR(useAmmoHandling) && {_vehicle getVariable [QGVAR(initialized),false] && !(_vehicle getVariable [QGVAR(exclude),false])}) then {
-    // if !(_vehicle getVariable [QGVAR(exclude),false]) then {
-        _vehicle removeMagazineGlobal (_vehicle magazinesTurret [0] select 0);
-        TRACE_1("",_vehicle magazinesTurret [0]);
-    // };
-};
-
 if (!GVAR(airResistanceEnabled)) exitWith {};
 
 // Large enough distance to not simulate any wind deflection

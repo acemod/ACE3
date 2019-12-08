@@ -12,21 +12,24 @@
  * None
  *
  * Example:
- * [_player, _target, "arifle_MX_F"] call ace_interaction_fnc_magToPassazine
+ * [_player, _target, "arifle_MX_F"] call ace_interaction_fnc_passMagazine
  *
  * Public: No
  */
 params ["_player", "_target", "_weapon"];
 
-private _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-private _filteredMags = magazinesAmmoFull _player select {(_x select 0) in _compatibleMags && {!(_x select 2)}};
+private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
+private _filteredMags = magazinesAmmoFull _player select {
+    _x params ["_className", "", "_loaded"];
+    (_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}
+};
 
 //select magazine with most ammo
 private _magToPass = _filteredMags select 0;
 private _magToPassIndex = 0;
 {
     _x params ["_className", "_ammoCount"];
-    if ((_ammoCount > (_magToPass select 1)) && (_target canAdd _className)) then {
+    if (_ammoCount > (_magToPass select 1)) then {
         _magToPass = _x;
         _magToPassIndex = _forEachIndex;
     };

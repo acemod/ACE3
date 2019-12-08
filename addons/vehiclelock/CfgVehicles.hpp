@@ -4,13 +4,13 @@
             displayName = CSTRING(Action_UnLock); \
             condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(2,3)]}); \
             statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,false)], [_target])] call CBA_fnc_targetEvent); \
-            icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
+            icon = QPATHTOF(ui\key_menuIcon_ca.paa); \
         }; \
         class ACE_lockVehicle { \
             displayName = CSTRING(Action_Lock); \
             condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(0,1)]}); \
             statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,true)], [_target])] call CBA_fnc_targetEvent); \
-            icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
+            icon = QPATHTOF(ui\key_menuIcon_ca.paa); \
         }; \
         class ACE_lockpickVehicle { \
             displayName = CSTRING(Action_Lockpick); \
@@ -26,7 +26,7 @@
                 condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(2,3)]}); \
                 statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,false)], [_target])] call CBA_fnc_targetEvent); \
                 exceptions[] = {"isNotSwimming"}; \
-                icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
+                icon = QPATHTOF(ui\key_menuIcon_ca.paa); \
             }; \
             class ACE_lockVehicle { \
                 displayName = CSTRING(Action_Lock); \
@@ -34,7 +34,7 @@
                 condition = QUOTE(([ARR_2(_player, _target)] call FUNC(hasKeyForVehicle)) && {(locked _target) in [ARR_2(0,1)]}); \
                 statement = QUOTE([ARR_3(QUOTE(QGVAR(setVehicleLock)), [ARR_2(_target,true)], [_target])] call CBA_fnc_targetEvent); \
                 exceptions[] = {"isNotSwimming"}; \
-                icon = QPATHTOF(UI\key_menuIcon_ca.paa); \
+                icon = QPATHTOF(ui\key_menuIcon_ca.paa); \
             }; \
             class ACE_lockpickVehicle { \
                 displayName = CSTRING(Action_Lockpick); \
@@ -58,6 +58,9 @@ class CfgVehicles {
     class Helicopter: Air {
         MACRO_LOCK_ACTIONS
     };
+    class Plane: Air {
+        MACRO_LOCK_ACTIONS
+    };
     class Motorcycle: LandVehicle {
         MACRO_LOCK_ACTIONS
     };
@@ -79,7 +82,7 @@ class CfgVehicles {
         scope = 1;
         isGlobal = 1;
         isSingular = 1;
-        icon = QPATHTOF(UI\Icon_Module_VehicleLock_ca.paa);
+        icon = QPATHTOF(ui\Icon_Module_VehicleLock_ca.paa);
         functionPriority = 0;
         class Arguments {
             class LockVehicleInventory {
@@ -117,7 +120,7 @@ class CfgVehicles {
         function = QFUNC(moduleSync);
         scope = 2;
         isGlobal = 0;
-        icon = QPATHTOF(UI\Icon_Module_VehicleKey_ca.paa);
+        icon = QPATHTOF(ui\Icon_Module_VehicleKey_ca.paa);
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {

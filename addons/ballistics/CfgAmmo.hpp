@@ -67,18 +67,18 @@ class CfgAmmo {
     class ACE_B_556x45_Ball_Tracer_Dim: B_556x45_Ball_Tracer_Red {
         nvgOnly = 1;
     };
-    class B_545x39_Ball_F : BulletBase {
-        airFriction=-0.00119458;
-        ACE_caliber=5.588;
-        ACE_bulletLength=21.59;
-        ACE_bulletMass=3.42792;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.168};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ICAO";
-        ACE_dragModel=7;
-        ACE_muzzleVelocities[]={735, 883, 892};
-        ACE_barrelLengths[]={206.5, 414.02, 508.0};
+    class B_545x39_Ball_F: BulletBase {
+        airFriction = -0.001195;
+        ACE_caliber = 5.6; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf
+        ACE_bulletLength = 21.59;
+        ACE_bulletMass = 3.43;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[] = {0.168};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {743, 848, 891, 900}; // at 21°C, at 15°C {735, 840, 883, 892} according with the AKS initSpeed
+        ACE_barrelLengths[] = {210, 314, 415, 508.0}; // respectively {AKS74U / AK105,AK12K / AK74 / default}
     };
     class B_56x15_dual: BulletBase {
         tracerScale = 0.5;
@@ -290,7 +290,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Berger_Hybrid_OTM : B_762x51_Ball {
-        airFriction=-0.00055262;
+        airFriction=-0.00053638;
         caliber=2.0;
         hit=19;
         typicalSpeed=853;
@@ -337,18 +337,18 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={735, 770, 809, 838};
         ACE_barrelLengths[]={406.4, 508.0, 604.5, 736.6};
     };
-    class B_762x39_Ball_F : BulletBase {
-        airFriction=-0.00154815;
-        ACE_caliber=7.823;
-        ACE_bulletLength=28.956;
-        ACE_bulletMass=7.9704;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.275};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ICAO";
-        ACE_dragModel=1;
-        ACE_muzzleVelocities[]={650, 716, 750};
-        ACE_barrelLengths[]={254.0, 414.02, 508.0};
+    class B_762x39_Ball_F: BulletBase {
+        airFriction = -0.001548;
+        ACE_caliber = 7.92; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf
+        ACE_bulletLength = 28.956;
+        ACE_bulletMass = 7.97;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[] = {0.275};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {658, 678, 723, 743, 753}; // at 21°C, at 15°C {650, 670, 715, 735, 745} according with the AKM,AK12,AK12U,RPK initSpeed
+        ACE_barrelLengths[] = {254, 314, 415, 520, 590}; // respectively {default / AK104,AK15K / AK47,AKM,AK103,AK15 / SKS / RPK}
     };
     class B_9x21_Ball : BulletBase {
         airFriction=-0.00211064;
@@ -602,6 +602,19 @@ class CfgAmmo {
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={510, 550, 596};
         ACE_barrelLengths[]={304.8, 406.4, 609.6};
+    };
+    class B_570x28_Ball: BulletBase {
+        ACE_caliber = 5.7; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf
+        ACE_bulletLength = 21.6; // http://blog.thejustnation.org/2011/04/5-7x28mm-ammo-review/
+        ACE_bulletMass = 2; // based on the SS190
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.084}; // https://www.thefirearmblog.com/blog/2016/10/24/modern-personal-defense-weapon-calibers-4-6x30mm-hk/
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {716, 776}; // at 21°C, 715-775 m/s at 15°C according with the 50Rnd_570x28_SMG_03 initSpeed
+        ACE_barrelLengths[] = {264, 407};
+        airFriction = -0.002619; // default BI value -0.001412
     };
     class B_19mm_HE: BulletBase {
         tracerScale = 1;

@@ -70,17 +70,24 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     private _size = [_item] call FUNC(getSizeItem);
 
     [
-        5 * _size,
+        GVAR(loadTimeCoefficient) * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
-        {["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
-        {},
+        {TRACE_1("unload finish",_this); ["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
+        {TRACE_1("unload fail",_this);},
         localize LSTRING(UnloadingItem),
-        {true},
+        {
+            (_this select 0) params ["_item", "_target", "_player"];
+            
+            (alive _target)
+            && {locked _target < 2}
+            && {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+            && {_item in (_target getVariable [QGVAR(loaded), []])}
+        },
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
 } else {
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
     private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
 
-    [[LSTRING(UnloadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
+    [[LSTRING(UnloadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };

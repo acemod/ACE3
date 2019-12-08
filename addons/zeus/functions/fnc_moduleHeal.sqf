@@ -43,8 +43,9 @@ switch (false) do {
 };
 
 // Heal validated target
-if (["ace_medical"] call EFUNC(common,isModLoaded) && {EGVAR(medical,level) > 0}) then {
-    [QEGVAR(medical,treatmentAdvanced_fullHealLocal), [_unit, _unit], _unit] call CBA_fnc_targetEvent;
+if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+    TRACE_1("healing with ace_medical",_unit);
+    [QEGVAR(medical_treatment,fullHealLocal), [_unit], _unit] call CBA_fnc_targetEvent;
 } else {
     // BI's scripted revive system
     if ((missionNamespace getVariable ["bis_revive_mode", 0]) != 0) then {

@@ -96,7 +96,7 @@ double getSolution(double initSpeed, double airFriction, double angleTarget, dou
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     ZERO_OUTPUT();
     if (!strcmp(function, "version")) {
-        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     } else {
         std::vector<std::string> argStrings = splitString(function);
         double initSpeed = std::stod(argStrings[0]);
@@ -109,7 +109,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         std::stringstream sstream;
         sstream << result;
 
-        strncpy_s(output, outputSize, sstream.str().c_str(), _TRUNCATE);
+        strncpy(output, sstream.str().c_str(), outputSize);
     }
     EXTENSION_RETURN();
 }
