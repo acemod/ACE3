@@ -13,6 +13,7 @@
             <Russian>Зевс</Russian>
             <Portuguese>Zeus</Portuguese>
             <Czech>Zeus</Czech>
+            <French>Zeus</French>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>
@@ -37,7 +38,7 @@
             <Czech>Poskytuje kontrolu na různými aspekty Zeuse.</Czech>
             <German>Bietet die Steuerung verschiedener Zeus-Optionen an.</German>
             <Portuguese>Proporciona controle sobre diversos aspectos do Zeus.</Portuguese>
-            <French>Fourni le contrôle des différents aspects de Zeus.</French>
+            <French>Fournit un contrôle sur divers aspects de Zeus</French>
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
             <Russian>Позволяет контролировать различные аспекты Зевса.</Russian>
             <Italian>Fornisce controllo su vari aspetti di Zeus.</Italian>
@@ -53,7 +54,7 @@
             <Czech>Zpráva o novém Zeusovi</Czech>
             <German>Aufstiegsnachrichten</German>
             <Portuguese>Mensagens de ascensão</Portuguese>
-            <French>Message d'ascension</French>
+            <French>Message d'Ascension</French>
             <Hungarian>Felemelkedési üzenetek</Hungarian>
             <Russian>Сообщения о вознесении</Russian>
             <Italian>Messaggi di Ascesa</Italian>
@@ -69,7 +70,7 @@
             <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
             <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
-            <French>Affiche un message global quand un joueur est assigné en tant que Zeus.</French>
+            <French>Affiche des messages popup globaux lorsqu'un joueur est assigné en tant que Zeus</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
@@ -101,7 +102,7 @@
             <Czech>Vytvoří orla, který následuje kameru Zeuse.</Czech>
             <German>Erstelle einen Adler, der der Zeus-Kamera folgt.</German>
             <Portuguese>Cria uma águia que segue a câmera do Zeus</Portuguese>
-            <French>Faire apparaitre un aigle qui suit la caméra Zeus</French>
+            <French>Crée un aigle qui suit la caméra Zeus</French>
             <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
             <Russian>Спавнит орла, который следует за камерой Зевса.</Russian>
             <Italian>Crea un'aquila che segue la camera Zeus.</Italian>
@@ -117,7 +118,7 @@
             <Czech>Zvuky větru</Czech>
             <German>Windgeräusche</German>
             <Portuguese>Sons de vento</Portuguese>
-            <French>Bruit de vent</French>
+            <French>Bruits de vent</French>
             <Hungarian>Szélhangok</Hungarian>
             <Russian>Звук ветра</Russian>
             <Italian>Suoni del Vento</Italian>
@@ -133,7 +134,7 @@
             <Czech>Přehrát varování (vítr) když Zeus převezmě kontrolu nad jednotkou.</Czech>
             <German>Spiele Windgeräusche ab, wenn Zeus eine Einheit steuert.</German>
             <Portuguese>Reproduz sons de vento quando uma unidade é remotamente controlada pelo Zeus.</Portuguese>
-            <French>Joue des bruits de vent quand Zeus controle une unité.</French>
+            <French>Joue des bruits de vent lorsque Zeus contrôle une unité distante</French>
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
             <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
             <Italian>Esegui rumori di vento quando Zeus controlla un'unità in remoto.</Italian>
@@ -149,7 +150,7 @@
             <Czech>Varování před dělostřelectvem</Czech>
             <German>Artilleriewarnung</German>
             <Portuguese>Aviso de explosivos</Portuguese>
-            <French>Alerte d'équipement militaire</French>
+            <French>Alerte d'artillerie</French>
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
             <Russian>Предупреждение об арте</Russian>
             <Italian>Allarme Esplosivi</Italian>
@@ -165,7 +166,7 @@
             <Czech>Přehrát varování (rádio) když Zeus použije dělostřelectvo.</Czech>
             <German>Spiele eine Radiowarnung ab, wenn Zeus Artillerie verwendet.</German>
             <Portuguese>Reproduz uma aviso via rádio quando o Zeus usa um explosivo.</Portuguese>
-            <French>Joue un son radio quand le Zeus utilise du matériel militaire.</French>
+            <French>Diffuse un avertissement radio lorsque Zeus utilise de l'artillerie</French>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
             <Italian>Riproduci un messaggio radio quando Zeus usa esplosivi.</Italian>
@@ -197,7 +198,7 @@
             <Czech>Odhalí miny pro spojence a umístnit jejich značku na mapu.</Czech>
             <German>Melde Minen gegenüber Verbündeten und platziere entsprechende Kartenmarkierungen.</German>
             <Portuguese>Revelar minas para aliados e colocar marcadores no mapa.</Portuguese>
-            <French>Révéler les mines et placer un marqueur sur la carte.</French>
+            <French>Révèle les mines aux alliés et place des marqueurs sur la carte</French>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
             <Russian>Показывает мины союзникам и отмечает их маркерами на карте.</Russian>
             <Italian>Rivela mine ad alleati e piazza marcatori in mappa.</Italian>
@@ -245,7 +246,7 @@
             <Czech>Přepnout - Vězeň</Czech>
             <German>Gefangennahme umschalten</German>
             <Portuguese>Alternar prisioneiro</Portuguese>
-            <French>Basculer en captif</French>
+            <French>Basculer captif</French>
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
             <Italian>Attivatore Prigioniero</Italian>
@@ -274,7 +275,7 @@
             <Japanese>編集可能オブジェクトを更新</Japanese>
             <Polish>Aktualizuj edytowalne obiekty</Polish>
             <Korean>수정 가능한 물체 갱신</Korean>
-            <French>Màj les objets éditables</French>
+            <French>Màj les objets modifiables</French>
             <Italian>Aggiorna Oggetti Modificabili</Italian>
             <Chinesesimp>更新可编辑的物件</Chinesesimp>
             <Chinese>更新可編輯的物件</Chinese>
@@ -292,6 +293,7 @@
             <Russian>Режим редактирования</Russian>
             <Portuguese>Modo de edição</Portuguese>
             <Czech>Režim úprav</Czech>
+            <French>Mode d'édition</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
@@ -303,6 +305,7 @@
             <Russian>Добавить или удалить редактируемые объекты от Зевса</Russian>
             <Portuguese>Adiciona ou remove objetos editáveis do Zeus</Portuguese>
             <Czech>Přidej nebo odeber upravitelné objekty ze Zeusu</Czech>
+            <French>Ajoute ou supprime des objets modifiables de Zeus</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
