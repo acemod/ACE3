@@ -23,6 +23,7 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         displayName = CSTRING(ShowVehicleCrewInfo);
+		description = CSTRING(ShowVehicleCrewInfo_Desc);
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(showNamesForAI) {
@@ -30,13 +31,15 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         displayName = CSTRING(ShowNamesForAI);
+		description = CSTRING(ShowNamesForAI_Desc);
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(showCursorTagForVehicles) {
-        displayName = CSTRING(showCursorTagForVehicles_DisplayName);
         value = 0;
         typeName = "BOOL";
         isClientSettable = 0;
+		displayName = CSTRING(ShowCursorTagForVehicles);
+		description = CSTRING(ShowCursorTagForVehicles_Desc);
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(showSoundWaves) {
@@ -49,18 +52,19 @@ class ACE_Settings {
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(playerNamesViewDistance) {
-        displayName = CSTRING(playerNamesViewDistance_DisplayName);
         value = 5;
         typeName = "SCALAR";
         isClientSettable = 0;
+		displayName = CSTRING(PlayerNamesViewDistance);
+		description = CSTRING(PlayerNamesViewDistance_Desc);
         category = CSTRING(Module_DisplayName);
         sliderSettings[] = {0, 50, 5, 1};
     };
     class GVAR(playerNamesMaxAlpha) {
-        displayName = CSTRING(playerNamesMaxAlpha);
         value = 0.8;
         typeName = "SCALAR";
         isClientSettable = 0;
+		displayName = CSTRING(PlayerNamesMaxAlpha);
         category = CSTRING(Module_DisplayName);
         sliderSettings[] = {0, 1, 0.8, 2};
     };
@@ -68,8 +72,8 @@ class ACE_Settings {
         value = 2;
         typeName = "SCALAR";
         isClientSettable = 1;
-        displayName = CSTRING(TagSize_Name);
-        description = CSTRING(TagSize_Description);
+        displayName = CSTRING(TagSize);
+        description = CSTRING(TagSize_Desc);
         values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
         category = CSTRING(Module_DisplayName);
     };

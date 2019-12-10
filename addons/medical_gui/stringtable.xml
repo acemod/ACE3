@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_Medical_GUI_SubCategory">
             <English>GUI</English>
             <Japanese>GUI</Japanese>
-            <French>GUI</French>
+            <French>Interface graphique</French>
             <Russian>Медицинский интерфейс</Russian>
             <Portuguese>GUI</Portuguese>
             <Chinese>界面</Chinese>
@@ -14,7 +14,7 @@
             <German>Aktiviere Sanitätsaktionen</German>
             <Japanese>医療行為を有効化</Japanese>
             <Russian>Разрешить Медицинские действия</Russian>
-            <French>Activer actions médicales</French>
+            <French>Activer les actions médicales</French>
             <Portuguese>Ativar Ações Médicas</Portuguese>
             <Chinese>啟用醫療行為</Chinese>
         </Key>
@@ -23,7 +23,7 @@
             <German>Aktiviert die Sanitätsaktionen für das Interaktionsmenü und legt das Aussehen fest</German>
             <Japanese>インタラクション メニューから選択した表示方式で医療行為をできるようになります。</Japanese>
             <Russian>Включает медицинские действия для меню взаимодействия и выбирает их стиль.</Russian>
-            <French>Permet d'afficher les actions médicales dans le menu d'interaction, ainsi que de choisir le style visuel.</French>
+            <French>Permet d'afficher les actions médicales dans le menu d'interaction, et de définir leur style visuel.</French>
             <Portuguese>Ativa as ações médicas para o menu de interação e seleciona seus estilos.</Portuguese>
             <Chinese>為互動選單啟用醫療行為以及選擇其風格。</Chinese>
         </Key>
@@ -64,7 +64,7 @@
             <German>Medizinische Selbst-Interaktionen anzeigen</German>
             <Japanese>自分への医療行為を有効化</Japanese>
             <Russian>Разрешить Медицинские действия на себе</Russian>
-            <French>Activer actions médicales sur soi-même</French>
+            <French>Activer les actions médicales sur soi-même</French>
             <Portuguese>Ativar ações médicas em si mesmo</Portuguese>
             <Chinese>啟用自我醫療行為</Chinese>
         </Key>
@@ -82,7 +82,7 @@
             <German>Aktiviere das Sanitätsmenü</German>
             <Japanese>医療メニューを有効化</Japanese>
             <Russian>Разрешить Медицинское меню</Russian>
-            <French>Activer menu médical</French>
+            <French>Activer le menu médical</French>
             <Portuguese>Ativar Menu Médico</Portuguese>
             <Chinese>啟用醫療選單</Chinese>
         </Key>
@@ -91,7 +91,7 @@
             <German>Aktiviere die Nutzung des Sanitätsmenüs durch eine Tastenkombination oder durch das Interaktionsmenü</German>
             <Japanese>割り当てられたキーかインタラクション メニューから医療メニューを使えるようになります。</Japanese>
             <Russian>Позволяет использовать Медицинское меню через связку клавиш или меню взаимодействия.</Russian>
-            <French>Permet l'utilisation du menu médical via une touche, ou via le menu d'interaction.</French>
+            <French>Permet l'utilisation du menu médical via le menu d'interaction ou l'appui d'une touche.</French>
             <Portuguese>Ativa o uso do Menu Médico atráves da Tecla ou Menu de Interação.</Portuguese>
             <Chinese>啟用以互動選單或者按鍵綁定所呼出的高效醫療選單</Chinese>
         </Key>

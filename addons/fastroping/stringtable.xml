@@ -35,7 +35,7 @@
             <English>Prepare fast roping system</English>
             <German>Bereite "Fast Roping"-System vor</German>
             <Polish>Przygotuj system zjazdu na linach</Polish>
-            <French>Préparer le système de descente rapide</French>
+            <French>Préparer le système de d'aérocordage</French>
             <Spanish>Preparar el sistema fast roping</Spanish>
             <Italian>Prepara le corde</Italian>
             <Czech>Připravit systém slaňování</Czech>
@@ -57,7 +57,7 @@
             <Polish>Schowaj system zjazdu na linach</Polish>
             <Russian>Спрятать систему спуска</Russian>
             <Portuguese>Recolher o sistema de descida rápida</Portuguese>
-            <French>Arrimer le système de descente rapide</French>
+            <French>Désactiver le système d'aérocordage</French>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -78,7 +78,7 @@
             <English>Fast rope</English>
             <German>Abseilen</German>
             <Polish>Zjedź na linie</Polish>
-            <French>Descente rapide</French>
+            <French>Aérocordage - Descendre en rappel</French>
             <Spanish>Descender por la cuerda</Spanish>
             <Italian>Scendi dalla corda</Italian>
             <Czech>SLANIT</Czech>
@@ -93,7 +93,7 @@
             <English>Cut ropes</English>
             <German>Seile abwerfen</German>
             <Polish>Odetnij liny</Polish>
-            <French>Couper les cordes</French>
+            <French>Aérocordage - Couper les cordes</French>
             <Spanish>Cortar cuerdas</Spanish>
             <Italian>Taglia le corde</Italian>
             <Czech>Odříznout lano</Czech>
@@ -123,7 +123,7 @@
             <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
             <German>Rüstet den ausgewählten Helicopter mit einem Fast Rope Insertion Extraction System aus</German>
             <Polish>Wyposaża wybrany helikopter w zestaw Fast Rope Insertion Extraction System</Polish>
-            <French>Equipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System</French>
+            <French>Équipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System</French>
             <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción Extracción Fast Rope</Spanish>
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
@@ -139,7 +139,7 @@
             <German>EINHEITEN ABSEILEN LASSEN</German>
             <Italian>SCENDI DALLE CORDE</Italian>
             <Portuguese>Equipa o helicóptero selecionado com o Fast Rope Insertion Extraction System</Portuguese>
-            <French>LAISSER LES UNITES UTILISER LA CORDE </French>
+            <French>LAISSER LES UNITÉS UTILISER LA CORDE </French>
             <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
             <Japanese>ユニットへファスト ロープをさせる</Japanese>
             <Polish>ZJAZD NA LINACH</Polish>
@@ -150,7 +150,7 @@
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>
             <German>12m Seile einsetzen</German>
-            <French>Déployer les cordes 12m</French>
+            <French>Déployer les cordes de 12 m</French>
             <Japanese>12m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 12 m.</Polish>
             <Russian>Выпустить 12 м канат</Russian>
@@ -160,7 +160,7 @@
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
             <English>Deploy 15m ropes</English>
             <German>15m Seile einsetzen</German>
-            <French>Déployer les cordes 15m</French>
+            <French>Déployer les cordes de 15 m</French>
             <Japanese>15m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 15 m.</Polish>
             <Russian>Выпустить 15 м канат</Russian>
@@ -170,7 +170,7 @@
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
             <English>Deploy 18m ropes</English>
             <German>18m Seile einsetzen</German>
-            <French>Déployer les cordes 18m</French>
+            <French>Déployer les cordes de 18 m</French>
             <Japanese>18m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 18 m.</Polish>
             <Russian>Выпустить 18 м канат</Russian>
@@ -180,7 +180,7 @@
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
             <English>Deploy 27m ropes</English>
             <German>27m Seile einsetzen</German>
-            <French>Déployer les cordes 27m</French>
+            <French>Déployer les cordes de 27 m</French>
             <Japanese>27m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 27 m.</Polish>
             <Russian>Выпустить 27 м канат</Russian>
@@ -190,7 +190,7 @@
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
             <English>Deploy 36m ropes</English>
             <German>36m Seile einsetzen</German>
-            <French>Déployer les cordes 36m</French>
+            <French>Déployer les cordes de 36 m</French>
             <Japanese>36m ロープを展開</Japanese>
             <Polish>Wysuń linę o długości 36 m.</Polish>
             <Russian>Выпустить 36 м канат</Russian>
@@ -220,7 +220,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_12_Display">
             <English>Rope 12.2 meters</English>
             <German>12.2 Meter Seil</German>
-            <French>Corde 12.2 mètres</French>
+            <French>Corde de 12.2 mètres</French>
             <Japanese>ロープ (12.2 メートル)</Japanese>
             <Polish>Lina, długość 12,2 m.</Polish>
             <Russian>Канат 12.2 метров</Russian>
@@ -230,7 +230,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_15_Display">
             <English>Rope 15.2 meters</English>
             <German>15.2 Meter Seil</German>
-            <French>Corde 15.2 mètres</French>
+            <French>Corde de 15.2 mètres</French>
             <Japanese>ロープ (15.2 メートル)</Japanese>
             <Polish>Lina, długość 15,2 m.</Polish>
             <Russian>Канат 15.2 метров</Russian>
@@ -240,7 +240,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_18_Display">
             <English>Rope 18.3 meters</English>
             <German>18.3 Meter Seil</German>
-            <French>Corde 18.3 mètres</French>
+            <French>Corde de 18.3 mètres</French>
             <Japanese>ロープ (18.3 メートル)</Japanese>
             <Polish>Lina, długość 18,3 m.</Polish>
             <Russian>Канат 18.3 метров</Russian>
@@ -250,7 +250,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_27_Display">
             <English>Rope 27.4 meters</English>
             <German>27.4 Meter Seil</German>
-            <French>Corde 27.4 mètres</French>
+            <French>Corde de 27.4 mètres</French>
             <Japanese>ロープ (27.4 メートル)</Japanese>
             <Polish>Lina, długość 27,4 m.</Polish>
             <Russian>Канат 27.4 метров</Russian>
@@ -260,7 +260,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_36_Display">
             <English>Rope 36.6 meters</English>
             <German>36.6 Meter Seil</German>
-            <French>Corde 36.6 mètres</French>
+            <French>Corde de 36.6 mètres</French>
             <Japanese>ロープ (36.6 メートル)</Japanese>
             <Polish>Lina, długość 36,6 m.</Polish>
             <Russian>Канат 36.6 метров</Russian>

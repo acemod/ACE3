@@ -675,7 +675,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_modIconsTooltip">
             <English>Show / hide mod icons for the left panel</English>
-            <French>Affiche / masque les icônes de mod du panneau gauche</French>
+            <French>Affiche/masque les icônes de mod du panneau gauche</French>
             <Polish>Pokaż / ukryj ikony modów w lewym panelu</Polish>
             <Japanese>左パネルにある MOD アイコンの表示 / 非表示をします</Japanese>
             <Italian>Mostra / nascondi le icone delle mod dal pannello sinistro</Italian>
@@ -949,7 +949,7 @@
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
             <German>Aktiviere die Gesichter-, Stimmen- und Abzeichenübersicht</German>
-            <French>Activer les onglets visages / voix / insignes</French>
+            <French>Activer les onglets visages/voix/insignes</French>
             <Japanese>顔 / 声 / 記章タブを有効化</Japanese>
             <Chinesesimp>启用脸谱/声音/徽章/选项 </Chinesesimp>
             <Chinese>啟用臉譜/聲音/徽章選項</Chinese>

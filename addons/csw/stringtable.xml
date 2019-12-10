@@ -86,7 +86,7 @@
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
             <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
             <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas. Munição carregada é reduzida para um único carregador.</Portuguese>
-            <French>Utilise ACE pour l'assemblage / le désassemblage des armes statiques supportées.\nLes munitions chargées sont réduites à un seul chargeur.</French>
+            <French>Utilise ACE pour l'assemblage/le désassemblage des armes statiques supportées\nLes munitions chargées sont réduites à un seul chargeur</French>
             <Japanese>対応している設置型火器に ACE3 の設置と解体を使用します。装填済みの弾倉は 1 つの弾倉に減少します。</Japanese>
             <Chinese>使用ACE來組裝/拆解固定型武器。上膛的限制為單個彈匣。</Chinese>
         </Key>
@@ -100,7 +100,7 @@
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
             <English>Store extra magazines next to static weapon</English>
             <Portuguese>Carregar munições extras próximo à arma estática</Portuguese>
-            <French>Range les chargeurs supplémentaires à côté de l'arme statique.</French>
+            <French>Range les chargeurs supplémentaires à côté de l'arme statique</French>
             <Japanese>次の設置型火器用に過剰弾薬を保持します。</Japanese>
             <Chinese>在固定型武器旁存放額外彈匣</Chinese>
         </Key>
@@ -114,7 +114,7 @@
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
             <Portuguese>Permite carregamento e descarregamento de munições</Portuguese>
-            <French>Permet le chargement et le déchargement des chargeurs.</French>
+            <French>Permet le chargement et le déchargement des chargeurs</French>
             <Japanese>弾薬の装填と除去を許可します。</Japanese>
             <Chinese>允許裝填或卸載彈匣</Chinese>
         </Key>
@@ -128,7 +128,7 @@
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
             <Portuguese>Escala o tempo requerido para montar e recarregar armas estáticas.</Portuguese>
-            <French>Définit l'échelle de temps nécessaire à l'assemblage et au rechargement des armes statiques.</French>
+            <French>Définit l'échelle de temps nécessaire à l'assemblage et au rechargement des armes statiques</French>
             <Japanese>設置型火器の設置と再装填時間を管理できます。</Japanese>
             <Chinese>設置組裝及裝填組裝固定型武器</Chinese>
         </Key>
@@ -142,7 +142,7 @@
         <Key ID="STR_ACE_CSW_dragAfterDeploy_description">
             <English>After deploying a tripod, start dragging it to a precise location</English>
             <Portuguese>Assim que montar um tripé, automaticamente começa a arrastá-lo para um posicionamento mais preciso</Portuguese>
-            <French>Aussitôt après avoir déployé un trépied, le joueur commence automatiquement à le glisser pour le positionner plus précisément.</French>
+            <French>Aussitôt après avoir déployé un trépied, le joueur commence automatiquement à le glisser pour le positionner plus précisément</French>
             <Japanese>三脚を設置後、動かせるよう三脚を引きずるようにします。</Japanese>
             <Chinese>在部署三腳架後，開始拖動它使其在你所要的精準位置</Chinese>
         </Key>

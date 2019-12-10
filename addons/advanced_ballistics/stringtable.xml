@@ -72,7 +72,7 @@
             <German>Aktiviert die erweiterte Ballistik</German>
             <Czech>Aktivuje pokročilou balistiku</Czech>
             <Portuguese>Ativa balística avançada</Portuguese>
-            <French>Activer la balistique avancée</French>
+            <French>Active la balistique avancée</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
             <Italian>Abilita Balistica Avanzata</Italian>
@@ -103,7 +103,7 @@
             <Korean>각 사격 사이에 총구속도 변화를 시뮬레이션 합니다.</Korean>
             <Chinese>模擬每發子彈的槍口初速都略有不同</Chinese>
             <Chinesesimp>模拟每发子弹的枪口初速都略有不同</Chinesesimp>
-            <French>Simule de légères variations de vitesse initiale entre chaque tir.</French>
+            <French>Simule de légères variations de vitesse initiale entre chaque tir</French>
             <Polish>Symuluje lekkie zmiany w prędkości wylotowej między każdym strzałem</Polish>
             <Russian>Имитирует небольшие изменения начальной скорости при каждом выстреле</Russian>
             <Portuguese>Simula pequenas variações na velocidade do Freio de Boca entre cada tiro</Portuguese>
@@ -132,7 +132,7 @@
             <German>Munitionstemperatur hat Einfluss auf die Mündungsgeschwindigkeit</German>
             <Czech>Úsťová rychlost je závislá na teplotě munice</Czech>
             <Portuguese>A velocidade de saída varia com a temperatura da munição</Portuguese>
-            <French>La vitesse initiale varie en fonction de la température des munitions.</French>
+            <French>La vitesse initiale varie en fonction de la température des munitions</French>
             <Hungarian>A kezdősebesség a lőszer hőmérsékletétől függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от температуры</Russian>
             <Italian>La velocità dello sparo varia a seconda della temperatura delle munizioni</Italian>
@@ -164,7 +164,7 @@
             <German>Lauflänge beeinflusst Mündungsgeschwindigkeit</German>
             <Czech>Úsťová rychlost je závislá na délce hlavně</Czech>
             <Portuguese>A velocidade de saída caria com o comprimento do cano</Portuguese>
-            <French>La vitesse initiale varie en fonction de la longueur du canon.</French>
+            <French>La vitesse initiale varie en fonction de la longueur du canon</French>
             <Hungarian>A kezdősebesség a cső hosszától függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от длины ствола</Russian>
             <Italian>La velocità di sparo varia a seconda della lunghezza della canna</Italian>
@@ -180,7 +180,7 @@
             <German>Geschossspureffekt aktivieren</German>
             <Czech>Povolit efekt trasírek</Czech>
             <Portuguese>Ativa efeito traçante de projétil</Portuguese>
-            <French>Activer l'effet balle traçante</French>
+            <French>Activer l'effet de balle traçante</French>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
@@ -228,7 +228,7 @@
             <German>Definiert das Intervall zwischen den einzelnen Simulationsschritten</German>
             <Czech>Určuje interval mezi každým výpočtem</Czech>
             <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
-            <French>Définit l'intervalle entre chacune des étapes de calcul.</French>
+            <French>Définit l'intervalle entre chacune des étapes de calcul</French>
             <Hungarian>Meghatározza a számítási lépések közötti időintervallumot</Hungarian>
             <Russian>Определяет временной интервал между вычислениями</Russian>
             <Italian>Definisce l'intervallo tra ogni step di calcolo</Italian>

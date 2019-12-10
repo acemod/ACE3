@@ -22,7 +22,7 @@
             <Polish>Zezwala na zmianę zachowania zaawansowanego trybu rzucania.</Polish>
             <German>Erlaubt es, das Verhalten des erweiterten Wurfsystems zu ändern.</German>
             <Korean>고급 투척 행위를 허가합니다</Korean>
-            <French>Permet de changer la configuration du lancé amélioré.</French>
+            <French>Permet de changer la configuration du lancé amélioré</French>
             <Italian>Permette il cambiamento della modalità di tiro.</Italian>
             <Chinese>允許使用更多不同的投擲方式</Chinese>
             <Chinesesimp>允许使用更多不同的投掷方式</Chinesesimp>
@@ -50,7 +50,7 @@
             <Polish>Aktywuje system zaawansowanego rzucania.</Polish>
             <German>Aktiviert das erweiterte Wurfsystem.</German>
             <Korean>고급 투척을 활성화 합니다</Korean>
-            <French>Active le système de lancé amélioré.</French>
+            <French>Active le système de lancé amélioré</French>
             <Italian>Abilita il sistema di lancio avanzato.</Italian>
             <Chinese>啟用進階投擲系統</Chinese>
             <Chinesesimp>启用进阶投掷系统</Chinesesimp>
@@ -78,7 +78,7 @@
             <Polish>Wyświetla wizualizację trasy przelotu granatu.</Polish>
             <German>Aktiviert die Visualisierung des Wurfbogens (wohin das Objekt geworfen werden wird).</German>
             <Korean>투척 궤도를 시각화 합니다(투척물이 어디로 갈지)</Korean>
-            <French>Active la visualisation de l'arc de lancé (où l'objet lancé va atterrir).</French>
+            <French>Active la visualisation de l'arc de lancé (la trajectoire de vol de l'objet)</French>
             <Italian>Abilita la visualizzazione dell'arco del tiro (dove l'oggetto lanciabile volerà).</Italian>
             <Chinese>顯示投擲軌道幫助投擲</Chinese>
             <Chinesesimp>显示投掷轨道帮助投掷</Chinesesimp>
@@ -104,7 +104,7 @@
             <Polish>Wyświetla podpowiedzi sterowania myszą kiedy obiekt miotany jest w ręku.</Polish>
             <German>Aktiviert visuelle Hinweise zur Maussteuerung, wenn ein Objekt zum Werfen vorbereitet wird.</German>
             <Korean>투척물을 준비시 마우스 조작을 시각화해서 보여줍니다</Korean>
-            <French>Active les aides visuels pour les controles à la souris lorsqu'un lancé est préparé.</French>
+            <French>Active les aides visuelles pour les contrôles à la souris lorsqu'un lancé est préparé</French>
             <Italian>Abilita la visualizzazione dei controlli del mouse quando l'oggetto lanciabile è pronto.</Italian>
             <Chinese>開啟後會在準備投擲時, 顯示滑鼠相關操作</Chinese>
             <Chinesesimp>开启后会在准备投掷时, 显示滑鼠相关操作</Chinesesimp>
@@ -117,7 +117,7 @@
             <Polish>Zezwól na podnoszenie obiektów miotanych</Polish>
             <German>Aktiviere Aufheben von Wurfobjekten</German>
             <Korean>투척물 줍기 활성화</Korean>
-            <French>Active la récupération des objets lancés</French>
+            <French>Active le ramassage des objets lancés</French>
             <Italian>Abilita Raccogli Oggetti</Italian>
             <Chinese>啟用可撿取地面投擲物</Chinese>
             <Chinesesimp>启用可捡取地面投掷物</Chinesesimp>
@@ -130,7 +130,7 @@
             <Polish>Umożliwia podnoszenie obiektów miotanych z ziemi.</Polish>
             <German>Aktiviert die Möglichkeit, geworfene Objekte wieder vom Boden aufzuheben.</German>
             <Korean>땅에 떨어진 투척물을 주울 수 있게 해줍니다.</Korean>
-            <French>Active la capacité de récupérer les objets lancés sur le sol.</French>
+            <French>Active la possibilité de ramasser des objets lancés sur le sol</French>
             <Italian>Abilita la possibilità di raccogliere un oggetto lanciabile da terra.</Italian>
             <Chinese>啟用後, 可撿取地面上的投擲物</Chinese>
             <Chinesesimp>启用后, 可捡取地面上的投掷物</Chinesesimp>
@@ -156,7 +156,7 @@
             <Polish>Umożliwia podnoszenie obiektów miotanych przyczepionych do innych obiektów.</Polish>
             <German>Aktiviert die Möglichkeit, befestigte Wurfobjekte erneut aufzunehmen.</German>
             <Korean>부착된 투척물을 주울 수 있게 해줍니다.</Korean>
-            <French>Active la capacité à ramasser les objets lançables attaché à d'autres objets.</French>
+            <French>Active la possibilité de ramasser des objets lançables attaché à d'autres objets</French>
             <Italian>Abilita la possibilità di raccogliere gli oggetti lanciabili dagli altri oggetti. </Italian>
             <Chinese>啟用後, 可撿取附著在物件上的投擲物</Chinese>
             <Chinesesimp>启用后, 可捡取附着在物件上的投掷物</Chinesesimp>
@@ -169,7 +169,7 @@
             <Polish>Przygotuj/zmień ob. miotany</Polish>
             <German>Wurfobjekt vorbereiten/wechseln</German>
             <Korean>투척물 준비/변경</Korean>
-            <French>Préparer/changer d'objet</French>
+            <French>Préparer/changer d'objet jetable</French>
             <Italian>Prepara/Cambia Oggetto lanciabile</Italian>
             <Chinese>準備/變更投擲物</Chinese>
             <Chinesesimp>准备/变更投掷物</Chinesesimp>

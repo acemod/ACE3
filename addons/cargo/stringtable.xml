@@ -100,7 +100,7 @@
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
             <Italian>Abilita il modulo di caricamento in cargo</Italian>
-            <French>Active la possibilité de charger du matériel dans un module de fret.\n(véhicule / container)</French>
+            <French>Active la possibilité de charger du matériel dans un module de fret (véhicule/container)</French>
             <Japanese>カーゴ モジュールで積み込みを有効化</Japanese>
             <Korean>화물 모듈에 싣기를 활성화합니다</Korean>
             <Chinese>啟用貨物裝載功能</Chinese>
@@ -351,7 +351,7 @@
             <Italian>Modifica quanto tempo ci impiega a caricare o scaricare gli oggetti.\n Tempo, in secondi, è la dimensione dell'oggetto moltiplicata per questo valore</Italian>
             <Russian>Изменяет время для загрузки/выгрузки предметов. \n Время (сек) - это размер предмета, умноженный на это значение.</Russian>
             <Portuguese>Coeficiente de quanto tempo leva para carregar/descarregar itens.\nTempo, em segundos, é o tamanho do objeto multiplicado por esse valor.</Portuguese>
-            <French>Modifie le temps nécessaire pour charger / décharger des objets.\nLe temps, en secondes, est calculé en multipliant la taille de l'élément par ce coefficient. </French>
+            <French>Modifie le temps nécessaire pour charger/décharger des objets.\nLe temps, en secondes, est calculé en multipliant la taille de l'élément par ce coefficient. </French>
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
         </Key>
     </Package>

@@ -33,7 +33,7 @@
             <Japanese>高倍率スコープでACE スコープ調節を有効化</Japanese>
             <Korean>고성능 조준경 조절 나사 활성화</Korean>
             <Polish>Włącz pokrętła regulacyjne </Polish>
-            <French>Active les tourelles de réglage des lunettes de visée à fort grossissement.</French>
+            <French>Active les tourelles de réglage des lunettes de visée à fort grossissement</French>
             <Italian>Abilita la regolazione delle torrette nei mirini a lunga gittata</Italian>
             <Chinesesimp>开启高倍率瞄准镜归零调节</Chinesesimp>
             <Chinese>開啟高倍率瞄準鏡歸零調節</Chinese>
@@ -59,7 +59,7 @@
             <Japanese>高倍率スコープで調整の使用を強制させます</Japanese>
             <Korean>고성능 조준경의 조절 나사 사용을 강제합니다</Korean>
             <Polish>Wymuś użycie pokręteł regulacyjnych dla celowników o dużym powiększeniu</Polish>
-            <French>Oblige l'utilisation des tourelles de réglage sur les lunettes de visée à fort grossissement.</French>
+            <French>Oblige l'utilisation des tourelles de réglage sur les lunettes de visée à fort grossissement</French>
             <Italian>Forza l'uso della regolazione nei mirini a lunga gittata</Italian>
             <Chinesesimp>强制为高倍率瞄准镜开启归零调节</Chinesesimp>
             <Chinese>強制為高倍率瞄準鏡開啟歸零調節</Chinese>
@@ -111,7 +111,7 @@
             <Japanese>'defaultZeroRange'設定を使う高倍率スコープのゼロイン距離を上書きします</Japanese>
             <Korean>기존 고성능 조준경의 영점거리에 '기본설정 영점거리' 를 덮어씌웁니다</Korean>
             <Polish>Używa 'defaultZeroRange' zamiast ustawionej odległości zerowania dla celowników o duzym przybliżeniu </Polish>
-            <French>Utilise le paramètre "Distance de zérotage par défaut" pour remplacer la distance de zérotage des lunettes de visée à fort grossissement.</French>
+            <French>Utilise le paramètre "Distance de zérotage par défaut" pour remplacer la distance de zérotage des lunettes de visée à fort grossissement</French>
             <Italian>Usa le impostazioni di "defaultZeroRange" (Portata Zero Predefinita) per sovrascrivere la portata zero dei mirini a lunga gittata </Italian>
             <Chinesesimp>使用'defaultZeroRange'来为高倍率瞄准镜覆写预设归零距离</Chinesesimp>
             <Chinese>使用'defaultZeroRange'來為高倍率瞄準鏡覆寫預設歸零距離</Chinese>
@@ -137,7 +137,7 @@
             <Japanese>高倍率スコープのゼロイン距離はこの設定になります</Japanese>
             <Korean>고성능 조준경이 정해진 수만큼 영점거리를 맞추게 됩니다.</Korean>
             <Polish>Celowniki o dużym powiększeniu będą zerowane dla tej odległości</Polish>
-            <French>Le zérotage des lunettes de visée à fort grossissement sera effectué pour cette distance.</French>
+            <French>Le zérotage des lunettes de visée à fort grossissement sera effectué pour cette distance</French>
             <Italian>I mirini a lunga gittata verranno azzerrati a questa distanza</Italian>
             <Chinesesimp>高倍率瞄准镜将归零在这个距离上</Chinesesimp>
             <Chinese>高倍率瞄準鏡將歸零在這個距離上</Chinese>
@@ -228,7 +228,7 @@
             <Japanese>高度により圧が減少</Japanese>
             <Korean>고도에 맞춰 기압 설정</Korean>
             <Polish>Ciśnienie określone na podstawie wysokości</Polish>
-            <French>Déduire la pression selon l'altitude</French>
+            <French>Déterminer la pression selon l'altitude</French>
             <Italian>Ricava la pressione dall'altitudine</Italian>
             <Chinesesimp>高度影响大气压力</Chinesesimp>
             <Chinese>高度影響大氣壓力</Chinese>
@@ -241,7 +241,7 @@
             <Japanese>標高により気圧が減少されます</Japanese>
             <Korean>주변 고도에 맞춰 기압을 설정합니다</Korean>
             <Polish>Określ ciśnienie barometryczne na podstawie wysokości terenu</Polish>
-            <French>Déduire la pression barométrique en fonction de l'altitude du terrain</French>
+            <French>Détermine la pression barométrique en fonction de l'altitude du terrain</French>
             <Italian>Ricava la pressione barometrica dall'altitudine del terreno</Italian>
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
@@ -259,7 +259,7 @@
             <Polish>Wykorzystaj legacy UI</Polish>
             <Russian>Использовать устаревший интерфейс</Russian>
             <Portuguese>Usar Interface Antiga</Portuguese>
-            <French>Utiliser l'ancienne UI</French>
+            <French>Utiliser l'ancienne IU</French>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_description">
             <English>Displays elevation and windage with signed numbers</English>
@@ -272,7 +272,7 @@
             <Polish>Wyświetla elewację i tarcie powietrza poprzez podpisane liczby</Polish>
             <Russian>Отображает горизонтальные и вертикальные поправки с подписанными числами</Russian>
             <Portuguese>Exibir elevação e vento com número sinalizados.</Portuguese>
-            <French>Affiche les valeurs de hausse et de dérive avec des nombres signés.</French>
+            <French>Affiche les valeurs de hausse et de dérive avec des nombres signés</French>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
             <English>Simplified zeroing</English>
@@ -298,7 +298,7 @@
             <Polish>Replikuje system zerowania, dla celowników karabinowych, z domyślnej gry.</Polish>
             <Russian>Использует ванильную систему прицеливания для прицелов</Russian>
             <Portuguese>Imita o sistema de zeramento vanilla para miras de rifle.</Portuguese>
-            <French>Reproduit le système de zérotage vanilla pour les lunettes.</French>
+            <French>Reproduit le système de zérotage vanilla pour les lunettes</French>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>

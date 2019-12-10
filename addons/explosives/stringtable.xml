@@ -758,7 +758,7 @@
             <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
             <Czech>Vyžadovat specialistu na zneškodnění výbušniny? Výchozí: Ne</Czech>
             <Portuguese>Requer especialista em explosivos para desativar explosivos? Padrão: Não</Portuguese>
-            <French>Seul un spécialiste peut désamorcer des explosifs.</French>
+            <French>Seul un spécialiste peut désamorcer des explosifs</French>
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
@@ -790,7 +790,7 @@
             <German>Entschärfungszeit für Nicht-Sprengstoffexperten erhöhen? Standard: Ja</German>
             <Czech>Zvýšit čas potřebný k dokončení akce pokud není specialista? Výchozí: Ano</Czech>
             <Portuguese>Aumentar o tempo necessário para completar ações por não especialistas? Padrão: Sim</Portuguese>
-            <French>Augmente le temps nécessaire au désamorçage pour les unités non spécialisées.</French>
+            <French>Augmente le temps nécessaire au désamorçage pour les unités non spécialisées</French>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
@@ -822,7 +822,7 @@
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
-            <French>Permet à certains explosifs d'exploser durant le désamorçage.</French>
+            <French>Certains explosifs exploseront durant le désamorçage. Valeur par défaut : activé</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>

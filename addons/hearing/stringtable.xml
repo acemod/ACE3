@@ -150,7 +150,7 @@
             <German>Deaktiviert Ohrklingeln wenn der Spieler Hörschäden davonträgt.</German>
             <Spanish>Desactiva el efecto de zumbido cuando el jugador recibe daño auditivo.</Spanish>
             <Polish>Usuń szum w uszach przy chwilowej utracie słuchu.</Polish>
-            <French>Enlève l'effet d'acouphène lorsqu'un joueur subit des dommages auditifs.</French>
+            <French>Enlève l'effet d'acouphène lorsqu'un joueur subit des dommages auditifs</French>
             <Italian>Quando il giocatore riceve danni all'udito, non fa sentire i fischi nelle orecchie</Italian>
             <Portuguese>Remove o efeito de zunido quando o jogador recebe dano na audição</Portuguese>
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
@@ -200,7 +200,7 @@
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
             <Italian>Riduci l'abilità uditiva quando il giocatore riceve danno uditivo</Italian>
-            <French>Réduit la capacité auditive du joueur lorsqu'il subit des dommages auditifs.</French>
+            <French>Réduit la capacité auditive du joueur lorsqu'il subit des dommages auditifs</French>
             <Japanese>音による損傷をうけ、聴覚が減る可能性があります</Japanese>
             <Korean>청력에 손상을 입으면 듣는 소리가 감소합니다.</Korean>
             <Chinesesimp>当玩家听力受损时降低听力能力?</Chinesesimp>
@@ -231,7 +231,7 @@
             <Spanish>Efecto Zeus RC</Spanish>
             <Czech>Vliv na Zeus RC</Czech>
             <Italian>Effetto Zeus RC</Italian>
-            <French>Effet sur le CàD du Zeus</French>
+            <French>Affecte le CàD Zeus</French>
             <Japanese>Zeus RC への効果</Japanese>
             <Korean>Zeus RC 효과</Korean>
             <Chinesesimp>启用效果在宙斯远程遥控</Chinesesimp>
@@ -246,7 +246,7 @@
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
             <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
             <Italian>Consenti alle unità controllate in remoto da Zeus di ricevere danni all'udito.</Italian>
-            <French>Permet aux unités contrôlées à distance de subir des dommages auditifs.</French>
+            <French>Permet aux unités contrôlées à distance de subir des dommages auditifs</French>
             <Japanese>Zeus により遠隔操作されたユニットにも、聴覚へ損傷を受けるようにします。</Japanese>
             <Korean>Zeus가 원격으로 청력손실을 입힐 수 있게 합니다.</Korean>
             <Chinesesimp>设定宙斯远程遥控的单位也会受到耳鸣的效果。</Chinesesimp>
@@ -328,7 +328,7 @@
             <Polish>Głośność podczas używania stoperów.</Polish>
             <Russian>Громкость при одетых берушах</Russian>
             <Portuguese>Volume quando estiver utilizando um Protetor Auricular</Portuguese>
-            <French>Volume audio perçu par les joueurs portant des bouchons anti bruit.</French>
+            <French>Volume audio perçu par les joueurs portant des bouchons anti bruit</French>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
@@ -352,7 +352,7 @@
             <Polish>Głośność podczas bycia nieprzytomnym.</Polish>
             <Russian>Громкость при потере сознания</Russian>
             <Portuguese>Volume enquanto inconsciente</Portuguese>
-            <French>Volume perçu par les joueurs inconscients.</French>
+            <French>Volume perçu par les joueurs inconscients</French>
         </Key>
     </Package>
 </Project>

@@ -93,7 +93,7 @@
             <Russian>Расширяет текущие возможности погоды с учетом температуры, влажности и давления</Russian>
             <Portuguese>Expande o clima existente com temperatura, humidade e pressão do ar.</Portuguese>
             <Czech>Rozšiřuje stávající počasí o teplotu, vlhkost a tlak vzduchu.</Czech>
-            <French>Améliore le module météo existant en y ajoutant la température, l'humidité et la pression atmosphérique</French>
+            <French>Améliore le module météo existant en y ajoutant la température, l'humidité et la pression atmosphérique.</French>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -118,7 +118,7 @@
             <German>Definiert das Intervall (in Sekunden) zwischen Wetteraktualisierungen</German>
             <Czech>Určit interval (v sekundách) mezi aktualizacemi počasí</Czech>
             <Portuguese>Defina o intervalo (em segundos) entre as atualizações de clima</Portuguese>
-            <French>Définit l'intervalle (en secondes) entre les mises à jour des conditions météo</French>
+            <French>Définit l'intervalle (en secondes) entre les mises à jour des conditions météo.</French>
             <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
             <Russian>Определяет интервал (в секундах) между обновлениями погоды</Russian>
             <Italian>Definisce l'intervallo(in secondi) tra aggiornamenti del meteo</Italian>
@@ -153,7 +153,7 @@
             <Russian>Включает симуляцию ветра на основе текущей местности (переписывает ванильный ветер)</Russian>
             <Portuguese>Ativar a simulação de vento dos mapas. (sobrepõe vento vanilla)</Portuguese>
             <Czech>Povoluje simulaci větru založenou na mapě (přepíše původní vítr)</Czech>
-            <French>Active la simulation du vent basée sur la carte (écrase le vent vanilla)</French>
+            <French>Active la simulation du vent basée sur la carte (écrase le vent vanilla).</French>
         </Key>
     </Package>
 </Project>
