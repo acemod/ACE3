@@ -31,9 +31,6 @@ GVAR(ppeffectBlur) = -1;
     ["vehicle", LINKFUNC(refreshGoggleType), false] call CBA_fnc_addPlayerEventHandler;
     ["turret", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
 
-    ["ace_firedPlayer", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerVehicle", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler;
-
     // handle only brightness if effects are disabled
     GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];
     GVAR(ppEffectNVGBrightness) ppEffectForceInNVG true;

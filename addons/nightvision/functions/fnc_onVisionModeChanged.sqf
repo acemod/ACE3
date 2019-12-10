@@ -44,6 +44,11 @@ if (_visionMode == 1) then {
         [true] call FUNC(setupDisplayEffects);
         [] call FUNC(refreshGoggleType);
         GVAR(PFID) = [LINKFUNC(pfeh), 0, []] call CBA_fnc_addPerFrameHandler;
+        GVAR(firedEHs) = [
+            ["ace_firedPlayer", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler,
+            ["ace_firedPlayerVehicle", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler
+        ];
+        TRACE_1("Added fired EHs",GVAR(firedEHs));
 
         // Fade in from black when turning nvg on
         QGVAR(turnOnEffect) cutText ["", "BLACK IN", 2.5];

@@ -7,6 +7,7 @@
     [0,2,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true, // isGlobal
     {
+        TRACE_1("effectScaling setting changed",_this);
         GVAR(ppEffectNVGBrightness) ppEffectEnable (
             (GVAR(effectScaling) == 0) && {currentVisionMode ACE_player == 1}
         );
@@ -18,6 +19,10 @@
             [GVAR(PFID)] call CBA_fnc_removePerFrameHandler;
             GVAR(PFID) = -1;
             GVAR(nextEffectsUpdate) = -1;
+            (missionNamespace getVariable [QGVAR(firedEHs), []]) params [["_firedPlayerID", -1], ["_firedPlayerVehicleID", -1]];
+            TRACE_2("removing fired EHs",_firedPlayerID,_firedPlayerVehicleID);
+            ["ace_firedPlayer", _firedPlayerID] call CBA_fnc_removeEventHandler,
+            ["ace_firedPlayerVehicle", _firedPlayerVehicleID] call CBA_fnc_removeEventHandler,
         } else {
             // Start PFH if scaling was previously set to 0
             if ((currentVisionMode ACE_player == 1) && {!GVAR(running)}) then {
@@ -31,6 +36,11 @@
                 };
 
                 GVAR(PFID) = [LINKFUNC(pfeh), 0, []] call CBA_fnc_addPerFrameHandler;
+                GVAR(firedEHs) = [
+                    ["ace_firedPlayer", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler,
+                    ["ace_firedPlayerVehicle", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler
+                ];
+                TRACE_1("Added fired EHs",GVAR(firedEHs));
             };
         };
     }
