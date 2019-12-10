@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Dynamically adds "Defuse" actions to nearby mines when interact_menu is opened.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_interactionType"];
 TRACE_1("Explosives interactEH",_interactionType);
@@ -25,7 +25,7 @@ TRACE_1("Explosives interactEH",_interactionType);
 if (
     _interactionType != 0
     || {vehicle ACE_player != ACE_player}
-    || {!("ACE_DefusalKit" in ([ACE_player, false, true, true, true, false] call CBA_fnc_uniqueUnitItems))}
+    || {!("ACE_DefusalKit" in (ACE_player call EFUNC(common,uniqueItems)))}
 ) exitWith {};
 
 [{
@@ -38,7 +38,7 @@ if (
         {deleteVehicle _x} forEach _addedHelpers;
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     } else {
-        // Prevent Rare Error when ending mission with interact key down:
+        // Prevent Rare Error when ending mission with interact key down
         private _player = ACE_player;
         if (isNull _player) exitWith {};
         private _playerPos = getPosASL _player;

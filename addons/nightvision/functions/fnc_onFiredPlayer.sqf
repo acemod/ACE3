@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Dslyecxi, PabstMirror
  * Change the blending when the player fires. Called from the unified fired EH only for the local player and his vehicle.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
 TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile);

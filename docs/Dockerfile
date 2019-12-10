@@ -1,6 +1,6 @@
-FROM phpcommunity/github-pages
+FROM starefossen/github-pages
 LABEL maintainer "bux"
 
-COPY ./entrypoint.sh /usr/src/app
+COPY entrypoint.sh /usr/local/bin/entrypoint
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint"]

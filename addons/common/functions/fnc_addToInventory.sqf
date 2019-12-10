@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Adds an item, weapon, or magazine to the unit's inventory or places it in a weaponHolder if no space.
@@ -17,7 +18,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_classname", ["_container", ""], ["_ammoCount", -1]];
 

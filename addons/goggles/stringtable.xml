@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Goggles">
         <Key ID="STR_ACE_Goggles_DisplayName">
@@ -9,6 +9,10 @@
             <Chinesesimp>护目镜</Chinesesimp>
             <Japanese>ゴーグル</Japanese>
             <Korean>고글</Korean>
+            <Polish>Gogle</Polish>
+            <Russian>Очки</Russian>
+            <Portuguese>Óculos</Portuguese>
+            <French>Lunettes</French>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
@@ -53,6 +57,7 @@
             <Italian>Effetti Occhiali</Italian>
             <Chinesesimp>护目镜效果</Chinesesimp>
             <Chinese>護目鏡效果</Chinese>
+            <Portuguese>Efeitos de Óculos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
@@ -65,6 +70,7 @@
             <Italian>Colore</Italian>
             <Chinesesimp>染色</Chinesesimp>
             <Chinese>染色</Chinese>
+            <Portuguese>Cor</Portuguese>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
@@ -77,6 +83,7 @@
             <Italian>Colore + Effetti</Italian>
             <Chinesesimp>染色 + 影响</Chinesesimp>
             <Chinese>染色 + 影響</Chinese>
+            <Portuguese>Cor + Efeitos</Portuguese>
         </Key>
     </Package>
 </Project>

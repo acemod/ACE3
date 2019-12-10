@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Disables the user input. Works stacked.
@@ -14,9 +15,9 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
-params ["_id", "_disable"];
+params [["_id", "#", [""]], ["_disable", false, [false]]];
+TRACE_2("setDisableUserInputStatus",_id,_disable);
 
 if (isNil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
     GVAR(DISABLE_USER_INPUT_COLLECTION) = [];

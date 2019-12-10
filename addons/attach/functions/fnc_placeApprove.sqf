@@ -1,8 +1,9 @@
+#include "script_component.hpp"
 /*
  * Author: Pabst Mirror (based on Explosive attach by Garth de Wet (LH))
  * Approves placement of the lightObject, scans for an appropriate location and attaches
  * A player can release the attachObject with it floating in mid-air.
- * This will use lineIntersectsWith to scan towards the center of the vehicle to find a collision
+ * This will use lineIntersectsSurfaces to scan towards the center of the vehicle to find a collision
  * ArmA's collision detection is of couse terrible and often misses collisions (difference between what we see and collision LOD)
  * So it does multiple scans at slighly different angles
  * This is VERY computationaly intensive, but doesn't happen that often.
@@ -23,7 +24,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAttachText", "_startingPosition"];
 TRACE_6("params",_unit,_attachToVehicle,_itemClassname,_itemVehClass,_onAttachText,_startingPosition);

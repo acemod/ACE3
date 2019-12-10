@@ -1,9 +1,10 @@
+#include "script_component.hpp"
 /*
  * Author: Kingsley
  * Mount the player in the vehicle they are directly looking at based on their distance.
  *
  * Arguments:
- * None
+ * 0: Target <OBJECT>(Optional)
  *
  * Return Value:
  * None
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!GVAR(enabled) ||
     {isNull ACE_player} ||
@@ -22,17 +22,27 @@ if (!GVAR(enabled) ||
     {ACE_player getVariable ["ace_unconscious", false]}
 ) exitWith {};
 
+params [["_interactionTarget", objNull, [objNull]]];
+TRACE_1("getInNearest",_interactionTarget);
+
 private _start = AGLtoASL (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
 private _end = (_start vectorAdd (getCameraViewDirection ACE_player vectorMultiply GVAR(distance)));
 private _objects = lineIntersectsSurfaces [_start, _end, ACE_player];
 private _target = (_objects param [0, []]) param [2, objNull];
+
+if ((isNull _target) && {alive _interactionTarget}) then {
+    _end = _start vectorAdd ((_start vectorFromTo (aimPos _interactionTarget)) vectorMultiply GVAR(distance));
+    _objects = lineIntersectsSurfaces [_start, _end, ACE_player];
+    TRACE_1("2nd ray attempt at interaction target aim pos",_objects);
+    _target = (_objects param [0, []]) param [2, objNull];
+};
 
 if (locked _target in [2,3]) exitWith {
     [localize LSTRING(VehicleLocked)] call EFUNC(common,displayTextStructured);
     true
 };
 
-TRACE_1("",_target);
+TRACE_2("",_target,typeOf _target);
 
 if (!isNull _target &&
         {alive _target} &&
@@ -70,13 +80,17 @@ if (!isNull _target &&
                 if ((!(_turretPath isEqualTo [])) && {_target lockedTurret _turretPath}) exitWith {TRACE_1("lockedTurret",_x);};
 
                 if (_effectiveRole == "turret") then {
-                    if ((getNumber (([_target, _turretPath] call CBA_fnc_getTurret) >> "isCopilot")) == 1) exitWith {
+                    private _turretConfig = [_target, _turretPath] call CBA_fnc_getTurret;
+                    if (getNumber (_turretConfig >> "isCopilot") == 1) exitWith {
                         _effectiveRole = "driver";
                     };
-                    if (_cargoIndex < 0) exitWith {
-                        _effectiveRole = "gunner"; // door gunners / 2nd turret
+                    if (
+                        _cargoIndex >= 0 // FFV
+                        || {"" isEqualTo getText (_turretConfig >> "gun")} // turret without weapon
+                    ) exitWith {
+                        _effectiveRole = "cargo";
                     };
-                    _effectiveRole = "cargo"; // probably a FFV
+                    _effectiveRole = "gunner"; // door gunners / 2nd turret
                 };
                 TRACE_2("",_effectiveRole,_x);
                 if (_effectiveRole != _desiredRole) exitWith {};
@@ -93,7 +107,7 @@ if (!isNull _target &&
                         {
                             if ((_x select 2) == _cargoIndex) exitWith {_cargoActionIndex = _forEachIndex};
                         } forEach (fullCrew [_target, "cargo", true]);
-                        
+
                         ACE_player action ["GetInCargo", _target, _cargoActionIndex];
                         TRACE_4("Geting In Cargo",_x,_role,_cargoActionIndex,_cargoIndex);
                     } else {

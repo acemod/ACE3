@@ -1,32 +1,18 @@
 class ACE_Settings {
     class GVAR(alwaysUseCursorSelfInteraction) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(AlwaysUseCursorSelfInteraction);
+        movedToSQF = 1;
     };
     class GVAR(cursorKeepCentered) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(cursorKeepCentered);
-        description = CSTRING(cursorKeepCenteredDescription);
+        movedToSQF = 1;
     };
     class GVAR(alwaysUseCursorInteraction) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(AlwaysUseCursorInteraction);
+        movedToSQF = 1;
     };
     class GVAR(useListMenu) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(UseListMenu);
+        movedToSQF = 1;
+    };
+    class GVAR(menuBackground) {
+        movedToSQF = 1;
     };
     class GVAR(colorTextMax) {
         value[] = {1, 1, 1, 1};
@@ -79,14 +65,6 @@ class ACE_Settings {
         isClientSettable = 1;
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(ActionOnKeyRelease);
-    };
-    class GVAR(menuBackground) {
-        value = 0;
-        typeName = "SCALAR";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(background);
-        values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(backgroundBlur), CSTRING(backgroundBlack)};
     };
     class GVAR(addBuildingActions) {
         value = 0;

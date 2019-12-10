@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Hides the height and velocity display while freefalling or parachuting on higher difficulties.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_dialog", "_type"];
 
@@ -37,4 +37,3 @@ switch (_type) do {
         } forEach [380, 382];
     };
 };
-nil // switch might return true if no case was found. Just to make sure the return value matches

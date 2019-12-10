@@ -50,23 +50,35 @@ class asdg_MuzzleSlot_762MG: asdg_MuzzleSlot { // for 7.62, 6.5 and 5.56 univers
         ACE_muzzle_mzls_B = 1;
     };
 };
+
+// Vanilla Muzzles from 1.94+ (ref https://github.com/CBATeam/CBA_A3/pull/1184)
 class MuzzleSlot;
+class MuzzleSlot_65: MuzzleSlot {
+    class compatibleItems {
+        ACE_muzzle_mzls_H = 1;
+    };
+};
+class MuzzleSlot_556: MuzzleSlot {
+    class compatibleItems {
+        ACE_muzzle_mzls_L = 1;
+    };
+};
+class MuzzleSlot_762: MuzzleSlot {
+    class compatibleItems {
+        ACE_muzzle_mzls_B = 1;
+    };
+};
 
 class CfgWeapons {
     class Rifle_Base_F;
-    
     class Rifle_Long_Base_F: Rifle_Base_F {
         class WeaponSlotsInfo;
     };
-
     /* Other */
     class LMG_Mk200_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: asdg_MuzzleSlot_762MG {
-                class compatibleItems: compatibleItems {
-                    ACE_muzzle_mzls_H = 1;
-                    ACE_muzzle_mzls_B = 0;
-                };
+            class MuzzleSlot: MuzzleSlot_65 {
+                compatibleItems[] += {"ACE_muzzle_mzls_H"};  // uses array instead of inherited class
             };
         };
     };

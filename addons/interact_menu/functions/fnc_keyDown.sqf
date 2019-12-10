@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Handle interactions key down
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_menuType"];
 
@@ -44,8 +44,8 @@ GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       (!(isNull (ACE_controlledUAV select 0))) ||
                       visibleMap ||
                       (!isNull curatorCamera) ||
-                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
-                      {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
+                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(alwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
+                      {(_menuType == 0) && GVAR(alwaysUseCursorInteraction)};
 
 // Delete existing controls in case there's any left
 GVAR(iconCount) = 0;

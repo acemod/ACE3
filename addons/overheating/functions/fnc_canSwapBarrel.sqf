@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey-Soldierman
  * Return true if player can swap barrel
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_unit","_weapon"];
 
 //Check if weapon can have its barrel swapped. If not exit out of function

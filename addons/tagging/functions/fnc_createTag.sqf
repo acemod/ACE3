@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag and handle its destruction. Only execute on the server.
@@ -8,6 +9,7 @@
  * 2: Colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
  * 3: Object it should be tied to <OBJECT>
  * 4: Unit that created the tag <OBJECT>
+ * 5: Material of the tag <STRING> (Optional)
  *
  * Return Value:
  * Tag created <BOOL>
@@ -18,9 +20,7 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
-params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit"];
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]]];
 TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
@@ -30,9 +30,10 @@ if (_texture == "") exitWith {
 
 private _tag = createSimpleObject ["UserTexture1m_F", _tagPosASL];
 _tag setObjectTextureGlobal [0, _texture];
+if (_material != "") then { _tag setObjectMaterialGlobal [0, _material] };
 _tag setVectorDirAndUp _vectorDirAndUp;
 
-// Throw a global event for mision makers
+// Throw a global event for mission makers
 ["ace_tagCreated", [_tag, _texture, _object, _unit]] call CBA_fnc_globalEvent;
 
 if (isNull _object) exitWith {true};

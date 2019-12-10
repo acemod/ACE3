@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Norrin, Rocko
  * Handles the HuntIR monitor key interaction
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _ret = false;
 

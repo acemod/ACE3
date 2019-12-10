@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut, Dslyecxi, PabstMirror
  * Disables turning on NVGs while the player aims down his sight.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_visionMode"];
 TRACE_2("onVisionModeChanged",_unit,_visionMode);

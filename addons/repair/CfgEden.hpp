@@ -1,3 +1,8 @@
+#define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
+
+#define DEFAULT_ISENGINEER ([ARR_2(0,1)] select (_this getUnitTrait 'engineer'))
+#define DEFAULT_ISREPAIRVEHICLE GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(canRepair),0)
+
 class ctrlToolbox;
 
 class Cfg3DEN {
@@ -35,10 +40,10 @@ class Cfg3DEN {
                         property = QUOTE(ace_isEngineer);
                         displayName = CSTRING(AssignEngineerRole_role_DisplayName);
                         tooltip = CSTRING(AssignEngineerRole_role_Description);
-                        expression = "if (_value != -1) then {_this setVariable ['%s',_value, true];}";
+                        expression = QUOTE(if !(_value == DEFAULT_ISENGINEER || {_value == -1}) then {_this setVariable [ARR_3('%s',_value,true)]});
                         typeName = "NUMBER";
                         condition = "objectBrain";
-                        defaultValue = "-1";
+                        defaultValue = QUOTE(DEFAULT_ISENGINEER);
                         control = QGVAR(isEngineerControl);
                     };
                     class ace_isRepairVehicle {
@@ -47,21 +52,16 @@ class Cfg3DEN {
                         control = "CheckboxNumber";
                         displayName = CSTRING(AssignRepairVehicle_role_DisplayName);
                         tooltip = CSTRING(AssignRepairVehicle_role_Description);
-                        expression = "_this setVariable ['%s',_value, true];";
+                        expression = QUOTE(if (_value != DEFAULT_ISREPAIRVEHICLE) then {_this setVariable [ARR_3('%s',_value,true)]});
                         typeName = "NUMBER";
                         condition = "objectVehicle";
-                        defaultValue = 0;
+                        defaultValue = QUOTE(DEFAULT_ISREPAIRVEHICLE);
                     };
-                    class ace_isRepairFacility {
+                    class ace_isRepairFacility: ace_isRepairVehicle {
                         property = QUOTE(ace_isRepairFacility);
-                        value = 0;
-                        control = "CheckboxNumber";
                         displayName = CSTRING(AssignRepairFacility_role_DisplayName);
                         tooltip = CSTRING(AssignRepairFacility_role_Description);
-                        expression = "_this setVariable ['%s',_value, true];";
-                        typeName = "NUMBER";
                         condition = "(1 - objectBrain) * (1 - objectVehicle)";
-                        defaultValue = 0;
                     };
                     class GVAR(editorLoadedTracks) {
                         displayName = CSTRING(editorLoadedTracks);
@@ -74,16 +74,11 @@ class Cfg3DEN {
                         condition = "objectHasInventoryCargo";
                         typeName = "NUMBER";
                     };
-                    class GVAR(editorLoadedWheels) {
+                    class GVAR(editorLoadedWheels): GVAR(editorLoadedTracks) {
                         displayName = CSTRING(editorLoadedWheels);
                         tooltip = CSTRING(editorLoadedWheels_tooltip);
                         property = QGVAR(editorLoadedWheels);
-                        control = "Edit";
-                        expression = "_this setVariable ['%s',_value];";
                         defaultValue = "[0,1] select (_this isKindOf 'Car')"; // must match pre init script
-                        validate = "number";
-                        condition = "objectHasInventoryCargo";
-                        typeName = "NUMBER";
                     };
                 };
             };

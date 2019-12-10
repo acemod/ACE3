@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Checks if tags are still leaning on an object periodically.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 GVAR(tagsToTest) = GVAR(tagsToTest) select {
     _x params ["_tag", "_tagPosASL", "_vectorDirAndUp"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * onUnLoad EH for arsenal.
@@ -10,7 +11,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 (_this select 1) params ["", "_exitCode"];
 
@@ -65,6 +65,11 @@ if (is3DEN) then {
 
 deleteVehicle GVAR(cameraHelper);
 camDestroy GVAR(camera);
+
+if (!isNil QGVAR(moduleUsed)) then {
+    GVAR(moduleUsed) = nil;
+    objNull remoteControl GVAR(center);
+};
 
 if (isMultiplayer) then {
 

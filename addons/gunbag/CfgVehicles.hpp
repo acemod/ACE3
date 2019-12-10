@@ -73,6 +73,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {QPATHTOF(data\gunbag_co.paa)};
         maximumLoad = 80;
         mass = 11;
+        ADDON = 1;
     };
 
     class GVAR(Tan): ADDON {

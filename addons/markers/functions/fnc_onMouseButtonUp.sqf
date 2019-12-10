@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: chris579
  * Triggered when a mouse button is released on the map.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ctrlMap", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
 
