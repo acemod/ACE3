@@ -36,6 +36,4 @@ private _category = [format ["ACE %1", LLSTRING(Module_DisplayName)]];
     _category,
     true, // default value
     false, // isGlobal
-    {[QGVAR(showCheckAirTemperature), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
 ] call CBA_settings_fnc_init;
