@@ -4,8 +4,8 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_CheckAirTemperature {
                 displayName = CSTRING(CheckAirTemperature);
-                condition = QUOTE(GVAR(enabled));
-                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
+                condition = QUOTE(GVAR(enabled) && GVAR(showCheckAirTemperature));
+                exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = QUOTE([ACE_player] call FUNC(getApproximateAirTemp));
                 icon = QPATHTOF(UI\temp_ca.paa);
             };
