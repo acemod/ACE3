@@ -155,7 +155,6 @@
         <Key ID="STR_ACE_Weather_CheckAirTemperature">
             <English>Check Air Temperature</English>
         </Key>
-        </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
         </Key>
