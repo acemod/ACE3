@@ -34,7 +34,9 @@ _patient setVariable [VAR_TOURNIQUET, _tourniquets, true];
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
-[QEGVAR(interact_menu,clearConditionCaches), []] call CBA_fnc_localEvent; // Reset canTreatCached
+private _nearPlayers = (_patient nearEntities ["Man", 6]) select {_x call EFUNC(common,isPlayer)};
+TRACE_1("clearConditionCaches: tourniquetRemove",_nearPlayers);
+[QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
 
 // Add tourniquet item to medic's inventory
 // todo: should there be a setting to select who receives the removed tourniquet?

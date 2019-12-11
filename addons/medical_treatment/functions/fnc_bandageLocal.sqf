@@ -21,10 +21,10 @@ params ["_patient", "_bodyPart", "_bandage"];
 TRACE_3("bandageLocal",_patient,_bodyPart,_bandage);
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
-if (_partIndex < 0) exitWith {false};
+if (_partIndex < 0) exitWith {};
 
 private _openWounds = GET_OPEN_WOUNDS(_patient);
-if (_openWounds isEqualTo []) exitWith {false};
+if (_openWounds isEqualTo []) exitWith {};
 
 // Figure out which injury for this bodypart is the best choice to bandage
 // TODO also use up the remainder on left over injuries
@@ -77,4 +77,8 @@ if (GVAR(clearTraumaAfterBandage)) then {
     };
 };
 
-true
+if (_amountOf <= 0) then { // Reset treatment condition cache for nearby players if we stopped all bleeding
+    private _nearPlayers = (_patient nearEntities ["Man", 6]) select {_x call EFUNC(common,isPlayer)};
+    TRACE_1("clearConditionCaches: bandage",_nearPlayers);
+    [QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
+};
