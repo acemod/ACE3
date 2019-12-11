@@ -21,6 +21,7 @@ class Extended_Init_EventHandlers {
     class CAManBase {
         class ADDON {
             init = QUOTE(_this call DFUNC(initPerson));
+            exclude[] = {"VirtualMan_F"};
         };
     };
     class StaticWeapon {
@@ -34,6 +35,11 @@ class Extended_Init_EventHandlers {
         };
     };
     class Land_PortableLight_single_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+    class Land_Camping_Light_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
         };

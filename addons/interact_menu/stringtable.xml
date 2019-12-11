@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -44,7 +44,7 @@
             <German>Interaktionsmenü in Listen anzeigen</German>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
             <Portuguese>Mostrar menu de interação como listas</Portuguese>
-            <Japanese>表示されるインタラクション メニューを一覧表示</Japanese>
+            <Japanese>インタラクション メニューを一覧表示</Japanese>
             <Korean>상호작용메뉴를 리스트화 해서 보이기</Korean>
             <Chinesesimp>以列表方式显示互动表单</Chinesesimp>
             <Chinese>以列表方式顯示互動表單</Chinese>
@@ -142,7 +142,7 @@
             <Portuguese>Interação - Max. de Texto</Portuguese>
             <Japanese>インタラクション - 文字の色</Japanese>
             <Korean>상호작용 - 문자색깔</Korean>
-            <Chinesesimp>互动 - 文字最大化</Chinesesimp>
+            <Chinesesimp>互动-文字颜色最大值</Chinesesimp>
             <Chinese>互動 - 文字最大化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
@@ -158,7 +158,7 @@
             <Portuguese>Interação - Min. de Texto</Portuguese>
             <Japanese>インタラクション - 文字の背景色</Japanese>
             <Korean>상호작용 - 문자배경색</Korean>
-            <Chinesesimp>互动 - 文字最小化</Chinesesimp>
+            <Chinesesimp>互动-文字颜色最小值</Chinesesimp>
             <Chinese>互動 - 文字最小化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
@@ -174,7 +174,7 @@
             <Portuguese>Interação - Max. de Sombra</Portuguese>
             <Japanese>インタラクション - 文字への影の色</Japanese>
             <Korean>상호작용 - 문자그림자색</Korean>
-            <Chinesesimp>互动 - 阴影最大化</Chinesesimp>
+            <Chinesesimp>互动 - 阴影最大值</Chinesesimp>
             <Chinese>互動 - 陰影最大化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
@@ -190,7 +190,7 @@
             <Portuguese>Interação - Min. de Sombra</Portuguese>
             <Japanese>インタラクション - 文字への影の最低色</Japanese>
             <Korean>상호작용 - 문자그림자배경색</Korean>
-            <Chinesesimp>互动 - 阴影最小化</Chinesesimp>
+            <Chinesesimp>互动 - 阴影最小值</Chinesesimp>
             <Chinese>互動 - 陰影最小化</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
@@ -230,13 +230,13 @@
             <German>Aktion nach Loslassen der Taste ausführen</German>
             <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
             <Czech>Provést akci při pustění klávesy menu</Czech>
-            <French>Action au relachement de touche</French>
+            <French>Action au relâchement de touche</French>
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
             <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
-            <Japanese>メニュー キーを離したときに動作を実行します。</Japanese>
+            <Japanese>メニュー キーを離した時に動作を実行</Japanese>
             <Korean>메뉴키를 놓을때 행동하기</Korean>
             <Chinesesimp>当放开选单键后就执行动作</Chinesesimp>
             <Chinese>當放開選單鍵後就執行動作</Chinese>
@@ -277,7 +277,7 @@
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
             <Czech>Umožňuje změnit stíny textu v menu interakce. Barva stínu je u tahu písma ignorována.</Czech>
             <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
-            <French>Permet de controler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
+            <French>Permet de contrôler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
             <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
             <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
             <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
@@ -287,7 +287,7 @@
             <Japanese>文字への影を設定します。縁取りは設定された影の色を無視します。</Japanese>
             <Korean>문자의 그림자를 조절하는것을 가능케합니다. 외각선은 임의의 그림자색을 무시합니다.</Korean>
             <Chinesesimp>允许控制文字阴影。轮廓部分则会忽略自定义的阴影颜色。</Chinesesimp>
-            <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色。</Chinese>
+            <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowOutline">
             <English>Outline</English>
@@ -312,7 +312,7 @@
             <Czech>Pozadí menu interakce</Czech>
             <German>Interaktionsmenü-Hintergrund</German>
             <Portuguese>Fundo do menu de interação</Portuguese>
-            <French>Arrière plan du menu d'interaction</French>
+            <French>Arrière-plan du menu d'interaction</French>
             <Hungarian>Cselekvő menü háttere</Hungarian>
             <Russian>Фон меню взаимодействия</Russian>
             <Italian>Sfondo Menù Interazioni</Italian>
@@ -328,14 +328,14 @@
             <Czech>Rozmazat obraz při otevřeném interakčním menu.</Czech>
             <German>Den Hintergrund verschwimmen lassen, während das Interaktionsmenü geöffnet ist.</German>
             <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
-            <French>Flouter l'arrière plan durant l'ouverture du menu d'interaction</French>
+            <French>Flouter l'arrière-plan durant l'ouverture du menu d'interaction</French>
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
             <Japanese>インタラクション メニューを開いたとき、背景にボケを与えます。</Japanese>
             <Korean>상호작용 메뉴가 열릴시 배경을 흐릿하게 처리합니다.</Korean>
             <Chinesesimp>当互动选单开启时，模糊背景画面。</Chinesesimp>
-            <Chinese>當互動選單開啟時，模糊背景畫面。</Chinese>
+            <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -375,7 +375,7 @@
             <Polish>Pokazuj akcje dla budynków</Polish>
             <Czech>Zobrazit akci pro budovy</Czech>
             <Spanish>Mostrar acciones para edificios</Spanish>
-            <French>Affiche les actions pour les batiments</French>
+            <French>Affiche les actions pour les bâtiments</French>
             <Hungarian>Cselekvések mutatása épületeknél</Hungarian>
             <Portuguese>Mostrar ações para edifícios</Portuguese>
             <Russian>Показывать действия для зданий</Russian>
@@ -391,12 +391,12 @@
             <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
             <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
             <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
-            <French>Ajoute des interactions pour ouvrir les portes et les échelles des batiments. (Note: l'ouverture du menu en ville dégrade les performances)</French>
+            <French>Ajoute des interactions pour ouvrir les portes et les échelles des bâtiments. (Note: l'ouverture du menu en ville dégrade les performances)</French>
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
             <Italian>Aggiunge azioni interattive per l'apertura delle porte e piazzamento scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
-            <Japanese>建物にあるドアの開閉やラダーの昇降といった動作をインタラクションへ追加します。(街などでインタラクション メニューを開くとパフォーマンスが低下します)</Japanese>
+            <Japanese>建物にある扉の開閉やはしごの昇降といった動作をインタラクションへ追加します。(街などでインタラクション メニューを開くと動作が低下します)</Japanese>
             <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
             <Chinesesimp>增加互动选单的功能在可开启的门与建筑物的梯子上。(注意: 此功能有可能会降低系统效能，特别是在城镇区更明显)</Chinesesimp>
             <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上。(注意: 此功能有可能會降低系統效能，特別是在城鎮區更明顯)</Chinese>
@@ -425,7 +425,7 @@
             <Czech>Rychlost animace interakce</Czech>
             <Italian>Velocità Animazioni Interazioni</Italian>
             <Spanish>Velocidad de animación del menú de interacción</Spanish>
-            <French>Vitesse de l'aniamtion d'interaction</French>
+            <French>Vitesse de l'animation d'interaction</French>
             <Japanese>インタラクションのアニメーション速度</Japanese>
             <Korean>상호작용 움직임 속도</Korean>
             <Chinesesimp>互动选单动画速度</Chinesesimp>
@@ -440,11 +440,23 @@
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
             <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
-            <French>Rend les animations de menu plus rapide et réduit le temps nécessaire à l'affichage des sous menus d'action</French>
-            <Japanese>サブ動作が表示されるホバーをした時に、表示されるメニューのアニメーション速度を早くしたり遅くしたりできます</Japanese>
+            <French>Rend les animations du menu plus rapide, et réduit le temps nécessaire à l'affichage des sous menus d'action</French>
+            <Japanese>ホバーで子アクションを表示した時に出るメニューのアニメーション速度を早くしたり遅くしたりできます</Japanese>
             <Chinesesimp>使选单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
             <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
             <Korean>상호 작용을 표시하기 위해 메뉴 애니메이션을 빠르게 만들고 마우스를 가져 오는 데 필요한 시간을 줄입니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelectorColor">
+            <English>Selector Color</English>
+            <German>Farbauswahl</German>
+            <Japanese>セレクターの色</Japanese>
+            <Chinesesimp>选择器颜色</Chinesesimp>
+            <Chinese>選單的顏色</Chinese>
+            <Italian>Controllo Settore</Italian>
+            <Polish>Kolor wybierającego</Polish>
+            <Russian>Цвет селектора</Russian>
+            <Portuguese>Cor do Seletor</Portuguese>
+            <French>Couleur du sélecteur</French>
         </Key>
     </Package>
 </Project>

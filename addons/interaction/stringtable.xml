@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_DisplayName">
@@ -9,6 +9,10 @@
             <Chinesesimp>互动</Chinesesimp>
             <Japanese>インタラクション</Japanese>
             <Korean>상호작용</Korean>
+            <Polish>Interakcja</Polish>
+            <Russian>Взаимодействие</Russian>
+            <Portuguese>Interação</Portuguese>
+            <French>Interaction</French>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
@@ -20,7 +24,7 @@
             <Russian>Взаимодействия</Russian>
             <Hungarian>Cselekvések</Hungarian>
             <Italian>Interazioni</Italian>
-            <Portuguese>Interaçãoes</Portuguese>
+            <Portuguese>Interações</Portuguese>
             <Japanese>インタラクション</Japanese>
             <Korean>상호작용</Korean>
             <Chinesesimp>互动</Chinesesimp>
@@ -229,7 +233,7 @@
             <Hungarian>Zárt ajtó</Hungarian>
             <Polish>Zablokowano drzwi</Polish>
             <Czech>Zamčené dveře</Czech>
-            <Japanese>ドアの鍵をしめた</Japanese>
+            <Japanese>ドアの鍵をしめました</Japanese>
             <Korean>잠긴 문</Korean>
             <Chinesesimp>门已上锁</Chinesesimp>
             <Chinese>門已上鎖</Chinese>
@@ -245,7 +249,7 @@
             <Hungarian>Nyitott ajtó</Hungarian>
             <Polish>Odblokowano drzwi</Polish>
             <Czech>Odemčené dveře</Czech>
-            <Japanese>ドアの鍵をあけた</Japanese>
+            <Japanese>ドアの鍵をあけました</Japanese>
             <Korean>열린 문</Korean>
             <Chinesesimp>门未上锁</Chinesesimp>
             <Chinese>門未上鎖</Chinese>
@@ -304,7 +308,7 @@
             <Spanish>BAILAR!</Spanish>
             <Polish>TAŃCZ!</Polish>
             <Czech>TANCUJ!</Czech>
-            <French>Danser !</French>
+            <French>DANSER !</French>
             <Russian>ТАНЦЕВАТЬ!</Russian>
             <Hungarian>TÁNC!</Hungarian>
             <Portuguese>DANCE!</Portuguese>
@@ -325,7 +329,7 @@
             <Hungarian>Tánc abbahagyása</Hungarian>
             <Portuguese>Parar de dançar</Portuguese>
             <Italian>Smetti di ballare</Italian>
-            <Japanese>踊るのをやめる</Japanese>
+            <Japanese>踊るのを止める</Japanese>
             <Korean>춤 멈추기</Korean>
             <Chinesesimp>停止跳舞</Chinesesimp>
             <Chinese>停止跳舞</Chinese>
@@ -341,7 +345,7 @@
             <Hungarian>&lt;&lt; Vissza</Hungarian>
             <Portuguese>&lt;&lt; Voltar</Portuguese>
             <Italian>&lt;&lt; Indietro</Italian>
-            <Japanese>&lt;&lt;もどる</Japanese>
+            <Japanese>&lt;&lt; 戻る</Japanese>
             <Korean>&lt;&lt;뒤로</Korean>
             <Chinesesimp>&lt;&lt;返回</Chinesesimp>
             <Chinese>&lt;&lt;返回</Chinese>
@@ -382,14 +386,14 @@
             <English>You were tapped on the RIGHT shoulder</English>
             <Spanish>Te tocaron el hombro DERECHO</Spanish>
             <German>Dir wurde auf die rechte Schulter geklopft</German>
-            <French>On vous tape sur l'épaule droite</French>
+            <French>On vous tape sur l'épaule DROITE</French>
             <Polish>Zostałeś klepnięty w prawe ramię</Polish>
             <Hungarian>Megveregették a JOBB válladat.</Hungarian>
             <Czech>Někdo tě poklepal na PRAVÉ rameno</Czech>
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla destra</Italian>
-            <Japanese>右肩を叩かれた</Japanese>
+            <Japanese>右肩を叩かれました</Japanese>
             <Korean>누군가 오른쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的右肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的右肩膀被輕拍了一下</Chinese>
@@ -398,14 +402,14 @@
             <English>You were tapped on the LEFT shoulder.</English>
             <Spanish>Te tocaron el hombro IZQUIERDO.</Spanish>
             <German>Dir wurde auf die linke Schulter geklopft</German>
-            <French>On vous tape sur l'épaule gauche</French>
+            <French>On vous tape sur l'épaule GAUCHE</French>
             <Polish>Zostałeś klepnięty w lewe ramię</Polish>
             <Hungarian>Megveregették a BAL válladat.</Hungarian>
             <Czech>Někdo tě poklepal na LEVÉ rameno</Czech>
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla sinistra</Italian>
-            <Japanese>左肩を叩かれた</Japanese>
+            <Japanese>左肩を叩かれました</Japanese>
             <Korean>누군가 왼쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的左肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的左肩膀被輕拍了一下</Chinese>
@@ -449,7 +453,7 @@
             <Polish>Odejdź!</Polish>
             <Czech>Jděte pryč!</Czech>
             <French>Allez-vous-en !</French>
-            <Russian>Уходите отсюда!</Russian>
+            <Russian>Уйдите отсюда!</Russian>
             <Hungarian>Tűnés!</Hungarian>
             <Portuguese>Vá Embora!</Portuguese>
             <Italian>Via di qui!</Italian>
@@ -464,7 +468,7 @@
             <Spanish>Al suelo!</Spanish>
             <Polish>Padnij!</Polish>
             <Czech>K zemi!</Czech>
-            <French>A terre !</French>
+            <French>À terre !</French>
             <Hungarian>A földre!</Hungarian>
             <Russian>Ложись!</Russian>
             <Portuguese>Abaixe-se!</Portuguese>
@@ -481,12 +485,13 @@
             <German>Aussteigen!</German>
             <Spanish>Sal del vehículo!</Spanish>
             <French>Sortez !</French>
-            <Russian>Выходи</Russian>
+            <Russian>Выходи!</Russian>
             <Czech>Vystupte</Czech>
             <Japanese>降りろ</Japanese>
             <Korean>나가</Korean>
             <Chinesesimp>出去</Chinesesimp>
             <Chinese>出去</Chinese>
+            <Portuguese>Saia!</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -707,7 +712,7 @@
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
             <Italian>Sei entrato nel team %1</Italian>
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
-            <Japanese>チーム %1 に入った</Japanese>
+            <Japanese>チーム %1 に入りました</Japanese>
             <Korean>당신은 %1팀에 참여했습니다</Korean>
             <Chinesesimp>你已加入%1组</Chinesesimp>
             <Chinese>你已加入%1組</Chinese>
@@ -739,7 +744,7 @@
             <Portuguese>Você deixou a Equipe</Portuguese>
             <Italian>Hai lasciato il team</Italian>
             <Hungarian>Elhagytad a csapatot</Hungarian>
-            <Japanese>チームを抜けた</Japanese>
+            <Japanese>チームを抜けました</Japanese>
             <Korean>팀을 나갔습니다</Korean>
             <Chinesesimp>你已离开小队</Chinesesimp>
             <Chinese>你已離開小隊</Chinese>
@@ -832,13 +837,24 @@
             <Polish>Pchnij</Polish>
             <Czech>Tlačit</Czech>
             <Hungarian>Tolás</Hungarian>
-            <Russian>Толкать</Russian>
+            <Russian>Толкнуть</Russian>
             <Portuguese>Empurrar</Portuguese>
             <Italian>Spingere</Italian>
             <Japanese>押す</Japanese>
             <Korean>밀기</Korean>
             <Chinesesimp>推</Chinesesimp>
             <Chinese>推</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Flip">
+            <English>Flip</English>
+            <German>Umdrehen</German>
+            <Russian>Перевернуть</Russian>
+            <Japanese>ひっくり返す</Japanese>
+            <Chinese>拋</Chinese>
+            <Italian>Gira</Italian>
+            <Polish>Przewróć</Polish>
+            <Portuguese>Virar</Portuguese>
+            <French>Tourner</French>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -944,15 +960,23 @@
             <Chinese>關閉負面評價</Chinese>
             <Chinesesimp>关闭负面评价</Chinesesimp>
             <Korean>부정행위 가중치 사용안함</Korean>
+            <Polish>Wyłącz negatywną ocenę</Polish>
+            <Russian>Отключить отрицательный рейтинг</Russian>
+            <Portuguese>Desativar avaliação negativa</Portuguese>
+            <French>Désactiver la notation négative</French>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
             <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewertungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
-            <Japanese>否定評価を受けますか？有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
+            <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしても AI からの攻撃を防ぎます。</Japanese>
             <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
-            <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價。</Chinese>
+            <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价? 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
             <Korean>플레이어의 부정행위 가중치를 계산합니까? 활성화된 플레이어는 높은 레이팅을 가질때, 아군의 장비나 병력을 사격해도 아군 AI의 사격을 받지 않습니다.</Korean>
+            <Polish>Czy powinni gracze otrzymywać negatywną ocenę? Kiedy aktywowani gracze otrzymuję wyłącznie pozytywną ocenę, która zapobiega ognia przyjaznego SI podczas niszczenia przyjaznego wyposażenia lub zabijaniu członków drużyny.</Polish>
+            <Russian>Должны ли игроки получать отрицательный рейтинг? Когда включено, игроки получают только положительный рейтинг, что предотвращает дружественный огонь от ИИ при уничтожении дружественного оборудования или убийстве членов команды.</Russian>
+            <Portuguese>Jogadores devem receber uma avaliação negativa? Quando ativado, os jogadores estão recebendo avaliações positivas, prevenindo que IA amigável atire quando destruir algum equipamento aliado ou matar membros de equipe.</Portuguese>
+            <French>Les joueurs devraient-ils pouvoir recevoir une note négative ? Si l'option est activée, les joueurs obtiennent des notes positives exclusivement, ce qui permet d'éviter que les unités IA effectuent du tir ami lorsque des joueurs détruisent de l'équipement allié, ou lorsqu'ils tuent des membres de l'équipe.</French>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -960,7 +984,7 @@
             <German>Die Gruppenverwaltung erlaubt die Zuweisung von Farben für Einheiten, die Kommandierung und das Beitreten/Verlassen einer Gruppe.</German>
             <Czech>Správa týmu se skládá z: přidělení barev pro členy týmu, převzetí velení, připojení/odpojení. </Czech>
             <Spanish>La gestión del equipo permite la asignación de colores para los miembros del equipo, tomando el mando del equipo y uniendo/dejando equipos.</Spanish>
-            <French>La gestion d'équipe permet l'allocation de couleur aux membres d'équipe, de prendre le commandement, de rejoindre ou quitter une équipe. </French>
+            <French>La gestion d'équipe permet d'allouer des couleurs aux membres des équipes, de prendre le commandement, et de rejoindre ou quitter une équipe. </French>
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
@@ -990,7 +1014,7 @@
             <German>Deaktivieren</German>
             <Polish>Wyłącz</Polish>
             <Spanish>Apagar</Spanish>
-            <French>Eteindre</French>
+            <French>Éteindre</French>
             <Italian>Spegni</Italian>
             <Czech>Vypnout</Czech>
             <Portuguese>Desligar</Portuguese>
@@ -1010,7 +1034,7 @@
             <Italian>Passa caricatore</Italian>
             <Spanish>Pasar cargador</Spanish>
             <French>Passer un chargeur</French>
-            <Japanese>弾倉をわたす</Japanese>
+            <Japanese>弾倉を渡す</Japanese>
             <Korean>탄창 건네기</Korean>
             <Chinesesimp>给予弹匣</Chinesesimp>
             <Chinese>給予彈匣</Chinese>
@@ -1024,7 +1048,7 @@
             <Czech>Zásobník do primární zbraně</Czech>
             <Italian>Caricatore Primario</Italian>
             <Spanish>Cargador primario</Spanish>
-            <French>Chargeur de l'arme principale</French>
+            <French>Chargeur d'arme principale</French>
             <Japanese>プライマリ用弾倉</Japanese>
             <Korean>주무기 탄창</Korean>
             <Chinesesimp>给予主武器弹匣</Chinesesimp>
@@ -1055,7 +1079,7 @@
             <Italian>%1 ti ha passato un caricatore %2 .</Italian>
             <Spanish>%1 te pasó un cargador %2.</Spanish>
             <French>%1 vous a passé un chargeur de %2.</French>
-            <Japanese>%1 はあなたに %2 弾倉をわたした</Japanese>
+            <Japanese>%1 はあなたに %2 弾倉を渡した</Japanese>
             <Korean>%1에게서 %2탄창을 받았다</Korean>
             <Chinesesimp>%1给你%2弹匣</Chinesesimp>
             <Chinese>%1給你%2彈匣</Chinese>
@@ -1070,19 +1094,36 @@
             <Italian>Mostra interazione "passa caricatore"</Italian>
             <Spanish>Mostrar "Pasar cargador" en el menú de interacción</Spanish>
             <French>Montrer l'interaction "Passer un chargeur"</French>
-            <Japanese>"弾倉をわたす"をインタラクションに表示する</Japanese>
+            <Japanese>"弾倉を渡す"をインタラクションに表示する</Japanese>
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_PullOutBody">
             <English>Pull out body</English>
+            <German>Person herausziehen</German>
             <Russian>Вытащить тело</Russian>
             <Japanese>身体を引き出す</Japanese>
             <Italian>Estrai il corpo</Italian>
             <Korean>시체 끌기</Korean>
             <Chinese>拿出屍體</Chinese>
             <Chinesesimp>拿出尸体</Chinesesimp>
+            <Polish>Wyciągnij ciało</Polish>
+            <Portuguese>Retirar Corpo</Portuguese>
+            <French>Retirer le corps</French>
+        </Key>
+        <Key ID="STR_ACE_Interaction_SmashWindshield">
+            <English>Smash windshield</English>
+            <German>Frontscheibe einschlagen</German>
+            <French>Briser le pare-brise</French>
+            <Czech>Vyrazit čelní sklo</Czech>
+            <Russian>Выбить лобовое стекло</Russian>
+            <Polish>Wyłam szybę</Polish>
+            <Hungarian>Szélvédő széttörése</Hungarian>
+            <Japanese>フロントガラスを破る</Japanese>
+            <Italian>Sfonda il parabrezza</Italian>
+            <Portuguese>Quebrar pára-brisa</Portuguese>
+            <Chinese>踹開擋風玻璃</Chinese>
         </Key>
     </Package>
 </Project>

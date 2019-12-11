@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Draw progress bar and execute given function if succesful.
@@ -18,7 +19,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 // positions for the icon UI
 #define RIGHT_SIDE    (safezoneW + safezoneX)

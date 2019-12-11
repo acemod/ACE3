@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Update temperature of a weapon.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon", "_heatIncrement"];
 TRACE_3("params",_unit,_weapon,_heatIncrement);

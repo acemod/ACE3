@@ -1,3 +1,5 @@
+#define DEBUG_MODE_FULL
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  *
@@ -15,8 +17,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 private _diagnoseStartTime = diag_tickTime;
 #ifdef DEBUG_INIT_SPEEDS
@@ -33,9 +33,7 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
     if (isClass _weaponConfig) then {
         private _weapon = configName _weaponConfig;
         private _weaponType = getNumber (_weaponConfig >> "Type");
-        if (_weaponType in [1, 2]) then {
-            // The weapon is a primary weapon or a handgun weapon
-
+        if (_weaponType in [TYPE_WEAPON_PRIMARY, TYPE_WEAPON_HANDGUN]) then {
             private _weaponInitSpeed = getNumber (_weaponConfig >> "initSpeed");
             private _magazines = getArray (_weaponConfig >> "magazines");
             {

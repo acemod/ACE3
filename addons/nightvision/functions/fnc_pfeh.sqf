@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * PFEH to handle refreshing effects.
@@ -14,13 +15,16 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if ((currentVisionMode ACE_player) != 1) exitWith {
     GVAR(running) = false;
     [false] call FUNC(setupDisplayEffects);
     [GVAR(PFID)] call CBA_fnc_removePerFrameHandler;
     GVAR(PFID) = -1;
+    (missionNamespace getVariable [QGVAR(firedEHs), []]) params [["_firedPlayerID", -1], ["_firedPlayerVehicleID", -1]];
+    TRACE_2("removing fired EHs",_firedPlayerID,_firedPlayerVehicleID);
+    ["ace_firedPlayer", _firedPlayerID] call CBA_fnc_removeEventHandler,
+    ["ace_firedPlayerVehicle", _firedPlayerVehicleID] call CBA_fnc_removeEventHandler,
 };
 if (EGVAR(common,OldIsCamera)) exitWith {
     if (GVAR(running)) then {
@@ -80,9 +84,6 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _grainIntensityFinal = _effectMod * linearConversion [1, 0, _effectiveLight, ST_NVG_NOISEINTENSITY_MIN, ST_NVG_NOISEINTENSITY_MAX, true];
     private _noiseSharpnessFinal = linearConversion [1, 0, _effectiveLight, ST_NVG_NOISESHARPNESS_MIN, ST_NVG_NOISESHARPNESS_MAX, true];
 
-    private _playerBrightSetting = ACE_player getVariable [QGVAR(NVGBrightness), 0];
-    _brightFinal = _brightFinal + (_playerBrightSetting / 20);
-
     private _fogApply = linearConversion [0, 1, _effectiveLight, ST_NVG_MAXFOG, ST_NVG_MINFOG, true];
 
     // Modify blur if looking down scope
@@ -96,6 +97,10 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _radialBlurPower = 0.0025 * GVAR(effectScaling);
     _brightFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _brightFinal];
     _contrastFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _contrastFinal];
+
+    // Add adjusted NVG brightness
+    private _playerBrightSetting = ACE_player getVariable [QGVAR(NVGBrightness), 0];
+    _brightFinal = _brightFinal + (_playerBrightSetting / 20);
 
     // Scale grain effects based on ace_nightvision_noiseScaling setting
     _grainIntensityFinal = _grainIntensityFinal * GVAR(noiseScaling);

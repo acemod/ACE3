@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  * On close Dialog
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 uiNamespace setVariable ['ATragMX_Display', nil];
 GVAR(active) = false;

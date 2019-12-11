@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  *
@@ -14,14 +15,9 @@
  * Public: No
  */
 
-// by commy2
-#include "script_component.hpp"
-
 /*
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector, displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector, displayNull);
 
 [
     round parseNumber ctrlText (_dlgVector displayCtrl 156),

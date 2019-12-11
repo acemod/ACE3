@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NameTags">
         <Key ID="STR_ACE_NameTags_ShowNames">
@@ -14,7 +14,7 @@
             <Portuguese>Mostrar nomes</Portuguese>
             <Japanese>名前の表示</Japanese>
             <Korean>이름 표시</Korean>
-            <Chinesesimp>显示名称</Chinesesimp>
+            <Chinesesimp>显示名字</Chinesesimp>
             <Chinese>顯示名稱</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames">
@@ -22,7 +22,7 @@
             <German>Spielernamen anzeigen</German>
             <Spanish>Mostrar nombres de jugadores</Spanish>
             <Polish>Pokaż imiona graczy</Polish>
-            <French>Afficher les nom des joueurs</French>
+            <French>Afficher le nom des joueurs</French>
             <Hungarian>Játékosnevek mutatása</Hungarian>
             <Czech>Zobrazit jména hráčů</Czech>
             <Portuguese>Mostrar nomes de jogadores</Portuguese>
@@ -30,7 +30,7 @@
             <Russian>Показывать имена игроков (включить имена)</Russian>
             <Japanese>プレイヤ名を表示</Japanese>
             <Korean>플레이어 이름 표시</Korean>
-            <Chinesesimp>显示玩家名称</Chinesesimp>
+            <Chinesesimp>显示玩家名字</Chinesesimp>
             <Chinese>顯示玩家名稱</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
@@ -46,7 +46,7 @@
             <Russian>Показать имена игроков только под курсором (при включенных именах)</Russian>
             <Japanese>カーソルを合わせた時だけプレイヤ名を表示 (プレイヤ名が必要)</Japanese>
             <Korean>커서로 지시할때만 플레이어 이름 표시(플레이어 이름 필요)</Korean>
-            <Chinesesimp>仅在准心指到后显示玩家名称 (玩家必须有设定名称)</Chinesesimp>
+            <Chinesesimp>仅在准心指到后显示玩家名字 (玩家必须有设定名字)</Chinesesimp>
             <Chinese>僅在準心指到後顯示玩家名稱 (玩家必須有設定名稱)</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress">
@@ -62,7 +62,7 @@
             <Portuguese>Mostrar nomes somente ao pressionar teclar (requer nome de jogadores)</Portuguese>
             <Japanese>キーを押した時だけプレイヤ名を表示 (プレイヤ名が必要)</Japanese>
             <Korean>키를 누를때만 플레이어 이름 표시(플레이어 이름 필요)</Korean>
-            <Chinesesimp>仅在按按键后显示玩家名称 (玩家必须有设定名称)</Chinesesimp>
+            <Chinesesimp>仅在按按键后显示玩家名字 (玩家必须有设定名字)</Chinesesimp>
             <Chinese>僅在按按鍵後顯示玩家名稱 (玩家必須有設定名稱)</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
@@ -70,7 +70,7 @@
             <German>Spielerränge anzeigen (benötigt Spielernamen)</German>
             <Polish>Pokaż rangi graczy (wymagana opcja Pokaż imiona graczy)</Polish>
             <Spanish>Mostrar rango de los jugadores (requiere Mostrar nombres de jugadores)</Spanish>
-            <French>Grade des joueurs  (si noms affichés)</French>
+            <French>Grade des joueurs (si noms affichés)</French>
             <Czech>Zobrazit hodnosti hráčů (vyžaduje jména hráčů)</Czech>
             <Italian>Mostra i gradi (insieme ai nomi)</Italian>
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
@@ -78,7 +78,7 @@
             <Russian>Показывать звания игроков (при вкл. именах)</Russian>
             <Japanese>プレイヤの階級を表示 (プレイヤ名が必要)</Japanese>
             <Korean>플레이어 계급 표시 (플레이어 이름 필요)</Korean>
-            <Chinesesimp>显示玩家军阶 (玩家必须有设定名称)</Chinesesimp>
+            <Chinesesimp>显示玩家军阶 (玩家必须有设定名字)</Chinesesimp>
             <Chinese>顯示玩家軍階 (玩家必須有設定名稱)</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
@@ -104,13 +104,13 @@
             <Russian>Показывать имена ботов</Russian>
             <Czech>Zobrazit jména AI</Czech>
             <Polish>Wyświetl imiona jednostek AI</Polish>
-            <French>Afficher les noms des IA</French>
+            <French>Afficher le nom des unités IA</French>
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
             <Italian>Mostra i nomi delle le unità AI</Italian>
             <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
             <Japanese>AI ユニットの名札を表示</Japanese>
             <Korean>인공지능 인원 이름 표시</Korean>
-            <Chinesesimp>显示AI单位名称</Chinesesimp>
+            <Chinesesimp>显示AI单位名字</Chinesesimp>
             <Chinese>顯示AI單位名稱</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves">
@@ -126,7 +126,7 @@
             <Portuguese>Mostrar onda sonora (requer nome de jogadores)</Portuguese>
             <Japanese>音波形を表示 (プレイヤ名が必要)</Japanese>
             <Korean>음파 표시 (플레이어 이름 필요)</Korean>
-            <Chinesesimp>当玩家讲话时，显示声波图案 (玩家必须有设定名称)</Chinesesimp>
+            <Chinesesimp>当玩家讲话时，显示声波图案 (玩家必须有设定名字)</Chinesesimp>
             <Chinese>當玩家講話時，顯示聲波圖案 (玩家必須有設定名稱)</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
@@ -142,7 +142,7 @@
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
             <Japanese>標準の名札の色（グループ メンバ以外)</Japanese>
             <Korean>기본 이름표 색상 (비-그룹 멤버)</Korean>
-            <Chinesesimp>预设名称颜色 (非同小队队友) </Chinesesimp>
+            <Chinesesimp>预设名字颜色 (非同小队队友) </Chinesesimp>
             <Chinese>預設名稱顏色 (非同小隊隊友) </Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_DisplayName">
@@ -158,7 +158,7 @@
             <Italian>Etichette Nomi</Italian>
             <Japanese>名札</Japanese>
             <Korean>이름표</Korean>
-            <Chinesesimp>玩家名称</Chinesesimp>
+            <Chinesesimp>玩家名字</Chinesesimp>
             <Chinese>玩家名稱</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
@@ -168,13 +168,13 @@
             <German>Sichtweite der Spielernamen</German>
             <Czech>Vzdálenost zobrazení jména hráčů</Czech>
             <Portuguese>Distância de visão dos nomes dos jogadores</Portuguese>
-            <French>Distance de vue des noms de joueurs</French>
+            <French>Distance visible des noms de joueurs</French>
             <Hungarian>Játékosok nevének látótávja</Hungarian>
             <Russian>Дистанция отображения имен</Russian>
             <Italian>Distanza Visiva Etichette Nomi</Italian>
             <Japanese>プレイヤ名が見える範囲</Japanese>
             <Korean>플레이어 이름 표시 거리</Korean>
-            <Chinesesimp>玩家名称显示距离</Chinesesimp>
+            <Chinesesimp>玩家名字显示距离</Chinesesimp>
             <Chinese>玩家名稱顯示距離</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
@@ -190,7 +190,7 @@
             <Italian>Distanza in metri a cui sono visibili i nomi giocatori. Default: 5</Italian>
             <Japanese>プレイヤの周り何メートルまで名札を表示できます。標準: 5</Japanese>
             <Korean>플레이어 이름이 표시되는 미터. 기본설정: 5</Korean>
-            <Chinesesimp>设定名称在多少距离以内显示。预设:5公尺</Chinesesimp>
+            <Chinesesimp>设定名字在多少距离以内显示。预设:5公尺</Chinesesimp>
             <Chinese>設定名稱在多少距離以內顯示。預設:5公尺</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_DisplayName">
@@ -200,13 +200,13 @@
             <German>Zeige KI-Namen?</German>
             <Czech>Zobrazit jmenovky pro AI?</Czech>
             <Portuguese>Mostrar nomes para IA?</Portuguese>
-            <French>Afficher les noms pour les IA?</French>
+            <French>Afficher les noms pour les IA ?</French>
             <Hungarian>Névcímkék megjelenítése AI-nál?</Hungarian>
             <Russian>Показывать имена ботов?</Russian>
             <Italian>Mostra etichette nomi per IA?</Italian>
             <Japanese>AI の名札も表示しますか?</Japanese>
             <Korean>인공지능의 이름도 표시합니까?</Korean>
-            <Chinesesimp>显示AI名称?</Chinesesimp>
+            <Chinesesimp>显示AI名字?</Chinesesimp>
             <Chinese>顯示AI名稱?</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_Description">
@@ -216,13 +216,13 @@
             <German>Zeige den Namen und Rang für freundliche KI-Einheiten? Standard: nicht erzwingen</German>
             <Czech>Zobrazit jména a hodnosti pro spřátelené AI jednotky? Výchozí: Nevynucovat</Czech>
             <Portuguese>Mostra o nome e patente para unidades IA aliadas? Padrão: Não forçar</Portuguese>
-            <French>Affiche le nom et le rang pour les IA alliées? Défaut : ne pas forcer</French>
+            <French>Afficher le nom et le rang des IA alliées? Défaut : ne pas forcer</French>
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать имена и звания дружественных ботов? По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
             <Japanese>友軍の AI にも名前と階級を表示しますか? 標準: 強制しない</Japanese>
             <Korean>아군 인공지능의 계급을 표시합니까? 기본설정: 강제하지 않음</Korean>
-            <Chinesesimp>显示友军AI的名称和军阶? 预设: 不显示</Chinesesimp>
+            <Chinesesimp>显示友军AI的名字和军阶? 预设: 不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceHide">
@@ -232,13 +232,13 @@
             <German>Verstecken erzwingen</German>
             <Czech>Vynuceno skrýt</Czech>
             <Portuguese>Ocultar forçado</Portuguese>
-            <French>Forcer la désactivation</French>
+            <French>Forcer le masquage</French>
             <Hungarian>Erőltetett rejtett</Hungarian>
             <Russian>Обязательно: Скрывать</Russian>
             <Italian>Forza Nascosto</Italian>
             <Japanese>強制で非表示</Japanese>
             <Korean>강제로 숨기기</Korean>
-            <Chinesesimp>强迫隐藏</Chinesesimp>
+            <Chinesesimp>强制隐藏</Chinesesimp>
             <Chinese>強迫隱藏</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShow">
@@ -254,7 +254,7 @@
             <Italian>Forza Mostra</Italian>
             <Japanese>強制で表示</Japanese>
             <Korean>강제로 표시</Korean>
-            <Chinesesimp>强迫显示</Chinesesimp>
+            <Chinesesimp>强制显示</Chinesesimp>
             <Chinese>強迫顯示</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_DisplayName">
@@ -280,7 +280,7 @@
             <German>Zeige Status der Fahrzeugbesatzung oder erlaube Spielern ihn auszuwählen. Standard: nicht erzwingen.</German>
             <Czech>Zobrazit informace o posádce, nebo nechat aby si hráč vybral sám. Výchozí: Nevynucovat </Czech>
             <Portuguese>Mostrar informações de tripulação ou por padrão permitir a escolha dos jogadores. Padrão: Não forçar.</Portuguese>
-            <French>Afficher les informations sur l'équipage d'un véhicule. Défaut: ne pas forcer</French>
+            <French>Afficher les informations sur l'équipage d'un véhicule. Défaut : ne pas forcer</French>
             <Hungarian>A legénységi adatok mutatása, alapértelmezett esetben a játékos által kiválasztható. Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать информацию об экипаже техники, или по-умолчанию, позволяет игрокам выбрать свою настройку. По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra informazioni sull'equipaggio del veicolo, oppure consenti di default di lasciare che siano i giocatori a scegliere. Default: Non Forzare</Italian>
@@ -313,11 +313,11 @@
             <Czech>Zobrazit jmenovky pro velitele vozidla (pouze pokud má klient jmenovky povolené). Výchozí: Ne</Czech>
             <Portuguese>Mostrar o nome no cursor para o comandante do veículo (somente se o cliente tiver etiquetas de nomes ativada). Padrão: Não</Portuguese>
             <Russian>Показывать имя командира техники (только, если клиент включил отображение имен). По-умолчанию: Нет</Russian>
-            <French>Afficher les étiquettes de nom pour les commandants de véhicule (uniquement si l'affichage est activé pour le client). Défaut: non</French>
+            <French>Afficher les étiquettes de nom pour les commandants de véhicule (uniquement si l'affichage est activé pour le client). Défaut : non</French>
             <Italian>Mostra il nome sul cursore per il comandante del veicolo (solo se il client ha le Etichette Nomi attive) Default: No</Italian>
             <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準: 無効</Japanese>
             <Korean>차량의 사령관의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화 할시에만 보입니다) 기본설정: 아니요</Korean>
-            <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名称 (仅当客户端的名称功能已启用)。预设: 关闭</Chinesesimp>
+            <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名字 (仅当客户端的名字功能已启用)。预设: 关闭</Chinesesimp>
             <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用)。預設: 關閉</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
@@ -331,9 +331,9 @@
             <Hungarian>Ez a modul lehetővé teszi a névcímkék beállításainak testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
             <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
-            <Japanese>このモジュールは名札の表示範囲と設定を変更できます。</Japanese>
+            <Japanese>これは名札の表示範囲と設定を変更できます。</Japanese>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>这个模块允许您设定名称和显示范围等设定</Chinesesimp>
+            <Chinesesimp>这个模块允许您设定名字和显示范围等设定</Chinesesimp>
             <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
@@ -445,7 +445,7 @@
             <Italian>Usa impostazioni Etichette Nomi</Italian>
             <Japanese>名札の設定</Japanese>
             <Korean>이름표 설정 사용</Korean>
-            <Chinesesimp>玩家名称设定</Chinesesimp>
+            <Chinesesimp>玩家名字设定</Chinesesimp>
             <Chinese>玩家名稱設定</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_AlwaysShowAll">
@@ -471,13 +471,13 @@
             <Czech>Zobrazit jména hráčů a nastavit jejich aktivaci. Výchozí: Povoleno</Czech>
             <German>Erlaubt das Anzeigen von Spielernamen und stellt ein, ob sie standardmäßig aktiviert oder deaktiviert sind. Standard: aktiviert</German>
             <Portuguese>Mostrar os nomes dos jogadores e definir sua ativação. Padrão: Ativado</Portuguese>
-            <French>Afficher les noms des joueurs et paramètre son activation. Défaut: activé</French>
+            <French>Affiche les noms des joueurs et définir leur activation. Défaut : activé</French>
             <Hungarian>Mutassa a játékosok nevét és kezelje az aktivációjukat. Alapértelmezett: Engedélyezve</Hungarian>
             <Russian>Показывать имена игроков и установить их активацию. По-умолчанию: Включено</Russian>
             <Italian>Mostra nomi giocatori ed imposta la loro attivazione. Default: Abilitato</Italian>
             <Japanese>プレイヤ名の表示と設定を有効化します。標準: 有効</Japanese>
             <Korean>플레이어 이름의 표시와 설정을 활성화합니다. 기본설정: 활성화</Korean>
-            <Chinesesimp>显示玩家的名称并设置其启动方式。预设: 启用</Chinesesimp>
+            <Chinesesimp>显示玩家的名字并设置其启动方式。预设: 启用</Chinesesimp>
             <Chinese>顯示玩家的名稱並設置其啟動方式。預設: 啟用</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
@@ -487,13 +487,13 @@
             <Czech>Efekt zvukových vln nad hlavami hráčů když mluví skrz PTT klávesu. Tato volba funguje s TFAR a ACRE2.</Czech>
             <German>Es wird ein Schallwellensymbol über den Köpfen von sprechenden Spielern angezeigt, die ihre Push-to-Talk-Taste drücken. Diese Option funktioniert mit "TFAR" und "ACRE2".</German>
             <Portuguese>Efeito de ondas sonoras acima das cabeças dos jogadores que falam depois mantendo pressionada a tecla PTT. Esta opção funciona com TFAR e ACRE2.</Portuguese>
-            <French>Icone au dessus de la tête du joueur qui parle après avoir utilisé la touche de PTT. Option compatible avec ACRE2 et TFAR</French>
+            <French>Effet d'onde sonore, qui s'anime au-dessus de la tête des joueurs lorsqu'ils parlent en maintenant la touche PTT enfoncée. Cette option fonctionne avec TFAR et ACRE2.</French>
             <Hungarian>Hanghullám-effekt a beszélő játékosok feje felett a PTT-gomb lenyomásakor. Ez a beállítás TFAR és ACRE2 alatt működik.</Hungarian>
             <Russian>Эффект звуковой волны над головами говорящих игроков при удерживании кнопки push-to-talk. Эта опация работает также с рациями TFAR и ACRE2.</Russian>
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
             <Japanese>プレイヤーが PTT キーを押している間は、音波形を表示します。このオプションは TFAR と ACRE2 で動作します。</Japanese>
             <Korean>플레이어가 PTT로 말할시 머리위에 음파효과를 적용합니다. 이 옵션은 TFAR과 ACRE2가 있을때만 적용됩니다.</Korean>
-            <Chinesesimp>当玩家使用按键发话时，其头上的角色名称旁会显示声波的图案。此功能可搭配TFAR、ACRE2等模组使用。</Chinesesimp>
+            <Chinesesimp>当玩家使用按键发话时，其头上的角色名字旁会显示声波的图案。此功能可搭配TFAR、ACRE2等模组使用。</Chinesesimp>
             <Chinese>當玩家使用按鍵發話時，其頭上的角色名稱旁會顯示聲波的圖案。此功能可搭配TFAR、ACRE2等模組使用。</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
@@ -509,7 +509,7 @@
             <Italian>Dimensione Etichette Nome</Italian>
             <Japanese>名札の大きさ</Japanese>
             <Korean>이름표 크기</Korean>
-            <Chinesesimp>玩家名称标记大小</Chinesesimp>
+            <Chinesesimp>玩家名字标记大小</Chinesesimp>
             <Chinese>玩家名稱標記大小</Chinese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Description">
@@ -538,9 +538,20 @@
             <Italian>Sfocatura nei bordi dello schermo</Italian>
             <Chinesesimp>在荧幕边框旁淡出</Chinesesimp>
             <Chinese>在螢幕邊框旁淡出</Chinese>
+            <Russian>Затухание на границе экрана</Russian>
+            <Portuguese>Ocultar na borda da tela</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_playerNamesMaxAlpha">
             <English>Player tags transparency</English>
+            <German>Spielernamen Transparenz</German>
+            <Japanese>プレイヤー名札の透明度</Japanese>
+            <Chinesesimp>玩家名字标签透明度</Chinesesimp>
+            <Chinese>玩家名稱透明度</Chinese>
+            <Italian>Trasparenza Etichette Nome</Italian>
+            <Polish>Przezroczystość etykiet gracza</Polish>
+            <Russian>Прозрачность меток игроков</Russian>
+            <Portuguese>Transparência da etiqueta de nome</Portuguese>
+            <French>Transparence des noms</French>
         </Key>
     </Package>
 </Project>

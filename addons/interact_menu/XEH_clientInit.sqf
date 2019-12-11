@@ -1,7 +1,29 @@
-//XEH_clientInit.sqf
 #include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
+
+// Wait until player controls (man,vehicle or uav) a thing before compiling the menu
+GVAR(controllableSelfActionsAdded) = [] call CBA_fnc_createNamespace;
+DFUNC(newControllableObject) = {
+    params ["_object"];
+    private _type = typeOf _object;
+    TRACE_2("newControllableObject",_object,_type);
+    if (_type == "") exitWith {};
+
+    if (!(GVAR(controllableSelfActionsAdded) getVariable [_type, false])) then {
+        [_type] call FUNC(compileMenuSelfAction);
+        GVAR(controllableSelfActionsAdded) setVariable [_type, true];
+        [{
+            TRACE_1("sending newControllableObject event",_this);
+            // event for other systems to add self actions, running addActionToClass before this will cause compiling
+            [QGVAR(newControllableObject), _this] call CBA_fnc_localEvent;
+        }, [_type]] call CBA_fnc_execNextFrame; // delay event a frame to ensure postInit has run for all addons
+    };
+};
+["unit", {[_this select 0] call FUNC(newControllableObject)}, true] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {[_this select 1] call FUNC(newControllableObject)}, true] call CBA_fnc_addPlayerEventHandler;
+["ACE_controlledUAV", {[_this select 0] call FUNC(newControllableObject)}] call CBA_fnc_addEventHandler;
+
 
 GVAR(blockDefaultActions) = [];
 
@@ -10,16 +32,16 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-["ace_settingChanged", {
-    params ["_name"];
-    if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
-        [] call FUNC(setupTextColors);
-    };
-}] call CBA_fnc_addEventHandler;
-
 ["ace_settingsInitialized", {
-    //Setup text/shadow/size/color settings matrix
+    // Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
+    // Setting changed added here so color setup happens once at init
+    ["ace_settingChanged", {
+        params ["_name"];
+        if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
+            [] call FUNC(setupTextColors);
+        };
+    }] call CBA_fnc_addEventHandler;
     // Install the render EH on the main display
     addMissionEventHandler ["Draw3D", {call FUNC(render)}];
 }] call CBA_fnc_addEventHandler;
@@ -78,10 +100,14 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
 
 // background options
 ["ace_interactMenuOpened", {
-    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
-    if (GVAR(menuBackground)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
+    params ["_menuType"];
+    private _menuBackgroundSetting = [GVAR(menuBackground), GVAR(menuBackgroundSelf)] select _menuType;
+    if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
+    if (_menuBackgroundSetting == 2) exitWith {0 cutRsc [QGVAR(menuBackground), "PLAIN", 1, false];};
 }] call CBA_fnc_addEventHandler;
 ["ace_interactMenuClosed", {
-    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
-    if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
+    params ["_menuType"];
+    private _menuBackgroundSetting = [GVAR(menuBackground), GVAR(menuBackgroundSelf)] select _menuType;
+    if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
+    if (_menuBackgroundSetting == 2) exitWith {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call CBA_fnc_addEventHandler;

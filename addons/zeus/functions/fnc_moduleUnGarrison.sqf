@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Un-garrison a garrisoned group.
@@ -13,8 +14,6 @@
  *
  * Public: No
 */
-
-#include "script_component.hpp"
 
 params ["_logic"];
 

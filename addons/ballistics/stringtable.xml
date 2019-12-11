@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Ballistics">
         <!-- QBU -->
@@ -15,7 +15,7 @@
             <Hungarian>6,5x47mm 20-lövedékes tár (HPBT Scenar)</Hungarian>
             <Japanese>6.5x47mm 20発入り 弾倉 (HPBT Scenar)</Japanese>
             <Korean>20발들이 6.5x47mm (HPBT Scenar)</Korean>
-            <Chinese>6.5x47mm 20發 彈匣 (Lapua 空尖艇尾狙擊專用彈)</Chinese>
+            <Chinese>6.5x47毫米 20發 彈匣 (拉普 空尖艇尾狙擊專用彈)</Chinese>
             <Chinesesimp>6.5x47mm 20发 弹匣 (Lapua 空尖艇尾狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_NameShort">
@@ -31,12 +31,12 @@
             <Hungarian>6,5mm Lapua</Hungarian>
             <Japanese>6.5mm Lapua</Japanese>
             <Korean>6.5mm Lapua</Korean>
-            <Chinese>6.5mm Lapua 空尖艇尾狙擊專用彈</Chinese>
+            <Chinese>6.5毫米 拉普 空尖艇尾狙擊專用彈</Chinese>
             <Chinesesimp>6.5mm Lapua 空尖艇尾狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
-            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 20</French>
+            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: QBU-88</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: QBU-88</Spanish>
             <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 20</Polish>
             <Russian>Калибр: 6,5x47 мм (экспансивные Scenar)&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: QBU-88</Russian>
@@ -47,7 +47,7 @@
             <Hungarian>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: QBU-88</Hungarian>
             <Japanese>口径: 6.5x47mm (HPBT Scenar)&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: QBU-88</Japanese>
             <Korean>구경: 6.5x47mm (HPBT Scenar)&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: QBU-88</Korean>
-            <Chinese>口徑: 6.5x47mm (Lapua 空尖艇尾狙擊專用彈)&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
+            <Chinese>口徑: 6.5x47毫米 (拉普 空尖艇尾狙擊專用彈)&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
             <Chinesesimp>口径: 6.5x47mm (Lapua 空尖艇尾狙击专用弹)&lt;br /&gt;发数: 20&lt;br /&gt;使用于: QBU-88</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Name">
@@ -63,7 +63,7 @@
             <Hungarian>6,5mm Creedmor 20-lövedékes tár</Hungarian>
             <Japanese>6.5mm Creedmor 20発入り 弾倉</Japanese>
             <Korean>20발들이 6.5mm Creedmor 탄창</Korean>
-            <Chinese>6.5mm 20發 彈匣 (Creedmor 狙擊專用彈)</Chinese>
+            <Chinese>6.5毫米 20發 彈匣 (克里德莫爾(CM) 狙擊專用彈)</Chinese>
             <Chinesesimp>6.5mm 20发 弹匣 (Creedmor 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_NameShort">
@@ -79,7 +79,7 @@
             <Hungarian>6,5mm CM</Hungarian>
             <Japanese>6.5mm CM</Japanese>
             <Korean>6.5mm CM</Korean>
-            <Chinese>6.5mm CM 狙擊專用彈</Chinese>
+            <Chinese>6.5毫米 CM 狙擊專用彈</Chinese>
             <Chinesesimp>6.5mm CM 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Description">
@@ -95,7 +95,7 @@
             <Hungarian>Kaliber: 6,5x47mm Creedmor&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: QBU-88</Hungarian>
             <Japanese>口径: 6.5x47mm Creedmor&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: QBU-88</Japanese>
             <Korean>구경: 6.5x47mm Creedmor&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: QBU-88</Korean>
-            <Chinese>口徑: 6.5x47mm Creedmor 狙擊專用彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
+            <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
             <Chinesesimp>口径: 6.5x47mm Creedmor 狙击专用弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: QBU-88</Chinesesimp>
         </Key>
         <!-- MX -->
@@ -112,7 +112,7 @@
             <Russian>Магазин из 30-ти 6,5 мм ИК-трассирующих</Russian>
             <Japanese>6.5mm 30発入り IR-DIM曳光弾 弾倉</Japanese>
             <Korean>30발들이 6.5mm IR-DIM 예광탄 탄창</Korean>
-            <Chinese>6.5mm 30發 低視度紅外線曳光彈 彈匣</Chinese>
+            <Chinese>6.5毫米 30發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 低视度红外线曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_Tracer_DimNameShort">
@@ -128,7 +128,7 @@
             <Russian>6,5 мм ИК-трассирующие</Russian>
             <Japanese>6.5mm IR-DIM曳光弾</Japanese>
             <Korean>6.5mm IR-DIM 예광탄</Korean>
-            <Chinese>6.5mm 低視紅外曳光彈</Chinese>
+            <Chinese>6.5毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>6.5mm 低视红外曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_Tracer_DimDescription">
@@ -144,7 +144,7 @@
             <Russian>Калибр: 6,5x39 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
             <Japanese>口径: 6.5x39mm 曳光弾 IR-DIM&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: MX/C/M/SW/3GL</Japanese>
             <Korean>구경: 6.5x39mm IR-DIM 예광탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
-            <Chinese>口徑: 6.5x39mm 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
+            <Chinese>口徑: 6.5x39毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
             <Chinesesimp>口径: 6.5x39mm 低视度红外线曳光弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MX/C/M/SW/3GL</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_SDName">
@@ -160,7 +160,7 @@
             <Russian>Магазин из 30-ти 6,5 мм дозвуковых</Russian>
             <Japanese>6.5mm 30発入り 亜音速弾 弾倉</Japanese>
             <Korean>30발들이 6.5mm 아음속탄 탄창</Korean>
-            <Chinese>6.5mm 30發 消音彈 彈匣</Chinese>
+            <Chinese>6.5毫米 30發 消音彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 消音弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_SDNameShort">
@@ -176,7 +176,7 @@
             <Russian>6,5 мм дозвуковые</Russian>
             <Japanese>6.5mm 亜音速弾</Japanese>
             <Korean>6.5mm 아음속탄</Korean>
-            <Chinese>6.5mm 消音彈</Chinese>
+            <Chinese>6.5毫米 消音彈</Chinese>
             <Chinesesimp>6.5mm 消音弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_SDDescription">
@@ -192,7 +192,7 @@
             <Russian>Калибр: 6,5x39 мм дозвуковые&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
             <Japanese>口径: 6.5x39mm 亜音速弾&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: MX/C/M/SW/3GL</Japanese>
             <Korean>구경: 6.5x39mm SD&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
-            <Chinese>口徑: 6.5x39mm 消音彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
+            <Chinese>口徑: 6.5x39毫米 消音彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
             <Chinesesimp>口径: 6.5x39mm 消音弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MX/C/M/SW/3GL</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_APName">
@@ -208,7 +208,7 @@
             <Russian>Магазин из 30-ти 6,5 мм бронебойных</Russian>
             <Japanese>6.5mm 30 発入り徹甲弾 弾倉</Japanese>
             <Korean>30발들이 6.5mm 철갑탄 탄창</Korean>
-            <Chinese>6.5mm 30發 穿甲彈 彈匣</Chinese>
+            <Chinese>6.5毫米30發 穿甲彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 穿甲弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_APNameShort">
@@ -224,7 +224,7 @@
             <Russian>6,5 мм бронебойные</Russian>
             <Japanese>6.5mm 徹甲弾</Japanese>
             <Korean>6.5mm 철갑탄</Korean>
-            <Chinese>6.5mm 穿甲彈</Chinese>
+            <Chinese>6.5毫米 穿甲彈</Chinese>
             <Chinesesimp>6.5mm 穿甲弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_APDescription">
@@ -240,7 +240,7 @@
             <Russian>Калибр: 6,5x39 мм бронебойные&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
             <Japanese>口径: 6.5x39mm 徹甲弾&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: MX/C/M/SW/3GL</Japanese>
             <Korean>구경: 6.5x39mm 철갑탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
-            <Chinese>口徑: 6.5x39mm 穿甲彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
+            <Chinese>口徑: 6.5x39毫米 穿甲彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
             <Chinesesimp>口径: 6.5x39mm 穿甲弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MX/C/M/SW/3GL</Chinesesimp>
         </Key>
         <!-- KATIBA -->
@@ -257,7 +257,7 @@
             <Russian>Магазин из 30-ти 6,5 мм ИК-трассирующих</Russian>
             <Japanese>6.5mm 30発入り IR-DIM曳光弾 弾倉</Japanese>
             <Korean>30발들이 6.5mm IR-DIM 예광탄 탄창</Korean>
-            <Chinese>6.5mm 30發 低視度紅外線曳光彈 彈匣</Chinese>
+            <Chinese>6.5毫米 30發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 低视度红外线曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_Tracer_DimNameShort">
@@ -273,7 +273,7 @@
             <Russian>6,5 мм ИК-трассирующие</Russian>
             <Japanese>6.5mm IR-DIM曳光弾</Japanese>
             <Korean>6.5mm IR-DIM 예광탄</Korean>
-            <Chinese>6.5mm 低視紅外曳光彈</Chinese>
+            <Chinese>6.5毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>6.5mm 低视红外曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_Tracer_DimDescription">
@@ -289,7 +289,7 @@
             <Russian>Калибр: 6,5x39 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
             <Japanese>口径: 6.5x39mm IR-DIM曳光弾&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: Katiba</Japanese>
             <Korean>구경: 6.5x39mm IR-DIM 예광탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: Katiba</Korean>
-            <Chinese>口徑: 6.5x39mm 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
+            <Chinese>口徑: 6.5x39毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
             <Chinesesimp>口径: 6.5x39mm 低视度红外线曳光弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: Katiba</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_SDName">
@@ -305,7 +305,7 @@
             <Russian>Магазин из 30-ти 6,5 мм дозвуковых</Russian>
             <Japanese>6.5mm 30発入り 亜音速弾 弾倉</Japanese>
             <Korean>30발들이 6.5mm 아음속탄 탄창</Korean>
-            <Chinese>6.5mm 30發 消音彈 彈匣</Chinese>
+            <Chinese>6.5毫米 30發 消音彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 消音弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_SDNameShort">
@@ -321,7 +321,7 @@
             <Russian>6,5 мм дозвуковые</Russian>
             <Japanese>6.5mm 亜音速弾</Japanese>
             <Korean>6.5mm 아음속탄</Korean>
-            <Chinese>6.5mm 消音彈</Chinese>
+            <Chinese>6.5毫米 消音彈</Chinese>
             <Chinesesimp>6.5mm 消音弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_SDDescription">
@@ -337,7 +337,7 @@
             <Russian>Калибр: 6,5x39 мм дозвуковые&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
             <Japanese>口径: 6.5x39mm 亜音速弾&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: Katiba</Japanese>
             <Korean>구경: 6.5x39mm 아음속탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: Katiba</Korean>
-            <Chinese>口徑: 6.5x39mm 消音彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
+            <Chinese>口徑: 6.5x39毫米 消音彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
             <Chinesesimp>口径: 6.5x39mm 消音弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: Katiba</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_APName">
@@ -353,7 +353,7 @@
             <Russian>Магазин из 30-ти 6,5 мм бронебойных</Russian>
             <Japanese>6.5mm 30 発入り徹甲弾 弾倉</Japanese>
             <Korean>30발들이 6.5mm 철갑탄 탄창</Korean>
-            <Chinese>6.5mm 30發 穿甲彈 彈匣</Chinese>
+            <Chinese>6.5毫米 30發 穿甲彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 穿甲弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_APNameShort">
@@ -369,7 +369,7 @@
             <Russian>6,5 мм бронебойные</Russian>
             <Japanese>6.5mm 徹甲弾</Japanese>
             <Korean>6.5mm 철갑탄</Korean>
-            <Chinese>6.5mm 穿甲彈</Chinese>
+            <Chinese>6.5毫米 穿甲彈</Chinese>
             <Chinesesimp>6.5mm 穿甲弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_APDescription">
@@ -385,7 +385,7 @@
             <Russian>Калибр: 6,5x39 мм бронебойные&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
             <Japanese>口径: 6.5x39mm 徹甲弾&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: Katiba</Japanese>
             <Korean>구경: 6.5x39mm 철갑탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: Katiba</Korean>
-            <Chinese>口徑: 6.5x39mm 穿甲彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
+            <Chinese>口徑: 6.5x39m毫米 穿甲彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
             <Chinesesimp>口径: 6.5x39mm 穿甲弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: Katiba</Chinesesimp>
         </Key>
         <!-- 5.56x45mm -->
@@ -402,7 +402,7 @@
             <Russian>Магазин из 30-ти 5,56 мм ИК-трассирующих</Russian>
             <Japanese>5.56mm 30発入り IR-DIM曳光弾 弾倉</Japanese>
             <Korean>30발 들이 5.56mm IR-DIM 예광탄 탄창</Korean>
-            <Chinese>5.56mm 30發 低視度紅外線曳光彈 彈匣</Chinese>
+            <Chinese>5.56毫米 30發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>5.56mm 30发 低视度红外线曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_mag_Tracer_DimNameShort">
@@ -418,7 +418,7 @@
             <Russian>5,56 мм ИК-трассирующие</Russian>
             <Japanese>5.56mm IR-DIM曳光弾</Japanese>
             <Korean>5.56mm IR-DIM 예광탄</Korean>
-            <Chinese>5.56mm 低視紅外曳光彈</Chinese>
+            <Chinese>5.56毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>5.56mm 低视红外曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_mag_Tracer_DimDescription">
@@ -434,7 +434,7 @@
             <Russian>Калибр: 5,56x45 мм ИК-трассирующие&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
             <Japanese>口径: 5.56x45mm IR-DIM曳光弾&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Japanese>
             <Korean>구경: 5.56x45mm IR-DIM 예광탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Korean>
-            <Chinese>口徑: 5.56x45mm 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Chinese>
+            <Chinese>口徑: 5.56x45毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Chinese>
             <Chinesesimp>口径: 5.56x45mm 低视度红外线曳光弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Chinesesimp>
         </Key>
         <!-- 7.62x51mm -->
@@ -451,7 +451,7 @@
             <Russian>Магазин из 20-ти 7,62 мм трассирующих</Russian>
             <Japanese>7.62mm 20発入り 曳光弾</Japanese>
             <Korean>20발들이 7.62mm 예광탄 탄창</Korean>
-            <Chinese>7.62mm 20發 曳光彈 彈匣</Chinese>
+            <Chinese>7.62毫米 20發 曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62mm 20发 曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_TracerNameShort">
@@ -459,7 +459,7 @@
             <Hungarian>7,62mm Nyomjelző</Hungarian>
             <German>7,62mm Leuchtspur</German>
             <Spanish>7,62mm Trazadora</Spanish>
-            <French>7,62mm Traçantes</French>
+            <French>7,62mm Traçante</French>
             <Polish>7,62mm Smugacz</Polish>
             <Czech>7.62mm Svítící</Czech>
             <Portuguese>7,62mm Traçante</Portuguese>
@@ -467,7 +467,7 @@
             <Russian>7,62 мм трассирущие</Russian>
             <Japanese>7.62mm 曳光弾</Japanese>
             <Korean>7.62mm 예광탄</Korean>
-            <Chinese>7.62mm 曳光彈</Chinese>
+            <Chinese>7.62毫米 曳光彈</Chinese>
             <Chinesesimp>7.62mm 曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_TracerDescription">
@@ -475,7 +475,7 @@
             <Hungarian>Kaliber: 7,62x51mm Nyomjelző&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm Leuchtspur&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51mm Trazadora&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51mm Traçantes&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: EBR</French>
+            <French>Calibre: 7,62x51mm Traçante&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
             <Polish>Kaliber: 7,62x51mm Smugacz&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51mm Svítící&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51mm Traçante&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
@@ -483,7 +483,7 @@
             <Russian>Калибр: 7,62x51 мм трассирующие&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
             <Japanese>口径: 7.62x51mm 曳光弾&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
             <Korean>구경: 7.62x51mm 예광탄&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: Mk18 ABR</Korean>
-            <Chinese>口徑: 7.62x51mm 曳光彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
+            <Chinese>口徑: 7.62x51毫米 曳光彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
             <Chinesesimp>口径: 7.62x51mm 曳光弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_Tracer_DimName">
@@ -499,7 +499,7 @@
             <Russian>Магазин из 20-ти 7,62 мм ИК-трассирующих</Russian>
             <Japanese>7.62mm 20発入り IR-DIM曳光弾</Japanese>
             <Korean>20발들이 7.62mm IR-DIM 예광탄 탄창</Korean>
-            <Chinese>7.62mm 20發 低視度紅外線曳光彈 彈匣</Chinese>
+            <Chinese>7.62毫米 20發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62mm 20发 低视度红外线曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_Tracer_DimNameShort">
@@ -515,7 +515,7 @@
             <Russian>7,62 мм ИК-трассирующие</Russian>
             <Japanese>7.62mm IR-DIM曳光弾</Japanese>
             <Korean>7.62mm IR-DIM 예광탄</Korean>
-            <Chinese>7.62mm 低視紅外曳光彈</Chinese>
+            <Chinese>7.62毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>7.62mm 低视红外曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_Tracer_DimDescription">
@@ -523,7 +523,7 @@
             <Hungarian>Kaliber: 7,62x51mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51mm Trazadoras IR-DIM&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51mm Traçantes IR-DIM&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: EBR</French>
+            <French>Calibre: 7,62x51mm Traçante IR-DIM&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
             <Polish>Kaliber: 7,62x51mm Smugacz IR-DIM&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51mm Svítící IR-DIM&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51mm Traçante IR-DIM&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
@@ -531,7 +531,7 @@
             <Russian>Калибр: 7,62x51 мм ИК-трассирующие&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
             <Japanese>口径: 7.62x51mm IR-DIM曳光弾&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
             <Korean>구경: 7.62x51mm IR-DIM 예광탄&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: Mk18 ABR</Korean>
-            <Chinese>口徑: 7.62x51mm 低視度紅外線曳光彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
+            <Chinese>口徑: 7.62x51毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
             <Chinesesimp>口径: 7.62x51mm 低视度红外线曳光弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_SDName">
@@ -547,7 +547,7 @@
             <Russian>Магазин из 20-ти 7,62 мм дозвуковых</Russian>
             <Japanese>7.62mm 20発入り 亜音速弾 弾倉</Japanese>
             <Korean>20발들이 7.62mm 아음속탄 탄창</Korean>
-            <Chinese>7.62mm 20發 消音彈 彈匣</Chinese>
+            <Chinese>7.62毫米 20發 消音彈 彈匣</Chinese>
             <Chinesesimp>7.62mm 20发 消音弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_SDNameShort">
@@ -563,7 +563,7 @@
             <Russian>7,62 мм дозвуковые</Russian>
             <Japanese>7.62mm 亜音速弾</Japanese>
             <Korean>7.62mm 아음속탄</Korean>
-            <Chinese>7.62mm 消音彈</Chinese>
+            <Chinese>7.62毫米 消音彈</Chinese>
             <Chinesesimp>7.62mm 消音弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_SDDescription">
@@ -571,7 +571,7 @@
             <Hungarian>Kaliber: 7,62x51mm Halk&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
             <German>Kaliber: 7,62x51mm SD&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: EBR</German>
             <Spanish>Calibre: 7,62x51mm SD&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
-            <French>Calibre: 7,62x51mm SD&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: EBR</French>
+            <French>Calibre: 7,62x51mm SD&lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
             <Polish>Kaliber: 7,62x51mm SD&lt;br /&gt;Pociski: 20&lt;br /&gt;Używane w: Mk18 ABR</Polish>
             <Czech>Ráže: 7.62x51mm SD&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
             <Portuguese>Calibre: 7,62x51mm SD&lt;br /&gt;Projéteis: 20&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
@@ -579,7 +579,7 @@
             <Russian>Калибр: 7,62x51 мм дозвуковые&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
             <Japanese>口径: 7.62x51mm 亜音速弾&lt;br /&gt;装填数: 20&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
             <Korean>구경: 7.62x51mm SD&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: Mk18 ABR</Korean>
-            <Chinese>口徑: 7.62x51mm 消音彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
+            <Chinese>口徑: 7.62x51毫米 消音彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
             <Chinesesimp>口径: 7.62x51mm 消音弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
         </Key>
         <!-- .338 Norma Magnum -->
@@ -587,7 +587,7 @@
             <English>.338 NM 130Rnd Tracer Belt</English>
             <German>.338 NM 130-Patronen-Gurt Leuchtspur</German>
             <Polish>Taśma .338 NM 130rd Smugacz</Polish>
-            <French>Bande .338 NM 130Cps Traçante</French>
+            <French>Bande .338 NM 130Cps Traçantes</French>
             <Spanish>Cinta de 130 balas trazadoras de .338 NM</Spanish>
             <Russian>Лента из 130-ти .338 NM трассирующих</Russian>
             <Italian>.338 NM 130Rnd Tracciante Belt</Italian>
@@ -596,7 +596,7 @@
             <Hungarian>.338 NM 130-lövedékes nyomkövető heveder</Hungarian>
             <Japanese>.338 NM 130発入り 曳光弾ベルト</Japanese>
             <Korean>130발들이 .338 NM 예광탄 벨트</Korean>
-            <Chinese>.338 NM 130發 曳光彈 彈鏈</Chinese>
+            <Chinese>.338 拉普麥格農(NM) 130發 曳光彈 彈鏈</Chinese>
             <Chinesesimp>.338 NM 130发 曳光弹 弹链</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_TracerNameShort">
@@ -628,7 +628,7 @@
             <Hungarian>Kaliber: .338 Norma Magnum nyomkövető&lt;br /&gt;Lövedékek: 130&lt;br /&gt;Használható: SPMG</Hungarian>
             <Japanese>口径: .338 Norma Magnum 曳光弾&lt;br /&gt;装填数: 130&lt;br /&gt;次で使用: SPMG</Japanese>
             <Korean>구경: .338 Norma 매그넘 예광탄&lt;br /&gt;장탄수: 130&lt;br /&gt;사용처: SPMG</Korean>
-            <Chinese>口徑: .338 Norma Magnum 曳光彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
+            <Chinese>口徑: .338 拉普麥格農 曳光彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
             <Chinesesimp>口径: .338 Norma Magnum 曳光弹&lt;br /&gt;发数: 130&lt;br /&gt;使用于: SPMG</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_Tracer_DimName">
@@ -644,7 +644,7 @@
             <Hungarian>.338 NM 130-lövedékes infravörös nyomkövető heveder</Hungarian>
             <Japanese>.338 NM 130発入り IR-DIM曳光弾ベルト</Japanese>
             <Korean>130발들이 .338 NM IR-DIM 예광탄 벨트</Korean>
-            <Chinese>.338 NM 130發 低視度紅外線曳光彈 彈鏈</Chinese>
+            <Chinese>.338 拉普麥格農(NM) 130發 低視度紅外線曳光彈 彈鏈</Chinese>
             <Chinesesimp>.338 NM 130发 低视度红外线曳光弹 弹链</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_Tracer_DimNameShort">
@@ -676,7 +676,7 @@
             <Hungarian>Kaliber: .338 Norma Magnum infravörös nyomkövető&lt;br /&gt;Lövedékek: 130&lt;br /&gt;Használható: SPMG</Hungarian>
             <Japanese>口径: .338 Norma Magnum IR-DIM曳光弾&lt;br /&gt;装填数: 130&lt;br /&gt;次で使用: SPMG</Japanese>
             <Korean>구경: .338 Norma 매그넘 IR-DIM 예광탄&lt;br /&gt;장탄수: 130&lt;br /&gt;사용처: SPMG</Korean>
-            <Chinese>口徑: .338 Norma Magnum 低視度紅外線曳光彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
+            <Chinese>口徑: .338 拉普麥格農 低視度紅外線曳光彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
             <Chinesesimp>口径: .338 Norma Magnum 低视度红外线曳光弹&lt;br /&gt;发数: 130&lt;br /&gt;使用于: SPMG</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_APName">
@@ -692,7 +692,7 @@
             <Hungarian>.338 NM 130-lövedékes páncéltörő heveder</Hungarian>
             <Japanese>.338 NM 130発入り 徹甲弾ベルト</Japanese>
             <Korean>130발들이 .338 NM 철갑탄 벨트</Korean>
-            <Chinese>.338 NM 130發 穿甲彈 彈鏈</Chinese>
+            <Chinese>.338 拉普麥格農(NM) 130發 穿甲彈 彈鏈</Chinese>
             <Chinesesimp>.338 NM 130发 穿甲弹 弹链</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_APNameShort">
@@ -724,7 +724,7 @@
             <Hungarian>Kaliber: .338 Norma Magnum páncéltörő&lt;br /&gt;Lövedékek: 130&lt;br /&gt;Használható: SPMG</Hungarian>
             <Japanese>口径: .338 Norma Magnum 徹甲弾&lt;br /&gt;装填数: 130&lt;br /&gt;次で使用: SPMG</Japanese>
             <Korean>구경: .338 Norma 매그넘 철갑탄&lt;br /&gt;장탄수: 130&lt;br /&gt;사용처: SPMG</Korean>
-            <Chinese>口徑: .338 Norma Magnum 穿甲彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
+            <Chinese>口徑: .338 拉普麥格農 穿甲彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
             <Chinesesimp>口径: .338 Norma Magnum 穿甲弹&lt;br /&gt;发数: 130&lt;br /&gt;使用于: SPMG</Chinesesimp>
         </Key>
         <!-- 9.3x64mm 10Rnd -->
@@ -732,7 +732,7 @@
             <English>9.3mm 10Rnd Tracer Mag</English>
             <German>9,3mm 10-Patronen-Magazin Leuchtspur</German>
             <Polish>Magazynek 9.3mm 10rd Smugacz</Polish>
-            <French>Ch. 9,3mm 10Cps Traçante</French>
+            <French>Ch. 9,3mm 10Cps Traçantes</French>
             <Spanish>Cargador de 10 balas trazadoras de 9.3mm</Spanish>
             <Russian>Магазин из 10-ти 9,3 мм трассирующих</Russian>
             <Italian>9.3mm 10Rnd Tracer Mag</Italian>
@@ -741,7 +741,7 @@
             <Hungarian>9,3mm 10-lövedékes nyomkövető tár</Hungarian>
             <Japanese>9.3mm 10発入り 曳光弾 弾倉</Japanese>
             <Korean>10발들이 9.3mm 예광탄 탄창</Korean>
-            <Chinese>9.3mm 10發 曳光彈 彈匣</Chinese>
+            <Chinese>9.3毫米 10發 曳光彈 彈匣</Chinese>
             <Chinesesimp>9.3mm 10发 曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_TracerNameShort">
@@ -757,7 +757,7 @@
             <Hungarian>9,3mm nyomkövető</Hungarian>
             <Japanese>9.3mm 曳光弾</Japanese>
             <Korean>9.3mm 예광탄</Korean>
-            <Chinese>9.3mm 曳光彈</Chinese>
+            <Chinese>9.3毫米 曳光彈</Chinese>
             <Chinesesimp>9.3mm 曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_TracerDescription">
@@ -773,14 +773,14 @@
             <Hungarian>Kaliber: 9,3x64mm nyomkövető&lt;br /&gt;Lövedékek: 10&lt;br /&gt;Használható: Cyrus</Hungarian>
             <Japanese>口径: 9.3x64mm 曳光弾&lt;br /&gt;装填数: 10&lt;br /&gt;次で使用: Cyrus</Japanese>
             <Korean>구경: 9.3x64mm 예광탄&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: Cyrus</Korean>
-            <Chinese>口徑: 9.3x64mm 曳光彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Cyrus</Chinese>
+            <Chinese>口徑: 9.3x64毫米 曳光彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Cyrus</Chinese>
             <Chinesesimp>口径: 9.3x64mm 曳光弹&lt;br /&gt;发数: 10&lt;br /&gt;使用于: Cyrus</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_Tracer_DimName">
             <English>9.3mm 10Rnd Tracer IR-DIM Mag</English>
             <German>9,3mm 10-Patronen-Magazin Leuchtspur IR-DIM</German>
             <Polish>Magazynek 9,3mm 10rd Smugacz IR-DIM</Polish>
-            <French>Ch. 9,3mm 10Cps Traçante IR-DIM</French>
+            <French>Ch. 9,3mm 10Cps Traçantes IR-DIM</French>
             <Spanish>Cargador de 10 balas trazadoras IR-DIM de 9.3mm</Spanish>
             <Russian>Магазин из 10-ти 9,3 мм ИК-трассирующих</Russian>
             <Italian>9.3mm 10Rnd Tracciante IR-DIM Mag</Italian>
@@ -789,7 +789,7 @@
             <Hungarian>9,3mm 10-lövedékes infravörös nyomkövető tár</Hungarian>
             <Japanese>9.3mm 10発入り IR-DIM曳光弾 弾倉</Japanese>
             <Korean>10발들이 9.3mm IR-DIM 예광탄 탄창</Korean>
-            <Chinese>9.3mm 10發 低視度紅外線曳光彈 彈匣</Chinese>
+            <Chinese>9.3毫米 10發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>9.3mm 10发 低视度红外线曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_Tracer_DimNameShort">
@@ -805,7 +805,7 @@
             <Hungarian>9,3mm infravörös nyomkövető</Hungarian>
             <Japanese>9.3mm IR-DIM曳光弾</Japanese>
             <Korean>9.3mm IR-DIM 예광탄</Korean>
-            <Chinese>9.3mm 低視紅外曳光彈</Chinese>
+            <Chinese>9.3毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>9.3mm 低视红外曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_Tracer_DimDescription">
@@ -821,7 +821,7 @@
             <Hungarian>Kaliber: 9,3x64mm infravörös nyomkövető&lt;br /&gt;Lövedékek: 10&lt;br /&gt; Használható: Cyrus</Hungarian>
             <Japanese>口径: 9.3x64mm IR-DIM曳光弾&lt;br /&gt;装填数: 10&lt;br /&gt;次で使用: Cyrus</Japanese>
             <Korean>구경: 9.3x64mm IR-DIM 예광탄&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: Cyrus</Korean>
-            <Chinese>口徑: 9.3x64mm 低視度紅外線曳光彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Cyrus</Chinese>
+            <Chinese>口徑: 9.3x64毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Cyrus</Chinese>
             <Chinesesimp>口径: 9.3x64mm 低视度红外线曳光弹&lt;br /&gt;发数: 10&lt;br /&gt;使用于: Cyrus</Chinesesimp>
         </Key>
         <!-- 9.3x64mm 150Rnd Belt-->
@@ -829,7 +829,7 @@
             <English>9.3mm 150Rnd Tracer Belt</English>
             <German>9,3mm 150-Patronen-Gurt Leuchtspur</German>
             <Polish>Taśma 9,3mm 150rd Smugacz</Polish>
-            <French>Bande 9,3mm 150Cps Traçante</French>
+            <French>Bande 9,3mm 150Cps Traçantes</French>
             <Spanish>Cinta de 150 balas trazadoras de 9.3mm</Spanish>
             <Russian>Лента из 150-ти 9,3 мм трассирующих</Russian>
             <Italian>9.3mm 150Rnd Tracer Belt</Italian>
@@ -838,7 +838,7 @@
             <Hungarian>9,3mm 150-lövedékes nyomkövető heveder</Hungarian>
             <Japanese>9.3mm 150発入り 曳光弾ベルト</Japanese>
             <Korean>150발들이 9.3mm 예광탄 벨트</Korean>
-            <Chinese>9.3mm 150發 曳光彈 彈鏈</Chinese>
+            <Chinese>9.3毫米 150發 曳光彈 彈鏈</Chinese>
             <Chinesesimp>9.3mm 150发 曳光弹 弹链</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_TracerNameShort">
@@ -854,14 +854,14 @@
             <Hungarian>9,3mm nyomkövető</Hungarian>
             <Japanese>9.3mm 曳光弾</Japanese>
             <Korean>9.3mm 예광탄</Korean>
-            <Chinese>9.3mm 曳光彈</Chinese>
+            <Chinese>9.3毫米 曳光彈</Chinese>
             <Chinesesimp>9.3mm 曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
             <German>Kaliber: 9,3x64mm Leuchtspur&lt;br /&gt;Patronen: 150&lt;br /&gt;Eingesetzt von: Navid</German>
             <Polish>Kaliber: 9,3x64mm Smugacz&lt;br /&gt;Pociski: 150&lt;br /&gt;Używane w: Navid</Polish>
-            <French>Calibre: 9,3x64mm Traçante&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé avec: Navid</French>
+            <French>Calibre: 9,3x64mm Traçantes&lt;br /&gt;Cartouches: 150&lt;br /&gt;Utilisé avec: Navid</French>
             <Spanish>Calibre: 9.3x64mm trazadora&lt;br /&gt;Balas: 150&lt;br /&gt;Se usa en: Navid</Spanish>
             <Russian>Калибр: 9,3x64 мм трассирующие&lt;br /&gt;Патронов: 150&lt;br /&gt;Используются с: Навид</Russian>
             <Italian>Calibro: 9.3x64mm Tracciante&lt;br /&gt;Munizioni: 150&lt;br /&gt;In uso su: Navid</Italian>
@@ -870,14 +870,14 @@
             <Hungarian>Kaliber: 9,3x64mm nyomkövető&lt;br /&gt;Lövedékek: 150&lt;br /&gt;Használható: Navid</Hungarian>
             <Japanese>口径: 9.3x64mm 曳光弾&lt;br /&gt;装填数: 150&lt;br /&gt;次で使用: Navid</Japanese>
             <Korean>구경: 9.3x64mm 예광탄&lt;br /&gt;장탄수: 150&lt;br /&gt;사용처: Navid</Korean>
-            <Chinese>口徑: 9.3x64mm 曳光彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
+            <Chinese>口徑: 9.3x64m毫米 曳光彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
             <Chinesesimp>口径: 9.3x64mm 曳光弹&lt;br /&gt;发数: 150&lt;br /&gt;使用于: Navid</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_Tracer_DimName">
             <English>9.3mm 150Rnd Tracer IR-DIM Belt</English>
             <German>9,3mm 150-Patronen-Gurt Leuchtspur IR-DIM</German>
             <Polish>Taśma 9,3mm 150rd Smugacz IR-DIM</Polish>
-            <French>Bande 9,3mm 150Cps Traçante IR-DIM</French>
+            <French>Bande 9,3mm 150Cps Traçantes IR-DIM</French>
             <Spanish>Cinta de 150 balas trazadoras IR-DIM de 9.3mm</Spanish>
             <Russian>Лента из 150-ти 9,3 мм ИК-трассирующих</Russian>
             <Italian>9.3mm 150Rnd Tracciante IR-DIM Belt</Italian>
@@ -886,7 +886,7 @@
             <Hungarian>9,3mm 150-lövedékes infravörös nyomkövető heveder</Hungarian>
             <Japanese>9.3mm 150発入り IR-DIM曳光弾ベルト</Japanese>
             <Korean>150발들이 9.3mm IR-DIM 예광탄 벨트</Korean>
-            <Chinese>9.3mm 150發 低視度紅外線曳光彈 彈鏈</Chinese>
+            <Chinese>9.3毫米 150發 低視度紅外線曳光彈 彈鏈</Chinese>
             <Chinesesimp>9.3mm 150发 低视度红外线曳光弹 弹链</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_Tracer_DimNameShort">
@@ -902,7 +902,7 @@
             <Hungarian>9,3mm infravörös nyomkövető</Hungarian>
             <Japanese>9.3mm IR-DIM曳光弾</Japanese>
             <Korean>9.3mm IR-DIM 예광탄</Korean>
-            <Chinese>9.3mm 低視紅外曳光彈</Chinese>
+            <Chinese>9.3毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>9.3mm 低视红外曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_Tracer_DimDescription">
@@ -918,7 +918,7 @@
             <Hungarian>Kaliber: 9,3x64mm infravörös nyomkövető&lt;br /&gt;Lövedékek: 150&lt;br /&gt;Használható: Navid</Hungarian>
             <Japanese>口径: 9.3x64mm IR-DIM曳光弾&lt;br /&gt;装填数: 150&lt;br /&gt;次で使用: Navid</Japanese>
             <Korean>구경: 9.3x64mm IR-DIM 예광탄&lt;br /&gt;장탄수: 150&lt;br /&gt;사용처: Navid</Korean>
-            <Chinese>口徑: 9.3x64mm 低視度紅外線曳光彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
+            <Chinese>口徑: 9.3x64毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
             <Chinesesimp>口径: 9.3x64mm 低视度红外线曳光弹&lt;br /&gt;发数: 150&lt;br /&gt;使用于: Navid</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_APName">
@@ -934,7 +934,7 @@
             <Hungarian>9,3mm 150-lövedékes páncéltörő heveder</Hungarian>
             <Japanese>9.3mm 150発入り 徹甲弾ベルト</Japanese>
             <Korean>150발들이 9.3mm 철갑탄 벨트</Korean>
-            <Chinese>9.3mm 150發 穿甲彈 彈鏈</Chinese>
+            <Chinese>9.3毫米 150發 穿甲彈 彈鏈</Chinese>
             <Chinesesimp>9.3mm 150发 穿甲弹 弹链</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_APNameShort">
@@ -950,7 +950,7 @@
             <Hungarian>9,3mm páncéltörő</Hungarian>
             <Japanese>9.3mm 徹甲弾</Japanese>
             <Korean>9.3mm 철갑탄</Korean>
-            <Chinese>9.3mm 穿甲彈</Chinese>
+            <Chinese>9.3毫米 穿甲彈</Chinese>
             <Chinesesimp>9.3mm 穿甲弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_APDescription">
@@ -966,7 +966,7 @@
             <Hungarian>Kaliber: 9,3x64mm páncéltörő&lt;br /&gt;Lövedékek: 150&lt;br /&gt;Használható: Navid</Hungarian>
             <Japanese>口径: 9.3x64mm 徹甲弾&lt;br /&gt;装填数: 150&lt;br /&gt;次で使用: Navid</Japanese>
             <Korean>구경: 9.3x64mm 철갑탄&lt;br /&gt;장탄수: 150&lt;br /&gt;사용처: Navid</Korean>
-            <Chinese>口徑: 9.3x64mm 穿甲彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
+            <Chinese>口徑: 9.3x64毫米 穿甲彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
             <Chinesesimp>口径: 9.3x64mm 穿甲弹&lt;br /&gt;发数: 150&lt;br /&gt;使用于: Navid</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_16Rnd_9x19_mag_Name">
@@ -982,7 +982,7 @@
             <Hungarian>9x19mm 16-lövedékes tár</Hungarian>
             <Japanese>9x19mm 16発入り 弾倉</Japanese>
             <Korean>16발들이 9x19mm 탄창</Korean>
-            <Chinese>9x19mm 16發 彈匣</Chinese>
+            <Chinese>9x19毫米 16發 彈匣</Chinese>
             <Chinesesimp>9x19mm 16发 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_16Rnd_9x19_mag_NameShort">
@@ -998,7 +998,7 @@
             <Hungarian>9x19mm</Hungarian>
             <Japanese>9x19mm</Japanese>
             <Korean>9x19mm</Korean>
-            <Chinese>9x19mm</Chinese>
+            <Chinese>9x19毫米</Chinese>
             <Chinesesimp>9x19mm</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_16Rnd_9x19_mag_Description">
@@ -1014,7 +1014,7 @@
             <Hungarian>9x19mm 16-lövedékes tár</Hungarian>
             <Japanese>9x19mm 30発入り 弾倉</Japanese>
             <Korean>30발들이 9x19mm 탄창</Korean>
-            <Chinese>9x19mm 30發 彈匣</Chinese>
+            <Chinese>9x19毫米 30發 彈匣</Chinese>
             <Chinesesimp>9x19mm 30发 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_9x19_mag_Name">
@@ -1030,7 +1030,7 @@
             <Hungarian>9x19mm 30-lövedékes tár</Hungarian>
             <Japanese>9x19mm 30発入り 弾倉</Japanese>
             <Korean>30발들이 9x19mm 탄창</Korean>
-            <Chinese>9x19mm 30發 彈匣</Chinese>
+            <Chinese>9x19毫米 30發 彈匣</Chinese>
             <Chinesesimp>9x19mm 30发 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_9x19_mag_NameShort">
@@ -1046,7 +1046,7 @@
             <Hungarian>9x19mm</Hungarian>
             <Japanese>9x19mm</Japanese>
             <Korean>9x19mm</Korean>
-            <Chinese>9x19mm</Chinese>
+            <Chinese>9x19毫米</Chinese>
             <Chinesesimp>9x19mm</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_9x19_mag_Description">
@@ -1062,13 +1062,13 @@
             <Hungarian>9x19mm 30-lövedékes tár</Hungarian>
             <Japanese>9x19mm 30発入り 弾倉</Japanese>
             <Korean>30발들이 9x19mm 탄창</Korean>
-            <Chinese>9x19mm 30發 彈匣</Chinese>
+            <Chinese>9x19毫米 30發 彈匣</Chinese>
             <Chinesesimp>9x19mm 30发 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x54_Tracer_mag_Name">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
             <Polish>Magazynek 7,62x54mm 10rd Smugacz</Polish>
-            <French>Ch. 7,62x54mm 10Cps Traçante</French>
+            <French>Ch. 7,62x54mm 10Cps Traçantes</French>
             <Spanish>Cargador de 10 balas trazadoras de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
             <German>7,62x54mm 10-Patronen-Magazin Leuchtspur</German>
@@ -1078,7 +1078,7 @@
             <Hungarian>7,62x54mm 10-lövedékes nyomkövető tár</Hungarian>
             <Japanese>7.62x54mm 10発入り 曳光弾 弾倉</Japanese>
             <Korean>10발들이 7.62x54mm 예광탄 탄창</Korean>
-            <Chinese>7.62x54mm 10發 曳光彈 彈匣</Chinese>
+            <Chinese>7.62x54毫米 10發 曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62x54mm 10发 曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x54_Tracer_mag_NameShort">
@@ -1094,13 +1094,13 @@
             <Hungarian>7,62mm</Hungarian>
             <Japanese>7.62mm</Japanese>
             <Korean>7.62mm</Korean>
-            <Chinese>7.62mm</Chinese>
+            <Chinese>7.62毫米</Chinese>
             <Chinesesimp>7.62mm</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
             <Polish>Magazynek 7,62x54mm 10rd Smugacz</Polish>
-            <French>Ch. 7,62x54mm 10Cps Traçante</French>
+            <French>Ch. 7,62x54mm 10Cps Traçantes</French>
             <Spanish>Cargador de 10 balas trazadoras de 7.62x54mm</Spanish>
             <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
             <German>7,62x54mm 10-Patronen-Magazin Leuchtspur</German>
@@ -1110,13 +1110,13 @@
             <Hungarian>7,62x54mm 10-lövedékes nyomkövető tár</Hungarian>
             <Japanese>7.62x54mm 10発入り 曳光弾 弾倉</Japanese>
             <Korean>10발들이 7.62x54mm 예광탄 탄창</Korean>
-            <Chinese>7.62x54mm 10發 曳光彈 彈匣</Chinese>
+            <Chinese>7.62x54毫米 10發 曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62x54mm 10发 曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
-            <French>Ch. 6,5mm 100Cps Traçante IR-DIM</French>
+            <French>Ch. 6,5mm 100Cps Traçantes IR-DIM</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 100-Patronen-Magazin IR-DIM Leuchtspur</German>
@@ -1126,7 +1126,7 @@
             <Hungarian>6,5mm 100-lövedékes infravörös nyomkövető tár</Hungarian>
             <Japanese>6.5mm 100発入り IR-DIM曳光弾 弾倉</Japanese>
             <Korean>100발들이 6.5mm IR-DIM 예광탄 탄창</Korean>
-            <Chinese>6.5mm 100發 低視度紅外線曳光彈 彈匣</Chinese>
+            <Chinese>6.5毫米 100發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 100发 低视度红外线曳光弹 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimNameShort">
@@ -1142,13 +1142,13 @@
             <Hungarian>6,5mm infravörös nyomkövető</Hungarian>
             <Japanese>6.5mm IR-DIM曳光弾</Japanese>
             <Korean>6.5mm IR-DIM 예광탄</Korean>
-            <Chinese>6.5mm 低視紅外曳光彈</Chinese>
+            <Chinese>6.5毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>6.5mm 低视红外曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX LSW</English>
             <Polish>Magazynek 6,5mm 100rd Smugacz IR-DIM</Polish>
-            <French>Ch. 6,5mm 100Cps Traçante IR-DIM&lt;br /&gt;Cartouches: 100&lt;br /&gt;Utilisé avec: MX LSW</French>
+            <French>Ch. 6,5mm 100Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 100&lt;br /&gt;Utilisé avec: MX LSW</French>
             <Spanish>Cargador de 100 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 100 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 100-Patronen-Magazin IR-DIM Leuchtspur&lt;br /&gt;Patronen: 100&lt;br /&gt;Eingesetzt von: MXLSW</German>
@@ -1158,13 +1158,13 @@
             <Hungarian>6.5mm 100-lövedékes infravörös nyomkövető tár&lt;br /&gt;Lövedékek: 100&lt;br /&gt;Használható: MX LSW</Hungarian>
             <Japanese>6.5mm 100発入り IR-DIM曳光弾 弾倉&lt;br /&gt;装填数: 100&lt;br /&gt;次で使用: MX LSW</Japanese>
             <Korean>100발들이 6.5mm IR-DIM 예광탄 탄창&lt;br /&gt;장탄수: 100&lt;br /&gt;사용처: MX LSW</Korean>
-            <Chinese>6.5mm 100發 低視度紅外線曳光彈&lt;br /&gt;發數: 100&lt;br /&gt;使用於: MX LSW</Chinese>
+            <Chinese>6.5毫米 100發 低視度紅外線曳光彈&lt;br /&gt;發數: 100&lt;br /&gt;使用於: MX LSW</Chinese>
             <Chinesesimp>6.5mm 100发 低视度红外线曳光弹&lt;br /&gt;发数: 100&lt;br /&gt;使用于: MX LSW</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimName">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
-            <French>Bande 6,5mm 200Cps Traçante IR-DIM</French>
+            <French>Bande 6,5mm 200Cps Traçantes IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 200-Patronen-Gurt IR-DIM Leuchtspur</German>
@@ -1174,7 +1174,7 @@
             <Hungarian>6,5mm 200-lövedékes infravörös nyomkövető heveder</Hungarian>
             <Japanese>6.5mm 200発入り IR-DIM曳光弾ベルト</Japanese>
             <Korean>200발들이 6.5mm IR-DIM 예광탄 탄창</Korean>
-            <Chinese>6.5mm 200發 低視度紅外線曳光彈 彈鏈</Chinese>
+            <Chinese>6.5毫米 200發 低視度紅外線曳光彈 彈鏈</Chinese>
             <Chinesesimp>6.5mm 200发 低视度红外线曳光弹 弹链</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
@@ -1190,13 +1190,13 @@
             <Hungarian>6,5mm infravörös nyomkövető</Hungarian>
             <Japanese>6.5mm IR-DIM曳光弾</Japanese>
             <Korean>6.5mm IR-DIM 예광탄</Korean>
-            <Chinese>6.5mm 低視紅外曳光彈</Chinese>
+            <Chinese>6.5毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>6.5mm 低视红外曳光弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimDescription">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
-            <French>Bande 6.5mm 200Cps Traçante IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
+            <French>Bande 6.5mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 200-Patronen-Gurt IR-DIM Leuchtspur&lt;br /&gt;Patronen: 200&lt;br /&gt;Eingesetzt von: Stoner 99 LMG</German>
@@ -1206,7 +1206,7 @@
             <Hungarian>6.5mm 200-lövedékes infravörös nyomkövető heveder&lt;br /&gt;Lövedékek: 200&lt;br /&gt;Használható: Stoner 99 LMG</Hungarian>
             <Japanese>6.5mm 200発入り IR-DIM曳光弾ベルト&lt;br /&gt;装填数: 200&lt;br /&gt;次で使用: Stoner 99 LMG</Japanese>
             <Korean>200발들이 6.5mm IR-DIM 예광탄 벨트&lt;br /&gt;장탄수: 200&lt;br /&gt;사용처: Stoner 99 LMG</Korean>
-            <Chinese>6.5mm 200發 低視度紅外線曳光彈&lt;br /&gt;發數: 200&lt;br /&gt;使用於: Stoner 99 LMG</Chinese>
+            <Chinese>6.5毫米 200發 低視度紅外線曳光彈&lt;br /&gt;發數: 200&lt;br /&gt;使用於: Stoner 99 LMG</Chinese>
             <Chinesesimp>6.5mm 200发 低视度红外线曳光弹&lt;br /&gt;发数: 200&lt;br /&gt;使用于: Stoner 99 LMG</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_Name">
@@ -1222,7 +1222,7 @@
             <Hungarian>5,56mm 30-lövedékes tár (Mk262)</Hungarian>
             <Japanese>5.56mm 30発入り 弾倉 (Mk262)</Japanese>
             <Korean>30발들이 5.56mm 탄창 (Mk262)</Korean>
-            <Chinese>5.56mm 30發 彈匣 (Mk262 狙擊專用彈)</Chinese>
+            <Chinese>5.56毫米 30發 彈匣 (Mk262 狙擊專用彈)</Chinese>
             <Chinesesimp>5.56mm 30发 弹匣 (Mk262 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_NameShort">
@@ -1238,7 +1238,7 @@
             <Hungarian>5,56mm Mk262</Hungarian>
             <Japanese>5.56mm Mk262</Japanese>
             <Korean>5.56mm Mk262</Korean>
-            <Chinese>5.56mm Mk262 狙擊專用彈</Chinese>
+            <Chinese>5.56毫米 Mk262 狙擊專用彈</Chinese>
             <Chinesesimp>5.56mm Mk262 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_Description">
@@ -1254,7 +1254,7 @@
             <Hungarian>Kaliber: 5,56x45mm NATO (Mk262)&lt;br /&gt;Lövedékek: 30</Hungarian>
             <Japanese>口径: 5.56x45mm NATO (Mk262)&lt;br /&gt;装填数: 30</Japanese>
             <Korean>구경: 5.56x45mm NATO (Mk262)&lt;br /&gt;장탄수: 30</Korean>
-            <Chinese>口徑: 5.56x45mm NATO標準 (Mk262 狙擊專用彈)&lt;br /&gt;發數: 30</Chinese>
+            <Chinese>口徑: 5.56x45毫米 NATO標準 (Mk262 狙擊專用彈)&lt;br /&gt;發數: 30</Chinese>
             <Chinesesimp>口径: 5.56x45mm NATO标准 (Mk262 狙击专用弹)&lt;br /&gt;发数: 30</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk318_mag_Name">
@@ -1270,7 +1270,7 @@
             <Hungarian>5,56mm 30-lövedékes tár (Mk318)</Hungarian>
             <Japanese>5.56mm 30発入り 弾倉 (Mk318)</Japanese>
             <Korean>30발들이 5.56mm 탄창 (Mk318)</Korean>
-            <Chinese>5.56mm 30發 彈匣 (Mk318 特戰專用彈)</Chinese>
+            <Chinese>5.56毫米 30發 彈匣 (Mk318 特戰專用彈)</Chinese>
             <Chinesesimp>5.56mm 30发 弹匣 (Mk318 特战专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk318_mag_NameShort">
@@ -1286,7 +1286,7 @@
             <Hungarian>5,56mm Mk318</Hungarian>
             <Japanese>5.56mm Mk318</Japanese>
             <Korean>5.56mm Mk318</Korean>
-            <Chinese>5.56mm Mk318 特戰專用彈</Chinese>
+            <Chinese>5.56毫米 Mk318 特戰專用彈</Chinese>
             <Chinesesimp>5.56mm Mk318 特战专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk318_mag_Description">
@@ -1302,7 +1302,7 @@
             <Hungarian>Kaliber: 5,56x45mm NATO (Mk318)&lt;br /&gt;Lövedékek: 30</Hungarian>
             <Japanese>口径: 5.56x45mm NATO (Mk318)&lt;br /&gt;装填数: 30</Japanese>
             <Korean>구경: 5.56x45mm NATO (Mk318)&lt;br /&gt;장탄수: 30</Korean>
-            <Chinese>口徑: 5.56x45mm NATO標準 (Mk318 特戰專用彈)&lt;br /&gt;發數: 30</Chinese>
+            <Chinese>口徑: 5.56x45毫米 NATO標準 (Mk318 特戰專用彈)&lt;br /&gt;發數: 30</Chinese>
             <Chinesesimp>口径: 5.56x45mm NATO标准 (Mk318 特战专用弹)&lt;br /&gt;发数: 30</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_Name">
@@ -1318,7 +1318,7 @@
             <Hungarian>5,56mm 30-lövedékes tár (M995 páncéltörő)</Hungarian>
             <Japanese>5.56mm 30発入り 弾倉 (M995 徹甲弾)</Japanese>
             <Korean>30발들이 5.56mm 탄창 (Mk995 철갑탄)</Korean>
-            <Chinese>5.56mm 30發 彈匣 (M995 穿甲彈)</Chinese>
+            <Chinese>5.56毫米 30發 彈匣 (M995 穿甲彈)</Chinese>
             <Chinesesimp>5.56mm 30发 弹匣 (M995 穿甲弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_NameShort">
@@ -1334,7 +1334,7 @@
             <Hungarian>5,56mm páncéltörő</Hungarian>
             <Japanese>5.56mm 徹甲弾</Japanese>
             <Korean>5.56mm 철갑탄</Korean>
-            <Chinese>5.56mm M995 穿甲彈</Chinese>
+            <Chinese>5.56毫米 M995 穿甲彈</Chinese>
             <Chinesesimp>5.56mm M995 穿甲弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_Description">
@@ -1350,7 +1350,7 @@
             <Hungarian>Kaliber: 5,56x45mm NATO (M995 páncéltörő)&lt;br /&gt;Lövedékek: 30</Hungarian>
             <Japanese>口径: 5.56x45mm NATO (M995 徹甲弾)&lt;br /&gt;装填数: 30</Japanese>
             <Korean>구경: 5.56x45mm NATO (Mk995 철갑탄)&lt;br /&gt;장탄수: 30</Korean>
-            <Chinese>口徑: 5.56x45mm NATO標準 (M995 穿甲彈)&lt;br /&gt;發數: 30</Chinese>
+            <Chinese>口徑: 5.56x45毫米 NATO標準 (M995 穿甲彈)&lt;br /&gt;發數: 30</Chinese>
             <Chinesesimp>口径: 5.56x45mm NATO标准 (M995 穿甲弹)&lt;br /&gt;发数: 30</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M118LR_Mag_Name">
@@ -1366,7 +1366,7 @@
             <Hungarian>7,62mm 10-lövedékes tár (M118LR)</Hungarian>
             <Japanese>7.62mm 10発入り 弾倉 (M118LR)</Japanese>
             <Korean>10발들이 7.62mm 탄창 (M118LR)</Korean>
-            <Chinese>7.62mm 10發 彈匣 (M118LR 狙擊專用彈)</Chinese>
+            <Chinese>7.62毫米 10發 彈匣 (M118LR 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 10发 弹匣 (M118LR 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M118LR_Mag_NameShort">
@@ -1382,7 +1382,7 @@
             <Hungarian>7,62mm M118LR</Hungarian>
             <Japanese>7.62mm M118LR</Japanese>
             <Korean>7.62mm M118LR</Korean>
-            <Chinese>7.62mm M118LR 狙擊專用彈</Chinese>
+            <Chinese>7.62m毫米 M118LR 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm M118LR 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M118LR_Mag_Description">
@@ -1398,7 +1398,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 7.62x51mm NATO (M118LR)&lt;br /&gt;装填数: 10</Japanese>
             <Korean>구경: 7.62x51mm NATO (M118LR)&lt;br /&gt;장탄수: 10</Korean>
-            <Chinese>口徑: 7.62x51mm NATO標準 (M118LR 狙擊專用彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinese>口徑: 7.62x51毫米 NATO標準 (M118LR 狙擊專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (M118LR 狙击专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M118LR_Mag_Name">
@@ -1414,7 +1414,7 @@
             <Hungarian>7,62mm 20-lövedékes tár (M118LR)</Hungarian>
             <Japanese>7.62mm 20発入り 弾倉 (M118LR)</Japanese>
             <Korean>20발들이 7.62mm 탄창 (M118LR)</Korean>
-            <Chinese>7.62mm 20發 彈匣 (M118LR 狙擊專用彈)</Chinese>
+            <Chinese>7.62毫米 20發 彈匣 (M118LR 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (M118LR 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M118LR_Mag_NameShort">
@@ -1430,7 +1430,7 @@
             <Hungarian>7,62mm M118LR</Hungarian>
             <Japanese>7.62mm M118LR</Japanese>
             <Korean>7.62mm M118LR</Korean>
-            <Chinese>7.62mm M118LR 狙擊專用彈</Chinese>
+            <Chinese>7.62毫米 M118LR 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm M118LR 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M118LR_Mag_Description">
@@ -1446,7 +1446,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Lövedékek: 20</Hungarian>
             <Japanese>口径: 7.62x51mm NATO (M118LR)&lt;br /&gt;装填数: 20</Japanese>
             <Korean>구경: 7.62x51mm NATO (M118LR)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x51mm NATO標準 (M118LR 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinese>口徑: 7.62x51毫米 NATO標準 (M118LR 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (M118LR 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk316_Mod_0_Mag_Name">
@@ -1462,7 +1462,7 @@
             <Hungarian>7,62mm 10-lövedékes tár (Mk316 Mod 0)</Hungarian>
             <Japanese>7.62mm 10発入り 弾倉 (Mk316 Mod 0)</Japanese>
             <Korean>10발들이 7.62mm 탄창 (Mk316 Mod 0)</Korean>
-            <Chinese>7.62mm 10發 彈匣 (Mk316 Mod 0 狙擊專用彈)</Chinese>
+            <Chinese>7.62毫米 10發 彈匣 (Mk316 Mod 0 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 10发 弹匣 (Mk316 Mod 0 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk316_Mod_0_Mag_NameShort">
@@ -1478,7 +1478,7 @@
             <Hungarian>7,62mm Mk316</Hungarian>
             <Japanese>7.62mm Mk316</Japanese>
             <Korean>7.62mm Mk316</Korean>
-            <Chinese>7.62mm Mk316 狙擊專用彈</Chinese>
+            <Chinese>7.62毫米 Mk316 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm Mk316 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk316_Mod_0_Mag_Description">
@@ -1494,7 +1494,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;装填数: 10</Japanese>
             <Korean>구경: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;장탄수: 10</Korean>
-            <Chinese>口徑: 7.62x51mm NATO標準 (Mk316 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinese>口徑: 7.62x51毫米 NATO標準 (Mk316 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (Mk316 Mod 0 狙击专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk316_Mod_0_Mag_Name">
@@ -1510,7 +1510,7 @@
             <Hungarian>7,62mm 20-lövedékes tár (Mk316 Mod 0)</Hungarian>
             <Japanese>7.62mm 20発入り 弾倉 (Mk316 Mod 0)</Japanese>
             <Korean>20발들이 7.62mm 탄창 (Mk316 Mod 0)</Korean>
-            <Chinese>7.62mm 20發 彈匣 (Mk316 Mod 0 狙擊專用彈)</Chinese>
+            <Chinese>7.62毫米 20發 彈匣 (Mk316 Mod 0 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Mk316 Mod 0 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk316_Mod_0_Mag_NameShort">
@@ -1526,7 +1526,7 @@
             <Hungarian>7,62mm Mk316</Hungarian>
             <Japanese>7.62mm Mk316</Japanese>
             <Korean>7.62mm Mk316</Korean>
-            <Chinese>7.62mm Mk316 狙擊專用彈</Chinese>
+            <Chinese>7.62毫米 Mk316 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm Mk316 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk316_Mod_0_Mag_Description">
@@ -1542,7 +1542,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Lövedékek: 20</Hungarian>
             <Japanese>口径: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;装填数: 20</Japanese>
             <Korean>구경: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x51mm NATO標準 (Mk316 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinese>口徑: 7.62x51毫米 NATO標準 (Mk316 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (Mk316 Mod 0 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk319_Mod_0_Mag_Name">
@@ -1558,7 +1558,7 @@
             <Hungarian>7,62mm 10-lövedékes tár (Mk319 Mod 0)</Hungarian>
             <Japanese>7.62mm 10発入り 弾倉 (Mk319 Mod 0)</Japanese>
             <Korean>10발들이 7.62mm 탄창 (Mk319 Mod 0)</Korean>
-            <Chinese>7.62mm 10發 彈匣 (Mk319 Mod 0 特戰專用彈)</Chinese>
+            <Chinese>7.62毫米 10發 彈匣 (Mk319 Mod 0 特戰專用彈)</Chinese>
             <Chinesesimp>7.62mm 10发 弹匣 (Mk319 Mod 0 特战专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
@@ -1574,7 +1574,7 @@
             <Hungarian>7,62mm Mk319</Hungarian>
             <Japanese>7.62mm Mk319</Japanese>
             <Korean>7.62mm Mk319</Korean>
-            <Chinese>7.62mm Mk319 特戰專用彈</Chinese>
+            <Chinese>7.62毫米 Mk319 特戰專用彈</Chinese>
             <Chinesesimp>7.62mm Mk319 特战专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk319_Mod_0_Mag_Description">
@@ -1590,7 +1590,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;装填数: 10</Japanese>
             <Korean>구경: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;장탄수: 10</Korean>
-            <Chinese>口徑: 7.62x51mm NATO標準 (Mk319 Mod 0 特戰專用彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinese>口徑: 7.62x51毫米 NATO標準 (Mk319 Mod 0 特戰專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (Mk319 Mod 0 特战专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk319_Mod_0_Mag_Name">
@@ -1606,7 +1606,7 @@
             <Hungarian>7,62mm 20-lövedékes tár (Mk319 Mod 0)</Hungarian>
             <Japanese>7.62mm 20発入り 弾倉 (Mk319 Mod 0)</Japanese>
             <Korean>20발들이 7.62mm 탄창 (Mk319 Mod 0)</Korean>
-            <Chinese>7.62mm 20發 彈匣 (Mk319 Mod 0 特戰專用彈)</Chinese>
+            <Chinese>7.62毫米 20發 彈匣 (Mk319 Mod 0 特戰專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Mk319 Mod 0 特战专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
@@ -1622,7 +1622,7 @@
             <Hungarian>7,62mm Mk319</Hungarian>
             <Japanese>7.62mm Mk319</Japanese>
             <Korean>7.62mm Mk319</Korean>
-            <Chinese>7.62mm Mk319 特戰專用彈</Chinese>
+            <Chinese>7.62毫米 Mk319 特戰專用彈</Chinese>
             <Chinesesimp>7.62mm Mk319 特战专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk319_Mod_0_Mag_Description">
@@ -1638,7 +1638,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Lövedékek: 20</Hungarian>
             <Japanese>口径: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;装填数: 20</Japanese>
             <Korean>구경: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x51mm NATO標準 (Mk319 Mod 0 特戰專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinese>口徑: 7.62x51毫米 NATO標準 (Mk319 Mod 0 特戰專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (Mk319 Mod 0 特战专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M993_AP_Mag_Name">
@@ -1654,7 +1654,7 @@
             <Hungarian>7,62mm 10-lövedékes tár (M993 páncéltörő)</Hungarian>
             <Japanese>7.62mm 10発入り 弾倉 (M993 徹甲弾)</Japanese>
             <Korean>10발들이 7.62mm 탄창 (M993 철갑탄)</Korean>
-            <Chinese>7.62mm 10發 彈匣 (M993 穿甲專用彈)</Chinese>
+            <Chinese>7.62毫米 10發 彈匣 (M993 穿甲專用彈)</Chinese>
             <Chinesesimp>7.62mm 10发 弹匣 (M993 穿甲专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M993_AP_Mag_NameShort">
@@ -1670,7 +1670,7 @@
             <Hungarian>7,62mm páncéltörő</Hungarian>
             <Japanese>7.62mm 徹甲弾</Japanese>
             <Korean>7.62mm 철갑탄</Korean>
-            <Chinese>7.62mm M993 穿甲專用彈</Chinese>
+            <Chinese>7.62毫米 M993 穿甲專用彈</Chinese>
             <Chinesesimp>7.62mm M993 穿甲专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M993_AP_Mag_Description">
@@ -1686,7 +1686,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (M993 páncéltörő)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;装填数: 10</Japanese>
             <Korean>구경: 7.62x51mm NATO (M993 철갑탄)&lt;br /&gt;장탄수: 10</Korean>
-            <Chinese>口徑: 7.62x51mm NATO標準 (M993 穿甲專用彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinese>口徑: 7.62x51毫米 NATO標準 (M993 穿甲專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (M993 穿甲专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M993_AP_Mag_Name">
@@ -1702,7 +1702,7 @@
             <Hungarian>7,62mm 20-lövedékes tár (M993 páncéltörő)</Hungarian>
             <Japanese>7.62mm 20発入り 弾倉 (M993 徹甲弾)</Japanese>
             <Korean>20발들이 7.62mm 탄창 (M993 철갑탄)</Korean>
-            <Chinese>7.62mm 20發 彈匣 (M993 穿甲專用彈)</Chinese>
+            <Chinese>7.62毫米 20發 彈匣 (M993 穿甲專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (M993 穿甲专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M993_AP_Mag_NameShort">
@@ -1718,7 +1718,7 @@
             <Hungarian>7,62mm páncéltörő</Hungarian>
             <Japanese>7.62mm 徹甲弾</Japanese>
             <Korean>7.62mm 철갑탄</Korean>
-            <Chinese>7.62mm M993 穿甲專用彈</Chinese>
+            <Chinese>7.62毫米 M993 穿甲專用彈</Chinese>
             <Chinesesimp>7.62mm M993 穿甲专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M993_AP_Mag_Description">
@@ -1734,7 +1734,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (M993 páncéltörő)&lt;br /&gt;Lövedékek: 20</Hungarian>
             <Japanese>口径: 7.62x51mm NATO (M993 徹甲弾)&lt;br /&gt;装填数: 20</Japanese>
             <Korean>구경: 7.62x51mm NATO (M993 철갑탄)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x51mm NATO標準 (M993 穿甲專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinese>口徑: 7.62x51毫米 NATO標準 (M993 穿甲專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (M993 穿甲专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
@@ -1750,7 +1750,7 @@
             <Hungarian>7,62mm 20-lövedékes tár (Mk248 Mod 0)</Hungarian>
             <Japanese>7.62mm 20発入り 弾倉 (Mk248 Mod 0)</Japanese>
             <Korean>20발들이 7.62mm 탄창 (Mk248 Mod 0)</Korean>
-            <Chinese>7.62mm 20發 彈匣 (Mk248 Mod 0 狙擊專用彈)</Chinese>
+            <Chinese>7.62毫米 20發 彈匣 (Mk248 Mod 0 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Mk248 Mod 0 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
@@ -1766,7 +1766,7 @@
             <Hungarian>7,62mm Mk248</Hungarian>
             <Japanese>7.62mm Mk248</Japanese>
             <Korean>7.62mm Mk248</Korean>
-            <Chinese>7.62mm Mk248 狙擊專用彈</Chinese>
+            <Chinese>7.62毫米 Mk248 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm Mk248 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
@@ -1782,7 +1782,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;Lövedékek: 20</Hungarian>
             <Japanese>口径: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;装填数: 20</Japanese>
             <Korean>구경: 7.62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x67mm NATO標準 (Mk248 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinese>口徑: 7.62x67毫米 NATO標準 (Mk248 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x67mm NATO标准 (Mk248 Mod 0 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_Name">
@@ -1798,7 +1798,7 @@
             <Hungarian>7,62mm 20-lövedékes tár (Mk248 Mod 1)</Hungarian>
             <Japanese>7.62mm 20発入り 弾倉 (Mk248 Mod 1)</Japanese>
             <Korean>20발들이 7.62mm 탄창 (Mk248 Mod 1)</Korean>
-            <Chinese>7.62mm 20發 彈匣 (Mk248 Mod 1 狙擊專用彈)</Chinese>
+            <Chinese>7.62毫米 20發 彈匣 (Mk248 Mod 1 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Mk248 Mod 1 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
@@ -1814,7 +1814,7 @@
             <Hungarian>7,62mm Mk248</Hungarian>
             <Japanese>7.62mm Mk248</Japanese>
             <Korean>7.62mm Mk248</Korean>
-            <Chinese>7.62mm Mk248 狙擊專用彈</Chinese>
+            <Chinese>7.62毫米 Mk248 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm Mk248 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
@@ -1830,7 +1830,7 @@
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;Lövedékek: 20</Hungarian>
             <Japanese>口径: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;装填数: 20</Japanese>
             <Korean>구경: 7.62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x67mm NATO標準 (Mk248 Mod 1 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinese>口徑: 7.62x67毫米 NATO標準 (Mk248 Mod 1 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x67mm NATO标准 (Mk248 Mod 1 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
@@ -1846,7 +1846,7 @@
             <Hungarian>7,62mm 20-lövedékes tár (Berger Hybrid OTM)</Hungarian>
             <Japanese>7.62mm 20発入り 弾倉 (Berger Hybrid OTM)</Japanese>
             <Korean>20발들이 7.62mm 탄창 (Berger Hybrid OTM)</Korean>
-            <Chinese>7.62mm 20發 彈匣 (Berger Hybrid 空尖比賽專用彈)</Chinese>
+            <Chinese>7.62毫米 20發 彈匣 (Berger Hybrid 空尖比賽專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Berger Hybrid 空尖比赛专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
@@ -1862,7 +1862,7 @@
             <Hungarian>7,62mm OTM</Hungarian>
             <Japanese>7.62mm OTM</Japanese>
             <Korean>7.62mm OTM</Korean>
-            <Chinese>7.62mm 空尖比賽專用彈</Chinese>
+            <Chinese>7.62毫米  空尖比賽專用彈</Chinese>
             <Chinesesimp>7.62mm 空尖比赛专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
@@ -1878,7 +1878,7 @@
             <Hungarian>Kaliber: 7,62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Lövedékek: 20</Hungarian>
             <Japanese>口径: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;装填数: 20</Japanese>
             <Korean>구경: 7.62x51mm NATO (Berger Hybrid OTM)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x67mm NATO標準 (Berger Hybrid 空尖比賽專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinese>口徑: 7.62x67毫米 NATO標準 (Berger Hybrid 空尖比賽專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x67mm NATO标准 (Berger Hybrid 空尖比赛专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Name">
@@ -1894,7 +1894,7 @@
             <Hungarian>6,5x47mm 30-lövedékes tár (HPBT Scenar)</Hungarian>
             <Japanese>6.5x47mm 30発入り 弾倉 (HPBT Scenar)</Japanese>
             <Korean>30발들이 6.5x47mm 탄창 (HPBT Scenar)</Korean>
-            <Chinese>6.5x47mm 30發 彈匣 (Lapua 空尖艇尾狙擊專用彈)</Chinese>
+            <Chinese>6.5x47毫米 30發 彈匣 (拉普 空尖艇尾狙擊專用彈)</Chinese>
             <Chinesesimp>6.5x47mm 30发 弹匣 (Lapua 空尖艇尾狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_NameShort">
@@ -1910,12 +1910,12 @@
             <Hungarian>6,5mm Lapua</Hungarian>
             <Japanese>6.5mm Lapua</Japanese>
             <Korean>6.5mm Lapua</Korean>
-            <Chinese>6.5mm Lapua 空尖艇尾狙擊專用彈</Chinese>
+            <Chinese>6.5毫米 拉普 空尖艇尾狙擊專用彈</Chinese>
             <Chinesesimp>6.5mm Lapua 空尖艇尾狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
-            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30</French>
+            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: MXM</French>
             <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: MXM</Spanish>
             <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
             <Russian>Калибр: 6,5x47 мм (экспансивные Scenar)&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MXM</Russian>
@@ -1926,7 +1926,7 @@
             <Hungarian>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MXM</Hungarian>
             <Japanese>口径: 6.5x47mm (HPBT Scenar)&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: MXM</Japanese>
             <Korean>구경: 6.5x47mm (HPBT Scenar)&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MXM</Korean>
-            <Chinese>口徑: 6.5x47mm (Lapua 空尖艇尾狙擊專用彈)&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
+            <Chinese>口徑: 6.5x47毫米 (拉普 空尖艇尾狙擊專用彈)&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
             <Chinesesimp>口径: 6.5x47mm (Lapua 空尖艇尾狙击专用弹)&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MXM</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Name">
@@ -1942,7 +1942,7 @@
             <Hungarian>6,5mm Creedmor 30-lövedékes tár</Hungarian>
             <Japanese>6.5mm Creedmor 30発入り 弾倉</Japanese>
             <Korean>30발들이 6.5mm Creedmor 탄창</Korean>
-            <Chinese>6.5mm 30發 彈匣 (Creedmor 狙擊專用彈)</Chinese>
+            <Chinese>6.5毫米 30發 彈匣 (克里德莫爾(CM) 狙擊專用彈)</Chinese>
             <Chinesesimp>6.5mm 30发 弹匣 (Creedmor 狙击专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
@@ -1958,7 +1958,7 @@
             <Hungarian>6,5mm CM</Hungarian>
             <Japanese>6.5mm CM</Japanese>
             <Korean>6.5mm CM</Korean>
-            <Chinese>6.5mm CM 狙擊專用彈</Chinese>
+            <Chinese>6.5毫米 CM狙擊專用彈</Chinese>
             <Chinesesimp>6.5mm CM 狙击专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Description">
@@ -1974,7 +1974,7 @@
             <Hungarian>Kaliber: 6,5x47mm Creedmor&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MXM</Hungarian>
             <Japanese>口径: 6.5x47mm Creedmor&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: MXM</Japanese>
             <Korean>구경: 6.5x47mm Creedmor&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MXM</Korean>
-            <Chinese>口徑: 6.5x47mm Creedmor 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
+            <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
             <Chinesesimp>口径: 6.5x47mm Creedmor 狙击专用弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MXM</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Name">
@@ -2022,7 +2022,7 @@
             <Hungarian>Kaliber: 8,6x70mm (300gr Lapua Scenar)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;装填数: 10</Japanese>
             <Korean>구경: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;장탄수: 10</Korean>
-            <Chinese>口徑: 8.6x70mm (300公克 Lapua Scenar)&lt;br /&gt;發數: 10</Chinese>
+            <Chinese>口徑: 8.6x70毫米 (300公克 Lapua Scenar)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 8.6x70mm (300公克 Lapua Scenar)&lt;br /&gt;发数: 10</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_API526_Mag_Name">
@@ -2070,7 +2070,7 @@
             <Hungarian>Kaliber: 8,6x70mm (API526)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 8.6x70mm (API526)&lt;br /&gt;装填数: 10</Japanese>
             <Korean>구경: 8.6x70mm (API526)&lt;br /&gt;장탄수: 10</Korean>
-            <Chinese>口徑: 8.6x70mm (API526 穿甲燃燒彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinese>口徑: 8.6x70毫米 (API526 穿甲燃燒彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 8.6x70mm (API526 穿甲燃烧弹)&lt;br /&gt;发数: 10</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Name">
@@ -2134,7 +2134,7 @@
             <Hungarian>12,7x99mm 5-lövedékes tár</Hungarian>
             <Japanese>12.7x99mm 5発入り 弾倉</Japanese>
             <Korean>5발들이 12.7x99mm 탄창</Korean>
-            <Chinese>12.7x99mm 5發 彈匣</Chinese>
+            <Chinese>12.7x99毫米 5發 彈匣</Chinese>
             <Chinesesimp>12.7x99mm 5发 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_NameShort">
@@ -2150,7 +2150,7 @@
             <Hungarian>12,7mm</Hungarian>
             <Japanese>12.7mm</Japanese>
             <Korean>12.7mm</Korean>
-            <Chinese>12.7mm</Chinese>
+            <Chinese>12.7毫米</Chinese>
             <Chinesesimp>12.7mm</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_Description">
@@ -2166,7 +2166,7 @@
             <Hungarian>Kaliber: 12,7x99mm&lt;br /&gt;Lövedékek: 5</Hungarian>
             <Japanese>口径: 12.7x99mm&lt;br /&gt;装填数: 5</Japanese>
             <Korean>구경: 12.7x99mm&lt;br /&gt;장탄수: 5</Korean>
-            <Chinese>口徑: 12.7x99mm&lt;br /&gt;發數: 5</Chinese>
+            <Chinese>口徑: 12.7x99毫米&lt;br /&gt;發數: 5</Chinese>
             <Chinesesimp>口径: 12.7x99mm&lt;br /&gt;发数: 5</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_Name">
@@ -2182,7 +2182,7 @@
             <Hungarian>12,7x99mm 5-lövedékes tár (páncéltörő-gyújtó)</Hungarian>
             <Japanese>12.7x99mm 5発入り焼夷徹甲弾 弾倉</Japanese>
             <Korean>5발들이 12.7x99mm 철갑소이탄 탄창</Korean>
-            <Chinese>12.7x99mm 穿甲燃燒彈 5發 彈匣</Chinese>
+            <Chinese>12.7x99毫米 穿甲燃燒彈 5發 彈匣</Chinese>
             <Chinesesimp>12.7x99mm 穿甲燃烧弹 5发 弹匣</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_NameShort">
@@ -2198,7 +2198,7 @@
             <Hungarian>12,7mm páncéltörő-gyújtó</Hungarian>
             <Japanese>12.7mm 焼夷徹甲弾</Japanese>
             <Korean>12.7mm 철갑소이탄</Korean>
-            <Chinese>12.7mm 穿甲燃燒彈</Chinese>
+            <Chinese>12.7毫米 穿甲燃燒彈</Chinese>
             <Chinesesimp>12.7mm 穿甲燃烧弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_Description">
@@ -2214,7 +2214,7 @@
             <Hungarian>Kaliber: 12,7x99mm API&lt;br /&gt;Lövedékek: 5</Hungarian>
             <Japanese>口径: 12.7x99mm 焼夷徹甲弾&lt;br /&gt;装填数: 5</Japanese>
             <Korean>구경: 12.7x99mm 철갑소이탄&lt;br /&gt;장탄수: 5</Korean>
-            <Chinese>口徑: 12.7x99mm 穿甲燃燒彈&lt;br /&gt;發數: 5</Chinese>
+            <Chinese>口徑: 12.7x99毫米 穿甲燃燒彈&lt;br /&gt;發數: 5</Chinese>
             <Chinesesimp>口径: 12.7x99mm 穿甲燃烧弹&lt;br /&gt;发数: 5</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_Name">
@@ -2230,7 +2230,7 @@
             <Hungarian>12,7x99mm 5-lövedékes tár (AMAX)</Hungarian>
             <Japanese>12.7x99mm 5発入り 弾倉 (AMAX)</Japanese>
             <Korean>5발들이 12.7x99mm 탄창 (AMAX)</Korean>
-            <Chinese>12.7x99mm 5發 彈匣 (AMAX 比賽專用彈)</Chinese>
+            <Chinese>12.7x99毫米 5發 彈匣 (AMAX 比賽專用彈)</Chinese>
             <Chinesesimp>12.7x99mm 5发 弹匣 (AMAX 比赛专用弹)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_NameShort">
@@ -2246,7 +2246,7 @@
             <Hungarian>12,7mm</Hungarian>
             <Japanese>12.7mm</Japanese>
             <Korean>12.7mm</Korean>
-            <Chinese>12.7mm AMAX 比賽專用彈</Chinese>
+            <Chinese>12.7毫米 AMAX 比賽專用彈</Chinese>
             <Chinesesimp>12.7mm AMAX 比赛专用弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_Description">
@@ -2262,7 +2262,7 @@
             <Hungarian>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Lövedékek: 5</Hungarian>
             <Japanese>口径: 12.7x99mm (AMAX)&lt;br /&gt;装填数: 5</Japanese>
             <Korean>구경: 12.7x99mm (AMAX)&lt;br /&gt;장탄수: 5</Korean>
-            <Chinese>口徑: 12.7x99mm (AMAX 比賽專用彈)&lt;br /&gt;發數: 5</Chinese>
+            <Chinese>口徑: 12.7x99毫米 (AMAX 比賽專用彈)&lt;br /&gt;發數: 5</Chinese>
             <Chinesesimp>口径: 12.7x99mm (AMAX 比赛专用弹)&lt;br /&gt;发数: 5</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_AmmoSupplyCrate_DisplayName">
@@ -2283,22 +2283,63 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelTwist">
             <English>Barrel twist</English>
+            <German>Dralllänge</German>
+            <Japanese>銃身の転度</Japanese>
+            <Chinesesimp>膛线缠距</Chinesesimp>
+            <Chinese>膛線扭度</Chinese>
+            <Italian>Rigatura della canna</Italian>
+            <Polish>Gwintowanie lufy</Polish>
+            <Russian>Нарезы ствола</Russian>
+            <Portuguese>Barrel Twist</Portuguese>
+            <French>Pas du canon</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
+            <German>Lauflänge</German>
             <French>Longueur du canon</French>
+            <Japanese>銃身長</Japanese>
+            <Chinesesimp>身管长度</Chinesesimp>
+            <Chinese>槍管長度</Chinese>
+            <Italian>Lunghezza della canna</Italian>
+            <Polish>Długość lufy</Polish>
+            <Russian>Длина ствола</Russian>
+            <Portuguese>Comprimento do cano</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
-            <French>Coefficient ballistique</French>
+            <German>Ballistischer Koeffizient</German>
+            <French>Coefficient balistique</French>
+            <Japanese>弾道係数</Japanese>
+            <Chinesesimp>弹道系数</Chinesesimp>
+            <Chinese>彈道係數</Chinese>
+            <Italian>Coefficente balistico</Italian>
+            <Polish>Współczynnik balistyczny</Polish>
+            <Russian>Баллистический коэффициент</Russian>
+            <Portuguese>Coeficiente balístico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
+            <German>Projektilgewicht</German>
             <French>Masse d'une balle</French>
+            <Japanese>弾丸重量</Japanese>
+            <Chinesesimp>弹头重量</Chinesesimp>
+            <Chinese>彈頭重量</Chinese>
+            <Italian>Massa del proiettile</Italian>
+            <Polish>Masa pocisku</Polish>
+            <Russian>Масса пули</Russian>
+            <Portuguese>Massa do projétil</Portuguese>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
-            <French>Vitesse à la bouche</French>
+            <German>Mündungsgeschwindigkeit</German>
+            <French>Vitesse initiale</French>
+            <Japanese>銃口初速</Japanese>
+            <Chinesesimp>枪口初速</Chinesesimp>
+            <Chinese>槍口初速</Chinese>
+            <Italian>Velocità iniziale</Italian>
+            <Polish>Prędkość wylotowa</Polish>
+            <Russian>Начальная скорость</Russian>
+            <Portuguese>Velocidade de Saída</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -72,7 +72,7 @@ dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
+importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "docs\\README.zh-TW.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
 versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
 
 ciBuild = False # Used for CI builds
@@ -334,11 +334,11 @@ def copy_important_files(source_dir,destination_dir):
         print_error("COPYING IMPORTANT FILES.")
         raise
 
-    # Copy all extension DLL's
+    # Copy all extensions
     try:
         os.chdir(os.path.join(source_dir))
         print_blue("\nSearching for DLLs in {}".format(os.getcwd()))
-        filenames = glob.glob("*.dll")
+        filenames = glob.glob("*.dll") + glob.glob("*.so")
 
         if not filenames:
             print ("Empty SET")
@@ -432,9 +432,15 @@ def cleanup_optionals(mod):
 
 
                 if (os.path.isfile(src_file_path)):
+                    if (os.path.isfile(dst_file_path)):
+                        # print("Cleanuping up old file {}".format(dst_file_path))
+                        os.remove(dst_file_path);
                     #print("Preserving {}".format(file_name))
                     os.renames(src_file_path,dst_file_path)
                 if (os.path.isfile(src_sig_path)):
+                    if (os.path.isfile(dst_sig_path)):
+                        # print("Cleanuping up old file {}".format(dst_sig_path))
+                        os.remove(dst_sig_path);
                     #print("Preserving {}".format(sigFile_name))
                     os.renames(src_sig_path,dst_sig_path)
             except FileExistsError:

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Change unit animation / play sound preview.
@@ -10,12 +12,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
-
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeShowItem = createProfileScope QFUNC(showItem);
-#endif
 
 if (GVAR(centerNotPlayer)) exitWith {};
 

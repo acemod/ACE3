@@ -9,7 +9,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(ACE_player,'ACE_HuntIR_monitor')] call EFUNC(common,hasItem));
                     statement = QUOTE([FUNC(huntir)] call CBA_fnc_execNextFrame;);
                     showDisabled = 0;
-                    priority = 2;
                     icon = QPATHTOF(UI\w_huntir_monitor_ca.paa);
                     exceptions[] = {};
                 };
@@ -74,7 +73,7 @@ class CfgVehicles {
     class ReammoBox_F;
     class ACE_HuntIR_Box: ReammoBox_F {
         model = QPATHTOF(data\ace_huntirbox.p3d);
-        displayName = $STR_DN_ACE_HUNTIRBOX;
+        displayName = CSTRING(TransportBox_DisplayName);
         class TransportItems {
             MACRO_ADDITEM(ACE_HuntIR_monitor,5);
         };
