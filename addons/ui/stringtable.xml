@@ -61,7 +61,7 @@
             <English>Allow client to modify their UI.</English>
             <Czech>Povolit klientovi měnit jeho UI</Czech>
             <Portuguese>Permite o cliente modificar sua IU.</Portuguese>
-            <French>Permet aux clients de modifier leur IU</French>
+            <French>Permet aux clients de modifier leur Interface Utilisateur.</French>
             <Russian>Позволить клиентам изменять их пользовательский интерфейс.</Russian>
             <Japanese>クライアントがユーザ インタフェイスを編集できるようにします。</Japanese>
             <Polish>Zezwól klientowi na modyfikację UI.</Polish>
@@ -75,7 +75,7 @@
             <English>Soldier/Vehicle/Weapon Information</English>
             <Czech>Informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Informação de Soldado/Veículo/Armamento</Portuguese>
-            <French>Information Soldat / Véhicule / Arme</French>
+            <French>Information Soldat/Véhicule/Arme</French>
             <Russian>Информация о Солдате/Технике/Оружии</Russian>
             <Japanese>兵士/車両/武器の情報</Japanese>
             <Polish>Informacje o żołnierzu/pojeździe/broni</Polish>
@@ -229,7 +229,7 @@
             <English>Throwable Type</English>
             <Czech>Typ granátů apod.</Czech>
             <Portuguese>Tipo de Arremessável</Portuguese>
-            <French>Type d'objets jetables</French>
+            <French>Type d'objet jetable</French>
             <Russian>Тип гранаты</Russian>
             <Japanese>投げる種類</Japanese>
             <Polish>Typ granatu</Polish>
@@ -270,7 +270,7 @@
         <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
             <English>Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento</Portuguese>
-            <French>Fond pour la barre d'informations inférieures de l'arme</French>
+            <French>Fond pour la barre d'informations inférieure de l'arme</French>
             <Russian>Фон ниформации об оружии снизу</Russian>
             <Japanese>武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni</Polish>
@@ -389,7 +389,7 @@
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
             <Portuguese>Tipo de Arremessável do fuzileiro</Portuguese>
-            <French>Type d'objets jetables (tireur)</French>
+            <French>Type d'objet jetable (tireur)</French>
             <Russian>Тип пусковой установки наводчика</Russian>
             <Japanese>射手用のランチャーの種類</Japanese>
             <Polish>Typ rakiet strzelca</Polish>
@@ -428,7 +428,7 @@
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento do fuzileiro</Portuguese>
-            <French>Fond pour la barre d'informations inférieures (tireur)</French>
+            <French>Fond pour la barre d'informations inférieure (tireur)</French>
             <Russian>Фон ниформации об орудии наводчика снизу</Russian>
             <Japanese>射手用の武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni strzelca</Polish>
@@ -540,7 +540,7 @@
             <English>Requires Soldier/Vehicle/Weapon Information.</English>
             <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Requer informações de Soldado/Veículo/Armamento</Portuguese>
-            <French>Requiert l'option `Information Soldat / Véhicule / Arme`</French>
+            <French>Requiert l'option "Information Soldat/Véhicule/Arme".</French>
             <Russian>Требуется Информация о Солдате/Технике/Оружии.</Russian>
             <Japanese>兵士/車両/武器の情報を必要とします。</Japanese>
             <Polish>Wymaga informacji o żołnierzu/pojeździe/broni.</Polish>

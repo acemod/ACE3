@@ -21,7 +21,7 @@
             <German>Aktiviere Blutspritzer</German>
             <Korean>피흘리기 활성화</Korean>
             <Polish>Włącz ślady krwi na ziemi</Polish>
-            <French>Activer gouttes de sang</French>
+            <French>Activer les gouttes de sang</French>
             <Italian>Abilita Perdite di Sangue</Italian>
             <Chinesesimp>开启血液滴落效果</Chinesesimp>
             <Chinese>開啟血液滴落效果</Chinese>
@@ -39,7 +39,7 @@
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
             <English>Max Blood Objects</English>
             <Japanese>最大血痕数</Japanese>
-            <French>Quantité sang affiché</French>
+            <French>Quantité de sang à afficher</French>
             <Russian>Макс. кол-во капель крови</Russian>
             <Portuguese>Limite de objetos de sangue</Portuguese>
             <Chinese>最大血跡數</Chinese>

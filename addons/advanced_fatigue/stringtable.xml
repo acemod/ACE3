@@ -9,7 +9,7 @@
             <Japanese>ACE アドバンスド ファティーグ</Japanese>
             <Italian>ACE Fatica Avanzata</Italian>
             <Korean>ACE 고급 피로도</Korean>
-            <French>ACE Fatigue Avancée</French>
+            <French>ACE Fatigue avancée</French>
             <Polish>ACE Zaawansowane Zmęczenie</Polish>
             <Russian>ACE Продвинутая усталость</Russian>
             <Portuguese>ACE Fadiga Avançada</Portuguese>
@@ -227,11 +227,13 @@
             <English>Fade Stamina bar automatically</English>
             <German>Blende Ausdauerleiste automatisch aus</German>
             <Chinese>體力條自動淡去</Chinese>
+            <French>Fondu automatique de la barre d'endurance</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
             <German>Passt die Transparenz der Ausdauerleiste abhängig vom Ausdauerstatus an.</German>
             <Chinese>依照目前的體力程度調整體力條之透明度</Chinese>
+            <French>Règle la transparence de la barre en fonction de l'état d'endurance.</French>
         </Key>
     </Package>
 </Project>

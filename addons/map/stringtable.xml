@@ -37,7 +37,7 @@
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
             <German>Simuliere Kartenbeleuchtung auf Basis des Umgebungslichts sowie der mitgeführten Gegenstände?</German>
             <Polish>Symuluj oświetlenie mapy bazujące na oświetleniu otoczenia oraz przedmiotach gracza?</Polish>
-            <French>Simuler l'éclairage de la carte en fonction de l'éclairage ambiant et des objets du joueur ?</French>
+            <French>Simule l'éclairage de la carte en fonction de l'éclairage ambiant et des objets du joueur.</French>
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
             <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
@@ -67,7 +67,7 @@
             <English>Add external glow to players who use flashlight on map?</English>
             <German>Kartenbeleuchtung mittels Taschenlampe durch Dritte erkennbar?</German>
             <Polish>Pokaż poświatę światła latarki na graczu, który używa latarki na widoku mapy?</Polish>
-            <French>Ajouter une lueur externe aux joueurs éclairant leur carte avec une lampe ?</French>
+            <French>Ajoute une lueur externe aux joueurs éclairant leur carte avec une lampe.</French>
             <Russian>Добавить свет при использовании фонаря на карте?</Russian>
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
@@ -101,7 +101,7 @@
             <German>Kamerawackeln beim Gehen?</German>
             <Czech>Umožnit třesení mapy za pochodu?</Czech>
             <Portuguese>Tremer o mapa enquanto caminha?</Portuguese>
-            <French>Faire trembler la carte lorsque le joueur marche ?</French>
+            <French>La carte tremble lorsque le joueur marche en la regardant.</French>
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
@@ -133,7 +133,7 @@
             <German>Schränkt die maximale Kartenvergrößerung ein.</German>
             <Czech>Omezit stupeň přiblížení pro mapu?</Czech>
             <Portuguese>Limitar a quantidade de zoom disponível para o mapa?</Portuguese>
-            <French>Limiter le niveau de zoom sur la carte ?</French>
+            <French>Limite le niveau de zoom sur la carte.</French>
             <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
             <Russian>Ограничить максимальное приближение, доступное на карте?</Russian>
             <Italian>Limita l'ammontare di zoom disponibile per la mappa?</Italian>
@@ -165,7 +165,7 @@
             <German>Gitter-Koordinaten auf dem Mauszeiger anzeigen?</German>
             <Czech>Zobrazit souřadnice u kurzoru v mapě?</Czech>
             <Portuguese>Mostrar as coordenadas de grade no ponteiro do mouse?</Portuguese>
-            <French>Afficher les coordonnées de la grille sur le pointeur de souris ?</French>
+            <French>Affiche les coordonnées de la grille sur le pointeur de souris.</French>
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
             <Italian>Mostra la griglia coordinate sul cursore mouse?</Italian>
@@ -229,7 +229,7 @@
             <Polish>Aktywuj Blue Force Tracking. Domyślnie: Nie</Polish>
             <Czech>Povolit Blue Force Tracking. Výchozí: Ne</Czech>
             <Spanish>Activar Blue Force Tracking. Por defecto: No</Spanish>
-            <French>Active le SFA. Défaut : non</French>
+            <French>Active le SFA. Valeur par défaut : désactivé.</French>
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
             <Russian>Включает систему служения BFT. По-умолчанию: Нет</Russian>
             <Italian>Abilita Blue Force Tracking. Default: No</Italian>
@@ -293,7 +293,7 @@
             <German>Verstecke Marker für "nur KI"-Gruppen?</German>
             <Czech>Skrýt značky pouze pro AI skupiny?</Czech>
             <Portuguese>Esconder marcadores que pertencem ao grupo de IA?</Portuguese>
-            <French>Cacher les marqueurs pour les groupes composés exclusivement d'unités IA ?</French>
+            <French>Cache les marqueurs pour les groupes composés exclusivement d'unités IA.</French>
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
             <Italian>Nascondi markers per gruppi di sole IA?</Italian>
@@ -325,7 +325,7 @@
             <German>Zeigt die Namen der einzelnen Spieler an</German>
             <Czech>Zobrazit názvy jednotlivých hráčů?</Czech>
             <Portuguese>Mostrar nomes individuais dos jogadores?</Portuguese>
-            <French>Afficher les noms des joueurs individuels ?</French>
+            <French>Affiche les noms de tous les joueurs individuellement.</French>
             <Hungarian>Itt található az adott játékos neveket?</Hungarian>
             <Russian>Показать отдельные имена игроков?</Russian>
             <Italian>Mostra i nomi dei giocatori singoli?</Italian>

@@ -228,7 +228,7 @@
             <Japanese>高度により圧が減少</Japanese>
             <Korean>고도에 맞춰 기압 설정</Korean>
             <Polish>Ciśnienie określone na podstawie wysokości</Polish>
-            <French>Déduire la pression selon l'altitude</French>
+            <French>Déterminer la pression selon l'altitude</French>
             <Italian>Ricava la pressione dall'altitudine</Italian>
             <Chinesesimp>高度影响大气压力</Chinesesimp>
             <Chinese>高度影響大氣壓力</Chinese>
@@ -241,7 +241,7 @@
             <Japanese>標高により気圧が減少されます</Japanese>
             <Korean>주변 고도에 맞춰 기압을 설정합니다</Korean>
             <Polish>Określ ciśnienie barometryczne na podstawie wysokości terenu</Polish>
-            <French>Déduire la pression barométrique en fonction de l'altitude du terrain</French>
+            <French>Détermine la pression barométrique en fonction de l'altitude du terrain.</French>
             <Italian>Ricava la pressione barometrica dall'altitudine del terreno</Italian>
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
@@ -259,7 +259,7 @@
             <Polish>Wykorzystaj legacy UI</Polish>
             <Russian>Использовать устаревший интерфейс</Russian>
             <Portuguese>Usar Interface Antiga</Portuguese>
-            <French>Utiliser l'ancienne UI</French>
+            <French>Utiliser l'ancienne IU</French>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_description">
             <English>Displays elevation and windage with signed numbers</English>
