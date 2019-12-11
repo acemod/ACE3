@@ -1,5 +1,4 @@
 class CfgVehicles {
-    
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
         scope = 1;

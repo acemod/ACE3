@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: LorenLuke
  * Returns an approximate representation of temperature at a unit's location.
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * [ACE_player] call ace_advanced_ballistics_fnc_getApproximateAirTemp
+ * [ACE_player] call ace_weather_fnc_getApproximateAirTemp
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 TRACE_1("params",_unit);
@@ -37,7 +37,7 @@ private _chill = _temperature + (0.33 * _water_vapor_pressure) - (0.70 * _windsp
 */
 
 // sigmoid = f(x) = L / (1 + e^(-k * (x - x_0)));
-// L max value, e = euler, k = steepness, 
+// L max value, e = euler, k = steepness,
 
 // L = max value
 private _sigmoid_L = 1;

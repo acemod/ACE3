@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: LorenLuke
  * Displays an abstracted depiction of air temperature to a unit.
@@ -5,16 +6,15 @@
  * Arguments:
  * 0: Temperature <NUMBER>
  * 1: Unit Bias range <ARRAY>
- * 
+ *
  * Return Value:
  * None
  *
  * Example:
- * [15.8] call ace_advanced_ballistics_fnc_displayAirTemp
+ * [15.8] call ace_weather_fnc_displayAirTemp
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_apparent_temperature", "_bias"];
 TRACE_2("params",_temperature, _bias);
@@ -54,7 +54,7 @@ for "_i" from -40 to 40 step 4 do {
     } else {
         _string = "I";
     };
-    
+
     if (abs( _i - _apparent_temperature) < 8.5) then {
         _temp_color = [
         // Colors obtained by quartic regression formula of RGB values at corresponding temperatures as marked on advanced_ballistics rangecard
