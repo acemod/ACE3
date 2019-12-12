@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ArtilleryTables">
-        <Key ID="STR_ACE_artillerytables_rangetable_displayName">
+        <Key ID="STR_ACE_ArtilleryTables_rangetable_displayName">
             <English>Artillery Rangetable</English>
         </Key>
-        <Key ID="STR_ACE_artillerytables_rangetable_description">
+        <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
         </Key>
-        <Key ID="STR_ACE_artillerytables_advancedCorrections_displayName">
+        <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
             <Polish>Opór powietrza</Polish>
             <Spanish>Resistencia al aire</Spanish>
@@ -23,7 +23,7 @@
             <Chinesesimp>空气阻力</Chinesesimp>
             <Chinese>空氣阻力</Chinese>
         </Key>
-        <Key ID="STR_ACE_artillerytables_advancedCorrections_description">
+        <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>
             <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza Mk6 przez graczy</Polish>
             <Spanish>Para disparos del jugador, modelo de resistencia al aire y efectos de viento</Spanish>
@@ -39,10 +39,10 @@
             <Chinesesimp>设定由玩家射击的迫击炮，将会受到空气阻力与风力的影响</Chinesesimp>
             <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
         </Key>
-        <Key ID="STR_ACE_artillerytables_disableArtilleryComputer_displayName">
+        <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_displayName">
             <English>Artillery Computer Disabled</English>
         </Key>
-        <Key ID="STR_ACE_artillerytables_disableArtilleryComputer_description">
+        <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
         </Key>
   </Package>
