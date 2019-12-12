@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: |
         cd extensions/build
-        cmake .. && cmake --build .
+        cmake .. -and cmake --build .
     - name: Upload Artifact
       uses: actions/upload-artifact@master
       with:
