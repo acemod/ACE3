@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Mk6Mortar">
+    <Package name="artillerytables">
         <Key ID="STR_ACE_artillerytables_rangetable_displayName">
             <English>Artillery Rangetable</English>
         </Key>
