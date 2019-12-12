@@ -78,7 +78,7 @@ if (GVAR(clearTraumaAfterBandage)) then {
 };
 
 if (_amountOf <= 0) then { // Reset treatment condition cache for nearby players if we stopped all bleeding
-    private _nearPlayers = (_patient nearEntities ["Man", 6]) select {_x call EFUNC(common,isPlayer)};
+    private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call EFUNC(common,isPlayer)};
     TRACE_1("clearConditionCaches: bandage",_nearPlayers);
     [QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
 };

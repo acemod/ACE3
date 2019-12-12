@@ -34,7 +34,7 @@ _patient setVariable [VAR_TOURNIQUET, _tourniquets, true];
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
-private _nearPlayers = (_patient nearEntities ["Man", 6]) select {_x call EFUNC(common,isPlayer)};
+private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call EFUNC(common,isPlayer)};
 TRACE_1("clearConditionCaches: tourniquetRemove",_nearPlayers);
 [QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
 
