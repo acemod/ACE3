@@ -13,6 +13,7 @@
             <Italian>Metal detector</Italian>
             <Chinesesimp>金属探测器</Chinesesimp>
             <Chinese>金屬探測器</Chinese>
+            <Portuguese>Detector de Metais</Portuguese>
         </Key>
         <Key ID="STR_ACE_MineDetector_MetalDetector">
             <English>Metal detector</English>
@@ -26,6 +27,7 @@
             <Italian>Metal detector</Italian>
             <Chinesesimp>金属探测器</Chinesesimp>
             <Chinese>金屬探測器</Chinese>
+            <Portuguese>Detector de Metais</Portuguese>
         </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
@@ -39,6 +41,7 @@
             <Italian>Attiva</Italian>
             <Chinesesimp>启用探测器</Chinesesimp>
             <Chinese>啟用探測器</Chinese>
+            <Portuguese>Ativar</Portuguese>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
             <English>Deactivate</English>
@@ -52,6 +55,7 @@
             <Italian>Disattiva</Italian>
             <Chinesesimp>停用探测器</Chinesesimp>
             <Chinese>停用探測器</Chinese>
+            <Portuguese>Desativar</Portuguese>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
@@ -65,6 +69,7 @@
             <Italian>Connetti Auricolari</Italian>
             <Chinesesimp>连接耳机</Chinesesimp>
             <Chinese>連接耳機</Chinese>
+            <Portuguese>Conectar fones de ouvido</Portuguese>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
@@ -78,6 +83,7 @@
             <Italian>Disconnetti Auricolari</Italian>
             <Chinesesimp>断开耳机</Chinesesimp>
             <Chinese>斷開耳機</Chinese>
+            <Portuguese>Desconectar fones de ouvido</Portuguese>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
@@ -91,6 +97,7 @@
             <Italian>Auricolari Connessi</Italian>
             <Chinesesimp>已连接耳机</Chinesesimp>
             <Chinese>已連接耳機</Chinese>
+            <Portuguese>Fones de ouvido conectados</Portuguese>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
@@ -104,6 +111,7 @@
             <Italian>Auricolari Disconnessi</Italian>
             <Chinesesimp>已断开耳机</Chinesesimp>
             <Chinese>已斷開耳機</Chinese>
+            <Portuguese>Fones de ouvido conectados</Portuguese>
         </Key>
     </Package>
 </Project>

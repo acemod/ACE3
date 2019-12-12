@@ -10,5 +10,6 @@ PREP_RECOMPILE_END;
 
 GVAR(staminaBarWidth) = 10 * (((safezoneW / safezoneH) min 1.2) / 40);
 GVAR(dutyList) = [[], []];
+GVAR(setAnimExclusions) = [];
 
 ADDON = true;

@@ -28,8 +28,6 @@ class CfgWeapons {
 
     // MX
     class arifle_MX_Base_F: Rifle_Base_F {
-        magazineWell[] = {"CBA_65x39_MX", "CBA_65x39_MX_XL"};
-
         class Single: Mode_SemiAuto {
             dispersion = MOA_TO_RAD(0.90);
         };
@@ -77,6 +75,7 @@ class CfgWeapons {
         ACE_barrelTwist = 228.6; // 1:9 inch twist
         ACE_barrelLength = 407;
         ACE_twistDirection = 1;
+        initSpeed = -1.083916; // 775 m/s according with the ACE_muzzleVelocities at 15°C, default BI value -1.1 (786 m/s)
         modes[] = {"Single"};
     };
     class SMG_03C_BASE: SMG_03_TR_BASE {
@@ -144,11 +143,20 @@ class CfgWeapons {
 
     // M14
     class DMR_06_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 558.8;
+        ACE_barrelTwist = 304.8;
+        initSpeed = -0.999395;
         class Single: Mode_SemiAuto {
             dispersion = MOA_TO_RAD(0.81);
         };
 
         class FullAuto: Mode_FullAuto {
+            dispersion = MOA_TO_RAD(0.81);
+        };
+    };
+
+    class DMR_06_hunter_base_F: DMR_06_base_F {
+        class Single: Single {
             dispersion = MOA_TO_RAD(0.81);
         };
     };
@@ -262,11 +270,6 @@ class CfgWeapons {
 
     // Stoner 99 LMG
     class LMG_Mk200_F: Rifle_Long_Base_F {
-        magazines[] = {
-            "200Rnd_65x39_cased_Box",
-            "200Rnd_65x39_cased_Box_Tracer",
-            "ACE_200Rnd_65x39_cased_Box_Tracer_Dim"
-        };
         initSpeed = -0.999327;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 317.5;
@@ -357,23 +360,47 @@ class CfgWeapons {
 
     // AKS
     class arifle_AKS_base_F: Rifle_Base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 160.02;
-        ACE_barrelLength = 206.5;
+        initSpeed = -1; // 735 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 160;
+        ACE_barrelLength = 210;
     };
 
     // AKM
     class arifle_AKM_base_F: Rifle_Base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 199.898;
-        ACE_barrelLength = 414.02;
+        initSpeed = -1; // 715 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 240;
+        ACE_barrelLength = 415;
     };
 
-    // AK12
+    // AK15,AK15K,RPK (AK12)
     class arifle_AK12_base_F: Rifle_Base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 199.898;
-        ACE_barrelLength = 414.02;
+        initSpeed = -1; // 715 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 240;
+        ACE_barrelLength = 415;
+    };
+
+    class arifle_AK12U_base_F: arifle_AK12_base_F {
+        initSpeed = -0.937063; // 715*0.937063= 670 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 240;
+        ACE_barrelLength = 314;
+    };
+
+    class arifle_RPK12_base_F: arifle_AK12_base_F {
+        initSpeed = -1.041958; // 715*1.041958= 745 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 240;
+        ACE_barrelLength = 590;
+    };
+
+    // MSBS GROT (Promet)
+    class arifle_MSBS65_base_F: Rifle_Base_F {
+        initSpeed = -0.971576; // 774*0.971576= 752 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelTwist = 228.6;
+        ACE_barrelLength = 406.4; // 16"
+    };
+
+    class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F {
+        initSpeed = -1.007752; // 774*1.007752= 780 m/s according with the ACE_muzzleVelocities at 15°C
+        ACE_barrelLength = 508; // 20"
     };
 
     // QBZ-95-1
@@ -789,23 +816,6 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist = 359.918;
         ACE_barrelLength = 620.014;
-    };
-
-    // M14
-    class srifle_DMR_06_camo_F: DMR_06_base_F {
-        magazines[] = {
-            "20Rnd_762x51_Mag",
-            "ACE_20Rnd_762x51_Mag_Tracer",
-            "ACE_20Rnd_762x51_Mag_Tracer_Dim",
-            "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-            "ACE_20Rnd_762x51_M118LR_Mag",
-            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-            "ACE_20Rnd_762x51_M993_AP_Mag",
-            "ACE_20Rnd_762x51_Mag_SD"
-        };
-        initSpeed = -0.999395;
-        ACE_barrelTwist = 304.8;
-        ACE_barrelLength = 558.8;
     };
 
     // HK121

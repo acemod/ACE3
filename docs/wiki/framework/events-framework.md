@@ -46,6 +46,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_interactMenuOpened` | [_menuType] | Local | Listen | Interaction Menu Opened
 |`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
+|`ace_interact_menu_newControllableObject` | [_typeOf] | Local | Listen | New controlable object, only fires once per type (add self interactions)
 
 ### 2.4 Cargo (`ace_cargo`)
 
@@ -87,6 +88,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
 |`ace_wireCuttingStarted` | [_unit, _fence] | Global | Listen | Fence cutting started
+
+### 2.9 Refuel (`ace_refuel`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_refuel_started` | [_source, _target] | Local | Listen | Refueling has started
+|`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick
+|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refueling has stopped
 
 
 ## 3. Usage

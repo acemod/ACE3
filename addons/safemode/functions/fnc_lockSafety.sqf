@@ -17,9 +17,6 @@
  * Public: No
  */
 
-// don't immediately switch back
-if (inputAction "nextWeapon" > 0) exitWith {};
-
 params ["_unit", "_weapon", "_muzzle"];
 
 private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];

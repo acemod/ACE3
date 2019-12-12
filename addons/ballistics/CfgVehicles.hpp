@@ -211,6 +211,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(AmmoSupplyCrate_DisplayName);
         model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_Ammo_F.jpg";
         author = ECSTRING(common,ACETeam);
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_20Rnd_762x51_Mag_SD,4);

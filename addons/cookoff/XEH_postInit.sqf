@@ -27,9 +27,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     };
 
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
-            ["tank", _this] call FUNC(handleDamage);
-        };
+        ["tank", _this] call FUNC(handleDamage);
     }];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
@@ -53,9 +51,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     };
 
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
-            ["tank", _this] call FUNC(handleDamage);
-        };
+        ["tank", _this] call FUNC(handleDamage);
     }];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
@@ -63,9 +59,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     params ["_vehicle"];
 
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
-            ["car", _this] call FUNC(handleDamage);
-        };
+        ["car", _this] call FUNC(handleDamage);
     }];
 }, nil, ["Wheeled_APC_F"], true] call CBA_fnc_addClassEventHandler;
 
@@ -89,7 +83,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 // blow off turret effect
 ["Tank", "killed", {
-    if ((_this select 0) getVariable [QGVAR(enable),GVAR(enable)]) then {
+    if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)] in [1, 2, true]) then {
         if (random 1 < 0.15) then {
             (_this select 0) call FUNC(blowOffTurret);
         };

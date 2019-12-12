@@ -75,8 +75,13 @@ class CfgVehicles {
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = [_target] call FUNC(canCutRopes);
-                statement = [_target] call FUNC(cutRopes);
+                condition = QUOTE(true);
+                statement = "";
+                class confirmCutRopes {
+                    displayName = ECSTRING(common,confirm);
+                    condition = QUOTE([_target] call FUNC(canCutRopes));
+                    statement = QUOTE([_target] call FUNC(cutRopes));
+                };
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
@@ -202,7 +207,7 @@ class CfgVehicles {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesAnchorBar";
-        GVAR(friesAttachmentPoint)[] = {0.065, 2.2, -0.15};
+        GVAR(friesAttachmentPoint)[] = {0.035, 2.2, -0.15};
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
         EQUIP_FRIES_ATTRIBUTE;
@@ -274,6 +279,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(Ropesupply);
         model = "\A3\Weapons_F\AmmoBoxes\Box_NATO_AmmoVeh_F.p3d";
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_AmmoVeh_F.jpg";
         author = "Pokertour";
         class TransportItems {
             MACRO_ADDITEM(ACE_rope12,15);

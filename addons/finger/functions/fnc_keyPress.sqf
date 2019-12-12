@@ -48,7 +48,7 @@ private _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]
             {alive _x} &&
             {(_x == (vehicle _x)) || {(vehicle _x) isKindOf "StaticWeapon"}} &&
             {GVAR(indicatorForSelf) || {_x != ACE_player}} &&
-            {!(lineIntersects [(eyePos _x), _playerEyePosASL, vehicle ACE_player, vehicle _x])} &&
+            {((lineIntersectsSurfaces [(eyePos _x), _playerEyePosASL, vehicle ACE_player, vehicle _x]) isEqualTo [])} &&
             {[_x] call EFUNC(common,isPlayer)}) then {
 
         _sendFingerToPlayers pushBack _x;

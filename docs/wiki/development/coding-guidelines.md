@@ -126,7 +126,8 @@ These macros are allowed but are not enforced.
 |`GETVAR(player,MyVarName,false)` | `player getVariable ["MyVarName", false]` |
 |`GETMVAR(MyVarName,objNull)` | `missionNamespace getVariable ["MyVarName", objNull]` |
 |`GETUVAR(MyVarName,displayNull)` | `uiNamespace getVariable ["MyVarName", displayNull]` |
-|`SETVAR(player,MyVarName,127)` |  `player setVariable ["MyVarName", 127]  SETPVAR(player,MyVarName,127) player setVariable ["MyVarName", 127, true]` |
+|`SETVAR(player,MyVarName,127)` | `player setVariable ["MyVarName", 127]` |
+|`SETPVAR(player,MyVarName,127)` | `player setVariable ["MyVarName", 127, true]` |
 |`SETMVAR(MyVarName,player)` | `missionNamespace setVariable ["MyVarName", player]` |
 |`SETUVAR(MyVarName,_control)` | `uiNamespace setVariable ["MyVarName", _control]` |
 
@@ -134,14 +135,16 @@ These macros are allowed but are not enforced.
 Note that you need the strings in module `stringtable.xml` in the correct format:
 `STR_ACE_<module>_<string>`
 
-Example: `STR_Balls_Banana`
+Example: `STR_ACE_Balls_Banana`
 
-Script strings (still require `localize` to localize the string):
+Script strings:
 
 | Macro | Expands to |
 | -------|---------|
 |`LSTRING(banana)` | `"STR_ACE_balls_banana"` |
+|`LLSTRING(banana)` | `localize "STR_ACE_balls_banana"` |
 |`ELSTRING(leg,banana)` | `"STR_ACE_leg_banana"` |
+|`LELSTRING(leg,banana)` | `localize "STR_ACE_leg_banana"` |
 
 
 Config Strings (require `$` as first character):
@@ -298,7 +301,7 @@ call {
         call {
         if (/* condition */) then {
             /* code */
-        };  
+        };
         };
 };
 ```

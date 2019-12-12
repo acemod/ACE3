@@ -136,17 +136,18 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {875, 910, 930, 945};
         ACE_barrelLengths[] = {330.2, 406.4, 508.0, 609.6};
     };
-    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball { // RUAG Ammotec
-        ACE_caliber = 4.65;
+    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball { // RUAG Ammotec: https://www.heckler-koch.com/en/products/military/submachine-guns/mp7a1/mp7a2/ammunition.html
+        ACE_caliber = 4.65; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-en.pdf
         ACE_bulletLength = 21;
         ACE_bulletMass = 2.6;
         ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
-        ACE_ballisticCoefficients[] = {0.171};
+        ACE_ballisticCoefficients[] = {0.089};
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
-        ACE_dragModel = 1;
-        ACE_muzzleVelocities[] = {620};
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {621}; // at 21°C, 620 m/s at 15°C according with the 4.6x30 FMJ magazine initSpeed
         ACE_barrelLengths[] = {180};
+        airFriction = -0.002635; // default RHS value -0.0027667
     };
     class rhs_ammo_46x30_JHP: rhs_ammo_46x30_FMJ { // RUAG Ammotec
         ACE_caliber = 4.65;
@@ -157,8 +158,9 @@ class CfgAmmo {
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
         ACE_dragModel = 1;
-        ACE_muzzleVelocities[] = {690};
+        ACE_muzzleVelocities[] = {691}; // at 21°C, 690 m/s at 15°C according with the 4.6x30 JHP magazine initSpeed
         ACE_barrelLengths[] = {180};
+        airFriction = -0.003723; // default RHS value -0.00348301
     };
     class rhs_ammo_46x30_AP: rhs_ammo_46x30_FMJ { // RUAG Ammotec
         ACE_caliber = 4.65;
@@ -169,8 +171,9 @@ class CfgAmmo {
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO";
         ACE_dragModel = 1;
-        ACE_muzzleVelocities[] = {680};
+        ACE_muzzleVelocities[] = {681}; // at 21°C, 680 m/s at 15°C according with the 4.6x30 AP magazine initSpeed
         ACE_barrelLengths[] = {180};
+        airFriction = -0.003045; // default RHS value -0.00266241
     };
     class rhs_ammo_45ACP_MHP: BulletBase { // B_45ACP_Ball (ballistics/CfgAmmo.hpp)
         ACE_caliber = 11.481;
@@ -293,5 +296,24 @@ class CfgAmmo {
     };
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;
+    };
+
+    class PipeBombBase;
+    class rhsusf_m112_ammo: PipeBombBase {
+        ace_explosives_magazine = "rhsusf_m112_mag";
+        ace_explosives_Explosive = "rhsusf_m112_ammo_scripted";
+        ace_explosives_size = 0;
+        ace_explosives_defuseObjectPosition[] = {-0.155,0,0.01};
+        soundActivation[] = {"", 0, 0, 0};
+        soundDeactivation[] = {"", 0, 0, 0};
+    };
+
+    class rhsusf_m112x4_ammo: PipeBombBase {
+        ace_explosives_magazine = "rhsusf_m112x4_mag";
+        ace_explosives_Explosive = "rhsusf_m112x4_ammo_scripted";
+        ace_explosives_size = 0;
+        ace_explosives_defuseObjectPosition[] = {-0.155,0.025,0.01};
+        soundActivation[] = {"", 0, 0, 0};
+        soundDeactivation[] = {"", 0, 0, 0};
     };
 };

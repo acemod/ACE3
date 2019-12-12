@@ -5,7 +5,7 @@
  * Use this in INIT and RESPAWN eh scripts, because ACE_player isn't reset yet.
  *
  * Arguments:
- * NONE.
+ * None
  *
  * Return Value:
  * Player controlled unit <OBJECT>

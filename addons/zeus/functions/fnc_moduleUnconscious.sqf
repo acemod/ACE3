@@ -37,9 +37,9 @@ if (isNil QEFUNC(medical,setUnconscious)) then {
             if !(alive _unit) then {
                 [LSTRING(OnlyAlive)] call FUNC(showMessage);
             } else {
-                private _conscious = GETVAR(_unit,ACE_isUnconscious,false);
+                private _unconscious = GETVAR(_unit,ACE_isUnconscious,false);
                 // Function handles locality for me
-                [_unit, !_conscious, 10e10, true] call EFUNC(medical,setUnconscious);
+                [_unit, !_unconscious, 10e10] call EFUNC(medical,setUnconscious);
             };
         };
     };

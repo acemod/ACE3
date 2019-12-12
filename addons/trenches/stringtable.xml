@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="trenches">
+    <Package name="Trenches">
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
             <English>Entrenching Tool</English>
             <German>Klappspaten</German>
@@ -37,13 +37,14 @@
             <Polish>Wnęka - mała</Polish>
             <Italian>Fascia - Piccola</Italian>
             <Spanish>Trinchera pequeña</Spanish>
-            <French>Envelope - petite</French>
+            <French>Enveloppe - Petite</French>
             <Portuguese>Trincheira - Pequena</Portuguese>
             <Russian>Окоп - Малый</Russian>
             <Japanese>塹壕 - 小型</Japanese>
             <Korean>참호 - 소형</Korean>
             <Chinesesimp>掩体 - 小</Chinesesimp>
             <Chinese>掩體 - 小</Chinese>
+            <Czech>Obálka - Malá</Czech>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -51,7 +52,7 @@
             <Polish>Mała jednoosobowa wnęka</Polish>
             <Italian>Piccola Trincea Personale</Italian>
             <Spanish>Trinchera personal pequeña</Spanish>
-            <French>Petite tranchée personelle</French>
+            <French>Petite tranchée personnelle</French>
             <Czech>Malý zákop pro jednoho</Czech>
             <Portuguese>Trincheira pessoal pequena</Portuguese>
             <Russian>Малый персональный окоп</Russian>
@@ -81,13 +82,14 @@
             <Polish>Wnęka - duża</Polish>
             <Italian>Fascia - Grande</Italian>
             <Spanish>Trinchera grande</Spanish>
-            <French>Enveloppe - grande</French>
+            <French>Enveloppe - Grande</French>
             <Portuguese>Trincheira - Grande</Portuguese>
             <Russian>Окоп - Большой</Russian>
             <Japanese>塹壕 - 大型</Japanese>
             <Korean>참호 -  대형</Korean>
             <Chinesesimp>掩体 - 大</Chinesesimp>
             <Chinese>掩體 - 大</Chinese>
+            <Czech>Obálka - Velká</Czech>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
@@ -95,7 +97,7 @@
             <Polish>Duża jednoosobowa wnęka</Polish>
             <Italian>Grande Trincea Personale</Italian>
             <Spanish>Trinchera personal grande</Spanish>
-            <French>Grande tranchée personelle</French>
+            <French>Grande tranchée personnelle</French>
             <Czech>Velký zákop pro jednoho</Czech>
             <Portuguese>Trincheira pessoal grande</Portuguese>
             <Russian>Большой персональный окоп</Russian>
@@ -125,7 +127,7 @@
             <Polish>Potwierdź kopanie</Polish>
             <Italian>Conferma Scavo</Italian>
             <Spanish>Confirmar cavado</Spanish>
-            <French>Confirmer la creusée</French>
+            <French>Confirmer l'excavation</French>
             <Czech>Potvrdit kopání</Czech>
             <Portuguese>Confirmar excavação</Portuguese>
             <Russian>Копать</Russian>
@@ -140,7 +142,7 @@
             <Polish>Anuluj kopanie</Polish>
             <Italian>Annulla Scavo</Italian>
             <Spanish>Cancelar cavado</Spanish>
-            <French>Annuler la creusée</French>
+            <French>Annuler l'excavation</French>
             <Czech>Zrušit kopání</Czech>
             <Portuguese>Cancelar excavação</Portuguese>
             <Russian>Отменить копание</Russian>
@@ -153,7 +155,7 @@
             <English>Rotate</English>
             <German>Drehen</German>
             <Spanish>Girar</Spanish>
-            <French>Tourner</French>
+            <French>Rotation</French>
             <Italian>Rotazione</Italian>
             <Czech>Otočit</Czech>
             <Hungarian>Forgatás</Hungarian>
@@ -171,7 +173,7 @@
             <Polish>Kopanie wnęki</Polish>
             <Italian>Scavando la Trincea</Italian>
             <Spanish>Cavando trinchera</Spanish>
-            <French>Creuse la tranchée</French>
+            <French>Excavation de la tranchée</French>
             <Czech>Vykopat zákop</Czech>
             <Portuguese>Cavando trincheira</Portuguese>
             <Russian>Копание окопа</Russian>
@@ -184,7 +186,7 @@
             <English>Continue Digging Trench</English>
             <Polish>Wzów kopanie wnęki</Polish>
             <Portuguese>Continuar cavando trincheira</Portuguese>
-            <French>Continuer à creuser la tranchée</French>
+            <French>Continuer de creuser la tranchée</French>
             <Russian>Продолжить копание окопа</Russian>
             <Czech>Pokračovat v kopání</Czech>
             <Japanese>塹壕を掘りつづける</Japanese>
@@ -212,7 +214,7 @@
             <English>Removing Trench</English>
             <Polish>Usuwanie wnęki</Polish>
             <Portuguese>Removendo tricnheira</Portuguese>
-            <French>Retirement de la tranchée</French>
+            <French>Retrait de la tranchée</French>
             <Russian>Убирание окопа</Russian>
             <Czech>Odstraňuji zákop</Czech>
             <Japanese>塹壕を消しています</Japanese>

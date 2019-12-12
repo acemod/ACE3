@@ -1,4 +1,3 @@
-
 class CfgWeapons {
     class NVGoggles;
     class rhsusf_ANPVS_14: NVGoggles { // Monocular
@@ -7,7 +6,7 @@ class CfgWeapons {
         EGVAR(nightvision,bluRadius) = 0.13;
     };
     class rhsusf_ANPVS_15: rhsusf_ANPVS_14 { // Binocular (same as base)
-        modelOptics = "";        
+        modelOptics = "";
         EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_binos_4096.paa);
         EGVAR(nightvision,bluRadius) = 0.15;
     };
@@ -119,9 +118,11 @@ class CfgWeapons {
     };
     class SMG_02_base_F;
     class rhsusf_weap_MP7A1_base_f: SMG_02_base_F {
+        ACE_barrelLength = 180;
+        ACE_barrelTwist = 160;
+        ACE_IronSightBaseAngle = -0.286479; // 5 mRad POA = POI at the default discreteDistance 100 m, SMG_02_base_F default value 0.434847
+        ACE_RailBaseAngle = 0; // SMG_02_base_F default value 0.0217724
         ACE_RailHeightAboveBore = 5;
-        ACE_barrelTwist = 160.0;
-        ACE_barrelLength = 180.0;
     };
     // RHS pistols
     class hgun_ACPC2_F;
@@ -229,7 +230,10 @@ class CfgWeapons {
         };
     };
 
-    class Launcher_Base_F;
+    class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
+    };
     class rhs_weap_smaw: Launcher_Base_F {
         ace_reloadlaunchers_enabled = 1;
         ace_overpressure_angle = 45;
@@ -241,11 +245,18 @@ class CfgWeapons {
         ace_overpressure_damage = 0.75;
     };
 
+    #define HEARING_PROTECTION_OPEN EGVAR(hearing,protection) = 0; EGVAR(hearing,lowerVolume) = 0;
     #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
     #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;
     #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
     // Fast Helmets
     class rhsusf_opscore_01;
+    class rhsusf_ihadss: rhsusf_opscore_01 {
+        HEARING_PROTECTION_PELTOR
+    };
+    class rhsusf_opscore_ut_pelt_nsw: rhsusf_opscore_01 {
+        HEARING_PROTECTION_PELTOR
+    };
     class rhsusf_opscore_aor1_pelt: rhsusf_opscore_01 {
         HEARING_PROTECTION_PELTOR
     };
@@ -295,6 +306,9 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR
     };
     class rhsusf_opscore_cover;
+    class rhsusf_opscore_mc_cover_pelt_nsw: rhsusf_opscore_cover {
+        HEARING_PROTECTION_PELTOR
+    };
     class rhsusf_opscore_mc_cover_pelt: rhsusf_opscore_cover {
         HEARING_PROTECTION_PELTOR
     };
@@ -380,7 +394,9 @@ class CfgWeapons {
     class rhsusf_mich_bare_norotos_alt_semi: rhsusf_mich_bare_norotos_semi {
         HEARING_PROTECTION_PELTOR
     };
-    class rhsusf_mich_bare_norotos_arc_semi;
+    class rhsusf_mich_bare_norotos_arc_semi: rhsusf_mich_bare_norotos_alt_semi {
+        HEARING_PROTECTION_OPEN
+    };
     class rhsusf_mich_bare_norotos_arc_alt_semi: rhsusf_mich_bare_norotos_arc_semi {
         HEARING_PROTECTION_PELTOR
     };
@@ -406,4 +422,91 @@ class CfgWeapons {
     class RHS_jetpilot_usaf: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
+
+    CREATE_CSW_PROXY(rhs_mortar_81mm);
+    CREATE_CSW_PROXY(RHS_M2);
+    CREATE_CSW_PROXY(RHS_MK19);
+    CREATE_CSW_PROXY(Rhs_weap_TOW_Launcher_static);
+
+    class GVAR(m252_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 20;
+            pickupTime = 25;
+            class assembleTo {
+                EGVAR(csw,mortarBaseplate) = "RHS_M252_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 620; // M252 Mortar Weight
+        };
+        displayName = ECSTRING(CSW,m252_tube);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_M252_D_ca.paa";
+    };
+
+    class GVAR(m2_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m3Tripod) = "RHS_M2StaticMG_WD";
+                EGVAR(csw,m3TripodLow) = "RHS_M2StaticMG_MiniTripod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 840;
+        };
+        displayName = ECSTRING(CSW,m2_gun);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_M2StaticMG_D_ca.paa";
+    };
+
+    class GVAR(mk19_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m3TripodLow) = "RHS_MK19_TriPod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 770;
+        };
+        displayName = ECSTRING(CSW,mk19_gun);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_MK19_TriPod_D_ca.paa";
+    };
+
+    class GVAR(tow_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m220Tripod) = "RHS_TOW_TriPod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 500;
+        };
+        displayName = ECSTRING(CSW,tow_tube);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\Ico\RHS_TOW_TriPod_D_ca.paa";
+    };
 };
+
