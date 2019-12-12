@@ -15,7 +15,10 @@ class CfgPatches {
 };
 
 class ACE_Extensions {
-    extensions[] += {"ace_artillerytables"};
+    class ace_artillerytables {
+        windows = 1;
+        client = 1;
+    };
 };
 
 #include "CfgEventHandlers.hpp"

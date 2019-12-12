@@ -1,7 +1,7 @@
 ace_artillerytables
 ==========
 
-Universal artillertables.
+Universal artillery rangetables.
 
 #### Items Added:
 `ACE_artilleryTable`
