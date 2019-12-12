@@ -100,10 +100,14 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
 
 // background options
 ["ace_interactMenuOpened", {
-    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
-    if (GVAR(menuBackground)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
+    params ["_menuType"];
+    private _menuBackgroundSetting = [GVAR(menuBackground), GVAR(menuBackgroundSelf)] select _menuType;
+    if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
+    if (_menuBackgroundSetting == 2) exitWith {0 cutRsc [QGVAR(menuBackground), "PLAIN", 1, false];};
 }] call CBA_fnc_addEventHandler;
 ["ace_interactMenuClosed", {
-    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
-    if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
+    params ["_menuType"];
+    private _menuBackgroundSetting = [GVAR(menuBackground), GVAR(menuBackgroundSelf)] select _menuType;
+    if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
+    if (_menuBackgroundSetting == 2) exitWith {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call CBA_fnc_addEventHandler;

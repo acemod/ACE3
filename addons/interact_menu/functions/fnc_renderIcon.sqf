@@ -38,7 +38,7 @@ if (_iconFile isEqualTo "") then {
     _iconFile = DEFAULT_ICON;
 };
 
-_text = if (GVAR(UseListMenu)) then {
+_text = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
     format ["<img image='%1' align='left' color='%2'/><t %3>%4</t>", _iconFile, _iconColor, _textSettings, _text]
 } else {
     format ["<img image='%1' align='center' color='%2'/><br/><t %3 align='center'>%4</t>", _iconFile, _iconColor, _textSettings, "ace_break_line" callExtension _text];
@@ -47,13 +47,14 @@ _text = if (GVAR(UseListMenu)) then {
 [_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
-private _pos = if (GVAR(UseListMenu)) then {
+private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
     [(_sPos select 0) - (0.0095 * SafeZoneW), (_sPos select 1) - (0.0095 * SafeZoneW), 0.20 * SafeZoneW, 0.035 * SafeZoneW]
 } else {
     [(_sPos select 0) - (0.0750 * SafeZoneW), (_sPos select 1) - (0.0095 * SafeZoneW), 0.15 * SafeZoneW, 0.100 * SafeZoneW]
 };
 
-if (GVAR(cursorKeepCentered) && {uiNamespace getVariable [QGVAR(cursorMenuOpened),false]}) then {
+
+if (([GVAR(cursorKeepCentered), GVAR(cursorKeepCenteredSelfInteraction)] select GVAR(keyDownSelfAction)) && {uiNamespace getVariable [QGVAR(cursorMenuOpened),false]}) then {
     _pos set [0, ((_pos select 0) - (GVAR(cursorPos) select 0) + 0.5)];
     _pos set [1, ((_pos select 1) - (GVAR(cursorPos) select 1) + 0.5)];
 };

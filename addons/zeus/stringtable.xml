@@ -12,6 +12,7 @@
             <Polish>Zeus</Polish>
             <Russian>Зевс</Russian>
             <Portuguese>Zeus</Portuguese>
+            <Czech>Zeus</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
             <English>Zeus Settings</English>
@@ -279,6 +280,7 @@
             <Chinese>更新可編輯的物件</Chinese>
             <Russian>Обновить редактируемые объекты</Russian>
             <Portuguese>Atualizar objetos editáveis</Portuguese>
+            <Czech>Aktualizujte upravitelné objekty</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
@@ -289,6 +291,7 @@
             <Polish>Tryb Edytowania</Polish>
             <Russian>Режим редактирования</Russian>
             <Portuguese>Modo de edição</Portuguese>
+            <Czech>Režim úprav</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
@@ -299,6 +302,7 @@
             <Polish>Dodaj lub usuń edytowalne obiekty z Zeus'a</Polish>
             <Russian>Добавить или удалить редактируемые объекты от Зевса</Russian>
             <Portuguese>Adiciona ou remove objetos editáveis do Zeus</Portuguese>
+            <Czech>Přidej nebo odeber upravitelné objekty ze Zeusu</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
@@ -308,6 +312,7 @@
             <Polish>Dodaj obiekty</Polish>
             <Russian>Добавить объекты</Russian>
             <Portuguese>Adicionar Objetos</Portuguese>
+            <Czech>Přidat objekty</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -321,6 +326,7 @@
             <Chinese>移除物件</Chinese>
             <Russian>Удалить объекты</Russian>
             <Portuguese>Remover Objetos</Portuguese>
+            <Czech>Odebrat objekty</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
@@ -334,6 +340,7 @@
             <Chinese>所有編輯者</Chinese>
             <Russian>Все кураторы</Russian>
             <Portuguese>Todos os Curadores</Portuguese>
+            <Czech>Všichni kurátoři</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Apply changes to all curators</English>
@@ -347,6 +354,7 @@
             <Chinese>確認變更給所有編輯者</Chinese>
             <Russian>Применить изменения ко всем кураторам</Russian>
             <Portuguese>Aplicar mudanças à todos os Curadores</Portuguese>
+            <Czech>Použít změny na všechny kurátory</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
             <English>Additional Objects</English>
@@ -356,6 +364,8 @@
             <Polish>Dodatkowe obiekty</Polish>
             <Russian>Доп. объекты</Russian>
             <Portuguese>Objetos adicionais</Portuguese>
+            <Czech>Další objekty</Czech>
+            <Chinese>額外物件</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
@@ -365,6 +375,8 @@
             <Polish>Dodatkowe obiekty do uwzględnienia w akcji niezależnie od zasięgu zadania</Polish>
             <Russian>Дополнительные объекты для включения в действие, независимо от радиуса выполнения задачи</Russian>
             <Portuguese>Objetos adicionais para incluir na ação, ignorando a distância da tarefa</Portuguese>
+            <Czech>Další objekty, které mají být zahrnuty do akce, bez ohledu na poloměr úlohy</Czech>
+            <Chinese>無論任務範圍何處，都在行動中包含著額外的物件</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -1009,6 +1021,7 @@
             <Japanese>なし</Japanese>
             <Russian>Нет</Russian>
             <Portuguese>Nenhum</Portuguese>
+            <Chinese>無</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
@@ -1018,6 +1031,7 @@
             <Japanese>プレイヤー</Japanese>
             <Russian>Игроки</Russian>
             <Portuguese>Jogadores</Portuguese>
+            <Chinese>玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
@@ -1027,6 +1041,7 @@
             <Japanese>プレイヤーと AI</Japanese>
             <Russian>Игроки и ИИ</Russian>
             <Portuguese>Jogadores e IA</Portuguese>
+            <Chinese>玩家與AI</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -1641,6 +1656,7 @@
             <Polish>Stwórz Zeus'a</Polish>
             <Italian>Crea Zeus</Italian>
             <Portuguese>Criar Zeus</Portuguese>
+            <Chinese>新增宙斯</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
@@ -1650,6 +1666,7 @@
             <Polish>Usuń Zeus'a</Polish>
             <Italian>Cancella Zeus</Italian>
             <Portuguese>Apagar Zeus</Portuguese>
+            <Chinese>刪除宙斯</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
@@ -1659,6 +1676,7 @@
             <Polish>"%1" menu</Polish>
             <Italian>menu "%1"</Italian>
             <Portuguese>Menu "%1"</Portuguese>
+            <Chinese>選單 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
@@ -1667,6 +1685,7 @@
             <Polish>Zrzut ładunku (cargo)</Polish>
             <Russian>Десантировать груз</Russian>
             <Portuguese>Soltar carga de paraquedas</Portuguese>
+            <Chinese>空投貨物</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
@@ -1675,6 +1694,7 @@
             <Polish>Niczego nie załadowano do cargo</Polish>
             <Russian>Грузовой отсек пуст</Russian>
             <Portuguese>Nenhuma carga carregada</Portuguese>
+            <Chinese>沒有貨物裝載</Chinese>
         </Key>
     </Package>
 </Project>

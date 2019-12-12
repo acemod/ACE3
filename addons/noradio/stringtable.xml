@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="noradio">
-        <Key ID="STR_ACE_noradio_setting">
+    <Package name="NoRadio">
+        <Key ID="STR_ACE_NoRadio_setting">
             <English>Mute Player</English>
             <German>Spieler stummschalten</German>
             <Italian>Muta Giocatore</Italian>
@@ -11,8 +11,9 @@
             <Polish>Wycisz Gracza</Polish>
             <Russian>Заглушить игрока</Russian>
             <Portuguese>Silenciar Jogador</Portuguese>
+            <French>Joueur en sourdine</French>
         </Key>
-        <Key ID="STR_ACE_noradio_setting_tooltip">
+        <Key ID="STR_ACE_NoRadio_setting_tooltip">
             <English>Mutes the controlled player avatar.</English>
             <German>Schaltet eigenen Spieleravatar stumm.</German>
             <Italian>Muta l'avatar del giocatore controllato.</Italian>
@@ -22,6 +23,7 @@
             <Polish>Wycisza awatar kontrolowany przez gracza</Polish>
             <Russian>Заглушить контролируемого игрока</Russian>
             <Portuguese>Silencia o avatar do Jogador controlado</Portuguese>
+            <French>Met en sourdine l'avatar du joueur</French>
         </Key>
     </Package>
 </Project>
