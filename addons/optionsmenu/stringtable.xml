@@ -24,7 +24,7 @@
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
             <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
-            <French>Envoie les informations de debug vers le RPT et le presse-papier</French>
+            <French>Envoie les informations de debug vers le RPT et le presse-papier.</French>
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
             <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
             <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
@@ -53,7 +53,7 @@
             <English>Resets your animation state.</English>
             <German>Setzt die derzeitige Animation zurück.</German>
             <Polish>Resetuje aktualną animację.</Polish>
-            <French>Réinitialise l'état de votre animation</French>
+            <French>Réinitialise l'état de votre animation.</French>
             <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
             <Portuguese>Redefine seu estado de animação.</Portuguese>
             <Russian>Исправляет баг с зациклившейся анимацией.</Russian>
@@ -87,7 +87,7 @@
             <German>Zeige Neuigkeiten im Hauptmenü</German>
             <Portuguese>Mostrar notícias no menu principal</Portuguese>
             <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
-            <French>Affiche les nouveautés dans le menu principal</French>
+            <French>Affiche les nouveautés dans le menu principal.</French>
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
             <Russian>Показывать новости в Главном Меню</Russian>
             <Czech>Zobrazit zprávy v hlavním menu</Czech>
@@ -199,7 +199,7 @@
             <German>Oben</German>
             <Czech>Nahoře</Czech>
             <Portuguese>Acima</Portuguese>
-            <French>Haut</French>
+            <French>En haut</French>
             <Hungarian>Fent</Hungarian>
             <Russian>Сверху</Russian>
             <Italian>Alto</Italian>
@@ -215,7 +215,7 @@
             <German>Unten</German>
             <Czech>Dole</Czech>
             <Portuguese>Abaixo</Portuguese>
-            <French>Bas</French>
+            <French>En bas</French>
             <Hungarian>Alul</Hungarian>
             <Russian>Снизу</Russian>
             <Italian>Basso</Italian>

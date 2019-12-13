@@ -69,7 +69,7 @@
             <German>Sprengstoffcode: %1</German>
             <Spanish>Código del explosivo: %1</Spanish>
             <Polish>Kod ładunku: %1</Polish>
-            <French>Code de l'explosif: %1</French>
+            <French>Code de l'explosif : %1</French>
             <Czech>Kód výbušniny: %1</Czech>
             <Hungarian>Robbanóanyag kódja: %1</Hungarian>
             <Portuguese>Código do explosivo: %1</Portuguese>
@@ -212,7 +212,7 @@
             <German>Wird benutzt um Sprengstoffe fernzuzünden</German>
             <Spanish>Usado para detonar remotamente explosivos</Spanish>
             <Polish>Używany do zdalnego detonowania ładunków wybuchowych</Polish>
-            <French>Utilisé pour déclencher des explosifs à distance</French>
+            <French>Utilisé pour déclencher des explosifs à distance.</French>
             <Czech>Používaný ke vzdálenému odpalování výbušnin</Czech>
             <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
             <Hungarian>Robbanóanyagok távoli robbantásához való</Hungarian>
@@ -244,7 +244,7 @@
             <German>Wird benutzt um Sprengstoffe fernzuzünden</German>
             <Spanish>Usado para detonar remotamente explosivos</Spanish>
             <Polish>Używany do zdalnego detonowania ładunków wybuchowych</Polish>
-            <French>Utilisé pour déclencher des explosifs à distance</French>
+            <French>Utilisé pour déclencher des explosifs à distance.</French>
             <Czech>Používané ke vzdálenému odpalování výbušnin</Czech>
             <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
             <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
@@ -612,7 +612,7 @@
             <Polish>Brak dostępnych zapalników dla %1</Polish>
             <Spanish>No hay detonadores disponibles para %1</Spanish>
             <German>Keine Auslöser für %1 vorhanden</German>
-            <French>Pas de déclencheur disponible pour %1</French>
+            <French>Pas de déclencheur disponible pour %1.</French>
             <Czech>Žádný detonátor k dispozici pro %1</Czech>
             <Italian>Nessun attivatore disponibile per %1</Italian>
             <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
@@ -690,7 +690,7 @@
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
             <German>Zündet Sprengladungen wenn losgelassen.</German>
-            <French>Utilisé pour déclencher des explosifs à distance quand relaché.</French>
+            <French>Utilisé pour déclencher des explosifs à distance quand relâché.</French>
             <Czech>Používaný k vzdálenému odpálení, při uvolnění odpálí výbušniny</Czech>
             <Polish>Używany w celu zdalnej detonacji ładunków, kiedy jego operator zostanie zabity.</Polish>
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
@@ -1015,7 +1015,7 @@
             <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
             <German>Typ: Stolperdraht-Leuchtrakete - Schießt bei Auslösung eine nicht-tödliche Leuchtrakete ab.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
             <Korean>종류: 조명지뢰 - 작동시 무해한 조명을 사출합니다.&lt;br /&gt;장탄수: 1&lt;br /&gt;사용처: 지면</Korean>
-            <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée. &lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
+            <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée.&lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
             <Italian>Tipo: Cavo d'innesco - Sfocio un abbaglio non letale quanto attivato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
             <Chinesesimp>类型: 绊线闪光地雷 - 触发后产生非致命性的强光.&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 地面</Chinesesimp>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
@@ -1048,14 +1048,14 @@
             <English>Is EOD</English>
             <German>Kampfmittelbeseitigung</German>
             <Japanese>EOD に</Japanese>
-            <French>Est un spécialiste en explosifs</French>
+            <French>Spécialiste en explosifs</French>
             <Chinese>是EOD</Chinese>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
             <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
             <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
-            <French>Contrôle si l'unité est un spécialiste en explosifs.</French>
+            <French>Définit si l'unité est un spécialiste en explosifs.</French>
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
         </Key>
     </Package>

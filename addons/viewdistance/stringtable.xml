@@ -56,7 +56,7 @@
             <Czech>Povolit ACE dohlednost</Czech>
             <German>Aktiviert ACE-Sichtweite</German>
             <Portuguese>Habilita a distância de visão ACE</Portuguese>
-            <French>Active la visibilité ACE</French>
+            <French>Active la visibilité ACE.</French>
             <Hungarian>Engedélyezi az ACE látótávolságot</Hungarian>
             <Russian>Включает ограничитель дальности видимости ACE</Russian>
             <Italian>Abilita distanza visiva ACE</Italian>
@@ -88,7 +88,7 @@
             <Czech>Stanoví limit jak daleko si může client zvýšit dohlednost (do 10000)</Czech>
             <German>Setze die Grenze fest, wie weit Spieler ihre Sichtweite erhöhen können (bis 10000)</German>
             <Portuguese>Estabelecer um limite de quão alto os clientes podem aumentar sua distância de visão (até 10000)</Portuguese>
-            <French>Définit la limite maximale à laquelle les clients peuvent augmenter leur distance visuelle (jusqu'à 10000)</French>
+            <French>Définit la limite maximale à laquelle les clients peuvent augmenter leur distance de visibilité (jusqu'à 10000).</French>
             <Hungarian>Korlátozza, mekkora látótávolságot állíthatnak be a kliensek (maximum 10000-ig)</Hungarian>
             <Russian>Устанавливает предел дальности, насколько клиенты могут увеличить свою дальность видимости (до 10000)</Russian>
             <Italian>Imposta il limite massimo a cui i client possono alzare la propria distanza visiva (massimo 10000)</Italian>
@@ -104,7 +104,7 @@
             <Czech>Limit dohlednoti pro klienty se nastavuje zde a může být potlačeno pomocí modulu.</Czech>
             <German>Stellt die Grenze für die Sichtweite des Spielers ein. Das kann von einem Modul überschrieben werden.</German>
             <Portuguese>Permite limitar a distância de visão máxima que pode ser definida por jogadores. Pode ser substituído por módulo.</Portuguese>
-            <French>La limite de portée visuelle du joueur est définie ici, pouvant être écrasée par un autre module</French>
+            <French>La limite de portée visuelle du joueur est définie ici, pouvant être écrasée par un autre module.</French>
             <Hungarian>A kliens látótávolsága itt állítható be, és felülbírálható modulok által</Hungarian>
             <Russian>Предел дальности видимости клиентов устанавливается здесь и может быть переопределен модулем</Russian>
             <Italian>Limite per la distanza visiva del client impostato qui e può essere scavalcato dal modulo</Italian>
@@ -136,7 +136,7 @@
             <Czech>Změna dohlednosti pro hráče pokud jde po svých.</Czech>
             <German>Verändert die Sichtweite, wenn ein Spieler zu Fuß unterwegs ist.</German>
             <Portuguese>Muda a distância de visão do jogador dentro do jogo quando ele está a pé.</Portuguese>
-            <French>Change la distance d'affichage du jeu quand le joueur est à pied</French>
+            <French>Change la distance d'affichage du jeu quand le joueur est à pied.</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos gyalogosan van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается пешком.</Russian>
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è a piedi.</Italian>
@@ -168,7 +168,7 @@
             <Czech>Změna dohlednosti pro hráče pokud je v pozemní technice.</Czech>
             <German>Verändert die Sichtweite, wenn ein Spieler in einem Landfahrzeug ist.</German>
             <Portuguese>Muda a distância de visão do jogador dentro do jogo quando ele está dentro de um veículo terrestre.</Portuguese>
-            <French>Change la distance d'affichage du jeu quand le joueur se trouve dans un véhicule terrestre</French>
+            <French>Change la distance d'affichage du jeu quand le joueur se trouve dans un véhicule terrestre.</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos szárazföldi járműben van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается в наземном транспорте.</Russian>
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un veicolo terrestre.</Italian>
@@ -200,7 +200,7 @@
             <Czech>Změna dohlednosti pro hráče pokud je ve vzdušné technice.</Czech>
             <German>Verändert die Sichtweite wenn ein Spieler in einem Luftfahrzeug ist.</German>
             <Portuguese>Muda a distância de visão do jogador dentro do jogo quando ele está dentro de um veículo aéreo.</Portuguese>
-            <French>Change la distance d'affichage du jeu quand le joueur se trouve dans un véhicule aérien</French>
+            <French>Change la distance d'affichage du jeu quand le joueur se trouve dans un véhicule aérien.</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos légi járműben van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается в воздушном транспорте.</Russian>
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un mezzo aereo.</Italian>

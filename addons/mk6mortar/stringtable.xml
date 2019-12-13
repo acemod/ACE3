@@ -148,7 +148,7 @@
             <German>Zeige den Computer und den Entfernungsmesser an (diese MÜSSEN entfernt werden, wenn der Luftwiderstand aktiviert ist)</German>
             <Czech>Zobrazit počítač a dálkoměr (toto MUSÍ být odstraněno pokud je zapnut odpor vzduchu)</Czech>
             <Portuguese>Mostra o computador e o medidor de distância (estes DEVEM ser removidos se você habilitar resistência do ar)</Portuguese>
-            <French>Affiche l'ordinateur de tir (cette option doit être DÉSACTIVÉE si la résistance de l'air est activée).</French>
+            <French>Affiche l'ordinateur de tir et le télémètre. Cette option doit être DÉSACTIVÉE si la résistance de l'air est activée.</French>
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
@@ -326,7 +326,7 @@
             <German>Lade Leuchtpatrone</German>
             <Spanish>Cargar Iluminación</Spanish>
             <Polish>Załaduj pocisk oświetlający</Polish>
-            <French>Charger Eclairante</French>
+            <French>Charger Éclairant</French>
             <Italian>Carica illuminante</Italian>
             <Czech>Nabít Světlici</Czech>
             <Portuguese>Carregar Iluminação</Portuguese>
@@ -446,7 +446,7 @@
             <German>Wird im Mk6 Mörser verwendet</German>
             <Spanish>Usada en el mortero Mk6</Spanish>
             <Polish>Używany w moździerzu Mk6</Polish>
-            <French>Utilisé dans le mortier Mk6</French>
+            <French>Utilisé dans le mortier Mk6.</French>
             <Italian>Usato nel mortaio Mk6</Italian>
             <Czech>Používá se u minometu Mk6</Czech>
             <Portuguese>Usada no Morteiro MK6</Portuguese>

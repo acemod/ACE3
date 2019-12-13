@@ -197,7 +197,7 @@
             <German>Einheit kapitulieren lassen</German>
             <Czech>Vzdávající se jednotka</Czech>
             <Portuguese>Fazer unidade se render</Portuguese>
-            <French>L'unité se rend</French>
+            <French>Se rend</French>
             <Hungarian>Egység kapitulálása</Hungarian>
             <Russian>Заставить юнита сдаться</Russian>
             <Italian>Fai arrendere l'unità</Italian>
@@ -213,7 +213,7 @@
             <German>Einheit synchronisieren, um sie kapitulieren zu lassen.</German>
             <Czech>Synchronizuj s jednotkou, která se má vzdát.</Czech>
             <Portuguese>Sincroniza uma unidade para fazer com que ela se renda.</Portuguese>
-            <French>Synchronise une unité pour qu'elle se rende.</French>
+            <French>Synchronise l'unité pour qu'elle se rende.</French>
             <Hungarian>Egység szinkronizálása, hogy kapituláljon.</Hungarian>
             <Russian>Синхронизируйте с юнитами, чтобы заставить их сдаться.</Russian>
             <Italian>Sincronizza una unità per farla arrendere.</Italian>
@@ -231,7 +231,7 @@
             <Czech>Spoutat jednotku</Czech>
             <Italian>Metti manette all'unità</Italian>
             <Spanish>Hacer que la unidad esté esposada</Spanish>
-            <French>Menotter une unité</French>
+            <French>Est menottée</French>
             <Japanese>ユニットを拘束する</Japanese>
             <Korean>포박하기</Korean>
             <Chinese>使單位戴上手銬</Chinese>
@@ -246,7 +246,7 @@
             <Czech>Synchronizovat s jednotkou, která má být v poutech.</Czech>
             <Italian>Sincronizza un'unità per metterle le manette.</Italian>
             <Spanish>Sincroniza una unidad para hacer que esté esposada.</Spanish>
-            <French>Synchronise une unité pour qu'elle soit menottée.</French>
+            <French>Synchronise l'unité pour qu'elle soit menottée.</French>
             <Japanese>同期されたユニットを拘束させます。</Japanese>
             <Korean>수갑을 채우기 위해 동기화합니다.</Korean>
             <Chinese>使單位戴上手銬</Chinese>
@@ -340,7 +340,7 @@
             <Spanish>Requiere que los Jugadores se rindan antes de arrestarlos</Spanish>
             <Czech>Vyžaduje, aby se hráč nejdříve vzdal, poté může být spoután</Czech>
             <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
-            <French>Requiert la capitulation des joueurs avant qu'ils ne puissent être arrêtés.</French>
+            <French>Définit si les joueurs doivent d'abord s'être rendus avant qu'on ne puisse les arrêter.</French>
             <Japanese>プレイヤーは拘束される前に、投降する必要があります。</Japanese>
             <Korean>체포하기 전에 먼저 플레이어가 투항을 해야만 합니다</Korean>
             <Chinese>玩家須先要求目標投降，才可以進行逮捕</Chinese>

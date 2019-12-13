@@ -5,7 +5,7 @@
             <English>Drone is full</English>
             <German>Drohne ist voll</German>
             <Spanish>El VANT está lleno</Spanish>
-            <French>Le drone est chargé</French>
+            <French>Le drone est chargé.</French>
             <Polish>Dron jest naładowany</Polish>
             <Hungarian>A drón fel van töltve</Hungarian>
             <Czech>Dron je nabitý</Czech>
@@ -21,7 +21,7 @@
             <English>You need a UAV Battery</English>
             <German>Du brauchst eine UAV-Batterie</German>
             <Spanish>Necesitas una batería para VANT</Spanish>
-            <French>Le drone nécessite une batterie</French>
+            <French>Le drone nécessite une batterie.</French>
             <Polish>Potrzebujesz baterii UAV</Polish>
             <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
             <Czech>Potřebuješ UAV baterii</Czech>
@@ -69,7 +69,7 @@
             <English>Used to refuel Carried UAV's</English>
             <German>Verwendet zum Aufladen von tragbaren UAVs</German>
             <Spanish>Usada para reabastecer el VANT</Spanish>
-            <French>Utilisée pour recharger un drone</French>
+            <French>Utilisée pour alimenter un drone en énergie.</French>
             <Polish>Używana do naładowania baterii przenośnego UAV</Polish>
             <Hungarian>Hordozható UAV-k feltöltéséhez való akkumulátor</Hungarian>
             <Czech>Používané k dobíjení UAV</Czech>

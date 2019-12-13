@@ -15,7 +15,7 @@
             <Portuguese>Apontando</Portuguese>
             <Czech>Ukazování </Czech>
         </Key>
-		<Key ID="STR_ACE_Finger_enabled_displayName">
+        <Key ID="STR_ACE_Finger_enabled_displayName">
             <English>Pointing Enabled</English>
             <German>Zeigen aktiviert</German>
             <French>Pointage activé</French>
@@ -30,6 +30,22 @@
             <Korean>가리키기 활성화</Korean>
             <Chinesesimp>指向系统启动</Chinesesimp>
             <Chinese>指向系統啟動</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Finger_enabled_description">
+            <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
+            <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
+            <French>Permet d'effectuer un pointage du doigt, ce qui a pour effet d'afficher sur l'écran des joueurs alliés proches un marqueur virtuel, indiquant la direction dans laquelle vous regardez. Peut être maintenu.</French>
+            <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
+            <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
+            <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>
+            <Russian>Показывает пальцем и рисует виртуальный маркер в направлении взгляда ближайшим игрокам. Можно удерживать.</Russian>
+            <Spanish>Señala y muestra un marcador virtual donde ustás apuntando para las unidades cercanas. Puede ser mantenido.</Spanish>
+            <Czech>Ukazuje virtuální značku kruhu ve směru, kterým se díváte pro všechny blízké jednotky.</Czech>
+            <Italian>Punta e mostra un marker virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
+            <Japanese>指差し表記は自ユニットの近くにいる人のみに表記されます。また押しっぱなしにできます。</Japanese>
+            <Korean>당신이 보는것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른채로 유지할 수 있습니다.</Korean>
+            <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
+            <Chinese>當按下此按鍵後，你附近的單位即可看見一個虛擬圖示，標明你正在指向的位置。此按鍵可以被按住來持續顯示。</Chinese>
         </Key>
         <Key ID="STR_ACE_Finger_maxRange_displayName">
             <English>Pointing Max Range</English>
@@ -146,7 +162,7 @@
         <Key ID="STR_ACE_Finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
             <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
-            <French>Effectue un pointage du doigt, et affiche sur l'écran des unités proches un marqueur virtuel, indiquant la direction dans laquelle vous regardez. Peut être maintenu.</French>
+            <French>Effectue un pointage du doigt, et affiche sur l'écran des unités alliées proches un marqueur virtuel, indiquant la direction dans laquelle vous regardez. Peut être maintenu.</French>
             <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
             <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>

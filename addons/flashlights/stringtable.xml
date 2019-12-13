@@ -108,12 +108,14 @@
             <German>Maglite ML300L</German>
             <Polish>Maglite ML300L</Polish>
             <Chinese>Maglite ML300L</Chinese>
+            <French>Maglite ML300L</French>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
             <English>Powerful LED flashlight.</English>
             <German>Leistungsstarke LED-Taschenlampe.</German>
             <Polish>Mocna latarka LED.</Polish>
             <Chinese>強大的LED手電筒</Chinese>
+            <French>Puissante lampe torche à LED.</French>
         </Key>
     </Package>
 </Project>

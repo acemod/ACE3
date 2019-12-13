@@ -49,7 +49,7 @@
             <Japanese>このユニットのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
             <Polish>Wpływa na ogólną wydolność tej jednostki. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 이 단위로 영향을 받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
-            <French>Impacte la performance globale de cette unité.\nPlus la valeur est élevée, plus le joueur est performant.</French>
+            <French>Impacte la performance globale de cette unité.\nPlus la valeur est élevée, plus l'unité est performante.</French>
             <Italian>Influenza qualsiasi prestazione di questa unità. Maggiore significa migliore.</Italian>
             <Chinese>影響這個單位的體力表現，值越高代表體力越好</Chinese>
             <Chinesesimp>影响这个单位的体力表现，值越高代表体力越好</Chinesesimp>
@@ -160,7 +160,7 @@
             <Japanese>武器を持つ手のぶれ度合いを設定します。 値が高ければ高いほど、手ぶれが強くなります。</Japanese>
             <Chinesesimp>影响手持武器的晃动程度,数值越高,抖动的越厉害.</Chinesesimp>
             <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
-            <French>Influe sur l'amplitude du tremblement de l'arme, une valeur plus élevée signifie plus de tremblement.</French>
+            <French>Influe sur l'amplitude du tremblement de l'arme. Une valeur plus élevée signifie plus de tremblement.</French>
             <Italian>Influenza l'ammontare di oscillazione dell'arma. Maggiore significa più oscillazione.</Italian>
             <Polish>Wpływa na poziom kołysania broni. Większa ilość znaczy większe kołysanie.</Polish>
             <Russian>Влияет на колебания прицела оружия. Чем выше - тем больше.</Russian>
@@ -187,7 +187,7 @@
             <Japanese>アドバンスド ファティーグを有効化します。</Japanese>
             <Polish>Włącza/wyłącza zaawansowaną wytrzymałość</Polish>
             <Korean>고급 피로도 활성화/비활성화</Korean>
-            <French>Active/désactive la fatigue avancée.</French>
+            <French>Active/Désactive la fatigue avancée.</French>
             <Italian>Abilita/disabilita la Fatica Avanzata.</Italian>
             <Chinese>啟用/關閉進階體力.</Chinese>
             <Chinesesimp>启用/关闭进阶体力.</Chinesesimp>

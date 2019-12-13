@@ -8,7 +8,7 @@
             <German>Zeige Spielernamen</German>
             <Czech>Jmenovky</Czech>
             <Portuguese>Etiquetas de nome</Portuguese>
-            <French>Name Tags</French>
+            <French>Noms des joueurs</French>
             <Hungarian>Névcímkék</Hungarian>
             <Russian>Имена игроков</Russian>
             <Italian>Etichette Nomi</Italian>
@@ -24,7 +24,7 @@
             <Spanish>Este módulo permite personalizar la configuración y la distancia de las Etiquetas de nombre.</Spanish>
             <Czech>Tento modul umožňuje si přizpůsobit nastavení a vzdálenost jmenovky.</Czech>
             <Portuguese>Este módulo permite que você personalize as configurações e distâncias de etiquetas de nome.</Portuguese>
-            <French>Ce module permet le paramétrage de l'affichage des étiquettes des noms.</French>
+            <French>Ce module permet de configurer les options et la distance d'affichage du nom des joueurs.</French>
             <Hungarian>Ez a modul lehetővé teszi a névcímkék beállításainak testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
             <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
@@ -37,7 +37,7 @@
             <English>Show Names</English>
             <German>Namen anzeigen</German>
             <Spanish>Mostrar nombres</Spanish>
-            <French>Afficher les noms des unités</French>
+            <French>Afficher les noms</French>
             <Czech>Zobrazit jména</Czech>
             <Polish>Pokaż imiona</Polish>
             <Hungarian>Nevek mutatása</Hungarian>
@@ -72,7 +72,7 @@
             <Czech>Zobrazit jména hráčů a nastavit jejich aktivaci. Výchozí: Povoleno</Czech>
             <German>Erlaubt das Anzeigen von Spielernamen und stellt ein, ob sie standardmäßig aktiviert oder deaktiviert sind. Standard: aktiviert</German>
             <Portuguese>Mostrar os nomes dos jogadores e definir sua ativação. Padrão: Ativado</Portuguese>
-            <French>Affiche le nom des joueurs et définit leur activation. Valeur par défaut : Activé.</French>
+            <French>Affiche le nom des joueurs et définit leur activation. Valeur par défaut : activé.</French>
             <Hungarian>Mutassa a játékosok nevét és kezelje az aktivációjukat. Alapértelmezett: Engedélyezve</Hungarian>
             <Russian>Показывать имена игроков и установить их активацию. По-умолчанию: Включено</Russian>
             <Italian>Mostra nomi giocatori ed imposta la loro attivazione. Default: Abilitato</Italian>
@@ -246,7 +246,7 @@
             <Czech>Zobrazit jmenovky pro velitele vozidla (pouze pokud má klient jmenovky povolené). Výchozí: Ne</Czech>
             <Portuguese>Mostrar o nome no cursor para o comandante do veículo (somente se o cliente tiver etiquetas de nomes ativada). Padrão: Não</Portuguese>
             <Russian>Показывать имя командира техники (только, если клиент включил отображение имен). По-умолчанию: Нет</Russian>
-            <French>Affiche les étiquettes de nom pour les commandants de véhicule (uniquement si noms affichés).</French>
+            <French>Affiche les noms pour les commandants de véhicule (uniquement si le client a activé l'affichage des noms).</French>
             <Italian>Mostra il nome sul cursore per il comandante del veicolo (solo se il client ha le Etichette Nomi attive) Default: No</Italian>
             <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準: 無効</Japanese>
             <Korean>차량의 사령관의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화 할시에만 보입니다) 기본설정: 아니요</Korean>
@@ -292,7 +292,7 @@
             <German>Verwende Spielernamen</German>
             <Czech>Použít nastavení jmenovky</Czech>
             <Portuguese>Usar ajustes de etiquetas de nome</Portuguese>
-            <French>Utiliser les paramètre des Names Tags</French>
+            <French>Utiliser les paramètre des noms</French>
             <Hungarian>Névcímkék beállításának használata</Hungarian>
             <Russian>Так же, как имена</Russian>
             <Italian>Usa impostazioni Etichette Nomi</Italian>
@@ -340,7 +340,7 @@
             <German>Entfernung in Metern, bei der Spielernamen angezeigt werden. Standard: 5</German>
             <Czech>Vzdálenost v metrech pro zobrazení jména. Výchozí: 5</Czech>
             <Portuguese>Distância em metros que os nomes dos jogadores são mostrados. Padrão: 5</Portuguese>
-            <French>Distance en mètres au delà de laquelle les noms des joueurs ne sont plus affichés. Valeur par défaut : 5.</French>
+            <French>Distance au delà de laquelle les noms des joueurs ne sont plus affichés. Valeur par défaut : 5 mètres.</French>
             <Hungarian>Méterben megadott érték a játékosok nevének mutatására. Alapértelmezett: 5</Hungarian>
             <Russian>Дистанция в метрах, на которой отображаются имена игроков. По-умолчанию: 5</Russian>
             <Italian>Distanza in metri a cui sono visibili i nomi giocatori. Default: 5</Italian>

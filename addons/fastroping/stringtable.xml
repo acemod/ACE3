@@ -108,7 +108,7 @@
             <English>Equip helicopter with FRIES</English>
             <German>Rüste Helicopter mit FRIES aus</German>
             <Polish>Wyposaż helikopter w FRIES</Polish>
-            <French>Équiper l'hélicoptère avec le FRIES</French>
+            <French>Équiper l'hélicoptère d'un FRIES</French>
             <Spanish>Equipar helicoptero con FRIES</Spanish>
             <Italian>Equipaggia l'elicottero con il FRIES</Italian>
             <Czech>Vybavit vrtulník pomocí FRIES</Czech>
@@ -123,7 +123,7 @@
             <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
             <German>Rüstet den ausgewählten Helicopter mit einem Fast Rope Insertion Extraction System aus</German>
             <Polish>Wyposaża wybrany helikopter w zestaw Fast Rope Insertion Extraction System</Polish>
-            <French>Équipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System.</French>
+            <French>Équipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System (système d'aérocordage).</French>
             <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción Extracción Fast Rope</Spanish>
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
@@ -210,7 +210,7 @@
         <Key ID="STR_ACE_Fastroping_descriptionShort">
             <English>Used to do deploy ropes from a compatibile helicopter</English>
             <German>Wird zum Bereitstellen von Seilen aus einem kompatiblen Hubschrauber verwendet</German>
-            <French>Utilisé pour déployer des cordes depuis un hélicoptère compatible</French>
+            <French>Utilisé pour déployer des cordes depuis un hélicoptère compatible.</French>
             <Japanese>対応するヘリコプターからロープを展開する為に使用されます</Japanese>
             <Polish>Używane do opuszczania lin z kompatybilnych smigłowców</Polish>
             <Russian>Используется для выпуска канатов с совместимого вертолета</Russian>
@@ -220,7 +220,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_12_Display">
             <English>Rope 12.2 meters</English>
             <German>12.2 Meter Seil</German>
-            <French>Corde de 12.2 mètres</French>
+            <French>Corde de 12,2 mètres</French>
             <Japanese>ロープ (12.2 メートル)</Japanese>
             <Polish>Lina, długość 12,2 m.</Polish>
             <Russian>Канат 12.2 метров</Russian>
@@ -230,7 +230,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_15_Display">
             <English>Rope 15.2 meters</English>
             <German>15.2 Meter Seil</German>
-            <French>Corde de 15.2 mètres</French>
+            <French>Corde de 15,2 mètres</French>
             <Japanese>ロープ (15.2 メートル)</Japanese>
             <Polish>Lina, długość 15,2 m.</Polish>
             <Russian>Канат 15.2 метров</Russian>
@@ -240,7 +240,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_18_Display">
             <English>Rope 18.3 meters</English>
             <German>18.3 Meter Seil</German>
-            <French>Corde de 18.3 mètres</French>
+            <French>Corde de 18,3 mètres</French>
             <Japanese>ロープ (18.3 メートル)</Japanese>
             <Polish>Lina, długość 18,3 m.</Polish>
             <Russian>Канат 18.3 метров</Russian>
@@ -250,7 +250,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_27_Display">
             <English>Rope 27.4 meters</English>
             <German>27.4 Meter Seil</German>
-            <French>Corde de 27.4 mètres</French>
+            <French>Corde de 27,4 mètres</French>
             <Japanese>ロープ (27.4 メートル)</Japanese>
             <Polish>Lina, długość 27,4 m.</Polish>
             <Russian>Канат 27.4 метров</Russian>
@@ -260,7 +260,7 @@
         <Key ID="STR_ACE_Fastroping_Rope_36_Display">
             <English>Rope 36.6 meters</English>
             <German>36.6 Meter Seil</German>
-            <French>Corde de 36.6 mètres</French>
+            <French>Corde de 36,6 mètres</French>
             <Japanese>ロープ (36.6 メートル)</Japanese>
             <Polish>Lina, długość 36,6 m.</Polish>
             <Russian>Канат 36.6 метров</Russian>

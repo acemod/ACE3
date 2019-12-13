@@ -277,7 +277,7 @@
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
             <Czech>Umožňuje změnit stíny textu v menu interakce. Barva stínu je u tahu písma ignorována.</Czech>
             <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
-            <French>Permet de contrôler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
+            <French>Permet de régler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
             <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
             <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
             <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
@@ -328,7 +328,7 @@
             <Czech>Rozmazat obraz při otevřeném interakčním menu.</Czech>
             <German>Den Hintergrund verschwimmen lassen, während das Interaktionsmenü geöffnet ist.</German>
             <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
-            <French>Flouter l'arrière-plan durant l'ouverture du menu d'interaction</French>
+            <French>Floute l'arrière-plan durant l'ouverture du menu d'interaction.</French>
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>

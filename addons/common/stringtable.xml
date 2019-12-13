@@ -507,7 +507,7 @@
             <Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
             <Russian>Выберите положение или или отключите отображение иконок состояний на Вашем экране. Эти иконки предоставят дополнительную информацию о состоянии персонажа и выполняемых действиях.</Russian>
             <Polish>Ustaw pozycję lub wyłącz całkowicie ikony pomocnicze na ekranie. Te ikony dostarczają dodatkowych informacji na temat statusu Twojej postaci i wykonywanych przez nią akcji.</Polish>
-            <French>Permet de sélectionner la position des icônes de feedback sur l'écran, ou de les désactiver\nCes icônes vous apportent des informations supplémentaires sur votre personnage et sur les actions effectuées</French>
+            <French>Permet de sélectionner la position des icônes de feedback sur l'écran, ou de les désactiver.\nCes icônes vous apportent des informations supplémentaires sur votre personnage et sur les actions effectuées.</French>
             <Czech>Nastavuje pozici nebo vypíná pomocné ikony. Tyto ikony ukazují extra informace ke stavu postavy a vykonávaných činností.</Czech>
             <Hungarian>Itt beállítható a visszajelző ikonok képernyőn lévő helyzete és jelenléte. Ezek az ikonok extra visszajelzést biztosítanak a karaktered állapotán és végrehajtott cselekvésein.</Hungarian>
             <Portuguese>Selecione a posição ou disabilite a posição dos ícones de feedback na sua tela. Esses ícones irão aparecer para mostrar feedback extra do status do seu personagem e ações realizadas.</Portuguese>
@@ -539,7 +539,7 @@
             <Italian>Modifica la posizione della barra di avanzamernto sullo schermo</Italian>
             <Russian>Установите желаемое положение строки состояния на экране.</Russian>
             <Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
-            <French>Définit la position de la barre de progression sur l'écran</French>
+            <French>Définit la position de la barre de progression sur l'écran.</French>
             <Czech>Nastavuje pozici ukazetele průběhu činnosti na vaší obrazovce.</Czech>
             <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
             <Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
@@ -571,7 +571,7 @@
             <Italian>Il colore di sfondo dei suggerimenti di ACE.</Italian>
             <Russian>Цвет фона всплывающих подсказок АСЕ.</Russian>
             <Polish>Kolor tła dla powiadomień ACE</Polish>
-            <French>Définit la couleur d'arrière-plan des notifications ACE</French>
+            <French>Définit la couleur d'arrière-plan des notifications ACE.</French>
             <Czech>Barva pozadí ACE nápovědy.</Czech>
             <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
             <Portuguese>A cor de fundo das hints do ACE.</Portuguese>
@@ -603,7 +603,7 @@
             <Italian>Il colore del testo dei suggerimenti di ACE. Questo è il colore predefinito per tutto il testo mostrato dal sistema di suggerimenti di ACE quando il colore del testo non ha altro colore specificato.</Italian>
             <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
             <Polish>Kolor tekstu dla powiadomień ACE. Ten kolor jest domyślnym dla wszystkich tekstów wyświetlanych poprzez System Powiadomień ACE, jeżeli dla powiadomienia nie określono innego koloru.</Polish>
-            <French>Définit la couleur du texte des notifications ACE\nCette couleur est la couleur par défaut pour tout texte affiché par le système de notifications ACE, si aucune autre couleur n'est spécifiée</French>
+            <French>Définit la couleur du texte des notifications ACE.\nCette couleur est la couleur par défaut pour tout texte affiché par le système de notifications ACE, si aucune autre couleur n'est spécifiée.</French>
             <Czech>Barva fontu ACE nápověd. Toto je standardní barva pro všechen text zobrazovaný ACE nápovědami, pokud nemá nápověda žádnou specifikanou barvu.</Czech>
             <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
             <Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</Portuguese>
@@ -636,7 +636,7 @@
             <Chinesesimp>保存武器雷射/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的的状态。</Chinesesimp>
             <Polish>Aktywuj znacznik laserowy/latarkę po zmianie broni lub wejściu/wyjściu z pojazdu, jeśli był on poprzednio włączony.</Polish>
             <Portuguese>Ativa a luz da arma ao trocar de arma, entrar/sair de um veículo. Caso tenha sido acesa anteriormente.</Portuguese>
-            <French>Si le pointeur laser/la lampe torche est allumé(e), cette option permet de le/la réallumer automatiquement après un changement d'arme, ou après une entrée/sortie d'un véhicule</French>
+            <French>Si le pointeur laser/la lampe torche est allumé(e), cette option permet de le/la réallumer automatiquement après un changement d'arme, ou après une entrée/sortie d'un véhicule.</French>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -663,7 +663,7 @@
             <Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>
             <Hungarian>A banán egy ehető gyümölcs, technikai szempontból bogyótermés, melyet több fürtvirágzatú növény termel a Musa rendszertani nemzetségben.</Hungarian>
             <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków.&lt;br /&gt;Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii.&lt;br /&gt;Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
-            <French>Une banane est un fruit comestible qui, d'un point de vue botanique, fait partie du groupe des baies\nProduite par plusieurs espèces de grandes plantes à fleurs herbacées du genre Musa</French>
+            <French>Une banane est un fruit comestible qui, d'un point de vue botanique, fait partie du groupe des baies.\nProduite par plusieurs espèces de grandes plantes à fleurs herbacées du genre Musa.</French>
             <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
             <Japanese>甘蕉は食べられる果物でバショウ科バショウ属のうち、果実を食用とする品種群の総称。また、その果実のこと。いくつかの原種から育種された多年草。種によっては熟すまでは毒を持つものもある。</Japanese>
             <Korean>바나나는 식용 과일로써 식물학적으로 열매류이며 여러 종류의 개화가능한 초본의 파초과로 부터 생산됩니다.</Korean>
@@ -694,7 +694,7 @@
             <Czech>Zjistit addon který je v souladu se serverem</Czech>
             <Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
             <Russian>Выполняет проверку версий аддонов ACE у подключаемых игроков</Russian>
-            <French>Vérifie l'intégrité des addons avec le serveur, et effectue l'action sélectionnée si un addon est manquant</French>
+            <French>Vérifie l'intégrité des addons avec le serveur, et effectue l'action sélectionnée si un addon est manquant.</French>
             <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
             <Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
             <Korean>서버 에드온의 무결성을 검사하고 사라진 에드온이 있을경우 행동을 선택합니다.</Korean>
@@ -724,7 +724,7 @@
             <German>Was soll mit Leuten geschehen, die nicht die richtigen PBO-Dateien geladen haben?</German>
             <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
             <Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
-            <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs</French>
+            <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
@@ -804,7 +804,7 @@
             <German>Alle Addons anstatt nur ACE überprüfen?</German>
             <Czech>Zkontrolovat všechny addony namísto jen těch od ACE?</Czech>
             <Portuguese>Verificar todos addons invés de só os do ACE?</Portuguese>
-            <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE</French>
+            <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
             <Russian>Проверять все аддоны, а не только ACE?</Russian>
             <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
@@ -836,7 +836,7 @@
             <German>Welche Addons werden dennoch erlaubt?</German>
             <Czech>Jaké addony jsou povoleny?</Czech>
             <Portuguese>Quais addons são permitidos de qualquer maneira?</Portuguese>
-            <French>Permet de définir une liste d'addons autorisés systématiquement</French>
+            <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
             <Italian>Quali addon sono permessi in ogni caso?</Italian>
@@ -868,7 +868,7 @@
             <German>Fügt einen LSD-Effekt zum synchronisierten Fahrzeug hinzu</German>
             <Czech>Přidá LSD efekt pro synchronizované vozidla</Czech>
             <Portuguese>Adiciona efeito LSD ao veículo sincronizado</Portuguese>
-            <French>Ajoute l'effet LSD aux véhicules synchronisés</French>
+            <French>Ajoute l'effet LSD aux véhicules synchronisés.</French>
             <Hungarian>LSD-effekt hozzáadása a szinkronizált járművekhez</Hungarian>
             <Russian>Добавляет эффект LSD (мигание всеми цветами радуги) синхронизированным транспортным средствам</Russian>
             <Italian>Aggiunge effetti LSD ai veicoli sincronizzati</Italian>
@@ -1250,7 +1250,7 @@
             <Polish>Zezwól skrypty ACE na przyciszanie muzyki.</Polish>
             <Russian>Позволить скриптам ACE приглушать музыку</Russian>
             <Portuguese>Permite que Scripts do ACE diminuam o volume da música.</Portuguese>
-            <French>Autorise les scripts ACE à baisser le volume de la musique</French>
+            <French>Autorise les scripts ACE à baisser le volume de la musique.</French>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>

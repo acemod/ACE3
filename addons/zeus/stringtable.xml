@@ -70,7 +70,7 @@
             <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
             <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
-            <French>Affiche des messages popup globaux lorsqu'un joueur est assigné en tant que Zeus.</French>
+            <French>Affiche des messages popup globaux lorsqu'un joueur est élevé au rang de Zeus.</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
@@ -246,7 +246,7 @@
             <Czech>Přepnout - Vězeň</Czech>
             <German>Gefangennahme umschalten</German>
             <Portuguese>Alternar prisioneiro</Portuguese>
-            <French>Basculer captivité</French>
+            <French>Commuter captivité</French>
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
             <Italian>Attivatore Prigioniero</Italian>
@@ -305,7 +305,7 @@
             <Russian>Добавить или удалить редактируемые объекты от Зевса</Russian>
             <Portuguese>Adiciona ou remove objetos editáveis do Zeus</Portuguese>
             <Czech>Přidej nebo odeber upravitelné objekty ze Zeusu</Czech>
-            <French>Ajoute ou supprime des objets modifiables de Zeus.</French>
+            <French>Ajoute ou supprime les objets modifiables depuis Zeus.</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
@@ -414,7 +414,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
-            <French>Changements : general, commanding, courage</French>
+            <French>Changements : `general`, `commanding`, `courage`.</French>
             <Russian>Изменяет: general, commanding, courage</Russian>
             <Czech>Upravuje: general, commanding, courage</Czech>
             <Japanese>変更: general, commanding, courage</Japanese>
@@ -442,7 +442,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
-            <French>Changements : aimingAccuracy</French>
+            <French>Changements : `aimingAccuracy`.</French>
             <Russian>Изменяет: aimingAccuracy</Russian>
             <Czech>Upravuje: aimingAccuracy</Czech>
             <Japanese>変更: aimingAccuracy</Japanese>
@@ -470,7 +470,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
-            <French>Changements : aimingShake, aimingSpeed, reloadSpeed</French>
+            <French>Changements : `aimingShake`, `aimingSpeed`, `reloadSpeed`.</French>
             <Russian>Изменяет: aimingShake, aimingSpeed, reloadSpeed</Russian>
             <Czech>Upravuje: aimingShake, aimingSpeed, reloadSpeed</Czech>
             <Japanese>変更: aimingShake, aimingSpeed, reloadSpeed</Japanese>
@@ -498,7 +498,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
-            <French>Changements : spotDistance, spotTime</French>
+            <French>Changements : `spotDistance`, `spotTime`.</French>
             <Russian>Изменяет: spotDistance, spotTime</Russian>
             <Czech>Upravuje: spotDistance, spotTime</Czech>
             <Japanese>変更: spotDistance, spotTime</Japanese>
@@ -601,7 +601,7 @@
             <Czech>Přepnout - Vzdávání</Czech>
             <German>Aufgabe umschalten</German>
             <Portuguese>Alternar rendição</Portuguese>
-            <French>Basculer capitulation</French>
+            <French>Commuter capitulation</French>
             <Hungarian>Kapituláló állapot váltása</Hungarian>
             <Russian>Сдавшийся (вкл./выкл.)</Russian>
             <Italian>Attivatore Resa</Italian>
@@ -726,7 +726,7 @@
             <Czech>Přepnout - Bezvědomí</Czech>
             <German>Bewusstlosigkeit umschalten</German>
             <Portuguese>Alternar inconsciência</Portuguese>
-            <French>Basculer état de conscience</French>
+            <French>Commuter état de conscience</French>
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
             <Russian>Без сознания (вкл./выкл.)</Russian>
             <Italian>Attivatore Incoscienza</Italian>
@@ -787,7 +787,7 @@
             <Czech>Určit zdravotnické vozidlo</Czech>
             <Spanish>Asignar vehículo médico</Spanish>
             <Italian>Assegna Veicolo Medico</Italian>
-            <French>Assigner véhicule médical</French>
+            <French>Affecter véhicule sanitaire</French>
             <Japanese>医療車両として割り当て</Japanese>
             <Korean>의무 차량 임명</Korean>
             <Chinesesimp>指定医疗载具</Chinesesimp>
@@ -802,7 +802,7 @@
             <Czech>Určit zdravotnické zařízení</Czech>
             <Spanish>Asignar instalación médica</Spanish>
             <Italian>Assegna Struttura Medica</Italian>
-            <French>Assigner établissement médical</French>
+            <French>Affecter installation sanitaire</French>
             <Japanese>医療施設として割り当て</Japanese>
             <Korean>의무 시설 임명</Korean>
             <Chinesesimp>指定医疗设施</Chinesesimp>
@@ -814,7 +814,7 @@
             <Polish>Przełącz symulację</Polish>
             <Japanese>シミュレーションを切り替え</Japanese>
             <Korean>재현 토글</Korean>
-            <French>Basculer Simulation</French>
+            <French>Commuter Simulation</French>
             <Italian>Attivatore Simulazione</Italian>
             <Chinesesimp>切换模拟</Chinesesimp>
             <Chinese>切換模擬</Chinese>
@@ -853,7 +853,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
-            <French>L'unité doit être vivante</French>
+            <French>L'unité doit être vivante.</French>
             <German>Einheit muss lebendig sein.</German>
             <Spanish>Utilizar solo en unidades vivas</Spanish>
             <Czech>Použitelné jen na živé jednotky</Czech>
@@ -869,7 +869,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyInfantry">
             <English>Unit must be infantry</English>
-            <French>L'unité doit être un fantassin</French>
+            <French>L'unité doit être un fantassin.</French>
             <German>Nur bei abgesessener Infanterie verwendbar</German>
             <Spanish>Utilizar solo en infanteria desmontada</Spanish>
             <Czech>Použitelné jen na pěsích jednotkách</Czech>
@@ -892,7 +892,7 @@
             <Spanish>La unidad debe ser una estructura</Spanish>
             <Czech>Jednotka musí být budova</Czech>
             <Italian>Si può usare solo su strutture</Italian>
-            <French>L'unité doit être une structure</French>
+            <French>L'unité doit être une structure.</French>
             <Japanese>ユニットを構造物とします</Japanese>
             <Korean>대상이 반드시 건축물이어야만 합니다</Korean>
             <Chinesesimp>单位必须是建筑</Chinesesimp>
@@ -907,7 +907,7 @@
             <Spanish>La unidad debe ser un vehículo</Spanish>
             <Czech>Jednotka musí být vozidlo</Czech>
             <Italian>Si può usare solo su veicoli</Italian>
-            <French>L'unité doit être un véhicule</French>
+            <French>L'unité doit être un véhicule.</French>
             <Japanese>ユニットを車両とします</Japanese>
             <Korean>대상이 반드시 차량이어야만 합니다</Korean>
             <Chinesesimp>单位必须是载具</Chinesesimp>
@@ -922,7 +922,7 @@
             <Italian>L'unità dev'essere un veicolo con spazio di carico</Italian>
             <German>Einheit muss ein Fahrzeug mit Ladekapazität sein</German>
             <Spanish>La unidad debe ser un vehículo con espacio de carga</Spanish>
-            <French>L'unité doit être un véhicule avec un espace de stockage</French>
+            <French>L'unité doit être un véhicule muni d'un espace de stockage.</French>
             <Japanese>ユニットをカーゴ スペースがある車両にします</Japanese>
             <Korean>대상이 반드시 화물을 실을 수 있는 차량이어야 합니다</Korean>
             <Chinesesimp>单位必须是载具且有载货空间</Chinesesimp>
@@ -937,7 +937,7 @@
             <Italian>L'unità deve avere spazio di carico disponibile</Italian>
             <German>Einheit muss freie Ladekapazität haben</German>
             <Spanish>La unidad debe tener espacio de carga disponible</Spanish>
-            <French>L'unité doit avoir de l'espace de chargement disponible</French>
+            <French>L'unité doit avoir de l'espace de chargement disponible.</French>
             <Japanese>ユニットへカーゴ スペースを与えます</Japanese>
             <Korean>대상의 화물공간이 남아있어야합니다</Korean>
             <Chinesesimp>单位必须有剩余的载货空间</Chinesesimp>
@@ -950,7 +950,7 @@
             <Czech>Jednotka nemí být vězeň</Czech>
             <German>Einheit darf nicht gefangen sein</German>
             <Portuguese>Unidade não pode ser prisioneira</Portuguese>
-            <French>L'unité ne doit pas être en captivité</French>
+            <French>L'unité ne doit pas être en captivité.</French>
             <Hungarian>Csak elfogatlan egységeken használni</Hungarian>
             <Russian>Юнит не должен быть пленным</Russian>
             <Italian>L'unità non dev'essere un prigioniero</Italian>
@@ -961,7 +961,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
-            <French>L'unité doit appartenir à une faction appropriée</French>
+            <French>L'unité doit appartenir à une faction appropriée.</French>
             <Russian>Юнит должен принадлежать соответствующей стороне</Russian>
             <Czech>Jednotka musí patřit k příslušné straně</Czech>
             <Japanese>ユニットを適切な陣営にします</Japanese>
@@ -975,7 +975,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
-            <French>Le bâtiment le plus proche est trop éloigné</French>
+            <French>Le bâtiment le plus proche est trop éloigné.</French>
             <Russian>Ближайшие здания слишком далеко</Russian>
             <Czech>Nejbližší budova je příliš daleko</Czech>
             <Japanese>近くに建物がありません。</Japanese>
@@ -989,7 +989,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
-            <French>Placer sur une unité</French>
+            <French>Placer sur une unité.</French>
             <German>Es wurde nichts ausgewählt</German>
             <Spanish>Nada bajo el ratón</Spanish>
             <Portuguese>Coloque em uma unidade</Portuguese>
@@ -1010,7 +1010,7 @@
             <Czech>Vyžaduje addon, který není přítomen</Czech>
             <German>Benötigt ein Addon, das nicht vorhanden ist</German>
             <Portuguese>Requer um addon que não está presente</Portuguese>
-            <French>Nécessite un addon qui n'est pas présent</French>
+            <French>Nécessite un addon qui n'est pas présent.</French>
             <Hungarian>Egy jelenleg hiányzó bővítményt igényel</Hungarian>
             <Russian>Требуется аддон, который отсутствует</Russian>
             <Italian>Richiede un addon che non è presente</Italian>
@@ -1122,7 +1122,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_Tooltip">
             <English>Radius to perform the task within</English>
-            <French>Rayon dans lequel effectuer la tâche</French>
+            <French>Rayon dans lequel effectuer la tâche.</French>
             <Russian>Радиус выполнения задания</Russian>
             <Japanese>次の範囲をタスクとして実行</Japanese>
             <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
@@ -1135,7 +1135,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
-            <French>Rayon entré invalide</French>
+            <French>Rayon entré invalide.</French>
             <Russian>Введен неправильный радиус</Russian>
             <Czech>Vložen neplatný parametr</Czech>
             <Japanese>無効な半径が入力されました</Japanese>
@@ -1202,7 +1202,7 @@
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
-            <French>Basculer JVN</French>
+            <French>Commuter JVN</French>
             <Italian>Attiva NVGs</Italian>
             <Japanese>暗視装置の切り替え</Japanese>
             <Chinese>切換夜視鏡</Chinese>
@@ -1228,7 +1228,7 @@
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment_tooltip">
             <English>Add or remove NVGs from units</English>
             <German>Nachtsichtgeräte Hinzufügen/Entfernen</German>
-            <French>Ajoute ou retire l'équipement de vision nocturne aux unités</French>
+            <French>Ajoute ou retire l'équipement de vision nocturne aux unités.</French>
             <Italian>Aggiunge o rimuove NVGs alle unità</Italian>
             <Japanese>ユニットから暗視装置の追加と削除</Japanese>
             <Chinese>增加或移除單位的夜視鏡</Chinese>
@@ -1248,7 +1248,7 @@
             <Polish>Przełącz cel</Polish>
             <Russian>Кому переключить</Russian>
             <Portuguese>Alternar alvo</Portuguese>
-            <French>Unité(s) cible</French>
+            <French>Unités cible</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
             <English>Units affected by the toggle</English>
@@ -1260,7 +1260,7 @@
             <Polish>Jednostki pod wpływem przełączenia</Polish>
             <Russian>Юниты, к которым применяется переключение</Russian>
             <Portuguese>Unidades afetadas pela alteração</Portuguese>
-            <French>Unités affectées par le changement</French>
+            <French>Unités affectées par le changement.</French>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1278,7 +1278,7 @@
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_DisplayName">
             <English>Toggle Flashlights</English>
             <German>Ändere Taschenlampen</German>
-            <French>Basculer lampes torches</French>
+            <French>Commuter lampes torches</French>
             <Italian>Attiva torce</Italian>
             <Japanese>フラッシュライトの切り替え</Japanese>
             <Chinese>切換手電筒</Chinese>
@@ -1343,7 +1343,7 @@
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
             <German>Gebäude von der höchsten Position zuerst befüllen</German>
-            <French>Remplir les bâtiments en commençant par le haut</French>
+            <French>Les bâtiments se remplissent en commençant par le haut.</French>
             <Japanese>建物を最も高い位置から占拠していきます</Japanese>
             <Italian>Riempi gli edifici dalla posizione più alta prima</Italian>
             <Chinese>從建築物的最高點開始布置衛哨</Chinese>
@@ -1436,7 +1436,7 @@
             <Chinese>沒有玩家找到</Chinese>
             <Chinesesimp>没有玩家找到</Chinesesimp>
             <Czech>Nije pronađen nijedan igrač</Czech>
-            <French>Aucun joueur trouvé</French>
+            <French>Aucun joueur trouvé.</French>
             <German>Keine Spieler gefunden</German>
             <Hungarian>Nincsenek játékosok</Hungarian>
             <Italian>Nessun giocatore trovato</Italian>
@@ -1468,7 +1468,7 @@
             <Chinese>分配修理設施</Chinese>
             <Chinesesimp>分配修理设施</Chinesesimp>
             <Czech>Přiřaďte opravu</Czech>
-            <French>Affecter une installation de réparation</French>
+            <French>Affecter un atelier de réparation</French>
             <German>Zuweisen von Reparatureinrichtung</German>
             <Hungarian>Hozzárendelés javításhoz</Hungarian>
             <Italian>Assegna struttura di riparazione</Italian>
@@ -1484,7 +1484,7 @@
             <Chinese>指派工程師</Chinese>
             <Chinesesimp>指派工程师</Chinesesimp>
             <Czech>Přiřadit inženýra</Czech>
-            <French>Affecter ingénieur</French>
+            <French>Assigner ingénieur</French>
             <German>Engineer zuweisen</German>
             <Hungarian>Engedélyezze a mérnököt</Hungarian>
             <Italian>Assign Engineer</Italian>
@@ -1612,7 +1612,7 @@
             <Chinese>單位將主動嘗試尋找並移動到附近的激活方單位。自動搜索的範圍是基於單位的距離技能，最少100米</Chinese>
             <Chinesesimp>单位将主动尝试寻找并移动到附近的激活方单位。自动搜索的范围是基于单位的距离技能，最少100米。</Chinesesimp>
             <Czech>Jednotka se bude aktivně snažit najít a přejít na blízké jednotky na straně aktivace. Rozsah Auto Seek je založen na dovednosti spotové vzdálenosti jednotky s minimem 100 metrů.</Czech>
-            <French>L'unité essaiera de trouver activement des unités proches appartenant à la faction cible, puis de se déplacer vers elles.\nLa portée de la recherche automatique est basée sur l'aptitude en repérage de l'unité, avec une distance minimale de 100 mètres.</French>
+            <French>L'unité essaiera de trouver activement des unités proches appartenant à la faction cible, puis elle se déplacera dans leur direction.\nLa portée de la recherche automatique est basée sur l'aptitude en repérage de l'unité, avec une distance minimale de 100 mètres.</French>
             <German>Die Einheit versucht aktiv, in der Nähe befindliche Einheiten der Aktivierungsseite zu finden und sich dorthin zu bewegen. Der Bereich der automatischen Suche basiert auf der Fähigkeit der Zielentfernung der Einheit mit einer Mindestentfernung von 100 Metern.</German>
             <Hungarian>Az egység aktívan megpróbálja megtalálni és elmozdulni az aktivációs oldal közeli egységei felé.Az automatikus keresési tartomány az egység helyszíni szakértelmén alapul, legalább 100 méterrel.</Hungarian>
             <Italian>L'unità cercherà attivamente di trovare e spostarsi verso le unità vicine del lato di attivazione. La gamma di Auto Seek si basa sull'abilità a distanza spot dell'unità con un minimo di 100 metri.</Italian>
@@ -1628,7 +1628,7 @@
             <Chinese>這個單位已經是自殺炸彈手了</Chinese>
             <Chinesesimp>这个单位已经是自杀炸弹手了</Chinesesimp>
             <Czech>Jednotka je již samovražedným bombardérem</Czech>
-            <French>L'unité est déjà un kamikaze</French>
+            <French>L'unité est déjà un kamikaze.</French>
             <German>Die Einheit ist bereits ein Selbstmordattentäter</German>
             <Hungarian>Az egység már öngyilkos bombázó</Hungarian>
             <Italian>L'unità è già un kamikaze</Italian>
@@ -1694,7 +1694,7 @@
             <Italian>menu "%1"</Italian>
             <Portuguese>Menu "%1"</Portuguese>
             <Chinese>選單 %1</Chinese>
-            <French>menu "%1"</French>
+            <French>Menu "%1"</French>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>

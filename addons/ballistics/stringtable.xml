@@ -4,7 +4,7 @@
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 20Rnd Mag (HPBT Scenar)</English>
-            <French>Ch. 6,5x47mm 20Cps (HPBT Scenar)</French>
+            <French>Ch. 6,5x47mm 20 Cps (HPBT Scenar)</French>
             <Spanish>Cargador de 20 balas de 6.5x47mm (HPBT Scenar)</Spanish>
             <Polish>Magazynek 6,5x47mm 20rd (HPBT Scenar)</Polish>
             <Russian>Магазин из 20-ти 6,5x47 мм (экспансивные Scenar)</Russian>
@@ -1196,7 +1196,7 @@
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimDescription">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
-            <French>Bande 6.5mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
+            <French>Bande 6,5mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 200-Patronen-Gurt IR-DIM Leuchtspur&lt;br /&gt;Patronen: 200&lt;br /&gt;Eingesetzt von: Stoner 99 LMG</German>
@@ -1436,7 +1436,7 @@
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
+            <French>Calibre: 7,62x51mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M118LR)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Patronen: 20</German>
@@ -2155,7 +2155,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
-            <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
+            <French>Calibre: 12,7x99mm&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99mm&lt;br /&gt;Pociski: 5</Polish>
             <Russian>Калибр: 12,7x99 мм&lt;br /&gt;Патронов: 5</Russian>

@@ -133,7 +133,7 @@
             <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
             <German>Verursacht temporäre Blind- und Taubheit.</German>
             <Spanish>Tambien conocida como granada cegadora. Produce de manera inmediata ceguera, sordera, tinitus y afecta el oído interior.</Spanish>
-            <French>Aussi connue en tant que "Flashbang". Elle provoque immédiatement cécité, surdité, acouphènes et troubles de l'oreille interne. </French>
+            <French>Aussi connue sous le nom de "Flashbang". Elle provoque immédiatement cécité, surdité, acouphènes et troubles de l'oreille interne. </French>
             <Polish>Znany też jako flashbang. Powoduje natychmiastową tymczasową ślepotę, głuchotę, dzwonienie w uszach i inne zaburzenia ucha wewnętrznego.</Polish>
             <Czech>Omračující granát je taktická nesmrtící zbraň používaná při záchraně rukojmí a zvládání davu.</Czech>
             <Russian>XM84 (M84) - граната нелетального действия, предназначена для отвлечения и временного вывода из строя, либо дезориентации противника. Основное использование нашла при освобождении заложников, захвате преступников и террористов, а также проведении диверсионных миссий.</Russian>
@@ -384,7 +384,7 @@
             <Russian>Тип: Осветительная ракета - звезда на парашюте</Russian>
             <Portuguese>Tipo: Sinalizador de pára-quedas estrela</Portuguese>
             <Chinese>類型：星式帶傘照明彈</Chinese>
-            <French>Type: Fusée éclairante à parachute</French>
+            <French>Type : Fusée éclairante à parachute</French>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
@@ -424,7 +424,7 @@
             <Russian>Тип: ИК-осветительная ракета на парашюте</Russian>
             <Portuguese>Tipo: Sinalizador Infravermelho de Pára-quedas</Portuguese>
             <Chinese>類型：帶傘型紅外線照明彈</Chinese>
-            <French>Type: Fusée IR à parachute</French>
+            <French>Type : Fusée IR à parachute</French>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>

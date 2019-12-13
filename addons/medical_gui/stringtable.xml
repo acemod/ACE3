@@ -335,7 +335,7 @@
             <German>Bandagen / Brüche</German>
             <Russian>Раны / переломы</Russian>
             <Spanish>Vendajes/Fracturas </Spanish>
-            <French>Bandages / Attelles</French>
+            <French>Bandages/Attelles</French>
             <Polish>Bandaże / Złamania</Polish>
             <Portuguese>Bandagens / Fraturas</Portuguese>
             <Czech>Bandáž / Zlomeniny</Czech>
@@ -395,7 +395,7 @@
             <German>Ziehen / Tragen</German>
             <Russian>Тащить / нести</Russian>
             <Spanish>Arrastrar / Cargar</Spanish>
-            <French>Traîner / Porter</French>
+            <French>Traîner/Porter</French>
             <Polish>Ciągnij / Nieś</Polish>
             <Portuguese>Arrastar / Carregar</Portuguese>
             <Czech>Táhnout / Nést</Czech>
@@ -650,7 +650,7 @@
             <German>Er hat %2 offene Wunden (%1)</German>
             <Russian>%2 открытые раны %1</Russian>
             <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
-            <French>Il y a %2 blessures ouvertes (%1)</French>
+            <French>Il y a %2 blessures ouvertes (%1).</French>
             <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
@@ -665,7 +665,7 @@
             <German>Er hat 1 offene Wunde (%1)</German>
             <Russian>Открытая рана %1</Russian>
             <Spanish>Hay 1 Herida Abierta %1</Spanish>
-            <French>Il y a 1 blessure ouverte (%1)</French>
+            <French>Il y a 1 blessure ouverte (%1).</French>
             <Polish>Widzisz 1 otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 %1 ferimento aberto</Portuguese>
             <Czech>Je zde 1 %1 otevřená rána</Czech>
@@ -680,7 +680,7 @@
             <German>Er hat eine zum Teil offene Wunde (%1)</German>
             <Russian>Частично открытая рана %1</Russian>
             <Spanish>Hay una herida parcial abierta %1</Spanish>
-            <French>Il y a une blessure partiellement ouverte (%1)</French>
+            <French>Il y a une blessure partiellement ouverte (%1).</French>
             <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
             <Czech>Je zde částečně %1 otevřená rána</Czech>
@@ -695,7 +695,7 @@
             <German>Er hat %2 verbundene Wunden (%1)</German>
             <Russian>%2 перевязанные раны %1</Russian>
             <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
-            <French>Il y a %2 blessures pansées (%1)</French>
+            <French>Il y a %2 blessures pansées (%1).</French>
             <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
             <Czech>Jsou zde %2 %1 ovázané rány</Czech>
@@ -710,7 +710,7 @@
             <German>Er hat 1 verbundene Wunde (%1)</German>
             <Russian>1 перевязанная рана %1</Russian>
             <Spanish>Hay 1 Herida Vendada %1</Spanish>
-            <French>Il y a 1 blessure pansée (%1)</French>
+            <French>Il y a 1 blessure pansée (%1).</French>
             <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 ferimento %1 tratado</Portuguese>
             <Czech>Je zde 1 %1 ovázaná rána</Czech>
@@ -725,7 +725,7 @@
             <German>Er hat eine zum Teil verbundene Wunde (%1)</German>
             <Russian>Частично перевязанная рана %1</Russian>
             <Spanish>Hay una Herida parcial %1 Vendada</Spanish>
-            <French>Il y a 1 blessure partiellement bandée (%1)</French>
+            <French>Il y a 1 blessure partiellement bandée (%1).</French>
             <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
             <Czech>Je zde částěčně %1 ovázaná rána</Czech>

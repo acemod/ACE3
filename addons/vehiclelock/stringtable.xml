@@ -82,7 +82,7 @@
             <English>A custom key that will open a specific vehicle.</English>
             <German>Ein Schlüssel der ein bestimmtes Fahrzeug aufschließt.</German>
             <Spanish>Una llave concreta abrirá un vehículo concreto.</Spanish>
-            <French>Une clé personnalisée qui ouvrira un véhicule bien particulier.</French>
+            <French>Une clé personnalisée qui ouvrira un véhicule spécifique.</French>
             <Polish>Unikatowy klucz, który otworzy konkretny pojazd.</Polish>
             <Czech>Vlastní klíč, který otevře konkrétní vozidlo.</Czech>
             <Hungarian>Egy egyedi kulcs, ami egy meghatározott járművet nyit ki.</Hungarian>
@@ -98,7 +98,7 @@
             <English>A Master Key will open any lock, no matter what!</English>
             <German>Ein Generalschlüssel der jedes Schloss öffnet.</German>
             <Spanish>Una llave maestra abrirá cualquier cierre, no importa cual!</Spanish>
-            <French>Un passe-partout qui ouvrira n'importe quelle serrure, quoi qu'il arrive.</French>
+            <French>Un passe-partout qui ouvrira n'importe quelle serrure.</French>
             <Polish>Uniwersalny klucz, który otworzy każdy zamek.</Polish>
             <Czech>Hlavní klíč otevře libovolný zámek, bez vyjímek!</Czech>
             <Hungarian>Egy főkulcs, ami minden zárat kinyit, helyzettől függetlenül!</Hungarian>
@@ -114,7 +114,7 @@
             <English>A lockpick set that can pick the locks of most vehicles.</English>
             <German>Ein Dietrich der die meisten Fahrzeugschlösser knacken kann.</German>
             <Spanish>Un set de ganzúas que puede abrir las cerraduras de la mayoría vehículos.</Spanish>
-            <French>Un set de crochetage qui peut forcer les serrures de la plupart des véhicules.</French>
+            <French>Un set de crochetage permettant de forcer la plupart des serrures de véhicules.</French>
             <Polish>Zestaw wytrychów, dzięki któremu można otworzyć zamki w większości pojazdów.</Polish>
             <Czech>Sada paklíčů, která dokáže odemknout zámky u většiny vozidel.</Czech>
             <Hungarian>Egy tolvajkulcs-készlet, mely a legtöbb jármű zárjait fel tudja törni.</Hungarian>
@@ -229,7 +229,7 @@
             <German>Sperrt das Inventar von gesperrten Fahrzeugen</German>
             <Czech>Zamknout inventář u zamčených vozidel</Czech>
             <Portuguese>Bloqueia o inventário de veículos fechados</Portuguese>
-            <French>Verrouille l'inventaire des véhicules fermés à clé</French>
+            <French>Verrouille l'inventaire des véhicules fermés à clé.</French>
             <Hungarian>Bezárja a zárt járművek rakterét is</Hungarian>
             <Russian>Закрывать инвентарь транспорта, если транспорт закрыт</Russian>
             <Italian>Blocca l'inventario di un veicolo bloccato</Italian>
@@ -261,7 +261,7 @@
             <German>Setze Sperrstatus für alle Fahrzeuge (entfernt unklare Sperrzustände)</German>
             <Czech>Nastavit stav zámku u všech vozidel (odstraňuje nejednoznačné stavy zámků)</Czech>
             <Portuguese>Definir estados de fechadura para todos os veículos (remove estados de fechadura ambíguos)</Portuguese>
-            <French>Définit l'état de verrouillage pour tous les véhicules (supprime les états de verrouillage ambigus)</French>
+            <French>Définit l'état de verrouillage pour tous les véhicules (supprime les états de verrouillage ambigus).</French>
             <Hungarian>Beállítja a zár-állapotot az összes járműhöz (eltávolítja az azonosíthatatlan zárállapotokat)</Hungarian>
             <Russian>Устанавливает начальное состояние замков всех транспортных средств (устраняет неоднозначные состояния)</Russian>
             <Italian>Imposta lo stato di blocco per tutti i veicoli (rimuove stati di blocco ambigui)</Italian>
@@ -341,7 +341,7 @@
             <German>Standardzeit um ein Schloss zu knacken (in Sekunden). Standard: 10</German>
             <Czech>Čas k vypáčení zámku (v sekundách). Výchozí: 10</Czech>
             <Portuguese>Tempo padrão para forçar a fechadura (em segundos). Padrão: 10</Portuguese>
-            <French>Temps par défaut requis pour crocheter une serrure (en secondes). Valeur par défaut : 10</French>
+            <French>Temps par défaut requis pour crocheter une serrure. Valeur par défaut : 10 secondes.</French>
             <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
             <Russian>Время для взлома замка отмычкой (в секундах). По-умолчанию: 10</Russian>
             <Italian>Tempo Default richiesto per forzare serrature (in secondi). Default: 10</Italian>
@@ -357,7 +357,7 @@
             <German>Einstellungen für Pick-Stärke und anfänglichen Fahrzeugsperrzustand. Entfernt unklare Sperrzustände.</German>
             <Czech>Nastavení síly vypáčení a počáteční stav zámku vozidla. Odstraňuje nejednoznačné stavy zámků.</Czech>
             <Portuguese>Definições para a durabilidade da chave micha e estado inicial da fechadura do veículo. Remove estados de fechadura ambíguas</Portuguese>
-            <French>Réglages de la difficulté de crochetage et de l'état initial de verrouillage du véhicule. Supprime les états de verrouillage ambigus.</French>
+            <French>Réglage de la difficulté du crochetage et de l'état de verrouillage initial des véhicules. Supprime les états de verrouillage ambigus.</French>
             <Hungarian>Beállítások a zártörő erősségére és alapértelmezett zár-állapotra a járműveken. Eltávolítja az azonosíthatatlan zár-állapotokat.</Hungarian>
             <Russian>Настройки силы отмычек и начальное состояние замков транспорта. Устраняет неоднозначные состояния замков.</Russian>
             <Italian>Impostazioni per resistenza iniziale delle serrature e stato di blocco dei veicoli. Rimuove stati di blocco ambigui.</Italian>
@@ -383,13 +383,13 @@
             <Chinese>指定載具鑰匙</Chinese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleKeyAssign_Module_Description">
-            <English>Sync with vehicles and players.  Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.</English>
+            <English>Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.</English>
             <Polish>Zsynchronizuj z pojazdami i graczami. Rozda klucze dla graczy dla każdego zsynchronizowanego pojazdu. Działa tylko na pojazdy obecne na misji od samego początku (postawione w edytorze).</Polish>
             <Spanish>Sincronizar con vehiculos y jugadores. Distribuirá llaves personalizadas a los jugadores para todos los vehículos sincronizados. Solo valido para objetos presentes al inicio de la mision.</Spanish>
             <German>Synchronisiere mit Fahrzeugen und Spielern. Wird eigene Schlüssel an Spieler für jedes synchronisierte Fahrzeuge aushändigen. Nur gültig für am Missionsstart existierende Fahrzeuge.</German>
             <Czech>Synchronizuj s vozidly a hráči. Hráč dostane klíč ke každému synchonizovanému vozidlu. Platné pouze pro objekty přítomné na začátku mise.</Czech>
             <Portuguese>Sincronizar com veículos e jogadores. Irá distribuir chaves personalizadas para os jogadores para cada veículo sincronizado. Só é válido para objetos presentes no início da missão.</Portuguese>
-            <French>Synchronisation avec les véhicules et les joueurs.  Remettra des clés personnalisées aux joueurs pour chaque véhicule synchronisé. Valable uniquement pour les objets présents dès le début de la mission.</French>
+            <French>Synchroniser avec les véhicules et les joueurs. Remettra des clés personnalisées aux joueurs pour chaque véhicule synchronisé.\nValable uniquement pour les objets présents dès le début de la mission.</French>
             <Hungarian>Szinkronizál a járművekkel és játékosokkal. Egyedi kulcsokat oszt ki a játékosoknak minden szinkronizált járműhöz. Csak a küldetés indításakor jelenlévő járművekhez érvényes.</Hungarian>
             <Russian>Синхронизируйте с транспортом и игроком. Это выдаст игроку ключи от всех синхронизированных транспортных средств. Работает только для объектов, присутствующих на старте миссии</Russian>
             <Italian>Sincronizza con veicoli e giocatori. Distribuirà chiavi ai giocatori per ogni veicolo sincronizzato. Valido solo per oggetti presenti ad inizio missione.</Italian>
