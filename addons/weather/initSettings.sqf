@@ -35,5 +35,5 @@ private _category = [format ["ACE %1", LLSTRING(Module_DisplayName)]];
     [LSTRING(showCheckAirTemperature_DisplayName)],
     _category,
     true, // default value
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_settings_fnc_init;
