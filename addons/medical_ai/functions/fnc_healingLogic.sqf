@@ -57,7 +57,6 @@ switch (true) do {
     case (IN_CRDC_ARRST(_target)): {
         if (EGVAR(medical_treatment,cprSuccessChance) == 0) then {
             _treatmentEvent = "#WaitForHeartRate";
-            [QEGVAR(medical,CPRSucceeded), _target] call CBA_fnc_localEvent;
         } else {
             _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
             _treatmentArgs = [_healer, _target];
