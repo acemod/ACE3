@@ -152,5 +152,11 @@
             <Portuguese>Ativar a simulação de vento dos mapas. (sobrepõe vento vanilla)</Portuguese>
             <Czech>Povoluje simulaci větru založenou na mapě (přepíše původní vítr)</Czech>
         </Key>
+        <Key ID="STR_ACE_Weather_CheckAirTemperature">
+            <English>Check Air Temperature</English>
+        </Key>
+        <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
+            <English>Show Check Air Temperature Action</English>
+        </Key>
     </Package>
 </Project>
