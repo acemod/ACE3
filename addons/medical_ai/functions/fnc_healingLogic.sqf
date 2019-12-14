@@ -54,13 +54,9 @@ switch (true) do {
         _treatmentTime = 5;
         _treatmentArgs = [_target, _selection, "FieldDressing"];
     };
-    case (IN_CRDC_ARRST(_target)): {
-        if (EGVAR(medical_treatment,cprSuccessChance) == 0) then {
-            _treatmentEvent = "#WaitForHeartRate";
-        } else {
-            _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
-            _treatmentArgs = [_healer, _target];
-        };
+    case (IN_CRDC_ARRST(_target) && {EGVAR(medical_treatment,cprSuccessChance) > 0}): {
+        _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
+        _treatmentArgs = [_healer, _target];
         _treatmentTime = 15;
     };
     case (_isMedic && {GET_BLOOD_VOLUME(_target) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}): {
@@ -70,7 +66,7 @@ switch (true) do {
             _x params ["_volumeRemaining"];
             _totalIvVolume = _totalIvVolume + _volumeRemaining;
         } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
-        
+
         if (GET_BLOOD_VOLUME(_target) + (_totalIvVolume / 1000) > BLOOD_VOLUME_CLASS_2_HEMORRHAGE) exitWith {
             _treatmentEvent = "#waitForBlood";
         };
