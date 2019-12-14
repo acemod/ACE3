@@ -154,9 +154,11 @@
         </Key>
         <Key ID="STR_ACE_Weather_CheckAirTemperature">
             <English>Check Air Temperature</English>
+            <Chinese>檢查氣溫</Chinese>
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
+            <Chinese>顯示檢查氣溫動作</Chinese>
         </Key>
     </Package>
 </Project>
