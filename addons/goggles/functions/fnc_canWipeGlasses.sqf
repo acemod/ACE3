@@ -4,10 +4,10 @@
  * Checks if player can wipe goggles.
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * None
  *
  * Return Value:
- * Can goggles be wiped <BOOL>
+ * Can wipe goggles <BOOL>
  *
  * Example:
  * [] call ace_goggles_fnc_canWipeGlasses
@@ -15,7 +15,4 @@
  * Public: No
  */
 
-// Can only wipe if full effects setting is set
-if (GVAR(effects) != 2) exitWith {false};
-
-!GETVAR(ACE_player,ACE_isUnconscious,false) // return
+GVAR(effects) != 2 && {!GETVAR(ACE_player,ACE_isUnconscious,false)} // return

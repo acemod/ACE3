@@ -7,7 +7,6 @@ class CfgVehicles {
                     displayName = CSTRING(WipeGlasses);
                     condition = QUOTE(GVAR(showClearGlasses) && {call FUNC(canWipeGlasses)});
                     statement = QUOTE(call FUNC(clearGlasses));
-                    exceptions[] = {"notOnMap"};
                 };
             };
         };

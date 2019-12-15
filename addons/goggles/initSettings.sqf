@@ -4,5 +4,5 @@
     [LSTRING(SettingShowClearGlasses), LSTRING(SettingShowClearGlasses)],
     localize LSTRING(SettingsName),
     false, // default value
-    2 // isGlobal
+    0 // isGlobal
 ] call CBA_fnc_addSetting;
