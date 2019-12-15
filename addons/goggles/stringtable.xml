@@ -85,5 +85,9 @@
             <Chinese>染色 + 影響</Chinese>
             <Portuguese>Cor + Efeitos</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
+            <English>Show clear glasses self interaction</English>
+            <Polish>Pokaż interakcję wyczyść gogle</Polish>
+        </Key>
     </Package>
 </Project>
