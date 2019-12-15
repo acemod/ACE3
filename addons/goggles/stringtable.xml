@@ -99,8 +99,8 @@
             <Portuguese>Cor + Efeitos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
-            <English>Show clear glasses self interaction</English>
-            <Polish>Pokaż interakcję wyczyść gogle</Polish>
+            <English>Show Wipe Goggles self interaction</English>
+            <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
         </Key>
     </Package>
 </Project>
