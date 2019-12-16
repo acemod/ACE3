@@ -11,7 +11,7 @@
  * Position of wanted missile pos relative to the camera direction <ARRAY>
  *
  * Example:
- * [] call ace_hot_fnc_seekerType_SACLOS
+ * [] call ace_missileguidance_fnc_seekerType_SACLOS
  *
  * Public: No
  */

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_hot_fnc_SACLOS_onFired
+ * [] call ace_missileguidance_fnc_SACLOS_onFired
  *
  * Public: No
  */

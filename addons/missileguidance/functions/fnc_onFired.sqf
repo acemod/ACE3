@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_shooter","","","","_ammo","","_projectile"];
+params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
 
 // Bail on not missile
 if (!(_ammo isKindOf "MissileBase")) exitWith {};
@@ -44,6 +44,9 @@ private _target = _shooter getVariable [QGVAR(target), nil];
 private _targetPos = _shooter getVariable [QGVAR(targetPosition), nil];
 private _seekerType = _shooter getVariable [QGVAR(seekerType), nil];
 private _attackProfile = _shooter getVariable [QGVAR(attackProfile), nil];
+if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "useModeForAttackProfile")) == 1) then {
+    _attackProfile = getText (configFile >> "CfgWeapons" >> _weapon >> _mode >> QGVAR(attackProfile))
+};
 private _lockMode = _shooter getVariable [QGVAR(lockMode), nil];
 
 private _laserCode = _shooter getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
