@@ -316,7 +316,7 @@
             <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
             <Chinesesimp>玩家可以使用束线带铐住同阵营队友</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
             <English>Require surrendering</English>
             <German>Benötigt Kapitulation</German>
             <Polish>Wymagaj kapitulacji</Polish>
@@ -408,7 +408,7 @@
             <Chinese>玩家能在收起自己武器後投降</Chinese>
             <Chinesesimp>玩家能在收起自己武器后投降</Chinesesimp>
         </Key>
-		<Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
+        <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
             <German>Benötigt für KI Kapitulation</German>
             <Italian>Necessita arresa AI</Italian>

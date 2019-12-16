@@ -174,7 +174,7 @@
             <Chinesesimp>显示载具成员信息</Chinesesimp>
             <Chinese>顯示載具成員信息</Chinese>
         </Key>
-        <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo_Desc">
+        <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo_Description">
             <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
             <Polish>Pokaż informacje o obsadzie pojazdu, lub pozwól graczom ustawić tą opcje według własnego uznania. Domyślnie: Nie wymuszaj</Polish>
             <Spanish>Muestra información de la tripulación, o por defecto permite a los jugadores elegirlo. Por defecto: No forzar</Spanish>
@@ -222,7 +222,7 @@
             <Chinesesimp>显示友军AI的名字和军阶? 预设: 不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>
         </Key>
-        <Key ID="STR_ACE_NameTags_ShowCursorTagForVehicles">
+        <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_DisplayName">
             <English>Show for Vehicles</English>
             <Polish>Pokaż dla pojazdów</Polish>
             <Spanish>Mostrar para vehiculos</Spanish>
@@ -238,7 +238,7 @@
             <Chinesesimp>显示给载具指挥官</Chinesesimp>
             <Chinese>顯示給載具指揮官</Chinese>
         </Key>
-        <Key ID="STR_ACE_NameTags_ShowCursorTagForVehicles_Desc">
+        <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_Description">
             <English>Show cursor NameTag for vehicle commander (only if client has name tags enabled) Default: No</English>
             <Polish>Pokazuj imię dowódcy pojazdu nad pojazdem (tylko jeżeli klient ma włączone imiona graczy). Domyślnie: Nie</Polish>
             <Spanish>Muestra etiquetas de nombre en el cursor para el comandante del vehiculo (solo si el cliente tiene las etiquetas de nombre activadas) Por defecto: No</Spanish>
@@ -317,7 +317,7 @@
             <Chinesesimp>永远显示全部</Chinesesimp>
             <Chinese>永遠顯示全部</Chinese>
         </Key>
-        <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance">
+        <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
             <English>Player Names View Dist.</English>
             <Polish>Zasięg imion graczy</Polish>
             <Spanish>Distancia de vision para nombres de jugadores</Spanish>
@@ -333,7 +333,7 @@
             <Chinesesimp>玩家名字显示距离</Chinesesimp>
             <Chinese>玩家名稱顯示距離</Chinese>
         </Key>
-        <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Desc">
+        <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
             <English>Distance in meters at which player names are shown. Default: 5</English>
             <Polish>Dystans w metrach, na którym wyświetlane są imiona graczy. Domyślnie: 5</Polish>
             <Spanish>Distancia en metros a la que se muestran los nombres de los jugadores. Por defecto: 5</Spanish>
@@ -361,7 +361,7 @@
             <Portuguese>Transparência da etiqueta de nome</Portuguese>
             <French>Transparence des noms</French>
         </Key>
-        <Key ID="STR_ACE_NameTags_TagSize">
+        <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
             <Polish>Rozmiar imion</Polish>
             <Spanish>Tamaño de las Etiquetas de nombre</Spanish>
@@ -377,7 +377,7 @@
             <Chinesesimp>玩家名字标记大小</Chinesesimp>
             <Chinese>玩家名稱標記大小</Chinese>
         </Key>
-        <Key ID="STR_ACE_NameTags_TagSize_Desc">
+        <Key ID="STR_ACE_NameTags_TagSize_Description">
             <English>Text and Icon Size Scaling</English>
             <Polish>Skalowanie tekstu oraz ikon</Polish>
             <Spanish>Escala del texto y el icono</Spanish>
