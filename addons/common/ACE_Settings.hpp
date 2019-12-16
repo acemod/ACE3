@@ -21,8 +21,8 @@ class ACE_Settings {
         value = 0;
         typeName = "SCALAR";
         isClientSettable = 0;
-        displayName = CSTRING(CheckPBO_Action_DisplayName);
-        description = CSTRING(CheckPBO_Action_Description);
+        displayName = CSTRING(CheckPBOsAction);
+        description = CSTRING(CheckPBOsActionDesc);
         values[] = {CSTRING(CheckPBO_Action_WarnOnce), CSTRING(CheckPBO_Action_WarnPerm), CSTRING(CheckPBO_Action_Kick)};
     };
     class GVAR(checkPBOsCheckAll) {
@@ -30,16 +30,16 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 0;
-        displayName = CSTRING(CheckPBO_CheckAll_DisplayName);
-        description = CSTRING(CheckPBO_CheckAll_Description);
+        displayName = CSTRING(CheckPBOsCheckAll);
+        description = CSTRING(CheckPBOsCheckAllDesc);
     };
     class GVAR(checkPBOsWhitelist) {
         category = CSTRING(DisplayName);
         value = "[]";
         typeName = "STRING";
         isClientSettable = 0;
-        displayName = CSTRING(CheckPBO_Whitelist_DisplayName);
-        description = CSTRING(CheckPBO_Whitelist_Description);
+        displayName = CSTRING(CheckPBOsWhitelist);
+        description = CSTRING(CheckPBOsWhitelistDesc);
     };
     /*class GVAR(enableNumberHotkeys) {
         value = 1;
