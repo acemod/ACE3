@@ -409,5 +409,85 @@
             <Chinesesimp>预设名字颜色 (非同小队队友) </Chinesesimp>
             <Chinese>預設名稱顏色 (非同小隊隊友) </Chinese>
         </Key>
+        <Key ID="STR_ACE_NameTags_ForceHide">
+            <English>Force Hide</English>
+            <Polish>Wymuś ukrycie</Polish>
+            <Spanish>Ocultar forzado</Spanish>
+            <German>Verstecken erzwingen</German>
+            <Czech>Vynuceno skrýt</Czech>
+            <Portuguese>Ocultar forçado</Portuguese>
+            <!-- <French>Module obsolète - Forcer le masquage</French> -->
+            <Hungarian>Erőltetett rejtett</Hungarian>
+            <Russian>Обязательно: Скрывать</Russian>
+            <Italian>Forza Nascosto</Italian>
+            <Japanese>強制で非表示</Japanese>
+            <Korean>강제로 숨기기</Korean>
+            <Chinesesimp>强制隐藏</Chinesesimp>
+            <Chinese>強迫隱藏</Chinese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShow">
+            <English>Force Show</English>
+            <Polish>Wymuś wyświetlanie</Polish>
+            <Spanish>Mostrar forzado</Spanish>
+            <German>Anzeige erzwingen</German>
+            <Czech>Vynuceno zobrazit</Czech>
+            <Portuguese>Mostrar forçado</Portuguese>
+            <!-- <French>Module obsolète - Forcer l'affichage</French> -->
+            <Hungarian>Erőltetett látható</Hungarian>
+            <Russian>Обязательно: Показывать</Russian>
+            <Italian>Forza Mostra</Italian>
+            <Japanese>強制で表示</Japanese>
+            <Korean>강제로 표시</Korean>
+            <Chinesesimp>强制显示</Chinesesimp>
+            <Chinese>強迫顯示</Chinese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
+            <English>Force Show Only on Cursor</English>
+            <Polish>Wymuś pod kursorem</Polish>
+            <Spanish>Forzar mostrar solo en el cursor</Spanish>
+            <Czech>Vynuceno zobrazit pouze na kurzor</Czech>
+            <German>Erzwinge nur mit Mauszeiger anzuzeigen</German>
+            <Portuguese>Forçar mostrar somente no cursor</Portuguese>
+            <!-- <French>Module obsolète - Forcer l'affichage sous le curseur uniquement</French> -->
+            <Hungarian>Erőltetett látható, csak kurzorra</Hungarian>
+            <Russian>Обязательно: Только под курсором</Russian>
+            <Italian>Forza Mostra solo su Cursore</Italian>
+            <Japanese>カーソルでのみに強制する</Japanese>
+            <Korean>커서만 강제로 해당</Korean>
+            <Chinesesimp>强制仅显示在准心指到时</Chinesesimp>
+            <Chinese>強制僅顯示在準心指到時</Chinese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
+            <English>Force Show Only on Keypress</English>
+            <Polish>Wymuś po wciśnięciu klawisza</Polish>
+            <Spanish>Forzar mostrar solo al pulsar tecla</Spanish>
+            <Czech>Vynuceno zobrazit pouze na klávesu</Czech>
+            <German>Erzwinge nur mit Tastendruck anzuzeigen</German>
+            <Portuguese>Forçar somente mostrar em tecla ativada</Portuguese>
+            <!-- <French>Module obsolète - Forcer l'affichage par appui de touche uniquement</French> -->
+            <Hungarian>Erőltetett látható, csak gombnyomásra</Hungarian>
+            <Russian>Обязательно: Только по нажатию клавиши</Russian>
+            <Italian>Forza Mostra solo quando Premi Tasto</Italian>
+            <Japanese>キー押下のみに強制する</Japanese>
+            <Korean>키를 누를경우만 강제로 해당</Korean>
+            <Chinesesimp>强制仅显示在按按键时</Chinesesimp>
+            <Chinese>強制僅顯示在按按鍵時</Chinese>
+        </Key>
+        <Key ID="STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress">
+            <English>Force Show Only on Cursor and Keypress</English>
+            <Polish>Wymuś pod kursorem i po wciśnięciu klawisza</Polish>
+            <Spanish>Forzar mostrar en el cursor y al pulsar tecla</Spanish>
+            <Czech>Vynuceno zobrazit pouze na kurzor a klávesu</Czech>
+            <German>Erzwinge nur mit Mauszeiger und Tastendruck anzuzeigen</German>
+            <Portuguese>Forçar mostrar somente em cursor e tecla ativada</Portuguese>
+            <!-- <French>Module obsolète - Forcer l'affichage sous le curseur et par appui de touche uniquement</French> -->
+            <Hungarian>Erőltetett látható, csak kurzorra és gombnyomásra</Hungarian>
+            <Russian>Обязательно: Под курсором или по нажатию клавиши</Russian>
+            <Italian>Forza Mostra solo su Cursore e quando Premi Tasto</Italian>
+            <Japanese>カーソルとキー押下のみに強制する</Japanese>
+            <Korean>커서와 키를 누를경우만 강제로 해당</Korean>
+            <Chinesesimp>强制显示在准心指到和按按键时</Chinesesimp>
+            <Chinese>強制顯示在準心指到和按按鍵時</Chinese>
+        </Key>
     </Package>
 </Project>
