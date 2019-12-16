@@ -475,7 +475,7 @@
             <Portuguese>Checar Todos os PBOs</Portuguese>
             <French>Vérifier tous les PBOs</French>
         </Key>
-		<Key ID="STR_ACE_Common_CheckPBO_CheckPBOsCheckAllDesc">
+		<Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
             <English>Check all addons, not only those of ACE.</English>
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
         </Key>
