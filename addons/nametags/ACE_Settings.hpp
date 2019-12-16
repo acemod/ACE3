@@ -23,7 +23,7 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSettable = 1;
         displayName = CSTRING(ShowVehicleCrewInfo);
-        description = CSTRING(ShowVehicleCrewInfo_Description);
+        description = CSTRING(ShowVehicleCrewInfo_Desc);
         category = CSTRING(Module_DisplayName);
     };
     class GVAR(showNamesForAI) {

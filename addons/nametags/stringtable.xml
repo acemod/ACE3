@@ -174,7 +174,7 @@
             <Chinesesimp>显示载具成员信息</Chinesesimp>
             <Chinese>顯示載具成員信息</Chinese>
         </Key>
-        <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo_Description">
+        <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo_Desc">
             <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
             <Polish>Pokaż informacje o obsadzie pojazdu, lub pozwól graczom ustawić tą opcje według własnego uznania. Domyślnie: Nie wymuszaj</Polish>
             <Spanish>Muestra información de la tripulación, o por defecto permite a los jugadores elegirlo. Por defecto: No forzar</Spanish>
