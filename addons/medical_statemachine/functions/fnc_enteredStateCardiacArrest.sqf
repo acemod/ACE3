@@ -20,10 +20,12 @@ params ["_unit"];
 
 // 10% possible variance in cardiac arrest time
 private _time = GVAR(cardiacArrestTime);
-_time = _time + random [_time*-0.1, 0, _time*0.1];
+_time = _time + _time * random [-0.1, 0, 0.1];
 
-_unit setVariable [QGVAR(cardiacArrestTime), _time];
-_unit setVariable [QGVAR(cardiacArrestStart), CBA_missionTime];
+_unit setVariable [QGVAR(cardiacArrestTimeLeft), _time];
+_unit setVariable [QGVAR(cardiacArrestTimeLastUpdate), CBA_missionTime];
+
+TRACE_3("enteredStateCardiacArrest",_unit,_time,CBA_missionTime);
 
 // Update the unit status to reflect cardiac arrest
-[_unit, true] call EFUNC(medical_status,setCardiacArrest);
+[_unit, true] call EFUNC(medical_status,setCardiacArrestState);

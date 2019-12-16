@@ -120,20 +120,20 @@ TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
-        
+
 _onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
 TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
-        
+
 // Run the "onFired" function passing the full guidance args array
 _onFiredFunc = getText (_config >> "onFired");
 TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
-        
+
 // Reverse:
 //  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];

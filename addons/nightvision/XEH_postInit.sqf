@@ -26,23 +26,17 @@ GVAR(ppeffectBlur) = -1;
     TRACE_4("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling));
 
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
-
-    // handle only brightness if effects are disabled
-    if (GVAR(effectScaling) == 0) exitWith {
-        GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];
-        GVAR(ppEffectNVGBrightness) ppEffectForceInNVG true;
-        GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, (-3+3)/5 + 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
-        GVAR(ppEffectNVGBrightness) ppEffectCommit 0;
-    };
-
     ["loadout", LINKFUNC(onLoadoutChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["cameraView", LINKFUNC(onCameraViewChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["vehicle", LINKFUNC(refreshGoggleType), false] call CBA_fnc_addPlayerEventHandler;
     ["turret", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
 
-    ["ace_firedPlayer", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerVehicle", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler;
-
+    // handle only brightness if effects are disabled
+    GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];
+    GVAR(ppEffectNVGBrightness) ppEffectForceInNVG true;
+    GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, (-3+3)/5 + 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
+    GVAR(ppEffectNVGBrightness) ppEffectCommit 0;
+    GVAR(ppEffectNVGBrightness) ppEffectEnable (GVAR(effectScaling) == 0);
 
     addMissionEventHandler ["Loaded", { // Restart UI vars on mission load
         if (GVAR(running)) then {

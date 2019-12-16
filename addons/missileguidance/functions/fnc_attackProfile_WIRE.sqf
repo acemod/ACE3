@@ -34,7 +34,7 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
         _attackProfileStateParams set [1, true];
         _attackProfileStateParams set [2, _randomVector];
 
-        playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLtoASL (_shooter modelToWorld _wireCutSource), 150, 1, 25];
+        playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLtoASL (_shooter modelToWorld _wireCutSource), 5, 1, 150];
     };
     _projectilePos vectorAdd _randomVector
 };

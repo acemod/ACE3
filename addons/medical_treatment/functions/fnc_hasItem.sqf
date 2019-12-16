@@ -1,44 +1,31 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal
- * Check if the item is present between the patient and the medic
+ * Author: Glowbal, mharis001
+ * Checks if one of the given items are present between the medic and patient.
+ * Does not respect the priority defined by the allowSharedEquipment setting.
+ * Will check medic first and then patient if shared equipment is allowed.
  *
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
- * 2: Item <STRING>
+ * 2: Items <ARRAY>
  *
  * Return Value:
- * Has the items <BOOL>
+ * Has Item <BOOL>
  *
  * Example:
- * [bob, patient, "bandage"] call ace_medical_treatment_fnc_hasItem
+ * [player, cursorObject, ["ACE_fieldDressing"]] call ace_medical_treatment_fnc_hasItems
  *
  * Public: No
  */
 
-params ["_medic", "_patient", "_item"];
+params ["_medic", "_patient", "_items"];
 
-if (isNil QEGVAR(medical,setting_allowSharedEquipment)) then {
-    EGVAR(medical,setting_allowSharedEquipment) = true;
+private _fnc_checkItems = {
+    params ["_unit"];
+
+    private _unitItems = _unit call EFUNC(common,uniqueItems);
+    _items findIf {_x in _unitItems} != -1
 };
 
-if (EGVAR(medical,setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {
-    true
-};
-
-if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
-    true
-};
-
-private _hasItem = false;
-
-if (vehicle _medic != _medic && {vehicle _medic call FUNC(isMedicalVehicle)}) then {
-    {
-        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {[_x, _item] call EFUNC(common,hasItem)}) exitWith {
-            _hasItem = true;
-        };
-    } forEach crew vehicle _medic;
-};
-
-_hasItem
+_medic call _fnc_checkItems || {GVAR(allowSharedEquipment) != 2 && {_patient call _fnc_checkItems}}

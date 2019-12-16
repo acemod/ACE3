@@ -8,18 +8,19 @@
  * 1: Name Of Body Part <STRING>
  * 2: Amount Of Damage <NUMBER>
  * 3: Type of the damage done <STRING>
+ * 4: Weighted array of damaged selections <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "Body", 0.5, "bullet"] call ace_medical_damage_fnc_woundsHandlerSQF
+ * [player, "Body", 0.5, "bullet", [1, 1]] call ace_medical_damage_fnc_woundsHandlerSQF
  *
  * Public: No
  */
 
-params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
-TRACE_4("woundsHandlerSQF",_unit,_bodyPart,_damage,_typeOfDamage);
+params ["_unit", "_bodyPart", "_damage", "_typeOfDamage", "_damageSelectionArray"];
+TRACE_5("woundsHandlerSQF",_unit,_bodyPart,_damage,_typeOfDamage,_damageSelectionArray);
 
 // Convert the selectionName to a number and ensure it is a valid selection.
 private _bodyPartN = ALL_BODY_PARTS find toLower _bodyPart;
@@ -47,7 +48,7 @@ private _allPossibleInjuries = [];
     // Check if the damage is higher as the min damage for the specific injury
     if (_damage >= _minDamage && {_damage <= _maxDamage || _maxDamage < 0}) then {
         // Check if the injury can be applied to the given selection name
-        if ("All" in _selections || {_bodyPart in _selections}) then { // @todo, this is case sensitive!
+        // if ("All" in _selections || {_bodyPart in _selections}) then { // @todo, this is case sensitive! [we have no injuries that use this, disabled for now]
 
             // Find the wound which has the highest minimal damage, so we can use this later on for adding the correct injuries
             if (_minDamage > _highestPossibleDamage) then {
@@ -57,7 +58,7 @@ private _allPossibleInjuries = [];
 
             // Store the valid possible injury for the damage type, damage amount and selection
             _allPossibleInjuries pushBack _x;
-        };
+        // };
     };
 } forEach _woundTypes;
 
@@ -65,7 +66,7 @@ private _allPossibleInjuries = [];
 if (_highestPossibleSpot < 0) exitWith { TRACE_2("no wounds possible",_damage,_highestPossibleSpot); };
 
 // Administration for open wounds and ids
-private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
+private _openWounds = GET_OPEN_WOUNDS(_unit);
 
 private _updateDamageEffects = false;
 private _painLevel = 0;
@@ -75,11 +76,11 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
 {
     _x params ["_thresholdMinDam", "_thresholdWoundCount"];
-    if (_thresholdMinDam <= _damage) exitWith {
+    if (_damage > _thresholdMinDam) exitWith {
         private _woundDamage = _damage / (_thresholdWoundCount max 1); // If the damage creates multiple wounds
         for "_i" from 1 to _thresholdWoundCount do {
-            // Find the injury we are going to add. Format [ classID, allowdSelections, bleedingRate, injuryPain]
-            private _oldInjury = if (random 1 >= 0.85) then {
+            // Find the injury we are going to add. Format [ classID, allowedSelections, bleedingRate, injuryPain]
+            private _oldInjury = if (random 1 < 0.15) then {
                 _woundTypes select _highestPossibleSpot
             } else {
                 selectRandom _allPossibleInjuries
@@ -87,23 +88,30 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
             _oldInjury params ["_woundClassIDToAdd", "", "_injuryBleedingRate", "_injuryPain", "", "", "", "_causeLimping", "_causeFracture"];
 
-            private _bodyPartNToAdd = [floor random 6, _bodyPartN] select _isSelectionSpecific; // 6 == count ALL_BODY_PARTS
+            private _bodyPartNToAdd = if (_isSelectionSpecific) then {_bodyPartN} else {selectRandomWeighted _damageSelectionArray};
 
             _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
             _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
 
-            // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
-            private _nastinessLikelihood = linearConversion [0, 20, (_woundDamage / _thresholdWoundCount), 0.5, 30, true];
-            private _bleedingModifier = 0.25 + 8 * exp ((random [-4.5, -5, -6]) / _nastinessLikelihood);
-            private _painModifier = 0.05 + 2 * exp (-2 / _nastinessLikelihood);
+            // Damage to limbs/head is scaled higher than torso by engine
+            // Anything above this value is guaranteed worst wound possible
+            private _worstDamage = [2, 1, 4, 4, 4, 4] select _bodyPartNToAdd;
 
-            private _bleeding = _injuryBleedingRate * _bleedingModifier;
+            // More wounds means more likely to get nasty wound
+            private _countModifier = 1 + random(_i - 1);
+
+            // Config specifies bleeding and pain for worst possible wound
+            // Worse wound correlates to higher damage, damage is not capped at 1
+            private _bleedModifier = linearConversion [0.1, _worstDamage, _woundDamage * _countModifier, 0.25, 1, true];
+            private _painModifier = (_bleedModifier * random [0.7, 1, 1.3]) min 1; // Pain isn't directly scaled to bleeding
+
+            private _bleeding = _injuryBleedingRate * _bleedModifier;
             private _pain = _injuryPain * _painModifier;
             _painLevel = _painLevel + _pain;
 
-            // wound category (minor [0..0.5], medium[0.5..1.0], large[1.0+])
-            private _category = floor linearConversion [0, 1, _bleedingModifier, 0, 2, true];
+            // wound category (minor [0.25-0.5], medium [0.5-0.75], large [0.75+])
+            private _category = floor linearConversion [0.25, 0.75, _bleedModifier, 0, 2, true];
 
             private _classComplex = 10 * _woundClassIDToAdd + _category;
 
@@ -113,32 +121,21 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_woundDamage > PENETRATION_THRESHOLD}}) then {
                 _critialDamage = true;
             };
+            if ([_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)) then {
+                TRACE_1("determineIfFatal returned true",_woundDamage);
+                [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+            };
 
             #ifdef DEBUG_MODE_FULL
             systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, _woundDamage toFixed 2, _woundDamage > PENETRATION_THRESHOLD, _bleeding toFixed 3, _pain toFixed 3];
             #endif
 
-            // Emulate damage to vital organs
             switch (true) do {
-                // Fatal damage to the head is guaranteed death
-            case (_bodyPartNToAdd == 0 && {_woundDamage >= HEAD_DAMAGE_THRESHOLD}): {
-                    TRACE_1("lethal headshot",_woundDamage toFixed 2);
-                    [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
-                };
-                // Fatal damage to torso has various results based on organ hit
-            case (_bodyPartNToAdd == 1 && {_woundDamage >= ORGAN_DAMAGE_THRESHOLD}): {
-                    // Heart shot is lethal
-                    if (random 1 < HEART_HIT_CHANCE) then {
-                        TRACE_1("lethal heartshot",_woundDamage toFixed 2);
-                        [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
-                    };
-                };
             case (_causeFracture && {EGVAR(medical,fractures) > 0} && {_bodyPartNToAdd > 1} && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}): {
                     TRACE_1("limb fracture",_bodyPartNToAdd);
-                    // todo: play sound?
-                    private _fractures = _unit getVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0]];
+                    private _fractures = GET_FRACTURES(_unit);
                     _fractures set [_bodyPartNToAdd, 1];
-                    _unit setVariable [QEGVAR(medical,fractures), _fractures, true];
+                    _unit setVariable [VAR_FRACTURES, _fractures, true];
                     [QEGVAR(medical,fracture), [_unit, _bodyPartNToAdd]] call CBA_fnc_localEvent; // local event for fracture
                     _updateDamageEffects = true;
                 };
@@ -180,7 +177,7 @@ if (_updateDamageEffects) then {
     [_unit] call EFUNC(medical_engine,updateDamageEffects);
 };
 
-_unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+_unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
@@ -193,4 +190,4 @@ if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call FUNC(handleIncapacitation);
 };
 
-TRACE_4("exit",_unit,_painLevel,GET_PAIN(_unit),_unit getVariable QEGVAR(medical,openWounds));
+TRACE_4("exit",_unit,_painLevel,GET_PAIN(_unit),GET_OPEN_WOUNDS(_unit));

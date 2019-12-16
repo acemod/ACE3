@@ -26,6 +26,9 @@
             <Chinesesimp>标志</Chinesesimp>
             <Korean>맵마커</Korean>
             <Polish>Znaczniki</Polish>
+            <Russian>Маркеры</Russian>
+            <Portuguese>Marcadores</Portuguese>
+            <French>Marqueurs</French>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
@@ -36,6 +39,9 @@
             <Chinesesimp>谁可以移动标志</Chinesesimp>
             <Italian>Permetti di spostare i marcatori a:</Italian>
             <Polish>Zezwól na poruszanie znaczników dla</Polish>
+            <Russian>Разрешить перемещение маркеров для</Russian>
+            <Portuguese>Permitir que movam marcadores</Portuguese>
+            <French>Permettre le déplacement des marqueurs pour</French>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
@@ -46,6 +52,9 @@
             <Chinesesimp>设定谁可以透过按住Alt键来移动标志。</Chinesesimp>
             <Italian>Limita quali giocatori possono spostare i marcatori mentre premono il tasto Alt.</Italian>
             <Polish>Ogranicz którzy gracze mogą poruszać znacznikami podczas trzymania przycisku Alt.</Polish>
+            <Russian>Устанавливает ограничение на перемещения маркеров игроками при помощи клавиши Alt</Russian>
+            <Portuguese>Restringe quais jogadores podem mover os marcadores do mapa enquanto seguram a tecla ALT.</Portuguese>
+            <French>Définit quels joueurs peuvent déplacer les marqueurs en maintenant la touche Alt enfoncée.</French>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
@@ -56,6 +65,9 @@
             <Chinesesimp>没有人</Chinesesimp>
             <Italian>Nessuno</Italian>
             <Polish>Nikt</Polish>
+            <Russian>Никого</Russian>
+            <Portuguese>Ninguém</Portuguese>
+            <French>Personne</French>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
@@ -66,6 +78,9 @@
             <Chinesesimp>所有玩家</Chinesesimp>
             <Korean>모든 플레이어</Korean>
             <Polish>Wszyscy gracze</Polish>
+            <Russian>Всех игроков</Russian>
+            <Portuguese>Todos jogadores</Portuguese>
+            <French>Tous les joueurs</French>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
@@ -76,6 +91,9 @@
             <Chinesesimp>管理员</Chinesesimp>
             <Korean>관리자</Korean>
             <Polish>Administratorzy</Polish>
+            <Russian>Админов</Russian>
+            <Portuguese>Admins</Portuguese>
+            <French>Admins</French>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
@@ -86,6 +104,9 @@
             <Chinesesimp>小队长</Chinesesimp>
             <Korean>분대장</Korean>
             <Polish>Przywódcy grup</Polish>
+            <Russian>Лидеров групп</Russian>
+            <Portuguese>Líderes de grupo</Portuguese>
+            <French>Chefs de groupe</French>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
@@ -96,12 +117,19 @@
             <Chinesesimp>小队长与管理员</Chinesesimp>
             <Korean>분대장과 관리자</Korean>
             <Polish>Przywódcy grup i Administratorzy</Polish>
+            <Russian>Лидеров групп и Админов</Russian>
+            <Portuguese>Líderes de grupo e Admins</Portuguese>
+            <French>Chefs de groupe et Admins</French>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
             <English>Creator</English>
             <German>Ersteller</German>
             <Japanese>設置者</Japanese>
             <Polish>Twórca</Polish>
+            <Russian>Создателя</Russian>
+            <Portuguese>Criador</Portuguese>
+            <Chinese>放置者</Chinese>
+            <French>Créateur</French>
         </Key>
     </Package>
 </Project>

@@ -73,7 +73,7 @@ class CfgVehicles {
     class ReammoBox_F;
     class ACE_HuntIR_Box: ReammoBox_F {
         model = QPATHTOF(data\ace_huntirbox.p3d);
-        displayName = $STR_DN_ACE_HUNTIRBOX;
+        displayName = CSTRING(TransportBox_DisplayName);
         class TransportItems {
             MACRO_ADDITEM(ACE_HuntIR_monitor,5);
         };

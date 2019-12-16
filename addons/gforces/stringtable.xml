@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="gforces">
-        <Key ID="STR_ACE_gforces_enabledFor_displayName">
+    <Package name="GForces">
+        <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
             <German>Effekte der G-Kräfte</German>
             <Spanish>Efectos Gforces</Spanish>
             <Czech>G Force efekty</Czech>
-            <Portuguese>Efeitos de ForçaG</Portuguese>
+            <Portuguese>Efeitos da Força G</Portuguese>
             <French>Effets de force gravitationnelle</French>
             <Russian>Эффекты перегрузок</Russian>
             <Japanese>G による効果</Japanese>
@@ -16,7 +16,7 @@
             <Chinesesimp>G力影响</Chinesesimp>
             <Chinese>G力影響</Chinese>
         </Key>
-        <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
+        <Key ID="STR_ACE_GForces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
             <German>Nur Luftfahrzeug</German>
             <Spanish>Sólo Aeronave</Spanish>
@@ -31,14 +31,17 @@
             <Chinesesimp>只有战斗机</Chinesesimp>
             <Chinese>只有戰鬥機</Chinese>
         </Key>
-        <Key ID="STR_ACE_gforces_statGReduction">
+        <Key ID="STR_ACE_GForces_statGReduction">
             <English>G-force reduction</English>
+            <German>G-Kräfte Reduzierung</German>
             <French>Reduction des Gs</French>
             <Japanese>耐 G 性</Japanese>
             <Chinesesimp>减少G力</Chinesesimp>
             <Chinese>減少G力</Chinese>
             <Italian>Riduzione forza G</Italian>
             <Polish>Redukcja przeciążenia</Polish>
+            <Russian>Уменьшение перегрузок</Russian>
+            <Portuguese>Redução de Força-G</Portuguese>
         </Key>
     </Package>
 </Project>

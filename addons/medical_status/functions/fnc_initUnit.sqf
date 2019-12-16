@@ -46,39 +46,35 @@ if (_isRespawn) then {
     _unit setVariable [VAR_PAIN_SUPP, 0, true];
 
     // - Wounds -------------------------------------------------------------------
-    _unit setVariable [QEGVAR(medical,openWounds), [], true];
-    _unit setVariable [QEGVAR(medical,bandagedWounds), [], true];
-    _unit setVariable [QEGVAR(medical,stitchedWounds), [], true];
+    _unit setVariable [VAR_OPEN_WOUNDS, [], true];
+    _unit setVariable [VAR_BANDAGED_WOUNDS, [], true];
+    _unit setVariable [VAR_STITCHED_WOUNDS, [], true];
     _unit setVariable [QEGVAR(medical,isLimping), false, true];
-    _unit setVariable [QEGVAR(medical,fractures), [0,0,0,0,0,0], true];
+    _unit setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 
     // - Misc ---------------------------------------------------------------------
     _unit setVariable [VAR_UNCON, false, true];
 
     // - Treatments ---------------------------------------------------------------
     _unit setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
-    _unit setVariable [QEGVAR(medical,occludedMedications), nil, true]; //Delayed Medications (from tourniquets)
+    _unit setVariable [QEGVAR(medical,occludedMedications), nil, true]; // Delayed Medications (from tourniquets)
     _unit setVariable [QEGVAR(medical,ivBags), nil, true];
 
-    // - Update wound bleeding
+    // Update wound bleeding
     [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
 
-    // triage card and logs
+    // Triage card and logs
     _unit setVariable [QEGVAR(medical,triageLevel), 0, true];
     _unit setVariable [QEGVAR(medical,triageCard), [], true];
 
-    // damage storage
+    // Damage storage
     _unit setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
 
-    // medication
+    // Medication
     _unit setVariable [VAR_MEDICATIONS, [], true];
 
-    // TODO move to treatment
-    private _logs = _unit getVariable [QEGVAR(medical,allLogs), []];
-    {
-        _unit setVariable [_x, nil];
-    } forEach _logs;
-    _unit setVariable [QEGVAR(medical,allLogs), [], true];
+    // Unconscious spontanious wake up chance
+    _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil];
 };
 
 [{

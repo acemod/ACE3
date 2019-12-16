@@ -80,13 +80,25 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     ];
     TRACE_2("incoming",_allDamages,_damageStructural);
 
+    // represents all incoming damage for selecting a non-selectionSpecific wound location, (used for selectRandomWeighted [value1,weight1,value2....])
+    private _damageSelectionArray = [
+        HITPOINT_INDEX_HEAD, _damageHead, HITPOINT_INDEX_BODY, _damageBody, HITPOINT_INDEX_LARM, _damageLeftArm, 
+        HITPOINT_INDEX_RARM, _damageRightArm, HITPOINT_INDEX_LLEG, _damageLeftLeg, HITPOINT_INDEX_RLEG, _damageRightLeg
+    ];
+
     _allDamages sort false;
     (_allDamages select 0) params ["_receivedDamage", "", "_woundedHitPoint"];
+    if (_damageHead >= HEAD_DAMAGE_THRESHOLD) then {
+        TRACE_3("reporting fatal head damage instead of max",_damageHead,_receivedDamage,_woundedHitPoint);
+        _receivedDamage = _damageHead;
+        _woundedHitPoint = "Head";
+    };
 
     // We know it's structural when no specific hitpoint is damaged
     if (_receivedDamage == 0) then {
         _receivedDamage = _damageStructural;
         _woundedHitPoint = "Body";
+        _damageSelectionArray = [1, 1]; // sum of weights would be 0
     };
 
     // Environmental damage sources all have empty ammo string
@@ -95,7 +107,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         // Any collision with terrain/vehicle/object has a shooter
         // Check this first because burning can happen at any velocity
         if !(isNull _shooter) then {
-            _ammo = "#collision";
+            _ammo = "#collision"; // non-selectionSpecific so only _damageSelectionArray matters
 
             /*
               If shooter != unit then they hit unit, otherwise it could be:
@@ -105,10 +117,11 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
                Assume fall damage for downward velocity because it's most common
             */
             if (_shooter == _unit && {(velocity _unit select 2) < -2}) then {
-                _woundedHitPoint = selectRandom ["RightLeg", "LeftLeg"];
+                _ammo = "#falling"; // non-selectionSpecific so only _damageSelectionArray matters
+                _damageSelectionArray = [HITPOINT_INDEX_RLEG, 1, HITPOINT_INDEX_LLEG, 1];
                 TRACE_5("Fall",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
-                _woundedHitPoint = selectRandom ["RightArm", "LeftArm", "RightLeg", "LeftLeg"];
+                _damageSelectionArray = [HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1];
                 TRACE_5("Collision",_unit,_shooter,_instigator,_damage,_receivedDamage);
             };
 
@@ -117,12 +130,16 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             // Higher momentum results in higher chance for head to be hit for more lethality
             if (_receivedDamage > 0.35) then {
                 private _headHitWeight = (_receivedDamage / 2) min 1;
-                _woundedHitPoint = selectRandomWeighted ["Body", (1 - _headHitWeight), "Head", _headHitWeight];
+                if (_recievedDamage < 0.6) then {
+                    _damageSelectionArray append [0, (1 - _headHitWeight), 1, _headHitWeight];
+                } else {
+                    _damageSelectionArray = [0, (1 - _headHitWeight), 1, _headHitWeight];
+                }
             };
         } else {
             // Anything else is almost guaranteed to be fire damage
-            _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
-            _ammo = "#unknown";
+            _damageSelectionArray = [HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1];;
+            _ammo = "#unknown"; // non-selectionSpecific so only _damageSelectionArray matters
 
             // Fire damage can occur as lots of minor damage events
             // Combine these until significant enough to wound
@@ -140,8 +157,8 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // No wounds for minor damage
     if (_receivedDamage > 1E-3) then {
-        [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo]] call CBA_fnc_localEvent;
-        TRACE_2("received",_receivedDamage,_woundedHitPoint);
+        TRACE_3("received",_receivedDamage,_woundedHitPoint,_damageSelectionArray);
+        [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo, _damageSelectionArray]] call CBA_fnc_localEvent;
     };
 
     // Clear stored damages otherwise they will influence future damage events
@@ -164,7 +181,7 @@ if (
     {getOxygenRemaining _unit <= 0.5} &&
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
-    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning", [HITPOINT_INDEX_BODY, 1]]] call CBA_fnc_localEvent;
     TRACE_5("Drowning",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
@@ -180,7 +197,11 @@ if (
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
-    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash"]] call CBA_fnc_localEvent;
+    private _damageSelectionArray = [
+        HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1, 
+        HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1
+    ];
+    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
