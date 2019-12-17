@@ -270,6 +270,10 @@
 `ace_medical_status`
 {% endif %}
 
+{% if include.component == "metis" %}
+`ace_missileguidance`
+{% endif %}
+
 {% if include.component == "microdagr" %}
 `ace_common`
 {% endif %}
