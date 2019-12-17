@@ -73,11 +73,5 @@
             <Chinese>只有在強烈疼痛時使用</Chinese>
             <French>Juste un fort effet douloureux</French>
         </Key>
-        <Key ID="STR_ACE_Medical_Feedback_painScreamFrequency_DisplayName">
-            <English>Pain Scream Frequency</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_painScreamFrequency_Description">
-            <English>Controls how often a unit will scream from being in pain.</English>
-        </Key>
     </Package>
 </Project>

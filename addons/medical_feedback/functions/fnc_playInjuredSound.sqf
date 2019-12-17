@@ -18,7 +18,7 @@
  * Public: No
  */
 #define TIME_OUT_HIT 1
-#define TIME_OUT_MOAN 5
+#define TIME_OUT_MOAN [12, 7.5, 5]
 
 params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, [0]]];
 // TRACE_3("",_unit,_type,_severity);
@@ -30,8 +30,7 @@ if !(_unit call EFUNC(common,isAwake)) exitWith {};
 
 // Handle timeout
 if (_unit getVariable [QGVAR(soundTimeout) + _type, -1] > CBA_missionTime) exitWith {};
-private _timeOut = TIME_OUT_HIT;
-if ((_type == "moan") && {(GVAR(painScreamFrequency) == 0) || {_timeOut = TIME_OUT_MOAN / GVAR(painScreamFrequency); false}}) exitWith {};
+private _timeOut = if (_type == "moan") then { TIME_OUT_MOAN # _severity } else { TIME_OUT_HIT };
 _unit setVariable [QGVAR(soundTimeout) + _type, CBA_missionTime + _timeOut];
 
 // Get units speaker
