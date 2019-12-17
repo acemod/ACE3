@@ -187,4 +187,3 @@
 
 
 #endif /* DIK_ESCAPE */
-

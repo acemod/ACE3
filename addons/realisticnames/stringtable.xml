@@ -37,7 +37,7 @@
             <English>XM312 (High)</English>
             <German>XM312 (Hoch)</German>
             <Spanish>XM312 (Alto)</Spanish>
-            <French>XM312 (Haut)</French>
+            <French>XM312 (Haute)</French>
             <Czech>XM312 (Vysoká montáž)</Czech>
             <Polish>XM312 (Wysoki)</Polish>
             <Russian>XM312 (Высокий)</Russian>
@@ -85,7 +85,7 @@
             <English>XM307 (High)</English>
             <German>XM307 (Hoch)</German>
             <Spanish>XM307 (Alto)</Spanish>
-            <French>XM307 (Haut)</French>
+            <French>XM307 (Haute)</French>
             <Czech>XM307 (Vysoká montáž)</Czech>
             <Polish>XM307 (Wysoki)</Polish>
             <Russian>XM307 (Высокий)</Russian>
@@ -667,6 +667,7 @@
             <Polish>KamAZ MRL</Polish>
             <Russian>КамАЗ РСЗО</Russian>
             <Portuguese>KamAZ MRL</Portuguese>
+            <French>KamAZ LRM</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -914,7 +915,7 @@
             <Spanish>RAH-66 Comanche</Spanish>
             <Polish>RAH-66 Comanche</Polish>
             <Czech>RAH-66 Comanche</Czech>
-            <French>RAH-66 Commanche</French>
+            <French>RAH-66 Comanche</French>
             <Russian>RAH-66 Команч</Russian>
             <Portuguese>RAH-66 Comanche</Portuguese>
             <Hungarian>RAH-66 Comanche</Hungarian>
@@ -1282,6 +1283,8 @@
             <Polish>Mini-granat V40</Polish>
             <Russian>V40 Мини-граната</Russian>
             <Portuguese>Mini Granada V40</Portuguese>
+            <French>V40 Mini-Grenade</French>
+            <Chinese>V40迷你手榴彈</Chinese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1433,7 +1436,7 @@
             <Spanish>Mina antipersona M26</Spanish>
             <Polish>Mina przeciwpiechotna M26</Polish>
             <Czech>M26 Protipěchotní mina</Czech>
-            <French>M26  Mine AP bondissante</French>
+            <French>M26 Mine AP bondissante</French>
             <Russian>M26 Противопехотная мина</Russian>
             <Portuguese>M26 Mina saltadora antipessoal</Portuguese>
             <Hungarian>M26 gyalogsági ugróakna</Hungarian>
@@ -1518,10 +1521,28 @@
             <Russian>FNX-45 Tactical</Russian>
             <Portuguese>FNX-45 Tactical</Portuguese>
             <Italian>FNX-45 Tactical</Italian>
+            <Turkish>FNX-45 Tactical</Turkish>
             <Japanese>FNX-45 タクティカル</Japanese>
             <Korean>FNX-45 Tactical</Korean>
             <Chinese>FNX-45戰術型手槍</Chinese>
             <Chinesesimp>FNX-45战术型手枪</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
+            <English>FNX-45 Tactical (Green)</English>
+            <German>FNX-45 Tactical (Grün)</German>
+            <Czech>FNX-45 Tactical (Zelený)</Czech>
+            <Polish>FNX-45 Tactical (Zielony)</Polish>
+            <French>FNX-45 Tactical (Vert)</French>
+            <Hungarian>FNX-45 Tactical (Zöld)</Hungarian>
+            <Spanish>FNX-45 Tactical (Verde)</Spanish>
+            <Russian>FNX-45 Tactical (Зелёный)</Russian>
+            <Portuguese>FNX-45 Tactical (Verde)</Portuguese>
+            <Italian>FNX-45 Tactical (Verde)</Italian>
+            <Turkish>FNX-45 Tactical (Yeşil)</Turkish>
+            <Japanese>FNX-45 タクティカル (緑)</Japanese>
+            <Korean>FNX-45 Tactical (초록)</Korean>
+            <Chinese>FNX-45戰術型手槍 (綠色)</Chinese>
+            <Chinesesimp>FNX-45战术型手枪 (绿色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name">
             <English>Chiappa Rhino 60DS</English>
@@ -1582,10 +1603,28 @@
             <Russian>РПГ-32</Russian>
             <Portuguese>RPG-32</Portuguese>
             <Italian>RPG-32</Italian>
+            <Turkish>RPG-32</Turkish>
             <Japanese>RPG-32</Japanese>
             <Korean>RPG-32</Korean>
             <Chinese>RPG-32"哈希姆"火箭發射器</Chinese>
             <Chinesesimp>RPG-32"哈希姆"火箭发射器</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_launch_RPG32_green_Name">
+            <English>RPG-32 (Green)</English>
+            <German>RPG-32 (Grün)</German>
+            <Czech>RPG-32 (Zelený)</Czech>
+            <Polish>RPG-32 (Zielony)</Polish>
+            <French>RPG-32 (Vert)</French>
+            <Hungarian>RPG-32 (Zöld)</Hungarian>
+            <Spanish>RPG-32 (Verde)</Spanish>
+            <Russian>РПГ-32 (Зелёный)</Russian>
+            <Portuguese>RPG-32 (Verde)</Portuguese>
+            <Italian>RPG-32 (Verde)</Italian>
+            <Turkish>RPG-32 (Yeşil)</Turkish>
+            <Japanese>RPG-32 (緑)</Japanese>
+            <Korean>RPG-32 (초록)</Korean>
+            <Chinese>RPG-32"哈希姆"火箭發射器 (綠色)</Chinese>
+            <Chinesesimp>RPG-32"哈希姆"火箭发射器 (绿色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_Name">
             <English>Mini-Spike (AA)</English>
@@ -1646,7 +1685,7 @@
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
             <German>Metis-M (Grün)</German>
-            <French>Metis-M (Verde)</French>
+            <French>Metis-M (Vert)</French>
             <Russian>Метис-М (Зелёный)</Russian>
             <Chinese>"麥士蒂索人"-M型反坦克導彈(綠色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(绿色)</Chinesesimp>
@@ -2108,7 +2147,7 @@
             <German>Mk14 Mod 1 EBR</German>
             <Czech>Mk14 Mod 1 EBR</Czech>
             <Polish>Mk14 Mod 1 EBR</Polish>
-            <French>Mk 14 Mod 1 EBR</French>
+            <French>Mk14 Mod 1 EBR</French>
             <Hungarian>Mk14 Mod 1 EBR</Hungarian>
             <Spanish>Mk14 Mod 1 EBR</Spanish>
             <Russian>Mk14 Mod 1 EBR</Russian>
@@ -2657,6 +2696,7 @@
             <Polish>Jeep Wrangler (SPG-9)</Polish>
             <Russian>Jeep Wrangler (СПГ-9)</Russian>
             <Portuguese>Jeep Wrangler (SPG-9)</Portuguese>
+            <French>Jeep Wrangler (SPG-9)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
             <English>Jeep Wrangler (LMG)</English>
@@ -2668,6 +2708,7 @@
             <Polish>Jeep Wrangler (LMG)</Polish>
             <Russian>Jeep Wrangler (Пулемет)</Russian>
             <Portuguese>Jeep Wrangler (LMG)</Portuguese>
+            <French>Jeep Wrangler (LMG)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
@@ -2739,7 +2780,7 @@
             <Spanish>QBZ-95-1 (Hex Verde)</Spanish>
             <Polish>QBZ-95-1 (zielony hex)</Polish>
             <Czech>QBZ-95-1 (Zelený Hex)</Czech>
-            <French>QBZ-95-1 (Hex Verte)</French>
+            <French>QBZ-95-1 (Hex Vert)</French>
             <Russian>QBZ-95-1 (Зелёный Гекс)</Russian>
             <Portuguese>QBZ-95-1 (Verde Hex)</Portuguese>
             <Hungarian>QBZ-95-1 (Zöld Hex)</Hungarian>
@@ -2787,7 +2828,7 @@
             <Spanish>QBZ-95-1 GL (Hex Verde)</Spanish>
             <Polish>QBZ-95-1 GL (zielony hex)</Polish>
             <Czech>QBZ-95-1 GL (Zelený Hex)</Czech>
-            <French>QBZ-95-1 GL (Hex Verte)</French>
+            <French>QBZ-95-1 GL (Hex Vert)</French>
             <Russian>QBZ-95-1 GL (Зелёный Гекс)</Russian>
             <Portuguese>QBZ-95-1 GL (Verde Hex)</Portuguese>
             <Hungarian>QBZ-95-1 GL (Zöld Hex)</Hungarian>
@@ -2835,7 +2876,7 @@
             <Spanish>QBZ-95-1 LSW (Hex Verde)</Spanish>
             <Polish>QBZ-95-1 LSW (zielony hex)</Polish>
             <Czech>QBZ-95-1 LSW (Zelený Hex)</Czech>
-            <French>QBZ-95-1 LSW (Hex Verte)</French>
+            <French>QBZ-95-1 LSW (Hex Vert)</French>
             <Russian>QBZ-95-1 LSW (Зелёный Гекс)</Russian>
             <Portuguese>QBZ-95-1 LSW (Verde Hex)</Portuguese>
             <Hungarian>QBZ-95-1 LSW (Zöld Hex)</Hungarian>
@@ -2883,7 +2924,7 @@
             <Spanish>QBU-88 (Hex Verde)</Spanish>
             <Polish>QBU-88 (zielony hex)</Polish>
             <Czech>QBU-88 (Zelený Hex)</Czech>
-            <French>QBU-88 (Hex Verte)</French>
+            <French>QBU-88 (Hex Vert)</French>
             <Russian>QBU-88 (Зелёный Гекс)</Russian>
             <Portuguese>QBU-88 (Verde Hex)</Portuguese>
             <Hungarian>QBU-88 (Zöld Hex)</Hungarian>
@@ -2915,7 +2956,7 @@
             <Spanish>GM6 Lynx (Hex Verde)</Spanish>
             <Polish>GM6 Lynx (Zielony hex)</Polish>
             <Czech>GM6 Lynx (Zelený Hex)</Czech>
-            <French>GM6 Lynx (Hex Verte)</French>
+            <French>GM6 Lynx (Hex Vert)</French>
             <Russian>GM6 Lynx (Зелёный Гекс)</Russian>
             <Portuguese>GM6 Lynx (Verde Hex)</Portuguese>
             <Hungarian>GM6 Lynx (Zöld Hex)</Hungarian>
@@ -3171,7 +3212,7 @@
             <Spanish>RPG-32 (Hex Verde)</Spanish>
             <Polish>RPG-32 (zielony hex)</Polish>
             <Czech>RPG-32 (Zelený Hex)</Czech>
-            <French>RPG-32 (Hex Verte)</French>
+            <French>RPG-32 (Hex Vert)</French>
             <Russian>RPG-32 (Зелёный Гекс)</Russian>
             <Portuguese>RPG-32 (Verde Hex)</Portuguese>
             <Hungarian>RPG-32 (Zöld Hex)</Hungarian>
@@ -3223,6 +3264,7 @@
             <Polish>Polaris DAGOR (XM312)</Polish>
             <Russian>Polaris DAGOR (XM312)</Russian>
             <Portuguese>Polaris DAGOR (XM312)</Portuguese>
+            <French>Polaris DAGOR (XM312)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
@@ -3234,6 +3276,7 @@
             <Polish>Polaris DAGOR (Mini-Spike AT)</Polish>
             <Russian>Polaris DAGOR (ПТ Mini-Spike)</Russian>
             <Portuguese>Polaris DAGOR (Mini-Spike AT)</Portuguese>
+            <French>Polaris DAGOR (Mini-Spike AC)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3245,6 +3288,7 @@
             <Polish>Polaris DAGOR</Polish>
             <Russian>Polaris DAGOR</Russian>
             <Portuguese>Polaris DAGOR</Portuguese>
+            <French>Polaris DAGOR</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
@@ -3256,6 +3300,7 @@
             <Polish>Polaris DAGOR (light)</Polish>
             <Russian>Polaris DAGOR (легкий)</Russian>
             <Portuguese>Polaris DAGOR (leve)</Portuguese>
+            <French>Polaris DAGOR (léger)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
@@ -3267,6 +3312,7 @@
             <Polish>LSV Mk. II (M134)</Polish>
             <Russian>LSV Mk. II (M134)</Russian>
             <Portuguese>LSV Mk. II (M134)</Portuguese>
+            <French>LSV Mk. II (M134)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -3278,6 +3324,7 @@
             <Polish>LSV Mk. II (Metis-M)</Polish>
             <Russian>LSV Mk. II (Метис-M)</Russian>
             <Portuguese>LSV Mk. II (Metis-M)</Portuguese>
+            <French>LSV Mk. II (Metis-M)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -3289,6 +3336,7 @@
             <Polish>LSV Mk. II</Polish>
             <Russian>LSV Mk. II</Russian>
             <Portuguese>LSV Mk. II</Portuguese>
+            <French>LSV Mk. II</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -3300,6 +3348,7 @@
             <Polish>Rooikat 120</Polish>
             <Russian>Rooikat 120</Russian>
             <Portuguese>Rooikat 120</Portuguese>
+            <French>Rooikat 120</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01_up">
             <English>Rooikat 120 UP</English>
@@ -3311,6 +3360,7 @@
             <Polish>Rooikat 120 UP</Polish>
             <Russian>Rooikat 120 UP</Russian>
             <Portuguese>Rooikat 120 UP</Portuguese>
+            <French>Rooikat 120 UP</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
@@ -3322,6 +3372,7 @@
             <Italian>T-14 Armata</Italian>
             <Polish>T-14 Armata</Polish>
             <Portuguese>T-14 Armata</Portuguese>
+            <French>T-14 Armata</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_command">
             <English>T-14K Armata</English>
@@ -3333,6 +3384,7 @@
             <Italian>T-14K Armata</Italian>
             <Polish>T-14K Armata</Polish>
             <Portuguese>T-14K Armata</Portuguese>
+            <French>T-14K Armata</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
@@ -3344,6 +3396,7 @@
             <Polish>Wiesel 2 Ozelot (AA)</Polish>
             <Russian>Wiesel 2 Ozelot (ПВО)</Russian>
             <Portuguese>Wiesel 2 Ozelot (AA)</Portuguese>
+            <French>Wiesel 2 Ozelot (AA)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
@@ -3355,6 +3408,7 @@
             <Polish>Wiesel 2 (ATGM)</Polish>
             <Russian>Wiesel 2 (ПТ)</Russian>
             <Portuguese>Wiesel 2 (ATGM)</Portuguese>
+            <French>Wiesel 2 (ATGM)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
@@ -3366,6 +3420,7 @@
             <Polish>Wiesel 2 (MK20)</Polish>
             <Russian>Wiesel 2 (MK20)</Russian>
             <Portuguese>Wiesel 2 (MK20)</Portuguese>
+            <French>Wiesel 2 (MK20)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_scout">
             <English>Wiesel 2 RFCV (Radar)</English>
@@ -3377,6 +3432,7 @@
             <Polish>Wiesel 2 RFCV (Radar)</Polish>
             <Russian>Wiesel 2 RFCV (Радар)</Russian>
             <Portuguese>Wiesel 2 RFCV (Radar)</Portuguese>
+            <French>Wiesel 2 RFCV (Radar)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -3388,6 +3444,7 @@
             <Polish>Leupold Mark 4 HAMR</Polish>
             <Russian>Leupold Mark 4 HAMR</Russian>
             <Portuguese>Leupold Mark 4 HAMR</Portuguese>
+            <French>Leupold Mark 4 HAMR</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
             <English>Leupold Mark 4 HAMR (Khaki)</English>
@@ -3399,6 +3456,7 @@
             <Polish>Leupold Mark 4 HAMR (Khaki)</Polish>
             <Russian>Leupold Mark 4 HAMR (Хаки)</Russian>
             <Portuguese>Leupold Mark 4 HAMR (Khaki)</Portuguese>
+            <French>Leupold Mark 4 HAMR (Kaki)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
@@ -3410,6 +3468,7 @@
             <Polish>ELCAN SpecterOS (Tan)</Polish>
             <Russian>ELCAN SpecterOS (Бронза)</Russian>
             <Portuguese>ELCAN SpecterOS (Bege)</Portuguese>
+            <French>ELCAN SpecterOS (Tan)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_blk">
             <English>ELCAN SpecterOS (Black)</English>
@@ -3421,6 +3480,7 @@
             <Polish>ELCAN SpecterOS (Czarny)</Polish>
             <Russian>ELCAN SpecterOS (Черный)</Russian>
             <Portuguese>ELCAN SpecterOS (Preto)</Portuguese>
+            <French>ELCAN SpecterOS (Noire)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
             <English>ELCAN SpecterOS (Green Hex)</English>
@@ -3431,6 +3491,7 @@
             <Polish>ELCAN SpecterOS (Zielony Hex)</Polish>
             <Russian>ELCAN SpecterOS (Зеленый Гекс)</Russian>
             <Portuguese>ELCAN SpecterOS (Verde Hex)</Portuguese>
+            <French>ELCAN SpecterOS (Hex Verte)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3442,6 +3503,7 @@
             <Polish>SIG BRAVO4 / ROMEO3 (Czarny)</Polish>
             <Russian>SIG BRAVO4 / ROMEO3 (Черный)</Russian>
             <Portuguese>SIG BRAVO4 / ROMEO3 (Preto)</Portuguese>
+            <French>SIG BRAVO4 / ROMEO3 (Noire)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
             <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
@@ -3453,6 +3515,7 @@
             <Polish>SIG BRAVO4 / ROMEO3 (Khaki)</Polish>
             <Russian>SIG BRAVO4 / ROMEO3 (Хаки)</Russian>
             <Portuguese>SIG BRAVO4 / ROMEO3 (Khaki)</Portuguese>
+            <French>SIG BRAVO4 / ROMEO3 (Kaki)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -3464,6 +3527,7 @@
             <Polish>SIG BRAVO4 / ROMEO3 (Piasek)</Polish>
             <Russian>SIG BRAVO4 / ROMEO3 (Песочный)</Russian>
             <Portuguese>SIG BRAVO4 / ROMEO3 (Areia)</Portuguese>
+            <French>SIG BRAVO4 / ROMEO3 (Beige)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
@@ -3474,6 +3538,7 @@
             <Polish>Nightforce NXS</Polish>
             <Russian>Nightforce NXS</Russian>
             <Portuguese>Nightforce NXS</Portuguese>
+            <French>Nightforce NXS</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
@@ -3484,6 +3549,7 @@
             <Polish>Nightforce NXS (Zielony Hex)</Polish>
             <Russian>Nightforce NXS (Зеленый Гекс)</Russian>
             <Portuguese>Nightforce NXS (Verde Hex)</Portuguese>
+            <French>Nightforce NXS (Hex Verte)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -3495,6 +3561,7 @@
             <Polish>Nightforce NXS (Dżungla)</Polish>
             <Russian>Nightforce NXS (Джунгли)</Russian>
             <Portuguese>Nightforce NXS (Selva)</Portuguese>
+            <French>Nightforce NXS (Jungle)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -3505,6 +3572,7 @@
             <Italian>Ottica US MR-10 (nera)</Italian>
             <Russian>US Optics MR-10 (Черный)</Russian>
             <Portuguese>US Optics MR-10  (Preto)</Portuguese>
+            <French>US Optics MR-10 (Noire)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -3515,6 +3583,7 @@
             <Italian>Ottica US MR-10 (cachi)</Italian>
             <Russian>US Optics MR-10 (Хаки)</Russian>
             <Portuguese>US Optics MR-10 (Khaki)</Portuguese>
+            <French>US Optics MR-10 (Kaki)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -3525,6 +3594,7 @@
             <Italian>Ottica US MR-10 (sabbia)</Italian>
             <Russian>US Optics MR-10 (Песочный)</Russian>
             <Portuguese>US Optics MR-10 (Areia)</Portuguese>
+            <French>US Optics MR-10 (Beige)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -3535,6 +3605,7 @@
             <Italian>KAHLES Helia (nero)</Italian>
             <Russian>KAHLES Helia (Черный)</Russian>
             <Portuguese>KAHLES Helia  (Preto)</Portuguese>
+            <French>KAHLES Helia (Noire)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -3545,6 +3616,7 @@
             <Italian>KAHLES Helia (esagonale)</Italian>
             <Russian>KAHLES Helia (Гекс)</Russian>
             <Portuguese>KAHLES Helia (Hex)</Portuguese>
+            <French>KAHLES Helia (Hex)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -3555,6 +3627,7 @@
             <Italian>KAHLES Helia (vecchio)</Italian>
             <Russian>KAHLES Helia (Старый)</Russian>
             <Portuguese>KAHLES Helia (Velho)</Portuguese>
+            <French>KAHLES Helia (Usée)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -3565,6 +3638,7 @@
             <Italian>KAHLES Helia (marroncino)</Italian>
             <Russian>KAHLES Helia (Бронза)</Russian>
             <Portuguese>KAHLES Helia (Bege)</Portuguese>
+            <French>KAHLES Helia (Tan)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
@@ -3575,6 +3649,7 @@
             <Polish>Burris XTR II</Polish>
             <Russian>Burris XTR II</Russian>
             <Portuguese>Burris XTR II</Portuguese>
+            <French>Burris XTR II</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
@@ -3585,6 +3660,7 @@
             <Polish>Burris XTR II (Zielony Hex)</Polish>
             <Russian>Burris XTR II (Зеленый Гекс)</Russian>
             <Portuguese>Burris XTR II (Verde Hex)</Portuguese>
+            <French>Burris XTR II (Hex Verte)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -3596,6 +3672,7 @@
             <Polish>EOTech XPS3 (Tan)</Polish>
             <Russian>EOTech XPS3 (Бронза)</Russian>
             <Portuguese>EOTech XPS3 (Bege)</Portuguese>
+            <French>EOTech XPS3 (Tan)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_blk">
             <English>EOTech XPS3 (Black)</English>
@@ -3607,6 +3684,7 @@
             <Polish>EOTech XPS3 (Czarny)</Polish>
             <Russian>EOTech XPS3 (Черный)</Russian>
             <Portuguese>EOTech XPS3 (Preto)</Portuguese>
+            <French>EOTech XPS3 (Noire)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_khk">
             <English>EOTech XPS3 (Khaki)</English>
@@ -3618,6 +3696,7 @@
             <Polish>EOTech XPS3 (Khaki)</Polish>
             <Russian>EOTech XPS3 (Хаки)</Russian>
             <Portuguese>EOTech XPS3 (Khaki)</Portuguese>
+            <French>EOTech XPS3 (Kaki)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -3629,6 +3708,7 @@
             <Polish>EOTech XPS3 SMG (Tan)</Polish>
             <Russian>EOTech XPS3 SMG (Бронза)</Russian>
             <Portuguese>EOTech XPS3 SMG (Bege)</Portuguese>
+            <French>EOTech XPS3 SMG (Tan)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_blk">
             <English>EOTech XPS3 SMG (Black)</English>
@@ -3640,6 +3720,7 @@
             <Polish>EOTech XPS3 SMG (Czarny)</Polish>
             <Russian>EOTech XPS3 SMG (Черный)</Russian>
             <Portuguese>EOTech XPS3 SMG (Preto)</Portuguese>
+            <French>EOTech XPS3 SMG (Noire)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_khk">
             <English>EOTech XPS3 SMG (Khaki)</English>
@@ -3651,6 +3732,7 @@
             <Polish>EOTech XPS3 SMG (Khaki)</Polish>
             <Russian>EOTech XPS3 SMG (Хаки)</Russian>
             <Portuguese>EOTech XPS3 SMG (Khaki)</Portuguese>
+            <French>EOTech XPS3 SMG (Kaki)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
@@ -3661,6 +3743,7 @@
             <Polish>IOR-Valdada Pitbull 2</Polish>
             <Russian>IOR-Valdada Pitbull 2</Russian>
             <Portuguese>IOR-Valdada Pitbull 2</Portuguese>
+            <French>IOR-Valdada Pitbull 2</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -3671,6 +3754,7 @@
             <Polish>Burris FastFire 2</Polish>
             <Russian>Burris FastFire 2</Russian>
             <Portuguese>Burris FastFire 2</Portuguese>
+            <French>Burris FastFire 2</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>
@@ -3682,6 +3766,7 @@
             <Polish>C-More Railway (Czerwony)</Polish>
             <Russian>C-More Railway (Красный)</Russian>
             <Portuguese>C-More Railway (Vermelho)</Portuguese>
+            <French>C-More Railway (Rouge)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn">
             <English>C-More Railway (Green)</English>
@@ -3693,6 +3778,7 @@
             <Polish>C-More Railway (Zielony)</Polish>
             <Russian>C-More Railway (Зеленый)</Russian>
             <Portuguese>C-More Railway (Verde)</Portuguese>
+            <French>C-More Railway (Verte)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_smg">
             <English>C-More Railway SMG (Red)</English>
@@ -3704,6 +3790,7 @@
             <Polish>C-More Railway SMG (Czerwony)</Polish>
             <Russian>C-More Railway SMG (Красный)</Russian>
             <Portuguese>C-More Railway SMG (Vermelho)</Portuguese>
+            <French>C-More Railway SMG (Rouge)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn_smg">
             <English>C-More Railway SMG (Green)</English>
@@ -3715,6 +3802,7 @@
             <Polish>C-More Railway SMG (Zielony)</Polish>
             <Russian>C-More Railway SMG (Зеленый)</Russian>
             <Portuguese>C-More Railway SMG (Verde)</Portuguese>
+            <French>C-More Railway SMG (Verte)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Black_Name">
             <English>P90 TR (Black)</English>
@@ -3977,7 +4065,7 @@
             <Hungarian>5,7mm 50-as Tár</Hungarian>
             <German>5,7mm 50-Patronen-Magazin</German>
             <Spanish>Cargador de 50 balas SD de 5,7mm</Spanish>
-            <French>Ch. 5,7mm 50Cps</French>
+            <French>Ch. 5,7 mm 50 Cps</French>
             <Polish>Magazynek 5,7mm 50rd</Polish>
             <Czech>5.7mm 50náb. Zásobník</Czech>
             <Portuguese>Carregador de 50 projéteis de 5.7mm</Portuguese>
@@ -3992,7 +4080,7 @@
             <English>Caliber: 5.7mm&lt;br /&gt;Rounds: 50&lt;br /&gt;Used in: P90</English>
             <German>Kaliber: 5,7mm&lt;br /&gt;Patronen: 50&lt;br /&gt;Eingesetzt von: P90</German>
             <Polish>Kaliber: 5,7mm&lt;br /&gt;Pociski: 50&lt;br /&gt;Używany w: P90</Polish>
-            <French>Calibre : 5,7mm&lt;br /&gt;Cartouches : 50&lt;br /&gt;Utilisé avec : P90</French>
+            <French>Calibre : 5,7 mm&lt;br /&gt;Cartouches : 50&lt;br /&gt;Utilisé avec : P90</French>
             <Spanish>Calibre: 5.7mm&lt;br /&gt;Balas: 50&lt;br /&gt;Se usa en: P90</Spanish>
             <Russian>Калибр: 5,7 мм&lt;br /&gt;Патронов: 50&lt;br /&gt;Используются с: P90</Russian>
             <Italian>Calibro: 5.7mm&lt;br /&gt;Munizioni: 50&lt;br /&gt;In uso su: P90</Italian>
@@ -4000,9 +4088,553 @@
             <Portuguese>Calibre: 5.7mm&lt;br /&gt;Cartuchos: 50&lt;br /&gt;Usado em: P90</Portuguese>
             <Hungarian>Kaliber: 5,7mm&lt;br /&gt;Lövedékek: 50&lt;br /&gt;Használható: P90</Hungarian>
             <Japanese>口径: 5.7mm&lt;br /&gt;装弾数: 50&lt;br /&gt;次で使用: P90</Japanese>
-            <Chinese>口徑: 5.7mm&lt;br /&gt;發數: 50&lt;br /&gt;使用於: P90</Chinese>
+            <Chinese>口徑: 5.7毫米&lt;br /&gt;發數: 50&lt;br /&gt;使用於: P90</Chinese>
             <Chinesesimp>口径: 5.7mm&lt;br /&gt;发数: 50&lt;br /&gt;使用于: P90</Chinesesimp>
             <Korean>구경: 5.7mm&lt;br /&gt;장탄수: 50&lt;br /&gt;사용됨: P90</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AKM">
+            <English>AKM</English>
+            <Chinese>AKM</Chinese>
+            <French>AKM</French>
+            <Spanish>AKM</Spanish>
+            <Italian>AKM</Italian>
+            <Polish>AKM</Polish>
+            <Russian>AKM</Russian>
+            <German>AKM</German>
+            <Czech>AKM</Czech>
+            <Portuguese>AKM</Portuguese>
+            <Korean>AKM</Korean>
+            <Chinesesimp>AKM</Chinesesimp>
+            <Japanese>AKM</Japanese>
+            <Turkish>AKM</Turkish>
+            <Hungarian>AKM</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AKS">
+            <English>AKS-74U</English>
+            <Chinese>AKS-74U</Chinese>
+            <French>AKS-74U</French>
+            <Spanish>AKS-74U</Spanish>
+            <Italian>AKS-74U</Italian>
+            <Polish>AKS-74U</Polish>
+            <Russian>AKS-74U</Russian>
+            <German>AKS-74U</German>
+            <Czech>AKS-74U</Czech>
+            <Portuguese>AKS-74U</Portuguese>
+            <Korean>AKS-74U</Korean>
+            <Chinesesimp>AKS-74U</Chinesesimp>
+            <Japanese>AKS-74U</Japanese>
+            <Turkish>AKS-74U</Turkish>
+            <Hungarian>AKS-74U</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12">
+            <English>AK-15</English>
+            <Chinese>AK-15</Chinese>
+            <French>AK-15</French>
+            <Spanish>AK-15</Spanish>
+            <Italian>AK-15</Italian>
+            <Polish>AK-15</Polish>
+            <Russian>AK-15</Russian>
+            <German>AK-15</German>
+            <Czech>AK-15</Czech>
+            <Portuguese>AK-15</Portuguese>
+            <Korean>AK-15</Korean>
+            <Chinesesimp>AK-15</Chinesesimp>
+            <Japanese>AK-15</Japanese>
+            <Turkish>AK-15</Turkish>
+            <Hungarian>AK-15</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_lush">
+            <English>AK-15 (Lush)</English>
+            <Chinese>AK-15 (草木茂盛)</Chinese>
+            <French>AK-15 (Forêt)</French>
+            <Spanish>AK-15 (exuberante)</Spanish>
+            <Italian>AK-15 (verdeggiante)</Italian>
+            <Polish>AK-15 (region z bujną roślinnością)</Polish>
+            <Russian>AK-15 (обильная растительность)</Russian>
+            <German>AK-15 (Grün)</German>
+            <Czech>AK-15 (bujný porost)</Czech>
+            <Portuguese>AK-15 (Exuberante)</Portuguese>
+            <Korean>AK-15 (초목)</Korean>
+            <Chinesesimp>AK-15 (繁茂)</Chinesesimp>
+            <Japanese>AK-15 (緑地)</Japanese>
+            <Turkish>AK-15 (Gür)</Turkish>
+            <Hungarian>AK-15 (esőerdő)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_arid">
+            <English>AK-15 (Arid)</English>
+            <Chinese>AK-15 (乾燥氣候)</Chinese>
+            <French>AK-15 (Désert)</French>
+            <Spanish>AK-15 (árido)</Spanish>
+            <Italian>AK-15 (arido)</Italian>
+            <Polish>AK-15 (region suchy)</Polish>
+            <Russian>AK-15 (засушливая местность)</Russian>
+            <German>AK-15 (Trocken)</German>
+            <Czech>AK-15 (suchý porost)</Czech>
+            <Portuguese>AK-15 (Árido)</Portuguese>
+            <Korean>AK-15 (건조)</Korean>
+            <Chinesesimp>AK-15 (干旱)</Chinesesimp>
+            <Japanese>AK-15 (乾燥地帯)</Japanese>
+            <Turkish>AK-15 (Kurak)</Turkish>
+            <Hungarian>AK-15 (sivatag)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL">
+            <English>AK-15 GL</English>
+            <Chinese>AK-15 GL</Chinese>
+            <French>AK-15 GL</French>
+            <Spanish>AK-15 GL</Spanish>
+            <Italian>AK-15 GL</Italian>
+            <Polish>AK-15 GL</Polish>
+            <Russian>AK-15 GL</Russian>
+            <German>AK-15 GL</German>
+            <Czech>AK-15 GL</Czech>
+            <Portuguese>AK-15 GL</Portuguese>
+            <Korean>AK-15 GL</Korean>
+            <Chinesesimp>AK-15 GL</Chinesesimp>
+            <Japanese>AK-15 GL</Japanese>
+            <Turkish>AK-15 GL</Turkish>
+            <Hungarian>AK-15 GL</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_lush">
+            <English>AK-15 GL (Lush)</English>
+            <Chinese>AK-15 GL (草木茂盛)</Chinese>
+            <French>AK-15 GL (Forêt)</French>
+            <Spanish>AK-15 GL (exuberante)</Spanish>
+            <Italian>AK-15 GL (verdeggiante)</Italian>
+            <Polish>AK-15 GL (region z bujną roślinnością)</Polish>
+            <Russian>AK-15 GL (обильная растительность)</Russian>
+            <German>AK-15 GL (Grün)</German>
+            <Czech>AK-15 GL (bujný porost)</Czech>
+            <Portuguese>AK-15 GL (Exuberante)</Portuguese>
+            <Korean>AK-15 GL (초목)</Korean>
+            <Chinesesimp>AK-15 GL (繁茂)</Chinesesimp>
+            <Japanese>AK-15 GL (緑地)</Japanese>
+            <Turkish>AK-15 GL (Gür)</Turkish>
+            <Hungarian>AK-15 GL (esőerdő)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12_GL_arid">
+            <English>AK-15 GL (Arid)</English>
+            <Chinese>AK-15 GL (乾燥氣候)</Chinese>
+            <French>AK-15 GL (Désert)</French>
+            <Spanish>AK-15 GL (árido)</Spanish>
+            <Italian>AK-15 GL (arido)</Italian>
+            <Polish>AK-15 GL (region suchy)</Polish>
+            <Russian>AK-15 GL (засушливая местность)</Russian>
+            <German>AK-15 GL (Trocken)</German>
+            <Czech>AK-15 GL (suchý porost)</Czech>
+            <Portuguese>AK-15 GL (Árido)</Portuguese>
+            <Korean>AK-15 GL (건조)</Korean>
+            <Chinesesimp>AK-15 GL (干旱)</Chinesesimp>
+            <Japanese>AK-15 GL (乾燥地帯)</Japanese>
+            <Turkish>AK-15AK-15 GL (Kurak)</Turkish>
+            <Hungarian>AK-15 GL (sivatag)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12U">
+            <English>AK-15K</English>
+            <Chinese>AK-15K</Chinese>
+            <French>AK-15K</French>
+            <Spanish>AK-15K</Spanish>
+            <Italian>AK-15K</Italian>
+            <Polish>AK-15K</Polish>
+            <Russian>AK-15K</Russian>
+            <German>AK-15K</German>
+            <Czech>AK-15K</Czech>
+            <Portuguese>AK-15K</Portuguese>
+            <Korean>AK-15K</Korean>
+            <Chinesesimp>AK-15K</Chinesesimp>
+            <Japanese>AK-15K</Japanese>
+            <Turkish>AK-15K</Turkish>
+            <Hungarian>AK-15K</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12U_lush">
+            <English>AK-15K (Lush)</English>
+            <Chinese>AK-15K (草木茂盛)</Chinese>
+            <French>AK-15K (Forêt)</French>
+            <Spanish>AK-15K (exuberante)</Spanish>
+            <Italian>AK-15K (verdeggiante)</Italian>
+            <Polish>AK-15K (region z bujną roślinnością)</Polish>
+            <Russian>AK-15K (обильная растительность)</Russian>
+            <German>AK-15K (Grün)</German>
+            <Czech>AK-15K (bujný porost)</Czech>
+            <Portuguese>AK-15K (Exuberante)</Portuguese>
+            <Korean>AK-15K (초목)</Korean>
+            <Chinesesimp>AK-15K (繁茂)</Chinesesimp>
+            <Japanese>AK-15K (緑地)</Japanese>
+            <Turkish>AK-15K (Gür)</Turkish>
+            <Hungarian>AK-15K (esőerdő)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_AK12U_arid">
+            <English>AK-15K (Arid)</English>
+            <Chinese>AK-15K (乾燥氣候)</Chinese>
+            <French>AK-15K (Désert)</French>
+            <Spanish>AK-15K (árido)</Spanish>
+            <Italian>AK-15K (arido)</Italian>
+            <Polish>AK-15K (region suchy)</Polish>
+            <Russian>AK-15K (засушливая местность)</Russian>
+            <German>AK-15K (Trocken)</German>
+            <Czech>AK-15K (suchý porost)</Czech>
+            <Portuguese>AK-15K (Árido)</Portuguese>
+            <Korean>AK-15K (건조)</Korean>
+            <Chinesesimp>AK-15K (干旱)</Chinesesimp>
+            <Japanese>AK-15K (乾燥地帯)</Japanese>
+            <Turkish>AK-15K (Kurak)</Turkish>
+            <Hungarian>AK-15K (sivatag)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_RPK12">
+            <English>RPK</English>
+            <Chinese>RPK</Chinese>
+            <French>RPK</French>
+            <Spanish>RPK</Spanish>
+            <Italian>RPK</Italian>
+            <Polish>RPK</Polish>
+            <Russian>RPK</Russian>
+            <German>RPK</German>
+            <Czech>RPK</Czech>
+            <Portuguese>RPK</Portuguese>
+            <Korean>RPK</Korean>
+            <Chinesesimp>RPK</Chinesesimp>
+            <Japanese>RPK</Japanese>
+            <Turkish>RPK</Turkish>
+            <Hungarian>RPK</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_RPK12_lush">
+            <English>RPK (Lush)</English>
+            <Chinese>RPK (草木茂盛)</Chinese>
+            <French>RPK (Forêt)</French>
+            <Spanish>RPK (exuberante)</Spanish>
+            <Italian>RPK (verdeggiante)</Italian>
+            <Polish>RPK (region z bujną roślinnością)</Polish>
+            <Russian>RPK (обильная растительность)</Russian>
+            <German>RPK (Grün)</German>
+            <Czech>RPK (bujný porost)</Czech>
+            <Portuguese>RPK (Exuberante)</Portuguese>
+            <Korean>RPK (초목)</Korean>
+            <Chinesesimp>RPK (繁茂)</Chinesesimp>
+            <Japanese>RPK (緑地)</Japanese>
+            <Turkish>RPK (Gür)</Turkish>
+            <Hungarian>RPK (esőerdő)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_RPK12_arid">
+            <English>RPK (Arid)</English>
+            <Chinese>RPK (乾燥氣候)</Chinese>
+            <French>RPK (Désert)</French>
+            <Spanish>RPK (árido)</Spanish>
+            <Italian>RPK (arido)</Italian>
+            <Polish>RPK (region suchy)</Polish>
+            <Russian>RPK (засушливая местность)</Russian>
+            <German>RPK (Trocken)</German>
+            <Czech>RPK (suchý porost)</Czech>
+            <Portuguese>RPK (Árido)</Portuguese>
+            <Korean>RPK (건조)</Korean>
+            <Chinesesimp>RPK (干旱)</Chinesesimp>
+            <Japanese>RPK (乾燥地帯)</Japanese>
+            <Turkish>RPK (Kurak)</Turkish>
+            <Hungarian>RPK (sivatag)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_hunter">
+            <English>M14 (classic)</English>
+            <Chinese>M14 (经典)</Chinese>
+            <French>M14 (classique)</French>
+            <Spanish>M14 (clásico)</Spanish>
+            <Italian>M14 (classico)</Italian>
+            <Polish>M14 (klasyczny)</Polish>
+            <Russian>M14 (классический)</Russian>
+            <German>M14 (klassisch)</German>
+            <Czech>M14 (klasický)</Czech>
+            <Portuguese>M14 (clássico)</Portuguese>
+            <Korean>M14 (표준)</Korean>
+            <Chinesesimp>M14 (經典)</Chinesesimp>
+            <Japanese>M14 (クラシック)</Japanese>
+            <Turkish>M14 (klasik)</Turkish>
+            <Hungarian>M14 (klasszikus)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_LMG_Mk200_black">
+            <English>Stoner 99 LMG (Black)</English>
+            <Chinese>斯通納99輕機槍(黑色)</Chinese>
+            <French>Stoner 99 LMG (Noire)</French>
+            <Spanish>Stoner 99 LMG (Negro)</Spanish>
+            <Italian>Stoner 99 LMG (Nero)</Italian>
+            <Polish>Stoner 99 LMG (Czarny)</Polish>
+            <Russian>Stoner 99 LMG (Чёрный)</Russian>
+            <German>Stoner 99 LMG (Schwarz)</German>
+            <Czech>Stoner 99 LMG (Černá)</Czech>
+            <Portuguese>Stoner 99 LMG (Preto)</Portuguese>
+            <Korean>Stoner 99 LMG (검정)</Korean>
+            <Chinesesimp>斯通纳99轻机枪(黑色)</Chinesesimp>
+            <Japanese>ストーナー 99 LMG(ブラック)</Japanese>
+            <Turkish>Stoner 99 LMG (Siyah)</Turkish>
+            <Hungarian>Stoner 99 Könnyűgéppuska (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65">
+            <English>MSBS Grot</English>
+            <Chinese>MSBS Grot</Chinese>
+            <French>MSBS Grot</French>
+            <Spanish>MSBS Grot</Spanish>
+            <Italian>MSBS Grot</Italian>
+            <Polish>MSBS Grot</Polish>
+            <Russian>MSBS Grot</Russian>
+            <German>MSBS Grot</German>
+            <Czech>MSBS Grot</Czech>
+            <Portuguese>MSBS Grot</Portuguese>
+            <Korean>MSBS Grot</Korean>
+            <Chinesesimp>MSBS Grot</Chinesesimp>
+            <Japanese>MSBS Grot</Japanese>
+            <Turkish>MSBS Grot</Turkish>
+            <Hungarian>MSBS Grot</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_black">
+            <English>MSBS Grot (Black)</English>
+            <Chinese>MSBS Grot(黑色)</Chinese>
+            <French>MSBS Grot (Noir)</French>
+            <Spanish>MSBS Grot (Negro)</Spanish>
+            <Italian>MSBS Grot (Nero)</Italian>
+            <Polish>MSBS Grot (Czarny)</Polish>
+            <Russian>MSBS Grot (Чёрный)</Russian>
+            <German>MSBS Grot (Schwarz)</German>
+            <Czech>MSBS Grot (Černá)</Czech>
+            <Portuguese>MSBS Grot (Preto)</Portuguese>
+            <Korean>MSBS Grot (검정)</Korean>
+            <Chinesesimp>MSBS Grot(黑色)</Chinesesimp>
+            <Japanese>MSBS Grot(ブラック)</Japanese>
+            <Turkish>MSBS Grot (Siyah)</Turkish>
+            <Hungarian>MSBS Grot (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_camo">
+            <English>MSBS Grot (Camo)</English>
+            <Chinese>MSBS Grot(迷彩)</Chinese>
+            <French>MSBS Grot (Camo)</French>
+            <Spanish>MSBS Grot (Camuflaje)</Spanish>
+            <Italian>MSBS Grot (Camo)</Italian>
+            <Polish>MSBS Grot (Kamuflaż)</Polish>
+            <Russian>MSBS Grot (Камо)</Russian>
+            <German>MSBS Grot (Tarnmuster)</German>
+            <Czech>MSBS Grot (Kamufláž)</Czech>
+            <Portuguese>MSBS Grot (Camo)</Portuguese>
+            <Korean>MSBS Grot (위장)</Korean>
+            <Chinesesimp>MSBS Grot(迷彩)</Chinesesimp>
+            <Japanese>MSBS Grot (カモフラージュ)</Japanese>
+            <Turkish>MSBS Grot (Kamuflaj)</Turkish>
+            <Hungarian>MSBS Grot (Terepmintás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_sand">
+            <English>MSBS Grot (Sand)</English>
+            <Chinese>MSBS Grot(沙色)</Chinese>
+            <French>MSBS Grot (Beige)</French>
+            <Spanish>MSBS Grot (Arena)</Spanish>
+            <Italian>MSBS Grot (Sabbia)</Italian>
+            <Polish>MSBS Grot (Piaskowy)</Polish>
+            <Russian>MSBS Grot (Песочный)</Russian>
+            <German>MSBS Grot (Sandfarben)</German>
+            <Czech>MSBS Grot (Písková)</Czech>
+            <Portuguese>MSBS Grot (Deserto)</Portuguese>
+            <Korean>MSBS Grot (모래)</Korean>
+            <Chinesesimp>MSBS Grot(沙色)</Chinesesimp>
+            <Japanese>MSBS Grot (サンド)</Japanese>
+            <Turkish>MSBS Grot (Kum)</Turkish>
+            <Hungarian>MSBS Grot (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL">
+            <English>MSBS Grot GL</English>
+            <Chinese>MSBS Grot GL</Chinese>
+            <French>MSBS Grot GL</French>
+            <Spanish>MSBS Grot GL</Spanish>
+            <Italian>MSBS Grot GL</Italian>
+            <Polish>MSBS Grot GL</Polish>
+            <Russian>MSBS Grot GL</Russian>
+            <German>MSBS Grot GL</German>
+            <Czech>MSBS Grot GL</Czech>
+            <Portuguese>MSBS Grot GL</Portuguese>
+            <Korean>MSBS Grot GL</Korean>
+            <Chinesesimp>MSBS Grot GL</Chinesesimp>
+            <Japanese>MSBS Grot GL</Japanese>
+            <Turkish>MSBS Grot GL</Turkish>
+            <Hungarian>MSBS Grot GL</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_black">
+            <English>MSBS Grot GL (Black)</English>
+            <Chinese>MSBS Grot GL(黑色)</Chinese>
+            <French>MSBS Grot GL (Noir)</French>
+            <Spanish>MSBS Grot GL (Negro)</Spanish>
+            <Italian>MSBS Grot GL (Nero)</Italian>
+            <Polish>MSBS Grot GL (Czarny)</Polish>
+            <Russian>MSBS Grot GL (Чёрный)</Russian>
+            <German>MSBS Grot GL (Schwarz)</German>
+            <Czech>MSBS Grot GL (Černá)</Czech>
+            <Portuguese>MSBS Grot GL (Preto)</Portuguese>
+            <Korean>MSBS Grot GL (검정)</Korean>
+            <Chinesesimp>MSBS Grot GL(黑色)</Chinesesimp>
+            <Japanese>MSBS Grot GL(ブラック)</Japanese>
+            <Turkish>MSBS Grot GL (Siyah)</Turkish>
+            <Hungarian>MSBS Grot GL (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_camo">
+            <English>MSBS Grot GL (Camo)</English>
+            <Chinese>MSBS Grot GL(迷彩)</Chinese>
+            <French>MSBS Grot GL (Camo)</French>
+            <Spanish>MSBS Grot GL (Camuflaje)</Spanish>
+            <Italian>MSBS Grot GL (Camo)</Italian>
+            <Polish>MSBS Grot GL (Kamuflaż)</Polish>
+            <Russian>MSBS Grot GL (Камо)</Russian>
+            <German>MSBS Grot GL (Tarnmuster)</German>
+            <Czech>MSBS Grot GL (Kamufláž)</Czech>
+            <Portuguese>MSBS Grot GL (Camo)</Portuguese>
+            <Korean>MSBS Grot GL (위장)</Korean>
+            <Chinesesimp>MSBS Grot GL(迷彩)</Chinesesimp>
+            <Japanese>MSBS Grot GL (カモフラージュ)</Japanese>
+            <Turkish>MSBS Grot GL (Kamuflaj)</Turkish>
+            <Hungarian>MSBS Grot GL (Terepmintás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_GL_sand">
+            <English>MSBS Grot GL (Sand)</English>
+            <Chinese>MSBS Grot GL(沙色)</Chinese>
+            <French>MSBS Grot GL (Beige)</French>
+            <Spanish>MSBS Grot GL (Arena)</Spanish>
+            <Italian>MSBS Grot GL (Sabbia)</Italian>
+            <Polish>MSBS Grot GL (Piaskowy)</Polish>
+            <Russian>MSBS Grot GL (Песочный)</Russian>
+            <German>MSBS Grot GL (Sandfarben)</German>
+            <Czech>MSBS Grot GL (Písková)</Czech>
+            <Portuguese>MSBS Grot GL (Deserto)</Portuguese>
+            <Korean>MSBS Grot GL (모래)</Korean>
+            <Chinesesimp>MSBS Grot GL(沙色)</Chinesesimp>
+            <Japanese>MSBS Grot GL (サンド)</Japanese>
+            <Turkish>MSBS Grot GL (Kum)</Turkish>
+            <Hungarian>MSBS Grot GL (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark">
+            <English>MSBS Grot MR</English>
+            <Chinese>MSBS Grot MR</Chinese>
+            <French>MSBS Grot MR</French>
+            <Spanish>MSBS Grot MR</Spanish>
+            <Italian>MSBS Grot MR</Italian>
+            <Polish>MSBS Grot MR</Polish>
+            <Russian>MSBS Grot MR</Russian>
+            <German>MSBS Grot MR</German>
+            <Czech>MSBS Grot MR</Czech>
+            <Portuguese>MSBS Grot MR</Portuguese>
+            <Korean>MSBS Grot MR</Korean>
+            <Chinesesimp>MSBS Grot MR</Chinesesimp>
+            <Japanese>MSBS Grot MR</Japanese>
+            <Turkish>MSBS Grot MR</Turkish>
+            <Hungarian>MSBS Grot MR</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_black">
+            <English>MSBS Grot MR (Black)</English>
+            <Chinese>MSBS Grot MR(黑色)</Chinese>
+            <French>MSBS Grot MR (Noir)</French>
+            <Spanish>MSBS Grot MR (Negro)</Spanish>
+            <Italian>MSBS Grot MR (Nero)</Italian>
+            <Polish>MSBS Grot MR (Czarny)</Polish>
+            <Russian>MSBS Grot MR (Чёрный)</Russian>
+            <German>MSBS Grot MR (Schwarz)</German>
+            <Czech>MSBS Grot MR (Černá)</Czech>
+            <Portuguese>MSBS Grot MR (Preto)</Portuguese>
+            <Korean>MSBS Grot MR (검정)</Korean>
+            <Chinesesimp>MSBS Grot MR(黑色)</Chinesesimp>
+            <Japanese>MSBS Grot MR(ブラック)</Japanese>
+            <Turkish>MSBS Grot MR (Siyah)</Turkish>
+            <Hungarian>MSBS Grot MR (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_camo">
+            <English>MSBS Grot MR (Camo)</English>
+            <Chinese>MSBS Grot MR(迷彩)</Chinese>
+            <French>MSBS Grot MR (Camo)</French>
+            <Spanish>MSBS Grot MR (Camuflaje)</Spanish>
+            <Italian>MSBS Grot MR (Camo)</Italian>
+            <Polish>MSBS Grot MR (Kamuflaż)</Polish>
+            <Russian>MSBS Grot MR (Камо)</Russian>
+            <German>MSBS Grot MR (Tarnmuster)</German>
+            <Czech>MSBS Grot MR (Kamufláž)</Czech>
+            <Portuguese>MSBS Grot MR (Camo)</Portuguese>
+            <Korean>MSBS Grot MR (위장)</Korean>
+            <Chinesesimp>MSBS Grot MR(迷彩)</Chinesesimp>
+            <Japanese>MSBS Grot MR (カモフラージュ)</Japanese>
+            <Turkish>MSBS Grot MR (Kamuflaj)</Turkish>
+            <Hungarian>MSBS Grot MR (Terepmintás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_Mark_sand">
+            <English>MSBS Grot MR (Sand)</English>
+            <Chinese>MSBS Grot MR(沙色)</Chinese>
+            <French>MSBS Grot MR (Beige)</French>
+            <Spanish>MSBS Grot MR (Arena)</Spanish>
+            <Italian>MSBS Grot MR (Sabbia)</Italian>
+            <Polish>MSBS Grot MR (Piaskowy)</Polish>
+            <Russian>MSBS Grot MR (Песочный)</Russian>
+            <German>MSBS Grot MR (Sandfarben)</German>
+            <Czech>MSBS Grot MR (Písková)</Czech>
+            <Portuguese>MSBS Grot MR (Deserto)</Portuguese>
+            <Korean>MSBS Grot MR (모래)</Korean>
+            <Chinesesimp>MSBS Grot MR(沙色)</Chinesesimp>
+            <Japanese>MSBS Grot MR (サンド)</Japanese>
+            <Turkish>MSBS Grot MR (Kum)</Turkish>
+            <Hungarian>MSBS Grot MR (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS">
+            <English>MSBS Grot SG</English>
+            <Chinese>MSBS Grot SG</Chinese>
+            <French>MSBS Grot SG</French>
+            <Spanish>MSBS Grot SG</Spanish>
+            <Italian>MSBS Grot SG</Italian>
+            <Polish>MSBS Grot SG</Polish>
+            <Russian>MSBS Grot SG</Russian>
+            <German>MSBS Grot SG</German>
+            <Czech>MSBS Grot SG</Czech>
+            <Portuguese>MSBS Grot SG</Portuguese>
+            <Korean>MSBS Grot SG</Korean>
+            <Chinesesimp>MSBS Grot SG</Chinesesimp>
+            <Japanese>MSBS Grot SG</Japanese>
+            <Turkish>MSBS Grot SG</Turkish>
+            <Hungarian>MSBS Grot SG</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_black">
+            <English>MSBS Grot SG (Black)</English>
+            <Chinese>MSBS Grot SG(黑色)</Chinese>
+            <French>MSBS Grot SG (Noir)</French>
+            <Spanish>MSBS Grot SG (Negro)</Spanish>
+            <Italian>MSBS Grot SG (Nero)</Italian>
+            <Polish>MSBS Grot SG (Czarny)</Polish>
+            <Russian>MSBS Grot SG (Чёрный)</Russian>
+            <German>MSBS Grot SG (Schwarz)</German>
+            <Czech>MSBS Grot SG (Černá)</Czech>
+            <Portuguese>MSBS Grot SG (Preto)</Portuguese>
+            <Korean>MSBS Grot SG (검정)</Korean>
+            <Chinesesimp>MSBS Grot SG(黑色)</Chinesesimp>
+            <Japanese>MSBS Grot SG(ブラック)</Japanese>
+            <Turkish>MSBS Grot SG (Siyah)</Turkish>
+            <Hungarian>MSBS Grot SG (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_camo">
+            <English>MSBS Grot SG (Camo)</English>
+            <Chinese>MSBS Grot SG(迷彩)</Chinese>
+            <French>MSBS Grot SG (Camo)</French>
+            <Spanish>MSBS Grot SG (Camuflaje)</Spanish>
+            <Italian>MSBS Grot SG (Camo)</Italian>
+            <Polish>MSBS Grot SG (Kamuflaż)</Polish>
+            <Russian>MSBS Grot SG (Камо)</Russian>
+            <German>MSBS Grot SG (Tarnmuster)</German>
+            <Czech>MSBS Grot SG (Kamufláž)</Czech>
+            <Portuguese>MSBS Grot SG (Camo)</Portuguese>
+            <Korean>MSBS Grot SG (위장)</Korean>
+            <Chinesesimp>MSBS Grot SG(迷彩)</Chinesesimp>
+            <Japanese>MSBS Grot SG (カモフラージュ)</Japanese>
+            <Turkish>MSBS Grot SG (Kamuflaj)</Turkish>
+            <Hungarian>MSBS Grot SG (Terepmintás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MSBS65_UBS_sand">
+            <English>MSBS Grot SG (Sand)</English>
+            <Chinese>MSBS Grot SG(沙色)</Chinese>
+            <French>MSBS Grot SG (Beige)</French>
+            <Spanish>MSBS Grot SG (Arena)</Spanish>
+            <Italian>MSBS Grot SG (Sabbia)</Italian>
+            <Polish>MSBS Grot SG (Piaskowy)</Polish>
+            <Russian>MSBS Grot SG (Песочный)</Russian>
+            <German>MSBS Grot SG (Sandfarben)</German>
+            <Czech>MSBS Grot SG (Písková)</Czech>
+            <Portuguese>MSBS Grot SG (Deserto)</Portuguese>
+            <Korean>MSBS Grot SG (모래)</Korean>
+            <Chinesesimp>MSBS Grot SG(沙色)</Chinesesimp>
+            <Japanese>MSBS Grot SG (サンド)</Japanese>
+            <Turkish>MSBS Grot SG (Kum)</Turkish>
+            <Hungarian>MSBS Grot SG (Homok)</Hungarian>
         </Key>
     </Package>
 </Project>

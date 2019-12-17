@@ -22,7 +22,7 @@ if (_player == _target) then {
     if ((vehicle _target) isKindOf "StaticWeapon") then {
         _target = vehicle _target;
     };
-    [_unit, "Gear", 1] call EFUNC(common,doGesture);
+    [_player, "Gear", 1] call EFUNC(common,doGesture);
 };
 
 [FUNC(displayAmmo), [_target], 1] call CBA_fnc_waitAndExecute;

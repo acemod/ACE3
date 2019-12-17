@@ -7,20 +7,19 @@
  * 0: The Unit <OBJECT>
  *
  * Return Value:
- * None
+ * Update Ran (at least 1 second between runs) <BOOL>
  *
  * Example:
  * [player] call ace_medical_vitals_fnc_handleUnitVitals
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
 
 params ["_unit"];
 
 private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), 0];
 private _deltaT = (CBA_missionTime - _lastTimeUpdated) min 10;
-if (_deltaT < 1) exitWith {}; // state machines could be calling this very rapidly depending on number of local units
+if (_deltaT < 1) exitWith { false }; // state machines could be calling this very rapidly depending on number of local units
 
 BEGIN_COUNTER(Vitals);
 
@@ -165,3 +164,5 @@ if (!isPlayer _unit) then {
 #endif
 
 END_COUNTER(Vitals);
+
+true

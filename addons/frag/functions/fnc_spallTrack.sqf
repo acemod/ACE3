@@ -24,11 +24,7 @@ private _velocity = velocity _round;
 private _velocityStep = _velocity vectorMultiply _delta;
 private _forwardPos = _curPos vectorAdd _velocityStep;
 
-private _intersectsWith = lineIntersectsWith [_curPos, _forwardPos];
-
-if (_intersectsWith isEqualTo []) exitWith {};
-
-// player sideChat format ["inter: %1", _intersectsWith];
+if !((lineIntersectsSurfaces [_curPos, _forwardPos]) isEqualTo []) exitWith {};
 {
     // diag_log text format ["Adding HP: %1", _x];
     private _index = count GVAR(spallHPData);

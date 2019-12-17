@@ -445,7 +445,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\mortar_m251_CA.paa";
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_M252_D_ca.paa";
     };
 
     class GVAR(m2_carry): Launcher_Base_F {
@@ -466,7 +466,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsusf\addons\rhsusf_editorPreviews\data\rhs_M2StaticMG_D.paa";
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_M2StaticMG_D_ca.paa";
     };
 
     class GVAR(mk19_carry): Launcher_Base_F {
@@ -486,7 +486,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\mk19_stat_CA.paa";
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_MK19_TriPod_D_ca.paa";
     };
 
     class GVAR(tow_carry): Launcher_Base_F {
@@ -506,7 +506,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\Ico\tow_static_CA.paa";
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\Ico\RHS_TOW_TriPod_D_ca.paa";
     };
 };
 

@@ -61,7 +61,7 @@ if (_proxyWeaponNeeded || GVAR(useAmmoHandling)) then {
     } forEach (magazinesAllTurrets _mortar);
 
     // remove orignal mags and add 1rnd versions:
-    { _staticWeapon removeMagazinesTurret _x; } forEach _magsToRemove;
+    { _mortar removeMagazinesTurret _x; } forEach _magsToRemove;
     { _mortar addMagazineTurret _x; } forEach _convertedMags;
 };
 

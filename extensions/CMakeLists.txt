@@ -99,8 +99,8 @@ endif()
 
 string(TIMESTAMP ACE_BUILDSTAMP "%Y-%m-%dT%H:%M:%SZ")
 set(ACE_VERSION_MAJOR 3)
-set(ACE_VERSION_MINOR 12)
-set(ACE_VERSION_REVISION 3)
+set(ACE_VERSION_MINOR 13)
+set(ACE_VERSION_REVISION 0)
 EXECUTE_PROCESS(COMMAND git rev-parse --verify HEAD
     OUTPUT_VARIABLE T_ACE_VERSION_BUILD
     OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -136,6 +136,7 @@ add_subdirectory(clipboard)
 add_subdirectory(advanced_ballistics)
 add_subdirectory(medical)
 add_subdirectory(strings)
+add_subdirectory(artillerytables)
 
 # Test Extension for dynamically loading/unloading built extensions; does not build in release
 if (DEVEL)

@@ -9,11 +9,7 @@
     } forEach (_unit getVariable [QEGVAR(medical,allLogs), []]);
 
     _unit setVariable [QEGVAR(medical,allLogs), [], true];
-
-    [_unit] call FUNC(checkItems);
 }] call CBA_fnc_addEventHandler;
-
-["loadout", LINKFUNC(checkItems)] call CBA_fnc_addPlayerEventHandler;
 
 // Handle body removal and litter on server
 if (isServer) then {
@@ -36,3 +32,32 @@ if (isServer) then {
 // Logging events
 [QGVAR(addToLog), LINKFUNC(addToLog)] call CBA_fnc_addEventHandler;
 [QGVAR(addToTriageCard), LINKFUNC(addToTriageCard)] call CBA_fnc_addEventHandler;
+
+// replace medical items with their ACE equivalents
+["ace_settingsInitialized", {
+    TRACE_1("ace_settingsInitialized EH",GVAR(convertItems)); // 0: Enabled 1: RemoveOnly 2:Disabled
+    if (GVAR(convertItems) == 2) exitWith {};
+    {
+        // turn [["stuff", 2], ...] into ["stuff", "stuff", ...]
+        private _replacements = [];
+        if (GVAR(convertItems) == 0) then {
+            {
+                _x params ["_item", "_count"];
+                for "_i" from 1 to _count do {
+                    _replacements pushBack _item;
+                };
+            } forEach getArray _x;
+        };
+
+        // check if replacement is for item type or class name
+        private _configName = configName _x;
+        private _toReplace = if ((_configName select [0,9]) == "ItemType_") then {
+            parseNumber (_configName select [9])
+        } else {
+            _configName
+        };
+
+        // register replacement
+        [_toReplace, _replacements] call EFUNC(common,registerItemReplacement);
+    } forEach (configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"]);
+}] call CBA_fnc_addEventHandler;

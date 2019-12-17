@@ -269,81 +269,99 @@
             <French>Cyalume (Hi Bleu)</French>
             <Japanese>ケミライト (高輝度 青)</Japanese>
             <Polish>Świetlik (jaskrawy niebieski)</Polish>
+            <German>Knicklicht (Blau, Hell)</German>
             <Italian>Luce chimica (Hi Blu)</Italian>
             <Russian>Химсвет (Ярко-Синий)</Russian>
             <Portuguese>Bastão de Luz (Azul Forte)</Portuguese>
+            <Chinese>螢光棒（超亮藍色）</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DisplayNameShort">
             <English>Blue Hi Light</English>
             <French>Lum. bleue haute intensité</French>
+            <German>Helles, blaues Knicklicht</German>
             <Japanese>高輝度の青色</Japanese>
             <Polish>Jaskrawe niebieskie światło</Polish>
             <Italian>Luce Hi Blu</Italian>
             <Russian>Яркий Синий свет</Russian>
             <Portuguese>Luz forte azul</Portuguese>
+            <Chinese>超亮藍色光</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DescriptionShort">
             <English>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
             <French>Type: Lumière - bleue Hi (30 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <German>Typ: Licht - blau, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Japanese>種類: 照明 - 高輝度 青 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe niebieskie (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <Italian>Tipo: Luce - Hi blu (30 minuti)&lt;br/&gt;Rimanenti:1 &lt;br/&gt;Usata in: Mano</Italian>
             <Russian>Тип: Свет - Ярко-Синий (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Azul Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Chinese>類型: 光 - 超亮藍色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DisplayName">
             <English>Chemlight (Hi Green)</English>
             <French>Cyalume (Hi Vert)</French>
+            <German>Knicklicht (Grün, Hell)</German>
             <Japanese>ケミライト (高輝度 緑)</Japanese>
             <Polish>Świetlik (jaskrawy zielony)</Polish>
             <Italian>Luce chimica (Hi Verde)</Italian>
             <Russian>Химсвет (Ярко-Зеленый)</Russian>
             <Portuguese>Bastão de Luz (Verde Forte)</Portuguese>
+            <Chinese>螢光棒（超亮綠色）</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DisplayNameShort">
             <English>Green Hi Light</English>
             <French>Lum. verte haute intensité</French>
+            <German>Helles, grünes Knicklicht</German>
             <Japanese>高輝度の青色</Japanese>
             <Polish>Jaskrawe zielone światło</Polish>
             <Italian>Luce Hi Verde</Italian>
             <Russian>Яркий Зеленый свет</Russian>
             <Portuguese>Luz forte verde</Portuguese>
+            <Chinese>超亮綠色光</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DescriptionShort">
             <English>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
             <French>Type: Lumière - verte Hi (30 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <German>Typ: Licht - grün, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Japanese>種類: 照明 - 高輝度 緑 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe zielone (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <Italian>Tipo: Luce - Hi verde (30 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Russian>Тип: Свет - Ярко-Зеленый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Verde Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Chinese>類型: 光 - 超亮綠色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayName">
             <English>Chemlight (Ultra-Hi Orange)</English>
             <French>Cyalume (Ultra-Hi orange)</French>
+            <German>Knicklicht (Orange, Hell)</German>
             <Japanese>ケミライト (高輝度 オレンジ)</Japanese>
             <Polish>Świetlik (ultra-jaskrawy pomarańczowy)</Polish>
             <Italian>Luce chimica (Ultra-Hi Arancione)</Italian>
             <Russian>Химсвет (Ультраяркий Оранжевый)</Russian>
             <Portuguese>Bastão de Luz (Laranja Ultra Forte)</Portuguese>
+            <Chinese>螢光棒（極亮橘色）</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayNameShort">
             <English>Orange Ultra-Hi Light</English>
             <French>Lum. orange ultra haute intensité</French>
+            <German>Helles, orangenes Knicklicht</German>
             <Japanese>ウルトラ高輝度のオレンジ色</Japanese>
             <Polish>Ultra-jaskrawe pomarańczowe światło</Polish>
             <Italian>Luce Ultra-Hi Arancione</Italian>
             <Russian>Ультраяркий Оранжевый свет</Russian>
             <Portuguese>Luz ultra forte laranja</Portuguese>
+            <Chinese>極亮橘色光</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DescriptionShort">
             <English>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
             <French>Type: Lumière - Orange Ultra-Hi (5 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <German>Typ: Licht - orange, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Japanese>種類: 照明 - ウルトラ高輝度 オレンジ (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - ultra-jaskrawe pomarańczowe (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <Polish>Typ: Światło - ultra-jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <Italian>Tipo: Luce - Ultra-Hi (5 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Russian>Тип: Свет - Ультраяркий Оранжевый (5 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Laranja Ultra Forte (5 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Chinese>類型: 光 - 極亮橘色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
             <English>Chemlight (IR)</English>
