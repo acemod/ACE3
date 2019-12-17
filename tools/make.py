@@ -73,7 +73,7 @@ prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = []
 importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "docs\\README.zh-TW.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
-versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
+versionFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "docs\\README.zh-TW.md"]
 
 ciBuild = False # Used for CI builds
 
