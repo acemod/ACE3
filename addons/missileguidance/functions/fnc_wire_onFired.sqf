@@ -26,7 +26,7 @@ private _maxDistanceSqr = _seekerMaxRange * _seekerMaxRange;
 private _minDistanceSqr = _seekerMinRange * _seekerMinRange;
 
 // AI don't know how to use the crosshair offset becauze they dum dum
-_crosshairOffset = if ((_gunner != ACE_PLAYER) && {_gunner != (ACE_controlledUAV select 1)}) then {
+private _crosshairOffset = if ((_gunner != ACE_PLAYER) && {_gunner != (ACE_controlledUAV select 1)}) then {
     [0, 0, 0];
 } else {
     [_config >> "offsetFromCrosshair", "ARRAY", [0, 0, 0]] call CBA_fnc_getConfigEntry

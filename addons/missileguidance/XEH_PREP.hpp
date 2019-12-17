@@ -10,7 +10,7 @@ PREP(onFired);
 PREP(onIncomingMissile);
 
 PREP(guidancePFH);
-PREP(doAttackProfile); 
+PREP(doAttackProfile);
 PREP(doSeekerSearch);
 
 PREP(doHandoff);
@@ -23,6 +23,7 @@ PREP(attackProfile_HI);
 PREP(attackProfile_LIN);
 PREP(attackProfile_MID);
 PREP(attackProfile_WIRE);
+PREP(attackProfile_BEAM);
 
 // Javelin profiles
 PREP(attackProfile_JAV_DIR);

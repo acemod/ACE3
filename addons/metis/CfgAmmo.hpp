@@ -6,7 +6,7 @@ class CfgAmmo {
         laserLock = 0;
         airLock = 0;
         lockType = 0;
-        
+
         class ace_missileguidance {
             enabled = 1;
 
@@ -38,7 +38,7 @@ class CfgAmmo {
             attackProfiles[] = {"WIRE"};
         };
     };
-    
+
     class M_Vorona_HE;
     class GVAR(HE): M_Vorona_HE {
         manualControl = 0;
@@ -46,7 +46,7 @@ class CfgAmmo {
         laserLock = 0;
         airLock = 0;
         lockType = 0;
-        
+
         class ace_missileguidance {
             enabled = 1;
 

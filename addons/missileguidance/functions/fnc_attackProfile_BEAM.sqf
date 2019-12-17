@@ -12,7 +12,7 @@
  * Missile Aim PosASL <ARRAY>
  *
  * Example:
- * [[1,2,3], [], []] call ace_missileguidance_fnc_attackProfile_WIRE;
+ * [[1,2,3], [], []] call ace_missileguidance_fnc_attackProfile_BEAM;
  *
  * Public: No
  */
