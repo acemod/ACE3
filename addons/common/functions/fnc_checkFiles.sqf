@@ -105,6 +105,9 @@ if (!isServer && {_platform in ["linux", "osx"]}) then {
         };
     } forEach ("true" configClasses (configFile >> "ACE_Extensions"));
 };
+if (isArray (configFile >> "ACE_Extensions" >> "extensions")) then {
+    WARNING("extensions[] array no longer supported");
+};
 
 ///////////////
 // check server version/addons

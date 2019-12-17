@@ -23,7 +23,7 @@
             <Japanese>ドッグ タグを見る</Japanese>
             <German>Hundemarke prüfen</German>
             <Korean>군번줄 확인</Korean>
-            <French>Vérifier les plaques d'identification</French>
+            <French>Vérifier la plaque d'identification</French>
             <Italian>Controlla Piastrina</Italian>
             <Chinese>檢查兵籍牌</Chinese>
             <Chinesesimp>检查兵籍牌</Chinesesimp>
@@ -65,7 +65,7 @@
             <Japanese>%1からドッグ タグを取っています・・・</Japanese>
             <German>Hundemarke von %1 genommen ...</German>
             <Korean>%1로부터 군번줄을 회수했습니다...</Korean>
-            <French>Plaque d'identification pris sur %1...</French>
+            <French>Plaque d'identification prise sur %1...</French>
             <Italian>Piastrina presa da %1...</Italian>
             <Chinese>從%1身上拿取兵籍牌...</Chinese>
             <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
@@ -79,7 +79,7 @@
             <Japanese>すでにドッグ タグは取られています・・・</Japanese>
             <German>Jemand anderes hat bereits die Hundemarke genommen ...</German>
             <Korean>누군가 이미 군번줄을 회수해갔습니다...</Korean>
-            <French>Quelqu'un d'autre a déjâ pris les plaques d'identification...</French>
+            <French>Quelqu'un d'autre a déjà pris la plaque d'identification...</French>
             <Italian>Qualcun altro ha già preso la piastrina...</Italian>
             <Chinese>已經有人把他的兵籍牌拿走了...</Chinese>
             <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
@@ -94,6 +94,7 @@
             <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
             <Russian>Экран для проверки жетонов</Russian>
             <Portuguese>Tela de Exibição para verificar dogtags</Portuguese>
+            <French>Affichage à l'écran pour le contrôle des plaques.</French>
         </Key>
     </Package>
 </Project>

@@ -40,7 +40,7 @@ GVAR(adjustPFH) = [{
 
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 // add mouse button action and hint
-[localize "STR_ACE_Tripod_Done", "", localize "STR_ACE_Tripod_ScrollAction"] call EFUNC(interaction,showMouseHint);
+[LLSTRING(Done), "", LLSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(Adjust), [
     _unit, "DefaultAction",

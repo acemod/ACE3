@@ -7,7 +7,7 @@
             <Spanish>Limitador de velocidad activado</Spanish>
             <Polish>Ogranicznik prędkości włączony</Polish>
             <Czech>Omezovač rychlosti zapnut</Czech>
-            <French>Limiteur de vitesse Activé</French>
+            <French>Limiteur de vitesse activé</French>
             <Russian>Ограничение скорости включено</Russian>
             <Hungarian>Sebességkorlátozó bekapcsolva</Hungarian>
             <Portuguese>Limitador de Velocidade Ativo</Portuguese>
@@ -23,7 +23,7 @@
             <Spanish>Limitador de velocidad desactivado</Spanish>
             <Polish>Ogranicznik prędkości wyłączony</Polish>
             <Czech>Omezovač rychlosti vypnut</Czech>
-            <French>Limiteur de vitesse Désactivé</French>
+            <French>Limiteur de vitesse désactivé</French>
             <Russian>Ограничение скорости выключено</Russian>
             <Hungarian>Sebességkorlátozó kikapcsolva</Hungarian>
             <Portuguese>Limitador de Velocidade Desativado</Portuguese>
@@ -42,6 +42,8 @@
             <Russian>Ограничение скорости</Russian>
             <Portuguese>Limite de Velocidade</Portuguese>
             <Czech>Rychlostní omezení</Czech>
+            <Chinese>速限</Chinese>
+            <French>Vitesse limite</French>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -68,6 +70,8 @@
             <Russian>Увеличить ограничение скорости</Russian>
             <Portuguese>Aumentar Limite de Velocidade</Portuguese>
             <Czech>Zvyš rychlostní limit</Czech>
+            <Chinese>增加速限</Chinese>
+            <French>Augmenter la vitesse limite</French>
         </Key>
         <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
             <English>Decrease Speed Limit</English>
@@ -78,6 +82,8 @@
             <Russian>Уменьшить ограничение скорости</Russian>
             <Portuguese>Diminuir Limite de Velocidade</Portuguese>
             <Czech>Sniž rychlostní limit</Czech>
+            <Chinese>降低速限</Chinese>
+            <French>Diminuer la vitesse limite</French>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
             <English>Disable automatic engine shut-off</English>
@@ -86,6 +92,8 @@
             <Russian>Убрать автовыключение двигателя</Russian>
             <Portuguese>Desativar desligamento automático do motor</Portuguese>
             <Czech>Vypni automatické vypnutí motoru</Czech>
+            <Chinese>關閉引擎自動熄火</Chinese>
+            <French>Désactiver l'arrêt automatique du moteur</French>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
@@ -94,6 +102,8 @@
             <Russian>Запрещает автоматическое выключение двигателя при выходе из транспорта</Russian>
             <Portuguese>Previne que o motor do veículo seja desligado automaticamente quando o motorista sair.</Portuguese>
             <Czech>Zabraň automatickému vypnutí motoru při opuštění vozidla.</Czech>
+            <Chinese>避免離開載具時自動熄火。</Chinese>
+            <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules</French>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>
@@ -102,6 +112,8 @@
             <Russian>Убрать действие 'Выпрыгнуть'</Russian>
             <Japanese>脱出アクションを非表示</Japanese>
             <Portuguese>Ocultar opção de Ejetar</Portuguese>
+            <Chinese>隱藏逃脫動作</Chinese>
+            <French>Masquer l'action d'éjection</French>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
             <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
@@ -110,6 +122,8 @@
             <Russian>Убирает действие 'Выпрыгнуть' из меню. (Требует перезагрузки)</Russian>
             <Japanese>アクション メニューから脱出アクションを消します。ゲームの再起動が必要です。</Japanese>
             <Portuguese>Oculta a opção de interação para ejetar. Requer que o jogo seja reiniciado.</Portuguese>
+            <Chinese>隱藏在動作選單中逃脫動作的選項。要求遊戲重新啟動。</Chinese>
+            <French>Masque l'entrée "Éjection" du menu Action. Nécessite un redémarrage du jeu.</French>
         </Key>
     </Package>
 </Project>

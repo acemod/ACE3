@@ -365,6 +365,7 @@
             <Russian>Доп. объекты</Russian>
             <Portuguese>Objetos adicionais</Portuguese>
             <Czech>Další objekty</Czech>
+            <Chinese>額外物件</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
@@ -375,6 +376,7 @@
             <Russian>Дополнительные объекты для включения в действие, независимо от радиуса выполнения задачи</Russian>
             <Portuguese>Objetos adicionais para incluir na ação, ignorando a distância da tarefa</Portuguese>
             <Czech>Další objekty, které mají být zahrnuty do akce, bez ohledu na poloměr úlohy</Czech>
+            <Chinese>無論任務範圍何處，都在行動中包含著額外的物件</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -1019,6 +1021,7 @@
             <Japanese>なし</Japanese>
             <Russian>Нет</Russian>
             <Portuguese>Nenhum</Portuguese>
+            <Chinese>無</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
             <English>Players</English>
@@ -1028,6 +1031,7 @@
             <Japanese>プレイヤー</Japanese>
             <Russian>Игроки</Russian>
             <Portuguese>Jogadores</Portuguese>
+            <Chinese>玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
             <English>Players and AI</English>
@@ -1037,6 +1041,7 @@
             <Japanese>プレイヤーと AI</Japanese>
             <Russian>Игроки и ИИ</Russian>
             <Portuguese>Jogadores e IA</Portuguese>
+            <Chinese>玩家與AI</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -1651,6 +1656,7 @@
             <Polish>Stwórz Zeus'a</Polish>
             <Italian>Crea Zeus</Italian>
             <Portuguese>Criar Zeus</Portuguese>
+            <Chinese>新增宙斯</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
             <English>Delete Zeus</English>
@@ -1660,6 +1666,7 @@
             <Polish>Usuń Zeus'a</Polish>
             <Italian>Cancella Zeus</Italian>
             <Portuguese>Apagar Zeus</Portuguese>
+            <Chinese>刪除宙斯</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
@@ -1669,6 +1676,7 @@
             <Polish>"%1" menu</Polish>
             <Italian>menu "%1"</Italian>
             <Portuguese>Menu "%1"</Portuguese>
+            <Chinese>選單 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
@@ -1677,6 +1685,7 @@
             <Polish>Zrzut ładunku (cargo)</Polish>
             <Russian>Десантировать груз</Russian>
             <Portuguese>Soltar carga de paraquedas</Portuguese>
+            <Chinese>空投貨物</Chinese>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>
@@ -1685,6 +1694,7 @@
             <Polish>Niczego nie załadowano do cargo</Polish>
             <Russian>Грузовой отсек пуст</Russian>
             <Portuguese>Nenhuma carga carregada</Portuguese>
+            <Chinese>沒有貨物裝載</Chinese>
         </Key>
     </Package>
 </Project>

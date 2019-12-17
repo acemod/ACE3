@@ -4,10 +4,11 @@
         <Key ID="STR_ACE_Medical_Feedback_SubCategory">
             <English>Feedback</English>
             <German>Feedback</German>
-            <Japanese>フィードバック</Japanese>
+            <Japanese>感触</Japanese>
             <Russian>Реакция на ранения</Russian>
             <French>Réaction aux blessures</French>
             <Portuguese>Reação a Lesões</Portuguese>
+            <Chinese>視覺回饋</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -22,6 +23,7 @@
             <Czech>Typ bolesti - efekt</Czech>
             <Japanese>痛み効果の種類</Japanese>
             <Korean>고통 효과 종류</Korean>
+            <Chinese>疼痛效果類型</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
             <English>Selects the used pain effect type.</English>
@@ -29,6 +31,7 @@
             <French>Permet de choisir quel effet provoque la douleur.</French>
             <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
             <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
+            <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -37,6 +40,7 @@
             <Russian>Белые вспышки</Russian>
             <French>Flash blancs</French>
             <Portuguese>Flashes Brancos</Portuguese>
+            <Chinese>白光閃爍</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -45,6 +49,7 @@
             <Russian>Пульсирующее размытие</Russian>
             <French>Pulsations floues</French>
             <Portuguese>Borrão Pulsante</Portuguese>
+            <Chinese>脈動模糊</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
             <English>Chromatic Aberration</English>
@@ -64,6 +69,9 @@
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
             <English>Only high pain effect</English>
+            <Japanese>強い痛みの時のみ</Japanese>
+            <Chinese>只有在強烈疼痛時使用</Chinese>
+            <French>Juste un fort effet douloureux</French>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_painScreamFrequency_DisplayName">
             <English>Pain Scream Frequency</English>
