@@ -26,6 +26,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "artillerytables" %}
+`ace_interaction`
+{% endif %}
+
 {% if include.component == "atragmx" %}
 `ACE_Advanced_Ballistics`, `ACE_common`, `ACE_weather`
 {% endif %}
@@ -291,7 +295,7 @@
 {% endif %}
 
 {% if include.component == "mk6mortar" %}
-`ace_csw`
+`ace_csw`, `ace_artillerytables`
 {% endif %}
 
 {% if include.component == "modules" %}
