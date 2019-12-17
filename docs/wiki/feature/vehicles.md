@@ -43,6 +43,7 @@ MBT main guns and mortars can no longer lock on enemies. The AT rounds of both n
 
 ### 1.10 Disable automatic engine shut-off
 `Added in 3.13.0`
+
 Adds the ability to prevent the automatic shut-off of the engine when exiting vehicles.
 
 ## 2. Usage
