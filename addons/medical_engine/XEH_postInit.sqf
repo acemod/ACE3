@@ -49,7 +49,7 @@
     };
 }] call CBA_fnc_addClassEventHandler;
 
-// guarentee aircraft crashes are more lethal
+// Guarantee aircraft crashes are more lethal
 ["Air", "Killed", {
     params ["_vehicle", "_killer"];
     TRACE_3("air killed",_vehicle,typeOf _vehicle,velocity _vehicle);
