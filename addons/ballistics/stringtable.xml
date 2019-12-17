@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Ballistics">
+        <!-- Shotguns -->
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_NameShort">
+            <English>#00 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
+            <English>#00 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
+            <English>#0 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
+            <English>#0 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
+            <English>#1 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
+            <English>#1 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
+            <English>#2 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
+            <English>#2 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
+            <English>#3 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
+            <English>#3 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
+            <English>#4 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
+            <English>#4 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
+            <English>#7 Birdshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
+            <English>#7 Birdshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
+            <English>12 Gauge 2Rnd #00 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
+            <English>12 Gauge 2Rnd #0 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No1_Buck_Name">
+            <English>12 Gauge 2Rnd #1 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No2_Buck_Name">
+            <English>12 Gauge 2Rnd #2 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No3_Buck_Name">
+            <English>12 Gauge 2Rnd #3 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Buck_Name">
+            <English>12 Gauge 2Rnd #4 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
+            <English>12 Gauge 2Rnd #7 Birdshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
+            <English>12 Gauge 6Rnd #00 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
+            <English>12 Gauge 6Rnd #0 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No1_Buck_Name">
+            <English>12 Gauge 6Rnd #1 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No2_Buck_Name">
+            <English>12 Gauge 6Rnd #2 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No3_Buck_Name">
+            <English>12 Gauge 6Rnd #3 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Buck_Name">
+            <English>12 Gauge 6Rnd #4 Buckshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
+            <English>12 Gauge 6Rnd #7 Birdshot</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
+            <English>12 Gauge 15Rnd #00 Buckshot</English>
+        </Key>
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 20Rnd Mag (HPBT Scenar)</English>
