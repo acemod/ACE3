@@ -13,12 +13,13 @@ endif()
 
 
 
-# enable_testing()
-# set(ACE_TEST_NAME Test_${ACE_EXTENSION_NAME})
+enable_testing()
+set(ACE_TEST_NAME Test_${ACE_EXTENSION_NAME})
 
-# add_executable(${ACE_TEST_NAME} tests/tester.cpp ${SOURCES})
-# target_link_libraries(${ACE_TEST_NAME} ace_common)
-# target_link_libraries(${ACE_TEST_NAME} ${ACE_EXTENSION_NAME})
-# target_link_libraries(${ACE_TEST_NAME} gtest_main)
-# add_test(${ACE_TEST_NAME} ${ACE_TEST_NAME})
-# set_target_properties(${ACE_TEST_NAME} PROPERTIES FOLDER Tests)
+add_executable(${ACE_TEST_NAME} tests/tester.cpp ${SOURCES})
+target_link_libraries(${ACE_TEST_NAME} ace_common)
+target_link_libraries(${ACE_TEST_NAME} ${ACE_EXTENSION_NAME})
+target_link_libraries(${ACE_TEST_NAME} gtest_main)
+add_test(${ACE_TEST_NAME} ${ACE_TEST_NAME})
+set_target_properties(${ACE_TEST_NAME} PROPERTIES FOLDER Tests)
+
