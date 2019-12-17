@@ -16,10 +16,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define VERSION_CONFIG_COMMON VERSION_CONFIG;\
-    versionDesc = "ACE 3";\
-    versionAct = QUOTE(call COMPILE_FILE(init_versionTooltip))
-
 
 #define DIG_SURFACE_BLACKLIST [ \
     "concrete", "concrete_exp", "concrete_int", "int_concrete", "int_concrete_exp", \

@@ -34,5 +34,11 @@
 #define SND_HEARBEAT_FAST   (selectRandom ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"])
 #define SND_HEARBEAT_NORMAL (selectRandom ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"])
 #define SND_HEARBEAT_SLOW   (selectRandom ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"])
+#define SND_FRACTURE        (selectRandom ["ACE_fracture_1", "ACE_fracture_2", "ACE_fracture_3", "ACE_fracture_4"])
 
 #define VOL_UNCONSCIOUS 0.25
+
+#define FX_PAIN_WHITE_FLASH 0
+#define FX_PAIN_PULSATING_BLUR 1
+#define FX_PAIN_CHROMATIC_ABERRATION 2
+#define FX_PAIN_ONLY_BASE 3

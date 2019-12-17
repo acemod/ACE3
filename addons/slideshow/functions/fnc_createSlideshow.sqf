@@ -64,6 +64,11 @@ if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions
 if (_duration == 0) then {
+
+    // Reverse the arrays so that the interactions will be added in the right order
+    reverse _images;
+    reverse _names;
+
     {
         if (_setName == "") then {
             _setName = localize LSTRING(Interaction);

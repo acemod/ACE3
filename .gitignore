@@ -1,8 +1,10 @@
 @*
 *.zip
 release/*
+releases/*
+hemtt
+hemtt.exe
 tools/temp
-tools/armake.exe
 *.cache
 *.pbo
 texHeaders.bin

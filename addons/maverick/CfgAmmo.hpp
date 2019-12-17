@@ -4,7 +4,7 @@ class CfgAmmo {
         class Components;
     };
     class Missile_AGM_02_F : MissileBase {};
-    
+
     class GVAR(L) : Missile_AGM_02_F {
         author = "xrufix";
         autoSeekTarget = 0;

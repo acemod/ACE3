@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="tripod">
+    <Package name="SpottingScope">
         <Key ID="STR_ACE_SpottingScope_DisplayName">
             <English>Spotting Scope</English>
             <German>Teleskop</German>
             <Russian>Зрительная труба</Russian>
             <Polish>Teleskop</Polish>
             <Spanish>Telescopio</Spanish>
-            <French>Téléscope de visée</French>
+            <French>Longue-vue</French>
             <Czech>Zaměřovací dalekohled</Czech>
             <Italian>Cannocchiale</Italian>
             <Hungarian>Megfigyelő távcső</Hungarian>
@@ -23,7 +23,7 @@
             <Russian>Поднять зрительная трубу</Russian>
             <Polish>Zabierz teleskop</Polish>
             <Spanish>Coger telescopio</Spanish>
-            <French>Prendre téléscope de visée</French>
+            <French>Récupérer la longue-vue</French>
             <Czech>Zvednout zaměřovací dalekohled</Czech>
             <Italian>Raccogli Cannocchiale</Italian>
             <Hungarian>Mefgigy. távcső felvétele</Hungarian>
@@ -39,7 +39,7 @@
             <Russian>Установить зрительная трубу</Russian>
             <Polish>Ustaw teleskop</Polish>
             <Spanish>Colocar telescopio</Spanish>
-            <French>Placer téléscope de visée</French>
+            <French>Placer la longue-vue</French>
             <Czech>Položit zaměřovací dalekohled</Czech>
             <Italian>Posiziona Cannocchiale</Italian>
             <Hungarian>Megfigy. távcső elhelyezése</Hungarian>

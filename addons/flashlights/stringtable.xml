@@ -93,12 +93,27 @@
         </Key>
         <Key ID="STR_ACE_Flashlights_statMapLightColor">
             <English>Map light color</English>
+            <German>Farbe des Kartenlichts</German>
             <French>Couleur de la lampe sur carte</French>
             <Japanese>光の色</Japanese>
             <Chinesesimp>地图上手电的颜色</Chinesesimp>
             <Chinese>地圖上使用手電筒的顏色</Chinese>
             <Italian>Colore della luce sulla mappa</Italian>
             <Polish>Kolor światła na mapie</Polish>
+            <Russian>Цвет подсветки карты</Russian>
+            <Portuguese>Cor da lanterna no mapa</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Flashlights_Maglite_ML300L_DisplayName">
+            <English>Maglite ML300L</English>
+            <German>Maglite ML300L</German>
+            <Polish>Maglite ML300L</Polish>
+            <Chinese>Maglite ML300L</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
+            <English>Powerful LED flashlight.</English>
+            <German>Leistungsstarke LED-Taschenlampe.</German>
+            <Polish>Mocna latarka LED.</Polish>
+            <Chinese>強大的LED手電筒</Chinese>
         </Key>
     </Package>
 </Project>
