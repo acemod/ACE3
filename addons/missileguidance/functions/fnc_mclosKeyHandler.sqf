@@ -15,8 +15,9 @@
  *
  * Public: No
  */
-params ["_dir", "_keyDown"];
 if (isNull GVAR(mclosMissile)) exitWith {false};
+
+params ["_dir", "_keyDown"];
 
 GVAR(mclosInput) set [_dir, parseNumber _keyDown];
 true
