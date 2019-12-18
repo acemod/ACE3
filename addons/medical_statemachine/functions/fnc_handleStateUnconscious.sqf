@@ -22,11 +22,6 @@ if (!alive _unit || {!local _unit}) exitWith {};
 
 [_unit] call EFUNC(medical_vitals,handleUnitVitals);
 
-private _painLevel = GET_PAIN_PERCEIVED(_unit);
-if (_painLevel > 0) then {
-    [QEGVAR(medical,moan), [_unit, _painLevel]] call CBA_fnc_localEvent;
-};
-
 // Handle spontaneous wake up from unconsciousness
 if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
     if (_unit call EFUNC(medical_status,hasStableVitals)) then {
