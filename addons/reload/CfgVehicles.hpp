@@ -1,6 +1,17 @@
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
+        class ACE_SelfActions {
+            class ACE_Equipment {
+                class GVAR(checkAmmo) {
+                    displayName = CSTRING(checkAmmo);
+                    condition = QUOTE(GVAR(showCheckAmmoSelf) && {_player call FUNC(canCheckAmmoSelf)});
+                    statement = QUOTE(call FUNC(checkAmmo));
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                };
+            };
+        };
+
         class ACE_Actions {
             class ACE_Weapon {
                 class GVAR(LinkBelt) {
