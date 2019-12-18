@@ -25,8 +25,12 @@ void __stdcall RVExtension(char* output, int outputSize, const char* function) {
 int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function, const char** args, int argsCnt) {
     if (!strcmp(function, "breakLine")) {
         if (argsCnt != 1) { return RETURN_WRONG_ARG_COUNT; }
-        const char* input = args[0];
-        std::string outputStr = addLineBreaks(splitString(input));
+        std::string inputStr(args[0]);
+        if (inputStr.length() >= 2) { // Handle callExtension adding double quotes to start and end of strings
+            inputStr.erase(0, 1);
+            inputStr.erase((inputStr.length() - 1), 1);
+        };
+        std::string outputStr = addLineBreaks(splitString(inputStr));
         strncpy(output, outputStr.c_str(), outputSize);
         return 0;
     };

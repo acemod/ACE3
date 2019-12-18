@@ -51,7 +51,7 @@ namespace test_ace_strings {
     TEST(getImagePath, extension_valid) {
         char output[256];
         char function[] = "getImagePath";
-        const char* args[] = { "<img image='\\A3\\Ui_f\\data\\IGUI\\Cfg\\Actions\\open_door_ca.paa' size='2.5' />" };
+        const char* args[] = { "\"<img image='\\A3\\Ui_f\\data\\IGUI\\Cfg\\Actions\\open_door_ca.paa' size='2.5' />\"" };
         int extReturn = RVExtensionArgs(output, 256, function, args, 1);
         std::cout << "extension_valid: " << output << "\n";
         ASSERT_STREQ(output, "\\A3\\Ui_f\\data\\IGUI\\Cfg\\Actions\\open_door_ca.paa");
@@ -73,7 +73,7 @@ namespace test_ace_strings {
     TEST(breakLine, extension_validShort) {
         char output[256];
         char function[] = "breakLine";
-        const char* args[] = { "aaa" };
+        const char* args[] = { "\"aaa\"" };
         int extReturn = RVExtensionArgs(output, 256, function, args, 1);
         std::cout << "extension_validShort: " << output << "\n";
         ASSERT_STREQ(output, "aaa");
@@ -82,7 +82,7 @@ namespace test_ace_strings {
     TEST(breakLine, extension_validLong) {
         char output[256];
         char function[] = "breakLine";
-        const char* args[] = { "Takes a string and insert as many line breaks as needed so it fits a given width" };
+        const char* args[] = { "\"Takes a string and insert as many line breaks as needed so it fits a given width\"" };
         int extReturn = RVExtensionArgs(output, 256, function, args, 1);
         std::cout << "extension_validLong: " << output << "\n";
         ASSERT_STREQ(output, "Takes a string<br/>and insert as<br/>many line<br/>breaks as<br/>needed so it<br/>fits a given<br/>width");
