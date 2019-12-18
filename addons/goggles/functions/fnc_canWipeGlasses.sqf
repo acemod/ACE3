@@ -15,4 +15,4 @@
  * Public: No
  */
 
-GVAR(effects) != 2 && {!GETVAR(ACE_player,ACE_isUnconscious,false)} // return
+GVAR(effects) == 2 && {!GETVAR(ACE_player,ACE_isUnconscious,false)} // return
