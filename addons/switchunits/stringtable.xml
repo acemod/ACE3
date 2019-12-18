@@ -13,7 +13,7 @@
             <Russian>Переключение юнитов</Russian>
             <Portuguese>Trocar Unidades</Portuguese>
             <Czech>Přepnout jednotky</Czech>
-            <French>Changement de faction</French>
+            <French>Changement de camp</French>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
@@ -22,7 +22,7 @@
             <Czech>Prohozená jednotka</Czech>
             <Polish>Przełączona jednostka</Polish>
             <Spanish>Cambiado de unidad</Spanish>
-            <French>Faction changée</French>
+            <French>Camp changé</French>
             <Hungarian>Egység átváltva</Hungarian>
             <Italian>Unità cambiata</Italian>
             <Portuguese>Trocado de unidade</Portuguese>
@@ -64,7 +64,7 @@
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSwitchUnits_DisplayName">
             <English>Enable switch side</English>
-            <French>Activer le changement de faction</French>
+            <French>Activer le changement de camp</French>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
@@ -265,7 +265,7 @@
             <Czech>Tento modul umožňuje přepínání mazi dostupnými stranami.</Czech>
             <Portuguese>Este módulo permite mudar o lado à disposição dos jogadores.</Portuguese>
             <Russian>Этот модуль позволяет игрокам переключаться между доступными юнитами.</Russian>
-            <French>Ce module vous permet de changer de faction en cours de partie.</French>
+            <French>Ce module vous permet de changer de camp en cours de partie.</French>
             <Italian>Questo modulo ti permette di cambiare lato durante la partita.</Italian>
             <Spanish>El módulo permite a las unidades cambiar de bando durante el juego.</Spanish>
             <Japanese>モジュールはゲームにおいて、陣営の切り替えを有効にします。</Japanese>
