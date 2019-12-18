@@ -21,46 +21,6 @@ class CfgWeapons {
         };
     };
 
-    class RKSL_optic_PMII_312_sunshade: RKSL_optic_PMII_312 {
-        class ItemInfo: ItemInfo { // default RKSL InventoryOpticsItem_Base_F
-            class OpticsModes {
-                class Snip {
-                    cameraDir = "";
-                    discreteDistance[] = {100};
-                    discreteDistanceInitIndex = 0;
-                    distanceZoomMax = 1500;
-                    distanceZoomMin = 100;
-                    memoryPointCamera = "opticView";
-                    opticsDisablePeripherialVision = 1;
-                    opticsDisplayName = "WFOV";
-                    opticsFlare = 1;
-                    opticsID = 1;
-                    opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
-                    opticsZoomInit = "(0.25/3)";
-                    opticsZoomMax = "(0.25/3)";
-                    opticsZoomMin = "(0.25/12)";
-                    useModelOptics = 1;
-                    visionMode[] = {"Normal"};
-                };
-                class RMR {
-                    cameraDir = "";
-                    distanceZoomMax = 100;
-                    distanceZoomMin = 100;
-                    memoryPointCamera = "eye";
-                    opticsDisablePeripherialVision = 0;
-                    opticsFlare = 0;
-                    opticsID = 2;
-                    opticsPPEffects[] = {};
-                    opticsZoomInit = 0.75;
-                    opticsZoomMax = 1.25;
-                    opticsZoomMin = 0.25;
-                    useModelOptics = 0;
-                    visionMode[] = {};
-                };
-            };
-        };
-    };
-
     class RKSL_optic_PMII_525: ItemCore { // https://www.schmidtundbender.de/en/products/police-military-forces/5-25x56-pm-iilp.html
         ACE_ScopeHeightAboveRail = 4.2235;
         ACE_ScopeAdjust_Vertical[] = {0, 26};
