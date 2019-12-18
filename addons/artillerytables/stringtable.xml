@@ -3,9 +3,11 @@
     <Package name="ArtilleryTables">
         <Key ID="STR_ACE_ArtilleryTables_rangetable_displayName">
             <English>Artillery Rangetable</English>
+            <Chinese>火炮射程表</Chinese>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
+            <Chinese>通用的火炮射程表</Chinese>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -41,9 +43,11 @@
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_displayName">
             <English>Artillery Computer Disabled</English>
+            <Chinese>停用火炮電腦</Chinese>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
+            <Chinese>停用原本的火炮控制電腦</Chinese>
         </Key>
-  </Package>
+    </Package>
 </Project>
