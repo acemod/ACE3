@@ -850,7 +850,7 @@
         <Key ID="STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName">
             <English>M6 SLAM Mine (Bottom Attack)</English>
             <!-- <Czech>Mina M6 SLAM</Czech> -->
-            <!-- <French>Module obsolète - Mine M6 SLAM (par le bas)</French> -->
+            <French>/!\ Module obsolète /!\ - Mine M6 SLAM (par le bas)</French>
             <German>M6-SLAM-Mine (Bodenangriff)</German>
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
@@ -871,7 +871,7 @@
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
             <!-- <Czech>Mina M6 SLAM</Czech> -->
-            <!-- <French>Module obsolète - Mine M6 SLAM (de flanc)</French> -->
+            <French>/!\ Module obsolète /!\ - Mine M6 SLAM (de flanc)</French>
             <German>M6-SLAM-Mine (Seitenangriff)</German>
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
@@ -892,7 +892,7 @@
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (městská)</Czech> -->
-            <!-- <French>Module obsolète - Grand EEI (urbain, plaque de pression)</French> -->
+            <French>/!\ Module obsolète /!\ - Grand EEI (urbain, plaque de pression)</French>
             <German>Große USBV (Stadt, Druckplatte)</German>
             <!-- <Italian>IED grande (urbano)</Italian> -->
             <!-- <Polish>Duży IED (miasto)</Polish> -->
@@ -913,7 +913,7 @@
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (zakopaná)</Czech> -->
-            <!-- <French>Module obsolète - Grand EEI (enterré, plaque de pression)</French> -->
+            <French>/!\ Module obsolète /!\ - Grand EEI (enterré, plaque de pression)</French>
             <German>Große USBV (Eingegraben, Druckplatte)</German>
             <!-- <Italian>IED grande (interrato)</Italian> -->
             <!-- <Polish>Duży IED (zakopany)</Polish> -->
@@ -934,7 +934,7 @@
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Malá nálož (městská)</Czech> -->
-            <!-- <French>Petit EEI (Urbain, plaque de pression)</French> -->
+            <French>/!\ Module obsolète /!\ - Petit EEI (Urbain, plaque de pression)</French>
             <German>Kleine USBV (Stadt, Druckplatte)</German>
             <!-- <Italian>IED piccolo (urbano)</Italian> -->
             <!-- <Polish>Mały IED (miasto)</Polish> -->
@@ -955,7 +955,7 @@
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Malá nálož (zakopaná)</Czech> -->
-            <!-- <French>Petit EEI (Enterré, plaque de pression)</French> -->
+            <French>/!\ Module obsolète /!\ - Petit EEI (Enterré, plaque de pression)</French>
             <German>Kleine USBV (Eingegraben, Druckplatte)</German>
             <!-- <Italian>IED piccolo (interrato)</Italian> -->
             <!-- <Polish>Mały IED (zakopany)</Polish> -->

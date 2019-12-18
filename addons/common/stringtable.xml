@@ -458,7 +458,7 @@
             <Portuguese>Ação de Checar PBO</Portuguese>
             <French>Action à la vérification des PBOs</French>
         </Key>
-		<Key ID="STR_ACE_Common_CheckPBOsActionDesc">
+        <Key ID="STR_ACE_Common_CheckPBOsActionDesc">
             <English>Defines the action to be taken if a player does not have the correct PBOs.</English>
             <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
         </Key>
@@ -475,7 +475,7 @@
             <Portuguese>Checar Todos os PBOs</Portuguese>
             <French>Vérifier tous les PBOs</French>
         </Key>
-		<Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
+        <Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
             <English>Check all addons, not only those of ACE.</English>
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
         </Key>
@@ -492,7 +492,7 @@
             <Portuguese>Lista Branca de PBO</Portuguese>
             <French>Vérifier les PBOs en liste blanche</French>
         </Key>
-		<Key ID="STR_ACE_Common_CheckPBOsWhitelistDesc">
+        <Key ID="STR_ACE_Common_CheckPBOsWhitelistDesc">
             <English>Define a list of regardless allowed addons.</English>
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
         </Key>
@@ -689,7 +689,7 @@
             <German>Überprüfe PBOs</German>
             <Czech>Zkontrolovat soubory PBO</Czech>
             <Portuguese>Verificar PBOs</Portuguese>
-            <!-- <French>Module obsolète - Vérifier les PBOs</French> -->
+            <French>/!\ Module obsolète /!\ - Vérifier les PBOs</French>
             <Hungarian>PBO-k ellenőrzése</Hungarian>
             <Russian>Проверка аддонов</Russian>
             <Italian>Controlla PBO</Italian>
@@ -706,7 +706,7 @@
             <Czech>Zjistit addon který je v souladu se serverem</Czech>
             <Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
             <Russian>Выполняет проверку версий аддонов ACE у подключаемых игроков</Russian>
-            <!-- <French>Module obsolète - Vérifie l'intégrité des addons avec le serveur, et effectue l'action sélectionnée si un addon est manquant.</French> -->
+            <French>/!\ Module obsolète /!\ - Vérifie l'intégrité des addons avec le serveur, et effectue l'action sélectionnée si un addon est manquant.</French>
             <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
             <Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
             <Korean>서버 에드온의 무결성을 검사하고 사라진 에드온이 있을경우 행동을 선택합니다.</Korean>
@@ -720,7 +720,7 @@
             <German>Aktion</German>
             <Czech>Akce</Czech>
             <Portuguese>Ação</Portuguese>
-            <!-- <French>Module obsolète - Action</French> -->
+            <French>/!\ Module obsolète /!\ - Action</French>
             <Hungarian>Cselekvés</Hungarian>
             <Russian>Действие</Russian>
             <Italian>Azione</Italian>
@@ -736,7 +736,7 @@
             <German>Was soll mit Leuten geschehen, die nicht die richtigen PBO-Dateien geladen haben?</German>
             <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
             <Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
-            <!-- <French>Module obsolète - Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French> -->
+            <French>/!\ Module obsolète /!\ - Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
@@ -800,7 +800,7 @@
             <German>Alle Addons überprüfen</German>
             <Czech>Zkontrolovat všechny addony</Czech>
             <Portuguese>Verificar todos addons</Portuguese>
-            <!-- <French>Module obsolète - Vérifier tous les addons</French> -->
+            <French>/!\ Module obsolète /!\ - Vérifier tous les addons</French>
             <Hungarian>Összes bővítmény ellenőrzése</Hungarian>
             <Russian>Проверять все аддоны</Russian>
             <Italian>Controlla tutti gli addon</Italian>
@@ -816,7 +816,7 @@
             <German>Alle Addons anstatt nur ACE überprüfen?</German>
             <Czech>Zkontrolovat všechny addony namísto jen těch od ACE?</Czech>
             <Portuguese>Verificar todos addons invés de só os do ACE?</Portuguese>
-            <!-- <French>Module obsolète - Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French> -->
+            <French>/!\ Module obsolète /!\ - Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
             <Russian>Проверять все аддоны, а не только ACE?</Russian>
             <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
@@ -832,7 +832,7 @@
             <German>Whitelist</German>
             <Czech>Seznam povolených</Czech>
             <Portuguese>Lista branca</Portuguese>
-            <!-- <French>Module obsolète - Liste blanche</French> -->
+            <French>/!\ Module obsolète /!\ - Liste blanche</French>
             <Hungarian>Fehérlista</Hungarian>
             <Russian>Вайтлист доп. аддонов</Russian>
             <Italian>Lista Bianca</Italian>
@@ -848,7 +848,7 @@
             <German>Welche Addons werden dennoch erlaubt?</German>
             <Czech>Jaké addony jsou povoleny?</Czech>
             <Portuguese>Quais addons são permitidos de qualquer maneira?</Portuguese>
-            <!-- <French>Module obsolète - Permet de définir une liste d'addons autorisés systématiquement.</French> -->
+            <French>/!\ Module obsolète /!\ - Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
             <Italian>Quali addon sono permessi in ogni caso?</Italian>

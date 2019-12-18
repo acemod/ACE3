@@ -416,7 +416,7 @@
             <German>Verstecken erzwingen</German>
             <Czech>Vynuceno skrýt</Czech>
             <Portuguese>Ocultar forçado</Portuguese>
-            <!-- <French>Module obsolète - Forcer le masquage</French> -->
+            <French>/!\ Module obsolète /!\ - Forcer le masquage</French>
             <Hungarian>Erőltetett rejtett</Hungarian>
             <Russian>Обязательно: Скрывать</Russian>
             <Italian>Forza Nascosto</Italian>
@@ -432,7 +432,7 @@
             <German>Anzeige erzwingen</German>
             <Czech>Vynuceno zobrazit</Czech>
             <Portuguese>Mostrar forçado</Portuguese>
-            <!-- <French>Module obsolète - Forcer l'affichage</French> -->
+            <French>/!\ Module obsolète /!\ - Forcer l'affichage</French>
             <Hungarian>Erőltetett látható</Hungarian>
             <Russian>Обязательно: Показывать</Russian>
             <Italian>Forza Mostra</Italian>
@@ -448,7 +448,7 @@
             <Czech>Vynuceno zobrazit pouze na kurzor</Czech>
             <German>Erzwinge nur mit Mauszeiger anzuzeigen</German>
             <Portuguese>Forçar mostrar somente no cursor</Portuguese>
-            <!-- <French>Module obsolète - Forcer l'affichage sous le curseur uniquement</French> -->
+            <French>/!\ Module obsolète /!\ - Forcer l'affichage sous le curseur uniquement</French>
             <Hungarian>Erőltetett látható, csak kurzorra</Hungarian>
             <Russian>Обязательно: Только под курсором</Russian>
             <Italian>Forza Mostra solo su Cursore</Italian>
@@ -464,7 +464,7 @@
             <Czech>Vynuceno zobrazit pouze na klávesu</Czech>
             <German>Erzwinge nur mit Tastendruck anzuzeigen</German>
             <Portuguese>Forçar somente mostrar em tecla ativada</Portuguese>
-            <!-- <French>Module obsolète - Forcer l'affichage par appui de touche uniquement</French> -->
+            <French>/!\ Module obsolète /!\ - Forcer l'affichage par appui de touche uniquement</French>
             <Hungarian>Erőltetett látható, csak gombnyomásra</Hungarian>
             <Russian>Обязательно: Только по нажатию клавиши</Russian>
             <Italian>Forza Mostra solo quando Premi Tasto</Italian>
@@ -480,7 +480,7 @@
             <Czech>Vynuceno zobrazit pouze na kurzor a klávesu</Czech>
             <German>Erzwinge nur mit Mauszeiger und Tastendruck anzuzeigen</German>
             <Portuguese>Forçar mostrar somente em cursor e tecla ativada</Portuguese>
-            <!-- <French>Module obsolète - Forcer l'affichage sous le curseur et par appui de touche uniquement</French> -->
+            <French>/!\ Module obsolète /!\ - Forcer l'affichage sous le curseur et par appui de touche uniquement</French>
             <Hungarian>Erőltetett látható, csak kurzorra és gombnyomásra</Hungarian>
             <Russian>Обязательно: Под курсором или по нажатию клавиши</Russian>
             <Italian>Forza Mostra solo su Cursore e quando Premi Tasto</Italian>
