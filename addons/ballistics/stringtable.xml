@@ -4,90 +4,119 @@
         <!-- Shotguns -->
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_NameShort">
             <English>#00 Buckshot</English>
+            <Chinese>#00 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
+            <Chinese>#00 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
+            <Chinese>#0 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
+            <Chinese>#0 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
+            <Chinese>#1 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
+            <Chinese>#1 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
+            <Chinese>#2 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
+            <Chinese>#2 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
+            <Chinese>#3 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
+            <Chinese>#3 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
+            <Chinese>#4 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
+            <Chinese>#4 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>
+            <Chinese>#7 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
             <English>#7 Birdshot</English>
+            <Chinese>#7 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
+            <Chinese>12鉛徑 2發  #00 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 2Rnd #0 Buckshot</English>
+            <Chinese>12鉛徑 2發  #0 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 2Rnd #1 Buckshot</English>
+            <Chinese>12鉛徑 2發  #1 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 2Rnd #2 Buckshot</English>
+            <Chinese>12鉛徑 2發  #2 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 2Rnd #3 Buckshot</English>
+            <Chinese>12鉛徑 2發  #3 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 2Rnd #4 Buckshot</English>
+            <Chinese>12鉛徑 2發  #4 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 2Rnd #7 Birdshot</English>
+            <Chinese>12鉛徑 2發  #7 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 6Rnd #00 Buckshot</English>
+            <Chinese>12鉛徑 6發  #00 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 6Rnd #0 Buckshot</English>
+            <Chinese>12鉛徑 6發  #0 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 6Rnd #1 Buckshot</English>
+            <Chinese>12鉛徑 6發  #1 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 6Rnd #2 Buckshot</English>
+            <Chinese>12鉛徑 6發  #2 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 6Rnd #3 Buckshot</English>
+            <Chinese>12鉛徑 6發  #3 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 6Rnd #4 Buckshot</English>
+            <Chinese>12鉛徑 6發  #4 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 6Rnd #7 Birdshot</English>
+            <Chinese>12鉛徑 6發  #7 鹿彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
+            <Chinese>12鉛徑 15發  #00 鹿彈</Chinese>
         </Key>
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">
@@ -1294,7 +1323,7 @@
             <Hungarian>6.5mm 200-lövedékes infravörös nyomkövető heveder&lt;br /&gt;Lövedékek: 200&lt;br /&gt;Használható: Stoner 99 LMG</Hungarian>
             <Japanese>6.5mm 200発入り IR-DIM曳光弾ベルト&lt;br /&gt;装填数: 200&lt;br /&gt;次で使用: Stoner 99 LMG</Japanese>
             <Korean>200발들이 6.5mm IR-DIM 예광탄 벨트&lt;br /&gt;장탄수: 200&lt;br /&gt;사용처: Stoner 99 LMG</Korean>
-            <Chinese>6.5毫米 200發 低視度紅外線曳光彈&lt;br /&gt;發數: 200&lt;br /&gt;使用於: Stoner 99 LMG</Chinese>
+            <Chinese>6.5毫米 200發 低視度紅外線曳光彈&lt;br /&gt;發數: 200&lt;br /&gt;使用於: Stoner 99 重機槍</Chinese>
             <Chinesesimp>6.5mm 200发 低视度红外线曳光弹&lt;br /&gt;发数: 200&lt;br /&gt;使用于: Stoner 99 LMG</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_Name">

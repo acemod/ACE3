@@ -14,6 +14,19 @@
             <Portuguese>Óculos</Portuguese>
             <French>Lunettes</French>
         </Key>
+        <Key ID="STR_ACE_Goggles_SettingsName">
+            <English>ACE Goggles</English>
+            <German>ACE Schutzbrille</German>
+            <Italian>ACE Occhiali</Italian>
+            <Chinese>ACE 護目鏡</Chinese>
+            <Chinesesimp>ACE 护目镜</Chinesesimp>
+            <Japanese>ACE ゴーグル</Japanese>
+            <Korean>ACE 고글</Korean>
+            <Polish>ACE Gogle</Polish>
+            <Russian>ACE Очки</Russian>
+            <Portuguese>ACE Óculos</Portuguese>
+            <French>ACE Lunettes</French>
+        </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
             <German>Brilleneffekt in dritter Person anzeigen</German>
@@ -84,6 +97,10 @@
             <Chinesesimp>染色 + 影响</Chinesesimp>
             <Chinese>染色 + 影響</Chinese>
             <Portuguese>Cor + Efeitos</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
+            <English>Show Wipe Goggles self interaction</English>
+            <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
         </Key>
     </Package>
 </Project>
