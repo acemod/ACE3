@@ -205,7 +205,7 @@ if (isServer) then {
 // Check files, previous installed version etc.
 //////////////////////////////////////////////////
 
-private _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
+private _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "versionStr");
 private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 // check previous version number from profile
