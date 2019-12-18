@@ -128,15 +128,15 @@ class CfgWeapons {
     class rhs_zsh7a: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
-    class rhs_zsh7a_alt : rhs_zsh7a {
+    class rhs_zsh7a_alt: rhs_zsh7a {
         ACE_Protection = 1;
     };
     class rhs_zsh7a_mike;
-    class rhs_zsh7a_mike_alt : rhs_zsh7a_mike {
+    class rhs_zsh7a_mike_alt: rhs_zsh7a_mike {
         ACE_Protection = 1;
     };
     class rhs_zsh7a_mike_green;
-    class rhs_zsh7a_mike_green_alt : rhs_zsh7a_mike_green {
+    class rhs_zsh7a_mike_green_alt: rhs_zsh7a_mike_green {
         ACE_Protection = 1;
     };
 
