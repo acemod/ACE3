@@ -95,8 +95,6 @@ namespace test_ace_strings {
         std::cout << "extension_wrongArgCount: " << output << "\n";
         ASSERT_EQ(extReturn, RETURN_WRONG_ARG_COUNT);
     }
-
-
  }
 
 
