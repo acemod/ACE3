@@ -102,3 +102,13 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 };
+
+// init eject from destroyed vehicle
+{
+    [_x, "init", {
+        params ["_vehicle"];
+        if (!alive _vehicle) exitWith {};
+        TRACE_2("ejectIfDestroyed init",_vehicle,typeOf _vehicle);
+        _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectIfDestroyed)}];
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach EJECT_IF_DESTROYED_VEHICLES;

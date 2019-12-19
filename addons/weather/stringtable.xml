@@ -155,5 +155,15 @@
             <Czech>Povoluje simulaci větru založenou na mapě (přepíše původní vítr)</Czech>
             <French>Active la simulation du vent basée sur la carte (écrase le vent vanilla).</French>
         </Key>
+        <Key ID="STR_ACE_Weather_CheckAirTemperature">
+            <English>Check Air Temperature</English>
+            <Chinese>檢查氣溫</Chinese>
+            <Japanese>気温を確認</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
+            <English>Show Check Air Temperature Action</English>
+            <Chinese>顯示檢查氣溫動作</Chinese>
+            <Japanese>気温の確認動作を表示</Japanese>
+        </Key>
     </Package>
 </Project>

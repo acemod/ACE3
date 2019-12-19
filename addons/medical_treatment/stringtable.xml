@@ -3546,7 +3546,7 @@
             <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
-            <Japanese>%1 は IV を与えた</Japanese>
+            <Japanese>%1 は IV を投与した</Japanese>
             <Korean>%1 (이)가 IV를 실시했다</Korean>
             <Chinesesimp>%1 已经给予静脉注射液</Chinesesimp>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
@@ -3573,6 +3573,7 @@
             <French>%1 a posé une attelle.</French>
             <Portuguese>%1 aplicou uma Tala</Portuguese>
             <Chinese>%1 已套用固定板</Chinese>
+            <Japanese>%1 は添え木を当てた</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
