@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Tracers">
-        <Container name="magazines">
-            <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_green">
-                <English>5.56 mm 150Rnd Reload Tracer (Green) Mag</English>
-                <German>150 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Magazin</German>
 	<Package name="Tracers">
 		<Container name="magazines">
 			<Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_green">
