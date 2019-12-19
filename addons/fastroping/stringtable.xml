@@ -156,6 +156,7 @@
             <Russian>Выпустить 12 м канат</Russian>
             <Portuguese>Jogar cordar (12m)</Portuguese>
             <Chinese>部屬12公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 12m</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
             <English>Deploy 15m ropes</English>
@@ -166,6 +167,7 @@
             <Russian>Выпустить 15 м канат</Russian>
             <Portuguese>Jogar cordar (15m)</Portuguese>
             <Chinese>部屬15公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 15m</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
             <English>Deploy 18m ropes</English>
@@ -176,6 +178,7 @@
             <Russian>Выпустить 18 м канат</Russian>
             <Portuguese>Jogar cordar (18m)</Portuguese>
             <Chinese>部屬18公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 18m</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
             <English>Deploy 27m ropes</English>
@@ -186,6 +189,7 @@
             <Russian>Выпустить 27 м канат</Russian>
             <Portuguese>Jogar cordar (27m)</Portuguese>
             <Chinese>部屬27公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 27m</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
             <English>Deploy 36m ropes</English>
@@ -196,6 +200,7 @@
             <Russian>Выпустить 36 м канат</Russian>
             <Portuguese>Jogar cordar (36m)</Portuguese>
             <Chinese>部屬36公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 36m</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Ropesupply">
             <English>[ACE] Ropes Supply crate</English>
@@ -206,6 +211,7 @@
             <Russian>[ACE] Ящик с канатами</Russian>
             <Portuguese>[ACE] Suprimento de cordas</Portuguese>
             <Chinese>[ACE] 繩索補充箱</Chinese>
+            <Italian>[ACE] Cassa Corde</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_descriptionShort">
             <English>Used to do deploy ropes from a compatibile helicopter</English>
@@ -216,6 +222,7 @@
             <Russian>Используется для выпуска канатов с совместимого вертолета</Russian>
             <Portuguese>Usado para fazer descida rápida de corda em helicópteros compatíveis com FRIES</Portuguese>
             <Chinese>在可相容的直升機上部屬繩索</Chinese>
+            <Italian>Utilizzato per distribuire corde da un elicottero compatibile</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_12_Display">
             <English>Rope 12.2 meters</English>
@@ -226,6 +233,7 @@
             <Russian>Канат 12.2 метров</Russian>
             <Portuguese>Corda (12.2m)</Portuguese>
             <Chinese>繩索（12.2公尺長）</Chinese>
+            <Italian>Corda da 12.2 metri</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_15_Display">
             <English>Rope 15.2 meters</English>
@@ -236,6 +244,7 @@
             <Russian>Канат 15.2 метров</Russian>
             <Portuguese>Corda (15.2m)</Portuguese>
             <Chinese>繩索（15.2公尺長）</Chinese>
+            <Italian>Corda da 15.2 metri</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_18_Display">
             <English>Rope 18.3 meters</English>
@@ -246,6 +255,7 @@
             <Russian>Канат 18.3 метров</Russian>
             <Portuguese>Corda (18.3m)</Portuguese>
             <Chinese>繩索（18.3公尺長）</Chinese>
+            <Italian>Corda da 18.3 metri</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_27_Display">
             <English>Rope 27.4 meters</English>
@@ -256,6 +266,7 @@
             <Russian>Канат 27.4 метров</Russian>
             <Portuguese>Corda (27.4m)</Portuguese>
             <Chinese>繩索（27.4公尺長）</Chinese>
+            <Italian>Corda da 27.4 metri</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_36_Display">
             <English>Rope 36.6 meters</English>
@@ -266,6 +277,7 @@
             <Russian>Канат 36.6 метров</Russian>
             <Portuguese>Corda (36.6m)</Portuguese>
             <Chinese>繩索（36.6公尺長）</Chinese>
+            <Italian>Corda da 36.6 metri</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -276,6 +288,7 @@
             <Russian>Требуется канат</Russian>
             <Portuguese>Requer uma corda para jogar</Portuguese>
             <Chinese>需要繩索來部屬</Chinese>
+            <Italian>Richiede una corda per il dispigamento</Italian>
         </Key>
     </Package>
 </Project>
