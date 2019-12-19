@@ -19,7 +19,7 @@
 disableSerialization;
 
 params ["_display", "_rscType"];
-TRACE_2("params",_display,_rscType);
+TRACE_2("turretDisplayLoaded",_display,_rscType);
 
 if (_rscType != "Mk6Mortar") exitWith {};
 if (isNull _display) exitWith {};
