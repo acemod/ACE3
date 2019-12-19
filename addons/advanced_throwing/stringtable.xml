@@ -83,6 +83,7 @@
             <Chinese>顯示投擲軌道幫助投擲</Chinese>
             <Chinesesimp>显示投掷轨道帮助投掷</Chinesesimp>
             <Portuguese>Permite a visualização do Arco de Arremesso por onde o objeto será jogado.</Portuguese>
+            <Czech>Zapíná vizualizaci oblouku vrhu (kam bude předmět hozen).</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
             <English>Show Throwing Mouse Controls</English>
@@ -96,6 +97,7 @@
             <Chinese>顯示滑鼠投擲控制提示</Chinese>
             <Chinesesimp>显示滑鼠投掷控制提示</Chinesesimp>
             <Portuguese>Mostrar os controles de mouse para Arremesso</Portuguese>
+            <Czech>Zobrazit ovládání házení myší</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_Description">
             <English>Enables visual cues for mouse controls when throwable is prepared.</English>
@@ -109,6 +111,7 @@
             <Chinese>開啟後會在準備投擲時, 顯示滑鼠相關操作</Chinese>
             <Chinesesimp>开启后会在准备投掷时, 显示滑鼠相关操作</Chinesesimp>
             <Portuguese>Ativa as dicas visuais dos controles do mouse quando um arremessável é preparado.</Portuguese>
+            <Czech>Zapíná popisky pro ovládání myší, když je házený předmět připraven.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
@@ -122,6 +125,7 @@
             <Chinese>啟用可撿取地面投擲物</Chinese>
             <Chinesesimp>启用可捡取地面投掷物</Chinesesimp>
             <Portuguese>Permitir pegar arremessáveis</Portuguese>
+            <Czech>Zapnout zdvihání házených předmětů</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_Description">
             <English>Enables ability to pick up throwables from the ground.</English>
@@ -135,6 +139,7 @@
             <Chinese>啟用後, 可撿取地面上的投擲物</Chinese>
             <Chinesesimp>启用后, 可捡取地面上的投掷物</Chinesesimp>
             <Portuguese>Permite que objetos arremessados sejam pegos do chão. (ACE Menu de Interação)</Portuguese>
+            <Czech>Zapíná schopnost zvednutí házených předmětů ze země.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
@@ -148,6 +153,7 @@
             <Chinese>啟用可撿取附著投擲物</Chinese>
             <Chinesesimp>启用可捡取附着投掷物</Chinesesimp>
             <Portuguese>Permitir pegar arremessáveis fixados</Portuguese>
+            <Czech>Zapnout zdvihání připnutých předmětů.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_Description">
             <English>Enables ability to pick up throwables from attached objects.</English>
@@ -161,6 +167,7 @@
             <Chinese>啟用後, 可撿取附著在物件上的投擲物</Chinese>
             <Chinesesimp>启用后, 可捡取附着在物件上的投掷物</Chinesesimp>
             <Portuguese>Permite que arremessáveis fixados em objetos sejam pegos.</Portuguese>
+            <Czech>Zapíná schopnost zvednutí předmětů z objektů ke kterým jsou připnuté.</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>
@@ -174,6 +181,7 @@
             <Chinese>準備/變更投擲物</Chinese>
             <Chinesesimp>准备/变更投掷物</Chinesesimp>
             <Portuguese>Preparar/Mudar Arremessável</Portuguese>
+            <Czech>Připravit/změnit házený předmět</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_dropModeHold">
             <English>Throwable Drop Mode (Hold)</English>
@@ -187,6 +195,7 @@
             <Chinese>投擲模式 (按住)</Chinese>
             <Chinesesimp>投掷模式 (按住)</Chinesesimp>
             <Portuguese>Modo de Arremesso (Segurar)</Portuguese>
+            <Czech>Mód puštění (Držet)</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
             <English>Throwable Drop Mode (Toggle)</English>
@@ -200,6 +209,7 @@
             <Chinese>投擲模式 (切換)</Chinese>
             <Chinesesimp>投掷模式 (切换)</Chinesesimp>
             <Portuguese>Modo de Arremesso (Alternar)</Portuguese>
+            <Czech>Mód puštění (Přepnout)</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Primed">
             <English>Primed</English>
@@ -213,6 +223,7 @@
             <Chinese>引信開始燃燒</Chinese>
             <Chinesesimp>引信开始燃烧</Chinesesimp>
             <Portuguese>Preparado</Portuguese>
+            <Czech>Odjištěný</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
@@ -226,6 +237,7 @@
             <Chinese>投擲</Chinese>
             <Chinesesimp>投掷</Chinesesimp>
             <Portuguese>Arremessar</Portuguese>
+            <Czech>Hodit</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
             <English>(Scroll) Change Mode</English>
@@ -239,6 +251,7 @@
             <Chinese>(滾輪) 變更模式</Chinese>
             <Chinesesimp>(滚轮) 变更模式</Chinesesimp>
             <Portuguese>(Roda do Mouse) Alternar modo</Portuguese>
+            <Czech>(Scrollovat) Změnit mód</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Extend">
             <English>(Scroll) Extend</English>
@@ -252,6 +265,7 @@
             <Chinese>(滾輪) 延長</Chinese>
             <Chinesesimp>(滚轮) 延长</Chinesesimp>
             <Portuguese>(Roda do Mouse) Extender</Portuguese>
+            <Czech>(Scrollovat) Oddálit</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
@@ -265,6 +279,7 @@
             <Chinese>(點擊) 提早拉開引信</Chinese>
             <Chinesesimp>(点击) 提早拉开引信</Chinesesimp>
             <Portuguese>(Clique) Cozinhar</Portuguese>
+            <Czech>(Klik) Odjistit</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_PickUp">
             <English>Pick Up</English>
@@ -278,6 +293,7 @@
             <Chinese>撿取</Chinese>
             <Chinesesimp>捡取</Chinesesimp>
             <Portuguese>Pegar</Portuguese>
+            <Czech>Zvednout</Czech>
         </Key>
     </Package>
 </Project>

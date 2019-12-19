@@ -13,6 +13,7 @@
             <Russian>Пленные</Russian>
             <Portuguese>Prisioneiros</Portuguese>
             <French>Prisonniers</French>
+            <Czech>Zajatci</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
@@ -420,6 +421,7 @@
             <Russian>Арестовывает указанный курсором юнит</Russian>
             <Portuguese>Torna a unidade sob o cursor um prisioneiro</Portuguese>
             <French>Capture l'unité sous le curseur.</French>
+            <Czech>Nastaví jednotku pod kurzorem jako zajatce.</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_name">
             <English>Require AI surrendering</English>
@@ -433,6 +435,7 @@
             <Russian>Требовать ИИ сдаться для ареста</Russian>
             <Portuguese>Requer rendição da IA</Portuguese>
             <French>Requiert la reddition de l'IA</French>
+            <Czech>Vyžadovat, aby se AI prvně vzdala</Czech>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
@@ -446,6 +449,7 @@
             <Russian>Требовать для ареста, чтобы ИИ вначале сдавались</Russian>
             <Portuguese>Requer que a IA se renda antes que seja presa</Portuguese>
             <French>Requiert la capitulation des unités IA avant qu'elles ne puissent être arrêtées.</French>
+            <Czech>Vyžadovat, aby se AI prvně vzdala před umožněním zajetí</Czech>
         </Key>
     </Package>
 </Project>

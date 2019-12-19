@@ -1007,6 +1007,7 @@
             <Chinesesimp>绊线闪光地雷</Chinesesimp>
             <Chinese>絆線閃光地雷</Chinese>
             <Portuguese>Tripwire (Sinalizador)</Portuguese>
+            <Czech>Světlice na nástražném drátu</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Description">
             <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
@@ -1020,6 +1021,7 @@
             <Chinesesimp>类型: 绊线闪光地雷 - 触发后产生非致命性的强光.&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 地面</Chinesesimp>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
             <Portuguese>Tipo: Flare de Tripwire - Acende um sinalizador não letal quando acionado.&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Chão</Portuguese>
+            <Czech>Typ: Světlice na nástražném drátu - Zapálí světlici při aktivaci.&lt;br/&gt;Pouze 1 použití&lt;br/&gt;Použít na zem</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_statExploRange">
             <English>Explosive range</English>
@@ -1032,6 +1034,7 @@
             <Polish>Zasięg wybuchu</Polish>
             <Russian>Дальность подрыва</Russian>
             <Portuguese>Alcance do explosivo</Portuguese>
+            <Czech>Dosah exploze</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
@@ -1043,6 +1046,7 @@
             <Portuguese>Timer de explosão</Portuguese>
             <French>Minuteur de détonation</French>
             <Chinese>引爆倒數</Chinese>
+            <Czech>Časovač exploze</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
