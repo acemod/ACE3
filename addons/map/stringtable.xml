@@ -16,7 +16,7 @@
             <Korean>지도</Korean>
             <Chinesesimp>地图</Chinesesimp>
             <Chinese>地圖</Chinese>
-            <Turkish>harita</Turkish>
+            <Turkish>Harita</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination</English>
@@ -33,7 +33,6 @@
             <Korean>지도에 조명</Korean>
             <Chinesesimp>地图照明</Chinesesimp>
             <Chinese>地圖照明</Chinese>
-            <Turkish>Harita aydınlatması</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
@@ -49,7 +48,6 @@
             <Korean>주변 환경및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
             <Chinesesimp>透过环境光与玩家的手电筒来决定地图亮度.</Chinesesimp>
             <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
-            <Turkish>Ortam aydınlatmasına ve oyuncunun eşyalarına göre harita aydınlatmasını simüle edin.</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow</English>
@@ -65,7 +63,6 @@
             <Korean>지도 조명이 빛이 납니까</Korean>
             <Chinesesimp>增加地图亮度</Chinesesimp>
             <Chinese>增加地圖亮度</Chinese>
-            <Turkish>Harita feneri kızdırma</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -81,7 +78,6 @@
             <Korean>지도에 불빛을 비치는 플레이어를 조금 더 밝게 합니까?</Korean>
             <Chinesesimp>当玩家打开手电筒时，增加地图亮度.</Chinesesimp>
             <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
-            <Turkish>Haritada fener kullanan oyunculara dış ışıma ekleme?</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake</English>
@@ -98,7 +94,6 @@
             <Korean>지도 흔들림</Korean>
             <Chinesesimp>地图震动</Chinesesimp>
             <Chinese>地圖震動</Chinese>
-            <Turkish>Harita sarsıntısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -259,7 +254,6 @@
             <Korean>간격</Korean>
             <Chinesesimp>间隔</Chinesesimp>
             <Chinese>間隔</Chinese>
-            <Turkish>Aralık</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>
@@ -403,7 +397,7 @@
             <Korean>켜기</Korean>
             <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟</Chinese>
-            <Turkish>üzerinde</Turkish>
+            <Turkish>Açık</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
@@ -419,7 +413,6 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
-            <Turkish>kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
