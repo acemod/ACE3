@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="MX2A">
+    <Package name="Yardage450">
         <Key ID="STR_ACE_Yardage450_DisplayName">
             <English>Yardage 450</English>
             <Polish>Yardage 450</Polish>
@@ -43,7 +43,7 @@
             <Hungarian>Yardage 450 - Főkapcsoló gomb</Hungarian>
             <Russian>Yardage 450 - Кнопка питания</Russian>
             <Italian>Yardage 450 - Bottone Accensione</Italian>
-            <French>Yardage 450 - bouton d'alimentation</French>
+            <French>Yardage 450 - Bouton d'alimentation</French>
             <Japanese>ヤードエイジ 450 - 起動ボタン</Japanese>
             <Korean>Yardage 450 - 전원 버튼</Korean>
             <Chinesesimp>Yardage 450 - 电源按钮</Chinesesimp>

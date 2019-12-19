@@ -10,7 +10,8 @@ class CfgPatches {
             "ACE_HandFlare_Green",
             "ACE_HandFlare_Yellow",
             "ACE_M84",
-            "ACE_M14"
+            "ACE_M14",
+            "ACE_CTS9"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};

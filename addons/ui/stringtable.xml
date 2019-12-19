@@ -5,7 +5,7 @@
             <English>User Interface</English>
             <Czech>Uživatelské rozhraní</Czech>
             <Portuguese>Interface do usuário</Portuguese>
-            <French>Interface utilisateur</French>
+            <French>Interface Utilisateur</French>
             <Russian>Интерфейс</Russian>
             <Japanese>ユーザ インタフェイス</Japanese>
             <Polish>Interfejs użytkownika</Polish>
@@ -20,7 +20,7 @@
             <English>User Interface</English>
             <Czech>Uživatelské rozhraní</Czech>
             <Portuguese>Interface do usuário</Portuguese>
-            <French>Interface utilisateur</French>
+            <French>Interface Utilisateur</French>
             <Russian>Пользовательский интерфейс</Russian>
             <Japanese>ユーザ インタフェイス</Japanese>
             <Polish>Interfejs użytkownika</Polish>
@@ -34,7 +34,7 @@
         <Key ID="STR_ACE_UI_ModuleDescription">
             <English>This module allows toggling visible user interface parts.</English>
             <Portuguese>Este módulo permite ligar ou desligar partes da interface do usuário</Portuguese>
-            <French>Ce module permet le basculement de parties visibles de l'interface utlisateur</French>
+            <French>Ce module permet d'activer ou de désactiver certains éléments de l'Interface Utilisateur (IU).</French>
             <Russian>Этот модуль позволяет переключать видимость элементов пользовательского интерфейса.</Russian>
             <Japanese>モジュールではユーザ インタフェイスの一部表示を切り替えできます。</Japanese>
             <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
@@ -43,12 +43,13 @@
             <Italian>Questo modulo consente di commutare parti di interfaccia utente visibili.</Italian>
             <Chinesesimp>此模块允许你调整使用者介面的任何一个元件</Chinesesimp>
             <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
+            <Czech>Tento modul umožňuje přepínání viditelných částí uživatelského rozhraní.</Czech>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI">
             <English>Allow Selective UI</English>
             <Czech>Povolit selektivní UI</Czech>
             <Portuguese>Permitir IU Selecionável</Portuguese>
-            <French>Permettre l'IU selective</French>
+            <French>Autoriser la personnalisation de l'IU</French>
             <Russian>Включить настраиваемый интерфейс</Russian>
             <Japanese>UI 選択性を許可</Japanese>
             <Polish>Zezwól na selektywne UI</Polish>
@@ -63,7 +64,7 @@
             <English>Allow client to modify their UI.</English>
             <Czech>Povolit klientovi měnit jeho UI</Czech>
             <Portuguese>Permite o cliente modificar sua IU.</Portuguese>
-            <French>Permet aux clients de modifier leur IU</French>
+            <French>Permet aux clients de modifier leur Interface Utilisateur.</French>
             <Russian>Позволить клиентам изменять их пользовательский интерфейс.</Russian>
             <Japanese>クライアントがユーザ インタフェイスを編集できるようにします。</Japanese>
             <Polish>Zezwól klientowi na modyfikację UI.</Polish>
@@ -78,7 +79,7 @@
             <English>Soldier/Vehicle/Weapon Information</English>
             <Czech>Informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Informação de Soldado/Veículo/Armamento</Portuguese>
-            <French>Soldat/Véhicule/Arme/Informations</French>
+            <French>Information soldat/véhicule/arme</French>
             <Russian>Информация о Солдате/Технике/Оружии</Russian>
             <Japanese>兵士/車両/武器の情報</Japanese>
             <Polish>Informacje o żołnierzu/pojeździe/broni</Polish>
@@ -108,7 +109,7 @@
             <English>Vehicle Compass</English>
             <Czech>Kompas vozidla</Czech>
             <Portuguese>Bússola de Veículo</Portuguese>
-            <French>Compas de véhicule</French>
+            <French>Boussole de véhicule</French>
             <Russian>Компас в технике</Russian>
             <Japanese>車両のレーダ</Japanese>
             <Polish>Kompas w pojeździe</Polish>
@@ -153,7 +154,7 @@
             <English>Weapon Name</English>
             <Czech>Název zbraně</Czech>
             <Portuguese>Nome do Armamento</Portuguese>
-            <French>Nom de l''arme</French>
+            <French>Nom de l'arme</French>
             <Russian>Название оружия</Russian>
             <Japanese>武器名</Japanese>
             <Polish>Nazwa broni</Polish>
@@ -168,7 +169,7 @@
             <English>Weapon Name Background</English>
             <Czech>Název zbraně v pozadí</Czech>
             <Portuguese>Fundo do Nome do Armamento</Portuguese>
-            <French>Arrière-plan du nom de l'arme</French>
+            <French>Fond pour le nom de l'arme</French>
             <Russian>Фон названия оружия</Russian>
             <Japanese>武器名の背景表示</Japanese>
             <Polish>Tło nazwy broni</Polish>
@@ -243,7 +244,7 @@
             <English>Throwable Type</English>
             <Czech>Typ granátů apod.</Czech>
             <Portuguese>Tipo de Arremessável</Portuguese>
-            <French>Type d'objets de lancer</French>
+            <French>Type d'objet lançable</French>
             <Russian>Тип гранаты</Russian>
             <Japanese>投げる種類</Japanese>
             <Polish>Typ granatu</Polish>
@@ -258,7 +259,7 @@
             <English>Throwable Count</English>
             <Czech>Počet granátů apod.</Czech>
             <Portuguese>Quantidade de Arremessável</Portuguese>
-            <French>Nombre d'objets de lancer</French>
+            <French>Nombre d'objets lançables</French>
             <Russian>Количество гранат</Russian>
             <Japanese>投げられる数</Japanese>
             <Polish>Ilość granatów</Polish>
@@ -273,7 +274,7 @@
             <English>Zeroing</English>
             <Czech>Náměr</Czech>
             <Portuguese>Zerar a mira</Portuguese>
-            <French>Mise à zéro</French>
+            <French>Zérotage</French>
             <Russian>Дальность стрельбы</Russian>
             <Japanese>ゼロイン</Japanese>
             <Polish>Wyzerowanie broni</Polish>
@@ -287,7 +288,7 @@
         <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
             <English>Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento</Portuguese>
-            <French>Arrière-plan des informations inférieures de l'arme</French>
+            <French>Fond pour la barre d'informations inférieure de l'arme</French>
             <Russian>Фон ниформации об оружии снизу</Russian>
             <Japanese>武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni</Polish>
@@ -331,7 +332,7 @@
         <Key ID="STR_ACE_UI_GunnerWeaponName">
             <English>Gunner Weapon Name</English>
             <Portuguese>Nome da arma do fuzileiro</Portuguese>
-            <French>Nom de l'arme du tireur</French>
+            <French>Nom de l'arme (tireur)</French>
             <Russian>Название орудия наводчика</Russian>
             <Japanese>射手用の武器名</Japanese>
             <Polish>Nazwa broni strzelca</Polish>
@@ -344,7 +345,7 @@
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
             <Portuguese>Fundo do nome da arma do fuzileiro</Portuguese>
-            <French>Arrière-plan du nom de l'arme (tireur)</French>
+            <French>Fond pour le nom de l'arme (tireur)</French>
             <Russian>Фон названия орудия наводчика</Russian>
             <Japanese>射手用の武器名の背景表示</Japanese>
             <Polish>Tło nazwy broni strzelca</Polish>
@@ -409,7 +410,7 @@
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
             <Portuguese>Tipo de Arremessável do fuzileiro</Portuguese>
-            <French>Type d'objets jetable ( tireur)</French>
+            <French>Type d'objet lançable (tireur)</French>
             <Russian>Тип пусковой установки наводчика</Russian>
             <Japanese>射手用のランチャーの種類</Japanese>
             <Polish>Typ rakiet strzelca</Polish>
@@ -422,7 +423,7 @@
         <Key ID="STR_ACE_UI_GunnerLaunchableCount">
             <English>Gunner Launchable Count</English>
             <Portuguese>Quantidade de Arremessável do fuzileiro</Portuguese>
-            <French>Nombre d'objets jetable (tireur)</French>
+            <French>Nombre d'objets lançables (tireur)</French>
             <Russian>Количество снарядов пусковой установки наводчика</Russian>
             <Japanese>射手用のランチャー弾薬数</Japanese>
             <Polish>Ilość rakiet strzelca</Polish>
@@ -435,7 +436,7 @@
         <Key ID="STR_ACE_UI_GunnerZeroing">
             <English>Gunner Zeroing</English>
             <Portuguese>Zerar a mira do fuzileiro</Portuguese>
-            <French>Mise à zéro ( tireur)</French>
+            <French>Zérotage (tireur)</French>
             <Russian>Дальность стрельбы наводчика</Russian>
             <Japanese>射手用ゼロイン</Japanese>
             <Polish>Wyzerowanie broni strzelca</Polish>
@@ -448,7 +449,7 @@
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento do fuzileiro</Portuguese>
-            <French>Arrière-plan des informations inférieures (tireur)</French>
+            <French>Fond pour la barre d'informations inférieure (tireur)</French>
             <Russian>Фон ниформации об орудии наводчика снизу</Russian>
             <Japanese>射手用の武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni strzelca</Polish>
@@ -477,7 +478,7 @@
             <English>Vehicle Name Background</English>
             <Czech>Název vozidla v pozadí</Czech>
             <Portuguese>Fundo do Nome do Veículo</Portuguese>
-            <French>Arrière-plan du nom du véhicule</French>
+            <French>Fond pour le nom du véhicule</French>
             <Russian>Фон названия техники</Russian>
             <Japanese>車両名の背景</Japanese>
             <Polish>Tło nazwy pojazdu</Polish>
@@ -492,7 +493,7 @@
             <English>Vehicle Fuel Bar</English>
             <Czech>Ukazatel paliva</Czech>
             <Portuguese>Barra de Combustível do Veículo</Portuguese>
-            <French>Barre d'éssence du véhicule</French>
+            <French>Barre d'essence du véhicule</French>
             <Russian>Полоса топлива</Russian>
             <Japanese>車両の燃料計</Japanese>
             <Polish>Pasek paliwa</Polish>
@@ -537,7 +538,7 @@
             <English>Vehicle Damage</English>
             <Czech>Poškození vozidla</Czech>
             <Portuguese>Dano do Veículo</Portuguese>
-            <French>Dégats du véhicule</French>
+            <French>Dégâts du véhicule</French>
             <Russian>Повреждение техники</Russian>
             <Japanese>車両の損傷表示</Japanese>
             <Polish>Uszkodzenia pojazdu</Polish>
@@ -552,7 +553,7 @@
             <English>Vehicle Info Background</English>
             <Czech>Info o vozidle v pozadí</Czech>
             <Portuguese>Fundo das informações do veículo</Portuguese>
-            <French>Arrière-plan des informations du véhicule</French>
+            <French>Fond pour les informations du véhicule</French>
             <Russian>Фон информации о технике</Russian>
             <Japanese>車両状態の背景</Japanese>
             <Polish>Tło informacji o pojeździe</Polish>
@@ -567,7 +568,7 @@
             <English>Requires Soldier/Vehicle/Weapon Information.</English>
             <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Requer informações de Soldado/Veículo/Armamento</Portuguese>
-            <French>Requiert les informations de soldat/Vehicule/Arme.</French>
+            <French>Requiert l'option "Information soldat/véhicule/arme".</French>
             <Russian>Требуется Информация о Солдате/Технике/Оружии.</Russian>
             <Japanese>兵士/車両/武器の情報を必要とします。</Japanese>
             <Polish>Wymaga informacji o żołnierzu/pojeździe/broni.</Polish>
@@ -581,7 +582,7 @@
             <English>Modifying User Interface is disabled.</English>
             <Czech>Změna uživatelského rozhraní je zakázána.</Czech>
             <Portuguese>A modificação da interface do usuário está desabilitada.</Portuguese>
-            <French>Modifications de l'interface utilisateur désactivé.</French>
+            <French>La personnalisation de l'Interface Utilisateur est désactivée.</French>
             <Russian>Изменение пользовательского интерфейса запрещено.</Russian>
             <Japanese>ユーザ インタフェイスの変更は無効化されています。</Japanese>
             <Polish>Modyfikacja interfejsu użytkownika jest wyłączona.</Polish>
@@ -594,7 +595,7 @@
         <Key ID="STR_ACE_UI_Disabled">
             <English>Cannot modify a forced User Interface element.</English>
             <Portuguese>Não é possível modificar um elemento forçado da interface do usuário.</Portuguese>
-            <French>Impossible de modifier un élément de l'interface utilisateur forcé.</French>
+            <French>Impossible de modifier un élément forcé de l'Interface Utilisateur.</French>
             <Russian>Невозможно изменить зафиксированный элемент пользовательского интерфейса.</Russian>
             <Japanese>ユーザー インタフェイス要素の強制はできません。</Japanese>
             <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>
@@ -603,6 +604,7 @@
             <Italian>Impossibile modificare un elemento forzato d' Interfaccia Utente.</Italian>
             <Chinesesimp>无法编辑已被锁定的使用者介面元件</Chinesesimp>
             <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
+            <Czech>Nelze upravit prvek vynuceného uživatelského rozhraní.</Czech>
         </Key>
     </Package>
 </Project>

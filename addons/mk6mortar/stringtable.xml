@@ -5,7 +5,7 @@
             <English>82mm Rangetable</English>
             <German>82mm Distanztabelle</German>
             <Polish>Tabela strzelnicza 82mm</Polish>
-            <French>Table de tir 82mm</French>
+            <French>Table de tir 82 mm</French>
             <Russian>82 мм Таблица дальностей и прицелов</Russian>
             <Spanish>Tabla de distancias de 82mm</Spanish>
             <Hungarian>82mm hatótáv-tábla</Hungarian>
@@ -15,13 +15,13 @@
             <Japanese>82mm 射表</Japanese>
             <Korean>82mm 사거리표</Korean>
             <Chinesesimp>82mm迫击炮射表</Chinesesimp>
-            <Chinese>82mm迫擊炮射表</Chinese>
+            <Chinese>82毫米迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the Mk6 82mm Mortar</English>
             <German>Distanztabelle für den Mk6 82mm Mortar</German>
             <Polish>Tabela strzelnicza dla moździerza 82mm Mk6</Polish>
-            <French>Table de tir pour le mortier Mk6 82mm</French>
+            <French>Table de tir pour le mortier Mk6 82 mm.</French>
             <Russian>Таблица дальностей и прицелов для Mk6 82 мм мортиры</Russian>
             <Spanish>Tabla de distancias para el mortero Mk6 de 82mm</Spanish>
             <Hungarian>Hatótáv-tábla a Mk6 82mm-es mozsárhoz</Hungarian>
@@ -31,13 +31,13 @@
             <Japanese>Mk6 82mm 迫撃砲の射表</Japanese>
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
             <Chinesesimp>MK6 82mm迫击炮射表</Chinesesimp>
-            <Chinese>MK6 82mm迫擊炮射表</Chinese>
+            <Chinese>MK6 82毫米迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
             <German>Öffne 82mm Distanztabelle</German>
             <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
-            <French>Ouvrir la table de tir 82mm</French>
+            <French>Ouvrir la table de tir 82 mm</French>
             <Russian>Открыть 82 мм Таблицу дальностей и прицелов</Russian>
             <Spanish>Abrir tabla de distancias de 82mm</Spanish>
             <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
@@ -47,7 +47,7 @@
             <Japanese>82mm 射表を開く</Japanese>
             <Korean>82mm 사거리표 열기</Korean>
             <Chinesesimp>开启82mm迫击炮射表</Chinesesimp>
-            <Chinese>開啟82mm迫擊炮射表</Chinese>
+            <Chinese>開啟82毫米迫擊炮射表</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_charge">
             <English>Charge</English>
@@ -84,7 +84,7 @@
             <German>Mk6-Einstellungen</German>
             <Czech>Mk6 - Nastavení</Czech>
             <Portuguese>Ajustes do Mk6</Portuguese>
-            <French>Option du Mk6</French>
+            <French>Paramètres du Mk6</French>
             <Hungarian>Mk6 beállítások</Hungarian>
             <Russian>Настройки Mk6</Russian>
             <Italian>Impostazioni Mk6</Italian>
@@ -116,7 +116,7 @@
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
             <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
-            <French>Pour les tirs de joueurs, modèle de résistance à l'air et d'effet du vent</French>
+            <French>Pour les tirs des joueurs, simule la résistance de l'air et les effets du vent.</French>
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
@@ -132,7 +132,7 @@
             <German>Erlaube Mk6-Computer</German>
             <Czech>Mk6 - Povolit počítač</Czech>
             <Portuguese>Permitir computador do Mk6</Portuguese>
-            <French>Autoriser l'ordinateur de tir pour Mk6</French>
+            <French>Activer l'ordinateur de tir du Mk6</French>
             <Hungarian>Mk6 számítógép engedélyezése</Hungarian>
             <Russian>Разрешить компьютер Mk6</Russian>
             <Italian>Consenti Computer Mk6</Italian>
@@ -148,7 +148,7 @@
             <German>Zeige den Computer und den Entfernungsmesser an (diese MÜSSEN entfernt werden, wenn der Luftwiderstand aktiviert ist)</German>
             <Czech>Zobrazit počítač a dálkoměr (toto MUSÍ být odstraněno pokud je zapnut odpor vzduchu)</Czech>
             <Portuguese>Mostra o computador e o medidor de distância (estes DEVEM ser removidos se você habilitar resistência do ar)</Portuguese>
-            <French>Affiche l'ordinateur de tir (cette option doit être DESACTIVEE  si la résisance à l'air est activée)</French>
+            <French>Affiche l'ordinateur de tir et le télémètre. Cette option doit être DÉSACTIVÉE si la résistance de l'air est activée.</French>
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
@@ -164,7 +164,7 @@
             <German>Erlaube Mk6-Kompass</German>
             <Czech>Mk6 - Povolit kompas</Czech>
             <Portuguese>Permitir bússula do Mk6</Portuguese>
-            <French>Autoriser la boussole pour Mk6</French>
+            <French>Activer la boussole du Mk6</French>
             <Hungarian>Mk6 iránytű engedélyezése</Hungarian>
             <Russian>Разрешить компас Mk6</Russian>
             <Italian>Consenti Bussola Mk6</Italian>
@@ -180,7 +180,7 @@
             <German>Zeige Mk6-Digitaler-Kompass</German>
             <Czech>Mk6 - Zobrazit digitální kompas</Czech>
             <Portuguese>Mostra a bússula digital do Mk6</Portuguese>
-            <French>Affiche la boussole digitale pour le Mk6</French>
+            <French>Affiche la boussole numérique du Mk6.</French>
             <Hungarian>Az Mk6 digitális iránytű megjelenítése</Hungarian>
             <Russian>Показывает цифровой компас Mk6</Russian>
             <Italian>Mostra la Bussola Digitale Mk6</Italian>
@@ -196,7 +196,7 @@
             <Czech>Tento modul umožňuje nastavení minometu Mk6.</Czech>
             <Portuguese>Este módulo permite que você ajuste o morteiro Mk6.</Portuguese>
             <Russian>Модуль настройки миномета Mk6.</Russian>
-            <French>Ce module permet de régler les options du mortier Mk6</French>
+            <French>Ce module permet de régler les options du mortier Mk6.</French>
             <Italian>Questo modulo ti consente di impostare i parametri del mortaio Mk6.</Italian>
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
             <Japanese>Mk6 迫撃砲への設定をできます。</Japanese>
@@ -223,7 +223,7 @@
             <German>Enfernt das Magzin des Mörsers. Es ist nun erforderlich, die einzelnen Patronen manuell zu laden. Dies beeinflusst nicht die KI-Truppen.</German>
             <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas. No afecta morteros controlados por IA.</Spanish>
             <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego. Nie dotyczy moździerzy AI.</Polish>
-            <French>Enlever les chargeurs de mortier, requiert des obus individuels qui doivent être chargés par le tireur ou le servant. N'affect pas les mortiers IA.</French>
+            <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement. N'affecte pas les mortiers IA.</French>
             <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
             <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжащим. Не влияет на артиллерию ИИ.</Russian>
@@ -237,7 +237,7 @@
             <German>Entferne Patrone</German>
             <Spanish>Extraer ronda</Spanish>
             <Polish>Wyładuj pocisk</Polish>
-            <French>Enlever l'obus</French>
+            <French>Retirer l'obus</French>
             <Italian>Togli proiettile</Italian>
             <Czech>Odstranit náboj</Czech>
             <Portuguese>Remover munição</Portuguese>
@@ -326,7 +326,7 @@
             <German>Lade Leuchtpatrone</German>
             <Spanish>Cargar Iluminación</Spanish>
             <Polish>Załaduj pocisk oświetlający</Polish>
-            <French>Charger Eclairante</French>
+            <French>Charger Éclairant</French>
             <Italian>Carica illuminante</Italian>
             <Czech>Nabít Světlici</Czech>
             <Portuguese>Carregar Iluminação</Portuguese>
@@ -371,7 +371,7 @@
             <German>82mm Sprengpatrone</German>
             <Spanish>Ronda 82mm HE</Spanish>
             <Polish>Pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82mm HE</French>
+            <French>Obus de 82 mm HE</French>
             <Italian>Proiettile da 82mm HE</Italian>
             <Czech>82mm HE náboj</Czech>
             <Portuguese>Munição 82mm HE</Portuguese>
@@ -379,14 +379,14 @@
             <Japanese>82mm りゅう弾</Japanese>
             <Korean>82mm 고폭탄</Korean>
             <Chinesesimp>82mm高爆弹</Chinesesimp>
-            <Chinese>82mm高爆彈</Chinese>
+            <Chinese>82毫米高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
             <German>82mm Nebelpatrone</German>
             <Spanish>Ronda 82mm Humo</Spanish>
             <Polish>Pocisk dymny kal. 82mm</Polish>
-            <French>Obus de 82mm fumigène</French>
+            <French>Obus de 82 mm fumigène</French>
             <Italian>Proiettile Fumogeno da 82mm</Italian>
             <Czech>82mm Kouřový náboj</Czech>
             <Portuguese>Munição 82mm Fumaça</Portuguese>
@@ -394,14 +394,14 @@
             <Japanese>82mm 発煙弾</Japanese>
             <Korean>82mm 연막탄</Korean>
             <Chinesesimp>82mm烟雾弹</Chinesesimp>
-            <Chinese>82mm煙霧彈</Chinese>
+            <Chinese>82毫米煙霧彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
             <German>82mm Leuchtpatrone</German>
             <Spanish>Ronda 82mm Iluminación</Spanish>
             <Polish>Pocisk oświetlający kal. 82mm</Polish>
-            <French>Obus de 82mm éclairant</French>
+            <French>Obus de 82 mm éclairant</French>
             <Italian>Proiettile illuminante da 82mm</Italian>
             <Czech>82mm Osvětlovací náboj</Czech>
             <Portuguese>Munição 82mm Iluminação</Portuguese>
@@ -409,14 +409,14 @@
             <Japanese>82mm 照明弾</Japanese>
             <Korean>82mm 조명탄</Korean>
             <Chinesesimp>82mm照明弹</Chinesesimp>
-            <Chinese>82mm照明彈</Chinese>
+            <Chinese>82毫米照明彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
             <German>82mm gelenkte Sprengpatrone</German>
             <Spanish>Ronda 82mm Guiada</Spanish>
             <Polish>Kierowany pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82mm HE guidé</French>
+            <French>Obus de 82 mm HE guidé</French>
             <Italian>Proiettile HE guidato</Italian>
             <Czech>82mm HE náboj (naváděný)</Czech>
             <Portuguese>Munição 82mm HE Guiada</Portuguese>
@@ -424,14 +424,14 @@
             <Japanese>82mm 誘導りゅう弾</Japanese>
             <Korean>82mm 유도 고폭탄</Korean>
             <Chinesesimp>82mm导引高爆弹</Chinesesimp>
-            <Chinese>82mm導引高爆彈</Chinese>
+            <Chinese>82毫米導引高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
             <German>82mm lasergelenkte Sprengpatrone</German>
             <Spanish>Ronda 82mm Guiada por Laser</Spanish>
             <Polish>Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82mm HE guidé au laser</French>
+            <French>Obus de 82 mm HE guidé au laser</French>
             <Italian>Proiettile HE a guida laser</Italian>
             <Czech>82mm HE náboj (naváděný laserem)</Czech>
             <Portuguese>Munição 82mm HE Guiada por Laser </Portuguese>
@@ -439,14 +439,14 @@
             <Japanese>82mm レーザ誘導りゅう弾</Japanese>
             <Korean>82mm 레이저 유도 고폭탄</Korean>
             <Chinesesimp>82mm雷射导引高爆弹</Chinesesimp>
-            <Chinese>82mm雷射導引高爆彈</Chinese>
+            <Chinese>82毫米雷射導引高爆彈</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
             <German>Wird im Mk6 Mörser verwendet</German>
             <Spanish>Usada en el mortero Mk6</Spanish>
             <Polish>Używany w moździerzu Mk6</Polish>
-            <French>Utilisé dans le mortier Mk6</French>
+            <French>Utilisé dans le mortier Mk6.</French>
             <Italian>Usato nel mortaio Mk6</Italian>
             <Czech>Používá se u minometu Mk6</Czech>
             <Portuguese>Usada no Morteiro MK6</Portuguese>
@@ -461,7 +461,7 @@
             <German>[ACE] 82mm Sprengpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm HE</Spanish>
             <Polish>[ACE] Skrzynka amunicji wybuchowej 82mm</Polish>
-            <French>[ACE] Obus de 82mm HE</French>
+            <French>[ACE] Obus de 82 mm HE</French>
             <Italian>[ACE] Scatola proiettili espolisvi ad alto potenziale (HE) da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm HE)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm HE</Portuguese>
@@ -469,14 +469,14 @@
             <Japanese>[ACE] 82mm りゅう弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 고폭탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm高爆弹药箱</Chinesesimp>
-            <Chinese>[ACE] 82mm高爆彈藥箱</Chinese>
+            <Chinese>[ACE] 82毫米高爆彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
             <German>[ACE] 82mm Nebelpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm Humo</Spanish>
             <Polish>[ACE] Skrzynka amunicji dymnej 82mm</Polish>
-            <French>[ACE] Obus de 82mm fumigène</French>
+            <French>[ACE] Obus de 82 mm fumigène</French>
             <Italian>[ACE] Scatola fumogeni da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm Dýmovnice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Fumaça</Portuguese>
@@ -484,14 +484,14 @@
             <Japanese>[ACE] 82mm 発煙弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 연막탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm烟雾弹药箱</Chinesesimp>
-            <Chinese>[ACE] 82mm煙霧彈藥箱</Chinese>
+            <Chinese>[ACE] 82毫米煙霧彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
             <German>[ACE] 82mm Leuchtpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm Iluminacion</Spanish>
             <Polish>[ACE] Skrzynka amunicji oświetlającej 82mm</Polish>
-            <French>[ACE] Obus de 82mm éclairants</French>
+            <French>[ACE] Obus de 82 mm éclairants</French>
             <Italian>[ACE] Scatola illuminanti da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm Světlice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Iluminação</Portuguese>
@@ -499,14 +499,14 @@
             <Japanese>[ACE] 82mm 照明弾入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 조명탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm照明弹药箱</Chinesesimp>
-            <Chinese>[ACE] 82mm照明彈藥箱</Chinese>
+            <Chinese>[ACE] 82毫米照明彈藥箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
             <German>[ACE] 82mm Standardkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm por defecto</Spanish>
             <Polish>[ACE] Skrzynka amunicji standardowej 82mm</Polish>
-            <French>[ACE] Obus de 82mm par défaut</French>
+            <French>[ACE] Obus de 82 mm par défaut</French>
             <Italian>[ACE] Scatola proiettili 82mm standard</Italian>
             <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
@@ -514,7 +514,7 @@
             <Japanese>[ACE] 82mm 保管箱</Japanese>
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
             <Chinesesimp>[ACE] 82mm预设弹药箱</Chinesesimp>
-            <Chinese>[ACE] 82mm預設彈藥箱</Chinese>
+            <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>
         </Key>
     </Package>
 </Project>

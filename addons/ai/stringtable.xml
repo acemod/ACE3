@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="ai">
-        <Key ID="STR_ACE_ai_GarrisonInvalidPosition">
+    <Package name="AI">
+        <Key ID="STR_ACE_AI_GarrisonInvalidPosition">
             <English>Invalid position provided.</English>
             <German>Ungültige Position</German>
-            <French>Position invalide fourni</French>
+            <French>Position invalide fournie.</French>
             <Japanese>位置が無効です。</Japanese>
             <Italian>Posizione invalida fornita.</Italian>
             <Chinese>提供的位置無效</Chinese>
@@ -16,10 +16,10 @@
             <Spanish>Posición no válida proporcionada</Spanish>
             <Turkish>Geçersiz konum sağlandı.</Turkish>
         </Key>
-        <Key ID="STR_ACE_ai_GarrisonNoUnits">
+        <Key ID="STR_ACE_AI_GarrisonNoUnits">
             <English>No units provided.</English>
             <German>Keine Einheit ausgewählt</German>
-            <French>Aucune unité fourni</French>
+            <French>Aucune unité fournie.</French>
             <Japanese>ユニットがありません。</Japanese>
             <Italian>Nessuna unità fornita.</Italian>
             <Chinese>找不到可用的單位</Chinese>
@@ -31,10 +31,10 @@
             <Spanish>No hay unidades proporcionadas.</Spanish>
             <Turkish>Sağlanan birim yok.</Turkish>
         </Key>
-        <Key ID="STR_ACE_ai_GarrisonNotEnoughPos">
+        <Key ID="STR_ACE_AI_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
             <German>Es gibt nicht genug Positionen, um alle Einheiten zu platzieren</German>
-            <French>Il n'y a pas assez de positions pour placer toutes les unités</French>
+            <French>Il n'y a pas assez de positions pour placer toutes les unités.</French>
             <Japanese>全ユニットを置くために十分な位置がありません。</Japanese>
             <Italian>Non ci sono abbastanza posizioni per piazzare tutte le unità.</Italian>
             <Chinese>沒有足夠的位置能擺放所有單位</Chinese>
@@ -46,10 +46,10 @@
             <Spanish>No hay suficientes posiciones para colocar todas las unidades.</Spanish>
             <Turkish>Tüm birimleri yerleştirmek için yeterli pozisyon yok.</Turkish>
         </Key>
-        <Key ID="STR_ACE_ai_GarrisonNoBuilding">
+        <Key ID="STR_ACE_AI_GarrisonNoBuilding">
             <English>No building found.</English>
             <German>Kein Gebäude gefunden</German>
-            <French>Aucun bâtiment trouvé</French>
+            <French>Aucun bâtiment trouvé.</French>
             <Japanese>建物がありません。</Japanese>
             <Italian>Nessun edificio trovato.</Italian>
             <Chinese>沒找到建築物</Chinese>

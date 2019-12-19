@@ -7,7 +7,7 @@
             <German>Laserstreuung-Simulationszähler</German>
             <Korean>레이저 분산 시뮬레이션 수</Korean>
             <Polish>Wskaźnik poziomu rozproszenia wiązki lasera</Polish>
-            <French>Compte de la simulation de la dispersion du laser</French>
+            <French>Nombre de simulations pour la dispersion du laser</French>
             <Italian>Contatore di Simulazione della Dispersione del Laser</Italian>
             <Chinesesimp>雷射散射模拟计算</Chinesesimp>
             <Chinese>雷射散射模擬計算</Chinese>
@@ -34,7 +34,7 @@
             <English>Laser - Cycle Code Up</English>
             <German>Lasercode +</German>
             <Polish>Laser - Następny kod</Polish>
-            <French>Laser - Code +</French>
+            <French>Code laser +</French>
             <Russian>Лазер - увеличить частоту</Russian>
             <Portuguese>Laser - Alternar Código para Cima</Portuguese>
             <Hungarian>Lézer - kódciklus növelése</Hungarian>
@@ -50,7 +50,7 @@
             <English>Laser - Cycle Code Down</English>
             <German>Lasercode -</German>
             <Polish>Laser - Poprzedni kod</Polish>
-            <French>Laser - Code -</French>
+            <French>Code laser -</French>
             <Russian>Лазер - уменьшить частоту</Russian>
             <Portuguese>Laser - Alternar Código para Baixo</Portuguese>
             <Hungarian>Lézer - kódciklus csökkentése</Hungarian>

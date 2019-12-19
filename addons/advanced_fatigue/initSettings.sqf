@@ -4,8 +4,14 @@
     [LSTRING(Enabled), LSTRING(Enabled_Description)],
     LSTRING(DisplayName),
     true,
-    true,
-    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true, {
+        if (!_this) then {
+            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+            _staminaBarContainer ctrlSetFade 1;
+            _staminaBarContainer ctrlCommit 0;
+        };
+        [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)
+    },
     true // Needs mission restart
 ] call CBA_Settings_fnc_init;
 
@@ -19,6 +25,21 @@
         if (!_this) then {
             private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
             _staminaBarContainer ctrlSetFade 1;
+            _staminaBarContainer ctrlCommit 0;
+        };
+    }
+] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(fadeStaminaBar),
+    "CHECKBOX",
+    [LSTRING(FadeStaminaBar), LSTRING(FadeStaminaBar_Description)],
+    LSTRING(DisplayName),
+    true,
+    false, {
+        if (!_this && GVAR(enabled) && GVAR(enableStaminaBar)) then {
+            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+            _staminaBarContainer ctrlSetFade 0;
             _staminaBarContainer ctrlCommit 0;
         };
     }

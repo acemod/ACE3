@@ -119,6 +119,16 @@ class CfgAmmo {
         effectsSmoke = "ACE_M84FlashbangEffect";
         whistleDist = 0;
     };
+    
+    class ACE_G_CTS9: ACE_G_M84 {
+        GVAR(flashbang) = 1;
+        GVAR(flashbangBangs) = 9;
+        GVAR(flashbangInterval) = 0.5;
+        GVAR(flashbangIntervalMaxDeviation) = 0.35;
+        model = QPATHTOF(models\ACE_CTS_9bang_thrown.p3d);
+        explosionTime = 1.5;
+        timeToLive = 10;
+    };
 
     class Chemlight_base: SmokeShell {
         GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\Other\dry4.wss", 3, 2, 10};

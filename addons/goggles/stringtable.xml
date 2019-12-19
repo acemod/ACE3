@@ -12,13 +12,27 @@
             <Polish>Gogle</Polish>
             <Russian>Очки</Russian>
             <Portuguese>Óculos</Portuguese>
+            <French>Lunettes</French>
+        </Key>
+        <Key ID="STR_ACE_Goggles_SettingsName">
+            <English>ACE Goggles</English>
+            <German>ACE Schutzbrille</German>
+            <Italian>ACE Occhiali</Italian>
+            <Chinese>ACE 護目鏡</Chinese>
+            <Chinesesimp>ACE 护目镜</Chinesesimp>
+            <Japanese>ACE ゴーグル</Japanese>
+            <Korean>ACE 고글</Korean>
+            <Polish>ACE Gogle</Polish>
+            <Russian>ACE Очки</Russian>
+            <Portuguese>ACE Óculos</Portuguese>
+            <French>ACE Lunettes</French>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
             <German>Brilleneffekt in dritter Person anzeigen</German>
             <Spanish>Mostrar efectos de las gafas en tercera persona</Spanish>
             <Czech>Zobrazit efekt brýlí v třetí osobě</Czech>
-            <French>Effets de lunettes à la 3ème personne</French>
+            <French>Effets des lunettes à la 3ème personne</French>
             <Russian>Отображать эффект очков от третьего лица</Russian>
             <Hungarian>Szemüveg-effekt mutatása külső nézetből</Hungarian>
             <Polish>Włącz efekty gogli w trzeciej osobie</Polish>
@@ -83,6 +97,12 @@
             <Chinesesimp>染色 + 影响</Chinesesimp>
             <Chinese>染色 + 影響</Chinese>
             <Portuguese>Cor + Efeitos</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
+            <English>Show Wipe Goggles self interaction</English>
+            <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
+            <Japanese>ゴーグルの拭き取りをセルフ インタラクションに表示</Japanese>
+            <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
         </Key>
     </Package>
 </Project>

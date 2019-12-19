@@ -179,7 +179,7 @@
             <Spanish>Disminuir el brillo de las NVG</Spanish>
             <Polish>Zmniejsz czułość noktowizji</Polish>
             <Czech>Snížení jasu noktovizoru</Czech>
-            <French>Baisser la luminosité des JVN</French>
+            <French>Abaisser la luminosité des JVN</French>
             <Russian>Уменьшить яркость ПНВ</Russian>
             <Hungarian>Éjjellátó fényerejének csökkentése</Hungarian>
             <Portuguese>Diminuir Luminosidade do EVN</Portuguese>
@@ -213,7 +213,7 @@
             <Polish>Ustawienia noktowizorów</Polish>
             <Italian>Impostazioni per visione notturna.</Italian>
             <Spanish>Parámetros para visión nocturna</Spanish>
-            <French>Réglage pour la vision nocturne</French>
+            <French>Réglages pour la vision nocturne.</French>
             <Japanese>暗視装置の設定をします。</Japanese>
             <Korean>야간투시경 설정</Korean>
             <Chinesesimp>设定夜视选项.</Chinesesimp>
@@ -228,7 +228,7 @@
             <Polish>Wył. NVG przy celowaniu</Polish>
             <Italian>Disabilita NVG nei mirini</Italian>
             <Spanish>Desactivar NVG en miras</Spanish>
-            <French>Desactiver les JVN dans les viseurs.</French>
+            <French>Désactiver les JVN dans les viseurs</French>
             <Japanese>スコープでは暗視装置を無効化</Japanese>
             <Korean>조준경 사용시 야투경 비활성화</Korean>
             <Chinesesimp>使用瞄准镜时关闭夜视镜</Chinesesimp>
@@ -268,7 +268,7 @@
             <German>Nebel wird genutzt, um die Sichtbarkeit einzuschränken.</German>
             <Chinese>透過霧氣來縮減夜視鏡的可視距離</Chinese>
             <Chinesesimp>透过雾气来缩减夜视镜的可视距离。</Chinesesimp>
-            <French>Le brouillard est utilisé pour limiter la visibilité</French>
+            <French>Le brouillard est utilisé pour limiter la visibilité.</French>
             <Polish>Mgła jest wykorzystywana do ograniczenia widoczności.</Polish>
             <Russian>Туман используется для ограничения видимости</Russian>
             <Portuguese>Névoa é usada para limitar visibilidade.</Portuguese>
@@ -292,7 +292,7 @@
             <German>Unschärfe und Helligkeitseffekte [Dies auf 0 zu setzen deaktiviert SÄMTLICHE Nachtsichteffekte]</German>
             <Chinese>調整模糊與亮度的效果。[設值為0會關閉所有夜視鏡的特殊效果]</Chinese>
             <Chinesesimp>调整模糊与亮度的效果。[设值为0会关闭所有夜视镜的特殊效果]</Chinesesimp>
-            <French>Effets de flou et de luminosité [Règler cette option sur 0 désactivera TOUS les effets de vision nocturne]</French>
+            <French>Effets de flou et de luminosité. [Régler cette option sur 0 désactivera TOUS les effets de vision nocturne.]</French>
             <Polish>Efekty rozmazania i jasności [Ustawienie na 0 wyłączy WSZYSTKIE efekty noktowizji]</Polish>
             <Russian>Эффекты размытия и яркости [Установка на 0 отключит ВСЕ эффекты ПНВ]</Russian>
             <Portuguese>Efeitos de borrão e brilho [Definir 0 desativa TODOS os efeitos da Visão Noturna]</Portuguese>
@@ -327,7 +327,7 @@
             <Chinese>調整配戴夜視鏡時畫面雜訊的多寡。</Chinese>
             <Chinesesimp>调整配戴夜视镜时画面杂讯的多寡。</Chinesesimp>
             <Japanese>暗視装置を使用時に起きる画像ノイズの強度です</Japanese>
-            <French>Intensité du bruit de l'image lorsque vous portez des JVN</French>
+            <French>Intensité du bruit de l'image lorsque vous portez des JVN.</French>
             <Italian>Intensità del disturbo dell'immagine quando i NVG sono equipaggiati</Italian>
             <Polish>Intensywność efektu szumu podczas noszenia gogli noktowizyjnych</Polish>
             <Russian>Интенсивность шума при использовании ПНВ</Russian>
@@ -351,7 +351,7 @@
             <Japanese>発射炎が作るローリング シャッター効果です</Japanese>
             <Chinesesimp>枪械开火时产生瞬间快门效果</Chinesesimp>
             <Chinese>槍開火時瞬間產生快門效果</Chinese>
-            <French>Effets d'obturateur à rideau dû aux flashs du canon</French>
+            <French>Effet d'obturateur à rideau dû aux flashs du canon.</French>
             <Italian>Effetto lampeggiante dato dal lampo dello sparo</Italian>
             <Polish>Efekt rolling shutter z błysków wylotowych</Polish>
             <Russian>Эффект затвора при вспышках выстрелов</Russian>

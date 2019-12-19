@@ -117,7 +117,7 @@ def main():
                 language,
                 keysum - localizedsum[i],
                 ", ".join(missing[i]),
-                round(100 * localizedsum[i] / keysum)))
+                round(100 * localizedsum[i] / keysum, 2)))
 
 if __name__ == "__main__":
     main()

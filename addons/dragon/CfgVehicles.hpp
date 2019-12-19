@@ -18,6 +18,7 @@ class CfgVehicles {
         faction = "BLU_F";
         crew = "B_soldier_f";
         model = QPATHTOF(models\ace_m47_static.p3d);
+        editorPreview = QPATHTOF(data\ace_dragon_staticAssembled.jpg);
         picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
         UiPicture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
         icon = "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AT_CA.paa";

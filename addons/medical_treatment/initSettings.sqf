@@ -25,7 +25,7 @@
     "CHECKBOX",
     [LSTRING(WoundReopening_DisplayName), LSTRING(WoundReopening_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    true,
+    false,
     true
 ] call CBA_settings_fnc_init;
 

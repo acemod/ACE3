@@ -20,6 +20,7 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@master
     - name: Build
+      shell: cmd
       run: |
         cd extensions/build
         cmake .. && cmake --build .

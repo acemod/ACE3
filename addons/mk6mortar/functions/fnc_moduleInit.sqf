@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_logic", "_syncedUnits", "_activated"];
+params ["_logic", "", "_activated"];
 
 if (!_activated) exitWith {WARNING("Module - placed but not active");};
 
