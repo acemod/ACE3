@@ -9,6 +9,7 @@
             <French>Médecine IA</French>
             <Portuguese>IA Médico</Portuguese>
             <Chinese>AI醫療兵</Chinese>
+            <Italian>Medico AI</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
@@ -18,6 +19,7 @@
             <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
             <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
+            <Italian>L'intelligenza artificiale risponderà a lesioni e perdita di coscienza</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>

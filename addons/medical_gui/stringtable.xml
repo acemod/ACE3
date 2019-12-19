@@ -8,6 +8,7 @@
             <Russian>Медицинский интерфейс</Russian>
             <Portuguese>GUI</Portuguese>
             <Chinese>界面</Chinese>
+            <Italian>GUI</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
             <English>Enable Medical Actions</English>
@@ -17,6 +18,7 @@
             <French>Activer actions médicales</French>
             <Portuguese>Ativar Ações Médicas</Portuguese>
             <Chinese>啟用醫療行為</Chinese>
+            <Italian>Attivare azioni mediche</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
@@ -26,6 +28,7 @@
             <French>Permet d'afficher les actions médicales dans le menu d'interaction, ainsi que de choisir le style visuel.</French>
             <Portuguese>Ativa as ações médicas para o menu de interação e seleciona seus estilos.</Portuguese>
             <Chinese>為互動選單啟用醫療行為以及選擇其風格。</Chinese>
+            <Italian>Abilita le azioni mediche per il Menu Interazione e seleziona il loro stile.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Selections3D">
             <English>Selections (3D)</English>
@@ -67,6 +70,7 @@
             <French>Activer actions médicales sur soi-même</French>
             <Portuguese>Ativar ações médicas em si mesmo</Portuguese>
             <Chinese>啟用自我醫療行為</Chinese>
+            <Italian>Abilitare le azioni di automedicazione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_Description">
             <English>Enables medical actions for the Self Interaction Menu.</English>
@@ -76,6 +80,7 @@
             <French>Active les actions médicales du menu d'interaction personnel.</French>
             <Portuguese>Ativa as ações médicas do menu de interação pessoal.</Portuguese>
             <Chinese>為自我互動選單啟用醫療行為。</Chinese>
+            <Italian>Abilita il menu per le interazioni mediche personali</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_DisplayName">
             <English>Enable Medical Menu</English>
@@ -85,6 +90,7 @@
             <French>Activer menu médical</French>
             <Portuguese>Ativar Menu Médico</Portuguese>
             <Chinese>啟用醫療選單</Chinese>
+            <Italian>Abilita il menu medico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
@@ -94,6 +100,7 @@
             <French>Permet l'utilisation du menu médical via une touche, ou via le menu d'interaction.</French>
             <Portuguese>Ativa o uso do Menu Médico atráves da Tecla ou Menu de Interação.</Portuguese>
             <Chinese>啟用以互動選單或者按鍵綁定所呼出的高效醫療選單</Chinese>
+            <Italian>Abilita l'uso del Menu Medico attraverso il menu tastiera o il menu di interazione.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
             <English>Reopen Medical Menu</English>
@@ -103,6 +110,7 @@
             <French>Rouvrir le menu médical</French>
             <Portuguese>Reabrir Menu Médico</Portuguese>
             <Chinese>醫療選單二度開啟</Chinese>
+            <Italian>Riaprire il menù medico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_Description">
             <English>Reopen the Medical Menu after successful treatment.</English>
@@ -112,6 +120,7 @@
             <French>Réouvre le menu médical suite à l'application d'un soin.</French>
             <Portuguese>Reabrir Menu Médico após um tratamento com sucesso</Portuguese>
             <Chinese>當治療完成後二度打開醫療選單</Chinese>
+            <Italian>Riaprire il menu medico dopo il trattamento con successo.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -121,6 +130,7 @@
             <French>Distance maximale</French>
             <Portuguese>Distância Máxima</Portuguese>
             <Chinese>最大醫療距離</Chinese>
+            <Italian>Massima distanza</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
@@ -130,6 +140,7 @@
             <French>Définit la distance (en mètres) à partir de laquelle il n'est plus possible d'activer le menu médical pour traiter un patient.</French>
             <Portuguese>A Distância máxima do paciente para que o Menu Médico possa ser aberto.</Portuguese>
             <Chinese>設定距離多遠以內可以對目標使用醫療選單</Chinese>
+            <Italian>Distanza massima da cui si può aprire il Menu Medico.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -847,6 +858,7 @@
             <French>Fracturé</French>
             <Portuguese>Fraturado</Portuguese>
             <Chinese>骨折</Chinese>
+            <Italian>Frattura</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
@@ -855,6 +867,7 @@
             <French>Attelle appliquée</French>
             <Portuguese>Tala Aplicada</Portuguese>
             <Chinese>已使用固定板</Chinese>
+            <Italian>Gessatura applicata</Italian>
         </Key>
         <!--
             Strings above match Blood2 but seem to differ in some languages, determine which is best to use
@@ -867,6 +880,7 @@
             <French>A perdu un peu de sang</French>
             <Portuguese>Perdeu um pouco de Sangue</Portuguese>
             <Chinese>輕微失血</Chinese>
+            <Italian>Ha perso un po' di sangue</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
             <English>Lost a lot of blood</English>
@@ -892,6 +906,7 @@
             <French>A perdu une grande quantité de sang</French>
             <Portuguese>Perdeu uma quantidade grande de sangue</Portuguese>
             <Chinese>極大量失血中</Chinese>
+            <Italian>Ha perso una grande quantità di sangue</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
@@ -901,6 +916,7 @@
             <French>Exsanguination</French>
             <Portuguese>Perdeu uma quantidade fatal de sangue</Portuguese>
             <Chinese>致命性失血中</Chinese>
+            <Italian>Ha perso una quantità fatale di sangue</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -953,6 +969,7 @@
             <Japanese>部分的な%1</Japanese>
             <Chinese>部分 %1</Chinese>
             <French>Partiel %1</French>
+            <Italian>Parziale %1</Italian>
         </Key>
     </Package>
 </Project>
