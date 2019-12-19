@@ -102,6 +102,7 @@
             <English>Show Wipe Goggles self interaction</English>
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
             <Japanese>ゴーグルの拭き取りをセルフ インタラクションに表示</Japanese>
+            <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
         </Key>
     </Package>
 </Project>
