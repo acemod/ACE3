@@ -3,12 +3,12 @@
 if (!hasInterface) exitWith {};
 
 ["ACE3 Common", QGVAR(wipeGlasses), localize LSTRING(WipeGlasses), {
-    if (GVAR(effects) != 2) exitWith {false}; //Can only wipe if full effects setting is set
-    if (!GETVAR(ace_player,ACE_isUnconscious,false)) exitWith {
-        call FUNC(clearGlasses);
-        true
-    };
-    false
+    // Conditions: specific
+    if !(call FUNC(canWipeGlasses)) exitWith {false};
+
+    call FUNC(clearGlasses);
+
+    true
 },
 {false},
 [20, [true, true, false]], false] call CBA_fnc_addKeybind;

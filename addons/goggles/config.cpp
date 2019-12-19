@@ -16,6 +16,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
 
 #define COMBAT_GOGGLES         ACE_Overlay = QPATHTOF(textures\HUD\CombatGoggles.paa); \
         ACE_OverlayCracked = QPATHTOF(textures\HUD\CombatGogglesCracked.paa); \
