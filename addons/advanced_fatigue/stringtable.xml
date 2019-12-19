@@ -198,7 +198,7 @@
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar">
             <English>Show stamina bar</English>
             <German>Zeige Ausdauerleiste</German>
-            <Japanese>スタミナバーを表示する</Japanese>
+            <Japanese>スタミナバーを表示</Japanese>
             <Polish>Pokaż pasek wytrzymałości</Polish>
             <Korean>피로도 막대</Korean>
             <French>Afficher la barre d'endurance</French>
@@ -227,11 +227,13 @@
             <English>Fade Stamina bar automatically</English>
             <German>Blende Ausdauerleiste automatisch aus</German>
             <Chinese>體力條自動淡去</Chinese>
+            <Japanese>自動的にスタミナバーを非表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
             <German>Passt die Transparenz der Ausdauerleiste abhängig vom Ausdauerstatus an.</German>
             <Chinese>依照目前的體力程度調整體力條之透明度</Chinese>
+            <Japanese>スタミナの状態に応じて、自動的にバーの透明度を調整します。</Japanese>
         </Key>
     </Package>
 </Project>
