@@ -101,6 +101,7 @@
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
             <English>Show Wipe Goggles self interaction</English>
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
+            <Japanese>ゴーグルの拭き取りをセルフ インタラクションに表示</Japanese>
         </Key>
     </Package>
 </Project>
