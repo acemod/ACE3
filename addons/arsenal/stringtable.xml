@@ -985,13 +985,13 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_Mode">
             <English>Mode</English>
-            <German>Modus</German>
             <Chinese>模式</Chinese>
             <French>Mode</French>
             <Spanish>Modo</Spanish>
             <Italian>Modalità</Italian>
             <Polish>Tryb</Polish>
             <Russian>Режим</Russian>
+            <German>Modus</German>
             <Czech>Režim</Czech>
             <Portuguese>Modo</Portuguese>
             <Korean>모드</Korean>

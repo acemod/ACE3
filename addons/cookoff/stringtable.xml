@@ -101,7 +101,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammunition cook off duration</English>
-            <German>Munitionsbrand Dauer</German>
+            <German>Dauer der Munitionsdurchzündung</German>
             <Polish>Czas trwania samozapłonu amunicji</Polish>
             <Japanese>弾薬の誘爆持続時間</Japanese>
             <French>Durée d'auto-inflammation des munitions</French>

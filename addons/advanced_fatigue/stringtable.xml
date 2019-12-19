@@ -31,7 +31,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_Description">
             <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
-            <German>Beinflusst die Leistungsfähigkeit aller Spieler ohne seperaten Leistungsfaktor. Ein höherer Wert bedeutet bessere Leistung.</German>
+            <German>Beinflusst die Leistungsfähigkeit aller Spieler ohne separaten Leistungsfaktor. Ein höherer Wert bedeutet bessere Leistung.</German>
             <Japanese>個別の因数を設定されていない、全てのプレイヤーのあらゆるパフォーマンスに影響を与えます。 値が高ければ高いほど、良い効果が得られます。</Japanese>
             <Polish>Wpływa na ogólną wydolność organizmu u wszystkich graczy bez ustawionego niestandardowego współczynnika. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 임의로 설정된 값 없이 영향받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
@@ -73,7 +73,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_Description">
             <English>Changes how fast the player recovers when resting. Higher is faster.</English>
-            <German>Ändert die Schnelligkeit der Ausdauerregeneration. Ein höherer Wert bedeutet eine schnellere Regeneration.</German>
+            <German>Ändert die Geschwindigkeit der Ausdauerregeneration. Ein höherer Wert bedeutet eine schnellere Regeneration.</German>
             <Japanese>プレイヤーが休憩をとる際に、どのくらいの速度でスタミナ回復するかを設定します。 値が高ければ高いほど、早くなります。</Japanese>
             <Polish>Wpływa na czas regeneracji podczas postoju. Więcej znaczy szybciej.</Polish>
             <Korean>얼마나 빨리 회복하는지를 바꿉니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
