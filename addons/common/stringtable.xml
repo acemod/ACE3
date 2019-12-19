@@ -610,7 +610,7 @@
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
-            <German>Wähle die Textfarbe für ACE-Hinweise. Die gewählte Farbe wird als Standardfarbe der Hinweise angezeigt, wenn der Hinweis selbst keine spezifische Farbe hat. </German>
+            <German>Wähle die Textfarbe für ACE-Hinweise. Die gewählte Farbe wird als Standardfarbe der Hinweise angezeigt, wenn der Hinweis selbst keine spezifische Farbe hat.</German>
             <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificación no tiene otro color especificado.</Spanish>
             <Italian>Il colore del testo dei suggerimenti di ACE. Questo è il colore predefinito per tutto il testo mostrato dal sistema di suggerimenti di ACE quando il colore del testo non ha altro colore specificato.</Italian>
             <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
