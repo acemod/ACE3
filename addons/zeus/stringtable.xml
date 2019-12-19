@@ -720,7 +720,7 @@
             <Chinesesimp>传送全部小队成员</Chinesesimp>
             <Chinese>傳送全部小隊成員</Chinese>
             <Portuguese>Teleporta todas as unidades do grupo</Portuguese>
-            <Spanish>Teletransporta todas las unidades en grupo</Spanish>
+            <Spanish>Teletransporta todas las unidades en el grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -766,7 +766,7 @@
             <Chinesesimp>搜索附近的建筑物</Chinesesimp>
             <Chinese>搜索附近的建築物</Chinese>
             <Portuguese>Procurar construções próximas</Portuguese>
-            <Spanish>Buscar edificio cercano</Spanish>
+            <Spanish>Buscar edificios cercanos</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -825,7 +825,7 @@
             <Chinese>切換模擬</Chinese>
             <Russian>Вкл/Выкл симуляцию</Russian>
             <Portuguese>Alternar Simulação</Portuguese>
-            <Spanish>Simulación de alternancia</Spanish>
+            <Spanish>Activar simulación</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -978,7 +978,7 @@
             <Chinesesimp>单位必须属于一个合适的一边</Chinesesimp>
             <Chinese>單位必須屬於一個合適的一邊</Chinese>
             <Portuguese>Unidade deve pertencer á um lado apropriado</Portuguese>
-            <Spanish>La unidad debe pertenecer a un lado apropiado</Spanish>
+            <Spanish>La unidad debe pertenecer al bando apropiado</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>

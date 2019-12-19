@@ -73,7 +73,7 @@
             <Italian>Permette al client di modificare la propria UI.</Italian>
             <Chinesesimp>允许客户端自行调整使用者介面</Chinesesimp>
             <Chinese>允許客戶端自行調整使用者介面</Chinese>
-            <Spanish>Permitir al cliente modificar su IU.</Spanish>
+            <Spanish>Permitir al cliente modificar su interfaz.</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
             <English>Soldier/Vehicle/Weapon Information</English>
@@ -223,7 +223,7 @@
             <Italian>Contatore Munizioni</Italian>
             <Chinesesimp>弹药数量</Chinesesimp>
             <Chinese>彈藥數量</Chinese>
-            <Spanish>Cuenta de munición</Spanish>
+            <Spanish>Cantidad de munición</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
             <English>Magazine Count</English>
@@ -238,7 +238,7 @@
             <Italian>Contatore Caricatore</Italian>
             <Chinesesimp>弹匣数量</Chinesesimp>
             <Chinese>彈匣數量</Chinese>
-            <Spanish>Recuento de revistas</Spanish>
+            <Spanish>Recuento de cargadores</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableName">
             <English>Throwable Type</English>
@@ -268,7 +268,7 @@
             <Italian>Contatore Lanciabili</Italian>
             <Chinesesimp>投掷物数量</Chinesesimp>
             <Chinese>投擲物數量</Chinese>
-            <Spanish>Cuenta arrojable</Spanish>
+            <Spanish>Cantidad arrojable</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_Zeroing">
             <English>Zeroing</English>

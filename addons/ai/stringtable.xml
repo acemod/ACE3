@@ -13,7 +13,7 @@
             <Polish>Podano błędną pozycję.</Polish>
             <Russian>Указана неверная позиция</Russian>
             <Portuguese>Posição inválida fornecida.</Portuguese>
-            <Spanish>Posición no válida proporcionada</Spanish>
+            <Spanish>Posición inválida proporcionada</Spanish>
             <Turkish>Geçersiz konum sağlandı.</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNoUnits">
@@ -58,7 +58,7 @@
             <Polish>Nie znaleziono budynku.</Polish>
             <Russian>Здание не найдено</Russian>
             <Portuguese>Nenhuma construção encontrada.</Portuguese>
-            <Spanish>No se encontró edificio.</Spanish>
+            <Spanish>No se ha encontrado ningún edificio.</Spanish>
             <Turkish>Bina bulunamadı.</Turkish>
         </Key>
     </Package>

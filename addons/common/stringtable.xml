@@ -475,7 +475,7 @@
             <Polish>Sprawdź wszystkie PBO</Polish>
             <Russian>Проверять все PBO</Russian>
             <Portuguese>Checar Todos os PBOs</Portuguese>
-            <Spanish>Comprobar PBO todo</Spanish>
+            <Spanish>Comprobar todos los PBO</Spanish>
             <French>Vérifier tous les PBOs</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
@@ -493,7 +493,7 @@
             <Polish>Sprawdź białą listę PBO</Polish>
             <Russian>Белый список для проверки PBO</Russian>
             <Portuguese>Lista Branca de PBO</Portuguese>
-            <Spanish>Comprobar PBO lista blanca</Spanish>
+            <Spanish>Comprobar lista blanca de PBOs</Spanish>
             <French>Vérifier les PBOs en liste blanche</French>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelistDesc">
