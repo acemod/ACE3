@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use item
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_item", ["_vehicleUsage", false]];
 
@@ -22,7 +22,7 @@ private _return = false;
 
 if !(_vehicleUsage) then {
     if (_item != "") then {
-        if (_item in items _unit) then {
+        if (_item in (_unit call EFUNC(common,uniqueItems))) then {
             _unit removeItem _item;
             _return = true;
         } else {

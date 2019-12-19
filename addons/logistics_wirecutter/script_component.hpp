@@ -50,7 +50,25 @@
     "wall_fen1_5.p3d",\
     "plot_provizorni.p3d",\
     "plp_ctm_partitioningfencegrey.p3d",\
-    "fence.p3d"\
+    "fence.p3d",\
+    "fort_razorwire.p3d",\
+    "barbedwire.pd3",\
+    "dd_pletivo.p3d",\
+    "plot_green_draty.p3d",\
+    "plot_rust_draty.p3d",\
+    "wall_fen1_5_2.p3d",\
+    "gm_fence_border_gssz_70_600.p3d",\
+    "gm_fence_border_gssz_70_gate_350_r.p3d",\
+    "gm_fence_border_gssz_70_gate_350_w.p3d",\
+    "gm_fence_border_gz1_600.p3d",\
+    "gm_fence_border_gz1_gate_350_r.p3d",\
+    "gm_fence_border_gz1_gate_350_w.p3d",\
+    "gm_fence_wirefence_01_01.p3d",\
+    "gm_fence_wirefence_01_02.p3d",\
+    "gm_fence_wirefence_01_03.p3d",\
+    "gm_gc_g501_sm70_01.p3d",\
+    "gm_gc_g501_sm70_02.p3d",\
+    "gm_gc_g501_sm70_03.p3d"\
 ]
 
 #define SOUND_CLIP_TIME_SPACING 1.5
@@ -58,7 +76,7 @@
 #define CUT_TIME_ENGINEER 7.5
 
 #define HAS_WIRECUTTER(unit) (\
-    "ACE_wirecutter" in ([ARR_6(unit, false, true, true, true, false)] call CBA_fnc_uniqueUnitItems) \
+    "ACE_wirecutter" in (unit call EFUNC(common,uniqueItems)) \
     || {1 == getNumber (configFile >> "CfgVehicles" >> (backpack unit) >> QGVAR(hasWirecutter))} \
     || {1 == getNumber (configFile >> "CfgWeapons" >> (vest unit) >> QGVAR(hasWirecutter))} \
 )

@@ -47,8 +47,8 @@ class CfgVehicles {
                 };
             };
             class playerNamesViewDistance {
-                displayName = CSTRING(PlayerNamesViewDistance_DisplayName);
-                description = CSTRING(PlayerNamesViewDistance_Description);
+                displayName = CSTRING(playerNamesViewDistance_DisplayName);
+                description = CSTRING(playerNamesViewDistance_Description);
                 typeName = "NUMBER";
                 defaultValue = 5;
             };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Sets a custom set of icons for a specified faction.
@@ -22,13 +23,13 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (isNil QGVAR(factionRanks)) then {
     GVAR(factionRanks) = [] call CBA_fnc_createNamespace;
 };
 
 params [["_faction", "", [""]], ["_icons", [], [[]], [7]]];
+TRACE_2("setFactionRankIcons",_faction,_icons);
 
 if !(_faction != "" && {_icons isEqualTypeAll ""}) exitWith {false};
 

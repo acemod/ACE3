@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.12.3-blue.svg?style=flat-square" alt="ACE3 Version">
+        <img src="https://img.shields.io/badge/Version-0.0.0-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Fehlermeldungen">
@@ -18,8 +18,8 @@
     <a href="https://slackin.ace3mod.com/">
         <img src="https://slackin.ace3mod.com/badge.svg?style=flat-square&label=Slack" alt="ACE3 Slack">
     </a>
-    <a href="https://travis-ci.org/acemod/ACE3">
-        <img src="https://img.shields.io/travis/acemod/ACE3.svg?style=flat-square&label=Build" alt="ACE3 Build Status">
+    <a href="https://circleci.com/gh/acemod/ACE3">
+        <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
     </a>
 </p>
 </p>

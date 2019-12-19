@@ -64,6 +64,17 @@ class CfgMagazines {
         ammo = "ACE_G_M84";
         mass = 4;
     };
+    
+    class ACE_CTS9: HandGrenade {
+        author = ECSTRING(common,ACETeam);
+        displayname = CSTRING(CTS9_Name);
+        descriptionShort = CSTRING(M84_Description);
+        displayNameShort = CSTRING(CTS9_NameShort);
+        model = QPATHTOF(models\ACE_CTS_9bang.p3d);
+        picture = QPATHTOF(UI\ace_cts9_x_ca.paa);
+        ammo = "ACE_G_CTS9";
+        mass = 4;
+    };
 
     class SmokeShell;
     class ACE_M14: SmokeShell {
@@ -88,5 +99,36 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "F_40mm_Red";
         initSpeed = 120;
+    };
+
+    class UGL_FlareWhite_F;
+    class ACE_40mm_Flare_white: UGL_FlareWhite_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_white";
+        displayName = CSTRING(40mm_flare_white);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
+
+    class UGL_FlareRed_F;
+    class ACE_40mm_Flare_red: UGL_FlareRed_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_red";
+        displayName = CSTRING(40mm_flare_red);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
+
+    class UGL_FlareGreen_F;
+    class ACE_40mm_Flare_green: UGL_FlareGreen_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_green";
+        displayName = CSTRING(40mm_flare_green);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
+
+    class ACE_40mm_Flare_ir: UGL_FlareWhite_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_ir";
+        displayName = CSTRING(40mm_flare_ir);
+        descriptionShort = CSTRING(parachute_flare_ir_description);
     };
 };

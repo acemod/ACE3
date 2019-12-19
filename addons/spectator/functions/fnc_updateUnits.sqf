@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Adds and removed units from the spectator list. Local effect.
@@ -14,8 +15,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 // Function only matters on player clients
 if (!hasInterface) exitWith {};

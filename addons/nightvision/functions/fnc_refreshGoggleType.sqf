@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Determines night vision source (player/vehicle) - Updates UI based on type.
@@ -13,11 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 TRACE_1("refreshGoggleType",_this);
 
-if (!GVAR(running)) exitWith {};
+if (!GVAR(running) || {GVAR(effectScaling) == 0}) exitWith {};
 
 // Defaults (good for most vehicles/binoculars)
 private _borderImage = "";

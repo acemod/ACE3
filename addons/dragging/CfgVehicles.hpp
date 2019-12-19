@@ -171,7 +171,7 @@ class CfgVehicles {
 
         GVAR(canDrag) = 1;
         GVAR(dragPosition[]) = {0,1.2,0};
-        GVAR(dragDirection) = 0;
+        GVAR(dragDirection) = 270;
     };
     class MetalCase_01_base_F: Items_base_F {
         class EventHandlers {
@@ -213,7 +213,7 @@ class CfgVehicles {
         };
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};
-        GVAR(carryDirection) = 270;
+        GVAR(carryDirection) = 0;
 
         GVAR(canDrag) = 1;
         GVAR(dragPosition[]) = {0,1.4,0};

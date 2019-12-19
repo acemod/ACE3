@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Starts the setup process for the passed explosive. Player only.
@@ -15,8 +16,6 @@
  *
  * Public: Yes
  */
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 
 #define PLACE_RANGE_MAX 1
 #define PLACE_RANGE_MIN 0.025
@@ -81,7 +80,7 @@ GVAR(TweakedAngle) = 0;
             #ifdef DEBUG_MODE_FULL
             drawLine3d [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
             #endif
-            if (lineIntersects [eyePos _unit, _testPos, _unit]) exitWith {_return = false;};
+            if !((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) isEqualTo []) exitWith {_return = false;};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
         _return
     };
@@ -95,8 +94,8 @@ GVAR(TweakedAngle) = 0;
         private _testBase = _basePosASL vectorAdd _lookDirVector;
         {
             private _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
-            private _intersectsWith = lineIntersectsWith [eyePos _unit, _testPos, _unit];
-            if (count _intersectsWith == 1) exitWith {_attachVehicle = (_intersectsWith select 0);};
+            private _intersectObject = ((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) param [0, objNull]) param [3, objNull];
+            if !(_intersectObject isEqualTo objNull) exitWith {_attachVehicle = _intersectObject};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
         if ((!isNull _attachVehicle) && {[PLACE_RANGE_MIN] call _testPositionIsValid} &&
                 {(_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}}) then {
@@ -119,14 +118,15 @@ GVAR(TweakedAngle) = 0;
 
     private _virtualPosASL = _basePosASL vectorAdd (_lookDirVector vectorMultiply _distanceFromBase);
 
-    //Update mouse hint:
+    // Update mouse hint
+    private _ctrlTextLMB = (uiNamespace getVariable [QEGVAR(interaction,mouseHint), displayNull]) displayCtrl 2420;
     if (_badPosition) then {
-        ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(BlockedAction);
+        _ctrlTextLMB ctrlSetText localize LSTRING(BlockedAction);
     } else {
         if (isNull _attachVehicle) then {
-            ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(PlaceAction);
+            _ctrlTextLMB ctrlSetText localize LSTRING(PlaceAction);
         } else {
-            ((uiNamespace getVariable ["ACE_Helper_Display", objNull]) displayCtrl 1000) ctrlSetText localize LSTRING(AttachAction);
+            _ctrlTextLMB ctrlSetText localize LSTRING(AttachAction);
         };
     };
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WeaponSelect">
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
@@ -8,7 +8,7 @@
             <Russian>Показывать текст при броске</Russian>
             <Czech>Zobrazí text při hodu granátem</Czech>
             <Polish>Wyświetl tekst przy rzucie granatem</Polish>
-            <French>Afficher texte lors d'un lancé de grenade</French>
+            <French>Afficher du texte lors d'un lancé de grenade</French>
             <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
             <Italian>Mostra indicazioni nel lancio granate</Italian>
             <Portuguese>Mostrat texto ao lançar granada</Portuguese>
@@ -24,7 +24,7 @@
             <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
             <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
             <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
-            <French>Afficher texte/info au lancé de grenade</French>
+            <French>Affiche un texte ou une notification lors d'un lancé de grenade.</French>
             <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
             <Italian>Mostra una notifica quando si lanciano granate</Italian>
             <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
@@ -40,7 +40,7 @@
             <Polish>Wybierz pistolet</Polish>
             <Czech>Zvolit Pistoly</Czech>
             <Russian>Выбрать пистолет</Russian>
-            <French>Sélectionner Pistolet</French>
+            <French>Sélectionner le pistolet</French>
             <Hungarian>Pisztoly Kiválasztása</Hungarian>
             <Portuguese>Selecionar Pistola</Portuguese>
             <Italian>Seleziona la Pistola</Italian>
@@ -56,7 +56,7 @@
             <Polish>Wybierz karabin</Polish>
             <Czech>Zvolit Pušku</Czech>
             <Russian>Выбрать винтовку</Russian>
-            <French>Sélectionner Fusil</French>
+            <French>Sélectionner le fusil</French>
             <Hungarian>Puska Kiválasztása</Hungarian>
             <Portuguese>Selecionar Rifle</Portuguese>
             <Italian>Seleziona il fucile</Italian>
@@ -72,7 +72,7 @@
             <Polish>Wybierz wyrzutnię</Polish>
             <Czech>Zvolit Raketomet</Czech>
             <Russian>Выбрать гранатомёт</Russian>
-            <French>Sélectionner Lanceur</French>
+            <French>Sélectionner le lanceur</French>
             <Hungarian>Rakétavető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lançador</Portuguese>
             <Italian>Seleziona il lanciamissili</Italian>
@@ -88,7 +88,7 @@
             <Polish>Wybierz granatnik</Polish>
             <Czech>Zvolit Granátomet</Czech>
             <Russian>Выбрать подствольный гранатомёт</Russian>
-            <French>Sélectionner Lance-grenades</French>
+            <French>Sélectionner le lance-grenades</French>
             <Hungarian>Gránátvető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lança-Granadas</Portuguese>
             <Italian>Seleziona il lanciagranate</Italian>
@@ -104,7 +104,7 @@
             <Polish>Wybierz lornetkę</Polish>
             <Czech>Zvolit Dalekohled</Czech>
             <Russian>Выбрать бинокль</Russian>
-            <French>Sélectionner Jumelles</French>
+            <French>Sélectionner les jumelles</French>
             <Hungarian>Távcső Kiválasztása</Hungarian>
             <Portuguese>Selecionar Binóculos</Portuguese>
             <Italian>Seleziona il Binocolo</Italian>
@@ -134,7 +134,7 @@
             <German>Motor an</German>
             <Spanish>Encender motor</Spanish>
             <Polish>Włącz silnik</Polish>
-            <French>Moteur allumé</French>
+            <French>Démarrer le moteur</French>
             <Hungarian>Motor indítása</Hungarian>
             <Czech>Zapnout motor</Czech>
             <Portuguese>Ligar Motor</Portuguese>
@@ -150,7 +150,7 @@
             <German>Motor aus</German>
             <Spanish>Apagar motor</Spanish>
             <Polish>Wyłącz silnik</Polish>
-            <French>Moteur éteint</French>
+            <French>Couper le moteur</French>
             <Hungarian>Motor leállítása</Hungarian>
             <Czech>Vypnout motor</Czech>
             <Portuguese>Desligar Motor</Portuguese>
@@ -166,7 +166,7 @@
             <German>Hauptgeschütz auswählen</German>
             <Spanish>Seleccionar arma principal</Spanish>
             <Polish>Wybierz główną broń</Polish>
-            <French>Sélectionner l'Arme Principale</French>
+            <French>Sélectionner l'arme principale</French>
             <Hungarian>Elsődleges Fegyver Kiválasztása</Hungarian>
             <Czech>Zvolit Hlavní Zbraň</Czech>
             <Portuguese>Selecionar Arma Principal</Portuguese>
@@ -182,7 +182,7 @@
             <German>Maschinengewehr auswählen</German>
             <Spanish>Seleccionar ametralladora</Spanish>
             <Polish>Wybierz karabin maszynowy</Polish>
-            <French>Sélectionner Mitrailleuse</French>
+            <French>Sélectionner la mitrailleuse</French>
             <Hungarian>Géppuska Kiválasztása</Hungarian>
             <Czech>Zvolit Kulomet</Czech>
             <Portuguese>Selecionar Metralhadora</Portuguese>
@@ -198,7 +198,7 @@
             <German>Raketen auswählen</German>
             <Spanish>Seleccionar misiles</Spanish>
             <Polish>Wybierz rakiety</Polish>
-            <French>Sélectionner Missiles</French>
+            <French>Sélectionner les missiles</French>
             <Hungarian>Rakéták Kiválasztása</Hungarian>
             <Czech>Zvolit Rakety</Czech>
             <Portuguese>Selecionar Mísseis</Portuguese>
@@ -246,7 +246,7 @@
             <German>Explosive Granate auswählen</German>
             <Spanish>Seleccionar granada de fragmenación</Spanish>
             <Polish>Wybierz granat odłamkowy</Polish>
-            <French>Sélectionner grenade à fragmentation</French>
+            <French>Sélectionner les grenades à fragmentation</French>
             <Hungarian>Repeszgránát Kiválasztása</Hungarian>
             <Czech>Zvolit výbušný granát</Czech>
             <Portuguese>Selecionar Granada de Fragmentação</Portuguese>
@@ -262,7 +262,7 @@
             <German>Nichtexplosive Granate auswählen</German>
             <Spanish>Seleccionar granada de no fragmentación</Spanish>
             <Polish>Wybierz granat nieodłamkowy</Polish>
-            <French>Sélectionner grenade non-léthale</French>
+            <French>Sélectionner les grenades non létales</French>
             <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
             <Czech>Zvolit ne-výbušný granát</Czech>
             <Portuguese>Selecionar Granada</Portuguese>
@@ -293,7 +293,7 @@
             <English>No grenades left</English>
             <German>Keine Granaten übrig</German>
             <Spanish>No quedan granadas</Spanish>
-            <French>Plus de grenades</French>
+            <French>Il n'y a plus de grenades.</French>
             <Polish>Brak granatów</Polish>
             <Czech>Žádné granáty</Czech>
             <Hungarian>Nincs több gránát</Hungarian>
@@ -310,7 +310,7 @@
             <German>Keine explosiven Granaten übrig</German>
             <Spanish>No quedan granadas de fragmentación</Spanish>
             <Polish>Brak granatów odłamkowych</Polish>
-            <French>Plus de grenades à fragmentation</French>
+            <French>Il n'y a plus de grenades à fragmentation.</French>
             <Hungarian>Nincs több repeszgránát</Hungarian>
             <Czech>Žádné výbušné granáty</Czech>
             <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
@@ -326,7 +326,7 @@
             <German>Keine nichtexplosiven Granaten übrig</German>
             <Spanish>Sin granadas misc.</Spanish>
             <Polish>Brak granatów nieodłamkowych</Polish>
-            <French>Plus de grenades non-léthales</French>
+            <French>Il n'y a plus de grenades non létales.</French>
             <Hungarian>Nincs több egyéb gránát</Hungarian>
             <Czech>Už nejsou žádné ostatní granáty</Czech>
             <Portuguese>Não há outras granadas restantes</Portuguese>
@@ -342,7 +342,7 @@
             <German>Keine Granate ausgewählt</German>
             <Spanish>Granada no seleccionada</Spanish>
             <Polish>Nie wybrano żadnego granatu</Polish>
-            <French>Aucune grenade sélectionnée</French>
+            <French>Aucune grenade sélectionnée.</French>
             <Hungarian>Nincs semmilyen gránát kiválasztva</Hungarian>
             <Czech>Není zvolen žádný granát</Czech>
             <Portuguese>Nenhuma granada selecionada</Portuguese>
@@ -358,7 +358,7 @@
             <German>Rauchwand abfeuern</German>
             <Spanish>Disparar lanzador de humo</Spanish>
             <Czech>Kouřový odpalovač</Czech>
-            <French>Tirer le lance-pots fumigènes</French>
+            <French>Lancer les pots fumigènes</French>
             <Polish>Wystrzel granat dymny</Polish>
             <Hungarian>Füstvető eltüzelése</Hungarian>
             <Russian>Пустить дымовую завесу</Russian>
@@ -371,12 +371,17 @@
         </Key>
         <Key ID="STR_ACE_WeaponSelect_CollisionLights">
             <English>Toggle Collision Lights</English>
-            <German>Positionslichter umschalten </German>
+            <German>Kollisionslichter an/ausschalten</German>
             <Italian>Attiva Luci di Collisione</Italian>
             <Korean>충돌 표시등 토글</Korean>
             <Chinese>切換碰撞燈</Chinese>
             <Chinesesimp>切换碰撞灯</Chinesesimp>
             <Japanese>衝突防止灯を切り替え</Japanese>
+            <Polish>Przełącz światła kolizyjne</Polish>
+            <Russian>Вкл/Выкл Бортовые огни</Russian>
+            <Portuguese>Alternar Luzes de Colisão</Portuguese>
+            <Czech>Přepnout kolizní světla</Czech>
+            <French>Allumer les feux anti-collision</French>
         </Key>
     </Package>
 </Project>

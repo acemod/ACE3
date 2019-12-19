@@ -1,4 +1,11 @@
 class ACE_Settings {
+    class GVAR(enabled) {
+        category = CSTRING(DisplayName);
+        typeName = "BOOL";
+        value = 1;
+        displayName = CSTRING(enabled_displayName);
+        description = CSTRING(enabled_description);
+    };
     class GVAR(displayTextOnJam) {
         category = CSTRING(DisplayName);
         typeName = "BOOL";
@@ -44,12 +51,5 @@ class ACE_Settings {
         displayName = CSTRING(unJamFailChance_displayName);
         description = CSTRING(unJamFailChance_description);
         sliderSettings[] = {0, 1, 0.1, 2};
-    };
-    class GVAR(enabled) {
-        category = CSTRING(DisplayName);
-        typeName = "BOOL";
-        value = 1;
-        displayName = CSTRING(enabled_displayName);
-        description = CSTRING(enabled_description);
     };
 };

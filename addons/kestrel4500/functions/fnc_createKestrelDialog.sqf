@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Opens the Kestrel 4500 dialog
@@ -13,14 +14,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (GVAR(Kestrel4500)) exitWith { false };
 if (underwater ACE_player) exitWith { false };
 if (!("ACE_Kestrel4500" in (uniformItems ACE_player)) && !("ACE_Kestrel4500" in (vestItems ACE_player))) exitWith { false };
 
 GVAR(Overlay) = false;
-3 cutText ["", "PLAIN"];
+QGVAR(Layer) cutText ["", "PLAIN"];
 
 GVAR(Kestrel4500) = true;
 createDialog 'Kestrel4500_Display';

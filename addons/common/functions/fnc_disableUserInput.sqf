@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Disables key input. ESC can still be pressed to open the menu.
@@ -13,9 +14,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_state"];
+TRACE_1("disableUserInput",_state);
 
 if (_state) then {
     disableSerialization;
@@ -81,7 +82,7 @@ if (_state) then {
             openMap true;
         };
 
-        if (isServer || {serverCommandAvailable "#kick"} || {player getVariable ["ACE_isUnconscious", false] && {(call FUNC(player)) getVariable [QEGVAR(medical,AllowChatWhileUnconscious), missionNamespace getVariable [QEGVAR(medical,AllowChatWhileUnconscious), false]]}}) then {
+        if (isServer || {serverCommandAvailable "#kick"}) then {
             if (!(_key in (actionKeys "DefaultAction" + actionKeys "Throw")) && {_key in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) then {
                 _key = 0;
             };

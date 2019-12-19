@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, SilentSpike
  * Sets the current camera interest using dummy target.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define CAMERA_TARGET_CHANGE_TIME 0.5
 
 params ["_object"];
