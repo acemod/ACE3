@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
-            <French>Charge %1</French>
+            <French>Charge %1.</French>
             <German>Lade %1</German>
             <Spanish>Cargar %1</Spanish>
             <Russian>Загрузка %1</Russian>

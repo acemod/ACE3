@@ -126,7 +126,7 @@
             <Chinesesimp>载具过远</Chinesesimp>
             <Japanese>車両が遠すぎます</Japanese>
             <German>Fahrzeug zu weit entfernt</German>
-            <French>Véhicule trop éloigné</French>
+            <French>Véhicule trop éloigné.</French>
             <Polish>Pojazd za daleko</Polish>
             <Russian>Техника слишком далеко</Russian>
             <Portuguese>Veículo muito longe</Portuguese>
@@ -150,7 +150,7 @@
             <Italian>Abilita l'uso dal modulo di Zeus</Italian>
             <Japanese>Zeus モジュールでパイロン メニューを利用できます。</Japanese>
             <German>Aktiviert die Nutzung im Zeus</German>
-            <French>Permet l'utilisation des modules Zeus</French>
+            <French>Permet l'utilisation des modules Zeus.</French>
             <Polish>Aktywuj wykorzystanie modułu zeus'a.</Polish>
             <Russian>Позволяет использовать модуль Зевса</Russian>
             <Portuguese>Permite usar o módulo de Zeus</Portuguese>
@@ -186,7 +186,7 @@
             <Italian>Questo aereo non ha piloni</Italian>
             <Japanese>航空機にパイロンがありません</Japanese>
             <German>Dieses Flugzeug hat keine Außenlaststationen</German>
-            <French>Cet aéronef n'a pas de pylônes</French>
+            <French>Cet aéronef n'a pas de pylônes.</French>
             <Polish>Ten pojazd nie posiada pylonów</Polish>
             <Russian>Эта авиатехника не имеет пилонов</Russian>
             <Portuguese>Essa aeronave não possui pylons</Portuguese>
@@ -198,7 +198,7 @@
             <Italian>Il modulo per configurare i piloni da Zeus è disabilitato</Italian>
             <Japanese>Zeus のパイロン モジュールを無効化</Japanese>
             <German>Die Konfiguration für das Außenlaststationen ist im Zeus deaktiviert</German>
-            <French>Le module de configuration des pylônes est désactivé pour Zeus</French>
+            <French>Le module de configuration des pylônes est désactivé pour Zeus.</French>
             <Polish>Konfiguracja modułu pylonów jest wyłączona dla zeus'a</Polish>
             <Russian>Модуль Настройка пилонов отключен для Zeus</Russian>
             <Portuguese>O Módulo de configurar pylons está desativado para o Zeus</Portuguese>

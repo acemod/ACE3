@@ -164,7 +164,7 @@
             <Spanish>Menú de interacción (Propio)</Spanish>
             <Polish>Menu interakcji (własne)</Polish>
             <Czech>Menu interakce (vlastní)</Czech>
-            <French>Menu d'interaction (Perso)</French>
+            <French>Menu d'interaction (personnel)</French>
             <Russian>Меню взаимодействия (с собой)</Russian>
             <Hungarian>Cselekvő menü (saját) </Hungarian>
             <Portuguese>Menu de Interação (Individual)</Portuguese>
@@ -180,7 +180,7 @@
             <Spanish>Abrir / Cerrar puerta</Spanish>
             <Polish>Otwórz / Zamknij drzwi</Polish>
             <Czech>Otevřít / Zavřít dveře</Czech>
-            <French>Ouvrir / Fermer la porte</French>
+            <French>Ouvrir/Fermer la porte</French>
             <Russian>Открыть / Закрыть двери</Russian>
             <Hungarian>Ajtó nyitása / zárása</Hungarian>
             <Portuguese>Abrir / Fechar Porta</Portuguese>
@@ -705,7 +705,7 @@
             <English>You joined Team %1</English>
             <German>Du bist Gruppe %1 beigetreten</German>
             <Spanish>Te has unido al equipo %1</Spanish>
-            <French>Vous avez rejoint l'équipe %1</French>
+            <French>Vous avez rejoint l'équipe %1.</French>
             <Polish>Dołączyłeś do %1</Polish>
             <Czech>Připojili jste se do %1 týmu</Czech>
             <Russian>Вы присоединились к группе %1</Russian>
@@ -737,7 +737,7 @@
             <English>You left the Team</English>
             <German>Du hast die Gruppe verlassen</German>
             <Spanish>Has dejado el equipo</Spanish>
-            <French>Vous avez quitté l'équipe</French>
+            <French>Vous avez quitté l'équipe.</French>
             <Polish>Opuściłeś drużynę</Polish>
             <Czech>Opustili jste tým</Czech>
             <Russian>Вы покинули группу</Russian>
@@ -943,7 +943,7 @@
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
             <Russian>Разрешить ли игрокам использовать меню управления группами? По-умолчани: Да</Russian>
-            <French>Permettre aux joueurs d'utiliser la gestion de groupe? Défaut : oui</French>
+            <French>Permet aux joueurs d'utiliser la gestion d'équipe. Valeur par défaut : activé.</French>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
@@ -976,7 +976,7 @@
             <Polish>Czy powinni gracze otrzymywać negatywną ocenę? Kiedy aktywowani gracze otrzymuję wyłącznie pozytywną ocenę, która zapobiega ognia przyjaznego SI podczas niszczenia przyjaznego wyposażenia lub zabijaniu członków drużyny.</Polish>
             <Russian>Должны ли игроки получать отрицательный рейтинг? Когда включено, игроки получают только положительный рейтинг, что предотвращает дружественный огонь от ИИ при уничтожении дружественного оборудования или убийстве членов команды.</Russian>
             <Portuguese>Jogadores devem receber uma avaliação negativa? Quando ativado, os jogadores estão recebendo avaliações positivas, prevenindo que IA amigável atire quando destruir algum equipamento aliado ou matar membros de equipe.</Portuguese>
-            <French>Les joueurs devraient-ils pouvoir recevoir une note négative ? Si l'option est activée, les joueurs obtiennent des notes positives exclusivement, ce qui permet d'éviter que les unités IA effectuent du tir ami lorsque des joueurs détruisent de l'équipement allié, ou lorsqu'ils tuent des membres de l'équipe.</French>
+            <French>Définit si les joueurs peuvent recevoir une note négative. Si l'option est activée, les joueurs obtiennent des notes positives exclusivement.\nCela permet d'éviter que les unités IA ne fassent du tir ami lorsque des joueurs détruisent de l'équipement allié, ou tuent des membres de l'équipe.</French>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>

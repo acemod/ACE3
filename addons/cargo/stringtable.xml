@@ -100,7 +100,7 @@
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
             <Italian>Abilita il modulo di caricamento in cargo</Italian>
-            <French>Active la possibilité de charger du matériel dans un module de fret.\n(véhicule / container)</French>
+            <French>Active la possibilité de charger du matériel dans un module de fret (véhicule/container).</French>
             <Japanese>カーゴ モジュールで積み込みを有効化</Japanese>
             <Korean>화물 모듈에 싣기를 활성화합니다</Korean>
             <Chinese>啟用貨物裝載功能</Chinese>
@@ -252,7 +252,7 @@
             <Korean>이 차량/컨테이너에서 사용가능한 화물 공간</Korean>
             <Russian>Грузовое пространство, доступное в этом транспортном средстве / контейнере</Russian>
             <Portuguese>O espaço de carga disponível nesse veículo/contâiner</Portuguese>
-            <French>L'espace de stockage disponible dans ce véhicule / container.</French>
+            <French>L'espace de stockage disponible dans ce véhicule/container.</French>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
@@ -265,7 +265,7 @@
             <Korean>화물 크기</Korean>
             <Russian>Размер груза</Russian>
             <Portuguese>Tamanho da Carga</Portuguese>
-            <French>Taille de cargaison</French>
+            <French>Encombrement fret</French>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
@@ -278,7 +278,7 @@
             <Korean>이 화물을 적재하는데 필요한 공간 (-1=무조건 적재가능)</Korean>
             <Russian>Грузовое пространство, необходимое для размещения этого объекта (-1 для незагружаемого)</Russian>
             <Portuguese>O Espaço de carga necessário para carregar esse objeto (-1 para que não seja carregável)</Portuguese>
-            <French>L'espace de stockage nécessaire pour contenir cet objet.\n(-1 pour les objets déchargeables)</French>
+            <French>Définit l'espace de stockage nécessaire à l'embarquement de cet objet (-1 pour le rendre non transportable).</French>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -311,7 +311,7 @@
             <German>Türlast Zeitfaktor</German>
             <Japanese>空中投下までの時間係数</Japanese>
             <Italian>Coefficente Tempo Lancio Paracadute</Italian>
-            <French>Coefficient Temps Paralargage</French>
+            <French>Coefficient du temps de paralargage</French>
             <Chinese>空投時間係數</Chinese>
             <Chinesesimp>空投时间系数</Chinesesimp>
             <Polish>Współczynnik czasu zrzutu</Polish>
@@ -340,7 +340,7 @@
             <Italian>Coefficente Tempo Caricamento</Italian>
             <Russian>Коэффициент времени погрузки</Russian>
             <Portuguese>Fator de tempo para carregar</Portuguese>
-            <French>Coefficient Temps Chargement</French>
+            <French>Coefficient du temps de chargement</French>
             <Chinese>裝載時間係數</Chinese>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
@@ -351,7 +351,7 @@
             <Italian>Modifica quanto tempo ci impiega a caricare o scaricare gli oggetti.\n Tempo, in secondi, è la dimensione dell'oggetto moltiplicata per questo valore</Italian>
             <Russian>Изменяет время для загрузки/выгрузки предметов. \n Время (сек) - это размер предмета, умноженный на это значение.</Russian>
             <Portuguese>Coeficiente de quanto tempo leva para carregar/descarregar itens.\nTempo, em segundos, é o tamanho do objeto multiplicado por esse valor.</Portuguese>
-            <French>Modifie le temps nécessaire pour charger / décharger des objets.\nLe temps, en secondes, est calculé en multipliant la taille de l'élément par ce coefficient. </French>
+            <French>Modifie le temps nécessaire pour charger/décharger des objets.\nLe temps, en secondes, est calculé en multipliant la taille de l'élément par ce coefficient.</French>
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
         </Key>
     </Package>
