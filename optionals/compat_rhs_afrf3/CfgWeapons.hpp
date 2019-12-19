@@ -128,6 +128,17 @@ class CfgWeapons {
     class rhs_zsh7a: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
+    class rhs_zsh7a_alt: rhs_zsh7a {
+        ACE_Protection = 1;
+    };
+    class rhs_zsh7a_mike;
+    class rhs_zsh7a_mike_alt: rhs_zsh7a_mike {
+        ACE_Protection = 1;
+    };
+    class rhs_zsh7a_mike_green;
+    class rhs_zsh7a_mike_green_alt: rhs_zsh7a_mike_green {
+        ACE_Protection = 1;
+    };
 
     class rhs_gssh18: H_HelmetB {
         HEARING_PROTECTION_EARMUFF
@@ -169,7 +180,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\podnos_2b14_ca.paa";
+        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_2b14_82mm_msv_ca.paa";
     };
 
     class GVAR(nsv_carry): Launcher_Base_F {
@@ -189,7 +200,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsafrf\addons\rhs_heavyweapons\mg\bis_kord\kord_CA.paa";
+        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\RHS_NSV_TriPod_MSV_ca.paa";
     };
 
     class GVAR(kord_carry): Launcher_Base_F {
@@ -210,7 +221,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\kord6u16sp_ca.paa";
+        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_KORD_MSV_ca.paa";
     };
 
     class GVAR(ags30_carry): Launcher_Base_F {
@@ -230,7 +241,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\ags_static_CA.paa";
+        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\RHS_AGS30_TriPod_MSV_ca.paa";
     };
 
     class GVAR(spg9_carry): Launcher_Base_F {
@@ -250,7 +261,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\spg9_CA.paa";
+        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_SPG9_INS_ca.paa";
     };
     class GVAR(spg9m_carry): GVAR(spg9_carry) {
         class ACE_CSW {
@@ -276,7 +287,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\metis_at13_CA.paa";
+        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_Metis_9k115_2_msv_ca.paa";
     };
 
     class GVAR(kornet_carry): Launcher_Base_F {
@@ -294,6 +305,6 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\metis_at13_CA.paa";
+        picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_Kornet_9M133_2_msv_ca.paa";
     };
 };

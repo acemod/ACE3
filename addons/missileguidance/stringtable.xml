@@ -9,7 +9,7 @@
             <German>Erweitertes Raketenlenksystem</German>
             <Czech>Pokročilé řízení střel</Czech>
             <Italian>Guida missili avanzata</Italian>
-            <Portuguese>Avançado Missile Guidance</Portuguese>
+            <Portuguese>Orientação avançada de Míssil</Portuguese>
             <Hungarian>Fejlett rakétairányító</Hungarian>
             <Russian>Продвинутое наведение ракет</Russian>
             <Japanese>高度なミサイルの誘導</Japanese>
@@ -24,7 +24,7 @@
             <Russian>Продвинутое наведение ракет, или ПНР, обеспечивает множество усовершествований для наведения и стрельбы ракет. Также, это система, необходимая для всех ракетных типов оружия.</Russian>
             <Spanish>El guiado avanzado de misiles, o AMG en sus siglas en inglés, ofrece múltiples mejoras en el fijado y disparo de misiles. Es también un sistema requerido para armas de tipo misil.</Spanish>
             <German>Das Erweiterte Raketenlenksystem, auch ERls genannt, bietet viele Verbesserungen zum Aufschalten und Feuern mittels gelenkter Raketen. </German>
-            <French>Le guidage avancé de missile, ou AMG en anglais, apporte de multiples améliorations au verouillage et au tir de missiles. C'est aussi un framework requis pour tout arme de type missile.</French>
+            <French>Le guidage avancé de missile, ou AMG en anglais, apporte de multiples améliorations au verrouillage et au tir de missiles. C'est aussi un framework requis pour toute arme de type missile.</French>
             <Hungarian>A fejlett rakétairányító (vagy AMG) többféle módosítást tartalmaz a rakéták célkövetéséhez és tüzeléséhez. Ez egy szükséges keresztrendszer a rakéta-alapú fegyverekhez.</Hungarian>
             <Portuguese>Orientação avançada de mísseis ou OAM, fornece vários aprimoramentos para travamento de mísseis e disparos. Também é um sistema requerido para disparar armas que utilizem mísseis.</Portuguese>
             <Czech>Pokočilé navádění raket (AMG) poskytuje několik vylepšení pro lepší zaměření a následnou střelbu. Je to prvek vyžadovaný u typu zbraní jako jsou rakety.</Czech>
@@ -36,7 +36,7 @@
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
             <Spanish>Misil Hydra-70 DAGR</Spanish>
-            <French>Hydra-70 DAGR</French>
+            <French>Missile Hydra-70 DAGR</French>
             <Polish>Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR Rakete</German>
             <Czech>Hydra-70 DAGR</Czech>
@@ -68,7 +68,7 @@
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
             <Spanish>Misil guiado por láser Hydra-70 DAGR</Spanish>
-            <French>Missile à guidage laser Hydra-70 DAGR</French>
+            <French>Missile Hydra-70 DAGR, à guidage laser</French>
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR lasergelenkte Rakete</German>
             <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
@@ -84,7 +84,7 @@
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
             <Spanish>Misil Hellfire II AGM-114K</Spanish>
-            <French>Hellfire II AGM-114K</French>
+            <French>Missile Hellfire II AGM-114K</French>
             <Polish>Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K</German>
             <Czech>Hellfire II AGM-114K</Czech>
@@ -116,7 +116,7 @@
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
             <Spanish>Misil guiado por láser Hellfire II AGM-114K</Spanish>
-            <French>Missile à guidage laser Hellfire II AGM-114K</French>
+            <French>Missile Hellfire II AGM-114K, à guidage laser</French>
             <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>
             <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>
@@ -136,7 +136,7 @@
             <German>Aus</German>
             <Czech>Vypnout</Czech>
             <Portuguese>Desligado</Portuguese>
-            <French>Eteint</French>
+            <French>Éteint</French>
             <Hungarian>Ki</Hungarian>
             <Russian>Выкл.</Russian>
             <Italian>Spento</Italian>
@@ -183,7 +183,7 @@
             <Russian>Переключение режимов огня</Russian>
             <Czech>Přepínání režimů palby</Czech>
             <Polish>Przełącz tryb ognia</Polish>
-            <French>Cycle mode de tir</French>
+            <French>Guidage missiles - Changer le mode de tir</French>
             <Hungarian>Tüzelési mód váltása</Hungarian>
             <Italian>Alterna le modalità di fuoco</Italian>
             <Spanish>Cambiar modo de disparo</Spanish>

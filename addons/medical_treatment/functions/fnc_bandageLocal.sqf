@@ -18,12 +18,13 @@
  */
 
 params ["_patient", "_bodyPart", "_bandage"];
+TRACE_3("bandageLocal",_patient,_bodyPart,_bandage);
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
-if (_partIndex < 0) exitWith {false};
+if (_partIndex < 0) exitWith {};
 
 private _openWounds = GET_OPEN_WOUNDS(_patient);
-if (_openWounds isEqualTo []) exitWith {false};
+if (_openWounds isEqualTo []) exitWith {};
 
 // Figure out which injury for this bodypart is the best choice to bandage
 // TODO also use up the remainder on left over injuries
@@ -54,4 +55,30 @@ if ((EGVAR(medical,limping) == 1) && {_partIndex > 3} && {_amountOf <= 0} && {_p
     [_patient] call EFUNC(medical_engine,updateDamageEffects);
 };
 
-true
+if (GVAR(clearTraumaAfterBandage)) then {
+    TRACE_2("clearTraumaAfterBandage - checking open wounds",_partIndex,_openWounds);
+    if ((_openWounds findIf {
+                    _x params ["", "_xBodyPartN", "_xAmountOf"];
+                    (_partIndex ==_xBodyPartN) && {_xAmountOf > 0}
+                }) == -1) then {
+
+        private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+        _bodyPartDamage set [_partIndex, 0];
+        _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+        TRACE_2("fully healed",_partIndex,_bodyPartDamage);
+
+        switch (_partIndex) do {
+            case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+            case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+            case 2;
+            case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+            default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        };
+    };
+};
+
+if (_amountOf <= 0) then { // Reset treatment condition cache for nearby players if we stopped all bleeding
+    private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call EFUNC(common,isPlayer)};
+    TRACE_1("clearConditionCaches: bandage",_nearPlayers);
+    [QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
+};

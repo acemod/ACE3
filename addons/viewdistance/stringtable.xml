@@ -8,7 +8,7 @@
             <Czech>Omezovač dohlednosti</Czech>
             <German>Sichtweitenbegrenzung</German>
             <Portuguese>Limitador de distância de visão</Portuguese>
-            <French>Limiteur de distance de vue</French>
+            <French>Limiteur de visibilité</French>
             <Hungarian>Látótáv-korlátozó</Hungarian>
             <Russian>Ограничитель дальности видимости</Russian>
             <Italian>Limitatore Distanza Visiva</Italian>
@@ -24,7 +24,7 @@
             <Czech>Umožňuje určit maximální dohlednost, kterou si může hráč nastavit</Czech>
             <German>Erlaubt das Einschränken der maximalen Sichtweite, welche von Spielern eingestellt werden kann.</German>
             <Portuguese>Permite limitar a distância máxima de visão que pode ser definida pelos jogadores.</Portuguese>
-            <French>Permet de limiter la distance de vue que les joueurs peuvent choisir</French>
+            <French>Permet de restreindre la distance maximale de visibilité pouvant être définie par les joueurs.</French>
             <Hungarian>Lehetővé teszi a játékosok által a látótávolság maximumának korlátozását.</Hungarian>
             <Russian>Позволяет ограничить максимальную дальность видимости, которая может быть установлена игроками.</Russian>
             <Italian>Consente di limitare la distanza visiva massima che può essere impostata dai giocatori.</Italian>
@@ -40,7 +40,7 @@
             <Czech>Povolit ACE dohlednost</Czech>
             <German>Aktiviere ACE-Sichtweite</German>
             <Portuguese>Habilitar distância de visão ACE</Portuguese>
-            <French>Activer la distance de vue ACE</French>
+            <French>Activer la visibilité ACE</French>
             <Hungarian>ACE látótávolság engedélyezése</Hungarian>
             <Russian>Ограничить дальность видимости</Russian>
             <Italian>Abilita distanza visiva ACE</Italian>
@@ -56,7 +56,7 @@
             <Czech>Povolit ACE dohlednost</Czech>
             <German>Aktiviert ACE-Sichtweite</German>
             <Portuguese>Habilita a distância de visão ACE</Portuguese>
-            <French>Activer la distance de vue ACE</French>
+            <French>Active la visibilité ACE.</French>
             <Hungarian>Engedélyezi az ACE látótávolságot</Hungarian>
             <Russian>Включает ограничитель дальности видимости ACE</Russian>
             <Italian>Abilita distanza visiva ACE</Italian>
@@ -72,7 +72,7 @@
             <Czech>Limit dohlednosti</Czech>
             <German>Sichtweitengrenze</German>
             <Portuguese>Limite da distância de visão</Portuguese>
-            <French>Limite de distance de vue</French>
+            <French>Limite de visibilité</French>
             <Hungarian>Látótáv-korlát</Hungarian>
             <Russian>Дальность видимости</Russian>
             <Italian>Limite Distanza Visiva</Italian>
@@ -88,7 +88,7 @@
             <Czech>Stanoví limit jak daleko si může client zvýšit dohlednost (do 10000)</Czech>
             <German>Setze die Grenze fest, wie weit Spieler ihre Sichtweite erhöhen können (bis 10000)</German>
             <Portuguese>Estabelecer um limite de quão alto os clientes podem aumentar sua distância de visão (até 10000)</Portuguese>
-            <French>Défini pour les clients la limite de distance de vue maximale (jusqu'à 10000)</French>
+            <French>Définit la limite maximale à laquelle les clients peuvent augmenter leur distance de visibilité (jusqu'à 10000).</French>
             <Hungarian>Korlátozza, mekkora látótávolságot állíthatnak be a kliensek (maximum 10000-ig)</Hungarian>
             <Russian>Устанавливает предел дальности, насколько клиенты могут увеличить свою дальность видимости (до 10000)</Russian>
             <Italian>Imposta il limite massimo a cui i client possono alzare la propria distanza visiva (massimo 10000)</Italian>
@@ -104,7 +104,7 @@
             <Czech>Limit dohlednoti pro klienty se nastavuje zde a může být potlačeno pomocí modulu.</Czech>
             <German>Stellt die Grenze für die Sichtweite des Spielers ein. Das kann von einem Modul überschrieben werden.</German>
             <Portuguese>Permite limitar a distância de visão máxima que pode ser definida por jogadores. Pode ser substituído por módulo.</Portuguese>
-            <French>Limite de la distance de vue pour les clients et peut être forcé par ce module</French>
+            <French>La limite de portée visuelle du joueur est définie ici, pouvant être écrasée par un autre module.</French>
             <Hungarian>A kliens látótávolsága itt állítható be, és felülbírálható modulok által</Hungarian>
             <Russian>Предел дальности видимости клиентов устанавливается здесь и может быть переопределен модулем</Russian>
             <Italian>Limite per la distanza visiva del client impostato qui e può essere scavalcato dal modulo</Italian>
@@ -120,7 +120,7 @@
             <Czech>Dohlednost (Pěšák)</Czech>
             <German>Spielersichtweite (zu Fuß)</German>
             <Portuguese>Distância de visão do cliente (A pé)</Portuguese>
-            <French>Distance de vue (à pied)</French>
+            <French>Visibilité (à pied)</French>
             <Hungarian>Kliens látótáv (gyalog)</Hungarian>
             <Russian>Дальность видимости (Пешком)</Russian>
             <Italian>Distanza Visiva Client (a Piedi)</Italian>
@@ -136,7 +136,7 @@
             <Czech>Změna dohlednosti pro hráče pokud jde po svých.</Czech>
             <German>Verändert die Sichtweite, wenn ein Spieler zu Fuß unterwegs ist.</German>
             <Portuguese>Muda a distância de visão do jogador dentro do jogo quando ele está a pé.</Portuguese>
-            <French>Change la distance de vue quand le joueur est à pied</French>
+            <French>Change la distance d'affichage du jeu quand le joueur est à pied.</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos gyalogosan van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается пешком.</Russian>
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è a piedi.</Italian>
@@ -152,7 +152,7 @@
             <Czech>Dohlednost (Pozemní technika)</Czech>
             <German>Spielersichtweite (Landfahrzeuge)</German>
             <Portuguese>Distância de visão do cliente (Veículo terrestre)</Portuguese>
-            <French>Distance de vue (à pied)</French>
+            <French>Visibilité (véhicule terrestre)</French>
             <Hungarian>Kliens látótáv (szárazföldi jármű)</Hungarian>
             <Russian>Дальность видимости (В наземном трансп.)</Russian>
             <Italian>Distanza Visiva Client (Veicolo Terrestre)</Italian>
@@ -168,7 +168,7 @@
             <Czech>Změna dohlednosti pro hráče pokud je v pozemní technice.</Czech>
             <German>Verändert die Sichtweite, wenn ein Spieler in einem Landfahrzeug ist.</German>
             <Portuguese>Muda a distância de visão do jogador dentro do jogo quando ele está dentro de um veículo terrestre.</Portuguese>
-            <French>Change la distance de vue quand le joueur est dans un véhicule</French>
+            <French>Change la distance d'affichage du jeu quand le joueur se trouve dans un véhicule terrestre.</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos szárazföldi járműben van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается в наземном транспорте.</Russian>
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un veicolo terrestre.</Italian>
@@ -184,7 +184,7 @@
             <Czech>Dohlednost (Vzdušná technika)</Czech>
             <German>Spielersichtweite (Luftfahrzeuge)</German>
             <Portuguese>Distância de visão do cliente (Veículo aéreo)</Portuguese>
-            <French>Distance de vue (véhicule aérien)</French>
+            <French>Visibilité (véhicule aérien)</French>
             <Hungarian>Kliens látótáv (légi jármű)</Hungarian>
             <Russian>Дальность видимости (В воздушном трансп.)</Russian>
             <Italian>Distanza Visiva Client (Veicoli d'Aria)</Italian>
@@ -200,7 +200,7 @@
             <Czech>Změna dohlednosti pro hráče pokud je ve vzdušné technice.</Czech>
             <German>Verändert die Sichtweite wenn ein Spieler in einem Luftfahrzeug ist.</German>
             <Portuguese>Muda a distância de visão do jogador dentro do jogo quando ele está dentro de um veículo aéreo.</Portuguese>
-            <French>Change la distance de vue quand le joueur est dans un véhicule aérien</French>
+            <French>Change la distance d'affichage du jeu quand le joueur se trouve dans un véhicule aérien.</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos légi járműben van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается в воздушном транспорте.</Russian>
             <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un mezzo aereo.</Italian>
@@ -216,7 +216,7 @@
             <Czech>Dynamická dohlednost objektů</Czech>
             <German>Dynamische Objektsichtweite</German>
             <Portuguese>Distância de visão dinâmica dos objetos</Portuguese>
-            <French>Distance de vue pour les objet dynamique </French>
+            <French>Distance d'affichage dynamique des objets</French>
             <Hungarian>Dinamikus objektum-látótáv</Hungarian>
             <Russian>Динамич. дальность отрисовки объектов</Russian>
             <Italian>Distanza Visiva Oggetti Dinamica</Italian>
@@ -232,7 +232,7 @@
             <Czech>Nastaví objekt dohlednosti jako koeficient dohlednosti.</Czech>
             <German>Passt die Objektsichtweite dynamisch der Sichtweite an.</German>
             <Portuguese>Estabelece a distância de visão dos objetos com um coeficiente da distância de visão.</Portuguese>
-            <French>Défini la distance d'affichage des objets comme un coefficient de la distance de vue</French>
+            <French>Définit la distance d'affichage des objets en fonction de la distance de visibilité, ou selon le champ de vision (FoV).\nLorsque l'affichage basé sur le FoV est choisi, les valeurs minimales et maximales varient en fonction de l'angle de vue.</French>
             <Hungarian>Beállítja az objektum-látótávot a megadott látótáv koefficienseként.</Hungarian>
             <Russian>Устанавливает дальность отрисовки объектов как коэффициент от общей дальности видимости.</Russian>
             <Italian>Imposta la distanza visiva degli oggetti come un coefficiente basato sulla distanza visiva oppure basato sul campo visivo.</Italian>
@@ -248,7 +248,7 @@
             <Czech>Vypnout</Czech>
             <German>Aus</German>
             <Portuguese>Desligado</Portuguese>
-            <French>Eteint</French>
+            <French>Désactivée</French>
             <Hungarian>Kikapcsolva</Hungarian>
             <Russian>Выкл.</Russian>
             <Italian>Disabilitato</Italian>
@@ -264,7 +264,7 @@
             <Czech>Velmi málo</Czech>
             <German>Sehr niedrig</German>
             <Portuguese>Muito baixo</Portuguese>
-            <French>Très bas</French>
+            <French>Très basse</French>
             <Hungarian>Minimális</Hungarian>
             <Russian>Очень низкая</Russian>
             <Italian>Molto Basso</Italian>
@@ -280,7 +280,7 @@
             <Czech>Málo</Czech>
             <German>Niedrig</German>
             <Portuguese>Baixo</Portuguese>
-            <French>Bas</French>
+            <French>Basse</French>
             <Hungarian>Alacsony</Hungarian>
             <Russian>Низкая</Russian>
             <Italian>Basso</Italian>
@@ -296,7 +296,7 @@
             <Czech>Středně</Czech>
             <German>Mittel</German>
             <Portuguese>Médio</Portuguese>
-            <French>Moyen</French>
+            <French>Moyenne</French>
             <Hungarian>Közepes</Hungarian>
             <Russian>Средняя</Russian>
             <Italian>Medio</Italian>
@@ -312,7 +312,7 @@
             <Czech>Hodně</Czech>
             <German>Hoch</German>
             <Portuguese>Alto</Portuguese>
-            <French>Haut</French>
+            <French>Haute</French>
             <Hungarian>Magas</Hungarian>
             <Russian>Высокая</Russian>
             <Italian>Alto</Italian>
@@ -328,7 +328,7 @@
             <Czech>Velmi hodně</Czech>
             <German>Sehr hoch</German>
             <Portuguese>Muito alto</Portuguese>
-            <French>Très haut</French>
+            <French>Très haute</French>
             <Hungarian>Maximális</Hungarian>
             <Russian>Очень высокая</Russian>
             <Italian>Molto Alto</Italian>
@@ -346,7 +346,7 @@
             <Polish>Oparty na FoV</Polish>
             <Italian>Basato su Campo Visivo (FoV)</Italian>
             <Spanish>Basada en campo de visión</Spanish>
-            <French>Champ de vision basé</French>
+            <French>Basée sur le champ de vision</French>
             <Japanese>視野角を元にする</Japanese>
             <Korean>시계(FoV)</Korean>
             <Chinesesimp>由视野角度决定</Chinesesimp>
@@ -359,7 +359,7 @@
             <Czech>Dohlednost:</Czech>
             <German>Sichtweite:</German>
             <Portuguese>Distância de visão:</Portuguese>
-            <French>Distance de vue</French>
+            <French>Distance de vue :</French>
             <Hungarian>Látótávolság:</Hungarian>
             <Russian>Дальность видимости:</Russian>
             <Italian>Distanza Visiva:</Italian>
@@ -375,7 +375,7 @@
             <Czech>Dohlednost objektů je</Czech>
             <German>Objektsichtweite ist</German>
             <Portuguese>Distância de visão do objeto é</Portuguese>
-            <French>La distance d'affichage des objets est:</French>
+            <French>La distance d'affichage des objets est de</French>
             <Hungarian>Az objektum-látótávolság:</Hungarian>
             <Russian>Дальность видимости объектов:</Russian>
             <Italian>Distanza Visiva Oggetti è</Italian>
@@ -391,7 +391,7 @@
             <Czech>Tato volba je neplatná! Limit je</Czech>
             <German>Diese Option ist ungültig! Die Grenze ist</German>
             <Portuguese>Essa opção é inválida. O limte é</Portuguese>
-            <French>Cette option est non valide! La limite est</French>
+            <French>Cette option est non valide ! La limite est de</French>
             <Hungarian>Ez a beállítás érvénytelen! A maximum mennyiség</Hungarian>
             <Russian>Настройка не верна! Текущий предел</Russian>
             <Italian>Questa opzione è invalida! Il limite è</Italian>

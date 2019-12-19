@@ -41,3 +41,13 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     {[QGVAR(progressBarTimeCoefficent), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // Needs mission restart
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(dragAfterDeploy), "CHECKBOX",
+    [LSTRING(dragAfterDeploy_displayName), LSTRING(dragAfterDeploy_description)],
+    _categoryArray,
+    false, // default value
+    false, // isGlobal
+    {[QGVAR(dragAfterDeploy), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    false // Needs mission restart
+] call CBA_settings_fnc_init;

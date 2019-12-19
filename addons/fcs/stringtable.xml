@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_FCS_LaseTarget">
             <English>Lase Target / Measure Distance</English>
             <German>Ziel anlasern / Entfernung messen</German>
-            <French>Télémétrer la cible</French>
+            <French>SCT - Illuminer la cible/Mesurer la distance</French>
             <Polish>Naświetl cel / Zmierz odległość</Polish>
             <Czech>Označit cíl / Změřit vzdálenost</Czech>
             <Spanish>Iluminar objetivo / Medir distancia</Spanish>
@@ -23,7 +23,7 @@
             <Spanish>Ajustado a</Spanish>
             <Polish>Wyzerowany na</Polish>
             <Czech>Nastaveno na</Czech>
-            <French>Remise à zéro à</French>
+            <French>Zéroté à</French>
             <Russian>Выставлено на</Russian>
             <Hungarian>Nullázási táv</Hungarian>
             <Portuguese>Fixado em</Portuguese>
@@ -39,7 +39,7 @@
             <Polish>Zwiększ zasięg SKO</Polish>
             <Spanish>Ajustar distancia del FCS (arriba)</Spanish>
             <Czech>Nastavit FCS Náměr (Nahoru)</Czech>
-            <French>Augmenter la distance du SCT</French>
+            <French>SCT - Augmenter la portée</French>
             <Hungarian>FCS tartomány állítása (Fel)</Hungarian>
             <Portuguese>Ajustar distância do FCS (Acima)</Portuguese>
             <Italian>Aumentare la distanza dell'FCS</Italian>
@@ -55,7 +55,7 @@
             <Polish>Zmniejsz zasięg SKO</Polish>
             <Spanish>Ajustar distancia del FCS (abajo)</Spanish>
             <Czech>Nastavit FCS Náměr (Dolů)</Czech>
-            <French>Réduire la distance du SCT</French>
+            <French>SCT - Réduire la portée</French>
             <Hungarian>FCS tartomány állítása (Le)</Hungarian>
             <Portuguese>Ajustar distância do FCS (Abaixo)</Portuguese>
             <Italian>Ridurre la distanza dell'FCS</Italian>
@@ -85,7 +85,7 @@
             <English>FCS has been reset.</English>
             <German>FLS wurde zurückgesetzt.</German>
             <Spanish>FCS reiniciado</Spanish>
-            <French>SCT réinitialisé.</French>
+            <French>SCT réinitialisé</French>
             <Polish>SKO został zresetowany.</Polish>
             <Czech>FCS byl resetován.</Czech>
             <Hungarian>FCS visszaállítva.</Hungarian>

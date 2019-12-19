@@ -8,7 +8,7 @@
             <Russian>Изменить размер окна инвентаря</Russian>
             <Czech>Zvětšit zobrazení inventáře</Czech>
             <Polish>Powiększ UI ekwipunku</Polish>
-            <French>Agrandir la taille d'affichage de l'inventaire</French>
+            <French>Agrandir l'affichage de l'inventaire</French>
             <Hungarian>Legyen a felszerelés menüje nagyobb</Hungarian>
             <Italian>Ingrandisci il menù inventario</Italian>
             <Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
@@ -24,7 +24,7 @@
             <Russian>Обычно, размер окна инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря, не увеличивая размеры шрифтов, так что отображется большее количество строк.</Russian>
             <Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
             <Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
-            <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de lignes.</French>
+            <French>En principe, l'affichage de l'inventaire est dimensionné par la taille de l'IU. Cette option permet d'agrandir l'IU de l'inventaire, mais sans augmenter la taille des polices, ce qui permet d'afficher plus de lignes.</French>
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni dell'interfaccia. Questa opzione permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>

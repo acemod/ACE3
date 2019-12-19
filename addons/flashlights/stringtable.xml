@@ -56,7 +56,7 @@
             <Spanish>Mini linterna blanca. Para su uso en el mapa.</Spanish>
             <Italian>Mini-torcia bianca. Da usare in mappa.</Italian>
             <French>Mini lampe torche blanche. Pour utilisation sur carte.</French>
-            <Japanese>白色光の小さなフラッシュライト。地図上でつかいます。</Japanese>
+            <Japanese>白色光の小さなフラッシュライト。地図上で使用します。</Japanese>
             <Korean>하얀색 조그마한 손전등. 지도를 비출때 씁니다.</Korean>
             <Chinesesimp>白色的迷你手电筒。用来照亮地图。</Chinesesimp>
             <Chinese>白色的迷你手電筒。用來照亮地圖。</Chinese>
@@ -86,7 +86,7 @@
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
-            <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
+            <Japanese>赤色フィルタ付きのフラッシュライト。地図上で使用します。</Japanese>
             <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
             <Chinesesimp>拥有红色滤光片的手电筒。用来照亮地图。</Chinesesimp>
             <Chinese>擁有紅色濾光片的手電筒。用來照亮地圖。</Chinese>
@@ -101,6 +101,23 @@
             <Italian>Colore della luce sulla mappa</Italian>
             <Polish>Kolor światła na mapie</Polish>
             <Russian>Цвет подсветки карты</Russian>
+            <Portuguese>Cor da lanterna no mapa</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Flashlights_Maglite_ML300L_DisplayName">
+            <English>Maglite ML300L</English>
+            <German>Maglite ML300L</German>
+            <Polish>Maglite ML300L</Polish>
+            <Chinese>Maglite ML300L</Chinese>
+            <French>Maglite ML300L</French>
+            <Japanese>マグライト ML300L</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
+            <English>Powerful LED flashlight.</English>
+            <German>Leistungsstarke LED-Taschenlampe.</German>
+            <Polish>Mocna latarka LED.</Polish>
+            <Chinese>強大的LED手電筒</Chinese>
+            <French>Puissante lampe torche à LED.</French>
+            <Japanese>協力な LED のフラッシュライト。</Japanese>
         </Key>
     </Package>
 </Project>

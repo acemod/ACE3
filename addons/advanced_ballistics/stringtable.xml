@@ -6,7 +6,7 @@
             <Polish>Pokaż inf. o wietrze</Polish>
             <Italian>Mostra indicazioni del vento</Italian>
             <Russian>Показать информацию о ветре</Russian>
-            <French>Afficher les info sur le vent</French>
+            <French>Afficher les infos sur le vent</French>
             <Spanish>Mostrar información del viento</Spanish>
             <German>Windinformationen anzeigen</German>
             <Hungarian>Széladatok mutatása</Hungarian>
@@ -72,7 +72,7 @@
             <German>Aktiviert die erweiterte Ballistik</German>
             <Czech>Aktivuje pokročilou balistiku</Czech>
             <Portuguese>Ativa balística avançada</Portuguese>
-            <French>Activer la balistique avancée</French>
+            <French>Active la balistique avancée.</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
             <Italian>Abilita Balistica Avanzata</Italian>
@@ -89,9 +89,11 @@
             <Korean>총구속도 변화적용</Korean>
             <Chinese>啟用槍口初速變化</Chinese>
             <Chinesesimp>启用枪口初速变化</Chinesesimp>
-            <French>Activer les variations de la vitesse initiale</French>
+            <French>Activer la variation de vitesse initiale</French>
             <Polish>Aktywuj wariację prędkości wylotowej</Polish>
             <Russian>Вкл. вариацию начальной скорости</Russian>
+            <Portuguese>Ativar Variação de Velocidade no Freio de boca (muzzle)</Portuguese>
+            <Czech>Povoluje variantu rychlosti ústí</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
@@ -101,9 +103,11 @@
             <Korean>각 사격 사이에 총구속도 변화를 시뮬레이션 합니다.</Korean>
             <Chinese>模擬每發子彈的槍口初速都略有不同</Chinese>
             <Chinesesimp>模拟每发子弹的枪口初速都略有不同</Chinesesimp>
-            <French>Simule les légères variations</French>
+            <French>Simule de légères variations de vitesse initiale entre chaque tir.</French>
             <Polish>Symuluje lekkie zmiany w prędkości wylotowej między każdym strzałem</Polish>
             <Russian>Имитирует небольшие изменения начальной скорости при каждом выстреле</Russian>
+            <Portuguese>Simula pequenas variações na velocidade do Freio de Boca entre cada tiro</Portuguese>
+            <Czech>Simuluje malé odchylky v úsťové rychlosti mezi jednotlivými výstřely</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
@@ -112,7 +116,7 @@
             <German>Simulation der Munitionstemperatur aktivieren</German>
             <Czech>Povolit simulaci teploty munice</Czech>
             <Portuguese>Ativar simulação de temperatura de munição</Portuguese>
-            <French>Active la simulation de la température</French>
+            <French>Activer la simulation de la température</French>
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция температуры для боеприпасов</Russian>
             <Italian>Abilita simulazione della temperatura delle munizioni</Italian>
@@ -128,7 +132,7 @@
             <German>Munitionstemperatur hat Einfluss auf die Mündungsgeschwindigkeit</German>
             <Czech>Úsťová rychlost je závislá na teplotě munice</Czech>
             <Portuguese>A velocidade de saída varia com a temperatura da munição</Portuguese>
-            <French>La température de la munition influe sur la vélocité intiale</French>
+            <French>La vitesse initiale varie en fonction de la température des munitions.</French>
             <Hungarian>A kezdősebesség a lőszer hőmérsékletétől függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от температуры</Russian>
             <Italian>La velocità dello sparo varia a seconda della temperatura delle munizioni</Italian>
@@ -160,7 +164,7 @@
             <German>Lauflänge beeinflusst Mündungsgeschwindigkeit</German>
             <Czech>Úsťová rychlost je závislá na délce hlavně</Czech>
             <Portuguese>A velocidade de saída caria com o comprimento do cano</Portuguese>
-            <French>La longueur du canon influe sur la vélocité initale</French>
+            <French>La vitesse initiale varie en fonction de la longueur du canon.</French>
             <Hungarian>A kezdősebesség a cső hosszától függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от длины ствола</Russian>
             <Italian>La velocità di sparo varia a seconda della lunghezza della canna</Italian>
@@ -176,7 +180,7 @@
             <German>Geschossspureffekt aktivieren</German>
             <Czech>Povolit efekt trasírek</Czech>
             <Portuguese>Ativa efeito traçante de projétil</Portuguese>
-            <French>Activer l'effet balle traçante</French>
+            <French>Activer l'effet de balle traçante</French>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
@@ -192,7 +196,7 @@
             <German>Aktiviere Geschossspureffekt für hohe Kaliber (bei Benutzung von Optiken mit starker Vergrößerung)</German>
             <Czech>Aktivuje efekt trasírek z vysokokaliberních zbraní (viditelné pouze skrze výkonnou optiku)</Czech>
             <Portuguese>Ativa o efeito traçante de projétil para projéteis de alto calibre (somente visível quando observado por miras telescópicas)</Portuguese>
-            <French>Active une tracante pour les munitions de gros calibre (seulement visible en utilisant des optiques avancées)</French>
+            <French>Active un effet de balle traçante pour les munitions de gros calibre (seulement visible en utilisant une optique à fort grossissement).</French>
             <Hungarian>Engedélyezi a nagy kaliberű lövedékek nyomának vizuális követését (csak nagy teljesítményű optikán keresztül látható)</Hungarian>
             <Russian>Включает эффект следов пуль для больших калибров (видны только через мощную оптику)</Russian>
             <Italian>Abilita effetto dei proiettili traccianti di alto calibro (visibile solo attraverso ottiche ad alto potenziale)</Italian>
@@ -224,7 +228,7 @@
             <German>Definiert das Intervall zwischen den einzelnen Simulationsschritten</German>
             <Czech>Určuje interval mezi každým výpočtem</Czech>
             <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
-            <French>Définit un intervalle de calcul entre deux simulations</French>
+            <French>Définit l'intervalle entre chacune des étapes de calcul.</French>
             <Hungarian>Meghatározza a számítási lépések közötti időintervallumot</Hungarian>
             <Russian>Определяет временной интервал между вычислениями</Russian>
             <Italian>Definisce l'intervallo tra ogni step di calcolo</Italian>
@@ -256,7 +260,7 @@
             <German>Gibt den Radius (in Metern) um den Spieler an, bei dem die erweiterte Ballistik auf Geschosse angewendet wird</German>
             <Czech>Určuje oblast kolem hráče (v metrech), kde je pokročilá balistika použita na projektil</Czech>
             <Portuguese>Define o raio ao redor do jogador (em metros) onde a balística avançada será aplicada aos projéteis</Portuguese>
-            <French>Définit le rayon autour du joueur (en mètres) d'application de la balistique avancée</French>
+            <French>Définit le rayon autour du joueur (en mètres), dans lequel la balistique avancée est appliquée aux projectiles.</French>
             <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékek fejlett ballisztikát használnak</Hungarian>
             <Russian>Определяет радиус вокруг игрока (в метрах), в котором продвинутая баллистика применяется к снарядам</Russian>
             <Italian>Definisce il raggio attorno al giocatore (in metri) per cui la Balistica Avanzata è applicata ai proiettili</Italian>
@@ -271,7 +275,7 @@
             <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
             <Czech>Tento modul umožňuje aktivovat pokročilou balistiku, která vypočítává trajektorii kulky a bere do úvahy věci jako je teplota vzduchu, atmosférický tlak, vlhkost vzduchu, gravitaci, typ munice a zbraň, ze které je náboj vystřelen. To vše přispívá k velmi přesné balistice.</Czech>
             <Portuguese>Este módulo permite que você ative cálculos de balística avançada, fazendo a trajetória do projétil levar em consideração coisas como temperatura do ar, pressão atmosférica, umidade, força de Coriolis, a gravidade, o modelo da arma no qual o disparo é realizado e o tipo de munição. Tudo isso acrescenta-se a um balística muito precisa.</Portuguese>
-            <French>Ce module active la simulation de balistique avancée - les projectiles sont influencés par des variables comme le vent, la température, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme avec laquelles ils sont tirés.</French>
+            <French>Ce module permet une simulation balistique avancée ; c'est à dire que la trajectoire des projectiles est influencée par des facteurs tels que la température de l'air, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme depuis laquelle elle est tirée.</French>
             <Hungarian>Ez a modul engedélyezi a fejlett ballisztikai szimulációt - a lövedékek röppályáját befolyásolni fogja a levegő hőmérséklete, légnyomás, páratartalom, gravitáció, a lövedék fajtája, valamint a fegyver, amiből kilőtték a lövedéket.</Hungarian>
             <Russian>Этот модуль включает симуляцию продвинутой баллистики - при этом на траекторию полета снаряда влияют различные параметры, такие как температура воздуха, атмосферное давление, влажность, гравитация, тип боеприпаса и оружия, из которого произвели выстрел.</Russian>
             <Spanish>Este módulo permite la simulación balística avanzada - es decir, la trayectoria de los proyectiles está influenciada por variables como la temperatura del aire, la presión atmosférica, la humedad, la gravedad, el tipo de municiones y el arma desde el que fue disparada.</Spanish>

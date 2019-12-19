@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HuntIR">
-        <Key ID="STR_DN_ACE_HUNTIRBOX">
+        <Key ID="STR_ACE_HuntIR_TransportBox_DisplayName">
             <English>HuntIR Transport Box</English>
             <German>HuntIR Transportkiste</German>
             <Spanish>Caja de transporte de HuntIR</Spanish>
@@ -17,7 +17,7 @@
             <Chinesesimp>高空战术摄像头运输箱</Chinesesimp>
             <Chinese>高空戰術成像器運輸箱</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_magazine_displayName">
+        <Key ID="STR_ACE_HuntIR_magazine_displayName">
             <English>HuntIR Round</English>
             <German>HuntIR Granate</German>
             <Spanish>Proyectil HuntIR</Spanish>
@@ -25,7 +25,7 @@
             <Russian>HuntIR снаряд</Russian>
             <Italian>Colpo HuntIR</Italian>
             <Polish>Nabój HuntIR</Polish>
-            <French>Munition HuntIR</French>
+            <French>Projectile HuntIR</French>
             <Hungarian>HuntIR lövedék</Hungarian>
             <Portuguese>Cartucho HuntIR</Portuguese>
             <Japanese>HuntIR 弾頭</Japanese>
@@ -33,7 +33,7 @@
             <Chinesesimp>高空战术摄像头弹药</Chinesesimp>
             <Chinese>高空戰術成像器彈藥</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_monitor_displayName">
+        <Key ID="STR_ACE_HuntIR_monitor_displayName">
             <English>HuntIR monitor</English>
             <German>HuntIR Monitor</German>
             <Spanish>Monitor HuntIR</Spanish>
@@ -49,7 +49,7 @@
             <Chinesesimp>高空战术摄像头显示面板</Chinesesimp>
             <Chinese>高空戰術成像器顯示面板</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_activateMonitor">
+        <Key ID="STR_ACE_HuntIR_activateMonitor">
             <English>Activate HuntIR monitor</English>
             <German>HuntIR Monitor aktivieren</German>
             <Spanish>Activar monitor HuntIR</Spanish>
@@ -65,7 +65,7 @@
             <Chinesesimp>开启高空战术摄像头显示面板</Chinesesimp>
             <Chinese>開啟高空戰術成像器顯示面板</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_CAM">
+        <Key ID="STR_ACE_HuntIR_CAM">
             <English>Camera:</English>
             <German>Kamera:</German>
             <Spanish>Camara:</Spanish>
@@ -81,7 +81,7 @@
             <Chinesesimp>摄像头:</Chinesesimp>
             <Chinese>攝影機:</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_ALT">
+        <Key ID="STR_ACE_HuntIR_ALT">
             <English>Altitude:</English>
             <German>Höhe:</German>
             <Spanish>Altitud:</Spanish>
@@ -97,7 +97,7 @@
             <Chinesesimp>高度:</Chinesesimp>
             <Chinese>高度:</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_TIME">
+        <Key ID="STR_ACE_HuntIR_TIME">
             <English>Recording Time:</English>
             <German>Aufnahmezeit:</German>
             <Spanish>Tiempo de grabación:</Spanish>
@@ -113,7 +113,7 @@
             <Chinesesimp>记录时间:</Chinesesimp>
             <Chinese>記錄時間:</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_ESC">
+        <Key ID="STR_ACE_HuntIR_ESC">
             <English>Press ESC to quit camera</English>
             <German>Zum Verlassen ESC drücken</German>
             <Spanish>Pulsar ESC para salir de la camara</Spanish>
@@ -121,7 +121,7 @@
             <Russian>Нажмите ESC чтобы выйти из режима камеры</Russian>
             <Italian>Premi ESC per uscire dalla telecamera</Italian>
             <Polish>Wciśnij ESC by wyjść z widoku kamery</Polish>
-            <French>Appuyer sur ESC pour quitter la camera</French>
+            <French>Appuyez sur ESC pour quitter la camera.</French>
             <Hungarian>Nyomj ESC-ket a kamerából való kilépéshez</Hungarian>
             <Portuguese>Pressione ESC para sair da câmera</Portuguese>
             <Japanese>ESC を押しカメラを抜ける</Japanese>
@@ -129,7 +129,7 @@
             <Chinesesimp>按下ESC退出摄像头</Chinesesimp>
             <Chinese>按下ESC退出攝影機</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_HELP">
+        <Key ID="STR_ACE_HuntIR_HELP">
             <English>Help</English>
             <German>Hilfe</German>
             <Spanish>Ayuda</Spanish>
@@ -145,7 +145,7 @@
             <Chinesesimp>帮助</Chinesesimp>
             <Chinese>幫助</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_HELP_ZOOM">
+        <Key ID="STR_ACE_HuntIR_HELP_ZOOM">
             <English>A/D - Cycle zoom</English>
             <German>A/D - Zoom</German>
             <Spanish>A/D - Cambiar zoom</Spanish>
@@ -161,7 +161,7 @@
             <Chinesesimp>A/D - 切换放大倍率</Chinesesimp>
             <Chinese>A/D - 切換放大倍率</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_HELP_CAM">
+        <Key ID="STR_ACE_HuntIR_HELP_CAM">
             <English>W/S - Select camera</English>
             <German>W/S - Wähle Kamera</German>
             <Spanish>W/S - Seleccionar camara</Spanish>
@@ -177,7 +177,7 @@
             <Chinesesimp>W/S - 切换摄像头</Chinesesimp>
             <Chinese>W/S - 切換攝影機</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_HELP_ROT">
+        <Key ID="STR_ACE_HuntIR_HELP_ROT">
             <English>Left/Right - Rotate camera</English>
             <German>Links/Rechts - Rotiere Kamera</German>
             <Spanish>Left/Right - Rotar camara</Spanish>
@@ -193,7 +193,7 @@
             <Chinesesimp>左/右 - 旋转摄像头</Chinesesimp>
             <Chinese>左/右 - 旋轉攝影機</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_HELP_ELV">
+        <Key ID="STR_ACE_HuntIR_HELP_ELV">
             <English>Up/Down - Elevate/lower camera</English>
             <German>Hoch/Runter - Neige Kamera</German>
             <Spanish>Up/Down - Subir/bajar camara</Spanish>
@@ -209,7 +209,7 @@
             <Chinesesimp>上/下 - 上升/下降摄像头</Chinesesimp>
             <Chinese>上/下 - 上升/下降攝影機</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_HELP_MOD">
+        <Key ID="STR_ACE_HuntIR_HELP_MOD">
             <English>N - Cycle IT modes</English>
             <German>N - Sichtmodi</German>
             <Spanish>N - Cambiar modos de IT</Spanish>
@@ -225,7 +225,7 @@
             <Chinesesimp>N - 切换热显模式</Chinesesimp>
             <Chinese>N - 切換熱顯模式</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_HELP_RES">
+        <Key ID="STR_ACE_HuntIR_HELP_RES">
             <English>R - Reset camera</English>
             <German>R - Kamera zurücksetzen</German>
             <Spanish>R - Reiniciar camara</Spanish>
@@ -241,7 +241,7 @@
             <Chinesesimp>R - 重置摄像头</Chinesesimp>
             <Chinese>R - 重置攝影機</Chinese>
         </Key>
-        <Key ID="STR_ACE_HUNTIR_HELP_EXIT">
+        <Key ID="STR_ACE_HuntIR_HELP_EXIT">
             <English>Esc - Exit help</English>
             <German>ESC - Hilfe verlassen</German>
             <Spanish>Esc - Salit de ayuda</Spanish>

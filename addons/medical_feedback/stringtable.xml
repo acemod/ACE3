@@ -4,9 +4,11 @@
         <Key ID="STR_ACE_Medical_Feedback_SubCategory">
             <English>Feedback</English>
             <German>Feedback</German>
-            <Japanese>フィードバック</Japanese>
+            <Japanese>感触</Japanese>
             <Russian>Реакция на ранения</Russian>
             <French>Réaction aux blessures</French>
+            <Portuguese>Reação a Lesões</Portuguese>
+            <Chinese>視覺回饋</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -21,11 +23,15 @@
             <Czech>Typ bolesti - efekt</Czech>
             <Japanese>痛み効果の種類</Japanese>
             <Korean>고통 효과 종류</Korean>
+            <Chinese>疼痛效果類型</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
             <English>Selects the used pain effect type.</English>
             <Japanese>痛みの効果の種類を選択できます。</Japanese>
             <French>Permet de choisir quel effet provoque la douleur.</French>
+            <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
+            <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
+            <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -33,6 +39,8 @@
             <Japanese>白く点滅</Japanese>
             <Russian>Белые вспышки</Russian>
             <French>Flash blancs</French>
+            <Portuguese>Flashes Brancos</Portuguese>
+            <Chinese>白光閃爍</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -40,9 +48,33 @@
             <Japanese>ボケの強弱</Japanese>
             <Russian>Пульсирующее размытие</Russian>
             <French>Pulsations floues</French>
+            <Portuguese>Borrão Pulsante</Portuguese>
+            <Chinese>脈動模糊</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
+            <English>Chromatic Aberration</English>
+            <German>Chromatische Aberration</German>
+            <Polish>Aberracja chromatyczna</Polish>
+            <Russian>Хроматическая аберрация</Russian>
+            <Italian>Aberrazione cromatica</Italian>
+            <Spanish>Aberración cromática</Spanish>
+            <French>Aberration chromatique</French>
+            <Hungarian>Kromatikus aberráció</Hungarian>
+            <Czech>Chromatická aberace</Czech>
+            <Portuguese>Aberração cromática</Portuguese>
+            <Japanese>色の収差</Japanese>
+            <Korean>색수차</Korean>
+            <Chinesesimp>色差</Chinesesimp>
+            <Chinese>色差</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
+            <English>Only high pain effect</English>
+            <Japanese>強い痛みの時のみ</Japanese>
+            <Chinese>只有在強烈疼痛時使用</Chinese>
+            <French>Juste un fort effet douloureux</French>
         </Key>
         <Container name="Settings">
-            <Key ID="STR_ACE_Medical_feedback_enableScreams_DisplayName">
+            <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
                 <Russian>Включить крики</Russian>
                 <Polish>Aktywuj wrzaski</Polish>
@@ -58,7 +90,7 @@
                 <Chinesesimp>启用尖叫</Chinesesimp>
                 <Chinese>啟用尖叫</Chinese>
             </Key>
-            <Key ID="STR_ACE_Medical_feedback_enableScreams_Description">
+            <Key ID="STR_ACE_Medical_Feedback_enableScreams_Description">
                 <English>Enable screaming by injured units</English>
                 <Russian>Включить крики раненных бойцов</Russian>
                 <Polish>Aktywuj wrzeszczenie z bólu przez ranne jednostki</Polish>

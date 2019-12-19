@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="concertina_wire">
-        <Key ID="STR_ACE_CONCERTINA_WIRE">
+    <Package name="Concertina_Wire">
+        <Key ID="STR_ACE_Concertina_Wire_DisplayName">
             <English>Concertina Wire</English>
             <German>NATO-Draht</German>
             <Russian>Колючая проволока</Russian>
             <Polish>Koncentrina</Polish>
             <Spanish>Alambre de espino</Spanish>
-            <French>Fill barbelé</French>
+            <French>Fil barbelé</French>
             <Czech>Ostnatý drát</Czech>
             <Italian>Filo a concertina</Italian>
             <Hungarian>Concertina wire</Hungarian>
@@ -17,7 +17,7 @@
             <Chinese>鐵絲網</Chinese>
             <Chinesesimp>铁丝网</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_CONCERTINA_WIRECOIL">
+        <Key ID="STR_ACE_Concertina_Wire_Coil_DisplayName">
             <English>Concertina Wire Coil</English>
             <German>NATO-Draht Rolle</German>
             <Russian>Колючая проволока (моток)</Russian>
@@ -33,13 +33,13 @@
             <Chinese>鐵絲網捲</Chinese>
             <Chinesesimp>铁丝网卷</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_UNROLLWIRE">
+        <Key ID="STR_ACE_Concertina_Wire_UnrollWire">
             <English>Dismount Concertina Wire</English>
             <German>NATO-Draht abbauen</German>
             <Russian>Демонтировать колючую проволоку</Russian>
             <Polish>Zwiń koncentrinę</Polish>
             <Spanish>Desmontar alambre de espino</Spanish>
-            <French>Démonter le fil barbelé</French>
+            <French>Démontage du fil barbelé...</French>
             <Czech>Svinout ostnatý drát</Czech>
             <Italian>Smonta il filo a concertina</Italian>
             <Hungarian>Dismount Concertina wire</Hungarian>
@@ -49,7 +49,7 @@
             <Chinese>卸下鐵絲網</Chinese>
             <Chinesesimp>卸下铁丝网</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_ROLLWIRE">
+        <Key ID="STR_ACE_Concertina_Wire_RollWire">
             <English>Deploy Concertina Wire</English>
             <German>NATO-Draht verlegen</German>
             <Russian>Монтировать колючую проволоку</Russian>

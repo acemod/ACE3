@@ -12,18 +12,22 @@
             <French>Spectateur</French>
             <Polish>Obserwator</Polish>
             <Russian>Зритель</Russian>
+            <Portuguese>Espectador</Portuguese>
+            <Czech>Divák</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
             <German>ACE Zuschauer</German>
             <Japanese>ACE スペクテイター</Japanese>
             <Italian>Spettatore ACE</Italian>
-            <French>Spectateur ACE</French>
+            <French>ACE Spectateur</French>
             <Chinesesimp>ACE 旁观者</Chinesesimp>
             <Chinese>ACE 旁觀者</Chinese>
             <Polish>Obserwator ACE</Polish>
             <Korean>ACE 관전자</Korean>
             <Russian>ACE Зритель</Russian>
+            <Portuguese>ACE Espectador</Portuguese>
+            <Czech>ACE Divák</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -34,7 +38,7 @@
             <Spanish>Configurar cómo el sistema de espectador funcionará por defecto.</Spanish>
             <Czech>Konfigurovat výchozí nastavení pozorovatele</Czech>
             <Italian>Configura come il sistema spettatore si comporterà di default.</Italian>
-            <French>Configure comment le système de spectateurs opère par défaut.</French>
+            <French>Configure le fonctionnement par défaut du système spectateur.</French>
             <Japanese>スペクテイター システムが標準でどのように動作するか設定できます。</Japanese>
             <Korean>어떻게 관전자 시스템이 기본적으로 작동되는지 설정합니다</Korean>
             <Chinesesimp>设定旁观者系统相关配置</Chinesesimp>
@@ -48,9 +52,11 @@
             <Chinese>可觀察AI</Chinese>
             <Chinesesimp>可观察AI</Chinesesimp>
             <Korean>AI 활성</Korean>
-            <French>IA Activée</French>
+            <French>IA visible</French>
             <Polish>SI Aktywowane</Polish>
             <Russian>Разрешить для ИИ</Russian>
+            <Portuguese>IA Ativado</Portuguese>
+            <Czech>AI povoleno</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -60,9 +66,10 @@
             <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
             <Chinesesimp>开启此功能后可在观察者模式下观察AI单位。</Chinesesimp>
             <Korean>관전자가 AI를 관전 할 수 있습니다.</Korean>
-            <French>Rends les IA visibles en spectateur</French>
+            <French>Rend les unités IA visibles en spectateur.</French>
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
             <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
+            <Portuguese>Permite que IA seja visivel no espectador</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -73,7 +80,7 @@
             <Czech>Módy kamery</Czech>
             <Spanish>Modos de cámara</Spanish>
             <Italian>Modalità camera</Italian>
-            <French>Mode de caméra</French>
+            <French>Modes de caméra</French>
             <Japanese>カメラ モード</Japanese>
             <Korean>카메라 모드</Korean>
             <Chinesesimp>摄影机模式</Chinesesimp>
@@ -88,7 +95,7 @@
             <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
             <Czech>Módy kamery které mohou být použity.</Czech>
             <Italian>Modalità che la camera può utilizzare.</Italian>
-            <French>Modes de caméra qui peuvent être utilisés</French>
+            <French>Modes de caméra pouvant être utilisés.</French>
             <Japanese>カメラ モードを設定できます。</Japanese>
             <Korean>사용할 수 있는 카메라 모드들 입니다</Korean>
             <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
@@ -111,7 +118,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>1PP and 3PP</English>
-            <French>1ère et 3e personne</French>
+            <French>1ère et 3ème personne</French>
             <Spanish>1.ª y 3.ª persona</Spanish>
             <Italian>1° e 3° pers</Italian>
             <Polish>1 i 3 os.</Polish>
@@ -133,7 +140,7 @@
             <Spanish>Modos de visión</Spanish>
             <Czech>Módy zobrazení</Czech>
             <Italian>Modalità visuali</Italian>
-            <French>Modes de vision</French>
+            <French>Modes de visualisation</French>
             <Japanese>ビジョン モード</Japanese>
             <Korean>시야 모드</Korean>
             <Chinesesimp>视觉模式</Chinesesimp>
@@ -148,7 +155,7 @@
             <Spanish>Modos de visión que pueden ser utilizados.</Spanish>
             <Czech>Módy zobrazení které mohou být použity.</Czech>
             <Italian>Modalità visuali che possono essere usate.</Italian>
-            <French>Modes de visions qui peuvent être utilisés</French>
+            <French>Modes de visualisation pouvant être utilisés.</French>
             <Japanese>ビジョン モードを設定できます。</Japanese>
             <Korean>사용할 수 있는 시야 모드들 입니다</Korean>
             <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
@@ -188,11 +195,17 @@
             <English>Max Follow Distance</English>
             <Russian>Макс. дистанция следования</Russian>
             <Japanese>最大追随距離</Japanese>
+            <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
+            <Chinese>最大跟隨距離</Chinese>
+            <French>Distance maximale de suivi</French>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
             <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
             <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
+            <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
+            <Chinese>攝影機能追隨目標的最大距離</Chinese>
+            <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
@@ -249,7 +262,7 @@
             <Czech>Noční</Czech>
             <Spanish>Nocturna</Spanish>
             <Italian>Notturno</Italian>
-            <French>Nuit</French>
+            <French>Nocturne</French>
             <Japanese>暗視装置</Japanese>
             <Korean>야간</Korean>
             <Chinesesimp>夜视</Chinesesimp>
@@ -282,6 +295,8 @@
             <French>Icônes</French>
             <Polish>Ikony</Polish>
             <Russian>Иконки</Russian>
+            <Portuguese>Ícones</Portuguese>
+            <Czech>Ikony</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -294,6 +309,8 @@
             <French>Projectiles</French>
             <Polish>Pociski</Polish>
             <Russian>Осколки</Russian>
+            <Portuguese>Projéteis</Portuguese>
+            <Czech>Projektily</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -336,6 +353,7 @@
             <French>Mode de vision</French>
             <Polish>Tryb Wizji</Polish>
             <Russian>Режим видения</Russian>
+            <Portuguese>Modo de Visão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -348,6 +366,8 @@
             <French>Vitesse lente</French>
             <Polish>Wolna Prędkość</Polish>
             <Russian>Замедление</Russian>
+            <Portuguese>Velocidade Lenta</Portuguese>
+            <Czech>Pomalá rychlost</Czech>
         </Key>
     </Package>
 </Project>

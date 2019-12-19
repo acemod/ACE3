@@ -28,4 +28,4 @@ _unit setVariable [QGVAR(cardiacArrestTimeLastUpdate), CBA_missionTime];
 TRACE_3("enteredStateCardiacArrest",_unit,_time,CBA_missionTime);
 
 // Update the unit status to reflect cardiac arrest
-[_unit, true] call EFUNC(medical_status,setCardiacArrest);
+[_unit, true] call EFUNC(medical_status,setCardiacArrestState);

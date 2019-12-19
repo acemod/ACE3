@@ -5,7 +5,7 @@
             <English>Show Wind Info</English>
             <Polish>Pokaż inf. o wietrze</Polish>
             <Russian>Показать информацию о ветре</Russian>
-            <French>Afficher information sur le vent</French>
+            <French>Afficher les informations sur le vent</French>
             <Spanish>Mostrar información del viento</Spanish>
             <Italian>Mostra informazioni sul vento</Italian>
             <German>Zeige Windinformationen</German>
@@ -21,7 +21,7 @@
             <English>Show Wind Info (Toggle)</English>
             <Polish>Pokaż inf. o wietrze (przełącz)</Polish>
             <Russian>Показать информацию о ветре (перекл.)</Russian>
-            <French>Afficher information sur le vent (bascule)</French>
+            <French>Afficher les informations sur le vent (bascule)</French>
             <Spanish>Mostrar información del viento (cambiar)</Spanish>
             <Italian>Mostra informazioni sul vento (camb.)</Italian>
             <German>Zeige Windinformationen (umsch.)</German>
@@ -56,7 +56,7 @@
             <German>ACE-Wettermodul (synchron im Multiplayer)</German>
             <Czech>Synchronizovat ACE počasí v multiplayeru</Czech>
             <Portuguese>Módulo climático ACE para sincronismo multiplayer</Portuguese>
-            <French>Module ACE de synchronisation de la météo en multi.</French>
+            <French>Module météo ACE synchronisé en multijoueur.</French>
             <Hungarian>Többjátékos szinkronizált ACE időjárás modul</Hungarian>
             <Russian>ACE Модуль для синхронизации погоды в мультиплеере</Russian>
             <Italian>Modulo Sincronizzazione Meteo ACE Multiplayer</Italian>
@@ -91,6 +91,9 @@
             <Korean>온도, 습도 및 기압에 따라 기존 날씨를 확장합니다.</Korean>
             <Polish>Poszerza istniejącą pogodę o temperaturę, wilgotność i ciśnienie powietrza.</Polish>
             <Russian>Расширяет текущие возможности погоды с учетом температуры, влажности и давления</Russian>
+            <Portuguese>Expande o clima existente com temperatura, humidade e pressão do ar.</Portuguese>
+            <Czech>Rozšiřuje stávající počasí o teplotu, vlhkost a tlak vzduchu.</Czech>
+            <French>Améliore le module météo existant en y ajoutant la température, l'humidité et la pression atmosphérique.</French>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -99,7 +102,7 @@
             <German>Aktualisierungsintervall</German>
             <Czech>Interval aktualizace</Czech>
             <Portuguese>Intervalo de atualização</Portuguese>
-            <French>Intervalle de synchronisation</French>
+            <French>Intervalle de mises à jour</French>
             <Hungarian>Frissítési intervallum</Hungarian>
             <Russian>Интервал обновления</Russian>
             <Italian>Intervallo Aggiornamento</Italian>
@@ -115,7 +118,7 @@
             <German>Definiert das Intervall (in Sekunden) zwischen Wetteraktualisierungen</German>
             <Czech>Určit interval (v sekundách) mezi aktualizacemi počasí</Czech>
             <Portuguese>Defina o intervalo (em segundos) entre as atualizações de clima</Portuguese>
-            <French>Défini un intervalle (secondes) entre deux synchronisations</French>
+            <French>Définit l'intervalle (en secondes) entre les mises à jour des conditions météo.</French>
             <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
             <Russian>Определяет интервал (в секундах) между обновлениями погоды</Russian>
             <Italian>Definisce l'intervallo(in secondi) tra aggiornamenti del meteo</Italian>
@@ -134,6 +137,9 @@
             <Korean>바람 시뮬레이션 (지도 기반)</Korean>
             <Polish>Symulacja Wiatru (bazowana na mapie)</Polish>
             <Russian>Симуляция ветра (на основе местности)</Russian>
+            <Portuguese>Simulação de Vento (baseado no mapa)</Portuguese>
+            <Czech>Simulace větru (podle mapy)</Czech>
+            <French>Simulation du vent (basée sur la carte)</French>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_Description">
             <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
@@ -145,6 +151,19 @@
             <Korean>지도 기반의 바람 시뮬레이션을 활성화합니다 (바닐라 바람을 덮음)</Korean>
             <Polish>Aktywuje symulację wiatru bazującą na mapie (nadpisuje wind z domyślnej wersji gry)</Polish>
             <Russian>Включает симуляцию ветра на основе текущей местности (переписывает ванильный ветер)</Russian>
+            <Portuguese>Ativar a simulação de vento dos mapas. (sobrepõe vento vanilla)</Portuguese>
+            <Czech>Povoluje simulaci větru založenou na mapě (přepíše původní vítr)</Czech>
+            <French>Active la simulation du vent basée sur la carte (écrase le vent vanilla).</French>
+        </Key>
+        <Key ID="STR_ACE_Weather_CheckAirTemperature">
+            <English>Check Air Temperature</English>
+            <Chinese>檢查氣溫</Chinese>
+            <Japanese>気温を確認</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
+            <English>Show Check Air Temperature Action</English>
+            <Chinese>顯示檢查氣溫動作</Chinese>
+            <Japanese>気温の確認動作を表示</Japanese>
         </Key>
     </Package>
 </Project>

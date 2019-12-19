@@ -49,7 +49,7 @@
         [_player, "PutDown"] call EFUNC(common,doGesture);
 
         // drag after deploying
-        if ((missionNamespace getVariable [QGVAR(dragAfterDeploying), false]) && {["ACE_dragging"] call EFUNC(common,isModLoaded)}) then {
+        if ((missionNamespace getVariable [QGVAR(dragAfterDeploy), false]) && {["ACE_dragging"] call EFUNC(common,isModLoaded)}) then {
             if ([_player, _cswTripod] call EFUNC(dragging,canCarry)) then {
                 TRACE_1("starting carry",_cswTripod);
                 [_player, _cswTripod] call EFUNC(dragging,startCarry);

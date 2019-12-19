@@ -8,8 +8,8 @@ add_definitions(/DWINVER=0x0600 /D_WIN32_WINNT=0x0600)
 endif()
 
 if (NOT CMAKE_BUILD_TYPE AND CMAKE_COMPILER_IS_GNUCXX)
-	message(STATUS "No build type selected, default to Debug")
-	set(CMAKE_BUILD_TYPE "Debug")
+    message(STATUS "No build type selected, default to Debug")
+    set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
 option(DEVEL "DEVEL" OFF)
@@ -18,19 +18,29 @@ option(USE_DIRECTX "USE_DIRECTX" OFF)
 option(USE_64BIT_BUILD "USE_64BIT_BUILD" OFF)
 option(USE_STATIC_LINKING "USE_STATIC_LINKING" ON)
 
+if(CMAKE_GENERATOR_PLATFORM MATCHES "x64")
+    set(USE_64BIT_BUILD ON)
+endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX)
-	SET(CMAKE_CXX_FLAGS "-std=c++11 -pedantic -pedantic-errors -march=i686 -m32 -O2 -s -fPIC -fpermissive")
-	set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
-	set(CMAKE_SHARED_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+    SET(CMAKE_CXX_FLAGS "-std=c++11 -pedantic -pedantic-errors -march=i686 -m32 -O2 -s -fPIC -fpermissive")
+    set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+    set(CMAKE_SHARED_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     message(ERROR "SUPPORT NOT COMPLETE")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /arch:SSE2 /Qpar-report:2")
-	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} /D _DEBUG /MTd /Zi /Ob0 /Od /RTC1")
-	set(CMAKE_CXX_FLAGS_MINSIZEREL     "${CMAKE_CXX_FLAGS} /MT /O1 /Ob1 /D NDEBUG")
-	set(CMAKE_CXX_FLAGS_RELEASE       "${CMAKE_CXX_FLAGS} /MT /O2 /Ob2 /D NDEBUG")
-	set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS} /MT /Zi /O2 /Ob1 /D NDEBUG")
+    add_definitions(-D_CRT_SECURE_NO_WARNINGS) # Disable MSVC *_s function warnings
+
+    if(USE_64BIT_BUILD)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /Qpar-report:2") # Default SSE2
+    else()
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /arch:SSE2 /Qpar-report:2")
+    endif()
+
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} /D _DEBUG /MTd /Zi /Ob0 /Od /RTC1")
+    set(CMAKE_CXX_FLAGS_MINSIZEREL     "${CMAKE_CXX_FLAGS} /MT /O1 /Ob1 /D NDEBUG")
+    set(CMAKE_CXX_FLAGS_RELEASE       "${CMAKE_CXX_FLAGS} /MT /O2 /Ob2 /D NDEBUG")
+    set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS} /MT /Zi /O2 /Ob1 /D NDEBUG")
 endif()
 
 include_directories("common")
@@ -89,8 +99,8 @@ endif()
 
 string(TIMESTAMP ACE_BUILDSTAMP "%Y-%m-%dT%H:%M:%SZ")
 set(ACE_VERSION_MAJOR 3)
-set(ACE_VERSION_MINOR 12)
-set(ACE_VERSION_REVISION 3)
+set(ACE_VERSION_MINOR 13)
+set(ACE_VERSION_REVISION 0)
 EXECUTE_PROCESS(COMMAND git rev-parse --verify HEAD
     OUTPUT_VARIABLE T_ACE_VERSION_BUILD
     OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -127,6 +137,7 @@ add_subdirectory(clipboard)
 add_subdirectory(advanced_ballistics)
 add_subdirectory(medical)
 add_subdirectory(parse_imagepath)
+add_subdirectory(artillerytables)
 
 # Test Extension for dynamically loading/unloading built extensions; does not build in release
 if (DEVEL)
