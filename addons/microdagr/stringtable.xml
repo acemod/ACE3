@@ -71,7 +71,7 @@
             <Spanish>Mostrar puntos de ruta en el mapa:</Spanish>
             <Russian>Показывать маршрутные точки на карте:</Russian>
             <Polish>Pokaż PT na mapie:</Polish>
-            <French>Montrer points de passage sur la carte</French>
+            <French>Montrer points de passage sur la carte :</French>
             <Czech>Ukázat waypointy na mapě:</Czech>
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
             <Italian>Mostra waypoint sulla mappa:</Italian>
@@ -116,7 +116,7 @@
         <Key ID="STR_ACE_MicroDAGR_settingOff">
             <English>Off</English>
             <Czech>Vypnuto</Czech>
-            <French>Eteint</French>
+            <French>Éteint</French>
             <German>Aus</German>
             <Italian>Spento</Italian>
             <Polish>Wył.</Polish>
@@ -151,7 +151,7 @@
             <Spanish>Nombre de [%1]</Spanish>
             <Russian>Название [%1]</Russian>
             <Polish>Nazwa [%1]</Polish>
-            <French>Nom de %1</French>
+            <French>Nom de [%1]</French>
             <Czech>Název [%1]</Czech>
             <Hungarian>[%1] neve</Hungarian>
             <Italian>Nome di [%1]</Italian>

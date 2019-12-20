@@ -528,7 +528,7 @@
             <English>Determines what damage can be fatal</English>
             <Japanese>致命傷となるダメージの種類を決定します。</Japanese>
             <Chinese>決定何種傷害為致命</Chinese>
-            <French>Détermine le type de blessures pouvant être fatales</French>
+            <French>Détermine le type de blessures pouvant être fatales.</French>
             <Czech>Nastavuje jaké poškození může být smrtelné</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">

@@ -73,7 +73,7 @@
             <Czech>Kolo vyměněno</Czech>
             <Spanish>Rueda cambiada</Spanish>
             <Italian>Ruota sostituita</Italian>
-            <French>Roue remplacée</French>
+            <French>Roue remplacée.</French>
             <Japanese>タイヤを交換しました</Japanese>
             <Korean>바퀴 교체됨</Korean>
             <Chinesesimp>轮胎更换完毕</Chinesesimp>
@@ -119,7 +119,7 @@
             <Czech>Kolo odstraněno</Czech>
             <Spanish>Rueda quitada</Spanish>
             <Italian>Ruota rimossa</Italian>
-            <French>Roue démontée</French>
+            <French>Roue démontée.</French>
             <Japanese>タイヤを外しました</Japanese>
             <Korean>바퀴 제거됨</Korean>
             <Chinesesimp>轮胎卸下完毕</Chinesesimp>
@@ -164,7 +164,7 @@
             <Czech>Pás vyměněn</Czech>
             <Spanish>Oruga cambiada</Spanish>
             <Italian>Cingolo sostituito</Italian>
-            <French>Chenille remplacée</French>
+            <French>Chenille remplacée.</French>
             <Japanese>履帯を交換しました</Japanese>
             <Korean>궤도 교체됨</Korean>
             <Chinesesimp>履带更换完毕</Chinesesimp>
@@ -209,7 +209,7 @@
             <Czech>Pás odstraněn</Czech>
             <Spanish>Oruga quitada</Spanish>
             <Italian>Cingolo rimosso</Italian>
-            <French>Chenille démontée</French>
+            <French>Chenille démontée.</French>
             <Japanese>履帯を外しました</Japanese>
             <Korean>궤도 제거됨</Korean>
             <Chinesesimp>履带卸下完毕</Chinesesimp>
@@ -224,7 +224,7 @@
             <Czech>Kompletní oprava</Czech>
             <Spanish>Reparación completa</Spanish>
             <Italian>Riparazione completa</Italian>
-            <French>Réparation complète</French>
+            <French>Réparer complètement</French>
             <Japanese>完全に修理</Japanese>
             <Korean>완전수리</Korean>
             <Chinesesimp>完整维修</Chinesesimp>
@@ -269,7 +269,7 @@
             <Spanish>¿En qué lugares puede un vehículo ser reparado totalmente?</Spanish>
             <Czech>V které oblasti může být vozidlo plně opraveno?</Czech>
             <Italian>In quali luoghi è possibile riparare completamente un veicolo?</Italian>
-            <French>À quels endroits peut-on réparer intégralement un véhicule ?</French>
+            <French>Définit les lieux permettant de réparer intégralement un véhicule.</French>
             <Japanese>どのような場所で車両の完全な修理を出来るようにしますか?</Japanese>
             <Korean>어느 구역에서 차량을 완전히 수리할 수 있게 합니까?</Korean>
             <Chinesesimp>什么位置可以完整维修载具?</Chinesesimp>
@@ -284,7 +284,7 @@
             <Czech>Povolit kompletní opravu</Czech>
             <Spanish>Permitir reparación completa</Spanish>
             <Italian>Consenti Riparazione Completa</Italian>
-            <French>Autoriser les réparations complètes</French>
+            <French>Réparations complètes autorisées pour</French>
             <Japanese>完全修理を許可</Japanese>
             <Korean>완전 수리 활성화</Korean>
             <Chinesesimp>允许完整维修</Chinesesimp>
@@ -299,7 +299,7 @@
             <Spanish>¿Quién puede realizar una reparación completa de un vehículo?</Spanish>
             <Czech>Kdo může provést úplné opravy na vozidle?</Czech>
             <Italian>Chi può eseguire una riparazione completa su un veicolo?</Italian>
-            <French>Qui peut effectuer une réparation complète sur un véhicule ?</French>
+            <French>Définit qui peut effectuer une réparation complète sur un véhicule.</French>
             <Japanese>誰が車両の完全な修理を出来るようにしますか?</Japanese>
             <Korean>누가 완전 수리를 할 수 있습니까?</Korean>
             <Chinesesimp>谁可以完整维修载具?</Chinesesimp>
@@ -329,7 +329,7 @@
             <Russian>Добавлять запасные части в технику (требуется модуль Грузоперевозок)?</Russian>
             <Czech>Přidat náhradní díly do vozidla (vyžaduje úložný prostor)?</Czech>
             <Italian>Aggiungi parti di ricambio ai veicoli (richiede componente Cargo)?</Italian>
-            <French>Ajouter des pièces de rechange aux véhicules (nécessite le système de cargaison) ?</French>
+            <French>Ajoute des pièces de rechange aux véhicules (nécessite le système de cargaison).</French>
             <Japanese>車両へ予備部品を追加しますか（カーゴ コンポーネントが必要)?</Japanese>
             <Korean>차량에 예비 부품을 더합니까?(짐칸 요소 필요)</Korean>
             <Chinesesimp>添加载具备件 (需相关货物组件)?</Chinesesimp>
@@ -339,7 +339,7 @@
             <English>Repair</English>
             <German>Reparieren</German>
             <Spanish>Reparación</Spanish>
-            <French>Réparer</French>
+            <French>Réparation</French>
             <Polish>Napraw</Polish>
             <Czech>Opravit</Czech>
             <Portuguese>Reparar</Portuguese>
@@ -375,7 +375,7 @@
             <Spanish>Mostrar una notificación cada vez que se reparare un vehículo</Spanish>
             <Czech>Zobrazit oznámení kdykoliv opravíš vozidlo</Czech>
             <Italian>Mostra una notifica quando stai riparando un veicolo</Italian>
-            <French>Affiche une notification à chaque fois que vous réparez un véhicule</French>
+            <French>Affiche une notification lorsque vous réparez un véhicule.</French>
             <Japanese>車両の修理を始めると、画面に通知を出します</Japanese>
             <Korean>수리시 화면에 글자로 알림이 뜹니다</Korean>
             <Chinesesimp>每当维修载具时显示通知</Chinesesimp>
@@ -417,7 +417,7 @@
             <English>Repaired %1</English>
             <German>%1 repariert</German>
             <Spanish>Reparado %1</Spanish>
-            <French>%1 réparé(e)</French>
+            <French>%1 réparé(e).</French>
             <Polish>Naprawiono %1</Polish>
             <Czech> %1 - opraveno </Czech>
             <Portuguese>Reparado %1</Portuguese>
@@ -438,7 +438,7 @@
             <Czech>Kompletně opravená část</Czech>
             <Spanish>Parte totalmente reparado</Spanish>
             <Italian>Parte riparata completamente</Italian>
-            <French>Pièce entièrement réparée</French>
+            <French>Pièce entièrement réparée.</French>
             <Japanese>完全に修理された部品</Japanese>
             <Korean>부분 완벽히 수리됨</Korean>
             <Chinesesimp>完整维修部分</Chinesesimp>
@@ -453,7 +453,7 @@
             <Spanish>Parcialmente reparada %1</Spanish>
             <Czech>%1 - částečně opraveno</Czech>
             <Italian>%1 parzialmente riparato</Italian>
-            <French>%1 partiellement réparé(e)</French>
+            <French>%1 partiellement réparé(e).</French>
             <Japanese>%1 を部分的に修理しました</Japanese>
             <Korean>%1 부분적으로 수리됨</Korean>
             <Chinesesimp>%1已完成部分维修</Chinesesimp>
@@ -468,7 +468,7 @@
             <Czech>%1 - kompletně opraveno</Czech>
             <Spanish>Totalmente reparada %1</Spanish>
             <Italian>%1 completamente riparato</Italian>
-            <French>%1 entièrement réparé(e)</French>
+            <French>%1 entièrement réparé(e).</French>
             <Japanese>%1 を完全に修理しました</Japanese>
             <Korean>%1 완전히 수리됨</Korean>
             <Chinesesimp>%1已完整维修</Chinesesimp>
@@ -483,7 +483,7 @@
             <Spanish>Parcialmente reparada %1</Spanish>
             <Czech>%1 - částečně opraveno</Czech>
             <Italian>%1 parzialmente riparato</Italian>
-            <French>%1 partiellement réparé(e)</French>
+            <French>%1 partiellement réparé(e).</French>
             <Japanese>%1 を部分的に修理しました</Japanese>
             <Korean>%1 부분적으로 수리됨</Korean>
             <Chinesesimp>%1已完成部分维修</Chinesesimp>
@@ -1122,7 +1122,7 @@
             <Czech>Pouze inženýr</Czech>
             <Spanish>Solo ingeniero</Spanish>
             <Italian>Solo Geniere</Italian>
-            <French>Ingénieur uniquement</French>
+            <French>Ingénieurs uniquement</French>
             <Japanese>工兵のみ</Japanese>
             <Korean>오직 정비공만</Korean>
             <Chinesesimp>只有工兵</Chinesesimp>
@@ -1139,7 +1139,7 @@
             <Korean>고급 정비공만</Korean>
             <Russian>Только продвинутые инженеры</Russian>
             <Portuguese>Somente engenheiro avançado</Portuguese>
-            <French>Ingénieur avancé uniquement</French>
+            <French>Ing. avancés uniquement</French>
             <Czech>Pouze pokročilý inženýr</Czech>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
@@ -1151,7 +1151,7 @@
             <Czech>Možnost Výměny Kol</Czech>
             <Spanish>Permitir rueda</Spanish>
             <Italian>Consenti Ruota</Italian>
-            <French>Autoriser les roues</French>
+            <French>Roues autorisées pour</French>
             <Japanese>タイヤを許可</Japanese>
             <Korean>바퀴 허가</Korean>
             <Chinesesimp>允许轮胎</Chinesesimp>
@@ -1166,7 +1166,7 @@
             <Czech>Kdo může odstranit a vyměnit kola?</Czech>
             <Spanish>¿Quién puede quitar y cambiar las ruedas?</Spanish>
             <Italian>Chi può rimuovere e sostituire le ruote?</Italian>
-            <French>Qui peut démonter et remplacer des roues ?</French>
+            <French>Définit qui peut démonter et remplacer des roues.</French>
             <Japanese>誰がタイヤの除去と交換を出来るようにしますか?</Japanese>
             <Korean>누가 바퀴를 제거 및 교체할 수 있습니까?</Korean>
             <Chinesesimp>谁可维修轮胎?</Chinesesimp>
@@ -1181,7 +1181,7 @@
             <Czech>Možnost Opravování</Czech>
             <Spanish>Permitir reparación</Spanish>
             <Italian>Consenti Riparazioni</Italian>
-            <French>Autoriser les réparations</French>
+            <French>Réparations autorisées pour</French>
             <Japanese>修理を許可</Japanese>
             <Korean>수리 허가</Korean>
             <Chinesesimp>允许维修</Chinesesimp>
@@ -1196,7 +1196,7 @@
             <Czech>Kdo může provádět opravy?</Czech>
             <Spanish>¿Quién puede realizar reparaciones?</Spanish>
             <Italian>Chi può eseguire riparazioni?</Italian>
-            <French>Qui peut effectuer des réparations ?</French>
+            <French>Définit qui peut effectuer des réparations.</French>
             <Japanese>誰が修理を出来るようににしますか?</Japanese>
             <Korean>누가 수리를 할 수 있습니까?</Korean>
             <Chinesesimp>谁可以进行维修操作?</Chinesesimp>
@@ -1226,7 +1226,7 @@
             <Spanish>¿Cuál es el daño máximo que puede ser reparado con una caja de herramientas?</Spanish>
             <Czech>Jaké maximální poškození může být opraveno pomocí opravárenské sady?</Czech>
             <Italian>Qual'è il danno massimo che può essere riparato con il Toolkit?</Italian>
-            <French>Quels sont les dégâts maximaux pouvant être réparés avec une trousse à outils ?</French>
+            <French>Définit la quantité maximale de dégâts pouvant être réparés avec une trousse à outils.</French>
             <Japanese>ツールキットで修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
             <Korean>어느정도의 피해까지 툴킷으로 수리가 가능합니까?</Korean>
             <Chinesesimp>工具包可以修复的最大损坏值?</Chinesesimp>
@@ -1241,7 +1241,7 @@
             <Spanish>Umbral de Reparación (Ingeniero)</Spanish>
             <Czech>Práh oprav (Inženýr)</Czech>
             <Italian>Limite Riparazioni (Geniere)</Italian>
-            <French>Seuil de réparabilité (ingénieur)</French>
+            <French>Seuil de réparabilité (ingénieurs)</French>
             <Japanese>修理のしきい値 (工兵)</Japanese>
             <Korean>정비 한계치 (정비공)</Korean>
             <Chinesesimp>维修门槛 (工兵)</Chinesesimp>
@@ -1256,7 +1256,7 @@
             <Spanish>¿Cuál es el daño máximo que puede ser reparado por un ingeniero?</Spanish>
             <Czech>Jaké maximální poškození může být opraveno pomoci inženýra?</Czech>
             <Italian>Qual'è il danno massimo che può essere riparato da un Geniere?</Italian>
-            <French>Quels sont les dégâts maximaux pouvant être réparés par un ingénieur ?</French>
+            <French>Définit la quantité maximale de dégâts qu'un ingénieur peut réparer.</French>
             <Japanese>工兵が修理できる、最大の損傷許容範囲を設定しますか?</Japanese>
             <Korean>정비공은 어느정도의 피해까지 수리할 수 있습니까?</Korean>
             <Chinesesimp>工兵可以修复的最大损坏值?</Chinesesimp>
@@ -1286,7 +1286,7 @@
             <Spanish>¿Deben retirarse las herramientas al usarlas?</Spanish>
             <Czech>Má být odstraněna sada nástroju po použití?</Czech>
             <Italian>Il Toolkit dev'essere rimosso dopo l'uso?</Italian>
-            <French>La trousse à outils devrait-elle être retirée après usage ?</French>
+            <French>Définit si la trousse à outils doit être retirée après usage.</French>
             <Japanese>ツールキットを使うと削除しますか?</Japanese>
             <Korean>툴킷을 사용하면 제거를 합니까?</Korean>
             <Chinesesimp>要在使用后删除工具包吗?</Chinesesimp>
@@ -1361,7 +1361,7 @@
             <Czech>Přiřadit Inženýra</Czech>
             <Spanish>Asignar ingeniero</Spanish>
             <Italian>Assegna Geniere</Italian>
-            <French>Assignation ingénieurs</French>
+            <French>Assigner ingénieur(s)</French>
             <Japanese>工兵にする</Japanese>
             <Korean>정비공 등록</Korean>
             <Chinesesimp>指派工兵</Chinesesimp>
@@ -1391,7 +1391,7 @@
             <Spanish>Lista de los nombres de las unidades que serán clasificados como ingeniero, separados por comas.</Spanish>
             <Czech>Seznam jmen jednotek, které budou klasifikovány jako inženýr, oddělit čárkami.</Czech>
             <Italian>Lista di unità che verranno classificate come genieri, separate da virgole.</Italian>
-            <French>Liste de noms d'unités qui seront classés en tant qu'ingénieurs, séparés par des virgules.</French>
+            <French>Liste d'unités qui seront classées comme ingénieurs, séparées par des virgules.</French>
             <Japanese>一覧に記載されたユニット名を、工兵として指定します。コンマで複数を指定できます。</Japanese>
             <Korean>목록내 보직이름은 정비공으로 분류됩니다. 쉼표로 구분합니다.</Korean>
             <Chinesesimp>工兵名单，把单位名称输入在这边即可定义其为工兵。每个单位使用逗号以做区隔。</Chinesesimp>
@@ -1421,7 +1421,7 @@
             <Spanish>Selecciona el nivel de conocimientos de ingeniería de la unidad</Spanish>
             <Czech>Vyberte úroveň dovednosti inženýra pro jednotku</Czech>
             <Italian>Seleziona il livello di abilità geniere dell'unità</Italian>
-            <French>Choix du niveau de compétence technique de l'unité</French>
+            <French>Choix du niveau de compétence technique de l'unité.</French>
             <Japanese>ユニットへの工兵スキルを選択</Japanese>
             <Korean>선택한 인원의 정비 실력을 고르십시요</Korean>
             <Chinesesimp>选择工兵的技术水平</Chinesesimp>
@@ -1481,7 +1481,7 @@
             <Spanish>Asignar una o varias unidades como ingeniero</Spanish>
             <Czech>Přiřaďte jednu nebo více osob jako inženýra</Czech>
             <Italian>Assegna una o più unità come genieri</Italian>
-            <French>Affecter une ou plusieurs unités en tant qu'ingénieur</French>
+            <French>Assigne une ou plusieurs unités en tant qu'ingénieur.</French>
             <Japanese>修理車両として指定</Japanese>
             <Korean>하나 혹은 여러 인원을 정비공으로 등록합니다</Korean>
             <Chinesesimp>指定一个或多个单位为工兵</Chinesesimp>
@@ -1496,7 +1496,7 @@
             <Spanish>Asignar vehículo de reparación</Spanish>
             <Czech>Přiřaďte opraváresnké vozidlo</Czech>
             <Italian>Assegna Veicolo Riparazioni</Italian>
-            <French>Assignation véhicule de réparation</French>
+            <French>Affecter véhicule(s) de réparation</French>
             <Japanese>修理車両として指定</Japanese>
             <Korean>정비 차량 등록</Korean>
             <Chinesesimp>指定维修载具</Chinesesimp>
@@ -1526,7 +1526,7 @@
             <Spanish>Lista de los vehículos que se clasifican como vehículo de reparación, separados por comas.</Spanish>
             <Czech>Seznam vozidel, která budou klasifikována jako opravárenská, oddělit čárkami.</Czech>
             <Italian>Lista di Veicoli che verranno considerati veicoli riparazioni, separati da virgole.</Italian>
-            <French>Liste de véhicules qui seront classés en tant que véhicules de réparation, séparés par des virgules.</French>
+            <French>Liste de véhicules qui seront classés comme véhicules de réparation, séparés par des virgules.</French>
             <Japanese>一覧に記載されたユニット名を、修理車両として指定します。コンマで複数を指定できます。</Japanese>
             <Korean>목록내 차량은 정비 차량으로 분류됩니다. 쉼표로 구분합니다.</Korean>
             <Chinesesimp>载具名单，把载具名称输入在这边即可定义其为维修载具。每个载具使用逗号以做区隔。</Chinesesimp>
@@ -1556,7 +1556,7 @@
             <Spanish>¿Está el vehículo clasificado como un vehículo de reparación?</Spanish>
             <Czech>Je vozidlo klasifikováno jako opravárenské?</Czech>
             <Italian>Il veicolo è classificato dome veicolo riparazioni?</Italian>
-            <French>Le véhicule est-il classé en tant que véhicule de réparation ?</French>
+            <French>Définit s'il s'agit d'un véhicule de réparation.</French>
             <Japanese>車両を修理車両と指定しますか?</Japanese>
             <Korean>이 차량을 정비 차량으로 분류합니까?</Korean>
             <Chinesesimp>此载具是维修载具吗?</Chinesesimp>
@@ -1571,7 +1571,7 @@
             <Spanish>Asignar uno o varios vehículos como vehículo de reparación</Spanish>
             <Czech>Přiřaďte jedno nebo více vozidel jako opravárenské vozidlo</Czech>
             <Italian>Assegna uno o più veicoli come veicoli riparazioni</Italian>
-            <French>Affecter un ou plusieurs véhicules en tant que véhicule de réparation</French>
+            <French>Affecte un ou plusieurs véhicules en tant que véhicule de réparation</French>
             <Japanese>単体、または複数の車両を修理車両とします</Japanese>
             <Korean>하나 혹은 여러 차량을 정비 차량으로 등록합니다</Korean>
             <Chinesesimp>指定一个或多个载具作为维修载具</Chinesesimp>
@@ -1586,7 +1586,7 @@
             <Spanish>Asignar instalación de reparación</Spanish>
             <Czech>Přiřaďte opravárenské zařízení</Czech>
             <Italian>Assegna Struttura Riparazioni</Italian>
-            <French>Assignation ateliers de réparation</French>
+            <French>Affecter atelier(s) de réparation</French>
             <Japanese>修理施設とする</Japanese>
             <Korean>정비 시설 등록</Korean>
             <Chinesesimp>指定维修设施</Chinesesimp>
@@ -1646,7 +1646,7 @@
             <Spanish>¿Está el objeto clasificado como una instalación de reparación?</Spanish>
             <Czech>Je objekt klasifikován jako opravárenské zařízení?</Czech>
             <Italian>L'oggetto è classificato come struttura riparazioni?</Italian>
-            <French>L'objet est-il classé en tant qu'atelier de réparation ?</French>
+            <French>Définit l'objet comme étant un atelier de réparation.</French>
             <Japanese>オブジェクトを修理施設として指定しますか?</Japanese>
             <Korean>이 시설을 정비 시설로 분류합니까?</Korean>
             <Chinesesimp>此设施是维修设施吗?</Chinesesimp>
@@ -1661,7 +1661,7 @@
             <Spanish>Asignar uno o varios objetos como una instalación de reparación</Spanish>
             <Czech>Přiřaďte jeden nebo více objektů jako opravárenské zařízení</Czech>
             <Italian>Assegna uno o più oggetti come strutture riparazioni</Italian>
-            <French>Assigner un ou plusieurs objets en tant qu'atelier de réparation</French>
+            <French>Assigne un ou plusieurs objets en tant qu'atelier de réparation.</French>
             <Japanese>ひとつ、または複数オブジェクトに予備部品を追加</Japanese>
             <Korean>하나 혹은 여러 시설을 정비 시설로 등록합니다</Korean>
             <Chinesesimp>指定一个或多个对象作为维修设施</Chinesesimp>
@@ -1691,7 +1691,7 @@
             <Russian>Добавить запасные части в одно или несколько транспортных средств</Russian>
             <Czech>Přidat náhradní díly do jednoho nebo více objektů</Czech>
             <Italian>Aggiungi parti di ricambio ad uno o più oggetti</Italian>
-            <French>Ajouter des pièces de rechange à un ou plusieurs objets</French>
+            <French>Ajoute des pièces de rechange à un ou plusieurs objets.</French>
             <Japanese>一覧に追加されたオブジェクトへ予備部品を与えます。コンマで複数を指定できます。</Japanese>
             <Korean>하나 혹은 여러 물체가 예비 부품을 더합니다</Korean>
             <Chinesesimp>添加备件到一个或多个对象上</Chinesesimp>
@@ -1781,7 +1781,7 @@
             <Russian>Число выбранных запасных частей.</Russian>
             <Czech>Počet vybraných náhradních dílů.</Czech>
             <Italian>Numero di parti di ricambio selezionate.</Italian>
-            <French>Nombre de pièces de rechange séléctionnées</French>
+            <French>Nombre de pièces de rechange séléctionnées.</French>
             <Japanese>選択された予備部品の数を選択します。</Japanese>
             <Korean>선택한 부품의 수</Korean>
             <Chinesesimp>选择的备件数量</Chinesesimp>
@@ -1796,7 +1796,7 @@
             <Portuguese>Requerimentos para reparo de rodas</Portuguese>
             <Czech>Vyžaduje opravu kol</Czech>
             <Italian>Requisiti riparazione ruote</Italian>
-            <French>Exigences pour réparations de roues</French>
+            <French>Exigences pour réparation des roues</French>
             <Japanese>タイヤの修理を必要</Japanese>
             <Korean>바퀴 교체 요구사항</Korean>
             <Chinesesimp>维修轮胎限制</Chinesesimp>
@@ -1811,7 +1811,7 @@
             <Portuguese>Itens requeridos para remover/trocar rodas</Portuguese>
             <Czech>Položka vyžaduje odstraněná/vyměněná kola</Czech>
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
-            <French>Objets nécessaires pour l'enlèvement / le remplacement de roues.</French>
+            <French>Outils nécessaires pour le démontage ou le remplacement des roues.</French>
             <Japanese>タイヤの除去と交換にアイテムを必要としますか?</Japanese>
             <Korean>바퀴를 제거/교체하는데 필요한 물건</Korean>
             <Chinesesimp>需要特定物品来移除/更换车轮</Chinesesimp>
@@ -1828,7 +1828,7 @@
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
             <Japanese>車両の特定コンポーネントか履帯の除去/交換にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
-            <French>Objets nécessaires à la réparation d'un élément donné d'un véhicule, ou pour démonter / remplacer des chenilles.</French>
+            <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
             <Czech>Předměty potřebné k provedení opravy konkrétní části vozidla nebo sundání/výměny pásů.</Czech>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
@@ -1842,7 +1842,7 @@
             <English>Items required to perform a full vehicle repair.</English>
             <Japanese>車両の完全修理にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來完整修復載具</Chinese>
-            <French>Objets nécessaires pour effectuer la réparation complète d'un véhicule.</French>
+            <French>Outils nécessaires pour effectuer une réparation complète des véhicules.</French>
             <Czech>Předměty potřebné k provedení plné opravy vozidla.</Czech>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
@@ -1851,7 +1851,7 @@
             <Spanish>El motor necesita desactivado para la reparación</Spanish>
             <Czech>Pro opravu je zapotřebí vypnout motor</Czech>
             <Portuguese>O motor deve estar desligado para manutenção</Portuguese>
-            <French>Le moteur doit être éteint pour la réparation</French>
+            <French>Le moteur doit être arrêté pour la réparation.</French>
             <Russian>Двигатель должен быть выключен для ремонта</Russian>
             <Japanese>修理のためにエンジンを停止させる必要があります。</Japanese>
             <Polish>Silnik musi być wyłączony w celu naprawy</Polish>

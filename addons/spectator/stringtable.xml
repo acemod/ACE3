@@ -66,7 +66,7 @@
             <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
             <Chinesesimp>开启此功能后可在观察者模式下观察AI单位。</Chinesesimp>
             <Korean>관전자가 AI를 관전 할 수 있습니다.</Korean>
-            <French>Rend les unités IA visibles en spectateur</French>
+            <French>Rend les unités IA visibles en spectateur.</French>
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
             <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
             <Portuguese>Permite que IA seja visivel no espectador</Portuguese>
@@ -96,7 +96,7 @@
             <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
             <Czech>Módy kamery které mohou být použity.</Czech>
             <Italian>Modalità che la camera può utilizzare.</Italian>
-            <French>Modes de caméra pouvant être utilisés</French>
+            <French>Modes de caméra pouvant être utilisés.</French>
             <Japanese>カメラ モードを設定できます。</Japanese>
             <Korean>사용할 수 있는 카메라 모드들 입니다</Korean>
             <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
@@ -156,7 +156,7 @@
             <Spanish>Modos de visión que pueden ser utilizados.</Spanish>
             <Czech>Módy zobrazení které mohou být použity.</Czech>
             <Italian>Modalità visuali che possono essere usate.</Italian>
-            <French>Modes de visualisation pouvant être utilisés</French>
+            <French>Modes de visualisation pouvant être utilisés.</French>
             <Japanese>ビジョン モードを設定できます。</Japanese>
             <Korean>사용할 수 있는 시야 모드들 입니다</Korean>
             <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
@@ -207,7 +207,7 @@
             <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
             <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
-            <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible</French>
+            <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
         </Key>
         <!-- Interface strings -->

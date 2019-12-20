@@ -22,7 +22,7 @@
             <Japanese>過圧効果の範囲 [標準: 1]</Japanese>
             <Korean>초과압력의 효과 크기 [기본설정: 1]</Korean>
             <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
-            <French>Ajuste l'effet de surpression [Défaut : 1]</French>
+            <French>Ajuste l'effet de surpression. Valeur par défaut : 1.</French>
             <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
             <Chinesesimp>高压影响的范围 [预设: 1]</Chinesesimp>
             <Chinese>高壓影響的範圍 [預設: 1]</Chinese>

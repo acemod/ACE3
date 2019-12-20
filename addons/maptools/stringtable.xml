@@ -69,7 +69,7 @@
             <English>Show Normal Map Tool</English>
             <German>Zeige Kartenwerkzeug (normal)</German>
             <Spanish>Mostrar herr. de mapa normal</Spanish>
-            <French>Montrer les outils de cartographie (normaux)</French>
+            <French>Montrer les outils de navigation (normaux)</French>
             <Italian>Visualizza Strumenti Cartografici standard</Italian>
             <Portuguese>Mostrar Ferramenta de Mapa Padrão</Portuguese>
             <Hungarian>Térképészeti eszköz megjelenítése (normál méret)</Hungarian>
@@ -85,7 +85,7 @@
             <English>Show Small Map Tool</English>
             <German>Zeige Kartenwerkzeug (klein)</German>
             <Spanish>Mostrar herr. de mapa pequeñas</Spanish>
-            <French>Montrer les outils de cartographie (petits)</French>
+            <French>Montrer les outils de navigation (petits)</French>
             <Italian>Visualizza Strumenti Cartografici piccoli</Italian>
             <Portuguese>Mostrar Ferramenta de Mapa Pequena</Portuguese>
             <Hungarian>Térképészeti eszköz megjelenítése (kicsinyített)</Hungarian>
@@ -179,7 +179,7 @@
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_displayName">
             <English>Rotate Map Tools Key</English>
-            <French>Touche de rotation des outils de naviguation</French>
+            <French>Touche de rotation des outils de navigation</French>
             <Russian>Клавиша поворота инструментов карты</Russian>
             <Japanese>マップ ツールの回転キー</Japanese>
             <Polish>Klawisz obrotu narzędzi nawigacyjnych</Polish>
@@ -193,7 +193,7 @@
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
-            <French>Touche modificatrice permettant la rotation des outils de naviguation </French>
+            <French>Touche modificatrice permettant la rotation des outils de navigation.</French>
             <Russian>Клавиша-модификатор, позволяющая поворачивать инструменты карты</Russian>
             <Japanese>マップ ツールを回転させるキーを編集できます。</Japanese>
             <Polish>Modyfikator pozwalający na obracanie narzędzi nawigacyjnych</Polish>
@@ -225,7 +225,7 @@
             <German>Zeichne gerade Linien am Rand des Kartenwerkzeugs. Hinweis: zum Löschen über den Mittelpunkt der Linie fahren</German>
             <Korean>독도용 도구 가장자리에 직선을 그립니다. 주의: 삭제하기 위해선 선의 중앙에 가져다 대십시요</Korean>
             <Polish>Przeciągnij po krawędzi narzędzi nawigacyjnych by narysować prostą linię. Uwaga: aby usunąć linię - nalezy ustawić kursor nad jej środkiem.</Polish>
-            <French>Utiliser le bord des outils de navigation pour tracer des lignes droites. Note : il faut pointer au milieu du trait pour pouvoir le supprimer.</French>
+            <French>Utilise le bord des outils de navigation pour tracer des lignes droites. Note : il faut pointer au milieu du trait pour pouvoir le supprimer.</French>
             <Italian>Disegna sul bordo degli strumenti di mappatura per disegnare linee dritte. Nota: Deve spostarsi al centro per essere cancellato.</Italian>
             <Chinesesimp>使用地图工具的边缘来绘制直线。备注: 要删除直线时，请把滑鼠移动到该线条的中央即可删除该线。</Chinesesimp>
             <Chinese>使用地圖工具的邊緣來繪製直線。備註: 要刪除直線時，請把滑鼠移動到該線條的中央即可刪除該線</Chinese>

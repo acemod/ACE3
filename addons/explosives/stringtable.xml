@@ -69,7 +69,7 @@
             <German>Sprengstoffcode: %1</German>
             <Spanish>Código del explosivo: %1</Spanish>
             <Polish>Kod ładunku: %1</Polish>
-            <French>Code de l'explosif: %1</French>
+            <French>Code de l'explosif : %1</French>
             <Czech>Kód výbušniny: %1</Czech>
             <Hungarian>Robbanóanyag kódja: %1</Hungarian>
             <Portuguese>Código do explosivo: %1</Portuguese>
@@ -212,7 +212,7 @@
             <German>Wird benutzt um Sprengstoffe fernzuzünden</German>
             <Spanish>Usado para detonar remotamente explosivos</Spanish>
             <Polish>Używany do zdalnego detonowania ładunków wybuchowych</Polish>
-            <French>Utilisé pour déclencher des explosifs à distance</French>
+            <French>Utilisé pour déclencher des explosifs à distance.</French>
             <Czech>Používaný ke vzdálenému odpalování výbušnin</Czech>
             <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
             <Hungarian>Robbanóanyagok távoli robbantásához való</Hungarian>
@@ -244,7 +244,7 @@
             <German>Wird benutzt um Sprengstoffe fernzuzünden</German>
             <Spanish>Usado para detonar remotamente explosivos</Spanish>
             <Polish>Używany do zdalnego detonowania ładunków wybuchowych</Polish>
-            <French>Utilisé pour déclencher des explosifs à distance</French>
+            <French>Utilisé pour déclencher des explosifs à distance.</French>
             <Czech>Používané ke vzdálenému odpalování výbušnin</Czech>
             <Italian>Usato per l'attivazione a distanza degli esplosivi</Italian>
             <Hungarian>Robbanóanyagok távoli robbantásához</Hungarian>
@@ -612,7 +612,7 @@
             <Polish>Brak dostępnych zapalników dla %1</Polish>
             <Spanish>No hay detonadores disponibles para %1</Spanish>
             <German>Keine Auslöser für %1 vorhanden</German>
-            <French>Pas de déclencheur disponible pour %1</French>
+            <French>Pas de déclencheur disponible pour %1.</French>
             <Czech>Žádný detonátor k dispozici pro %1</Czech>
             <Italian>Nessun attivatore disponibile per %1</Italian>
             <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
@@ -690,7 +690,7 @@
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
             <German>Zündet Sprengladungen wenn losgelassen.</German>
-            <French>Utilisé pour déclencher des explosifs à distance quand relaché.</French>
+            <French>Utilisé pour déclencher des explosifs à distance quand relâché.</French>
             <Czech>Používaný k vzdálenému odpálení, při uvolnění odpálí výbušniny</Czech>
             <Polish>Używany w celu zdalnej detonacji ładunków, kiedy jego operator zostanie zabity.</Polish>
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>
@@ -822,7 +822,7 @@
             <Polish>Spraw, aby niektóre ładunki wybuchowe eksplodowały przy próbie ich rozbrojenia? Domyślnie:Tak</Polish>
             <Czech>Umožnit u některých výbušnin explozi při pokusu je zneškodnit? Výchozí: Ano</Czech>
             <Spanish>¿Habilitar ciertos explosivos para estallar al desactivar? Por defecto: Sí</Spanish>
-            <French>Permet à certains explosifs d'exploser durant le désamorçage.</French>
+            <French>Certains explosifs exploseront durant le désamorçage. Valeur par défaut : activé.</French>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
@@ -850,7 +850,7 @@
         <Key ID="STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName">
             <English>M6 SLAM Mine (Bottom Attack)</English>
             <!-- <Czech>Mina M6 SLAM</Czech> -->
-            <!-- <French>Mine M6 SLAM</French> -->
+            <French>/!\ Module obsolète /!\ - Mine M6 SLAM (par le bas)</French>
             <German>M6-SLAM-Mine (Bodenangriff)</German>
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
@@ -859,7 +859,6 @@
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od dołu)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Inferior)</Spanish>
-            <French>Mine M6 SLAM (par le bas)</French>
             <Italian>Mina M6 SLAM (base)</Italian>
             <Czech>M6 SLAM (Útok zespoda)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Inferior)</Portuguese>
@@ -872,7 +871,7 @@
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
             <!-- <Czech>Mina M6 SLAM</Czech> -->
-            <!-- <French>Mine M6 SLAM</French> -->
+            <French>/!\ Module obsolète /!\ - Mine M6 SLAM (de flanc)</French>
             <German>M6-SLAM-Mine (Seitenangriff)</German>
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
@@ -881,7 +880,6 @@
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od boku)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
-            <French>Mine M6 SLAM (de flanc)</French>
             <Italian>Mina M6 SLAM (Laterale)</Italian>
             <Czech>M6 SLAM (Útok do strany)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Lateral)</Portuguese>
@@ -894,7 +892,7 @@
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (městská)</Czech> -->
-            <!-- <French>Grand engin explosif improvisé (urbain)</French> -->
+            <French>/!\ Module obsolète /!\ - Grand EEI (urbain, plaque de pression)</French>
             <German>Große USBV (Stadt, Druckplatte)</German>
             <!-- <Italian>IED grande (urbano)</Italian> -->
             <!-- <Polish>Duży IED (miasto)</Polish> -->
@@ -903,7 +901,6 @@
             <!-- <Spanish>IED grande (Urbano)</Spanish> -->
             <Polish>Duży IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Urbano, Placa de presión)</Spanish>
-            <French>Grand EEI (Urbain, plaque de pression)</French>
             <Italian>IED grande (urbano, a pressione)</Italian>
             <Czech>IED, Velké (Městské, Nášlapné)</Czech>
             <Portuguese>IED Grande (Urbano, Placa de pressão)</Portuguese>
@@ -916,7 +913,7 @@
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Velká nálož (zakopaná)</Czech> -->
-            <!-- <French>Grand engin explosif improvisé (enterré)</French> -->
+            <French>/!\ Module obsolète /!\ - Grand EEI (enterré, plaque de pression)</French>
             <German>Große USBV (Eingegraben, Druckplatte)</German>
             <!-- <Italian>IED grande (interrato)</Italian> -->
             <!-- <Polish>Duży IED (zakopany)</Polish> -->
@@ -925,7 +922,6 @@
             <!-- <Spanish>IED grande (Enterrado)</Spanish> -->
             <Polish>Duży IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Enterrado, Placa de presión)</Spanish>
-            <French>Grand EEI (Enterré, plaque de pression)</French>
             <Italian>IED grande (interrato, a pressione)</Italian>
             <Czech>IED, Velké (Zakopané, Nášlapné)</Czech>
             <Portuguese>IED Grande (Enterrado, Placa de pressão)</Portuguese>
@@ -938,7 +934,7 @@
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
             <!-- <Czech>Malá nálož (městská)</Czech> -->
-            <!-- <French>Petit engin explosif improvisé (urbain)</French> -->
+            <French>/!\ Module obsolète /!\ - Petit EEI (Urbain, plaque de pression)</French>
             <German>Kleine USBV (Stadt, Druckplatte)</German>
             <!-- <Italian>IED piccolo (urbano)</Italian> -->
             <!-- <Polish>Mały IED (miasto)</Polish> -->
@@ -947,7 +943,6 @@
             <!-- <Spanish>IED pequeño (Urbano)</Spanish> -->
             <Polish>Mały IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Urbano, Placa de presión)</Spanish>
-            <French>Petit EEI (Urbain, plaque de pression)</French>
             <Italian>IED piccolo (urbano, a pressione)</Italian>
             <Czech>IED, Malé (Městské, Nášlapné)</Czech>
             <Portuguese>IED Pequeno(Urbano, Placa de pressão)</Portuguese>
@@ -960,7 +955,7 @@
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
             <!-- <Czech>Malá nálož (zakopaná)</Czech> -->
-            <!-- <French>Petit engin explosif improvisé (enterré)</French> -->
+            <French>/!\ Module obsolète /!\ - Petit EEI (Enterré, plaque de pression)</French>
             <German>Kleine USBV (Eingegraben, Druckplatte)</German>
             <!-- <Italian>IED piccolo (interrato)</Italian> -->
             <!-- <Polish>Mały IED (zakopany)</Polish> -->
@@ -969,7 +964,6 @@
             <!-- <Spanish>IED pequeño (Enterrado)</Spanish> -->
             <Polish>Mały IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Enterrado, Placa de presión)</Spanish>
-            <French>Petit EEI (Enterré, plaque de pression)</French>
             <Italian>IED piccolo (interrato, a pressione)</Italian>
             <Czech>IED, Malé (Zakopané, Nášlapné)</Czech>
             <Portuguese>IED Pequeno (Enterrado, Placa de pressão)</Portuguese>
@@ -1016,7 +1010,7 @@
             <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
             <German>Typ: Stolperdraht-Leuchtrakete - Schießt bei Auslösung eine nicht-tödliche Leuchtrakete ab.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
             <Korean>종류: 조명지뢰 - 작동시 무해한 조명을 사출합니다.&lt;br /&gt;장탄수: 1&lt;br /&gt;사용처: 지면</Korean>
-            <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée. &lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
+            <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée.&lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
             <Italian>Tipo: Cavo d'innesco - Sfocio un abbaglio non letale quanto attivato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
             <Chinesesimp>类型: 绊线闪光地雷 - 触发后产生非致命性的强光.&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 地面</Chinesesimp>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
@@ -1052,7 +1046,7 @@
             <English>Is EOD</English>
             <German>Kampfmittelbeseitigung</German>
             <Japanese>EOD に</Japanese>
-            <French>Est un spécialiste en explosifs</French>
+            <French>Spécialiste en explosifs</French>
             <Chinese>是EOD</Chinese>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
         </Key>
@@ -1060,7 +1054,7 @@
             <English>Controls whether the unit is an explosive specialist.</English>
             <German>Steuert, ob die Einheit ein Sprengstoffspezialist ist.</German>
             <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
-            <French>Contrôle si l'unité est un spécialiste en explosifs.</French>
+            <French>Définit si l'unité est un spécialiste en explosifs.</French>
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
         </Key>

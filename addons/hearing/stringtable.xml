@@ -104,7 +104,7 @@
             <Polish>Nie masz stoperów</Polish>
             <Czech>Nemáš žádné špunty</Czech>
             <Russian>У вас нет беруш</Russian>
-            <French>Vous n'avez pas de bouchons anti bruit</French>
+            <French>Vous n'avez pas de bouchons anti bruit.</French>
             <Hungarian>Nincsen füldugód</Hungarian>
             <Portuguese>Você não possui protetores auriculares</Portuguese>
             <Italian>Non hai i tappi auricolari</Italian>
@@ -118,7 +118,7 @@
             <German>Kein Platz im Inventar</German>
             <Spanish>Sin espacio en el inventario</Spanish>
             <Polish>Brak miejsca w ekwipunku</Polish>
-            <French>Pas de place dans l'inventaire</French>
+            <French>Il n'y a plus de place dans l'inventaire.</French>
             <Czech>Není místo v inventáři</Czech>
             <Italian>Non hai abbastanza spazio</Italian>
             <Portuguese>Não há espaço no inventário</Portuguese>
@@ -232,7 +232,7 @@
             <Spanish>Efecto Zeus RC</Spanish>
             <Czech>Vliv na Zeus RC</Czech>
             <Italian>Effetto Zeus RC</Italian>
-            <French>Effet sur le CàD du Zeus</French>
+            <French>Affecte le CàD Zeus</French>
             <Japanese>Zeus RC への効果</Japanese>
             <Korean>Zeus RC 효과</Korean>
             <Chinesesimp>启用效果在宙斯远程遥控</Chinesesimp>
@@ -247,7 +247,7 @@
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
             <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
             <Italian>Consenti alle unità controllate in remoto da Zeus di ricevere danni all'udito.</Italian>
-            <French>Permet aux unités contrôlées à distance de subir des dommages auditifs.</French>
+            <French>Permet aux unités contrôlées à distance par Zeus de subir des dommages auditifs.</French>
             <Japanese>Zeus により遠隔操作されたユニットにも、聴覚へ損傷を受けるようにします。</Japanese>
             <Korean>Zeus가 원격으로 청력손실을 입힐 수 있게 합니다.</Korean>
             <Chinesesimp>设定宙斯远程遥控的单位也会受到耳鸣的效果。</Chinesesimp>

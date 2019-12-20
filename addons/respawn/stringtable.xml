@@ -306,7 +306,7 @@
             <Czech>Tento modul umožňuje nastavení znovuzrození (respawn).</Czech>
             <Portuguese>Este módulo permite que você personalize as configurações do renascimento (Spawn).</Portuguese>
             <Russian>Этот модуль позволяет настроить систему возрождения.</Russian>
-            <French>Ce module vous permet de configurer les fonctionnalités ACE spécifiques aux réapparitions des joueurs.</French>
+            <French>Ce module vous permet de configurer les fonctionnalités ACE spécifiques à la réapparition des joueurs.</French>
             <Italian>Questo modulo ti permette di configurare le funzionalità ACE specifiche dei respawn.</Italian>
             <Spanish>Este módulo permite configurar parámetros relacionados con la reaparición</Spanish>
             <Japanese>有効化するとリスポンへ ACE 機能を設定できます。</Japanese>
@@ -370,7 +370,7 @@
             <Russian>Этот модуль позволяет вам указать место сбора, куда вы можете быстро телепортироваться с "базы". Требуется наличие соответствующих объектов на карте - базы и флага. Они могут быть найдены в категории Пусто -&gt; ACE Возрождения.</Russian>
             <Italian>Questo modulo ti consente di usare Punti di Raccolta in missione, a cui ti puoi teleportare rapidamente dalla bandiera in base. Richiede il piazzamento di oggetti speciali in mappa - base e bandiera. Entrambi disponibili nella categoria Vuoto -&gt; Respawn ACE</Italian>
             <Spanish>Este módulo permite usar puntos de reunión en la misión, a los que pueden teletransportarse las unidades desde la bandera de base. Requiere colocar objetos especiales en el mapa: las banderas de base y de reunión, ambas disponibles en la categoría Vacio-&gt; Reaparición ACE</Spanish>
-            <French>Ce module vous permet d'utiliser des points de ralliement dans les missions, vers lesquels vous pouvez vous téléporter rapidement depuis le drapeau de la base.\nNécessite de placer des objets spéciaux sur la carte - base et drapeau. Tous deux disponibles dans la catégorie "Vide -&gt; ACE Réapparition".</French>
+            <French>Ce module vous permet d'utiliser des points de ralliement dans les missions, vers lesquels vous pouvez vous téléporter rapidement depuis le drapeau de la base.\nNécessite de placer des objets spéciaux sur la carte - base et drapeau, tous deux disponibles dans la catégorie "Vide -&gt; ACE Réapparition".</French>
             <Japanese>ミッションでベースから素早く移動できるラリーポイントを使えるようにします。ゲーム内に専用オブジェクトとなるベースとフラッグを設置している必要があります。両オブジェクトは Empty 下の ACE リスポンから設置できます。</Japanese>
             <Korean>이 모듈은 미션 중에 기지 깃발에서 집결지로 빠르게 텔레포트 시켜주는 역활을 합니다. 지도 상에 기지 및 깃발이 필요합니다. 두 가지 모두 Empty-&gt;ACE Respawn 카테고리에서 찾을 수 있습니다.</Korean>
             <Chinesesimp>摆放此模块后，你将能在任务中布署集合点，使你可以快速往返基地与前线。要使用本功能，请记得放上空物件-&gt;ACE 重生里面的基地与旗帜。</Chinesesimp>

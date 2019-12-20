@@ -133,7 +133,7 @@
             <English>Interaction - Text Max</English>
             <Polish>Interakcja - Tekst max</Polish>
             <Czech>Interakce - Text Max</Czech>
-            <French>Interaction - Texte Max</French>
+            <French>Interaction - Texte max</French>
             <German>Interaktionstextfarbe Max</German>
             <Italian>Interazioni - Testo Massimo</Italian>
             <Russian>Взаимодействие - Текст Макс.</Russian>
@@ -149,7 +149,7 @@
             <English>Interaction - Text Min</English>
             <Polish>Interakcja - Tekst min</Polish>
             <Czech>Interakce - Text Min</Czech>
-            <French>Interaction - Texte Min</French>
+            <French>Interaction - Texte min</French>
             <German>Interaktionstextfarbe Min</German>
             <Italian>Interazioni - Testo Minimo</Italian>
             <Russian>Взаимодействие - Текст Мин.</Russian>
@@ -165,7 +165,7 @@
             <English>Interaction - Shadow Max</English>
             <Polish>Interakcja - Cień max</Polish>
             <Czech>Interakce - Stín Max</Czech>
-            <French>Interaction - Ombre Max</French>
+            <French>Interaction - Ombre max</French>
             <German>Interaktionstextschatten Max</German>
             <Italian>Interazioni - Ombra Massima</Italian>
             <Russian>Взаимодействие - Тень Макс.</Russian>
@@ -181,7 +181,7 @@
             <English>Interaction - Shadow Min</English>
             <Polish>Interakcja - Cień min</Polish>
             <Czech>Interakce - Stín Min</Czech>
-            <French>Interaction - Ombre Min</French>
+            <French>Interaction - Ombre min</French>
             <German>Interaktionstextschatten Min</German>
             <Italian>Interazioni - Ombra Minima</Italian>
             <Russian>Взаимодействие - Тень Мин.</Russian>
@@ -212,7 +212,7 @@
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
             <Czech>Udržuje kurzor na středu. Užitečné, pokud je velikost obrazovky omezena.</Czech>
-            <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
+            <French>Garde le curseur au milieu de l'écran, et dispose le menu des options tout autour. Utile si la taille de l'écran est limitée.</French>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
             <German>Hält den Mauszeiger zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
             <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
@@ -230,7 +230,7 @@
             <German>Aktion nach Loslassen der Taste ausführen</German>
             <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
             <Czech>Provést akci při pustění klávesy menu</Czech>
-            <French>Action au relâchement de touche</French>
+            <French>Action au relâchement des touches</French>
             <Russian>Выполнять действие при отпускании кнопки взаимодействия</Russian>
             <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
@@ -277,7 +277,7 @@
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
             <Czech>Umožňuje změnit stíny textu v menu interakce. Barva stínu je u tahu písma ignorována.</Czech>
             <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
-            <French>Permet de contrôler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
+            <French>Permet de régler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
             <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
             <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
             <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
@@ -328,7 +328,7 @@
             <Czech>Rozmazat obraz při otevřeném interakčním menu.</Czech>
             <German>Den Hintergrund verschwimmen lassen, während das Interaktionsmenü geöffnet ist.</German>
             <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
-            <French>Flouter l'arrière-plan durant l'ouverture du menu d'interaction</French>
+            <French>Floute l'arrière-plan durant l'ouverture du menu d'interaction.</French>
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
@@ -375,7 +375,7 @@
             <Polish>Pokazuj akcje dla budynków</Polish>
             <Czech>Zobrazit akci pro budovy</Czech>
             <Spanish>Mostrar acciones para edificios</Spanish>
-            <French>Affiche les actions pour les bâtiments</French>
+            <French>Afficher les actions pour les bâtiments</French>
             <Hungarian>Cselekvések mutatása épületeknél</Hungarian>
             <Portuguese>Mostrar ações para edifícios</Portuguese>
             <Russian>Показывать действия для зданий</Russian>
@@ -391,7 +391,7 @@
             <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
             <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
             <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
-            <French>Ajoute des interactions pour ouvrir les portes et les échelles des bâtiments. (Note: l'ouverture du menu en ville dégrade les performances)</French>
+            <French>Ajoute des interactions pour ouvrir les portes et les échelles des bâtiments.\nNote : l'ouverture du menu en ville dégrade les performances.</French>
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
@@ -440,7 +440,7 @@
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
             <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
-            <French>Rend les animations du menu plus rapide, et réduit le temps nécessaire à l'affichage des sous menus d'action</French>
+            <French>Rend les animations du menu plus rapide, et réduit le temps nécessaire à l'affichage des sous menus d'action.</French>
             <Japanese>ホバーで子アクションを表示した時に出るメニューのアニメーション速度を早くしたり遅くしたりできます</Japanese>
             <Chinesesimp>使选单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
             <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>

@@ -23,7 +23,7 @@
             <Spanish>Dirección: %1</Spanish>
             <Russian>Направление: %1°</Russian>
             <Czech>Směr: %1</Czech>
-            <French>Direction %1</French>
+            <French>Direction : %1</French>
             <German>Windrichtung: %1</German>
             <Hungarian>Irány: %1</Hungarian>
             <Italian>Direzione: %1°</Italian>
@@ -39,7 +39,7 @@
             <Spanish>Velocidad: %1 m/s</Spanish>
             <Russian>Скорость: %1 м/с</Russian>
             <Czech>Rychlost: %1 m/s</Czech>
-            <French>Vitesse %1 m/s</French>
+            <French>Vitesse : %1 m/s</French>
             <German>Geschwindigkeit: %1 m/s</German>
             <Hungarian>Sebesség: %1 m/s</Hungarian>
             <Italian>Velocità: %1 m/s</Italian>
@@ -71,7 +71,7 @@
             <Spanish>Humedad: %1%</Spanish>
             <Russian>Влажность: %1%</Russian>
             <Czech>Vlhkost: %1%</Czech>
-            <French>Humidité: %1%</French>
+            <French>Humidité : %1%</French>
             <German>Luftfeuchtigkeit: %1</German>
             <Hungarian>Páratartalom: %1%</Hungarian>
             <Italian>Umidità: %1%</Italian>
@@ -88,7 +88,7 @@
             <Czech>Účinky větru</Czech>
             <German>Windablenkung</German>
             <Portuguese>Desvio de vento</Portuguese>
-            <French>Déflexion du vent</French>
+            <French>Déflexion due au vent</French>
             <Hungarian>Szél-hárítás</Hungarian>
             <Russian>Отклонение ветром</Russian>
             <Italian>Deviazione del Vento</Italian>
@@ -104,7 +104,7 @@
             <German>Windablenkung</German>
             <Czech>Účinky větru</Czech>
             <Portuguese>Desvio de vento</Portuguese>
-            <French>Déflexion du vent</French>
+            <French>Déflexion due au vent</French>
             <Hungarian>Szél-hárítás</Hungarian>
             <Russian>Отклонение ветром</Russian>
             <Italian>Deviazione del Vento</Italian>
@@ -120,7 +120,7 @@
             <German>Aktiviert Windablenkung</German>
             <Czech>Umožňit vliv větru</Czech>
             <Portuguese>Ativa o desvio de vento</Portuguese>
-            <French>Active la déflexion dûe au vent</French>
+            <French>Active la déflexion due au vent.</French>
             <Hungarian>Engedélyezi a szél-hárítást</Hungarian>
             <Russian>Включает отклонение ветром</Russian>
             <Italian>Abilita deviazione del vento</Italian>
@@ -136,7 +136,7 @@
             <German>Fahrzeuge aktiviert</German>
             <Czech>Vozidla povolena</Czech>
             <Portuguese>Ativado em veículos</Portuguese>
-            <French>Activer les véhicules</French>
+            <French>Activer pour les véhicules</French>
             <Hungarian>Jármű engedélyezve</Hungarian>
             <Russian>Для техники</Russian>
             <Italian>Abilita per Veicoli</Italian>
@@ -152,7 +152,7 @@
             <German>Aktiviere Windablenkung für statische oder Fahrzeugschützen</German>
             <Czech>Umožnit vliv větru pro střelce z vozidla/statiky</Czech>
             <Portuguese>Ativa o desvio de vento para atiradores de estáticas e veículos</Portuguese>
-            <French>Activer la déflection dûe au vent pour les armes statique et les véhicules</French>
+            <French>Active la déflexion due au vent pour les armes statiques et les mitrailleuses des véhicules.</French>
             <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
             <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
             <Italian>Abilita deviazione del vento per artiglieri di statiche/veicoli</Italian>
@@ -184,7 +184,7 @@
             <German>Definiert das Intervall zwischen jedem Berechnungsschritt</German>
             <Czech>Určuje interval mezi každým výpočtem</Czech>
             <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
-            <French>Défini l'intervalle entre deux points de calcul</French>
+            <French>Définit l'intervalle entre chacune des étapes de calcul.</French>
             <Hungarian>Megszabja a számítási lépések közötti intervallumot</Hungarian>
             <Russian>Определяет временной интервал между расчетами</Russian>
             <Italian>Definisce l'intervallo tra ogni passaggio di calcolo</Italian>
@@ -200,7 +200,7 @@
             <German>Windeinfluss auf die Geschossbahnen</German>
             <Czech>Vítr ovlivňuje trajektorii projektilu</Czech>
             <Portuguese>Influência do vento na trajetória dos projéteis</Portuguese>
-            <French>Le vent influe sur la trajectoire des projectiles</French>
+            <French>Le vent influe sur la trajectoire des projectiles.</French>
             <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
             <Russian>Влияние втера на траекторию снарядов</Russian>
             <Italian>Influenza del vento sulla traiettoria dei proiettili</Italian>

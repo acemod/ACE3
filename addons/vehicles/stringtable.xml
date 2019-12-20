@@ -103,7 +103,7 @@
             <Portuguese>Previne que o motor do veículo seja desligado automaticamente quando o motorista sair.</Portuguese>
             <Czech>Zabraň automatickému vypnutí motoru při opuštění vozidla.</Czech>
             <Chinese>避免離開載具時自動熄火。</Chinese>
-            <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules</French>
+            <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>

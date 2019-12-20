@@ -32,7 +32,7 @@
             <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht ()Überprüfung alle 15 Sekunden)</German>
             <Japanese>容体が安定しているユニットが気絶する確率を決定できます。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
-            <French>La probabilité pour qu'une unité en état stable puisse reprendre conscience (état vérifié toutes les 15 secondes).</French>
+            <French>La probabilité qu'une unité en état stable puisse reprendre conscience spontanément (état vérifié toutes les 15 secondes).</French>
             <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
             <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
             <Czech>Pravděpodobnost, že se jednotka se stabilními životními známkami probudí z bezvědomí (zkoušeno každých 15 vteřin).</Czech>
@@ -329,7 +329,7 @@
             <German>Behandlungseinstellungen der Standard ACE-Medizin konfigurieren</German>
             <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
             <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
-            <French>Configurer les paramètres de traitement à partir de 'ACE médical basique'.</French>
+            <French>Configurer les paramètres de traitement à partir de "ACE médical basique".</French>
             <Italian>Configura le impostazioni trattamenti per ACE Medical di base</Italian>
             <Portuguese>Configura as opções de tratamento do sistema médico básico do ACE</Portuguese>
             <Russian>Настройка лечения в базовой медицинской системе ACE</Russian>
@@ -396,7 +396,7 @@
             <Spanish>La distancia hasta %1 se ha agrandado demasiado para el tratamiento</Spanish>
             <Czech>%1 je příliš daleko, léčba není možná</Czech>
             <Italian>Distanza da %1 è diventata troppo alta per permettere trattamento</Italian>
-            <French>%1 est trop loin pour être soigné</French>
+            <French>%1 est trop loin pour être soigné.</French>
             <Japanese>%1 は治療をできない所まで離れた</Japanese>
             <Korean>%1 부터의 거리가 너무 멀어 치료할 수 없습니다</Korean>
             <Chinesesimp>设定当距离超过%1将不能使用治疗动作</Chinesesimp>

@@ -25,7 +25,7 @@
             <Russian>HuntIR снаряд</Russian>
             <Italian>Colpo HuntIR</Italian>
             <Polish>Nabój HuntIR</Polish>
-            <French>Munition HuntIR</French>
+            <French>Projectile HuntIR</French>
             <Hungarian>HuntIR lövedék</Hungarian>
             <Portuguese>Cartucho HuntIR</Portuguese>
             <Japanese>HuntIR 弾頭</Japanese>
@@ -121,7 +121,7 @@
             <Russian>Нажмите ESC чтобы выйти из режима камеры</Russian>
             <Italian>Premi ESC per uscire dalla telecamera</Italian>
             <Polish>Wciśnij ESC by wyjść z widoku kamery</Polish>
-            <French>Appuyer sur ESC pour quitter la camera</French>
+            <French>Appuyez sur ESC pour quitter la camera.</French>
             <Hungarian>Nyomj ESC-ket a kamerából való kilépéshez</Hungarian>
             <Portuguese>Pressione ESC para sair da câmera</Portuguese>
             <Japanese>ESC を押しカメラを抜ける</Japanese>

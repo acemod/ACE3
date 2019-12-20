@@ -40,7 +40,7 @@
             <Czech>Jak rychle bude vozidlo natankováno?</Czech>
             <Italian>Quanto velocemente dovrebbe essere rifornito un veicolo?</Italian>
             <Spanish>Cuán rápido se reabastecen los vehículos?</Spanish>
-            <French>À quelle vitesse un véhicule devrait-il être ravitaillé ?</French>
+            <French>Définit la vitesse de ravitaillement en carburant des véhicules.</French>
             <Japanese>どのくらいの速さで車両へ給油しますか?</Japanese>
             <Korean>차량이 얼마나 빨리 재급유될 수 있습니까?</Korean>
             <Chinesesimp>载具多快会加油完毕?</Chinesesimp>
@@ -294,7 +294,7 @@
             <Czech>%1 litrů natankováno</Czech>
             <Italian>%1 litri riforniti</Italian>
             <Spanish>%1 lt reabastecido</Spanish>
-            <French>%1 litres pompés</French>
+            <French>%1 litres pompés.</French>
             <Japanese>%1 リッターを給油しました</Japanese>
             <Korean>%1 리터 재급유됨</Korean>
             <Chinesesimp>已加入%1公升的燃料</Chinesesimp>
@@ -324,7 +324,7 @@
             <Czech>Dosažena maximální délka hadice</Czech>
             <Italian>Distanza massima della pompa raggiunta.</Italian>
             <Spanish>Máxima longitud de manguera alcanzada.</Spanish>
-            <French>Tuyau tendu au maximum</French>
+            <French>Tuyau tendu au maximum.</French>
             <Japanese>給油ホースはもうこれ以上届きません。</Japanese>
             <Korean>주유기 호스 최대 거리에 도달함.</Korean>
             <Chinesesimp>已加满至最大油量。</Chinesesimp>
@@ -339,7 +339,7 @@
             <Czech>Tankování dokončeno</Czech>
             <Italian>Rifornimento completato</Italian>
             <Spanish>Reabastecimiento completado</Spanish>
-            <French>Ravitaillement terminé</French>
+            <French>Ravitaillement terminé.</French>
             <Japanese>給油を完了しました</Japanese>
             <Korean>재급유 완료함</Korean>
             <Chinesesimp>加油完毕</Chinesesimp>
@@ -354,7 +354,7 @@
             <Czech>Tankování zastaveno</Czech>
             <Italian>Rifornimento fermato</Italian>
             <Spanish>Reabastecimiento detenido</Spanish>
-            <French>Arrêt du ravitaillement</French>
+            <French>Ravitaillement arrêté.</French>
             <Japanese>給油を止めました</Japanese>
             <Korean>재급유 멈춤</Korean>
             <Chinesesimp>已停止加油</Chinesesimp>
@@ -369,7 +369,7 @@
             <Czech>Tankování zahájeno</Czech>
             <Italian>Rifornimento iniziato</Italian>
             <Spanish>Comenzó el reabastecimiento</Spanish>
-            <French>Début du ravitaillement</French>
+            <French>Ravitaillement démarré.</French>
             <Japanese>給油を始めました</Japanese>
             <Korean>재급유 시작함</Korean>
             <Chinesesimp>已开始加油</Chinesesimp>
@@ -429,7 +429,7 @@
             <Czech>%1 litrů bylo natankováno.</Czech>
             <Italian>%1 litri sono stati riforniti.</Italian>
             <Spanish>Se reabastecieron %1 lt </Spanish>
-            <French>%1 litres ont été pompés</French>
+            <French>%1 litres ont été pompés.</French>
             <Japanese>%1 リッターが給油されました。</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
             <Chinesesimp>已加入%1公升</Chinesesimp>
@@ -476,7 +476,7 @@
             <Korean>재급유에 사용 할 수 있는 연료량 (-1=비활성, -10=무한)</Korean>
             <Polish>Pojemność paliwa dostępnego do tankowania (-1 wyłącz, -10 jeśli nieskończone)</Polish>
             <Portuguese>Quantidade de combustível disponível para abastecer (-1 para desativar, -10 para infinito)</Portuguese>
-            <French>Le volume de carburant disponible pour le ravitaillement (-1 pour désactiver, -10 pour quantité illimitée)</French>
+            <French>Le volume de carburant disponible pour le ravitaillement (-1 pour désactiver, -10 pour quantité illimitée).</French>
             <Czech>Objem paliva k tankování (-1 pro vypnutí, -10 pro nekonečno)</Czech>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenName">
@@ -504,7 +504,7 @@
             <Korean>재급유기 부착에 쓰이는 모델 좌표</Korean>
             <Polish>Modelowe koordynaty wykorzystane do przyłączenia węża paliwowego</Polish>
             <Portuguese>As coordenadas do modelo usado para conectar a mangueira ao veículo</Portuguese>
-            <French>Coordonnées de l'objet sur lequel est fixé le pistolet de ravitaillement</French>
+            <French>Coordonnées du modèle 3D où est attaché le tuyau ravitaillement.</French>
             <Czech>Souřadnice na modelu pro připojení hadice na palivo.</Czech>
         </Key>
     </Package>
