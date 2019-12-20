@@ -141,6 +141,7 @@
             <Chinese>在螢幕邊框旁淡出</Chinese>
             <Russian>Затухание на границе экрана</Russian>
             <Portuguese>Ocultar na borda da tela</Portuguese>
+            <Czech>Zeslábnout poblíž okrajů obrazovky</Czech>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
             <English>Show player ranks (requires player names)</English>
@@ -360,6 +361,7 @@
             <Russian>Прозрачность меток игроков</Russian>
             <Portuguese>Transparência da etiqueta de nome</Portuguese>
             <French>Transparence des noms</French>
+            <Czech>Průhlednost jmenovek</Czech>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>

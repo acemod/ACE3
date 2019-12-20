@@ -13,6 +13,7 @@
             <Russian>ACE Блокировка транспорта</Russian>
             <Portuguese>ACE Trancar Veículos</Portuguese>
             <French>ACE Verrouillage véhicule</French>
+            <Czech>ACE Zamykání Vozidel</Czech>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>

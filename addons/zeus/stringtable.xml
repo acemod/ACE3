@@ -622,6 +622,7 @@
             <Chinese>增加/移除快速垂降進場撤離系統</Chinese>
             <Russian>Добавить/Удалить FRIES</Russian>
             <Portuguese>Adicionar/Remover FRIES</Portuguese>
+            <Czech>Přidat/Odebrat FRIES (slaňování)</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
@@ -635,6 +636,7 @@
             <Chinese>%1無法使用快速繩降系統</Chinese>
             <Russian>%1 несовместим с быстрым спуском</Russian>
             <Portuguese>%1 não é compatível com sistema de corda.</Portuguese>
+            <Czech>%1 není kompatibilní se slaňováním.</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
             <English>Unable to remove FRIES, ropes are deployed.</English>
@@ -648,6 +650,7 @@
             <Chinese>無法移除快速繩降系統，因為繩索已被釋放出來</Chinese>
             <Russian>Невозможно удалить FRIES, канаты развернуты.</Russian>
             <Portuguese>Não foi possível remover o FRIES, as cordas estão soltas.</Portuguese>
+            <Czech>Nemohu odebrat FRIES, lana jsou vytažena.</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
@@ -826,6 +829,7 @@
             <Russian>Вкл/Выкл симуляцию</Russian>
             <Portuguese>Alternar Simulação</Portuguese>
             <Spanish>Activar simulación</Spanish>
+            <Czech>Přepnout simulaci objektu</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -1037,6 +1041,7 @@
             <Portuguese>Nenhum</Portuguese>
             <Spanish>Ninguno</Spanish>
             <Chinese>無</Chinese>
+            <Czech>Nikdo</Czech>
             <French>Aucun</French>
         </Key>
         <Key ID="STR_ACE_Zeus_Players">
@@ -1049,6 +1054,7 @@
             <Portuguese>Jogadores</Portuguese>
             <Spanish>Jugadores</Spanish>
             <Chinese>玩家</Chinese>
+            <Czech>Hráči</Czech>
             <French>Joueurs</French>
         </Key>
         <Key ID="STR_ACE_Zeus_PlayersAndAI">
@@ -1061,6 +1067,7 @@
             <Portuguese>Jogadores e IA</Portuguese>
             <Spanish>Jugadores e IA</Spanish>
             <Chinese>玩家與AI</Chinese>
+            <Czech>Hráči a AI</Czech>
             <French>Joueurs et IA</French>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
@@ -1116,6 +1123,7 @@
             <Polish>Wybierz ładunek do wyładowania</Polish>
             <Russian>Выберите груз для выгрузки</Russian>
             <Portuguese>Selecione objeto para descarregar</Portuguese>
+            <Czech>Vyberte náklad na vyložení</Czech>
             <French>Sélectionner une cargaison à décharger</French>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
@@ -1131,6 +1139,7 @@
             <Chinese>目標半徑</Chinese>
             <Portuguese>Área da tarefa</Portuguese>
             <Spanish>Radio de tarea</Spanish>
+            <Czech>Okruh úkolu</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_Tooltip">
             <English>Radius to perform the task within</English>
@@ -1144,6 +1153,7 @@
             <Chinesesimp>设定目标范围半径</Chinesesimp>
             <Chinese>設定目標範圍半徑</Chinese>
             <Portuguese>Raio para se executar uma tarefa</Portuguese>
+            <Czech>Okruh ve kterém bude úkol vykonán</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
@@ -1172,6 +1182,7 @@
             <Russian>Огонь на подавление</Russian>
             <Portuguese>Fogo de Supressão</Portuguese>
             <Spanish>Fuego supresivo</Spanish>
+            <Czech>Krycí palba</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddFullArsenal_DisplayName">
             <English>Add Full Arsenal</English>
@@ -1185,6 +1196,7 @@
             <Korean>아스날 놓기</Korean>
             <Russian>Добавить весь Арсенал</Russian>
             <Portuguese>Adicionar Arsenal Completo</Portuguese>
+            <Czech>Přidat plný arzenál</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveArsenal_DisplayName">
             <English>Remove Arsenal</English>
@@ -1198,6 +1210,7 @@
             <Korean>아스날 제거</Korean>
             <Russian>Убрать Арсенал</Russian>
             <Portuguese>Remover Arsenal</Portuguese>
+            <Czech>Odebrat arzenál</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
@@ -1210,6 +1223,7 @@
             <Polish>Załaduj do ładunku</Polish>
             <Russian>Загрузить в отсек</Russian>
             <Portuguese>Carregar na carga</Portuguese>
+            <Czech>Naložit do nákladového prostoru</Czech>
             <French>Charger dans le véhicule</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
@@ -1224,6 +1238,7 @@
             <Polish>Przełącz NVG</Polish>
             <Russian>Вкл/Выкл ПНВ</Russian>
             <Portuguese>Alternar Visão Noturna</Portuguese>
+            <Czech>Přepnout noktovizory</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment">
             <English>NVG Equipment</English>
@@ -1237,6 +1252,7 @@
             <Polish>Ekwipunek NVG</Polish>
             <Russian>Приборы ночного видения</Russian>
             <Portuguese>Equipamento de Visão Noturna</Portuguese>
+            <Czech>Noktovizory - vybavení</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment_tooltip">
             <English>Add or remove NVGs from units</English>
@@ -1250,6 +1266,7 @@
             <Polish>Dodaj lub usuń noktowizję z jednostek</Polish>
             <Russian>Добавить/Убрать ПНВ у юнитов</Russian>
             <Portuguese>Adiciona ou remove visão noturna de unidades</Portuguese>
+            <Czech>Přidat nebo odebrat noktovizory jednotkám</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
@@ -1262,6 +1279,7 @@
             <Russian>Кому переключить</Russian>
             <Portuguese>Alternar alvo</Portuguese>
             <Spanish>Objetivo de palanca</Spanish>
+            <Czech>Přepnout cíl</Czech>
             <French>Unités cible</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget_Tooltip">
@@ -1274,6 +1292,7 @@
             <Polish>Jednostki pod wpływem przełączenia</Polish>
             <Russian>Юниты, к которым применяется переключение</Russian>
             <Portuguese>Unidades afetadas pela alteração</Portuguese>
+            <Czech>Jednotky ovlivněné přepnutím</Czech>
             <French>Unités affectées par le changement.</French>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
@@ -1288,6 +1307,7 @@
             <Polish>Wybrana grupa</Polish>
             <Russian>Выбранная группа</Russian>
             <Portuguese>Grupo Selecionado</Portuguese>
+            <Czech>Vybraná skupina</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_DisplayName">
             <English>Toggle Flashlights</English>
@@ -1302,6 +1322,7 @@
             <Russian>Вкл/Выкл Фонари</Russian>
             <Portuguese>Alternar Lanternas</Portuguese>
             <Spanish>Alternar linternas</Spanish>
+            <Czech>Přepnout svítilny</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_Flashlights">
             <English>Flashlights</English>
@@ -1316,6 +1337,7 @@
             <Russian>Фонари</Russian>
             <Portuguese>Lanternas</Portuguese>
             <Spanish>Linternas</Spanish>
+            <Czech>Svítilny</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_AddGear">
             <English>Add Gear</English>
@@ -1329,6 +1351,7 @@
             <Polish>Dodaj wyposażenie</Polish>
             <Russian>Добавить снаряжение</Russian>
             <Portuguese>Adicionar equipamento</Portuguese>
+            <Czech>Přidat vybavení</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
             <English>Garrison Group</English>
@@ -1342,6 +1365,7 @@
             <Polish>Rozmieść grupę w garnizonie</Polish>
             <Russian>Разместить группу в здании</Russian>
             <Portuguese>Guarnecer grupo</Portuguese>
+            <Czech>Umístit posádku (jednotka)</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
             <English>Fill from top to bottom</English>
@@ -1355,6 +1379,7 @@
             <Polish>Wypełnij od góry do dołu</Polish>
             <Russian>Занять здание сверху до низу</Russian>
             <Portuguese>Preencher de cima para baixo</Portuguese>
+            <Czech>Naplnit odshora dolů</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
@@ -1368,6 +1393,7 @@
             <Polish>Wypełnij budynki zaczynając od najwyższej pozycji</Polish>
             <Russian>Занять здание начиная с верхних позиций</Russian>
             <Portuguese>Preencher construções do lugar mais alto primeiro</Portuguese>
+            <Czech>Naplní nejdříve nejvyšší pozice v budovách</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
             <English>Building filling mode</English>
@@ -1381,6 +1407,7 @@
             <Polish>Tryb wypełniania budynków</Polish>
             <Russian>Режим заполнения здания</Russian>
             <Portuguese>Modo de preenchimento da construção</Portuguese>
+            <Czech>Režim plnění budov</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
             <English>Even filling</English>
@@ -1394,6 +1421,7 @@
             <Polish>Równe wypełnienie</Polish>
             <Russian>Равномерно</Russian>
             <Portuguese>Preenchimento equilibrado</Portuguese>
+            <Czech>Rovnoměrné plnění</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
@@ -1407,6 +1435,7 @@
             <Polish>Budynek za budynkiem</Polish>
             <Russian>Здание за зданием</Russian>
             <Portuguese>Construção por construção</Portuguese>
+            <Czech>Budova za budovou</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
             <English>Random filling</English>
@@ -1420,6 +1449,7 @@
             <Polish>Losowe wypełnienie</Polish>
             <Russian>Случайно</Russian>
             <Portuguese>Preenchimento aleatório</Portuguese>
+            <Czech>Náhodné plnění</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
@@ -1434,6 +1464,7 @@
             <Russian>Телепорт</Russian>
             <Portuguese>Teleportar</Portuguese>
             <Spanish>Teletransporte</Spanish>
+            <Czech>Teleportovat</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
             <English>Un-garrison Group</English>
@@ -1447,12 +1478,13 @@
             <Polish>Cofnij rozmieszczenie grupu w garnizonie</Polish>
             <Russian>Вывести группу из здания</Russian>
             <Portuguese>Desguarnecer grupo</Portuguese>
+            <Czech>Zrušit posádku - uvolnit jednotku</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_noneFound">
             <English>No players found</English>
             <Chinese>沒有玩家找到</Chinese>
             <Chinesesimp>没有玩家找到</Chinesesimp>
-            <Czech>Nije pronađen nijedan igrač</Czech>
+            <Czech>Nenalezen žádný hráč</Czech>
             <French>Aucun joueur trouvé.</French>
             <German>Keine Spieler gefunden</German>
             <Hungarian>Nincsenek játékosok</Hungarian>
@@ -1667,6 +1699,7 @@
             <Russian>Добавить полный ACE Арсенал</Russian>
             <Portuguese>Adicionar Arsenal ACE Completo</Portuguese>
             <Spanish>Añadir ACE Arsenal completo</Spanish>
+            <Czech>Přidat plný ACE Arzenál</Czech>
             <French>Ajouter arsenal ACE complet</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveACEArsenal_DisplayName">
@@ -1680,6 +1713,7 @@
             <Russian>Убрать ACE Арсенал</Russian>
             <Portuguese>Remover Arsenal ACE</Portuguese>
             <Spanish>Eliminar ACE Arsenal</Spanish>
+            <Czech>Odebrat plný ACE Arzenál</Czech>
             <French>Retirer un arsenal ACE</French>
         </Key>
         <Key ID="STR_ACE_Zeus_CreateZeus">
@@ -1692,6 +1726,7 @@
             <Portuguese>Criar Zeus</Portuguese>
             <Spanish>Crear Zeus</Spanish>
             <Chinese>新增宙斯</Chinese>
+            <Czech>Vytvořit Zeuse</Czech>
             <French>Créer Zeus</French>
         </Key>
         <Key ID="STR_ACE_Zeus_DeleteZeus">
@@ -1704,6 +1739,7 @@
             <Portuguese>Apagar Zeus</Portuguese>
             <Spanish>Eliminar Zeus</Spanish>
             <Chinese>刪除宙斯</Chinese>
+            <Czech>Smazat Zeuse</Czech>
             <French>Supprimer Zeus</French>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
@@ -1715,6 +1751,7 @@
             <Italian>menu "%1"</Italian>
             <Portuguese>Menu "%1"</Portuguese>
             <Chinese>選單 %1</Chinese>
+            <Czech>"%1" menu</Czech>
             <French>Menu "%1"</French>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
@@ -1725,6 +1762,7 @@
             <Russian>Десантировать груз</Russian>
             <Portuguese>Soltar carga de paraquedas</Portuguese>
             <Chinese>空投貨物</Chinese>
+            <Czech>Výsadek nákladu</Czech>
             <French>Paralargage de cargaison</French>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
@@ -1736,6 +1774,7 @@
             <Portuguese>Nenhuma carga carregada</Portuguese>
             <Spanish>No hay carga cargada</Spanish>
             <Chinese>沒有貨物裝載</Chinese>
+            <Czech>Žádný náklad není naložen</Czech>
             <French>Aucune cargaison chargée</French>
         </Key>
     </Package>

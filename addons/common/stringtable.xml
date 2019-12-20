@@ -13,6 +13,7 @@
             <Russian>Общий</Russian>
             <Portuguese>Comum</Portuguese>
             <Spanish>Común</Spanish>
+            <Czech>Obecné</Czech>
             <French>Commun</French>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
@@ -459,10 +460,12 @@
             <Portuguese>Ação de Checar PBO</Portuguese>
             <Spanish>Comprobar PBO</Spanish>
             <French>Action à la vérification des PBOs</French>
+            <Czech>Zkontrolovat PBO</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsActionDesc">
             <English>Defines the action to be taken if a player does not have the correct PBOs.</English>
             <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
+            <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -477,10 +480,12 @@
             <Portuguese>Checar Todos os PBOs</Portuguese>
             <Spanish>Comprobar todos los PBO</Spanish>
             <French>Vérifier tous les PBOs</French>
+            <Czech>Zkontrolovat všechnz PBO</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
             <English>Check all addons, not only those of ACE.</English>
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
+            <Chinese>檢查全部的插件而非只有ACE。</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -495,10 +500,12 @@
             <Portuguese>Lista Branca de PBO</Portuguese>
             <Spanish>Comprobar lista blanca de PBOs</Spanish>
             <French>Vérifier les PBOs en liste blanche</French>
+            <Czech>Zkontrolovat PBO proti whitelistu</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelistDesc">
             <English>Define a list of regardless allowed addons.</English>
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
+            <Chinese>定義哪些插件是允許使用的。</Chinese>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -640,6 +647,7 @@
             <Polish>Trwały znacznik laserowy/latarka</Polish>
             <Portuguese>Luz da lanterna/laser da arma persistente</Portuguese>
             <French>Rémanence du pointeur laser/de la lampe torche</French>
+            <Czech>Perzistentní laser/baterka na zbrani</Czech>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -653,6 +661,7 @@
             <Polish>Aktywuj znacznik laserowy/latarkę po zmianie broni lub wejściu/wyjściu z pojazdu, jeśli był on poprzednio włączony.</Polish>
             <Portuguese>Ativa a luz da arma ao trocar de arma, entrar/sair de um veículo. Caso tenha sido acesa anteriormente.</Portuguese>
             <French>Si le pointeur laser/la lampe torche est allumé(e), cette option permet de le/la réallumer automatiquement après un changement d'arme, ou après une entrée/sortie d'un véhicule.</French>
+            <Czech>Pokud jsou zaplé, zapíná laser/baterku po přepnutí zbraně nebo po nástupu/výstupu z vozidla.</Czech>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -980,6 +989,7 @@
             <Spanish>Siempre</Spanish>
             <French>Toujours</French>
             <Chinese>一直</Chinese>
+            <Czech>Vždy</Czech>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1067,6 +1077,7 @@
             <Spanish>Confirmar</Spanish>
             <French>Confirmer</French>
             <Chinese>確認</Chinese>
+            <Czech>Potvrdit</Czech>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1077,6 +1088,7 @@
             <Spanish>Nunca</Spanish>
             <French>Jamais</French>
             <Chinese>從不</Chinese>
+            <Czech>Nikdy</Czech>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1257,6 +1269,7 @@
             <Russian>Разрешить приглушение музыки</Russian>
             <Portuguese>Permite diminuir volume da música</Portuguese>
             <French>Permission d'abaisser la musique</French>
+            <Czech>Povolit snížení hlasitosti hudby</Czech>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1270,6 +1283,7 @@
             <Russian>Позволить скриптам ACE приглушать музыку</Russian>
             <Portuguese>Permite que Scripts do ACE diminuam o volume da música.</Portuguese>
             <French>Autorise les scripts ACE à baisser le volume de la musique.</French>
+            <Czech>Povolit ACE skriptům snížit hlasitost hudby</Czech>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1282,6 +1296,7 @@
             <Russian>Флаг (ACE - Черный)</Russian>
             <Portuguese>Bandeira (ACE - Preto)</Portuguese>
             <French>Drapeau (ACE - Noir)</French>
+            <Czech>Vlajka (ACE - Černá)</Czech>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -1294,6 +1309,7 @@
             <Russian>Флаг (ACE - Белый)</Russian>
             <Portuguese>Bandeira (ACE - Branco)</Portuguese>
             <French>Drapeau (ACE - Blanc)</French>
+            <Czech>Vlajka (ACE - Bílá)</Czech>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>

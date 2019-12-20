@@ -70,6 +70,7 @@
             <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
             <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
             <Portuguese>Permite que IA seja visivel no espectador</Portuguese>
+            <Czech>Umožňuje sledovat AI v módu diváka</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -198,6 +199,7 @@
             <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
             <Chinese>最大跟隨距離</Chinese>
             <French>Distance maximale de suivi</French>
+            <Czech>Maximální vzdálenost sledování objektu</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
@@ -206,6 +208,7 @@
             <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
+            <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
@@ -354,6 +357,7 @@
             <Polish>Tryb Wizji</Polish>
             <Russian>Режим видения</Russian>
             <Portuguese>Modo de Visão</Portuguese>
+            <Czech>Režim sledování</Czech>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>

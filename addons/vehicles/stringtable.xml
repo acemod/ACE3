@@ -120,6 +120,7 @@
             <Spanish>Ocultar acción de expulsión</Spanish>
             <Chinese>隱藏逃脫動作</Chinese>
             <French>Masquer l'action d'éjection</French>
+            <Czech>Schovat vyskočení z vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
             <English>Hides the Eject entry from the action menu. Requires a game restart.</English>
@@ -131,6 +132,7 @@
             <Spanish>Oculta la entrada Expulsar del menú de acciones. Requiere un reinicio del juego.</Spanish>
             <Chinese>隱藏在動作選單中逃脫動作的選項。要求遊戲重新啟動。</Chinese>
             <French>Masque l'entrée "Éjection" du menu Action. Nécessite un redémarrage du jeu.</French>
+            <Czech>Schová akci vyskošení z vozidla z akčního menu. Vyžaduje restart hry.</Czech>
         </Key>
     </Package>
 </Project>

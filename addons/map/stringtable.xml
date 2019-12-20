@@ -520,6 +520,7 @@
             <Chinese>關閉友軍蹤跡</Chinese>
             <Russian>Отключить BFT</Russian>
             <Portuguese>Desativar BFT</Portuguese>
+            <Czech>Vypnout sledování přátelských jednotek (BFT).</Czech>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT_description">
             <English>Always disable Blue Force Tracking for this group.</English>
@@ -533,6 +534,7 @@
             <Chinese>對此小隊永遠關閉友軍蹤跡顯示</Chinese>
             <Russian>Всегда отключать Blue Force Tracking для этой группы</Russian>
             <Portuguese>Sempre desativar Rastreio Blue Force (BFT) para esse grupo.</Portuguese>
+            <Czech>Vždy vypne sledování přátelských jednotek (BFT) pro tuto skupinu.</Czech>
         </Key>
     </Package>
 </Project>
