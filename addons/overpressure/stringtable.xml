@@ -14,6 +14,7 @@
             <Russian>Коэффициент избыточного давления</Russian>
             <Portuguese>Coeficiente de Distância de Sobrepressão</Portuguese>
             <Hungarian>Túlnyomás-távolság együtthatója</Hungarian>
+            <Czech>Koeficient vzdálenosti přetlaku</Czech>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect [Default: 1]</English>
@@ -28,6 +29,7 @@
             <Russian>Степень зависимости избыточного давления от расстояния [По умолчанию: 1]</Russian>
             <Portuguese>Escala o efeito de sobrepressão [Padrão: 1]</Portuguese>
             <Hungarian>Állítja a túlnyomás hatását [Alapértelmezett: 1]</Hungarian>
+            <Czech>Nastavuje jak velký je efekt přetlaku [Standard: 1]</Czech>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
@@ -41,6 +43,7 @@
             <Portuguese>Alcance do Sopro de Disparo</Portuguese>
             <Hungarian>Utóhatás távolsága</Hungarian>
             <French>Portée du backblast</French>
+            <Czech>Dosah zpětné tlakové vlny (backblast)</Czech>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastAngle">
             <English>Backblast angle</English>
@@ -54,6 +57,7 @@
             <Portuguese>Ângulo do Sopro de Disparo</Portuguese>
             <Hungarian>Utóhatás aránya</Hungarian>
             <French>Angle du backblast</French>
+            <Czech>Úhel zpětné tlakové vlny (backblast)</Czech>
         </Key>
     </Package>
 </Project>

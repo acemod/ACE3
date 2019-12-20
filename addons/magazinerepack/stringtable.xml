@@ -13,6 +13,7 @@
             <Russian>Перепаковка Магазинов</Russian>
             <Portuguese>Preenchimento de Carregador</Portuguese>
             <French>Remplissage chargeurs</French>
+            <Czech>Přepáskování zásobníků</Czech>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
@@ -26,6 +27,7 @@
             <Russian>Время на патрон</Russian>
             <Portuguese>Tempo por projétil</Portuguese>
             <French>Temps par cartouche</French>
+            <Czech>Čas na náboj</Czech>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
@@ -39,6 +41,7 @@
             <Russian>Время на магазин</Russian>
             <Portuguese>Tempo por carregador</Portuguese>
             <French>Temps par chargeur</French>
+            <Czech>Čas na zásobník</Czech>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
@@ -52,6 +55,7 @@
             <Russian>Время на звено ленты</Russian>
             <Portuguese>Tempo por carregador de cinto</Portuguese>
             <French>Temps par bande</French>
+            <Czech>Čas na článek pásu</Czech>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
             <English>Repack Magazines</English>

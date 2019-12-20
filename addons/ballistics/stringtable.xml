@@ -2438,6 +2438,7 @@
             <Russian>Нарезы ствола</Russian>
             <Portuguese>Barrel Twist</Portuguese>
             <French>Pas du canon</French>
+            <Czech>Stoupání vývrtu hlavně</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
@@ -2450,6 +2451,7 @@
             <Polish>Długość lufy</Polish>
             <Russian>Длина ствола</Russian>
             <Portuguese>Comprimento do cano</Portuguese>
+            <Czech>Délka hlavně</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
@@ -2462,6 +2464,7 @@
             <Polish>Współczynnik balistyczny</Polish>
             <Russian>Баллистический коэффициент</Russian>
             <Portuguese>Coeficiente balístico</Portuguese>
+            <Czech>Balistický koeficient</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
@@ -2474,6 +2477,7 @@
             <Polish>Masa pocisku</Polish>
             <Russian>Масса пули</Russian>
             <Portuguese>Massa do projétil</Portuguese>
+            <Czech>Váha projektilu</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
@@ -2486,6 +2490,7 @@
             <Polish>Prędkość wylotowa</Polish>
             <Russian>Начальная скорость</Russian>
             <Portuguese>Velocidade de Saída</Portuguese>
+            <Czech>Úsťová rychlost</Czech>
         </Key>
     </Package>
 </Project>
