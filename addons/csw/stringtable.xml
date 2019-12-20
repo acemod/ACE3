@@ -450,7 +450,7 @@
             <French>[CSW] Sac Tube M252</French>
             <Japanese>[CSW] M252 発射筒バッグ</Japanese>
             <Chinese>[CSW] M252 炮管袋</Chinese>
-            <Czech>[CSW] M252 minometná hlaveň v batohu</Czech>
+            <Czech>[CSW] M252 minometná hlaveň v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_m2_gun">
             <English>[CSW] M2 Gun Bag</English>
@@ -458,7 +458,7 @@
             <French>[CSW] Sac M2</French>
             <Japanese>[CSW] M2 バッグ</Japanese>
             <Chinese>[CSW] M2槍械袋</Chinese>
-            <Czech>[CSW] M2 zbraň v batohu</Czech>
+            <Czech>[CSW] M2 zbraň v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_mk19_gun">
             <English>[CSW] MK19 Gun Bag</English>
@@ -466,7 +466,7 @@
             <French>[CSW] Sac MK19</French>
             <Japanese>[CSW] Mk19 バッグ</Japanese>
             <Chinese>[CSW] Mk19槍械袋</Chinese>
-            <Czech>[CSW] MK19 zbraň v batohu</Czech>
+            <Czech>[CSW] MK19 zbraň v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>
@@ -474,7 +474,7 @@
             <French>[CSW] Sac Lanceur BGM-71 TOW</French>
             <Japanese>[CSW] BGM-71 TOW ランチャー バッグ</Japanese>
             <Chinese>[CSW] BGM-71 拖式飛彈發射器袋</Chinese>
-            <Czech>[CSW] BGM-71 TOW raketomet v batohu</Czech>
+            <Czech>[CSW] BGM-71 TOW raketomet v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_dshk_gun">
             <English>[CSW] DSHK Gun Bag</English>
@@ -482,7 +482,7 @@
             <French>[CSW] Sac DSHK</French>
             <Japanese>[CSW] DShK バッグ</Japanese>
             <Chinese>[CSW]DShK 槍械袋</Chinese>
-            <Czech>[CSW] DSHK zbraň v batohu</Czech>
+            <Czech>[CSW] DSHK zbraň v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_2b14_tube">
             <English>[CSW] 2B14 Tube Bag</English>
@@ -490,7 +490,7 @@
             <French>[CSW] Sac Tube 2B14</French>
             <Japanese>[CSW] 2B14 発射筒バッグ</Japanese>
             <Chinese>[CSW] 2B14 炮管袋</Chinese>
-            <Czech>[CSW] 2B14 minometná hlaveň v batohu</Czech>
+            <Czech>[CSW] 2B14 minometná hlaveň v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_nsv_gun">
             <English>[CSW] NSV Gun Bag</English>
@@ -498,7 +498,7 @@
             <French>[CSW] Sac NSV</French>
             <Japanese>[CSW] NSV バッグ</Japanese>
             <Chinese>[CSW] NSV 槍械袋</Chinese>
-            <Czech>[CSW] NSV zbraň v batohu</Czech>
+            <Czech>[CSW] NSV zbraň v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_kord_gun">
             <English>[CSW] KORD Gun Bag</English>
@@ -506,7 +506,7 @@
             <French>[CSW] Sac KORD</French>
             <Japanese>[CSW] KORD バッグ</Japanese>
             <Chinese>[CSW] KORD 槍械袋</Chinese>
-            <Czech>[CSW] KORD zbraň v batohu</Czech>
+            <Czech>[CSW] KORD zbraň v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_ags30_gun">
             <English>[CSW] AGS-30 Gun Bag</English>
@@ -514,7 +514,7 @@
             <French>[CSW] Sac AGS-30</French>
             <Japanese>[CSW] AGS-30 バッグ</Japanese>
             <Chinese>[CSW] AGS-30 槍械袋</Chinese>
-            <Czech>[CSW] ASG-30 zbraň v batohu</Czech>
+            <Czech>[CSW] ASG-30 zbraň v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_metis_tube">
             <English>[CSW] 9k115 Metis Launcher Bag</English>
@@ -522,7 +522,7 @@
             <French>[CSW] Sac Lanceur 9K115 Metis</French>
             <Japanese>[CSW] 9K115 メティス ランチャー バッグ</Japanese>
             <Chinese>[CSW] 9k115 麥士蒂索人發射器袋</Chinese>
-            <Czech>[CSW] 9k115 Metis raketomet v batohu</Czech>
+            <Czech>[CSW] 9k115 Metis raketomet v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_kornet_launcher">
             <English>[CSW] 9m113 Kornet Launcher</English>
@@ -554,7 +554,7 @@
             <French>[CSW] Sac Lanceur SPG-9</French>
             <Japanese>[CSW] SPG-9 ランチャー バッグ</Japanese>
             <Chinese>[CSW] SPG-9 發射器袋</Chinese>
-            <Czech>[CSW] SPG-9 raketomet v batohu</Czech>
+            <Czech>[CSW] SPG-9 raketomet v pouzdře</Czech>
         </Key>
         <Key ID="STR_ACE_CSW_spg9m_tube">
             <English>[CSW] SPG-9M Launcher Bag</English>
@@ -562,7 +562,7 @@
             <French>[CSW] Sac Lanceur SPG-9M</French>
             <Japanese>[CSW] SPG-9M ランチャー バッグ</Japanese>
             <Chinese>[CSW] SPG-9M 發射器袋</Chinese>
-            <Czech>[CSW] SPG-9M raketomet v batohu</Czech>
+            <Czech>[CSW] SPG-9M raketomet v pouzdře</Czech>
         </Key>
     </Package>
 </Project>

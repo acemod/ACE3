@@ -279,6 +279,7 @@
             <Italian>Informazioni Sfondo Arma Bassa</Italian>
             <Chinesesimp>武器底部资讯栏背景</Chinesesimp>
             <Chinese>武器底部資訊欄背景</Chinese>
+            <Czech>Nižší pozadí panulu s informacemi o zbrani</Czech>
         </Key>
         <Key ID="STR_ACE_UI_Stance">
             <English>Stance</English>
@@ -320,6 +321,7 @@
             <Italian>Nome Arma Artigliere</Italian>
             <Chinesesimp>炮手武器名称</Chinesesimp>
             <Chinese>砲手武器名稱</Chinese>
+            <Czech>Jméno zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
@@ -333,6 +335,7 @@
             <Italian>Nome Sfondo Arma Artigliere</Italian>
             <Chinesesimp>炮手武器名称背景</Chinesesimp>
             <Chinese>砲手武器名稱背景</Chinese>
+            <Czech>Pozadí jména zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerFiringMode">
             <English>Gunner Firing Mode</English>
@@ -346,6 +349,7 @@
             <Italian>Modalità di Fuoco Artigliere</Italian>
             <Chinesesimp>炮手射击模式</Chinesesimp>
             <Chinese>砲手射擊模式</Chinese>
+            <Czech>Režim palby zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoType">
             <English>Gunner Ammo Type</English>
@@ -359,6 +363,7 @@
             <Italian>Tipo Munizioni Artigliere</Italian>
             <Chinesesimp>炮手弹药类型</Chinesesimp>
             <Chinese>砲手彈藥類型</Chinese>
+            <Czech>Typ munice zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoCount">
             <English>Gunner Ammo Count</English>
@@ -372,6 +377,7 @@
             <Italian>Contatore Munizioni Artigliere</Italian>
             <Chinesesimp>炮手弹药数量</Chinesesimp>
             <Chinese>砲手彈藥數量</Chinese>
+            <Czech>Počet zásobníků zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
@@ -385,6 +391,7 @@
             <Italian>Contatore Caricatore Artigliere</Italian>
             <Chinesesimp>炮手弹匣数量</Chinesesimp>
             <Chinese>砲手彈匣數量</Chinese>
+            <Czech>Počet munice zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
@@ -398,6 +405,7 @@
             <Italian>Tipo Lanciabile Artigliere</Italian>
             <Chinesesimp>炮手发射物类型</Chinesesimp>
             <Chinese>砲手發射物類型</Chinese>
+            <Czech>Typ odpalitelných granátů vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableCount">
             <English>Gunner Launchable Count</English>
@@ -411,6 +419,7 @@
             <Italian>Contatore Lanciabili Artigliere</Italian>
             <Chinesesimp>炮手发射物数量</Chinesesimp>
             <Chinese>砲手發射物數量</Chinese>
+            <Czech>Počet odpalitelných granátů vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerZeroing">
             <English>Gunner Zeroing</English>
@@ -424,6 +433,7 @@
             <Italian>Azzeramento Artigliere</Italian>
             <Chinesesimp>炮手归零距离</Chinesesimp>
             <Chinese>砲手歸零距離</Chinese>
+            <Czech>Náměr zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
@@ -437,6 +447,7 @@
             <Italian>Informazioni Sfondo Arma Artigliere Bassa</Italian>
             <Chinesesimp>炮手武器底部资讯栏背景</Chinesesimp>
             <Chinese>砲手武器底部資訊欄背景</Chinese>
+            <Czech>Nižší pozadí panelu s informacemi o zbrani vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>

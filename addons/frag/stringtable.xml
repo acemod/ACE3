@@ -94,6 +94,7 @@
             <Korean>폭발 반사 시뮬레이션</Korean>
             <Chinesesimp>模拟爆炸反射</Chinesesimp>
             <Chinese>模擬爆炸反射</Chinese>
+            <Czech>Simulace odrazu exploze</Czech>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections_Desc">
             <English>Enable the ACE Explosion Reflection Simulation</English>
@@ -108,6 +109,7 @@
             <Korean>ACE 폭발 반사 시뮬레이션을 적용합니다.</Korean>
             <Chinesesimp>启用ACE模拟爆炸反射</Chinesesimp>
             <Chinese>啟用ACE模擬爆炸反射</Chinese>
+            <Czech>Povolit ACE simulaci odrazu exploze</Czech>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>

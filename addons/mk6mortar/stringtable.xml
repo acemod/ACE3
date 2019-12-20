@@ -76,6 +76,7 @@
             <Polish>Moździerz Mk6</Polish>
             <Russian>Миномет Mk6</Russian>
             <Portuguese>Morteiro Mk6</Portuguese>
+            <Czech>Minomet Mk6</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -217,6 +218,7 @@
             <Korean>탄약 관리 활성화</Korean>
             <Chinesesimp>使用手动弹药装卸</Chinesesimp>
             <Chinese>使用手動彈藥裝卸</Chinese>
+            <Czech>Používat ruční manipulaci s municí</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
@@ -231,6 +233,7 @@
             <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야만 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
             <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由AI射击的迫击炮</Chinesesimp>
             <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填。此功能並不影響由AI射擊的迫擊砲</Chinese>
+            <Czech>Odstraní z minometu zásobník a vynucuje nabíjení po každém výstřelu buď mířičem nebo nabíječem. Tato možnost neovlivňuje AI posádky.</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -275,6 +278,7 @@
             <Korean>탄약 제거중</Korean>
             <Chinesesimp>卸除弹头中</Chinesesimp>
             <Chinese>卸除彈頭中</Chinese>
+            <Czech>Vybít minomet</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>

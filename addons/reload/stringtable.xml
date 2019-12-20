@@ -36,10 +36,12 @@
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelf">
             <English>Always show check ammo self interaction</English>
             <Polish>Zawsze pokazuj interakcję od sprawdzania amunicji</Polish>
+            <Czech>Vždy zobrazit kontrolu munice v menu vlastní interakce</Czech>
         </Key>
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelfDesc">
             <English>Shows check ammo self interaction even when not in static weapons.</English>
             <Polish>Pokazuje interakcję od sprawdzania amunicji poza bronią statyczną.</Polish>
+            <Czech>Zobrazuje kontrolu munice v menu vlastní interakce i pokud hráč nepoužívá statickou zbraň.</Czech>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>

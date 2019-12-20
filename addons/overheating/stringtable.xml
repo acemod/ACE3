@@ -13,6 +13,7 @@
             <Portuguese>Super Aquecimento</Portuguese>
             <Hungarian>Túlmelegedés</Hungarian>
             <French>Surchauffe</French>
+            <Czech>Přehřívání</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
@@ -293,7 +294,7 @@
             <Polish>Porażka przy usuwaniu zacięcia</Polish>
             <French>Toujours enrayé !</French>
             <Italian>Non si è disinceppata!</Italian>
-            <Czech>Zbrań se nepodařilo uvolnit</Czech>
+            <Czech>Zbraň se nepodařilo uvolnit</Czech>
             <Portuguese>Falha no desemperramento</Portuguese>
             <Russian>Не удалось исправить клин</Russian>
             <Japanese>弾詰りの除去に失敗しました</Japanese>
@@ -446,7 +447,7 @@
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
             <French>Canon(s) de rechange froid(s)</French>
             <Russian>Прохладные</Russian>
-            <Czech>Studená náhrandí hlaveň</Czech>
+            <Czech>Studená náhradní hlaveň</Czech>
             <Japanese>予備銃身は冷たい</Japanese>
             <Polish>Zimne zapasowe lufy</Polish>
             <German>Kalte Wechselläufe</German>
@@ -460,7 +461,7 @@
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
             <French>Canon(s) de rechange tiède(s)</French>
             <Russian>Теплые</Russian>
-            <Czech>Teplá náhrandí hlaveň</Czech>
+            <Czech>Teplá náhradní hlaveň</Czech>
             <Japanese>予備銃身は温かい</Japanese>
             <Polish>Ciepłe zapasowe lufy</Polish>
             <German>Warme Wechselläufe</German>
@@ -474,7 +475,7 @@
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
             <French>Canon(s) de rechange chaud(s)</French>
             <Russian>Горячие</Russian>
-            <Czech>Horká náhrandí hlaveň</Czech>
+            <Czech>Horká náhradní hlaveň</Czech>
             <Japanese>予備銃身は熱い</Japanese>
             <Polish>Gorące zapasowe lufy</Polish>
             <German>Heiße Wechselläufe</German>
@@ -488,7 +489,7 @@
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
             <French>Canon(s) de rechange très chaud(s)</French>
             <Russian>Очень горячие</Russian>
-            <Czech>Velmi horká náhrandí hlaveň</Czech>
+            <Czech>Velmi horká náhradní hlaveň</Czech>
             <Japanese>予備銃身はとても熱い</Japanese>
             <Polish>Bardzo gorące zapasowe lufy</Polish>
             <German>Sehr heiße Wechselläufe</German>
@@ -502,7 +503,7 @@
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
             <French>Canon(s) de rechange extrêmement chaud(s)</French>
             <Russian>Запредельно горячие</Russian>
-            <Czech>Extrémně horká náhrandí hlaveň</Czech>
+            <Czech>Extrémně horká náhradní hlaveň</Czech>
             <Japanese>予備銃身は極めて熱い</Japanese>
             <Polish>Ekstremalnie gorące zapasowe lufy</Polish>
             <German>Extrem heiße Wechselläufe</German>
@@ -538,6 +539,7 @@
             <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
             <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
             <Chinese>啟用槍管過熱/干擾模塊</Chinese>
+            <Czech>Hlavní přepínač pro modul přehřívání/zasekávání</Czech>
         </Key>
     </Package>
 </Project>
