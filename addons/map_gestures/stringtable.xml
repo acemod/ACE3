@@ -163,6 +163,7 @@
             <Korean>그룹 설정이 없는 경우 리더의 예비 색상 값입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
+            <Czech>Záložní barva pro velitele skupin pokud není žádné skupinové nastavení [Modul: ponechat prázdné abyste nepřepsali nastavení klientů]</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_defaultColor_displayName">
             <English>Default Color</English>
@@ -192,6 +193,7 @@
             <Korean>그룹 설정이 없을 경우의 예비 색상입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
             <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
             <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
+            <Czech>Záložní barva pokud není žádné skupinové nastavení [Modul: ponechat prázdné abyste nepřepsali nastavení klientů]</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_leadColor_displayName">
             <English>Lead Color</English>
@@ -221,6 +223,7 @@
             <Korean>그룹이 이 모듈에 동기화 됐을때의 리더 색상입니다.</Korean>
             <Chinesesimp>改变与此同步小队队长的标识器颜色。</Chinesesimp>
             <Chinese>改變與此同步小隊隊長的指示器顏色</Chinese>
+            <Czech>Barva pro velitele skupin které jsou synchronizované s tímto modulem.</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_color_displayName">
             <English>Color</English>
@@ -250,6 +253,7 @@
             <Korean>그룹이 이 모듈에 동기화 됐을때의 멤버 색상입니다.</Korean>
             <Chinesesimp>改变与此同步小队队员的标识器颜色</Chinesesimp>
             <Chinese>改變與此同步小隊隊員的指示器顏色</Chinese>
+            <Czech>Barva pro členy skupin které jsou synchronizované s tímto modulem.</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>
@@ -271,7 +275,7 @@
             <Portuguese>Gestos no mapa</Portuguese>
             <Polish>Gesty na mapie</Polish>
             <Russian>Жесты на карте</Russian>
-            <Czech>Ukazovní v mapě</Czech>
+            <Czech>Ukazování v mapě</Czech>
             <Italian>Gesti Mappa</Italian>
             <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>

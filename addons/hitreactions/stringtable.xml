@@ -13,6 +13,7 @@
             <Russian>Минимальный урон для активации падения</Russian>
             <Portuguese>Dano Mínimo para ativar queda</Portuguese>
             <French>Dommages minimaux pour déclencher la chute</French>
+            <Czech>Minimum škody pro aktivaci spadnutí</Czech>
         </Key>
     </Package>
 </Project>

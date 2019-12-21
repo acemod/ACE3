@@ -65,6 +65,7 @@
         <Key ID="STR_ACE_SwitchUnits_EnableSwitchUnits_DisplayName">
             <English>Enable switch side</English>
             <French>Activer le changement de camp</French>
+            <Chinese>啟用陣營切換</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
