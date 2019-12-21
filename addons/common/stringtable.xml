@@ -464,6 +464,7 @@
             <English>Defines the action to be taken if a player does not have the correct PBOs.</English>
             <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
+            <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -477,12 +478,13 @@
             <Russian>Проверять все PBO</Russian>
             <Portuguese>Checar Todos os PBOs</Portuguese>
             <French>Vérifier tous les PBOs</French>
-            <Czech>Zkontrolovat všechnz PBO</Czech>
+            <Czech>Zkontrolovat všechny PBO</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
             <English>Check all addons, not only those of ACE.</English>
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
+            <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -502,6 +504,7 @@
             <English>Define a list of regardless allowed addons.</English>
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Chinese>定義哪些插件是允許使用的。</Chinese>
+            <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>

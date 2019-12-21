@@ -134,6 +134,7 @@
             <Korean>지도 색상에 표시되는 이름의 색상을 결정합니다.</Korean>
             <Chinesesimp>定义名称文字颜色。使其与地图标识器颜色有所区别。</Chinesesimp>
             <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別</Chinese>
+            <Czech>Barva jména zobrazeného vedle značky ukazovátka na mapě.</Czech>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_defaultLeadColor_displayName">
             <English>Lead Default Color</English>
