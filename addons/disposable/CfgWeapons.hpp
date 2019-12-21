@@ -9,6 +9,7 @@ class CfgWeapons {
         scopeArsenal = 2;
         baseWeapon = "launch_NLAW_F";
 
+        magazineWell[] = {}; // remove magwell for this and inherited weapons
         magazines[] = {"CBA_FakeLauncherMagazine"};
         magazineReloadTime = 0.1;
         reloadMagazineSound[] = {"",1,1};
