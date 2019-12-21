@@ -1,7 +1,7 @@
 [
     QGVAR(showClearGlasses),
     "CHECKBOX",
-    [LSTRING(SettingShowClearGlasses), LSTRING(SettingShowClearGlasses)],
+    [LSTRING(SettingShowClearGlasses), LSTRING(SettingShowClearGlassesDesc)],
     localize LSTRING(SettingsName),
     false, // default value
     0 // isGlobal
