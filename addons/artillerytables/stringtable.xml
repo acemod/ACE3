@@ -5,11 +5,13 @@
             <English>Artillery Rangetable</English>
             <Chinese>火炮射程表</Chinese>
             <Japanese>火砲射程</Japanese>
+            <French>Table de tir d'artillerie</French>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
             <Chinese>通用的火炮射程表</Chinese>
             <Japanese>汎用の火砲用射程表</Japanese>
+            <French>Table de tir universelle pour l'artillerie.</French>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -34,7 +36,7 @@
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
             <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
-            <French>Pour les tirs de joueurs, modèle de résistance à l'air et d'effet du vent</French>
+            <French>Pour les tirs des joueurs, simule la résistance de l'air et les effets du vent.</French>
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
@@ -47,11 +49,13 @@
             <English>Artillery Computer Disabled</English>
             <Chinese>停用火炮電腦</Chinese>
             <Japanese>砲撃コンピュータ無効化</Japanese>
+            <French>Désactiver l'ordinateur de tir</French>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
             <Chinese>停用原本的火炮控制電腦</Chinese>
             <Japanese>ゲームの砲撃コンピュータを無効化します。</Japanese>
+            <French>Désactive l'ordinateur de tir vanilla.</French>
         </Key>
     </Package>
 </Project>
