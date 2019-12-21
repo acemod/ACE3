@@ -103,6 +103,11 @@
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
             <Japanese>ゴーグルの拭き取りをセルフ インタラクションに表示</Japanese>
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
+            <French>Afficher l'interaction "Essuyer les lunettes"</French>
+        </Key>
+        <Key ID="STR_ACE_Goggles_SettingShowClearGlassesDesc">
+            <English>Show Wipe Goggles self interaction</English>
+            <French>Affiche l'action "Essuyer les lunettes" dans le menu d'interaction personnel.</French>
         </Key>
     </Package>
 </Project>
