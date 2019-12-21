@@ -9,7 +9,7 @@ class CfgWeapons {
         scopeArsenal = 2;
         baseWeapon = "launch_NLAW_F";
 
-        magazineWell[] = {}; // remove magwell for this and inherited weapons
+        magazineWell[] = {}; // remove magwell, so only the fakeMag can be loaded (inherited by used)
         magazines[] = {"CBA_FakeLauncherMagazine"};
         magazineReloadTime = 0.1;
         reloadMagazineSound[] = {"",1,1};
@@ -26,6 +26,7 @@ class CfgWeapons {
         baseWeapon = "launch_NLAW_F";
 
         magazines[] = {"NLAW_F"};
+        magazineWell[] = {"NLAW"}; // restore magwell
 
         class EventHandlers {
             fired = "_this call CBA_fnc_firedDisposable"; // this weapon eventhandler is required!
