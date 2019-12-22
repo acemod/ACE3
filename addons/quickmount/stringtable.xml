@@ -57,6 +57,10 @@
             <French>Véhicule plein</French>
             <Czech>Vozidlo je plné</Czech>
         </Key>
+        <Key ID="STR_ACE_QuickMount_EnabledDescription">
+            <English>This option allows quick entry into the vehicle you are directly looking at.</English>
+            <French>Cette option permet d'entrer rapidement dans les véhicules que vous regardez.</French>
+        </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
             <German>Entfernung</German>
