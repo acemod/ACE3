@@ -1,7 +1,7 @@
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ELSTRING(common,Enabled),
+    [ELSTRING(common,Enabled), LSTRING(KeybindDescription)]
     format ["ACE %1", LLSTRING(Category)],
     true,
     true
