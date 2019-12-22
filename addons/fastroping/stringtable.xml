@@ -281,6 +281,10 @@
             <Chinese>繩索（36.6公尺長）</Chinese>
             <Czech>Lano 36.6 metrů</Czech>
         </Key>
+         <Key ID="STR_ACE_Fastroping_setting_categoryMenu_displayName">
+            <English>Fast-roping</English>
+            <French>Aérocordage</French>
+        </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
             <German>Seil-Item zum aufbauen benötigt</German>

@@ -64,7 +64,7 @@
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSwitchUnits_DisplayName">
             <English>Enable switch side</English>
-            <French>Activer le changement de camp</French>
+            <French>Permettre le changement de camp</French>
             <Chinese>啟用陣營切換</Chinese>
             <Czech>Povolit změnu strany</Czech>
         </Key>
@@ -75,7 +75,7 @@
             <German>Nach BLUFOR wechseln?</German>
             <Czech>Přesunout k BLUFOR?</Czech>
             <Portuguese>Trocar para Oeste?</Portuguese>
-            <French>Changer en BLUFOR</French>
+            <French>Passage en BLUFOR</French>
             <Hungarian>Átváltás BLUFOR-ra?</Hungarian>
             <Russian>На синих?</Russian>
             <Italian>Cambia per BLUFOR?</Italian>
@@ -107,7 +107,7 @@
             <German>Nach OPFOR wechseln?</German>
             <Czech>Přesunout k OPFOR?</Czech>
             <Portuguese>Trocar para Leste?</Portuguese>
-            <French>Changer en OPFOR</French>
+            <French>Passage en OPFOR</French>
             <Hungarian>Átváltás OPFOR-ra?</Hungarian>
             <Russian>На красных?</Russian>
             <Italian>Cambia per OPFOR?</Italian>
@@ -139,7 +139,7 @@
             <German>Nach INDFOR wechseln?</German>
             <Czech>Přesunout k INDFOR?</Czech>
             <Portuguese>Trocar para Indenpendente</Portuguese>
-            <French>Changer en Indépendant</French>
+            <French>Passage en Indépendant</French>
             <Hungarian>Átváltás INDFOR-ra?</Hungarian>
             <Russian>На независимых?</Russian>
             <Italian>Cambia per INDFOR?</Italian>
@@ -171,7 +171,7 @@
             <German>Nach CIVILIAN wechseln?</German>
             <Czech>Přesunout k CIVILISTŮM?</Czech>
             <Portuguese>Trocar para Civis?</Portuguese>
-            <French>Changer en Civil</French>
+            <French>Passage en Civil</French>
             <Hungarian>Átváltás civilre?</Hungarian>
             <Russian>На гражданских?</Russian>
             <Italian>Cambia per Civili?</Italian>
@@ -203,7 +203,7 @@
             <German>Aktiviere Sicherheitszone?</German>
             <Czech>Povolit bezpečné oblasti?</Czech>
             <Portuguese>Habilitar zona segura?</Portuguese>
-            <French>Activer la zone sécurisée</French>
+            <French>Créer une zone sécurisée</French>
             <Hungarian>Biztonságos zóna engedélyezése?</Hungarian>
             <Russian>Безопасная зона</Russian>
             <Italian>Abilita Zona Sicura?</Italian>
