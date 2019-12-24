@@ -816,8 +816,8 @@
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Display">
-            <English>Packing Bandage</English>
-            <German>Mullbinde</German>
+            <English>Bandage (Packing)</English>
+            <German>Bandage (Mullbinde)</German>
             <Russian>Тампонирующая повязка</Russian>
             <Spanish>Vendaje compresivo</Spanish>
             <French>Bande compressive</French>
@@ -1407,12 +1407,12 @@
             <Chinese>生理食鹽水 (250毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Display">
-            <English>Basic Field Dressing (QuikClot)</English>
+            <English>Bandage (QuikClot)</English>
             <Russian>Первичный перевязочный пакет (QuikClot)</Russian>
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Pansement hémostatique (Quikclot)</French>
             <Polish>Opatrunek QuikClot ACS</Polish>
-            <German>Verbandpäckchen (QuikClot)</German>
+            <German>Bandage (QuikClot)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
