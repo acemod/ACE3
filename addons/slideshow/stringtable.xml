@@ -74,7 +74,7 @@
             <Portuguese>Controles</Portuguese>
             <Russian>Контроллеры</Russian>
             <Spanish>Controladores</Spanish>
-            <Czech>Kontrolor</Czech>
+            <Czech>Kontrolní objekty</Czech>
             <Italian>Controllori</Italian>
             <Japanese>コントローラ</Japanese>
             <Korean>조종 장치</Korean>
@@ -95,6 +95,7 @@
             <Korean>조종 장치 물체 명칭, 다수의 경우 쉼표로 구분됩니다.</Korean>
             <Chinese>指定是控制器的物件名稱，如有多個物件，請以逗號作區隔</Chinese>
             <Chinesesimp>指定是控制器的物件名称，如有多个物件，请以逗号作区隔</Chinesesimp>
+            <Czech>Jména kontrolních objektů, v případě více oddělená čárkami.</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
@@ -158,6 +159,7 @@
             <Korean>상호작용 메세지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
             <Chinese>設定互動鍵切換圖片時的按鈕名稱，多個按鈕請以逗號做區隔，有多少圖片就輸入多少個按鈕，以利切換圖片</Chinese>
             <Chinesesimp>设定互动键切换图片时的按钮名称，多个按钮请以逗号做区隔，有多少图片就输入多少个按钮，以利切换图片</Chinesesimp>
+            <Czech>Seznam jmen které budou použity pro interakce, oddělené čárkami, v pořadí obrázků.</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
             <English>Set Name</English>
@@ -171,6 +173,7 @@
             <Korean>이름 설정</Korean>
             <Russian>Установить имя</Russian>
             <Portuguese>Definir Nome</Portuguese>
+            <Czech>Jméno setu</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
@@ -184,6 +187,7 @@
             <Korean>상위 상호작용 이름 (여러개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
             <Russian>Имя, которое будет использоваться для основных взаимодействий (для различения нескольких слайдов). По умолчанию: «Slides»</Russian>
             <Portuguese>Nome que será usado para a entrada principal de interação (para separar vários slideshows). Padrão: "Slides"</Portuguese>
+            <Czech>Jméno, které bude použito pro hlavní interakci (pro rozlišení více prezentací). Standard: Snímky</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>

@@ -507,6 +507,7 @@
             <Portuguese>MicroDAGR - Precisão de Waypoint</Portuguese>
             <French>MicroDAGR - Précision points de passage</French>
             <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
+            <Czech>MicroDAGR - přesnost Waypointů</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>
@@ -518,6 +519,7 @@
             <Portuguese>Controla o quão preciso pode exibir o waypoint de distância</Portuguese>
             <French>Définit la précision d'affichage des points de passage.</French>
             <Chinese>控制顯示的導航點精確度為多少</Chinese>
+            <Czech>Nastavuje jak přesně je vzdálenost waypointů zobrazena.</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
@@ -529,6 +531,7 @@
             <Portuguese>100m</Portuguese>
             <French>100 m</French>
             <Chinese>一百公尺</Chinese>
+            <Czech>100 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -540,6 +543,7 @@
             <Portuguese>10m</Portuguese>
             <French>10 m</French>
             <Chinese>十公尺</Chinese>
+            <Czech>10 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -551,6 +555,7 @@
             <Portuguese>1m</Portuguese>
             <French>1 m</French>
             <Chinese>一公尺</Chinese>
+            <Czech>1 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>

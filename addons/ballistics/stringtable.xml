@@ -6,146 +6,175 @@
             <English>#00 Buckshot</English>
             <Chinese>#00 鹿彈</Chinese>
             <Japanese>#00 バックショット</Japanese>
+            <Czech>#00 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
             <Chinese>#00 鹿彈</Chinese>
             <Japanese>#00 バックショット</Japanese>
+            <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
             <Chinese>#0 鹿彈</Chinese>
             <Japanese>#0 バックショット</Japanese>
+            <Czech>#0 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
             <Chinese>#0 鹿彈</Chinese>
             <Japanese>#0 バックショット</Japanese>
+            <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
             <Chinese>#1 鹿彈</Chinese>
             <Japanese>#1 バックショット</Japanese>
+            <Czech>#1 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
             <Chinese>#1 鹿彈</Chinese>
             <Japanese>#1 バックショット</Japanese>
+            <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
             <Chinese>#2 鹿彈</Chinese>
             <Japanese>#2 バックショット</Japanese>
+            <Czech>#2 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
             <Chinese>#2 鹿彈</Chinese>
             <Japanese>#2 バックショット</Japanese>
+            <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
             <Chinese>#3 鹿彈</Chinese>
             <Japanese>#3 バックショット</Japanese>
+            <Czech>#3 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
             <Chinese>#3 鹿彈</Chinese>
             <Japanese>#3 バックショット</Japanese>
+            <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
             <Chinese>#4 鹿彈</Chinese>
             <Japanese>#4 バックショット</Japanese>
+            <Czech>#4 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
             <Chinese>#4 鹿彈</Chinese>
             <Japanese>#4 バックショット</Japanese>
+            <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>
             <Chinese>#7 鹿彈</Chinese>
             <Japanese>#7 バックショット</Japanese>
+            <Czech>#7 Broky malé</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
             <English>#7 Birdshot</English>
             <Chinese>#7 鹿彈</Chinese>
             <Japanese>#7 バックショット</Japanese>
+            <Czech>#7 Broky malé - kalibr 2.54 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
             <Chinese>12鉛徑 2發  #00 鹿彈</Chinese>
             <Japanese>12 ゲージ 2 発入り #00 バックショット</Japanese>
+            <Czech>2x #00 Broky velké (kalibr 8.38 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 2Rnd #0 Buckshot</English>
             <Chinese>12鉛徑 2發  #0 鹿彈</Chinese>
             <Japanese>12 ゲージ 2 発入り #0 バックショット</Japanese>
+            <Czech>2x #0 Broky velké (kalibr 8.1 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 2Rnd #1 Buckshot</English>
             <Chinese>12鉛徑 2發  #1 鹿彈</Chinese>
             <Japanese>12 ゲージ 2 発入り #1 バックショット</Japanese>
+            <Czech>2x #1 Broky velké (kalibr 7.6 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 2Rnd #2 Buckshot</English>
             <Chinese>12鉛徑 2發  #2 鹿彈</Chinese>
             <Japanese>12 ゲージ 2 発入り #2 バックショット</Japanese>
+            <Czech>2x #2 Broky velké (kalibr 6.9 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 2Rnd #3 Buckshot</English>
             <Chinese>12鉛徑 2發  #3 鹿彈</Chinese>
             <Japanese>12 ゲージ 2 発入り #3 バックショット</Japanese>
+            <Czech>2x #3 Broky velké (kalibr 6.4 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 2Rnd #4 Buckshot</English>
             <Chinese>12鉛徑 2發  #4 鹿彈</Chinese>
             <Japanese>12 ゲージ 2 発入り #4 バックショット</Japanese>
+            <Czech>2x #4 Broky velké (kalibr 6.1 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 2Rnd #7 Birdshot</English>
             <Chinese>12鉛徑 2發  #7 鹿彈</Chinese>
             <Japanese>12 ゲージ 2 発入り #7 バックショット</Japanese>
+            <Czech>2x #7 Broky malé (kalibr 2.54 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 6Rnd #00 Buckshot</English>
             <Chinese>12鉛徑 6發  #00 鹿彈</Chinese>
             <Japanese>12 ゲージ 6 発入り #00 バックショット</Japanese>
+            <Czech>6x #00 Broky velké (kalibr 8.38 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 6Rnd #0 Buckshot</English>
             <Chinese>12鉛徑 6發  #0 鹿彈</Chinese>
             <Japanese>12 ゲージ 6 発入り #0 バックショット</Japanese>
+            <Czech>6x #0 Broky velké (kalibr 8.1 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 6Rnd #1 Buckshot</English>
             <Chinese>12鉛徑 6發  #1 鹿彈</Chinese>
             <Japanese>12 ゲージ 6 発入り #1 バックショット</Japanese>
+            <Czech>6x #1 Broky velké (kalibr 7.6 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 6Rnd #2 Buckshot</English>
             <Chinese>12鉛徑 6發  #2 鹿彈</Chinese>
             <Japanese>12 ゲージ 6 発入り #2 バックショット</Japanese>
+            <Czech>6x #2 Broky velké (kalibr 6.9 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 6Rnd #3 Buckshot</English>
             <Chinese>12鉛徑 6發  #3 鹿彈</Chinese>
             <Japanese>12 ゲージ 6 発入り #3 バックショット</Japanese>
+            <Czech>6x #3 Broky velké (kalibr 6.4 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 6Rnd #4 Buckshot</English>
             <Chinese>12鉛徑 6發  #4 鹿彈</Chinese>
             <Japanese>12 ゲージ 6 発入り #4 バックショット</Japanese>
+            <Czech>6x #4 Broky velké (kalibr 6.1 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 6Rnd #7 Birdshot</English>
             <Chinese>12鉛徑 6發  #7 鹿彈</Chinese>
             <Japanese>12 ゲージ 6 発入り #7 バックショット</Japanese>
+            <Czech>6x #7 Broky malé (kalibr 2.54 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
             <Chinese>12鉛徑 15發  #00 鹿彈</Chinese>
             <Japanese>12 ゲージ 15 発入り #00 バックショット</Japanese>
+            <Czech>15x #00 Broky velké (kalibr 8.38 mm)</Czech>
         </Key>
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">
@@ -2438,6 +2467,7 @@
             <Russian>Нарезы ствола</Russian>
             <Portuguese>Barrel Twist</Portuguese>
             <French>Pas du canon</French>
+            <Czech>Stoupání vývrtu hlavně</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
@@ -2450,6 +2480,7 @@
             <Polish>Długość lufy</Polish>
             <Russian>Длина ствола</Russian>
             <Portuguese>Comprimento do cano</Portuguese>
+            <Czech>Délka hlavně</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
@@ -2462,6 +2493,7 @@
             <Polish>Współczynnik balistyczny</Polish>
             <Russian>Баллистический коэффициент</Russian>
             <Portuguese>Coeficiente balístico</Portuguese>
+            <Czech>Balistický koeficient</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
@@ -2474,6 +2506,7 @@
             <Polish>Masa pocisku</Polish>
             <Russian>Масса пули</Russian>
             <Portuguese>Massa do projétil</Portuguese>
+            <Czech>Váha projektilu</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
@@ -2486,6 +2519,7 @@
             <Polish>Prędkość wylotowa</Polish>
             <Russian>Начальная скорость</Russian>
             <Portuguese>Velocidade de Saída</Portuguese>
+            <Czech>Úsťová rychlost</Czech>
         </Key>
     </Package>
 </Project>

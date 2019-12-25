@@ -13,6 +13,7 @@
             <Polish>ACE Samozapłon</Polish>
             <Russian>ACE Возгорание</Russian>
             <Portuguese>ACE Cook off</Portuguese>
+            <Czech>ACE Vznícení munice</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_name">
             <English>Damage handling and turret effects</English>
@@ -22,6 +23,7 @@
             <Portuguese>Manipulação de dano e efeitos de torre</Portuguese>
             <French>Dégâts et effets de tourelle</French>
             <Chinese>傷害控制及炮塔效果</Chinese>
+            <Czech>Poškodit ovládání a efekty věže</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_tooltip">
             <English>Changes damage handling for cook off and turret explosion effects</English>
@@ -31,6 +33,7 @@
             <Portuguese>Modifica a manipulação de dano para o cozinhamento de munição e efeitos de explosão da torre</Portuguese>
             <French>Modifie la gestion des dégâts pour l'auto-inflammation et les effets d'explosion de tourelle.</French>
             <Chinese>更改殉爆以及炮塔爆炸之傷害控制</Chinese>
+            <Czech>Změní poškození ovládání a efekty výbuchu veže</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <English>Wreck (Turret)</English>
@@ -59,6 +62,7 @@
             <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
             <Russian>Разрешить возгорание ящиков с боеприпасами</Russian>
             <Portuguese>Permitir cozinhar caixas de munição</Portuguese>
+            <Czech>Povolit vynícení munice v krabicích</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
@@ -72,6 +76,7 @@
             <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
             <Russian>Активирует возгорание ящиков с боеприпасами</Russian>
             <Portuguese>Permitir que caixas de munição cozinhem.</Portuguese>
+            <Czech>Zapíná vznícení munice v krabicích.</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable Ammunition cook off</English>
@@ -85,6 +90,7 @@
             <Chinesesimp>开启弹药殉爆效果</Chinesesimp>
             <Russian>Разрешить детонацию боекомплекта</Russian>
             <Portuguese>Permitir cozinhar munição</Portuguese>
+            <Czech>Povolit vznícení munice</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
@@ -98,6 +104,7 @@
             <Korean>쿡오프 현상을 활성화 합니다. 이것은 탄약에 불이 붙어있는 동안 주변에 발사체를 발사합니다.</Korean>
             <Russian>Активирует возгорание и детонацию боекомплекта в горящей технике</Russian>
             <Portuguese>Permite que a munição cozinhe. Dispara projéteis de munição enquanto o veículo está em chamas e tem munição.</Portuguese>
+            <Czech>Zapíná vznícení munice. Vystřeluje projektily po dobu kdy vozidlo hoří a má munici.</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammunition cook off duration</English>
@@ -111,6 +118,7 @@
             <Korean>쿡오프 지속 시간</Korean>
             <Russian>Длительность возгорания боеприпасов</Russian>
             <Portuguese>Duração do cozinhamento de munição</Portuguese>
+            <Czech>Doba trvání vznícení munice</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
@@ -124,6 +132,7 @@
             <Korean>쿡오프 지속 시간의 배수 [0 이면 비활성]</Korean>
             <Russian>Множитель длительности возгорания [0 - отключает возгорание боеприпасов]</Russian>
             <Portuguese>Multiplicação da duração do cozinhamento [0 faz com que o cozinhamento seja desativado]</Portuguese>
+            <Czech>Multiplikátor doby trvání vznícení munice [Nastavte 0 pro vypnutí vznícení munice]</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
             <English>Cook-off probability coefficient</English>
@@ -136,6 +145,7 @@
             <Polish>Współczynnik prawdopodobieństwa samozapłonu</Polish>
             <Russian>Коэффициент вероятности возгорания</Russian>
             <Portuguese>Probabilidade de Cozinhar</Portuguese>
+            <Czech>Koeficient pravděpodobnosti vznícení munice</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for cook-off probability. Higher value results in higher cook-off probability</English>
@@ -148,6 +158,7 @@
             <Polish>Mnożnik prawdopodobieństwa samozapłonu. Większa wartość oznacza większe prawdopodobieństwo samozapłonu</Polish>
             <Russian>Множитель коэффициента вероятности возгорания. Чем выше значение, тем выше вероятность.</Russian>
             <Portuguese>Multiplicador para a chance de cozinhamento. Valores mais altos aumentam as chances de ocorrer.</Portuguese>
+            <Czech>Multiplikátor pro pravděpodobnost vznícení munice. Vyšší hodnota znamená vyšší šanci vznícení munice.</Czech>
         </Key>
     </Package>
 </Project>
