@@ -16,6 +16,7 @@
             <Korean>지도</Korean>
             <Chinesesimp>地图</Chinesesimp>
             <Chinese>地圖</Chinese>
+            <Turkish>Harita</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination</English>
@@ -364,6 +365,7 @@
             <Korean>손전등</Korean>
             <Chinesesimp>手电筒</Chinesesimp>
             <Chinese>手電筒</Chinese>
+            <Turkish>Fenerler</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
@@ -379,6 +381,7 @@
             <Korean>야투경</Korean>
             <Chinesesimp>夜视镜</Chinesesimp>
             <Chinese>夜視鏡</Chinese>
+            <Turkish>NVG</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
@@ -394,6 +397,7 @@
             <Korean>켜기</Korean>
             <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟</Chinese>
+            <Turkish>Açık</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
@@ -455,6 +459,7 @@
             <Korean>%1 켜기</Korean>
             <Chinesesimp>开启%1</Chinesesimp>
             <Chinese>開啟%1</Chinese>
+            <Turkish>%1 'i aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_turnLightOff">
             <English>Turn Off %1</English>
@@ -471,6 +476,7 @@
             <Korean>%1 끄기</Korean>
             <Chinesesimp>关闭%1</Chinesesimp>
             <Chinese>關閉%1</Chinese>
+            <Turkish>%1 'i Kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>

@@ -522,7 +522,7 @@
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
             <Japanese>武器の扱い</Japanese>
-            <Chinese>需要放下武器</Chinese>
+            <Chinese>需要收起武器</Chinese>
             <French>Rengainer obligatoirement</French>
             <Czech>Vyžadováno schování zbraně</Czech>
         </Key>
@@ -536,28 +536,28 @@
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
             <Japanese>下げるか収める</Japanese>
-            <Chinese>放下或者放入武器套</Chinese>
+            <Chinese>放低或者收起</Chinese>
             <French>Abaisser ou rengainer</French>
             <Czech>Snížena nebo Schována</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
             <English>Lowered or Holstered (Except Exam)</English>
             <Japanese>下げるか収める (診断行動は除外)</Japanese>
-            <Chinese>放下或者放入武器套（除了診斷）</Chinese>
+            <Chinese>放低或者收起（除了診斷）</Chinese>
             <French>Abaisser ou rengainer (sauf examens)</French>
             <Czech>Snížena nebo Schována (kromě Diagnózy)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
             <English>Holstered only</English>
             <Japanese>収めた時のみ</Japanese>
-            <Chinese>只能放入武器套</Chinese>
+            <Chinese>只能收起</Chinese>
             <French>Rengainer seulement</French>
             <Czech>Pouze Schována</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
             <English>Holstered only (Except Exam)</English>
             <Japanese>収めた時のみ (診断行動は除外)</Japanese>
-            <Chinese>只能放入武器套（除了診斷）</Chinese>
+            <Chinese>只能收起（除了診斷）</Chinese>
             <French>Rengainer seulement (sauf examens)</French>
             <Czech>Pouze Schována (kromě Diagnózy)</Czech>
         </Key>
@@ -816,8 +816,8 @@
             <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Display">
-            <English>Packing Bandage</English>
-            <German>Mullbinde</German>
+            <English>Bandage (Packing)</English>
+            <German>Bandage (Mullbinde)</German>
             <Russian>Тампонирующая повязка</Russian>
             <Spanish>Vendaje compresivo</Spanish>
             <French>Bande compressive</French>
@@ -829,7 +829,7 @@
             <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
             <Chinesesimp>包扎绷带</Chinesesimp>
-            <Chinese>包紮繃帶</Chinese>
+            <Chinese>繃帶（包紮型）</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
@@ -877,7 +877,7 @@
             <Japanese>包帯 (伸縮)</Japanese>
             <Korean>붕대 (압박)</Korean>
             <Chinesesimp>弹性绷带</Chinesesimp>
-            <Chinese>彈性繃帶</Chinese>
+            <Chinese>繃帶（彈性型）</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Desc_Short">
             <English>Bandage kit, Elastic</English>
@@ -893,7 +893,7 @@
             <Japanese>包帯キット (伸縮)</Japanese>
             <Korean>붕대, 압박</Korean>
             <Chinesesimp>弹性绷带</Chinesesimp>
-            <Chinese>彈性繃帶</Chinese>
+            <Chinese>一個彈性繃帶包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Desc_Use">
             <English>Allows an even compression and extra support to the injured area.</English>
@@ -1228,7 +1228,7 @@
             <Japanese>血しょう IV (500ml)</Japanese>
             <Korean>혈장 IV (500ml)</Korean>
             <Chinesesimp>血浆 (500ml)</Chinesesimp>
-            <Chinese>血漿 (500毫升)</Chinese>
+            <Chinese>點滴 (血漿 500毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Plasma_IV_250">
             <English>Plasma IV (250ml)</English>
@@ -1244,7 +1244,7 @@
             <Japanese>血しょう IV (250ml)</Japanese>
             <Korean>혈장 IV (250ml)</Korean>
             <Chinesesimp>血浆 (250ml)</Chinesesimp>
-            <Chinese>血漿 (250毫升)</Chinese>
+            <Chinese>點滴 (血漿 250毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV">
             <English>Blood IV (1000ml)</English>
@@ -1260,7 +1260,7 @@
             <Japanese>血液 IV (1000ml)</Japanese>
             <Korean>혈액 IV (1000ml)</Korean>
             <Chinesesimp>血液 (1000ml)</Chinesesimp>
-            <Chinese>血液 (1000毫升)</Chinese>
+            <Chinese>點滴 (血液 1000毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Short">
             <English>Blood IV, for restoring a patients blood (keep cold)</English>
@@ -1308,7 +1308,7 @@
             <Japanese>血液 IV (500ml)</Japanese>
             <Korean>혈액 IV (500ml)</Korean>
             <Chinesesimp>血液 (500ml)</Chinesesimp>
-            <Chinese>血液 (500毫升)</Chinese>
+            <Chinese>點滴 (血液 500毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_250">
             <English>Blood IV (250ml)</English>
@@ -1324,7 +1324,7 @@
             <Japanese>血液 IV (250ml)</Japanese>
             <Korean>혈액 IV (250ml)</Korean>
             <Chinesesimp>血液 (250ml)</Chinesesimp>
-            <Chinese>血液 (250毫升)</Chinese>
+            <Chinese>點滴 (血液 250毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV">
             <English>Saline IV (1000ml)</English>
@@ -1340,7 +1340,7 @@
             <Japanese>生理食塩水 IV (1000ml)</Japanese>
             <Korean>생리식염수 IV (1000ml)</Korean>
             <Chinesesimp>生理食盐水 (1000ml)</Chinesesimp>
-            <Chinese>生理食鹽水 (1000毫升)</Chinese>
+            <Chinese>點滴 (食鹽水 1000毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_Desc_Short">
             <English>Saline IV, for restoring a patients blood</English>
@@ -1388,7 +1388,7 @@
             <Japanese>生理食塩水 IV (500ml)</Japanese>
             <Korean>생리식염수 IV (500ml)</Korean>
             <Chinesesimp>生理食盐水 (500ml)</Chinesesimp>
-            <Chinese>生理食鹽水 (500毫升)</Chinese>
+            <Chinese>點滴 (食鹽水 500毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_250">
             <English>Saline IV (250ml)</English>
@@ -1404,15 +1404,15 @@
             <Japanese>生理食塩水 IV (250ml)</Japanese>
             <Korean>생리식염수 IV (250ml)</Korean>
             <Chinesesimp>生理食盐水 (250ml)</Chinesesimp>
-            <Chinese>生理食鹽水 (250毫升)</Chinese>
+            <Chinese>點滴 (食鹽水 250毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Display">
-            <English>Basic Field Dressing (QuikClot)</English>
+            <English>Bandage (QuikClot)</English>
             <Russian>Первичный перевязочный пакет (QuikClot)</Russian>
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Pansement hémostatique (Quikclot)</French>
             <Polish>Opatrunek QuikClot ACS</Polish>
-            <German>Verbandpäckchen (QuikClot)</German>
+            <German>Bandage (QuikClot)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
@@ -1420,7 +1420,7 @@
             <Japanese>緊急圧迫止血包帯 (クイッククロット)</Japanese>
             <Korean>필드 드레싱 (퀵 클롯)</Korean>
             <Chinesesimp>基本战地包扎 (止血粉)</Chinesesimp>
-            <Chinese>基本戰地包紮 (止血粉)</Chinese>
+            <Chinese>繃帶 (止血粉)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Desc_Short">
             <English>QuikClot bandage</English>
@@ -2552,7 +2552,7 @@
             <Japanese>ほとんど呼吸をしていない</Japanese>
             <Korean>호흡이 없음</Korean>
             <Chinesesimp>快要没呼吸</Chinesesimp>
-            <Chinese>快要沒呼吸</Chinese>
+            <Chinese>呼吸極弱</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_MildPain">
             <English>In mild pain</English>
@@ -3244,7 +3244,7 @@
             <Japanese>彼には痛みがあるようだ</Japanese>
             <Korean>통증이 있다</Korean>
             <Chinesesimp>他感到疼痛</Chinesesimp>
-            <Chinese>他感到疼痛</Chinese>
+            <Chinese>他感到疼痛中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_noPain">
             <English>He is not in pain</English>
@@ -3260,7 +3260,7 @@
             <Japanese>彼には痛みがないようだ</Japanese>
             <Korean>통증이 없다</Korean>
             <Chinesesimp>他不会疼痛</Chinesesimp>
-            <Chinese>他不會疼痛</Chinese>
+            <Chinese>他沒感到疼痛中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandaged">
             <English>Bandaged</English>
