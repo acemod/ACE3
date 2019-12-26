@@ -12,6 +12,7 @@
             <Polish>Ogólny</Polish>
             <Russian>Общий</Russian>
             <Portuguese>Comum</Portuguese>
+            <Spanish>Común</Spanish>
             <Czech>Obecné</Czech>
             <French>Commun</French>
         </Key>
@@ -457,6 +458,7 @@
             <Polish>Sprawdź akcję PBO</Polish>
             <Russian>Действие при проверке PBO</Russian>
             <Portuguese>Ação de Checar PBO</Portuguese>
+            <Spanish>Comprobar PBO</Spanish>
             <French>Action à la vérification des PBOs</French>
             <Czech>Zkontrolovat PBO</Czech>
         </Key>
@@ -477,6 +479,7 @@
             <Polish>Sprawdź wszystkie PBO</Polish>
             <Russian>Проверять все PBO</Russian>
             <Portuguese>Checar Todos os PBOs</Portuguese>
+            <Spanish>Comprobar todos los PBO</Spanish>
             <French>Vérifier tous les PBOs</French>
             <Czech>Zkontrolovat všechny PBO</Czech>
         </Key>
@@ -497,6 +500,7 @@
             <Polish>Sprawdź białą listę PBO</Polish>
             <Russian>Белый список для проверки PBO</Russian>
             <Portuguese>Lista Branca de PBO</Portuguese>
+            <Spanish>Comprobar lista blanca de PBOs</Spanish>
             <French>Vérifier les PBOs en liste blanche</French>
             <Czech>Zkontrolovat PBO proti whitelistu</Czech>
         </Key>
@@ -985,6 +989,7 @@
             <Japanese>常に</Japanese>
             <Russian>Всегда</Russian>
             <Portuguese>Sempre</Portuguese>
+            <Spanish>Siempre</Spanish>
             <French>Toujours</French>
             <Chinese>一直</Chinese>
             <Czech>Vždy</Czech>
@@ -1072,6 +1077,7 @@
             <German>Bestätigen</German>
             <Russian>Подтвердить</Russian>
             <Portuguese>Confirmar</Portuguese>
+            <Spanish>Confirmar</Spanish>
             <French>Confirmer</French>
             <Chinese>確認</Chinese>
             <Czech>Potvrdit</Czech>
@@ -1082,6 +1088,7 @@
             <German>Nie</German>
             <Russian>Никогда</Russian>
             <Portuguese>Nunca</Portuguese>
+            <Spanish>Nunca</Spanish>
             <French>Jamais</French>
             <Chinese>從不</Chinese>
             <Czech>Nikdy</Czech>
