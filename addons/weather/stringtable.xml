@@ -169,9 +169,5 @@
             <Japanese>気温の確認動作を表示</Japanese>
             <French>Afficher l'interaction "Vérifier la température"</French>
         </Key>
-        <Key ID="STR_ACE_Weather_showCheckAirTemperature_Description">
-            <English>Show Check Air Temperature Action on the self interaction menu.</English>
-            <French>Affiche l'action "Vérifier la température" dans le menu d'interaction personnel.</French>
-        </Key>
     </Package>
 </Project>
