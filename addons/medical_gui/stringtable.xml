@@ -869,9 +869,7 @@
             <Chinese>已使用固定板</Chinese>
             <Czech>Dlaha aplikována</Czech>
         </Key>
-        <!--
-            Strings above match Blood2 but seem to differ in some languages, determine which is best to use
-        -->
+        <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
             <English>Lost some blood</English>
             <German>Hat etwas Blut verloren</German>
