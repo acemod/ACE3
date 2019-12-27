@@ -116,7 +116,7 @@ def check_stringtable(filepath):
                 errors += 1
 
     # Check whitespace for tabs and correct number of indenting spaces
-    with open(filepath, "r", encoding = "latin-1") as file:
+    with open(filepath, "r", encoding = "utf-8") as file:
        spacing_depth = 0
 
        for line_number, line in enumerate(file, 1):
