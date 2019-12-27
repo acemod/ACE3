@@ -467,6 +467,7 @@
             <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
             <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
+            <Polish>Określa akcję, która ma być podjęta, jeśli gracz nie ma właściwych PBO.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -488,6 +489,7 @@
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
+            <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>

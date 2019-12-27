@@ -7,72 +7,84 @@
             <Chinese>#00 鹿彈</Chinese>
             <Japanese>#00 バックショット</Japanese>
             <Czech>#00 Broky velké</Czech>
+            <Polish>#00 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
             <Chinese>#00 鹿彈</Chinese>
             <Japanese>#00 バックショット</Japanese>
             <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
+            <Polish>#00 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
             <Chinese>#0 鹿彈</Chinese>
             <Japanese>#0 バックショット</Japanese>
             <Czech>#0 Broky velké</Czech>
+            <Polish>#0 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
             <Chinese>#0 鹿彈</Chinese>
             <Japanese>#0 バックショット</Japanese>
             <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
+            <Polish>#0 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
             <Chinese>#1 鹿彈</Chinese>
             <Japanese>#1 バックショット</Japanese>
             <Czech>#1 Broky velké</Czech>
+            <Polish>#1 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
             <Chinese>#1 鹿彈</Chinese>
             <Japanese>#1 バックショット</Japanese>
             <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
+            <Polish>#1 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
             <Chinese>#2 鹿彈</Chinese>
             <Japanese>#2 バックショット</Japanese>
             <Czech>#2 Broky velké</Czech>
+            <Polish>#2 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
             <Chinese>#2 鹿彈</Chinese>
             <Japanese>#2 バックショット</Japanese>
             <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
+            <Polish>#2 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
             <Chinese>#3 鹿彈</Chinese>
             <Japanese>#3 バックショット</Japanese>
             <Czech>#3 Broky velké</Czech>
+            <Polish>#3 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
             <Chinese>#3 鹿彈</Chinese>
             <Japanese>#3 バックショット</Japanese>
             <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
+            <Polish>#3 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
             <Chinese>#4 鹿彈</Chinese>
             <Japanese>#4 バックショット</Japanese>
             <Czech>#4 Broky velké</Czech>
+            <Polish>#4 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
             <Chinese>#4 鹿彈</Chinese>
             <Japanese>#4 バックショット</Japanese>
             <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
+            <Polish>#4 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>

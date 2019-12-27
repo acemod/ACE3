@@ -230,6 +230,7 @@
             <Czech>Automaticky schovat lištu výdrže</Czech>
             <French>Fondu automatique de la barre d'endurance</French>
             <Japanese>自動的にスタミナバーを非表示</Japanese>
+            <Polish>Chowaj pasek wytrzymałości automatycznie</Polish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
@@ -238,6 +239,7 @@
             <Czech>Upravuje průhlednost lišty v závislosti na současném stavu výdrže</Czech>
             <French>Règle la transparence de la barre en fonction de l'état d'endurance.</French>
             <Japanese>スタミナの状態に応じて、自動的にバーの透明度を調整します。</Japanese>
+            <Polish>Dostosowuje przezroczystość paska na podstawie stanu wytrzymałości.</Polish>
         </Key>
     </Package>
 </Project>
