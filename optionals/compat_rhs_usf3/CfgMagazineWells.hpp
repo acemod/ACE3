@@ -5,4 +5,7 @@ class CfgMagazineWells {
     class ace_hellfire_N {
         ADDON[] = {GVAR(pylon_mag_2rnd_hellfire_n)};
     };
+    class ace_hellfire_L {
+        ADDON[] = {GVAR(pylon_mag_2rnd_hellfire_L)};
+    };
 };
