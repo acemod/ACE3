@@ -19,9 +19,8 @@ params ["", "_args", "_seekerStateParams"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["_target","","","",""];
-_stateParams params ["", "_seekerStateParams", "", ""];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
-_seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownSpeed", "_lastTimeSeen"];
+_seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownVelocity", "_lastTimeSeen"];
 
 if (_isActive || { !_shooterHasRadar } || { CBA_missionTime >= _timeWhenActive }) then {
     if !(_isActive) then {
@@ -48,12 +47,13 @@ if (_isActive || { !_shooterHasRadar } || { CBA_missionTime >= _timeWhenActive }
         private _a1 = abs _projPitch;
         private _a2 = 180 - ((_seekerAngle / 2) + _a1);
         private _seekerBaseRadiusAtGround = ACTIVE_RADAR_MINIMUM_SCAN_AREA max (_distanceToExpectedTarget / sin(_a2) * sin(_seekerAngle / 2));
-        private _seekerBaseRadiusAdjusted = linearConversion [0, _seekerBaseRadiusAtGround, (CBA_missionTime - _lastTimeSeen) * _lastKnownSpeed, ACTIVE_RADAR_MINIMUM_SCAN_AREA, _seekerBaseRadiusAtGround, false];
+        private _seekerBaseRadiusAdjusted = linearConversion [0, _seekerBaseRadiusAtGround, (CBA_missionTime - _lastTimeSeen) * vectorMagnitude _lastKnownVelocity, ACTIVE_RADAR_MINIMUM_SCAN_AREA, _seekerBaseRadiusAtGround, false];
         // Look in front of seeker for any targets
         private _nearestObjects = nearestObjects [_expectedTargetPos, ["AllVehicles"], _seekerBaseRadiusAdjusted, false];
 
         _nearestObjects = _nearestObjects apply {
-            if ([_projectile, getPosASL _x, _seekerAngle] call ace_missileguidance_fnc_checkSeekerAngle && { [_projectile, _x, false] call ace_missileguidance_fnc_checkLOS }) then {
+            // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
+            if ([_projectile, getPosASL _x, _seekerAngle] call ace_missileguidance_fnc_checkSeekerAngle && { ([_projectile, _x, true] call ace_missileguidance_fnc_checkLOS) || { ([_projectile, _x, false] call ace_missileguidance_fnc_checkLOS) } }) then {
                 _x
             } else {
                 objNull
@@ -81,7 +81,8 @@ if (_isActive || { !_shooterHasRadar } || { CBA_missionTime >= _timeWhenActive }
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
     private _remoteTargets = listRemoteTargets side _shooter;
     if ((_remoteTargets findIf { (_target in _x) && (_x#1 > 0) }) < 0) then {
-        if (!isVehicleRadarOn vehicle _shooter || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, false] call ace_missileguidance_fnc_checkLOS) }) exitWith {
+        // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
+        if (!isVehicleRadarOn vehicle _shooter || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, true] call ace_missileguidance_fnc_checkLOS) && { !([vehicle _shooter, _target, false] call ace_missileguidance_fnc_checkLOS) } }) exitWith {
             _seekerStateParams set [0, true];
             _expectedTargetPos
         };
@@ -94,7 +95,7 @@ if !(isNull _target) then {
     _expectedTargetPos = _targetAdjustedPos;
 
     _seekerStateParams set [3, _expectedTargetPos];
-    _seekerStateParams set [7, speed _target];
+    _seekerStateParams set [7, velocity _target];
     _seekerStateParams set [8, CBA_missionTime];
 };
 

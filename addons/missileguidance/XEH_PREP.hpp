@@ -40,4 +40,4 @@ PREP(wire_onFired);
 
 // Seeker OnFired
 PREP(SACLOS_onFired);
-PREP(arh_onFired);
+PREP(ahr_onFired);
