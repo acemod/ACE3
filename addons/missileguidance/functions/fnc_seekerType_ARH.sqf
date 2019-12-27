@@ -81,17 +81,9 @@ if (_isActive || { !_shooterHasRadar } || { CBA_missionTime >= _timeWhenActive }
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
     private _remoteTargets = listRemoteTargets side _shooter;
     if ((_remoteTargets findIf { (_target in _x) && (_x#1 > 0) }) < 0) then {
-        if (!isVehicleRadarOn vehicle _shooter || { !alive vehicle _shooter }) exitWith {
+        if (!isVehicleRadarOn vehicle _shooter || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, false] call ace_missileguidance_fnc_checkLOS) }) exitWith {
             _seekerStateParams set [0, true];
             _expectedTargetPos
-        };
-        
-        // try to relock if we lost it
-        if (cursorTarget != _target || { !([vehicle _shooter, _target, false] call ace_missileguidance_fnc_checkLOS) }) then {
-            // the player broke lock or they switched target
-            _target = objNull;
-            if (isNull cursorTarget || { !(cursorTarget isKindOf "AllVehicles") }) exitWith { _expectedTargetPos };
-            _target = cursorTarget;
         };
     };
 };
