@@ -84,4 +84,43 @@ class CfgMagazines {
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
+    
+    // Lima - tandem shaped charge HEAT (anti-tank) Fire and Forget Active Radar Homing
+    class 6Rnd_ACE_Hellfire_AGM114L: 6Rnd_ACE_Hellfire_AGM114K { // Old style vehicle magazine
+        count = 6;
+        ammo = "ACE_Hellfire_AGM114L";
+        displayName = "AGM-114L [ACE]";
+        displayNameShort = "AGM-114L";
+        descriptionShort = "AGM-114L";
+    };
+
+    // 1.70 pylon magazines:
+    class PylonMissile_1Rnd_ACE_Hellfire_AGM114L: PylonMissile_1Rnd_ACE_Hellfire_AGM114K { // Bare missle
+        displayName = "1x AGM-114L [ACE]";
+        displayNameShort = "AGM-114L";
+        descriptionShort = "AGM-114L";
+        ammo = "ACE_Hellfire_AGM114L";
+        pylonWeapon = QGVAR(launcher_L);
+    };
+    class PylonRack_1Rnd_ACE_Hellfire_AGM114L: PylonRack_1Rnd_ACE_Hellfire_AGM114K { // 1x Launcher Support Rack
+        displayName = "1x AGM-114L [ACE]";
+        displayNameShort = "AGM-114L";
+        descriptionShort = "AGM-114L";
+        ammo = "ACE_Hellfire_AGM114L";
+        pylonWeapon = QGVAR(launcher_L);
+    };
+    class PylonRack_3Rnd_ACE_Hellfire_AGM114L: PylonRack_3Rnd_ACE_Hellfire_AGM114K { // 3x Launcher Support Rack
+        displayName = "3x AGM-114L [ACE]";
+        displayNameShort = "AGM-114L";
+        descriptionShort = "AGM-114L";
+        ammo = "ACE_Hellfire_AGM114L";
+        pylonWeapon = QGVAR(launcher_L);
+    };
+    class PylonRack_4Rnd_ACE_Hellfire_AGM114L: PylonRack_4Rnd_ACE_Hellfire_AGM114K { // 4x Launcher Support Rack
+        displayName = "4x AGM-114L [ACE]";
+        displayNameShort = "AGM-114L";
+        descriptionShort = "AGM-114L";
+        ammo = "ACE_Hellfire_AGM114L";
+        pylonWeapon = QGVAR(launcher_L);
+    };
 };
