@@ -34,7 +34,7 @@ class CfgWeapons {
         displayName = "AGM-114L Hellfire ""Longbow""";
         magazines[] = {"6Rnd_ACE_Hellfire_AGM114L", "PylonMissile_1Rnd_ACE_Hellfire_AGM114L", "PylonRack_1Rnd_ACE_Hellfire_AGM114L", "PylonRack_3Rnd_ACE_Hellfire_AGM114L", "PylonRack_4Rnd_ACE_Hellfire_AGM114L"};
         magazineWell[] += {QGVAR(L)};
-        EGVAR(laser,showHud) = 1;
+        EGVAR(laser,showHud) = 1; // Just to show the attack profile
         EGVAR(laser,canSelect) = 0;
         class StandardSound {
             begin1[] = {"A3\Sounds_F\weapons\Rockets\missile_1",1.12202,1.3,1000};

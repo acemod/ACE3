@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Sets up SACLOS state arrays (called from missileGuidance's onFired).
+ * Sets up Active Radar state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
  * Guidance Arg Array <ARRAY>
@@ -10,14 +10,15 @@
  * None
  *
  * Example:
- * [] call ace_missileguidance_fnc_SACLOS_onFired
+ * [] call ace_missileguidance_fnc_ahr_onFired
  *
  * Public: No
  */
 params ["_firedEH", "_launchParams", "", "", "_stateParams"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 _stateParams params ["", "_seekerStateParams"];
-_launchParams params ["_target"];
+_launchParams params ["","_targetLaunchParams"];
+_targetLaunchParams params ["_target"];
 
 _target = missileTarget _projectile;
 if (isNull _target && isVehicleRadarOn vehicle _shooter) then {

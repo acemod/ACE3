@@ -22,7 +22,7 @@ _launchParams params ["_target","","","",""];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
 _seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownVelocity", "_lastTimeSeen"];
 
-if (_isActive || { !_shooterHasRadar } || { CBA_missionTime >= _timeWhenActive }) then {
+if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     if !(_isActive) then {
         _seekerStateParams set [0, true];
     };
@@ -33,6 +33,7 @@ if (_isActive || { !_shooterHasRadar } || { CBA_missionTime >= _timeWhenActive }
     // Internal radar homing
     // For performance reasons only poll for target every so often instead of each frame
     if ((_lastTargetPollTime + ACTIVE_RADAR_POLL_FREQUENCY) - CBA_missionTime < 0) then {
+    
         _target = objNull;
         _lastTargetPollTime = CBA_missionTime;
         _seekerStateParams set [4, _lastTargetPollTime];
@@ -53,7 +54,7 @@ if (_isActive || { !_shooterHasRadar } || { CBA_missionTime >= _timeWhenActive }
 
         _nearestObjects = _nearestObjects apply {
             // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
-            if ([_projectile, getPosASL _x, _seekerAngle] call ace_missileguidance_fnc_checkSeekerAngle && { ([_projectile, _x, true] call ace_missileguidance_fnc_checkLOS) || { ([_projectile, _x, false] call ace_missileguidance_fnc_checkLOS) } }) then {
+            if ([_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && { ([_projectile, _x, true] call FUNC(checkLOS)) || { ([_projectile, _x, false] call FUNC(checkLOS)) } }) then {
                 _x
             } else {
                 objNull
@@ -77,12 +78,15 @@ if (_isActive || { !_shooterHasRadar } || { CBA_missionTime >= _timeWhenActive }
 
     _projectile setMissileTarget _target;
 } else {
+    #ifdef DRAW_GUIDANCE_INFO
+    _seekerTypeName = "AHR - EXT";
+    #endif
     // External radar homing
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
     private _remoteTargets = listRemoteTargets side _shooter;
     if ((_remoteTargets findIf { (_target in _x) && (_x#1 > 0) }) < 0) then {
         // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
-        if (!isVehicleRadarOn vehicle _shooter || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, true] call ace_missileguidance_fnc_checkLOS) && { !([vehicle _shooter, _target, false] call ace_missileguidance_fnc_checkLOS) } }) exitWith {
+        if (!_shooterHasRadar || { !isVehicleRadarOn vehicle _shooter } || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, true] call FUNC(checkLOS)) && { !([vehicle _shooter, _target, false] call FUNC(checkLOS)) } }) exitWith {
             _seekerStateParams set [0, true];
             _expectedTargetPos
         };
