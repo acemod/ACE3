@@ -1346,5 +1346,9 @@
             <Chinesesimp>玩家与AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
         </Key>
+        <Key ID="STR_ACE_Common_showActionInSelfInteraction">
+            <English>Show the action in the self-interaction menu</English>
+            <French>Affiche l'action dans le menu d'interaction personnel.</French>
+        </Key>
     </Package>
 </Project>
