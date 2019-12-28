@@ -69,4 +69,5 @@ _seekerStateParams set [5, _shooterHasActiveRadar];
 _seekerStateParams set [6, false];
 _seekerStateParams set [7, [0, 0, 0]];
 _seekerStateParams set [8, CBA_missionTime];
+_seekerStateParams set [9, isNull _target];
 
