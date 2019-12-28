@@ -283,102 +283,119 @@
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Grün&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Зеленый&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: Mk200</Russian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: Mk200</Czech>
+                <Polish>Kaliber: 6.5x39 mm Smugowa - Zielona&lt;br /&gt;Sztuk: 200&lt;br /&gt;Używana w: Mk200</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red">
                 <English>6.5 mm 200Rnd Belt Case Tracer (Red)</English>
                 <German>6,5 mm 200-Schuss-Gurtkiste Leuchtspur (rot)</German>
                 <Russian>Короб 200 патр. 6.5 мм трассирующих (Красный)</Russian>
                 <Czech>6.5 mm 200 ranný pás, stopovka (Červená)</Czech>
+                <Polish>6.5 mm Magazynek pudełkowy 200szt. Smugowa (Czerwona)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red_description">
                 <English>Caliber: 6.5x39 mm Tracer - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Rot&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Красный&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: Mk200</Russian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Červená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: Mk200</Czech>
+                <Polish>Kaliber: 6.5x39 mm Smugowa - Czerwona&lt;br /&gt;Sztuk: 200&lt;br /&gt;Używana w: Mk200</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green">
                 <English>7.62 mm 20Rnd Tracer (Green) Mag</English>
                 <German>7,62 mm 20-Schuss-Magazin Leuchtspur (Grün)</German>
                 <Russian>Магазин 20 патр. 7.62 мм трассирующих (Зеленый)</Russian>
                 <Czech>7.62 mm 20 ranný zásobník, stopovka (Zelená)</Czech>
+                <Polish>7.62 mm Magazynek 20szt. Smugowa (Zielona)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green_description">
                 <English>Caliber: 7.62x51 mm NATO Tracer - Green&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
                 <German>Kaliber: 7,62x51 mm NATO Leuchtspur - grün&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</German>
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Зеленый&lt;br /&gt;Патронов: 20&lt;br /&gt;Используется в:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Russian>
                 <Czech>Kalibr: 7.62×51 mm NATO Stopovka - Zelená&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použito v: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Czech>
+                <Polish>Kaliber: 7.62x51 mm NATO Smugowa - Zielona&lt;br /&gt;Sztuk: 20&lt;br /&gt;Używana w:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow">
                 <English>7.62 mm 20Rnd Tracer (Yellow) Mag</English>
                 <German>7,62 mm 20-Schuss-Magazin Leuchtspur (Gelb)</German>
                 <Russian>Магазин 20 патр. 7.62 мм трассирующих (Желтый)</Russian>
                 <Czech>7.62 mm 20 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek 20szt. Smugowa (Żółta)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow_description">
                 <English>Caliber: 7.62x51 mm NATO Tracer - Yellow&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
                 <German>Kaliber: 7,62x51 mm NATO Leuchtspur - gelb&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</German>
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Желтый&lt;br /&gt;Патронов: 20&lt;br /&gt;Используется в:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Russian>
                 <Czech>Kalibr: 7.62×51 mm NATO Stopovka - Žlutá&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použito v: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Czech>
+                <Polish>Kaliber: 7.62x51 mm NATO Smugowa - Żółta&lt;br /&gt;Sztuk: 20&lt;br /&gt;Używana w:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_red">
                 <English>7.62mm 150Rnd Box Mixed (Red)</English>
                 <German>7.62mm 150 Schuss Kiste Gemischt (rot)</German>
                 <Russian>Короб 150 патр. 7.62 мм TE4 (Красный)</Russian>
                 <Czech>7.62 mm 150 ranný pás, částečná stopovka (Červená)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Mieszana (Czerwona)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_yellow">
                 <English>7.62mm 150Rnd Box Mixed (Yellow)</English>
                 <German>7.62mm 150 Schuss Kiste Gemischt (gelb)</German>
                 <Russian>Короб 150 патр. 7.62 мм TE4 (Желтый)</Russian>
                 <Czech>7.62 mm 150 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Mieszana (Żółta)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red">
                 <English>7.62mm 150Rnd Box Tracer (Red)</English>
                 <German>7.62mm 150 Schuss Kiste Leuchtspur (rot)</German>
                 <Russian>Короб 150 патр. 7.62 мм трассирующих (Красный)</Russian>
                 <Czech>7.62 mm 150 ranný pás, stopovka (Červená)</Czech>
+                <Polish>7.62mm Magazynek pudełkowy 150szt. Smugowa (Czerwona)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red_description">
                 <English>Caliber: 7.62x54 mm Tracer - Red&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
                 <German>Kaliber: 7.62x54 mm Leuchtspur - Rot&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Красный&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: Zafir</Russian>
                 <Czech>Kalibr: 7.62×54 mm Stopovka - Červená&lt;br /&gt;Nábojů: 150&lt;br /&gt;Použito v: Zafir</Czech>
+                <Polish>Kaliber: 7.62x54 mm Smugowa - Czerwona&lt;br /&gt;Sztuk: 150&lt;br /&gt;Używana w: Zafir</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow">
                 <English>7.62mm 150Rnd Box Tracer (Yellow)</English>
                 <German>7.62mm 150 Schuss Kiste Leuchtspur (Rot)</German>
                 <Russian>Короб 150 патр. 7.62 мм трассирующих (Желтый)</Russian>
                 <Czech>7.62 mm 150 ranný pás, stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Smugowa (Żółta)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow_description">
                 <English>Caliber: 7.62x54 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
                 <German>Kaliber: 7.62x54 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Желтый&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: Zafir</Russian>
                 <Czech>Kalibr: 7.62×54 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 150&lt;br /&gt;Použito v: Zafir</Czech>
+                <Polish>Kaliber: 7.62x54 mm Smugowa - Żółta&lt;br /&gt;Sztuk: 150&lt;br /&gt;Używana w: Zafir</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_yellow">
                 <English>9.3mm 150Rnd Belt Mixed (Yellow)</English>
                 <German>9.3mm 150 Schuss Gurt gemischt (Gelb)</German>
                 <Russian>Лента 150 патр. 9.3 мм TE4 (Желтый)</Russian>
                 <Czech>9.3 mm 150 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>9.3 mm Taśma 150szt. Mieszana (Żółta)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_red">
                 <English>9.3mm 150Rnd Belt Mixed (Red)</English>
                 <German>9.3mm 150 Schuss Gurt gemischt (Rot)</German>
                 <Russian>Лента 150 патр. 9.3 мм TE4 (Красный)</Russian>
                 <Czech>9.3 mm 150 ranný pás, částečná stopovka (Červená)</Czech>
+                <Polish>9.3 mm Taśma 150szt. Mieszana (Czerwona)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_yellow">
                 <English>.338 NM 130Rnd Belt Mixed (Yellow)</English>
                 <German>.338 NM 130 Schuss Gurt gemischt (gelb)</German>
                 <Russian>Лента 130 патр. .338 NM TE4 (Желтый)</Russian>
                 <Czech>.338 NM 130 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>.338 NM Taśma 130szt. Mieszana (Żółta)</Polish>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_green">
                 <English>.338 NM 130Rnd Belt Mixed (Green)</English>
                 <German>.338 NM 130 Schuss Gurt gemischt (grün)</German>
                 <Russian>Лента 130 патр. .338 NM TE4 (Зеленый)</Russian>
                 <Czech>.338 NM 130 ranný pás, částečná stopovka (Zelená)</Czech>
+                <Polish>.338 NM Taśma 130szt. Mieszana (Zielona)</Polish>
             </Key>
         </Container>
     </Package>

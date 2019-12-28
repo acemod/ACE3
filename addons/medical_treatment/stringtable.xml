@@ -41,7 +41,7 @@
             <Portuguese>Ativa as opções de Verificar Pulso, Verificar Pressão Sanguínea e Verificar Resposta, ao invés do diagnóstico geral.</Portuguese>
             <Chinese>啟用檢查脈搏、血壓以及病患反應的動作而非一般的診斷動作。\n當停用時，CPR只會在需要時出現。\n當這個選項啟用時必須診斷病患是否無意識或者心搏停止。</Chinese>
             <Czech>Povoluje kontrolu srdečního tepu, krevního tlaku a reakce pacienta namísto univerzální diagnózy.\nKdyž je tato možnost vypnuta, CPR akce bude dostupná pouze pokud je vhodné ji provést.\nAkce které tato možnost zapíná jsou nutné k určení zda je pacient v bezvědomí nebo má srdeční zástavu.</Czech>
-            <Polish>Włącza opcje sprawdzania Pulsu, Ciśnienia Tętniczego Krwi i Reakcje Na Ból, zamiast bardziej ogólnej akcji "Diagnozuj".\n Po wyłączeniu tej opcji akcja RKO będzie wyświetlana tylko wtedy, gdy jej wykonanie będzie odpowiednie.\n Opcja, która włącza to ustawienie jest potrzebna do ustalenia, czy osoba jest nieprzytomna lub ma zatrzymanie krążenia.</Polish>
+            <Polish>Włącza opcje sprawdzania Pulsu, Ciśnienia Tętniczego Krwi i Reakcje Na Ból, zamiast bardziej ogólnej akcji Diagnozuj.\n Po wyłączeniu tej opcji akcja RKO będzie wyświetlana tylko wtedy, gdy jej wykonanie będzie odpowiednie.\n Opcja, która włącza to ustawienie jest potrzebna do ustalenia, czy osoba jest nieprzytomna lub ma zatrzymanie krążenia.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -82,7 +82,7 @@
             <Portuguese>Permite que ferimentos atados possam reabrir. Requer Ataduras Avançadas para funcionar.</Portuguese>
             <Chinese>啟用包紮過的傷口是否會再度裂開。需要啟用「進階包紮」之功能。</Chinese>
             <Czech>Povoluje znovuotevírání obvázaných zranění. Vyžaduje zapnuté Pokročilé obvazy.</Czech>
-            <Polish>Umożliwia ponowne otwarcie zabandażowanych ran. Wymaga włączenia opcji "Zaawansowane Bandaże".</Polish>
+            <Polish>Umożliwia ponowne otwarcie się zabandażowanych ran. Wymaga włączenia opcji Zaawansowane Bandaże.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -266,7 +266,7 @@
             <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
             <Chinese>要受過何種程度的醫療訓練才可以使用個人急救包</Chinese>
             <Czech>Úroveň výcviku pro použití osobní lékárničky (PAK).</Czech>
-            <Polish>Poziom wyszkolenia wymagany do użycia apteczek osobistych.</Polish>
+            <Polish>Poziom wyszkolenia wymagany do korzystania z apteczek osobistych.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
             <English>Locations PAK</English>
@@ -312,7 +312,7 @@
             <Portuguese>Controla se o KPS deve ser descartado/consumido após o uso.</Portuguese>
             <Chinese>設定個人急救包是否為消耗品</Chinese>
             <Czech>Nastavuje zda má být osobní lékárnička (PAK) spotřebována po použití.</Czech>
-            <Polish>Kontroluje, czy apteczka osobista powinien być wykorzystany po użyciu.</Polish>
+            <Polish>Kontroluje, czy apteczka osobista powinna być stracona po użyciu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -352,7 +352,7 @@
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
             <Czech>Úroveň výcviku pro použití sešívací sady.</Czech>
-            <Polish>Poziom wyszkolenia wymagany do użycia Zestawu Chirurgicznego.</Polish>
+            <Polish>Poziom wyszkolenia wymagany do korzystania z Zestawu Chirurgicznego.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
@@ -392,7 +392,7 @@
             <Portuguese>Controla se o Kit Cirúrgico deve ser descartado/consumido após o uso.</Portuguese>
             <Chinese>設定手術包是否為消耗品</Chinese>
             <Czech>Nastavuje </Czech>
-            <Polish>Kontroluje, czy Zestaw Chirurgiczny powinien być wykorzystany po użyciu.</Polish>
+            <Polish>Kontroluje, czy Zestaw Chirurgiczny powinien być stracony po użyciu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
@@ -578,7 +578,7 @@
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
             <French>Définit si les armes doivent être rengainées ou abaissées avant de pouvoir effectuer des actes médicaux.\nLes options "sauf examens" autorisent les examens (vérification du pouls, de la tension artérielle, de l'état de conscience) en toutes circonstances.</French>
             <Czech>Nastavuje zda musí být zbraň schovaná/snížená pro provádění zdravotnických úkonů.\nKromě Diagnózy - Umožňuje diagnostické akce (kontrola srdečního tepu, tlaku krve a reakci pacienta) vždy bez ohledu na nastavení schování zbraně.</Czech>
-            <Polish>Kontroluje, czy broń musi być schowana/opuszczona w celu wykonania leczenia pacjenta.\n Za wyjątkiem diagnozowania - umożliwia wykonywanie czynności kontrolnych (sprawdzanie tętna, ciśnienia krwi, reakcji) przez cały czas, niezależnie od ustawienia "Wymagana broń w kaburze".</Polish>
+            <Polish>Kontroluje, czy broń musi być schowana/opuszczona w celu wykonania leczenia pacjenta.\n Za wyjątkiem diagnozowania - umożliwia wykonywanie czynności kontrolnych (sprawdzanie tętna, ciśnienia krwi, reakcji) przez cały czas, niezależnie od ustawienia Wymagana broń w kaburze.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
@@ -968,7 +968,7 @@
             <Russian>Жгут</Russian>
             <Spanish>Torniquete (CAT)</Spanish>
             <French>Garrot (CAT)</French>
-            <Polish>Staza (typ. CAT)</Polish>
+            <Polish>Staza taktyczna (typu CAT)</Polish>
             <Czech>Škrtidlo (CAT)</Czech>
             <Hungarian>Érszorító (CAT)</Hungarian>
             <Italian>Laccio emostatico (CAT)</Italian>

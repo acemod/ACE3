@@ -511,6 +511,7 @@
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Chinese>定義哪些插件是允許使用的。</Chinese>
             <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
+            <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -995,6 +996,7 @@
             <French>Toujours</French>
             <Chinese>一直</Chinese>
             <Czech>Vždy</Czech>
+            <Polish>Zawsze</Polish>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1083,6 +1085,7 @@
             <French>Confirmer</French>
             <Chinese>確認</Chinese>
             <Czech>Potvrdit</Czech>
+            <Polish>Potwierdź</Polish>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1094,6 +1097,7 @@
             <French>Jamais</French>
             <Chinese>從不</Chinese>
             <Czech>Nikdy</Czech>
+            <Polish>Nigdy</Polish>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>

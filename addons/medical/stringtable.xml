@@ -26,6 +26,7 @@
             <Portuguese>Chance de recuperar consciência</Portuguese>
             <Chinese>從無意識中甦醒機率</Chinese>
             <Czech>Pravděpodobnost probuzení se z bezvědomí</Czech>
+            <Polish>Szansa na wybudzenie nieprzytomnego</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
@@ -36,6 +37,7 @@
             <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
             <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
             <Czech>Pravděpodobnost, že se jednotka se stabilními životními známkami probudí z bezvědomí (zkoušeno každých 15 vteřin).</Czech>
+            <Polish>Prawdopodobieństwo, że jednostka ze stabilnymi parametrami życiowymi obudzi się z nieprzytomności (sprawdzane co 15 sekund).</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Increases Wake Up Chance</English>
@@ -43,6 +45,7 @@
             <Chinese>腎上腺素甦醒機率增加</Chinese>
             <French>L'épinéphrine augmente les chances de réveil</French>
             <Czech>Epinefrin zvyšuje šanci na probuzení</Czech>
+            <Polish>Szansa na wybudzenie po użyciu Epinefryny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -50,6 +53,7 @@
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
             <French>Augmente la probabilité qu'un patient inconscient se réveille spontanément lorsqu'il a de l'épinéphrine dans son système sanguin.</French>
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
+            <Polish>Zwiększa częstotliwość spontanicznych wybudzeń, gdy pacjent ma epinefrynę w swoim organizmie. </Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -59,6 +63,7 @@
             <Portuguese>Mancando</Portuguese>
             <Chinese>跛腳</Chinese>
             <Czech>Kulhání</Czech>
+            <Polish>Kuśtykanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -66,6 +71,7 @@
             <Chinese>控制裂開或者已包紮傷口是否會讓人跛腳。</Chinese>
             <French>Permet de définir si les plaies ouvertes ou pansées font boiter une personne.</French>
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
+            <Polish>Kontroluje, czy otwarte lub zabandażowane rany powodują utykanie jednostki.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -75,6 +81,7 @@
             <Portuguese>Mancar se possuir feridas abertas</Portuguese>
             <Chinese>傷口裂開時跛腳</Chinese>
             <Czech>Kulhat s otevřeným zraněním</Czech>
+            <Polish>Kuśtykanie przy otwartych ranach</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -84,6 +91,7 @@
             <Portuguese>Mancar se possuir feridas abertas ou atadas</Portuguese>
             <Chinese>使裂開或者包紮過的傷口讓人跛腳</Chinese>
             <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
+            <Polish>Kuśtykanie przy otwartych ranach lub zabandażowanych ranach</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -93,6 +101,7 @@
             <Portuguese>Fraturas</Portuguese>
             <Chinese>骨折</Chinese>
             <Czech>Zlomeniny</Czech>
+            <Polish>Złamania</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
@@ -100,6 +109,7 @@
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
             <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
+            <Polish>Kontroluje efekt użycia szyn do leczenia złamań.\n Po wyłączeniu obrażenia nie powodują złamań.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -109,6 +119,7 @@
             <Portuguese>Tala cura fraturas completamente</Portuguese>
             <Chinese>固定板完全治癒骨折</Chinese>
             <Czech>Dlahy kompletně léčí zlomeniny</Czech>
+            <Polish>Szyny leczą zupełnie złamania</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -118,6 +129,7 @@
             <Portuguese>Talas curam (mas não consegue correr)</Portuguese>
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
+            <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>

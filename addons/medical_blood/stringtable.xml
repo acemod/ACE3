@@ -37,6 +37,7 @@
             <Portuguese>Permitir a criação de gotas de sangue quando as unidades recebem ferimentos ou estão sangrando.</Portuguese>
             <Chinese>啟用出血效果當單位失血或受傷的時候。</Chinese>
             <Czech>Povoluje vytváření kapek krve na zemi když jednotka krvácí nebo utrpí zranění.</Czech>
+            <Polish>Umożliwia tworzenie śladów krwi, gdy jednostki krwawią lub otrzymują obrażenia.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
             <English>Max Blood Objects</English>
@@ -46,6 +47,7 @@
             <Portuguese>Limite de objetos de sangue</Portuguese>
             <Chinese>最大血跡數</Chinese>
             <Czech>Maximum objektů krve</Czech>
+            <Polish>Maksymalna ilość śladów krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
             <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
@@ -55,6 +57,7 @@
             <Portuguese>Define o limite máximo de objetos de gota de sangue que podem ser criados, quantidades excessivas podem causar lag de FPS.</Portuguese>
             <Chinese>設定最大可存在的血跡數量。太極端的數量會導致幀數低落或卡頓</Chinese>
             <Czech>Nastavuje maximum objektů krve na zemi, příliš mnoho může způsobit pokles FPS</Czech>
+            <Polish>Definiuje maksymalną ilość śladów krwi,  które mogą zostać stworzone, nadmierne ilości mogą powodować spadki FPS.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
             <English>Blood Lifetime</English>
@@ -64,6 +67,7 @@
             <Portuguese>Duração do Sangue</Portuguese>
             <Chinese>血跡時長</Chinese>
             <Czech>Životnost krve</Czech>
+            <Polish>Żywotność śladów krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
             <English>Controls the lifetime of blood drop objects.</English>
@@ -73,6 +77,7 @@
             <Portuguese>Controla o tempo de vida que um objeto de gota de sangue tem.</Portuguese>
             <Chinese>控制血跡在地上的時長</Chinese>
             <Czech>Nastavuje jak dlouho objekty krve na zemi vydrží.</Czech>
+            <Polish>Kontroluje żywotność śladów krwi.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
             <English>Only Players</English>
