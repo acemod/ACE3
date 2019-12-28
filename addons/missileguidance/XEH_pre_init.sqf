@@ -11,4 +11,7 @@ PREP_RECOMPILE_END;
 // As weapons take config changes, there is little point in being able to disable guidance
 if (isNil QGVAR(enabled)) then { GVAR(enabled) = 2; };
 
+GVAR(mclosMissile) = objNull;
+GVAR(mclosInput) = [0, 0, 0, 0];
+
 ADDON = true;

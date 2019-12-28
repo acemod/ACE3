@@ -82,4 +82,11 @@ class GVAR(SeekerTypes) {
         functionName = QFUNC(seekerType_SACLOS);
         onFired = QFUNC(SACLOS_onFired);
     };
+    class MCLOS {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(seekerType_MCLOS);
+    };
 };

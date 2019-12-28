@@ -1,5 +1,6 @@
 LOG("prep");
 PREP(cycleAttackProfileKeyDown);
+PREP(mclosKeyHandler);
 
 PREP(changeMissileDirection);
 
@@ -33,6 +34,7 @@ PREP(attackProfile_JAV_TOP);
 PREP(seekerType_SALH);
 PREP(seekerType_Optic);
 PREP(seekerType_SACLOS);
+PREP(seekerType_MCLOS);
 
 // Attack Profiles OnFired
 PREP(wire_onFired);
