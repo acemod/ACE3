@@ -96,9 +96,9 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     private _remoteTargets = listRemoteTargets side _shooter;
     if ((_remoteTargets findIf { (_target in _x) && (_x#1 > 0) }) < 0) then {
         // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
-        if (!_shooterHasRadar || { !isVehicleRadarOn vehicle _shooter } || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, true] call FUNC(checkLOS)) && { !([vehicle _shooter, _target, false] call FUNC(checkLOS)) } }) exitWith {
+        if (!_shooterHasRadar || { !isVehicleRadarOn vehicle _shooter } || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, true] call FUNC(checkLOS)) && { !([vehicle _shooter, _target, false] call FUNC(checkLOS)) } }) then {
             _seekerStateParams set [0, true];
-            _expectedTargetPos
+            _target = objNull; // set up state for active guidance
         };
     };
 };
