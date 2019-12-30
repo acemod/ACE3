@@ -60,6 +60,7 @@
         <Key ID="STR_ACE_QuickMount_EnabledDescription">
             <English>This option allows quick entry into the vehicle you are directly looking at.</English>
             <French>Cette option permet d'entrer rapidement dans les véhicules que vous regardez.</French>
+            <Chinese>這個選項允許你能快速進入你直視的載具</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
