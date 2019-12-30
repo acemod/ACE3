@@ -9,4 +9,6 @@ PREP_RECOMPILE_END;
 GVAR(cachedTags) = [];
 GVAR(cachedRequiredItems) = [];
 
+#include "initSettings.sqf"
+
 ADDON = true;

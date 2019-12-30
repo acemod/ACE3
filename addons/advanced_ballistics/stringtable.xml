@@ -72,7 +72,7 @@
             <German>Aktiviert die erweiterte Ballistik</German>
             <Czech>Aktivuje pokročilou balistiku</Czech>
             <Portuguese>Ativa balística avançada</Portuguese>
-            <French>Activer la balistique avancée</French>
+            <French>Active la balistique avancée.</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
             <Italian>Abilita Balistica Avanzata</Italian>
@@ -180,7 +180,7 @@
             <German>Geschossspureffekt aktivieren</German>
             <Czech>Povolit efekt trasírek</Czech>
             <Portuguese>Ativa efeito traçante de projétil</Portuguese>
-            <French>Activer l'effet balle traçante</French>
+            <French>Activer l'effet de balle traçante</French>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
@@ -196,7 +196,7 @@
             <German>Aktiviere Geschossspureffekt für hohe Kaliber (bei Benutzung von Optiken mit starker Vergrößerung)</German>
             <Czech>Aktivuje efekt trasírek z vysokokaliberních zbraní (viditelné pouze skrze výkonnou optiku)</Czech>
             <Portuguese>Ativa o efeito traçante de projétil para projéteis de alto calibre (somente visível quando observado por miras telescópicas)</Portuguese>
-            <French>Active un effet de balle traçante pour les munitions de gros calibre (seulement visible en utilisant une optique à fort grossissement)</French>
+            <French>Active un effet de balle traçante pour les munitions de gros calibre (seulement visible en utilisant une optique à fort grossissement).</French>
             <Hungarian>Engedélyezi a nagy kaliberű lövedékek nyomának vizuális követését (csak nagy teljesítményű optikán keresztül látható)</Hungarian>
             <Russian>Включает эффект следов пуль для больших калибров (видны только через мощную оптику)</Russian>
             <Italian>Abilita effetto dei proiettili traccianti di alto calibro (visibile solo attraverso ottiche ad alto potenziale)</Italian>

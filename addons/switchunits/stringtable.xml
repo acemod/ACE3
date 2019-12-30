@@ -13,7 +13,7 @@
             <Russian>Переключение юнитов</Russian>
             <Portuguese>Trocar Unidades</Portuguese>
             <Czech>Přepnout jednotky</Czech>
-            <French>Changement de faction</French>
+            <French>Changement de camp</French>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
@@ -22,7 +22,7 @@
             <Czech>Prohozená jednotka</Czech>
             <Polish>Przełączona jednostka</Polish>
             <Spanish>Cambiado de unidad</Spanish>
-            <French>Faction changée</French>
+            <French>Camp changé</French>
             <Hungarian>Egység átváltva</Hungarian>
             <Italian>Unità cambiata</Italian>
             <Portuguese>Trocado de unidade</Portuguese>
@@ -62,6 +62,12 @@
             <Chinesesimp>这单位太接近敌人了</Chinesesimp>
             <Chinese>這單位太接近敵人了</Chinese>
         </Key>
+        <Key ID="STR_ACE_SwitchUnits_EnableSwitchUnits_DisplayName">
+            <English>Enable switch side</English>
+            <French>Permettre le changement de camp</French>
+            <Chinese>啟用陣營切換</Chinese>
+            <Czech>Povolit změnu strany</Czech>
+        </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
             <Polish>Zmiana na Zachód?</Polish>
@@ -69,7 +75,7 @@
             <German>Nach BLUFOR wechseln?</German>
             <Czech>Přesunout k BLUFOR?</Czech>
             <Portuguese>Trocar para Oeste?</Portuguese>
-            <French>Changer en BLUFOR</French>
+            <French>Passage en BLUFOR</French>
             <Hungarian>Átváltás BLUFOR-ra?</Hungarian>
             <Russian>На синих?</Russian>
             <Italian>Cambia per BLUFOR?</Italian>
@@ -85,7 +91,7 @@
             <German>Erlaube das Wechseln zu BLUFOR-Einheiten?</German>
             <Czech>Povolit přesun k BLUFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Oeste?</Portuguese>
-            <French>Autorise le passage en unité BLUFOR</French>
+            <French>Autorise le passage en unité BLUFOR.</French>
             <Hungarian>Nyugat-fakciós egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на синих юнитов?</Russian>
             <Italian>Consenti passaggio ad unità BLUFOR?</Italian>
@@ -101,7 +107,7 @@
             <German>Nach OPFOR wechseln?</German>
             <Czech>Přesunout k OPFOR?</Czech>
             <Portuguese>Trocar para Leste?</Portuguese>
-            <French>Changer en OPFOR</French>
+            <French>Passage en OPFOR</French>
             <Hungarian>Átváltás OPFOR-ra?</Hungarian>
             <Russian>На красных?</Russian>
             <Italian>Cambia per OPFOR?</Italian>
@@ -117,7 +123,7 @@
             <German>Erlaube das Wechseln zu OPFOR-Einheiten?</German>
             <Czech>Povolit přesun k OPFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Leste?</Portuguese>
-            <French>Autorise le passage en unité OPFOR</French>
+            <French>Autorise le passage en unité OPFOR.</French>
             <Hungarian>Kelet-fakciós egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на красных юнитов?</Russian>
             <Italian>Consenti passaggio ad unità OPFOR?</Italian>
@@ -133,7 +139,7 @@
             <German>Nach INDFOR wechseln?</German>
             <Czech>Přesunout k INDFOR?</Czech>
             <Portuguese>Trocar para Indenpendente</Portuguese>
-            <French>Changer en Indépendant</French>
+            <French>Passage en Indépendant</French>
             <Hungarian>Átváltás INDFOR-ra?</Hungarian>
             <Russian>На независимых?</Russian>
             <Italian>Cambia per INDFOR?</Italian>
@@ -149,7 +155,7 @@
             <German>Erlaube das Wechseln zu INDFOR-Einheiten?</German>
             <Czech>Povolit přesun k INDFOR?</Czech>
             <Portuguese>Permitir troca de unidades para o Indenpendente?</Portuguese>
-            <French>Autorise le passage en unité Indépendante</French>
+            <French>Autorise le passage en unité Indépendante.</French>
             <Hungarian>Független egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на независимых юнитов?</Russian>
             <Italian>Consenti passaggio ad unità INDFOR?</Italian>
@@ -165,7 +171,7 @@
             <German>Nach CIVILIAN wechseln?</German>
             <Czech>Přesunout k CIVILISTŮM?</Czech>
             <Portuguese>Trocar para Civis?</Portuguese>
-            <French>Changer en Civil</French>
+            <French>Passage en Civil</French>
             <Hungarian>Átváltás civilre?</Hungarian>
             <Russian>На гражданских?</Russian>
             <Italian>Cambia per Civili?</Italian>
@@ -181,7 +187,7 @@
             <German>Erlaube das Wechseln zu CIVILIAN-Einheiten?</German>
             <Czech>Povolit přesun k CIVILISTŮM?</Czech>
             <Portuguese>Permitir troca de unidades para o Civil?</Portuguese>
-            <French>Autorise le passage en unité Civile</French>
+            <French>Autorise le passage en unité Civile.</French>
             <Hungarian>Civil egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на гражданских юнитов?</Russian>
             <Italian>Consenti passaggio ad unità civili?</Italian>
@@ -197,7 +203,7 @@
             <German>Aktiviere Sicherheitszone?</German>
             <Czech>Povolit bezpečné oblasti?</Czech>
             <Portuguese>Habilitar zona segura?</Portuguese>
-            <French>Activer la zone sécurisée</French>
+            <French>Créer une zone sécurisée</French>
             <Hungarian>Biztonságos zóna engedélyezése?</Hungarian>
             <Russian>Безопасная зона</Russian>
             <Italian>Abilita Zona Sicura?</Italian>
@@ -211,9 +217,9 @@
             <Polish>Aktywuje bezpieczną strefę wokół jednostek przeciwnika. Gracze nie mogą zmieniać strony wewnątrz tej strefy.</Polish>
             <Spanish>Habilita una zona segura alrededor de las unidades enemigas. Los jugadores no pueden cambiar de unidad dentro de la zona segura.</Spanish>
             <German>Aktiviere eine Sicherheitszone um feindliche Einheiten? Spieler können nicht zu Einheiten in der Sicherheitszone wechseln.</German>
-            <Czech>Povolit bezpečnou zónu kolem nepřátelských jednotek? Hráči se nemohou změnit strany/jednotky uvnitř bezpečné zóny.</Czech>
+            <Czech>Povolit bezpečnou zónu kolem nepřátelských jednotek? Hráči nemohou změnit strany/jednotky uvnitř bezpečné zóny.</Czech>
             <Portuguese>Habilitar uma zona segur ao redor das unidades inimigas? Jogadores não conseguirão trocar para unidades dentro dessa zona segura.</Portuguese>
-            <French>Active une zone de sécurité autour des unités ennemies. Les joueurs ne peuvent pas changer de camp à l'intérieur de la zone.</French>
+            <French>Active une zone de sécurité autour des unités ennemies. Les joueurs ne peuvent pas changer de camp à l'intérieur de cette zone.</French>
             <Hungarian>Engedélyezve legyen-e egy biztonságos zóna az ellenségek körül? A játékosok nem tudnak a biztonságos zónán belüli egységekre váltani.</Hungarian>
             <Russian>Включить безопасную зону вокруг вражеских юнитов? Игроки не могут переключаться на юнитов, находящихся в безопасной зоне.</Russian>
             <Italian>Abilita una zona sicura attorno ad unità nemiche? I giocatori non possono cambiare ad unità dentro la zona sicura.</Italian>
@@ -245,7 +251,7 @@
             <German>Die Sicherheitszone um Spieler von einem anderen Team. Standard: 100</German>
             <Czech>Bezpečná zóna kolem hráče z jiných týmu. Výchozí: 100</Czech>
             <Portuguese>A zona segura ao redor dos jogadores de diferentes equipes. Padrão: 100</Portuguese>
-            <French>Rayon de la zone sécurité autour des joueurs d'équipes différentes. Valeur par défaut : 100</French>
+            <French>Rayon de la zone de sécurité autour des joueurs d'équipes différentes. Valeur par défaut : 100 mètres.</French>
             <Hungarian>A biztonságos zóna más csapatból lévő játékosok körül. Alapértelmezett: 100</Hungarian>
             <Russian>Радиус безопасной зоны вокруг ироков из противоположной команды. По-умолчанию: 100</Russian>
             <Italian>La zona sicura attorno ai giocatori di un team diverso. Default: 100</Italian>
@@ -261,7 +267,7 @@
             <Czech>Tento modul umožňuje přepínání mazi dostupnými stranami.</Czech>
             <Portuguese>Este módulo permite mudar o lado à disposição dos jogadores.</Portuguese>
             <Russian>Этот модуль позволяет игрокам переключаться между доступными юнитами.</Russian>
-            <French>Ce module vous permet de changer de faction en cours de partie.</French>
+            <French>Ce module vous permet de changer de camp en cours de partie.</French>
             <Italian>Questo modulo ti permette di cambiare lato durante la partita.</Italian>
             <Spanish>El módulo permite a las unidades cambiar de bando durante el juego.</Spanish>
             <Japanese>モジュールはゲームにおいて、陣営の切り替えを有効にします。</Japanese>

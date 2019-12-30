@@ -71,7 +71,7 @@
             <Spanish>Mostrar puntos de ruta en el mapa:</Spanish>
             <Russian>Показывать маршрутные точки на карте:</Russian>
             <Polish>Pokaż PT na mapie:</Polish>
-            <French>Montrer points de passage sur la carte</French>
+            <French>Montrer points de passage sur la carte :</French>
             <Czech>Ukázat waypointy na mapě:</Czech>
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
             <Italian>Mostra waypoint sulla mappa:</Italian>
@@ -116,7 +116,7 @@
         <Key ID="STR_ACE_MicroDAGR_settingOff">
             <English>Off</English>
             <Czech>Vypnuto</Czech>
-            <French>Eteint</French>
+            <French>Éteint</French>
             <German>Aus</German>
             <Italian>Spento</Italian>
             <Polish>Wył.</Polish>
@@ -151,7 +151,7 @@
             <Spanish>Nombre de [%1]</Spanish>
             <Russian>Название [%1]</Russian>
             <Polish>Nazwa [%1]</Polish>
-            <French>Nom de %1</French>
+            <French>Nom de [%1]</French>
             <Czech>Název [%1]</Czech>
             <Hungarian>[%1] neve</Hungarian>
             <Italian>Nome di [%1]</Italian>
@@ -424,7 +424,7 @@
             <Czech>MicroDAGR - Vyplnění mapy</Czech>
             <German>MicroDAGR-Kartenfüllung</German>
             <Portuguese>Preenchimento de mapa do MicroDAGR</Portuguese>
-            <French>MicroDAGR - Remplissage de la carte</French>
+            <French>Contenu de la carte</French>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
             <Italian>Riempimento Mappa MicroDAGR</Italian>
@@ -440,7 +440,7 @@
             <German>Wie viel Daten auf einem MicroDAGR zu sehen sind</German>
             <Czech>Kolik informací je načteno do MicroDAGR?</Czech>
             <Portuguese>Quanta informação é preenchida no mapa do MicroDAGR</Portuguese>
-            <French>Définit la quantité d'informations apparaissant sur la carte du MicroDAGR.</French>
+            <French>Définit le type d'information à afficher sur la carte du MicroDAGR.</French>
             <Hungarian>Mennyi térképadatot tartalmaz a MicroDAGR</Hungarian>
             <Russian>Сколько данных должно отображаться на карте MicroDAGR</Russian>
             <Italian>Quanti dati sono trasferiti nella mappa del MicroDAGR</Italian>
@@ -456,7 +456,7 @@
             <German>Satellitenbild + Gebäude</German>
             <Czech>Satelit + Budovy</Czech>
             <Portuguese>Satélite completo + Edifícios</Portuguese>
-            <French>Image satellite + Batiments</French>
+            <French>Image satellite + Bâtiments</French>
             <Hungarian>Teljes műholdas + épületek</Hungarian>
             <Russian>Спутник + Здания</Russian>
             <Italian>Satellite Completo + Edifici</Italian>
@@ -488,7 +488,7 @@
             <German>Keine (kann keine Kartenansicht verwenden)</German>
             <Czech>Žádný (Nelze použít zobrazení mapy)</Czech>
             <Portuguese>Nada (Não pode usar a tela de mapa)</Portuguese>
-            <French>Rien (La vue carte n'est pas possible)</French>
+            <French>Néant (carte désactivée)</French>
             <Hungarian>Semmi (nem használható a térképnézet)</Hungarian>
             <Russian>Не показывать (запрещает использовать режим карты)</Russian>
             <Italian>Nessuno (Non puoi usare la vista mappa)</Italian>
@@ -505,8 +505,9 @@
             <Polish>MicroDAGR - Precyzja PT</Polish>
             <Russian>MicroDAGR - Точность маршрутных точек</Russian>
             <Portuguese>MicroDAGR - Precisão de Waypoint</Portuguese>
-            <French>MicroDAGR - Précision points de passage</French>
+            <French>Précision des points de passage</French>
             <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
+            <Czech>MicroDAGR - přesnost Waypointů</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>
@@ -518,6 +519,7 @@
             <Portuguese>Controla o quão preciso pode exibir o waypoint de distância</Portuguese>
             <French>Définit la précision d'affichage des points de passage.</French>
             <Chinese>控制顯示的導航點精確度為多少</Chinese>
+            <Czech>Nastavuje jak přesně je vzdálenost waypointů zobrazena.</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
@@ -529,6 +531,7 @@
             <Portuguese>100m</Portuguese>
             <French>100 m</French>
             <Chinese>一百公尺</Chinese>
+            <Czech>100 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -540,6 +543,7 @@
             <Portuguese>10m</Portuguese>
             <French>10 m</French>
             <Chinese>十公尺</Chinese>
+            <Czech>10 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -551,6 +555,7 @@
             <Portuguese>1m</Portuguese>
             <French>1 m</French>
             <Chinese>一公尺</Chinese>
+            <Czech>1 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>

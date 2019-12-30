@@ -5,118 +5,205 @@
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_NameShort">
             <English>#00 Buckshot</English>
             <Chinese>#00 鹿彈</Chinese>
+            <Japanese>#00 バックショット</Japanese>
+            <French>Chevrotine #00</French>
+            <Czech>#00 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
             <Chinese>#00 鹿彈</Chinese>
+            <Japanese>#00 バックショット</Japanese>
+            <French>Chevrotine #00</French>
+            <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
             <Chinese>#0 鹿彈</Chinese>
+            <Japanese>#0 バックショット</Japanese>
+            <French>Chevrotine #0</French>
+            <Czech>#0 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
             <Chinese>#0 鹿彈</Chinese>
+            <Japanese>#0 バックショット</Japanese>
+            <French>Chevrotine #0</French>
+            <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
             <Chinese>#1 鹿彈</Chinese>
+            <Japanese>#1 バックショット</Japanese>
+            <French>Chevrotine #1</French>
+            <Czech>#1 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
             <Chinese>#1 鹿彈</Chinese>
+            <Japanese>#1 バックショット</Japanese>
+            <French>Chevrotine #1</French>
+            <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
             <Chinese>#2 鹿彈</Chinese>
+            <Japanese>#2 バックショット</Japanese>
+            <French>Chevrotine #2</French>
+            <Czech>#2 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
             <Chinese>#2 鹿彈</Chinese>
+            <Japanese>#2 バックショット</Japanese>
+            <French>Chevrotine #2</French>
+            <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
             <Chinese>#3 鹿彈</Chinese>
+            <Japanese>#3 バックショット</Japanese>
+            <French>Chevrotine #3</French>
+            <Czech>#3 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
             <Chinese>#3 鹿彈</Chinese>
+            <Japanese>#3 バックショット</Japanese>
+            <French>Chevrotine #3</French>
+            <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
             <Chinese>#4 鹿彈</Chinese>
+            <Japanese>#4 バックショット</Japanese>
+            <French>Chevrotine #4</French>
+            <Czech>#4 Broky velké</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
             <Chinese>#4 鹿彈</Chinese>
+            <Japanese>#4 バックショット</Japanese>
+            <French>Chevrotine #4</French>
+            <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>
             <Chinese>#7 鹿彈</Chinese>
+            <Japanese>#7 バックショット</Japanese>
+            <French>Grenaille No.4</French>
+            <Czech>#7 Broky malé</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
             <English>#7 Birdshot</English>
             <Chinese>#7 鹿彈</Chinese>
+            <Japanese>#7 バックショット</Japanese>
+            <French>Grenaille No.4</French>
+            <Czech>#7 Broky malé - kalibr 2.54 mm</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
             <Chinese>12鉛徑 2發  #00 鹿彈</Chinese>
+            <Japanese>12 ゲージ 2 発入り #00 バックショット</Japanese>
+            <French>2 balles cal. 12 Chevrotine #00</French>
+            <Czech>2x #00 Broky velké (kalibr 8.38 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 2Rnd #0 Buckshot</English>
             <Chinese>12鉛徑 2發  #0 鹿彈</Chinese>
+            <Japanese>12 ゲージ 2 発入り #0 バックショット</Japanese>
+            <French>2 balles cal. 12 Chevrotine #0</French>
+            <Czech>2x #0 Broky velké (kalibr 8.1 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 2Rnd #1 Buckshot</English>
             <Chinese>12鉛徑 2發  #1 鹿彈</Chinese>
+            <Japanese>12 ゲージ 2 発入り #1 バックショット</Japanese>
+            <French>2 balles cal. 12 Chevrotine #1</French>
+            <Czech>2x #1 Broky velké (kalibr 7.6 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 2Rnd #2 Buckshot</English>
             <Chinese>12鉛徑 2發  #2 鹿彈</Chinese>
+            <Japanese>12 ゲージ 2 発入り #2 バックショット</Japanese>
+            <French>2 balles cal. 12 Chevrotine #2</French>
+            <Czech>2x #2 Broky velké (kalibr 6.9 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 2Rnd #3 Buckshot</English>
             <Chinese>12鉛徑 2發  #3 鹿彈</Chinese>
+            <Japanese>12 ゲージ 2 発入り #3 バックショット</Japanese>
+            <French>2 balles cal. 12 Chevrotine #3</French>
+            <Czech>2x #3 Broky velké (kalibr 6.4 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 2Rnd #4 Buckshot</English>
             <Chinese>12鉛徑 2發  #4 鹿彈</Chinese>
+            <Japanese>12 ゲージ 2 発入り #4 バックショット</Japanese>
+            <French>2 balles cal. 12 Chevrotine #4</French>
+            <Czech>2x #4 Broky velké (kalibr 6.1 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 2Rnd #7 Birdshot</English>
             <Chinese>12鉛徑 2發  #7 鹿彈</Chinese>
+            <Japanese>12 ゲージ 2 発入り #7 バックショット</Japanese>
+            <French>2 balles cal. 12 Grenaille No.4</French>
+            <Czech>2x #7 Broky malé (kalibr 2.54 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 6Rnd #00 Buckshot</English>
             <Chinese>12鉛徑 6發  #00 鹿彈</Chinese>
+            <Japanese>12 ゲージ 6 発入り #00 バックショット</Japanese>
+            <French>6 balles cal. 12 Chevrotine #00</French>
+            <Czech>6x #00 Broky velké (kalibr 8.38 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 6Rnd #0 Buckshot</English>
             <Chinese>12鉛徑 6發  #0 鹿彈</Chinese>
+            <Japanese>12 ゲージ 6 発入り #0 バックショット</Japanese>
+            <French>6 balles cal. 12 Chevrotine #0</French>
+            <Czech>6x #0 Broky velké (kalibr 8.1 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 6Rnd #1 Buckshot</English>
             <Chinese>12鉛徑 6發  #1 鹿彈</Chinese>
+            <Japanese>12 ゲージ 6 発入り #1 バックショット</Japanese>
+            <French>6 balles cal. 12 Chevrotine #1</French>
+            <Czech>6x #1 Broky velké (kalibr 7.6 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 6Rnd #2 Buckshot</English>
             <Chinese>12鉛徑 6發  #2 鹿彈</Chinese>
+            <Japanese>12 ゲージ 6 発入り #2 バックショット</Japanese>
+            <French>6 balles cal. 12 Chevrotine #2</French>
+            <Czech>6x #2 Broky velké (kalibr 6.9 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 6Rnd #3 Buckshot</English>
             <Chinese>12鉛徑 6發  #3 鹿彈</Chinese>
+            <Japanese>12 ゲージ 6 発入り #3 バックショット</Japanese>
+            <French>6 balles cal. 12 Chevrotine #3</French>
+            <Czech>6x #3 Broky velké (kalibr 6.4 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 6Rnd #4 Buckshot</English>
             <Chinese>12鉛徑 6發  #4 鹿彈</Chinese>
+            <Japanese>12 ゲージ 6 発入り #4 バックショット</Japanese>
+            <French>6 balles cal. 12 Chevrotine #4</French>
+            <Czech>6x #4 Broky velké (kalibr 6.1 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 6Rnd #7 Birdshot</English>
             <Chinese>12鉛徑 6發  #7 鹿彈</Chinese>
+            <Japanese>12 ゲージ 6 発入り #7 バックショット</Japanese>
+            <French>6 balles cal. 12 Grenaille No.4</French>
+            <Czech>6x #7 Broky malé (kalibr 2.54 mm)</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
             <Chinese>12鉛徑 15發  #00 鹿彈</Chinese>
+            <Japanese>12 ゲージ 15 発入り #00 バックショット</Japanese>
+            <French>15 balles cal. 12 Chevrotine #00</French>
+            <Czech>15x #00 Broky velké (kalibr 8.38 mm)</Czech>
         </Key>
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">
@@ -1313,7 +1400,7 @@
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimDescription">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
             <Polish>Magazynek 6,5mm 200rd Smugacz IR-DIM</Polish>
-            <French>Bande 6.5mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
+            <French>Bande 6,5mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5mm 200-Patronen-Gurt IR-DIM Leuchtspur&lt;br /&gt;Patronen: 200&lt;br /&gt;Eingesetzt von: Stoner 99 LMG</German>
@@ -1553,7 +1640,7 @@
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
             <Polish>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
+            <French>Calibre: 7,62x51mm NATO (M118LR)&lt;br /&gt;Cartouches: 20</French>
             <Spanish>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M118LR)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Patronen: 20</German>
@@ -2272,7 +2359,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
-            <French>Calibre: 12.7x99mm&lt;br /&gt;Cartouches: 5</French>
+            <French>Calibre: 12,7x99mm&lt;br /&gt;Cartouches: 5</French>
             <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 5</Spanish>
             <Polish>Kaliber: 12,7x99mm&lt;br /&gt;Pociski: 5</Polish>
             <Russian>Калибр: 12,7x99 мм&lt;br /&gt;Патронов: 5</Russian>
@@ -2409,6 +2496,7 @@
             <Russian>Нарезы ствола</Russian>
             <Portuguese>Barrel Twist</Portuguese>
             <French>Pas du canon</French>
+            <Czech>Stoupání vývrtu hlavně</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
@@ -2421,6 +2509,7 @@
             <Polish>Długość lufy</Polish>
             <Russian>Длина ствола</Russian>
             <Portuguese>Comprimento do cano</Portuguese>
+            <Czech>Délka hlavně</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
@@ -2433,6 +2522,7 @@
             <Polish>Współczynnik balistyczny</Polish>
             <Russian>Баллистический коэффициент</Russian>
             <Portuguese>Coeficiente balístico</Portuguese>
+            <Czech>Balistický koeficient</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
@@ -2445,6 +2535,7 @@
             <Polish>Masa pocisku</Polish>
             <Russian>Масса пули</Russian>
             <Portuguese>Massa do projétil</Portuguese>
+            <Czech>Váha projektilu</Czech>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
@@ -2457,6 +2548,7 @@
             <Polish>Prędkość wylotowa</Polish>
             <Russian>Начальная скорость</Russian>
             <Portuguese>Velocidade de Saída</Portuguese>
+            <Czech>Úsťová rychlost</Czech>
         </Key>
     </Package>
 </Project>

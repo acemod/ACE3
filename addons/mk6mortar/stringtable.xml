@@ -76,6 +76,7 @@
             <Polish>Moździerz Mk6</Polish>
             <Russian>Миномет Mk6</Russian>
             <Portuguese>Morteiro Mk6</Portuguese>
+            <Czech>Minomet Mk6</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -116,7 +117,7 @@
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
             <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
-            <French>Pour les tirs de joueurs, simule la résistance de l'air et les effets du vent.</French>
+            <French>Pour les tirs des joueurs, simule la résistance de l'air et les effets du vent.</French>
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
@@ -132,7 +133,7 @@
             <German>Erlaube Mk6-Computer</German>
             <Czech>Mk6 - Povolit počítač</Czech>
             <Portuguese>Permitir computador do Mk6</Portuguese>
-            <French>Autoriser l'ordinateur de tir pour Mk6</French>
+            <French>Activer l'ordinateur de tir du Mk6</French>
             <Hungarian>Mk6 számítógép engedélyezése</Hungarian>
             <Russian>Разрешить компьютер Mk6</Russian>
             <Italian>Consenti Computer Mk6</Italian>
@@ -148,7 +149,7 @@
             <German>Zeige den Computer und den Entfernungsmesser an (diese MÜSSEN entfernt werden, wenn der Luftwiderstand aktiviert ist)</German>
             <Czech>Zobrazit počítač a dálkoměr (toto MUSÍ být odstraněno pokud je zapnut odpor vzduchu)</Czech>
             <Portuguese>Mostra o computador e o medidor de distância (estes DEVEM ser removidos se você habilitar resistência do ar)</Portuguese>
-            <French>Affiche l'ordinateur de tir (cette option doit être DESACTIVEE si la résistance de l'air est activée).</French>
+            <French>Affiche l'ordinateur de tir et le télémètre. Cette option doit être DÉSACTIVÉE si la résistance de l'air est activée.</French>
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
@@ -164,7 +165,7 @@
             <German>Erlaube Mk6-Kompass</German>
             <Czech>Mk6 - Povolit kompas</Czech>
             <Portuguese>Permitir bússula do Mk6</Portuguese>
-            <French>Autoriser la boussole pour Mk6</French>
+            <French>Activer la boussole du Mk6</French>
             <Hungarian>Mk6 iránytű engedélyezése</Hungarian>
             <Russian>Разрешить компас Mk6</Russian>
             <Italian>Consenti Bussola Mk6</Italian>
@@ -217,13 +218,14 @@
             <Korean>탄약 관리 활성화</Korean>
             <Chinesesimp>使用手动弹药装卸</Chinesesimp>
             <Chinese>使用手動彈藥裝卸</Chinese>
+            <Czech>Používat ruční manipulaci s municí</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
             <German>Enfernt das Magzin des Mörsers. Es ist nun erforderlich, die einzelnen Patronen manuell zu laden. Dies beeinflusst nicht die KI-Truppen.</German>
             <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas. No afecta morteros controlados por IA.</Spanish>
             <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego. Nie dotyczy moździerzy AI.</Polish>
-            <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement.\nN'affecte pas les mortiers IA.</French>
+            <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement. N'affecte pas les mortiers IA.</French>
             <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
             <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжащим. Не влияет на артиллерию ИИ.</Russian>
@@ -231,6 +233,7 @@
             <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야만 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
             <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由AI射击的迫击炮</Chinesesimp>
             <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填。此功能並不影響由AI射擊的迫擊砲</Chinese>
+            <Czech>Odstraní z minometu zásobník a vynucuje nabíjení po každém výstřelu buď mířičem nebo nabíječem. Tato možnost neovlivňuje AI posádky.</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -275,6 +278,7 @@
             <Korean>탄약 제거중</Korean>
             <Chinesesimp>卸除弹头中</Chinesesimp>
             <Chinese>卸除彈頭中</Chinese>
+            <Czech>Vybít minomet</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -326,7 +330,7 @@
             <German>Lade Leuchtpatrone</German>
             <Spanish>Cargar Iluminación</Spanish>
             <Polish>Załaduj pocisk oświetlający</Polish>
-            <French>Charger Eclairante</French>
+            <French>Charger Éclairant</French>
             <Italian>Carica illuminante</Italian>
             <Czech>Nabít Světlici</Czech>
             <Portuguese>Carregar Iluminação</Portuguese>
@@ -446,7 +450,7 @@
             <German>Wird im Mk6 Mörser verwendet</German>
             <Spanish>Usada en el mortero Mk6</Spanish>
             <Polish>Używany w moździerzu Mk6</Polish>
-            <French>Utilisé dans le mortier Mk6</French>
+            <French>Utilisé dans le mortier Mk6.</French>
             <Italian>Usato nel mortaio Mk6</Italian>
             <Czech>Používá se u minometu Mk6</Czech>
             <Portuguese>Usada no Morteiro MK6</Portuguese>

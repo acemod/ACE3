@@ -4,10 +4,16 @@
         <Key ID="STR_ACE_ArtilleryTables_rangetable_displayName">
             <English>Artillery Rangetable</English>
             <Chinese>火炮射程表</Chinese>
+            <Czech>Dělostřelecké tabulky střelby</Czech>
+            <Japanese>火砲射程</Japanese>
+            <French>Table de tir d'artillerie</French>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
             <Chinese>通用的火炮射程表</Chinese>
+            <Czech>Univerzální dělostřelecká tabulka střelby</Czech>
+            <Japanese>汎用の火砲用射程表</Japanese>
+            <French>Table de tir universelle pour l'artillerie.</French>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -30,13 +36,13 @@
             <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza Mk6 przez graczy</Polish>
             <Spanish>Para disparos del jugador, modelo de resistencia al aire y efectos de viento</Spanish>
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
-            <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
+            <Czech>Pro střelbu hráče používat odpor vzduchu a vliv větru</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
-            <French>Pour les tirs de joueurs, modèle de résistance à l'air et d'effet du vent</French>
+            <French>Pour les tirs des joueurs, simule la résistance de l'air et les effets du vent.</French>
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
-            <Japanese>プレイヤが射撃すると、空気抵抗モデルと風による影響をあたえます。</Japanese>
+            <Japanese>プレイヤが射撃すると、空気抵抗モデルと風による影響を与えます。</Japanese>
             <Korean>플레이어 사격시 공기저항과 바람에 영향을 받습니다</Korean>
             <Chinesesimp>设定由玩家射击的迫击炮，将会受到空气阻力与风力的影响</Chinesesimp>
             <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
@@ -44,10 +50,16 @@
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_displayName">
             <English>Artillery Computer Disabled</English>
             <Chinese>停用火炮電腦</Chinese>
+            <Czech>Zakázat používání dělostřeleckého počítače</Czech>
+            <Japanese>砲撃コンピュータ無効化</Japanese>
+            <French>Désactiver l'ordinateur de tir</French>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
             <Chinese>停用原本的火炮控制電腦</Chinese>
+            <Czech>Zakázat používání dělostřeleckého počítače základní hry</Czech>
+            <Japanese>ゲームの砲撃コンピュータを無効化します。</Japanese>
+            <French>Désactive l'ordinateur de tir vanilla.</French>
         </Key>
     </Package>
 </Project>

@@ -108,6 +108,7 @@
             <Russian>Убрать высотомер при падении</Russian>
             <Portuguese>Esconder Altímetro de queda livre</Portuguese>
             <French>Masquer l'altimètre en chute libre</French>
+            <Czech>Schovat výškoměr v GUI při volném pádu</Czech>
         </Key>
         <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
             <English>Hides the altitude and speed shown while free falling or parachuting.</English>
@@ -120,6 +121,7 @@
             <Russian>Скрывает показания высоты и скорости при свободном падении или прыжках с парашютом.</Russian>
             <Portuguese>Esconde a altitude e velocidade enquanto estiver em queda livre ou saltando de paraquedas.</Portuguese>
             <French>Cache l'altitude et la vitesse affichées, lors d'une chute libre ou d'un parachutage.</French>
+            <Czech>Schová výšku a rychlost v GUI při volném pádu a při použití padáku.</Czech>
         </Key>
     </Package>
 </Project>
