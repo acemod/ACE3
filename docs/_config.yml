@@ -10,7 +10,7 @@ ace:
     major: 3
     minor: 13
     patch: 0
-    build: 44
+    build: 45
 
 acex:
   githubUrl: https://github.com/acemod/ACEX
@@ -18,7 +18,7 @@ acex:
     major: 3
     minor: 5
     patch: 0
-    build: 14
+    build: 15
 
 
 markdown: kramdown
