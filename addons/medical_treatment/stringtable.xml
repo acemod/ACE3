@@ -58,6 +58,25 @@
             <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
             <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
+            <English>Advanced Medication</English>
+            <German>Erweiterte Medikamente</German>
+            <Japanese>アドバンスド医薬品</Japanese>
+            <Russian>Расширенные Лекарства</Russian>
+            <French>Médication avancée</French>
+            <Portuguese>Medicação Avançada</Portuguese>
+            <Chinese>進階醫療用品</Chinese>
+            <Czech>Pokročilé léky</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
+            <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
+            <Russian>Устанавливает расширенное использование лекарств</Russian>
+            <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンとアトロピンが利用可能になります。</Japanese>
+            <French>Permet une manipulation étendue et plus appronfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine et d'atropine.</French>
+            <Portuguese>Ativa a manipulação avançada de medicações. Também permite o uso de Adenosina e Atropina.</Portuguese>
+            <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
+            <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
             <English>Wound Reopening</English>
             <Japanese>創傷再開放</Japanese>
@@ -76,24 +95,15 @@
             <Chinese>啟用包紮過的傷口是否會再度裂開。需要啟用「進階包紮」之功能。</Chinese>
             <Czech>Povoluje znovuotevírání obvázaných zranění. Vyžaduje zapnuté Pokročilé obvazy.</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
-            <English>Advanced Medication</English>
-            <German>Erweiterte Medikamente</German>
-            <Japanese>アドバンスド医薬品</Japanese>
-            <Russian>Расширенные Лекарства</Russian>
-            <French>Médication avancée</French>
-            <Portuguese>Medicação Avançada</Portuguese>
-            <Chinese>進階醫療用品</Chinese>
-            <Czech>Pokročilé léky</Czech>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
+            <English>Clear Trauma After Bandage</English>
+            <Japanese>治療後に外傷を削除</Japanese>
+            <Chinese>包紮即痊癒</Chinese>
+            <French>Guérir les blessures pansées</French>
+            <Czech>Vyčistit úraz po obvázání</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
-            <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine and Atropine.</English>
-            <Russian>Устанавливает расширенное использование лекарств</Russian>
-            <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンとアトロピンが利用可能になります。</Japanese>
-            <French>Permet une manipulation étendue et plus appronfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine et d'atropine.</French>
-            <Portuguese>Ativa a manipulação avançada de medicações. Também permite o uso de Adenosina e Atropina.</Portuguese>
-            <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
-            <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
+            <English>Controls whether fully bandaged body parts are healed.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -118,26 +128,6 @@
             <Portuguese>Aumenta a qualidade do tratamento quando dentro de veículos ou instalações médicas. Destreinados se tornam médicos, médicos se tornam doutores.</Portuguese>
             <Chinese>在醫療設施或者載具旁時增加醫療能力。未受訓練的將會成為醫療兵，醫療兵將會成為軍醫。</Chinese>
             <Czech>Zvyšuje zdravotnickou úroveň v zdravotnických objektech a vozidlech. Nevycvičení se stávají mediky a medici se stávají doktory.</Czech>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
-            <English>Self IV Transfusion</English>
-            <German>Eigennutzung von Bluttransfusionen</German>
-            <Russian>Внутривенное переливание на себе</Russian>
-            <Japanese>自己 IV 輸血</Japanese>
-            <French>Autotransfusion d'IV</French>
-            <Portuguese>Autotransfusão de IV</Portuguese>
-            <Chinese>自我注射點滴</Chinese>
-            <Czech>Samoaplikace IV transfuze</Czech>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
-            <English>Enables the use of IV Transfusions on oneself.</English>
-            <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
-            <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
-            <Japanese>自らに対して IV 輸血を可能にします。</Japanese>
-            <French>Permet de poser des IV sur soi-même.</French>
-            <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
-            <Chinese>啟用是否能對自己注射點滴</Chinese>
-            <Czech>Umožňuje aplikovat IV transfuze na sama sebe.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
@@ -379,6 +369,26 @@
             <Chinese>啟用是否能自己使用手術包來縫合自己的傷口。</Chinese>
             <Czech>Umožňuje použití sešívací sady na sebe sama.</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
+            <English>Self IV Transfusion</English>
+            <German>Eigennutzung von Bluttransfusionen</German>
+            <Russian>Внутривенное переливание на себе</Russian>
+            <Japanese>自己 IV 輸血</Japanese>
+            <French>Autotransfusion d'IV</French>
+            <Portuguese>Autotransfusão de IV</Portuguese>
+            <Chinese>自我注射點滴</Chinese>
+            <Czech>Samoaplikace IV transfuze</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
+            <English>Enables the use of IV Transfusions on oneself.</English>
+            <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
+            <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
+            <Japanese>自らに対して IV 輸血を可能にします。</Japanese>
+            <French>Permet de poser des IV sur soi-même.</French>
+            <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
+            <Chinese>啟用是否能對自己注射點滴</Chinese>
+            <Czech>Umožňuje aplikovat IV transfuze na sama sebe.</Czech>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
@@ -519,6 +529,24 @@
             <Chinese>車輛 %amp; 設施</Chinese>
             <Czech>Zdravotnická zařízení a vozidla</Czech>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_DisplayName">
+            <English>CPR Success Chance</English>
+            <Japanese>心肺蘇生の成功率</Japanese>
+            <French>Chance de réussite de la RCP</French>
+            <Russian>Шанс успешной реанимации</Russian>
+            <Portuguese>Chance de ter sucesso com SBV</Portuguese>
+            <Chinese>心肺復甦術成功率</Chinese>
+            <Czech>Pravděpodobnost úspěchu CPR</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_Description">
+            <English>Probability that CPR will be successful in restoring heart rhythm.</English>
+            <Japanese>心肺蘇生によって心拍を戻せる確率を決定できます。</Japanese>
+            <French>Probabilité de rétablir un rythme cardiaque suite à une RCP.</French>
+            <Russian>Вероятность успешного проведения сердечно-лёгочной реанимации (СЛР).</Russian>
+            <Portuguese>Probabilidade que um SBV restaurará o batimento cardíaco.</Portuguese>
+            <Chinese>心肺復甦術恢復心率的機率。</Chinese>
+            <Czech>Pravděpodobnost, že CPR obnoví srdeční tep.</Czech>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
             <Japanese>武器の扱い</Japanese>
@@ -527,7 +555,7 @@
             <Czech>Vyžadováno schování zbraně</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
-            <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam - Allows examination actions (checking pulse, blood pressure, response) at all times regardless of Holster Required setting.</English>
+            <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
             <Japanese>何らかの治療をするには武器を下げるか収めるかどうかを決定します。\nなお次の診断行動は設定で例外できます: 心拍確認、血圧測定、反応確認</Japanese>
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
             <French>Définit si les armes doivent être rengainées ou abaissées avant de pouvoir effectuer des actes médicaux.\nLes options "sauf examens" autorisent les examens (vérification du pouls, de la tension artérielle, de l'état de conscience) en toutes circonstances.</French>
@@ -548,14 +576,14 @@
             <Czech>Snížena nebo Schována (kromě Diagnózy)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
-            <English>Holstered only</English>
+            <English>Holstered Only</English>
             <Japanese>収めた時のみ</Japanese>
             <Chinese>只能收起</Chinese>
             <French>Rengainer seulement</French>
             <Czech>Pouze Schována</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
-            <English>Holstered only (Except Exam)</English>
+            <English>Holstered Only (Except Exam)</English>
             <Japanese>収めた時のみ (診断行動は除外)</Japanese>
             <Chinese>只能收起（除了診斷）</Chinese>
             <French>Rengainer seulement (sauf examens)</French>
@@ -2254,24 +2282,6 @@
             <Chinesesimp>进行心肺复苏术中...</Chinesesimp>
             <Chinese>進行心肺復甦術中...</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_DisplayName">
-            <English>CPR Success Chance</English>
-            <Japanese>心肺蘇生の成功率</Japanese>
-            <French>Chance de réussite de la RCP</French>
-            <Russian>Шанс успешной реанимации</Russian>
-            <Portuguese>Chance de ter sucesso com SBV</Portuguese>
-            <Chinese>心肺復甦術成功率</Chinese>
-            <Czech>Pravděpodobnost úspěchu CPR</Czech>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_cprSuccessChance_Description">
-            <English>Probability that cpr will be successful in restoring heart rhythm.</English>
-            <Japanese>心肺蘇生によって心拍を戻せる確率を決定できます。</Japanese>
-            <French>Probabilité de rétablir un rythme cardiaque suite à une RCP.</French>
-            <Russian>Вероятность успешного проведения сердечно-лёгочной реанимации (СЛР).</Russian>
-            <Portuguese>Probabilidade que um SBV restaurará o batimento cardíaco.</Portuguese>
-            <Chinese>心肺復甦術恢復心率的機率。</Chinese>
-            <Czech>Pravděpodobnost, že CPR obnoví srdeční tep.</Czech>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
             <German>Bluttransfusion IV (1000ml)</German>
@@ -3761,92 +3771,6 @@
             <Korean>이 부위에는 지혈대가 없습니다!</Korean>
             <Chinesesimp>这部位没有止血带!</Chinesesimp>
             <Chinese>這部位沒有止血帶!</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_MedicalSettings_useCondition_PAK_Description">
-            <English>When can the PAK be used?</English>
-            <German>Wann kann das Erste-Hilfe-Set verwendet werden?</German>
-            <Czech>Kdy může být použita osobní lékárnička?</Czech>
-            <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
-            <French>Définit quand peut être utilisée la trousse sanitaire.</French>
-            <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
-            <Hungarian>Mikor lehet az elsősegélycsomagot használni?</Hungarian>
-            <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
-            <Russian>Где может использоваться аптечка?</Russian>
-            <Italian>Quando può essere usato il Kit Pronto Soccorso?</Italian>
-            <Japanese>どこでも応急処置キットを使えるようにしますか?</Japanese>
-            <Korean>언제 개인응급키트를 사용할 수 있습니까?</Korean>
-            <Chinesesimp>何时可以使用个人急救包?</Chinesesimp>
-            <Chinese>何時可以使用個人急救包?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_MedicalSettings_useCondition_SurgicalKit_DisplayName">
-            <English>Condition Surgical Kit (Adv)</English>
-            <German>Beding. für d. Operationskasten (erw.)</German>
-            <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
-            <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
-            <French>Conditions d'utilisation de la trousse chirurgicale</French>
-            <Polish>Warunek zestawu chirurgicznego</Polish>
-            <Hungarian>Sebészkészlet állapot</Hungarian>
-            <Portuguese>Condição do Kit Cirúrgico (Avançado)</Portuguese>
-            <Russian>Условие использования хирургического набора (усл.)</Russian>
-            <Italian>Condizioni Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットの状態 (アド)</Japanese>
-            <Korean>봉합키트 상태 (고급)</Korean>
-            <Chinesesimp>使用手术包的条件 (进阶伤口)</Chinesesimp>
-            <Chinese>使用手術包的條件 (進階傷口)</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_MedicalSettings_useCondition_SurgicalKit_Description">
-            <English>When can the Surgical Kit be used?</English>
-            <German>Wann kann der Operationskasten verwendet werden?</German>
-            <Czech>Kde může být použita chirurgická souprava?</Czech>
-            <Spanish>¿Cuando se puede utilizar el equipo quirúrgico?</Spanish>
-            <French>Définit quand peut être utilisée la trousse chirurgicale.</French>
-            <Polish>Po spełnieniu jakich warunków zestaw chirurgiczny może zostać zastosowany na pacjencie?</Polish>
-            <Hungarian>Mikor lehet a sebészkészletet használni?</Hungarian>
-            <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
-            <Russian>Где может использоваться хирургический набор?</Russian>
-            <Italian>Quando può essere usato il Kit Chirurgico?</Italian>
-            <Japanese>いつでも縫合キットを使えるようにしますか?</Japanese>
-            <Korean>언제 봉합키트를 사용할 수 있습니까?</Korean>
-            <Chinesesimp>何时可以使用手术工具包?</Chinesesimp>
-            <Chinese>何時可以使用手術工具包?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_MedicalSettings_useCondition_PAK_DisplayName">
-            <English>Condition PAK</English>
-            <German>Bedingungen für d. Erste-Hilfe-Set</German>
-            <Czech>Podmínky pro použití osobní lékárničky</Czech>
-            <Spanish>Condición EPA</Spanish>
-            <French>Conditions d'utilisation de la trousse sanitaire</French>
-            <Polish>Warunek apteczek</Polish>
-            <Hungarian>Elsősegélycsomag állapot</Hungarian>
-            <Portuguese>Condição do KPS</Portuguese>
-            <Russian>Условие использования аптечки</Russian>
-            <Italian>Condizioni Kit Pronto Soccorso</Italian>
-            <Japanese>応急処置キットの状態</Japanese>
-            <Korean>개인응급키트 상태</Korean>
-            <Chinesesimp>个人急救包使用条件</Chinesesimp>
-            <Chinese>個人急救包使用條件</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_clearTraumaAfterBandage_DisplayName">
-            <English>Clear Trauma After Bandage</English>
-            <Japanese>治療後に外傷を削除</Japanese>
-            <Chinese>包紮即痊癒</Chinese>
-            <French>Guérir les blessures pansées</French>
-            <Czech>Vyčistit úraz po obvázání</Czech>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_clearTraumaAfterBandage_Description">
-            <English>Heal fully bandaged hitpoints</English>
-            <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
-            <Spanish>Curar miembros totalmente vendados</Spanish>
-            <Russian>Исцелять полностью перебинтованные части тела</Russian>
-            <Portuguese>Curar pontos de vida totalmente enfaixados</Portuguese>
-            <Czech>Plně vyléčit hitpointy po obvázání</Czech>
-            <Italian>Cura hitpoints completamente bendati</Italian>
-            <French>Soigne les plaies entièrement bandées.</French>
-            <German>Heilt vollständig bandagierte Trefferpunkte</German>
-            <Japanese>包帯は体力を完全に回復する</Japanese>
-            <Korean>붕대를 감은후 체력을 회복함</Korean>
-            <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
-            <Chinese>完全醫療包紮的部位至痊癒</Chinese>
         </Key>
     </Package>
 </Project>
