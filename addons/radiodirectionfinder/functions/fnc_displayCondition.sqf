@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
 * Author: PabstMirror
-*
+* Condition for showing the RDF interface
 *
 * Arguments:
 * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
@@ -15,7 +15,7 @@
 * Public: No
 */
 
-params ["_unit"];
+params ["_player"];
 
-(alive _unit)
-&& {(backpack _unit) == QGVAR(backpack)}
+((backpack _player) == QGVAR(backpack))
+&& {alive _player}

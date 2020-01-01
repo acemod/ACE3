@@ -1,8 +1,8 @@
 LOG("prep");
 
 PREP(addSignal);
-PREP(beaconCleanup);
-PREP(beaconInit);
+PREP(beaconCleanupServer);
+PREP(beaconInitServer);
 PREP(createGUI);
 PREP(displayCondition);
 PREP(getSignals);

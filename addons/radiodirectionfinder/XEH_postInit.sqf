@@ -5,13 +5,13 @@
     if (GVAR(showUAV)) then {
         GVAR(signalSourceFuncs) pushBack LINKFUNC(getSignalsUAV);
     };
-    if ((isClass (configFile >> "CfgPatches" >> "acre_sys_core")) && GVAR(showACRE)) then {
+    if ((isClass (configFile >> "CfgPatches" >> "acre_sys_core")) && {missionNamespace getVariable [QGVAR(showACRE), false]}) then {
         GVAR(signalSourceFuncs) pushBack LINKFUNC(getSignalsACRE);
     };
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    ["ACE_transmitter_base", "init", FUNC(beaconInit), true, [], true] call CBA_fnc_addClassEventHandler;
+    ["ACE_transmitter_base", "init", FUNC(beaconInitServer), true, [], true] call CBA_fnc_addClassEventHandler;
     [QGVAR(getUavFreq), {
         params ["_uav"];
         if (!isNil {_uav getVariable QGVAR(freqMhz)}) exitWith {TRACE_1("getUavFreq - already set",_uav);};
@@ -37,8 +37,8 @@ private _closeCode = {
     if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {};
     [DISPLAY_MODE_CLOSED] call FUNC(toggleDisplayMode);
 };
-// [(localize LSTRING(itemName)), QPATHTOF(images\x_item.paa), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
-["RDF", "", _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+// ToDo: IconImage
+[LLSTRING(backpack_displayName), "", _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
 
 
 #ifdef DEBUG_MODE_FULL

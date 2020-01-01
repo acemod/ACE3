@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="RadioDirectionFinder">
-        <Key ID="STR_ACE_radiodirectionfinder_x">
-            <English>x</English>
+        <Key ID="STR_ACE_RadioDirectionFinder_backpack_displayName">
+            <English>PRD-13(V)3 Radio Direction Finder</English>
+        </Key>
+        <Key ID="STR_ACE_RadioDirectionFinder_openRDF">
+            <English>Open Radio Direction Finder</English>
+        </Key>
+        <Key ID="STR_ACE_RadioDirectionFinder_locatorBeacon406">
+            <English>[ACE] 406MHz Locator Bacon</English>
+        </Key>
+        <Key ID="STR_ACE_RadioDirectionFinder_locatorAttachToActivate">
+            <English>Attach to activate</English>
         </Key>
     </Package>
 </Project>

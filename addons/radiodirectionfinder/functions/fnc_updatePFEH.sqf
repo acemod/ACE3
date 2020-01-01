@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Updates the display (several times a second) called from the pfeh
+ * Main PFEH, runs while display or dialog is open
  *
  * Arguments:
  * None
@@ -19,7 +19,7 @@ private _unit = ace_player;
 private _backpackObject = backpackContainer _unit;
 
 if (!([_unit] call FUNC(displayCondition))) exitWith {
-    TRACE_2("displayCondition failed",_unit,_backpackObject);
+    TRACE_2("displayCondition failed",_unit,typeOf _backpackObject);
     [DISPLAY_MODE_CLOSED] call FUNC(toggleDisplayMode);
 };
 
@@ -28,27 +28,28 @@ _args params ["_deltaTime"];
 _deltaTime = CBA_missionTime - _deltaTime;
 _args set [0, CBA_missionTime];
 
-private _canShow = [_unit, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith);
+private _canInteract = [_unit, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith);
 private _display = displayNull;
 private _shown = false;
 
 if (GVAR(currentShowMode) == DISPLAY_MODE_DISPLAY) then {
     _display = uiNamespace getVariable [QGVAR(display), displayNull];
-    private _desiredPhase = if (_canShow && {cameraView != "GUNNER"} && {EGVAR(interact_menu,openedMenuType) < 0}) then {
+    private _desiredPhase = if (_canInteract && {cameraView != "GUNNER"} && {EGVAR(interact_menu,openedMenuType) < 0}) then {
+        // Can interact, not in gunner view and don't have interaction menu open - show more if weapon lowered
         if (weaponLowered _unit) then { 0.9 } else { 0.75 };
     } else {
-        0
+        0 // hide it
     };
     _shown = [_display, _desiredPhase, _deltaTime] call FUNC(updateDisplayAnim);
 } else {
     _display = uiNamespace getVariable [QGVAR(dialog), displayNull];
-    if ((!_canShow) || {isNull _display}) exitWith { [DISPLAY_MODE_DISPLAY, 1] call FUNC(toggleDisplayMode); };
+    if ((!_canInteract) || {isNull _display}) exitWith { [DISPLAY_MODE_DISPLAY, 1] call FUNC(toggleDisplayMode); };
     _shown = [_display, 1, _deltaTime] call FUNC(updateDisplayAnim);
 };
 if (!_shown) exitWith {};
 
 if (GVAR(nextGuiUpate) > CBA_missionTime) exitWith {};
-GVAR(nextGuiUpate) = CBA_missionTime + 0.1;
+GVAR(nextGuiUpate) = CBA_missionTime + 0.25;
 
 BEGIN_COUNTER(hudUpdate);
 
@@ -68,7 +69,7 @@ _ctrlTime ctrlSetText ([daytime, "HH:MM"] call bis_fnc_timeToString);
 (_display displayCtrl IDC_MENU_BG3) ctrlSetText (["#(argb,8,8,3)color(0.15,0.15,0.15,1)", "#(argb,8,8,3)color(0.5,0.5,0.5,1)"] select (_menuTab == IDC_MENU_BUTTON3));
 
 switch (_menuTab) do {
-case (IDC_MENU_BUTTON1): {
+case (IDC_MENU_BUTTON1): { // Compas view
         private _signals = [getPosASL _unit, _currentTargetFreq, 10] call FUNC(getSignals);
         private _baseDir = getDir _unit;
         // re-sort by relative dir
@@ -86,7 +87,7 @@ case (IDC_MENU_BUTTON1): {
         private _ctrlCircleDot = _display displayCtrl IDC_MODE1_CIRCLE_DOT;
         private _primarySignalInfo = [];
         if (_signals isEqualTo []) then {
-            _primarySignalInfo pushBack format ["<t size='2'><t align='center'>Nothing</t></t>", _freqMhz];
+            _primarySignalInfo pushBack format ["<t size='2'><t align='center'>Nothing</t></t>"];
             _ctrlCircleDot ctrlShow false;
         } else {
             _ctrlCircleDot ctrlShow true;
@@ -111,7 +112,7 @@ case (IDC_MENU_BUTTON1): {
             };
         } forEach _lines;
     };
-case (IDC_MENU_BUTTON2): {
+case (IDC_MENU_BUTTON2): { // Frequency Selections
         private _signals = [getPosASL _unit, _currentTargetFreq, 10] call FUNC(getSignals);
         private _ctrlFreqSelectionText = _display displayCtrl IDC_MODE2_FREQ_TEXT;
         private _currentTargetFreqText = if (_currentTargetFreq > 0) then { format ["%1 MHz",_currentTargetFreq] } else { "Any" };
@@ -123,7 +124,7 @@ case (IDC_MENU_BUTTON2): {
         private _ctrlResetBackground = _display displayCtrl IDC_MODE2_RESET_BACKGROUND;
         _ctrlResetBackground ctrlSetText (["#(argb,8,8,3)color(0.2,0.2,0.2,1)", "#(argb,8,8,3)color(0.9,0.1,0.1,1)"] select (_currentTargetFreq > 0));
     };
-case (IDC_MENU_BUTTON3): {
+case (IDC_MENU_BUTTON3): { // List View
         private _signals = [getPosASL _unit, 0, 20] call FUNC(getSignals); // no freq filter
         _signals = _signals apply {
             _x params ["_rtx", "_freqMhz", "_bearing"];

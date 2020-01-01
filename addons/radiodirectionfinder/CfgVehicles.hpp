@@ -5,9 +5,9 @@ class CfgVehicles {
     class Bag_Base;
     class GVAR(backpack): Bag_Base {
         scope = 2;
-        displayName = "PRD-13 Radio Direction Finder";
+        displayName = CSTRING(backpack_displayName);
         author = ECSTRING(common,aceteam);
-        model = "z\ace\addons\radiodirectionfinder\data\ace_antennaBackpack";
+        model = QPATHTOF(data\ace_antennaBackpack);
         maximumLoad = 50;
         mass = 100;
     };
@@ -23,7 +23,7 @@ class CfgVehicles {
         scope = 1;
     };
     class ACE_transmitter_406MHz: ACE_transmitter_base {
-        displayName = "[ACE] Transmitter 406MHz";
+        displayName = CSTRING(locatorBeacon406);
         GVAR(freq) = 406;
         GVAR(power) = 5000;
     };
@@ -33,23 +33,21 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class GVAR(open) { // Opens the dialog
-                    // displayName = CSTRING(configure);
-                    displayName = "RDF: Open";
+                class GVAR(open) { // Opens the interactive dialog
+                    displayName = CSTRING(openRDF);
                     condition = QUOTE(_player call FUNC(displayCondition));
+                    // open with execNextFrame to prevent problems with interaction menu closing dialog
                     statement = QUOTE([ARR_2(FUNC(toggleDisplayMode),[DISPLAY_MODE_DIALOG])] call CBA_fnc_execNextFrame);
                     // icon = QPATHTOF(UI\icon_android.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     class GVAR(show) { // Opens the display
-                        // displayName = CSTRING(show);
-                        displayName = "Show";
+                        displayName = "$STR_DISP_SHOW";
                         condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_DISPLAY);
                         statement = QUOTE([DISPLAY_MODE_DISPLAY] call FUNC(toggleDisplayMode));
                         exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     };
-                    class GVAR(close) {
-                        // displayName = CSTRING(closeUnit);
-                        displayName = "Close";
+                    class GVAR(hide) {
+                        displayName = "$STR_DISP_HIDE";
                         condition = QUOTE(GVAR(currentShowMode) != DISPLAY_MODE_CLOSED);
                         statement = QUOTE([DISPLAY_MODE_CLOSED] call FUNC(toggleDisplayMode));
                         exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};

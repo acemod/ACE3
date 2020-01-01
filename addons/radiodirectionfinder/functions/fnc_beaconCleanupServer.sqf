@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * (Server Only)
+ * Cleans up beacon on delete or killed (Server Only)
  *
  * Arguments:
  * None
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_radiodirectionfinder_fnc_beaconCleanup
+ * [] call ace_radiodirectionfinder_fnc_beaconCleanupServer
  *
  * Public: No
  */
@@ -18,7 +18,6 @@
 TRACE_1("beaconCleanup",_this);
 
 [{
-    private _removed = false;
     private _list = missionNamespace getVariable [QGVAR(signalList), []];
     private _countStart = count _list;
     _list = _list select { // select if array or alive or just not-null (if not a transmitter)

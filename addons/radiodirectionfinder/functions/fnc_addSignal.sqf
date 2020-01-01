@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Adds a scripted signal
+ * Adds a scripted signal (Server only)
  *
  * Arguments:
  * 0: Source <ARRAY>or<OBJECT>
@@ -17,7 +17,7 @@
  * Public: Yes
  */
 
-if (!isServer) exitWith {};
+if (!isServer) exitWith { WARNING_1("addSignal only has effect when called on server - %1",_this); };
 
 params [["_object", objNull, [objNull, []]], ["_freqMHz", 0, [0]], ["_powerMW", 0, [0]]];
 TRACE_3("addSignal",_object,_freqMHz,_powerMW);
