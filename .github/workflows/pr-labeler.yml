@@ -1,0 +1,11 @@
+name: PR Labeler
+
+on: [pull_request]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: srvaroa/labeler@v0.2
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

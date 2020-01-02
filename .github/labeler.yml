@@ -1,0 +1,17 @@
+kind/feature request:
+  title: '.*Add.*'
+
+kind/enhancement:
+  title: '.*(Improve|Change|Make|Convert).*'
+
+kind/bug fix:
+  title: '.*Fix.*'
+
+status/WIP:
+  title: 'WIP.*'
+
+area/compatibility:
+  title: '.*compat.*'
+
+area/translations:
+  title: '.*translation.*
