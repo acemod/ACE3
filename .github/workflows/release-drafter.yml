@@ -3,11 +3,10 @@ name: Release Drafter
 on:
   push:
     branches:
-    #- master
-    - fix-replacer-release-draft
+    - master
 
 jobs:
-  update_release_draft:
+  draft:
     runs-on: ubuntu-latest
     steps:
       - name: Release Drafter
