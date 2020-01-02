@@ -43,6 +43,7 @@
             <Chinese>腎上腺素甦醒機率增加</Chinese>
             <French>L'épinéphrine augmente les chances de réveil</French>
             <Czech>Epinefrin zvyšuje šanci na probuzení</Czech>
+            <Portuguese>Epinefrina Aumenta a chance de acordar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -50,6 +51,7 @@
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
             <French>Augmente la probabilité qu'un patient inconscient se réveille spontanément lorsqu'il a de l'épinéphrine dans son système sanguin.</French>
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
+            <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -66,6 +68,7 @@
             <Chinese>控制裂開或者已包紮傷口是否會讓人跛腳。</Chinese>
             <French>Permet de définir si les plaies ouvertes ou pansées font boiter une personne.</French>
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
+            <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -100,6 +103,7 @@
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
             <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
+            <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>

@@ -110,6 +110,7 @@
             <Japanese>ゴーグルの拭き取りをセルフ インタラクションに表示</Japanese>
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
+            <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -968,6 +968,7 @@
             <Chinese>部分 %1</Chinese>
             <French>Partiel %1</French>
             <Czech>Parciální %1</Czech>
+            <Portuguese>Parcial%1</Portuguese>
         </Key>
     </Package>
 </Project>
