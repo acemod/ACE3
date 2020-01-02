@@ -1,3 +1,6 @@
+branches:
+  - release-drafter  # for testing edits to this configuration
+
 name-template: 'Version $NEXT_PATCH_VERSION'
 tag-template: 'v$NEXT_PATCH_VERSION'
 
@@ -29,5 +32,5 @@ template: |
 
 replacers:
   # Category titles
-  - search: '\#\# (\*\*(ADDED|FIXED|CHANGED):\*\*)'
+  - search: '/\#\# (\*\*(ADDED|FIXED|CHANGED):\*\*)/g'
     replace: '$1'
