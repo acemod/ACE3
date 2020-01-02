@@ -11,52 +11,52 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class Unconscious;
         class DeadState;
         class ace_unc_1: DeadState {
-            file = QPATHTO_T(anims\ace_unc_1.rtm);
+            file = QPATHTO_T(data\ace_unc_1.rtm);
         };
         class ace_unc_2: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_2.rtm);
+            file = QPATHTO_T(data\ace_unc_2.rtm);
         };
         class ace_unc_3: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_3.rtm);
+            file = QPATHTO_T(data\ace_unc_3.rtm);
         };
         class ace_unc_4: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_4.rtm);
+            file = QPATHTO_T(data\ace_unc_4.rtm);
         };
         class ace_unc_5: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_5.rtm);
+            file = QPATHTO_T(data\ace_unc_5.rtm);
         };
         class ace_unc_6: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_6.rtm);
+            file = QPATHTO_T(data\ace_unc_6.rtm);
         };
         class ace_unc_7: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_7.rtm);
+            file = QPATHTO_T(data\ace_unc_7.rtm);
         };
         class ace_unc_8: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_8.rtm);
+            file = QPATHTO_T(data\ace_unc_8.rtm);
         };
         class ace_unc_1_1: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_1_1.rtm);
+            file = QPATHTO_T(data\ace_unc_1_1.rtm);
         };
         class ace_unc_2_1: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_2_1.rtm);
+            file = QPATHTO_T(data\ace_unc_2_1.rtm);
         };
         class ace_unc_3_1: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_3_1.rtm);
+            file = QPATHTO_T(data\ace_unc_3_1.rtm);
         };
         class ace_unc_4_1: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_4_1.rtm);
+            file = QPATHTO_T(data\ace_unc_4_1.rtm);
         };
         class ace_unc_5_1: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_5_1.rtm);
+            file = QPATHTO_T(data\ace_unc_5_1.rtm);
         };
         class ace_unc_6_1: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_6_1.rtm);
+            file = QPATHTO_T(data\ace_unc_6_1.rtm);
         };
         class ace_unc_7_1: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_7_1.rtm);
+            file = QPATHTO_T(data\ace_unc_7_1.rtm);
         };
         class ace_unc_8_1: ace_unc_1 {
-            file = QPATHTO_T(anims\ace_unc_8_1.rtm);
+            file = QPATHTO_T(data\ace_unc_8_1.rtm);
         };
         /* added for the "ace_unc" part */
         class KIA_passenger_boat_holdleft;
