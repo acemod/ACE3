@@ -4,7 +4,7 @@ on:
   push:
     branches:
     #- master
-    - fix-regex-release-draft
+    - fix-replacer-release-draft
 
 jobs:
   update_release_draft:

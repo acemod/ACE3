@@ -32,4 +32,4 @@ replacers:
   - search: '/\#\# (\*\*(ADDED|FIXED|CHANGED):\*\*)/g'
     replace: '$1'
 
-branches: 'fix-regex-release-draft'
+branches: 'fix-replacer-release-draft'
