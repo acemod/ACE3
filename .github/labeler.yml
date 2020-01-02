@@ -14,4 +14,16 @@ area/compatibility:
   title: '.*compat.*'
 
 area/translations:
-  title: '.*translation.*
+  title: '.*translation.*'
+
+area/documentation:
+  title: '.*(documentation|docs).*'
+
+kind/documentation:
+  title: '.*(documentation|docs).*'
+
+area/tools:
+  title: '.*tools.*'
+
+ignore changelog:
+  title: '.*tools.*'
