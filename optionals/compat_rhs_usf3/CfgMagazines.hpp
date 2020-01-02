@@ -205,7 +205,7 @@ class cfgMagazines {
         picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
     };
     class RHS_48Rnd_40mm_MK19_M430A1;
-    class GVAR(48Rnd_40mm_MK19_M430A1) : RHS_48Rnd_40mm_MK19_M430A1 {
+    class GVAR(48Rnd_40mm_MK19_M430A1): RHS_48Rnd_40mm_MK19_M430A1 {
         scope = 2;
         type = 256;
         count = 48;
