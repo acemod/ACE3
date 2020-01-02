@@ -1,4 +1,5 @@
 branches:
+  - master
   - release-drafter  # for testing edits to this configuration
 
 name-template: 'Version $NEXT_PATCH_VERSION'
