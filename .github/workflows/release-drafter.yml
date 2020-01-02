@@ -3,7 +3,8 @@ name: Release Drafter
 on:
   push:
     branches:
-    - master
+    #- master
+    - fix-regex-release-draft
 
 jobs:
   update_release_draft:

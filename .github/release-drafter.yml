@@ -29,5 +29,7 @@ template: |
 
 replacers:
   # Category titles
-  - search: '\#\# (\*\*(ADDED|FIXED|CHANGED):\*\*)'
+  - search: '/\#\# (\*\*(ADDED|FIXED|CHANGED):\*\*)/g'
     replace: '$1'
+
+branches: 'fix-regex-release-draft'
