@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -458,6 +458,7 @@
             <Portuguese>Cor do Seletor</Portuguese>
             <French>Couleur du sélecteur</French>
             <Czech>Barva selektoru</Czech>
+            <Spanish>Selector de color</Spanish>
         </Key>
     </Package>
 </Project>

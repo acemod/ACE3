@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Goggles">
         <Key ID="STR_ACE_Goggles_DisplayName">
@@ -14,6 +14,7 @@
             <Portuguese>Óculos</Portuguese>
             <French>Lunettes</French>
             <Czech>Brýle</Czech>
+            <Spanish>Gafas</Spanish>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingsName">
             <English>ACE Goggles</English>
@@ -28,6 +29,7 @@
             <Portuguese>ACE Óculos</Portuguese>
             <French>ACE Lunettes</French>
             <Czech>ACE Brýle</Czech>
+            <Spanish>[ACE] Gafas</Spanish>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
@@ -74,6 +76,7 @@
             <Chinese>護目鏡效果</Chinese>
             <Portuguese>Efeitos de Óculos</Portuguese>
             <Czech>Efekty brýlí</Czech>
+            <Spanish>Efectos de gafas</Spanish>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
@@ -88,6 +91,7 @@
             <Chinese>染色</Chinese>
             <Portuguese>Cor</Portuguese>
             <Czech>Zabarvení</Czech>
+            <Spanish>Tinte</Spanish>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
@@ -102,6 +106,7 @@
             <Chinese>染色 + 影響</Chinese>
             <Portuguese>Cor + Efeitos</Portuguese>
             <Czech>Zabarvení + Efekty</Czech>
+            <Spanish>Tinte + efectos</Spanish>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
             <English>Show Wipe Goggles self interaction</English>
@@ -111,6 +116,7 @@
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
+            <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NameTags">
         <Key ID="STR_ACE_NameTags_Module_DisplayName">
@@ -142,6 +142,7 @@
             <Russian>Затухание на границе экрана</Russian>
             <Portuguese>Ocultar na borda da tela</Portuguese>
             <Czech>Zeslábnout poblíž okrajů obrazovky</Czech>
+            <Spanish>Difuminar en el borde de pantalla</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
             <English>Show player ranks (requires player names)</English>
@@ -362,6 +363,7 @@
             <Portuguese>Transparência da etiqueta de nome</Portuguese>
             <French>Transparence des noms</French>
             <Czech>Průhlednost jmenovek</Czech>
+            <Spanish>Transparencia de etiquetas de jugadores</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>

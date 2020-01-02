@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="GForces">
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
@@ -43,6 +43,7 @@
             <Russian>Уменьшение перегрузок</Russian>
             <Portuguese>Redução de Força-G</Portuguese>
             <Czech>Redukce G Force</Czech>
+            <Spanish>Reducción de fuerzas G</Spanish>
         </Key>
     </Package>
 </Project>

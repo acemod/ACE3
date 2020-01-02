@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_AI">
         <Key ID="STR_ACE_Medical_AI_enableFor_title">
@@ -10,6 +10,7 @@
             <Portuguese>IA Médico</Portuguese>
             <Chinese>AI醫療兵</Chinese>
             <Czech>Zdravotnická AI</Czech>
+            <Spanish>Médico para IA</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
@@ -20,6 +21,7 @@
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
             <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
             <Czech>UI reaguje na zranění a bezvědomí</Czech>
+            <Spanish>La IA responderá a heridas e inconsciencia</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
