@@ -77,6 +77,7 @@
             <Chinese>只有在強烈疼痛時使用</Chinese>
             <French>Juste un fort effet douloureux</French>
             <Czech>Pouze efekt vysoké bolesti</Czech>
+            <Portuguese>Apenas efeito de dor alta</Portuguese>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
