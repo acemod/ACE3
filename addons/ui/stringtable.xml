@@ -5,7 +5,7 @@
             <English>User Interface</English>
             <Czech>Uživatelské rozhraní</Czech>
             <Portuguese>Interface do usuário</Portuguese>
-            <French>Interface utilisateur</French>
+            <French>Interface Utilisateur</French>
             <Russian>Интерфейс</Russian>
             <Japanese>ユーザ インタフェイス</Japanese>
             <Polish>Interfejs użytkownika</Polish>
@@ -14,12 +14,13 @@
             <Italian>Interfaccia Utente</Italian>
             <Chinesesimp>使用者介面</Chinesesimp>
             <Chinese>使用者介面</Chinese>
+            <Spanish>Interfaz de usuario</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_ModuleName">
             <English>User Interface</English>
             <Czech>Uživatelské rozhraní</Czech>
             <Portuguese>Interface do usuário</Portuguese>
-            <French>Interface utilisateur</French>
+            <French>Interface Utilisateur</French>
             <Russian>Пользовательский интерфейс</Russian>
             <Japanese>ユーザ インタフェイス</Japanese>
             <Polish>Interfejs użytkownika</Polish>
@@ -28,11 +29,12 @@
             <Italian>Interfaccia Utente</Italian>
             <Chinesesimp>使用者介面</Chinesesimp>
             <Chinese>使用者介面</Chinese>
+            <Spanish>Interfaz de usuario</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_ModuleDescription">
             <English>This module allows toggling visible user interface parts.</English>
             <Portuguese>Este módulo permite ligar ou desligar partes da interface do usuário</Portuguese>
-            <French>Ce module permet le basculement de parties visibles de l'interface utlisateur</French>
+            <French>Ce module permet d'activer ou de désactiver certains éléments de l'Interface Utilisateur (IU).</French>
             <Russian>Этот модуль позволяет переключать видимость элементов пользовательского интерфейса.</Russian>
             <Japanese>モジュールではユーザ インタフェイスの一部表示を切り替えできます。</Japanese>
             <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
@@ -41,12 +43,13 @@
             <Italian>Questo modulo consente di commutare parti di interfaccia utente visibili.</Italian>
             <Chinesesimp>此模块允许你调整使用者介面的任何一个元件</Chinesesimp>
             <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
+            <Czech>Tento modul umožňuje přepínání viditelných částí uživatelského rozhraní.</Czech>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI">
             <English>Allow Selective UI</English>
             <Czech>Povolit selektivní UI</Czech>
             <Portuguese>Permitir IU Selecionável</Portuguese>
-            <French>Permettre l'IU selective</French>
+            <French>Autoriser la personnalisation de l'IU</French>
             <Russian>Включить настраиваемый интерфейс</Russian>
             <Japanese>UI 選択性を許可</Japanese>
             <Polish>Zezwól na selektywne UI</Polish>
@@ -55,12 +58,13 @@
             <Italian>Permette l'UI Selettiva</Italian>
             <Chinesesimp>允许调整使用者介面</Chinesesimp>
             <Chinese>允許調整使用者介面</Chinese>
+            <Spanish>Permitir IU selectiva</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
             <English>Allow client to modify their UI.</English>
             <Czech>Povolit klientovi měnit jeho UI</Czech>
             <Portuguese>Permite o cliente modificar sua IU.</Portuguese>
-            <French>Permet aux clients de modifier leur IU</French>
+            <French>Permet aux clients de modifier leur Interface Utilisateur.</French>
             <Russian>Позволить клиентам изменять их пользовательский интерфейс.</Russian>
             <Japanese>クライアントがユーザ インタフェイスを編集できるようにします。</Japanese>
             <Polish>Zezwól klientowi na modyfikację UI.</Polish>
@@ -69,12 +73,13 @@
             <Italian>Permette al client di modificare la propria UI.</Italian>
             <Chinesesimp>允许客户端自行调整使用者介面</Chinesesimp>
             <Chinese>允許客戶端自行調整使用者介面</Chinese>
+            <Spanish>Permitir al cliente modificar su interfaz.</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
             <English>Soldier/Vehicle/Weapon Information</English>
             <Czech>Informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Informação de Soldado/Veículo/Armamento</Portuguese>
-            <French>Soldat/Véhicule/Arme/Informations</French>
+            <French>Information soldat/véhicule/arme</French>
             <Russian>Информация о Солдате/Технике/Оружии</Russian>
             <Japanese>兵士/車両/武器の情報</Japanese>
             <Polish>Informacje o żołnierzu/pojeździe/broni</Polish>
@@ -83,6 +88,7 @@
             <Italian>Informazioni Soldato/Veicolo/Arma</Italian>
             <Chinesesimp>士兵/载具/武器资讯栏</Chinesesimp>
             <Chinese>士兵/載具/武器資訊欄</Chinese>
+            <Spanish>Información de soldado / vehículo / arma</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleRadar">
             <English>Vehicle Radar</English>
@@ -97,12 +103,13 @@
             <Italian>Rada Veicolo</Italian>
             <Chinesesimp>载具雷达</Chinesesimp>
             <Chinese>載具雷達</Chinese>
+            <Spanish>Radar de vehículos</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleCompass">
             <English>Vehicle Compass</English>
             <Czech>Kompas vozidla</Czech>
             <Portuguese>Bússola de Veículo</Portuguese>
-            <French>Compas de véhicule</French>
+            <French>Boussole de véhicule</French>
             <Russian>Компас в технике</Russian>
             <Japanese>車両のレーダ</Japanese>
             <Polish>Kompas w pojeździe</Polish>
@@ -111,6 +118,7 @@
             <Italian>Bussola Veicolo</Italian>
             <Chinesesimp>载具指北针</Chinesesimp>
             <Chinese>載具指北針</Chinese>
+            <Spanish>Brújula del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_CommandMenu">
             <English>Command Menu</English>
@@ -125,6 +133,7 @@
             <Italian>Menù di Comando</Italian>
             <Chinesesimp>指挥选单</Chinesesimp>
             <Chinese>指揮選單</Chinese>
+            <Spanish>Menú de Comando</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GroupBar">
             <English>Group Bar</English>
@@ -139,12 +148,13 @@
             <Italian>Barra del Gruppo</Italian>
             <Chinesesimp>小队状态栏</Chinesesimp>
             <Chinese>小隊狀態欄</Chinese>
+            <Spanish>Barra de grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
             <Czech>Název zbraně</Czech>
             <Portuguese>Nome do Armamento</Portuguese>
-            <French>Nom de l''arme</French>
+            <French>Nom de l'arme</French>
             <Russian>Название оружия</Russian>
             <Japanese>武器名</Japanese>
             <Polish>Nazwa broni</Polish>
@@ -153,12 +163,13 @@
             <Italian>Nome Arma</Italian>
             <Chinesesimp>武器名称</Chinesesimp>
             <Chinese>武器名稱</Chinese>
+            <Spanish>Nombre del arma</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_WeaponNameBackground">
             <English>Weapon Name Background</English>
             <Czech>Název zbraně v pozadí</Czech>
             <Portuguese>Fundo do Nome do Armamento</Portuguese>
-            <French>Arrière-plan du nom de l'arme</French>
+            <French>Fond pour le nom de l'arme</French>
             <Russian>Фон названия оружия</Russian>
             <Japanese>武器名の背景表示</Japanese>
             <Polish>Tło nazwy broni</Polish>
@@ -167,6 +178,7 @@
             <Italian>Nome Sfondo Arma</Italian>
             <Chinesesimp>武器名称背景</Chinesesimp>
             <Chinese>武器名稱背景</Chinese>
+            <Spanish>Fondo de nombre de arma</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_FiringMode">
             <English>Firing Mode</English>
@@ -181,6 +193,7 @@
             <Italian>Modalità di Fuoco</Italian>
             <Chinesesimp>射击模式</Chinesesimp>
             <Chinese>射擊模式</Chinese>
+            <Spanish>Modo de disparo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_AmmoType">
             <English>Ammo Type</English>
@@ -195,6 +208,7 @@
             <Italian>Tipo Munizioni</Italian>
             <Chinesesimp>弹药类型</Chinesesimp>
             <Chinese>彈藥類型</Chinese>
+            <Spanish>Tipo de munición</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_AmmoCount">
             <English>Ammo Count</English>
@@ -209,6 +223,7 @@
             <Italian>Contatore Munizioni</Italian>
             <Chinesesimp>弹药数量</Chinesesimp>
             <Chinese>彈藥數量</Chinese>
+            <Spanish>Cantidad de munición</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
             <English>Magazine Count</English>
@@ -223,12 +238,13 @@
             <Italian>Contatore Caricatore</Italian>
             <Chinesesimp>弹匣数量</Chinesesimp>
             <Chinese>彈匣數量</Chinese>
+            <Spanish>Recuento de cargadores</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableName">
             <English>Throwable Type</English>
             <Czech>Typ granátů apod.</Czech>
             <Portuguese>Tipo de Arremessável</Portuguese>
-            <French>Type d'objets de lancer</French>
+            <French>Type d'objet lançable</French>
             <Russian>Тип гранаты</Russian>
             <Japanese>投げる種類</Japanese>
             <Polish>Typ granatu</Polish>
@@ -237,12 +253,13 @@
             <Italian>Tipo Lanciabile</Italian>
             <Chinesesimp>投掷物类型</Chinesesimp>
             <Chinese>投擲物類型</Chinese>
+            <Spanish>Tipo arrojable</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableCount">
             <English>Throwable Count</English>
             <Czech>Počet granátů apod.</Czech>
             <Portuguese>Quantidade de Arremessável</Portuguese>
-            <French>Nombre d'objets de lancer</French>
+            <French>Nombre d'objets lançables</French>
             <Russian>Количество гранат</Russian>
             <Japanese>投げられる数</Japanese>
             <Polish>Ilość granatów</Polish>
@@ -251,12 +268,13 @@
             <Italian>Contatore Lanciabili</Italian>
             <Chinesesimp>投掷物数量</Chinesesimp>
             <Chinese>投擲物數量</Chinese>
+            <Spanish>Cantidad arrojable</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_Zeroing">
             <English>Zeroing</English>
             <Czech>Náměr</Czech>
             <Portuguese>Zerar a mira</Portuguese>
-            <French>Mise à zéro</French>
+            <French>Zérotage</French>
             <Russian>Дальность стрельбы</Russian>
             <Japanese>ゼロイン</Japanese>
             <Polish>Wyzerowanie broni</Polish>
@@ -265,11 +283,12 @@
             <Italian>Azzeramento</Italian>
             <Chinesesimp>归零距离</Chinesesimp>
             <Chinese>歸零距離</Chinese>
+            <Spanish>Reducción a cero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
             <English>Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento</Portuguese>
-            <French>Arrière-plan des informations inférieures de l'arme</French>
+            <French>Fond pour la barre d'informations inférieure de l'arme</French>
             <Russian>Фон ниформации об оружии снизу</Russian>
             <Japanese>武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni</Polish>
@@ -278,6 +297,8 @@
             <Italian>Informazioni Sfondo Arma Bassa</Italian>
             <Chinesesimp>武器底部资讯栏背景</Chinesesimp>
             <Chinese>武器底部資訊欄背景</Chinese>
+            <Spanish>Fondo de información inferior de arma</Spanish>
+            <Czech>Nižší pozadí panulu s informacemi o zbrani</Czech>
         </Key>
         <Key ID="STR_ACE_UI_Stance">
             <English>Stance</English>
@@ -292,6 +313,7 @@
             <Italian>Postura</Italian>
             <Chinesesimp>姿态</Chinesesimp>
             <Chinese>姿態</Chinese>
+            <Spanish>Postura</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_StaminaBar">
             <English>Stamina Bar</English>
@@ -306,11 +328,12 @@
             <Italian>Barra Stamina</Italian>
             <Chinesesimp>体力栏</Chinesesimp>
             <Chinese>體力欄</Chinese>
+            <Spanish>Barra de resistencia</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponName">
             <English>Gunner Weapon Name</English>
             <Portuguese>Nome da arma do fuzileiro</Portuguese>
-            <French>Nom de l'arme du tireur</French>
+            <French>Nom de l'arme (tireur)</French>
             <Russian>Название орудия наводчика</Russian>
             <Japanese>射手用の武器名</Japanese>
             <Polish>Nazwa broni strzelca</Polish>
@@ -319,11 +342,12 @@
             <Italian>Nome Arma Artigliere</Italian>
             <Chinesesimp>炮手武器名称</Chinesesimp>
             <Chinese>砲手武器名稱</Chinese>
+            <Czech>Jméno zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
             <Portuguese>Fundo do nome da arma do fuzileiro</Portuguese>
-            <French>Arrière-plan du nom de l'arme (tireur)</French>
+            <French>Fond pour le nom de l'arme (tireur)</French>
             <Russian>Фон названия орудия наводчика</Russian>
             <Japanese>射手用の武器名の背景表示</Japanese>
             <Polish>Tło nazwy broni strzelca</Polish>
@@ -332,6 +356,7 @@
             <Italian>Nome Sfondo Arma Artigliere</Italian>
             <Chinesesimp>炮手武器名称背景</Chinesesimp>
             <Chinese>砲手武器名稱背景</Chinese>
+            <Czech>Pozadí jména zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerFiringMode">
             <English>Gunner Firing Mode</English>
@@ -345,6 +370,7 @@
             <Italian>Modalità di Fuoco Artigliere</Italian>
             <Chinesesimp>炮手射击模式</Chinesesimp>
             <Chinese>砲手射擊模式</Chinese>
+            <Czech>Režim palby zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoType">
             <English>Gunner Ammo Type</English>
@@ -358,6 +384,7 @@
             <Italian>Tipo Munizioni Artigliere</Italian>
             <Chinesesimp>炮手弹药类型</Chinesesimp>
             <Chinese>砲手彈藥類型</Chinese>
+            <Czech>Typ munice zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoCount">
             <English>Gunner Ammo Count</English>
@@ -371,6 +398,7 @@
             <Italian>Contatore Munizioni Artigliere</Italian>
             <Chinesesimp>炮手弹药数量</Chinesesimp>
             <Chinese>砲手彈藥數量</Chinese>
+            <Czech>Počet zásobníků zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
@@ -384,11 +412,12 @@
             <Italian>Contatore Caricatore Artigliere</Italian>
             <Chinesesimp>炮手弹匣数量</Chinesesimp>
             <Chinese>砲手彈匣數量</Chinese>
+            <Czech>Počet munice zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
             <Portuguese>Tipo de Arremessável do fuzileiro</Portuguese>
-            <French>Type d'objets jetable ( tireur)</French>
+            <French>Type d'objet lançable (tireur)</French>
             <Russian>Тип пусковой установки наводчика</Russian>
             <Japanese>射手用のランチャーの種類</Japanese>
             <Polish>Typ rakiet strzelca</Polish>
@@ -397,11 +426,12 @@
             <Italian>Tipo Lanciabile Artigliere</Italian>
             <Chinesesimp>炮手发射物类型</Chinesesimp>
             <Chinese>砲手發射物類型</Chinese>
+            <Czech>Typ odpalitelných granátů vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableCount">
             <English>Gunner Launchable Count</English>
             <Portuguese>Quantidade de Arremessável do fuzileiro</Portuguese>
-            <French>Nombre d'objets jetable (tireur)</French>
+            <French>Nombre d'objets lançables (tireur)</French>
             <Russian>Количество снарядов пусковой установки наводчика</Russian>
             <Japanese>射手用のランチャー弾薬数</Japanese>
             <Polish>Ilość rakiet strzelca</Polish>
@@ -410,11 +440,12 @@
             <Italian>Contatore Lanciabili Artigliere</Italian>
             <Chinesesimp>炮手发射物数量</Chinesesimp>
             <Chinese>砲手發射物數量</Chinese>
+            <Czech>Počet odpalitelných granátů vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerZeroing">
             <English>Gunner Zeroing</English>
             <Portuguese>Zerar a mira do fuzileiro</Portuguese>
-            <French>Mise à zéro ( tireur)</French>
+            <French>Zérotage (tireur)</French>
             <Russian>Дальность стрельбы наводчика</Russian>
             <Japanese>射手用ゼロイン</Japanese>
             <Polish>Wyzerowanie broni strzelca</Polish>
@@ -423,11 +454,12 @@
             <Italian>Azzeramento Artigliere</Italian>
             <Chinesesimp>炮手归零距离</Chinesesimp>
             <Chinese>砲手歸零距離</Chinese>
+            <Czech>Náměr zbraně vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento do fuzileiro</Portuguese>
-            <French>Arrière-plan des informations inférieures (tireur)</French>
+            <French>Fond pour la barre d'informations inférieure (tireur)</French>
             <Russian>Фон ниформации об орудии наводчика снизу</Russian>
             <Japanese>射手用の武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni strzelca</Polish>
@@ -436,6 +468,7 @@
             <Italian>Informazioni Sfondo Arma Artigliere Bassa</Italian>
             <Chinesesimp>炮手武器底部资讯栏背景</Chinesesimp>
             <Chinese>砲手武器底部資訊欄背景</Chinese>
+            <Czech>Nižší pozadí panelu s informacemi o zbrani vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
@@ -450,12 +483,13 @@
             <Italian>Nome Veicolo</Italian>
             <Chinesesimp>载具名称</Chinesesimp>
             <Chinese>載具名稱</Chinese>
+            <Spanish>Nombre del vehiculo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleNameBackground">
             <English>Vehicle Name Background</English>
             <Czech>Název vozidla v pozadí</Czech>
             <Portuguese>Fundo do Nome do Veículo</Portuguese>
-            <French>Arrière-plan du nom du véhicule</French>
+            <French>Fond pour le nom du véhicule</French>
             <Russian>Фон названия техники</Russian>
             <Japanese>車両名の背景</Japanese>
             <Polish>Tło nazwy pojazdu</Polish>
@@ -464,12 +498,13 @@
             <Italian>Nome Sfondo Veicolo</Italian>
             <Chinesesimp>载具名称背景</Chinesesimp>
             <Chinese>載具名稱背景</Chinese>
+            <Spanish>Fondo del nombre del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleFuelBar">
             <English>Vehicle Fuel Bar</English>
             <Czech>Ukazatel paliva</Czech>
             <Portuguese>Barra de Combustível do Veículo</Portuguese>
-            <French>Barre d'éssence du véhicule</French>
+            <French>Barre d'essence du véhicule</French>
             <Russian>Полоса топлива</Russian>
             <Japanese>車両の燃料計</Japanese>
             <Polish>Pasek paliwa</Polish>
@@ -478,6 +513,7 @@
             <Italian>Barra Carburante Veicolo</Italian>
             <Chinesesimp>载具燃料栏</Chinesesimp>
             <Chinese>載具燃料欄</Chinese>
+            <Spanish>Barra de combustible del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleSpeed">
             <English>Vehicle Speed</English>
@@ -492,6 +528,7 @@
             <Italian>Velocità Veicolo</Italian>
             <Chinesesimp>载具速度</Chinesesimp>
             <Chinese>載具速度</Chinese>
+            <Spanish>Velocidad del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleAltitude">
             <English>Vehicle Altitude</English>
@@ -506,12 +543,13 @@
             <Italian>Altitudine Veicolo</Italian>
             <Chinesesimp>载具高度</Chinesesimp>
             <Chinese>載具高度</Chinese>
+            <Spanish>Altitud del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleDamage">
             <English>Vehicle Damage</English>
             <Czech>Poškození vozidla</Czech>
             <Portuguese>Dano do Veículo</Portuguese>
-            <French>Dégats du véhicule</French>
+            <French>Dégâts du véhicule</French>
             <Russian>Повреждение техники</Russian>
             <Japanese>車両の損傷表示</Japanese>
             <Polish>Uszkodzenia pojazdu</Polish>
@@ -520,12 +558,13 @@
             <Italian>Danno Veicolo</Italian>
             <Chinesesimp>载具伤害</Chinesesimp>
             <Chinese>載具傷害</Chinese>
+            <Spanish>Daño vehicular</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleInfoBackground">
             <English>Vehicle Info Background</English>
             <Czech>Info o vozidle v pozadí</Czech>
             <Portuguese>Fundo das informações do veículo</Portuguese>
-            <French>Arrière-plan des informations du véhicule</French>
+            <French>Fond pour les informations du véhicule</French>
             <Russian>Фон информации о технике</Russian>
             <Japanese>車両状態の背景</Japanese>
             <Polish>Tło informacji o pojeździe</Polish>
@@ -534,12 +573,13 @@
             <Italian>Informazioni Sfondo Veicolo</Italian>
             <Chinesesimp>载具资讯栏背景</Chinesesimp>
             <Chinese>載具資訊欄背景</Chinese>
+            <Spanish>Fondo de información del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
             <English>Requires Soldier/Vehicle/Weapon Information.</English>
             <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Requer informações de Soldado/Veículo/Armamento</Portuguese>
-            <French>Requiert les informations de soldat/Vehicule/Arme.</French>
+            <French>Requiert l'option "Information soldat/véhicule/arme".</French>
             <Russian>Требуется Информация о Солдате/Технике/Оружии.</Russian>
             <Japanese>兵士/車両/武器の情報を必要とします。</Japanese>
             <Polish>Wymaga informacji o żołnierzu/pojeździe/broni.</Polish>
@@ -553,7 +593,7 @@
             <English>Modifying User Interface is disabled.</English>
             <Czech>Změna uživatelského rozhraní je zakázána.</Czech>
             <Portuguese>A modificação da interface do usuário está desabilitada.</Portuguese>
-            <French>Modifications de l'interface utilisateur désactivé.</French>
+            <French>La personnalisation de l'Interface Utilisateur est désactivée.</French>
             <Russian>Изменение пользовательского интерфейса запрещено.</Russian>
             <Japanese>ユーザ インタフェイスの変更は無効化されています。</Japanese>
             <Polish>Modyfikacja interfejsu użytkownika jest wyłączona.</Polish>
@@ -566,7 +606,7 @@
         <Key ID="STR_ACE_UI_Disabled">
             <English>Cannot modify a forced User Interface element.</English>
             <Portuguese>Não é possível modificar um elemento forçado da interface do usuário.</Portuguese>
-            <French>Impossible de modifier un élément de l'interface utilisateur forcé.</French>
+            <French>Impossible de modifier un élément forcé de l'Interface Utilisateur.</French>
             <Russian>Невозможно изменить зафиксированный элемент пользовательского интерфейса.</Russian>
             <Japanese>ユーザー インタフェイス要素の強制はできません。</Japanese>
             <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>
@@ -575,6 +615,7 @@
             <Italian>Impossibile modificare un elemento forzato d' Interfaccia Utente.</Italian>
             <Chinesesimp>无法编辑已被锁定的使用者介面元件</Chinesesimp>
             <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
+            <Czech>Nelze upravit prvek vynuceného uživatelského rozhraní.</Czech>
         </Key>
     </Package>
 </Project>

@@ -40,10 +40,7 @@ private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWoun
 TRACE_1("",_extensionOutput);
 
 // these are default values and modified by _extensionOutput
-private _painToAdd = 0;
-private _woundsCreated = [];
-
-call compile _extensionOutput;
+(parseSimpleArray _extensionOutput) params ["_woundsCreated", "_painToAdd"];
 
 // todo: Make the pain and bleeding calculations part of the extension again
 private _woundDamage = _damage / ((count _woundsCreated) max 1); // If the damage creates multiple wounds

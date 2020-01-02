@@ -11,6 +11,9 @@
             <Polish>Ustaw tryb pocisku Hellfire</Polish>
             <Korean>헬파이어 모드 세팅</Korean>
             <Russian>Установить режим Hellfire</Russian>
+            <Portuguese>Definir modo de Hellfire</Portuguese>
+            <French>Définir mode Hellfire</French>
+            <Czech>Nastavit režim Hellfire</Czech>
         </Key>
     </Package>
 </Project>

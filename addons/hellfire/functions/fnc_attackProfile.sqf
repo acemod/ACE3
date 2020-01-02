@@ -18,8 +18,10 @@
  */
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
-_args params ["_firedEH", "_launchParams"];
-_launchParams params ["","_targetLaunchParams"];
+_args params ["_firedEH", "_launchParams", "", "", "_stateParams"];
+_stateParams params ["", "_seekerStateParams"];
+_launchParams params ["","_targetLaunchParams","_seekerType"];
+
 _targetLaunchParams params ["", "", "_launchPos"];
 _firedEH params ["","","","","","","_projectile"];
 
@@ -68,7 +70,7 @@ switch (_attackStage) do {
         private _gainSlope = linearConversion [0.5, 0.1, _distToGoRatio, 7, -7, true]; 
         _returnTargetPos = +_seekerTargetPos;
         _returnTargetPos set [2, ((_projectilePos select 2) + (_distanceToTarget2d * sin _gainSlope)) max (_seekerTargetPos select 2)];
-    
+
         if ((_distanceToTarget2d < 500) || {(_currentHeightOverTarget atan2 _distanceToTarget2d) > 15}) then { // Wait until we can come down at a sharp angle
             _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
             TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
@@ -77,6 +79,17 @@ switch (_attackStage) do {
     case STAGE_ATTACK_TERMINAL: {
         private _distanceToTarget2d = _seekerTargetPos distance2d _projectilePos;
         _returnTargetPos = _seekerTargetPos vectorAdd [0, 0, _distanceToTarget2d * 0.02];
+    };
+};
+
+// Special radar case. Adjust target position such that we are leading it
+if (_attackStage >= 3 && { _seekerType isEqualTo "ARH" }) then {
+    _seekerStateParams params ["", "", "", "", "", "", "", "_lastKnownVelocity"];
+    private _projectileVelocity = velocity _projectile;
+    if (_projectileVelocity#2 < 0) then {
+        private _projectileSpeed = vectorMagnitude _projectileVelocity; // this gives a precise impact time versus using speed _projectile. Dont change
+        private _timeUntilImpact = (_seekerTargetPos distance _projectilePos) / _projectileSpeed;
+        _returnTargetPos = _returnTargetPos vectorAdd (_lastKnownVelocity vectorMultiply _timeUntilImpact);
     };
 };
 

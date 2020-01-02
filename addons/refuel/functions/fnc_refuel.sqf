@@ -93,6 +93,8 @@ if (_maxFuel == 0) then {
         };
         _unit setVariable [QGVAR(tempFuel), _fuelInSink];
 
+        [QGVAR(tick), [_source, _sink, _rateTime]] call CBA_fnc_localEvent;
+
         [QEGVAR(common,setFuel), [_sink, _fuelInSink], _sink] call CBA_fnc_targetEvent;
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
@@ -100,6 +102,7 @@ if (_maxFuel == 0) then {
     };
 
     if (_finished) exitWith {
+        [QGVAR(stopped), [_source, _sink]] call CBA_fnc_localEvent;
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
     };

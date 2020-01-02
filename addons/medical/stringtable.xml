@@ -20,54 +20,108 @@
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
             <German>Wahrscheinlichkeit aufzuwachen</German>
-            <Japanese>気絶から覚醒する可能性</Japanese>
+            <Japanese>気絶から覚醒の可能性</Japanese>
             <Russian>Шанс очнуться при потере сознания</Russian>
+            <French>Chance de reprendre connaissance</French>
+            <Portuguese>Chance de recuperar consciência</Portuguese>
+            <Chinese>從無意識中甦醒機率</Chinese>
+            <Czech>Pravděpodobnost probuzení se z bezvědomí</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
             <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht ()Überprüfung alle 15 Sekunden)</German>
-            <Japanese>安定状態にある人が覚醒する確率です。(15 秒毎に確認)</Japanese>
+            <Japanese>容体が安定しているユニットが気絶する確率を決定できます。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
+            <French>La probabilité qu'une unité en état stable puisse reprendre conscience spontanément (état vérifié toutes les 15 secondes).</French>
+            <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
+            <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
+            <Czech>Pravděpodobnost, že se jednotka se stabilními životními známkami probudí z bezvědomí (zkoušeno každých 15 vteřin).</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
+            <English>Epinephrine Increases Wake Up Chance</English>
+            <Japanese>アドレナリンで覚醒確率上昇</Japanese>
+            <Chinese>腎上腺素甦醒機率增加</Chinese>
+            <French>L'épinéphrine augmente les chances de réveil</French>
+            <Czech>Epinefrin zvyšuje šanci na probuzení</Czech>
+            <Portuguese>Epinefrina Aumenta a chance de acordar</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
+            <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
+            <Japanese>患者がアドレナリンを投与されると自発的に覚醒する確率を上昇させます。</Japanese>
+            <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
+            <French>Augmente la probabilité qu'un patient inconscient se réveille spontanément lorsqu'il a de l'épinéphrine dans son système sanguin.</French>
+            <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
+            <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
             <Russian>Хромота</Russian>
             <Japanese>跛行</Japanese>
+            <French>Boitement</French>
+            <Portuguese>Mancando</Portuguese>
+            <Chinese>跛腳</Chinese>
+            <Czech>Kulhání</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
-            <English>Limp when unit has leg wounds...(todo)</English>
-            <Russian>Хромота, когда юнит имеет ранения ног...</Russian>
-            <Japanese>足を負傷時に引きずって歩くようにします・・・(TODO)</Japanese>
+            <English>Controls whether open or bandaged wounds cause a person to limp.</English>
+            <Japanese>創傷開放か傷があると跛行するかどうかを決定できます。</Japanese>
+            <Chinese>控制裂開或者已包紮傷口是否會讓人跛腳。</Chinese>
+            <French>Permet de définir si les plaies ouvertes ou pansées font boiter une personne.</French>
+            <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
+            <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
-            <English>Limp on open wounds</English>
+            <English>Limp on Open Wounds</English>
             <Russian>Хромота при открытых ранах</Russian>
             <Japanese>創傷開放時に跛行</Japanese>
+            <French>Boiter si plaies ouvertes</French>
+            <Portuguese>Mancar se possuir feridas abertas</Portuguese>
+            <Chinese>傷口裂開時跛腳</Chinese>
+            <Czech>Kulhat s otevřeným zraněním</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
-            <English>Limp on open or bandaged wounds</English>
+            <English>Limp on Open or Bandaged Wounds</English>
             <Russian>Хромота при открытых или забинтованых ранах</Russian>
-            <Japanese>負傷時は引きずって歩くようにします</Japanese>
+            <Japanese>手当した傷か創傷開放すると跛行</Japanese>
+            <French>Boiter si plaies ouvertes ou pansées</French>
+            <Portuguese>Mancar se possuir feridas abertas ou atadas</Portuguese>
+            <Chinese>使裂開或者包紮過的傷口讓人跛腳</Chinese>
+            <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
             <Russian>Переломы</Russian>
             <Japanese>骨折</Japanese>
+            <French>Fractures</French>
+            <Portuguese>Fraturas</Portuguese>
+            <Chinese>骨折</Chinese>
+            <Czech>Zlomeniny</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
-            <English>Limp fractures... (todo)</English>
-            <Russian>Хромота при переломах...</Russian>
-            <Japanese>骨折時は引きずって歩くようにします・・・ (TODO)</Japanese>
+            <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
+            <Japanese>医療機能で骨折に添え木効果を使うかどうかを決定できます。\n無効化すると、骨折効果は表れません。</Japanese>
+            <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
+            <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
+            <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
+            <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
-            <English>Splints fully heal fractures</English>
+            <English>Splints Fully Heal Fractures</English>
             <Russian>Шины полностью лечат перелом</Russian>
             <Japanese>添え木で骨折完治</Japanese>
+            <French>Les attelles guérissent complètement les fractures</French>
+            <Portuguese>Tala cura fraturas completamente</Portuguese>
+            <Chinese>固定板完全治癒骨折</Chinese>
+            <Czech>Dlahy kompletně léčí zlomeniny</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
-            <English>Splints heal (but cannot sprint)</English>
+            <English>Splints Heal, but Cannot Sprint</English>
             <Russian>Шины вылечивают, но не дают бегать</Russian>
-            <Japanese>添え木で治療しますが、走れません</Japanese>
+            <Japanese>添え木で治癒可能、走れないように</Japanese>
+            <French>Les attelles guérissent les fractures, mais empêchent de courir</French>
+            <Portuguese>Talas curam (mas não consegue correr)</Portuguese>
+            <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
+            <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -76,7 +130,7 @@
             <Portuguese>IA controlada remotamente</Portuguese>
             <Polish>Zdalnie sterowane AI</Polish>
             <Czech>Vzdáleně ovládané AI</Czech>
-            <French>Contrôle à distance des IA</French>
+            <French>IA contrôlées à distance</French>
             <Hungarian>Távvezérelt AI</Hungarian>
             <Russian>Зевса считать ботом</Russian>
             <Italian>IA Controllate in Remoto</Italian>
@@ -92,11 +146,11 @@
             <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
             <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
             <Czech>Ošetřit vzdáleně ovládané jednotky jako AI, ne jako hráče?</Czech>
-            <French>Soigner les unitées controlées à distance comme des IA et non comme des joueurs?</French>
+            <French>Définit si les unités contrôlées à distance sont traitées comme des IA, et non comme des joueurs.</French>
             <Hungarian>Távvezérelt egységek AI-ként, nem játékosként való kezelése?</Hungarian>
             <Russian>Обрабатывать дистанционно управляемых юнитов как ботов, а не как игроков?</Russian>
             <Italian>Considera le unità controllate in remoto come IA e non come giocatori?</Italian>
-            <Japanese>遠隔操作された AI は、非プレイヤーとして扱いますか?</Japanese>
+            <Japanese>遠隔操作された AI を非プレイヤーとして扱いますか?</Japanese>
             <Korean>원격 조작하는 AI는 비 플레이어로 취급합니까?</Korean>
             <Chinesesimp>以医疗AI的方式医疗被遥控的单位</Chinesesimp>
             <Chinese>以醫療AI的方式醫療被遙控的單位</Chinese>
@@ -125,13 +179,13 @@
             <German>Lässt eine Einheit bewusstlos werden anstatt zu sterben</German>
             <Czech>Jednotka upadne do bezvědomí namísto smrti</Czech>
             <Portuguese>Fazer a unidade ficar inconsciente invés de morrer</Portuguese>
-            <French>Forcer l'inconscience au lieu de la mort instantanée</French>
+            <French>Force une unité à perdre connaissance, au lieu de mourir sur le coup.</French>
             <Hungarian>Egy egység kerüljön eszméletlen állapotba a halott helyett</Hungarian>
             <Italian>Imposta un'unità come incosciente invece di morta</Italian>
-            <Japanese>ユニットの即死を防止するために、気絶へ移行させます</Japanese>
+            <Japanese>ユニットの即死を防止する為に気絶へ移行させます</Japanese>
             <Korean>인원의 즉사를 방지코자 즉사 대신 기절시킵니다</Korean>
             <Chinesesimp>伤者最严重只会立即进入昏迷，而非立即死亡</Chinesesimp>
-            <Chinese>傷者最嚴重只會立即進入昏迷，而非立即死亡</Chinese>
+            <Chinese>傷者最嚴重只會無意識，而非立即死亡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
@@ -141,7 +195,7 @@
             <German>Aktiviert ein Sanitätssystem für Spieler und KI.</German>
             <Czech>Poskytuje zdravotní systém pro hráče a AI.</Czech>
             <Portuguese>Proporciona o sistema médico para os jogadores e a IA.</Portuguese>
-            <French>Fourni un système médical pour les joueurs et les IA.</French>
+            <French>Fournit un système médical aussi bien pour les joueurs que pour les IA.</French>
             <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
             <Italian>Fornisce un sistema medico sia per giocatori che IA.</Italian>
             <Japanese>プレイヤーと AI の両方へ医療システムを提供します。</Japanese>
@@ -173,7 +227,7 @@
             <German>Wähle aus, welche Einheiten unter das erweiterte Sanitätssystem fallen</German>
             <Czech>Vyberte, pro jaké jednotky bude pokročilý zdravotní systém povolen</Czech>
             <Portuguese>Selecione quais unidades o sistema médico avançado será habilitado</Portuguese>
-            <French>Sélectionne pour quelles unités les soins avancés seront activés</French>
+            <French>Sélectionne pour quelles unités les soins avancés seront actifs.</French>
             <Hungarian>Kiválasztható, mely egységek számára legyen engedélyezve a fejlett orvosi rendszer</Hungarian>
             <Italian>Seleziona per quali unità verrà abilitato i sistema medico avanzato</Italian>
             <Japanese>選択されたユニットが、アドバンスド医療が使えるようになります</Japanese>
@@ -189,7 +243,7 @@
             <German>Nur Spieler</German>
             <Czech>Pouze hráči</Czech>
             <Portuguese>Somente jogadores</Portuguese>
-            <French>Joueur uniquement</French>
+            <French>Joueurs uniquement</French>
             <Hungarian>Csak játékosok</Hungarian>
             <Italian>Solo giocatori</Italian>
             <Japanese>プレイヤーのみ</Japanese>
@@ -221,7 +275,7 @@
             <German>Fahrzeugunfälle</German>
             <Czech>Poškození z kolize</Czech>
             <Portuguese>Batidas de veículos</Portuguese>
-            <French>Accident en véhicule</French>
+            <French>Accidents en véhicule</French>
             <Hungarian>Járműbalesetek</Hungarian>
             <Italian>Schianto Veicoli</Italian>
             <Japanese>車両の衝突</Japanese>
@@ -237,7 +291,7 @@
             <German>Verursacht ein Fahrzeugunfall Verletzungen</German>
             <Czech>Dostane jednotka poškození při autonehodě?</Czech>
             <Portuguese>As unidades recebem dano de uma batida de veículo?</Portuguese>
-            <French>Les unités subissent des dégats lors d'accident</French>
+            <French>Définit si les unités subissent des dégâts en cas d'accidents en véhicule.</French>
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
             <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか?</Japanese>
@@ -254,7 +308,7 @@
             <Portuguese>Curar hitpoints</Portuguese>
             <Czech>Léčit hitponty</Czech>
             <Italian>Cura Hitpoints</Italian>
-            <French>Soigner les blessures</French>
+            <French>Guérir les blessures</French>
             <Japanese>ヒットポイントの回復</Japanese>
             <Korean>체력 회복</Korean>
             <Chinesesimp>完整治疗</Chinesesimp>
@@ -269,23 +323,25 @@
             <Portuguese>Curar totalmente hitpoints enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura Hitpoints completamente bendati</Italian>
-            <French>Soigner les plaies entièrement bandées.</French>
-            <Japanese>包帯によりヒットポイントを完全に回復する</Japanese>
+            <French>Les plaies entièrement bandées seront guéries.</French>
+            <Japanese>包帯によりヒットポイントを完全に回復します。</Japanese>
             <Korean>붕대를 감아서 체력을 회복</Korean>
+            <Chinese>繃帶是否會完整恢復生命值</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Basic Medical</English>
             <German>Behandlungseinstellungen der Standard ACE-Medizin konfigurieren</German>
             <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
             <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
-            <French>Configure les réglages de traitement dans ACE médical basique</French>
+            <French>Configurer les paramètres de traitement à partir de "ACE médical basique".</French>
             <Italian>Configura le impostazioni trattamenti per ACE Medical di base</Italian>
             <Portuguese>Configura as opções de tratamento do sistema médico básico do ACE</Portuguese>
             <Russian>Настройка лечения в базовой медицинской системе ACE</Russian>
-            <Japanese>ACE ベーシック医療による設定で、治療を設定する</Japanese>
+            <Japanese>ACE ベーシック医療による設定で、治療を設定します。</Japanese>
             <Korean>ACE 기본 의료에 대한 치료 설정 수정</Korean>
             <Chinesesimp>设定ACE基本医疗的规则</Chinesesimp>
             <Chinese>設定ACE基本醫療的規則</Chinese>
+            <Czech>Nastavit nastavení léčby z ACE Zdravotnické Základní</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>
@@ -344,7 +400,7 @@
             <Spanish>La distancia hasta %1 se ha agrandado demasiado para el tratamiento</Spanish>
             <Czech>%1 je příliš daleko, léčba není možná</Czech>
             <Italian>Distanza da %1 è diventata troppo alta per permettere trattamento</Italian>
-            <French>%1 est trop loin pour être soigné</French>
+            <French>%1 est trop loin pour être soigné.</French>
             <Japanese>%1 は治療をできない所まで離れた</Japanese>
             <Korean>%1 부터의 거리가 너무 멀어 치료할 수 없습니다</Korean>
             <Chinesesimp>设定当距离超过%1将不能使用治疗动作</Chinesesimp>
@@ -360,6 +416,9 @@
             <Korean>뚜껑 열기</Korean>
             <Polish>Otwórz pokrywę</Polish>
             <Russian>Открыть крышку</Russian>
+            <French>Ouvrir le couvercle</French>
+            <Portuguese>Abrir Tampa</Portuguese>
+            <Czech>Otevřít víko</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -371,6 +430,9 @@
             <Korean>뚜껑 닫기</Korean>
             <Polish>Zamknij pokrywę</Polish>
             <Russian>Закрыть крышку</Russian>
+            <French>Fermer le couvercle</French>
+            <Portuguese>Fechar Tampa</Portuguese>
+            <Czech>Zavřít víko</Czech>
         </Key>
     </Package>
 </Project>

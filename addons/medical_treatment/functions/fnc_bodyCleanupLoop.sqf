@@ -29,4 +29,4 @@ if (GVAR(bodiesToDelete) isEqualTo []) exitWith {
 };
 
 // Schedule cleanup loop to executed again
-[FUNC(litterCleanupLoop), [], BODY_CLEANUP_CHECK_DELAY] call CBA_fnc_waitAndExecute;
+[FUNC(bodyCleanupLoop), [], BODY_CLEANUP_CHECK_DELAY] call CBA_fnc_waitAndExecute;

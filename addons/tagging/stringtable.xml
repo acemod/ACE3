@@ -12,6 +12,8 @@
             <Italian>Marcamento</Italian>
             <Chinesesimp>喷漆</Chinesesimp>
             <Chinese>噴漆</Chinese>
+            <Portuguese>Marcação</Portuguese>
+            <Czech>Označování</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
@@ -24,6 +26,8 @@
             <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
             <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
             <Chinese>定義噴漆系統預設設定</Chinese>
+            <Portuguese>Configura como o sistema de Marcação funcionará como padrão. (Tagging)</Portuguese>
+            <Czech>Nakonfigurujte, jak bude systém značkování ve výchozím nastavení fungovat.</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Spray Paint - Quick Tag</English>
@@ -32,10 +36,12 @@
             <Polish>Szybkie tagowanie</Polish>
             <German>Schnelle Markierung (Spraydose)</German>
             <Korean>빠른 뿌리기</Korean>
-            <French>Marquage rapide</French>
+            <French>Peinture en spray - Marquage rapide</French>
             <Italian>Marcamento Rapido</Italian>
             <Chinesesimp>快速喷漆</Chinesesimp>
             <Chinese>快速噴漆</Chinese>
+            <Portuguese>Lata de Tinta - Marcação Rápida</Portuguese>
+            <Czech>Stříkací barva - Rychlá značka</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
@@ -44,10 +50,12 @@
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
-            <French>Action réalisé au point de marquage principal.</French>
+            <French>Type de marquage à appliquer sur le point visé.</French>
             <Italian>Azione eseguita sul punto di interazione dei tag principali.</Italian>
             <Chinesesimp>直接喷漆在互动选单瞄准的点上。</Chinesesimp>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
+            <Portuguese>Ação executada no ponto principal de marcação</Portuguese>
+            <Czech>Akce prováděná v hlavním bodě značky interakce.</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
@@ -60,6 +68,8 @@
             <Italian>Ultimo Usato</Italian>
             <Chinesesimp>上次最后使用</Chinesesimp>
             <Chinese>上次最後使用</Chinese>
+            <Portuguese>Último usado</Portuguese>
+            <Czech>Naposledy použitý</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
@@ -68,10 +78,12 @@
             <Polish>Losowy X</Polish>
             <German>Zufällig X</German>
             <Korean>무작위 X</Korean>
-            <French>Aléatoire X</French>
+            <French>X aléatoire</French>
             <Italian>Random X</Italian>
             <Chinesesimp>随机X标记</Chinesesimp>
             <Chinese>隨機X標記</Chinese>
+            <Portuguese>Aleatório X</Portuguese>
+            <Czech>Náhodné X</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
@@ -84,6 +96,8 @@
             <Italian>Random</Italian>
             <Chinesesimp>随机</Chinesesimp>
             <Chinese>隨機</Chinese>
+            <Portuguese>Aleatório</Portuguese>
+            <Czech>Náhodný</Czech>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
@@ -161,11 +175,11 @@
             <Chinese>藍色X標記</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
-            <English>Black spray paint</English>
-            <German>Schwarze Sprühfarbe</German>
+            <English>Spray Paint (Black)</English>
+            <German>Sprühfarbe (Schwarz)</German>
             <Spanish>Pintura negra</Spanish>
-            <Polish>Czarna farba w sprayu</Polish>
-            <French>Peinture pulvérisée noire</French>
+            <Polish>Farba w Sprayu (Czarna)</Polish>
+            <French>Peinture en spray (Noire)</French>
             <Italian>Bomboletta spray nera</Italian>
             <Czech>Černý sprej</Czech>
             <Portuguese>Spray de tinta preta</Portuguese>
@@ -176,11 +190,11 @@
             <Chinese>黑色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
-            <English>Red spray paint</English>
-            <German>Rote Sprühfarbe</German>
+            <English>Spray Paint (Red)</English>
+            <German>Sprühfarbe (Rot)</German>
             <Spanish>Pintura roja</Spanish>
-            <Polish>Czerwona farba w sprayu</Polish>
-            <French>Peinture pulvérisée rouge</French>
+            <Polish>Farba w Sprayu (Czerwona)</Polish>
+            <French>Peinture en spray (Rouge)</French>
             <Italian>Bomboletta spray rossa</Italian>
             <Czech>Červený sprej</Czech>
             <Portuguese>Spray de tinta vermelha</Portuguese>
@@ -191,11 +205,11 @@
             <Chinese>紅色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
-            <English>Green spray paint</English>
-            <German>Grüne Sprühfarbe</German>
+            <English>Spray Paint (Green)</English>
+            <German>Sprühfarbe (Grün)</German>
             <Spanish>Pintura verde</Spanish>
-            <Polish>Zielona farba w sprayu</Polish>
-            <French>Peinture pulvérisée verte</French>
+            <Polish>Farba w Sprayu (Zielona)</Polish>
+            <French>Peinture en spray (Verte)</French>
             <Italian>Bomboletta spray verde</Italian>
             <Czech>Zelený sprej</Czech>
             <Portuguese>Spray de tinta verde</Portuguese>
@@ -206,11 +220,11 @@
             <Chinese>綠色噴漆</Chinese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
-            <English>Blue spray paint</English>
-            <German>Blaue Sprühfarbe</German>
+            <English>Spray Paint (Blue)</English>
+            <German>Sprühfarbe (Blau)</German>
             <Spanish>Pintura azul</Spanish>
-            <Polish>Niebieska farba w sprayu</Polish>
-            <French>Peinture pulvérisée bleue</French>
+            <Polish>Farba w Sprayu (Niebieska)</Polish>
+            <French>Peinture en spray (Bleue)</French>
             <Italian>Bomboletta spray blu</Italian>
             <Czech>Modrý sprej</Czech>
             <Portuguese>Spray de tinta azul</Portuguese>
@@ -225,7 +239,7 @@
             <German>Eine Farbsprühdose um Wände zu markieren.</German>
             <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
-            <French>Un spray de peinture pour marquer les murs.</French>
+            <French>Une bombe de peinture en spray pour tagger les murs.</French>
             <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>

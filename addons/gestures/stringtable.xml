@@ -273,7 +273,7 @@
             <Polish>Pokaż gesty w menu interakcji</Polish>
             <Italian>Mostra Gesti su Menù Interazione</Italian>
             <Spanish>Mostrar gestos en el menú de interacción</Spanish>
-            <French>Afficher les gestes dans le menu d'interaction.</French>
+            <French>Afficher les gestes dans le menu d'interaction</French>
             <Portuguese>Mostrar gestos no menu de interação</Portuguese>
             <Russian>Показать жесты в меню взаимодействия</Russian>
             <Japanese>インタラクション メニュー上でジェスチャー表示</Japanese>
@@ -288,7 +288,7 @@
             <Polish>Pokaż listę gestów w menu własnej interakcji, użyj tylko skrótów na klawiaturze lub wyłącz całkowicie</Polish>
             <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente tasti di scelta rapida, o disabilita completamente</Italian>
             <Spanish>Muestror los gestos en el menú de interacción propia, utilizar solo combinación de teclas o desactivarlos completamente</Spanish>
-            <French>Afficher les gestes dans le menu d'interaction personnel, ou seulement utiliser les touches, ou desactiver complètement.</French>
+            <French>Afficher les gestes dans le menu d'interaction personnel, ou utiliser uniquement les touches, ou désactiver complètement.</French>
             <Portuguese>Mostra gestos no menu de interação, ou utilize um dos atalhos de teclado ou desative completamente</Portuguese>
             <Russian>Показать жесты в меню взамиодейтсвия с собой или только использовать горячие клавиши, или полностью отключить</Russian>
             <Japanese>キー操作や同時使用を無効化している場合はセルフ インタラクション メニュ上でジェスチャーを表示します</Japanese>
@@ -303,7 +303,7 @@
             <Polish>Tylko skróty klaw.</Polish>
             <Italian>Solo tasti di scelta rapida</Italian>
             <Spanish>Solo mediante teclas</Spanish>
-            <French>Seulement les touches</French>
+            <French>Touches uniquement</French>
             <Portuguese>Somente atalhos de teclado</Portuguese>
             <Russian>Только горячие клавиши</Russian>
             <Japanese>キー操作のみ</Japanese>

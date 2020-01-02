@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="sandbag">
+    <Package name="Sandbag">
         <Key ID="STR_ACE_Sandbag_sandbag_displayName">
             <English>Sandbag</English>
             <German>Sandsack</German>
@@ -39,7 +39,7 @@
             <Russian>Установка на этом месте невозможна</Russian>
             <Polish>Nie można tu budować</Polish>
             <Spanish>No se puede construir aqui</Spanish>
-            <French>Impossible de construire ici</French>
+            <French>Impossible de construire ici.</French>
             <Czech>Zde nelze postavit</Czech>
             <Italian>Impossibile costruire qui</Italian>
             <Hungarian>Nem teheted ide</Hungarian>
@@ -55,7 +55,7 @@
             <Russian>Взять мешок с песком</Russian>
             <Polish>Zabierz worek</Polish>
             <Spanish>Coger saco de arena</Spanish>
-            <French>Prendre sac de sable</French>
+            <French>Prendre le sac de sable</French>
             <Czech>Zvednout pytel</Czech>
             <Italian>Prendi Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák felvétele</Hungarian>
@@ -71,7 +71,7 @@
             <Russian>Нести мешок с песком</Russian>
             <Polish>Przenieś worek</Polish>
             <Spanish>Portar saco de arena</Spanish>
-            <French>Porter sac de sable</French>
+            <French>Porter le sac de sable</French>
             <Czech>Nést pytel</Czech>
             <Italian>Trasporta Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák cipelése</Hungarian>
@@ -87,7 +87,7 @@
             <Russian>Завершить переноску</Russian>
             <Polish>Zostaw worek</Polish>
             <Spanish>Dejar de portar</Spanish>
-            <French>Arreter de porter</French>
+            <French>Arrêter de porter</French>
             <Czech>Položit</Czech>
             <Italian>Fine Trasporto</Italian>
             <Hungarian>Cipelés abbahagyása</Hungarian>
@@ -103,7 +103,7 @@
             <Russian>Положить мешок</Russian>
             <Polish>Upuść worek</Polish>
             <Spanish>Soltar saco de arena</Spanish>
-            <French>Lacher sac de sable</French>
+            <French>Lâcher le sac de sable</French>
             <Czech>Odložit pytel</Czech>
             <Italian>Lascia Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák eldobása</Hungarian>
@@ -119,7 +119,7 @@
             <Russian>Подтвердить установку</Russian>
             <Polish>Potwierdź rozłożenie</Polish>
             <Spanish>Confirmar despliegue</Spanish>
-            <French>Confirmer Déploiement</French>
+            <French>Confirmer l'installation</French>
             <Czech>Potvrdit Položení</Czech>
             <Italian>Conferma Posizionamento</Italian>
             <Hungarian>Lerak</Hungarian>
@@ -135,7 +135,7 @@
             <Russian>Отменить установку</Russian>
             <Polish>Anuluj rozłożenie</Polish>
             <Spanish>Cancelar despliegue</Spanish>
-            <French>Annuler Déploiement</French>
+            <French>Annuler l'installation</French>
             <Czech>Zrušit Položení</Czech>
             <Italian>Cancella Posizionamento</Italian>
             <Hungarian>Visszavonás</Hungarian>
@@ -151,7 +151,7 @@
             <Russian>Установить мешок с песком</Russian>
             <Polish>Rozłóż worek z piaskiem</Polish>
             <Spanish>Desplegar saco de arena</Spanish>
-            <French>Deployer sac de sable</French>
+            <French>Installer un sac de sable</French>
             <Czech>Umístit pytel</Czech>
             <Italian>Posiziona Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák lerakása</Hungarian>
@@ -183,7 +183,7 @@
             <Russian>Здесь нет песка</Russian>
             <Polish>Tu nie ma piasku</Polish>
             <Spanish>Aqui no hay arena</Spanish>
-            <French>Pas de sable ici</French>
+            <French>Il n'y a pas de sable ici.</French>
             <Czech>Tady není písek</Czech>
             <Italian>Qui non cè Sabbia</Italian>
             <Hungarian>Itt nincs homok</Hungarian>

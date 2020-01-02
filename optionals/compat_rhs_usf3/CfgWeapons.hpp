@@ -1,4 +1,3 @@
-
 class CfgWeapons {
     class NVGoggles;
     class rhsusf_ANPVS_14: NVGoggles { // Monocular
@@ -231,7 +230,10 @@ class CfgWeapons {
         };
     };
 
-    class Launcher_Base_F;
+    class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
+    };
     class rhs_weap_smaw: Launcher_Base_F {
         ace_reloadlaunchers_enabled = 1;
         ace_overpressure_angle = 45;
@@ -249,9 +251,6 @@ class CfgWeapons {
     #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
     // Fast Helmets
     class rhsusf_opscore_01;
-    class rhsusf_ihadss: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR
-    };
     class rhsusf_opscore_ut_pelt_nsw: rhsusf_opscore_01 {
         HEARING_PROTECTION_PELTOR
     };
@@ -411,13 +410,153 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR
     };
 
-
     class rhsusf_hgu56p: rhsusf_opscore_01 {
+        HEARING_PROTECTION_VICCREW
+    };
+    class rhsusf_hgu56p_visor: rhsusf_hgu56p {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_black;
+    class rhsusf_hgu56p_visor_black: rhsusf_hgu56p_black {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_green;
+    class rhsusf_hgu56p_visor_green: rhsusf_hgu56p_green {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask: rhsusf_hgu56p {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask_black: rhsusf_hgu56p_black {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask_Empire_black: rhsusf_hgu56p_black {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask_green: rhsusf_hgu56p_green {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_mask_smiley;
+    class rhsusf_hgu56p_visor_mask_smiley: rhsusf_hgu56p_mask_smiley {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_pink;
+    class rhsusf_hgu56p_visor_mask_pink: rhsusf_hgu56p_pink {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_pink: rhsusf_hgu56p_pink {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_saf;
+    class rhsusf_hgu56p_visor_saf: rhsusf_hgu56p_saf {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_usa;
+    class rhsusf_hgu56p_visor_usa: rhsusf_hgu56p_usa {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_white;
+    class rhsusf_hgu56p_visor_white: rhsusf_hgu56p_white {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask_black_skull;
+    class rhsusf_hgu56p_mask_black_skull: rhsusf_hgu56p_visor_mask_black_skull {
+        ACE_Protection = 0;
+    };
+    class rhsusf_ihadss: rhsusf_opscore_01 {
         HEARING_PROTECTION_VICCREW
     };
 
     class H_HelmetB;
     class RHS_jetpilot_usaf: H_HelmetB {
+        ACE_Protection = 1;
         HEARING_PROTECTION_VICCREW
     };
+
+    CREATE_CSW_PROXY(rhs_mortar_81mm);
+    CREATE_CSW_PROXY(RHS_M2);
+    CREATE_CSW_PROXY(RHS_MK19);
+    CREATE_CSW_PROXY(Rhs_weap_TOW_Launcher_static);
+
+    class GVAR(m252_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 20;
+            pickupTime = 25;
+            class assembleTo {
+                EGVAR(csw,mortarBaseplate) = "RHS_M252_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 620; // M252 Mortar Weight
+        };
+        displayName = ECSTRING(CSW,m252_tube);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_M252_D_ca.paa";
+    };
+
+    class GVAR(m2_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m3Tripod) = "RHS_M2StaticMG_WD";
+                EGVAR(csw,m3TripodLow) = "RHS_M2StaticMG_MiniTripod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 840;
+        };
+        displayName = ECSTRING(CSW,m2_gun);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_M2StaticMG_D_ca.paa";
+    };
+
+    class GVAR(mk19_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m3TripodLow) = "RHS_MK19_TriPod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 770;
+        };
+        displayName = ECSTRING(CSW,mk19_gun);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\ico\RHS_MK19_TriPod_D_ca.paa";
+    };
+
+    class GVAR(tow_carry): Launcher_Base_F {
+        class ACE_CSW {
+            type = "weapon";
+            deployTime = 4;
+            pickupTime = 4;
+            class assembleTo {
+                EGVAR(csw,m220Tripod) = "RHS_TOW_TriPod_WD";
+            };
+        };
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 500;
+        };
+        displayName = ECSTRING(CSW,tow_tube);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+        modes[] = {};
+        picture = "\rhsusf\addons\rhsusf_heavyweapons\data\Ico\RHS_TOW_TriPod_D_ca.paa";
+    };
 };
+

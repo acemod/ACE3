@@ -1,5 +1,38 @@
 class CfgMagazineWells {
 
+    class CBA_12g_2rnds {
+        ADDON[] = {
+            "ACE_2Rnd_12Gauge_Pellets_No0_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No1_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No2_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No3_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No4_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No4_Bird"
+        };
+    };
+
+    class HunterShotgun_01_12GA { //Vanilla magwell
+        ADDON[] = {
+            "ACE_2Rnd_12Gauge_Pellets_No0_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No1_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No2_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No3_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No4_Buck",
+            "ACE_2Rnd_12Gauge_Pellets_No4_Bird"
+        };
+    };
+
+    class UBS_12GA { //Vanilla magwell
+        ADDON[] = {
+            "ACE_6Rnd_12Gauge_Pellets_No0_Buck",
+            "ACE_6Rnd_12Gauge_Pellets_No1_Buck",
+            "ACE_6Rnd_12Gauge_Pellets_No2_Buck",
+            "ACE_6Rnd_12Gauge_Pellets_No3_Buck",
+            "ACE_6Rnd_12Gauge_Pellets_No4_Buck",
+            "ACE_6Rnd_12Gauge_Pellets_No4_Bird"
+        };
+    };
+
     class CBA_65x39_MX {
         ADDON[] = {
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
@@ -27,10 +60,10 @@ class CfgMagazineWells {
     };
     class STANAG_556x45 { //Vanilla magwell
         ADDON[] = {
-                "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
-                "ACE_30Rnd_556x45_Stanag_Mk262_mag",
-                "ACE_30Rnd_556x45_Stanag_Mk318_mag",
-                "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+            "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk262_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk318_mag",
+            "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
     };
 

@@ -70,7 +70,7 @@
             <Czech>Zbývající prostor: %1</Czech>
             <Spanish>Espacio de carga restante: %1</Spanish>
             <Italian>Spazio cargo rimanente: %1</Italian>
-            <French>Espace de cargaison restant : %1</French>
+            <French>Espace de chargement restant : %1</French>
             <Japanese>カーゴの空き容量: %1</Japanese>
             <Korean>선적 공간 남음: %1</Korean>
             <Chinese>貨物剩餘空間: %1</Chinese>
@@ -85,7 +85,7 @@
             <Czech>Povolit náklad</Czech>
             <Spanish>Habilitar carga</Spanish>
             <Italian>Abilita Cargo</Italian>
-            <French>Activer la mise en cargaison</French>
+            <French>Activer la cargaison</French>
             <Japanese>カーゴを有効化</Japanese>
             <Korean>화물 활성화</Korean>
             <Chinese>啟用貨物裝載</Chinese>
@@ -100,7 +100,7 @@
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
             <Italian>Abilita il modulo di caricamento in cargo</Italian>
-            <French>Active le chargement de cargaison dans un vehicule</French>
+            <French>Active la possibilité de charger du matériel dans un module de fret (véhicule/container).</French>
             <Japanese>カーゴ モジュールで積み込みを有効化</Japanese>
             <Korean>화물 모듈에 싣기를 활성화합니다</Korean>
             <Chinese>啟用貨物裝載功能</Chinese>
@@ -130,7 +130,7 @@
             <Spanish>Configure los ajustes del módulo de carga</Spanish>
             <Czech>Konfigurace nákladního modulu</Czech>
             <Italian>Configura le impostazioni del modulo cargo</Italian>
-            <French>Configure les paramètres du module de cargaison</French>
+            <French>Configure les paramètres du module de cargaison.</French>
             <Japanese>カーゴ モジュールの設定を構成</Japanese>
             <Korean>화물 모듈의 환경 설정을 바꿉니다</Korean>
             <Chinese>配置貨物模塊設定</Chinese>
@@ -156,7 +156,7 @@
             <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
             <German>%1&lt;br/&gt;von&lt;br/&gt;%2 abgeladen</German>
             <Spanish>Descargado/a&lt;br/&gt;%1 de&lt;br/&gt;%2</Spanish>
-            <French>Déchargé&lt;br/&gt;%1 de&lt;br/&gt;%2</French>
+            <French>%1&lt;br/&gt;déchargé de&lt;br/&gt;%2</French>
             <Polish>%1&lt;br/&gt;rozładowano z&lt;br/&gt;%2</Polish>
             <Czech>%1&lt;br/&gt;vyloženo z&lt;br/&gt;%2</Czech>
             <Portuguese>%1&lt;br/&gt;descarregado de&lt;br/&gt;%2</Portuguese>
@@ -207,7 +207,7 @@
             <Russian>%1&lt;br/&gt;не может быть погружен</Russian>
             <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
-            <French>%1&lt;br /&gt; n'a pas pu être chargé</French>
+            <French>%1&lt;br /&gt;n'a pas pu être chargé</French>
             <Japanese>%1&lt;br/&gt;は積み込めませんでした</Japanese>
             <Korean>%1&lt;br/&gt;이 실릴 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被裝載</Chinese>
@@ -222,7 +222,7 @@
             <Russian>%1&lt;br/&gt;не может быть выгружен</Russian>
             <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
-            <French>%1&lt;br /&gt; n'a pas pu être déchargé</French>
+            <French>%1&lt;br /&gt;n'a pas pu être déchargé</French>
             <Japanese>%1&lt;br/&gt;は降ろせませんでした</Japanese>
             <Korean>%1&lt;br/&gt;이 내려질 수가 없습니다</Korean>
             <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
@@ -238,6 +238,9 @@
             <Polish>Przestrzeń ładunkowa</Polish>
             <Korean>화물 공간</Korean>
             <Russian>Грузовое пространство</Russian>
+            <Portuguese>Espaço de Carga</Portuguese>
+            <French>Espace de stockage</French>
+            <Czech>Nákladový prostor</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
@@ -249,6 +252,9 @@
             <Polish>Dostępna przestrzeń ładunkowa w tym pojeździe/kontenerze</Polish>
             <Korean>이 차량/컨테이너에서 사용가능한 화물 공간</Korean>
             <Russian>Грузовое пространство, доступное в этом транспортном средстве / контейнере</Russian>
+            <Portuguese>O espaço de carga disponível nesse veículo/contâiner</Portuguese>
+            <French>L'espace de stockage disponible dans ce véhicule/container.</French>
+            <Czech>Nákladový prostor dostupný v tomto vozidle/kontejneru</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
@@ -260,6 +266,9 @@
             <Polish>Wielkość ładunku</Polish>
             <Korean>화물 크기</Korean>
             <Russian>Размер груза</Russian>
+            <Portuguese>Tamanho da Carga</Portuguese>
+            <French>Encombrement fret</French>
+            <Czech>Velikost nákladu</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
@@ -271,6 +280,9 @@
             <Polish>Wymagana przestrzeń ładunkowa dla tego obiektu (-1 dla niemożliwych do załadowania)</Polish>
             <Korean>이 화물을 적재하는데 필요한 공간 (-1=무조건 적재가능)</Korean>
             <Russian>Грузовое пространство, необходимое для размещения этого объекта (-1 для незагружаемого)</Russian>
+            <Portuguese>O Espaço de carga necessário para carregar esse objeto (-1 para que não seja carregável)</Portuguese>
+            <French>Définit l'espace de stockage nécessaire à l'embarquement de cet objet (-1 pour le rendre non transportable).</French>
+            <Czech>Nákladový prostor požadovný pro naložení tohoto objektu (-1 pro nenaložitelné)</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -278,11 +290,13 @@
             <Japanese>空中投下</Japanese>
             <Polish>Zrzut zaopatrzenia</Polish>
             <Korean>공중 투하</Korean>
-            <French>Largage aérien</French>
+            <French>Largage</French>
             <Italian>Lancio Aereo</Italian>
             <Chinese>空投</Chinese>
             <Chinesesimp>空投</Chinesesimp>
             <Russian>Десантирование груза</Russian>
+            <Portuguese>Lançamento Aéreo</Portuguese>
+            <Czech>Výsadek</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
@@ -290,35 +304,41 @@
             <Japanese>機体が水平ではありません</Japanese>
             <Polish>Nierówny lot</Polish>
             <Korean>기체가 수평이 아닙니다</Korean>
-            <French>Rétablir l'assiette</French>
+            <French>Vol en dénivelé</French>
             <Italian>Volo non Livellato</Italian>
             <Chinese>此架飛機並無保持水平飛行</Chinese>
             <Chinesesimp>此架飞机并无保持水平飞行</Chinesesimp>
             <Russian>Неподходящее положение</Russian>
+            <Portuguese>Desnivelar Vôo</Portuguese>
+            <Czech>Let není vyrovnaný</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coefficient</English>
             <German>Türlast Zeitfaktor</German>
             <Japanese>空中投下までの時間係数</Japanese>
             <Italian>Coefficente Tempo Lancio Paracadute</Italian>
-            <French>Coefficient Temps de largage de cargaison</French>
+            <French>Coefficient du temps de paralargage</French>
             <Chinese>空投時間係數</Chinese>
             <Chinesesimp>空投时间系数</Chinesesimp>
             <Polish>Współczynnik czasu zrzutu</Polish>
             <Korean>공중 투하 시간 계수</Korean>
             <Russian>Коэффициент времени десантирования</Russian>
+            <Portuguese>Fator de Tempo para soltar a carga</Portuguese>
+            <Czech>Koeficient času nákladního výsadku</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
             <German>Beeinflusst die zusätzliche Zeit für Türlastabwürfe.</German>
             <Japanese>カーゴ アイテムを空中投下するまでの時間を変更します。</Japanese>
             <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
-            <French>Modifier le temps qu'il faut pour larguer la cargaison.</French>
+            <French>Modifie le temps nécessaire au paralargage d'une cargaison.</French>
             <Chinese>設定空投所需消耗的時間</Chinese>
             <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
             <Polish>Modyfikator wskazujący jak dużo czasu potrzeba by zrzucić przedmiot na spadochronie.</Polish>
             <Korean>화물을 공중 투하 하는데 얼마나 걸리는 시간 설정</Korean>
             <Russian>Модификатор времени, необходимого для десантирования груза</Russian>
+            <Portuguese>Coeficiente de quanto tempo leva para soltar uma carga de paraquedas</Portuguese>
+            <Czech>Upravuje jak dlouho výsadek trvá pro náklad.</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
@@ -327,6 +347,10 @@
             <Polish>Współczynnik czasu załadowania</Polish>
             <Italian>Coefficente Tempo Caricamento</Italian>
             <Russian>Коэффициент времени погрузки</Russian>
+            <Portuguese>Fator de tempo para carregar</Portuguese>
+            <French>Coefficient du temps de chargement</French>
+            <Chinese>裝載時間係數</Chinese>
+            <Czech>Koeficient času nákládání</Czech>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
@@ -335,6 +359,10 @@
             <Polish>Modyfikuje, jak długo zajmuje załadowywanie/wyładowywanie przedmiotów. \nCzasem, w sekundach, jest wielkość przedmiotu razy jego wartość.</Polish>
             <Italian>Modifica quanto tempo ci impiega a caricare o scaricare gli oggetti.\n Tempo, in secondi, è la dimensione dell'oggetto moltiplicata per questo valore</Italian>
             <Russian>Изменяет время для загрузки/выгрузки предметов. \n Время (сек) - это размер предмета, умноженный на это значение.</Russian>
+            <Portuguese>Coeficiente de quanto tempo leva para carregar/descarregar itens.\nTempo, em segundos, é o tamanho do objeto multiplicado por esse valor.</Portuguese>
+            <French>Modifie le temps nécessaire pour charger/décharger des objets.\nLe temps, en secondes, est calculé en multipliant la taille de l'élément par ce coefficient.</French>
+            <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
+            <Czech>Upravuje jak dlouho nakládají/vykládání trvá.\nVýsledkem je čas v sekundách - velikost objektu vynásobená touto hodnotou.</Czech>
         </Key>
     </Package>
 </Project>

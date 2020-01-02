@@ -51,7 +51,7 @@ import traceback
 import time
 import timeit
 import re
-import fileinput
+from tempfile import mkstemp
 
 if sys.platform == "win32":
     import winreg
@@ -72,8 +72,8 @@ dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
-versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
+importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "docs\\README.zh-TW.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
+versionFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "docs\\README.zh-TW.md"]
 
 ciBuild = False # Used for CI builds
 
@@ -334,11 +334,11 @@ def copy_important_files(source_dir,destination_dir):
         print_error("COPYING IMPORTANT FILES.")
         raise
 
-    # Copy all extension DLL's
+    # Copy all extensions
     try:
         os.chdir(os.path.join(source_dir))
         print_blue("\nSearching for DLLs in {}".format(os.getcwd()))
-        filenames = glob.glob("*.dll")
+        filenames = glob.glob("*.dll") + glob.glob("*.so")
 
         if not filenames:
             print ("Empty SET")
@@ -582,9 +582,15 @@ def get_project_version(version_increments=[]):
 
 
 def replace_file(filePath, oldSubstring, newSubstring):
-    for line in fileinput.input(filePath, inplace=True):
-        # Use stdout directly, print() adds newlines automatically
-        sys.stdout.write(line.replace(oldSubstring,newSubstring))
+    fh, absPath = mkstemp()
+    with open(absPath, "w", encoding="utf-8") as newFile:
+        with open(filePath, encoding="utf-8") as oldFile:
+            for line in oldFile:
+                newFile.write(line.replace(oldSubstring, newSubstring))
+
+    newFile.close()
+    os.remove(filePath)
+    shutil.move(absPath, filePath)
 
 
 def set_version_in_files():
@@ -603,7 +609,7 @@ def set_version_in_files():
         try:
             # Save the file contents to a variable if the file exists
             if os.path.isfile(filePath):
-                f = open(filePath, "r+")
+                f = open(filePath, "r+", encoding="utf-8")
                 fileText = f.read()
                 f.close()
 

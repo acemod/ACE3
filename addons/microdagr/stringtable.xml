@@ -27,7 +27,7 @@
             <Czech>MicroDAGR pokročílá GPS příjímač</Czech>
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
             <Italian>Ricevitore GPS avanzato MicroDAGR</Italian>
-            <Portuguese>Recepitor GPS avançado MicroDAGR</Portuguese>
+            <Portuguese>Receptor GPS avançado MicroDAGR</Portuguese>
             <Japanese>MicroDAGR は改良された GPS 受信機です</Japanese>
             <Korean>MicroDAGR 고급 위성항법 수신기</Korean>
             <Chinesesimp>微型军用高级防御GPS接收器</Chinesesimp>
@@ -38,7 +38,7 @@
             <Spanish>Unidad angular:</Spanish>
             <Russian>Угловые единицы:</Russian>
             <Polish>Jednostka kątowa:</Polish>
-            <French>Unité angulaire</French>
+            <French>Unité angulaire :</French>
             <German>Winkeleinheit:</German>
             <Czech>Úhlová jednotka:</Czech>
             <Hungarian>Szögmértékegység:</Hungarian>
@@ -71,7 +71,7 @@
             <Spanish>Mostrar puntos de ruta en el mapa:</Spanish>
             <Russian>Показывать маршрутные точки на карте:</Russian>
             <Polish>Pokaż PT na mapie:</Polish>
-            <French>Montrer points de passage sur la carte</French>
+            <French>Montrer points de passage sur la carte :</French>
             <Czech>Ukázat waypointy na mapě:</Czech>
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
             <Italian>Mostra waypoint sulla mappa:</Italian>
@@ -116,7 +116,7 @@
         <Key ID="STR_ACE_MicroDAGR_settingOff">
             <English>Off</English>
             <Czech>Vypnuto</Czech>
-            <French>Eteint</French>
+            <French>Éteint</French>
             <German>Aus</German>
             <Italian>Spento</Italian>
             <Polish>Wył.</Polish>
@@ -134,12 +134,12 @@
             <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
             <Russian>Введите сеточные координаты:</Russian>
             <Polish>Wprowadź współrzędne:</Polish>
-            <French>Entrer coordonnées</French>
+            <French>Entrer coordonnées :</French>
             <German>Koordinaten eingeben:</German>
             <Czech>Napiš souřadnice:</Czech>
             <Hungarian>Add meg a rácskoordinátákat:</Hungarian>
             <Italian>Introduci griglia coordinate:</Italian>
-            <Portuguese>Digite as Ccords. do Grid</Portuguese>
+            <Portuguese>Digite as Coords. do Grid</Portuguese>
             <Japanese>座標を入力:</Japanese>
             <Chinesesimp>输入网格座标:</Chinesesimp>
             <Chinese>輸入網格座標:</Chinese>
@@ -151,7 +151,7 @@
             <Spanish>Nombre de [%1]</Spanish>
             <Russian>Название [%1]</Russian>
             <Polish>Nazwa [%1]</Polish>
-            <French>Nom de %1</French>
+            <French>Nom de [%1]</French>
             <Czech>Název [%1]</Czech>
             <Hungarian>[%1] neve</Hungarian>
             <Italian>Nome di [%1]</Italian>
@@ -199,7 +199,7 @@
             <German>Distanz:</German>
             <Russian>Дистанция:</Russian>
             <Polish>Dystans:</Polish>
-            <French>Distance:</French>
+            <French>Distance :</French>
             <Czech>Vzdálenost:</Czech>
             <Hungarian>Távolság:</Hungarian>
             <Italian>Distanza:</Italian>
@@ -264,7 +264,7 @@
             <German>Verbinde zu</German>
             <Czech>Připojit k</Czech>
             <Polish>Podłącz do</Polish>
-            <French>Connecter</French>
+            <French>Connecter à</French>
             <Hungarian>Csatlakozás</Hungarian>
             <Italian>Collega a </Italian>
             <Portuguese>Conectar à</Portuguese>
@@ -424,7 +424,7 @@
             <Czech>MicroDAGR - Vyplnění mapy</Czech>
             <German>MicroDAGR-Kartenfüllung</German>
             <Portuguese>Preenchimento de mapa do MicroDAGR</Portuguese>
-            <French>MicroDAGR - Remplissage de la carte</French>
+            <French>Contenu de la carte</French>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
             <Italian>Riempimento Mappa MicroDAGR</Italian>
@@ -440,7 +440,7 @@
             <German>Wie viel Daten auf einem MicroDAGR zu sehen sind</German>
             <Czech>Kolik informací je načteno do MicroDAGR?</Czech>
             <Portuguese>Quanta informação é preenchida no mapa do MicroDAGR</Portuguese>
-            <French>Combien d'informations apparaissent sur la carte du MicroDAGR</French>
+            <French>Définit le type d'information à afficher sur la carte du MicroDAGR.</French>
             <Hungarian>Mennyi térképadatot tartalmaz a MicroDAGR</Hungarian>
             <Russian>Сколько данных должно отображаться на карте MicroDAGR</Russian>
             <Italian>Quanti dati sono trasferiti nella mappa del MicroDAGR</Italian>
@@ -456,7 +456,7 @@
             <German>Satellitenbild + Gebäude</German>
             <Czech>Satelit + Budovy</Czech>
             <Portuguese>Satélite completo + Edifícios</Portuguese>
-            <French>Satellite + Batiments</French>
+            <French>Image satellite + Bâtiments</French>
             <Hungarian>Teljes műholdas + épületek</Hungarian>
             <Russian>Спутник + Здания</Russian>
             <Italian>Satellite Completo + Edifici</Italian>
@@ -488,7 +488,7 @@
             <German>Keine (kann keine Kartenansicht verwenden)</German>
             <Czech>Žádný (Nelze použít zobrazení mapy)</Czech>
             <Portuguese>Nada (Não pode usar a tela de mapa)</Portuguese>
-            <French>Rien (La vue carte n'est pas possible)</French>
+            <French>Néant (carte désactivée)</French>
             <Hungarian>Semmi (nem használható a térképnézet)</Hungarian>
             <Russian>Не показывать (запрещает использовать режим карты)</Russian>
             <Italian>Nessuno (Non puoi usare la vista mappa)</Italian>
@@ -504,6 +504,10 @@
             <Japanese>MicroDAGR - ウェイポイントの精度</Japanese>
             <Polish>MicroDAGR - Precyzja PT</Polish>
             <Russian>MicroDAGR - Точность маршрутных точек</Russian>
+            <Portuguese>MicroDAGR - Precisão de Waypoint</Portuguese>
+            <French>Précision des points de passage</French>
+            <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
+            <Czech>MicroDAGR - přesnost Waypointů</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
             <English>Controls how precise the waypointdistance can be displayed</English>
@@ -512,6 +516,10 @@
             <Japanese>表示されるウェイポイントの精度を設定します</Japanese>
             <Polish>Kontroluje jak precyzyjnie może być wyświetlany dystans PT</Polish>
             <Russian>Управляет точностью отображения расстояний маршрутных точек</Russian>
+            <Portuguese>Controla o quão preciso pode exibir o waypoint de distância</Portuguese>
+            <French>Définit la précision d'affichage des points de passage.</French>
+            <Chinese>控制顯示的導航點精確度為多少</Chinese>
+            <Czech>Nastavuje jak přesně je vzdálenost waypointů zobrazena.</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
@@ -520,6 +528,10 @@
             <Japanese>100m</Japanese>
             <Polish>100m</Polish>
             <Russian>100 м</Russian>
+            <Portuguese>100m</Portuguese>
+            <French>100 m</French>
+            <Chinese>一百公尺</Chinese>
+            <Czech>100 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -528,6 +540,10 @@
             <Japanese>10m</Japanese>
             <Polish>10m</Polish>
             <Russian>10 м</Russian>
+            <Portuguese>10m</Portuguese>
+            <French>10 m</French>
+            <Chinese>十公尺</Chinese>
+            <Czech>10 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -536,6 +552,10 @@
             <Japanese>1m</Japanese>
             <Polish>1m</Polish>
             <Russian>1 м</Russian>
+            <Portuguese>1m</Portuguese>
+            <French>1 m</French>
+            <Chinese>一公尺</Chinese>
+            <Czech>1 m</Czech>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>
@@ -544,7 +564,7 @@
             <German>Steuert wie viel Daten auf dem microDAGR zu sehen ist. Weniger Daten schränken die Kartenansicht ein, um mehr auf der Minimap zu sehen.</German>
             <Czech>Tento modul umožňuje kontrolovat, kolik informací je obsaženo v MicroDAGR. Menší množství dat omezené zobrazením mapy ukazují méně věcí na minimapě.</Czech>
             <Portuguese>Controla quantos dados são preenchidos nos itens microDAGR. Menos dados restringe a visualização de mapa para mostrar menos informações no minimapa.</Portuguese>
-            <French>Contrôle le nombre d'informations disponibles sur la carte du MicroDAGR.</French>
+            <French>Définit la quantité de données présentes dans le MicroDAGR.\nMoins de données force la carte à afficher moins d'informations sur la minimap.</French>
             <Hungarian>Meghatárroza a MicroDAGR objektumok térképének tartalmát. A kevesebb adat korlátozza a térképnézeti módot az eszközön.</Hungarian>
             <Russian>Контролирует, сколько данных должно отображаться на карте устройств MicroDAGR. Ограничивает объем отображаемых данных на миникарте.</Russian>
             <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa.</Italian>

@@ -20,7 +20,7 @@
         <Key ID="STR_ACE_Disposable_UsedTubeDescription">
             <English>Used disposable rocket launcher</English>
             <German>Benutzter Einweg-Raketenwerfer</German>
-            <French>Lance-roquette à usage unique utilisé</French>
+            <French>Lance-roquette à usage unique déjà utilisé</French>
             <Czech>Použitý raketomet</Czech>
             <Polish>Zużyta rura granatnika jednorazowego użytku</Polish>
             <Spanish>Lanzador desechable utilizado</Spanish>
@@ -36,7 +36,7 @@
         <Key ID="STR_ACE_Disposable_PreloadedMissileDummy">
             <English>Preloaded Missile Dummy</English>
             <German>Vorgeladene Racketennachbildung</German>
-            <French>Missile préchargé</French>
+            <French>Missile inerte préchargé</French>
             <Czech>Přednabitá maketa rakety</Czech>
             <Polish>Wstępnie załadowana atrapa pocisku</Polish>
             <Spanish>Precargado misil inerte</Spanish>

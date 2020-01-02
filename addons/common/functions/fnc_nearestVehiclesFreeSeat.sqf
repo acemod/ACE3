@@ -19,4 +19,8 @@
 params ["_unit", ["_distance", 10]];
 
 private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F", "Pod_Heli_Transport_04_crewed_base_F"], _distance];
-_nearVehicles select {(_x emptyPositions "cargo" > 0) || {_x emptyPositions "gunner" > 0}}
+_nearVehicles select {
+    // Filter cargo seats that will eject unconscious units (e.g. quad bike)
+    ((_x emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUnconscious', false])} || {(getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> "ejectDeadCargo")) == 0})
+    || {_x emptyPositions "gunner" > 0}
+}

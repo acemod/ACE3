@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Dragon">
+        <Key ID="STR_ACE_Dragon_dragonNameCarry">
+            <English>[CSW] M47 Super-Dragon</English>
+            <Portuguese>[CSW] M47 Super-Dragon</Portuguese>
+            <French>[CSW] M47 Super-Dragon</French>
+            <Japanese>[CSW] M47 スーパー ドラゴン</Japanese>
+            <Chinese>[CSW] M47龍式</Chinese>
+            <Czech>[CSW] M47 Super-Dragon</Czech>
+        </Key>
+        <Key ID="STR_ACE_Dragon_dragonName">
+            <English>M47 Super-Dragon</English>
+            <Portuguese>M47 Super-Dragon</Portuguese>
+            <French>M47 Super-Dragon</French>
+            <Japanese>M47 スーパー ドラゴン</Japanese>
+            <Chinese>M47 龍式</Chinese>
+            <Czech>M47 Super-Dragon</Czech>
+        </Key>
+        <Key ID="STR_ACE_Dragon_attachSight">
+            <English>Attach Sight</English>
+            <Portuguese>Colocar Mira</Portuguese>
+            <French>Monter le viseur</French>
+            <Japanese>照準器を取り付ける</Japanese>
+            <Chinese>裝上瞄具</Chinese>
+            <Czech>Připojit puškohled</Czech>
+        </Key>
+        <Key ID="STR_ACE_Dragon_detachSight">
+            <English>Detach Sight</English>
+            <Portuguese>Remover Mira</Portuguese>
+            <French>Démonter le viseur</French>
+            <Japanese>照準器を外す</Japanese>
+            <Chinese>拆下瞄具</Chinese>
+            <Czech>Odpojit puškohled</Czech>
+        </Key>
+        <Key ID="STR_ACE_Dragon_sightName">
+            <English>SU-36/P Daysight</English>
+            <Portuguese>SU-36/P Daysight</Portuguese>
+            <French>SU-36/P Daysight</French>
+            <Japanese>SU-36/P デイサイト</Japanese>
+            <Chinese>SU-36/P 日間瞄具</Chinese>
+            <Czech>SU-36/P denní puškohled</Czech>
+        </Key>
+        <Key ID="STR_ACE_Dragon_sightDescription">
+            <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
+            <Portuguese>Uma mira leve e comum utilizada para operações de dia. Contêm o computador de orientação para todo o sistema.</Portuguese>
+            <French>Un viseur léger et bon marché utilisé pour les opérations de jour.\nContient l'ordinateur de guidage pour tout le système.</French>
+            <Japanese>昼間時に使用される軽量で、低価格の照準器です。システム全体の誘導コンピュータを備えています。</Japanese>
+            <Chinese>一個輕量，便宜適合日間行動使用的廉價瞄具。內含全套制導電腦系統</Chinese>
+            <Czech>Lehký a levný puškohled pro použití za denního světla. Obsahuje navigační počítač pro celý systém.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Dragon_dragonDescription">
+            <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
+            <Portuguese>Um míssil SACLOS, guiado por fio com uma característica única de vôo</Portuguese>
+            <French>Un missile filoguidé SACLOS, présentant une caractéristique de vol exceptionnelle.</French>
+            <Japanese>特徴的な飛行特性を持つ、ワイヤ誘導の SACLOS ミサイルです。</Japanese>
+            <Chinese>一個有線制導半自動指令型飛彈並有著獨特的飛航動作</Chinese>
+            <Czech>Drátem naváděná SACLOS raketa s unikátními letovými vlastnostmi</Czech>
+        </Key>
+    </Package>
+</Project>

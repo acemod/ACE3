@@ -22,11 +22,6 @@ if (!alive _unit || {!local _unit}) exitWith {};
 
 [_unit] call EFUNC(medical_vitals,handleUnitVitals);
 
-private _painLevel = GET_PAIN_PERCEIVED(_unit);
-if (_painLevel > 0) then {
-    [QEGVAR(medical,moan), [_unit, _painLevel]] call CBA_fnc_localEvent;
-};
-
 // Handle spontaneous wake up from unconsciousness
 if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
     if (_unit call EFUNC(medical_status,hasStableVitals)) then {
@@ -39,7 +34,13 @@ if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
         };
 
-        if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
+        private _wakeUpCheckInterval = SPONTANEOUS_WAKE_UP_INTERVAL;
+        if (EGVAR(medical,spontaneousWakeUpEpinephrineBoost) > 1) then {
+            private _epiEffectiveness = [_unit, "Epinephrine", false] call EFUNC(medical_status,getMedicationCount);
+            _wakeUpCheckInterval = _wakeUpCheckInterval * linearConversion [0, 1, _epiEffectiveness, 1, 1 / EGVAR(medical,spontaneousWakeUpEpinephrineBoost), true];
+            TRACE_2("epiBoost",_epiEffectiveness,_wakeUpCheckInterval);
+        };
+        if (CBA_missionTime - _lastWakeUpCheck > _wakeUpCheckInterval) then {
             TRACE_2("Checking for wake up",_unit,EGVAR(medical,spontaneousWakeUpChance));
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime];
 

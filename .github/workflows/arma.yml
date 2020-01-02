@@ -1,0 +1,49 @@
+name: Arma
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Validate SQF
+      run: python3 tools/sqf_validator.py
+    - name: Validate Config
+      run: python3 tools/config_style_checker.py
+    - name: Validate Stringtables
+      run: python3 tools/stringtable_validator.py
+    - name: Check Strings
+      run: python3 tools/check_strings.py
+    - name: Check for BOM
+      uses: arma-actions/bom-check@master
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Lint (sqflint)
+      uses: arma-actions/sqflint@master
+      continue-on-error: true # No failure due to many false-positives
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Build using HEMTT
+      uses: arma-actions/hemtt@master
+      with:
+        command: build --ci  # no --release due to https://github.com/synixebrett/HEMTT/issues/227
+    # https://github.com/actions/upload-artifact/issues/3#issuecomment-524442814
+    # - name: Upload Artifact
+    #   uses: actions/upload-artifact@master
+    #   with:
+    #     name: ace3-${{ github.sha }}-nobin
+    #     path: '@ace'

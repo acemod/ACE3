@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="map_gestures">
-        <Key ID="STR_ACE_map_gestures_moduleSettings_displayName">
+    <Package name="Map_Gestures">
+        <Key ID="STR_ACE_Map_Gestures_moduleSettings_displayName">
             <English>Map Gestures</English>
             <Portuguese>Gestos no mapa</Portuguese>
             <Polish>Gesty na mapie</Polish>
@@ -10,13 +10,13 @@
             <Italian>Gesti Mappa</Italian>
             <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
-            <French>Gestes de carte</French>
+            <French>Pointage sur carte</French>
             <Japanese>マップ ジェスチャ</Japanese>
             <Korean>지도 신호</Korean>
             <Chinesesimp>地图标识器</Chinesesimp>
             <Chinese>地圖指示器</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_enabled_displayName">
+        <Key ID="STR_ACE_Map_Gestures_enabled_displayName">
             <English>Enabled</English>
             <Portuguese>Ativado</Portuguese>
             <Polish>Aktywne</Polish>
@@ -25,13 +25,28 @@
             <Italian>Abilita</Italian>
             <German>Aktiviert</German>
             <Spanish>Activado</Spanish>
-            <French>Activer</French>
+            <French>Activé</French>
             <Japanese>有効化</Japanese>
             <Korean>켜기</Korean>
             <Chinesesimp>启用</Chinesesimp>
             <Chinese>啟用</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_maxRange_displayName">
+        <Key ID="STR_ACE_Map_Gestures_enabled_description">
+            <English>Enables the Map Gestures.</English>
+            <Portuguese>Ativa os gestos no mapa</Portuguese>
+            <Polish>Aktywuje gesty na mapie.</Polish>
+            <Russian>Включает указания на карте.</Russian>
+            <Czech>Povolit ukazování v mapě</Czech>
+            <Italian>Abilita i Gesti Mappa</Italian>
+            <German>Aktiviert die Kartenzeichen.</German>
+            <Spanish>Activar Gestos en Mapa</Spanish>
+            <French>Active le pointage sur carte.</French>
+            <Japanese>マップ ジェスチャを有効化</Japanese>
+            <Korean>지도 신호 활성화</Korean>
+            <Chinesesimp>启用地图标识器</Chinesesimp>
+            <Chinese>啟用地圖指示器</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_maxRange_displayName">
             <English>Map Gesture Max Range</English>
             <Portuguese>Distância para gestos no mapa</Portuguese>
             <Polish>Maks. zasięg gestów</Polish>
@@ -40,13 +55,13 @@
             <Italian>Distanza Massima Gesti Mappa</Italian>
             <German>Maximale Reichweite der Kartenzeichen</German>
             <Spanish>Máx. dist. para gestos en mapa</Spanish>
-            <French>Distance max. des gestes de carte</French>
+            <French>Portée du pointage sur carte</French>
             <Japanese>マップ ジェスチャの最大範囲</Japanese>
             <Korean>지도 신호 최대 거리</Korean>
             <Chinesesimp>地图标识器最大范围</Chinesesimp>
             <Chinese>地圖指示器最大範圍</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_maxRange_description">
+        <Key ID="STR_ACE_Map_Gestures_maxRange_description">
             <English>Max range between players to show the map gesture indicator [default: 7 meters]</English>
             <Portuguese>Distância max. entre os jogadores para mostrar o indicador de gesto no mapa [padrão: 7 metros]</Portuguese>
             <Polish>Maksymalny zasięg, w obrębie którego gesty będą widoczne dla graczy [domyślnie: 7 metrów]</Polish>
@@ -55,144 +70,13 @@
             <Italian>Distanza massima tra giocatori per mostrare i gesti in mappa [default: 7 metri]</Italian>
             <German>Maximale Reichweite zwischen Spielern um Kartenzeichen anzuzeigen (Standard: 7 Meter)</German>
             <Spanish>Máxima distancia a la cual pueden verse el indicador de gestos [defecto: 7 m]</Spanish>
-            <French>Distance max. entre les joueurs pour montrer le pointage sur carte. (Défaut : 7m)</French>
+            <French>Définit le rayon au-delà duquel les joueurs ne verront plus l'indicateur de pointage de leurs alliés. Valeur par défaut : 7 mètres.</French>
             <Japanese>プレイヤのマップ ジェスチャによる表示範囲を設定します [標準：7 メートル]</Japanese>
             <Korean>플레이어간에 지도 신호 표시거리를 설정합니다. [기본: 7 미터]</Korean>
             <Chinesesimp>设定地图标识器显示的最大范围距离 [预设: 7公尺]</Chinesesimp>
             <Chinese>設定地圖指示器顯示的最大範圍距離 [預設: 7公尺]</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadColor_displayName">
-            <English>Lead Default Color</English>
-            <Portuguese>Cor padrão para o líder</Portuguese>
-            <Polish>Domyślny kolor lidera</Polish>
-            <Russian>Лид. цвет по-умолчанию</Russian>
-            <Czech>Výchozí barva velitele</Czech>
-            <Italian>Colore Default Caposquadra</Italian>
-            <German>Gruppenführer-Standardfarbe</German>
-            <Spanish>Color por defecto para el lider</Spanish>
-            <French>Couleur principale de commandement.</French>
-            <Japanese>リーダー用標準の色</Japanese>
-            <Korean>리더 기본 색상</Korean>
-            <Chinesesimp>队长预设颜色</Chinesesimp>
-            <Chinese>隊長預設顏色</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultLeadColor_description">
-            <English>Fallback Color value for group leaders when there is no group setting. [Module: leave blank to not force on clients]</English>
-            <Portuguese>Valor de cor alternativa para líderes de grupo</Portuguese>
-            <Polish>Domyślny kolor dla liderów grup.</Polish>
-            <Russian>Значение цвета для лидеров групп.</Russian>
-            <Italian>Colore di riserva dei capisquadra quando non c'è nessuna impostazione gruppo. [Modulo: lascia vuoto per non forzare su clients]</Italian>
-            <German>Ersatz-Farbwert für Gruppenführer wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
-            <Spanish>Color por defecto para líderes cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
-            <French>Couleur par défaut pour les chefs de groupe quand il n'y a pas de réglage pour le groupe. (Module : laisser vide pour ne pas forcer chez les clients)</French>
-            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
-            <Korean>그룹 설정이 없는 경우 리더의 예비 색상 값입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
-            <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
-            <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultColor_displayName">
-            <English>Default Color</English>
-            <Portuguese>Cor padrão</Portuguese>
-            <Polish>Kolor domyślny</Polish>
-            <Russian>Цвет по-умолчанию</Russian>
-            <Czech>Výchozí barva</Czech>
-            <Italian>Colore Default</Italian>
-            <German>Standardfarbe</German>
-            <Spanish>Color por defecto</Spanish>
-            <French>Couleur par défaut</French>
-            <Japanese>標準色</Japanese>
-            <Korean>기본 색상</Korean>
-            <Chinesesimp>预设颜色</Chinesesimp>
-            <Chinese>預設顏色</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_defaultColor_description">
-            <English>Fallback Color value when there is no group setting. [Module: leave blank to not force on clients]</English>
-            <Portuguese>Valor alternativo de cor</Portuguese>
-            <Polish>Kolor domyślny</Polish>
-            <Russian>Значение цвета.</Russian>
-            <Italian>Colore di riserva quando non ci sono impostazioni gruppo. [Modulo: lascia vuto per non forzare sui clients]</Italian>
-            <German>Ersatz-Farbwert wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
-            <Spanish>Color por defecto cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
-            <French>Couleur par défaut quand il n'y a pas de réglage pour le groupe. (Module : laisser vide pour ne pas forcer chez les clients)</French>
-            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
-            <Korean>그룹 설정이 없을 경우의 예비 색상입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
-            <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
-            <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_leadColor_displayName">
-            <English>Lead Color</English>
-            <Portuguese>Cor do líder</Portuguese>
-            <Polish>Kolor lidera</Polish>
-            <Russian>Лид. цвет</Russian>
-            <Czech>Barva velitele</Czech>
-            <Italian>Colore Caposquadra</Italian>
-            <German>Gruppenführer-Farbe</German>
-            <Spanish>Color para el líder</Spanish>
-            <French>Couleur de commandement</French>
-            <Japanese>リーダー用の色</Japanese>
-            <Korean>리더 색상</Korean>
-            <Chinesesimp>队长颜色</Chinesesimp>
-            <Chinese>隊長顏色</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_leadColor_description">
-            <English>Color value for group leaders of groups synced with this module.</English>
-            <Portuguese>Valor de cor para líderes de grupo sincronizados com este módulo.</Portuguese>
-            <Polish>Kolor dla liderów grup zsynchronizowanych z tym modułem.</Polish>
-            <Russian>Значение цвета для лидеров групп, которые [группы] синхронизированы с этим модулем.</Russian>
-            <Italian>Colore dei Caposquadra per gruppi sincronizzati con questo modulo.</Italian>
-            <German>Farbwert für Gruppenführer, die mit diesem Modul synchronisiert werden.</German>
-            <Spanish>Color para los líderes de los grupos sincronizados al módulo.</Spanish>
-            <French>Couleur pour les chefs de groupe des groupes synchronisés avec le module.</French>
-            <Japanese>モジュールで同期されたグループのリーダー用に色の値を決定します。</Japanese>
-            <Korean>그룹이 이 모듈에 동기화 됐을때의 리더 색상입니다.</Korean>
-            <Chinesesimp>改变与此同步小队队长的标识器颜色。</Chinesesimp>
-            <Chinese>改變與此同步小隊隊長的指示器顏色</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_color_displayName">
-            <English>Color</English>
-            <Portuguese>Cor</Portuguese>
-            <Polish>Kolor</Polish>
-            <Russian>Цвет</Russian>
-            <Czech>Barva</Czech>
-            <Italian>Colore</Italian>
-            <German>Farbe</German>
-            <Spanish>Color</Spanish>
-            <French>Couleur</French>
-            <Japanese>色</Japanese>
-            <Korean>색상</Korean>
-            <Chinesesimp>颜色</Chinesesimp>
-            <Chinese>顏色</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_color_description">
-            <English>Color value for group members of groups synced with this module.</English>
-            <Portuguese>Valor de cor para membros de grupo sincronizados com este módulo.</Portuguese>
-            <Polish>Kolor dla członków grup zsynchronizowanych z tym modułem.</Polish>
-            <Russian>Значение цвета для членов групп, которые [группы] синхронизированы с этим модулем.</Russian>
-            <Italian>Colore per membri di gruppi sincronizzati con questo modulo.</Italian>
-            <German>Farbwert für Gruppenmitglieder, die mit diesem Modul synchronisiert werden.</German>
-            <Spanish>Color para los miembros de los grupos sincronizados al módulo.</Spanish>
-            <French>Couleur pour les membres du groupe synchronisé avec ce module.</French>
-            <Japanese>モジュールで同期されたグループのメンバ用に色の値を決定します。</Japanese>
-            <Korean>그룹이 이 모듈에 동기화 됐을때의 멤버 색상입니다.</Korean>
-            <Chinesesimp>改变与此同步小队队员的标识器颜色</Chinesesimp>
-            <Chinese>改變與此同步小隊隊員的指示器顏色</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_moduleGroupSettings_displayName">
-            <English>Map Gestures - Group Settings</English>
-            <Portuguese>Gestos no mapa - Definições de Grupo</Portuguese>
-            <Polish>Gesty na mapie - ustawienia grup</Polish>
-            <Russian>Жесты на карте - настройки групп</Russian>
-            <Czech>Ukazování v mapě - nastavení skupiny</Czech>
-            <Italian>Gesti Mappa - Impostazioni Gruppi</Italian>
-            <German>Kartenzeichen - Gruppeneinstellungen</German>
-            <Spanish>Gestos en mapas - Configuración de grupos</Spanish>
-            <French>Gestes de carte - réglages de groupe</French>
-            <Japanese>マップ ジェスチャ - グループ設定</Japanese>
-            <Korean>지도 신호 - 그룹 설정</Korean>
-            <Chinesesimp>地图标识器 - 队伍设定</Chinesesimp>
-            <Chinese>地圖指示器 - 隊伍設定</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_interval_displayName">
+        <Key ID="STR_ACE_Map_Gestures_interval_displayName">
             <English>Update Interval</English>
             <Portuguese>Intervalo de atualizações</Portuguese>
             <Polish>Interwał aktualizacji</Polish>
@@ -207,7 +91,7 @@
             <Chinesesimp>更新间隔</Chinesesimp>
             <Chinese>更新間隔</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_interval_description">
+        <Key ID="STR_ACE_Map_Gestures_interval_description">
             <English>Time between data updates.</English>
             <Portuguese>Tempo entre atualização de dados</Portuguese>
             <Polish>Odstęp pomiędzy aktualizacjami danych</Polish>
@@ -216,28 +100,13 @@
             <Italian>Intervallo tra aggiornamenti dati.</Italian>
             <German>Zeit zwischen Datenupdates.</German>
             <Spanish>Tiempo entre actualizaciones sucesivas.</Spanish>
-            <French>Temps entre les actualisations de données</French>
+            <French>Période de mise à jour des données.</French>
             <Japanese>データの更新間隔</Japanese>
             <Korean>데이터 갱신 간격</Korean>
             <Chinesesimp>定义每次更新数据的时间.</Chinesesimp>
             <Chinese>定義每次更新數據的時間</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_enabled_description">
-            <English>Enables the Map Gestures.</English>
-            <Portuguese>Ativa os gestos no mapa</Portuguese>
-            <Polish>Aktywuje gesty na mapie.</Polish>
-            <Russian>Включает указания на карте.</Russian>
-            <Czech>Povolit ukazování v mapě</Czech>
-            <Italian>Abilita i Gesti Mappa</Italian>
-            <German>Aktiviert die Kartenzeichen.</German>
-            <Spanish>Activar Gestos en Mapa</Spanish>
-            <French>Activer les gestes de carte</French>
-            <Japanese>マップ ジェスチャを有効化</Japanese>
-            <Korean>지도 신호 활성화</Korean>
-            <Chinesesimp>启用地图标识器</Chinesesimp>
-            <Chinese>啟用地圖指示器</Chinese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_nameTextColor_displayName">
+        <Key ID="STR_ACE_Map_Gestures_nameTextColor_displayName">
             <English>Name Text Color</English>
             <Portuguese>Cor do texto do nome</Portuguese>
             <Polish>Kolor nazw</Polish>
@@ -252,7 +121,7 @@
             <Chinesesimp>名称文字颜色</Chinesesimp>
             <Chinese>名稱文字顏色</Chinese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_nameTextColor_description">
+        <Key ID="STR_ACE_Map_Gestures_nameTextColor_description">
             <English>Color of the name tag text besides the map gestures mark.</English>
             <Portuguese>Cor do texto da etiqueta de nome que fica embaixo da marcação de gestos no mapa.</Portuguese>
             <Polish>Kolor nazwy gracza obok markera gestu mapy.</Polish>
@@ -260,22 +129,158 @@
             <Italian>Colore del testo dei nametag oltre a quello dei Gesti Mappa</Italian>
             <German>Farbe der Namenstexte neben der Kartenzeichen-Markierung.</German>
             <Spanish>Color de los nombres dibujados al lado del marcados de gestos.</Spanish>
-            <French>Couleur des tags de nom à côté de marqueur de pointage sur carte.</French>
+            <French>Définit la couleur du texte pour le nom à côté du marqueur de pointage sur carte.</French>
             <Japanese>マップ ジェスチャに表示される、名前の色を決定します。</Japanese>
             <Korean>지도 색상에 표시되는 이름의 색상을 결정합니다.</Korean>
             <Chinesesimp>定义名称文字颜色。使其与地图标识器颜色有所区别。</Chinesesimp>
             <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別</Chinese>
+            <Czech>Barva jména zobrazeného vedle značky ukazovátka na mapě.</Czech>
         </Key>
-        <Key ID="STR_ACE_map_gestures_mapGestures_category">
+        <Key ID="STR_ACE_Map_Gestures_defaultLeadColor_displayName">
+            <English>Lead Default Color</English>
+            <Portuguese>Cor padrão para o líder</Portuguese>
+            <Polish>Domyślny kolor lidera</Polish>
+            <Russian>Лид. цвет по-умолчанию</Russian>
+            <Czech>Výchozí barva velitele</Czech>
+            <Italian>Colore Default Caposquadra</Italian>
+            <German>Gruppenführer-Standardfarbe</German>
+            <Spanish>Color por defecto para el lider</Spanish>
+            <French>Couleur de commandement par défaut</French>
+            <Japanese>リーダー用標準の色</Japanese>
+            <Korean>리더 기본 색상</Korean>
+            <Chinesesimp>队长预设颜色</Chinesesimp>
+            <Chinese>隊長預設顏色</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_defaultLeadColor_description">
+            <English>Fallback Color value for group leaders when there is no group setting. [Module: leave blank to not force on clients]</English>
+            <Portuguese>Valor de cor alternativa para líderes de grupo</Portuguese>
+            <Polish>Domyślny kolor dla liderów grup.</Polish>
+            <Russian>Значение цвета для лидеров групп.</Russian>
+            <Italian>Colore di riserva dei capisquadra quando non c'è nessuna impostazione gruppo. [Modulo: lascia vuoto per non forzare su clients]</Italian>
+            <German>Ersatz-Farbwert für Gruppenführer wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
+            <Spanish>Color por defecto para líderes cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
+            <French>Définit la couleur par défaut pour les chefs de groupe quand il n'y a pas de réglage de groupe. [Module : laisser vide pour ne pas forcer chez les clients.]</French>
+            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
+            <Korean>그룹 설정이 없는 경우 리더의 예비 색상 값입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
+            <Chinesesimp>当没有设定小队颜色时，此功能会定义队长的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
+            <Chinese>當沒有設定小隊顏色時，此功能會定義隊長的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
+            <Czech>Záložní barva pro velitele skupin pokud není žádné skupinové nastavení [Modul: ponechat prázdné abyste nepřepsali nastavení klientů]</Czech>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_defaultColor_displayName">
+            <English>Default Color</English>
+            <Portuguese>Cor padrão</Portuguese>
+            <Polish>Kolor domyślny</Polish>
+            <Russian>Цвет по-умолчанию</Russian>
+            <Czech>Výchozí barva</Czech>
+            <Italian>Colore Default</Italian>
+            <German>Standardfarbe</German>
+            <Spanish>Color por defecto</Spanish>
+            <French>Couleur par défaut</French>
+            <Japanese>標準色</Japanese>
+            <Korean>기본 색상</Korean>
+            <Chinesesimp>预设颜色</Chinesesimp>
+            <Chinese>預設顏色</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_defaultColor_description">
+            <English>Fallback Color value when there is no group setting. [Module: leave blank to not force on clients]</English>
+            <Portuguese>Valor alternativo de cor</Portuguese>
+            <Polish>Kolor domyślny</Polish>
+            <Russian>Значение цвета.</Russian>
+            <Italian>Colore di riserva quando non ci sono impostazioni gruppo. [Modulo: lascia vuto per non forzare sui clients]</Italian>
+            <German>Ersatz-Farbwert wenn keine Gruppeneinstellung vorhanden ist. [Modul: leer lassen um Anwendung bei Clients nicht zu erzwingen]</German>
+            <Spanish>Color por defecto cuando no está configurado [Módulo: dejar en blanco para no forzar]</Spanish>
+            <French>Définit la couleur par défaut quand il n'y a pas de réglage pour le groupe. [Module : laisser vide pour ne pas forcer chez les clients.]</French>
+            <Japanese>グループ設定が存在しない場合に、グループ リーダーへ設定される色の値を設定します。[モジュール：空の場合はクライアントへ強制しません]</Japanese>
+            <Korean>그룹 설정이 없을 경우의 예비 색상입니다. [모듈: 클라이언트에서 강체치 않기 위해 공백으로 비워둘것]</Korean>
+            <Chinesesimp>当没有设定小队颜色时，此功能会定义玩家的标识器颜色。[模块: 此栏留空来保持预设颜色]</Chinesesimp>
+            <Chinese>當沒有設定小隊顏色時，此功能會定義玩家的指示器顏色。[模塊: 此欄留空來保持預設顏色]</Chinese>
+            <Czech>Záložní barva pokud není žádné skupinové nastavení [Modul: ponechat prázdné abyste nepřepsali nastavení klientů]</Czech>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_leadColor_displayName">
+            <English>Lead Color</English>
+            <Portuguese>Cor do líder</Portuguese>
+            <Polish>Kolor lidera</Polish>
+            <Russian>Лид. цвет</Russian>
+            <Czech>Barva velitele</Czech>
+            <Italian>Colore Caposquadra</Italian>
+            <German>Gruppenführer-Farbe</German>
+            <Spanish>Color para el líder</Spanish>
+            <French>Couleur de commandement</French>
+            <Japanese>リーダー用の色</Japanese>
+            <Korean>리더 색상</Korean>
+            <Chinesesimp>队长颜色</Chinesesimp>
+            <Chinese>隊長顏色</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_leadColor_description">
+            <English>Color value for group leaders of groups synced with this module.</English>
+            <Portuguese>Valor de cor para líderes de grupo sincronizados com este módulo.</Portuguese>
+            <Polish>Kolor dla liderów grup zsynchronizowanych z tym modułem.</Polish>
+            <Russian>Значение цвета для лидеров групп, которые [группы] синхронизированы с этим модулем.</Russian>
+            <Italian>Colore dei Caposquadra per gruppi sincronizzati con questo modulo.</Italian>
+            <German>Farbwert für Gruppenführer, die mit diesem Modul synchronisiert werden.</German>
+            <Spanish>Color para los líderes de los grupos sincronizados al módulo.</Spanish>
+            <French>Couleur pour les chefs des groupes synchronisés avec ce module.</French>
+            <Japanese>モジュールで同期されたグループのリーダー用に色の値を決定します。</Japanese>
+            <Korean>그룹이 이 모듈에 동기화 됐을때의 리더 색상입니다.</Korean>
+            <Chinesesimp>改变与此同步小队队长的标识器颜色。</Chinesesimp>
+            <Chinese>改變與此同步小隊隊長的指示器顏色</Chinese>
+            <Czech>Barva pro velitele skupin které jsou synchronizované s tímto modulem.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_color_displayName">
+            <English>Color</English>
+            <Portuguese>Cor</Portuguese>
+            <Polish>Kolor</Polish>
+            <Russian>Цвет</Russian>
+            <Czech>Barva</Czech>
+            <Italian>Colore</Italian>
+            <German>Farbe</German>
+            <Spanish>Color</Spanish>
+            <French>Couleur</French>
+            <Japanese>色</Japanese>
+            <Korean>색상</Korean>
+            <Chinesesimp>颜色</Chinesesimp>
+            <Chinese>顏色</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_color_description">
+            <English>Color value for group members of groups synced with this module.</English>
+            <Portuguese>Valor de cor para membros de grupo sincronizados com este módulo.</Portuguese>
+            <Polish>Kolor dla członków grup zsynchronizowanych z tym modułem.</Polish>
+            <Russian>Значение цвета для членов групп, которые [группы] синхронизированы с этим модулем.</Russian>
+            <Italian>Colore per membri di gruppi sincronizzati con questo modulo.</Italian>
+            <German>Farbwert für Gruppenmitglieder, die mit diesem Modul synchronisiert werden.</German>
+            <Spanish>Color para los miembros de los grupos sincronizados al módulo.</Spanish>
+            <French>Couleur pour les membres des groupes synchronisés avec ce module.</French>
+            <Japanese>モジュールで同期されたグループのメンバ用に色の値を決定します。</Japanese>
+            <Korean>그룹이 이 모듈에 동기화 됐을때의 멤버 색상입니다.</Korean>
+            <Chinesesimp>改变与此同步小队队员的标识器颜色</Chinesesimp>
+            <Chinese>改變與此同步小隊隊員的指示器顏色</Chinese>
+            <Czech>Barva pro členy skupin které jsou synchronizované s tímto modulem.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
+            <English>Map Gestures - Group Settings</English>
+            <Portuguese>Gestos no mapa - Definições de Grupo</Portuguese>
+            <Polish>Gesty na mapie - ustawienia grup</Polish>
+            <Russian>Жесты на карте - настройки групп</Russian>
+            <Czech>Ukazování v mapě - nastavení skupiny</Czech>
+            <Italian>Gesti Mappa - Impostazioni Gruppi</Italian>
+            <German>Kartenzeichen - Gruppeneinstellungen</German>
+            <Spanish>Gestos en mapas - Configuración de grupos</Spanish>
+            <French>Pointage sur carte - réglages de groupe</French>
+            <Japanese>マップ ジェスチャ - グループ設定</Japanese>
+            <Korean>지도 신호 - 그룹 설정</Korean>
+            <Chinesesimp>地图标识器 - 队伍设定</Chinesesimp>
+            <Chinese>地圖指示器 - 隊伍設定</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_mapGestures_category">
             <English>Map Gestures</English>
             <Portuguese>Gestos no mapa</Portuguese>
             <Polish>Gesty na mapie</Polish>
             <Russian>Жесты на карте</Russian>
-            <Czech>Ukazovní v mapě</Czech>
+            <Czech>Ukazování v mapě</Czech>
             <Italian>Gesti Mappa</Italian>
             <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
-            <French>Gestes de carte</French>
+            <French>Pointage sur carte</French>
             <Japanese>マップ ジェスチャ</Japanese>
             <Korean>지도 신호</Korean>
             <Chinesesimp>地图标识器</Chinesesimp>
