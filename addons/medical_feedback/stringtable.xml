@@ -9,6 +9,7 @@
             <French>Réaction aux blessures</French>
             <Portuguese>Reação a Lesões</Portuguese>
             <Chinese>視覺回饋</Chinese>
+            <Italian>Commenti</Italian>
             <Czech>Zpětná vazba</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
@@ -16,7 +17,7 @@
             <German>Schmerzeffekt-Typ</German>
             <Polish>Rodzaj efektu bólu</Polish>
             <Russian>Визуальный эффект боли</Russian>
-            <Italian>Pain Effect Type</Italian>
+            <Italian>Effetto del dolore</Italian>
             <Spanish>Tipo de efecto de dolor</Spanish>
             <French>Effet de douleur</French>
             <Hungarian>Fájdalom-effekt típusa</Hungarian>
@@ -33,6 +34,7 @@
             <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
             <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
             <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
+            <Italian>Seleziona il tipo di effetto del dolore usato.</Italian>
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
@@ -43,6 +45,7 @@
             <French>Flash blancs</French>
             <Portuguese>Flashes Brancos</Portuguese>
             <Chinese>白光閃爍</Chinese>
+            <Italian>Bianco lampeggiante</Italian>
             <Czech>Blikání bílé barvy</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
@@ -53,6 +56,7 @@
             <French>Pulsations floues</French>
             <Portuguese>Borrão Pulsante</Portuguese>
             <Chinese>脈動模糊</Chinese>
+            <Italian>Sfocatura pulsante</Italian>
             <Czech>Pulzující rozmazání</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
@@ -76,6 +80,7 @@
             <Japanese>強い痛みの時のみ</Japanese>
             <Chinese>只有在強烈疼痛時使用</Chinese>
             <French>Juste un fort effet douloureux</French>
+            <Italian>Solo elevato effetto di dolore</Italian>
             <Czech>Pouze efekt vysoké bolesti</Czech>
             <Portuguese>Apenas efeito de dor alta</Portuguese>
         </Key>

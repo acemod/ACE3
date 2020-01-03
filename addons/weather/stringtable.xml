@@ -158,6 +158,7 @@
         <Key ID="STR_ACE_Weather_CheckAirTemperature">
             <English>Check Air Temperature</English>
             <Chinese>檢查氣溫</Chinese>
+            <Italian>Controllare la temperatura dell'aria</Italian>
             <Czech>Zkontrolovat teplotu vzduchu</Czech>
             <Japanese>気温を確認</Japanese>
             <French>Vérifier la température</French>
@@ -166,6 +167,7 @@
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
             <Chinese>顯示檢查氣溫動作</Chinese>
+            <Italian>Mostra Controlla l'azione della temperatura dell'aria</Italian>
             <Czech>Ukázat akci kontroly teploty vzduchu</Czech>
             <Japanese>気温の確認動作を表示</Japanese>
             <French>Afficher l'interaction "Vérifier la température"</French>

@@ -8,6 +8,7 @@
             <Russian>Порог критического урона игрока</Russian>
             <Portuguese>Limite de Dano Crítico do Jogador</Portuguese>
             <Chinese>玩家重擊承受量</Chinese>
+            <Italian>Soglia danni critici del giocatore</Italian>
             <Czech>Kritická míra poškození pro hráče</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
@@ -17,6 +18,7 @@
             <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
             <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
+            <Italian>Imposta la quantità di danno che un giocatore può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození hráč může obdržet než upadne do bezvědomí.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
@@ -26,6 +28,7 @@
             <Russian>Порог критического урона AI</Russian>
             <Portuguese>Limite de Dano Crítico da IA</Portuguese>
             <Chinese>AI重擊承受量</Chinese>
+            <Italian>Soglia dei danni critici dell AI</Italian>
             <Czech>Kritická míra poškození pro AI</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
@@ -35,6 +38,7 @@
             <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
+            <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
@@ -522,6 +526,7 @@
             <Japanese>致命傷の原因</Japanese>
             <Chinese>致命傷來源</Chinese>
             <French>Cause de blessure mortelle</French>
+            <Italian>Fonte del danno fatale</Italian>
             <Czech>Zdroj smrtelné škody</Czech>
             <Portuguese>Fonte de Dano Fatal</Portuguese>
         </Key>
@@ -529,6 +534,7 @@
             <English>Determines what damage can be fatal</English>
             <Japanese>致命傷となるダメージの種類を決定します。</Japanese>
             <Chinese>決定何種傷害為致命</Chinese>
+            <Italian>Determina quali danni possono essere fatali</Italian>
             <French>Détermine le type de blessures pouvant être fatales.</French>
             <Czech>Nastavuje jaké poškození může být smrtelné</Czech>
             <Portuguese>Determina qual dano pode ser fatal</Portuguese>
@@ -538,6 +544,7 @@
             <Japanese>重要器官に大きなダメージを受けた時のみ</Japanese>
             <Chinese>只有重要器官之重傷</Chinese>
             <French>Grosses blessures sur organes vitaux</French>
+            <Italian>Solo grandi colpi agli organi vitali</Italian>
             <Czech>Pouze zásahy do životně důležitých orgánů</Czech>
             <Portuguese>Apenas danos largos a órgãos vitais</Portuguese>
         </Key>
@@ -546,6 +553,7 @@
             <Japanese>外傷の数</Japanese>
             <Chinese>外部創傷累計</Chinese>
             <French>Somme des traumatismes</French>
+            <Italian>Somma dei traumi</Italian>
             <Czech>Celkové množství úrazů</Czech>
             <Portuguese>Soma do trauma</Portuguese>
         </Key>
@@ -554,6 +562,7 @@
             <Japanese>両方</Japanese>
             <Chinese>兩者都是</Chinese>
             <French>Les deux</French>
+            <Italian>o</Italian>
             <Czech>Kterýkoliv ze dvou</Czech>
             <Portuguese>Ou</Portuguese>
         </Key>
