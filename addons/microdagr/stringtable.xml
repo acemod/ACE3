@@ -424,7 +424,7 @@
             <Czech>MicroDAGR - Vyplnění mapy</Czech>
             <German>MicroDAGR-Kartenfüllung</German>
             <Portuguese>Preenchimento de mapa do MicroDAGR</Portuguese>
-            <French>MicroDAGR - Remplissage de la carte</French>
+            <French>Contenu de la carte</French>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
             <Italian>Riempimento Mappa MicroDAGR</Italian>
@@ -440,7 +440,7 @@
             <German>Wie viel Daten auf einem MicroDAGR zu sehen sind</German>
             <Czech>Kolik informací je načteno do MicroDAGR?</Czech>
             <Portuguese>Quanta informação é preenchida no mapa do MicroDAGR</Portuguese>
-            <French>Définit la quantité d'informations apparaissant sur la carte du MicroDAGR.</French>
+            <French>Définit le type d'information à afficher sur la carte du MicroDAGR.</French>
             <Hungarian>Mennyi térképadatot tartalmaz a MicroDAGR</Hungarian>
             <Russian>Сколько данных должно отображаться на карте MicroDAGR</Russian>
             <Italian>Quanti dati sono trasferiti nella mappa del MicroDAGR</Italian>
@@ -456,7 +456,7 @@
             <German>Satellitenbild + Gebäude</German>
             <Czech>Satelit + Budovy</Czech>
             <Portuguese>Satélite completo + Edifícios</Portuguese>
-            <French>Image satellite + Batiments</French>
+            <French>Image satellite + Bâtiments</French>
             <Hungarian>Teljes műholdas + épületek</Hungarian>
             <Russian>Спутник + Здания</Russian>
             <Italian>Satellite Completo + Edifici</Italian>
@@ -488,7 +488,7 @@
             <German>Keine (kann keine Kartenansicht verwenden)</German>
             <Czech>Žádný (Nelze použít zobrazení mapy)</Czech>
             <Portuguese>Nada (Não pode usar a tela de mapa)</Portuguese>
-            <French>Rien (La vue carte n'est pas possible)</French>
+            <French>Néant (carte désactivée)</French>
             <Hungarian>Semmi (nem használható a térképnézet)</Hungarian>
             <Russian>Не показывать (запрещает использовать режим карты)</Russian>
             <Italian>Nessuno (Non puoi usare la vista mappa)</Italian>
@@ -505,7 +505,7 @@
             <Polish>MicroDAGR - Precyzja PT</Polish>
             <Russian>MicroDAGR - Точность маршрутных точек</Russian>
             <Portuguese>MicroDAGR - Precisão de Waypoint</Portuguese>
-            <French>MicroDAGR - Précision points de passage</French>
+            <French>Précision des points de passage</French>
             <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
             <Czech>MicroDAGR - přesnost Waypointů</Czech>
         </Key>

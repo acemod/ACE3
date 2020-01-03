@@ -241,6 +241,7 @@
             <Portuguese>Espaço de Carga</Portuguese>
             <French>Espace de stockage</French>
             <Czech>Nákladový prostor</Czech>
+            <Spanish>Espacio de carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
@@ -255,6 +256,7 @@
             <Portuguese>O espaço de carga disponível nesse veículo/contâiner</Portuguese>
             <French>L'espace de stockage disponible dans ce véhicule/container.</French>
             <Czech>Nákladový prostor dostupný v tomto vozidle/kontejneru</Czech>
+            <Spanish>El espacio de carga disponible en este vehículo/contenedor</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
@@ -269,6 +271,7 @@
             <Portuguese>Tamanho da Carga</Portuguese>
             <French>Encombrement fret</French>
             <Czech>Velikost nákladu</Czech>
+            <Spanish>Tamaño de carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
@@ -283,6 +286,7 @@
             <Portuguese>O Espaço de carga necessário para carregar esse objeto (-1 para que não seja carregável)</Portuguese>
             <French>Définit l'espace de stockage nécessaire à l'embarquement de cet objet (-1 pour le rendre non transportable).</French>
             <Czech>Nákladový prostor požadovný pro naložení tohoto objektu (-1 pro nenaložitelné)</Czech>
+            <Spanish>Espacio de carga requerido para guardar este objeto (-1 para no descargable)</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -297,6 +301,7 @@
             <Russian>Десантирование груза</Russian>
             <Portuguese>Lançamento Aéreo</Portuguese>
             <Czech>Výsadek</Czech>
+            <Spanish>Lanzamiento aéreo</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
@@ -311,6 +316,7 @@
             <Russian>Неподходящее положение</Russian>
             <Portuguese>Desnivelar Vôo</Portuguese>
             <Czech>Let není vyrovnaný</Czech>
+            <Spanish>Vuelo no nivelado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coefficient</English>
@@ -325,6 +331,7 @@
             <Russian>Коэффициент времени десантирования</Russian>
             <Portuguese>Fator de Tempo para soltar a carga</Portuguese>
             <Czech>Koeficient času nákladního výsadku</Czech>
+            <Spanish>Coeficiente de tiempo para lanzamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
@@ -339,6 +346,7 @@
             <Russian>Модификатор времени, необходимого для десантирования груза</Russian>
             <Portuguese>Coeficiente de quanto tempo leva para soltar uma carga de paraquedas</Portuguese>
             <Czech>Upravuje jak dlouho výsadek trvá pro náklad.</Czech>
+            <Spanish>Modificador de tiempo de lanzamiento en paracaídas de un objeto cargado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
@@ -351,6 +359,7 @@
             <French>Coefficient du temps de chargement</French>
             <Chinese>裝載時間係數</Chinese>
             <Czech>Koeficient času nákládání</Czech>
+            <Spanish>Coeficiente de tiempo para cargar</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
@@ -363,6 +372,7 @@
             <French>Modifie le temps nécessaire pour charger/décharger des objets.\nLe temps, en secondes, est calculé en multipliant la taille de l'élément par ce coefficient.</French>
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
             <Czech>Upravuje jak dlouho nakládají/vykládání trvá.\nVýsledkem je čas v sekundách - velikost objektu vynásobená touto hodnotou.</Czech>
+            <Spanish>Modifica el tiempo de carga/descarga de objetos.\n El Tiempo en segundos, es el tamño del objeto multiplicado por este valor.</Spanish>
         </Key>
     </Package>
 </Project>

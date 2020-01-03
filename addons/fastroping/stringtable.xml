@@ -59,6 +59,7 @@
             <Portuguese>Recolher o sistema de descida rápida</Portuguese>
             <French>Désactiver le système d'aérocordage</French>
             <Czech>Odložit systém slaňování</Czech>
+            <Spanish>Recoger sistema de fast roping</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -158,6 +159,7 @@
             <Russian>Выпустить 12 м канат</Russian>
             <Portuguese>Jogar cordar (12m)</Portuguese>
             <Chinese>部屬12公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 12m</Italian>
             <Czech>Připravit 12m lana</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
@@ -169,6 +171,7 @@
             <Russian>Выпустить 15 м канат</Russian>
             <Portuguese>Jogar cordar (15m)</Portuguese>
             <Chinese>部屬15公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 15m</Italian>
             <Czech>Připravit 15m lana</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
@@ -180,6 +183,7 @@
             <Russian>Выпустить 18 м канат</Russian>
             <Portuguese>Jogar cordar (18m)</Portuguese>
             <Chinese>部屬18公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 18m</Italian>
             <Czech>Připravit 18m lana</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
@@ -191,6 +195,7 @@
             <Russian>Выпустить 27 м канат</Russian>
             <Portuguese>Jogar cordar (27m)</Portuguese>
             <Chinese>部屬27公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 27m</Italian>
             <Czech>Připravit 27m lana</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
@@ -202,6 +207,7 @@
             <Russian>Выпустить 36 м канат</Russian>
             <Portuguese>Jogar cordar (36m)</Portuguese>
             <Chinese>部屬36公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 36m</Italian>
             <Czech>Připravit 36m lana</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Ropesupply">
@@ -213,6 +219,7 @@
             <Russian>[ACE] Ящик с канатами</Russian>
             <Portuguese>[ACE] Suprimento de cordas</Portuguese>
             <Chinese>[ACE] 繩索補充箱</Chinese>
+            <Italian>[ACE] Cassa Corde</Italian>
             <Czech>[ACE] Bedna s lany</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_descriptionShort">
@@ -224,6 +231,7 @@
             <Russian>Используется для выпуска канатов с совместимого вертолета</Russian>
             <Portuguese>Usado para fazer descida rápida de corda em helicópteros compatíveis com FRIES</Portuguese>
             <Chinese>在可相容的直升機上部屬繩索</Chinese>
+            <Italian>Utilizzato per distribuire corde da un elicottero compatibile</Italian>
             <Czech>Používané na přípravu lan na slaňování z kompatibilních helikoptér</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_12_Display">
@@ -235,6 +243,7 @@
             <Russian>Канат 12.2 метров</Russian>
             <Portuguese>Corda (12.2m)</Portuguese>
             <Chinese>繩索（12.2公尺長）</Chinese>
+            <Italian>Corda da 12.2 metri</Italian>
             <Czech>Lano 12.2 metrů</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_15_Display">
@@ -246,6 +255,7 @@
             <Russian>Канат 15.2 метров</Russian>
             <Portuguese>Corda (15.2m)</Portuguese>
             <Chinese>繩索（15.2公尺長）</Chinese>
+            <Italian>Corda da 15.2 metri</Italian>
             <Czech>Lano 15.2 metrů</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_18_Display">
@@ -257,6 +267,7 @@
             <Russian>Канат 18.3 метров</Russian>
             <Portuguese>Corda (18.3m)</Portuguese>
             <Chinese>繩索（18.3公尺長）</Chinese>
+            <Italian>Corda da 18.3 metri</Italian>
             <Czech>Lano 18.3 metrů</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_27_Display">
@@ -268,6 +279,7 @@
             <Russian>Канат 27.4 метров</Russian>
             <Portuguese>Corda (27.4m)</Portuguese>
             <Chinese>繩索（27.4公尺長）</Chinese>
+            <Italian>Corda da 27.4 metri</Italian>
             <Czech>Lano 27.4 metrů</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_36_Display">
@@ -279,7 +291,14 @@
             <Russian>Канат 36.6 метров</Russian>
             <Portuguese>Corda (36.6m)</Portuguese>
             <Chinese>繩索（36.6公尺長）</Chinese>
+            <Italian>Corda da 36.6 metri</Italian>
             <Czech>Lano 36.6 metrů</Czech>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_setting_categoryMenu_displayName">
+            <English>Fast-roping</English>
+            <French>Aérocordage</French>
+            <Chinese>快速繩降</Chinese>
+            <Japanese>ファスト ロープ</Japanese>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -290,6 +309,7 @@
             <Russian>Требуется канат</Russian>
             <Portuguese>Requer uma corda para jogar</Portuguese>
             <Chinese>需要繩索來部屬</Chinese>
+            <Italian>Richiede una corda per il dispigamento</Italian>
             <Czech>Požadovat předmět lana pro slaňování</Czech>
         </Key>
     </Package>

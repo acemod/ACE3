@@ -22,7 +22,7 @@
             <Russian>Показывать текст, когда клинит оружие</Russian>
             <Czech>Zobrazit upozornění při zaseknutí</Czech>
             <Polish>Wyświetl tekst przy zacięciu broni</Polish>
-            <French>Afficher texte si enrayé</French>
+            <French>Afficher du texte si enrayé</French>
             <Hungarian>Szöveges értesítés kijelzése a fegyver elakadásakor</Hungarian>
             <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
             <Italian>Visualizza testo in caso di inceppamento</Italian>
@@ -53,7 +53,7 @@
             <Polish>Efekty cząsteczkowe przegrzania</Polish>
             <Italian>Effetti Particelle Surriscaldamento</Italian>
             <Spanish>Efectos de partículas</Spanish>
-            <French>Surchauffe - Effets de particules </French>
+            <French>Effets de particules </French>
             <Czech>Částicové efekty přehřívání</Czech>
             <Portuguese>Efeito de parícula de superaquecimento</Portuguese>
             <Russian>Эффект частиц при перегреве</Russian>
@@ -85,7 +85,7 @@
             <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
             <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
             <Spanish>Efectos de partículas para todos</Spanish>
-            <French>Surchauffe - Effets de particules pour tout le monde</French>
+            <French>Effets de particules pour tout le monde</French>
             <Czech>Částicové efekty přehřívání pro všechny</Czech>
             <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
             <Russian>Эффект частиц при перегреве для всех</Russian>
@@ -117,7 +117,7 @@
             <Polish>Wpływ na rozrzut</Polish>
             <Italian>Dispersione Surriscaldamento</Italian>
             <Spanish>Dispersión</Spanish>
-            <French>Surchauffe - Dispersion</French>
+            <French>Dispersion</French>
             <Portuguese>Disperção de superaquecimento</Portuguese>
             <Russian>Разброс при перегреве</Russian>
             <Czech>Důsledky přehřátí zbraně</Czech>

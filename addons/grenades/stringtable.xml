@@ -149,9 +149,12 @@
             <English>CTS 7290 9-bang Flash Grenade</English>
             <German>CTS 7290 9-fach Blendgranate</German>
             <Chinese>CTS 7290-9 9閃 閃光彈</Chinese>
+            <Italian>CTS 7290 9- Flash bang Grenade</Italian>
             <Czech>CTS 7290 9 ranný oslepující granát</Czech>
             <Japanese>CTS 7290 9-bang 閃光手榴弾</Japanese>
             <Polish>CTS 7290 9-bang Granat Hukowy</Polish>
+            <French>CTS 7290 9-bang Grenade incapacitante</French>
+            <Portuguese>Granada de Luz CTS 7290 9-Explosões</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_NameShort">
             <English>CTS 7290-9</English>

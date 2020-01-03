@@ -50,6 +50,11 @@ class cfgMagazines {
         pylonWeapon = "ace_hellfire_launcher_N";
         ammo = "ACE_Hellfire_AGM114N";
     };
+    class GVAR(pylon_mag_2rnd_hellfire_l): rhs_mag_AGM114K_2 {
+        displayName = "2x AGM-114L [ACE]";
+        pylonWeapon = "ace_hellfire_launcher_L";
+        ammo = "ACE_Hellfire_AGM114L";
+    };
 
     class rhsusf_m112_mag: CA_Magazine {
         ace_explosives_DelayTime = 1;
@@ -192,6 +197,15 @@ class cfgMagazines {
     };
     class RHS_48Rnd_40mm_MK19_M430I;
     class GVAR(48Rnd_40mm_MK19_M430I): RHS_48Rnd_40mm_MK19_M430I {
+        scope = 2;
+        type = 256;
+        count = 48;
+        mass = 40;
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
+    class RHS_48Rnd_40mm_MK19_M430A1;
+    class GVAR(48Rnd_40mm_MK19_M430A1): RHS_48Rnd_40mm_MK19_M430A1 {
         scope = 2;
         type = 256;
         count = 48;
