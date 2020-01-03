@@ -116,7 +116,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
             <Czech>Zdravotnická místa zvyšují zdravotnickou úrovně</Czech>
-            <Italian>Località aumentano addestramento</Italian>
+            <Italian>Sedi per potenziare la formazione</Italian>
             <German>Örtliche Trainingssteigerung</German>
             <Spanish>Ubicación mejora entrenamiento.</Spanish>
             <Polish>Miejsca zwiększają wyszkolenie</Polish>
@@ -127,7 +127,6 @@
             <Korean>교육 증가 지역</Korean>
             <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
             <Chinese>受所在位置影響提升醫療能力</Chinese>
-            <Italian>Sedi per potenziare la formazione</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
