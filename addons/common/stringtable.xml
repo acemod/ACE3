@@ -467,6 +467,7 @@
             <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
             <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
+            <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -488,6 +489,7 @@
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
+            <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -509,6 +511,7 @@
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Chinese>定義哪些插件是允許使用的。</Chinese>
             <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
+            <Japanese>許可するアドオンを定義します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -1354,6 +1357,7 @@
             <French>Affiche l'action dans le menu d'interaction personnel.</French>
             <Chinese>在自我互動選單內顯示動作</Chinese>
             <Portuguese>Mostra a ação no menu de auto-interação</Portuguese>
+            <Japanese>セルフ インタラクションに動作を表示</Japanese>
         </Key>
     </Package>
 </Project>

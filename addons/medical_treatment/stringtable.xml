@@ -112,6 +112,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
             <English>Controls whether fully bandaged body parts are healed.</English>
+            <Japanese>全ての傷に対して包帯を巻いた部分を治癒するかどうかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -442,7 +443,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
             <English>Remove Only</English>
-            <Japanese>削除</Japanese>
+            <Japanese>削除のみ</Japanese>
             <French>Retirer uniquement</French>
             <Russian>Удалять</Russian>
             <Portuguese>Apenas Remover</Portuguese>
