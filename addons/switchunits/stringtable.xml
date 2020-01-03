@@ -68,6 +68,7 @@
             <Chinese>啟用陣營切換</Chinese>
             <Czech>Povolit změnu strany</Czech>
             <Portuguese>Habilita troca de time</Portuguese>
+            <Japanese>陣営切り替えを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
