@@ -59,6 +59,7 @@
             <Portuguese>Recolher o sistema de descida rápida</Portuguese>
             <French>Désactiver le système d'aérocordage</French>
             <Czech>Odložit systém slaňování</Czech>
+            <Spanish>Recoger sistema de fast roping</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>

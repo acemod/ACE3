@@ -2260,6 +2260,7 @@
             <Chinese>套上固定板</Chinese>
             <Italian>Applica gessatura</Italian>
             <Czech>Aplikovat dlahu</Czech>
+            <Spanish>Aplicar férula</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Splint">
             <English>Applying Splint...</English>
@@ -2270,6 +2271,7 @@
             <Chinese>套用固定板中...</Chinese>
             <Italian>Applicazione gessatura</Italian>
             <Czech>Aplikuji dlahu...</Czech>
+            <Spanish>Aplicando férula...</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -2489,6 +2491,7 @@
             <Chinese>輕微</Chinese>
             <Italian>Minimo</Italian>
             <Czech>Minimální</Czech>
+            <Spanish>Mínimo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -2628,6 +2631,7 @@
             <Chinese>中度疼痛中</Chinese>
             <Italian>Con un dolore leggero</Italian>
             <Czech>V mírných bolestech</Czech>
+            <Spanish>Con dolor leve</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Pain">
             <English>In pain</English>
@@ -2655,6 +2659,7 @@
             <Chinese>嚴重疼痛中</Chinese>
             <Italian>Con un forte dolore</Italian>
             <Czech>Ve velkých bolestech</Czech>
+            <Spanish>Con dolor severo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -3703,6 +3708,7 @@
             <Italian>%1 ha applicato una gessatura</Italian>
             <Czech>%1 použil dlahu</Czech>
             <Japanese>%1 は添え木を当てた</Japanese>
+            <Spanish>%1 aplicada una férula</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>

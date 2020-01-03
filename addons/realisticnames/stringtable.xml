@@ -669,6 +669,7 @@
             <Portuguese>KamAZ MRL</Portuguese>
             <French>KamAZ LRM</French>
             <Czech>KamAZ MRL (raketové dělostřelectvo)</Czech>
+            <Spanish>KamAZ MRL</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -1287,6 +1288,7 @@
             <French>V40 Mini-Grenade</French>
             <Chinese>V40迷你手榴彈</Chinese>
             <Czech>V40 Mini-Granát</Czech>
+            <Spanish>Mini Granada V40</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1685,6 +1687,7 @@
             <Polish>Metis-M (Brązowy)</Polish>
             <Portuguese>Metis-M (Marrom)</Portuguese>
             <Czech>Metis-M (hnědý)</Czech>
+            <Spanish>Metis-M (Marrón)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
@@ -1698,6 +1701,7 @@
             <Polish>Metis-M (Zielony)</Polish>
             <Portuguese>Metis-M (Verde)</Portuguese>
             <Czech>Metis-M (zelený)</Czech>
+            <Spanish>Metis-M (Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>

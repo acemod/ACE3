@@ -1141,6 +1141,7 @@
             <Portuguese>Somente engenheiro avançado</Portuguese>
             <French>Ing. avancés uniquement</French>
             <Czech>Pouze pokročilý inženýr</Czech>
+            <Spanish>Solo ingeniero avanzado</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1471,6 +1472,7 @@
             <Portuguese>Engenheiro Avançado</Portuguese>
             <French>Ing. avancé</French>
             <Czech>Pokročilý Inženýr</Czech>
+            <Spanish>Ingeniero avanzado</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
@@ -1825,6 +1827,7 @@
             <Italian>Requisiti di riparazione vari</Italian>
             <Czech>Požadavky pro částečnou opravu</Czech>
             <Portuguese>Requerimentos para reparo miscelâneo</Portuguese>
+            <Spanish>Requisitos de objetos misceláneos de reparación</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
@@ -1833,6 +1836,7 @@
             <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
             <Czech>Předměty potřebné k provedení opravy konkrétní části vozidla nebo sundání/výměny pásů.</Czech>
             <Portuguese>Items necessários para reparar uma peça específica ou remover/substituir lagarta.</Portuguese>
+            <Spanish>Objetos necesarios para reparar un componente específico del vehículo o quitar/reemplazar las orugas.</Spanish>
             <Italian>Elementi necessari per riparare un componente specifico del veicolo o per rimuovere/sostituire i cingoli</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
@@ -1843,6 +1847,7 @@
             <Italian>Requisiti per la riparazione completa</Italian>
             <Czech>Požadavky pro plnou opravu</Czech>
             <Portuguese>Requerimentos de Reparo Completo</Portuguese>
+            <Spanish>Requisitos para reparación completa</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
@@ -1851,6 +1856,7 @@
             <French>Outils nécessaires pour effectuer une réparation complète des véhicules.</French>
             <Czech>Předměty potřebné k provedení plné opravy vozidla.</Czech>
             <Portuguese>Itens requeridos para realizar um reparo veicular completo.</Portuguese>
+            <Spanish>Objetos requeridos para una reparación completa</Spanish>
             <Italian>Elementi necessari per eseguire una riparazione completa del veicolo.</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
@@ -1880,6 +1886,7 @@
             <Portuguese>Esteiras Reservas</Portuguese>
             <French>Chenilles de rechange</French>
             <Czech>Náhradní pásy</Czech>
+            <Spanish>Orugas de repuesto</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedTracks_tooltip">
             <English>Number of spare tracks in cargo.</English>
@@ -1893,6 +1900,7 @@
             <Portuguese>Número de esteiras reservas na Carga</Portuguese>
             <French>Nombre de chenilles de rechange dans la cargaison.</French>
             <Czech>Počet náhradních pásů v nákladovém prostoru vozidla.</Czech>
+            <Spanish>Número de orugas de repuesto en la carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels">
             <English>Spare Wheels</English>
@@ -1906,6 +1914,7 @@
             <Portuguese>Pneus Reservas</Portuguese>
             <French>Roues de secours</French>
             <Czech>Náhradní kola</Czech>
+            <Spanish>Ruedas de repuesto</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_editorLoadedWheels_tooltip">
             <English>Number of spare wheels in cargo.</English>
@@ -1919,6 +1928,7 @@
             <Portuguese>Número de pneus reservas na Carga</Portuguese>
             <French>Nombre de roues de secours dans la cargaison.</French>
             <Czech>Počet náhradních kol v nákladovém prostoru vozidla.</Czech>
+            <Spanish>Número de ruedas de repuesto en la carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_name">
             <English>Auto shut off engine on repair</English>
@@ -1932,6 +1942,7 @@
             <Portuguese>Desligar motor automaticamente enquanto reparar</Portuguese>
             <French>Arrêt auto du moteur lors d'une réparation</French>
             <Czech>Automaticky vypnout motor při opravách</Czech>
+            <Spanish>Apagar el motor automáticamente al reparar</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
             <English>Automatically shut off the engine when doing repairs.</English>
@@ -1945,6 +1956,7 @@
             <Portuguese>Automaticamente desliga o motor quando iniciar o reparo do veículo.</Portuguese>
             <French>Coupe automatiquement le moteur lorsque des réparations sont effectuées.</French>
             <Czech>Automaticky vypne motor při zahájení oprav.</Czech>
+            <Spanish>Apagar el motor automáticamente al efectuar una reparación</Spanish>
         </Key>
     </Package>
 </Project>

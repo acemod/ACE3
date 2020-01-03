@@ -27,6 +27,7 @@
             <Chinese>從無意識中甦醒機率</Chinese>
             <Italian>Chance di rialzarsi</Italian>
             <Czech>Pravděpodobnost probuzení se z bezvědomí</Czech>
+            <Spanish>Posibilidad de recuperar la conciencia</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
@@ -38,6 +39,7 @@
             <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
             <Italian>La probabilità che un'unità con i segni vitali stabili si risvegli dall'incoscienza (controllata ogni 15 secondi).</Italian>
             <Czech>Pravděpodobnost, že se jednotka se stabilními životními známkami probudí z bezvědomí (zkoušeno každých 15 vteřin).</Czech>
+            <Spanish>La probabilidad de que una unidad estabilizada recupere la conciencia y se levante (se comprueba cada 15 segundos)</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Increases Wake Up Chance</English>
@@ -47,6 +49,7 @@
             <Italian>L'epinefrina aumenta la possibilità di rialzarsi</Italian>
             <Czech>Epinefrin zvyšuje šanci na probuzení</Czech>
             <Portuguese>Epinefrina Aumenta a chance de acordar</Portuguese>
+            <Spanish>Epinefrina, aumenta la posibilidad de despertar</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -56,6 +59,7 @@
             <Italian>Aumenta la frequenza dei controlli al risveglio spontaneo quando il paziente ha l'Epinefrina nel suo corpo</Italian>
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
+            <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -66,6 +70,7 @@
             <Chinese>跛腳</Chinese>
             <Italian>Zoppicare</Italian>
             <Czech>Kulhání</Czech>
+            <Spanish>Cojera</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -75,6 +80,7 @@
             <Italian>Controlla se le ferite aperte o bendate fanno zoppicare una persona.</Italian>
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
             <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
+            <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -85,6 +91,7 @@
             <Chinese>傷口裂開時跛腳</Chinese>
             <Italian>Zoppo per via delle ferite aperte</Italian>
             <Czech>Kulhat s otevřeným zraněním</Czech>
+            <Spanish>Cojera en heridas abiertas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -95,6 +102,7 @@
             <Chinese>使裂開或者包紮過的傷口讓人跛腳</Chinese>
             <Italian>Zoppicare su ferite aperte o bendate</Italian>
             <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
+            <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -105,6 +113,7 @@
             <Chinese>骨折</Chinese>
             <Italian>Fratture</Italian>
             <Czech>Zlomeniny</Czech>
+            <Spanish>Fracturas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
@@ -114,6 +123,7 @@
             <Italian>Controlla l'effetto dell'utilizzo di stecche per curare le fratture. Quando disabilitato, le lesioni non causano fratture.</Italian>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
+            <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -124,6 +134,7 @@
             <Chinese>固定板完全治癒骨折</Chinese>
             <Italian>Le gessature curano al massimo le fratture</Italian>
             <Czech>Dlahy kompletně léčí zlomeniny</Czech>
+            <Spanish>Férulas sanan completamente las fracturas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -134,6 +145,7 @@
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
             <Italian>Le gessature curano, ma non puoi correre</Italian>
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
+            <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -431,6 +443,7 @@
             <French>Ouvrir le couvercle</French>
             <Portuguese>Abrir Tampa</Portuguese>
             <Czech>Otevřít víko</Czech>
+            <Spanish>Abrir tapa</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -445,6 +458,7 @@
             <French>Fermer le couvercle</French>
             <Portuguese>Fechar Tampa</Portuguese>
             <Czech>Zavřít víko</Czech>
+            <Spanish>Cerrar tapa</Spanish>
         </Key>
     </Package>
 </Project>

@@ -14,6 +14,7 @@
             <Portuguese>Interação</Portuguese>
             <French>Interaction</French>
             <Czech>Interakce</Czech>
+            <Spanish>Interacción</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
@@ -857,6 +858,7 @@
             <Portuguese>Virar</Portuguese>
             <French>Tourner</French>
             <Czech>Otočit</Czech>
+            <Spanish>Voltear</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -967,6 +969,7 @@
             <Portuguese>Desativar avaliação negativa</Portuguese>
             <French>Désactiver la notation négative</French>
             <Czech>Vypnout negativní hodnocení</Czech>
+            <Spanish>Deshabilitar valoración negativa</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
@@ -981,6 +984,7 @@
             <Portuguese>Jogadores devem receber uma avaliação negativa? Quando ativado, os jogadores estão recebendo avaliações positivas, prevenindo que IA amigável atire quando destruir algum equipamento aliado ou matar membros de equipe.</Portuguese>
             <French>Définit si les joueurs peuvent recevoir une note négative. Si l'option est activée, les joueurs obtiennent des notes positives exclusivement.\nCela permet d'éviter que les unités IA ne fassent du tir ami lorsque des joueurs détruisent de l'équipement allié, ou tuent des membres de l'équipe.</French>
             <Czech>Měli by hráči obdržet negativní hodnocení? Pokud ne, hráči obdrží pouze pozitivní hodnocení, což zabrání přátelské AI střílet na hráče pokud hráči ničí přátelské vybavení nebo zabíjejí vlastní tým.</Czech>
+            <Spanish>¿Deben los jugadores recibir una calificación negativa? Cuando los jugadores habilitados solo reciben calificaciones positivas, lo que evita el fuego amistoso de la IA al destruir equipamiento amigo o matar a los miembros del equipo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -1116,6 +1120,7 @@
             <Portuguese>Retirar Corpo</Portuguese>
             <French>Retirer le corps</French>
             <Czech>Vytáhnout tělo</Czech>
+            <Spanish>Sacar cuerpo</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_SmashWindshield">
             <English>Smash windshield</English>
@@ -1129,6 +1134,7 @@
             <Italian>Sfonda il parabrezza</Italian>
             <Portuguese>Quebrar pára-brisa</Portuguese>
             <Chinese>踹開擋風玻璃</Chinese>
+            <Spanish>Romper parabrisas</Spanish>
         </Key>
     </Package>
 </Project>

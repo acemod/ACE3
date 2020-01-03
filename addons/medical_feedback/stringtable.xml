@@ -11,6 +11,7 @@
             <Chinese>視覺回饋</Chinese>
             <Italian>Commenti</Italian>
             <Czech>Zpětná vazba</Czech>
+            <Spanish>Reacción</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -36,6 +37,7 @@
             <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
             <Italian>Seleziona il tipo di effetto del dolore usato.</Italian>
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
+            <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -47,6 +49,7 @@
             <Chinese>白光閃爍</Chinese>
             <Italian>Bianco lampeggiante</Italian>
             <Czech>Blikání bílé barvy</Czech>
+            <Spanish>Destello blanco</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -58,6 +61,7 @@
             <Chinese>脈動模糊</Chinese>
             <Italian>Sfocatura pulsante</Italian>
             <Czech>Pulzující rozmazání</Czech>
+            <Spanish>Enborronamiento pulsante</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
             <English>Chromatic Aberration</English>
@@ -83,6 +87,7 @@
             <Italian>Solo elevato effetto di dolore</Italian>
             <Czech>Pouze efekt vysoké bolesti</Czech>
             <Portuguese>Apenas efeito de dor alta</Portuguese>
+            <Spanish>Solo efecto de dolor fuerte</Spanish>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
