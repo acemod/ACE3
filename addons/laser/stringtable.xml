@@ -13,6 +13,7 @@
             <Chinese>雷射散射模擬計算</Chinese>
             <Russian>Число симуляций рассеивания лазерного луча</Russian>
             <Portuguese>Contador da Simulação de Dispersão de Laser</Portuguese>
+            <Czech>Počet simulace disperze laseru</Czech>
         </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>
@@ -34,7 +35,7 @@
             <English>Laser - Cycle Code Up</English>
             <German>Lasercode +</German>
             <Polish>Laser - Następny kod</Polish>
-            <French>Laser - Code Sup</French>
+            <French>Code laser +</French>
             <Russian>Лазер - увеличить частоту</Russian>
             <Portuguese>Laser - Alternar Código para Cima</Portuguese>
             <Hungarian>Lézer - kódciklus növelése</Hungarian>
@@ -50,7 +51,7 @@
             <English>Laser - Cycle Code Down</English>
             <German>Lasercode -</German>
             <Polish>Laser - Poprzedni kod</Polish>
-            <French>Laser - Code Inf</French>
+            <French>Code laser -</French>
             <Russian>Лазер - уменьшить частоту</Russian>
             <Portuguese>Laser - Alternar Código para Baixo</Portuguese>
             <Hungarian>Lézer - kódciklus csökkentése</Hungarian>

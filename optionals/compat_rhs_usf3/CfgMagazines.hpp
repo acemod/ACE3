@@ -50,6 +50,11 @@ class cfgMagazines {
         pylonWeapon = "ace_hellfire_launcher_N";
         ammo = "ACE_Hellfire_AGM114N";
     };
+    class GVAR(pylon_mag_2rnd_hellfire_l): rhs_mag_AGM114K_2 {
+        displayName = "2x AGM-114L [ACE]";
+        pylonWeapon = "ace_hellfire_launcher_L";
+        ammo = "ACE_Hellfire_AGM114L";
+    };
 
     class rhsusf_m112_mag: CA_Magazine {
         ace_explosives_DelayTime = 1;

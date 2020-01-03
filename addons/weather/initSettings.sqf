@@ -32,7 +32,7 @@ private _category = [format ["ACE %1", LLSTRING(Module_DisplayName)]];
 
 [
     QGVAR(showCheckAirTemperature), "CHECKBOX",
-    [LSTRING(showCheckAirTemperature_DisplayName)],
+    [LSTRING(showCheckAirTemperature_DisplayName), LELSTRING(common,showActionInSelfInteraction)],
     _category,
     true, // default value
     false // isGlobal

@@ -14,6 +14,7 @@
             <Chinese>兵籍牌</Chinese>
             <Chinesesimp>兵籍牌</Chinesesimp>
             <Portuguese>Dog Tag</Portuguese>
+            <Spanish>Placa de identidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
@@ -28,6 +29,7 @@
             <Chinese>檢查兵籍牌</Chinese>
             <Chinesesimp>检查兵籍牌</Chinesesimp>
             <Portuguese>Verificar Dog Tag</Portuguese>
+            <Spanish>Verificar placa de identidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
@@ -42,6 +44,7 @@
             <Chinese>檢查</Chinese>
             <Chinesesimp>检查</Chinesesimp>
             <Portuguese>Verificar</Portuguese>
+            <Spanish>Verificar</Spanish>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
@@ -56,6 +59,7 @@
             <Chinese>拿取</Chinese>
             <Chinesesimp>拿取</Chinesesimp>
             <Portuguese>Pegar</Portuguese>
+            <Spanish>Tomar</Spanish>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dogtag taken from %1...</English>
@@ -70,6 +74,7 @@
             <Chinese>從%1身上拿取兵籍牌...</Chinese>
             <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
             <Portuguese>Dogtag pego de %1...</Portuguese>
+            <Spanish>Tomado placa de identidad de %1...</Spanish>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the dogtag...</English>
@@ -84,6 +89,7 @@
             <Chinese>已經有人把他的兵籍牌拿走了...</Chinese>
             <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
             <Portuguese>Alguém já pegou essa dogtag...</Portuguese>
+            <Spanish>Alguien más ha tomado la placa de identidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Dogtags_IGUI_Description">
             <English>Onscreen display for checking dogtags</English>
@@ -94,7 +100,9 @@
             <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
             <Russian>Экран для проверки жетонов</Russian>
             <Portuguese>Tela de Exibição para verificar dogtags</Portuguese>
+            <Spanish>Visualización en pantalla para</Spanish>
             <French>Affichage à l'écran pour le contrôle des plaques.</French>
+            <Czech>Okno na obrazovce pro kontrolu známek</Czech>
         </Key>
     </Package>
 </Project>

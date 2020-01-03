@@ -13,6 +13,7 @@
             <Russian>NLAW наведение на цель (Удерживать)</Russian>
             <Portuguese>NLAW Rastrear Alvo (Segurar)</Portuguese>
             <French>NLAW suivre la cible (maintenir)</French>
+            <Czech>NLAW sledování cíle (držet)</Czech>
         </Key>
         <Key ID="STR_ACE_NLAW_directAttack">
             <English>Direct Attack</English>
@@ -26,6 +27,7 @@
             <Russian>Прямая атака</Russian>
             <Portuguese>Ataque Direto</Portuguese>
             <French>Attaque directe</French>
+            <Czech>Přímý útok</Czech>
         </Key>
         <Key ID="STR_ACE_NLAW_overflyTopAttack">
             <English>Overfly Top Attack</English>
@@ -39,6 +41,7 @@
             <Russian>Атака сверху</Russian>
             <Portuguese>Ataque por cima</Portuguese>
             <French>Attaque par le haut</French>
+            <Czech>Útok zvrchu při přeletu</Czech>
         </Key>
     </Package>
 </Project>

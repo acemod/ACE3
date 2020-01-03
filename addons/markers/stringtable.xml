@@ -29,6 +29,7 @@
             <Russian>Маркеры</Russian>
             <Portuguese>Marcadores</Portuguese>
             <French>Marqueurs</French>
+            <Czech>Značky</Czech>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
@@ -42,6 +43,7 @@
             <Russian>Разрешить перемещение маркеров для</Russian>
             <Portuguese>Permitir que movam marcadores</Portuguese>
             <French>Permettre le déplacement des marqueurs pour</French>
+            <Czech>Povolit pohyb se značkami pro</Czech>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
@@ -54,7 +56,8 @@
             <Polish>Ogranicz którzy gracze mogą poruszać znacznikami podczas trzymania przycisku Alt.</Polish>
             <Russian>Устанавливает ограничение на перемещения маркеров игроками при помощи клавиши Alt</Russian>
             <Portuguese>Restringe quais jogadores podem mover os marcadores do mapa enquanto seguram a tecla ALT.</Portuguese>
-            <French>Définit quels joueurs peuvent déplacer les marqueurs en maintenant la touche Alt enfoncée.</French>
+            <French>Définit quels joueurs peuvent déplacer des marqueurs en maintenant la touche Alt enfoncée.</French>
+            <Czech>Omezuje kdo může pohybovat se značkami při podržení klávesy Alt.</Czech>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
@@ -68,6 +71,7 @@
             <Russian>Никого</Russian>
             <Portuguese>Ninguém</Portuguese>
             <French>Personne</French>
+            <Czech>Nikdo</Czech>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
@@ -81,6 +85,7 @@
             <Russian>Всех игроков</Russian>
             <Portuguese>Todos jogadores</Portuguese>
             <French>Tous les joueurs</French>
+            <Czech>Všichni hráči</Czech>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
@@ -94,6 +99,7 @@
             <Russian>Админов</Russian>
             <Portuguese>Admins</Portuguese>
             <French>Admins</French>
+            <Czech>Administrátoři</Czech>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
@@ -107,6 +113,7 @@
             <Russian>Лидеров групп</Russian>
             <Portuguese>Líderes de grupo</Portuguese>
             <French>Chefs de groupe</French>
+            <Czech>Velitelé jednotek</Czech>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
@@ -120,6 +127,7 @@
             <Russian>Лидеров групп и Админов</Russian>
             <Portuguese>Líderes de grupo e Admins</Portuguese>
             <French>Chefs de groupe et Admins</French>
+            <Czech>Velitelé jednotek a Administrátoři</Czech>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
             <English>Creator</English>
@@ -130,6 +138,7 @@
             <Portuguese>Criador</Portuguese>
             <Chinese>放置者</Chinese>
             <French>Créateur</French>
+            <Czech>Tvůrce</Czech>
         </Key>
     </Package>
 </Project>

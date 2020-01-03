@@ -251,9 +251,6 @@ class CfgWeapons {
     #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
     // Fast Helmets
     class rhsusf_opscore_01;
-    class rhsusf_ihadss: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR
-    };
     class rhsusf_opscore_ut_pelt_nsw: rhsusf_opscore_01 {
         HEARING_PROTECTION_PELTOR
     };
@@ -413,13 +410,66 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR
     };
 
-
     class rhsusf_hgu56p: rhsusf_opscore_01 {
+        HEARING_PROTECTION_VICCREW
+    };
+    class rhsusf_hgu56p_visor: rhsusf_hgu56p {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_black;
+    class rhsusf_hgu56p_visor_black: rhsusf_hgu56p_black {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_green;
+    class rhsusf_hgu56p_visor_green: rhsusf_hgu56p_green {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask: rhsusf_hgu56p {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask_black: rhsusf_hgu56p_black {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask_Empire_black: rhsusf_hgu56p_black {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask_green: rhsusf_hgu56p_green {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_mask_smiley;
+    class rhsusf_hgu56p_visor_mask_smiley: rhsusf_hgu56p_mask_smiley {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_pink;
+    class rhsusf_hgu56p_visor_mask_pink: rhsusf_hgu56p_pink {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_pink: rhsusf_hgu56p_pink {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_saf;
+    class rhsusf_hgu56p_visor_saf: rhsusf_hgu56p_saf {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_usa;
+    class rhsusf_hgu56p_visor_usa: rhsusf_hgu56p_usa {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_white;
+    class rhsusf_hgu56p_visor_white: rhsusf_hgu56p_white {
+        ACE_Protection = 1;
+    };
+    class rhsusf_hgu56p_visor_mask_black_skull;
+    class rhsusf_hgu56p_mask_black_skull: rhsusf_hgu56p_visor_mask_black_skull {
+        ACE_Protection = 0;
+    };
+    class rhsusf_ihadss: rhsusf_opscore_01 {
         HEARING_PROTECTION_VICCREW
     };
 
     class H_HelmetB;
     class RHS_jetpilot_usaf: H_HelmetB {
+        ACE_Protection = 1;
         HEARING_PROTECTION_VICCREW
     };
 

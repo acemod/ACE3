@@ -12,6 +12,9 @@
             <Polish>Ogólny</Polish>
             <Russian>Общий</Russian>
             <Portuguese>Comum</Portuguese>
+            <Spanish>Común</Spanish>
+            <Czech>Obecné</Czech>
+            <French>Commun</French>
         </Key>
         <Key ID="STR_ACE_Common_ACETeam">
             <English>ACE-Team</English>
@@ -455,7 +458,15 @@
             <Polish>Sprawdź akcję PBO</Polish>
             <Russian>Действие при проверке PBO</Russian>
             <Portuguese>Ação de Checar PBO</Portuguese>
-            <French>Vérifier les PBOs</French>
+            <Spanish>Comprobar PBO</Spanish>
+            <French>Action à la vérification des PBOs</French>
+            <Czech>Zkontrolovat PBO</Czech>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsActionDesc">
+            <English>Defines the action to be taken if a player does not have the correct PBOs.</English>
+            <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
+            <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
+            <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -468,7 +479,15 @@
             <Polish>Sprawdź wszystkie PBO</Polish>
             <Russian>Проверять все PBO</Russian>
             <Portuguese>Checar Todos os PBOs</Portuguese>
+            <Spanish>Comprobar todos los PBO</Spanish>
             <French>Vérifier tous les PBOs</French>
+            <Czech>Zkontrolovat všechny PBO</Czech>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
+            <English>Check all addons, not only those of ACE.</English>
+            <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
+            <Chinese>檢查全部的插件而非只有ACE。</Chinese>
+            <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -481,7 +500,15 @@
             <Polish>Sprawdź białą listę PBO</Polish>
             <Russian>Белый список для проверки PBO</Russian>
             <Portuguese>Lista Branca de PBO</Portuguese>
+            <Spanish>Comprobar lista blanca de PBOs</Spanish>
             <French>Vérifier les PBOs en liste blanche</French>
+            <Czech>Zkontrolovat PBO proti whitelistu</Czech>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBOsWhitelistDesc">
+            <English>Define a list of regardless allowed addons.</English>
+            <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
+            <Chinese>定義哪些插件是允許使用的。</Chinese>
+            <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -622,7 +649,8 @@
             <Chinesesimp>保持武器雷射/手电筒的状态</Chinesesimp>
             <Polish>Trwały znacznik laserowy/latarka</Polish>
             <Portuguese>Luz da lanterna/laser da arma persistente</Portuguese>
-            <French>Rémanence pointeur laser / lampe torche</French>
+            <French>Rémanence du pointeur laser/de la lampe torche</French>
+            <Czech>Perzistentní laser/baterka na zbrani</Czech>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -635,7 +663,8 @@
             <Chinesesimp>保存武器雷射/手电筒的开关状态，使玩家切换武器或进出载具时能保持之前的的状态。</Chinesesimp>
             <Polish>Aktywuj znacznik laserowy/latarkę po zmianie broni lub wejściu/wyjściu z pojazdu, jeśli był on poprzednio włączony.</Polish>
             <Portuguese>Ativa a luz da arma ao trocar de arma, entrar/sair de um veículo. Caso tenha sido acesa anteriormente.</Portuguese>
-            <French>Si le pointeur laser / la lampe torche est allumé(e), cette option permet de le / la réallumer automatiquement après un changement d'arme, ou après une entrée / sortie d'un véhicule.</French>
+            <French>Si le pointeur laser/la lampe torche est allumé(e), cette option permet de le/la réallumer automatiquement après un changement d'arme, ou après une entrée/sortie d'un véhicule.</French>
+            <Czech>Pokud jsou zaplé, zapíná laser/baterku po přepnutí zbraně nebo po nástupu/výstupu z vozidla.</Czech>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -676,7 +705,7 @@
             <German>Überprüfe PBOs</German>
             <Czech>Zkontrolovat soubory PBO</Czech>
             <Portuguese>Verificar PBOs</Portuguese>
-            <French>Vérifier les PBOs</French>
+            <French>/!\ Module obsolète /!\ - Vérifier les PBOs</French>
             <Hungarian>PBO-k ellenőrzése</Hungarian>
             <Russian>Проверка аддонов</Russian>
             <Italian>Controlla PBO</Italian>
@@ -693,7 +722,7 @@
             <Czech>Zjistit addon který je v souladu se serverem</Czech>
             <Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
             <Russian>Выполняет проверку версий аддонов ACE у подключаемых игроков</Russian>
-            <French>Vérifie l'intégrité des addons avec le serveur, et effectue l'action sélectionnée si un addon est manquant.</French>
+            <French>/!\ Module obsolète /!\ - Vérifie l'intégrité des addons avec le serveur, et effectue l'action sélectionnée si un addon est manquant.</French>
             <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
             <Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
             <Korean>서버 에드온의 무결성을 검사하고 사라진 에드온이 있을경우 행동을 선택합니다.</Korean>
@@ -707,7 +736,7 @@
             <German>Aktion</German>
             <Czech>Akce</Czech>
             <Portuguese>Ação</Portuguese>
-            <French>Action</French>
+            <French>/!\ Module obsolète /!\ - Action</French>
             <Hungarian>Cselekvés</Hungarian>
             <Russian>Действие</Russian>
             <Italian>Azione</Italian>
@@ -723,7 +752,7 @@
             <German>Was soll mit Leuten geschehen, die nicht die richtigen PBO-Dateien geladen haben?</German>
             <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
             <Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
-            <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
+            <French>/!\ Module obsolète /!\ - Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
@@ -787,7 +816,7 @@
             <German>Alle Addons überprüfen</German>
             <Czech>Zkontrolovat všechny addony</Czech>
             <Portuguese>Verificar todos addons</Portuguese>
-            <French>Vérifier tous les addons</French>
+            <French>/!\ Module obsolète /!\ - Vérifier tous les addons</French>
             <Hungarian>Összes bővítmény ellenőrzése</Hungarian>
             <Russian>Проверять все аддоны</Russian>
             <Italian>Controlla tutti gli addon</Italian>
@@ -803,7 +832,7 @@
             <German>Alle Addons anstatt nur ACE überprüfen?</German>
             <Czech>Zkontrolovat všechny addony namísto jen těch od ACE?</Czech>
             <Portuguese>Verificar todos addons invés de só os do ACE?</Portuguese>
-            <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
+            <French>/!\ Module obsolète /!\ - Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
             <Russian>Проверять все аддоны, а не только ACE?</Russian>
             <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
@@ -819,7 +848,7 @@
             <German>Whitelist</German>
             <Czech>Seznam povolených</Czech>
             <Portuguese>Lista branca</Portuguese>
-            <French>Liste blanche</French>
+            <French>/!\ Module obsolète /!\ - Liste blanche</French>
             <Hungarian>Fehérlista</Hungarian>
             <Russian>Вайтлист доп. аддонов</Russian>
             <Italian>Lista Bianca</Italian>
@@ -835,7 +864,7 @@
             <German>Welche Addons werden dennoch erlaubt?</German>
             <Czech>Jaké addony jsou povoleny?</Czech>
             <Portuguese>Quais addons são permitidos de qualquer maneira?</Portuguese>
-            <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
+            <French>/!\ Module obsolète /!\ - Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
             <Italian>Quali addon sono permessi in ogni caso?</Italian>
@@ -883,7 +912,7 @@
             <Portuguese>Ativa dispositivo de mão</Portuguese>
             <Polish>Przełącz urządzenie podręczne</Polish>
             <Czech>Přepnout ruční zařízení</Czech>
-            <French>Allumer l'ordinateur de poche</French>
+            <French>Allumer l'appareil portatif</French>
             <Hungarian>Kézi eszköz kapcsolása</Hungarian>
             <Russian>Включить портативное устройство</Russian>
             <Italian>Apri dispositivo palmare</Italian>
@@ -899,7 +928,7 @@
             <Portuguese>Fecha dispositivo de mão</Portuguese>
             <Polish>Zamknij urządzenie podręczne</Polish>
             <Czech>Zavřít ruční zařízení</Czech>
-            <French>Fermer l'ordinateur de poche</French>
+            <French>Éteindre l'appareil portatif</French>
             <Hungarian>Kézi eszköz bezárása</Hungarian>
             <Russian>Закрыть портативное устройство</Russian>
             <Italian>Chiudi dispositivo palmare</Italian>
@@ -915,7 +944,7 @@
             <Portuguese>Troca dispositivos de mão</Portuguese>
             <Polish>Następne urządzenie podręczne</Polish>
             <Czech>Procházet ruční zařízení</Czech>
-            <French>Changer (cycle) d'ordinateur de poche</French>
+            <French>Changer d'appareil portatif</French>
             <Hungarian>Kézi eszköz váltása</Hungarian>
             <Russian>Следующее портативное устройство</Russian>
             <Italian>Cicla tra dispositivi palmari</Italian>
@@ -960,8 +989,10 @@
             <Japanese>常に</Japanese>
             <Russian>Всегда</Russian>
             <Portuguese>Sempre</Portuguese>
+            <Spanish>Siempre</Spanish>
             <French>Toujours</French>
             <Chinese>一直</Chinese>
+            <Czech>Vždy</Czech>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1046,8 +1077,10 @@
             <German>Bestätigen</German>
             <Russian>Подтвердить</Russian>
             <Portuguese>Confirmar</Portuguese>
+            <Spanish>Confirmar</Spanish>
             <French>Confirmer</French>
             <Chinese>確認</Chinese>
+            <Czech>Potvrdit</Czech>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1055,8 +1088,10 @@
             <German>Nie</German>
             <Russian>Никогда</Russian>
             <Portuguese>Nunca</Portuguese>
+            <Spanish>Nunca</Spanish>
             <French>Jamais</French>
             <Chinese>從不</Chinese>
+            <Czech>Nikdy</Czech>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1157,7 +1192,7 @@
             <Czech>ACE Nastavení optiky</Czech>
             <Spanish>ACE Ajuste de miras</Spanish>
             <Italian>ACE Regolazione Ottiche</Italian>
-            <French>ACE Réglage de la lunette </French>
+            <French>ACE Réglage des lunettes</French>
             <Japanese>ACE スコープ調節</Japanese>
             <Korean>ACE 조준경 조정</Korean>
             <Chinese>ACE 瞄準鏡調節按鍵</Chinese>
@@ -1213,7 +1248,7 @@
             <English>Weight:</English>
             <German>Gewicht:</German>
             <Spanish>Peso:</Spanish>
-            <French>Poids:</French>
+            <French>Poids :</French>
             <Polish>Waga:</Polish>
             <Czech>Váha:</Czech>
             <Italian>Peso:</Italian>
@@ -1237,6 +1272,7 @@
             <Russian>Разрешить приглушение музыки</Russian>
             <Portuguese>Permite diminuir volume da música</Portuguese>
             <French>Permission d'abaisser la musique</French>
+            <Czech>Povolit snížení hlasitosti hudby</Czech>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1250,6 +1286,7 @@
             <Russian>Позволить скриптам ACE приглушать музыку</Russian>
             <Portuguese>Permite que Scripts do ACE diminuam o volume da música.</Portuguese>
             <French>Autorise les scripts ACE à baisser le volume de la musique.</French>
+            <Czech>Povolit ACE skriptům snížit hlasitost hudby</Czech>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1262,6 +1299,7 @@
             <Russian>Флаг (ACE - Черный)</Russian>
             <Portuguese>Bandeira (ACE - Preto)</Portuguese>
             <French>Drapeau (ACE - Noir)</French>
+            <Czech>Vlajka (ACE - Černá)</Czech>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -1274,6 +1312,7 @@
             <Russian>Флаг (ACE - Белый)</Russian>
             <Portuguese>Bandeira (ACE - Branco)</Portuguese>
             <French>Drapeau (ACE - Blanc)</French>
+            <Czech>Vlajka (ACE - Bílá)</Czech>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -1306,6 +1345,12 @@
             <Korean>플레이어 및 인공지능</Korean>
             <Chinesesimp>玩家与AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Common_showActionInSelfInteraction">
+            <English>Show the action in the self-interaction menu</English>
+            <French>Affiche l'action dans le menu d'interaction personnel.</French>
+            <Chinese>在自我互動選單內顯示動作</Chinese>
+            <Portuguese>Mostra a ação no menu de auto-interação</Portuguese>
         </Key>
     </Package>
 </Project>
