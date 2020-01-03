@@ -37,10 +37,13 @@ private _hitPointsAddedAmount = [];
 private _processedSelections = [];
 private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 
+private _vehCfg = configFile >> "CfgVehicles" >> _type;
 // Custom position can be defined via config for associated hitpoint
-private _hitpointPositions = getArray (configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointPositions));
+private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
 // Associated hitpoints can be grouped via config to produce a single repair action
-private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR(hitpointGroups));
+private _hitpointGroups = getArray (_vehCfg >> QGVAR(hitpointGroups));
+// Get turret paths
+private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehicle, "commander", true])) apply {_x # 3};
 
 {
     private _selection = _x;
@@ -71,8 +74,6 @@ private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR
 
         _processedSelections pushBack _selection;
     } else {
-        // Empty selections don't exist
-        if (_selection isEqualTo "") exitWith { TRACE_3("Skipping Empty Sel",_hitpoint,_forEachIndex,_selection); };
         // Empty hitpoints don't contain enough information
         if (_hitpoint isEqualTo "") exitWith { TRACE_3("Skipping Empty Hit",_hitpoint,_forEachIndex,_selection); };
         // Ignore glass hitpoints
@@ -83,10 +84,30 @@ private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR
         // ToDo: see how community utilizes new armor system, could also check getText (_hitpointConfig >> "simulation")
         if (((_hitpoint select [0,7]) == "hitera_") || {(_hitpoint select [0,8]) == "hitslat_"} || {(_hitpoint select [0,4]) == "era_"}) exitWith { TRACE_3("Skipping ERA/SLAT",_hitpoint,_forEachIndex,_selection); };
 
+        // Some hitpoints do not have a selection but do have an armorComponent value (seems to mainly be RHS)
+        // Ref https://community.bistudio.com/wiki/Arma_3_Damage_Enhancement
+        // this code won't support identically named hitpoints (e.g. commander turret: Duplicate HitPoint name 'HitTurret')
+        private _armorComponent = "";
+        if (_selection == "") then {
+            {
+                private _turretHitpointCfg = ([_vehCfg, _x] call CBA_fnc_getTurret) >> "HitPoints";
+                private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
+                if (!(_hitpointsCfg isEqualTo [])) exitWith {
+                    TRACE_2("turret hitpoint configFound",_hitpoint,_x);
+                     // only do turret hitpoints for now or we get some weird stuff
+                    if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1}) then {
+                        _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
+                    };
+                };
+            } forEach _turretPaths;
+            if (_armorComponent != "") then { INFO_3("%1: %2 no selection: using armorComponent %3",_type,_hitpoint,_armorComponent); };
+        };
+        if ((_selection == "") && {_armorComponent == ""}) exitWith { TRACE_3("Skipping no selection OR armor component",_hitpoint,_forEachIndex,_selection); };
+
 
         //Depends hitpoints shouldn't be modified directly (will be normalized)
         // Biki: Clearing 'depends' in case of inheritance cannot be an empty string (rpt warnings), but rather a "0" value.
-        if (!((getText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"])) exitWith {
+        if (!((getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"])) exitWith {
             TRACE_3("Skip Depends",_hitpoint,_forEachIndex,_selection);
         };
 
@@ -115,6 +136,17 @@ private _hitpointGroups = getArray(configFile >> "CfgVehicles" >> _type >> QGVAR
                 ERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);
             };
         } forEach _hitpointPositions;
+
+        // if no selection then use the FireLOD to position the action
+        if ((_selection == "") && {_position isEqualTo {_target selectionPosition ['', 'HitPoints'];}}) then {
+            if ((_vehicle selectionPosition [_armorComponent, "FireGeometry"]) isEqualTo [0,0,0]) then {
+                WARNING_3("[%1: %2: %3] armorComponent does not exist?",_type,_hitpoint,_armorComponent);
+                _position = [0,0,0]; // just stick it on mainActions
+            } else {
+                _position = compile format ["_target selectionPosition ['%1', 'FireGeometry'];", _armorComponent];
+            };
+            TRACE_1("using armorComponent position",_position);
+        };
 
         // Prepare the repair action
         private _name = format ["Repair_%1_%2", _forEachIndex, _selection];

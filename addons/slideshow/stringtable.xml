@@ -20,7 +20,7 @@
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
             <German>Dieses Modul erlaubt eine Diavorführung auf unterschiedlichen Objekten. Ein Modul, eine Bilderliste. Nur Objekte mit "hiddenSelection 0" werden unterstützt.</German>
-            <French>Ce module permet d'afficher des diaporamas sur différents objets. Un module par liste d'images. Seuls les objets avec le paramètre `HiddenSelection 0` sont supportés</French>
+            <French>Ce module permet d'afficher des diaporamas sur différents objets. Un module par liste d'images.\nSeuls les objets avec le paramètre `HiddenSelection 0` sont supportés.</French>
             <Polish>Ten moduł pozwala skonfigurować pokaz slajdów na różnych obiektach. Jeden moduł na jedną liste slajdów. Tylko obiekty z hiddenSelection 0 są wspierane.</Polish>
             <Hungarian>Ez a modul lehetővé teszi a különböző objektumokon való vetítést. Egy modul/képlista. Csak "hiddenSelection 0"-t tartalmazó objektumok felelnek meg.</Hungarian>
             <Portuguese>Este módulo permite que você monte apresentações de slides em diferentes objetos. Um módulo por lista de imagem. Somente objetos com hiddenSelection 0 são suportados.</Portuguese>
@@ -74,7 +74,7 @@
             <Portuguese>Controles</Portuguese>
             <Russian>Контроллеры</Russian>
             <Spanish>Controladores</Spanish>
-            <Czech>Kontrolor</Czech>
+            <Czech>Kontrolní objekty</Czech>
             <Italian>Controllori</Italian>
             <Japanese>コントローラ</Japanese>
             <Korean>조종 장치</Korean>
@@ -95,6 +95,7 @@
             <Korean>조종 장치 물체 명칭, 다수의 경우 쉼표로 구분됩니다.</Korean>
             <Chinese>指定是控制器的物件名稱，如有多個物件，請以逗號作區隔</Chinese>
             <Chinesesimp>指定是控制器的物件名称，如有多个物件，请以逗号作区隔</Chinesesimp>
+            <Czech>Jména kontrolních objektů, v případě více oddělená čárkami.</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
@@ -115,7 +116,7 @@
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
             <German>Eine Liste von Bildern, die bei der Vorführung verwendet werden. (Durch Kommata getrennt, mit vollem Pfad angegeben (z.B Bilder\bild.paa)).</German>
-            <French>Liste des images qui seront utilisées dans le diaporama, séparées par des virgules, avec le chemin complet correctement formaté (p. ex. images\image.paa)</French>
+            <French>Liste des images qui seront utilisées dans le diaporama, séparées par des virgules, avec le chemin complet correctement formaté (p. ex. images\image.paa).</French>
             <Polish>Lista obrazów, które zostaną użyte do pokazu slajdów, oddzielone przecinkiem, z poprawnym pełnym formatem ścieżki do obrazka (np. slajdy\obrazek.paa).</Polish>
             <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
             <Portuguese>Lista das imagens que serão utilizadas na apresentação de slides, separadas por vírgula, com o caminho completo corretamente formatado (ex: imagens\imagem.paa).</Portuguese>
@@ -158,6 +159,7 @@
             <Korean>상호작용 메세지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
             <Chinese>設定互動鍵切換圖片時的按鈕名稱，多個按鈕請以逗號做區隔，有多少圖片就輸入多少個按鈕，以利切換圖片</Chinese>
             <Chinesesimp>设定互动键切换图片时的按钮名称，多个按钮请以逗号做区隔，有多少图片就输入多少个按钮，以利切换图片</Chinesesimp>
+            <Czech>Seznam jmen které budou použity pro interakce, oddělené čárkami, v pořadí obrázků.</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
             <English>Set Name</English>
@@ -171,6 +173,7 @@
             <Korean>이름 설정</Korean>
             <Russian>Установить имя</Russian>
             <Portuguese>Definir Nome</Portuguese>
+            <Czech>Jméno setu</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
@@ -184,6 +187,7 @@
             <Korean>상위 상호작용 이름 (여러개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
             <Russian>Имя, которое будет использоваться для основных взаимодействий (для различения нескольких слайдов). По умолчанию: «Slides»</Russian>
             <Portuguese>Nome que será usado para a entrada principal de interação (para separar vários slideshows). Padrão: "Slides"</Portuguese>
+            <Czech>Jméno, které bude použito pro hlavní interakci (pro rozlišení více prezentací). Standard: Snímky</Czech>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
@@ -203,7 +207,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
-            <French>Temps d'affichage de chaque diapositive. Valeur par défaut : 0 (transition automatique désactivée)</French>
+            <French>Temps d'affichage de chaque diapositive. Valeur par défaut : 0 (transition automatique désactivée).</French>
             <Polish>Czas trwania poszczególnych slajdów. Domyślnie: 0 (Automatyczne przejścia wyłączone)</Polish>
             <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
             <Portuguese>Duração de cada slide. Padrão: 0 (Transição automática desabilitada)</Portuguese>

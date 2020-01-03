@@ -71,8 +71,8 @@
             <Spanish>Activa la balística avanzada</Spanish>
             <German>Aktiviert die erweiterte Ballistik</German>
             <Czech>Aktivuje pokročilou balistiku</Czech>
-            <Portuguese>Ativa balística avançada</Portuguese>
-            <French>Activer la balistique avancée</French>
+            <Portuguese>Ativa a balística avançada</Portuguese>
+            <French>Active la balistique avancée.</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
             <Italian>Abilita Balistica Avanzata</Italian>
@@ -92,7 +92,7 @@
             <French>Activer la variation de vitesse initiale</French>
             <Polish>Aktywuj wariację prędkości wylotowej</Polish>
             <Russian>Вкл. вариацию начальной скорости</Russian>
-            <Portuguese>Ativar Variação de Velocidade no Freio de boca (muzzle)</Portuguese>
+            <Portuguese>Ativar Variação de Velocidade no Freio de boca </Portuguese>
             <Czech>Povoluje variantu rychlosti ústí</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
@@ -180,7 +180,7 @@
             <German>Geschossspureffekt aktivieren</German>
             <Czech>Povolit efekt trasírek</Czech>
             <Portuguese>Ativa efeito traçante de projétil</Portuguese>
-            <French>Activer l'effet balle traçante</French>
+            <French>Activer l'effet de balle traçante</French>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
@@ -196,7 +196,7 @@
             <German>Aktiviere Geschossspureffekt für hohe Kaliber (bei Benutzung von Optiken mit starker Vergrößerung)</German>
             <Czech>Aktivuje efekt trasírek z vysokokaliberních zbraní (viditelné pouze skrze výkonnou optiku)</Czech>
             <Portuguese>Ativa o efeito traçante de projétil para projéteis de alto calibre (somente visível quando observado por miras telescópicas)</Portuguese>
-            <French>Active un effet de balle traçante pour les munitions de gros calibre (seulement visible en utilisant une optique à fort grossissement)</French>
+            <French>Active un effet de balle traçante pour les munitions de gros calibre (seulement visible en utilisant une optique à fort grossissement).</French>
             <Hungarian>Engedélyezi a nagy kaliberű lövedékek nyomának vizuális követését (csak nagy teljesítményű optikán keresztül látható)</Hungarian>
             <Russian>Включает эффект следов пуль для больших калибров (видны только через мощную оптику)</Russian>
             <Italian>Abilita effetto dei proiettili traccianti di alto calibro (visibile solo attraverso ottiche ad alto potenziale)</Italian>
@@ -243,7 +243,7 @@
             <Spanish>Radio de simulación</Spanish>
             <German>Simulationsradius</German>
             <Czech>Rozsah simulace</Czech>
-            <Portuguese>Raio de simulação</Portuguese>
+            <Portuguese>Raio da simulação</Portuguese>
             <French>Rayon de simulation</French>
             <Hungarian>Szimuláció hatóköre</Hungarian>
             <Russian>Радиус симуляции</Russian>
@@ -274,7 +274,7 @@
             <German>Dieses Modul aktiviert die Erweiterte Ballisitk. Die Flugbahn eines Geschosses wird nun von Einflüssen wie z.B Temperatur, Luftdruck, Luftfeuchtigkeit, Schwerkraft, Geschossart sowie der Waffe aus dem es gefeuert wird, beeinflusst.</German>
             <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
             <Czech>Tento modul umožňuje aktivovat pokročilou balistiku, která vypočítává trajektorii kulky a bere do úvahy věci jako je teplota vzduchu, atmosférický tlak, vlhkost vzduchu, gravitaci, typ munice a zbraň, ze které je náboj vystřelen. To vše přispívá k velmi přesné balistice.</Czech>
-            <Portuguese>Este módulo permite que você ative cálculos de balística avançada, fazendo a trajetória do projétil levar em consideração coisas como temperatura do ar, pressão atmosférica, umidade, força de Coriolis, a gravidade, o modelo da arma no qual o disparo é realizado e o tipo de munição. Tudo isso acrescenta-se a um balística muito precisa.</Portuguese>
+            <Portuguese>Este módulo permite que você ative cálculos de balística avançada, fazendo a trajetória do projétil levar em consideração coisas como temperatura do ar, pressão atmosférica, umidade, a gravidade, a arma no qual o disparo é realizado e o tipo de munição.</Portuguese>
             <French>Ce module permet une simulation balistique avancée ; c'est à dire que la trajectoire des projectiles est influencée par des facteurs tels que la température de l'air, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme depuis laquelle elle est tirée.</French>
             <Hungarian>Ez a modul engedélyezi a fejlett ballisztikai szimulációt - a lövedékek röppályáját befolyásolni fogja a levegő hőmérséklete, légnyomás, páratartalom, gravitáció, a lövedék fajtája, valamint a fegyver, amiből kilőtték a lövedéket.</Hungarian>
             <Russian>Этот модуль включает симуляцию продвинутой баллистики - при этом на траекторию полета снаряда влияют различные параметры, такие как температура воздуха, атмосферное давление, влажность, гравитация, тип боеприпаса и оружия, из которого произвели выстрел.</Russian>

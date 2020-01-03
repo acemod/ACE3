@@ -104,7 +104,7 @@
             <Polish>Nie masz stoperów</Polish>
             <Czech>Nemáš žádné špunty</Czech>
             <Russian>У вас нет беруш</Russian>
-            <French>Vous n'avez pas de bouchons anti bruit</French>
+            <French>Vous n'avez pas de bouchons anti bruit.</French>
             <Hungarian>Nincsen füldugód</Hungarian>
             <Portuguese>Você não possui protetores auriculares</Portuguese>
             <Italian>Non hai i tappi auricolari</Italian>
@@ -118,7 +118,7 @@
             <German>Kein Platz im Inventar</German>
             <Spanish>Sin espacio en el inventario</Spanish>
             <Polish>Brak miejsca w ekwipunku</Polish>
-            <French>Pas de place dans l'inventaire</French>
+            <French>Il n'y a plus de place dans l'inventaire.</French>
             <Czech>Není místo v inventáři</Czech>
             <Italian>Non hai abbastanza spazio</Italian>
             <Portuguese>Não há espaço no inventário</Portuguese>
@@ -158,6 +158,7 @@
             <Korean>플레이어가 청력손실을 입을때 생기는 이명현상을 제거합니다.</Korean>
             <Chinesesimp>关闭耳鸣效果时，就算玩家受到相当程度的听力伤害, 也不会造成耳鸣效果</Chinesesimp>
             <Chinese>關閉耳鳴效果時，就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果</Chinese>
+            <Czech>Odstranit tinitus když hráč utrpí poškození sluchu</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
@@ -231,7 +232,7 @@
             <Spanish>Efecto Zeus RC</Spanish>
             <Czech>Vliv na Zeus RC</Czech>
             <Italian>Effetto Zeus RC</Italian>
-            <French>Effet sur le CàD du Zeus</French>
+            <French>Affecte le CàD Zeus</French>
             <Japanese>Zeus RC への効果</Japanese>
             <Korean>Zeus RC 효과</Korean>
             <Chinesesimp>启用效果在宙斯远程遥控</Chinesesimp>
@@ -246,7 +247,7 @@
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
             <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
             <Italian>Consenti alle unità controllate in remoto da Zeus di ricevere danni all'udito.</Italian>
-            <French>Permet aux unités contrôlées à distance de subir des dommages auditifs.</French>
+            <French>Permet aux unités contrôlées à distance par Zeus de subir des dommages auditifs.</French>
             <Japanese>Zeus により遠隔操作されたユニットにも、聴覚へ損傷を受けるようにします。</Japanese>
             <Korean>Zeus가 원격으로 청력손실을 입힐 수 있게 합니다.</Korean>
             <Chinesesimp>设定宙斯远程遥控的单位也会受到耳鸣的效果。</Chinesesimp>
@@ -293,6 +294,7 @@
             <Polish>Ochrona słuchu</Polish>
             <Russian>Защита слуха</Russian>
             <Portuguese>Proteção Auditiva</Portuguese>
+            <Czech>Ochrana sluchu</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
@@ -305,6 +307,7 @@
             <Polish>Tłumienie głośności</Polish>
             <Russian>Глушение звука</Russian>
             <Portuguese>Abafamento de Volume</Portuguese>
+            <Czech>Snížení hlasitosti</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
@@ -317,6 +320,7 @@
             <Russian>Громкость в берушах</Russian>
             <Portuguese>Volume do Protetor Auricular</Portuguese>
             <French>Volume bouchons anti bruit</French>
+            <Czech>Hlasitost se špunty</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
@@ -329,6 +333,7 @@
             <Russian>Громкость при одетых берушах</Russian>
             <Portuguese>Volume quando estiver utilizando um Protetor Auricular</Portuguese>
             <French>Volume audio perçu par les joueurs portant des bouchons anti bruit.</French>
+            <Czech>Hlasitost při používání špuntů do uší.</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
@@ -341,6 +346,7 @@
             <Russian>Громкость без сознания</Russian>
             <Portuguese>Volume Inconsciente</Portuguese>
             <French>Volume inconscience</French>
+            <Czech>Hlasitost při ztrátě vědomí</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
@@ -353,6 +359,7 @@
             <Russian>Громкость при потере сознания</Russian>
             <Portuguese>Volume enquanto inconsciente</Portuguese>
             <French>Volume perçu par les joueurs inconscients.</French>
+            <Czech>Hlasitost během ztráty vědomí.</Czech>
         </Key>
     </Package>
 </Project>

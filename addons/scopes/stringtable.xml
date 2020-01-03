@@ -13,6 +13,7 @@
             <Chinese>瞄準鏡</Chinese>
             <Russian>Прицелы</Russian>
             <Portuguese>Mira Telescópica</Portuguese>
+            <Czech>Puškohledy</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_displayName">
             <English>Enable ACE Scope adjustment</English>
@@ -26,6 +27,7 @@
             <Chinese>開啟ACE瞄準鏡歸零調節</Chinese>
             <Russian>Включить настройку прицелов ACE</Russian>
             <Portuguese>Permitir ajustes de Mira do ACE</Portuguese>
+            <Czech>Povolit ACE náměr puškohledů</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_description">
             <English>Enable adjustment turrets on high powered scopes</English>
@@ -39,6 +41,7 @@
             <Chinese>開啟高倍率瞄準鏡歸零調節</Chinese>
             <Russian>Включает регулировочные барабанчики ввода поправок на прицелах с высокой кратностью</Russian>
             <Portuguese>Permite que as Miras Telescópicas sejam ajustadas com ACE</Portuguese>
+            <Czech>Povolí náměr puškohledů pomocí komínků optiky na seřízení zameřovacího kříže u kompatibilních puškohledů.</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_displayName">
             <English>Force adjustment turrets</English>
@@ -52,6 +55,7 @@
             <Chinese>強制使用歸零調節</Chinese>
             <Russian>Включить регулировку ненастроенных прицелов</Russian>
             <Portuguese>Força ajustes ACE para Miras</Portuguese>
+            <Czech>Vynutit použití komínků</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustment turrets on high powered scopes</English>
@@ -59,12 +63,13 @@
             <Japanese>高倍率スコープで調整の使用を強制させます</Japanese>
             <Korean>고성능 조준경의 조절 나사 사용을 강제합니다</Korean>
             <Polish>Wymuś użycie pokręteł regulacyjnych dla celowników o dużym powiększeniu</Polish>
-            <French>Oblige l'utilisation des tourelles de réglage sur les lunettes de visée à fort grossissement.</French>
+            <French>Force l'utilisation des tourelles de réglage sur les lunettes de visée à fort grossissement.</French>
             <Italian>Forza l'uso della regolazione nei mirini a lunga gittata</Italian>
             <Chinesesimp>强制为高倍率瞄准镜开启归零调节</Chinesesimp>
             <Chinese>強制為高倍率瞄準鏡開啟歸零調節</Chinese>
             <Russian>Принудительно использовать барабанчики ввода поправок для ненастроенных прицелов с высокой кратностью</Russian>
             <Portuguese>Força o uso dos controles de ajuste de Mira do ACE em Miras Telescópicas</Portuguese>
+            <Czech>Vynutí používání komínků u puškohledů.</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_displayName">
             <English>Correct zeroing</English>
@@ -78,6 +83,7 @@
             <Chinese>修正歸零</Chinese>
             <Russian>Корректировать пристрелку</Russian>
             <Portuguese>Corrigir Zeramento</Portuguese>
+            <Czech>Opravit náměr</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_description">
             <English>Corrects the zeroing of all small arms sights</English>
@@ -85,12 +91,13 @@
             <Japanese>全ての小口径用照準器のゼロインを調節します</Japanese>
             <Korean>모든 소화기의 영점을 고칩니다</Korean>
             <Polish>Poprawia zerowanie wszystkich celowników broni ręcznej</Polish>
-            <French>Corrige le zérotage de tous les viseurs d'armes légères</French>
+            <French>Corrige le zérotage de tous les viseurs d'armes légères.</French>
             <Italian>Corregge l'azzeramento di tutti i mirini di bassa portata</Italian>
             <Chinesesimp>为所有小口径武器修正归零</Chinesesimp>
             <Chinese>為所有小口徑武器修正歸零</Chinese>
             <Russian>Позволяет корректировать пристрелку для всех прицелов стрелкового оружия</Russian>
             <Portuguese>Corrige o Zeramento de todas as miras de armas pequenas. (Zeroing)</Portuguese>
+            <Czech>Opravuje náměr mířidel všech ručních zbraní</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_displayName">
             <English>Overwrite zero distance</English>
@@ -104,6 +111,7 @@
             <Chinese>覆寫歸零距離</Chinese>
             <Russian>Перезаписать дальность пристрелки</Russian>
             <Portuguese>Sobrepor distância zero</Portuguese>
+            <Czech>Přepsat vzdálenost náměru</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
@@ -117,6 +125,7 @@
             <Chinese>使用'defaultZeroRange'來為高倍率瞄準鏡覆寫預設歸零距離</Chinese>
             <Russian>Использует настройку 'defaultZeroRange' для перенастройки дальности пристрелки прицелов с высокой кратностью</Russian>
             <Portuguese>Utiliza a configuração 'Distância Zero Padrão' para sobrepor a distância zero de Miras Telescópicas</Portuguese>
+            <Czech>Používá nastavení 'defaultZeroRange' na přepsání vzdálenosti náměru pro puškohledy</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_displayName">
             <English>Default zero distance</English>
@@ -130,6 +139,7 @@
             <Chinese>預設歸零距離</Chinese>
             <Russian>Дальность пристрелки по умолчанию</Russian>
             <Portuguese>Distância Zero Padrão</Portuguese>
+            <Czech>Standardní vzdálenost náměru</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_description">
             <English>High powered scopes will be zeroed at this distance</English>
@@ -137,12 +147,13 @@
             <Japanese>高倍率スコープのゼロイン距離はこの設定になります</Japanese>
             <Korean>고성능 조준경이 정해진 수만큼 영점거리를 맞추게 됩니다.</Korean>
             <Polish>Celowniki o dużym powiększeniu będą zerowane dla tej odległości</Polish>
-            <French>Le zérotage des lunettes de visée à fort grossissement sera effectué pour cette distance.</French>
+            <French>Distance de zérotage des lunettes de visée à fort grossissement.</French>
             <Italian>I mirini a lunga gittata verranno azzerrati a questa distanza</Italian>
             <Chinesesimp>高倍率瞄准镜将归零在这个距离上</Chinesesimp>
             <Chinese>高倍率瞄準鏡將歸零在這個距離上</Chinese>
             <Russian>Дальность, на которую будут пристреляны прицелы с высокой кратностью</Russian>
             <Portuguese>Miras Telescópicas serão zeradas nessa distância</Portuguese>
+            <Czech>Puškohledy budou naměřené na tuto vzdálenost</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
             <English>Reference temperature</English>
@@ -156,6 +167,7 @@
             <Chinese>參考溫度</Chinese>
             <Russian>Референсная температура</Russian>
             <Portuguese>Temperatura de Referência</Portuguese>
+            <Czech>Referenční teplota</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_description">
             <English>Temperature at which the scope was zeroed</English>
@@ -163,12 +175,13 @@
             <Japanese>スコープがゼロインされる温度</Japanese>
             <Korean>조준경 영점조준시 온도</Korean>
             <Polish>Temperatura, przy której celownik został wyzerowany</Polish>
-            <French>Température de référence pour le zérotage des lunettes</French>
+            <French>Température de référence pour le zérotage des lunettes.</French>
             <Italian>Temperatura a cui è stato azzerato il mirino</Italian>
             <Chinesesimp>武器参考多少温度来进行归零.</Chinesesimp>
             <Chinese>武器參考多少溫度來進行歸零.</Chinese>
             <Russian>Температура, при которой выполнена пристрелка прицела</Russian>
             <Portuguese>Temperatura na qual a mira foi zerada.</Portuguese>
+            <Czech>Teplota za které byl puškohled naměřen</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_displayName">
             <English>Reference barometric pressure</English>
@@ -182,6 +195,7 @@
             <Chinese>參考大氣壓力</Chinese>
             <Russian>Референсное давление</Russian>
             <Portuguese>Pressão Barométrica de Referência</Portuguese>
+            <Czech>Referenční barometrický tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_description">
             <English>Barometric pressure at which the scope was zeroed</English>
@@ -189,12 +203,13 @@
             <Japanese>スコープがゼロインされる気圧</Japanese>
             <Korean>조준경 영점조준시 기압</Korean>
             <Polish>Ciśnienie barometryczne, przy którym celownik został wyzerowany</Polish>
-            <French>Pression barométrique de référence pour le zérotage des lunettes</French>
+            <French>Pression barométrique de référence pour le zérotage des lunettes.</French>
             <Italian>Pressione barometrica a cui è stato azzerato il mirino</Italian>
             <Chinesesimp>武器参考多少大气压力来进行归零。</Chinesesimp>
             <Chinese>武器參考多少大氣壓力來進行歸零。</Chinese>
             <Russian>Давление, при котором выполнена пристрелка прицела</Russian>
             <Portuguese>Pressão Barométrica de quando a mira foi zerada.</Portuguese>
+            <Czech>Barometrický tlak za kterého byl puškohled naměřen</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
@@ -208,6 +223,7 @@
             <Chinese>參考濕度</Chinese>
             <Russian>Референсная влажность</Russian>
             <Portuguese>Humidade de Referência</Portuguese>
+            <Czech>Referenční vlhkost vzduchu</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_description">
             <English>Humidity at which the scope was zeroed</English>
@@ -215,12 +231,13 @@
             <Japanese>スコープがゼロインされる湿度</Japanese>
             <Korean>조준경 영점조준시 습도</Korean>
             <Polish>Wilgotność powietrza, przy której celownik został wyzerowany</Polish>
-            <French>Taux d'humidité de référence pour le zérotage des lunettes</French>
+            <French>Taux d'humidité de référence pour le zérotage des lunettes.</French>
             <Italian>Umidità a cui è stato azzerato il mirino</Italian>
             <Chinesesimp>武器参考多少湿度来进行归零。</Chinesesimp>
             <Chinese>武器參考多少濕度來進行歸零。</Chinese>
             <Russian>Влажность, при которой выполнена пристрелка прицела</Russian>
             <Portuguese>Humidade na qual a mira foi zerada.</Portuguese>
+            <Czech>Vlhkost vzduchu za které byl puškohled naměřen</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
             <English>Deduce pressure from altitude</English>
@@ -228,12 +245,13 @@
             <Japanese>高度により圧が減少</Japanese>
             <Korean>고도에 맞춰 기압 설정</Korean>
             <Polish>Ciśnienie określone na podstawie wysokości</Polish>
-            <French>Déduire la pression selon l'altitude</French>
+            <French>Déterminer la pression selon l'altitude</French>
             <Italian>Ricava la pressione dall'altitudine</Italian>
             <Chinesesimp>高度影响大气压力</Chinesesimp>
             <Chinese>高度影響大氣壓力</Chinese>
             <Russian>Просчитать давление из высоты</Russian>
             <Portuguese>Deduzir pressão pela altitude</Portuguese>
+            <Czech>Snížit tlak podle nadmořské výšky</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
             <English>Deduce the barometric pressure from the terrain altitude</English>
@@ -241,12 +259,13 @@
             <Japanese>標高により気圧が減少されます</Japanese>
             <Korean>주변 고도에 맞춰 기압을 설정합니다</Korean>
             <Polish>Określ ciśnienie barometryczne na podstawie wysokości terenu</Polish>
-            <French>Déduire la pression barométrique en fonction de l'altitude du terrain</French>
+            <French>Détermine la pression barométrique en fonction de l'altitude du terrain.</French>
             <Italian>Ricava la pressione barometrica dall'altitudine del terreno</Italian>
             <Chinesesimp>在不同高度上会有不同的大气压力</Chinesesimp>
             <Chinese>在不同高度上會有不同的大氣壓力</Chinese>
             <Russian>Давление определяется по высоте</Russian>
             <Portuguese>Deduz a pressão barométrica pela altitude do terreno.</Portuguese>
+            <Czech>Snížit barometrický tlak podle současné nadmořské výšky terénu</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_displayName">
             <English>Use legacy UI</English>
@@ -259,7 +278,8 @@
             <Polish>Wykorzystaj legacy UI</Polish>
             <Russian>Использовать устаревший интерфейс</Russian>
             <Portuguese>Usar Interface Antiga</Portuguese>
-            <French>Utiliser l'ancienne UI</French>
+            <French>Utiliser l'ancienne IU</French>
+            <Czech>Používat staré UI</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_useLegacyUI_description">
             <English>Displays elevation and windage with signed numbers</English>
@@ -273,6 +293,7 @@
             <Russian>Отображает горизонтальные и вертикальные поправки с подписанными числами</Russian>
             <Portuguese>Exibir elevação e vento com número sinalizados.</Portuguese>
             <French>Affiche les valeurs de hausse et de dérive avec des nombres signés.</French>
+            <Czech>Zobrazovat elevaci a vítr s znaménky plus a mínus.</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
             <English>Simplified zeroing</English>
@@ -286,6 +307,7 @@
             <Russian>Упрощенная пристрелка</Russian>
             <Portuguese>Zeramento Simplificado</Portuguese>
             <French>Zérotage simplifié</French>
+            <Czech>Zjednodušené naměřování</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
@@ -299,6 +321,7 @@
             <Russian>Использует ванильную систему прицеливания для прицелов</Russian>
             <Portuguese>Imita o sistema de zeramento vanilla para miras de rifle.</Portuguese>
             <French>Reproduit le système de zérotage vanilla pour les lunettes.</French>
+            <Czech>Replikuje systém naměřování puškohledů ze základní hry.</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -456,6 +479,7 @@
             <Russian>Сбросить дальность пристрелки</Russian>
             <Portuguese>Resetar Ajuste Zero</Portuguese>
             <French>Réinitialiser le réglage du zéro</French>
+            <Czech>Reset vynulování</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
@@ -469,6 +493,7 @@
             <Chinese>此模塊可為高倍率瞄準鏡新增歸零風偏，距離用的調整紐。</Chinese>
             <Russian>Этот модуль добавляет барабанчики ввода горизонтальных и вертикальных поправок для прицелов с высокой кратностью</Russian>
             <Portuguese>Esse módulo implementa vento e elevação para os ajustes de miras telescópicas.</Portuguese>
+            <Czech>Tento modul přidává korekci zaměrovacího kříže puškohledů pro vítr a výšku.</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentDown">
             <English>%1D</English>
@@ -482,6 +507,7 @@
             <Polish>%1D</Polish>
             <Russian>%1D</Russian>
             <Portuguese>%1D</Portuguese>
+            <Czech>%1D</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentLeft">
             <English>%1L</English>
@@ -495,6 +521,7 @@
             <Polish>%1L</Polish>
             <Russian>%1L</Russian>
             <Portuguese>%1L</Portuguese>
+            <Czech>%1L</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_DisplayAdjustmentRight">
             <English>%1R</English>
@@ -508,6 +535,7 @@
             <Polish>%1R</Polish>
             <Russian>%1R</Russian>
             <Portuguese>%1R</Portuguese>
+            <Czech>%1R</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_statHorizontalLimits">
             <English>Horizontal limits</English>
@@ -519,6 +547,7 @@
             <Russian>Лимит по горизонтали</Russian>
             <Portuguese>Limite Horizontal</Portuguese>
             <French>Limites horizontales</French>
+            <Czech>Horizontální limity</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_statVerticalLimits">
             <English>Vertical limits</English>
@@ -530,6 +559,7 @@
             <Russian>Лимит по вертикали</Russian>
             <Portuguese>Limite Vertical</Portuguese>
             <French>Limites verticales</French>
+            <Czech>Vertikální limity</Czech>
         </Key>
     </Package>
 </Project>

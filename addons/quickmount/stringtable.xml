@@ -13,6 +13,7 @@
             <Russian>Быстрая посадка</Russian>
             <Portuguese>Entrada Rápida</Portuguese>
             <French>Entrée rapide</French>
+            <Czech>Rychlé nastoupení</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindName">
             <English>Vehicle quick mount</English>
@@ -26,6 +27,7 @@
             <Russian>Быстрая посадка в технику</Russian>
             <Portuguese>Entrada Rápida em Veículo</Portuguese>
             <French>Entrée rapide véhicules</French>
+            <Czech>Rychlé nastoupení do vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindDescription">
             <English>Quickly enter the vehicle you are directly looking at.</English>
@@ -38,7 +40,8 @@
             <Korean>빠르게 당신이 보고 있는 가까운 차량에 탑승합니다. </Korean>
             <Russian>Позволяет быстро сесть в технику, на которую вы смотрите</Russian>
             <Portuguese>Rapidamente entra no veículo que você está olhando diretamente.</Portuguese>
-            <French>Permet d'entrer rapidement dans un véhicule que vous regardez.</French>
+            <French>Permet d'entrer rapidement dans le véhicule que vous regardez.</French>
+            <Czech>Rychle nastoupit do vozidla na které se díváte.</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleFull">
             <English>Vehicle Full</English>
@@ -52,6 +55,13 @@
             <Russian>Мест нет</Russian>
             <Portuguese>Veículo cheio</Portuguese>
             <French>Véhicule plein</French>
+            <Czech>Vozidlo je plné</Czech>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_EnabledDescription">
+            <English>This option allows quick entry into the vehicle you are directly looking at.</English>
+            <French>Cette option permet d'entrer rapidement dans les véhicules que vous regardez.</French>
+            <Chinese>這個選項允許你能快速進入你直視的載具</Chinese>
+            <Portuguese>Esta opção permite entrada rápida para o veículo que você está olhando</Portuguese>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
@@ -65,6 +75,7 @@
             <Russian>Дистанция</Russian>
             <Portuguese>Distância</Portuguese>
             <French>Distance</French>
+            <Czech>Vzdálenost</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_DistanceDescription">
             <English>Maximum distance to check for vehicles.</English>
@@ -78,6 +89,7 @@
             <Russian>Максимальная дистанция для техники</Russian>
             <Portuguese>Distância máxima para checar por veículos.</Portuguese>
             <French>Distance de vérification maximale des véhicules.</French>
+            <Czech>Maximální vzdálenost od vozidel.</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleLocked">
             <English>Vehicle Locked</English>
@@ -91,6 +103,7 @@
             <Russian>Техника закрыта</Russian>
             <Portuguese>Veículo Trancado</Portuguese>
             <French>Véhicule verrouillé</French>
+            <Czech>Vozidlo je zamčeno</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_Speed">
             <English>Maximum Speed (km/h)</English>
@@ -104,6 +117,7 @@
             <Russian>Макс. скорость (км/ч)</Russian>
             <Portuguese>Velocidade Máxima (km/h)</Portuguese>
             <French>Vitesse maximale (km/h)</French>
+            <Czech>Maximální rychlost (km/h)</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_SpeedDescription">
             <English>Maximum vehicle speed (km/h) allowed for player entry</English>
@@ -116,7 +130,8 @@
             <Korean>플레이어가 탑승 가능한 목표 차량의 최대 속도</Korean>
             <Russian>Макс. скорость техники для посадки игрока (км/ч)</Russian>
             <Portuguese>Velocidade máxima que o veículo pode estar para permitr entrada rápida.</Portuguese>
-            <French>Vitesse maximale d'un véhicule (km/h) pour qu'un joueur puisse y entrer.</French>
+            <French>Définit la vitesse maximale que peut avoir un véhicule en mouvement pour qu'un joueur réussisse à y entrer.</French>
+            <Czech>Maximální rychlost vozidla (km/h) při které hráči mohou nastoupit do vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
             <English>Prioritize Seat</English>
@@ -129,7 +144,8 @@
             <Korean>좌석 우선순위 지정</Korean>
             <Russian>Приоритет мест</Russian>
             <Portuguese>Priorizar Assento</Portuguese>
-            <French>Priorité place assise</French>
+            <French>Place prioritaire</French>
+            <Czech>Priorita sedadel</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_PriorityDescription">
             <English>Seat priority on entry</English>
@@ -142,7 +158,8 @@
             <Korean>탑승할 좌석의 우선순위를 지정합니다.</Korean>
             <Russian>Приоритет мест при посадке</Russian>
             <Portuguese>Define qual o assento que vai priorizar a Entrada Rápida</Portuguese>
-            <French>S'asseoir en priorité lors de l'embarquement</French>
+            <French>Définit à quel poste s'asseoir en priorité lors de l'embarquement.</French>
+            <Czech>Priorita sedadla při nástupu</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_ChangeSeat">
             <English>Change seat</English>
@@ -154,6 +171,7 @@
             <Portuguese>Mudar de Assento</Portuguese>
             <Chinese>換座位</Chinese>
             <French>Changer de place</French>
+            <Czech>Změnit sedadlo</Czech>
         </Key>
     </Package>
 </Project>

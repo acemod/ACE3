@@ -191,16 +191,9 @@ class CfgWeapons {
     class EBR_base_F: Rifle_Long_Base_F {
         // EMR/EBR is typically issued semi-auto AFAIK
         modes[] = {"Single", "single_close_optics1", "single_medium_optics1", "single_far_optics1"};
-        cursor = "arifle";
-    };
-
-    class LRR_base_F: Rifle_Long_Base_F {
-        cursor = "arifle";
     };
 
     class GM6_base_F: Rifle_Long_Base_F {
-        cursor = "arifle";
-
         // Fuck your balancing, BI.
         class Single: Mode_SemiAuto {
             // 250 rpm is probably the limit of the finger on a heavy bullpup trigger like this thing must have.
