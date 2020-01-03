@@ -98,6 +98,7 @@
             <Czech>Vypni automatické vypnutí motoru</Czech>
             <Chinese>關閉引擎自動熄火</Chinese>
             <French>Désactiver l'arrêt automatique du moteur</French>
+            <Italian>Disattivare lo spegnimento automatico del motore</Italian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
@@ -108,6 +109,7 @@
             <Spanish>Desactivar el apagado automático del motor al salir de los vehículos.</Spanish>
             <Czech>Zabraň automatickému vypnutí motoru při opuštění vozidla.</Czech>
             <Chinese>避免離開載具時自動熄火。</Chinese>
+            <Italian>Impedire lo spegnimento automatico del motore quando si esce dai veicoli.</Italian>
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
@@ -120,6 +122,7 @@
             <Spanish>Ocultar acción de expulsión</Spanish>
             <Chinese>隱藏逃脫動作</Chinese>
             <French>Masquer l'action d'éjection</French>
+            <Italian>Nascondi azione di espulsione</Italian>
             <Czech>Schovat vyskočení z vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectActionTooltip">
@@ -132,6 +135,7 @@
             <Spanish>Oculta la entrada Expulsar del menú de acciones. Requiere un reinicio del juego.</Spanish>
             <Chinese>隱藏在動作選單中逃脫動作的選項。要求遊戲重新啟動。</Chinese>
             <French>Masque l'entrée "Éjection" du menu Action. Nécessite un redémarrage du jeu.</French>
+            <Italian>Nasconde la voce Espelli dal menu azione. Richiede il riavvio del gioco.</Italian>
             <Czech>Schová akci vyskošení z vozidla z akčního menu. Vyžaduje restart hry.</Czech>
         </Key>
     </Package>

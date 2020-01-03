@@ -992,6 +992,7 @@
             <Spanish>Siempre</Spanish>
             <French>Toujours</French>
             <Chinese>一直</Chinese>
+            <Italian>Sempre</Italian>
             <Czech>Vždy</Czech>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
@@ -1080,6 +1081,7 @@
             <Spanish>Confirmar</Spanish>
             <French>Confirmer</French>
             <Chinese>確認</Chinese>
+            <Italian>Conferma</Italian>
             <Czech>Potvrdit</Czech>
         </Key>
         <Key ID="STR_ACE_Common_Never">
@@ -1091,6 +1093,7 @@
             <Spanish>Nunca</Spanish>
             <French>Jamais</French>
             <Chinese>從不</Chinese>
+            <Italian>Mai</Italian>
             <Czech>Nikdy</Czech>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">

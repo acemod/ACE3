@@ -1048,6 +1048,7 @@
             <Japanese>EOD に</Japanese>
             <French>Spécialiste en explosifs</French>
             <Chinese>是EOD</Chinese>
+            <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
@@ -1056,6 +1057,7 @@
             <Japanese>ユニットが何であれ爆発物専門家にします。</Japanese>
             <French>Définit si l'unité est un spécialiste en explosifs.</French>
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
+            <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
         </Key>
     </Package>

@@ -8,6 +8,7 @@
             <Russian>Медицинский интерфейс</Russian>
             <Portuguese>GUI</Portuguese>
             <Chinese>界面</Chinese>
+            <Italian>GUI</Italian>
             <Czech>GUI</Czech>
             <Spanish>Interfaz gráfica</Spanish>
         </Key>
@@ -19,6 +20,7 @@
             <French>Activer les actions médicales</French>
             <Portuguese>Ativar Ações Médicas</Portuguese>
             <Chinese>啟用醫療行為</Chinese>
+            <Italian>Attivare azioni mediche</Italian>
             <Czech>Povolit zdravotnické akce</Czech>
             <Spanish>Habilitar acciones médicas</Spanish>
         </Key>
@@ -30,6 +32,7 @@
             <French>Permet d'afficher les actions médicales dans le menu d'interaction, et de définir leur style visuel.</French>
             <Portuguese>Ativa as ações médicas para o menu de interação e seleciona seus estilos.</Portuguese>
             <Chinese>為互動選單啟用醫療行為以及選擇其風格。</Chinese>
+            <Italian>Abilita le azioni mediche per il Menu Interazione e seleziona il loro stile.</Italian>
             <Czech>Povolit zdravotnické akce pro menu interakcí a vybrat jejich styl.</Czech>
             <Spanish>Habilita acciones médicas para el menú de interacción y selecciona su estilo.</Spanish>
         </Key>
@@ -73,6 +76,7 @@
             <French>Activer les actions médicales sur soi-même</French>
             <Portuguese>Ativar ações médicas em si mesmo</Portuguese>
             <Chinese>啟用自我醫療行為</Chinese>
+            <Italian>Abilitare le azioni di automedicazione</Italian>
             <Czech>Povolit zdravotnické vlastní akce</Czech>
             <Spanish>Habilitar las acciones médicas en uno mismo</Spanish>
         </Key>
@@ -84,6 +88,7 @@
             <French>Active les actions médicales du menu d'interaction personnel.</French>
             <Portuguese>Ativa as ações médicas do menu de interação pessoal.</Portuguese>
             <Chinese>為自我互動選單啟用醫療行為。</Chinese>
+            <Italian>Abilita il menu per le interazioni mediche personali</Italian>
             <Czech>Povoluje zdravotnické akce v menu vlastních interakcí.</Czech>
             <Spanish>Activa las acciones médicas para el menú de interacción personal</Spanish>
         </Key>
@@ -95,6 +100,7 @@
             <French>Activer le menu médical</French>
             <Portuguese>Ativar Menu Médico</Portuguese>
             <Chinese>啟用醫療選單</Chinese>
+            <Italian>Abilita il menu medico</Italian>
             <Czech>Povolit Zdravotnické menu</Czech>
             <Spanish>Activar menú médico</Spanish>
         </Key>
@@ -106,6 +112,7 @@
             <French>Permet l'utilisation du menu médical via le menu d'interaction ou l'appui d'une touche.</French>
             <Portuguese>Ativa o uso do Menu Médico atráves da Tecla ou Menu de Interação.</Portuguese>
             <Chinese>啟用以互動選單或者按鍵綁定所呼出的高效醫療選單</Chinese>
+            <Italian>Abilita l'uso del Menu Medico attraverso il menu tastiera o il menu di interazione.</Italian>
             <Czech> Povoluje používání Zdravotnického menu klávesovou zkratku nebo skrze menu interakcí.</Czech>
             <Spanish>Activa el uso del menú médico a través de la tecla o del menú de interacción</Spanish>
         </Key>
@@ -117,6 +124,7 @@
             <French>Rouvrir le menu médical</French>
             <Portuguese>Reabrir Menu Médico</Portuguese>
             <Chinese>醫療選單二度開啟</Chinese>
+            <Italian>Riaprire il menù medico</Italian>
             <Czech>Znovu otevřít Zdravotnické menu</Czech>
             <Spanish>Reabrir menú médico</Spanish>
         </Key>
@@ -128,6 +136,7 @@
             <French>Réouvre le menu médical suite à l'application d'un soin.</French>
             <Portuguese>Reabrir Menu Médico após um tratamento com sucesso</Portuguese>
             <Chinese>當治療完成後二度打開醫療選單</Chinese>
+            <Italian>Riaprire il menu medico dopo il trattamento con successo.</Italian>
             <Czech>Otevře Zdravotnické menu po úspěšném dokončení zdravotnické akce.</Czech>
             <Spanish>Reabrir menú médico después de completar un tratamiento</Spanish>
         </Key>
@@ -139,6 +148,7 @@
             <French>Distance maximale</French>
             <Portuguese>Distância Máxima</Portuguese>
             <Chinese>最大醫療距離</Chinese>
+            <Italian>Massima distanza</Italian>
             <Czech>Maximální vzdálenost</Czech>
             <Spanish>Distancia máxima</Spanish>
         </Key>
@@ -150,6 +160,7 @@
             <French>Définit la distance (en mètres) à partir de laquelle il n'est plus possible d'activer le menu médical pour traiter un patient.</French>
             <Portuguese>A Distância máxima do paciente para que o Menu Médico possa ser aberto.</Portuguese>
             <Chinese>設定距離多遠以內可以對目標使用醫療選單</Chinese>
+            <Italian>Distanza massima da cui si può aprire il Menu Medico.</Italian>
             <Czech>Maximální vzdálenost ze které je možné otevřít Zdravotnické menu.</Czech>
             <Spanish>Distancia máxima desde el paciente para que el menú pueda ser abierto</Spanish>
         </Key>
@@ -869,6 +880,7 @@
             <French>Fracturé</French>
             <Portuguese>Fraturado</Portuguese>
             <Chinese>骨折</Chinese>
+            <Italian>Frattura</Italian>
             <Czech>Zlomené</Czech>
             <Spanish>Fracturada</Spanish>
         </Key>
@@ -879,6 +891,7 @@
             <French>Attelle appliquée</French>
             <Portuguese>Tala Aplicada</Portuguese>
             <Chinese>已使用固定板</Chinese>
+            <Italian>Gessatura applicata</Italian>
             <Czech>Dlaha aplikována</Czech>
             <Spanish>Tablilla aplicada</Spanish>
         </Key>
@@ -891,6 +904,7 @@
             <French>A perdu un peu de sang</French>
             <Portuguese>Perdeu um pouco de Sangue</Portuguese>
             <Chinese>輕微失血</Chinese>
+            <Italian>Ha perso un po' di sangue</Italian>
             <Czech>Ztratil trochu krve</Czech>
             <Spanish>Algo de sangre perdida</Spanish>
         </Key>
@@ -918,6 +932,7 @@
             <French>A perdu une grande quantité de sang</French>
             <Portuguese>Perdeu uma quantidade grande de sangue</Portuguese>
             <Chinese>極大量失血中</Chinese>
+            <Italian>Ha perso una grande quantità di sangue</Italian>
             <Czech>Ztratil velké množství krve</Czech>
             <Spanish>Perdida gran cantidad de sangre</Spanish>
         </Key>
@@ -929,6 +944,7 @@
             <French>Exsanguination</French>
             <Portuguese>Perdeu uma quantidade fatal de sangue</Portuguese>
             <Chinese>致命性失血中</Chinese>
+            <Italian>Ha perso una quantità fatale di sangue</Italian>
             <Czech>Vykrvácel</Czech>
             <Spanish>Perdida una cantidad fatal de sangre</Spanish>
         </Key>
@@ -983,6 +999,7 @@
             <Japanese>部分的な%1</Japanese>
             <Chinese>部分 %1</Chinese>
             <French>Partiel %1</French>
+            <Italian>Parziale %1</Italian>
             <Czech>Parciální %1</Czech>
             <Portuguese>Parcial%1</Portuguese>
             <Spanish>Parcial %1</Spanish>

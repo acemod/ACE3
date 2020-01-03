@@ -1824,6 +1824,7 @@
             <Japanese>部分修理条件</Japanese>
             <Chinese>額外修理條件</Chinese>
             <French>Exigences pour réparations diverses</French>
+            <Italian>Requisiti di riparazione vari</Italian>
             <Czech>Požadavky pro částečnou opravu</Czech>
             <Portuguese>Requerimentos para reparo miscelâneo</Portuguese>
             <Spanish>Requisitos de objetos misceláneos de reparación</Spanish>
@@ -1836,12 +1837,14 @@
             <Czech>Předměty potřebné k provedení opravy konkrétní části vozidla nebo sundání/výměny pásů.</Czech>
             <Portuguese>Items necessários para reparar uma peça específica ou remover/substituir lagarta.</Portuguese>
             <Spanish>Objetos necesarios para reparar un componente específico del vehículo o quitar/reemplazar las orugas.</Spanish>
+            <Italian>Elementi necessari per riparare un componente specifico del veicolo o per rimuovere/sostituire i cingoli</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
             <Japanese>完全修理条件</Japanese>
             <Chinese>完整修復條件</Chinese>
             <French>Exigences pour réparations complètes</French>
+            <Italian>Requisiti per la riparazione completa</Italian>
             <Czech>Požadavky pro plnou opravu</Czech>
             <Portuguese>Requerimentos de Reparo Completo</Portuguese>
             <Spanish>Requisitos para reparación completa</Spanish>
@@ -1854,6 +1857,7 @@
             <Czech>Předměty potřebné k provedení plné opravy vozidla.</Czech>
             <Portuguese>Itens requeridos para realizar um reparo veicular completo.</Portuguese>
             <Spanish>Objetos requeridos para una reparación completa</Spanish>
+            <Italian>Elementi necessari per eseguire una riparazione completa del veicolo.</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>

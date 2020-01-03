@@ -1762,6 +1762,7 @@
             <Russian>Десантировать груз</Russian>
             <Portuguese>Soltar carga de paraquedas</Portuguese>
             <Chinese>空投貨物</Chinese>
+            <Italian>Paradrop Cargo</Italian>
             <Czech>Výsadek nákladu</Czech>
             <French>Paralargage de cargaison</French>
         </Key>
@@ -1774,6 +1775,7 @@
             <Portuguese>Nenhuma carga carregada</Portuguese>
             <Spanish>No hay carga cargada</Spanish>
             <Chinese>沒有貨物裝載</Chinese>
+            <Italian>Nessun carico caricato</Italian>
             <Czech>Žádný náklad není naložen</Czech>
             <French>Aucune cargaison chargée</French>
         </Key>
