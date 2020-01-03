@@ -846,7 +846,7 @@
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Czech>Ztratil hodně krve</Czech>
             <Italian>Perso molto Sangue</Italian>
-            <Japanese>大量失血している</Japanese>
+            <Japanese>大量失血した</Japanese>
             <Korean>많은 피를 흘림</Korean>
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
@@ -863,7 +863,7 @@
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
             <Russian>Наложена шина</Russian>
-            <Japanese>添え木が当てている</Japanese>
+            <Japanese>添え木を当てている</Japanese>
             <French>Attelle appliquée</French>
             <Portuguese>Tala Aplicada</Portuguese>
             <Chinese>已使用固定板</Chinese>
@@ -873,7 +873,7 @@
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
             <English>Lost some blood</English>
             <German>Hat etwas Blut verloren</German>
-            <Japanese>いくらか失血している</Japanese>
+            <Japanese>いくらか失血した</Japanese>
             <Russian>Небольшая кровопотеря</Russian>
             <French>A perdu un peu de sang</French>
             <Portuguese>Perdeu um pouco de Sangue</Portuguese>
@@ -891,7 +891,7 @@
             <Hungarian>Sok vért vesztett</Hungarian>
             <Italian>Ha perso parecchio sangue</Italian>
             <Portuguese>Perdeu muito sangue</Portuguese>
-            <Japanese>大量失血している</Japanese>
+            <Japanese>大量失血した</Japanese>
             <Korean>많은 양의 혈액을 잃음</Korean>
             <Chinesesimp>大量失血中</Chinesesimp>
             <Chinese>大量失血中</Chinese>
@@ -899,7 +899,7 @@
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood3">
             <English>Lost a large amount of blood</English>
             <German>Hat eine sehr große Menge Blut verloren</German>
-            <Japanese>かなり酷く大量失血している</Japanese>
+            <Japanese>かなり酷く大量失血した</Japanese>
             <Russian>Огромная кровопотеря</Russian>
             <French>A perdu une grande quantité de sang</French>
             <Portuguese>Perdeu uma quantidade grande de sangue</Portuguese>
@@ -909,7 +909,7 @@
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
             <German>Hat eine kritische Menge an Blut verloren</German>
-            <Japanese>致命的な程失血している</Japanese>
+            <Japanese>致命的な程失血した</Japanese>
             <Russian>Фатальная кровопотеря</Russian>
             <French>Exsanguination</French>
             <Portuguese>Perdeu uma quantidade fatal de sangue</Portuguese>
