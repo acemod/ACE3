@@ -210,6 +210,7 @@
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
             <Italian>Distanza massima che la telecamera seguente può percorrere dall'obiettivo</Italian>
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
+            <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
