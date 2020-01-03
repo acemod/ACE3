@@ -30,13 +30,12 @@
             <Czech>Povolit kapky krve</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_Description">
-            <English>Artificial intelligence will respond to injury and loss of consciousness</English>
+            <English>Enables the creation of blood drops when units are bleeding or take damage.</English>
             <Japanese>ユニットが出血かダメージを受けた時に、血痕を残すようにします。</Japanese>
             <French>Si une unité saigne, elle laissera des traces de sang derrière elle.</French>
             <Russian>Разрешает создание капель крови при кровотечении или получении урона</Russian>
             <Portuguese>Permitir a criação de gotas de sangue quando as unidades recebem ferimentos ou estão sangrando.</Portuguese>
             <Chinese>啟用出血效果當單位失血或受傷的時候。</Chinese>
-            <Italian>L'intelligenza artificiale risponderà a lesioni e perdita di coscienza</Italian>
             <Czech>Povoluje vytváření kapek krve na zemi když jednotka krvácí nebo utrpí zranění.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
