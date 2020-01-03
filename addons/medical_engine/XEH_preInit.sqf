@@ -62,8 +62,8 @@ addMissionEventHandler ["Loaded", {
     params ["_unit", "_active"];
     if (_active) then {
         if (_unit getVariable [QGVAR(waitForAnim), true]) then {
-            [{(animationstate _this) find QGVAR(face) != -1}, {
-                [_this, animationstate _this] call FUNC(applyAnimAfterRagdoll);
+            [{(animationState _this) find QGVAR(face) != -1}, {
+                [_this, animationState _this] call FUNC(applyAnimAfterRagdoll);
             }, _unit, 20] call CBA_fnc_waitUntilAndExecute;
             _unit setVariable [QGVAR(waitForAnim), false];
         };
