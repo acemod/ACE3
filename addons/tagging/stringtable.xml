@@ -14,7 +14,6 @@
             <Chinese>噴漆</Chinese>
             <Portuguese>Marcação</Portuguese>
             <Czech>Označování</Czech>
-            <Turkish>İşaretleme</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
@@ -117,7 +116,6 @@
             <French>Tag</French>
             <Chinesesimp>喷漆</Chinesesimp>
             <Chinese>噴漆</Chinese>
-            <Turkish>İşaret</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
             <English>X black</English>
