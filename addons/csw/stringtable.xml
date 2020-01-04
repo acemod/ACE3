@@ -9,6 +9,7 @@
             <Chinese>班組支援武器</Chinese>
             <Italian>Armi servite dall'equipaggio</Italian>
             <Czech>Posádkou obsluhované zbraně (CSW)</Czech>
+            <Spanish>Armas provistas por tripulación</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
@@ -18,6 +19,7 @@
             <Chinese>設置三腳架</Chinese>
             <Italian>Piazza bipode</Italian>
             <Czech>Položit trojnožku</Czech>
+            <Spanish>Colocar tripode</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -48,7 +50,7 @@
         <Key ID="STR_ACE_CSW_loadX">
             <English>Load %1</English>
             <German>Lade %1</German>
-            <Spanish>Load %1</Spanish>
+            <Spanish>Cargar %1</Spanish>
             <Czech>Nabít %1</Czech>
             <French>Charger %1</French>
             <Polish>Załaduj %1</Polish>
@@ -62,7 +64,7 @@
         <Key ID="STR_ACE_CSW_unloadX">
             <English>Unload %1</English>
             <German>Entlade %1</German>
-            <Spanish>Unload %1</Spanish>
+            <Spanish>Descargar %1</Spanish>
             <Czech>Vytáhnout zásobník z %1</Czech>
             <French>Décharger %1</French>
             <Polish>Rozładuj %1</Polish>
@@ -81,6 +83,7 @@
             <Chinese>聯結至 %1</Chinese>
             <Italian>Collega %1</Italian>
             <Czech>Spojit %1</Czech>
+            <Spanish>Conectar %1</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
             <English>Advanced assembly</English>
@@ -90,6 +93,7 @@
             <Chinese>進階組裝</Chinese>
             <Italian>Montaggio avanzato</Italian>
             <Czech>Pokročilé skládání</Czech>
+            <Spanish>Ensamblado avanzado</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
             <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
@@ -99,6 +103,7 @@
             <Chinese>使用ACE來組裝/拆解固定型武器。上膛的限制為單個彈匣。</Chinese>
             <Italian>Utilizzare ace per l'Assemblaggio/smontaggio di armi statiche supportate. Le munizioni cariche sono ridotte ad un solo caricatore.</Italian>
             <Czech>Použít ACE pro složení/rozložení podporovaných statických zbraní. Nabitá munice je snížená na jeden zásobník.</Czech>
+            <Spanish>Use ace para ensamblado/desamblado de armas estáticas soportadas. Munición cargada es reducida a un cargador</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save extra ammo</English>
@@ -108,6 +113,7 @@
             <Chinese>保存額外彈藥</Chinese>
             <Italian>Risparmiare munizioni extra</Italian>
             <Czech>Uložit munici navíc.</Czech>
+            <Spanish>Guardar munición extra</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
             <English>Store extra magazines next to static weapon</English>
@@ -117,6 +123,7 @@
             <Chinese>在固定型武器旁存放額外彈匣</Chinese>
             <Italian>Conservare i caricatori extra accanto all'arma statica</Italian>
             <Czech>Ukládat munici navíc vedle statické zbraně.</Czech>
+            <Spanish>Almacenar cargadores extra junto al arma estática</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
@@ -126,6 +133,7 @@
             <Chinese>彈藥處理</Chinese>
             <Italian>Gestione delle munizioni</Italian>
             <Czech>Manipulace s municí</Czech>
+            <Spanish>Manejo de municiones</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
@@ -135,6 +143,7 @@
             <Chinese>允許裝填或卸載彈匣</Chinese>
             <Italian>Permettere il carico e lo scarico dei caricatori</Italian>
             <Czech>Povolit nabíjení a vybíjení zásobníků.</Czech>
+            <Spanish>Permitir carga y descarga de cargadores</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
@@ -144,6 +153,7 @@
             <Chinese>互動時間係數</Chinese>
             <Italian>Coefficente per il tempo di interazione</Italian>
             <Czech>Koeficient času interakce</Czech>
+            <Spanish>Coheficiente de tiempo de interacción</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
@@ -153,6 +163,7 @@
             <Chinese>設置組裝及裝填組裝固定型武器</Chinese>
             <Italian>Tempo necessario per assemblare e ricaricare le armi statiche</Italian>
             <Czech>Škáluje čas potřebný ke skládání a přebíjení statických zbraní.</Czech>
+            <Spanish>Escala de tiempo requerida para ensamblar y recargar el arma estática</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_displayName">
             <English>Drag tripods after deploying</English>
@@ -162,6 +173,7 @@
             <Chinese>在佈置三腳架後拖拉</Chinese>
             <Italian>Trascinare i treppiedi dopo lo schieramento</Italian>
             <Czech>Tahat trojnožku po položení</Czech>
+            <Spanish>Arrastrar tripodes despues de desplegar</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_description">
             <English>After deploying a tripod, start dragging it to a precise location</English>
@@ -171,6 +183,7 @@
             <Chinese>在部署三腳架後，開始拖動它使其在你所要的精準位置</Chinese>
             <Italian>Dopo aver posizionato un treppiede, iniziate a trascinarlo in una posizione precisa</Italian>
             <Czech>Po položení trojnožky začít automaticky tahání pro lepší polohu.</Czech>
+            <Spanish>Después de desplegar un tripode, comenzar a arrastrar a la ubicación precisa</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
@@ -180,6 +193,7 @@
             <Chinese>撿起三腳架</Chinese>
             <Italian>Recupero treppiede</Italian>
             <Czech>Složit trojnožku</Czech>
+            <Spanish>Recoger tripode</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
@@ -189,6 +203,7 @@
             <Chinese>裝載武器</Chinese>
             <Italian>Montare l'arma</Italian>
             <Czech>Připevnit zbraň</Czech>
+            <Spanish>Montar arma</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>
@@ -198,6 +213,7 @@
             <Chinese>拆裝武器中...</Chinese>
             <Italian>Smontaggio arma...</Italian>
             <Czech>Rozkládám zbraň...</Czech>
+            <Spanish>Desensamblando pistola...</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
@@ -207,6 +223,7 @@
             <Chinese>組裝武器中...</Chinese>
             <Italian>Montaggio arma...</Italian>
             <Czech>Skládám zbraň...</Czech>
+            <Spanish>Ensamblando pistola</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_PickupTripod_progressBar">
             <English>Picking Up Tripod...</English>
@@ -216,6 +233,7 @@
             <Chinese>撿起三腳架...</Chinese>
             <Italian>Recupero treppiede...</Italian>
             <Czech>Zvedám trojnožku...</Czech>
+            <Spanish>Recogiendo tripode...</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
@@ -225,6 +243,7 @@
             <Chinese>部署三腳架...</Chinese>
             <Italian>Piazzare treppiede...</Italian>
             <Czech>Pokládám trojnožku...</Czech>
+            <Spanish>Ubicando tripode...</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW">
             <English>Enable CSW</English>
@@ -234,6 +253,7 @@
             <Chinese>啟用CSW(班用支援武器)</Chinese>
             <Italian>Attiva CSW</Italian>
             <Czech>Povolit posádkou obsluhované zbraně (CSW)</Czech>
+            <Spanish>Habilitar CSW</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW_tooltip">
             <English>Enables Crew Served ability on this weapon</English>
@@ -243,6 +263,7 @@
             <Chinese>對此武器啟用班組支援能力</Chinese>
             <Italian>Abilita l'abilità dell'equipaggio su quest'arma</Italian>
             <Czech>Zapne CSW funkce na této zbrani</Czech>
+            <Spanish>Habilita la habilidad de tripulación en esta arma</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableAndEmpty">
             <English>Enabled and Leave Weapon Empty</English>
@@ -252,6 +273,7 @@
             <Chinese>啟用並不裝填武器</Chinese>
             <Italian>Abilitato e lascia l'arma vuota</Italian>
             <Czech>Povolit a nechat zbraň prázdnou</Czech>
+            <Spanish>Habilitar y dejar el arma vacia</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_genericTripod_displayName">
             <English>Tripod</English>
