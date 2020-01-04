@@ -46,12 +46,12 @@ _patient setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
 // Handle the reopening of bandaged wounds
-if (_impact > 0 && {GVAR(advancedBandages) && {GVAR(woundReopening)}}) then {
+if (_impact > 0 && {GVAR(advancedBandages) == 2}) then {
     [_patient, _impact, _partIndex, _woundIndex, _wound, _bandage] call FUNC(handleBandageOpening);
 };
 
 // Check if we fixed limping from this treatment
-if ((EGVAR(medical,limping) == 1) && {_partIndex > 3} && {_amountOf <= 0} && {_patient getVariable [QEGVAR(medical,isLimping), false]}) then {
+if (EGVAR(medical,limping) == 1 && {_partIndex > 3} && {_amountOf <= 0} && {_patient getVariable [QEGVAR(medical,isLimping), false]}) then {
     [_patient] call EFUNC(medical_engine,updateDamageEffects);
 };
 

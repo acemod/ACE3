@@ -43,27 +43,6 @@
             <Italian>Abilita le azioni di controllo del polso, controllo della pressione sanguigna e controllo della risposta al trattamento invece dell'azione generica Diagnose.\ Se disabilitata, l'azione di RCP sarà mostrata solo quando l'esecuzione della RCP è appropriata.\Le azioni abilitate da questa impostazione sono necessarie per determinare se una persona è in stato di incoscienza o in arresto cardiaco.</Italian>
             <Czech>Povoluje kontrolu srdečního tepu, krevního tlaku a reakce pacienta namísto univerzální diagnózy.\nKdyž je tato možnost vypnuta, CPR akce bude dostupná pouze pokud je vhodné ji provést.\nAkce které tato možnost zapíná jsou nutné k určení zda je pacient v bezvědomí nebo má srdeční zástavu.</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
-            <English>Advanced Bandages</English>
-            <German>Erweiterte Bandagen</German>
-            <Japanese>アドバンスド包帯</Japanese>
-            <Russian>Расширенная Перевязка</Russian>
-            <French>Pansements avancés</French>
-            <Portuguese>Ataduras Avançadas</Portuguese>
-            <Chinese>進階包紮</Chinese>
-            <Italian>Bendaggi avanzati</Italian>
-            <Czech>Pokročilé obvazy</Czech>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
-            <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
-            <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
-            <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
-            <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
-            <Portuguese>Ativa o uso de tipos diferentes de ataduras ao invés de apenas a atadura básica.</Portuguese>
-            <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
-            <Italian>Permette azioni di trattamento per diversi tipi di bendaggio al posto del bendaggio generico.</Italian>
-            <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
             <German>Erweiterte Medikamente</German>
@@ -83,25 +62,29 @@
             <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
             <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
-            <English>Wound Reopening</English>
-            <Japanese>創傷再開放</Japanese>
-            <French>Réouverture des plaies</French>
-            <Russian>Повторное открытие ран</Russian>
-            <Portuguese>Reabrir Feridas</Portuguese>
-            <Chinese>傷口再度裂開</Chinese>
-            <Italian>Riapertura della ferita</Italian>
-            <Czech>Znovuotevření ran</Czech>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
+            <English>Advanced Bandages</English>
+            <German>Erweiterte Bandagen</German>
+            <Japanese>アドバンスド包帯</Japanese>
+            <Russian>Расширенная Перевязка</Russian>
+            <French>Pansements avancés</French>
+            <Portuguese>Ataduras Avançadas</Portuguese>
+            <Chinese>進階包紮</Chinese>
+            <Italian>Bendaggi avanzati</Italian>
+            <Czech>Pokročilé obvazy</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
-            <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
-            <Japanese>有効化すると治療をした創傷を再開放します。アドバンスド包帯を有効化している必要があります。</Japanese>
-            <French>Permet la réouverture des plaies pansées.\nNécessite que l'option "pansements avancés" soit activée.</French>
-            <Russian>Разрешает повторное открытие перевязанных ран. Требуются опция «Расширенная Перевязка».</Russian>
-            <Portuguese>Permite que ferimentos atados possam reabrir. Requer Ataduras Avançadas para funcionar.</Portuguese>
-            <Chinese>啟用包紮過的傷口是否會再度裂開。需要啟用「進階包紮」之功能。</Chinese>
-            <Czech>Povoluje znovuotevírání obvázaných zranění. Vyžaduje zapnuté Pokročilé obvazy.</Czech>
-            <Italian>Permette la riapertura delle ferite fasciate. Richiede l'abilitazione di Bende Avanzate.</Italian>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
+            <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
+            <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
+            <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
+            <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
+            <Portuguese>Ativa o uso de tipos diferentes de ataduras ao invés de apenas a atadura básica.</Portuguese>
+            <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
+            <Italian>Permette azioni di trattamento per diversi tipi di bendaggio al posto del bendaggio generico.</Italian>
+            <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_EnabledCanReopen">
+            <English>Enabled &amp; Can Reopen</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
