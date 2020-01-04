@@ -14,7 +14,6 @@
             <Russian>Зритель</Russian>
             <Portuguese>Espectador</Portuguese>
             <Czech>Divák</Czech>
-            <Turkish>İzleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -29,7 +28,6 @@
             <Russian>ACE Зритель</Russian>
             <Portuguese>ACE Espectador</Portuguese>
             <Czech>ACE Divák</Czech>
-            <Turkish>ACE İzleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -316,7 +314,6 @@
             <Russian>Иконки</Russian>
             <Portuguese>Ícones</Portuguese>
             <Czech>Ikony</Czech>
-            <Turkish>İkonlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
