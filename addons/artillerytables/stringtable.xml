@@ -9,7 +9,7 @@
             <Japanese>火砲射程</Japanese>
             <French>Table de tir d'artillerie</French>
             <Portuguese>Tabela de Artilharia</Portuguese>
-            <Spanish>Tabla de dsitancias de artillería</Spanish>
+            <Spanish>Tabla de distancias de artillería</Spanish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
@@ -19,7 +19,7 @@
             <Japanese>汎用の火砲用射程表</Japanese>
             <French>Table de tir universelle pour l'artillerie.</French>
             <Portuguese>Tabela de Artilharia Universal</Portuguese>
-            <Spanish>Tabla de dsitancias universal de artillería</Spanish>
+            <Spanish>Tabla de distancias universal de artillería</Spanish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -61,7 +61,7 @@
             <Japanese>砲撃コンピュータ無効化</Japanese>
             <French>Désactiver l'ordinateur de tir</French>
             <Portuguese>Computador de Artilharia Desabilitado</Portuguese>
-            <Spanish>Computador de artillería deshabilitado</Spanish>
+            <Spanish>Computadora de artillería deshabilitada</Spanish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
@@ -71,7 +71,7 @@
             <Japanese>ゲームの砲撃コンピュータを無効化します。</Japanese>
             <French>Désactive l'ordinateur de tir vanilla.</French>
             <Portuguese>Desabilitar o computador de artilharia padrão</Portuguese>
-            <Spanish>Deshabilita el computador de artillería por defecto de Arma3</Spanish>
+            <Spanish>Deshabilita la computadora de artillería por defecto de Arma 3</Spanish>
         </Key>
     </Package>
 </Project>
