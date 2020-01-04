@@ -150,7 +150,6 @@
             <Korean>취소</Korean>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
-            <Turkish>İptal Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_ScrollAction">
             <English>Rotate</English>
@@ -315,7 +314,6 @@
             <Korean>해체 장비</Korean>
             <Chinesesimp>拆弹工具</Chinesesimp>
             <Chinese>拆彈工具</Chinese>
-            <Turkish>Bomba İmha Kiti</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusalKit_description">
             <English>Allows defusing of explosives</English>
@@ -431,7 +429,6 @@
             <Korean>취소</Korean>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
-            <Turkish>İptal et</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateMenu">
             <English>Detonate Menu</English>
@@ -480,7 +477,6 @@
             <Korean>해체</Korean>
             <Chinesesimp>拆除</Chinesesimp>
             <Chinese>拆除</Chinese>
-            <Turkish>İmha et</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusingExplosive">
             <English>Defusing Explosive...</English>
@@ -497,7 +493,6 @@
             <Korean>폭발물 해체중...</Korean>
             <Chinesesimp>炸弹拆除中...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
-            <Turkish>Patlayıcı İmha Ediliyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_timerName">
             <English>Timer</English>
