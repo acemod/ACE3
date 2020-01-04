@@ -14,6 +14,7 @@
             <Portuguese>Prisioneiros</Portuguese>
             <French>Prisonniers</French>
             <Czech>Zajatci</Czech>
+            <Spanish>Prisioneros</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
@@ -82,7 +83,7 @@
         <Key ID="STR_ACE_Captives_NoCaptive">
             <English>You need to take him as prisoner first!</English>
             <German>Du musst ihn zuerst gefangen nehmen.</German>
-            <Spanish>Necesitas hacerle prisionero primero!</Spanish>
+            <Spanish>Necesitas tomarlo como prisionero primero!</Spanish>
             <Polish>Najpierw musisz go aresztować!</Polish>
             <French>Vous devez d'abord le capturer !</French>
             <Czech>Musíš ho nejdříve zajmout!</Czech>
@@ -422,6 +423,7 @@
             <Portuguese>Requer rendição da IA</Portuguese>
             <French>Requiert la reddition de l'IA</French>
             <Czech>Vyžadovat, aby se AI prvně vzdala</Czech>
+            <Spanish>Requiere rendición de la IA</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
@@ -436,6 +438,7 @@
             <Portuguese>Requer que a IA se renda antes que seja presa</Portuguese>
             <French>Requiert la capitulation des unités IA avant qu'elles ne puissent être arrêtées.</French>
             <Czech>Vyžadovat, aby se AI prvně vzdala před umožněním zajetí</Czech>
+            <Spanish>Requiere rendicion de la IA antes de poder ser arrestada</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
@@ -450,6 +453,7 @@
             <Portuguese>Torna a unidade sob o cursor um prisioneiro</Portuguese>
             <French>Capture l'unité sous le curseur.</French>
             <Czech>Nastaví jednotku pod kurzorem jako zajatce.</Czech>
+            <Spanish>Establece a la unidad bajo el cursos como prisionero</Spanish>
         </Key>
     </Package>
 </Project>
