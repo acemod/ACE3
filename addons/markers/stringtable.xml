@@ -31,7 +31,6 @@
             <Portuguese>Marcadores</Portuguese>
             <French>Marqueurs</French>
             <Czech>Značky</Czech>
-            <Turkish>İşaretleyiciler</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
