@@ -453,7 +453,6 @@
             <Korean>취소</Korean>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
-            <Turkish>İptal et</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_MakeSelection">
             <English>Select</English>
@@ -520,7 +519,6 @@
             <Chinesesimp>出去</Chinesesimp>
             <Chinese>出去</Chinese>
             <Portuguese>Saia!</Portuguese>
-            <Turkish>İn!</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -893,7 +891,6 @@
             <Korean>밀기</Korean>
             <Chinesesimp>推</Chinesesimp>
             <Chinese>推</Chinese>
-            <Turkish>İt</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Flip">
             <English>Flip</English>
