@@ -413,6 +413,7 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapali</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>

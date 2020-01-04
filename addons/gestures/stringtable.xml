@@ -16,6 +16,7 @@
             <Korean>ACE 수신호</Korean>
             <Chinesesimp>ACE 手势</Chinesesimp>
             <Chinese>ACE 手勢</Chinese>
+            <Turkish>ACE Hareketleri</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Name">
             <English>ACE Gestures</English>
@@ -32,6 +33,7 @@
             <Korean>ACE 수신호</Korean>
             <Chinesesimp>ACE 手势</Chinesesimp>
             <Chinese>ACE 手勢</Chinese>
+            <Turkish>ACE Hareketleri</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Gestures">
             <English>Gestures</English>
@@ -48,6 +50,7 @@
             <Korean>수신호</Korean>
             <Chinesesimp>手势</Chinesesimp>
             <Chinese>手勢</Chinese>
+            <Turkish>Hareketler</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Advance">
             <English>Advance</English>
@@ -80,6 +83,7 @@
             <Korean>이동</Korean>
             <Chinesesimp>出发</Chinesesimp>
             <Chinese>出發</Chinese>
+            <Turkish>Git</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Follow">
             <English>Follow</English>
@@ -96,6 +100,7 @@
             <Korean>따라올것</Korean>
             <Chinesesimp>跟进</Chinesesimp>
             <Chinese>跟進</Chinese>
+            <Turkish>Takip Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Up">
             <English>Up</English>
@@ -128,6 +133,7 @@
             <Korean>사격 중지</Korean>
             <Chinesesimp>停火</Chinesesimp>
             <Chinese>停火</Chinese>
+            <Turkish>Ateşi durdur</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Stop">
             <English>Stop</English>
@@ -143,6 +149,7 @@
             <Korean>멈춰</Korean>
             <Chinesesimp>停止</Chinesesimp>
             <Chinese>停止</Chinese>
+            <Turkish>Dur</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Freeze">
             <English>Freeze</English>
@@ -159,6 +166,7 @@
             <Korean>정지</Korean>
             <Chinesesimp>不准动</Chinesesimp>
             <Chinese>不准動</Chinese>
+            <Turkish>Don</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Cover">
             <English>Cover</English>
@@ -190,6 +198,7 @@
             <Korean>집결</Korean>
             <Chinesesimp>集合</Chinesesimp>
             <Chinese>集合</Chinese>
+            <Turkish>Toplan</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Forward">
             <English>Move forward</English>
@@ -205,6 +214,7 @@
             <Korean>앞으로 이동</Korean>
             <Chinesesimp>往前走</Chinesesimp>
             <Chinese>往前走</Chinese>
+            <Turkish>İleri git</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Engage">
             <English>Engage</English>
@@ -220,6 +230,7 @@
             <Korean>교전할것</Korean>
             <Chinesesimp>交战</Chinesesimp>
             <Chinese>交戰</Chinese>
+            <Turkish>Tut</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Point">
             <English>Point</English>
@@ -250,6 +261,7 @@
             <Korean>기다려</Korean>
             <Chinesesimp>停住</Chinesesimp>
             <Chinese>停住</Chinese>
+            <Turkish>Dur</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Warning">
             <English>Warning</English>
@@ -265,6 +277,7 @@
             <Korean>주의</Korean>
             <Chinesesimp>警告</Chinesesimp>
             <Chinese>警告</Chinese>
+            <Turkish>Uyarı</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>

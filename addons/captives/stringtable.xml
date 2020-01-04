@@ -14,6 +14,7 @@
             <Portuguese>Prisioneiros</Portuguese>
             <French>Prisonniers</French>
             <Czech>Zajatci</Czech>
+            <Turkish>Tutsaklar</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
@@ -30,6 +31,7 @@
             <Korean>포박하기</Korean>
             <Chinese>逮捕俘虜</Chinese>
             <Chinesesimp>逮捕俘虏</Chinesesimp>
+            <Turkish>Kelepçele</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_ReleaseCaptive">
             <English>Free Prisoner</English>
@@ -46,6 +48,7 @@
             <Korean>풀어주기</Korean>
             <Chinese>釋放俘虜</Chinese>
             <Chinesesimp>释放俘虏</Chinesesimp>
+            <Turkish>Serbest bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_EscortCaptive">
             <English>Escort Prisoner</English>
@@ -62,6 +65,7 @@
             <Korean>포로 호송하기</Korean>
             <Chinese>護送俘虜</Chinese>
             <Chinesesimp>护送俘虏</Chinesesimp>
+            <Turkish>Taşı</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_StopEscorting">
             <English>Release Prisoner</English>
@@ -78,6 +82,7 @@
             <Korean>포로 풀어주기</Korean>
             <Chinese>停止護送俘虜</Chinese>
             <Chinesesimp>停止护送俘虏</Chinesesimp>
+            <Turkish>Taşımayı bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_NoCaptive">
             <English>You need to take him as prisoner first!</English>
@@ -94,6 +99,7 @@
             <Korean>먼저 포로로 만들어야합니다!</Korean>
             <Chinese>你必須先逮捕他!</Chinese>
             <Chinesesimp>你必须先逮捕他!</Chinesesimp>
+            <Turkish>Önce onu tutuklamalısın!</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_LoadCaptive">
             <English>Load Captive</English>
@@ -110,6 +116,7 @@
             <Korean>포로 태우기</Korean>
             <Chinese>將俘虜放入載具</Chinese>
             <Chinesesimp>将俘虏放入载具</Chinesesimp>
+            <Turkish>Tutukluyu bindir/yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_UnloadCaptive">
             <English>Unload Captive</English>
@@ -126,6 +133,7 @@
             <Korean>포로 내리기</Korean>
             <Chinese>將俘虜帶出載具</Chinese>
             <Chinesesimp>将俘虏带出载具</Chinesesimp>
+            <Turkish>Tutukluyu indir/boşalt</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -142,6 +150,7 @@
             <Korean>케이블 타이</Korean>
             <Chinese>束線帶</Chinese>
             <Chinesesimp>束线带</Chinesesimp>
+            <Turkish>Kelepçe</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_CableTieDescription">
             <English>Cable ties that allow you to restrain prisoners.</English>
@@ -174,6 +183,7 @@
             <Korean>투항</Korean>
             <Chinese>投降</Chinese>
             <Chinesesimp>投降</Chinesesimp>
+            <Turkish>Teslim ol</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_StopSurrendering">
             <English>Stop Surrendering</English>
@@ -190,6 +200,7 @@
             <Korean>투항하는것을 멈춤</Korean>
             <Chinese>停止投降</Chinese>
             <Chinesesimp>停止投降</Chinesesimp>
+            <Turkish>Teslim olmayı durdur</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_DisplayName">
             <English>Make Unit Surrender</English>

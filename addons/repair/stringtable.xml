@@ -16,6 +16,7 @@
             <Korean>예비 궤도</Korean>
             <Chinesesimp>备用履带</Chinesesimp>
             <Chinese>備用履帶</Chinese>
+            <Turkish>Yedek Parça</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_SpareWheel">
             <English>Spare Wheel</English>
@@ -32,6 +33,7 @@
             <Korean>예비 바퀴</Korean>
             <Chinesesimp>备用轮胎</Chinesesimp>
             <Chinese>備用輪胎</Chinese>
+            <Turkish>Yedek Tekerlek</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceWheel">
             <English>Change Wheel</English>
@@ -48,6 +50,7 @@
             <Korean>바퀴 교체</Korean>
             <Chinesesimp>更换轮胎</Chinesesimp>
             <Chinese>更換輪胎</Chinese>
+            <Turkish>Tekerleği Değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingWheel">
             <English>Replacing Wheel...</English>
@@ -63,6 +66,7 @@
             <Korean>바퀴 교체중...</Korean>
             <Chinesesimp>更换轮胎中...</Chinesesimp>
             <Chinese>更換輪胎中...</Chinese>
+            <Turkish>Tekerlek Takılıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedWheel">
             <English>Wheel replaced</English>
@@ -78,6 +82,7 @@
             <Korean>바퀴 교체됨</Korean>
             <Chinesesimp>轮胎更换完毕</Chinesesimp>
             <Chinese>輪胎更換完畢</Chinese>
+            <Turkish>Tekerlek Takıldı</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveWheel">
             <English>Remove Wheel</English>
@@ -94,6 +99,7 @@
             <Korean>바퀴 제거</Korean>
             <Chinesesimp>卸下轮胎</Chinesesimp>
             <Chinese>卸下輪胎</Chinese>
+            <Turkish>Tekerleği Sök</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingWheel">
             <English>Removing Wheel...</English>
@@ -109,6 +115,7 @@
             <Korean>바퀴 제거중...</Korean>
             <Chinesesimp>卸下轮胎中...</Chinesesimp>
             <Chinese>卸下輪胎中...</Chinese>
+            <Turkish>Tekerlek Sökülüyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedWheel">
             <English>Wheel removed</English>
@@ -124,6 +131,7 @@
             <Korean>바퀴 제거됨</Korean>
             <Chinesesimp>轮胎卸下完毕</Chinesesimp>
             <Chinese>輪胎卸下完畢</Chinese>
+            <Turkish>Tekerlek Söküldü</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceTrack">
             <English>Change Track</English>
@@ -139,6 +147,7 @@
             <Korean>궤도 교체</Korean>
             <Chinesesimp>更换履带</Chinesesimp>
             <Chinese>更換履帶</Chinese>
+            <Turkish>Parçayı Değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingTrack">
             <English>Replacing Track...</English>
@@ -154,6 +163,7 @@
             <Korean>궤도 교체중...</Korean>
             <Chinesesimp>更换履带中...</Chinesesimp>
             <Chinese>更換履帶中...</Chinese>
+            <Turkish>Parça Değişiyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedTrack">
             <English>Track replaced</English>
@@ -169,6 +179,7 @@
             <Korean>궤도 교체됨</Korean>
             <Chinesesimp>履带更换完毕</Chinesesimp>
             <Chinese>履帶更換完畢</Chinese>
+            <Turkish>Parça Değişti</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveTrack">
             <English>Remove Track</English>
@@ -184,6 +195,7 @@
             <Korean>궤도 제거</Korean>
             <Chinesesimp>卸下履带</Chinesesimp>
             <Chinese>卸下履帶</Chinese>
+            <Turkish>Parçayı Sök</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingTrack">
             <English>Removing Track...</English>
@@ -199,6 +211,7 @@
             <Korean>궤도 제거중...</Korean>
             <Chinesesimp>卸下履带中...</Chinesesimp>
             <Chinese>卸下履帶中...</Chinese>
+            <Turkish>Parça Sökülüyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedTrack">
             <English>Track removed</English>
@@ -214,6 +227,7 @@
             <Korean>궤도 제거됨</Korean>
             <Chinesesimp>履带卸下完毕</Chinesesimp>
             <Chinese>履帶卸下完畢</Chinese>
+            <Turkish>Parça Söküldü</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepair">
             <English>Full Repair</English>
@@ -244,6 +258,7 @@
             <Korean>차량 수리중...</Korean>
             <Chinesesimp>维修载具中...</Chinesesimp>
             <Chinese>維修載具中...</Chinese>
+            <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
@@ -350,6 +365,7 @@
             <Korean>수리</Korean>
             <Chinesesimp>维修</Chinesesimp>
             <Chinese>維修</Chinese>
+            <Turkish>Tamir</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextName">
             <English>Display text on repair</English>
@@ -396,6 +412,7 @@
             <Korean>수리중...</Korean>
             <Chinesesimp>维修中...</Chinesesimp>
             <Chinese>維修中...</Chinese>
+            <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_RepairingHitPoint">
             <English>Repairing %1...</English>
@@ -412,6 +429,7 @@
             <Korean>%1 수리중...</Korean>
             <Chinesesimp>维修%1中...</Chinesesimp>
             <Chinese>維修%1中...</Chinese>
+            <Turkish>Tamir Ediliyor %1...</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_Repaired">
             <English>Repaired %1</English>
@@ -428,6 +446,7 @@
             <Korean>%1 수리됨</Korean>
             <Chinesesimp>已维修%1</Chinesesimp>
             <Chinese>已維修%1</Chinese>
+            <Turkish>Tamir Edildi %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedFully">
             <English>Fully repaired part</English>
@@ -504,6 +523,7 @@
             <Korean>몸체</Korean>
             <Chinesesimp>车身</Chinesesimp>
             <Chinese>車身</Chinese>
+            <Turkish>Vücut</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitHull">
             <English>Hull</English>
@@ -520,6 +540,7 @@
             <Korean>선체</Korean>
             <Chinesesimp>车壳</Chinesesimp>
             <Chinese>車殼</Chinese>
+            <Turkish>Gövde</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitEngine">
             <English>Engine</English>
@@ -536,6 +557,7 @@
             <Korean>엔진</Korean>
             <Chinesesimp>引擎</Chinesesimp>
             <Chinese>引擎</Chinese>
+            <Turkish>Motor</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerL1">
             <English>Left Horizontal Stabilizer</English>
@@ -597,6 +619,7 @@
             <Korean>연료 탱크</Korean>
             <Chinesesimp>油箱</Chinesesimp>
             <Chinese>油箱</Chinese>
+            <Turkish>Yakıt Tankeri</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitTransmission">
             <English>Transmission</English>
@@ -612,6 +635,7 @@
             <Korean>변속기</Korean>
             <Chinesesimp>变速箱</Chinesesimp>
             <Chinese>變速箱</Chinese>
+            <Turkish>Vites</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitGear">
             <English>Gear</English>
@@ -627,6 +651,7 @@
             <Korean>기어</Korean>
             <Chinesesimp>齿轮</Chinesesimp>
             <Chinese>齒輪</Chinese>
+            <Turkish>Vites</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitStarter">
             <English>Starter</English>
@@ -642,6 +667,7 @@
             <Korean>점화기</Korean>
             <Chinesesimp>发动机</Chinesesimp>
             <Chinese>發動機</Chinese>
+            <Turkish>Marş</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitTail">
             <English>Tail</English>
@@ -657,6 +683,7 @@
             <Korean>꼬리</Korean>
             <Chinesesimp>尾翼</Chinesesimp>
             <Chinese>尾翼</Chinese>
+            <Turkish>Kuyruk</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitPitotTube">
             <English>Pitot Tube</English>
@@ -672,6 +699,7 @@
             <Korean>동압관</Korean>
             <Chinesesimp>空速管</Chinesesimp>
             <Chinese>空速管</Chinese>
+            <Turkish>Pilot Tüpü</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
@@ -702,6 +730,7 @@
             <Korean>탄약</Korean>
             <Chinesesimp>弹药</Chinesesimp>
             <Chinese>彈藥</Chinese>
+            <Turkish>Cephane</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
             <English>Turret</English>
@@ -718,6 +747,7 @@
             <Korean>포탑</Korean>
             <Chinesesimp>炮塔</Chinesesimp>
             <Chinese>砲塔</Chinese>
+            <Turkish>Taret</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitGun">
             <English>Gun</English>
@@ -734,6 +764,7 @@
             <Korean>포</Korean>
             <Chinesesimp>枪</Chinesesimp>
             <Chinese>槍</Chinese>
+            <Turkish>Silah</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitComTurret">
             <English>Commander Turret</English>
@@ -750,6 +781,7 @@
             <Korean>지휘관 포탑</Korean>
             <Chinesesimp>指挥官 炮塔</Chinesesimp>
             <Chinese>指揮官 砲塔</Chinese>
+            <Turkish>Komutan Tareti</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitComGun">
             <English>Commander Gun</English>
@@ -766,6 +798,7 @@
             <Korean>지휘관 포</Korean>
             <Chinesesimp>指挥官 枪</Chinesesimp>
             <Chinese>指揮官 槍</Chinese>
+            <Turkish>Komutan Silahı</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
@@ -781,6 +814,7 @@
             <Korean>미사일</Korean>
             <Chinesesimp>导弹</Chinesesimp>
             <Chinese>導彈</Chinese>
+            <Turkish>Füzeler</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
@@ -973,6 +1007,7 @@
             <Korean>주 로터</Korean>
             <Chinesesimp>主旋翼</Chinesesimp>
             <Chinese>主旋翼</Chinese>
+            <Turkish>Ana Rotor</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitVRotor">
             <English>Tail Rotor</English>
@@ -989,6 +1024,7 @@
             <Korean>꼬리 로터</Korean>
             <Chinesesimp>尾桨</Chinesesimp>
             <Chinese>尾槳</Chinese>
+            <Turkish>Arka Rotor</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitWinch">
             <English>Winch</English>
@@ -1004,6 +1040,7 @@
             <Korean>윈치</Korean>
             <Chinesesimp>绞盘</Chinesesimp>
             <Chinese>絞盤</Chinese>
+            <Turkish>Vinç</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitRGlass">
             <English>Glass (right)</English>
@@ -1020,6 +1057,7 @@
             <Korean>유리 (오른쪽)</Korean>
             <Chinesesimp>玻璃 (右)</Chinesesimp>
             <Chinese>玻璃 (右)</Chinese>
+            <Turkish>Cam(Sağ)</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitLGlass">
             <English>Glass (left)</English>
@@ -1036,6 +1074,7 @@
             <Korean>유리 (왼쪽)</Korean>
             <Chinesesimp>玻璃 (左)</Chinesesimp>
             <Chinese>玻璃 (左)</Chinese>
+            <Turkish>Cam (sol)</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitGlass">
             <English>Glass</English>
@@ -1052,6 +1091,7 @@
             <Korean>유리</Korean>
             <Chinesesimp>玻璃</Chinesesimp>
             <Chinese>玻璃</Chinese>
+            <Turkish>Cam</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_Hitera_1_hitpoint">
             <English>ERA</English>
@@ -1112,6 +1152,7 @@
             <Korean>모두</Korean>
             <Chinesesimp>任何人</Chinesesimp>
             <Chinese>任何人</Chinese>
+            <Turkish>Herkes</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
             <English>Engineer only</English>
@@ -1127,6 +1168,7 @@
             <Korean>오직 정비공만</Korean>
             <Chinesesimp>只有工兵</Chinesesimp>
             <Chinese>只有工兵</Chinese>
+            <Turkish>Sadece Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
@@ -1142,6 +1184,7 @@
             <French>Ing. avancés uniquement</French>
             <Czech>Pouze pokročilý inženýr</Czech>
             <Spanish>Solo ingeniero avanzado</Spanish>
+            <Turkish>Sadece Gelişmiş Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_name">
             <English>Allow Wheel</English>

@@ -9,6 +9,7 @@
             <Chinese>[CSW] M47龍式</Chinese>
             <Italian>[CSW] M47 Super-Dragon</Italian>
             <Czech>[CSW] M47 Super-Dragon</Czech>
+            <Turkish>[CSW] M47 Super-Dragon</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
@@ -18,6 +19,7 @@
             <Chinese>M47 龍式</Chinese>
             <Italian>M47 Super-Dragon</Italian>
             <Czech>M47 Super-Dragon</Czech>
+            <Turkish>M47 Super-Dragon</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragon_attachSight">
             <English>Attach Sight</English>
@@ -45,6 +47,7 @@
             <Chinese>SU-36/P 日間瞄具</Chinese>
             <Italian>SU-36/P Daysight</Italian>
             <Czech>SU-36/P denní puškohled</Czech>
+            <Turkish>SU-36/P Daysight</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>

@@ -68,6 +68,7 @@
             <Korean>장탄수 확인</Korean>
             <Chinesesimp>检查弹药</Chinesesimp>
             <Chinese>檢查彈藥</Chinese>
+            <Turkish>Cephaneni Kontrol Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Reload_Ammo">
             <English>Ammo</English>
@@ -84,6 +85,7 @@
             <Korean>장탄수</Korean>
             <Chinesesimp>弹药</Chinesesimp>
             <Chinese>彈藥</Chinese>
+            <Turkish>Cephane</Turkish>
         </Key>
         <Key ID="STR_ACE_Reload_LinkBelt">
             <English>Link belt</English>
