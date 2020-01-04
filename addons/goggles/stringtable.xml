@@ -118,6 +118,7 @@
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
+            <German>Zeige Brille abwischen Selbstinteraktion</German>
         </Key>
     </Package>
 </Project>

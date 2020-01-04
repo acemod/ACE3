@@ -137,6 +137,7 @@
             <Chinese>[Shift+左鍵來保存至任務預設]</Chinese>
             <Italian>[Shift+Click per salvare la missione con gli equipaggiamenti predefiniti]</Italian>
             <Czech>[Shift+Klik pro uložení jako standardního vybavení pro misi]</Czech>
+            <German>[Shift+Click um als Missionvorgabe zu speichern]</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
             <English>Rename</English>
@@ -701,7 +702,7 @@
         <Key ID="STR_ACE_Arsenal_settingCategory">
             <English>ACE Arsenal</English>
             <French>ACE Arsenal</French>
-            <German>ACE-Arsenal</German>
+            <German>ACE Arsenal</German>
             <Polish>ACE Arsenał</Polish>
             <Japanese>ACE 武器庫</Japanese>
             <Italian>ACE Arsenale</Italian>
@@ -771,7 +772,7 @@
         <Key ID="STR_ACE_Arsenal_CantOpenDisplay">
             <English>Unable to open ACE arsenal</English>
             <French>Impossible d'ouvrir l'arsenal ACE.</French>
-            <German>Kann ACE-Arsenal nicht anzeigen</German>
+            <German>Kann ACE Arsenal nicht anzeigen</German>
             <Italian>Impossibile aprire l'arsenale ACE</Italian>
             <Japanese>ACE 武器庫を開けません</Japanese>
             <Korean>ACE 아스날을 열 수 없음</Korean>
@@ -785,7 +786,7 @@
         <Key ID="STR_ACE_Arsenal_portLoadoutsText">
             <English>Import BI VA loadouts to ACE Arsenal</English>
             <French>Importer les sets BI VA dans l'arsenal ACE</French>
-            <German>Importiert die BI-VA-Ausrüstungen in das ACE-Arsenal</German>
+            <German>Importiert die BI-VA-Ausrüstungen in das ACE Arsenal</German>
             <Japanese>標準の VA 装備から ACE 武器庫へ取り込み</Japanese>
             <Korean>바닐라 로드아웃을 ace 아스날로 가져오기</Korean>
             <Chinese>匯入BI原廠虛擬軍火庫的裝備到ACE虛擬軍火庫中</Chinese>
@@ -826,7 +827,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission">
             <English>ACE Arsenal</English>
-            <German>ACE-Arsenal</German>
+            <German>ACE Arsenal</German>
             <Japanese>ACE 武器庫</Japanese>
             <Korean>ACE 아스날</Korean>
             <Chinese>ACE虛擬軍火庫</Chinese>
@@ -840,7 +841,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_ReturnToArsenal">
             <English>Return to ACE Arsenal.</English>
-            <German>Zurück zum ACE-Arsenal.</German>
+            <German>Zurück zum ACE Arsenal.</German>
             <Japanese>ACE 武器庫へ戻ります。</Japanese>
             <Korean>ACE 아스날로 돌아가기</Korean>
             <Chinese>返回到ACE虛擬軍火庫</Chinese>
@@ -854,7 +855,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission_tooltip">
             <English>Use ACE Arsenal to try out different weapons and equipment.</English>
-            <German>Verwende ACE-Arsenal und sieh dir verschiedene Waffen und Ausrüstung an und probiere sie aus.</German>
+            <German>Verwende ACE Arsenal und sieh dir verschiedene Waffen und Ausrüstung an und probiere sie aus.</German>
             <Japanese>様々な武器と装備を試せるよう ACE 武器庫を使用します。</Japanese>
             <Korean>ACE Arsenal을 사용하여 다른 무기와 장비를 시험해보십시오.</Korean>
             <Chinese>使用ACE虛擬軍火庫來嘗試不同的武器與裝備</Chinese>
@@ -930,6 +931,7 @@
             <Russian>Уровень Калия</Russian>
             <Portuguese>Níveis de Potássio</Portuguese>
             <Czech>Úrovně draslíku</Czech>
+            <German>Kaliumniveau</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
             <English>Magnification</English>

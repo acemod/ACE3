@@ -415,6 +415,7 @@
             <Chinese>類型：星式帶傘照明彈</Chinese>
             <French>Type : Fusée éclairante à parachute</French>
             <Czech>Typ: Světlice s padákem</Czech>
+            <German>Typ: Fallschirm Stern-Leuchtkugel</German>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
@@ -426,6 +427,7 @@
             <Chinese>M583 照明彈（白色）</Chinese>
             <French>M583 Fusée éclairante (Blanche)</French>
             <Czech>M583 Světlice (Bílá)</Czech>
+            <German>M583 Weisse Leuchtmunition</German>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
@@ -437,6 +439,7 @@
             <Chinese>M662 照明彈（紅色）</Chinese>
             <French>M662 Fusée éclairante (Rouge)</French>
             <Czech>M662 Světlice (Červená)</Czech>
+            <German>M662 Rote Leuchtmunition</German>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
@@ -448,6 +451,7 @@
             <Chinese>M661 照明彈（綠色）</Chinese>
             <French>M661 Fusée éclairante (Verte)</French>
             <Czech>M661 Světlice (Zelená)</Czech>
+            <German>M661 Grüne Leuchtmunition</German>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
@@ -459,6 +463,7 @@
             <Chinese>類型：帶傘型紅外線照明彈</Chinese>
             <French>Type : Fusée IR à parachute</French>
             <Czech>Typ: Infračervená světlice s padákem</Czech>
+            <German>Typ: Fallschirm IR-Leuchtkugel</German>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
@@ -470,6 +475,7 @@
             <Chinese>M992 紅外線照明彈</Chinese>
             <French>M992 Fusée IR</French>
             <Czech>M992 Infračervená světlice</Czech>
+            <German>M992 IR Leuchtmunition</German>
         </Key>
     </Package>
 </Project>

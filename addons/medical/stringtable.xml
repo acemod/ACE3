@@ -6,7 +6,7 @@
             <Russian>ACE: медицина</Russian>
             <Polish>ACE Opcje medyczne</Polish>
             <Spanish>Médico ACE</Spanish>
-            <German>ACE-Medicsystem</German>
+            <German>ACE Medicsystem</German>
             <Czech>ACE Zdravotnické</Czech>
             <Portuguese>ACE Médico</Portuguese>
             <French>ACE Médical</French>
@@ -50,6 +50,7 @@
             <Czech>Epinefrin zvyšuje šanci na probuzení</Czech>
             <Portuguese>Epinefrina Aumenta a chance de acordar</Portuguese>
             <Spanish>Epinefrina, aumenta la posibilidad de despertar</Spanish>
+            <German>Epiniphrin vergrössert die Wahrscheinlichkeit von Aufwachen</German>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -60,6 +61,7 @@
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
+            <German>Vergrössert die Wahrscheinlichkeit von spontanem Aufwachen, wenn der Patient Epiniphrin in seinem Blutkreislauf hat.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -71,6 +73,7 @@
             <Italian>Zoppicare</Italian>
             <Czech>Kulhání</Czech>
             <Spanish>Cojera</Spanish>
+            <German>Hinken</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -81,6 +84,7 @@
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
             <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
+            <German>Reguliert ob offene oder verbundene Wunden Hinken verursacht.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -92,6 +96,7 @@
             <Italian>Zoppo per via delle ferite aperte</Italian>
             <Czech>Kulhat s otevřeným zraněním</Czech>
             <Spanish>Cojera en heridas abiertas</Spanish>
+            <German>Hinken mit offenen Wunden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -103,6 +108,7 @@
             <Italian>Zoppicare su ferite aperte o bendate</Italian>
             <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
             <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
+            <German>Hinken mit offenen oder verbundenen Wunden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -114,6 +120,7 @@
             <Italian>Fratture</Italian>
             <Czech>Zlomeniny</Czech>
             <Spanish>Fracturas</Spanish>
+            <German>Brüche</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
@@ -124,6 +131,7 @@
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
+            <German>Reguliert wie wirksam Schienen sind. \nWenn deaktiviert, verursachen Verletzungen keine Brüche.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -135,6 +143,7 @@
             <Italian>Le gessature curano al massimo le fratture</Italian>
             <Czech>Dlahy kompletně léčí zlomeniny</Czech>
             <Spanish>Férulas sanan completamente las fracturas</Spanish>
+            <German>Schienen heilen Brüche völlig</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -146,6 +155,7 @@
             <Italian>Le gessature curano, ma non puoi correre</Italian>
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
+            <German>Schienen heilen, aber verhindern sprinten</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>

@@ -10,6 +10,7 @@
             <French>Chevrotine #00</French>
             <Czech>#00 Broky velké</Czech>
             <Portuguese>#00 Chumbo</Portuguese>
+            <German>#00 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
@@ -19,6 +20,7 @@
             <French>Chevrotine #00</French>
             <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
             <Portuguese>#00 Chumbo</Portuguese>
+            <German>#00 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
@@ -28,6 +30,7 @@
             <French>Chevrotine #0</French>
             <Czech>#0 Broky velké</Czech>
             <Portuguese>#0 Chumbo</Portuguese>
+            <German>#0 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
@@ -37,6 +40,7 @@
             <French>Chevrotine #0</French>
             <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
             <Portuguese>#0 Chumbo</Portuguese>
+            <German>#0 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
@@ -46,6 +50,7 @@
             <French>Chevrotine #1</French>
             <Czech>#1 Broky velké</Czech>
             <Portuguese>#1 Chumbo</Portuguese>
+            <German>#1 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
@@ -55,6 +60,7 @@
             <French>Chevrotine #1</French>
             <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
             <Portuguese>#1 Chumbo</Portuguese>
+            <German>#1 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
@@ -64,6 +70,7 @@
             <French>Chevrotine #2</French>
             <Czech>#2 Broky velké</Czech>
             <Portuguese>#2 Chumbo</Portuguese>
+            <German>#2 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
@@ -73,6 +80,7 @@
             <French>Chevrotine #2</French>
             <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
             <Portuguese>#2 Chumbo</Portuguese>
+            <German>#2 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
@@ -82,6 +90,7 @@
             <French>Chevrotine #3</French>
             <Czech>#3 Broky velké</Czech>
             <Portuguese>#3 Chumbo</Portuguese>
+            <German>#3 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
@@ -91,6 +100,7 @@
             <French>Chevrotine #3</French>
             <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
             <Portuguese>#3 Chumbo</Portuguese>
+            <German>#3 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
@@ -100,6 +110,7 @@
             <French>Chevrotine #4</French>
             <Czech>#4 Broky velké</Czech>
             <Portuguese>#4 Chumbo</Portuguese>
+            <German>#4 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
@@ -109,6 +120,7 @@
             <French>Chevrotine #4</French>
             <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
             <Portuguese>#4 Chumbo</Portuguese>
+            <German>#4 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>
@@ -117,6 +129,7 @@
             <Japanese>#7 バックショット</Japanese>
             <French>Grenaille No.4</French>
             <Czech>#7 Broky malé</Czech>
+            <German>#7 Vogeldunst</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
             <English>#7 Birdshot</English>
@@ -125,6 +138,7 @@
             <Japanese>#7 バックショット</Japanese>
             <French>Grenaille No.4</French>
             <Czech>#7 Broky malé - kalibr 2.54 mm</Czech>
+            <German>#7 Vogeldunst</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
@@ -134,6 +148,7 @@
             <French>2 balles cal. 12 Chevrotine #00</French>
             <Czech>2x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Portuguese>Chumbo #00 Calibre Doze 2 Tiros</Portuguese>
+            <German>Kaliber 12 2-Schuss #00 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 2Rnd #0 Buckshot</English>
@@ -143,6 +158,7 @@
             <French>2 balles cal. 12 Chevrotine #0</French>
             <Czech>2x #0 Broky velké (kalibr 8.1 mm)</Czech>
             <Portuguese>Chumbo #0 Calibre Doze 2 Tiros</Portuguese>
+            <German>Kaliber 12 2-Schuss #0 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 2Rnd #1 Buckshot</English>
@@ -152,6 +168,7 @@
             <French>2 balles cal. 12 Chevrotine #1</French>
             <Czech>2x #1 Broky velké (kalibr 7.6 mm)</Czech>
             <Portuguese>Chumbo #1 Calibre Doze 2 Tiros</Portuguese>
+            <German>Kaliber 12 2-Schuss #1 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 2Rnd #2 Buckshot</English>
@@ -161,6 +178,7 @@
             <French>2 balles cal. 12 Chevrotine #2</French>
             <Czech>2x #2 Broky velké (kalibr 6.9 mm)</Czech>
             <Portuguese>Chumbo #2 Calibre Doze 2 Tiros</Portuguese>
+            <German>Kaliber 12 2-Schuss #2 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 2Rnd #3 Buckshot</English>
@@ -170,6 +188,7 @@
             <French>2 balles cal. 12 Chevrotine #3</French>
             <Czech>2x #3 Broky velké (kalibr 6.4 mm)</Czech>
             <Portuguese>Chumbo #3 Calibre Doze 2 Tiros</Portuguese>
+            <German>Kaliber 12 2-Schuss #3 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 2Rnd #4 Buckshot</English>
@@ -179,6 +198,7 @@
             <French>2 balles cal. 12 Chevrotine #4</French>
             <Czech>2x #4 Broky velké (kalibr 6.1 mm)</Czech>
             <Portuguese>Chumbo #4 Calibre Doze 2 Tiros</Portuguese>
+            <German>Kaliber 12 2-Schuss #4 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 2Rnd #7 Birdshot</English>
@@ -188,6 +208,7 @@
             <French>2 balles cal. 12 Grenaille No.4</French>
             <Czech>2x #7 Broky malé (kalibr 2.54 mm)</Czech>
             <Portuguese>Chumbo #7 Calibre Doze 2 Tiros</Portuguese>
+            <German>Kaliber 12 2-Schuss #7 Vogeldunst</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 6Rnd #00 Buckshot</English>
@@ -197,6 +218,7 @@
             <French>6 balles cal. 12 Chevrotine #00</French>
             <Czech>6x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Portuguese>Chumbo #00 Calibre Doze 6 Tiros</Portuguese>
+            <German>Kaliber 12 6-Schuss #00 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 6Rnd #0 Buckshot</English>
@@ -206,6 +228,7 @@
             <French>6 balles cal. 12 Chevrotine #0</French>
             <Czech>6x #0 Broky velké (kalibr 8.1 mm)</Czech>
             <Portuguese>Chumbo #0 Calibre Doze 6 Tiros</Portuguese>
+            <German>Kaliber 12 6-Schuss #0 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 6Rnd #1 Buckshot</English>
@@ -215,6 +238,7 @@
             <French>6 balles cal. 12 Chevrotine #1</French>
             <Czech>6x #1 Broky velké (kalibr 7.6 mm)</Czech>
             <Portuguese>Chumbo #1 Calibre Doze 6 Tiros</Portuguese>
+            <German>Kaliber 12 6-Schuss #1 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 6Rnd #2 Buckshot</English>
@@ -224,6 +248,7 @@
             <French>6 balles cal. 12 Chevrotine #2</French>
             <Czech>6x #2 Broky velké (kalibr 6.9 mm)</Czech>
             <Portuguese>Chumbo #2 Calibre Doze 6 Tiros</Portuguese>
+            <German>Kaliber 12 6-Schuss #2 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 6Rnd #3 Buckshot</English>
@@ -233,6 +258,7 @@
             <French>6 balles cal. 12 Chevrotine #3</French>
             <Czech>6x #3 Broky velké (kalibr 6.4 mm)</Czech>
             <Portuguese>Chumbo #3 Calibre Doze 6 Tiros</Portuguese>
+            <German>Kaliber 12 6-Schuss #3 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 6Rnd #4 Buckshot</English>
@@ -242,6 +268,7 @@
             <French>6 balles cal. 12 Chevrotine #4</French>
             <Czech>6x #4 Broky velké (kalibr 6.1 mm)</Czech>
             <Portuguese>Chumbo #4 Calibre Doze 6 Tiros</Portuguese>
+            <German>Kaliber 12 6-Schuss #4 Schrotmunition</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 6Rnd #7 Birdshot</English>
@@ -250,6 +277,7 @@
             <Japanese>12 ゲージ 6 発入り #7 バックショット</Japanese>
             <French>6 balles cal. 12 Grenaille No.4</French>
             <Czech>6x #7 Broky malé (kalibr 2.54 mm)</Czech>
+            <German>Kaliber 12 6-Schuss #7 Vogeldunst</German>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
@@ -259,6 +287,7 @@
             <French>15 balles cal. 12 Chevrotine #00</French>
             <Czech>15x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Portuguese>Chumbo #00 Calibre Doze 15 Tiros</Portuguese>
+            <German>Kaliber 12 15-Schuss #00 Schrotmunition</German>
         </Key>
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">

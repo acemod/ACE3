@@ -483,7 +483,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_hmg_Name">
             <English>Fennek (HMG)</English>
-            <German>Fennek (sMG)</German>
+            <German>Fennek (SMG)</German>
             <Spanish>Fennek (HMG)</Spanish>
             <Polish>Fennek (CKM)</Polish>
             <Czech>Fennek (HMG)</Czech>
@@ -2366,7 +2366,7 @@
             <Spanish>SIG 556 (Arena)</Spanish>
             <Russian>SIG 556 (Песочный)</Russian>
             <Polish>SIG 556 (piaskowy)</Polish>
-            <German>SIG 556 (sandfarben)</German>
+            <German>SIG 556 (Sandfarben)</German>
             <Italian>SIG 556 (Sabbia)</Italian>
             <Hungarian>SIG 556 (Homok)</Hungarian>
             <Portuguese>SIG 556 (Deserto)</Portuguese>
@@ -2670,7 +2670,7 @@
             <Spanish>LWMMG (Arena)</Spanish>
             <Russian>LWMMG (Песочный)</Russian>
             <Polish>LWMMG (piaskowy)</Polish>
-            <German>LWMMG (sandfarben)</German>
+            <German>LWMMG (Sandfarben)</German>
             <Italian>LWMMG (Sabbia)</Italian>
             <Hungarian>LWMMG (Homok)</Hungarian>
             <Portuguese>LWMMG (Deserto)</Portuguese>
@@ -3063,7 +3063,7 @@
             <French>HK416A5 11" (Beige)</French>
             <Spanish>HK416A5 11" (Arena)</Spanish>
             <Russian>HK416A5 11" (Песочный)</Russian>
-            <German>HK416A5 11" (sandfarben)</German>
+            <German>HK416A5 11" (Sandfarben)</German>
             <Polish>HK416A5 11" (piaskowy)</Polish>
             <Italian>HK416A5 11" (Sabbia)</Italian>
             <Hungarian>HK416A5 11" (Homok)</Hungarian>
@@ -3111,7 +3111,7 @@
             <French>HK416A5 11" GL (Beige)</French>
             <Spanish>HK416A5 11" GL (Arena)</Spanish>
             <Russian>HK416A5 11" GL (Песочный)</Russian>
-            <German>HK416A5 11" GL (sandfarben)</German>
+            <German>HK416A5 11" GL (Sandfarben)</German>
             <Polish>HK416A5 11" GL (piaskowy)</Polish>
             <Italian>HK416A5 11" GL (Sabbia)</Italian>
             <Hungarian>HK416A5 11" GL (Homok)</Hungarian>
@@ -3159,7 +3159,7 @@
             <French>HK416A5 14.5" (Beige)</French>
             <Spanish>HK416A5 14.5" (Arena)</Spanish>
             <Russian>HK416A5 14.5" (Песочный)</Russian>
-            <German>HK416A5 14.5" (sandfarben)</German>
+            <German>HK416A5 14.5" (Sandfarben))</German>
             <Polish>HK416A5 14.5" (piaskowy)</Polish>
             <Italian>HK416A5 14.5" (Sabbia)</Italian>
             <Hungarian>HK416A5 14.5" (Homok)</Hungarian>
@@ -3207,7 +3207,7 @@
             <French>HK417A2 20" (Beige)</French>
             <Spanish>HK417A2 20" (Arena)</Spanish>
             <Russian>HK417A2 20" (Песочный)</Russian>
-            <German>HK417A2 20" (sandfarben)</German>
+            <German>HK417A2 20" (Sandfarben)</German>
             <Polish>HK417A2 20" (piaskowy)</Polish>
             <Italian>HK417A2 20" (Sabbia)</Italian>
             <Hungarian>HK417A2 20" (Homok)</Hungarian>
@@ -3523,6 +3523,7 @@
             <Portuguese>ELCAN SpecterOS (Verde Hex)</Portuguese>
             <French>ELCAN SpecterOS (Hex Verte)</French>
             <Czech>ELCAN SpecterOS (Zelený Hex)</Czech>
+            <German>ELCAN SpecterOS (Hex Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3574,6 +3575,7 @@
             <Portuguese>Nightforce NXS</Portuguese>
             <French>Nightforce NXS</French>
             <Czech>Nightforce NXS</Czech>
+            <German>Nightforce NXS</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
@@ -3586,6 +3588,7 @@
             <Portuguese>Nightforce NXS (Verde Hex)</Portuguese>
             <French>Nightforce NXS (Hex Verte)</French>
             <Czech>Nightforce NXS (Zelený Hex)</Czech>
+            <German>Nightforce NXS (Hex Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -3611,6 +3614,7 @@
             <Portuguese>US Optics MR-10  (Preto)</Portuguese>
             <French>US Optics MR-10 (Noire)</French>
             <Czech>US Optics MR-10 (Černá)</Czech>
+            <German>US Optics MR-10 (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -3623,6 +3627,7 @@
             <Portuguese>US Optics MR-10 (Khaki)</Portuguese>
             <French>US Optics MR-10 (Kaki)</French>
             <Czech>US Optics MR-10 (Khaki)</Czech>
+            <German>US Optics MR-10 (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -3635,6 +3640,7 @@
             <Portuguese>US Optics MR-10 (Areia)</Portuguese>
             <French>US Optics MR-10 (Beige)</French>
             <Czech>US Optics MR-10 (Písková)</Czech>
+            <German>US Optics MR-10 (Sandfarben)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -3647,6 +3653,7 @@
             <Portuguese>KAHLES Helia  (Preto)</Portuguese>
             <French>KAHLES Helia (Noire)</French>
             <Czech>KAHLES Helia (Černá)</Czech>
+            <German>KAHLES Helia (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -3659,6 +3666,7 @@
             <Portuguese>KAHLES Helia (Hex)</Portuguese>
             <French>KAHLES Helia (Hex)</French>
             <Czech>KAHLES Helia (Hex)</Czech>
+            <German>KAHLES Helia (Hex)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -3671,6 +3679,7 @@
             <Portuguese>KAHLES Helia (Velho)</Portuguese>
             <French>KAHLES Helia (Usée)</French>
             <Czech>KAHLES Helia (Stará)</Czech>
+            <German>KAHLES Helia (Alt)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -3683,6 +3692,7 @@
             <Portuguese>KAHLES Helia (Bege)</Portuguese>
             <French>KAHLES Helia (Tan)</French>
             <Czech>KAHLES Helia (Žlutohnědá)</Czech>
+            <German>KAHLES Helia (Beige)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
@@ -3695,6 +3705,7 @@
             <Portuguese>Burris XTR II</Portuguese>
             <French>Burris XTR II</French>
             <Czech>Burris XTR II</Czech>
+            <German>Burris XTR II</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
@@ -3707,6 +3718,7 @@
             <Portuguese>Burris XTR II (Verde Hex)</Portuguese>
             <French>Burris XTR II (Hex Verte)</French>
             <Czech>Burris XTR II (Zelený Hex)</Czech>
+            <German>Burris XTR II (Hex Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -3797,6 +3809,7 @@
             <Portuguese>IOR-Valdada Pitbull 2</Portuguese>
             <French>IOR-Valdada Pitbull 2</French>
             <Czech>IOR-Valdada Pitbull 2</Czech>
+            <German>IOR-Valdada Pitbull 2</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -3809,6 +3822,7 @@
             <Portuguese>Burris FastFire 2</Portuguese>
             <French>Burris FastFire 2</French>
             <Czech>Burris FastFire 2</Czech>
+            <German>Burris FastFire 2</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>

@@ -201,6 +201,7 @@
             <French>Distance maximale de suivi</French>
             <Italian>Distanza massima per seguire</Italian>
             <Czech>Maximální vzdálenost sledování objektu</Czech>
+            <German>Maximale Folgedistanz</German>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
@@ -211,6 +212,7 @@
             <Italian>Distanza massima che la telecamera seguente può percorrere dall'obiettivo</Italian>
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
+            <German>Maximale Distanz zwischen Folgekamera und Zielobjekt</German>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">

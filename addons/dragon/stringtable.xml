@@ -9,6 +9,7 @@
             <Chinese>[CSW] M47龍式</Chinese>
             <Italian>[CSW] M47 Super-Dragon</Italian>
             <Czech>[CSW] M47 Super-Dragon</Czech>
+            <German>[CSW] M47 Super-Dragon</German>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
@@ -18,6 +19,7 @@
             <Chinese>M47 龍式</Chinese>
             <Italian>M47 Super-Dragon</Italian>
             <Czech>M47 Super-Dragon</Czech>
+            <German>M47 Super-Dragon</German>
         </Key>
         <Key ID="STR_ACE_Dragon_attachSight">
             <English>Attach Sight</English>
@@ -27,6 +29,7 @@
             <Chinese>裝上瞄具</Chinese>
             <Italian>Monta mirino</Italian>
             <Czech>Připojit puškohled</Czech>
+            <German>Zielfernrohr montieren</German>
         </Key>
         <Key ID="STR_ACE_Dragon_detachSight">
             <English>Detach Sight</English>
@@ -36,6 +39,7 @@
             <Chinese>拆下瞄具</Chinese>
             <Italian>Smonta mirino</Italian>
             <Czech>Odpojit puškohled</Czech>
+            <German>Zielfernrohr abmontieren</German>
         </Key>
         <Key ID="STR_ACE_Dragon_sightName">
             <English>SU-36/P Daysight</English>
@@ -45,6 +49,7 @@
             <Chinese>SU-36/P 日間瞄具</Chinese>
             <Italian>SU-36/P Daysight</Italian>
             <Czech>SU-36/P denní puškohled</Czech>
+            <German>SU-36/P Tageszielfernrohr</German>
         </Key>
         <Key ID="STR_ACE_Dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
@@ -54,6 +59,7 @@
             <Chinese>一個輕量，便宜適合日間行動使用的廉價瞄具。內含全套制導電腦系統</Chinese>
             <Italian>Una luce,un mirino usato per le operazioni diurne.Contiene il computer di guida per l'intero sistema </Italian>
             <Czech>Lehký a levný puškohled pro použití za denního světla. Obsahuje navigační počítač pro celý systém.</Czech>
+            <German>Ein leichtes, billiges Zielfernrohr, welches bei Tageslicht gebraucht wird. Enthaltet ein Lenkungscomputer für das gesamte System.</German>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
@@ -63,6 +69,7 @@
             <Chinese>一個有線制導半自動指令型飛彈並有著獨特的飛航動作</Chinese>
             <Italian>Un missile SACLOS  filo-guidato con uniche caratterische di volo </Italian>
             <Czech>Drátem naváděná SACLOS raketa s unikátními letovými vlastnostmi</Czech>
+            <German>Eine drahtgesteuerte SACLOS Rakete mit einer eigenartigen Flugeigenschaft.</German>
         </Key>
     </Package>
 </Project>

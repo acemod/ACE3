@@ -52,27 +52,43 @@
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionHEI">
             <English>30mm High-Explosive Incendiary</English>
+            <French>30mm explosif incendiaire</French>
+            <German>30mm Explosives Brandgeschoss</German>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
             <English>30mm HEI</English>
+            <French>30mm HEI</French>
+            <German>30mm HEI</German>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionAP">
             <English>30mm DU Armor Piercing</English>
+            <German>30mm Panzerbrechendes abgereichertes Uran-Geschoss</German>
+            <French>30mm antichar avec uranium appauvri</French>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortAP">
             <English>30mm DU AP</English>
+            <French>30mm DU AP</French>
+            <German>30mm DU AP</German>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM41">
             <English>30mm Combat Mix 4:1 DU:HEI</English>
+            <German>30mm Gefechtmischung 4:1 abgereichertes Uran:explosives Brandgeschoss</German>
+            <French>30mm mélange combat 4:1 uranium appauvri:explosif incendiaire</French>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM41">
             <English>30mm CM 4:1</English>
+            <French>30mm CM 4:1</French>
+            <German>30mm CM 4:1</German>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM51">
             <English>30mm Combat Mix 5:1 DU:HEI</English>
+            <German>30mm Gefechtmischung 5:1 abgereichertes Uran:explosives Brandgeschoss</German>
+            <French>30mm mélange combat 5:1 uranium appauvri:explosif incendiaire</French>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM51">
             <English>30mm CM 5:1</English>
+            <French>30mm CM 5:1</French>
+            <German>30mm CM 5:1</German>
         </Key>
     </Package>
 </Project>

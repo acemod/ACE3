@@ -38,6 +38,7 @@
             <Italian>Seleziona il tipo di effetto del dolore usato.</Italian>
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
+            <German>Erlaubt die Auswahl vom Schmerzeffekt-Typ.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -88,6 +89,7 @@
             <Czech>Pouze efekt vysoké bolesti</Czech>
             <Portuguese>Apenas efeito de dor alta</Portuguese>
             <Spanish>Solo efecto de dolor fuerte</Spanish>
+            <German>Nur starker Schmerzeffekt</German>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">

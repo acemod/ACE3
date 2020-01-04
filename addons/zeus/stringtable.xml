@@ -317,6 +317,7 @@
             <Portuguese>Adicionar Objetos</Portuguese>
             <Czech>Přidat objekty</Czech>
             <French>Ajouter des objets</French>
+            <German>Objekte hinzufügen</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
