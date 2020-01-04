@@ -148,7 +148,6 @@
             <Korean>상호작용 명칭</Korean>
             <Chinese>互動鍵名稱</Chinese>
             <Chinesesimp>互动键名称</Chinesesimp>
-            <Turkish>Etkileşim İsimleri</Turkish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
@@ -179,7 +178,6 @@
             <Russian>Установить имя</Russian>
             <Portuguese>Definir Nome</Portuguese>
             <Czech>Jméno setu</Czech>
-            <Turkish>İsim Ayarla</Turkish>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
