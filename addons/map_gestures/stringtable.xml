@@ -124,7 +124,6 @@
             <Korean>글 색상 명칭</Korean>
             <Chinesesimp>名称文字颜色</Chinesesimp>
             <Chinese>名稱文字顏色</Chinese>
-            <Turkish>Yazı İsim Rengi</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_nameTextColor_description">
             <English>Color of the name tag text besides the map gestures mark.</English>
