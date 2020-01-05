@@ -16,6 +16,7 @@
             <Korean>바람의 정보를 표시</Korean>
             <Chinese>顯示風況</Chinese>
             <Chinesesimp>显示风况</Chinesesimp>
+            <Turkish>Rüzgar bilgilerini göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ProtractorKey">
             <English>Show Protractor</English>
@@ -48,6 +49,7 @@
             <Korean>고급 탄도학</Korean>
             <Chinese>先進彈道系統</Chinese>
             <Chinesesimp>先进弹道系统</Chinesesimp>
+            <Turkish>Gelişmiş Balistik</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_DisplayName">
             <English>Advanced Ballistics</English>
@@ -64,6 +66,7 @@
             <Korean>고급 탄도학</Korean>
             <Chinese>先進彈道系統</Chinese>
             <Chinesesimp>先进弹道系统</Chinesesimp>
+            <Turkish>Gelişmiş Balistik</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_Description">
             <English>Enables advanced ballistics</English>
@@ -80,6 +83,7 @@
             <Korean>고급 탄도학을 적용합니다</Korean>
             <Chinese>啟用先進彈道系統</Chinese>
             <Chinesesimp>启用先进弹道系统</Chinesesimp>
+            <Turkish>Gelişmiş balistiği etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_DisplayName">
             <English>Enable Muzzle Velocity Variation</English>

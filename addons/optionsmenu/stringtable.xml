@@ -80,6 +80,7 @@
             <Korean>ACE 새소식</Korean>
             <Chinesesimp>ACE新闻</Chinesesimp>
             <Chinese>ACE新聞</Chinese>
+            <Turkish>ACE Haberler</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -96,6 +97,7 @@
             <Korean>메인메뉴에 새소식을 표시합니다</Korean>
             <Chinesesimp>显示新闻消息于主选单</Chinesesimp>
             <Chinese>顯示新聞消息於主選單</Chinese>
+            <Turkish>Ana Menü de Haberleri Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>ACE Logistics</English>
@@ -111,6 +113,7 @@
             <Korean>ACE 보급</Korean>
             <Chinesesimp>ACE 后勤设定</Chinesesimp>
             <Chinese>ACE 後勤設定</Chinese>
+            <Turkish>ACE Lojistik</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
@@ -127,6 +130,7 @@
             <Korean>숨기기</Korean>
             <Chinesesimp>隐藏</Chinesesimp>
             <Chinese>隱藏</Chinese>
+            <Turkish>Gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
@@ -207,6 +211,7 @@
             <Korean>상단</Korean>
             <Chinesesimp>上方</Chinesesimp>
             <Chinese>上方</Chinese>
+            <Turkish>Üst</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
@@ -223,6 +228,7 @@
             <Korean>하단</Korean>
             <Chinesesimp>下方</Chinesesimp>
             <Chinese>下方</Chinese>
+            <Turkish>Alt</Turkish>
         </Key>
     </Package>
 </Project>

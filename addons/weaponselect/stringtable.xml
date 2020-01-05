@@ -48,6 +48,7 @@
             <Korean>권총 선택</Korean>
             <Chinesesimp>选择手枪</Chinesesimp>
             <Chinese>選擇手槍</Chinese>
+            <Turkish>Tabancayı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifle">
             <English>Select Rifle</English>
@@ -64,6 +65,7 @@
             <Korean>소총 선택</Korean>
             <Chinesesimp>选择步枪</Chinesesimp>
             <Chinese>選擇步槍</Chinese>
+            <Turkish>Tüfeği Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
             <English>Select Launcher</English>
@@ -80,6 +82,7 @@
             <Korean>발사기 선택</Korean>
             <Chinesesimp>选择发射器</Chinesesimp>
             <Chinese>選擇發射器</Chinese>
+            <Turkish>Fırlatılabiliri Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
             <English>Select Grenade Launcher</English>
@@ -96,6 +99,7 @@
             <Korean>유탄발사기 선택</Korean>
             <Chinesesimp>选择榴弹发射器</Chinesesimp>
             <Chinese>選擇榴彈發射器</Chinese>
+            <Turkish>Bombaatarı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
             <English>Select Binoculars</English>
@@ -144,6 +148,7 @@
             <Korean>엔진 켜기</Korean>
             <Chinesesimp>引擎发动</Chinesesimp>
             <Chinese>引擎發動</Chinese>
+            <Turkish>Motor Açık</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOff">
             <English>Engine off</English>
@@ -160,6 +165,7 @@
             <Korean>엔진 끄기</Korean>
             <Chinesesimp>引擎熄火</Chinesesimp>
             <Chinese>引擎熄火</Chinese>
+            <Turkish>Motor Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
             <English>Select Main Gun</English>

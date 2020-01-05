@@ -46,6 +46,7 @@
             <Japanese>アドバンスド</Japanese>
             <Korean>고급</Korean>
             <Chinese>進階</Chinese>
+            <Turkish>Gelişmiş</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
@@ -62,6 +63,7 @@
             <Korean>저장</Korean>
             <Chinese>儲存</Chinese>
             <Chinesesimp>储存</Chinesesimp>
+            <Turkish>Kaydet</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Cancel">
             <English>Cancel</English>
@@ -94,6 +96,7 @@
             <Korean>ACE 옵션</Korean>
             <Chinese>ACE設定選項</Chinese>
             <Chinesesimp>ACE设定选项</Chinesesimp>
+            <Turkish>ACE Ayarları</Turkish>
         </Key>
         <!-- These are cardinal directions, in case you didn't guess. -->
         <Key ID="STR_ACE_Common_N">
@@ -111,6 +114,7 @@
             <Korean>북</Korean>
             <Chinese>北</Chinese>
             <Chinesesimp>北</Chinesesimp>
+            <Turkish>K</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NNE">
             <English>NNE</English>
@@ -143,6 +147,7 @@
             <Korean>북동</Korean>
             <Chinese>東北</Chinese>
             <Chinesesimp>东北</Chinesesimp>
+            <Turkish>KD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ENE">
             <English>ENE</English>
@@ -175,6 +180,7 @@
             <Korean>동</Korean>
             <Chinese>東</Chinese>
             <Chinesesimp>东</Chinesesimp>
+            <Turkish>D</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ESE">
             <English>ESE</English>
@@ -207,6 +213,7 @@
             <Korean>남동</Korean>
             <Chinese>東南</Chinese>
             <Chinesesimp>东南</Chinesesimp>
+            <Turkish>GD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_SSE">
             <English>SSE</English>
@@ -239,6 +246,7 @@
             <Korean>남</Korean>
             <Chinese>南</Chinese>
             <Chinesesimp>南</Chinesesimp>
+            <Turkish>G</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_SSW">
             <English>SSW</English>
@@ -271,6 +279,7 @@
             <Korean>남서</Korean>
             <Chinese>西南</Chinese>
             <Chinesesimp>西南</Chinesesimp>
+            <Turkish>GB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_WSW">
             <English>WSW</English>
@@ -303,6 +312,7 @@
             <Korean>서</Korean>
             <Chinese>西</Chinese>
             <Chinesesimp>西</Chinesesimp>
+            <Turkish>B</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_WNW">
             <English>WNW</English>
@@ -335,6 +345,7 @@
             <Korean>북서</Korean>
             <Chinese>西北</Chinese>
             <Chinesesimp>西北</Chinesesimp>
+            <Turkish>KB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NNW">
             <English>NNW</English>
@@ -415,6 +426,7 @@
             <Korean>알 수 없음</Korean>
             <Chinese>未知的</Chinese>
             <Chinesesimp>未知的</Chinesesimp>
+            <Turkish>Bilinmeyen</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Normal">
             <English>Normal</English>
@@ -430,6 +442,7 @@
             <Japanese>通常</Japanese>
             <Korean>보통</Korean>
             <Chinese>普通</Chinese>
+            <Turkish>Normal</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -446,6 +459,7 @@
             <Korean>무음</Korean>
             <Chinese>無語音</Chinese>
             <Chinesesimp>没声音</Chinesesimp>
+            <Turkish>Ses yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
             <English>Check PBO Action</English>
