@@ -119,7 +119,7 @@
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
             <English>Controls whether fully bandaged body parts are healed.</English>
             <Japanese>全ての傷に対して包帯を巻いた部分を治癒するかどうかを決定します。</Japanese>
-            <German>Kontrolliert ob voll bandagierte Körperteile geheilt werden.</German>
+            <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
