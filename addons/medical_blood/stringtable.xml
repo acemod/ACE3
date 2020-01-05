@@ -87,7 +87,7 @@
             <Italian>Controlla la durata degli oggetti con gocce di sangue.</Italian>
             <Czech>Nastavuje jak dlouho objekty krve na zemi vydrží.</Czech>
             <Spanish>Controla el tiempo de vida que tendrán los objetos de sangre</Spanish>
-            <German>Kontrolliert die Lebenszeot der Bluttropfen Objekte.</German>
+            <German>Kontrolliert die Anzeigedauer der Bluttropfen-Objekte.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
             <English>Only Players</English>
