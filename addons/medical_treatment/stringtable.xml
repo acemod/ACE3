@@ -106,7 +106,7 @@
             <Chinese>啟用包紮過的傷口是否會再度裂開。需要啟用「進階包紮」之功能。</Chinese>
             <Czech>Povoluje znovuotevírání obvázaných zranění. Vyžaduje zapnuté Pokročilé obvazy.</Czech>
             <Italian>Permette la riapertura delle ferite fasciate. Richiede l'abilitazione di Bende Avanzate.</Italian>
-            <German>Ermöglicht das aufreißen von bandagierten Wunden. Benötigt das erweiterte Bandagen angeschaltet ist. </German>
+            <German>Ermöglicht das Wiederöffnen von bandagierten Wunden. Benötigt das 'Erweiterte Bandagen' aktiviert ist.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
