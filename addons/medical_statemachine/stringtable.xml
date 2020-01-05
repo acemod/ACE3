@@ -24,7 +24,7 @@
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_Description">
             <English>Controls when players can receive fatal injuries. A fatal injury is caused by significant damage to the head or torso.</English>
             <Portuguese>Controla quando os jogadores podem receber lesões fatais. Uma lesão fatal é causada por um dano significante na cabeça ou tronco.</Portuguese>
-            <Japanese>プレイヤーが致命傷を受けた時の挙動を管理できます。頭部や胴体に受ける大きなダメージは致命傷になります。</Japanese>
+             <Japanese>プレイヤーが致命傷を受けた時の挙動を管理できます。頭部や胸部に受ける大きなダメージは致命傷になります。</Japanese>
             <Chinese>控制當玩家受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。</Chinese>
             <French>Définit si les joueurs décèdent en cas de blessure mortelle. Une blessure mortelle est causée par un dommage important à la tête ou au torse.</French>
             <Czech>Nastavuje zda hráči mohou utrpět smrtelné zranění. Smrtelné zranění je utrpěto významným poškozením hlavy nebo trupu.</Czech>
