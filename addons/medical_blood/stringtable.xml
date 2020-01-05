@@ -63,7 +63,7 @@
             <Italian>Imposta il numero massimo di gocce di sangue che possono essere depositate, quantità eccessive possono causare del lag di FPS.</Italian>
             <Czech>Nastavuje maximum objektů krve na zemi, příliš mnoho může způsobit pokles FPS</Czech>
             <Spanish>Fija el límite de objetos de sangre que aparecerán, cantidades excesivas pueden causar caídas de FPS</Spanish>
-            <German>Legt die maximale Anzahl an Blutropfen Objekte fest welche erscheinen können. Exessive Anzahlen können FPs lag verursachen.</German>
+            <German>Legt die maximale Anzahl an Blutstropfen-Objekten fest, die erscheinen können. Eine zu hoch eingestellte Anzahl kann Lags verursachen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
             <English>Blood Lifetime</English>
