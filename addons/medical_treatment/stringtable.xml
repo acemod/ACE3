@@ -369,7 +369,7 @@
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
             <Italian>Livello di formazione richiesto per l'utilizzo di un kit chirurgico.</Italian>
             <Czech>Úroveň výcviku pro použití sešívací sady.</Czech>
-            <German>'Fähigkeiten Level', das benötigt wird um ein Operations-Set zu nutzen.</German>
+            <German>'Fähigkeiten-Level', das benötigt wird um ein Operations-Set zu nutzen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
