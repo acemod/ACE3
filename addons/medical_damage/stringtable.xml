@@ -35,7 +35,7 @@
             <Italian>Soglia dei danni critici dell AI</Italian>
             <Czech>Kritická míra poškození pro AI</Czech>
             <Spanish>Límite de daño crítico de la IA</Spanish>
-            <German>Kritische KI Schadens Schwelle</German>
+            <German>Schwelle für kritischen KI-Schaden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
             <English>Sets the amount of damage an AI unit can receive before going unconscious.</English>
