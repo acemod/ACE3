@@ -215,7 +215,7 @@
             <Chinese>要受過何種程度的醫療訓練才可以使用腎上腺素</Chinese>
             <Italian>Livello di addestramento richiesto per usare l'Epinefrina.</Italian>
             <Czech>Úroveň výcviku pro použití epinefrinu</Czech>
-            <German>'Fähigkeiten Level', das benötigt wird um Epinephrin zu nutzen.</German>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Epinephrin zu nutzen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
             <English>Locations Epinephrine</English>
