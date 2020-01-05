@@ -239,6 +239,7 @@
             <Chinesesimp>投掷</Chinesesimp>
             <Portuguese>Arremessar</Portuguese>
             <Czech>Hodit</Czech>
+            <Turkish>At</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
             <English>(Scroll) Change Mode</English>
@@ -253,6 +254,7 @@
             <Chinesesimp>(滚轮) 变更模式</Chinesesimp>
             <Portuguese>(Roda do Mouse) Alternar modo</Portuguese>
             <Czech>(Scrollovat) Změnit mód</Czech>
+            <Turkish>(Tekerlek) Modu Değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Extend">
             <English>(Scroll) Extend</English>
@@ -267,6 +269,7 @@
             <Chinesesimp>(滚轮) 延长</Chinesesimp>
             <Portuguese>(Roda do Mouse) Extender</Portuguese>
             <Czech>(Scrollovat) Oddálit</Czech>
+            <Turkish>(Tekerlek) Uzat</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
@@ -281,6 +284,7 @@
             <Chinesesimp>(点击) 提早拉开引信</Chinesesimp>
             <Portuguese>(Clique) Cozinhar</Portuguese>
             <Czech>(Klik) Odjistit</Czech>
+            <Turkish>(Tıkla) Cook</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_PickUp">
             <English>Pick Up</English>
@@ -295,6 +299,7 @@
             <Chinesesimp>捡取</Chinesesimp>
             <Portuguese>Pegar</Portuguese>
             <Czech>Zvednout</Czech>
+            <Turkish>Al</Turkish>
         </Key>
     </Package>
 </Project>
