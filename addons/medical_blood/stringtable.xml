@@ -75,7 +75,7 @@
             <Italian>Vita del sangue</Italian>
             <Czech>Životnost krve</Czech>
             <Spanish>Duración de la sangre</Spanish>
-            <German>Anzeigedauer der Bluttropfen</German>
+            <German>Anzeigedauer der Blutstropfen</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
             <English>Controls the lifetime of blood drop objects.</English>
