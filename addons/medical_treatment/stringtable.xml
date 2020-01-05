@@ -391,7 +391,7 @@
             <Chinese>控制何處能使用手術包</Chinese>
             <Italian>Controlla dove può essere usato un kit chirurgico.</Italian>
             <Czech>Nastavuje zda má být sešívací sada spotřebována po použití.</Czech>
-            <German>Kontrolliert wo ein Nähkit genutzt werden kann.</German>
+            <German>Kontrolliert, wo ein Operations-Set genutzt werden kann.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
