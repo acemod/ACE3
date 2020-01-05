@@ -189,7 +189,7 @@
             <Chinese>優先使用醫療兵的醫療物資</Chinese>
             <Italian>Prima le attrezzature mediche</Italian>
             <Czech>Prvně medikovo vybavení</Czech>
-            <German>Equipment des Sanitäters zuerst.</German>
+            <German>Ausrüstung des Sanitäters zuerst.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
