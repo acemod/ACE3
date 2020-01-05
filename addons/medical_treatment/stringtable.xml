@@ -544,7 +544,7 @@
             <Chinese>醫療用廢棄物時長</Chinese>
             <Italian>Tempo spazzatura</Italian>
             <Czech>Životnost odpadků</Czech>
-            <German>Abfall Lebenszeit</German>
+            <German>Abfall Anzeigedauer</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
