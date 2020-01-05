@@ -317,7 +317,7 @@
             <Chinese>設定個人急救包是否為消耗品</Chinese>
             <Italian>Controlla se un PAK deve essere consumato dopo l'uso.</Italian>
             <Czech>Nastavuje zda má být osobní lékárnička (PAK) spotřebována po použití.</Czech>
-            <German>Kontrolliert ob ein PAK nach der Benutzung verbraucht werden soll.</German>
+            <German>Kontrolliert, ob ein Erste-Hilfe-Set nach der Benutzung verbraucht werden soll.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
