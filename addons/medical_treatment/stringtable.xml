@@ -380,7 +380,7 @@
             <Chinese>手術包使用地點</Chinese>
             <Italian>Luoghi Kit chirurgico</Italian>
             <Czech>Nastavuje kde může být sešívací sada použita</Czech>
-            <German>Ort des chirugischen Nähkits.</German>
+            <German>Orte für Operations-Set</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
