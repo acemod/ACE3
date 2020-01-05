@@ -306,7 +306,7 @@
             <Chinese>個人急救包為消耗品</Chinese>
             <Italian>Consumare PAK</Italian>
             <Czech>Spotřebuj osobní lékárničku (PAK)</Czech>
-            <German>Verbrauche PAK.</German>
+            <German>Verbrauche Erste-Hilfe-Set</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
