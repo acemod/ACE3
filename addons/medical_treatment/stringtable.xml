@@ -268,7 +268,7 @@
             <Chinese>要受過何種程度的醫療訓練才可以使用個人急救包</Chinese>
             <Italian>Livello di formazione richiesto per l'utilizzo di un PAK.</Italian>
             <Czech>Úroveň výcviku pro použití osobní lékárničky (PAK).</Czech>
-            <German>Fäigkeiten Level benötigt um ein PAK zu nutzen.</German>
+            <German>'Fähigkeiten Level', das benötigt wird um ein Erste-Hilfe-Set zu nutzen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
             <English>Locations PAK</English>
