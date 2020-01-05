@@ -5,18 +5,18 @@
  *
  * Arguments:
  * 0: Unit (player) <OBJECT>
- * 1: Display hint <BOOL> (default: true)
+ * 1: Display hint <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [ace_player] call ace_hearing_fnc_putInEarplugs
+ * [ace_player, false] call ace_hearing_fnc_putInEarplugs
  *
  * Public: No
  */
 
-params ["_player", ["_displayHint", true, [true]]];
+params ["_player", ["_displayHint", false, [false]]];
 
 if (!GVAR(EnableCombatDeafness)) exitWith {};
 

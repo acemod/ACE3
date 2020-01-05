@@ -79,7 +79,7 @@ class CfgVehicles {
                     class ACE_AssignTeamRed {
                         displayName = CSTRING(AssignTeamRed);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'RED',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_red_ca.paa);
@@ -87,7 +87,7 @@ class CfgVehicles {
                     class ACE_AssignTeamGreen {
                         displayName = CSTRING(AssignTeamGreen);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'GREEN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_green_ca.paa);
@@ -95,7 +95,7 @@ class CfgVehicles {
                     class ACE_AssignTeamBlue {
                         displayName = CSTRING(AssignTeamBlue);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'BLUE',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_blue_ca.paa);
@@ -103,7 +103,7 @@ class CfgVehicles {
                     class ACE_AssignTeamYellow {
                         displayName = CSTRING(AssignTeamYellow);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'YELLOW',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_yellow_ca.paa);
@@ -111,7 +111,7 @@ class CfgVehicles {
                     class ACE_UnassignTeam {
                         displayName = CSTRING(LeaveTeam);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
-                        statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'MAIN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_white_ca.paa);
@@ -251,7 +251,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinTeamRed);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'RED',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_red_ca.paa);
                 };
@@ -259,7 +259,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinTeamGreen);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'GREEN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_green_ca.paa);
                 };
@@ -267,7 +267,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinTeamBlue);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'BLUE',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_blue_ca.paa);
                 };
@@ -275,7 +275,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinTeamYellow);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'YELLOW',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_yellow_ca.paa);
                 };
@@ -283,7 +283,7 @@ class CfgVehicles {
                     displayName = CSTRING(LeaveTeam);
                     condition = QUOTE(assignedTeam _player != 'MAIN');
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'MAIN')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'MAIN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_white_ca.paa);
                 };

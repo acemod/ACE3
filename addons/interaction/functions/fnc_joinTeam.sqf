@@ -6,18 +6,18 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Team <STRING>
- * 2: Display hint <BOOL> (default: true)
+ * 2: Display hint <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "YELLOW"] call ace_interaction_fnc_joinTeam
+ * [player, "YELLOW", false] call ace_interaction_fnc_joinTeam
  *
  * Public: No
  */
 
-params ["_unit", "_team", ["_displayHint", true, [true]]];
+params ["_unit", "_team", ["_displayHint", false, [false]]];
 
 ["CBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
 
