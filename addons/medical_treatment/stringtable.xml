@@ -167,7 +167,7 @@
             <Chinese>控制是否病患與醫療兵之間能否共享醫療物資</Chinese>
             <Italian>Controlla se le attrezzature mediche possono essere condivise tra il paziente e il medico.</Italian>
             <Czech>Nastavuje zda jak je zdravotnické vybavení sdíleno mezi medikem a pacientem.</Czech>
-            <German>Kontrolliert ob medizinisches Equipment zwischen den Patienten und Sanitäter geteilt werden kann.</German>
+            <German>Kontrolliert, ob medizinische Ausrüstung zwischen Patient und Sanitäter geteilt werden kann.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
