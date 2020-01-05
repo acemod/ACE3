@@ -321,7 +321,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
-            <German>PAK Selbstanwendung</German>
+            <German>Erste-Hilfe-Set Selbstanwendung</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
