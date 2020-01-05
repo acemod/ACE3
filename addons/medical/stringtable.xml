@@ -131,7 +131,7 @@
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
-            <German>Kontrolliert den Effekt wenn Schienen verwendet werden um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
+            <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
