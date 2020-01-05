@@ -336,7 +336,7 @@
             <Chinese>個人急救包的時間係數</Chinese>
             <Italian>Coefficiente temporale PAK</Italian>
             <Czech>Časový koeficient pro osobní lékárničku (PAK)</Czech>
-            <German>Zeit Koeffizient PAK</German>
+            <German>Zeit Koeffizient Erste-Hilfe-Set</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
