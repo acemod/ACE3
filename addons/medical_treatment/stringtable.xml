@@ -178,7 +178,7 @@
             <Chinese>優先使用患者的醫療物資</Chinese>
             <Italian>L'attrezzatura del paziente prima di tutto</Italian>
             <Czech>Prvně pacientovo vybavení</Czech>
-            <German>Ausrüstung des Patienten zuerst.</German>
+            <German>Ausrüstung des Patienten zuerst</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
