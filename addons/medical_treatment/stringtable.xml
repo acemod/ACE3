@@ -114,7 +114,7 @@
             <Chinese>包紮即痊癒</Chinese>
             <French>Guérir les blessures pansées</French>
             <Czech>Vyčistit úraz po obvázání</Czech>
-            <German>BehebeTrauma nach Bandagierung.</German>
+            <German>Entferne Trauma nach Bandagierung.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
             <English>Controls whether fully bandaged body parts are healed.</English>
