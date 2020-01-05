@@ -19,7 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
-            <German>Wahrscheinlichkeit aufzuwachen</German>
+            <German>Wahrscheinlichkeit um aufzuwachen</German>
             <Japanese>気絶から覚醒の可能性</Japanese>
             <Russian>Шанс очнуться при потере сознания</Russian>
             <French>Chance de reprendre connaissance</French>
@@ -31,7 +31,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
-            <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht ()Überprüfung alle 15 Sekunden)</German>
+            <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht (Überprüfung alle 15 Sekunden)</German>
             <Japanese>容体が安定しているユニットが気絶する確率を決定できます。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
             <French>La probabilité qu'une unité en état stable puisse reprendre conscience spontanément (état vérifié toutes les 15 secondes).</French>
@@ -50,6 +50,7 @@
             <Czech>Epinefrin zvyšuje šanci na probuzení</Czech>
             <Portuguese>Epinefrina Aumenta a chance de acordar</Portuguese>
             <Spanish>Epinefrina, aumenta la posibilidad de despertar</Spanish>
+            <German>Epinephrine erhöht die Aufwachwahrscheinlichkeit</German>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -60,6 +61,7 @@
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
+            <German>Erhöht wie oft Aufwachprüfungen passieren wenn der Patient Epinephrine im System hat.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -71,6 +73,7 @@
             <Italian>Zoppicare</Italian>
             <Czech>Kulhání</Czech>
             <Spanish>Cojera</Spanish>
+            <German>Humpeln</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -81,6 +84,7 @@
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
             <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
+            <German>Kontrolliert ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -92,6 +96,7 @@
             <Italian>Zoppo per via delle ferite aperte</Italian>
             <Czech>Kulhat s otevřeným zraněním</Czech>
             <Spanish>Cojera en heridas abiertas</Spanish>
+            <German>Humpeln bei offenen Wunden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -103,6 +108,7 @@
             <Italian>Zoppicare su ferite aperte o bendate</Italian>
             <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
             <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
+            <German>Humpeln bei offenen oder bandagierten Wunden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -114,6 +120,7 @@
             <Italian>Fratture</Italian>
             <Czech>Zlomeniny</Czech>
             <Spanish>Fracturas</Spanish>
+            <German>Brüche</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
@@ -124,6 +131,7 @@
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
+            <German>Kontrolliert den Effekt von Schienen um Knochenbrüche zu behandeln. \nWenn ausgeschaltet verursachen Verletzungen keine Knochenbrüche.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -135,6 +143,7 @@
             <Italian>Le gessature curano al massimo le fratture</Italian>
             <Czech>Dlahy kompletně léčí zlomeniny</Czech>
             <Spanish>Férulas sanan completamente las fracturas</Spanish>
+            <German>Schienen heilen Knochenbrüche vollständig</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -146,6 +155,7 @@
             <Italian>Le gessature curano, ma non puoi correre</Italian>
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
+            <German>Schienen heilen, aber ermöglichen kein Sprinten</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
