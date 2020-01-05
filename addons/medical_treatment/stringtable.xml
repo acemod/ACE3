@@ -241,7 +241,7 @@
             <Chinese>控制何處能使用腎上腺素</Chinese>
             <Italian>Controlli dove si può usare l'Epinefrina.</Italian>
             <Czech>Nastavuje kde může být epinefrin použit</Czech>
-            <German>Kontrolliert wo Epinephrine genutzt werden kann.</German>
+            <German>Kontrolliert, wo Epinephrin genutzt werden kann.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
