@@ -40,7 +40,7 @@
             <French>Décès si blessure mortelle (IA)</French>
             <Czech>Smrtelná zranění AI</Czech>
             <Italian>AI Lesioni mortali</Italian>
-            <German>Fatale KI Verletzungen</German>
+            <German>Tödliche KI-Verletzungen</German>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_Description">
             <English>Controls when AI can receive fatal injuries. A fatal injury is caused by significant damage to the head or body.\nWhen set to "Always", this effectively produces "AI Instant Death" behaviour as AI will immediately die from any fatal injury.\nNOTE: Any mode other than "Always" requires AI Unconsciousness to be enabled.</English>
