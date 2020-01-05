@@ -433,7 +433,7 @@
             <Chinese>啟用是否能自己使用手術包來縫合自己的傷口。</Chinese>
             <Czech>Umožňuje použití sešívací sady na sebe sama.</Czech>
             <Italian>Permette l'uso di kit chirurgici per ricucirsi.</Italian>
-            <German>Ermöglicht die Benutzung des Operations-Sets um sich selbst zu nähen.</German>
+            <German>Ermöglicht die Benutzung des Operations-Sets, um sich selbst zu nähen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
