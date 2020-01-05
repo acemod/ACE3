@@ -402,7 +402,7 @@
             <Chinese>手術包為消耗品</Chinese>
             <Italian>Consumare Kit Chirurgico</Italian>
             <Czech>Spotřebuj sešívací sadu</Czech>
-            <German>Verbrauche Nähkit.</German>
+            <German>Verbrauche Operations-Set.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>Controls whether a surgical kit should be consumed after use.</English>
