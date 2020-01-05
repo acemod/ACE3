@@ -511,7 +511,7 @@
             <Chinese>啟用醫療後剩下的醫療用廢棄物。</Chinese>
             <Italian>Permette la creazione di rifiuti al momento del trattamento.</Italian>
             <Czech>Umožňuje vytvořit odpadky při léčbě.</Czech>
-            <German>Ermöglicht das produzieren von Abfall bei Behandlung.</German>
+            <German>Ermöglicht das Produzieren von Abfall während einer Behandlung.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
             <English>Max Litter Objects</English>
