@@ -11,7 +11,7 @@
             <Italian>Soglia danni critici del giocatore</Italian>
             <Czech>Kritická míra poškození pro hráče</Czech>
             <Spanish>Límite de daño crítico al jugador</Spanish>
-            <German>Kritische Spielerschadens Schwelle</German>
+            <German>Schwelle für kritischen Spielerschaden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious.</English>
