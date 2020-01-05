@@ -533,7 +533,7 @@
             <Chinese>設定最大可以產生的醫療用廢棄物數量，極端的數量的話可能導致幀數下降。</Chinese>
             <Italian>Imposta il numero massimo di rifiuti che possono essere generati, quantità eccessive possono causare un ritardo FPS.</Italian>
             <Czech>Nastavuje maximum odpadků, které se mohou objevit. Vysoká hodnota m§že negativně ovlivnit FPS.</Czech>
-            <German>Bestimmt die maximal Anzahl von Abfall Objekten welche kreiert werden können. Exessive Anzahlen können FPS lag verursachen.</German>
+            <German>Bestimmt die maximal Anzahl an Abfall-Objekten, die erstellt werden können. Eine zu hohe Anzahl kann Lag verursachen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
