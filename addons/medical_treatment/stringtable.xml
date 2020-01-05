@@ -156,7 +156,7 @@
             <Chinese>允許共享設備</Chinese>
             <Italian>Consentire la condivisione di attrezzature</Italian>
             <Czech>Povolit sdílení vybavení</Czech>
-            <German>Erlaube geteiltes Equipment</German>
+            <German>Erlaube geteilte Ausrüstung</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
