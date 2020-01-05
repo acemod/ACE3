@@ -571,7 +571,7 @@
             <Czech>Celkové množství úrazů</Czech>
             <Portuguese>Soma do trauma</Portuguese>
             <Spanish>Suma de traumatismos</Spanish>
-            <German>Summe des Traumas</German>
+            <German>Summe aller Traumata</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
             <English>Either</English>
