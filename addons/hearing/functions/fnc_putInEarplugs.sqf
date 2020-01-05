@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Unit (player) <OBJECT>
+ * 1: Display hint <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -15,7 +16,7 @@
  * Public: No
  */
 
-params ["_player"];
+params ["_player", ["_displayHint", true, [true]]];
 
 if (!GVAR(EnableCombatDeafness)) exitWith {};
 
@@ -24,7 +25,9 @@ _player removeItem "ACE_EarPlugs";
 
 _player setVariable ["ACE_hasEarPlugsIn", true, true];
 
-[localize LSTRING(EarPlugs_Are_On)] call EFUNC(common,displayTextStructured);
+if (_displayHint) then {
+    [localize LSTRING(EarPlugs_Are_On)] call EFUNC(common,displayTextStructured);
+};
 
 //Force an immediate fast volume update:
 [[true]] call FUNC(updateVolume);

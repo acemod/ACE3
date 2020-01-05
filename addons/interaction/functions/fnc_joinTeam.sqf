@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Team <STRING>
+ * 2: Display hint <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -16,7 +17,7 @@
  * Public: No
  */
 
-params ["_unit", "_team"];
+params ["_unit", "_team", ["_displayHint", true, [true]]];
 
 ["CBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
 
@@ -30,6 +31,7 @@ if (_unit == ACE_player) then {
         _team = localize format [LSTRING(Team%1), _team];
         _message = format [localize LSTRING(JoinedTeam), _team];
     };
-
-    [_message] call EFUNC(common,displayTextStructured);
+    if (_displayHint) then {
+        [_message] call EFUNC(common,displayTextStructured);
+    };
 };
