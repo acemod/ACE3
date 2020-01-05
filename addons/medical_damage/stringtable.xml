@@ -47,7 +47,7 @@
             <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
             <Spanish>Fijar la cantidad de daño que la IA puede recivir antes de caer inconsciente</Spanish>
-            <German>Legt die Anzahl an Schaden fest welche eine KI Einheit erhalten kann, bevor sie ohnmächtig wird.</German>
+            <German>Legt die Höhe des Schadens fest, den ein KI-Einheit erhalten kann, bevor sie ohnmächtig wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
