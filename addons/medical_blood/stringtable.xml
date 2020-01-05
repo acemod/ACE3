@@ -51,7 +51,7 @@
             <Italian>Oggetti Sangue al Massimo</Italian>
             <Czech>Maximum objektů krve</Czech>
             <Spanish>Máxima cantidad de objetos de sangre</Spanish>
-            <German>Maximale Blut Objekte</German>
+            <German>Maximale Anzahl an Blutstropfen-Objekten</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
             <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
