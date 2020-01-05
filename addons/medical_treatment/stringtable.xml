@@ -555,7 +555,7 @@
             <Chinese>控制醫療用廢棄物的時長，以秒為單位。設定為-1則是永不刪除。</Chinese>
             <Italian>Controlla la durata di vita degli oggetti  spazzatura, in pochi secondi. -1 è per sempre.</Italian>
             <Czech>Nastavuje za jak dlouho zdravotnické odpadky zmizí. -1 je navždy.</Czech>
-            <German>Kontrolliert die Lebenszeit von Abfall Objekten in Sekunden. -1 ist für immer.</German>
+            <German>Kontrolliert die Anzeigedauer von Abfall-Objekten in Sekunden. -1 ist für immer.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
             <English>Anyone</English>
