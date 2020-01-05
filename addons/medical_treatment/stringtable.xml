@@ -295,7 +295,7 @@
             <Chinese>控制何處能使用個人急救包</Chinese>
             <Italian>Controlla dove può essere usato un PAK.</Italian>
             <Czech>Nastavuje kde může být osobní lékárnička (PAK) použita.</Czech>
-            <German>Kontrolliert wo ein PAK benutzt werden kann.</German>
+            <German>Kontrolliert, wo ein Erste-Hilfe-Set benutzt werden kann.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
             <English>Consume PAK</English>
