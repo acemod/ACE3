@@ -73,6 +73,7 @@
             <Portuguese>Medicação Avançada</Portuguese>
             <Chinese>進階醫療用品</Chinese>
             <Czech>Pokročilé léky</Czech>
+            <Italian>Medicazione avanzata</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
@@ -82,6 +83,7 @@
             <Portuguese>Ativa a manipulação avançada de medicações. Também permite o uso de Adenosina e Atropina.</Portuguese>
             <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
             <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
+            <Italian>Abilita una gestione della medicazione più estesa e approfondita. Permette inoltre l'utilizzo dell'Adenosina.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
             <English>Wound Reopening</English>
@@ -109,10 +111,12 @@
             <Chinese>包紮即痊癒</Chinese>
             <French>Guérir les blessures pansées</French>
             <Czech>Vyčistit úraz po obvázání</Czech>
+            <Italian>Rimozione ferite bendate</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
             <English>Controls whether fully bandaged body parts are healed.</English>
             <Japanese>全ての傷に対して包帯を巻いた部分を治癒するかどうかを決定します。</Japanese>
+            <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -303,9 +307,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
+            <Italian>Utilizzo del kit di pronto soccorso su se stessi</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
+            <Italian>Abilita l'utilizzo del kit di pronto soccorso su se stessi.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -414,6 +420,7 @@
             <Portuguese>Autotransfusão de IV</Portuguese>
             <Chinese>自我注射點滴</Chinese>
             <Czech>Samoaplikace IV transfuze</Czech>
+            <Italian>Trasfusione endovena su se stessi</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
             <English>Enables the use of IV transfusions on oneself.</English>
@@ -424,6 +431,7 @@
             <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
             <Czech>Umožňuje aplikovat IV transfuze na sama sebe.</Czech>
+            <Italian>Abilita la trasfusione in endovena su se stessi.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
