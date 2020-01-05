@@ -84,7 +84,7 @@
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
             <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
-            <German>Kontrolliert ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
+            <German>Kontrolliert, ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
