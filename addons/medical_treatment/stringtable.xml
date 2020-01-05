@@ -358,7 +358,7 @@
             <Chinese>允許使用手術包</Chinese>
             <Italian>Permettere il kit chirurgico</Italian>
             <Czech>Povolit sešívací sadu</Czech>
-            <German>Erlaube Nähkit</German>
+            <German>Erlaube Operations-Set</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
