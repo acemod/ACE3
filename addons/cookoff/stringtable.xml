@@ -24,6 +24,8 @@
             <French>Dégâts et effets de tourelle</French>
             <Chinese>傷害控制及炮塔效果</Chinese>
             <Czech>Poškodit ovládání a efekty věže</Czech>
+            <Polish>Efekty uszkodzenia i wieży
+</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_hd_tooltip">
             <English>Changes damage handling for cook off and turret explosion effects</English>
@@ -34,6 +36,7 @@
             <French>Modifie la gestion des dégâts pour l'auto-inflammation et les effets d'explosion de tourelle.</French>
             <Chinese>更改殉爆以及炮塔爆炸之傷害控制</Chinese>
             <Czech>Změní poškození ovládání a efekty výbuchu veže</Czech>
+            <Polish>Zmienia uszkodzenia dla wybuchu amunicji i efekt eksplozji wieży</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <English>Wreck (Turret)</English>

@@ -98,6 +98,7 @@
             <Czech>Vypni automatické vypnutí motoru</Czech>
             <Chinese>關閉引擎自動熄火</Chinese>
             <French>Désactiver l'arrêt automatique du moteur</French>
+            <Polish>Wyłacz automatyczne zgaszenie silnika</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
@@ -109,6 +110,7 @@
             <Czech>Zabraň automatickému vypnutí motoru při opuštění vozidla.</Czech>
             <Chinese>避免離開載具時自動熄火。</Chinese>
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
+            <Polish>Zapobiegnij automatycznemu zgaszeniu silnika po wyjsciu z pojazdu.</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>

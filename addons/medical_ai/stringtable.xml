@@ -10,6 +10,7 @@
             <Portuguese>IA Médico</Portuguese>
             <Chinese>AI醫療兵</Chinese>
             <Czech>Zdravotnická AI</Czech>
+            <Polish>Medyczne AI</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
@@ -20,6 +21,7 @@
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
             <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
             <Czech>UI reaguje na zranění a bezvědomí</Czech>
+            <Polish>AI reaguje na zranienia i nieprzytomności</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>

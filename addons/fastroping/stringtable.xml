@@ -285,6 +285,7 @@
             <English>Fast-roping</English>
             <French>Aérocordage</French>
             <Chinese>快速繩降</Chinese>
+            <Polish>Fast-roping</Polish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>

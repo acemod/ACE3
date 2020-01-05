@@ -200,6 +200,7 @@
             <Chinese>最大跟隨距離</Chinese>
             <French>Distance maximale de suivi</French>
             <Czech>Maximální vzdálenost sledování objektu</Czech>
+            <Polish>Maksymalna Odległość od Śledzonego Obiektu</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
@@ -209,6 +210,7 @@
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
+            <Polish>Maksymalna odległość na którą może oddalić sie kamera od śledzonego obiektu</Polish>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">

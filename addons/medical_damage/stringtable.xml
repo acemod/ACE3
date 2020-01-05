@@ -9,6 +9,7 @@
             <Portuguese>Limite de Dano Crítico do Jogador</Portuguese>
             <Chinese>玩家重擊承受量</Chinese>
             <Czech>Kritická míra poškození pro hráče</Czech>
+            <Polish>Próg Obrażeń dla Gracza</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious.</English>
@@ -18,6 +19,8 @@
             <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
             <Czech>Nastavuje kolik poškození hráč může obdržet než upadne do bezvědomí.</Czech>
+            <Polish>Ustawia ilość obrażeń które gracz może przyjąć przed ustratą przytomności.
+</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
@@ -27,6 +30,7 @@
             <Portuguese>Limite de Dano Crítico da IA</Portuguese>
             <Chinese>AI重擊承受量</Chinese>
             <Czech>Kritická míra poškození pro AI</Czech>
+            <Polish>Próg Obrażeń dla AI</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
             <English>Sets the amount of damage an AI unit can receive before going unconscious.</English>
@@ -36,6 +40,8 @@
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
+            <Polish>"Ustawia ilość obrażeń które AI może przyjąć przed ustratą przytomności.
+"</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
@@ -523,6 +529,7 @@
             <Chinese>致命傷來源</Chinese>
             <French>Cause de blessure mortelle</French>
             <Czech>Zdroj smrtelné škody</Czech>
+            <Polish>Źródło obrażeń śmiertelnych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
             <English>Determines what damage can be fatal</English>
@@ -530,6 +537,7 @@
             <Chinese>決定何種傷害為致命</Chinese>
             <French>Détermine le type de blessures pouvant être fatales.</French>
             <Czech>Nastavuje jaké poškození může být smrtelné</Czech>
+            <Polish>Determinuje jakie obrażenia mogą być śmiertelne</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
@@ -537,6 +545,7 @@
             <Chinese>只有重要器官之重傷</Chinese>
             <French>Grosses blessures sur organes vitaux</French>
             <Czech>Pouze zásahy do životně důležitých orgánů</Czech>
+            <Polish>Tylko duże trafinia w organy niezbędne do życia</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
             <English>Sum of trauma</English>
@@ -544,6 +553,7 @@
             <Chinese>外部創傷累計</Chinese>
             <French>Somme des traumatismes</French>
             <Czech>Celkové množství úrazů</Czech>
+            <Polish>Suma urazów</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
             <English>Either</English>
@@ -551,6 +561,7 @@
             <Chinese>兩者都是</Chinese>
             <French>Les deux</French>
             <Czech>Kterýkoliv ze dvou</Czech>
+            <Polish>Zarówno</Polish>
         </Key>
     </Package>
 </Project>

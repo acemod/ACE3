@@ -10,6 +10,8 @@
             <Portuguese>Status</Portuguese>
             <Chinese>狀態</Chinese>
             <Czech>Stav</Czech>
+            <Polish>Stan
+</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
@@ -84,6 +86,7 @@
             <Portuguese>Velocidade de Transferência de Sangue</Portuguese>
             <Chinese>點滴輸血流量</Chinese>
             <Czech>Rychlost IV transfuze </Czech>
+            <Polish>Szybkość przepływu transfuzji IV</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>

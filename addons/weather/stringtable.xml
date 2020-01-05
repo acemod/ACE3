@@ -161,6 +161,7 @@
             <Czech>Zkontrolovat teplotu vzduchu</Czech>
             <Japanese>気温を確認</Japanese>
             <French>Vérifier la température</French>
+            <Polish>Sprawdz Temperature Powietrza</Polish>
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
@@ -168,6 +169,7 @@
             <Czech>Ukázat akci kontroly teploty vzduchu</Czech>
             <Japanese>気温の確認動作を表示</Japanese>
             <French>Afficher l'interaction "Vérifier la température"</French>
+            <Polish>Pokaż Akcję Sprawdz Temperature Powietrza</Polish>
         </Key>
     </Package>
 </Project>

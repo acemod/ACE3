@@ -1823,6 +1823,7 @@
             <Chinese>額外修理條件</Chinese>
             <French>Exigences pour réparations diverses</French>
             <Czech>Požadavky pro částečnou opravu</Czech>
+            <Polish>Różne wymagania naprawcze</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
@@ -1830,6 +1831,7 @@
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
             <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
             <Czech>Předměty potřebné k provedení opravy konkrétní části vozidla nebo sundání/výměny pásů.</Czech>
+            <Polish>Przedmioty potrzebne do naprawy specyficznego modułu pojazdu lub usunięcia/wymiany gąsienicy.</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
@@ -1837,6 +1839,7 @@
             <Chinese>完整修復條件</Chinese>
             <French>Exigences pour réparations complètes</French>
             <Czech>Požadavky pro plnou opravu</Czech>
+            <Polish>Wymagania do pełnej naprawy</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
@@ -1844,6 +1847,8 @@
             <Chinese>是否需要物品來完整修復載具</Chinese>
             <French>Outils nécessaires pour effectuer une réparation complète des véhicules.</French>
             <Czech>Předměty potřebné k provedení plné opravy vozidla.</Czech>
+            <Polish>
+Przedmioty potrzebne do wykonania pełnej naprawy pojazdu.</Polish>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>

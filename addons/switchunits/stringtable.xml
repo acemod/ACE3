@@ -67,6 +67,7 @@
             <French>Permettre le changement de camp</French>
             <Chinese>啟用陣營切換</Chinese>
             <Czech>Povolit změnu strany</Czech>
+            <Polish>Pozwól na zmiane stron</Polish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>

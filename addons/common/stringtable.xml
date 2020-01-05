@@ -467,6 +467,7 @@
             <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
             <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
+            <Polish>Definiuje co powinno sie stać jeżeli gracz nie posiada poprawnych plików PBO.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -488,6 +489,7 @@
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
+            <Polish>Sprawdz wszystkie modyfikacje, nie tylko pochodzące z ACE.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -993,6 +995,7 @@
             <French>Toujours</French>
             <Chinese>一直</Chinese>
             <Czech>Vždy</Czech>
+            <Polish>Zawsze</Polish>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1081,6 +1084,7 @@
             <French>Confirmer</French>
             <Chinese>確認</Chinese>
             <Czech>Potvrdit</Czech>
+            <Polish>Potwierdź</Polish>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1092,6 +1096,7 @@
             <French>Jamais</French>
             <Chinese>從不</Chinese>
             <Czech>Nikdy</Czech>
+            <Polish>Nigdy</Polish>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1350,6 +1355,7 @@
             <English>Show the action in the self-interaction menu</English>
             <French>Affiche l'action dans le menu d'interaction personnel.</French>
             <Chinese>在自我互動選單內顯示動作</Chinese>
+            <Polish>Pokaż akcje w menu interakcji własnej</Polish>
         </Key>
     </Package>
 </Project>
