@@ -61,7 +61,7 @@
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
-            <German>Erhöht wie oft Aufwachprüfungen passieren wenn der Patient Epinephrine im System hat.</German>
+            <German>Erhöht wie oft Aufwachprüfungen passieren wenn ein Patient Epinephrin im Blutkreislauf hat.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
