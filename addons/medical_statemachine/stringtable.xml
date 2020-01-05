@@ -30,7 +30,7 @@
             <French>Définit si les joueurs décèdent en cas de blessure mortelle. Une blessure mortelle est causée par un dommage important à la tête ou au torse.</French>
             <Czech>Nastavuje zda hráči mohou utrpět smrtelné zranění. Smrtelné zranění je utrpěto významným poškozením hlavy nebo těla.</Czech>
             <Italian>Controlla quando i giocatori possono ricevere infortuni mortali. Una lesione mortale è causata da un danno significativo alla testa o al corpo.</Italian>
-            <German>Kontrolliert wann Spieler tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Körper verursacht.</German>
+            <German>Legt fest wann Spieler tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Körper verursacht.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
             <English>AI Fatal Injuries</English>
@@ -50,7 +50,7 @@
             <French>Définit si les unités IA décèdent en cas de blessure mortelle. Une blessure mortelle est causée par un dommage important à la tête ou au torse.\nSi réglé sur "Toujours", cela produit effectivement un comportement de "Mort instantanée" car les unités IA mourront immédiatement de toute blessure mortelle.\nNOTE : Tout mode autre que "Toujours" nécessite l'activation de l'option "Inconscience IA".</French>
             <Czech>Nastavuje zda AI může utrpět smrtelné zranění. Smrtelné zranění je utrpěto významným poškozením hlavy nebo těla.\nPokud je tato možnost nastavena na "Vždy", efektivně nastává stav "Povolit okamžitou smrt AI", protože AI okamžitě zemře při jakémkoliv smrtelném zranění.\nPOZNÁMKA: Jakýkoliv jiný stav než "Vždy" potřebuje zapnutou možnost "Bezvědomí AI".</Czech>
             <Italian>Controlla quando l'IA può ricevere ferite mortali. Una lesione mortale è causata da un danno significativo alla testa o al corpo. Se impostato su "Sempre", questo produce efficacemente il comportamento "Morte istantanea AI", poiché l'IA morirà immediatamente a causa di qualsiasi lesione mortale.\NOTA: Qualsiasi modalità diversa da "Sempre" richiede l'attivazione dell'Incoscienza AI.</Italian>
-            <German>Kontrolliert wann KI-Einheiten tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Körper verursacht.\nWenn "Immer" eingestellt ist, erzeugt diese Einstellung das "KI Sofort-Tod" Verhalten. KI-Einheiten sterben sofort durch jede tödliche Verletzung.\nBEACHTE: Eine andere Einstellung als "Immer" bedingt, dass "KI-Bewusstlosigkeit" verwendet wird.</German>
+            <German>Legt fest wann KI-Einheiten tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Körper verursacht.\nWenn "Immer" eingestellt ist, erzeugt diese Einstellung das "KI Sofort-Tod" Verhalten. KI-Einheiten sterben sofort durch jede tödliche Verletzung.\nBEACHTE: Eine andere Einstellung als "Immer" bedingt, dass "KI-Bewusstlosigkeit" verwendet wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_DisplayName">
             <English>AI Unconsciousness</English>
