@@ -1111,7 +1111,7 @@
             <Chinese>固定骨折的部位</Chinese>
             <Italian>Stabilizza un arto fratturato</Italian>
             <Czech>Znehybňuje zlomenou končetinu</Czech>
-            <German>Stabilisiere eine gebrochenes Körperteil</German>
+            <German>Stabilisiere einen Bruch</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
