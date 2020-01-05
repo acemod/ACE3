@@ -38,7 +38,7 @@
             <Italian>Seleziona il tipo di effetto del dolore usato.</Italian>
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
-            <German>Wählt den benutzen Schmerzeffekts Typen.</German>
+            <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
