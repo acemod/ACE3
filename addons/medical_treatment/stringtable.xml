@@ -637,7 +637,7 @@
             <Chinese>心肺復甦術恢復心率的機率。</Chinese>
             <Czech>Pravděpodobnost, že CPR obnoví srdeční tep.</Czech>
             <Italian>E' probabile che la rianimazione RCP abbia successo nel ripristinare il ritmo cardiaco.</Italian>
-            <German>Wahrscheinlichkeit das HLW erfolgreich sein wird in Wiederherstellung des Herzrhythmus. </German>
+            <German>Wahrscheinlichkeit, dass HLW bei der Wiederherstellung des Herzrhythmus erfolgreich sein wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
