@@ -646,7 +646,7 @@
             <French>Rengainer obligatoirement</French>
             <Italian>Fondina richiesta</Italian>
             <Czech>Vyžadováno schování zbraně</Czech>
-            <German>Holstern benötigt.</German>
+            <German>Holstern benötigt</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
