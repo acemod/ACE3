@@ -145,7 +145,7 @@
             <Chinese>在醫療設施或者載具旁時增加醫療能力。未受訓練的將會成為醫療兵，醫療兵將會成為軍醫。</Chinese>
             <Italian>Aumentare la formazione medica quando si è in veicoli o strutture mediche. Se non addestrato diventa medico, il medico diventa dottore.</Italian>
             <Czech>Zvyšuje zdravotnickou úroveň v zdravotnických objektech a vozidlech. Nevycvičení se stávají mediky a medici se stávají doktory.</Czech>
-            <German>Verbessere Medizinische Fähigkeiten in medizinischen Fahrzeugen oder Einrichtungen. Untrainiert wird zu Sanitäter, Sanitäter wird zum Arzt.</German>
+            <German>Verbessere medizinische Fähigkeiten in medizinischen Fahrzeugen oder Einrichtungen. Untrainiert wird zu Sanitäter, Sanitäter wird zu Arzt.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
