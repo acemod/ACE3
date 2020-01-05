@@ -522,7 +522,7 @@
             <Chinese>最大醫療用廢棄物數量</Chinese>
             <Italian>Numero massimo di oggetti spazzatura</Italian>
             <Czech>Maximum odpadků</Czech>
-            <German>Maximale Abfall Objekte</German>
+            <German>Maximale Anzahl an Abfall-Objekten</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
