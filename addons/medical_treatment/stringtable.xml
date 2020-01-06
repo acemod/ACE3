@@ -58,6 +58,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
+            <German>Erlaubt Behandlungsaktionen für verschiedene Bandagetypen anstelle der gewöhnlichen Bandagen.</German>
             <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
             <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
             <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
