@@ -11,6 +11,7 @@
             <Italian>Soglia danni critici del giocatore</Italian>
             <Czech>Kritická míra poškození pro hráče</Czech>
             <Spanish>Límite de daño crítico al jugador</Spanish>
+            <Polish>Próg obrażeń krytycznych, które może przyjąć gracz</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious.</English>
@@ -22,6 +23,7 @@
             <Italian>Imposta la quantità di danno che un giocatore può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození hráč může obdržet než upadne do bezvědomí.</Czech>
             <Spanish>Fijar la cantidad de daño que un jugador puede recivir antes de caer inconsciente</Spanish>
+            <Polish>Ilość obrażeń, które może otrzymać gracz przed utratą przytomności</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
@@ -33,6 +35,7 @@
             <Italian>Soglia dei danni critici dell AI</Italian>
             <Czech>Kritická míra poškození pro AI</Czech>
             <Spanish>Límite de daño crítico de la IA</Spanish>
+            <Polish>Próg obrażeń krytycznych, które może przyjąć AI</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
             <English>Sets the amount of damage an AI unit can receive before going unconscious.</English>
@@ -44,6 +47,7 @@
             <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
             <Spanish>Fijar la cantidad de daño que la IA puede recivir antes de caer inconsciente</Spanish>
+            <Polish>Ilość obrażeń, które może otrzymać AI przed utratą przytomności</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
@@ -534,6 +538,7 @@
             <Czech>Zdroj smrtelné škody</Czech>
             <Portuguese>Fonte de Dano Fatal</Portuguese>
             <Spanish>Origen de daño fatal</Spanish>
+            <Polish>Źródło obrażeń krytycznych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
             <English>Determines what damage can be fatal</English>
@@ -544,6 +549,7 @@
             <Czech>Nastavuje jaké poškození může být smrtelné</Czech>
             <Portuguese>Determina qual dano pode ser fatal</Portuguese>
             <Spanish>Determina qué daño puede ser fatal</Spanish>
+            <Polish>Decyduje, co może zostać źródłem obrażeń krytycznych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
@@ -554,6 +560,7 @@
             <Czech>Pouze zásahy do životně důležitých orgánů</Czech>
             <Portuguese>Apenas danos largos a órgãos vitais</Portuguese>
             <Spanish>Solo grandes heridas en organos vitales</Spanish>
+            <Polish>Tylko poważne obrażenia organów życiowych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
             <English>Sum of trauma</English>
@@ -564,6 +571,7 @@
             <Czech>Celkové množství úrazů</Czech>
             <Portuguese>Soma do trauma</Portuguese>
             <Spanish>Suma de traumatismos</Spanish>
+            <Polish>Suma urazów</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
             <English>Either</English>
@@ -574,6 +582,7 @@
             <Czech>Kterýkoliv ze dvou</Czech>
             <Portuguese>Ou</Portuguese>
             <Spanish>Ambos</Spanish>
+            <Polish>Zarówno</Polish>
         </Key>
     </Package>
 </Project>

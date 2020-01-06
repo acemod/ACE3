@@ -11,6 +11,7 @@
             <Italian>GUI</Italian>
             <Czech>GUI</Czech>
             <Spanish>Interfaz gráfica</Spanish>
+            <Polish>Interfejs użytkownika</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
             <English>Enable Medical Actions</English>
@@ -23,6 +24,7 @@
             <Italian>Attivare azioni mediche</Italian>
             <Czech>Povolit zdravotnické akce</Czech>
             <Spanish>Habilitar acciones médicas</Spanish>
+            <Polish>Włącz interakcje medyczne</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
@@ -35,6 +37,7 @@
             <Italian>Abilita le azioni mediche per il Menu Interazione e seleziona il loro stile.</Italian>
             <Czech>Povolit zdravotnické akce pro menu interakcí a vybrat jejich styl.</Czech>
             <Spanish>Habilita acciones médicas para el menú de interacción y selecciona su estilo.</Spanish>
+            <Polish>Włącz interakcje medyczne dla menu interakcji i wybierz ich styl</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Selections3D">
             <English>Selections (3D)</English>
@@ -79,6 +82,7 @@
             <Italian>Abilitare le azioni di automedicazione</Italian>
             <Czech>Povolit zdravotnické vlastní akce</Czech>
             <Spanish>Habilitar las acciones médicas en uno mismo</Spanish>
+            <Polish>Włącz własne interakcje medyczne</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_Description">
             <English>Enables medical actions for the Self Interaction Menu.</English>
@@ -91,6 +95,7 @@
             <Italian>Abilita il menu per le interazioni mediche personali</Italian>
             <Czech>Povoluje zdravotnické akce v menu vlastních interakcí.</Czech>
             <Spanish>Activa las acciones médicas para el menú de interacción personal</Spanish>
+            <Polish>Włącz interakcje medyczne dla własnego menu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_DisplayName">
             <English>Enable Medical Menu</English>
@@ -103,6 +108,7 @@
             <Italian>Abilita il menu medico</Italian>
             <Czech>Povolit Zdravotnické menu</Czech>
             <Spanish>Activar menú médico</Spanish>
+            <Polish>Włącz menu medyczne</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
@@ -115,6 +121,7 @@
             <Italian>Abilita l'uso del Menu Medico attraverso il menu tastiera o il menu di interazione.</Italian>
             <Czech> Povoluje používání Zdravotnického menu klávesovou zkratku nebo skrze menu interakcí.</Czech>
             <Spanish>Activa el uso del menú médico a través de la tecla o del menú de interacción</Spanish>
+            <Polish>Włącz menu medyczne poprzez skrót klawiszowy lub menu interakcji</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
             <English>Reopen Medical Menu</English>
@@ -127,6 +134,7 @@
             <Italian>Riaprire il menù medico</Italian>
             <Czech>Znovu otevřít Zdravotnické menu</Czech>
             <Spanish>Reabrir menú médico</Spanish>
+            <Polish>Ponowne otwarcie menu medycznego</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_Description">
             <English>Reopen the Medical Menu after successful treatment.</English>
@@ -139,6 +147,7 @@
             <Italian>Riaprire il menu medico dopo il trattamento con successo.</Italian>
             <Czech>Otevře Zdravotnické menu po úspěšném dokončení zdravotnické akce.</Czech>
             <Spanish>Reabrir menú médico después de completar un tratamiento</Spanish>
+            <Polish>Otwórz ponownie menu medyczne po wykonanym leczeniu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -151,6 +160,7 @@
             <Italian>Massima distanza</Italian>
             <Czech>Maximální vzdálenost</Czech>
             <Spanish>Distancia máxima</Spanish>
+            <Polish>Maksymalny dystans</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
@@ -163,6 +173,7 @@
             <Italian>Distanza massima da cui si può aprire il Menu Medico.</Italian>
             <Czech>Maximální vzdálenost ze které je možné otevřít Zdravotnické menu.</Czech>
             <Spanish>Distancia máxima desde el paciente para que el menú pueda ser abierto</Spanish>
+            <Polish>Maksymalny dystans z którego menu medyczne może zostać otwarte</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -883,6 +894,7 @@
             <Italian>Frattura</Italian>
             <Czech>Zlomené</Czech>
             <Spanish>Fracturada</Spanish>
+            <Polish>Złamanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
@@ -894,6 +906,7 @@
             <Italian>Gessatura applicata</Italian>
             <Czech>Dlaha aplikována</Czech>
             <Spanish>Tablilla aplicada</Spanish>
+            <Polish>Założona szyna</Polish>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -907,6 +920,7 @@
             <Italian>Ha perso un po' di sangue</Italian>
             <Czech>Ztratil trochu krve</Czech>
             <Spanish>Algo de sangre perdida</Spanish>
+            <Polish>Stracił trochę krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
             <English>Lost a lot of blood</English>
@@ -935,6 +949,7 @@
             <Italian>Ha perso una grande quantità di sangue</Italian>
             <Czech>Ztratil velké množství krve</Czech>
             <Spanish>Perdida gran cantidad de sangre</Spanish>
+            <Polish>Stracił bardzo dużo krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
@@ -947,6 +962,7 @@
             <Italian>Ha perso una quantità fatale di sangue</Italian>
             <Czech>Vykrvácel</Czech>
             <Spanish>Perdida una cantidad fatal de sangre</Spanish>
+            <Polish>Stracił krytyczną ilość krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -969,7 +985,7 @@
             <Russian>Назотрахеальная трубка</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
             <French>Canule Nasopharyngée [NPA]</French>
-            <Polish>Rurka nosowo-gardłowa [NPA]</Polish>
+            <Polish>Rurka nosowo-gardłowa [UG]</Polish>
             <Portuguese>Tubo nasofaríngeo [NPA]</Portuguese>
             <Czech>Nasofaryngeální trubice [NPA]</Czech>
             <Italian>Tubo Nasofaringeo [NPA]</Italian>
@@ -1003,6 +1019,7 @@
             <Czech>Parciální %1</Czech>
             <Portuguese>Parcial%1</Portuguese>
             <Spanish>Parcial %1</Spanish>
+            <Polish>Częściowa %1</Polish>
         </Key>
     </Package>
 </Project>
