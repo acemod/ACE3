@@ -3180,7 +3180,7 @@
             <Polish>%1 jest przytomny</Polish>
             <German>%1 ist anprechbar</German>
             <Hungarian>%1 reakcióképes</Hungarian>
-            <Italian>%1 e' cosciente</Italian>
+            <Italian>%1 è cosciente</Italian>
             <Portuguese>%1 está respondendo</Portuguese>
             <Czech>%1 odpovídá</Czech>
             <Japanese>%1 は反応あり</Japanese>
@@ -3196,7 +3196,7 @@
             <Polish>%1 jest nieprzytomny</Polish>
             <German>%1 ist nicht ansprechbar</German>
             <Hungarian>%1 nem reagál</Hungarian>
-            <Italian>%1 e' incosciente</Italian>
+            <Italian>%1 non risponde</Italian>
             <Portuguese>%1 não está respondendo</Portuguese>
             <Czech>%1 neodpovídá</Czech>
             <Japanese>%1 の反応なし</Japanese>
