@@ -19,7 +19,7 @@
             <Russian>Медицинский мусор</Russian>
             <Portuguese>Lixo</Portuguese>
             <Chinese>醫療用廢棄物</Chinese>
-            <Italian>Spazzatura</Italian>
+            <Italian>Rifiuti</Italian>
             <Czech>Odpadky</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
@@ -92,7 +92,7 @@
             <Russian>Повторное открытие ран</Russian>
             <Portuguese>Reabrir Feridas</Portuguese>
             <Chinese>傷口再度裂開</Chinese>
-            <Italian>Riapertura della ferita</Italian>
+            <Italian>Riapertura delle ferite</Italian>
             <Czech>Znovuotevření ran</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
@@ -475,7 +475,7 @@
             <Portuguese>Permitir Lixo Médico</Portuguese>
             <French>Activer les détritus</French>
             <Hungarian>Szemét engedélyezése</Hungarian>
-            <Italian>Abilita Barella</Italian>
+            <Italian>Abilita rifiuti</Italian>
             <Japanese>廃棄物の有効化</Japanese>
             <Chinese>啟用醫療用廢棄物</Chinese>
         </Key>
@@ -496,7 +496,7 @@
             <Russian>Макс. кол-во мусора</Russian>
             <Portuguese>Máximo de Objetos de Lixo</Portuguese>
             <Chinese>最大醫療用廢棄物數量</Chinese>
-            <Italian>Numero massimo di oggetti spazzatura</Italian>
+            <Italian>Numero massimo di rifiuti</Italian>
             <Czech>Maximum odpadků</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
@@ -506,7 +506,7 @@
             <Russian>Устанавливает максимальное количество создаваемых объектов мусора. Чрезмерное значение может вызвать задержку FPS.</Russian>
             <Portuguese>Define o limite máximo de objetos de lixo que podem ser criados, quantidade excessivas podem causar lag de FPS.</Portuguese>
             <Chinese>設定最大可以產生的醫療用廢棄物數量，極端的數量的話可能導致幀數下降。</Chinese>
-            <Italian>Imposta il numero massimo di rifiuti che possono essere generati, quantità eccessive possono causare un ritardo FPS.</Italian>
+            <Italian>Imposta il numero massimo di rifiuti che possono essere generati, quantità eccessive possono diminuire gli FPS.</Italian>
             <Czech>Nastavuje maximum odpadků, které se mohou objevit. Vysoká hodnota m§že negativně ovlivnit FPS.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
@@ -516,7 +516,7 @@
             <Russian>Время жизни мусора</Russian>
             <Portuguese>Duração de Lixo</Portuguese>
             <Chinese>醫療用廢棄物時長</Chinese>
-            <Italian>Tempo spazzatura</Italian>
+            <Italian>Tempo rifiuti</Italian>
             <Czech>Životnost odpadků</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
@@ -526,7 +526,7 @@
             <Russian>Управляет временем жизни объектов мусора в секундах. -1 означает Навсегда.</Russian>
             <Portuguese>Controla o tempo de vida de objetos de lixo criados em segundos. -1 é para sempre.</Portuguese>
             <Chinese>控制醫療用廢棄物的時長，以秒為單位。設定為-1則是永不刪除。</Chinese>
-            <Italian>Controlla la durata di vita degli oggetti  spazzatura, in pochi secondi. -1 è per sempre.</Italian>
+            <Italian>Controlla la durata di vita dei rifiuti in secondi. -1 è per sempre.</Italian>
             <Czech>Nastavuje za jak dlouho zdravotnické odpadky zmizí. -1 je navždy.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
