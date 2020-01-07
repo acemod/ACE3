@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Item Classname <STRING>
  * 1: Hitpoint <STRING>
+ * 2: Disable Caching <BOOLEAN> (Default: false)
  *
  * Return Value:
  * Protection the item applies to that hitpoint <ARRAY>
@@ -18,13 +19,13 @@
  * Public: No
  */
 
- params ["_item","_hitpoint"];
+ params ["_item","_hitpoint",["_noCache",false]];
 
 _hitpoint = toLower _hitpoint;
 
 // Return the cached value if found
-private _cached = GVAR(armourCache_items) getVariable _item;
-if (!isNil "_cached") exitwith {
+private _cached = if (_noCache) then {[]} else {GVAR(armourCache_items) getVariable [_item,[]]};
+if !(_cached isEqualTo []) exitwith {
     private _index = _cached findIf {_x#0 isEqualTo _hitpoint};
     if (_index == -1) then {[0,0]} else {(_cached select _index)#1};
 };
@@ -48,7 +49,9 @@ private _armourValues = [];
     _armourValues pushBack [_protectionHitpoint,[_armour,_expl]];
 } foreach ("isText (_x >> ""hitpointName"")" configClasses _protection);
 
-GVAR(armourCache_items) setVariable [_item, _armourValues];
+if (!_noCache) then {
+    GVAR(armourCache_items) setVariable [_item, _armourValues];
+};
 
 // Return the value that was actually requested
 private _index = _armourValues findIf {_x#0 isEqualTo _hitpoint};
