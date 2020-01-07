@@ -30,7 +30,11 @@ if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIB
 
 // Cache for armour values of equipped items (vests etc)
 if (isNil QGVAR(armourCache_items)) then {
-	GVAR(armourCache_items) = false call CBA_fnc_createNamespace;
+    GVAR(armourCache_items) = false call CBA_fnc_createNamespace;
+};
+// Separate cache for uniforms because they work differently
+if (isNil QGVAR(armourCache_uniforms)) then {
+    GVAR(armourCache_uniforms) = false call CBA_fnc_createNamespace;
 };
 
 // Hack for #3168 (units in static weapons do not take any damage):

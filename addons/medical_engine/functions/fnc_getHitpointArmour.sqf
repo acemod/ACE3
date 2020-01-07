@@ -28,8 +28,10 @@ private _unitClass = typeOf _unit;
 // If the uniform is valid, we use the unit class it defines
 private _uniform = uniform _unit;
 if !(_uniform isEqualTo "") then {
-	private _cfg = configFile >> "CfgWeapons" >> _uniform >> "ItemInfo";
-	_unitClass = getText (_cfg >> "uniformClass");
+    private _cfg = configFile >> "CfgWeapons" >> _uniform >> "ItemInfo";
+    if (isClass _cfg && {isText (_cfg >> "uniformClass")}) then {
+        _unitClass = getText (_cfg >> "uniformClass");
+    };
 };
 
 // Get base values from the uniform or unit class
@@ -44,9 +46,9 @@ if (isNumber (_hpClass >> "explosionShielding")) then {_explosion = _explosion *
 
 // Add values from equipped vests and other gear
 {
-	private _values = [_x, _hitpoint] call FUNC(getItemArmour);
-	_armour = _armour + _values#0;
-	_explosion = _explosion + _values#1;
+    private _values = [_x, _hitpoint] call FUNC(getItemArmour);
+    _armour = _armour + _values#0;
+    _explosion = _explosion + _values#1;
 } foreach [vest _unit, headgear _unit];
 
 // Return
