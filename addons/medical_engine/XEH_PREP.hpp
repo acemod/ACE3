@@ -4,3 +4,5 @@ PREP(updateBodyPartVisuals);
 PREP(updateDamageEffects);
 PREP(setStructuralDamage);
 PREP(setUnconsciousAnim);
+PREP(getHitpointArmour);
+PREP(getItemArmour);
