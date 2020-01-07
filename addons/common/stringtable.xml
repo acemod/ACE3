@@ -481,6 +481,7 @@
             <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
             <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
+            <Polish>Określa akcję, która ma być podjęta, jeśli gracz nie ma właściwych PBO.</Polish>
             <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
@@ -503,6 +504,7 @@
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
+            <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
             <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
@@ -525,6 +527,7 @@
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Chinese>定義哪些插件是允許使用的。</Chinese>
             <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
+            <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
             <Japanese>許可するアドオンを定義します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
@@ -1011,6 +1014,7 @@
             <Chinese>一直</Chinese>
             <Italian>Sempre</Italian>
             <Czech>Vždy</Czech>
+            <Polish>Zawsze</Polish>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1100,6 +1104,7 @@
             <Chinese>確認</Chinese>
             <Italian>Conferma</Italian>
             <Czech>Potvrdit</Czech>
+            <Polish>Potwierdź</Polish>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1112,6 +1117,7 @@
             <Chinese>從不</Chinese>
             <Italian>Mai</Italian>
             <Czech>Nikdy</Czech>
+            <Polish>Nigdy</Polish>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>

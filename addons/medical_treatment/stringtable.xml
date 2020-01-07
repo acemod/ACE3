@@ -22,7 +22,7 @@
             <Chinese>醫療用廢棄物</Chinese>
             <Italian>Spazzatura</Italian>
             <Czech>Odpadky</Czech>
-            <Polish>Leżący</Polish>
+            <Polish>Śmieci</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
@@ -34,7 +34,7 @@
             <Chinese>進階診斷</Chinese>
             <Italian>Diagnosi avanzata</Italian>
             <Czech>Pokročilá diagnóza</Czech>
-            <Polish>Zaawansowana diagnoza</Polish>
+            <Polish>Zaawansowana Diagnoza</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.\nWhen disabled, the CPR action will only be shown when performing CPR is appropriate.\nThe actions this setting enables are needed to determine whether a person is unconscious or in cardiac arrest.</English>
@@ -45,6 +45,7 @@
             <Chinese>啟用檢查脈搏、血壓以及病患反應的動作而非一般的診斷動作。\n當停用時，CPR只會在需要時出現。\n當這個選項啟用時必須診斷病患是否無意識或者心搏停止。</Chinese>
             <Italian>Abilita le azioni di controllo del polso, controllo della pressione sanguigna e controllo della risposta al trattamento invece dell'azione generica Diagnose.\ Se disabilitata, l'azione di RCP sarà mostrata solo quando l'esecuzione della RCP è appropriata.\Le azioni abilitate da questa impostazione sono necessarie per determinare se una persona è in stato di incoscienza o in arresto cardiaco.</Italian>
             <Czech>Povoluje kontrolu srdečního tepu, krevního tlaku a reakce pacienta namísto univerzální diagnózy.\nKdyž je tato možnost vypnuta, CPR akce bude dostupná pouze pokud je vhodné ji provést.\nAkce které tato možnost zapíná jsou nutné k určení zda je pacient v bezvědomí nebo má srdeční zástavu.</Czech>
+            <Polish>Włącza opcje sprawdzania Pulsu, Ciśnienia Tętniczego Krwi i Reakcje Na Ból, zamiast bardziej ogólnej akcji Diagnozuj.\n Po wyłączeniu tej opcji akcja RKO będzie wyświetlana tylko wtedy, gdy jej wykonanie będzie odpowiednie.\n Opcja, która włącza to ustawienie jest potrzebna do ustalenia, czy osoba jest nieprzytomna lub ma zatrzymanie krążenia.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -56,7 +57,7 @@
             <Chinese>進階包紮</Chinese>
             <Italian>Bendaggi avanzati</Italian>
             <Czech>Pokročilé obvazy</Czech>
-            <Polish>Zaawansowane bandażowanie</Polish>
+            <Polish>Zaawansowane Bandaże</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
@@ -67,7 +68,7 @@
             <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
             <Italian>Permette azioni di trattamento per diversi tipi di bendaggio al posto del bendaggio generico.</Italian>
             <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
-            <Polish>Pozwala leczyć różnymi typami bandaży</Polish>
+            <Polish>Umożliwia wybranie konkretnego rodzaju bandaża zamiast ogólnej akcji bandażowania.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -98,7 +99,7 @@
             <Chinese>傷口再度裂開</Chinese>
             <Italian>Riapertura della ferita</Italian>
             <Czech>Znovuotevření ran</Czech>
-            <Polish>Ponowne otwieranie się ran</Polish>
+            <Polish>Ponowne Otwarcie Ran</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
             <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
@@ -108,6 +109,7 @@
             <Portuguese>Permite que ferimentos atados possam reabrir. Requer Ataduras Avançadas para funcionar.</Portuguese>
             <Chinese>啟用包紮過的傷口是否會再度裂開。需要啟用「進階包紮」之功能。</Chinese>
             <Czech>Povoluje znovuotevírání obvázaných zranění. Vyžaduje zapnuté Pokročilé obvazy.</Czech>
+            <Polish>Umożliwia ponowne otwarcie się zabandażowanych ran. Wymaga włączenia opcji Zaawansowane Bandaże.</Polish>
             <Italian>Permette la riapertura delle ferite fasciate. Richiede l'abilitazione di Bende Avanzate.</Italian>
             <Polish>Włącza ponowne otwieranie się zabandażowanych ran. Wymaga zaawansowanych bandaży.</Polish>
         </Key>
@@ -148,6 +150,7 @@
             <Chinese>在醫療設施或者載具旁時增加醫療能力。未受訓練的將會成為醫療兵，醫療兵將會成為軍醫。</Chinese>
             <Italian>Aumentare la formazione medica quando si è in veicoli o strutture mediche. Se non addestrato diventa medico, il medico diventa dottore.</Italian>
             <Czech>Zvyšuje zdravotnickou úroveň v zdravotnických objektech a vozidlech. Nevycvičení se stávají mediky a medici se stávají doktory.</Czech>
+            <Polish>Zwiększ wyszkolenie medyczne w pojazdach lub obiektach medycznych. Niewytrenowana jednostka zostaje medykiem, medyk zostaje lekarzem.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_DisplayName">
             <English>Allow Shared Equipment</English>
@@ -158,7 +161,7 @@
             <Chinese>允許共享設備</Chinese>
             <Italian>Consentire la condivisione di attrezzature</Italian>
             <Czech>Povolit sdílení vybavení</Czech>
-            <Polish>Włącz współdzielenie ekwipunku</Polish>
+            <Polish>Zezwalaj na współdzielenie sprzętu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
@@ -169,7 +172,7 @@
             <Chinese>控制是否病患與醫療兵之間能否共享醫療物資</Chinese>
             <Italian>Controlla se le attrezzature mediche possono essere condivise tra il paziente e il medico.</Italian>
             <Czech>Nastavuje zda jak je zdravotnické vybavení sdíleno mezi medikem a pacientem.</Czech>
-            <Polish>Kontroluje czy ekwipunek medyczny może być współdzielony pomiędzy medykiem i poszkodowanym.</Polish>
+            <Polish>Kontroluje, czy sprzęt medyczny ma być dzielony między pacjentem a medykiem.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
@@ -180,7 +183,7 @@
             <Chinese>優先使用患者的醫療物資</Chinese>
             <Italian>L'attrezzatura del paziente prima di tutto</Italian>
             <Czech>Prvně pacientovo vybavení</Czech>
-            <Polish>Ekwipunek poszkodowanego w pierwszej kolejności</Polish>
+            <Polish>Najpierw sprzęt pacjenta</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedic">
             <English>Medic's Equipment First</English>
@@ -191,13 +194,13 @@
             <Chinese>優先使用醫療兵的醫療物資</Chinese>
             <Italian>Prima le attrezzature mediche</Italian>
             <Czech>Prvně medikovo vybavení</Czech>
-            <Polish>Ekwipunek medyka w pierwszej kolejności</Polish>
+            <Polish>Najpierw sprzęt medyka</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
             <German>Erlaube Epiniphrin</German>
             <Spanish>Permitir Epinefrina</Spanish>
-            <Polish>Ograniczenia adrenaliny</Polish>
+            <Polish>Ograniczenia użycia adrenaliny</Polish>
             <French>Épinéphrine autorisée pour</French>
             <Italian>Permette epinefrina</Italian>
             <Czech>Povolit epinefrin</Czech>
@@ -217,13 +220,13 @@
             <Chinese>要受過何種程度的醫療訓練才可以使用腎上腺素</Chinese>
             <Italian>Livello di addestramento richiesto per usare l'Epinefrina.</Italian>
             <Czech>Úroveň výcviku pro použití epinefrinu</Czech>
-            <Polish>Poziom uprawnień wymagany do użycia Epinefryny</Polish>
+            <Polish>Poziom wyszkolenia wymagany do korzystania z epinefryny.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_DisplayName">
             <English>Locations Epinephrine</English>
             <German>Orte für Epiniphrin</German>
             <Spanish>Ubicaciones epinefrina</Spanish>
-            <Polish>Ograniczenia adrenaliny</Polish>
+            <Polish>Miejsca użycia epinefryny</Polish>
             <French>Lieux épinéphrine</French>
             <Italian>Ubicazione epinefrina</Italian>
             <Czech>Oblast pro použití epinefrinu</Czech>
@@ -243,12 +246,12 @@
             <Chinese>控制何處能使用腎上腺素</Chinese>
             <Italian>Controlli dove si può usare l'Epinefrina.</Italian>
             <Czech>Nastavuje kde může být epinefrin použit</Czech>
-            <Polish>Kontroluje gdzie można użyć Epinefryne</Polish>
+            <Polish>Kontroluje, gdzie można stosować epinefrynę.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
             <Russian>Использование Аптечки</Russian>
-            <Polish>Ustawienie apteczek osobistych</Polish>
+            <Polish>Ograniczenia użycia apteczek osobistych</Polish>
             <Spanish>Permitir EPA</Spanish>
             <German>Erlaube Erste-Hilfe-Set</German>
             <Czech>Povolit osobní lékárničky (PAK)</Czech>
@@ -270,12 +273,12 @@
             <Chinese>要受過何種程度的醫療訓練才可以使用個人急救包</Chinese>
             <Italian>Livello di formazione richiesto per l'utilizzo di un PAK.</Italian>
             <Czech>Úroveň výcviku pro použití osobní lékárničky (PAK).</Czech>
-            <Polish>Poziom uprawnień wymagany do użycia apteczek osobistych</Polish>
+            <Polish>Poziom wyszkolenia wymagany do korzystania z apteczek osobistych.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_DisplayName">
             <English>Locations PAK</English>
             <Russian>Места использования Аптечки</Russian>
-            <Polish>Ograniczenie apteczek osobistych</Polish>
+            <Polish>Miejsca użycia apteczek osobistych</Polish>
             <Spanish>Ubicaciones del EPA</Spanish>
             <German>Orte für Erste-Hilfe-Set</German>
             <Czech>Oblast k použití PAK</Czech>
@@ -297,7 +300,7 @@
             <Chinese>控制何處能使用個人急救包</Chinese>
             <Italian>Controlla dove può essere usato un PAK.</Italian>
             <Czech>Nastavuje kde může být osobní lékárnička (PAK) použita.</Czech>
-            <Polish>Kontroluje gdzie można użyć apteczek osobistych</Polish>
+            <Polish>Kontroluje, gdzie można korzystać z apteczek osobistych.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_DisplayName">
             <English>Consume PAK</English>
@@ -308,7 +311,7 @@
             <Chinese>個人急救包為消耗品</Chinese>
             <Italian>Consumare PAK</Italian>
             <Czech>Spotřebuj osobní lékárničku (PAK)</Czech>
-            <Polish>Zużycie apteczki osobistej</Polish>
+            <Polish>Zużycie apteczek osobistych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
@@ -319,7 +322,7 @@
             <Chinese>設定個人急救包是否為消耗品</Chinese>
             <Italian>Controlla se un PAK deve essere consumato dopo l'uso.</Italian>
             <Czech>Nastavuje zda má být osobní lékárnička (PAK) spotřebována po použití.</Czech>
-            <Polish>Kontroluje zużycie apteczki osobistej po użyciu</Polish>
+            <Polish>Kontroluje, czy apteczka osobista powinna być zużyta po użyciu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
@@ -338,7 +341,7 @@
             <Chinese>個人急救包的時間係數</Chinese>
             <Italian>Coefficiente temporale PAK</Italian>
             <Czech>Časový koeficient pro osobní lékárničku (PAK)</Czech>
-            <Polish>Współczynnik czasu użycia apteczki osobistej</Polish>
+            <Polish>Współczynnik czasu apteczek osobistych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
@@ -349,7 +352,7 @@
             <Chinese>修改個人急救包要使用多久才能完成。\n醫療時間是依照全身的肢體狀況並乘上該係數而決定的，至少十秒。</Chinese>
             <Italian>Il tempo di trattamento si basa sul danno totale della parte del corpo moltiplicato per questo coefficiente, con un minimo di 10 secondi.</Italian>
             <Czech>Upravuje jak dlouho trvá léčba pomocí osobní lékárničky (PAK).\nDoba léčby závisí na celkovém poškození částí těla vynásobeném tímto koeficientem, přičemž minimum je 10 vteřin.</Czech>
-            <Polish>Modyfikuje ile trwa użycie apteczki osobistej \n Ogólny czas leczenia jest sumą obrażeń ciała pomnożoną przez ten współczynnik, przy czym wartość minimalna to 10 sekund</Polish>
+            <Polish>Zmienia czas potrzebny na zastosowanie apteczki osobistej.\n Czas leczenia jest oparty na całkowitym uszkodzeniu części ciała pomnożonym przez ten współczynnik, wynosi minimum 10 sekund.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
@@ -360,7 +363,7 @@
             <Chinese>允許使用手術包</Chinese>
             <Italian>Permettere il kit chirurgico</Italian>
             <Czech>Povolit sešívací sadu</Czech>
-            <Polish>Zezwól na zestaw do szycia</Polish>
+            <Polish>Ograniczenia Użycia Zestawu Chirurgicznego</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
@@ -371,7 +374,7 @@
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
             <Italian>Livello di formazione richiesto per l'utilizzo di un kit chirurgico.</Italian>
             <Czech>Úroveň výcviku pro použití sešívací sady.</Czech>
-            <Polish>Poziom uprawnień wymagany do użycia zestawu do szycia</Polish>
+            <Polish>Poziom wyszkolenia wymagany do korzystania z Zestawu Chirurgicznego.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_DisplayName">
             <English>Locations Surgical Kit</English>
@@ -382,7 +385,7 @@
             <Chinese>手術包使用地點</Chinese>
             <Italian>Luoghi Kit chirurgico</Italian>
             <Czech>Nastavuje kde může být sešívací sada použita</Czech>
-            <Polish>Lokalizacje zestawu do szycia</Polish>
+            <Polish>Miejsca użycia Zestawu Chirurgicznego</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
@@ -393,7 +396,7 @@
             <Chinese>控制何處能使用手術包</Chinese>
             <Italian>Controlla dove può essere usato un kit chirurgico.</Italian>
             <Czech>Nastavuje zda má být sešívací sada spotřebována po použití.</Czech>
-            <Polish>Kontroluje gdzie zestaw do szycia może zostać użyty</Polish>
+            <Polish>Kontroluje, gdzie można użyć Zestawu Chirurgicznego.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
@@ -404,7 +407,7 @@
             <Chinese>手術包為消耗品</Chinese>
             <Italian>Consumare Kit Chirurgico</Italian>
             <Czech>Spotřebuj sešívací sadu</Czech>
-            <Polish>Zużycie zestawu do szycia</Polish>
+            <Polish>Zużycie Zestawów Chirurgicznych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>Controls whether a surgical kit should be consumed after use.</English>
@@ -415,7 +418,7 @@
             <Chinese>設定手術包是否為消耗品</Chinese>
             <Italian>Controlla se un kit chirurgico deve essere consumato dopo l'uso.</Italian>
             <Czech>Nastavuje </Czech>
-            <Polish>Kontroluje czy zestaw do szycia będzie zużyty po użyciu</Polish>
+            <Polish>Kontroluje, czy Zestaw Chirurgiczny powinien być zużyty po użyciu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
@@ -425,7 +428,7 @@
             <Chinese>自我縫合</Chinese>
             <Italian>Auto cucitura</Italian>
             <Czech>Samo-zašívání</Czech>
-            <Polish>Samoszycie</Polish>
+            <Polish>Zszywanie własnych ran</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_Description">
             <English>Enables the use of surgical kits to stitch oneself.</English>
@@ -434,6 +437,7 @@
             <Japanese>縫合キットを使い自らを縫合できるようにします。</Japanese>
             <Chinese>啟用是否能自己使用手術包來縫合自己的傷口。</Chinese>
             <Czech>Umožňuje použití sešívací sady na sebe sama.</Czech>
+            <Polish>Umożliwia użycie Zestawu Chirurgicznego na sobie.</Polish>
             <Italian>Permette l'uso di kit chirurgici per ricucirsi.</Italian>
             <Polish>Pozwala na używanie zestawu do szycia na sobie</Polish>
         </Key>
@@ -469,7 +473,7 @@
             <Chinese>轉換原版物品</Chinese>
             <Italian>Converti oggetti vanilla</Italian>
             <Czech>Přeměnit zdravotnické předměty ze základní hry</Czech>
-            <Polish>Zamień przedmioty z vanilli</Polish>
+            <Polish>Konwertuj przedmioty z vanili</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
@@ -481,7 +485,7 @@
             <Chinese>控制是否轉換原版的醫療物資成ACE的醫療物資，或者單純移除或無視。</Chinese>
             <Italian>Controlla se gli articoli medicali vanilla vengono convertiti in articoli medicali ACE, rimossi o ignorati.</Italian>
             <Czech>Nastavuje zda zdravotnické předměty ze základní hry budou přeměněny na ACE předměty, odstraněny nebo ignorovány.</Czech>
-            <Polish>Kontroluje czy przedmioty z vanilli są zamienione na przedmioty ACE medycznego, usunięte lub zignorowane.</Polish>
+            <Polish>Kontroluje, czy podstawowe przedmioty medyczne z Arma są konwertowane na przedmioty medyczne ACE, tylko usuwane lub ignorowane.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_RemoveOnly">
             <English>Remove Only</English>
@@ -492,7 +496,7 @@
             <Chinese>單純移除</Chinese>
             <Italian>Rimuovere solo</Italian>
             <Czech>Pouze odstranit</Czech>
-            <Polish>Usuń</Polish>
+            <Polish>Tylko Usuwaj</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_DisplayName">
             <English>Enable Litter</English>
@@ -517,7 +521,7 @@
             <Chinese>啟用醫療後剩下的醫療用廢棄物。</Chinese>
             <Italian>Permette la creazione di rifiuti al momento del trattamento.</Italian>
             <Czech>Umožňuje vytvořit odpadky při léčbě.</Czech>
-            <Polish>Włącza odpadki powstałe po leczeniu</Polish>
+            <Polish>Umożliwia tworzenie śmieci po przeprowadzaniu zabiegu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_DisplayName">
             <English>Max Litter Objects</English>
@@ -528,7 +532,7 @@
             <Chinese>最大醫療用廢棄物數量</Chinese>
             <Italian>Numero massimo di oggetti spazzatura</Italian>
             <Czech>Maximum odpadků</Czech>
-            <Polish>Maksymalna liczba odpadków</Polish>
+            <Polish>Maksymalna Ilość Śmieci</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MaxLitterObjects_Description">
             <English>Sets the maximum number of litter objects which can be spawned, excessive amounts can cause FPS lag.</English>
@@ -539,7 +543,7 @@
             <Chinese>設定最大可以產生的醫療用廢棄物數量，極端的數量的話可能導致幀數下降。</Chinese>
             <Italian>Imposta il numero massimo di rifiuti che possono essere generati, quantità eccessive possono causare un ritardo FPS.</Italian>
             <Czech>Nastavuje maximum odpadků, které se mohou objevit. Vysoká hodnota m§že negativně ovlivnit FPS.</Czech>
-            <Polish>Ustawia maksymalną liczbę odpadków, wysoka wartość może powodować spadki FPS</Polish>
+            <Polish>Definiuje maksymalną liczbę śmieci, które mogą zostać stworzone, nadmierne ilości mogą powodować spadki FPS.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_DisplayName">
             <English>Litter Lifetime</English>
@@ -550,7 +554,7 @@
             <Chinese>醫療用廢棄物時長</Chinese>
             <Italian>Tempo spazzatura</Italian>
             <Czech>Životnost odpadků</Czech>
-            <Polish>Czas trwania odpadków</Polish>
+            <Polish>Czas trwania Śmieci</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
@@ -561,7 +565,7 @@
             <Chinese>控制醫療用廢棄物的時長，以秒為單位。設定為-1則是永不刪除。</Chinese>
             <Italian>Controlla la durata di vita degli oggetti  spazzatura, in pochi secondi. -1 è per sempre.</Italian>
             <Czech>Nastavuje za jak dlouho zdravotnické odpadky zmizí. -1 je navždy.</Czech>
-            <Polish>Kontroluje czas trwania odpadków w sekundach. Gdy -1 to śmieci nie będą znikać</Polish>
+            <Polish>Kontroluje czas trwania śmieci w sekundach. -1 pozostawia je na zawsze.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
             <English>Anyone</English>
@@ -588,7 +592,7 @@
             <Chinese>醫療兵</Chinese>
             <Italian>Medici</Italian>
             <Czech>Medikové</Czech>
-            <Polish>Ratownicy Medyczni</Polish>
+            <Polish>Medycy</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Doctors">
             <English>Doctors</English>
@@ -599,7 +603,7 @@
             <Chinese>軍醫</Chinese>
             <Italian>Dottori</Italian>
             <Czech>Doktoři</Czech>
-            <Polish>Lekarze</Polish>
+            <Polish>Doktorzy</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicalFacilities">
             <English>Medical Facilities</English>
@@ -610,7 +614,7 @@
             <Chinese>醫療設施</Chinese>
             <Italian>Strutture mediche</Italian>
             <Czech>Zdravotnické zařízení</Czech>
-            <Polish>Placówki medyczne</Polish>
+            <Polish>Obiekty Medyczne</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VehiclesAndFacilities">
             <English>Vehicles &amp; Facilities</English>
@@ -621,7 +625,7 @@
             <Chinese>車輛 %amp; 設施</Chinese>
             <Czech>Zdravotnická zařízení a vozidla</Czech>
             <Italian>Veicoli e strutture</Italian>
-            <Polish>Pojazdy i placówki</Polish>
+            <Polish>Pojazdy i Obiekty</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_DisplayName">
             <English>CPR Success Chance</English>
@@ -652,7 +656,7 @@
             <French>Rengainer obligatoirement</French>
             <Italian>Fondina richiesta</Italian>
             <Czech>Vyžadováno schování zbraně</Czech>
-            <Polish>Schowanie broni</Polish>
+            <Polish>Wymagana broń w kaburze</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
@@ -660,6 +664,7 @@
             <Chinese>控制是否要先放下或把武器放入武器套才能做出醫療行為。\n除了診斷 - 允許未放下或未放入的情況下進行一連串的診斷（檢查脈搏，血壓，反應）。</Chinese>
             <French>Définit si les armes doivent être rengainées ou abaissées avant de pouvoir effectuer des actes médicaux.\nLes options "sauf examens" autorisent les examens (vérification du pouls, de la tension artérielle, de l'état de conscience) en toutes circonstances.</French>
             <Czech>Nastavuje zda musí být zbraň schovaná/snížená pro provádění zdravotnických úkonů.\nKromě Diagnózy - Umožňuje diagnostické akce (kontrola srdečního tepu, tlaku krve a reakci pacienta) vždy bez ohledu na nastavení schování zbraně.</Czech>
+            <Polish>Kontroluje, czy broń musi być schowana/opuszczona w celu wykonania leczenia pacjenta.\n Za wyjątkiem diagnozowania - umożliwia wykonywanie czynności kontrolnych (sprawdzanie tętna, ciśnienia krwi, reakcji) przez cały czas, niezależnie od ustawienia Wymagana broń w kaburze.</Polish>
             <Italian>Controlla se le armi devono essere tenute nella fondina / abbassate per poter eseguire le azioni mediche.\Except Exam - Permette azioni di esame (controllo del polso, della pressione sanguigna, della risposta) in ogni momento indipendentemente dall'impostazione della fondina richiesta.</Italian>
             <Polish>Kontroluje czy broń musi być schowana / opuszczona aby udzielać pomocy medycznej. \nNie dotyczy diagnostyki pozwala sprawdzić parametry życiowe niezależnie od tego ustawienia.</Polish>
         </Key>
@@ -670,7 +675,7 @@
             <French>Abaisser ou rengainer</French>
             <Italian>Abbassato o con fondina</Italian>
             <Czech>Snížena nebo Schována</Czech>
-            <Polish>Opuszczona lub schowana</Polish>
+            <Polish>Opuszczona lub w kaburze</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
             <English>Lowered or Holstered (Except Exam)</English>
@@ -679,7 +684,7 @@
             <French>Abaisser ou rengainer (sauf examens)</French>
             <Italian>Abbassato o con la fondina (eccetto l'esame)</Italian>
             <Czech>Snížena nebo Schována (kromě Diagnózy)</Czech>
-            <Polish>Opuszczona lub schowana (nie dotyczy diagnostyki)</Polish>
+            <Polish>Opuszczona lub w kaburze (oprócz diagnozowania)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
             <English>Holstered Only</English>
@@ -688,7 +693,7 @@
             <French>Rengainer seulement</French>
             <Italian>Solo con la fondina</Italian>
             <Czech>Pouze Schována</Czech>
-            <Polish>Schowana</Polish>
+            <Polish>Tylko w Kaburze</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
             <English>Holstered Only (Except Exam)</English>
@@ -697,7 +702,7 @@
             <French>Rengainer seulement (sauf examens)</French>
             <Italian>Solo fondina (eccetto esame)</Italian>
             <Czech>Pouze Schována (kromě Diagnózy)</Czech>
-            <Polish>Schowana (nie dotyczy diagnostyki)</Polish>
+            <Polish>Tylko w Kaburze (oprócz diagnozowania)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
@@ -1055,7 +1060,7 @@
             <Russian>Жгут</Russian>
             <Spanish>Torniquete (CAT)</Spanish>
             <French>Garrot (CAT)</French>
-            <Polish>Staza (typ. CAT)</Polish>
+            <Polish>Staza taktyczna (CAT)</Polish>
             <Czech>Škrtidlo (CAT)</Czech>
             <Hungarian>Érszorító (CAT)</Hungarian>
             <Italian>Laccio emostatico (CAT)</Italian>
@@ -1117,7 +1122,7 @@
             <Chinese>固定骨折的部位</Chinese>
             <Italian>Stabilizza un arto fratturato</Italian>
             <Czech>Znehybňuje zlomenou končetinu</Czech>
-            <Polish>Używana w celu stabilizacji złamań</Polish>
+            <Polish>Stabilizuje złamaną kończynę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -2323,6 +2328,7 @@
             <Chinese>套上固定板</Chinese>
             <Italian>Applica gessatura</Italian>
             <Czech>Aplikovat dlahu</Czech>
+            <Polish>Załóż szynę</Polish>
             <Spanish>Aplicar férula</Spanish>
             <Polish>Załóż szynę</Polish>
         </Key>
@@ -2335,6 +2341,7 @@
             <Chinese>套用固定板中...</Chinese>
             <Italian>Applicazione gessatura</Italian>
             <Czech>Aplikuji dlahu...</Czech>
+            <Polish>Zakładanie szyny</Polish>
             <Spanish>Aplicando férula...</Spanish>
             <Polish>Zakładanie szyny</Polish>
         </Key>
@@ -2556,6 +2563,7 @@
             <Chinese>輕微</Chinese>
             <Italian>Minimo</Italian>
             <Czech>Minimální</Czech>
+            <Polish>Minimalny</Polish>
             <Spanish>Mínimo</Spanish>
             <Polish>ZIELONY</Polish>
         </Key>
@@ -2697,6 +2705,7 @@
             <Chinese>中度疼痛中</Chinese>
             <Italian>Con un dolore leggero</Italian>
             <Czech>V mírných bolestech</Czech>
+            <Polish>W łagodnym bólu</Polish>
             <Spanish>Con dolor leve</Spanish>
             <Polish>W lekkim bólu</Polish>
         </Key>
@@ -2726,6 +2735,7 @@
             <Chinese>嚴重疼痛中</Chinese>
             <Italian>Con un forte dolore</Italian>
             <Czech>Ve velkých bolestech</Czech>
+            <Polish>W silnym bólu</Polish>
             <Spanish>Con dolor severo</Spanish>
             <Polish>W silnym bólu</Polish>
         </Key>
@@ -3776,6 +3786,7 @@
             <Italian>%1 ha applicato una gessatura</Italian>
             <Czech>%1 použil dlahu</Czech>
             <Japanese>%1 は添え木を当てた</Japanese>
+            <Polish>%1 założył szynę</Polish>
             <Spanish>%1 aplicada una férula</Spanish>
             <Polish>%1 założył szynę</Polish>
         </Key>
@@ -3892,7 +3903,7 @@
         <Key ID="STR_ACE_Medical_Treatment_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
             <German>An diesem Körperteil befindet sich kein Tourniquet!</German>
-            <Polish>Na tej części ciała nie ma stazy!</Polish>
+            <Polish>Na tej kończynie nie ma stazy!</Polish>
             <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
             <Russian>Нет жгута на этой части тела!</Russian>
             <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>

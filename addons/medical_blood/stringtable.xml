@@ -38,6 +38,7 @@
             <Portuguese>Permitir a criação de gotas de sangue quando as unidades recebem ferimentos ou estão sangrando.</Portuguese>
             <Chinese>啟用出血效果當單位失血或受傷的時候。</Chinese>
             <Czech>Povoluje vytváření kapek krve na zemi když jednotka krvácí nebo utrpí zranění.</Czech>
+            <Polish>Umożliwia tworzenie śladów krwi, gdy jednostki krwawią lub otrzymują obrażenia.</Polish>
             <Spanish>Habilita la creación de sangrecuando la unidad está sangrando o recibe daño</Spanish>
             <Polish>Włącza pojawianie się śladów krwi na ziemi gdy jednostka krwawi lub zostaje zraniona.</Polish>
         </Key>
@@ -50,6 +51,7 @@
             <Chinese>最大血跡數</Chinese>
             <Italian>Oggetti Sangue al Massimo</Italian>
             <Czech>Maximum objektů krve</Czech>
+            <Polish>Maksymalna ilość śladów krwi</Polish>
             <Spanish>Máxima cantidad de objetos de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
@@ -61,6 +63,7 @@
             <Chinese>設定最大可存在的血跡數量。太極端的數量會導致幀數低落或卡頓</Chinese>
             <Italian>Imposta il numero massimo di gocce di sangue che possono essere depositate, quantità eccessive possono causare del lag di FPS.</Italian>
             <Czech>Nastavuje maximum objektů krve na zemi, příliš mnoho může způsobit pokles FPS</Czech>
+            <Polish>Definiuje maksymalną ilość śladów krwi,  które mogą zostać stworzone, nadmierne ilości mogą powodować spadki FPS.</Polish>
             <Spanish>Fija el límite de objetos de sangre que aparecerán, cantidades excesivas pueden causar caídas de FPS</Spanish>
             <Polish>Ustawia maksymalną ilość śladów krwi na ziemi, wysokie wartości mogą powodować spadki FPS</Polish>
         </Key>
@@ -73,6 +76,7 @@
             <Chinese>血跡時長</Chinese>
             <Italian>Vita del sangue</Italian>
             <Czech>Životnost krve</Czech>
+            <Polish>Czas trwania śladów krwi</Polish>
             <Spanish>Duración de la sangre</Spanish>
             <Polish>Czas trwania krwi</Polish>
         </Key>
@@ -85,6 +89,7 @@
             <Chinese>控制血跡在地上的時長</Chinese>
             <Italian>Controlla la durata degli oggetti con gocce di sangue.</Italian>
             <Czech>Nastavuje jak dlouho objekty krve na zemi vydrží.</Czech>
+            <Polish>Kontroluje czas trwania śladów krwi.</Polish>
             <Spanish>Controla el tiempo de vida que tendrán los objetos de sangre</Spanish>
             <Polish>Czas trwania śladów krwi</Polish>
         </Key>
