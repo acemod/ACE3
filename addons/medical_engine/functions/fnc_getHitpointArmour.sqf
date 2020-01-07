@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
- * Author: pterolatypus
- * Scans config for the unit's items (or uses cached values) to calculate the total armour on a hitpoint
+ * Author: Pterolatypus
+ * Checks a unit's equipment to calculate the total armour on a hitpoint
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -13,7 +13,7 @@
  * 1: ExplosionShielding <NUMBER>
  *
  * Example:
- * [player, "HitChest"] call ace_medical_engine_fnc_getArmourValueHitpoint
+ * [player, "HitChest"] call ace_medical_engine_fnc_getHitpointArmour
  *
  * Public: No
  */

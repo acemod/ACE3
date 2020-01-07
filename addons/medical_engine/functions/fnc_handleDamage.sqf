@@ -1,4 +1,3 @@
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 /*
  * Author: commy2, SilentSpike
@@ -70,7 +69,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         _unit getVariable [QGVAR($HitAbdomen), [0,0]],
         _unit getVariable [QGVAR($HitDiaphragm), [0,0]],
         _unit getVariable [QGVAR($HitChest), [0,0]]
-        // HitBody removed as it's a placeholder hitpoint and the high armor value (1000) throws the calculations off
+        // HitBody removed as it's a placeholder hitpoint and the high armour value (1000) throws the calculations off
     ];
     _damageBody sort false;
     _damageBody = _damageBody#0;
