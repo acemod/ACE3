@@ -27,6 +27,7 @@
             <Chinese>從無意識中甦醒機率</Chinese>
             <Italian>Chance di rialzarsi</Italian>
             <Czech>Pravděpodobnost probuzení se z bezvědomí</Czech>
+            <Polish>Szansa na wybudzenie nieprzytomnego</Polish>
             <Spanish>Posibilidad de recuperar la conciencia</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
@@ -39,6 +40,7 @@
             <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
             <Italian>La probabilità che un'unità con i segni vitali stabili si risvegli dall'incoscienza (controllata ogni 15 secondi).</Italian>
             <Czech>Pravděpodobnost, že se jednotka se stabilními životními známkami probudí z bezvědomí (zkoušeno každých 15 vteřin).</Czech>
+            <Polish>Prawdopodobieństwo, że jednostka ze stabilnymi parametrami życiowymi obudzi się z nieprzytomności (sprawdzane co 15 sekund).</Polish>
             <Spanish>La probabilidad de que una unidad estabilizada recupere la conciencia y se levante (se comprueba cada 15 segundos)</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
@@ -48,6 +50,7 @@
             <French>L'épinéphrine augmente les chances de réveil</French>
             <Italian>L'epinefrina aumenta la possibilità di rialzarsi</Italian>
             <Czech>Epinefrin zvyšuje šanci na probuzení</Czech>
+            <Polish>Szansa na wybudzenie po użyciu Epinefryny</Polish>
             <Portuguese>Epinefrina Aumenta a chance de acordar</Portuguese>
             <Spanish>Epinefrina, aumenta la posibilidad de despertar</Spanish>
         </Key>
@@ -58,6 +61,7 @@
             <French>Augmente la probabilité qu'un patient inconscient se réveille spontanément lorsqu'il a de l'épinéphrine dans son système sanguin.</French>
             <Italian>Aumenta la frequenza dei controlli al risveglio spontaneo quando il paziente ha l'Epinefrina nel suo corpo</Italian>
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
+            <Polish>Zwiększa częstotliwość spontanicznych wybudzeń, gdy pacjent ma epinefrynę w swoim organizmie. </Polish>
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
         </Key>
@@ -70,6 +74,7 @@
             <Chinese>跛腳</Chinese>
             <Italian>Zoppicare</Italian>
             <Czech>Kulhání</Czech>
+            <Polish>Kuśtykanie</Polish>
             <Spanish>Cojera</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
@@ -79,6 +84,7 @@
             <French>Permet de définir si les plaies ouvertes ou pansées font boiter une personne.</French>
             <Italian>Controlla se le ferite aperte o bendate fanno zoppicare una persona.</Italian>
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
+            <Polish>Kontroluje, czy otwarte lub zabandażowane rany powodują utykanie jednostki.</Polish>
             <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
         </Key>
@@ -91,6 +97,7 @@
             <Chinese>傷口裂開時跛腳</Chinese>
             <Italian>Zoppo per via delle ferite aperte</Italian>
             <Czech>Kulhat s otevřeným zraněním</Czech>
+            <Polish>Kuśtykanie przy otwartych ranach</Polish>
             <Spanish>Cojera en heridas abiertas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
@@ -102,6 +109,7 @@
             <Chinese>使裂開或者包紮過的傷口讓人跛腳</Chinese>
             <Italian>Zoppicare su ferite aperte o bendate</Italian>
             <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
+            <Polish>Kuśtykanie przy otwartych ranach lub zabandażowanych ranach</Polish>
             <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
@@ -113,6 +121,7 @@
             <Chinese>骨折</Chinese>
             <Italian>Fratture</Italian>
             <Czech>Zlomeniny</Czech>
+            <Polish>Złamania</Polish>
             <Spanish>Fracturas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
@@ -122,6 +131,7 @@
             <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
             <Italian>Controlla l'effetto dell'utilizzo di stecche per curare le fratture. Quando disabilitato, le lesioni non causano fratture.</Italian>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
+            <Polish>Kontroluje efekt użycia szyn do leczenia złamań.\n Po wyłączeniu obrażenia nie powodują złamań.</Polish>
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
         </Key>
@@ -134,6 +144,7 @@
             <Chinese>固定板完全治癒骨折</Chinese>
             <Italian>Le gessature curano al massimo le fratture</Italian>
             <Czech>Dlahy kompletně léčí zlomeniny</Czech>
+            <Polish>Szyny leczą zupełnie złamania</Polish>
             <Spanish>Férulas sanan completamente las fracturas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
@@ -145,6 +156,7 @@
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
             <Italian>Le gessature curano, ma non puoi correre</Italian>
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
+            <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
