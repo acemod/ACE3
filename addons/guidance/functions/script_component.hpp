@@ -1,0 +1,1 @@
+#include "\z\ace\addons\guidance\script_component.hpp"
