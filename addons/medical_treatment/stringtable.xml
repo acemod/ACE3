@@ -208,7 +208,7 @@
             <Chinese>允許使用腎上腺素</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
-            <English>Training level required to use Epinephrine.</English>
+            <English>Training level required to use epinephrine.</English>
             <Japanese>アドレナリンの使用に訓練レベルを必要とさせます。</Japanese>
             <French>Définit quelle qualification médicale est requise pour pouvoir utiliser l'épinéphrine.</French>
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
@@ -234,7 +234,7 @@
             <Chinese>腎上腺素使用地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
-            <English>Controls where Epinephrine can be used.</English>
+            <English>Controls where epinephrine can be used.</English>
             <Japanese>アドレナリンが使える場所を決定します。</Japanese>
             <French>Définit où l'épinéphrine peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Адреналин.</Russian>
@@ -320,6 +320,12 @@
             <Czech>Nastavuje zda má být osobní lékárnička (PAK) spotřebována po použití.</Czech>
             <Polish>Kontroluje, czy apteczka osobista powinna być stracona po użyciu.</Polish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
+            <English>Self PAK Usage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
+            <English>Enables the use of PAKs to heal oneself.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
             <Japanese>応急処置キットの時間係数</Japanese>
@@ -354,7 +360,7 @@
             <Polish>Ograniczenia Użycia Zestawu Chirurgicznego</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
-            <English>Training level required to use a Surgical Kit.</English>
+            <English>Training level required to use a surgical kit.</English>
             <Japanese>縫合キットの使用に訓練レベルを必要とさせます。</Japanese>
             <French>Définit quelle qualification médicale est requise pour pouvoir utiliser une trousse chirurgicale.</French>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
@@ -376,7 +382,7 @@
             <Polish>Miejsca użycia Zestawu Chirurgicznego</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
-            <English>Controls where a Surgical Kit can be used.</English>
+            <English>Controls where a surgical kit can be used.</English>
             <Japanese>縫合キットが使える場所を決定します。</Japanese>
             <French>Définit où la trousse chirurgicale peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
@@ -398,7 +404,7 @@
             <Polish>Utrata Zestawów Chirurgicznych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
-            <English>Controls whether a Surgical Kit should be consumed after use.</English>
+            <English>Controls whether a surgical kit should be consumed after use.</English>
             <Japanese>縫合キットの使用後に消費するかどうかを決定します。</Japanese>
             <French>Définit si la trousse chirurgicale doit être à usage unique.</French>
             <Russian>Контролирует, следует ли израсходовать Хирургический набор после использования.</Russian>
@@ -439,7 +445,7 @@
             <Czech>Samoaplikace IV transfuze</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
-            <English>Enables the use of IV Transfusions on oneself.</English>
+            <English>Enables the use of IV transfusions on oneself.</English>
             <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
             <Japanese>自らに対して IV 輸血を可能にします。</Japanese>

@@ -75,6 +75,7 @@
             <Korean>줄 배치</Korean>
             <Chinesesimp>部属绳索</Chinesesimp>
             <Chinese>部屬繩索</Chinese>
+            <Turkish>Halatları sal</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
             <English>Fast rope</English>
@@ -90,6 +91,7 @@
             <Korean>강하하기</Korean>
             <Chinesesimp>快速绳降</Chinesesimp>
             <Chinese>快速繩降</Chinese>
+            <Turkish>Halatla in</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
             <English>Cut ropes</English>
@@ -105,6 +107,7 @@
             <Korean>줄 자르기</Korean>
             <Chinesesimp>剪掉绳索</Chinesesimp>
             <Chinese>剪掉繩索</Chinese>
+            <Turkish>Halatı Kes</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES">
             <English>Equip helicopter with FRIES</English>
@@ -161,6 +164,7 @@
             <Chinese>部屬12公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 12m</Italian>
             <Czech>Připravit 12m lana</Czech>
+            <Turkish>12m halat sal</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
             <English>Deploy 15m ropes</English>
@@ -173,6 +177,7 @@
             <Chinese>部屬15公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 15m</Italian>
             <Czech>Připravit 15m lana</Czech>
+            <Turkish>15m halat sal</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
             <English>Deploy 18m ropes</English>
@@ -185,6 +190,7 @@
             <Chinese>部屬18公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 18m</Italian>
             <Czech>Připravit 18m lana</Czech>
+            <Turkish>18m halat sal</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
             <English>Deploy 27m ropes</English>
@@ -197,6 +203,7 @@
             <Chinese>部屬27公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 27m</Italian>
             <Czech>Připravit 27m lana</Czech>
+            <Turkish>27m halat sal</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
             <English>Deploy 36m ropes</English>
@@ -209,6 +216,7 @@
             <Chinese>部屬36公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 36m</Italian>
             <Czech>Připravit 36m lana</Czech>
+            <Turkish>36m halat sal</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Ropesupply">
             <English>[ACE] Ropes Supply crate</English>
@@ -245,6 +253,7 @@
             <Chinese>繩索（12.2公尺長）</Chinese>
             <Italian>Corda da 12.2 metri</Italian>
             <Czech>Lano 12.2 metrů</Czech>
+            <Turkish>12.2 metre halat</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_15_Display">
             <English>Rope 15.2 meters</English>
@@ -257,6 +266,7 @@
             <Chinese>繩索（15.2公尺長）</Chinese>
             <Italian>Corda da 15.2 metri</Italian>
             <Czech>Lano 15.2 metrů</Czech>
+            <Turkish>15.2 metre halat</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_18_Display">
             <English>Rope 18.3 meters</English>
@@ -269,6 +279,7 @@
             <Chinese>繩索（18.3公尺長）</Chinese>
             <Italian>Corda da 18.3 metri</Italian>
             <Czech>Lano 18.3 metrů</Czech>
+            <Turkish>18.3 metre halat</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_27_Display">
             <English>Rope 27.4 meters</English>
@@ -281,6 +292,7 @@
             <Chinese>繩索（27.4公尺長）</Chinese>
             <Italian>Corda da 27.4 metri</Italian>
             <Czech>Lano 27.4 metrů</Czech>
+            <Turkish>27.4 metre halat</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_36_Display">
             <English>Rope 36.6 meters</English>
@@ -293,6 +305,7 @@
             <Chinese>繩索（36.6公尺長）</Chinese>
             <Italian>Corda da 36.6 metri</Italian>
             <Czech>Lano 36.6 metrů</Czech>
+            <Turkish>36.6 metre halat</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_categoryMenu_displayName">
             <English>Fast-roping</English>

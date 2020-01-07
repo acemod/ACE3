@@ -14,6 +14,7 @@
             <Chinesesimp>进阶投掷</Chinesesimp>
             <Portuguese>Arremesso Avançado</Portuguese>
             <Czech>Pokročilé házení</Czech>
+            <Turkish>Gelişmiş Fırlatma</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
             <English>Allows changing advanced throwing behaviour.</English>

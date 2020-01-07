@@ -48,6 +48,7 @@
             <Korean>기후</Korean>
             <Chinesesimp>天气</Chinesesimp>
             <Chinese>天氣</Chinese>
+            <Turkish>Hava Durumu</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
@@ -80,6 +81,7 @@
             <Korean>ACE 기후</Korean>
             <Chinesesimp>ACE 天气</Chinesesimp>
             <Chinese>ACE 天氣</Chinese>
+            <Turkish>ACE Hava Durumu</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_enabled_Description">
             <English>Expands the existing weather by temperature, humidity and air pressure.</English>

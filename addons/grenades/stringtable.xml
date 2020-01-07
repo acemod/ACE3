@@ -16,6 +16,7 @@
             <Korean>투척 종류 전환</Korean>
             <Chinesesimp>切换投掷模式</Chinesesimp>
             <Chinese>切換投擲模式</Chinese>
+            <Turkish>Bomba fırlatma modunu değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_NormalThrow">
             <English>Normal Throw</English>
@@ -32,6 +33,7 @@
             <Korean>일반 던지기</Korean>
             <Chinesesimp>普通投掷</Chinesesimp>
             <Chinese>普通投擲</Chinese>
+            <Turkish>Normal Fırlatma</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_HighThrow">
             <English>High Throw</English>
@@ -48,6 +50,7 @@
             <Korean>높이 던지기</Korean>
             <Chinesesimp>高抛</Chinesesimp>
             <Chinese>高拋</Chinese>
+            <Turkish>Yüksek Fırlatma</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_PreciseThrow">
             <English>Precise Throw</English>

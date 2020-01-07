@@ -440,7 +440,7 @@ class ADDON {
             };
             class AbrasionLarge: Abrasion {
                 effectiveness = 0.7;
-                reopeningChance = 5;
+                reopeningChance = 0.5;
             };
 
             class Avulsion: Abrasion {

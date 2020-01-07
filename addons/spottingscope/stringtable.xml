@@ -16,6 +16,7 @@
             <Korean>감적 망원경</Korean>
             <Chinesesimp>观测镜</Chinesesimp>
             <Chinese>觀測鏡</Chinese>
+            <Turkish>Gözcü Dürbünü</Turkish>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
@@ -32,6 +33,7 @@
             <Korean>감적 망원경 줍기</Korean>
             <Chinesesimp>捡起观测镜</Chinesesimp>
             <Chinese>撿起觀測鏡</Chinese>
+            <Turkish>Gözcü Dürbününü al</Turkish>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
@@ -48,6 +50,7 @@
             <Korean>감적 망원경 배치</Korean>
             <Chinesesimp>放置观测镜</Chinesesimp>
             <Chinese>放置觀測鏡</Chinese>
+            <Turkish>Gözcü Dürbününü Yerleştir</Turkish>
         </Key>
     </Package>
 </Project>

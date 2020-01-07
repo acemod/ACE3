@@ -16,6 +16,7 @@
             <Korean>귀마개</Korean>
             <Chinesesimp>耳塞</Chinesesimp>
             <Chinese>耳塞</Chinese>
+            <Turkish>Kulak Tıkacı</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Description">
             <English>Protective Earplugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
@@ -48,6 +49,7 @@
             <Korean>귀마개 착용</Korean>
             <Chinesesimp>塞入耳塞</Chinesesimp>
             <Chinese>塞入耳塞</Chinese>
+            <Turkish>Kulak Tıkacı Tak</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Off">
             <English>Earplugs out</English>
@@ -64,6 +66,7 @@
             <Korean>귀마개 뺌</Korean>
             <Chinesesimp>取出耳塞</Chinesesimp>
             <Chinese>取出耳塞</Chinese>
+            <Turkish>Kulak Tıkacını Çıkart</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_On">
             <English>Earplugs in</English>
@@ -80,6 +83,7 @@
             <Korean>귀마개 착용</Korean>
             <Chinesesimp>耳塞已塞入</Chinesesimp>
             <Chinese>耳塞已塞入</Chinese>
+            <Turkish>Kulak Tıkacı Takıldı</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_Off">
             <English>Earplugs out</English>
@@ -96,6 +100,7 @@
             <Korean>귀마개 뺌</Korean>
             <Chinesesimp>耳塞已取出</Chinesesimp>
             <Chinese>耳塞已取出</Chinese>
+            <Turkish>Kulak Tıkacı Çıkartıldı</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_NoPlugs">
             <English>You have no earplugs</English>
@@ -112,6 +117,7 @@
             <Korean>귀마개가 없습니다</Korean>
             <Chinesesimp>你没有耳塞</Chinesesimp>
             <Chinese>你沒有耳塞</Chinese>
+            <Turkish>Kulak Tıkacın Yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_Inventory_Full">
             <English>No inventory space</English>
@@ -128,6 +134,7 @@
             <Korean>넣을 공간이 없습니다</Korean>
             <Chinesesimp>无可用空间</Chinesesimp>
             <Chinese>無可用空間</Chinese>
+            <Turkish>Envanterin de alan yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_DisplayName">
             <English>Disable ear ringing</English>

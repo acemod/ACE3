@@ -119,6 +119,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(allowSelfPAK),
+    "LIST",
+    [LSTRING(AllowSelfPAK_DisplayName), LSTRING(AllowSelfPAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(timeCoefficientPAK),
     "SLIDER",
     [LSTRING(TimeCoefficientPAK_DisplayName), LSTRING(TimeCoefficientPAK_Description)],
