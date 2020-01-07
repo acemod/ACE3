@@ -111,7 +111,6 @@
             <Czech>Povoluje znovuotevírání obvázaných zranění. Vyžaduje zapnuté Pokročilé obvazy.</Czech>
             <Polish>Umożliwia ponowne otwarcie się zabandażowanych ran. Wymaga włączenia opcji Zaawansowane Bandaże.</Polish>
             <Italian>Permette la riapertura delle ferite fasciate. Richiede l'abilitazione di Bende Avanzate.</Italian>
-            <Polish>Włącza ponowne otwieranie się zabandażowanych ran. Wymaga zaawansowanych bandaży.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
@@ -439,7 +438,6 @@
             <Czech>Umožňuje použití sešívací sady na sebe sama.</Czech>
             <Polish>Umożliwia użycie Zestawu Chirurgicznego na sobie.</Polish>
             <Italian>Permette l'uso di kit chirurgici per ricucirsi.</Italian>
-            <Polish>Pozwala na używanie zestawu do szycia na sobie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -666,7 +664,6 @@
             <Czech>Nastavuje zda musí být zbraň schovaná/snížená pro provádění zdravotnických úkonů.\nKromě Diagnózy - Umožňuje diagnostické akce (kontrola srdečního tepu, tlaku krve a reakci pacienta) vždy bez ohledu na nastavení schování zbraně.</Czech>
             <Polish>Kontroluje, czy broń musi być schowana/opuszczona w celu wykonania leczenia pacjenta.\n Za wyjątkiem diagnozowania - umożliwia wykonywanie czynności kontrolnych (sprawdzanie tętna, ciśnienia krwi, reakcji) przez cały czas, niezależnie od ustawienia Wymagana broń w kaburze.</Polish>
             <Italian>Controlla se le armi devono essere tenute nella fondina / abbassate per poter eseguire le azioni mediche.\Except Exam - Permette azioni di esame (controllo del polso, della pressione sanguigna, della risposta) in ogni momento indipendentemente dall'impostazione della fondina richiesta.</Italian>
-            <Polish>Kontroluje czy broń musi być schowana / opuszczona aby udzielać pomocy medycznej. \nNie dotyczy diagnostyki pozwala sprawdzić parametry życiowe niezależnie od tego ustawienia.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
@@ -2330,7 +2327,6 @@
             <Czech>Aplikovat dlahu</Czech>
             <Polish>Załóż szynę</Polish>
             <Spanish>Aplicar férula</Spanish>
-            <Polish>Załóż szynę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Splint">
             <English>Applying Splint...</English>
@@ -2343,7 +2339,6 @@
             <Czech>Aplikuji dlahu...</Czech>
             <Polish>Zakładanie szyny</Polish>
             <Spanish>Aplicando férula...</Spanish>
-            <Polish>Zakładanie szyny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Diagnose">
             <English>Diagnose</English>
@@ -2565,7 +2560,6 @@
             <Czech>Minimální</Czech>
             <Polish>Minimalny</Polish>
             <Spanish>Mínimo</Spanish>
-            <Polish>ZIELONY</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -2707,7 +2701,6 @@
             <Czech>V mírných bolestech</Czech>
             <Polish>W łagodnym bólu</Polish>
             <Spanish>Con dolor leve</Spanish>
-            <Polish>W lekkim bólu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Pain">
             <English>In pain</English>
@@ -2737,7 +2730,6 @@
             <Czech>Ve velkých bolestech</Czech>
             <Polish>W silnym bólu</Polish>
             <Spanish>Con dolor severo</Spanish>
-            <Polish>W silnym bólu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -3788,7 +3780,6 @@
             <Japanese>%1 は添え木を当てた</Japanese>
             <Polish>%1 założył szynę</Polish>
             <Spanish>%1 aplicada una férula</Spanish>
-            <Polish>%1 założył szynę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>

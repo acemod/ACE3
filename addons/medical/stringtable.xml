@@ -29,7 +29,6 @@
             <Czech>Pravděpodobnost probuzení se z bezvědomí</Czech>
             <Polish>Szansa na wybudzenie nieprzytomnego</Polish>
             <Spanish>Posibilidad de recuperar la conciencia</Spanish>
-            <Polish>Prawdopodobieństwo wybudzenia z nieprzytomności</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
@@ -43,7 +42,6 @@
             <Czech>Pravděpodobnost, že se jednotka se stabilními životními známkami probudí z bezvědomí (zkoušeno každých 15 vteřin).</Czech>
             <Polish>Prawdopodobieństwo, że jednostka ze stabilnymi parametrami życiowymi obudzi się z nieprzytomności (sprawdzane co 15 sekund).</Polish>
             <Spanish>La probabilidad de que una unidad estabilizada recupere la conciencia y se levante (se comprueba cada 15 segundos)</Spanish>
-            <Polish>Prawdopodobieństwo wybudzenia się z nieprzytomności jednostki o stabilnych funkcjach życiowych (sprawdzane co 15 sekund)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Increases Wake Up Chance</English>
@@ -55,7 +53,6 @@
             <Polish>Szansa na wybudzenie po użyciu Epinefryny</Polish>
             <Portuguese>Epinefrina Aumenta a chance de acordar</Portuguese>
             <Spanish>Epinefrina, aumenta la posibilidad de despertar</Spanish>
-            <Polish>Epinefryna podnosi szanse na wybudzenie się</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -67,7 +64,6 @@
             <Polish>Zwiększa częstotliwość spontanicznych wybudzeń, gdy pacjent ma epinefrynę w swoim organizmie. </Polish>
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
-            <Polish>Wzrost częstotliwości sprawdzania spontanicznego wybudzenia się jednostki z nieprzytomności po podaniu epinefryny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -80,7 +76,6 @@
             <Czech>Kulhání</Czech>
             <Polish>Kuśtykanie</Polish>
             <Spanish>Cojera</Spanish>
-            <Polish>Kuśtykanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -92,7 +87,6 @@
             <Polish>Kontroluje, czy otwarte lub zabandażowane rany powodują utykanie jednostki.</Polish>
             <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
-            <Polish>Kontroluje czy otwarta lub zanandażowana rana powoduje kuśtykanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -105,7 +99,6 @@
             <Czech>Kulhat s otevřeným zraněním</Czech>
             <Polish>Kuśtykanie przy otwartych ranach</Polish>
             <Spanish>Cojera en heridas abiertas</Spanish>
-            <Polish>Otwarta rana powoduje kuśtykanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -118,7 +111,6 @@
             <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
             <Polish>Kuśtykanie przy otwartych ranach lub zabandażowanych ranach</Polish>
             <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
-            <Polish>Otwarta lub zabandażowana rana powoduje kuśtykanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -131,7 +123,6 @@
             <Czech>Zlomeniny</Czech>
             <Polish>Złamania</Polish>
             <Spanish>Fracturas</Spanish>
-            <Polish>Złamania</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
@@ -143,7 +134,6 @@
             <Polish>Kontroluje efekt użycia szyn do leczenia złamań.\n Po wyłączeniu obrażenia nie powodują złamań.</Polish>
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
-            <Polish>Kontroluje efekt zastosowania szyny na złamania. \nGdy wyłączone, rany nie będą powodowały złamań.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -156,7 +146,6 @@
             <Czech>Dlahy kompletně léčí zlomeniny</Czech>
             <Polish>Szyny leczą zupełnie złamania</Polish>
             <Spanish>Férulas sanan completamente las fracturas</Spanish>
-            <Polish>Szyna w pełni leczy złamanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -169,7 +158,6 @@
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
             <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
-            <Polish>Szyna leczy, ale nie pozwala na sprint</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>

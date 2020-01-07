@@ -22,7 +22,6 @@
             <Czech>Smrtelná zranění hráčů</Czech>
             <Polish>Śmiertelne Obrażenia Gracza</Polish>
             <Italian>Lesioni mortali del giocatore</Italian>
-            <Polish>Krytyczne obrażenia gracza</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_Description">
             <English>Controls when players can receive fatal injuries. A fatal injury is caused by significant damage to the head or body.</English>
@@ -33,7 +32,6 @@
             <Czech>Nastavuje zda hráči mohou utrpět smrtelné zranění. Smrtelné zranění je utrpěto významným poškozením hlavy nebo těla.</Czech>
             <Polish>Definiuje, kiedy gracze mogą otrzymać śmiertelne obrażenia. Śmiertelne obrażenia są spowodowane znacznym uszkodzeniem głowy lub torsu.</Polish>
             <Italian>Controlla quando i giocatori possono ricevere infortuni mortali. Una lesione mortale è causata da un danno significativo alla testa o al corpo.</Italian>
-            <Polish>Kontroluje kiedy gracz może otrzymać obrażenia krytyczne. Obrażenia krytyczne są powodowane przez znaczące uszkodzenie głowy lub klatki piersiowej</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
             <English>AI Fatal Injuries</English>
@@ -44,7 +42,6 @@
             <Czech>Smrtelná zranění AI</Czech>
             <Polish>Śmiertelne obrażenia AI.</Polish>
             <Italian>AI Lesioni mortali</Italian>
-            <Polish>Krytyczne obrażenia AI</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_Description">
             <English>Controls when AI can receive fatal injuries. A fatal injury is caused by significant damage to the head or body.\nWhen set to "Always", this effectively produces "AI Instant Death" behaviour as AI will immediately die from any fatal injury.\nNOTE: Any mode other than "Always" requires AI Unconsciousness to be enabled.</English>
@@ -55,7 +52,6 @@
             <Czech>Nastavuje zda AI může utrpět smrtelné zranění. Smrtelné zranění je utrpěto významným poškozením hlavy nebo těla.\nPokud je tato možnost nastavena na "Vždy", efektivně nastává stav "Povolit okamžitou smrt AI", protože AI okamžitě zemře při jakémkoliv smrtelném zranění.\nPOZNÁMKA: Jakýkoliv jiný stav než "Vždy" potřebuje zapnutou možnost "Bezvědomí AI".</Czech>
             <Polish>Definiuje, kiedy AI może otrzymać śmiertelne obrażenia. Śmiertelne obrażenia są spowodowane znacznym uszkodzeniem głowy lub torsu.\n Ustawienie "Zawsze" powoduje "Natychmiastową śmierć AI", ponieważ AI natychmiast umiera z powodu śmiertelnych obrażeń.\n UWAGA: Każdy inny tryb niż "Zawsze" wymaga włączenia nieprzytomności AI.</Polish>
             <Italian>Controlla quando l'IA può ricevere ferite mortali. Una lesione mortale è causata da un danno significativo alla testa o al corpo. Se impostato su "Sempre", questo produce efficacemente il comportamento "Morte istantanea AI", poiché l'IA morirà immediatamente a causa di qualsiasi lesione mortale.\NOTA: Qualsiasi modalità diversa da "Sempre" richiede l'attivazione dell'Incoscienza AI.</Italian>
-            <Polish>Kontroluje kiedy AI może otrzymać obrażenia krytyczne. Obrażenia krytyczne są spowodowane znaczącym uszkodzeniem głowy lub klatki piersiowej. \nKiedy ustawione "Zawsze" AI będzie odrazu umierało po otrzymaniu obrażeń krytycznych. \nNOTE: Wartość inna niż "Zawsze" wymaga włączenia opcji nieprzytomności AI</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_DisplayName">
             <English>AI Unconsciousness</English>
@@ -82,7 +78,6 @@
             <Czech>Nastavuje zda AI může upadnout do bezvědomí namísto okamžité smrti.\nToto nastavení funguje společně s "Smrtelná zranění AI" protože srdeční zástava potřebuje možnost upadnout do bezvědomí.\nTyto možnosti jsou separované, protože jednotky mohou upadnout do bezvědomí kvůli kritickému stavu způsobenému ne smrtelnými zraněními.\nV podstatě to znamená, že pokud chcete zapnout srdeční zástavu pro AI, tato možnost musí být zapnutá.</Czech>
             <Polish>Definiuje, czy AI może stracić przytomność zamiast natychmiast zginąć.\n Ta opcja działa razem z ustawieniem "Śmiertelne urazy AI", ponieważ przejście do zatrzymania akcji serca wymaga, aby jednostka mogła stracić przytomność.\n Jednak te ustawienia są rozdzielone, ponieważ jednostki mogą stracić przytomność z powodu krytycznych czynności życiowych powstałych w wyniku urazów innych niż śmiertelne.\n W istocie oznacza to, że aby umożliwić zatrzymanie akcji serca dla jednostek AI, to ustawienie musi być włączone.</Polish>
             <Italian>Controlla se l'IA può perdere i sensi invece di morire immediatamente. Questa impostazione funziona insieme all'impostazione "AI Fatal Injuries" poiché, per andare in arresto cardiaco, è necessario che l'unità sia in grado di perdere i sensi. Tuttavia, queste impostazioni sono separate perché le unità possono perdere i sensi da segni vitali critici derivanti da lesioni non mortali.</Italian>
-            <Polish>Kontroluje kiedy AI może zostać nieprzytomne zamias umrzeć odrazu \nTa opcja działa razem z ustawieniem "Krytyczne obrażenia AI", tak długo jak zatrzymanie krążenia wymaga od jednostki bycie nieprzytomną. \nTe opcje sa oddzielne, bo jednostka może zostać nieprzytomna z powodu krytycznych wartości parametrów życiowych spowodowanych przez zwykłe obrażenia. \n</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>

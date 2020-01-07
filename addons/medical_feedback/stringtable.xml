@@ -13,7 +13,6 @@
             <Czech>Zpětná vazba</Czech>
             <Polish>Informacje Zwrotne</Polish>
             <Spanish>Reacción</Spanish>
-            <Polish>Informacje zwrotne</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -41,7 +40,6 @@
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
             <Polish>Wybiera rodzaj efektu bólu.</Polish>
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
-            <Polish>Wybiera rodzaj efektu bólu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -55,7 +53,6 @@
             <Czech>Blikání bílé barvy</Czech>
             <Polish>Miganie na biało</Polish>
             <Spanish>Destello blanco</Spanish>
-            <Polish>Białe błyski</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -69,7 +66,6 @@
             <Czech>Pulzující rozmazání</Czech>
             <Polish>Pulsujące rozmycie</Polish>
             <Spanish>Enborronamiento pulsante</Spanish>
-            <Polish>Pulsujące plamy</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
             <English>Chromatic Aberration</English>
@@ -97,7 +93,6 @@
             <Polish>Tylko efekt mocnego bólu</Polish>
             <Portuguese>Apenas efeito de dor alta</Portuguese>
             <Spanish>Solo efecto de dolor fuerte</Spanish>
-            <Polish>Tylko efekt mocnego bólu</Polish>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
