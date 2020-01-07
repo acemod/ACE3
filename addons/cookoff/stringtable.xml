@@ -37,7 +37,7 @@
             <Chinese>更改殉爆以及炮塔爆炸之傷害控制</Chinese>
             <Italian>Modifica la gestione dei danni per gli effetti di esplosione della torretta e danneggiamenti</Italian>
             <Czech>Změní poškození ovládání a efekty výbuchu veže</Czech>
-            <Polish>Zmienia obsługę obrażeń podczas cook off i eksplozji wieży</Polish>
+            <Polish>Zmienia obsługę obrażeń podczas samozapłonu i eksplozji wieży</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <English>Wreck (Turret)</English>

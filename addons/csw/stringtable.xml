@@ -93,7 +93,7 @@
             <Chinese>進階組裝</Chinese>
             <Italian>Montaggio avanzato</Italian>
             <Czech>Pokročilé skládání</Czech>
-            <Polish>Zaawansowane skladanie</Polish>
+            <Polish>Zaawansowane składanie</Polish>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
             <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
@@ -203,7 +203,7 @@
             <Chinese>裝載武器</Chinese>
             <Italian>Montare l'arma</Italian>
             <Czech>Připevnit zbraň</Czech>
-            <Polish>Zamonuj Broń</Polish>
+            <Polish>Zamontuj Broń</Polish>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>

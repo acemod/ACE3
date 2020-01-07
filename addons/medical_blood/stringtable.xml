@@ -74,7 +74,7 @@
             <Chinese>血跡時長</Chinese>
             <Italian>Vita del sangue</Italian>
             <Czech>Životnost krve</Czech>
-            <Polish>Żywotność śladów krwi</Polish>
+            <Polish>Czas trwania śladów krwi</Polish>
             <Spanish>Duración de la sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
@@ -86,7 +86,7 @@
             <Chinese>控制血跡在地上的時長</Chinese>
             <Italian>Controlla la durata degli oggetti con gocce di sangue.</Italian>
             <Czech>Nastavuje jak dlouho objekty krve na zemi vydrží.</Czech>
-            <Polish>Kontroluje żywotność śladów krwi.</Polish>
+            <Polish>Kontroluje czas trwania śladów krwi.</Polish>
             <Spanish>Controla el tiempo de vida que tendrán los objetos de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">

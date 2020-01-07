@@ -222,7 +222,7 @@
             <English>Locations Epinephrine</English>
             <German>Orte für Epiniphrin</German>
             <Spanish>Ubicaciones epinefrina</Spanish>
-            <Polish>Miejsca użycia adrenaliny</Polish>
+            <Polish>Miejsca użycia epinefryny</Polish>
             <French>Lieux épinéphrine</French>
             <Italian>Ubicazione epinefrina</Italian>
             <Czech>Oblast pro použití epinefrinu</Czech>
@@ -307,7 +307,7 @@
             <Chinese>個人急救包為消耗品</Chinese>
             <Italian>Consumare PAK</Italian>
             <Czech>Spotřebuj osobní lékárničku (PAK)</Czech>
-            <Polish>Utrata apteczek osobistych</Polish>
+            <Polish>Zużycie apteczek osobistych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
@@ -318,7 +318,7 @@
             <Chinese>設定個人急救包是否為消耗品</Chinese>
             <Italian>Controlla se un PAK deve essere consumato dopo l'uso.</Italian>
             <Czech>Nastavuje zda má být osobní lékárnička (PAK) spotřebována po použití.</Czech>
-            <Polish>Kontroluje, czy apteczka osobista powinna być stracona po użyciu.</Polish>
+            <Polish>Kontroluje, czy apteczka osobista powinna być zużyta po użyciu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
@@ -401,7 +401,7 @@
             <Chinese>手術包為消耗品</Chinese>
             <Italian>Consumare Kit Chirurgico</Italian>
             <Czech>Spotřebuj sešívací sadu</Czech>
-            <Polish>Utrata Zestawów Chirurgicznych</Polish>
+            <Polish>Zużycie Zestawów Chirurgicznych</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_Description">
             <English>Controls whether a surgical kit should be consumed after use.</English>
@@ -412,7 +412,7 @@
             <Chinese>設定手術包是否為消耗品</Chinese>
             <Italian>Controlla se un kit chirurgico deve essere consumato dopo l'uso.</Italian>
             <Czech>Nastavuje </Czech>
-            <Polish>Kontroluje, czy Zestaw Chirurgiczny powinien być stracony po użyciu.</Polish>
+            <Polish>Kontroluje, czy Zestaw Chirurgiczny powinien być zużyty po użyciu.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
@@ -545,7 +545,7 @@
             <Chinese>醫療用廢棄物時長</Chinese>
             <Italian>Tempo spazzatura</Italian>
             <Czech>Životnost odpadků</Czech>
-            <Polish>Żywotność Śmieci</Polish>
+            <Polish>Czas trwania Śmieci</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
@@ -556,7 +556,7 @@
             <Chinese>控制醫療用廢棄物的時長，以秒為單位。設定為-1則是永不刪除。</Chinese>
             <Italian>Controlla la durata di vita degli oggetti  spazzatura, in pochi secondi. -1 è per sempre.</Italian>
             <Czech>Nastavuje za jak dlouho zdravotnické odpadky zmizí. -1 je navždy.</Czech>
-            <Polish>Kontroluje żywotność śmieci w sekundach. -1 pozostawia je na zawsze.</Polish>
+            <Polish>Kontroluje czas trwania śmieci w sekundach. -1 pozostawia je na zawsze.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Anyone">
             <English>Anyone</English>
@@ -1048,7 +1048,7 @@
             <Russian>Жгут</Russian>
             <Spanish>Torniquete (CAT)</Spanish>
             <French>Garrot (CAT)</French>
-            <Polish>Staza taktyczna (typu CAT)</Polish>
+            <Polish>Staza taktyczna (CAT)</Polish>
             <Czech>Škrtidlo (CAT)</Czech>
             <Hungarian>Érszorító (CAT)</Hungarian>
             <Italian>Laccio emostatico (CAT)</Italian>
@@ -3769,7 +3769,7 @@
             <Italian>%1 ha applicato una gessatura</Italian>
             <Czech>%1 použil dlahu</Czech>
             <Japanese>%1 は添え木を当てた</Japanese>
-            <Polish>% 1 założył szynę</Polish>
+            <Polish>%1 założył szynę</Polish>
             <Spanish>%1 aplicada una férula</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_fullHeal">
