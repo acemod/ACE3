@@ -41,7 +41,6 @@ if (!isClass _protection) exitwith {
 };
 
 // Read all armor values from config
-// TODO: do I need to worry about inheritance here?
 // TODO: if a hitpoint has multiple entries this will find them all, but only the first will be returned by findIf. Do I need to do something (add them together?) or is this fine?
 private _armorValues = [];
 {
@@ -49,7 +48,7 @@ private _armorValues = [];
     private _armor = getNumber (_x >> "armor");
     private _expl = getNumber (_x >> "explosionShielding");
     _armorValues pushBack [_protectionHitpoint,[_armor,_expl]];
-} forEach configProperties [_protection, "isClass _x && {isText (_x >> ""hitpointName"")}"];
+} forEach configProperties [_protection, "isClass _x"];
 
 if (!_noCache) then {
     GVAR(armorCache_items) setVariable [_item, _armorValues];

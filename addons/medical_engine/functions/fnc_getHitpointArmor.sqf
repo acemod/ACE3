@@ -27,7 +27,6 @@ if (_hitpoint in ["", "#structural"]) exitwith {[1,1]};
 
 // Get base values from the unit class
 private _unitCfg = configFile >> "CfgVehicles" >> (typeOf _unit);
-// TODO: find a more reliable source of default values
 private _armor = getNumber (_unitCfg >> "armor");
 private _explosion = getNumber (_unitCfg >> "explosionShielding");
 
