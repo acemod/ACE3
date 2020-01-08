@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Pterolatypus
- * Checks a unit's equipment to calculate the total armour on a hitpoint
+ * Checks a unit's equipment to calculate the total armor on a hitpoint
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -9,12 +9,12 @@
  * 2: Disable Caching <BOOLEAN> (Default: false)
  *
  * Return Value:
- * Total armour for the given hitpoint <ARRAY>
- * 0: Armour <NUMBER>
+ * Total armor for the given hitpoint <ARRAY>
+ * 0: Armor <NUMBER>
  * 1: ExplosionShielding <NUMBER>
  *
  * Example:
- * [player, "HitChest"] call ace_medical_engine_fnc_getHitpointArmour
+ * [player, "HitChest"] call ace_medical_engine_fnc_getHitpointArmor
  *
  * Public: No
  */
@@ -36,19 +36,19 @@ private _uniform = uniform _unit;
 if !(_uniform isEqualTo "") then {
     // Check for previously cached values
     private _uniformClass = getText (configFile >> "CfgWeapons" >> _uniform >> "ItemInfo" >> "uniformClass");
-    private _cached = if (_noCache) then {[]} else {GVAR(armourCache_uniforms) getVariable [_uniformClass, []]};
+    private _cached = if (_noCache) then {[]} else {GVAR(armorCache_uniforms) getVariable [_uniformClass, []]};
     if (_cached isEqualTo []) then {
-        TRACE_2("Uniform armour cache miss",_uniformClass,_noCache);
+        TRACE_2("Uniform armor cache miss",_uniformClass,_noCache);
         // Scan config for uniform 'unit' hitpoints
         private _hpConfig = configFile >> "CfgVehicles" >> _uniformClass >> "HitPoints";
         _cached = [];
         {
-            private _hpArmour = getNumber (_x >> "armor");
+            private _hpArmor = getNumber (_x >> "armor");
             private _hpExpl = getNumber (_x >> "explosionShielding");
-            _cached pushBack [configName _x, [_hpArmour, _hpExpl]];
+            _cached pushBack [configName _x, [_hpArmor, _hpExpl]];
         } forEach configProperties [_hpConfig, "isClass _x"];
         if (!_noCache) then {
-            GVAR(armourCache_uniforms) setVariable [_uniformClass, _cached];
+            GVAR(armorCache_uniforms) setVariable [_uniformClass, _cached];
         };
     };
 
@@ -63,7 +63,7 @@ if !(_uniform isEqualTo "") then {
 
 // Add values from equipped vests and other gear
 {
-    private _values = [_x, _hitpoint, _noCache] call FUNC(getItemArmour);
+    private _values = [_x, _hitpoint, _noCache] call FUNC(getItemArmor);
     _armor = _armor + (_values select 0);
     _explosion = _explosion + (_values select 1);
 } forEach [vest _unit, headgear _unit];

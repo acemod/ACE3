@@ -35,9 +35,9 @@ if (_hitPoint isEqualTo "") then {
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 private _newDamage = _damage - _oldDamage;
-// Get armour value of hitpoint and calculate damage before armour
-private _armour = [_unit, _hitpoint] call FUNC(getHitpointArmour);
-private _realDamage = _newDamage * _armour#0;
+// Get armor value of hitpoint and calculate damage before armor
+private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
+private _realDamage = _newDamage * (_armor select 0);
 // Damages are stored for "ace_hdbracket" event triggered last
 _unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage,_newDamage]];
 TRACE_3("Received hit",_hitpoint,_newDamage,_realDamage);
@@ -61,7 +61,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         _unit getVariable [QGVAR($HitHead), [0,0]]
     ];
     _damageHead sort false;
-    _damageHead = _damageHead#0;
+    _damageHead = _damageHead select 0;
 
     // --- Body
     private _damageBody = [
@@ -69,10 +69,10 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         _unit getVariable [QGVAR($HitAbdomen), [0,0]],
         _unit getVariable [QGVAR($HitDiaphragm), [0,0]],
         _unit getVariable [QGVAR($HitChest), [0,0]]
-        // HitBody removed as it's a placeholder hitpoint and the high armour value (1000) throws the calculations off
+        // HitBody removed as it's a placeholder hitpoint and the high armor value (1000) throws the calculations off
     ];
     _damageBody sort false;
-    _damageBody = _damageBody#0;
+    _damageBody = _damageBody select 0;
 
     // --- Arms and Legs
     private _damageLeftArm = _unit getVariable [QGVAR($HitLeftArm), [0,0]];
@@ -94,13 +94,13 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // represents all incoming damage for selecting a non-selectionSpecific wound location, (used for selectRandomWeighted [value1,weight1,value2....])
     private _damageSelectionArray = [
-        HITPOINT_INDEX_HEAD, _damageHead#1, HITPOINT_INDEX_BODY, _damageBody#1, HITPOINT_INDEX_LARM, _damageLeftArm#1, 
-        HITPOINT_INDEX_RARM, _damageRightArm#1, HITPOINT_INDEX_LLEG, _damageLeftLeg#1, HITPOINT_INDEX_RLEG, _damageRightLeg#1
+        HITPOINT_INDEX_HEAD, _damageHead select 1, HITPOINT_INDEX_BODY, _damageBody select 1, HITPOINT_INDEX_LARM, _damageLeftArm select 1, 
+        HITPOINT_INDEX_RARM, _damageRightArm select 1, HITPOINT_INDEX_LLEG, _damageLeftLeg select 1, HITPOINT_INDEX_RLEG, _damageRightLeg select 1
     ];
 
     _allDamages sort false;
     (_allDamages select 0) params ["","_receivedDamage", "", "_woundedHitPoint"];
-    private _receivedDamageHead = _damageHead#1;
+    private _receivedDamageHead = _damageHead select 1;
     if (_receivedDamageHead >= HEAD_DAMAGE_THRESHOLD) then {
         TRACE_3("reporting fatal head damage instead of max",_receivedDamageHead,_receivedDamage,_woundedHitPoint);
         _receivedDamage = _receivedDamageHead;
@@ -109,7 +109,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // We know it's structural when no specific hitpoint is damaged
     if (_receivedDamage == 0) then {
-        _receivedDamage = _damageStructural#1;
+        _receivedDamage = _damageStructural select 1;
         _woundedHitPoint = "Body";
         _damageSelectionArray = [1, 1]; // sum of weights would be 0
     };
