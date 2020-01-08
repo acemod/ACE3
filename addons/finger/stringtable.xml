@@ -14,6 +14,7 @@
             <Russian>Указание пальцем</Russian>
             <Portuguese>Apontando</Portuguese>
             <Czech>Ukazování </Czech>
+            <Spanish>Señalando</Spanish>
         </Key>
         <Key ID="STR_ACE_Finger_enabled_displayName">
             <English>Pointing Enabled</English>
@@ -30,6 +31,7 @@
             <Korean>가리키기 활성화</Korean>
             <Chinesesimp>指向系统启动</Chinesesimp>
             <Chinese>指向系統啟動</Chinese>
+            <Spanish>Señalado permitido</Spanish>
         </Key>
         <Key ID="STR_ACE_Finger_enabled_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
