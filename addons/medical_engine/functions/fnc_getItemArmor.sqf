@@ -46,8 +46,8 @@ private _armorValues = [];
 {
     private _protectionHitpoint = toLower getText (_x >> "hitpointName");
     private _armor = getNumber (_x >> "armor");
-    private _expl = getNumber (_x >> "explosionShielding");
-    _armorValues pushBack [_protectionHitpoint,[_armor,_expl]];
+    private _explosion = getNumber (_x >> "explosionShielding");
+    _armorValues pushBack [_protectionHitpoint, [_armor, _explosion]];
 } forEach configProperties [_protection, "isClass _x"];
 
 if (!_noCache) then {

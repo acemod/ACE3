@@ -24,7 +24,6 @@ params ["_unit","_hitpoint",["_noCache",false]];
 // Structural damage is inferred differently, not needed here
 if (_hitpoint in ["", "#structural"]) exitwith {[1,1]};
 
-
 // Get base values from the unit class
 private _unitCfg = configFile >> "CfgVehicles" >> (typeOf _unit);
 private _armor = getNumber (_unitCfg >> "armor");
@@ -32,7 +31,7 @@ private _explosion = getNumber (_unitCfg >> "explosionShielding");
 
 // If the uniform is valid, use hitpoint values from the unit class it defines
 private _uniform = uniform _unit;
-if !(_uniform isEqualTo "") then {
+if (_uniform != "") then {
     // Check for previously cached values
     private _uniformClass = getText (configFile >> "CfgWeapons" >> _uniform >> "ItemInfo" >> "uniformClass");
     private _cached = if (_noCache) then {[]} else {GVAR(armorCache_uniforms) getVariable [_uniformClass, []]};

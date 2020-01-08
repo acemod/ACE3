@@ -39,7 +39,7 @@ private _newDamage = _damage - _oldDamage;
 private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
 private _realDamage = _newDamage * (_armor select 0);
 // Damages are stored for "ace_hdbracket" event triggered last
-_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage,_newDamage]];
+_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
 TRACE_3("Received hit",_hitpoint,_newDamage,_realDamage);
 
 // Engine damage to these hitpoints controls blood visuals, limping, weapon sway
@@ -99,7 +99,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     ];
 
     _allDamages sort false;
-    (_allDamages select 0) params ["","_receivedDamage", "", "_woundedHitPoint"];
+    (_allDamages select 0) params ["", "_receivedDamage", "", "_woundedHitPoint"];
     private _receivedDamageHead = _damageHead select 1;
     if (_receivedDamageHead >= HEAD_DAMAGE_THRESHOLD) then {
         TRACE_3("reporting fatal head damage instead of max",_receivedDamageHead,_receivedDamage,_woundedHitPoint);
