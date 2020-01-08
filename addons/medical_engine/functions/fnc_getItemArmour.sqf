@@ -23,6 +23,8 @@
 
 _hitpoint = toLower _hitpoint;
 
+if (_item isEqualTo "") exitwith {[0,0]};
+
 // Return the cached value if found
 private _cached = if (_noCache) then {[]} else {GVAR(armourCache_items) getVariable [_item,[]]};
 if !(_cached isEqualTo []) exitwith {
@@ -44,10 +46,10 @@ if (!isClass _protection) exitwith {
 private _armourValues = [];
 {
     private _protectionHitpoint = toLower getText (_x >> "hitpointName");
-    private _armour = if (isNumber (_x >> "armor")) then {getNumber (_x >> "armor")} else {0};
-    private _expl = if (isNumber (_x >> "explosionShielding")) then {getNumber (_x >> "explosionShielding")} else {0};
+    private _armour = getNumber (_x >> "armor");
+    private _expl = getNumber (_x >> "explosionShielding");
     _armourValues pushBack [_protectionHitpoint,[_armour,_expl]];
-} foreach ("isText (_x >> ""hitpointName"")" configClasses _protection);
+} forEach configProperties [_protection, "isClass _x && {isText (_x >> ""hitpointName"")}"];
 
 if (!_noCache) then {
     GVAR(armourCache_items) setVariable [_item, _armourValues];

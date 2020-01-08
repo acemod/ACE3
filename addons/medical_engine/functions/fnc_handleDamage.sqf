@@ -83,12 +83,12 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     // Find hit point that received the maxium damage
     // Priority used for sorting if incoming damage is equivalent (e.g. max which is 4)
     private _allDamages = [
-        [_damageHead#0,     _damageHead#1,      PRIORITY_HEAD,      "Head"],
-        [_damageBody#0,     _damageBody#1,      PRIORITY_BODY,      "Body"],
-        [_damageLeftArm#0,  _damageLeftArm#1,   PRIORITY_LEFT_ARM,  "LeftArm"],
-        [_damageRightArm#0, _damageRightArm#1,  PRIORITY_RIGHT_ARM, "RightArm"],
-        [_damageLeftLeg#0,  _damageLeftLeg#1,   PRIORITY_LEFT_LEG,  "LeftLeg"],
-        [_damageRightLeg#0, _damageRightLeg#1,  PRIORITY_RIGHT_LEG, "RightLeg"]
+        _damageHead     + [PRIORITY_HEAD,      "Head"],
+        _damageBody     + [PRIORITY_BODY,      "Body"],
+        _damageLeftArm  + [PRIORITY_LEFT_ARM,  "LeftArm"],
+        _damageRightArm + [PRIORITY_RIGHT_ARM, "RightArm"],
+        _damageLeftLeg  + [PRIORITY_LEFT_LEG,  "LeftLeg"],
+        _damageRightLeg + [PRIORITY_RIGHT_LEG, "RightLeg"]
     ];
     TRACE_2("incoming",_allDamages,_damageStructural);
 
