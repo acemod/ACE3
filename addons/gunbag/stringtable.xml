@@ -15,6 +15,7 @@
             <Chinese>槍袋</Chinese>
             <Portuguese>Bolsa de Arma</Portuguese>
             <Turkish>Silah Çantası</Turkish>
+            <Spanish>Funda de arma</Spanish>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
             <English>Gunbag (Tan)</English>
@@ -30,6 +31,7 @@
             <Chinese>槍袋 (黃褐色)</Chinese>
             <Portuguese>Bolsa de Arma (Bege)</Portuguese>
             <Turkish>Silah Çantası (Tan)</Turkish>
+            <Spanish>Funda de arma (Tan)</Spanish>
         </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
@@ -45,6 +47,7 @@
             <Chinese>將武器放置槍袋</Chinese>
             <Portuguese>Colocar arma na Bosla de Arma</Portuguese>
             <Turkish>Silahını silah çantasına koy</Turkish>
+            <Spanish>Poner arma en la funda</Spanish>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
@@ -60,6 +63,7 @@
             <Chinese>將武器拿出槍袋</Chinese>
             <Portuguese>Retirar arma da Bolsa de Arma</Portuguese>
             <Turkish>Silahını silah çantasından çıkart</Turkish>
+            <Spanish>Sacar arma de la funda</Spanish>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>
@@ -75,6 +79,7 @@
             <Chinese>狀態</Chinese>
             <Portuguese>Status</Portuguese>
             <Turkish>Kontrol Et</Turkish>
+            <Spanish>Estado</Spanish>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
@@ -90,6 +95,7 @@
             <Chinese>槍袋為空</Chinese>
             <Portuguese>Bolsa de Arma Vazia</Portuguese>
             <Turkish>Silah Çantası Boş</Turkish>
+            <Spanish>Funda de arma vacía</Spanish>
         </Key>
     </Package>
 </Project>
