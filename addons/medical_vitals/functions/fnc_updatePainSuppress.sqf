@@ -20,15 +20,16 @@
 
 params ["_unit", "_painSupressAdjustment", "_deltaT", "_syncValue"];
 
-_unit setVariable [VAR_PAIN_SUPP, 0 max _painSupressAdjustment, _syncValue];
-
 // Handle continuous pain reduction
 private _pain = GET_PAIN(_unit);
 _unit setVariable [VAR_PAIN, 0 max (_pain - _deltaT / PAIN_FADE_TIME), _syncValue];
 
-// Handles simple medication
 if (isNil QEGVAR(medical_treatment,advancedMedication) || {!EGVAR(medical_treatment,advancedMedication)}) then {
+    // Handles simple medication
     private _painSupress = _unit getVariable [VAR_PAIN_SUPP, 0];
     _painSupress = _painSupress - _deltaT / PAIN_SUPPRESSION_FADE_TIME;
     _unit setVariable [VAR_PAIN_SUPP, 0 max _painSupress, _syncValue];
+} else {
+    // Handle advanced medication
+    _unit setVariable [VAR_PAIN_SUPP, 0 max _painSupressAdjustment, _syncValue];
 };
