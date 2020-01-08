@@ -19,7 +19,7 @@
  * Public: No
  */
 
-params ["_unit","_hitpoint",["_noCache",false]];
+params ["_unit","_hitpoint"];
 
 // Structural damage is inferred differently, not needed here
 if (_hitpoint in ["", "#structural"]) exitwith {[1,1]};
@@ -34,36 +34,34 @@ private _uniform = uniform _unit;
 if (_uniform != "") then {
     // Check for previously cached values
     private _uniformClass = getText (configFile >> "CfgWeapons" >> _uniform >> "ItemInfo" >> "uniformClass");
-    private _cached = if (_noCache) then {[]} else {GVAR(armorCache_uniforms) getVariable [_uniformClass, []]};
-    if (_cached isEqualTo []) then {
-        TRACE_2("Uniform armor cache miss",_uniformClass,_noCache);
+    private _cached = GVAR(armorCache_uniforms) getVariable _uniformClass;
+    if (isNil "_cached") then {
+        TRACE_1("Uniform armor cache miss",_uniformClass);
         // Scan config for uniform 'unit' hitpoints
         private _hpConfig = configFile >> "CfgVehicles" >> _uniformClass >> "HitPoints";
         _cached = [];
         {
-            private _hpArmor = getNumber (_x >> "armor");
-            private _hpExpl = getNumber (_x >> "explosionShielding");
-            _cached pushBack [configName _x, [_hpArmor, _hpExpl]];
+            private _armor = getNumber (_x >> "armor");
+            private _explosion = getNumber (_x >> "explosionShielding");
+            _cached pushBack [configName _x, [_armor, _explosion]];
         } forEach configProperties [_hpConfig, "isClass _x"];
-        if (!_noCache) then {
-            GVAR(armorCache_uniforms) setVariable [_uniformClass, _cached];
-        };
+        GVAR(armorCache_uniforms) setVariable [_uniformClass, _cached];
     };
 
     // Apply the value for the correct hitpoint
     private _index = _cached findIf {(_x select 0) isEqualTo _hitpoint};
     if (_index > -1) then {
-        private _values = _cached select _index;
-        _armor = _armor * (_values select 1) select 0;
-        _explosion = _explosion * (_values select 1) select 1;
+        private _values = (_cached select _index) select 1;
+        _armor = _armor * (_values select 0);
+        _explosion = _explosion * (_values select 1);
     }
 };
 
 // Add values from equipped vests and other gear
 {
-    private _values = [_x, _hitpoint, _noCache] call FUNC(getItemArmor);
-    _armor = _armor + (_values select 0);
-    _explosion = _explosion + (_values select 1);
+    [_x, _hitpoint] call FUNC(getItemArmor) params ["_armorX", "_explosionX"];
+    _armor = _armor + _armorX;
+    _explosion = _explosion + _explosionX;
 } forEach [vest _unit, headgear _unit];
 
 // Return
