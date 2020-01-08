@@ -28,8 +28,8 @@ if (_hitpoint in ["", "#structural"]) exitwith {[1,1]};
 // Get base values from the unit class
 private _unitCfg = configFile >> "CfgVehicles" >> (typeOf _unit);
 // TODO: find a more reliable source of default values
-private _armour = if (isNumber (_unitCfg >> "armor")) then {getNumber (_unitCfg >> "armor")} else {2};
-private _explosion = if (isNumber (_unitCfg >> "explosionShielding")) then {getNumber (_unitCfg >> "explosionShielding")} else {0.4};
+private _armor = getNumber (_unitCfg >> "armor");
+private _explosion = getNumber (_unitCfg >> "explosionShielding");
 
 // If the uniform is valid, use hitpoint values from the unit class it defines
 private _uniform = uniform _unit;
@@ -53,20 +53,20 @@ if !(_uniform isEqualTo "") then {
     };
 
     // Apply the value for the correct hitpoint
-    private _index = _cached findIf {_x#0 isEqualTo _hitpoint};
+    private _index = _cached findIf {(_x select 0) isEqualTo _hitpoint};
     if (_index > -1) then {
         private _values = _cached select _index;
-        _armour = _armour * _values#1#0;
-        _explosion = _explosion * _values#1#1;
+        _armor = _armor * (_values select 1) select 0;
+        _explosion = _explosion * (_values select 1) select 1;
     }
 };
 
 // Add values from equipped vests and other gear
 {
     private _values = [_x, _hitpoint, _noCache] call FUNC(getItemArmour);
-    _armour = _armour + _values#0;
-    _explosion = _explosion + _values#1;
+    _armor = _armor + (_values select 0);
+    _explosion = _explosion + (_values select 1);
 } forEach [vest _unit, headgear _unit];
 
 // Return
-[_armour, _explosion]
+[_armor, _explosion]

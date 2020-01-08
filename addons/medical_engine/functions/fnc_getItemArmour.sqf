@@ -28,8 +28,8 @@ if (_item isEqualTo "") exitwith {[0,0]};
 // Return the cached value if found
 private _cached = if (_noCache) then {[]} else {GVAR(armourCache_items) getVariable [_item,[]]};
 if !(_cached isEqualTo []) exitwith {
-    private _index = _cached findIf {_x#0 isEqualTo _hitpoint};
-    if (_index == -1) then {[0,0]} else {(_cached select _index)#1};
+    private _index = _cached findIf {(_x select 0) isEqualTo _hitpoint};
+    if (_index == -1) then {[0,0]} else {(_cached select _index) select 1};
 };
 TRACE_1("Item armour cache miss",_item);
 
@@ -56,5 +56,5 @@ if (!_noCache) then {
 };
 
 // Return the value that was actually requested
-private _index = _armourValues findIf {_x#0 isEqualTo _hitpoint};
-if (_index == -1) then {[0,0]} else {(_armourValues select _index)#1} //return
+private _index = _armourValues findIf {(_x select 0) isEqualTo _hitpoint};
+if (_index == -1) then {[0,0]} else {(_armourValues select _index) select 1} //return
