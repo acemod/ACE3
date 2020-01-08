@@ -195,7 +195,7 @@ class controls {
             };
             class Easting: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_EASTING;
-                // text = "11994e"; //--- ToDo: Localize;
+                // text = "11994E";
                 style = ST_RIGHT;
                 x = W_PART(14.5);
                 y = H_PART(1.5);
@@ -205,7 +205,7 @@ class controls {
             };
             class Northing: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_NORTHING;
-                // text = "11994n"; //--- ToDo: Localize;
+                // text = "11994N";
                 style = ST_RIGHT;
                 x = W_PART(14.5);
                 y = H_PART(3.5);

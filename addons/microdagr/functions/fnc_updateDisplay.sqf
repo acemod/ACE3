@@ -32,8 +32,8 @@ switch (GVAR(currentApplicationPage)) do {
 case (APP_MODE_INFODISPLAY): {
         //Easting/Northing:
         private _posString = [getPos ACE_player] call EFUNC(common,getMapGridFromPos);
-        private _eastingText = (_posString select 0) + "e";
-        private _northingText = (_posString select 1) + "n";
+        private _eastingText = (_posString select 0) + LELSTRING(common,E);
+        private _northingText = (_posString select 1) + LELSTRING(common,N);
         (_display displayCtrl IDC_MODEDISPLAY_EASTING) ctrlSetText _eastingText;
         (_display displayCtrl IDC_MODEDISPLAY_NORTHING) ctrlSetText _northingText;
 
