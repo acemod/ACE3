@@ -58,15 +58,18 @@
             <Portuguese>Medicação Avançada</Portuguese>
             <Chinese>進階醫療用品</Chinese>
             <Czech>Pokročilé léky</Czech>
+            <Italian>Medicazione avanzata</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
             <Russian>Устанавливает расширенное использование лекарств</Russian>
             <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンとアトロピンが利用可能になります。</Japanese>
-            <French>Permet une manipulation étendue et plus appronfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine et d'atropine.</French>
+            <French>Permet une manipulation étendue et plus approfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine.</French>
             <Portuguese>Ativa a manipulação avançada de medicações. Também permite o uso de Adenosina e Atropina.</Portuguese>
             <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
             <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
+            <Italian>Abilita una gestione della medicazione più estesa e approfondita. Permette inoltre l'utilizzo dell'Adenosina.</Italian>
+            <German>Ermöglicht erweiterte, mehr tiefgründigere Anwendung von Medikationen. Ebenso ermöglicht es die Benutzung von Adenosin.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -82,6 +85,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
+            <German>Ermöglicht Behandlungsaktionen für verschiedene Bandagentypen anstelle der gewöhnlichen Bandageaktionen.</German>
             <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
             <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
             <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
@@ -90,7 +94,6 @@
             <Italian>Permette azioni di trattamento per diversi tipi di bendaggio al posto del bendaggio generico.</Italian>
             <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
             <Polish>Umożliwia wybranie konkretnego rodzaju bandaża zamiast ogólnej akcji bandażowania.</Polish>
-            <German>Ermöglicht Behandlungsaktionen für verschiedene Bandagentypen anstelle der gewöhnlichen Bandageaktionen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_EnabledCanReopen">
             <English>Enabled &amp; Can Reopen</English>
