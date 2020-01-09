@@ -16,6 +16,7 @@
             <Korean>시야 제한기</Korean>
             <Chinesesimp>视野距离限制器</Chinesesimp>
             <Chinese>視野距離限制器</Chinese>
+            <Turkish>Görüş Uzaklığı Sınırlayıcısı</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_Module_Description">
             <English>Allows limiting maximum view distance that can be set by players.</English>
@@ -256,6 +257,7 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_verylow">
             <English>Very Low</English>
@@ -272,6 +274,7 @@
             <Korean>매우 낮음</Korean>
             <Chinesesimp>非常低</Chinesesimp>
             <Chinese>非常低</Chinese>
+            <Turkish>Çok Düşük</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_low">
             <English>Low</English>
@@ -288,6 +291,7 @@
             <Korean>낮음</Korean>
             <Chinesesimp>低</Chinesesimp>
             <Chinese>低</Chinese>
+            <Turkish>Düşük</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_medium">
             <English>Medium</English>
@@ -304,6 +308,7 @@
             <Korean>중간</Korean>
             <Chinesesimp>中</Chinesesimp>
             <Chinese>中</Chinese>
+            <Turkish>Orta</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_high">
             <English>High</English>
@@ -320,6 +325,7 @@
             <Korean>높음</Korean>
             <Chinesesimp>高</Chinesesimp>
             <Chinese>高</Chinese>
+            <Turkish>Yüksek</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_veryhigh">
             <English>Very High</English>
@@ -336,6 +342,7 @@
             <Korean>매우 높음</Korean>
             <Chinesesimp>非常高</Chinesesimp>
             <Chinese>非常高</Chinese>
+            <Turkish>Çok Yüksek</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_fovBased">
             <English>FoV Based</English>
@@ -367,6 +374,7 @@
             <Korean>시야:</Korean>
             <Chinesesimp>视野距离:</Chinesesimp>
             <Chinese>視野距離:</Chinese>
+            <Turkish>Görüş Uzaklığı:</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_objectinfotext">
             <English>Object View Distance is</English>
@@ -415,6 +423,7 @@
             <Korean>영상 설정</Korean>
             <Chinesesimp>影像设定</Chinesesimp>
             <Chinese>影像設定</Chinese>
+            <Turkish>Grafik Ayarları</Turkish>
         </Key>
     </Package>
 </Project>

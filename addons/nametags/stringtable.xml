@@ -64,6 +64,7 @@
             <Korean>플레이어 이름 표시</Korean>
             <Chinesesimp>显示玩家名字</Chinesesimp>
             <Chinese>顯示玩家名稱</Chinese>
+            <Turkish>Oyuncu isimlerini göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
             <English>Show player names and set their activation. Default: Enabled</English>

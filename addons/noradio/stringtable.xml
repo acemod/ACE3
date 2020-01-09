@@ -13,6 +13,7 @@
             <Portuguese>Silenciar Jogador</Portuguese>
             <French>Joueur en sourdine</French>
             <Czech>Ztlumit hráče</Czech>
+            <Turkish>Oyuncuyu Sustur</Turkish>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting_tooltip">
             <English>Mutes the controlled player avatar.</English>
