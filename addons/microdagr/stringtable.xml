@@ -217,6 +217,10 @@
             <English>M</English>
             <French>M</French>
         </Key>
+        <Key ID="STR_ACE_MicroDAGR_controlKphSymbol">
+            <English>kph</English>
+            <French>km/h</French>
+        </Key>
         <Key ID="STR_ACE_MicroDAGR_compasDirection">
             <English>Compass Direction</English>
             <German>Kompass Richtung</German>

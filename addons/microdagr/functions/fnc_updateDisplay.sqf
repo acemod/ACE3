@@ -52,7 +52,7 @@ case (APP_MODE_INFODISPLAY): {
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
         //Speed:
-        (_display displayCtrl IDC_MODEDISPLAY_SPEEDNUM) ctrlSetText format ["%1kph", (round (speed (vehicle ACE_player)))];;
+        (_display displayCtrl IDC_MODEDISPLAY_SPEEDNUM) ctrlSetText format ["%1 %2", (round (speed (vehicle ACE_player))), LLSTRING(controlKphSymbol)];;
 
 
         if (GVAR(currentWaypoint) == -1) then {

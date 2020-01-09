@@ -259,11 +259,11 @@ class controls {
             };
             class SpeedNum: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_SPEEDNUM;
-                // text = "34kph"; //--- ToDo: Localize;
+                // text = "34kph";
                 style = ST_RIGHT;
                 x = W_PART(14.5);
                 y = H_PART(8.5);
-                w = W_PART(7.5);
+                w = W_PART(10);
                 h = H_PART(1.5);
                 sizeEx = H_PART(1.5);
             };
