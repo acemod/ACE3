@@ -360,7 +360,7 @@ class controls {
                     };
                     class TargetElevationNum: GVAR(RscText) {
                         idc = IDC_MODEDISPLAY_TARGETELEVATIONNUM;
-                        // text = "+000232 MSL"; //--- ToDo: Localize;
+                        // text = "+000232 MSL";
                         style = ST_RIGHT;
                         x = W_PART(12);
                         y = H_PART(3.5);

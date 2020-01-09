@@ -92,7 +92,7 @@ case (APP_MODE_INFODISPLAY): {
                 _rangeText = format ["%1 km", _2dDistanceKm toFixed GVAR(waypointPrecision)];
                 private _numASL = (_targetPosLocationASL select 2) + EGVAR(common,mapAltitude);
                 _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
-                _aboveSeaLevelText = if (_numASL > 0) then {"+" + _aboveSeaLevelText + " MSL"} else {_aboveSeaLevelText + " MSL"};
+                _aboveSeaLevelText = if (_numASL > 0) then {format ["+%1 %2", _aboveSeaLevelText, LLSTRING(controlMSL)]} else {format ["%1 %2", _aboveSeaLevelText, LLSTRING(controlMSL)]};
             };
 
             (_display displayCtrl IDC_MODEDISPLAY_TRACKNUM) ctrlSetText _bearingText;
