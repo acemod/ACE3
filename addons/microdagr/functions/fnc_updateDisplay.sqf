@@ -84,7 +84,7 @@ case (APP_MODE_INFODISPLAY): {
             if (!(_targetPosLocationASL isEqualTo [])) then {
                 private _bearing = [(getPosASL ACE_player), _targetPosLocationASL] call BIS_fnc_dirTo;
                 _bearingText = if (GVAR(settingUseMils)) then {
-                    [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
+                    ([(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber) + LLSTRING(controlMilSymbol);
                 } else {
                     ([_bearing, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
@@ -104,7 +104,7 @@ case (APP_MODE_INFODISPLAY): {
 case (APP_MODE_COMPASS): {
         //Heading:
         private _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
+            ([(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber) + LLSTRING(controlMilSymbol);
         } else {
             ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
@@ -140,7 +140,7 @@ case (APP_MODE_COMPASS): {
             if (!(_targetPosLocationASL isEqualTo [])) then {
                 private _bearing = [(getPosASL ACE_player), _targetPosLocationASL] call BIS_fnc_dirTo;
                 _bearingText = if (GVAR(settingUseMils)) then {
-                    [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
+                    ([(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber) + LLSTRING(controlMilSymbol);
                 } else {
                     ([_bearing, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };

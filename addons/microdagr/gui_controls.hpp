@@ -323,7 +323,7 @@ class controls {
                     };
                     class TrackNum: GVAR(RscText) {
                         idc = IDC_MODEDISPLAY_TRACKNUM;
-                        // text = "097.2oM"; //--- ToDo: Localize;
+                        // text = "097.2°M";
                         x = W_PART(4);
                         y = H_PART(0.5);
                         w = W_PART(10);
