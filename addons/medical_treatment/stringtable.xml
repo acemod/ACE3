@@ -3056,17 +3056,17 @@
             <Chinese>脈搏</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Content">
-            <English>Checking Heart Rate...</English>
+            <English>Checking Pulse...</English>
             <French>Vérification du pouls...</French>
             <Russian>Проверка пульса...</Russian>
-            <Spanish>Comprobando ritmo cardíaco...</Spanish>
+            <Spanish>Comprobando pulso...</Spanish>
             <Polish>Sprawdzanie tętna...</Polish>
-            <German>Kontrolliere Herzfrequenz...</German>
+            <German>Kontrolliere Puls...</German>
             <Hungarian>Szívverés-szám mérése...</Hungarian>
-            <Italian>Controllando il battito cardiaco...</Italian>
-            <Portuguese>Aferindo Pulso...</Portuguese>
-            <Czech>Kontroluji srdeční tep...</Czech>
-            <Japanese>心拍数を測定しています・・・</Japanese>
+            <Italian>Controllando il polso...</Italian>
+            <Portuguese>Checando Pulso...</Portuguese>
+            <Czech>Kontroluji puls...</Czech>
+            <Japanese>脈拍数を測定しています・・・</Japanese>
             <Korean>맥박 확인중...</Korean>
             <Chinesesimp>检查心跳中...</Chinesesimp>
             <Chinese>檢查心跳中...</Chinese>
