@@ -12,6 +12,7 @@
             <Czech>GUI</Czech>
             <Polish>Graficzny Interfejs Użytkownika</Polish>
             <Spanish>Interfaz gráfica</Spanish>
+            <German>Graphische Benutzeroberfläche</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
             <English>Enable Medical Actions</English>
@@ -1020,6 +1021,7 @@
             <Polish>Częściowe %1</Polish>
             <Portuguese>Parcial%1</Portuguese>
             <Spanish>Parcial %1</Spanish>
+            <German>Partiell %1</German>
         </Key>
     </Package>
 </Project>
