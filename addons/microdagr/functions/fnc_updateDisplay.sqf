@@ -45,7 +45,7 @@ case (APP_MODE_INFODISPLAY): {
 
         //Heading:
         _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
+            ([(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber) + LLSTRING(controlMilSymbol);
         } else {
             ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };

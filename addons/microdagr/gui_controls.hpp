@@ -250,7 +250,7 @@ class controls {
             };
             class HeadingNum: GVAR(RscText) {
                 idc = IDC_MODEDISPLAY_HEADINGNUM;
-                // text = "097.2oM"; //--- ToDo: Localize;
+                // text = "097.2°M";
                 x = W_PART(4);
                 y = H_PART(8.5);
                 w = W_PART(10);
