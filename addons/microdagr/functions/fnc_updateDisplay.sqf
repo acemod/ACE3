@@ -40,7 +40,7 @@ case (APP_MODE_INFODISPLAY): {
         //Elevation:
         private _numASL = ((getPosASL ACE_player) select 2) + EGVAR(common,mapAltitude);
         private _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
-        _aboveSeaLevelText = if (_numASL > 0) then {"+" + _aboveSeaLevelText + " MSL"} else {_aboveSeaLevelText + " MSL"};
+        _aboveSeaLevelText = if (_numASL > 0) then {format ["+%1 %2", _aboveSeaLevelText, LLSTRING(controlMSL)]} else {format ["%1 %2", _aboveSeaLevelText, LLSTRING(controlMSL)]};
         (_display displayCtrl IDC_MODEDISPLAY_ELEVATIONNUM) ctrlSetText _aboveSeaLevelText;
 
         //Heading:

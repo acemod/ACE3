@@ -209,6 +209,10 @@
             <Chinesesimp>范围:</Chinesesimp>
             <Chinese>範圍:</Chinese>
         </Key>
+        <Key ID="STR_ACE_MicroDAGR_controlMSL">
+            <English>MSL</English>
+            <French>MSL</French>
+        </Key>
         <Key ID="STR_ACE_MicroDAGR_compasDirection">
             <English>Compass Direction</English>
             <German>Kompass Richtung</German>
