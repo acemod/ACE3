@@ -16,6 +16,7 @@
             <Korean>슬라이드 쇼</Korean>
             <Chinese>幻燈片</Chinese>
             <Chinesesimp>幻灯片</Chinesesimp>
+            <Turkish>Slayt</Turkish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
@@ -48,6 +49,7 @@
             <Korean>물체</Korean>
             <Chinese>物件</Chinese>
             <Chinesesimp>物件</Chinesesimp>
+            <Turkish>Objeler</Turkish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
@@ -80,6 +82,7 @@
             <Korean>조종 장치</Korean>
             <Chinese>控制器</Chinese>
             <Chinesesimp>控制器</Chinesesimp>
+            <Turkish>Kontroller</Turkish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
@@ -112,6 +115,7 @@
             <Korean>사진</Korean>
             <Chinese>圖片</Chinese>
             <Chinesesimp>图片</Chinesesimp>
+            <Turkish>Resimler</Turkish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
@@ -236,6 +240,7 @@
             <Korean>슬라이드</Korean>
             <Chinese>幻燈片</Chinese>
             <Chinesesimp>幻灯片</Chinesesimp>
+            <Turkish>Slaytlar</Turkish>
         </Key>
     </Package>
 </Project>

@@ -15,6 +15,7 @@
             <Chinesesimp>使用者介面</Chinesesimp>
             <Chinese>使用者介面</Chinese>
             <Spanish>Interfaz de usuario</Spanish>
+            <Turkish>Kullanıcı Arayüzü</Turkish>
         </Key>
         <Key ID="STR_ACE_UI_ModuleName">
             <English>User Interface</English>
@@ -30,6 +31,7 @@
             <Chinesesimp>使用者介面</Chinesesimp>
             <Chinese>使用者介面</Chinese>
             <Spanish>Interfaz de usuario</Spanish>
+            <Turkish>Kullanıcı Arayüzü</Turkish>
         </Key>
         <Key ID="STR_ACE_UI_ModuleDescription">
             <English>This module allows toggling visible user interface parts.</English>
