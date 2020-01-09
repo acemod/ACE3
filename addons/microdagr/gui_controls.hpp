@@ -335,7 +335,7 @@ class controls {
                         text = CSTRING(controlRange);
                         x = W_PART(0.5);
                         y = H_PART(2);
-                        w = W_PART(7.5);
+                        w = W_PART(10);
                         h = H_PART(1.5);
                         sizeEx = H_PART(1.25);
                     };
