@@ -163,6 +163,7 @@
             <Italian>Controllare la temperatura dell'aria</Italian>
             <Czech>Zkontrolovat teplotu vzduchu</Czech>
             <Japanese>気温を確認</Japanese>
+            <Polish>Sprawdź temperaturę powietrza</Polish>
             <French>Vérifier la température</French>
             <Portuguese>Checar a temperatura do ar </Portuguese>
         </Key>
@@ -172,6 +173,7 @@
             <Italian>Mostra Controlla l'azione della temperatura dell'aria</Italian>
             <Czech>Ukázat akci kontroly teploty vzduchu</Czech>
             <Japanese>気温の確認動作を表示</Japanese>
+            <Polish>Pokaż akcje sprawdzającą temperaturę powietrza</Polish>
             <French>Afficher l'interaction "Vérifier la température"</French>
             <Portuguese>Mostrar a ação "Checar a temperatura do ar"</Portuguese>
         </Key>
