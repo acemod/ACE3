@@ -376,6 +376,7 @@
                 <Russian>Калибр: 6.5x39 мм, трассер Зеленый&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: Mk200</Russian>
                 <Italian>Calibri: 6.5x39 mm Traccianti - Verdi&lt;br /&gt;Colpi: 200&lt;br /&gt;Usati In: Mk200</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: Mk200</Czech>
+                <Polish>Kaliber: 6.5x39 mm Smugowa - Zielona&lt;br /&gt;Sztuk: 200&lt;br /&gt;Używana w: Mk200</Polish>
                 <Portuguese>Caliber: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red">
@@ -384,6 +385,7 @@
                 <Russian>Короб 200 патр. 6.5 мм трассирующих (Красный)</Russian>
                 <Italian>6.5 mm 200Colpi Caricatore Maggiorato Tracciante (rossi)</Italian>
                 <Czech>6.5 mm 200 ranný pás, stopovka (Červená)</Czech>
+                <Polish>6.5 mm Magazynek pudełkowy 200szt. Smugowa (Czerwona)</Polish>
                 <Portuguese>Caixa de Cinto 6.5 mm 200 Balas Tracejantes (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red_description">
@@ -392,6 +394,7 @@
                 <Russian>Калибр: 6.5x39 мм, трассер Красный&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: Mk200</Russian>
                 <Italian>Calibro: 6.5x39 mm Traccianti - Rossi&lt;br /&gt;Colpi: 200&lt;br /&gt;Usati in: Mk200</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Červená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: Mk200</Czech>
+                <Polish>Kaliber: 6.5x39 mm Smugowa - Czerwona&lt;br /&gt;Sztuk: 200&lt;br /&gt;Używana w: Mk200</Polish>
                 <Portuguese>Caliber: 6.5x39 mm Tracejante - Vermelho&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green">
@@ -400,6 +403,7 @@
                 <Russian>Магазин 20 патр. 7.62 мм трассирующих (Зеленый)</Russian>
                 <Italian>7.62 mm 20Colpi Traccianti (verdi) Caricatore</Italian>
                 <Czech>7.62 mm 20 ranný zásobník, stopovka (Zelená)</Czech>
+                <Polish>7.62 mm Magazynek 20szt. Smugowa (Zielona)</Polish>
                 <Portuguese>Magazine 7.62 mm 20 Balas Tracejantes (verdes)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green_description">
@@ -408,6 +412,7 @@
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Зеленый&lt;br /&gt;Патронов: 20&lt;br /&gt;Используется в:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Russian>
                 <Italian>Calibro: 7.62x51 mm NATO Traccianti - Verdi&lt;br /&gt;Colpi: 20&lt;br /&gt;Usati in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Italian>
                 <Czech>Kalibr: 7.62×51 mm NATO Stopovka - Zelená&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použito v: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Czech>
+                <Polish>Kaliber: 7.62x51 mm NATO Smugowa - Zielona&lt;br /&gt;Sztuk: 20&lt;br /&gt;Używana w:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Polish>
                 <Portuguese>Calibre: 7.62x51 mm NATO Tracejante - Verde&lt;br/&gt;Balas: 20&lt;br/&gt;Usado em: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow">
@@ -416,6 +421,7 @@
                 <Russian>Магазин 20 патр. 7.62 мм трассирующих (Желтый)</Russian>
                 <Italian>7.62 mm 20Colpi Traccianti (Gialli) Caricatori</Italian>
                 <Czech>7.62 mm 20 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek 20szt. Smugowa (Żółta)</Polish>
                 <Portuguese>Magazine 7.62 mm 20 Balas Tracejantes (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow_description">
@@ -424,6 +430,7 @@
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Желтый&lt;br /&gt;Патронов: 20&lt;br /&gt;Используется в:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Russian>
                 <Italian>Calibro: 7.62x51 mm NATO Traccianti - Gialli&lt;br /&gt;Colpi: 20&lt;br /&gt;Usati in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Italian>
                 <Czech>Kalibr: 7.62×51 mm NATO Stopovka - Žlutá&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použito v: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Czech>
+                <Polish>Kaliber: 7.62x51 mm NATO Smugowa - Żółta&lt;br /&gt;Sztuk: 20&lt;br /&gt;Używana w:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Polish>
                 <Portuguese>Calibre: 7.62x51 mm NATO Tracejante - Amarelo&lt;br/&gt;Balas: 20&lt;br/&gt;Usado em: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_red">
@@ -432,6 +439,7 @@
                 <Russian>Короб 150 патр. 7.62 мм TE4 (Красный)</Russian>
                 <Italian>7.62mm 150Colpi Caricatore Maggiorato Misti (rossi)</Italian>
                 <Czech>7.62 mm 150 ranný pás, částečná stopovka (Červená)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Mieszana (Czerwona)</Polish>
                 <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_yellow">
@@ -440,6 +448,7 @@
                 <Russian>Короб 150 патр. 7.62 мм TE4 (Желтый)</Russian>
                 <Italian>7.62mm 150Colpi Caricatore Maggiorato Misti (Gialli)</Italian>
                 <Czech>7.62 mm 150 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Mieszana (Żółta)</Polish>
                 <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red">
@@ -448,6 +457,7 @@
                 <Russian>Короб 150 патр. 7.62 мм трассирующих (Красный)</Russian>
                 <Italian>7.62mm 150Colpi Caricatore Maggiorato (Rossi)</Italian>
                 <Czech>7.62 mm 150 ranný pás, stopovka (Červená)</Czech>
+                <Polish>7.62mm Magazynek pudełkowy 150szt. Smugowa (Czerwona)</Polish>
                 <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red_description">
@@ -456,6 +466,7 @@
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Красный&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: Zafir</Russian>
                 <Italian>Calibro: 7.62x54 mm Traccianti - Rossi&lt;br /&gt;Colpi: 150&lt;br /&gt;Usati in: Zafir</Italian>
                 <Czech>Kalibr: 7.62×54 mm Stopovka - Červená&lt;br /&gt;Nábojů: 150&lt;br /&gt;Použito v: Zafir</Czech>
+                <Polish>Kaliber: 7.62x54 mm Smugowa - Czerwona&lt;br /&gt;Sztuk: 150&lt;br /&gt;Używana w: Zafir</Polish>
                 <Portuguese>Calibre: 7.62x54 mm Tracejante - Vermelho&lt;br/&gt;Balas: 150&lt;br/&gt;Usado em:Zafir</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow">
@@ -464,6 +475,7 @@
                 <Russian>Короб 150 патр. 7.62 мм трассирующих (Желтый)</Russian>
                 <Italian>7.62mm 150Colpi Caricatore Maggiorato Traccianti (gialli)</Italian>
                 <Czech>7.62 mm 150 ranný pás, stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Smugowa (Żółta)</Polish>
                 <Portuguese>Caixa 7.62mm 150 Balas Tracejantes (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow_description">
@@ -472,6 +484,7 @@
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Желтый&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: Zafir</Russian>
                 <Italian>Calibro: 7.62x54 mm Traccianti - Gialli&lt;br /&gt;Colpi: 150&lt;br /&gt;Usati in: Zafir</Italian>
                 <Czech>Kalibr: 7.62×54 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 150&lt;br /&gt;Použito v: Zafir</Czech>
+                <Polish>Kaliber: 7.62x54 mm Smugowa - Żółta&lt;br /&gt;Sztuk: 150&lt;br /&gt;Używana w: Zafir</Polish>
                 <Portuguese>Calibre: 7.62x54 mm Tracejante - Amarelo&lt;br/&gt;Balas: 150&lt;br/&gt;Usado em:Zafir</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_yellow">
@@ -480,6 +493,7 @@
                 <Russian>Лента 150 патр. 9.3 мм TE4 (Желтый)</Russian>
                 <Italian>9.3mm 150Colpi Caricatore Maggiorato (Giallo)</Italian>
                 <Czech>9.3 mm 150 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>9.3 mm Taśma 150szt. Mieszana (Żółta)</Polish>
                 <Portuguese>Cinto 9.3mm 150 Balas Misturadas (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_red">
@@ -488,6 +502,7 @@
                 <Russian>Лента 150 патр. 9.3 мм TE4 (Красный)</Russian>
                 <Italian>9.3mm 150Colpi Caricatore Maggiorato (Rosso)</Italian>
                 <Czech>9.3 mm 150 ranný pás, částečná stopovka (Červená)</Czech>
+                <Polish>9.3 mm Taśma 150szt. Mieszana (Czerwona)</Polish>
                 <Portuguese>Cinto 9.3mm 150 Balas Misturadas (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_yellow">
@@ -496,6 +511,7 @@
                 <Russian>Лента 130 патр. .338 NM TE4 (Желтый)</Russian>
                 <Italian>.338 NM 130Colpi Caricatore a nastro Misto (giallo)</Italian>
                 <Czech>.338 NM 130 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>.338 NM Taśma 130szt. Mieszana (Żółta)</Polish>
                 <Portuguese>Cinto .338 NM Misturado (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_green">
@@ -504,6 +520,7 @@
                 <Russian>Лента 130 патр. .338 NM TE4 (Зеленый)</Russian>
                 <Italian>.338 NM 130Colpi Caricatore a nastro Misto (Verde)</Italian>
                 <Czech>.338 NM 130 ranný pás, částečná stopovka (Zelená)</Czech>
+                <Polish>.338 NM Taśma 130szt. Mieszana (Zielona)</Polish>
                 <Portuguese>Cinto .338 NM 130 Balas Misturados (Verde)</Portuguese>
             </Key>
         </Container>
