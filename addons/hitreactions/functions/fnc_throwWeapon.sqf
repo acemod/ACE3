@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Makes the unit throw their currently selected weapon.
+ * Makes the unit throw their currently selected weapon. Unit must be local.
  *
  * Arguments:
  * 0: unit <OBJECT>
