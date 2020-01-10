@@ -177,7 +177,7 @@
             <English>Bruise</English>
             <German>Prellung</German>
             <Italian>Contusione</Italian>
-            <Russian>Контузия</Russian>
+            <Russian>Ушиб</Russian>
             <French>Hématome</French>
             <Polish>Stłuczenie</Polish>
             <Spanish>Contusión</Spanish>
@@ -192,7 +192,7 @@
             <English>Minor Bruise</English>
             <German>Kleine Prellung</German>
             <Italian>Minima Contusione</Italian>
-            <Russian>Слабая контузия</Russian>
+            <Russian>Слабый ушиб</Russian>
             <French>Petit hématome</French>
             <Polish>Pomniejsze stłuczenie</Polish>
             <Spanish>Contusión menor</Spanish>
@@ -207,7 +207,7 @@
             <English>Medium Bruise</English>
             <German>Mittlere Prellung</German>
             <Italian>Media Contusione</Italian>
-            <Russian>Умеренная контузия</Russian>
+            <Russian>средний ушиб</Russian>
             <French>Moyen hématome</French>
             <Polish>Średnie stłuczenie</Polish>
             <Spanish>Contusión media</Spanish>
@@ -222,7 +222,7 @@
             <English>Large Bruise</English>
             <German>Große Prellung</German>
             <Italian>Alta Contusione</Italian>
-            <Russian>Сильная контузия</Russian>
+            <Russian>сильный ушиб</Russian>
             <French>Grand hématome</French>
             <Polish>Duże stłuczenie</Polish>
             <Spanish>Contusión severa</Spanish>
