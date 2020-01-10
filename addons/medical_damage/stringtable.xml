@@ -43,7 +43,7 @@
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
             <English>Sets the amount of damage an AI unit can receive before going unconscious (or dying when "Sum of Trauma" is enabled).</English>
             <Japanese>AI が気絶になる前に受けられるダメージ量を決定できます。</Japanese>
-            <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance.</French>
+            <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
             <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
