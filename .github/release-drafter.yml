@@ -10,15 +10,16 @@ categories:
     labels:
       - 'kind/feature request'
       - 'kind/enhancement'
-      - 'area/translations'
   - title: '**FIXED:**'
     labels:
       - 'kind/bug fix'
   - title: '**CHANGED:**'
     labels:
-      - 'kind/enhancement'
       - 'kind/cleanup'
       - 'area/compatibility'
+  - title: '**Translations:**'
+    labels:
+      - 'area/translations'
 
 exclude-labels:
   - 'ignore changelog'
