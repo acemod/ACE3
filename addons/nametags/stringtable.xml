@@ -64,6 +64,7 @@
             <Korean>플레이어 이름 표시</Korean>
             <Chinesesimp>显示玩家名字</Chinesesimp>
             <Chinese>顯示玩家名稱</Chinese>
+            <Turkish>Oyuncu isimlerini göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
             <English>Show player names and set their activation. Default: Enabled</English>
@@ -142,6 +143,7 @@
             <Russian>Затухание на границе экрана</Russian>
             <Portuguese>Ocultar na borda da tela</Portuguese>
             <Czech>Zeslábnout poblíž okrajů obrazovky</Czech>
+            <Spanish>Difuminar en el borde de pantalla</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
             <English>Show player ranks (requires player names)</English>
@@ -362,6 +364,7 @@
             <Portuguese>Transparência da etiqueta de nome</Portuguese>
             <French>Transparence des noms</French>
             <Czech>Průhlednost jmenovek</Czech>
+            <Spanish>Transparencia de etiquetas de jugadores</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>

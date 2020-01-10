@@ -1,5 +1,3 @@
-
-// todo: this setting just disables some treatment options, remove?
 [
     QGVAR(advancedDiagnose),
     "CHECKBOX",
@@ -13,6 +11,15 @@
     QGVAR(advancedBandages),
     "CHECKBOX",
     [LSTRING(AdvancedBandages_DisplayName), LSTRING(AdvancedBandages_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(advancedMedication),
+    "CHECKBOX",
+    [LSTRING(AdvancedMedication_DisplayName), LSTRING(AdvancedMedication_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     true,
     true
@@ -32,18 +39,9 @@
 [
     QGVAR(clearTraumaAfterBandage),
     "CHECKBOX",
-    [LSTRING(clearTraumaAfterBandage_DisplayName), LSTRING(clearTraumaAfterBandage_Description)],
+    [LSTRING(ClearTraumaAfterBandage_DisplayName), LSTRING(ClearTraumaAfterBandage_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
-    true
-] call CBA_settings_fnc_init;
-
-[
-    QGVAR(advancedMedication),
-    "CHECKBOX",
-    [LSTRING(AdvancedMedication_DisplayName), LSTRING(AdvancedMedication_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    true,
     true
 ] call CBA_settings_fnc_init;
 
@@ -54,15 +52,6 @@
     [LSTRING(LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
-    true
-] call CBA_settings_fnc_init;
-
-[
-    QGVAR(allowSelfIV),
-    "LIST",
-    [LSTRING(AllowSelfIV_DisplayName), LSTRING(AllowSelfIV_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
     true
 ] call CBA_settings_fnc_init;
 
@@ -130,6 +119,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(allowSelfPAK),
+    "LIST",
+    [LSTRING(AllowSelfPAK_DisplayName), LSTRING(AllowSelfPAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(timeCoefficientPAK),
     "SLIDER",
     [LSTRING(TimeCoefficientPAK_DisplayName), LSTRING(TimeCoefficientPAK_Description)],
@@ -175,11 +173,29 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(allowSelfIV),
+    "LIST",
+    [LSTRING(AllowSelfIV_DisplayName), LSTRING(AllowSelfIV_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(cprSuccessChance),
     "SLIDER",
-    [LSTRING(cprSuccessChance_DisplayName), LSTRING(cprSuccessChance_Description)],
+    [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 1, 0.4, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(holsterRequired),
+    "LIST",
+    [LSTRING(HolsterRequired_DisplayName), LSTRING(HolsterRequired_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Disabled), LSTRING(HolsterRequired_Lowered), LSTRING(HolsterRequired_LoweredExam), LSTRING(HolsterRequired_Holstered), LSTRING(HolsterRequired_HolsteredExam)], 0],
     true
 ] call CBA_settings_fnc_init;
 
@@ -209,14 +225,3 @@
     [-1, 3600, 600, 0],
     true
 ] call CBA_settings_fnc_init;
-
-[
-    QGVAR(holsterRequired),
-    "LIST",
-    [LSTRING(HolsterRequired_DisplayName), LSTRING(HolsterRequired_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1, 2, 3, 4], [ELSTRING(common,Disabled), LSTRING(HolsterRequired_Lowered), LSTRING(HolsterRequired_LoweredExam), LSTRING(HolsterRequired_Holstered), LSTRING(HolsterRequired_HolsteredExam)], 0],
-    true
-] call CBA_settings_fnc_init;
-
-

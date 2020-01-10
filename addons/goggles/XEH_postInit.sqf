@@ -133,12 +133,16 @@ if (!hasInterface) exitWith {};
 
         }] call CBA_fnc_addEventHandler;
 
+        // Handle "rain is snow" maps like CUP's Chernarus Winter
+        private _rainSpeed = getNumber (configFile >> "CfgWorlds" >> worldName >> "RainParticles" >> "dropSpeed");
+        GVAR(mapHasRain) = _rainSpeed > 10; // CAWorld default is 25, Chernarus_Winter is 1
+
         // goggles effects main PFH
         [{
             BEGIN_COUNTER(goggles);
 
             // rain
-            call FUNC(applyRainEffect);
+            if (GVAR(mapHasRain)) then FUNC(applyRainEffect);
 
             // auto remove effects under water
             if (GVAR(EffectsActive) && {underwater ACE_player} && {[goggles ACE_player] call FUNC(isDivingGoggles)}) then {

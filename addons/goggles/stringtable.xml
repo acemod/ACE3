@@ -14,6 +14,8 @@
             <Portuguese>Óculos</Portuguese>
             <French>Lunettes</French>
             <Czech>Brýle</Czech>
+            <Spanish>Gafas</Spanish>
+            <Turkish>Gözlük</Turkish>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingsName">
             <English>ACE Goggles</English>
@@ -28,6 +30,8 @@
             <Portuguese>ACE Óculos</Portuguese>
             <French>ACE Lunettes</French>
             <Czech>ACE Brýle</Czech>
+            <Spanish>[ACE] Gafas</Spanish>
+            <Turkish>ACE Gözlük</Turkish>
         </Key>
         <Key ID="STR_ACE_Goggles_ShowInThirdPerson">
             <English>Show Goggle Effects in Third Person</English>
@@ -44,6 +48,7 @@
             <Korean>3인칭시에도 고글 효과를 보이게 합니다</Korean>
             <Chinesesimp>在第三人称视角显示护目镜效果</Chinesesimp>
             <Chinese>在第三人稱視角顯示護目鏡效果</Chinese>
+            <Turkish>Gözlük efektlerini 3. şahıs görünümün de göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Goggles_WipeGlasses">
             <English>Wipe Goggles</English>
@@ -60,6 +65,7 @@
             <Korean>고글 닦기</Korean>
             <Chinesesimp>擦拭护目镜</Chinesesimp>
             <Chinese>擦拭護目鏡</Chinese>
+            <Turkish>Gözlük Camlarını Sil</Turkish>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_displayName">
             <English>Goggle Effects</English>
@@ -74,6 +80,8 @@
             <Chinese>護目鏡效果</Chinese>
             <Portuguese>Efeitos de Óculos</Portuguese>
             <Czech>Efekty brýlí</Czech>
+            <Spanish>Efectos de gafas</Spanish>
+            <Turkish>Gözlük efektleri</Turkish>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
@@ -88,6 +96,8 @@
             <Chinese>染色</Chinese>
             <Portuguese>Cor</Portuguese>
             <Czech>Zabarvení</Czech>
+            <Spanish>Tinte</Spanish>
+            <Turkish>Ton</Turkish>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
@@ -102,14 +112,19 @@
             <Chinese>染色 + 影響</Chinese>
             <Portuguese>Cor + Efeitos</Portuguese>
             <Czech>Zabarvení + Efekty</Czech>
+            <Spanish>Tinte + efectos</Spanish>
+            <Turkish>Ton + Efektler</Turkish>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
             <English>Show Wipe Goggles self interaction</English>
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
+            <Italian>Mostra interazione automatica per la pulizia degli occhiali</Italian>
             <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>
             <Japanese>ゴーグルの拭き取りをセルフ インタラクションに表示</Japanese>
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
+            <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
+            <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
         </Key>
     </Package>
 </Project>

@@ -7,8 +7,10 @@
             <French>[CSW] M47 Super-Dragon</French>
             <Japanese>[CSW] M47 スーパー ドラゴン</Japanese>
             <Chinese>[CSW] M47龍式</Chinese>
+            <Italian>[CSW] M47 Super-Dragon</Italian>
             <Czech>[CSW] M47 Super-Dragon</Czech>
             <Polish>[CSW] M47 Super-Dragon</Polish>
+            <Turkish>[CSW] M47 Super-Dragon</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
@@ -16,8 +18,10 @@
             <French>M47 Super-Dragon</French>
             <Japanese>M47 スーパー ドラゴン</Japanese>
             <Chinese>M47 龍式</Chinese>
+            <Italian>M47 Super-Dragon</Italian>
             <Czech>M47 Super-Dragon</Czech>
             <Polish>M47 Super-Dragon</Polish>
+            <Turkish>M47 Super-Dragon</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragon_attachSight">
             <English>Attach Sight</English>
@@ -25,8 +29,9 @@
             <French>Monter le viseur</French>
             <Japanese>照準器を取り付ける</Japanese>
             <Chinese>裝上瞄具</Chinese>
+            <Italian>Monta mirino</Italian>
             <Czech>Připojit puškohled</Czech>
-            <Polish>Zamontuj optykę</Polish>
+            <Polish>Dołącz Optykę</Polish>
         </Key>
         <Key ID="STR_ACE_Dragon_detachSight">
             <English>Detach Sight</English>
@@ -34,8 +39,9 @@
             <French>Démonter le viseur</French>
             <Japanese>照準器を外す</Japanese>
             <Chinese>拆下瞄具</Chinese>
+            <Italian>Smonta mirino</Italian>
             <Czech>Odpojit puškohled</Czech>
-            <Polish>Zdemontuj optykę</Polish>
+            <Polish>Odczep Optykę</Polish>
         </Key>
         <Key ID="STR_ACE_Dragon_sightName">
             <English>SU-36/P Daysight</English>
@@ -43,8 +49,10 @@
             <French>SU-36/P Daysight</French>
             <Japanese>SU-36/P デイサイト</Japanese>
             <Chinese>SU-36/P 日間瞄具</Chinese>
+            <Italian>SU-36/P Daysight</Italian>
             <Czech>SU-36/P denní puškohled</Czech>
-            <Polish>SU-36/P celownik dzienny</Polish>
+            <Polish>SU-36/P Celownik dzienny</Polish>
+            <Turkish>SU-36/P Daysight</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
@@ -52,8 +60,9 @@
             <French>Un viseur léger et bon marché utilisé pour les opérations de jour.\nContient l'ordinateur de guidage pour tout le système.</French>
             <Japanese>昼間時に使用される軽量で、低価格の照準器です。システム全体の誘導コンピュータを備えています。</Japanese>
             <Chinese>一個輕量，便宜適合日間行動使用的廉價瞄具。內含全套制導電腦系統</Chinese>
+            <Italian>Una luce,un mirino usato per le operazioni diurne.Contiene il computer di guida per l'intero sistema </Italian>
             <Czech>Lehký a levný puškohled pro použití za denního světla. Obsahuje navigační počítač pro celý systém.</Czech>
-            <Polish>Lekki, tani celownik używany do operacji za dnia. Zawiera komputer prowadzący dla całego systemu.</Polish>
+            <Polish>Lekki, tani celownik używany do działania w trakcie dnia. Zawiera komputer naprowadząjący dla całego systemu</Polish>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
@@ -61,9 +70,9 @@
             <French>Un missile filoguidé SACLOS, présentant une caractéristique de vol exceptionnelle.</French>
             <Japanese>特徴的な飛行特性を持つ、ワイヤ誘導の SACLOS ミサイルです。</Japanese>
             <Chinese>一個有線制導半自動指令型飛彈並有著獨特的飛航動作</Chinese>
+            <Italian>Un missile SACLOS  filo-guidato con uniche caratterische di volo </Italian>
             <Czech>Drátem naváděná SACLOS raketa s unikátními letovými vlastnostmi</Czech>
-            <Polish>Kablowo sterowana rakieta SACLOS z unikalnymi charakterystykami lotu
-</Polish>
+            <Polish>Naprowadzany przewodowo rakietowy pocisk SACLOS o unikalnej charakterystyce lotu</Polish>
         </Key>
     </Package>
 </Project>

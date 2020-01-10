@@ -47,6 +47,7 @@
             <Korean>가방</Korean>
             <Chinesesimp>背包</Chinesesimp>
             <Chinese>背包</Chinese>
+            <Turkish>Çantalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -62,6 +63,7 @@
             <Korean>헬멧</Korean>
             <Chinesesimp>头盔</Chinesesimp>
             <Chinese>頭盔</Chinese>
+            <Turkish>Kasklar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -77,6 +79,7 @@
             <Korean>안경</Korean>
             <Chinesesimp>眼镜</Chinesesimp>
             <Chinese>眼鏡</Chinese>
+            <Turkish>Gözlükler</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -92,6 +95,7 @@
             <Korean>복장</Korean>
             <Chinesesimp>服装</Chinesesimp>
             <Chinese>服裝</Chinese>
+            <Turkish>Üniformalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -107,6 +111,7 @@
             <Korean>조끼</Korean>
             <Chinesesimp>背心</Chinesesimp>
             <Chinese>背心</Chinese>
+            <Turkish>Yelekler</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -122,6 +127,7 @@
             <Korean>수류탄</Korean>
             <Chinesesimp>手榴弹</Chinesesimp>
             <Chinese>手榴彈</Chinese>
+            <Turkish>Bombalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -137,6 +143,7 @@
             <Korean>의료</Korean>
             <Chinesesimp>医疗</Chinesesimp>
             <Chinese>醫療</Chinese>
+            <Turkish>Sağlık</Turkish>
         </Key>
     </Package>
 </Project>

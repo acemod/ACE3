@@ -16,6 +16,7 @@
             <Korean>절단기</Korean>
             <Chinesesimp>剪铁丝网钳</Chinesesimp>
             <Chinese>剪鐵絲網鉗</Chinese>
+            <Turkish>Tel Makası</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
@@ -32,6 +33,7 @@
             <Korean>절단기</Korean>
             <Chinesesimp>剪铁丝网钳</Chinesesimp>
             <Chinese>剪鐵絲網鉗</Chinese>
+            <Turkish>Tel Makası</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CutFence">
             <English>Cut Fence</English>
@@ -48,6 +50,7 @@
             <Korean>철조망 자르기</Korean>
             <Chinesesimp>剪断护栏</Chinesesimp>
             <Chinese>剪斷護欄</Chinese>
+            <Turkish>Çiti/Teli Kes</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
             <English>Cutting Fences / Wires...</English>
@@ -64,6 +67,7 @@
             <Korean>철망/철조망 자르는중...</Korean>
             <Chinesesimp>剪断护栏/刺网中...</Chinesesimp>
             <Chinese>剪斷護欄/刺網中...</Chinese>
+            <Turkish>Kesiliyor Çit/Tel</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>

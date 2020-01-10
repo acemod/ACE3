@@ -15,6 +15,7 @@
             <Chinesesimp>兵籍牌</Chinesesimp>
             <Portuguese>Dog Tag</Portuguese>
             <Spanish>Placa de identidad</Spanish>
+            <Turkish>Künye</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
@@ -30,6 +31,7 @@
             <Chinesesimp>检查兵籍牌</Chinesesimp>
             <Portuguese>Verificar Dog Tag</Portuguese>
             <Spanish>Verificar placa de identidad</Spanish>
+            <Turkish>Künyeyi Kontrol Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
@@ -45,6 +47,7 @@
             <Chinesesimp>检查</Chinesesimp>
             <Portuguese>Verificar</Portuguese>
             <Spanish>Verificar</Spanish>
+            <Turkish>Kontrol Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
@@ -60,6 +63,7 @@
             <Chinesesimp>拿取</Chinesesimp>
             <Portuguese>Pegar</Portuguese>
             <Spanish>Tomar</Spanish>
+            <Turkish>Al</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dogtag taken from %1...</English>

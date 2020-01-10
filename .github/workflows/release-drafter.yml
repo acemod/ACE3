@@ -6,7 +6,7 @@ on:
     - master
 
 jobs:
-  update_release_draft:
+  draft:
     runs-on: ubuntu-latest
     steps:
       - name: Release Drafter

@@ -48,6 +48,7 @@
             <Korean>기후</Korean>
             <Chinesesimp>天气</Chinesesimp>
             <Chinese>天氣</Chinese>
+            <Turkish>Hava Durumu</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
@@ -80,6 +81,7 @@
             <Korean>ACE 기후</Korean>
             <Chinesesimp>ACE 天气</Chinesesimp>
             <Chinese>ACE 天氣</Chinese>
+            <Turkish>ACE Hava Durumu</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_enabled_Description">
             <English>Expands the existing weather by temperature, humidity and air pressure.</English>
@@ -158,18 +160,24 @@
         <Key ID="STR_ACE_Weather_CheckAirTemperature">
             <English>Check Air Temperature</English>
             <Chinese>檢查氣溫</Chinese>
+            <Italian>Controllare la temperatura dell'aria</Italian>
             <Czech>Zkontrolovat teplotu vzduchu</Czech>
             <Japanese>気温を確認</Japanese>
+            <Polish>Sprawdź temperaturę powietrza</Polish>
             <French>Vérifier la température</French>
             <Polish>Sprawdz Temperature Powietrza</Polish>
+            <Portuguese>Checar a temperatura do ar </Portuguese>
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
             <Chinese>顯示檢查氣溫動作</Chinese>
+            <Italian>Mostra Controlla l'azione della temperatura dell'aria</Italian>
             <Czech>Ukázat akci kontroly teploty vzduchu</Czech>
             <Japanese>気温の確認動作を表示</Japanese>
+            <Polish>Pokaż akcje sprawdzającą temperaturę powietrza</Polish>
             <French>Afficher l'interaction "Vérifier la température"</French>
             <Polish>Pokaż Akcję Sprawdz Temperature Powietrza</Polish>
+            <Portuguese>Mostrar a ação "Checar a temperatura do ar"</Portuguese>
         </Key>
     </Package>
 </Project>

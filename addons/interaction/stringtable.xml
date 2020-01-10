@@ -14,6 +14,8 @@
             <Portuguese>Interação</Portuguese>
             <French>Interaction</French>
             <Czech>Interakce</Czech>
+            <Spanish>Interacción</Spanish>
+            <Turkish>Etkileşim</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_MainAction">
             <English>Interactions</English>
@@ -30,6 +32,7 @@
             <Korean>상호작용</Korean>
             <Chinesesimp>互动</Chinesesimp>
             <Chinese>互動</Chinese>
+            <Turkish>Etkileşim</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -46,6 +49,7 @@
             <Korean>몸통</Korean>
             <Chinesesimp>身体</Chinesesimp>
             <Chinese>身體</Chinese>
+            <Turkish>Gövde</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
@@ -62,6 +66,7 @@
             <Korean>머리</Korean>
             <Chinesesimp>头部</Chinesesimp>
             <Chinese>頭部</Chinese>
+            <Turkish>Kafa</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
@@ -78,6 +83,7 @@
             <Korean>왼쪽 팔</Korean>
             <Chinesesimp>左手</Chinesesimp>
             <Chinese>左手</Chinese>
+            <Turkish>Sol Kol</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
@@ -94,6 +100,7 @@
             <Korean>오른쪽 팔</Korean>
             <Chinesesimp>右手</Chinesesimp>
             <Chinese>右手</Chinese>
+            <Turkish>Sağ Kol</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -110,6 +117,7 @@
             <Korean>왼쪽 다리</Korean>
             <Chinesesimp>左脚</Chinesesimp>
             <Chinese>左腳</Chinese>
+            <Turkish>Sol Bacak</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
@@ -126,6 +134,7 @@
             <Korean>오른쪽 다리</Korean>
             <Chinesesimp>右脚</Chinesesimp>
             <Chinese>右腳</Chinese>
+            <Turkish>Sağ Bacak</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
@@ -142,6 +151,7 @@
             <Korean>무기</Korean>
             <Chinesesimp>武器</Chinesesimp>
             <Chinese>武器</Chinese>
+            <Turkish>Silah</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenu">
             <English>Interaction Menu</English>
@@ -158,6 +168,7 @@
             <Korean>상호작용 메뉴</Korean>
             <Chinesesimp>互动选单</Chinesesimp>
             <Chinese>互動選單</Chinese>
+            <Turkish>Etkileim Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenuSelf">
             <English>Interaction Menu (Self)</English>
@@ -174,6 +185,7 @@
             <Korean>상호작용 메뉴(자신)</Korean>
             <Chinesesimp>互动选单 (自我)</Chinesesimp>
             <Chinese>互動選單 (自我)</Chinese>
+            <Turkish>Etkileşim Menüsü(Şahsi)</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenDoor">
             <English>Open / Close Door</English>
@@ -190,6 +202,7 @@
             <Korean>문 열기 / 닫기</Korean>
             <Chinesesimp>打开/关上 门</Chinesesimp>
             <Chinese>打開/關上 門</Chinese>
+            <Turkish>Kapıyı Aç/Kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_LockDoor">
             <English>Lock Door</English>
@@ -206,6 +219,7 @@
             <Korean>문 잠그기</Korean>
             <Chinesesimp>锁门</Chinesesimp>
             <Chinese>鎖門</Chinese>
+            <Turkish>Kapıyı Kilitle</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_UnlockDoor">
             <English>Unlock Door</English>
@@ -222,6 +236,7 @@
             <Korean>잠긴문 열기</Korean>
             <Chinesesimp>解锁门</Chinesesimp>
             <Chinese>解鎖門</Chinese>
+            <Turkish>Kapının Kilidini Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_LockedDoor">
             <English>Locked Door</English>
@@ -238,6 +253,7 @@
             <Korean>잠긴 문</Korean>
             <Chinesesimp>门已上锁</Chinesesimp>
             <Chinese>門已上鎖</Chinese>
+            <Turkish>Kilitli Kapı</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_UnlockedDoor">
             <English>Unlocked Door</English>
@@ -254,6 +270,7 @@
             <Korean>열린 문</Korean>
             <Chinesesimp>门未上锁</Chinesesimp>
             <Chinese>門未上鎖</Chinese>
+            <Turkish>Kilidi Açık Kapı</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinGroup">
             <English>Join group</English>
@@ -270,6 +287,7 @@
             <Korean>그룹 참여</Korean>
             <Chinesesimp>加入小队</Chinesesimp>
             <Chinese>加入小隊</Chinese>
+            <Turkish>Gruba katıl</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveGroup">
             <English>Leave Group</English>
@@ -286,6 +304,7 @@
             <Korean>그룹 나가기</Korean>
             <Chinesesimp>离开小队</Chinesesimp>
             <Chinese>離開小隊</Chinese>
+            <Turkish>Gruptan ayrıl</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_BecomeLeader">
             <English>Become Leader</English>
@@ -302,6 +321,7 @@
             <Korean>리더 되기</Korean>
             <Chinesesimp>成为队长</Chinesesimp>
             <Chinese>成為隊長</Chinese>
+            <Turkish>Lider ol</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -318,6 +338,7 @@
             <Korean>춤추기!</Korean>
             <Chinesesimp>跳舞</Chinesesimp>
             <Chinese>跳舞</Chinese>
+            <Turkish>DANS!</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_StopDancing">
             <English>Stop Dancing</English>
@@ -350,6 +371,7 @@
             <Korean>&lt;&lt;뒤로</Korean>
             <Chinesesimp>&lt;&lt;返回</Chinesesimp>
             <Chinese>&lt;&lt;返回</Chinese>
+            <Turkish>&lt;&lt; Geri</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_WeaponOnBack">
             <English>Put weapon on back</English>
@@ -382,6 +404,7 @@
             <Korean>어깨 치기</Korean>
             <Chinesesimp>轻拍肩膀</Chinesesimp>
             <Chinese>輕拍肩膀</Chinese>
+            <Turkish>Omuzuna Dokun</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedRight">
             <English>You were tapped on the RIGHT shoulder</English>
@@ -446,6 +469,7 @@
             <Korean>선택</Korean>
             <Chinesesimp>选择</Chinesesimp>
             <Chinese>選擇</Chinese>
+            <Turkish>Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_SendAway">
             <English>Go Away!</English>
@@ -462,6 +486,7 @@
             <Korean>저리 가!</Korean>
             <Chinesesimp>走开!</Chinesesimp>
             <Chinese>走開!</Chinese>
+            <Turkish>Git!</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_GetDown">
             <English>Get Down!</English>
@@ -478,6 +503,7 @@
             <Korean>엎드려!</Korean>
             <Chinesesimp>趴下!</Chinesesimp>
             <Chinese>趴下!</Chinese>
+            <Turkish>Yat!</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_GetOut">
             <English>Get Out</English>
@@ -509,6 +535,7 @@
             <Korean>팀 설정</Korean>
             <Chinesesimp>小队管理</Chinesesimp>
             <Chinese>小隊管理</Chinese>
+            <Turkish>Takım Yönetimi</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>
@@ -525,6 +552,7 @@
             <Korean>빨강</Korean>
             <Chinesesimp>红色</Chinesesimp>
             <Chinese>紅色</Chinese>
+            <Turkish>Kırmızı</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamGREEN">
             <English>Green</English>
@@ -541,6 +569,7 @@
             <Korean>초록</Korean>
             <Chinesesimp>绿色</Chinesesimp>
             <Chinese>綠色</Chinese>
+            <Turkish>Yeşil</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamBLUE">
             <English>Blue</English>
@@ -557,6 +586,7 @@
             <Korean>파랑</Korean>
             <Chinesesimp>蓝色</Chinesesimp>
             <Chinese>藍色</Chinese>
+            <Turkish>Mavi</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamYELLOW">
             <English>Yellow</English>
@@ -573,6 +603,7 @@
             <Korean>노랑</Korean>
             <Chinesesimp>黄色</Chinesesimp>
             <Chinese>黃色</Chinese>
+            <Turkish>Sarı</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamRed">
             <English>Assign Red</English>
@@ -589,6 +620,7 @@
             <Korean>빨강에 등록</Korean>
             <Chinesesimp>指派为红组</Chinesesimp>
             <Chinese>指派為紅組</Chinese>
+            <Turkish>Kırmızıya Ata</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
@@ -605,6 +637,7 @@
             <Korean>초록에 등록</Korean>
             <Chinesesimp>指派为绿组</Chinesesimp>
             <Chinese>指派為綠組</Chinese>
+            <Turkish>Yeşile Ata</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
@@ -621,6 +654,7 @@
             <Korean>파랑이 등록</Korean>
             <Chinesesimp>指派为蓝组</Chinesesimp>
             <Chinese>指派為藍組</Chinese>
+            <Turkish>Maviye Ata</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
@@ -637,6 +671,7 @@
             <Korean>노랑에 등록</Korean>
             <Chinesesimp>指派为黄组</Chinesesimp>
             <Chinese>指派為黃組</Chinese>
+            <Turkish>Sarıya Ata</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
@@ -653,6 +688,7 @@
             <Korean>빨강에 참여</Korean>
             <Chinesesimp>加入红组</Chinesesimp>
             <Chinese>加入紅組</Chinese>
+            <Turkish>Kırmızıya Katıl</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
@@ -669,6 +705,7 @@
             <Korean>초록에 참여</Korean>
             <Chinesesimp>加入绿组</Chinesesimp>
             <Chinese>加入綠組</Chinese>
+            <Turkish>Yeşile Katıl</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
@@ -685,6 +722,7 @@
             <Korean>파랑에 참여</Korean>
             <Chinesesimp>加入蓝组</Chinesesimp>
             <Chinese>加入藍組</Chinese>
+            <Turkish>Maviye Katıl</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
@@ -701,6 +739,7 @@
             <Korean>노랑에 참여</Korean>
             <Chinesesimp>加入黄组</Chinesesimp>
             <Chinese>加入黃組</Chinese>
+            <Turkish>Sarıya Katıl</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
@@ -717,6 +756,7 @@
             <Korean>당신은 %1팀에 참여했습니다</Korean>
             <Chinesesimp>你已加入%1组</Chinesesimp>
             <Chinese>你已加入%1組</Chinese>
+            <Turkish>Takıma katıldın %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveTeam">
             <English>Leave Team</English>
@@ -733,6 +773,7 @@
             <Korean>팀 나가기</Korean>
             <Chinesesimp>离开小队</Chinesesimp>
             <Chinese>離開小隊</Chinese>
+            <Turkish>Takımdan Ayrıl</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_LeftTeam">
             <English>You left the Team</English>
@@ -749,6 +790,7 @@
             <Korean>팀을 나갔습니다</Korean>
             <Chinesesimp>你已离开小队</Chinesesimp>
             <Chinese>你已離開小隊</Chinese>
+            <Turkish>Takımdan Ayrıldın</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Pardon">
             <English>Pardon</English>
@@ -765,6 +807,7 @@
             <Korean>허용</Korean>
             <Chinesesimp>原谅</Chinesesimp>
             <Chinese>原諒</Chinese>
+            <Turkish>Pardon</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_ScrollHint">
             <English>Scroll</English>
@@ -781,6 +824,7 @@
             <Korean>스크롤</Korean>
             <Chinesesimp>滚动</Chinesesimp>
             <Chinese>滾動</Chinese>
+            <Turkish>Kaydırma</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_ModifierKey">
             <English>Modifier Key</English>
@@ -813,6 +857,7 @@
             <Korean>범위 내에 없습니다</Korean>
             <Chinesesimp>不在范围内</Chinesesimp>
             <Chinese>不在範圍內</Chinese>
+            <Turkish>Menzilde Değil</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Equipment">
             <English>Equipment</English>
@@ -829,6 +874,7 @@
             <Korean>장비</Korean>
             <Chinesesimp>装备</Chinesesimp>
             <Chinese>裝備</Chinese>
+            <Turkish>Ekipmanlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Push">
             <English>Push</English>
@@ -857,6 +903,8 @@
             <Portuguese>Virar</Portuguese>
             <French>Tourner</French>
             <Czech>Otočit</Czech>
+            <Spanish>Voltear</Spanish>
+            <Turkish>Döndür</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -873,6 +921,7 @@
             <Korean>상호작용</Korean>
             <Chinesesimp>互动</Chinesesimp>
             <Chinese>互動</Chinese>
+            <Turkish>Etkileşim</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
@@ -889,6 +938,7 @@
             <Korean>승객</Korean>
             <Chinesesimp>乘客</Chinesesimp>
             <Chinese>乘客</Chinese>
+            <Turkish>Yolcular</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenBox">
             <English>Open</English>
@@ -905,6 +955,7 @@
             <Korean>열기</Korean>
             <Chinesesimp>打开</Chinesesimp>
             <Chinese>打開</Chinese>
+            <Turkish>Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -921,6 +972,7 @@
             <Korean>상호작용 시스템</Korean>
             <Chinesesimp>互动系统</Chinesesimp>
             <Chinese>互動系統</Chinese>
+            <Turkish>Etkileşim Sistemi</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
@@ -967,6 +1019,7 @@
             <Portuguese>Desativar avaliação negativa</Portuguese>
             <French>Désactiver la notation négative</French>
             <Czech>Vypnout negativní hodnocení</Czech>
+            <Spanish>Deshabilitar valoración negativa</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
@@ -981,6 +1034,7 @@
             <Portuguese>Jogadores devem receber uma avaliação negativa? Quando ativado, os jogadores estão recebendo avaliações positivas, prevenindo que IA amigável atire quando destruir algum equipamento aliado ou matar membros de equipe.</Portuguese>
             <French>Définit si les joueurs peuvent recevoir une note négative. Si l'option est activée, les joueurs obtiennent des notes positives exclusivement.\nCela permet d'éviter que les unités IA ne fassent du tir ami lorsque des joueurs détruisent de l'équipement allié, ou tuent des membres de l'équipe.</French>
             <Czech>Měli by hráči obdržet negativní hodnocení? Pokud ne, hráči obdrží pouze pozitivní hodnocení, což zabrání přátelské AI střílet na hráče pokud hráči ničí přátelské vybavení nebo zabíjejí vlastní tým.</Czech>
+            <Spanish>¿Deben los jugadores recibir una calificación negativa? Cuando los jugadores habilitados solo reciben calificaciones positivas, lo que evita el fuego amistoso de la IA al destruir equipamiento amigo o matar a los miembros del equipo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -1012,6 +1066,7 @@
             <Korean>켜기</Korean>
             <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟</Chinese>
+            <Turkish>Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -1027,6 +1082,7 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
@@ -1116,6 +1172,7 @@
             <Portuguese>Retirar Corpo</Portuguese>
             <French>Retirer le corps</French>
             <Czech>Vytáhnout tělo</Czech>
+            <Spanish>Sacar cuerpo</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_SmashWindshield">
             <English>Smash windshield</English>
@@ -1129,6 +1186,7 @@
             <Italian>Sfonda il parabrezza</Italian>
             <Portuguese>Quebrar pára-brisa</Portuguese>
             <Chinese>踹開擋風玻璃</Chinese>
+            <Spanish>Romper parabrisas</Spanish>
         </Key>
     </Package>
 </Project>

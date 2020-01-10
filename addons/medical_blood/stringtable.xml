@@ -28,6 +28,7 @@
             <Russian>Разрешить капли крови</Russian>
             <Portuguese>Permitir gotas de sangue</Portuguese>
             <Czech>Povolit kapky krve</Czech>
+            <Spanish>Habilitar manchas de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_Description">
             <English>Enables the creation of blood drops when units are bleeding or take damage.</English>
@@ -37,7 +38,10 @@
             <Portuguese>Permitir a criação de gotas de sangue quando as unidades recebem ferimentos ou estão sangrando.</Portuguese>
             <Chinese>啟用出血效果當單位失血或受傷的時候。</Chinese>
             <Czech>Povoluje vytváření kapek krve na zemi když jednotka krvácí nebo utrpí zranění.</Czech>
-            <Polish>Powoduje tworzenie kropli krwii kiedy jednostka krwawi lub otrzymuje obrażenia.</Polish>
+            <Polish>Umożliwia tworzenie śladów krwi, gdy jednostki krwawią lub otrzymują obrażenia.</Polish>
+            <Spanish>Habilita la creación de sangrecuando la unidad está sangrando o recibe daño</Spanish>
+            <Italian>Abilita la creazione di chiazze di sangue quando un'unità sta sanguinando o viene ferita.</Italian>
+            <German>Ermöglicht das Erstellen von Blutstropfen, wenn Einheiten am Bluten sind oder Schaden nehmen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_DisplayName">
             <English>Max Blood Objects</English>
@@ -46,8 +50,11 @@
             <Russian>Макс. кол-во капель крови</Russian>
             <Portuguese>Limite de objetos de sangue</Portuguese>
             <Chinese>最大血跡數</Chinese>
+            <Italian>Massimo numero di chiazze di sangue</Italian>
             <Czech>Maximum objektů krve</Czech>
-            <Polish>Maksymakna ilość objektów krwii</Polish>
+            <Polish>Maksymalna ilość śladów krwi</Polish>
+            <Spanish>Máxima cantidad de objetos de sangre</Spanish>
+            <German>Maximale Anzahl an Blutstropfen-Objekten</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
             <English>Sets the maximum number of blood drop objects which can be spawned, excessive amounts can cause FPS lag.</English>
@@ -56,8 +63,11 @@
             <Russian>Задает макс. количество создаваемых объектов капель крови. Чрезмерное количество может вызвать задержку FPS</Russian>
             <Portuguese>Define o limite máximo de objetos de gota de sangue que podem ser criados, quantidades excessivas podem causar lag de FPS.</Portuguese>
             <Chinese>設定最大可存在的血跡數量。太極端的數量會導致幀數低落或卡頓</Chinese>
+            <Italian>Imposta il numero massimo di chiazze di sangue che possono essere depositate, quantità eccessive possono causare del lag di FPS.</Italian>
             <Czech>Nastavuje maximum objektů krve na zemi, příliš mnoho může způsobit pokles FPS</Czech>
-            <Polish>Ustawia maksymalną ilość objektów kropli krwii które mogą sie utworzyć, zbyt duża ich ilość może spowodować spadek FPS.</Polish>
+            <Polish>Definiuje maksymalną ilość śladów krwi,  które mogą zostać stworzone, nadmierne ilości mogą powodować spadki FPS.</Polish>
+            <Spanish>Fija el límite de objetos de sangre que aparecerán, cantidades excesivas pueden causar caídas de FPS</Spanish>
+            <German>Legt die maximale Anzahl an Blutstropfen-Objekten fest, die erscheinen können. Eine zu hoch eingestellte Anzahl kann Lags verursachen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
             <English>Blood Lifetime</English>
@@ -66,8 +76,11 @@
             <Russian>Время жизни капель крови</Russian>
             <Portuguese>Duração do Sangue</Portuguese>
             <Chinese>血跡時長</Chinese>
+            <Italian>Durata del sangue</Italian>
             <Czech>Životnost krve</Czech>
-            <Polish>Żywotność Krwii</Polish>
+            <Polish>Czas trwania śladów krwi</Polish>
+            <Spanish>Duración de la sangre</Spanish>
+            <German>Anzeigedauer der Blutstropfen</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
             <English>Controls the lifetime of blood drop objects.</English>
@@ -76,8 +89,11 @@
             <Russian>Управляет временем жизни объектов капель крови.</Russian>
             <Portuguese>Controla o tempo de vida que um objeto de gota de sangue tem.</Portuguese>
             <Chinese>控制血跡在地上的時長</Chinese>
+            <Italian>Controlla la durata delle chiazze di sangue.</Italian>
             <Czech>Nastavuje jak dlouho objekty krve na zemi vydrží.</Czech>
-            <Polish>Kontroluje żywoność objektów kropli krwii</Polish>
+            <Polish>Kontroluje czas trwania śladów krwi.</Polish>
+            <Spanish>Controla el tiempo de vida que tendrán los objetos de sangre</Spanish>
+            <German>Kontrolliert die Anzeigedauer der Blutstropfen-Objekte.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
             <English>Only Players</English>
@@ -92,6 +108,7 @@
             <Russian>Только игроки</Russian>
             <Portuguese>Apenas Jogadores</Portuguese>
             <Czech>Pouze hráči</Czech>
+            <Spanish>Solo jugadores</Spanish>
         </Key>
     </Package>
 </Project>

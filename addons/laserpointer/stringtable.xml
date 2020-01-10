@@ -96,6 +96,7 @@
             <Korean>레이저</Korean>
             <Chinesesimp>雷射</Chinesesimp>
             <Chinese>雷射</Chinese>
+            <Turkish>Lazer</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -112,6 +113,7 @@
             <Korean>적외선 레이저</Korean>
             <Chinesesimp>红外线雷射</Chinesesimp>
             <Chinese>紅外線雷射</Chinese>
+            <Turkish>IR Lazer</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>
@@ -128,6 +130,7 @@
             <Korean>레이저 / 적외선 레이저 전환</Korean>
             <Chinesesimp>切换雷射/红外线雷射</Chinesesimp>
             <Chinese>切換雷射/紅外線雷射</Chinese>
+            <Turkish>Değiştir Lazer/IR Lazer</Turkish>
         </Key>
     </Package>
 </Project>

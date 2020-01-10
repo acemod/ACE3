@@ -6,379 +6,522 @@
                 <English>5.56 mm 150Rnd Reload Tracer (Green) Mag</English>
                 <German>150 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Magazin</German>
                 <Russian>Магазин 150 патр. 5.56 мм с послед. трас. (Зеленый)</Russian>
+                <Italian>5.56 mm 150 colpi ricarica traccianti (verdi) caricatore</Italian>
                 <Czech>5.56 mm 150 ranný zásobník, stopovka pro přebití (Zelená)</Czech>
+                <Portuguese>Recarregar magazine de 150 balas tracejantes (verde)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_yellow">
                 <English>5.56 mm 150Rnd Reload Tracer (Yellow) Mag</English>
                 <German>150 Schuss 5,56 mm Nachlade-Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 150 патр. 5.56 мм с послед. трас. (Желтый)</Russian>
+                <Italian>5.56 mm 150 colpi Ricarica traccianti (gialli) caricatore</Italian>
                 <Czech>5.56 mm 150 ranný zásobník, stopovka pro přebití (Žlutá)</Czech>
+                <Portuguese>Recarregar magazine 150 balas tracejantes (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_green">
                 <English>5.56 mm 150Rnd Tracer (Green) Mag</English>
                 <German>150 Schuss 5,56 mm Leuchtspur (Grün) Magazin</German>
                 <Russian>Магазин 150 патр. 5.56 мм трассирующих (Зеленый)</Russian>
+                <Italian>5.56 mm 150 colpi traccianti (verdi) caricatore</Italian>
                 <Czech>5.56 mm 150 ranný zásobník, stopovka (Zelená)</Czech>
+                <Portuguese>Magazine 5.56mm Tracejante (verde)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_green_description">
                 <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
                 <German>Kaliber: 5,56x45 mm Leuchtspur - grün&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet in: SPAR-16S</German>
                 <Russian>Калибр: 5.56x45 мм, трассер Зеленый&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: SPAR-16S</Russian>
+                <Italian>calibro: 5.56x46 mm traccianti - verdi&lt;br/&gt; Colpi: 150&lt;br/&gt; Usati in: SPAR-16S </Italian>
                 <Czech>Kalibr: 5.56×45 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 150&lt;br /&gt;Použito v: SPAR-16S</Czech>
+                <Portuguese>Calibre 5.56x45mm Tracejante - Verde&lt;br/&gt;Balas:150&lt;br/&gt;Usado em: Spar-16S</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_yellow">
                 <English>5.56 mm 150Rnd Tracer (Yellow) Mag</English>
                 <German>150 Schuss 5,56 mm Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 150 патр. 5.56 мм трассирующих (Желтый)</Russian>
+                <Italian>5.56 mm 150Colpi Traccianti (gialli) caricatore</Italian>
                 <Czech>5.56 mm 150 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Portuguese>Magazine 5.56mm 150 balas tracejante (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_556x45_Drum_tracer_yellow_description">
                 <English>Caliber: 5.56x45 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: SPAR-16S</English>
                 <German>Kaliber: 5,56x45 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 150&lt;br /&gt;Verwendet in: SPAR-16S</German>
                 <Russian>Калибр: 5.56x45 мм, трассер Желтый&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: SPAR-16S</Russian>
+                <Italian>calibro:5.56x45 traccianti - gialli &lt;br/&gt;Colpi:150&lt;br/&gt;Usati in: SPAR-16S</Italian>
                 <Czech>Kalibr: 5.56×45 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 150&lt;br /&gt;Použito v: SPAR-16S</Czech>
+                <Portuguese>Calibre: 5.56x45mm Tracejante - Amarelo &lt;br/&gt;Balas:150&lt;br/&gt;Usado em:Spar-16S</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_green">
                 <English>5.56 mm 200Rnd Reload Tracer (Green) Box</English>
                 <German>200 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Kasten</German>
                 <Russian>Короб 200 патр. 5.56 мм с послед. трас. (Зеленый)</Russian>
+                <Italian>5.56 mm 200colpi Ricarica traccianti (verdi) scatola</Italian>
                 <Czech>5.56 mm 200 ranný box, stopovka pro přebití (Zelená)</Czech>
+                <Portuguese>Recarregar Caixa 5.56mm 200 Balas tracejantes (verdes)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_tracer_green">
                 <English>5.56 mm 200Rnd Tracer (Green) Box</English>
                 <German>200 Schuss 5,56 mm Nachlade-Leuchtspur (Grün) Kasten</German>
                 <Russian>Короб 200 патр. 5.56 мм трассирующих (Зеленый)</Russian>
+                <Italian>5.56 mm 200colpi Traccianti (verdi) Scatola</Italian>
                 <Czech>5.56 mm 200 ranný box, stopovka (Zelená)</Czech>
+                <Portuguese>Caixa 5.56mm 200 balas tracejantes (verdes) </Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_556x45_Box_tracer_green_description">
                 <English>Caliber: 5.56x45 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: LIM-85</English>
                 <German>Kaliber: 5,56x45 mm Leuchtspur - grün&lt;br /&gt;Schuss: 200&lt;br /&gt;Verwendet in: LIM-85</German>
                 <Russian>Калибр: 5.56x45 мм, трассер Зеленый&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: LIM-85</Russian>
+                <Italian>Calibro: 5.56x45 mm Traccianti - Verdi&lt;br /&gt;Colpi: 200&lt;br /&gt;Usati in: LIM-85</Italian>
                 <Czech>Kalibr: 5.56×45 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: LIM-85</Czech>
+                <Portuguese>Calibre:5.56x45 mm Tracejante - Verde &lt;br/&gt;Balas: 200&lt;br/&gt;Usado em:LIM-85</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_red">
                 <English>5.8 mm 30Rnd Reload Tracer (Red) Mag</English>
                 <German>30 Schuss 5,8 mm Nachlade-Leuchtspur (Rot) Magazin</German>
                 <Russian>Магазин 30 патр. 5.8 мм с послед. трас. (Красный)</Russian>
+                <Italian>5.8 mm 30Colpi Ricarica Tracciante (Rosso) Caricatore</Italian>
                 <Czech>5.8 mm 30 ranný zásobník, stopovka pro přebití (Červená)</Czech>
+                <Portuguese>Recarregar magazine 5.8mm 30 Balas tracejantes (vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_yellow">
                 <English>5.8 mm 30Rnd Reload Tracer (Yellow) Mag</English>
                 <German>30 Schuss 5,8 mm Nachlade-Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 30 патр. 5.8 мм с послед. трас. (Желтый)</Russian>
+                <Italian>5.8 mm 30Colpi ricarica Traccianti (Giallo) Caricatore</Italian>
                 <Czech>5.8 mm 30 ranný zásobník, stopovka pro přebití (Žlutá)</Czech>
+                <Portuguese>Recarregar magazine 5.8mm 30 Balas tracejantes (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_red">
                 <English>5.8 mm 30Rnd Tracer (Red) Mag</English>
                 <German>30 Schuss 5,8 mm Leuchtspur (Rot) Magazin</German>
                 <Russian>Магазин 30 патр. 5.8 мм трассирующих (Красный)</Russian>
+                <Italian>5.8 mm 30Colpi Traccianti (rossi) Caricatore</Italian>
                 <Czech>5.8 mm 30 ranný zásobník, stopovka (Červená)</Czech>
+                <Portuguese>Magazine 5.8 mm 30 balas tracejantes (vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_red_description">
                 <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
                 <German>Kaliber: 5,8x42 mm Leuchtspur - rot&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet in: CAR-95, CAR-95 GL</German>
                 <Russian>Калибр: 5.8x42 мм, трассер Красный&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: CAR-95, CAR-95 GL</Russian>
+                <Italian>Calibro: 5.8x42 mm Traccianti - Rossi&lt;br /&gt;Colpi: 30&lt;br /&gt;Usati in: CAR-95, CAR-95 GL</Italian>
                 <Czech>Kalibr: 5.8×42 mm Stopovka - Červená&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: CAR-95, CAR-95 GL</Czech>
+                <Portuguese>Calibre: 5.8x42 mm Tracejante - Vermelho&lt;br/&gt;Balas:30&lt;br/&gt;Usado em CAR-95, CAR-95 GL</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_yellow">
                 <English>5.8 mm 30Rnd Tracer (Yellow) Mag</English>
                 <German>30 Schuss 5,8 mm Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 30 патр. 5.8 мм трассирующих (Желтый)</Russian>
+                <Italian>5.8 mm 30Colpi Traccianti (Giallo) Caricatore</Italian>
                 <Czech>5.8 mm 30 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Portuguese>Magazine 5.8 mm 30 balas tracejante (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_580x42_Mag_tracer_yellow_description">
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</English>
                 <German>Kaliber: 5,8x42 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 30&lt;br /&gt;Verwendet in: CAR-95, CAR-95 GL</German>
                 <Russian>Калибр: 5.8x42 мм, трассер Желтый&lt;br /&gt;Патронов: 30&lt;br /&gt;Используется в: CAR-95, CAR-95 GL</Russian>
+                <Italian>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: CAR-95, CAR-95 GL</Italian>
                 <Czech>Kalibr: 5.8×42 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: CAR-95, CAR-95 GL</Czech>
+                <Portuguese>Calibre: 5.8x42 mm Tracejante - Amarelo &lt;br/&gt;Balas: 30&lt;br/&gt;Usado em: CAR-95, CAR-95 GL</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_red">
                 <English>5.8 mm 100Rnd Reload Tracer (Red) Mag</English>
                 <German>100 Schuss 5,8 mm Nachlade-Leuchtspur (Rot) Magazin</German>
                 <Russian>Магазин 100 патр. 5.8 мм с послед. трас. (Красный)</Russian>
+                <Italian>5,8 mm 100Colpi Ricarica Tracciante (rosso) Caricatore</Italian>
                 <Czech>5.8 mm 100 ranný zásobník, stopovka pro přebití (Červená)</Czech>
+                <Portuguese>Recarregar magazine 5.8 mm 100 balas tracejante (vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_yellow">
                 <English>5.8 mm 100Rnd Reload Tracer (Yellow) Mag</English>
                 <German>100 Schuss 5,8 mm Nachlade-Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 100 патр. 5.8 мм с послед. трас. (Желтый)</Russian>
+                <Italian>5.8 mm 100Colpi Ricarica Traccianti (gialli) Caricatore</Italian>
                 <Czech>5.8 mm 100 ranný zásobník, stopovka pro přebití (Žlutá)</Czech>
+                <Portuguese>Recarregar magazine 5.8 mm 100 balas tracejantes (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_red">
                 <English>5.8 mm 100Rnd Tracer (Red) Mag</English>
                 <German>100 Schuss 5,8 mm Leuchtspur (Rot) Magazin</German>
                 <Russian>Магазин 100 патр. 5.8 мм трассирующих (Красный)</Russian>
+                <Italian>5.8 mm 100Colpi Ricarica Traccianti (rossi) Caricatore</Italian>
                 <Czech>5.8 mm 100 ranný zásobník, stopovka (Červená)</Czech>
+                <Portuguese>Magazine 5.8 mm 100 balas tracejantes (vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_red_description">
                 <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
                 <German>Kaliber: 5,8x42 mm Leuchtspur - rot&lt;br /&gt;Schuss: 100&lt;br /&gt;Verwendet in: CAR-95-1</German>
                 <Russian>Калибр: 5.8x42 мм, трассер Красный&lt;br /&gt;Патронов: 100&lt;br /&gt;Используется в: CAR-95, CAR-95 GL</Russian>
+                <Italian>Calibro: 5.8x42 mm Tracciante - Rosso&lt;br /&gt;Colpi: 100&lt;br /&gt;Usati in: CAR-95-1</Italian>
                 <Czech>Kalibr: 5.8×42 mm Stopovka - Červená&lt;br /&gt;Nábojů: 100&lt;br /&gt;Použito v: CAR-95-1</Czech>
+                <Portuguese>Calibre: 5.8x42 mm Tracejante - Vermelho&lt;br/&gt;Balas:100&lt;br/&gt;Usado em CAR-95-1</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow">
                 <English>5.8 mm 100Rnd Tracer (Yellow) Mag</English>
                 <German>100 Schuss 5,8 mm Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 100 патр. 5.8 мм трассирующих (Желтый)</Russian>
+                <Italian>5.8mm 100Colpi Traccianti (gialli) Caricatore</Italian>
                 <Czech>5.8 mm 100 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Portuguese>Magazine 5.8 mm 100 balas tracejantes (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow_description">
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
                 <German>Kaliber: 5,8x42 mm Leuchtspur - gelb&lt;br /&gt;Schuss: 100&lt;br /&gt;Verwendet in: CAR-95-1</German>
                 <Russian>Калибр: 5.8x42 мм, трассер Желтый&lt;br /&gt;Патронов: 100&lt;br /&gt;Используется в: CAR-95, CAR-95 GL</Russian>
+                <Italian>Calibro: 5.8x42 mm Traccianti - Gialli&lt;br /&gt;Colpi: 100&lt;br /&gt;Usati in: CAR-95-1</Italian>
                 <Czech>Kalibr: 5.8×42 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 100&lt;br /&gt;Použito v: CAR-95-1</Czech>
+                <Portuguese>Calibre: 5.8x42 mm Tracejante - Amarelo&lt;br/&gt;Balas:100&lt;br/&gt;Usado em CAR-95-1</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_green">
                 <English>6.5mm 30Rnd Reload Tracer (Green) Mag</English>
                 <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Grün) Magazin</German>
                 <Russian>Магазин 30 патр. 6.5 мм с послед. трас. (Зеленый)</Russian>
+                <Italian>6.5mm 30Colpi Ricarica Traccianti(verdi) Caricatore</Italian>
                 <Czech>6.5 mm 30 ranný zásobník, stopovka pro přebití (Zelená)</Czech>
+                <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (verde)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
                 <German>Kaliber: 6.5x39 mm Nachlade-Leuchtspur - Grün&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Зеленый&lt;br /&gt;Патронов: 30&lt;br /&gt;Используется в: MX/C/M/SW/3GL</Russian>
+                <Italian>Calibro: 6.5x39 mm Traccianti - Verdi&lt;br /&gt;Colpi: 30&lt;br /&gt;Usati in: MX/C/M/SW/3GL</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: MX/C/M/SW/3GL</Czech>
+                <Portuguese>Calibre: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_yellow">
                 <English>6.5mm 30Rnd Reload Tracer (Yellow) Mag</English>
                 <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 30 патр. 6.5 мм с послед. трас. (Желтый)</Russian>
+                <Italian>6.5mm 30Colpi Ricarica Traccianti (Gialli) Caricatore</Italian>
                 <Czech>6.5 mm 30 ranný zásobník, stopovka pro přebití (Žlutá)</Czech>
+                <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
                 <German>Kaliber: 6.5x39 mm Nachlade-Leuchtspur - Gelb&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Желтый&lt;br /&gt;Патронов: 30&lt;br /&gt;Используется в: MX/C/M/SW/3GL</Russian>
+                <Italian>Calibro: 6.5x39 mm Tracciante - Giallo&lt;br /&gt;Colpi: 30&lt;br /&gt;Usati in: MX/C/M/SW/3GL</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: MX/C/M/SW/3GL</Czech>
+                <Portuguese>Calibre: 6.5x39 mm Tracejante - Amarelo&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_green">
                 <English>6.5mm 30Rnd Tracer (Green) Mag</English>
                 <German>30 Schuss 6.5mm Leuchtspur (Grün) Magazin</German>
                 <Russian>Магазин 30 патр. 6.5 мм трассирующих (Зеленый)</Russian>
+                <Italian>6.5mm 30Colpi Traccianti (Verdi) Caricatore</Italian>
                 <Czech>6.5 mm 30 ranný zásobník, stopovka (Zelená)</Czech>
+                <Portuguese>Magazine 6.5mm 30 balas tracejantes (verde)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Grün&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Зеленый&lt;br /&gt;Патронов: 30&lt;br /&gt;Используется в: MX/C/M/SW/3GL</Russian>
+                <Italian>Calibro: 6.5x39 mm traccianti - Verdi&lt;br /&gt;Colpi: 30&lt;br /&gt;Usati in: MX/C/M/SW/3GL</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: MX/C/M/SW/3GL</Czech>
+                <Portuguese>Calibre: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_yellow">
                 <English>6.5mm 30Rnd Tracer (Yellow) Mag</English>
                 <German>30 Schuss 6.5mm Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 30 патр. 6.5 мм трассирующих (Желтый)</Russian>
+                <Italian>6.5mm 30 Colpi Traccianti (Gialli) Caricatore</Italian>
                 <Czech>6.5 mm 30 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Portuguese>Magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 30&lt;br /&gt;Verwendet in: MX/C/M/SW/3GL</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Желтый&lt;br /&gt;Патронов: 30&lt;br /&gt;Используется в: MX/C/M/SW/3GL</Russian>
+                <Italian>Caliber: 6.5x39 mm Tracciante - Giallo&lt;br /&gt;Colpi: 30&lt;br /&gt;Usati in: MX/C/M/SW/3GL</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: MX/C/M/SW/3GL</Czech>
+                <Portuguese>Calibre: 6.5x39 mm Tracejante - Amarelo&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_green">
                 <English>6.5mm 100Rnd Mixed Mag (Green)</English>
                 <German>100 Schuss 6.5mm Magazin gemischt (grün)</German>
                 <Russian>Магазин 100 патр. 6.5 мм TE4 (Зеленый)</Russian>
+                <Italian>6.5mm 100Colpi Misti Caricatore (verdi)</Italian>
                 <Czech>6.5 mm 100 ranný zásobník, částečná stopovka (Zelená)</Czech>
+                <Portuguese>Magazine 6.5mm 100 balas misturadas (verde)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_yellow">
                 <English>6.5mm 100Rnd Mixed Mag (Yellow)</English>
                 <German>100 Schuss 6.5mm Magazin gemischt (gelb)</German>
                 <Russian>Магазин 100 патр. 6.5 мм TE4 (Желтый)</Russian>
+                <Italian>6.5mm 100Colpi Misti Caricatore (gialli)</Italian>
                 <Czech>6.5 mm 100 ranný zásobník, částečná stopovka (Žlutá)</Czech>
+                <Portuguese>Magazine 6.5mm 100 balas misturadas (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_green">
                 <English>6.5mm 100Rnd Mag Tracer (Green)</English>
                 <German>100 Schuss 6.5mm Magazin Leuchtspur (Grün)</German>
                 <Russian>Магазин 100 патр. 6.5 мм трассирующих (Зеленый)</Russian>
+                <Italian>6.5mm 100Colpi Caricatore Tracciante (verde)</Italian>
                 <Czech>6.5 mm 100 ranný zásobník, stopovka (Zelená)</Czech>
+                <Portuguese>Magazine 6.5mm 100 balas tracejantes</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Grün&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Зеленый&lt;br /&gt;Патронов: 100&lt;br /&gt;Используется в: MX SW</Russian>
+                <Italian>Calibro: 6.5x39 mm Traccianti - Verdi&lt;br /&gt;Colpi: 100&lt;br /&gt;Usati in: MX SW</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 100&lt;br /&gt;Použito v: MX SW</Czech>
+                <Portuguese>Calibre: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas: 100&lt;br/&gt;Usado em: MX SW</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_yellow">
                 <English>6.5mm 100Rnd Mag Tracer (Yellow)</English>
                 <German>100 Schuss 6.5mm Magazin Leuchtspur (Gelb)</German>
                 <Russian>Магазин 100 патр. 6.5 мм трассирующих (Желтый)</Russian>
+                <Italian>6.5mm 100Colpi Caricatore Traccianti (giallo)</Italian>
                 <Czech>6.5 mm 100 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Portuguese>Magazine 6.5mm 100 balas tracejantes (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_65x39_mx_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX SW</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 100&lt;br /&gt;Verwendet in: MX SW</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Желтый&lt;br /&gt;Патронов: 100&lt;br /&gt;Используется в: MX SW</Russian>
+                <Italian>Calibro: 6.5x39 mm Traccianti -  Gialli&lt;br /&gt;Colpi: 100&lt;br /&gt;Usati in: MX SW</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 100&lt;br /&gt;Použito v: MX SW</Czech>
+                <Portuguese>Calibre: 6.5x39 mm Tracejante - Amarelo&lt;br/&gt;Balas: 100&lt;br/&gt;Usado em: MX SW</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_red">
                 <English>6.5mm 30Rnd Reload Tracer (Red) Mag</English>
                 <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Rot) Magazin</German>
                 <Russian>Магазин 30 патр. 6.5 мм с послед. трас. (Красный)</Russian>
+                <Italian>6.5mm 30Colpi Ricarica Traccianti (Rossi) Caricatore </Italian>
                 <Czech>6.5 mm 30 ranný zásobník, stopovka pro přebití (Červená)</Czech>
+                <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_yellow">
                 <English>6.5mm 30Rnd Reload Tracer (Yellow) Mag</English>
                 <German>30 Schuss 6.5mm Nachlade-Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 30 патр. 6.5 мм с послед. трас. (Желтый)</Russian>
+                <Italian>6.5mm 30Colpi Ricarica Traccianti (gialli) Caricatore</Italian>
                 <Czech>6.5 mm 30 ranný zásobník, stopovka pro přebití (Žlutá)</Czech>
+                <Portuguese>Recarregar magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_red">
                 <English>6.5mm 30Rnd Tracer (Red) Mag</English>
                 <German>30 Schuss 6.5mm Leuchtspur (Rot) Magazin</German>
                 <Russian>Магазин 30 патр. 6.5 мм трассирующих (Красный)</Russian>
+                <Italian>6.5mm 30Colpi Traccianti (rossi) Caricatori</Italian>
                 <Czech>6.5 mm 30 ranný zásobník, stopovka (Červená)</Czech>
+                <Portuguese>Magazine 6.5mm 30 balas tracejantes (vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_red_description">
                 <English>Caliber: 6.5x39 mm Tracer (Red) - Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba, Type 115</English>
                 <German>Kaliber: 6,5x39mm Leuchtspur (Rot) ‒ hülsenlos&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba, Typ 115</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Красный безгильзовый&lt;br /&gt;Патронов: 30&lt;br /&gt;Используется в:  Katiba, Type 115</Russian>
+                <Italian>Calibro: 6.5x39 mm Traccianti (Rossi) - Senza Bossolo&lt;br /&gt;Colpi: 30&lt;br /&gt;Usati in: Katiba, Type 115</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Červená - Beznábojnicová&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: Katiba, Type 115</Czech>
+                <Portuguese>Calibre: 6.5x39 mm Tracejante (Vermelho) - Sem Cartucho&lt;br/&gt;Balas: 30&lt;br/&gt;Usado em: Katiba, Type 115</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_yellow">
                 <English>6.5mm 30Rnd Tracer (Yellow) Mag</English>
                 <German>30 Schuss 6.5mm Leuchtspur (Gelb) Magazin</German>
                 <Russian>Магазин 30 патр. 6.5 мм трассирующих (Желтый)</Russian>
+                <Italian>6.5mm 30 Colpi Traccianti (gialli) Caricatore</Italian>
                 <Czech>6.5 mm 30 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Portuguese>Magazine 6.5mm 30 balas tracejantes (amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_katiba_tracer_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer (Yellow) - Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba, Type 115</English>
                 <German>Kaliber: 6,5x39mm Leuchtspur (Rot) ‒ hülsenlos&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Katiba, Typ 115</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Желтый безгильзовый&lt;br /&gt;Патронов: 30&lt;br /&gt;Используется в:  Katiba, Type 115</Russian>
+                <Italian>Calibro: 6.5x39 mm Traccianti (Gialli) - Senza Bossolo&lt;br /&gt;Colpi: 30&lt;br /&gt;Usati in: Katiba, Type 115</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Žlutá - Beznábojnicová&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: Katiba, Type 115</Czech>
+                <Portuguese>Caliber: 6.5x39 mm Tracejante (Vermelho) - Sem Cartucho&lt;br/&gt;Balas: 30&lt;br/&gt;Usado em: Katiba, Type 115</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green">
                 <English>6.5 mm 200Rnd Belt Case Mixed (Green)</English>
                 <German>6,5 mm 200-Schuss-Gurtkiste Gemischt (grün)</German>
                 <Russian>Короб 200 патр. 6.5 мм TE4 (Зеленый)</Russian>
+                <Italian>6.5mm 200Colpi Caricatore esteso Misti (Verdi)</Italian>
                 <Czech>6.5 mm 200 ranný pás, částečná stopovka (Zelená)</Czech>
+                <Portuguese>Caixa de Cinto 6.5 mm 200 Balas Misturados (Verde) </Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_green_description">
                 <English>Caliber: 6.5x39 mm Mixed - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
                 <German>Kaliber: 6.5x39 mm Gemischt - Grün&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
                 <Russian>Калибр: 6.5x39 мм, трассер каждый 4 Зеленый&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: Mk200</Russian>
+                <Italian>Calibro: 6.5x39 mm Misti - Verdi&lt;br /&gt;Colpi: 200&lt;br /&gt;Usati in: Mk200</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: Mk200</Czech>
+                <Portuguese>Calibre: 6.5x39 mm Misturado - Verde&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_red">
                 <English>6.5 mm 200Rnd Belt Case Mixed (Red)</English>
                 <German>6,5 mm 200-Schuss-Gurtkiste Gemischt (grün)</German>
                 <Russian>Короб 200 патр. 6.5 мм TE4 (Красный)</Russian>
+                <Italian>6.5 mm 200Colpi Caritore maggiorato Misti (rossi)</Italian>
                 <Czech>6.5 mm 200 ranný pás, částečná stopovka (Červená)</Czech>
+                <Portuguese>Caixa de Cinto 6.5 mm 200 balas misturadas (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_red_description">
                 <English>Caliber: 6.5x39 mm Mixed - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
                 <German>Kaliber: 6.5x39 mm Mixed - Rot&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
                 <Russian>Калибр: 6.5x39 мм, трассер каждый 4 Красный&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: Mk200</Russian>
+                <Italian>Calibro: 6.5x39 mm Misti - Rossi&lt;br /&gt;Colpi: 200&lt;br /&gt;Usati in: Mk200</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Červená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: Mk200</Czech>
+                <Portuguese>Caliber: 6.5x39 mm Misturado - Vermelho&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_green">
                 <English>6.5 mm 200Rnd Belt Case Tracer (Green)</English>
                 <German>6,5 mm 200-Schuss-Gurtkiste Leuchtspur (grün)</German>
                 <Russian>Короб 200 патр. 6.5 мм трассирующих (Зеленый)</Russian>
+                <Italian>6.5 mm 200Colpi Caricatore maggiorato Traccianti (verdi)</Italian>
                 <Czech>6.5 mm 200 ranný pás, částečná stopovka (Zelená)</Czech>
+                <Portuguese>Caixa de Cinto 6;5 mm 200 balas tracejantes (Verde)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_green_description">
                 <English>Caliber: 6.5x39 mm Tracer - Green&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Grün&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Зеленый&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: Mk200</Russian>
+                <Italian>Calibri: 6.5x39 mm Traccianti - Verdi&lt;br /&gt;Colpi: 200&lt;br /&gt;Usati In: Mk200</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Zelená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: Mk200</Czech>
+                <Polish>Kaliber: 6.5x39 mm Smugowa - Zielona&lt;br /&gt;Sztuk: 200&lt;br /&gt;Używana w: Mk200</Polish>
+                <Portuguese>Caliber: 6.5x39 mm Tracejante - Verde&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red">
                 <English>6.5 mm 200Rnd Belt Case Tracer (Red)</English>
                 <German>6,5 mm 200-Schuss-Gurtkiste Leuchtspur (rot)</German>
                 <Russian>Короб 200 патр. 6.5 мм трассирующих (Красный)</Russian>
+                <Italian>6.5 mm 200Colpi Caricatore Maggiorato Tracciante (rossi)</Italian>
                 <Czech>6.5 mm 200 ranný pás, stopovka (Červená)</Czech>
+                <Polish>6.5 mm Magazynek pudełkowy 200szt. Smugowa (Czerwona)</Polish>
+                <Portuguese>Caixa de Cinto 6.5 mm 200 Balas Tracejantes (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_200Rnd_65x39_cased_Box_tracer_red_description">
                 <English>Caliber: 6.5x39 mm Tracer - Red&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Mk200</English>
                 <German>Kaliber: 6.5x39 mm Leuchtspur - Rot&lt;br /&gt;Patronen: 200&lt;br /&gt;Verwendet in: Mk200</German>
                 <Russian>Калибр: 6.5x39 мм, трассер Красный&lt;br /&gt;Патронов: 200&lt;br /&gt;Используется в: Mk200</Russian>
+                <Italian>Calibro: 6.5x39 mm Traccianti - Rossi&lt;br /&gt;Colpi: 200&lt;br /&gt;Usati in: Mk200</Italian>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Červená&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použito v: Mk200</Czech>
+                <Polish>Kaliber: 6.5x39 mm Smugowa - Czerwona&lt;br /&gt;Sztuk: 200&lt;br /&gt;Używana w: Mk200</Polish>
+                <Portuguese>Caliber: 6.5x39 mm Tracejante - Vermelho&lt;br/&gt;Balas: 200&lt;br/&gt;Usado em: Mk200</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green">
                 <English>7.62 mm 20Rnd Tracer (Green) Mag</English>
                 <German>7,62 mm 20-Schuss-Magazin Leuchtspur (Grün)</German>
                 <Russian>Магазин 20 патр. 7.62 мм трассирующих (Зеленый)</Russian>
+                <Italian>7.62 mm 20Colpi Traccianti (verdi) Caricatore</Italian>
                 <Czech>7.62 mm 20 ranný zásobník, stopovka (Zelená)</Czech>
+                <Polish>7.62 mm Magazynek 20szt. Smugowa (Zielona)</Polish>
+                <Portuguese>Magazine 7.62 mm 20 Balas Tracejantes (verdes)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_green_description">
                 <English>Caliber: 7.62x51 mm NATO Tracer - Green&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
                 <German>Kaliber: 7,62x51 mm NATO Leuchtspur - grün&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</German>
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Зеленый&lt;br /&gt;Патронов: 20&lt;br /&gt;Используется в:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Russian>
+                <Italian>Calibro: 7.62x51 mm NATO Traccianti - Verdi&lt;br /&gt;Colpi: 20&lt;br /&gt;Usati in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Italian>
                 <Czech>Kalibr: 7.62×51 mm NATO Stopovka - Zelená&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použito v: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Czech>
+                <Polish>Kaliber: 7.62x51 mm NATO Smugowa - Zielona&lt;br /&gt;Sztuk: 20&lt;br /&gt;Używana w:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Polish>
+                <Portuguese>Calibre: 7.62x51 mm NATO Tracejante - Verde&lt;br/&gt;Balas: 20&lt;br/&gt;Usado em: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow">
                 <English>7.62 mm 20Rnd Tracer (Yellow) Mag</English>
                 <German>7,62 mm 20-Schuss-Magazin Leuchtspur (Gelb)</German>
                 <Russian>Магазин 20 патр. 7.62 мм трассирующих (Желтый)</Russian>
+                <Italian>7.62 mm 20Colpi Traccianti (Gialli) Caricatori</Italian>
                 <Czech>7.62 mm 20 ranný zásobník, stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek 20szt. Smugowa (Żółta)</Polish>
+                <Portuguese>Magazine 7.62 mm 20 Balas Tracejantes (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_20Rnd_762x51_Mag_Tracer_yellow_description">
                 <English>Caliber: 7.62x51 mm NATO Tracer - Yellow&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</English>
                 <German>Kaliber: 7,62x51 mm NATO Leuchtspur - gelb&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</German>
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Желтый&lt;br /&gt;Патронов: 20&lt;br /&gt;Используется в:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Russian>
+                <Italian>Calibro: 7.62x51 mm NATO Traccianti - Gialli&lt;br /&gt;Colpi: 20&lt;br /&gt;Usati in: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Italian>
                 <Czech>Kalibr: 7.62×51 mm NATO Stopovka - Žlutá&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použito v: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Czech>
+                <Polish>Kaliber: 7.62x51 mm NATO Smugowa - Żółta&lt;br /&gt;Sztuk: 20&lt;br /&gt;Używana w:  Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Polish>
+                <Portuguese>Calibre: 7.62x51 mm NATO Tracejante - Amarelo&lt;br/&gt;Balas: 20&lt;br/&gt;Usado em: Mk18 ABR, Mk-I EMR, Mk14, SPAR-17</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_red">
                 <English>7.62mm 150Rnd Box Mixed (Red)</English>
                 <German>7.62mm 150 Schuss Kiste Gemischt (rot)</German>
                 <Russian>Короб 150 патр. 7.62 мм TE4 (Красный)</Russian>
+                <Italian>7.62mm 150Colpi Caricatore Maggiorato Misti (rossi)</Italian>
                 <Czech>7.62 mm 150 ranný pás, částečná stopovka (Červená)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Mieszana (Czerwona)</Polish>
+                <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_yellow">
                 <English>7.62mm 150Rnd Box Mixed (Yellow)</English>
                 <German>7.62mm 150 Schuss Kiste Gemischt (gelb)</German>
                 <Russian>Короб 150 патр. 7.62 мм TE4 (Желтый)</Russian>
+                <Italian>7.62mm 150Colpi Caricatore Maggiorato Misti (Gialli)</Italian>
                 <Czech>7.62 mm 150 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Mieszana (Żółta)</Polish>
+                <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red">
                 <English>7.62mm 150Rnd Box Tracer (Red)</English>
                 <German>7.62mm 150 Schuss Kiste Leuchtspur (rot)</German>
                 <Russian>Короб 150 патр. 7.62 мм трассирующих (Красный)</Russian>
+                <Italian>7.62mm 150Colpi Caricatore Maggiorato (Rossi)</Italian>
                 <Czech>7.62 mm 150 ranný pás, stopovka (Červená)</Czech>
+                <Polish>7.62mm Magazynek pudełkowy 150szt. Smugowa (Czerwona)</Polish>
+                <Portuguese>Caixa 7.62mm 150 Balas Misturadas (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_red_description">
                 <English>Caliber: 7.62x54 mm Tracer - Red&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
                 <German>Kaliber: 7.62x54 mm Leuchtspur - Rot&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Красный&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: Zafir</Russian>
+                <Italian>Calibro: 7.62x54 mm Traccianti - Rossi&lt;br /&gt;Colpi: 150&lt;br /&gt;Usati in: Zafir</Italian>
                 <Czech>Kalibr: 7.62×54 mm Stopovka - Červená&lt;br /&gt;Nábojů: 150&lt;br /&gt;Použito v: Zafir</Czech>
+                <Polish>Kaliber: 7.62x54 mm Smugowa - Czerwona&lt;br /&gt;Sztuk: 150&lt;br /&gt;Używana w: Zafir</Polish>
+                <Portuguese>Calibre: 7.62x54 mm Tracejante - Vermelho&lt;br/&gt;Balas: 150&lt;br/&gt;Usado em:Zafir</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow">
                 <English>7.62mm 150Rnd Box Tracer (Yellow)</English>
                 <German>7.62mm 150 Schuss Kiste Leuchtspur (Rot)</German>
                 <Russian>Короб 150 патр. 7.62 мм трассирующих (Желтый)</Russian>
+                <Italian>7.62mm 150Colpi Caricatore Maggiorato Traccianti (gialli)</Italian>
                 <Czech>7.62 mm 150 ranný pás, stopovka (Žlutá)</Czech>
+                <Polish>7.62 mm Magazynek pudełkowy 150szt. Smugowa (Żółta)</Polish>
+                <Portuguese>Caixa 7.62mm 150 Balas Tracejantes (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_762x54_Box_Tracer_yellow_description">
                 <English>Caliber: 7.62x54 mm Tracer - Yellow&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Zafir</English>
                 <German>Kaliber: 7.62x54 mm Leuchtspur - Gelb&lt;br /&gt;Patronen: 150&lt;br /&gt;Verwendet in: Zafir</German>
                 <Russian>Калибр: 7.62x51 mm NATO, трассер Желтый&lt;br /&gt;Патронов: 150&lt;br /&gt;Используется в: Zafir</Russian>
+                <Italian>Calibro: 7.62x54 mm Traccianti - Gialli&lt;br /&gt;Colpi: 150&lt;br /&gt;Usati in: Zafir</Italian>
                 <Czech>Kalibr: 7.62×54 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 150&lt;br /&gt;Použito v: Zafir</Czech>
+                <Polish>Kaliber: 7.62x54 mm Smugowa - Żółta&lt;br /&gt;Sztuk: 150&lt;br /&gt;Używana w: Zafir</Polish>
+                <Portuguese>Calibre: 7.62x54 mm Tracejante - Amarelo&lt;br/&gt;Balas: 150&lt;br/&gt;Usado em:Zafir</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_yellow">
                 <English>9.3mm 150Rnd Belt Mixed (Yellow)</English>
                 <German>9.3mm 150 Schuss Gurt gemischt (Gelb)</German>
                 <Russian>Лента 150 патр. 9.3 мм TE4 (Желтый)</Russian>
+                <Italian>9.3mm 150Colpi Caricatore Maggiorato (Giallo)</Italian>
                 <Czech>9.3 mm 150 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>9.3 mm Taśma 150szt. Mieszana (Żółta)</Polish>
+                <Portuguese>Cinto 9.3mm 150 Balas Misturadas (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_150Rnd_93x64_Mag_red">
                 <English>9.3mm 150Rnd Belt Mixed (Red)</English>
                 <German>9.3mm 150 Schuss Gurt gemischt (Rot)</German>
                 <Russian>Лента 150 патр. 9.3 мм TE4 (Красный)</Russian>
+                <Italian>9.3mm 150Colpi Caricatore Maggiorato (Rosso)</Italian>
                 <Czech>9.3 mm 150 ranný pás, částečná stopovka (Červená)</Czech>
+                <Polish>9.3 mm Taśma 150szt. Mieszana (Czerwona)</Polish>
+                <Portuguese>Cinto 9.3mm 150 Balas Misturadas (Vermelho)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_yellow">
                 <English>.338 NM 130Rnd Belt Mixed (Yellow)</English>
                 <German>.338 NM 130 Schuss Gurt gemischt (gelb)</German>
                 <Russian>Лента 130 патр. .338 NM TE4 (Желтый)</Russian>
+                <Italian>.338 NM 130Colpi Caricatore a nastro Misto (giallo)</Italian>
                 <Czech>.338 NM 130 ranný pás, částečná stopovka (Žlutá)</Czech>
+                <Polish>.338 NM Taśma 130szt. Mieszana (Żółta)</Polish>
+                <Portuguese>Cinto .338 NM Misturado (Amarelo)</Portuguese>
             </Key>
             <Key ID="STR_ACE_Tracers_130Rnd_338_Mag_green">
                 <English>.338 NM 130Rnd Belt Mixed (Green)</English>
                 <German>.338 NM 130 Schuss Gurt gemischt (grün)</German>
                 <Russian>Лента 130 патр. .338 NM TE4 (Зеленый)</Russian>
+                <Italian>.338 NM 130Colpi Caricatore a nastro Misto (Verde)</Italian>
                 <Czech>.338 NM 130 ranný pás, částečná stopovka (Zelená)</Czech>
+                <Polish>.338 NM Taśma 130szt. Mieszana (Zielona)</Polish>
+                <Portuguese>Cinto .338 NM 130 Balas Misturados (Verde)</Portuguese>
             </Key>
         </Container>
     </Package>

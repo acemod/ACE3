@@ -16,6 +16,7 @@
             <Korean>소염기 (6.5 mm)</Korean>
             <Chinesesimp>消光器 (6.5 mm)</Chinesesimp>
             <Chinese>消光器 (6.5 毫米)</Chinese>
+            <Turkish>Flash Suppressor (6.5 mm)</Turkish>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_B">
             <English>Flash Suppressor (7.62 mm)</English>
@@ -32,6 +33,7 @@
             <Korean>소염기 (7.62 mm)</Korean>
             <Chinesesimp>消光器 (7.62 mm)</Chinesesimp>
             <Chinese>消光器 (7.62 毫米)</Chinese>
+            <Turkish>Flash Suppressor (7.62 mm)</Turkish>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_L">
             <English>Flash Suppressor (5.56 mm)</English>
@@ -48,6 +50,7 @@
             <Korean>소염기 (5.56 mm)</Korean>
             <Chinesesimp>消光器 (5.56 mm)</Chinesesimp>
             <Chinese>消光器 (5.56 毫米)</Chinese>
+            <Turkish>Flash Suppressor (5.56 mm)</Turkish>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_01">
             <English>Flash Suppressor (.45 ACP)</English>
@@ -64,6 +67,7 @@
             <Korean>소염기 (.45 ACP)</Korean>
             <Chinesesimp>消光器 (.45 ACP)</Chinesesimp>
             <Chinese>消光器 (.45 ACP)</Chinese>
+            <Turkish>Flash Suppressor (.45 ACP)</Turkish>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_02">
             <English>Flash Suppressor (9 mm)</English>
@@ -80,6 +84,7 @@
             <Korean>소염기 (9 mm)</Korean>
             <Chinesesimp>消光器 (9 mm)</Chinesesimp>
             <Chinese>消光器 (9 毫米)</Chinese>
+            <Turkish>Flash Suppressor (9 mm)</Turkish>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_338">
             <English>Flash Suppressor (.338)</English>
@@ -96,6 +101,7 @@
             <Korean>소염기 (.338)</Korean>
             <Chinesesimp>消光器 (.338)</Chinesesimp>
             <Chinese>消光器 (.338)</Chinese>
+            <Turkish>Flash Suppressor (.338)</Turkish>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_93mmg">
             <English>Flash Suppressor (9.3 mm)</English>
@@ -112,6 +118,7 @@
             <Korean>소염기 (9.3 mm)</Korean>
             <Chinesesimp>消光器 (9.3 mm)</Chinesesimp>
             <Chinese>消光器 (9.3 毫米)</Chinese>
+            <Turkish>Flash Suppressor (9.3 mm)</Turkish>
         </Key>
     </Package>
 </Project>
