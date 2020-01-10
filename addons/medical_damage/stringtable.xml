@@ -41,7 +41,7 @@
             <German>Schwelle für kritischen KI-Schaden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
-            <English>Sets the amount of damage an AI unit can receive before going unconscious or dying when "Sum of Trauma" is enabled.</English>
+            <English>Sets the amount of damage an AI unit can receive before going unconscious (or dying when "Sum of Trauma" is enabled).</English>
             <Japanese>AI が気絶になる前に受けられるダメージ量を決定できます。</Japanese>
             <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance.</French>
             <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
@@ -49,7 +49,7 @@
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
             <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
-            <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności oraz śmierci gdy "Suma urazów" jest włączona.</Polish>
+            <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności (oraz śmierci gdy "Suma urazów" jest włączona).</Polish>
             <Spanish>Fijar la cantidad de daño que la IA puede recivir antes de caer inconsciente</Spanish>
             <German>Legt die Höhe des Schadens fest, den eine KI-Einheit erhalten kann, bevor sie ohnmächtig wird (oder stirbt, wenn "Summe aller Traumata" aktiviert ist).</German>
         </Key>
