@@ -251,7 +251,7 @@
             <Korean>환자 내리기</Korean>
             <Chinesesimp>将伤者背出</Chinesesimp>
             <Chinese>將傷者背出</Chinese>
-            <Turkish>Kişiyi İndir</Turkish>
+            <Turkish>Kişiyi Indir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -314,7 +314,7 @@
             <Korean>활동 로그</Korean>
             <Chinesesimp>医疗纪录</Chinesesimp>
             <Chinese>醫療紀錄</Chinese>
-            <Turkish>AKTİVİTE GÜNLÜĞÜ</Turkish>
+            <Turkish>AKTIVITE GÜNLÜĞÜ</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_QUICK_VIEW">
             <English>QUICK VIEW</English>
@@ -379,7 +379,7 @@
             <Korean>환자 검사하기</Korean>
             <Chinesesimp>检查伤者</Chinesesimp>
             <Chinese>檢查傷者</Chinese>
-            <Turkish>Hastayı İncele</Turkish>
+            <Turkish>Hastayı Incele</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BandageFractures">
             <English>Bandage / Fractures</English>

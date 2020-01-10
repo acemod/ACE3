@@ -33,7 +33,7 @@
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
             <Chinesesimp>这个模块允许您设定名字和显示范围等设定</Chinesesimp>
             <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
-            <Turkish>Bu modül, İsim Etiketleri ayarlarını ve aralığını özelleştirmenizi sağlar.</Turkish>
+            <Turkish>Bu modül, Isim Etiketleri ayarlarını ve aralığını özelleştirmenizi sağlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNames">
             <English>Show Names</English>
@@ -50,7 +50,7 @@
             <Korean>이름 표시</Korean>
             <Chinesesimp>显示名字</Chinesesimp>
             <Chinese>顯示名稱</Chinese>
-            <Turkish>İsimleri Göster</Turkish>
+            <Turkish>Isimleri Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames">
             <English>Show player names</English>

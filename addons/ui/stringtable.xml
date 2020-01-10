@@ -170,7 +170,7 @@
             <Chinesesimp>武器名称</Chinesesimp>
             <Chinese>武器名稱</Chinese>
             <Spanish>Nombre del arma</Spanish>
-            <Turkish>Silah İsmi</Turkish>
+            <Turkish>Silah Ismi</Turkish>
         </Key>
         <Key ID="STR_ACE_UI_WeaponNameBackground">
             <English>Weapon Name Background</English>
@@ -359,7 +359,7 @@
             <Chinesesimp>炮手武器名称</Chinesesimp>
             <Chinese>砲手武器名稱</Chinese>
             <Czech>Jméno zbraně vozidla</Czech>
-            <Turkish>Nişancı Silah İsmi</Turkish>
+            <Turkish>Nişancı Silah Ismi</Turkish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
@@ -505,7 +505,7 @@
             <Chinesesimp>载具名称</Chinesesimp>
             <Chinese>載具名稱</Chinese>
             <Spanish>Nombre del vehiculo</Spanish>
-            <Turkish>Araç İsmi</Turkish>
+            <Turkish>Araç Ismi</Turkish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleNameBackground">
             <English>Vehicle Name Background</English>

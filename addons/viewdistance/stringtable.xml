@@ -133,7 +133,7 @@
             <Korean>클라이언트 시야 (보병)</Korean>
             <Chinesesimp>客户端视野距离 (步行)</Chinesesimp>
             <Chinese>客戶端視野距離 (步行)</Chinese>
-            <Turkish>Kİşilerin Görüş Uzaklığı Mesafesi (Yerde)</Turkish>
+            <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Yerde)</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_Description">
             <English>Changes in game view distance when the player is on foot.</English>
@@ -167,7 +167,7 @@
             <Korean>클라이언트 시야 (차량)</Korean>
             <Chinesesimp>客户端视野距离 (地面载具)</Chinesesimp>
             <Chinese>客戶端視野距離 (地面載具)</Chinese>
-            <Turkish>Kİşilerin Görüş Uzaklığı Mesafesi (Kara Araçların da)</Turkish>
+            <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Kara Araçların da)</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_Description">
             <English>Changes in game view distance when the player is in a land vehicle.</English>
@@ -201,7 +201,7 @@
             <Korean>클라이언트 시야 (항공기)</Korean>
             <Chinesesimp>客户端视野距离 (空中载具)</Chinesesimp>
             <Chinese>客戶端視野距離 (空中載具)</Chinese>
-            <Turkish>Kİşilerin Görüş Uzaklığı Mesafesi (Hava Araçların da)</Turkish>
+            <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Hava Araçların da)</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_Description">
             <English>Changes in game view distance when the player is in an air vehicle.</English>

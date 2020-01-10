@@ -16,7 +16,7 @@
             <Korean>레이저 지시기</Korean>
             <Chinesesimp>雷射指示器</Chinesesimp>
             <Chinese>雷射指示器</Chinese>
-            <Turkish>Lazer İşaretleyici</Turkish>
+            <Turkish>Lazer Işaretleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_red">
             <English>Laser Pointer (red)</English>
@@ -33,7 +33,7 @@
             <Korean>레이저 지시기 (빨강)</Korean>
             <Chinesesimp>雷射指示器 (红色)</Chinesesimp>
             <Chinese>雷射指示器 (紅色)</Chinese>
-            <Turkish>Lazer İşaretleyici (Kırmızı)</Turkish>
+            <Turkish>Lazer Işaretleyici (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_green">
             <English>Laser Pointer (green)</English>
@@ -50,7 +50,7 @@
             <Korean>레이저 지시기 (초록)</Korean>
             <Chinesesimp>雷射指示器 (绿色)</Chinesesimp>
             <Chinese>雷射指示器 (綠色)</Chinese>
-            <Turkish>Lazer İşaretleyici (Yeşil)</Turkish>
+            <Turkish>Lazer Işaretleyici (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Description">
             <English>Emits visible light. </English>

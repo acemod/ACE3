@@ -306,7 +306,7 @@
             <Korean>완전 수리 활성화</Korean>
             <Chinesesimp>允许完整维修</Chinesesimp>
             <Chinese>允許完整維修</Chinese>
-            <Turkish>Tam Onarıma İzin Ver</Turkish>
+            <Turkish>Tam Onarıma Izin Ver</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
             <English>Who can perform a full repair on a vehicle?</English>
