@@ -345,19 +345,19 @@
             <Polish>Kontroluje, czy apteczka osobista powinna być zużyta po użyciu.</Polish>
             <German>Kontrolliert, ob ein Erste-Hilfe-Set nach der Benutzung verbraucht werden soll.</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
-            <English>Enables the use of PAKs to heal oneself.</English>
-            <Italian>Abilita l'utilizzo del kit di pronto soccorso su se stessi.</Italian>
-            <German>Erlaubt die Benutzung des Erste-Hilfe-Sets, um sich selbst zu heilen.</German>
-            <Chinese>啟用個人急救包能對自己使用。</Chinese>
-            <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
             <Italian>Utilizzo del kit di pronto soccorso su se stessi</Italian>
             <German>Erste-Hilfe-Set Selbstanwendung</German>
             <Chinese>自我使用急救包</Chinese>
             <French>Utilisation de la trousse sanitaire sur soi-même</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
+            <English>Enables the use of PAKs to heal oneself.</English>
+            <Italian>Abilita l'utilizzo del kit di pronto soccorso su se stessi.</Italian>
+            <German>Erlaubt die Benutzung des Erste-Hilfe-Sets, um sich selbst zu heilen.</German>
+            <Chinese>啟用個人急救包能對自己使用。</Chinese>
+            <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
