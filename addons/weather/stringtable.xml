@@ -165,7 +165,6 @@
             <Japanese>気温を確認</Japanese>
             <Polish>Sprawdź temperaturę powietrza</Polish>
             <French>Vérifier la température</French>
-            <Polish>Sprawdz Temperature Powietrza</Polish>
             <Portuguese>Checar a temperatura do ar </Portuguese>
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
@@ -176,7 +175,6 @@
             <Japanese>気温の確認動作を表示</Japanese>
             <Polish>Pokaż akcje sprawdzającą temperaturę powietrza</Polish>
             <French>Afficher l'interaction "Vérifier la température"</French>
-            <Polish>Pokaż Akcję Sprawdz Temperature Powietrza</Polish>
             <Portuguese>Mostrar a ação "Checar a temperatura do ar"</Portuguese>
         </Key>
     </Package>
