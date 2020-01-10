@@ -40,7 +40,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.\nWhen disabled, the CPR action will only be shown when performing CPR is appropriate.\nThe actions this setting enables are needed to determine whether a person is unconscious or in cardiac arrest.</English>
             <Japanese>有効化すると通常の診断動作に代わり、心拍や血圧測定、反応を確認できます。</Japanese>
-            <French>Permet un diagnostic avancé, en permettant la vérification du pouls, de la pression sanguine, ainsi que la réponse du patient aux traitements.</French>
+            <French>Active le diagnostic avancé, permettant la vérification du pouls, de la pression sanguine, ainsi que la réponse du patient aux traitements.\nSi l'option est désactivée, l'action de RCP ne sera visible que si elle est effectivement appropriée.\nLe diagnostic avancé est indispensable pour différencier une personne inconsciente d'une personne en arrêt cardiaque.</French>
             <Russian>Включает действия «Проверить пульс», «Проверить давление» и «Проверить реакцию» вместо общего действия «Диагностика».</Russian>
             <Portuguese>Ativa as opções de Verificar Pulso, Verificar Pressão Sanguínea e Verificar Resposta, ao invés do diagnóstico geral.</Portuguese>
             <Chinese>啟用檢查脈搏、血壓以及病患反應的動作而非一般的診斷動作。\n當停用時，CPR只會在需要時出現。\n當這個選項啟用時必須診斷病患是否無意識或者心搏停止。</Chinese>
@@ -88,7 +88,7 @@
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
             <Russian>Устанавливает расширенное использование лекарств</Russian>
             <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンとアトロピンが利用可能になります。</Japanese>
-            <French>Permet une manipulation étendue et plus appronfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine et d'atropine.</French>
+            <French>Permet une manipulation étendue et plus approfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine.</French>
             <Portuguese>Ativa a manipulação avançada de medicações. Também permite o uso de Adenosina e Atropina.</Portuguese>
             <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
             <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
@@ -131,8 +131,10 @@
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
             <English>Controls whether fully bandaged body parts are healed.</English>
             <Japanese>全ての傷に対して包帯を巻いた部分を治癒するかどうかを決定します。</Japanese>
+            <French>Définit s'il faut guérir les parties du corps entièrement bandées.</French>
             <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
             <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
+            <Chinese>控制說當傷口處理好的時候是否直接痊癒。</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -347,11 +349,15 @@
             <English>Enables the use of PAKs to heal oneself.</English>
             <Italian>Abilita l'utilizzo del kit di pronto soccorso su se stessi.</Italian>
             <German>Erlaubt die Benutzung des Erste-Hilfe-Sets, um sich selbst zu heilen.</German>
+            <Chinese>啟用個人急救包能對自己使用。</Chinese>
+            <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
             <Italian>Utilizzo del kit di pronto soccorso su se stessi</Italian>
             <German>Erste-Hilfe-Set Selbstanwendung</German>
+            <Chinese>自我使用急救包</Chinese>
+            <French>Utilisation de la trousse sanitaire sur soi-même</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -546,7 +552,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
             <English>Enables the creation of litter upon treatment.</English>
             <Japanese>治療後に廃棄物の生成を有効化します。</Japanese>
-            <French>Permet de laisser des détritus (emballages, pansements usagés...) suite à un traitement.</French>
+            <French>Active la généreration de détritus (emballages, pansements usagés...) suite à un traitement.</French>
             <Russian>Разрешает создание медицинского мусора при лечении.</Russian>
             <Portuguese>Permite a criação de lixo médico durante o tratamento.</Portuguese>
             <Chinese>啟用醫療後剩下的醫療用廢棄物。</Chinese>
@@ -594,7 +600,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
             <Japanese>廃棄物の寿命を秒で決定できます。-1 で永遠です。</Japanese>
-            <French>Définit la durée d'affichage des détritus.</French>
+            <French>Définit la durée d'affichage des détritus, en secondes. Durée illimitée : -1.</French>
             <Russian>Управляет временем жизни объектов мусора в секундах. -1 означает Навсегда.</Russian>
             <Portuguese>Controla o tempo de vida de objetos de lixo criados em segundos. -1 é para sempre.</Portuguese>
             <Chinese>控制醫療用廢棄物的時長，以秒為單位。設定為-1則是永不刪除。</Chinese>
