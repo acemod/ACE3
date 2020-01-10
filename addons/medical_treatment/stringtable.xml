@@ -503,7 +503,7 @@
             <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
             <Czech>Umožňuje aplikovat IV transfuze na sama sebe.</Czech>
-            <Polish>Pozwala przetoczyć IV samemu sobie</Polish>
+            <Polish>Pozwala przetoczyć płyny IV samemu sobie</Polish>
             <Italian>Abilita la trasfusione in endovena su se stessi.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
@@ -2632,7 +2632,7 @@
             <English>Delayed</English>
             <Spanish>Retrasado</Spanish>
             <Russian>Срочная помощь</Russian>
-            <Polish>ŻÓŁTY</Polish>
+            <Polish>Pomoc Odroczona</Polish>
             <French>Peut attendre</French>
             <German>Verzögert</German>
             <Czech>Odložitelný</Czech>
@@ -2648,7 +2648,7 @@
             <English>Immediate</English>
             <Spanish>Inmediato</Spanish>
             <Russian>Неотложная помощь</Russian>
-            <Polish>CZERWONY</Polish>
+            <Polish>Pomoc Natychmiastowa</Polish>
             <French>Urgent</French>
             <German>Sofort</German>
             <Czech>Okamžitý</Czech>
@@ -2664,7 +2664,7 @@
             <English>Deceased</English>
             <Spanish>Fallecido</Spanish>
             <Russian>Труп</Russian>
-            <Polish>CZARNY</Polish>
+            <Polish>Denat</Polish>
             <French>Décédé</French>
             <German>Verstorben</German>
             <Czech>Mrtvý</Czech>
@@ -2680,7 +2680,7 @@
             <English>None</English>
             <Spanish>Ninguno</Spanish>
             <Russian>Отсутствует</Russian>
-            <Polish>NIE SKLASYFIKOWANY</Polish>
+            <Polish>Brak klasyfikacji</Polish>
             <French>Pas de fiche</French>
             <German>Keine</German>
             <Czech>Nic</Czech>
