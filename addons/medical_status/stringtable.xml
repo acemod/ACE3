@@ -12,6 +12,7 @@
             <Italian>Stato</Italian>
             <Czech>Stav</Czech>
             <Spanish>Estado</Spanish>
+            <Turkish>Durum</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
@@ -28,6 +29,7 @@
             <Korean>출혈 계수</Korean>
             <Chinesesimp>流血系数</Chinesesimp>
             <Chinese>流血係數</Chinese>
+            <Turkish>Kanama Katsayısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_Description">
             <English>Coefficient for controlling the bleeding speed.</English>
@@ -44,6 +46,7 @@
             <Korean>출혈의 속도를 계수만큼 변경합니다</Korean>
             <Chinesesimp>修改流血速度</Chinesesimp>
             <Chinese>修改流血速度</Chinese>
+            <Turkish>Kanama hızını kontrol etme katsayısı.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_DisplayName">
             <English>Pain Coefficient</English>
@@ -60,6 +63,7 @@
             <Korean>고통 계수</Korean>
             <Chinesesimp>疼痛系数</Chinesesimp>
             <Chinese>疼痛係數</Chinese>
+            <Turkish>Ağrı Katsayısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_Description">
             <English>Coefficient for controlling the intensity of pain adjustments.</English>

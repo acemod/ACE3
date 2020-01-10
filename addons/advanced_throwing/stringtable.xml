@@ -43,6 +43,7 @@
             <Chinesesimp>启用进阶投掷</Chinesesimp>
             <Portuguese>Ativa o Arremesso Avançado</Portuguese>
             <Czech>Povolit pokročilé házení</Czech>
+            <Turkish>Gelişmiş Fırlatmayı Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>
@@ -57,6 +58,7 @@
             <Chinesesimp>启用进阶投掷系统</Chinesesimp>
             <Portuguese>Ativa o sistema de Arremesso Avançado.</Portuguese>
             <Czech>Umožňuje pokročilý systém házení.</Czech>
+            <Turkish>Gelişmiş fırlatma sistemini etkinleştirir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
@@ -71,6 +73,7 @@
             <Chinesesimp>显示投掷轨道</Chinesesimp>
             <Portuguese>Mostrar o Arco de Arremesso</Portuguese>
             <Czech>Zobrazit oblouk vrhu </Czech>
+            <Turkish>Atış Yayını Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_Description">
             <English>Enables visualization of the throw arc (where throwable will fly).</English>

@@ -229,6 +229,7 @@
             <Chinese>[ACE] 繩索補充箱</Chinese>
             <Italian>[ACE] Cassa Corde</Italian>
             <Czech>[ACE] Bedna s lany</Czech>
+            <Turkish>[ACE] Halat Sandığı</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_descriptionShort">
             <English>Used to do deploy ropes from a compatibile helicopter</English>

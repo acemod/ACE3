@@ -63,6 +63,7 @@
             <Chinese>停用探測器</Chinese>
             <Portuguese>Desativar</Portuguese>
             <Spanish>Desactivar</Spanish>
+            <Turkish>Aktif Değil</Turkish>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>

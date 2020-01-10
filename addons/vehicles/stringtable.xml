@@ -78,6 +78,7 @@
             <Czech>Zvyš rychlostní limit</Czech>
             <Chinese>增加速限</Chinese>
             <French>Augmenter la vitesse limite</French>
+            <Turkish>Hız Limitini Arttır</Turkish>
         </Key>
         <Key ID="STR_ACE_Vehicles_DecreaseSpeedLimit">
             <English>Decrease Speed Limit</English>
@@ -91,6 +92,7 @@
             <Czech>Sniž rychlostní limit</Czech>
             <Chinese>降低速限</Chinese>
             <French>Diminuer la vitesse limite</French>
+            <Turkish>Hız Limitini Azalt</Turkish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningName">
             <English>Disable automatic engine shut-off</English>
@@ -103,6 +105,7 @@
             <Chinese>關閉引擎自動熄火</Chinese>
             <French>Désactiver l'arrêt automatique du moteur</French>
             <Italian>Disattivare lo spegnimento automatico del motore</Italian>
+            <Turkish>Otomatik motor durdurmayı devre dışı bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
             <English>Prevent the automatic shut-off of the engine when exiting vehicles.</English>
@@ -115,6 +118,7 @@
             <Chinese>避免離開載具時自動熄火。</Chinese>
             <Italian>Impedire lo spegnimento automatico del motore quando si esce dai veicoli.</Italian>
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
+            <Turkish>Araçtan inerken motorun otomatik kapatılmasını engelleyin.</Turkish>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>

@@ -243,6 +243,7 @@
             <Korean>완전수리</Korean>
             <Chinesesimp>完整维修</Chinesesimp>
             <Chinese>完整維修</Chinese>
+            <Turkish>Tam Onarım</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_fullyRepairing">
             <English>Repairing Vehicle...</English>
@@ -274,6 +275,7 @@
             <Korean>완전수리 구역</Korean>
             <Chinesesimp>完整维修地点</Chinesesimp>
             <Chinese>完整維修地點</Chinese>
+            <Turkish>Tam Onarım Konumu</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation_description">
             <English>At what locations can a vehicle be fully repaired?</English>
@@ -304,6 +306,7 @@
             <Korean>완전 수리 활성화</Korean>
             <Chinesesimp>允许完整维修</Chinesesimp>
             <Chinese>允許完整維修</Chinese>
+            <Turkish>Tam Onarıma İzin Ver</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
             <English>Who can perform a full repair on a vehicle?</English>
@@ -319,6 +322,7 @@
             <Korean>누가 완전 수리를 할 수 있습니까?</Korean>
             <Chinesesimp>谁可以完整维修载具?</Chinesesimp>
             <Chinese>誰可以完整維修載具?</Chinese>
+            <Turkish>Kimler araçta tam onarım yapabilir?</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_name">
             <English>Add Spare Parts</English>
@@ -334,6 +338,7 @@
             <Korean>예비 부품 더하기</Korean>
             <Chinesesimp>添加备件</Chinesesimp>
             <Chinese>添加備件</Chinese>
+            <Turkish>Yedek Parça Ekle</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_description">
             <English>Add spare parts to vehicles (requires Cargo component)?</English>
@@ -573,6 +578,7 @@
             <Korean>왼쪽 수평안정판</Korean>
             <Chinesesimp>左侧悬挂稳定</Chinesesimp>
             <Chinese>左側懸掛穩定</Chinese>
+            <Turkish>Sol Yatay Sabitleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
             <English>Right Horizontal Stabilizer</English>
@@ -588,6 +594,7 @@
             <Korean>오른쪽 수평안정판</Korean>
             <Chinesesimp>右侧悬挂稳定</Chinesesimp>
             <Chinese>右側懸掛穩定</Chinese>
+            <Turkish>Sağ Yatay Sabitleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
             <English>Vertical Stabilizer</English>
@@ -603,6 +610,7 @@
             <Korean>수직 안정판</Korean>
             <Chinesesimp>垂直稳定</Chinesesimp>
             <Chinese>垂直穩定</Chinese>
+            <Turkish>Dikey Sabitleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
             <English>Fuel Tank</English>
@@ -1485,6 +1493,7 @@
             <Korean>없음</Korean>
             <Chinesesimp>无</Chinesesimp>
             <Chinese>無</Chinese>
+            <Turkish>Hiçbiri</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_engineer">
             <English>Engineer</English>
@@ -1500,6 +1509,7 @@
             <Korean>정비공</Korean>
             <Chinesesimp>工兵</Chinesesimp>
             <Chinese>工兵</Chinese>
+            <Turkish>Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
             <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
@@ -1516,6 +1526,7 @@
             <French>Ing. avancé</French>
             <Czech>Pokročilý Inženýr</Czech>
             <Spanish>Ingeniero avanzado</Spanish>
+            <Turkish>Gelişmiş Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
@@ -1756,6 +1767,7 @@
             <Korean>목록</Korean>
             <Chinesesimp>名单</Chinesesimp>
             <Chinese>名單</Chinese>
+            <Turkish>Liste</Turkish>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
