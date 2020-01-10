@@ -312,6 +312,7 @@
             <French>Aérocordage</French>
             <Chinese>快速繩降</Chinese>
             <Japanese>ファスト ロープ</Japanese>
+            <Polish>Zjazd na linach</Polish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
