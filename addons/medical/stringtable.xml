@@ -19,7 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
-            <German>Wahrscheinlichkeit aufzuwachen</German>
+            <German>Wahrscheinlichkeit um aufzuwachen</German>
             <Japanese>気絶から覚醒の可能性</Japanese>
             <Russian>Шанс очнуться при потере сознания</Russian>
             <French>Chance de reprendre connaissance</French>
@@ -32,7 +32,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
-            <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht ()Überprüfung alle 15 Sekunden)</German>
+            <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht (Überprüfung alle 15 Sekunden)</German>
             <Japanese>容体が安定しているユニットが気絶する確率を決定できます。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
             <French>La probabilité qu'une unité en état stable puisse reprendre conscience spontanément (état vérifié toutes les 15 secondes).</French>
@@ -44,15 +44,7 @@
             <Spanish>La probabilidad de que una unidad estabilizada recupere la conciencia y se levante (se comprueba cada 15 segundos)</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
-            <English>Epinephrine Increases Wake Up Chance</English>
-            <Japanese>アドレナリンで覚醒確率上昇</Japanese>
-            <Chinese>腎上腺素甦醒機率增加</Chinese>
-            <French>L'épinéphrine augmente les chances de réveil</French>
-            <Italian>L'epinefrina aumenta la possibilità di rialzarsi</Italian>
-            <Czech>Epinefrin zvyšuje šanci na probuzení</Czech>
-            <Polish>Szansa na wybudzenie po użyciu Epinefryny</Polish>
-            <Portuguese>Epinefrina Aumenta a chance de acordar</Portuguese>
-            <Spanish>Epinefrina, aumenta la posibilidad de despertar</Spanish>
+            <English>Epinephrine Wake Up Chance Boost</English>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -64,6 +56,7 @@
             <Polish>Zwiększa częstotliwość spontanicznych wybudzeń, gdy pacjent ma epinefrynę w swoim organizmie. </Polish>
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
+            <German>Erhöht wie oft Aufwachprüfungen passieren, wenn ein Patient Epinephrin im Blutkreislauf hat.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -76,6 +69,7 @@
             <Czech>Kulhání</Czech>
             <Polish>Kuśtykanie</Polish>
             <Spanish>Cojera</Spanish>
+            <German>Humpeln</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -87,6 +81,7 @@
             <Polish>Kontroluje, czy otwarte lub zabandażowane rany powodują utykanie jednostki.</Polish>
             <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
+            <German>Stellt ein, ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -99,6 +94,7 @@
             <Czech>Kulhat s otevřeným zraněním</Czech>
             <Polish>Kuśtykanie przy otwartych ranach</Polish>
             <Spanish>Cojera en heridas abiertas</Spanish>
+            <German>Humpeln bei offenen Wunden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -111,6 +107,7 @@
             <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
             <Polish>Kuśtykanie przy otwartych ranach lub zabandażowanych ranach</Polish>
             <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
+            <German>Humpeln bei offenen oder bandagierten Wunden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -123,6 +120,7 @@
             <Czech>Zlomeniny</Czech>
             <Polish>Złamania</Polish>
             <Spanish>Fracturas</Spanish>
+            <German>Brüche</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
@@ -134,6 +132,7 @@
             <Polish>Kontroluje efekt użycia szyn do leczenia złamań.\n Po wyłączeniu obrażenia nie powodują złamań.</Polish>
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
+            <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -146,6 +145,7 @@
             <Czech>Dlahy kompletně léčí zlomeniny</Czech>
             <Polish>Szyny leczą zupełnie złamania</Polish>
             <Spanish>Férulas sanan completamente las fracturas</Spanish>
+            <German>Schienen heilen Knochenbrüche vollständig</German>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -158,6 +158,7 @@
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
             <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
+            <German>Schienen heilen, aber ermöglichen kein Sprinten</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -265,7 +266,7 @@
             <Portuguese>Selecione quais unidades o sistema médico avançado será habilitado</Portuguese>
             <French>Sélectionne pour quelles unités les soins avancés seront actifs.</French>
             <Hungarian>Kiválasztható, mely egységek számára legyen engedélyezve a fejlett orvosi rendszer</Hungarian>
-            <Italian>Seleziona per quali unità verrà abilitato i sistema medico avanzato</Italian>
+            <Italian>Seleziona per quali unità verrà abilitato il sistema medico avanzato</Italian>
             <Japanese>選択されたユニットが、アドバンスド医療が使えるようになります</Japanese>
             <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시요.</Korean>
             <Chinesesimp>选择进阶医疗系统影响的对象</Chinesesimp>

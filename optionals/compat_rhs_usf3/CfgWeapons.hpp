@@ -156,6 +156,13 @@ class CfgWeapons {
             };
         };
     };
+    // ACOG is a sniper scope for some reason, but we don't want scope adjust
+    class rhsusf_acc_ACOG: rhsusf_acc_sniper_base {
+        ACE_ScopeAdjust_Vertical[] = { 0, 0 };
+        ACE_ScopeAdjust_Horizontal[] = { 0, 0 };
+        ACE_ScopeAdjust_VerticalIncrement = 0;
+        ACE_ScopeAdjust_HorizontalIncrement = 0;
+    };
     class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
         ACE_ScopeHeightAboveRail = 2.62567;
     };
