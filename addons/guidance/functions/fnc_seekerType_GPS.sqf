@@ -19,26 +19,30 @@
  */
 
 params ["_projectile", "_shooter","_extractedInfo"];
-_targetInfo params ["_seekerType","_attackProfile","_target","_targetPos","_targetVector","_launchPos", "_miscSeeker", "_miscProfile"];
+_extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
+_miscManeuvering params ["_degreesPerSecond", "_lastRunTime"];
+_miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
 
 _miscSeeker params ["_active","_canUpdate","_gpsTargetPos"];
+_seekerTargetPos = _targetPos;
+if(!(isNil "_gpsTargetPos")) then {
+    _seekerTargetPos = _gpsTargetPos;
+};
 
 if(!_active) exitWith {_gpsTargetPos};
 
 if(_canUpdate) then {
-    private _gpsTargetPos = _shooter getVariable [QGVAR(GPSPos), [0,0,0]];
     if(!(_gpsTargetPos isEqualTo [0,0,0])) then {
-        _targetPos = _gpsTargetPos;
-    } else {
-        _gpsTargetPos = _targetPos;
+        _seekerTargetPos = _gpsTargetPos;
     };
     
     _miscSeeker set [2, _gpsTargetPos];
     _targetInfo set [6, _miscSeeker];
-    _targetInfo set [3, _gpsTargetPos];
+    _targetInfo set [2, _gpsTargetPos];
 };
 
-_targetInfo set [4, (getPosASL _projectile) vectorFromTo _gpsTargetPos];
+_targetInfo set [4, (getPosASL _projectile) vectorFromTo _seekerTargetPos];
 
-//_gpsTargetPos;
-_targetPos;
+
+
+_seekerTargetPos;

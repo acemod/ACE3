@@ -69,6 +69,7 @@ class CfgAmmo {
 
     class G_40mm_HE;
     class G_40mm_DEBUG: G_40mm_HE {
+        timeToLive = 60;
         class ADDON {
             enabled = 1;
 
@@ -96,6 +97,96 @@ class CfgAmmo {
             attackProfiles[] = {"INDIRECT"};
         };
     };
-    
+
+    class ammo_Missile_Cruise_01;
+    class ammo_Missile_Cruise_DEBUG: ammo_Missile_Cruise_01 {
+        class ADDON {
+            enabled = 1;
+
+            minDeflection = 0.0005;      // Minium flap deflection for guidance
+            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
+            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
+
+            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+            // Guidance type for munitions
+            defaultSeekerType = "GPS";
+            seekerTypes[] = {"GPS"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 1;
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "SSBM";
+            attackProfiles[] = {"SSBM"};
+        };
+    };
+
+    class MissileBase;
+    class M_Titan_AA: MissileBase {
+        class ADDON {
+            enabled = 1;
+
+            minDeflection = 0.0005;      // Minium flap deflection for guidance
+            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
+            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
+
+            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+            // Guidance type for munitions
+            defaultSeekerType = "IR";
+            seekerTypes[] = {"IR"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "AAM";
+            attackProfiles[] = {"AAM"};
+        };
+    };
+
+    class Missile_AGM_02_F : MissileBase {
+        class ADDON {
+            enabled = 1;
+
+            minDeflection = 0.0005;      // Minium flap deflection for guidance
+            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
+            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
+
+            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+            // Guidance type for munitions
+            defaultSeekerType = "GPS";
+            seekerTypes[] = {"GPS"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 5000;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "AGM";
+            attackProfiles[] = {"AGM"};
+        };
+    };
+
+
 };
 

@@ -9,4 +9,10 @@ class CfgWeapons {
         class Single1;
         magazines[] += {"8Rnd_82mm_Mo_DEBUG"};
     };
+    
+    class weapon_VLSBase;
+    class weapon_VLS_01: weapon_VLSBase {
+        magazines[] += {"magazine_Missiles_Cruise_DEBUG"};
+    };
+  
 };

@@ -34,6 +34,23 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_SSBM);
     };
+    
+    class AAM {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(attackProfile_AAM);
+    };
+    
+    class AGM {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(attackProfile_LIN);
+    };
+    
 };
 
 class GVAR(SeekerTypes) {
@@ -60,4 +77,13 @@ class GVAR(SeekerTypes) {
 
         functionName = QFUNC(seekerType_SACLOS);
     };
+    
+    class IR {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(seekerType_IR);
+    };
+    
 };

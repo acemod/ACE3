@@ -17,29 +17,36 @@
  * Public: No
  */
 
-params ["_projectile", "_shooter","_extractedInfo", "_seekerTargetPos"];
-_extractedInfo params ["_seekerType","_attackProfile","_target","_targetPos","_targetVector","_launchPos", "_miscSeeker", "_miscProfile"];
-_miscProfile params ["_thrust", "_thrustTime", "_launchTime"];
+params ["_projectile", "_shooter","_extractedInfo","_seekerTargetPos"];
+_extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
+_miscManeuvering params ["_degreesPerSecond", "_lastRunTime"];
+_miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
+
+_miscProfile params ["_distanceToTarget", "_pastMidpoint"];
 
 _projPos = getPosASL _projectile;
 
-//parabolic form = y = (x-h)^2 + k
-_k = (_projPos select 2) - (_targetPos select 2);
+if((time - _launchTime) < 20) exitWith {
+(getPosASL _projectile) vectorAdd [0,0,10];
+};
 
+if(isNil "_distanceToTarget") then {
+    _distanceToTarget = sqrt(  ((_projPos select 0) - (_seekerTargetPos select 0))^2 + ((_projPos select 1) - (_seekerTargetPos select 1))^2);
+    _miscProfile set [0, _distanceToTarget];
+};
+if(isNil "_pastMidpoint") then {
+    _pastMidpoint = false;
+    _miscProfile set [1, _pastMidpoint];
+};
 
+_dirToTarget = ((_seekerTargetPos select 0) - (_projPos select 0)) atan2 ((_seekerTargetPos select 1) - (_projPos select 1));
 
-_speed = vectorMagnitude (velocity _projectile));
-_timeLeft = ((_thrustTime - (time - _launchTime)) min 0);
-_finalSpeed = (_speed + ( _timeLeft * _thrust );
+if( (sqrt(((_projPos select 0) - (_seekerTargetPos select 0))^2 + ((_projPos select 1) - (_seekerTargetPos select 1))^2)) < (_distanceToTarget/2) ) then {
+    _miscProfile set [1, true];
+};
 
-
-
-
-_finalDistance = (_timeLeft * _speed) + (_thrust * (_timeLeft)^2)/2;
-
-_finalPos = _projPos + ((vectorNormalized (velocity _projectile)) * _finalDistance);
-
-
-
+if(!(_pastMidpoint)) exitWith {
+    (getPosASL _projectile) vectorAdd [sin(_dirToTarget)*cos(45),cos(_dirToTarget)*cos(45),sin(45)];
+};
 
 _seekerTargetPos;

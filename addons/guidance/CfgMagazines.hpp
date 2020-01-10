@@ -21,4 +21,11 @@ class CfgMagazines {
         displayName = "DEBUG";
         displayNameShort = "DEBUG";
     };
+    
+    class magazine_Missiles_Cruise_01_x18;
+    class magazine_Missiles_Cruise_DEBUG: magazine_Missiles_Cruise_01_x18 {
+        ammo = "ammo_Missile_Cruise_DEBUG";
+        displayName = "DEBUG";
+        displayNameShort = "DEBUG";
+    };
 };

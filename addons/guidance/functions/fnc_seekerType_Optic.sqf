@@ -16,8 +16,10 @@
  * Public: No
  */
 
-params ["_projectile", "_seekerType","_targetInfo"];
-_targetInfo params ["_target","_targetPos","_targetVector","_launchPos"];
+params ["_projectile", "_shooter","_extractedInfo"];
+_extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
+_miscManeuvering params ["_degreesPerSecond", "_lastRunTime"];
+_miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
 
 private _inc = 2;
 private _incSpacing = 0.4;

@@ -17,12 +17,13 @@
  * Public: No
  */
 params ["_projectile", "_shooter","_extractedInfo"];
-_extractedInfo params ["_seekerType","_attackProfile","_target","_targetPos","_targetVector","_launchPos", "_miscSeeker", "_miscProfile"];
+_extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
+_miscManeuvering params ["_degreesPerSecond", "_lastRunTime"];
+_miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
+
 _miscSeeker params ["_active","_laserInfo"];
 _laserInfo params ["_laserCode", "_wavelengthMin", "_wavelengthMax"];
-
 if(!_active) exitWith {[0,0,0]};
-
 _projPos = getPosASL _projectile;
 
 _seekerAngle = 10;
@@ -35,8 +36,8 @@ _extractedInfo set [3, _laserResult select 0];
 _extractedInfo set [2,_laserResult select 1];
 _extractedInfo set [4, _projPos vectorFromTo (_laserResult select 0)];
 
-if(((_laserResult select 0) isEqualTo [0,0,0]) && (isNull _laserResult select 1)) then {
+if(isNull (_laserResult select 1)) exitWith {
     _extractedInfo set [4, vectorNormalized (velocity _projectile)];
+    [0,0,0];
 };
-
 _laserResult select 0;

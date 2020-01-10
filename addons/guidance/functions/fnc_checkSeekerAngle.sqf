@@ -7,7 +7,8 @@
  * Arguments:
  * 0: Seeker <OBJECT>
  * 1: Target PosASL <ARRAY>
- * 2: Max Angle (degrees) <NUMBER>
+ * 2: Search Vector <ARRAY>
+ * 3: Max Angle (degrees) <NUMBER>
  *
  * Return Value:
  * Can See <BOOL>
@@ -18,16 +19,13 @@
  * Public: No
  */
 
-params ["_seeker", "_targetPos", "_seekerMaxAngle"];
+params ["_pos", "_targetPos", "_direction", "_maxAngle"];
 
-private _sensorPos = getPosASL _seeker;
+_vectorFromTo = _pos vectorFromTo _targetPos;
 
-private _testPointVector = vectorNormalized (_targetPos vectorDiff _sensorPos);
-private _testDotProduct = (vectorNormalized (velocity _seeker)) vectorDotProduct _testPointVector;
+_dotProd = _vectorFromTo vectorDotProduct (vectorNormalized _direction);
 
-TRACE_2("fov",acos _testDotProduct,_seekerMaxAngle);
-
-if (_testDotProduct < (cos _seekerMaxAngle)) exitWith {
+if (_dotProd < (cos _maxAngle)) exitWith {
     false
 };
 

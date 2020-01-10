@@ -16,7 +16,10 @@
  * Public: No
  */
 params ["_projectile", "_shooter","_extractedInfo"];
-_extractedInfo params ["_seekerType","_attackProfile","_target","_targetPos","_targetVector","_launchPos", "_miscSeeker", "_miscProfile"];
+_extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
+_miscManeuvering params ["_degreesPerSecond", "_lastRunTime"];
+_miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
+
 _miscSeeker params ["_active"];
 if (!active) exitWith {[0,0,0]};
 
