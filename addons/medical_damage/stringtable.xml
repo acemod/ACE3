@@ -15,7 +15,7 @@
             <German>Schwelle für kritischen Spielerschaden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
-            <English>Sets the amount of damage a player can receive before going unconscious (or dying if "Sum of Trauma" is enabled).</English>
+            <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
             <Japanese>プレイヤーが気絶になる前に受けられるダメージ量を決定できます。</Japanese>
             <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance.</French>
             <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
