@@ -5,13 +5,13 @@
  * Unit must be local and not inside a vehicle or attached to another object.
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Weapon Holder
  *
  * Example:
- * player call ACE_hitreactions_fnc_throwWeapon
+ * player call ace_hitreactions_fnc_throwWeapon
  *
  * Public: No
  */
@@ -20,6 +20,7 @@
 #define THROW_TORQUE 0.2
 
 params ["_unit"];
+
 private _weapon = currentWeapon _unit;
 if (!isNull objectParent _unit || _weapon isEqualTo "") exitWith {objNull};
 
