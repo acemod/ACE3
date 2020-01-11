@@ -7,10 +7,11 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common","ace_disposable"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"BaerMitUmlaut"};
+        authors[] = {"BaerMitUmlaut", "Brostrom.A|Evul"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgWeapons.hpp"
+#include "CfgMagazines.hpp"
