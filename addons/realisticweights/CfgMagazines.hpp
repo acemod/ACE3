@@ -25,6 +25,6 @@ class CfgMagazines {
         mass = 11.85;
     };
     class MiniGrenade: CA_Magazine {
-        mass = 2.02;
+        mass = 3;
     };
 };
