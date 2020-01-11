@@ -507,7 +507,7 @@
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
             <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
             <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
-            <Spanish>Comprueba todos los complementos, no solo los de ACE</Spanish>
+            <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -531,7 +531,7 @@
             <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
             <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
             <Japanese>許可するアドオンを定義します。</Japanese>
-            <Spanish>Define una lista de complementos permitidos independientemente</Spanish>
+            <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -674,7 +674,7 @@
             <Portuguese>Luz da lanterna/laser da arma persistente</Portuguese>
             <French>Rémanence du pointeur laser/de la lampe torche</French>
             <Czech>Perzistentní laser/baterka na zbrani</Czech>
-            <Spanish>Punto Laser/Linterna persistente en arma</Spanish>
+            <Spanish>Punto láser/Linterna persistente en arma</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -689,7 +689,7 @@
             <Portuguese>Ativa a luz da arma ao trocar de arma, entrar/sair de um veículo. Caso tenha sido acesa anteriormente.</Portuguese>
             <French>Si le pointeur laser/la lampe torche est allumé(e), cette option permet de le/la réallumer automatiquement après un changement d'arme, ou après une entrée/sortie d'un véhicule.</French>
             <Czech>Pokud jsou zaplé, zapíná laser/baterku po přepnutí zbraně nebo po nástupu/výstupu z vozidla.</Czech>
-            <Spanish>Habilite la luz de la pistola después del cambio de arma o la entrada / salida del vehículo si estaba habilitado</Spanish>
+            <Spanish>Habilita la luz en el arma después de cambiarla o tras la entrada/salida de un vehículo si estaba préviamente habilitada</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -1304,7 +1304,7 @@
             <Portuguese>Permite diminuir volume da música</Portuguese>
             <French>Permission d'abaisser la musique</French>
             <Czech>Povolit snížení hlasitosti hudby</Czech>
-            <Spanish>Permitir apagar música</Spanish>
+            <Spanish>Permitir reducir el volumen de la música</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1319,7 +1319,7 @@
             <Portuguese>Permite que Scripts do ACE diminuam o volume da música.</Portuguese>
             <French>Autorise les scripts ACE à baisser le volume de la musique.</French>
             <Czech>Povolit ACE skriptům snížit hlasitost hudby</Czech>
-            <Spanish>Permitir a los scripts ACE apagar la música</Spanish>
+            <Spanish>Permitir a los scripts de ACE reducir el volumen la música</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1388,7 +1388,7 @@
             <Portuguese>Mostra a ação no menu de auto-interação</Portuguese>
             <Japanese>セルフ インタラクションに動作を表示</Japanese>
             <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
-            <Spanish>Mostrar la accion en el menú de interacción propio</Spanish>
+            <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
         </Key>
     </Package>
 </Project>

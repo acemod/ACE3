@@ -21,7 +21,7 @@
             <German>Rüstet kompatible Helikopter mit einem Fast Rope Insertion Extraction System aus.</German>
             <Polish>Wyposaża kompatybilne helikoptery w zestaw Fast Rope Insertion Extraction System.</Polish>
             <French>Équipe les hélicoptères compatibles avec un FRIES (Fast Rope Insertion Extraction System).</French>
-            <Spanish>Equipar helicoptero compatible con un Sistema de Inserción Extracción Cuerda Rápida.</Spanish>
+            <Spanish>Equipar helicoptero compatible con un Sistema de Inserción/Extracción Rápida por Cuerda.</Spanish>
             <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
@@ -36,7 +36,7 @@
             <German>Bereite "Fast Roping"-System vor</German>
             <Polish>Przygotuj system zjazdu na linach</Polish>
             <French>Préparer le système d'aérocordage</French>
-            <Spanish>Preparar el sistema Cuerda Rápida</Spanish>
+            <Spanish>Preparar el sistema de Cuerda Rápida</Spanish>
             <Italian>Prepara le corde</Italian>
             <Czech>Připravit systém slaňování</Czech>
             <Portuguese>Prepara sistema de descida rápida</Portuguese>
@@ -129,7 +129,7 @@
             <German>Rüstet den ausgewählten Helicopter mit einem Fast Rope Insertion Extraction System aus</German>
             <Polish>Wyposaża wybrany helikopter w zestaw Fast Rope Insertion Extraction System</Polish>
             <French>Équipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System (système d'aérocordage).</French>
-            <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción Extracción Cuerda Rápida</Spanish>
+            <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción/Extracción Rápida por Cuerda</Spanish>
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
             <Portuguese>Equipa um helicóptero selecionado com um sistema de Fast Rope Insertion Extraction System</Portuguese>
@@ -165,7 +165,7 @@
             <Italian>Dispiegamento corde 12m</Italian>
             <Czech>Připravit 12m lana</Czech>
             <Turkish>12m halat sal</Turkish>
-            <Spanish>Desplegar cuertas de 12m</Spanish>
+            <Spanish>Desplegar cuerdas de 12m</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
             <English>Deploy 15m ropes</English>
@@ -261,7 +261,7 @@
             <Italian>Corda da 12.2 metri</Italian>
             <Czech>Lano 12.2 metrů</Czech>
             <Turkish>12.2 metre halat</Turkish>
-            <Spanish>Cuerda 12.2 metros</Spanish>
+            <Spanish>Cuerda de 12.2 metros</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_15_Display">
             <English>Rope 15.2 meters</English>
@@ -324,7 +324,7 @@
             <French>Aérocordage</French>
             <Chinese>快速繩降</Chinese>
             <Japanese>ファスト ロープ</Japanese>
-            <Spanish>Cuerdas rapidas</Spanish>
+            <Spanish>Cuerdas rápidas</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -337,7 +337,7 @@
             <Chinese>需要繩索來部屬</Chinese>
             <Italian>Richiede una corda per il dispigamento</Italian>
             <Czech>Požadovat předmět lana pro slaňování</Czech>
-            <Spanish>Requiere item cuerda para desplegar</Spanish>
+            <Spanish>Requiere una cuerda para desplegar</Spanish>
         </Key>
     </Package>
 </Project>

@@ -47,7 +47,7 @@
             <Chinese>將武器放置槍袋</Chinese>
             <Portuguese>Colocar arma na Bosla de Arma</Portuguese>
             <Turkish>Silahını silah çantasına koy</Turkish>
-            <Spanish>Poner arma en la funda</Spanish>
+            <Spanish>Poner el arma en la funda</Spanish>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
@@ -63,7 +63,7 @@
             <Chinese>將武器拿出槍袋</Chinese>
             <Portuguese>Retirar arma da Bolsa de Arma</Portuguese>
             <Turkish>Silahını silah çantasından çıkart</Turkish>
-            <Spanish>Sacar arma de la funda</Spanish>
+            <Spanish>Sacar el arma de la funda</Spanish>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>

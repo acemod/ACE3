@@ -25,7 +25,7 @@
             <Chinese>視線內半自動指令</Chinese>
             <French>Contrôle semi-automatique par contact visuel (SACLOS)</French>
             <Czech>Poloautomatický povelový systém dalkového navedení pro záměrné cíle (SACLOS)</Czech>
-            <Spanish>Comando semiautomático a la línea de visión</Spanish>
+            <Spanish>Control semi-automático por línea de visión</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description">
             <English>Wire-Guided Missile</English>
