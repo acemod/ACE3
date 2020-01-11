@@ -57,8 +57,12 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                if ((count _compatibleMags) > 0) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -95,8 +99,12 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                if ((count _compatibleMags) > 0) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -132,8 +140,12 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                if ((count _compatibleMags) > 0) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
