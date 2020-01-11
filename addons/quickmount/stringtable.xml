@@ -62,8 +62,10 @@
             <English>This option allows quick entry into the vehicle you are directly looking at.</English>
             <French>Cette option permet d'entrer rapidement dans les véhicules que vous regardez.</French>
             <Chinese>這個選項允許你能快速進入你直視的載具</Chinese>
+            <Polish>Ta opcja umożliwia szybkie wsiadanie do pojazdu na który patrzysz.</Polish>
             <Portuguese>Esta opção permite entrada rápida para o veículo que você está olhando</Portuguese>
             <Japanese>この機能により直接見ている車両へすぐさま搭乗できます。</Japanese>
+            <Italian>Questa opzione permette l'entrata rapida nel veicolo che si sta guardando.</Italian>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>

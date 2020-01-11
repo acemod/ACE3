@@ -7,6 +7,7 @@
             <Italian>Tavola balistica per artigliria </Italian>
             <Czech>Dělostřelecké tabulky střelby</Czech>
             <Japanese>火砲射程</Japanese>
+            <Polish>Tabela Strzelnicza</Polish>
             <French>Table de tir d'artillerie</French>
             <Portuguese>Tabela de Artilharia</Portuguese>
             <Spanish>Tabla de dsitancias de artillería</Spanish>
@@ -18,6 +19,7 @@
             <Italian>Tavola balistica universale per artiglieria</Italian>
             <Czech>Univerzální dělostřelecká tabulka střelby</Czech>
             <Japanese>汎用の火砲用射程表</Japanese>
+            <Polish>Uniwersalna Tabela Strzelnicza</Polish>
             <French>Table de tir universelle pour l'artillerie.</French>
             <Portuguese>Tabela de Artilharia Universal</Portuguese>
             <Spanish>Tabla de dsitancias universal de artillería</Spanish>
@@ -62,6 +64,7 @@
             <Italian>Computer artiglieria disattivato</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače</Czech>
             <Japanese>砲撃コンピュータ無効化</Japanese>
+            <Polish>Wyłączony Komputer Artyleryjski</Polish>
             <French>Désactiver l'ordinateur de tir</French>
             <Portuguese>Computador de Artilharia Desabilitado</Portuguese>
             <Spanish>Computador de artillería deshabilitado</Spanish>
@@ -73,6 +76,7 @@
             <Italian>Disattiva il computer artiglieria vanilla</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače základní hry</Czech>
             <Japanese>ゲームの砲撃コンピュータを無効化します。</Japanese>
+            <Polish>Wyłącza komputer artyleryjski wprowadzony w vanili</Polish>
             <French>Désactive l'ordinateur de tir vanilla.</French>
             <Portuguese>Desabilitar o computador de artilharia padrão</Portuguese>
             <Spanish>Deshabilita el computador de artillería por defecto de Arma3</Spanish>

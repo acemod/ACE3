@@ -228,23 +228,27 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar">
             <English>Fade Stamina bar automatically</English>
+            <Russian>Скрыть шкалу усталости автоматически</Russian>
             <German>Blende Ausdauerleiste automatisch aus</German>
             <Chinese>體力條自動淡去</Chinese>
-            <Italian>Dissolvenza automatica della barra di resistenza</Italian>
+            <Italian>Dissolvenza automatica della barra della stamina</Italian>
             <Czech>Automaticky schovat lištu výdrže</Czech>
             <French>Fondu automatique de la barre d'endurance</French>
             <Japanese>自動的にスタミナバーを非表示</Japanese>
+            <Polish>Chowaj pasek wytrzymałości automatycznie</Polish>
             <Portuguese>Barra de stamina some automaticamente</Portuguese>
             <Turkish>Dayanıklılık çubuğunu otomatik olarak soldur</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
+            <Russian>Регулирует прозрачность шкалы в зависимости от статуса выносливости.</Russian>
             <German>Passt die Transparenz der Ausdauerleiste abhängig vom Ausdauerstatus an.</German>
             <Chinese>依照目前的體力程度調整體力條之透明度</Chinese>
-            <Italian>Regola la trasparenza della barra in base allo stato di resistenza.</Italian>
+            <Italian>Regola la trasparenza della barra in base allo stato di affaticamento.</Italian>
             <Czech>Upravuje průhlednost lišty v závislosti na současném stavu výdrže</Czech>
             <French>Règle la transparence de la barre en fonction de l'état d'endurance.</French>
             <Japanese>スタミナの状態に応じて、自動的にバーの透明度を調整します。</Japanese>
+            <Polish>Dostosowuje przezroczystość paska na podstawie stanu wytrzymałości.</Polish>
             <Portuguese>Ajusta a transparência da barra baseado no status da stamina</Portuguese>
         </Key>
     </Package>

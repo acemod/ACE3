@@ -1881,6 +1881,7 @@
             <French>Exigences pour réparations diverses</French>
             <Italian>Requisiti di riparazione vari</Italian>
             <Czech>Požadavky pro částečnou opravu</Czech>
+            <Polish>Rózne wymagania do naprawy</Polish>
             <Portuguese>Requerimentos para reparo miscelâneo</Portuguese>
             <Spanish>Requisitos de objetos misceláneos de reparación</Spanish>
         </Key>
@@ -1890,6 +1891,7 @@
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
             <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
             <Czech>Předměty potřebné k provedení opravy konkrétní části vozidla nebo sundání/výměny pásů.</Czech>
+            <Polish>Przedmioty wymagane do naprawy określonego elementu pojazdu lub usunięcia/wymiany gąsienicy.</Polish>
             <Portuguese>Items necessários para reparar uma peça específica ou remover/substituir lagarta.</Portuguese>
             <Spanish>Objetos necesarios para reparar un componente específico del vehículo o quitar/reemplazar las orugas.</Spanish>
             <Italian>Elementi necessari per riparare un componente specifico del veicolo o per rimuovere/sostituire i cingoli</Italian>
@@ -1901,6 +1903,7 @@
             <French>Exigences pour réparations complètes</French>
             <Italian>Requisiti per la riparazione completa</Italian>
             <Czech>Požadavky pro plnou opravu</Czech>
+            <Polish>Wymagania pełnej naprawy</Polish>
             <Portuguese>Requerimentos de Reparo Completo</Portuguese>
             <Spanish>Requisitos para reparación completa</Spanish>
         </Key>
@@ -1910,6 +1913,7 @@
             <Chinese>是否需要物品來完整修復載具</Chinese>
             <French>Outils nécessaires pour effectuer une réparation complète des véhicules.</French>
             <Czech>Předměty potřebné k provedení plné opravy vozidla.</Czech>
+            <Polish>Przedmioty wymagane do przeprowadzenia pełnej naprawy pojazdu.</Polish>
             <Portuguese>Itens requeridos para realizar um reparo veicular completo.</Portuguese>
             <Spanish>Objetos requeridos para una reparación completa</Spanish>
             <Italian>Elementi necessari per eseguire una riparazione completa del veicolo.</Italian>

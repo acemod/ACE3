@@ -104,6 +104,7 @@
             <Czech>Vypni automatické vypnutí motoru</Czech>
             <Chinese>關閉引擎自動熄火</Chinese>
             <French>Désactiver l'arrêt automatique du moteur</French>
+            <Polish>Wyłącz automatyczne wyłączanie silnika</Polish>
             <Italian>Disattivare lo spegnimento automatico del motore</Italian>
             <Turkish>Otomatik motor durdurmayı devre dışı bırak</Turkish>
         </Key>
@@ -119,6 +120,7 @@
             <Italian>Impedire lo spegnimento automatico del motore quando si esce dai veicoli.</Italian>
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
             <Turkish>Araçtan inerken motorun otomatik kapatılmasını engelleyin.</Turkish>
+            <Polish>Zapobiegaj automatycznemu wyłączaniu silnika podczas wychodzenia z pojazdu.</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>

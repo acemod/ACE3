@@ -11,6 +11,7 @@
             <Chinese>視覺回饋</Chinese>
             <Italian>Commenti</Italian>
             <Czech>Zpětná vazba</Czech>
+            <Polish>Informacje Zwrotne</Polish>
             <Spanish>Reacción</Spanish>
             <Turkish>Geri Bildirim</Turkish>
         </Key>
@@ -39,8 +40,10 @@
             <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
             <Italian>Seleziona il tipo di effetto del dolore usato.</Italian>
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
+            <Polish>Wybiera rodzaj efektu bólu.</Polish>
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
             <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
+            <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -52,6 +55,7 @@
             <Chinese>白光閃爍</Chinese>
             <Italian>Bianco lampeggiante</Italian>
             <Czech>Blikání bílé barvy</Czech>
+            <Polish>Miganie na biało</Polish>
             <Spanish>Destello blanco</Spanish>
             <Turkish>Beyaz Yanıp Sönüyor</Turkish>
         </Key>
@@ -65,6 +69,7 @@
             <Chinese>脈動模糊</Chinese>
             <Italian>Sfocatura pulsante</Italian>
             <Czech>Pulzující rozmazání</Czech>
+            <Polish>Pulsujące rozmycie</Polish>
             <Spanish>Enborronamiento pulsante</Spanish>
             <Turkish>Titreşimli Bulanıklık</Turkish>
         </Key>
@@ -92,9 +97,11 @@
             <French>Juste un fort effet douloureux</French>
             <Italian>Solo elevato effetto di dolore</Italian>
             <Czech>Pouze efekt vysoké bolesti</Czech>
+            <Polish>Tylko efekt mocnego bólu</Polish>
             <Portuguese>Apenas efeito de dor alta</Portuguese>
             <Spanish>Solo efecto de dolor fuerte</Spanish>
             <Turkish>Sadece yüksek ağrı etkisi</Turkish>
+            <German>Nur bei starken Schmerzen</German>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
