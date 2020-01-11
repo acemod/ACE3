@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: commy2
- * Makes the unit throw their currently selected weapon. Unit must be local.
+ * Makes the unit throw their currently selected weapon.
+ * Unit must be local and not inside a vehicle or attached to another object.
  *
  * Arguments:
  * 0: unit <OBJECT>
@@ -20,7 +21,7 @@
 
 params ["_unit"];
 private _weapon = currentWeapon _unit;
-if (_weapon isEqualTo "") exitWith {objNull};
+if (!isNull objectParent _unit || _weapon isEqualTo "") exitWith {objNull};
 
 private _data = weaponsItems _unit select {_x select 0 == _weapon} select 0;
 
