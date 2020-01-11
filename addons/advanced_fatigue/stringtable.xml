@@ -225,6 +225,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar">
             <English>Fade Stamina bar automatically</English>
+            <Russian>Скрыть шкалу усталости автоматически</Russian>
             <German>Blende Ausdauerleiste automatisch aus</German>
             <Chinese>體力條自動淡去</Chinese>
             <Italian>Dissolvenza automatica della barra della stamina</Italian>
@@ -236,6 +237,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
+            <Russian>Регулирует прозрачность шкалы в зависимости от статуса выносливости.</Russian>
             <German>Passt die Transparenz der Ausdauerleiste abhängig vom Ausdauerstatus an.</German>
             <Chinese>依照目前的體力程度調整體力條之透明度</Chinese>
             <Italian>Regola la trasparenza della barra in base allo stato di affaticamento.</Italian>
