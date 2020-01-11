@@ -10,7 +10,7 @@
             <Polish>Tabela Strzelnicza</Polish>
             <French>Table de tir d'artillerie</French>
             <Portuguese>Tabela de Artilharia</Portuguese>
-            <Spanish>Tabla de dsitancias de artillería</Spanish>
+            <Spanish>Tabla de distancias de artillería</Spanish>
             <Turkish>Topçu Menzil Tablosu</Turkish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
@@ -22,7 +22,7 @@
             <Polish>Uniwersalna Tabela Strzelnicza</Polish>
             <French>Table de tir universelle pour l'artillerie.</French>
             <Portuguese>Tabela de Artilharia Universal</Portuguese>
-            <Spanish>Tabla de dsitancias universal de artillería</Spanish>
+            <Spanish>Tabla de distancias universal de artillería</Spanish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -67,7 +67,7 @@
             <Polish>Wyłączony Komputer Artyleryjski</Polish>
             <French>Désactiver l'ordinateur de tir</French>
             <Portuguese>Computador de Artilharia Desabilitado</Portuguese>
-            <Spanish>Computador de artillería deshabilitado</Spanish>
+            <Spanish>Computadora de artillería deshabilitada</Spanish>
             <Turkish>Topçu Bilgisayarı Devre Dışı</Turkish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
@@ -79,7 +79,7 @@
             <Polish>Wyłącza komputer artyleryjski wprowadzony w vanili</Polish>
             <French>Désactive l'ordinateur de tir vanilla.</French>
             <Portuguese>Desabilitar o computador de artilharia padrão</Portuguese>
-            <Spanish>Deshabilita el computador de artillería por defecto de Arma3</Spanish>
+            <Spanish>Deshabilita la computadora de artillería por defecto de Arma 3</Spanish>
             <Turkish>Topçu bilgisayarını devre dışı bırak</Turkish>
         </Key>
     </Package>

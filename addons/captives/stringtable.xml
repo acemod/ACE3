@@ -15,6 +15,7 @@
             <French>Prisonniers</French>
             <Czech>Zajatci</Czech>
             <Turkish>Tutsaklar</Turkish>
+            <Spanish>Prisioneros</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
@@ -436,6 +437,7 @@
             <Portuguese>Requer rendição da IA</Portuguese>
             <French>Requiert la reddition de l'IA</French>
             <Czech>Vyžadovat, aby se AI prvně vzdala</Czech>
+            <Spanish>Requiere la rendición de la IA</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrenderAi_description">
             <English>Require AI to surrender before they can be arrested</English>
@@ -450,6 +452,7 @@
             <Portuguese>Requer que a IA se renda antes que seja presa</Portuguese>
             <French>Requiert la capitulation des unités IA avant qu'elles ne puissent être arrêtées.</French>
             <Czech>Vyžadovat, aby se AI prvně vzdala před umožněním zajetí</Czech>
+            <Spanish>Requiere la rendición de la IA antes de poder arrestarlas</Spanish>
         </Key>
         <Key ID="STR_ACE_Captives_KeyComb_Description">
             <English>Sets the unit under the cursor captive.</English>
@@ -464,6 +467,7 @@
             <Portuguese>Torna a unidade sob o cursor um prisioneiro</Portuguese>
             <French>Capture l'unité sous le curseur.</French>
             <Czech>Nastaví jednotku pod kurzorem jako zajatce.</Czech>
+            <Spanish>Establece a la unidad bajo el cursor como prisionera</Spanish>
         </Key>
     </Package>
 </Project>

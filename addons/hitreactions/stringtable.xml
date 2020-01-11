@@ -15,6 +15,7 @@
             <French>Dommages minimaux pour déclencher la chute</French>
             <Czech>Minimum škody pro aktivaci spadnutí</Czech>
             <Turkish>Düşmeyi tetikleyen min hasar</Turkish>
+            <Spanish>Daño mínimo para provocar la caída</Spanish>
         </Key>
     </Package>
 </Project>
