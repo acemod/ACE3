@@ -4,7 +4,7 @@
  * Makes the unit throw their currently selected weapon. Unit must be local.
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Weapon Holder
