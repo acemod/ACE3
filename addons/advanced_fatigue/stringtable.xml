@@ -235,6 +235,7 @@
             <French>Fondu automatique de la barre d'endurance</French>
             <Japanese>自動的にスタミナバーを非表示</Japanese>
             <Portuguese>Barra de stamina some automaticamente</Portuguese>
+            <Turkish>Dayanıklılık çubuğunu otomatik olarak soldur</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
