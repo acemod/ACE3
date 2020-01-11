@@ -19,6 +19,7 @@
 #define THROW_TORQUE 0.2
 
 params ["_unit"];
+
 private _weapon = currentWeapon _unit;
 if (_weapon isEqualTo "") exitWith {objNull};
 
