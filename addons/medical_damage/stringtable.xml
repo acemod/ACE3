@@ -574,7 +574,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
             <English>Sum of trauma</English>
-            <Russian>Сочетанность травмы</Russian>
+            <Russian>Совокупность травмы</Russian>
             <Japanese>外傷の数</Japanese>
             <Chinese>外部創傷累計</Chinese>
             <French>Somme des traumatismes</French>
