@@ -110,6 +110,7 @@
             <Portuguese>Cor da lanterna no mapa</Portuguese>
             <Czech>Barva svítilny na mapě</Czech>
             <Turkish>Harita ışık rengi</Turkish>
+            <Spanish>Color de luz sobre el mapa</Spanish>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_DisplayName">
             <English>Maglite ML300L</English>
@@ -121,6 +122,7 @@
             <French>Maglite ML300L</French>
             <Japanese>マグライト ML300L</Japanese>
             <Turkish>Maglite ML300L</Turkish>
+            <Spanish>Maglite ML300L</Spanish>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
             <English>Powerful LED flashlight.</English>
@@ -132,6 +134,7 @@
             <French>Puissante lampe torche à LED.</French>
             <Japanese>協力な LED のフラッシュライト。</Japanese>
             <Turkish>Güçlü LED el feneri</Turkish>
+            <Spanish>Linterna LED potente</Spanish>
         </Key>
     </Package>
 </Project>

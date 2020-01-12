@@ -21,7 +21,7 @@ if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _vehicle setVariable [QGVAR(isCookingOff), true];
 
 if (local _vehicle) then {
-    [QGVAR(cookOff), _vehicle] call CBA_fnc_remoteEvent;
+    [QGVAR(cookOff), _vehicle] call CBA_fnc_globalEvent;
 };
 
 [{
