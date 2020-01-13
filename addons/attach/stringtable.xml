@@ -203,7 +203,7 @@
             <Korean>적외선 스트로브는 자신의 위치를 반짝이면서 표시합니다. 이는 야간투시경으로 밖에 보지 못합니다.</Korean>
             <Chinese>紅外線閃頻器,藉由紅外線閃頻信號來辨識你的位置，僅能使用夜視系統來辨識紅外線信號</Chinese>
             <Chinesesimp>红外线闪频器,藉由红外线闪频信号来辨识你的位置，仅能使用夜视系统来辨识红外线信号</Chinesesimp>
-            <Turkish>IR Stroboskop, konumunuzu yalnızca gece görüşlerinden görülebilen titreşimli bir ışık aracılığıyla sağlar.</Turkish>
+            <Turkish>IR Stroboskop, yalnızca gece görüşlerinden gözükebilen titreşimli bir ışık aracılığıyla konumunuzu gösterir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_PlaceAction">
             <English>Place</English>
