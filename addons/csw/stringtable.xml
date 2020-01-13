@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_CSW_displayName">
             <English>Crew Served Weapons</English>
             <Portuguese>Crew Served Weapons (CSW)</Portuguese>
-            <French>Armes lourdes</French>
+            <French>Armes statiques</French>
             <Japanese>共用火器 (CSW)</Japanese>
             <Chinese>班組支援武器</Chinese>
             <Italian>Armi servite dall'equipaggio</Italian>
@@ -113,7 +113,7 @@
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save extra ammo</English>
             <Portuguese>Economizar munição extra</Portuguese>
-            <French>Économiser les munitions supplémentaires</French>
+            <French>Conserver le surplus de munitions</French>
             <Japanese>過剰弾薬を保持</Japanese>
             <Chinese>保存額外彈藥</Chinese>
             <Italian>Risparmiare munizioni extra</Italian>
@@ -124,7 +124,7 @@
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
             <English>Store extra magazines next to static weapon</English>
             <Portuguese>Carregar munições extras próximo à arma estática</Portuguese>
-            <French>Range les chargeurs supplémentaires à côté de l'arme statique.</French>
+            <French>Range les chargeurs en surplus auprès de l'arme statique.</French>
             <Japanese>次の設置型火器用に過剰弾薬を保持します。</Japanese>
             <Chinese>在固定型武器旁存放額外彈匣</Chinese>
             <Italian>Conservare i caricatori extra accanto all'arma statica</Italian>
@@ -146,7 +146,7 @@
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
             <Portuguese>Permite carregamento e descarregamento de munições</Portuguese>
-            <French>Définit qui peut charger et décharger des chargeurs.</French>
+            <French>Définit qui peut charger et décharger les chargeurs.</French>
             <Japanese>弾薬の装填と除去を許可します。</Japanese>
             <Chinese>允許裝填或卸載彈匣</Chinese>
             <Italian>Permettere il carico e lo scarico dei caricatori</Italian>
@@ -179,7 +179,7 @@
         <Key ID="STR_ACE_CSW_dragAfterDeploy_displayName">
             <English>Drag tripods after deploying</English>
             <Portuguese>Arrastar tripés após montar</Portuguese>
-            <French>Glisser trépied après déploiement</French>
+            <French>Glisser le trépied après déploiement</French>
             <Japanese>設置後に三脚を引きずる</Japanese>
             <Chinese>在佈置三腳架後拖拉</Chinese>
             <Italian>Trascinare i treppiedi dopo lo schieramento</Italian>
@@ -201,7 +201,7 @@
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
             <Portuguese>Carregar Tripé</Portuguese>
-            <French>Ramasser Trépied</French>
+            <French>Récupérer le trépied</French>
             <Japanese>三脚を拾う</Japanese>
             <Chinese>撿起三腳架</Chinese>
             <Italian>Recupero treppiede</Italian>
@@ -212,7 +212,7 @@
         <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
             <Portuguese>Montar Arma</Portuguese>
-            <French>Monter Arme</French>
+            <French>Monter l'arme</French>
             <Japanese>火器を乗せる</Japanese>
             <Chinese>裝載武器</Chinese>
             <Italian>Montare l'arma</Italian>
@@ -245,7 +245,7 @@
         <Key ID="STR_ACE_CSW_PickupTripod_progressBar">
             <English>Picking Up Tripod...</English>
             <Portuguese>Carregando Tripé...</Portuguese>
-            <French>Ramassage du trépied...</French>
+            <French>Récupération du trépied...</French>
             <Japanese>三脚を取得中です・・・</Japanese>
             <Chinese>撿起三腳架...</Chinese>
             <Italian>Recupero treppiede...</Italian>
@@ -313,7 +313,7 @@
         <Key ID="STR_ACE_CSW_StaticATBag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AT)</English>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AT)</Portuguese>
-            <French>[CSW] Lanceur Statique Mini-Spike (AT)</French>
+            <French>[CSW] Lanceur statique Mini-Spike (AT)</French>
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AT)</Japanese>
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對地）</Chinese>
             <Italian>[CSW] Static Mini-Spike Launcher (AT)</Italian>
@@ -323,7 +323,7 @@
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AA)</English>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AA)</Portuguese>
-            <French>[CSW] Lanceur Statique Mini-Spike (AA)</French>
+            <French>[CSW] Lanceur statique Mini-Spike (AA)</French>
             <Japanese>[CSW] 設置型ミニ スパイク ランチャー (AA)</Japanese>
             <Chinese>[CSW] 固定型 "迷你長釘"導彈發射器（對空）</Chinese>
             <Italian>[CSW] Static Mini-Spike Launcher (AA)</Italian>
@@ -333,7 +333,7 @@
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
             <English>[CSW] Static XM312 Gun</English>
             <Portuguese>[CSW] Arma Estática - XM312</Portuguese>
-            <French>[CSW] Mitrailleuse Statique XM312</French>
+            <French>[CSW] Mitrailleuse statique XM312</French>
             <Japanese>[CSW] 設置型 XM312</Japanese>
             <Chinese>[CSW] 固定型 XM312重機槍</Chinese>
             <Italian>[CSW] Static XM312 Gun</Italian>
@@ -343,7 +343,7 @@
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
             <Portuguese>[CSW] Arma Estática - XM312 (Autônoma)</Portuguese>
-            <French>[CSW] Mitrailleuse Statique XM312 (Autonome)</French>
+            <French>[CSW] Mitrailleuse statique XM312 (Autonome)</French>
             <Japanese>[CSW] 設置型 XM312 (自律型)</Japanese>
             <Chinese>[CSW] 固定型 XM312重機槍（自主型）</Chinese>
             <Italian>[CSW] Static XM312 Gun (Autonomo)</Italian>
@@ -353,7 +353,7 @@
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[CSW] Static XM307 Gun</English>
             <Portuguese>[CSW] Arma Estática - XM307</Portuguese>
-            <French>[CSW] Mitrailleuse Statique XM307</French>
+            <French>[CSW] Lance-grenades statique XM307</French>
             <Japanese>[CSW] 設置型 XM307</Japanese>
             <Chinese>[CSW] 固定型XM307榴彈機槍</Chinese>
             <Italian>[CSW] Static XM307 Gun</Italian>
@@ -363,7 +363,7 @@
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[CSW] Static XM307 Gun (Autonomous)</English>
             <Portuguese>[CSW] Arma Estática - XM307 (Autônoma)</Portuguese>
-            <French>[CSW] Mitrailleuse Statique XM307 (Autonome)</French>
+            <French>[CSW] Lance-grenades statique XM307 (Autonome)</French>
             <Japanese>[CSW] 設置型 XM307 (自律型)</Japanese>
             <Chinese>[CSW] 固定型 XM307榴彈機槍（自主型）</Chinese>
             <Italian>[CSW] Static XM307 Gun (Autonomo)</Italian>
@@ -373,7 +373,7 @@
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x108mm HMG</Portuguese>
-            <French>[CSW] Bande 12.7x108mm HMG</French>
+            <French>[CSW] Bande 12,7x108 mm HMG</French>
             <Japanese>[CSW] 12.7x108 mm HMG ベルト</Japanese>
             <Chinese>[CSW]12.7x108毫米 重機槍彈鏈</Chinese>
             <Italian>[CSW] 12.7x108mm HMG Belt</Italian>
@@ -383,7 +383,7 @@
         <Key ID="STR_ACE_CSW_127x99_displayName">
             <English>[CSW] 12.7x99mm HMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG</Portuguese>
-            <French>[CSW] Bande 12.7x99mm HMG</French>
+            <French>[CSW] Bande 12,7x99 mm HMG</French>
             <Japanese>[CSW] 12.7x99 mm HMG ベルト</Japanese>
             <Chinese>[CSW]12.7x99毫米 重機槍彈鏈</Chinese>
             <Italian>[CSW] 12.7x99mm HMG Belt</Italian>
@@ -393,7 +393,7 @@
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Red)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Vermelho)</Portuguese>
-            <French>[CSW] Bande 12.7x99mm HMG Traçantes (Rouges)</French>
+            <French>[CSW] Bande 12,7x99 mm HMG traçantes (Rouges)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (赤)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（紅色）</Chinese>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Italian>
@@ -403,7 +403,7 @@
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Green)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Verde)</Portuguese>
-            <French>[CSW] Bande 12.7x99mm HMG Traçantes (Vertes)</French>
+            <French>[CSW] Bande 12,7x99 mm HMG traçantes (Vertes)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (緑)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（綠色）</Chinese>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Italian>
@@ -413,7 +413,7 @@
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</English>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Amarelo)</Portuguese>
-            <French>[CSW] Bande 12.7x99mm HMG Traçantes (Jaunes)</French>
+            <French>[CSW] Bande 12,7x99 mm HMG traçantes (Jaunes)</French>
             <Japanese>[CSW] 12.7x99 mm HMG 曳光弾ベルト (黄)</Japanese>
             <Chinese>[CSW] 12.7x99毫米 重機槍曳光彈鏈（黃色）</Chinese>
             <Italian>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Italian>
@@ -423,7 +423,7 @@
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[CSW] 20mm Grenade GMG Belt</English>
             <Portuguese>[CSW] Cinto de Munição - Granada 20mm GMG</Portuguese>
-            <French>[CSW] Bande Grenades 20mm GMG</French>
+            <French>[CSW] Bande grenades 20 mm GMG</French>
             <Japanese>[CSW] 20 mm てき弾 GMG ベルト</Japanese>
             <Chinese>[CSW]20毫米 榴彈 榴彈機槍彈鏈</Chinese>
             <Italian>[CSW] 20mm Grenade GMG Belt</Italian>
@@ -533,7 +533,7 @@
         <Key ID="STR_ACE_CSW_mortarBaseplateBag_displayName">
             <English>[CSW] Mortar Baseplate</English>
             <Portuguese>[CSW] Placa base de Morteiro</Portuguese>
-            <French>[CSW] Plaque de base pour Mortier</French>
+            <French>[CSW] Plaque de base pour mortier</French>
             <Japanese>[CSW] 迫撃砲基盤</Japanese>
             <Chinese>[CSW] 迫擊炮基座</Chinese>
             <Italian>[CSW] Mortar Baseplate</Italian>
@@ -543,7 +543,7 @@
         <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
             <English>Mortar Baseplate</English>
             <Portuguese>Placa base de Morteiro</Portuguese>
-            <French>Plaque de base pour Mortier</French>
+            <French>Plaque de base pour mortier</French>
             <Japanese>迫撃砲基盤</Japanese>
             <Chinese>迫擊炮基座</Chinese>
             <Italian>Mortar Baseplate</Italian>
@@ -553,7 +553,7 @@
         <Key ID="STR_ACE_CSW_mk6MortarBag_displayName">
             <English>[CSW] Mk6 Mortar Tube</English>
             <Portuguese>[CSW] Tubo de Morteiro - Mk6</Portuguese>
-            <French>[CSW] Tube Mortier Mk6</French>
+            <French>[CSW] Tube mortier Mk6</French>
             <Japanese>[CSW] Mk6 迫撃砲発射筒</Japanese>
             <Chinese>[CSW] Mk6 迫擊炮炮管</Chinese>
             <Italian>[CSW] Mk6 Mortar Tube</Italian>
@@ -563,7 +563,7 @@
         <Key ID="STR_ACE_CSW_m252_tube">
             <English>[CSW] M252 Tube Bag</English>
             <Portuguese>[CSW] Tubo de Morteiro - M252</Portuguese>
-            <French>[CSW] Sac Tube M252</French>
+            <French>[CSW] Sac tube M252</French>
             <Japanese>[CSW] M252 発射筒バッグ</Japanese>
             <Chinese>[CSW] M252 炮管袋</Chinese>
             <Italian>[CSW] M252 Tube Bag</Italian>
@@ -593,7 +593,7 @@
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - BGM-71 TOW</Portuguese>
-            <French>[CSW] Sac Lanceur BGM-71 TOW</French>
+            <French>[CSW] Sac lanceur BGM-71 TOW</French>
             <Japanese>[CSW] BGM-71 TOW ランチャー バッグ</Japanese>
             <Chinese>[CSW] BGM-71 拖式飛彈發射器袋</Chinese>
             <Italian>[CSW] BGM-71 TOW Launcher Bag</Italian>
@@ -613,7 +613,7 @@
         <Key ID="STR_ACE_CSW_2b14_tube">
             <English>[CSW] 2B14 Tube Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - 2B14</Portuguese>
-            <French>[CSW] Sac Tube 2B14</French>
+            <French>[CSW] Sac tube 2B14</French>
             <Japanese>[CSW] 2B14 発射筒バッグ</Japanese>
             <Chinese>[CSW] 2B14 炮管袋</Chinese>
             <Italian>[CSW] 2B14 Tube Bag</Italian>
@@ -653,7 +653,7 @@
         <Key ID="STR_ACE_CSW_metis_tube">
             <English>[CSW] 9k115 Metis Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Arma - 9k115 Metis</Portuguese>
-            <French>[CSW] Sac Lanceur 9K115 Metis</French>
+            <French>[CSW] Sac lanceur 9K115 Metis</French>
             <Japanese>[CSW] 9K115 メティス ランチャー バッグ</Japanese>
             <Chinese>[CSW] 9k115 麥士蒂索人發射器袋</Chinese>
             <Italian>[CSW] 9k115 Metis Launcher Bag</Italian>
@@ -663,7 +663,7 @@
         <Key ID="STR_ACE_CSW_kornet_launcher">
             <English>[CSW] 9m113 Kornet Launcher</English>
             <Portuguese>[CSW] Bolsa de Arma - 9m113 Kornet</Portuguese>
-            <French>[CSW] Sac Lanceur 9M113 Kornet</French>
+            <French>[CSW] Sac lanceur 9M113 Kornet</French>
             <Japanese>[CSW] 9M113 コルネット ランチャー バッグ</Japanese>
             <Chinese>[CSW] 9M113 短號發射器</Chinese>
             <Italian>[CSW] 9m113 Kornet Launcher</Italian>
@@ -693,7 +693,7 @@
         <Key ID="STR_ACE_CSW_spg9_tube">
             <English>[CSW] SPG-9 Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - SPG-9</Portuguese>
-            <French>[CSW] Sac Lanceur SPG-9</French>
+            <French>[CSW] Sac lanceur SPG-9</French>
             <Japanese>[CSW] SPG-9 ランチャー バッグ</Japanese>
             <Chinese>[CSW] SPG-9 發射器袋</Chinese>
             <Italian>[CSW] SPG-9 Launcher Bag</Italian>
@@ -703,7 +703,7 @@
         <Key ID="STR_ACE_CSW_spg9m_tube">
             <English>[CSW] SPG-9M Launcher Bag</English>
             <Portuguese>[CSW] Bolsa de Lançador - SPG-9M</Portuguese>
-            <French>[CSW] Sac Lanceur SPG-9M</French>
+            <French>[CSW] Sac lanceur SPG-9M</French>
             <Japanese>[CSW] SPG-9M ランチャー バッグ</Japanese>
             <Chinese>[CSW] SPG-9M 發射器袋</Chinese>
             <Italian>[CSW] SPG-9M Launcher Bag</Italian>
