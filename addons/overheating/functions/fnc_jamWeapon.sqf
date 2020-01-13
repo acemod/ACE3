@@ -40,6 +40,14 @@ if (_ammo > 0) then {
     }, [_unit, _weapon, _ammo]] call CBA_fnc_execNextFrame;
 };
 
+if (_weapon == primaryWeapon _unit) then {
+    playSound QGVAR(jamming_rifle);
+} else {
+    if (_weapon == handgunWeapon _unit) then {
+        playSound QGVAR(jamming_pistol);
+    };
+};
+
 // only display the hint once, after you try to shoot an already jammed weapon
 GVAR(knowAboutJam) = false;
 
