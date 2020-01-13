@@ -6,7 +6,7 @@
             <Russian>Маркировка</Russian>
             <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
-            <German>Markierungssystem (Spraydose)</German>
+            <German>Markieren (Spraydose)</German>
             <Korean>뿌리기</Korean>
             <French>Marquage</French>
             <Italian>Marcamento</Italian>
@@ -20,7 +20,7 @@
             <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
             <Japanese>標準で開くタグ付けシステムの設定を行います。</Japanese>
             <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
-            <German>Konfiguriert, wie das Markierungssystem standardmäßig funktioniert.</German>
+            <German>Konfiguriert, wie das markieren standardmäßig funktioniert.</German>
             <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
             <French>Configure le fonctionnement par défaut du système de marquage.</French>
             <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>

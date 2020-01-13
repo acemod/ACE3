@@ -3,7 +3,7 @@
     <Package name="Vehicles">
         <Key ID="STR_ACE_Vehicles_On">
             <English>Speed Limiter on</English>
-            <German>Begrenzer an</German>
+            <German>Geschwindigkeitsbegrenzer an</German>
             <Spanish>Limitador de velocidad activado</Spanish>
             <Polish>Ogranicznik prędkości włączony</Polish>
             <Czech>Omezovač rychlosti zapnut</Czech>
@@ -19,7 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
-            <German>Begrenzer aus</German>
+            <German>Geschwindigkeitsbegrenzer aus</German>
             <Spanish>Limitador de velocidad desactivado</Spanish>
             <Polish>Ogranicznik prędkości wyłączony</Polish>
             <Czech>Omezovač rychlosti vypnut</Czech>
@@ -48,7 +48,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
-            <German>Begrenzer</German>
+            <German>Geschwindigkeitsbegrenzer</German>
             <Spanish>Limitador de velocidad</Spanish>
             <Polish>Ogranicznik prędkości</Polish>
             <Czech>Omezovač rychlosti</Czech>

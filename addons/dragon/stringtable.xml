@@ -3,6 +3,7 @@
     <Package name="Dragon">
         <Key ID="STR_ACE_Dragon_dragonNameCarry">
             <English>[CSW] M47 Super-Dragon</English>
+            <German>[CSW] M47 Super-Dragon</German>
             <Portuguese>[CSW] M47 Super-Dragon</Portuguese>
             <French>[CSW] M47 Super-Dragon</French>
             <Japanese>[CSW] M47 スーパー ドラゴン</Japanese>
@@ -12,6 +13,7 @@
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
+            <German>M47 Super-Dragon</German>
             <Portuguese>M47 Super-Dragon</Portuguese>
             <French>M47 Super-Dragon</French>
             <Japanese>M47 スーパー ドラゴン</Japanese>
@@ -21,6 +23,7 @@
         </Key>
         <Key ID="STR_ACE_Dragon_attachSight">
             <English>Attach Sight</English>
+            <German>Bringe Visier an</German>
             <Portuguese>Colocar Mira</Portuguese>
             <French>Monter le viseur</French>
             <Japanese>照準器を取り付ける</Japanese>
@@ -30,6 +33,7 @@
         </Key>
         <Key ID="STR_ACE_Dragon_detachSight">
             <English>Detach Sight</English>
+            <German>Nehme Visier ab</German>
             <Portuguese>Remover Mira</Portuguese>
             <French>Démonter le viseur</French>
             <Japanese>照準器を外す</Japanese>
@@ -39,6 +43,7 @@
         </Key>
         <Key ID="STR_ACE_Dragon_sightName">
             <English>SU-36/P Daysight</English>
+            <German>SU-36/P Daysight</German>
             <Portuguese>SU-36/P Daysight</Portuguese>
             <French>SU-36/P Daysight</French>
             <Japanese>SU-36/P デイサイト</Japanese>
@@ -48,6 +53,7 @@
         </Key>
         <Key ID="STR_ACE_Dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
+            <German>Ein leichte, billige Visierung for Tageseinsätze. Beinhaltet den Zielsuchcomputer für das ganze System.</German>
             <Portuguese>Uma mira leve e comum utilizada para operações de dia. Contêm o computador de orientação para todo o sistema.</Portuguese>
             <French>Un viseur léger et bon marché utilisé pour les opérations de jour.\nContient l'ordinateur de guidage pour tout le système.</French>
             <Japanese>昼間時に使用される軽量で、低価格の照準器です。システム全体の誘導コンピュータを備えています。</Japanese>
@@ -57,6 +63,7 @@
         </Key>
         <Key ID="STR_ACE_Dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
+            <German>Eine Drahtgelenkte SACLOS Rakete mit einer einzigartigen Flug Charakteristik</German>
             <Portuguese>Um míssil SACLOS, guiado por fio com uma característica única de vôo</Portuguese>
             <French>Un missile filoguidé SACLOS, présentant une caractéristique de vol exceptionnelle.</French>
             <Japanese>特徴的な飛行特性を持つ、ワイヤ誘導の SACLOS ミサイルです。</Japanese>
