@@ -55,7 +55,7 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
     };
 
     private _statement = {
-        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _this select 0];
+        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _this select 0, false, eyePos (_this select 0), 1, 1, 15];
 
         if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {(_this select 1) ammo currentWeapon (_this select 1) > 0} && {GVAR(DisplayTextOnJam)}) then {
             [localize LSTRING(WeaponJammed)] call EFUNC(common,displayTextStructured);
