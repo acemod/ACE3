@@ -65,4 +65,65 @@ class CfgAmmo {
             enabled = 1; // Missile Guidance must be explicitly enabled
         };
     };
+    class ACE_Hellfire_AGM114L: ACE_Hellfire_AGM114K {
+        displayName = "AGM-114L";
+        displayNameShort = "AGM-114L";
+        description = "AGM-114L";
+        descriptionShort = "AGM-114L";
+        class ace_missileguidance: ace_missileguidance {
+            canVanillaLock = 1;
+            enabled = 1; // Missile Guidance must be explicitly enabled
+            seekLastTargetPos = 0;
+            defaultSeekerType = "ARH";
+            seekerTypes[] = { "ARH" };
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = { "LOBL" };
+
+            activeRadarEngageDistance = 1000;
+            seekerMaxRange = 2000; // distance that the hellfire internal radar can scan
+        };
+
+        // Vanilla lock system vars
+        weaponLockSystem = "8";
+        airLock = 1;
+        lockType = 0;
+        maneuvrability = 0; // no maneuvrability so that default guidance doesnt work
+
+        missileLockMaxDistance      = 8000;
+        missileLockMinDistance      = 250;
+        missileLockMaxSpeed         = 600;
+        missileKeepLockedCone       = 70;
+
+        flightProfiles[] = {};
+        class Components {
+            class SensorsManagerComponent {
+                class Components {
+                    class MillimeterWaveRadar {
+                        componentType = "ActiveRadarSensorComponent";
+                        class AirTarget {
+                            minRange = 0;
+                            maxRange = 8000;
+                            objectDistanceLimitCoef = -1;
+                            viewDistanceLimitCoef = -1;
+                        };
+                        class GroundTarget {
+                            minRange = 0;
+                            maxRange = 8000;
+                            objectDistanceLimitCoef = -1;
+                            viewDistanceLimitCoef = -1;
+                        };
+                        typeRecognitionDistance     = 4000;
+                        angleRangeHorizontal        = 70;
+                        angleRangeVertical          = 70;
+                        groundNoiseDistanceCoef     = 0; // relevant to AA missiles - not really for this
+                        maxGroundNoiseDistance      = 250;
+                        minSpeedThreshold           = 0;
+                        maxSpeedThreshold           = 600;
+                        nightRangeCoef = 1;
+                        maxFogSeeThrough = 0.8;
+                    };
+                };
+            };
+        };
+    };
 };

@@ -16,6 +16,7 @@
             <Korean>물건 부착</Korean>
             <Chinese>附掛裝備&gt;&gt;</Chinese>
             <Chinesesimp>附挂装备&gt;&gt;</Chinesesimp>
+            <Turkish>Eşyayı bağla</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Attach">
             <English>Attach</English>
@@ -32,6 +33,7 @@
             <Korean>부착</Korean>
             <Chinese>附掛</Chinese>
             <Chinesesimp>附挂</Chinesesimp>
+            <Turkish>Bağla</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Detach">
             <English>Detach item</English>
@@ -40,7 +42,7 @@
             <Polish>Odczep przedmiot</Polish>
             <French>Détacher l'objet</French>
             <Czech>Odepnout předmět</Czech>
-            <Portuguese>Separar item</Portuguese>
+            <Portuguese>Desprender item</Portuguese>
             <Italian>Stacca l'oggetto</Italian>
             <Hungarian>Tárgy lecsatolása</Hungarian>
             <Russian>Отсоединить</Russian>
@@ -48,6 +50,7 @@
             <Korean>분리</Korean>
             <Chinese>取下裝備</Chinese>
             <Chinesesimp>取下装备</Chinesesimp>
+            <Turkish>Eşyayı sök</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Attached">
             <English>IR Strobe Attached</English>
@@ -160,6 +163,7 @@
             <Korean>넣을 공간이 없음</Korean>
             <Chinese>無可用空間</Chinese>
             <Chinesesimp>无可用空间</Chinesesimp>
+            <Turkish>Envanter de alan yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Name">
             <English>IR Strobe</English>
@@ -200,7 +204,7 @@
             <Polish>Umieść</Polish>
             <French>Placer</French>
             <Czech>Položit</Czech>
-            <Portuguese>Colocar</Portuguese>
+            <Portuguese>Fixar</Portuguese>
             <Italian>Posiziona</Italian>
             <Hungarian>Elhelyez</Hungarian>
             <Russian>Установить</Russian>
@@ -208,6 +212,7 @@
             <Korean>두기</Korean>
             <Chinese>放置</Chinese>
             <Chinesesimp>放置</Chinesesimp>
+            <Turkish>Yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_CancelAction">
             <English>Cancel</English>
@@ -240,6 +245,7 @@
             <Korean>부착 실패</Korean>
             <Chinese>附掛失敗</Chinese>
             <Chinesesimp>附挂失败</Chinesesimp>
+            <Turkish>Bağlama başarısız</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>

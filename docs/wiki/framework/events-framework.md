@@ -46,6 +46,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_interactMenuOpened` | [_menuType] | Local | Listen | Interaction Menu Opened
 |`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
+|`ace_interact_menu_newControllableObject` | [_typeOf] | Local | Listen | New controlable object, only fires once per type (add self interactions)
 
 ### 2.4 Cargo (`ace_cargo`)
 
@@ -88,6 +89,21 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |----------|---------|---------|---------|---------|---------|
 |`ace_wireCuttingStarted` | [_unit, _fence] | Global | Listen | Fence cutting started
 
+### 2.9 Refuel (`ace_refuel`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_refuel_started` | [_source, _target] | Local | Listen | Refueling has started
+|`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick
+|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refueling has stopped
+
+### 2.10 Cook Off (`ace_cookoff`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_cookoff_cookOff` | _vehicle | Global | Listen | Vehicle cook off has started
+|`ace_cookoff_cookOffBox` | _box | Global | Listen | Ammo box cook off has started
+|`ace_cookoff_engineFire` | _vehicle | Global | Listen | Engine fire has started
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

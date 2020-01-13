@@ -8,7 +8,7 @@
             <Polish>Stopery do uszu</Polish>
             <Czech>Špunty</Czech>
             <Russian>Беруши</Russian>
-            <French>Bouchons Anti-Bruits</French>
+            <French>Bouchons anti bruit</French>
             <Hungarian>Füldugó</Hungarian>
             <Portuguese>Protetor auricular</Portuguese>
             <Italian>Tappi auricolari</Italian>
@@ -16,6 +16,7 @@
             <Korean>귀마개</Korean>
             <Chinesesimp>耳塞</Chinesesimp>
             <Chinese>耳塞</Chinese>
+            <Turkish>Kulak Tıkacı</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Description">
             <English>Protective Earplugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
@@ -24,7 +25,7 @@
             <Polish>Stopery do uszu umożliwiają użytkownikowi przebywać w pobliżu głośnej broni bez poniesienia konsekwencji jaką jest utrata słuchu.</Polish>
             <Czech>Ochranné špunty umožňují uživateli, aby neutrpěl zranění jeho sluchu v blízkosti hlasitých zbraní.</Czech>
             <Russian>Беруши позволяют носителю находиться возле громкого вооружения без потери слуха.</Russian>
-            <French>Bouchons Anti-Bruits permettant au porteur d'être près d'arme bruyante sans risque d'endommager son ouïe.</French>
+            <French>Les bouchons d'oreilles anti bruit permettent au porteur d'être près d'armes bruyantes, sans risque d'endommager son ouïe.</French>
             <Hungarian>Erősebb hanghatásoktól védő füldugó, megakadályozza a nagy hanggal járó fegyverzettől való halláskárosodást.</Hungarian>
             <Portuguese>Protetor para ouvidos permitem que o usuário esteja próximo a ruídos sem danificar sua audição.</Portuguese>
             <Italian>Proteggono l'apparato uditivo, permettendo a chi li indossa di resistere ai suoni particolarmente forti senza alcun danno.</Italian>
@@ -48,6 +49,7 @@
             <Korean>귀마개 착용</Korean>
             <Chinesesimp>塞入耳塞</Chinesesimp>
             <Chinese>塞入耳塞</Chinese>
+            <Turkish>Kulak Tıkacı Tak</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Off">
             <English>Earplugs out</English>
@@ -64,6 +66,7 @@
             <Korean>귀마개 뺌</Korean>
             <Chinesesimp>取出耳塞</Chinesesimp>
             <Chinese>取出耳塞</Chinese>
+            <Turkish>Kulak Tıkacını Çıkart</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_On">
             <English>Earplugs in</English>
@@ -80,6 +83,7 @@
             <Korean>귀마개 착용</Korean>
             <Chinesesimp>耳塞已塞入</Chinesesimp>
             <Chinese>耳塞已塞入</Chinese>
+            <Turkish>Kulak Tıkacı Takıldı</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_Off">
             <English>Earplugs out</English>
@@ -96,6 +100,7 @@
             <Korean>귀마개 뺌</Korean>
             <Chinesesimp>耳塞已取出</Chinesesimp>
             <Chinese>耳塞已取出</Chinese>
+            <Turkish>Kulak Tıkacı Çıkartıldı</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_NoPlugs">
             <English>You have no earplugs</English>
@@ -104,7 +109,7 @@
             <Polish>Nie masz stoperów</Polish>
             <Czech>Nemáš žádné špunty</Czech>
             <Russian>У вас нет беруш</Russian>
-            <French>Vous n'avez pas de bouchons anti-bruits</French>
+            <French>Vous n'avez pas de bouchons anti bruit.</French>
             <Hungarian>Nincsen füldugód</Hungarian>
             <Portuguese>Você não possui protetores auriculares</Portuguese>
             <Italian>Non hai i tappi auricolari</Italian>
@@ -112,13 +117,14 @@
             <Korean>귀마개가 없습니다</Korean>
             <Chinesesimp>你没有耳塞</Chinesesimp>
             <Chinese>你沒有耳塞</Chinese>
+            <Turkish>Kulak Tıkacın Yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_Inventory_Full">
             <English>No inventory space</English>
             <German>Kein Platz im Inventar</German>
             <Spanish>Sin espacio en el inventario</Spanish>
             <Polish>Brak miejsca w ekwipunku</Polish>
-            <French>Pas de place dans l'inventaire</French>
+            <French>Il n'y a plus de place dans l'inventaire.</French>
             <Czech>Není místo v inventáři</Czech>
             <Italian>Non hai abbastanza spazio</Italian>
             <Portuguese>Não há espaço no inventário</Portuguese>
@@ -128,10 +134,11 @@
             <Korean>넣을 공간이 없습니다</Korean>
             <Chinesesimp>无可用空间</Chinesesimp>
             <Chinese>無可用空間</Chinese>
+            <Turkish>Envanterin de alan yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_DisplayName">
             <English>Disable ear ringing</English>
-            <French>Désactiver le bourdonnement</French>
+            <French>Désactiver les bourdonnements</French>
             <Spanish>Desactivar zumbido de oídos</Spanish>
             <Russian>Отключить звон в ушах</Russian>
             <German>Knalltrauma deaktivieren</German>
@@ -150,7 +157,7 @@
             <German>Deaktiviert Ohrklingeln wenn der Spieler Hörschäden davonträgt.</German>
             <Spanish>Desactiva el efecto de zumbido cuando el jugador recibe daño auditivo.</Spanish>
             <Polish>Usuń szum w uszach przy chwilowej utracie słuchu.</Polish>
-            <French>Enlève les acouphènes quand le joueur prend des dommages auditifs.</French>
+            <French>Enlève l'effet d'acouphène lorsqu'un joueur subit des dommages auditifs.</French>
             <Italian>Quando il giocatore riceve danni all'udito, non fa sentire i fischi nelle orecchie</Italian>
             <Portuguese>Remove o efeito de zunido quando o jogador recebe dano na audição</Portuguese>
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
@@ -158,6 +165,7 @@
             <Korean>플레이어가 청력손실을 입을때 생기는 이명현상을 제거합니다.</Korean>
             <Chinesesimp>关闭耳鸣效果时，就算玩家受到相当程度的听力伤害, 也不会造成耳鸣效果</Chinesesimp>
             <Chinese>關閉耳鳴效果時，就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果</Chinese>
+            <Czech>Odstranit tinitus když hráč utrpí poškození sluchu</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
@@ -200,7 +208,7 @@
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
             <Italian>Riduci l'abilità uditiva quando il giocatore riceve danno uditivo</Italian>
-            <French>Réduire l'audition lorsque le joueur prend des dommages auditifs.</French>
+            <French>Réduit la capacité auditive du joueur lorsqu'il subit des dommages auditifs.</French>
             <Japanese>音による損傷をうけ、聴覚が減る可能性があります</Japanese>
             <Korean>청력에 손상을 입으면 듣는 소리가 감소합니다.</Korean>
             <Chinesesimp>当玩家听力受损时降低听力能力?</Chinesesimp>
@@ -214,7 +222,7 @@
             <German>Dieses Modul aktiviert/deaktiviert die Taubheit im Gefecht. Wenn aktiviert, können Spieler ohne Gehörschutz taub werden, wenn eine Waffe in ihrer Nähe abgefeuert wird oder eine Explosion stattfindet.</German>
             <Czech>Ztráta sluchu je možná ve chvíly, kdy se v bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a osoba je  bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>
             <Portuguese>Este módulo ativa / desativa surdez em combate. Quando ativado, os jogadores podem ficar surdos quando uma arma é disparada ao seu redor ou uma explosão ocorre sem proteção auditiva.</Portuguese>
-            <French>Ce module active / désactivé la surdité au combat. Si active, des joueurs peuvent devenir sourds sans protection d'oreille, si une arme est utilisée ou une explosion a lieu à proximité</French>
+            <French>Pemet le réglage de la surdité au combat et des bourdonnements. Si actif, les joueurs sans protection auditive peuvent être assourdis quand une arme est utilisée à proximité, ou lorsqu'une explosion se produit.</French>
             <Spanish>Controles de sordera de combate y zumbido en los oídos. Al activarlo, los jugadores pueden ser ensordecidos cuando un arma se dispara cerca o una explosión tiene lugar sin protección auditiva</Spanish>
             <Italian>Controlla la sordità da combattimento e fischio alle orecchie. Quando attivato, i giocatori possono essere assordati quando un'arma spara vicino o avviene un'esplosione senza protezione uditiva</Italian>
             <Japanese>戦闘による難聴や、耳鳴りを設定します。有効では聴覚を保護していないと近傍の銃声や爆発音により、難聴になります。</Japanese>
@@ -231,7 +239,7 @@
             <Spanish>Efecto Zeus RC</Spanish>
             <Czech>Vliv na Zeus RC</Czech>
             <Italian>Effetto Zeus RC</Italian>
-            <French>Effet sur le CàD du Zeus</French>
+            <French>Affecte le CàD Zeus</French>
             <Japanese>Zeus RC への効果</Japanese>
             <Korean>Zeus RC 효과</Korean>
             <Chinesesimp>启用效果在宙斯远程遥控</Chinesesimp>
@@ -246,7 +254,7 @@
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
             <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
             <Italian>Consenti alle unità controllate in remoto da Zeus di ricevere danni all'udito.</Italian>
-            <French>Permet aux unités controlées à distance de subir des traumatismes sonores.</French>
+            <French>Permet aux unités contrôlées à distance par Zeus de subir des dommages auditifs.</French>
             <Japanese>Zeus により遠隔操作されたユニットにも、聴覚へ損傷を受けるようにします。</Japanese>
             <Korean>Zeus가 원격으로 청력손실을 입힐 수 있게 합니다.</Korean>
             <Chinesesimp>设定宙斯远程遥控的单位也会受到耳鸣的效果。</Chinesesimp>
@@ -261,7 +269,7 @@
             <Czech>Přidat špunty jednotce</Czech>
             <Italian>Aggiungi Tappi per Orecchie alle unità</Italian>
             <Spanish>Agregar tapones de oida a la unidad</Spanish>
-            <French>Ajouter des bouchons anti-bruits aux unités</French>
+            <French>Ajouter des bouchons anti bruit aux unités</French>
             <Japanese>ユニットへ耳栓を追加</Japanese>
             <Korean>해당 인원에게 귀마개 추가</Korean>
             <Chinesesimp>增加耳塞给单位</Chinesesimp>
@@ -276,7 +284,7 @@
             <Czech>Přidat `ACE_EarPlugs` všem jednotkám které mají zbraň. Můžete vypnout, pokud používáte vlastní výbavu.</Czech>
             <Italian>Aggiungi l'oggetto 'ACE_EarPlugs' a tutte le unità che hanno armi rumorose. Può essere disabilitato se vengono usati loadout personalizzati.</Italian>
             <Spanish>Agregar el item `ACE_EarPlugs`  a todas las unidades equipadas con armas muy ruidosas. Desactivar si quieren utilizarse equipamientos personalizados.</Spanish>
-            <French>Ajoute l'objet "Ace_EarPlugs" à toutes les unités ayant des armes bruyantes. Peut être désactivé par des loadouts personalisés.</French>
+            <French>Ajoute l'objet `Ace_EarPlugs` à toutes les unités ayant des armes bruyantes. Peut être désactivé si de l'équipement personnalisé est utilisé.</French>
             <Japanese>全ユニットへ`ACE_EarPlugs`アイテムを持たせます。これは変更された武装で無効化できます。</Japanese>
             <Korean>무기를 가지고 있는 모든 인원에게 'ACE_EarPlugs'를 지급합니다. 임의의 장비를 사용시 비활성화 할 수 있습니다.</Korean>
             <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位。当你想自定装备时，此功能可被关闭。</Chinesesimp>
@@ -284,47 +292,81 @@
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingProtection">
             <English>Hearing protection</English>
+            <German>Gehörschutz</German>
             <French>Protection auditive</French>
             <Japanese>聴覚保護</Japanese>
             <Chinesesimp>听力保护</Chinesesimp>
             <Chinese>聽力保護</Chinese>
             <Italian>Protezione auditiva</Italian>
+            <Polish>Ochrona słuchu</Polish>
+            <Russian>Защита слуха</Russian>
+            <Portuguese>Proteção Auditiva</Portuguese>
+            <Czech>Ochrana sluchu</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
-            <French>Étouffement des sons</French>
+            <German>Lautstärkedämpfung</German>
+            <French>Atténuation du volume</French>
             <Japanese>音量低下</Japanese>
             <Chinesesimp>降低音量</Chinesesimp>
             <Chinese>進低音量</Chinese>
             <Italian>Volume attenuazione</Italian>
+            <Polish>Tłumienie głośności</Polish>
+            <Russian>Глушение звука</Russian>
+            <Portuguese>Abafamento de Volume</Portuguese>
+            <Czech>Snížení hlasitosti</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
+            <German>Lautstärke Ohrenstöpsel</German>
             <Japanese>耳栓時の音量</Japanese>
             <Chinesesimp>耳塞时音量</Chinesesimp>
             <Chinese>耳塞時音量</Chinese>
             <Italian>Volume tappi per le orecchie</Italian>
+            <Polish>Głośność Stoperów</Polish>
+            <Russian>Громкость в берушах</Russian>
+            <Portuguese>Volume do Protetor Auricular</Portuguese>
+            <French>Volume bouchons anti bruit</French>
+            <Czech>Hlasitost se špunty</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
+            <German>Lautstärke wenn man Ohrenstöpsel benutzt</German>
             <Japanese>耳栓使用時の音量を決定します。</Japanese>
             <Chinesesimp>决定带上耳塞时的音量</Chinesesimp>
             <Chinese>使用耳塞時音量</Chinese>
             <Italian>Volume audio quandi si indossano i tappi per le orecchie.</Italian>
+            <Polish>Głośność podczas używania stoperów.</Polish>
+            <Russian>Громкость при одетых берушах</Russian>
+            <Portuguese>Volume quando estiver utilizando um Protetor Auricular</Portuguese>
+            <French>Volume audio perçu par les joueurs portant des bouchons anti bruit.</French>
+            <Czech>Hlasitost při používání špuntů do uší.</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
+            <German>Lautstärke Bewusstlosigkeit</German>
             <Japanese>気絶時の音量</Japanese>
             <Chinesesimp>无意识时音量</Chinesesimp>
             <Chinese>昏迷時音量</Chinese>
             <Italian>Volume quando incoscente</Italian>
+            <Polish>Nieprzytomna Głośność</Polish>
+            <Russian>Громкость без сознания</Russian>
+            <Portuguese>Volume Inconsciente</Portuguese>
+            <French>Volume inconscience</French>
+            <Czech>Hlasitost při ztrátě vědomí</Czech>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
+            <German>Lautstärke während man Bewusstlos ist</German>
             <Japanese>気絶時の音量を決定します。</Japanese>
             <Chinesesimp>决定处于无意识时的音量</Chinesesimp>
             <Chinese>昏迷時使用耳塞的音量</Chinese>
             <Italian>Volume quando incoscente.</Italian>
+            <Polish>Głośność podczas bycia nieprzytomnym.</Polish>
+            <Russian>Громкость при потере сознания</Russian>
+            <Portuguese>Volume enquanto inconsciente</Portuguese>
+            <French>Volume perçu par les joueurs inconscients.</French>
+            <Czech>Hlasitost během ztráty vědomí.</Czech>
         </Key>
     </Package>
 </Project>

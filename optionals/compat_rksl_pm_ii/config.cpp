@@ -6,9 +6,9 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"RKSL_PMII"};
+        requiredAddons[] = {"RKSL_PMII", "RKSL_PMII_525"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg"};
+        authors[] = {"Ruthberg", "Dedmen"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

@@ -19,8 +19,8 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
-["blockSprint", false, []] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
+["blockSprint", false, ["ace_advanced_fatigue", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
@@ -37,6 +37,11 @@
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setAnimSpeedCoef), {
+    params ["_object", "_set"];
+    _object setAnimSpeedCoef _set;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setCaptive), {
@@ -83,6 +88,11 @@
     _vehicle engineOn false;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setMass), {
+    params ["_object", "_mass"];
+    _object setMass _mass;
+}] call CBA_fnc_addEventHandler;
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {
@@ -111,8 +121,8 @@ if (isServer) then {
 [QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
 [QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
-["ace_loadPersonEvent", FUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
-["ace_unloadPersonEvent", FUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_loadPersonEvent", LINKFUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_unloadPersonEvent", LINKFUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
@@ -135,8 +145,22 @@ if (isServer) then {
 [QGVAR(playActionNow), {(_this select 0) playActionNow (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
-[QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
+
+[QGVAR(setVanillaHitPointDamage), {
+    params ["_object", "_hitPointAnddamage"];
+    private _damageDisabled = !isDamageAllowed _object;
+
+    if (_damageDisabled) then {
+        _object allowDamage true;
+    };
+
+    _object setHitPointDamage _hitPointAnddamage;
+
+    if (_damageDisabled) then {
+        _object allowDamage false;
+    };
+}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
@@ -150,6 +174,7 @@ if (isServer) then {
     [QGVAR(setShotParents), {(_this select 0) setShotParents [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
     ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
+    [QGVAR(claimSafe), LINKFUNC(claimSafeServer)] call CBA_fnc_addEventHandler;
 };
 
 
@@ -180,7 +205,7 @@ if (isServer) then {
 // Check files, previous installed version etc.
 //////////////////////////////////////////////////
 
-private _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
+private _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "versionStr");
 private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 // check previous version number from profile
@@ -288,7 +313,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         if (isNull player) exitWith {true};
         private _UAV = getConnectedUAV player;
         if (!alive player) then {_UAV = objNull;};
-        private _position = (UAVControl _UAV) param [1, ""];
+        private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
         switch (toLower _position) do {
@@ -434,14 +459,14 @@ GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
 
 // Register localizations for the Keybinding categories
-["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Equipment", LLSTRING(ACEKeybindCategoryEquipment)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Common", LLSTRING(ACEKeybindCategoryCommon)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Weapons", LLSTRING(ACEKeybindCategoryWeapons)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Movement", LLSTRING(ACEKeybindCategoryMovement)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Scope Adjustment", LLSTRING(ACEKeybindCategoryScopeAdjustment)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Vehicles", LLSTRING(ACEKeybindCategoryVehicles)] call CBA_fnc_registerKeybindModPrettyName;
 
-["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"), {
+["ACE3 Equipment", QGVAR(openDevice), LLSTRING(toggleHandheldDevice), {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 3);
@@ -450,7 +475,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, false, false]], false] call CBA_fnc_addKeybind;  //Home Key
 
-["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"), {
+["ACE3 Equipment", QGVAR(closeDevice), LLSTRING(closeHandheldDevice), {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 4);
@@ -459,7 +484,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, true, false]], false] call CBA_fnc_addKeybind;  //CTRL + Home Key
 
-["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"), {
+["ACE3 Equipment", QGVAR(cycleDevice), LLSTRING(cycleHandheldDevices), {
     [1] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     private _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);

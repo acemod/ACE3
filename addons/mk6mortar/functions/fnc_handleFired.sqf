@@ -21,22 +21,13 @@
  * Public: No
  */
 
-params ["_vehicle", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
-
-if (GVAR(useAmmoHandling) && {_vehicle getVariable [QGVAR(initialized),false] && !(_vehicle getVariable [QGVAR(exclude),false])}) then {
-    // if !(_vehicle getVariable [QGVAR(exclude),false]) then {
-        _vehicle removeMagazineGlobal (_vehicle magazinesTurret [0] select 0);
-        TRACE_1("",_vehicle magazinesTurret [0]);
-    // };
-};
-
-if (!GVAR(airResistanceEnabled)) exitWith {};
+params ["_vehicle", "", "", "", "", "", "_projectile"];
 
 // Large enough distance to not simulate any wind deflection
 if (_vehicle distance ACE_player > 8000) exitWith {false};
 
 //AI will have no clue how to use:
-_shooterMan = gunner _vehicle;
+private _shooterMan = gunner _vehicle;
 if (!([_shooterMan] call EFUNC(common,isPlayer))) exitWith {false};
 
 //Calculate air density:
@@ -52,8 +43,8 @@ TRACE_5("FiredWeather",_temperature,_pressure,_relativeHumidity,_airDensity,_rel
 //powder effects:
 private _newMuzzleVelocityCoefficent = (((_temperature + 273.13) / 288.13 - 1) / 40 + 1);
 if (_newMuzzleVelocityCoefficent != 1) then {
-    _bulletVelocity = velocity _projectile;
-    _bulletSpeed = vectorMagnitude _bulletVelocity;
+    private _bulletVelocity = velocity _projectile;
+    private _bulletSpeed = vectorMagnitude _bulletVelocity;
     _bulletVelocity = (vectorNormalized _bulletVelocity) vectorMultiply (_bulletSpeed * _newMuzzleVelocityCoefficent);
     _projectile setVelocity _bulletVelocity;
 };
@@ -71,7 +62,6 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _args set[2, CBA_missionTime];
 
     private _bulletVelocity = velocity _shell;
-    private _bulletSpeed = vectorMagnitude _bulletVelocity;
 
     private _trueVelocity = _bulletVelocity vectorDiff wind;
     private _trueSpeed = vectorMagnitude _trueVelocity;

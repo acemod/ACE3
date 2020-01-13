@@ -8,7 +8,7 @@
             <Russian>Изменить размер окна инвентаря</Russian>
             <Czech>Zvětšit zobrazení inventáře</Czech>
             <Polish>Powiększ UI ekwipunku</Polish>
-            <French>Agrandir la taille d'affichage de l'inventaire</French>
+            <French>Agrandir l'affichage de l'inventaire</French>
             <Hungarian>Legyen a felszerelés menüje nagyobb</Hungarian>
             <Italian>Ingrandisci il menù inventario</Italian>
             <Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
@@ -24,7 +24,7 @@
             <Russian>Обычно, размер окна инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря, не увеличивая размеры шрифтов, так что отображется большее количество строк.</Russian>
             <Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
             <Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
-            <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de lignes.</French>
+            <French>En principe, l'affichage de l'inventaire est dimensionné par la taille de l'IU. Cette option permet d'agrandir l'IU de l'inventaire, mais sans augmenter la taille des polices, ce qui permet d'afficher plus de lignes.</French>
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni dell'interfaccia. Questa opzione permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
@@ -47,6 +47,7 @@
             <Korean>가방</Korean>
             <Chinesesimp>背包</Chinesesimp>
             <Chinese>背包</Chinese>
+            <Turkish>Çantalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -62,6 +63,7 @@
             <Korean>헬멧</Korean>
             <Chinesesimp>头盔</Chinesesimp>
             <Chinese>頭盔</Chinese>
+            <Turkish>Kasklar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -77,6 +79,7 @@
             <Korean>안경</Korean>
             <Chinesesimp>眼镜</Chinesesimp>
             <Chinese>眼鏡</Chinese>
+            <Turkish>Gözlükler</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -92,6 +95,7 @@
             <Korean>복장</Korean>
             <Chinesesimp>服装</Chinesesimp>
             <Chinese>服裝</Chinese>
+            <Turkish>Üniformalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -107,6 +111,7 @@
             <Korean>조끼</Korean>
             <Chinesesimp>背心</Chinesesimp>
             <Chinese>背心</Chinese>
+            <Turkish>Yelekler</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -122,6 +127,7 @@
             <Korean>수류탄</Korean>
             <Chinesesimp>手榴弹</Chinesesimp>
             <Chinese>手榴彈</Chinese>
+            <Turkish>Bombalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -137,6 +143,7 @@
             <Korean>의료</Korean>
             <Chinesesimp>医疗</Chinesesimp>
             <Chinese>醫療</Chinese>
+            <Turkish>Sağlık</Turkish>
         </Key>
     </Package>
 </Project>

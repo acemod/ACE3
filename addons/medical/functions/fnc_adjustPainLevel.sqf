@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Interface to allow external modules to safely adjust pain levels.
+ * Public interface to allow external modules to safely adjust pain levels.
+ * Added pain can be positive or negative (Note: ignores painCoefficient setting)
  *
  * Arguments:
  * 0: The patient <OBJECT>
@@ -17,18 +18,11 @@
  */
 
 params ["_unit", "_addedPain"];
-//Only run on local units:
-if (!local _unit) exitWith {ERROR("unit is not local");};
-TRACE_3("ACE_DEBUG: adjustPainLevel Called",_unit, _pain, _addedPain);
 
-//Ignore if medical system disabled:
-if (GVAR(level) == 0) exitWith {};
+if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit); };
 
-private _pain = ((_unit getVariable [QGVAR(pain), 0]) + _addedPain) max 0;
+private _pain = GET_PAIN(_unit);
 
-_unit setVariable [QGVAR(pain), _pain];
+_pain = 0 max (_pain + _addedPain) min 1;
 
-//Start up the vital watching (if not already running)
-[_unit] call FUNC(addVitalLoop);
-
-_pain;
+_unit setVariable [VAR_PAIN, _pain];

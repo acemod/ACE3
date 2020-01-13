@@ -34,7 +34,7 @@ private _delay = [45, 30] select ([_unit] call EFUNC(common,isEngineer) || {[_un
     [_wire],
     {(_this select 0) call FUNC(dismountSuccess)},
     {},
-    localize "STR_ACE_UNROLLWIRE",
+    LLSTRING(UnrollWire),
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

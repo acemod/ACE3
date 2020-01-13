@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ir0n1E
- * Calculate mass of weapon an items.
+ * Calculate mass of weapon and items.
  *
  * Arguments:
  * 0: Weapon <STRING>

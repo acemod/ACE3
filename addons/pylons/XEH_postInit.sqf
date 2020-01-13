@@ -1,34 +1,38 @@
 #include "script_component.hpp"
 
-private _filter = "isClass (_x >> 'Components' >> 'TransportPylonsComponent') && {(getNumber (_x >> 'scope')) > 0}";
-GVAR(aircraftWithPylons) = (_filter configClasses (configFile >> "CfgVehicles")) apply {configName _x};
-{
-    [_x, "init", {
-        params ["_aircraft"];
+GVAR(aircraftWithPylons) = [];
 
-        private _loadoutAction = [
-            QGVAR(loadoutAction),
-            localize LSTRING(ConfigurePylons),
-            "",
-            {[_target] call FUNC(showDialog)},
-            {
-                if (!GVAR(enabledFromAmmoTrucks)) exitWith {false};
+GVAR(loadoutAction) = [ // create action
+    QGVAR(loadoutAction),
+    localize LSTRING(ConfigurePylons),
+    "",
+    {[_target] call FUNC(showDialog)},
+    {
+        if (!GVAR(enabledFromAmmoTrucks)) exitWith {false};
 
-                private _vehicles = nearestObjects [_target, ["Air", "LandVehicle", "Slingload_base_F", "ReammoBox_F"], GVAR(searchDistance) + 10];
-                private _isRearmVehicle = if (["ace_rearm"] call EFUNC(common,isModLoaded)) then {
-                    _vehicles findIf {[_x] call EFUNC(rearm,isSource)} != -1;
-                } else {
-                    private _cfgVehicle = configFile >> "CfgVehicles";
-                    _vehicles findIf {getNumber (_cfgVehicle >> typeOf _x >> "transportAmmo") > 0} != -1;
-                };
-                
-                (_isRearmVehicle && {[ace_player, _target] call FUNC(canConfigurePylons)})
-            }
-        ] call EFUNC(interact_menu,createAction);
+        private _vehicles = nearestObjects [_target, ["Air", "LandVehicle", "Slingload_base_F", "ReammoBox_F"], GVAR(searchDistance) + 10];
+        private _isRearmVehicle = if (["ace_rearm"] call EFUNC(common,isModLoaded)) then {
+            _vehicles findIf {[_x] call EFUNC(rearm,isSource)} != -1;
+        } else {
+            private _cfgVehicle = configFile >> "CfgVehicles";
+            _vehicles findIf {getNumber (_cfgVehicle >> typeOf _x >> "transportAmmo") > 0} != -1;
+        };
+        
+        (_isRearmVehicle && {[ace_player, _target] call FUNC(canConfigurePylons)})
+    }
+] call EFUNC(interact_menu,createAction);
 
-        [_aircraft, 0, ["ACE_MainActions"], _loadoutAction] call EFUNC(interact_menu,addActionToObject);
-    }, false, [], true] call CBA_fnc_addClassEventHandler;
-} forEach GVAR(aircraftWithPylons);
+["Air", "init", { // on air vehicle init, add action to class if has pylons
+    params ["_vehicle"];
+    private _typeOf = typeOf _vehicle;
+
+    if (_typeOf in GVAR(aircraftWithPylons)) exitWith {};
+    if (!isClass (configFile >> "CfgVehicles" >> _typeOf >> 'Components' >> 'TransportPylonsComponent')) exitWith {};
+
+    GVAR(aircraftWithPylons) pushBack _typeOf;
+    [_typeOf, 0, ["ACE_MainActions"], GVAR(loadoutAction)] call EFUNC(interact_menu,addActionToClass);
+}, true, ["ParachuteBase"], true] call CBA_fnc_addClassEventHandler;
+
 
 [QGVAR(setPylonLoadOutEvent), {
     params ["_aircraft", "_pylonIndex", "_pylon", "_turret", "_weaponToRemove"];

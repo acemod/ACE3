@@ -6,6 +6,114 @@ class CfgAmmo {
         timeToLive=6;
     };
 
+    class ShotgunBase;
+
+    class B_12Gauge_Pellets_Submunition: BulletBase { //#00 Buckshot
+        //vanilla values have been left as comments for reference purposes
+        caliber = 0.525; //penetration of ~3mm RHA, ~9.6mm metal
+        //caliber = 1; //too high, ~5.7mm of RHA (380*1*15/1000=5.7), ~18.25 metal
+        //cost = 1;
+        //hit = 20;
+        //simulationStep = 0.0001;
+        //cartridge = "";
+        //submunitionAmmo = "B_12Gauge_Pellets_Submunition_Deploy";
+        submunitionConeType[] = {"poissondisc", 9};  //#00 Buckshot generally has 9 pellets per shell
+        //submunitionConeType[] = {"poissondisc", 18};
+        //submunitionConeAngle = 0.8;
+        //triggerSpeedCoef[] = {0.85, 1};
+        triggerTime = 0.008; // Shot takes ~5-15 feet to start spreading out and the vanilla triggerTime is too short to allow that
+        //triggerTime = 0.001;
+    };
+    class B_12Gauge_Pellets_Submunition_Deploy: BulletBase {
+        airFriction = -0.0030;
+        //airFriction = -0.0067;
+        caliber = 0.525;
+        hit = 2.55; //vanilla hit is way too high
+        //hit = 6;
+        //indirectHit = 0;
+        //indirectHitRange = 0;
+        //typicalSpeed = 360;
+        //deflecting = 35;
+    };
+
+    class B_12Gauge_Pellets: ShotgunBase { //This doesn't seem to be used for anything, but I want to standardize the caliber with the other pellet classes.
+        caliber = 0.525; //3mm RHA, probably still too high though as RHA is hardened.
+    };
+
+    class ACE_12Gauge_Pellets_Submunition_No0_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.5;
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy";
+        submunitionConeType[] = {"poissondisc", 9};
+        submunitionConeAngle = 0.81;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0033;
+        caliber = 0.5;
+        hit = 2.27;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No1_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.475;
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy";
+        submunitionConeType[] = {"poissondisc", 11};
+        submunitionConeAngle = 0.83;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0038;
+        caliber = 0.475;
+        hit = 1.86;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No2_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.45;
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy";
+        submunitionConeType[] = {"poissondisc", 14};
+        submunitionConeAngle = 0.85;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0048;
+        caliber = 0.45;
+        hit = 1.46;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No3_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.425;
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy";
+        submunitionConeType[] = {"poissondisc", 18};
+        submunitionConeAngle = 0.87;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0067;
+        caliber = 0.425;
+        hit = 1.13;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No4_Buck: B_12Gauge_Pellets_Submunition {
+        caliber = 0.4;
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy";
+        submunitionConeType[] = {"poissondisc", 21};
+        submunitionConeAngle = 0.89;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        airFriction = -0.0085;
+        caliber = 0.4;
+        hit = 0.97;
+    };
+    class ACE_12Gauge_Pellets_Submunition_No4_Bird: B_12Gauge_Pellets_Submunition {
+        caliber = 0.2;
+        hit = 3;
+        submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy";
+        submunitionConeType[] = {"poissondisc", 135};
+        submunitionConeAngle = 1.1;
+        triggerSpeedCoef[] = {0.8, 1};
+    };
+    class ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
+        caliber = 0.2;
+        airFriction = -0.0800;
+        hit = 0.15;
+    };
+
+    class B_12Gauge_Slug: BulletBase {
+        //caliber = 3; //too high, ~20mm of RHA (450*3*15/1000=20), ~64mm metal
+        caliber = 1.037; //~7mm RHA, ~22.4mm metal, probably still too high though as RHA is hardened.
+    };
+
     class B_556x45_Ball : BulletBase {
         airFriction=-0.00130094;
         tracerScale = 1;
@@ -67,18 +175,18 @@ class CfgAmmo {
     class ACE_B_556x45_Ball_Tracer_Dim: B_556x45_Ball_Tracer_Red {
         nvgOnly = 1;
     };
-    class B_545x39_Ball_F : BulletBase {
-        airFriction=-0.00119458;
-        ACE_caliber=5.588;
-        ACE_bulletLength=21.59;
-        ACE_bulletMass=3.42792;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.168};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ICAO";
-        ACE_dragModel=7;
-        ACE_muzzleVelocities[]={735, 883, 892};
-        ACE_barrelLengths[]={206.5, 414.02, 508.0};
+    class B_545x39_Ball_F: BulletBase {
+        airFriction = -0.001195;
+        ACE_caliber = 5.6; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf
+        ACE_bulletLength = 21.59;
+        ACE_bulletMass = 3.43;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[] = {0.168};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {743, 848, 891, 900}; // at 21°C, at 15°C {735, 840, 883, 892} according with the AKS initSpeed
+        ACE_barrelLengths[] = {210, 314, 415, 508.0}; // respectively {AKS74U / AK105,AK12K / AK74 / default}
     };
     class B_56x15_dual: BulletBase {
         tracerScale = 0.5;
@@ -290,7 +398,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Berger_Hybrid_OTM : B_762x51_Ball {
-        airFriction=-0.00055262;
+        airFriction=-0.00053638;
         caliber=2.0;
         hit=19;
         typicalSpeed=853;
@@ -337,18 +445,18 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={735, 770, 809, 838};
         ACE_barrelLengths[]={406.4, 508.0, 604.5, 736.6};
     };
-    class B_762x39_Ball_F : BulletBase {
-        airFriction=-0.00154815;
-        ACE_caliber=7.823;
-        ACE_bulletLength=28.956;
-        ACE_bulletMass=7.9704;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.275};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ICAO";
-        ACE_dragModel=1;
-        ACE_muzzleVelocities[]={650, 716, 750};
-        ACE_barrelLengths[]={254.0, 414.02, 508.0};
+    class B_762x39_Ball_F: BulletBase {
+        airFriction = -0.001548;
+        ACE_caliber = 7.92; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf
+        ACE_bulletLength = 28.956;
+        ACE_bulletMass = 7.97;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[] = {0.275};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {658, 678, 723, 743, 753}; // at 21°C, at 15°C {650, 670, 715, 735, 745} according with the AKM,AK12,AK12U,RPK initSpeed
+        ACE_barrelLengths[] = {254, 314, 415, 520, 590}; // respectively {default / AK104,AK15K / AK47,AKM,AK103,AK15 / SKS / RPK}
     };
     class B_9x21_Ball : BulletBase {
         airFriction=-0.00211064;
@@ -604,15 +712,17 @@ class CfgAmmo {
         ACE_barrelLengths[]={304.8, 406.4, 609.6};
     };
     class B_570x28_Ball: BulletBase {
-        ACE_caliber = 5.7;
+        ACE_caliber = 5.7; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf
         ACE_bulletLength = 21.6; // http://blog.thejustnation.org/2011/04/5-7x28mm-ammo-review/
         ACE_bulletMass = 2; // based on the SS190
-        ACE_ballisticCoefficients[] = {0.177}; //http://m.delphiforums.com/autogun/messages/5267/7
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.084}; // https://www.thefirearmblog.com/blog/2016/10/24/modern-personal-defense-weapon-calibers-4-6x30mm-hk/
         ACE_velocityBoundaries[] = {};
-        ACE_standardAtmosphere = "ASM"; // 50/50 chance to get it right
+        ACE_standardAtmosphere = "ICAO";
         ACE_dragModel = 7;
-        ACE_muzzleVelocities[] = {716,776};
-        ACE_barrelLengths[] = {264,407};
+        ACE_muzzleVelocities[] = {716, 776}; // at 21°C, 715-775 m/s at 15°C according with the 50Rnd_570x28_SMG_03 initSpeed
+        ACE_barrelLengths[] = {264, 407};
+        airFriction = -0.002619; // default BI value -0.001412
     };
     class B_19mm_HE: BulletBase {
         tracerScale = 1;

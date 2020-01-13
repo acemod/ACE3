@@ -1,4 +1,3 @@
-
 PREP(clearDisplay);
 PREP(convertToTexturesDegree);
 PREP(convertToTexturesDistance);

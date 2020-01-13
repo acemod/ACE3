@@ -10,6 +10,10 @@
             <Chinese>次世代輕型反坦克導彈發射器追蹤目標 (按住)</Chinese>
             <Polish>Śledzenie Celu NLAW (Przytrzymaj)</Polish>
             <Korean>NLAW 목표 추적 (누름유지)</Korean>
+            <Russian>NLAW наведение на цель (Удерживать)</Russian>
+            <Portuguese>NLAW Rastrear Alvo (Segurar)</Portuguese>
+            <French>NLAW suivre la cible (maintenir)</French>
+            <Czech>NLAW sledování cíle (držet)</Czech>
         </Key>
         <Key ID="STR_ACE_NLAW_directAttack">
             <English>Direct Attack</English>
@@ -20,6 +24,10 @@
             <Chinese>直射模式</Chinese>
             <Polish>Bezpośredni atak</Polish>
             <Korean>직접 사격</Korean>
+            <Russian>Прямая атака</Russian>
+            <Portuguese>Ataque Direto</Portuguese>
+            <French>Attaque directe</French>
+            <Czech>Přímý útok</Czech>
         </Key>
         <Key ID="STR_ACE_NLAW_overflyTopAttack">
             <English>Overfly Top Attack</English>
@@ -30,6 +38,10 @@
             <Chinese>攻頂模式</Chinese>
             <Polish>Atak z góry</Polish>
             <Korean>탑어택</Korean>
+            <Russian>Атака сверху</Russian>
+            <Portuguese>Ataque por cima</Portuguese>
+            <French>Attaque par le haut</French>
+            <Czech>Útok zvrchu při přeletu</Czech>
         </Key>
     </Package>
 </Project>
