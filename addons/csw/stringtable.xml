@@ -81,7 +81,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
-            German>Verbinde %1</German>
+            <German>Verbinde %1</German>
             <Portuguese>Conectar %1</Portuguese>
             <French>Connecter %1</French>
             <Japanese>%1 を接続</Japanese>
@@ -93,7 +93,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
             <English>Advanced assembly</English>
-            German>Erweiterter Zusammenbau</German>
+            <German>Erweiterter Zusammenbau</German>
             <Portuguese>Montagem Avançada</Portuguese>
             <French>Assemblage avancé</French>
             <Japanese>アドバンスド設置</Japanese>
@@ -105,7 +105,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
             <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
-            German>Benutze ACE um unterstützte statische Waffen zu montieren/demontieren. Geladene Munition ist auf ein einzelnes Magazin reduziert.</German>
+            <German>Benutze ACE um unterstützte statische Waffen zu montieren/demontieren. Geladene Munition ist auf ein einzelnes Magazin reduziert.</German>
             <Portuguese>Usar o ACE para Montar/Desmontar armas estáticas suportadas. Munição carregada é reduzida para um único carregador.</Portuguese>
             <French>Utilise ACE pour l'assemblage/le désassemblage des armes statiques supportées.\nLes munitions chargées sont réduites à un seul chargeur.</French>
             <Japanese>対応している設置型火器に ACE3 の設置と解体を使用します。装填済みの弾倉は 1 つの弾倉に減少します。</Japanese>
@@ -117,7 +117,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save extra ammo</English>
-            German>Spare extra Munition</German>
+            <German>Spare extra Munition</German>
             <Portuguese>Economizar munição extra</Portuguese>
             <French>Économiser les munitions supplémentaires</French>
             <Japanese>過剰弾薬を保持</Japanese>
@@ -129,7 +129,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
             <English>Store extra magazines next to static weapon</English>
-            German>Lager extra Magazine neben der statischen Waffe</German>
+            <German>Lager extra Magazine neben der statischen Waffe</German>
             <Portuguese>Carregar munições extras próximo à arma estática</Portuguese>
             <French>Range les chargeurs supplémentaires à côté de l'arme statique.</French>
             <Japanese>次の設置型火器用に過剰弾薬を保持します。</Japanese>
@@ -141,7 +141,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
-            German>Munitionsmanagement</German>
+            <German>Munitionsmanagement</German>
             <Portuguese>Manipulação de Munições</Portuguese>
             <French>Manipulation des munitions</French>
             <Japanese>弾薬の処理</Japanese>
@@ -153,7 +153,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
-            German>Erlaubt es Magazine zu- und entladen.</German>
+            <German>Erlaubt es Magazine zu- und entladen.</German>
             <Portuguese>Permite carregamento e descarregamento de munições</Portuguese>
             <French>Définit qui peut charger et décharger des chargeurs.</French>
             <Japanese>弾薬の装填と除去を許可します。</Japanese>
@@ -165,7 +165,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
-            German>Interaktionszeit Koeffizient</German>
+            <German>Interaktionszeit Koeffizient</German>
             <Portuguese>Coeficiente de tempo para a interação</Portuguese>
             <French>Coefficient du temps d'interaction</French>
             <Japanese>インタラクション時間係数</Japanese>
@@ -177,7 +177,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
-            German>Skaliert die Zeit die benötigt wird um statische Waffen aufzubauen und nachzuladen.</German>
+            <German>Skaliert die Zeit die benötigt wird um statische Waffen aufzubauen und nachzuladen.</German>
             <Portuguese>Escala o tempo requerido para montar e recarregar armas estáticas.</Portuguese>
             <French>Définit l'échelle de temps nécessaire à l'assemblage et au rechargement des armes statiques.</French>
             <Japanese>設置型火器の設置と再装填時間を管理できます。</Japanese>
