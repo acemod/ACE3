@@ -46,6 +46,7 @@
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Wake Up Chance Boost</English>
             <Polish>Zwiększenie szansy na wybudzenie po podaniu epinefryny</Polish>
+            <Chinese>腎上腺素甦醒率加成</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
