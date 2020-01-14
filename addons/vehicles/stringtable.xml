@@ -16,6 +16,7 @@
             <Korean>속도 제한기 켜짐</Korean>
             <Chinesesimp>启用速度限制</Chinesesimp>
             <Chinese>啟用速度限制</Chinese>
+            <Turkish>Hız Sabitleyeciı Açık</Turkish>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -32,6 +33,7 @@
             <Korean>속도 제한기 꺼짐</Korean>
             <Chinesesimp>停用速度限制</Chinesesimp>
             <Chinese>停用速度限制</Chinese>
+            <Turkish>Hız Sabitleyeci Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>
@@ -45,6 +47,7 @@
             <Czech>Rychlostní omezení</Czech>
             <Chinese>速限</Chinese>
             <French>Vitesse limite</French>
+            <Turkish>Hız Limiti</Turkish>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -61,6 +64,7 @@
             <Korean>속도 제한기</Korean>
             <Chinesesimp>速度限制器</Chinesesimp>
             <Chinese>速度限制器</Chinese>
+            <Turkish>Hız Sabitleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Vehicles_IncreaseSpeedLimit">
             <English>Increase Speed Limit</English>
@@ -98,6 +102,7 @@
             <Czech>Vypni automatické vypnutí motoru</Czech>
             <Chinese>關閉引擎自動熄火</Chinese>
             <French>Désactiver l'arrêt automatique du moteur</French>
+            <Polish>Wyłącz automatyczne wyłączanie silnika</Polish>
             <Italian>Disattivare lo spegnimento automatico del motore</Italian>
         </Key>
         <Key ID="STR_ACE_Vehicles_SettingKeepEngineRunningDesc">
@@ -111,6 +116,7 @@
             <Chinese>避免離開載具時自動熄火。</Chinese>
             <Italian>Impedire lo spegnimento automatico del motore quando si esce dai veicoli.</Italian>
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
+            <Polish>Zapobiegaj automatycznemu wyłączaniu silnika podczas wychodzenia z pojazdu.</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicles_HideEjectAction">
             <English>Hide Eject Action</English>

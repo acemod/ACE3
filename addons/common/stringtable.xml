@@ -46,6 +46,7 @@
             <Japanese>アドバンスド</Japanese>
             <Korean>고급</Korean>
             <Chinese>進階</Chinese>
+            <Turkish>Gelişmiş</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
@@ -62,6 +63,7 @@
             <Korean>저장</Korean>
             <Chinese>儲存</Chinese>
             <Chinesesimp>储存</Chinesesimp>
+            <Turkish>Kaydet</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Cancel">
             <English>Cancel</English>
@@ -94,6 +96,7 @@
             <Korean>ACE 옵션</Korean>
             <Chinese>ACE設定選項</Chinese>
             <Chinesesimp>ACE设定选项</Chinesesimp>
+            <Turkish>ACE Ayarları</Turkish>
         </Key>
         <!-- These are cardinal directions, in case you didn't guess. -->
         <Key ID="STR_ACE_Common_N">
@@ -111,6 +114,7 @@
             <Korean>북</Korean>
             <Chinese>北</Chinese>
             <Chinesesimp>北</Chinesesimp>
+            <Turkish>K</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NNE">
             <English>NNE</English>
@@ -143,6 +147,7 @@
             <Korean>북동</Korean>
             <Chinese>東北</Chinese>
             <Chinesesimp>东北</Chinesesimp>
+            <Turkish>KD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ENE">
             <English>ENE</English>
@@ -175,6 +180,7 @@
             <Korean>동</Korean>
             <Chinese>東</Chinese>
             <Chinesesimp>东</Chinesesimp>
+            <Turkish>D</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ESE">
             <English>ESE</English>
@@ -207,6 +213,7 @@
             <Korean>남동</Korean>
             <Chinese>東南</Chinese>
             <Chinesesimp>东南</Chinesesimp>
+            <Turkish>GD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_SSE">
             <English>SSE</English>
@@ -239,6 +246,7 @@
             <Korean>남</Korean>
             <Chinese>南</Chinese>
             <Chinesesimp>南</Chinesesimp>
+            <Turkish>G</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_SSW">
             <English>SSW</English>
@@ -271,6 +279,7 @@
             <Korean>남서</Korean>
             <Chinese>西南</Chinese>
             <Chinesesimp>西南</Chinesesimp>
+            <Turkish>GB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_WSW">
             <English>WSW</English>
@@ -303,6 +312,7 @@
             <Korean>서</Korean>
             <Chinese>西</Chinese>
             <Chinesesimp>西</Chinesesimp>
+            <Turkish>B</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_WNW">
             <English>WNW</English>
@@ -335,6 +345,7 @@
             <Korean>북서</Korean>
             <Chinese>西北</Chinese>
             <Chinesesimp>西北</Chinesesimp>
+            <Turkish>KB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NNW">
             <English>NNW</English>
@@ -415,6 +426,7 @@
             <Korean>알 수 없음</Korean>
             <Chinese>未知的</Chinese>
             <Chinesesimp>未知的</Chinesesimp>
+            <Turkish>Bilinmeyen</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Normal">
             <English>Normal</English>
@@ -430,6 +442,7 @@
             <Japanese>通常</Japanese>
             <Korean>보통</Korean>
             <Chinese>普通</Chinese>
+            <Turkish>Normal</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -446,6 +459,7 @@
             <Korean>무음</Korean>
             <Chinese>無語音</Chinese>
             <Chinesesimp>没声音</Chinesesimp>
+            <Turkish>Ses yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsAction">
             <English>Check PBO Action</English>
@@ -467,7 +481,9 @@
             <French>Définit l'action à effectuer si un joueur n'a pas les bons PBOs.</French>
             <Chinese>設定當玩家有錯誤的PBO檔案時要如何處置。</Chinese>
             <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
+            <Polish>Określa akcję, która ma być podjęta, jeśli gracz nie ma właściwych PBO.</Polish>
             <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
+            <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -489,7 +505,9 @@
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
+            <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
             <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
+            <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -511,7 +529,9 @@
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Chinese>定義哪些插件是允許使用的。</Chinese>
             <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
+            <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
             <Japanese>許可するアドオンを定義します。</Japanese>
+            <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -654,6 +674,7 @@
             <Portuguese>Luz da lanterna/laser da arma persistente</Portuguese>
             <French>Rémanence du pointeur laser/de la lampe torche</French>
             <Czech>Perzistentní laser/baterka na zbrani</Czech>
+            <Spanish>Punto láser/Linterna persistente en arma</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
@@ -668,6 +689,7 @@
             <Portuguese>Ativa a luz da arma ao trocar de arma, entrar/sair de um veículo. Caso tenha sido acesa anteriormente.</Portuguese>
             <French>Si le pointeur laser/la lampe torche est allumé(e), cette option permet de le/la réallumer automatiquement après un changement d'arme, ou après une entrée/sortie d'un véhicule.</French>
             <Czech>Pokud jsou zaplé, zapíná laser/baterku po přepnutí zbraně nebo po nástupu/výstupu z vozidla.</Czech>
+            <Spanish>Habilita la luz en el arma después de cambiarla o tras la entrada/salida de un vehículo si estaba préviamente habilitada</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -997,6 +1019,7 @@
             <Chinese>一直</Chinese>
             <Italian>Sempre</Italian>
             <Czech>Vždy</Czech>
+            <Polish>Zawsze</Polish>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1086,6 +1109,7 @@
             <Chinese>確認</Chinese>
             <Italian>Conferma</Italian>
             <Czech>Potvrdit</Czech>
+            <Polish>Potwierdź</Polish>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1098,6 +1122,7 @@
             <Chinese>從不</Chinese>
             <Italian>Mai</Italian>
             <Czech>Nikdy</Czech>
+            <Polish>Nigdy</Polish>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1279,6 +1304,7 @@
             <Portuguese>Permite diminuir volume da música</Portuguese>
             <French>Permission d'abaisser la musique</French>
             <Czech>Povolit snížení hlasitosti hudby</Czech>
+            <Spanish>Permitir reducir el volumen de la música</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1293,6 +1319,7 @@
             <Portuguese>Permite que Scripts do ACE diminuam o volume da música.</Portuguese>
             <French>Autorise les scripts ACE à baisser le volume de la musique.</French>
             <Czech>Povolit ACE skriptům snížit hlasitost hudby</Czech>
+            <Spanish>Permitir a los scripts de ACE reducir el volumen la música</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1306,6 +1333,7 @@
             <Portuguese>Bandeira (ACE - Preto)</Portuguese>
             <French>Drapeau (ACE - Noir)</French>
             <Czech>Vlajka (ACE - Černá)</Czech>
+            <Spanish>Bandera (ACE - Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
             <English>Flag (ACE - White)</English>
@@ -1319,6 +1347,7 @@
             <Portuguese>Bandeira (ACE - Branco)</Portuguese>
             <French>Drapeau (ACE - Blanc)</French>
             <Czech>Vlajka (ACE - Bílá)</Czech>
+            <Spanish>Bandera (ACE - Blanca)</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -1356,8 +1385,11 @@
             <English>Show the action in the self-interaction menu</English>
             <French>Affiche l'action dans le menu d'interaction personnel.</French>
             <Chinese>在自我互動選單內顯示動作</Chinese>
+            <Polish>Pokaż akcje w menu interakcji własnej</Polish>
             <Portuguese>Mostra a ação no menu de auto-interação</Portuguese>
             <Japanese>セルフ インタラクションに動作を表示</Japanese>
+            <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
+            <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
         </Key>
     </Package>
 </Project>

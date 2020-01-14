@@ -14,6 +14,7 @@
             <Russian>Спрятать</Russian>
             <Portuguese>Ocultar</Portuguese>
             <Czech>Skrýt</Czech>
+            <Turkish>Gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonHideTooltip">
             <English>Hide interface</English>
@@ -28,6 +29,7 @@
             <Russian>Скрыть интерфейс</Russian>
             <Portuguese>Oculta a Interface</Portuguese>
             <Czech>Skrýt rozhraní</Czech>
+            <Turkish>Arayüzü gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsText">
             <English>Loadouts</English>
@@ -42,6 +44,7 @@
             <Russian>Комплекты</Russian>
             <Portuguese>Loadouts</Portuguese>
             <Czech>Sady vybavení</Czech>
+            <Turkish>Dışa aktar</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportText">
             <English>Export</English>
@@ -84,6 +87,7 @@
             <Russian>Закрыть</Russian>
             <Portuguese>Fechar</Portuguese>
             <Czech>Zavřít</Czech>
+            <Turkish>Kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_noVirtualItems">
             <English>No virtual item available</English>
@@ -112,6 +116,7 @@
             <Russian>Сохранить</Russian>
             <Portuguese>Salvar</Portuguese>
             <Czech>Uložit</Czech>
+            <Turkish>Kaydet</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip">
             <English>Save the current loadout</English>
@@ -152,6 +157,7 @@
             <Russian>Переименовать</Russian>
             <Portuguese>Renomear</Portuguese>
             <Czech>Přejmenovat</Czech>
+            <Turkish>Yeniden adlandır</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
@@ -180,6 +186,7 @@
             <Russian>Загрузить</Russian>
             <Portuguese>Carregar</Portuguese>
             <Czech>Nahrát</Czech>
+            <Turkish>Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadTooltip">
             <English>Load the selected loadout</English>
@@ -208,6 +215,7 @@
             <Russian>Удалить</Russian>
             <Portuguese>Apagar</Portuguese>
             <Czech>Smazat</Czech>
+            <Turkish>Sil</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteTooltip">
             <English>Delete the selected loadout</English>

@@ -10,6 +10,7 @@
             <Chinese>玩家重擊承受量</Chinese>
             <Italian>Soglia danni critici del giocatore</Italian>
             <Czech>Kritická míra poškození pro hráče</Czech>
+            <Polish>Próg Obrażeń Krytycznych Gracza</Polish>
             <Spanish>Límite de daño crítico al jugador</Spanish>
             <German>Schwelle für kritischen Spielerschaden</German>
         </Key>
@@ -22,6 +23,7 @@
             <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
             <Italian>Imposta la quantità di danno che un giocatore può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození hráč může obdržet než upadne do bezvědomí.</Czech>
+            <Polish>Definiuje ilość obrażeń jaką może przyjąć gracz przed straceniem przytomności.</Polish>
             <Spanish>Fijar la cantidad de daño que un jugador puede recivir antes de caer inconsciente</Spanish>
             <German>Legt die Höhe des Schadens fest, den ein Spieler erhalten kann, bevor er ohnmächtig wird.</German>
         </Key>
@@ -34,6 +36,7 @@
             <Chinese>AI重擊承受量</Chinese>
             <Italian>Soglia dei danni critici dell AI</Italian>
             <Czech>Kritická míra poškození pro AI</Czech>
+            <Polish>Próg Obrażeń Krytycznych AI</Polish>
             <Spanish>Límite de daño crítico de la IA</Spanish>
             <German>Schwelle für kritischen KI-Schaden</German>
         </Key>
@@ -46,6 +49,7 @@
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
             <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
+            <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności</Polish>
             <Spanish>Fijar la cantidad de daño que la IA puede recivir antes de caer inconsciente</Spanish>
             <German>Legt die Höhe des Schadens fest, den eine KI-Einheit erhalten kann, bevor sie ohnmächtig wird.</German>
         </Key>
@@ -188,7 +192,7 @@
             <English>Minor Bruise</English>
             <German>Kleine Prellung</German>
             <Italian>Minima Contusione</Italian>
-            <Russian>Малый ушиб</Russian>
+            <Russian>Слабый ушиб</Russian>
             <French>Petit hématome</French>
             <Polish>Pomniejsze stłuczenie</Polish>
             <Spanish>Contusión menor</Spanish>
@@ -218,7 +222,7 @@
             <English>Large Bruise</English>
             <German>Große Prellung</German>
             <Italian>Alta Contusione</Italian>
-            <Russian>Большой ушиб</Russian>
+            <Russian>Сильный ушиб</Russian>
             <French>Grand hématome</French>
             <Polish>Duże stłuczenie</Polish>
             <Spanish>Contusión severa</Spanish>
@@ -233,7 +237,7 @@
             <English>Crushed tissue</English>
             <German>Quetschverletzung</German>
             <Italian>Tessuto Schiacciato</Italian>
-            <Russian>Компресионная травма</Russian>
+            <Russian>Компрессионная травма</Russian>
             <French>Tissu écrasé</French>
             <Polish>Zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado</Spanish>
@@ -248,7 +252,7 @@
             <English>Minor crushed tissue</English>
             <German>Kleine Quetschverletzung</German>
             <Italian>Minimo Tessuto Schiacciato</Italian>
-            <Russian>Малая компрессионная травма</Russian>
+            <Russian>Слабая компрессионная травма</Russian>
             <French>Tissu légèrement écrasé</French>
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado menor</Spanish>
@@ -263,7 +267,7 @@
             <English>Medium crushed tissue</English>
             <German>Mittlere Quetschverletzung</German>
             <Italian>Medio Tessuto Schiacciato</Italian>
-            <Russian>Средняя компрессионная травма</Russian>
+            <Russian>Умеренная компрессионная травма</Russian>
             <French>Tissu moyennement écrasé</French>
             <Polish>Średnie zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado medio</Spanish>
@@ -278,7 +282,7 @@
             <English>Large crushed tissue</English>
             <German>Große Quetschverletzung</German>
             <Italian>Alto Tessuto Schiacciato</Italian>
-            <Russian>Большая компрессионная травма</Russian>
+            <Russian>Сильная компрессионная травма</Russian>
             <French>Tissu fortement écrasé</French>
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
             <Spanish>Tejido triturado severo</Spanish>
@@ -293,7 +297,7 @@
             <English>Cut</English>
             <German>Schnittwunde</German>
             <Italian>Taglio</Italian>
-            <Russian>Резаная рана</Russian>
+            <Russian>Порез</Russian>
             <French>Coupure</French>
             <Polish>Rana cięta</Polish>
             <Spanish>Corte</Spanish>
@@ -308,7 +312,7 @@
             <English>Small Cut</English>
             <German>Kleine Schnittwunde</German>
             <Italian>Piccolo Taglio</Italian>
-            <Russian>Малая резаная рана</Russian>
+            <Russian>Мелкий порез</Russian>
             <Polish>Pomniejsza rana cięta</Polish>
             <Spanish>Corte menor</Spanish>
             <Hungarian>Kis vágás</Hungarian>
@@ -323,7 +327,7 @@
             <English>Medium Cut</English>
             <German>Mittlere Schnittwunde</German>
             <Italian>Medio Taglio</Italian>
-            <Russian>Средняя резаная рана</Russian>
+            <Russian>Средний порез</Russian>
             <Polish>Średnia rana cięta</Polish>
             <Spanish>Corte mediano</Spanish>
             <Hungarian>Közepes vágás</Hungarian>
@@ -338,7 +342,7 @@
             <English>Large Cut</English>
             <German>Große Schnittwunde</German>
             <Italian>Grande Taglio</Italian>
-            <Russian>Большая резаная рана</Russian>
+            <Russian>Сильный порез</Russian>
             <Polish>Duża rana cięta</Polish>
             <Spanish>Corte severo</Spanish>
             <Hungarian>Nagy vágás</Hungarian>
@@ -531,55 +535,65 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_DisplayName">
             <English>Fatal Damage Source</English>
+            <Russian>Причина смертельного урона</Russian>
             <Japanese>致命傷の原因</Japanese>
             <Chinese>致命傷來源</Chinese>
             <French>Cause de blessure mortelle</French>
             <Italian>Fonte del danno fatale</Italian>
             <Czech>Zdroj smrtelné škody</Czech>
+            <Polish>Źródło obrażeń krytycznych</Polish>
             <Portuguese>Fonte de Dano Fatal</Portuguese>
             <Spanish>Origen de daño fatal</Spanish>
             <German>Quelle für tödlichen Schaden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
             <English>Determines what damage can be fatal</English>
+            <Russian>Определяет какой урон будет смертельным</Russian>
             <Japanese>致命傷となるダメージの種類を決定します。</Japanese>
             <Chinese>決定何種傷害為致命</Chinese>
             <Italian>Determina quali danni possono essere fatali</Italian>
             <French>Détermine le type de blessures pouvant être fatales.</French>
             <Czech>Nastavuje jaké poškození může být smrtelné</Czech>
+            <Polish>Określa jakie obrażenia mogą być śmiertelne</Polish>
             <Portuguese>Determina qual dano pode ser fatal</Portuguese>
             <Spanish>Determina qué daño puede ser fatal</Spanish>
             <German>Bestimmt welcher Schaden tödlich ist.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
             <English>Only large hits to vital organs</English>
+            <Russian>Только серьезные попадания в жизненно важные органы</Russian>
             <Japanese>重要器官に大きなダメージを受けた時のみ</Japanese>
             <Chinese>只有重要器官之重傷</Chinese>
             <French>Grosses blessures sur organes vitaux</French>
             <Italian>Solo grandi colpi agli organi vitali</Italian>
             <Czech>Pouze zásahy do životně důležitých orgánů</Czech>
+            <Polish>Tylko duże trafienia w ważne narządy</Polish>
             <Portuguese>Apenas danos largos a órgãos vitais</Portuguese>
             <Spanish>Solo grandes heridas en organos vitales</Spanish>
             <German>Nur schwere Treffer an lebenswichtigen Organen</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
             <English>Sum of trauma</English>
+            <Russian>Совокупность травмы</Russian>
             <Japanese>外傷の数</Japanese>
             <Chinese>外部創傷累計</Chinese>
             <French>Somme des traumatismes</French>
             <Italian>Somma dei traumi</Italian>
             <Czech>Celkové množství úrazů</Czech>
+            <Polish>Wiele Urazów</Polish>
             <Portuguese>Soma do trauma</Portuguese>
             <Spanish>Suma de traumatismos</Spanish>
             <German>Summe aller Traumata</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
             <English>Either</English>
+            <Russian>Оба</Russian>
             <Japanese>両方</Japanese>
             <Chinese>兩者都是</Chinese>
             <French>Les deux</French>
             <Italian>o</Italian>
             <Czech>Kterýkoliv ze dvou</Czech>
+            <Polish>Zarówno</Polish>
             <Portuguese>Ou</Portuguese>
             <Spanish>Ambos</Spanish>
             <German>Beide</German>

@@ -70,6 +70,7 @@
             <Russian>&lt;пусто&gt;</Russian>
             <Portuguese>&lt;vazio&gt;</Portuguese>
             <Czech>&lt;prázdné&gt;</Czech>
+            <Turkish>&lt;boş&gt;</Turkish>
         </Key>
         <Key ID="STR_ACE_Pylons_BannerText">
             <English>Pylons that are colored red will have to be manually rearmed.</English>

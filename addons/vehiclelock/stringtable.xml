@@ -14,6 +14,7 @@
             <Portuguese>ACE Trancar Veículos</Portuguese>
             <French>ACE Verrouillage véhicule</French>
             <Czech>ACE Zamykání Vozidel</Czech>
+            <Turkish>ACE Araç Kilidi</Turkish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
@@ -30,6 +31,7 @@
             <Korean>차량 잠금열기</Korean>
             <Chinesesimp>载具解锁</Chinesesimp>
             <Chinese>載具解鎖</Chinese>
+            <Turkish>Araç Kilidini Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_Lock">
             <English>Lock Vehicle</English>
@@ -46,6 +48,7 @@
             <Korean>차량 잠그기</Korean>
             <Chinesesimp>载具上锁</Chinesesimp>
             <Chinese>載具上鎖</Chinese>
+            <Turkish>Aracı Kilitle</Turkish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_Lockpick">
             <English>Lockpick Vehicle</English>
@@ -62,6 +65,7 @@
             <Korean>차량 문따기</Korean>
             <Chinesesimp>解锁载具</Chinesesimp>
             <Chinese>解鎖載具</Chinese>
+            <Turkish>Aracı Maymuncukla</Turkish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_LockpickInUse">
             <English>Picking Lock...</English>
@@ -78,6 +82,7 @@
             <Korean>문따는중...</Korean>
             <Chinesesimp>解锁中...</Chinesesimp>
             <Chinese>解鎖中...</Chinese>
+            <Turkish>Maymuncuklanıyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Item_Custom_Description">
             <English>A custom key that will open a specific vehicle.</English>

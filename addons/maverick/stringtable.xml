@@ -15,6 +15,7 @@
                 <Portuguese>AGM-65 Maverick L, Míssil Anti Chão Guiado a Laser</Portuguese>
                 <French>AGM-65L Maverick, Missile Air-Sol à Guidage Laser</French>
                 <Czech>AGM-65 Maverick L, Laserem naváděná střela vzduch-země</Czech>
+                <Turkish>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</Turkish>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_x1">
                 <English>AGM-65 Maverick L [ACE]</English>
@@ -29,6 +30,7 @@
                 <Portuguese>AGM-65 Maverick L [ACE]</Portuguese>
                 <French>1x AGM-65L Maverick [ACE]</French>
                 <Czech>AGM-65 Maverick L [ACE]</Czech>
+                <Turkish>AGM-65 Maverick L [ACE]</Turkish>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_x2">
                 <English>2x AGM-65 Maverick L [ACE]</English>
@@ -43,6 +45,7 @@
                 <Portuguese>2x AGM-65 Maverick L [ACE]</Portuguese>
                 <French>2x AGM-65L Maverick [ACE]</French>
                 <Czech>2x AGM-65 Maverick L [ACE]</Czech>
+                <Turkish>2x AGM-65 Maverick L [ACE]</Turkish>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_x3">
                 <English>3x AGM-65 Maverick L [ACE]</English>
@@ -57,6 +60,7 @@
                 <Portuguese>3x AGM-65 Maverick L [ACE]</Portuguese>
                 <French>3x AGM-65L Maverick [ACE]</French>
                 <Czech>3x AGM-65 Maverick L [ACE]</Czech>
+                <Turkish>3x AGM-65 Maverick L [ACE]</Turkish>
             </Key>
             <Key ID="STR_ACE_Maverick_l_mag_short">
                 <English>Laser Guided</English>
@@ -71,6 +75,7 @@
                 <Portuguese>Guiado a laser</Portuguese>
                 <French>Guidage Laser</French>
                 <Czech>Laserem naváděná</Czech>
+                <Turkish>Lazer Güdümlü</Turkish>
             </Key>
             <Key ID="STR_ACE_Maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
@@ -85,6 +90,7 @@
                 <Portuguese>Kh-25ML, Míssil Ar para Chão Guiado a Laser</Portuguese>
                 <French>Kh-25ML, Missile Air-Sol à Guidage Laser</French>
                 <Czech>Kh-25ML, Laserem naváděná střela vzduch-země</Czech>
+                <Turkish>Kh-25ML, Laser Guided Air-to-Ground-Missile</Turkish>
             </Key>
             <Key ID="STR_ACE_Maverick_kh25ml_mag_x1">
                 <English>1x Kh-25ML [ACE]</English>
@@ -99,6 +105,7 @@
                 <Portuguese>1x Kh-25ML [ACE]</Portuguese>
                 <French>1x Kh-25ML [ACE]</French>
                 <Czech>1x Kh-25ML [ACE]</Czech>
+                <Turkish>1x Kh-25ML [ACE]</Turkish>
             </Key>
         </Container>
         <Container name="weapons">
@@ -115,6 +122,7 @@
                 <Portuguese>AGM-65 Maverick L</Portuguese>
                 <French>AGM-65L Maverick</French>
                 <Czech>AGM-65 Maverick L</Czech>
+                <Turkish>AGM-65 Maverick L</Turkish>
             </Key>
             <Key ID="STR_ACE_Maverick_kh25ml">
                 <English>Kh-25ML</English>
@@ -129,6 +137,7 @@
                 <Portuguese>Kh-25ML</Portuguese>
                 <French>Kh-25ML</French>
                 <Czech>Kh-25ML</Czech>
+                <Turkish>Kh-25ML</Turkish>
             </Key>
         </Container>
     </Package>
