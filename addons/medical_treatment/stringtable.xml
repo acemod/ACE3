@@ -507,6 +507,14 @@
             <Polish>Pozwala przetoczyć płyny IV samemu sobie</Polish>
             <Italian>Abilita la trasfusione in endovena su se stessi.</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
+            <English>Allow IV Transfusion</English>
+            <German>Erlaube Bluttransfusionen</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
+            <English>Training level required to transfuse IVs.</English>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfunieren.</German>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>

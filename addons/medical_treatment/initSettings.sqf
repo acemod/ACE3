@@ -182,6 +182,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(medicIV),
+    "LIST",
+    [LSTRING(MedicIV_DisplayName), LSTRING(MedicIV_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(cprSuccessChance),
     "SLIDER",
     [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
