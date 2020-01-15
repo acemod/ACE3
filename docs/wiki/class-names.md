@@ -230,7 +230,8 @@ ACE_salineIV_500 | Saline IV (500ml) | ACE_ItemCore |
 ACE_salineIV_250 | Saline IV (250ml) | ACE_ItemCore |
 ACE_surgicalKit | Surgical Kit | ACE_ItemCore |
 ACE_tourniquet | Tourniquet (CAT) | ACE_ItemCore |
-ACE_medicalSupplyCrate | ACE Medical Supply Crate | ammo box |
+ACE_medicalSupplyCrate | Simple ACE Medical Supply Crate | ammo box |
+ACE_medicalSupplyCrate_advanced | Advanced ACE Medical Supply Crate | ammo box |
 
 ### MicroDAGR
 `Added in 3.0.0`
