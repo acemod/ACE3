@@ -514,7 +514,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
-            <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfunieren.</German>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfundieren.</German>
             <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
