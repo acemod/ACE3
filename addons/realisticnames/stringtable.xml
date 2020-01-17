@@ -16,6 +16,7 @@
             <Korean>XM312</Korean>
             <Chinese>XM312重機槍</Chinese>
             <Chinesesimp>XM312重机枪</Chinesesimp>
+            <Turkish>XM312</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HMG_01_A_Name">
             <English>XM312A</English>
@@ -32,6 +33,7 @@
             <Korean>XM312A</Korean>
             <Chinese>XM312A重機槍</Chinese>
             <Chinesesimp>XM312A重机枪</Chinesesimp>
+            <Turkish>XM312A</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HMG_01_high_Name">
             <English>XM312 (High)</English>
@@ -48,6 +50,7 @@
             <Korean>XM312 (높음)</Korean>
             <Chinese>XM312重機槍 (高射腳架)</Chinese>
             <Chinesesimp>XM312重机枪 (高射脚架)</Chinesesimp>
+            <Turkish>XM312 (Yüksek)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_Name">
             <English>XM307</English>
@@ -64,6 +67,7 @@
             <Korean>XM307</Korean>
             <Chinese>XM307榴彈機槍</Chinese>
             <Chinesesimp>XM307榴弹机枪</Chinesesimp>
+            <Turkish>XM307</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_A_Name">
             <English>XM307A</English>
@@ -80,6 +84,7 @@
             <Korean>XM307A</Korean>
             <Chinese>XM307A榴彈機槍</Chinese>
             <Chinesesimp>XM307A榴弹机枪</Chinesesimp>
+            <Turkish>XM307A</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_high_Name">
             <English>XM307 (High)</English>
@@ -96,6 +101,7 @@
             <Korean>XM307 (높음)</Korean>
             <Chinese>XM307榴彈機槍 (高射腳架)</Chinese>
             <Chinesesimp>XM307榴弹机枪 (高射脚架)</Chinesesimp>
+            <Turkish>XM307 (Yüksek)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_static_AT_Name">
             <English>Mini-Spike Launcher (AT)</English>
@@ -112,6 +118,7 @@
             <Korean>Mini-Spike Launcher (대전차)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (反坦克)</Chinese>
             <Chinesesimp>"迷你长钉"导弹发射器 (反坦克)</Chinesesimp>
+            <Turkish>Mini-Spike Launcher (AT)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_static_AA_Name">
             <English>Mini-Spike Launcher (AA)</English>
@@ -128,6 +135,7 @@
             <Korean>Mini-Spike Launcher (대공)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (防空)</Chinese>
             <Chinesesimp>"迷你长钉"导弹发射器 (防空)</Chinesesimp>
+            <Turkish>Mini-Spike Launcher (AA)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_UAV_02_Name">
             <English>YABHON-R3</English>
@@ -144,6 +152,7 @@
             <Korean>YABHON-R3</Korean>
             <Chinese>"亞伯罕-R3型"空中無人載具</Chinese>
             <Chinesesimp>"亚伯罕-R3型"空中无人载具</Chinesesimp>
+            <Turkish>YABHON-R3</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_UAV_02_CAS_Name">
             <English>YABHON-R3 (CAS)</English>
@@ -160,6 +169,7 @@
             <Korean>YABHON-R3 (근접지원)</Korean>
             <Chinese>"亞伯罕-R3型"空中無人載具 (近空支援)</Chinese>
             <Chinesesimp>"亚伯罕-R3型"空中无人载具 (近空支援)</Chinesesimp>
+            <Turkish>YABHON-R3 (CAS)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_Name">
             <English>M-ATV</English>
@@ -176,6 +186,7 @@
             <Korean>M-ATV</Korean>
             <Chinese>防地雷反伏擊全地形車</Chinese>
             <Chinesesimp>防地雷反伏击全地形车</Chinesesimp>
+            <Turkish>M-ATV</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_hmg_Name">
             <English>M-ATV (HMG)</English>
@@ -192,6 +203,7 @@
             <Korean>M-ATV (HMG)</Korean>
             <Chinese>防地雷反伏擊全地形車 (重機槍)</Chinese>
             <Chinesesimp>防地雷反伏击全地形车 (重机枪)</Chinesesimp>
+            <Turkish>M-ATV (HMG)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_gmg_Name">
             <English>M-ATV (GMG)</English>
@@ -208,6 +220,7 @@
             <Korean>M-ATV (GMG)</Korean>
             <Chinese>防地雷反伏擊全地形車 (榴彈機槍)</Chinese>
             <Chinesesimp>防地雷反伏击全地形车 (榴弹机枪)</Chinesesimp>
+            <Turkish>M-ATV (GMG)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_cannon_Name">
             <English>Merkava Mk IV M</English>
@@ -224,6 +237,7 @@
             <Korean>Merkava Mk IV M</Korean>
             <Chinese>"梅卡瓦4代"主戰坦克</Chinese>
             <Chinesesimp>"梅卡瓦4代"主战坦克</Chinesesimp>
+            <Turkish>Merkava Mk IV M</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_TUSK_Name">
             <English>Merkava Mk IV LIC</English>
@@ -240,6 +254,7 @@
             <Korean>Merkava Mk IV LIC</Korean>
             <Chinese>"梅卡瓦4代"主戰坦克 城市版</Chinese>
             <Chinesesimp>"梅卡瓦4代"主战坦克 城市版</Chinesesimp>
+            <Turkish>Merkava Mk IV LIC</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_arty_Name">
             <English>Sholef</English>
@@ -256,6 +271,7 @@
             <Korean>Sholef</Korean>
             <Chinese>"神槍"自走炮</Chinese>
             <Chinesesimp>"神枪"自走炮</Chinesesimp>
+            <Turkish>Sholef</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_mlrs_Name">
             <English>Seara</English>
@@ -272,6 +288,7 @@
             <Korean>Seara</Korean>
             <Chinese>"希拉"多管火箭車</Chinese>
             <Chinesesimp>"希拉"多管火箭车</Chinesesimp>
+            <Turkish>Seara</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_rcws_Name">
             <English>Namer</English>
@@ -288,6 +305,7 @@
             <Korean>Namer</Korean>
             <Chinese>"花豹"裝甲運兵車</Chinese>
             <Chinesesimp>"花豹"装甲运兵车</Chinesesimp>
+            <Turkish>Namer</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_AA_Name">
             <English>Bardelas</English>
@@ -304,6 +322,7 @@
             <Korean>Bardelas</Korean>
             <Chinese>"布萊德斯"防空車</Chinese>
             <Chinesesimp>"布莱德斯"防空车</Chinesesimp>
+            <Turkish>Bardelas</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_01_cannon_Name">
             <English>Badger IFV</English>
@@ -320,6 +339,7 @@
             <Korean>Badger IFV</Korean>
             <Chinese>"蜜獾"步兵戰車</Chinese>
             <Chinesesimp>"蜜獾"步兵战车</Chinesesimp>
+            <Turkish>Badger IFV</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_CRV_Name">
             <English>Nemmera</English>
@@ -336,6 +356,7 @@
             <Korean>Nemmera</Korean>
             <Chinese>"雌豹"戰鬥工程車</Chinese>
             <Chinesesimp>"雌豹"战斗工程车</Chinesesimp>
+            <Turkish>Nemmera</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_transport_Name">
             <English>HEMTT Transport</English>
@@ -352,6 +373,7 @@
             <Korean>HEMTT 수송</Korean>
             <Chinese>重型增程機動戰術卡車 (運輸)</Chinese>
             <Chinesesimp>重型增程机动战术卡车 (运输)</Chinesesimp>
+            <Turkish>HEMTT Nakil</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_covered_Name">
             <English>HEMTT Transport (covered)</English>
@@ -368,6 +390,7 @@
             <Korean>HEMTT 수송 (덮개)</Korean>
             <Chinese>重型增程機動戰術卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>重型增程机动战术卡车 (运输, 棚布)</Chinesesimp>
+            <Turkish>HEMTT Nakil (Kapalı)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_mover_Name">
             <English>HEMTT</English>
@@ -384,6 +407,7 @@
             <Korean>HEMTT</Korean>
             <Chinese>重型增程機動戰術卡車</Chinese>
             <Chinesesimp>重型增程机动战术卡车</Chinesesimp>
+            <Turkish>HEMTT</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_box_Name">
             <English>HEMTT Container</English>
@@ -400,6 +424,7 @@
             <Korean>HEMTT 컨테이너</Korean>
             <Chinese>重型增程機動戰術卡車 (貨櫃)</Chinese>
             <Chinesesimp>重型增程机动战术卡车 (货柜)</Chinesesimp>
+            <Turkish>HEMTT Konteynır</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_medical_Name">
             <English>HEMTT Medical</English>
@@ -416,6 +441,7 @@
             <Korean>HEMTT 의료</Korean>
             <Chinese>重型增程機動戰術卡車 (醫療)</Chinese>
             <Chinesesimp>重型增程机动战术卡车 (医疗)</Chinesesimp>
+            <Turkish>HEMTT  Medikal</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_ammo_Name">
             <English>HEMTT Ammo</English>
@@ -432,6 +458,7 @@
             <Korean>HEMTT 탄약</Korean>
             <Chinese>重型增程機動戰術卡車 (彈藥)</Chinese>
             <Chinesesimp>重型增程机动战术卡车 (弹药)</Chinesesimp>
+            <Turkish>HEMTT Cephane</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_fuel_Name">
             <English>HEMTT Fuel</English>
@@ -448,6 +475,7 @@
             <Korean>HEMTT 연료</Korean>
             <Chinese>重型增程機動戰術卡車 (燃油)</Chinese>
             <Chinesesimp>重型增程机动战术卡车 (燃油)</Chinesesimp>
+            <Turkish>HEMTT Yakıt</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_Repair_Name">
             <English>HEMTT Repair</English>
@@ -464,6 +492,7 @@
             <Korean>HEMTT 수리</Korean>
             <Chinese>重型增程機動戰術卡車 (維修)</Chinese>
             <Chinesesimp>重型增程机动战术卡车 (维修)</Chinesesimp>
+            <Turkish>HEMTT Tamir</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_Name">
             <English>Fennek</English>
@@ -480,6 +509,7 @@
             <Korean>Fennek</Korean>
             <Chinese>"非洲小狐"防地雷反伏擊車</Chinese>
             <Chinesesimp>"非洲小狐"防地雷反伏击车</Chinesesimp>
+            <Turkish>Fennek</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_hmg_Name">
             <English>Fennek (HMG)</English>
@@ -496,6 +526,7 @@
             <Korean>Fennek (HMG)</Korean>
             <Chinese>"非洲小狐"防地雷反伏擊車 (重機槍)</Chinese>
             <Chinesesimp>"非洲小狐"防地雷反伏击车 (重机枪)</Chinesesimp>
+            <Turkish>Fennek (HMG)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_gmg_Name">
             <English>Fennek (GMG)</English>
@@ -512,6 +543,7 @@
             <Korean>Fennek (GMG)</Korean>
             <Chinese>"非洲小狐"防地雷反伏擊車 (榴彈機槍)</Chinese>
             <Chinesesimp>"非洲小狐"防地雷反伏击车 (榴弹机枪)</Chinesesimp>
+            <Turkish>Fennek (GMG)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_03_cannon_Name">
             <English>Leopard 2SG</English>
@@ -528,6 +560,7 @@
             <Korean>Leopard 2SG</Korean>
             <Chinese>"豹2型新加坡版"主戰坦克</Chinese>
             <Chinesesimp>"豹2型新加坡版"主战坦克</Chinesesimp>
+            <Turkish>Leopard 2SG</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_tracked_03_cannon_Name">
             <English>FV510 Warrior</English>
@@ -544,6 +577,7 @@
             <Korean>FV510 Warrior</Korean>
             <Chinese>FV510"戰士"步兵戰車</Chinese>
             <Chinesesimp>FV510"战士"步兵战车</Chinesesimp>
+            <Turkish>FV510 Warrior</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_03_cannon_Name">
             <English>Pandur II</English>
@@ -560,6 +594,7 @@
             <Korean>Pandur II</Korean>
             <Chinese>"潘德2型"裝甲運兵車</Chinese>
             <Chinesesimp>"潘德2型"装甲运兵车</Chinesesimp>
+            <Turkish>Pandur II</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_transport_Name">
             <English>KamAZ Transport</English>
@@ -576,6 +611,7 @@
             <Korean>KamAZ 수송</Korean>
             <Chinese>"卡瑪斯"卡車 (運輸)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (运输)</Chinesesimp>
+            <Turkish>KamAZ Nakil</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_covered_Name">
             <English>KamAZ Transport (covered)</English>
@@ -592,6 +628,7 @@
             <Korean>KamAZ 수송 (덮개)</Korean>
             <Chinese>"卡瑪斯"卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (运输, 棚布)</Chinesesimp>
+            <Turkish>KamAZ Nakil (Kapalı)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
@@ -608,6 +645,7 @@
             <Korean>KamAZ 탄약</Korean>
             <Chinese>"卡瑪斯"卡車 (彈藥)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (弹药)</Chinesesimp>
+            <Turkish>KamAZ Cephane</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_fuel_Name">
             <English>KamAZ Fuel</English>
@@ -624,6 +662,7 @@
             <Korean>KamAZ 연료</Korean>
             <Chinese>"卡瑪斯"卡車 (燃油)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (燃油)</Chinesesimp>
+            <Turkish>KamAZ Yakıt</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_box_Name">
             <English>KamAZ Repair</English>
@@ -640,6 +679,7 @@
             <Korean>KamAZ 수리</Korean>
             <Chinese>"卡瑪斯"卡車 (維修)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (维修)</Chinesesimp>
+            <Turkish>KamAZ Tamir</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_medical_Name">
             <English>KamAZ Medical</English>
@@ -656,6 +696,7 @@
             <Korean>KamAZ 의료</Korean>
             <Chinese>"卡瑪斯"卡車 (醫療)</Chinese>
             <Chinesesimp>"卡玛斯"卡车 (医疗)</Chinesesimp>
+            <Turkish>KamAZ Medikal</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -670,6 +711,7 @@
             <French>KamAZ LRM</French>
             <Czech>KamAZ MRL (raketové dělostřelectvo)</Czech>
             <Spanish>KamAZ MRL</Spanish>
+            <Turkish>KamAZ </Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Karatel</English>
@@ -686,6 +728,7 @@
             <Korean>Karatel</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车</Chinesesimp>
+            <Turkish>Karatel</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_hmg_Name">
             <English>Karatel (HMG)</English>
@@ -702,6 +745,7 @@
             <Korean>Karatel (HMG)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (重機槍)</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车 (重机枪)</Chinesesimp>
+            <Turkish>Karatel (HMG)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_gmg_Name">
             <English>Karatel (GMG)</English>
@@ -718,6 +762,7 @@
             <Korean>Karatel (GMG)</Korean>
             <Chinese>"懲罰者"防地雷反伏擊車 (榴彈機槍)</Chinese>
             <Chinesesimp>"惩罚者"防地雷反伏击车 (榴弹机枪)</Chinesesimp>
+            <Turkish>Karatel (GMG)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_02_cannon_Name">
             <English>T100 Black Eagle</English>
@@ -734,6 +779,7 @@
             <Korean>T100 Black Eagle</Korean>
             <Chinese>T100"黑鷹"主戰坦克</Chinese>
             <Chinesesimp>T100"黑鹰"主战坦克</Chinesesimp>
+            <Turkish>T100 Black Eagle</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_02_arty_Name">
             <English>2S9 Sochor</English>
@@ -750,6 +796,7 @@
             <Korean>2S9 Sochor</Korean>
             <Chinese>2S9"薩克爾"自走砲</Chinese>
             <Chinesesimp>2S9"萨克尔"自走炮</Chinesesimp>
+            <Turkish>2S9 Sochor</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_02_cannon_Name">
             <English>BM-2T Stalker</English>
@@ -766,6 +813,7 @@
             <Korean>BM-2T Stalker</Korean>
             <Chinese>BM-2T"潛行者"步兵戰車</Chinese>
             <Chinesesimp>BM-2T"潜行者"步兵战车</Chinesesimp>
+            <Turkish>BM-2T Stalker</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_02_AA_Name">
             <English>ZSU-35 Tigris</English>
@@ -782,6 +830,7 @@
             <Korean>ZSU-35 Tigris</Korean>
             <Chinese>ZSU-35"虎式"防空車</Chinese>
             <Chinesesimp>ZSU-35"虎式"防空车</Chinesesimp>
+            <Turkish>ZSU-35 Tigris</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_02_rcws_Name">
             <English>Otokar ARMA</English>
@@ -798,6 +847,7 @@
             <Korean>Otokar ARMA</Korean>
             <Chinese>"奧托卡-阿爾默"裝甲運兵車</Chinese>
             <Chinesesimp>"奥托卡-阿尔默"装甲运兵车</Chinesesimp>
+            <Turkish>Otokar ARMA</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_transport_Name">
             <English>Typhoon Transport</English>
@@ -814,6 +864,7 @@
             <Korean>Typhoon 수송</Korean>
             <Chinese>"颱風"卡車 (運輸)</Chinese>
             <Chinesesimp>"台风"卡车 (运输)</Chinesesimp>
+            <Turkish>Typhoon Nakil</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_covered_Name">
             <English>Typhoon Transport (covered)</English>
@@ -830,6 +881,7 @@
             <Korean>Typhoon 수송 (덮개)</Korean>
             <Chinese>"颱風"卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>"台风"卡车 (运输, 棚布)</Chinesesimp>
+            <Turkish>Typhoon Nakil (Kapalı)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_device_Name">
             <English>Typhoon Device</English>
@@ -846,6 +898,7 @@
             <Korean>Typhoon 장치</Korean>
             <Chinese>"颱風"卡車 (精密設備)</Chinese>
             <Chinesesimp>"台风"卡车 (精密设备)</Chinesesimp>
+            <Turkish>Typhoon Cihaz</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_ammo_Name">
             <English>Typhoon Ammo</English>
@@ -862,6 +915,7 @@
             <Korean>Typhoon 탄약</Korean>
             <Chinese>"颱風"卡車 (彈藥)</Chinese>
             <Chinesesimp>"台风"卡车 (弹药)</Chinesesimp>
+            <Turkish>Typhoon Cephane</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_fuel_Name">
             <English>Typhoon Fuel</English>
@@ -878,6 +932,7 @@
             <Korean>Typhoon 연료</Korean>
             <Chinese>"颱風"卡車 (燃油)</Chinese>
             <Chinesesimp>"台风"卡车 (燃油)</Chinesesimp>
+            <Turkish>Typhoon Yakıt</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_repair_Name">
             <English>Typhoon Repair</English>
@@ -894,6 +949,7 @@
             <Korean>Typhoon 수리</Korean>
             <Chinese>"颱風"卡車 (維修)</Chinese>
             <Chinesesimp>"台风"卡车 (维修)</Chinesesimp>
+            <Turkish>Typhoon Tamir</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_medical_Name">
             <English>Typhoon Medical</English>
@@ -910,6 +966,7 @@
             <Korean>Typhoon 의료</Korean>
             <Chinese>"颱風"卡車 (醫療)</Chinese>
             <Chinesesimp>"台风"卡车 (医疗)</Chinesesimp>
+            <Turkish>Typhoon Medikal</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Attack_01_Name">
             <English>RAH-66 Comanche</English>
@@ -926,6 +983,7 @@
             <Korean>RAH-66 Comanche</Korean>
             <Chinese>RAH-66"卡曼契"攻擊直升機</Chinese>
             <Chinesesimp>RAH-66"卡曼契"攻击直升机</Chinesesimp>
+            <Turkish>RAH-66 Comanche</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_Name">
             <English>MH-6 Little Bird</English>
@@ -942,6 +1000,7 @@
             <Korean>MH-6 Little Bird</Korean>
             <Chinese>MH-6"小鳥"運輸直升機</Chinese>
             <Chinesesimp>MH-6"小鸟"运输直升机</Chinesesimp>
+            <Turkish>MH-6 Little Bird</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_armed_Name">
             <English>AH-6 Little Bird</English>
@@ -958,6 +1017,7 @@
             <Korean>AH-6 Little Bird</Korean>
             <Chinese>AH-6"小鳥"武裝直升機</Chinese>
             <Chinesesimp>AH-6"小鸟"武装直升机</Chinesesimp>
+            <Turkish>AH-6 Little Bird</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_03_Name">
             <English>CH-47I Chinook</English>
@@ -974,6 +1034,7 @@
             <Korean>CH-47I Chinook</Korean>
             <Chinese>CH-47I"契努克"運輸直升機</Chinese>
             <Chinesesimp>CH-47I"契努克"运输直升机</Chinesesimp>
+            <Turkish>CH-47I Chinook</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_03_unarmed_Name">
             <English>CH-47I Chinook (unarmed)</English>
@@ -990,6 +1051,7 @@
             <Korean>CH-47I Chinook (비무장)</Korean>
             <Chinese>CH-47I"契努克"運輸直升機 (無武裝)</Chinese>
             <Chinesesimp>CH-47I"契努克"运输直升机 (无武装)</Chinesesimp>
+            <Turkish>CH-47I Chinook (silahsız)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_01_Name">
             <English>A-10D Thunderbolt II</English>
@@ -1006,6 +1068,7 @@
             <Korean>A-10D Thunderbolt II</Korean>
             <Chinese>A-10D"雷霆二式"攻擊機</Chinese>
             <Chinesesimp>A-10D"雷霆二式"攻击机</Chinesesimp>
+            <Turkish>A-10D Thunderbolt II</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_light_03_Name">
             <English>AW159 Wildcat</English>
@@ -1022,6 +1085,7 @@
             <Korean>AW159 Wildcat</Korean>
             <Chinese>AW159"野貓"直升機</Chinese>
             <Chinesesimp>AW159"野猫"直升机</Chinesesimp>
+            <Turkish>AW159 Wildcat</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_light_03_unarmed_Name">
             <English>AW159 Wildcat (unarmed)</English>
@@ -1038,6 +1102,7 @@
             <Korean>AW159 Wildcat (비무장)</Korean>
             <Chinese>AW159"野貓"直升機 (無武裝)</Chinese>
             <Chinesesimp>AW159"野猫"直升机 (无武装)</Chinesesimp>
+            <Turkish>AW159 Wildcat (silahsız)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_02_Name">
             <English>AW101 Merlin</English>
@@ -1054,6 +1119,7 @@
             <Korean>AW101 Merlin</Korean>
             <Chinese>AW101"灰背隼"運輸直升機</Chinese>
             <Chinesesimp>AW101"灰背隼"运输直升机</Chinesesimp>
+            <Turkish>AW101 Merlin</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_Name">
             <English>L-159 ALCA</English>
@@ -1070,6 +1136,7 @@
             <Korean>L-159 ALCA</Korean>
             <Chinese>L-159先進輕型戰鬥機</Chinese>
             <Chinesesimp>L-159先进轻型战斗机</Chinesesimp>
+            <Turkish>L-159 ALCA</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_CAS_Name">
             <English>L-159 ALCA (CAS)</English>
@@ -1086,6 +1153,7 @@
             <Korean>L-159 ALCA (근접지원)</Korean>
             <Chinese>L-159先進輕型戰鬥機 (近空支援)</Chinese>
             <Chinesesimp>L-159先进轻型战斗机 (近空支援)</Chinesesimp>
+            <Turkish>L-159 ALCA (CAS)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_AA_Name">
             <English>L-159 ALCA (AA)</English>
@@ -1102,6 +1170,7 @@
             <Korean>L-159 ALCA (대공)</Korean>
             <Chinese>L-159先進輕型戰鬥機 (空對空)</Chinese>
             <Chinesesimp>L-159先进轻型战斗机 (空对空)</Chinesesimp>
+            <Turkish>L-159 ALCA (AA)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_04_Name">
             <English>JAS 39 Gripen</English>
@@ -1117,6 +1186,7 @@
             <Korean>JAS 39 그리펜</Korean>
             <Chinese>JAS 39 獅鷲戰鬥機</Chinese>
             <Chinesesimp>JAS 39 狮鹫战斗机</Chinesesimp>
+            <Turkish>JAS 39 Gripen</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_Name">
             <English>Ka-60 Kasatka</English>
@@ -1133,6 +1203,7 @@
             <Korean>Ka-60 Kasatka</Korean>
             <Chinese>Ka-60"逆戟鯨"直升機</Chinese>
             <Chinesesimp>Ka-60"逆戟鲸"直升机</Chinesesimp>
+            <Turkish>Ka-60 Kasatka</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_v2_Name">
             <English>Ka-60 Kasatka (Black &amp; White)</English>
@@ -1148,6 +1219,7 @@
             <Korean>Ka-60 Kasatka (검정 및 하양)</Korean>
             <Chinese>Ka-60"逆戟鯨"直升機 (黑&amp;白)</Chinese>
             <Chinesesimp>Ka-60"逆戟鲸"直升机 (黑&amp;白)</Chinesesimp>
+            <Turkish>Ka-60 Kasatka (Siyah &amp; Beyaz)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_unarmed_Name">
             <English>Ka-60 Kasatka (unarmed)</English>
@@ -1164,6 +1236,7 @@
             <Korean>Ka-60 Kasatka (비무장)</Korean>
             <Chinese>Ka-60"逆戟鯨"直升機 (無武裝)</Chinese>
             <Chinesesimp>Ka-60"逆戟鲸"直升机 (无武装)</Chinesesimp>
+            <Turkish>Ka-60 Kasatka (Silahsız)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_02_Name">
             <English>Yak-130</English>
@@ -1180,6 +1253,7 @@
             <Korean>Yak-130</Korean>
             <Chinese>Yak-130"手套"攻擊機</Chinese>
             <Chinesesimp>Yak-130"手套"攻击机</Chinesesimp>
+            <Turkish>Yak-130</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_civil_Name">
             <English>MD 500</English>
@@ -1196,6 +1270,7 @@
             <Korean>MD 500</Korean>
             <Chinese>MD 500"防衛者"直升機</Chinese>
             <Chinesesimp>MD 500"防卫者"直升机</Chinesesimp>
+            <Turkish>MD 500</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SLAM_Name">
             <English>M4A1 SLAM</English>
@@ -1212,6 +1287,7 @@
             <Korean>M4A1 SLAM</Korean>
             <Chinese>M4A1指向性反裝甲地雷</Chinese>
             <Chinesesimp>M4A1指向性反装甲地雷</Chinesesimp>
+            <Turkish>M4A1 SLAM</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Claymore_Name">
             <English>M18A1 Claymore</English>
@@ -1228,6 +1304,7 @@
             <Korean>M18A1 클레이모어</Korean>
             <Chinese>M18A1"闊刀"地雷</Chinese>
             <Chinesesimp>M18A1"阔刀"地雷</Chinesesimp>
+            <Turkish>M18A1 Claymore</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SatchelCharge_Name">
             <English>M183 Demolition Charge Assembly</English>
@@ -1289,6 +1366,7 @@
             <Chinese>V40迷你手榴彈</Chinese>
             <Czech>V40 Mini-Granát</Czech>
             <Spanish>Mini Granada V40</Spanish>
+            <Turkish>V40 Mini-El Bombası</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -1305,6 +1383,7 @@
             <Korean>M83 연막탄 (하양)</Korean>
             <Chinese>M83煙霧彈 (白色)</Chinese>
             <Chinesesimp>M83烟雾弹 (白色)</Chinesesimp>
+            <Turkish>M83 Sis Bombası (Beyaz)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellBlue_Name">
             <English>M18 Smoke Grenade (Blue)</English>
@@ -1321,6 +1400,7 @@
             <Korean>M18 연막탄 (파랑)</Korean>
             <Chinese>M18煙霧彈 (藍色)</Chinese>
             <Chinesesimp>M18烟雾弹 (蓝色)</Chinesesimp>
+            <Turkish>M83 Sis Bombası (Mavi)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellGreen_Name">
             <English>M18 Smoke Grenade (Green)</English>
@@ -1337,6 +1417,7 @@
             <Korean>M18 연막탄 (초록)</Korean>
             <Chinese>M18煙霧彈 (綠色)</Chinese>
             <Chinesesimp>M18烟雾弹 (绿色)</Chinesesimp>
+            <Turkish>M83 Sis Bombası (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellOrange_Name">
             <English>M18 Smoke Grenade (Orange)</English>
@@ -1353,6 +1434,7 @@
             <Korean>M18 연막탄 (주황)</Korean>
             <Chinese>M18煙霧彈 (橘色)</Chinese>
             <Chinesesimp>M18烟雾弹 (橘色)</Chinesesimp>
+            <Turkish>M83 Sis Bombası (Turuncu)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellPurple_Name">
             <English>M18 Smoke Grenade (Purple)</English>
@@ -1369,6 +1451,7 @@
             <Korean>M18 연막탄 (보라)</Korean>
             <Chinese>M18煙霧彈 (紫色)</Chinese>
             <Chinesesimp>M18烟雾弹 (紫色)</Chinesesimp>
+            <Turkish>M83 Sis Bombası (Mor)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellRed_Name">
             <English>M18 Smoke Grenade (Red)</English>
@@ -1385,6 +1468,7 @@
             <Korean>M18 연막탄 (빨강)</Korean>
             <Chinese>M18煙霧彈 (紅色)</Chinese>
             <Chinesesimp>M18烟雾弹 (红色)</Chinesesimp>
+            <Turkish>M83 Sis Bombası (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellYellow_Name">
             <English>M18 Smoke Grenade (Yellow)</English>
@@ -1401,6 +1485,7 @@
             <Korean>M18 연막탄 (노랑)</Korean>
             <Chinese>M18煙霧彈 (黃色)</Chinese>
             <Chinesesimp>M18烟雾弹 (黄色)</Chinesesimp>
+            <Turkish>M83 Sis Bombası (Sarı)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_ATMine_Name">
             <English>M15 Anti-Tank Mine</English>
@@ -1417,6 +1502,7 @@
             <Korean>M15 대전차지뢰</Korean>
             <Chinese>M15反坦克地雷</Chinese>
             <Chinesesimp>M15反坦克地雷</Chinesesimp>
+            <Turkish>M15 Anti-Tank Mayını</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSMine_Name">
             <English>VS-50 Anti-Personnel Mine</English>
@@ -1433,6 +1519,7 @@
             <Korean>VS-50 대인지뢰</Korean>
             <Chinese>VS-50反人員地雷</Chinese>
             <Chinesesimp>VS-50反人员地雷</Chinesesimp>
+            <Turkish>VS-50 Anti-Personel Mayını</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSBoundingMine_Name">
             <English>M26 Anti-Personnel Bounding Mine</English>
@@ -1481,6 +1568,7 @@
             <Korean>P99</Korean>
             <Chinese>P99手槍</Chinese>
             <Chinesesimp>P99手枪</Chinesesimp>
+            <Turkish>P99</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Rook40_Name">
             <English>MP-443 Grach</English>
@@ -1497,6 +1585,7 @@
             <Korean>MP-443 Grach</Korean>
             <Chinese>MP-443"烏鴉"手槍</Chinese>
             <Chinesesimp>MP-443"乌鸦"手枪</Chinesesimp>
+            <Turkish>MP-443 Grach</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>Custom Covert II</English>
@@ -1513,6 +1602,7 @@
             <Korean>Custom Covert II</Korean>
             <Chinese>特裝隱蔽Ⅱ型手槍</Chinese>
             <Chinesesimp>特装隐蔽Ⅱ型手枪</Chinesesimp>
+            <Turkish>Custom Covert II</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name">
             <English>FNX-45 Tactical</English>
@@ -1563,6 +1653,7 @@
             <Korean>Chiappa Rhino 60DS</Korean>
             <Chinese>齊亞帕"犀牛"60DS左輪手槍</Chinese>
             <Chinesesimp>齐亚帕"犀牛"60DS左轮手枪</Chinesesimp>
+            <Turkish>Chiappa Rhino 60DS</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_Signal_Name">
             <English>Taurus Judge</English>
@@ -1579,6 +1670,7 @@
             <Korean>Taurus Judge</Korean>
             <Chinese>金牛座"法官"信號槍</Chinese>
             <Chinesesimp>金牛座"法官"信号枪</Chinesesimp>
+            <Turkish>Taurus Judge</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_NLAW_Name">
             <English>NLAW</English>
@@ -1595,6 +1687,7 @@
             <Korean>NLAW</Korean>
             <Chinese>次世代輕型反坦克導彈發射器</Chinese>
             <Chinesesimp>次世代轻型反坦克导弹发射器</Chinesesimp>
+            <Turkish>NLAW</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_Name">
             <English>RPG-32</English>
@@ -1645,6 +1738,7 @@
             <Korean>Mini-Spike (대공)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (防空)</Chinese>
             <Chinesesimp>"迷你长钉"导弹发射器 (防空)</Chinesesimp>
+            <Turkish>Mini-Spike (AA)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
@@ -1661,6 +1755,7 @@
             <Korean>Mini-Spike (대전차)</Korean>
             <Chinese>"迷你長釘"導彈發射器 (反坦克)</Chinese>
             <Chinesesimp>"迷你长钉"导弹发射器 (反坦克)</Chinesesimp>
+            <Turkish>Mini-Spike (AT)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_missiles_vorona">
             <English>Metis-M</English>
@@ -1674,6 +1769,7 @@
             <Polish>Metis-M</Polish>
             <Portuguese>Metis-M</Portuguese>
             <Czech>Metis-M</Czech>
+            <Turkish>Metis-M</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
             <English>Metis-M (Brown)</English>
@@ -1688,6 +1784,7 @@
             <Portuguese>Metis-M (Marrom)</Portuguese>
             <Czech>Metis-M (hnědý)</Czech>
             <Spanish>Metis-M (Marrón)</Spanish>
+            <Turkish>Metis-M (Kahverengi)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_green">
             <English>Metis-M (Green)</English>
@@ -1702,6 +1799,7 @@
             <Portuguese>Metis-M (Verde)</Portuguese>
             <Czech>Metis-M (zelený)</Czech>
             <Spanish>Metis-M (Verde)</Spanish>
+            <Turkish>Metis-M (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -1718,6 +1816,7 @@
             <Korean>MX</Korean>
             <Chinese>MX突擊步槍</Chinese>
             <Chinesesimp>MX突击步枪</Chinesesimp>
+            <Turkish>MX</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Black_Name">
             <English>MX (Black)</English>
@@ -1734,6 +1833,7 @@
             <Korean>MX (검정)</Korean>
             <Chinese>MX突擊步槍 (黑色)</Chinese>
             <Chinesesimp>MX突击步枪 (黑色)</Chinesesimp>
+            <Turkish>MX (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
@@ -1750,6 +1850,7 @@
             <Korean>MXC</Korean>
             <Chinese>MXC卡賓步槍</Chinese>
             <Chinesesimp>MXC卡宾步枪</Chinesesimp>
+            <Turkish>MXC</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Black_Name">
             <English>MXC (Black)</English>
@@ -1766,6 +1867,7 @@
             <Korean>MXC (검정)</Korean>
             <Chinese>MXC卡賓步槍 (黑色)</Chinese>
             <Chinesesimp>MXC卡宾步枪 (黑色)</Chinesesimp>
+            <Turkish>MXC (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
@@ -1782,6 +1884,7 @@
             <Korean>MX 3GL</Korean>
             <Chinese>MX突擊步槍 (3連裝榴彈)</Chinese>
             <Chinesesimp>MX突击步枪 (3连装榴弹)</Chinesesimp>
+            <Turkish>MX 3GL</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Black_Name">
             <English>MX 3GL (Black)</English>
@@ -1798,6 +1901,7 @@
             <Korean>MX 3GL (검정)</Korean>
             <Chinese>MX突擊步槍 (3連裝榴彈-黑色)</Chinese>
             <Chinesesimp>MX突击步枪 (3连装榴弹-黑色)</Chinesesimp>
+            <Turkish>MX 3GL (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
@@ -1814,6 +1918,7 @@
             <Korean>MX LSW</Korean>
             <Chinese>MX輕型機槍</Chinese>
             <Chinesesimp>MX轻型机枪</Chinesesimp>
+            <Turkish>MX LSW</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Black_Name">
             <English>MX LSW (Black)</English>
@@ -1830,6 +1935,7 @@
             <Korean>MX LSW (검정)</Korean>
             <Chinese>MX輕型機槍 (黑色)</Chinese>
             <Chinesesimp>MX轻型机枪 (黑色)</Chinesesimp>
+            <Turkish>MX LSW (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
@@ -1846,6 +1952,7 @@
             <Korean>MXM</Korean>
             <Chinese>MXM精準步槍</Chinese>
             <Chinesesimp>MXM精准步枪</Chinesesimp>
+            <Turkish>MXM</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Black_Name">
             <English>MXM (Black)</English>
@@ -1862,6 +1969,7 @@
             <Korean>MXM (검정)</Korean>
             <Chinese>MXM精準步槍 (黑色)</Chinese>
             <Chinesesimp>MXM精准步枪 (黑色)</Chinesesimp>
+            <Turkish>MXM (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KH2002 Sama</English>
@@ -1878,6 +1986,7 @@
             <Korean>KH2002 Sama</Korean>
             <Chinese>KH2002"海白爾"突擊步槍</Chinese>
             <Chinesesimp>KH2002"海白尔"突击步枪</Chinesesimp>
+            <Turkish>KH2002 Sama</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_C_Name">
             <English>KH2002C Sama</English>
@@ -1894,6 +2003,7 @@
             <Korean>KH2002C Sama</Korean>
             <Chinese>KH2002C"海白爾"卡賓步槍</Chinese>
             <Chinesesimp>KH2002C"海白尔"卡宾步枪</Chinesesimp>
+            <Turkish>KH2002C Sama</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_GL_Name">
             <English>KH2002 Sama KGL</English>
@@ -1910,6 +2020,7 @@
             <Korean>KH2002 Sama KGL</Korean>
             <Chinese>KH2002"海白爾"突擊步槍 (榴彈)</Chinese>
             <Chinesesimp>KH2002"海白尔"突击步枪 (榴弹)</Chinesesimp>
+            <Turkish>KH2002 Sama KGL</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_Name">
             <English>F2000 (Camo)</English>
@@ -1926,6 +2037,7 @@
             <Korean>F2000 (위장)</Korean>
             <Chinese>F2000突擊步槍 (迷彩)</Chinese>
             <Chinesesimp>F2000突击步枪 (迷彩)</Chinesesimp>
+            <Turkish>F2000 (Kamuflaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_plain_Name">
             <English>F2000</English>
@@ -1942,6 +2054,7 @@
             <Korean>F2000</Korean>
             <Chinese>F2000突擊步槍</Chinese>
             <Chinesesimp>F2000突击步枪</Chinesesimp>
+            <Turkish>F2000</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_Name">
             <English>F2000 Tactical (Camo)</English>
@@ -1958,6 +2071,7 @@
             <Korean>F2000 Tactical (위장)</Korean>
             <Chinese>F2000戰術型突擊步槍 (迷彩)</Chinese>
             <Chinesesimp>F2000战术型突击步枪 (迷彩)</Chinesesimp>
+            <Turkish>F2000 Tactical (Kamuflaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_plain_Name">
             <English>F2000 Tactical</English>
@@ -1974,6 +2088,7 @@
             <Korean>F2000 Tactical</Korean>
             <Chinese>F2000戰術型突擊步槍</Chinese>
             <Chinesesimp>F2000战术型突击步枪</Chinesesimp>
+            <Turkish>F2000 Tactical</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_Name">
             <English>F2000 EGLM (Camo)</English>
@@ -1990,6 +2105,7 @@
             <Korean>F2000 EGLM (위장)</Korean>
             <Chinese>F2000突擊步槍 (榴彈-迷彩)</Chinese>
             <Chinesesimp>F2000突击步枪 (榴弹-迷彩)</Chinesesimp>
+            <Turkish>F2000 EGLM (Kamuflaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name">
             <English>F2000 EGLM</English>
@@ -2006,6 +2122,7 @@
             <Korean>F2000 EGLM</Korean>
             <Chinese>F2000突擊步槍 (榴彈)</Chinese>
             <Chinesesimp>F2000突击步枪 (榴弹)</Chinesesimp>
+            <Turkish>F2000 EGLM</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_Name">
             <English>TAR-21</English>
@@ -2022,6 +2139,7 @@
             <Korean>TAR-21</Korean>
             <Chinese>TAR-21突擊步槍</Chinese>
             <Chinesesimp>TAR-21突击步枪</Chinesesimp>
+            <Turkish>TAR-21</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG20_Name">
             <English>CTAR-21</English>
@@ -2038,6 +2156,7 @@
             <Korean>CTAR-21</Korean>
             <Chinese>CTAR-21卡賓步槍</Chinese>
             <Chinesesimp>CTAR-21卡宾步枪</Chinesesimp>
+            <Turkish>CTAR-21</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_GL_Name">
             <English>GTAR-21 EGLM</English>
@@ -2054,6 +2173,7 @@
             <Korean>GTAR-21 EGLM</Korean>
             <Chinese>GTAR-21突擊步槍 (榴彈)</Chinese>
             <Chinesesimp>GTAR-21突击步枪 (榴弹)</Chinesesimp>
+            <Turkish>GTAR-21 EGLM</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_01_Name">
             <English>Vector SMG</English>
@@ -2070,6 +2190,7 @@
             <Korean>Vector SMG</Korean>
             <Chinese>"維克特"衝鋒槍</Chinese>
             <Chinesesimp>"维克特"冲锋枪</Chinesesimp>
+            <Turkish>Vector SMG</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_02_Name">
             <English>Scorpion Evo 3 A1</English>
@@ -2086,6 +2207,7 @@
             <Korean>Scorpion Evo 3 A1</Korean>
             <Chinese>"蠍式"Evo 3 A1衝鋒槍</Chinese>
             <Chinesesimp>"蝎式"Evo 3 A1冲锋枪</Chinesesimp>
+            <Turkish>Scorpion Evo 3 A1</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_PDW2000_Name">
             <English>CPW</English>
@@ -2102,6 +2224,7 @@
             <Korean>CPW</Korean>
             <Chinese>緊湊型個人衝鋒槍</Chinese>
             <Chinesesimp>紧凑型个人冲锋枪</Chinesesimp>
+            <Turkish>CPW</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SDAR_Name">
             <English>RFB SDAR</English>
@@ -2118,6 +2241,7 @@
             <Korean>RFB SDAR</Korean>
             <Chinese>犢牛式水陸兩用步槍</Chinese>
             <Chinesesimp>犊牛式水陆两用步枪</Chinesesimp>
+            <Turkish>RFB SDAR</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_Name">
             <English>Stoner 99 LMG</English>
@@ -2134,6 +2258,7 @@
             <Korean>Stoner 99 LMG</Korean>
             <Chinese>斯通納99輕機槍</Chinese>
             <Chinesesimp>斯通纳99轻机枪</Chinesesimp>
+            <Turkish>Stoner 99 LMG</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Zafir_Name">
             <English>Negev NG7</English>
@@ -2150,6 +2275,7 @@
             <Korean>Negev NG7</Korean>
             <Chinese>內蓋夫NG7機槍</Chinese>
             <Chinesesimp>内盖夫NG7机枪</Chinesesimp>
+            <Turkish>Negev NG7</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_EBR_Name">
             <English>Mk14 Mod 1 EBR</English>
@@ -2166,6 +2292,7 @@
             <Korean>Mk14 Mod 1 EBR</Korean>
             <Chinese>Mk14一型增強型戰鬥步槍</Chinese>
             <Chinesesimp>Mk14一型增强型战斗步枪</Chinesesimp>
+            <Turkish>Mk14 Mod 1 EBR</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_Name">
             <English>GM6 Lynx</English>
@@ -2182,6 +2309,7 @@
             <Korean>GM6 Lynx</Korean>
             <Chinese>GM6"天貓"反器材狙擊步槍</Chinese>
             <Chinesesimp>GM6"天猫"反器材狙击步枪</Chinesesimp>
+            <Turkish>GM6 Lynx</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_camo_Name">
             <English>GM6 Lynx (Camo)</English>
@@ -2198,6 +2326,7 @@
             <Korean>GM6 Lynx (위장)</Korean>
             <Chinese>GM6"天貓"反器材狙擊步槍 (迷彩)</Chinese>
             <Chinesesimp>GM6"天猫"反器材狙击步枪 (迷彩)</Chinesesimp>
+            <Turkish>GM6 Lynx (Kamufulaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_Name">
             <English>M200 Intervention</English>
@@ -2214,6 +2343,7 @@
             <Korean>M200 Intervention</Korean>
             <Chinese>M200干預型狙擊步槍</Chinese>
             <Chinesesimp>M200干预型狙击步枪</Chinesesimp>
+            <Turkish>M200 Intervention</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_camo_Name">
             <English>M200 Intervention (Camo)</English>
@@ -2230,6 +2360,7 @@
             <Korean>M200 Intervention (위장)</Korean>
             <Chinese>M200干預型狙擊步槍 (迷彩)</Chinese>
             <Chinesesimp>M200干预型狙击步枪 (迷彩)</Chinesesimp>
+            <Turkish>M200 Intervention (kamuflaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>
@@ -2246,6 +2377,7 @@
             <Korean>VS-121</Korean>
             <Chinese>VS-121狙擊步槍</Chinese>
             <Chinesesimp>VS-121狙击步枪</Chinesesimp>
+            <Turkish>VS-121</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_02">
             <English>Noreen "Bad News" ULR</English>
@@ -2262,6 +2394,7 @@
             <Korean>Noreen "Bad News" ULR</Korean>
             <Chinese>諾琳"壞消息"極距狙擊步槍</Chinese>
             <Chinesesimp>诺琳"坏消息"极距狙击步枪</Chinesesimp>
+            <Turkish>Noreen "Bad News" ULR</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
             <English>Noreen "Bad News" ULR (Black)</English>
@@ -2278,6 +2411,7 @@
             <Korean>Noreen "Bad News" ULR (검정)</Korean>
             <Chinese>諾琳"壞消息"極距狙擊步槍 (黑色)</Chinese>
             <Chinesesimp>诺琳"坏消息"极距狙击步枪 (黑色)</Chinesesimp>
+            <Turkish>Noreen "Bad News" ULR (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
             <English>Noreen "Bad News" ULR (Camo)</English>
@@ -2294,6 +2428,7 @@
             <Korean>Noreen "Bad News" ULR (위장)</Korean>
             <Chinese>諾琳"壞消息"極距狙擊步槍 (迷彩)</Chinese>
             <Chinesesimp>诺琳"坏消息"极距狙击步枪 (迷彩)</Chinesesimp>
+            <Turkish>Noreen "Bad News" ULR (Kamufulaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>Noreen "Bad News" ULR (Sand)</English>
@@ -2310,6 +2445,7 @@
             <Korean>Noreen "Bad News" ULR (모래)</Korean>
             <Chinese>諾琳"壞消息"極距狙擊步槍 (沙色)</Chinese>
             <Chinesesimp>诺琳"坏消息"极距狙击步枪 (沙色)</Chinesesimp>
+            <Turkish>Noreen "Bad News" ULR (Çöl)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>SIG 556</English>
@@ -2326,6 +2462,7 @@
             <Korean>SIG 556</Korean>
             <Chinese>SIG 556精準步槍</Chinese>
             <Chinesesimp>SIG 556精准步枪</Chinesesimp>
+            <Turkish>SIG 556</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>SIG 556 (Black)</English>
@@ -2342,6 +2479,7 @@
             <Korean>SIG 556 (검정)</Korean>
             <Chinese>SIG 556精準步槍 (黑色)</Chinese>
             <Chinesesimp>SIG 556精准步枪 (黑色)</Chinesesimp>
+            <Turkish>SIG 556 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
             <English>SIG 556 (Khaki)</English>
@@ -2358,6 +2496,7 @@
             <Korean>SIG 556 (카키)</Korean>
             <Chinese>SIG 556精準步槍 (卡其色)</Chinese>
             <Chinesesimp>SIG 556精准步枪 (卡其色)</Chinesesimp>
+            <Turkish>SIG 556 (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>SIG 556 (Sand)</English>
@@ -2374,6 +2513,7 @@
             <Korean>SIG 556 (모래)</Korean>
             <Chinese>SIG 556精準步槍 (沙色)</Chinese>
             <Chinesesimp>SIG 556精准步枪 (沙色)</Chinesesimp>
+            <Turkish>SIG 556 (Kum)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
             <English>SIG 556 (Camo)</English>
@@ -2390,6 +2530,7 @@
             <Korean>SIG 556 (위장)</Korean>
             <Chinese>SIG 556精準步槍 (迷彩)</Chinese>
             <Chinesesimp>SIG 556精准步枪 (迷彩)</Chinesesimp>
+            <Turkish>SIG 556 (Kamufulaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>SIG 556 (Woodland)</English>
@@ -2406,6 +2547,7 @@
             <Korean>SIG 556 (우드랜드)</Korean>
             <Chinese>SIG 556精準步槍 (森林迷彩)</Chinese>
             <Chinesesimp>SIG 556精准步枪 (森林迷彩)</Chinesesimp>
+            <Turkish>SIG 556 (Orman)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
@@ -2422,6 +2564,7 @@
             <Korean>ASP-1 キール</Korean>
             <Chinese>ASP-1"基爾"消音狙擊步槍</Chinese>
             <Chinesesimp>ASP-1"基尔"消音狙击步枪</Chinesesimp>
+            <Turkish>ASP-1 Kir</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
@@ -2438,6 +2581,7 @@
             <Korean>ASP-1 Kir (검정)</Korean>
             <Chinese>ASP-1"基爾"消音狙擊步槍 (黑色)</Chinese>
             <Chinesesimp>ASP-1"基尔"消音狙击步枪 (黑色)</Chinesesimp>
+            <Turkish>ASP-1 Kir (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
@@ -2454,6 +2598,7 @@
             <Korean>ASP-1 Kir (황갈)</Korean>
             <Chinese>ASP-1"基爾"消音狙擊步槍 (黃褐色)</Chinese>
             <Chinesesimp>ASP-1"基尔"消音狙击步枪 (黄褐色)</Chinesesimp>
+            <Turkish>ASP-1 Kir (Tan)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_05">
             <English>Cyrus</English>
@@ -2470,6 +2615,7 @@
             <Korean>Cyrus</Korean>
             <Chinese>"居鲁士"狙擊步槍</Chinese>
             <Chinesesimp>"居鲁士"狙击步枪</Chinesesimp>
+            <Turkish>Cyrus</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
             <English>Cyrus (Black)</English>
@@ -2486,6 +2632,7 @@
             <Korean>Cyrus (검정)</Korean>
             <Chinese>"居鲁士"狙擊步槍 (黑色)</Chinese>
             <Chinesesimp>"居鲁士"狙击步枪 (黑色)</Chinesesimp>
+            <Turkish>Cyrus (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_hex">
             <English>Cyrus (Hex)</English>
@@ -2502,6 +2649,7 @@
             <Korean>Cyrus (육각)</Korean>
             <Chinese>"居鲁士"狙擊步槍 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>"居鲁士"狙击步枪 (数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>Cyrus (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>Cyrus (Tan)</English>
@@ -2518,6 +2666,7 @@
             <Korean>Cyrus (황갈)</Korean>
             <Chinese>"居鲁士"狙擊步槍 (黃褐色)</Chinese>
             <Chinesesimp>"居鲁士"狙击步枪 (黄褐色)</Chinesesimp>
+            <Turkish>Cyrus (Tan)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_06">
             <English>M14</English>
@@ -2534,6 +2683,7 @@
             <Korean>M14</Korean>
             <Chinese>M14精準步槍</Chinese>
             <Chinesesimp>M14精准步枪</Chinesesimp>
+            <Turkish>M14</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
             <English>M14 (Camo)</English>
@@ -2550,6 +2700,7 @@
             <Korean>M14 (위장)</Korean>
             <Chinese>M14精準步槍 (迷彩)</Chinese>
             <Chinesesimp>M14精准步枪 (迷彩)</Chinesesimp>
+            <Turkish>M14 (Kamufulaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>M14 (Olive)</English>
@@ -2566,6 +2717,7 @@
             <Korean>M14 (올리브)</Korean>
             <Chinese>M14精準步槍 (橄欖色)</Chinese>
             <Chinesesimp>M14精准步枪 (橄榄色)</Chinesesimp>
+            <Turkish>M14 (Zeytin Yeşili)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>HK121</English>
@@ -2582,6 +2734,7 @@
             <Korean>HK121</Korean>
             <Chinese>HK121中型機槍</Chinese>
             <Chinesesimp>HK121中型机枪</Chinesesimp>
+            <Turkish>HK121</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
             <English>HK121 (Hex)</English>
@@ -2598,6 +2751,7 @@
             <Korean>HK121 (육각)</Korean>
             <Chinese>HK121中型機槍 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>HK121中型机枪 (数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>HK121 (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>HK121 (Tan)</English>
@@ -2614,6 +2768,7 @@
             <Korean>HK121 (황갈)</Korean>
             <Chinese>HK121機槍 (黃褐色)</Chinese>
             <Chinesesimp>HK121机枪 (黄褐色)</Chinesesimp>
+            <Turkish>HK121 (Tan)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
@@ -2630,6 +2785,7 @@
             <Korean>LWMMG</Korean>
             <Chinese>輕量化中型機槍</Chinese>
             <Chinesesimp>轻量化中型机枪</Chinesesimp>
+            <Turkish>LWMMG</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
             <English>LWMMG (MTP)</English>
@@ -2646,6 +2802,7 @@
             <Korean>LWMMG (MTP)</Korean>
             <Chinese>輕量化中型機槍 (多地形迷彩)</Chinese>
             <Chinesesimp>轻量化中型机枪 (多地形迷彩)</Chinesesimp>
+            <Turkish>LWMMG (MTP)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>LWMMG (Black)</English>
@@ -2662,6 +2819,7 @@
             <Korean>LWMMG (검정)</Korean>
             <Chinese>輕量化中型機槍 (黑色)</Chinese>
             <Chinesesimp>轻量化中型机枪 (黑色)</Chinesesimp>
+            <Turkish>LWMMG (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>LWMMG (Sand)</English>
@@ -2678,6 +2836,7 @@
             <Korean>LWMMG (모래)</Korean>
             <Chinese>輕量化中型機槍 (沙色)</Chinese>
             <Chinesesimp>轻量化中型机枪 (沙色)</Chinesesimp>
+            <Turkish>LWMMG (Kum)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed">
             <English>Jeep Wrangler</English>
@@ -2694,6 +2853,7 @@
             <Korean>Jeep Wrangler</Korean>
             <Chinese>"牧馬人"吉普車</Chinese>
             <Chinesesimp>"牧马人"吉普车</Chinesesimp>
+            <Turkish>Jeep Wrangler</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_at">
             <English>Jeep Wrangler (SPG-9)</English>
@@ -2707,6 +2867,7 @@
             <Portuguese>Jeep Wrangler (SPG-9)</Portuguese>
             <French>Jeep Wrangler (SPG-9)</French>
             <Czech>Jeep Wrangler (SPG-9)</Czech>
+            <Turkish>Jeep Wrangler (SPG-9)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
             <English>Jeep Wrangler (LMG)</English>
@@ -2720,6 +2881,7 @@
             <Portuguese>Jeep Wrangler (LMG)</Portuguese>
             <French>Jeep Wrangler (LMG)</French>
             <Czech>Jeep Wrangler (LMG)</Czech>
+            <Turkish>Jeep Wrangler (LMG)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
@@ -2736,6 +2898,7 @@
             <Korean>Cessna TTx</Korean>
             <Chinese>"賽斯納"TTx單引擎飛機</Chinese>
             <Chinesesimp>"赛斯纳"TTx单引擎飞机</Chinesesimp>
+            <Turkish>Cessna TTx</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01_racing">
             <English>Cessna TTx (Racing)</English>
@@ -2752,6 +2915,7 @@
             <Korean>Cessna TTx (경주용)</Korean>
             <Chinese>"賽斯納"TTx單引擎飛機 (競速)</Chinese>
             <Chinesesimp>"赛斯纳"TTx单引擎飞机 (竞速)</Chinesesimp>
+            <Turkish>Cessna TTx (Racing)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_O_T_UAV_04_CAS">
             <English>Burraq UCAV</English>
@@ -2768,6 +2932,7 @@
             <Korean>Burraq UCAV</Korean>
             <Chinese>"柏拉格"空中無人戰鬥載具</Chinese>
             <Chinesesimp>"柏拉格"空中无人战斗载具</Chinesesimp>
+            <Turkish>Burraq UCAV</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -2784,6 +2949,7 @@
             <Korean>QBZ-95-1 (검정)</Korean>
             <Chinese>QBZ-95-1式自動步槍 (黑色)</Chinese>
             <Chinesesimp>QBZ-95-1式自动步枪 (黑色)</Chinesesimp>
+            <Turkish>QBZ-95-1 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_ghex">
             <English>QBZ-95-1 (Green Hex)</English>
@@ -2800,6 +2966,7 @@
             <Korean>QBZ-95-1 (초록육각)</Korean>
             <Chinese>QBZ-95-1式自動步槍 (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>QBZ-95-1式自动步枪 (绿色数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>QBZ-95-1 (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_hex">
             <English>QBZ-95-1 (Hex)</English>
@@ -2816,6 +2983,7 @@
             <Korean>QBZ-95-1 (육각)</Korean>
             <Chinese>QBZ-95-1式自動步槍 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>QBZ-95-1式自动步枪 (数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>QBZ-95-1 (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_blk">
             <English>QBZ-95-1 GL (Black)</English>
@@ -2832,6 +3000,7 @@
             <Korean>QBZ-95-1 GL (검정)</Korean>
             <Chinese>QBZ-95-1式自動步槍 (榴彈-黑色)</Chinese>
             <Chinesesimp>QBZ-95-1式自动步枪 (榴弹-黑色)</Chinesesimp>
+            <Turkish>QBZ-95-1 GL (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_ghex">
             <English>QBZ-95-1 GL (Green Hex)</English>
@@ -2848,6 +3017,7 @@
             <Korean>QBZ-95-1 GL (초록육각)</Korean>
             <Chinese>QBZ-95-1式自動步槍 (榴彈-綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>QBZ-95-1式自动步枪 (榴弹-绿色数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>QBZ-95-1 GL (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_hex">
             <English>QBZ-95-1 GL (Hex)</English>
@@ -2864,6 +3034,7 @@
             <Korean>QBZ-95-1 GL (육각)</Korean>
             <Chinese>QBZ-95-1式自動步槍 (榴彈-數位蜂巢迷彩)</Chinese>
             <Chinesesimp>QBZ-95-1式自动步枪 (榴弹-数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>QBZ-95-1 GL (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTARS_blk">
             <English>QBZ-95-1 LSW (Black)</English>
@@ -2880,6 +3051,7 @@
             <Korean>QBZ-95-1 LSW (검정)</Korean>
             <Chinese>QBZ-95-1式輕機槍 (黑色)</Chinese>
             <Chinesesimp>QBZ-95-1式轻机枪 (黑色)</Chinesesimp>
+            <Turkish>QBZ-95-1 LSW (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTARS_ghex">
             <English>QBZ-95-1 LSW (Green Hex)</English>
@@ -2896,6 +3068,7 @@
             <Korean>QBZ-95-1 LSW (초록육각)</Korean>
             <Chinese>QBZ-95-1式輕機槍 (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>QBZ-95-1式轻机枪 (绿色数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>QBZ-95-1 LSW (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTARS_hex">
             <English>QBZ-95-1 LSW (Hex)</English>
@@ -2912,6 +3085,7 @@
             <Korean>QBZ-95-1 LSW (육각)</Korean>
             <Chinese>QBZ-95-1式輕機槍 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>QBZ-95-1式轻机枪 (数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>QBZ-95-1 LSW (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_blk">
             <English>QBU-88 (Black)</English>
@@ -2928,6 +3102,7 @@
             <Korean>QBU-88 (검정)</Korean>
             <Chinese>QBU-88式狙擊步槍 (黑色)</Chinese>
             <Chinesesimp>QBU-88式狙击步枪 (黑色)</Chinesesimp>
+            <Turkish>QBU-88 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_ghex">
             <English>QBU-88 (Green Hex)</English>
@@ -2944,6 +3119,7 @@
             <Korean>QBU-88 (초록육각)</Korean>
             <Chinese>QBU-88式狙擊步槍 (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>QBU-88式狙击步枪 (绿色数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>QBU-88 (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_hex">
             <English>QBU-88 (Hex)</English>
@@ -2960,6 +3136,7 @@
             <Korean>QBU-88 (육각)</Korean>
             <Chinese>QBU-88式狙擊步槍 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>QBU-88式狙击步枪 (数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>QBU-88 (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_ghex">
             <English>GM6 Lynx (Green Hex)</English>
@@ -2976,6 +3153,7 @@
             <Korean>GM6 Lynx (초록육각)</Korean>
             <Chinese>GM6"天貓"反器材狙擊步槍 (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>GM6"天猫"反器材狙击步枪 (绿色数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>GM6 Lynx (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_03">
             <English>FN Minimi SPW</English>
@@ -2992,6 +3170,7 @@
             <Korean>FN Minimi SPW</Korean>
             <Chinese>FN Minimi班用自動機槍</Chinese>
             <Chinesesimp>FN Minimi班用自动机枪</Chinesesimp>
+            <Turkish>FN Minimi SPW</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_tna">
             <English>M200 Intervention (Tropic)</English>
@@ -3008,6 +3187,7 @@
             <Korean>M200 Intervention (열대)</Korean>
             <Chinese>M200干預型狙擊步槍 (熱帶迷彩)</Chinese>
             <Chinesesimp>M200干预型狙击步枪 (热带迷彩)</Chinesesimp>
+            <Turkish>M200 Intervention (Tropic)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_05">
             <English>MP5K</English>
@@ -3024,6 +3204,7 @@
             <Korean>MP5K</Korean>
             <Chinese>MP5K衝鋒槍</Chinese>
             <Chinesesimp>MP5K冲锋枪</Chinesesimp>
+            <Turkish>MP5K</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_blk">
             <English>HK416A5 11" (Black)</English>
@@ -3040,6 +3221,7 @@
             <Korean>HK416A5 11" (검정)</Korean>
             <Chinese>HK416A5 11"突擊步槍 (黑色)</Chinese>
             <Chinesesimp>HK416A5 11"突击步枪 (黑色)</Chinesesimp>
+            <Turkish>HK416A5 11" (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_khk">
             <English>HK416A5 11" (Khaki)</English>
@@ -3056,6 +3238,7 @@
             <Korean>HK416A5 11" (카키)</Korean>
             <Chinese>HK416A5 11"突擊步槍 (卡其色)</Chinese>
             <Chinesesimp>HK416A5 11"突击步枪 (卡其色)</Chinesesimp>
+            <Turkish>HK416A5 11" (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_snd">
             <English>HK416A5 11" (Sand)</English>
@@ -3072,6 +3255,7 @@
             <Korean>HK416A5 11" (모래)</Korean>
             <Chinese>HK416A5 11"突擊步槍 (沙色)</Chinese>
             <Chinesesimp>HK416A5 11"突击步枪 (沙色)</Chinesesimp>
+            <Turkish>HK416A5 11" (Kum)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_blk">
             <English>HK416A5 11" GL (Black)</English>
@@ -3088,6 +3272,7 @@
             <Korean>HK416A5 11" GL (검정)</Korean>
             <Chinese>HK416A5 11"突擊步槍 (榴彈-黑色)</Chinese>
             <Chinesesimp>HK416A5 11"突击步枪 (榴弹-黑色)</Chinesesimp>
+            <Turkish>HK416A5 11" GL (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_khk">
             <English>HK416A5 11" GL (Khaki)</English>
@@ -3104,6 +3289,7 @@
             <Korean>HK416A5 11" GL (카키)</Korean>
             <Chinese>HK416A5 11"突擊步槍 (榴彈-卡其色)</Chinese>
             <Chinesesimp>HK416A5 11"突击步枪 (榴弹-卡其色)</Chinesesimp>
+            <Turkish>HK416A5 11" GL (Hakii)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_snd">
             <English>HK416A5 11" GL (Sand)</English>
@@ -3120,6 +3306,7 @@
             <Korean>HK416A5 11" GL (모래)</Korean>
             <Chinese>HK416A5 11"突擊步槍 (榴彈-沙色)</Chinese>
             <Chinesesimp>HK416A5 11"突击步枪 (榴弹-沙色)</Chinesesimp>
+            <Turkish>HK416A5 11" GL (Çöl)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_blk">
             <English>HK416A5 14.5" (Black)</English>
@@ -3136,6 +3323,7 @@
             <Korean>HK416A5 14.5" (검정)</Korean>
             <Chinese>HK416A5 14.5"突擊步槍 (黑色)</Chinese>
             <Chinesesimp>HK416A5 14.5"突击步枪 (黑色)</Chinesesimp>
+            <Turkish>HK416A5 14.5" (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_khk">
             <English>HK416A5 14.5" (Khaki)</English>
@@ -3152,6 +3340,7 @@
             <Korean>HK416A5 14.5" (카키)</Korean>
             <Chinese>HK416A5 14.5"突擊步槍 (卡其色)</Chinese>
             <Chinesesimp>HK416A5 14.5"突击步枪 (卡其色)</Chinesesimp>
+            <Turkish>HK416A5 14.5" (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_snd">
             <English>HK416A5 14.5" (Sand)</English>
@@ -3168,6 +3357,7 @@
             <Korean>HK416A5 14.5" (모래)</Korean>
             <Chinese>HK416A5 14.5"突擊步槍 (沙色)</Chinese>
             <Chinesesimp>HK416A5 14.5"突击步枪 (沙色)</Chinesesimp>
+            <Turkish>HK416A5 14.5" (Kum)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_blk">
             <English>HK417A2 20" (Black)</English>
@@ -3184,6 +3374,7 @@
             <Korean>HK417A2 20" (검정)</Korean>
             <Chinese>HK417A2 20"突擊步槍 (黑色)</Chinese>
             <Chinesesimp>HK417A2 20"突击步枪 (黑色)</Chinesesimp>
+            <Turkish>HK417A2 20" (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_khk">
             <English>HK417A2 20" (Khaki)</English>
@@ -3200,6 +3391,7 @@
             <Korean>HK417A2 20" (카키)</Korean>
             <Chinese>HK417A2 20"突擊步槍 (卡其色)</Chinese>
             <Chinesesimp>HK417A2 20"突击步枪 (卡其色)</Chinesesimp>
+            <Turkish>HK417A2 20" (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_snd">
             <English>HK417A2 20" (Sand)</English>
@@ -3216,6 +3408,7 @@
             <Korean>HK417A2 20" (모래)</Korean>
             <Chinese>HK417A2 20"突擊步槍 (沙色)</Chinese>
             <Chinesesimp>HK417A2 20"突击步枪 (沙色)</Chinesesimp>
+            <Turkish>HK417A2 20" (Kum)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_ghex">
             <English>RPG-32 (Green Hex)</English>
@@ -3232,6 +3425,7 @@
             <Korean>RPG-32 (초록육각)</Korean>
             <Chinese>RPG-32火箭發射器 (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>RPG-32火箭发射器 (绿色数位蜂巢迷彩)</Chinesesimp>
+            <Turkish>RPG-32 (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_P07_khk">
             <English>P99 (Khaki)</English>
@@ -3248,6 +3442,7 @@
             <Korean>P99 (카키)</Korean>
             <Chinese>P99半自動手槍 (卡其色)</Chinese>
             <Chinesesimp>P99半自动手枪 (卡其色)</Chinesesimp>
+            <Turkish>P99 (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
             <English>Makarov PM</English>
@@ -3264,6 +3459,7 @@
             <Korean>Makarov PM</Korean>
             <Chinese>"馬卡洛夫"手槍</Chinese>
             <Chinesesimp>"马卡洛夫"手枪</Chinesesimp>
+            <Turkish>Makarov PM</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_armed">
             <English>Polaris DAGOR (XM312)</English>
@@ -3277,6 +3473,7 @@
             <Portuguese>Polaris DAGOR (XM312)</Portuguese>
             <French>Polaris DAGOR (XM312)</French>
             <Czech>Polaris DAGOR (XM312)</Czech>
+            <Turkish>Polaris DAGOR (XM312)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
@@ -3290,6 +3487,7 @@
             <Portuguese>Polaris DAGOR (Mini-Spike AT)</Portuguese>
             <French>Polaris DAGOR (Mini-Spike AC)</French>
             <Czech>Polaris DAGOR (Mini-Spike AT)</Czech>
+            <Turkish>Polaris DAGOR (Mini-Spike AT)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3303,6 +3501,7 @@
             <Portuguese>Polaris DAGOR</Portuguese>
             <French>Polaris DAGOR</French>
             <Czech>Polaris DAGOR</Czech>
+            <Turkish>Polaris DAGOR</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
@@ -3316,6 +3515,7 @@
             <Portuguese>Polaris DAGOR (leve)</Portuguese>
             <French>Polaris DAGOR (léger)</French>
             <Czech>Polaris DAGOR (lehký)</Czech>
+            <Turkish>Polaris DAGOR (light)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
@@ -3329,6 +3529,7 @@
             <Portuguese>LSV Mk. II (M134)</Portuguese>
             <French>LSV Mk. II (M134)</French>
             <Czech>LSV Mk. II (M134)</Czech>
+            <Turkish>LSV Mk. II (M134)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -3342,6 +3543,7 @@
             <Portuguese>LSV Mk. II (Metis-M)</Portuguese>
             <French>LSV Mk. II (Metis-M)</French>
             <Czech>LSV Mk. II (Metis-M)</Czech>
+            <Turkish>LSV Mk. II (Metis-M)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -3355,6 +3557,7 @@
             <Portuguese>LSV Mk. II</Portuguese>
             <French>LSV Mk. II</French>
             <Czech>LSV Mk. II</Czech>
+            <Turkish>LSV Mk. II</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -3368,6 +3571,7 @@
             <Portuguese>Rooikat 120</Portuguese>
             <French>Rooikat 120</French>
             <Czech>Rooikat 120</Czech>
+            <Turkish>Rooikat 120</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01_up">
             <English>Rooikat 120 UP</English>
@@ -3381,6 +3585,7 @@
             <Portuguese>Rooikat 120 UP</Portuguese>
             <French>Rooikat 120 UP</French>
             <Czech>Rooikat 120 UP</Czech>
+            <Turkish>Rooikat 120 UP</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
@@ -3394,6 +3599,7 @@
             <Portuguese>T-14 Armata</Portuguese>
             <French>T-14 Armata</French>
             <Czech>T-14 Armata</Czech>
+            <Turkish>T-14 Armata</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_command">
             <English>T-14K Armata</English>
@@ -3407,6 +3613,7 @@
             <Portuguese>T-14K Armata</Portuguese>
             <French>T-14K Armata</French>
             <Czech>T-14K Armata</Czech>
+            <Turkish>T-14K Armata</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
@@ -3420,6 +3627,7 @@
             <Portuguese>Wiesel 2 Ozelot (AA)</Portuguese>
             <French>Wiesel 2 Ozelot (AA)</French>
             <Czech>Wiesel 2 Ozelot (AA)</Czech>
+            <Turkish>Wiesel 2 Ozelot (AA)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
@@ -3433,6 +3641,7 @@
             <Portuguese>Wiesel 2 (ATGM)</Portuguese>
             <French>Wiesel 2 (ATGM)</French>
             <Czech>Wiesel 2 (ATGM)</Czech>
+            <Turkish>Wiesel 2 (ATGM)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
@@ -3446,6 +3655,7 @@
             <Portuguese>Wiesel 2 (MK20)</Portuguese>
             <French>Wiesel 2 (MK20)</French>
             <Czech>Wiesel 2 (MK20)</Czech>
+            <Turkish>Wiesel 2 (MK20)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_scout">
             <English>Wiesel 2 RFCV (Radar)</English>
@@ -3459,6 +3669,7 @@
             <Portuguese>Wiesel 2 RFCV (Radar)</Portuguese>
             <French>Wiesel 2 RFCV (Radar)</French>
             <Czech>Wiesel 2 RFCV (Radar)</Czech>
+            <Turkish>Wiesel 2 RFCV (Radar)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -3472,6 +3683,7 @@
             <Portuguese>Leupold Mark 4 HAMR</Portuguese>
             <French>Leupold Mark 4 HAMR</French>
             <Czech>Leupold Mark 4 HAMR</Czech>
+            <Turkish>Leupold Mark 4 HAMR</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
             <English>Leupold Mark 4 HAMR (Khaki)</English>
@@ -3485,6 +3697,7 @@
             <Portuguese>Leupold Mark 4 HAMR (Khaki)</Portuguese>
             <French>Leupold Mark 4 HAMR (Kaki)</French>
             <Czech>Leupold Mark 4 HAMR (Khaki)</Czech>
+            <Turkish>Leupold Mark 4 HAMR (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
@@ -3498,6 +3711,7 @@
             <Portuguese>ELCAN SpecterOS (Bege)</Portuguese>
             <French>ELCAN SpecterOS (Tan)</French>
             <Czech>ELCAN SpecterOS (Žlutohnědá)</Czech>
+            <Turkish>ELCAN SpecterOS (Tan)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_blk">
             <English>ELCAN SpecterOS (Black)</English>
@@ -3511,6 +3725,7 @@
             <Portuguese>ELCAN SpecterOS (Preto)</Portuguese>
             <French>ELCAN SpecterOS (Noire)</French>
             <Czech>ELCAN SpecterOS (Černá)</Czech>
+            <Turkish>ELCAN SpecterOS (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
             <English>ELCAN SpecterOS (Green Hex)</English>
@@ -3523,6 +3738,7 @@
             <Portuguese>ELCAN SpecterOS (Verde Hex)</Portuguese>
             <French>ELCAN SpecterOS (Hex Verte)</French>
             <Czech>ELCAN SpecterOS (Zelený Hex)</Czech>
+            <Turkish>ELCAN SpecterOS (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3536,6 +3752,7 @@
             <Portuguese>SIG BRAVO4 / ROMEO3 (Preto)</Portuguese>
             <French>SIG BRAVO4 / ROMEO3 (Noire)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Černá)</Czech>
+            <Turkish>SIG BRAVO4 / ROMEO3 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
             <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
@@ -3549,6 +3766,7 @@
             <Portuguese>SIG BRAVO4 / ROMEO3 (Khaki)</Portuguese>
             <French>SIG BRAVO4 / ROMEO3 (Kaki)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Khaki)</Czech>
+            <Turkish>SIG BRAVO4 / ROMEO3 (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -3562,6 +3780,7 @@
             <Portuguese>SIG BRAVO4 / ROMEO3 (Areia)</Portuguese>
             <French>SIG BRAVO4 / ROMEO3 (Beige)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Písková)</Czech>
+            <Turkish>SIG BRAVO4 / ROMEO3 (Kum)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
@@ -3574,6 +3793,7 @@
             <Portuguese>Nightforce NXS</Portuguese>
             <French>Nightforce NXS</French>
             <Czech>Nightforce NXS</Czech>
+            <Turkish>Nightforce NXS</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
@@ -3586,6 +3806,7 @@
             <Portuguese>Nightforce NXS (Verde Hex)</Portuguese>
             <French>Nightforce NXS (Hex Verte)</French>
             <Czech>Nightforce NXS (Zelený Hex)</Czech>
+            <Turkish>Nightforce NXS (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -3599,6 +3820,7 @@
             <Portuguese>Nightforce NXS (Selva)</Portuguese>
             <French>Nightforce NXS (Jungle)</French>
             <Czech>Nightforce NXS (Džungle)</Czech>
+            <Turkish>Nightforce NXS (Orman)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -3611,6 +3833,7 @@
             <Portuguese>US Optics MR-10  (Preto)</Portuguese>
             <French>US Optics MR-10 (Noire)</French>
             <Czech>US Optics MR-10 (Černá)</Czech>
+            <Turkish>US Optics MR-10 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -3623,6 +3846,7 @@
             <Portuguese>US Optics MR-10 (Khaki)</Portuguese>
             <French>US Optics MR-10 (Kaki)</French>
             <Czech>US Optics MR-10 (Khaki)</Czech>
+            <Turkish>US Optics MR-10 (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -3635,6 +3859,7 @@
             <Portuguese>US Optics MR-10 (Areia)</Portuguese>
             <French>US Optics MR-10 (Beige)</French>
             <Czech>US Optics MR-10 (Písková)</Czech>
+            <Turkish>US Optics MR-10 (Kum)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -3647,6 +3872,7 @@
             <Portuguese>KAHLES Helia  (Preto)</Portuguese>
             <French>KAHLES Helia (Noire)</French>
             <Czech>KAHLES Helia (Černá)</Czech>
+            <Turkish>KAHLES Helia (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -3659,6 +3885,7 @@
             <Portuguese>KAHLES Helia (Hex)</Portuguese>
             <French>KAHLES Helia (Hex)</French>
             <Czech>KAHLES Helia (Hex)</Czech>
+            <Turkish>KAHLES Helia (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -3671,6 +3898,7 @@
             <Portuguese>KAHLES Helia (Velho)</Portuguese>
             <French>KAHLES Helia (Usée)</French>
             <Czech>KAHLES Helia (Stará)</Czech>
+            <Turkish>KAHLES Helia (Eski)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -3683,6 +3911,7 @@
             <Portuguese>KAHLES Helia (Bege)</Portuguese>
             <French>KAHLES Helia (Tan)</French>
             <Czech>KAHLES Helia (Žlutohnědá)</Czech>
+            <Turkish>KAHLES Helia (Tan)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
@@ -3695,6 +3924,7 @@
             <Portuguese>Burris XTR II</Portuguese>
             <French>Burris XTR II</French>
             <Czech>Burris XTR II</Czech>
+            <Turkish>Burris XTR II</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
@@ -3707,6 +3937,7 @@
             <Portuguese>Burris XTR II (Verde Hex)</Portuguese>
             <French>Burris XTR II (Hex Verte)</French>
             <Czech>Burris XTR II (Zelený Hex)</Czech>
+            <Turkish>Burris XTR II (Yeşil Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -3720,6 +3951,7 @@
             <Portuguese>EOTech XPS3 (Bege)</Portuguese>
             <French>EOTech XPS3 (Tan)</French>
             <Czech>EOTech XPS3 (Žlutohnědá)</Czech>
+            <Turkish>EOTech XPS3 (Tan)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_blk">
             <English>EOTech XPS3 (Black)</English>
@@ -3733,6 +3965,7 @@
             <Portuguese>EOTech XPS3 (Preto)</Portuguese>
             <French>EOTech XPS3 (Noire)</French>
             <Czech>EOTech XPS3 (Černá)</Czech>
+            <Turkish>EOTech XPS3 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_khk">
             <English>EOTech XPS3 (Khaki)</English>
@@ -3746,6 +3979,7 @@
             <Portuguese>EOTech XPS3 (Khaki)</Portuguese>
             <French>EOTech XPS3 (Kaki)</French>
             <Czech>EOTech XPS3 (Khaki)</Czech>
+            <Turkish>EOTech XPS3 (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -3759,6 +3993,7 @@
             <Portuguese>EOTech XPS3 SMG (Bege)</Portuguese>
             <French>EOTech XPS3 SMG (Tan)</French>
             <Czech>EOTech XPS3 SMG (Žlutohnědá)</Czech>
+            <Turkish>EOTech XPS3 SMG (Tan)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_blk">
             <English>EOTech XPS3 SMG (Black)</English>
@@ -3772,6 +4007,7 @@
             <Portuguese>EOTech XPS3 SMG (Preto)</Portuguese>
             <French>EOTech XPS3 SMG (Noire)</French>
             <Czech>EOTech XPS3 SMG (Černá)</Czech>
+            <Turkish>EOTech XPS3 SMG (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_khk">
             <English>EOTech XPS3 SMG (Khaki)</English>
@@ -3785,6 +4021,7 @@
             <Portuguese>EOTech XPS3 SMG (Khaki)</Portuguese>
             <French>EOTech XPS3 SMG (Kaki)</French>
             <Czech>EOTech XPS3 SMG (Khaki)</Czech>
+            <Turkish>EOTech XPS3 SMG (Hakii)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
@@ -3797,6 +4034,7 @@
             <Portuguese>IOR-Valdada Pitbull 2</Portuguese>
             <French>IOR-Valdada Pitbull 2</French>
             <Czech>IOR-Valdada Pitbull 2</Czech>
+            <Turkish>IOR-Valdada Pitbull 2</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -3809,6 +4047,7 @@
             <Portuguese>Burris FastFire 2</Portuguese>
             <French>Burris FastFire 2</French>
             <Czech>Burris FastFire 2</Czech>
+            <Turkish>Burris FastFire 2</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>
@@ -3822,6 +4061,7 @@
             <Portuguese>C-More Railway (Vermelho)</Portuguese>
             <French>C-More Railway (Rouge)</French>
             <Czech>C-More Railway (Červený)</Czech>
+            <Turkish>C-More Railway (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn">
             <English>C-More Railway (Green)</English>
@@ -3835,6 +4075,7 @@
             <Portuguese>C-More Railway (Verde)</Portuguese>
             <French>C-More Railway (Verte)</French>
             <Czech>C-More Railway (Zelený)</Czech>
+            <Turkish>C-More Railway (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_smg">
             <English>C-More Railway SMG (Red)</English>
@@ -3848,6 +4089,7 @@
             <Portuguese>C-More Railway SMG (Vermelho)</Portuguese>
             <French>C-More Railway SMG (Rouge)</French>
             <Czech>C-More Railway SMG (Červený)</Czech>
+            <Turkish>C-More Railway SMG (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn_smg">
             <English>C-More Railway SMG (Green)</English>
@@ -3861,6 +4103,7 @@
             <Portuguese>C-More Railway SMG (Verde)</Portuguese>
             <French>C-More Railway SMG (Verte)</French>
             <Czech>C-More Railway SMG (Zelený)</Czech>
+            <Turkish>C-More Railway SMG (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Black_Name">
             <English>P90 TR (Black)</English>
@@ -3877,6 +4120,7 @@
             <Chinese>P90 TR (黑色)</Chinese>
             <Chinesesimp>P90 TR (黑色)</Chinesesimp>
             <Korean>P90 TR (Black)</Korean>
+            <Turkish>P90 TR (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Khaki_Name">
             <English>P90 TR (Khaki)</English>
@@ -3893,6 +4137,7 @@
             <Chinese>P90 TR (沙色)</Chinese>
             <Chinesesimp>P90 TR (沙色)</Chinesesimp>
             <Korean>P90 TR (Khaki)</Korean>
+            <Turkish>P90 TR (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Camo_Name">
             <English>P90 TR (Camo)</English>
@@ -3909,6 +4154,7 @@
             <Chinese>P90 TR (迷彩)</Chinese>
             <Chinesesimp>P90 TR (迷彩)</Chinesesimp>
             <Korean>P90 TR (Camo)</Korean>
+            <Turkish>P90 TR (Kamufulaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Hex_Name">
             <English>P90 TR (Hex)</English>
@@ -3925,6 +4171,7 @@
             <Chinese>P90 TR (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>P90 TR (数位蜂巢迷彩)</Chinesesimp>
             <Korean>P90 TR (Hex)</Korean>
+            <Turkish>P90 TR (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Black_Name">
             <English>P90 (Black)</English>
@@ -3941,6 +4188,7 @@
             <Chinese>P90 (黑色)</Chinese>
             <Chinesesimp>P90 (黑色)</Chinesesimp>
             <Korean>P90 (Black)</Korean>
+            <Turkish>P90 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Khaki_Name">
             <English>P90 (Khaki)</English>
@@ -3957,6 +4205,7 @@
             <Chinese>P90 (沙色)</Chinese>
             <Chinesesimp>P90 (沙色)</Chinesesimp>
             <Korean>P90 (Khaki)</Korean>
+            <Turkish>P90 (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Camo_Name">
             <English>P90 (Camo)</English>
@@ -3973,6 +4222,7 @@
             <Chinese>P90 (迷彩)</Chinese>
             <Chinesesimp>P90 (迷彩)</Chinesesimp>
             <Korean>P90 (Camo)</Korean>
+            <Turkish>P90 (Kamufulaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Hex_Name">
             <English>P90 (Hex)</English>
@@ -3989,6 +4239,7 @@
             <Chinese>P90 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>P90 (数位蜂巢迷彩)</Chinesesimp>
             <Korean>P90 (Hex)</Korean>
+            <Turkish>P90 (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_TR_Black_Name">
             <English>PS90 TR (Black)</English>
@@ -4005,6 +4256,7 @@
             <Chinese>PS90 TR (黑色)</Chinese>
             <Chinesesimp>PS90 TR (黑色)</Chinesesimp>
             <Korean>PS90 TR (Black)</Korean>
+            <Turkish>PS90 TR (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_TR_Khaki_Name">
             <English>PS90 TR (Khaki)</English>
@@ -4021,6 +4273,7 @@
             <Chinese>PS90 TR (沙色)</Chinese>
             <Chinesesimp>PS90 TR (沙色)</Chinesesimp>
             <Korean>PS90 TR (Khaki)</Korean>
+            <Turkish>PS90 TR (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_TR_Camo_Name">
             <English>PS90 TR (Camo)</English>
@@ -4037,6 +4290,7 @@
             <Chinese>PS90 TR (迷彩)</Chinese>
             <Chinesesimp>PS90 TR (迷彩)</Chinesesimp>
             <Korean>PS90 TR (Camo)</Korean>
+            <Turkish>PS90 TR (Kamufulaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_TR_Hex_Name">
             <English>PS90 TR (Hex)</English>
@@ -4053,6 +4307,7 @@
             <Chinese>PS90 TR (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>PS90 TR (数位蜂巢迷彩)</Chinesesimp>
             <Korean>PS90 TR (Hex)</Korean>
+            <Turkish>PS90 TR (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_Black_Name">
             <English>PS90 (Black)</English>
@@ -4069,6 +4324,7 @@
             <Chinese>PS90 (黑色)</Chinese>
             <Chinesesimp>PS90 (黑色)</Chinesesimp>
             <Korean>PS90 (Black)</Korean>
+            <Turkish>PS90 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_Khaki_Name">
             <English>PS90 (Khaki)</English>
@@ -4085,6 +4341,7 @@
             <Chinese>PS90 (沙色)</Chinese>
             <Chinesesimp>PS90 (沙色)</Chinesesimp>
             <Korean>PS90 (Khaki)</Korean>
+            <Turkish>PS90 (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_Camo_Name">
             <English>PS90 (Camo)</English>
@@ -4101,6 +4358,7 @@
             <Chinese>PS90 (迷彩)</Chinese>
             <Chinesesimp>PS90 (迷彩)</Chinesesimp>
             <Korean>PS90 (Camo)</Korean>
+            <Turkish>PS90 (Kamufulaj)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_PS90_Hex_Name">
             <English>PS90 (Hex)</English>
@@ -4117,6 +4375,7 @@
             <Chinese>PS90 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>PS90 (数位蜂巢迷彩)</Chinesesimp>
             <Korean>PS90 (Hex)</Korean>
+            <Turkish>PS90 (Hex)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Mag_Name">
             <English>5.7mm 50Rnd Mag</English>
@@ -4133,6 +4392,7 @@
             <Chinese>5.7mm 50發 彈匣</Chinese>
             <Chinesesimp>5.7mm 50发 弹匣</Chinesesimp>
             <Korean>5.7mm 50Rnd Mag</Korean>
+            <Turkish>5.7mm 50Rnd Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_Mag_DescriptionShort">
             <English>Caliber: 5.7mm&lt;br /&gt;Rounds: 50&lt;br /&gt;Used in: P90</English>

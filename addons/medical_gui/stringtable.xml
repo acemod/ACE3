@@ -12,6 +12,7 @@
             <Czech>GUI</Czech>
             <Polish>Graficzny Interfejs Użytkownika</Polish>
             <Spanish>Interfaz gráfica</Spanish>
+            <Turkish>GUI</Turkish>
             <German>Graphische Benutzeroberfläche</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_DisplayName">
@@ -26,6 +27,7 @@
             <Czech>Povolit zdravotnické akce</Czech>
             <Polish>Włącza opcje medyczne</Polish>
             <Spanish>Habilitar acciones médicas</Spanish>
+            <Turkish>Medikal hareketleri etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
@@ -55,6 +57,7 @@
             <Korean>선택 (3d)</Korean>
             <Chinesesimp>选择 (3D)</Chinesesimp>
             <Chinese>選擇 (3D)</Chinese>
+            <Turkish>Seçimler (3D)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Radial">
             <English>Radial</English>
@@ -71,6 +74,7 @@
             <Korean>다이얼형</Korean>
             <Chinesesimp>放射状</Chinesesimp>
             <Chinese>放射狀</Chinese>
+            <Turkish>Radyal</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_DisplayName">
             <English>Enable Medical Self Actions</English>
@@ -84,6 +88,7 @@
             <Czech>Povolit zdravotnické vlastní akce</Czech>
             <Polish>Włącza akcje medyczne na sobie</Polish>
             <Spanish>Habilitar las acciones médicas en uno mismo</Spanish>
+            <Turkish>Kendine Tıbbi Müdahele Etmeyi Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_Description">
             <English>Enables medical actions for the Self Interaction Menu.</English>
@@ -110,6 +115,7 @@
             <Czech>Povolit Zdravotnické menu</Czech>
             <Polish>Włącz Menu Medyczne</Polish>
             <Spanish>Activar menú médico</Spanish>
+            <Turkish>Medikal Menüyü Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
@@ -191,6 +197,7 @@
             <Korean>치료</Korean>
             <Chinesesimp>医疗</Chinesesimp>
             <Chinese>醫療</Chinese>
+            <Turkish>Medikal</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MedicalMenu">
             <English>Medical Menu</English>
@@ -206,6 +213,7 @@
             <Korean>의료 메뉴</Korean>
             <Chinesesimp>医疗选单</Chinesesimp>
             <Chinese>醫療選單</Chinese>
+            <Turkish>Medikal Menü</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenMedicalMenu">
             <English>Open Medical Menu</English>
@@ -221,6 +229,7 @@
             <Korean>의료 메뉴 열기</Korean>
             <Chinesesimp>开起医疗选单</Chinesesimp>
             <Chinese>開起醫療選單</Chinese>
+            <Turkish>Medikal Menüyü Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
@@ -237,6 +246,7 @@
             <Korean>환자 싣기</Korean>
             <Chinesesimp>将伤者放入</Chinesesimp>
             <Chinese>將傷者放入</Chinese>
+            <Turkish>Kişiyi Bindir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_UnloadPatient">
             <English>Unload Patient</English>
@@ -253,6 +263,7 @@
             <Korean>환자 내리기</Korean>
             <Chinesesimp>将伤者背出</Chinesesimp>
             <Chinese>將傷者背出</Chinese>
+            <Turkish>Kişiyi Indir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -283,6 +294,7 @@
             <Korean>상태</Korean>
             <Chinesesimp>状态</Chinesesimp>
             <Chinese>狀態</Chinese>
+            <Turkish>DURUM</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OVERVIEW">
             <English>OVERVIEW</English>
@@ -298,6 +310,7 @@
             <Korean>개요</Korean>
             <Chinesesimp>概述</Chinesesimp>
             <Chinese>概述</Chinese>
+            <Turkish>GENEL BAKIŞ</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ACTIVITY_LOG">
             <English>ACTIVITY LOG</English>
@@ -313,6 +326,7 @@
             <Korean>활동 로그</Korean>
             <Chinesesimp>医疗纪录</Chinesesimp>
             <Chinese>醫療紀錄</Chinese>
+            <Turkish>AKTIVITE GÜNLÜĞÜ</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_QUICK_VIEW">
             <English>QUICK VIEW</English>
@@ -328,6 +342,7 @@
             <Korean>퀵 뷰</Korean>
             <Chinesesimp>快速检查</Chinesesimp>
             <Chinese>快速檢查</Chinese>
+            <Turkish>HIZLI GÖRÜNÜM</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_INJURIES">
             <English>INJURIES</English>
@@ -344,6 +359,7 @@
             <Korean>부상</Korean>
             <Chinesesimp>受伤</Chinesesimp>
             <Chinese>受傷</Chinese>
+            <Turkish>YARALANMALARI</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ViewTriageCard">
             <English>View Triage Card</English>
@@ -359,6 +375,7 @@
             <Korean>부상자 카드 보기</Korean>
             <Chinesesimp>查看诊断卡</Chinesesimp>
             <Chinese>查看診斷卡</Chinese>
+            <Turkish>Triyaj Kartını Görüntüle</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ExaminePatient">
             <English>Examine Patient</English>
@@ -374,6 +391,7 @@
             <Korean>환자 검사하기</Korean>
             <Chinesesimp>检查伤者</Chinesesimp>
             <Chinese>檢查傷者</Chinese>
+            <Turkish>Hastayı Incele</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BandageFractures">
             <English>Bandage / Fractures</English>
@@ -389,6 +407,7 @@
             <Korean>붕대 / 골절</Korean>
             <Chinesesimp>绷带 / 骨折</Chinesesimp>
             <Chinese>繃帶 / 骨折</Chinese>
+            <Turkish>Bandaj / Kırıklar</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medication">
             <English>Medication</English>
@@ -449,6 +468,7 @@
             <Korean>끌기 / 들기</Korean>
             <Chinesesimp>拖 / 背</Chinesesimp>
             <Chinese>拖 / 背</Chinese>
+            <Turkish>Sürükle / Taşı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ToggleSelf">
             <English>Toggle (Self)</English>
@@ -479,6 +499,7 @@
             <Korean>머리</Korean>
             <Chinesesimp>头部</Chinesesimp>
             <Chinese>頭部</Chinese>
+            <Turkish>Kafa</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Torso">
             <English>Torso</English>
@@ -494,6 +515,7 @@
             <Korean>몸통</Korean>
             <Chinesesimp>身体</Chinesesimp>
             <Chinese>身體</Chinese>
+            <Turkish>Gövde</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LeftArm">
             <English>Left Arm</English>
@@ -509,6 +531,7 @@
             <Korean>왼쪽 팔</Korean>
             <Chinesesimp>左手</Chinesesimp>
             <Chinese>左手</Chinese>
+            <Turkish>Sol Kol</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_RightArm">
             <English>Right Arm</English>
@@ -524,6 +547,7 @@
             <Korean>오른쪽 팔</Korean>
             <Chinesesimp>右手</Chinesesimp>
             <Chinese>右手</Chinese>
+            <Turkish>Sağ Kol</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LeftLeg">
             <English>Left Leg</English>
@@ -539,6 +563,7 @@
             <Korean>왼쪽 다리</Korean>
             <Chinesesimp>左脚</Chinesesimp>
             <Chinese>左腳</Chinese>
+            <Turkish>Sol Bacak</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_RightLeg">
             <English>Right Leg</English>
@@ -554,6 +579,7 @@
             <Korean>오른쪽 다리</Korean>
             <Chinesesimp>右脚</Chinesesimp>
             <Chinese>右腳</Chinese>
+            <Turkish>Sağ Bacak</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectHead">
             <English>Select Head</English>
@@ -569,6 +595,7 @@
             <Korean>머리 선택</Korean>
             <Chinesesimp>选择头部</Chinesesimp>
             <Chinese>選擇頭部</Chinese>
+            <Turkish>Kafayı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectTorso">
             <English>Select Torso</English>
@@ -584,6 +611,7 @@
             <Korean>몸통 선택</Korean>
             <Chinesesimp>选择身体</Chinesesimp>
             <Chinese>選擇身體</Chinese>
+            <Turkish>Gövdeyi Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectLeftArm">
             <English>Select Left Arm</English>
@@ -599,6 +627,7 @@
             <Korean>왼쪽 팔 선택</Korean>
             <Chinesesimp>选择左手</Chinesesimp>
             <Chinese>選擇左手</Chinese>
+            <Turkish>Sol Kolu Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectRightArm">
             <English>Select Right Arm</English>
@@ -614,6 +643,7 @@
             <Korean>오른쪽 팔 선택</Korean>
             <Chinesesimp>选择右手</Chinesesimp>
             <Chinese>選擇右手</Chinese>
+            <Turkish>Sağ Kolu Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectLeftLeg">
             <English>Select Left Leg</English>
@@ -629,6 +659,7 @@
             <Korean>왼쪽 다리 선택</Korean>
             <Chinesesimp>选择左脚</Chinesesimp>
             <Chinese>選擇左腳</Chinese>
+            <Turkish>Sol Bacağı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectRightLeg">
             <English>Select Right Leg</English>
@@ -644,6 +675,7 @@
             <Korean>오른쪽 다리 선택</Korean>
             <Chinesesimp>选择右脚</Chinesesimp>
             <Chinese>選擇右腳</Chinese>
+            <Turkish>Sağ Bacağı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Small">
             <English>Small</English>
@@ -659,6 +691,7 @@
             <Korean>소</Korean>
             <Chinesesimp>小</Chinesesimp>
             <Chinese>小</Chinese>
+            <Turkish>Küçük</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medium">
             <English>Medium</English>
@@ -674,6 +707,7 @@
             <Korean>중</Korean>
             <Chinesesimp>中</Chinesesimp>
             <Chinese>中</Chinese>
+            <Turkish>Orta</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Large">
             <English>Large</English>
@@ -689,6 +723,7 @@
             <Korean>대</Korean>
             <Chinesesimp>大</Chinesesimp>
             <Chinese>大</Chinese>
+            <Turkish>Büyük</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MULTIPLE_OPEN_WOUNDS">
             <English>There are %2 %1 Open Wounds</English>

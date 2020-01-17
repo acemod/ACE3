@@ -16,6 +16,7 @@
             <Korean>MicroDAGR GPS</Korean>
             <Chinesesimp>微型军用GPS接收器</Chinesesimp>
             <Chinese>微型軍用GPS接收器</Chinese>
+            <Turkish>MicroDAGR GPS</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_itemDescription">
             <English>MicroDAGR advanced GPS receiver</English>
@@ -112,6 +113,7 @@
             <Korean>켜기</Korean>
             <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟</Chinese>
+            <Turkish>Açık</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingOff">
             <English>Off</English>
@@ -128,6 +130,7 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterCords">
             <English>Enter Grid Cords:</English>

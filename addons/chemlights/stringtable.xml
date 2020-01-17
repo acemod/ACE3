@@ -15,6 +15,7 @@
             <Portuguese>Bastões de Luz</Portuguese>
             <Czech>Chemická světla</Czech>
             <Spanish>Luces químicas</Spanish>
+            <Turkish>Işık Çubukları</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare">
             <English>Prepare %1</English>
@@ -61,6 +62,7 @@
             <Korean>소지품 공간이 없음</Korean>
             <Chinese>已無存放空間</Chinese>
             <Chinesesimp>已无存放空间</Chinesesimp>
+            <Turkish>Envanter de alan yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Box_DisplayName">
             <English>[ACE] Chemlights</English>
@@ -91,6 +93,7 @@
             <Portuguese>Bastão de Luz (Laranja)</Portuguese>
             <Czech>Chemické světlo (Oranžové)</Czech>
             <Spanish>Luz química (naranja)</Spanish>
+            <Turkish>Işık Çubuğu (Turuncu)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayNameShort">
             <English>Orange Light</English>
@@ -106,6 +109,7 @@
             <Portuguese>Luz Laranja</Portuguese>
             <Czech>Oranžové světlo</Czech>
             <Spanish>Luz naranja</Spanish>
+            <Turkish>Turuncu Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DescriptionShort">
             <English>Type: Light - Orange&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -136,6 +140,7 @@
             <Portuguese>Bastão de Luz (Branco)</Portuguese>
             <Czech>Chemické světlo (Bílé)</Czech>
             <Spanish>Luz química (Blanca)</Spanish>
+            <Turkish>Işık Çubuğu (Beyaz)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayNameShort">
             <English>White Light</English>
@@ -151,6 +156,7 @@
             <Portuguese>Luz Branca</Portuguese>
             <Czech>Bílé světlo</Czech>
             <Spanish>Luz blanca</Spanish>
+            <Turkish>Beyaz Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DescriptionShort">
             <English>Type: Light - White&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -181,6 +187,7 @@
             <Portuguese>Bastão de Luz (Vermelho Forte)</Portuguese>
             <Czech>Chemické světlo (Červené jasné)</Czech>
             <Spanish>Luz química (Roja Hi)</Spanish>
+            <Turkish>Işık Çubuğu (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayNameShort">
             <English>Red Hi Light</English>
@@ -196,6 +203,7 @@
             <Portuguese>Luz forte vermelha</Portuguese>
             <Czech>Červené jasné světlo</Czech>
             <Spanish>Luz roja Hi</Spanish>
+            <Turkish>Kırmızı Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
             <English>Type: Light - Red Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -226,6 +234,7 @@
             <Portuguese>Bastão de Luz (Amarelo Forte)</Portuguese>
             <Czech>Chemické světlo (Žluté jasné)</Czech>
             <Spanish>Luz química (Amarilla Hi)</Spanish>
+            <Turkish>Işık Çubuğu (Sarı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayNameShort">
             <English>Yellow Hi Light</English>
@@ -241,6 +250,7 @@
             <Portuguese>Luz forte amarela</Portuguese>
             <Czech>Žluté jasné světlo</Czech>
             <Spanish>Luz amarilla Hi</Spanish>
+            <Turkish>Sarı Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
             <English>Type: Light - Yellow Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>

@@ -16,6 +16,7 @@
             <Korean>사용함</Korean>
             <Chinese>使用過的火箭筒</Chinese>
             <Chinesesimp>使用过的火箭筒</Chinesesimp>
+            <Turkish>Kullanılmış Tüp</Turkish>
         </Key>
         <Key ID="STR_ACE_Disposable_UsedTubeDescription">
             <English>Used disposable rocket launcher</English>
@@ -32,6 +33,7 @@
             <Korean>사용한 일회용 발사관</Korean>
             <Chinese>使用過的一次性火箭發射器</Chinese>
             <Chinesesimp>使用过的一次性火箭发射器</Chinesesimp>
+            <Turkish>Tek Kullanımlık Roket Atar</Turkish>
         </Key>
         <Key ID="STR_ACE_Disposable_PreloadedMissileDummy">
             <English>Preloaded Missile Dummy</English>

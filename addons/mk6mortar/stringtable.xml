@@ -16,6 +16,7 @@
             <Korean>82mm 사거리표</Korean>
             <Chinesesimp>82mm迫击炮射表</Chinesesimp>
             <Chinese>82毫米迫擊炮射表</Chinese>
+            <Turkish>82mm Menzil Tablosu</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the Mk6 82mm Mortar</English>
@@ -48,6 +49,7 @@
             <Korean>82mm 사거리표 열기</Korean>
             <Chinesesimp>开启82mm迫击炮射表</Chinesesimp>
             <Chinese>開啟82毫米迫擊炮射表</Chinese>
+            <Turkish>82mm Menzil Tablosunu Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_charge">
             <English>Charge</English>
@@ -64,6 +66,7 @@
             <Korean>장약</Korean>
             <Chinesesimp>装药</Chinesesimp>
             <Chinese>裝藥</Chinese>
+            <Turkish>Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_DisplayName">
             <English>Mk6 Mortar</English>
@@ -77,6 +80,7 @@
             <Russian>Миномет Mk6</Russian>
             <Portuguese>Morteiro Mk6</Portuguese>
             <Czech>Minomet Mk6</Czech>
+            <Turkish>Mk6 Mortar</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -93,6 +97,7 @@
             <Korean>Mk6 설정</Korean>
             <Chinesesimp>MK6设定</Chinesesimp>
             <Chinese>MK6設定</Chinese>
+            <Turkish>Mk6 Ayarları</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
@@ -109,6 +114,7 @@
             <Korean>공기저항</Korean>
             <Chinesesimp>空气阻力</Chinesesimp>
             <Chinese>空氣阻力</Chinese>
+            <Turkish>Hava Direnci</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>

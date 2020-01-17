@@ -59,6 +59,7 @@
             <Chinese>進階醫療用品</Chinese>
             <Czech>Pokročilé léky</Czech>
             <Italian>Medicazione avanzata</Italian>
+            <Polish>Zaawansowane leki</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
@@ -70,6 +71,7 @@
             <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
             <Italian>Abilita una gestione della medicazione più estesa e approfondita. Permette inoltre l'utilizzo dell'Adenosina.</Italian>
             <German>Ermöglicht erweiterte, mehr tiefgründigere Anwendung von Medikationen. Ebenso ermöglicht es die Benutzung von Adenosin.</German>
+            <Polish>Pozwala na zaawansowane uzycie leków. Pozwala na używanie Adenozyny.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -104,12 +106,14 @@
             <Chinese>包紮即痊癒</Chinese>
             <French>Guérir les blessures pansées</French>
             <Czech>Vyčistit úraz po obvázání</Czech>
+            <Polish>Usuń uraz po zabandażowaniu</Polish>
             <Italian>Rimozione ferite bendate</Italian>
             <German>Entferne Trauma nach Bandagierung.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
             <English>Controls whether fully bandaged body parts are healed.</English>
             <Japanese>全ての傷に対して包帯を巻いた部分を治癒するかどうかを決定します。</Japanese>
+            <Polish>Kontroluje czy w pełni zabandażowane części ciała są uleczone.</Polish>
             <French>Définit s'il faut guérir les parties du corps entièrement bandées.</French>
             <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
             <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
@@ -324,19 +328,21 @@
             <Polish>Kontroluje, czy apteczka osobista powinna być zużyta po użyciu.</Polish>
             <German>Kontrolliert, ob ein Erste-Hilfe-Set nach der Benutzung verbraucht werden soll.</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
-            <English>Enables the use of PAKs to heal oneself.</English>
-            <Italian>Abilita l'utilizzo del kit di pronto soccorso su se stessi.</Italian>
-            <German>Erlaubt die Benutzung des Erste-Hilfe-Sets, um sich selbst zu heilen.</German>
-            <Chinese>啟用個人急救包能對自己使用。</Chinese>
-            <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_DisplayName">
             <English>Self PAK Usage</English>
             <Italian>Utilizzo del kit di pronto soccorso su se stessi</Italian>
             <German>Erste-Hilfe-Set Selbstanwendung</German>
             <Chinese>自我使用急救包</Chinese>
             <French>Utilisation de la trousse sanitaire sur soi-même</French>
+            <Polish>Używanie apteczki osobistej na sobie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
+            <English>Enables the use of PAKs to heal oneself.</English>
+            <Italian>Abilita l'utilizzo del kit di pronto soccorso su se stessi.</Italian>
+            <German>Erlaubt die Benutzung des Erste-Hilfe-Sets, um sich selbst zu heilen.</German>
+            <Chinese>啟用個人急救包能對自己使用。</Chinese>
+            <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
+            <Polish>Pozwala na użycie apteczki osobistej na sobie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -465,6 +471,7 @@
             <Portuguese>Autotransfusão de IV</Portuguese>
             <Chinese>自我注射點滴</Chinese>
             <Czech>Samoaplikace IV transfuze</Czech>
+            <Polish>Samotransfuzja IV</Polish>
             <Italian>Trasfusione endovena su se stessi</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_Description">
@@ -476,6 +483,7 @@
             <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
             <Czech>Umožňuje aplikovat IV transfuze na sama sebe.</Czech>
+            <Polish>Pozwala przetoczyć płyny IV samemu sobie</Polish>
             <Italian>Abilita la trasfusione in endovena su se stessi.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
@@ -661,6 +669,7 @@
             <Chinese>心肺復甦術成功率</Chinese>
             <Czech>Pravděpodobnost úspěchu CPR</Czech>
             <Italian>Possibilità di successo della RCP</Italian>
+            <Polish>Szansa powodzenia RKO</Polish>
             <German>HLW Erfolgsrate</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_Description">
@@ -672,6 +681,7 @@
             <Chinese>心肺復甦術恢復心率的機率。</Chinese>
             <Czech>Pravděpodobnost, že CPR obnoví srdeční tep.</Czech>
             <Italian>E' probabile che la rianimazione RCP abbia successo nel ripristinare il ritmo cardiaco.</Italian>
+            <Polish>Prawdopodobieństwo przwyrócenia akcji serca poprzez wykonanie RKO</Polish>
             <German>Wahrscheinlichkeit, dass HLW bei der Wiederherstellung des Herzrhythmus erfolgreich sein wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
@@ -1442,20 +1452,20 @@
             <Chinese>點滴 (血液 1000毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Short">
-            <English>Blood IV, for restoring a patients blood (keep cold)</English>
-            <Russian>Пакет крови для возмещения объёма потерянной крови (хранить в холодильнике)</Russian>
-            <Spanish>Sangre intravenosa, para restarurar el volumen sanguíneo (mantener frío)</Spanish>
-            <French>Culot sanguin pour transfustion IV, restaure le sang d'un patient (à conserver au froid).</French>
-            <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta, trzymać w warunkach chłodniczych.</Polish>
-            <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek (hidegen tárolandó)</Hungarian>
-            <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue (conservare al fresco)</Italian>
-            <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
-            <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.(Manter frio)</Portuguese>
-            <Czech>Krevní transfuze pro doplnění pacientovi krve (skladujte v chladu)</Czech>
-            <Japanese>血液 IV は、患者へ血液を補給します。(要低温保存)</Japanese>
-            <Korean>혈액 IV, 환자에게 혈액을 공급합니다. (차갑게 할것)</Korean>
-            <Chinesesimp>血液, 用于补充伤者流失的血液 (需冷藏)</Chinesesimp>
-            <Chinese>血液, 用於補充傷者流失的血液 (需冷藏)</Chinese>
+            <English>Blood IV, for restoring a patients blood</English>
+            <Russian>Пакет крови для возмещения объёма потерянной крови</Russian>
+            <Spanish>Sangre intravenosa, para restarurar el volumen sanguíneo</Spanish>
+            <French>Culot sanguin pour transfustion IV, restaure le sang d'un patient.</French>
+            <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta.</Polish>
+            <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek</Hungarian>
+            <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue</Italian>
+            <German>Blut IV, um den Bluthaushalt des Patienten wiederherzustellen.</German>
+            <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.</Portuguese>
+            <Czech>Krevní transfuze pro doplnění pacientovi krve</Czech>
+            <Japanese>血液 IV は、患者へ血液を補給します。</Japanese>
+            <Korean>혈액 IV, 환자에게 혈액을 공급합니다.</Korean>
+            <Chinesesimp>血液, 用于补充伤者流失的血液</Chinesesimp>
+            <Chinese>血液, 用於補充傷者流失的血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Use">
             <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually conducted in the transport phase of medical care.</English>
@@ -2602,7 +2612,7 @@
             <English>Delayed</English>
             <Spanish>Retrasado</Spanish>
             <Russian>Срочная помощь</Russian>
-            <Polish>Opóźniony</Polish>
+            <Polish>Pomoc Odroczona</Polish>
             <French>Peut attendre</French>
             <German>Verzögert</German>
             <Czech>Odložitelný</Czech>
@@ -2618,7 +2628,7 @@
             <English>Immediate</English>
             <Spanish>Inmediato</Spanish>
             <Russian>Неотложная помощь</Russian>
-            <Polish>Natychmiastowy</Polish>
+            <Polish>Pomoc Natychmiastowa</Polish>
             <French>Urgent</French>
             <German>Sofort</German>
             <Czech>Okamžitý</Czech>
@@ -2634,7 +2644,7 @@
             <English>Deceased</English>
             <Spanish>Fallecido</Spanish>
             <Russian>Труп</Russian>
-            <Polish>Nie żyje</Polish>
+            <Polish>Denat</Polish>
             <French>Décédé</French>
             <German>Verstorben</German>
             <Czech>Mrtvý</Czech>
@@ -2650,7 +2660,7 @@
             <English>None</English>
             <Spanish>Ninguno</Spanish>
             <Russian>Отсутствует</Russian>
-            <Polish>Brak</Polish>
+            <Polish>Brak klasyfikacji</Polish>
             <French>Pas de fiche</French>
             <German>Keine</German>
             <Czech>Nic</Czech>
@@ -2774,7 +2784,7 @@
             <Russian>Жгут</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
             <French>Garrot [CAT]</French>
-            <Polish>Staza [typ. CAT]</Polish>
+            <Polish>Staza [CAT]</Polish>
             <Czech>Škrtidlo [CAT]</Czech>
             <Hungarian>Érszorító [CAT]</Hungarian>
             <Italian>Laccio emostatico [CAT]</Italian>

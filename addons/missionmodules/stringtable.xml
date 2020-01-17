@@ -16,6 +16,7 @@
             <Korean>ACE 미션 모듈</Korean>
             <Chinesesimp>ACE 任务模块</Chinesesimp>
             <Chinese>ACE 任務模塊</Chinese>
+            <Turkish>ACE Görev Modülleri</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
             <English>Ambiance Sounds</English>
@@ -32,6 +33,7 @@
             <Korean>환경 효과음</Korean>
             <Chinesesimp>环境声音</Chinesesimp>
             <Chinese>環境聲音</Chinese>
+            <Turkish>Ortam Sesleri</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
             <English>Sounds</English>
@@ -48,6 +50,7 @@
             <Korean>효과음</Korean>
             <Chinesesimp>声音</Chinesesimp>
             <Chinese>聲音</Chinese>
+            <Turkish>Sesler</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
             <English>Class names of the ambiance sounds to be played. Seperated by ','</English>
@@ -79,6 +82,7 @@
             <Korean>최소 거리</Korean>
             <Chinesesimp>最小距离</Chinesesimp>
             <Chinese>最小距離</Chinese>
+            <Turkish>Minimum Mesafe</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
             <English>Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)</English>
@@ -111,6 +115,7 @@
             <Korean>최대 거리</Korean>
             <Chinesesimp>最大距离</Chinesesimp>
             <Chinese>最大距離</Chinese>
+            <Turkish>Maksimum Mesafe</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
             <English>Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)</English>
@@ -143,6 +148,7 @@
             <Korean>최소 지연</Korean>
             <Chinesesimp>最小延迟</Chinesesimp>
             <Chinese>最小延遲</Chinese>
+            <Turkish>Minimum Gecikme</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
             <English>Minimal delay between sounds played</English>
@@ -175,6 +181,7 @@
             <Korean>최대 지연</Korean>
             <Chinesesimp>最大延迟</Chinesesimp>
             <Chinese>最大延遲</Chinese>
+            <Turkish>Maksimum Gecikme</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
             <English>Maximum delay between sounds played</English>
@@ -207,6 +214,7 @@
             <Korean>플레이어 따라가기</Korean>
             <Chinesesimp>跟随玩家</Chinesesimp>
             <Chinese>跟隨玩家</Chinese>
+            <Turkish>Oyuncuları Takip Et</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
             <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
