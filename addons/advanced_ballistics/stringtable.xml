@@ -33,6 +33,7 @@
             <Korean>각도기 표시</Korean>
             <Chinese>顯示量角器</Chinese>
             <Chinesesimp>显示量角器</Chinesesimp>
+            <Turkish>Açı Ölçeri Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_DisplayName">
             <English>Advanced Ballistics</English>
@@ -98,6 +99,7 @@
             <Russian>Вкл. вариацию начальной скорости</Russian>
             <Portuguese>Ativar Variação de Velocidade no Freio de boca </Portuguese>
             <Czech>Povoluje variantu rychlosti ústí</Czech>
+            <Turkish>Namlu Hızı Değişimini Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
@@ -128,6 +130,7 @@
             <Korean>탄약 온도 구현 적용</Korean>
             <Chinese>啟用彈藥溫度模擬系統</Chinese>
             <Chinesesimp>启用弹药温度模拟系统</Chinesesimp>
+            <Turkish>Cephane Sıcaklık Simülasyonunu Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_Description">
             <English>Muzzle velocity varies with ammo temperature</English>
@@ -256,6 +259,7 @@
             <Korean>구현 범위</Korean>
             <Chinese>模擬半徑</Chinese>
             <Chinesesimp>模拟半径</Chinesesimp>
+            <Turkish>Similasyon Yarıçapı</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationRadius_Description">
             <English>Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles</English>
@@ -288,6 +292,7 @@
             <Korean>이 모듈은 고급 탄도학을 적용시킵니다 - 이는 발사체의 궤적이 기온, 대기압, 습도, 중력, 탄환의 종류와 어느 무기에서 발사되는지에 따라 영향을 받습니다.</Korean>
             <Chinese>該模塊實現先進的彈道仿真 - 這意味著子彈的軌跡是由空氣溫度、大氣壓力、濕度、重力、彈藥類型以及射擊的武器所影響</Chinese>
             <Chinesesimp>该模块实现先进的弹道仿真 - 这意味着子弹的轨迹是由空气温度、大气压力、湿度、重力、弹药类型以及射击的武器所影响</Chinesesimp>
+            <Turkish>Bu modül gelişmiş balistik simülasyonunu etkinleştirir - yani mermilerin gidişatını hava sıcaklığı, atmosfer basıncı, nem, yerçekimi, mühimmat türü ve ateşlendiği silah gibi durumlar etkiler.</Turkish>
         </Key>
     </Package>
 </Project>

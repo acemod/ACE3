@@ -117,7 +117,7 @@
             <Korean>포로 태우기</Korean>
             <Chinese>將俘虜放入載具</Chinese>
             <Chinesesimp>将俘虏放入载具</Chinesesimp>
-            <Turkish>Tutukluyu bindir/yükle</Turkish>
+            <Turkish>Tutukluyu bindir</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_UnloadCaptive">
             <English>Unload Captive</English>
@@ -134,7 +134,7 @@
             <Korean>포로 내리기</Korean>
             <Chinese>將俘虜帶出載具</Chinese>
             <Chinesesimp>将俘虏带出载具</Chinesesimp>
-            <Turkish>Tutukluyu indir/boşalt</Turkish>
+            <Turkish>Tutukluyu indir</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -168,6 +168,7 @@
             <Korean>케이블 타이는 포로를 구류시킬때 씁니다.</Korean>
             <Chinese>束線帶可以綁住俘虜</Chinese>
             <Chinesesimp>束线带可以绑住俘虏</Chinesesimp>
+            <Turkish>Kişilerin ellerini bağlamanız için kablo sağlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_StartSurrendering">
             <English>Surrender</English>
@@ -218,6 +219,7 @@
             <Korean>투항시키기</Korean>
             <Chinese>使單位投降</Chinese>
             <Chinesesimp>使单位投降</Chinesesimp>
+            <Turkish>Birimi Kelepçele</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.</English>
@@ -280,6 +282,7 @@
             <Korean>포박 설정</Korean>
             <Chinese>俘虜設定</Chinese>
             <Chinesesimp>俘虏设定</Chinesesimp>
+            <Turkish>Tutsak Ayarları</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_Description">
             <English>Controls settings for surrender and cable ties</English>
