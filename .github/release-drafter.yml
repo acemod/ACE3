@@ -9,10 +9,12 @@ categories:
   - title: '**ADDED:**'
     labels:
       - 'kind/feature request'
-      - 'kind/enhancement'
   - title: '**FIXED:**'
     labels:
       - 'kind/bug fix'
+  - title: '**IMPROVED:**'
+    labels:
+      - 'kind/enhancement'
   - title: '**CHANGED:**'
     labels:
       - 'kind/cleanup'
