@@ -17,14 +17,39 @@
  * Public: No
  */
 
-params ["_projectile", "_fuzeMisc"];
-_fuzeMisc params ["_enabled", "_vehicleCheckRange", "_groundCheckRange"];
+params ["_projectile", "_miscFuze"];
+_miscFuze params ["_fuzeVehicle", "_fuzeAlt", "_fuzeRange"];
 
-if(!(_enabled)) exitWith {false};
+private _projPos = getPosASL _projectile;
 
-_projPos = getPos _projectile;
-if((_projPos) nearObjects ["Any", _vehicleCheckRange]) exitWith {true};
+_fuzeVehicle params ["_fuzeVehicleRadius", "_armedFuzeVehicle", "_nearestPass"];
+_fuzeAlt params ["_fuzeAltHeight", "_armedFuzeAlt"];
+_fuzeRange params ["_fuzeRangeDistance", "_armedFuzeRange", "_distanceTraveled"];
 
-if((_projPos select 2) < _groundCheckRange) exitWith {true};
+private _return = false;
 
-false;
+if (_armedFuzeVehicle) then {
+    _vehs = (_projPos) nearObjects ["AllVehicles", _fuzeVehicleRadius];
+    if(count _vehs > 0) then {
+        if( ((_projectile distance (_vehs select 0)) > _nearestPass) && (_nearestPass > 0) ) exitWith {
+            triggerAmmo _projectile;
+            _return = true;
+        };
+        _fuzeVehicle set [2, (_projectile) distance (_vehs select 0)];
+    };
+};
+
+if (_armedFuzeAlt) then {
+    if(ASLToAGL(_projPos) select 2 < _fuzeAltHeight) exitWith {
+    triggerAmmo _projectile;
+    _return = true;
+    };
+};
+
+if (_armedFuzeRange) then {
+    if((_distanceTraveled > _fuzeRangeDistance) && (_fuzeRangeDistance > 0)) exitWith {
+    _return = true;
+    };
+};
+
+_return;

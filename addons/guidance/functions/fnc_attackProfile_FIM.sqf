@@ -19,26 +19,36 @@
 
 params ["_projectile", "_shooter","_extractedInfo","_seekerTargetPos"];
 _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
-_miscManeuvering params ["_degreesPerSecond", "_lastRunTime"];
+_miscManeuvering params ["_degreesPerSecond","_lastTickTime", "_lastRunTime"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
 
-_miscProfile params ["_attackVector"];
+_miscProfile params ["_attackTrajectory"];
 
 _projPos = getPosASL _projectile;
-_returnPos = _projPos vectorAdd (vectorNormalized (velocity _projectile));
 
-if (_attackVector isEqualTo [0,0,0]) then {
-    if(!(isNull _target)) then {
-        _targetPos = getPosASL _target;
-        _targetVector = vectorNormalized (_projPos vectorFromTo _targetPos);
-        _miscProfile set [0,vectorNormalized (_projectile worldToModel (ASLToAGL _targetPos))];
+if(isNil "_attackTrajectory") then {
+    if(_seekerTargetPos isEqualTo [0,0,0]) exitWith {
+        [0,0,0];
+    } else {
+        _attackTrajectory = vectorNormalized (_projectile worldToModel ASLToAGL (_seekerTargetPos));
+        _miscProfile set [0,_attackTrajectory];
+        _extractedInfo set [4, _attackTrajectory];
     };
-} else {
-    _vectorPos = AGLToASL (_projectile modelToWorld _attackVector);
-    _posDif = _seekerTargetPos vectorAdd (_vectorPos vectorMultiply -1);
-    _returnPos = _projPos vectorAdd ((_returnPos vectorMultiply (_projPos distance _seekerTargetPos)) vectorAdd _posDif);
 };
 
-_extractedInfo set [4, _proj worldToModel (ASLToAGL _returnPos)];
+_seekerTargetRelPos = vectorNormalized (_projectile worldToModel ASLToAGL (_seekerTargetPos));
+_angleDif = acos(_attackTrajectory vectorDotProduct _seekerTargetRelPos);
+_v = vectorDir _projectile;
+if(_angleDif != 0) then {
+    _crossVector = _attackTrajectory vectorCrossProduct _seekerTargetRelPos;
+    _v = [vectorDir _projectile, _crossVector, _angleDif] call CBA_fnc_vectRotate3D;
+};
 
-_returnPos;
+
+
+//hint format ["%1", _attackTrajectory];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], _projectile modelToWorld (_attackTrajectory vectorMultiply (_projectile distance _seekerTargetPos)), 0.75, 0.75, 0, "Trajectory", 1, 0.025, "TahomaB"];
+//AGLToASL (_projectile modelToWorld _attackTrajectory);
+
+//_projPos vectorAdd _v;
+_seekerTargetPos;

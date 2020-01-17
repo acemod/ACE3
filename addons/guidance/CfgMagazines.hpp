@@ -20,6 +20,7 @@ class CfgMagazines {
         ammo = "G_40mm_DEBUG";
         displayName = "DEBUG";
         displayNameShort = "DEBUG";
+        initSpeed = 160;
     };
     
     class magazine_Missiles_Cruise_01_x18;

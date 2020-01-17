@@ -20,48 +20,32 @@ params ["_projectile", "_shooter","_extractedInfo"];
 _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
 _miscManeuvering params ["_degreesPerSecond","_lastTickTime", "_lastRunTime"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
-_miscSeeker params ["_lastAcquireTime"];
 
 _projPos = AGLToASL (_projectile modelToWorld [0,0,0]);
 _checkVector = vectorDir _projectile;
 _seekerAngle = 45;
 _seekerMaxRange = 3000;
 
+
 //Get Targets and Countermeasures
 _targetsList = [];
 {
-    private _xPos = getPosASL _x;
-    private _angleOkay = acos((_projPos vectorFromTo _xPos) vectorCos _checkVector) < _seekerAngle;
+    if (isVehicleRadarOn _x) then {
+        private _xPos = getPosASL _x;
+        private _angleOkay = acos((_projPos vectorFromTo _xPos) vectorCos _checkVector) < _seekerAngle;
 
-    private _losOkay = false;
-    if (_angleOkay) then {
-        _losOkay = [_projectile, _x, true] call FUNC(checkLos);
+        private _losOkay = false;
+        if (_angleOkay) then {
+            _losOkay = [_projectile, _x, true] call FUNC(checkLos);
+        };
+        if (_angleOkay && _losOkay) then {
+            _targetsList pushBack _x;
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0.5,1,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
+        } else {
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0.5,0,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
+        };
     };
-    if (_angleOkay && _losOkay && isEngineOn _x) then {
-        _targetsList pushBack _x;
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0.5,1,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
-    } else {
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0.5,0,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
-    };
-} forEach ((ASLToAGL _projPos) nearEntities [["Air"], _seekerMaxRange]);
-
-//Get Countermeasures
-{
-    private _xPos = getPosASL _x;
-    private _angleOkay = acos((_projPos vectorFromTo _xPos) vectorCos _checkVector) < _seekerAngle;
-
-    private _losOkay = false;
-    if (_angleOkay) then {
-        _losOkay = [_projectile, _x, true] call FUNC(checkLos);
-    };
-    if (_angleOkay && _losOkay) then {
-        _targetsList pushBack _x;
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,1,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
-    } else {
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
-    };
-} forEach ((ASLToAGL _projPos) nearObjects ["CMflareAmmo", _seekerMaxRange]);
-
+} forEach ((ASLToAGL _projPos) nearEntities [["LandVehicle"], _seekerMaxRange]);
 
 if (!(count _targetsList > 0) ) exitWith {
     [0,0,0];
@@ -76,12 +60,6 @@ private _flareCoeff = 1.5; //treats a flare of having an angle (1/x) times its a
 while {(count _seekerTargetsList) < 1 && (_angleThreshold < _seekerAngle)} do {
     {
         private _xPos = getPosASL _x;
-//        private _checkAngleThreshold = _angleThreshold - 0.5 + (random 0.8); // add a bit of jitter
-        private _checkAngleThreshold = _angleThreshold;
-        if (_x isKindOf "CMflareAmmo") then {
-            _checkAngleThreshold = _checkAngleThreshold * _flareCoeff;
-        };
-
         if (
             (acos((_projPos vectorFromTo _xPos) vectorCos _checkVector) < _angleThreshold) &&
             ([_projectile, _x, true] call FUNC(checkLos))

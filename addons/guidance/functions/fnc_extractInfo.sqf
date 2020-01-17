@@ -82,15 +82,19 @@ _pilotCameraDir = getPilotCameraDirection _shooter;
 
 _target = _variableTarget;
 _targetPos = getPosASL _variableTarget;
+_targetVector = vectorDir _projectile;
 // Pick our target and set direction/pos; override using variables first;
 if(isNull _variableTarget) then {
     if(isNull _missileTarget) then {
         if(!(isNull _cursorTarget)) then {
-            _target = _cursorTarget;
-            _missileTargetPos = getPosASL _cursorTarget;
+            if(missileTarget _projectile == _cursorTarget) then {
+                _target = _cursorTarget;
+                _targetPos = getPosASL _cursorTarget;
+            };
+            _targetVector = _projPos vectorFromTo (getPosASL _cursorTarget);
         } else {
             if(_pilotCameraTarget select 0) then {
-                _missileTarget = _pilotCameraTarget select 2;
+                _target = _pilotCameraTarget select 2;
                 _targetPos = _pilotCameraTarget select 1;
             } else {
                 if(_hasPilotCamera) then {
@@ -102,10 +106,9 @@ if(isNull _variableTarget) then {
                         _targetPos = _pilotCameraPosASL vectorAdd (_pilotCameraVector vectorMultiply 5000);
                     } else {
                         _targetPos = (_intersectArray select 0) select 0;
-                        hint format ["%1", _targetPos];
                     };
                 } else {
-                    _missileVector = _shooter weaponDirection _weapon;
+                    _targetVector = _shooter weaponDirection _weapon;
                     private _intersectArray = lineIntersectsSurfaces[eyepos _shooter,(eyePos _shooter) vectorAdd (_missileVector vectorMultiply 5000)];
                     if(!(count _intersectArray < 1)) then {
                         _targetPos = (_intersectArray select 0) select 0;
@@ -127,7 +130,6 @@ if(isNil "_missileVector") then {
     _missileVector = _projPos vectorFromTo _missileTargetPos;
 };
 
-hint format ["%1", _targetPos];
 // Maneuvering variables
 //need to convert legacy to deg/second
 private _minDeflectionLegacy = 0.00005;
@@ -207,12 +209,12 @@ switch (true) do {
         };
     };
     case (_ammo isKindOf "GrenadeBase"): {
-        _degreesPerSecond = 7.5;
-        _degreesPerSecondYaw = 7.5;
-        _degreesPerSecondPitch = 7.5;
+        _degreesPerSecond = 12.5;
+        _degreesPerSecondYaw = 12.5;
+        _degreesPerSecondPitch = 12.5;
         _degreesPerSecondRoll = 0;
         if(isNil "_sensorAngle") then {
-            _sensorAngle = 20;
+            _sensorAngle = 30;
         };
     };
 };
@@ -239,8 +241,9 @@ if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "useModeForA
 //prep and reserve seeker and attack profile arrays;
 private _miscSeeker = [true]; //sets seeker to 'active'
 private _miscProfile = [];
-private _fuzeRange = 0;
-private _fuzeAlt = 0;
+private _fuzeVehicle = [0, false, 0];
+private _fuzeAlt = [0, false];
+private _fuzeRange = [0, false, 0];
 
 //Configure our seeker settings based on the type
 switch (_seekerType) do {
@@ -292,16 +295,16 @@ switch (_attackProfile) do {
     };
     case "FIM": {
         _sensorAngle = 65;
-        _fuzeRange = 10;
+        _fuzeVehicle = [20, false, 0];
     };
     case "ATGM": {
-        _miscProfile set [0, false]; //top-attack/Overfly mode; PLACEHOLDER VALUE
+        _miscProfile set [0, false, 0]; //top-attack/Overfly mode; PLACEHOLDER VALUE
     };
     case "SSBM": {
-        _degreesPerSecond = 10;
+        _degreesPerSecond = 12;
     };
     case "SAM": {
-        _fuzeRange = 15;
+        _fuzeVehicle = [25, false, 0];
     };
     case "AGM": {
         _miscProfile set [0, false]; //top-attack/Overfly mode; PLACEHOLDER VALUE
@@ -310,11 +313,11 @@ switch (_attackProfile) do {
         if(isNil "_targetPos") then {
             _miscProfile set [0, [0,0,0]]; //Proportional Attack Intercept Vector
         } else {
-            _targetVector = vectorNormalized (_projectile WorldToModel (ASLToAGL _targetPos));
+            _targetVector = _projectile worldtoModel (ASLToAGL _targetPos);
             _miscProfile set [0,_targetVector]; //Proportional Attack Intercept Vector
         };
         _sensorAngle = 25;
-        _fuzeRange = 10;
+        _fuzeVehicle = [15, false, 0];
         };
     case "GBU": {
         if(_seekerType == "GPS") then {
@@ -332,10 +335,9 @@ switch (_attackProfile) do {
     default {};
 };
 
-
 //Aggregate settings in our array
-private _miscManeuvering = [_degreesPerSecond, diag_tickTime]; //diag_tickTime used for '_lastRunTime'
+private _miscManeuvering = [_degreesPerSecond, diag_tickTime, time]; //diag_tickTime used for '_lastTickTime'; time used for _lastRunTime
 private _miscSensor = [_seekerAngle, _seekerMinRange, _seekerMaxRange];
-private _miscFuze = [false, _fuzeRange, _fuzeAlt];
+private _miscFuze = [_fuzeVehicle, _fuzeAlt, _fuzeRange];
 
-[_seekerType, _attackProfile, _target,_targetPos,_targetVector, _launchPos, _launchTime, _miscManeuvering, _miscSensor, _miscSeeker, _miscProfile, _miscFuze];
+[_seekerType, _attackProfile, _target, _targetPos, _targetVector, _launchPos, _launchTime, _miscManeuvering, _miscSensor, _miscSeeker, _miscProfile, _miscFuze];
