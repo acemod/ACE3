@@ -511,11 +511,13 @@
             <English>Allow IV Transfusion</English>
             <German>Erlaube Bluttransfusionen</German>
             <Polish>Zezwalaj na przetaczanie płynów IV</Polish>
+            <French>Pose de perfusion autorisée pour</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
             <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfundieren.</German>
             <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
+            <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
