@@ -16,6 +16,7 @@
             <Korean>디버그를 클립보드로</Korean>
             <Chinesesimp>复制除错讯息至剪贴簿</Chinesesimp>
             <Chinese>複製除錯訊息至剪貼簿</Chinese>
+            <Turkish>Panoya Hata Ayıkla</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -32,6 +33,7 @@
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
             <Chinesesimp>复制除错讯息至剪贴簿与RPT报告档中。</Chinesesimp>
             <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中</Chinese>
+            <Turkish>Hata ayıklama bilgilerini RPT ve panoya gönderir.</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
@@ -48,6 +50,7 @@
             <Korean>헤드버그 수정</Korean>
             <Chinesesimp>修复动作BUG</Chinesesimp>
             <Chinese>修復動作BUG</Chinese>
+            <Turkish>Animasyon Düzeltme</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
@@ -64,6 +67,7 @@
             <Korean>자신의 동작 상태 초기화</Korean>
             <Chinesesimp>当ACE发生动作BUG时，点此修复。</Chinesesimp>
             <Chinese>當ACE發生動作BUG時，點此修復</Chinese>
+            <Turkish>Animasyon durumunuzu sıfırlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>

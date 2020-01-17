@@ -16,6 +16,7 @@
             <Korean>무인기 충전완료</Korean>
             <Chinesesimp>无人载具电池已充满</Chinesesimp>
             <Chinese>無人載具電池已充滿</Chinese>
+            <Turkish>IHA Dolu</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_NoBattery">
             <English>You need a UAV Battery</English>
@@ -48,6 +49,7 @@
             <Korean>재충전</Korean>
             <Chinesesimp>充电</Chinesesimp>
             <Chinese>充電</Chinese>
+            <Turkish>Şarj</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Name">
             <English>UAV Battery</English>
@@ -96,6 +98,7 @@
             <Chinesesimp>充电中...</Chinesesimp>
             <Chinese>充電中...</Chinese>
             <Korean>충전중...</Korean>
+            <Turkish>Şarj Oluyor</Turkish>
         </Key>
     </Package>
 </Project>

@@ -14,6 +14,7 @@
             <Korean>혈흔</Korean>
             <Japanese>血痕</Japanese>
             <Chinese>血跡</Chinese>
+            <Turkish>Kan</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_DisplayName">
             <English>Enable Blood Drops</English>
@@ -29,6 +30,7 @@
             <Portuguese>Permitir gotas de sangue</Portuguese>
             <Czech>Povolit kapky krve</Czech>
             <Spanish>Habilitar manchas de sangre</Spanish>
+            <Turkish>Kan Damlalarıı Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_EnabledFor_Description">
             <English>Enables the creation of blood drops when units are bleeding or take damage.</English>
@@ -40,6 +42,7 @@
             <Czech>Povoluje vytváření kapek krve na zemi když jednotka krvácí nebo utrpí zranění.</Czech>
             <Polish>Umożliwia tworzenie śladów krwi, gdy jednostki krwawią lub otrzymują obrażenia.</Polish>
             <Spanish>Habilita la creación de sangrecuando la unidad está sangrando o recibe daño</Spanish>
+            <Turkish>Kişiler kanarken veya hasar alırken kan damlası oluşumunu sağlar.</Turkish>
             <Italian>Abilita la creazione di chiazze di sangue quando un'unità sta sanguinando o viene ferita.</Italian>
             <German>Ermöglicht das Erstellen von Blutstropfen, wenn Einheiten am Bluten sind oder Schaden nehmen.</German>
         </Key>
@@ -54,6 +57,7 @@
             <Czech>Maximum objektů krve</Czech>
             <Polish>Maksymalna ilość śladów krwi</Polish>
             <Spanish>Máxima cantidad de objetos de sangre</Spanish>
+            <Turkish>Maksimum Kan Objeleri</Turkish>
             <German>Maximale Anzahl an Blutstropfen-Objekten</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_MaxBloodObjects_Description">
@@ -67,6 +71,7 @@
             <Czech>Nastavuje maximum objektů krve na zemi, příliš mnoho může způsobit pokles FPS</Czech>
             <Polish>Definiuje maksymalną ilość śladów krwi,  które mogą zostać stworzone, nadmierne ilości mogą powodować spadki FPS.</Polish>
             <Spanish>Fija el límite de objetos de sangre que aparecerán, cantidades excesivas pueden causar caídas de FPS</Spanish>
+            <Turkish>Ortaya çıkabilecek maksimum kan damlası sayısını ayarlar, aşırı miktarlar FPS düşmesine neden olabilir.</Turkish>
             <German>Legt die maximale Anzahl an Blutstropfen-Objekten fest, die erscheinen können. Eine zu hoch eingestellte Anzahl kann Lags verursachen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_DisplayName">
@@ -80,6 +85,7 @@
             <Czech>Životnost krve</Czech>
             <Polish>Czas trwania śladów krwi</Polish>
             <Spanish>Duración de la sangre</Spanish>
+            <Turkish>Kan Ömrü</Turkish>
             <German>Anzeigedauer der Blutstropfen</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
@@ -93,6 +99,7 @@
             <Czech>Nastavuje jak dlouho objekty krve na zemi vydrží.</Czech>
             <Polish>Kontroluje czas trwania śladów krwi.</Polish>
             <Spanish>Controla el tiempo de vida que tendrán los objetos de sangre</Spanish>
+            <Turkish>Kan objelerinin silinme süresini belirler.</Turkish>
             <German>Kontrolliert die Anzeigedauer der Blutstropfen-Objekte.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_OnlyPlayers">
@@ -109,6 +116,7 @@
             <Portuguese>Apenas Jogadores</Portuguese>
             <Czech>Pouze hráči</Czech>
             <Spanish>Solo jugadores</Spanish>
+            <Turkish>Sadece Oyuncular</Turkish>
         </Key>
     </Package>
 </Project>

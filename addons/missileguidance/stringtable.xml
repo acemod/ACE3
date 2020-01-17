@@ -64,6 +64,7 @@
             <Korean>DAGR</Korean>
             <Chinesesimp>直接攻击制导火箭弹</Chinesesimp>
             <Chinese>直接攻擊導引飛彈</Chinese>
+            <Turkish>DAGR</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
@@ -80,6 +81,7 @@
             <Korean>Hydra-70 DAGR 레이저 유도 미사일</Korean>
             <Chinesesimp>九头蛇-70mm 制导航空火箭弹</Chinesesimp>
             <Chinese>九頭蛇-70 直接攻擊雷射導引飛彈</Chinese>
+            <Turkish>Hydra-70 DAGR Laser Guided Missile</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -96,6 +98,7 @@
             <Korean>Hellfire II AGM-114K 미사일</Korean>
             <Chinesesimp>地狱火II型AGM-114K空地制导破甲弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 導彈</Chinese>
+            <Turkish>Hellfire II AGM-114K Missile</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_Short">
             <English>AGM-114K</English>
@@ -112,6 +115,7 @@
             <Korean>AGM-114K</Korean>
             <Chinesesimp>AGM-114K制导破甲弹</Chinesesimp>
             <Chinese>AGM-114K</Chinese>
+            <Turkish>AGM-114K</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
@@ -128,6 +132,7 @@
             <Korean>Hellfire II AGM-114K 레이저 유도 미사일</Korean>
             <Chinesesimp>地狱火II型AGM-114K空地制导破甲弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 雷射導引飛彈</Chinese>
+            <Turkish>Hellfire II AGM-114K Laser Guided Missile</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Off">
             <English>Off</English>
@@ -144,6 +149,7 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
@@ -160,6 +166,7 @@
             <Korean>오직 플레이어만</Korean>
             <Chinesesimp>只有玩家</Chinesesimp>
             <Chinese>只有玩家</Chinese>
+            <Turkish>Sadece Oyuncular</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
@@ -176,6 +183,7 @@
             <Chinesesimp>玩家和AI</Chinesesimp>
             <Chinese>玩家和AI</Chinese>
             <Korean>플레이어와 AI</Korean>
+            <Turkish>Oyuncular ve AI</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Cycle Fire Mode</English>
@@ -192,6 +200,7 @@
             <Korean>발사 방식 순환</Korean>
             <Chinesesimp>循环切换开火模式</Chinesesimp>
             <Chinese>循環切換開火模式</Chinese>
+            <Turkish>Ateşleme Modunu Değiştir</Turkish>
         </Key>
     </Package>
 </Project>

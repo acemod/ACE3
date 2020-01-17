@@ -32,7 +32,7 @@
             <Korean>상호작용</Korean>
             <Chinesesimp>互动</Chinesesimp>
             <Chinese>互動</Chinese>
-            <Turkish>Etkileşim</Turkish>
+            <Turkish>Etkileşimler</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -355,6 +355,7 @@
             <Korean>춤 멈추기</Korean>
             <Chinesesimp>停止跳舞</Chinesesimp>
             <Chinese>停止跳舞</Chinese>
+            <Turkish>Dans Etmeyi Durdur</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Back">
             <English>&lt;&lt; Back</English>
@@ -388,6 +389,7 @@
             <Korean>등에 무기 메기</Korean>
             <Chinesesimp>将武器放到背后</Chinesesimp>
             <Chinese>將武器放到背後</Chinese>
+            <Turkish>Silahı arkaya koy</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TapShoulder">
             <English>Tap Shoulder</English>
@@ -421,6 +423,7 @@
             <Korean>누군가 오른쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的右肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的右肩膀被輕拍了一下</Chinese>
+            <Turkish>Birisi Sağ Omuzuna Dokundu</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedLeft">
             <English>You were tapped on the LEFT shoulder.</English>
@@ -437,6 +440,7 @@
             <Korean>누군가 왼쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的左肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的左肩膀被輕拍了一下</Chinese>
+            <Turkish>Birisi Sol Omuzuna Dokundu</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_CancelSelection">
             <English>Cancel</English>
@@ -453,6 +457,7 @@
             <Korean>취소</Korean>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_MakeSelection">
             <English>Select</English>
@@ -519,6 +524,7 @@
             <Chinesesimp>出去</Chinesesimp>
             <Chinese>出去</Chinese>
             <Portuguese>Saia!</Portuguese>
+            <Turkish>Dışarı</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -891,6 +897,7 @@
             <Korean>밀기</Korean>
             <Chinesesimp>推</Chinesesimp>
             <Chinese>推</Chinese>
+            <Turkish>Ittir</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_Flip">
             <English>Flip</English>
@@ -989,6 +996,7 @@
             <Korean>팀 설정 활성화</Korean>
             <Chinesesimp>启用小队管理</Chinesesimp>
             <Chinese>啟用小隊管理</Chinese>
+            <Turkish>Takım Yönetimini Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -1005,6 +1013,7 @@
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
             <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
+            <Turkish>Oyuncuların Takım Yönetimi Menüsünü kullanmalarına izin verilmeli mi? Varsayılan: Evet</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_DisplayName">
             <English>Disable negative rating</English>
@@ -1113,6 +1122,7 @@
             <Korean>주무기 탄창</Korean>
             <Chinesesimp>给予主武器弹匣</Chinesesimp>
             <Chinese>給予主武器彈匣</Chinese>
+            <Turkish>Birincil Şarjörü</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
@@ -1128,6 +1138,7 @@
             <Korean>부무기 탄창</Korean>
             <Chinesesimp>给予手枪弹匣</Chinesesimp>
             <Chinese>給予手槍彈匣</Chinese>
+            <Turkish>Tabanca Şarjörü</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
