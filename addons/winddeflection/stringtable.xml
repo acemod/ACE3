@@ -16,6 +16,7 @@
             <Korean>바람 정보</Korean>
             <Chinesesimp>风力资讯</Chinesesimp>
             <Chinese>風力資訊</Chinese>
+            <Turkish>Rüzgar Bilgisi</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_DIRECTION">
             <English>Direction: %1</English>
@@ -32,6 +33,7 @@
             <Korean>방향: %1</Korean>
             <Chinesesimp>风向: %1</Chinesesimp>
             <Chinese>風向: %1</Chinese>
+            <Turkish>Yön: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_SPEED">
             <English>Speed: %1 m/s</English>
@@ -48,6 +50,7 @@
             <Korean>풍속: %1 m/s</Korean>
             <Chinesesimp>风速: %1 m/s</Chinesesimp>
             <Chinese>風速: %1 m/s</Chinese>
+            <Turkish>Hız: %1 m/s</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_CATEGORY">
             <English>Weather Information</English>
@@ -64,6 +67,7 @@
             <Korean>기상 정보</Korean>
             <Chinesesimp>天气资讯</Chinesesimp>
             <Chinese>天氣資訊</Chinese>
+            <Turkish>Hava Durumu Bilgisi</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_HUMIDITY">
             <English>Humidity: %1%</English>
@@ -80,6 +84,7 @@
             <Korean>습도: %1%</Korean>
             <Chinesesimp>湿度: %1%</Chinesesimp>
             <Chinese>濕度: %1%</Chinese>
+            <Turkish>Nem Oranı: %1%</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_DisplayName">
             <English>Wind Deflection</English>
@@ -96,6 +101,7 @@
             <Korean>풍향 변화</Korean>
             <Chinesesimp>风偏</Chinesesimp>
             <Chinese>風偏</Chinese>
+            <Turkish>Rüzgar Sapması</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
             <English>Wind Deflection</English>
@@ -112,6 +118,7 @@
             <Korean>풍향 변화</Korean>
             <Chinesesimp>风偏</Chinesesimp>
             <Chinese>風偏</Chinese>
+            <Turkish>Rüzgar Sapması</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_Description">
             <English>Enables wind deflection</English>
@@ -128,6 +135,7 @@
             <Korean>풍향 변화를 적용합니다</Korean>
             <Chinesesimp>开启风偏效果</Chinesesimp>
             <Chinese>開啟風偏效果</Chinese>
+            <Turkish>Rüzgar sapmasını aktif et</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_DisplayName">
             <English>Vehicle Enabled</English>
@@ -144,6 +152,7 @@
             <Korean>차량 적용</Korean>
             <Chinesesimp>启用风偏给载具</Chinesesimp>
             <Chinese>啟用風偏給載具</Chinese>
+            <Turkish>Araçlar da etkin</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_Description">
             <English>Enables wind deflection for static/vehicle gunners</English>
@@ -160,6 +169,7 @@
             <Korean>차량이나 거치식 무기 사수에게 풍향 변화를 적용합니다</Korean>
             <Chinesesimp>使风偏作用在固定式武器与载具炮手身上</Chinesesimp>
             <Chinese>使風偏作用在固定式武器與載具砲手身上</Chinese>
+            <Turkish>Araç nişancıları için rüzgar sapmasını etkinleştirir.</Turkish>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
             <English>Simulation Interval</English>

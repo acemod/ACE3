@@ -14,6 +14,7 @@
             <Portuguese>Trocar Unidades</Portuguese>
             <Czech>Přepnout jednotky</Czech>
             <French>Changement de camp</French>
+            <Turkish>Birlik Değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
@@ -30,6 +31,7 @@
             <Chinesesimp>切换单位</Chinesesimp>
             <Chinese>切換單位</Chinese>
             <Korean>인원 전환</Korean>
+            <Turkish>Birlik Değiştirildi</Turkish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TryingToSwitch">
             <English>Trying to switch</English>
@@ -45,6 +47,7 @@
             <Korean>전환 시도중</Korean>
             <Chinesesimp>尝试切换中</Chinesesimp>
             <Chinese>嘗試切換中</Chinese>
+            <Turkish>Birlik değiştirilme deneniyor</Turkish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>
@@ -67,6 +70,7 @@
             <French>Permettre le changement de camp</French>
             <Chinese>啟用陣營切換</Chinese>
             <Czech>Povolit změnu strany</Czech>
+            <Polish>Włącz zmiane strony</Polish>
             <Portuguese>Habilita troca de time</Portuguese>
             <Japanese>陣営切り替えを有効化</Japanese>
         </Key>
@@ -85,6 +89,7 @@
             <Chinesesimp>切换至蓝方?</Chinesesimp>
             <Chinese>切換至藍方?</Chinese>
             <Korean>청군으로 전환합니까?</Korean>
+            <Turkish>Batıya Geç?</Turkish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
@@ -117,6 +122,7 @@
             <Chinesesimp>切换至红方?</Chinesesimp>
             <Chinese>切換至紅方?</Chinese>
             <Korean>대항군으로 전환합니까?</Korean>
+            <Turkish>Doğuya Geç ?</Turkish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
@@ -149,6 +155,7 @@
             <Chinesesimp>切换至独立方?</Chinesesimp>
             <Chinese>切換至獨立方?</Chinese>
             <Korean>독립군 으로 전환합니까?</Korean>
+            <Turkish>Bağımsıza Geç?</Turkish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
@@ -181,6 +188,7 @@
             <Korean>민간인으로 전환합니까?</Korean>
             <Chinesesimp>切换至平民方?</Chinesesimp>
             <Chinese>切換至平民方?</Chinese>
+            <Turkish>Sivillere Geç?</Turkish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>

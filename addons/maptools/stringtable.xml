@@ -16,6 +16,7 @@
             <Korean>독도용 도구</Korean>
             <Chinesesimp>地图工具</Chinesesimp>
             <Chinese>地圖工具</Chinese>
+            <Turkish>Harita Araçları</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_Description">
             <English>The Map Tools allow you to measure distances and angles on the map.</English>
@@ -32,6 +33,7 @@
             <Korean>독도용 도구는 지도상에서 거리나 각도를 잴 수 있게 해줍니다.</Korean>
             <Chinesesimp>地图工具能够让你在地图上测量距离与角度</Chinesesimp>
             <Chinese>地圖工具能夠讓你在地圖上測量距離與角度</Chinese>
+            <Turkish>Harita Araçları, haritadaki mesafeleri ve açıları ölçmenize olanak tanır.</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
@@ -48,6 +50,7 @@
             <Korean>독도용 도구</Korean>
             <Chinesesimp>地图工具</Chinesesimp>
             <Chinese>地圖工具</Chinese>
+            <Turkish>Harita Araçları</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsHide">
             <English>Hide Map Tool</English>
@@ -64,6 +67,7 @@
             <Korean>독도용 도구 숨기기</Korean>
             <Chinesesimp>隐藏地图工具</Chinesesimp>
             <Chinese>隱藏地圖工具</Chinese>
+            <Turkish>Harita Aracını gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowNormal">
             <English>Show Normal Map Tool</English>
@@ -80,6 +84,7 @@
             <Korean>보통 독도용 도구로 보기</Korean>
             <Chinesesimp>显示地图工具</Chinesesimp>
             <Chinese>顯示地圖工具</Chinese>
+            <Turkish>Normal Harita Aracını Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowSmall">
             <English>Show Small Map Tool</English>
@@ -96,6 +101,7 @@
             <Korean>작은 독도용 도구로 보기</Korean>
             <Chinesesimp>显示小的地图工具</Chinesesimp>
             <Chinese>顯示小的地圖工具</Chinese>
+            <Turkish>Küçük Harita Aracını Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignNorth">
             <English>Align Map Tool to North</English>
@@ -112,6 +118,7 @@
             <Korean>독도용 도구를 북쪽으로 정렬</Korean>
             <Chinesesimp>地图工具对准北方</Chinesesimp>
             <Chinese>地圖工具對準北方</Chinese>
+            <Turkish>Harita Aracını Kuzeye Hizala</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignCompass">
             <English>Align Map Tool to Compass</English>
@@ -128,6 +135,7 @@
             <Korean>독도용 도구를 나침반에 정렬</Korean>
             <Chinesesimp>地图工具对准指北针</Chinesesimp>
             <Chinese>地圖工具對準指北針</Chinese>
+            <Turkish>Harita Aracını Pusulaya Hizala</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsShow">
             <English>Show GPS on Map</English>
@@ -144,6 +152,7 @@
             <Korean>GPS를 지도상에 꺼내기</Korean>
             <Chinesesimp>在地图上显示GPS</Chinesesimp>
             <Chinese>在地圖上顯示GPS</Chinese>
+            <Turkish>Harita da GPS Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsHide">
             <English>Hide GPS on Map</English>
@@ -160,6 +169,7 @@
             <Korean>GPS를 지도상에서 숨기기</Korean>
             <Chinesesimp>在地图上隐藏GPS</Chinesesimp>
             <Chinese>在地圖上隱藏GPS</Chinese>
+            <Turkish>Harita da GPS'i Gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_MarkerDirection">
             <English>Direction: %1°</English>
@@ -176,6 +186,7 @@
             <Korean>방위: %1°</Korean>
             <Chinesesimp>方位: %1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>
+            <Turkish>Yön: %1°</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_displayName">
             <English>Rotate Map Tools Key</English>
@@ -190,6 +201,7 @@
             <Chinese>選轉地圖工具的按鍵</Chinese>
             <Portuguese>Tecla para girar Ferramentas de Mapa</Portuguese>
             <Czech>Klávesa pro otáčení pomůcky k mapě</Czech>
+            <Turkish>Harita Aracının Yönünü Değiştirme Tuşu</Turkish>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>

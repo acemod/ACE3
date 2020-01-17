@@ -298,6 +298,7 @@ class GVAR(actions) {
         condition = QUOTE(_patient call EFUNC(medical_status,isInStableCondition));
         items[] = {"ACE_personalAidKit"};
         treatmentLocations = QGVAR(locationPAK);
+        allowSelfTreatment = QGVAR(allowSelfPAK);
         medicRequired = QGVAR(medicPAK);
         treatmentTime = QFUNC(getHealTime);
         callbackSuccess = QFUNC(fullHeal);

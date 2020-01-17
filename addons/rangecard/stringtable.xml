@@ -16,6 +16,7 @@
             <Korean>사거리표</Korean>
             <Chinesesimp>弹道射表</Chinesesimp>
             <Chinese>彈道射表</Chinese>
+            <Turkish>Menzil Kartı</Turkish>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
@@ -48,6 +49,7 @@
             <Korean>사거리표 열기</Korean>
             <Chinesesimp>开启弹道射表</Chinesesimp>
             <Chinese>開啟彈道射表</Chinese>
+            <Turkish>Menzil Kartını Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
@@ -64,6 +66,7 @@
             <Korean>복제 사거리표 열기</Korean>
             <Chinesesimp>开启弹道射表副本</Chinesesimp>
             <Chinese>開啟彈道射表副本</Chinese>
+            <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
             <English>Open Range Card</English>
@@ -80,6 +83,7 @@
             <Korean>사거리표 열기</Korean>
             <Chinesesimp>开启弹道射表</Chinesesimp>
             <Chinese>開啟彈道射表</Chinese>
+            <Turkish>Menzil Kartını Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
@@ -96,6 +100,7 @@
             <Korean>복제 사거리표 열기</Korean>
             <Chinesesimp>开启弹道射表副本</Chinesesimp>
             <Chinese>開啟彈道射表副本</Chinese>
+            <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_RangeCard_CopyRangeCard">
             <English>Copy Range Card</English>
@@ -112,6 +117,7 @@
             <Korean>사거리표 복제</Korean>
             <Chinesesimp>复制弹道射表</Chinesesimp>
             <Chinese>複製彈道射表</Chinese>
+            <Turkish>Menzil Kartını Kopyala</Turkish>
         </Key>
     </Package>
 </Project>

@@ -11,7 +11,9 @@
             <Chinese>視覺回饋</Chinese>
             <Italian>Commenti</Italian>
             <Czech>Zpětná vazba</Czech>
+            <Polish>Informacje Zwrotne</Polish>
             <Spanish>Reacción</Spanish>
+            <Turkish>Geri Bildirim</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
             <English>Pain Effect Type</English>
@@ -27,6 +29,7 @@
             <Japanese>痛み効果の種類</Japanese>
             <Korean>고통 효과 종류</Korean>
             <Chinese>疼痛效果類型</Chinese>
+            <Turkish>Ağrı Etkisi Türü</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
             <English>Selects the used pain effect type.</English>
@@ -37,7 +40,10 @@
             <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
             <Italian>Seleziona il tipo di effetto del dolore usato.</Italian>
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
+            <Polish>Wybiera rodzaj efektu bólu.</Polish>
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
+            <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
+            <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
             <English>White Flashing</English>
@@ -49,7 +55,9 @@
             <Chinese>白光閃爍</Chinese>
             <Italian>Bianco lampeggiante</Italian>
             <Czech>Blikání bílé barvy</Czech>
+            <Polish>Miganie na biało</Polish>
             <Spanish>Destello blanco</Spanish>
+            <Turkish>Beyaz Yanıp Sönüyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
@@ -61,7 +69,9 @@
             <Chinese>脈動模糊</Chinese>
             <Italian>Sfocatura pulsante</Italian>
             <Czech>Pulzující rozmazání</Czech>
+            <Polish>Pulsujące rozmycie</Polish>
             <Spanish>Enborronamiento pulsante</Spanish>
+            <Turkish>Titreşimli Bulanıklık</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
             <English>Chromatic Aberration</English>
@@ -78,6 +88,7 @@
             <Korean>색수차</Korean>
             <Chinesesimp>色差</Chinesesimp>
             <Chinese>色差</Chinese>
+            <Turkish>Renk sapmaları</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
             <English>Only high pain effect</English>
@@ -86,8 +97,11 @@
             <French>Juste un fort effet douloureux</French>
             <Italian>Solo elevato effetto di dolore</Italian>
             <Czech>Pouze efekt vysoké bolesti</Czech>
+            <Polish>Tylko efekt mocnego bólu</Polish>
             <Portuguese>Apenas efeito de dor alta</Portuguese>
             <Spanish>Solo efecto de dolor fuerte</Spanish>
+            <Turkish>Sadece yüksek ağrı etkisi</Turkish>
+            <German>Nur bei starken Schmerzen</German>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
@@ -105,6 +119,7 @@
                 <Korean>비명 활성화</Korean>
                 <Chinesesimp>启用尖叫</Chinesesimp>
                 <Chinese>啟用尖叫</Chinese>
+                <Turkish>Çığlıkları Etkinleştir</Turkish>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_Description">
                 <English>Enable screaming by injured units</English>
@@ -121,6 +136,7 @@
                 <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
                 <Chinesesimp>启用伤者的尖叫声</Chinesesimp>
                 <Chinese>啟用傷者的尖叫聲</Chinese>
+                <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
             </Key>
         </Container>
     </Package>

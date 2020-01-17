@@ -15,6 +15,7 @@
             <Portuguese>Posição inválida fornecida.</Portuguese>
             <Spanish>Posición inválida proporcionada</Spanish>
             <Czech>Pozice není validní.</Czech>
+            <Turkish>Geçersiz Konum</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNoUnits">
             <English>No units provided.</English>
@@ -30,6 +31,7 @@
             <Portuguese>Nenhuma unidade fornecida.</Portuguese>
             <Spanish>No hay unidades proporcionadas.</Spanish>
             <Czech>Nejsou k dispozici žádné jednotky.</Czech>
+            <Turkish>Hiçbir Birim Bulunamadı</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
@@ -60,6 +62,7 @@
             <Portuguese>Nenhuma construção encontrada.</Portuguese>
             <Spanish>No se ha encontrado ningún edificio.</Spanish>
             <Czech>Nenalezena žádná budova.</Czech>
+            <Turkish>Bir yapı bulunamadı</Turkish>
         </Key>
     </Package>
 </Project>

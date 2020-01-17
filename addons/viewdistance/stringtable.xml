@@ -16,6 +16,7 @@
             <Korean>시야 제한기</Korean>
             <Chinesesimp>视野距离限制器</Chinesesimp>
             <Chinese>視野距離限制器</Chinese>
+            <Turkish>Görüş Uzaklığı Sınırlayıcısı</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_Module_Description">
             <English>Allows limiting maximum view distance that can be set by players.</English>
@@ -48,6 +49,7 @@
             <Korean>ACE 시야 활성화</Korean>
             <Chinesesimp>启用ACE视距</Chinesesimp>
             <Chinese>啟用ACE視距</Chinese>
+            <Turkish>ACE Görüş Uzaklığını Aktif Et</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_Description">
             <English>Enables ACE viewdistance</English>
@@ -64,6 +66,7 @@
             <Korean>ACE 시야 활성화</Korean>
             <Chinesesimp>启用ACE视距</Chinesesimp>
             <Chinese>啟用ACE視距</Chinese>
+            <Turkish>ACE Görüş Uzaklığını Aktif Et</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_DisplayName">
             <English>View Distance Limit</English>
@@ -80,6 +83,7 @@
             <Korean>시야 제한기</Korean>
             <Chinesesimp>视野距离限制</Chinesesimp>
             <Chinese>視野距離限制</Chinese>
+            <Turkish>Görüş Uzaklığı Limiti</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_Description">
             <English>Sets the limit for how high clients can raise their view distance (up to 10000)</English>
@@ -96,6 +100,7 @@
             <Korean>클라이언트가 최대 얼마나 멀리 볼 수 있는지 제한을 둡니다 (10000 까지 가능)</Korean>
             <Chinesesimp>设定客户端最高可显示的视野距离 (最高至10000)</Chinesesimp>
             <Chinese>設定客戶端最高可顯示的視野距離 (最高至10000)</Chinese>
+            <Turkish>Kişilerin görüş mesafelerini ne kadar yükseltebileceğine ilişkin sınırı belirler (En Fazla 10000)</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_setting">
             <English>Limit for client's view distance set here and can overridden by module</English>
@@ -128,6 +133,7 @@
             <Korean>클라이언트 시야 (보병)</Korean>
             <Chinesesimp>客户端视野距离 (步行)</Chinesesimp>
             <Chinese>客戶端視野距離 (步行)</Chinese>
+            <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Yerde)</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_Description">
             <English>Changes in game view distance when the player is on foot.</English>
@@ -144,6 +150,7 @@
             <Korean>플레이어가 보병일 경우의 시야를 바꿀 수 있습니다.</Korean>
             <Chinesesimp>改变玩家步行时的视野距离.</Chinesesimp>
             <Chinese>改變玩家步行時的視野距離.</Chinese>
+            <Turkish>Oyuncular ayakta iken görebileceği uzaklığı değiştir.</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_DisplayName">
             <English>Client View Distance (Land Vehicle)</English>
@@ -160,6 +167,7 @@
             <Korean>클라이언트 시야 (차량)</Korean>
             <Chinesesimp>客户端视野距离 (地面载具)</Chinesesimp>
             <Chinese>客戶端視野距離 (地面載具)</Chinese>
+            <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Kara Araçların da)</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_Description">
             <English>Changes in game view distance when the player is in a land vehicle.</English>
@@ -176,6 +184,7 @@
             <Korean>플레이어가 차량 내부일 경우의 시야를 바꿀 수 있습니다.</Korean>
             <Chinesesimp>改变玩家于地面载具内时的视野距离</Chinesesimp>
             <Chinese>改變玩家於地面載具內時的視野距離</Chinese>
+            <Turkish>Oyuncular kara araçlarında iken görebileceği uzaklığı değiştir.</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_DisplayName">
             <English>Client View Distance (Air Vehicle)</English>
@@ -192,6 +201,7 @@
             <Korean>클라이언트 시야 (항공기)</Korean>
             <Chinesesimp>客户端视野距离 (空中载具)</Chinesesimp>
             <Chinese>客戶端視野距離 (空中載具)</Chinese>
+            <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Hava Araçların da)</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_Description">
             <English>Changes in game view distance when the player is in an air vehicle.</English>
@@ -208,6 +218,7 @@
             <Korean>플레이어가 항공기 내부일 경우의 시야를 바꿀 수 있습니다.</Korean>
             <Chinesesimp>改变玩家于空中载具内时的视野距离</Chinesesimp>
             <Chinese>改變玩家於空中載具內時的視野距離</Chinese>
+            <Turkish>Oyuncular hava araçların da iken görebileceği uzaklığı değiştir.</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_DisplayName">
             <English>Dynamic Object View Distance</English>
@@ -256,6 +267,7 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_verylow">
             <English>Very Low</English>
@@ -272,6 +284,7 @@
             <Korean>매우 낮음</Korean>
             <Chinesesimp>非常低</Chinesesimp>
             <Chinese>非常低</Chinese>
+            <Turkish>Çok Düşük</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_low">
             <English>Low</English>
@@ -288,6 +301,7 @@
             <Korean>낮음</Korean>
             <Chinesesimp>低</Chinesesimp>
             <Chinese>低</Chinese>
+            <Turkish>Düşük</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_medium">
             <English>Medium</English>
@@ -304,6 +318,7 @@
             <Korean>중간</Korean>
             <Chinesesimp>中</Chinesesimp>
             <Chinese>中</Chinese>
+            <Turkish>Orta</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_high">
             <English>High</English>
@@ -320,6 +335,7 @@
             <Korean>높음</Korean>
             <Chinesesimp>高</Chinesesimp>
             <Chinese>高</Chinese>
+            <Turkish>Yüksek</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_veryhigh">
             <English>Very High</English>
@@ -336,6 +352,7 @@
             <Korean>매우 높음</Korean>
             <Chinesesimp>非常高</Chinesesimp>
             <Chinese>非常高</Chinese>
+            <Turkish>Çok Yüksek</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_fovBased">
             <English>FoV Based</English>
@@ -367,6 +384,7 @@
             <Korean>시야:</Korean>
             <Chinesesimp>视野距离:</Chinesesimp>
             <Chinese>視野距離:</Chinese>
+            <Turkish>Görüş Uzaklığı:</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_objectinfotext">
             <English>Object View Distance is</English>
@@ -399,6 +417,7 @@
             <Korean>이 옵션은 불가능합니다! 제한은</Korean>
             <Chinesesimp>该选项是无效的! 限制是</Chinesesimp>
             <Chinese>該選項是無效的! 限制是</Chinese>
+            <Turkish>Bu seçenek geçersiz! Limit</Turkish>
         </Key>
         <Key ID="STR_ACE_ViewDistance_videosettings">
             <English>Video Settings</English>
@@ -415,6 +434,7 @@
             <Korean>영상 설정</Korean>
             <Chinesesimp>影像设定</Chinesesimp>
             <Chinese>影像設定</Chinese>
+            <Turkish>Grafik Ayarları</Turkish>
         </Key>
     </Package>
 </Project>

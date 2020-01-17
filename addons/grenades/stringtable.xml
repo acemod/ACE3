@@ -16,6 +16,7 @@
             <Korean>투척 종류 전환</Korean>
             <Chinesesimp>切换投掷模式</Chinesesimp>
             <Chinese>切換投擲模式</Chinese>
+            <Turkish>Bomba fırlatma modunu değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_NormalThrow">
             <English>Normal Throw</English>
@@ -32,6 +33,7 @@
             <Korean>일반 던지기</Korean>
             <Chinesesimp>普通投掷</Chinesesimp>
             <Chinese>普通投擲</Chinese>
+            <Turkish>Normal Fırlatma</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_HighThrow">
             <English>High Throw</English>
@@ -48,6 +50,7 @@
             <Korean>높이 던지기</Korean>
             <Chinesesimp>高抛</Chinesesimp>
             <Chinese>高拋</Chinese>
+            <Turkish>Yüksek Fırlatma</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_PreciseThrow">
             <English>Precise Throw</English>
@@ -80,6 +83,7 @@
             <Korean>굴려넣기</Korean>
             <Chinesesimp>地面滚抛</Chinesesimp>
             <Chinese>地面滾拋</Chinese>
+            <Turkish>Bombayı Yuvarla</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_DropGrenade">
             <English>Drop Grenade</English>
@@ -96,6 +100,7 @@
             <Korean>떨어뜨리기</Korean>
             <Chinesesimp>下丢投掷</Chinesesimp>
             <Chinese>下丟投擲</Chinese>
+            <Turkish>Bombayı Yere Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>
@@ -128,6 +133,7 @@
             <Korean>M84</Korean>
             <Chinesesimp>M84</Chinesesimp>
             <Chinese>M84</Chinese>
+            <Turkish>M84</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Description">
             <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
@@ -152,6 +158,7 @@
             <Italian>CTS 7290 9- Flash bang Grenade</Italian>
             <Czech>CTS 7290 9 ranný oslepující granát</Czech>
             <Japanese>CTS 7290 9-bang 閃光手榴弾</Japanese>
+            <Polish>CTS 7290 9-bang Granat Hukowy</Polish>
             <French>CTS 7290 9-bang Grenade incapacitante</French>
             <Portuguese>Granada de Luz CTS 7290 9-Explosões</Portuguese>
         </Key>

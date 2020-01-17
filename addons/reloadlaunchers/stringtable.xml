@@ -16,6 +16,7 @@
             <Korean>무기 재장전</Korean>
             <Chinesesimp>装载发射器</Chinesesimp>
             <Chinese>裝載發射器</Chinese>
+            <Turkish>Fırlatıcıyı Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>
@@ -32,6 +33,7 @@
             <Korean>무기 재장전중...</Korean>
             <Chinesesimp>装载发射器中...</Chinesesimp>
             <Chinese>裝載發射器中...</Chinese>
+            <Turkish>Fırlatıcı Yükleniyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">
             <English>Launcher loaded</English>
@@ -48,6 +50,7 @@
             <Korean>무기 재장전됨</Korean>
             <Chinesesimp>发射器装载完毕</Chinesesimp>
             <Chinese>發射器裝載完畢</Chinese>
+            <Turkish>Fırlatıcı Yüklendi</Turkish>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
@@ -64,6 +67,7 @@
             <Korean>%1 장전</Korean>
             <Chinesesimp>装载%1</Chinesesimp>
             <Chinese>裝載%1</Chinese>
+            <Turkish>%1 Yüklendi</Turkish>
         </Key>
     </Package>
 </Project>

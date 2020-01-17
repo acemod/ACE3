@@ -16,6 +16,7 @@
             <Korean>물건 부착</Korean>
             <Chinese>附掛裝備&gt;&gt;</Chinese>
             <Chinesesimp>附挂装备&gt;&gt;</Chinesesimp>
+            <Turkish>Eşyayı bağla</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Attach">
             <English>Attach</English>
@@ -32,6 +33,7 @@
             <Korean>부착</Korean>
             <Chinese>附掛</Chinese>
             <Chinesesimp>附挂</Chinesesimp>
+            <Turkish>Bağla</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Detach">
             <English>Detach item</English>
@@ -48,6 +50,7 @@
             <Korean>분리</Korean>
             <Chinese>取下裝備</Chinese>
             <Chinesesimp>取下装备</Chinesesimp>
+            <Turkish>Eşyayı sök</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Attached">
             <English>IR Strobe Attached</English>
@@ -64,6 +67,7 @@
             <Korean>적외선 스트로브 부착됨</Korean>
             <Chinese>已附掛紅外線頻閃器</Chinese>
             <Chinesesimp>已附挂红外线频闪器</Chinesesimp>
+            <Turkish>IR Strobe Bağlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Detached">
             <English>IR Strobe Detached</English>
@@ -80,6 +84,7 @@
             <Korean>적외선 스트로브 분리됨</Korean>
             <Chinese>已取下紅外線頻閃器</Chinese>
             <Chinesesimp>已取下红外线频闪器</Chinesesimp>
+            <Turkish>IR Strobe Söküldü</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Attached">
             <English>IR Grenade Attached</English>
@@ -96,6 +101,7 @@
             <Korean>적외선 수류탄 부착됨</Korean>
             <Chinese>已附掛紅外線手榴彈</Chinese>
             <Chinesesimp>已附挂红外线手榴弹</Chinesesimp>
+            <Turkish>IR Bombası Bağlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Detached">
             <English>IR Grenade Detached</English>
@@ -112,6 +118,7 @@
             <Korean>적외선 수류탄 분리됨</Korean>
             <Chinese>已取下紅外線手榴彈</Chinese>
             <Chinesesimp>已取下红外线手榴弹</Chinesesimp>
+            <Turkish>IR Bombası Söküldü</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Attached">
             <English>Chemlight Attached</English>
@@ -128,6 +135,7 @@
             <Korean>켐라이트 부착됨</Korean>
             <Chinese>已附掛螢光棒</Chinese>
             <Chinesesimp>已附挂萤光棒</Chinesesimp>
+            <Turkish>Işık Çubuğu Bağlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Detached">
             <English>Chemlight Detached</English>
@@ -144,6 +152,7 @@
             <Korean>켐라이트 분리됨</Korean>
             <Chinese>已取下螢光棒</Chinese>
             <Chinesesimp>已取下萤光棒</Chinesesimp>
+            <Turkish>Işık Çubuğu Söküldü</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Inventory_Full">
             <English>No inventory space</English>
@@ -160,6 +169,7 @@
             <Korean>넣을 공간이 없음</Korean>
             <Chinese>無可用空間</Chinese>
             <Chinesesimp>无可用空间</Chinesesimp>
+            <Turkish>Envanter de alan yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Name">
             <English>IR Strobe</English>
@@ -176,6 +186,7 @@
             <Korean>적외선 스트로브</Korean>
             <Chinese>紅外線頻閃器</Chinese>
             <Chinesesimp>红外线频闪器</Chinesesimp>
+            <Turkish>IR Stroboskop</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Description">
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
@@ -192,6 +203,7 @@
             <Korean>적외선 스트로브는 자신의 위치를 반짝이면서 표시합니다. 이는 야간투시경으로 밖에 보지 못합니다.</Korean>
             <Chinese>紅外線閃頻器,藉由紅外線閃頻信號來辨識你的位置，僅能使用夜視系統來辨識紅外線信號</Chinese>
             <Chinesesimp>红外线闪频器,藉由红外线闪频信号来辨识你的位置，仅能使用夜视系统来辨识红外线信号</Chinesesimp>
+            <Turkish>IR Stroboskop, yalnızca gece görüşlerinden gözükebilen titreşimli bir ışık aracılığıyla konumunuzu gösterir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_PlaceAction">
             <English>Place</English>
@@ -208,6 +220,7 @@
             <Korean>두기</Korean>
             <Chinese>放置</Chinese>
             <Chinesesimp>放置</Chinesesimp>
+            <Turkish>Yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_CancelAction">
             <English>Cancel</English>
@@ -224,6 +237,7 @@
             <Korean>취소</Korean>
             <Chinese>取消</Chinese>
             <Chinesesimp>取消</Chinesesimp>
+            <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Failed">
             <English>Attach Failed</English>
@@ -240,6 +254,7 @@
             <Korean>부착 실패</Korean>
             <Chinese>附掛失敗</Chinese>
             <Chinesesimp>附挂失败</Chinesesimp>
+            <Turkish>Bağlama başarısız</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>
@@ -256,6 +271,7 @@
             <Korean>%1&lt;br/&gt;부착됨</Korean>
             <Chinese>%1&lt;br/&gt;已附掛</Chinese>
             <Chinesesimp>%1&lt;br/&gt;已附挂</Chinesesimp>
+            <Turkish>%1&lt;br/&gt;Bağlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
             <English>%1&lt;br/&gt;Detached</English>
@@ -272,6 +288,7 @@
             <Korean>%1&lt;br/&gt;분리됨</Korean>
             <Chinese>%1&lt;br/&gt;已取下</Chinese>
             <Chinesesimp>%1&lt;br/&gt;已取下</Chinesesimp>
+            <Turkish>%1&lt;br/&gt;Söküldü</Turkish>
         </Key>
     </Package>
 </Project>

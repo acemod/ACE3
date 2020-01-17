@@ -15,6 +15,7 @@
             <Korean>야전삽</Korean>
             <Chinesesimp>战备锹</Chinesesimp>
             <Chinese>戰備鍬</Chinese>
+            <Turkish>Kürek</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
@@ -30,6 +31,7 @@
             <Korean>야전용 삽. 군인들의 영원한 친구</Korean>
             <Chinesesimp>战备锹</Chinesesimp>
             <Chinese>戰備鍬</Chinese>
+            <Turkish>Kürek</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
@@ -45,6 +47,7 @@
             <Chinesesimp>掩体 - 小</Chinesesimp>
             <Chinese>掩體 - 小</Chinese>
             <Czech>Obálka - Malá</Czech>
+            <Turkish>Zarf - Küçük</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -60,6 +63,7 @@
             <Korean>소형 개인참호</Korean>
             <Chinesesimp>小型个人掩体</Chinesesimp>
             <Chinese>小型個人掩體</Chinese>
+            <Turkish>Küçük Kişisel Siper</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
@@ -75,6 +79,7 @@
             <Korean>소형참호 파기</Korean>
             <Chinesesimp>盖小掩体</Chinesesimp>
             <Chinese>蓋小掩體</Chinese>
+            <Turkish>Küçük Siper</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
@@ -90,6 +95,7 @@
             <Chinesesimp>掩体 - 大</Chinesesimp>
             <Chinese>掩體 - 大</Chinese>
             <Czech>Obálka - Velká</Czech>
+            <Turkish>Zarf - Büyük</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
@@ -105,6 +111,7 @@
             <Korean>대형 참호</Korean>
             <Chinesesimp>大型个人掩体</Chinesesimp>
             <Chinese>大型個人掩體</Chinese>
+            <Turkish>Geniş Kişisel Siper</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
@@ -120,6 +127,7 @@
             <Korean>대형참호 파기</Korean>
             <Chinesesimp>盖大掩体</Chinesesimp>
             <Chinese>蓋大掩體</Chinese>
+            <Turkish>Büyük Siper</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_ConfirmDig">
             <English>Confirm Dig</English>
@@ -135,6 +143,7 @@
             <Korean>여기에 파기</Korean>
             <Chinesesimp>确认开工</Chinesesimp>
             <Chinese>確認開工</Chinese>
+            <Turkish>Kazmayı Onayla</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_CancelDig">
             <English>Cancel Dig</English>
@@ -150,6 +159,7 @@
             <Korean>취소하기</Korean>
             <Chinesesimp>取消动作</Chinesesimp>
             <Chinese>取消動作</Chinese>
+            <Turkish>Kazmayı Iptal Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_ScrollAction">
             <English>Rotate</English>
@@ -166,6 +176,7 @@
             <Korean>돌리기</Korean>
             <Chinesesimp>旋转</Chinesesimp>
             <Chinese>旋轉</Chinese>
+            <Turkish>Yönlendir</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_DiggingTrench">
             <English>Digging Trench</English>
@@ -181,6 +192,7 @@
             <Korean>참호 파는중</Korean>
             <Chinesesimp>正在盖掩体中</Chinesesimp>
             <Chinese>正在蓋掩體中</Chinese>
+            <Turkish>Siper Kazılıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_ContinueDiggingTrench">
             <English>Continue Digging Trench</English>
@@ -195,6 +207,7 @@
             <Italian>Continuando a Scavare la Trincea</Italian>
             <Chinesesimp>继续盖掩体</Chinesesimp>
             <Chinese>繼續蓋掩體</Chinese>
+            <Turkish>Kazmaya Devam Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
@@ -209,6 +222,7 @@
             <Italian>Rimuovi Trincea</Italian>
             <Chinesesimp>移除掩体</Chinesesimp>
             <Chinese>移除掩體</Chinese>
+            <Turkish>Siperi Kaldır</Turkish>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -223,6 +237,7 @@
             <Italian>Rimuovendo la Trincea</Italian>
             <Chinesesimp>移除掩体中</Chinesesimp>
             <Chinese>移除掩體中</Chinese>
+            <Turkish>Siper Kaldırılıyor</Turkish>
         </Key>
     </Package>
 </Project>

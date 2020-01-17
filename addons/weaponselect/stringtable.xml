@@ -48,6 +48,7 @@
             <Korean>권총 선택</Korean>
             <Chinesesimp>选择手枪</Chinesesimp>
             <Chinese>選擇手槍</Chinese>
+            <Turkish>Tabancayı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifle">
             <English>Select Rifle</English>
@@ -64,6 +65,7 @@
             <Korean>소총 선택</Korean>
             <Chinesesimp>选择步枪</Chinesesimp>
             <Chinese>選擇步槍</Chinese>
+            <Turkish>Tüfeği Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
             <English>Select Launcher</English>
@@ -80,6 +82,7 @@
             <Korean>발사기 선택</Korean>
             <Chinesesimp>选择发射器</Chinesesimp>
             <Chinese>選擇發射器</Chinese>
+            <Turkish>Fırlatılabiliri Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
             <English>Select Grenade Launcher</English>
@@ -96,6 +99,7 @@
             <Korean>유탄발사기 선택</Korean>
             <Chinesesimp>选择榴弹发射器</Chinesesimp>
             <Chinese>選擇榴彈發射器</Chinese>
+            <Turkish>Bombaatarı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
             <English>Select Binoculars</English>
@@ -112,6 +116,7 @@
             <Korean>망원경 선택</Korean>
             <Chinesesimp>选择望远镜</Chinesesimp>
             <Chinese>選擇望遠鏡</Chinese>
+            <Turkish>Dürbünü Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
             <English>Holster Weapon</English>
@@ -128,6 +133,7 @@
             <Korean>무기 집어넣기</Korean>
             <Chinesesimp>武器套</Chinesesimp>
             <Chinese>武器套</Chinese>
+            <Turkish>Silahını Kılıfına Koy</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOn">
             <English>Engine on</English>
@@ -144,6 +150,7 @@
             <Korean>엔진 켜기</Korean>
             <Chinesesimp>引擎发动</Chinesesimp>
             <Chinese>引擎發動</Chinese>
+            <Turkish>Motor Açık</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOff">
             <English>Engine off</English>
@@ -160,6 +167,7 @@
             <Korean>엔진 끄기</Korean>
             <Chinesesimp>引擎熄火</Chinesesimp>
             <Chinese>引擎熄火</Chinese>
+            <Turkish>Motor Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
             <English>Select Main Gun</English>
@@ -176,6 +184,7 @@
             <Korean>주포 선택</Korean>
             <Chinesesimp>选择主武器</Chinesesimp>
             <Chinese>選擇主武器</Chinese>
+            <Turkish>Ana Silahı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
             <English>Select Machine Gun</English>
@@ -192,6 +201,7 @@
             <Korean>기관총 선택</Korean>
             <Chinesesimp>选择机枪</Chinesesimp>
             <Chinese>選擇機槍</Chinese>
+            <Turkish>Makineli Silahı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
             <English>Select Missiles</English>
@@ -208,6 +218,7 @@
             <Korean>미사일 선택</Korean>
             <Chinesesimp>选择导弹</Chinesesimp>
             <Chinese>選擇導彈</Chinese>
+            <Turkish>Füzeleri Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
             <English>Grenade %1</English>
@@ -224,6 +235,7 @@
             <Korean>%1 수류탄</Korean>
             <Chinesesimp>手榴弹 %1</Chinesesimp>
             <Chinese>手榴彈 %1</Chinese>
+            <Turkish>El Bombası %1</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
             <English>Ready Grenade</English>
@@ -240,6 +252,7 @@
             <Korean>투척물 준비</Korean>
             <Chinesesimp>准备手榴弹</Chinesesimp>
             <Chinese>準備手榴彈</Chinese>
+            <Turkish>El Bombası Hazır</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
             <English>Select Frag Grenade</English>
@@ -256,6 +269,7 @@
             <Korean>살상 투척물 선택</Korean>
             <Chinesesimp>选择破片手榴弹</Chinesesimp>
             <Chinese>選擇破片手榴彈</Chinese>
+            <Turkish>El Bombasını Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeOther">
             <English>Select Non-Frag Grenade</English>
@@ -272,6 +286,7 @@
             <Korean>비살상 투척물 선택</Korean>
             <Chinesesimp>选择非破片手榴弹</Chinesesimp>
             <Chinese>選擇非破片手榴彈</Chinese>
+            <Turkish>El Bombası Dışındakileri Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
             <English>Throw Selected Grenade</English>
@@ -288,6 +303,7 @@
             <Korean>선택된 투척물 투척</Korean>
             <Chinesesimp>投掷选择的手榴弹</Chinesesimp>
             <Chinese>投擲選擇的手榴彈</Chinese>
+            <Turkish>Seçilen Bombayı Fırlat</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
             <English>No grenades left</English>
@@ -304,6 +320,7 @@
             <Korean>투척물 없음</Korean>
             <Chinesesimp>已无手榴弹</Chinesesimp>
             <Chinese>已無手榴彈</Chinese>
+            <Turkish>El Bombası Kalmadı</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
             <English>No frags left</English>
@@ -352,6 +369,7 @@
             <Korean>선택된 수류탄 없음</Korean>
             <Chinesesimp>未选择手榴弹</Chinesesimp>
             <Chinese>未選擇手榴彈</Chinese>
+            <Turkish>Bomba Seçilmedi</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
             <English>Fire Smoke Launcher</English>
@@ -368,6 +386,7 @@
             <Korean>연막발사기 박사</Korean>
             <Chinesesimp>发射烟雾发射器</Chinesesimp>
             <Chinese>發射煙霧發射器</Chinese>
+            <Turkish>Ateşli Sis Fırlatıcısı</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_CollisionLights">
             <English>Toggle Collision Lights</English>
@@ -383,6 +402,7 @@
             <Spanish>Alternar luces de colisión</Spanish>
             <Czech>Přepnout kolizní světla</Czech>
             <French>Allumer les feux anti-collision</French>
+            <Turkish>Çarpışma Işıklarını Aç/Kapat</Turkish>
         </Key>
     </Package>
 </Project>
