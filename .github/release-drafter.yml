@@ -9,16 +9,19 @@ categories:
   - title: '**ADDED:**'
     labels:
       - 'kind/feature request'
-      - 'kind/enhancement'
-      - 'area/translations'
   - title: '**FIXED:**'
     labels:
       - 'kind/bug fix'
-  - title: '**CHANGED:**'
+  - title: '**IMPROVED:**'
     labels:
       - 'kind/enhancement'
+  - title: '**CHANGED:**'
+    labels:
       - 'kind/cleanup'
       - 'area/compatibility'
+  - title: '**TRANSLATIONS:**'
+    labels:
+      - 'area/translations'
 
 exclude-labels:
   - 'ignore changelog'
