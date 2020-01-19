@@ -1876,7 +1876,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
-            <German>Gegenstände die benötigt werden um eine spezifische Fahrzeug Komponente oder eine Kette zu entfernen/auszutauschen.</German>
+            <German>Gegenstände die benötigt werden, um eine spezifische Fahrzeugkomponente oder eine Kette zu entfernen/auszutauschen.</German>
             <Japanese>車両の特定コンポーネントか履帯の除去/交換にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
             <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
