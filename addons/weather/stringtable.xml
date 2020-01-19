@@ -170,7 +170,7 @@
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
-            <German>Zeige Überprüfe Lufttemperaturaktion</German>
+            <German>Zeige "Überprüfe Lufttemperatur" im Selbstinteraktionsmenü</German>
             <Chinese>顯示檢查氣溫動作</Chinese>
             <Italian>Mostra Controlla l'azione della temperatura dell'aria</Italian>
             <Czech>Ukázat akci kontroly teploty vzduchu</Czech>
