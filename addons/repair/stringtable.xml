@@ -1834,7 +1834,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_DisplayName">
             <English>Wheel Repair Requirements</English>
-            <German>Bedingungen zur Reifenreperatur</German>
+            <German>Bedingungen für die Reifenreperatur</German>
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
             <Russian>Для ремонта колес требуется</Russian>
