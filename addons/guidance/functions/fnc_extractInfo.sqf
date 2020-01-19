@@ -149,6 +149,7 @@ private _degreesPerSecondPitch = nil;
 private _degreesPerSecondRoll = nil;
 */
 _degreesPerSecond = 5;
+_glideAngle = 90; //90 is straight down, 0 flies forever
 
 
 //SensorVariables
@@ -173,7 +174,7 @@ private _attackProfileFunction = getText (configFile >> QGVAR(AttackProfiles) >>
 // Bake in variables we may not otherwise have;
 switch (true) do {
     case (_ammo isKindOf "MissileBase"): {
-        _degreesPerSecond = 30;
+        _degreesPerSecond = 60;
         _degreesPerSecondYaw = 30;
         _degreesPerSecondPitch = 60;
         _degreesPerSecondRoll = 150;
@@ -181,8 +182,18 @@ switch (true) do {
             _sensorAngle = 35;
         };
     };
+    case (_ammo isKindOf "BombBase"): {
+        _degreesPerSecond = 30;
+        _glideAngle = 0;
+        _degreesPerSecondYaw = 30;
+        _degreesPerSecondPitch = 60;
+        _degreesPerSecondRoll = 150;
+        if(isNil "_sensorAngle") then {
+            _sensorAngle = 65;
+        };
+    };
     case (_ammo isKindOf "RocketCore"): {
-        _degreesPerSecond = 20;
+        _degreesPerSecond = 35;
         _degreesPerSecondYaw = 20;
         _degreesPerSecondPitch = 40;
         _degreesPerSecondRoll = 100;
@@ -191,12 +202,12 @@ switch (true) do {
         };
     };
     case (_ammo isKindOf "ShellBase"): {
-        _degreesPerSecond = 5;
+        _degreesPerSecond = 7.5;
         _degreesPerSecondYaw = 5;
         _degreesPerSecondPitch = 5;
         _degreesPerSecondRoll = 0;    
         if(isNil "_sensorAngle") then {
-            _sensorAngle = 20;
+            _sensorAngle = 25;
         };
     };
     case (_ammo isKindOf "BulletBase"): {
@@ -205,7 +216,7 @@ switch (true) do {
         _degreesPerSecondPitch = 3;
         _degreesPerSecondRoll = 0;    
         if(isNil "_sensorAngle") then {
-            _sensorAngle = 20;
+            _sensorAngle = 15;
         };
     };
     case (_ammo isKindOf "GrenadeBase"): {
@@ -214,7 +225,7 @@ switch (true) do {
         _degreesPerSecondPitch = 12.5;
         _degreesPerSecondRoll = 0;
         if(isNil "_sensorAngle") then {
-            _sensorAngle = 30;
+            _sensorAngle = 20;
         };
     };
 };
@@ -244,6 +255,8 @@ private _miscProfile = [];
 private _fuzeVehicle = [0, false, 0];
 private _fuzeAlt = [0, false];
 private _fuzeRange = [0, false, 0];
+private _fuzeTime = [0, false, 0];
+private _fuzeLoc = [0, false, [0,0,0]];
 
 //Configure our seeker settings based on the type
 switch (_seekerType) do {
@@ -258,7 +271,7 @@ switch (_seekerType) do {
         _miscSeeker set [2, _variableGPSPos]; //GPS target position
     };
     case "EO": {
-    
+        _miscSeeker set [0, _targetPos];
     };
     case "SALH": {
         private _laserCode = _variableLaserCode;
@@ -294,7 +307,7 @@ switch (_attackProfile) do {
         _miscProfile set [0, false]; //top-attack/Overfly mode; PLACEHOLDER VALUE
     };
     case "FIM": {
-        _sensorAngle = 65;
+        _seekerAngle = 65;
         _fuzeVehicle = [20, false, 0];
     };
     case "ATGM": {
@@ -316,7 +329,7 @@ switch (_attackProfile) do {
             _targetVector = _projectile worldtoModel (ASLToAGL _targetPos);
             _miscProfile set [0,_targetVector]; //Proportional Attack Intercept Vector
         };
-        _sensorAngle = 25;
+        _seekerAngle = 25;
         _fuzeVehicle = [15, false, 0];
         };
     case "GBU": {
@@ -336,8 +349,8 @@ switch (_attackProfile) do {
 };
 
 //Aggregate settings in our array
-private _miscManeuvering = [_degreesPerSecond, diag_tickTime, time]; //diag_tickTime used for '_lastTickTime'; time used for _lastRunTime
+private _miscManeuvering = [_degreesPerSecond, _glideAngle, diag_tickTime, time]; //diag_tickTime used for '_lastTickTime'; time used for _lastRunTime
 private _miscSensor = [_seekerAngle, _seekerMinRange, _seekerMaxRange];
-private _miscFuze = [_fuzeVehicle, _fuzeAlt, _fuzeRange];
+private _miscFuze = [_fuzeVehicle, _fuzeAlt, _fuzeRange, _fuzeTime, _fuzeLoc];
 
 [_seekerType, _attackProfile, _target, _targetPos, _targetVector, _launchPos, _launchTime, _miscManeuvering, _miscSensor, _miscSeeker, _miscProfile, _miscFuze];

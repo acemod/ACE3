@@ -25,7 +25,9 @@ PREP(attackProfile_INDIRECT);
 PREP(attackProfile_SSBM);
 
 // Seeker search functions
+PREP(seekerType_EO);
 PREP(seekerType_GPS);
 PREP(seekerType_IR);
+PREP(seekerType_PRH);
 PREP(seekerType_SACLOS);
 PREP(seekerType_SALH);

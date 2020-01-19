@@ -19,15 +19,10 @@
 
 params ["_projectile", "_shooter","_extractedInfo","_seekerTargetPos"];
 _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
-_miscManeuvering params ["_degreesPerSecond","_lastTickTime", "_lastRunTime"];
+_miscManeuvering params ["_degreesPerSecond", "_glideAngle", "_lastTickTime", "_lastRunTime"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
 
-_extractedInfo set [4,vectorNormalized (velocity _projectile)];
-if( (((velocity _projectile) select 2) < 0) && !(_miscSeeker#0)) then {
-    _miscSeeker set [0, true];
-    hint "GBU active!";
-};
 
-if (_seekerTargetPos isEqualTo [0,0,0]) exitWith {_seekerTargetPos};
+_extractedInfo set [4,vectorNormalized (velocity _projectile)];
 
 _seekerTargetPos;

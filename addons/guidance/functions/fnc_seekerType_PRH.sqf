@@ -18,13 +18,13 @@
 
 params ["_projectile", "_shooter","_extractedInfo"];
 _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
-_miscManeuvering params ["_degreesPerSecond","_lastTickTime", "_lastRunTime"];
+_miscManeuvering params ["_degreesPerSecond", "_glideAngle", "_lastTickTime", "_lastRunTime"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
 
 _projPos = AGLToASL (_projectile modelToWorld [0,0,0]);
 _checkVector = vectorDir _projectile;
 _seekerAngle = 45;
-_seekerMaxRange = 3000;
+_seekerMaxRange = 5000;
 
 
 //Get Targets and Countermeasures

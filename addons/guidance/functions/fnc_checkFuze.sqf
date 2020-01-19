@@ -18,13 +18,15 @@
  */
 
 params ["_projectile", "_miscFuze"];
-_miscFuze params ["_fuzeVehicle", "_fuzeAlt", "_fuzeRange"];
+_miscFuze params ["_fuzeVehicle", "_fuzeAlt", "_fuzeRange", "_fuzeTime", "_fuzeLoc"];
 
 private _projPos = getPosASL _projectile;
 
 _fuzeVehicle params ["_fuzeVehicleRadius", "_armedFuzeVehicle", "_nearestPass"];
 _fuzeAlt params ["_fuzeAltHeight", "_armedFuzeAlt"];
 _fuzeRange params ["_fuzeRangeDistance", "_armedFuzeRange", "_distanceTraveled"];
+_fuzeTime params ["_fuzeTime", "_armedFuzeTime", "_timeRun"];
+_fuzeLoc params ["_fuzeLocDistance", "_armedFuzeLoc", "_fuzeLocPos"];
 
 private _return = false;
 
@@ -48,8 +50,24 @@ if (_armedFuzeAlt) then {
 
 if (_armedFuzeRange) then {
     if((_distanceTraveled > _fuzeRangeDistance) && (_fuzeRangeDistance > 0)) exitWith {
+    triggerAmmo _projectile;
     _return = true;
     };
 };
+
+if (_armedFuzeTime) then {
+    if(_timeRun > _fuzeTime) exitWith {
+        triggerAmmo _projectile;
+        _return = true;
+    };
+};
+
+if (_armedFuzeLoc) then {
+    if((_fuzeLocDistance > (_fuzeLocPos distance _projPos))) exitWith {
+        triggerAmmo _projectile;
+        _return = true;
+    };
+};
+
 
 _return;

@@ -169,8 +169,38 @@ class CfgAmmo {
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
             // Guidance type for munitions
-            defaultSeekerType = "GPS";
-            seekerTypes[] = {"GPS"};
+            defaultSeekerType = "EO";
+            seekerTypes[] = {"EO"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 5000;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "AGM";
+            attackProfiles[] = {"AGM"};
+        };
+    };
+    
+    class ammo_Missile_AntiRadiationBase: MissileBase {};
+    class ammo_Missile_HARM: ammo_Missile_AntiRadiationBase {
+        class ADDON {
+            enabled = 1;
+
+            minDeflection = 0.0005;      // Minium flap deflection for guidance
+            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
+            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
+
+            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+            // Guidance type for munitions
+            defaultSeekerType = "PRH";
+            seekerTypes[] = {"PRH"};
 
             defaultSeekerLockMode = "LIN";
             seekerLockModes[] = {"LIN"};
@@ -187,6 +217,55 @@ class CfgAmmo {
         };
     };
 
+    class BombCore;
+    class LaserBombCore: BombCore {};
+    class ammo_Bomb_LaserGuidedBase: LaserBombCore {};
+    class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
+        class ADDON {
+            enabled = 1;
+                
+            // Guidance type for munitions
+            defaultSeekerType = "SALH";
+            seekerTypes[] = {"SALH"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 5000;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "GBU";
+            attackProfiles[] = {"GBU"};
+        };
+    };
+    
+    class ammo_Bomb_SmallDiameterBase: ammo_Bomb_LaserGuidedBase {};
+    class ammo_Bomb_SDB: ammo_Bomb_SmallDiameterBase {
+        class ADDON {
+            enabled = 1;
+                
+            // Guidance type for munitions
+            defaultSeekerType = "GPS";
+            seekerTypes[] = {"GPS"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 5000;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "GBU";
+            attackProfiles[] = {"GBU"};
+        };     
+    };
 
 };
 

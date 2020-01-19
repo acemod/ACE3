@@ -20,10 +20,11 @@
 
 params ["_projectile", "_shooter","_extractedInfo"];
 _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
-_miscManeuvering params ["_degreesPerSecond","_lastTickTime", "_lastRunTime"];
+_miscManeuvering params ["_degreesPerSecond", "_glideAngle", "_lastTickTime", "_lastRunTime"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
-
 _miscSeeker params ["_active","_canUpdate","_gpsTargetPos"];
+
+_projPos = getPosASL _projectile;
 _seekerTargetPos = _targetPos;
 if(!(isNil "_gpsTargetPos")) then {
     _seekerTargetPos = _gpsTargetPos;
@@ -43,6 +44,5 @@ if(_canUpdate) then {
 
 _targetInfo set [4, (getPosASL _projectile) vectorFromTo _seekerTargetPos];
 
-
-
+_seekerTargetPos = _seekerTargetPos vectorAdd [0,0,(_projPos distance _seekerTargetPos) / 80];
 _seekerTargetPos;
