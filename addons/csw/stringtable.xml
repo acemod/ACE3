@@ -165,7 +165,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
-            <German>Interaktionszeit Koeffizient</German>
+            <German>Interaktionsdauerkoeffizient</German>
             <Portuguese>Coeficiente de tempo para a interação</Portuguese>
             <French>Coefficient du temps d'interaction</French>
             <Japanese>インタラクション時間係数</Japanese>
