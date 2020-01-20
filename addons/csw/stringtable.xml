@@ -237,7 +237,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>
-            <German>Waffe auseinandernehmen...</German>
+            <German>Nehme Waffe auseinander...</German>
             <Portuguese>Desmontando Arma...</Portuguese>
             <French>Désassemblage de l'arme...</French>
             <Japanese>火器を解体中です・・・</Japanese>
