@@ -71,7 +71,7 @@
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
-            <German>Deaktiviert die Vanilla Artilleriecomputer</German>
+            <German>Deaktiviert die Vanilla-Artilleriecomputer</German>
             <Chinese>停用原本的火炮控制電腦</Chinese>
             <Italian>Disattiva il computer artiglieria vanilla</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače základní hry</Czech>
