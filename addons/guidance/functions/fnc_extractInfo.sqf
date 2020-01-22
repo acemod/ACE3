@@ -40,10 +40,13 @@ private _variableSeekerType = _shooter getVariable [QGVAR(seekerType), nil];
 private _variableAttackProfile = _shooter getVariable [QGVAR(attackProfile), nil];
 private _variableLockMode = _shooter getVariable [QGVAR(lockMode), nil];
 
-private _variablePLOSValues = _shooter getVariable [QGVAR(PLOSValues), [0,0,0]];
+private _variablePLOSValues = _shooter getVariable [QGVAR(PLOSValues), [0,0]];
 private _variableMCLOSValues = _shooter getVariable [QGVAR(MCLOSValues), [0,0]];
 
 private _variableGPSPos = _shooter getVariable [QGVAR(GPSPos), nil];
+
+private _variableMCLOSMissile = _shooter getVariable [QGVAR(MCLOSMissile), objNull];
+private _variableSACLOSMissile = _shooter getVariable [QGVAR(SACLOSMissile), objNull];
 
 private _variableLaserCode = _shooter getVariable [QEGVAR(laser,code), nil];
 
@@ -90,12 +93,13 @@ if(isNull _variableTarget) then {
             if(missileTarget _projectile == _cursorTarget) then {
                 _target = _cursorTarget;
                 _targetPos = getPosASL _cursorTarget;
+                _targetVector = _projPos vectorFromTo _targetPos;
             };
-            _targetVector = _projPos vectorFromTo (getPosASL _cursorTarget);
         } else {
             if(_pilotCameraTarget select 0) then {
                 _target = _pilotCameraTarget select 2;
                 _targetPos = _pilotCameraTarget select 1;
+                _targetVector = _projPos vectorFromTo _targetPos;
             } else {
                 if(_hasPilotCamera) then {
                     private _pilotCameraPosOffset = (getPos _shooter) vectorDiff (_shooter modelToWorld _pilotCameraPos);
@@ -103,32 +107,44 @@ if(isNull _variableTarget) then {
                     private _pilotCameraVector = (getPos _shooter) vectorFromTo (_shooter modelToWorld _pilotCameraDir);
                     private _intersectArray = lineIntersectsSurfaces[_pilotCameraPosASL,_pilotCameraPosASL vectorAdd (_pilotCameraVector vectorMultiply 5000)];
                     if(count _intersectArray < 1) then {
-                        _targetPos = _pilotCameraPosASL vectorAdd (_pilotCameraVector vectorMultiply 5000);
+                        _targetPos = _pilotCameraPosASL vectorAdd (_pilotCameraVector vectorMultiply 10000);
                     } else {
                         _targetPos = (_intersectArray select 0) select 0;
                     };
                 } else {
-                    _targetVector = _shooter weaponDirection _weapon;
-                    private _intersectArray = lineIntersectsSurfaces[eyepos _shooter,(eyePos _shooter) vectorAdd (_missileVector vectorMultiply 5000)];
-                    if(!(count _intersectArray < 1)) then {
-                        _targetPos = (_intersectArray select 0) select 0;
+                    if(_shooter == vehicle _shooter) then {
+                        _targetVector = eyeDirection _shooter;
+                        private _intersectArray = lineIntersectsSurfaces[eyepos _shooter,(eyePos _shooter) vectorAdd (_targetVector vectorMultiply 10000)];
+                        if(!(count _intersectArray < 1)) then {
+                            _targetPos = (_intersectArray select 0) select 0;
+                        } else {
+                            _targetPos = (AGLToASL (_shooter modelToWorld _pilotCameraPos)) vectorAdd (_targetVector vectorMultiply 10000);
+                        };
                     } else {
-                        _targetPos = (AGLToASL (_shooter modelToWorld _pilotCameraPos)) vectorAdd (_missileVector vectorMultiply 5000);
+                        _targetVector = _shooter weaponDirection _weapon;
+                        private _intersectArray = lineIntersectsSurfaces[eyepos _shooter,(eyePos _shooter) vectorAdd (_targetVector vectorMultiply 10000)];
+                        if(!(count _intersectArray < 1)) then {
+                            _targetPos = (_intersectArray select 0) select 0;
+                        } else {
+                            _targetPos = (AGLToASL (_shooter modelToWorld _pilotCameraPos)) vectorAdd (_targetVector vectorMultiply 10000);
+                        };
                     };
                 };
             };
         };
+    } else {
+        _target = _missileTarget;
+        _targetPos = getPosASL _missileTarget;
     };
 };
 
 _missileTarget = _target;
 _missileTargetPos = _targetPos;
+_targetVector = _projPos vectorFromTo _targetPos;
+_missileVector = _targetVector;
 
 _projectile setMissileTarget _missileTarget;
 _projectile setMissileTargetPos _missileTargetPos;
-if(isNil "_missileVector") then {
-    _missileVector = _projPos vectorFromTo _missileTargetPos;
-};
 
 // Maneuvering variables
 //need to convert legacy to deg/second
@@ -182,8 +198,8 @@ switch (true) do {
             _sensorAngle = 35;
         };
     };
-    case (_ammo isKindOf "BombBase"): {
-        _degreesPerSecond = 30;
+    case (_ammo isKindOf "BombCore"): {
+        _degreesPerSecond = 10;
         _glideAngle = 0;
         _degreesPerSecondYaw = 30;
         _degreesPerSecondPitch = 60;
@@ -271,7 +287,7 @@ switch (_seekerType) do {
         _miscSeeker set [2, _variableGPSPos]; //GPS target position
     };
     case "EO": {
-        _miscSeeker set [0, _targetPos];
+        _miscSeeker set [1, _targetPos];
     };
     case "SALH": {
         private _laserCode = _variableLaserCode;
@@ -280,10 +296,12 @@ switch (_seekerType) do {
         _miscSeeker set [1, _laserInfo]; //Laser information
     };
     case "SACLOS": {
-    
+        _shooter setVariable [QGVAR(SACLOSMissile), _projectile];
     };
     case "MCLOS": {
-    
+        _shooter setVariable [QGVAR(MCLOSMissile), _projectile];
+        _degreesPerSecond = 20;
+        _miscSeeker set [3, true];
     };
     case "PLOS": {
         _miscSeeker set [1,[0,0,0]]; //Proportional Attack Intercept Vector; VALUE STAND-IN
@@ -292,7 +310,7 @@ switch (_seekerType) do {
         _miscSeeker set [1,time]; // Give about a half second if contact is lost to reacquire
     };
     case "ARH": {
-
+    
     };
     case "PRH": {};
     default {
@@ -300,11 +318,11 @@ switch (_seekerType) do {
     };
 };
 
-
+_miscProfile set [0, [_mode, _variableLockMode]]; //top-attack/Overfly mode; PLACEHOLDER VALUE
 //configure our attack profile settings based on type;
 switch (_attackProfile) do {
     case "FGM": {
-        _miscProfile set [0, false]; //top-attack/Overfly mode; PLACEHOLDER VALUE
+
     };
     case "FIM": {
         _seekerAngle = 65;
@@ -320,22 +338,15 @@ switch (_attackProfile) do {
         _fuzeVehicle = [25, false, 0];
     };
     case "AGM": {
-        _miscProfile set [0, false]; //top-attack/Overfly mode; PLACEHOLDER VALUE
+
     };
     case "AAM": {
-        if(isNil "_targetPos") then {
-            _miscProfile set [0, [0,0,0]]; //Proportional Attack Intercept Vector
-        } else {
-            _targetVector = _projectile worldtoModel (ASLToAGL _targetPos);
-            _miscProfile set [0,_targetVector]; //Proportional Attack Intercept Vector
-        };
         _seekerAngle = 25;
         _fuzeVehicle = [15, false, 0];
-        };
+    };
     case "GBU": {
         if(_seekerType == "GPS") then {
-            _miscProfile set [0, true]; //lofted/indirect attack mode;
-            _miscProfile set [0, 0]; //Custom angle of attack; Always negative; 0 or greater is ignored value.
+            _miscProfile set [1, 0]; //Custom angle of attack; Always negative; 0 or greater is ignored value.
         } else {
 
         };
@@ -349,8 +360,8 @@ switch (_attackProfile) do {
 };
 
 //Aggregate settings in our array
-private _miscManeuvering = [_degreesPerSecond, _glideAngle, diag_tickTime, time]; //diag_tickTime used for '_lastTickTime'; time used for _lastRunTime
-private _miscSensor = [_seekerAngle, _seekerMinRange, _seekerMaxRange];
+private _miscManeuvering = [_degreesPerSecond, _glideAngle, diag_tickTime, time, 0]; //diag_tickTime used for '_lastTickTime'; time used for _lastRunTime
+private _miscSensor = [_sensorAngle, _sensorMinRange, _sensorMaxRange];
 private _miscFuze = [_fuzeVehicle, _fuzeAlt, _fuzeRange, _fuzeTime, _fuzeLoc];
 
 [_seekerType, _attackProfile, _target, _targetPos, _targetVector, _launchPos, _launchTime, _miscManeuvering, _miscSensor, _miscSeeker, _miscProfile, _miscFuze];

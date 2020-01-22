@@ -1,5 +1,6 @@
 LOG("prep");
 PREP(cycleAttackProfileKeyDown);
+PREP(keyDown);
 
 PREP(checkFuze);
 PREP(checkLos);
@@ -30,4 +31,6 @@ PREP(seekerType_GPS);
 PREP(seekerType_IR);
 PREP(seekerType_PRH);
 PREP(seekerType_SACLOS);
+PREP(seekerType_PLOS);
+PREP(seekerType_MCLOS);
 PREP(seekerType_SALH);

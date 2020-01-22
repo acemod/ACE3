@@ -20,12 +20,12 @@ params ["_projectile", "_shooter","_extractedInfo"];
 _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
 _miscManeuvering params ["_degreesPerSecond", "_glideAngle", "_lastTickTime", "_lastRunTime"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
+_miscSeeker params ["_active"];
 
+
+if(!_active) exitWith {[0,0,0]};
 _projPos = AGLToASL (_projectile modelToWorld [0,0,0]);
 _checkVector = vectorDir _projectile;
-_seekerAngle = 45;
-_seekerMaxRange = 5000;
-
 
 //Get Targets and Countermeasures
 _targetsList = [];
@@ -61,7 +61,7 @@ while {(count _seekerTargetsList) < 1 && (_angleThreshold < _seekerAngle)} do {
     {
         private _xPos = getPosASL _x;
         if (
-            (acos((_projPos vectorFromTo _xPos) vectorCos _checkVector) < _angleThreshold) &&
+            (acos((_projPos vectorFromTo _xPos) vectorCos _targetVector) < _angleThreshold) &&
             ([_projectile, _x, true] call FUNC(checkLos))
         ) then {
             _seekerTargetsList pushBack _x;
@@ -81,7 +81,7 @@ private _foundTargetPos = AGLToASL ((_seekerTargetsList select 0) modelToWorld (
 
 //_foundTargetPos = getPosASL (_seekerTargetsList select 0);
 
-_miscSeeker set [0, time];
+//_miscSeeker set [0, time];
 
 _extractedInfo set [2, _seekerTargetsList select 0];
 _extractedInfo set [3, _foundTargetPos];

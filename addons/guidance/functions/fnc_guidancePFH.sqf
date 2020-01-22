@@ -23,7 +23,7 @@ _args params ["_firedEH","_extractedInfo"];
 
 _firedEH params ["_shooter","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
 _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile", "_miscFuze"];
-_miscManeuvering params ["_degreesPerSecond", "_glideAngle", "_lastTickTime", "_lastRunTime"];
+_miscManeuvering params ["_degreesPerSecond", "_glideAngle", "_lastTickTime", "_lastRunTime", "_runtimeDelta"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
 
 _miscFuze params ["_fuzeVehicle", "_fuzeAlt", "_fuzeRange", "_fuzeTime", "_fuzeLoc"];
@@ -54,13 +54,22 @@ if (accTime > 0) then {
     _adjustTime = 0;
 };
 
+_miscManeuvering set [4, _runtimeDelta];
+
 private _projPos = getposASL _projectile;
 
 // Seeker Search
 private _seekerTargetPos = [_projectile, _shooter, _extractedInfo] call FUNC(runSeekerSearch);
+if (isNil "_seekerTargetPos") then {
+    _seekerTargetPos = [0,0,0];
+};
 
 // Attack Profile Search
 private _attackProfileTargetPos = [_projectile, _shooter, _extractedInfo, _seekerTargetPos] call FUNC(runAttackProfile);
+if (isNil "_attackProfileTargetPos") then {
+    _attackProfileTargetPos = [0,0,0];
+};
+
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projPos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
 
 // Fuze Check
@@ -104,5 +113,4 @@ if(_l == 0) then {
     _projectile setVectorDirAndUp [ _v, [(_v select 0) * _r,(_v select 1) * _r, _l] ];
 };
 
-
-_projectile setVelocity ((_v vectorMultiply (vectorMagnitude (velocity _projectile))) vectorAdd ([0,0,sin(_glideAngle) * -9.80665 * _runtimeDelta]) );
+_projectile setVelocity ((_v vectorMultiply (vectorMagnitude (velocity _projectile))) vectorAdd ([0,0,-9.80665 * _runtimeDelta]) );

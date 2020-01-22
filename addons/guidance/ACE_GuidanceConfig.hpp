@@ -11,7 +11,7 @@ class GVAR(AttackProfiles) {
         visualName = "";
         description = "";
 
-        functionName = QFUNC(attackProfile_LIN);
+        functionName = QFUNC(attackProfile_DIRECT);
     };
     class INDIRECT {
         name = "";
@@ -48,7 +48,7 @@ class GVAR(AttackProfiles) {
         visualName = "";
         description = "";
 
-        functionName = QFUNC(attackProfile_LIN);
+        functionName = QFUNC(attackProfile_AGM);
     };
     
 };
@@ -60,6 +60,7 @@ class GVAR(SeekerTypes) {
         description = "";
 
         functionName = QFUNC(seekerType_GPS);
+        preGuidanceName = "";
     };
 
     class SALH {
@@ -68,6 +69,7 @@ class GVAR(SeekerTypes) {
         description = "";
 
         functionName = QFUNC(seekerType_SALH);
+        preGuidanceName = "";
     };
 
     class SACLOS {
@@ -76,6 +78,7 @@ class GVAR(SeekerTypes) {
         description = "";
 
         functionName = QFUNC(seekerType_SACLOS);
+        preGuidanceName = "";
     };
     
     class IR {
@@ -84,6 +87,7 @@ class GVAR(SeekerTypes) {
         description = "";
 
         functionName = QFUNC(seekerType_IR);
+        preGuidanceName = "";
     };
     
     class EO {
@@ -92,6 +96,7 @@ class GVAR(SeekerTypes) {
         description = "";
 
         functionName = QFUNC(seekerType_EO);
+        preGuidanceName = "";
     };
     
     class PRH {
@@ -100,6 +105,25 @@ class GVAR(SeekerTypes) {
         description = "";
 
         functionName = QFUNC(seekerType_PRH);
+        preGuidanceName = "";
+    };
+    
+    class PLOS {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(seekerType_PLOS);
+        preGuidanceName = QFUNC(preGuidance_PLOS);
+    };
+
+    class MCLOS {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(seekerType_MCLOS);
+        preGuidanceName = "";
     };
     
 };

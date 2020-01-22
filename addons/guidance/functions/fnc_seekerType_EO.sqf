@@ -20,7 +20,9 @@ params ["_projectile", "_shooter","_extractedInfo"];
 _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos", "_targetVector", "_launchPos", "_launchTime", "_miscManeuvering", "_miscSensor", "_miscSeeker", "_miscProfile"];
 _miscManeuvering params ["_degreesPerSecond", "_glideAngle", "_lastTickTime", "_lastRunTime"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
-_miscSeeker params ["_focusPoint", "_points"];
+_miscSeeker params ["_active", "_focusPoint", "_points"];
+
+if(!_active) exitWith {[0,0,0]};
 
 _seekerMaxRange = 5000;
 
@@ -34,7 +36,7 @@ if(isNil "_focusPoint" || (count _focusPoint) <= 0 ) exitWith {
     if((count _focusPoint) < 1) then {
         _focusPoint = _projPos vectorAdd (_finalVector vectorMultiply 10000)
     };
-    _miscSeeker set [0, _focusPoint];
+    _miscSeeker set [1, _focusPoint];
 };
 
 private _toVector = _projPos vectorFromTo _focusPoint;
@@ -72,7 +74,7 @@ if(count _points > 75) then {
 if(count _points < 1) then {
     _points = nil;
 };
-_miscSeeker set [1,_points];
+_miscSeeker set [2,_points];
 
 private _finalVector = [0,0,0];
 private _finalPoint = [0,0,0];
@@ -113,7 +115,7 @@ if(_pivotAmt > 0) then {
     private _finalVector = [_finalVector, _pivotVector, _pivotAmt] call CBA_fnc_vectRotate3D;
 };
 private _seekerTargetPos = terrainIntersectAtASL [_projPos, _projPos vectorAdd (_finalVector vectorMultiply 10000)]; 
-_miscSeeker set [0, _seekerTargetPos];
+_miscSeeker set [1, _seekerTargetPos];
 
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL (_finalPoint), 0.75, 0.75, 0, "finalPoint", 1, 0.025, "TahomaB"];
 //_projPos vectorAdd (_finalVector);

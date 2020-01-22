@@ -26,9 +26,6 @@ _laserInfo params ["_laserCode", "_wavelengthMin", "_wavelengthMax"];
 if(!_active) exitWith {[0,0,0]};
 private _projPos = getPosASL _projectile;
 
-_seekerAngle = 10;
-_seekerMaxRange = 3000;
-
 //Needs fix for off-axis search
 private _laserResult = [(_projPos), (_targetVector), _seekerAngle, _seekerMaxRange, [_wavelengthMin, _wavelengthMax], _laserCode, _projectile] call EFUNC(laser,seekerFindLaserSpot);
 

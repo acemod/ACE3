@@ -129,6 +129,30 @@ class CfgAmmo {
     };
 
     class MissileBase;
+    class M_Titan_AT: MissileBase {};
+    class M_Titan_AP: M_Titan_AT {
+        class ADDON {
+            enabled = 1;
+            
+            defaultSeekerType = "MCLOS";
+            seekerTypes[] = {"MCLOS"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "AGM";
+            attackProfiles[] = {"AGM"};
+        };
+    };
+    
+    
     class M_Titan_AA: MissileBase {
         class ADDON {
             enabled = 1;
