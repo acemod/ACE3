@@ -24,46 +24,34 @@ private _fnc_getItemArmor = {
     params ["_item", "_hitpoint"];
 
     private _key = format ["%1$%2", _item, _hitpoint];
-    private _armorValues = GVAR(armorCache) getVariable _key;
+    private _armor = GVAR(armorCache) getVariable _key;
 
-    if (isNil "_armorValues") then {
+    if (isNil "_armor") then {
 
         TRACE_2("Cache miss", _item, _hitpoint);
-        if (_item isEqualTo "") exitWith {
-            _armorValues = [0,0];
-            GVAR(armorCache) setVariable [_key, _armorValues];
+        if (_item isEqualTo "" || _hitpoint isEqualTo "") exitWith {
+            _armor = 0;
+            GVAR(armorCache) setVariable [_key, _armor];
         };
 
         private _itemInfo = configFile >> "CfgWeapons" >> _item >> "ItemInfo";
 
         if (getNumber (_itemInfo >> "type") == TYPE_UNIFORM) then {
             private _unitCfg = configFile >> "CfgVehicles" >> getText (_itemInfo >> "uniformClass");
-            private _baseValues = GVAR(armorCache) getVariable (_item + "$$base");
-
-            if (isNil "_baseValues") then {
-                _baseValues = [getNumber (_unitCfg >> "armor"), getNumber (_unitCfg >> "explosionShielding")];
-                GVAR(armorCache) setVariable [(_item + "$$base"), _baseValues];
-            };
-
             private _entry = _unitCfg >> "HitPoints" >> _hitpoint;
-            _armorValues = [
-                (_baseValues select 0) * getNumber (_entry >> "armor"),
-                (_baseValues select 1) * getNumber (_entry >> "explosionShielding")
-            ];
+
+            _armor = getNumber (_unitCfg >> "armor") * getNumber (_entry >> "armor")
         } else {
             private _condition = format ["getText (_x >> 'hitpointName') == '%1'",_hitpoint];
             private _entry = configProperties [_itemInfo >> "HitpointsProtectionInfo", _condition] param [0, configNull];
 
-            _armorValues = [
-                getNumber (_entry >> "armor"),
-                getNumber (_entry >> "explosionShielding")
-            ];
+            _armor = getNumber (_entry >> "armor");
         };
 
-        GVAR(armorCache) setVariable [_key, _armorValues];
+        GVAR(armorCache) setVariable [_key, _armor];
     };
 
-    _armorValues // return
+    _armor // return
 };
 
 private _uniform = uniform _unit;
@@ -72,14 +60,10 @@ if (_uniform isEqualTo "") then {
     _uniform =  getText (configFile >> "CfgVehicles" >> typeOf _unit >> "nakedUniform");
 };
 
-// Initialise with values from uniform
-[_uniform, _hitpoint] call _fnc_getItemArmor params ["_armor", "_explosion"];
-
+private _armor = 0;
 // Add values from relevant gear
 {
-    [_x, _hitpoint] call _fnc_getItemArmor params ["_armorX", "_explosionX"];
-    _armor = _armor + _armorX;
-    _explosion = _explosion + _explosionX;
-} forEach [vest _unit, headgear _unit];
+    _armor = _armor + ([_x, _hitpoint] call _fnc_getItemArmor);
+} forEach [_uniform, vest _unit, headgear _unit];
 
-[_armor, _explosion] // return
+_armor // return

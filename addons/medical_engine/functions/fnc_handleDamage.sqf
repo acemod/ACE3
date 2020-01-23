@@ -36,7 +36,7 @@ if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), t
 
 private _newDamage = _damage - _oldDamage;
 // Get armor value of hitpoint and calculate damage before armor
-private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor) select 0;
+private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
 private _realDamage = _newDamage * _armor;
 // Damages are stored for "ace_hdbracket" event triggered last
 _unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
