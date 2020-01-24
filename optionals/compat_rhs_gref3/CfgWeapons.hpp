@@ -98,6 +98,9 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 740;
         };
         displayName = ECSTRING(csw,dshk_gun);
@@ -106,5 +109,8 @@ class CfgWeapons {
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\mapico\icomap_DShKM_CA.paa";
+        magazines[] = {
+            QEGVAR(csw,50Rnd_127x108_mag)
+        };
     };
 };
