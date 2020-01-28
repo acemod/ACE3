@@ -24,7 +24,10 @@ private _velocity = velocity _round;
 private _velocityStep = _velocity vectorMultiply _delta;
 private _forwardPos = _curPos vectorAdd _velocityStep;
 
-if !((lineIntersectsSurfaces [_curPos, _forwardPos]) isEqualTo []) exitWith {};
+
+private _intersectsWith = lineIntersectsWith [_curPos, _forwardPos];
+
+if (_intersectsWith isEqualTo []) exitWith {};
 {
     // diag_log text format ["Adding HP: %1", _x];
     private _index = count GVAR(spallHPData);
