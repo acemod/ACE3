@@ -79,6 +79,7 @@
             <Korean>선적 공간 남음: %1</Korean>
             <Chinese>貨物剩餘空間: %1</Chinese>
             <Chinesesimp>货物剩余空间: %1</Chinesesimp>
+            <Turkish>Kargo Alanı Kaldı: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
@@ -94,6 +95,7 @@
             <Korean>화물 활성화</Korean>
             <Chinese>啟用貨物裝載</Chinese>
             <Chinesesimp>启用货物装载</Chinesesimp>
+            <Turkish>Kargoyu Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>

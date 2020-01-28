@@ -117,6 +117,7 @@
             <Korean>위</Korean>
             <Chinesesimp>起立</Chinesesimp>
             <Chinese>起立</Chinese>
+            <Turkish>Yukarı</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_CeaseFire">
             <English>Cease Fire</English>
@@ -214,6 +215,7 @@
             <Korean>앞으로 이동</Korean>
             <Chinesesimp>往前走</Chinesesimp>
             <Chinese>往前走</Chinese>
+            <Turkish>Ileri Git</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Engage">
             <English>Engage</English>
@@ -245,6 +247,7 @@
             <Korean>가리키기</Korean>
             <Chinesesimp>指出</Chinesesimp>
             <Chinese>指出</Chinese>
+            <Turkish>Nokta</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Hold">
             <English>Hold</English>
@@ -292,6 +295,7 @@
             <Korean>수신호를 상호작용 메뉴에서 보여줍니다</Korean>
             <Chinesesimp>显示手势互动选单</Chinesesimp>
             <Chinese>顯示手勢互動選單</Chinese>
+            <Turkish>Hareketleri Etkileşim Menüsünde Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -307,6 +311,7 @@
             <Korean>수신호를 상호작용 메뉴에서 보여주거나 혹은 단축키를 지정하거나 아니면 아예 사용하지 않습니다.</Korean>
             <Chinesesimp>显示手势选项在自己的互动选单上，或只利用键盘来使用手势，或完全禁用</Chinesesimp>
             <Chinese>顯示手勢選項在自己的互動選單上，或只利用鍵盤來使用手勢，或完全禁用</Chinese>
+            <Turkish>Kendi kendine etkileşim menüsünde hareketleri göster veya sadece tuş atamaları kullan veya tamamen devre dışı bırak.</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_JustKeybinds">
             <English>Just Keybinds</English>
@@ -322,6 +327,7 @@
             <Korean>오직 단축키만</Korean>
             <Chinesesimp>只利用键盘</Chinesesimp>
             <Chinese>只利用鍵盤</Chinese>
+            <Turkish>Sadece Tuş Atamaları</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_KeysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -337,6 +343,7 @@
             <Korean>단축키및 상호작용 메뉴</Korean>
             <Chinesesimp>键盘 + 互动选单</Chinesesimp>
             <Chinese>鍵盤 + 互動選單</Chinese>
+            <Turkish>Tuş Atamaları + Etkileşim Menüsü</Turkish>
         </Key>
     </Package>
 </Project>

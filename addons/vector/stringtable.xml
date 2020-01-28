@@ -67,7 +67,7 @@
             <Korean>Vector - 방위각 키</Korean>
             <Chinesesimp>Vector - 方位按键</Chinesesimp>
             <Chinese>Vector - 方位按鍵</Chinese>
-            <Turkish>Vector - Azimuth Key</Turkish>
+            <Turkish>Vector - Azimuth Tuşu</Turkish>
         </Key>
         <Key ID="STR_ACE_Vector_DistanceKey">
             <English>Vector - Distance Key</English>
@@ -84,7 +84,7 @@
             <Korean>Vector - 거리 키</Korean>
             <Chinesesimp>Vector - 距离按键</Chinesesimp>
             <Chinese>Vector - 距離按鍵</Chinese>
-            <Turkish>Vector - Distance Key</Turkish>
+            <Turkish>Vector - Mesafe Tuşu</Turkish>
         </Key>
     </Package>
 </Project>

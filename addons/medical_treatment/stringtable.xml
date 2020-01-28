@@ -507,6 +507,18 @@
             <Polish>Pozwala przetoczyć płyny IV samemu sobie</Polish>
             <Italian>Abilita la trasfusione in endovena su se stessi.</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
+            <English>Allow IV Transfusion</English>
+            <German>Erlaube Bluttransfusionen</German>
+            <Polish>Zezwalaj na przetaczanie płynów IV</Polish>
+            <French>Pose de perfusion autorisée pour</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
+            <English>Training level required to transfuse IVs.</English>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfundieren.</German>
+            <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
+            <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
@@ -1473,20 +1485,20 @@
             <Chinese>點滴 (血液 1000毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Short">
-            <English>Blood IV, for restoring a patients blood (keep cold)</English>
-            <Russian>Пакет крови для возмещения объёма потерянной крови (хранить в холодильнике)</Russian>
-            <Spanish>Sangre intravenosa, para restarurar el volumen sanguíneo (mantener frío)</Spanish>
-            <French>Culot sanguin pour transfustion IV, restaure le sang d'un patient (à conserver au froid).</French>
-            <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta, trzymać w warunkach chłodniczych.</Polish>
-            <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek (hidegen tárolandó)</Hungarian>
-            <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue (conservare al fresco)</Italian>
-            <German>Blut IV, Bluthaushalt des Patienten wiederherstellen. (Kühl halten)</German>
-            <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.(Manter frio)</Portuguese>
-            <Czech>Krevní transfuze pro doplnění pacientovi krve (skladujte v chladu)</Czech>
-            <Japanese>血液 IV は、患者へ血液を補給します。(要低温保存)</Japanese>
-            <Korean>혈액 IV, 환자에게 혈액을 공급합니다. (차갑게 할것)</Korean>
-            <Chinesesimp>血液, 用于补充伤者流失的血液 (需冷藏)</Chinesesimp>
-            <Chinese>血液, 用於補充傷者流失的血液 (需冷藏)</Chinese>
+            <English>Blood IV, for restoring a patients blood</English>
+            <Russian>Пакет крови для возмещения объёма потерянной крови</Russian>
+            <Spanish>Sangre intravenosa, para restarurar el volumen sanguíneo</Spanish>
+            <French>Culot sanguin pour transfustion IV, restaure le sang d'un patient.</French>
+            <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta.</Polish>
+            <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek</Hungarian>
+            <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue</Italian>
+            <German>Blut IV, um den Bluthaushalt des Patienten wiederherzustellen.</German>
+            <Portuguese>Sangue intravenoso, para restaurar o volume sanguinio do paciente.</Portuguese>
+            <Czech>Krevní transfuze pro doplnění pacientovi krve</Czech>
+            <Japanese>血液 IV は、患者へ血液を補給します。</Japanese>
+            <Korean>혈액 IV, 환자에게 혈액을 공급합니다.</Korean>
+            <Chinesesimp>血液, 用于补充伤者流失的血液</Chinesesimp>
+            <Chinese>血液, 用於補充傷者流失的血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Use">
             <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually conducted in the transport phase of medical care.</English>

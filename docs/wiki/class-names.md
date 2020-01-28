@@ -38,7 +38,7 @@ ACE_200Rnd_65x39_cased_Box_Tracer_Dim | 6.5mm IR-DIM | Magazine |
 ACE_30Rnd_65x39_caseless_mag_Tracer_Dim | 6.5mm IR-DIM | Magazine |
 ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim | 6.5mm IR-DIM | Magazine |
 ACE_30Rnd_556x45_Stanag_M995_AP_mag | 5.56mm AP | Magazine |
-ACE_30Rnd_556x45_Stanag_Mk262_mag | 5.56mm Mk262 | Magazine |  
+ACE_30Rnd_556x45_Stanag_Mk262_mag | 5.56mm Mk262 | Magazine |
 ACE_30Rnd_556x45_Stanag_Mk318_mag | 5.56mm Mk318 | Magazine |
 ACE_30Rnd_556x45_Stanag_Tracer_Dim | 5.56mm IR-DIM | Magazine |
 ACE_20Rnd_762x51_Mag_Tracer | 7.62mm Tracer | Magazine |
@@ -230,6 +230,8 @@ ACE_salineIV_500 | Saline IV (500ml) | ACE_ItemCore |
 ACE_salineIV_250 | Saline IV (250ml) | ACE_ItemCore |
 ACE_surgicalKit | Surgical Kit | ACE_ItemCore |
 ACE_tourniquet | Tourniquet (CAT) | ACE_ItemCore |
+ACE_medicalSupplyCrate | Simple ACE Medical Supply Crate | ammo box |
+ACE_medicalSupplyCrate_advanced | Advanced ACE Medical Supply Crate | ammo box |
 
 ### MicroDAGR
 `Added in 3.0.0`

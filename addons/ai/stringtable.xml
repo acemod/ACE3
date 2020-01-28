@@ -31,6 +31,7 @@
             <Portuguese>Nenhuma unidade fornecida.</Portuguese>
             <Spanish>No hay unidades proporcionadas.</Spanish>
             <Czech>Nejsou k dispozici žádné jednotky.</Czech>
+            <Turkish>Hiçbir Birim Bulunamadı</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>

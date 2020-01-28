@@ -14,6 +14,7 @@
             <Chinese>噴漆</Chinese>
             <Portuguese>Marcação</Portuguese>
             <Czech>Označování</Czech>
+            <Turkish>Işaretleme</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
@@ -42,6 +43,7 @@
             <Chinese>快速噴漆</Chinese>
             <Portuguese>Lata de Tinta - Marcação Rápida</Portuguese>
             <Czech>Stříkací barva - Rychlá značka</Czech>
+            <Turkish>Sprey Boya- Hızlı Işaretleme</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
@@ -116,6 +118,7 @@
             <French>Tag</French>
             <Chinesesimp>喷漆</Chinesesimp>
             <Chinese>噴漆</Chinese>
+            <Turkish>Işaretle</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
             <English>X black</English>

@@ -38,6 +38,6 @@
     "TIME",
     [LSTRING(CardiacArrestTime_DisplayName), LSTRING(CardiacArrestTime_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [1, 3600, 30],
+    [1, 3600, 300],
     true
 ] call CBA_settings_fnc_init;
