@@ -512,12 +512,14 @@
             <German>Erlaube Bluttransfusionen</German>
             <Polish>Zezwalaj na przetaczanie płynów IV</Polish>
             <French>Pose de perfusion autorisée pour</French>
+            <Chinese>允許操作點滴</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
             <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfundieren.</German>
             <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
             <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
+            <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -687,7 +689,7 @@
             <French>Véhicules &amp; installations sanitaires</French>
             <Russian>Техника и госпитали</Russian>
             <Portuguese>Veículos e Instalações Médicas</Portuguese>
-            <Chinese>車輛 %amp; 設施</Chinese>
+            <Chinese>車輛與設施</Chinese>
             <Czech>Zdravotnická zařízení a vozidla</Czech>
             <Italian>Veicoli e strutture</Italian>
             <Polish>Pojazdy i Obiekty</Polish>
