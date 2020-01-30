@@ -109,8 +109,5 @@ class CfgWeapons {
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\mapico\icomap_DShKM_CA.paa";
-        magazines[] = {
-            QEGVAR(csw,50Rnd_127x108_mag)
-        };
     };
 };
