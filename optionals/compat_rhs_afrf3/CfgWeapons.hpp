@@ -184,13 +184,6 @@ class CfgWeapons {
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_2b14_82mm_msv_ca.paa";
-        magazines[] = {
-            QGVARMAIN(1Rnd_82mm_Mo_HE),
-            QGVARMAIN(1Rnd_82mm_Mo_Smoke),
-            QGVARMAIN(1Rnd_82mm_Mo_Illum),
-            QGVARMAIN(1Rnd_82mm_Mo_HE_Guided),
-            QGVARMAIN(1Rnd_82mm_Mo_HE_LaserGuided)
-        };
     };
 
     class GVAR(nsv_carry): Launcher_Base_F {
@@ -214,9 +207,6 @@ class CfgWeapons {
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\RHS_NSV_TriPod_MSV_ca.paa";
-        magazines[] = {
-            QEGVAR(csw,50Rnd_127x108_mag)
-        };
     };
 
     class GVAR(kord_carry): Launcher_Base_F {
@@ -241,9 +231,6 @@ class CfgWeapons {
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_KORD_MSV_ca.paa";
-        magazines[] = {
-            QEGVAR(csw,50Rnd_127x108_mag)
-        };
     };
 
     class GVAR(ags30_carry): Launcher_Base_F {
@@ -267,11 +254,6 @@ class CfgWeapons {
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\RHS_AGS30_TriPod_MSV_ca.paa";
-        magazines[] = {
-            QGVAR(mag_VOG30_30),
-            QGVAR(mag_GPD30_30),
-            QGVAR(mag_VOG17m_30)
-        };
     };
 
     class GVAR(spg9_carry): Launcher_Base_F {
@@ -295,13 +277,6 @@ class CfgWeapons {
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_SPG9_INS_ca.paa";
-        magazines[] = {
-            QGVAR(mag_PG9V),
-            QGVAR(mag_PG9N),
-            QGVAR(mag_PG9VNT),
-            QGVAR(mag_OG9VM),
-            QGVAR(mag_OG9V)
-        };
     };
 
     class GVAR(spg9m_carry): GVAR(spg9_carry) {
