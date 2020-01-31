@@ -69,4 +69,4 @@
     if (local _unit && {_anim == "unconscious" && {lifeState _unit != "INCAPACITATED"}}) then {
         [_unit, false] call FUNC(setUnconsciousAnim);
     };
-}, true, [], true] call CBA_fnc_addClassEventHandler;
+}] call CBA_fnc_addClassEventHandler;
