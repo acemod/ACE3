@@ -173,7 +173,9 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
-             class MuzzleSlot {
+            // One WeaponSlot with a positive value for iconScale forces game to use icon overlay method.
+            // Required, because the inventory icon has no accessory variants.
+            class MuzzleSlot {
                 iconScale = 0.1;
             };
             mass = 670; // 2B14 Mortar Weight
@@ -286,6 +288,7 @@ class CfgWeapons {
             };
         };
         displayName = ECSTRING(csw,spg9m_tube);
+        author = ECSTRING(common,ACETeam);
     };
 
     class GVAR(metis_carry): Launcher_Base_F {
