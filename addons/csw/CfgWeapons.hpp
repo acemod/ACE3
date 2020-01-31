@@ -27,6 +27,7 @@ class CfgWeapons {
             deploy = QGVAR(m3TripodLow);
         };
         displayName = CSTRING(m3TripodLowFolded_displayName);
+        author = ECSTRING(common,ACETeam);
     };
 
     class GVAR(kordCarryTripod): Launcher_Base_F {
@@ -52,6 +53,7 @@ class CfgWeapons {
             deploy = QGVAR(kordTripodLow);
         };
         displayName = CSTRING(kordTripodFoldedLow_displayName);
+        author = ECSTRING(common,ACETeam);
     };
 
     class GVAR(m220CarryTripod): Launcher_Base_F {
@@ -148,23 +150,13 @@ class CfgWeapons {
     };
 
     class GVAR(staticAACarry): GVAR(staticATCarry) {
-        class ADDON {
-            type = "weapon";
-            deployTime = 15;
-            pickupTime = 20;
+        class ADDON: ADDON {
             class assembleTo {
                 GVAR(m3Tripod) = "B_static_AA_F";
             };
         };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 320;
-        };
         displayName = CSTRING(StaticAABag_displayName);
         author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
-        modes[] = {};
-        picture = QPATHTOF(UI\StaticAT_Icon.paa);
     };
 
     class GVAR(staticHMGCarry): Launcher_Base_F {
