@@ -18,3 +18,24 @@
         [true] call FUNC(initEffects);
     }
 ] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(bloodVolumeEffectType),
+    "LIST",
+    [LSTRING(BloodVolumeEffectType_DisplayName), LSTRING(BloodVolumeEffectType_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    [
+        [FX_BLOODVOLUME_COLOR_CORRECTION, FX_BLOODVOLUME_ICON, FX_BLOODVOLUME_BOTH],
+        [LSTRING(BloodVolumeEffectType_colorCorrection), LSTRING(BloodVolumeEffectType_icon), LSTRING(BloodVolumeEffectType_both)],
+        0
+    ],
+    false,
+    {
+        if (isNil QGVAR(ppPain)) exitWith {
+            TRACE_1("bloodVolumeEffect setting - before postInit",_this);
+        };
+
+        TRACE_1("bloodVolumeEffect setting - resetting effect",_this);
+        [false] call FUNC(initEffects);
+    }
+] call CBA_Settings_fnc_init;

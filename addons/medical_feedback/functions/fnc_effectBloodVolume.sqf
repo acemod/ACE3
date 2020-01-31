@@ -18,9 +18,11 @@
 
 params ["_enable", "_intensity"];
 
+if (isNil QGVAR(ppBloodVolume)) exitWith {};
 if ((!_enable) || {_intensity == 0}) exitWith {
     GVAR(ppBloodVolume) ppEffectEnable false;
 };
+
 GVAR(ppBloodVolume) ppEffectEnable true;
 GVAR(ppBloodVolume) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0],  [1, 1, 1, 1 - _intensity],  [0.2, 0.2, 0.2, 0]];
 GVAR(ppBloodVolume) ppEffectCommit 1;

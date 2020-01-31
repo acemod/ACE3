@@ -85,11 +85,31 @@ GVAR(ppUnconsciousBlackout) = [
 
 
 // - Blood volume -------------------------------------------------------------
-GVAR(ppBloodVolume) = [
+if (!isNil QGVAR(ppBloodVolume)) then {
+    TRACE_1("delete blood volume",GVAR(ppBloodVolume));
+    ppEffectDestroy GVAR(ppBloodVolume)
+};
+
+GVAR(ppBloodVolume) = nil;
+private _ppBloodVolumeSettings = [
     "ColorCorrections",
     13503,
     [1, 1, 0,  [0, 0, 0, 0],  [1, 1, 1, 1],  [0.2, 0.2, 0.2, 0]]
-] call _fnc_createEffect;
+];
+GVAR(showBloodVolumeIcon) = false;
+
+switch (GVAR(bloodVolumeEffectType)) do {
+    case FX_BLOODVOLUME_COLOR_CORRECTION: {
+        GVAR(ppBloodVolume) = _ppBloodVolumeSettings call _fnc_createEffect;
+    };
+    case FX_BLOODVOLUME_ICON: {
+        GVAR(showBloodVolumeIcon) = true;
+    };
+    case FX_BLOODVOLUME_BOTH: {
+        GVAR(showBloodVolumeIcon) = true;
+        GVAR(ppBloodVolume) = _ppBloodVolumeSettings call _fnc_createEffect;
+    };
+};
 
 // - Incapacitation -----------------------------------------------------------
 GVAR(ppIncapacitationGlare) = [

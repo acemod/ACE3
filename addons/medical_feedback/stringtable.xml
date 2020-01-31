@@ -103,6 +103,26 @@
             <Turkish>Sadece yüksek ağrı etkisi</Turkish>
             <German>Nur bei starken Schmerzen</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
+            <English>Low Blood Volume Effect Type</English>
+            <Russian>Визуальный эффект низкого объема крови</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
+            <English>Selects the used low blood volume effect type.</English>
+            <Russian>Выбирает тип визуализации эффекта низкого объема крови.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
+            <English>Color fading</English>
+            <Russian>Потеря цветности</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
+            <English>Icon</English>
+            <Russian>Иконка</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
+            <English>Icon + Color fading</English>
+            <Russian>Иконка + Потеря цветности</Russian>
+        </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
                 <English>Enable Screams</English>
