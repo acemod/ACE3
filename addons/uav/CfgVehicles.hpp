@@ -1,5 +1,10 @@
 class CBA_Extended_EventHandlers;
 
+
+class Turrets;
+class MainTurret;
+class AnimationSources;
+
 class UAVPod {
     class OpticsIn
     {
@@ -83,28 +88,56 @@ class UAVOptics {
 class CfgVehicles {
     class B_UAV_01_F;
     class ACE_B_UAV_01_F: B_UAV_01_F {
-        magazines[] = {"laserbatteries"};
-        weapons[] = {"laserdesignator_pilotCamera"};
+        magazines[] += {"laserbatteries"};
+        weapons[] += {"laserdesignator_pilotCamera"};
         displayName = "AR-2 Darter (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
 
-        class Turrets{};
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
         
         class Viewoptics: UAVOptics{};
 
         class PilotCamera: UAVPod{};
 
-
     };
     
     class O_UAV_01_F;
     class ACE_O_UAV_01_F: O_UAV_01_F {
-        magazines[] = {"laserbatteries"};
-        weapons[] = {"laserdesignator_pilotCamera"};
+        magazines[] += {"laserbatteries"};
+        weapons[] += {"laserdesignator_pilotCamera"};
         displayName = "Tayran AR-2 (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
 
-        class Turrets{};
+
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
         
         class Viewoptics: UAVOptics{};
 
@@ -114,12 +147,27 @@ class CfgVehicles {
 
     class I_UAV_01_F;
     class ACE_I_UAV_01_F: I_UAV_01_F {
-        magazines[] = {"laserbatteries"};
-        weapons[] = {"laserdesignator_pilotCamera"};
+        magazines[] += {"laserbatteries"};
+        weapons[] += {"laserdesignator_pilotCamera"};
         displayName = "AR-2 Darter (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
 
-        class Turrets{};
+
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
         
         class Viewoptics: UAVOptics{};
 
@@ -129,12 +177,26 @@ class CfgVehicles {
 
     class I_E_UAV_01_F;
     class ACE_I_E_UAV_01_F: I_E_UAV_01_F {
-        magazines[] = {"laserbatteries"};
-        weapons[] = {"laserdesignator_pilotCamera"};
+        magazines[] += {"laserbatteries"};
+        weapons[] += {"laserdesignator_pilotCamera"};
         displayName = "AR-2 Darter (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
 
-        class Turrets{};
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
         
         class Viewoptics: UAVOptics{};
 
@@ -144,15 +206,28 @@ class CfgVehicles {
 
     class B_UAV_02_dynamicLoadout_F;
     class ACE_B_UAV_02_dynamicLoadout_F: B_UAV_02_dynamicLoadout_F {
-        magazines[] = {"laserbatteries"};
-        weapons[] = {"laserdesignator_pilotCamera"};
+        magazines[] += {"laserbatteries"};
+        weapons[] += {"laserdesignator_pilotCamera"};
         displayName = "YABHON-R3 (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
         
-        class Turrets{};
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
         
         class Viewoptics: UAVOptics{};
-
 
         class PilotCamera: UAVPod{};
         
@@ -160,13 +235,27 @@ class CfgVehicles {
     
     class O_UAV_02_dynamicLoadout_F;
     class ACE_O_UAV_02_dynamicLoadout_F: O_UAV_02_dynamicLoadout_F {
-        magazines[] = {"laserbatteries"};
-        weapons[] = {"laserdesignator_pilotCamera"};
+        magazines[] += {"laserbatteries"};
+        weapons[] += {"laserdesignator_pilotCamera"};
         displayName = "YABHON-R3 (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
         
-        class Turrets{};
-        
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
+
         class Viewoptics: UAVOptics{};
 
         class PilotCamera: UAVPod{};
@@ -175,12 +264,26 @@ class CfgVehicles {
     
     class I_UAV_02_dynamicLoadout_F;
     class ACE_I_UAV_02_dynamicLoadout_F: I_UAV_02_dynamicLoadout_F {
-        magazines[] = {"laserbatteries"};
-        weapons[] = {"laserdesignator_pilotCamera"};
+        magazines[] += {"laserbatteries"};
+        weapons[] += {"laserdesignator_pilotCamera"};
         displayName = "YABHON-R3 (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
         
-        class Turrets{};
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
         
         class Viewoptics: UAVOptics{};
 
@@ -190,12 +293,26 @@ class CfgVehicles {
 
     class B_T_UAV_03_dynamicLoadout_F;
     class ACE_B_T_UAV_03_dynamicLoadout_F: B_T_UAV_03_dynamicLoadout_F {
-        magazines[] = {"laserbatteries"};
-        weapons[] = {"laserdesignator_pilotCamera"};
+        magazines[] += {"laserbatteries"};
+        weapons[] += {"laserdesignator_pilotCamera"};
         displayName = "MQ-12 Falcon (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
         
-        class Turrets{};
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
         
         class Viewoptics: UAVOptics{};
 
@@ -210,8 +327,22 @@ class CfgVehicles {
         weapons[] = {"missiles_Jian","laserdesignator_pilotCamera"};
         displayName = "Burraq UCAV (Pilot Cam)";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod"; //rsc with Weapon elements
-        
-        class Turrets{};
+
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };   
         
         class Viewoptics: UAVOptics{};
 
@@ -219,22 +350,9 @@ class CfgVehicles {
 
     };
 
-    class UAV;
-    class UAV_05_Base_F: UAV {
-        class Components
-        {
-            class SensorsManagerComponent
-            {
-                class Components
-                {
-                    class IRSensorComponent;
-                    class VisualSensorComponent;
-                };
-            };
-        };
-    };
 
-    class B_UAV_05_F: UAV_05_Base_F {};
+
+    class B_UAV_05_F;
     class ACE_B_UAV_05_F: B_UAV_05_F {
 //        memoryPointDriverOptics = "PiP0_pos";
 
@@ -246,26 +364,25 @@ class CfgVehicles {
         //driverWeaponsInfoType = "RscOptics_UAV_06_TGP";
         driverWeaponsInfoType = "ACE_RscOptics_UAVPod";
         
-        class Turrets{};
+        class Turrets {};
+
+        class AnimationSources: AnimationSources 
+        {
+
+            class mainGun 
+            {
+                source = "user";
+                animperiod = 0.25;
+            };
+            class mainTurret: mainGun 
+            {
+                animperiod = 0.25;
+            };
+        };
         
         class Viewoptics: UAVOptics{};
 
         class PilotCamera: UAVPod{};
 
-        class Components: Components 
-        {
-            class SensorsManagerComponent: SensorsManagerComponent
-            {
-                class Components: Components
-                {
-                    class IRSensorComponent: IRSensorComponent{
-                        animDirection = "PilotCamera_V";
-                    };
-                    class VisualSensorComponent: VisualSensorComponent{
-                        animDirection = "PilotCamera_V";
-                    };
-                };
-            };
-        };
     };
 };
