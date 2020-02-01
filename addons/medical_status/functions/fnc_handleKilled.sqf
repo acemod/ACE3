@@ -41,7 +41,7 @@ _unit setVariable [QGVAR(killed), _unit];
 
 if (_unit getVariable ["ACE_isUnconscious", false]) then {
     // Enable user input before respawn, in case mission is using respawnTemplates
-    ["unconscious", false] call EGVAR(common,setDisableUserInputStatus);
+    ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
 };
 
 ["ace_killed", [_unit, _causeOfDeath, _killer, _instigator]] call CBA_fnc_globalEvent;
