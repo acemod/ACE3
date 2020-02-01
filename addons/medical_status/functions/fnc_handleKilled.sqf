@@ -39,7 +39,7 @@ TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
 if (_unit isEqualTo (_unit getVariable [QGVAR(killed), objNull])) exitWith {}; // ensure event is only called once
 _unit setVariable [QGVAR(killed), _unit];
 
-if (_unit getVariable [VAR_UNCON, false]) then {
+if (IS_UNCONSCIOUS(_unit)) then {
     // Enable user input before respawn, in case mission is using respawnTemplates
     ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
 };
