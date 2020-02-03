@@ -17,13 +17,11 @@
  */
 params ["_enable", "_intensity"];
 
-disableSerialization;
-private _indicatorCtrl = uiNamespace getVariable QGVAR(BloodVolumeInfoIndicator);
+private _indicatorCtrl = uiNamespace getVariable [QGVAR(BloodVolumeInfoIndicator), controlNull];
 
-if (!_enable || !GVAR(showBloodVolumeIcon)) exitWith {
-    if (ctrlText _indicatorCtrl != "") then { 
+if (!_enable || !GVAR(showBloodVolumeIcon) || {isNull _indicatorCtrl}) exitWith {
+    if (!isNull _indicatorCtrl && {ctrlText _indicatorCtrl != ""}) then { 
         _indicatorCtrl ctrlSetText "";
-        _indicatorCtrl ctrlSetTextColor ICON_BLOODVOLUME_COLOR_NONE;
         _indicatorCtrl ctrlCommit 0;
     };
 };
