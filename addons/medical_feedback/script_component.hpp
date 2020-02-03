@@ -50,7 +50,7 @@
 #define ICON_BLOODVOLUME_IDX_MIN 0
 #define ICON_BLOODVOLUME_IDX_MAX 6
 
-#define ICON_BLOODVOLUME_PATH         QPATHTOF(data\bloodVolume_%1.paa)
+#define ICON_BLOODVOLUME_PATH(num)    format [QPATHTOF(data\bloodVolume_%1.paa), num]
 #define ICON_BLOODVOLUME_COLOR_WHITE  [1, 1, 1, 1]
 #define ICON_BLOODVOLUME_COLOR_ORANGE [1, 0.6, 0, 1]
 #define ICON_BLOODVOLUME_COLOR_RED    [0.8, 0.2, 0, 1]

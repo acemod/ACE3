@@ -48,11 +48,11 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 ] call FUNC(effectBloodVolume);
 [
     true,
-    ceil(linearConversion [
+    ceil linearConversion [
         BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE,
         _bloodVolume,
         ICON_BLOODVOLUME_IDX_MIN, ICON_BLOODVOLUME_IDX_MAX, true
-    ])
+    ]
 ] call FUNC(effectBloodVolumeIcon);
 
 [!_unconscious, _pain] call FUNC(effectPain);

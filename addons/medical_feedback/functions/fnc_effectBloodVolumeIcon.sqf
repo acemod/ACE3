@@ -15,15 +15,16 @@
  *
  * Public: No
  */
-
 params ["_enable", "_intensity"];
 
+disableSerialization;
+private _indicatorCtrl = uiNamespace getVariable QGVAR(BloodVolumeInfoIndicator);
+
 if (!_enable || !GVAR(showBloodVolumeIcon)) exitWith {
-    with uiNamespace do {
-        if (ctrlText BloodVolumeInfoControlGroup == "") exitWith {};
-        BloodVolumeInfoControlGroup ctrlSetText "";
-        BloodVolumeInfoControlGroup ctrlSetTextColor ICON_BLOODVOLUME_COLOR_NONE;
-        BloodVolumeInfoControlGroup ctrlCommit 0;
+    if (ctrlText _indicatorCtrl != "") then { 
+        _indicatorCtrl ctrlSetText "";
+        _indicatorCtrl ctrlSetTextColor ICON_BLOODVOLUME_COLOR_NONE;
+        _indicatorCtrl ctrlCommit 0;
     };
 };
 
@@ -31,18 +32,15 @@ private _text = "";
 private _color = ICON_BLOODVOLUME_COLOR_NONE;
 
 if (_intensity > 0) then {
-    _text = format [ICON_BLOODVOLUME_PATH, _intensity];
+    _text = ICON_BLOODVOLUME_PATH(_intensity);
     if (_intensity > 2) then {
-        _color = if (_intensity > 4) then { ICON_BLOODVOLUME_COLOR_RED } else { ICON_BLOODVOLUME_COLOR_ORANGE };
+        _color = [ICON_BLOODVOLUME_COLOR_ORANGE, ICON_BLOODVOLUME_COLOR_RED] select (_intensity > 4);
     } else {
         _color = ICON_BLOODVOLUME_COLOR_WHITE;
     };
 };
 
 // --- Affecting UI icon with proper image and color
-uiNamespace setVariable [QGVAR(bloodVolumeIconInfo), [_text, _color]];
-with uiNamespace do {
-    BloodVolumeInfoControlGroup ctrlSetText (GVAR(bloodVolumeIconInfo) select 0);
-    BloodVolumeInfoControlGroup ctrlSetTextColor (GVAR(bloodVolumeIconInfo) select 1);
-    BloodVolumeInfoControlGroup ctrlCommit 0;
-};
+_indicatorCtrl ctrlSetText _text;
+_indicatorCtrl ctrlSetTextColor _color;
+_indicatorCtrl ctrlCommit 0;

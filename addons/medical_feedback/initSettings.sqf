@@ -17,7 +17,7 @@
         TRACE_1("painEffectType setting - resetting effect",_this);
         [true] call FUNC(initEffects);
     }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(bloodVolumeEffectType),
@@ -38,4 +38,4 @@
         TRACE_1("bloodVolumeEffect setting - resetting effect",_this);
         [false] call FUNC(initEffects);
     }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
