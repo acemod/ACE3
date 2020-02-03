@@ -31,11 +31,11 @@
     ],
     false,
     {
-        if (isNil QGVAR(ppPain)) exitWith {
+        if (isNil QGVAR(showBloodVolumeIcon)) exitWith {
             TRACE_1("bloodVolumeEffect setting - before postInit",_this);
         };
 
         TRACE_1("bloodVolumeEffect setting - resetting effect",_this);
-        [false] call FUNC(initEffects);
+        [true] call FUNC(initEffects);
     }
 ] call CBA_fnc_addSetting;

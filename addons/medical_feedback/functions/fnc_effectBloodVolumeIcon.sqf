@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 10Dozen
- * Handles the blood volume icon
+ * Handles the blood volume icon.
  *
  * Arguments:
  * 0: Enable <BOOL>
@@ -15,14 +15,15 @@
  *
  * Public: No
  */
+
 params ["_enable", "_intensity"];
 
-private _indicatorCtrl = uiNamespace getVariable [QGVAR(BloodVolumeInfoIndicator), controlNull];
+private _indicatorCtrl = uiNamespace getVariable [QGVAR(bloodVolumeIndicator), controlNull];
+if (isNull _indicatorCtrl) exitWith {};
 
-if (!_enable || !GVAR(showBloodVolumeIcon) || {isNull _indicatorCtrl}) exitWith {
-    if (!isNull _indicatorCtrl && {ctrlText _indicatorCtrl != ""}) then { 
+if (!_enable || !GVAR(showBloodVolumeIcon)) exitWith {
+    if (ctrlText _indicatorCtrl != "") then { 
         _indicatorCtrl ctrlSetText "";
-        _indicatorCtrl ctrlCommit 0;
     };
 };
 
@@ -41,4 +42,3 @@ if (_intensity > 0) then {
 // --- Affecting UI icon with proper image and color
 _indicatorCtrl ctrlSetText _text;
 _indicatorCtrl ctrlSetTextColor _color;
-_indicatorCtrl ctrlCommit 0;
