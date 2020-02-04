@@ -3,7 +3,7 @@ class RscInGameUI {
     class RscStanceInfo {
         controls[] += {QGVAR(bloodVolumeIndicator)};
         class GVAR(bloodVolumeIndicator): RscPictureKeepAspect {
-            onLoad = QUOTE(with uiNamespace do {GVAR(bloodVolumeIndicator) = _this select 0});
+            onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(bloodVolumeIndicator),_this select 0)]);
             x = IGUI_GRID_STANCE_X;
             y = IGUI_GRID_STANCE_Y;
             w = IGUI_GRID_STANCE_WAbs / 4;

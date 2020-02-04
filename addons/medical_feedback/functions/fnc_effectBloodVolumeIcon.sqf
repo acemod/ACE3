@@ -19,12 +19,9 @@
 params ["_enable", "_intensity"];
 
 private _indicatorCtrl = uiNamespace getVariable [QGVAR(bloodVolumeIndicator), controlNull];
-if (isNull _indicatorCtrl) exitWith {};
 
 if (!_enable || !GVAR(showBloodVolumeIcon)) exitWith {
-    if (ctrlText _indicatorCtrl != "") then { 
-        _indicatorCtrl ctrlSetText "";
-    };
+    _indicatorCtrl ctrlSetText "";
 };
 
 private _text = "";
