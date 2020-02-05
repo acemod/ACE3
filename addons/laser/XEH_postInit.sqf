@@ -47,6 +47,43 @@ if (hasInterface) then {
     };
 }] call CBA_fnc_addEventHandler;
 
+
+/*
+["Air", "init", {
+    params ["_vehicle"];
+    _hasPilotCamera = hasPilotCamera _vehicle;
+    if (_hasPilotCamera) then {
+        _vehicle setVariable [QGVAR(hasLaserSpotTracker), true];
+        _vehicle setVariable [QGVAR(laserSpotTrackerOn), false];
+    };
+    
+    private _actionOff = ["LSTOff", "Laser Spot Tracker Off", "", {(_this select 0) call FUNC(toggleLST)}, {(_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false]}] call ace_interact_menu_fnc_createAction;
+    [_vehicle, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
+    _actionOn = ["LSTOn", "Laser Spot Tracker On", "", {(_this select 0) call FUNC(toggleLST)}, {!((_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false])}] call ace_interact_menu_fnc_createAction;
+    [_vehicle, 1, ["ACE_MainActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
+
+
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+*/
+
+
+["Plane", "init", {
+    params ["_vehicle"];
+    _hasPilotCamera = hasPilotCamera _vehicle;
+
+    if (_hasPilotCamera) then {
+        _vehicle setVariable [QGVAR(hasLaserSpotTracker), true];
+        _vehicle setVariable [QGVAR(laserSpotTrackerOn), false];
+    };
+
+    
+    private _actionOff = ["LSTOff", localize LSTRING(LSTOff), "", {[_this select 0] call FUNC(toggleLST)}, {(_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false]}] call ace_interact_menu_fnc_createAction;
+    [_vehicle, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
+    private _actionOn = ["LSTOn", localize LSTRING(LSTOn), "", {[_this select 0] call FUNC(toggleLST)}, {!((_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false])}] call ace_interact_menu_fnc_createAction;
+    [_vehicle, 1, ["ACE_SelfActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
+    
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
 // Shows detector and mine posistions in 3d when debug is on
 #ifdef DRAW_LASER_INFO
 addMissionEventHandler ["Draw3D", {_this call FUNC(dev_drawVisibleLaserTargets)}];

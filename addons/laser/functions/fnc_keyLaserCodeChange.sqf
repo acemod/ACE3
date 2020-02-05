@@ -40,8 +40,9 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
 };
 
 TRACE_2("",_currentShooter,_currentWeapon);
-if (((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) &&
-        {(getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(canSelect))) == 0}) exitWith {false};
+if (((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) && 
+    (!(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false]) ) && 
+    {(getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(canSelect))) == 0}) exitWith {false};
 
 private _oldLaserCode = _currentShooter getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
 private _newLaserCode = _oldLaserCode;
@@ -61,6 +62,13 @@ TRACE_2("",_oldLaserCode,_newLaserCode);
 if (_oldLaserCode != _newLaserCode) then {
     _currentShooter setVariable [QGVAR(code), _newLaserCode, true];
 };
-[format ["%1: %2", localize LSTRING(laserCode), _newLaserCode]] call EFUNC(common,displayTextStructured);
+private _string = "";
+if (_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false]) then {
+    private _LSTmessage = "";
+    if(_currentShooter getVariable [QGVAR(laserSpotTrackerOn), false]) then {_LSTmessage = localize LSTRING(LSTOn)} else {_LSTmessage = localize LSTRING(LSTOff)};
+    _string = format ["%1<br/>", _LSTmessage];
+};
+_string = format ["%1%2: %3", _string, localize LSTRING(laserCode), _newLaserCode];
+[_string] call EFUNC(common,displayTextStructured);
 
 true

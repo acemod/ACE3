@@ -63,5 +63,11 @@
             <Chinesesimp>雷射 - 循环切换雷射码 下</Chinesesimp>
             <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
         </Key>
+        <Key ID="STR_ACE_Laser_LSTOn">
+            <English>Laser Spot Tracker- On</English>
+        </Key>
+        <Key ID="STR_ACE_Laser_LSTOff">
+            <English>Laser Spot Tracker- Off</English>
+        </Key>
     </Package>
 </Project>
