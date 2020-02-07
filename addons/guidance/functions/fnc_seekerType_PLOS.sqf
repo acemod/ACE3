@@ -22,17 +22,39 @@ _extractedInfo params ["_seekerType", "_attackProfile", "_target", "_targetPos",
 _miscManeuvering params ["_degreesPerSecond", "_glideAngle", "_lastTickTime", "_lastRunTime", "_runtimeDelta"];
 _miscSensor params ["_seekerAngle", "_seekerMinRange", "_seekerMaxRange"];
 _miscSeeker params ["_active","_difs"];
-_difs params ["_yawDif","_pitchDif"];
+_difs params ["_vect","_crossVector","_ang"];
 
-if(!_active) exitWith {[0,0,0]};
+
+
+//if(!_active) exitWith {[0,0,0]};
+
+if (isNil "_difs")  then {
+    _vect = [0,0,0];
+    _crossVector = [0,0,1];
+    _ang = 0;
+};
+
+if (_vect isEqualTo [0,0,0]) then {
+    _vect = vectorNormalized (velocity _projectile);
+    hint str [_vect];
+};
+
+private _vars = _shooter getVariable [QGVAR(PLOSVars), nil];
+if (!(isNil "_vars")) then {
+    _crossVector  = (_vars select 2) select 0;
+    _ang  = (_vars select 2) select 1;
+};
 
 private _projPos = getPosASL _projectile;
-private _vector = vectorNormalized (velocity _projectile);
+if(_ang != 0) then {
+    _vect = [_vect, _crossVector, 2 * _ang * _runtimeDelta] call CBA_fnc_vectRotate3D; //magic number
+};
 
-private _rightVector = [0,1,0] vectorCrossProduct _vector;
-private _upVector = _vector vectorCrossProduct _rightVector;
+_difs set [0, _vect];
+_difs set [1, _crossVector];
+_difs set [2, _ang];
 
-_vector = [_vector, _rightVector, _pitchDif * _runtimeDelta] call CBA_fnc_vectRotate3D;
-_vector = [_vector, _rightVector, _yawDif * _runtimeDelta] call CBA_fnc_vectRotate3D;
 
-[0,0,0];
+private _projPos = getPosASL _projectile;
+
+_projPos vectorAdd _vect;

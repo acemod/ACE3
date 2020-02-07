@@ -1,57 +1,15 @@
 #include "script_component.hpp"
 
-["ACE3 Weapons", QGVAR(MFKey1), localize LSTRING(MFKey1),
-{
-    [1, true] call FUNC(keyDown);
-},
-{
-    [1, false] call FUNC(keyDown);
-},
-[15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
 
-["ACE3 Weapons", QGVAR(MFKey2), localize LSTRING(MFKey2),
-{
-    [2, true] call FUNC(keyDown);
-},
-{
-    [2, false] call FUNC(keyDown);
-},
-[15, [false, true, false]], false] call CBA_fnc_addKeybind;  //Ctrl+Tab Key
+if (hasInterface) then {
+#include "initKeybinds.sqf"
 
-["ACE3 Weapons", QGVAR(MFKeyUp), localize LSTRING(MFKeyUp),
-{
-    [3, true] call FUNC(keyDown);
-},
-{
-    [3, false] call FUNC(keyDown);
-},
-[200, [false, false, false]], false] call CBA_fnc_addKeybind;  //Up Arrow
+    GVAR(pfID) = -1;
 
-["ACE3 Weapons", QGVAR(MFKeyLeft), localize LSTRING(MFKeyLeft),
-{
-    [4, true] call FUNC(keyDown);
-},
-{
-    [4, false] call FUNC(keyDown);
-},
-[203, [false, false, false]], false] call CBA_fnc_addKeybind;  //Left
+    ["ace_settingsInitialized", {
+//        ["weapon", LINKFUNC(weaponSwitch), false] call CBA_fnc_addPlayerEventHandler;
+//        ["vehicle", LINKFUNC(showVehicleHud), true] call CBA_fnc_addPlayerEventHandler; // only one of these needs the retro flag
 
-["ACE3 Weapons", QGVAR(MFKeyRight), localize LSTRING(MFKeyRight),
-{
-    [5, true] call FUNC(keyDown);
-},
-{
-    [5, false] call FUNC(keyDown);
-},
-[205, [false, false, false]], false] call CBA_fnc_addKeybind;  //Right
+    }] call CBA_fnc_addEventHandler;
+};
 
-["ACE3 Weapons", QGVAR(MFKeyDown), localize LSTRING(MFKeyDown),
-{
-    [6, true] call FUNC(keyDown);
-},
-{
-    [6, false] call FUNC(keyDown);
-},
-[208, [false, false, false]], false] call CBA_fnc_addKeybind;  //Down
-
-true

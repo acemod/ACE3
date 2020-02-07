@@ -67,7 +67,7 @@ for "_i" from 1 to 5 do {
     };
 };
 
-if(count _points > 75) then {
+if(count _points > 100) then {
     private _ret = _points deleteRange [0,5];
 };
 
@@ -79,8 +79,8 @@ _miscSeeker set [2,_points];
 private _finalVector = [0,0,0];
 private _finalPoint = [0,0,0];
 private _divisor = 0;
-private _vehMult = 35;
-private _thermMult = 18;
+private _vehMult = 2;
+private _thermMult = 100;
 
 {
     private _mult = 1;

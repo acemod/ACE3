@@ -304,7 +304,7 @@ switch (_seekerType) do {
         _miscSeeker set [3, true];
     };
     case "PLOS": {
-        _miscSeeker set [1,[0,0,0]]; //Proportional Attack Intercept Vector; VALUE STAND-IN
+        _miscSeeker set [1, [[0,0,0], [0,1,0], 0] ]; //Proportional Attack Intercept Vector; VALUE STAND-IN
     };
     case "IR": {
         _miscSeeker set [1,time]; // Give about a half second if contact is lost to reacquire

@@ -69,7 +69,7 @@ class CfgAmmo {
 
     class G_40mm_HE;
     class G_40mm_DEBUG: G_40mm_HE {
-        timeToLive = 60;
+        timeToLive = 30;
         class ADDON {
             enabled = 1;
 
@@ -97,6 +97,38 @@ class CfgAmmo {
             attackProfiles[] = {"INDIRECT"};
         };
     };
+
+    class RocketBase;
+    class R_MRAAWS_HEAT_F: RocketBase {};
+    class R_MRAAWS_HEAT55_F: R_MRAAWS_HEAT_F {
+        class ADDON {
+            enabled = 1;
+
+            minDeflection = 0.0005;      // Minium flap deflection for guidance
+            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
+            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
+
+            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+            // Guidance type for munitions
+            defaultSeekerType = "PLOS";
+            seekerTypes[] = {"PLOS"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 1;
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "DIRECT";
+            attackProfiles[] = {"DIRECT"};
+        };
+    };
+
 
     class ammo_Missile_Cruise_01;
     class ammo_Missile_Cruise_DEBUG: ammo_Missile_Cruise_01 {
@@ -290,6 +322,5 @@ class CfgAmmo {
             attackProfiles[] = {"GBU"};
         };     
     };
-
 };
 

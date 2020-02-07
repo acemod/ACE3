@@ -17,14 +17,29 @@
  */
 
 params ["_key", "_down"];
+
 playSound "ACE_Sound_Click";
+
 private _shooter = vehicle player;
 private _return = false;
+
 
 switch (_key) do {
 
     case 1: {
         _return = true;
+        if(_down) then {
+            _shooter setVariable [QGVAR(PLOSVars), [_shooter weaponDirection (currentWeapon _shooter),time,[[0,0,0],0]] ];
+        } else {
+            private _plosVars = _shooter getVariable [QGVAR(PLOSVars), nil];
+            if(!isNil "_plosVars") then {
+                private _weaponDir = _shooter weaponDirection (currentWeapon _shooter);
+                private _angle = acos((_plosVars select 0) vectorCos (_weaponDir))/(time - (_plosVars select 1));
+                private _crossVector = (_plosVars select 0) vectorCrossProduct _weaponDir;
+                
+                _shooter setVariable [QGVAR(PLOSVars), [[0,0,0], time, [_crossVector, _angle]] ];
+            };
+        };
     }; //MF key 1
     
     case 2: {
@@ -76,4 +91,6 @@ switch (_key) do {
     }; //Down
 
 };
+
 _return;
+

@@ -47,22 +47,29 @@ _targetsList = [];
 } forEach ((ASLToAGL _projPos) nearEntities [["Air"], _seekerMaxRange]);
 
 //Get Countermeasures
+private _countermeasuresTargetsList = [];
 {
-    private _xPos = getPosASL _x;
-    private _angleOkay = acos((_projPos vectorFromTo _xPos) vectorCos _checkVector) < _seekerAngle;
+    _y = _x;
+    {
+        if ((_targetsList find _x) < 0) then {
+            private _xPos = getPosASL _x;
+            private _angleOkay = acos((_projPos vectorFromTo _xPos) vectorCos _checkVector) < _seekerAngle;
 
-    private _losOkay = false;
-    if (_angleOkay) then {
-        _losOkay = [_projectile, _x, true] call FUNC(checkLos);
-    };
-    if (_angleOkay && _losOkay) then {
-        _targetsList pushBack _x;
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,1,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
-    } else {
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
-    };
-} forEach ((ASLToAGL _projPos) nearObjects ["CMflareAmmo", _seekerMaxRange]);
+            private _losOkay = false;
+            if (_angleOkay) then {
+                _losOkay = [_projectile, _x, true] call FUNC(checkLos);
+            };
+            if (_angleOkay && _losOkay) then {
+                _countermeasuresTargetsList pushBack _x;
+                drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,1,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
+            } else {
+                drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], ASLtoAGL _xPos, 0.75, 0.75, 0, str(_x), 1, 0.025, "TahomaB"];
+            };
+        };
+    } forEach ((getPos _y) nearObjects ["CMflareAmmo", 50]);
+} forEach _targetsList;
 
+_targetsList = _targetsList + _countermeasuresTargetsList;
 
 if (!(count _targetsList > 0) ) exitWith {
     [0,0,0];
@@ -100,11 +107,11 @@ if ((count _seekerTargetsList) < 1) exitWith {
 }; 
 
 //get engine position, if none, center of the model isn't bad either. :P
-private _foundTargetPos = AGLToASL ((_seekerTargetsList select 0) modelToWorld ((_seekerTargetsList select 0) selectionPosition ["HitEngine","HitPoints"]));
+private _foundTargetPos = AGLToASL ((_seekerTargetsList select 0) modelToWorldWorld ((_seekerTargetsList select 0) selectionPosition ["HitEngine","HitPoints"]));
 
-//_foundTargetPos = getPosASL (_seekerTargetsList select 0);
+_foundTargetPos = getPosASL (_seekerTargetsList select 0);
 
-_miscSeeker set [0, time];
+_miscSeeker set [1, time];
 
 _extractedInfo set [2, _seekerTargetsList select 0];
 _extractedInfo set [3, _foundTargetPos];

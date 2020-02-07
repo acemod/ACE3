@@ -23,6 +23,7 @@ PREP(attackProfile_FIM);
 PREP(attackProfile_GBU);
 PREP(attackProfile_LIN);
 PREP(attackProfile_INDIRECT);
+PREP(attackProfile_DIRECT);
 PREP(attackProfile_SSBM);
 
 // Seeker search functions

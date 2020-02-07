@@ -29,4 +29,5 @@ class CfgMagazines {
         displayName = "DEBUG";
         displayNameShort = "DEBUG";
     };
+    
 };

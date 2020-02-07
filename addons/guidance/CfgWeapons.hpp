@@ -14,5 +14,9 @@ class CfgWeapons {
     class weapon_VLS_01: weapon_VLSBase {
         magazines[] += {"magazine_Missiles_Cruise_DEBUG"};
     };
-  
+
+    class Launcher_Base_F; 
+    class launch_MRAWS_base_F: Launcher_Base_F {
+        magazines[] += {"MRAWS_DEBUG_F"};
+    };
 };

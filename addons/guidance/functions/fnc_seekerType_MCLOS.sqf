@@ -27,7 +27,9 @@ if(!_active) exitWith {[0,0,0]};
 
 if(_projectile != (_shooter getVariable [QGVAR(MCLOSMissile), objNull])) exitWith {[0,0,0]};
 
-if(time - _launchTime < 0.5) exitWith {[0,0,0]};
+if(time - _launchTime < 0.75) exitWith {
+    _launchVector = eyeDirection _shooter;
+};
 
 private _projPos = getPosASL _projectile;
 
