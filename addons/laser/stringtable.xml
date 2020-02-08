@@ -64,10 +64,16 @@
             <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOn">
-            <English>Laser Spot Tracker- On</English>
+            <English>Laser Spot Tracker: On</English>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOff">
-            <English>Laser Spot Tracker- Off</English>
+            <English>Laser Spot Tracker: Off</English>
+        </Key>
+        <Key ID="STR_ACE_Laser_LaserMarkOn">
+            <English>Marking Laser: On</English>
+        </Key>
+        <Key ID="STR_ACE_Laser_LaserMarkOff">
+            <English>Marking Laser: Off</English>
         </Key>
     </Package>
 </Project>

@@ -65,7 +65,11 @@ if (_oldLaserCode != _newLaserCode) then {
 private _string = "";
 if (_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false]) then {
     private _LSTmessage = "";
-    if(_currentShooter getVariable [QGVAR(laserSpotTrackerOn), false]) then {_LSTmessage = localize LSTRING(LSTOn)} else {_LSTmessage = localize LSTRING(LSTOff)};
+    if(_currentShooter getVariable [QGVAR(laserSpotTrackerOn), false]) then {
+        _LSTmessage = localize LSTRING(LSTOn);
+    } else {
+        _LSTmessage = localize LSTRING(LSTOff);
+    };
     _string = format ["%1<br/>", _LSTmessage];
 };
 _string = format ["%1%2: %3", _string, localize LSTRING(laserCode), _newLaserCode];

@@ -48,24 +48,13 @@ if (hasInterface) then {
 }] call CBA_fnc_addEventHandler;
 
 
-/*
-["Air", "init", {
-    params ["_vehicle"];
-    _hasPilotCamera = hasPilotCamera _vehicle;
-    if (_hasPilotCamera) then {
-        _vehicle setVariable [QGVAR(hasLaserSpotTracker), true];
-        _vehicle setVariable [QGVAR(laserSpotTrackerOn), false];
+["ace_laserOn", {
+    params ["_uuid", "_args"];
+    private _vehicle = _args select 0;
+    if(hasPilotCamera _vehicle) then {
+        [_vehicle] call FUNC(laserPointTrack);
     };
-    
-    private _actionOff = ["LSTOff", "Laser Spot Tracker Off", "", {(_this select 0) call FUNC(toggleLST)}, {(_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false]}] call ace_interact_menu_fnc_createAction;
-    [_vehicle, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
-    _actionOn = ["LSTOn", "Laser Spot Tracker On", "", {(_this select 0) call FUNC(toggleLST)}, {!((_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false])}] call ace_interact_menu_fnc_createAction;
-    [_vehicle, 1, ["ACE_MainActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
-
-
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-*/
-
+}] call CBA_fnc_addEventHandler;
 
 ["Plane", "init", {
     params ["_vehicle"];
@@ -80,6 +69,26 @@ if (hasInterface) then {
     private _actionOff = ["LSTOff", localize LSTRING(LSTOff), "", {[_this select 0] call FUNC(toggleLST)}, {(_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false]}] call ace_interact_menu_fnc_createAction;
     [_vehicle, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
     private _actionOn = ["LSTOn", localize LSTRING(LSTOn), "", {[_this select 0] call FUNC(toggleLST)}, {!((_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false])}] call ace_interact_menu_fnc_createAction;
+    [_vehicle, 1, ["ACE_SelfActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
+    
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+["Air", "init", {
+    params ["_vehicle"];
+    _hasPilotCamera = hasPilotCamera _vehicle;
+
+    //if (_shooter isKindOf "Plane" && { !hasPilotCamera _shooter }) exitWith { WARNING("SACLOS fired from planes without camera unsupported"); };
+
+
+    if (_hasPilotCamera) then {
+        _vehicle setVariable [QGVAR(hasMarkerLaser), true];
+        _vehicle setVariable [QGVAR(laserMarkerOn), false];
+    };
+
+    
+    private _actionOff = ["LaserMarkerOff", localize LSTRING(laserMarkOff), "", {[_this select 0] call FUNC(toggleMarker)}, {(_this select 0) getVariable [QGVAR(laserMarkerOn), false]}] call ace_interact_menu_fnc_createAction;
+    [_vehicle, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
+    private _actionOn = ["LaserMarkerOn", localize LSTRING(laserMarkOn), "", {[_this select 0] call FUNC(toggleMarker)}, {!((_this select 0) getVariable [QGVAR(laserMarkerOn), false])}] call ace_interact_menu_fnc_createAction;
     [_vehicle, 1, ["ACE_SelfActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
     
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;

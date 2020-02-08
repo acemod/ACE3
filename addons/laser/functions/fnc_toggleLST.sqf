@@ -1,17 +1,16 @@
 #include "script_component.hpp"
 /*
- * Author: PabstMirror
- * Shows the laser hud when vehicle is equiped with the weapon.
- * Shows laser code, fire mode and seeker status.
+ * Author: LorenLuke
+ * Toggles the laser spot tracker for any enabled vehicle;
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player] call ace_laser_fnc_showVehicleHud
+ * [vehicle player] call ace_laser_fnc_toggleLST
  *
  * Public: No
  */
@@ -19,8 +18,7 @@
 
 params ["_vehicle"];
 
-_hasLST = _vehicle getVariable [QGVAR(hasLaserSpotTracker), false];
-if (! _hasLST) exitWith {};
+if !(_vehicle getVariable [QGVAR(hasLaserSpotTracker), false]) exitWith {};
 
 private _enabled = _vehicle getVariable [QGVAR(laserSpotTrackerOn), false];
 _vehicle setVariable [QGVAR(laserSpotTrackerOn), !_enabled];
@@ -35,7 +33,7 @@ GVAR(TrackerpfID) = [{
     params ["_args", "_pfID"];
     _args params ["_vehicle"];
 
-    if (!(_vehicle getVariable [QGVAR(laserSpotTrackerOn), false])) exitWith {
+    if (!(_vehicle getVariable [QGVAR(laserSpotTrackerOn), false]) || (!alive _vehicle)) exitWith {
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
     
@@ -49,15 +47,19 @@ GVAR(TrackerpfID) = [{
     private _pilotCameraLookPos = [sin(-deg(_pilotCameraRotation select 0)) * cos(-deg(_pilotCameraRotation select 1)), cos(-deg(_pilotCameraRotation select 0)) * cos(-deg(_pilotCameraRotation select 1)), sin(-deg(_pilotCameraRotation select 1))];
     private _pilotCameraVector = _pos vectorFromTo (_vehicle modelToWorldWorld _pilotCameraLookPos);
 
-    private _laserSource = AGLtoASL (_vehicle modelToWorld (_vehicle selectionPosition _pilotCameraPos));
+    private _laserSource = _vehicle modelToWorldWorld _pilotCameraPos;
     
     private _laserResult = [_laserSource, _pilotCameraVector, 15, 5000, [ACE_DEFAULT_LASER_WAVELENGTH,ACE_DEFAULT_LASER_WAVELENGTH], _laserCode, _vehicle] call EFUNC(laser,seekerFindLaserSpot);
     private _foundTargetPos = _laserResult select 0;
 
-//    _vehicle setPilotCameraTarget _foundTargetPos;
-    private _modelOffset = (_vehicle worldToModel (ASLToAGL (_laserResult select 0))) vectorDiff (_pilotCameraPos);
-    _vehicle setPilotCameraDirection ([0,0,0] vectorFromTo (_modelOffset));
-
-}, 0.05, [_vehicle]] call CBA_fnc_addPerFrameHandler;
+    if((getPilotCameraTarget _vehicle) select 0) then {
+        private _distance = ((getPilotCameraTarget _vehicle) select 1) distance _foundTargetPos;
+        if(_distance > 0.5) then {
+            _vehicle setPilotCameraTarget _foundTargetPos;
+        };
+    } else {
+        _vehicle setPilotCameraTarget _foundTargetPos;
+    };
+}, 0, [_vehicle]] call CBA_fnc_addPerFrameHandler;
 
 
