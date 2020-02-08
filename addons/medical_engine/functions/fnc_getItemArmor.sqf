@@ -22,11 +22,11 @@ private _armor = GVAR(armorCache) getVariable _key;
 
 if (isNil "_armor") then {
 
-	TRACE_2("Cache miss", _item, _hitpoint);
-	if (_item isEqualTo "" || _hitpoint isEqualTo "") exitWith {
-	    _armor = 0;
-	    GVAR(armorCache) setVariable [_key, _armor];
-	};
+    TRACE_2("Cache miss", _item, _hitpoint);
+    if (_item isEqualTo "" || _hitpoint isEqualTo "") exitWith {
+        _armor = 0;
+        GVAR(armorCache) setVariable [_key, _armor];
+    };
 
     private _itemInfo = configFile >> "CfgWeapons" >> _item >> "ItemInfo";
 
@@ -36,7 +36,7 @@ if (isNil "_armor") then {
 
         _armor = getNumber (_unitCfg >> "armor") * getNumber (_entry >> "armor")
     } else {
-        private _condition = format ["getText (_x >> 'hitpointName') == '%1'",_hitpoint];
+        private _condition = format ["getText (_x >> 'hitpointName') == '%1'", _hitpoint];
         private _entry = configProperties [_itemInfo >> "HitpointsProtectionInfo", _condition] param [0, configNull];
 
         _armor = getNumber (_entry >> "armor");
