@@ -11,7 +11,7 @@
 
             private _pilotCameraTarget = getPilotCameraTarget _vehicle;
             private _pilotCameraRotation = getPilotCameraRotation _vehicle;
-            if(_pilotCameraTarget select 0) then {
+            if (_pilotCameraTarget select 0) then {
                 private _pilotCameraTargetPos = _pilotCameraTarget select 1;
                 private _pilotCameraTargetRelPos = vectorNormalized ((_vehicle worldToModel (ASLToAGL _pilotCameraTargetPos)) vectorDiff (getPilotCameraPosition _vehicle));
                 _pilotCameraRotation = [ -(rad ((_pilotCameraTargetRelPos select 0) atan2 (_pilotCameraTargetRelPos select 1)) ), -(rad asin(_pilotCameraTargetRelPos select 2))]
