@@ -19,7 +19,7 @@ params [["_codeChange", 0, [0]]];
 
 TRACE_1("params",_codeChange);
 
-if ((!alive ACE_player) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {false};
+if (( !alive ACE_player) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {false};
 
 private _currentShooter = objNull;
 private _currentWeapon = "";
@@ -40,9 +40,10 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
 };
 
 TRACE_2("",_currentShooter,_currentWeapon);
-if (((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) && 
-    (!(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false]) ) && 
-    {(getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(canSelect))) == 0}) exitWith {false};
+private _currentWeaponCfg = configFile >> "CfgWeapons" >> _currentWeapon;
+if ((getNumber (_currentWeaponCfg  >> "laser") == 0) && 
+    ( !(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false]) ) && 
+    {(getNumber (_currentWeaponCfg >> QGVAR(canSelect))) == 0}) exitWith {false};
 
 private _oldLaserCode = _currentShooter getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
 private _newLaserCode = _oldLaserCode;
@@ -64,12 +65,7 @@ if (_oldLaserCode != _newLaserCode) then {
 };
 private _string = "";
 if (_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false]) then {
-    private _LSTmessage = "";
-    if(_currentShooter getVariable [QGVAR(laserSpotTrackerOn), false]) then {
-        _LSTmessage = localize LSTRING(LSTOn);
-    } else {
-        _LSTmessage = localize LSTRING(LSTOff);
-    };
+    private _LSTmessage = localize ([LSTRING(LSTOff), LSTRING(LSTOn)] select (_currentShooter getVariable [QGVAR(laserSpotTrackerOn), false]));
     _string = format ["%1<br/>", _LSTmessage];
 };
 _string = format ["%1%2: %3", _string, localize LSTRING(laserCode), _newLaserCode];

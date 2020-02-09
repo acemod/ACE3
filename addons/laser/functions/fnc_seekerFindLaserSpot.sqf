@@ -12,19 +12,24 @@
  * 4: Seeker wavelength sensitivity range, [1550,1550] is common eye safe <ARRAY>
  * 5: Seeker laser code. <NUMBER>
  * 6: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
+ * 7: Ignore 2 (e.g. Player's vehicle) <OBJECT> (default: objNull)
  *
  * Return Value:
  * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found <ARRAY>
  *
  * Example:
- * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot
+ * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player, vehiclePlayer] call ace_laser_fnc_seekerFindLaserSpot
  *
  * Public: No
  */
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", "_ignoreObj", "_ignoreBy"];
+
+if(isNil "_ignoreBy") then {
+    _ignoreBy = objNull;
+};
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
@@ -79,7 +84,9 @@ private _finalOwner = objNull;
                 private _testPointVector = _posASL vectorFromTo _testPoint;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
                 if ((_testDotProduct > _seekerCos) && {(_testPoint vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
-                    _spots pushBack [_testPoint, _owner];
+                    if(_owner != _ignoreBy) then {
+                        _spots pushBack [_testPoint, _owner];
+                    };
                 };
             } forEach _resultPositions;
         } else {
@@ -142,7 +149,7 @@ if ((count _spots) > 0) then {
         _bucketList = _finalBuckets select _index;
         {
             private _testPos = (_x select 0) vectorAdd [0,0,0.05];
-            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1];
+            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj, objNull];
             if ([] isEqualTo _testIntersections) then {
                 _bucketList pushBack _x;
             };

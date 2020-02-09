@@ -13,7 +13,7 @@ if (hasInterface) then {
         ["ACE_controlledUAV", {
             params ["_UAV", "_seatAI", "_turret", "_position"];
             TRACE_4("ACE_controlledUAV EH",_UAV,_seatAI,_turret,_position);
-            if (!isNull _seatAI) then {
+            if ( !isNull _seatAI) then {
                 [_seatAI] call FUNC(showVehicleHud);
             } else {
                 [ace_player] call FUNC(showVehicleHud);
@@ -51,40 +51,42 @@ if (hasInterface) then {
 ["ace_laserOn", {
     params ["_uuid", "_args"];
     private _vehicle = _args select 0;
-    if(hasPilotCamera _vehicle) then {
+    if (hasPilotCamera _vehicle) then {
         [_vehicle] call FUNC(laserPointTrack);
     };
 }] call CBA_fnc_addEventHandler;
 
-["Plane", "init", {
+["AllVehicles", "init", {
     params ["_vehicle"];
-    _hasPilotCamera = hasPilotCamera _vehicle;
+    private _hasPilotCamera = hasPilotCamera _vehicle;
+    private _hasLaserSensor = isClass (configfile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "SensorsManagerComponent" >> "Components" >> "LaserSensorComponent");
 
-    if (_hasPilotCamera) then {
+
+    if ( (_hasPilotCamera) && (_hasLaserSensor) ) then {
         _vehicle setVariable [QGVAR(hasLaserSpotTracker), true];
         _vehicle setVariable [QGVAR(laserSpotTrackerOn), false];
+        private _actionOff = ["LSTOff", localize LSTRING(LSTOff), "", {[_this select 0] call FUNC(toggleLST)}, {(_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false]}] call ace_interact_menu_fnc_createAction;
+        [_vehicle, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
+        private _actionOn = ["LSTOn", localize LSTRING(LSTOn), "", {[_this select 0] call FUNC(toggleLST)}, {!((_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false])}] call ace_interact_menu_fnc_createAction;
+        [_vehicle, 1, ["ACE_SelfActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
     };
 
-    
-    private _actionOff = ["LSTOff", localize LSTRING(LSTOff), "", {[_this select 0] call FUNC(toggleLST)}, {(_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false]}] call ace_interact_menu_fnc_createAction;
-    [_vehicle, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
-    private _actionOn = ["LSTOn", localize LSTRING(LSTOn), "", {[_this select 0] call FUNC(toggleLST)}, {!((_this select 0) getVariable [QGVAR(laserSpotTrackerOn), false])}] call ace_interact_menu_fnc_createAction;
-    [_vehicle, 1, ["ACE_SelfActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
-    
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    private _foundLaser = 0;
+    private _weapons = weapons _vehicle;
+    {
+        _weapons = _weapons + (_vehicle weaponsTurret _x);
+    } forEach (allTurrets _vehicle);
 
-["Air", "init", {
-    params ["_vehicle"];
-    _hasPilotCamera = hasPilotCamera _vehicle;
-
-    //if (_shooter isKindOf "Plane" && { !hasPilotCamera _shooter }) exitWith { WARNING("SACLOS fired from planes without camera unsupported"); };
-
-
-    if (_hasPilotCamera) then {
-        _vehicle setVariable [QGVAR(hasMarkerLaser), true];
-        _vehicle setVariable [QGVAR(laserMarkerOn), false];
+    if (_weapons find "Laserdesignator_mounted" > -1) then {
+        _foundLaser = 1;
+    };
+    if (_weapons find "Laserdesignator_pilotCamera" > -1) then {
+        _foundLaser = 2;
     };
 
+    if (_foundlaser == 0) exitWith {};
+    _vehicle setVariable [QGVAR(hasMarkerLaser), true];
+    _vehicle setVariable [QGVAR(laserMarkerOn), false];
     
     private _actionOff = ["LaserMarkerOff", localize LSTRING(laserMarkOff), "", {[_this select 0] call FUNC(toggleMarker)}, {(_this select 0) getVariable [QGVAR(laserMarkerOn), false]}] call ace_interact_menu_fnc_createAction;
     [_vehicle, 1, ["ACE_SelfActions"], _actionOff] call ace_interact_menu_fnc_addActionToObject;
@@ -92,6 +94,7 @@ if (hasInterface) then {
     [_vehicle, 1, ["ACE_SelfActions"], _actionOn] call ace_interact_menu_fnc_addActionToObject;
     
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
 
 // Shows detector and mine posistions in 3d when debug is on
 #ifdef DRAW_LASER_INFO
