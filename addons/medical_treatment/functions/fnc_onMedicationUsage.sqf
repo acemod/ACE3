@@ -53,7 +53,7 @@ if !(_overdosedMedications isEqualTo []) then {
         TRACE_1("CriticalVitals Event",_target); // make unconscious
         [QEGVAR(medical,CriticalVitals), _target] call CBA_fnc_localEvent;
     };
-    if (isNil _onOverDose) then {
+    if (isNil "_onOverDose") then {
         _onOverDose = compile _onOverDose;
     } else {
         _onOverDose = missionNamespace getVariable _onOverDose;
