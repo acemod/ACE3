@@ -35,7 +35,7 @@ private _distance = if (_type == "hit") then {
     [10, 15, 20] select _severity;
 };
 private _targets = _unit nearEntities ["CAManBase", _distance];
-if ((_targets findIf {isPlayer _x}) == -1) exitWith {};
+if (_targets findIf {isPlayer _x} == -1) exitWith {};
 
 // Handle timeout
 if (_unit getVariable [QGVAR(soundTimeout) + _type, -1] > CBA_missionTime) exitWith {};
