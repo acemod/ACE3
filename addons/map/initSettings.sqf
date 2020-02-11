@@ -85,7 +85,7 @@
     [0, 30, 1, 1],
     true,
     {[QGVAR(BFT_Interval), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
