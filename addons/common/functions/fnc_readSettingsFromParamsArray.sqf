@@ -31,7 +31,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
         TRACE_3("ace_setting",_title,_settingName,_settingValue);
 
         // Check if the variable is already defined
-        if (isNil _settingName) exitWith {
+        if (isNil "_settingName") exitWith {
             ERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting", _settingName);
         };
 

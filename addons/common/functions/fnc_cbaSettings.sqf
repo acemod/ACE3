@@ -73,7 +73,7 @@ GVAR(settingsMovedToSQF) = [];
     #ifdef DEBUG_MODE_FULL
     INFO_1("checking settingsMovedToSQF [%1]",count GVAR(settingsMovedToSQF));
     {
-        if (isNil _x) then { WARNING_1("setting [%1] NOT moved to sqf",_x); };
+        if (isNil "_x") then { WARNING_1("setting [%1] NOT moved to sqf",_x); };
     } forEach GVAR(settingsMovedToSQF);
     #endif
 }] call CBA_fnc_addEventHandler;
@@ -107,7 +107,7 @@ for "_index" from 0 to (_countOptions - 1) do {
     if ((toLower _settingName) in GVAR(cbaSettings_forcedSettings)) then {
         WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",_varName);
     } else {
-        if ((isNil _settingName) && {(getNumber (_settingsConfig >> _settingName >> "movedToSQF")) == 0}) then {
+        if ((isNil "_settingName") && {(getNumber (_settingsConfig >> _settingName >> "movedToSQF")) == 0}) then {
             // New setting, that was first defined in missionConfigFile
             INFO_1("Creating new CBA setting for ace_setting from mission config [%1]",_settingName);
             [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
