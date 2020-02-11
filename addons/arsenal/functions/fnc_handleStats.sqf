@@ -46,7 +46,7 @@ private _hideUnusedFnc = {
     } forEach _numbers;
 };
 
-if !(isNil "_itemCfg") then {
+if (!isNil "_itemCfg") then {
 
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];
