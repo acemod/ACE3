@@ -25,7 +25,7 @@ params ["_firer", "_posASL", "_direction", "_weapon", "_magazine", "_ammo"];
 
 // Bake variable name and check if the variable exists, call the caching function otherwise
 private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-private _var = if (isNil _varName) then {
+private _var = if (isNil "_varName") then {
     [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
 } else {
     missionNameSpace getVariable _varName;
