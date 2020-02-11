@@ -54,7 +54,7 @@ if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {fa
 private _return = true;
 if (getText (_config >> "condition") != "") then {
     private _condition = getText (_config >> "condition");
-    if (isNil _condition) then {
+    if (isNil "_condition") then {
         _condition = compile _condition;
     } else {
         _condition = missionNamespace getVariable _condition;
@@ -82,7 +82,7 @@ if (!("All" in _repairLocations)) then {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
         if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
-        if !(isNil _x) exitWith {
+        if (!isNil "_x") exitWith {
             private _val = missionNamespace getVariable _x;
             if (_val isEqualType 0) then {
                 _return = switch (_val) do {
@@ -139,7 +139,7 @@ if (_callbackProgress == "") then {
         (alive _target) && {(abs speed _target) < 1} // make sure vehicle doesn't drive off
     };
 } else {
-    if (isNil _callbackProgress) then {
+    if (isNil "_callbackProgress") then {
         _callbackProgress = compile _callbackProgress;
     } else {
         _callbackProgress = missionNamespace getVariable _callbackProgress;
@@ -192,7 +192,7 @@ if (_repairTime < 0) then {
     } else {
         if (isText (_config >> "repairingTime")) exitWith {
             private _repairTimeConfig = getText (_config >> "repairingTime");
-            if (isNil _repairTimeConfig) then {
+            if (isNil "_repairTimeConfig") then {
                 _repairTimeConfig = compile _repairTimeConfig;
             } else {
                 _repairTimeConfig = missionNamespace getVariable _repairTimeConfig;
