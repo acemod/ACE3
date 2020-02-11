@@ -20,7 +20,7 @@
             private _isPersistent = getNumber (_config >> "isPersistent") > 0 || getNumber (_config >> "isGlobal") > 1;
             private _isSingular  = getNumber (_config >> "isSingular") > 0;
             private _function = getText (_config >> "function");
-            if (isNil _function) then {
+            if (isNil "_function") then {
                 _function = compile _function;
             } else {
                 _function = missionNamespace getVariable _function;
