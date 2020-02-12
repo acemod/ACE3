@@ -51,7 +51,7 @@ if (_weaponSelect != "") then {
 private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 
 private _callback = getText (_config >> "callbackSuccess");
-if (isNil "_callback") then {
+if (isNil _callback) then {
     _callback = compile _callback;
 } else {
     _callback = missionNamespace getVariable _callback;

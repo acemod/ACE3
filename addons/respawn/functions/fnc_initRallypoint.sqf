@@ -21,7 +21,7 @@ params ["_rallypoint", "_respawnMarker", "_side"];
 
 private _name = typeOf _rallypoint;
 
-if (isNil "_name") then {
+if (isNil _name) then {
     missionNamespace setVariable [_name, _rallypoint];
 
     _rallypoint setVariable [QGVAR(side), _side];

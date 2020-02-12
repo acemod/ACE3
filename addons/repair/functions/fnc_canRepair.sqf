@@ -48,7 +48,7 @@ if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {fa
 private _return = true;
 if (getText (_config >> "condition") != "") then {
     private _condition = getText (_config >> "condition");
-    if (isNil "_condition") then {
+    if (isNil _condition) then {
         _condition = compile _condition;
     } else {
         _condition = missionNamespace getVariable _condition;
@@ -77,7 +77,7 @@ if (!("All" in _repairLocations)) then {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
         if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
-        if (!isNil "_x") exitWith {
+        if (!isNil _x) exitWith {
             private _val = missionNamespace getVariable _x;
             if (_val isEqualType 0) then {
                 _return = switch (_val) do {
