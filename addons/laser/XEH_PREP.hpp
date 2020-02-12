@@ -18,3 +18,4 @@ PREP(shootRay);
 PREP(showVehicleHud);
 PREP(toggleLST);
 PREP(toggleMarker);
+PREP(toggleMarkerHand);

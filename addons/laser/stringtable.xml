@@ -75,5 +75,8 @@
         <Key ID="STR_ACE_Laser_LaserMarkOff">
             <English>Marking Laser: Off</English>
         </Key>
+        <Key ID="STR_ACE_Laser_LaserMarkToggle">
+            <English>Toggle Marking Laser</English>
+        </Key>
     </Package>
 </Project>

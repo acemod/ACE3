@@ -96,6 +96,22 @@ if (hasInterface) then {
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 
+["CAManBase", "init", {
+    params ["_unit"];
+    findDisplay 46 displayAddEventHandler ["KeyDown", {
+        params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
+        if (_ctrl) then {_key = _key + 486539264};
+        if (_shift) then {_key = _key + 704643072};
+        if (_alt) then {_key = _key + 939524096};
+        private _lightKeys = actionKeys "headlights";
+        if (_lightKeys find _key > -1) then {
+            if ( ((currentWeapon player) == "Laserdesignator")) then {
+                [player] call FUNC(toggleMarkerHand);
+            };
+        };
+    }];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
 // Shows detector and mine posistions in 3d when debug is on
 #ifdef DRAW_LASER_INFO
 addMissionEventHandler ["Draw3D", {_this call FUNC(dev_drawVisibleLaserTargets)}];

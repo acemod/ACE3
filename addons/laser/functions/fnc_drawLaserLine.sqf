@@ -17,9 +17,11 @@
  * Public: No
  */
 
-params ["_start", "_end", "_color"];
-
+params ["_list"];
 
 if ((currentVisionMode ACE_player) > 0) then {
-    drawLine3D [_start, _end, _color];
+    {
+        _x params ["_start", "_end", "_color"];
+        drawLine3D [_start, _end, _color];
+    } forEach _list;
 };
