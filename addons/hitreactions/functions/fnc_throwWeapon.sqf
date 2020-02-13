@@ -26,7 +26,7 @@ if (!isNull objectParent _unit || _weapon isEqualTo "") exitWith {objNull};
 
 private _data = weaponsItems _unit select {_x select 0 == _weapon} select 0;
 
-private _holder = createVehicle ["WeaponHolderSimulated", [0,0,0], [], 0, "CAN_COLLIDE"];
+private _holder = createVehicle ["WeaponHolderSimulated", [0, 0, 0], [], 0, "CAN_COLLIDE"];
 _holder addWeaponWithAttachmentsCargoGlobal [_data, 1];
 
 private _vDir = _unit weaponDirection _weapon;
