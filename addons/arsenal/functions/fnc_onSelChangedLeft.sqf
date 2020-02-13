@@ -23,10 +23,10 @@ private _display = ctrlParent _control;
 private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
 
 private _weaponDefaultRightPanel = _display displayCtrl IDC_buttonOptic;
-private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select ((!isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
+private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
 
 private _containerDefaultRightPanel = _display displayCtrl IDC_buttonMisc;
-private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select ((!isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
+private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
 
 private _fnc_clearPreviousWepMags = {
     private _compatibleMags = getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
