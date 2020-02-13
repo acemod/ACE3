@@ -16,6 +16,7 @@
  * Public: No
  */
 
+#define OFFSET_LATERAL 0.59
 #define THROW_VELOCITY 1.5
 #define THROW_TORQUE 0.2
 
@@ -33,7 +34,7 @@ private _vDir = _unit weaponDirection _weapon;
 private _vLat = vectorNormalized (_vDir vectorCrossProduct [0, 0, 1]);
 private _vUp = _vLat vectorCrossProduct _vDir;
 
-private _position = _unit modelToWorldWorld (_unit selectionPosition "RightHand") vectorAdd (_vLat vectorMultiply 0.59);
+private _position = _unit modelToWorldWorld (_unit selectionPosition "RightHand") vectorAdd (_vLat vectorMultiply OFFSET_LATERAL);
 private _velocity = vectorNormalized (_vDir vectorAdd (_vUp vectorMultiply 2)) vectorMultiply THROW_VELOCITY vectorAdd velocity _unit;
 
 _unit removeWeapon _weapon;
