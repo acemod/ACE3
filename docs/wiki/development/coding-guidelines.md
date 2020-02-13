@@ -397,6 +397,23 @@ Magic numbers are any of the following:
 
 [Source](http://en.wikipedia.org/wiki/Magic_number_%28programming%29){:target="_blank"}
 
+### 5.7 Spaces between array elements
+When using array notation `[]`, always use a space between elements to improve code readability.
+
+Good:
+
+```js
+params ["_unit", "_vehicle"];
+private _pos = [0, 0, 0];
+```
+
+Bad:
+
+```js
+params ["_unit","_vehicle"];
+private _pos = [0,0,0];
+```
+
 
 ## 6. Code Standards
 
