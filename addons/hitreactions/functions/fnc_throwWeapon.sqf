@@ -30,7 +30,7 @@ private _holder = createVehicle ["WeaponHolderSimulated", [0,0,0], [], 0, "CAN_C
 _holder addWeaponWithAttachmentsCargoGlobal [_data, 1];
 
 private _vDir = _unit weaponDirection _weapon;
-private _vLat = vectorNormalized (_vDir vectorCrossProduct [0,0,1]);
+private _vLat = vectorNormalized (_vDir vectorCrossProduct [0, 0, 1]);
 private _vUp = _vLat vectorCrossProduct _vDir;
 
 private _position = _unit modelToWorldWorld (_unit selectionPosition "RightHand") vectorAdd (_vLat vectorMultiply 0.59);
