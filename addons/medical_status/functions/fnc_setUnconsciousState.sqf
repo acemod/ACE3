@@ -33,7 +33,7 @@ _unit setVariable [VAR_UNCON, _active, true];
 
 // Set players volume according to unconscious state
 if (_unit == ACE_player) then {
-    !_active call EFUNC(common,setVolume);
+    [!_active] call EFUNC(common,setVolume);
 };
 
 if (_active) then {
