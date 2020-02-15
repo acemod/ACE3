@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: LorenLuke
- * Toggles the marker laser mode for any laser-designating vehicle;
+ * Toggles the marker laser mode for any laser-designating unit/vehicle;
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -18,69 +18,15 @@
 
 params ["_vehicle"];
 
-_hasMarker = _vehicle getVariable [QGVAR(hasMarkerLaser), false];
-if (! _hasMarker) exitWith {};
-
-private _enabled = _vehicle getVariable [QGVAR(laserMarkerOn), false];
-_vehicle setVariable [QGVAR(laserMarkerOn), ! _enabled];
-
-private _markerMessage = localize ([LSTRING(LaserMarkOff), LSTRING(LaserMarkOn)] select (_vehicle getVariable [QGVAR(laserMarkerOn), false]));
-[_markerMessage] call EFUNC(common,displayTextStructured);
-
-private _weapon = "";
-private _weapons = weapons _vehicle;
+private _found = false;
 {
-    _weapons = _weapons + (_vehicle weaponsTurret _x);
-} forEach (allTurrets _vehicle);
+    _x params ["_unit", "_sourceName", "_selectedWeapon", "_selectedTurret", "_pilotLaser", "_active"];
+    if (_unit == _vehicle) exitWith {
+        _found = true;
+        if(_active) then {["ace_markerOff", _vehicle] call CBA_fnc_globalEvent} else {["ace_markerOn", _vehicle] call CBA_fnc_globalEvent};
+    };
+} forEach GVAR(laserMarkers);
 
-if (_weapons find "Laserdesignator_mounted" > -1) then {
-    _weapon = "Laserdesignator_mounted";
-} else {
-    _weapon = "Laserdesignator_pilotCamera";
+if (! _found) then {
+    ["ace_markerOn", _vehicle] call CBA_fnc_globalEvent;
 };
-
-private _sourcePoint = "";
-if (hasPilotCamera _vehicle && (_weapon == "Laserdesignator_pilotCamera")) then {
-    _sourcePoint = getText (configfile >> "CfgVehicles" >> (typeOf _vehicle) >> "memoryPointDriverOptics");
-} else {
-    {
-        private _weapons = _vehicle weaponsTurret _x;
-        
-        if (_weapons find _weapon > -1) then {
-            private _turretConfig = [_vehicle, _x] call CBA_fnc_getTurret;
-            _sourcePoint = getText(_turretConfig >> "memoryPointGunnerOptics");
-        };
-    } forEach (allTurrets _vehicle);
-};
-
-GVAR(TrackerpfID) = [{
-    params ["_args", "_pfID"];
-    _args params ["_vehicle","_sourcePoint","_turret"];
-    
-    if (isNil "_turret" || {isNull _turret}) then {
-        _turret = _vehicle;
-    };
-    
-    if ( !(_vehicle getVariable [QGVAR(laserMarkerOn), false]) || !(alive _vehicle) ) exitWith {
-        [_pfID] call CBA_fnc_removePerFrameHandler;
-    };
-    if (isNull (laserTarget _turret)) exitWith {};
-
-    if (allUnitsUAV find _unit > -1) then {
-        _sourcePoint = getText (configfile >> "CfgVehicles" >> (typeOf _vehicle) >> "uavCameraGunnerPos");
-    };
-
-    private _laserSource = (_vehicle modelToWorldVisualWorld (_vehicle selectionPosition _sourcePoint));
-    
-    private _laserPos = getPosASL (laserTarget _turret);
-    private _distance = (_laserPos distance _laserSource) + 1.5;
-    private _vector = _laserSource vectorFromTo _laserPos;
-    
-    private _list = [];
-    private _num = 15;
-    for "_i" from 1 to _num do {
-        private _toPos = (_laserSource vectorAdd (_vector vectorMultiply _distance)) vectorAdd [sin(_i*(360/_num))*0.05,cos(_i*(360/_num))*0.005,0];
-        _list pushback [ASLToAGL (_laserSource), ASLToAGL (_toPos), [0.8,1,0.8,1]];
-    };
-    [_list] remoteExec [QFUNC(drawLaserLine), 0, false];
-}, 0, [_vehicle, _sourcePoint]] call CBA_fnc_addPerFrameHandler;

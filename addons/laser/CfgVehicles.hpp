@@ -17,8 +17,8 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ACE_ToggleMarkerLaser {
                     displayName = CSTRING(laserMarkToggle);
-                    condition = QUOTE('Laserdesignator' in weapons ACE_player);
-                    statement = QUOTE( ARR_1(ACE_player) call FUNC(toggleMarkerHand));
+                    condition = QUOTE(getNumber (configFile >> 'CfgWeapons' >> (currentWeapon ACE_player) >> QUOTE(QUOTE(ADDON)) >> 'markerEnabled') > 0);
+                    statement = QUOTE( ARR_1(ACE_player) call FUNC(toggleMarker));
                     showDisabled = 0;
                     exceptions[] = {"isNotSwimming"};
                 };

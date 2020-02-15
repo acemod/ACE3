@@ -13,6 +13,7 @@ ACE_DEFAULT_LASER_BEAMSPREAD = 1;
 
 GVAR(laserEmitters) = [] call CBA_fnc_hashCreate;
 GVAR(trackedLaserTargets) = [];
+GVAR(laserMarkers) = [];
 GVAR(pfehID) = -1;
 
 ADDON = true;
