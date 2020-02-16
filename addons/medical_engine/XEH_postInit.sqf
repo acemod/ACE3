@@ -25,6 +25,7 @@
         _unit setVariable [
             QEGVAR(medical,HandleDamageEHID),
             _unit addEventHandler ["HandleDamage", {
+                // Not returning anything for dead units prevents double execution for Killed events.
                 private _return = _this call FUNC(handleDamage);
                 if (alive _unit) then {_return};
             }]
