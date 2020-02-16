@@ -11,6 +11,9 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 
 private _uniforms = "getNumber (_x >> 'scope') == 2 && {configName _x isKindOf ['Uniform_Base', _cfgWeapons]}" configClasses _cfgWeapons;
 private _units = _uniforms apply {_cfgVehicles >> getText (_x >> "ItemInfo" >> "uniformClass")};
+if (param [0, false]) then { // Check all units (if naked)
+   _units append ((configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(getNumber (_x >> 'scope')) == 2} && {configName _x isKindOf 'CAManBase'}", true]));
+};
 
 INFO_1("Checking mans for medical hitpoints [%1 units]",count _units);
 
