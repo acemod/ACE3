@@ -2,8 +2,9 @@
 
 ["Air", "init", { // on air vehicle init, add action to class if has pylons
     params ["_vehicle"];
-    _isUAV = unitIsUAV _vehicle;
-    _hasPilotCamera = hasPilotCamera _vehicle;
+    if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "trackPilotCamera")) < 1) exitWith {};
+    private _isUAV = unitIsUAV _vehicle;
+    private _hasPilotCamera = hasPilotCamera _vehicle;
     if(_isUAV && _hasPilotCamera) then {
         _pfhID = [{
             params ["_args", "_pfID"];
@@ -19,7 +20,7 @@
             _vehicle animateSource ["mainTurret", _pilotCameraRotation select 0];
             _vehicle animateSource ["mainGun", -(_pilotCameraRotation select 1)];
 
-        }, 0.05, [_vehicle]] call CBA_fnc_addPerFrameHandler;
+        }, 0, [_vehicle]] call CBA_fnc_addPerFrameHandler;
         _vehicle setVariable [QGVAR(pfhID), _pfhID];
     };
 }, true, [], true] call CBA_fnc_addClassEventHandler;

@@ -1,8 +1,5 @@
 class CBA_Extended_EventHandlers;
 
-
-class Turrets;
-class MainTurret;
 class AnimationSources;
 
 class UAVPod {
@@ -142,6 +139,10 @@ class CfgVehicles {
         class Viewoptics: UAVOptics{};
 
         class PilotCamera: UAVPod{};
+        
+        class ADDON {
+            trackPilotCamera = 1;
+        };
 
     };
 
@@ -173,6 +174,10 @@ class CfgVehicles {
 
         class PilotCamera: UAVPod{};
 
+        class ADDON {
+            trackPilotCamera = 1;
+        };
+
     };
 
     class I_E_UAV_01_F;
@@ -202,6 +207,10 @@ class CfgVehicles {
 
         class PilotCamera: UAVPod{};
 
+        class ADDON {
+            trackPilotCamera = 1;
+        };
+
     };
 
     class B_UAV_02_dynamicLoadout_F;
@@ -230,6 +239,10 @@ class CfgVehicles {
         class Viewoptics: UAVOptics{};
 
         class PilotCamera: UAVPod{};
+
+        class ADDON {
+            trackPilotCamera = 1;
+        };
         
     };
     
@@ -260,6 +273,10 @@ class CfgVehicles {
 
         class PilotCamera: UAVPod{};
 
+        class ADDON {
+            trackPilotCamera = 1;
+        };
+
     };
     
     class I_UAV_02_dynamicLoadout_F;
@@ -288,6 +305,10 @@ class CfgVehicles {
         class Viewoptics: UAVOptics{};
 
         class PilotCamera: UAVPod{};
+
+        class ADDON {
+            trackPilotCamera = 1;
+        };
 
     };
 
@@ -318,6 +339,10 @@ class CfgVehicles {
 
         class PilotCamera: UAVPod{};
 
+        class ADDON {
+            trackPilotCamera = 1;
+        };
+
     };
 
     
@@ -347,6 +372,10 @@ class CfgVehicles {
         class Viewoptics: UAVOptics{};
 
         class PilotCamera: UAVPod{};
+
+        class ADDON {
+            trackPilotCamera = 1;
+        };
 
     };
 
@@ -383,6 +412,10 @@ class CfgVehicles {
         class Viewoptics: UAVOptics{};
 
         class PilotCamera: UAVPod{};
+
+        class ADDON {
+            trackPilotCamera = 1;
+        };
 
     };
 };
