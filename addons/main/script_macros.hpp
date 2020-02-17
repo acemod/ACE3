@@ -133,10 +133,8 @@
 #define DEG_TO_MRAD(d) ((d) * 17.45329252) // Conversion factor: (50 * PI) / 9
 #define MRAD_TO_DEG(d) ((d) / 17.45329252) // Conversion factor: 9 / (50 * PI)
 #define MOA_TO_RAD(d) ((d) * 0.00029088) // Conversion factor: PI / 10800
-#define EVAL_MOA_TO_RAD(d) __EVAL(MOA_TO_RAD(d))
 
 #define AI_DISPERSION(newDispersion,oldDispersion,oldCoef) ((oldDispersion * oldCoef) / (newDispersion))
-#define EVAL_AI_DISPERSION(newDispersion,oldDispersion,oldCoef) __EVAL(AI_DISPERSION(newDispersion,oldDispersion,oldCoef))
 
 #define ZEUS_ACTION_CONDITION ([_target, {QUOTE(QUOTE(ADDON)) in curatorAddons _this}, missionNamespace, QUOTE(QGVAR(zeusCheck)), 1E11, 'ace_interactMenuClosed'] call EFUNC(common,cachedCall))
 
