@@ -236,12 +236,12 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 457.2;
-        class Single: Mode_SemiAuto {
+        class Single: Single {
             dispersion = MOA_TO_RAD(0.90);
             AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,1.4,1.7);
         };
 
-        class FullAuto: Mode_FullAuto {
+        class FullAuto: FullAuto {
             dispersion = MOA_TO_RAD(0.90);
             AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,2,3);
         };
