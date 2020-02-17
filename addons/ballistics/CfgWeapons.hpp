@@ -14,59 +14,91 @@ class CfgWeapons {
 
     // GM6 Lynx
     class GM6_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.45),0.00035,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.45),0.00035,6);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.45);
+            dispersion = EVAL_MOA_TO_RAD(0.45);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.45),0.00035,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.45),0.00035,1.4);
         };
     };
 
     // M200 Intervention
     class LRR_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.50),0.00018,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.50),0.00018,6);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.50);
+            dispersion = EVAL_MOA_TO_RAD(0.50);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.50),0.00018,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.50),0.00018,1.4);
         };
     };
 
     // MX
     class arifle_MX_Base_F: Rifle_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00087,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00087,4);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00087,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00087,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00087,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00087,2);
         };
     };
 
     // KH2002 Sama
     class arifle_katiba_Base_F: Rifle_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,4);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,2);
         };
     };
 
     // CTAR-21
     class Tavor_base_F: Rifle_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,4);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,2);
         };
     };
 
     // F2000
     class mk20_base_F: Rifle_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,4);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,2);
         };
     };
 
@@ -85,59 +117,91 @@ class CfgWeapons {
 
     // Noreen "Bad News" ULR
     class DMR_02_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.61),0.00044,3);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.61),0.00044,2);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.61);
+            dispersion = EVAL_MOA_TO_RAD(0.61);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.61),0.00044,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.61),0.00044,1.4);
         };
     };
 
     // VS-121
     class DMR_01_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,1.7);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,1.4);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,2);
         };
     };
 
     // Mk14 Mod 1 EBR
     class EBR_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00073,3);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00073,2);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00073,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00073,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00073,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00073,2);
         };
     };
 
     // SIG 556
     class DMR_03_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,3);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,2);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,2);
         };
     };
 
     // ASP-1 Kir
     class DMR_04_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.0),0.0029,3);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.0),0.0029,2);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.0);
+            dispersion = EVAL_MOA_TO_RAD(1.0);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.0),0.0029,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.0),0.0029,1.4);
         };
     };
 
     // Cyrus
     class DMR_05_base_F: Rifle_Long_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.67),0.00073,3);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.67),0.00073,2);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.67);
+            dispersion = EVAL_MOA_TO_RAD(0.67);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.67),0.00073,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.67),0.00073,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.67);
+            dispersion = EVAL_MOA_TO_RAD(0.67);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.67),0.00073,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.67),0.00073,2);
         };
     };
 
@@ -146,18 +210,28 @@ class CfgWeapons {
         ACE_barrelLength = 558.8;
         ACE_barrelTwist = 304.8;
         initSpeed = -0.999395;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00087,3);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00087,2);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00087,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00087,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00087,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00087,2);
         };
     };
 
     class DMR_06_hunter_base_F: DMR_06_base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.000435,3);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.000435,2);
         class Single: Single {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.000435,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.000435,1.4);
         };
     };
 
@@ -171,15 +245,21 @@ class CfgWeapons {
             "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim",
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
         };
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,24);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,21);
         initSpeed = -0.981912;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 406.4;
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00087,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00087,2);
         };
     };
 
@@ -192,15 +272,21 @@ class CfgWeapons {
             "ACE_30Rnd_65x47_Scenar_mag",
             "ACE_30Rnd_65_Creedmor_mag"
         };
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,4);
         initSpeed = -1.0;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 457.2;
-        class Single: Single {
-            dispersion = MOA_TO_RAD(0.90);
+        class Single: Mode_SemiAuto {
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,1.4);
         };
 
-        class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
+        class FullAuto: Mode_FullAuto {
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00073,2);
         };
     };
 
@@ -221,12 +307,18 @@ class CfgWeapons {
         initSpeed = -0.869636;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 264.0;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00073,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00073,6);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00073,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00073,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00073,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00073,2);
         };
     };
 
@@ -235,12 +327,18 @@ class CfgWeapons {
         initSpeed = -0.999864;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.0;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00058,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00058,6);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00058,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00058,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00058,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00058,2);
         };
     };
 
@@ -259,12 +357,18 @@ class CfgWeapons {
         initSpeed = -0.991536;
         ACE_barrelTwist = 279.4;
         ACE_barrelLength = 508.0;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,6);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
+            dispersion = EVAL_MOA_TO_RAD(0.81);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.81),0.00058,2);
         };
     };
 
@@ -291,16 +395,24 @@ class CfgWeapons {
 
     // RFB SDAR
     class SDAR_base_F: Rifle_Base_F {
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(3.0),0.00131,14);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(3.0),0.00131,10);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(3.0);
+            dispersion = EVAL_MOA_TO_RAD(3.0);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(3.0),0.00131,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(3.0),0.00131,1.4);
         };
 
         class Burst: Mode_Burst {
-            dispersion = MOA_TO_RAD(3.0);
+            dispersion = EVAL_MOA_TO_RAD(3.0);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(3.0),0.00131,2.4);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(3.0),0.00131,1.9);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(3.0);
+            dispersion = EVAL_MOA_TO_RAD(3.0);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(3.0),0.00131,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(3.0),0.00131,2);
         };
     };
 
@@ -408,12 +520,18 @@ class CfgWeapons {
         initSpeed = -0.978947;
         ACE_barrelTwist = 244.0;
         ACE_barrelLength = 463.0;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,6);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00116,2);
         };
     };
 
@@ -422,13 +540,17 @@ class CfgWeapons {
         initSpeed = -0.99998;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 640.0;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.01),0.00044,3);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.01),0.00044,2);
         magazines[] = {
             "20Rnd_650x39_Cased_Mag_F",
             "ACE_20Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65_Creedmor_mag"
         };
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.01);
+            dispersion = EVAL_MOA_TO_RAD(1.01);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.01),0.00044,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.01),0.00044,1.4);
         };
     };
 
@@ -437,12 +559,18 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist = 244.0;
         ACE_barrelLength = 600.0;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00102,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00102,6);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00102,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00102,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00102,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00102,2);
         };
     };
 
@@ -451,12 +579,18 @@ class CfgWeapons {
         initSpeed = -0.984262;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 463.0;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,4);
         class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,1.4);
         };
 
         class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,2);
         };
     };
 
@@ -482,12 +616,18 @@ class CfgWeapons {
         initSpeed = -0.961294;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 393.7;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00145,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00145,4);
         class Single: Single {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00145,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00145,1.4);
         };
 
         class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00145,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00145,2);
         };
     };
 
@@ -537,12 +677,18 @@ class CfgWeapons {
         initSpeed = -0.946382;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 266.7;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,4);
         class Single: Single {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,1.4);
         };
 
         class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
+            dispersion = EVAL_MOA_TO_RAD(0.90);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(0.90),0.00116,2);
         };
     };
 
@@ -619,11 +765,15 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 459.74;
         class Single: Single {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00087,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00087,1.4);
         };
 
         class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00087,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00087,2);
         };
     };
 
@@ -682,12 +832,18 @@ class CfgWeapons {
         initSpeed = -0.974297;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 406.4;
+        aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00145,6);
+        aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00145,4);
         class Single: Single {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00145,1.7);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00145,1.4);
         };
 
         class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
+            dispersion = EVAL_MOA_TO_RAD(1.12);
+            aiDispersionCoefY = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00145,3);
+            aiDispersionCoefX = EVAL_AI_DISPERSION(MOA_TO_RAD(1.12),0.00145,2);
         };
     };
 
