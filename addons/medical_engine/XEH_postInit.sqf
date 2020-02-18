@@ -27,7 +27,7 @@
             _unit addEventHandler ["HandleDamage", {
                 // Not returning anything for dead units prevents double execution of Killed events.
                 private _return = _this call FUNC(handleDamage);
-                if (alive _unit) then {_return};
+                if (alive param [0]) then {_return};
             }]
         ];
     };
