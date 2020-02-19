@@ -42,7 +42,7 @@ private _unit = {
     if (_x isKindOf "CAManBase") exitWith {_x};
 } forEach (attachedObjects (_brokenRope select 3));
 
-if !(isNil "_unit") then {
+if (!isNil "_unit") then {
     if (_part == "top") then {
         detach _unit;
     } else {
