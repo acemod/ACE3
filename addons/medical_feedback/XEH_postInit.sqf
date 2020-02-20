@@ -57,7 +57,7 @@ GVAR(bloodTickCounter) = 0;
     params ["_unit"];
 
     if (_unit != ACE_player) exitWith {};
-
+    // Players always able to hear for any systems that might run while dead (e.g. spectator)
     [true, _unit] call EFUNC(common,setVolume);
 
     [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
