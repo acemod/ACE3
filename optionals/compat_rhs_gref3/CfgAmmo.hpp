@@ -2,7 +2,9 @@ class CfgAmmo {
     class GrenadeHand;
     class rhsgref_ammo_rkg3em: GrenadeHand { // Scripted shaped charge
         ace_frag_force = 0;
+        rhs_fuseTime[] = {0.6, 0.65, 0.7}; // Up the fuseTime values to account for delay used in ace_advanced_throwing_fnc_throw
     };
+
     class BulletBase;
     class rhs_ammo_762x25_Ball: BulletBase {
         ACE_caliber=7.874;
