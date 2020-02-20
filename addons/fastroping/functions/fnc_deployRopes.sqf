@@ -34,7 +34,7 @@ if (_ropeLength <= 0) then {
 
 TRACE_3("",_ropeClass,_ropeLength,GVAR(requireRopeItems));
 
-if (GVAR(requireRopeItems)) then {
+if (GVAR(requireRopeItems) && {_ropeClass != ""}) then {
     if (_ropeClass in (_player call EFUNC(common,uniqueItems))) then {
         _player removeItem _ropeClass;
     } else {
