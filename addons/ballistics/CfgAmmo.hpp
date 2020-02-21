@@ -495,7 +495,7 @@ class CfgAmmo {
         ACE_bulletMass = 17; // https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
         ACE_muzzleVelocityVariationSD = 0.4;
         ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[] = {0.515}; // Compromise as close as possible to these MVs and ToF from this table (unknown measurement conditions) https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=5
+        ACE_ballisticCoefficients[] = {0.515}; // Compromise as close as possible to these velocities and times of flight from this table (unknown measurement conditions) https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=5
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ICAO"; // Better result with ICAO (15°C, 1013,25 hPa, 0%) than ASM conditions (15°C, 999,916 hPa, 78%)
         ACE_dragModel = 1; // Better result than an equivalent G7 BC
