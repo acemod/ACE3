@@ -36,7 +36,7 @@
             <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht (Überprüfung alle 15 Sekunden)</German>
             <Japanese>容体が安定しているユニットが気絶する確率を決定できます。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
-            <French>La probabilité qu'une unité en état stable puisse reprendre conscience spontanément (état vérifié toutes les 15 secondes).</French>
+            <French>La probabilité pour qu'une unité inconsciente en état stable reprenne conscience spontanément (état vérifié toutes les 15 secondes).</French>
             <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
             <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
             <Italian>La probabilità che un'unità con i segni vitali stabili si risvegli dall'incoscienza (controllata ogni 15 secondi).</Italian>
@@ -46,6 +46,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Wake Up Chance Boost</English>
+            <French>L'épinéphrine augmente les chances de réveil</French>
             <Polish>Zwiększenie szansy na wybudzenie po podaniu epinefryny</Polish>
             <Chinese>腎上腺素甦醒率加成</Chinese>
             <German>Erhöhung der Aufwachüberprüfungsrate durch Epinephrin</German>
@@ -54,7 +55,7 @@
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
             <Japanese>患者がアドレナリンを投与されると自発的に覚醒する確率を上昇させます。</Japanese>
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
-            <French>Augmente la probabilité qu'un patient inconscient se réveille spontanément lorsqu'il a de l'épinéphrine dans son système sanguin.</French>
+            <French>Augmente la fréquence des tests de réveil lorsque le patient a de l'épinéphrine dans son système sanguin.\n(L'épinéphrine n'accélère pas la reprise de conscience si la valeur est définie sur 1.)</French>
             <Italian>Aumenta la frequenza dei controlli al risveglio spontaneo quando il paziente ha l'Epinefrina nel suo corpo</Italian>
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
             <Polish>Zwiększa częstotliwość spontanicznych wybudzeń, gdy pacjent ma epinefrynę w swoim organizmie. </Polish>
