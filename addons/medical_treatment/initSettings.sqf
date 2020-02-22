@@ -195,7 +195,7 @@
     "SLIDER",
     [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [0, 1, 0.4, 2],
+    [0, 1, 0.4, 2, true],
     true
 ] call CBA_settings_fnc_init;
 
