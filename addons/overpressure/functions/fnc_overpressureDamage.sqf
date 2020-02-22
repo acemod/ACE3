@@ -56,12 +56,13 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             // If the target is the ACE_player
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};
 
-            if (isClass (configFile >> "CfgPatches" >> "ACE_Medical")) then {
-                [_x, _damage, "body", "backblast", _firer] call EFUNC(medical,addDamageToUnit);
-            } else {
-                TRACE_1("",isDamageAllowed _x);
-                if (!isDamageAllowed _x) exitWith {}; // Skip damage if not allowed
-                _x setDamage (damage _x + _damage);
+            TRACE_1("",isDamageAllowed _x);
+            if (isDamageAllowed _x && {_x getVariable [QEGVAR(medical,allowDamage), true]}) then {
+                if (isClass (configFile >> "CfgPatches" >> "ACE_Medical")) then {
+                    [_x, _damage, "body", "backblast", _firer] call EFUNC(medical,addDamageToUnit);
+                } else {
+                    _x setDamage (damage _x + _damage);
+                };
             };
 
             #ifdef DEBUG_MODE_FULL

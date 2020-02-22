@@ -79,6 +79,7 @@
             <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
             <Portuguese>Dogtag pego de %1...</Portuguese>
             <Spanish>Tomado placa de identidad de %1...</Spanish>
+            <Turkish>Künye %1 kişisinden alındı</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the dogtag...</English>

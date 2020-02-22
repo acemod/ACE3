@@ -4,7 +4,6 @@ class CfgWeapons {
         class WeaponSlotsInfo;
     };
 
-
     // Tripods:
     class GVAR(m3CarryTripod): Launcher_Base_F {
         class ADDON {
@@ -28,6 +27,7 @@ class CfgWeapons {
             deploy = QGVAR(m3TripodLow);
         };
         displayName = CSTRING(m3TripodLowFolded_displayName);
+        author = ECSTRING(common,ACETeam);
     };
 
     class GVAR(kordCarryTripod): Launcher_Base_F {
@@ -53,6 +53,7 @@ class CfgWeapons {
             deploy = QGVAR(kordTripodLow);
         };
         displayName = CSTRING(kordTripodFoldedLow_displayName);
+        author = ECSTRING(common,ACETeam);
     };
 
     class GVAR(m220CarryTripod): Launcher_Base_F {
@@ -127,8 +128,6 @@ class CfgWeapons {
         picture = QPATHTOF(UI\Tripod_Icon.paa); // todo
     };
 
-
-
     // Weapons:
     class GVAR(staticATCarry): Launcher_Base_F {
         class ADDON {
@@ -151,23 +150,13 @@ class CfgWeapons {
     };
 
     class GVAR(staticAACarry): GVAR(staticATCarry) {
-        class ADDON {
-            type = "weapon";
-            deployTime = 15;
-            pickupTime = 20;
+        class ADDON: ADDON {
             class assembleTo {
                 GVAR(m3Tripod) = "B_static_AA_F";
             };
         };
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 320;
-        };
         displayName = CSTRING(StaticAABag_displayName);
         author = ECSTRING(common,ACETeam);
-        scope = 2;
-        model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
-        modes[] = {};
-        picture = QPATHTOF(UI\StaticAT_Icon.paa);
     };
 
     class GVAR(staticHMGCarry): Launcher_Base_F {
@@ -212,7 +201,6 @@ class CfgWeapons {
         picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
     };
 
-
     class GVAR(staticMortarCarry): Launcher_Base_F {
         class ADDON {
             type = "weapon";
@@ -230,7 +218,7 @@ class CfgWeapons {
         scope = 2;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
-        picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
+        picture = QPATHTOF(UI\StaticMortarTube_Icon.paa);
     };
 
     // Proxy Weapons
@@ -246,7 +234,6 @@ class CfgWeapons {
     class GVAR(Titan_AA_Static) : missiles_titan_static {
         magazineReloadTime = 0.5;
     };
-
 
     /*
     class GVAR(staticAutoHMGCarry): Launcher_Base_F {
@@ -270,7 +257,6 @@ class CfgWeapons {
         picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
     };
 
-
     class GVAR(staticAutoGMGCarry): Launcher_Base_F {
         class GVAR(options) {
             assembleTo = QGVAR(staticAutoGMGWeapon);
@@ -291,4 +277,3 @@ class CfgWeapons {
 
  */
 };
-

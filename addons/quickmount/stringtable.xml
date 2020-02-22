@@ -95,6 +95,7 @@
             <Portuguese>Distância máxima para checar por veículos.</Portuguese>
             <French>Distance de vérification maximale des véhicules.</French>
             <Czech>Maximální vzdálenost od vozidel.</Czech>
+            <Turkish>Araçların kontrol edilmesi için maksimum mesafe.</Turkish>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleLocked">
             <English>Vehicle Locked</English>
@@ -139,6 +140,7 @@
             <Portuguese>Velocidade máxima que o veículo pode estar para permitr entrada rápida.</Portuguese>
             <French>Définit la vitesse maximale que peut avoir un véhicule en mouvement pour qu'un joueur réussisse à y entrer.</French>
             <Czech>Maximální rychlost vozidla (km/h) při které hráči mohou nastoupit do vozidla</Czech>
+            <Turkish>Oyuncu binmesi için izin verilen maksimum araç hızı (km / s)</Turkish>
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
             <English>Prioritize Seat</English>
@@ -153,6 +155,7 @@
             <Portuguese>Priorizar Assento</Portuguese>
             <French>Place prioritaire</French>
             <Czech>Priorita sedadel</Czech>
+            <Turkish>Koltuğa Öncelik Ver</Turkish>
         </Key>
         <Key ID="STR_ACE_QuickMount_PriorityDescription">
             <English>Seat priority on entry</English>
@@ -167,6 +170,7 @@
             <Portuguese>Define qual o assento que vai priorizar a Entrada Rápida</Portuguese>
             <French>Définit à quel poste s'asseoir en priorité lors de l'embarquement.</French>
             <Czech>Priorita sedadla při nástupu</Czech>
+            <Turkish>Araça binerken koltuk önceliği</Turkish>
         </Key>
         <Key ID="STR_ACE_QuickMount_ChangeSeat">
             <English>Change seat</English>

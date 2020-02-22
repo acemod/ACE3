@@ -12,6 +12,7 @@
             <Chinese>有線制導</Chinese>
             <French>Filoguidé</French>
             <Czech>Drátem naváděné</Czech>
+            <Turkish>Tel-Güdümlü</Turkish>
             <Spanish>Guiado por cable</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_SACLOS_Description">
@@ -38,6 +39,7 @@
             <Chinese>有線制導飛彈</Chinese>
             <French>Missile filoguidé</French>
             <Czech>Drátem naváděná střela</Czech>
+            <Turkish>Tel Güdümlü Füze</Turkish>
             <Spanish>Misil guiado por cable</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hotMissile">
@@ -51,6 +53,7 @@
             <Chinese>高次音速(HOT)飛彈</Chinese>
             <French>Missile HOT</French>
             <Czech>HOT Střela</Czech>
+            <Turkish>HOT Missile</Turkish>
             <Spanish>Misil HOT</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot1">
@@ -64,6 +67,7 @@
             <French>HOT 1</French>
             <Chinese>HOT 1</Chinese>
             <Czech>HOT 1</Czech>
+            <Turkish>HOT 1</Turkish>
             <Spanish>HOT 1</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot2">
@@ -77,6 +81,7 @@
             <French>HOT 2</French>
             <Chinese>HOT 2</Chinese>
             <Czech>HOT 2</Czech>
+            <Turkish>HOT 2</Turkish>
             <Spanish>HOT 2</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp">
@@ -90,6 +95,7 @@
             <French>HOT 2MP</French>
             <Chinese>HOT 2MP</Chinese>
             <Czech>HOT 2MP</Czech>
+            <Turkish>HOT 2MP</Turkish>
             <Spanish>HOT 2MP</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot3">
@@ -103,6 +109,7 @@
             <French>HOT 3</French>
             <Chinese>HOT 3</Chinese>
             <Czech>HOT 3</Czech>
+            <Turkish>HOT 3</Turkish>
             <Spanish>HOT 3</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_missileType_Description_AP">
@@ -116,6 +123,7 @@
             <Chinese>有線制導飛彈（反步兵）</Chinese>
             <French>Missile filoguidé (antipersonnel)</French>
             <Czech>Drátem naváděná střela (protipěchotní)</Czech>
+            <Turkish>Tel Güdümlü Füze (Anti-Personelı)</Turkish>
             <Spanish>Misil guiado por cable (Antipersona)</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_1">
@@ -129,6 +137,7 @@
             <French>1x HOT 1 [ACE]</French>
             <Chinese>1x HOT 1 [ACE]</Chinese>
             <Czech>1x HOT 1 [ACE]</Czech>
+            <Turkish>1x HOT 1 [ACE]</Turkish>
             <Spanish>1x HOT 1 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_3">
@@ -142,6 +151,7 @@
             <French>3x HOT 1 [ACE]</French>
             <Chinese>3x HOT 1 [ACE]</Chinese>
             <Czech>3x HOT 1 [ACE]</Czech>
+            <Turkish>3x HOT 1 [ACE]</Turkish>
             <Spanish>3x HOT 1 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot1_4">
@@ -155,6 +165,7 @@
             <French>4x HOT 1 [ACE]</French>
             <Chinese>4x HOT 1 [ACE]</Chinese>
             <Czech>4x HOT 1 [ACE]</Czech>
+            <Turkish>4x HOT 1 [ACE]</Turkish>
             <Spanish>4x HOT 1 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_1">
@@ -168,6 +179,7 @@
             <French>1x HOT 2 [ACE]</French>
             <Chinese>1x HOT 2 [ACE]</Chinese>
             <Czech>1x HOT 2 [ACE]</Czech>
+            <Turkish>1x HOT 2 [ACE]</Turkish>
             <Spanish>1x HOT 2 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_3">
@@ -181,6 +193,7 @@
             <French>3x HOT 2 [ACE]</French>
             <Chinese>3x HOT 2 [ACE]</Chinese>
             <Czech>3x HOT 2 [ACE]</Czech>
+            <Turkish>3x HOT 2 [ACE]</Turkish>
             <Spanish>3x HOT 2 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot2_4">
@@ -194,6 +207,7 @@
             <French>4x HOT 2 [ACE]</French>
             <Chinese>4x HOT 2 [ACE]</Chinese>
             <Czech>4x HOT 2 [ACE]</Czech>
+            <Turkish>4x HOT 2 [ACE]</Turkish>
             <Spanish>4x HOT 2 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_1">
@@ -207,6 +221,7 @@
             <French>1x HOT 2MP [ACE]</French>
             <Chinese>1x HOT 2MP [ACE]</Chinese>
             <Czech>1x HOT 2MP [ACE]</Czech>
+            <Turkish>1x HOT 2MP [ACE]</Turkish>
             <Spanish>1x HOT 2MP [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_3">
@@ -220,6 +235,7 @@
             <French>3x HOT 2MP [ACE]</French>
             <Chinese>3x HOT 2MP [ACE]</Chinese>
             <Czech>3x HOT 2MP [ACE]</Czech>
+            <Turkish>3x HOT 2MP [ACE]</Turkish>
             <Spanish>3x HOT 2MP [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot2mp_4">
@@ -233,6 +249,7 @@
             <French>4x HOT 2MP [ACE]</French>
             <Chinese>4x HOT 2MP [ACE]</Chinese>
             <Czech>4x HOT 2MP [ACE]</Czech>
+            <Turkish>4x HOT 2MP [ACE]</Turkish>
             <Spanish>4x HOT 2MP [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_1">
@@ -246,6 +263,7 @@
             <French>1x HOT 3 [ACE]</French>
             <Chinese>1x HOT 3 [ACE]</Chinese>
             <Czech>1x HOT 3 [ACE]</Czech>
+            <Turkish>1x HOT 3 [ACE]</Turkish>
             <Spanish>1x HOT 3 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_4">
@@ -259,6 +277,7 @@
             <French>4x HOT 3 [ACE]</French>
             <Chinese>4x HOT 3 [ACE]</Chinese>
             <Czech>4x HOT 3 [ACE]</Czech>
+            <Turkish>4x HOT 3 [ACE]</Turkish>
             <Spanish>4x HOT 3 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_HOT_hot3_3">
@@ -272,6 +291,7 @@
             <French>3x HOT 3 [ACE]</French>
             <Chinese>3x HOT 3 [ACE]</Chinese>
             <Czech>3x HOT 3 [ACE]</Czech>
+            <Turkish>3x HOT 3 [ACE]</Turkish>
             <Spanish>3x HOT 3 [ACE]</Spanish>
         </Key>
     </Package>

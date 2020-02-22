@@ -16,6 +16,7 @@
             <Korean>바람 정보 표시</Korean>
             <Chinesesimp>显示风力资讯</Chinesesimp>
             <Chinese>顯示風力資訊</Chinese>
+            <Turkish>Rüzgar Bilgilerini Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_WindInfoKeyToggle">
             <English>Show Wind Info (Toggle)</English>
@@ -32,6 +33,7 @@
             <Korean>바람 정보 표시 (토글)</Korean>
             <Chinesesimp>显示风力资讯(切换)</Chinesesimp>
             <Chinese>顯示風力資訊(切換)</Chinese>
+            <Turkish>Rüzgar Bilgilerini Göster (Değiştir)</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_Module_DisplayName">
             <English>Weather</English>
@@ -65,6 +67,7 @@
             <Korean>ACE 기후 모듈과 멀티플레이가 동기화됩니다.</Korean>
             <Chinesesimp>使用ACE天气模块来同步所有客户端的天气状态(多人游戏)</Chinesesimp>
             <Chinese>使用ACE天氣模塊來同步所有客戶端的天氣狀態(多人遊戲)</Chinese>
+            <Turkish>Çok oyunculu ACE </Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_enabled_DisplayName">
             <English>ACE Weather</English>
@@ -112,6 +115,7 @@
             <Korean>갱신 간격</Korean>
             <Chinesesimp>更新间隔</Chinesesimp>
             <Chinese>更新間隔</Chinese>
+            <Turkish>Güncelleştirme Aralığı</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_Description">
             <English>Defines the interval (seconds) between weather updates</English>
@@ -128,6 +132,7 @@
             <Korean>기후를 갱신 하는 간격을 초 단위로 정합니다.</Korean>
             <Chinesesimp>设定天气更新的时间间隔(秒)</Chinesesimp>
             <Chinese>設定天氣更新的時間間隔(秒)</Chinese>
+            <Turkish>Hava durumu güncellemeleri arasındaki aralığı (saniye) tanımlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_DisplayName">
             <English>Wind Simulation (map based)</English>
@@ -142,6 +147,7 @@
             <Portuguese>Simulação de Vento (baseado no mapa)</Portuguese>
             <Czech>Simulace větru (podle mapy)</Czech>
             <French>Simulation du vent (basée sur la carte)</French>
+            <Turkish>Rüzgar Simülasyonu (harita tabanlı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_windSimulation_Description">
             <English>Enables the map based wind simulation (overwrites vanilla wind)</English>
@@ -156,6 +162,7 @@
             <Portuguese>Ativar a simulação de vento dos mapas. (sobrepõe vento vanilla)</Portuguese>
             <Czech>Povoluje simulaci větru založenou na mapě (přepíše původní vítr)</Czech>
             <French>Active la simulation du vent basée sur la carte (écrase le vent vanilla).</French>
+            <Turkish>Harita tabanlı rüzgar simülasyonunu etkinleştirir (Normal rüzgarının üzerine yazar)</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_CheckAirTemperature">
             <English>Check Air Temperature</English>
@@ -167,6 +174,7 @@
             <Polish>Sprawdź temperaturę powietrza</Polish>
             <French>Vérifier la température</French>
             <Portuguese>Checar a temperatura do ar </Portuguese>
+            <Turkish>Hava Sıcaklığını Kontrol Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
@@ -178,6 +186,7 @@
             <Polish>Pokaż akcje sprawdzającą temperaturę powietrza</Polish>
             <French>Afficher l'interaction "Vérifier la température"</French>
             <Portuguese>Mostrar a ação "Checar a temperatura do ar"</Portuguese>
+            <Turkish>Hava Sıcaklığını Kontrol Etme Eylemini Göster</Turkish>
         </Key>
     </Package>
 </Project>

@@ -39,8 +39,8 @@ if (EGVAR(medical,fractures) > 0) then {
             TRACE_1("updating status effect",_isSprintBlocked);
             [_unit, "blockSprint", QEGVAR(medical,fracture), _isSprintBlocked] call EFUNC(common,statusEffect_set);
         };
-        if ((_fractures select 2) == 1) then { _aimFracture = _aimFracture + 2; };
-        if ((_fractures select 3) == 1) then { _aimFracture = _aimFracture + 2; };
+        if ((_fractures select 2) == -1) then { _aimFracture = _aimFracture + 2; };
+        if ((_fractures select 3) == -1) then { _aimFracture = _aimFracture + 2; };
     };
     _unit setVariable [QGVAR(aimFracture), _aimFracture, false]; // local only var, used in ace_medical's postInit to set ACE_setCustomAimCoef
 };

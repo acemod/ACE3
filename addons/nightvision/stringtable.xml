@@ -30,6 +30,7 @@
             <Korean>야투경 (1세대)</Korean>
             <Chinesesimp>夜视镜 (初代)</Chinesesimp>
             <Chinese>夜視鏡 (初代)</Chinese>
+            <Turkish>GG Gözlüğü (1. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2">
             <English>NV Goggles (Gen2)</English>
@@ -46,6 +47,7 @@
             <Korean>야투경 (2세대)</Korean>
             <Chinesesimp>夜视镜 (二代)</Chinesesimp>
             <Chinese>夜視鏡 (二代)</Chinese>
+            <Turkish>GG Gözlüğü (2. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -62,6 +64,7 @@
             <Korean>야투경 (3세대)</Korean>
             <Chinesesimp>夜视镜 (三代)</Chinesesimp>
             <Chinese>夜視鏡 (三代)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_brown">
             <English>NV Goggles (Gen3, Brown)</English>
@@ -78,6 +81,7 @@
             <Korean>야투경 (3세대, 갈색)</Korean>
             <Chinesesimp>夜视镜 (三代, 棕色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 棕色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Kahverengi)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green">
             <English>NV Goggles (Gen3, Green)</English>
@@ -94,6 +98,7 @@
             <Korean>야투경 (3세대, 녹색)</Korean>
             <Chinesesimp>夜视镜 (三代, 绿色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 綠色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black">
             <English>NV Goggles (Gen3, Black)</English>
@@ -110,6 +115,7 @@
             <Korean>야투경 (3세대, 검정색)</Korean>
             <Chinesesimp>夜视镜 (三代, 黑色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 黑色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4">
             <English>NV Goggles (Gen4)</English>
@@ -126,6 +132,7 @@
             <Korean>야투경 (4세대)</Korean>
             <Chinesesimp>夜视镜 (四代)</Chinesesimp>
             <Chinese>夜視鏡 (四代)</Chinese>
+            <Turkish>GG Gözlüğü (4. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_FullScreen">
             <English>NV Goggles (Wide)</English>
@@ -142,6 +149,7 @@
             <Korean>야투경 (넓음)</Korean>
             <Chinesesimp>夜视镜 (宽版)</Chinesesimp>
             <Chinese>夜視鏡 (寬版)</Chinese>
+            <Turkish>GG Gözlüğü (Geniş)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -158,6 +166,7 @@
             <Korean>밝기: %1</Korean>
             <Chinesesimp>亮度: %1</Chinesesimp>
             <Chinese>亮度: %1</Chinese>
+            <Turkish>Parlaklık: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_IncreaseNVGBrightness">
             <English>Increase NVG Brightness</English>
@@ -205,6 +214,7 @@
             <Korean>야간투시경</Korean>
             <Chinesesimp>夜视</Chinesesimp>
             <Chinese>夜視</Chinese>
+            <Turkish>Gece Görüşü</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_Description">
             <English>Settings for night vision.</English>
