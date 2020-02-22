@@ -117,6 +117,7 @@
         </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
             <English>Show Wipe Goggles self interaction</English>
+            <German>Zeige "Brille abwischen" im Selbstinteraktionsmenü</German>
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
             <Italian>Mostra interazione automatica per la pulizia degli occhiali</Italian>
             <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>

@@ -203,6 +203,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
             <English>Max Follow Distance</English>
+            <German>Maximale Beobachtungsdistance</German>
             <Russian>Макс. дистанция следования</Russian>
             <Japanese>最大追随距離</Japanese>
             <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
@@ -214,6 +215,7 @@
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
+            <German>Maximale Distanz in welcher die Kamera dem Ziel folgen kann.</German>
             <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
             <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
             <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
