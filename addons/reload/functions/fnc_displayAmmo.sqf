@@ -42,6 +42,11 @@ if (_target isKindOf "StaticWeapon") then {
             };
         } forEach _magazines;
     };
+    
+    // For static weapons the muzzle seemingly never returns anything for static weapons with/without people inside
+    if (_muzzle == "") then {
+        _muzzle = _weapon;
+    };
 };
 
 if (_magazine == "") exitWith {};
