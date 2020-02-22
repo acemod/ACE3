@@ -25,7 +25,7 @@
     "SLIDER",
     [LSTRING(FractureChance_DisplayName), LSTRING(FractureChance_Description)],
     LSTRING(Category),
-    [0, 1, 0.8, 2],
+    [0, 1, 0.8, 2, true],
     true
 ] call CBA_settings_fnc_init;
 
