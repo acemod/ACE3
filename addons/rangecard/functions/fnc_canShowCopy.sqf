@@ -19,4 +19,4 @@ GVAR(ammoClassCopy) != "" &&
 GVAR(magazineClassCopy) != "" &&
 GVAR(weaponClassCopy) != "" &&
 !GVAR(RangeCardOpened) &&
-"ACE_RangeCard" in ([ACE_player] call CBA_fnc_uniqueUnitItems)
+"ACE_RangeCard" in ([ACE_player] call EFUNC(common,uniqueItems))

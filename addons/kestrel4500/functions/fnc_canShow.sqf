@@ -15,4 +15,4 @@
  * Public: No
  */
 
-"ACE_Kestrel4500" in ([ACE_player] call CBA_fnc_uniqueUnitItems)
+"ACE_Kestrel4500" in ([ACE_player] call EFUNC(common,uniqueItems))

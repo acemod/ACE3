@@ -16,4 +16,4 @@
  */
 
 !underwater ACE_player &&
-"ACE_ATragMX" in ([ACE_player] call CBA_fnc_uniqueUnitItems)
+"ACE_ATragMX" in ([ACE_player] call EFUNC(common,uniqueItems))
