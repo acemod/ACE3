@@ -63,7 +63,7 @@
     } forEach (crew _vehicle);
 }, true, ["ParachuteBase"]] call CBA_fnc_addClassEventHandler;
 
-// fixes units being stuck in unconscious animation when being knocked over by a physix object
+// Fixes units being stuck in unconscious animation when being knocked over by a PhysX object
 ["CAManBase", "AnimDone", {
     params ["_unit", "_anim"];
     if (local _unit && {_anim == "unconscious" && {lifeState _unit != "INCAPACITATED"}}) then {
