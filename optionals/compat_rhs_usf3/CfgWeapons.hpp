@@ -495,6 +495,11 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            // One WeaponSlot with a positive value for iconScale forces game to use icon overlay method.
+            // Required, because the inventory icon has no accessory variants.
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 620; // M252 Mortar Weight
         };
         displayName = ECSTRING(CSW,m252_tube);
@@ -516,6 +521,9 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 840;
         };
         displayName = ECSTRING(CSW,m2_gun);
@@ -536,6 +544,9 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 770;
         };
         displayName = ECSTRING(CSW,mk19_gun);
@@ -556,6 +567,9 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 500;
         };
         displayName = ECSTRING(CSW,tow_tube);
@@ -566,4 +580,3 @@ class CfgWeapons {
         picture = "\rhsusf\addons\rhsusf_heavyweapons\data\Ico\RHS_TOW_TriPod_D_ca.paa";
     };
 };
-

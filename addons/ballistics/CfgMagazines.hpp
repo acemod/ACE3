@@ -440,7 +440,6 @@ class CfgMagazines {
         initSpeed = 860;
     };
 
-
     class 30Rnd_9x21_Mag: CA_Magazine {
         initSpeed = 430;
     };
@@ -513,27 +512,28 @@ class CfgMagazines {
     class 10Rnd_127x54_Mag: CA_Magazine {
         initSpeed = 300;
     };
-    
+
     class 150Rnd_556x45_Drum_Mag_F: CA_Magazine {
         initSpeed = 869;
     };
-    
+
     class 130Rnd_338_Mag: CA_Magazine {
         initSpeed = 807;
     };
-    
+
     class 200Rnd_65x39_Belt: VehicleMagazine {
         initSpeed = 806;
     };
-    
+
     class 20Rnd_556x45_UW_mag: 30Rnd_556x45_Stanag {
         initSpeed = 267;
     };
-    
+
     class 150Rnd_93x64_Mag: CA_Magazine {
-        initSpeed = 870;
+        initSpeed = 768; // according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
     };
+
     class 10Rnd_93x64_DMR_05_Mag: 150Rnd_93x64_Mag {
-        initSpeed = 870;
+        initSpeed = 780; // according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
     };
 };

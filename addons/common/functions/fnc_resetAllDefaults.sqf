@@ -23,7 +23,7 @@ _unit setVariable ["ACE_isUnconscious", nil, true];
 if (isPlayer _unit) then {
     [true] call FUNC(setVolume);
 
-    if !(isNil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
+    if (!isNil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
         // clear all disable user input
         {
             [_x, false] call FUNC(setDisableUserInputStatus);
