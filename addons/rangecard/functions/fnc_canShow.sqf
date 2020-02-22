@@ -15,7 +15,7 @@
  * Public: No
  */
 
-(GVAR(ammoClass) != "" &&
+GVAR(ammoClass) != "" &&
 GVAR(magazineClass) != "" &&
 GVAR(weaponClass) != "" &&
 !GVAR(RangeCardOpened) &&

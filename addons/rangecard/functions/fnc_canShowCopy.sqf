@@ -15,7 +15,7 @@
  * Public: No
  */
 
-(GVAR(ammoClassCopy) != "" &&
+GVAR(ammoClassCopy) != "" &&
 GVAR(magazineClassCopy) != "" &&
 GVAR(weaponClassCopy) != "" &&
 !GVAR(RangeCardOpened) &&
