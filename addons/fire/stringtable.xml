@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Fire">
+        <Key ID="STR_ACE_fire_category_displayName">
+            <English>ACE Fire</English>
+        </Key>
+        <Key ID="STR_ACE_fire_Actions_PatDown">
+            <English>Pat Down Fire</English>
+        </Key>
+        <Key ID="STR_ACE_fire_Actions_PerformingPatDown">
+            <English>Patting Down Fire</English>
+        </Key>
+        <Key ID="STR_ACE_fire_setting_enable">
+            <English>Enable</English>
+        </Key>
+        <Key ID="STR_ACE_fire_setting_description">
+            <English>Allow units to catch fire</English>
+        </Key>
+    </Package>
+</Project>

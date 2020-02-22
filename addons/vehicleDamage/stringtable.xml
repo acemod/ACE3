@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="vehicledamage">
+        <Key ID="STR_ACE_vehicledamage_category_displayName">
+            <English>ACE Advanced Vehicle Damage</English>
+        </Key>
+        <Key ID="STR_ACE_vehicledamage_setting_enable">
+            <English>Enable</English>
+        </Key>
+        <Key ID="STR_ACE_vehicledamage_setting_description">
+            <English>Enable/Disable advanced vehicle damage</English>
+        </Key>
+    </Package>
+</Project>

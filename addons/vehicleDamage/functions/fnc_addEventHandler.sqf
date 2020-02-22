@@ -16,6 +16,8 @@
  */
 params["_vehicle"];
 
+if !(GVAR(enabled)) exitWith {};
+
 private _hitpointHash = [[], nil] call CBA_fnc_hashCreate;
 private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
 private _hitpointsConfig = _vehicleConfig >> "HitPoints";

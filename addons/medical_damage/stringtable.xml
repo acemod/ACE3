@@ -631,41 +631,17 @@
             <Turkish>Ikisinden biri</Turkish>
             <German>Beide</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnFirstDegree">
-            <English>First-Degree Burn</English>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn">
+            <English>Thermal Burn</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnFirstDegree_Minor">
-            <English>Minor First-Degree Burn</English>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
+            <English>Minor Thermal Burn</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnFirstDegree_Medium">
-            <English>Medium First-Degree Burn</English>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
+            <English>Medium Thermal Burn</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnFirstDegree_Major">
-            <English>Major First-Degree Burn</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnSecondDegree">
-            <English>Second-Degree Burn</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnSecondDegree_Minor">
-            <English>Minor Second-Degree Burn</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnSecondDegree_Medium">
-            <English>Medium Second-Degree Burn</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnSecondDegree_Major">
-            <English>Major Second-Degree Burn</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnThirdDegree">
-            <English>Third-Degree Burn</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnThirdDegree_Minor">
-            <English>Minor Third-Degree Burn</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnThirdDegree_Medium">
-            <English>Medium Third-Degree Burn</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_ThermalBurnThirdDegree_Major">
-            <English>Major Third-Degree Burn</English>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
+            <English>Major Thermal Burn</English>
         </Key>
     </Package>
 </Project>
