@@ -150,6 +150,7 @@
             <Korean>취소</Korean>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_ScrollAction">
             <English>Rotate</English>
@@ -183,6 +184,7 @@
             <Korean>Thor III 켜기</Korean>
             <Chinesesimp>开启索尔三型</Chinesesimp>
             <Chinese>開啟索爾三型</Chinese>
+            <Turkish>Thor III ü aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Jammer_TurnOff">
             <English>Turn Off Thor III</English>
@@ -199,6 +201,7 @@
             <Korean>Thor III 끄기</Korean>
             <Chinesesimp>关闭索尔三型</Chinesesimp>
             <Chinese>關閉索爾三型</Chinese>
+            <Turkish>Thor III ü kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_displayName">
             <English>Cellphone</English>
@@ -265,6 +268,7 @@
             <Korean>원격으로 폭발물을 폭파시킬때 씁니다.</Korean>
             <Chinesesimp>用于远端引爆炸药</Chinesesimp>
             <Chinese>用於遠端引爆炸藥</Chinese>
+            <Turkish>Patlayıcıları uzaktan tetiklemek için kullanılır</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_M152_Clacker_displayName">
             <English>M152 Firing Device</English>
@@ -298,6 +302,7 @@
             <Korean>M152 RAMS</Korean>
             <Chinesesimp>M152 远端炸药引爆系统</Chinesesimp>
             <Chinese>M152 遠端炸藥引爆系統</Chinese>
+            <Turkish>M152 RAMS</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusalKit_displayName">
             <English>Defusal Kit</English>
@@ -314,6 +319,7 @@
             <Korean>해체 장비</Korean>
             <Chinesesimp>拆弹工具</Chinesesimp>
             <Chinese>拆彈工具</Chinese>
+            <Turkish>Imha Kiti</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusalKit_description">
             <English>Allows defusing of explosives</English>
@@ -330,6 +336,7 @@
             <Korean>폭발물을 해체할 수 있게 해줍니다</Korean>
             <Chinesesimp>可以用来拆除炸弹</Chinesesimp>
             <Chinese>可以用來拆除炸彈</Chinese>
+            <Turkish>Patlayıcıların etkisiz hale gelmesini sağlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_AddToSpeedDial">
             <English>Add to Speed Dial</English>
@@ -429,6 +436,7 @@
             <Korean>취소</Korean>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateMenu">
             <English>Detonate Menu</English>
@@ -445,6 +453,7 @@
             <Korean>폭파 메뉴</Korean>
             <Chinesesimp>引爆选单</Chinesesimp>
             <Chinese>引爆選單</Chinese>
+            <Turkish>Patlatma Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceMenu">
             <English>Place Menu</English>
@@ -461,6 +470,7 @@
             <Korean>설치 메뉴</Korean>
             <Chinesesimp>放置选单</Chinesesimp>
             <Chinese>放置選單</Chinese>
+            <Turkish>Yerleştirme Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Defuse">
             <English>Defuse</English>
@@ -477,6 +487,7 @@
             <Korean>해체</Korean>
             <Chinesesimp>拆除</Chinesesimp>
             <Chinese>拆除</Chinese>
+            <Turkish>Imha</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusingExplosive">
             <English>Defusing Explosive...</English>
@@ -493,6 +504,7 @@
             <Korean>폭발물 해체중...</Korean>
             <Chinesesimp>炸弹拆除中...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
+            <Turkish>Patlayıcı Imha Ediliyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_timerName">
             <English>Timer</English>

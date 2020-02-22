@@ -813,16 +813,16 @@ class CfgWeapons {
 
     // Cyrus
     class srifle_DMR_05_blk_F: DMR_05_base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 359.918;
-        ACE_barrelLength = 620.014;
+        initSpeed = -1.0; // 780 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
+        ACE_barrelTwist = 360.0;
+        ACE_barrelLength = 620.0;
     };
 
     // HK121
-    class MMG_01_hex_F: MMG_01_base_F {
-        initSpeed = -0.985613;
-        ACE_barrelTwist = 359.918;
-        ACE_barrelLength = 549.91;
+    class MMG_01_hex_F: MMG_01_base_F { // https://www.heckler-koch.com/en/products/military/machine-guns/mg5/mg5/technical-data.html93x
+        initSpeed = -1.0; // 768 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
+        ACE_barrelTwist = 360.0;
+        ACE_barrelLength = 550.0;
     };
 
     // LWMMG

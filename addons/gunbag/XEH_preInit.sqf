@@ -35,7 +35,7 @@ PREP_RECOMPILE_END;
 
 [QEGVAR(arsenal,displayClosed), {
 
-    if !(isNil QGVAR(arsenalCache)) then {
+    if (!isNil QGVAR(arsenalCache)) then {
         (backpackContainer EGVAR(arsenal,center)) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
     };
 

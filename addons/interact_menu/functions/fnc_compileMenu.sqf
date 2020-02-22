@@ -24,7 +24,7 @@ if (_target isEqualType objNull) then {
 private _namespace = GVAR(ActNamespace);
 
 // Exit if the action menu is already compiled for this class
-if !(isNil {_namespace getVariable _objectType}) exitWith {};
+if (!isNil {_namespace getVariable _objectType}) exitWith {};
 
 if (_objectType isKindOf "VirtualMan_F") exitWith { // these have config: isPlayableLogic = 1
     TRACE_1("skipping playable logic",_objectType);
@@ -41,7 +41,7 @@ private _recurseFnc = {
 
     {
         private _entryCfg = _x;
-        if(isClass _entryCfg) then {
+        if (isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
             private _distance = _parentDistance;
             if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
