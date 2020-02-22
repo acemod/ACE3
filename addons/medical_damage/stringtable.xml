@@ -15,18 +15,18 @@
             <German>Schwelle für kritischen Spielerschaden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
-            <English>Sets the amount of damage a player can receive before going unconscious.</English>
+            <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
             <Japanese>プレイヤーが気絶になる前に受けられるダメージ量を決定できます。</Japanese>
-            <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance.</French>
+            <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
             <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
             <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
             <Italian>Imposta la quantità di danno che un giocatore può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození hráč může obdržet než upadne do bezvědomí.</Czech>
-            <Polish>Definiuje ilość obrażeń jaką może przyjąć gracz przed straceniem przytomności.</Polish>
+            <Polish>Definiuje ilość obrażeń jaką może przyjąć gracz przed straceniem przytomności (oraz śmierci gdy "Suma urazów" jest włączona).</Polish>
             <Spanish>Fijar la cantidad de daño que un jugador puede recivir antes de caer inconsciente</Spanish>
+            <German>Legt die Höhe des Schadens fest, den ein Spieler erhalten kann, bevor er ohnmächtig wird (oder stirbt, wenn "Summe aller Traumata" aktiviert ist).</German>
             <Turkish>Bir oyuncunun bayılmadan önce alabileceği hasar miktarını belirler.</Turkish>
-            <German>Legt die Höhe des Schadens fest, den ein Spieler erhalten kann, bevor er ohnmächtig wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
@@ -42,17 +42,17 @@
             <German>Schwelle für kritischen KI-Schaden</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
-            <English>Sets the amount of damage an AI unit can receive before going unconscious.</English>
+            <English>Sets the amount of damage an AI unit can receive before going unconscious (or dying when "Sum of Trauma" is enabled).</English>
             <Japanese>AI が気絶になる前に受けられるダメージ量を決定できます。</Japanese>
-            <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance.</French>
+            <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
             <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
             <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
             <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
             <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
-            <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności</Polish>
+            <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności (oraz śmierci gdy "Suma urazów" jest włączona).</Polish>
             <Spanish>Fijar la cantidad de daño que la IA puede recivir antes de caer inconsciente</Spanish>
-            <German>Legt die Höhe des Schadens fest, den eine KI-Einheit erhalten kann, bevor sie ohnmächtig wird.</German>
+            <German>Legt die Höhe des Schadens fest, den eine KI-Einheit erhalten kann, bevor sie ohnmächtig wird (oder stirbt, wenn "Summe aller Traumata" aktiviert ist).</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
@@ -612,7 +612,7 @@
             <French>Somme des traumatismes</French>
             <Italian>Somma dei traumi</Italian>
             <Czech>Celkové množství úrazů</Czech>
-            <Polish>Wiele Urazów</Polish>
+            <Polish>Suma urazów</Polish>
             <Portuguese>Soma do trauma</Portuguese>
             <Spanish>Suma de traumatismos</Spanish>
             <German>Summe aller Traumata</German>
