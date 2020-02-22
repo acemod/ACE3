@@ -135,6 +135,7 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     };
 
     // Make player flinch
+    if (_strength <= 0.2) exitWith {};
     private _minFlinch = linearConversion [0.2, 1, _strength, 0, 60, true];
     private _maxFlinch = linearConversion [0.2, 1, _strength, 0, 95, true];
     private _flinch    = (_minFlinch + random (_maxFlinch - _minFlinch)) * selectRandom [-1, 1];
