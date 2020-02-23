@@ -95,6 +95,21 @@ if (binocular _medic != "" && {binocular _medic == currentWeapon _medic}) then {
 
 // Play treatment animation for medic and determine the ending animation
 if (vehicle _medic == _medic && {_medicAnim != ""}) then {
+    // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
+    private _animRatio = (_animDuration / _treatmentTime) min 3;
+    TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);
+
+    // Don't slow down animation too much to prevent it looking funny.
+    if (_animRatio < ANIMATION_SPEED_MIN_COEFFICIENT) then {
+        _animRatio = ANIMATION_SPEED_MIN_COEFFICIENT;
+    };
+
+    // Skip animation enitrely if progress bar too quick.
+    if (_animRatio > ANIMATION_SPEED_MAX_COEFFICIENT) exitWith {};
+
+    [QEGVAR(common,setAnimSpeedCoef), [_medic, _animRatio]] call CBA_fnc_globalEvent;
+
+    // Play animation
     private _endInAnim = "AmovP[pos]MstpS[stn]W[wpn]Dnon";
 
     private _pos = ["knl", "pne"] select (stance _medic == "PRONE");
@@ -111,11 +126,6 @@ if (vehicle _medic == _medic && {_medicAnim != ""}) then {
     [_medic, _medicAnim] call EFUNC(common,doAnimation);
     [_medic, _endInAnim] call EFUNC(common,doAnimation);
     _medic setVariable [QGVAR(endInAnim), _endInAnim];
-
-    // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
-    private _animRatio = (_animDuration / _treatmentTime) min 3;
-    TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);
-    [QEGVAR(common,setAnimSpeedCoef), [_medic, _animRatio]] call CBA_fnc_globalEvent;
 
     if (!isNil QEGVAR(advanced_fatigue,setAnimExclusions)) then {
         EGVAR(advanced_fatigue,setAnimExclusions) pushBack QUOTE(ADDON);
