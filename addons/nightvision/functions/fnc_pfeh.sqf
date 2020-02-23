@@ -57,6 +57,11 @@ if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
 };
 END_COUNTER(borderScaling);
 
+if !(IS_MAGNIFIED isEqualTo GVAR(isUsingMagnification)) then {
+    GVAR(isUsingMagnification) = IS_MAGNIFIED;
+    GVAR(nextEffectsUpdate) = -1;
+};
+
 if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // Update radial blur as it depends on zoom level, so should be changed each frame like the border/hex
     if (GVAR(ppeffectRadialBlur) != -1) then {
@@ -89,7 +94,7 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _fogApply = linearConversion [0, 1, _effectiveLight, ST_NVG_MAXFOG, ST_NVG_MINFOG, true];
 
     // Modify blur if looking down scope
-    if (cameraView == "GUNNER" && {[_unit] call CBA_fnc_canUseWeapon && {0.75 call CBA_fnc_getFOV select 1 < 3.01}}) then {
+    if (cameraView == "GUNNER" && {[_unit] call CBA_fnc_canUseWeapon && {!GVAR(isUsingMagnification)}}) then {
         private _weapon = currentWeapon _unit;
         if (_weapon == "") exitWith {};
         if (_weapon == primaryWeapon _unit) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE]}; // Rifles are bad
