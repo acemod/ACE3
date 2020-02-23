@@ -24,7 +24,7 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     (findDisplay 91919) closeDisplay 2;
 };
 
-if(GVAR(actionSelected)) then {
+if (GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 
     private _player = ACE_Player;
