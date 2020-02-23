@@ -89,7 +89,7 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _fogApply = linearConversion [0, 1, _effectiveLight, ST_NVG_MAXFOG, ST_NVG_MINFOG, true];
 
     // Modify blur if looking down scope
-    if (cameraView == "GUNNER" && {[_unit] call CBA_fnc_canUseWeapon && {systemChat str (0.75 call CBA_fnc_getFOV select 1); 0.75 call CBA_fnc_getFOV select 1 < 3.01}}) then {
+    if (cameraView == "GUNNER" && {[_unit] call CBA_fnc_canUseWeapon && {0.75 call CBA_fnc_getFOV select 1 < 3.01}}) then {
         private _weapon = currentWeapon _unit;
         if (_weapon == "") exitWith {};
         if (_weapon == primaryWeapon _unit) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE]}; // Rifles are bad
