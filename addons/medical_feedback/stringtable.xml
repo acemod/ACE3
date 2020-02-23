@@ -106,22 +106,27 @@
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
             <English>Low Blood Volume Effect Type</English>
             <Russian>Визуальный эффект низкого объема крови</Russian>
+            <French>Effet de faible volume sanguin</French>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
             <English>Selects the used low blood volume effect type.</English>
             <Russian>Выбирает тип визуализации эффекта низкого объема крови.</Russian>
+            <French>Permet de choisir quel effet provoque un faible volume sanguin.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>
             <Russian>Потеря цветности</Russian>
+            <French>Atténuation des couleurs</French>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
             <Russian>Иконка</Russian>
+            <French>Icône</French>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
             <English>Icon + Color Fading</English>
             <Russian>Иконка + Потеря цветности</Russian>
+            <French>Icône + Atténuation des couleurs</French>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
