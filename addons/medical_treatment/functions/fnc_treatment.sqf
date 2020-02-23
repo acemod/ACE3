@@ -96,7 +96,7 @@ if (binocular _medic != "" && {binocular _medic == currentWeapon _medic}) then {
 // Play treatment animation for medic and determine the ending animation
 if (vehicle _medic == _medic && {_medicAnim != ""}) then {
     // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
-    private _animRatio = (_animDuration / _treatmentTime) min 3;
+    private _animRatio = _animDuration / _treatmentTime;
     TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);
 
     // Don't slow down animation too much to prevent it looking funny.

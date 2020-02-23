@@ -53,4 +53,4 @@
 #define ANIMATION_SPEED_MIN_COEFFICIENT 0.5
 
 // Animations that would be played faster than this are instead skipped. (= Progress bar too quick for animation).
-#define ANIMATION_SPEED_MAX_COEFFICIENT 3
+#define ANIMATION_SPEED_MAX_COEFFICIENT 2.5
