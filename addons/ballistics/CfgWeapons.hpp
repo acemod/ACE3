@@ -1,7 +1,3 @@
-class Mode_SemiAuto;
-class Mode_Burst;
-class Mode_FullAuto;
-
 class CfgWeapons {
     class LMG_RCWS;
     class MGun;
@@ -13,62 +9,22 @@ class CfgWeapons {
     class Rifle_Long_Base_F: Rifle_Base_F {};
 
     // GM6 Lynx
-    class GM6_base_F: Rifle_Long_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.45);
-        };
-    };
+    class GM6_base_F: Rifle_Long_Base_F {};
 
     // M200 Intervention
-    class LRR_base_F: Rifle_Long_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.50);
-        };
-    };
+    class LRR_base_F: Rifle_Long_Base_F {};
 
     // MX
-    class arifle_MX_Base_F: Rifle_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-    };
+    class arifle_MX_Base_F: Rifle_Base_F {};
 
     // KH2002 Sama
-    class arifle_katiba_Base_F: Rifle_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-    };
+    class arifle_katiba_Base_F: Rifle_Base_F {};
 
     // CTAR-21
-    class Tavor_base_F: Rifle_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-    };
+    class Tavor_base_F: Rifle_Base_F {};
 
     // F2000
-    class mk20_base_F: Rifle_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-    };
+    class mk20_base_F: Rifle_Base_F {};
 
     // P90 (1.86)
     class SMG_03_TR_BASE: Rifle_Base_F {
@@ -84,81 +40,28 @@ class CfgWeapons {
     };
 
     // Noreen "Bad News" ULR
-    class DMR_02_base_F: Rifle_Long_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.61);
-        };
-    };
+    class DMR_02_base_F: Rifle_Long_Base_F {};
 
     // VS-121
-    class DMR_01_base_F: Rifle_Long_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-    };
+    class DMR_01_base_F: Rifle_Long_Base_F {};
 
     // Mk14 Mod 1 EBR
-    class EBR_base_F: Rifle_Long_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-    };
+    class EBR_base_F: Rifle_Long_Base_F {};
 
     // SIG 556
-    class DMR_03_base_F: Rifle_Long_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-    };
+    class DMR_03_base_F: Rifle_Long_Base_F {};
 
     // ASP-1 Kir
-    class DMR_04_base_F: Rifle_Long_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.0);
-        };
-    };
+    class DMR_04_base_F: Rifle_Long_Base_F {};
 
     // Cyrus
-    class DMR_05_base_F: Rifle_Long_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.67);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.67);
-        };
-    };
+    class DMR_05_base_F: Rifle_Long_Base_F {};
 
     // M14
     class DMR_06_base_F: Rifle_Long_Base_F {
         ACE_barrelLength = 558.8;
         ACE_barrelTwist = 304.8;
         initSpeed = -0.999395;
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-    };
-
-    class DMR_06_hunter_base_F: DMR_06_base_F {
-        class Single: Single {
-            dispersion = MOA_TO_RAD(0.81);
-        };
     };
 
     // MX LSW
@@ -174,13 +77,6 @@ class CfgWeapons {
         initSpeed = -0.981912;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 406.4;
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
     };
 
     // MXM
@@ -195,13 +91,6 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 457.2;
-        class Single: Single {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-
-        class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
     };
 
     // HK416A5 11"
@@ -221,13 +110,6 @@ class CfgWeapons {
         initSpeed = -0.869636;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 264.0;
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
     };
 
     // HK416A5 14.5"
@@ -235,13 +117,6 @@ class CfgWeapons {
         initSpeed = -0.999864;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.0;
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
     };
 
     // HK417A2 20"
@@ -259,13 +134,6 @@ class CfgWeapons {
         initSpeed = -0.991536;
         ACE_barrelTwist = 279.4;
         ACE_barrelLength = 508.0;
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.81);
-        };
     };
 
     // Stoner 99 LMG
@@ -290,19 +158,7 @@ class CfgWeapons {
     };
 
     // RFB SDAR
-    class SDAR_base_F: Rifle_Base_F {
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(3.0);
-        };
-
-        class Burst: Mode_Burst {
-            dispersion = MOA_TO_RAD(3.0);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(3.0);
-        };
-    };
+    class SDAR_base_F: Rifle_Base_F {};
 
     class Pistol;
     class Pistol_Base_F: Pistol {};
@@ -408,13 +264,6 @@ class CfgWeapons {
         initSpeed = -0.978947;
         ACE_barrelTwist = 244.0;
         ACE_barrelLength = 463.0;
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
     };
 
     // QBU-88
@@ -427,9 +276,6 @@ class CfgWeapons {
             "ACE_20Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65_Creedmor_mag"
         };
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.01);
-        };
     };
 
     // QBZ-95-1 LSW
@@ -437,13 +283,6 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist = 244.0;
         ACE_barrelLength = 600.0;
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
     };
 
     // Type 115
@@ -451,13 +290,6 @@ class CfgWeapons {
         initSpeed = -0.984262;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 463.0;
-        class Single: Mode_SemiAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-
-        class FullAuto: Mode_FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
     };
 
     // KH2002 Sama
@@ -482,13 +314,6 @@ class CfgWeapons {
         initSpeed = -0.961294;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 393.7;
-        class Single: Single {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-
-        class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
     };
 
     // KH2002 Sama KGL
@@ -537,13 +362,6 @@ class CfgWeapons {
         initSpeed = -0.946382;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 266.7;
-        class Single: Single {
-            dispersion = MOA_TO_RAD(0.90);
-        };
-
-        class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(0.90);
-        };
     };
 
     // RFB SDAR
@@ -618,13 +436,6 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 459.74;
-        class Single: Single {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-
-        class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
     };
 
     // TAR-21 EGLM
@@ -682,13 +493,6 @@ class CfgWeapons {
         initSpeed = -0.974297;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 406.4;
-        class Single: Single {
-            dispersion = MOA_TO_RAD(1.12);
-        };
-
-        class FullAuto: FullAuto {
-            dispersion = MOA_TO_RAD(1.12);
-        };
     };
 
     // F2000 EGLM
