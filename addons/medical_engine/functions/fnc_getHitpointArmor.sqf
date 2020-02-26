@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Pterolatypus
- * Checks a unit's equipment to calculate the total armor on a hitpoint
+ * Checks a unit's equipment to calculate the total armor on a hitpoint.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+
 params ["_unit", "_hitpoint"];
 
 private _uniform = uniform _unit;

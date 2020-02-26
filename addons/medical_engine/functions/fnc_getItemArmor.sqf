@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Pterolatypus
- * Reads cache or config to determine what armor an item provides to a particular hitpoint
+ * Returns the armor value the given item provides to a particular hitpoint, either from a cache or by reading the item config.
  *
  * Arguments:
  * 0: Item Class <STRING>
@@ -15,15 +15,15 @@
  *
  * Public: No
  */
+
 params ["_item", "_hitpoint"];
 
 private _key = format ["%1$%2", _item, _hitpoint];
 private _armor = GVAR(armorCache) getVariable _key;
 
 if (isNil "_armor") then {
-
-    TRACE_2("Cache miss", _item, _hitpoint);
-    if (_item isEqualTo "" || _hitpoint isEqualTo "") exitWith {
+    TRACE_2("Cache miss",_item,_hitpoint);
+    if ("" in [_item, _hitpoint]) exitWith {
         _armor = 0;
         GVAR(armorCache) setVariable [_key, _armor];
     };
