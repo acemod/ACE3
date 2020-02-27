@@ -8,11 +8,98 @@ class CfgWeapons {
     class Rifle_Short_Base_F: Rifle_Base_F {};
     class Rifle_Long_Base_F: Rifle_Base_F {};
 
+    // Rifle_Long_Base Sniper Marksman
     // GM6 Lynx
-    class GM6_base_F: Rifle_Long_Base_F {};
+    class GM6_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 730;
+        ACE_barrelTwist = 381.0;
+        initSpeed = -1.0;
+        magazineWell[] = {
+            "CBA_50BMG_M107"
+        }; // empty in vanilla
+    };
 
     // M200 Intervention
-    class LRR_base_F: Rifle_Long_Base_F {};
+    class LRR_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 736.6;
+        ACE_barrelTwist = 330.2;
+        initSpeed = -1.0;
+        magazineWell[] += {
+            "CBA_408CT_Inter"
+        }; // vanilla magazineWell[] = {"M320_408"};
+    };
+
+    // Mk14 Mod 1 EBR
+    class EBR_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 457.2;
+        ACE_barrelTwist = 304.8;
+        initSpeed = -0.979444;
+    };
+
+    // VS-121
+    class DMR_01_base_F: Rifle_Long_Base_F {
+        ACE_barrelTwist = 241.3;
+        ACE_barrelLength = 609.6;
+        initSpeed = -1.00019;
+    };
+
+    // Noreen "Bad News" ULR
+    class DMR_02_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 508.0;
+        ACE_barrelTwist = 254.0;
+        initSpeed = -1.0;
+        magazines[] = {
+            "10Rnd_338_Mag",
+            "ACE_10Rnd_338_300gr_HPBT_Mag",
+            "ACE_10Rnd_338_API526_Mag",
+            "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
+            "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
+            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
+        };
+    };
+
+    // SIG 556
+    class DMR_03_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 508.0;
+        ACE_barrelTwist = 254.0;
+        initSpeed = -0.991536;
+        magazineWell[] += {
+            "CBA_762x51_M14"
+        }; // vanilla magazineWell[] = {"M14_762x51"};
+    };
+
+    // ASP-1 Kir
+    class DMR_04_base_F: Rifle_Long_Base_F {
+        initSpeed = -1.0;
+        ACE_barrelTwist = 203.2;
+        ACE_barrelLength = 450.088;
+    };
+
+    // Cyrus
+    class DMR_05_base_F: Rifle_Long_Base_F {
+        initSpeed = -1.0; // 780 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
+        ACE_barrelTwist = 360.0;
+        ACE_barrelLength = 620.0;
+    };
+
+    // M14
+    class DMR_06_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 558.8;
+        ACE_barrelTwist = 304.8;
+        initSpeed = -0.999395;
+    };
+
+    // QBU-88
+    class DMR_07_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 640.0;
+        ACE_barrelTwist = 228.6;
+        initSpeed = -0.99998;
+        magazines[] = {
+            "20Rnd_650x39_Cased_Mag_F",
+            "ACE_20Rnd_65x47_Scenar_mag",
+            "ACE_20Rnd_65_Creedmor_mag"
+        };
+    };
 
     // MX
     class arifle_MX_Base_F: Rifle_Base_F {};
@@ -37,31 +124,6 @@ class CfgWeapons {
     class SMG_03C_BASE: SMG_03_TR_BASE {
         ACE_barrelLength = 264;
         modes[] = {"Single", "FullAuto"};
-    };
-
-    // Noreen "Bad News" ULR
-    class DMR_02_base_F: Rifle_Long_Base_F {};
-
-    // VS-121
-    class DMR_01_base_F: Rifle_Long_Base_F {};
-
-    // Mk14 Mod 1 EBR
-    class EBR_base_F: Rifle_Long_Base_F {};
-
-    // SIG 556
-    class DMR_03_base_F: Rifle_Long_Base_F {};
-
-    // ASP-1 Kir
-    class DMR_04_base_F: Rifle_Long_Base_F {};
-
-    // Cyrus
-    class DMR_05_base_F: Rifle_Long_Base_F {};
-
-    // M14
-    class DMR_06_base_F: Rifle_Long_Base_F {
-        ACE_barrelLength = 558.8;
-        ACE_barrelTwist = 304.8;
-        initSpeed = -0.999395;
     };
 
     // MX LSW
@@ -264,18 +326,6 @@ class CfgWeapons {
         initSpeed = -0.978947;
         ACE_barrelTwist = 244.0;
         ACE_barrelLength = 463.0;
-    };
-
-    // QBU-88
-    class DMR_07_base_F: Rifle_Long_Base_F {
-        initSpeed = -0.99998;
-        ACE_barrelTwist = 228.6;
-        ACE_barrelLength = 640.0;
-        magazines[] = {
-            "20Rnd_650x39_Cased_Mag_F",
-            "ACE_20Rnd_65x47_Scenar_mag",
-            "ACE_20Rnd_65_Creedmor_mag"
-        };
     };
 
     // QBZ-95-1 LSW
@@ -521,105 +571,6 @@ class CfgWeapons {
         initSpeed = -1.00148;
         ACE_barrelTwist = 406.4;
         ACE_barrelLength = 139.7;
-    };
-
-    // VS-121
-    class srifle_DMR_01_F: DMR_01_base_F {
-        magazines[] = {
-            "10Rnd_762x54_Mag",
-            "ACE_10Rnd_762x54_Tracer_mag"
-        };
-        initSpeed = -1.00019;
-        ACE_barrelTwist = 241.3;
-        ACE_barrelLength = 609.6;
-    };
-
-    // Mk14 Mod 1 EBR
-    class srifle_EBR_F: EBR_base_F {
-        magazines[] = {
-            "20Rnd_762x51_Mag",
-            "ACE_20Rnd_762x51_Mag_Tracer",
-            "ACE_20Rnd_762x51_Mag_Tracer_Dim",
-            "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-            "ACE_20Rnd_762x51_M118LR_Mag",
-            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-            "ACE_20Rnd_762x51_M993_AP_Mag",
-            "ACE_20Rnd_762x51_Mag_SD"
-        };
-        initSpeed = -0.979444;
-        ACE_barrelTwist = 304.8;
-        ACE_barrelLength = 457.2;
-    };
-
-    // M200 Intervention
-    class srifle_LRR_F: LRR_base_F {
-        magazines[] = {
-            "7Rnd_408_Mag",
-            "ACE_7Rnd_408_305gr_Mag"
-        };
-        initSpeed = -1.0;
-        ACE_barrelTwist = 330.2;
-        ACE_barrelLength = 736.6;
-    };
-
-    // GM6 Lynx
-    class srifle_GM6_F: GM6_base_F {
-        magazines[] = {
-            "5Rnd_127x108_Mag",
-            "5Rnd_127x108_APDS_Mag",
-            "ACE_5Rnd_127x99_Mag",
-            "ACE_5Rnd_127x99_API_Mag",
-            "ACE_5Rnd_127x99_AMAX_Mag"
-        };
-        initSpeed = -1.0;
-        ACE_barrelTwist = 381.0;
-        ACE_barrelLength = 730;
-    };
-
-    // Noreen "Bad News" ULR
-    class srifle_DMR_02_F: DMR_02_base_F {
-        magazines[] = {
-            "10Rnd_338_Mag",
-            "ACE_10Rnd_338_300gr_HPBT_Mag",
-            "ACE_10Rnd_338_API526_Mag",
-            "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
-            "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
-            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
-        };
-        initSpeed = -1.0;
-        ACE_barrelTwist = 254.0;
-        ACE_barrelLength = 508.0;
-    };
-
-    // SIG 556
-    class srifle_DMR_03_F: DMR_03_base_F {
-        magazines[] = {
-            "20Rnd_762x51_Mag",
-            "ACE_20Rnd_762x51_Mag_Tracer",
-            "ACE_20Rnd_762x51_Mag_Tracer_Dim",
-            "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-            "ACE_20Rnd_762x51_M118LR_Mag",
-            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-            "ACE_20Rnd_762x51_M993_AP_Mag",
-            "ACE_20Rnd_762x51_Mag_SD"
-        };
-        initSpeed = -0.991536;
-        ACE_barrelTwist = 254.0;
-        ACE_barrelLength = 508.0;
-    };
-
-    // ASP-1 Kir
-    class srifle_DMR_04_F: DMR_04_base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 203.2;
-        ACE_barrelLength = 450.088;
-    };
-
-    // Cyrus
-    class srifle_DMR_05_blk_F: DMR_05_base_F {
-        initSpeed = -1.0; // 780 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
-        ACE_barrelTwist = 360.0;
-        ACE_barrelLength = 620.0;
     };
 
     // HK121
