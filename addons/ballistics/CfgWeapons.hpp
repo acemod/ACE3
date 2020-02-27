@@ -48,8 +48,7 @@ class CfgWeapons {
         ACE_barrelLength = 508.0;
         ACE_barrelTwist = 254.0;
         initSpeed = -1.0;
-        magazines[] = {
-            "10Rnd_338_Mag",
+        magazines[] += {
             "ACE_10Rnd_338_300gr_HPBT_Mag",
             "ACE_10Rnd_338_API526_Mag",
             "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
@@ -94,15 +93,69 @@ class CfgWeapons {
         ACE_barrelLength = 640.0;
         ACE_barrelTwist = 228.6;
         initSpeed = -0.99998;
-        magazines[] = {
-            "20Rnd_650x39_Cased_Mag_F",
+        magazines[] += {
             "ACE_20Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65_Creedmor_mag"
         };
     };
 
+    // Rifle_Base
+    // MX variants
+    class arifle_MX_Base_F: Rifle_Base_F {
+        ACE_barrelTwist = 228.6;
+    };
+
+    // MX LSW
+    class arifle_MX_SW_F: arifle_MX_Base_F {
+        ACE_barrelLength = 406.4;
+        initSpeed = -0.981912;
+    };
+
+    // MXM
+    class arifle_MXM_F: arifle_MX_Base_F {
+        ACE_barrelLength = 457.2;
+        initSpeed = -1.0;
+        magazines[] += {
+            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_30Rnd_65_Creedmor_mag"
+        };
+    };
+
+    class arifle_MXM_Black_F: arifle_MXM_F {
+        magazines[] += {
+            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_30Rnd_65_Creedmor_mag"
+        };
+    };
+    
+    class arifle_MXM_khk_F: arifle_MXM_Black_F {
+        magazines[] += {
+            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_30Rnd_65_Creedmor_mag"
+        };
+    };
+
     // MX
-    class arifle_MX_Base_F: Rifle_Base_F {};
+    class arifle_MX_F: arifle_MX_Base_F {
+        ACE_barrelLength = 368.3;
+        initSpeed = -0.972222;
+    };
+
+    // MX 3GL
+    class arifle_MX_GL_F: arifle_MX_Base_F {
+        ACE_barrelLength = 368.3;
+        initSpeed = -0.972222;
+    };
+
+    // MXC
+    class arifle_MXC_F: arifle_MX_Base_F {
+        ACE_barrelLength = 266.7;
+        ACE_barrelTwist = 203.2;
+        initSpeed = -0.946382;
+    };
 
     // KH2002 Sama
     class arifle_katiba_Base_F: Rifle_Base_F {};
@@ -124,35 +177,6 @@ class CfgWeapons {
     class SMG_03C_BASE: SMG_03_TR_BASE {
         ACE_barrelLength = 264;
         modes[] = {"Single", "FullAuto"};
-    };
-
-    // MX LSW
-    class arifle_MX_SW_F: arifle_MX_Base_F {
-        magazines[] = {
-            "100Rnd_65x39_caseless_mag_Tracer",
-            "100Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
-        };
-        initSpeed = -0.981912;
-        ACE_barrelTwist = 228.6;
-        ACE_barrelLength = 406.4;
-    };
-
-    // MXM
-    class arifle_MXM_F: arifle_MX_Base_F {
-        magazines[] = {
-            "30Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x47_Scenar_mag",
-            "ACE_30Rnd_65_Creedmor_mag"
-        };
-        initSpeed = -1.0;
-        ACE_barrelTwist = 228.6;
-        ACE_barrelLength = 457.2;
     };
 
     // HK416A5 11"
@@ -376,42 +400,6 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist = 203.2;
         ACE_barrelLength = 508.0;
-    };
-
-    // MX
-    class arifle_MX_F: arifle_MX_Base_F {
-        magazines[] = {
-            "30Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
-        };
-        initSpeed = -0.972222;
-        ACE_barrelTwist = 228.6;
-        ACE_barrelLength = 368.3;
-    };
-
-    // MX 3GL
-    class arifle_MX_GL_F: arifle_MX_Base_F {
-        magazines[] = {
-            "30Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
-        };
-        initSpeed = -0.972222;
-        ACE_barrelTwist = 228.6;
-        ACE_barrelLength = 368.3;
-    };
-
-    // MXC
-    class arifle_MXC_F: arifle_MX_Base_F {
-        magazines[] = {
-            "30Rnd_65x39_caseless_mag",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
-        };
-        initSpeed = -0.946382;
-        ACE_barrelTwist = 203.2;
-        ACE_barrelLength = 266.7;
     };
 
     // RFB SDAR
