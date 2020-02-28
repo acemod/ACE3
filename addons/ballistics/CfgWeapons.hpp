@@ -126,7 +126,7 @@ class CfgWeapons {
     };
 
     // LWMMG
-    class MMG_02_base_F: Rifle_Long_Base_F
+    class MMG_02_base_F: Rifle_Long_Base_F {
         ACE_barrelLength = 609.6;
         ACE_barrelTwist = 234.95;
         initSpeed = -1.0;
