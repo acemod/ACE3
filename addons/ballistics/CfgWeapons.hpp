@@ -1,7 +1,6 @@
 class CfgWeapons {
-    class LMG_RCWS;
-    class MGun;
-    class MGunCore;
+    class HMG_01;
+    class Pistol_Base_F;
     class Rifle_Base_F;
     class Rifle_Short_Base_F: Rifle_Base_F {};
     class Rifle_Long_Base_F: Rifle_Base_F {};
@@ -367,20 +366,32 @@ class CfgWeapons {
 
     // Rifle_Short_Base_F
     // CPW
-    class pdw2000_base_F: Rifle_Short_Base_F {};
-
-    class hgun_PDW2000_F: pdw2000_base_F {
+    class pdw2000_base_F: Rifle_Short_Base_F {
         ACE_barrelLength = 177.8;
         ACE_barrelTwist = 228.6;
+    };
+
+    class hgun_PDW2000_F: pdw2000_base_F {
         initSpeed = -0.994186;
     };
 
-    // Scorpion Evo 3 A1
-    class SMG_02_base_F: Rifle_Short_Base_F  {};
+    // Vector SMG
+    class SMG_01_Base: Rifle_Short_Base_F {
+        ACE_barrelLength = 139.7;
+        ACE_barrelTwist = 406.4;
+    };
 
-    class SMG_02_F: SMG_02_base_F  {
+    class SMG_01_F: SMG_01_Base {
+        initSpeed = -1.00148;
+    };
+
+    // Scorpion Evo 3 A1
+    class SMG_02_base_F: Rifle_Short_Base_F  {
         ACE_barrelLength = 195.58;
         ACE_barrelTwist = 254.0;
+    };
+
+    class SMG_02_F: SMG_02_base_F  {
         initSpeed = -1.00029;
     };
 
@@ -391,68 +402,54 @@ class CfgWeapons {
         initSpeed = -0.943783;
     };
 
-    // Vector SMG
-    class SMG_01_Base: Rifle_Short_Base_F {};
-
-    class SMG_01_F: SMG_01_Base {
-        ACE_barrelLength = 139.7;
-        ACE_barrelTwist = 406.4;
-        initSpeed = -1.00148;
-    };
-
-    class Pistol;
-    class Pistol_Base_F: Pistol {};
-
+    // Pistol_Base_F
     // P99
     class hgun_P07_F: Pistol_Base_F {
-        initSpeed = -0.906977;
-        ACE_barrelTwist = 254.0;
         ACE_barrelLength = 101.6;
+        ACE_barrelTwist = 254.0;
+        initSpeed = -0.906977;
     };
 
     // MP-443 Grach
     class hgun_Rook40_F: Pistol_Base_F {
-        initSpeed = -0.934884;
-        ACE_barrelTwist = 254.0;
         ACE_barrelLength = 111.76;
+        ACE_barrelTwist = 254.0;
+        initSpeed = -0.934884;
     };
 
     // Custom Covert II
     class hgun_ACPC2_F: Pistol_Base_F {
-        initSpeed = -0.984252;
-        ACE_barrelTwist = 406.4;
         ACE_barrelLength = 127.0;
+        ACE_barrelTwist = 406.4;
+        initSpeed = -0.984252;
     };
 
     // FNX-45 Tactical
     class hgun_Pistol_heavy_01_F: Pistol_Base_F {
-        initSpeed = -0.944882;
-        ACE_barrelTwist = 406.4;
         ACE_barrelLength = 114.3;
+        ACE_barrelTwist = 406.4;
+        initSpeed = -0.944882;
     };
 
     // Chiappa Rhino 60DS
     class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-        initSpeed = -0.905512;
-        ACE_barrelTwist = 406.4;
         ACE_barrelLength = 76.2;
+        ACE_barrelTwist = 406.4;
+        initSpeed = -0.905512;
     };
 
     // Makarov PM
     class hgun_Pistol_01_F: Pistol_Base_F {
-        initSpeed = -0.883721;
-        ACE_barrelTwist = 254.0;
         ACE_barrelLength = 93.5;
+        ACE_barrelTwist = 254.0;
+        initSpeed = -0.883721;
     };
 
-    class HMG_127 : LMG_RCWS {
-    };
-    class HMG_01: HMG_127 {
-    };
+    // M2_Turret
     class HMG_M2: HMG_01 {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 304.8;
         ACE_barrelLength = 1143.0;
+        ACE_barrelTwist = 304.8;
+        initSpeed = -1.0;
     };
 
     /* Silencers */
