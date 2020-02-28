@@ -96,6 +96,42 @@ class CfgWeapons {
         };
     };
 
+    // Rifle_Long_Base_F MG
+    // Stoner 99 LMG
+    class LMG_Mk200_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 317.5;
+        ACE_barrelTwist = 177.8;
+        initSpeed = -0.999327;
+    };
+
+    // Negev NG7
+    class LMG_Zafir_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 459.74;
+        ACE_barrelTwist = 304.8;
+        initSpeed = -1.00048;
+    };
+
+    // M249 SPW
+    class LMG_03_base_F: Rifle_Long_Base_F {
+        ACE_barrelLength = 414.02;
+        ACE_barrelTwist = 177.8;
+        initSpeed = -1.00051;
+    };
+
+    // HK121
+    class MMG_01_base_F: Rifle_Long_Base_F { // https://www.heckler-koch.com/en/products/military/machine-guns/mg5/mg5/technical-data.html93x
+        ACE_barrelLength = 550.0;
+        ACE_barrelTwist = 360.0;
+        initSpeed = -1.0; // 768 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
+    };
+
+    // LWMMG
+    class MMG_02_base_F: Rifle_Long_Base_F
+        ACE_barrelLength = 609.6;
+        ACE_barrelTwist = 234.95;
+        initSpeed = -1.0;
+    };
+
     // Rifle_Base_F
     // MX variants
     class arifle_MX_Base_F: Rifle_Base_F {
@@ -326,42 +362,6 @@ class CfgWeapons {
         ACE_barrelLength = 463.0;
         ACE_barrelTwist = 228.6;
         initSpeed = -0.984262;
-    };
-
-    // Rifle_Long_Base_F MG
-    // Stoner 99 LMG
-    class LMG_Mk200_F: Rifle_Long_Base_F {
-        ACE_barrelLength = 317.5;
-        ACE_barrelTwist = 177.8;
-        initSpeed = -0.999327;
-    };
-
-    // Negev NG7
-    class LMG_Zafir_F: Rifle_Long_Base_F {
-        ACE_barrelLength = 459.74;
-        ACE_barrelTwist = 304.8;
-        initSpeed = -1.00048;
-    };
-
-    // M249 SPW
-    class LMG_03_base_F: Rifle_Long_Base_F {
-        ACE_barrelLength = 414.02;
-        ACE_barrelTwist = 177.8;
-        initSpeed = -1.00051;
-    };
-
-    // HK121
-    class MMG_01_base_F: Rifle_Long_Base_F { // https://www.heckler-koch.com/en/products/military/machine-guns/mg5/mg5/technical-data.html93x
-        ACE_barrelLength = 550.0;
-        ACE_barrelTwist = 360.0;
-        initSpeed = -1.0; // 768 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
-    };
-
-    // LWMMG
-    class MMG_02_base_F: Rifle_Long_Base_F
-        ACE_barrelLength = 609.6;
-        ACE_barrelTwist = 234.95;
-        initSpeed = -1.0;
     };
 
     // Rifle_Short_Base_F
