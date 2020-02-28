@@ -26,4 +26,4 @@ _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
 [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
 
 // Kill the unit without changing visual apperance
-[_unit, 1] call EFUNC(medical_engine,setStructuralDamage);
+[EFUNC(medical_engine,setStructuralDamage), [_unit, 1]] call CBA_fnc_execNextFrame;
