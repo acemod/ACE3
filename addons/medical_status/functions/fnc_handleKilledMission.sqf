@@ -21,6 +21,14 @@
 params ["_unit", "_killer", "_instigator", "_useEffects"];
 TRACE_4("handleKilledMission",_unit,_killer,_instigator,_useEffects);
 
+// ensure event is only called once
+if (_unit isEqualTo (_unit getVariable [QGVAR(killedMission), objNull])) exitWith {
+    _this set [0, objNull];
+    _this set [1, objNull];
+    _this set [2, objNull];
+};
+_unit setVariable [QGVAR(killedMission), _unit];
+
 private _causeOfDeath = _unit getVariable [QEGVAR(medical,causeOfDeath), "#scripted"];
 
 // if undefined then it's a death not caused by ace's setDead (mission setDamage, disconnect)
@@ -34,3 +42,4 @@ if (_causeOfDeath != "#scripted") then {
         _this set [2, _instigator];
     };
 };
+TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
