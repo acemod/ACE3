@@ -42,7 +42,7 @@ if (_causeOfDeath != "#scripted") then {
         _this set [2, _instigator];
     };
 };
-TRACE_3("killer mission info",_killer,_instigator,_causeOfDeath);
+TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
 
 if (_unit == player) then {
     // Enable user input before respawn, in case mission is using respawnTemplates
