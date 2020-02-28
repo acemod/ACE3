@@ -45,13 +45,6 @@ class CfgWeapons {
         ACE_barrelLength = 508.0;
         ACE_barrelTwist = 254.0;
         initSpeed = -1.0;
-        magazines[] += {
-            "ACE_10Rnd_338_300gr_HPBT_Mag",
-            "ACE_10Rnd_338_API526_Mag",
-            "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
-            "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
-            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
-        };
     };
 
     // SIG 556
@@ -90,7 +83,7 @@ class CfgWeapons {
         ACE_barrelLength = 640.0;
         ACE_barrelTwist = 228.6;
         initSpeed = -0.99998;
-        magazines[] += {
+        magazines[] += { //No Vanilla magwell
             "ACE_20Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65_Creedmor_mag"
         };
@@ -148,27 +141,6 @@ class CfgWeapons {
     class arifle_MXM_F: arifle_MX_Base_F {
         ACE_barrelLength = 457.2;
         initSpeed = -1.0;
-        magazines[] += {
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x47_Scenar_mag",
-            "ACE_30Rnd_65_Creedmor_mag"
-        };
-    };
-
-    class arifle_MXM_Black_F: arifle_MXM_F {
-        magazines[] += {
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x47_Scenar_mag",
-            "ACE_30Rnd_65_Creedmor_mag"
-        };
-    };
-
-    class arifle_MXM_khk_F: arifle_MXM_Black_F {
-        magazines[] += {
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x47_Scenar_mag",
-            "ACE_30Rnd_65_Creedmor_mag"
-        };
     };
 
     // MX
