@@ -2,13 +2,11 @@ class CfgWeapons {
     class LMG_RCWS;
     class MGun;
     class MGunCore;
-    class MMG_01_base_F;
-    class MMG_02_base_F;
     class Rifle_Base_F;
     class Rifle_Short_Base_F: Rifle_Base_F {};
     class Rifle_Long_Base_F: Rifle_Base_F {};
 
-    // Rifle_Long_Base Sniper Marksman
+    // Rifle_Long_Base_F Sniper Marksman
     // GM6 Lynx
     class GM6_base_F: Rifle_Long_Base_F {
         ACE_barrelLength = 730;
@@ -99,7 +97,7 @@ class CfgWeapons {
         };
     };
 
-    // Rifle_Base
+    // Rifle_Base_F
     // MX variants
     class arifle_MX_Base_F: Rifle_Base_F {
         ACE_barrelTwist = 228.6;
@@ -331,25 +329,75 @@ class CfgWeapons {
         initSpeed = -0.984262;
     };
 
+    // Rifle_Long_Base_F MG
     // Stoner 99 LMG
     class LMG_Mk200_F: Rifle_Long_Base_F {
-        initSpeed = -0.999327;
-        ACE_barrelTwist = 177.8;
         ACE_barrelLength = 317.5;
+        ACE_barrelTwist = 177.8;
+        initSpeed = -0.999327;
     };
 
     // Negev NG7
     class LMG_Zafir_F: Rifle_Long_Base_F {
-        initSpeed = -1.00048;
-        ACE_barrelTwist = 304.8;
         ACE_barrelLength = 459.74;
+        ACE_barrelTwist = 304.8;
+        initSpeed = -1.00048;
     };
 
     // M249 SPW
     class LMG_03_base_F: Rifle_Long_Base_F {
-        initSpeed = -1.00051;
-        ACE_barrelTwist = 177.8;
         ACE_barrelLength = 414.02;
+        ACE_barrelTwist = 177.8;
+        initSpeed = -1.00051;
+    };
+
+    // HK121
+    class MMG_01_base_F: Rifle_Long_Base_F { // https://www.heckler-koch.com/en/products/military/machine-guns/mg5/mg5/technical-data.html93x
+        ACE_barrelLength = 550.0;
+        ACE_barrelTwist = 360.0;
+        initSpeed = -1.0; // 768 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
+    };
+
+    // LWMMG
+    class MMG_02_base_F: Rifle_Long_Base_F
+        ACE_barrelLength = 609.6;
+        ACE_barrelTwist = 234.95;
+        initSpeed = -1.0;
+    };
+
+    // Rifle_Short_Base_F
+    // CPW
+    class pdw2000_base_F: Rifle_Short_Base_F {};
+
+    class hgun_PDW2000_F: pdw2000_base_F {
+        ACE_barrelLength = 177.8;
+        ACE_barrelTwist = 228.6;
+        initSpeed = -0.994186;
+    };
+
+    // Scorpion Evo 3 A1
+    class SMG_02_base_F: Rifle_Short_Base_F  {};
+
+    class SMG_02_F: SMG_02_base_F  {
+        ACE_barrelLength = 195.58;
+        ACE_barrelTwist = 254.0;
+        initSpeed = -1.00029;
+    };
+
+    // MP5K
+    class SMG_05_base_F: Rifle_Short_Base_F {
+        ACE_barrelLength = 115.0;
+        ACE_barrelTwist = 254.0;
+        initSpeed = -0.943783;
+    };
+
+    // Vector SMG
+    class SMG_01_Base: Rifle_Short_Base_F {};
+
+    class SMG_01_F: SMG_01_Base {
+        ACE_barrelLength = 139.7;
+        ACE_barrelTwist = 406.4;
+        initSpeed = -1.00148;
     };
 
     class Pistol;
@@ -395,54 +443,6 @@ class CfgWeapons {
         initSpeed = -0.883721;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 93.5;
-    };
-
-    class pdw2000_base_F: Rifle_Short_Base_F {};
-
-    // CPW
-    class hgun_PDW2000_F: pdw2000_base_F {
-        initSpeed = -0.994186;
-        ACE_barrelTwist = 228.6;
-        ACE_barrelLength = 177.8;
-    };
-
-    class SMG_02_base_F: Rifle_Short_Base_F  {};
-
-    // Scorpion Evo 3 A1
-    class SMG_02_F: SMG_02_base_F  {
-        initSpeed = -1.00029;
-        ACE_barrelTwist = 254.0;
-        ACE_barrelLength = 195.58;
-    };
-
-    // MP5K
-    class SMG_05_base_F: Rifle_Short_Base_F {
-        initSpeed = -0.943783;
-        ACE_barrelTwist = 254.0;
-        ACE_barrelLength = 115.0;
-    };
-
-    class SMG_01_Base: Rifle_Short_Base_F {};
-
-    // Vector SMG
-    class SMG_01_F: SMG_01_Base {
-        initSpeed = -1.00148;
-        ACE_barrelTwist = 406.4;
-        ACE_barrelLength = 139.7;
-    };
-
-    // HK121
-    class MMG_01_hex_F: MMG_01_base_F { // https://www.heckler-koch.com/en/products/military/machine-guns/mg5/mg5/technical-data.html93x
-        initSpeed = -1.0; // 768 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
-        ACE_barrelTwist = 360.0;
-        ACE_barrelLength = 550.0;
-    };
-
-    // LWMMG
-    class MMG_02_camo_F: MMG_02_base_F {
-        initSpeed = -1.0;
-        ACE_barrelTwist = 234.95;
-        ACE_barrelLength = 609.6;
     };
 
     class HMG_127 : LMG_RCWS {
