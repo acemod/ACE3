@@ -2,7 +2,7 @@
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 /*
  * Author: Brandon (TCVM)
- * Makes object catch fire. Only call from events
+ * Makes object catch fire. Only call from events. Local effects only
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -149,7 +149,7 @@ if (_isBurning) exitWith {};
                         [QGVAR(burn), [ACE_PLAYER, _intensity * (7 / 8), _instigator]] call CBA_fnc_globalEvent;
                     };
                 } else {
-                    if ({ (ACE_PLAYER isKindOf "Man") } && { !(_unit isEqualTo ACE_PLAYER) }) then {
+                    if ((ACE_PLAYER isKindOf "Man") && { !(_unit isEqualTo ACE_PLAYER) }) then {
                         private _burnCounter = ACE_PLAYER getVariable [QGVAR(burnCounter), 0];
                         if (_distanceToUnit < BURN_PROPOGATE_DISTANCE) then {
                             if (_burnCounter < BURN_PROPOGATE_COUNTER_MAX) then {

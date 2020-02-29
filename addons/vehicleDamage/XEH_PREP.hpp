@@ -10,3 +10,6 @@ PREP(handleDetonation);
 PREP(handleDamage);
 PREP(knockOut);
 PREP(addDamage);
+PREP(handleDamageEjectIfDestroyed);
+PREP(blowOffTurret);
+

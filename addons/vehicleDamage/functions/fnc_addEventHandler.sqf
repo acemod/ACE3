@@ -18,6 +18,22 @@ params["_vehicle"];
 
 if !(GVAR(enabled)) exitWith {};
 
+// Add engine smoke to car types. Don't allow these vehicles to blow up from AP damage
+if ((_vehicle isKindOf "car") && { !(_vehicle isKindOf "Wheeled_APC_F") }) exitWith {
+    _vehicle addEventHandler ["HandleDamage", {
+        params ["_vehicle", "_ammo", "_damage", "", "", "_hitIndex", "", "_hitPoint"];
+        _hitpoint = toLower _hitpoint;
+        if (_hitpoint in ["hithull", "hitfuel", "#structural"] && {!IS_EXPLOSIVE_AMMO(_ammo)}) then {
+            _damage min 0.89
+        } else {
+            if (_hitpoint isEqualTo "hitengine" && {_damage > 0.9}) then {
+                _vehicle call EFUNC(cookoff,engineFire);
+            };
+            _damage
+        };
+    }];
+};
+
 private _hitpointHash = [[], nil] call CBA_fnc_hashCreate;
 private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
 private _hitpointsConfig = _vehicleConfig >> "HitPoints";
