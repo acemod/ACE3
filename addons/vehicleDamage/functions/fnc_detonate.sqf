@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Detonates vehicle ammo and kills all inside
+ * Detonates vehicle ammo and heavily wounds all inside
  *
  * Arguments:
  * 0: The vehicle
@@ -25,6 +25,9 @@ if (_vehicleAmmo isEqualTo []) then {
 
 if ((_vehicleAmmo select 1) > 0) then {
     {
-        _x setDamage 1;
+        // random amount of injuries
+        for "_i" from 0 to random 5 do {
+            [_x, random 1 , selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], selectRandom ["bullet", "shell", "explosive"]] call ace_medical_fnc_addDamageToUnit
+        };
     } forEach crew _vehicle;
 };

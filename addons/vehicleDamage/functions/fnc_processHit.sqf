@@ -129,7 +129,7 @@ switch (_hitArea) do {
         
         // slightly lower injury chance since this hit the engine block
         [_vehicle, 0.8 * _injuryChance, _injuryCount, _injurer] call FUNC(injureOccupants);
-        [_vehicle, _chanceOfFire] call FUNC(handleCookoff);
+        [_vehicle, _chanceOfFire, _chanceOfFire * 5] call FUNC(handleCookoff);
     };
     case "hull": {
         _chanceOfDetonate = ([_vehicleConfig >> QGVAR(hullDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2);
@@ -197,7 +197,7 @@ switch (_hitArea) do {
             [_vehicle, -1, _x, 1] call FUNC(addDamage);
         } forEach _partKill;
         
-        [_vehicle, _chanceOfFire] call FUNC(handleCookoff);
+        [_vehicle, _chanceOfFire, _chanceOfFire * 5] call FUNC(handleCookoff);
     };
     case "turret": {
         _chanceOfDetonate = ([_vehicleConfig >> QGVAR(turretDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _chanceOfDetonation;
@@ -215,7 +215,7 @@ switch (_hitArea) do {
         };
         
         [_vehicle, 1.5 * _injuryChance, _injuryCount, _injurer] call FUNC(injureOccupants);
-        [_vehicle, _chanceOfFire] call FUNC(handleCookoff);
+        [_vehicle, _chanceOfFire, _chanceOfFire * 5] call FUNC(handleCookoff);
     };
     case "gun": {
         TRACE_1("hit gun",_ammoEffectiveness);
