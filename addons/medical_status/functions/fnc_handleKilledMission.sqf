@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Vanilla Killed EH, attempts to set correct source/killer for other killed event handlers (vanilla and XEH)
+ * Vanilla EntityKilled mission EH, attempts to set correct source/killer for other killed event handlers.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -13,21 +13,21 @@
  * None
  *
  * Example:
- * [cursorObject, player, player, true] call ace_medical_status_fnc_handleKilled
+ * [cursorObject, player, player, true] call ace_medical_status_fnc_handleKilledMission
  *
  * Public: No
  */
 
 params ["_unit", "_killer", "_instigator", "_useEffects"];
-TRACE_4("handleKilled",_unit,_killer,_instigator,_useEffects);
+TRACE_4("handleKilledMission",_unit,_killer,_instigator,_useEffects);
 
 // ensure event is only called once
-if (_unit isEqualTo (_unit getVariable [QGVAR(killed), objNull])) exitWith {
+if (_unit isEqualTo (_unit getVariable [QGVAR(killedMission), objNull])) exitWith {
     _this set [0, objNull];
     _this set [1, objNull];
     _this set [2, objNull];
 };
-_unit setVariable [QGVAR(killed), _unit];
+_unit setVariable [QGVAR(killedMission), _unit];
 
 private _causeOfDeath = _unit getVariable [QEGVAR(medical,causeOfDeath), "#scripted"];
 
@@ -42,11 +42,4 @@ if (_causeOfDeath != "#scripted") then {
         _this set [2, _instigator];
     };
 };
-TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
-
-if (_unit == player) then {
-    // Enable user input before respawn, in case mission is using respawnTemplates
-    ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
-};
-
-["ace_killed", [_unit, _causeOfDeath, _killer, _instigator]] call CBA_fnc_globalEvent;
+TRACE_3("killer mission info",_killer,_instigator,_causeOfDeath);
