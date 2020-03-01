@@ -44,7 +44,7 @@ if (_warheadType < 0) then {
     _warheadType = WARHEAD_TYPE_NONE;
 };
 if (_incendiary < 0) then {
-    _incendiary = [0.3, 0.85, 1, 1, 0] select _warheadType;
+    _incendiary = [0.3, 0.1, 1, 1, 0] select _warheadType;
 };
 
 private _projectileExplosive = [_projectileConfig >> "explosive", "NUMBER", 0] call CBA_fnc_getConfigEntry;
@@ -101,7 +101,6 @@ if (count (_currentVehicleAmmo select 0) > 0) then {
     } forEach (_currentVehicleAmmo select 0);
     _chanceOfDetonation = _chanceOfDetonation / _countOfExplodableAmmo;
 };
-
 private _chanceOfDetonate = 0;
 private _chanceOfFire = 0;
 private _currentFuel = fuel _vehicle;
