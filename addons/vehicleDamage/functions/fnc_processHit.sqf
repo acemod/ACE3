@@ -27,7 +27,7 @@ private _currentPartDamage = _vehicle getHitIndex _hitIndex;
 private _nextPartDamage = _currentPartDamage + _newDamage;
 
 // damage is high enough immediate KO
-if (_newDamage >= 10) exitWith {
+if (_newDamage >= 15) exitWith {
     TRACE_2("immediate KO high damage",_newDamage,_currentPartDamage);
     [_vehicle] call FUNC(knockOut);
     [_vehicle, 1] call FUNC(handleDetonation);
@@ -277,7 +277,7 @@ switch (_hitArea) do {
             _chanceOfFire = 0; // no cookoff for cars
         };
         
-        [_vehicle, _chanceOfFire, _injurer] call FUNC(handleCookoff);
+        [_vehicle, _chanceOfFire, _chanceOfFire * 5, _injurer] call FUNC(handleCookoff);
         
         private _damage = (0.1 max (0.1 * _newDamage / _minDamage)) min 1;
         [_vehicle, _hitIndex, _hitpointName, (_vehicle getHitIndex _hitIndex) + _damage] call FUNC(addDamage);

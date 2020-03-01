@@ -21,7 +21,7 @@
 
 params ["_obj", "_jet", "_ring", "_time", "_fireSelection"];
 private _light = "#lightpoint" createVehicleLocal [0,0,0];
-_light setLightBrightness 0.35;
+_light setLightBrightness 5;
 _light setLightAmbient [0.8, 0.6, 0.2];
 _light setLightColor [1, 0.5, 0.2];
 _light lightAttachObject [_obj, [0,0,0]];
@@ -33,6 +33,12 @@ if (isServer) then {
     _sound = createSoundSource [_soundName, position _obj, [], 0];
 };
 
+if (_ring) then {
+    private _intensity = 6;
+    private _radius = 1.5 * ((boundingBoxReal _obj) select 2);
+    [QEGVAR(fire,addFireSource), [_obj, _radius, _intensity, _obj]] call CBA_fnc_globalEvent;
+};
+
 [{
     params ["_args", "_pfh"];
     _args params ["_obj", "_jet", "_ring", "_time", "_startTime", "_light", "_fireSelection", "_sound"];
@@ -40,6 +46,7 @@ if (isServer) then {
     if (_elapsedTime >= _time) exitWith {
         deleteVehicle _light;
         deleteVehicle _sound;
+        [QEGVAR(fire,removeFireSource), [_obj]] call CBA_fnc_globalEvent;
         [_pfh] call CBA_fnc_removePerFrameHandler;
     };
     private _factor = (1 + (_elapsedTime / 2) min 2);
@@ -49,7 +56,7 @@ if (isServer) then {
         _factor = _factor * linearConversion [_time * (3 / 4), _time, _elapsedTime, 1, 0.5];
     };
     
-    _light setLightBrightness 0.35 * (_factor / 5);
+    _light setLightBrightness 5 * (_factor / 5);
     
     if (_jet) then {
         private _particlePosition = (_obj selectionPosition _fireSelection) vectorAdd [-0.1 + random 0.2, -0.1 + random 0.2, 0];
@@ -75,6 +82,12 @@ if (isServer) then {
             "",
             _obj
         ];
+        
+        // make flame push object into ground to make effect seem more "alive"
+        if (!isGamePaused && { local _obj }) then {
+            private _force = [0, 0, _factor * -(0.5 min random 1.5) * (0.3 min random 1)] vectorMultiply getMass _obj;
+            _obj addForce [_force, vectorUpVisual _obj];
+        };
     };
     
     if (_ring) then {
@@ -167,6 +180,5 @@ if (isServer) then {
             [2 + random 1], 1, 0, "", "", _obj
         ];
     };
-    
 }, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound]] call cba_fnc_addPerFrameHandler;
 
