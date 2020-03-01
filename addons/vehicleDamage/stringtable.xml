@@ -10,5 +10,11 @@
         <Key ID="STR_ACE_vehicledamage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
         </Key>
+        <Key ID="STR_ACE_vehicledamage_carDamage_setting_description">
+            <English>Enable/Disable advanced car damage (Experimental)</English>
+        </Key>
+        <Key ID="STR_ACE_vehicledamage_carDamage_setting_enable">
+            <English>Enable/Disable advanced Car Damage</English>
+        </Key>
     </Package>
 </Project>

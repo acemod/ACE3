@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * (vehicle player) call ace_cookoff_fnc_blowOffTurret
+ * (vehicle player) call ace_vehicleDamage_fnc_blowOffTurret
  *
  * Public: No
  */

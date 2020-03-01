@@ -19,19 +19,18 @@
 params ["_vehicle", "_chanceOfFire", "_intensity", ["_injurer", objNull]];
 
 private _alreadyCookingOff = _vehicle getVariable [QGVAR(cookingOff), false];
-private _alreadyDetonating = _vehicle getVariable [QGVAR(detonating), false];
 
 if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     private _fireDetonateChance = [configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(detonationDuringFireProb), "number", 0] call CBA_fnc_getConfigEntry;
     
     private _delayWithSmoke = _chanceOfFire < random 1;
-    [QEGVAR(cookOff,cookOff), [_vehicle, _intensity, _injurer, _delayWithSmoke, _fireDetonateChance, false]] call CBA_fnc_localEvent;
-    if (!_alreadyDetonating && { _fireDetonateChance > random 1 }) then {
-        [_vehicle, 1, _injurer] call FUNC(handleDetonation);
-        LOG_2("Detonating [%1] while cooking off with a chance of [%2] hit [%3]",_vehicle,_fireDetonateChance);
+    private _detonateAfterCookoff = false;
+    if (_fireDetonateChance > random 1) then {
+        _detonateAfterCookoff = true;
     };
+    [QEGVAR(cookOff,cookOff), [_vehicle, _intensity, _injurer, _delayWithSmoke, _fireDetonateChance, _detonateAfterCookoff]] call CBA_fnc_localEvent;
     _vehicle setVariable [QGVAR(cookingOff), true];
-    LOG_2("Cooking-off [%1] with a chance-of-fire [%2] hit [%3]",_vehicle,_chanceOfFire);
+    LOG_4("Cooking-off [%1] with a chance-of-fire [%2] - Delayed Smoke | Detonate after cookoff [%3 | %4]",_vehicle,_chanceOfFire,_delayWithSmoke,_detonateAfterCookoff);
     [_vehicle] spawn FUNC(abandon);
     LOG_1("[%1] is on fire is bailing",_vehicle);
     true
