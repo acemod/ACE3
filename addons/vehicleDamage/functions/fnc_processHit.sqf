@@ -66,7 +66,7 @@ if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
 };
 
 if (_newDamage < _minDamage) exitWith {
-    TRACE_2("minimum damage returning",_newDamage,_minDamage);
+    TRACE_4("minimum damage returning",_newDamage,_minDamage,_warheadTypeStr,_hitArea);
     _return
 };
 
@@ -91,7 +91,7 @@ private _injuryChance = 0;
 private _injuryCount = 0;
 switch (_warheadType) do {
     case WARHEAD_TYPE_AP: {
-        _injuryChance = _ammoEffectiveness;
+        _injuryChance = (_ammoEffectiveness * 2) min 1;
         _injuryCount = 1 + (_ammoEffectiveness * round random 9);
     };
     case WARHEAD_TYPE_HE: {
@@ -224,7 +224,7 @@ switch (_hitArea) do {
             [_vehicle, -1, _x, 1] call FUNC(addDamage);
         } forEach _partKill;
         
-        [_vehicle, _chanceOfFire, _chanceOfFire * 5, _injurer] call FUNC(handleCookoff);
+        [_vehicle, _chanceOfFire, _chanceOfFire * 10, _injurer] call FUNC(handleCookoff);
     };
     case "turret": {
         _chanceOfDetonate = ([_vehicleConfig >> QGVAR(turretDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _chanceOfDetonation;
@@ -246,7 +246,7 @@ switch (_hitArea) do {
         };
         
         [_vehicle, 1.5 * _injuryChance, _injuryCount, _injurer] call FUNC(injureOccupants);
-        [_vehicle, _chanceOfFire, _chanceOfFire * 5, _injurer] call FUNC(handleCookoff);
+        [_vehicle, _chanceOfFire, _chanceOfFire * 15, _injurer] call FUNC(handleCookoff);
     };
     case "gun": {
         TRACE_1("hit gun",_ammoEffectiveness);
@@ -277,7 +277,7 @@ switch (_hitArea) do {
             _chanceOfFire = 0; // no cookoff for cars
         };
         
-        [_vehicle, _chanceOfFire, _chanceOfFire * 5, _injurer] call FUNC(handleCookoff);
+        [_vehicle, _chanceOfFire, _chanceOfFire * 3, _injurer] call FUNC(handleCookoff);
         
         private _damage = (0.1 max (0.1 * _newDamage / _minDamage)) min 1;
         [_vehicle, _hitIndex, _hitpointName, (_vehicle getHitIndex _hitIndex) + _damage] call FUNC(addDamage);

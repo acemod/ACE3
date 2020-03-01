@@ -60,6 +60,7 @@ if !((_hitPoint find "#light") >= 0 || { _damage <= 0 }) then {
 _vehicle setVariable [QGVAR(hitHash), _hitHash];
 
 // damage is never to be handled in-engine. Always handle out of engine with this event handler
+// don't return 0 or else old parts will be reset in damage
 _vehicle getHitIndex _hitIndex;
 
 
