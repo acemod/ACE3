@@ -15,7 +15,7 @@
  *
  * Public: No
  */
-params ["_vehicle", ["_vehicleAmmo", []]];
+params ["_vehicle", ["_injurer", objNull], ["_vehicleAmmo", []]];
 
 if (_vehicleAmmo isEqualTo []) then {
     _vehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
@@ -27,7 +27,7 @@ if ((_vehicleAmmo select 1) > 0) then {
     {
         // random amount of injuries
         for "_i" from 0 to random 5 do {
-            [_x, random 1 , selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], selectRandom ["bullet", "shell", "explosive"]] call ace_medical_fnc_addDamageToUnit
+            [_x, random 1 , selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], selectRandom ["bullet", "shell", "explosive"], _injurer] call EFUNC(medical,addDamageToUnit);
         };
     } forEach crew _vehicle;
 };

@@ -7,9 +7,9 @@
 #define IS_EXPLOSIVE_AMMO(ammo) (getNumber (ammo call CBA_fnc_getObjectConfig >> "explosive") > 0.5)
 
 #define ENGINE_HITPOINTS [["hitengine"], "engine"]
-#define HULL_HITPOINTS [["hithull"],"hull"]
+#define HULL_HITPOINTS [["hithull", "hitbody", "#structural"],"hull"]
 #define TRACK_HITPOINTS [["hitltrack", "hitrtrack"], "track"]
-#define WHEEL_HITPOINTS [["hitlbwheel", "hitlmwheel", "hitlfwheel", "hitlf2wheel", "hitrbwheel", "hitrlwheel", "hitrfwheel", "hitrf2wheel"], "wheel"]
+#define WHEEL_HITPOINTS [["hitlbwheel", "hitlmwheel", "hitlfwheel", "hitlf2wheel", "hitrbwheel", hitrmwheel, "hitrlwheel", "hitrfwheel", "hitrf2wheel"], "wheel"]
 #define FUEL_HITPOINTS [["hitfuel"], "fuel"]
 #define ALL_HITPOINTS [ENGINE_HITPOINTS, HULL_HITPOINTS, TRACK_HITPOINTS, WHEEL_HITPOINTS, FUEL_HITPOINTS]
 

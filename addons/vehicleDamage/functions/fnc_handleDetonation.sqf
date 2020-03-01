@@ -16,12 +16,12 @@
  *
  * Public: No
  */
-params ["_vehicle", "_chanceOfDetonate"];
+params ["_vehicle", "_chanceOfDetonate", ["_injurer", objNull]];
 private _currentVehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
 private _alreadyDetonating = _vehicle getVariable [QGVAR(detonating), false];
 
 if (!_alreadyDetonating && { _chanceOfDetonate >= random 1 }) exitWith {
-    [_vehicle, _currentVehicleAmmo] call FUNC(detonate);
+    [_vehicle, _injurer, _currentVehicleAmmo] call FUNC(detonate);
     LOG_2("Detonating [%1] with a chance-to-detonate [%2]",_vehicle,_chanceOfDetonate);
     _vehicle setVariable [QGVAR(detonating), true];
     true
