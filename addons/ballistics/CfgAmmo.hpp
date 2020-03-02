@@ -47,55 +47,65 @@ class CfgAmmo {
         submunitionConeType[] = {"poissondisc", 9};
         submunitionConeAngle = 0.81;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No0_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0033;
         caliber = 0.5;
         hit = 2.27;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No1_Buck: B_12Gauge_Pellets_Submunition {
         caliber = 0.475;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 11};
         submunitionConeAngle = 0.83;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No1_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0038;
         caliber = 0.475;
         hit = 1.86;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No2_Buck: B_12Gauge_Pellets_Submunition {
         caliber = 0.45;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 14};
         submunitionConeAngle = 0.85;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No2_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0048;
         caliber = 0.45;
         hit = 1.46;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No3_Buck: B_12Gauge_Pellets_Submunition {
         caliber = 0.425;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 18};
         submunitionConeAngle = 0.87;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No3_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0067;
         caliber = 0.425;
         hit = 1.13;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No4_Buck: B_12Gauge_Pellets_Submunition {
         caliber = 0.4;
         submunitionAmmo = "ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy";
         submunitionConeType[] = {"poissondisc", 21};
         submunitionConeAngle = 0.89;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No4_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0085;
         caliber = 0.4;
         hit = 0.97;
     };
+
     class ACE_12Gauge_Pellets_Submunition_No4_Bird: B_12Gauge_Pellets_Submunition {
         caliber = 0.2;
         hit = 3;
@@ -104,6 +114,7 @@ class CfgAmmo {
         submunitionConeAngle = 1.1;
         triggerSpeedCoef[] = {0.8, 1};
     };
+
     class ACE_12Gauge_Pellets_Submunition_No4_Bird_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         caliber = 0.2;
         airFriction = -0.0800;
@@ -215,7 +226,7 @@ class CfgAmmo {
 
     class B_65x39_Caseless : BulletBase {
         airFriction = -0.00077363;
-        tracerScale = 1.1; //1.0;
+        tracerScale = 1.1; // 1.0;
         ACE_caliber = 6.706;
         ACE_bulletLength = 32.893;
         ACE_bulletMass = 7.9704;
@@ -272,12 +283,12 @@ class CfgAmmo {
 
     class SubmunitionBullet;
     class B_65x39_Minigun_Caseless: SubmunitionBullet {
-        tracerScale = 1.1; //1.0;
+        tracerScale = 1.1; // 1.0;
     };
 
     class B_762x51_Ball : BulletBase {
         airFriction = -0.00103711;
-        tracerScale = 1.2; //0.6;
+        tracerScale = 1.2; // 0.6;
         tracerStartTime = 0.073;  // Based on the British L5A1 which burns out to 1000m 
         tracerEndTime = 2.15957;  // Time in seconds calculated with ballistics calculator
         ACE_caliber = 7.823;
@@ -658,7 +669,7 @@ class CfgAmmo {
     class B_127x99_Ball : BulletBase {
         timeToLive = 10;
         airFriction = -0.00058679;
-        tracerScale = 1.3; //1.2;
+        tracerScale = 1.3; // 1.2;
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
@@ -675,7 +686,7 @@ class CfgAmmo {
     class ACE_127x99_API : B_127x99_Ball {
         timeToLive = 10;
         airFriction = -0.00058679;
-        tracerScale = 1.3;//
+        tracerScale = 1.3;
         hit = 25;
         caliber = 4.0;
         ACE_caliber = 12.954;
