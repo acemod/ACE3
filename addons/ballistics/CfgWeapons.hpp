@@ -51,10 +51,13 @@ class CfgWeapons {
     class DMR_03_base_F: Rifle_Long_Base_F {
         ACE_barrelLength = 508.0;
         ACE_barrelTwist = 254.0;
-        initSpeed = -0.991536;
         magazineWell[] += {
             "CBA_762x51_M14"
         }; // vanilla magazineWell[] = {"M14_762x51"};
+    };
+
+    class srifle_DMR_03_F: DMR_03_base_F {
+        initSpeed = -0.991536;
     };
 
     // ASP-1 Kir
