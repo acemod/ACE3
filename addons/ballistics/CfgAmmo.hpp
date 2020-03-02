@@ -398,7 +398,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Berger_Hybrid_OTM : B_762x51_Ball {
-        airFriction=-0.00053638;
+        airFriction=-0.000546;
         caliber=2.0;
         hit=19;
         typicalSpeed=853;
