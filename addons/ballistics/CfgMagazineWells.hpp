@@ -46,7 +46,7 @@ class CfgMagazineWells {
         };
     };
 
-    class CBA_65x39_Katiba {
+    class Katiba_65x39 {
         ADDON[] = {
             "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
         };
