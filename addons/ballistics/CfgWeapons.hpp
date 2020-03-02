@@ -57,7 +57,7 @@ class CfgWeapons {
     };
 
     class srifle_DMR_03_F: DMR_03_base_F {
-        initSpeed = -0.991536;
+        initSpeed = -0.991536; // Default vanilla value 940
     };
 
     // ASP-1 Kir
