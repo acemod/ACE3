@@ -26,14 +26,14 @@
             <Hungarian>Fájdalom-effekt típusa</Hungarian>
             <Portuguese>Tipo do efeito de dor</Portuguese>
             <Czech>Typ bolesti - efekt</Czech>
-            <Japanese>痛み効果の種類</Japanese>
+            <Japanese>痛み効果種類</Japanese>
             <Korean>고통 효과 종류</Korean>
             <Chinese>疼痛效果類型</Chinese>
             <Turkish>Ağrı Etkisi Türü</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
             <English>Selects the used pain effect type.</English>
-            <Japanese>痛みの効果の種類を選択できます。</Japanese>
+            <Japanese>痛みの効果を選択できます。</Japanese>
             <French>Permet de choisir quel effet provoque la douleur.</French>
             <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
             <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
@@ -107,26 +107,31 @@
             <English>Low Blood Volume Effect Type</English>
             <Russian>Визуальный эффект низкого объема крови</Russian>
             <French>Effet de faible volume sanguin</French>
+            <Japanese>低血液量時の効果種類</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
             <English>Selects the used low blood volume effect type.</English>
             <Russian>Выбирает тип визуализации эффекта низкого объема крови.</Russian>
             <French>Permet de choisir quel effet provoque un faible volume sanguin.</French>
+            <Japanese>低血液量時の効果を選択できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>
             <Russian>Потеря цветности</Russian>
             <French>Atténuation des couleurs</French>
+            <Japanese>退色</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
             <Russian>Иконка</Russian>
             <French>Icône</French>
+            <Japanese>アイコン</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
             <English>Icon + Color Fading</English>
             <Russian>Иконка + Потеря цветности</Russian>
             <French>Icône + Atténuation des couleurs</French>
+            <Japanese>アイコンと退色</Japanese>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">

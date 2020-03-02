@@ -12,11 +12,11 @@
             <French>ACE Médical</French>
             <Hungarian>ACE Orvosi Rendszer</Hungarian>
             <Italian>ACE Medical</Italian>
-            <Japanese>ACE 医療</Japanese>
             <Korean>ACE 의료</Korean>
             <Chinesesimp>ACE 医疗系统</Chinesesimp>
             <Chinese>ACE 醫療系統</Chinese>
             <Turkish>ACE Medikal</Turkish>
+            <Japanese>ACE 医療</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
@@ -50,6 +50,7 @@
             <Polish>Zwiększenie szansy na wybudzenie po podaniu epinefryny</Polish>
             <Chinese>腎上腺素甦醒率加成</Chinese>
             <German>Erhöhung der Aufwachüberprüfungsrate durch Epinephrin</German>
+            <Japanese>アドレナリン覚醒率の上昇</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -168,10 +169,12 @@
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
             <French>Chance de fracture</French>
+            <Japanese>骨折確率</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
             <French>La probabilité pour qu'une blessure pouvant causer une fracture en crée effectivement une.</French>
+            <Japanese>骨折の原因となる負傷で骨折する確率を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
