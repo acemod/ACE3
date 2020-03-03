@@ -140,7 +140,7 @@ if (_isBurning) exitWith {};
     };
     
     if !(isGamePaused) then {
-        // propogate fire
+        // propagate fire
         if ((CBA_missionTime - _lastPropogateUpdate) >= BURN_PROPOGATE_UPDATE) then {
             _lastPropogateUpdate = CBA_missionTime;
             if !([ACE_PLAYER] call FUNC(isBurning)) then {
