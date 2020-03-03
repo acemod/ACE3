@@ -1,4 +1,22 @@
 class CfgVehicles {
+    class ThingX;
+    class GVAR(Turret_MBT_01): ThingX {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = QGVAR(Turret_MBT_01);
+        scope = 1;
+        displayName = CSTRING(generic_turret_wreck);
+        model = "\A3\Structures_F\Wrecks\Wreck_Slammer_turret_F.p3d";
+        icon = "\A3\armor_f_gamma\MBT_01\Data\ui\map_slammer_mk4_ca.paa";
+    };
+    class GVAR(Turret_MBT_02): ThingX {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = QGVAR(Turret_MBT_02);
+        scope = 1;
+        displayName = CSTRING(generic_turret_wreck);
+        model = "\A3\Structures_F\Wrecks\Wreck_T72_turret_F.p3d";
+        icon = "\A3\armor_f_gamma\MBT_02\Data\UI\map_MBT_02_ca.paa";
+    };
+    
     class Tank;
     class Car_F;
     class Tank_F : Tank {
@@ -114,7 +132,9 @@ class CfgVehicles {
         GVAR(detonationDuringFireProb) = 0.3;
     };
     class B_MBT_01_base_F: MBT_01_base_F {};
-    class B_MBT_01_cannon_F: B_MBT_01_base_F {};
+    class B_MBT_01_cannon_F: B_MBT_01_base_F {
+        GVAR(turret)[] = {QGVAR(Turret_MBT_01),{0,-1,0.5}};
+    };
     class B_MBT_01_TUSK_F: B_MBT_01_cannon_F {
         GVAR(eraHitpoints)[] = {
             "HitERA_Front",
@@ -123,6 +143,12 @@ class CfgVehicles {
             "HitERA_Top_Front", "HitERA_Top_Left", "HitERA_Top_Right"
         };
     };
+    
+    class O_MBT_02_base_F;
+    class O_MBT_02_cannon_F: O_MBT_02_base_F {
+        GVAR(turret)[] = {QGVAR(Turret_MBT_02),{0,-1,0}};
+    };
+    
     class APC_Tracked_02_base_F : Tank_F {
         GVAR(hullDetonationProb) = 0;
         GVAR(turretDetonationProb) = 0.2;
