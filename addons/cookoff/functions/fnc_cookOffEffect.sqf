@@ -36,6 +36,7 @@ if (isServer) then {
 if (_ring) then {
     private _intensity = 6;
     private _radius = 1.5 * ((boundingBoxReal _obj) select 2);
+    // only the server initializes this event so this is fine
     [QEGVAR(fire,addFireSource), [_obj, _radius, _intensity, _obj]] call CBA_fnc_globalEvent;
 };
 
