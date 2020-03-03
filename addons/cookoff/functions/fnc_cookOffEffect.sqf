@@ -122,7 +122,8 @@ if (_ring) then {
             [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]], 
             [2 + random 1], 1, 0, "", "", _obj
         ];
-        drop [["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
+        drop [
+            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
             "", "Billboard", 1, (0.1 + (random 0.2)) * _factor, 
             [-0.1 + random 0.2, -0.1 + random 0.2, -1],
             [-20 * (_factor / 2), 0, 0], 

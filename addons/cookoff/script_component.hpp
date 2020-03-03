@@ -31,4 +31,5 @@
 // Delay between flame effect for players in a cooking off vehicle
 #define FLAME_EFFECT_DELAY 0.4
 
-#define EJECT_IF_DESTROYED_VEHICLES ["Boat_Transport_02_base_F", "Rubber_duck_base_F"]
+// Common commander hatch defines for default vehicles
+#define DEFAULT_COMMANDER_HATCHES ["osa_poklop_commander", "hatch_commander_axis"]

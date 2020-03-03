@@ -73,7 +73,7 @@ private _iterateThroughConfig = {
 _vehicle allowCrewInImmobile true;
 private _eh = _vehicle getVariable [QGVAR(handleDamage), nil];
 if (isNil "_eh") then {
-    TRACE_1("added eh", _vehicle);
+    TRACE_1("EH not added yet - added eh now", _vehicle);
     private _hd = _vehicle addEventHandler ["HandleDamage", { _this call FUNC(handleDamage); }];
     _vehicle setVariable [QGVAR(handleDamage), _hd];
 };

@@ -28,9 +28,9 @@ if (_positions isEqualTo []) then {
     WARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
     {
         private _pos = _vehicle selectionPosition _x;
-        if(_pos isEqualTo [0, 0, 0]) exitWith {};
+        if (_pos isEqualTo [0, 0, 0]) exitWith {};
         _positions pushBack _x;
-    } forEach ["osa_poklop_commander", "hatch_commander_axis"];
+    } forEach DEFAULT_COMMANDER_HATCHES;
     
     if (_positions isEqualTo []) then {
         _positions pushBack "#noselection";

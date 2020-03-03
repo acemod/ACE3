@@ -21,16 +21,18 @@
 params ["_vehicle", "_chance", "_count", ["_source", objNull]];
 TRACE_4("adding damage to units", _vehicle, _chance, _count, _source);
 
-private _crewCount = count crew _vehicle;
+private _vehicleCrew = crew _vehicle;
+private _crewCount = count _vehicleCrew;
 if (_crewCount <= 0) exitWith {};
 
 private _crewInjuryIndices = [];
-for "_i" from 0 to _crewCount - 1 do {
-    _crewInjuryIndices pushBack _i;
-};
+{
+    _crewInjuryIndices pushBack (_forEachIndex - 1);
+} forEach _vehicleCrew;
 
 private _injuryCount = 0;
-for "_i" from 1 to _crewCount do {
+// Not actually doing anything to any initial vehicle crew in this forEach - just a way to loop through all crew at least once
+{
     private _indexToInjure = -1;
     {
         if (_chance > random 1) exitWith {
@@ -41,7 +43,7 @@ for "_i" from 1 to _crewCount do {
     if (_indexToInjure >= 0) then {
         _injuryCount = _injuryCount + 1;
         private _indexCount = count _crewInjuryIndices;
-        private _casualty = (crew _vehicle) select (_crewInjuryIndices select _indexToInjure);
+        private _casualty = _vehicleCrew select (_crewInjuryIndices select _indexToInjure);
         _crewInjuryIndices deleteAt _indexToInjure;
         
         // arbitrary percentages
@@ -53,6 +55,5 @@ for "_i" from 1 to _crewCount do {
     };
     
     if (_injuryCount >= _count) exitWith {};
-};
+} forEach _vehicleCrew;
 
- 
