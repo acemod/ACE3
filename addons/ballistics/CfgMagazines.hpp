@@ -454,7 +454,7 @@ class CfgMagazines {
     };
 
     class 10Rnd_50BW_Mag_F: CA_Magazine {
-        initSpeed = 552;
+        initSpeed = 549; // according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
     };
 
     class 11Rnd_45ACP_Mag: CA_Magazine {
