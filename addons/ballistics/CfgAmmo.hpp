@@ -698,19 +698,21 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class B_50BW_Ball_F : BulletBase {
-        airFriction=-0.00205896;
-        ACE_caliber=12.7;
-        ACE_bulletLength=24.13;
-        ACE_bulletMass=21.7076;
-        ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
-        ACE_ballisticCoefficients[]={0.21};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ASM";
-        ACE_dragModel=1;
-        ACE_muzzleVelocities[]={510, 550, 596};
-        ACE_barrelLengths[]={304.8, 406.4, 609.6};
+
+    class B_50BW_Ball_F: BulletBase { // http://www.alexanderarms.com/images/pdfs/beowulf_ballistics.pdf#page=2
+        airFriction = -0.002098; // According with the G1 BC 0.21 and the muzzle velocity 1800 ft/s: 549 m/s
+        ACE_caliber = 12.7;
+        ACE_bulletLength = 24.13;
+        ACE_bulletMass = 21.64; // 334 grains
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.21};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ASM";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {550}; // at 21°C, at 15°C 549 m/s according with the 10Rnd_50BW_Mag_F initSpeep
+        ACE_barrelLengths[] = {304.8}; // 12"
     };
+
     class B_570x28_Ball: BulletBase {
         ACE_caliber = 5.7; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf
         ACE_bulletLength = 21.6; // http://blog.thejustnation.org/2011/04/5-7x28mm-ammo-review/
