@@ -11,9 +11,11 @@ class CfgWeapons {
         ACE_barrelLength = 730;
         ACE_barrelTwist = 381.0;
         initSpeed = -1.0;
-        magazineWell[] += {
-            "CBA_50BMG_M107"
-        }; // empty in vanilla
+        magazines[] += { // No Vanilla magwell
+            "ACE_5Rnd_127x99_Mag",
+            "ACE_5Rnd_127x99_API_Mag",
+            "ACE_5Rnd_127x99_AMAX_Mag"
+        };
     };
 
     // M200 Intervention
@@ -21,9 +23,6 @@ class CfgWeapons {
         ACE_barrelLength = 736.6;
         ACE_barrelTwist = 330.2;
         initSpeed = -1.0;
-        magazineWell[] += {
-            "CBA_408CT_Inter"
-        }; // vanilla magazineWell[] = {"M320_408"};
     };
 
     // Mk14 Mod 1 EBR
@@ -52,9 +51,6 @@ class CfgWeapons {
         ACE_barrelLength = 508.0;
         ACE_barrelTwist = 254.0;
         initSpeed = -0.991536;
-        magazineWell[] += {
-            "CBA_762x51_M14"
-        }; // vanilla magazineWell[] = {"M14_762x51"};
     };
 
     // ASP-1 Kir
