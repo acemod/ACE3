@@ -69,6 +69,22 @@ class CfgMagazineWells {
         };
     };
 
+    class M14_762x51 {
+        ADDON[] = { // Vanilla magwell
+            "ACE_20Rnd_762x51_Mag_Tracer",
+            "ACE_20Rnd_762x51_Mag_Tracer_Dim",
+            "ACE_20Rnd_762x51_Mag_SD",
+            "ACE_10Rnd_762x51_M118LR_Mag",
+            "ACE_10Rnd_762x51_Mk316_Mod_0_Mag",
+            "ACE_10Rnd_762x51_Mk319_Mod_0_Mag",
+            "ACE_10Rnd_762x51_M993_AP_Mag",
+            "ACE_20Rnd_762x51_M118LR_Mag",
+            "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
+            "ACE_20Rnd_762x51_M993_AP_Mag"
+        };
+    };
+
     class CBA_762x51_M14 {
         ADDON[] = {
             "ACE_20Rnd_762x51_Mag_Tracer",
@@ -157,6 +173,12 @@ class CfgMagazineWells {
     };
 
     class CBA_408CT_Inter {
+        ADDON[] = {
+            "ACE_7Rnd_408_305gr_Mag"
+        };
+    };
+
+    class M320_408 { // Vanilla magwell
         ADDON[] = {
             "ACE_7Rnd_408_305gr_Mag"
         };
