@@ -44,6 +44,13 @@ class CfgVehicles {
 
     class rhs_bmd_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 300;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0.8;
+        EGVAR(vehicleDamage,turretFireProb) = 0.5;
+        EGVAR(vehicleDamage,engineFireProb) = 0.8;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
     class rhs_bmp1tank_base: Tank_F {
         EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
@@ -51,19 +58,83 @@ class CfgVehicles {
     };
     class rhs_bmp3tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 460;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0.5;
+        EGVAR(vehicleDamage,turretFireProb) = 0.2;
+        EGVAR(vehicleDamage,engineFireProb) = 0.8;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
     class rhs_btr_base: Wheeled_APC_F {
         EGVAR(map,vehicleLightColor)[] = {0,0,1,0.1};
         EGVAR(refuel,fuelCapacity) = 300;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0.7;
+        EGVAR(vehicleDamage,turretFireProb) = 0.7;
+        EGVAR(vehicleDamage,engineFireProb) = 0.7;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
     class rhs_a3spruttank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 400;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0.5;
+        EGVAR(vehicleDamage,turretFireProb) = 0.2;
+        EGVAR(vehicleDamage,engineFireProb) = 0.8;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
     class rhs_a3t72tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.8;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,hullFireProb) = 0.8;
+        EGVAR(vehicleDamage,turretFireProb) = 0.2;
+        EGVAR(vehicleDamage,engineFireProb) = 0.5;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.2;
+        GVAR(turret)[] = { QEGVAR(vehicleDamage,Turret_MBT_01), {0, -1, 0.5} };
     };
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.8;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,hullFireProb) = 0.8;
+        EGVAR(vehicleDamage,turretFireProb) = 0.2;
+        EGVAR(vehicleDamage,engineFireProb) = 0.5;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.2;
+    };
+    class rhs_bmp_base: rhs_bmp1tank_base {
+        GVAR(hullDetonationProb) = 0;
+        GVAR(turretDetonationProb) = 0.2;
+        GVAR(engineDetonationProb) = 0;
+        GVAR(hullFireProb) = 0.8;
+        GVAR(turretFireProb) = 0.5;
+        GVAR(engineFireProb) = 0.8;
+        GVAR(detonationDuringFireProb) = 0.5;
+    };
+    class rhs_zsutank_base: APC_Tracked_02_base_F {
+        GVAR(hullDetonationProb) = 0;
+        GVAR(turretDetonationProb) = 0;
+        GVAR(engineDetonationProb) = 0.2;
+        GVAR(hullFireProb) = 0.7;
+        GVAR(turretFireProb) = 0.7;
+        GVAR(engineFireProb) = 0.8;
+        GVAR(detonationDuringFireProb) = 0.8;
+    };
+    class rhs_t72bd_tv: rhs_a3t72tank_base {};
+    class rhs_t90_tv: rhs_t72bd_tv {
+        GVAR(hullDetonationProb) = 0;
+        GVAR(turretDetonationProb) = 0;
+        GVAR(engineDetonationProb) = 0;
+        GVAR(hullFireProb) = 0.2;
+        GVAR(turretFireProb) = 0.2;
+        GVAR(engineFireProb) = 0.5;
+        GVAR(detonationDuringFireProb) = 0;
     };
 
     class rhs_infantry_msv_base;

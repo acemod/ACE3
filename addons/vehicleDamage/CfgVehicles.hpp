@@ -133,7 +133,7 @@ class CfgVehicles {
     };
     class B_MBT_01_base_F: MBT_01_base_F {};
     class B_MBT_01_cannon_F: B_MBT_01_base_F {
-        GVAR(turret)[] = {QGVAR(Turret_MBT_01),{0,-1,0.5}};
+        GVAR(turret)[] = { QGVAR(Turret_MBT_01), {0, -1, 0.5} };
     };
     class B_MBT_01_TUSK_F: B_MBT_01_cannon_F {
         GVAR(eraHitpoints)[] = {
@@ -146,7 +146,7 @@ class CfgVehicles {
     
     class O_MBT_02_base_F;
     class O_MBT_02_cannon_F: O_MBT_02_base_F {
-        GVAR(turret)[] = {QGVAR(Turret_MBT_02),{0,-1,0}};
+        GVAR(turret)[] = { QGVAR(Turret_MBT_02), {0, -1, 0} };
     };
     
     class APC_Tracked_02_base_F : Tank_F {

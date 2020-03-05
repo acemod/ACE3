@@ -262,6 +262,13 @@ class CfgVehicles {
     class rhsusf_m113tank_base: APC_Tracked_02_base_F {
         EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
         EGVAR(refuel,fuelCapacity) = 360;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0.7;
+        EGVAR(vehicleDamage,turretFireProb) = 0.2;
+        EGVAR(vehicleDamage,engineFireProb) = 0.8;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
 
     class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
@@ -270,11 +277,45 @@ class CfgVehicles {
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
+    class Wheeled_APC_F;
     class APC_Tracked_03_base_F;
-    class RHS_M2A2_Base: APC_Tracked_03_base_F {
+    class RHS_M2A2_Base : APC_Tracked_03_base_F {
         EGVAR(refuel,fuelCapacity) = 746;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0.2;
+        EGVAR(vehicleDamage,turretFireProb) = 0.2;
+        EGVAR(vehicleDamage,engineFireProb) = 0.8;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
-
+    class rhsusf_M1117_base : Wheeled_APC_F {
+        GVAR(hullDetonationProb) = 0.2;
+        GVAR(turretDetonationProb) = 0.2;
+        GVAR(engineDetonationProb) = 0;
+        GVAR(hullFireProb) = 0.7;
+        GVAR(turretFireProb) = 0.2;
+        GVAR(engineFireProb) = 0.8;
+        GVAR(detonationDuringFireProb) = 0.5;
+    };
+    class rhsusf_stryker_base: Wheeled_APC_F {
+        GVAR(hullDetonationProb) = 0.2;
+        GVAR(turretDetonationProb) = 0.2;
+        GVAR(engineDetonationProb) = 0;
+        GVAR(hullFireProb) = 0.5;
+        GVAR(turretFireProb) = 0.2;
+        GVAR(engineFireProb) = 0.7;
+        GVAR(detonationDuringFireProb) = 0.5;
+    };
+    class rhsusf_m1a1tank_base : MBT_01_base_F {
+        GVAR(hullDetonationProb) = 0;
+        GVAR(turretDetonationProb) = 0;
+        GVAR(engineDetonationProb) = 0;
+        GVAR(hullFireProb) = 0;
+        GVAR(turretFireProb) = 0;
+        GVAR(engineFireProb) = 0.5;
+        GVAR(detonationDuringFireProb) = 0;
+    };
     class Plane_CAS_01_base_F;
     class RHS_A10: Plane_CAS_01_base_F {
         EGVAR(refuel,fuelCapacity) = 6223;

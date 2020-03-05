@@ -28,4 +28,15 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={785, 800, 815};
         ACE_barrelLengths[]={508.0, 599.948, 660.4};
     };
+    
+    class rhs_ammo_3bk12_penetrator;
+	class rhsgref_ammo_rkg3em_penetrator: rhs_ammo_3bk12_penetrator {
+        EGVAR(vehicleDamage,incendiary) = 1.0;
+    };
+    class rhs_ammo_rpg75_penetrator: rhs_ammo_3bk12_penetrator {
+        EGVAR(vehicleDamage,incendiary) = 1.0;
+    };
+    class rhs_ammo_panzerfaust60_penetrator: rhs_ammo_3bk12_penetrator {
+        EGVAR(vehicleDamage,incendiary) = 1.0;
+    };
 };
