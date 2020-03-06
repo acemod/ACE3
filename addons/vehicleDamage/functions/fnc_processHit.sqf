@@ -59,6 +59,7 @@ if (_incendiary < 0) then {
 
 private _projectileExplosive = [_projectileConfig >> "explosive", "NUMBER", 0] call CBA_fnc_getConfigEntry;
 private _minDamage = [_hitpointConfig >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry;
+private _indirectHit = [_projectileConfig >> "indirectHit", "NUMBER", 0] call CBA_fnc_getConfigEntry;
 
 if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
     // change damage based on projectile speed (doesn't do this in vanilla ARMA believe it or not)
@@ -74,6 +75,14 @@ if (_newDamage < abs _minDamage) exitWith {
     _return
 };
 
+if (_warheadType isEqualTo WARHEAD_TYPE_HE) then {
+    private _modifiedIndirectHit = _indirectHit / 100;
+    if (_newDamage > _modifiedIndirectHit) then {
+        _newDamage = _newDamage / 2;
+    };
+    _newDamage = (_newDamage * (_newDamage / _modifiedIndirectHit)) min _newDamage;
+};
+
 if (_minDamage == 0) then {
     _minDamage = 1;
 };
@@ -84,7 +93,11 @@ if (_minDamage < 0) then {
 private _ammoEffectiveness = if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
     0.15 max _newDamage
 } else {
-    ((_newDamage / _minDamage) * 0.4) min 1
+    if (_warheadType isEqualTo WARHEAD_TYPE_HE) then {
+        (_newDamage / (_minDamage + (_indirectHit / 100)) * 0.2)
+    } else {
+        ((_newDamage / _minDamage) * 0.4) min 1
+    };
 };
 TRACE_4("ammo effectiveness",_ammoEffectiveness,_newDamage,_minDamage,_warheadTypeStr);
 
@@ -104,8 +117,8 @@ switch (_warheadType) do {
         _injuryCount = 1 + (_ammoEffectiveness * round random 9);
     };
     case WARHEAD_TYPE_HE: {
-        _injuryChance = 0.1; // spalling injury chance alongside direct hit potential
-        _injuryCount = 2;
+        _injuryChance = 0.03 * (1 + _ammoEffectiveness); // spalling injury chance alongside direct hit potential
+        _injuryCount = 2 + (ceil random 3);
         if (_isCar) then {
             _injuryChance = 0.8;
             _injuryCount = 3 max random count crew _vehicle;

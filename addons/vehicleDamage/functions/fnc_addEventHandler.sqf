@@ -19,7 +19,7 @@ TRACE_2("addEventHandler",_vehicle,GVAR(enabled));
 
 if !(GVAR(enabled)) exitWith {
     #ifdef DEBUG_MODE_FULL
-    ["Warning: Vehicle Damage not enabled...", 2] call CBA_fnc_notify;
+    [{ ["Warning: Vehicle Damage not enabled...", 2] call CBA_fnc_notify; }, [], 5] call CBA_fnc_waitAndExecute; 
     #endif
 };
 
