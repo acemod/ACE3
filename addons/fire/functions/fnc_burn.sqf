@@ -129,6 +129,10 @@ if (_isBurning) exitWith {};
     _fireLight setLightAttenuation [1, 10 max (5 min (10 - _intensity)), 0, 15];
     _lightFlare setLightFlareSize (_intensity * (3 / 4)) * FLARE_SIZE_MODIFIER;
     
+    if !(GVAR(enableFlare)) then {
+        _lightFlare setLightFlareSize 0;
+    };
+    
     // always keep flare visible to perceiving unit as long as it isnt the player
     if !(_unit isEqualTo ACE_PLAYER) then {
         private _relativeAttachPoint = [0, 0, 0.3];

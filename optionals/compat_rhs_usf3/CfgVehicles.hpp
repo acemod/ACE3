@@ -313,7 +313,7 @@ class CfgVehicles {
         EGVAR(vehicleDamage,turretFireProb) = 0;
         EGVAR(vehicleDamage,engineFireProb) = 0.5;
         EGVAR(vehicleDamage,detonationDuringFireProb) = 0;
-        EGVAR(vehicleDamage,hitpointAlias)[] = { { "hull", { "hitammohull" } } };
+        EGVAR(vehicleDamage,hitpointAlias)[] = { { "hull", { "hitammohull", "hitammo" } } };
     };
     
     class RHS_M2A2;
