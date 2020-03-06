@@ -49,6 +49,7 @@ private _iterateThroughConfig = {
     private _isTurret = ([_config >> "isTurret", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
     private _isEra = _configName in _eraHitpoints;
     private _isSlat = _configName in _slatHitpoints;
+    private _isMisc = false;
     
     // prevent incompatabilites with old mods
     if ((toLower _configName) isEqualTo "hitturret") then {
@@ -61,15 +62,14 @@ private _iterateThroughConfig = {
     private _hash = _vehicle getVariable QGVAR(hitpointHash);
     {
         _x params ["_hitType", "_hitPoints"];
-        {
-            if ((toLower _configName) isEqualTo _x) then {
-                [_hash, toLower _configName, [_hitType, _config, _configName]] call CBA_fnc_hashSet;
-            };
-        } forEach _hitPoints;
+        if ((toLower _configName) in _hitPoints) then {
+            [_hash, toLower _configName, [_hitType, _config, _configName]] call CBA_fnc_hashSet;
+            _isMisc = true;
+        };
     } forEach _hitpointAliases;
-    
-    if (_isGun || _isTurret || _isEra || _isSlat) then {
-        TRACE_5("found gun/turret/era/slat",_isGun,_isTurret,_isEra,_isSlat,_hash);
+        
+    if (_isGun || _isTurret || _isEra || _isSlat || _isMisc) then {
+        TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hash);
         if (_isGun) then {
             [_hash, toLower _configName, ["gun", _config, _configName]] call CBA_fnc_hashSet;
         };
@@ -91,6 +91,7 @@ private _iterateThroughConfig = {
 };
 
 private _hitpointAliases = [_vehicleConfig >> QGVAR(hitpointAlias), "ARRAY", []] call CBA_fnc_getConfigEntry;
+TRACE_1("hitpoint alias",_hitpointAliases);
 [_vehicle, _hitpointsConfig, _iterateThroughConfig, _hitpointAliases] call _iterateThroughConfig;
 [_vehicle, _turretConfig, _iterateThroughConfig, _hitpointAliases] call _iterateThroughConfig;
 
