@@ -18,7 +18,13 @@
  *
  * Public: No
  */
-params ["_vehicle", "_hitIndex", "_hitPoint", "_damage"];
+params ["_vehicle", "_hitIndex", "_hitPoint", "_damage", ["_capDamageAtCurret", true]];
+
+private _currentDamage = _vehicle getHitPointDamage _hitPoint;
+if (_capDamageAtCurret && { _damage <_currentDamage }) exitWith {
+    TRACE_4("capping damage at current",_capDamageAtCurret,_damage,_currentDamage,_hitPoint);
+};
+
 TRACE_4("adding damage to vehicle",_vehicle,_hitIndex,_hitPoint,_damage);
 if (_hitPoint isEqualTo "#structural") then {
     _hitPoint = "hithull";
