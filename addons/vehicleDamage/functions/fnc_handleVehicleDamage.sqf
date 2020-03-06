@@ -77,7 +77,7 @@ if (isNil "_multHit") then {
     };
 };
 if (_ignoreHit && !_structural) exitWith {
-    LOG_2("Ignoring multiple hits done to vehicle [%1] by [%2].",_vehicle,_injurer);
+    LOG_3("Ignoring multiple hits done to vehicle [%1] by [%2] -- hitpoint [%3].",_vehicle,_injurer,_hitPoint);
     true
 };
 LOG_3("Processing hit done to vehicle [%1] by [%2] at time [%3].",_vehicle,_injurer,CBA_missionTime);

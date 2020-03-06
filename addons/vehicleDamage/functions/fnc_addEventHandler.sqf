@@ -17,7 +17,11 @@
 params["_vehicle"];
 TRACE_2("addEventHandler",_vehicle,GVAR(enabled));
 
-if !(GVAR(enabled)) exitWith {};
+if !(GVAR(enabled)) exitWith {
+    #ifdef DEBUG_MODE_FULL
+    ["Warning: Vehicle Damage not enabled...", 2] call CBA_fnc_notify;
+    #endif
+};
 
 private _hitpointHash = [[], nil] call CBA_fnc_hashCreate;
 private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;

@@ -23,6 +23,10 @@ _hitpointData params ["_hitArea", "_hitpointConfig", "_hitpointName"];
 
 private _return = true;
 
+if (_newDamage < 0) then {
+    _newDamage = -_newDamage;
+};
+
 private _currentPartDamage = _vehicle getHitIndex _hitIndex;
 private _nextPartDamage = _currentPartDamage + _newDamage;
 
