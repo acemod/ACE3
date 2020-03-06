@@ -23,16 +23,12 @@
             _crewman setSpeedMode "FULL";
         }] call CBA_fnc_addEventHandler;
 
-        ["ace_settingsInitialized", {
-            TRACE_1("settingsInit", GVAR(enableCrewBailing));
-
-            ["Tank", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
-            ["Wheeled_APC_F", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
-            
-            if (GVAR(enableCarDamage)) then {
-                ["Car", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
-            };
-        }] call CBA_fnc_addEventHandler;
+        ["Tank", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
+        ["Wheeled_APC_F", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
+        
+        if (GVAR(enableCarDamage)) then {
+            ["Car", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
+        };
 
         // blow off turret effect
         ["Tank", "killed", {

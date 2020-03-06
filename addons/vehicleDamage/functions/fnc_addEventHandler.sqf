@@ -38,37 +38,57 @@ _vehicle setVariable [QGVAR(hitpointHash), _hitpointHash];
 
 // gun and turret hitpoints arent hardcoded anymore - dig through config to find correct names
 private _iterateThroughConfig = {
-    params ["_vehicle", "_config", "_iterateThroughConfig"];
+    params ["_vehicle", "_config", "_iterateThroughConfig", "_hitpointAliases"];
     TRACE_1("checking config",_config);
+    private _configName = configName _config;
     private _isGun = ([_config >> "isGun", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
     private _isTurret = ([_config >> "isTurret", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
-    private _isEra = (configName _config) in _eraHitpoints;
-    private _isSlat = (configName _config) in _slatHitpoints;
+    private _isEra = _configName in _eraHitpoints;
+    private _isSlat = _configName in _slatHitpoints;
     
-    if (_isGun || _isTurret || _isEra || _isSlat)then {
-        private _hash = _vehicle getVariable QGVAR(hitpointHash);
+    // prevent incompatabilites with old mods
+    if ((toLower _configName) isEqualTo "hitturret") then {
+        _isTurret = true;
+    };
+    if ((toLower _configName) isEqualTo "hitgun") then {
+        _isGun = true;
+    };
+    
+    private _hash = _vehicle getVariable QGVAR(hitpointHash);
+    {
+        _x params ["_hitType", "_hitPoints"];
+        {
+            if ((toLower _configName) isEqualTo _x) then {
+                [_hash, toLower _configName, [_hitType, _config, _configName]] call CBA_fnc_hashSet;
+            };
+        } forEach _hitPoints;
+    } forEach _hitpointAliases;
+    
+    if (_isGun || _isTurret || _isEra || _isSlat) then {
         TRACE_5("found gun/turret/era/slat",_isGun,_isTurret,_isEra,_isSlat,_hash);
         if (_isGun) then {
-            [_hash, toLower configName _config, ["gun", _config, configName _config]] call CBA_fnc_hashSet;
+            [_hash, toLower _configName, ["gun", _config, _configName]] call CBA_fnc_hashSet;
         };
         if (_isTurret) then {
-            [_hash, toLower configName _config, ["turret", _config, configName _config]] call CBA_fnc_hashSet;
+            [_hash, toLower _configName, ["turret", _config, _configName]] call CBA_fnc_hashSet;
         };
         if (_isEra) then {
-            [_hash, toLower configName _config, ["era", _config, configName _config]] call CBA_fnc_hashSet;
+            [_hash, toLower _configName, ["era", _config, _configName]] call CBA_fnc_hashSet;
         };
         if (_isSlat) then {
-            [_hash, toLower configName _config, ["slat", _config, configName _config]] call CBA_fnc_hashSet;
+            [_hash, toLower _configName, ["slat", _config, _configName]] call CBA_fnc_hashSet;
         };
         _vehicle setVariable [QGVAR(hitpointHash), _hash];
     } else {
         {
-            [_vehicle, _x, _iterateThroughConfig] call _iterateThroughConfig;
+            [_vehicle, _x, _iterateThroughConfig, _hitpointAliases] call _iterateThroughConfig;
         } forEach configProperties [_config, "isClass _x", true];
     };
 };
-[_vehicle, _hitpointsConfig, _iterateThroughConfig] call _iterateThroughConfig;
-[_vehicle, _turretConfig, _iterateThroughConfig] call _iterateThroughConfig;
+
+private _hitpointAliases = [_vehicleConfig >> QGVAR(hitpointAlias), "ARRAY", []] call CBA_fnc_getConfigEntry;
+[_vehicle, _hitpointsConfig, _iterateThroughConfig, _hitpointAliases] call _iterateThroughConfig;
+[_vehicle, _turretConfig, _iterateThroughConfig, _hitpointAliases] call _iterateThroughConfig;
 
 _vehicle allowCrewInImmobile true;
 private _eh = _vehicle getVariable [QGVAR(handleDamage), nil];

@@ -15,7 +15,9 @@
     params ["_vehicle"];
     
     private _effects = _vehicle getVariable [QGVAR(effects), []];
-    _effects count {deleteVehicle _x };
+    if !(_effects isEqualTo []) then {
+         { deleteVehicle _x } count _effects;
+    };
 }] call CBA_fnc_addEventHandler;
 
 GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;

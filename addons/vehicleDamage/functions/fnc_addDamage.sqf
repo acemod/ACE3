@@ -20,6 +20,10 @@
  */
 params ["_vehicle", "_hitIndex", "_hitPoint", "_damage"];
 TRACE_4("adding damage to vehicle",_vehicle,_hitIndex,_hitPoint,_damage);
+if (_hitPoint isEqualTo "#structural") then {
+    _hitPoint = "hithull";
+    _hitIndex = -1;
+};
 if (_hitIndex >= 0) then {
     _vehicle setHitIndex [_hitIndex, _damage, true];
 } else {

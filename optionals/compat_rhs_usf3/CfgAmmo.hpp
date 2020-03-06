@@ -281,18 +281,11 @@ class CfgAmmo {
     class rhs_ammo_M136_hp_rocket: rhs_ammo_M136_rocket {
         EGVAR(vehicleDamage,incendiary) = 0.5;
     };
-    class rhs_ammo_M136_hedp_rocket: rhs_ammo_M136_rocket {
-        EGVAR(vehicleDamage,incendiary) = 0.8;
-    };
-    class rhs_ammo_m72a7_rocket: rhs_ammo_M136_hedp_rocket {
-        EGVAR(vehicleDamage,incendiary) = 1.0;
-    };
     class rhsusf_40mm_HE;
     class rhsusf_40mm_HEDP: rhsusf_40mm_HE {
         EGVAR(vehicleDamage,incendiary) = 0.8;
     };
     
-    class rhsusf_ammo_basic_penetrator;
     class rhs_ammo_M136_penetrator: rhsusf_ammo_basic_penetrator {
         EGVAR(vehicleDamage,incendiary) = 1.0;
     };
@@ -305,12 +298,13 @@ class CfgAmmo {
     class rhs_ammo_M_fgm148_AT_penetrator: rhsusf_ammo_basic_penetrator {
         EGVAR(vehicleDamage,incendiary) = 1.0;
     };
-    class class rhs_ammo_smaw_HEAA_penetrator: rhsusf_ammo_basic_penetrator {
+    class rhs_ammo_smaw_HEAA_penetrator: rhsusf_ammo_basic_penetrator {
         EGVAR(vehicleDamage,incendiary) = 1.0;
     };
     class rhs_ammo_maaws_HEAT_penetrator: rhsusf_ammo_basic_penetrator {
         EGVAR(vehicleDamage,incendiary) = 1.0;
     };
+    class RocketBase;
     class rhs_ammo_maaws_HEDP: RocketBase {
         EGVAR(vehicleDamage,incendiary) = 0.8;
     };
@@ -400,8 +394,6 @@ class CfgAmmo {
         ace_frag_skip = 0;
         ace_frag_force = 1;
     };
-    class RocketBase;
-    class rhs_ammo_M136_rocket: RocketBase {};
     class rhs_ammo_M136_hedp_rocket: rhs_ammo_M136_rocket {
         ace_frag_enabled = 1;
         ace_frag_metal = 330;
@@ -411,6 +403,13 @@ class CfgAmmo {
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
+        EGVAR(vehicleDamage,incendiary) = 0.8;
+    };
+    class rhs_ammo_m72a7_rocket: rhs_ammo_M136_hedp_rocket {
+        EGVAR(vehicleDamage,incendiary) = 1.0;
+        ace_frag_enabled = 0;
+        ace_frag_skip = 1;
+        ace_frag_force = 0;
     };
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;

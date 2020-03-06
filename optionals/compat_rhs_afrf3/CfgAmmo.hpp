@@ -217,6 +217,7 @@ class CfgAmmo {
     class rhs_ammo_bk_base: rhs_ammo_bm_base {
         EGVAR(vehicleDamage,incendiary) = 1.0;
     };
+    class rhs_ammo_3bm_base: rhs_ammo_bm_base {};
     class rhs_ammo_of_base: Sh_125mm_HE {
         EGVAR(vehicleDamage,incendiary) = 0.30;
     };

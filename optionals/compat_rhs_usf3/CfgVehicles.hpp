@@ -45,9 +45,6 @@ class CfgVehicles {
     };
 
     class MBT_01_base_F: Tank_F {};
-    class rhsusf_m1a1tank_base: MBT_01_base_F {
-        EGVAR(refuel,fuelCapacity) = 1909;
-    };
     class Helicopter_Base_F: Helicopter {
         class Eventhandlers;
     };
@@ -290,32 +287,118 @@ class CfgVehicles {
         EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
     class rhsusf_M1117_base : Wheeled_APC_F {
-        GVAR(hullDetonationProb) = 0.2;
-        GVAR(turretDetonationProb) = 0.2;
-        GVAR(engineDetonationProb) = 0;
-        GVAR(hullFireProb) = 0.7;
-        GVAR(turretFireProb) = 0.2;
-        GVAR(engineFireProb) = 0.8;
-        GVAR(detonationDuringFireProb) = 0.5;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0.7;
+        EGVAR(vehicleDamage,turretFireProb) = 0.2;
+        EGVAR(vehicleDamage,engineFireProb) = 0.8;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
     class rhsusf_stryker_base: Wheeled_APC_F {
-        GVAR(hullDetonationProb) = 0.2;
-        GVAR(turretDetonationProb) = 0.2;
-        GVAR(engineDetonationProb) = 0;
-        GVAR(hullFireProb) = 0.5;
-        GVAR(turretFireProb) = 0.2;
-        GVAR(engineFireProb) = 0.7;
-        GVAR(detonationDuringFireProb) = 0.5;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0.2;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0.5;
+        EGVAR(vehicleDamage,turretFireProb) = 0.2;
+        EGVAR(vehicleDamage,engineFireProb) = 0.7;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0.5;
     };
     class rhsusf_m1a1tank_base : MBT_01_base_F {
-        GVAR(hullDetonationProb) = 0;
-        GVAR(turretDetonationProb) = 0;
-        GVAR(engineDetonationProb) = 0;
-        GVAR(hullFireProb) = 0;
-        GVAR(turretFireProb) = 0;
-        GVAR(engineFireProb) = 0.5;
-        GVAR(detonationDuringFireProb) = 0;
+        EGVAR(refuel,fuelCapacity) = 1909;
+        EGVAR(vehicleDamage,hullDetonationProb) = 0;
+        EGVAR(vehicleDamage,turretDetonationProb) = 0;
+        EGVAR(vehicleDamage,engineDetonationProb) = 0;
+        EGVAR(vehicleDamage,hullFireProb) = 0;
+        EGVAR(vehicleDamage,turretFireProb) = 0;
+        EGVAR(vehicleDamage,engineFireProb) = 0.5;
+        EGVAR(vehicleDamage,detonationDuringFireProb) = 0;
     };
+    
+    class RHS_M2A2;
+    class RHS_M2A2_BUSKI: RHS_M2A2 {
+        EGVAR(vehicleDamage,eraHitpoints)[] = { 
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
+            "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
+            "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
+            "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint",
+            "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint",
+            "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint",
+            "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint",
+            "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint",
+        };
+    };
+    class RHS_M2A3;
+    class RHS_M2A3_BUSKI: RHS_M2A3 {
+        EGVAR(vehicleDamage,eraHitpoints)[] = { 
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
+            "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
+            "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
+            "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint",
+            "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint",
+            "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint",
+            "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint",
+            "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint",
+        };
+    };
+    class RHS_M2A3_BUSKIII: RHS_M2A3_BUSKI {
+        EGVAR(vehicleDamage,eraHitpoints)[] = { 
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
+            "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
+            "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
+            "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint",
+            "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint",
+            "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint",
+            "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint",
+            "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint",
+            "era_46_hitpoint", "era_47_hitpoint", "era_48_hitpoint", "era_49_hitpoint", "era_50_hitpoint",
+            "era_51_hitpoint", "era_52_hitpoint", "era_53_hitpoint", "era_54_hitpoint", "era_55_hitpoint",
+            "era_56_hitpoint", "era_57_hitpoint", "era_58_hitpoint", "era_59_hitpoint"
+        };
+    };
+    class rhsusf_m1a1aim_tuski_wd: rhsusf_m1a1tank_base {
+        EGVAR(vehicleDamage,eraHitpoints)[] = { 
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
+            "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
+            "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
+            "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint",
+            "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint",
+            "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint"
+        };
+        EGVAR(vehicleDamage,slatHitpoints)[] = { "SLAT_1_hitpoint" };
+    };
+    class rhsusf_m1a2tank_base;
+    class rhsusf_m1a2sep1tuskid_usarmy: rhsusf_m1a2tank_base {
+        EGVAR(vehicleDamage,eraHitpoints)[] = { 
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
+            "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
+            "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
+            "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint",
+            "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint",
+            "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint"
+        };
+        EGVAR(vehicleDamage,slatHitpoints)[] = { "SLAT_1_hitpoint" };
+    };
+    class rhsusf_m1a2sep1tuskiiwd_usarmy: rhsusf_m1a2sep1tuskid_usarmy {
+        EGVAR(vehicleDamage,eraHitpoints)[] = { 
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
+            "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
+            "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
+            "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint",
+            "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint",
+            "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint",
+            "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint",
+            "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint",
+            "era_46_hitpoint"
+        };
+    };
+    
     class Plane_CAS_01_base_F;
     class RHS_A10: Plane_CAS_01_base_F {
         EGVAR(refuel,fuelCapacity) = 6223;

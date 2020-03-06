@@ -65,20 +65,25 @@ if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
     };
 };
 
-if (_newDamage < _minDamage) exitWith {
-    TRACE_4("minimum damage returning",_newDamage,_minDamage,_warheadTypeStr,_hitArea);
+if (_newDamage < abs _minDamage) exitWith {
+    TRACE_4("minimum damage returning",_newDamage,abs _minDamage,_warheadTypeStr,_hitArea);
     _return
 };
 
-if (_minDamage isEqualTo 0) then {
+if (_minDamage == 0) then {
     _minDamage = 1;
+};
+if (_minDamage < 0) then {
+    _minDamage = -_minDamage;
 };
 
 private _ammoEffectiveness = if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
-    0.15 max (_newDamage / 500)
+    0.15 max _newDamage
 } else {
     ((_newDamage / _minDamage) * 0.4) min 1
 };
+TRACE_4("ammo effectiveness",_ammoEffectiveness,_newDamage,_minDamage,_warheadTypeStr);
+
 _incendiary = _incendiary * _ammoEffectiveness;
 
 
@@ -109,8 +114,8 @@ switch (_warheadType) do {
 };
 
 private _currentVehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
+private _chanceOfDetonation = 0;
 if !(count (_currentVehicleAmmo select 0) isEqualTo 0) then {
-    private _chanceOfDetonation = 0;
     private _countOfExplodableAmmo = 0;
     private _magConfig = configFile >> "CfgMagazines";
     {
@@ -119,7 +124,9 @@ if !(count (_currentVehicleAmmo select 0) isEqualTo 0) then {
         _chanceOfDetonation = _chanceOfDetonation + (_currentAmmoCount / _initialAmmoCount);
         _countOfExplodableAmmo = _countOfExplodableAmmo + 1;
     } forEach (_currentVehicleAmmo select 0);
-    _chanceOfDetonation = _chanceOfDetonation / _countOfExplodableAmmo;
+    if (_countOfExplodableAmmo != 0) then {
+        _chanceOfDetonation = _chanceOfDetonation / _countOfExplodableAmmo;
+    };
 };
 private _chanceToDetonate = 0;
 private _chanceOfFire = 0;
@@ -129,7 +136,7 @@ switch (_hitArea) do {
     case "engine": {
         _chanceToDetonate = ([_vehicleConfig >> QGVAR(engineDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _currentFuel;
         _chanceOfFire = ([_vehicleConfig >> QGVAR(engineFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _currentFuel;
-        TRACE_2("damaged engine",_chanceToDetonate,_chanceOfFire);
+        TRACE_5("hit engine",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel);
         
         if (_isCar) then {
             _chanceOfFire = 0; // no cookoff for cars
@@ -157,7 +164,7 @@ switch (_hitArea) do {
     case "hull": {
         _chanceToDetonate = ([_vehicleConfig >> QGVAR(hullDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2);
         _chanceOfFire = ([_vehicleConfig >> QGVAR(hullFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2);
-        TRACE_2("hit hull",_chanceToDetonate,_chanceOfFire);
+        TRACE_5("hit hull",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel);
         
         if (_isCar) then {
             _chanceOfFire = 0; // no cookoff for cars
@@ -174,9 +181,11 @@ switch (_hitArea) do {
         private _hashKeys = [_hash] call CBA_fnc_hashKeys;
         
         // 25% chance of jamming turret - 25% of mobility kill - 25% of both - 75% chance of critical hull damage
+        private _rand = random 1;
+        TRACE_2("rolling hull damage",_ammoEffectiveness,_rand);
         private _partKill = [];
-        if (_ammoEffectiveness > random 1) then {
-            private _rand = random 1;
+        if (_ammoEffectiveness > _rand) then {
+            _rand = random 1;
             TRACE_2("damaged hull part",_ammoEffectiveness,_rand);
             switch (true) do {
                 case (_rand < 0.25): {
@@ -229,7 +238,7 @@ switch (_hitArea) do {
     case "turret": {
         _chanceToDetonate = ([_vehicleConfig >> QGVAR(turretDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _chanceOfDetonation;
         _chanceOfFire = ([_vehicleConfig >> QGVAR(turretFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _chanceOfDetonation;
-        TRACE_2("hit turret",_chanceToDetonate,_chanceOfFire);
+        TRACE_5("hit turret",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel);
         
         if (_isCar) then {
             _chanceOfFire = 0; // no cookoff for cars
@@ -249,7 +258,7 @@ switch (_hitArea) do {
         [_vehicle, _chanceOfFire, _chanceOfFire * 15, _injurer] call FUNC(handleCookoff);
     };
     case "gun": {
-        TRACE_1("hit gun",_ammoEffectiveness);
+        TRACE_5("hit gun",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel);
         if (0.8 * _ammoEffectiveness > random 1) then {
             TRACE_1("damaged gun",_ammoEffectiveness * 0.8);
             [_vehicle, _hitIndex, _hitpointName, 1] call FUNC(addDamage);
