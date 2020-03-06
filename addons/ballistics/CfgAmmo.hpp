@@ -701,7 +701,7 @@ class CfgAmmo {
 
     class B_50BW_Ball_F: BulletBase { // http://www.alexanderarms.com/images/pdfs/beowulf_ballistics.pdf#page=2
         airFriction = -0.002098; // According with the G1 BC 0.21 and the muzzle velocity 1800 ft/s: 549 m/s
-        ACE_caliber = 12.7;
+        ACE_caliber = 4.55; // instead 12.7 to match with the .50BW adv. ballistics (twist rate 20") overwritten by the Katiba rifle twist 8" until a BI fix
         ACE_bulletLength = 24.13;
         ACE_bulletMass = 21.64; // 334 grains
         ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
