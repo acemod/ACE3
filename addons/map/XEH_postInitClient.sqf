@@ -8,6 +8,8 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
+GVAR(flashlights) = [] call CBA_fnc_createNamespace;
+
 ["ace_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
         //Set the chat channel once the map has finished loading
