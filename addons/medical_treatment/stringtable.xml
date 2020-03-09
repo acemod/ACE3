@@ -100,6 +100,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_EnabledCanReopen">
             <English>Enabled &amp; Can Reopen</English>
             <French>Activé &amp; peuvent se rouvrir</French>
+            <Japanese>有効 &amp; 再開放</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
@@ -336,6 +337,7 @@
             <Chinese>自我使用急救包</Chinese>
             <French>Utilisation de la trousse sanitaire sur soi-même</French>
             <Polish>Używanie apteczki osobistej na sobie</Polish>
+            <Japanese>応急処置キットの自己使用</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
@@ -344,6 +346,7 @@
             <Chinese>啟用個人急救包能對自己使用。</Chinese>
             <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
             <Polish>Pozwala na użycie apteczki osobistej na sobie</Polish>
+            <Japanese>応急処置キットを使って、自分を治療できるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -493,6 +496,7 @@
             <Polish>Zezwalaj na przetaczanie płynów IV</Polish>
             <French>Pose de perfusion autorisée pour</French>
             <Chinese>允許操作點滴</Chinese>
+            <Japanese>IV 輸血の制限</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
@@ -500,6 +504,7 @@
             <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
             <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
+            <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
