@@ -17,7 +17,7 @@
         </Key>
         <Key ID="STR_ACE_HOT_SACLOS_Description">
             <English>Semi-automatic command to line of sight</English>
-            <German>halbautomatische Steuerung über Sichtverbindung (SACLOS)</German>
+            <German>Halbautomatische Steuerung über Sichtverbindung (SACLOS)</German>
             <Polish>Semi-automatyczna komenda do pola widzenia</Polish>
             <Italian>Comando Semi-Automatico via Contatto Visivo(SACLOS)</Italian>
             <Japanese>半自動指令照準線一致誘導方式</Japanese>

@@ -134,6 +134,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip_shiftClick">
             <English>[Shift+Click to save to mission defaults]</English>
+            <German>[Umschalt+Linksklick um als Standard-Missionsausrüstung zu speichern]</German>
             <Japanese>[Shift + クリック] でミッション標準として保存します</Japanese>
             <Polish>Shift + Klik aby zapisac jako domyślne dla misji </Polish>
             <Russian>[Shift+Клик, чтобы сохранить в настройках по умолчанию]</Russian>
@@ -929,6 +930,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_statPotassium">
             <English>Potassium levels</English>
+            <German>Kaliumspiegel</German>
             <French>Taux de potassium</French>
             <Japanese>カリウム レベル</Japanese>
             <Chinesesimp>钾水平</Chinesesimp>

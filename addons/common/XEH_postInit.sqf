@@ -387,6 +387,11 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
 
+["isNotUnconscious", {
+    params ["_unit"];
+    lifeState _unit != "INCAPACITATED"
+}] call FUNC(addCanInteractWithCondition);
+
 //////////////////////////////////////////////////
 // Set up reload mutex
 //////////////////////////////////////////////////

@@ -21,7 +21,7 @@
  */
 
 params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_unit"];
-TRACE_6("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unit);
+TRACE_5("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unit);
 
 TRACE_3("",local _vehicle, _vehicle turretLocal _turretPath,local _unit);
 if (!(_vehicle turretLocal _turretPath)) exitWith {};

@@ -1846,7 +1846,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_DisplayName">
             <English>Wheel Repair Requirements</English>
-            <German>Erfordernisse zur Reifenreperatur</German>
+            <German>Bedingungen für die Reifenreperatur</German>
             <Polish>Wym. naprawy kół</Polish>
             <Spanish>Requisitos de reparación de ruedas</Spanish>
             <Russian>Для ремонта колес требуется</Russian>
@@ -1876,6 +1876,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
+            <German>Sonstige Reparaturbedingungen</German>
             <Japanese>部分修理条件</Japanese>
             <Chinese>額外修理條件</Chinese>
             <French>Exigences pour réparations diverses</French>
@@ -1887,6 +1888,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
+            <German>Gegenstände die benötigt werden, um eine spezifische Fahrzeugkomponente oder eine Kette zu entfernen/auszutauschen.</German>
             <Japanese>車両の特定コンポーネントか履帯の除去/交換にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來修復一些特別載具部位或者移除/替換履帶</Chinese>
             <French>Outils nécessaires pour la réparation d'un équipement spécifique du véhicule, et pour le démontage ou le remplacement des chenilles.</French>
@@ -1898,6 +1900,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
+            <German>Bedingungen für vollständige Reparatur</German>
             <Japanese>完全修理条件</Japanese>
             <Chinese>完整修復條件</Chinese>
             <French>Exigences pour réparations complètes</French>
@@ -1909,6 +1912,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
+            <German>Gegenstände die benötigt werden um ein Fahrzeug vollständig zu reparieren.</German>
             <Japanese>車両の完全修理にアイテムを必要とします。</Japanese>
             <Chinese>是否需要物品來完整修復載具</Chinese>
             <French>Outils nécessaires pour effectuer une réparation complète des véhicules.</French>
@@ -1920,7 +1924,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
-            <German>Motor muss ausgeschaltet zu reparieren sein</German>
+            <German>Motor muss ausgeschaltet sein um zu reparieren</German>
             <Spanish>El motor necesita desactivado para la reparación</Spanish>
             <Czech>Pro opravu je zapotřebí vypnout motor</Czech>
             <Portuguese>O motor deve estar desligado para manutenção</Portuguese>

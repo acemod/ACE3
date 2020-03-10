@@ -34,9 +34,13 @@ if (_hitPoint isEqualTo "") then {
 // Damage can be disabled with old variable or via sqf command allowDamage
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
-// Damages are stored for "ace_hdbracket" event triggered last
 private _newDamage = _damage - _oldDamage;
-_unit setVariable [format [QGVAR($%1), _hitPoint], _newDamage];
+// Get armor value of hitpoint and calculate damage before armor
+private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
+private _realDamage = _newDamage * _armor;
+// Damages are stored for "ace_hdbracket" event triggered last
+_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
+TRACE_3("Received hit",_hitpoint,_newDamage,_realDamage);
 
 // Engine damage to these hitpoints controls blood visuals, limping, weapon sway
 // Handled in fnc_damageBodyPart, persist here
@@ -51,52 +55,61 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     private _damageStructural = _unit getVariable [HIT_STRUCTURAL, 0];
 
     // --- Head
-    private _damageFace = _unit getVariable [QGVAR($HitFace), 0];
-    private _damageNeck = _unit getVariable [QGVAR($HitNeck), 0];
-    private _damageHead = (_unit getVariable [QGVAR($HitHead), 0]) max _damageFace max _damageNeck;
+    private _damageHead = [
+        _unit getVariable [QGVAR($HitFace), [0,0]],
+        _unit getVariable [QGVAR($HitNeck), [0,0]],
+        _unit getVariable [QGVAR($HitHead), [0,0]]
+    ];
+    _damageHead sort false;
+    _damageHead = _damageHead select 0;
 
     // --- Body
-    private _damagePelvis = _unit getVariable [QGVAR($HitPelvis), 0];
-    private _damageAbdomen = _unit getVariable [QGVAR($HitAbdomen), 0];
-    private _damageDiaphragm = _unit getVariable [QGVAR($HitDiaphragm), 0];
-    private _damageChest = _unit getVariable [QGVAR($HitChest), 0];
-    private _damageBody = (_unit getVariable [QGVAR($HitBody), 0]) max _damagePelvis max _damageAbdomen max _damageDiaphragm max _damageChest;
+    private _damageBody = [
+        _unit getVariable [QGVAR($HitPelvis), [0,0]],
+        _unit getVariable [QGVAR($HitAbdomen), [0,0]],
+        _unit getVariable [QGVAR($HitDiaphragm), [0,0]],
+        _unit getVariable [QGVAR($HitChest), [0,0]]
+        // HitBody removed as it's a placeholder hitpoint and the high armor value (1000) throws the calculations off
+    ];
+    _damageBody sort false;
+    _damageBody = _damageBody select 0;
 
     // --- Arms and Legs
-    private _damageLeftArm = _unit getVariable [QGVAR($HitLeftArm), 0];
-    private _damageRightArm = _unit getVariable [QGVAR($HitRightArm), 0];
-    private _damageLeftLeg = _unit getVariable [QGVAR($HitLeftLeg), 0];
-    private _damageRightLeg = _unit getVariable [QGVAR($HitRightLeg), 0];
+    private _damageLeftArm = _unit getVariable [QGVAR($HitLeftArm), [0,0]];
+    private _damageRightArm = _unit getVariable [QGVAR($HitRightArm), [0,0]];
+    private _damageLeftLeg = _unit getVariable [QGVAR($HitLeftLeg), [0,0]];
+    private _damageRightLeg = _unit getVariable [QGVAR($HitRightLeg), [0,0]];
 
     // Find hit point that received the maxium damage
     // Priority used for sorting if incoming damage is equivalent (e.g. max which is 4)
     private _allDamages = [
-        [_damageHead,     PRIORITY_HEAD,      "Head"],
-        [_damageBody,     PRIORITY_BODY,      "Body"],
-        [_damageLeftArm,  PRIORITY_LEFT_ARM,  "LeftArm"],
-        [_damageRightArm, PRIORITY_RIGHT_ARM, "RightArm"],
-        [_damageLeftLeg,  PRIORITY_LEFT_LEG,  "LeftLeg"],
-        [_damageRightLeg, PRIORITY_RIGHT_LEG, "RightLeg"]
+        _damageHead     + [PRIORITY_HEAD,      "Head"],
+        _damageBody     + [PRIORITY_BODY,      "Body"],
+        _damageLeftArm  + [PRIORITY_LEFT_ARM,  "LeftArm"],
+        _damageRightArm + [PRIORITY_RIGHT_ARM, "RightArm"],
+        _damageLeftLeg  + [PRIORITY_LEFT_LEG,  "LeftLeg"],
+        _damageRightLeg + [PRIORITY_RIGHT_LEG, "RightLeg"]
     ];
     TRACE_2("incoming",_allDamages,_damageStructural);
 
     // represents all incoming damage for selecting a non-selectionSpecific wound location, (used for selectRandomWeighted [value1,weight1,value2....])
     private _damageSelectionArray = [
-        HITPOINT_INDEX_HEAD, _damageHead, HITPOINT_INDEX_BODY, _damageBody, HITPOINT_INDEX_LARM, _damageLeftArm, 
-        HITPOINT_INDEX_RARM, _damageRightArm, HITPOINT_INDEX_LLEG, _damageLeftLeg, HITPOINT_INDEX_RLEG, _damageRightLeg
+        HITPOINT_INDEX_HEAD, _damageHead select 1, HITPOINT_INDEX_BODY, _damageBody select 1, HITPOINT_INDEX_LARM, _damageLeftArm select 1, 
+        HITPOINT_INDEX_RARM, _damageRightArm select 1, HITPOINT_INDEX_LLEG, _damageLeftLeg select 1, HITPOINT_INDEX_RLEG, _damageRightLeg select 1
     ];
 
     _allDamages sort false;
-    (_allDamages select 0) params ["_receivedDamage", "", "_woundedHitPoint"];
-    if (_damageHead >= HEAD_DAMAGE_THRESHOLD) then {
-        TRACE_3("reporting fatal head damage instead of max",_damageHead,_receivedDamage,_woundedHitPoint);
-        _receivedDamage = _damageHead;
+    (_allDamages select 0) params ["", "_receivedDamage", "", "_woundedHitPoint"];
+    private _receivedDamageHead = _damageHead select 1;
+    if (_receivedDamageHead >= HEAD_DAMAGE_THRESHOLD) then {
+        TRACE_3("reporting fatal head damage instead of max",_receivedDamageHead,_receivedDamage,_woundedHitPoint);
+        _receivedDamage = _receivedDamageHead;
         _woundedHitPoint = "Head";
     };
 
     // We know it's structural when no specific hitpoint is damaged
     if (_receivedDamage == 0) then {
-        _receivedDamage = _damageStructural;
+        _receivedDamage = _damageStructural select 1;
         _woundedHitPoint = "Body";
         _damageSelectionArray = [1, 1]; // sum of weights would be 0
     };

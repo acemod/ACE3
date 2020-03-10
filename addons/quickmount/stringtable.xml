@@ -129,7 +129,7 @@
         </Key>
         <Key ID="STR_ACE_QuickMount_SpeedDescription">
             <English>Maximum vehicle speed (km/h) allowed for player entry</English>
-            <German>Maximale Geschwindigkeit (km/h) für Schnellzugang</German>
+            <German>Maximale erlaubte Geschwindigkeit (km/h) für Schnellzugang</German>
             <Italian>Velocità massima del veicolo (km/h) consentita per far salire un giocatore</Italian>
             <Japanese>プレイヤーが搭乗できる限界速度 (km/h)</Japanese>
             <Chinesesimp>设置玩家能在最高速度是多少的情况之下进入载具。</Chinesesimp>
