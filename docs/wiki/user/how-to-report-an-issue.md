@@ -9,6 +9,10 @@ parent: wiki
 
 ### Before reporting
 
+<a href="{{ site.baseurl }}/img/wiki/user/issue_flowchart.png">
+    <img src="{{ site.baseurl }}/img/wiki/user/issue_flowchart.png" width="1400" height="600" alt="Issue Flowchart" />
+</a>
+
 If you have found an issue with ACE3 please make sure that ACE3 is really the cause of the problem. To do this try to reproduce the issue with using only `@CBA_A3` and `@ace` on a newly created mission.
 
 Indicate if the issue appears on stable or development version. In case it is the development version, please also include the commit SHA-1 hash.
