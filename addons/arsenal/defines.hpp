@@ -130,6 +130,12 @@
 #define IDC_statsCurrentPage 54
 #define IDC_statsButton 55
 #define IDC_statsButtonClose 56
+#define IDC_iconBackgroundRoleplay 57
+#define IDC_buttonRoleplay 58
+#define IDC_iconBackgroundMedical 59
+#define IDC_buttonMedical 60
+#define IDC_iconBackgroundFood 61
+#define IDC_buttonFood 62
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3
@@ -174,8 +180,8 @@
 
 #define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
 #define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod
-#define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc
-#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
+#define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc, IDC_buttonRoleplay, IDC_buttonMedical, IDC_buttonFood
+#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc, IDC_iconBackgroundRoleplay, IDC_iconBackgroundMedical, IDC_iconBackgroundFood
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
 
 #define GETDLC\
@@ -413,3 +419,59 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
+
+#define MEDICAL_ITEMS\
+    [\
+        "ACE_atropine",\
+        "ACE_fieldDressing",\
+        "ACE_elasticBandage",\
+        "ACE_quikclot",\
+        "ACE_bloodIV",\
+        "ACE_bloodIV_500",\
+        "ACE_bloodIV_250",\
+        "ACE_bodyBag",\
+        "ACE_bodyBagObject",\
+        "ACE_epinephrine",\
+        "ACE_morphine",\
+        "ACE_packingBandage",\
+        "ACE_personalAidKit",\
+        "ACE_plasmaIV",\
+        "ACE_plasmaIV_500",\
+        "ACE_plasmaIV_250",\
+        "ACE_salineIV",\
+        "ACE_salineIV_500",\
+        "ACE_salineIV_250",\
+        "ACE_surgicalKit",\
+        "ACE_splint",\
+        "ACE_tourniquet",\
+        "ACE_medicalSupplyCrate",\
+        "ACE_medicalSupplyCrate_advanced",\
+        "KEKO_painkiller",\
+        "FirstAidKit",\
+        "Medikit"\
+    ]
+
+#define FOOD_ITEMS\
+    [\
+        "ACE_Banana",\
+        "ACE_Can_Franta",\
+        "ACE_Can_RedGull",\
+        "ACE_Can_Spirit",\
+        "ACE_Humanitarian_Ration",\
+        "ACE_MRE_BeefStew",\
+        "ACE_MRE_ChickenTikkaMasala",\
+        "ACE_MRE_ChickenHerbDumplings",\
+        "ACE_MRE_CreamChickenSoup",\
+        "ACE_MRE_CreamTomatoSoup",\
+        "ACE_MRE_LambCurry",\
+        "ACE_MRE_MeatballsPasta",\
+        "ACE_MRE_SteakVegetables",\
+        "ACE_WaterBottle",\
+        "ACE_WaterBottle_Empty",\
+        "ACE_WaterBottle_Half",\
+        "ACE_Canteen",\
+        "ACE_Canteen_Empty",\
+        "ACE_Canteen_Half"\
+    ]
+
+#define IS_ROLEPLAY_ITEM ((_x find "UMI_" == 0) || (_x find "ar_" == 0) || (_x in ["rds_car_FirstAidKit"]))

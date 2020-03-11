@@ -272,9 +272,29 @@ switch (_ctrlIDC) do {
         } foreach (GVAR(virtualItems) select 21);
     };
 
-    case IDC_buttonMisc : {
+    case IDC_buttonRoleplay : {
         {
             ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
+        } foreach ((GVAR(virtualItems) select 17) select {IS_ROLEPLAY_ITEM});
+    };
+
+    case IDC_buttonFood : {
+        {
+            ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
+        } foreach ((GVAR(virtualItems) select 17) select {_x in FOOD_ITEMS});
+    };
+
+    case IDC_buttonMedical : {
+        {
+            ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
+        } foreach ((GVAR(virtualItems) select 17) select {_x in MEDICAL_ITEMS});
+    };
+
+    case IDC_buttonMisc : {
+        {
+            if (!(_x in MEDICAL_ITEMS) && !(_x in FOOD_ITEMS) && !IS_ROLEPLAY_ITEM) then {
+                ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
+            };
         } foreach (GVAR(virtualItems) select 17);
         {
             ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
