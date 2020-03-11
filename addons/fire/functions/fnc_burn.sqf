@@ -261,6 +261,7 @@ if (_isBurning) exitWith {};
         };
     };
 }, 0, [_unit, _intensity, _instigator], {
+    TRACE_1("burn init",GVAR(enableFlare));
     // init function
     private _params = _this getVariable "params";
     _params params ["_unit", "_startingIntensity"];

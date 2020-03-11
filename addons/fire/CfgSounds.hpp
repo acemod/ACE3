@@ -2,7 +2,7 @@
 #define CREATE_SCREAM(no)\
 class GVAR(DOUBLES(scream,no)) { \
     name = QUOTE(GVAR(CONCAT(scream,no)));\
-    sound[] = {QUOTE(PATHTOF(CONCAT(sounds\scream,no).ogg)), db + 2, 1};\
+    sound[] = {QUOTE(PATHTOF(CONCAT(sounds\scream,no).ogg)), db + 8, 1};\
     titles[] = {}; \
 }
     
