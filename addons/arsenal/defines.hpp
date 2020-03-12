@@ -342,7 +342,7 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
         _x ctrlShow false;\
         _x ctrlCommit 0;\
     };\
-} foreach [RIGHT_PANEL_CUSTOM_BUTTONS];
+} forEach [RIGHT_PANEL_CUSTOM_BUTTONS];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
 {\
