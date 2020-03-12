@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 
 ["ace_settingsInitialized", {
     TRACE_1("settings init",GVAR(enabled));
@@ -9,7 +8,7 @@
             TRACE_3("bailOut",_center,_crewman,_vehicle);
 
             if (isPlayer _crewman) exitWith {};
-            if (!alive _crewman || IS_UNCONSCIOUS(_crewman)) exitWith {};
+            if (!alive _crewman || { !( [_crewman] call EFUNC(common,isAwake))} } exitWith {};
 
             unassignVehicle _crewman;
             _crewman leaveVehicle _vehicle;

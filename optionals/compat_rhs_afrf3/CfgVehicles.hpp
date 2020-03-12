@@ -348,7 +348,7 @@ class CfgVehicles {
             "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
             "era_31_hitpoint", "era_32_hitpoint"
         };
-    }
+    };
 
     class rhs_t72be_tv: rhs_t72bd_tv {
         EGVAR(vehicleDamage,eraHitpoints)[] = {

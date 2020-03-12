@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         // ammo/vehicle config defines touch all of these
-        requiredAddons[] = { "ace_common", "ace_cookoff", "ace_dragon", "ace_hot", "ace_aircraft", "ace_ballistics", "ace_hellfire", "ace_frag" };
+        requiredAddons[] = { "ace_common", "ace_cookoff" };
         author = ECSTRING(common,ACETeam);
         authors[] = {""};
         url = ECSTRING(main,URL);

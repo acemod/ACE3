@@ -110,13 +110,4 @@ class CfgAmmo {
     CREATE_INCENDIARY_AMMO(R_MRAAWS_HE_F,                   R_MRAAWS_HEAT_F,        0.4);
     
     CREATE_INCENDIARY_AMMO(B_20mm_AP,                       BulletBase,             0.2);
-    
-    // ACE implemented ammo
-    CREATE_INCENDIARY_AMMO(ACE_Gatling_30mm_AP_Plane_CAS_01_F,      Gatling_30mm_HE_Plane_CAS_01_F,     1.0);
-    CREATE_INCENDIARY_AMMO(ACE_20mm_AP,                             B_20mm,                             0.5);
-    CREATE_INCENDIARY_AMMO(ACE_127x99_API,                          B_127x99_Ball,                      1.0);
-    CREATE_INCENDIARY_AMMO(ACE_338_Ball_API526,                     B_338_Ball,                         1.0);
-    CREATE_INCENDIARY_AMMO(ACE_G_40mm_Practice,                     ACE_G_40mm_HE,                      0.0);
-    CREATE_INCENDIARY_AMMO(ACE_Hellfire_AGM114N,                    ACE_Hellfire_AGM114K,               0.3);
-    CREATE_INCENDIARY_AMMO(ace_hot_HOT2MP,                          ace_hot_HOT2,                       0.1);
 };

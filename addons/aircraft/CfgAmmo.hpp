@@ -23,6 +23,7 @@ class CfgAmmo {
         explosive = 0;
         CraterEffects = "";
         explosionEffects = "";
+        EGVAR(vehicleDamage,incendiary) = 0.5;
     };
 
     // adjust minigun caliber and deflection to other ammo
@@ -58,6 +59,7 @@ class CfgAmmo {
        indirectHit = 2.5; // default: 4
        indirectHitRange = 1; // default: 3
        fuseDistance = 0.2; // default: 10
+       EGVAR(vehicleDamage,incendiary) = 1.0;
     };
 
    // adds submunition logic, enabling multiple rounds per frame
@@ -69,6 +71,7 @@ class CfgAmmo {
        model = "\A3\Weapons_f\Data\bullettracer\tracer_red.p3d";
        triggerTime = 0.005;
        ACE_caliber = 1.4;
+       EGVAR(vehicleDamage,incendiary) = 1.0;
    };
 
    class ACE_Gatling_30mm_Sub_AP: ACE_Gatling_30mm_Sub_HEI {

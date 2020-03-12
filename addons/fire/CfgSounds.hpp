@@ -1,4 +1,5 @@
-#define CONCAT(a,b) a##b
+// weird ass concatenation syntax. PBO Project complains otherwise...
+#define CONCAT(a,b) a####b
 #define CREATE_SCREAM(no)\
 class GVAR(DOUBLES(scream,no)) { \
     name = QUOTE(GVAR(CONCAT(scream,no)));\
