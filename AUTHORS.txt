@@ -6,6 +6,7 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+Brandon (TCVM) <brandondanyluk366@gmail.com>
 bux578 <github@jonathandavid.de>
 commy2
 esteldunedain <nicolas.d.badano@gmail.com>
@@ -52,7 +53,6 @@ Bla1337
 BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
 Brakoviejo
-Brandon (TCVM) <brandondanyluk366@gmail.com>
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>
