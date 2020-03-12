@@ -1,5 +1,6 @@
 PREP(addDefaultLoadout);
 PREP(addListBoxItem);
+PREP(addRightPanelButton);
 PREP(addStat);
 PREP(addVirtualItems);
 PREP(attributeAddCompatible);

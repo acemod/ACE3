@@ -130,12 +130,26 @@
 #define IDC_statsCurrentPage 54
 #define IDC_statsButton 55
 #define IDC_statsButtonClose 56
-#define IDC_iconBackgroundRoleplay 57
-#define IDC_buttonRoleplay 58
-#define IDC_iconBackgroundMedical 59
-#define IDC_buttonMedical 60
-#define IDC_iconBackgroundFood 61
-#define IDC_buttonFood 62
+#define IDC_iconBackgroundCustom1 57
+#define IDC_buttonCustom1 58
+#define IDC_iconBackgroundCustom2 59
+#define IDC_buttonCustom2 60
+#define IDC_iconBackgroundCustom3 61
+#define IDC_buttonCustom3 62
+#define IDC_iconBackgroundCustom4 63
+#define IDC_buttonCustom4 64
+#define IDC_iconBackgroundCustom5 65
+#define IDC_buttonCustom5 66
+#define IDC_iconBackgroundCustom6 67
+#define IDC_buttonCustom6 68
+#define IDC_iconBackgroundCustom7 69
+#define IDC_buttonCustom7 70
+#define IDC_iconBackgroundCustom8 71
+#define IDC_buttonCustom8 72
+#define IDC_iconBackgroundCustom9 73
+#define IDC_buttonCustom9 74
+#define IDC_iconBackgroundCustom10 75
+#define IDC_buttonCustom10 76
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3
@@ -178,10 +192,11 @@
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
 
+#define RIGHT_PANEL_CUSTOM_BUTTONS IDC_buttonCustom1, IDC_buttonCustom2, IDC_buttonCustom3, IDC_buttonCustom4, IDC_buttonCustom5, IDC_buttonCustom6, IDC_buttonCustom7, IDC_buttonCustom8, IDC_buttonCustom9, IDC_buttonCustom10
 #define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
 #define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod
-#define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc, IDC_buttonRoleplay, IDC_buttonMedical, IDC_buttonFood
-#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc, IDC_iconBackgroundRoleplay, IDC_iconBackgroundMedical, IDC_iconBackgroundFood
+#define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc, RIGHT_PANEL_CUSTOM_BUTTONS
+#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc, IDC_iconBackgroundCustom1, IDC_iconBackgroundCustom2, IDC_iconBackgroundCustom3, IDC_iconBackgroundCustom4, IDC_iconBackgroundCustom5, IDC_iconBackgroundCustom6, IDC_iconBackgroundCustom7, IDC_iconBackgroundCustom8, IDC_iconBackgroundCustom9, IDC_iconBackgroundCustom10
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
 
 #define GETDLC\
@@ -310,7 +325,24 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
-];
+];\
+{\
+    private _idc = _x;\
+    _x = _display displayCtrl _idc;\
+    if (!isNil QGVAR(customRightPanelButtons) && {!isNil {GVAR(customRightPanelButtons) param [_forEachIndex]}}) then {\
+        (GVAR(customRightPanelButtons) select _forEachIndex) params ["", "_picture", "_tooltip"];\
+        _x ctrlSetText _picture;\
+        _x ctrlSetTooltip _tooltip;\
+    } else {\
+        _x ctrlSetFade 1;\
+        _x ctrlShow false;\
+        _x ctrlCommit 0;\
+        _x = _display displayCtrl (_idc - 1);\
+        _x ctrlSetFade 1;\
+        _x ctrlShow false;\
+        _x ctrlCommit 0;\
+    };\
+} foreach [RIGHT_PANEL_CUSTOM_BUTTONS];
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
 {\
@@ -420,58 +452,14 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
 
-#define MEDICAL_ITEMS\
-    [\
-        "ACE_atropine",\
-        "ACE_fieldDressing",\
-        "ACE_elasticBandage",\
-        "ACE_quikclot",\
-        "ACE_bloodIV",\
-        "ACE_bloodIV_500",\
-        "ACE_bloodIV_250",\
-        "ACE_bodyBag",\
-        "ACE_bodyBagObject",\
-        "ACE_epinephrine",\
-        "ACE_morphine",\
-        "ACE_packingBandage",\
-        "ACE_personalAidKit",\
-        "ACE_plasmaIV",\
-        "ACE_plasmaIV_500",\
-        "ACE_plasmaIV_250",\
-        "ACE_salineIV",\
-        "ACE_salineIV_500",\
-        "ACE_salineIV_250",\
-        "ACE_surgicalKit",\
-        "ACE_splint",\
-        "ACE_tourniquet",\
-        "ACE_medicalSupplyCrate",\
-        "ACE_medicalSupplyCrate_advanced",\
-        "KEKO_painkiller",\
-        "FirstAidKit",\
-        "Medikit"\
-    ]
-
-#define FOOD_ITEMS\
-    [\
-        "ACE_Banana",\
-        "ACE_Can_Franta",\
-        "ACE_Can_RedGull",\
-        "ACE_Can_Spirit",\
-        "ACE_Humanitarian_Ration",\
-        "ACE_MRE_BeefStew",\
-        "ACE_MRE_ChickenTikkaMasala",\
-        "ACE_MRE_ChickenHerbDumplings",\
-        "ACE_MRE_CreamChickenSoup",\
-        "ACE_MRE_CreamTomatoSoup",\
-        "ACE_MRE_LambCurry",\
-        "ACE_MRE_MeatballsPasta",\
-        "ACE_MRE_SteakVegetables",\
-        "ACE_WaterBottle",\
-        "ACE_WaterBottle_Empty",\
-        "ACE_WaterBottle_Half",\
-        "ACE_Canteen",\
-        "ACE_Canteen_Empty",\
-        "ACE_Canteen_Half"\
-    ]
-
-#define IS_ROLEPLAY_ITEM ((_x find "UMI_" == 0) || (_x find "ar_" == 0) || (_x in ["rds_car_FirstAidKit"]))
+#define ADD_CUSTOM_BUTTON(NUMBER)\
+    class iconBackgroundCustom##NUMBER: iconBackgroundOptic {\
+        idc = __EVAL((IDC_iconBackgroundCustom1 - 2) + (NUMBER * 2));\
+        y = QUOTE(safezoneY + (88 + (10 * NUMBER)) * GRID_H);\
+    };\
+    class buttonCustom##NUMBER: buttonOptic {\
+        idc = __EVAL((IDC_buttonCustom1 - 2) + (NUMBER * 2));\
+        text = QPATHTOF(data\iconCustom.paa);\
+        tooltip = "";\
+        y = QUOTE(safezoneY + (88 + (10 * NUMBER)) * GRID_H);\
+    }

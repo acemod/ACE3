@@ -272,30 +272,41 @@ switch (_ctrlIDC) do {
         } foreach (GVAR(virtualItems) select 21);
     };
 
-    case IDC_buttonRoleplay : {
-        {
-            ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 17) select {IS_ROLEPLAY_ITEM});
-    };
-
-    case IDC_buttonFood : {
-        {
-            ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 17) select {_x in FOOD_ITEMS});
-    };
-
-    case IDC_buttonMedical : {
-        {
-            ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 17) select {_x in MEDICAL_ITEMS});
+    case IDC_buttonCustom1;
+    case IDC_buttonCustom2;
+    case IDC_buttonCustom3;
+    case IDC_buttonCustom4;
+    case IDC_buttonCustom5;
+    case IDC_buttonCustom6;
+    case IDC_buttonCustom7;
+    case IDC_buttonCustom8;
+    case IDC_buttonCustom9;
+    case IDC_buttonCustom10 : {
+        private _data = GVAR(customRightPanelButtons) param [[RIGHT_PANEL_CUSTOM_BUTTONS] findIf {_x == _ctrlIDC}];
+        
+        if (!isNil "_data") then {
+            private _items = _data select 0;
+            {
+                ["CfgWeapons", _x, true]  call _fnc_fill_right_Container;
+            } foreach ((GVAR(virtualItems) select 17) select {(toLower _x) in _items});
+        };
     };
 
     case IDC_buttonMisc : {
-        {
-            if (!(_x in MEDICAL_ITEMS) && !(_x in FOOD_ITEMS) && !IS_ROLEPLAY_ITEM) then {
+        // hide custom button items
+        if (!isNil QGVAR(customRightPanelButtons)) then {
+            private _blockItems = [];
+            {
+                if (!isNil "_x") then {
+                    _blockItems append (_x select 0);
+                };
+            } forEach GVAR(customRightPanelButtons);
+            
+            {
                 ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
-            };
-        } foreach (GVAR(virtualItems) select 17);
+            } foreach ((GVAR(virtualItems) select 17) select {!((toLower _x) in _blockItems)});
+        };
+        
         {
             ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 18);

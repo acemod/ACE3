@@ -893,49 +893,28 @@ class GVAR(display) {
             tooltip="$STR_A3_RscDisplayArsenal_tab_CargoPut";
             y = QUOTE(safezoneY + 78 * GRID_H);
         };
-
-        class iconBackgroundMedical: iconBackgroundOptic {
-            idc = IDC_iconBackgroundMedical;
-            y = QUOTE(safezoneY + 88 * GRID_H);
-        };
-        class buttonMedical: buttonOptic {
-            idc = IDC_buttonMedical;
-            text=QPATHTOF(data\iconMedical.paa);
-            tooltip=CSTRING(buttonMedicalTooltip);
-            y = QUOTE(safezoneY + 88 * GRID_H);
-        };
-        class iconBackgroundFood: iconBackgroundOptic {
-            idc = IDC_iconBackgroundFood;
-            y = QUOTE(safezoneY + 98 * GRID_H);
-        };
-        class buttonFood: buttonOptic {
-            idc = IDC_buttonFood;
-            text=QPATHTOF(data\iconFood.paa);
-            tooltip=CSTRING(buttonFoodTooltip);
-            y = QUOTE(safezoneY + 98 * GRID_H);
-        };
-        class iconBackgroundRoleplay: iconBackgroundOptic {
-            idc = IDC_iconBackgroundRoleplay;
-            y = QUOTE(safezoneY + 108 * GRID_H);
-        };
-        class buttonRoleplay: buttonOptic {
-            idc = IDC_buttonRoleplay;
-            text=QPATHTOF(data\iconRoleplay.paa);
-            tooltip=CSTRING(buttonRoleplayTooltip);
-            y = QUOTE(safezoneY + 108 * GRID_H);
-        };
         class iconBackgroundMisc: iconBackgroundOptic {
             idc = IDC_iconBackgroundMisc;
-            y = QUOTE(safezoneY + 118 * GRID_H);
+            y = QUOTE(safezoneY + 88 * GRID_H);
         };
         class buttonMisc: buttonOptic {
             idc = IDC_buttonMisc;
             text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\CargoMisc_ca.paa";
             tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
-            y = QUOTE(safezoneY + 118 * GRID_H);
+            y = QUOTE(safezoneY + 88 * GRID_H);
         };
-
-
+        
+        ADD_CUSTOM_BUTTON(1);
+        ADD_CUSTOM_BUTTON(2);
+        ADD_CUSTOM_BUTTON(3);
+        ADD_CUSTOM_BUTTON(4);
+        ADD_CUSTOM_BUTTON(5);
+        ADD_CUSTOM_BUTTON(6);
+        ADD_CUSTOM_BUTTON(7);
+        ADD_CUSTOM_BUTTON(8);
+        ADD_CUSTOM_BUTTON(9);
+        ADD_CUSTOM_BUTTON(10);
+        
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
             text = QPATHTOF(data\iconClearContainer.paa);
