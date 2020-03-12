@@ -38,8 +38,8 @@ private _return = if (_position >= 0 && _position <= 9) then {
         private _configItemInfo = _cfgWeapons >> _x >> "ItemInfo";
            
         _x isKindOf ["CBA_MiscItem", _cfgWeapons] && {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} ||
-            {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-            {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"}
+        {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
+        {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"}
     };
     
     GVAR(customRightPanelButtons) set [_position, [_items apply {toLower _x}, _picture, _tooltip]];
