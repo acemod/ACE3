@@ -58,8 +58,13 @@ if (_incendiary < 0) then {
     _incendiary = [0.3, 0.1, 1, 1, 0] select _warheadType;
 };
 
-private _projectileExplosive = [_projectileConfig >> "explosive", "NUMBER", 0] call CBA_fnc_getConfigEntry;
 private _minDamage = [_hitpointConfig >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry;
+if (_minDamage < 0) then {
+    _minDamage = -_minDamage;
+};
+
+private _ammoEffectiveness = 0;
+private _projectileExplosive = [_projectileConfig >> "explosive", "NUMBER", 0] call CBA_fnc_getConfigEntry;
 private _indirectHit = [_projectileConfig >> "indirectHit", "NUMBER", 0] call CBA_fnc_getConfigEntry;
 
 if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
@@ -71,12 +76,8 @@ if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
     };
 };
 
-if (_minDamage < 0) then {
-    _minDamage = -_minDamage;
-};
-
 private _penChance = 1;
-if (_newDamage < abs _minDamage) then {
+if (_newDamage < _minDamage) then {
     _penChance = _newDamage / _minDamage;
     TRACE_5("minimum damage modifying hit",_newDamage,_penChance,abs _minDamage,_warheadTypeStr,_hitArea);
 };
@@ -98,7 +99,7 @@ if (_warheadType isEqualTo WARHEAD_TYPE_HE) then {
     _newDamage = (_newDamage * (_newDamage / _modifiedIndirectHit)) min _newDamage;
 };
 
-private _ammoEffectiveness = if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
+_ammoEffectiveness = if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
     0.15 max _newDamage
 } else {
     if (_warheadType isEqualTo WARHEAD_TYPE_HE) then {
@@ -110,7 +111,6 @@ private _ammoEffectiveness = if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
 TRACE_4("ammo effectiveness",_ammoEffectiveness,_newDamage,_minDamage,_warheadTypeStr);
 
 _incendiary = _incendiary * _ammoEffectiveness;
-
 
 private _isCar = (_vehicle isKindOf "Car" && { !(_vehicle isKindOf "Wheeled_APC_F") });
 if (_isCar) then {
