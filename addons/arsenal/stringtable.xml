@@ -1189,17 +1189,5 @@
             <Chinese>有效時間</Chinese>
             <Czech>Time to live</Czech>
         </Key>
-        <Key ID="STR_ACE_Arsenal_buttonMedicalTooltip">
-            <English>Medical Items</English>
-            <German>Erste Hilfe Items</German>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_buttonFoodTooltip">
-            <English>Food Items</English>
-            <German>Essen Items</German>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_buttonRoleplayTooltip">
-            <English>Roleplay Items</English>
-            <German>Rollenspiel Items</German>
-        </Key>
     </Package>
 </Project>
