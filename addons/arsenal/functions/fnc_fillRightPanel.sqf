@@ -304,7 +304,7 @@ switch (_ctrlIDC) do {
             
             {
                 ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
-            } foreach ((GVAR(virtualItems) select 17) select {!((toLower _x) in _blockItems)});
+            } forEach ((GVAR(virtualItems) select 17) select {!((toLower _x) in _blockItems)});
         };
         
         {
