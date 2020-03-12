@@ -282,7 +282,7 @@ switch (_ctrlIDC) do {
     case IDC_buttonCustom8;
     case IDC_buttonCustom9;
     case IDC_buttonCustom10 : {
-        private _data = GVAR(customRightPanelButtons) param [[RIGHT_PANEL_CUSTOM_BUTTONS] findIf {_x == _ctrlIDC}];
+        private _data = GVAR(customRightPanelButtons) param [[RIGHT_PANEL_CUSTOM_BUTTONS] find _ctrlIDC];
         
         if (!isNil "_data") then {
             private _items = _data select 0;
