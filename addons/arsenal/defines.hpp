@@ -454,11 +454,11 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
 
 #define ADD_CUSTOM_BUTTON(NUMBER)\
     class iconBackgroundCustom##NUMBER: iconBackgroundOptic {\
-        idc = __EVAL((IDC_iconBackgroundCustom1 - 2) + (NUMBER * 2));\
+        idc = (IDC_iconBackgroundCustom1 - 2) + (NUMBER * 2);\
         y = QUOTE(safezoneY + (88 + (10 * NUMBER)) * GRID_H);\
     };\
     class buttonCustom##NUMBER: buttonOptic {\
-        idc = __EVAL((IDC_buttonCustom1 - 2) + (NUMBER * 2));\
+        idc = (IDC_buttonCustom1 - 2) + (NUMBER * 2);\
         text = QPATHTOF(data\iconCustom.paa);\
         tooltip = "";\
         y = QUOTE(safezoneY + (88 + (10 * NUMBER)) * GRID_H);\

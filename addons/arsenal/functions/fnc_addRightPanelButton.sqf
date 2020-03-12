@@ -33,13 +33,13 @@ if (_override != -1 && {_override >= 0} && {_override <= 9}) then {
 };
 
 private _return = if (_position >= 0 && _position <= 9) then {
-    private _configCfgWeapons = configFile >> "CfgWeapons";
+    private _cfgWeapons = configFile >> "CfgWeapons";
     _items = _items select {
-        private _configItemInfo = _configCfgWeapons >> _x >> "ItemInfo";
-        
-        isClass (_configItemInfo) && ((getNumber (_configItemInfo >> "type")) in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD] &&
-            {(_x isKindOf ["CBA_MiscItem", (_configCfgWeapons)])}) || {(getNumber (_configItemInfo >> "type")) in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-            {(getText (_configCfgWeapons >> _x >> "simulation")) == "ItemMineDetector"}
+        private _configItemInfo = _cfgWeapons >> _x >> "ItemInfo";
+           
+        _x isKindOf ["CBA_MiscItem", _cfgWeapons] && {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} ||
+            {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
+            {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"}
     };
     
     GVAR(customRightPanelButtons) set [_position, [_items apply {toLower _x}, _picture, _tooltip]];
