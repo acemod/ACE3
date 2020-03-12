@@ -287,7 +287,7 @@ switch (_ctrlIDC) do {
         if (!isNil "_data") then {
             private _items = _data select 0;
             {
-                ["CfgWeapons", _x, true]  call _fnc_fill_right_Container;
+                ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
             } foreach ((GVAR(virtualItems) select 17) select {(toLower _x) in _items});
         };
     };
@@ -304,7 +304,7 @@ switch (_ctrlIDC) do {
             
             {
                 ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
-            } foreach ((GVAR(virtualItems) select 17) select {!((toLower _x) in _blockItems)});
+            } forEach ((GVAR(virtualItems) select 17) select {!((toLower _x) in _blockItems)});
         };
         
         {
