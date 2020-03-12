@@ -26,7 +26,7 @@ if (isNil QGVAR(customRightPanelButtons)) then {
     GVAR(customRightPanelButtons) = [];
 };
 
-private _position = (GVAR(customRightPanelButtons) findIf {isNil "_x"}) min (count GVAR(customRightPanelButtons));
+private _position = 0 max ((GVAR(customRightPanelButtons) findIf {isNil "_x"}) min (count GVAR(customRightPanelButtons)));
 
 if (_override != -1 && {_override >= 0} && {_override <= 9}) then {
     _position = _override;
