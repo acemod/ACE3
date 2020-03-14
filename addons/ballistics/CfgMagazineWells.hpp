@@ -192,6 +192,14 @@ class CfgMagazineWells {
         };
     };
 
+    class GM6_127x108 {
+        ADDON[] = {
+            "ACE_5Rnd_127x99_Mag",
+            "ACE_5Rnd_127x99_API_Mag",
+            "ACE_5Rnd_127x99_AMAX_Mag"
+        };
+    };
+
     class CBA_9x19_P226 { // SIG P226
         ADDON[] = {
             "ACE_16Rnd_9x19_mag"
