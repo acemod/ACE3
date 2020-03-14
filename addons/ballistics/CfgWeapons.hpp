@@ -11,10 +11,8 @@ class CfgWeapons {
         ACE_barrelLength = 730;
         ACE_barrelTwist = 381.0;
         initSpeed = -1.0;
-        magazines[] += { // No Vanilla magwell
-            "ACE_5Rnd_127x99_Mag",
-            "ACE_5Rnd_127x99_API_Mag",
-            "ACE_5Rnd_127x99_AMAX_Mag"
+        magazineWell[] = { // Vanilla magwell
+            "GM6_127x108"
         };
     };
 
