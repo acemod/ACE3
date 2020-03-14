@@ -20,7 +20,7 @@ params ["_unit", "_newSurrenderState"];
 
 private _returnValue = if (_newSurrenderState) then {
     //no weapon equiped AND not currently surrendering and
-    GVAR(allowSurrender) && {(currentWeapon _unit) == ""} && {!(_unit getVariable [QGVAR(isSurrendering), false])}
+    GVAR(allowSurrender) && {currentWeapon _unit isEqualTo "" || {isClass (configFile >> "CfgPatches" >> "ACE_HitReactions")}} && {!(_unit getVariable [QGVAR(isSurrendering), false])}
 } else {
     //is Surrendering
     (_unit getVariable [QGVAR(isSurrendering), false])

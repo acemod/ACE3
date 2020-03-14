@@ -23,6 +23,9 @@
 
 params ["_unit"];
 
+if !(_unit call CBA_fnc_canUseWeapon) exitWith {};
+if !([_unit, _vehicle] call EFUNC(common,canInteractWith)) exitWith {};
+
 private _weapon = currentWeapon _unit;
 if (!isNull objectParent _unit || _weapon isEqualTo "") exitWith {objNull};
 

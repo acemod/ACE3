@@ -42,6 +42,10 @@ if (_state) then {
     if ((vehicle _unit) != _unit) exitWith {WARNING("Cannot surrender while mounted");};
     if (_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {WARNING("Cannot surrender while handcuffed");};
 
+    if (isClass (configFile >> "CfgPatches" >> "ACE_HitReactions")) then {
+        _unit call EFUNC(HitReactions,throwWeapon);
+    };
+
     _unit setVariable [QGVAR(isSurrendering), true, true];
 
     [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
