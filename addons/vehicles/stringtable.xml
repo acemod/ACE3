@@ -151,6 +151,7 @@
         <Key ID="STR_ACE_Vehicles_SpeedLimiterStep">
             <English>Speed limiter step</English>
             <Polish>Przeskok limitera prędkości</Polish>
+            <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
         </Key>
     </Package>
 </Project>
