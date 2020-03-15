@@ -149,7 +149,7 @@
             <Czech>Schová akci vyskošení z vozidla z akčního menu. Vyžaduje restart hry.</Czech>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiterStep">
-            <English>Speed limiter step</English>
+            <English>Speed Limiter Step</English>
             <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
             <Polish>Przeskok limitera prędkości</Polish>
         </Key>
