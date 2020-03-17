@@ -1,5 +1,23 @@
 #include "script_component.hpp"
+
 if (!hasInterface) exitWith {};
+
+[missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
+    private _unit = ACE_player;
+    private _fatigue = _unit getVariable [QGVAR(aimFatigue), 0];
+
+    switch (stance _unit) do {
+        case ("CROUCH"): {
+            1.0 + _fatigue ^ 2 * 0.1
+        };
+        case ("PRONE"): {
+            1.0 + _fatigue ^ 2 * 2.0
+        };
+        default {
+            1.5 + _fatigue ^ 2 * 3.0
+        };
+    };
+}] call EFUNC(common,arithmeticSetSource);
 
 ["ace_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
@@ -29,8 +47,8 @@ if (!hasInterface) exitWith {};
         [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
             linearConversion [0, 1, (_this getVariable [QEGVAR(medical,pain), 0]), 1, 1.1, true];
         }] call FUNC(addDutyFactor);
-        [QEGVAR(medical,bloodVolume), { // 100->1.0, 90->1.1, 80->1.2
-            linearConversion [100, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 100]), 1, 2, true];
+        [QEGVAR(medical,bloodVolume), { // 6->1.0, 5->1.167, 4->1.33
+            linearConversion [6, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 6]), 1, 2, true];
         }] call FUNC(addDutyFactor);
     };
     if (["ACE_Dragging"] call EFUNC(common,isModLoaded)) then {

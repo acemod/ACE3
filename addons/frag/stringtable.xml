@@ -40,7 +40,7 @@
             <German>Aktiviere die ACE-Splittersimulation</German>
             <Czech>Povolit ACE simulaci fragmentů</Czech>
             <Portuguese>Ativa a simulação de fragmentação do ACE</Portuguese>
-            <French>Active la simulation ACE de la fragmentation</French>
+            <French>Active la simulation de la fragmentation ACE.</French>
             <Hungarian>Az ACE repesz-szimuláció engedélyezése</Hungarian>
             <Russian>Включить симуляцию осколков ACE</Russian>
             <Italian>Abilita la Simulazione Frammentazione di ACE</Italian>
@@ -72,7 +72,7 @@
             <German>Aktiviere ACE-Explosionssimulation</German>
             <Czech>Povolit ACE simulaci úlomků</Czech>
             <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
-            <French>Active la simulation d'éclat ACE</French>
+            <French>Active la simulation d'éclat ACE.</French>
             <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
             <Russian>Включить симуляцию обломков ACE</Russian>
             <Italian>Abilita la Simulazione Spalling di ACE</Italian>
@@ -87,13 +87,14 @@
             <Italian>Simulazione Riflessi Esplosioni</Italian>
             <German>Druckwellensimulation</German>
             <Spanish>Activar simulación de reflexiones</Spanish>
-            <French>Simulation de la réflection des explosions.</French>
+            <French>Simulation de la réflexion des explosions</French>
             <Portuguese>Simulação de reflexo de explosão</Portuguese>
             <Russian>Cимуляция отражения взрывов ACE</Russian>
             <Japanese>爆発による飛翔シミュレーション</Japanese>
             <Korean>폭발 반사 시뮬레이션</Korean>
             <Chinesesimp>模拟爆炸反射</Chinesesimp>
             <Chinese>模擬爆炸反射</Chinese>
+            <Czech>Simulace odrazu exploze</Czech>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections_Desc">
             <English>Enable the ACE Explosion Reflection Simulation</English>
@@ -101,13 +102,14 @@
             <Italian>Abilita la Simulazione Riflessi Esplosioni di ACE</Italian>
             <German>Aktiviere die ACE-Druckwellensimulation</German>
             <Spanish>Activa la simulación de reflexiones para las explosiones.</Spanish>
-            <French>Activer la simulation de la réfléction des explosions ACE.</French>
+            <French>Active la simulation de la réflexion des explosions ACE.</French>
             <Portuguese>Ativa a simulação de reflexo de explosão do ACE</Portuguese>
             <Russian>Включить симуляцию отражения взрывов ACE</Russian>
             <Japanese>爆発による飛翔シミュレーションを有効化</Japanese>
             <Korean>ACE 폭발 반사 시뮬레이션을 적용합니다.</Korean>
             <Chinesesimp>启用ACE模拟爆炸反射</Chinesesimp>
             <Chinese>啟用ACE模擬爆炸反射</Chinese>
+            <Czech>Povolit ACE simulaci odrazu exploze</Czech>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
@@ -116,7 +118,7 @@
             <German>Maximalzahl der verfolgten Projektile</German>
             <Czech>Maximální počet sledovaných projektilů</Czech>
             <Portuguese>Máximo de projéteis rastreados</Portuguese>
-            <French>Nombre maximum de projectile suivis</French>
+            <French>Nombre maximum de projectiles suivis</French>
             <Hungarian>Maximum követett repeszek</Hungarian>
             <Russian>Макс. количество отслеживаемых снарядов</Russian>
             <Italian>Numero massimo di Proiettili Tracciati</Italian>
@@ -132,7 +134,7 @@
             <German>Diese Einstellung steuert die maximale Anzahl an Projektilen, die das Splitter- und Explosionssystem gleichzeitig verfolgen wird. Wenn mehr Projektile abgefeuert werden, werden sie nicht verfolgt werden. Diese Einstellung zu verringern, kann FPS-Einbrüche bei Szenarien mit vielen Projektilen verhindern (&gt;200 Objekte gleichzeitig in der Luft)</German>
             <Czech>Toto nastavení kontroluje maximální množství projektilů z fragmentace a úlomků, která jsou sledována v dané době. Pokud je vystřeleno více projektilů, tak nebudou sledovány. Snižte toto nastavení pokud si nepřejete propady FPS v situacích, kde je velké množství projektilů ( &gt;200 nábojů najednou ve vzduchu)</Czech>
             <Portuguese>Esta definição controla a quantidade máxima de projéteis que o sistema de fragmentação e estilhaçamento irá acompanhar em qualquer momento. Se mais projéteis são disparados, eles não serão rastreados. Diminua essa configuração se você não quiser que o FPS caia em cenários com alta contagem de projéteis (&gt; 200 projéteis no ar ao mesmo tempo)</Portuguese>
-            <French>Cette option contrôle le nombre maximum de projectiles et d'éclats résultant de la fragmentation que le système suivra à un moment T. Si plus de projectiles sont générés, ils ne seront pas pris en compte. Baisser cette option si vous ne voulez pas de baisse de FPS en cas d'un nombre important de projectiles (&gt;200 éclats en même temps)</French>
+            <French>Ce paramètre contrôle le nombre maximum de projectiles et d'éclats résultant de la fragmentation, que le système peut suivre à chaque instant.\nSi plus de projectiles sont générés, ils ne seront pas pris en compte. Baissez ce réglage si vous ne voulez pas de chute de FPS en cas de nombre important de projectiles (&gt;200 éclats en même temps).</French>
             <Hungarian>Ez a beállítás szabályozza a repeszeződés és pattogzás által kilőtt objektumok követett számát. Ha több ez a szám, ezek az objektumok nem lesznek követve. Csökkentsd ezt a beállítást, ha nem akarsz lassulásokat magas-törmelékmennyiségű helyzetekben (200+ repesz a levegőben egyszerre)</Hungarian>
             <Russian>Эта настройка контролирует максимальное количество снарядов, которок отслеживает система осколков и обломков в каждый момент времени. Снаряды, выстреленные сверх этого числа, отслеживаться не будут. Уменьшите это значение, если вы не хотите падения FPS при большом количестве снарядов в одной перестрелке (&gt; 200 одновременно летящих снарядов)</Russian>
             <Italian>Questo parametro controlla il numero massimo di proiettili che la frammentazione e il sistema di spalling tracciano in ogni momento. Se più proiettili sono sparati, non verranno tracciati. Abbassa questo parametro se non vuoi cali di FPS in scenari con molti proiettili (&gt;200 proiettili in aria contemporaneamente)</Italian>
@@ -164,7 +166,7 @@
             <Spanish>El número de cálculos de esquirlas que se hará en cualquier cuadro. Esto ayuda a dispersar el impacto en FPS del seguimiento de esquirlas de balas a través de múltiples cuadros, lo que limita aún más su impacto.</Spanish>
             <Czech>Počet úlomků v daném snímku. Toto pomáhá rozšířit FPS dopad sledovaného úlomku napříč více snímky, omezuje jeho vliv ještě více.</Czech>
             <Portuguese>O número de cálculos por estilhaço rastreado para executar em qualquer quadro. Isso ajuda a distribuir o impacto no FPS do rastreamento de estilhaço em vários quadros, o que limita o seu impacto ainda mais.</Portuguese>
-            <French>Le nombre d'éclats à calculer dans chaque image. Ceci permet de diffuser l'impact sur les FPS dans de multiples images, limitant la perte de FPS.</French>
+            <French>Le nombre de calculs de suivi à effectuer pour chaque image. Cela aide à répartir l'impact des calculs sur plusieurs images, limitant ainsi encore davantage l'impact sur les FPS.</French>
             <Hungarian>A lepattogzási útvonalak számításának darabjai képkockánként. Ez eloszlatja az FPS-megszakadást több képkockára, ezzel csökkentve a súlyosságát.</Hungarian>
             <Russian>Число обрабатываемых осколков за кадр. Это позволяет распределить нагрузку по отслеживанию осколков между несколькими кадрами, чтобы предотвратить падение FPS.</Russian>
             <Italian>Il numero di calcoli per tracciamento di spalling ad ogni frame. Questo aiuta a distribuire l'impatto del tracciamento dello spalling su più frame, limitando ancora di più l'impatto.</Italian>

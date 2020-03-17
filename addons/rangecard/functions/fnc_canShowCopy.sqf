@@ -15,4 +15,8 @@
  * Public: No
  */
 
-(GVAR(ammoClassCopy) != "" && GVAR(magazineClassCopy) != "" && GVAR(weaponClassCopy) != "" && !GVAR(RangeCardOpened) && ("ACE_RangeCard" in (uniformItems ACE_player)) || ("ACE_RangeCard" in (vestItems ACE_player)))
+GVAR(ammoClassCopy) != "" &&
+GVAR(magazineClassCopy) != "" &&
+GVAR(weaponClassCopy) != "" &&
+!GVAR(RangeCardOpened) &&
+"ACE_RangeCard" in ([ACE_player] call EFUNC(common,uniqueItems))

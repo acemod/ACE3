@@ -50,33 +50,38 @@ class CfgVehicles {
             };
             class ACE_deployRopes12 {
                 displayName = CSTRING(Interaction_deployRopes12);
-                condition = QUOTE([ARR_3(_target, _player, 'ACE_rope12')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope12'))]] call CBA_fnc_serverEvent);
+                condition = QUOTE([ARR_3(_target,_player,'ACE_rope12')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope12'))]] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes15 {
                 displayName = CSTRING(Interaction_deployRopes15);
-                condition = QUOTE([ARR_3(_target, _player, 'ACE_rope15')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope15'))]] call CBA_fnc_serverEvent);
+                condition = QUOTE([ARR_3(_target,_player,'ACE_rope15')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope15'))]] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes18 {
                 displayName = CSTRING(Interaction_deployRopes18);
-                condition = QUOTE([ARR_3(_target, _player, 'ACE_rope18')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope18'))]] call CBA_fnc_serverEvent);
+                condition = QUOTE([ARR_3(_target,_player,'ACE_rope18')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope18'))]] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes27 {
                 displayName = CSTRING(Interaction_deployRopes27);
-                condition = QUOTE([ARR_3(_target, _player, 'ACE_rope27')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope27'))]] call CBA_fnc_serverEvent);
+                condition = QUOTE([ARR_3(_target,_player,'ACE_rope27')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope27'))]] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes36 {
                 displayName = CSTRING(Interaction_deployRopes36);
-                condition = QUOTE([ARR_4(_target, _player, 'ACE_rope36', true)] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [ARR_3(_target, _player, 'ACE_rope36'))]] call CBA_fnc_serverEvent);
+                condition = QUOTE([ARR_4(_target,_player,'ACE_rope36',true)] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope36'))]] call CBA_fnc_serverEvent);
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = [_target] call FUNC(canCutRopes);
-                statement = [_target] call FUNC(cutRopes);
+                condition = QUOTE(true);
+                statement = "";
+                class confirmCutRopes {
+                    displayName = ECSTRING(common,confirm);
+                    condition = QUOTE([_target] call FUNC(canCutRopes));
+                    statement = QUOTE([_target] call FUNC(cutRopes));
+                };
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
@@ -202,7 +207,7 @@ class CfgVehicles {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesAnchorBar";
-        GVAR(friesAttachmentPoint)[] = {0.065, 2.2, -0.15};
+        GVAR(friesAttachmentPoint)[] = {0.035, 2.2, -0.15};
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
         EQUIP_FRIES_ATTRIBUTE;
@@ -274,6 +279,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(Ropesupply);
         model = "\A3\Weapons_F\AmmoBoxes\Box_NATO_AmmoVeh_F.p3d";
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_AmmoVeh_F.jpg";
         author = "Pokertour";
         class TransportItems {
             MACRO_ADDITEM(ACE_rope12,15);

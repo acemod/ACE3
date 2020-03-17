@@ -8,13 +8,12 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 // Arsenal
-GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium"];
+GVAR(modList) = ["", "curator", "kart", "heli", "mark", "expansion", "expansionpremium"];
 
 [QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_Settings_fnc_init;
 [QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_Settings_fnc_init;
 [QGVAR(fontHeight), "SLIDER", [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)], localize LSTRING(settingCategory), [1, 10, 4.5, 1]] call CBA_Settings_fnc_init;
 [QGVAR(enableIdentityTabs), "CHECKBOX", localize LSTRING(enableIdentityTabsSettings), localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
-
 
 // Arsenal loadouts
 [QGVAR(allowDefaultLoadouts), "CHECKBOX", [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)], localize LSTRING(settingCategory), true, true] call CBA_Settings_fnc_init;
@@ -59,5 +58,18 @@ GVAR(modList) = ["","curator","kart","heli","mark","expansion","expansionpremium
 }] call CBA_fnc_addEventHandler;
 
 call FUNC(compileStats);
+
+[QUOTE(ADDON), {!isNil QGVAR(camera)}] call CBA_fnc_registerFeatureCamera;
+
+// Compatibility with CBA scripted optics and dispoable framework
+[QGVAR(displayOpened), {
+    "cba_optics_arsenalOpened" call CBA_fnc_localEvent;
+    "cba_disposable_arsenalOpened" call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(displayClosed), {
+    "cba_optics_arsenalClosed" call CBA_fnc_localEvent;
+    "cba_disposable_arsenalClosed" call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
 
 ADDON = true;

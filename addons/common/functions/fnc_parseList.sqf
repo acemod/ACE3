@@ -43,7 +43,7 @@ if (_checkNil) then {
     private _nilCheckedList = [];
 
     {
-        if !(isNil _x) then {
+        if (!isNil _x) then {
             _nilCheckedList pushBack (missionNamespace getVariable _x);
         };
         false

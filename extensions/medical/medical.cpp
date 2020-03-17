@@ -33,7 +33,7 @@ std::vector<std::string> parseExtensionInput(const std::string& input)
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     if (!strcmp(function, "version")) {
-        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
     }
     else
     {
@@ -85,6 +85,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
             }
         }
 
-        strncpy_s(output, outputSize, returnValue.c_str(), _TRUNCATE);
+        strncpy(output, returnValue.c_str(), outputSize);
     }
 }

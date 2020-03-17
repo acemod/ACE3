@@ -48,7 +48,7 @@ if (_target isKindOf "CAManBase") then {
     [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
     [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);
 
-    _timer = CBA_missionTime + 15;
+    _timer = CBA_missionTime + 10;
 
 } else {
 
@@ -73,3 +73,11 @@ _unit setVariable [QGVAR(isCarrying), true, true];
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
 [FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
+
+// disable collisions by setting the physx mass to almost zero
+private _mass = getMass _target;
+
+if (_mass > 1) then {
+    _target setVariable [QGVAR(originalMass), _mass, true];
+    [QEGVAR(common,setMass), [_target, 1e-12], _target] call CBA_fnc_targetEvent;
+};

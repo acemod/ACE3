@@ -9,6 +9,11 @@
             <Chinesesimp>过热</Chinesesimp>
             <Japanese>過熱</Japanese>
             <Polish>Przegrzewanie</Polish>
+            <Russian>Перегрев</Russian>
+            <Portuguese>Super Aquecimento</Portuguese>
+            <Hungarian>Túlmelegedés</Hungarian>
+            <French>Surchauffe</French>
+            <Czech>Přehřívání</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
@@ -17,7 +22,7 @@
             <Russian>Показывать текст, когда клинит оружие</Russian>
             <Czech>Zobrazit upozornění při zaseknutí</Czech>
             <Polish>Wyświetl tekst przy zacięciu broni</Polish>
-            <French>Affiche texte si enrayé</French>
+            <French>Afficher du texte si enrayé</French>
             <Hungarian>Szöveges értesítés kijelzése a fegyver elakadásakor</Hungarian>
             <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
             <Italian>Visualizza testo in caso di inceppamento</Italian>
@@ -33,7 +38,7 @@
             <Russian>Показывать уведомление каждый раз, когда клинит Ваше оружие.</Russian>
             <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
             <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
-            <French>Affiche une notification lors d'un enrayement</French>
+            <French>Affiche une notification lorsque votre arme est enrayée.</French>
             <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
             <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
             <Italian>Visualizza una notifica in caso la tua arma si inceppasse</Italian>
@@ -48,7 +53,7 @@
             <Polish>Efekty cząsteczkowe przegrzania</Polish>
             <Italian>Effetti Particelle Surriscaldamento</Italian>
             <Spanish>Efectos de partículas</Spanish>
-            <French>Effet de surchauffe</French>
+            <French>Effets de particules </French>
             <Czech>Částicové efekty přehřívání</Czech>
             <Portuguese>Efeito de parícula de superaquecimento</Portuguese>
             <Russian>Эффект частиц при перегреве</Russian>
@@ -56,6 +61,7 @@
             <Korean>과열 입자 효과</Korean>
             <Chinesesimp>枪管过热特效</Chinesesimp>
             <Chinese>槍管過熱特效</Chinese>
+            <Hungarian>Részecskék túlmelegedése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
@@ -63,7 +69,7 @@
             <Polish>Pokaż efekty cząsteczkowe kiedy broń się przegrzeje</Polish>
             <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
-            <French>Montrer les effets lorsque l'arme surchauffe.</French>
+            <French>Affiche des effets de particules lorsqu'une arme surchauffe.</French>
             <Portuguese>Mostra efeitos de párticula quando a arma superaquece</Portuguese>
             <Russian>Показывать эффект частиц, когда оружие перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
@@ -71,6 +77,7 @@
             <Korean>무기가 과열되면 입자 효과를 보여줍니다</Korean>
             <Chinesesimp>显示枪管过热特效</Chinesesimp>
             <Chinese>顯示槍管過熱特效</Chinese>
+            <Hungarian>Fegyvertúlmelegedést okozó részecskehatások mutatása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
@@ -78,7 +85,7 @@
             <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
             <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
             <Spanish>Efectos de partículas para todos</Spanish>
-            <French>Effets de surchauffe pour tout le monde.</French>
+            <French>Effets de particules pour tout le monde</French>
             <Czech>Částicové efekty přehřívání pro všechny</Czech>
             <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
             <Russian>Эффект частиц при перегреве для всех</Russian>
@@ -86,6 +93,7 @@
             <Korean>모두에게 과열 입자 효과 적용</Korean>
             <Chinesesimp>显示其他玩家的枪管过热特效</Chinesesimp>
             <Chinese>顯示其他玩家的槍管過熱特效</Chinese>
+            <Hungarian>A részecskék túlmelegedésének hatása mindenki számára</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
@@ -93,7 +101,7 @@
             <Polish>Pokazuje efekty cząsteczkowe kiedy broń innego gracza się przegrzeje</Polish>
             <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
-            <French>Montrer les effets de surchauffe des autres joueurs.</French>
+            <French>Affiche les effets de particules lorsque les armes des autres joueurs surchauffent.</French>
             <Portuguese>Mostra efeito de partículas quando a arma de outros jogadores superaquece</Portuguese>
             <Russian>Показывать эффект частиц, когда оружие других игроков перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
@@ -101,6 +109,7 @@
             <Korean>모든 인원이 무기가 과열될시 입자 효과가 나타납니다.</Korean>
             <Chinesesimp>当其他玩家的武器过热时显示特效</Chinesesimp>
             <Chinese>當其他玩家的武器過熱時顯示特效</Chinese>
+            <Hungarian>Mutassa a részecskehatásokat, amikor más játékosok fegyvere melegedik túl</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
@@ -108,7 +117,7 @@
             <Polish>Wpływ na rozrzut</Polish>
             <Italian>Dispersione Surriscaldamento</Italian>
             <Spanish>Dispersión</Spanish>
-            <French>Disperssion dûe à la surchauffe</French>
+            <French>Dispersion</French>
             <Portuguese>Disperção de superaquecimento</Portuguese>
             <Russian>Разброс при перегреве</Russian>
             <Czech>Důsledky přehřátí zbraně</Czech>
@@ -116,6 +125,7 @@
             <Korean>과열 명중률 저하</Korean>
             <Chinesesimp>过热散射</Chinesesimp>
             <Chinese>過熱散射</Chinese>
+            <Hungarian>Túlmelegedés diszperzió (szórás)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
@@ -123,7 +133,7 @@
             <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
             <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applica per tutti i giocatori.</Italian>
             <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
-            <French>Les armes en surchauffe seront moins précises et auront une vitesse en sortie de bouche plus faible. S'applique pour tous les joueurs.</French>
+            <French>Les armes surchauffées seront moins précises et auront une vitesse initiale moins élevée. S'applique à tous les joueurs.</French>
             <Portuguese>Armas superaquecidas irão ser menos precisas e ter velocidade de disparo reduzidas. Aplica a todos os jogadores.</Portuguese>
             <Russian>Перегретое оружие будет менее точным, а дульная скорость будет снижена. Применяется ко всем игрокам.</Russian>
             <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
@@ -131,13 +141,14 @@
             <Korean>무기 과열시 무기의 명중률이 저하되고 총구속도가 감소합니다. 이는 모든 플레이어에게 적용됩니다.</Korean>
             <Chinesesimp>过热的武器将会有打不准和减少射击初速的情况。适用于所有玩家</Chinesesimp>
             <Chinese>過熱的武器將會有打不準和減少射擊初速的情況。適用於所有玩家</Chinese>
+            <Hungarian>A túlmelegedett fegyverek kevésbé lesznek pontosak és csökkent a lövés sebessége. Minden játékosra vonatkozik.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
             <German>Behebt Ladehemmung beim Nachladen</German>
             <Spanish>Desencasquillar el arma al recargar.</Spanish>
             <Polish>Usuń zacięcie przy przeładowaniu</Polish>
-            <French>Des-enrayer l'arme au rechargement.</French>
+            <French>Désenrayer l'arme au rechargement</French>
             <Italian>Disinceppa l'arma quando si ricarica</Italian>
             <Czech>Uvolnit zbraň při přebití</Czech>
             <Portuguese>Desemperrar arma no recarregamento</Portuguese>
@@ -146,13 +157,14 @@
             <Korean>재장전시 탄걸림 해결</Korean>
             <Chinesesimp>重装弹匣以解决卡弹</Chinesesimp>
             <Chinese>重裝彈匣以解決卡彈</Chinese>
+            <Hungarian>Távolítsa el az akadályt újratöltéskor</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
             <German>Nachladen behebt eine Ladehemmung.</German>
             <Spanish>Recargar el arma la desencasquilla.</Spanish>
             <Polish>Przeładowywanie usuwa zacięcie</Polish>
-            <French>Recharger vide la chambre de l'arme</French>
+            <French>Les armes se désenrayent lors d'un rechargement.</French>
             <Italian>L'arma si disinceppa quando si ricarica</Italian>
             <Czech>Přebití uvolní zaseknutou zbraň.</Czech>
             <Portuguese>Recarregar desemperra arma.</Portuguese>
@@ -161,13 +173,14 @@
             <Korean>탄걸림이 재장전시 해결됩니다.</Korean>
             <Chinesesimp>利用重装弹匣来解决卡弹</Chinesesimp>
             <Chinese>利用重裝彈匣來解決卡彈</Chinese>
+            <Hungarian>Az újratöltés megszünteti a fegyver elakadását.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
             <German>Wahrscheinlichkeit, dass Ladehemmung nicht behoben wird</German>
             <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
             <Polish>Szansa na porażkę usuw. zacięcia</Polish>
-            <French>Chance de rater le des-enrayement</French>
+            <French>Risque d'échec du désenrayement</French>
             <Italian>Probabilità di sbagliare a disinceppare l'arma</Italian>
             <Czech>Šance, že uvolnění zbraně selže</Czech>
             <Portuguese>Chance de falha de desemperramento</Portuguese>
@@ -176,13 +189,14 @@
             <Korean>탄걸림 해결 시도 실패확률</Korean>
             <Chinesesimp>解决卡弹失败机率</Chinesesimp>
             <Chinese>解決卡彈失敗機率</Chinese>
+            <Hungarian>Akadály eltávolítás hibájának esélye</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
             <German>Wahrscheinlichkeit, dass der Versuch eine Ladehemmung zu beheben fehl schlägt und erneut durchgeführt werden muss.</German>
             <Spanish>Probabilidad de que el proceso de desencasquille falle, teniendo que repetirlo.</Spanish>
             <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
-            <French>Probabilité qu'une action de des-enrayement échoue, nécessitant de recommencer.</French>
+            <French>Probabilité qu'une action de désenrayement échoue, nécessitant de recommencer.</French>
             <Italian>Probabilità che si possa sbagliare a caso a disinceppare l'arma. Richiede di ripetere.</Italian>
             <Portuguese>Probabilidade que uma ação de desemperramento falhe, tendo que ser repetida</Portuguese>
             <Russian>Вертоятность того, что устранение заклинивания не сработает, и его придется повторить.</Russian>
@@ -191,6 +205,7 @@
             <Korean>탄걸림 해결 시도시 실패할 확률이 있습니다. 이는 다시 탄걸림 해결을 시도해야함을 의미합니다.</Korean>
             <Chinesesimp>清除卡弹时有可能会失败，需要反覆进行清枪。</Chinesesimp>
             <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
+            <Hungarian>Valószínűsége annak, hogy egy akadály eltávolítás művelet kudarcot vall, megismétlést igényel.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -230,7 +245,7 @@
             <Spanish>Arma encasquillada!</Spanish>
             <Polish>Zacięcie!</Polish>
             <Czech>Zbraň se zasekla!</Czech>
-            <French>Arme enrayée</French>
+            <French>Arme enrayée !</French>
             <Russian>Оружие заклинило!</Russian>
             <Hungarian>Megakadt a fegyver!</Hungarian>
             <Portuguese>Arma travada!</Portuguese>
@@ -262,7 +277,7 @@
             <Spanish>Arma desencasquillada</Spanish>
             <Polish>Zacięcie usunięte</Polish>
             <Czech>Zbraň uvolněna</Czech>
-            <French>Arme désenrayée</French>
+            <French>Arme désenrayée.</French>
             <Russian>Оружие исправлено</Russian>
             <Hungarian>Akadás elhárítva</Hungarian>
             <Portuguese>Arma destravada</Portuguese>
@@ -279,7 +294,7 @@
             <Polish>Porażka przy usuwaniu zacięcia</Polish>
             <French>Toujours enrayé !</French>
             <Italian>Non si è disinceppata!</Italian>
-            <Czech>Zbrań se nepodařilo uvolnit</Czech>
+            <Czech>Zbraň se nepodařilo uvolnit</Czech>
             <Portuguese>Falha no desemperramento</Portuguese>
             <Russian>Не удалось исправить клин</Russian>
             <Japanese>弾詰りの除去に失敗しました</Japanese>
@@ -293,7 +308,7 @@
             <Spanish>Cambiar el cañón</Spanish>
             <Polish>Wymień lufę</Polish>
             <Czech>Vyměnit hlaveň</Czech>
-            <French>Changer de canon</French>
+            <French>Remplacer le canon</French>
             <Russian>Сменить ствол</Russian>
             <Hungarian>Cső cserélése</Hungarian>
             <Portuguese>Substituir cano</Portuguese>
@@ -309,7 +324,7 @@
             <Spanish>Cambiando el cañón...</Spanish>
             <Polish>Wymienianie lufy...</Polish>
             <Czech>Měním hlaveň...</Czech>
-            <French>Changement du canon...</French>
+            <French>Remplacement du canon...</French>
             <Russian>Смена ствола...</Russian>
             <Hungarian>Cső kicserélése folyamatban...</Hungarian>
             <Portuguese>Substituindo cano...</Portuguese>
@@ -325,7 +340,7 @@
             <Spanish>Cañón cambiado</Spanish>
             <Polish>Lufa wymieniona</Polish>
             <Czech>Hlaveň vyměněna</Czech>
-            <French>Canon changé</French>
+            <French>Canon remplacé.</French>
             <Russian>Ствол заменён</Russian>
             <Hungarian>Cső kicserélve</Hungarian>
             <Portuguese>Cano substituído</Portuguese>
@@ -430,9 +445,9 @@
         <Key ID="STR_ACE_Overheating_BarrelCool">
             <English>Cool Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
-            <French>Canon(s) de rechange froid</French>
+            <French>Canon(s) de rechange froid(s).</French>
             <Russian>Прохладные</Russian>
-            <Czech>Studená náhrandí hlaveň</Czech>
+            <Czech>Studená náhradní hlaveň</Czech>
             <Japanese>予備銃身は冷たい</Japanese>
             <Polish>Zimne zapasowe lufy</Polish>
             <German>Kalte Wechselläufe</German>
@@ -444,9 +459,9 @@
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
-            <French>Canon(s) de rechange tiède</French>
+            <French>Canon(s) de rechange tiède(s).</French>
             <Russian>Теплые</Russian>
-            <Czech>Teplá náhrandí hlaveň</Czech>
+            <Czech>Teplá náhradní hlaveň</Czech>
             <Japanese>予備銃身は温かい</Japanese>
             <Polish>Ciepłe zapasowe lufy</Polish>
             <German>Warme Wechselläufe</German>
@@ -458,9 +473,9 @@
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
-            <French>Canon(s) de rechange chaud</French>
+            <French>Canon(s) de rechange chaud(s).</French>
             <Russian>Горячие</Russian>
-            <Czech>Horká náhrandí hlaveň</Czech>
+            <Czech>Horká náhradní hlaveň</Czech>
             <Japanese>予備銃身は熱い</Japanese>
             <Polish>Gorące zapasowe lufy</Polish>
             <German>Heiße Wechselläufe</German>
@@ -472,9 +487,9 @@
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
-            <French>Canon(s) de rechange très chaud</French>
+            <French>Canon(s) de rechange très chaud(s).</French>
             <Russian>Очень горячие</Russian>
-            <Czech>Velmi horká náhrandí hlaveň</Czech>
+            <Czech>Velmi horká náhradní hlaveň</Czech>
             <Japanese>予備銃身はとても熱い</Japanese>
             <Polish>Bardzo gorące zapasowe lufy</Polish>
             <German>Sehr heiße Wechselläufe</German>
@@ -486,9 +501,9 @@
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
-            <French>Canon(s) de rechange extrêmement chaud</French>
+            <French>Canon(s) de rechange extrêmement chaud(s).</French>
             <Russian>Запредельно горячие</Russian>
-            <Czech>Extrémně horká náhrandí hlaveň</Czech>
+            <Czech>Extrémně horká náhradní hlaveň</Czech>
             <Japanese>予備銃身は極めて熱い</Japanese>
             <Polish>Ekstremalnie gorące zapasowe lufy</Polish>
             <German>Extrem heiße Wechselläufe</German>
@@ -515,7 +530,7 @@
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
             <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
-            <French>Activateur maître pour le module de surchauffe / enrayement</French>
+            <French>Active le module de surchauffe/d'enrayement.</French>
             <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
             <Japanese>過熱と弾詰まりモジュールを全て有効化します</Japanese>
             <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
@@ -524,6 +539,7 @@
             <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
             <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
             <Chinese>啟用槍管過熱/干擾模塊</Chinese>
+            <Czech>Hlavní přepínač pro modul přehřívání/zasekávání</Czech>
         </Key>
     </Package>
 </Project>

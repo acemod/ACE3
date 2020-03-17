@@ -43,7 +43,7 @@ class CfgVehicles {
                     condition = QUOTE(call DFUNC(canShowFreeSeats)); \
                     statement = QUOTE(call DFUNC(getInNearest)); \
                     exceptions[] = {"isNotSwimming"}; \
-                    insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
+                    insertChildren = QUOTE((_this select 2) param [ARR_2(0, [])]); \
                 }; \
             }; \
         }; \
@@ -52,7 +52,7 @@ class CfgVehicles {
                 displayName = CSTRING(ChangeSeat); \
                 condition = QUOTE(call DFUNC(canShowFreeSeats)); \
                 statement = ""; \
-                insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
+                insertChildren = QUOTE((_this select 2) param [ARR_2(0, [])]); \
             }; \
         }
 

@@ -46,7 +46,7 @@ if (_object getVariable [QGVAR(testVar), false]) then {
 
     // If the object already has tags attached, just add the new one to the list
     private _attachedTags = _object getVariable QGVAR(attachedTags);
-    if !(isNil  "_attachedTags ") exitWith {
+    if (!isNil "_attachedTags") exitWith {
         _attachedTags pushBack _tag;
     };
 

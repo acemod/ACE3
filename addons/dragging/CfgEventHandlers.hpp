@@ -21,6 +21,7 @@ class Extended_Init_EventHandlers {
     class CAManBase {
         class ADDON {
             init = QUOTE(_this call DFUNC(initPerson));
+            exclude[] = {"VirtualMan_F"};
         };
     };
     class StaticWeapon {

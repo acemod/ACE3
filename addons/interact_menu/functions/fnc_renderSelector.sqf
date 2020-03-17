@@ -39,7 +39,7 @@ private _pos = if (GVAR(UseListMenu)) then {
 
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
-if (GVAR(cursorKeepCentered) && {uiNamespace getVariable [QGVAR(cursorMenuOpened),false]}) then {
+if (([GVAR(cursorKeepCentered), GVAR(cursorKeepCenteredSelfInteraction)] select GVAR(keyDownSelfAction)) && {uiNamespace getVariable [QGVAR(cursorMenuOpened), false]}) then {
     _pos set [0, ((_pos select 0) - (GVAR(cursorPos) select 0) + 0.5)];
     _pos set [1, ((_pos select 1) - (GVAR(cursorPos) select 1) + 0.5)];
 };

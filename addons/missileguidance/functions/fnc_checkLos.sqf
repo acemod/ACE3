@@ -1,11 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: jaynus
- * Returns whether the seeker object can see the target position with lineIntersect
+ * Returns whether the seeker object can see the target position with checkVisibility
  *
  * Arguments:
  * 0: Seeker <OBJECT>
  * 1: Target <OBJECT>
+ * 2: Whether or not to use checkVisibility to test for LOS <BOOLEAN>
  *
  * Return Value:
  * Has LOS <BOOL>
@@ -16,8 +17,13 @@
  * Public: No
  */
 
-params ["_seeker", "_target"];
+params ["_seeker", "_target", ["_checkVisibilityTest", true]];
 
+// Boolean checkVisibilityTest so that if the seeker type is one that ignores smoke we revert back to raw LOS checking.
+if (_checkVisibilityTest) exitWith {
+    private _visibility = [_seeker, "VIEW", _target] checkVisibility [getPosASL _seeker, aimPos _target];
+    _visibility > 0.001
+};
 if ((isNil "_seeker") || {isNil "_target"}) exitWith {
     ERROR_2("nil",_seeker,_target);
     false
@@ -36,4 +42,5 @@ if (!((terrainIntersectASL [_seekerPos, _targetPos]) && {terrainIntersectASL [_s
     _return = false;
 };
 
-_return;
+_return
+

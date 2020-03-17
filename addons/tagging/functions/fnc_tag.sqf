@@ -37,7 +37,7 @@ private _intersections = lineIntersectsSurfaces [_startPosASL, _endPosASL, _unit
 
 // If there's no intersections
 if (_intersections isEqualTo []) exitWith {
-    TRACE_3("No intersections",_intersections);
+    TRACE_1("No intersections",_intersections);
     false
 };
 
@@ -95,7 +95,7 @@ if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([ 0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}) exitWith {
-    TRACE_3("Unsuitable location:",_touchingPoint);
+    TRACE_1("Unsuitable location:",_touchingPoint);
     false
 };
 
@@ -108,7 +108,7 @@ private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
     params ["", "", "", "", "_unit"];
     TRACE_2("Unit:",_unit,_this);
 
-    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
+    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 5, 1, 15];
 
     // Tell the server to create the tag and handle its destruction
     [QGVAR(createTag), _this] call CBA_fnc_serverEvent;

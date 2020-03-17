@@ -33,7 +33,7 @@ while {dialog} do {
 BIS_fnc_feedback_allowPP = !_init;
 
 // Removes death blur if present
-if !(isNil "BIS_DeathBlur") then {
+if (!isNil "BIS_DeathBlur") then {
     BIS_DeathBlur ppEffectAdjust [0];
     BIS_DeathBlur ppEffectCommit 0;
 };
@@ -187,4 +187,7 @@ if (_init) then {
 
     // Ensure chat is shown again
     showChat true;
+
+    // Restore HUD
+    [] call EFUNC(common,showHud);
 };

@@ -24,12 +24,6 @@ call FUNC(determineZoom);
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
 
-    // Start Blue Force Tracking if Enabled
-    if (GVAR(BFT_Enabled)) then {
-        GVAR(BFT_markers) = [];
-        [FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
-    };
-
     //illumination settings
     if (GVAR(mapIllumination)) then {
         ["loadout", {
@@ -114,6 +108,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
         switch (true) do {
             case (_vehicle isKindOf "Tank");
             case (_vehicle isKindOf "Wheeled_APC"): { {true} };
+            case (_vehicle isKindOf "ParachuteBase"): { {false} };
             case (_vehicle isKindOf "Helicopter");
             case (_vehicle isKindOf "Plane"): { {(driver _vehicle == _unit) || {gunner _vehicle == _unit}} };
             default { {false} };
