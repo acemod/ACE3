@@ -683,9 +683,6 @@ class CfgVehicles {
     class ReammoBox;
     // dropped weapons/gear
     class WeaponHolder: ReammoBox {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
