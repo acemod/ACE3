@@ -15,7 +15,7 @@
  * Public: Yes
  */
 
-if !(isNil QGVAR(camera)) then {
+if (!isNil QGVAR(camera)) then {
     [GVAR(camMode), GVAR(camFocus), GVAR(camVision), getPosATL GVAR(camera), getDirVisual GVAR(camera)]
 } else {
     // These values could be pre-set by function

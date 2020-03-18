@@ -7,7 +7,7 @@
     true,
     {[QGVAR(mapIllumination), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(mapGlow),
@@ -18,7 +18,7 @@
     true,
     {[QGVAR(mapGlow), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(mapShake),
@@ -27,7 +27,7 @@
     format["ACE %1", localize LSTRING(Module_DisplayName)],
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(mapLimitZoom),
@@ -36,7 +36,7 @@
     format["ACE %1", localize LSTRING(Module_DisplayName)],
     false,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(mapShowCursorCoordinates),
@@ -45,7 +45,7 @@
     format["ACE %1", localize LSTRING(Module_DisplayName)],
     false,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(DefaultChannel),
@@ -56,7 +56,7 @@
     true,
     {[QGVAR(DefaultChannel), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Blue Force Tracking
 [
@@ -66,9 +66,16 @@
     [format ["ACE %1", localize LSTRING(Module_DisplayName)], localize LSTRING(BFT_Module_DisplayName)],
     false,
     true,
-    {[QGVAR(BFT_Enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
-] call CBA_settings_fnc_init;
+    {
+        [QGVAR(BFT_Enabled), _this] call EFUNC(common,cbaSettings_settingChanged);
+        
+        if (isNil QGVAR(BFT_markers)) then {
+            GVAR(BFT_markers) = [];
+            [FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
+        };
+    },
+    false
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(BFT_Interval),
@@ -79,7 +86,7 @@
     true,
     {[QGVAR(BFT_Interval), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(BFT_ShowPlayerNames),
@@ -89,8 +96,8 @@
     false,
     true,
     {[QGVAR(BFT_ShowPlayerNames), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
-] call CBA_settings_fnc_init;
+    false
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(BFT_HideAiGroups),
@@ -100,5 +107,5 @@
     false,
     true,
     {[QGVAR(BFT_HideAiGroups), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
-] call CBA_settings_fnc_init;
+    false
+] call CBA_fnc_addSetting;

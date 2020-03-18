@@ -62,3 +62,11 @@
         [QEGVAR(medical,woundReceived), [_x, "Head", _lethality, _killer, "#vehiclecrash", [HITPOINT_INDEX_HEAD,1]], _x] call CBA_fnc_targetEvent;
     } forEach (crew _vehicle);
 }, true, ["ParachuteBase"]] call CBA_fnc_addClassEventHandler;
+
+// Fixes units being stuck in unconscious animation when being knocked over by a PhysX object
+["CAManBase", "AnimDone", {
+    params ["_unit", "_anim"];
+    if (local _unit && {_anim == "unconscious" && {lifeState _unit != "INCAPACITATED"}}) then {
+        [_unit, false] call FUNC(setUnconsciousAnim);
+    };
+}] call CBA_fnc_addClassEventHandler;

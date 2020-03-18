@@ -47,6 +47,7 @@
             <Korean>차량이 얼마나 빨리 재급유될 수 있습니까?</Korean>
             <Chinesesimp>载具多快会加油完毕?</Chinesesimp>
             <Chinese>載具多快會加油完畢?</Chinese>
+            <Turkish>Bir araca ne kadar hızlı yakıt ikmali yapılmalıdır?</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
@@ -360,6 +361,7 @@
             <Korean>재급유 완료함</Korean>
             <Chinesesimp>加油完毕</Chinesesimp>
             <Chinese>加油完畢</Chinese>
+            <Turkish>Yakıt Doldurma Tamamlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Stopped">
             <English>Fueling stopped</English>
@@ -375,6 +377,7 @@
             <Korean>재급유 멈춤</Korean>
             <Chinesesimp>已停止加油</Chinesesimp>
             <Chinese>已停止加油</Chinese>
+            <Turkish>Yakıt Doldurma Durduruldu</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Started">
             <English>Fueling started</English>
@@ -390,6 +393,7 @@
             <Korean>재급유 시작함</Korean>
             <Chinesesimp>已开始加油</Chinesesimp>
             <Chinese>已開始加油</Chinese>
+            <Turkish>Yakıt Doldurma Başlatıldı</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Return">
             <English>Return fuel nozzle</English>
@@ -405,6 +409,7 @@
             <Korean>주유기 반환</Korean>
             <Chinesesimp>放回燃料喷嘴</Chinesesimp>
             <Chinese>放回燃料噴嘴</Chinese>
+            <Turkish>Yakıt Pompasını Geri Koy</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_ReturnAction">
             <English>Returning fuel nozzle...</English>
@@ -420,6 +425,7 @@
             <Korean>주유기 반환중</Korean>
             <Chinesesimp>放回燃料喷嘴中...</Chinesesimp>
             <Chinese>放回燃料噴嘴中...</Chinese>
+            <Turkish>Yakıt Pompası Geri Koyuluyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounter">
             <English>Check fuel counter</English>

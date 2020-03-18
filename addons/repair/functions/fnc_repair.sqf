@@ -82,7 +82,7 @@ if (!("All" in _repairLocations)) then {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
         if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
-        if !(isNil _x) exitWith {
+        if (!isNil _x) exitWith {
             private _val = missionNamespace getVariable _x;
             if (_val isEqualType 0) then {
                 _return = switch (_val) do {

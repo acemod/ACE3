@@ -31,6 +31,7 @@
             <Korean>ACE-Team</Korean>
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
+            <Turkish>ACE-Takımı</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Advanced">
             <English>Advanced</English>
@@ -80,6 +81,7 @@
             <Korean>취소</Korean>
             <Chinese>取消</Chinese>
             <Chinesesimp>取消</Chinesesimp>
+            <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Options">
             <English>ACE Options</English>
@@ -394,6 +396,7 @@
             <Korean>[ACE] 기타 물품.</Korean>
             <Chinese>[ACE] 雜項</Chinese>
             <Chinesesimp>[ACE] 杂项</Chinesesimp>
+            <Turkish>[ACE] Çeşitli Nesneler</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_EnableNumberHotkeys">
             <English>Disable Command Menu</English>
@@ -410,6 +413,7 @@
             <Korean>지휘 메뉴 종료</Korean>
             <Chinese>關閉命令選單</Chinese>
             <Chinesesimp>关闭命令选单</Chinesesimp>
+            <Turkish>Komut Menüsünü Devre Dışı Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Unknown">
             <English>Unknown</English>
@@ -1333,6 +1337,7 @@
             <Portuguese>Bandeira (ACE - Preto)</Portuguese>
             <French>Drapeau (ACE - Noir)</French>
             <Czech>Vlajka (ACE - Černá)</Czech>
+            <Turkish>Bayrak (ACE- Siyah)</Turkish>
             <Spanish>Bandera (ACE - Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_FlagWhite">
@@ -1347,6 +1352,7 @@
             <Portuguese>Bandeira (ACE - Branco)</Portuguese>
             <French>Drapeau (ACE - Blanc)</French>
             <Czech>Vlajka (ACE - Bílá)</Czech>
+            <Turkish>Bayrak (ACE - Beyaz)</Turkish>
             <Spanish>Bandera (ACE - Blanca)</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
@@ -1364,6 +1370,7 @@
             <Korean>플레이어만</Korean>
             <Chinesesimp>只限玩家</Chinesesimp>
             <Chinese>只限玩家</Chinese>
+            <Turkish>Sadece oyuncular</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
@@ -1380,6 +1387,7 @@
             <Korean>플레이어 및 인공지능</Korean>
             <Chinesesimp>玩家与AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
+            <Turkish>Oyuncular ve AI</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_showActionInSelfInteraction">
             <English>Show the action in the self-interaction menu</English>

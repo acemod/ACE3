@@ -1,5 +1,4 @@
 class CfgMagazineWells {
-
     class CBA_12g_2rnds {
         ADDON[] = {
             "ACE_2Rnd_12Gauge_Pellets_No0_Buck",
@@ -33,17 +32,20 @@ class CfgMagazineWells {
         };
     };
 
-    class CBA_65x39_MX {
+    class MX_65x39 { //Vanilla magwell
         ADDON[] = {
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
+            "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim",
+            "ACE_30Rnd_65x47_Scenar_mag",
+            "ACE_30Rnd_65_Creedmor_mag"
         };
     };
-    class CBA_65x39_MX_XL {
+    class MX_65x39_Large { //Vanilla magwell
         ADDON[] = {
             "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim"
         };
     };
+
     class CBA_65x39_Mk200 {
         ADDON[] = {
             "ACE_200Rnd_65x39_cased_Box_Tracer_Dim"
@@ -128,10 +130,15 @@ class CfgMagazineWells {
         };
     };
 
-//Missing in CBA
-//ACE_20Rnd_762x67_Mk248_Mod_0_Mag
-//ACE_20Rnd_762x67_Mk248_Mod_1_Mag
-//ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag
+    class MAR10_338 { //Vanilla magwell
+        ADDON[] = {
+            "ACE_10Rnd_338_300gr_HPBT_Mag",
+            "ACE_10Rnd_338_API526_Mag",
+            "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
+            "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
+            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
+        };
+    };
 
     class CBA_65C_AR10 {
         ADDON[] = {
@@ -194,5 +201,4 @@ class CfgMagazineWells {
             "ACE_10Rnd_762x54_Tracer_mag"
         };
     };
-
 };
