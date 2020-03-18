@@ -25,7 +25,10 @@ if (isNil "_damageType") then {
         case ((_typeOfProjectile select [0,1]) isEqualTo "#"): { _typeOfProjectile select [1] };
         // -- projectiles
         case (isText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")): { getText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType") };
-        default {toLower _typeOfProjectile};
+        default {
+            WARNING_1("Damage Type [%1] has no ACE_damageType",_typeOfProjectile);
+            toLower _typeOfProjectile
+        };
     };
 
     GVAR(damageTypeCache) setVariable [_typeOfProjectile, _damageType];
