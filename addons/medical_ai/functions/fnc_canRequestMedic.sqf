@@ -10,7 +10,7 @@
  * Can request medic <BOOL>
  *
  * Example:
- * player call ACE_medical_ai_fnc_canRequestMedic
+ * call ACE_medical_ai_fnc_canRequestMedic
  *
  * Public: No
  */
@@ -19,16 +19,12 @@
 //   we ignore this here. We need to "notice" the medic that he should
 //   treat other units, or else he won't do anything on his own.
 
-if ([_this] call EFUNC(medical_treatment,isMedic) || {vehicle _this != _this}) exitWith {false};
+if ([_this] call EFUNC(medical,isMedic) || {vehicle _this != _this}) exitWith {false};
 
-// Search for a medic, prioritize unitReady
-private _medic = objNull;
 {
-    if ([_x] call EFUNC(medical_treatment,isMedic) && {!([_x] call EFUNC(common,isPlayer))} && {
-        _medic = _x;
-        (unitReady _medic)
-    }) exitWith {};
+    if ([_x] call EFUNC(medical,isMedic) && {!([_x] call EFUNC(common,isPlayer))}) exitWith {
+        _this setVariable [QGVAR(assignedMedic), _x];
+        true
+    };
+    false
 } forEach (units _this);
-
-_this setVariable [QGVAR(assignedMedic), _medic];
-!isNull _medic

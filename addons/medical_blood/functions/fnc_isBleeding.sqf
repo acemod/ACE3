@@ -1,16 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: Glowbal
- * Checks if the given unit is bleeding. Handles both ACE Medical and Vanilla.
+ * Check if is bleeding
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: unit <TYPE>
  *
  * Return Value:
- * Is Bleeding <BOOL>
+ * is Bleeding <BOOL>
  *
  * Example:
- * [player] call ace_medical_blood_fnc_isBleeding
+ * [UNIT] call ace_medical_blood_fnc_isBleeding
  *
  * Public: No
  */
@@ -18,7 +18,6 @@
 params ["_unit"];
 
 if (GVAR(useAceMedical)) exitWith {
-    IS_BLEEDING(_unit);
+    _unit getVariable [QEGVAR(medical,isBleeding), false];
 };
-
-alive _unit && {getDammage _unit > 0.3}
+alive _unit && {getDammage _unit > 0.3};

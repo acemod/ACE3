@@ -2,7 +2,7 @@
 #define COMPONENT_BEAUTIFIED Medical Blood
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
+// #define DEBUG_ENABLED_MEDICAL_BLOOD
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
@@ -14,9 +14,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_BLOOD
 #endif
 
-#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define BLOOD_DISABLED     0
-#define BLOOD_ONLY_PLAYERS 1
-#define BLOOD_ENABLED      2
+#define MAX_BLOOD_OBJECTS 500
+#define BLOOD_OBJECT_LIFETIME 900

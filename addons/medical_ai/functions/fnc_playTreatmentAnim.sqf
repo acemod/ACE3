@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Treatment name <STRING>
+ * 1: Is bandage <BOOL>
  * 2: Is self treatment <BOOL>
  *
  * Return Value:
@@ -16,12 +16,17 @@
  *
  * Public: No
  */
-params ["_unit", "_actionName", "_isSelfTreatment"];
-TRACE_3("playTreatmentAnim",_unit,_actionName,_isSelfTreatment);
+params ["_unit", "_isBandage", "_isSelfTreatment"];
 
 if (vehicle _unit != _unit) exitWith {};
 
-private _configProperty = "animationMedic";
+private _animConfig = if (_isBandage) then {
+    configFile >> "ACE_Medical_Actions" >> "Basic" >> "Bandage";
+} else {
+    configFile >> "ACE_Medical_Actions" >> "Basic" >> "Morphine";
+};
+
+private _configProperty = "animationCaller";
 if (_isSelfTreatment) then {
     _configProperty = _configProperty + "Self";
 };
@@ -29,9 +34,7 @@ if (stance _unit == "PRONE") then {
     _configProperty = _configProperty + "Prone";
 };
 
-private _anim = getText (configFile >> QEGVAR(medical_treatment,Actions) >> _actionName >> _configProperty);
-if (_anim == "") exitWith { WARNING_2("no anim [%1, %2]",_actionName,_configProperty); };
-
+private _anim = getText (_animConfig >> _configProperty);
 private _wpn = switch (true) do {
     case ((currentWeapon _unit) == ""): {"non"};
     case ((currentWeapon _unit) == (primaryWeapon _unit)): {"rfl"};

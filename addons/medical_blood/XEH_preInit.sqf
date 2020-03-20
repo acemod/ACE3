@@ -6,8 +6,6 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
-
 // blood object model namespace
 GVAR(models) = [] call CBA_fnc_createNamespace;
 

@@ -1,7 +1,6 @@
-PREP(cleanupLoop);
-PREP(createBlood);
-PREP(handleWoundReceived);
-PREP(init);
+
+PREP(hit);
 PREP(isBleeding);
 PREP(onBleeding);
+PREP(createBlood);
 PREP(spurt);
