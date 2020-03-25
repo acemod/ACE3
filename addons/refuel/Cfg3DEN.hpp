@@ -1,7 +1,12 @@
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
+#define GET_NUMBER_GREATER_ZERO(config,default) (if (0 < getNumber (config)) then {getNumber (config)} else {default})
 #define GET_1ST_ARRAY(config) (if (isArray (config)) then {getArray (config) select 0} else {[ARR_3(0,0,0)]})
 
-#define DEFAULT_FUELCARGO GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(fuelCargo),REFUEL_DISABLED_FUEL)
+#define DEFAULT_FUELCARGO \
+    GET_NUMBER(\
+        configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(fuelCargo),\
+        GET_NUMBER_GREATER_ZERO(configFile >> 'CfgVehicles' >> typeOf _this >> 'transportFuel',REFUEL_DISABLED_FUEL)\
+    )
 #define DEFAULT_HOOKS GET_1ST_ARRAY(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(hooks))
 
 class Cfg3DEN {

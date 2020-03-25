@@ -1,7 +1,28 @@
 #include "script_component.hpp"
+if (!GVAR(enabled)) exitWith {};
+
+["All", "InitPost", {
+    params ["_vehicle"];
+    if (!local _vehicle) exitWith {};
+
+    if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportFuel") != 0) then {
+        _vehicle setFuelCargo 0;
+    };
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+
+private _cacheRefuelClasses = call (uiNamespace getVariable [QGVAR(cacheRefuelClasses), {[[],[]]}]);
+_cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_dynamicClasses", [], [[]]]];
 
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
+
+    private _worldSize = worldSize;
+    private _worldCenter = [_worldSize / 2, _worldSize / 2];
+    {
+        {
+            _x setFuelCargo 0;
+        } forEach (_worldCenter nearObjects [_x, _worldSize]);
+    } forEach _staticClasses;
 };
 
 [QGVAR(initSource), LINKFUNC(initSource)] call CBA_fnc_addEventHandler;
@@ -62,9 +83,6 @@ GVAR(actions) = [
 ];
 
 // init menu for config refuel vehicles
-private _cacheRefuelClasses = call (uiNamespace getVariable [QGVAR(cacheRefuelClasses), {[[],[]]}]);
-_cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_dynamicClasses", [], [[]]]];
-
 {
     private _className = _x;
     [_className, 0, ["ACE_MainActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToClass);
@@ -87,9 +105,9 @@ _cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_dynamicClasses", []
 addMissionEventHandler ["Draw3D", {
     private _source = cursorObject;
     private _cfgPos = getArray (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(hooks));
-    private _dynPos = _source getVariable [QGVAR(hooks), []];
+    private _dynPos = _source getVariable [QGVAR(hooks), _cfgPos];
     {
         drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,1,1,1], _source modelToWorldVisual _x, 1, 1, 0, format ["Hook %1", _forEachIndex]];
-    } forEach ([_dynPos, _cfgPos] select (_dynPos isEqualTo []));
+    } forEach _dynPos;
 }];
 #endif

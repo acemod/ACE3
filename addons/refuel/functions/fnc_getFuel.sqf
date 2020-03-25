@@ -22,7 +22,9 @@ if (isNull _source) exitWith {0};
 private _fuel = _source getVariable QGVAR(currentFuelCargo);
 
 if (isNil "_fuel") then {
-    _fuel = getNumber (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(fuelCargo));
+    private _cfg = configFile >> "CfgVehicles" >> typeOf _source;
+    private _transportFuel = getNumber (_cfg >> "transportFuel");
+    _fuel = [_cfg >> QGVAR(fuelCargo), "NUMBER", _transportFuel] call CBA_fnc_getConfigEntry;
     _source setVariable [QGVAR(currentFuelCargo), _fuel, true];
 };
 

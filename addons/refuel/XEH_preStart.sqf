@@ -7,13 +7,14 @@ private _staticClasses = [];
 private _dynamicClasses = [];
 
 {
-    private _fuelCargo = getNumber (_x >> QGVAR(fuelCargo));
+    private _transportFuel = getNumber (_x >> "transportFuel");
+    private _fuelCargo = [_x >> QGVAR(fuelCargo), "NUMBER", _transportFuel] call CBA_fnc_getConfigEntry;
     if (_fuelCargo > 0 || {_fuelCargo == REFUEL_INFINITE_FUEL}) then {
         private _sourceClass = configName _x;
         // check if we can use actions with inheritance
         if (
             !isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init") // addActionToClass relies on XEH init
-            || {configName _x isKindOf "Static"} // CBA_fnc_addClassEventHandler doesn't support "Static" class
+            || {_sourceClass isKindOf "Static"} // CBA_fnc_addClassEventHandler doesn't support "Static" class
         ) then {
             if (2 == getNumber (_x >> "scope")) then {
                 _staticClasses pushBackUnique _sourceClass;
