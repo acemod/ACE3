@@ -21,10 +21,14 @@ private _damageType = GVAR(damageTypeCache) getVariable _typeOfProjectile;
 
 if (isNil "_damageType") then {
     _damageType = switch (true) do {
-        // -- non-projectiles reported by custom handleDamage wrapper
-        case ((_typeOfProjectile select [0,1]) isEqualTo "#"): { _typeOfProjectile select [1] };
-        // -- projectiles
-        case (isText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")): { getText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType") };
+        // non-projectiles reported by custom handleDamage wrapper
+        case ((_typeOfProjectile select [0,1]) isEqualTo "#"): {
+            _typeOfProjectile select [1]
+        };
+        // projectiles
+        case (isText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")): {
+            getText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")
+        };
         default {
             WARNING_1("Damage Type [%1] has no ACE_damageType",_typeOfProjectile);
             toLower _typeOfProjectile
