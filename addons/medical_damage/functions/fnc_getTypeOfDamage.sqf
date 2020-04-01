@@ -30,8 +30,8 @@ if (isNil "_damageType") then {
             getText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")
         };
         default {
-            WARNING_1("Damage Type [%1] has no ACE_damageType",_typeOfProjectile);
-            toLower _typeOfProjectile
+            WARNING_1("Ammo Type [%1] has no ACE_damageType",_typeOfProjectile);
+            "unknown"
         };
     };
 
