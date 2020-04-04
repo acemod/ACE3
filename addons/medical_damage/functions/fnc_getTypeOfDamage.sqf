@@ -30,11 +30,11 @@ if (isNil "_damageType") then {
             getText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")
         };
         default {
-            WARNING_1("Ammo Type [%1] has no ACE_damageType",_typeOfProjectile);
-            "unknown"
+            toLower _typeOfProjectile
         };
     };
 
+    TRACE_2("getTypeOfDamage caching",_typeOfProjectile,_damageType);
     GVAR(damageTypeCache) setVariable [_typeOfProjectile, _damageType];
 };
 
