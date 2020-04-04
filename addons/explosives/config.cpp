@@ -47,7 +47,7 @@ class CfgActions {
     class DeactivateMine:None {
         show = 0;
     };
-    class UseContainerMagazine:None {
+    class UseContainerMagazine: None {
         show = 0;
     };
 };
