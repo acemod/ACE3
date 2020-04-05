@@ -42,7 +42,7 @@ if (_target isKindOf "StaticWeapon") then {
             };
         } forEach _magazines;
     };
-    
+
     // For static weapons the muzzle seemingly never returns anything for static weapons with/without people inside
     if (_muzzle == "") then {
         _muzzle = _weapon;
@@ -76,10 +76,14 @@ if (_muzzle == _weapon) then {
 } else {
     _showNumber = true;
 
+    _ammo = _target ammo _muzzle;
+    if (_ammo == 0) then { _magazine = ""; };
+
     _count = if (_magazine != "") then {
         {_x == _magazine} count (magazines _target + [_magazine])
     } else {
-        {_x in getArray (configFile >> "CfgWeapons" >> _weapon >> _muzzle >> "Magazines")} count magazines _target
+        private _compatibleMagazines =  [configFile >> "CfgWeapons" >> _weapon >> _muzzle] call CBA_fnc_compatibleMagazines;
+        {_x in _compatibleMagazines} count magazines _target
     };
 };
 
