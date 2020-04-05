@@ -67,6 +67,7 @@
     if !((ctrlIDD _mapDisplay) in GVAR(mapDisplaysWithDrawEHs)) then {
         GVAR(mapDisplaysWithDrawEHs) pushBack (ctrlIDD _mapDisplay);
         _mapCtrl ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
+        (_mapDisplay displayCtrl 9051) ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // #TopoHack
     };
 
     ////////////////////

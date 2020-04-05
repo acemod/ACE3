@@ -23,4 +23,8 @@ class CfgWeapons {
             };
         };
     };
+    class ItemMap;
+    class ace_TopographicMap: ItemMap {
+        displayName = "Topo test";
+    };
 };

@@ -21,6 +21,7 @@ GVAR(mapTool_isRotating) = false;
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {call FUNC(updateMapToolMarkers); call FUNC(openMapGpsUpdate);}];
+    ((findDisplay 12) displayCtrl 9051) ctrlAddEventHandler ["Draw", {call FUNC(updateMapToolMarkers);}]; // #TopoHack
 }, []] call CBA_fnc_waitUntilAndExecute;
 
 ["visibleMap", {

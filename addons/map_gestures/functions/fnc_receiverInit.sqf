@@ -23,3 +23,4 @@ if (!isNil QGVAR(DrawMapHandlerID)) then {
     GVAR(DrawMapHandlerID) = nil;
 };
 GVAR(DrawMapHandlerID) = findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {call FUNC(drawMapGestures)}];
+ findDisplay 12 displayCtrl 9051 ctrlAddEventHandler ["Draw", {call FUNC(drawMapGestures)}]; // #TopoHack
