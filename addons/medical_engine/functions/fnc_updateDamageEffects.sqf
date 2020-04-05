@@ -18,7 +18,7 @@
 
 params [["_unit", objNull, [objNull]]];
 
-if (!local _unit) exitWith { ERROR("Unit not local or null"); };
+if (!local _unit) exitWith { ERROR_2("updateDamageEffects: Unit not local or null [%1:%2]",_unit,typeOf _unit); };
 
 private _isLimping = false;
 
