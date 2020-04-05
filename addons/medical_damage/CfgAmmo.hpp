@@ -64,7 +64,8 @@ class CfgAmmo {
     class Bo_Mk82: BombCore {
         ACE_damageType = "explosive";
     };
-    class ammo_Bomb_LaserGuidedBase: BombCore {
+    class LaserBombCore;
+    class ammo_Bomb_LaserGuidedBase: LaserBombCore {
         ACE_damageType = "explosive";
     };
     class BombDemine_01_Ammo_F: BombCore {
