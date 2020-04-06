@@ -143,7 +143,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             // Higher momentum results in higher chance for head to be hit for more lethality
             if (_receivedDamage > 0.35) then {
                 private _headHitWeight = (_receivedDamage / 2) min 1;
-                if (_recievedDamage < 0.6) then {
+                if (_receivedDamage < 0.6) then {
                     _damageSelectionArray append [0, (1 - _headHitWeight), 1, _headHitWeight];
                 } else {
                     _damageSelectionArray = [0, (1 - _headHitWeight), 1, _headHitWeight];
