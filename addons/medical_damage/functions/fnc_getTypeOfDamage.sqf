@@ -4,7 +4,7 @@
  * Get the type of damage based upon the projectile.
  *
  * Arguments:
- * 0: The projectile classname or object <STRING>
+ * 0: The projectile classname OR the name of a damage type <STRING>
  *
  * Return Value:
  * Type of damage <STRING>
@@ -20,18 +20,17 @@ params ["_typeOfProjectile"];
 private _damageType = GVAR(damageTypeCache) getVariable _typeOfProjectile;
 
 if (isNil "_damageType") then {
-    _damageType = switch (true) do {
-        // non-projectiles reported by custom handleDamage wrapper
-        case ((_typeOfProjectile select [0,1]) isEqualTo "#"): {
-            _typeOfProjectile select [1]
-        };
-        // projectiles
-        case (isText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")): {
-            getText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")
-        };
-        default {
-            toLower _typeOfProjectile
-        };
+    if (isText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")) then {
+        _damageType = getText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType");
+    } else {
+        WARNING_1("Ammo type [%1] has no ACE_damageType",_typeOfProjectile);
+        _damageType = "unknown";
+    };
+
+    // config may define an invalid damage type
+    if (isNil {GVAR(allDamageTypesData) getVariable _damageType}) then {
+        WARNING_2("Damage type [%1] for ammo [%2] not found",_typeOfDamage,_typeOfProjectile);
+        _damageType = "unknown";
     };
 
     TRACE_2("getTypeOfDamage caching",_typeOfProjectile,_damageType);

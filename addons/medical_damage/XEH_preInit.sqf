@@ -16,9 +16,6 @@ addMissionEventHandler ["Loaded",{
     call FUNC(parseConfigForInjuries);
 }];
 
-// Cache for damage types of each ammo class
-GVAR(damageTypeCache) = false call CBA_fnc_createNamespace;
-
 // decide which woundsHandler to use by whether the extension is present or not
 // if ("ace_medical" callExtension "version" != "") then {
 
