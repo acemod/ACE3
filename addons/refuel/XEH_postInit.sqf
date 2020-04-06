@@ -8,7 +8,7 @@ if (!GVAR(enabled)) exitWith {};
     if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportFuel") != 0) then {
         _vehicle setFuelCargo 0;
     };
-}, true, [], true] call CBA_fnc_addClassEventHandler;
+}, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
 
 private _cacheRefuelClasses = call (uiNamespace getVariable [QGVAR(cacheRefuelClasses), {[[],[]]}]);
 _cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_dynamicClasses", [], [[]]]];
