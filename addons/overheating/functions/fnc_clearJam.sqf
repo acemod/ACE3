@@ -36,7 +36,7 @@ if (_weapon in _jammedWeapons) then {
         if (_weapon == primaryWeapon _unit) then {
             playSound QGVAR(fixing_rifle);
         } else {
-            if (_weapon == secondaryWeapon _unit) then {
+            if (_weapon == handgunWeapon _unit) then {
                 playSound QGVAR(fixing_pistol);
             };
         };

@@ -41,8 +41,7 @@ if (GVAR(Overlay)) exitWith {
     QGVAR(Layer) cutText ["", "PLAIN"];
     true
 };
-if (underwater ACE_player) exitWith { true };
-if (!("ACE_Kestrel4500" in (uniformItems ACE_player)) && !("ACE_Kestrel4500" in (vestItems ACE_player))) exitWith { true };
+if (underwater ACE_player || {!(call FUNC(canShow))}) exitWith {true};
 
 if (GVAR(Kestrel4500) && dialog) then {
     GVAR(Kestrel4500) = false;
@@ -53,7 +52,7 @@ GVAR(Overlay) = true;
 
 [{
     // abort condition
-    if (!GVAR(Overlay) || {!(("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player)))}) exitWith {
+    if (!GVAR(Overlay) || {!(call FUNC(canShow))}) exitWith {
         GVAR(Overlay) = false;
         QGVAR(Layer) cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;

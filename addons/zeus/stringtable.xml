@@ -314,6 +314,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
+            <German>Füge Objekte hinzu</German>
             <Chinese>新增物件</Chinese>
             <Italian>Aggiungi Oggetti</Italian>
             <Japanese>オブジェクト追加</Japanese>
@@ -341,7 +342,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
-            <German>Alle Zeus'</German>
+            <German>Alle Kuratoren</German>
             <Japanese>全キュレーター</Japanese>
             <Korean>모든 큐레이터</Korean>
             <Polish>Wszyscy kuratorzy</Polish>
@@ -355,7 +356,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Apply changes to all curators</English>
-            <German>Änderungen bei allen Zeus' aktualisieren</German>
+            <German>Änderungen bei allen Kuratoren aktualisieren</German>
             <Japanese>全キュレーターへ変更を適用します。</Japanese>
             <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
@@ -1803,7 +1804,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
-            <German>Paradrop Ladung</German>
+            <German>Ladung abwerfen (Fallschirm)</German>
             <Japanese>カーゴを空中投下</Japanese>
             <Polish>Zrzut ładunku (cargo)</Polish>
             <Russian>Десантировать груз</Russian>

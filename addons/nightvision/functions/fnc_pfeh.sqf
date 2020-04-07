@@ -16,7 +16,9 @@
  * Public: No
  */
 
-if ((currentVisionMode ACE_player) != 1) exitWith {
+private _unit = ACE_player;
+
+if (currentVisionMode _unit != 1) exitWith {
     GVAR(running) = false;
     [false] call FUNC(setupDisplayEffects);
     [GVAR(PFID)] call CBA_fnc_removePerFrameHandler;
@@ -28,7 +30,7 @@ if ((currentVisionMode ACE_player) != 1) exitWith {
 };
 if (EGVAR(common,OldIsCamera)) exitWith {
     if (GVAR(running)) then {
-        TRACE_2("pausing NVG for scripted camera",alive ACE_player,EGVAR(common,OldIsCamera));
+        TRACE_2("pausing NVG for scripted camera",alive _unit,EGVAR(common,OldIsCamera));
         GVAR(running) = false;
         [false] call FUNC(setupDisplayEffects);
     };
@@ -45,7 +47,7 @@ BEGIN_COUNTER(borderScaling);
 private _scale = (call EFUNC(common,getZoom)) * 1.12513;
 if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
     // Prevents issues when "zooming out" on ultra wide monitors - The square mask would be narrower than the screen
-    if (((GVAR(defaultPositionBorder) select 2) * _scale) < safeZoneW) then {
+    if ((GVAR(defaultPositionBorder) select 2) * _scale < safeZoneW) then {
         _scale = safeZoneW / (GVAR(defaultPositionBorder) select 2);
     };
     [(uiNamespace getVariable QGVAR(titleDisplay)) displayCtrl 1000, GVAR(defaultPositionHex), _scale] call FUNC(scaleCtrl);
@@ -54,6 +56,11 @@ if (!(GVAR(defaultPositionBorder) isEqualTo [])) then {
     ((uiNamespace getVariable QGVAR(titleDisplay)) displayCtrl 1000) ctrlSetFade (linearConversion [4, 6, _scale, 0.2, 1, true]);
 };
 END_COUNTER(borderScaling);
+
+if !(IS_MAGNIFIED isEqualTo GVAR(isUsingMagnification)) then {
+    GVAR(isUsingMagnification) = IS_MAGNIFIED;
+    GVAR(nextEffectsUpdate) = -1;
+};
 
 if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     // Update radial blur as it depends on zoom level, so should be changed each frame like the border/hex
@@ -87,10 +94,11 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     private _fogApply = linearConversion [0, 1, _effectiveLight, ST_NVG_MAXFOG, ST_NVG_MINFOG, true];
 
     // Modify blur if looking down scope
-    if ((cameraView == "GUNNER") && {[ACE_player] call CBA_fnc_canUseWeapon}) then {
-        if (currentWeapon ACE_player == "") exitWith {};
-        if (currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE]}; // Rifles are bad
-        if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL]}; // Pistols aren't so bad
+    if (cameraView == "GUNNER" && {[_unit] call CBA_fnc_canUseWeapon && {!GVAR(isUsingMagnification)}}) then {
+        private _weapon = currentWeapon _unit;
+        if (_weapon == "") exitWith {};
+        if (_weapon == primaryWeapon _unit) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE]}; // Rifles are bad
+        if (_weapon == handgunWeapon _unit) exitWith {_blurFinal = _blurFinal * linearConversion [0, 1, GVAR(aimDownSightsBlur), 1, ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL]}; // Pistols aren't so bad
     };
 
     // Scale general effects based on ace_nightvision_effectScaling setting
@@ -99,7 +107,7 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     _contrastFinal = linearConversion [0, 1, GVAR(effectScaling), 1, _contrastFinal];
 
     // Add adjusted NVG brightness
-    private _playerBrightSetting = ACE_player getVariable [QGVAR(NVGBrightness), 0];
+    private _playerBrightSetting = _unit getVariable [QGVAR(NVGBrightness), 0];
     _brightFinal = _brightFinal + (_playerBrightSetting / 20);
 
     // Scale grain effects based on ace_nightvision_noiseScaling setting
@@ -148,9 +156,12 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
 
     // Modify local fog:
     if (GVAR(fogScaling) > 0) then {
-        if (((vehicle ACE_player) != ACE_player) && {(vehicle ACE_player) isKindOf "Air"}) then {  // For flying in particular, can refine nicer later.
+        private _vehicle = vehicle _unit;
+
+        if (_vehicle != _unit && {_vehicle isKindOf "Air"}) then {  // For flying in particular, can refine nicer later.
             _fogApply = _fogApply * ST_NVG_AIR_FOG_MULTIPLIER;
         };
+
         _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, (GVAR(fogScaling) * _fogApply), 1]; // mix in old fog if present
         GVAR(nvgFog) = [_fogApply, 0, 0];
         0 setFog GVAR(nvgFog)

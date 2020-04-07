@@ -8,7 +8,7 @@
             <Russian>MicroDAGR GPS</Russian>
             <Czech>MicroDAGR GPS</Czech>
             <Polish>MicroDAGR GPS</Polish>
-            <French>MicroDAGR GPS</French>
+            <French>MicroDAGR</French>
             <Hungarian>MicroDAGR GPS</Hungarian>
             <Italian>GPS MicroDAGR</Italian>
             <Portuguese>GPS MicroDAGR</Portuguese>
@@ -16,6 +16,7 @@
             <Korean>MicroDAGR GPS</Korean>
             <Chinesesimp>微型军用GPS接收器</Chinesesimp>
             <Chinese>微型軍用GPS接收器</Chinese>
+            <Turkish>MicroDAGR GPS</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_itemDescription">
             <English>MicroDAGR advanced GPS receiver</English>
@@ -23,7 +24,7 @@
             <Spanish>Receptor avanzado GPS MicroDAGR</Spanish>
             <Russian>Многофункциональный GPS-приёмник.</Russian>
             <Polish>Zaawansowany odbiornik GPS MicroDAGR</Polish>
-            <French>Récepteur GPS MicroDAGR</French>
+            <French>MicroDAGR - Récepteur GPS avancé</French>
             <Czech>MicroDAGR pokročílá GPS příjímač</Czech>
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
             <Italian>Ricevitore GPS avanzato MicroDAGR</Italian>
@@ -49,13 +50,29 @@
             <Chinesesimp>角密位:</Chinesesimp>
             <Chinese>角密位:</Chinese>
         </Key>
+        <Key ID="STR_ACE_MicroDAGR_settingDegrees">
+            <English>Degrees</English>
+            <German>Grad</German>
+            <Spanish>Grados</Spanish>
+            <Russian>Градусы</Russian>
+            <Polish>Stopnie</Polish>
+            <French>Degré</French>
+            <Czech>Stupně</Czech>
+            <Hungarian>Fok</Hungarian>
+            <Italian>Gradi</Italian>
+            <Portuguese>Graus</Portuguese>
+            <Japanese>角度</Japanese>
+            <Korean>각도</Korean>
+            <Chinesesimp>度</Chinesesimp>
+            <Chinese>度</Chinese>
+        </Key>
         <Key ID="STR_ACE_MicroDAGR_settingMils">
             <English>Mils</English>
             <German>Mil</German>
             <Spanish>Mils</Spanish>
             <Russian>Тысячные</Russian>
             <Polish>Tysiączne</Polish>
-            <French>Mils</French>
+            <French>Mil</French>
             <Czech>Mils</Czech>
             <Hungarian>Mil</Hungarian>
             <Italian>Mils</Italian>
@@ -71,7 +88,7 @@
             <Spanish>Mostrar puntos de ruta en el mapa:</Spanish>
             <Russian>Показывать маршрутные точки на карте:</Russian>
             <Polish>Pokaż PT na mapie:</Polish>
-            <French>Montrer points de passage sur la carte :</French>
+            <French>Montrer les WP sur la carte :</French>
             <Czech>Ukázat waypointy na mapě:</Czech>
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
             <Italian>Mostra waypoint sulla mappa:</Italian>
@@ -81,26 +98,10 @@
             <Chinesesimp>显示路径点在地图上:</Chinesesimp>
             <Chinese>顯示路徑點在地圖上:</Chinese>
         </Key>
-        <Key ID="STR_ACE_MicroDAGR_settingDegrees">
-            <English>Degrees</English>
-            <German>Grad</German>
-            <Spanish>Grados</Spanish>
-            <Russian>Градусы</Russian>
-            <Polish>Stopnie</Polish>
-            <French>Degrés</French>
-            <Czech>Stupně</Czech>
-            <Hungarian>Fok</Hungarian>
-            <Italian>Gradi</Italian>
-            <Portuguese>Graus</Portuguese>
-            <Japanese>角度</Japanese>
-            <Korean>각도</Korean>
-            <Chinesesimp>度</Chinesesimp>
-            <Chinese>度</Chinese>
-        </Key>
         <Key ID="STR_ACE_MicroDAGR_settingOn">
             <English>On</English>
             <Czech>Zapnuto</Czech>
-            <French>Allumé</French>
+            <French>Actif</French>
             <German>Ein</German>
             <Italian>Acceso</Italian>
             <Polish>Wł.</Polish>
@@ -112,11 +113,12 @@
             <Korean>켜기</Korean>
             <Chinesesimp>开启</Chinesesimp>
             <Chinese>開啟</Chinese>
+            <Turkish>Açık</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingOff">
             <English>Off</English>
             <Czech>Vypnuto</Czech>
-            <French>Éteint</French>
+            <French>Inactif</French>
             <German>Aus</German>
             <Italian>Spento</Italian>
             <Polish>Wył.</Polish>
@@ -128,13 +130,14 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterCords">
             <English>Enter Grid Cords:</English>
             <Spanish>Introducir coordenadas de cuadrícula:</Spanish>
             <Russian>Введите сеточные координаты:</Russian>
             <Polish>Wprowadź współrzędne:</Polish>
-            <French>Entrer coordonnées :</French>
+            <French>Entrer coordonnées</French>
             <German>Koordinaten eingeben:</German>
             <Czech>Napiš souřadnice:</Czech>
             <Hungarian>Add meg a rácskoordinátákat:</Hungarian>
@@ -167,7 +170,7 @@
             <Spanish>Nuevo-MGRS</Spanish>
             <Russian>MGRS-Новая</Russian>
             <Polish>MGRS-Nowy</Polish>
-            <French>Info-MGRS</French>
+            <French>MGRS-Nouveau</French>
             <Czech>MGRS-Nový</Czech>
             <Hungarian>MGRS-új</Hungarian>
             <Italian>Nuovo MGRS</Italian>
@@ -231,7 +234,7 @@
             <Spanish>Marca</Spanish>
             <Russian>Отметка</Russian>
             <Polish>Oznacz</Polish>
-            <French>Marque</French>
+            <French>Marquer</French>
             <Czech>Označit</Czech>
             <Hungarian>Jelölés</Hungarian>
             <Italian>Marca</Italian>
@@ -248,7 +251,7 @@
             <Russian>Машрутные точки</Russian>
             <Czech>Waypointy</Czech>
             <Polish>Punkty trasy</Polish>
-            <French>Point de passage</French>
+            <French>Points de passage</French>
             <Hungarian>Útvonalpontok</Hungarian>
             <Italian>waypoints</Italian>
             <Portuguese>Waypoints</Portuguese>
@@ -264,7 +267,7 @@
             <German>Verbinde zu</German>
             <Czech>Připojit k</Czech>
             <Polish>Podłącz do</Polish>
-            <French>Connecter à</French>
+            <French>Connecter</French>
             <Hungarian>Csatlakozás</Hungarian>
             <Italian>Collega a </Italian>
             <Portuguese>Conectar à</Portuguese>
@@ -296,7 +299,7 @@
             <Russian>Установить МТ</Russian>
             <Czech>Nastavit WP</Czech>
             <Polish>UstawPT</Polish>
-            <French>Définir point de passage</French>
+            <French>ChoixWP</French>
             <Hungarian>UP Beállítása</Hungarian>
             <Italian>Definisci WayPoints</Italian>
             <Portuguese>Definir WP</Portuguese>
@@ -312,7 +315,7 @@
             <Russian>Добавить</Russian>
             <Czech>Přidat</Czech>
             <Polish>Dodaj</Polish>
-            <French>Ajouter</French>
+            <French>Ajout</French>
             <Hungarian>Hozzáadás</Hungarian>
             <Italian>Aggiungi</Italian>
             <Portuguese>Adicionar</Portuguese>
@@ -324,7 +327,7 @@
         <Key ID="STR_ACE_MicroDAGR_waypointsDelete">
             <English>Delete</English>
             <Czech>Smazat</Czech>
-            <French>Supprimer</French>
+            <French>Suppr.</French>
             <German>Löschen</German>
             <Italian>Elimina</Italian>
             <Polish>Usuń</Polish>

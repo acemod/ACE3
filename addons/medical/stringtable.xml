@@ -12,10 +12,11 @@
             <French>ACE Médical</French>
             <Hungarian>ACE Orvosi Rendszer</Hungarian>
             <Italian>ACE Medical</Italian>
-            <Japanese>ACE 医療</Japanese>
             <Korean>ACE 의료</Korean>
             <Chinesesimp>ACE 医疗系统</Chinesesimp>
             <Chinese>ACE 醫療系統</Chinese>
+            <Turkish>ACE Medikal</Turkish>
+            <Japanese>ACE 医療</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
@@ -31,11 +32,11 @@
             <Spanish>Posibilidad de recuperar la conciencia</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
-            <English>The probablity that a unit with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
+            <English>The probability that a person with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
             <German>Wahrscheinlichkeit, dass eine bewusstlose Person mit stabilen Vitalwerten wieder aufwacht (Überprüfung alle 15 Sekunden)</German>
             <Japanese>容体が安定しているユニットが気絶する確率を決定できます。(15 秒毎に確認)</Japanese>
             <Russian>Вероятность, что стабилизированный юнит очнется от потери сознания (Проверяется каждые 15 сек)</Russian>
-            <French>La probabilité qu'une unité en état stable puisse reprendre conscience spontanément (état vérifié toutes les 15 secondes).</French>
+            <French>La probabilité pour qu'une unité inconsciente en état stable reprenne conscience spontanément (état vérifié toutes les 15 secondes).</French>
             <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
             <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
             <Italian>La probabilità che un'unità con i segni vitali stabili si risvegli dall'incoscienza (controllata ogni 15 secondi).</Italian>
@@ -45,12 +46,17 @@
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Wake Up Chance Boost</English>
+            <French>L'épinéphrine augmente les chances de réveil</French>
+            <Polish>Zwiększenie szansy na wybudzenie po podaniu epinefryny</Polish>
+            <Chinese>腎上腺素甦醒率加成</Chinese>
+            <German>Erhöhung der Aufwachüberprüfungsrate durch Epinephrin</German>
+            <Japanese>アドレナリン覚醒率の上昇</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
             <Japanese>患者がアドレナリンを投与されると自発的に覚醒する確率を上昇させます。</Japanese>
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
-            <French>Augmente la probabilité qu'un patient inconscient se réveille spontanément lorsqu'il a de l'épinéphrine dans son système sanguin.</French>
+            <French>Augmente la fréquence des tests de réveil lorsque le patient a de l'épinéphrine dans son système sanguin.\n(L'épinéphrine n'accélère pas la reprise de conscience si la valeur est définie sur 1.)</French>
             <Italian>Aumenta la frequenza dei controlli al risveglio spontaneo quando il paziente ha l'Epinefrina nel suo corpo</Italian>
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
             <Polish>Zwiększa częstotliwość spontanicznych wybudzeń, gdy pacjent ma epinefrynę w swoim organizmie. </Polish>
@@ -160,85 +166,15 @@
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
             <German>Schienen heilen, aber ermöglichen kein Sprinten</German>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
-            <English>Remote Controlled AI</English>
-            <German>Ferngesteuerte KI-Einheiten</German>
-            <Spanish>IA controlada remotamente</Spanish>
-            <Portuguese>IA controlada remotamente</Portuguese>
-            <Polish>Zdalnie sterowane AI</Polish>
-            <Czech>Vzdáleně ovládané AI</Czech>
-            <French>IA contrôlées à distance</French>
-            <Hungarian>Távvezérelt AI</Hungarian>
-            <Russian>Зевса считать ботом</Russian>
-            <Italian>IA Controllate in Remoto</Italian>
-            <Japanese>遠隔操作された AI</Japanese>
-            <Korean>인공지능 원격조종</Korean>
-            <Chinesesimp>遥控AI</Chinesesimp>
-            <Chinese>遙控AI</Chinese>
+        <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
+            <English>Fracture Chance</English>
+            <French>Chance de fracture</French>
+            <Japanese>骨折確率</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
-            <English>Treat remote controlled units as AI not players?</English>
-            <German>Legt fest, ob ferngesteuerte Einheiten als KI anstatt als Spieler behandelt werden sollen.</German>
-            <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
-            <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
-            <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
-            <Czech>Ošetřit vzdáleně ovládané jednotky jako AI, ne jako hráče?</Czech>
-            <French>Définit si les unités contrôlées à distance sont traitées comme des IA, et non comme des joueurs.</French>
-            <Hungarian>Távvezérelt egységek AI-ként, nem játékosként való kezelése?</Hungarian>
-            <Russian>Обрабатывать дистанционно управляемых юнитов как ботов, а не как игроков?</Russian>
-            <Italian>Considera le unità controllate in remoto come IA e non come giocatori?</Italian>
-            <Japanese>遠隔操作された AI を非プレイヤーとして扱いますか?</Japanese>
-            <Korean>원격 조작하는 AI는 비 플레이어로 취급합니까?</Korean>
-            <Chinesesimp>以医疗AI的方式医疗被遥控的单位</Chinesesimp>
-            <Chinese>以醫療AI的方式醫療被遙控的單位</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
-            <English>Prevent instant death</English>
-            <Russian>Откл. мгновенную смерть</Russian>
-            <Polish>Wyłącz natychmiastową śmierć</Polish>
-            <Spanish>Prevenir muerte instantánea</Spanish>
-            <German>Verhindere direkten Tod</German>
-            <Czech>Zabránit okamžité smrti</Czech>
-            <Portuguese>Previnir morte instantânea</Portuguese>
-            <French>Empêcher la mort instantanée</French>
-            <Hungarian>Azonnali halál kiiktatása</Hungarian>
-            <Italian>Previeni morte istantanea</Italian>
-            <Japanese>即死の防止</Japanese>
-            <Korean>즉사 방지</Korean>
-            <Chinesesimp>防止当场死亡</Chinesesimp>
-            <Chinese>防止當場死亡</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_Description">
-            <English>Have a unit move to unconscious instead of death</English>
-            <Russian>Бойцы теряют сознание вместо того, чтобы умирать</Russian>
-            <Polish>Spraw, aby jednostka została przeniesiona do stanu nieprzytomności zamiast ginąć na miejscu od śmiertelnych obrażeń</Polish>
-            <Spanish>Mover una unidad a inconsciente en vez de a muerta</Spanish>
-            <German>Lässt eine Einheit bewusstlos werden anstatt zu sterben</German>
-            <Czech>Jednotka upadne do bezvědomí namísto smrti</Czech>
-            <Portuguese>Fazer a unidade ficar inconsciente invés de morrer</Portuguese>
-            <French>Force une unité à perdre connaissance, au lieu de mourir sur le coup.</French>
-            <Hungarian>Egy egység kerüljön eszméletlen állapotba a halott helyett</Hungarian>
-            <Italian>Imposta un'unità come incosciente invece di morta</Italian>
-            <Japanese>ユニットの即死を防止する為に気絶へ移行させます</Japanese>
-            <Korean>인원의 즉사를 방지코자 즉사 대신 기절시킵니다</Korean>
-            <Chinesesimp>伤者最严重只会立即进入昏迷，而非立即死亡</Chinesesimp>
-            <Chinese>傷者最嚴重只會無意識，而非立即死亡</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
-            <English>Provides a medical system for both players and AI.</English>
-            <Russian>Включает медицинскую систему как для игроков, так и для ботов.</Russian>
-            <Polish>Moduł ten dostarcza system medyczny dla graczy oraz AI.</Polish>
-            <Spanish>Proporciona un sistema médico para  jugadores e IA.</Spanish>
-            <German>Aktiviert ein Sanitätssystem für Spieler und KI.</German>
-            <Czech>Poskytuje zdravotní systém pro hráče a AI.</Czech>
-            <Portuguese>Proporciona o sistema médico para os jogadores e a IA.</Portuguese>
-            <French>Fournit un système médical aussi bien pour les joueurs que pour les IA.</French>
-            <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
-            <Italian>Fornisce un sistema medico sia per giocatori che IA.</Italian>
-            <Japanese>プレイヤーと AI の両方へ医療システムを提供します。</Japanese>
-            <Korean>의료 시스템을 플레이어 및 인공지능에게 제공합니다.</Korean>
-            <Chinesesimp>医疗系统将同时对玩家与AI发生作用</Chinesesimp>
-            <Chinese>醫療系統將同時對玩家與AI發生作用</Chinese>
+        <Key ID="STR_ACE_Medical_FractureChance_Description">
+            <English>The probability of a fracture causing wound resulting in a fracture.</English>
+            <French>La probabilité pour qu'une blessure pouvant causer une fracture en crée effectivement une.</French>
+            <Japanese>骨折の原因となる負傷で骨折する確率を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -335,50 +271,6 @@
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
             <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_healHitPointAfterAdvBandage_DisplayName">
-            <English>Heal hitpoints</English>
-            <German>Heile Trefferpunkte</German>
-            <Polish>Lecz hitpointy</Polish>
-            <Spanish>Curar puntos de vida</Spanish>
-            <Russian>Исцелять части тела</Russian>
-            <Portuguese>Curar hitpoints</Portuguese>
-            <Czech>Léčit hitponty</Czech>
-            <Italian>Cura Hitpoints</Italian>
-            <French>Guérir les blessures</French>
-            <Japanese>ヒットポイントの回復</Japanese>
-            <Korean>체력 회복</Korean>
-            <Chinesesimp>完整治疗</Chinesesimp>
-            <Chinese>完整治療</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_healHitPointAfterAdvBandage_Description">
-            <English>Heal fully bandaged hitpoints</English>
-            <German>Heile verbundene Trefferpunkte</German>
-            <Polish>Po bandażowaniu ulecz hitpointy, usuwając z nich ślady krwi i przywracając im pełną sprawność.</Polish>
-            <Spanish>Curar miembros totalmente vendados</Spanish>
-            <Russian>Исцелять полностью перебинтованные части тела</Russian>
-            <Portuguese>Curar totalmente hitpoints enfaixados</Portuguese>
-            <Czech>Heal fully bandaged hitpoints</Czech>
-            <Italian>Cura Hitpoints completamente bendati</Italian>
-            <French>Les plaies entièrement bandées seront guéries.</French>
-            <Japanese>包帯によりヒットポイントを完全に回復します。</Japanese>
-            <Korean>붕대를 감아서 체력을 회복</Korean>
-            <Chinese>繃帶是否會完整恢復生命值</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
-            <English>Configure the treatment settings from ACE Basic Medical</English>
-            <German>Behandlungseinstellungen der Standard ACE-Medizin konfigurieren</German>
-            <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
-            <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
-            <French>Configurer les paramètres de traitement à partir de "ACE médical basique".</French>
-            <Italian>Configura le impostazioni trattamenti per ACE Medical di base</Italian>
-            <Portuguese>Configura as opções de tratamento do sistema médico básico do ACE</Portuguese>
-            <Russian>Настройка лечения в базовой медицинской системе ACE</Russian>
-            <Japanese>ACE ベーシック医療による設定で、治療を設定します。</Japanese>
-            <Korean>ACE 기본 의료에 대한 치료 설정 수정</Korean>
-            <Chinesesimp>设定ACE基本医疗的规则</Chinesesimp>
-            <Chinese>設定ACE基本醫療的規則</Chinese>
-            <Czech>Nastavit nastavení léčby z ACE Zdravotnické Základní</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>

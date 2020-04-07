@@ -14,6 +14,7 @@
             <Russian>ACE Продвинутая усталость</Russian>
             <Portuguese>ACE Fadiga Avançada</Portuguese>
             <Czech>ACE Pokročilá únava</Czech>
+            <Turkish>ACE Gelişmiş Yorgunluk</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
             <English>Performance Factor</English>
@@ -28,6 +29,7 @@
             <Russian>Фактор производительности</Russian>
             <Portuguese>Fator de Performance</Portuguese>
             <Czech>Faktor výkonu</Czech>
+            <Turkish>Performans Faktörü</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_Description">
             <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
@@ -70,6 +72,7 @@
             <Russian>Фактор восстановления</Russian>
             <Portuguese>Fator de Recuperação</Portuguese>
             <Czech>Faktor zotavení</Czech>
+            <Turkish>Kurtarma Faktörü</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_Description">
             <English>Changes how fast the player recovers when resting. Higher is faster.</English>
@@ -225,6 +228,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar">
             <English>Fade Stamina bar automatically</English>
+            <Russian>Скрыть шкалу усталости автоматически</Russian>
             <German>Blende Ausdauerleiste automatisch aus</German>
             <Chinese>體力條自動淡去</Chinese>
             <Italian>Dissolvenza automatica della barra della stamina</Italian>
@@ -233,9 +237,11 @@
             <Japanese>自動的にスタミナバーを非表示</Japanese>
             <Polish>Chowaj pasek wytrzymałości automatycznie</Polish>
             <Portuguese>Barra de stamina some automaticamente</Portuguese>
+            <Turkish>Dayanıklılık çubuğunu otomatik olarak soldur</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_FadeStaminaBar_Description">
             <English>Adjusts transparency of the bar based on stamina status.</English>
+            <Russian>Регулирует прозрачность шкалы в зависимости от статуса выносливости.</Russian>
             <German>Passt die Transparenz der Ausdauerleiste abhängig vom Ausdauerstatus an.</German>
             <Chinese>依照目前的體力程度調整體力條之透明度</Chinese>
             <Italian>Regola la trasparenza della barra in base allo stato di affaticamento.</Italian>

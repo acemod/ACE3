@@ -152,12 +152,12 @@ Max. Tof diff (ms): 11.5
 Optimal airFriction: 0.00063027
 ##########################################
 Ammo Class: ACE_762x67_Ball_Berger_Hybrid_OTM
-MaxRanges (m): [900, 1000, 1000]
+MaxRanges (m): [1100, 1200, 1300]
 MuzzleVelocities (m/s): [800, 853, 884]
-Max. Velocity diff (m/s): 19.15
-Max. Drop diff (cm): 7.57
-Max. Tof diff (ms): 15.0
-Optimal airFriction: 0.00053638
+Max. Velocity diff (m/s): 25.76
+Max. Drop diff (cm): 16.2
+Max. Tof diff (ms): 28.5
+Optimal airFriction: 0.00054587
 ##########################################
 Ammo Class: B_762x54_Ball
 MaxRanges (m): [500, 800, 800]

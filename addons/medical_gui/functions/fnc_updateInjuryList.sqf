@@ -104,45 +104,34 @@ if (_totalIvVolume >= 1) then {
 // Add entries for open, bandaged, and stitched wounds
 private _woundEntries = [];
 
-private _fnc_getWoundDescription = {
-    private _classIndex = _woundClassID / 10;
-    private _category = _woundClassID % 10;
-    private _className = EGVAR(medical_damage,woundsData) select _classIndex select 6;
-    private _suffix = ["Minor", "Medium", "Large"] select _category;
-    private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];
-    if (_amountOf >= 1) then {
-        format ["%1x %2", ceil _amountOf, _woundName];
-    } else {
-        format [localize LSTRING(PartialX), _woundName];
-    };
+private _fnc_processWounds = {
+    params ["_wounds", "_format", "_color"];
+
+    {
+        _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
+
+        if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
+            private _classIndex = _woundClassID / 10;
+            private _category   = _woundClassID % 10;
+
+            private _className = EGVAR(medical_damage,woundsData) select _classIndex select 6;
+            private _suffix = ["Minor", "Medium", "Large"] select _category;
+            private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];
+
+            private _woundDescription = if (_amountOf >= 1) then {
+                format ["%1x %2", ceil _amountOf, _woundName]
+            } else {
+                format [localize LSTRING(PartialX), _woundName]
+            };
+
+            _woundEntries pushBack [format [_format, _woundDescription], _color];
+        };
+    } forEach _wounds;
 };
 
-{
-    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
-    if (_selectionN == _bodyPartN) then {
-        if (_amountOf > 0) then {
-            _woundEntries pushBack [call _fnc_getWoundDescription, [1, 1, 1, 1]];
-        } else {
-            if !(EGVAR(medical_treatment,advancedBandages) && {EGVAR(medical_treatment,woundReopening)}) then {
-                _woundEntries pushBack [format ["[B] %1", call _fnc_getWoundDescription], [0.7, 0.7, 0.7, 1]];
-            };
-        };
-    };
-} forEach GET_OPEN_WOUNDS(_target);
-
-{
-    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
-    if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
-        _woundEntries pushBack [format ["[B] %1", call _fnc_getWoundDescription], [0.88, 0.7, 0.65, 1]];
-    };
-} forEach GET_BANDAGED_WOUNDS(_target);
-
-{
-    _x params ["_woundClassID", "_bodyPartN", "_amountOf"];
-    if (_selectionN == _bodyPartN && {_amountOf > 0}) then {
-        _woundEntries pushBack [format ["[S] %1", call _fnc_getWoundDescription], [0.7, 0.7, 0.7, 1]];
-    };
-} forEach GET_STITCHED_WOUNDS(_target);
+[GET_OPEN_WOUNDS(_target), "%1", [1, 1, 1, 1]] call _fnc_processWounds;
+[GET_BANDAGED_WOUNDS(_target), "[B] %1", [0.88, 0.7, 0.65, 1]] call _fnc_processWounds;
+[GET_STITCHED_WOUNDS(_target), "[S] %1", [0.7, 0.7, 0.7, 1]] call _fnc_processWounds;
 
 // Handle no wound entries
 if (_woundEntries isEqualTo []) then {

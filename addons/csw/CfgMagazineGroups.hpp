@@ -83,4 +83,3 @@ class GVAR(groups) {
         1Rnd_GAA_missiles = 1;
     };
 };
-

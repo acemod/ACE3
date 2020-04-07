@@ -13,6 +13,7 @@
             <Czech>Zdravotnická AI</Czech>
             <Polish>Medyk AI</Polish>
             <Spanish>Médico para IA</Spanish>
+            <Turkish>Medikal AI</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
@@ -41,6 +42,7 @@
             <Korean>서버와 헤드리스만</Korean>
             <Portuguese>Apenas Servidor e HC</Portuguese>
             <Czech>Pouze Server a HC</Czech>
+            <Turkish>Sadece Sunucu ve HC de</Turkish>
         </Key>
     </Package>
 </Project>

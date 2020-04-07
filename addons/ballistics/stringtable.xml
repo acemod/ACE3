@@ -4,6 +4,7 @@
         <!-- Shotguns -->
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_NameShort">
             <English>#00 Buckshot</English>
+            <German>#00 Schrotmunition</German>
             <Chinese>#00 鹿彈</Chinese>
             <Italian>#00 Buckshot</Italian>
             <Japanese>#00 バックショット</Japanese>
@@ -14,6 +15,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
+            <German>#00 Schrotmunition</German>
             <Chinese>#00 鹿彈</Chinese>
             <Italian>#00 Buckshot</Italian>
             <Japanese>#00 バックショット</Japanese>
@@ -24,6 +26,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
+            <German>#0 Schrotmunition</German>
             <Chinese>#0 鹿彈</Chinese>
             <Italian>#0 Buckshot</Italian>
             <Japanese>#0 バックショット</Japanese>
@@ -34,6 +37,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
+            <German>#0 Schrotmunition</German>
             <Chinese>#0 鹿彈</Chinese>
             <Italian>#0 Buckshot</Italian>
             <Japanese>#0 バックショット</Japanese>
@@ -44,6 +48,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
+            <German>#1 Schrotmunition</German>
             <Chinese>#1 鹿彈</Chinese>
             <Italian>#1 Buckshot</Italian>
             <Japanese>#1 バックショット</Japanese>
@@ -54,6 +59,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
+            <German>#1 Schrotmunition</German>
             <Chinese>#1 鹿彈</Chinese>
             <Italian>#1 Buckshot</Italian>
             <Japanese>#1 バックショット</Japanese>
@@ -64,6 +70,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
+            <German>#2 Schrotmunition</German>
             <Chinese>#2 鹿彈</Chinese>
             <Italian>#2 Buckshot</Italian>
             <Japanese>#2 バックショット</Japanese>
@@ -74,6 +81,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
+            <German>#2 Schrotmunition</German>
             <Chinese>#2 鹿彈</Chinese>
             <Italian>#2 Buckshot</Italian>
             <Japanese>#2 バックショット</Japanese>
@@ -84,6 +92,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
+            <German>#3 Schrotmunition</German>
             <Chinese>#3 鹿彈</Chinese>
             <Italian>#3 Buckshot</Italian>
             <Japanese>#3 バックショット</Japanese>
@@ -94,6 +103,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
+            <German>#3 Schrotmunition</German>
             <Chinese>#3 鹿彈</Chinese>
             <Italian>#3 Buckshot</Italian>
             <Japanese>#3 バックショット</Japanese>
@@ -104,6 +114,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
+            <German>#4 Schrotmunition</German>
             <Chinese>#4 鹿彈</Chinese>
             <Italian>#4 Buckshot</Italian>
             <Japanese>#4 バックショット</Japanese>
@@ -114,6 +125,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
+            <German>#4 Schrotmunition</German>
             <Chinese>#4 鹿彈</Chinese>
             <Italian>#4 Buckshot</Italian>
             <Japanese>#4 バックショット</Japanese>
@@ -124,6 +136,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>
+            <German>#7 Vogelschrot</German>
             <Chinese>#7 鹿彈</Chinese>
             <Italian>#7 Birdshot</Italian>
             <Japanese>#7 バックショット</Japanese>
@@ -133,6 +146,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
             <English>#7 Birdshot</English>
+            <German>#7 Vogelschrot</German>
             <Chinese>#7 鹿彈</Chinese>
             <Italian>#7 Birdshot</Italian>
             <Japanese>#7 バックショット</Japanese>
@@ -142,6 +156,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
+            <German>12 Gauge 2Schuss #00 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #00 鹿彈</Chinese>
             <Italian>12 Gauge 2Rnd #00 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #00 バックショット</Japanese>
@@ -152,6 +167,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 2Rnd #0 Buckshot</English>
+            <German>12 Gauge 2Schuss #0 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #0 鹿彈</Chinese>
             <Italian>12 Gauge 2Rnd #0 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #0 バックショット</Japanese>
@@ -162,6 +178,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 2Rnd #1 Buckshot</English>
+            <German>12 Gauge 2Schuss #1 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #1 鹿彈</Chinese>
             <Italian>12 Gauge 2Rnd #1 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #1 バックショット</Japanese>
@@ -172,6 +189,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 2Rnd #2 Buckshot</English>
+            <German>12 Gauge 2Schuss #2 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #2 鹿彈</Chinese>
             <Italian>12 Gauge 2Rnd #2 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #2 バックショット</Japanese>
@@ -182,6 +200,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 2Rnd #3 Buckshot</English>
+            <German>12 Gauge 2Schuss #3 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #3 鹿彈</Chinese>
             <Italian>12 Gauge 2Rnd #3 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #3 バックショット</Japanese>
@@ -192,6 +211,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 2Rnd #4 Buckshot</English>
+            <German>12 Gauge 2Schuss #4 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #4 鹿彈</Chinese>
             <Italian>12 Gauge 2Rnd #4 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #4 バックショット</Japanese>
@@ -202,6 +222,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 2Rnd #7 Birdshot</English>
+            <German>12 Gauge 2Schuss #7 Schrotmunition</German>
             <Chinese>12鉛徑 2發  #7 鹿彈</Chinese>
             <Italian>12 Gauge 2Rnd #7 Birdshot</Italian>
             <Japanese>12 ゲージ 2 発入り #7 バックショット</Japanese>
@@ -212,6 +233,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 6Rnd #00 Buckshot</English>
+            <German>12 Gauge 6Schuss #00 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #00 鹿彈</Chinese>
             <Italian>12 Gauge 6Rnd #00 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #00 バックショット</Japanese>
@@ -222,6 +244,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 6Rnd #0 Buckshot</English>
+            <German>12 Gauge 6Schuss #0 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #0 鹿彈</Chinese>
             <Italian>12 Gauge 6Rnd #0 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #0 バックショット</Japanese>
@@ -232,6 +255,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 6Rnd #1 Buckshot</English>
+            <German>12 Gauge 6Schuss #1 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #1 鹿彈</Chinese>
             <Italian>12 Gauge 6Rnd #1 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #1 バックショット</Japanese>
@@ -242,6 +266,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 6Rnd #2 Buckshot</English>
+            <German>12 Gauge 6Schuss #2 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #2 鹿彈</Chinese>
             <Italian>12 Gauge 6Rnd #2 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #2 バックショット</Japanese>
@@ -252,6 +277,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 6Rnd #3 Buckshot</English>
+            <German>12 Gauge 6Schuss #3 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #3 鹿彈</Chinese>
             <Italian>12 Gauge 6Rnd #3 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #3 バックショット</Japanese>
@@ -262,6 +288,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 6Rnd #4 Buckshot</English>
+            <German>12 Gauge 6Schuss #4 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #4 鹿彈</Chinese>
             <Italian>12 Gauge 6Rnd #4 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #4 バックショット</Japanese>
@@ -272,6 +299,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 6Rnd #7 Birdshot</English>
+            <German>12 Gauge 6Schuss #7 Schrotmunition</German>
             <Chinese>12鉛徑 6發  #7 鹿彈</Chinese>
             <Italian>12 Gauge 6Rnd #7 Birdshot</Italian>
             <Japanese>12 ゲージ 6 発入り #7 バックショット</Japanese>
@@ -281,6 +309,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
+            <German>12 Gauge 15Schuss #00 Schrotmunition</German>
             <Chinese>12鉛徑 15發  #00 鹿彈</Chinese>
             <Italian>12 Gauge 15Rnd #00 Buckshot</Italian>
             <Japanese>12 ゲージ 15 発入り #00 バックショット</Japanese>
@@ -2581,6 +2610,7 @@
             <Portuguese>Barrel Twist</Portuguese>
             <French>Pas du canon</French>
             <Czech>Stoupání vývrtu hlavně</Czech>
+            <Spanish>Estriado del cañón</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelLength">
             <English>Barrel length</English>
@@ -2594,6 +2624,7 @@
             <Russian>Длина ствола</Russian>
             <Portuguese>Comprimento do cano</Portuguese>
             <Czech>Délka hlavně</Czech>
+            <Spanish>Longitud del cañón</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
@@ -2607,6 +2638,7 @@
             <Russian>Баллистический коэффициент</Russian>
             <Portuguese>Coeficiente balístico</Portuguese>
             <Czech>Balistický koeficient</Czech>
+            <Spanish>Coheficiente de balística</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
@@ -2620,6 +2652,7 @@
             <Russian>Масса пули</Russian>
             <Portuguese>Massa do projétil</Portuguese>
             <Czech>Váha projektilu</Czech>
+            <Spanish>Masa de la bala</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
@@ -2633,6 +2666,7 @@
             <Russian>Начальная скорость</Russian>
             <Portuguese>Velocidade de Saída</Portuguese>
             <Czech>Úsťová rychlost</Czech>
+            <Spanish>Velocidad inicial</Spanish>
         </Key>
     </Package>
 </Project>

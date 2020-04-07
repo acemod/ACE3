@@ -398,7 +398,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class ACE_762x67_Ball_Berger_Hybrid_OTM : B_762x51_Ball {
-        airFriction=-0.00053638;
+        airFriction=-0.000546;
         caliber=2.0;
         hit=19;
         typicalSpeed=853;
@@ -489,18 +489,18 @@ class CfgAmmo {
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
     class B_93x64_Ball : BulletBase {
-        airFriction=-0.00110727;
-        ACE_caliber=9.296;
-        ACE_bulletLength=34.29;
-        ACE_bulletMass=14.904;
-        ACE_muzzleVelocityVariationSD=0.4;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.368};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ASM";
-        ACE_dragModel=1;
-        ACE_muzzleVelocities[]={850, 870, 880};
-        ACE_barrelLengths[]={508.0, 620.014, 660.4};
+        airFriction = -0.000808; // According with the G1 BC 0.515 and the SVDK muzzle velocity 780 m/s https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
+        ACE_caliber = 9.28; // https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
+        ACE_bulletLength = 35.56; // Average length from bullets with similar mass and BC
+        ACE_bulletMass = 17; // https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
+        ACE_muzzleVelocityVariationSD = 0.4;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[] = {0.515}; // Compromise as close as possible to these velocities and times of flight from this table (unknown measurement conditions) https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=5
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO"; // Better result with ICAO (15°C, 1013,25 hPa, 0%) than ASM conditions (15°C, 999,916 hPa, 78%)
+        ACE_dragModel = 1; // Better result than an equivalent G7 BC
+        ACE_muzzleVelocities[] = {768, 788, 798}; // Default values - 82 m/s at 21°C, at 15°C {760, 780, 790} according with the 10Rnd_93x64_DMR_05_Mag and the 150Rnd_93x64_Mag initSpeed
+        ACE_barrelLengths[] = {508.0, 620.0, 660.4};
     };
     class B_408_Ball : BulletBase {
         timeToLive=10;
@@ -698,19 +698,21 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class B_50BW_Ball_F : BulletBase {
-        airFriction=-0.00205896;
-        ACE_caliber=12.7;
-        ACE_bulletLength=24.13;
-        ACE_bulletMass=21.7076;
-        ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
-        ACE_ballisticCoefficients[]={0.21};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ASM";
-        ACE_dragModel=1;
-        ACE_muzzleVelocities[]={510, 550, 596};
-        ACE_barrelLengths[]={304.8, 406.4, 609.6};
+
+    class B_50BW_Ball_F: BulletBase { // http://www.alexanderarms.com/images/pdfs/beowulf_ballistics.pdf#page=2
+        airFriction = -0.002098; // According with the G1 BC 0.21 and the muzzle velocity 1800 ft/s: 549 m/s
+        ACE_caliber = 4.55; // instead 12.7 to match with the .50BW adv. ballistics (twist rate 20") overwritten by the Katiba rifle twist 8" until a BI fix
+        ACE_bulletLength = 24.13;
+        ACE_bulletMass = 21.64; // 334 grains
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.21};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ASM";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {550}; // at 21°C, at 15°C 549 m/s according with the 10Rnd_50BW_Mag_F initSpeep
+        ACE_barrelLengths[] = {304.8}; // 12"
     };
+
     class B_570x28_Ball: BulletBase {
         ACE_caliber = 5.7; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf
         ACE_bulletLength = 21.6; // http://blog.thejustnation.org/2011/04/5-7x28mm-ammo-review/

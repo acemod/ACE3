@@ -54,7 +54,7 @@ private _logAll = false;
         private _weapMags = getArray (configFile >> "CfgWeapons" >> _x >> "magazines");
         {
             private _xMag = _x;
-            private _groups = "getNumber (_x >> _xMag) == 1" configClasses (configFile >> QGVAR(groups));
+            private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
             private _carryMag = configName (_groups param [0, configNull]);
             if ((_carryMag == "") && {_logAll || {_xMag in _loadedMags}}) then {
                 private _vehs = [_hash, _xMag] call CBA_fnc_hashGet;

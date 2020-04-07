@@ -25,7 +25,7 @@ if (damage _vehicle >= 1) exitWith {};
 if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] in [0, false]) exitWith {};
 
 // Check for players and exit if none found and the enable for players only setting is true
-if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] isEqualTo 2 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} == -1}) exitWith {};
+if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] isEqualTo 1 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} == -1}) exitWith {};
 
 // get hitpoint name
 private _hitpoint = "#structural";
