@@ -21,7 +21,7 @@
             <German>Rüstet kompatible Helikopter mit einem Fast Rope Insertion Extraction System aus.</German>
             <Polish>Wyposaża kompatybilne helikoptery w zestaw Fast Rope Insertion Extraction System.</Polish>
             <French>Équipe les hélicoptères compatibles avec un FRIES (Fast Rope Insertion Extraction System).</French>
-            <Spanish>Equipar helicoptero compatible con un Sistema de Inserción Extracción Fast Rope.</Spanish>
+            <Spanish>Equipar helicóptero compatible con un Sistema de Inserción Extracción Fast Rope.</Spanish>
             <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
@@ -111,7 +111,7 @@
             <German>Rüste Helicopter mit FRIES aus</German>
             <Polish>Wyposaż helikopter w FRIES</Polish>
             <French>Équiper l'hélicoptère d'un FRIES</French>
-            <Spanish>Equipar helicoptero con FRIES</Spanish>
+            <Spanish>Equipar helicóptero con FRIES</Spanish>
             <Italian>Equipaggia l'elicottero con il FRIES</Italian>
             <Czech>Vybavit vrtulník pomocí FRIES</Czech>
             <Portuguese>Equipar helicóptero com FRIES</Portuguese>
@@ -126,7 +126,7 @@
             <German>Rüstet den ausgewählten Helicopter mit einem Fast Rope Insertion Extraction System aus</German>
             <Polish>Wyposaża wybrany helikopter w zestaw Fast Rope Insertion Extraction System</Polish>
             <French>Équipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System (système d'aérocordage).</French>
-            <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción Extracción Fast Rope</Spanish>
+            <Spanish>Equipa el helicóptero seleccionado con un Sistema de Inserción Extracción Fast Rope</Spanish>
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
             <Portuguese>Equipa um helicóptero selecionado com um sistema de Fast Rope Insertion Extraction System</Portuguese>
@@ -149,6 +149,7 @@
             <Chinese>讓單位快速繩降</Chinese>
             <Korean>패스트 로프를 놓음</Korean>
             <Czech>UMOŽNIT JEDNOTKÁM SLAŇOVAT</Czech>
+            <Spanish>Dejar a las unidades hacer fastroping</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>
@@ -161,6 +162,7 @@
             <Chinese>部屬12公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 12m</Italian>
             <Czech>Připravit 12m lana</Czech>
+            <Spanish>Desplegar cuerdas de 12m</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
             <English>Deploy 15m ropes</English>
@@ -173,6 +175,7 @@
             <Chinese>部屬15公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 15m</Italian>
             <Czech>Připravit 15m lana</Czech>
+            <Spanish>Desplegar cuerdas de 15m</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
             <English>Deploy 18m ropes</English>
@@ -185,6 +188,7 @@
             <Chinese>部屬18公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 18m</Italian>
             <Czech>Připravit 18m lana</Czech>
+            <Spanish>Desplegar cuerdas de 18m</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
             <English>Deploy 27m ropes</English>
@@ -197,6 +201,7 @@
             <Chinese>部屬27公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 27m</Italian>
             <Czech>Připravit 27m lana</Czech>
+            <Spanish>Desplegar cuerdas de 27m</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
             <English>Deploy 36m ropes</English>
@@ -209,6 +214,7 @@
             <Chinese>部屬36公尺長之繩索</Chinese>
             <Italian>Dispiegamento corde 36m</Italian>
             <Czech>Připravit 36m lana</Czech>
+            <Spanish>Desplegar cuerdas de 36m</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Ropesupply">
             <English>[ACE] Ropes Supply crate</English>
@@ -221,6 +227,7 @@
             <Chinese>[ACE] 繩索補充箱</Chinese>
             <Italian>[ACE] Cassa Corde</Italian>
             <Czech>[ACE] Bedna s lany</Czech>
+            <Spanish>[ACE] Cajón de suministros de cuerdas</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_descriptionShort">
             <English>Used to do deploy ropes from a compatibile helicopter</English>
@@ -233,6 +240,7 @@
             <Chinese>在可相容的直升機上部屬繩索</Chinese>
             <Italian>Utilizzato per distribuire corde da un elicottero compatibile</Italian>
             <Czech>Používané na přípravu lan na slaňování z kompatibilních helikoptér</Czech>
+            <Spanish>Usado para desplegar cuerdas desde un helicóptero compatible</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_12_Display">
             <English>Rope 12.2 meters</English>
@@ -245,6 +253,7 @@
             <Chinese>繩索（12.2公尺長）</Chinese>
             <Italian>Corda da 12.2 metri</Italian>
             <Czech>Lano 12.2 metrů</Czech>
+            <Spanish>Cuerda 12.2 metros</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_15_Display">
             <English>Rope 15.2 meters</English>
@@ -257,6 +266,7 @@
             <Chinese>繩索（15.2公尺長）</Chinese>
             <Italian>Corda da 15.2 metri</Italian>
             <Czech>Lano 15.2 metrů</Czech>
+            <Spanish>Cuerda 15.2 metros</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_18_Display">
             <English>Rope 18.3 meters</English>
@@ -269,6 +279,7 @@
             <Chinese>繩索（18.3公尺長）</Chinese>
             <Italian>Corda da 18.3 metri</Italian>
             <Czech>Lano 18.3 metrů</Czech>
+            <Spanish>Cuerda 18.3 metros</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_27_Display">
             <English>Rope 27.4 meters</English>
@@ -281,6 +292,7 @@
             <Chinese>繩索（27.4公尺長）</Chinese>
             <Italian>Corda da 27.4 metri</Italian>
             <Czech>Lano 27.4 metrů</Czech>
+            <Spanish>Cuerda 27.4 metros</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_36_Display">
             <English>Rope 36.6 meters</English>
@@ -293,11 +305,13 @@
             <Chinese>繩索（36.6公尺長）</Chinese>
             <Italian>Corda da 36.6 metri</Italian>
             <Czech>Lano 36.6 metrů</Czech>
+            <Spanish>Cuerda 36.6 metros</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_categoryMenu_displayName">
             <English>Fast-roping</English>
             <French>Aérocordage</French>
             <Chinese>快速繩降</Chinese>
+            <Spanish>Fastroping</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -310,6 +324,7 @@
             <Chinese>需要繩索來部屬</Chinese>
             <Italian>Richiede una corda per il dispigamento</Italian>
             <Czech>Požadovat předmět lana pro slaňování</Czech>
+            <Spanish>Requiere objeto cuerda para desplegarse</Spanish>
         </Key>
     </Package>
 </Project>
