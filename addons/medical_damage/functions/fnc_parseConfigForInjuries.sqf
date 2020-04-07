@@ -78,6 +78,7 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 
     GVAR(allDamageTypesData) setVariable [_className, [_thresholds, _selectionSpecific > 0, _woundTypes]];
     GVAR(damageTypeCache) setVariable [_className, _className];
+    GVAR(damageTypeCache) setVariable ["#"+_className, _className];
 
     /*
     // extension loading
