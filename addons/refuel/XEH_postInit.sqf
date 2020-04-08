@@ -10,20 +10,20 @@ if (!GVAR(enabled)) exitWith {};
     };
 }, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
 
+if (isServer) then {
+    addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
+};
+
 private _cacheRefuelClasses = call (uiNamespace getVariable [QGVAR(cacheRefuelClasses), {[[],[]]}]);
 _cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_dynamicClasses", [], [[]]]];
 
-if (isServer) then {
-    addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
-
-    private _worldSize = worldSize;
-    private _worldCenter = [_worldSize / 2, _worldSize / 2];
+private _worldSize = worldSize;
+private _worldCenter = [_worldSize / 2, _worldSize / 2];
+{
     {
-        {
-            _x setFuelCargo 0;
-        } forEach (_worldCenter nearObjects [_x, _worldSize]);
-    } forEach _staticClasses;
-};
+        _x setFuelCargo 0;
+    } forEach (_worldCenter nearObjects [_x, _worldSize]);
+} forEach _staticClasses;
 
 [QGVAR(initSource), LINKFUNC(initSource)] call CBA_fnc_addEventHandler;
 
