@@ -331,9 +331,14 @@ class CfgWeapons {
 
     // Type 115
     class arifle_ARX_base_F: Rifle_Base_F {
-        ACE_barrelLength = 463.0;
-        ACE_barrelTwist = 228.6;
-        initSpeed = -0.984262;
+        ACE_barrelLength = 508.0;
+        ACE_barrelTwist = 203.2;
+        initSpeed = -1.0;
+        class Secondary: Rifle_Base_F {
+            ACE_barrelLength = 304.8;
+            ACE_barrelTwist = 508.0;
+            initSpeed = -1.0;
+        };
     };
 
     // Rifle_Short_Base_F
