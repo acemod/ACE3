@@ -152,6 +152,7 @@
             <English>Speed Limiter Step</English>
             <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
             <Polish>Przeskok limitera prędkości</Polish>
+            <French>Pas du limiteur de vitesse</French>
         </Key>
     </Package>
 </Project>
