@@ -73,3 +73,15 @@ class ACE_Tests {
     vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
     mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
 };
+
+class RscDisplayMainMap {
+    EGVAR(mapEventHandlers,IDCs)[] = {51};
+    EGVAR(mapEventHandlers,type) = QEGVAR(mapEventHandlers,main);
+};
+class RscDisplayGetReady: RscDisplayMainMap {
+    EGVAR(mapEventHandlers,type) = QEGVAR(mapEventHandlers,briefing);
+};
+class RscCustomInfoMiniMap {
+    EGVAR(mapEventHandlers,IDCs)[] = {101};
+    EGVAR(mapEventHandlers,type) =  QEGVAR(mapEventHandlers,gps);
+};

@@ -16,7 +16,7 @@
  */
 
 params ["_display"];
-TRACE_1("params",_display);
+TRACE_1("mapDisplayInitEH",_display);
 
 private _bisShapeLB = _display displayctrl 1091;
 private _curSelShape = missionNamespace getVariable [QGVAR(curSelMarkerShape), 0];
@@ -30,8 +30,3 @@ private _curSelColor = missionNamespace getVariable [QGVAR(curSelMarkerColor), 0
 TRACE_2("color",_bisColorLB,_curSelColor);
 _bisColorLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
 _bisColorLB lbSetCurSel _curSelColor;
-
-// movable markers
-private _ctrlMap = _display displayCtrl 51;
-_ctrlMap ctrlAddEventHandler ["MouseButtonDown", {_this call FUNC(onMouseButtonDown)}];
-_ctrlMap ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onMouseButtonUp)}];

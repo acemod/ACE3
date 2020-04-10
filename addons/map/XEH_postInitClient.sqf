@@ -60,21 +60,23 @@ call FUNC(determineZoom);
     };
 }] call CBA_fnc_addEventHandler;
 
+
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
-
+GVAR(updateActiveMap) = true;
+GVAR(activeMapTypeIDC) = 51;
 ["loadout", {
     params ["_unit"];
     if (isNull _unit) exitWith {
         GVAR(hasWatch) = true;
+        GVAR(activeMapTypeIDC) = 51;
     };
-    GVAR(hasWatch) = false;
-    {
-        if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
-        false
-    } count (assignedItems _unit);
+    GVAR(hasWatch) = ((assignedItems _unit) findIf {_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]}) != -1;
+    GVAR(activeMapTypeIDC) = 51 max getNumber (configFile >> "CfgWeapons" >> ((assignedItems _unit) param [0, ""]) >> QGVAR(MapTypeIDC));
 }, true] call CBA_fnc_addPlayerEventHandler;
 
+["visibleMap", { GVAR(updateActiveMap) = true; }] call CBA_fnc_addPlayerEventHandler;
+addMissionEventHandler ["Loaded", { GVAR(updateActiveMap) = true; }];
 
 // Vehicle map lighting:
 GVAR(vehicleLightCondition) = {true};
@@ -115,3 +117,44 @@ GVAR(vehicleLightColor) = [1,1,1,0];
         };
     };
 }, true] call CBA_fnc_addPlayerEventHandler;
+
+// Draw map effects
+["Draw", {call FUNC(onDrawMap)}, true] call EFUNC(common,addMapEventHandler);
+["Draw", {call FUNC(updateMapEffects)}, true] call EFUNC(common,addMapEventHandler);
+
+["MouseMoving", {
+    params ["_control", "_x", "_y"];
+    if (GVAR(isShaking) && {count GVAR(rightMouseButtonLastPos) == 2}) then {
+        private _lastPos = _control ctrlMapScreenToWorld GVAR(rightMouseButtonLastPos);
+        private _newPos = _control ctrlMapScreenToWorld [_x, _y];
+        GVAR(lastStillPosition) set [0, (GVAR(lastStillPosition) select 0) + (_lastPos select 0) - (_newPos select 0)];
+        GVAR(lastStillPosition) set [1, (GVAR(lastStillPosition) select 1) + (_lastPos select 1) - (_newPos select 1)];
+        GVAR(rightMouseButtonLastPos) = [_x, _y];
+        TRACE_3("Mouse Move",_lastPos,_newPos,GVAR(rightMouseButtonLastPos));
+    };
+}, true] call EFUNC(common,addMapEventHandler);
+
+["MouseButtonDown", {
+    params ["", "_button", "_x", "_y"];
+    if (_button == 1) then {
+        GVAR(rightMouseButtonLastPos) = [_x, _y];
+    };
+}, true] call EFUNC(common,addMapEventHandler);
+
+["MouseButtonUp", {
+    params ["", "_button"];
+    if (_button == 1) then {
+        GVAR(rightMouseButtonLastPos) = [];
+    };
+}, true] call EFUNC(common,addMapEventHandler);
+
+//get mouse position on map
+["MouseMoving", {
+    params ["_control", "_x", "_y"];
+    GVAR(mousePos) = _control ctrlMapScreenToWorld [_x, _y];
+}, true] call EFUNC(common,addMapEventHandler);
+
+["MouseHolding", {
+    params ["_control", "_x", "_y"];
+    GVAR(mousePos) = _control ctrlMapScreenToWorld [_x, _y];
+}, true] call EFUNC(common,addMapEventHandler);

@@ -10,6 +10,8 @@ PREP(readSettingsFromParamsArray);
 PREP(actionKeysNamesConverted);
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
+PREP(addMapEventHandler);
+PREP(addMapEventHandler_init);
 PREP(addToInventory);
 PREP(assignedItemFix);
 PREP(assignObjectsInList);

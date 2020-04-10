@@ -69,7 +69,7 @@ class RscMapControl {
 // Topographic Map:
 class ctrlMap;
 class GVAR(topographicCtrl): ctrlMap {
-    idc = 9051;
+    idc = IDC_MAP_TOPO;
 
     // scaleMin = 0.005;
     // scaleMax = 10;  //Lets the mini display zoom out far enough
@@ -126,6 +126,13 @@ class GVAR(topographicCtrl): ctrlMap {
         colorBackground[] = {0.906000, 0.901000, 0.880000, 0.5};
         color[] = {0, 0, 0, 0.75};
     };
+    class LineMarker { // make line-drawings visable (but still can't draw our own?)
+        textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
+        lineWidthThin = 0.008;
+        lineWidthThick = 0.014;
+        lineDistanceMin = 3e-005;
+        lineLengthMin = 5;
+    };
 };
 
 class RscMap;
@@ -146,10 +153,10 @@ class RscDisplayArcadeMap_Layout_6: RscMap { //"Streamlined" Editor:
 
 // REGULAR MAP
 class RscDisplayMainMap {
+    EGVAR(mapEventHandlers,IDCs)[] = {IDC_MAP_MAIN, IDC_MAP_TOPO};
     // Tweak map styling
     class controlsBackground {
         class CA_Map: RscMapControl {
-            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
             #include "MapTweaks.hpp"
         };
         class ACE_topoMap: GVAR(topographicCtrl) {};
@@ -204,9 +211,9 @@ class RscDisplayGetReady: RscDisplayMainMap {
     // Tweak map styling
     class controlsBackground {
         class CA_Map: RscMapControl {
-            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
             #include "MapTweaks.hpp"
         };
+        class ACE_topoMap: GVAR(topographicCtrl) {};
     };
     // get rid of the "center to player position" - button (as it works even on elite)
     class controls {

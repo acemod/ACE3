@@ -30,3 +30,5 @@
 ]
 
 #define DIG_SURFACE_WHITELIST ["grass", "grasstall_exp", "forest_exp"]
+
+#define ADDMAPEVENTHANDLER_EVENTS ["Draw", "MouseMoving", "MouseButtonDown", "MouseButtonUp", "MouseMoving", "MouseHolding"]

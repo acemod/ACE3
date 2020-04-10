@@ -26,6 +26,12 @@ class Extended_DisplayLoad_EventHandlers {
     class RscUnitInfo {
         ADDON = QUOTE([ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Any')])] call CBA_fnc_localEvent;);
     };
+    class RscDiary {
+        ADDON = QUOTE([ARR_2('RscDiary', _this # 0)] call (uiNamespace getVariable 'FUNC(addMapEventHandler_init)'));
+    };
+    class RscCustomInfoMiniMap {
+        ADDON = QUOTE([ARR_2('RscCustomInfoMiniMap', _this # 0)] call (uiNamespace getVariable 'FUNC(addMapEventHandler_init)'));
+    };
 };
 
 class Extended_InitPost_EventHandlers {

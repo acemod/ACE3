@@ -15,12 +15,9 @@
  * Public: No
  */
 
+TRACE_1("receiverInit",_this);
+
 ACE_player setVariable [QGVAR(Transmit), false, true];
 GVAR(EnableTransmit) = false;
 
-if (!isNil QGVAR(DrawMapHandlerID)) then {
-    (findDisplay 12 displayCtrl 51) ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)];
-    GVAR(DrawMapHandlerID) = nil;
-};
-GVAR(DrawMapHandlerID) = findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {call FUNC(drawMapGestures)}];
- findDisplay 12 displayCtrl 9051 ctrlAddEventHandler ["Draw", {call FUNC(drawMapGestures)}]; // #TopoHack
+["Draw", {call FUNC(drawMapGestures)}, true] call EFUNC(common,addMapEventHandler);

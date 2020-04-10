@@ -15,34 +15,23 @@
  * Public: No
  */
 
-disableSerialization;
-
-private _mapCtrl = findDisplay 12 displayCtrl 51;
+TRACE_1("transmitterInit",_this);
 
 // MouseMoving EH.
-if (!isNil QGVAR(MouseMoveHandlerID)) then {
-    _mapCtrl ctrlRemoveEventHandler ["MouseMoving", GVAR(MouseMoveHandlerID)];
-    GVAR(MouseMoveHandlerID) = nil;
-};
-GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
+["MouseMoving", {
     // Don't transmit any data if we're using the map tools
     if (!GVAR(EnableTransmit) || {(["ace_maptools"] call EFUNC(common,isModLoaded)) && {EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)}}) exitWith {};
 
     params ["_control", "_posX", "_posY"];
-
     if (!(ACE_player getVariable QGVAR(Transmit))) then {
         ACE_player setVariable [QGVAR(Transmit), true, true];
     };
 
     GVAR(pointPosition) = _control ctrlMapScreenToWorld [_posX, _posY];
-}];
+}, true] call EFUNC(common,addMapEventHandler);
 
 // MouseDown EH
-if (!isNil QGVAR(MouseDownHandlerID)) then {
-    _mapCtrl ctrlRemoveEventHandler ["MouseButtonDown",GVAR(MouseDownHandlerID)];
-    GVAR(MouseDownHandlerID) = nil;
-};
-GVAR(MouseDownHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonDown", {
+["MouseButtonDown", {
     if (!GVAR(enabled)) exitWith {};
 
     params ["", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
@@ -50,14 +39,10 @@ GVAR(MouseDownHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonDown", {
     if (_button == 0 && {[_shift, _ctrl, _alt] isEqualTo [false, false, false]}) then {
         call FUNC(initTransmit);
     };
-}];
+}, true] call EFUNC(common,addMapEventHandler);
 
 // MouseUp EH
-if (!isNil QGVAR(MouseUpHandlerID)) then {
-    _mapCtrl ctrlRemoveEventHandler ["MouseButtonUp", GVAR(MouseUpHandlerID)];
-    GVAR(MouseUpHandlerID) = nil;
-};
-GVAR(MouseUpHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonUp", {
+["MouseButtonUp", {
     if (!GVAR(enabled)) exitWith {};
 
     params ["", "_button"];
@@ -65,4 +50,4 @@ GVAR(MouseUpHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonUp", {
     if (_button == 0) then {
         call FUNC(endTransmit);
     };
-}];
+}, true] call EFUNC(common,addMapEventHandler);

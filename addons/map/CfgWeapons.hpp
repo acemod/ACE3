@@ -25,6 +25,7 @@ class CfgWeapons {
     };
     class ItemMap;
     class ace_TopographicMap: ItemMap {
+        GVAR(MapTypeIDC) = IDC_MAP_TOPO;
         displayName = "Topo test";
     };
 };
