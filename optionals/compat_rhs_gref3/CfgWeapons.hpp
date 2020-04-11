@@ -77,8 +77,44 @@ class CfgWeapons {
         ACE_barrelTwist=240;
         ACE_barrelLength=658;
     };
+    class rhs_weap_vhs2_base;
+    class rhs_weap_vhsd2: rhs_weap_vhs2_base {
+        ACE_barrelTwist= 177.8;
+        ACE_barrelLength=500.0;
+    };
+    class rhs_weap_vhsk2: rhs_weap_vhsd2 {
+        ACE_barrelTwist= 177.8;
+        ACE_barrelLength=410.0;
+    };
+    class rhs_weap_vhsd2_ct15x: rhs_weap_vhsk2 {
+        ACE_barrelTwist= 177.8;
+        ACE_barrelLength=500.0;
+    };
+    class rhs_weap_vhsd2_bg: rhs_weap_vhsd2_ct15x {
+        ACE_barrelTwist= 177.8;
+        ACE_barrelLength=500.0;
+    };
+    class rhs_weap_fnfal_base;
+    class rhs_weap_l1a1_base: rhs_weap_fnfal_base {
+        ACE_barrelTwist = 302.26;
+        ACE_barrelLength =554.4;
+    };
     class rhs_weap_mg42_base: Rifle_Base_F {
         ACE_Overheating_allowSwapBarrel = 1;
+        ACE_barrelTwist = 305.0;
+        ACE_barrelLength =530.0;
+    };
+    class rhs_weap_MP44_base: Rifle_Base_F {
+        ACE_barrelTwist = 240.0;
+        ACE_barrelLength =420.0;
+    };
+    class rhs_weap_m3a1_base : Rifle_Base_F {
+        ACE_barrelTwist = 406.0;
+        ACE_barrelLength =203.2;
+    };
+    class rhs_weap_M1garand_Base_F : Rifle_Base_F {
+        ACE_barrelTwist = 254.0;
+        ACE_barrelLength =610.0;
     };
 
     CREATE_CSW_PROXY(rhs_weap_DSHKM);
