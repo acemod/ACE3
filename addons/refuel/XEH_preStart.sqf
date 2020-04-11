@@ -4,7 +4,8 @@
 
 // cache refuel vehicles, see XEH_postInit.sqf
 private _staticClasses = [];
-private _dynamicClasses = [];
+private _baseStaticClasses = [];
+private _baseDynamicClasses = [];
 
 {
     private _transportFuel = getNumber (_x >> "transportFuel");
@@ -12,20 +13,27 @@ private _dynamicClasses = [];
     if (_fuelCargo > 0 || {_fuelCargo == REFUEL_INFINITE_FUEL}) then {
         private _sourceClass = configName _x;
         // check if we can use actions with inheritance
+        private _noXEH = isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init");
         if (
-            !isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init") // addActionToClass relies on XEH init
+            _noXEH // addActionToClass relies on XEH init
             || {_sourceClass isKindOf "Static"} // CBA_fnc_addClassEventHandler doesn't support "Static" class
         ) then {
             if (2 == getNumber (_x >> "scope")) then {
-                _staticClasses pushBackUnique _sourceClass;
+                if (_noXEH) then {
+                    WARNING_3("Class %1: %2 [%3] needs XEH",_sourceClass,configName inheritsFrom _x,configSourceMod _x);
+                };
+                _staticClasses pushBack _sourceClass;
+                if (-1 == _baseStaticClasses findIf {_sourceClass isKindOf _x}) then {
+                    _baseStaticClasses pushBack _sourceClass;
+                };
             };
         } else {
-            if (-1 == _dynamicClasses findIf {_sourceClass isKindOf _x}) then {
-                _dynamicClasses pushBackUnique _sourceClass;
+            if (-1 == _baseDynamicClasses findIf {_sourceClass isKindOf _x}) then {
+                _baseDynamicClasses pushBack _sourceClass;
             };
         };
     };
 } forEach ('true' configClasses (configFile >> "CfgVehicles"));
 
-TRACE_2("compiled",count _staticClasses,count _dynamicClasses);
-uiNamespace setVariable [QGVAR(cacheRefuelClasses), compileFinal str [_staticClasses, _dynamicClasses]];
+TRACE_3("compiled",count _staticClasses,count _baseStaticClasses,count _baseDynamicClasses);
+uiNamespace setVariable [QGVAR(cacheRefuelClasses), compileFinal str [_staticClasses, _baseStaticClasses, _baseDynamicClasses]];

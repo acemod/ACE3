@@ -5,7 +5,7 @@ if (!GVAR(enabled)) exitWith {};
     params ["_vehicle"];
     if (!local _vehicle) exitWith {};
 
-    if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportFuel") != 0) then {
+    if (getFuelCargo _vehicle > 0) then {
         _vehicle setFuelCargo 0;
     };
 }, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
@@ -14,16 +14,43 @@ if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
 };
 
-private _cacheRefuelClasses = call (uiNamespace getVariable [QGVAR(cacheRefuelClasses), {[[],[]]}]);
-_cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_dynamicClasses", [], [[]]]];
+private _cacheRefuelClasses = call (uiNamespace getVariable [QGVAR(cacheRefuelClasses), {[[],[],[]]}]);
+_cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_baseStaticClasses", [], [[]]], ["_baseDynamicClasses", [], [[]]]];
 
-private _worldSize = worldSize;
-private _worldCenter = [_worldSize / 2, _worldSize / 2];
-{
+private _cfgPositions = configFile >> QGVAR(positions) >> worldName;
+if (isArray _cfgPositions) then {
+    // check terrain fuel stations
     {
-        _x setFuelCargo 0;
-    } forEach (_worldCenter nearObjects [_x, _worldSize]);
-} forEach _staticClasses;
+        _x params ["_class", "_positions"];
+        {
+            private _objects = _x nearObjects [_class, 30];
+            if (_objects isEqualTo []) then {
+                WARNING_3("no pumps %1 found near %2 %3",_class,worldName,_x);
+            } else {
+                {
+                    _x setFuelCargo 0;
+                } forEach _objects;
+            };
+        } forEach _positions;
+    } forEach getArray _cfgPositions;
+    // check static objects placed in editor
+    if (isServer) then {
+        {
+            if (0 < getFuelCargo _x) then {
+                _x setFuelCargo 0;
+            };
+        } forEach allMissionObjects "";
+    };
+} else {
+    WARNING_2("World %1: no configured %2; can be loaded slower",worldName,QGVAR(positions));
+    private _worldSize = worldSize;
+    private _worldCenter = [_worldSize / 2, _worldSize / 2];
+    {
+        {
+            _x setFuelCargo 0;
+        } forEach (_worldCenter nearObjects [_x, _worldSize]);
+    } forEach _baseStaticClasses;
+};
 
 [QGVAR(initSource), LINKFUNC(initSource)] call CBA_fnc_addEventHandler;
 
@@ -99,7 +126,7 @@ GVAR(actions) = [
         [_className, 0, ["ACE_MainActions", QGVAR(Refuel)], _x, true] call EFUNC(interact_menu,addActionToClass);
     } forEach GVAR(actions);
     TRACE_1("add menu to dynamic",_x);
-} forEach _dynamicClasses;
+} forEach _baseDynamicClasses;
 
 #ifdef DRAW_HOOKS_POS
 addMissionEventHandler ["Draw3D", {
