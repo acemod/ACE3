@@ -32,9 +32,7 @@ params [
 ];
 TRACE_3("makeSource",_source,_fuelCargo,_hooks);
 
-private _cfg = configFile >> "CfgVehicles" >> typeOf _source;
-private _transportFuel = getNumber (_cfg >> "transportFuel");
-private _fuelCargoConfig = [_cfg >> QGVAR(fuelCargo), "NUMBER", _transportFuel] call CBA_fnc_getConfigEntry;
+private _fuelCargoConfig = _source call FUNC(getFuelCargo);
 
 if (
     isNull _source

@@ -3,10 +3,13 @@ if (!GVAR(enabled)) exitWith {};
 
 ["All", "InitPost", {
     params ["_vehicle"];
-    if (!local _vehicle) exitWith {};
+    if (getFuelCargo _vehicle <= 0) exitWith {};
 
-    if (getFuelCargo _vehicle > 0) then {
+    if (local _vehicle) then {
         _vehicle setFuelCargo 0;
+    };
+    if (-1 == _vehicle getVariable [QGVAR(HDEHID), -1]) then {
+        _vehicle setVariable [QGVAR(HDEHID), _vehicle addEventHandler ["HandleDamage", LINKFUNC(handleDamage)]];
     };
 }, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
 
@@ -19,7 +22,6 @@ _cacheRefuelClasses params [["_staticClasses", [], [[]]], ["_baseStaticClasses",
 
 private _cfgPositions = configFile >> QGVAR(positions) >> worldName;
 if (isArray _cfgPositions) then {
-    // check terrain fuel stations
     {
         _x params ["_class", "_positions"];
         {
@@ -28,26 +30,33 @@ if (isArray _cfgPositions) then {
                 WARNING_3("no pumps %1 found near %2 %3",_class,worldName,_x);
             } else {
                 {
+                    // terrain fuel pumps don't trigger init and must setFuelCargo on each client
                     _x setFuelCargo 0;
+                    if (isServer) then {
+                        _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)];
+                    };
                 } forEach _objects;
             };
         } forEach _positions;
     } forEach getArray _cfgPositions;
-    // check static objects placed in editor
-    if (isServer) then {
-        {
-            if (0 < getFuelCargo _x) then {
-                _x setFuelCargo 0;
-            };
-        } forEach allMissionObjects "";
-    };
+
+    // placed in editor static objects don't trigger init but synchronize fuel cargo
+    // placed in editor vehicles both trigger init and synchronize fuel cargo
+    {
+        if (0 < getFuelCargo _x) then {
+            if (local _x) then {_x setFuelCargo 0;};
+            _x setVariable [QGVAR(HDEHID), _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)]];
+        };
+    } forEach allMissionObjects "";
 } else {
+    // here are both terrain and editor static objects
     WARNING_2("World %1: no configured %2; can be loaded slower",worldName,QGVAR(positions));
     private _worldSize = worldSize;
     private _worldCenter = [_worldSize / 2, _worldSize / 2];
     {
         {
             _x setFuelCargo 0;
+            _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)];
         } forEach (_worldCenter nearObjects [_x, _worldSize]);
     } forEach _baseStaticClasses;
 };
