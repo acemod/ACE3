@@ -367,7 +367,7 @@
 {% endif %}
 
 {% if include.component == "realisticnames" %}
-`ace_common`
+`ace_common`, `ace_optics`
 {% endif %}
 
 {% if include.component == "realisticweights" %}
