@@ -39,8 +39,8 @@ if (_item isEqualType objNull) then {
     [QEGVAR(common,hideObjectGlobal), [_item, true]] call CBA_fnc_serverEvent;
     
     // Cars below water will take engine damage over time and eventualy become "water logged" and unfixable (because of negative z attach)
-    if ((getText (configFile >> "CfgVehicles" >> (typeOf _item) >> "simulation")) == "carx") then {
-        TRACE_1("disabling car damage",_item);
+    if ((getText (configFile >> "CfgVehicles" >> (typeOf _item) >> "simulation")) == "carx" || (getText (configFile >> "CfgVehicles" >> (typeOf _item) >> "simulation")) == "tankx") then {
+        TRACE_1("disabling vehicle damage",_item);
         [_item, "blockDamage", "ACE_cargo", true] call EFUNC(common,statusEffect_set);
     };
 };
