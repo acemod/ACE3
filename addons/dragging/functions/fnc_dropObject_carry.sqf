@@ -72,30 +72,6 @@ if !(_target isKindOf "CAManBase") then {
     [QEGVAR(common,fixFloating), _target, _target] call CBA_fnc_targetEvent;
 };
 
-// workaround for weapon dropped from dead body. Sometimes it falls under ground and setPos is needed
-#define MAX_FALLING_TIME 1.2
-#define MAX_FALLING_HEIGHT (GRAVITY * (MAX_FALLING_TIME ^ 2) / 2)
-if (_target isKindOf "WeaponHolderSimulated") then {
-    private _positionASL = getPosASL _target;
-    // find first touched surface height
-    private _surfaces = lineIntersectsSurfaces [_positionASL, ATLToASL [_positionASL select 0, _positionASL select 1, -1], _target, _unit];
-    if (_surfaces isEqualTo []) exitWith {};
-    private _surfaceHeight = _surfaces select 0 select 0 select 2;
-    // if target is falling more than we want to track, let it go
-    if (_surfaceHeight + MAX_FALLING_HEIGHT < _positionASL select 2) exitWith {};
-
-    [
-        {getPosASL (_this select 0) select 2 < (_this select 1) - 0.2},
-        {
-            private _neededPos = getPosASL (_this select 0);
-            _neededPos set [2, _this select 1];
-            (_this select 0) setPosASL _neededPos;
-        },
-        [_target, _surfaceHeight],
-        MAX_FALLING_TIME
-    ] call CBA_fnc_waitUntilAndExecute;
-};
-
 // recreate UAV crew
 if (_target getVariable [QGVAR(isUAV), false]) then {
     createVehicleCrew _target;
