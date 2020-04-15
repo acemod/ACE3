@@ -120,7 +120,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         // Any collision with terrain/vehicle/object has a shooter
         // Check this first because burning can happen at any velocity
         if !(isNull _shooter) then {
-            _ammo = "#collision"; // non-selectionSpecific so only _damageSelectionArray matters
+            _ammo = "collision"; // non-selectionSpecific so only _damageSelectionArray matters
 
             /*
               If shooter != unit then they hit unit, otherwise it could be:
@@ -130,7 +130,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
                Assume fall damage for downward velocity because it's most common
             */
             if (_shooter == _unit && {(velocity _unit select 2) < -2}) then {
-                _ammo = "#falling"; // non-selectionSpecific so only _damageSelectionArray matters
+                _ammo = "falling"; // non-selectionSpecific so only _damageSelectionArray matters
                 _damageSelectionArray = [HITPOINT_INDEX_RLEG, 1, HITPOINT_INDEX_LLEG, 1];
                 TRACE_5("Fall",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
@@ -143,7 +143,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             // Higher momentum results in higher chance for head to be hit for more lethality
             if (_receivedDamage > 0.35) then {
                 private _headHitWeight = (_receivedDamage / 2) min 1;
-                if (_recievedDamage < 0.6) then {
+                if (_receivedDamage < 0.6) then {
                     _damageSelectionArray append [0, (1 - _headHitWeight), 1, _headHitWeight];
                 } else {
                     _damageSelectionArray = [0, (1 - _headHitWeight), 1, _headHitWeight];
@@ -152,7 +152,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         } else {
             // Anything else is almost guaranteed to be fire damage
             _damageSelectionArray = [HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1];;
-            _ammo = "#unknown"; // non-selectionSpecific so only _damageSelectionArray matters
+            _ammo = "unknown"; // non-selectionSpecific so only _damageSelectionArray matters
 
             // Fire damage can occur as lots of minor damage events
             // Combine these until significant enough to wound
@@ -194,7 +194,7 @@ if (
     {getOxygenRemaining _unit <= 0.5} &&
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
-    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning", [HITPOINT_INDEX_BODY, 1]]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "drowning", [HITPOINT_INDEX_BODY, 1]]] call CBA_fnc_localEvent;
     TRACE_5("Drowning",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
@@ -214,7 +214,7 @@ if (
         HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1, 
         HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1
     ];
-    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
