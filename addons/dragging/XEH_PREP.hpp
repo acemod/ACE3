@@ -19,6 +19,8 @@ PREP(handleUnconscious);
 PREP(initObject);
 PREP(initPerson);
 PREP(isObjectOnObject);
+PREP(onKeyDown);
+PREP(onKeyUp);
 PREP(setCarryable);
 PREP(setDraggable);
 PREP(startCarry);

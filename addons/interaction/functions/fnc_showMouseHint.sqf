@@ -8,7 +8,7 @@
  * 0: Left click text <STRING>
  * 1: Right click text <STRING>
  * 2: Scroll text <STRING> (default: "")
- * 2: Extra icon/text pairs <ARRAY> (default: [])
+ * 3: Extra icon/text pairs <ARRAY> (default: [])
  *
  * Return Value:
  * None
