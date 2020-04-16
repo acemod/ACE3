@@ -3,10 +3,11 @@
     "CHECKBOX",
     [LSTRING(SavePreDeathGear_DisplayName), LSTRING(SavePreDeathGear_Description)],
     LSTRING(DisplayName),
+    false,
     true,
-    true, {
+    {
         if (_this && {getMissionConfigValue ["respawnDelay", 0] == 0}) then {
-            0.01 remoteExec ["setPlayerRespawnTime"];
+             setPlayerRespawnTime 0.01;
         };
     }
 ] call CBA_Settings_fnc_init;
@@ -25,6 +26,6 @@
     "CHECKBOX",
     [LSTRING(FriendlyFire_Module_DisplayName), LSTRING(FriendlyFire_Module_Description)],
     LSTRING(DisplayName),
-    true,
+    false,
     true
 ] call CBA_Settings_fnc_init;
