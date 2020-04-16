@@ -79,7 +79,7 @@ class CfgVehicles {
                     class ACE_AssignTeamRed {
                         displayName = CSTRING(AssignTeamRed);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'RED',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_red_ca.paa);
@@ -87,7 +87,7 @@ class CfgVehicles {
                     class ACE_AssignTeamGreen {
                         displayName = CSTRING(AssignTeamGreen);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'GREEN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_green_ca.paa);
@@ -95,7 +95,7 @@ class CfgVehicles {
                     class ACE_AssignTeamBlue {
                         displayName = CSTRING(AssignTeamBlue);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'BLUE',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_blue_ca.paa);
@@ -103,7 +103,7 @@ class CfgVehicles {
                     class ACE_AssignTeamYellow {
                         displayName = CSTRING(AssignTeamYellow);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'YELLOW',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_yellow_ca.paa);
@@ -111,7 +111,7 @@ class CfgVehicles {
                     class ACE_UnassignTeam {
                         displayName = CSTRING(LeaveTeam);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
-                        statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'MAIN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         icon = QPATHTOF(UI\team\team_white_ca.paa);
@@ -251,7 +251,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinTeamRed);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'RED',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_red_ca.paa);
                 };
@@ -259,7 +259,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinTeamGreen);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'GREEN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_green_ca.paa);
                 };
@@ -267,7 +267,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinTeamBlue);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'BLUE',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_blue_ca.paa);
                 };
@@ -275,7 +275,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinTeamYellow);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'YELLOW',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_yellow_ca.paa);
                 };
@@ -283,7 +283,7 @@ class CfgVehicles {
                     displayName = CSTRING(LeaveTeam);
                     condition = QUOTE(assignedTeam _player != 'MAIN');
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'MAIN')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'MAIN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_white_ca.paa);
                 };
@@ -341,6 +341,11 @@ class CfgVehicles {
                 condition = QUOTE(alive _target);
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+            };
+            class GVAR(smashWindshield) {
+                displayName = CSTRING(SmashWindshield);
+                condition = QUOTE(_player == driver _target && {private _damage = _target getHitPointDamage 'HitGlass1'; _damage > 0.5 && {_damage < 1}});
+                statement = QUOTE(playSound3D [ARR_2('A3\Sounds_F\weapons\hits\glass_2.wss',_target)]; _target setHitPointDamage [ARR_2('HitGlass1',1)];);
             };
         };
     };
@@ -665,14 +670,14 @@ class CfgVehicles {
                 class GVAR(TurnOn) {
                     displayName = CSTRING(TurnOn);
                     icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
-                    condition = QUOTE(alive _target && !(_target getVariable [ARR_2('ACE_lampOn',true)]));
-                    statement = QUOTE(_target call DFUNC(switchLamp));
+                    condition = QUOTE(alive _target && !(_target getVariable [ARR_2(QQGVAR(isLightOn),true)]));
+                    statement = QUOTE([ARR_3(QQGVAR(setLight),[ARR_2(_target,true)],_target)] call CBA_fnc_targetEvent);
                 };
                 class GVAR(TurnOff) {
                     displayName = CSTRING(TurnOff);
                     icon = "\A3\ui_f\data\igui\cfg\actions\ico_cpt_land_OFF_ca.paa";
-                    condition = QUOTE(alive _target && _target getVariable [ARR_2('ACE_lampOn',true)]);
-                    statement = QUOTE(_target call DFUNC(switchLamp));
+                    condition = QUOTE(alive _target && _target getVariable [ARR_2(QQGVAR(isLightOn),true)]);
+                    statement = QUOTE([ARR_3(QQGVAR(setLight),[ARR_2(_target,false)],_target)] call CBA_fnc_targetEvent);
                 };
             };
         };
@@ -696,6 +701,30 @@ class CfgVehicles {
                     icon = "\A3\ui_f\data\igui\cfg\actions\ico_cpt_land_OFF_ca.paa";
                     condition = QUOTE(alive _target && isCollisionLightOn _target);
                     statement = QUOTE([ARR_3(QQGVAR(setCollisionLight),[ARR_2(_target,false)],_target)] call CBA_fnc_targetEvent);
+                };
+            };
+        };
+    };
+
+    class Land_Camping_Light_off_F: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 2;
+
+                // to make "Camping Lantern (Off)" be turned on we replace it with "Camping Lantern"
+                class GVAR(TurnOn) {
+                    displayName = CSTRING(TurnOn);
+                    icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
+                    condition = QUOTE(alive _target);
+                    statement = QUOTE(\
+                        private _position = getPosATL _target;\
+                        private _vectorDirAndUp = [ARR_2(vectorDir _target,vectorUp _target)];\
+                        deleteVehicle _target;\
+                        private _newLamp = 'Land_Camping_Light_F' createVehicle [ARR_3(0,0,0)];\
+                        _newLamp setPosATL _position;\
+                        _newLamp setVectorDirAndUp _vectorDirAndUp;\
+                    );
                 };
             };
         };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Reload a launcher
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_target","_weapon","_magazine"];
 TRACE_4("params",_unit,_target,_weapon,_magazine);
@@ -27,4 +27,4 @@ if (currentWeapon _target != _weapon) exitWith {};
 if (currentMagazine _target != "") exitWith {};
 
 // command is wip, reload time for launchers is not intended.
-_target addWeaponItem [_weapon, _magazine];
+_target addWeaponItem [_weapon, _magazine, true];

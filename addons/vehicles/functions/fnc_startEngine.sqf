@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Delays engine start of vehicle.
@@ -14,11 +15,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_isEngineOn"];
 
-if (!_isEngineOn || {floor abs speed _vehicle > 0}) exitWith {};
+if (!_isEngineOn || {floor abs speed _vehicle > 0 || {!isNull isVehicleCargo _vehicle}}) exitWith {};
 
 [{
     params ["_args", "_idPFH"];

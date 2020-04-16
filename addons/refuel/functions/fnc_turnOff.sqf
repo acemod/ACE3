@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Turn off a fuel nozzle.
@@ -14,10 +15,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
 _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
 _nozzle setVariable [QGVAR(isRefueling), false, true];
 [LSTRING(Hint_Stopped), 1.5, _unit] call EFUNC(common,displayTextStructured);
+[QGVAR(stopped), [_nozzle getVariable QGVAR(source), _nozzle getVariable QGVAR(sink)]] call CBA_fnc_localEvent;

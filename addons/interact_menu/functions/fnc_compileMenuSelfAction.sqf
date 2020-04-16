@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Compile the self action menu from config for an object's class
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target"];
 
@@ -24,7 +24,7 @@ if (_target isEqualType objNull) then {
 private _namespace = GVAR(ActSelfNamespace);
 
 // Exit if the action menu is already compiled for this class
-if !(isNil {_namespace getVariable _objectType}) exitWith {};
+if (!isNil {_namespace getVariable _objectType}) exitWith {};
 
 
 private _recurseFnc = {
@@ -34,7 +34,7 @@ private _recurseFnc = {
 
     {
         private _entryCfg = _x;
-        if(isClass _entryCfg) then {
+        if (isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
 
             private _icon = if (isArray (_entryCfg >> "icon")) then {

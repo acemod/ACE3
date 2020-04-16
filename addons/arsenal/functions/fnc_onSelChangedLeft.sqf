@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handles selection changes on the left panel.
@@ -11,8 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_control", "_curSel"];
 
@@ -23,10 +23,10 @@ private _display = ctrlParent _control;
 private _item = [_control lnbData [_curSel, 0], _control lbData _curSel] select !(ctrlType _control == 102);
 
 private _weaponDefaultRightPanel = _display displayCtrl IDC_buttonOptic;
-private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
+private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
 
 private _containerDefaultRightPanel = _display displayCtrl IDC_buttonMisc;
-private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!(isNil QGVAR(currentRightPanel)) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
+private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
 
 private _fnc_clearPreviousWepMags = {
     private _compatibleMags = getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
@@ -57,8 +57,12 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                if !(_compatibleMags isEqualTo []) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -95,8 +99,12 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                if !(_compatibleMags isEqualTo []) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -132,8 +140,12 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _cfgMags = configFile >> "CfgMagazines";
+                private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                GVAR(center) addWeaponItem [_item, [(getArray (configfile >> "cfgweapons" >> _item >> "magazines")) select 0]];
+                if !(_compatibleMags isEqualTo []) then {
+                    GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
+                };
 
                 {
                     if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
@@ -240,7 +252,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             if ((GVAR(currentItems) select 6) != _item) then {
                 removeBackpack GVAR(center);
-                GVAR(center) addBackpack _item;
+                GVAR(center) addBackpackGlobal _item;
                 while {count backpackItems GVAR(center) > 0} do {
                     GVAR(center) removeItemFromBackpack (backpackItems GVAR(center) select 0);
                 }; //--- Remove default config contents
@@ -412,7 +424,14 @@ switch (GVAR(currentLeftPanel)) do {
 
         call FUNC(showItem);
         TOGGLE_RIGHT_PANEL_HIDE
-        [_display, _control, _curSel, (configFile >> "CfgUnitInsignia" >> _item)] call FUNC(itemInfo);
+
+        private _unitInsigniaConfig = (configFile >> "CfgUnitInsignia" >> _item);
+
+        if (configName _unitInsigniaConfig isEqualTo "") then {
+            [_display, _control, _curSel, (missionConfigFile >> "CfgUnitInsignia" >> _item)] call FUNC(itemInfo);
+        } else {
+            [_display, _control, _curSel, _unitInsigniaConfig] call FUNC(itemInfo);
+        };
     };
 };
 

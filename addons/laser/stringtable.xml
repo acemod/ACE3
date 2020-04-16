@@ -7,10 +7,14 @@
             <German>Laserstreuung-Simulationszähler</German>
             <Korean>레이저 분산 시뮬레이션 수</Korean>
             <Polish>Wskaźnik poziomu rozproszenia wiązki lasera</Polish>
-            <French>Compte de la simulation de la dispersion du laser</French>
-            <Italian>Contatore Simulazione Dispersione Laser</Italian>
+            <French>Nombre de simulations pour la dispersion du laser</French>
+            <Italian>Contatore di Simulazione della Dispersione del Laser</Italian>
             <Chinesesimp>雷射散射模拟计算</Chinesesimp>
             <Chinese>雷射散射模擬計算</Chinese>
+            <Russian>Число симуляций рассеивания лазерного луча</Russian>
+            <Portuguese>Contador da Simulação de Dispersão de Laser</Portuguese>
+            <Czech>Počet simulace disperze laseru</Czech>
+            <Spanish>Número de dispersión en la simulación del láser</Spanish>
         </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>
@@ -27,18 +31,19 @@
             <Korean>레이저 코드</Korean>
             <Chinesesimp>雷射码</Chinesesimp>
             <Chinese>雷射碼</Chinese>
+            <Turkish>Lazer Kod</Turkish>
         </Key>
         <Key ID="STR_ACE_Laser_laserCodeUp">
             <English>Laser - Cycle Code Up</English>
             <German>Lasercode +</German>
             <Polish>Laser - Następny kod</Polish>
-            <French>Laser - Code +</French>
+            <French>Code laser +</French>
             <Russian>Лазер - увеличить частоту</Russian>
             <Portuguese>Laser - Alternar Código para Cima</Portuguese>
             <Hungarian>Lézer - kódciklus növelése</Hungarian>
             <Spanish>Láser - Aumentar código</Spanish>
             <Czech>Laser - Kód +</Czech>
-            <Italian>Codice laser +</Italian>
+            <Italian>Laser - Cambia codice +</Italian>
             <Japanese>レーザ - コードの数値を増やす</Japanese>
             <Korean>레이저 - 코드 순환 위</Korean>
             <Chinesesimp>雷射 - 循环切换雷射码 上</Chinesesimp>
@@ -48,13 +53,13 @@
             <English>Laser - Cycle Code Down</English>
             <German>Lasercode -</German>
             <Polish>Laser - Poprzedni kod</Polish>
-            <French>Laser - Code -</French>
+            <French>Code laser -</French>
             <Russian>Лазер - уменьшить частоту</Russian>
             <Portuguese>Laser - Alternar Código para Baixo</Portuguese>
             <Hungarian>Lézer - kódciklus csökkentése</Hungarian>
             <Spanish>Láser - Reducir código</Spanish>
             <Czech>Laser - Kód -</Czech>
-            <Italian>Codice laser -</Italian>
+            <Italian>Laser - Cambia codice -</Italian>
             <Japanese>レーザ - コードの数値を減らす</Japanese>
             <Korean>레이저 - 코드 순환 아래</Korean>
             <Chinesesimp>雷射 - 循环切换雷射码 下</Chinesesimp>

@@ -1,22 +1,24 @@
-/*
-* Author: 654wak654
-* Shows the aircraft loadout dialog for given aircraft.
-*
-* Arguments:
-* 0: Aircraft <OBJECT>
-* 1: Is curator. Disables time and resource requirements. <BOOL> (default: false)
-*
-* Return Value:
-* None
-*
-* Example:
-* [vehicle ace_player] call ace_pylons_fnc_showDialog
-*
-* Public: Yes
-*/
 #include "script_component.hpp"
+/*
+ * Author: 654wak654
+ * Shows the aircraft loadout dialog for given aircraft.
+ *
+ * Arguments:
+ * 0: Aircraft <OBJECT>
+ * 1: Is curator. Disables time and resource requirements. <BOOL> (default: false)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [vehicle ace_player] call ace_pylons_fnc_showDialog
+ *
+ * Public: Yes
+ */
 
 params ["_aircraft", ["_isCurator", false]];
+
+if (_isCurator && {!(["ace_zeus"] call EFUNC(common,isModLoaded))}) exitWith { WARNING("ace_zeus not loaded"); };
 
 if !(typeOf _aircraft in GVAR(aircraftWithPylons)) exitWith {
     if (_isCurator) then {

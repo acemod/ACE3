@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handles the stats control group
@@ -13,8 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display", "_control", "_curSel", "_itemCfg"];
 
@@ -46,7 +46,7 @@ private _hideUnusedFnc = {
     } forEach _numbers;
 };
 
-if !(isNil "_itemCfg") then {
+if (!isNil "_itemCfg") then {
 
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];

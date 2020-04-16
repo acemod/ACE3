@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Handle interactions key up
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_menuType", "_calledByClicking"];
 
@@ -24,7 +24,7 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     (findDisplay 91919) closeDisplay 2;
 };
 
-if(GVAR(actionSelected)) then {
+if (GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 
     private _player = ACE_Player;

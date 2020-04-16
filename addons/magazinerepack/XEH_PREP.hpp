@@ -1,4 +1,4 @@
-
+PREP(canRepackMagazine);
 PREP(getMagazineChildren);
 PREP(magazineRepackFinish);
 PREP(magazineRepackProgress);

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Fill  left panel.
@@ -11,14 +13,12 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display", "_control"];
 
 private _ctrlIDC = ctrlIDC _control;
 
-if !(isNil QGVAR(currentLeftPanel)) then {
+if (!isNil QGVAR(currentLeftPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLeftPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
     _previousCtrlBackground ctrlCommit FADE_DELAY;
@@ -162,6 +162,16 @@ switch true do {
                 {
                     ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
                 } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
+                
+                {
+                    private _displayName = getText (_x >> "displayName");
+                    private _className = configName _x;
+                    private _lbAdd =  _ctrlPanel lbAdd _displayName;
+
+                    _ctrlPanel lbSetData [_lbAdd, _className];
+                    _ctrlPanel lbSetPicture [_lbAdd, getText (_x >> "texture")];
+                    _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
+                } foreach ("true" configClasses (missionConfigFile >> "CfgUnitInsignia"));
             };
         };
     };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Authors: Ruthberg
  * Tests if the Range Card copy can be shown
@@ -13,6 +14,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-(GVAR(ammoClassCopy) != "" && GVAR(magazineClassCopy) != "" && GVAR(weaponClassCopy) != "" && !GVAR(RangeCardOpened) && ("ACE_RangeCard" in (uniformItems ACE_player)) || ("ACE_RangeCard" in (vestItems ACE_player)))
+GVAR(ammoClassCopy) != "" &&
+GVAR(magazineClassCopy) != "" &&
+GVAR(weaponClassCopy) != "" &&
+!GVAR(RangeCardOpened) &&
+"ACE_RangeCard" in ([ACE_player] call EFUNC(common,uniqueItems))

@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+
 params ["_unit", "_killer"];
 
 // fix, because ace medical cause _unit == _killer

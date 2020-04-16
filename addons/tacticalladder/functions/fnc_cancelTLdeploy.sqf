@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko, Ruthberg, commy2
  * Cancel tactical ladder deployment
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __ANIMS ["extract_1","extract_2","extract_3","extract_4","extract_5","extract_6","extract_7","extract_8","extract_9","extract_10","extract_11"]
 
@@ -32,8 +32,7 @@ GVAR(ladder) animate ["rotate", 0];
 
 {
     GVAR(ladder) animate [_x, 0];
-    true
-} count __ANIMS;
+} forEach __ANIMS; //Don't "optimize" this to a count. See #6607
 
 // remove mouse buttons and hint
 call EFUNC(interaction,hideMouseHint);

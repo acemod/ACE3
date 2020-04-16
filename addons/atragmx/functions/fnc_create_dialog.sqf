@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Creates the ATragMX dialog
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define __dsp (uiNamespace getVariable "ATragMX_Display")
 #define __ctrlBackground (__dsp displayCtrl 720000)
@@ -28,9 +28,7 @@ if (!GVAR(initialised)) then {
     TRACE_1("",GVAR(initialised));
 };
 
-if (GVAR(active)) exitWith { false };
-if (underwater ACE_player) exitWith { false };
-if (!("ACE_ATragMX" in (uniformItems ACE_player)) && !("ACE_ATragMX" in (vestItems ACE_player))) exitWith { false };
+if (GVAR(active) || {!(call FUNC(can_show))}) exitWith {false};
 
 createDialog 'ATragMX_Display';
 

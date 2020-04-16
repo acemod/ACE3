@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make unit a suicide bomber.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define EXPLOSIVES ["R_TBG32V_F", "M_Mo_120mm_AT", "Bo_GBU12_LGB"]
 #define DISTANCE_FAR 15
@@ -77,7 +77,7 @@ if (_autoSeek) then {
     private _nearestObjects = nearestObjects [_unit, [], _range] select {side _x == _activationSide && {_x != _unit} && {alive _x}};
 
     #ifdef DEBUG_MODE_FULL
-        if !(isNil "_lastMove") then {
+        if (!isNil "_lastMove") then {
             drawLine3D [_unit modelToWorldVisual [0, 0, 1], _lastMove, [1, 0, 0, 1]];
         };
         for "_i" from 0 to 35 do {

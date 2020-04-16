@@ -8,16 +8,15 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Garth 'L-H' de Wet"};
+        authors[] = {"Garth 'L-H' de Wet", "mharis001"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "ACE_Settings.hpp"
-
 #include "CfgEventHandlers.hpp"
-
+#include "Cfg3DEN.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
@@ -25,9 +24,17 @@ class CfgPatches {
 #include "CfgCloudlets.hpp"
 
 #include "ACE_Triggers.hpp"
-#include "ExplosivesUI.hpp"
-#include "GUI_VirtualAmmo.hpp"
 #include "ACE_Arsenal_Stats.hpp"
+
+// UI stuff
+class RscText;
+class RscEdit;
+class RscPicture;
+class RscButton;
+class ctrlXSliderH;
+#include "ExplosivesUI.hpp"
+#include "TimerDialog.hpp"
+#include "GUI_VirtualAmmo.hpp"
 
 class CfgActions {
     class None;
@@ -38,6 +45,9 @@ class CfgActions {
         show = 0;
     };
     class DeactivateMine:None {
+        show = 0;
+    };
+    class UseContainerMagazine: None {
         show = 0;
     };
 };

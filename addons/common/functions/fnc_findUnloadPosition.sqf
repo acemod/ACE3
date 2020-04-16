@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, ViperMaul
  * Find a safe place near a vehicle to unload something.
@@ -18,8 +19,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 //Number of tests run (effects performance in worst case scenarior where nothing is found VERSUES reliably finding a pos):
 #define MAX_TESTS 75

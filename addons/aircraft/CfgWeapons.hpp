@@ -2,7 +2,7 @@ class Mode_FullAuto;
 
 class CfgWeapons {
     class RocketPods;
-    class ACE_AIR_SAFETY : RocketPods {
+    class ACE_AIR_SAFETY: RocketPods {
         CanLock = 0;
         displayName = "SAFE";
         displayNameMagazine = "SAFE";
@@ -16,8 +16,21 @@ class CfgWeapons {
         magazineReloadTime = 0.1;
     };
 
-    // bigger mag for comanche
     class CannonCore;
+    // Fix attrocious A-10 Cannon Dispersion; Add high ROF capability
+    class Gatling_30mm_Plane_CAS_01_F: CannonCore {
+        magazines[] += {"ACE_1000Rnd_Gatling_30mm_Plane_CAS_HEI","ACE_1000Rnd_Gatling_30mm_Plane_CAS_AP","ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM41","ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM51"};
+        class LowROF: Mode_FullAuto {
+            multiplier = 3;
+            burst = 1;
+            burstRangeMax = 1;
+            reloadtime = 0.046;
+            dispersion = 0.0046; //0.279508497 = 0.25 * sqrt(0.8^-1); (80%, 5mil. https://en.wikipedia.org/wiki/GAU-8_Avenger#Accuracy) - Luke
+            magazines[] = {"1000Rnd_Gatling_30mm_Plane_CAS_01_F", "ACE_1000Rnd_Gatling_30mm_Plane_CAS_CM"};
+
+        };
+    };
+    // bigger mag for comanche
     class gatling_20mm: CannonCore {
         magazines[] += {"ACE_500Rnd_20mm_shells_Comanche"};
 

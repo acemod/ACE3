@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Get the remaining ammunition amount.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_truck", "_unit"];
 TRACE_2("readSupplyCounter",_truck,_unit);
@@ -51,10 +51,10 @@ if (GVAR(supply) == 1) then {
             private _numChars = count (localize LSTRING(Hint_RemainingAmmo));
             private _text = "";
             private _magazines = _truck getVariable QGVAR(magazineSupply);
-            if !(isNil "_magazines") then {
+            if (!isNil "_magazines") then {
                 {
                     _x params ["_magazineClass", "_rounds"];
-                    private _line = format ["%1: %2",  getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"), _rounds];
+                    private _line = format ["%1: %2", _magazineClass call FUNC(getMagazineName), _rounds];
                     _numChars = _numChars max (count _line);
                     _text = format ["%1<br/>%2", _text, _line];
                     _supply = _supply + 0.5;

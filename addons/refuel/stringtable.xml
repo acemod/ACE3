@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
@@ -10,11 +10,12 @@
             <Czech>Nastavení tankování</Czech>
             <Italian>Impostazioni Rifornimento</Italian>
             <Spanish>Parámetros de reabastecimiento</Spanish>
-            <French>Réglages de ravitaillement</French>
+            <French>Paramètres de ravitaillement</French>
             <Japanese>給油設定</Japanese>
             <Korean>재급유 설정</Korean>
             <Chinesesimp>加油设定</Chinesesimp>
             <Chinese>加油設定</Chinese>
+            <Turkish>Yakıt Doldurma Ayarları</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_DisplayName">
             <English>Flow Rate</English>
@@ -25,11 +26,12 @@
             <Czech>Rychlost tankování</Czech>
             <Italian>Portata Flusso</Italian>
             <Spanish>Caudal de llenado</Spanish>
-            <French>Vitesse du ravitaillement</French>
+            <French>Débit de la pompe</French>
             <Japanese>流量</Japanese>
             <Korean>주유량</Korean>
             <Chinesesimp>油料流量</Chinesesimp>
             <Chinese>油料流量</Chinese>
+            <Turkish>Doldurma Hızı</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_Description">
             <English>How fast should a vehicle be refueled?</English>
@@ -40,11 +42,12 @@
             <Czech>Jak rychle bude vozidlo natankováno?</Czech>
             <Italian>Quanto velocemente dovrebbe essere rifornito un veicolo?</Italian>
             <Spanish>Cuán rápido se reabastecen los vehículos?</Spanish>
-            <French>A quelle vitesse devrait être ravitaillé un véhicule ?</French>
+            <French>Définit la vitesse de ravitaillement en carburant des véhicules.</French>
             <Japanese>どのくらいの速さで車両へ給油しますか?</Japanese>
             <Korean>차량이 얼마나 빨리 재급유될 수 있습니까?</Korean>
             <Chinesesimp>载具多快会加油完毕?</Chinesesimp>
             <Chinese>載具多快會加油完畢?</Chinese>
+            <Turkish>Bir araca ne kadar hızlı yakıt ikmali yapılmalıdır?</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
@@ -55,11 +58,12 @@
             <Czech>Natankovat</Czech>
             <Italian>Rifornisci</Italian>
             <Spanish>Reabastecer</Spanish>
-            <French>Ravitaillement</French>
+            <French>Faire le plein</French>
             <Japanese>給油</Japanese>
             <Korean>재급유</Korean>
             <Chinesesimp>加油</Chinesesimp>
             <Chinese>加油</Chinese>
+            <Turkish>Yakıt Doldurma</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzle">
             <English>Take fuel nozzle</English>
@@ -70,11 +74,12 @@
             <Czech>Vzít výdejní pistoli</Czech>
             <Italian>Prendi manica benzina</Italian>
             <Spanish>Tomar surtidor</Spanish>
-            <French>Prendre la pompe</French>
+            <French>Prendre le pistolet</French>
             <Japanese>給油ノズルを取る</Japanese>
             <Korean>주유기 획득</Korean>
             <Chinesesimp>拿取燃料喷嘴</Chinesesimp>
             <Chinese>拿取燃料噴嘴</Chinese>
+            <Turkish>Yakıt Pompasını Al</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzleAction">
             <English>Taking fuel nozzle...</English>
@@ -85,11 +90,12 @@
             <Czech>Beru výdejní pistoli...</Czech>
             <Italian>Prendendo manicotto benzina...</Italian>
             <Spanish>Tomando surtidor...</Spanish>
-            <French>Prise de la pompe...</French>
+            <French>Prise du pistolet...</French>
             <Japanese>給油ノズルを取っています・・・</Japanese>
             <Korean>주유기 획득중...</Korean>
             <Chinesesimp>拿取燃料喷嘴中...</Chinesesimp>
             <Chinese>拿取燃料噴嘴中...</Chinese>
+            <Turkish>Yakıt Pompası Alınıyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect">
             <English>Connect fuel nozzle</English>
@@ -100,11 +106,12 @@
             <Czech>Připojit výdejní pistoli</Czech>
             <Italian>Collega manica benzina</Italian>
             <Spanish>Conectar surtidor</Spanish>
-            <French>Connecter la pompe</French>
+            <French>Introduire le pistolet</French>
             <Japanese>給油ノズルを接続する</Japanese>
             <Korean>주유기 꼽기</Korean>
             <Chinesesimp>连接燃料喷嘴</Chinesesimp>
             <Chinese>連接燃料噴嘴</Chinese>
+            <Turkish>Yakıt Pompasını Bağla</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectAction">
             <English>Connecting fuel nozzle...</English>
@@ -115,11 +122,12 @@
             <Czech>Připojuji výdejní pistoli...</Czech>
             <Italian>Collegando manicotto benzina...</Italian>
             <Spanish>Conectando surtidor...</Spanish>
-            <French>Connection de la pompe...</French>
+            <French>Introduction du pistolet...</French>
             <Japanese>給油ノズルを接続しています・・・</Japanese>
             <Korean>주유기 꼽는중...</Korean>
             <Chinesesimp>连结燃料喷嘴中...</Chinesesimp>
             <Chinese>連結燃料噴嘴中...</Chinese>
+            <Turkish>Yakıt Pompası Bağlanıyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Disconnect">
             <English>Disconnect fuel nozzle</English>
@@ -130,11 +138,12 @@
             <Czech>Odpojit výdejní pistoli</Czech>
             <Italian>Scollega manicotto benzina</Italian>
             <Spanish>Desconectar surtidor</Spanish>
-            <French>Déconnecter la pompe</French>
-            <Japanese>給油ノズルを外しました</Japanese>
+            <French>Retirer le pistolet</French>
+            <Japanese>給油ノズルを外す</Japanese>
             <Korean>주유기 뽑기</Korean>
             <Chinesesimp>断开燃料喷嘴</Chinesesimp>
             <Chinese>斷開燃料噴嘴</Chinese>
+            <Turkish>Yakıt Pompası Çıkar</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect_Action">
             <English>Connect</English>
@@ -145,11 +154,12 @@
             <Czech>Připojit</Czech>
             <Italian>Collega</Italian>
             <Spanish>Conectar</Spanish>
-            <French>Connecter</French>
+            <French>Raccorder</French>
             <Japanese>接続</Japanese>
             <Korean>꼽기</Korean>
             <Chinesesimp>连结</Chinesesimp>
             <Chinese>連結</Chinese>
+            <Turkish>Bağlan</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuel">
             <English>Check remaining fuel</English>
@@ -165,6 +175,7 @@
             <Korean>남은 연료 확인</Korean>
             <Chinesesimp>检查剩余燃料</Chinesesimp>
             <Chinese>檢查剩餘燃料</Chinese>
+            <Turkish>Kalan yakıtı kontrol et</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelAction">
             <English>Checking remaining fuel...</English>
@@ -175,11 +186,12 @@
             <Czech>Kontroluji zůstatek paliva...</Czech>
             <Italian>Controllando la benzina rimanente...</Italian>
             <Spanish>Verificando combustible remanente,,,</Spanish>
-            <French>Vérifie le carburant restant...</French>
+            <French>Vérification du carburant restant...</French>
             <Japanese>残燃料を見ています・・・</Japanese>
             <Korean>남은 연료 확인중...</Korean>
             <Chinesesimp>检查剩余燃料中...</Chinesesimp>
             <Chinese>檢查剩餘燃料中...</Chinese>
+            <Turkish>Kalan Yakıt Kontrol Ediliyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_RemainingFuel">
             <English>There are %1 liters left.</English>
@@ -195,6 +207,7 @@
             <Korean>%1 리터 남음</Korean>
             <Chinesesimp>剩下%1公升的燃料。</Chinesesimp>
             <Chinese>剩下%1公升的燃料。</Chinese>
+            <Turkish>%1 litre kaldı.</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Empty">
             <English>There is no fuel left.</English>
@@ -210,6 +223,7 @@
             <Korean>연료 없음.</Korean>
             <Chinesesimp>没有剩余的燃料</Chinesesimp>
             <Chinese>沒有剩餘的燃料</Chinese>
+            <Turkish>Yakıt Kalmadı</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Cancel">
             <English>Cancel</English>
@@ -235,11 +249,12 @@
             <Czech>Neúspěšný</Czech>
             <Italian>Fallito</Italian>
             <Spanish>Falló</Spanish>
-            <French>Echoué</French>
+            <French>Échec</French>
             <Japanese>失敗</Japanese>
             <Korean>실패</Korean>
             <Chinesesimp>失败</Chinesesimp>
             <Chinese>失敗</Chinese>
+            <Turkish>Başarısız</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOff">
             <English>Stop fueling</English>
@@ -255,6 +270,7 @@
             <Korean>그만 재급유하기</Korean>
             <Chinesesimp>停止加油</Chinesesimp>
             <Chinese>停止加油</Chinese>
+            <Turkish>Yakıt Doldurmayı Durdur</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOn">
             <English>Start fueling</English>
@@ -265,11 +281,12 @@
             <Czech>Začít tankovat</Czech>
             <Italian>Inizia rifornimento</Italian>
             <Spanish>Comenzar reabastecimiento</Spanish>
-            <French>Débute le ravitaillement</French>
+            <French>Débuter le ravitaillement</French>
             <Japanese>給油を始める</Japanese>
             <Korean>재급유 시작</Korean>
             <Chinesesimp>开始加油</Chinesesimp>
             <Chinese>開始加油</Chinese>
+            <Turkish>Yakıt Doldurmayı Başlat</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
@@ -279,6 +296,11 @@
             <Chinese>無法開啟燃料噴嘴</Chinese>
             <Chinesesimp>无法开启燃料喷嘴</Chinesesimp>
             <Korean>주유기를 켤 수 없습니다.</Korean>
+            <Polish>Nie można włączyć dyszy paliwowej</Polish>
+            <Russian>Не удалось включить топливный пистолет</Russian>
+            <Portuguese>Não foi possível ativar o bico de combustível</Portuguese>
+            <French>Impossible de démarrer la pompe</French>
+            <Czech>Nepodařilo se zapnout trysku</Czech>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -289,7 +311,7 @@
             <Czech>%1 litrů natankováno</Czech>
             <Italian>%1 litri riforniti</Italian>
             <Spanish>%1 lt reabastecido</Spanish>
-            <French>%1 litres ravitaillés</French>
+            <French>%1 litres pompés.</French>
             <Japanese>%1 リッターを給油しました</Japanese>
             <Korean>%1 리터 재급유됨</Korean>
             <Chinesesimp>已加入%1公升的燃料</Chinesesimp>
@@ -319,7 +341,7 @@
             <Czech>Dosažena maximální délka hadice</Czech>
             <Italian>Distanza massima della pompa raggiunta.</Italian>
             <Spanish>Máxima longitud de manguera alcanzada.</Spanish>
-            <French>Tuyau tendu au maximum</French>
+            <French>Tuyau tendu au maximum.</French>
             <Japanese>給油ホースはもうこれ以上届きません。</Japanese>
             <Korean>주유기 호스 최대 거리에 도달함.</Korean>
             <Chinesesimp>已加满至最大油量。</Chinesesimp>
@@ -334,11 +356,12 @@
             <Czech>Tankování dokončeno</Czech>
             <Italian>Rifornimento completato</Italian>
             <Spanish>Reabastecimiento completado</Spanish>
-            <French>Ravitaillement terminé</French>
+            <French>Ravitaillement terminé.</French>
             <Japanese>給油を完了しました</Japanese>
             <Korean>재급유 완료함</Korean>
             <Chinesesimp>加油完毕</Chinesesimp>
             <Chinese>加油完畢</Chinese>
+            <Turkish>Yakıt Doldurma Tamamlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Stopped">
             <English>Fueling stopped</English>
@@ -349,11 +372,12 @@
             <Czech>Tankování zastaveno</Czech>
             <Italian>Rifornimento fermato</Italian>
             <Spanish>Reabastecimiento detenido</Spanish>
-            <French>Ravitaillement stoppé</French>
+            <French>Ravitaillement arrêté.</French>
             <Japanese>給油を止めました</Japanese>
             <Korean>재급유 멈춤</Korean>
             <Chinesesimp>已停止加油</Chinesesimp>
             <Chinese>已停止加油</Chinese>
+            <Turkish>Yakıt Doldurma Durduruldu</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Started">
             <English>Fueling started</English>
@@ -364,11 +388,12 @@
             <Czech>Tankování zahájeno</Czech>
             <Italian>Rifornimento iniziato</Italian>
             <Spanish>Comenzó el reabastecimiento</Spanish>
-            <French>Ravitaillement débuté</French>
+            <French>Ravitaillement démarré.</French>
             <Japanese>給油を始めました</Japanese>
             <Korean>재급유 시작함</Korean>
             <Chinesesimp>已开始加油</Chinesesimp>
             <Chinese>已開始加油</Chinese>
+            <Turkish>Yakıt Doldurma Başlatıldı</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Return">
             <English>Return fuel nozzle</English>
@@ -379,11 +404,12 @@
             <Czech>Vrátit výdejní pistoli</Czech>
             <Italian>Riponi manicotto benzina</Italian>
             <Spanish>Devolver surtidor</Spanish>
-            <French>Retourner la pompe</French>
+            <French>Ranger le pistolet</French>
             <Japanese>給油ノズルを戻す</Japanese>
             <Korean>주유기 반환</Korean>
             <Chinesesimp>放回燃料喷嘴</Chinesesimp>
             <Chinese>放回燃料噴嘴</Chinese>
+            <Turkish>Yakıt Pompasını Geri Koy</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_ReturnAction">
             <English>Returning fuel nozzle...</English>
@@ -394,11 +420,12 @@
             <Czech>Vracím výdejní pistoli...</Czech>
             <Italian>Riponendo la manica della benzina...</Italian>
             <Spanish>Devolviendo el surtidor...</Spanish>
-            <French>Retourne la pompe</French>
+            <French>Rangement du pistolet...</French>
             <Japanese>給油ノズルを戻しています・・・</Japanese>
             <Korean>주유기 반환중</Korean>
             <Chinesesimp>放回燃料喷嘴中...</Chinesesimp>
             <Chinese>放回燃料噴嘴中...</Chinese>
+            <Turkish>Yakıt Pompası Geri Koyuluyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounter">
             <English>Check fuel counter</English>
@@ -424,7 +451,7 @@
             <Czech>%1 litrů bylo natankováno.</Czech>
             <Italian>%1 litri sono stati riforniti.</Italian>
             <Spanish>Se reabastecieron %1 lt </Spanish>
-            <French>%1 litres ont été écoulés.</French>
+            <French>%1 litres ont été pompés.</French>
             <Japanese>%1 リッターが給油されました。</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
             <Chinesesimp>已加入%1公升</Chinesesimp>
@@ -440,6 +467,10 @@
             <Chinese>加油軟管長度</Chinese>
             <Polish>Długość węża paliwowego</Polish>
             <Korean>주유기 호스 길이</Korean>
+            <Russian>Длина заправочного шланга</Russian>
+            <Portuguese>Comprimento da Mangueira de Combustível</Portuguese>
+            <French>Longueur du tuyau</French>
+            <Czech>Délka hadice na palivo</Czech>
         </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenName">
             <English>Fuel Cargo Volume</English>
@@ -450,6 +481,10 @@
             <Chinese>儲油量</Chinese>
             <Chinesesimp>储油量</Chinesesimp>
             <Korean>연료통 크기</Korean>
+            <Polish>Pojemność Ładunku Paliwa</Polish>
+            <Portuguese>Capacidade de Combustível</Portuguese>
+            <French>Volume de la citerne</French>
+            <Czech>Objem palivové cisterny</Czech>
         </Key>
         <!-- REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL are used here -->
         <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
@@ -461,6 +496,10 @@
             <Chinese>設定有多少油料可供載具進行加油(-1時關閉，-10為無限油量)</Chinese>
             <Chinesesimp>设定有多少油料可供载具进行加油(-1时关闭，-10为无限油量)</Chinesesimp>
             <Korean>재급유에 사용 할 수 있는 연료량 (-1=비활성, -10=무한)</Korean>
+            <Polish>Pojemność paliwa dostępnego do tankowania (-1 wyłącz, -10 jeśli nieskończone)</Polish>
+            <Portuguese>Quantidade de combustível disponível para abastecer (-1 para desativar, -10 para infinito)</Portuguese>
+            <French>Le volume de carburant disponible pour le ravitaillement (-1 pour désactiver, -10 pour quantité illimitée).</French>
+            <Czech>Objem paliva k tankování (-1 pro vypnutí, -10 pro nekonečno)</Czech>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenName">
             <English>Refuel Hose attach coordinates</English>
@@ -471,6 +510,10 @@
             <Chinese>加油軟管安裝位置</Chinese>
             <Chinesesimp>加油软管安装位置</Chinesesimp>
             <Korean>재급유기 부착 좌표</Korean>
+            <Polish>Koordynaty przyłączenia węża paliwowego</Polish>
+            <Portuguese>Coords. do encaixe para Mangueira</Portuguese>
+            <French>Coordonnées du pistolet</French>
+            <Czech>Souřadnice pro připojení hadice na palivo</Czech>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenDesc">
             <English>Model coordinates used to attach refuel hose</English>
@@ -481,6 +524,10 @@
             <Chinese>設定加油軟管會安裝到模型的哪個位置上</Chinese>
             <Chinesesimp>设定加油软管会安装到模型的哪个位置上</Chinesesimp>
             <Korean>재급유기 부착에 쓰이는 모델 좌표</Korean>
+            <Polish>Modelowe koordynaty wykorzystane do przyłączenia węża paliwowego</Polish>
+            <Portuguese>As coordenadas do modelo usado para conectar a mangueira ao veículo</Portuguese>
+            <French>Coordonnées du modèle 3D où est attaché le tuyau ravitaillement.</French>
+            <Czech>Souřadnice na modelu pro připojení hadice na palivo.</Czech>
         </Key>
     </Package>
 </Project>

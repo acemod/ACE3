@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Chemlights">
         <Key ID="STR_ACE_Chemlights_Action_Chemlights">
@@ -11,21 +11,30 @@
             <Italian>Luce chimica</Italian>
             <Chinese>螢光棒</Chinese>
             <Chinesesimp>萤光棒</Chinesesimp>
+            <Russian>Химсвет</Russian>
+            <Portuguese>Bastões de Luz</Portuguese>
+            <Czech>Chemická světla</Czech>
+            <Spanish>Luces químicas</Spanish>
+            <Turkish>Işık Çubukları</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare">
             <English>Prepare %1</English>
-            <Japanese>%1 をつかう</Japanese>
+            <Japanese>%1 を使う</Japanese>
             <Polish>Przygotuj %1</Polish>
             <German>%1 vorbereiten</German>
             <Korean>%1 준비</Korean>
-            <French>Prépare %1</French>
+            <French>Préparer un %1</French>
             <Italian>Prepara %1</Italian>
             <Chinese>使用%1</Chinese>
             <Chinesesimp>使用%1</Chinesesimp>
+            <Russian>Приготовить %1</Russian>
+            <Portuguese>Preparar %1</Portuguese>
+            <Czech>Připravit %1</Czech>
+            <Spanish>Preparar %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
-            <Japanese>%1&lt;br/&gt;をつかった</Japanese>
+            <Japanese>%1&lt;br/&gt;を使った</Japanese>
             <Polish>%1&lt;br/&gt;Przygotowany</Polish>
             <German>%1&lt;br/&gt;vorbereitet</German>
             <Korean>%1&lt;br/&gt;준비됨</Korean>
@@ -33,13 +42,17 @@
             <Italian>%1 &lt;br/&gt; Preparata</Italian>
             <Chinese>%1&lt;br/&gt;已使用</Chinese>
             <Chinesesimp>%1&lt;br/&gt;已使用</Chinesesimp>
+            <Russian>%1&lt;br/&gt;Приготовлен</Russian>
+            <Portuguese>%1&lt;br/&gt;Preparado</Portuguese>
+            <Czech>%1&lt;br/&gt;Připraveno</Czech>
+            <Spanish>%1&lt;br/&gt;Preparado</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Inventory_Full">
             <English>No inventory space</English>
             <German>Kein Platz im Inventar</German>
             <Spanish>Sin espacio en inventario</Spanish>
             <Polish>Brak miejsca w ekwipunku</Polish>
-            <French>Pas de place</French>
+            <French>Pas de place dans l'inventaire</French>
             <Czech>Nedostatek místa v inventáři</Czech>
             <Portuguese>Sem espaço no inventário</Portuguese>
             <Italian>Nessuno spazio nell'inventario</Italian>
@@ -49,6 +62,7 @@
             <Korean>소지품 공간이 없음</Korean>
             <Chinese>已無存放空間</Chinese>
             <Chinesesimp>已无存放空间</Chinesesimp>
+            <Turkish>Envanter de alan yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Box_DisplayName">
             <English>[ACE] Chemlights</English>
@@ -56,10 +70,14 @@
             <Polish>[ACE] Świetliki</Polish>
             <German>[ACE] Knicklichter</German>
             <Korean>[ACE] 켐라이트</Korean>
-            <French>[ACE] Cyalume</French>
+            <French>[ACE] Cyalumes</French>
             <Italian>[ACE] Luci chimiche</Italian>
             <Chinese>[ACE] 螢光棒</Chinese>
             <Chinesesimp>[ACE] 萤光棒</Chinesesimp>
+            <Russian>[ACE] Химсвет</Russian>
+            <Portuguese>[ACE] Bastões de Luz</Portuguese>
+            <Czech>[ACE] Chemická světla</Czech>
+            <Spanish>[ACE] Luces químicas</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayName">
             <English>Chemlight (Orange)</English>
@@ -71,6 +89,11 @@
             <Italian>Luce chimica (Arancione)</Italian>
             <Chinese>螢光棒 (橘色)</Chinese>
             <Chinesesimp>萤光棒 (橘色)</Chinesesimp>
+            <Russian>Химсвет (Оранжевый)</Russian>
+            <Portuguese>Bastão de Luz (Laranja)</Portuguese>
+            <Czech>Chemické světlo (Oranžové)</Czech>
+            <Spanish>Luz química (naranja)</Spanish>
+            <Turkish>Işık Çubuğu (Turuncu)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayNameShort">
             <English>Orange Light</English>
@@ -82,6 +105,11 @@
             <Italian>Luce Arancione</Italian>
             <Chinese>橘色光</Chinese>
             <Chinesesimp>橘色光</Chinesesimp>
+            <Russian>Оранжевый свет</Russian>
+            <Portuguese>Luz Laranja</Portuguese>
+            <Czech>Oranžové světlo</Czech>
+            <Spanish>Luz naranja</Spanish>
+            <Turkish>Turuncu Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DescriptionShort">
             <English>Type: Light - Orange&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -89,10 +117,14 @@
             <Polish>Typ: Światło - pomarańczowe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - orange&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류:밝은 오렌지&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - orange&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <French>Type : lumière - Orange&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
             <Italian>Tipo: Luce - Arancione&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 橘色&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型: 光 - 橘色&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <Russian>Тип: Свет - Оранжевый&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Laranja&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Czech>Typ: Světlo - Oranžové&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Naranja&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayName">
             <English>Chemlight (White)</English>
@@ -104,6 +136,11 @@
             <Italian>Luce chimica (Bianca)</Italian>
             <Chinese>螢光棒 (白色)</Chinese>
             <Chinesesimp>萤光棒 (白色)</Chinesesimp>
+            <Russian>Химсвет (Белый)</Russian>
+            <Portuguese>Bastão de Luz (Branco)</Portuguese>
+            <Czech>Chemické světlo (Bílé)</Czech>
+            <Spanish>Luz química (Blanca)</Spanish>
+            <Turkish>Işık Çubuğu (Beyaz)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayNameShort">
             <English>White Light</English>
@@ -115,6 +152,11 @@
             <Italian>Luce Bianca</Italian>
             <Chinese>白色光</Chinese>
             <Chinesesimp>白色光</Chinesesimp>
+            <Russian>Белый свет</Russian>
+            <Portuguese>Luz Branca</Portuguese>
+            <Czech>Bílé světlo</Czech>
+            <Spanish>Luz blanca</Spanish>
+            <Turkish>Beyaz Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DescriptionShort">
             <English>Type: Light - White&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -122,10 +164,14 @@
             <Polish>Typ: Światło - białe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - weiß&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류:하얀색&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - blanche&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <French>Type : lumière - Blanche&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
             <Italian>Tipo: Luce - Bianca&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 白色&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型: 光 - 白色&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <Russian>Тип: Свет - Белый&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Branco&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Czech>Typ: Světlo - Bílé&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Blanca&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayName">
             <English>Chemlight (Hi Red)</English>
@@ -133,10 +179,15 @@
             <Polish>Świetlik (jaskrawy czerwony)</Polish>
             <German>Knicklicht (rot, hell)</German>
             <Korean>켐라이트 (밝은 빨간색)</Korean>
-            <French>Cyalume (Hi rouge)</French>
+            <French>Cyalume HL (rouge)</French>
             <Italian>Luce chimica (Hi Rossa)</Italian>
             <Chinese>螢光棒 (超亮紅色)</Chinese>
             <Chinesesimp>萤光棒 (超亮红色)</Chinesesimp>
+            <Russian>Химсвет (Ярко-Красный)</Russian>
+            <Portuguese>Bastão de Luz (Vermelho Forte)</Portuguese>
+            <Czech>Chemické světlo (Červené jasné)</Czech>
+            <Spanish>Luz química (Roja Hi)</Spanish>
+            <Turkish>Işık Çubuğu (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayNameShort">
             <English>Red Hi Light</English>
@@ -144,21 +195,30 @@
             <Polish>Jaskrawe czerwone światło</Polish>
             <German>Helles, rotes Knicklicht</German>
             <Korean>밝은 빨간색</Korean>
-            <French>Lum. rouge haute intensité</French>
+            <French>Lum. rouge HL</French>
             <Italian>Luce Hi Rossa</Italian>
             <Chinese>超亮紅色光</Chinese>
             <Chinesesimp>超亮红色光</Chinesesimp>
+            <Russian>Яркий Красный свет</Russian>
+            <Portuguese>Luz forte vermelha</Portuguese>
+            <Czech>Červené jasné světlo</Czech>
+            <Spanish>Luz roja Hi</Spanish>
+            <Turkish>Kırmızı Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
-            <English>Type: Light - Red Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 赤 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - jaskrawe czerwone (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - rot, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류: 밝은 빨간색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - rouge Hi (5 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
-            <Italian>Tipo: Luce - Rossa Hi (5 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
-            <Chinese>類型: 光 - 超亮紅色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
-            <Chinesesimp>类型: 光 - 超亮红色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <English>Type: Light - Red Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 赤 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe czerwone (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - rot, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류: 밝은 빨간색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+            <French>Type : lumière HL (30 minutes) - Rouge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
+            <Italian>Tipo: Luce - Rossa Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Chinese>類型: 光 - 超亮紅色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 超亮红色 (30分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <Russian>Тип: Свет - Ярко-Красный (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Vermelho Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Czech>Typ: Světlo - Červené jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Roja Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayName">
             <English>Chemlight (Hi Yellow)</English>
@@ -166,10 +226,15 @@
             <Polish>Świetlik (jaskrawy żółty)</Polish>
             <German>Knicklicht (gelb, hell)</German>
             <Korean>켐라이트 (밝은 노란색)</Korean>
-            <French>Cyalume (Hi jaune)</French>
+            <French>Cyalume HL (jaune)</French>
             <Italian>Luce chimica (Hi Gialla)</Italian>
             <Chinese>螢光棒 (超亮黃色)</Chinese>
             <Chinesesimp>萤光棒 (超亮黄色)</Chinesesimp>
+            <Russian>Химсвет (Ярко-Желтый)</Russian>
+            <Portuguese>Bastão de Luz (Amarelo Forte)</Portuguese>
+            <Czech>Chemické světlo (Žluté jasné)</Czech>
+            <Spanish>Luz química (Amarilla Hi)</Spanish>
+            <Turkish>Işık Çubuğu (Sarı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayNameShort">
             <English>Yellow Hi Light</English>
@@ -177,54 +242,30 @@
             <Polish>Jaskrawe żółte światło</Polish>
             <German>Helles, gelbes Knicklicht</German>
             <Korean>밝은 노란색</Korean>
-            <French>Lum. jaune haute intensité</French>
+            <French>Lum. jaune HL</French>
             <Italian>Luce Hi Gialla</Italian>
             <Chinese>超亮黃色光</Chinese>
             <Chinesesimp>超亮黄色光</Chinesesimp>
+            <Russian>Яркий Желтый свет</Russian>
+            <Portuguese>Luz forte amarela</Portuguese>
+            <Czech>Žluté jasné světlo</Czech>
+            <Spanish>Luz amarilla Hi</Spanish>
+            <Turkish>Sarı Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
-            <English>Type: Light - Yellow Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 黄 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - jaskrawe żółte (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - gelb, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류:밝은 노란색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
-            <French>Type: Lumière - Jaune Hi (5 minutes)Nbre: 1&lt;br /&gt; À main</French>
-            <Italian>Tipo: Luce - Gialla Hi (5 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
-            <Chinese>類型: 光 - 超亮黃色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
-            <Chinesesimp>类型: 光 - 超亮黄色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Chemlights_HiOrange_DisplayName">
-            <English>Chemlight (Hi Orange)</English>
-            <Japanese>ケミライト (高輝度 オレンジ)</Japanese>
-            <Polish>Świetlik (jaskrawy pomarańczowy)</Polish>
-            <German>Knicklicht (orange, hell)</German>
-            <Korean>켐라이트 (밝은 주황색)</Korean>
-            <French>Cyalume (Hi orange)</French>
-            <Italian>Luce chimica (Hi Arancione)</Italian>
-            <Chinese>螢光棒 (超亮橘色)</Chinese>
-            <Chinesesimp>萤光棒 (超亮橘色)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Chemlights_HiOrange_DisplayNameShort">
-            <English>Orange Hi Light</English>
-            <Japanese>高輝度のオレンジ</Japanese>
-            <Polish>Jaskrawe pomarańczowe światło</Polish>
-            <German>Helles, oranges Knicklicht</German>
-            <Korean>밝은 주황색</Korean>
-            <French>Lum. orange haute intensité</French>
-            <Italian>Luce Hi Arancione</Italian>
-            <Chinese>超亮橘色光</Chinese>
-            <Chinesesimp>超亮橘色光</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Chemlights_HiOrange_DescriptionShort">
-            <English>Type: Light - Orange Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 オレンジ (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - orange, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류: 밝은 주황색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - orange Hi (5 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
-            <Italian>Tipo: Luce - Arancione Hi (5 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
-            <Chinese>類型: 光 - 超亮橘色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
-            <Chinesesimp>类型: 光 - 超亮橘色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <English>Type: Light - Yellow Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 黄 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe żółte (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - gelb, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류:밝은 노란색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
+            <French>Type : lumière HL (30 minutes) - Jaune&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
+            <Italian>Tipo: Luce - Gialla Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Chinese>類型: 光 - 超亮黃色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 超亮黄色 (30分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <Russian>Тип: Свет - Ярко-Желтый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Amarelo Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Czech>Typ: Světlo - Žluté jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Amarilla Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayName">
             <English>Chemlight (Hi White)</English>
@@ -232,10 +273,14 @@
             <Polish>Świetlik (jaskrawy biały)</Polish>
             <German>Knicklicht (weiß, hell)</German>
             <Korean>켐라이트 (밝은 하얀색)</Korean>
-            <French>Cyalume (Hi blanc)</French>
+            <French>Cyalume HL (blanc)</French>
             <Italian>Luce chimica (Hi Bianca)</Italian>
             <Chinese>螢光棒 (超亮白色)</Chinese>
             <Chinesesimp>萤光棒 (超亮白色)</Chinesesimp>
+            <Russian>Химсвет (Ярко-Белый)</Russian>
+            <Portuguese>Bastão de Luz (Branco Forte)</Portuguese>
+            <Czech>Chemické světlo (Bílé jasné)</Czech>
+            <Spanish>Luz química (Blanca Hi)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayNameShort">
             <English>White Hi Light</English>
@@ -243,21 +288,146 @@
             <Polish>Jaskrawe białe światło</Polish>
             <German>Helles, weißes Knicklicht</German>
             <Korean>밝은 하얀색</Korean>
-            <French>Lum. blanche haute intensité</French>
+            <French>Lum. blanche HL</French>
             <Italian>Luce Hi Bianca</Italian>
             <Chinese>超亮白色光</Chinese>
             <Chinesesimp>超亮白色光</Chinesesimp>
+            <Russian>Яркий Белый свет</Russian>
+            <Portuguese>Luz forte branca</Portuguese>
+            <Czech>Bílé jasné světlo</Czech>
+            <Spanish>Luz blanca Hi</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
-            <English>Type: Light - White Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 白 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
-            <Polish>Typ: Światło - jaskrawe białe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - weiß, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
-            <Korean>종류: 밝은 하얀색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - blanche Hi (5 minutes)&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
-            <Italian>Tipo: Luce - Bianca Hi (5 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
-            <Chinese>類型: 光 - 超亮白色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
-            <Chinesesimp>类型: 光 - 超亮白色 (5分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <English>Type: Light - White Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 白 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe białe (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - weiß, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류: 밝은 하얀색 (30분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+            <French>Type : lumière HL (30 minutes) - Blanche&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
+            <Italian>Tipo: Luce - Bianca Hi (30 minuti)&lt;br /&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Chinese>類型: 光 - 超亮白色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Chinesesimp>类型: 光 - 超亮白色 (30分钟)&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <Russian>Тип: Свет - Ярко-Белый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Branco Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Czech>Typ: Světlo - Bílé jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Blanca Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiBlue_DisplayName">
+            <English>Chemlight (Hi Blue)</English>
+            <French>Cyalume HL (bleu)</French>
+            <Japanese>ケミライト (高輝度 青)</Japanese>
+            <Polish>Świetlik (jaskrawy niebieski)</Polish>
+            <German>Knicklicht (Blau, Hell)</German>
+            <Italian>Luce chimica (Hi Blu)</Italian>
+            <Russian>Химсвет (Ярко-Синий)</Russian>
+            <Portuguese>Bastão de Luz (Azul Forte)</Portuguese>
+            <Chinese>螢光棒（超亮藍色）</Chinese>
+            <Czech>Chemické světlo (Modré jasné)</Czech>
+            <Spanish>Luz química (Azul Hi)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiBlue_DisplayNameShort">
+            <English>Blue Hi Light</English>
+            <French>Lum. bleue HL</French>
+            <German>Helles, blaues Knicklicht</German>
+            <Japanese>高輝度の青色</Japanese>
+            <Polish>Jaskrawe niebieskie światło</Polish>
+            <Italian>Luce Hi Blu</Italian>
+            <Russian>Яркий Синий свет</Russian>
+            <Portuguese>Luz forte azul</Portuguese>
+            <Chinese>超亮藍色光</Chinese>
+            <Czech>Modré jasné světlo</Czech>
+            <Spanish>Luz azul Hi</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiBlue_DescriptionShort">
+            <English>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <French>Type : lumière HL (30 minutes) - Bleue&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
+            <German>Typ: Licht - blau, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Japanese>種類: 照明 - 高輝度 青 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe niebieskie (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <Italian>Tipo: Luce - Hi blu (30 minuti)&lt;br/&gt;Rimanenti:1 &lt;br/&gt;Usata in: Mano</Italian>
+            <Russian>Тип: Свет - Ярко-Синий (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Azul Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Chinese>類型: 光 - 超亮藍色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Czech>Typ: Světlo - Modré jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Azul Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiGreen_DisplayName">
+            <English>Chemlight (Hi Green)</English>
+            <French>Cyalume HL (vert)</French>
+            <German>Knicklicht (Grün, Hell)</German>
+            <Japanese>ケミライト (高輝度 緑)</Japanese>
+            <Polish>Świetlik (jaskrawy zielony)</Polish>
+            <Italian>Luce chimica (Hi Verde)</Italian>
+            <Russian>Химсвет (Ярко-Зеленый)</Russian>
+            <Portuguese>Bastão de Luz (Verde Forte)</Portuguese>
+            <Chinese>螢光棒（超亮綠色）</Chinese>
+            <Czech>Chemické světlo (Zelené jasné)</Czech>
+            <Spanish>Luz química (Verde Hi)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiGreen_DisplayNameShort">
+            <English>Green Hi Light</English>
+            <French>Lum. verte HL</French>
+            <German>Helles, grünes Knicklicht</German>
+            <Japanese>高輝度の青色</Japanese>
+            <Polish>Jaskrawe zielone światło</Polish>
+            <Italian>Luce Hi Verde</Italian>
+            <Russian>Яркий Зеленый свет</Russian>
+            <Portuguese>Luz forte verde</Portuguese>
+            <Chinese>超亮綠色光</Chinese>
+            <Czech>Zelené jasné světlo</Czech>
+            <Spanish>Luz verde Hi</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiGreen_DescriptionShort">
+            <English>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <French>Type : lumière HL (30 minutes) - Verte&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
+            <German>Typ: Licht - grün, hell (30 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Japanese>種類: 照明 - 高輝度 緑 (30分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe zielone (30 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <Italian>Tipo: Luce - Hi verde (30 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Russian>Тип: Свет - Ярко-Зеленый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Verde Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Chinese>類型: 光 - 超亮綠色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Czech>Typ: Světlo - Zelené jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Verde Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayName">
+            <English>Chemlight (Ultra-Hi Orange)</English>
+            <French>Cyalume UHL (orange)</French>
+            <German>Knicklicht (Orange, Hell)</German>
+            <Japanese>ケミライト (高輝度 オレンジ)</Japanese>
+            <Polish>Świetlik (ultra-jaskrawy pomarańczowy)</Polish>
+            <Italian>Luce chimica (Ultra-Hi Arancione)</Italian>
+            <Russian>Химсвет (Ультраяркий Оранжевый)</Russian>
+            <Portuguese>Bastão de Luz (Laranja Ultra Forte)</Portuguese>
+            <Chinese>螢光棒（極亮橘色）</Chinese>
+            <Czech>Chemické světlo (Oranžové velmi jasné)</Czech>
+            <Spanish>Luz química (Naranja Ultra-Hi)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayNameShort">
+            <English>Orange Ultra-Hi Light</English>
+            <French>Lum. orange UHL</French>
+            <German>Helles, orangenes Knicklicht</German>
+            <Japanese>ウルトラ高輝度のオレンジ色</Japanese>
+            <Polish>Ultra-jaskrawe pomarańczowe światło</Polish>
+            <Italian>Luce Ultra-Hi Arancione</Italian>
+            <Russian>Ультраяркий Оранжевый свет</Russian>
+            <Portuguese>Luz ultra forte laranja</Portuguese>
+            <Chinese>極亮橘色光</Chinese>
+            <Czech>Oranžové velmi jasné světlo</Czech>
+            <Spanish>Luz naranja Ultra-Hi</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_UltraHiOrange_DescriptionShort">
+            <English>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <French>Type : lumière UHL (5 minutes) - Orange&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
+            <German>Typ: Licht - orange, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Japanese>種類: 照明 - ウルトラ高輝度 オレンジ (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - ultra-jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <Italian>Tipo: Luce - Ultra-Hi (5 minuti)&lt;br/&gt;Rimanenti: 1&lt;br/&gt;Usata in: Mano</Italian>
+            <Russian>Тип: Свет - Ультраяркий Оранжевый (5 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Laranja Ultra Forte (5 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Chinese>類型: 光 - 極亮橘色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
+            <Czech>Typ: Světlo - Oranžové velmi jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Naranja Ultra-Hi (5 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
             <English>Chemlight (IR)</English>
@@ -269,6 +439,10 @@
             <Italian>Luce chimica (IR)</Italian>
             <Chinese>螢光棒 (紅外線)</Chinese>
             <Chinesesimp>萤光棒 (红外线)</Chinesesimp>
+            <Russian>Химсвет (Инфракрасный)</Russian>
+            <Portuguese>Bastão de Luz (IV)</Portuguese>
+            <Czech>Chemické světlo (Infračervené)</Czech>
+            <Spanish>Luz química (IR)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayNameShort">
             <English>IR Light</English>
@@ -276,10 +450,14 @@
             <Polish>Światło podczerwone</Polish>
             <German>IR-Knicklicht</German>
             <Korean>적외선 켐라이트</Korean>
-            <French>Lumière IR</French>
+            <French>Lum. IR</French>
             <Italian>Luce IR</Italian>
             <Chinese>紅外線光</Chinese>
             <Chinesesimp>红外线光</Chinesesimp>
+            <Russian>Инфракрасный свет</Russian>
+            <Portuguese>Bastão de luz infravermelho</Portuguese>
+            <Czech>Infračervené světlo</Czech>
+            <Spanish>Luz IR</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DescriptionShort">
             <English>Type: Light - Infrared&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -287,10 +465,14 @@
             <Polish>Typ: Światło - podczerwone&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - infrarot&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류: 적외선&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
-            <French>Type: Lumière - infrarouge&lt;br /&gt;Nbre: 1&lt;br /&gt; À main</French>
+            <French>Type: lumière - Infrarouge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
             <Italian>Tipo: Luce - Infrarossi&lt;br /&gt;Usata in: Mano</Italian>
             <Chinese>類型: 光 - 紅外線&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Chinesesimp>类型: 光 - 红外线&lt;br /&gt;发数: 1&lt;br /&gt;使用于: 手</Chinesesimp>
+            <Russian>Тип: Свет - Инфракрасный&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
+            <Portuguese>Tipo: Luz - Infravermelho&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
+            <Czech>Typ: Světlo - Infračervené&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz infra-roja&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Empty_DisplayName">
             <English>Chemlight Shield (Empty)</English>
@@ -298,10 +480,14 @@
             <Polish>Osłona na świetlik (pusta)</Polish>
             <German>Knicklicht-Abschirmung (leer)</German>
             <Korean>켐라이트 쉴드 (비어있음)</Korean>
-            <French>Étui cyalume (vide)</French>
+            <French>Etui cyalume (vide)</French>
             <Italian>Scudo Luce chimica (Vuoto)</Italian>
             <Chinese>螢光棒保護殼 (空)</Chinese>
             <Chinesesimp>萤光棒保护壳 (空)</Chinesesimp>
+            <Russian>Контейнер для Химсвета (Пуст)</Russian>
+            <Portuguese>Estojo de Luz (Vazio)</Portuguese>
+            <Czech>Clona na chemické světlo</Czech>
+            <Spanish>Protector de luz química (Vacía)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Empty_DescriptionShort">
             <English>Shield for chemlights. Combine with chemlight to prepare reading light.</English>
@@ -309,10 +495,14 @@
             <Polish>Osłona na świetliki. Połącz ją ze świetlikiem by stworzyć lampkę do czytania.</Polish>
             <German>Abschirmung für Knicklichter. Mit Knicklicht kombinieren, um Leselicht zu erhalten.</German>
             <Korean>켐라이트를 위한 가림막입니다. 켐라이트와 같이 사용하여  읽을 때 씁니다.</Korean>
-            <French>Étui pour cyalume. Combiné avec un cyalume pour obtennir un lampe de lecture.</French>
+            <French>Étui pour cyalume. Le combiner avec un cyalume pour obtenir une lampe de lecture.</French>
             <Italian>Scudo per luci chimiche. Combina con una luce chimica per una luce da lettura.</Italian>
             <Chinese>螢光棒的保護殼. 與螢光棒結合後可充當閱讀燈</Chinese>
             <Chinesesimp>萤光棒的保护壳. 与萤光棒结合后可充当阅读灯.</Chinesesimp>
+            <Russian>Защитный контейнер для Химсвета. Объедините с Химсветом, чтобы подготовить Свет для чтения</Russian>
+            <Portuguese>Estojo para os bastões de luz. Combine com o bastão de luz para preparar luz de leitura.</Portuguese>
+            <Czech>Clona na chemické světlo. Při vložení chemického světla vznikne praktické světlo na čtení.</Czech>
+            <Spanish>Protector para luz química. Combina con luz química para preparar una luz de lectura</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DisplayName">
             <English>Chemlight Shield (Green)</English>
@@ -320,10 +510,14 @@
             <Polish>Osłona na świetlik (zielona)</Polish>
             <German>Knicklicht-Abschirmung (grün)</German>
             <Korean>켐라이트 쉴드 (초록)</Korean>
-            <French>Étui cyalume (vert)</French>
+            <French>Etui avec cyalume (vert)</French>
             <Italian>Scudo Luce Chimica (Verde)</Italian>
             <Chinese>螢光棒保護殼 (綠色)</Chinese>
             <Chinesesimp>萤光棒保护壳 (绿色)</Chinesesimp>
+            <Russian>Контейнер для Химсвета (Зел)</Russian>
+            <Portuguese>Estojo de Luz (Verde)</Portuguese>
+            <Czech>Clona s vloženým chemickým světlem (Zelené)</Czech>
+            <Spanish>Protector de luz química (Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DescriptionShort">
             <English>Green reading light.</English>
@@ -331,10 +525,14 @@
             <Polish>Zielona lampka.</Polish>
             <German>Grünes Leselicht.</German>
             <Korean>초록빛 조명</Korean>
-            <French>Lampe d'orientation verte.</French>
+            <French>Lampe de lecture verte.</French>
             <Italian>Luce da lettura Verde.</Italian>
             <Chinese>綠色閱讀燈</Chinese>
             <Chinesesimp>绿色阅读灯。</Chinesesimp>
+            <Russian>Ночник из Химсвета (Зеленый)</Russian>
+            <Portuguese>Luz de leitura verde.</Portuguese>
+            <Czech>Zelené světlo na čtení.</Czech>
+            <Spanish>Luz de lectura verde</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DisplayName">
             <English>Chemlight Shield (Red)</English>
@@ -342,10 +540,14 @@
             <Polish>Osłona na świetlik (czerwona)</Polish>
             <German>Knicklicht-Abschirmung (rot)</German>
             <Korean>켐라이트 쉴드 (빨강)</Korean>
-            <French>Étui cyalume (rouge)</French>
+            <French>Etui avec cyalume (rouge)</French>
             <Italian>Scudo Luce Chimica (Rossa)</Italian>
             <Chinese>螢光棒保護殼 (紅色)</Chinese>
             <Chinesesimp>萤光棒保护壳 (红色)</Chinesesimp>
+            <Russian>Контейнер для Химсвета (Красн)</Russian>
+            <Portuguese>Estojo de Luz (Vermelho)</Portuguese>
+            <Czech>Clona s vloženým chemickým světlem (Červené)</Czech>
+            <Spanish>Protector de luz química (Roja)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DescriptionShort">
             <English>Red reading light.</English>
@@ -353,10 +555,14 @@
             <Polish>Czerwona lampka.</Polish>
             <German>Rotes Leselicht.</German>
             <Korean>빨간색 조명</Korean>
-            <French>Lampe d'orientation rouge.</French>
+            <French>Lampe de lecture rouge.</French>
             <Italian>Luce da lettura Rossa.</Italian>
             <Chinese>紅色閱讀燈</Chinese>
             <Chinesesimp>红色阅读灯。</Chinesesimp>
+            <Russian>Ночник из Химсвета (Красный)</Russian>
+            <Portuguese>Luz de leitura vermelha.</Portuguese>
+            <Czech>Červené světlo na čtení.</Czech>
+            <Spanish>Luz de lectura roja</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DisplayName">
             <English>Chemlight Shield (Blue)</English>
@@ -364,10 +570,14 @@
             <Polish>Osłona na świetlik (niebieska)</Polish>
             <German>Knicklicht-Abschirmung (blau)</German>
             <Korean>켐라이트 쉴드 (파랑)</Korean>
-            <French>Étui cyalume (bleu)</French>
+            <French>Etui avec cyalume (bleu)</French>
             <Italian>Scudo Luce Chimica (Blu)</Italian>
             <Chinese>螢光棒保護殼 (藍色)</Chinese>
             <Chinesesimp>萤光棒保护壳 (蓝色)</Chinesesimp>
+            <Russian>Контейнер для Химсвета (Син)</Russian>
+            <Portuguese>Estojo de Luz (Azul)</Portuguese>
+            <Czech>Clona s vloženým chemickým světlem (Modré)</Czech>
+            <Spanish>Protector de luz química (Azul)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DescriptionShort">
             <English>Blue reading light.</English>
@@ -375,10 +585,14 @@
             <Polish>Niebieska lampka.</Polish>
             <German>Blaues Leselicht.</German>
             <Korean>파란색 조명</Korean>
-            <French>Lampe d'orientation bleue.</French>
+            <French>Lampe de lecture bleue.</French>
             <Italian>Luce da lettura Blu.</Italian>
             <Chinese>藍色閱讀燈</Chinese>
             <Chinesesimp>蓝色阅读灯。</Chinesesimp>
+            <Russian>Ночник из Химсвета (Синий)</Russian>
+            <Portuguese>Luz de leitura azul.</Portuguese>
+            <Czech>Modré světlo na čtení.</Czech>
+            <Spanish>Luz de lectura azul</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DisplayName">
             <English>Chemlight Shield (Yellow)</English>
@@ -386,10 +600,14 @@
             <Polish>Osłona na świetlik (żółta)</Polish>
             <German>Knicklicht-Abschirmung (gelb)</German>
             <Korean>켐라이트 쉴드 (노랑)</Korean>
-            <French>Étui cyalume (jaune)</French>
+            <French>Etui avec cyalume (jaune)</French>
             <Italian>Scudo Luce Chimica (Gialla)</Italian>
             <Chinese>螢光棒保護殼 (黃色)</Chinese>
             <Chinesesimp>萤光棒保护壳 (黄色)</Chinesesimp>
+            <Russian>Контейнер для Химсвета (Желт)</Russian>
+            <Portuguese>Estojo de Luz (Amarelo)</Portuguese>
+            <Czech>Clona s vloženým chemickým světlem (Žluté)</Czech>
+            <Spanish>Protector de luz química (Amarilla)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DescriptionShort">
             <English>Yellow reading light.</English>
@@ -397,10 +615,14 @@
             <Polish>Żółta lampka.</Polish>
             <German>Gelbes Leselicht.</German>
             <Korean>노란색 조명</Korean>
-            <French>Lampe d'orientation jaune.</French>
+            <French>Lampe de lecture jaune.</French>
             <Italian>Luce da lettura Gialla.</Italian>
             <Chinese>黃色閱讀燈</Chinese>
             <Chinesesimp>黄色阅读灯。</Chinesesimp>
+            <Russian>Ночник из Химсвета (Желтый)</Russian>
+            <Portuguese>Luz de leitura amarela.</Portuguese>
+            <Czech>Žluté světlo na čtení.</Czech>
+            <Spanish>Luz de lectura amarilla</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DisplayName">
             <English>Chemlight Shield (Orange)</English>
@@ -408,10 +630,14 @@
             <Polish>Osłona na świetlik (pomarańczowa)</Polish>
             <German>Knicklicht-Abschirmung (orange)</German>
             <Korean>켐라이트 쉴드 (주황)</Korean>
-            <French>Étui cyalume (orange)</French>
+            <French>Etui avec cyalume (orange)</French>
             <Italian>Scudo Luce Chimica (Arancione)</Italian>
             <Chinese>螢光棒保護殼 (橘色)</Chinese>
             <Chinesesimp>萤光棒保护壳 (橘色)</Chinesesimp>
+            <Russian>Контейнер для Химсвета (Оранж)</Russian>
+            <Portuguese>Estojo de Luz (Laranja)</Portuguese>
+            <Czech>Clona s vloženým chemickým světlem (Oranžové)</Czech>
+            <Spanish>Protector de luz química (Naranja)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DescriptionShort">
             <English>Orange reading light.</English>
@@ -419,10 +645,14 @@
             <Polish>Pomarańczowa lampka.</Polish>
             <German>Oranges Leselicht.</German>
             <Korean>주황색 조명</Korean>
-            <French>Lampe d'orientation orange.</French>
+            <French>Lampe de lecture orange.</French>
             <Italian>Luce da lettura Arancione.</Italian>
             <Chinese>橘色閱讀燈</Chinese>
             <Chinesesimp>橘色阅读灯。</Chinesesimp>
+            <Russian>Ночник из Химсвета (Оранжевый)</Russian>
+            <Portuguese>Luz de leitura laranja.</Portuguese>
+            <Czech>Oranžové světlo na čtení.</Czech>
+            <Spanish>Luz de lectura naranja</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DisplayName">
             <English>Chemlight Shield (White)</English>
@@ -430,21 +660,29 @@
             <Polish>Osłona na świetlik (biała)</Polish>
             <German>Knicklicht-Abschirmung (weiß)</German>
             <Korean>켐라이트 쉴드 (하양)</Korean>
-            <French>Étui cyalume (blanc)</French>
+            <French>Etui avec cyalume (blanc)</French>
             <Italian>Scudo Luce Chimica (Bianca)</Italian>
             <Chinese>螢光棒保護殼 (白色)</Chinese>
             <Chinesesimp>萤光棒保护壳 (白色)</Chinesesimp>
+            <Russian>Контейнер для Химсвета (Белый)</Russian>
+            <Portuguese>Estojo de Luz (Branco)</Portuguese>
+            <Czech>Clona s vloženým chemickým světlem (Bílé)</Czech>
+            <Spanish>Protector de luz química (Blanca)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DescriptionShort">
             <English>White reading light.</English>
-            <Japanese>白の照明。</Japanese>
+            <Japanese>白色の照明。</Japanese>
             <Polish>Biała lampka.</Polish>
             <German>Weißes Leselicht.</German>
             <Korean>주황색 조명</Korean>
-            <French>Lampe d'orientation blanche.</French>
+            <French>Lampe de lecture blanche.</French>
             <Italian>Luce da lettura Bianca.</Italian>
             <Chinese>白色閱讀燈</Chinese>
             <Chinesesimp>白色阅读灯。</Chinesesimp>
+            <Russian>Ночник из Химсвета (Белый)</Russian>
+            <Portuguese>Luz de leitura branca.</Portuguese>
+            <Czech>Bílé světlo na čtení.</Czech>
+            <Spanish>Luz de lectura blanca</Spanish>
         </Key>
     </Package>
 </Project>

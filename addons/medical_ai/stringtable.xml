@@ -1,30 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="medical_ai">
-        <Key ID="STR_ACE_medical_ai_enabledFor_DisplayName">
-            <English>Medical AI enabled for</English>
-            <Japanese>次に AI 治療を有効</Japanese>
-            <Chinesesimp>AI医疗启用</Chinesesimp>
-            <Chinese>AI醫療啟用</Chinese>
+    <Package name="Medical_AI">
+        <Key ID="STR_ACE_Medical_AI_enableFor_title">
+            <English>Medic AI</English>
+            <German>Sanitäts KI</German>
+            <Japanese>AI 衛生兵</Japanese>
+            <Russian>ИИ Медик</Russian>
+            <French>Médecine IA</French>
+            <Portuguese>IA Médico</Portuguese>
+            <Chinese>AI醫療兵</Chinese>
+            <Italian>Medico AI</Italian>
+            <Czech>Zdravotnická AI</Czech>
+            <Polish>Medyk AI</Polish>
+            <Spanish>Médico para IA</Spanish>
+            <Turkish>Medikal AI</Turkish>
         </Key>
-        <Key ID="STR_ACE_medical_ai_enabledFor_Description">
-            <English>Enable AI units to heal themselves and each other.</English>
-            <Japanese>AI ユニットの自己や相互治療を有効化します。</Japanese>
-            <Chinesesimp>使AI单位能够彼此治疗自己</Chinesesimp>
-            <Chinese>啟用AI能夠彼此醫療自己</Chinese>
+        <Key ID="STR_ACE_Medical_AI_enableFor_desc">
+            <English>AI will respond to injury and unconsciousness</English>
+            <German>KI reagiert auf Verletzungen und Bewusstlosigkeit</German>
+            <Japanese>AI が負傷者と気絶している人に対して行動するようになります。</Japanese>
+            <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
+            <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
+            <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
+            <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
+            <Italian>L'intelligenza artificiale risponderà a lesioni e perdita di coscienza</Italian>
+            <Czech>UI reaguje na zranění a bezvědomí</Czech>
+            <Polish>AI zareaguje na obrażenia i utratę przytomności</Polish>
+            <Spanish>La IA responderá a heridas e inconsciencia</Spanish>
         </Key>
-        <Key ID="STR_ACE_medical_ai_enabledFor_OnlyServerAndHC">
+        <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
             <German>Nur Server und HC</German>
             <Spanish>Sólo Server y HC</Spanish>
-            <Russian>Нур сервера унд HC</Russian>
+            <Russian>Только сервер и HC</Russian>
             <Japanese>サーバーと HC のみ</Japanese>
             <Polish>Tylko serwer i HC</Polish>
-            <French>Seulement sur le server ou le HC</French>
+            <French>Seulement sur le serveur ou le HC</French>
             <Italian>Solo Server e HC</Italian>
             <Chinesesimp>只在伺服器或无头客户端</Chinesesimp>
             <Chinese>只在伺服器或無頭客戶端</Chinese>
             <Korean>서버와 헤드리스만</Korean>
+            <Portuguese>Apenas Servidor e HC</Portuguese>
+            <Czech>Pouze Server a HC</Czech>
+            <Turkish>Sadece Sunucu ve HC de</Turkish>
         </Key>
     </Package>
 </Project>

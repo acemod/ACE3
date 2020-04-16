@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * onUnLoad EH for arsenal loadouts display.
@@ -10,16 +12,12 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 GVAR(currentLoadoutsTab) = nil;
 
 private _arsenalDisplay = findDisplay IDD_ace_arsenal;
 private _mouseBlockCtrl = _arsenalDisplay displayCtrl IDC_mouseBlock;
 
-GVAR(cameraPosition) = GVAR(previousCameraPos);
-GVAR(previousCameraPos) = nil;
 GVAR(loadoutsSearchbarFocus) = nil;
 GVAR(loadoutsPanelFocus) =  nil;
 

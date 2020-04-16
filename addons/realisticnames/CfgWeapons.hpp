@@ -93,6 +93,60 @@ class CfgWeapons {
     class arifle_Mk20_GL_plain_F: arifle_Mk20_GL_F {
         displayName = CSTRING(arifle_Mk20_GL_plain_Name);
     };
+    
+    // P90 (1.86)
+    class SMG_03_TR_BASE;
+    class SMG_03_TR_black: SMG_03_TR_BASE {
+        displayName = CSTRING(PS90_TR_Black_Name);
+    };
+    class SMG_03_TR_khaki: SMG_03_TR_black {
+        displayName = CSTRING(PS90_TR_Khaki_Name);
+    };
+    class SMG_03_TR_camo: SMG_03_TR_black {
+        displayName = CSTRING(PS90_TR_Camo_Name);
+    };
+    class SMG_03_TR_hex: SMG_03_TR_BASE {
+        displayName = CSTRING(PS90_TR_Hex_Name);
+    };
+    class SMG_03_black: SMG_03_TR_BASE {
+        displayName = CSTRING(PS90_Black_Name);
+    };
+    class SMG_03_khaki: SMG_03_black {
+        displayName = CSTRING(PS90_Khaki_Name);
+    };
+    class SMG_03_camo: SMG_03_black {
+        displayName = CSTRING(PS90_Camo_Name);
+    };
+    class SMG_03_hex: SMG_03_black {
+        displayName = CSTRING(PS90_Hex_Name);
+    };
+    class SMG_03C_BASE: SMG_03_TR_BASE {};
+    class SMG_03C_TR_black: SMG_03C_BASE {
+        displayName = CSTRING(P90_TR_Black_Name);
+    };
+    class SMG_03C_TR_khaki: SMG_03C_TR_black {
+        displayName = CSTRING(P90_TR_Khaki_Name);
+    };
+    class SMG_03C_TR_camo: SMG_03C_TR_black {
+        displayName = CSTRING(P90_TR_Camo_Name);
+    };
+    class SMG_03C_TR_hex: SMG_03C_TR_black {
+        displayName = CSTRING(P90_TR_Hex_Name);
+    };
+    class SMG_03C_black: SMG_03C_Base {
+        displayName = CSTRING(P90_Black_Name);
+    };
+    class SMG_03C_khaki: SMG_03C_black {
+        displayName = CSTRING(P90_Khaki_Name);
+    };
+    class SMG_03C_camo: SMG_03C_black {
+        displayName = CSTRING(P90_Camo_Name);
+    };
+    class SMG_03C_hex: SMG_03C_black {
+        displayName = CSTRING(P90_Hex_Name);
+    };
+    
+    
 
     // Vector
     class SMG_01_Base;
@@ -645,6 +699,9 @@ class CfgWeapons {
     class optic_Hamr_khk_F : optic_hamr {
         displayName = CSTRING(optic_hamr_khk);
     };
+    class ACE_optic_Hamr_2D : optic_Hamr {
+        displayName = CSTRING(optic_hamr_2d);
+    };
 
     class optic_Arco : ItemCore {
         displayName = CSTRING(optic_arco);
@@ -654,6 +711,9 @@ class CfgWeapons {
     };
     class optic_Arco_ghex_F : optic_Arco {
         displayName = CSTRING(optic_arco_ghex);
+    };
+    class ACE_optic_Arco_2D : optic_Arco {
+        displayName = CSTRING(optic_arco_2d);
     };
 
     class optic_ERCO_blk_f : optic_Arco {
@@ -675,7 +735,35 @@ class CfgWeapons {
     class optic_LRPS_tna_F : optic_LRPS {
         displayName = CSTRING(optic_lrps_tna);
     };
-
+    class ACE_optic_LRPS_2D : optic_LRPS {
+        displayName = CSTRING(optic_lrps_2d);
+    };
+    
+    class optic_AMS_base;
+    class optic_AMS: optic_AMS_base {
+        displayName = CSTRING(optic_ams);
+    };
+    class optic_AMS_khk: optic_AMS {
+        displayName = CSTRING(optic_ams_khk);
+    };
+    class optic_AMS_snd: optic_AMS {
+        displayName = CSTRING(optic_ams_snd);
+    };
+    
+    class optic_KHS_base;
+    class optic_KHS_blk: optic_KHS_base {
+        displayName = CSTRING(optic_khs_blk);
+    };
+    class optic_KHS_hex: optic_KHS_blk {
+        displayName = CSTRING(optic_khs_hex);
+    };
+    class optic_KHS_old: ItemCore {
+        displayName = CSTRING(optic_khs_old);
+    };
+    class optic_KHS_tan: optic_KHS_blk {
+        displayName = CSTRING(optic_khs_tan);
+    };
+    
     class optic_DMS : ItemCore {
         displayName = CSTRING(optic_dms);
     };
@@ -704,6 +792,9 @@ class CfgWeapons {
 
     class optic_MRCO : ItemCore {
         displayName = CSTRING(optic_MRCO);
+    };
+    class ACE_optic_MRCO_2D : optic_MRCO {
+        displayName = CSTRING(optic_MRCO_2d);
     };
 
     class optic_Yorris : ItemCore {
@@ -847,5 +938,148 @@ class CfgWeapons {
     // Makarov
     class hgun_Pistol_01_F: Pistol_Base_F {
         displayName = CSTRING(hgun_Pistol_01);
+    };
+
+    // AKM
+    class arifle_AKM_base_F;
+    class arifle_AKM_F: arifle_AKM_base_F {
+        displayName = CSTRING(arifle_AKM);
+    };
+
+    // AKSU
+    class arifle_AKS_base_F;
+    class arifle_AKS_F: arifle_AKS_base_F {
+        displayName = CSTRING(arifle_AKS);
+    };
+
+    // Contact/Livonia
+
+    // FNX-45 (Green)
+    class hgun_Pistol_heavy_01_green_F: hgun_Pistol_heavy_01_F {
+        displayName = CSTRING(hgun_Pistol_heavy_01_green_Name);
+    };
+
+    // RPG-32 (Green)
+    class launch_RPG32_green_F: launch_RPG32_F {
+        displayName = CSTRING(launch_RPG32_green_Name);
+    };
+
+    // AK15 variants
+    class arifle_AK12_base_F;
+    class arifle_AK12_F: arifle_AK12_base_F {
+        displayName = CSTRING(arifle_AK12);
+    };
+    class arifle_AK12_lush_F: arifle_AK12_base_F {
+        displayName = CSTRING(arifle_AK12_lush);
+    };
+    class arifle_AK12_arid_F: arifle_AK12_base_F {
+        displayName = CSTRING(arifle_AK12_arid);
+    };
+    class arifle_AK12_GL_base_F;
+    class arifle_AK12_GL_F: arifle_AK12_GL_base_F {
+        displayName = CSTRING(arifle_AK12_GL);
+    };
+    class arifle_AK12_GL_lush_F: arifle_AK12_GL_base_F {
+        displayName = CSTRING(arifle_AK12_GL_lush);
+    };
+    class arifle_AK12_GL_arid_F: arifle_AK12_GL_base_F {
+        displayName = CSTRING(arifle_AK12_GL_arid);
+    };
+    class arifle_AK12U_base_F;
+    class arifle_AK12U_F: arifle_AK12U_base_F {
+        displayName = CSTRING(arifle_AK12U);
+    };
+    class arifle_AK12U_lush_F: arifle_AK12U_base_F {
+        displayName = CSTRING(arifle_AK12U_lush);
+    };
+    class arifle_AK12U_arid_F: arifle_AK12U_base_F {
+        displayName = CSTRING(arifle_AK12U_arid);
+    };
+    class arifle_RPK12_base_F;
+    class arifle_RPK12_F: arifle_RPK12_base_F {
+        displayName = CSTRING(arifle_RPK12);
+    };
+    class arifle_RPK12_lush_F: arifle_RPK12_base_F {
+        displayName = CSTRING(arifle_RPK12_lush);
+    };
+    class arifle_RPK12_arid_F: arifle_RPK12_base_F {
+        displayName = CSTRING(arifle_RPK12_arid);
+    };
+
+    // M14 (Classic)
+    class DMR_06_hunter_base_F;
+    class srifle_DMR_06_hunter_F: DMR_06_hunter_base_F {
+        displayName = CSTRING(srifle_DMR_06_hunter);
+    };
+
+    // Stoner 99 LMG (Black)
+    class LMG_Mk200_black_F: LMG_Mk200_F {
+        displayName = CSTRING(LMG_Mk200_black);
+    };
+
+    // MSBS Grot variants
+    class arifle_MSBS65_base_F;
+    class arifle_MSBS65_F: arifle_MSBS65_base_F {
+        displayName = CSTRING(arifle_MSBS65);
+    };
+    class arifle_MSBS65_base_black_F;
+    class arifle_MSBS65_black_F: arifle_MSBS65_base_black_F {
+        displayName = CSTRING(arifle_MSBS65_black);
+    };
+    class arifle_MSBS65_base_camo_F;
+    class arifle_MSBS65_camo_F: arifle_MSBS65_base_camo_F {
+        displayName = CSTRING(arifle_MSBS65_camo);
+    };
+    class arifle_MSBS65_base_sand_F;
+    class arifle_MSBS65_sand_F: arifle_MSBS65_base_sand_F {
+        displayName = CSTRING(arifle_MSBS65_sand);
+    };
+    class arifle_MSBS65_GL_base_F;
+    class arifle_MSBS65_GL_F: arifle_MSBS65_GL_base_F {
+        displayName = CSTRING(arifle_MSBS65_GL);
+    };
+    class arifle_MSBS65_GL_base_black_F;
+    class arifle_MSBS65_GL_black_F: arifle_MSBS65_GL_base_black_F {
+        displayName = CSTRING(arifle_MSBS65_GL_black);
+    };
+    class arifle_MSBS65_GL_base_camo_F;
+    class arifle_MSBS65_GL_camo_F: arifle_MSBS65_GL_base_camo_F {
+        displayName = CSTRING(arifle_MSBS65_GL_camo);
+    };
+    class arifle_MSBS65_GL_base_sand_F;
+    class arifle_MSBS65_GL_sand_F: arifle_MSBS65_GL_base_sand_F {
+        displayName = CSTRING(arifle_MSBS65_GL_sand);
+    };
+    class arifle_MSBS65_Mark_base_F;
+    class arifle_MSBS65_Mark_F: arifle_MSBS65_Mark_base_F {
+        displayName = CSTRING(arifle_MSBS65_Mark);
+    };
+    class arifle_MSBS65_Mark_base_black_F;
+    class arifle_MSBS65_Mark_black_F: arifle_MSBS65_Mark_base_black_F {
+        displayName = CSTRING(arifle_MSBS65_Mark_black);
+    };
+    class arifle_MSBS65_Mark_base_camo_F;
+    class arifle_MSBS65_Mark_camo_F: arifle_MSBS65_Mark_base_camo_F {
+        displayName = CSTRING(arifle_MSBS65_Mark_camo);
+    };
+    class arifle_MSBS65_Mark_base_sand_F;
+    class arifle_MSBS65_Mark_sand_F: arifle_MSBS65_Mark_base_sand_F {
+        displayName = CSTRING(arifle_MSBS65_Mark_sand);
+    };
+    class arifle_MSBS65_UBS_base_F;
+    class arifle_MSBS65_UBS_F: arifle_MSBS65_UBS_base_F {
+        displayName = CSTRING(arifle_MSBS65_UBS);
+    };
+    class arifle_MSBS65_UBS_base_black_F;
+    class arifle_MSBS65_UBS_black_F: arifle_MSBS65_UBS_base_black_F {
+        displayName = CSTRING(arifle_MSBS65_UBS_black);
+    };
+    class arifle_MSBS65_UBS_base_camo_F;
+    class arifle_MSBS65_UBS_camo_F: arifle_MSBS65_UBS_base_camo_F {
+        displayName = CSTRING(arifle_MSBS65_UBS_camo);
+    };
+    class arifle_MSBS65_UBS_base_sand_F;
+    class arifle_MSBS65_UBS_sand_F: arifle_MSBS65_UBS_base_sand_F {
+        displayName = CSTRING(arifle_MSBS65_UBS_sand);
     };
 };
