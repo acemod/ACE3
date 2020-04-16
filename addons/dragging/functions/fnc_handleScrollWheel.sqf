@@ -27,7 +27,7 @@ private _carriedItem = _unit getVariable [QGVAR(carriedObject), objNull];
 //disabled for persons
 if (_carriedItem isKindOf "CAManBase") exitWith {false};
 
-if !(GVAR(ctrlHeld)) then {
+if !(cba_events_control) then {
     // raise/lower
 
     // move carried item 15 cm per scroll interval

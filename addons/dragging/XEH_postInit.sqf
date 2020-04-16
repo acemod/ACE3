@@ -27,11 +27,7 @@ if (isNil "ACE_maxWeightCarry") then {
 // handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
-GVAR(ctrlHeld) = false;
-
 // display event handler
-["KeyDown", {_this call FUNC(onKeyDown)}] call CBA_fnc_addDisplayHandler;
-["KeyUp", {_this call FUNC(onKeyUp)}] call CBA_fnc_addDisplayHandler;
 ["MouseZChanged", {_this select 1 call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
 
 //@todo Captivity?
