@@ -62,7 +62,6 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 
         // fix falling back to unconsciousness animation and disable rotating in that state
         class Unconscious: Default {
-            ConnectTo[] = {};
             head = "headNo";
             forceAim = 1;
             static = 1;
