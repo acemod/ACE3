@@ -17,10 +17,10 @@
 
 params ["_scrollAmount"];
 
-// EH is always assigned. Exit and don't overwrite input if not carrying
-if !(ace_player getVariable [QGVAR(isCarrying), false]) exitWith {false};
+private _unit = ACE_player;
 
-private _unit = ace_player;
+// EH is always assigned. Exit and don't overwrite input if not carrying
+if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {false};
 
 private _carriedItem = _unit getVariable [QGVAR(carriedObject), objNull];
 
