@@ -28,7 +28,7 @@ if (!GVAR(EnableTransmit) || !visibleMap) exitWith {
     [_pfhId] call CBA_fnc_removePerFrameHandler;
 };
 
-private _remotePos = ace_player getVariable [QGVAR(pointPosition), [0,0,0]];
+private _remotePos = ACE_player getVariable [QGVAR(pointPosition), [0, 0, 0]];
 if (_remotePos distance2D GVAR(pointPosition) > 1) then { // Only transmit when actually moving
     ACE_player setVariable [QGVAR(pointPosition), GVAR(pointPosition), true];
 };
