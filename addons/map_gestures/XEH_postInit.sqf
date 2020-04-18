@@ -8,10 +8,10 @@ if (!hasInterface) exitWith {};
 
 ["ace_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
-    
+
     // This will set QEGVAR(common,playerOwner) var on player objects
     [] call EFUNC(common,setPlayerOwner);
-    
+
     GVAR(pointPosition) = [0,0,0];
 
     [QGVAR(syncPos), {

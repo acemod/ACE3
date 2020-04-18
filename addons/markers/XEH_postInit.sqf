@@ -12,7 +12,13 @@ if (isMultiplayer && {!isServer} && {hasInterface}) then {
     [QGVAR(sendMarkersJIP), CBA_clientID] call CBA_fnc_serverEvent;
 };
 
-GVAR(mapDisplaysWithDrawEHs) = [];
+// Run MapDrawEH on main and briefing maps
+["Draw", {call FUNC(mapDrawEH)}, true, true] call EFUNC(common,addMapEventHandler);
+
+// movable markers (add on main and briefing maps)
+["MouseButtonDown", {_this call FUNC(onMouseButtonDown)}, true, true] call EFUNC(common,addMapEventHandler);
+["MouseButtonUp", {_this call FUNC(onMouseButtonUp)}, true, true] call EFUNC(common,addMapEventHandler);
+
 GVAR(currentMarkerPosition) = [];
 GVAR(currentMarkerAngle) = 0;
 GVAR(currentMarkerColorConfigName) = "";

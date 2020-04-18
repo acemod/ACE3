@@ -15,13 +15,10 @@ GVAR(mapTool_isDragging) = false;
 GVAR(mapTool_isRotating) = false;
 
 //Install the event handers for the map tools on the main in-game map
-[{!isNull findDisplay 12},
-{
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseMoving", {_this call FUNC(handleMouseMove);}];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}];
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {call FUNC(updateMapToolMarkers); call FUNC(openMapGpsUpdate);}];
-}, []] call CBA_fnc_waitUntilAndExecute;
+["Draw", {call FUNC(updateMapToolMarkers); call FUNC(openMapGpsUpdate);}, true] call EFUNC(common,addMapEventHandler);
+["MouseMoving", {call FUNC(handleMouseMove);}, true] call EFUNC(common,addMapEventHandler);
+["MouseButtonDown", {[1, _this] call FUNC(handleMouseButton);}, true] call EFUNC(common,addMapEventHandler);
+["MouseButtonUp", {[0, _this] call FUNC(handleMouseButton)}, true] call EFUNC(common,addMapEventHandler);
 
 ["visibleMap", {
     params ["", "_mapOn"];
@@ -34,4 +31,3 @@ GVAR(mapTool_isRotating) = false;
 
 GVAR(freeDrawingData) = [];
 GVAR(freedrawing) = false;
-

@@ -18,9 +18,6 @@ class Extended_PostInit_EventHandlers {
 };
 
 class Extended_DisplayLoad_EventHandlers {
-    class RscDiary {
-        ADDON = QUOTE(call COMPILE_FILE(XEH_displayLoad));
-    };
     class RscDisplayInterrupt {
         ADDON = QUOTE(_this call FUNC(handleEscapeMenu));
     };

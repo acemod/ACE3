@@ -19,7 +19,6 @@ class RscEdit;
 class RscButton;
 class RscListBox;
 
-
 class GVAR(RscActiveTextPicture): RscActiveText {
     style = 48;
     colorText[] = {1,1,1,1};
@@ -46,12 +45,14 @@ class GVAR(RscText): RscText {
 #define H_PART(num) QUOTE((num) * (safeZoneH / 36))
 
 class GVAR(TheDialog) {
+    EGVAR(mapEventHandlers,IDCs)[] = {IDC_MAPPLAIN, IDC_MAPDETAILS};
+    EGVAR(mapEventHandlers,type) = QEGVAR(mapEventHandlers,gps);
     idd = -1;
     movingEnable = 1;
     duration = 9999999;
     fadein = 0;
     fadeout = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(DialogDisplay)),_this select 0)];);
+    onLoad = QUOTE([ARR_2(QUOTE(QGVAR(TheDialog)), _this # 0)] call EFUNC(common,addMapEventHandler_init); uiNamespace setVariable [ARR_2(QUOTE(QGVAR(DialogDisplay)),_this # 0)];);
     onUnload = QUOTE([] call FUNC(dialogClosedEH));
 
     #include "gui_controls.hpp"
@@ -81,7 +82,7 @@ class RscTitles {
         duration = 9999999;
         fadein = 0;
         fadeout = 0;
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(RscTitleDisplay)),_this select 0)];);
+        onLoad = QUOTE([ARR_2(QUOTE(QGVAR(TheDialog)), _this # 0)] call EFUNC(common,addMapEventHandler_init); uiNamespace setVariable [ARR_2(QUOTE(QGVAR(RscTitleDisplay)),_this # 0)];);
 
         #include "gui_controls.hpp"
     };

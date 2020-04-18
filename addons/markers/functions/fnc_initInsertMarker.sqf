@@ -63,13 +63,6 @@
     };
 
     ////////////////////
-    // Install MapDrawEH on current map
-    if !((ctrlIDD _mapDisplay) in GVAR(mapDisplaysWithDrawEHs)) then {
-        GVAR(mapDisplaysWithDrawEHs) pushBack (ctrlIDD _mapDisplay);
-        _mapCtrl ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
-    };
-
-    ////////////////////
     // Calculate center position of the marker placement ctrl
     if !(GVAR(editingMarker) isEqualTo "") then {
         //prevent changing the original marker position

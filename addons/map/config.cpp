@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ace_TopographicMap"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
@@ -65,6 +65,76 @@ class RscMapControl {
     sizeExGrid = 0.032;
 };
 
+
+// Topographic Map:
+class ctrlMap;
+class GVAR(topographicCtrl): ctrlMap {
+    idc = IDC_MAP_TOPO;
+
+    // scaleMin = 0.005;
+    // scaleMax = 10;  //Lets the mini display zoom out far enough
+    drawObjects = 0;
+    text = "#(argb,8,8,3)color(1,1,1,1)";
+    maxSatelliteAlpha = 0;
+
+    alphaFadeStartScale = 100;
+    alphaFadeEndScale = 100;
+    colorSea[] = {0.467,0.631,1,0.25};
+    colorCountlinesWater[] = {0.491,0.577,0.702,0.3};
+    colorMainCountlinesWater[] = {0.491,0.577,0.702,0.6};
+    colorGrid[] = {0,0,0,0.15};
+    colorGridMap[] = {0,0,0,0.2};
+
+    //Text sizes:
+    sizeExLabel = 0;
+    // sizeExGrid =
+    sizeExUnits = 0;
+    // sizeExNames = //Marker's Text
+    sizeExInfo = 0;
+    sizeExLevel = 0;
+    // sizeEx =
+
+    ptsPerSquareRoad = 0.75;
+    ptsPerSquareObj = 2000; //don't show buildings
+
+    showCountourInterval = 1;
+
+    colorTracks[] = {0.0,0.0,0.0,0.25};
+    colorTracksFill[] = {0.0,0.0,0.0,0.25};
+    colorRoads[] = {0.0,0.0,0.0,0.5};
+    colorRoadsFill[] = {1,1,0,0.5};
+    colorMainRoads[] = {0.0,0.0,0.0,1};
+    colorMainRoadsFill[] = {1,0.6,0.4,1};
+    colorRailWay[] = {0.8,0.2,0,1};
+
+    colorBackground[] = {0.929412, 0.929412, 0.929412, 1.0};
+    colorOutside[] = {0.929412, 0.929412, 0.929412, 1.0};
+    colorCountlines[] = {0.647059, 0.533333, 0.286275, 1};
+    colorMainCountlines[] = {0.858824, 0, 0,1};
+    colorForest[] = {0.6, 0.8, 0.2, 0.1};
+    colorForestBorder[] = {0,1,0,0.25};
+    colorLevels[] = {0.0, 0.0, 0.0, 0.5};
+    colorRocks[] = {0.50, 0.50, 0.50, 0};
+
+    class Legend {
+        x = SafeZoneX+SafeZoneW-.340;
+        y = SafeZoneY+SafeZoneH-.152;
+        font = "RobotoCondensed";
+        w = .340;
+        h = .152;
+        sizeEx = 0.039210;
+        colorBackground[] = {0.906000, 0.901000, 0.880000, 0.5};
+        color[] = {0, 0, 0, 0.75};
+    };
+    class LineMarker { // make line-drawings visable (but still can't draw our own?)
+        textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
+        lineWidthThin = 0.008;
+        lineWidthThick = 0.014;
+        lineDistanceMin = 3e-005;
+        lineLengthMin = 5;
+    };
+};
+
 class RscMap;
 class RscDisplayArcadeMap_Layout_2: RscMap { //"Traditional" Editor:
     class controlsBackground {
@@ -83,12 +153,13 @@ class RscDisplayArcadeMap_Layout_6: RscMap { //"Streamlined" Editor:
 
 // REGULAR MAP
 class RscDisplayMainMap {
+    EGVAR(mapEventHandlers,IDCs)[] = {IDC_MAP_MAIN, IDC_MAP_TOPO};
     // Tweak map styling
     class controlsBackground {
         class CA_Map: RscMapControl {
-            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
             #include "MapTweaks.hpp"
         };
+        class ACE_topoMap: GVAR(topographicCtrl) {};
     };
     // get rid of the "center to player position" - button (as it works even on elite)
     class controls {
@@ -140,9 +211,9 @@ class RscDisplayGetReady: RscDisplayMainMap {
     // Tweak map styling
     class controlsBackground {
         class CA_Map: RscMapControl {
-            onDraw = QUOTE([ctrlParent (_this select 0)] call DFUNC(onDrawMap));
             #include "MapTweaks.hpp"
         };
+        class ACE_topoMap: GVAR(topographicCtrl) {};
     };
     // get rid of the "center to player position" - button (as it works even on elite)
     class controls {

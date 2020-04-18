@@ -4,7 +4,7 @@
  * On map draw, updates the effects
  *
  * Arguments:
- * None
+ * 0: Map Control <CONTROL>
  *
  * Return Value:
  * None

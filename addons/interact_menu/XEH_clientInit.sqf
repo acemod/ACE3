@@ -112,3 +112,5 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
     if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
     if (_menuBackgroundSetting == 2) exitWith {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call CBA_fnc_addEventHandler;
+
+["Draw", {call FUNC(render)}, true] call EFUNC(common,addMapEventHandler);
