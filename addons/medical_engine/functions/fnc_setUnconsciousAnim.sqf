@@ -26,9 +26,6 @@ if (!local _unit) exitWith {
 _unit setUnconscious _isUnconscious;
 
 if (_isUnconscious) then {
-	// Event handler for the unconscious animation
-	[_unit, "AnimChanged", LINKFUNC(unconAnimEH)] call CBA_fnc_addBISEventHandler;
-
     // eject from static weapon
     if (vehicle _unit isKindOf "StaticWeapon") then {
         TRACE_2("ejecting from static weapon",_unit,vehicle _unit);
