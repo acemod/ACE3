@@ -30,7 +30,7 @@ if (!GVAR(EnableTransmit) || !visibleMap) exitWith {
 
 private _remotePos = ace_player getVariable [QGVAR(pointPosition), [0,0,0]];
 if ((_remotePos distance2d GVAR(pointPosition)) > 1) then { // Only transmit when actually moving
-    ace_player setVariable [QGVAR(pointPosition), GVAR(pointPosition), true];
+    ACE_player setVariable [QGVAR(pointPosition), GVAR(pointPosition), true];
 };
 
 END_COUNTER(transmit);
