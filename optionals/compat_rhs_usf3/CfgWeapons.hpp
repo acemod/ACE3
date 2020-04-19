@@ -156,6 +156,13 @@ class CfgWeapons {
             };
         };
     };
+    // ACOG is a sniper scope for some reason, but we don't want scope adjust
+    class rhsusf_acc_ACOG: rhsusf_acc_sniper_base {
+        ACE_ScopeAdjust_Vertical[] = { 0, 0 };
+        ACE_ScopeAdjust_Horizontal[] = { 0, 0 };
+        ACE_ScopeAdjust_VerticalIncrement = 0;
+        ACE_ScopeAdjust_HorizontalIncrement = 0;
+    };
     class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
         ACE_ScopeHeightAboveRail = 2.62567;
     };
@@ -488,6 +495,11 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            // One WeaponSlot with a positive value for iconScale forces game to use icon overlay method.
+            // Required, because the inventory icon has no accessory variants.
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 620; // M252 Mortar Weight
         };
         displayName = ECSTRING(CSW,m252_tube);
@@ -509,6 +521,9 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 840;
         };
         displayName = ECSTRING(CSW,m2_gun);
@@ -529,6 +544,9 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 770;
         };
         displayName = ECSTRING(CSW,mk19_gun);
@@ -549,6 +567,9 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 500;
         };
         displayName = ECSTRING(CSW,tow_tube);
@@ -559,4 +580,3 @@ class CfgWeapons {
         picture = "\rhsusf\addons\rhsusf_heavyweapons\data\Ico\RHS_TOW_TriPod_D_ca.paa";
     };
 };
-

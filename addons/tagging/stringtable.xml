@@ -6,7 +6,7 @@
             <Russian>Маркировка</Russian>
             <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
-            <German>Markierungssystem (Spraydose)</German>
+            <German>Markieren (Spraydose)</German>
             <Korean>뿌리기</Korean>
             <French>Marquage</French>
             <Italian>Marcamento</Italian>
@@ -14,13 +14,14 @@
             <Chinese>噴漆</Chinese>
             <Portuguese>Marcação</Portuguese>
             <Czech>Označování</Czech>
+            <Turkish>Işaretleme</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
             <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
             <Japanese>標準で開くタグ付けシステムの設定を行います。</Japanese>
             <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
-            <German>Konfiguriert, wie das Markierungssystem standardmäßig funktioniert.</German>
+            <German>Konfiguriert, wie das Markieren standardmäßig funktioniert.</German>
             <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
             <French>Configure le fonctionnement par défaut du système de marquage.</French>
             <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
@@ -42,6 +43,7 @@
             <Chinese>快速噴漆</Chinese>
             <Portuguese>Lata de Tinta - Marcação Rápida</Portuguese>
             <Czech>Stříkací barva - Rychlá značka</Czech>
+            <Turkish>Sprey Boya- Hızlı Işaretleme</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
@@ -70,6 +72,7 @@
             <Chinese>上次最後使用</Chinese>
             <Portuguese>Último usado</Portuguese>
             <Czech>Naposledy použitý</Czech>
+            <Turkish>Son Kullanan</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
@@ -84,6 +87,7 @@
             <Chinese>隨機X標記</Chinese>
             <Portuguese>Aleatório X</Portuguese>
             <Czech>Náhodné X</Czech>
+            <Turkish>Rasgele X</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
@@ -98,6 +102,7 @@
             <Chinese>隨機</Chinese>
             <Portuguese>Aleatório</Portuguese>
             <Czech>Náhodný</Czech>
+            <Turkish>Rasgele</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
@@ -113,6 +118,7 @@
             <French>Tag</French>
             <Chinesesimp>喷漆</Chinesesimp>
             <Chinese>噴漆</Chinese>
+            <Turkish>Işaretle</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
             <English>X black</English>
@@ -128,6 +134,7 @@
             <Korean>검정 X</Korean>
             <Chinesesimp>黑色X标记</Chinesesimp>
             <Chinese>黑色X標記</Chinese>
+            <Turkish>X Siyah</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_XRed">
             <English>X red</English>
@@ -143,6 +150,7 @@
             <Korean>빨간 X</Korean>
             <Chinesesimp>红色X标记</Chinesesimp>
             <Chinese>紅色X標記</Chinese>
+            <Turkish>X Red</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_XGreen">
             <English>X green</English>
@@ -158,6 +166,7 @@
             <Korean>초록 X</Korean>
             <Chinesesimp>绿色X标记</Chinesesimp>
             <Chinese>綠色X標記</Chinese>
+            <Turkish>X Yeşil</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlue">
             <English>X blue</English>
@@ -173,6 +182,7 @@
             <Korean>파랑 X</Korean>
             <Chinesesimp>蓝色X标记</Chinesesimp>
             <Chinese>藍色X標記</Chinese>
+            <Turkish>X Mavi</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
@@ -188,6 +198,7 @@
             <Korean>검정 스프레이</Korean>
             <Chinesesimp>黑色喷漆</Chinesesimp>
             <Chinese>黑色噴漆</Chinese>
+            <Turkish>Sprey Boya (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
             <English>Spray Paint (Red)</English>
@@ -203,6 +214,7 @@
             <Korean>빨강 스프레이</Korean>
             <Chinesesimp>红色喷漆</Chinesesimp>
             <Chinese>紅色噴漆</Chinese>
+            <Turkish>Sprey Boya (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
             <English>Spray Paint (Green)</English>
@@ -218,6 +230,7 @@
             <Korean>초록 스프레이</Korean>
             <Chinesesimp>绿色喷漆</Chinesesimp>
             <Chinese>綠色噴漆</Chinese>
+            <Turkish>Sprey Boya (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Spray Paint (Blue)</English>
@@ -233,6 +246,7 @@
             <Korean>파랑 스프레이</Korean>
             <Chinesesimp>蓝色喷漆</Chinesesimp>
             <Chinese>藍色噴漆</Chinese>
+            <Turkish>Sprey Boya (Mavi)</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>

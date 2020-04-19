@@ -13,6 +13,7 @@
             <Portuguese>Ressurgimento</Portuguese>
             <French>Réapparition</French>
             <Czech>Znovuzrození</Czech>
+            <Turkish>Yeniden Doğma</Turkish>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
@@ -61,6 +62,7 @@
             <Korean>기지로 순간이동</Korean>
             <Chinesesimp>传送至基地</Chinesesimp>
             <Chinese>傳送至基地</Chinese>
+            <Turkish>Üsse Işınlan</Turkish>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
@@ -93,6 +95,7 @@
             <Korean>기지로 순간이동함</Korean>
             <Chinesesimp>已传送至基地</Chinesesimp>
             <Chinese>已傳送至基地</Chinese>
+            <Turkish>Üsse Işınlan</Turkish>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
             <English>Teleported to Rallypoint</English>
@@ -237,6 +240,7 @@
             <Korean>장비를 저장합니까?</Korean>
             <Chinesesimp>储存装备?</Chinesesimp>
             <Chinese>儲存裝備?</Chinese>
+            <Turkish>Kıyafetleri Kaydet?</Turkish>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
             <English>Respawn with the gear a soldier had just before his death?</English>
@@ -269,6 +273,7 @@
             <Korean>시체를 제거합니까?</Korean>
             <Chinesesimp>删除尸体?</Chinesesimp>
             <Chinese>刪除屍體?</Chinese>
+            <Turkish>Bedeni Sil ?</Turkish>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
             <English>Remove player bodies after disconnect?</English>
@@ -298,6 +303,7 @@
             <Portuguese>Tempo para remover corpo</Portuguese>
             <French>Minuterie enlèvement corps</French>
             <Czech>Časovač odstranění mrtvol</Czech>
+            <Turkish>Bedenin Silinme Süresi</Turkish>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>
@@ -407,6 +413,7 @@
             <Korean>ACE 재배치</Korean>
             <Chinesesimp>ACE 重生</Chinesesimp>
             <Chinese>ACE 重生</Chinese>
+            <Turkish>ACE Yeniden Doğma</Turkish>
         </Key>
     </Package>
 </Project>

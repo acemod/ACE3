@@ -14,6 +14,7 @@
             <Chinesesimp>进阶投掷</Chinesesimp>
             <Portuguese>Arremesso Avançado</Portuguese>
             <Czech>Pokročilé házení</Czech>
+            <Turkish>Gelişmiş Fırlatma</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
             <English>Allows changing advanced throwing behaviour.</English>
@@ -42,6 +43,7 @@
             <Chinesesimp>启用进阶投掷</Chinesesimp>
             <Portuguese>Ativa o Arremesso Avançado</Portuguese>
             <Czech>Povolit pokročilé házení</Czech>
+            <Turkish>Gelişmiş Fırlatmayı Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>
@@ -56,6 +58,7 @@
             <Chinesesimp>启用进阶投掷系统</Chinesesimp>
             <Portuguese>Ativa o sistema de Arremesso Avançado.</Portuguese>
             <Czech>Umožňuje pokročilý systém házení.</Czech>
+            <Turkish>Gelişmiş fırlatma sistemini etkinleştirir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
@@ -70,6 +73,7 @@
             <Chinesesimp>显示投掷轨道</Chinesesimp>
             <Portuguese>Mostrar o Arco de Arremesso</Portuguese>
             <Czech>Zobrazit oblouk vrhu </Czech>
+            <Turkish>Atış Yayını Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_Description">
             <English>Enables visualization of the throw arc (where throwable will fly).</English>
@@ -238,6 +242,7 @@
             <Chinesesimp>投掷</Chinesesimp>
             <Portuguese>Arremessar</Portuguese>
             <Czech>Hodit</Czech>
+            <Turkish>At</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
             <English>(Scroll) Change Mode</English>
@@ -252,6 +257,7 @@
             <Chinesesimp>(滚轮) 变更模式</Chinesesimp>
             <Portuguese>(Roda do Mouse) Alternar modo</Portuguese>
             <Czech>(Scrollovat) Změnit mód</Czech>
+            <Turkish>(Tekerlek) Modu Değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Extend">
             <English>(Scroll) Extend</English>
@@ -266,6 +272,7 @@
             <Chinesesimp>(滚轮) 延长</Chinesesimp>
             <Portuguese>(Roda do Mouse) Extender</Portuguese>
             <Czech>(Scrollovat) Oddálit</Czech>
+            <Turkish>(Tekerlek) Uzat</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
@@ -280,6 +287,7 @@
             <Chinesesimp>(点击) 提早拉开引信</Chinesesimp>
             <Portuguese>(Clique) Cozinhar</Portuguese>
             <Czech>(Klik) Odjistit</Czech>
+            <Turkish>(Tıkla) Cook</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_PickUp">
             <English>Pick Up</English>
@@ -294,6 +302,7 @@
             <Chinesesimp>捡取</Chinesesimp>
             <Portuguese>Pegar</Portuguese>
             <Czech>Zvednout</Czech>
+            <Turkish>Al</Turkish>
         </Key>
     </Package>
 </Project>

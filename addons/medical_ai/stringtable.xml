@@ -9,7 +9,11 @@
             <French>Médecine IA</French>
             <Portuguese>IA Médico</Portuguese>
             <Chinese>AI醫療兵</Chinese>
+            <Italian>Medico AI</Italian>
             <Czech>Zdravotnická AI</Czech>
+            <Polish>Medyk AI</Polish>
+            <Spanish>Médico para IA</Spanish>
+            <Turkish>Medikal AI</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
@@ -19,7 +23,10 @@
             <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
             <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
+            <Italian>L'intelligenza artificiale risponderà a lesioni e perdita di coscienza</Italian>
             <Czech>UI reaguje na zranění a bezvědomí</Czech>
+            <Polish>AI zareaguje na obrażenia i utratę przytomności</Polish>
+            <Spanish>La IA responderá a heridas e inconsciencia</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
@@ -35,6 +42,7 @@
             <Korean>서버와 헤드리스만</Korean>
             <Portuguese>Apenas Servidor e HC</Portuguese>
             <Czech>Pouze Server a HC</Czech>
+            <Turkish>Sadece Sunucu ve HC de</Turkish>
         </Key>
     </Package>
 </Project>

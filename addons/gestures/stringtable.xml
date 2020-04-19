@@ -16,6 +16,7 @@
             <Korean>ACE 수신호</Korean>
             <Chinesesimp>ACE 手势</Chinesesimp>
             <Chinese>ACE 手勢</Chinese>
+            <Turkish>ACE Hareketleri</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Name">
             <English>ACE Gestures</English>
@@ -32,6 +33,7 @@
             <Korean>ACE 수신호</Korean>
             <Chinesesimp>ACE 手势</Chinesesimp>
             <Chinese>ACE 手勢</Chinese>
+            <Turkish>ACE Hareketleri</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Gestures">
             <English>Gestures</English>
@@ -48,6 +50,7 @@
             <Korean>수신호</Korean>
             <Chinesesimp>手势</Chinesesimp>
             <Chinese>手勢</Chinese>
+            <Turkish>Hareketler</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Advance">
             <English>Advance</English>
@@ -80,6 +83,7 @@
             <Korean>이동</Korean>
             <Chinesesimp>出发</Chinesesimp>
             <Chinese>出發</Chinese>
+            <Turkish>Git</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Follow">
             <English>Follow</English>
@@ -96,6 +100,7 @@
             <Korean>따라올것</Korean>
             <Chinesesimp>跟进</Chinesesimp>
             <Chinese>跟進</Chinese>
+            <Turkish>Takip Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Up">
             <English>Up</English>
@@ -112,6 +117,7 @@
             <Korean>위</Korean>
             <Chinesesimp>起立</Chinesesimp>
             <Chinese>起立</Chinese>
+            <Turkish>Yukarı</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_CeaseFire">
             <English>Cease Fire</English>
@@ -128,6 +134,7 @@
             <Korean>사격 중지</Korean>
             <Chinesesimp>停火</Chinesesimp>
             <Chinese>停火</Chinese>
+            <Turkish>Ateşi durdur</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Stop">
             <English>Stop</English>
@@ -143,6 +150,7 @@
             <Korean>멈춰</Korean>
             <Chinesesimp>停止</Chinesesimp>
             <Chinese>停止</Chinese>
+            <Turkish>Dur</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Freeze">
             <English>Freeze</English>
@@ -159,6 +167,7 @@
             <Korean>정지</Korean>
             <Chinesesimp>不准动</Chinesesimp>
             <Chinese>不准動</Chinese>
+            <Turkish>Don</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Cover">
             <English>Cover</English>
@@ -190,6 +199,7 @@
             <Korean>집결</Korean>
             <Chinesesimp>集合</Chinesesimp>
             <Chinese>集合</Chinese>
+            <Turkish>Toplan</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Forward">
             <English>Move forward</English>
@@ -205,6 +215,7 @@
             <Korean>앞으로 이동</Korean>
             <Chinesesimp>往前走</Chinesesimp>
             <Chinese>往前走</Chinese>
+            <Turkish>Ileri Git</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Engage">
             <English>Engage</English>
@@ -220,6 +231,7 @@
             <Korean>교전할것</Korean>
             <Chinesesimp>交战</Chinesesimp>
             <Chinese>交戰</Chinese>
+            <Turkish>Tut</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Point">
             <English>Point</English>
@@ -235,6 +247,7 @@
             <Korean>가리키기</Korean>
             <Chinesesimp>指出</Chinesesimp>
             <Chinese>指出</Chinese>
+            <Turkish>Nokta</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Hold">
             <English>Hold</English>
@@ -250,6 +263,7 @@
             <Korean>기다려</Korean>
             <Chinesesimp>停住</Chinesesimp>
             <Chinese>停住</Chinese>
+            <Turkish>Dur</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Warning">
             <English>Warning</English>
@@ -265,6 +279,7 @@
             <Korean>주의</Korean>
             <Chinesesimp>警告</Chinesesimp>
             <Chinese>警告</Chinese>
+            <Turkish>Uyarı</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
@@ -280,6 +295,7 @@
             <Korean>수신호를 상호작용 메뉴에서 보여줍니다</Korean>
             <Chinesesimp>显示手势互动选单</Chinesesimp>
             <Chinese>顯示手勢互動選單</Chinese>
+            <Turkish>Hareketleri Etkileşim Menüsünde Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -295,6 +311,7 @@
             <Korean>수신호를 상호작용 메뉴에서 보여주거나 혹은 단축키를 지정하거나 아니면 아예 사용하지 않습니다.</Korean>
             <Chinesesimp>显示手势选项在自己的互动选单上，或只利用键盘来使用手势，或完全禁用</Chinesesimp>
             <Chinese>顯示手勢選項在自己的互動選單上，或只利用鍵盤來使用手勢，或完全禁用</Chinese>
+            <Turkish>Kendi kendine etkileşim menüsünde hareketleri göster veya sadece tuş atamaları kullan veya tamamen devre dışı bırak.</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_JustKeybinds">
             <English>Just Keybinds</English>
@@ -310,6 +327,7 @@
             <Korean>오직 단축키만</Korean>
             <Chinesesimp>只利用键盘</Chinesesimp>
             <Chinese>只利用鍵盤</Chinese>
+            <Turkish>Sadece Tuş Atamaları</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_KeysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -325,6 +343,7 @@
             <Korean>단축키및 상호작용 메뉴</Korean>
             <Chinesesimp>键盘 + 互动选单</Chinesesimp>
             <Chinese>鍵盤 + 互動選單</Chinese>
+            <Turkish>Tuş Atamaları + Etkileşim Menüsü</Turkish>
         </Key>
     </Package>
 </Project>

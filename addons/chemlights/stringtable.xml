@@ -14,6 +14,8 @@
             <Russian>Химсвет</Russian>
             <Portuguese>Bastões de Luz</Portuguese>
             <Czech>Chemická světla</Czech>
+            <Spanish>Luces químicas</Spanish>
+            <Turkish>Işık Çubukları</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare">
             <English>Prepare %1</English>
@@ -28,6 +30,7 @@
             <Russian>Приготовить %1</Russian>
             <Portuguese>Preparar %1</Portuguese>
             <Czech>Připravit %1</Czech>
+            <Spanish>Preparar %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
@@ -42,6 +45,7 @@
             <Russian>%1&lt;br/&gt;Приготовлен</Russian>
             <Portuguese>%1&lt;br/&gt;Preparado</Portuguese>
             <Czech>%1&lt;br/&gt;Připraveno</Czech>
+            <Spanish>%1&lt;br/&gt;Preparado</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Inventory_Full">
             <English>No inventory space</English>
@@ -58,6 +62,7 @@
             <Korean>소지품 공간이 없음</Korean>
             <Chinese>已無存放空間</Chinese>
             <Chinesesimp>已无存放空间</Chinesesimp>
+            <Turkish>Envanter de alan yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Box_DisplayName">
             <English>[ACE] Chemlights</English>
@@ -72,6 +77,7 @@
             <Russian>[ACE] Химсвет</Russian>
             <Portuguese>[ACE] Bastões de Luz</Portuguese>
             <Czech>[ACE] Chemická světla</Czech>
+            <Spanish>[ACE] Luces químicas</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayName">
             <English>Chemlight (Orange)</English>
@@ -86,6 +92,8 @@
             <Russian>Химсвет (Оранжевый)</Russian>
             <Portuguese>Bastão de Luz (Laranja)</Portuguese>
             <Czech>Chemické světlo (Oranžové)</Czech>
+            <Spanish>Luz química (naranja)</Spanish>
+            <Turkish>Işık Çubuğu (Turuncu)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayNameShort">
             <English>Orange Light</English>
@@ -100,6 +108,8 @@
             <Russian>Оранжевый свет</Russian>
             <Portuguese>Luz Laranja</Portuguese>
             <Czech>Oranžové světlo</Czech>
+            <Spanish>Luz naranja</Spanish>
+            <Turkish>Turuncu Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DescriptionShort">
             <English>Type: Light - Orange&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -114,6 +124,7 @@
             <Russian>Тип: Свет - Оранжевый&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Laranja&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Czech>Typ: Světlo - Oranžové&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Naranja&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayName">
             <English>Chemlight (White)</English>
@@ -128,6 +139,8 @@
             <Russian>Химсвет (Белый)</Russian>
             <Portuguese>Bastão de Luz (Branco)</Portuguese>
             <Czech>Chemické světlo (Bílé)</Czech>
+            <Spanish>Luz química (Blanca)</Spanish>
+            <Turkish>Işık Çubuğu (Beyaz)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayNameShort">
             <English>White Light</English>
@@ -142,6 +155,8 @@
             <Russian>Белый свет</Russian>
             <Portuguese>Luz Branca</Portuguese>
             <Czech>Bílé světlo</Czech>
+            <Spanish>Luz blanca</Spanish>
+            <Turkish>Beyaz Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DescriptionShort">
             <English>Type: Light - White&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -156,6 +171,7 @@
             <Russian>Тип: Свет - Белый&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Branco&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Czech>Typ: Světlo - Bílé&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Blanca&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayName">
             <English>Chemlight (Hi Red)</English>
@@ -170,6 +186,8 @@
             <Russian>Химсвет (Ярко-Красный)</Russian>
             <Portuguese>Bastão de Luz (Vermelho Forte)</Portuguese>
             <Czech>Chemické světlo (Červené jasné)</Czech>
+            <Spanish>Luz química (Roja Hi)</Spanish>
+            <Turkish>Işık Çubuğu (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayNameShort">
             <English>Red Hi Light</English>
@@ -184,6 +202,8 @@
             <Russian>Яркий Красный свет</Russian>
             <Portuguese>Luz forte vermelha</Portuguese>
             <Czech>Červené jasné světlo</Czech>
+            <Spanish>Luz roja Hi</Spanish>
+            <Turkish>Kırmızı Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
             <English>Type: Light - Red Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -198,6 +218,7 @@
             <Russian>Тип: Свет - Ярко-Красный (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Vermelho Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Czech>Typ: Světlo - Červené jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Roja Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayName">
             <English>Chemlight (Hi Yellow)</English>
@@ -212,6 +233,8 @@
             <Russian>Химсвет (Ярко-Желтый)</Russian>
             <Portuguese>Bastão de Luz (Amarelo Forte)</Portuguese>
             <Czech>Chemické světlo (Žluté jasné)</Czech>
+            <Spanish>Luz química (Amarilla Hi)</Spanish>
+            <Turkish>Işık Çubuğu (Sarı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayNameShort">
             <English>Yellow Hi Light</English>
@@ -226,6 +249,8 @@
             <Russian>Яркий Желтый свет</Russian>
             <Portuguese>Luz forte amarela</Portuguese>
             <Czech>Žluté jasné světlo</Czech>
+            <Spanish>Luz amarilla Hi</Spanish>
+            <Turkish>Sarı Işık</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
             <English>Type: Light - Yellow Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -240,6 +265,7 @@
             <Russian>Тип: Свет - Ярко-Желтый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Amarelo Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Czech>Typ: Světlo - Žluté jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Amarilla Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayName">
             <English>Chemlight (Hi White)</English>
@@ -254,6 +280,7 @@
             <Russian>Химсвет (Ярко-Белый)</Russian>
             <Portuguese>Bastão de Luz (Branco Forte)</Portuguese>
             <Czech>Chemické světlo (Bílé jasné)</Czech>
+            <Spanish>Luz química (Blanca Hi)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayNameShort">
             <English>White Hi Light</English>
@@ -268,6 +295,7 @@
             <Russian>Яркий Белый свет</Russian>
             <Portuguese>Luz forte branca</Portuguese>
             <Czech>Bílé jasné světlo</Czech>
+            <Spanish>Luz blanca Hi</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
             <English>Type: Light - White Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -282,6 +310,7 @@
             <Russian>Тип: Свет - Ярко-Белый (30 минут)&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Branco Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Czech>Typ: Světlo - Bílé jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Blanca Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DisplayName">
             <English>Chemlight (Hi Blue)</English>
@@ -294,6 +323,7 @@
             <Portuguese>Bastão de Luz (Azul Forte)</Portuguese>
             <Chinese>螢光棒（超亮藍色）</Chinese>
             <Czech>Chemické světlo (Modré jasné)</Czech>
+            <Spanish>Luz química (Azul Hi)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DisplayNameShort">
             <English>Blue Hi Light</English>
@@ -306,6 +336,7 @@
             <Portuguese>Luz forte azul</Portuguese>
             <Chinese>超亮藍色光</Chinese>
             <Czech>Modré jasné světlo</Czech>
+            <Spanish>Luz azul Hi</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiBlue_DescriptionShort">
             <English>Type: Light - Blue Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -318,6 +349,7 @@
             <Portuguese>Tipo: Luz - Azul Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 超亮藍色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Czech>Typ: Světlo - Modré jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Azul Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DisplayName">
             <English>Chemlight (Hi Green)</English>
@@ -330,6 +362,7 @@
             <Portuguese>Bastão de Luz (Verde Forte)</Portuguese>
             <Chinese>螢光棒（超亮綠色）</Chinese>
             <Czech>Chemické světlo (Zelené jasné)</Czech>
+            <Spanish>Luz química (Verde Hi)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DisplayNameShort">
             <English>Green Hi Light</English>
@@ -342,6 +375,7 @@
             <Portuguese>Luz forte verde</Portuguese>
             <Chinese>超亮綠色光</Chinese>
             <Czech>Zelené jasné světlo</Czech>
+            <Spanish>Luz verde Hi</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiGreen_DescriptionShort">
             <English>Type: Light - Green Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -354,6 +388,7 @@
             <Portuguese>Tipo: Luz - Verde Forte (30 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 超亮綠色 (30分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Czech>Typ: Světlo - Zelené jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Verde Hi (30 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayName">
             <English>Chemlight (Ultra-Hi Orange)</English>
@@ -366,6 +401,7 @@
             <Portuguese>Bastão de Luz (Laranja Ultra Forte)</Portuguese>
             <Chinese>螢光棒（極亮橘色）</Chinese>
             <Czech>Chemické světlo (Oranžové velmi jasné)</Czech>
+            <Spanish>Luz química (Naranja Ultra-Hi)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DisplayNameShort">
             <English>Orange Ultra-Hi Light</English>
@@ -378,6 +414,7 @@
             <Portuguese>Luz ultra forte laranja</Portuguese>
             <Chinese>極亮橘色光</Chinese>
             <Czech>Oranžové velmi jasné světlo</Czech>
+            <Spanish>Luz naranja Ultra-Hi</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_UltraHiOrange_DescriptionShort">
             <English>Type: Light - Orange Ultra-Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -390,6 +427,7 @@
             <Portuguese>Tipo: Luz - Laranja Ultra Forte (5 minutos)&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Chinese>類型: 光 - 極亮橘色 (5分鐘)&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 手</Chinese>
             <Czech>Typ: Světlo - Oranžové velmi jasné&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz - Naranja Ultra-Hi (5 minutos)&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
             <English>Chemlight (IR)</English>
@@ -404,6 +442,7 @@
             <Russian>Химсвет (Инфракрасный)</Russian>
             <Portuguese>Bastão de Luz (IV)</Portuguese>
             <Czech>Chemické světlo (Infračervené)</Czech>
+            <Spanish>Luz química (IR)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayNameShort">
             <English>IR Light</English>
@@ -418,6 +457,7 @@
             <Russian>Инфракрасный свет</Russian>
             <Portuguese>Bastão de luz infravermelho</Portuguese>
             <Czech>Infračervené světlo</Czech>
+            <Spanish>Luz IR</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DescriptionShort">
             <English>Type: Light - Infrared&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
@@ -432,6 +472,7 @@
             <Russian>Тип: Свет - Инфракрасный&lt;br /&gt;1 штука&lt;br /&gt;В руках</Russian>
             <Portuguese>Tipo: Luz - Infravermelho&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Mão</Portuguese>
             <Czech>Typ: Světlo - Infračervené&lt;br/&gt;Počet použití: 1&lt;br/&gt;Použít v ruce</Czech>
+            <Spanish>Tipo: Luz infra-roja&lt;br /&gt;Cantidad: 1&lt;br /&gt;Usado en: Mano</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Empty_DisplayName">
             <English>Chemlight Shield (Empty)</English>
@@ -446,6 +487,7 @@
             <Russian>Контейнер для Химсвета (Пуст)</Russian>
             <Portuguese>Estojo de Luz (Vazio)</Portuguese>
             <Czech>Clona na chemické světlo</Czech>
+            <Spanish>Protector de luz química (Vacía)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Empty_DescriptionShort">
             <English>Shield for chemlights. Combine with chemlight to prepare reading light.</English>
@@ -460,6 +502,7 @@
             <Russian>Защитный контейнер для Химсвета. Объедините с Химсветом, чтобы подготовить Свет для чтения</Russian>
             <Portuguese>Estojo para os bastões de luz. Combine com o bastão de luz para preparar luz de leitura.</Portuguese>
             <Czech>Clona na chemické světlo. Při vložení chemického světla vznikne praktické světlo na čtení.</Czech>
+            <Spanish>Protector para luz química. Combina con luz química para preparar una luz de lectura</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DisplayName">
             <English>Chemlight Shield (Green)</English>
@@ -474,6 +517,7 @@
             <Russian>Контейнер для Химсвета (Зел)</Russian>
             <Portuguese>Estojo de Luz (Verde)</Portuguese>
             <Czech>Clona s vloženým chemickým světlem (Zelené)</Czech>
+            <Spanish>Protector de luz química (Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DescriptionShort">
             <English>Green reading light.</English>
@@ -488,6 +532,7 @@
             <Russian>Ночник из Химсвета (Зеленый)</Russian>
             <Portuguese>Luz de leitura verde.</Portuguese>
             <Czech>Zelené světlo na čtení.</Czech>
+            <Spanish>Luz de lectura verde</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DisplayName">
             <English>Chemlight Shield (Red)</English>
@@ -502,6 +547,7 @@
             <Russian>Контейнер для Химсвета (Красн)</Russian>
             <Portuguese>Estojo de Luz (Vermelho)</Portuguese>
             <Czech>Clona s vloženým chemickým světlem (Červené)</Czech>
+            <Spanish>Protector de luz química (Roja)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DescriptionShort">
             <English>Red reading light.</English>
@@ -516,6 +562,7 @@
             <Russian>Ночник из Химсвета (Красный)</Russian>
             <Portuguese>Luz de leitura vermelha.</Portuguese>
             <Czech>Červené světlo na čtení.</Czech>
+            <Spanish>Luz de lectura roja</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DisplayName">
             <English>Chemlight Shield (Blue)</English>
@@ -530,6 +577,7 @@
             <Russian>Контейнер для Химсвета (Син)</Russian>
             <Portuguese>Estojo de Luz (Azul)</Portuguese>
             <Czech>Clona s vloženým chemickým světlem (Modré)</Czech>
+            <Spanish>Protector de luz química (Azul)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DescriptionShort">
             <English>Blue reading light.</English>
@@ -544,6 +592,7 @@
             <Russian>Ночник из Химсвета (Синий)</Russian>
             <Portuguese>Luz de leitura azul.</Portuguese>
             <Czech>Modré světlo na čtení.</Czech>
+            <Spanish>Luz de lectura azul</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DisplayName">
             <English>Chemlight Shield (Yellow)</English>
@@ -558,6 +607,7 @@
             <Russian>Контейнер для Химсвета (Желт)</Russian>
             <Portuguese>Estojo de Luz (Amarelo)</Portuguese>
             <Czech>Clona s vloženým chemickým světlem (Žluté)</Czech>
+            <Spanish>Protector de luz química (Amarilla)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DescriptionShort">
             <English>Yellow reading light.</English>
@@ -572,6 +622,7 @@
             <Russian>Ночник из Химсвета (Желтый)</Russian>
             <Portuguese>Luz de leitura amarela.</Portuguese>
             <Czech>Žluté světlo na čtení.</Czech>
+            <Spanish>Luz de lectura amarilla</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DisplayName">
             <English>Chemlight Shield (Orange)</English>
@@ -586,6 +637,7 @@
             <Russian>Контейнер для Химсвета (Оранж)</Russian>
             <Portuguese>Estojo de Luz (Laranja)</Portuguese>
             <Czech>Clona s vloženým chemickým světlem (Oranžové)</Czech>
+            <Spanish>Protector de luz química (Naranja)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DescriptionShort">
             <English>Orange reading light.</English>
@@ -600,6 +652,7 @@
             <Russian>Ночник из Химсвета (Оранжевый)</Russian>
             <Portuguese>Luz de leitura laranja.</Portuguese>
             <Czech>Oranžové světlo na čtení.</Czech>
+            <Spanish>Luz de lectura naranja</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DisplayName">
             <English>Chemlight Shield (White)</English>
@@ -614,6 +667,7 @@
             <Russian>Контейнер для Химсвета (Белый)</Russian>
             <Portuguese>Estojo de Luz (Branco)</Portuguese>
             <Czech>Clona s vloženým chemickým světlem (Bílé)</Czech>
+            <Spanish>Protector de luz química (Blanca)</Spanish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DescriptionShort">
             <English>White reading light.</English>
@@ -628,6 +682,7 @@
             <Russian>Ночник из Химсвета (Белый)</Russian>
             <Portuguese>Luz de leitura branca.</Portuguese>
             <Czech>Bílé světlo na čtení.</Czech>
+            <Spanish>Luz de lectura blanca</Spanish>
         </Key>
     </Package>
 </Project>

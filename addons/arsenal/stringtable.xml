@@ -14,6 +14,7 @@
             <Russian>Спрятать</Russian>
             <Portuguese>Ocultar</Portuguese>
             <Czech>Skrýt</Czech>
+            <Turkish>Gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonHideTooltip">
             <English>Hide interface</English>
@@ -28,6 +29,7 @@
             <Russian>Скрыть интерфейс</Russian>
             <Portuguese>Oculta a Interface</Portuguese>
             <Czech>Skrýt rozhraní</Czech>
+            <Turkish>Arayüzü gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadoutsText">
             <English>Loadouts</English>
@@ -42,6 +44,7 @@
             <Russian>Комплекты</Russian>
             <Portuguese>Loadouts</Portuguese>
             <Czech>Sady vybavení</Czech>
+            <Turkish>Dışa aktar</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonExportText">
             <English>Export</English>
@@ -84,6 +87,7 @@
             <Russian>Закрыть</Russian>
             <Portuguese>Fechar</Portuguese>
             <Czech>Zavřít</Czech>
+            <Turkish>Kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_noVirtualItems">
             <English>No virtual item available</English>
@@ -112,6 +116,7 @@
             <Russian>Сохранить</Russian>
             <Portuguese>Salvar</Portuguese>
             <Czech>Uložit</Czech>
+            <Turkish>Kaydet</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip">
             <English>Save the current loadout</English>
@@ -129,12 +134,14 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveTooltip_shiftClick">
             <English>[Shift+Click to save to mission defaults]</English>
+            <German>[Umschalt+Linksklick um als Standard-Missionsausrüstung zu speichern]</German>
             <Japanese>[Shift + クリック] でミッション標準として保存します</Japanese>
             <Polish>Shift + Klik aby zapisac jako domyślne dla misji </Polish>
             <Russian>[Shift+Клик, чтобы сохранить в настройках по умолчанию]</Russian>
             <Portuguese>[Shift+Clique para salvar nos padrões da missão]</Portuguese>
             <French>[Shift+Clic pour enregistrer en tant qu'équipement prédéfini.]</French>
             <Chinese>[Shift+左鍵來保存至任務預設]</Chinese>
+            <Italian>[Shift+Click per salvare la missione con gli equipaggiamenti predefiniti]</Italian>
             <Czech>[Shift+Klik pro uložení jako standardního vybavení pro misi]</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
@@ -150,6 +157,7 @@
             <Russian>Переименовать</Russian>
             <Portuguese>Renomear</Portuguese>
             <Czech>Přejmenovat</Czech>
+            <Turkish>Yeniden adlandır</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
@@ -178,6 +186,7 @@
             <Russian>Загрузить</Russian>
             <Portuguese>Carregar</Portuguese>
             <Czech>Nahrát</Czech>
+            <Turkish>Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonLoadTooltip">
             <English>Load the selected loadout</English>
@@ -206,6 +215,7 @@
             <Russian>Удалить</Russian>
             <Portuguese>Apagar</Portuguese>
             <Czech>Smazat</Czech>
+            <Turkish>Sil</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonDeleteTooltip">
             <English>Delete the selected loadout</English>
@@ -920,6 +930,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_statPotassium">
             <English>Potassium levels</English>
+            <German>Kaliumspiegel</German>
             <French>Taux de potassium</French>
             <Japanese>カリウム レベル</Japanese>
             <Chinesesimp>钾水平</Chinesesimp>
@@ -1139,6 +1150,7 @@
             <Portuguese>Importar lista de itens da área de transferência (deve estar no mesmo formato que uma lista exportada)</Portuguese>
             <French>Importe un tableau d'équipements depuis le presse-papier (le format doit être identique à celui de l'exportation).</French>
             <Chinese>從剪貼簿匯入物品列表之陣列（應該與匯出的格式一樣）</Chinese>
+            <Italian>Importa elenco appunti (deve essere nello stesso formato di un elenco esportato)</Italian>
             <Czech>Importovat pole se seznamem předmětů ze schránky (měl by být ve stejném formátu jako export)</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
@@ -1150,6 +1162,7 @@
             <Portuguese>Adicionar itens compatíveis</Portuguese>
             <French>Ajouter des objets compatibles</French>
             <Chinese>增加相容的物品</Chinese>
+            <Italian>Aggiungi Oggetti Compatibili</Italian>
             <Czech>Přidat kompatibilní předměty</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_Tooltip">
@@ -1161,6 +1174,7 @@
             <Portuguese>Irá automaticamente adicionar acessórios ou carregadores (baseado na categoria selecionada) para todas as armas na lista de itens atual</Portuguese>
             <French>Ajoute automatiquement des accessoires ou des chargeurs compatibles (en fonction de la catégorie sélectionnée), pour toutes les armes de la liste actuelle.</French>
             <Chinese>將會自動增加相容的配件以及彈匣（基於選擇的類型）至妳目前物品列表中的全部武器</Chinese>
+            <Italian>Aggiungerà automaticamente accessori o caricatori (in base alla categoria selezionata) per tutte le armi nell'elenco degli oggetti correnti</Italian>
             <Czech>Automaticky přídá kompatibilní zásobníky (na základě vybrané kategorie) ro všechny zbraně v současném seznamu předmětů</Czech>
         </Key>
         <Key ID="STR_ACE_Arsenal_statTTL">

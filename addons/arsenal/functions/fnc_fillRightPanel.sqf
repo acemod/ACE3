@@ -19,7 +19,7 @@ params ["_display", "_control"];
 private _ctrlIDC = ctrlIDC _control;
 
 // Fade old control background
-if !(isNil QGVAR(currentRightPanel)) then {
+if (!isNil QGVAR(currentRightPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentRightPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
     _previousCtrlBackground ctrlCommit FADE_DELAY;

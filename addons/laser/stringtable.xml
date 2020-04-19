@@ -14,6 +14,7 @@
             <Russian>Число симуляций рассеивания лазерного луча</Russian>
             <Portuguese>Contador da Simulação de Dispersão de Laser</Portuguese>
             <Czech>Počet simulace disperze laseru</Czech>
+            <Spanish>Número de dispersión en la simulación del láser</Spanish>
         </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>
@@ -30,6 +31,7 @@
             <Korean>레이저 코드</Korean>
             <Chinesesimp>雷射码</Chinesesimp>
             <Chinese>雷射碼</Chinese>
+            <Turkish>Lazer Kod</Turkish>
         </Key>
         <Key ID="STR_ACE_Laser_laserCodeUp">
             <English>Laser - Cycle Code Up</English>

@@ -204,6 +204,15 @@ class cfgMagazines {
         model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
         picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
     };
+    class RHS_48Rnd_40mm_MK19_M430A1;
+    class GVAR(48Rnd_40mm_MK19_M430A1): RHS_48Rnd_40mm_MK19_M430A1 {
+        scope = 2;
+        type = 256;
+        count = 48;
+        mass = 40;
+        model = "\A3\Structures_F_EPB\Items\Military\Ammobox_rounds_F.p3d"; // ammo can instead of any special model so no one gets especially confused over what it is
+        picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
+    };
     class RHS_48Rnd_40mm_MK19_M1001;
     class GVAR(48Rnd_40mm_MK19_M1001): RHS_48Rnd_40mm_MK19_M1001 {
         scope = 2;

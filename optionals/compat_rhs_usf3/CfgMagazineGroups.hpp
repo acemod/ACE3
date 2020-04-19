@@ -16,6 +16,10 @@ class ace_csw_groups {
         RHS_48Rnd_40mm_MK19_M430I = 1;
         RHS_96Rnd_40mm_MK19_M430I = 1;
     };
+    class GVAR(48Rnd_40mm_MK19_M430A1) {
+        RHS_48Rnd_40mm_MK19_M430A1 = 1;
+        RHS_96Rnd_40mm_MK19_M430A1 = 1;
+    };
     class GVAR(48Rnd_40mm_MK19_M1001) {
         RHS_48Rnd_40mm_MK19_M1001 = 1;
         RHS_96Rnd_40mm_MK19_M1001 = 1;

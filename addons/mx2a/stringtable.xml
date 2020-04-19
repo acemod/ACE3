@@ -16,6 +16,7 @@
             <Korean>MX-2A</Korean>
             <Chinesesimp>MX-2A(热成像)</Chinesesimp>
             <Chinese>MX-2A</Chinese>
+            <Turkish>MX-2A</Turkish>
         </Key>
         <Key ID="STR_ACE_MX2A_Description">
             <English>Thermal imaging device</English>
@@ -32,6 +33,7 @@
             <Korean>열영상 장치</Korean>
             <Chinesesimp>热成像装置</Chinesesimp>
             <Chinese>熱成像裝置</Chinese>
+            <Turkish>Termal Görüntüleme Aracı</Turkish>
         </Key>
     </Package>
 </Project>

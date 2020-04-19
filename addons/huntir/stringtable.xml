@@ -244,7 +244,7 @@
         <Key ID="STR_ACE_HuntIR_HELP_EXIT">
             <English>Esc - Exit help</English>
             <German>ESC - Hilfe verlassen</German>
-            <Spanish>Esc - Salit de ayuda</Spanish>
+            <Spanish>Esc - Salir del menú de ayuda</Spanish>
             <Czech>Esc - Ukončit pomoc </Czech>
             <Russian>Esc - Выйти из помощи</Russian>
             <Italian>Esc - Chiudi aiuto</Italian>

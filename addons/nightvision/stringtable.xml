@@ -13,6 +13,7 @@
             <Russian>ACE ПНВ</Russian>
             <Portuguese>ACE Visão Noturna</Portuguese>
             <Czech>ACE Noční vidění</Czech>
+            <Turkish>ACE Gece Görüşü</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
             <English>NV Goggles (Gen1)</English>
@@ -29,6 +30,7 @@
             <Korean>야투경 (1세대)</Korean>
             <Chinesesimp>夜视镜 (初代)</Chinesesimp>
             <Chinese>夜視鏡 (初代)</Chinese>
+            <Turkish>GG Gözlüğü (1. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2">
             <English>NV Goggles (Gen2)</English>
@@ -45,6 +47,7 @@
             <Korean>야투경 (2세대)</Korean>
             <Chinesesimp>夜视镜 (二代)</Chinesesimp>
             <Chinese>夜視鏡 (二代)</Chinese>
+            <Turkish>GG Gözlüğü (2. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -61,6 +64,7 @@
             <Korean>야투경 (3세대)</Korean>
             <Chinesesimp>夜视镜 (三代)</Chinesesimp>
             <Chinese>夜視鏡 (三代)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_brown">
             <English>NV Goggles (Gen3, Brown)</English>
@@ -77,6 +81,7 @@
             <Korean>야투경 (3세대, 갈색)</Korean>
             <Chinesesimp>夜视镜 (三代, 棕色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 棕色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Kahverengi)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green">
             <English>NV Goggles (Gen3, Green)</English>
@@ -93,6 +98,7 @@
             <Korean>야투경 (3세대, 녹색)</Korean>
             <Chinesesimp>夜视镜 (三代, 绿色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 綠色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black">
             <English>NV Goggles (Gen3, Black)</English>
@@ -109,6 +115,7 @@
             <Korean>야투경 (3세대, 검정색)</Korean>
             <Chinesesimp>夜视镜 (三代, 黑色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 黑色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4">
             <English>NV Goggles (Gen4)</English>
@@ -125,6 +132,7 @@
             <Korean>야투경 (4세대)</Korean>
             <Chinesesimp>夜视镜 (四代)</Chinesesimp>
             <Chinese>夜視鏡 (四代)</Chinese>
+            <Turkish>GG Gözlüğü (4. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_FullScreen">
             <English>NV Goggles (Wide)</English>
@@ -141,6 +149,7 @@
             <Korean>야투경 (넓음)</Korean>
             <Chinesesimp>夜视镜 (宽版)</Chinesesimp>
             <Chinese>夜視鏡 (寬版)</Chinese>
+            <Turkish>GG Gözlüğü (Geniş)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -157,6 +166,7 @@
             <Korean>밝기: %1</Korean>
             <Chinesesimp>亮度: %1</Chinesesimp>
             <Chinese>亮度: %1</Chinese>
+            <Turkish>Parlaklık: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_IncreaseNVGBrightness">
             <English>Increase NVG Brightness</English>
@@ -204,6 +214,7 @@
             <Korean>야간투시경</Korean>
             <Chinesesimp>夜视</Chinesesimp>
             <Chinese>夜視</Chinese>
+            <Turkish>Gece Görüşü</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_Description">
             <English>Settings for night vision.</English>
@@ -262,6 +273,7 @@
             <Russian>Степень размытия ПНВ</Russian>
             <Portuguese>Escala de Névoa na NVG</Portuguese>
             <Czech>Míra mlhy pro noktovizor</Czech>
+            <Spanish>Escala de niebla NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_Description">
             <English>Fog is used to limit visibility.</English>
@@ -275,6 +287,7 @@
             <Russian>Туман используется для ограничения видимости</Russian>
             <Portuguese>Névoa é usada para limitar visibilidade.</Portuguese>
             <Czech>Mlha je použita pro omezení dohledu.</Czech>
+            <Spanish>Niebla es usada para limitar la visibilidad</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
             <English>NVG Effect Scale</English>
@@ -288,6 +301,7 @@
             <Russian>Степень эффектов ПНВ</Russian>
             <Portuguese>Intensidade de efeito da Visão Noturna</Portuguese>
             <Czech>Míra efektu pro noktovizor</Czech>
+            <Spanish>Escala del efecto NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
@@ -301,6 +315,7 @@
             <Russian>Эффекты размытия и яркости [Установка на 0 отключит ВСЕ эффекты ПНВ]</Russian>
             <Portuguese>Efeitos de borrão e brilho [Definir 0 desativa TODOS os efeitos da Visão Noturna]</Portuguese>
             <Czech>Rozostření a jas [Nastavení na 0 vypne VŠECHNY efekty nočního vidění]</Czech>
+            <Spanish>Efectos de emborronado y brillo [Configuración a 0 deshabilita todos los efectos de visión nocturna]</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
@@ -314,6 +329,7 @@
             <Russian>Размытие при опущеном прицеле</Russian>
             <Portuguese>Borrão ao mirar</Portuguese>
             <Czech>Rozostření při použití mířidel</Czech>
+            <Spanish>Emborronado al mirar</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_DisplayName">
             <English>NVG Noise Scale</English>
@@ -327,6 +343,7 @@
             <Russian>Степень шума ПНВ</Russian>
             <Portuguese>Intensidade de Ruído/Efeito Granulado</Portuguese>
             <Czech>Míra šumu pro noktovizor</Czech>
+            <Spanish>Escala de ruido/granulado NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
@@ -340,6 +357,7 @@
             <Russian>Интенсивность шума при использовании ПНВ</Russian>
             <Portuguese>Intensidade de Ruído de Imagem ao utilizar Visão Noturna</Portuguese>
             <Czech>Intezita šumu při používání noktovizoru</Czech>
+            <Spanish>Intensidad de ruido de la imagen cuando se usa NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
@@ -353,6 +371,7 @@
             <Russian>Эффекты затвора</Russian>
             <Portuguese>Efeito de Obturador</Portuguese>
             <Czech>Efekt závěrky</Czech>
+            <Spanish>Efecto de obturador</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
@@ -366,6 +385,7 @@
             <Russian>Эффект затвора при вспышках выстрелов</Russian>
             <Portuguese>Efeito de rolamento de Obturador de flashes de focinho</Portuguese>
             <Czech>Efekt závěrky z důsledku výšlehu při střelbě</Czech>
+            <Spanish>Efecto obturador por los fogonazos de la boca del cañón</Spanish>
         </Key>
     </Package>
 </Project>

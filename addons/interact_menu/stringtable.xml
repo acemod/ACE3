@@ -64,6 +64,7 @@
             <Korean>상호작용 키</Korean>
             <Chinesesimp>互动键</Chinesesimp>
             <Chinese>互動鍵</Chinese>
+            <Turkish>Etkileşim Tuşu</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
             <English>Self Interaction Key</English>
@@ -80,6 +81,7 @@
             <Korean>자기상호작용 키</Korean>
             <Chinesesimp>自我互动键</Chinesesimp>
             <Chinese>自我互動鍵</Chinese>
+            <Turkish>Kendi Etkileşimim Tuşu</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
             <English>Self Actions</English>
@@ -96,6 +98,7 @@
             <Korean>자기 동작</Korean>
             <Chinesesimp>自我动作</Chinesesimp>
             <Chinese>自我動作</Chinese>
+            <Turkish>Kendi Etkileşimim</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
             <English>Vehicle Actions</English>
@@ -112,6 +115,7 @@
             <Korean>차량 동작</Korean>
             <Chinesesimp>载具动作</Chinesesimp>
             <Chinese>載具動作</Chinese>
+            <Turkish>Araç Etkileşimi</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
             <English>Zeus Actions</English>
@@ -128,6 +132,7 @@
             <Korean>Zeus 동작</Korean>
             <Chinesesimp>宙斯操作</Chinesesimp>
             <Chinese>宙斯操作</Chinese>
+            <Turkish>Zeus Etkileşimi</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
@@ -352,6 +357,7 @@
             <Korean>화면 흐리게</Korean>
             <Chinesesimp>模糊画面</Chinesesimp>
             <Chinese>模糊畫面</Chinese>
+            <Turkish>Bulanık Ekran</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
@@ -368,6 +374,7 @@
             <Korean>까맣게</Korean>
             <Chinesesimp>黑色</Chinesesimp>
             <Chinese>黑色</Chinese>
+            <Turkish>Siyah</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
             <English>Show actions for buildings</English>
@@ -458,6 +465,7 @@
             <Portuguese>Cor do Seletor</Portuguese>
             <French>Couleur du sélecteur</French>
             <Czech>Barva selektoru</Czech>
+            <Spanish>Selector de color</Spanish>
         </Key>
     </Package>
 </Project>

@@ -367,7 +367,7 @@
 {% endif %}
 
 {% if include.component == "realisticnames" %}
-`ace_common`
+`ace_common`, `ace_optics`
 {% endif %}
 
 {% if include.component == "realisticweights" %}
@@ -548,6 +548,10 @@
 
 {% if include.component == "particles" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "realisticdispersion" %}
+`ace_ballistics`
 {% endif %}
 
 {% if include.component == "tracers" %}

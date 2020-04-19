@@ -15,6 +15,7 @@
             <Korean>Fulton MX-991</Korean>
             <Chinesesimp>Fulton MX-991手电筒</Chinesesimp>
             <Chinese>Fulton MX-991</Chinese>
+            <Turkish>Fulton MX-991</Turkish>
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -30,6 +31,7 @@
             <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
             <Chinesesimp>拥有红色滤光片的手电筒。用来照亮地图。</Chinesesimp>
             <Chinese>擁有紅色濾光片的手電筒。用來照亮地圖。</Chinese>
+            <Turkish>Kırmızı filtreli el feneri. Harita üzerin de kullanım için.</Turkish>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -45,6 +47,7 @@
             <Korean>Maglite XL50</Korean>
             <Chinesesimp>Maglite XL50手电筒</Chinesesimp>
             <Chinese>Maglite XL50</Chinese>
+            <Turkish>Maglite XL50</Turkish>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_Description">
             <English>White mini flashlight. For use on map.</English>
@@ -60,6 +63,7 @@
             <Korean>하얀색 조그마한 손전등. 지도를 비출때 씁니다.</Korean>
             <Chinesesimp>白色的迷你手电筒。用来照亮地图。</Chinesesimp>
             <Chinese>白色的迷你手電筒。用來照亮地圖。</Chinese>
+            <Turkish>Beyaz küçük el feneri. Harita üzerin de kullanım için.</Turkish>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -75,6 +79,7 @@
             <Korean>KSF-1</Korean>
             <Chinesesimp>KSF-1手电筒</Chinesesimp>
             <Chinese>KSF-1</Chinese>
+            <Turkish>KSF-1</Turkish>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -90,6 +95,7 @@
             <Korean>빨간색 필터가 달린 손전등입니다. 지도를 비출때 씁니다.</Korean>
             <Chinesesimp>拥有红色滤光片的手电筒。用来照亮地图。</Chinesesimp>
             <Chinese>擁有紅色濾光片的手電筒。用來照亮地圖。</Chinese>
+            <Turkish>Kırmızı filtreli el feneri. Harita üzerin de kullanım için.</Turkish>
         </Key>
         <Key ID="STR_ACE_Flashlights_statMapLightColor">
             <English>Map light color</English>
@@ -103,24 +109,32 @@
             <Russian>Цвет подсветки карты</Russian>
             <Portuguese>Cor da lanterna no mapa</Portuguese>
             <Czech>Barva svítilny na mapě</Czech>
+            <Turkish>Harita ışık rengi</Turkish>
+            <Spanish>Color de luz sobre el mapa</Spanish>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_DisplayName">
             <English>Maglite ML300L</English>
             <German>Maglite ML300L</German>
             <Polish>Maglite ML300L</Polish>
             <Chinese>Maglite ML300L</Chinese>
+            <Italian>Maglite ML300L</Italian>
             <Czech>Maglite ML300L</Czech>
             <French>Maglite ML300L</French>
             <Japanese>マグライト ML300L</Japanese>
+            <Turkish>Maglite ML300L</Turkish>
+            <Spanish>Maglite ML300L</Spanish>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
             <English>Powerful LED flashlight.</English>
             <German>Leistungsstarke LED-Taschenlampe.</German>
             <Polish>Mocna latarka LED.</Polish>
             <Chinese>強大的LED手電筒</Chinese>
+            <Italian>Torcia a LED ad alta potenza</Italian>
             <Czech>Silná LED svítilna.</Czech>
             <French>Puissante lampe torche à LED.</French>
             <Japanese>協力な LED のフラッシュライト。</Japanese>
+            <Turkish>Güçlü LED el feneri</Turkish>
+            <Spanish>Linterna LED potente</Spanish>
         </Key>
     </Package>
 </Project>

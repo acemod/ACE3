@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
             <German>Effekte der G-Kräfte</German>
-            <Spanish>Efectos Gforces</Spanish>
+            <Spanish>Efectos de fuerza G</Spanish>
             <Czech>G Force efekty</Czech>
             <Portuguese>Efeitos da Força G</Portuguese>
             <French>Effets de force gravitationnelle</French>
@@ -15,6 +15,7 @@
             <Italian>Effetti forza G</Italian>
             <Chinesesimp>G力影响</Chinesesimp>
             <Chinese>G力影響</Chinese>
+            <Turkish>G-Kuvveti Efekti</Turkish>
         </Key>
         <Key ID="STR_ACE_GForces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
@@ -30,6 +31,7 @@
             <Italian>Solo Aerei</Italian>
             <Chinesesimp>只有战斗机</Chinesesimp>
             <Chinese>只有戰鬥機</Chinese>
+            <Turkish>Sadece Uçaklar</Turkish>
         </Key>
         <Key ID="STR_ACE_GForces_statGReduction">
             <English>G-force reduction</English>
@@ -43,6 +45,7 @@
             <Russian>Уменьшение перегрузок</Russian>
             <Portuguese>Redução de Força-G</Portuguese>
             <Czech>Redukce G Force</Czech>
+            <Spanish>Reducción de fuerzas G</Spanish>
         </Key>
     </Package>
 </Project>

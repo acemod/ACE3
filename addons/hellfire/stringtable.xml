@@ -3,7 +3,7 @@
     <Package name="Hellfire">
         <Key ID="STR_ACE_Hellfire_hellfireModeAction">
             <English>Set Hellfire mode</English>
-            <German>Setze Hellfire-Modus</German>
+            <German>Hellfire-Modus einstellen</German>
             <Italian>Imposta modalità Hellfire</Italian>
             <Japanese>ヘルファイア モードを設定</Japanese>
             <Chinesesimp>设定地狱火模式</Chinesesimp>
@@ -14,6 +14,8 @@
             <Portuguese>Definir modo de Hellfire</Portuguese>
             <French>Définir mode Hellfire</French>
             <Czech>Nastavit režim Hellfire</Czech>
+            <Turkish>Hellfire modunu ayarla</Turkish>
+            <Spanish>Ajustar modo Hellfire</Spanish>
         </Key>
     </Package>
 </Project>

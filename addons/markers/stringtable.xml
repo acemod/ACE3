@@ -16,6 +16,7 @@
             <Korean>방위: %1°</Korean>
             <Chinesesimp>方位: %1°</Chinesesimp>
             <Chinese>方位: %1°</Chinese>
+            <Turkish>Yön: %1°</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
@@ -30,6 +31,7 @@
             <Portuguese>Marcadores</Portuguese>
             <French>Marqueurs</French>
             <Czech>Značky</Czech>
+            <Turkish>Işaretleyiciler</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
@@ -72,6 +74,7 @@
             <Portuguese>Ninguém</Portuguese>
             <French>Personne</French>
             <Czech>Nikdo</Czech>
+            <Turkish>Hiçkimse</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
@@ -86,6 +89,7 @@
             <Portuguese>Todos jogadores</Portuguese>
             <French>Tous les joueurs</French>
             <Czech>Všichni hráči</Czech>
+            <Turkish>Bütün Oyuncular</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
@@ -100,6 +104,7 @@
             <Portuguese>Admins</Portuguese>
             <French>Admins</French>
             <Czech>Administrátoři</Czech>
+            <Turkish>Adminler</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
@@ -114,6 +119,7 @@
             <Portuguese>Líderes de grupo</Portuguese>
             <French>Chefs de groupe</French>
             <Czech>Velitelé jednotek</Czech>
+            <Turkish>Grup Liderleri</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
@@ -128,6 +134,7 @@
             <Portuguese>Líderes de grupo e Admins</Portuguese>
             <French>Chefs de groupe et Admins</French>
             <Czech>Velitelé jednotek a Administrátoři</Czech>
+            <Turkish>Grup Liderleri Ve Adminler</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
             <English>Creator</English>
@@ -138,7 +145,9 @@
             <Portuguese>Criador</Portuguese>
             <Chinese>放置者</Chinese>
             <French>Créateur</French>
+            <Italian>Creatore</Italian>
             <Czech>Tvůrce</Czech>
+            <Turkish>Yaratıcı</Turkish>
         </Key>
     </Package>
 </Project>

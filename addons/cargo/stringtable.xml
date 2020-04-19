@@ -15,6 +15,7 @@
             <Korean>싣기</Korean>
             <Chinese>裝載</Chinese>
             <Chinesesimp>装载</Chinesesimp>
+            <Turkish>Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
@@ -30,6 +31,7 @@
             <Korean>내리기</Korean>
             <Chinese>卸載</Chinese>
             <Chinesesimp>卸载</Chinesesimp>
+            <Turkish>Boşalt</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -45,6 +47,7 @@
             <Korean>화물</Korean>
             <Chinese>貨物</Chinese>
             <Chinesesimp>货物</Chinesesimp>
+            <Turkish>Kargo</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
@@ -60,6 +63,7 @@
             <Korean>화물 메뉴</Korean>
             <Chinese>貨物選單</Chinese>
             <Chinesesimp>货物选单</Chinesesimp>
+            <Turkish>Kargo Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
@@ -75,6 +79,7 @@
             <Korean>선적 공간 남음: %1</Korean>
             <Chinese>貨物剩餘空間: %1</Chinese>
             <Chinesesimp>货物剩余空间: %1</Chinesesimp>
+            <Turkish>Kargo Alanı Kaldı: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
@@ -90,6 +95,7 @@
             <Korean>화물 활성화</Korean>
             <Chinese>啟用貨物裝載</Chinese>
             <Chinesesimp>启用货物装载</Chinesesimp>
+            <Turkish>Kargoyu Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
@@ -120,6 +126,7 @@
             <Korean>화물 설정</Korean>
             <Chinese>貨物設定</Chinese>
             <Chinesesimp>货物设定</Chinesesimp>
+            <Turkish>Kargo Ayarları</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
@@ -182,6 +189,7 @@
             <Korean>화물 싣기</Korean>
             <Chinese>裝載貨物中</Chinese>
             <Chinesesimp>装载货物中</Chinesesimp>
+            <Turkish>Kargo Yükleniyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
@@ -197,6 +205,7 @@
             <Korean>화물 내리기</Korean>
             <Chinese>卸載貨物中</Chinese>
             <Chinesesimp>卸载货物中</Chinesesimp>
+            <Turkish>Kargo Boşaltılıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -241,6 +250,8 @@
             <Portuguese>Espaço de Carga</Portuguese>
             <French>Espace de stockage</French>
             <Czech>Nákladový prostor</Czech>
+            <Spanish>Espacio de carga</Spanish>
+            <Turkish>Kargo Alanı</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
@@ -255,6 +266,7 @@
             <Portuguese>O espaço de carga disponível nesse veículo/contâiner</Portuguese>
             <French>L'espace de stockage disponible dans ce véhicule/container.</French>
             <Czech>Nákladový prostor dostupný v tomto vozidle/kontejneru</Czech>
+            <Spanish>El espacio de carga disponible en este vehículo/contenedor</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
@@ -269,6 +281,8 @@
             <Portuguese>Tamanho da Carga</Portuguese>
             <French>Encombrement fret</French>
             <Czech>Velikost nákladu</Czech>
+            <Spanish>Tamaño de carga</Spanish>
+            <Turkish>Kargo Boyutu</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
@@ -283,6 +297,7 @@
             <Portuguese>O Espaço de carga necessário para carregar esse objeto (-1 para que não seja carregável)</Portuguese>
             <French>Définit l'espace de stockage nécessaire à l'embarquement de cet objet (-1 pour le rendre non transportable).</French>
             <Czech>Nákladový prostor požadovný pro naložení tohoto objektu (-1 pro nenaložitelné)</Czech>
+            <Spanish>Espacio de carga requerido para guardar este objeto (-1 para no descargable)</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -297,6 +312,7 @@
             <Russian>Десантирование груза</Russian>
             <Portuguese>Lançamento Aéreo</Portuguese>
             <Czech>Výsadek</Czech>
+            <Spanish>Lanzamiento aéreo</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
@@ -311,6 +327,7 @@
             <Russian>Неподходящее положение</Russian>
             <Portuguese>Desnivelar Vôo</Portuguese>
             <Czech>Let není vyrovnaný</Czech>
+            <Spanish>Vuelo no nivelado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coefficient</English>
@@ -325,6 +342,7 @@
             <Russian>Коэффициент времени десантирования</Russian>
             <Portuguese>Fator de Tempo para soltar a carga</Portuguese>
             <Czech>Koeficient času nákladního výsadku</Czech>
+            <Spanish>Coeficiente de tiempo para lanzamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
@@ -339,6 +357,7 @@
             <Russian>Модификатор времени, необходимого для десантирования груза</Russian>
             <Portuguese>Coeficiente de quanto tempo leva para soltar uma carga de paraquedas</Portuguese>
             <Czech>Upravuje jak dlouho výsadek trvá pro náklad.</Czech>
+            <Spanish>Modificador de tiempo de lanzamiento en paracaídas de un objeto cargado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
@@ -351,6 +370,7 @@
             <French>Coefficient du temps de chargement</French>
             <Chinese>裝載時間係數</Chinese>
             <Czech>Koeficient času nákládání</Czech>
+            <Spanish>Coeficiente de tiempo para cargar</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
@@ -363,6 +383,7 @@
             <French>Modifie le temps nécessaire pour charger/décharger des objets.\nLe temps, en secondes, est calculé en multipliant la taille de l'élément par ce coefficient.</French>
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
             <Czech>Upravuje jak dlouho nakládají/vykládání trvá.\nVýsledkem je čas v sekundách - velikost objektu vynásobená touto hodnotou.</Czech>
+            <Spanish>Modifica el tiempo de carga/descarga de objetos.\n El Tiempo en segundos, es el tamño del objeto multiplicado por este valor.</Spanish>
         </Key>
     </Package>
 </Project>

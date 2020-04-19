@@ -16,6 +16,7 @@
             <Korean>디버그를 클립보드로</Korean>
             <Chinesesimp>复制除错讯息至剪贴簿</Chinesesimp>
             <Chinese>複製除錯訊息至剪貼簿</Chinese>
+            <Turkish>Panoya Hata Ayıkla</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -32,6 +33,7 @@
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
             <Chinesesimp>复制除错讯息至剪贴簿与RPT报告档中。</Chinesesimp>
             <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中</Chinese>
+            <Turkish>Hata ayıklama bilgilerini RPT ve panoya gönderir.</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
@@ -48,6 +50,7 @@
             <Korean>헤드버그 수정</Korean>
             <Chinesesimp>修复动作BUG</Chinesesimp>
             <Chinese>修復動作BUG</Chinese>
+            <Turkish>Animasyon Düzeltme</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
@@ -64,6 +67,7 @@
             <Korean>자신의 동작 상태 초기화</Korean>
             <Chinesesimp>当ACE发生动作BUG时，点此修复。</Chinesesimp>
             <Chinese>當ACE發生動作BUG時，點此修復</Chinese>
+            <Turkish>Animasyon durumunuzu sıfırlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -80,6 +84,7 @@
             <Korean>ACE 새소식</Korean>
             <Chinesesimp>ACE新闻</Chinesesimp>
             <Chinese>ACE新聞</Chinese>
+            <Turkish>ACE Haberler</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -96,6 +101,7 @@
             <Korean>메인메뉴에 새소식을 표시합니다</Korean>
             <Chinesesimp>显示新闻消息于主选单</Chinesesimp>
             <Chinese>顯示新聞消息於主選單</Chinese>
+            <Turkish>Ana Menü de Haberleri Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>ACE Logistics</English>
@@ -111,6 +117,7 @@
             <Korean>ACE 보급</Korean>
             <Chinesesimp>ACE 后勤设定</Chinesesimp>
             <Chinese>ACE 後勤設定</Chinese>
+            <Turkish>ACE Lojistik</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
@@ -127,6 +134,7 @@
             <Korean>숨기기</Korean>
             <Chinesesimp>隐藏</Chinesesimp>
             <Chinese>隱藏</Chinese>
+            <Turkish>Gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
@@ -207,6 +215,7 @@
             <Korean>상단</Korean>
             <Chinesesimp>上方</Chinesesimp>
             <Chinese>上方</Chinese>
+            <Turkish>Üst</Turkish>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
@@ -223,6 +232,7 @@
             <Korean>하단</Korean>
             <Chinesesimp>下方</Chinesesimp>
             <Chinese>下方</Chinese>
+            <Turkish>Alt</Turkish>
         </Key>
     </Package>
 </Project>

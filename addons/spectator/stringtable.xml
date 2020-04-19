@@ -14,6 +14,7 @@
             <Russian>Зритель</Russian>
             <Portuguese>Espectador</Portuguese>
             <Czech>Divák</Czech>
+            <Turkish>Izleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -28,6 +29,7 @@
             <Russian>ACE Зритель</Russian>
             <Portuguese>ACE Espectador</Portuguese>
             <Czech>ACE Divák</Czech>
+            <Turkish>ACE Izleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -57,6 +59,7 @@
             <Russian>Разрешить для ИИ</Russian>
             <Portuguese>IA Ativado</Portuguese>
             <Czech>AI povoleno</Czech>
+            <Turkish>AI Etkin</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -86,6 +89,7 @@
             <Korean>카메라 모드</Korean>
             <Chinesesimp>摄影机模式</Chinesesimp>
             <Chinese>攝影機模式</Chinese>
+            <Turkish>Kamera Modları</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
             <English>Camera modes that can be used</English>
@@ -116,6 +120,7 @@
             <Korean>모두</Korean>
             <Chinesesimp>所有</Chinesesimp>
             <Chinese>所有</Chinese>
+            <Turkish>Hepsi</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>1PP and 3PP</English>
@@ -131,6 +136,7 @@
             <Japanese>一人称と三人称</Japanese>
             <Chinese>第一人稱與第三人稱</Chinese>
             <Chinesesimp>第一人称与第三人称</Chinesesimp>
+            <Turkish>1PP ve 3PP</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
@@ -146,6 +152,7 @@
             <Korean>시야 모드</Korean>
             <Chinesesimp>视觉模式</Chinesesimp>
             <Chinese>視覺模式</Chinese>
+            <Turkish>Görüş Modları</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
             <English>Vision modes that can be used</English>
@@ -176,6 +183,7 @@
             <Korean>야간투시경</Korean>
             <Chinesesimp>夜视</Chinesesimp>
             <Chinese>夜視</Chinese>
+            <Turkish>Geçe Görüşü</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
@@ -191,24 +199,31 @@
             <Korean>열화상</Korean>
             <Chinesesimp>热成像</Chinesesimp>
             <Chinese>熱成像</Chinese>
+            <Turkish>Termal Görüş</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
             <English>Max Follow Distance</English>
+            <German>Maximale Beobachtungsdistance</German>
             <Russian>Макс. дистанция следования</Russian>
             <Japanese>最大追随距離</Japanese>
             <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
             <Chinese>最大跟隨距離</Chinese>
             <French>Distance maximale de suivi</French>
+            <Italian>Distanza massima per seguire</Italian>
             <Czech>Maximální vzdálenost sledování objektu</Czech>
+            <Polish>Maksymalna odległość śledzenia</Polish>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
+            <German>Maximale Distanz in welcher die Kamera dem Ziel folgen kann.</German>
             <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
             <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
             <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
+            <Italian>Distanza massima che la telecamera seguente può percorrere dall'obiettivo</Italian>
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
+            <Polish>Maksymalna odległość na jakiej kamera może podążać od celu</Polish>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
@@ -225,6 +240,7 @@
             <Korean>정비공</Korean>
             <Chinese>工兵</Chinese>
             <Chinesesimp>工兵</Chinesesimp>
+            <Turkish>Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
@@ -240,6 +256,7 @@
             <Korean>자유</Korean>
             <Chinesesimp>自由模式</Chinesesimp>
             <Chinese>自由模式</Chinese>
+            <Turkish>Serbest</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNormal">
             <English>Normal</English>
@@ -255,6 +272,7 @@
             <Korean>정상</Korean>
             <Chinesesimp>正常</Chinesesimp>
             <Chinese>正常</Chinese>
+            <Turkish>Normal</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
@@ -270,6 +288,7 @@
             <Korean>야간</Korean>
             <Chinesesimp>夜视</Chinesesimp>
             <Chinese>夜視</Chinese>
+            <Turkish>Gece</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
@@ -285,6 +304,7 @@
             <Korean>열상</Korean>
             <Chinesesimp>热成像</Chinesesimp>
             <Chinese>熱成像</Chinese>
+            <Turkish>Termal</Turkish>
         </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_uiIcons">
@@ -300,6 +320,7 @@
             <Russian>Иконки</Russian>
             <Portuguese>Ícones</Portuguese>
             <Czech>Ikony</Czech>
+            <Turkish>Ikonlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -314,6 +335,7 @@
             <Russian>Осколки</Russian>
             <Portuguese>Projéteis</Portuguese>
             <Czech>Projektily</Czech>
+            <Turkish>Mermiler</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -329,6 +351,7 @@
             <Korean>다음 인원</Korean>
             <Chinesesimp>下个单位</Chinesesimp>
             <Chinese>下個單位</Chinese>
+            <Turkish>Sonraki Takım</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
@@ -344,6 +367,7 @@
             <Korean>이전 인원</Korean>
             <Chinesesimp>上个单位</Chinesesimp>
             <Chinese>上個單位</Chinese>
+            <Turkish>Önceki Takım</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Vision Mode</English>
@@ -358,6 +382,7 @@
             <Russian>Режим видения</Russian>
             <Portuguese>Modo de Visão</Portuguese>
             <Czech>Režim sledování</Czech>
+            <Turkish>Görüş Modu</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -372,6 +397,7 @@
             <Russian>Замедление</Russian>
             <Portuguese>Velocidade Lenta</Portuguese>
             <Czech>Pomalá rychlost</Czech>
+            <Turkish>Yavaş Hız</Turkish>
         </Key>
     </Package>
 </Project>

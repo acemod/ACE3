@@ -16,6 +16,7 @@
             <Korean>고도계</Korean>
             <Chinesesimp>高度计</Chinesesimp>
             <Chinese>高度計</Chinese>
+            <Turkish>Altimetre</Turkish>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
             <English>Altimeter Watch</English>
@@ -32,6 +33,7 @@
             <Korean>고도계 시계</Korean>
             <Chinesesimp>高度计手表</Chinesesimp>
             <Chinese>高度計手錶</Chinese>
+            <Turkish>Altimetre Saati</Turkish>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDescription">
             <English>Used to show height, descent rate and the time.</English>
@@ -48,6 +50,7 @@
             <Korean>높이와, 하강속도 그리고 시간을 보여줍니다.</Korean>
             <Chinesesimp>用于显示高度，下降率和时间。</Chinesesimp>
             <Chinese>用於顯示高度，下降率和時間</Chinese>
+            <Turkish>Yüksekliği, alçalma hızını ve zamanı göstermek için kullanılır.</Turkish>
         </Key>
         <Key ID="STR_ACE_Parachute_NonSteerableParachute">
             <English>Non-Steerable Parachute</English>
@@ -64,6 +67,7 @@
             <Korean>비-조종 낙하산</Korean>
             <Chinesesimp>非可操控降落伞</Chinesesimp>
             <Chinese>非可操控降落傘</Chinese>
+            <Turkish>Yönlendirilemez Paraşüt</Turkish>
         </Key>
         <Key ID="STR_ACE_Parachute_CutParachute">
             <English>Cut Parachute</English>
@@ -80,6 +84,7 @@
             <Korean>낙하산 자르기</Korean>
             <Chinesesimp>剪断降落伞</Chinesesimp>
             <Chinese>剪斷降落傘</Chinese>
+            <Turkish>Paraşütü Kes</Turkish>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
@@ -96,6 +101,7 @@
             <Korean>예비 낙하산</Korean>
             <Chinesesimp>备用降落伞</Chinesesimp>
             <Chinese>備用降落傘</Chinese>
+            <Turkish>Yedek Paraşüt</Turkish>
         </Key>
         <Key ID="STR_ACE_Parachute_HideAltimeter">
             <English>Hide Freefall Altimeter</English>
@@ -109,6 +115,8 @@
             <Portuguese>Esconder Altímetro de queda livre</Portuguese>
             <French>Masquer l'altimètre en chute libre</French>
             <Czech>Schovat výškoměr v GUI při volném pádu</Czech>
+            <Spanish>Ocultar altímetro de caída libre</Spanish>
+            <Turkish>Serbest Düşüş Altimetresini Gizle</Turkish>
         </Key>
         <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
             <English>Hides the altitude and speed shown while free falling or parachuting.</English>
@@ -122,6 +130,8 @@
             <Portuguese>Esconde a altitude e velocidade enquanto estiver em queda livre ou saltando de paraquedas.</Portuguese>
             <French>Cache l'altitude et la vitesse affichées, lors d'une chute libre ou d'un parachutage.</French>
             <Czech>Schová výšku a rychlost v GUI při volném pádu a při použití padáku.</Czech>
+            <Spanish>Oculta la altitud y la velocidad que se muestran en caída libre o en paracaídas.</Spanish>
+            <Turkish>Serbest düşme veya paraşütle atlama sırasında gösterilen yüksekliği ve hızı gizler.</Turkish>
         </Key>
     </Package>
 </Project>

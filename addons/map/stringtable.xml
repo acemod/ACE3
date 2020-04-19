@@ -33,6 +33,7 @@
             <Korean>지도에 조명</Korean>
             <Chinesesimp>地图照明</Chinesesimp>
             <Chinese>地圖照明</Chinese>
+            <Turkish>Harita aydınlatması</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
@@ -94,6 +95,7 @@
             <Korean>지도 흔들림</Korean>
             <Chinesesimp>地图震动</Chinesesimp>
             <Chinese>地圖震動</Chinese>
+            <Turkish>Harita sarsıntısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -413,6 +415,7 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapali</Turkish>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>

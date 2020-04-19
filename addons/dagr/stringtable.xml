@@ -15,6 +15,7 @@
             <Korean>DAGR</Korean>
             <Chinese>軍用GPS接收器</Chinese>
             <Chinesesimp>军用GPS接收器</Chinesesimp>
+            <Turkish>DAGR</Turkish>
         </Key>
         <Key ID="STR_ACE_DAGR_ConfigureDAGR">
             <English>Configure DAGR</English>
@@ -30,6 +31,7 @@
             <Korean>DAGR 설정</Korean>
             <Chinese>設定軍用GPS接收器</Chinese>
             <Chinesesimp>设定军用GPS接收器</Chinesesimp>
+            <Turkish>DAGR'ı yapılandır</Turkish>
         </Key>
         <Key ID="STR_ACE_DAGR_ToggleDAGR">
             <English>Toggle DAGR</English>
@@ -45,6 +47,7 @@
             <Korean>DAGR 토글</Korean>
             <Chinese>切換軍用GPS接收器</Chinese>
             <Chinesesimp>切换军用GPS接收器</Chinesesimp>
+            <Turkish>DAGR'yi aç / kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_DAGR_Description">
             <English>Defense Advanced GPS Receiver</English>

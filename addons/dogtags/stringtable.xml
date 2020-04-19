@@ -7,7 +7,7 @@
             <Russian>Жетон</Russian>
             <Czech>Identifikační známka</Czech>
             <Japanese>ドッグ タグ</Japanese>
-            <German>Hundemarke</German>
+            <German>Erkennungsmarke</German>
             <Korean>군번줄</Korean>
             <French>Plaque d'identification</French>
             <Italian>Piastrina</Italian>
@@ -15,6 +15,7 @@
             <Chinesesimp>兵籍牌</Chinesesimp>
             <Portuguese>Dog Tag</Portuguese>
             <Spanish>Placa de identidad</Spanish>
+            <Turkish>Künye</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
@@ -22,7 +23,7 @@
             <Russian>Проверить жетон</Russian>
             <Czech>Zkontrolovat známku</Czech>
             <Japanese>ドッグ タグを見る</Japanese>
-            <German>Hundemarke prüfen</German>
+            <German>Erkennungsmarke prüfen</German>
             <Korean>군번줄 확인</Korean>
             <French>Vérifier la plaque d'identification</French>
             <Italian>Controlla Piastrina</Italian>
@@ -30,6 +31,7 @@
             <Chinesesimp>检查兵籍牌</Chinesesimp>
             <Portuguese>Verificar Dog Tag</Portuguese>
             <Spanish>Verificar placa de identidad</Spanish>
+            <Turkish>Künyeyi Kontrol Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
@@ -45,6 +47,7 @@
             <Chinesesimp>检查</Chinesesimp>
             <Portuguese>Verificar</Portuguese>
             <Spanish>Verificar</Spanish>
+            <Turkish>Kontrol Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
@@ -60,6 +63,7 @@
             <Chinesesimp>拿取</Chinesesimp>
             <Portuguese>Pegar</Portuguese>
             <Spanish>Tomar</Spanish>
+            <Turkish>Al</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dogtag taken from %1...</English>
@@ -67,7 +71,7 @@
             <Russian>Жетон снят с %1...</Russian>
             <Czech>Sebral jsem známku od %1...</Czech>
             <Japanese>%1からドッグ タグを取っています・・・</Japanese>
-            <German>Hundemarke von %1 genommen ...</German>
+            <German>Erkennungsmarke von %1 genommen...</German>
             <Korean>%1로부터 군번줄을 회수했습니다...</Korean>
             <French>Plaque d'identification prise sur %1...</French>
             <Italian>Piastrina presa da %1...</Italian>
@@ -75,6 +79,7 @@
             <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
             <Portuguese>Dogtag pego de %1...</Portuguese>
             <Spanish>Tomado placa de identidad de %1...</Spanish>
+            <Turkish>Künye %1 kişisinden alındı</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the dogtag...</English>
@@ -82,7 +87,7 @@
             <Russian>Кто-то уже забрал жетон...</Russian>
             <Czech>Někdo jiný už vzal identifikační známku...</Czech>
             <Japanese>すでにドッグ タグは取られています・・・</Japanese>
-            <German>Jemand anderes hat bereits die Hundemarke genommen ...</German>
+            <German>Jemand anderes hat bereits die Erkennungsmarke genommen...</German>
             <Korean>누군가 이미 군번줄을 회수해갔습니다...</Korean>
             <French>Quelqu'un d'autre a déjà pris la plaque d'identification...</French>
             <Italian>Qualcun altro ha già preso la piastrina...</Italian>
@@ -93,7 +98,7 @@
         </Key>
         <Key ID="STR_ACE_Dogtags_IGUI_Description">
             <English>Onscreen display for checking dogtags</English>
-            <German>Anzeige um Hundemarke zu überprüfen</German>
+            <German>Anzeige um Erkennungsmarke zu überprüfen</German>
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
             <Japanese>確認中のドッグタグを画面上で表示します</Japanese>
             <Italian>Display su schermo per il controllo delle piastrine</Italian>

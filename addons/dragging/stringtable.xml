@@ -16,6 +16,7 @@
             <Korean>끌기</Korean>
             <Chinese>拖拉</Chinese>
             <Chinesesimp>拖拉</Chinesesimp>
+            <Turkish>Sürükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
             <English>Release</English>
@@ -32,6 +33,7 @@
             <Korean>놓기</Korean>
             <Chinese>放開</Chinese>
             <Chinesesimp>放开</Chinesesimp>
+            <Turkish>Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
@@ -48,6 +50,7 @@
             <Korean>물건 끌기/놓기</Korean>
             <Chinese>拖拉/放開物品</Chinese>
             <Chinesesimp>拖拉/放开物品</Chinesesimp>
+            <Turkish>Objeyi Sürükle/Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -64,6 +67,7 @@
             <Korean>물체가 너무 무겁습니다</Korean>
             <Chinese>此物品過重</Chinese>
             <Chinesesimp>此物品过重</Chinesesimp>
+            <Turkish>Eşya çok ağır</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
@@ -80,6 +84,7 @@
             <Korean>업기</Korean>
             <Chinese>背起</Chinese>
             <Chinesesimp>背起</Chinesesimp>
+            <Turkish>Taşı</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_LowerRaise">
             <English>Raise/Lower</English>
@@ -95,6 +100,7 @@
             <Korean>높이기/낮추기</Korean>
             <Chinese>提高/下降</Chinese>
             <Chinesesimp>提高/下降</Chinesesimp>
+            <Turkish>Yukarı/Aşağı</Turkish>
         </Key>
     </Package>
 </Project>

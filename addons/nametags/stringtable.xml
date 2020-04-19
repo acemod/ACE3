@@ -16,6 +16,7 @@
             <Korean>이름표</Korean>
             <Chinesesimp>玩家名字</Chinesesimp>
             <Chinese>玩家名稱</Chinese>
+            <Turkish>Isım Etiketleri</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
             <English>This module allows you to customize settings and range of Name Tags.</English>
@@ -32,6 +33,7 @@
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
             <Chinesesimp>这个模块允许您设定名字和显示范围等设定</Chinesesimp>
             <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
+            <Turkish>Bu modül, Isim Etiketleri ayarlarını ve aralığını özelleştirmenizi sağlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNames">
             <English>Show Names</English>
@@ -48,6 +50,7 @@
             <Korean>이름 표시</Korean>
             <Chinesesimp>显示名字</Chinesesimp>
             <Chinese>顯示名稱</Chinese>
+            <Turkish>Isimleri Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames">
             <English>Show player names</English>
@@ -64,6 +67,7 @@
             <Korean>플레이어 이름 표시</Korean>
             <Chinesesimp>显示玩家名字</Chinesesimp>
             <Chinese>顯示玩家名稱</Chinese>
+            <Turkish>Oyuncu isimlerini göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
             <English>Show player names and set their activation. Default: Enabled</English>
@@ -142,6 +146,7 @@
             <Russian>Затухание на границе экрана</Russian>
             <Portuguese>Ocultar na borda da tela</Portuguese>
             <Czech>Zeslábnout poblíž okrajů obrazovky</Czech>
+            <Spanish>Difuminar en el borde de pantalla</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
             <English>Show player ranks (requires player names)</English>
@@ -362,6 +367,7 @@
             <Portuguese>Transparência da etiqueta de nome</Portuguese>
             <French>Transparence des noms</French>
             <Czech>Průhlednost jmenovek</Czech>
+            <Spanish>Transparencia de etiquetas de jugadores</Spanish>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>

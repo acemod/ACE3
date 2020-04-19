@@ -147,7 +147,7 @@ class GVAR(actions) {
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         allowSelfTreatment = QGVAR(allowSelfIV);
         category = "advanced";
-        medicRequired = 1;
+        medicRequired = QGVAR(medicIV);
         treatmentTime = 12;
         items[] = {"ACE_bloodIV"};
         condition = "";
@@ -298,6 +298,7 @@ class GVAR(actions) {
         condition = QUOTE(_patient call EFUNC(medical_status,isInStableCondition));
         items[] = {"ACE_personalAidKit"};
         treatmentLocations = QGVAR(locationPAK);
+        allowSelfTreatment = QGVAR(allowSelfPAK);
         medicRequired = QGVAR(medicPAK);
         treatmentTime = QFUNC(getHealTime);
         callbackSuccess = QFUNC(fullHeal);

@@ -18,7 +18,7 @@ params ["_display", "_control"];
 
 private _ctrlIDC = ctrlIDC _control;
 
-if !(isNil QGVAR(currentLeftPanel)) then {
+if (!isNil QGVAR(currentLeftPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLeftPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
     _previousCtrlBackground ctrlCommit FADE_DELAY;

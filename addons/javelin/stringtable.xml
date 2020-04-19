@@ -3,7 +3,7 @@
     <Package name="Javelin">
         <Key ID="STR_ACE_Javelin_LockTarget">
             <English>Lock Target (Hold)</English>
-            <German>Ziel aufschalten</German>
+            <German>Ziel aufschalten (Halten)</German>
             <Russian>Захватить цель (удерживать)</Russian>
             <Czech>Zamknout cíl (držet)</Czech>
             <Polish>Namierz cel (przytrzymaj)</Polish>
@@ -16,6 +16,7 @@
             <Korean>표적 획득 (누르기)</Korean>
             <Chinesesimp>锁定目标 (按住)</Chinesesimp>
             <Chinese>鎖定目標 (按住)</Chinese>
+            <Turkish>Hedefe Kilitlen(Basılı Tut)</Turkish>
         </Key>
     </Package>
 </Project>

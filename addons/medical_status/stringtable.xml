@@ -9,7 +9,11 @@
             <French>Statut</French>
             <Portuguese>Status</Portuguese>
             <Chinese>狀態</Chinese>
+            <Italian>Stato</Italian>
             <Czech>Stav</Czech>
+            <Polish>Status</Polish>
+            <Spanish>Estado</Spanish>
+            <Turkish>Durum</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_DisplayName">
             <English>Bleeding Coefficient</English>
@@ -26,6 +30,7 @@
             <Korean>출혈 계수</Korean>
             <Chinesesimp>流血系数</Chinesesimp>
             <Chinese>流血係數</Chinese>
+            <Turkish>Kanama Katsayısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_BleedingCoefficient_Description">
             <English>Coefficient for controlling the bleeding speed.</English>
@@ -42,6 +47,7 @@
             <Korean>출혈의 속도를 계수만큼 변경합니다</Korean>
             <Chinesesimp>修改流血速度</Chinesesimp>
             <Chinese>修改流血速度</Chinese>
+            <Turkish>Kanama hızını kontrol etme katsayısı.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_DisplayName">
             <English>Pain Coefficient</English>
@@ -58,6 +64,7 @@
             <Korean>고통 계수</Korean>
             <Chinesesimp>疼痛系数</Chinesesimp>
             <Chinese>疼痛係數</Chinese>
+            <Turkish>Ağrı Katsayısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_PainCoefficient_Description">
             <English>Coefficient for controlling the intensity of pain adjustments.</English>
@@ -83,7 +90,10 @@
             <French>Débit de transfusion IV</French>
             <Portuguese>Velocidade de Transferência de Sangue</Portuguese>
             <Chinese>點滴輸血流量</Chinese>
+            <Italian>IV Portata della trasfusione</Italian>
             <Czech>Rychlost IV transfuze </Czech>
+            <Polish>Natężenie Przepływu Transfuzji IV</Polish>
+            <Spanish>IV Flujo de transfusión</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
@@ -93,7 +103,10 @@
             <French>Définit la vitesse à laquelle le liquide s'écoule des poches de perfusion.\nLa variation du volume de poche IV est calculée selon la  formule suivante :\n intervalle de temps (s) * variation IV par seconde (4,1667 ml/s) * débit (ce coefficient).</French>
             <Portuguese>Controla o quão rápido flúidos são extraídos de bolsas de IV. A mudança no volume da bolsa d IV é calculado assim:\nIntervalo de tempo (s) * mudança de iv por segundo (4.1667 mL/s) * Velocidade de transferência (esse valor)</Portuguese>
             <Chinese>控制從點滴輸入人體的液體流量多快。點滴的體積更改是以\n時間間隔（單位秒）乘上點滴每秒速度（4.1667毫升/秒）乘上流量（該係數）。</Chinese>
+            <Italian>Controlla la velocità con cui il fluido esce dalle sacche per flebo. La variazione di volume delle sacche IV è calcolata come:\intervallo di tempo (s) * variazione iv al secondo (4,1667 mL/s) * portata (questo coefficiente).</Italian>
             <Czech>Nastavuje jak rychle tekutiny vytékají z IV sáčku. Zbývající objem IV sáčku je vypočítáván následovně:\nčasový interval (s) * změna iv za sekundu (4,1667 mL/s) * rychlost toku (tento koeficient).</Czech>
+            <Polish>Kontroluje, jak szybko płyn wypływa z worków IV. Zmiana objętości worka IV jest obliczana jako:\n przedział czasowy * zmiana iv na sekundę (4,1667 mL/s) * natężenie przepływu (ten współczynnik).</Polish>
+            <Spanish>Controla la rapidez con que fluye el líquido de las bolsas intravenosas. El cambio de volumen de la bolsa IV se calcula como: \n intervalo (s) de tiempo * cambio iv por segundo (4.1667 mL/s) * velocidad de flujo (este coeficiente).</Spanish>
         </Key>
     </Package>
 </Project>

@@ -47,7 +47,7 @@ private _affected = (ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20];
 _affected = _affected - [ACE_player];
 {
     if (local _x && {alive _x}) then {
-        private _strength = 1 - (((getPosASL _x) vectorDistance _grenadePosASL) min 20) / 20;
+        private _strength = 1 - (((eyePos _x) vectorDistance _grenadePosASL) min 20) / 20;
 
         TRACE_3("FlashBangEffect Start",_x,((getPosASL _x) vectorDistance _grenadePosASL),_strength);
 
@@ -55,9 +55,9 @@ _affected = _affected - [ACE_player];
 
         _x setSkill (skill _x / 50);
 
-        if (_strength > 0.2) then {
-            _x setVectorDir ((getPosASL _x) vectorDiff _grenadePosASL);
-        };
+        // Make AI try to look away
+        private _dirToFlash = _x getDir _grenadePosASL;
+        _x setDir (_dirToFlash + linearConversion [0.2, 1, _strength, 40, 135] * selectRandom [-1, 1]);
 
         [{
             params ["_unit"];
@@ -140,8 +140,11 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
         }, [], 17 * _strength] call CBA_fnc_waitAndExecute;
     };
 
-    if (_strength > 0.2) then {
-        ACE_player setVectorDir (_eyePos vectorDiff _grenadePosASL);
-    };
+    // Make player flinch
+    if (_strength <= 0.2) exitWith {};
+    private _minFlinch = linearConversion [0.2, 1, _strength, 0, 60, true];
+    private _maxFlinch = linearConversion [0.2, 1, _strength, 0, 95, true];
+    private _flinch    = (_minFlinch + random (_maxFlinch - _minFlinch)) * selectRandom [-1, 1];
+    ACE_player setDir (getDir ACE_player + _flinch);
 };
 true

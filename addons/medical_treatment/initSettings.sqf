@@ -8,15 +8,6 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(advancedBandages),
-    "CHECKBOX",
-    [LSTRING(AdvancedBandages_DisplayName), LSTRING(AdvancedBandages_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    true,
-    true
-] call CBA_settings_fnc_init;
-
-[
     QGVAR(advancedMedication),
     "CHECKBOX",
     [LSTRING(AdvancedMedication_DisplayName), LSTRING(AdvancedMedication_Description)],
@@ -25,14 +16,12 @@
     true
 ] call CBA_settings_fnc_init;
 
-// todo: verify that this setting does not require a restart
-// todo: this setting requires advanced bandages to be enabled, they should be independent
 [
-    QGVAR(woundReopening),
-    "CHECKBOX",
-    [LSTRING(WoundReopening_DisplayName), LSTRING(WoundReopening_Description)],
+    QGVAR(advancedBandages),
+    "LIST",
+    [LSTRING(AdvancedBandages_DisplayName), LSTRING(AdvancedBandages_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    false,
+    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedBandages_EnabledCanReopen)], 1],
     true
 ] call CBA_settings_fnc_init;
 
@@ -119,6 +108,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(allowSelfPAK),
+    "LIST",
+    [LSTRING(AllowSelfPAK_DisplayName), LSTRING(AllowSelfPAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(timeCoefficientPAK),
     "SLIDER",
     [LSTRING(TimeCoefficientPAK_DisplayName), LSTRING(TimeCoefficientPAK_Description)],
@@ -164,6 +162,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(medicIV),
+    "LIST",
+    [LSTRING(MedicIV_DisplayName), LSTRING(MedicIV_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(allowSelfIV),
     "LIST",
     [LSTRING(AllowSelfIV_DisplayName), LSTRING(AllowSelfIV_Description)],
@@ -177,7 +184,7 @@
     "SLIDER",
     [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [0, 1, 0.4, 2],
+    [0, 1, 0.4, 2, true],
     true
 ] call CBA_settings_fnc_init;
 
