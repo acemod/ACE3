@@ -72,9 +72,9 @@ class CfgVehicles {
                     displayName = CSTRING(TeamManagement);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
                     statement = "";
+                    modifierFunction = QUOTE(call FUNC(modifyTeamManagementAction));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                     class ACE_AssignTeamRed {
                         displayName = CSTRING(AssignTeamRed);
@@ -244,8 +244,8 @@ class CfgVehicles {
                 condition = QUOTE(GVAR(EnableTeamManagement));
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                 statement = "";
+                modifierFunction = QUOTE(call FUNC(modifyTeamManagementAction));
                 showDisabled = 1;
-                icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
