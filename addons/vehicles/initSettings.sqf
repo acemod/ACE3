@@ -25,6 +25,5 @@
     "SLIDER",
     LSTRING(SpeedLimiterStep),
     ELSTRING(common,ACEKeybindCategoryVehicles),
-    [1, 10, 5, 0],
-    2
+    [1, 10, 5, 0]
 ] call CBA_fnc_addSetting;
