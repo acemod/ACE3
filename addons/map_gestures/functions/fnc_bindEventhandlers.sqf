@@ -30,15 +30,14 @@ if (!isNil QGVAR(MouseMoveHandlerID)) then {
 };
 
 GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
-    // Don't transmit any data if we're using the map tools
-    if (!GVAR(EnableTransmit) || {(["ace_maptools"] call EFUNC(common,isModLoaded)) && {EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)}}) exitWith {};
-
     params ["_control", "_posX", "_posY"];
     private _position = _control ctrlMapScreenToWorld [_posX, _posY];
-    if (_position distance2D GVAR(pointPosition) > 1) then { // Only transmit when actually moving
+    GVAR(cursorPosition) = _position;
+    // Don't transmit any data if we're using the map tools
+    if (!GVAR(EnableTransmit) || {(["ace_maptools"] call EFUNC(common,isModLoaded)) && {EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)}}) exitWith {};
+    if (_position distance2D (ACE_player getVariable [QGVAR(pointPosition), [0, 0, 0]]) >= 1) then {
         [ACE_player, QGVAR(pointPosition), _position, GVAR(interval)] call EFUNC(common,setVariablePublic);
     };
-    GVAR(pointPosition) = _position;
 }];
 
 // MouseDown EH
@@ -66,6 +65,7 @@ GVAR(MouseUpHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonUp", {
     params ["", "_button"];
     if (_button == 0) then {
         GVAR(EnableTransmit) = false;
-        ACE_player setVariable [QGVAR(pointPosition), nil, true];
+        ACE_player setVariable [QGVAR(pointPosition), nil, true]; // Instantly transmit nil to stop drawing icon
+        GVAR(cursorPosition) = nil;
     };
 }];

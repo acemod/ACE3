@@ -36,6 +36,9 @@ params ["_mapHandle", "_position"];
     private _pos = _x getVariable QGVAR(pointPosition);
     // Only render if the unit is alive and transmitting
     if (alive _x && !isNil "_pos") then {
+        if (_x == ACE_player && !isNil QGVAR(cursorPosition)) then {
+            _pos = GVAR(cursorPosition);
+        };
 
         // If color settings for the group exist, then use those, otherwise fall back to the default colors
         private _colorMap = GVAR(GroupColorCfgMappingNew) getVariable [(groupID (group _x)), [GVAR(defaultLeadColor), GVAR(defaultColor)]];
