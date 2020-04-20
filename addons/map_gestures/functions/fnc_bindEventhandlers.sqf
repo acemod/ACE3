@@ -21,7 +21,7 @@ if (!isNil QGVAR(DrawMapHandlerID)) then {
     _mapCtrl ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)];
     GVAR(DrawMapHandlerID) = nil;
 };
-GVAR(DrawMapHandlerID) = _mapCtrl ctrlAddEventHandler ["Draw", {[_this select 0, ACE_player] call FUNC(drawMapGestures)}];
+GVAR(DrawMapHandlerID) = _mapCtrl ctrlAddEventHandler ["Draw", {[_this select 0, [ACE_player]] call FUNC(drawMapGestures)}];
 
 // MouseMoving EH.
 if (!isNil QGVAR(MouseMoveHandlerID)) then {
