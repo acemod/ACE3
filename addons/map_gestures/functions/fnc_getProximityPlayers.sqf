@@ -29,5 +29,5 @@ private _proximityPlayers = [];
     };
 } forEach _positions;
 
-_proximityPlayers = _proximityPlayers select {[_x, false] call EFUNC(common,isPlayer);}
+_proximityPlayers = _proximityPlayers select {[_x, false] call EFUNC(common,isPlayer);};
 _proximityPlayers arrayIntersect _proximityPlayers;
