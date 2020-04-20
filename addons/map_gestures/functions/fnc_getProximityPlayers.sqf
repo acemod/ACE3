@@ -20,8 +20,8 @@ params ["_unit", "_range"];
 
 private _proximityPlayers = _unit nearEntities [["CAMAnBase"], _range];
 if (_unit isEqualType objNull) then {
-    _proximityPlayers deleteAt (_proximityPlayers find _unit);
     _proximityPlayers append (crew vehicle _unit);
 };
 
-_proximityPlayers select {[_x, false] call EFUNC(common,isPlayer);}
+_proximityPlayers = _proximityPlayers select {[_x, false] call EFUNC(common,isPlayer);}
+_proximityPlayers arrayIntersect _proximityPlayers;
