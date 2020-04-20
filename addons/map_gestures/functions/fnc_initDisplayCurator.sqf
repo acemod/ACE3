@@ -18,4 +18,4 @@ params ["_display"];
 
 private _mapCtrl = _display displayCtrl 50;
 
-_mapCtrl ctrlAddEventHandler ["Draw", {[_this select 0, [ACE_player, positionCameraToWorld [0, 0, 0]]] call FUNC(drawMapGestures)}];
+_mapCtrl ctrlAddEventHandler ["Draw", { [_this select 0, [ACE_player, positionCameraToWorld [0, 0, 0]]] call FUNC(drawMapGestures);}];

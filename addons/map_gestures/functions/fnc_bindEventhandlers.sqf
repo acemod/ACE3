@@ -21,7 +21,7 @@ if (!isNil QGVAR(DrawMapHandlerID)) then {
     _mapCtrl ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)];
     GVAR(DrawMapHandlerID) = nil;
 };
-GVAR(DrawMapHandlerID) = _mapCtrl ctrlAddEventHandler ["Draw", {[_this select 0, [ACE_player]] call FUNC(drawMapGestures)}];
+GVAR(DrawMapHandlerID) = _mapCtrl ctrlAddEventHandler ["Draw", { [_this select 0, [ACE_player]] call FUNC(drawMapGestures); }];
 
 // MouseMoving EH.
 if (!isNil QGVAR(MouseMoveHandlerID)) then {
@@ -30,6 +30,7 @@ if (!isNil QGVAR(MouseMoveHandlerID)) then {
 };
 
 GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
+    if (!GVAR(enabled)) exitWith {};
     params ["_control", "_posX", "_posY"];
     private _position = _control ctrlMapScreenToWorld [_posX, _posY];
     GVAR(cursorPosition) = _position;

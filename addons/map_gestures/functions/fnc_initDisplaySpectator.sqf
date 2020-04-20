@@ -21,5 +21,5 @@ _mapCtrl ctrlAddEventHandler ["Draw", {
     if !(isNull EGVAR(spectator,camFocus)) then {
         _targets pushback EGVAR(spectator,camFocus);
     };
-    [_this select 0, _targets] call FUNC(drawMapGestures)
+    [_this select 0, _targets] call FUNC(drawMapGestures);
 }];
