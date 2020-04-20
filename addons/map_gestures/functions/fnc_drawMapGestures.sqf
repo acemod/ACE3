@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Map Handle <CONTROL>
+ * 1: Position based on what should be drawn <POSITION>
  *
  * Return Value:
  * None
@@ -26,36 +27,27 @@ BEGIN_COUNTER(draw);
 #define TEXT_SIZE 0.030
 #define TEXT_SHADOW 0
 
-if (!GVAR(enabled) || !visibleMap) exitWith {};
+if (!GVAR(enabled)) exitWith {};
 
-params ["_mapHandle"];
+params ["_mapHandle", "_position"];
 
 // Iterate over all nearby players and render their pointer if player is transmitting.
 {
-
+    private _pos = _x getVariable QGVAR(pointPosition);
     // Only render if the unit is alive and transmitting
-    if (alive _x && {_x getVariable [QGVAR(Transmit), false]}) then {
-
-        private _pos = _x getVariable [QGVAR(pointPosition), [0,0,0]];
-
-        private _group = group _x;
-        private _grpName = groupID _group;
+    if (alive _x && !isNil "_pos") then {
 
         // If color settings for the group exist, then use those, otherwise fall back to the default colors
-        private _colorMap = GVAR(GroupColorCfgMappingNew) getVariable _grpName;
-        private _color = if (isNil "_colorMap") then {
-            [GVAR(defaultLeadColor), GVAR(defaultColor)] select (_x != leader _group);
-        } else {
-            _colorMap select (_x != leader _group);
-        };
+        private _colorMap = GVAR(GroupColorCfgMappingNew) getVariable [(groupID (group _x)), [GVAR(defaultLeadColor), GVAR(defaultColor)]];
+        private _color = _colorMap select (_x != leader _x);
 
         TRACE_2("",_colorMap,_color);
-        
+
         // Render icon and player name
         _mapHandle drawIcon ["\a3\ui_f\data\gui\cfg\Hints\icon_text\group_1_ca.paa", _color, _pos, ICON_RENDER_SIZE, ICON_RENDER_SIZE, ICON_ANGLE, "", ICON_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
         _mapHandle drawIcon ["#(argb,8,8,3)color(0,0,0,0)", GVAR(nameTextColor), _pos, TEXT_ICON_RENDER_SIZE, TEXT_ICON_RENDER_SIZE, ICON_ANGLE, name _x, TEXT_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
     };
     nil
-} count ([ACE_player, GVAR(maxRange)] call FUNC(getProximityPlayers));
+} count ([_position, GVAR(maxRange)] call FUNC(getProximityPlayers));
 
 END_COUNTER(draw);

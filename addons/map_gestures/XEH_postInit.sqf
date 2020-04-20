@@ -11,14 +11,13 @@ if (!hasInterface) exitWith {};
 
     GVAR(pointPosition) = [0,0,0];
 
-    [{
-        if (isNull (findDisplay 12)) exitWith {};
+    [{!isNull (findDisplay 12)}, {
+        call FUNC(bindEventHandlers);
+    }] call CBA_fnc_waitUntilAndExecute;
 
-        params ["", "_pfhId"];
+    ["visibleMap", {
+        GVAR(EnableTransmit) = false;
+        ACE_player setVariable [QGVAR(pointPosition), nil, true];
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
-        call FUNC(receiverInit);
-        call FUNC(transmitterInit);
-
-        [_pfhId] call CBA_fnc_removePerFrameHandler;
-    }, 1, []] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;

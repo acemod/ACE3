@@ -4,7 +4,7 @@
  * Returns all players in a given range and in the units vehicle.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Unit <OBJECT, ARRAY>
  * 1: Range <NUMBER>
  *
  * Return Value:
@@ -19,7 +19,9 @@
 params ["_unit", "_range"];
 
 private _proximityPlayers = _unit nearEntities [["CAMAnBase"], _range];
-_proximityPlayers deleteAt (_proximityPlayers find _unit);
-_proximityPlayers append (crew vehicle _unit);
+if (_unit isEqualType objNull) then {
+    _proximityPlayers deleteAt (_proximityPlayers find _unit);
+    _proximityPlayers append (crew vehicle _unit);
+};
 
 _proximityPlayers select {[_x, false] call EFUNC(common,isPlayer);}
