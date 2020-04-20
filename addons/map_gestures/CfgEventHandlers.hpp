@@ -21,4 +21,7 @@ class Extended_DisplayLoad_EventHandlers {
     class RscDisplayCurator {
         ADDON = QUOTE(_this call FUNC(initDisplayCurator));
     };
+    class EGVAR(spectator,display) {
+        ADDON = QUOTE(_this call FUNC(initDisplaySpectator));
+    }
 };
