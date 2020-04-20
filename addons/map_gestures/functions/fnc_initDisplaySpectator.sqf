@@ -10,13 +10,13 @@
  * None
  *
  * Example:
- * [_display] call ace_map_gestures_fnc_initDisplayCurator
+ * [_display, 50] call ace_map_gestures_fnc_initDisplayCurator
  *
  * Public: No
  */
-params ["_display"];
+params ["_display", "_mapID"];
 
-private _mapCtrl = _display displayCtrl 50;
+private _mapCtrl = _display displayCtrl _mapID;
 
 _mapCtrl ctrlAddEventHandler ["Draw", {
     private _targets = [positionCameraToWorld [0, 0, 0]];
