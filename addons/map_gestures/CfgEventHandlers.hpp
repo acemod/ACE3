@@ -1,4 +1,3 @@
-
 class Extended_PreStart_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preStart));
@@ -21,10 +20,7 @@ class Extended_DisplayLoad_EventHandlers {
     class RscDisplayCurator {
         ADDON = QUOTE(_this call FUNC(initDisplayCurator));
     };
-    class EGVAR(spectator,display) {
-        ADDON = QUOTE([_this, 60014] call FUNC(initDisplaySpectator));
-    };
     class RscDisplayEGSpectator {
-        ADDON = QUOTE([_this, 50] call FUNC(initDisplaySpectator));
+        ADDON = QUOTE((((_this select 0) displayCtrl 63909) controlsGroupCtrl 62609) call FUNC(initDisplaySpectator));
     };
 };

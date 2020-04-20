@@ -14,9 +14,7 @@
  *
  * Public: No
  */
-params ["_display", "_mapID"];
-
-private _mapCtrl = _display displayCtrl _mapID;
+params ["_mapCtrl"];
 
 _mapCtrl ctrlAddEventHandler ["Draw", {
     private _targets = [positionCameraToWorld [0, 0, 0]];
