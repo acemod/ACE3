@@ -148,5 +148,11 @@
             <Italian>Nasconde la voce Espelli dal menu azione. Richiede il riavvio del gioco.</Italian>
             <Czech>Schová akci vyskošení z vozidla z akčního menu. Vyžaduje restart hry.</Czech>
         </Key>
+        <Key ID="STR_ACE_Vehicles_SpeedLimiterStep">
+            <English>Speed Limiter Step</English>
+            <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
+            <Polish>Przeskok limitera prędkości</Polish>
+            <French>Pas du limiteur de vitesse</French>
+        </Key>
     </Package>
 </Project>

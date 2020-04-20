@@ -63,7 +63,7 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 if (_target isKindOf "CAManBase") then {
     [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);
 } else {
-    [localize LSTRING(Drop), "", localize LSTRING(LowerRaise)] call EFUNC(interaction,showMouseHint);
+    [localize LSTRING(Drop), "", localize LSTRING(RaiseLowerRotate)] call EFUNC(interaction,showMouseHint);
 };
 
 // check everything
