@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_display, 50] call ace_map_gestures_fnc_initDisplayCurator
+ * _mapCtrl call ace_map_gestures_fnc_initDisplayCurator
  *
  * Public: No
  */

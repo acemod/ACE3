@@ -18,9 +18,12 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayCurator {
-        ADDON = QUOTE(_this call FUNC(initDisplayCurator));
+        ADDON = QUOTE((_this displayCtrl 50) call FUNC(initDisplayCurator));
     };
     class RscDisplayEGSpectator {
         ADDON = QUOTE((((_this select 0) displayCtrl 63909) controlsGroupCtrl 62609) call FUNC(initDisplaySpectator));
+    };
+    class RscDiary {
+        ADDON = QUOTE(((_this select 0) displayCtrl 51) call FUNC(initDisplayDiary));
     };
 };

@@ -4,7 +4,7 @@
  * Returns all players in a given range and in the units vehicle.
  *
  * Arguments:
- * 0: Positions <ARRY<OBJECT, ARRAY>>
+ * 0: Positions <ARRY<OBJECT, ARRAY>, BOOL>
  * 1: Range <NUMBER>
  *
  * Return Value:
@@ -18,10 +18,11 @@
 
 params ["_positions", "_range"];
 
+private _proximityPlayers = [];
 if (_positions isEqualType objNull || _positions isEqualTypeArray [0, 0, 0] || _positions isEqualTypeArray [0, 0]) then {
     _positions = [_positions];
 };
-private _proximityPlayers = [];
+
 {
     _proximityPlayers append (_x nearEntities [["CAMAnBase"], _range]);
     if (_x isEqualType objNull) then {
@@ -29,5 +30,12 @@ private _proximityPlayers = [];
     };
 } forEach _positions;
 
-_proximityPlayers = _proximityPlayers select {[_x, false] call EFUNC(common,isPlayer);};
-_proximityPlayers arrayIntersect _proximityPlayers;
+_proximityPlayers = _proximityPlayers arrayIntersect _proximityPlayers;
+
+_proximityPlayers = _proximityPlayers select { [_x, false] call EFUNC(common,isPlayer); };
+
+if (GVAR(onlyShowFriendlys)) then {
+    _proximityPlayers = _proximityPlayers select { [playerSide, side _x] call BIS_fnc_areFriendly; };
+};
+
+_proximityPlayers

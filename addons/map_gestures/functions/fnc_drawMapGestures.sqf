@@ -29,7 +29,7 @@ BEGIN_COUNTER(draw);
 
 if (!GVAR(enabled)) exitWith {};
 
-params ["_mapHandle", "_position"];
+params ["_mapHandle", "_positions"];
 
 // Iterate over all nearby players and render their pointer if player is transmitting.
 {
@@ -51,6 +51,6 @@ params ["_mapHandle", "_position"];
         _mapHandle drawIcon ["#(argb,8,8,3)color(0,0,0,0)", GVAR(nameTextColor), _pos, TEXT_ICON_RENDER_SIZE, TEXT_ICON_RENDER_SIZE, ICON_ANGLE, name _x, TEXT_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
     };
     nil
-} count ([_position, GVAR(maxRange)] call FUNC(getProximityPlayers));
+} count ([_positions, GVAR(maxRange)] call FUNC(getProximityPlayers));
 
 END_COUNTER(draw);

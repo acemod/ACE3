@@ -10,17 +10,16 @@
  * None
  *
  * Example:
- * [] call ace_map_gestures_fnc_bindEventHandler
+ * _mapCtrl call ace_map_gestures_fnc_initDisplayDiary
  *
  * Public: No
  */
-
-private _mapCtrl = (findDisplay 12) displayCtrl 51;
-
+params ["_mapCtrl"];
 if (!isNil QGVAR(DrawMapHandlerID)) then {
     _mapCtrl ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)];
     GVAR(DrawMapHandlerID) = nil;
 };
+
 GVAR(DrawMapHandlerID) = _mapCtrl ctrlAddEventHandler ["Draw", { [_this select 0, [ACE_player]] call FUNC(drawMapGestures); }];
 
 // MouseMoving EH.
@@ -48,6 +47,7 @@ if (!isNil QGVAR(MouseDownHandlerID)) then {
 };
 
 GVAR(MouseDownHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonDown", {
+    if (getClientStateNumber < 10) exitWith {};
     if (!GVAR(enabled)) exitWith {};
         params ["", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
         if (_button == 0 && {[_shift, _ctrl, _alt] isEqualTo [false, false, false]}) then {
@@ -62,6 +62,7 @@ if (!isNil QGVAR(MouseUpHandlerID)) then {
 };
 
 GVAR(MouseUpHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonUp", {
+    if (getClientStateNumber < 10) exitWith {};
     if (!GVAR(enabled)) exitWith {};
     params ["", "_button"];
     if (_button == 0) then {
