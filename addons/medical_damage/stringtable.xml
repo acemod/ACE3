@@ -631,5 +631,15 @@
             <Turkish>Ikisinden biri</Turkish>
             <German>Beide</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
+            <English>Unit Damage Threshold</English>
+            <German>Schwelle für Schaden</German>
+            <French>Seuil de dégâts</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
+            <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
+            <German>Legt die Höhe des Schadens fest, den eine Einheit erhalten kann, bevor diese ohnmächtig wird. (0 für Misionsnormalwert)</German>
+            <French>Définit la quantité de dégâts que l'unité peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).\n(0 utilise la valeur définie dans la mission.)</French>
+        </Key>
     </Package>
 </Project>

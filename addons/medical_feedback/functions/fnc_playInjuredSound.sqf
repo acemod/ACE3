@@ -23,9 +23,8 @@
 params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, [0]]];
 // TRACE_3("",_unit,_type,_severity);
 
-if (!local _unit) exitWith {
-    ERROR("Unit not local or null");
-};
+if (!local _unit) exitWith { ERROR_2("playInjuredSound: Unit not local or null [%1:%2]",_unit,typeOf _unit); };
+
 if !(_unit call EFUNC(common,isAwake)) exitWith {};
 
 // Handle timeout

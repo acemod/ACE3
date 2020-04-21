@@ -3699,6 +3699,20 @@
             <Czech>Leupold Mark 4 HAMR (Khaki)</Czech>
             <Turkish>Leupold Mark 4 HAMR (Haki)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_hamr_2d">
+            <English>Leupold Mark 4 HAMR (2D)</English>
+            <German>Leupold Mark 4 HAMR (2D)</German>
+            <Chinese>Leupold Mark 4 HAMR (2D)</Chinese>
+            <Chinesesimp>Leupold Mark 4 HAMR (2D)</Chinesesimp>
+            <Japanese>Leupold Mark 4 HAMR (2D)</Japanese>
+            <Italian>Leupold Mark 4 HAMR (2D)</Italian>
+            <Polish>Leupold Mark 4 HAMR (2D)</Polish>
+            <Russian>Leupold Mark 4 HAMR (2D)</Russian>
+            <Portuguese>Leupold Mark 4 HAMR (2D)</Portuguese>
+            <French>Leupold Mark 4 HAMR (2D)</French>
+            <Czech>Leupold Mark 4 HAMR (2D)</Czech>
+            <Turkish>Leupold Mark 4 HAMR (2D)</Turkish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
             <German>ELCAN SpecterOS (Beige)</German>
@@ -3739,6 +3753,20 @@
             <French>ELCAN SpecterOS (Hex Verte)</French>
             <Czech>ELCAN SpecterOS (Zelený Hex)</Czech>
             <Turkish>ELCAN SpecterOS (Yeşil Hex)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_2d">
+            <English>ELCAN SpecterOS (2D)</English>
+            <German>ELCAN SpecterOS (2D)</German>
+            <Chinese>ELCAN SpecterOS (2D)</Chinese>
+            <Chinesesimp>ELCAN SpecterOS (2D)</Chinesesimp>
+            <Japanese>ELCAN SpecterOS (2D)</Japanese>
+            <Italian>ELCAN SpecterOS (2D)</Italian>
+            <Polish>ELCAN SpecterOS (2D)</Polish>
+            <Russian>ELCAN SpecterOS (2D)</Russian>
+            <Portuguese>ELCAN SpecterOS (2D)</Portuguese>
+            <French>ELCAN SpecterOS (2D)</French>
+            <Czech>ELCAN SpecterOS (2D)</Czech>
+            <Turkish>ELCAN SpecterOS (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3821,6 +3849,19 @@
             <French>Nightforce NXS (Jungle)</French>
             <Czech>Nightforce NXS (Džungle)</Czech>
             <Turkish>Nightforce NXS (Orman)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_lrps_2d">
+            <English>Nightforce NXS (2D)</English>
+            <Chinese>Nightforce NXS (2D)</Chinese>
+            <Chinesesimp>Nightforce NXS (2D)</Chinesesimp>
+            <Japanese>Nightforce NXS (2D)</Japanese>
+            <Italian>Nightforce NXS (2D)</Italian>
+            <Polish>Nightforce NXS (2D)</Polish>
+            <Russian>Nightforce NXS (2D)</Russian>
+            <Portuguese>Nightforce NXS (2D)</Portuguese>
+            <French>Nightforce NXS (2D)</French>
+            <Czech>Nightforce NXS (2D)</Czech>
+            <Turkish>Nightforce NXS (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -4035,6 +4076,19 @@
             <French>IOR-Valdada Pitbull 2</French>
             <Czech>IOR-Valdada Pitbull 2</Czech>
             <Turkish>IOR-Valdada Pitbull 2</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrco_2d">
+            <English>IOR-Valdada Pitbull 2 (2D)</English>
+            <Chinese>IOR-Valdada Pitbull 2 (2D)</Chinese>
+            <Chinesesimp>IOR-Valdada Pitbull 2 (2D)</Chinesesimp>
+            <Japanese>IOR-Valdada ピットブル 2 (2D)</Japanese>
+            <Italian>IOR-Valdada Pitbull 2 (2D)</Italian>
+            <Polish>IOR-Valdada Pitbull 2 (2D)</Polish>
+            <Russian>IOR-Valdada Pitbull 2 (2D)</Russian>
+            <Portuguese>IOR-Valdada Pitbull 2 (2D)</Portuguese>
+            <French>IOR-Valdada Pitbull 2 (2D)</French>
+            <Czech>IOR-Valdada Pitbull 2 (2D)</Czech>
+            <Turkish>IOR-Valdada Pitbull 2 (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
