@@ -86,21 +86,10 @@
             <Chinesesimp>背起</Chinesesimp>
             <Turkish>Taşı</Turkish>
         </Key>
-        <Key ID="STR_ACE_Dragging_LowerRaise">
-            <English>Raise/Lower</English>
-            <German>Heben/Senken</German>
-            <Polish>Wyżej/Niżej</Polish>
-            <Portuguese>Levantar/Abaixar</Portuguese>
-            <Russian>Поднять/Опустить</Russian>
-            <Czech>Zvýšit/Snížit</Czech>
-            <Italian>Alza/Abbassa</Italian>
-            <Spanish>Subir/Bajar</Spanish>
-            <French>Lever/Baisser</French>
-            <Japanese>上げる/下げる</Japanese>
-            <Korean>높이기/낮추기</Korean>
-            <Chinese>提高/下降</Chinese>
-            <Chinesesimp>提高/下降</Chinesesimp>
-            <Turkish>Yukarı/Aşağı</Turkish>
+        <Key ID="STR_ACE_Dragging_RaiseLowerRotate">
+            <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
+            <German>Heben/Senken | (Strg + Scrollen) Drehen</German>
+            <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
         </Key>
     </Package>
 </Project>
