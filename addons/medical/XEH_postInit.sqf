@@ -3,9 +3,6 @@
 
 [QEGVAR(medical,setUnconscious), LINKFUNC(setUnconscious)] call CBA_fnc_addEventHandler;
 
-// For BETA/RC - debug non-default settings to rpt:
-call compile preprocessFileLineNumbers QPATHTOF(dev\reportSettings.sqf);
-
 if (!hasInterface) exitWith {};
 
 [missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
@@ -13,6 +10,7 @@ if (!hasInterface) exitWith {};
 }] call EFUNC(common,arithmeticSetSource);
 
 #ifdef DEBUG_MODE_FULL
+    call compile preprocessFileLineNumbers QPATHTOF(dev\reportSettings.sqf);
     call compile preprocessFileLineNumbers QPATHTOF(dev\watchVariable.sqf);
     call compile preprocessFileLineNumbers QPATHTOF(dev\debugDisplay.sqf);
 #endif
