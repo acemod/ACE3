@@ -34,6 +34,7 @@ if (isArray _cfgPositions) then {
                     _x setFuelCargo 0;
                     if (isServer) then {
                         _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)];
+                        _x setVariable [QGVAR(isTerrainPump), true];
                     };
                 } forEach _objects;
             };
@@ -53,13 +54,23 @@ if (isArray _cfgPositions) then {
     WARNING_2("World %1: no configured %2; can be loaded slower",worldName,QGVAR(positions));
     private _worldSize = worldSize;
     private _worldCenter = [_worldSize / 2, _worldSize / 2];
+    private _refuelMissionObjects = allMissionObjects "" select {0 < getFuelCargo _x};
     {
         {
             _x setFuelCargo 0;
             _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)];
+            if (isServer && {!(_x in _refuelMissionObjects)}) then {
+                _x setVariable [QGVAR(isTerrainPump), true];
+            };
         } forEach (_worldCenter nearObjects [_x, _worldSize]);
     } forEach _baseStaticClasses;
 };
+
+[QGVAR(setFuelCargo), {
+    params ["_source", "_fuel"];
+    TRACE_2("setFuelCargo event",_fuel,_source);
+    _source setFuelCargo _fuel;
+}] call CBA_fnc_addEventHandler;
 
 [QGVAR(initSource), LINKFUNC(initSource)] call CBA_fnc_addEventHandler;
 

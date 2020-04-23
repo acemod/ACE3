@@ -25,9 +25,16 @@ _source setVariable [QGVAR(handled), true];
 if (alive _source) then {
     private _fuel = _source getVariable QGVAR(currentFuelCargo);
     if (isNil "_fuel") then {
-        _source setFuelCargo 1;
+        _fuel = 1;
     } else {
-        _source setFuelCargo (_fuel / (_source call FUNC(getFuelCargo)));
+        _fuel = _fuel / (_source call FUNC(getFuelCargo));
+    };
+    if (_source getVariable [QGVAR(isTerrainPump), false]) then {
+        TRACE_1("alive terrain",_source);
+        [QGVAR(setFuelCargo), [_source, _fuel]] call CBA_fnc_globalEvent;
+    } else {
+        TRACE_1("alive not terrain",_source);
+        _source setFuelCargo _fuel;
     };
 };
 
@@ -35,8 +42,14 @@ if (alive _source) then {
 [{
     params ["_source", "_ehid"];
     if (alive _source) then {
-        _source setFuelCargo 0;
+        TRACE_1("next frame alive",_source);
+        if (_source getVariable [QGVAR(isTerrainPump), false]) then {
+            [QGVAR(setFuelCargo), [_source, 0]] call CBA_fnc_globalEvent;
+        } else {
+            _source setFuelCargo 0;
+        };
     } else {
+        TRACE_1("next frame dead",_source);
         _source removeEventHandler ["HandleDamage", _ehid];
         if (-1 < _source getVariable [QGVAR(HDEHID), -1]) then {
             _source setVariable [QGVAR(HDEHID), nil];
