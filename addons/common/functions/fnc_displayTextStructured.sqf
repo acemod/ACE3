@@ -40,36 +40,4 @@ if (typeName _text != "TEXT") then {
     _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
 };
 
-private _isShown = ctrlShown (uiNamespace getVariable ["ACE_ctrlHint", controlNull]);
-
-("ACE_RscHint" call BIS_fnc_rscLayer) cutRsc ["ACE_RscHint", "PLAIN", 0, true];
-
-disableSerialization;
-private _ctrlHint = uiNamespace getVariable "ACE_ctrlHint";
-
-_ctrlHint ctrlSetBackgroundColor GVAR(displayTextColor);
-_ctrlHint ctrlSetTextColor GVAR(displayTextFontColor);
-
-// Use profile settings from CfgUIGrids.hpp
-private _xPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_X", ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40))];
-private _yPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_Y", safeZoneY + 0.175 * safezoneH];
-private _wPos =  (_width *(((safezoneW / safezoneH) min 1.2) / 40));
-private _hPos = _size * (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
-
-// Ensure still in bounds for large width/height
-_xPos = safezoneX max (_xPos min (safezoneX + safezoneW - _wPos));
-_yPos = safeZoneY max (_yPos min (safeZoneY + safezoneH - _hPos));
-
-// Zeus Interface Open and Display would be under the "CREATE" list
-if (!isNull curatorCamera) then {
-    _xPos = _xPos min ((safezoneX + safezoneW - 12.5 * (((safezoneW / safezoneH) min 1.2) / 40)) - _wPos);
-};
-
-private _position = [_xPos, _yPos, _wPos, _hPos];
-
-_ctrlHint ctrlSetPosition _position;
-_ctrlHint ctrlCommit 0;
-
-_ctrlHint ctrlSetStructuredText _text;
-_ctrlHint ctrlSetPosition _position;
-_ctrlHint ctrlCommit ([0.5, 0] select _isShown);
+_text call CBA_fnc_notify;
