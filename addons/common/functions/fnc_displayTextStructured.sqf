@@ -37,7 +37,7 @@ if (typeName _text != "TEXT") exitwith {
     if (_text isEqualType "" && {isLocalized _text}) then {
         _text = localize _text;
     };
-    (parseText format ["<t align='center'>%1</t>", _text]) call CBA_fnc_notify;
+    (format ["<t align='center'>%1</t>", _text]) call CBA_fnc_notify;
 };
 
-_text call CBA_fnc_notify;
+str(_text) call CBA_fnc_notify;
