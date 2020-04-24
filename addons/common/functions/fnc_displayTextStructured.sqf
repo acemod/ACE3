@@ -23,7 +23,7 @@ params [["_text", ""], ["_size", 1.5, [0]], ["_target", ACE_player, [objNull]], 
 
 if (_target != ACE_player) exitWith {};
 
-if (typeName _text != "TEXT") then {
+if (typeName _text != "TEXT") exitwith {
     if (_text isEqualType []) then {
         if (count _text > 0) then {
             {
@@ -37,7 +37,7 @@ if (typeName _text != "TEXT") then {
     if (_text isEqualType "" && {isLocalized _text}) then {
         _text = localize _text;
     };
-    _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
+    (parseText format ["<t align='center'>%1</t>", _text]) call CBA_fnc_notify;
 };
 
 _text call CBA_fnc_notify;
