@@ -274,7 +274,7 @@ enableCamShake true;
     if (alive _oldPlayer) then {
         [FUNC(setName), [_oldPlayer]] call CBA_fnc_execNextFrame;
     };
-}] call CBA_fnc_addPlayerEventHandler;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 
 //////////////////////////////////////////////////
