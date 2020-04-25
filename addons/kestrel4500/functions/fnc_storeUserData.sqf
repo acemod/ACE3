@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_kestrel4500_fnc_store_user_data
+ * call ace_kestrel4500_fnc_storeUserData
  *
  * Public: No
  */

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [CONTROL, _target] call ace_medical_menu_fnc_updateBodyImage
+ * [CONTROL, _target] call ace_medical_gui_fnc_updateBodyImage
  *
  * Public: No
  */

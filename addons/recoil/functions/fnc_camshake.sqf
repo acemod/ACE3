@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, (currentWeapon player), (currentMuzzle player)] call ace_recoil_fnc_camShake;
+ * [player, (currentWeapon player), (currentMuzzle player)] call ace_recoil_fnc_camshake;
  *
  * Public: No
  */
