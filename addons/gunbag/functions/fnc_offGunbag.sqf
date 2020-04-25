@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, target] call ace_gunbag_fnc_toGunbag
+ * [player, target] call ace_gunbag_fnc_offGunbag
  *
  * Public: No
  */

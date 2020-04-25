@@ -12,7 +12,7 @@
  * Has LOS <BOOL>
  *
  * Example:
- * [player, cursorTarget] call ace_missileguidance_fnc_checkLOS;
+ * [player, cursorTarget] call ace_missileguidance_fnc_checkLos;
  *
  * Public: No
  */

@@ -15,7 +15,7 @@
  * 1: Categorized vehicle's turrets <ARRAY>
  *
  * Example:
- * call ace_nametags_fnc_updateSettings
+ * call ace_nametags_fnc_getVehicleData
  *
  * Public: No
  */

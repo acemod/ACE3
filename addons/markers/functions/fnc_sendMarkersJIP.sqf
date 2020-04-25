@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [onUnloadEvent] call ace_markers_fnc_sendMarkerJIP;
+ * [onUnloadEvent] call ace_markers_fnc_sendMarkersJIP;
  *
  * Public: No
  */

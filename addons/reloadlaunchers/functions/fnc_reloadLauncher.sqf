@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_realoadLauncher
+ * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_reloadLauncher
  *
  * Public: No
  */
