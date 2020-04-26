@@ -16,9 +16,9 @@
  * Public: No
  */
 
-params ["_target", "", "", "_actionData"];
+params ["_teamColor", "_icon", "_actionData"];
 
-private _color = switch (assignedTeam _target) do {
+private _color = switch (toUpper _teamColor) do {
     case "RED": {missionNamespace getVariable [QEGVAR(nametags,nametagColorRed), [221, 0, 0]]};
     case "GREEN": {missionNamespace getVariable [QEGVAR(nametags,nametagColorGreen), [0, 221, 0]]};
     case "BLUE": {missionNamespace getVariable [QEGVAR(nametags,nametagColorBlue), [0, 0, 221]]};
@@ -26,6 +26,6 @@ private _color = switch (assignedTeam _target) do {
     default {missionNamespace getVariable [QEGVAR(nametags,nametagColorMain), [255,255,255]]};
 };
 
-_actionData set [2, [QPATHTOF(UI\team\team_management_ca.paa), _color call BIS_fnc_colorRGBtoHTML]];
+_actionData set [2, [_icon, _color call BIS_fnc_colorRGBtoHTML]];
 
 nil
