@@ -25,6 +25,8 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(makeSource), _this];
 };
 
+if (!GVAR(enabled)) exitWith {};
+
 params [
     ["_source", objNull, [objNull]],
     ["_fuelCargo", 0, [0]],
