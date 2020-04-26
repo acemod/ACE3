@@ -32,14 +32,15 @@ params [
     ["_fuelCargo", 0, [0]],
     ["_hooks", nil, [[]]]
 ];
-TRACE_3("makeSource",_source,_fuelCargo,_hooks);
 
 private _fuelCargoConfig = _source call FUNC(getFuelCargo);
+
+TRACE_4("makeSource",_source,_fuelCargo,_hooks,_fuelCargoConfig);
 
 if (
     isNull _source
     || {_fuelCargo < 0 && {!(_fuelCargo in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL])}}
-    || {_fuelCargo != 0 && {_fuelCargo == _fuelCargoConfig}}
+    || {_fuelCargo == REFUEL_DISABLED_FUEL && {_fuelCargoConfig == REFUEL_DISABLED_FUEL}}
 ) exitWith {};
 
 [_source, _fuelCargo] call FUNC(setFuel);
@@ -55,7 +56,7 @@ if (
 };
 
 // check if menu already exists
-if (_fuelCargoConfig != 0 || {!isNil {_source getVariable QGVAR(initSource_jipID)}}) exitWith {};
+if (_fuelCargoConfig != REFUEL_DISABLED_FUEL || {!isNil {_source getVariable QGVAR(initSource_jipID)}}) exitWith {};
 
 private _jipID = [QGVAR(initSource), [_source]] call CBA_fnc_globalEventJIP;
 [_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
