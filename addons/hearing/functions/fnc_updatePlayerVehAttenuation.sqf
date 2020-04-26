@@ -44,6 +44,7 @@ if (ACE_player != _vehicle) then {
             linearConversion [2, 8, _armor, 0.5, 0.3, true];};
         case (_effectType == "OpenCarAttenuation"): {1};
         case (_effectType == "TankAttenuation"): {0.1};
+        case (_effectType == "MrapAttenuation"): {0.2};
         case (_effectType == "HeliAttenuation"): {0.3};
         case (_effectType == "OpenHeliAttenuation"): {0.9};
         case (_effectType == "SemiOpenHeliAttenuation"): {0.6};
