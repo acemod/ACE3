@@ -23,7 +23,7 @@ private _color = switch (toUpper _teamColor) do {
     case "GREEN": {missionNamespace getVariable [QEGVAR(nametags,nametagColorGreen), [0, 221, 0]]};
     case "BLUE": {missionNamespace getVariable [QEGVAR(nametags,nametagColorBlue), [0, 0, 221]]};
     case "YELLOW": {missionNamespace getVariable [QEGVAR(nametags,nametagColorYellow), [221, 221, 0]]};
-    default {missionNamespace getVariable [QEGVAR(nametags,nametagColorMain), [255,255,255]]};
+    default {missionNamespace getVariable [QEGVAR(nametags,nametagColorMain), [255, 255, 255]]};
 };
 
 _actionData set [2, [_icon, _color call BIS_fnc_colorRGBtoHTML]];
