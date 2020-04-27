@@ -26,12 +26,13 @@ The medical rewrite has changed the focus from "basic" or "advanced" levels to a
 
 ##### 1.1.1.1 Limping
 
-Controls whether or not a leg wound will cause you to limp, can be set to "Disabled", "Open Wounds" or "Limp on Open or Bandaged Wounds". This effect will be removed upon Stitching or using a PAK.
+Controls whether or not a leg wound will cause you to limp, can be set to "Disabled", "Open Wounds" or "Limp on Open or Bandaged Wounds". This effect will be removed upon Stitching or using a Personal Aid Kit respectively.
 
 ##### 1.1.1.2 Fractures
 
-Fractures cause pain, increased weapon sway or inability to jog or run, can be set to "Disabled", "Splints Fully Heal Fractures" or "Splints Heal, but Cannot Sprint".
-An additional setting to this is the Fracture Chance, it's a probability of the kind of wound that causes a fracture to actually cause one.
+Fractures: Fractured limbs cause pain, increased weapon sway or inability to jog or run, can be set to "Disabled", "Splints Fully Heal Fractures" or "Splints Heal, but Cannot Sprint".
+
+Fracture Chance: The probability of a fracture causing wound to actually cause one.
 
 ##### 1.1.1.3 Unconscious Wake Up Chance
 
@@ -40,7 +41,7 @@ Additionally Epinephrine can boost the chances of waking up by increasing the am
 
 ##### 1.1.1.4 Fatal Damage Source
 
-Fatal damage is now controlled by either "Large hits to vital organs", "Sum of trauma" or both. This means carefully placed shots or simply higher amounts of wounds can be fatal to players or AI.
+Fatal damage is now controlled by either "Large hits to vital organs", "Sum of trauma" or "Either". This means carefully placed shots or simply higher amounts of wounds can be fatal to players or AI.
 
 ##### 1.1.1.5 Damage Threshold
 
@@ -88,11 +89,11 @@ Much the same as Medical Actions, This is a checkbox for Enabling/Disabling ACE 
 
 ##### 1.1.5.3 Medical Menu
 
-Medical menu is by default bound to "H", it can be accessed via ACE interaction/Self interaction. Usage of this comes down to personal preference as it offers a much easier method of actively treating patients where time is of essence. It can be set to "Enabled", "Disabled" or "Vehicles Only".
+Medical Menu: By default bound to "H", it can be accessed via ACE interaction/Self interaction. Usage of this comes down to personal preference as it offers a much easier method of actively treating patients where time is of essence. It can be set to "Enabled", "Disabled" or "Vehicles Only".
 
-Reopen Medical Menu, after initially treating a wound it will automatically re-open the menu so you can continue treating the patient, set by an Enabled/Disabled checkbox.
+Reopen Medical Menu: After initially treating a wound it will automatically re-open the menu so you can continue treating the patient, set by an Enabled/Disabled checkbox.
 
-Maximum Distance, how far in meters you can be from your patient before the medical menu is unavailable or automatically closed.
+Maximum Distance: How far in meters you can be from your patient before the medical menu is unavailable or automatically closed.
 
 #### 1.1.6 Litter
 
