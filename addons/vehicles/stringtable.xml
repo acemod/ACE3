@@ -153,6 +153,7 @@
             <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
             <Polish>Przeskok limitera prędkości</Polish>
             <French>Pas du limiteur de vitesse</French>
+            <Japanese>設定速度の増減量</Japanese>
         </Key>
     </Package>
 </Project>

@@ -2889,7 +2889,7 @@
             <Italian>Hai diagnosticato %1</Italian>
             <Portuguese>Você verificou o paciente %1</Portuguese>
             <Czech>Zkontroloval jsi %1</Czech>
-            <Japanese>自分の血圧は %1</Japanese>
+            <Japanese>血圧は %1</Japanese>
             <Korean>나의 혈압은 %1 이다</Korean>
             <Chinesesimp>你已经检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
@@ -3209,7 +3209,7 @@
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca baixa</Portuguese>
             <Czech>Nahmatal jsi slabý srdeční puls</Czech>
-            <Japanese>自分の心拍数は低い</Japanese>
+            <Japanese>心拍数は低い</Japanese>
             <Korean>약한 맥박이다</Korean>
             <Chinesesimp>心跳微弱</Chinesesimp>
             <Chinese>心跳微弱</Chinese>
@@ -3225,7 +3225,7 @@
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca normal</Portuguese>
             <Czech>Nahmatal jsi silný srdeční puls</Czech>
-            <Japanese>自分の心拍数は強い</Japanese>
+            <Japanese>心拍数は強い</Japanese>
             <Korean>강한 맥박이다</Korean>
             <Chinesesimp>心跳过快</Chinesesimp>
             <Chinese>心跳過快</Chinese>
@@ -3241,7 +3241,7 @@
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca alta</Portuguese>
             <Czech>Nahmatal jsi normální srdeční puls</Czech>
-            <Japanese>自分の心拍数は通常</Japanese>
+            <Japanese>心拍数は通常</Japanese>
             <Korean>보통 맥박이다</Korean>
             <Chinesesimp>心跳正常</Chinesesimp>
             <Chinese>心跳正常</Chinese>
@@ -3922,7 +3922,7 @@
             <Italian>Cura hitpoints completamente bendati</Italian>
             <French>Guérir les plaies entièrement bandées</French>
             <German>Heilt vollständig bandagierte Trefferpunkte</German>
-            <Japanese>包帯は体力を完全に回復する</Japanese>
+            <Japanese>包帯は体力を完全に回復させます</Japanese>
             <Korean>붕대를 감은후 체력을 회복함</Korean>
             <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
             <Chinese>完全醫療包紮的部位至痊癒</Chinese>
