@@ -77,6 +77,9 @@ if (_target getVariable [QGVAR(isUAV), false]) then {
     createVehicleCrew _target;
 };
 
+// fixes not being able to move when in combat pace
+[_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+
 // reset mass
 private _mass = _target getVariable [QGVAR(originalMass), 0];
 

@@ -11,7 +11,7 @@
             <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
             <French>Pointage sur carte</French>
-            <Japanese>マップ ジェスチャ</Japanese>
+            <Japanese>マップ ジェスチャー</Japanese>
             <Korean>지도 신호</Korean>
             <Chinesesimp>地图标识器</Chinesesimp>
             <Chinese>地圖指示器</Chinese>
@@ -43,7 +43,7 @@
             <German>Aktiviert die Kartenzeichen.</German>
             <Spanish>Activar Gestos en Mapa</Spanish>
             <French>Active le pointage sur carte.</French>
-            <Japanese>マップ ジェスチャを有効化</Japanese>
+            <Japanese>マップ ジェスチャーを有効化</Japanese>
             <Korean>지도 신호 활성화</Korean>
             <Chinesesimp>启用地图标识器</Chinesesimp>
             <Chinese>啟用地圖指示器</Chinese>
@@ -59,7 +59,7 @@
             <German>Maximale Reichweite der Kartenzeichen</German>
             <Spanish>Máx. dist. para gestos en mapa</Spanish>
             <French>Portée du pointage sur carte</French>
-            <Japanese>マップ ジェスチャの最大範囲</Japanese>
+            <Japanese>マップ ジェスチャーの最大範囲</Japanese>
             <Korean>지도 신호 최대 거리</Korean>
             <Chinesesimp>地图标识器最大范围</Chinesesimp>
             <Chinese>地圖指示器最大範圍</Chinese>
@@ -75,7 +75,7 @@
             <German>Maximale Reichweite zwischen Spielern um Kartenzeichen anzuzeigen (Standard: 7 Meter)</German>
             <Spanish>Máxima distancia a la cual pueden verse el indicador de gestos [defecto: 7 m]</Spanish>
             <French>Définit le rayon au-delà duquel les joueurs ne verront plus l'indicateur de pointage de leurs alliés. Valeur par défaut : 7 mètres.</French>
-            <Japanese>プレイヤのマップ ジェスチャによる表示範囲を設定します [標準：7 メートル]</Japanese>
+            <Japanese>プレイヤーによるマップ ジェスチャーの表示範囲を設定します [標準：7 メートル]</Japanese>
             <Korean>플레이어간에 지도 신호 표시거리를 설정합니다. [기본: 7 미터]</Korean>
             <Chinesesimp>设定地图标识器显示的最大范围距离 [预设: 7公尺]</Chinesesimp>
             <Chinese>設定地圖指示器顯示的最大範圍距離 [預設: 7公尺]</Chinese>
@@ -137,7 +137,7 @@
             <German>Farbe der Namenstexte neben der Kartenzeichen-Markierung.</German>
             <Spanish>Color de los nombres dibujados al lado del marcados de gestos.</Spanish>
             <French>Définit la couleur du texte pour le nom à côté du marqueur de pointage sur carte.</French>
-            <Japanese>マップ ジェスチャに表示される、名前の色を決定します。</Japanese>
+            <Japanese>マップ ジェスチャーに表示される、名前の色を決定します。</Japanese>
             <Korean>지도 색상에 표시되는 이름의 색상을 결정합니다.</Korean>
             <Chinesesimp>定义名称文字颜色。使其与地图标识器颜色有所区别。</Chinesesimp>
             <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別</Chinese>
@@ -275,7 +275,7 @@
             <German>Kartenzeichen - Gruppeneinstellungen</German>
             <Spanish>Gestos en mapas - Configuración de grupos</Spanish>
             <French>Pointage sur carte - réglages de groupe</French>
-            <Japanese>マップ ジェスチャ - グループ設定</Japanese>
+            <Japanese>マップ ジェスチャー - グループ設定</Japanese>
             <Korean>지도 신호 - 그룹 설정</Korean>
             <Chinesesimp>地图标识器 - 队伍设定</Chinesesimp>
             <Chinese>地圖指示器 - 隊伍設定</Chinese>
@@ -290,7 +290,7 @@
             <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
             <French>Pointage sur carte</French>
-            <Japanese>マップ ジェスチャ</Japanese>
+            <Japanese>マップ ジェスチャー</Japanese>
             <Korean>지도 신호</Korean>
             <Chinesesimp>地图标识器</Chinesesimp>
             <Chinese>地圖指示器</Chinese>

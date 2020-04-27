@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_atragmx_fnc_store_user_data
+ * call ace_atragmx_fnc_store_gun_list
  *
  * Public: No
  */

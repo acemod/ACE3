@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [[array]] call ace_fcs_fnc_handleAirBurstAummunitionPFH
+ * [[array]] call ace_fcs_fnc_handleAirBurstAmmunitionPFH
  *
  * Public: No
  */
