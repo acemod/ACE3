@@ -1,13 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: veteran29
- * Modifies the ACE_TeamManagement action to show current group color.
+ * Modifies the ACE_TeamManagement or join team action with given group color and icon.
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Player <OBJECT>
- * 2: Args <ANY>
- * 3: Action Data <ARRAY>
+ * 0: Team color <STRING>
+ * 1: Icon to show on action <STRING>
+ * 2: Action Data to modifiy <ARRAY>
  *
  * Return Value:
  * None
