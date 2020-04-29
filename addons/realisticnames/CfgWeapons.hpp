@@ -699,6 +699,9 @@ class CfgWeapons {
     class optic_Hamr_khk_F : optic_hamr {
         displayName = CSTRING(optic_hamr_khk);
     };
+    class ACE_optic_Hamr_2D : optic_Hamr {
+        displayName = CSTRING(optic_hamr_2d);
+    };
 
     class optic_Arco : ItemCore {
         displayName = CSTRING(optic_arco);
@@ -708,6 +711,9 @@ class CfgWeapons {
     };
     class optic_Arco_ghex_F : optic_Arco {
         displayName = CSTRING(optic_arco_ghex);
+    };
+    class ACE_optic_Arco_2D : optic_Arco {
+        displayName = CSTRING(optic_arco_2d);
     };
 
     class optic_ERCO_blk_f : optic_Arco {
@@ -728,6 +734,9 @@ class CfgWeapons {
     };
     class optic_LRPS_tna_F : optic_LRPS {
         displayName = CSTRING(optic_lrps_tna);
+    };
+    class ACE_optic_LRPS_2D : optic_LRPS {
+        displayName = CSTRING(optic_lrps_2d);
     };
     
     class optic_AMS_base;
@@ -783,6 +792,9 @@ class CfgWeapons {
 
     class optic_MRCO : ItemCore {
         displayName = CSTRING(optic_MRCO);
+    };
+    class ACE_optic_MRCO_2D : optic_MRCO {
+        displayName = CSTRING(optic_MRCO_2d);
     };
 
     class optic_Yorris : ItemCore {

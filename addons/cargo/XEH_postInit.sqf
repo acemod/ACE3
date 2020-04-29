@@ -51,8 +51,9 @@
     _item hideObjectGlobal false;
     _item setPosASL (AGLtoASL _emptyPosAGL);
 
-    if ((getText (configFile >> "CfgVehicles" >> (typeOf _item) >> "simulation")) == "carx") then {
-        TRACE_1("re-enabling car damage",_item);
+    private _simulationType = toLower getText (configFile >> "CfgVehicles" >> typeOf _item >> "simulation");
+    if (_simulationType in ["carx", "tankx"]) then {
+        TRACE_1("re-enabling vehicle damage",_item);
         [_item, "blockDamage", "ACE_cargo", false] call EFUNC(common,statusEffect_set);
     };
 }] call CBA_fnc_addEventHandler;

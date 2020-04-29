@@ -12,7 +12,7 @@
  * Day of The Week <NUMBER>
  *
  * Example:
- * [1995, 10, 21] call ace_kestrel4500_fnc_buttonPressed
+ * [1995, 10, 21] call ace_kestrel4500_fnc_dayOfWeek
  *
  * Public: No
  */

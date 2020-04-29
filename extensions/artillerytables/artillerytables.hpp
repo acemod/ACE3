@@ -10,9 +10,9 @@
 #define RETURN_WRONG_ARG_COUNT      -1002
 
 extern "C" {
-    __declspec(dllexport) void __stdcall RVExtension(char* output, int outputSize, const char* function);
-    __declspec(dllexport) int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function, const char** argv, int argc);
-    __declspec(dllexport) void __stdcall RVExtensionVersion(char* output, int outputSize);
+    EXPORT void __stdcall RVExtension(char* output, int outputSize, const char* function);
+    EXPORT int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function, const char** argv, int argc);
+    EXPORT void __stdcall RVExtensionVersion(char* output, int outputSize);
 }
 
 std::tuple<double, double, double> simulateShot(const double _fireAngleRad, const double _muzzleVelocity, const double _heightOfTarget, const double _crossWind, const double _tailWind, const double _temperature, const double _airDensity, double _airFriction);

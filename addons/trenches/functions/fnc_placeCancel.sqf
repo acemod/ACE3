@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [ACE_player] call ace_sandbag_fnc_placeCancel
+ * [ACE_player] call ace_trenches_fnc_placeCancel
  *
  * Public: No
  */

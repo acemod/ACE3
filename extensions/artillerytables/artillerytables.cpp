@@ -205,14 +205,14 @@ std::string simulateCalcRangeTableLine(const double _rangeToHit, const double _m
 }
 
 void __stdcall RVExtensionVersion(char* output, int outputSize) {
-    strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+    strncpy(output, ACE_FULL_VERSION_STR, outputSize - 1);
 }
 void __stdcall RVExtension(char* output, int outputSize, const char* function) {
     if (!strcmp(function, "version")) {
         RVExtensionVersion(output, outputSize);
         return;
     }
-    strncpy(output, "error - use args version of callExtension", outputSize);
+    strncpy(output, "error - use args version of callExtension", outputSize - 1);
 }
 int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function, const char** args, int argsCnt) {
     if (!strcmp(function, "version")) {
@@ -254,7 +254,7 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
 
         std::stringstream outputStr; // debug max distance and thead count
         outputStr << "[" << bestDistance << "," << fWorkers.size() << "]";
-        strncpy(output, outputStr.str().c_str(), outputSize);
+        strncpy(output, outputStr.str().c_str(), outputSize - 1);
         return 0;
     }
 
@@ -274,10 +274,10 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
             result = fWorkers[getLineIndex].get();
             getLineIndex++;
         }
-        strncpy(output, result.c_str(), outputSize);
+        strncpy(output, result.c_str(), outputSize - 1);
         return 1;
     }
 
-    strncpy(output, "error - invalid function", outputSize);
+    strncpy(output, "error - invalid function", outputSize - 1);
     return RETURN_INVALID_FUNCTION; // Error: function not valid
 }
