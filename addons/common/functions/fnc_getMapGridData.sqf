@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [] call ace_map_fnc_getMapGridData
+ * [] call ace_common_fnc_getMapGridData
  *
  * Public: No
  */

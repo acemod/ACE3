@@ -33,7 +33,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
             <Russian>Включить улучшенный бросок</Russian>
-            <Japanese>アドバンスド スローイングを有効化する</Japanese>
+            <Japanese>アドバンスド スローイングを有効化</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
             <German>Aktiviere erweitertes Wurfsystem</German>
             <Korean>고급 투척 활성화 </Korean>
@@ -63,7 +63,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
             <Russian>Показать траекторию броска</Russian>
-            <Japanese>投てき軌道を表示する</Japanese>
+            <Japanese>投てき軌道を表示</Japanese>
             <Polish>Pokaż trasę lotu</Polish>
             <German>Zeige Wurfbogen</German>
             <Korean>투척 궤적 표시</Korean>
@@ -92,7 +92,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
             <English>Show Throwing Mouse Controls</English>
             <Russian>Показывать управление мышью</Russian>
-            <Japanese>投てきのマウス操作を表示する</Japanese>
+            <Japanese>投てきのマウス操作を表示</Japanese>
             <Polish>Pokaż podpowiedzi sterowania myszą</Polish>
             <German>Zeige Maussteuerung beim Werfen</German>
             <Korean>마우스 조작 표시</Korean>
@@ -120,7 +120,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
             <Russian>Включить подбор гранат</Russian>
-            <Japanese>投てき物の拾い上げを有効化する</Japanese>
+            <Japanese>投てき物の拾い上げを有効化</Japanese>
             <Polish>Zezwól na podnoszenie obiektów miotanych</Polish>
             <German>Aktiviere Aufheben von Wurfobjekten</German>
             <Korean>투척물 줍기 활성화</Korean>
@@ -148,7 +148,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
             <Russian>Включить подбор прикрепленных гранат</Russian>
-            <Japanese>取り付けられた投てき物の拾い上げを有効化する</Japanese>
+            <Japanese>取り付けられた投てき物の拾い上げを有効化</Japanese>
             <Polish>Zezwól na podnoszenie przyczepionych obiektów miotanych</Polish>
             <German>Aktiviere erneute Aufnahme befestigter Wurfobjekte</German>
             <Korean>부착 투척물 줍기 활성화</Korean>
@@ -162,7 +162,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_Description">
             <English>Enables ability to pick up throwables from attached objects.</English>
             <Russian>Включает возможность подбирать гранаты, прикрепленные к объектам.</Russian>
-            <Japanese>取り付けられた投てき物を、取り付け先から拾い上げる機能を有効化します。</Japanese>
+            <Japanese>取り付けられた投てき物を拾い上げる機能を有効化します。</Japanese>
             <Polish>Umożliwia podnoszenie obiektów miotanych przyczepionych do innych obiektów.</Polish>
             <German>Aktiviert die Möglichkeit, befestigte Wurfobjekte erneut aufzunehmen.</German>
             <Korean>부착된 투척물을 주울 수 있게 해줍니다.</Korean>

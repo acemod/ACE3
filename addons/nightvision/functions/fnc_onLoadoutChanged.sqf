@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player] call ace_nightvision_fnc_onLoadoutChange
+ * [player] call ace_nightvision_fnc_onLoadoutChanged
  *
  * Public: No
  */

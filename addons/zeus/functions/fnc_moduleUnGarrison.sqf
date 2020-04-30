@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [LOGIC] call ace_zeus_fnc_moduleUngarrison
+ * [LOGIC] call ace_zeus_fnc_moduleUnGarrison
  *
  * Public: No
 */
