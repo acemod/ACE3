@@ -15,6 +15,7 @@ class CfgPatches {
 };
 
 #include "ui\RscAttributes.hpp"
+#include "ui\RscCustomArsenalButton.hpp"
 #include "Display3DEN.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"

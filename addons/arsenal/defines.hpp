@@ -130,26 +130,6 @@
 #define IDC_statsCurrentPage 54
 #define IDC_statsButton 55
 #define IDC_statsButtonClose 56
-#define IDC_iconBackgroundCustom1 57
-#define IDC_buttonCustom1 58
-#define IDC_iconBackgroundCustom2 59
-#define IDC_buttonCustom2 60
-#define IDC_iconBackgroundCustom3 61
-#define IDC_buttonCustom3 62
-#define IDC_iconBackgroundCustom4 63
-#define IDC_buttonCustom4 64
-#define IDC_iconBackgroundCustom5 65
-#define IDC_buttonCustom5 66
-#define IDC_iconBackgroundCustom6 67
-#define IDC_buttonCustom6 68
-#define IDC_iconBackgroundCustom7 69
-#define IDC_buttonCustom7 70
-#define IDC_iconBackgroundCustom8 71
-#define IDC_buttonCustom8 72
-#define IDC_iconBackgroundCustom9 73
-#define IDC_buttonCustom9 74
-#define IDC_iconBackgroundCustom10 75
-#define IDC_buttonCustom10 76
 
 #define IDD_loadouts_display 1127002
 #define IDC_centerBox 3
@@ -192,11 +172,12 @@
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
 
-#define RIGHT_PANEL_CUSTOM_BUTTONS IDC_buttonCustom1, IDC_buttonCustom2, IDC_buttonCustom3, IDC_buttonCustom4, IDC_buttonCustom5, IDC_buttonCustom6, IDC_buttonCustom7, IDC_buttonCustom8, IDC_buttonCustom9, IDC_buttonCustom10
+#define RIGHT_PANEL_CUSTOM_BUTTONS 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+#define RIGHT_PANEL_CUSTOM_BACKGROUND 60, 62, 64, 66, 68, 70, 72, 74, 76, 78
 #define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
 #define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod
 #define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc, RIGHT_PANEL_CUSTOM_BUTTONS
-#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc, IDC_iconBackgroundCustom1, IDC_iconBackgroundCustom2, IDC_iconBackgroundCustom3, IDC_iconBackgroundCustom4, IDC_iconBackgroundCustom5, IDC_iconBackgroundCustom6, IDC_iconBackgroundCustom7, IDC_iconBackgroundCustom8, IDC_iconBackgroundCustom9, IDC_iconBackgroundCustom10
+#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc, RIGHT_PANEL_CUSTOM_BACKGROUND
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
 
 #define GETDLC\
@@ -326,23 +307,37 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
 ];\
-{\
-    private _idc = _x;\
-    _x = _display displayCtrl _idc;\
-    if (!isNil QGVAR(customRightPanelButtons) && {!isNil {GVAR(customRightPanelButtons) param [_forEachIndex]}}) then {\
-        (GVAR(customRightPanelButtons) select _forEachIndex) params ["", "_picture", "_tooltip"];\
-        _x ctrlSetText _picture;\
-        _x ctrlSetTooltip _tooltip;\
-    } else {\
-        _x ctrlSetFade 1;\
-        _x ctrlShow false;\
+if (!isNil QGVAR(customRightPanelButtons)) then {\
+    private _miscOffset = 0;\
+    {\
+        if (!isNil "_x") then {\
+            _x params ["", "_picture", "_tooltip"];\
+            _miscOffset = _forEachIndex + 1;\
+            private _ctrl = _display ctrlCreate ["ace_arsenal_customArsenalButton_Button", 61 + (_forEachIndex * 2)];\
+            _ctrl ctrlSetPosition [\
+                safezoneW + safezoneX - 10 * GRID_W,\
+                safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
+            ];\
+            _ctrl ctrlSetText _picture;\
+            _ctrl ctrlSetTooltip _tooltip;\
+            _ctrl ctrlCommit 0;\
+            _ctrl = _display ctrlCreate ["ace_arsenal_customArsenalButton_Background", 60 + (_forEachIndex * 2)];\
+            _ctrl ctrlSetPosition [\
+                safezoneW + safezoneX - 13 * GRID_W,\
+                safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
+            ];\
+            _ctrl ctrlCommit 0;\
+        };\
+    } forEach GVAR(customRightPanelButtons);\
+    {\
+        _x = _display displayCtrl _x;\
+        _x ctrlSetPosition [\
+            safezoneW + safezoneX - (10 + (3 * _forEachIndex)) * GRID_W,\
+            safezoneY + (88 + (10 * _miscOffset)) * GRID_H\
+        ];\
         _x ctrlCommit 0;\
-        _x = _display displayCtrl (_idc - 1);\
-        _x ctrlSetFade 1;\
-        _x ctrlShow false;\
-        _x ctrlCommit 0;\
-    };\
-} forEach [RIGHT_PANEL_CUSTOM_BUTTONS];
+    } forEach [IDC_buttonMisc, IDC_iconBackgroundMisc];\
+};
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
 {\
@@ -451,15 +446,3 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
     _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
-
-#define ADD_CUSTOM_BUTTON(NUMBER)\
-    class iconBackgroundCustom##NUMBER: iconBackgroundOptic {\
-        idc = (IDC_iconBackgroundCustom1 - 2) + (NUMBER * 2);\
-        y = QUOTE(safezoneY + (88 + (10 * NUMBER)) * GRID_H);\
-    };\
-    class buttonCustom##NUMBER: buttonOptic {\
-        idc = (IDC_buttonCustom1 - 2) + (NUMBER * 2);\
-        text = QPATHTOF(data\iconCustom.paa);\
-        tooltip = "";\
-        y = QUOTE(safezoneY + (88 + (10 * NUMBER)) * GRID_H);\
-    }
