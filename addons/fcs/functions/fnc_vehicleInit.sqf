@@ -21,11 +21,9 @@ params ["_vehicle"];
     private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) then {
-        if (missionNamespace getVariable [QGVAR(needToAddFiredEH), true]) then {
-            ["ace_firedPlayerVehicle", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
-            ["ace_firedPlayerVehicleNonLocal", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
-            GVAR(needToAddFiredEH) = false;
-            TRACE_1("Registered fired event handlers for all vehicles",GVAR(needToAddFiredEH));
+        if (isNil QGVAR(jipID)) then {
+            GVAR(jipID) = [QGVAR(addFiredEH), [], QGVAR(addFiredEH)] call CBA_fnc_globalEventJIP;
+            TRACE_1("Adding fired EH for players",GVAR(jipID));
         };
 
         _vehicle setVariable [format ["%1_%2", QGVAR(Distance),  _x],  0, true];
@@ -48,5 +46,4 @@ params ["_vehicle"];
             _vehicle setVariable [format ["%1_%2", QGVAR(ViewDiff), _x],         0, true];
         };
     };
-    false
-} count allTurrets _vehicle;
+} forEach allTurrets _vehicle;
