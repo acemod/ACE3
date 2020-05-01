@@ -950,7 +950,7 @@
             <German>Hat etwas Blut verloren</German>
             <Japanese>いくらか失血した</Japanese>
             <Russian>Небольшая кровопотеря</Russian>
-            <French>A perdu un peu de sang</French>
+            <French>A perdu une faible quantité de sang</French>
             <Portuguese>Perdeu um pouco de Sangue</Portuguese>
             <Chinese>輕微失血</Chinese>
             <Italian>Ha perso un po' di sangue</Italian>
@@ -963,7 +963,7 @@
             <German>Hat eine große Menge Blut verloren</German>
             <Russian>Большая кровопотеря</Russian>
             <Spanish>Mucha sangre perdida</Spanish>
-            <French>A perdu beaucoup de sang</French>
+            <French>A perdu une quantité modérée de sang</French>
             <Polish>Stracił dużo krwi</Polish>
             <Czech>Ztratil hodně krve</Czech>
             <Hungarian>Sok vért vesztett</Hungarian>
@@ -979,7 +979,7 @@
             <German>Hat eine sehr große Menge Blut verloren</German>
             <Japanese>かなり酷く大量失血した</Japanese>
             <Russian>Огромная кровопотеря</Russian>
-            <French>A perdu une grande quantité de sang</French>
+            <French>A perdu une importante quantité de sang</French>
             <Portuguese>Perdeu uma quantidade grande de sangue</Portuguese>
             <Chinese>極大量失血中</Chinese>
             <Italian>Ha perso una grande quantità di sangue</Italian>
@@ -992,7 +992,7 @@
             <German>Hat eine kritische Menge an Blut verloren</German>
             <Japanese>致命的な程失血した</Japanese>
             <Russian>Фатальная кровопотеря</Russian>
-            <French>Exsanguination</French>
+            <French>A perdu une quantité critique de sang</French>
             <Portuguese>Perdeu uma quantidade fatal de sangue</Portuguese>
             <Chinese>致命性失血中</Chinese>
             <Italian>Ha perso una quantità fatale di sangue</Italian>
