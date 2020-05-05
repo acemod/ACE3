@@ -132,7 +132,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [LSTRING(RequiredWoundStatePAK_Open), LSTRING(Bandaged), LSTRING(RequiredWoundStatePAK_Stitched)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowPainPAK),
@@ -141,7 +141,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(minBloodPAK),
@@ -150,7 +150,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 100, 15, 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(minHeartRatePAK),
@@ -159,7 +159,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 80, 40, 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(medicSurgicalKit),
