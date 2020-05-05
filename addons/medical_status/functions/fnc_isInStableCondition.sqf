@@ -17,15 +17,30 @@
 
 params ["_unit"];
 
+hint "1";
+
 if (!alive _unit) exitWith { false };
 if (IS_UNCONSCIOUS(_unit)) exitWith { false };
 if (IS_BLEEDING(_unit)) exitWith { false };
-if (GET_HEART_RATE(_unit) < QEGVAR(medical_treatment,minHeartRatePAK)) exitWith { false };
+if (GET_HEART_RATE(_unit) < EGVAR(medical_treatment,minHeartRatePAK)) exitWith { false };
 
-private _requiredBloodVolume = DEFAULT_BLOOD_VOLUME * (QEGVAR(medical_treatment,minBloodPAK) / 100);
+hint "2";
+
+private _requiredBloodVolume = DEFAULT_BLOOD_VOLUME * (EGVAR(medical_treatment,minBloodPAK) / 100);
 if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith { false };
 
-if (QEGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith { false };
-if (QEGVAR(medical_treatment,allowOpenWoundsPAK) == 0 && { !(GET_OPEN_WOUNDS(_unit) isEqualTo []) }) exitWith { false };
+hint "3";
+
+if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith { false };
+
+private _requiredWoundState = EGVAR(medical_treatment,requiredWoundStatePAK);
+
+// Require at least bandaged wounds.
+if (_requiredWoundState >= 1 && { !(GET_OPEN_WOUNDS(_unit) isEqualTo []) }) exitWith { false };
+
+// Require stitched wounds.
+if (_requiredWoundState == 2 && { !(GET_BANDAGED_WOUNDS(_unit) isEqualTo []) }) exitWith { false };
+
+hint "4";
 
 true

@@ -126,11 +126,11 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(allowOpenWoundsPAK),
+    QGVAR(requiredWoundStatePAK),
     "LIST",
-    [LSTRING(AllowOpenWoundsPAK_DisplayName), LSTRING(AllowOpenWoundsPAK_Description)],
+    [LSTRING(RequiredWoundStatePAK_DisplayName), LSTRING(RequiredWoundStatePAK_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
+    [[0, 1, 2], [LSTRING(RequiredWoundStatePAK_Open), LSTRING(Bandaged), LSTRING(RequiredWoundStatePAK_Stitched)], 0],
     true
 ] call CBA_settings_fnc_init;
 

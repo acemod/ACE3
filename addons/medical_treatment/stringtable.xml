@@ -372,11 +372,17 @@
             <Polish>Zmienia czas potrzebny na zastosowanie apteczki osobistej.\n Czas leczenia jest oparty na całkowitym uszkodzeniu części ciała pomnożonym przez ten współczynnik, wynosi minimum 10 sekund.</Polish>
             <German>Modifiziert, wie lange ein Erste-Hilfe-Set für die Anwendung benötigt.\nDie Behandlungszeit basiert auf der Anzahl des Gesamtkörperschadens multipliziert mit diesem Koeffizienten, mit einen Minimum von 10 Sekunden.</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowOpenWoundsPAK_DisplayName">
-            <English>Allow Open Wounds PAK</English>
+        <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_DisplayName">
+            <English>Required Wound State PAK</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowOpenWoundsPAK_Description">
-            <English>Enables the use of PAKs on patients with open wounds without any bleeding.</English>
+        <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_Description">
+            <English>Which state all wounds on a patient need to be in for PAK to be possible.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_Open">
+            <English>Open</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_Stitched">
+            <English>Stitched</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowPainPAK_DisplayName">
             <English>Allow Pain PAK</English>
