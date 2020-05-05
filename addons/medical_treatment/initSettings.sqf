@@ -126,6 +126,42 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(allowOpenWoundsPAK),
+    "LIST",
+    [LSTRING(AllowOpenWoundsPAK_DisplayName), LSTRING(AllowOpenWoundsPAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(allowPainPAK),
+    "LIST",
+    [LSTRING(AllowPainPAK_DisplayName), LSTRING(AllowPainPAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1], [ELSTRING(common,No), ELSTRING(common,Yes)], 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(minBloodPAK),
+    "SLIDER",
+    [LSTRING(MinBloodPAK_DisplayName), LSTRING(MinBloodPAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 100, 15, 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(minHeartRatePAK),
+    "SLIDER",
+    [LSTRING(MinHeartRatePAK_DisplayName), LSTRING(MinHeartRatePAK_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 80, 40, 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(medicSurgicalKit),
     "LIST",
     [LSTRING(MedicSurgicalKit_DisplayName), LSTRING(MedicSurgicalKit_Description)],

@@ -372,6 +372,30 @@
             <Polish>Zmienia czas potrzebny na zastosowanie apteczki osobistej.\n Czas leczenia jest oparty na całkowitym uszkodzeniu części ciała pomnożonym przez ten współczynnik, wynosi minimum 10 sekund.</Polish>
             <German>Modifiziert, wie lange ein Erste-Hilfe-Set für die Anwendung benötigt.\nDie Behandlungszeit basiert auf der Anzahl des Gesamtkörperschadens multipliziert mit diesem Koeffizienten, mit einen Minimum von 10 Sekunden.</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowOpenWoundsPAK_DisplayName">
+            <English>Allow Open Wounds PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowOpenWoundsPAK_Description">
+            <English>Enables the use of PAKs on patients with open wounds without any bleeding.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowPainPAK_DisplayName">
+            <English>Allow Pain PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowPainPAK_Description">
+            <English>Enables the use of PAKs on patients in pain.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MinBloodPAK_DisplayName">
+            <English>Min Blood PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MinBloodPAK_Description">
+            <English>Minimum blood volume required to use a PAK.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MinHeartRatePAK_DisplayName">
+            <English>Min Heart Rate PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MinHeartRatePAK_Description">
+            <English>Minimum heart rate required to use a PAK.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
             <Japanese>縫合キットを許可</Japanese>
