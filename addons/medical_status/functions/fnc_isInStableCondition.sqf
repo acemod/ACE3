@@ -17,11 +17,18 @@
 
 params ["_unit"];
 
+<<<<<<< HEAD
 if (!alive _unit
     || {IS_UNCONSCIOUS(_unit)}
     || {IS_BLEEDING(_unit)}
     || {GET_HEART_RATE(_unit) < EGVAR(medical_treatment,minHeartRatePAK)}
 ) exitWith {false};
+=======
+if (!alive _unit) exitWith {false};
+if (IS_UNCONSCIOUS(_unit)) exitWith {false};
+if (IS_BLEEDING(_unit)) exitWith {false};
+if (GET_HEART_RATE(_unit) < EGVAR(medical_treatment,minHeartRatePAK)) exitWith {false};
+>>>>>>> 0dc1f593459518fc472483b0ca55477e0d9eebcf
 
 private _requiredBloodVolume = DEFAULT_BLOOD_VOLUME * (EGVAR(medical_treatment,minBloodPAK) / 100);
 if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith { false };
