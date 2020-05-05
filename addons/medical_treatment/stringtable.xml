@@ -631,6 +631,36 @@
             <Spanish>Modifica el tiempo que tarda en aplicarse un EPA. \n El tiempo de tratamiento se basa en el daño total de la parte del cuerpo multiplicado por este coeficiente, con un mínimo de 10 segundos.</Spanish>
             <Korean>개인응급키트를 사용하는데 걸리는 시간의 계수을 정합니다.\n최소 10초를 기준으로 몸 전체 피해량과 계수를 합산하여 계산합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_DisplayName">
+            <English>Required Wound State PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_Description">
+            <English>Controls whether a patient's wounds must be bandaged or stitched in order to use a PAK.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_Open">
+            <English>Open</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_Stitched">
+            <English>Stitched</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowPainPAK_DisplayName">
+            <English>Allow Pain PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowPainPAK_Description">
+            <English>Controls whether PAKs can be used on patients in pain.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MinBloodPAK_DisplayName">
+            <English>Min Blood PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MinBloodPAK_Description">
+            <English>Minimum blood volume percentage required to use a PAK.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MinHeartRatePAK_DisplayName">
+            <English>Min Heart Rate PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MinHeartRatePAK_Description">
+            <English>Minimum heart rate required to use a PAK.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_DisplayName">
             <English>Allow Surgical Kit</English>
             <Japanese>縫合キットを許可</Japanese>

@@ -176,6 +176,14 @@ Self IV Transfusion: See "Self PAK Usage".
 
 Time Coefficient PAK: This setting controls how long a PAK takes to apply. Set to higher values to increase, lower to decrease. PAK has a minimum of 10 seconds usage time.
 
+Required Wounds State PAK: Controls whether a patient's wounds must be bandaged or stitched in order to use a PAK.
+
+Allow Pain PAK: Controls whether PAKs can be used on patients in pain.
+
+Min Blood PAK: Minimum blood volume percentage required to use a PAK.
+
+Min Heart Rate PAK: Minimum heart rate required to use a PAK.
+
 CPR Success Chance: This setting controls the chance of a successful round of CPR. By default this is set to 40%.
 
 Holster Required: This setting controls whether or not you must first lower or holster your weapon to perform medical actions, with the exception of "Check Pulse", "Check Blood Pressure" and "Check Response".
