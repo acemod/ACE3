@@ -1398,6 +1398,7 @@
             <Japanese>セルフ インタラクションに動作を表示</Japanese>
             <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
             <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
+            <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
         </Key>
     </Package>
 </Project>

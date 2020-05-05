@@ -101,13 +101,14 @@
             <English>Enabled &amp; Can Reopen</English>
             <French>Activé &amp; peuvent se rouvrir</French>
             <Japanese>有効 &amp; 再開放</Japanese>
+            <Czech>Zapnuto &amp; Úrazy se mohou znovu otevřít</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>
             <Chinese>包紮即痊癒</Chinese>
             <French>Guérir les blessures pansées</French>
-            <Czech>Vyčistit úraz po obvázání</Czech>
+            <Czech>Odebrat úraz po obvázání</Czech>
             <Polish>Usuń uraz po zabandażowaniu</Polish>
             <Italian>Rimozione ferite bendate</Italian>
             <German>Entferne Trauma nach Bandagierung.</German>
@@ -120,6 +121,7 @@
             <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
             <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
             <Chinese>控制說當傷口處理好的時候是否直接痊癒。</Chinese>
+            <Czech>Nastavuje zda se plně obvázané části těla vyléčí.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -338,6 +340,7 @@
             <French>Utilisation de la trousse sanitaire sur soi-même</French>
             <Polish>Używanie apteczki osobistej na sobie</Polish>
             <Japanese>応急処置キットの自己使用</Japanese>
+            <Czech>Samo-použití osobní lékárničky (PAK)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
@@ -347,6 +350,7 @@
             <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
             <Polish>Pozwala na użycie apteczki osobistej na sobie</Polish>
             <Japanese>応急処置キットを使って、自分を治療できるようにします。</Japanese>
+            <Czech>Umožňuje použít osobní lékárničku (PAK) na sama sebe.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -497,6 +501,7 @@
             <French>Pose de perfusion autorisée pour</French>
             <Chinese>允許操作點滴</Chinese>
             <Japanese>IV 輸血の制限</Japanese>
+            <Czech>Povolit IV transfuzi</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
@@ -505,6 +510,7 @@
             <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
+            <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>

@@ -59,6 +59,7 @@
             <Polish>30mm Odłamkowo-Burzące - Zapalające</Polish>
             <German>30mm Hochexplosiv/Brandladung</German>
             <Japanese>30mm 焼夷りゅう弾</Japanese>
+            <Czech>30mm Tříštivo-trhavá zápalná střela</Czech>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
             <English>30mm HEI</English>
@@ -67,6 +68,7 @@
             <Polish>30mm OB-Z</Polish>
             <German>30mm HEB</German>
             <Japanese>30mm HEI</Japanese>
+            <Czech>30mm HEI</Czech>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionAP">
             <English>30mm DU Armor Piercing</English>
@@ -75,6 +77,7 @@
             <Polish>30mm Zubożony Uran - Przebijające</Polish>
             <German>30mm abgereichertes panzerbrechendes Uraniumgeschoss</German>
             <Japanese>30mm DU 徹甲弾</Japanese>
+            <Czech>30mm Protipancéřová střela z ochuzeného Uranu</Czech>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortAP">
             <English>30mm DU AP</English>
@@ -83,6 +86,7 @@
             <Polish>30mm ZU-P</Polish>
             <German>30mm DU-PB</German>
             <Japanese>30mm DU AP</Japanese>
+            <Czech>30 mm DU AP</Czech>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM41">
             <English>30mm Combat Mix 4:1 DU:HEI</English>
@@ -91,6 +95,7 @@
             <Polish>30mm Mieszanka bojowa 4:1 ZU:OB-Z</Polish>
             <German>30mm Kampfmischung 4:1 DU:HEB</German>
             <Japanese>30mm コンバット ミックス 4:1 DU:HEI</Japanese>
+            <Czech>30mm Bojový Mix 4:1 DU:HEI</Czech>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM41">
             <English>30mm CM 4:1</English>
@@ -99,6 +104,7 @@
             <Polish>30mm MB 4:1</Polish>
             <German>30mm KM 4:1</German>
             <Japanese>30mm CM 4:1</Japanese>
+            <Czech>30mm BM 4:1</Czech>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM51">
             <English>30mm Combat Mix 5:1 DU:HEI</English>
@@ -107,6 +113,7 @@
             <Polish>30mm Mieszanka bojowa 5:1 ZU:OB-Z</Polish>
             <German>30mm Kampfmischung 5:1 DU:HEB</German>
             <Japanese>30mm コンバット ミックス 5:1 DU:HEI</Japanese>
+            <Czech>30mm Bojový Mix 5:1 DU:HEI</Czech>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM51">
             <English>30mm CM 5:1</English>
@@ -115,6 +122,7 @@
             <Polish>30mm MB 5:1</Polish>
             <German>30mm KM 5:1</German>
             <Japanese>30mm CM 5:1</Japanese>
+            <Czech>30mm BM 5:1</Czech>
         </Key>
     </Package>
 </Project>
