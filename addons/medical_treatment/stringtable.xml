@@ -121,7 +121,7 @@
             <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
             <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
             <Chinese>控制說當傷口處理好的時候是否直接痊癒。</Chinese>
-            <Czech>Nastavuje zda se plně obvázané části těla vyléčí.</Czech>
+            <Czech>Nastavuje zda jsou plně obvázané části těla vyléčena.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
