@@ -388,6 +388,7 @@
             <Japanese>裂傷</Japanese>
             <Korean>찢어짐</Korean>
             <Chinese>撕裂傷</Chinese>
+            <Turkish>Yırtık</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Minor">
             <English>Small Tear</English>
@@ -403,6 +404,7 @@
             <Japanese>小さな裂傷</Japanese>
             <Korean>조금 찢어짐</Korean>
             <Chinese>小撕裂傷</Chinese>
+            <Turkish>Küçük Yırtık</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Medium">
             <English>Medium Tear</English>
@@ -418,6 +420,7 @@
             <Japanese>中くらいの裂傷</Japanese>
             <Korean>꽤 찢어짐</Korean>
             <Chinese>中度撕裂傷</Chinese>
+            <Turkish>Orta Yırtık</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Large">
             <English>Large Tear</English>

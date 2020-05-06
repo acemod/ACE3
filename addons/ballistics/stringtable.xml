@@ -11,6 +11,7 @@
             <Czech>#00 Broky velké</Czech>
             <Polish>#00 Śrut</Polish>
             <Portuguese>#00 Chumbo</Portuguese>
+            <Turkish>#00 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
@@ -21,6 +22,7 @@
             <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
             <Polish>#00 Śrut</Polish>
             <Portuguese>#00 Chumbo</Portuguese>
+            <Turkish>#00 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
@@ -31,6 +33,7 @@
             <Czech>#0 Broky velké</Czech>
             <Polish>#0 Śrut</Polish>
             <Portuguese>#0 Chumbo</Portuguese>
+            <Turkish>#0 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
@@ -41,6 +44,7 @@
             <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
             <Polish>#0 Śrut</Polish>
             <Portuguese>#0 Chumbo</Portuguese>
+            <Turkish>#0 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
@@ -51,6 +55,7 @@
             <Czech>#1 Broky velké</Czech>
             <Polish>#1 Śrut</Polish>
             <Portuguese>#1 Chumbo</Portuguese>
+            <Turkish>#1 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
@@ -61,6 +66,7 @@
             <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
             <Polish>#1 Śrut</Polish>
             <Portuguese>#1 Chumbo</Portuguese>
+            <Turkish>#1 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
@@ -71,6 +77,7 @@
             <Czech>#2 Broky velké</Czech>
             <Polish>#2 Śrut</Polish>
             <Portuguese>#2 Chumbo</Portuguese>
+            <Turkish>#2 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
@@ -81,6 +88,7 @@
             <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
             <Polish>#2 Śrut</Polish>
             <Portuguese>#2 Chumbo</Portuguese>
+            <Turkish>#2 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
@@ -91,6 +99,7 @@
             <Czech>#3 Broky velké</Czech>
             <Polish>#3 Śrut</Polish>
             <Portuguese>#3 Chumbo</Portuguese>
+            <Turkish>#3 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
@@ -101,6 +110,7 @@
             <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
             <Polish>#3 Śrut</Polish>
             <Portuguese>#3 Chumbo</Portuguese>
+            <Turkish>#3 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
@@ -111,6 +121,7 @@
             <Czech>#4 Broky velké</Czech>
             <Polish>#4 Śrut</Polish>
             <Portuguese>#4 Chumbo</Portuguese>
+            <Turkish>#4 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
@@ -121,6 +132,7 @@
             <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
             <Polish>#4 Śrut</Polish>
             <Portuguese>#4 Chumbo</Portuguese>
+            <Turkish>#4 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>
@@ -130,6 +142,7 @@
             <French>Grenaille No.4</French>
             <Czech>#7 Broky malé</Czech>
             <Polish>#7 Śrut Drobny</Polish>
+            <Turkish>#7 Küçük saçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
             <English>#7 Birdshot</English>
@@ -139,6 +152,7 @@
             <French>Grenaille No.4</French>
             <Czech>#7 Broky malé - kalibr 2.54 mm</Czech>
             <Polish>#7 Śrut Drobny (Birdshot)</Polish>
+            <Turkish>#7 Küçük saçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
@@ -902,6 +916,7 @@
             <Korean>.338 NM 예광탄</Korean>
             <Chinese>.338 NM 曳光彈</Chinese>
             <Chinesesimp>.338 NM 曳光弹</Chinesesimp>
+            <Turkish>.338 NM Tracer</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_TracerDescription">
             <English>Caliber: .338 Norma Magnum Tracer&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -950,6 +965,7 @@
             <Korean>.338 NM IR-DIM 예광탄</Korean>
             <Chinese>.338 NM 低視紅外曳光彈</Chinese>
             <Chinesesimp>.338 NM 低视红外曳光弹</Chinesesimp>
+            <Turkish>.338 NM IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_Tracer_DimDescription">
             <English>Caliber: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -998,6 +1014,7 @@
             <Korean>.338 NM 철갑탄</Korean>
             <Chinese>.338 NM 穿甲彈</Chinese>
             <Chinesesimp>.338 NM 穿甲弹</Chinesesimp>
+            <Turkish>.338 NM AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_APDescription">
             <English>Caliber: .338 Norma Magnum AP&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -1047,6 +1064,7 @@
             <Korean>9.3mm 예광탄</Korean>
             <Chinese>9.3毫米 曳光彈</Chinese>
             <Chinesesimp>9.3mm 曳光弹</Chinesesimp>
+            <Turkish>9.3mm Tracer</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -1095,6 +1113,7 @@
             <Korean>9.3mm IR-DIM 예광탄</Korean>
             <Chinese>9.3毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>9.3mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>9.3mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Cyrus</English>
@@ -1144,6 +1163,7 @@
             <Korean>9.3mm 예광탄</Korean>
             <Chinese>9.3毫米 曳光彈</Chinese>
             <Chinesesimp>9.3mm 曳光弹</Chinesesimp>
+            <Turkish>9.3mm Tracer</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_TracerDescription">
             <English>Caliber: 9.3x64mm Tracer&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -1192,6 +1212,7 @@
             <Korean>9.3mm IR-DIM 예광탄</Korean>
             <Chinese>9.3毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>9.3mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>9.3mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_Tracer_DimDescription">
             <English>Caliber: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -1240,6 +1261,7 @@
             <Korean>9.3mm 철갑탄</Korean>
             <Chinese>9.3毫米 穿甲彈</Chinese>
             <Chinesesimp>9.3mm 穿甲弹</Chinesesimp>
+            <Turkish>9.3mm AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_APDescription">
             <English>Caliber: 9.3x64mm AP&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: Navid</English>
@@ -1288,6 +1310,7 @@
             <Korean>9x19mm</Korean>
             <Chinese>9x19毫米</Chinese>
             <Chinesesimp>9x19mm</Chinesesimp>
+            <Turkish>9x19mm</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_16Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
@@ -1336,6 +1359,7 @@
             <Korean>9x19mm</Korean>
             <Chinese>9x19毫米</Chinese>
             <Chinesesimp>9x19mm</Chinesesimp>
+            <Turkish>9x19mm</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_9x19_mag_Description">
             <English>9x19mm 30Rnd Mag</English>
@@ -1384,6 +1408,7 @@
             <Korean>7.62mm</Korean>
             <Chinese>7.62毫米</Chinese>
             <Chinesesimp>7.62mm</Chinesesimp>
+            <Turkish>7.62mm</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x54_Tracer_mag_Description">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
@@ -1432,6 +1457,7 @@
             <Korean>6.5mm IR-DIM 예광탄</Korean>
             <Chinese>6.5毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>6.5mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>6.5mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX LSW</English>
@@ -1480,6 +1506,7 @@
             <Korean>6.5mm IR-DIM 예광탄</Korean>
             <Chinese>6.5毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>6.5mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>6.5mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimDescription">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
@@ -1528,6 +1555,7 @@
             <Korean>5.56mm Mk262</Korean>
             <Chinese>5.56毫米 Mk262 狙擊專用彈</Chinese>
             <Chinesesimp>5.56mm Mk262 狙击专用弹</Chinesesimp>
+            <Turkish>5.56mm Mk262</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_Description">
             <English>Caliber: 5.56x45mm NATO (Mk262)&lt;br /&gt;Rounds: 30</English>
@@ -1576,6 +1604,7 @@
             <Korean>5.56mm Mk318</Korean>
             <Chinese>5.56毫米 Mk318 特戰專用彈</Chinese>
             <Chinesesimp>5.56mm Mk318 特战专用弹</Chinesesimp>
+            <Turkish>5.56mm Mk318</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk318_mag_Description">
             <English>Caliber: 5.56x45mm NATO (Mk318)&lt;br /&gt;Rounds: 30</English>
@@ -1624,6 +1653,7 @@
             <Korean>5.56mm 철갑탄</Korean>
             <Chinese>5.56毫米 M995 穿甲彈</Chinese>
             <Chinesesimp>5.56mm M995 穿甲弹</Chinesesimp>
+            <Turkish>5.56mm AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_Description">
             <English>Caliber: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Rounds: 30</English>
@@ -1672,6 +1702,7 @@
             <Korean>7.62mm M118LR</Korean>
             <Chinese>7.62m毫米 M118LR 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm M118LR 狙击专用弹</Chinesesimp>
+            <Turkish>7.62mm M118LR</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (M118LR)&lt;br /&gt;Rounds: 10</English>
@@ -1720,6 +1751,7 @@
             <Korean>7.62mm M118LR</Korean>
             <Chinese>7.62毫米 M118LR 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm M118LR 狙击专用弹</Chinesesimp>
+            <Turkish>7.62mm M118LR</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M118LR_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (M118LR)&lt;br /&gt;Rounds: 20</English>
@@ -1768,6 +1800,7 @@
             <Korean>7.62mm Mk316</Korean>
             <Chinese>7.62毫米 Mk316 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm Mk316 狙击专用弹</Chinesesimp>
+            <Turkish>7.62mm Mk316</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk316_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Rounds: 10</English>
@@ -1816,6 +1849,7 @@
             <Korean>7.62mm Mk316</Korean>
             <Chinese>7.62毫米 Mk316 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm Mk316 狙击专用弹</Chinesesimp>
+            <Turkish>7.62mm Mk316</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk316_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Rounds: 20</English>
@@ -1864,6 +1898,7 @@
             <Korean>7.62mm Mk319</Korean>
             <Chinese>7.62毫米 Mk319 特戰專用彈</Chinese>
             <Chinesesimp>7.62mm Mk319 特战专用弹</Chinesesimp>
+            <Turkish>7.62mm Mk319</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 10</English>
@@ -1912,6 +1947,7 @@
             <Korean>7.62mm Mk319</Korean>
             <Chinese>7.62毫米 Mk319 特戰專用彈</Chinese>
             <Chinesesimp>7.62mm Mk319 特战专用弹</Chinesesimp>
+            <Turkish>7.62mm Mk319</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk319_Mod_0_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Rounds: 20</English>
@@ -1960,6 +1996,7 @@
             <Korean>7.62mm 철갑탄</Korean>
             <Chinese>7.62毫米 M993 穿甲專用彈</Chinese>
             <Chinesesimp>7.62mm M993 穿甲专用弹</Chinesesimp>
+            <Turkish>7.62mm AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M993_AP_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Rounds: 10</English>
@@ -2008,6 +2045,7 @@
             <Korean>7.62mm 철갑탄</Korean>
             <Chinese>7.62毫米 M993 穿甲專用彈</Chinese>
             <Chinesesimp>7.62mm M993 穿甲专用弹</Chinesesimp>
+            <Turkish>7.62mm AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M993_AP_Mag_Description">
             <English>Caliber: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Rounds: 20</English>
@@ -2056,6 +2094,7 @@
             <Korean>7.62mm Mk248</Korean>
             <Chinese>7.62毫米 Mk248 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm Mk248 狙击专用弹</Chinesesimp>
+            <Turkish>7.62mm Mk248</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
             <English>Caliber: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
@@ -2104,6 +2143,7 @@
             <Korean>7.62mm Mk248</Korean>
             <Chinese>7.62毫米 Mk248 狙擊專用彈</Chinese>
             <Chinesesimp>7.62mm Mk248 狙击专用弹</Chinesesimp>
+            <Turkish>7.62mm Mk248</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
             <English>Caliber: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
@@ -2152,6 +2192,7 @@
             <Korean>7.62mm OTM</Korean>
             <Chinese>7.62毫米  空尖比賽專用彈</Chinese>
             <Chinesesimp>7.62mm 空尖比赛专用弹</Chinesesimp>
+            <Turkish>7.62mm OTM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
             <English>Caliber: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
@@ -2200,6 +2241,7 @@
             <Korean>6.5mm Lapua</Korean>
             <Chinese>6.5毫米 拉普 空尖艇尾狙擊專用彈</Chinese>
             <Chinesesimp>6.5mm Lapua 空尖艇尾狙击专用弹</Chinesesimp>
+            <Turkish>6.5mm Lapua</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
@@ -2248,6 +2290,7 @@
             <Korean>6.5mm CM</Korean>
             <Chinese>6.5毫米 CM狙擊專用彈</Chinese>
             <Chinesesimp>6.5mm CM 狙击专用弹</Chinesesimp>
+            <Turkish>6.5mm CM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Description">
             <English>Caliber: 6.5x47mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MXM</English>
@@ -2296,6 +2339,7 @@
             <Korean>.338 Scenar</Korean>
             <Chinese>.338 Scenar</Chinese>
             <Chinesesimp>.338 Scenar</Chinesesimp>
+            <Turkish>.338 Scenar</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Description">
             <English>Caliber: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Rounds: 10</English>
@@ -2344,6 +2388,7 @@
             <Korean>.338 철갑탄</Korean>
             <Chinese>.338 API526 穿甲燃燒彈</Chinese>
             <Chinesesimp>.338 API526 穿甲燃烧弹</Chinesesimp>
+            <Turkish>.338 AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_API526_Mag_Description">
             <English>Caliber: 8.6x70mm (API526)&lt;br /&gt;Rounds: 10</English>
@@ -2392,6 +2437,7 @@
             <Korean>.408</Korean>
             <Chinese>.408</Chinese>
             <Chinesesimp>.408</Chinesesimp>
+            <Turkish>.408</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Description">
             <English>Caliber: .408 CheyTac (305gr)&lt;br /&gt;Rounds: 7</English>
@@ -2440,6 +2486,7 @@
             <Korean>12.7mm</Korean>
             <Chinese>12.7毫米</Chinese>
             <Chinesesimp>12.7mm</Chinesesimp>
+            <Turkish>12.7mm</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
@@ -2488,6 +2535,7 @@
             <Korean>12.7mm 철갑소이탄</Korean>
             <Chinese>12.7毫米 穿甲燃燒彈</Chinese>
             <Chinesesimp>12.7mm 穿甲燃烧弹</Chinesesimp>
+            <Turkish>12.7mm API</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_Description">
             <English>Caliber: 12.7x99mm API&lt;br /&gt;Rounds: 5</English>
@@ -2520,6 +2568,7 @@
             <Korean>5발들이 12.7x99mm 탄창 (AMAX)</Korean>
             <Chinese>12.7x99毫米 5發 彈匣 (AMAX 比賽專用彈)</Chinese>
             <Chinesesimp>12.7x99mm 5发 弹匣 (AMAX 比赛专用弹)</Chinesesimp>
+            <Turkish>12.7x99mm 5Rnd Şarjör (AMAX)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_NameShort">
             <English>12.7mm</English>
@@ -2536,6 +2585,7 @@
             <Korean>12.7mm</Korean>
             <Chinese>12.7毫米 AMAX 比賽專用彈</Chinese>
             <Chinesesimp>12.7mm AMAX 比赛专用弹</Chinesesimp>
+            <Turkish>12.7mm</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_Description">
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
@@ -2552,6 +2602,7 @@
             <Korean>구경: 12.7x99mm (AMAX)&lt;br /&gt;장탄수: 5</Korean>
             <Chinese>口徑: 12.7x99毫米 (AMAX 比賽專用彈)&lt;br /&gt;發數: 5</Chinese>
             <Chinesesimp>口径: 12.7x99mm (AMAX 比赛专用弹)&lt;br /&gt;发数: 5</Chinesesimp>
+            <Turkish>Kalibre: 12.7x99mm (AMAX)&lt;br /&gt;Mermi: 5</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_AmmoSupplyCrate_DisplayName">
             <English>[ACE] Ammo Supply Crate</English>
@@ -2568,6 +2619,7 @@
             <Korean>[ACE] 탄약 보급 상자</Korean>
             <Chinese>[ACE] 彈藥補給箱</Chinese>
             <Chinesesimp>[ACE] 弹药补给箱</Chinesesimp>
+            <Turkish>[ACE] Cephane İkmal Kutusu</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelTwist">
             <English>Barrel twist</English>
@@ -2596,6 +2648,7 @@
             <Portuguese>Comprimento do cano</Portuguese>
             <Czech>Délka hlavně</Czech>
             <Spanish>Longitud del cañón</Spanish>
+            <Turkish>Namlu Uzunluğu</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>
@@ -2610,6 +2663,7 @@
             <Portuguese>Coeficiente balístico</Portuguese>
             <Czech>Balistický koeficient</Czech>
             <Spanish>Coheficiente de balística</Spanish>
+            <Turkish>Balistik Katsayısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBulletMass">
             <English>Bullet mass</English>
@@ -2624,6 +2678,7 @@
             <Portuguese>Massa do projétil</Portuguese>
             <Czech>Váha projektilu</Czech>
             <Spanish>Masa de la bala</Spanish>
+            <Turkish>Mermi Ağırlığı</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statMuzzleVelocity">
             <English>Muzzle velocity</English>
@@ -2638,6 +2693,7 @@
             <Portuguese>Velocidade de Saída</Portuguese>
             <Czech>Úsťová rychlost</Czech>
             <Spanish>Velocidad inicial</Spanish>
+            <Turkish>Namlu çıkış hızı</Turkish>
         </Key>
     </Package>
 </Project>

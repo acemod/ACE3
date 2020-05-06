@@ -12,6 +12,7 @@
             <Italian>Stato</Italian>
             <Czech>Stavy</Czech>
             <Polish>Stany</Polish>
+            <Turkish>Devletler</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_DisplayName">
             <English>Player Fatal Injuries</English>
@@ -100,6 +101,7 @@
             <Italian>Tempo d'arresto cardiaco</Italian>
             <Czech>Délka srdeční zástavy</Czech>
             <Polish>Czas Zatrzymania Akcji Serca</Polish>
+            <Turkish>Kalp Durma Süresi</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_Description">
             <English>Controls how long it takes to die from cardiac arrest.</English>
@@ -111,6 +113,7 @@
             <Italian>Controlla quanto tempo ci vuole per morire di arresto cardiaco.</Italian>
             <Czech>Nastavuje po jak dlouhé době pacient zemře kvůli srdeční zástavě.</Czech>
             <Polish>Definiuje czas potrzebny na śmierć z powodu zatrzymania akcji serca.</Polish>
+            <Turkish>Ne kadar süre de kalbi durarak ölmesini belirleyin.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_InCardiacArrest">
             <English>In Cardiac Arrest</English>
@@ -123,6 +126,7 @@
             <Italian>In arresto cardiaco</Italian>
             <Czech>V srdeční zástavě</Czech>
             <Polish>Zatrzymanie Akcji Serca</Polish>
+            <Turkish>Kalbi Durdu</Turkish>
         </Key>
     </Package>
 </Project>
