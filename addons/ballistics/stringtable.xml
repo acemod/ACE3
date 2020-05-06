@@ -12,7 +12,7 @@
             <Czech>#00 Broky velké</Czech>
             <Polish>#00 Śrut</Polish>
             <Portuguese>#00 Chumbo</Portuguese>
-            <Turkish>#00 İrisaçma</Turkish>
+            <Turkish>#00 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
@@ -24,7 +24,7 @@
             <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
             <Polish>#00 Śrut</Polish>
             <Portuguese>#00 Chumbo</Portuguese>
-            <Turkish>#00 İrisaçma</Turkish>
+            <Turkish>#00 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
@@ -36,7 +36,7 @@
             <Czech>#0 Broky velké</Czech>
             <Polish>#0 Śrut</Polish>
             <Portuguese>#0 Chumbo</Portuguese>
-            <Turkish>#0 İrisaçma</Turkish>
+            <Turkish>#0 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
@@ -48,7 +48,7 @@
             <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
             <Polish>#0 Śrut</Polish>
             <Portuguese>#0 Chumbo</Portuguese>
-            <Turkish>#0 İrisaçma</Turkish>
+            <Turkish>#0 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
@@ -60,7 +60,7 @@
             <Czech>#1 Broky velké</Czech>
             <Polish>#1 Śrut</Polish>
             <Portuguese>#1 Chumbo</Portuguese>
-            <Turkish>#1 İrisaçma</Turkish>
+            <Turkish>#1 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
@@ -72,7 +72,7 @@
             <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
             <Polish>#1 Śrut</Polish>
             <Portuguese>#1 Chumbo</Portuguese>
-            <Turkish>#1 İrisaçma</Turkish>
+            <Turkish>#1 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
@@ -84,7 +84,7 @@
             <Czech>#2 Broky velké</Czech>
             <Polish>#2 Śrut</Polish>
             <Portuguese>#2 Chumbo</Portuguese>
-            <Turkish>#2 İrisaçma</Turkish>
+            <Turkish>#2 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
@@ -96,7 +96,7 @@
             <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
             <Polish>#2 Śrut</Polish>
             <Portuguese>#2 Chumbo</Portuguese>
-            <Turkish>#2 İrisaçma</Turkish>
+            <Turkish>#2 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
@@ -108,7 +108,7 @@
             <Czech>#3 Broky velké</Czech>
             <Polish>#3 Śrut</Polish>
             <Portuguese>#3 Chumbo</Portuguese>
-            <Turkish>#3 İrisaçma</Turkish>
+            <Turkish>#3 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
@@ -120,7 +120,7 @@
             <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
             <Polish>#3 Śrut</Polish>
             <Portuguese>#3 Chumbo</Portuguese>
-            <Turkish>#3 İrisaçma</Turkish>
+            <Turkish>#3 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
@@ -132,7 +132,7 @@
             <Czech>#4 Broky velké</Czech>
             <Polish>#4 Śrut</Polish>
             <Portuguese>#4 Chumbo</Portuguese>
-            <Turkish>#4 İrisaçma</Turkish>
+            <Turkish>#4 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
@@ -144,7 +144,7 @@
             <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
             <Polish>#4 Śrut</Polish>
             <Portuguese>#4 Chumbo</Portuguese>
-            <Turkish>#4 İrisaçma</Turkish>
+            <Turkish>#4 Irisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>
@@ -2648,7 +2648,7 @@
             <Korean>[ACE] 탄약 보급 상자</Korean>
             <Chinese>[ACE] 彈藥補給箱</Chinese>
             <Chinesesimp>[ACE] 弹药补给箱</Chinesesimp>
-            <Turkish>[ACE] Cephane İkmal Kutusu</Turkish>
+            <Turkish>[ACE] Cephane Ikmal Kutusu</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBarrelTwist">
             <English>Barrel twist</English>
