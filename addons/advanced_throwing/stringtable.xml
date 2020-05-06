@@ -216,7 +216,7 @@
             <Czech>Mód puštění (Držet)</Czech>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
-            <English>Throwable Drop Mode (Activar/Desactivar)</English>
+            <English>Throwable Drop Mode (Toggle)</English>
             <Spanish>Modo soltar objeto lanzable (interruptor)</Spanish>
             <Russian>Режим броска гранаты (переключить)</Russian>
             <Japanese>投てきモード (切り替え)</Japanese>
