@@ -329,6 +329,7 @@
             <Spanish>Cuerdas rápidas</Spanish>
             <Polish>Zjazd na linach</Polish>
             <Turkish>Halatla Kayma</Turkish>
+            <Czech>Slaňování</Czech>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>

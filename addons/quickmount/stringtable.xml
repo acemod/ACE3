@@ -68,6 +68,7 @@
             <Japanese>この機能により直接見ている車両へすぐさま搭乗できます。</Japanese>
             <Italian>Questa opzione permette l'entrata rapida nel veicolo che si sta guardando.</Italian>
             <Turkish>Bu seçenek, doğrudan bakmakta olduğunuz araca hızlı giriş sağlar.</Turkish>
+            <Czech>Tato možnost umožňuje rychle nastoupit do vozidla na které se díváte.</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
