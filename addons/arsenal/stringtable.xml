@@ -74,7 +74,7 @@
             <Russian>Импорт</Russian>
             <Portuguese>Importar</Portuguese>
             <Czech>Import</Czech>
-            <Turkish>İçe Aktar</Turkish>
+            <Turkish>Içe Aktar</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonCloseText">
             <English>Close</English>
@@ -529,7 +529,7 @@
             <Russian>Поле имени пустое!</Russian>
             <Portuguese>O nome não pode estar vazio!</Portuguese>
             <Czech>Pole "Jméno" je prázdné!</Czech>
-            <Turkish>İsim alanı boş!</Turkish>
+            <Turkish>Isim alanı boş!</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_saveAuthorError">
             <English>You are the author of this loadout</English>
