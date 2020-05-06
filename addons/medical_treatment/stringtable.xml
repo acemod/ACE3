@@ -61,6 +61,7 @@
             <Czech>Pokročilé léky</Czech>
             <Italian>Medicazione avanzata</Italian>
             <Polish>Zaawansowane leki</Polish>
+            <Turkish>Gelişmiş Ilaç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
@@ -99,54 +100,6 @@
             <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
             <Polish>Umożliwia wybranie konkretnego rodzaju bandaża zamiast ogólnej akcji bandażowania.</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
-            <English>Advanced Medication</English>
-            <German>Erweiterte Medikamente</German>
-            <Japanese>アドバンスド医薬品</Japanese>
-            <Russian>Расширенные Лекарства</Russian>
-            <French>Médication avancée</French>
-            <Portuguese>Medicação Avançada</Portuguese>
-            <Chinese>進階醫療用品</Chinese>
-            <Czech>Pokročilé léky</Czech>
-            <Polish>Zaawansowane leki</Polish>
-            <Italian>Medicazione avanzata</Italian>
-            <Turkish>Gelişmiş Ilaç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
-            <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
-            <Russian>Устанавливает расширенное использование лекарств</Russian>
-            <Japanese>有効化するともっと多くの多様な機能を持つ医薬品を使えます。また、アデノシンとアトロピンが利用可能になります。</Japanese>
-            <French>Permet une manipulation étendue et plus approfondie des médicaments.\nEn outre, permet l'utilisation d'adénosine.</French>
-            <Portuguese>Ativa a manipulação avançada de medicações. Também permite o uso de Adenosina e Atropina.</Portuguese>
-            <Chinese>是否擴展藥物管控使其更深度化。並且，啟用腺苷以及阿托品的使用次數</Chinese>
-            <Czech>Povoluje hlubší a rozšířené zacházení s léčivy. Také aktivuje Adenosin a Atropin.</Czech>
-            <Italian>Abilita una gestione della medicazione più estesa e approfondita. Permette inoltre l'utilizzo dell'Adenosina.</Italian>
-            <German>Ermöglicht erweiterte, mehr tiefgründigere Anwendung von Medikationen. Ebenso ermöglicht es die Benutzung von Adenosin.</German>
-            <Polish>Pozwala na zaawansowane uzycie leków. Pozwala na używanie Adenozyny.</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
-            <English>Wound Reopening</English>
-            <Japanese>創傷再開放</Japanese>
-            <French>Réouverture des plaies</French>
-            <Russian>Повторное открытие ран</Russian>
-            <Portuguese>Reabrir Feridas</Portuguese>
-            <Chinese>傷口再度裂開</Chinese>
-            <Italian>Riapertura delle ferite</Italian>
-            <Czech>Znovuotevření ran</Czech>
-            <Polish>Ponowne Otwarcie Ran</Polish>
-            <German>Wunden Wiederöffnung</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
-            <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
-            <Japanese>有効化すると治療をした創傷を再開放します。アドバンスド包帯を有効化している必要があります。</Japanese>
-            <French>Permet la réouverture des plaies pansées.\nNécessite que l'option "pansements avancés" soit activée.</French>
-            <Russian>Разрешает повторное открытие перевязанных ран. Требуются опция «Расширенная Перевязка».</Russian>
-            <Portuguese>Permite que ferimentos atados possam reabrir. Requer Ataduras Avançadas para funcionar.</Portuguese>
-            <Chinese>啟用包紮過的傷口是否會再度裂開。需要啟用「進階包紮」之功能。</Chinese>
-            <Czech>Povoluje znovuotevírání obvázaných zranění. Vyžaduje zapnuté Pokročilé obvazy.</Czech>
-            <Polish>Umożliwia ponowne otwarcie się zabandażowanych ran. Wymaga włączenia opcji Zaawansowane Bandaże.</Polish>
-            <Italian>Permette la riapertura delle ferite fasciate. Richiede l'abilitazione di Bende Avanzate.</Italian>
-            <German>Ermöglicht das Wiederöffnen von bandagierten Wunden. Benötigt, dass 'Erweiterte Bandagen' aktiviert ist.</German>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_EnabledCanReopen">
             <English>Enabled &amp; Can Reopen</English>
             <French>Activé &amp; peuvent se rouvrir</French>
