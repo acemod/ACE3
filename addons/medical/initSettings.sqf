@@ -5,7 +5,7 @@
     LSTRING(Category),
     [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(Limping_LimpOnOpenWounds), LSTRING(Limping_LimpRequiresStitching)], 1],
     true,
-    {[QGVAR(limping), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    {},
     true
 ] call CBA_settings_fnc_init;
 
@@ -16,7 +16,16 @@
     LSTRING(Category),
     [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(Fractures_SplintHealsFully), LSTRING(Fractures_SplintHasEffects)], 1],
     true,
-    {[QGVAR(fractures), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    {},
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(fractureChance),
+    "SLIDER",
+    [LSTRING(FractureChance_DisplayName), LSTRING(FractureChance_Description)],
+    LSTRING(Category),
+    [0, 1, 0.8, 2, true],
     true
 ] call CBA_settings_fnc_init;
 
@@ -25,7 +34,7 @@
     "SLIDER",
     [LSTRING(SpontaneousWakeUpChance_DisplayName), LSTRING(SpontaneousWakeUpChance_Description)],
     LSTRING(Category),
-    [0, 1, 0.05, 2],
+    [0, 1, 0.05, 2, true],
     true
 ] call CBA_settings_fnc_init;
 

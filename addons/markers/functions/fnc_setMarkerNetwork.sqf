@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [[],[],dummyLogic] call ace_markers_fnc_setMarkerJIP;
+ * [[],[],dummyLogic] call ace_markers_fnc_setMarkerNetwork;
  *
  * Public: No
  */

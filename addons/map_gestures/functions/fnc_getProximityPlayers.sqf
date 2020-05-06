@@ -18,7 +18,7 @@
 
 params ["_unit", "_range"];
 
-private _proximityPlayers = (getPos _unit) nearEntities [["CAMAnBase"], _range];
+private _proximityPlayers = _unit nearEntities [["CAMAnBase"], _range];
 _proximityPlayers deleteAt (_proximityPlayers find _unit);
 _proximityPlayers append (crew vehicle _unit);
 

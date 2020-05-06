@@ -34,6 +34,7 @@ if (alive ACE_player) then {
         private _vehConfig = configFile >> "CfgVehicles" >> (typeOf _currentVehicle);
 
         if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
+        if ([ACE_player] call CBA_fnc_canUseWeapon) exitWith {true}; // FFV
 
         if (ACE_player == (driver _currentVehicle)) exitWith {
             !("NVG" in getArray (_vehConfig >> "ViewOptics" >> "visionMode"));

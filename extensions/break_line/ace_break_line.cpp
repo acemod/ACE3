@@ -64,9 +64,9 @@ std::string addLineBreaks(const std::vector<std::string> &words) {
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     ZERO_OUTPUT();
     if (!strcmp(function, "version")) {
-        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize - 1);
     } else {
-        strncpy(output, addLineBreaks(splitString(function)).c_str(), outputSize);
+        strncpy(output, addLineBreaks(splitString(function)).c_str(), outputSize - 1);
     }
     EXTENSION_RETURN();
 }

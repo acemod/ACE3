@@ -3,7 +3,7 @@
     <Package name="Vehicles">
         <Key ID="STR_ACE_Vehicles_On">
             <English>Speed Limiter on</English>
-            <German>Begrenzer an</German>
+            <German>Geschwindigkeitsbegrenzer an</German>
             <Spanish>Limitador de velocidad activado</Spanish>
             <Polish>Ogranicznik prędkości włączony</Polish>
             <Czech>Omezovač rychlosti zapnut</Czech>
@@ -20,7 +20,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
-            <German>Begrenzer aus</German>
+            <German>Geschwindigkeitsbegrenzer aus</German>
             <Spanish>Limitador de velocidad desactivado</Spanish>
             <Polish>Ogranicznik prędkości wyłączony</Polish>
             <Czech>Omezovač rychlosti vypnut</Czech>
@@ -51,7 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
-            <German>Begrenzer</German>
+            <German>Geschwindigkeitsbegrenzer</German>
             <Spanish>Limitador de velocidad</Spanish>
             <Polish>Ogranicznik prędkości</Polish>
             <Czech>Omezovač rychlosti</Czech>
@@ -147,6 +147,13 @@
             <French>Masque l'entrée "Éjection" du menu Action. Nécessite un redémarrage du jeu.</French>
             <Italian>Nasconde la voce Espelli dal menu azione. Richiede il riavvio del gioco.</Italian>
             <Czech>Schová akci vyskošení z vozidla z akčního menu. Vyžaduje restart hry.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Vehicles_SpeedLimiterStep">
+            <English>Speed Limiter Step</English>
+            <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
+            <Polish>Przeskok limitera prędkości</Polish>
+            <French>Pas du limiteur de vitesse</French>
+            <Japanese>設定速度の増減量</Japanese>
         </Key>
     </Package>
 </Project>

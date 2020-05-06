@@ -10,7 +10,7 @@
  * Amount of time to wait before deploying ropes <NUMBER>
  *
  * Example:
- * [_vehicle] call ace_fastroping_fnc_onDeployRopesCommon
+ * [_vehicle] call ace_fastroping_fnc_onPrepareCommon
  *
  * Public: No
  */

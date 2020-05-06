@@ -36,6 +36,12 @@ if (_menuType == 0) then {
     GVAR(keyDownSelfAction) = true;
 };
 GVAR(keyDownTime) = diag_tickTime;
+
+// Raise MenuClosed event whenever one type is replaced with another, because KeyUp code is not guaranteed.
+if (GVAR(openedMenuType) != -1) then {
+    ["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
+};
+
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];

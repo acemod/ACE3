@@ -432,6 +432,7 @@
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_description">
             <English>Type: Star Parachute Flare</English>
+            <German>Typ: Fallschirmfackel</German>
             <Polish>Typ: Gwiezdna Flara Spadochronowa</Polish>
             <Italian>Tipo: Granata a paracadute con bengala</Italian>
             <Japanese>種類: パラシュート式照明弾 (星弾)</Japanese>
@@ -443,6 +444,7 @@
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
+            <German>M583 Leuchtfackel (Weiß)</German>
             <Polish>M583 Flara oświetlająca (Biała)</Polish>
             <Italian>M583 Granata con bengala (Bianca)</Italian>
             <Japanese>M583 照明弾 (白)</Japanese>
@@ -455,6 +457,7 @@
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
+            <German>M662 Leuchtfackel (Rot)</German>
             <Polish>M662 Flara oświetlająca (Czerwona)</Polish>
             <Italian>M662 Granata con bengala (Rossa)</Italian>
             <Japanese>M662 照明弾 (赤)</Japanese>
@@ -467,6 +470,7 @@
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
+            <German>M661 Leuchtfackel (Grün)</German>
             <Polish>M661 Flara oświetlająca (Zielona)</Polish>
             <Italian>M661 Granata con bengala (Verde)</Italian>
             <Japanese>M661 照明弾 (緑)</Japanese>
@@ -479,6 +483,7 @@
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
+            <German>Typ: Infrarote Fallschirmfackel</German>
             <Polish>Typ: Spadochronowa Flara IR</Polish>
             <Italian>Tipo: Granata a paracadute con infrarosso</Italian>
             <Japanese>種類: パラシュート式赤外線照明弾</Japanese>
@@ -491,6 +496,7 @@
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
+            <German>M992 IR Leuchtfackel</German>
             <Polish>M992 Oświetlająca flara IR</Polish>
             <Italian>M992 Granata con infrarosso</Italian>
             <Japanese>M992 赤外線照明弾</Japanese>
