@@ -57,20 +57,16 @@
             <Chinese>30毫米高爆燃燒彈</Chinese>
             <French>30 mm High-Explosive Incendiary</French>
             <Polish>30mm Odłamkowo-Burzące - Zapalające</Polish>
-
             <Turkish>30mm Yüksek Patlayıcı </Turkish>
             <German>30mm Hochexplosiv/Brandladung</German>
             <Japanese>30mm 焼夷りゅう弾</Japanese>
-
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
             <English>30mm HEI</English>
             <Chinese>30毫米高爆燃燒</Chinese>
             <French>30 mm HEI</French>
             <Polish>30mm OB-Z</Polish>
-
             <Turkish>30mm HEI</Turkish>
-
             <German>30mm HEB</German>
             <Japanese>30mm HEI</Japanese>
         </Key>
@@ -79,9 +75,7 @@
             <Chinese>30毫米貧化鈾穿甲彈 </Chinese>
             <French>30 mm UA Armor Piercing</French>
             <Polish>30mm Zubożony Uran - Przebijające</Polish>
-
             <Turkish>30mm DU Zırh Delici</Turkish>
-
             <German>30mm abgereichertes panzerbrechendes Uraniumgeschoss</German>
             <Japanese>30mm DU 徹甲弾</Japanese>
         </Key>
