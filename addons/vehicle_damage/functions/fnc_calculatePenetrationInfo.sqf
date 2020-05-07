@@ -85,7 +85,7 @@ private _enabled = ([_hitpointConfig >> QGVAR(enabled), "NUMBER", 0] call CBA_fn
 private _rodMaterialStr = [_projectileConfig >> QGVAR(material), "STRING", "tungsten"] call CBA_fnc_getConfigEntry;
 private _rodMaterialParams = MATERIAL_ARRAY select (1 + MATERIAL_ARRAY find toLower _rodMaterial);
 
-if !(_enabled) exitWith { [false, 0, 0, 0, 0] }
+if !(_enabled) exitWith { [false, 0, 0, 0, 0] };
 if (_rodMaterialParams isEqualTo [0, 0, 0, 0, 0, 0]) exitWith { [] };
 
 private _tanX = 2 * (0.283 * 0.0656 * (1));

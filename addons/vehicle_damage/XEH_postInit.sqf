@@ -8,7 +8,7 @@
             TRACE_3("bailOut",_center,_crewman,_vehicle);
 
             if (isPlayer _crewman) exitWith {};
-            if (!alive _crewman || { !( [_crewman] call EFUNC(common,isAwake))} } exitWith {};
+            if (!alive _crewman || { !( [_crewman] call EFUNC(common,isAwake))} ) exitWith {};
 
             unassignVehicle _crewman;
             _crewman leaveVehicle _vehicle;
