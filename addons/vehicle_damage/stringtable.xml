@@ -4,22 +4,22 @@
         <Key ID="STR_ACE_vehicle_damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
         </Key>
-        <Key ID="STR_ace_vehicle_damage_setting_enable">
+        <Key ID="STR_ACE_vehicle_damage_setting_enable">
             <English>Enable</English>
         </Key>
-        <Key ID="STR_ace_vehicle_damage_setting_description">
+        <Key ID="STR_ACE_vehicle_damage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
         </Key>
-        <Key ID="STR_ace_vehicle_damage_carDamage_setting_description">
+        <Key ID="STR_ACE_vehicle_damage_carDamage_setting_description">
             <English>Enable/Disable advanced car damage (Experimental)</English>
         </Key>
-        <Key ID="STR_ace_vehicle_damage_carDamage_setting_enable">
+        <Key ID="STR_ACE_vehicle_damage_carDamage_setting_enable">
             <English>Enable/Disable advanced Car Damage</English>
         </Key>
-        <Key ID="STR_ace_vehicle_damage_advancedPenSimulation_setting_description">
+        <Key ID="STR_ACE_vehicle_damage_advancedPenSimulation_setting_description">
             <English>Calculates whether or not round penetrated using custom RHA values for each hitpoint</English>
         </Key>
-        <Key ID="STR_ace_vehicle_damage_advancedPenSimulation_setting_enable">
+        <Key ID="STR_ACE_vehicle_damage_advancedPenSimulation_setting_enable">
             <English>Enable/Disable advanced penetration simulation</English>
         </Key>
     </Package>
