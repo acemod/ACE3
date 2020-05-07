@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [vehicle player, 234, "HitHull"] call ace_vehicleDamage_fnc_knockOut
+ * [vehicle player, 234, "HitHull"] call ace_vehicle_damage_fnc_knockOut
  *
  *
  * Public: No

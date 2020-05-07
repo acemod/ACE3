@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [myVehicle, 0.6, 10] call ace_vehicleDamage_fnc_injureOccupants;
+ * [myVehicle, 0.6, 10] call ace_vehicle_damage_fnc_injureOccupants;
  *
  *
  * Public: No

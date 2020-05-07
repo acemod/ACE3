@@ -1,5 +1,5 @@
-#define COMPONENT vehicleDamage
-#define COMPONENT_BEAUTIFIED VehicleDamage
+#define COMPONENT vehicle_damage
+#define COMPONENT_BEAUTIFIED Vehicle Damage
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

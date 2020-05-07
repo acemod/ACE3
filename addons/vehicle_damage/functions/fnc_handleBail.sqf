@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [tank1, false, true] call ace_vehicleDamage_fnc_determineGenericSelectionType
+ * [tank1, false, true] call ace_vehicle_damage_fnc_determineGenericSelectionType
  *
  *
  * Public: No

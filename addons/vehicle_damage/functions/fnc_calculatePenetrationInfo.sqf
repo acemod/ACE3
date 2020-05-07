@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [myVehicle, projectile, 5, 0.663] call ace_vehicleDamage_fnc_calculatePenetrationInfo;
+ * [myVehicle, projectile, 5, 0.663] call ace_vehicle_damage_fnc_calculatePenetrationInfo;
  *
  *
  * Public: No

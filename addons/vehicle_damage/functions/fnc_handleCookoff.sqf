@@ -11,7 +11,7 @@
  * If cooked off
  *
  * Example:
- * [tank2, 0.1] call ace_vehicleDamage_fnc_handleCookoff;
+ * [tank2, 0.1] call ace_vehicle_damage_fnc_handleCookoff;
  *
  *
  * Public: No

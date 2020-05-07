@@ -11,7 +11,7 @@
  * Detonated <BOOL>
  *
  * Example:
- * [tank2, 0.5] call ace_vehicleDamage_fnc_handleDetonation;
+ * [tank2, 0.5] call ace_vehicle_damage_fnc_handleDetonation;
  *
  *
  * Public: No

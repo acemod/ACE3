@@ -597,7 +597,7 @@ class CfgAmmo {
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={880, 895, 900};
         ACE_barrelLengths[]={508.0, 685.8, 711.2};
-        EGVAR(vehicleDamage,incendiary) = 1.0;
+        EGVAR(vehicle_damage,incendiary) = 1.0;
     };
     class B_127x33_Ball: BulletBase {
         tracerScale = 1.3; //1.2;
@@ -649,7 +649,7 @@ class CfgAmmo {
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={900};
         ACE_barrelLengths[]={736.6};
-        EGVAR(vehicleDamage,incendiary) = 1.0;
+        EGVAR(vehicle_damage,incendiary) = 1.0;
     };
     class ACE_127x99_Ball_AMAX : B_127x99_Ball {
         timeToLive=10;

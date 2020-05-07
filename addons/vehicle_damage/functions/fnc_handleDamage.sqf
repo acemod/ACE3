@@ -13,7 +13,7 @@
  * 0
  *
  * Example:
- * [myVehicle, projectile, 5, 0.663] call ace_vehicleDamage_fnc_handleDamage;
+ * [myVehicle, projectile, 5, 0.663] call ace_vehicle_damage_fnc_handleDamage;
  *
  *
  * Public: No

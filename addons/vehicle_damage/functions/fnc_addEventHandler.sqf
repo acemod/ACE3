@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [tank2] call ace_vehicleDamage_fnc_addEventHandler;
+ * [tank2] call ace_vehicle_damage_fnc_addEventHandler;
  *
  * Public: No
  */
