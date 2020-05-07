@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Fire">
+    <Package name="fire">
         <Key ID="STR_ACE_fire_category_displayName">
             <English>ACE Fire</English>
         </Key>
