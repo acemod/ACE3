@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [vehicle player, false] call ace_vehicle_fnc_startEngine
+ * [vehicle player, false] call ace_vehicles_fnc_startEngine
  *
  * Public: No
  */

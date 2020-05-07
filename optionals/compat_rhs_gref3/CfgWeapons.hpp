@@ -98,6 +98,11 @@ class CfgWeapons {
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
+            // One WeaponSlot with a positive value for iconScale forces game to use icon overlay method.
+            // Required, because the inventory icon has no accessory variants.
+            class MuzzleSlot {
+                iconScale = 0.1;
+            };
             mass = 740;
         };
         displayName = ECSTRING(csw,dshk_gun);

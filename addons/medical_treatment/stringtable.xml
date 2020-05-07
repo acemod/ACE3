@@ -49,41 +49,17 @@
             <Polish>Włącza opcje sprawdzania Pulsu, Ciśnienia Tętniczego Krwi i Reakcje Na Ból, zamiast bardziej ogólnej akcji Diagnozuj.\n Po wyłączeniu tej opcji akcja RKO będzie wyświetlana tylko wtedy, gdy jej wykonanie będzie odpowiednie.\n Opcja, która włącza to ustawienie jest potrzebna do ustalenia, czy osoba jest nieprzytomna lub ma zatrzymanie krążenia.</Polish>
             <German>Ermöglicht die 'Überprüfe Puls', 'Überprüfe Blutdruck' und 'Überprüfe Reaktionen' Behandlungsaktionen anstatt der einfachen 'Diagnose' Behandlungsaktion.\nWenn diese Einstellung nicht aktiviert ist, wird die "HLW"-Aktion nur angezeigt, wenn die Anwendung von HLW angemessen ist.\nDie Aktionen, die das Aktivieren dieser Einstellung ermöglicht, werden benötigt um zu bestimmen, ob eine Person bewusstlos ist oder einen Herzstillstand erleidet.</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
-            <English>Advanced Bandages</English>
-            <German>Erweiterte Bandagen</German>
-            <Japanese>アドバンスド包帯</Japanese>
-            <Russian>Расширенная Перевязка</Russian>
-            <French>Pansements avancés</French>
-            <Portuguese>Ataduras Avançadas</Portuguese>
-            <Chinese>進階包紮</Chinese>
-            <Italian>Bendaggi avanzati</Italian>
-            <Czech>Pokročilé obvazy</Czech>
-            <Polish>Zaawansowane Bandaże</Polish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
-            <English>Enables treatment actions for different bandage types instead of the generic Bandage action.</English>
-            <German>Ermöglicht Behandlungsaktionen für verschiedene Bandagentypen anstelle der gewöhnlichen Bandageaktionen.</German>
-            <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
-            <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
-            <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
-            <Portuguese>Ativa o uso de tipos diferentes de ataduras ao invés de apenas a atadura básica.</Portuguese>
-            <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
-            <Italian>Permette azioni di trattamento per diversi tipi di bendaggio al posto del bendaggio generico.</Italian>
-            <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
-            <Polish>Umożliwia wybranie konkretnego rodzaju bandaża zamiast ogólnej akcji bandażowania.</Polish>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
-            <German>Erweiterte Medikamente</German>
+            <German>Erweiterte Medikation</German>
             <Japanese>アドバンスド医薬品</Japanese>
             <Russian>Расширенные Лекарства</Russian>
             <French>Médication avancée</French>
             <Portuguese>Medicação Avançada</Portuguese>
             <Chinese>進階醫療用品</Chinese>
             <Czech>Pokročilé léky</Czech>
-            <Polish>Zaawansowane leki</Polish>
             <Italian>Medicazione avanzata</Italian>
+            <Polish>Zaawansowane leki</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
@@ -97,36 +73,42 @@
             <German>Ermöglicht erweiterte, mehr tiefgründigere Anwendung von Medikationen. Ebenso ermöglicht es die Benutzung von Adenosin.</German>
             <Polish>Pozwala na zaawansowane uzycie leków. Pozwala na używanie Adenozyny.</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_WoundReopening_DisplayName">
-            <English>Wound Reopening</English>
-            <Japanese>創傷再開放</Japanese>
-            <French>Réouverture des plaies</French>
-            <Russian>Повторное открытие ран</Russian>
-            <Portuguese>Reabrir Feridas</Portuguese>
-            <Chinese>傷口再度裂開</Chinese>
-            <Italian>Riapertura delle ferite</Italian>
-            <Czech>Znovuotevření ran</Czech>
-            <Polish>Ponowne Otwarcie Ran</Polish>
-            <German>Wunden Wiederöffnung</German>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
+            <English>Advanced Bandages</English>
+            <German>Erweiterte Bandagen</German>
+            <Japanese>アドバンスド包帯</Japanese>
+            <Russian>Расширенная Перевязка</Russian>
+            <French>Pansements avancés</French>
+            <Portuguese>Ataduras Avançadas</Portuguese>
+            <Chinese>進階包紮</Chinese>
+            <Italian>Bendaggi avanzati</Italian>
+            <Czech>Pokročilé obvazy</Czech>
+            <Polish>Zaawansowane Bandaże</Polish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_WoundReopening_Description">
-            <English>Enables the reopening of bandaged wounds. Requires Advanced Bandages to be enabled.</English>
-            <Japanese>有効化すると治療をした創傷を再開放します。アドバンスド包帯を有効化している必要があります。</Japanese>
-            <French>Permet la réouverture des plaies pansées.\nNécessite que l'option "pansements avancés" soit activée.</French>
-            <Russian>Разрешает повторное открытие перевязанных ран. Требуются опция «Расширенная Перевязка».</Russian>
-            <Portuguese>Permite que ferimentos atados possam reabrir. Requer Ataduras Avançadas para funcionar.</Portuguese>
-            <Chinese>啟用包紮過的傷口是否會再度裂開。需要啟用「進階包紮」之功能。</Chinese>
-            <Czech>Povoluje znovuotevírání obvázaných zranění. Vyžaduje zapnuté Pokročilé obvazy.</Czech>
-            <Polish>Umożliwia ponowne otwarcie się zabandażowanych ran. Wymaga włączenia opcji Zaawansowane Bandaże.</Polish>
-            <Italian>Permette la riapertura delle ferite fasciate. Richiede l'abilitazione di Bende Avanzate.</Italian>
-            <German>Ermöglicht das Wiederöffnen von bandagierten Wunden. Benötigt, dass 'Erweiterte Bandagen' aktiviert ist.</German>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
+            <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
+            <German>Ermöglicht Behandlungsaktionen für verschiedene Bandagentypen anstelle der gewöhnlichen Bandageaktionen.</German>
+            <Japanese>有効化すると通常の包帯動作に代わり、様々な種類がある包帯で治療ができます。</Japanese>
+            <French>Active différents types de bandages, à choisir judicieusement en fonction des plaies.</French>
+            <Russian>Включает действия для разных типов повязок, вместо общего действия «Перевязка».</Russian>
+            <Portuguese>Ativa o uso de tipos diferentes de ataduras ao invés de apenas a atadura básica.</Portuguese>
+            <Chinese>啟用不同繃帶的可用行為而非一般包紮動作。</Chinese>
+            <Italian>Permette azioni di trattamento per diversi tipi di bendaggio al posto del bendaggio generico.</Italian>
+            <Czech>Povoluje specifické obvazy s různými vlastnostmi namísto jednoho univerzálního obvazu.</Czech>
+            <Polish>Umożliwia wybranie konkretnego rodzaju bandaża zamiast ogólnej akcji bandażowania.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_EnabledCanReopen">
+            <English>Enabled &amp; Can Reopen</English>
+            <French>Activé &amp; peuvent se rouvrir</French>
+            <Japanese>有効 &amp; 再開放</Japanese>
+            <Czech>Zapnuto &amp; Úrazy se mohou znovu otevřít</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>
             <Chinese>包紮即痊癒</Chinese>
             <French>Guérir les blessures pansées</French>
-            <Czech>Vyčistit úraz po obvázání</Czech>
+            <Czech>Odebrat úraz po obvázání</Czech>
             <Polish>Usuń uraz po zabandażowaniu</Polish>
             <Italian>Rimozione ferite bendate</Italian>
             <German>Entferne Trauma nach Bandagierung.</German>
@@ -139,6 +121,7 @@
             <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
             <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
             <Chinese>控制說當傷口處理好的時候是否直接痊癒。</Chinese>
+            <Czech>Nastavuje zda jsou plně obvázané části těla vyléčena.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -356,6 +339,8 @@
             <Chinese>自我使用急救包</Chinese>
             <French>Utilisation de la trousse sanitaire sur soi-même</French>
             <Polish>Używanie apteczki osobistej na sobie</Polish>
+            <Japanese>応急処置キットの自己使用</Japanese>
+            <Czech>Samo-použití osobní lékárničky (PAK)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
@@ -364,6 +349,8 @@
             <Chinese>啟用個人急救包能對自己使用。</Chinese>
             <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
             <Polish>Pozwala na użycie apteczki osobistej na sobie</Polish>
+            <Japanese>応急処置キットを使って、自分を治療できるようにします。</Japanese>
+            <Czech>Umožňuje použít osobní lékárničku (PAK) na sama sebe.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -513,6 +500,8 @@
             <Polish>Zezwalaj na przetaczanie płynów IV</Polish>
             <French>Pose de perfusion autorisée pour</French>
             <Chinese>允許操作點滴</Chinese>
+            <Japanese>IV 輸血の制限</Japanese>
+            <Czech>Povolit IV transfuzi</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
@@ -520,6 +509,8 @@
             <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
             <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
+            <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
+            <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -2904,7 +2895,7 @@
             <Italian>Hai diagnosticato %1</Italian>
             <Portuguese>Você verificou o paciente %1</Portuguese>
             <Czech>Zkontroloval jsi %1</Czech>
-            <Japanese>自分の血圧は %1</Japanese>
+            <Japanese>血圧は %1</Japanese>
             <Korean>나의 혈압은 %1 이다</Korean>
             <Chinesesimp>你已经检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
@@ -3224,7 +3215,7 @@
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca baixa</Portuguese>
             <Czech>Nahmatal jsi slabý srdeční puls</Czech>
-            <Japanese>自分の心拍数は低い</Japanese>
+            <Japanese>心拍数は低い</Japanese>
             <Korean>약한 맥박이다</Korean>
             <Chinesesimp>心跳微弱</Chinesesimp>
             <Chinese>心跳微弱</Chinese>
@@ -3240,7 +3231,7 @@
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca normal</Portuguese>
             <Czech>Nahmatal jsi silný srdeční puls</Czech>
-            <Japanese>自分の心拍数は強い</Japanese>
+            <Japanese>心拍数は強い</Japanese>
             <Korean>강한 맥박이다</Korean>
             <Chinesesimp>心跳过快</Chinesesimp>
             <Chinese>心跳過快</Chinese>
@@ -3256,7 +3247,7 @@
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca alta</Portuguese>
             <Czech>Nahmatal jsi normální srdeční puls</Czech>
-            <Japanese>自分の心拍数は通常</Japanese>
+            <Japanese>心拍数は通常</Japanese>
             <Korean>보통 맥박이다</Korean>
             <Chinesesimp>心跳正常</Chinesesimp>
             <Chinese>心跳正常</Chinese>
@@ -3937,7 +3928,7 @@
             <Italian>Cura hitpoints completamente bendati</Italian>
             <French>Guérir les plaies entièrement bandées</French>
             <German>Heilt vollständig bandagierte Trefferpunkte</German>
-            <Japanese>包帯は体力を完全に回復する</Japanese>
+            <Japanese>包帯は体力を完全に回復させます</Japanese>
             <Korean>붕대를 감은후 체력을 회복함</Korean>
             <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
             <Chinese>完全醫療包紮的部位至痊癒</Chinese>

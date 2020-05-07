@@ -63,7 +63,7 @@
             <Hungarian>Fejlett ballisztika</Hungarian>
             <Russian>Продвинутая баллистика</Russian>
             <Italian>Balistica Avanzata</Italian>
-            <Japanese>アドバンスド バリスティックス</Japanese>
+            <Japanese>アドバンスド バリスティックスを有効化</Japanese>
             <Korean>고급 탄도학</Korean>
             <Chinese>先進彈道系統</Chinese>
             <Chinesesimp>先进弹道系统</Chinesesimp>
@@ -88,8 +88,9 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_DisplayName">
             <English>Enable Muzzle Velocity Variation</English>
+            <Spanish>Activar variación de velocidad inicial</Spanish>
             <German>Variation der Mündungsgeschwindigkeit aktivieren</German>
-            <Japanese>銃口初速の変動を有効化する</Japanese>
+            <Japanese>銃口初速の変動を有効化</Japanese>
             <Italian>Abilita Variazione Velocità Volata</Italian>
             <Korean>총구속도 변화적용</Korean>
             <Chinese>啟用槍口初速變化</Chinese>
@@ -103,6 +104,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
+            <Spanish>Simula variaciones ligeras de velocidad entre cada disparo</Spanish>
             <German>Simuliert leichte Variationen der Mündungsgeschwindigkeit zwischen jedem Schuss.</German>
             <Japanese>発射毎の銃口初速の変動をシミュレートします。</Japanese>
             <Italian>Simula lievi variazioni della velocità della volata tra un colpo e l'altro</Italian>
@@ -126,7 +128,7 @@
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция температуры для боеприпасов</Russian>
             <Italian>Abilita simulazione della temperatura delle munizioni</Italian>
-            <Japanese>弾薬温度のシミュレーションを有効化する</Japanese>
+            <Japanese>弾薬温度のシミュレーションを有効化</Japanese>
             <Korean>탄약 온도 구현 적용</Korean>
             <Chinese>啟用彈藥溫度模擬系統</Chinese>
             <Chinesesimp>启用弹药温度模拟系统</Chinesesimp>
@@ -159,7 +161,7 @@
             <Hungarian>Csőhossz-szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция длины ствола</Russian>
             <Italian>Abilita simulazione della lunghezza della canna</Italian>
-            <Japanese>銃身長のシミュレーションを有効化する</Japanese>
+            <Japanese>銃身長のシミュレーションを有効化</Japanese>
             <Korean>총열 길이 구현 적용</Korean>
             <Chinese>啟用槍管長度模擬系統</Chinese>
             <Chinesesimp>启用枪管长度模拟系统</Chinesesimp>
@@ -191,7 +193,7 @@
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
-            <Japanese>弾丸の軌跡エフェクトを有効化する</Japanese>
+            <Japanese>弾丸の軌跡エフェクトを有効化</Japanese>
             <Korean>예광탄 효과 적용</Korean>
             <Chinese>啟用曳光彈效果</Chinese>
             <Chinesesimp>启用曳光弹效果</Chinesesimp>
@@ -223,7 +225,7 @@
             <Hungarian>Szimuláció intervalluma</Hungarian>
             <Russian>Интервал симуляции</Russian>
             <Italian>Intervallo Simulazione</Italian>
-            <Japanese>シミュレーションの間隔</Japanese>
+            <Japanese>シミュレーション間隔</Japanese>
             <Korean>구현 간격</Korean>
             <Chinese>模擬間隔</Chinese>
             <Chinesesimp>模拟间隔</Chinesesimp>
@@ -239,7 +241,7 @@
             <Hungarian>Meghatározza a számítási lépések közötti időintervallumot</Hungarian>
             <Russian>Определяет временной интервал между вычислениями</Russian>
             <Italian>Definisce l'intervallo tra ogni step di calcolo</Italian>
-            <Japanese>各計算毎の間隔を定義します。</Japanese>
+            <Japanese>各シミュレーション毎の間隔を定義します。</Japanese>
             <Korean>각 계산 단위의 간격을 정의합니다</Korean>
             <Chinese>定義每個模擬計算之間的時間間隔</Chinese>
             <Chinesesimp>定义每个模拟计算之间的时间间隔</Chinesesimp>

@@ -24,7 +24,7 @@ GVAR(lastSearchTextLoadouts) = "";
 [QGVAR(loadoutUnshared), {
     params ["_contentPanelCtrl" , "_playerName", "_loadoutName"];
 
-    if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
+    if (!isNil QGVAR(currentLoadoutsTab) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
         private _dataToCheck = _playerName + _loadoutName;
 
@@ -52,7 +52,7 @@ GVAR(lastSearchTextLoadouts) = "";
     params ["_contentPanelCtrl" ,"_loadoutArgs"];
     _loadoutArgs params ["_playerName", "_loadoutName", "_loadoutData"];
 
-    if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
+    if (!isNil QGVAR(currentLoadoutsTab) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
         private _curSelData =_contentPanelCtrl lnbData [(lnbCurSelRow _contentPanelCtrl), 1];
         ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];

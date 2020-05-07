@@ -274,7 +274,7 @@ enableCamShake true;
     if (alive _oldPlayer) then {
         [FUNC(setName), [_oldPlayer]] call CBA_fnc_execNextFrame;
     };
-}] call CBA_fnc_addPlayerEventHandler;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 
 //////////////////////////////////////////////////
@@ -386,6 +386,11 @@ addMissionEventHandler ["PlayerViewChanged", {
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
+
+["isNotUnconscious", {
+    params ["_unit"];
+    lifeState _unit != "INCAPACITATED"
+}] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////
 // Set up reload mutex

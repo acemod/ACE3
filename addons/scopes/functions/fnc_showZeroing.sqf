@@ -67,7 +67,7 @@ if (GVAR(simplifiedZeroing)) then {
 // Set the time when to hide the knobs
 GVAR(timeToHide) = diag_tickTime + 3.0;
 
-if !(isNil QGVAR(fadePFH)) exitWith {};
+if (!isNil QGVAR(fadePFH)) exitWith {};
 
 // Launch a PFH to wait and fade out the knobs
 GVAR(fadePFH) = [{

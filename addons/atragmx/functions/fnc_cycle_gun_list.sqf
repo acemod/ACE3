@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_atragmx_fnc_cycle_scope_unit
+ * call ace_atragmx_fnc_cycle_gun_list
  *
  * Public: No
  */
