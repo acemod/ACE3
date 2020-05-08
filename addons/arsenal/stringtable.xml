@@ -1189,5 +1189,11 @@
             <Chinese>有效時間</Chinese>
             <Czech>Time to live</Czech>
         </Key>
+        <Key ID="STR_ACE_Arsenal_StatExplosionTime">
+            <English>Fuse Time</English>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
+            <English>Detonates on impact</English>
+        </Key>
     </Package>
 </Project>

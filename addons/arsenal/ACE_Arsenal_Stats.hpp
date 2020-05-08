@@ -115,8 +115,17 @@ class GVAR(stats) {
         stats[] = {"ammo"};
         displayName = CSTRING(statTTL);
         showText = 1;
-        textStatement= QUOTE(call FUNC(statTextStatement_smokeChemTTL));
+        textStatement = QUOTE(call FUNC(statTextStatement_smokeChemTTL));
         condition = QUOTE((configName (_this select 1)) isKindOf [ARR_2('smokeShell', configFile >> 'CfgMagazines')]);
+        tabs[] = {{}, {5}};
+    };
+    class ACE_explosionTime: statBase {
+        scope =  2;
+        priority = 3;
+        displayName = CSTRING(StatExplosionTime);
+        showText = 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_explosionTime));
+        condition = QUOTE(true);
         tabs[] = {{}, {5}};
     };
 };
