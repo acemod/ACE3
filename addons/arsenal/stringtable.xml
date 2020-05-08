@@ -1194,6 +1194,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
+            <German>Aufschlagzünder</German>
         </Key>
     </Package>
 </Project>
