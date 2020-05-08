@@ -616,7 +616,7 @@ class CfgWeapons {
         displayName = "L94A1";
     };
     class ACE_LMG_coax_ext_MG3: LMG_coax_ext {
-        displayName = "H&K MG3";
+        displayName = "Rheinmetall MG3";
     };
     class ACE_LMG_coax_DenelMG4 : LMG_coax {
         displayName = "Denel MG4";
