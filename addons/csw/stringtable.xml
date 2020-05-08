@@ -371,6 +371,7 @@
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
             <Czech>[CSW] Statická zbraň M2 se štítem</Czech>
+            <French>[CSW] Mitrailleuse statique M2 ac. bouclier</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
