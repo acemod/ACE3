@@ -106,10 +106,10 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 1.98812;
     };
     class rhs_weap_m14_socom_base: rhs_weap_m14_base {
-      ACE_barrelTwist = 304.8;
-      ACE_barrelLength = 413; //16.25 in (413 mm)
-      ACE_Overheating_dispersion = 0.75;
-      ACE_RailHeightAboveBore = 1.98812;
+        ACE_barrelTwist = 304.8;
+        ACE_barrelLength = 413; //16.25 in (413 mm)
+        ACE_Overheating_dispersion = 0.75;
+        ACE_RailHeightAboveBore = 1.98812;
     };
     class rhs_weap_m14ebrri;
     class rhs_weap_sr25: rhs_weap_m14ebrri {
