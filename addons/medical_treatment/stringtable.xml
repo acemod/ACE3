@@ -36,6 +36,7 @@
             <Italian>Diagnosi avanzata</Italian>
             <Czech>Pokročilá diagnóza</Czech>
             <Polish>Zaawansowana Diagnoza</Polish>
+            <Turkish>Gelişmiş Teşhis</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.\nWhen disabled, the CPR action will only be shown when performing CPR is appropriate.\nThe actions this setting enables are needed to determine whether a person is unconscious or in cardiac arrest.</English>
@@ -60,6 +61,7 @@
             <Czech>Pokročilé léky</Czech>
             <Italian>Medicazione avanzata</Italian>
             <Polish>Zaawansowane leki</Polish>
+            <Turkish>Gelişmiş Ilaç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
@@ -84,6 +86,7 @@
             <Italian>Bendaggi avanzati</Italian>
             <Czech>Pokročilé obvazy</Czech>
             <Polish>Zaawansowane Bandaże</Polish>
+            <Turkish>Gelişmiş Bandajlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
@@ -1476,6 +1479,7 @@
             <Korean>혈액 IV (1000ml)</Korean>
             <Chinesesimp>血液 (1000ml)</Chinesesimp>
             <Chinese>點滴 (血液 1000毫升)</Chinese>
+            <Turkish>Kan IV (1000ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Short">
             <English>Blood IV, for restoring a patients blood</English>
@@ -1524,6 +1528,7 @@
             <Korean>혈액 IV (500ml)</Korean>
             <Chinesesimp>血液 (500ml)</Chinesesimp>
             <Chinese>點滴 (血液 500毫升)</Chinese>
+            <Turkish>Kan IV (500ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_250">
             <English>Blood IV (250ml)</English>
@@ -1540,6 +1545,7 @@
             <Korean>혈액 IV (250ml)</Korean>
             <Chinesesimp>血液 (250ml)</Chinesesimp>
             <Chinese>點滴 (血液 250毫升)</Chinese>
+            <Turkish>Kan IV (250ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV">
             <English>Saline IV (1000ml)</English>
@@ -1556,6 +1562,7 @@
             <Korean>생리식염수 IV (1000ml)</Korean>
             <Chinesesimp>生理食盐水 (1000ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 1000毫升)</Chinese>
+            <Turkish>Serum IV (1000ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_Desc_Short">
             <English>Saline IV, for restoring a patients blood</English>
@@ -1604,6 +1611,7 @@
             <Korean>생리식염수 IV (500ml)</Korean>
             <Chinesesimp>生理食盐水 (500ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 500毫升)</Chinese>
+            <Turkish>Serum IV (500ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_250">
             <English>Saline IV (250ml)</English>
@@ -1620,6 +1628,7 @@
             <Korean>생리식염수 IV (250ml)</Korean>
             <Chinesesimp>生理食盐水 (250ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 250毫升)</Chinese>
+            <Turkish>Serum IV (250ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Display">
             <English>Bandage (QuikClot)</English>
