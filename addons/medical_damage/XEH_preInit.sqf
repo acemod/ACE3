@@ -21,7 +21,7 @@ addMissionEventHandler ["Loaded",{
 
     // DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandler);
 // } else {
-    INFO("Using woundsHandlerSQF");
+    // INFO("Using woundsHandlerSQF");
     DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandlerSQF);
 // };
 

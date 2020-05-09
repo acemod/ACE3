@@ -12,7 +12,7 @@
  * Succesfully unloaded person <BOOL>
  *
  * Example:
- * [bob, car, bob] call ace_common_fnc_unloadpersonLocal
+ * [bob, car, bob] call ace_common_fnc_unloadPersonLocal
  *
  * Public: No
  */

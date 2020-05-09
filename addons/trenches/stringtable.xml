@@ -7,7 +7,7 @@
             <Polish>Saperka</Polish>
             <Italian>Pala da Trincea</Italian>
             <Spanish>Pala para trincheras</Spanish>
-            <French>Outil de tranchée</French>
+            <French>Pelle tactique</French>
             <Czech>Polní lopatka</Czech>
             <Portuguese>Ferramenta de trincheira</Portuguese>
             <Russian>Саперная лопата</Russian>
@@ -23,7 +23,7 @@
             <German>Mit dem Klappspaten können Erdwälle oder Gräben ausgehoben werden. </German>
             <Italian>Pala da Trincea</Italian>
             <Spanish>Pala para trincheras</Spanish>
-            <French>Outil de tranchée</French>
+            <French>Outil permettant de creuser des tranchées.</French>
             <Czech>Polní lopatky se používají k zákopovým a jiným pracem.</Czech>
             <Portuguese>Ferramenta de trincheira</Portuguese>
             <Russian>Саперная лопата</Russian>
@@ -39,7 +39,7 @@
             <Polish>Wnęka - mała</Polish>
             <Italian>Fascia - Piccola</Italian>
             <Spanish>Trinchera pequeña</Spanish>
-            <French>Enveloppe - Petite</French>
+            <French>Tranchée individuelle</French>
             <Portuguese>Trincheira - Pequena</Portuguese>
             <Russian>Окоп - Малый</Russian>
             <Japanese>塹壕 - 小型</Japanese>
@@ -87,7 +87,7 @@
             <Polish>Wnęka - duża</Polish>
             <Italian>Fascia - Grande</Italian>
             <Spanish>Trinchera grande</Spanish>
-            <French>Enveloppe - Grande</French>
+            <French>Grande tranchée</French>
             <Portuguese>Trincheira - Grande</Portuguese>
             <Russian>Окоп - Большой</Russian>
             <Japanese>塹壕 - 大型</Japanese>
@@ -198,7 +198,7 @@
             <English>Continue Digging Trench</English>
             <Polish>Wzów kopanie wnęki</Polish>
             <Portuguese>Continuar cavando trincheira</Portuguese>
-            <French>Continuer de creuser la tranchée</French>
+            <French>Poursuivre l'excavation de la tranchée</French>
             <Russian>Продолжить копание окопа</Russian>
             <Czech>Pokračovat v kopání</Czech>
             <Japanese>塹壕を掘りつづける</Japanese>

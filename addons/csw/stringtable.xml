@@ -368,6 +368,9 @@
             <Turkish>[CSW] Static XM312 Gun</Turkish>
             <Polish>[CSW] Statyczny karabin maszynowy XM312</Polish>
         </Key>
+        <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
+            <English>[CSW] Static M2 w/ Shield</English>
+        </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
             <German>[CSW] Statische XM312 (Autonom)</German>

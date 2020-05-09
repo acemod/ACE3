@@ -12,7 +12,7 @@
  * User and Item <ARRAY>
  *
  * Example:
- * [player, cursorObject, ["bandage"]] call ace_medical_treatment_fnc_useItems
+ * [player, cursorObject, ["bandage"]] call ace_medical_treatment_fnc_useItem
  *
  * Public: No
  */
