@@ -84,6 +84,7 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
     };
     class rhs_weap_m249: rhs_weap_lmg_minimi_railed {
+        ACE_RailHeightAboveBore = 3;
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
     };
