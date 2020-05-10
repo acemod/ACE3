@@ -23,4 +23,4 @@ params ["_vehicle", "_turret"];
 [_vehicle, format ["%1_%2", QGVAR(Elevation), _turret],  0] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(Azimuth),   _turret],  0] call EFUNC(common,setVariablePublic);
 
-[localize LSTRING(HasBeenReset)] call EFUNC(common,displayTextStructured);
+[localize LSTRING(HasBeenReset)] call CBA_fnc_notify;

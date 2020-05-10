@@ -54,14 +54,14 @@ if (_weapon in _jammedWeapons) then {
         };
         if (GVAR(DisplayTextOnJam)) then {
             [{
-                [localize LSTRING(WeaponUnjammed)] call EFUNC(common,displayTextStructured);
+                [localize LSTRING(WeaponUnjammed)] call CBA_fnc_notify;
             }, [], _delay] call CBA_fnc_waitAndExecute;
         };
     } else {
         // Failure
         if (GVAR(DisplayTextOnJam)) then {
             [{
-                [localize LSTRING(WeaponUnjamFailed)] call EFUNC(common,displayTextStructured);
+                [localize LSTRING(WeaponUnjamFailed)] call CBA_fnc_notify;
             }, [], _delay] call CBA_fnc_waitAndExecute;
         };
     };

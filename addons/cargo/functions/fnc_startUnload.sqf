@@ -49,7 +49,7 @@ if (GVAR(interactionParadrop)) exitWith {
             params ["_args", "", "", "_errorCode"]; // show warning if we failed because of flight conditions
             if (_errorCode == 3) then {
                 _args params ["_item", "_target", "_player"];
-                [localize LSTRING(unlevelFlightWarning)] call EFUNC(common,displayTextStructured);
+                [localize LSTRING(unlevelFlightWarning)] call CBA_fnc_notify;
             };
         },
         localize LSTRING(UnloadingItem),
@@ -77,7 +77,7 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
         localize LSTRING(UnloadingItem),
         {
             (_this select 0) params ["_item", "_target", "_player"];
-            
+
             (alive _target)
             && {locked _target < 2}
             && {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
@@ -89,5 +89,5 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
     private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
 
-    [[LSTRING(UnloadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
+    format [LSTRING(UnloadingFailed), _displayName] call CBA_fnc_notify;
 };

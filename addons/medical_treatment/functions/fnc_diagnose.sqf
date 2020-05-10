@@ -46,4 +46,4 @@ if (alive _patient) then {
     };
 };
 
-[_messages, 3] call EFUNC(common,displayTextStructured);
+[_messages] call CBA_fnc_notify;

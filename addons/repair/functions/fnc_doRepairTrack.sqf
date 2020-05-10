@@ -45,5 +45,5 @@ deleteVehicle _track;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    [LSTRING(ReplacedTrack)] call EFUNC(common,displayTextStructured);
+    [LSTRING(ReplacedTrack)] call CBA_fnc_notify;
 };

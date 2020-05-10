@@ -18,7 +18,7 @@
 params ["_unit"];
 
 if !([_unit] call FUNC(canClimb)) exitWith {
-    [localize LSTRING(CanNotClimb)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(CanNotClimb)] call CBA_fnc_notify;
 };
 
 if !(_unit getVariable [QGVAR(isClimbInit), false]) then {

@@ -28,7 +28,7 @@ if ((count _emptyPosAGL) != 3) exitWith {
     TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
     if ((!isNull _unloader) && {_unloader == ACE_player}) then {
         //display text saying there are no safe places to exit the vehicle
-        [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
+        [localize ELSTRING(common,NoRoomToUnload)] call CBA_fnc_notify;
     };
     false
 };

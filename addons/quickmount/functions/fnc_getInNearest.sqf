@@ -38,7 +38,7 @@ if ((isNull _target) && {alive _interactionTarget}) then {
 };
 
 if (locked _target in [2,3]) exitWith {
-    [localize LSTRING(VehicleLocked)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(VehicleLocked)] call CBA_fnc_notify;
     true
 };
 
@@ -124,7 +124,7 @@ if (!isNull _target &&
 
     if (!_hasAction) then {
         TRACE_1("no empty seats",_hasAction);
-        [localize LSTRING(VehicleFull)] call EFUNC(common,displayTextStructured);
+        [localize LSTRING(VehicleFull)] call CBA_fnc_notify;
     };
 };
 

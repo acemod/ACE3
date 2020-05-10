@@ -34,7 +34,7 @@ GVAR(isSpeedLimiter) = false;
 ["ACE3 Vehicles", QGVAR(scrollUp), localize LSTRING(IncreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) + GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
-        [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
+        [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call CBA_fnc_notify;
         true
     };
 }, {false}, [MOUSE_SCROLL_UP, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + Mouse Wheel Scroll Up
@@ -42,7 +42,7 @@ GVAR(isSpeedLimiter) = false;
 ["ACE3 Vehicles", QGVAR(scrollDown), localize LSTRING(DecreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
         GVAR(speedLimit) = round (GVAR(speedLimit) - GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
-        [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
+        [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call CBA_fnc_notify;
         true
     };
 }, {false}, [MOUSE_SCROLL_DOWN, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + Mouse Wheel Scroll Down

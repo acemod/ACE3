@@ -56,7 +56,7 @@ private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_sink modelToW
 
 //Checks (too close to center or can't attach)
 if (_bestPosASL isEqualTo []) exitWith {
-    [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Failed)] call CBA_fnc_notify;
 };
 
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)

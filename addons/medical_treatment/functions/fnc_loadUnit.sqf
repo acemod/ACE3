@@ -21,7 +21,7 @@ params ["_medic", "_patient", ["_vehicle", objNull]];
 TRACE_3("loadUnit",_medic,_patient,_vehicle);
 
 if (_patient call EFUNC(common,isAwake)) exitWith {
-    [[LSTRING(CanNotLoad), _patient call EFUNC(common,getName)]] call EFUNC(common,displayTextStructured);
+    format [LSTRING(CanNotLoad), _patient call EFUNC(common,getName)] call CBA_fnc_notify;
 };
 
 if (_patient call EFUNC(medical_status,isBeingCarried)) then {
@@ -44,7 +44,7 @@ if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
     TRACE_2("success",_unit,_vehicle);
     private _patientName = [_unit, false, true] call EFUNC(common,getName);
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
-    [[LSTRING(LoadedInto), _patientName, _vehicleName], 3] call EFUNC(common,displayTextStructured);
+    format [LSTRING(LoadedInto), _patientName, _vehicleName] call CBA_fnc_notify;
 }, [_patient, _vehicle], 3, {
     params ["_unit", "_emptyPos"];
     WARNING_3("loadPerson failed to load %1[local %2] -> %3 ",_unit,local _unit,_vehicle);

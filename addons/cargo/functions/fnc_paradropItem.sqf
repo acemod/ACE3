@@ -96,14 +96,10 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
 }, 1, [_itemObject]] call CBA_fnc_addPerFrameHandler;
 
 if (_showHint) then {
-    [
-        [
-            LSTRING(UnloadedItem),
-            getText (configFile >> "CfgVehicles" >> typeOf _itemObject >> "displayName"),
-            getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
-        ],
-        3
-    ] call EFUNC(common,displayTextStructured);
+    format [LSTRING(UnloadedItem),
+        getText (configFile >> "CfgVehicles" >> typeOf _itemObject >> "displayName"),
+        getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
+    ] call CBA_fnc_notify;
 };
 
 // Invoke listenable event

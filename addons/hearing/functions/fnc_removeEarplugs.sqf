@@ -21,7 +21,7 @@ params ["_player", ["_displayHint", false, [false]]];
 if (!GVAR(EnableCombatDeafness)) exitWith {};
 
 if !(_player canAdd "ACE_EarPlugs") exitWith { // inventory full
-    [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Inventory_Full)] call CBA_fnc_notify;
 };
 
 // Plugs already in and removing them.
@@ -30,7 +30,7 @@ _player addItem "ACE_EarPlugs";
 _player setVariable ["ACE_hasEarPlugsIn", false, true];
 
 if (_displayHint) then {
-    [localize LSTRING(EarPlugs_Are_Off)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(EarPlugs_Are_Off)] call CBA_fnc_notify;
 };
 
 //Force an immediate fast volume update:

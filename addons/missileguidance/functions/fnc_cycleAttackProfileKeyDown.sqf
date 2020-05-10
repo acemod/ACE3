@@ -95,5 +95,5 @@ playSound "ACE_Sound_Click";
 
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "showHintOnCycle")) == 1) then {
     private _localizedName = getText (configFile >> QGVAR(AttackProfiles) >> _nextFireMode >> "name");
-    [_localizedName] call EFUNC(common,displayTextStructured);
+    [_localizedName] call CBA_fnc_notify;
 };

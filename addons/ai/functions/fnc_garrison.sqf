@@ -30,12 +30,12 @@ private _currentUnitMoveList = missionNameSpace getVariable [QGVAR(garrison_unit
 
 if (_startingPos isEqualTo [0,0,0]) exitWith {
     TRACE_1("fnc_garrison: StartingPos error",_startingPos);
-    [LSTRING(GarrisonInvalidPosition)] call EFUNC(common,displayTextStructured);
+    [LSTRING(GarrisonInvalidPosition)] call CBA_fnc_notify;
 };
 
 if (count _unitsArray == 0 || {isNull (_unitsArray select 0)}) exitWith {
     TRACE_1("fnc_garrison: Units error",_unitsArray);
-    [LSTRING(GarrisonNoUnits)] call EFUNC(common,displayTextStructured);
+    [LSTRING(GarrisonNoUnits)] call CBA_fnc_notify;
 };
 
 private _buildings = nearestObjects [_startingPos, _buildingTypes, ([_fillingRadius, 50] select (_fillingRadius < 50))];
@@ -45,7 +45,7 @@ if (_fillingRadius >= 50) then {
 
 if (count _buildings == 0) exitWith {
     TRACE_1("fnc_garrison: Building error",_buildings);
-    [LSTRING(GarrisonNoBuilding)] call EFUNC(common,displayTextStructured);
+    [LSTRING(GarrisonNoBuilding)] call CBA_fnc_notify;
 };
 
 private _buildingsIndex = [];
@@ -91,7 +91,7 @@ private _count = 0;
 {_count = _count + count _x} foreach _buildingsIndex;
 if ( (count _unitsArray) - _count > 0) then {
     TRACE_4("fnc_garrison: Not enough spots to place all units",_unitsArray,count _unitsArray,_count,((count _unitsArray) - _count > 0));
-    [LSTRING(GarrisonNotEnoughPos)] call EFUNC(common,displayTextStructured);
+    [LSTRING(GarrisonNotEnoughPos)] call CBA_fnc_notify;
 };
 
 private _placedUnits = [];

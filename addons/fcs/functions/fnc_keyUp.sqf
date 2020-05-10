@@ -123,5 +123,5 @@ if (_playSound) then {
 };
 
 if (_showHint) then {
-    [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call EFUNC(common,displayTextStructured);
+    [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call CBA_fnc_notify;
 };

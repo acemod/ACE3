@@ -43,7 +43,7 @@
             params [ARR_4("_player","_damageBlocked","_moveBackCode","_moveBackParams")]; \
             [ARR_2(_player,_moveBackParams)] call _moveBackCode; \
             if (_damageBlocked) then {_player allowDamage true}; \
-            localize "str_mis_state_failed" call EFUNC(common,displayTextStructured); \
+            localize "str_mis_state_failed" call CBA_fnc_notify; \
         } \
     )] call CBA_fnc_waitUntilAndExecute;
 

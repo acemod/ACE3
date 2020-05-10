@@ -38,7 +38,7 @@ playSound3D [
 // display message
 if ((_target getVariable [QGVAR(dogtagTaken), objNull]) == _target) then {
     [{
-        [_this, 2.5] call EFUNC(common,displayTextStructured);
+        [_this] call CBA_fnc_notify;
     }, localize LSTRING(dogtagAlreadyTaken), DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;
 } else {
     _target setVariable [QGVAR(dogtagTaken), _target, true];

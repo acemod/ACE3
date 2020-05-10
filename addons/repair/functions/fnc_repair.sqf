@@ -39,7 +39,7 @@ if ((isEngineOn _target) && {GVAR(autoShutOffEngineWhenStartingRepair)}) then {
     [QEGVAR(common,engineOn), [_target, false], _target] call CBA_fnc_targetEvent;
 };
 if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWith {
-    [LSTRING(shutOffEngineWarning), 1.5, _caller] call EFUNC(common,displayTextStructured);
+    [LSTRING(shutOffEngineWarning)] call CBA_fnc_notify;
     false
 };
 

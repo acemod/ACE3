@@ -32,6 +32,6 @@ if (_unit == ACE_player) then {
         _message = format [localize LSTRING(JoinedTeam), _team];
     };
     if (_displayHint) then {
-        [_message] call EFUNC(common,displayTextStructured);
+        [_message] call CBA_fnc_notify;
     };
 };

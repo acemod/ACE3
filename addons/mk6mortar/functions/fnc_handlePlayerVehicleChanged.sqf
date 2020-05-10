@@ -50,7 +50,7 @@ if (_lastFireMode != -1) then {
         if (shownArtilleryComputer && {!GVAR(allowComputerRangefinder)}) then {
             //Don't like this solution, but it works
             closeDialog 0;
-            [parseText "Computer Disabled"] call EFUNC(common,displayTextStructured);
+            ["Computer Disabled"] call CBA_fnc_notify;
         };
 
         private _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];

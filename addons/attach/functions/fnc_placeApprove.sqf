@@ -81,7 +81,7 @@ private _closeInDistance = (_closeInMax + _closeInMin) / 2;
 //Checks (too close to center or can't attach)
 if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
-    [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Failed)] call CBA_fnc_notify;
 };
 
 //Move it out slightly, for visability sake (better to look a little funny than be embedded//sunk in the hull and be useless)
@@ -101,4 +101,4 @@ private _attachList = _attachToVehicle getVariable [QGVAR(attached), []];
 _attachList pushBack [_attachedObject, _itemClassname];
 _attachToVehicle setVariable [QGVAR(attached), _attachList, true];
 
-[_onAttachText, 2] call EFUNC(common,displayTextStructured);
+[_onAttachText] call CBA_fnc_notify;

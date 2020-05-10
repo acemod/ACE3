@@ -25,7 +25,7 @@ if (!GETVAR(_target,GVAR(ignoreWeightDrag),false) && {
     _weight > GETMVAR(ACE_maxWeightDrag,1E11)
 }) exitWith {
     // exit if object weight is over global var value
-    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(UnableToDrag)] call CBA_fnc_notify;
 };
 
 // add a primary weapon if the unit has none.

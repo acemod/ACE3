@@ -79,6 +79,6 @@ if (hasInterface) then {
     [QGVAR(zeusCreated), {
         params ["_zeus"];
         GVAR(zeus) = _zeus;
-        [localize "str_a3_cfgvehicles_moduletasksetstate_f_arguments_state_values_created_0"] call EFUNC(common,displayTextStructured);
+        [localize "str_a3_cfgvehicles_moduletasksetstate_f_arguments_state_values_created_0"] call CBA_fnc_notify;
     }] call CBA_fnc_addEventHandler;
 };

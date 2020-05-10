@@ -20,7 +20,7 @@ params ["_unit", "_state"];
 _unit setVariable [QGVAR(isUsingHeadphones), _state];
 
 if (_state) then {
-    [localize LSTRING(HeadphonesConnected)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(HeadphonesConnected)] call CBA_fnc_notify;
 } else {
-    [localize LSTRING(HeadphonesDisconnected)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(HeadphonesDisconnected)] call CBA_fnc_notify;
 };

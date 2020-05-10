@@ -20,7 +20,7 @@
 if (shownArtilleryComputer && {GVAR(disableArtilleryComputer)}) then {
     // Still Don't like this solution, but it works
     closeDialog 0;
-    [localize LSTRING(disableArtilleryComputer_displayName)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(disableArtilleryComputer_displayName)] call CBA_fnc_notify;
 };
 
 // Restart display if null (not just at start, this will happen periodicly)

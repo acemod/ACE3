@@ -38,5 +38,5 @@ TRACE_2("new wheel created",_newWheel,damage _newWheel);
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    [localize LSTRING(RemovedWheel)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(RemovedWheel)] call CBA_fnc_notify;
 };

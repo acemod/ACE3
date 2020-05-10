@@ -36,7 +36,7 @@ if (_position isEqualTo []) then {_position = getPosATL _unit};
 
 _position set [2, 0];
 
-[localize LSTRING(Deploy)] call EFUNC(common,displayTextStructured);
+[localize LSTRING(Deploy)] call CBA_fnc_notify;
 
 [{
     params ["_rallypoint", "_unit", "_position"];
@@ -48,5 +48,5 @@ _position set [2, 0];
 
     ["ace_rallypointMoved", [_rallypoint, _side, _position]] call CBA_fnc_globalEvent;
 
-    [localize LSTRING(Deployed)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Deployed)] call CBA_fnc_notify;
 }, [_rallypoint, _unit, _position], 5] call CBA_fnc_waitAndExecute;

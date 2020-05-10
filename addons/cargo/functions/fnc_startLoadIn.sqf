@@ -42,7 +42,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
         GVAR(loadTimeCoefficient) * _size,
         [_object, _vehicle],
         {
-            TRACE_1("load finish",_this); 
+            TRACE_1("load finish",_this);
             [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
             ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
         },
@@ -62,7 +62,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
 } else {
     private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
 
-    [[LSTRING(LoadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
+    format [LSTRING(LoadingFailed), _displayName] call CBA_fnc_notify;
 };
 
 _return

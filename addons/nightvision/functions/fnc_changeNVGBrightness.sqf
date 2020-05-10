@@ -27,7 +27,7 @@ _brightness = ((_brightness + _changeInBrightness) min 0) max -6;
 _player setVariable [QGVAR(NVGBrightness), _brightness, false];
 
 // Display default setting as 0
-[format [LLSTRING(NVGBrightness), _brightness - _defaultBrightness]] call EFUNC(common,displayTextStructured);
+format [LLSTRING(NVGBrightness), _brightness - _defaultBrightness] call CBA_fnc_notify;
 playSound "ACE_Sound_Click";
 
 // Handle brightness only if effects are disabled

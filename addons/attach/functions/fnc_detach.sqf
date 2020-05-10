@@ -47,7 +47,7 @@ private _isChemlight = _attachedObject isKindOf "Chemlight_base";
 
 // Exit if can't add the item
 if (!(_unit canAdd _itemName) && {!_isChemlight}) exitWith {
-    [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Inventory_Full)] call CBA_fnc_notify;
 };
 
 // Add item to inventory (unless it's a chemlight)
@@ -83,4 +83,4 @@ if (_itemDisplayName == "") then {
     _itemDisplayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
 };
 
-[format [localize LSTRING(Item_Detached), _itemDisplayName], 2] call EFUNC(common,displayTextStructured);
+[format [localize LSTRING(Item_Detached), _itemDisplayName]] call CBA_fnc_notify;

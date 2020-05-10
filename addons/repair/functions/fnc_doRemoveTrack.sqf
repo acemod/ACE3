@@ -38,5 +38,5 @@ TRACE_2("new track created",_newTrack,damage _newTrack);
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    [localize LSTRING(RemovedTrack)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(RemovedTrack)] call CBA_fnc_notify;
 };

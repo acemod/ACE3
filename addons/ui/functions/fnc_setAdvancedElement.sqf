@@ -25,7 +25,7 @@ if (isNil "_cachedElement") exitWith {TRACE_1("nil element",_this)};
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
     TRACE_1("not allowed",_this);
-    [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured);
+    [LSTRING(Disallowed)] call CBA_fnc_notify;
     false
 };
 
@@ -46,7 +46,7 @@ if (
     if (!call (_x select 0)) exitWith {
         // Display and print info which component forced the element except for default vehicle check
         if (_showHint) then {
-            [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
+            [LSTRING(Disabled)] call CBA_fnc_notify;
             INFO_2("Attempted modification of a forced User Interface element '%1' by '%2'.",_element,_x select 1);
         };
         _show = false;
@@ -59,7 +59,7 @@ if (!_force) then {
     if (!isNil "_setElement") then {
         _setElement params ["_sourceSet", "_showSet"];
         if (_showHint) then {
-            [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
+            [LSTRING(Disabled)] call CBA_fnc_notify;
             INFO_2("Attempted modification of a forced User Interface element '%1' by '%2'.",_element,_sourceSet);
         };
         _show = _showSet;

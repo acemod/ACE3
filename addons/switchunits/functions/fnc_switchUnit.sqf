@@ -34,7 +34,7 @@ if (GVAR(EnableSafeZone)) then {
 
 // exitWith doesn't exit past the "if(EnableSafeZone)" block
 if (_leave) exitWith {
-    [localize LSTRING(TooCloseToEnemy)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(TooCloseToEnemy)] call CBA_fnc_notify;
 };
 
 // should switch locality
@@ -46,7 +46,7 @@ if (_leave) exitWith {
     params ["_args", "_pfhId"];
     _args params ["_unit", "_oldUnit"];
 
-    [localize LSTRING(TryingToSwitch)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(TryingToSwitch)] call CBA_fnc_notify;
 
     if (local _unit) exitWith {
         _oldUnit setVariable [QGVAR(IsPlayerControlled), false, true];
@@ -75,7 +75,7 @@ if (_leave) exitWith {
             ["ace_setOwner", [_oldUnit, _oldOwner]] call CBA_fnc_serverEvent;
         };
 
-        [localize LSTRING(SwitchedUnit)] call EFUNC(common,displayTextStructured);
+        [localize LSTRING(SwitchedUnit)] call CBA_fnc_notify;
 
         [_pfhId] call CBA_fnc_removePerFrameHandler;
     };

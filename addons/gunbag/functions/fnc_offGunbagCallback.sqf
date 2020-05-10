@@ -23,7 +23,7 @@ private _gunbag = backpackContainer _target;
 private _state = _gunbag getVariable [QGVAR(gunbagWeapon), []];
 
 if (_state isEqualTo []) exitWith {
-    [localize LSTRING(empty)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(empty)] call CBA_fnc_notify;
 };
 
 _state params ["_weapon", "_items", "_magazines"];

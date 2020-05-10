@@ -87,7 +87,7 @@ TRACE_2("start",_unit,_nozzle);
         DROP_NOZZLE
         UNHOLSTER_WEAPON
         END_PFH
-        [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+        [LSTRING(Hint_TooFar)] call CBA_fnc_notify;
     };
 
     private _hintLMB = "";

@@ -55,6 +55,6 @@ if (_showPrompt) then {
             ] select (_newViewDistance <= _viewDistanceLimit);
             _text = _text + format ["<br/><t align='center'>%1 %2%3</t>", localize LSTRING(objectinfotext), _objectViewDistanceCoeff * 100, "%"];
         };
-        [parseText _text, 2] call EFUNC(common,displayTextStructured);
+        _text call CBA_fnc_notify;
     };
 };

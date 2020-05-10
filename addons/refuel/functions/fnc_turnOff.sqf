@@ -20,5 +20,5 @@ params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
 _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
 _nozzle setVariable [QGVAR(isRefueling), false, true];
-[LSTRING(Hint_Stopped), 1.5, _unit] call EFUNC(common,displayTextStructured);
+[LSTRING(Hint_Stopped)] call CBA_fnc_notify;
 [QGVAR(stopped), [_nozzle getVariable QGVAR(source), _nozzle getVariable QGVAR(sink)]] call CBA_fnc_localEvent;

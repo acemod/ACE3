@@ -26,7 +26,7 @@ private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 private _tourniquets = GET_TOURNIQUETS(_patient);
 
 if (_tourniquets select _partIndex == 0) exitWith {
-    [LSTRING(noTourniquetOnBodyPart), 1.5] call EFUNC(common,displayTextStructured);
+    [LSTRING(noTourniquetOnBodyPart)] call CBA_fnc_notify;
 };
 
 _tourniquets set [_partIndex, 0];

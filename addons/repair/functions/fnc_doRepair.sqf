@@ -72,5 +72,5 @@ if (GVAR(DisplayTextOnRepair)) then {
     ([_hitPointClassname, _textLocalized, _textDefault] call FUNC(getHitPointString)) params ["_text"];
 
     // Display text
-    [_text] call EFUNC(common,displayTextStructured);
+    [_text] call CBA_fnc_notify;
 };

@@ -50,7 +50,7 @@ if (_maxFuel == 0) then {
     private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
     private _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > (_hoseLength - 2);
     if (_tooFar && {!(_nozzle getVariable [QGVAR(jerryCan), false])}) exitWith {
-        [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+        [LSTRING(Hint_TooFar)] call CBA_fnc_notify;
 
         [objNull, _nozzle] call FUNC(dropNozzle);
         _nozzle setVariable [QGVAR(isConnected), false, true];
@@ -65,7 +65,7 @@ if (_maxFuel == 0) then {
     if (_fueling) then {
         private _fuelInSource = [_source] call FUNC(getFuel);
         if (_fuelInSource == 0) exitWith {
-            [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
+            [LSTRING(Hint_SourceEmpty)] call CBA_fnc_notify;
             _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
             _nozzle setVariable [QGVAR(isRefueling), false, true];
         };
@@ -82,14 +82,14 @@ if (_maxFuel == 0) then {
         if (_fuelInSource < 0 && {_fuelInSource > REFUEL_INFINITE_FUEL}) then {
             _fuelInSource = 0;
             _finished = true;
-            [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
+            [LSTRING(Hint_SourceEmpty)] call CBA_fnc_notify;
         };
 
         private _fuelInSink = (_unit getVariable [QGVAR(tempFuel), _startFuel])  + ( _rateTime / _maxFuel);
         if (_fuelInSink > 1) then {
             _fuelInSink = 1;
             _finished = true;
-            [LSTRING(Hint_Completed), 2, _unit] call EFUNC(common,displayTextStructured);
+            [LSTRING(Hint_Completed)] call CBA_fnc_notify;
         };
         _unit setVariable [QGVAR(tempFuel), _fuelInSink];
 

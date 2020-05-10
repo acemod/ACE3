@@ -24,7 +24,7 @@ params ["_medic", "_patient", "_bodyPart", "", "", "_usedItem"];
 
 // Exit if there is a tourniquet already applied to body part
 if ([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo)) exitWith {
-    ["There is already a tourniquet on this body part!", 1.5] call EFUNC(common,displayTextStructured); // todo: localize
+    "There is already a tourniquet on this body part!" call CBA_fnc_notify; // todo: localize
 };
 
 [_patient, _usedItem] call FUNC(addToTriageCard);

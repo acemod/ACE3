@@ -26,13 +26,13 @@ _player removeItem "ACE_EarPlugs";
 _player setVariable ["ACE_hasEarPlugsIn", true, true];
 
 if (_displayHint) then {
-    [localize LSTRING(EarPlugs_Are_On)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(EarPlugs_Are_On)] call CBA_fnc_notify;
 };
 
 //Force an immediate fast volume update:
 [[true]] call FUNC(updateVolume);
 
 // No Earplugs in inventory, telling user
-//[localize LSTRING(NoPlugs)] call EFUNC(common,displayTextStructured);
+//[localize LSTRING(NoPlugs)] call CBA_fnc_notify;
 
 [] call FUNC(updateHearingProtection);

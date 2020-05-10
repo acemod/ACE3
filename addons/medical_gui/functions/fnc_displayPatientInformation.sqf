@@ -40,7 +40,7 @@ if (isNull _display) then {
         if (ACE_player distance _target > MAX_DISTANCE && {vehicle _target != vehicle ACE_player}) exitWith {
             [_pfhID] call CBA_fnc_removePerFrameHandler;
             QGVAR(RscPatientInfo) cutFadeOut 0.3;
-            [[ELSTRING(medical,DistanceToFar), _target call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
+            format [ELSTRING(medical,DistanceToFar), _target call EFUNC(common,getName)] call CBA_fnc_notify;
         };
 
         // Update body image

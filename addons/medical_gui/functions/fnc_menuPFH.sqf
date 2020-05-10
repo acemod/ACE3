@@ -20,7 +20,7 @@ if !([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(com
     closeDialog 0;
     // Show hint if distance condition failed
     if ((ACE_player distance GVAR(target) > GVAR(maxDistance)) && {vehicle ACE_player != vehicle GVAR(target)}) then {
-        [[ELSTRING(medical,DistanceToFar), GVAR(target) call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
+        format [ELSTRING(medical,DistanceToFar), GVAR(target) call EFUNC(common,getName)] call CBA_fnc_notify;
     };
 };
 

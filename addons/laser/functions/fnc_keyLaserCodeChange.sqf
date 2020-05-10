@@ -61,6 +61,6 @@ TRACE_2("",_oldLaserCode,_newLaserCode);
 if (_oldLaserCode != _newLaserCode) then {
     _currentShooter setVariable [QGVAR(code), _newLaserCode, true];
 };
-[format ["%1: %2", localize LSTRING(laserCode), _newLaserCode]] call EFUNC(common,displayTextStructured);
+[format ["%1: %2", localize LSTRING(laserCode), _newLaserCode]] call CBA_fnc_notify;
 
 true

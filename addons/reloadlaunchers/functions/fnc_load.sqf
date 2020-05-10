@@ -36,11 +36,11 @@ private _onSuccess =  {
     (_this select 0 select 0) removeMagazine (_this select 0 select 3);
     [QGVAR(reloadLauncher), _this select 0, _this select 0 select 1] call CBA_fnc_targetEvent;
 
-    [localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
+    [localize LSTRING(LauncherLoaded)] call CBA_fnc_notify;
 };
 
 private _onFailure = {
-    [localize ELSTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
+    [localize ELSTRING(common,ActionAborted)] call CBA_fnc_notify;
 };
 
 private _condition = {

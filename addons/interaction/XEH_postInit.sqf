@@ -87,7 +87,7 @@ GVAR(isOpeningDoor) = false;
     if (_unit == ACE_player) then {
         addCamShake [4, 0.5, 5];
         private _message = parseText format ([["%1 &gt;", localize LSTRING(YouWereTappedRight)], ["&lt; %1", localize LSTRING(YouWereTappedLeft)]] select (_shoulderNum == 1));
-        [_message] call EFUNC(common,displayTextStructured);
+        [_message] call CBA_fnc_notify;
     };
 }] call CBA_fnc_addEventHandler;
 

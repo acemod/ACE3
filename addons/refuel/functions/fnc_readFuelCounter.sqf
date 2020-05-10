@@ -26,4 +26,4 @@ private _fuelCounter = if (_currentFuel == REFUEL_INFINITE_FUEL) then {
 };
 
 private _fuelCounter = 0.01 * round (100 * _fuelCounter);
-[[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);
+format [LSTRING(Hint_FuelCounter), _fuelCounter] call CBA_fnc_notify;

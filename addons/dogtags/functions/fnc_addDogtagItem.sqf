@@ -27,5 +27,5 @@ private _displayText = format [localize LSTRING(takeDogtagSuccess), _nickName];
 
 // display message
 [{
-    [_this, 2.5] call EFUNC(common,displayTextStructured);
+    [_this] call CBA_fnc_notify;
 }, _displayText, DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;

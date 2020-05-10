@@ -41,7 +41,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
-        [_onAttachText, 2] call EFUNC(common,displayTextStructured);
+        [_onAttachText] call CBA_fnc_notify;
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {

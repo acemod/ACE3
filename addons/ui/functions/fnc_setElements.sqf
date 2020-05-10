@@ -19,7 +19,7 @@ params [["_showHint", false]];
 
 if (isArray (missionConfigFile >> "showHUD")) exitWith {
     if (_showHint) then {
-        [LSTRING(Disabled)] call EFUNC(common,displayTextStructured);
+        [LSTRING(Disabled)] call CBA_fnc_notify;
     };
 };
 

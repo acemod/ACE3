@@ -48,5 +48,5 @@ deleteVehicle _wheel;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    [LSTRING(ReplacedWheel)] call EFUNC(common,displayTextStructured);
+    [LSTRING(ReplacedWheel)] call CBA_fnc_notify;
 };

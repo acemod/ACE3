@@ -45,4 +45,4 @@ _clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localiz
 _unit setVariable [QGVAR(Clackers), _clacker, true];
 
 //display clacker code message:
-[format [localize LSTRING(DetonateCode), GVAR(PlacedCount)]] call EFUNC(common,displayTextStructured);
+[format [localize LSTRING(DetonateCode), GVAR(PlacedCount)]] call CBA_fnc_notify;

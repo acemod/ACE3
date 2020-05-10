@@ -29,9 +29,9 @@ if (GVAR(supply) == 1) then {
             params ["_args"];
             _args params [["_unit", objNull, [objNull]], ["_truck", objNull, [objNull]], ["_supplyCount", 0, [0]]];
             if (_supplyCount > 0 ) then {
-                [[LSTRING(Hint_RemainingSupplyPoints), _supplyCount], 2, _unit] call EFUNC(common,displayTextStructured);
+                format [LSTRING(Hint_RemainingSupplyPoints), _supplyCount] call CBA_fnc_notify;
             } else {
-                [LSTRING(Hint_Empty), 2, _unit] call EFUNC(common,displayTextStructured);
+                [LSTRING(Hint_Empty)] call CBA_fnc_notify;
             };
             true
         },
@@ -62,9 +62,9 @@ if (GVAR(supply) == 1) then {
                 } count _magazines;
             };
             if (_supply > 1.5) then {
-                [[LSTRING(Hint_RemainingAmmo), _text], _supply, _unit, (_numChars/2.9)] call EFUNC(common,displayTextStructured);
+                format [LSTRING(Hint_RemainingAmmo), _text] call CBA_fnc_notify;
             } else {
-                [LSTRING(Hint_Empty), 2, _unit] call EFUNC(common,displayTextStructured);
+                [LSTRING(Hint_Empty)] call CBA_fnc_notify;
             };
             true
         },
