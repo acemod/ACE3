@@ -100,19 +100,25 @@ class CfgWeapons {
         ACE_barrelLength = 629.92;
         ACE_Overheating_allowSwapBarrel = 1;
     };
-    class rhs_weap_m14_base: srifle_EBR_F {
+    class rhs_weap_m14_base;
+    class rhs_weap_m14: rhs_weap_m14_base {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
         ACE_Overheating_dispersion = 0.75;
         ACE_RailHeightAboveBore = 1.98812;
     };
-    class rhs_weap_m14_socom_base: rhs_weap_m14_base {
+    class rhs_weap_m14ebrri: rhs_weap_m14ebrri_base {
+        ACE_barrelTwist = 304.8;
+        ACE_barrelLength = 558.8;
+        ACE_Overheating_dispersion = 0.75;
+        ACE_RailHeightAboveBore = 1.98812;
+    };
+    class rhs_weap_m14_socom_base: rhs_weap_m14 {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 413; //16.25 in (413 mm)
         ACE_Overheating_dispersion = 0.75;
         ACE_RailHeightAboveBore = 1.98812;
     };
-    class rhs_weap_m14ebrri;
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
