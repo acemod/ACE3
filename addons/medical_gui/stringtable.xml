@@ -423,6 +423,7 @@
             <Korean>약물 치료</Korean>
             <Chinesesimp>药物</Chinesesimp>
             <Chinese>藥物</Chinese>
+            <Turkish>Ilaç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_AirwayManagement">
             <English>Airway Management</English>
@@ -438,6 +439,7 @@
             <Korean>기도 관리</Korean>
             <Chinesesimp>呼吸道管理</Chinesesimp>
             <Chinese>呼吸道管理</Chinese>
+            <Turkish>Hava Yolu Yönetimi</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_AdvancedTreatment">
             <English>Advanced Treatments</English>
@@ -829,6 +831,7 @@
             <Korean>정상 호흡</Korean>
             <Chinesesimp>正常呼吸</Chinesesimp>
             <Chinese>正常呼吸</Chinese>
+            <Turkish>Normal solunum</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_NO_BREATHING">
             <English>No breathing</English>
@@ -844,6 +847,7 @@
             <Korean>호흡이 없음</Korean>
             <Chinesesimp>没有呼吸</Chinesesimp>
             <Chinese>沒有呼吸</Chinese>
+            <Turkish>Solunum yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DIFFICULT_BREATHING">
             <English>Difficult breathing</English>
@@ -859,6 +863,7 @@
             <Korean>호흡 곤란</Korean>
             <Chinesesimp>呼吸困难</Chinesesimp>
             <Chinese>呼吸困難</Chinese>
+            <Turkish>Nefes almada zorluk</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ALMOST_NO_BREATHING">
             <English>Almost no breathing</English>
@@ -874,6 +879,7 @@
             <Korean>호흡이 거의 없음</Korean>
             <Chinesesimp>几乎没有呼吸</Chinesesimp>
             <Chinese>幾乎沒有呼吸</Chinese>
+            <Turkish>Neredeyse hiç nefes almıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_BLEEDING">
             <English>Bleeding</English>
@@ -889,6 +895,7 @@
             <Korean>출혈</Korean>
             <Chinesesimp>出血中</Chinesesimp>
             <Chinese>出血中</Chinese>
+            <Turkish>Kanama var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
@@ -904,6 +911,7 @@
             <Korean>고통</Korean>
             <Chinesesimp>疼痛中</Chinesesimp>
             <Chinese>疼痛中</Chinese>
+            <Turkish>Ağrısı var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_LOST_BLOOD">
             <English>Lost a lot of Blood</English>
@@ -919,6 +927,7 @@
             <Korean>많은 피를 흘림</Korean>
             <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
+            <Turkish>Çok fazla kan kaybı var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_Fractured">
             <English>Fractured</English>
@@ -957,6 +966,7 @@
             <Czech>Ztratil trochu krve</Czech>
             <Polish>Stracił trochę krwi</Polish>
             <Spanish>Algo de sangre perdida</Spanish>
+            <Turkish>Az kan kaybı var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
             <English>Lost a lot of blood</English>
@@ -973,6 +983,7 @@
             <Korean>많은 양의 혈액을 잃음</Korean>
             <Chinesesimp>大量失血中</Chinesesimp>
             <Chinese>大量失血中</Chinese>
+            <Turkish>Çok fazla kan kaybı var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood3">
             <English>Lost a large amount of blood</English>
@@ -986,6 +997,7 @@
             <Czech>Ztratil velké množství krve</Czech>
             <Polish>Stracił dużą ilość krwi</Polish>
             <Spanish>Perdida gran cantidad de sangre</Spanish>
+            <Turkish>Çok miktarda kan kaybetti</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
@@ -999,6 +1011,7 @@
             <Czech>Vykrvácel</Czech>
             <Polish>Stracił krytyczną ilość krwi</Polish>
             <Spanish>Perdida una cantidad fatal de sangre</Spanish>
+            <Turkish>Ölümcül miktarda kan kaybetti</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -1014,6 +1027,7 @@
             <Korean>지혈대 [CAT]</Korean>
             <Chinesesimp>军用止血带</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
+            <Turkish>Turnike [CAT]</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_NPA_APPLIED">
             <English>Nasopharyngeal Tube [NPA]</English>
@@ -1045,6 +1059,7 @@
             <Korean>부상자 분류 카드</Korean>
             <Chinesesimp>检伤分类卡</Chinesesimp>
             <Chinese>檢傷分類卡</Chinese>
+            <Turkish>Triyaj Kartı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PartialX">
             <English>Partial %1</English>
@@ -1057,6 +1072,7 @@
             <Portuguese>Parcial%1</Portuguese>
             <Spanish>Parcial %1</Spanish>
             <German>Partiell %1</German>
+            <Turkish>Parsiyel %1</Turkish>
         </Key>
     </Package>
 </Project>

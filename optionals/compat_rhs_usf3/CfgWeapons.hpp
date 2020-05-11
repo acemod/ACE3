@@ -13,7 +13,7 @@ class CfgWeapons {
 
     class Pistol_Base_F;
     class Rifle_Base_F;
-    class srifle_EBR_F;
+    class rhs_weap_m14ebrri_base;
     class launch_O_Titan_F;
     class GM6_base_F;
     class rhs_weap_M107_Base_F: GM6_base_F {
