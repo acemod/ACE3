@@ -380,6 +380,7 @@
             <Korean>행동 취소됨.</Korean>
             <Chinese>動作已被取消</Chinese>
             <Chinesesimp>动作已被取消</Chinesesimp>
+            <Turkish>Işlem iptal edildi.</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_MiscItems">
             <English>[ACE] Miscellaneous Items</English>
@@ -1172,6 +1173,7 @@
             <Korean>ACE 장비</Korean>
             <Chinese>ACE 裝備按鍵</Chinese>
             <Chinesesimp>ACE 装备按键</Chinesesimp>
+            <Turkish>ACE Ekipmanlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE Common</English>
@@ -1202,6 +1204,7 @@
             <Korean>ACE 무기</Korean>
             <Chinese>ACE 武器按鍵</Chinese>
             <Chinesesimp>ACE 武器按键</Chinesesimp>
+            <Turkish>ACE Silahlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE Movement</English>
@@ -1247,6 +1250,7 @@
             <Korean>ACE 차량</Korean>
             <Chinese>ACE 載具按鍵</Chinese>
             <Chinesesimp>ACE 载具按键</Chinesesimp>
+            <Turkish>ACE Araçlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1398,6 +1402,7 @@
             <Japanese>セルフ インタラクションに動作を表示</Japanese>
             <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
             <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
+            <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
         </Key>
     </Package>
 </Project>
