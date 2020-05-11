@@ -36,7 +36,6 @@
             <Italian>Diagnosi avanzata</Italian>
             <Czech>Pokročilá diagnóza</Czech>
             <Polish>Zaawansowana Diagnoza</Polish>
-            <Turkish>Gelişmiş Teşhis</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
             <English>Enables the Check Pulse, Check Blood Pressure, and Check Response treatment actions instead of the generic Diagnose action.\nWhen disabled, the CPR action will only be shown when performing CPR is appropriate.\nThe actions this setting enables are needed to determine whether a person is unconscious or in cardiac arrest.</English>
@@ -61,7 +60,6 @@
             <Czech>Pokročilé léky</Czech>
             <Italian>Medicazione avanzata</Italian>
             <Polish>Zaawansowane leki</Polish>
-            <Turkish>Gelişmiş Ilaç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
@@ -86,7 +84,6 @@
             <Italian>Bendaggi avanzati</Italian>
             <Czech>Pokročilé obvazy</Czech>
             <Polish>Zaawansowane Bandaże</Polish>
-            <Turkish>Gelişmiş Bandajlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
@@ -104,14 +101,13 @@
             <English>Enabled &amp; Can Reopen</English>
             <French>Activé &amp; peuvent se rouvrir</French>
             <Japanese>有効 &amp; 再開放</Japanese>
-            <Czech>Zapnuto &amp; Úrazy se mohou znovu otevřít</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>
             <Chinese>包紮即痊癒</Chinese>
             <French>Guérir les blessures pansées</French>
-            <Czech>Odebrat úraz po obvázání</Czech>
+            <Czech>Vyčistit úraz po obvázání</Czech>
             <Polish>Usuń uraz po zabandażowaniu</Polish>
             <Italian>Rimozione ferite bendate</Italian>
             <German>Entferne Trauma nach Bandagierung.</German>
@@ -124,7 +120,6 @@
             <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
             <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
             <Chinese>控制說當傷口處理好的時候是否直接痊癒。</Chinese>
-            <Czech>Nastavuje zda jsou plně obvázané části těla vyléčena.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -343,7 +338,6 @@
             <French>Utilisation de la trousse sanitaire sur soi-même</French>
             <Polish>Używanie apteczki osobistej na sobie</Polish>
             <Japanese>応急処置キットの自己使用</Japanese>
-            <Czech>Samo-použití osobní lékárničky (PAK)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
@@ -353,7 +347,6 @@
             <French>Définit si le joueur peut utiliser la trousse sanitaire pour se soigner lui-même.</French>
             <Polish>Pozwala na użycie apteczki osobistej na sobie</Polish>
             <Japanese>応急処置キットを使って、自分を治療できるようにします。</Japanese>
-            <Czech>Umožňuje použít osobní lékárničku (PAK) na sama sebe.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -504,7 +497,6 @@
             <French>Pose de perfusion autorisée pour</French>
             <Chinese>允許操作點滴</Chinese>
             <Japanese>IV 輸血の制限</Japanese>
-            <Czech>Povolit IV transfuzi</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
@@ -513,7 +505,6 @@
             <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
-            <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -1479,7 +1470,6 @@
             <Korean>혈액 IV (1000ml)</Korean>
             <Chinesesimp>血液 (1000ml)</Chinesesimp>
             <Chinese>點滴 (血液 1000毫升)</Chinese>
-            <Turkish>Kan IV (1000ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_Desc_Short">
             <English>Blood IV, for restoring a patients blood</English>
@@ -1528,7 +1518,6 @@
             <Korean>혈액 IV (500ml)</Korean>
             <Chinesesimp>血液 (500ml)</Chinesesimp>
             <Chinese>點滴 (血液 500毫升)</Chinese>
-            <Turkish>Kan IV (500ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Blood_IV_250">
             <English>Blood IV (250ml)</English>
@@ -1545,7 +1534,6 @@
             <Korean>혈액 IV (250ml)</Korean>
             <Chinesesimp>血液 (250ml)</Chinesesimp>
             <Chinese>點滴 (血液 250毫升)</Chinese>
-            <Turkish>Kan IV (250ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV">
             <English>Saline IV (1000ml)</English>
@@ -1562,7 +1550,6 @@
             <Korean>생리식염수 IV (1000ml)</Korean>
             <Chinesesimp>生理食盐水 (1000ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 1000毫升)</Chinese>
-            <Turkish>Serum IV (1000ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_Desc_Short">
             <English>Saline IV, for restoring a patients blood</English>
@@ -1611,7 +1598,6 @@
             <Korean>생리식염수 IV (500ml)</Korean>
             <Chinesesimp>生理食盐水 (500ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 500毫升)</Chinese>
-            <Turkish>Serum IV (500ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_250">
             <English>Saline IV (250ml)</English>
@@ -1628,7 +1614,6 @@
             <Korean>생리식염수 IV (250ml)</Korean>
             <Chinesesimp>生理食盐水 (250ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 250毫升)</Chinese>
-            <Turkish>Serum IV (250ml)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Display">
             <English>Bandage (QuikClot)</English>

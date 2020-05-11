@@ -42,7 +42,6 @@
             <Portuguese>Rapidamente entra no veículo que você está olhando diretamente.</Portuguese>
             <French>Permet d'entrer rapidement dans le véhicule que vous regardez.</French>
             <Czech>Rychle nastoupit do vozidla na které se díváte.</Czech>
-            <Turkish>Doğrudan bakmakta olduğunuz araca hızla girin.</Turkish>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleFull">
             <English>Vehicle Full</English>
@@ -67,8 +66,6 @@
             <Portuguese>Esta opção permite entrada rápida para o veículo que você está olhando</Portuguese>
             <Japanese>この機能により直接見ている車両へすぐさま搭乗できます。</Japanese>
             <Italian>Questa opzione permette l'entrata rapida nel veicolo che si sta guardando.</Italian>
-            <Turkish>Bu seçenek, doğrudan bakmakta olduğunuz araca hızlı giriş sağlar.</Turkish>
-            <Czech>Tato možnost umožňuje rychle nastoupit do vozidla na které se díváte.</Czech>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
