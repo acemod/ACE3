@@ -7,7 +7,7 @@
             <Chinese>火炮射程表</Chinese>
             <Italian>Tavola balistica per artigliria </Italian>
             <Czech>Dělostřelecké tabulky střelby</Czech>
-            <Japanese>火砲射程</Japanese>
+            <Japanese>火砲射表</Japanese>
             <Polish>Tabela Strzelnicza</Polish>
             <French>Table de tir d'artillerie</French>
             <Portuguese>Tabela de Artilharia</Portuguese>
@@ -25,6 +25,7 @@
             <French>Table de tir universelle pour l'artillerie.</French>
             <Portuguese>Tabela de Artilharia Universal</Portuguese>
             <Spanish>Tabla de distancias universal de artillería</Spanish>
+            <Turkish>Uluslar arası Topçu Menzil Tablosu</Turkish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>

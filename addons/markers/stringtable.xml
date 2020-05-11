@@ -50,7 +50,7 @@
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
             <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
-            <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をさせられるか制限できます。</Japanese>
+            <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をできるか制限できます。</Japanese>
             <Korean>Alt 키를 누른 상태에서 마커를 움직일 수있는 플레이어를 제한합니다.</Korean>
             <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
             <Chinesesimp>设定谁可以透过按住Alt键来移动标志。</Chinesesimp>
@@ -60,6 +60,7 @@
             <Portuguese>Restringe quais jogadores podem mover os marcadores do mapa enquanto seguram a tecla ALT.</Portuguese>
             <French>Définit quels joueurs peuvent déplacer des marqueurs en maintenant la touche Alt enfoncée.</French>
             <Czech>Omezuje kdo může pohybovat se značkami při podržení klávesy Alt.</Czech>
+            <Turkish>Alt tuşunu basılı tutarken hangi işaretçilerin hareket edebileceğini sınırlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>

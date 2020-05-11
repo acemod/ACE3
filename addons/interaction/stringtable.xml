@@ -847,6 +847,7 @@
             <Korean>키 할당하기</Korean>
             <Chinesesimp>编辑按键</Chinesesimp>
             <Chinese>編輯按鍵</Chinese>
+            <Turkish>Modifiye Tuşu</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_NotInRange">
             <English>Not in Range</English>
@@ -992,7 +993,7 @@
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
             <Italian>Abilità Management Squadra</Italian>
-            <Japanese>チーム管理を使う</Japanese>
+            <Japanese>チーム管理の有効化</Japanese>
             <Korean>팀 설정 활성화</Korean>
             <Chinesesimp>启用小队管理</Chinesesimp>
             <Chinese>啟用小隊管理</Chinese>
@@ -1009,7 +1010,7 @@
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
-            <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか? 標準: 有効化</Japanese>
+            <Japanese>プレイヤーがチーム管理メニューを使えるかどうかを設定します。標準: 有効化</Japanese>
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
             <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
@@ -1165,7 +1166,7 @@
             <Italian>Mostra interazione "passa caricatore"</Italian>
             <Spanish>Mostrar "Pasar cargador" en el menú de interacción</Spanish>
             <French>Montrer l'interaction "Passer un chargeur"</French>
-            <Japanese>"弾倉を渡す"をインタラクションに表示する</Japanese>
+            <Japanese>"弾倉を渡す"をインタラクションに表示</Japanese>
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>

@@ -1321,6 +1321,7 @@
             <Korean>M183 폭파 장약 조립</Korean>
             <Chinese>M183炸藥包</Chinese>
             <Chinesesimp>M183炸药包</Chinesesimp>
+            <Turkish>M183 Demolition Charge Assembly</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1337,6 +1338,7 @@
             <Korean>M112 폭파 블럭</Korean>
             <Chinese>M112塑性炸藥</Chinese>
             <Chinesesimp>M112塑性炸药</Chinesesimp>
+            <Turkish>M112 Demolition Block</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -1353,6 +1355,7 @@
             <Korean>M67 세열 수류탄</Korean>
             <Chinese>M67破片手榴彈</Chinese>
             <Chinesesimp>M67破片手榴弹</Chinesesimp>
+            <Turkish>M67 El Bombası</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MiniGrenade_Name">
             <English>V40 Mini-Grenade</English>
@@ -1536,6 +1539,7 @@
             <Korean>M26 대인도약지뢰</Korean>
             <Chinese>M26反人員彈跳雷</Chinese>
             <Chinesesimp>M26反人员弹跳雷</Chinesesimp>
+            <Turkish>M26 Anti Personel Mayını</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSTripwireMine_Name">
             <English>PMR-3 Anti-Personnel Tripwire Mine</English>
@@ -1552,6 +1556,7 @@
             <Korean>PMR-3 대인인계철선지뢰</Korean>
             <Chinese>PMR-3反人員絆線雷</Chinese>
             <Chinesesimp>PMR-3反人员绊线雷</Chinesesimp>
+            <Turkish>PMR-3 Telli Anti Personel Mayını</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_P07_Name">
             <English>P99</English>
@@ -3617,7 +3622,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
-            <German>Wiesel 2 Ozelot (FlaRaWaTrg)</German>
+            <German>Wiesel 2 Ozelot (LeFlaSys)</German>
             <Chinesesimp>"鼬鼠"2装甲车 (防空)</Chinesesimp>
             <Chinese>"鼬鼠"2裝甲車 (防空)</Chinese>
             <Japanese>ウィーゼル 2 オゼロット (対空)</Japanese>
@@ -4463,6 +4468,7 @@
             <Chinese>口徑: 5.7毫米&lt;br /&gt;發數: 50&lt;br /&gt;使用於: P90</Chinese>
             <Chinesesimp>口径: 5.7mm&lt;br /&gt;发数: 50&lt;br /&gt;使用于: P90</Chinesesimp>
             <Korean>구경: 5.7mm&lt;br /&gt;장탄수: 50&lt;br /&gt;사용됨: P90</Korean>
+            <Turkish>Kalibre: 5.7mm&lt;br /&gt;Mermi: 50&lt;br /&gt;Kullanıyor: P90</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_AKM">
             <English>AKM</English>

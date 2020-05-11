@@ -67,6 +67,7 @@
             <Korean>전진</Korean>
             <Chinesesimp>前进</Chinesesimp>
             <Chinese>前進</Chinese>
+            <Turkish>Ilerle</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Go">
             <English>Go</English>
@@ -184,6 +185,7 @@
             <Korean>엄폐</Korean>
             <Chinesesimp>掩护</Chinesesimp>
             <Chinese>掩護</Chinese>
+            <Turkish>Mevzi Al</Turkish>
         </Key>
         <Key ID="STR_ACE_Gestures_Regroup">
             <English>Rally up</English>

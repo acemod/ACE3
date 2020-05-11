@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [1, 2, "ammo", "magazine", "weapon"] call ace_rangecard_fnc_openRangeCard
+ * [1, 2, "ammo", "magazine", "weapon"] call ace_rangecard_fnc_updateRangeCard
  *
  * Public: No
  */

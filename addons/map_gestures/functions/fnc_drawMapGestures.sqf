@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [findDisplay 12 displayCtrl 51] call ace_map_gesutres_fnc_drawMapGestures
+ * [findDisplay 12 displayCtrl 51] call ace_map_gestures_fnc_drawMapGestures
  *
  * Public: No
  */

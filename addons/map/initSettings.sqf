@@ -69,7 +69,7 @@
     {
         [QGVAR(BFT_Enabled), _this] call EFUNC(common,cbaSettings_settingChanged);
         
-        if (isNil QGVAR(BFT_markers)) then {
+        if (GVAR(BFT_Enabled) && {isNil QGVAR(BFT_markers)}) then {
             GVAR(BFT_markers) = [];
             [FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
         };

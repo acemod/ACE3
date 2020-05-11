@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [ACE_Player, killer] call ace_module_fnc_functionName
+ * [ACE_Player, killer] call ace_respawn_fnc_showFriendlyFireMessage
  *
  * Public: No
  */
