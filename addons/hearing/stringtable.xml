@@ -119,23 +119,6 @@
             <Chinese>你沒有耳塞</Chinese>
             <Turkish>Kulak Tıkacın Yok</Turkish>
         </Key>
-        <Key ID="STR_ACE_Hearing_Inventory_Full">
-            <English>No inventory space</English>
-            <German>Kein Platz im Inventar</German>
-            <Spanish>Sin espacio en el inventario</Spanish>
-            <Polish>Brak miejsca w ekwipunku</Polish>
-            <French>Il n'y a plus de place dans l'inventaire.</French>
-            <Czech>Není místo v inventáři</Czech>
-            <Italian>Non hai abbastanza spazio</Italian>
-            <Portuguese>Não há espaço no inventário</Portuguese>
-            <Hungarian>Nincs több hely</Hungarian>
-            <Russian>Нет места в инвентаре</Russian>
-            <Japanese>インベントリに空きがありません</Japanese>
-            <Korean>넣을 공간이 없습니다</Korean>
-            <Chinesesimp>无可用空间</Chinesesimp>
-            <Chinese>無可用空間</Chinese>
-            <Turkish>Envanterin de alan yok</Turkish>
-        </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_DisplayName">
             <English>Disable ear ringing</English>
             <French>Désactiver les bourdonnements</French>

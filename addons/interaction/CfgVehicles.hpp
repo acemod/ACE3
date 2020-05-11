@@ -313,6 +313,14 @@ class CfgVehicles {
                 showDisabled = 1;
                 icon = "";  // @todo
             };
+
+            class GVAR(weaponAttachments) {
+                displayName = "$STR_A3_CfgEditorCategories_EdCat_WeaponAttachments0";
+                condition = QGVAR(weaponAttachments);
+                exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                insertChildren = QUOTE(call DFUNC(getWeaponAttachmentsActions));
+                modifierFunction = QUOTE(call DFUNC(modifyWeaponAttachmentsAction));
+            };
         };
     };
 

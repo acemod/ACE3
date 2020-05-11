@@ -47,7 +47,7 @@ private _isChemlight = _attachedObject isKindOf "Chemlight_base";
 
 // Exit if can't add the item
 if (!(_unit canAdd _itemName) && {!_isChemlight}) exitWith {
-    [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
+    [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
 // Add item to inventory (unless it's a chemlight)

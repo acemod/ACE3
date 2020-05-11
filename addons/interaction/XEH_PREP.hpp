@@ -32,6 +32,11 @@ PREP(pardon);
 PREP(canPullOutBody);
 PREP(pullOutBody);
 
+// Weapon Attachments
+PREP(getWeaponAttachmentsActions);
+PREP(modifyWeaponAttachmentsAction);
+PREP(switchWeaponAttachment);
+
 // interaction with doors
 PREP(getDoor);
 PREP(getGlassDoor);

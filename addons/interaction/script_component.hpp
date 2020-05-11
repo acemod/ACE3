@@ -33,3 +33,5 @@
 #define MACRO_DOOR_REACH_DISTANCE (AGLToASL positionCameraToWorld [0,0,0] vectorDistance AGLToASL (ACE_player modelToWorld (ACE_player selectionPosition "Head"))) + 2
 
 #define DISABLED_LAMP_DAMAGE 0.95
+
+#define WEAPON_ICON_PATH "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal"
