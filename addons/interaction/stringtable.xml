@@ -1200,5 +1200,13 @@
             <Chinese>踹開擋風玻璃</Chinese>
             <Spanish>Romper parabrisas</Spanish>
         </Key>
+        <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
+            <English>Attach %1</English>
+            <Russian>Установить %1</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
+            <English>Detach %1</English>
+            <Russian>Снять %1</Russian>
+        </Key>
     </Package>
 </Project>

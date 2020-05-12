@@ -34,7 +34,6 @@ PREP(pullOutBody);
 
 // Weapon Attachments
 PREP(getWeaponAttachmentsActions);
-PREP(modifyWeaponAttachmentsAction);
 PREP(switchWeaponAttachment);
 
 // interaction with doors
