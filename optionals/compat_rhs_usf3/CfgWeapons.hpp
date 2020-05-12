@@ -74,28 +74,26 @@ class CfgWeapons {
     };
     class rhs_weap_lmg_minimi_railed;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
-        ACE_RailHeightAboveBore = 3;
+        ACE_RailHeightAboveBore = 4.11044;
         ACE_barrelLength = 348;
         ACE_barrelTwist = 177.8;
     };
     class rhs_weap_m249_pip_L: rhs_weap_lmg_minimi_railed {
-        ACE_RailHeightAboveBore = 3;
+        ACE_RailHeightAboveBore = 4.34899;
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
     };
     class rhs_weap_m249: rhs_weap_lmg_minimi_railed {
-        ACE_RailHeightAboveBore = 3;
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
     };
     class rhs_weap_m249_pip: rhs_weap_lmg_minimi_railed {
-        ACE_RailHeightAboveBore = 3;
         ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
     };
     class rhs_weap_M249_base;
     class rhs_weap_m240_base: rhs_weap_M249_base {
-        ACE_RailHeightAboveBore = 2.68925;
+        ACE_RailHeightAboveBore = 4.3987;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 629.92;
         ACE_Overheating_allowSwapBarrel = 1;
@@ -105,45 +103,40 @@ class CfgWeapons {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
         ACE_Overheating_dispersion = 0.75;
-        ACE_RailHeightAboveBore = 1.98812;
     };
     class rhs_weap_m14ebrri: rhs_weap_m14ebrri_base {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
         ACE_Overheating_dispersion = 0.75;
-        ACE_RailHeightAboveBore = 1.98812;
+        ACE_RailHeightAboveBore = 3.08341;
     };
     class rhs_weap_m14_socom_base: rhs_weap_m14 {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 413; //16.25 in (413 mm)
         ACE_Overheating_dispersion = 0.75;
-        ACE_RailHeightAboveBore = 1.98812;
     };
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
-        ACE_RailHeightAboveBore = 1.98812;
+        ACE_RailHeightAboveBore = 3.13162;
     };
     class rhs_weap_sr25_ec: rhs_weap_sr25 {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 508.0;
-        ACE_RailHeightAboveBore = 1.98812;
+        ACE_RailHeightAboveBore = 3.13689;
     };
     class rhs_weap_SCAR_H_Base;
     class rhs_weap_SCAR_H_CQC_Base : rhs_weap_SCAR_H_Base {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 330.0;
-        ACE_RailHeightAboveBore = 3;
     };
     class rhs_weap_SCAR_H_LB_Base : rhs_weap_SCAR_H_CQC_Base {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 508.0;
-        ACE_RailHeightAboveBore = 3;
     };
     class rhs_weap_SCAR_H_STD_Base : rhs_weap_SCAR_H_LB_Base {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 406.0;
-        ACE_RailHeightAboveBore = 3;
     };
     class rhs_weap_M590_5RD: Rifle_Base_F {
         ACE_barrelTwist = 0.0;
