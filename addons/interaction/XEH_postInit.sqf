@@ -137,5 +137,7 @@ GVAR(isOpeningDoor) = false;
 }] call CBA_fnc_addEventHandler;
 
 {
-    [_x, {[QGVAR(clearWeaponAttachmentsActionsCache)] call CBA_fnc_localEvent;}] call CBA_fnc_addPlayerEventHandler;
+    [_x, {
+        [QGVAR(clearWeaponAttachmentsActionsCache)] call CBA_fnc_localEvent;
+    }] call CBA_fnc_addPlayerEventHandler;
 } forEach ["loadout", "weapon"];
