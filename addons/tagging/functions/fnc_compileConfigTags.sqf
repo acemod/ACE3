@@ -48,8 +48,13 @@
 
     private _icon = getText (_x >> "icon");
 
+    private _tagModel = getText (_x >> "tagModel");
+    if (_tagModel == "") then {
+        _tagModel = "UserTexture1m_F";
+    };
+
     if (!_failure) then {
-        GVAR(cachedTags) pushBack [_class, _displayName, _requiredItem, _textures, _icon, _materials];
+        GVAR(cachedTags) pushBack [_class, _displayName, _requiredItem, _textures, _icon, _materials, _tagModel];
         GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
     };
 } forEach ("true" configClasses (configFile >> "ACE_Tags"));

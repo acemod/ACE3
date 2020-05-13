@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
  * 2: Material of the tag <STRING> (Optional)
+ * 3: Tag Model <STRING> (optional)
  *
  * Return Value:
  * Sucess <BOOL>
@@ -20,7 +21,8 @@
 params [
     ["_unit", objNull, [objNull]],
     ["_texture", "", [""]],
-    ["_material", "", [""]]
+    ["_material", "", [""]],
+    ["_tagModel", "UserTexture1m_F", [""]]
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
