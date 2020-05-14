@@ -16,19 +16,19 @@
  *
  * Public: No
  */
-params ["_vehicle", "_chanceOfDetonate", ["_injurer", objNull]];
-private _currentVehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
+params ["_vehicle", "_chanceOfDetonate", "_vehicleAmmo", "_explosiveAmmoCount", "_nonExplosiveAmmoCount", ["_injurer", objNull]];
 private _alreadyDetonating = _vehicle getVariable [QGVAR(detonating), false];
+private _isKnockedOut = _explosiveAmmoCount > 0;
 
 if (!_alreadyDetonating && { _chanceOfDetonate >= random 1 }) exitWith {
-    [_vehicle, _injurer, _currentVehicleAmmo] call FUNC(detonate);
+    [_vehicle, _injurer, _vehicleAmmo] call FUNC(detonate);
     LOG_2("Detonating [%1] with a chance-to-detonate [%2]",_vehicle,_chanceOfDetonate);
     _vehicle setVariable [QGVAR(detonating), true];
-    true
+    _isKnockedOut
 };
 
 // Avoid RPT spam
-if (_alreadyDetonating) exitWith { true };
+if (_alreadyDetonating) exitWith { _isKnockedOut };
 
 LOG_5("[%1] No Detonation - Chance of detonation [%2]",_vehicle,_chanceOfDetonate);
 false

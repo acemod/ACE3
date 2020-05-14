@@ -16,11 +16,11 @@
         <Key ID="STR_ACE_vehicle_damage_carDamage_setting_enable">
             <English>Enable/Disable advanced Car Damage</English>
         </Key>
-        <Key ID="STR_ACE_vehicle_damage_advancedPenSimulation_setting_description">
-            <English>Calculates whether or not round penetrated using custom RHA values for each hitpoint</English>
+        <Key ID="STR_ACE_vehicledamage_removeAmmoAfterCookoff_setting_description">
+            <English>Removes all vehicle ammo after cook-off</English>
         </Key>
-        <Key ID="STR_ACE_vehicle_damage_advancedPenSimulation_setting_enable">
-            <English>Enable/Disable advanced penetration simulation</English>
+        <Key ID="STR_ACE_vehicledamage_removeAmmoAfterCookoff_setting_enable">
+            <English>Enable/Disable Ammo Removal During Cook-Off</English>
         </Key>
     </Package>
 </Project>

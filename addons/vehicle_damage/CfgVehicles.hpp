@@ -27,6 +27,7 @@ class CfgVehicles {
         GVAR(turretFireProb) = 0.2;
         GVAR(engineFireProb) = 0.5;
         GVAR(detonationDuringFireProb) = 0.2;
+        GVAR(canHaveFireRing) = 0;
     };
     class Wheeled_APC_F : Car_F {
         GVAR(hullDetonationProb) = 0.2;
@@ -36,6 +37,7 @@ class CfgVehicles {
         GVAR(turretFireProb) = 0.2;
         GVAR(engineFireProb) = 0.5;
         GVAR(detonationDuringFireProb) = 0.2;
+        GVAR(canHaveFireRing) = 0;
     };
     class APC_Tracked_01_base_F : Tank_F {};
     class B_APC_Tracked_01_base_F : APC_Tracked_01_base_F {};
@@ -47,22 +49,23 @@ class CfgVehicles {
         GVAR(turretFireProb) = 0.7;
         GVAR(engineFireProb) = 0.8;
         GVAR(detonationDuringFireProb) = 0.8;
+        GVAR(canHaveFireRing) = 1;
     };
     class B_APC_Tracked_01_rcws_F : B_APC_Tracked_01_base_F {
-        GVAR(hullDetonationProb) = 0;
-        GVAR(turretDetonationProb) = 0.2;
-        GVAR(engineDetonationProb) = 0;
+        GVAR(hullDetonationProb) = 0.3;
+        GVAR(turretDetonationProb) = 0;
+        GVAR(engineDetonationProb) = 0.1;
         GVAR(hullFireProb) = 0.8;
-        GVAR(turretFireProb) = 0.5;
+        GVAR(turretFireProb) = 0;
         GVAR(engineFireProb) = 0.8;
         GVAR(detonationDuringFireProb) = 0.5;
     };
     class B_APC_Tracked_01_CRV_F : B_APC_Tracked_01_base_F {
-        GVAR(hullDetonationProb) = 0;
-        GVAR(turretDetonationProb) = 0.2;
-        GVAR(engineDetonationProb) = 0;
+        GVAR(hullDetonationProb) = 0.3;
+        GVAR(turretDetonationProb) = 0;
+        GVAR(engineDetonationProb) = 0.1;
         GVAR(hullFireProb) = 0.8;
-        GVAR(turretFireProb) = 0.5;
+        GVAR(turretFireProb) = 0;
         GVAR(engineFireProb) = 0.8;
         GVAR(detonationDuringFireProb) = 0.5;
     };
@@ -84,13 +87,14 @@ class CfgVehicles {
         GVAR(turretFireProb) = 0.7;
         GVAR(engineFireProb) = 0.7;
         GVAR(detonationDuringFireProb) = 0.5;
+        GVAR(canHaveFireRing) = 1;
     };
     class APC_Wheeled_02_base_F: Wheeled_APC_F {
         GVAR(hullDetonationProb) = 0.2;
-        GVAR(turretDetonationProb) = 0.2;
+        GVAR(turretDetonationProb) = 0;
         GVAR(engineDetonationProb) = 0;
         GVAR(hullFireProb) = 0.7;
-        GVAR(turretFireProb) = 0.7;
+        GVAR(turretFireProb) = 0;
         GVAR(engineFireProb) = 0.7;
         GVAR(detonationDuringFireProb) = 0.5;
         GVAR(slatHitpoints)[] = {
@@ -130,6 +134,7 @@ class CfgVehicles {
         GVAR(turretFireProb) = 0.4;
         GVAR(engineFireProb) = 0.5;
         GVAR(detonationDuringFireProb) = 0.3;
+        GVAR(canHaveFireRing) = 1;
     };
     class B_MBT_01_base_F: MBT_01_base_F {};
     class B_MBT_01_cannon_F: B_MBT_01_base_F {
@@ -147,14 +152,15 @@ class CfgVehicles {
     class O_MBT_02_base_F;
     class O_MBT_02_cannon_F: O_MBT_02_base_F {
         GVAR(turret)[] = { QGVAR(Turret_MBT_02), {0, -1, 0} };
+        GVAR(canHaveFireRing) = 1;
     };
     
     class APC_Tracked_02_base_F : Tank_F {
         GVAR(hullDetonationProb) = 0;
-        GVAR(turretDetonationProb) = 0.2;
+        GVAR(turretDetonationProb) = 0;
         GVAR(engineDetonationProb) = 0;
         GVAR(hullFireProb) = 0.8;
-        GVAR(turretFireProb) = 0.5;
+        GVAR(turretFireProb) = 0;
         GVAR(engineFireProb) = 0.8;
         GVAR(detonationDuringFireProb) = 0.5;
         GVAR(slatHitpoints)[] = {
@@ -163,6 +169,7 @@ class CfgVehicles {
             "HitSLAT_back",
             "HitSLAT_front"
         };
+        GVAR(canHaveFireRing) = 1;
     };
     class O_APC_Tracked_02_base_F : APC_Tracked_02_base_F {};
     class O_APC_Tracked_02_AA_F : O_APC_Tracked_02_base_F {
@@ -173,6 +180,7 @@ class CfgVehicles {
         GVAR(turretFireProb) = 0.7;
         GVAR(engineFireProb) = 0.8;
         GVAR(detonationDuringFireProb) = 0.8;
+        GVAR(canHaveFireRing) = 1;
     };
     class MBT_04_base_F : Tank_F {
         GVAR(hullDetonationProb) = 0;
@@ -191,6 +199,7 @@ class CfgVehicles {
         GVAR(slatHitpoints)[] = {
             "HitSLAT_Left", "HitSLAT_Right"
         };
+        GVAR(canHaveFireRing) = 1;
     };
     class MBT_02_base_F : Tank_F {
         GVAR(hullDetonationProb) = 0;
@@ -207,6 +216,7 @@ class CfgVehicles {
             "HitERA_Top_Left_1", "HitERA_Top_Left_2",
             "HitERA_Top_Right_1", "HitERA_Top_Right_2"
         };
+        GVAR(canHaveFireRing) = 1;
     };
     class LT_01_base_F : Tank_F {
         GVAR(hullDetonationProb) = 0.8;
@@ -246,13 +256,14 @@ class CfgVehicles {
             "HitSLAT_top_back", "HitSLAT_top_left", "HitSLAT_top_right",
             "HitSLAT_back", "HitSLAT_front"
         };
+        GVAR(canHaveFireRing) = 1;
     };
     class APC_Wheeled_03_base_F : Wheeled_APC_F {
         GVAR(hullDetonationProb) = 0.2;
-        GVAR(turretDetonationProb) = 0.2;
+        GVAR(turretDetonationProb) = 0;
         GVAR(engineDetonationProb) = 0;
         GVAR(hullFireProb) = 0.7;
-        GVAR(turretFireProb) = 0.7;
+        GVAR(turretFireProb) = 0;
         GVAR(engineFireProb) = 0.7;
         GVAR(detonationDuringFireProb) = 0.5;
         GVAR(slatHitpoints)[] = {
@@ -274,6 +285,7 @@ class CfgVehicles {
             "HitSLAT_Left", "HitSLAT_Right", "HitSLAT_back", 
             "HitSLAT_top_left", "HitSLAT_top_right", "HitSLAT_top_back"
         };
+        GVAR(canHaveFireRing) = 1;
     };
 };
 

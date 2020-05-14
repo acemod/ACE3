@@ -4,7 +4,7 @@
     TRACE_1("settings init",GVAR(enabled));
     if (GVAR(enabled)) then {
         [QGVAR(bailOut), {
-            params["_center", "_crewman", "_vehicle"];
+            params ["_center", "_crewman", "_vehicle"];
             TRACE_3("bailOut",_center,_crewman,_vehicle);
 
             if (isPlayer _crewman) exitWith {};
@@ -22,11 +22,11 @@
             _crewman setSpeedMode "FULL";
         }] call CBA_fnc_addEventHandler;
 
-        ["Tank", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
-        ["Wheeled_APC_F", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
+        ["Tank", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+        ["Wheeled_APC_F", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
         
         if (GVAR(enableCarDamage)) then {
-            ["Car", "init", LINKFUNC(addEventHandler), nil, nil, true] call CBA_fnc_addClassEventHandler;
+            ["Car", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
         };
 
         // blow off turret effect
@@ -34,7 +34,7 @@
             if (random 1 < 0.15) then {
                 (_this select 0) call FUNC(blowOffTurret);
             };
-        }] call CBA_fnc_addClassEventHandler;
+        }, true, [], true] call CBA_fnc_addClassEventHandler;
 
         // event to add a turret to a curator if the vehicle already belonged to that curator
         if (isServer) then {

@@ -9,12 +9,12 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(enableAdvancedPen), "CHECKBOX",
-    [LSTRING(advancedPenSimulation_setting_enable), LSTRING(advancedPenSimulation_setting_description)],
+    QGVAR(removeAmmoDuringCookoff), "CHECKBOX",
+    [LSTRING(removeAmmoAfterCookoff_setting_enable), LSTRING(removeAmmoAfterCookoff_setting_description)],
     LSTRING(category_displayName),
     true, // default value
     true, // isGlobal
-    {[QGVAR(enableAdvancedPen), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    {[QGVAR(removeAmmoDuringCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // Needs mission restart
 ] call CBA_settings_fnc_init;
 

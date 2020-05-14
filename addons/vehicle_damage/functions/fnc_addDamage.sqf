@@ -21,7 +21,7 @@
 params ["_vehicle", "_hitIndex", "_hitPoint", "_damage", ["_capDamageAtCurret", true]];
 
 private _currentDamage = _vehicle getHitPointDamage _hitPoint;
-if (_capDamageAtCurret && { _damage <_currentDamage }) exitWith {
+if (_capDamageAtCurret && { _damage < _currentDamage }) exitWith {
     TRACE_4("capping damage at current",_capDamageAtCurret,_damage,_currentDamage,_hitPoint);
 };
 

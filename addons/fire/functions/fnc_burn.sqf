@@ -342,5 +342,5 @@ if (_isBurning) exitWith {};
 }, {
     // exit condition
     (_this getVariable "params") params ["_unit"];
-    isNull _unit || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) };
+    (isNull _unit) || { (_unit != vehicle _unit) && { isNull vehicle _unit } } || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) };
 }, ["_intensity", "_fireParticle", "_smokeParticle", "_fireLight", "_fireSound", "_lightFlare", "_lastIntensityUpdate", "_lastPropogateUpdate"]] call CBA_fnc_createPerFrameHandlerObject

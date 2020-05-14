@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false]];
+params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false], ["_fireSource", ""], ["_canRing", true]];
 
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _vehicle setVariable [QGVAR(isCookingOff), true, true];
@@ -44,12 +44,12 @@ if (_smokeDelayEnabled) then {
 [QGVAR(smoke), [_vehicle, _positions]] call CBA_fnc_globalEvent;
 
 [{
-    params ["_vehicle", "_positions", "_intensity", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator"];
+    params ["_vehicle", "_positions", "_intensity", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_canRing"];
     _vehicle setVariable [QGVAR(intensity), _intensity];
 
     [{
         params ["_args", "_pfh"];
-        _args params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator"];
+        _args params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_canRing"];
         private _intensity = _vehicle getVariable [QGVAR(intensity), 0];
         if (_intensity <= 1) exitWith {
             [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
@@ -68,9 +68,18 @@ if (_smokeDelayEnabled) then {
             if (!_ring && _intensity >= 2) then {
                 _ring = (0.7 > random 1);
             };
+            
+            if !(_canRing) then {
+                _ring = false;
+            };
         
-            private _time = linearConversion [0, 10, _intensity, 5, 20] + random COOKOFF_TIME;
-            [QGVAR(cookOffEffect), [_vehicle, true, _ring, _time, selectRandom _positions]] call CBA_fnc_globalEvent;
+            private _time = linearConversion [0, 10, _intensity, 3, 20] + random COOKOFF_TIME;
+            
+            if (_fireSource isEqualTo "") then {
+                _fireSource = selectRandom _positions;
+            };
+            
+            [QGVAR(cookOffEffect), [_vehicle, true, _ring, _time, _fireSource]] call CBA_fnc_globalEvent;
             
             _intensity = _intensity - (0.5 max random 1);
             _vehicle setVariable [QGVAR(intensity), _intensity];
@@ -87,11 +96,14 @@ if (_smokeDelayEnabled) then {
             private _nextExplosiveDetonation = _vehicle getVariable [QGVAR(nextExplosiveDetonation), 0];
                         
             if ((CBA_missionTime - _lastExplosiveDetonationTime) > _nextExplosiveDetonation) then {
-                createVehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld (_vehicle selectionPosition selectRandom _positions)), [], 0 , "CAN_COLLIDE"];
+                if (_fireSource isEqualTo "") then {
+                    _fireSource = selectRandom _positions;
+                };
+                createVehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld (_vehicle selectionPosition _fireSource)), [], 0 , "CAN_COLLIDE"];
                 
                 _vehicle setVariable [QGVAR(lastExplosiveDetonation), CBA_missionTime];
                 _vehicle setVariable [QGVAR(nextExplosiveDetonation), random 60];
             };
         };
-    }, 0.25, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator]] call CBA_fnc_addPerFrameHandler
-}, [_vehicle, _positions, _intensity, _ammoDetonationChance, _detonateAfterCookoff, _instigator], _delay] call CBA_fnc_waitAndExecute;
+    }, 0.25, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _canRing]] call CBA_fnc_addPerFrameHandler
+}, [_vehicle, _positions, _intensity, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _canRing], _delay] call CBA_fnc_waitAndExecute;
