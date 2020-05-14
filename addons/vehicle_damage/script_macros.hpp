@@ -13,6 +13,8 @@
 #define FUEL_HITPOINTS [["hitfuel"], "fuel"]
 #define ALL_HITPOINTS [ENGINE_HITPOINTS, HULL_HITPOINTS, TRACK_HITPOINTS, WHEEL_HITPOINTS, FUEL_HITPOINTS]
 
+#define CRITICAL_HITPOINTS ["hithull", 0.89, "hitbody", 0.89, "#structural", 0.89, "hitengine", 0.9]
+
 #define WARHEAD_TYPE_HE 0
 #define WARHEAD_TYPE_AP 1
 #define WARHEAD_TYPE_HEAT 2

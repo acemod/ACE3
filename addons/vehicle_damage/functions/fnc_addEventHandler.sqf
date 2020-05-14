@@ -98,8 +98,13 @@ TRACE_1("hitpoint alias",_hitpointAliases);
 _vehicle allowCrewInImmobile true;
 private _eh = _vehicle getVariable [QGVAR(handleDamage), nil];
 if (isNil "_eh") then {
-    TRACE_1("EH not added yet - added eh now", _vehicle);
-    private _hd = _vehicle addEventHandler ["HandleDamage", { _this call FUNC(handleDamage); }];
-    _vehicle setVariable [QGVAR(handleDamage), _hd];
+    // no clue why, but for some reason this needs to exec'd next frame or else it isnt the last event handler in the system.
+    // Maybe its overridden somewhere else, but this makes sure it is the last one
+    [{
+        params ["_vehicle"];
+        TRACE_1("EH not added yet - added eh now", _vehicle);
+        private _hd = _vehicle addEventHandler ["HandleDamage", { _this call FUNC(handleDamage) }];
+        _vehicle setVariable [QGVAR(handleDamage), _hd];
+    }, [_vehicle]] call CBA_fnc_execNextFrame;
 };
 

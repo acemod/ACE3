@@ -148,12 +148,15 @@ if !(count (_currentVehicleAmmo select 0) isEqualTo 0) then {
     private _ammoConfig = configFile >> "CfgAmmo";
     private _countOfExplodableAmmo = 0;
     {
-        _x params ["_ammoClassname", "_currentAmmoCount"];
-        private _initialAmmoCount = getNumber (_magConfig >> _ammoClassname >> "count");
+        _x params ["_magazineClassname", "_currentAmmoCount"];
+        private _initialAmmoCount = getNumber (_magConfig >> _magazineClassname >> "count");
         _chanceOfDetonation = _chanceOfDetonation + (_currentAmmoCount / _initialAmmoCount);
         _countOfExplodableAmmo = _countOfExplodableAmmo + 1;
         
-        if (getNumber (_ammoConfig >> _ammoClassname >> "explosive") > 0.5) then {
+        private _ammoClassname = getText (_magConfig >> _magazineClassname >> "ammo");
+        private _explosive = getNumber (_ammoConfig >> _ammoClassname >> "explosive");
+        private _hit = getNumber (_ammoConfig >> _ammoClassname >> "hit");
+        if (_explosive > 0.5 || _hit > 50) then {
             _explosiveAmmoCount = _explosiveAmmoCount + 1;
         } else {
             _nonExplosiveAmmoCount = _nonExplosiveAmmoCount + 1;
@@ -202,7 +205,7 @@ switch (_hitArea) do {
         _chanceToDetonate = ([_vehicleConfig >> QGVAR(hullDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
         _chanceOfFire = ([_vehicleConfig >> QGVAR(hullFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
         
-        private _cookoffIntensity = _explosiveAmmoCount * _chanceOfFire;
+        private _cookoffIntensity = 1.5 + (_explosiveAmmoCount * _chanceOfFire);
         TRACE_6("hit hull",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel,_cookoffIntensity);
         
         if (_isCar) then {

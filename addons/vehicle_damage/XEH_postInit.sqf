@@ -30,11 +30,11 @@
         };
 
         // blow off turret effect
-        ["Tank", "killed", {
+        /*["Tank", "killed", {
             if (random 1 < 0.15) then {
                 (_this select 0) call FUNC(blowOffTurret);
             };
-        }, true, [], true] call CBA_fnc_addClassEventHandler;
+        }, true, [], true] call CBA_fnc_addClassEventHandler;*/
 
         // event to add a turret to a curator if the vehicle already belonged to that curator
         if (isServer) then {

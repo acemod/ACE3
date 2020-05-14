@@ -268,7 +268,6 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.2;
         EGVAR(vehicle_damage,engineFireProb) = 0.5;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.2;
-        EGVAR(vehicle_damage,turret)[] = { QEGVAR(vehicle_damage,Turret_MBT_01), {0, -1, 0.5} };
     };
     class rhs_bmp_base: rhs_bmp1tank_base {
         EGVAR(vehicle_damage,hullDetonationProb) = 0;
