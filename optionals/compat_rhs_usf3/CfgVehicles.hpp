@@ -330,7 +330,7 @@ class CfgVehicles {
             "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint",
             "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint",
         };
-        EGVAR(vehicleDamage,canHaveFireRing) = 1;
+        EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };
     class RHS_M2A3;
     class RHS_M2A3_BUSKI: RHS_M2A3 {
@@ -345,7 +345,7 @@ class CfgVehicles {
             "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint",
             "era_41_hitpoint", "era_42_hitpoint", "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint",
         };
-        EGVAR(vehicleDamage,canHaveFireRing) = 1;
+        EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };
     class RHS_M2A3_BUSKIII: RHS_M2A3_BUSKI {
         EGVAR(vehicle_damage,eraHitpoints)[] = { 

@@ -142,7 +142,7 @@ class CfgVehicles {
 
     class rhs_t80b: rhs_tank_base {
         EGVAR(refuel,fuelCapacity) = 1100;
-        EGVAR(vehicleDamage,canHaveFireRing) = 1;
+        EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };
     class Truck_F: Car_F {};
     class RHS_Ural_BaseTurret: Truck_F {
@@ -326,7 +326,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,slatHitpoints)[] = {
             "SLAT_38_hitpoint", "SLAT_39_hitpoint", "SLAT_40_hitpoint", "SLAT_41_hitpoint"
         };
-        EGVAR(vehicleDamage,canHaveFireRing) = 1;
+        EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };
     
     class rhs_t72bb_tv: rhs_a3t72tank_base {
