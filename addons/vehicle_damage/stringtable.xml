@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="vehicle_damage">
-        <Key ID="STR_ACE_vehicle_damage_category_displayName">
+    <Package name="Vehicle_Damage">
+        <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
         </Key>
-        <Key ID="STR_ACE_vehicle_damage_setting_enable">
+        <Key ID="STR_ACE_Vehicle_Damage_setting_enable">
             <English>Enable</English>
         </Key>
-        <Key ID="STR_ACE_vehicle_damage_setting_description">
+        <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
         </Key>
-        <Key ID="STR_ACE_vehicle_damage_carDamage_setting_description">
+        <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
             <English>Enable/Disable advanced car damage (Experimental)</English>
         </Key>
-        <Key ID="STR_ACE_vehicle_damage_carDamage_setting_enable">
+        <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable/Disable advanced Car Damage</English>
         </Key>
-        <Key ID="STR_ACE_vehicledamage_removeAmmoAfterCookoff_setting_description">
+        <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_description">
             <English>Removes all vehicle ammo after cook-off</English>
         </Key>
-        <Key ID="STR_ACE_vehicledamage_removeAmmoAfterCookoff_setting_enable">
+        <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_enable">
             <English>Enable/Disable Ammo Removal During Cook-Off</English>
         </Key>
     </Package>

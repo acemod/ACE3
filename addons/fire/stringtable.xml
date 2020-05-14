@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="fire">
-        <Key ID="STR_ACE_fire_category_displayName">
+    <Package name="Fire">
+        <Key ID="STR_ACE_Fire_category_displayName">
             <English>ACE Fire</English>
         </Key>
-        <Key ID="STR_ACE_fire_Actions_PatDown">
+        <Key ID="STR_ACE_Fire_Actions_PatDown">
             <English>Pat Down Fire</English>
         </Key>
-        <Key ID="STR_ACE_fire_Actions_PerformingPatDown">
+        <Key ID="STR_ACE_Fire_Actions_PerformingPatDown">
             <English>Patting Down Fire</English>
         </Key>
-        <Key ID="STR_ACE_fire_setting_enable">
+        <Key ID="STR_ACE_Fire_setting_enable">
             <English>Enable</English>
         </Key>
-        <Key ID="STR_ACE_fire_setting_description">
+        <Key ID="STR_ACE_Fire_setting_description">
             <English>Allow units to catch fire</English>
         </Key>
-        <Key ID="STR_ACE_fire_setting_flareEnable">
+        <Key ID="STR_ACE_Fire_setting_flareEnable">
             <English>Creates fire-flare at night</English>
         </Key>
-        <Key ID="STR_ACE_fire_setting_flareDescription">
+        <Key ID="STR_ACE_Fire_setting_flareDescription">
             <English>Enables the fire-flare effect at night</English>
         </Key>
     </Package>
