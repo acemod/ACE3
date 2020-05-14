@@ -2,7 +2,7 @@
     QGVAR(enabled), "CHECKBOX",
     [LSTRING(setting_enable), LSTRING(setting_description)],
     LSTRING(category_displayName),
-    false, // default value
+    true, // default value
     true, // isGlobal
     {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
