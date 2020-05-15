@@ -23,7 +23,7 @@ private _alreadyCookingOff = _vehicle getVariable [QGVAR(cookingOff), false];
 if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     private _fireDetonateChance = [configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(detonationDuringFireProb), "number", 0] call CBA_fnc_getConfigEntry;
     if (_canRing) then {
-        _canRing = (1 isEqualTo [configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(canHaveFireRing), "number", 0] call CBA_fnc_getConfigEntry);
+        _canRing = 1 isEqualTo ([configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(canHaveFireRing), "number", 0] call CBA_fnc_getConfigEntry);
     };
 
     private _delayWithSmoke = _chanceOfFire < random 1;
@@ -51,3 +51,4 @@ if (_alreadyCookingOff) exitWith { true };
 
 LOG_2("[%1] No Cook-off - Chance of fire [%2]",_vehicle,_chanceOfFire);
 false
+
