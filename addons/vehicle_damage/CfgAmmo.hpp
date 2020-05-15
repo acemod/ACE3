@@ -22,8 +22,6 @@ class CfgAmmo {
     class B_338_Ball;
     
     class ACE_G_40mm_HE;
-    class ACE_Hellfire_AGM114K;
-    class ace_hot_HOT2;
     
     CREATE_INCENDIARY_AMMO(BulletBase,                      BulletCore,             0.5);
     CREATE_INCENDIARY_AMMO(ShellBase,                       ShellCore,              1.0);
@@ -69,7 +67,7 @@ class CfgAmmo {
     CREATE_INCENDIARY_AMMO(Sh_120mm_APFSDS,                 ShellBase,              0.1);
     CREATE_INCENDIARY_AMMO(Sh_120mm_HEAT_MP,                ShellBase,              0.8);
     CREATE_INCENDIARY_AMMO(Sh_155mm_AMOS,                   ShellBase,              0.4);
-    CREATE_INCENDIARY_AMMO(Sh_82mm_AMOS,                    ShellBase,              0.1);
+    CREATE_INCENDIARY_AMMO(Sh_82mm_AMOS,                    Sh_155mm_AMOS,          0.1);
     
     CREATE_INCENDIARY_AMMO(Bo_Mk82,                         BombCore,               0.8);
     CREATE_INCENDIARY_AMMO(R_TBG32V_F,                      R_PG32V_F,              0.2);
