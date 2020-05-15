@@ -33,13 +33,12 @@ if (isServer) then {
     // I dont think there is an alternative that takes into effect distance and whatever, but if you find one please fix!
     private _soundName = selectRandomWeighted [QGVAR(Sound_low), 0.1, QGVAR(Sound_mid), 0.25, QGVAR(Sound_high), 0.65];
     _sound = createSoundSource [_soundName, position _obj, [], 0];
-};
-
-if (_ring) then {
-    private _intensity = 6;
-    private _radius = 1.5 * ((boundingBoxReal _obj) select 2);
-    // only the server initializes this event so this is fine
-    [QEGVAR(fire,addFireSource), [_obj, _radius, _intensity, _obj]] call CBA_fnc_globalEvent;
+    
+    if (_ring) then {
+        private _intensity = 6;
+        private _radius = 1.5 * ((boundingBoxReal _obj) select 2);
+        [QEGVAR(fire,addFireSource), [_obj, _radius, _intensity, _obj]] call CBA_fnc_localEvent;
+    };
 };
 
 [{
