@@ -49,6 +49,19 @@
             <Turkish>Silahını silah çantasına koy</Turkish>
             <Spanish>Poner el arma en la funda</Spanish>
         </Key>
+        <Key ID="STR_ACE_Gunbag_SwapGunbag">
+            <English>Swap weapons in gunbag</English>
+            <German>Tauschen Sie die Waffe in Waffentasche</German>
+            <French>Échangez vos armes dans un sac de tir</French>
+            <Russian>Поменять оружие в сумке</Russian>
+            <Czech>Vyměňujte zbraně v pušce</Czech>
+            <Japanese>ガンバッグの武器を交換する</Japanese>
+            <Polish>Zamień broń w worku z bronią</Polish>
+            <Korean>총 주머니에서 무기 교환</Korean>
+            <Italian>Scambia le armi nella sacca per armi</Italian>
+            <Chinesesimp>在枪袋中交换武器</Chinesesimp>
+            <Chinese>在槍袋中交換武器</Chinese>
+        </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
             <German>Hole Waffe aus Waffentasche</German>
