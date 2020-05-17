@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Builds color strings needed for displaying interaction text
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //Mixes 2 colors (number arrays) and makes a color string "#AARRGGBB" for structured text
 private _mixColor = {

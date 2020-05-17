@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Use Equipment items if any is available.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_items"];
 TRACE_2("params",_unit,_items);

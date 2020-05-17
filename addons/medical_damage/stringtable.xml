@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Medical_Damage">
+        <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_DisplayName">
+            <English>Player Critical Damage Threshold</English>
+            <Japanese>プレイヤーのクリティカル ダメージしきい値</Japanese>
+            <French>Seuil de dégât critique du joueur</French>
+            <Russian>Порог критического урона игрока</Russian>
+            <Portuguese>Limite de Dano Crítico do Jogador</Portuguese>
+            <Chinese>玩家重擊承受量</Chinese>
+            <Italian>Soglia danni critici del giocatore</Italian>
+            <Czech>Kritická míra poškození pro hráče</Czech>
+            <Polish>Próg Obrażeń Krytycznych Gracza</Polish>
+            <Spanish>Límite de daño crítico al jugador</Spanish>
+            <German>Schwelle für kritischen Spielerschaden</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
+            <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
+            <Japanese>プレイヤーが気絶になる前に受けられるダメージ量を決定できます。</Japanese>
+            <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
+            <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание.</Russian>
+            <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
+            <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
+            <Italian>Imposta la quantità di danno che un giocatore può ricevere prima di perdere conoscenza.</Italian>
+            <Czech>Nastavuje kolik poškození hráč může obdržet než upadne do bezvědomí.</Czech>
+            <Polish>Definiuje ilość obrażeń jaką może przyjąć gracz przed straceniem przytomności (oraz śmierci gdy "Suma urazów" jest włączona).</Polish>
+            <Spanish>Fijar la cantidad de daño que un jugador puede recivir antes de caer inconsciente</Spanish>
+            <German>Legt die Höhe des Schadens fest, den ein Spieler erhalten kann, bevor er ohnmächtig wird (oder stirbt, wenn "Summe aller Traumata" aktiviert ist).</German>
+            <Turkish>Bir oyuncunun bayılmadan önce alabileceği hasar miktarını belirler.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
+            <English>AI Critical Damage Threshold</English>
+            <Japanese>AI のクリティカル ダメージしきい値</Japanese>
+            <French>Seuil de dégât critique de l'IA</French>
+            <Russian>Порог критического урона AI</Russian>
+            <Portuguese>Limite de Dano Crítico da IA</Portuguese>
+            <Chinese>AI重擊承受量</Chinese>
+            <Italian>Soglia dei danni critici dell AI</Italian>
+            <Czech>Kritická míra poškození pro AI</Czech>
+            <Polish>Próg Obrażeń Krytycznych AI</Polish>
+            <Spanish>Límite de daño crítico de la IA</Spanish>
+            <German>Schwelle für kritischen KI-Schaden</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
+            <English>Sets the amount of damage an AI unit can receive before going unconscious (or dying when "Sum of Trauma" is enabled).</English>
+            <Japanese>AI が気絶になる前に受けられるダメージ量を決定できます。</Japanese>
+            <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
+            <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание.</Russian>
+            <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
+            <Chinese>設定AI在無意識之前能承受多少傷害</Chinese>
+            <Italian>Imposta la quantità di danno che un'unità AI può ricevere prima di perdere conoscenza.</Italian>
+            <Czech>Nastavuje kolik poškození AI může obdržet než upadne do bezvědomí.</Czech>
+            <Polish>Definiuje ilość obrażeń jaką może przyjąć AI przed straceniem przytomności (oraz śmierci gdy "Suma urazów" jest włączona).</Polish>
+            <Spanish>Fijar la cantidad de daño que la IA puede recivir antes de caer inconsciente</Spanish>
+            <German>Legt die Höhe des Schadens fest, den eine KI-Einheit erhalten kann, bevor sie ohnmächtig wird (oder stirbt, wenn "Summe aller Traumata" aktiviert ist).</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Abrasion">
+            <English>Scrape</English>
+            <German>Kratzer</German>
+            <Italian>Scorticatura</Italian>
+            <Russian>Ссадина</Russian>
+            <French>Écorchure</French>
+            <Polish>Draśnięcie</Polish>
+            <Spanish>Arañazo</Spanish>
+            <Hungarian>Horzsolás</Hungarian>
+            <Portuguese>Raspão</Portuguese>
+            <Czech>Odřenina</Czech>
+            <Japanese>擦り傷</Japanese>
+            <Korean>긁힘</Korean>
+            <Chinese>擦傷</Chinese>
+            <Turkish>Sıyrık</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Abrasion_Minor">
+            <English>Minor Scrape</English>
+            <German>Kleiner Kratzer</German>
+            <Italian>Minima Scorticatura</Italian>
+            <Russian>Малая ссадина</Russian>
+            <French>Petite écorchure</French>
+            <Polish>Pomniejsze draśnięcie</Polish>
+            <Spanish>Arañazo menor</Spanish>
+            <Hungarian>Kis horzsolás</Hungarian>
+            <Portuguese>Raspão leve</Portuguese>
+            <Czech>Malá odřenina</Czech>
+            <Japanese>小さな擦り傷</Japanese>
+            <Korean>조금 긁힘</Korean>
+            <Chinese>小擦傷</Chinese>
+            <Turkish>Küçük Sıyrık</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Abrasion_Medium">
+            <English>Medium Scrape</English>
+            <German>Mittlerer Kratzer</German>
+            <Italian>Media Scorticatura</Italian>
+            <Russian>Средняя ссадина</Russian>
+            <French>Moyenne écorchure</French>
+            <Polish>Średnie draśnięcie</Polish>
+            <Spanish>Arañazo medio</Spanish>
+            <Hungarian>Közepes horzsolás</Hungarian>
+            <Portuguese>Raspão médio</Portuguese>
+            <Czech>Středně velká odřenina</Czech>
+            <Japanese>中くらいの擦り傷</Japanese>
+            <Korean>꽤 긁힘</Korean>
+            <Chinese>中度擦傷</Chinese>
+            <Turkish>Orta Sıyrık</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Abrasion_Large">
+            <English>Large Scrape</English>
+            <German>Großer Kratzer</German>
+            <Italian>Alta Scorticatura</Italian>
+            <Russian>Большая ссадина</Russian>
+            <French>Grande écorchure</French>
+            <Polish>Duże draśnięcie</Polish>
+            <Spanish>Arañazo severo</Spanish>
+            <Hungarian>Nagy horzsolás</Hungarian>
+            <Portuguese>Raspão grave</Portuguese>
+            <Czech>Velká odřenina</Czech>
+            <Japanese>大きな擦り傷</Japanese>
+            <Korean>심하게 긁힘</Korean>
+            <Chinese>嚴重擦傷</Chinese>
+            <Turkish>Büyük Sıyrık</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Avulsion">
+            <English>Avulsion</English>
+            <German>Avulsion</German>
+            <Italian>Avulsione</Italian>
+            <Russian>Авульсия</Russian>
+            <French>Avulsion</French>
+            <Polish>Rana płatowa</Polish>
+            <Spanish>Avulsión</Spanish>
+            <Hungarian>Leszakadás</Hungarian>
+            <Portuguese>Avulsão</Portuguese>
+            <Czech>Avulze</Czech>
+            <Japanese>剥離傷</Japanese>
+            <Korean>떨어져나감</Korean>
+            <Chinese>撕除傷</Chinese>
+            <Turkish>Kopma</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Avulsion_Minor">
+            <English>Minor Avulsion</English>
+            <German>Kleine Avulsion</German>
+            <Italian>Minima Avulsione</Italian>
+            <Russian>Малая Авульсия</Russian>
+            <French>Petite avulsion</French>
+            <Polish>Pomniejsza rana płatowa</Polish>
+            <Spanish>Avulsión menor</Spanish>
+            <Hungarian>Kis leszakadás</Hungarian>
+            <Portuguese>Avulsão leve</Portuguese>
+            <Czech>Malá avulze</Czech>
+            <Japanese>小さな剥離傷</Japanese>
+            <Korean>조금 떨어져나감</Korean>
+            <Chinese>小撕除傷</Chinese>
+            <Turkish>Küçük Kopuk</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Avulsion_Medium">
+            <English>Medium Avulsion</English>
+            <German>Mittlere Avulsion</German>
+            <Italian>Media Avulsione</Italian>
+            <Russian>Средняя Авульсия</Russian>
+            <French>Moyenne avulsion</French>
+            <Polish>Średnia rana płatowa</Polish>
+            <Spanish>Avulsión media</Spanish>
+            <Hungarian>Közepes leszakadás</Hungarian>
+            <Portuguese>Avulsão média</Portuguese>
+            <Czech>Střední avulze</Czech>
+            <Japanese>中くらいの剥離傷</Japanese>
+            <Korean>꽤 떨어져나감</Korean>
+            <Chinese>中度撕除傷</Chinese>
+            <Turkish>Orta Kopuk</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Avulsion_Large">
+            <English>Large Avulsion</English>
+            <German>Große Avulsion</German>
+            <Italian>Alta Avulsione</Italian>
+            <Russian>Большая Авульсия</Russian>
+            <French>Grande avulsion</French>
+            <Polish>Duża rana płatowa</Polish>
+            <Spanish>Avulsión severa</Spanish>
+            <Hungarian>Nagy leszakadás</Hungarian>
+            <Portuguese>Avulsão grave</Portuguese>
+            <Czech>Velká avulze</Czech>
+            <Japanese>大きな剥離傷</Japanese>
+            <Korean>크게 떨어져나감</Korean>
+            <Chinese>嚴重撕除傷</Chinese>
+            <Turkish>Büyük Kopuk</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Contusion">
+            <English>Bruise</English>
+            <German>Prellung</German>
+            <Italian>Contusione</Italian>
+            <Russian>Ушиб</Russian>
+            <French>Hématome</French>
+            <Polish>Stłuczenie</Polish>
+            <Spanish>Contusión</Spanish>
+            <Hungarian>Zúzódás</Hungarian>
+            <Portuguese>Contusão</Portuguese>
+            <Czech>Modřina</Czech>
+            <Japanese>打ち傷</Japanese>
+            <Korean>멍</Korean>
+            <Chinese>挫傷</Chinese>
+            <Turkish>Yara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Contusion_Minor">
+            <English>Minor Bruise</English>
+            <German>Kleine Prellung</German>
+            <Italian>Minima Contusione</Italian>
+            <Russian>Слабый ушиб</Russian>
+            <French>Petit hématome</French>
+            <Polish>Pomniejsze stłuczenie</Polish>
+            <Spanish>Contusión menor</Spanish>
+            <Hungarian>Kis zúzódás</Hungarian>
+            <Portuguese>Contusão leve</Portuguese>
+            <Czech>Malá modřina</Czech>
+            <Japanese>小さな打ち傷</Japanese>
+            <Korean>조금 멍듬</Korean>
+            <Chinese>小挫傷</Chinese>
+            <Turkish>Küçük Yara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Contusion_Medium">
+            <English>Medium Bruise</English>
+            <German>Mittlere Prellung</German>
+            <Italian>Media Contusione</Italian>
+            <Russian>Средний ушиб</Russian>
+            <French>Moyen hématome</French>
+            <Polish>Średnie stłuczenie</Polish>
+            <Spanish>Contusión media</Spanish>
+            <Hungarian>Közepes zúzódás</Hungarian>
+            <Portuguese>Contusão média</Portuguese>
+            <Czech>Středně velká modřina</Czech>
+            <Japanese>中くらいの打ち傷</Japanese>
+            <Korean>꽤 멍듬</Korean>
+            <Chinese>中度挫傷</Chinese>
+            <Turkish>Orta Yara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Contusion_Large">
+            <English>Large Bruise</English>
+            <German>Große Prellung</German>
+            <Italian>Alta Contusione</Italian>
+            <Russian>Сильный ушиб</Russian>
+            <French>Grand hématome</French>
+            <Polish>Duże stłuczenie</Polish>
+            <Spanish>Contusión severa</Spanish>
+            <Hungarian>Nagy zúzódás</Hungarian>
+            <Portuguese>Contusão grave</Portuguese>
+            <Czech>Velká modřina</Czech>
+            <Japanese>大きな打撲傷</Japanese>
+            <Korean>심하게 멍듬</Korean>
+            <Chinese>嚴重挫傷</Chinese>
+            <Turkish>Büyük Yara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Crush">
+            <English>Crushed tissue</English>
+            <German>Quetschverletzung</German>
+            <Italian>Tessuto Schiacciato</Italian>
+            <Russian>Компрессионная травма</Russian>
+            <French>Tissu écrasé</French>
+            <Polish>Zgniecienie tkanek miękkich</Polish>
+            <Spanish>Tejido triturado</Spanish>
+            <Hungarian>Zúzott szövet</Hungarian>
+            <Portuguese>Tecido esmagado</Portuguese>
+            <Czech>Zhmoždění měkkých tkání</Czech>
+            <Japanese>圧挫傷</Japanese>
+            <Korean>뭉개짐</Korean>
+            <Chinese>壓迫傷</Chinese>
+            <Turkish>Ezilmiş Doku</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Crush_Minor">
+            <English>Minor crushed tissue</English>
+            <German>Kleine Quetschverletzung</German>
+            <Italian>Minimo Tessuto Schiacciato</Italian>
+            <Russian>Слабая компрессионная травма</Russian>
+            <French>Tissu légèrement écrasé</French>
+            <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
+            <Spanish>Tejido triturado menor</Spanish>
+            <Hungarian>Kis zúzott szövet</Hungarian>
+            <Portuguese>Tecido esmagado leve</Portuguese>
+            <Czech>Malé zhmoždění měkkých tkání</Czech>
+            <Japanese>小さな圧挫傷</Japanese>
+            <Korean>조금 뭉개짐</Korean>
+            <Chinese>小壓迫傷</Chinese>
+            <Turkish>Küçük Ezilmiş Doku</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Crush_Medium">
+            <English>Medium crushed tissue</English>
+            <German>Mittlere Quetschverletzung</German>
+            <Italian>Medio Tessuto Schiacciato</Italian>
+            <Russian>Умеренная компрессионная травма</Russian>
+            <French>Tissu moyennement écrasé</French>
+            <Polish>Średnie zgniecienie tkanek miękkich</Polish>
+            <Spanish>Tejido triturado medio</Spanish>
+            <Hungarian>Közepes zúzott szövet</Hungarian>
+            <Portuguese>Tecido esmagado médio</Portuguese>
+            <Czech>Střední zhmoždění měkkých tkání</Czech>
+            <Japanese>中くらいの圧挫傷</Japanese>
+            <Korean>꽤 뭉개짐</Korean>
+            <Chinese>中度壓迫傷</Chinese>
+            <Turkish>Orta Ezilmiş Doku</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Crush_Large">
+            <English>Large crushed tissue</English>
+            <German>Große Quetschverletzung</German>
+            <Italian>Alto Tessuto Schiacciato</Italian>
+            <Russian>Сильная компрессионная травма</Russian>
+            <French>Tissu fortement écrasé</French>
+            <Polish>Duże zgniecienie tkanek miękkich</Polish>
+            <Spanish>Tejido triturado severo</Spanish>
+            <Hungarian>Nagy zúzött szövet</Hungarian>
+            <Portuguese>Tecido esmagado grave</Portuguese>
+            <Czech>Velké zhmoždění měkkých tkání</Czech>
+            <Japanese>大きな圧挫傷</Japanese>
+            <Korean>심하게 뭉개짐</Korean>
+            <Chinese>嚴重壓迫傷</Chinese>
+            <Turkish>Büyük Ezilmiş Doku</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Cut">
+            <English>Cut</English>
+            <German>Schnittwunde</German>
+            <Italian>Taglio</Italian>
+            <Russian>Порез</Russian>
+            <French>Coupure</French>
+            <Polish>Rana cięta</Polish>
+            <Spanish>Corte</Spanish>
+            <Hungarian>Vágás</Hungarian>
+            <Portuguese>Corte</Portuguese>
+            <Czech>Řezná rána</Czech>
+            <Japanese>切り傷</Japanese>
+            <Korean>베임</Korean>
+            <Chinese>割傷</Chinese>
+            <Turkish>Kesik</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Cut_Minor">
+            <English>Small Cut</English>
+            <German>Kleine Schnittwunde</German>
+            <Italian>Piccolo Taglio</Italian>
+            <Russian>Мелкий порез</Russian>
+            <Polish>Pomniejsza rana cięta</Polish>
+            <Spanish>Corte menor</Spanish>
+            <Hungarian>Kis vágás</Hungarian>
+            <French>Petite coupure</French>
+            <Portuguese>Corte leve</Portuguese>
+            <Czech>Malá řezná rána</Czech>
+            <Japanese>小さな切り傷</Japanese>
+            <Korean>조금 베임</Korean>
+            <Chinese>小割傷</Chinese>
+            <Turkish>Küçük Kesik</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Cut_Medium">
+            <English>Medium Cut</English>
+            <German>Mittlere Schnittwunde</German>
+            <Italian>Medio Taglio</Italian>
+            <Russian>Средний порез</Russian>
+            <Polish>Średnia rana cięta</Polish>
+            <Spanish>Corte mediano</Spanish>
+            <Hungarian>Közepes vágás</Hungarian>
+            <French>Coupure moyenne</French>
+            <Portuguese>Corte médio</Portuguese>
+            <Czech>Střední řezná rána</Czech>
+            <Japanese>中くらいの切り傷</Japanese>
+            <Korean>꽤 베임</Korean>
+            <Chinese>中度割傷</Chinese>
+            <Turkish>Orta Kesik</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Cut_Large">
+            <English>Large Cut</English>
+            <German>Große Schnittwunde</German>
+            <Italian>Grande Taglio</Italian>
+            <Russian>Сильный порез</Russian>
+            <Polish>Duża rana cięta</Polish>
+            <Spanish>Corte severo</Spanish>
+            <Hungarian>Nagy vágás</Hungarian>
+            <French>Large coupure</French>
+            <Portuguese>Corte grave</Portuguese>
+            <Czech>Velká řezná rána</Czech>
+            <Japanese>大きな切り傷</Japanese>
+            <Korean>심하게 베임</Korean>
+            <Chinese>嚴重割傷</Chinese>
+            <Turkish>Büyük Kesik</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Laceration">
+            <English>Tear</English>
+            <German>Riss</German>
+            <Italian>Strappo</Italian>
+            <Russian>Рваная рана</Russian>
+            <Polish>Rozerwanie skóry</Polish>
+            <French>Lacération</French>
+            <Spanish>Desgarro</Spanish>
+            <Hungarian>Szakadás</Hungarian>
+            <Portuguese>Ruptura</Portuguese>
+            <Czech>Tržná rána</Czech>
+            <Japanese>裂傷</Japanese>
+            <Korean>찢어짐</Korean>
+            <Chinese>撕裂傷</Chinese>
+            <Turkish>Yırtık</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Laceration_Minor">
+            <English>Small Tear</English>
+            <German>Kleiner Riss</German>
+            <Italian>Piccolo Strappo</Italian>
+            <Russian>Малая рваная рана</Russian>
+            <Polish>Pomniejsze rozerwanie skóry</Polish>
+            <French>Petite lacération</French>
+            <Spanish>Desgarro menor</Spanish>
+            <Hungarian>Kis szakadás</Hungarian>
+            <Portuguese>Ruptura leve</Portuguese>
+            <Czech>Malá tržná rána</Czech>
+            <Japanese>小さな裂傷</Japanese>
+            <Korean>조금 찢어짐</Korean>
+            <Chinese>小撕裂傷</Chinese>
+            <Turkish>Küçük Yırtık</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Laceration_Medium">
+            <English>Medium Tear</English>
+            <German>Mittlerer Riss</German>
+            <Italian>Medio Strappo</Italian>
+            <Russian>Средняя рваная рана</Russian>
+            <Polish>Średnie rozerwanie skóry</Polish>
+            <Spanish>Desgarro medio</Spanish>
+            <Hungarian>Közepes szakadás</Hungarian>
+            <French>Moyenne lacération</French>
+            <Portuguese>Ruptura média</Portuguese>
+            <Czech>Střední tržná rána</Czech>
+            <Japanese>中くらいの裂傷</Japanese>
+            <Korean>꽤 찢어짐</Korean>
+            <Chinese>中度撕裂傷</Chinese>
+            <Turkish>Orta Yırtık</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Laceration_Large">
+            <English>Large Tear</English>
+            <German>Großer Riss</German>
+            <Italian>Grande Strappo</Italian>
+            <Russian>Большая рваная рана</Russian>
+            <Polish>Duże rozerwanie skóry</Polish>
+            <Spanish>Desgarro severo</Spanish>
+            <Hungarian>Nagy szakadás</Hungarian>
+            <French>Grande lacération</French>
+            <Portuguese>Ruptura grave</Portuguese>
+            <Czech>Velká tržná rána</Czech>
+            <Japanese>大きな裂傷</Japanese>
+            <Korean>심하게 찢어짐</Korean>
+            <Chinese>嚴重撕裂傷</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_VelocityWound">
+            <English>Velocity Wound</English>
+            <German>Ballistisches Trauma</German>
+            <Italian>Velocità Ferita</Italian>
+            <Russian>Огнестрельная рана</Russian>
+            <Polish>Rana postrzałowa</Polish>
+            <French>Plaie pénétrante</French>
+            <Spanish>Herida de bala</Spanish>
+            <Hungarian>Lőtt seb</Hungarian>
+            <Portuguese>Ferimento por projétil de arma de fogo</Portuguese>
+            <Czech>Střelné poranění</Czech>
+            <Japanese>銃創</Japanese>
+            <Korean>총상</Korean>
+            <Chinese>槍傷</Chinese>
+            <Turkish>Hız Yarası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_VelocityWound_Minor">
+            <English>Small Velocity Wound</English>
+            <German>Kleines Ballistisches Trauma</German>
+            <Italian>Lenta Velocità Ferita</Italian>
+            <Russian>Малая огнестрельная рана</Russian>
+            <Polish>Pomniejsza rana postrzałowa</Polish>
+            <Spanish>Herida de bala menor</Spanish>
+            <Hungarian>Kis lőtt seb</Hungarian>
+            <French>Petite plaie pénétrante</French>
+            <Portuguese>Ferimento leve por projétil de arma de fogo</Portuguese>
+            <Czech>Malé střelné poranění</Czech>
+            <Japanese>小さな銃創</Japanese>
+            <Korean>소형 총상</Korean>
+            <Chinese>小槍傷</Chinese>
+            <Turkish>Küçük Hız Yarası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_VelocityWound_Medium">
+            <English>Medium Velocity Wound</English>
+            <German>Mittleres Ballistisches Trauma</German>
+            <Italian>Media Velocità Ferita</Italian>
+            <Russian>Средняя огнестрельная рана</Russian>
+            <Polish>Średnia rana postrzałowa</Polish>
+            <Spanish>Herida de bala media</Spanish>
+            <Hungarian>Közepes lőtt seb</Hungarian>
+            <French>Plaie moyenne pénétrante</French>
+            <Portuguese>Ferimento médio por projétil de arma de fogo</Portuguese>
+            <Czech>Střední střelné poranění</Czech>
+            <Japanese>中くらいの銃創</Japanese>
+            <Korean>중형 총상</Korean>
+            <Chinese>中度槍傷</Chinese>
+            <Turkish>Orta Hız Yarası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_VelocityWound_Large">
+            <English>Large Velocity Wound</English>
+            <German>Großes Ballistisches Trauma</German>
+            <Italian>Alta Velocità Ferita</Italian>
+            <Russian>Большая огнестрельная рана</Russian>
+            <Polish>Duża rana postrzałowa</Polish>
+            <Spanish>Herida de bala severa</Spanish>
+            <Hungarian>Nagy lőtt seb</Hungarian>
+            <French>Grande plaie pénétrante</French>
+            <Portuguese>Ferimento grave por projétil de arma de fogo</Portuguese>
+            <Czech>Velké střelné poranění</Czech>
+            <Japanese>大きな銃創</Japanese>
+            <Korean>대형 총상</Korean>
+            <Chinese>嚴重槍傷</Chinese>
+            <Turkish>Büyük Hız Yarası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PunctureWound">
+            <English>Puncture Wound</English>
+            <German>Stichwunde</German>
+            <Italian>Puntura Ferita</Italian>
+            <Russian>Колотая рана</Russian>
+            <Polish>Rana kłuta</Polish>
+            <French>Blessure par perforation</French>
+            <Spanish>Herida punzante</Spanish>
+            <Hungarian>Szúrt seb</Hungarian>
+            <Portuguese>Ferimento por perfuração</Portuguese>
+            <Czech>Bodná rána</Czech>
+            <Japanese>刺し傷</Japanese>
+            <Korean>관통상</Korean>
+            <Chinese>刺傷</Chinese>
+            <Turkish>Delinme Yarası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PunctureWound_Minor">
+            <English>Minor Puncture Wound</English>
+            <German>Kleine Stichwunde</German>
+            <Italian>Piccola Puntura Ferita</Italian>
+            <Russian>Малая колотая рана</Russian>
+            <Polish>Pomniejsza rana kłuta</Polish>
+            <Spanish>Herida punzante menor</Spanish>
+            <Hungarian>Kis szúrt seb</Hungarian>
+            <French>Petite perforation</French>
+            <Portuguese>Ferimento leve por perfuração</Portuguese>
+            <Czech>Malá bodná rána</Czech>
+            <Japanese>小さな刺し傷</Japanese>
+            <Korean>소형 관통상</Korean>
+            <Chinese>小刺傷</Chinese>
+            <Turkish>Küçük Delinme Yarası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PunctureWound_Medium">
+            <English>Medium Puncture Wound</English>
+            <German>Mittlere Stichwunde</German>
+            <Italian>Media Puntura Ferita</Italian>
+            <Russian>Средняя колотая рана</Russian>
+            <Polish>Średnia rana kłuta</Polish>
+            <Spanish>Herida punzante media</Spanish>
+            <Hungarian>Közepes szúrt seb</Hungarian>
+            <French>Moyenne perforation</French>
+            <Portuguese>Ferimento médio por perfuração</Portuguese>
+            <Czech>Střední bodná rána</Czech>
+            <Japanese>中くらいの刺し傷</Japanese>
+            <Korean>중형 관통상</Korean>
+            <Chinese>中度刺傷</Chinese>
+            <Turkish>Orta Delinme Yarası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PunctureWound_Large">
+            <English>Large Puncture Wound</English>
+            <German>Große Stichwunde</German>
+            <Italian>Grande Puntura Ferita</Italian>
+            <Russian>Большая колотая рана</Russian>
+            <Polish>Duża rana kłuta</Polish>
+            <Spanish>Herida punzante severa</Spanish>
+            <Hungarian>Nagy szúrt seb</Hungarian>
+            <French>Grande perforation</French>
+            <Portuguese>Ferimento grave por perfuração</Portuguese>
+            <Czech>Velká bodná rána</Czech>
+            <Japanese>大きな刺し傷</Japanese>
+            <Korean>대형 관통상</Korean>
+            <Chinese>嚴重刺傷</Chinese>
+            <Turkish>Büyük Delinme Yarası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_DisplayName">
+            <English>Fatal Damage Source</English>
+            <Russian>Причина смертельного урона</Russian>
+            <Japanese>致命傷の原因</Japanese>
+            <Chinese>致命傷來源</Chinese>
+            <French>Cause de blessure mortelle</French>
+            <Italian>Fonte del danno fatale</Italian>
+            <Czech>Zdroj smrtelné škody</Czech>
+            <Polish>Źródło obrażeń krytycznych</Polish>
+            <Portuguese>Fonte de Dano Fatal</Portuguese>
+            <Spanish>Origen de daño fatal</Spanish>
+            <Turkish>Ölümcül Hasar Kaynağı</Turkish>
+            <German>Quelle für tödlichen Schaden</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
+            <English>Determines what damage can be fatal</English>
+            <Russian>Определяет какой урон будет смертельным</Russian>
+            <Japanese>致命傷となるダメージの種類を決定します。</Japanese>
+            <Chinese>決定何種傷害為致命</Chinese>
+            <Italian>Determina quali danni possono essere fatali</Italian>
+            <French>Détermine le type de blessures pouvant être fatales.</French>
+            <Czech>Nastavuje jaké poškození může být smrtelné</Czech>
+            <Polish>Określa jakie obrażenia mogą być śmiertelne</Polish>
+            <Portuguese>Determina qual dano pode ser fatal</Portuguese>
+            <Spanish>Determina qué daño puede ser fatal</Spanish>
+            <Turkish>Hangi hasarın ölümcül olabileceğini belirler</Turkish>
+            <German>Bestimmt welcher Schaden tödlich ist.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_vitalShotsOnly">
+            <English>Only large hits to vital organs</English>
+            <Russian>Только серьезные попадания в жизненно важные органы</Russian>
+            <Japanese>重要器官に大きなダメージを受けた時のみ</Japanese>
+            <Chinese>只有重要器官之重傷</Chinese>
+            <French>Grosses blessures sur organes vitaux</French>
+            <Italian>Solo grandi colpi agli organi vitali</Italian>
+            <Czech>Pouze zásahy do životně důležitých orgánů</Czech>
+            <Polish>Tylko duże trafienia w ważne narządy</Polish>
+            <Portuguese>Apenas danos largos a órgãos vitais</Portuguese>
+            <Spanish>Solo grandes heridas en organos vitales</Spanish>
+            <Turkish>Sadece hayati organlara büyük vuruşlar</Turkish>
+            <German>Nur schwere Treffer an lebenswichtigen Organen</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_trauma">
+            <English>Sum of trauma</English>
+            <Russian>Совокупность травмы</Russian>
+            <Japanese>外傷の数</Japanese>
+            <Chinese>外部創傷累計</Chinese>
+            <French>Somme des traumatismes</French>
+            <Italian>Somma dei traumi</Italian>
+            <Czech>Celkové množství úrazů</Czech>
+            <Polish>Suma urazów</Polish>
+            <Portuguese>Soma do trauma</Portuguese>
+            <Spanish>Suma de traumatismos</Spanish>
+            <German>Summe aller Traumata</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_both">
+            <English>Either</English>
+            <Russian>Оба</Russian>
+            <Japanese>両方</Japanese>
+            <Chinese>兩者都是</Chinese>
+            <French>Les deux</French>
+            <Italian>o</Italian>
+            <Czech>Kterýkoliv ze dvou</Czech>
+            <Polish>Zarówno</Polish>
+            <Portuguese>Ou</Portuguese>
+            <Spanish>Ambos</Spanish>
+            <Turkish>Ikisinden biri</Turkish>
+            <German>Beide</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
+            <English>Unit Damage Threshold</English>
+            <German>Schwelle für Schaden</German>
+            <French>Seuil de dégâts</French>
+            <Japanese>ユニットのダメージしきい値</Japanese>
+            <Czech>Práh poškození</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
+            <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
+            <German>Legt die Höhe des Schadens fest, den eine Einheit erhalten kann, bevor diese ohnmächtig wird. (0 für Misionsnormalwert)</German>
+            <French>Définit la quantité de dégâts que l'unité peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).\n(0 utilise la valeur définie dans la mission.)</French>
+            <Japanese>ユニットが気絶するまで許容できるダメージ値を設定できます。標準: 0</Japanese>
+            <Czech>Určuje kolik poškození může jednotka utrpět než upadne do bezvědomí. (pro použití standardní hodnoty mise zadejte 0)</Czech>
+        </Key>
+    </Package>
+</Project>

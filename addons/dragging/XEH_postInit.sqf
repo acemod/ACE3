@@ -27,14 +27,16 @@ if (isNil "ACE_maxWeightCarry") then {
 // handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
+// display event handler
+["MouseZChanged", {_this select 1 call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
+
 //@todo Captivity?
 
 //Add Keybind:
-["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)),
-{
+["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)), {
     if (!alive ACE_player) exitWith {false};
     if !([ACE_player, objNull, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    
+
     // If we are drag/carrying something right now then just drop it:
     if (ACE_player getVariable [QGVAR(isDragging), false]) exitWith {
         [ACE_player, ACE_player getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
@@ -51,7 +53,6 @@ if (isNil "ACE_maxWeightCarry") then {
 
     [ACE_player, _cursor] call FUNC(startDrag);
     false
-},
-{false},
-[-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
-
+}, {
+    false
+}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND

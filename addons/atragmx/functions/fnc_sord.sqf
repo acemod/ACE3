@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Handles incoming data packets from the Vectronix Vector LRF
@@ -11,11 +12,10 @@
  * None
  *
  * Example:
- * [1000, 45, 1] call ace_microdagr_fnc_recieveRangefinderData
+ * [1000, 45, 1] call ace_atragmx_fnc_sord
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!GVAR(initialised)) exitWith {};
 

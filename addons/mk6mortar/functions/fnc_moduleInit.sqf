@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Loads settings from the module.
@@ -15,9 +16,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_logic", "_syncedUnits", "_activated"];
+params ["_logic", "", "_activated"];
 
 if (!_activated) exitWith {WARNING("Module - placed but not active");};
 

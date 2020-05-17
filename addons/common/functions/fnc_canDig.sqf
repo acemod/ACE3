@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg, commy2
  * Checks if the player can dig on the surface below (enough dust).
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -31,7 +31,7 @@ private _surfaceDust = getNumber (_config >> "dust");
 TRACE_2("Surface",_surfaceType,_surfaceDust);
 
 if (isNumber (_config >> "ACE_canDig")) then {
-    getNumber (_config >> "ACE_canDig") // return
+    (getNumber (_config >> "ACE_canDig")) == 1 // return
 } else {
     !(_surfaceType in DIG_SURFACE_BLACKLIST) && {(_surfaceDust >= 0.1) || {_surfaceType in DIG_SURFACE_WHITELIST}} // return
 };

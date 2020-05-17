@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Determines night vision source (player/vehicle) - Updates UI based on type.
@@ -13,11 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 TRACE_1("refreshGoggleType",_this);
 
-if (!GVAR(running)) exitWith {};
+if (!GVAR(running) || {GVAR(effectScaling) == 0}) exitWith {};
 
 // Defaults (good for most vehicles/binoculars)
 private _borderImage = "";
@@ -34,6 +34,7 @@ if (alive ACE_player) then {
         private _vehConfig = configFile >> "CfgVehicles" >> (typeOf _currentVehicle);
 
         if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
+        if ([ACE_player] call CBA_fnc_canUseWeapon) exitWith {true}; // FFV
 
         if (ACE_player == (driver _currentVehicle)) exitWith {
             !("NVG" in getArray (_vehConfig >> "ViewOptics" >> "visionMode"));

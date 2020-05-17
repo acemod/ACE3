@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Waypoint function for the fast rope waypoint.
@@ -10,12 +11,10 @@
  * true <BOOL>
  *
  * Example:
- * [_group, [6560, 12390, 0]] call ace_fastroping_fnc_deployAIWayoint
+ * [_group, [6560, 12390, 0]] call ace_fastroping_fnc_deployAIWaypoint
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params [["_group", grpNull, [grpNull]], ["_position", [0, 0, 0], [[]], 3]];
 
 private _vehicle = vehicle leader _group;

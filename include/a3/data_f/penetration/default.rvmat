@@ -1,0 +1,9 @@
+surfaceInfo="A3\data_f\Penetration\default.bisurf";
+ambient[]={0.48699999,0.32800001,0.249,1};
+diffuse[]={0.48699999,0.32800001,0.249,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,1};
+specular[]={0,0,0,1};
+specularPower=1;
+PixelShaderID="Normal";
+VertexShaderID="Basic";

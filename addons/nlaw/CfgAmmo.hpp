@@ -29,6 +29,7 @@ class CfgAmmo {
             // Attack profile type selection
             defaultAttackProfile = QGVAR(directAttack);
             attackProfiles[] = {QGVAR(directAttack), QGVAR(overflyTopAttack)};
+            useModeForAttackProfile = 1;
             showHintOnCycle = 1;
 
             // Run once at fired event
@@ -39,11 +40,11 @@ class CfgAmmo {
     // Sub ammos used in OTA mode (see fnc_seeker.sqf)
     class ACE_NLAW_Explosion: ACE_NLAW { // Based on FCS-Airburst, will explode right away
         timeToLive = 0;
-        model = "";
+        model = "\A3\weapons_f\empty";
     };
     class ACE_NLAW_ShapedCharge: ACE_NLAW { // Shaped charge from rocket explosion, no effects
         timeToLive = 1;
-        model = "";
+        model = "\A3\weapons_f\empty";
         hit = 750;
         indirectHit = 0;
         indirectHitRange = 0;

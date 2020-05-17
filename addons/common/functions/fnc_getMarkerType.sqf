@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Get the apropriate marker for a group.
@@ -9,11 +10,10 @@
  * Marker Type <STRING>
  *
  * Example:
- * ["GROUP"] call ace_common_fnc_getmarkerType
+ * ["GROUP"] call ace_common_fnc_getMarkerType
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_group"];
 

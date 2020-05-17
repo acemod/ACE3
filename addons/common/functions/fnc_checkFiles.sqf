@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Compares version numbers of PBOs and DLLs.
@@ -13,14 +14,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ///////////////
 // check addons
 ///////////////
 private _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
-
-INFO_1("ACE is version %1.",_version);
 
 //CBA Versioning check - close main display if using incompatible version
 private _cbaVersionAr = getArray (configFile >> "CfgPatches" >> "cba_main" >> "versionAr");
@@ -29,7 +27,7 @@ private _cbaRequiredAr = getArray (configFile >> "CfgSettings" >> "CBA" >> "Vers
 private _cbaVersionStr = _cbaVersionAr joinString ".";
 private _cbaRequiredStr = _cbaRequiredAr joinString ".";
 
-INFO_2("CBA is version %1 (min required %2)",_cbaVersionStr,_cbaRequiredStr);
+INFO_3("ACE is version %1 - CBA is version %2 (min required %3)",_version,_cbaVersionStr,_cbaRequiredStr);
 
 if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) then {
     private _errorMsg = format ["CBA version %1 is outdated (required %2)", _cbaVersionStr, _cbaRequiredStr];
@@ -40,9 +38,7 @@ if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) the
 };
 
 //private _addons = activatedAddons; // broken with High-Command module, see #2134
-private _addons = "true" configClasses (configFile >> "CfgPatches");//
-_addons = _addons apply {toLower configName _x};//
-_addons = _addons select {_x find "ace_" == 0};
+private _addons = (cba_common_addons select {(_x select [0,4]) == "ace_"}) apply {toLower _x};
 
 private _oldCompats = [];
 {
@@ -69,38 +65,46 @@ if (!(_oldCompats isEqualTo [])) then {
 };
 
 ///////////////
-// check dlls
+// check extensions
 ///////////////
-if (toLower (productVersion select 6) in ["linux", "osx"]) then {
-    INFO_2("Operating system does not support DLL file format");
+private _platform = toLower (productVersion select 6);
+if (!isServer && {_platform in ["linux", "osx"]}) then {
+    // Linux and OSX client ports do not support extensions at all
+    INFO("Operating system does not support extensions");
 } else {
     {
-        private _versionEx = _x callExtension "version";
+        private _extension = configName _x;
+        private _isWindows = _platform == "windows" && {getNumber (_x >> "windows") == 1};
+        private _isLinux = _platform == "linux" && {getNumber (_x >> "linux") == 1};
+        private _isClient = hasInterface && {getNumber (_x >> "client") == 1};
+        private _isServer = !hasInterface && {getNumber (_x >> "server") == 1};
 
-        if (_versionEx == "") then {
-            private _extension = ".dll";
+        if ((_isWindows || _isLinux) && {_isClient || _isServer}) then {
+            private _versionEx = _extension callExtension "version";
+            if (_versionEx == "") then {
+                private _extensionFile = _extension;
+                if (productVersion select 7 == "x64") then {
+                    _extensionFile = format ["%1_x64", _extensionFile];
+                };
 
-            if (productVersion select 7 == "x64") then {
-                _extension = "_x64.dll";
+                private _platformExt = [".dll", ".so"] select (_platform == "linux");
+                _extensionFile = format ["%1%2", _extensionFile, _platformExt];
+
+                private _errorMsg = format ["Extension %1 not found.", _extensionFile];
+                ERROR(_errorMsg);
+
+                if (hasInterface) then {
+                    ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+                };
+            } else {
+                // Print the current extension version
+                INFO_2("Extension version: %1: %2",_extension,_versionEx);
             };
-
-            if (productVersion select 6 == "Linux") then {
-                _extension = ".so";
-            };
-
-            private _errorMsg = format ["Extension %1%2 not found.", _x, _extension];
-
-            ERROR(_errorMsg);
-
-            if (hasInterface) then {
-                ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
-            };
-        } else {
-            // Print the current extension version
-            INFO_2("Extension version: %1: %2",_x,_versionEx);
         };
-        false
-    } count getArray (configFile >> "ACE_Extensions" >> "extensions");
+    } forEach ("true" configClasses (configFile >> "ACE_Extensions"));
+};
+if (isArray (configFile >> "ACE_Extensions" >> "extensions")) then {
+    WARNING("extensions[] array no longer supported");
 };
 
 ///////////////

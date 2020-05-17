@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Verify the provided loadout.
@@ -10,8 +12,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_loadout"];
 
@@ -211,7 +211,7 @@ for "_dataIndex" from 0 to 9 do {
         };
 
         case 9: {
-            for "_subIndex" from 0 to 4 do {
+            for "_subIndex" from 0 to 5 do {
                 private _item = (_loadout select _dataIndex) select _subIndex;
 
                 if (_item != "") then {

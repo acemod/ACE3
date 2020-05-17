@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Selects random tag and applies it.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 // Exit if Quick Tag disabled
 if (GVAR(quickTag) == 0) exitWith {};
@@ -49,6 +48,17 @@ if (GVAR(quickTag) == 3) then {
 
 // Tag
 if !(_possibleTags isEqualTo []) then {
-    private _availableTags = _possibleTags select {(_x select 2) in ((items _unit) apply {toLower _x})};
-    [_unit, selectRandom ((selectRandom _availableTags) select 3)] call FUNC(tag);
+    private _availableTags = _possibleTags select {(_x select 2) in (_unit call EFUNC(common,uniqueItems))};
+    (selectRandom _availableTags) params ["", "", "", "_textures", "", "_materials"];
+
+    (
+        if (count _textures == count _materials) then {
+            private _textureIndex = floor random count _textures;
+            [_textures select _textureIndex, _materials select _textureIndex]
+        } else {
+            [selectRandom _textures, selectRandom _materials]
+        }
+    ) params ["_randomTexture", "_randomMaterial"];
+
+    [_unit, _randomTexture, _randomMaterial] call FUNC(tag);
 };

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Cycles through the gun list
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * call ace_atragmx_fnc_cycle_scope_unit
+ * call ace_atragmx_fnc_cycle_gun_list
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!(GVAR(showMainPage) || GVAR(showGunList))) exitWith {};
 

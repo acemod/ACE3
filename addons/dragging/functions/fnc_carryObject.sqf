@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Carry an object.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
@@ -63,7 +63,7 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 if (_target isKindOf "CAManBase") then {
     [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);
 } else {
-    [localize LSTRING(Drop), "", localize LSTRING(LowerRaise)] call EFUNC(interaction,showMouseHint);
+    [localize LSTRING(Drop), "", localize LSTRING(RaiseLowerRotate)] call EFUNC(interaction,showMouseHint);
 };
 
 // check everything

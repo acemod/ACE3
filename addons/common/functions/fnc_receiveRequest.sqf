@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * N/A
@@ -13,11 +14,10 @@
  * None
  *
  * Example:
- * [bob, kevin, "ID", "Message", {Callback}] call ace_common_fnc_recieveRequest
+ * [bob, kevin, "ID", "Message", {Callback}] call ace_common_fnc_receiveRequest
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 
@@ -33,7 +33,7 @@ if (isLocalized _requestMessage) then {
 
 hint format ["%1", _requestMessage]; // @todo ?
 
-if !(isNil QGVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT)) then {
+if (!isNil QGVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT)) then {
     terminate GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT);
 };
 

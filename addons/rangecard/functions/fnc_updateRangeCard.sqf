@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Authors: Ruthberg
  * Updates the range card data
@@ -13,11 +14,10 @@
  * None
  *
  * Example:
- * [1, 2, "ammo", "magazine", "weapon"] call ace_rangecard_fnc_openRangeCard
+ * [1, 2, "ammo", "magazine", "weapon"] call ace_rangecard_fnc_updateRangeCard
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 #define __dsp (uiNamespace getVariable "RangleCard_Display")

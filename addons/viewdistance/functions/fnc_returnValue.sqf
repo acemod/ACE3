@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Winter
  * Returns the view distance value according to the given index.
@@ -9,12 +10,10 @@
  * View Distance <NUMBER>
  *
  * Example:
- * [2] call ace_viewdistance_fnc_returnViewDistanceValue
+ * [2] call ace_viewdistance_fnc_returnValue
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_index"];
 

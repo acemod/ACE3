@@ -1,44 +1,68 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project name="ace_Maverick">
-    <Package name="main">
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Maverick">
         <Container name="magazines">
-            <Key ID="str_ace_maverick_l_mag_descr">
+            <Key ID="STR_ACE_Maverick_l_mag_descr">
                 <English>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</English>
                 <German>AGM-65 Maverick L, lasergelenkte Luft-Boden-Rakete</German>
-                <Italian>AGM-65 Maverick L, Guida Laser Missile-Anti-Terra</Italian>
+                <Italian>AGM-65 Maverick L, Guida Laser Missile Anti-Terra</Italian>
                 <Japanese>AGM-65 マーベリック L、レーザー誘導対地ミサイル</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型，雷射導引對地導彈</Chinese>
-                <Chinesesimp>AGM-65"小牛"飞弹L型，雷射导引对地导弹</Chinesesimp>
+                <Chinesesimp>AGM-65"小牛"空地L型，雷射导引对地导弹</Chinesesimp>
                 <Korean>AGM-65 Maverick L, 레이저 유도 대지 미사일</Korean>
+                <Polish>AGM-65 Maverick L, Kierowany laserowo pocisk powietrze-ziemia</Polish>
+                <Russian>AGM-65 Maverick L, ракета Воздух-Земля с лазерным наведением</Russian>
+                <Portuguese>AGM-65 Maverick L, Míssil Anti Chão Guiado a Laser</Portuguese>
+                <French>AGM-65L Maverick, Missile Air-Sol à Guidage Laser</French>
+                <Czech>AGM-65 Maverick L, Laserem naváděná střela vzduch-země</Czech>
+                <Turkish>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</Turkish>
             </Key>
-            <Key ID="str_ace_maverick_l_mag_x1">
+            <Key ID="STR_ACE_Maverick_l_mag_x1">
                 <English>AGM-65 Maverick L [ACE]</English>
                 <German>AGM-65 Maverick L [ACE]</German>
                 <Italian>AGM-65 Maverick L [ACE]</Italian>
                 <Japanese>AGM-65 マーベリック L [ACE]</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型 [ACE]</Chinese>
-                <Chinesesimp>AGM-65"小牛"飞弹L型 [ACE]</Chinesesimp>
+                <Chinesesimp>AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Korean>AGM-65 Maverick L [ACE]</Korean>
+                <Polish>AGM-65 Maverick L [ACE]</Polish>
+                <Russian>AGM-65 Maverick L [ACE]</Russian>
+                <Portuguese>AGM-65 Maverick L [ACE]</Portuguese>
+                <French>1x AGM-65L Maverick [ACE]</French>
+                <Czech>AGM-65 Maverick L [ACE]</Czech>
+                <Turkish>AGM-65 Maverick L [ACE]</Turkish>
             </Key>
-            <Key ID="str_ace_maverick_l_mag_x2">
+            <Key ID="STR_ACE_Maverick_l_mag_x2">
                 <English>2x AGM-65 Maverick L [ACE]</English>
                 <German>2x AGM-65 Maverick L [ACE]</German>
                 <Italian>2x AGM-65 Maverick L [ACE]</Italian>
                 <Japanese>2x AGM-65 マーベリック L [ACE]</Japanese>
                 <Chinese>2x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
-                <Chinesesimp>2x AGM-65"小牛"飞弹L型 [ACE]</Chinesesimp>
+                <Chinesesimp>2x AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Korean>2x AGM-65 Maverick L [ACE]</Korean>
+                <Polish>2x AGM-65 Maverick L [ACE]</Polish>
+                <Russian>2x AGM-65 Maverick L [ACE]</Russian>
+                <Portuguese>2x AGM-65 Maverick L [ACE]</Portuguese>
+                <French>2x AGM-65L Maverick [ACE]</French>
+                <Czech>2x AGM-65 Maverick L [ACE]</Czech>
+                <Turkish>2x AGM-65 Maverick L [ACE]</Turkish>
             </Key>
-            <Key ID="str_ace_maverick_l_mag_x3">
+            <Key ID="STR_ACE_Maverick_l_mag_x3">
                 <English>3x AGM-65 Maverick L [ACE]</English>
                 <German>3x AGM-65 Maverick L [ACE]</German>
                 <Italian>3x AGM-65 Maverick L [ACE]</Italian>
                 <Japanese>3x AGM-65 マーベリック L [ACE]</Japanese>
                 <Chinese>3x AGM-65"小牛"飛彈L型 [ACE]</Chinese>
-                <Chinesesimp>3x AGM-65"小牛"飞弹L型 [ACE]</Chinesesimp>
+                <Chinesesimp>3x AGM-65"小牛"空地L型 [ACE]</Chinesesimp>
                 <Korean>3x AGM-65 Maverick L [ACE]</Korean>
+                <Polish>3x AGM-65 Maverick L [ACE]</Polish>
+                <Russian>3x AGM-65 Maverick L [ACE]</Russian>
+                <Portuguese>3x AGM-65 Maverick L [ACE]</Portuguese>
+                <French>3x AGM-65L Maverick [ACE]</French>
+                <Czech>3x AGM-65 Maverick L [ACE]</Czech>
+                <Turkish>3x AGM-65 Maverick L [ACE]</Turkish>
             </Key>
-            <Key ID="str_ace_maverick_l_mag_short">
+            <Key ID="STR_ACE_Maverick_l_mag_short">
                 <English>Laser Guided</English>
                 <German>Lasergelenkt</German>
                 <Italian>Guida Laser</Italian>
@@ -46,40 +70,74 @@
                 <Chinese>雷射導引</Chinese>
                 <Chinesesimp>雷射导引</Chinesesimp>
                 <Korean>레이저 유도</Korean>
+                <Polish>Kierowany laserowo</Polish>
+                <Russian>С лазерным наведением</Russian>
+                <Portuguese>Guiado a laser</Portuguese>
+                <French>Guidage Laser</French>
+                <Czech>Laserem naváděná</Czech>
+                <Turkish>Lazer Güdümlü</Turkish>
             </Key>
-            <Key ID="str_ace_maverick_kh25ml_mag_descr">
+            <Key ID="STR_ACE_Maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
                 <German>Ch-25ML, Lasergelenkte Luft-Boden-Rakete</German>
                 <Korean>Kh-25ML, 레이저 유도 대공 미사일</Korean>
                 <Chinese>Kh-25ML，雷射導引對地導彈</Chinese>
-                <Chinesesimp>Kh-25ML，雷射导引对地导弹</Chinesesimp>
+                <Chinesesimp>Kh-25ML，镭射导引空地导弹</Chinesesimp>
+                <Japanese>Kh-25ML、レーザー誘導対地ミサイル</Japanese>
+                <Italian>Kh-25ML, a Guida Laser Missile Aria-Terra</Italian>
+                <Polish>Kh-25ML, Kierowany laserowo pocisk powietrze-ziemia</Polish>
+                <Russian>Х-25МЛ, ракета Воздух-Земля с лазерным наведением</Russian>
+                <Portuguese>Kh-25ML, Míssil Ar para Chão Guiado a Laser</Portuguese>
+                <French>Kh-25ML, Missile Air-Sol à Guidage Laser</French>
+                <Czech>Kh-25ML, Laserem naváděná střela vzduch-země</Czech>
+                <Turkish>Kh-25ML, Laser Guided Air-to-Ground-Missile</Turkish>
             </Key>
-            <Key ID="str_ace_maverick_kh25ml_mag_x1">
+            <Key ID="STR_ACE_Maverick_kh25ml_mag_x1">
                 <English>1x Kh-25ML [ACE]</English>
                 <German>1x Ch-25ML [ACE]</German>
                 <Russian>1x Х-25МЛ [ACE]</Russian>
                 <Korean>1x Kh-25ML [ACE]</Korean>
                 <Chinese>1x Kh-25ML [ACE]</Chinese>
-                <Chinesesimp>1x Kh-25ML [ACE]</Chinesesimp>
+                <Chinesesimp>1x Kh-25ML镭射空地导弹 [ACE]</Chinesesimp>
+                <Japanese>1x Kh-25ML [ACE]</Japanese>
+                <Italian>1x Kh-25ML [ACE]</Italian>
+                <Polish>1x Kh-25ML [ACE]</Polish>
+                <Portuguese>1x Kh-25ML [ACE]</Portuguese>
+                <French>1x Kh-25ML [ACE]</French>
+                <Czech>1x Kh-25ML [ACE]</Czech>
+                <Turkish>1x Kh-25ML [ACE]</Turkish>
             </Key>
         </Container>
         <Container name="weapons">
-            <Key ID="str_ace_maverick_l">
+            <Key ID="STR_ACE_Maverick_l">
                 <English>AGM-65 Maverick L</English>
                 <German>AGM-65 Maverick L</German>
                 <Italian>AGM-65 Maverick L</Italian>
                 <Japanese>AGM-65 マーベリック L</Japanese>
-                <Chinese>AGM-65"小牛"飛彈L型</Chinese>
+                <Chinese>AGM-65"小牛"空地L型</Chinese>
                 <Chinesesimp>AGM-65"小牛"飞弹L型</Chinesesimp>
                 <Korean>AGM-65 Maverick L</Korean>
+                <Polish>AGM-65 Maverick L</Polish>
+                <Russian>AGM-65 Maverick L</Russian>
+                <Portuguese>AGM-65 Maverick L</Portuguese>
+                <French>AGM-65L Maverick</French>
+                <Czech>AGM-65 Maverick L</Czech>
+                <Turkish>AGM-65 Maverick L</Turkish>
             </Key>
-            <Key ID="str_ace_maverick_kh25ml">
+            <Key ID="STR_ACE_Maverick_kh25ml">
                 <English>Kh-25ML</English>
                 <German>Ch-25ML</German>
                 <Russian>Х-25МЛ</Russian>
                 <Korean>Kh-25ML</Korean>
                 <Chinese>Kh-25ML</Chinese>
-                <Chinesesimp>Kh-25ML</Chinesesimp>
+                <Chinesesimp>Kh-25ML镭射空地导弹</Chinesesimp>
+                <Japanese>Kh-25ML</Japanese>
+                <Italian>Kh-25ML</Italian>
+                <Polish>Kh-25ML</Polish>
+                <Portuguese>Kh-25ML</Portuguese>
+                <French>Kh-25ML</French>
+                <Czech>Kh-25ML</Czech>
+                <Turkish>Kh-25ML</Turkish>
             </Key>
         </Container>
     </Package>

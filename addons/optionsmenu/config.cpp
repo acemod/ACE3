@@ -30,7 +30,10 @@ class CfgAddons {
 #include "gui\pauseMenu.hpp"
 
 class ACE_Extensions {
-    extensions[] += {"ace_clipboard"};
+    class ace_clipboard {
+        windows = 1;
+        client = 1;
+    };
 };
 
 class CfgCommands {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Adds a round to the blacklist (will be ignored).
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_round"];
 TRACE_1("addBlackList",_round);

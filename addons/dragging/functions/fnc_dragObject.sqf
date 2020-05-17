@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Drag an object. Called from ace_dragging_fnc_startDrag
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
@@ -63,6 +63,9 @@ GVAR(currentHeightChange) = 0;
 
 // prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+
+// fixes not being able to move when in combat pace
+[_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
 
 if !(_UAVCrew isEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;

@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Fill right panel.
@@ -11,19 +13,13 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
-
-#ifdef ENABLE_PERF_PROFILING
-    private _scopeFillRightPanel = createProfileScope QFUNC(fillRightPanel);
-#endif
 
 params ["_display", "_control"];
 
 private _ctrlIDC = ctrlIDC _control;
 
 // Fade old control background
-if !(isNil QGVAR(currentRightPanel)) then {
+if (!isNil QGVAR(currentRightPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentRightPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
     _previousCtrlBackground ctrlCommit FADE_DELAY;
@@ -82,17 +78,19 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
         private _index = _forEachIndex;
 
         {
-            private _subIndex = _forEachIndex;
+            private _subIndex = _forEachIndex min 1;
             {
-                // Magazine group
-                if !(isClass (configFile >> "CfgMagazines" >> _x)) then {
-                    private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
-                    private _magArray = [_magazineGroups, _x] call CBA_fnc_hashGet;
-                    {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
-                } else {
-                    ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
-                }
+                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
+
+            // Magazine groups
+            {
+                private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
+                private _magArray = [_magazineGroups, toLower _x] call CBA_fnc_hashGet;
+                {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
+            } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
+
+
         } foreach getArray (_weaponConfig >> "muzzles");
     };
 } foreach [primaryWeapon GVAR(center), handgunWeapon GVAR(center), secondaryWeapon GVAR(center)];
@@ -137,6 +135,12 @@ switch (GVAR(currentLeftPanel)) do {
         _ctrlPanel = _display displayCtrl IDC_rightTabContentListnBox;
     };
 };
+
+// Force a "refresh" animation of the panel
+_ctrlPanel ctrlSetFade 1;
+_ctrlPanel ctrlCommit 0;
+_ctrlPanel ctrlSetFade 0;
+_ctrlPanel ctrlCommit FADE_DELAY;
 
 _itemsToCheck = _itemsToCheck apply {toLower _x};
 _compatibleItems =  _compatibleItems apply {toLower _x};
@@ -284,9 +288,7 @@ switch (_ctrlIDC) do {
     };
 };
 
-if (GVAR(currentRightPanel) != _ctrlIDC) then {
-    (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
-};
+(_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
 
 GVAR(currentRightPanel) = _ctrlIDC;
 

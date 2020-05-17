@@ -1,11 +1,16 @@
 ---
 layout: wiki
-title: How to report an issue
+title: How to Report an Issue
 description: If you have found an issue with ACE3 please read this entry before reporting it.
 group: user
 order: 10
 parent: wiki
 ---
+
+<a href="{{ site.baseurl }}/img/wiki/user/issue_flowchart.png" target="_blank">
+    <center><img src="{{ site.baseurl }}/img/wiki/user/issue_flowchart.png" width="200" alt="Issue Flowchart" /></center>
+    <center><i>Issue Flowchart - click to enlarge</i></center>
+</a>
 
 ### Before reporting
 

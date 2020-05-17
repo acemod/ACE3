@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the terrain roughness length at a given world position
@@ -13,14 +14,15 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Source: http://es.ucsc.edu/~jnoble/wind/extrap/index.html
 #define ROUGHNESS_LENGTHS [0.0002, 0.0005, 0.0024, 0.03, 0.055, 0.1, 0.2, 0.4, 0.8, 1.6]
 
 private _windSource = _this vectorDiff ((vectorNormalized wind) vectorMultiply 25);
-
-private _nearBuildings = count (_windSource nearObjects ["Building", 50]);
+private _nearBuildings = {
+    // Filter lights - fixes high roughness on airports (#6602)
+    str _x find "light" == -1
+} count (_windSource nearObjects ["Building", 50]);
 private _isWater = surfaceIsWater _windSource;
 
 if (_nearBuildings == 0 && _isWater) exitWith {

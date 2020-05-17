@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Phyma
  * Find glass door.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_distance", "_house", "_door"];
 

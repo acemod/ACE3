@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Adds controller slide actions.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_objects", "_images", "_names", "_controller", "_currentSlideshow"];
 

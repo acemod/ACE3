@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Zapat, Dslyecxi, Jonpas
  * Draws throw arc.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Disable drawing when intersecting with the vehicle
 if !([ACE_player] call FUNC(canThrow)) exitWith {
@@ -53,7 +53,7 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
             if (lineIntersects [_prevTrajASL, _newTrajASL]) then { // Checks the "VIEW" LOD
                 _cross = 2; // 2: View LOD Block (Red)
             } else {
-                if (!((lineIntersectsSurfaces [_prevTrajASL, _newTrajASL, _activeThrowable, ACE_player, true, 1, "GEOM", "FIRE"]) isEqualTo [])) then {
+                if !((lineIntersectsSurfaces [_prevTrajASL, _newTrajASL, _activeThrowable, ACE_player, true, 1, "GEOM", "FIRE"]) isEqualTo []) then {
                     _cross = 3; // 3: GEOM/FIRE LOD Block (Yellow) - pass a3 bulding glass, but blocked on some CUP glass
                 };
             };

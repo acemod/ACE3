@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Refreshes nvg effect if switching NVG goggles.
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * [player] call ace_nightvision_fnc_onLoadoutChange
+ * [player] call ace_nightvision_fnc_onLoadoutChanged
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
 TRACE_1("onLoadoutChange",_player);

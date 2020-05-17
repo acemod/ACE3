@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Fastroping">
         <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
             <English>Equip FRIES</English>
             <German>Rüste FRIES aus</German>
             <Polish>Wyposaż FRIES</Polish>
-            <French>Equiper le FRIES</French>
+            <French>Équiper le FRIES</French>
             <Spanish>Equipar FRIES</Spanish>
             <Italian>Equipaggia il FRIES</Italian>
             <Czech>Vybavit FRIES</Czech>
@@ -20,13 +20,13 @@
             <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
             <German>Rüstet kompatible Helikopter mit einem Fast Rope Insertion Extraction System aus.</German>
             <Polish>Wyposaża kompatybilne helikoptery w zestaw Fast Rope Insertion Extraction System.</Polish>
-            <French>Equipe les hélicoptères compatibles avec un Module Fast Rope Insertion Extraction System.</French>
-            <Spanish>Equipar helicoptero compatible con un Sistema de Inserción Extracción Fast Rope.</Spanish>
+            <French>Équipe les hélicoptères compatibles avec un FRIES (Fast Rope Insertion Extraction System).</French>
+            <Spanish>Equipar helicoptero compatible con un Sistema de Inserción/Extracción Rápida por Cuerda.</Spanish>
             <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
             <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам.</Russian>
-            <Japanese>ヘリコプターで Fast Rope Insertion Extraction System を使えるようにします</Japanese>
+            <Japanese>ヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
             <Korean>패스트로프 투입 및 탈출 시스템을 호환되는 헬리콥터에 적용합니다.</Korean>
             <Chinesesimp>使可相容的直升机启用快速绳降及撤离系统</Chinesesimp>
             <Chinese>使可相容的直升機啟用快速繩降及撤離系統</Chinese>
@@ -35,8 +35,8 @@
             <English>Prepare fast roping system</English>
             <German>Bereite "Fast Roping"-System vor</German>
             <Polish>Przygotuj system zjazdu na linach</Polish>
-            <French>Préparer le système de corde lisse</French>
-            <Spanish>Preparar el sistema fast roping</Spanish>
+            <French>Préparer le système d'aérocordage</French>
+            <Spanish>Preparar el sistema de Cuerda Rápida</Spanish>
             <Italian>Prepara le corde</Italian>
             <Czech>Připravit systém slaňování</Czech>
             <Portuguese>Prepara sistema de descida rápida</Portuguese>
@@ -45,6 +45,7 @@
             <Korean>패스트로프 준비</Korean>
             <Chinesesimp>准备快速绳降系统</Chinesesimp>
             <Chinese>準備快速繩降系統</Chinese>
+            <Turkish>Halatla inme sistemini hazırla</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_stowFRIES">
             <English>Stow fast roping system</English>
@@ -54,6 +55,12 @@
             <Chinese>收起快速繩降系統</Chinese>
             <Chinesesimp>收起快速绳降系统</Chinesesimp>
             <Korean>패스트 로프 시스템 보관</Korean>
+            <Polish>Schowaj system zjazdu na linach</Polish>
+            <Russian>Спрятать систему спуска</Russian>
+            <Portuguese>Recolher o sistema de descida rápida</Portuguese>
+            <French>Désactiver le système d'aérocordage</French>
+            <Czech>Odložit systém slaňování</Czech>
+            <Spanish>Recoger sistema de Cuerda Rápida</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -69,12 +76,13 @@
             <Korean>줄 배치</Korean>
             <Chinesesimp>部属绳索</Chinesesimp>
             <Chinese>部屬繩索</Chinese>
+            <Turkish>Halatları sal</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
             <English>Fast rope</English>
             <German>Abseilen</German>
             <Polish>Zjedź na linie</Polish>
-            <French>Descendre à la corde</French>
+            <French>Aérocordage - Descendre en rappel</French>
             <Spanish>Descender por la cuerda</Spanish>
             <Italian>Scendi dalla corda</Italian>
             <Czech>SLANIT</Czech>
@@ -84,12 +92,13 @@
             <Korean>강하하기</Korean>
             <Chinesesimp>快速绳降</Chinesesimp>
             <Chinese>快速繩降</Chinese>
+            <Turkish>Halatla in</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
             <English>Cut ropes</English>
             <German>Seile abwerfen</German>
             <Polish>Odetnij liny</Polish>
-            <French>Détacher les cordes</French>
+            <French>Aérocordage - Couper les cordes</French>
             <Spanish>Cortar cuerdas</Spanish>
             <Italian>Taglia le corde</Italian>
             <Czech>Odříznout lano</Czech>
@@ -99,12 +108,13 @@
             <Korean>줄 자르기</Korean>
             <Chinesesimp>剪掉绳索</Chinesesimp>
             <Chinese>剪掉繩索</Chinese>
+            <Turkish>Halatı Kes</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES">
             <English>Equip helicopter with FRIES</English>
             <German>Rüste Helicopter mit FRIES aus</German>
             <Polish>Wyposaż helikopter w FRIES</Polish>
-            <French>Equiper l'hélicoptère avec le FRIES</French>
+            <French>Équiper l'hélicoptère d'un FRIES</French>
             <Spanish>Equipar helicoptero con FRIES</Spanish>
             <Italian>Equipaggia l'elicottero con il FRIES</Italian>
             <Czech>Vybavit vrtulník pomocí FRIES</Czech>
@@ -119,8 +129,8 @@
             <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
             <German>Rüstet den ausgewählten Helicopter mit einem Fast Rope Insertion Extraction System aus</German>
             <Polish>Wyposaża wybrany helikopter w zestaw Fast Rope Insertion Extraction System</Polish>
-            <French>Equipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System</French>
-            <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción Extracción Fast Rope</Spanish>
+            <French>Équipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System (système d'aérocordage).</French>
+            <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción/Extracción Rápida por Cuerda</Spanish>
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
             <Portuguese>Equipa um helicóptero selecionado com um sistema de Fast Rope Insertion Extraction System</Portuguese>
@@ -135,13 +145,205 @@
             <German>EINHEITEN ABSEILEN LASSEN</German>
             <Italian>SCENDI DALLE CORDE</Italian>
             <Portuguese>Equipa o helicóptero selecionado com o Fast Rope Insertion Extraction System</Portuguese>
-            <French>LAISSER LES UNITES UTILISER LA CORDE </French>
+            <French>LAISSER LES UNITÉS UTILISER LA CORDE</French>
             <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
             <Japanese>ユニットへファスト ロープをさせる</Japanese>
             <Polish>ZJAZD NA LINACH</Polish>
             <Chinesesimp>让单位快速绳降</Chinesesimp>
             <Chinese>讓單位快速繩降</Chinese>
             <Korean>패스트 로프를 놓음</Korean>
+            <Czech>UMOŽNIT JEDNOTKÁM SLAŇOVAT</Czech>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
+            <English>Deploy 12m ropes</English>
+            <German>12m Seile einsetzen</German>
+            <French>Déployer les cordes de 12 m</French>
+            <Japanese>12m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 12 m.</Polish>
+            <Russian>Выпустить 12 м канат</Russian>
+            <Portuguese>Jogar cordar (12m)</Portuguese>
+            <Chinese>部屬12公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 12m</Italian>
+            <Czech>Připravit 12m lana</Czech>
+            <Turkish>12m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 12m</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
+            <English>Deploy 15m ropes</English>
+            <German>15m Seile einsetzen</German>
+            <French>Déployer les cordes de 15 m</French>
+            <Japanese>15m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 15 m.</Polish>
+            <Russian>Выпустить 15 м канат</Russian>
+            <Portuguese>Jogar cordar (15m)</Portuguese>
+            <Chinese>部屬15公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 15m</Italian>
+            <Czech>Připravit 15m lana</Czech>
+            <Turkish>15m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 15m</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
+            <English>Deploy 18m ropes</English>
+            <German>18m Seile einsetzen</German>
+            <French>Déployer les cordes de 18 m</French>
+            <Japanese>18m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 18 m.</Polish>
+            <Russian>Выпустить 18 м канат</Russian>
+            <Portuguese>Jogar cordar (18m)</Portuguese>
+            <Chinese>部屬18公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 18m</Italian>
+            <Czech>Připravit 18m lana</Czech>
+            <Turkish>18m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 18m</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
+            <English>Deploy 27m ropes</English>
+            <German>27m Seile einsetzen</German>
+            <French>Déployer les cordes de 27 m</French>
+            <Japanese>27m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 27 m.</Polish>
+            <Russian>Выпустить 27 м канат</Russian>
+            <Portuguese>Jogar cordar (27m)</Portuguese>
+            <Chinese>部屬27公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 27m</Italian>
+            <Czech>Připravit 27m lana</Czech>
+            <Turkish>27m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 27m</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
+            <English>Deploy 36m ropes</English>
+            <German>36m Seile einsetzen</German>
+            <French>Déployer les cordes de 36 m</French>
+            <Japanese>36m ロープを展開</Japanese>
+            <Polish>Wysuń linę o długości 36 m.</Polish>
+            <Russian>Выпустить 36 м канат</Russian>
+            <Portuguese>Jogar cordar (36m)</Portuguese>
+            <Chinese>部屬36公尺長之繩索</Chinese>
+            <Italian>Dispiegamento corde 36m</Italian>
+            <Czech>Připravit 36m lana</Czech>
+            <Turkish>36m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 36m</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Ropesupply">
+            <English>[ACE] Ropes Supply crate</English>
+            <German>[ACE] Seil Versorgungskiste</German>
+            <French>[ACE] Caisse de Cordes</French>
+            <Japanese>[ACE] ロープ収納箱</Japanese>
+            <Polish>Skrzynia z linami ACE</Polish>
+            <Russian>[ACE] Ящик с канатами</Russian>
+            <Portuguese>[ACE] Suprimento de cordas</Portuguese>
+            <Chinese>[ACE] 繩索補充箱</Chinese>
+            <Italian>[ACE] Cassa Corde</Italian>
+            <Czech>[ACE] Bedna s lany</Czech>
+            <Turkish>[ACE] Halat Sandığı</Turkish>
+            <Spanish>[ACE] Caja de suministros - cuerdas</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_descriptionShort">
+            <English>Used to do deploy ropes from a compatibile helicopter</English>
+            <German>Wird zum Bereitstellen von Seilen aus einem kompatiblen Hubschrauber verwendet</German>
+            <French>Utilisé pour déployer des cordes depuis un hélicoptère compatible.</French>
+            <Japanese>対応するヘリコプターからロープを展開する為に使用されます</Japanese>
+            <Polish>Używane do opuszczania lin z kompatybilnych smigłowców</Polish>
+            <Russian>Используется для выпуска канатов с совместимого вертолета</Russian>
+            <Portuguese>Usado para fazer descida rápida de corda em helicópteros compatíveis com FRIES</Portuguese>
+            <Chinese>在可相容的直升機上部屬繩索</Chinese>
+            <Italian>Utilizzato per distribuire corde da un elicottero compatibile</Italian>
+            <Czech>Používané na přípravu lan na slaňování z kompatibilních helikoptér</Czech>
+            <Spanish>Usar para desplegar cuerdas desde helicopteros compatibles</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_12_Display">
+            <English>Rope 12.2 meters</English>
+            <German>12.2 Meter Seil</German>
+            <French>Corde de 12,2 mètres</French>
+            <Japanese>ロープ (12.2 メートル)</Japanese>
+            <Polish>Lina, długość 12,2 m.</Polish>
+            <Russian>Канат 12.2 метров</Russian>
+            <Portuguese>Corda (12.2m)</Portuguese>
+            <Chinese>繩索（12.2公尺長）</Chinese>
+            <Italian>Corda da 12.2 metri</Italian>
+            <Czech>Lano 12.2 metrů</Czech>
+            <Turkish>12.2 metre halat</Turkish>
+            <Spanish>Cuerda de 12.2 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_15_Display">
+            <English>Rope 15.2 meters</English>
+            <German>15.2 Meter Seil</German>
+            <French>Corde de 15,2 mètres</French>
+            <Japanese>ロープ (15.2 メートル)</Japanese>
+            <Polish>Lina, długość 15,2 m.</Polish>
+            <Russian>Канат 15.2 метров</Russian>
+            <Portuguese>Corda (15.2m)</Portuguese>
+            <Chinese>繩索（15.2公尺長）</Chinese>
+            <Italian>Corda da 15.2 metri</Italian>
+            <Czech>Lano 15.2 metrů</Czech>
+            <Turkish>15.2 metre halat</Turkish>
+            <Spanish>Cuerda de 15.2 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_18_Display">
+            <English>Rope 18.3 meters</English>
+            <German>18.3 Meter Seil</German>
+            <French>Corde de 18,3 mètres</French>
+            <Japanese>ロープ (18.3 メートル)</Japanese>
+            <Polish>Lina, długość 18,3 m.</Polish>
+            <Russian>Канат 18.3 метров</Russian>
+            <Portuguese>Corda (18.3m)</Portuguese>
+            <Chinese>繩索（18.3公尺長）</Chinese>
+            <Italian>Corda da 18.3 metri</Italian>
+            <Czech>Lano 18.3 metrů</Czech>
+            <Turkish>18.3 metre halat</Turkish>
+            <Spanish>Cuerda de 18.3 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_27_Display">
+            <English>Rope 27.4 meters</English>
+            <German>27.4 Meter Seil</German>
+            <French>Corde de 27,4 mètres</French>
+            <Japanese>ロープ (27.4 メートル)</Japanese>
+            <Polish>Lina, długość 27,4 m.</Polish>
+            <Russian>Канат 27.4 метров</Russian>
+            <Portuguese>Corda (27.4m)</Portuguese>
+            <Chinese>繩索（27.4公尺長）</Chinese>
+            <Italian>Corda da 27.4 metri</Italian>
+            <Czech>Lano 27.4 metrů</Czech>
+            <Turkish>27.4 metre halat</Turkish>
+            <Spanish>Cuerda de 27.4 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Rope_36_Display">
+            <English>Rope 36.6 meters</English>
+            <German>36.6 Meter Seil</German>
+            <French>Corde de 36,6 mètres</French>
+            <Japanese>ロープ (36.6 メートル)</Japanese>
+            <Polish>Lina, długość 36,6 m.</Polish>
+            <Russian>Канат 36.6 метров</Russian>
+            <Portuguese>Corda (36.6m)</Portuguese>
+            <Chinese>繩索（36.6公尺長）</Chinese>
+            <Italian>Corda da 36.6 metri</Italian>
+            <Czech>Lano 36.6 metrů</Czech>
+            <Turkish>36.6 metre halat</Turkish>
+            <Spanish>Cuerda 36.6 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_setting_categoryMenu_displayName">
+            <English>Fast-roping</English>
+            <French>Aérocordage</French>
+            <Chinese>快速繩降</Chinese>
+            <Japanese>ファスト ロープ</Japanese>
+            <Spanish>Cuerdas rápidas</Spanish>
+            <Polish>Zjazd na linach</Polish>
+            <Turkish>Halatla Kayma</Turkish>
+            <Czech>Slaňování</Czech>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
+            <English>Require rope item to deploy</English>
+            <German>Seil-Item zum aufbauen benötigt</German>
+            <French>Nécessite une corde pour le déploiement</French>
+            <Japanese>展開にはロープ アイテムを必須に</Japanese>
+            <Polish>Wymaga przedmiotu typu lina </Polish>
+            <Russian>Требуется канат</Russian>
+            <Portuguese>Requer uma corda para jogar</Portuguese>
+            <Chinese>需要繩索來部屬</Chinese>
+            <Italian>Richiede una corda per il dispigamento</Italian>
+            <Czech>Požadovat předmět lana pro slaňování</Czech>
+            <Spanish>Requiere una cuerda para desplegar</Spanish>
+            <Turkish>Halatla kaymak için halat gerekli</Turkish>
         </Key>
     </Package>
 </Project>

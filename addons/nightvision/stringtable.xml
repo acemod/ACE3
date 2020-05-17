@@ -1,13 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NightVision">
         <Key ID="STR_ACE_NightVision_Category">
             <English>ACE Nightvision</English>
             <Japanese>ACE 暗視装置</Japanese>
-            <Italian>Visione notturna ACE</Italian>
+            <Italian>ACE Visione notturna</Italian>
             <German>ACE-Nachtsicht</German>
             <Chinese>ACE夜視鏡</Chinese>
             <Chinesesimp>ACE夜视镜</Chinesesimp>
+            <French>ACE Vision Nocturne</French>
+            <Polish>ACE Noktowizja</Polish>
+            <Russian>ACE ПНВ</Russian>
+            <Portuguese>ACE Visão Noturna</Portuguese>
+            <Czech>ACE Noční vidění</Czech>
+            <Turkish>ACE Gece Görüşü</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
             <English>NV Goggles (Gen1)</English>
@@ -24,6 +30,7 @@
             <Korean>야투경 (1세대)</Korean>
             <Chinesesimp>夜视镜 (初代)</Chinesesimp>
             <Chinese>夜視鏡 (初代)</Chinese>
+            <Turkish>GG Gözlüğü (1. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2">
             <English>NV Goggles (Gen2)</English>
@@ -40,6 +47,7 @@
             <Korean>야투경 (2세대)</Korean>
             <Chinesesimp>夜视镜 (二代)</Chinesesimp>
             <Chinese>夜視鏡 (二代)</Chinese>
+            <Turkish>GG Gözlüğü (2. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -56,6 +64,7 @@
             <Korean>야투경 (3세대)</Korean>
             <Chinesesimp>夜视镜 (三代)</Chinesesimp>
             <Chinese>夜視鏡 (三代)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_brown">
             <English>NV Goggles (Gen3, Brown)</English>
@@ -72,6 +81,7 @@
             <Korean>야투경 (3세대, 갈색)</Korean>
             <Chinesesimp>夜视镜 (三代, 棕色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 棕色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Kahverengi)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green">
             <English>NV Goggles (Gen3, Green)</English>
@@ -88,6 +98,7 @@
             <Korean>야투경 (3세대, 녹색)</Korean>
             <Chinesesimp>夜视镜 (三代, 绿色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 綠色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black">
             <English>NV Goggles (Gen3, Black)</English>
@@ -104,6 +115,7 @@
             <Korean>야투경 (3세대, 검정색)</Korean>
             <Chinesesimp>夜视镜 (三代, 黑色)</Chinesesimp>
             <Chinese>夜視鏡 (三代, 黑色)</Chinese>
+            <Turkish>GG Gözlüğü (3. Jen Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4">
             <English>NV Goggles (Gen4)</English>
@@ -120,6 +132,7 @@
             <Korean>야투경 (4세대)</Korean>
             <Chinesesimp>夜视镜 (四代)</Chinesesimp>
             <Chinese>夜視鏡 (四代)</Chinese>
+            <Turkish>GG Gözlüğü (4. Jen)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_FullScreen">
             <English>NV Goggles (Wide)</English>
@@ -136,6 +149,7 @@
             <Korean>야투경 (넓음)</Korean>
             <Chinesesimp>夜视镜 (宽版)</Chinesesimp>
             <Chinese>夜視鏡 (寬版)</Chinese>
+            <Turkish>GG Gözlüğü (Geniş)</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -152,6 +166,7 @@
             <Korean>밝기: %1</Korean>
             <Chinesesimp>亮度: %1</Chinesesimp>
             <Chinese>亮度: %1</Chinese>
+            <Turkish>Parlaklık: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_IncreaseNVGBrightness">
             <English>Increase NVG Brightness</English>
@@ -168,6 +183,7 @@
             <Korean>야투경 밝기 높이기</Korean>
             <Chinesesimp>增加夜视镜亮度</Chinesesimp>
             <Chinese>增加夜視鏡亮度</Chinese>
+            <Turkish>Gece Görüşü Parlaklığını Arttır</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_DecreaseNVGBrightness">
             <English>Decrease NVG Brightness</English>
@@ -175,7 +191,7 @@
             <Spanish>Disminuir el brillo de las NVG</Spanish>
             <Polish>Zmniejsz czułość noktowizji</Polish>
             <Czech>Snížení jasu noktovizoru</Czech>
-            <French>Baisser la luminosité des JVN</French>
+            <French>Abaisser la luminosité des JVN</French>
             <Russian>Уменьшить яркость ПНВ</Russian>
             <Hungarian>Éjjellátó fényerejének csökkentése</Hungarian>
             <Portuguese>Diminuir Luminosidade do EVN</Portuguese>
@@ -184,11 +200,12 @@
             <Korean>야투경 밝기 줄이기</Korean>
             <Chinesesimp>减少夜视镜亮度</Chinesesimp>
             <Chinese>減少夜視鏡亮度</Chinese>
+            <Turkish>Gece Görüşü Parlaklığını Düşür</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_DisplayName">
             <English>Nightvision</English>
             <German>Nachtsicht</German>
-            <Russian>Ночное виденье</Russian>
+            <Russian>Ночное видение</Russian>
             <Portuguese>Visão Noturna</Portuguese>
             <Czech>Noční vidění</Czech>
             <Polish>Noktowizja</Polish>
@@ -199,51 +216,54 @@
             <Korean>야간투시경</Korean>
             <Chinesesimp>夜视</Chinesesimp>
             <Chinese>夜視</Chinese>
+            <Turkish>Gece Görüşü</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_Description">
             <English>Settings for night vision.</English>
             <German>Einstellungen für Nachtsichtgeräte.</German>
-            <Russian>Настройки ночного виденья</Russian>
+            <Russian>Настройки приборов ночного видения</Russian>
             <Portuguese>Ajustes para visão noturna.</Portuguese>
             <Czech>Nastavení nočního vidění</Czech>
             <Polish>Ustawienia noktowizorów</Polish>
             <Italian>Impostazioni per visione notturna.</Italian>
             <Spanish>Parámetros para visión nocturna</Spanish>
-            <French>Réglage pour la vision nocturne</French>
-            <Japanese>暗視装置の設定。</Japanese>
+            <French>Réglages pour la vision nocturne.</French>
+            <Japanese>暗視装置の設定をします。</Japanese>
             <Korean>야간투시경 설정</Korean>
             <Chinesesimp>设定夜视选项.</Chinesesimp>
-            <Chinese>設定夜視選項.</Chinese>
+            <Chinese>設定夜視選項</Chinese>
+            <Turkish>Gece görüşü ayarı.</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
             <German>Deakt. NS mit Visier</German>
             <Russian>Убирать ПНВ при прицеливании</Russian>
             <Portuguese>Desabilitar visão noturna nas lunetas</Portuguese>
-            <Czech>Zakázat NVG v zaměřovači</Czech>
+            <Czech>Zakázat noktovizor u puškohledů</Czech>
             <Polish>Wył. NVG przy celowaniu</Polish>
             <Italian>Disabilita NVG nei mirini</Italian>
             <Spanish>Desactivar NVG en miras</Spanish>
-            <French>Desactiver les JVN dans les viseurs.</French>
+            <French>Désactiver les JVN dans les viseurs</French>
             <Japanese>スコープでは暗視装置を無効化</Japanese>
             <Korean>조준경 사용시 야투경 비활성화</Korean>
             <Chinesesimp>使用瞄准镜时关闭夜视镜</Chinesesimp>
             <Chinese>使用瞄準鏡時關閉夜視鏡</Chinese>
+            <Turkish>Gece görüşünü dürbünde kapat.</Turkish>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_Description">
             <English>Blocks the usage of night vision goggles whilst aiming down the sight.</English>
             <German>Blockiert die Nachtsichtbrillen beim Verwenden des Visiers.</German>
-            <Russian>Блокирует использование головного ПНВ при прицеливании через прицел.</Russian>
+            <Russian>Блокирует использование головного ПНВ при прицеливании</Russian>
             <Portuguese>Bloqueia o uso de visão noturna ao utilizar a mira.</Portuguese>
-            <Czech>Zabraňuje používání nokovizoru v režimu zaměřovače.</Czech>
+            <Czech>Zabraňuje používání noktovizoru při použití mířidel.</Czech>
             <Polish>Uniemożliwia korzystanie z gogli noktowizyjnych przy celowaniu.</Polish>
             <Italian>Blocca l'uso di visori notturni mentre miri con ottiche.</Italian>
             <Spanish>Desactiva el uso de gafas visión nocturna cuando se utilizan miras normales.</Spanish>
             <French>Bloque l'usage des JVN pendant la visée.</French>
-            <Japanese>スコープを使い狙いを付けると、暗視装置を無効化します。</Japanese>
+            <Japanese>スコープで狙いを付けると、暗視装置を無効化します。</Japanese>
             <Korean>조준시 야투경의 사용을 제한합니다.</Korean>
             <Chinesesimp>此功能开启后，当要使用瞄准镜时，为避免夜视镜镜头碰撞到瞄准镜，会先拿开夜视镜后再进行瞄准镜瞄准。</Chinesesimp>
-            <Chinese>此功能開啟後，當要使用瞄準鏡時，為避免夜視鏡鏡頭碰撞到瞄準鏡，會先拿開夜視鏡後再進行瞄準鏡瞄準。</Chinese>
+            <Chinese>此功能開啟後，當要使用瞄準鏡時，為避免夜視鏡鏡頭碰撞到瞄準鏡，會先拿開夜視鏡後再進行瞄準鏡瞄準</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_DisplayName">
             <English>NVG Fog Scale</English>
@@ -252,14 +272,26 @@
             <German>Nebel in Nachtsicht</German>
             <Chinese>夜視鏡霧氣程度</Chinese>
             <Chinesesimp>夜视镜雾气程度</Chinesesimp>
+            <French>Épaisseur du brouillard (JVN)</French>
+            <Polish>Skala Mgły NVG</Polish>
+            <Russian>Степень размытия ПНВ</Russian>
+            <Portuguese>Escala de Névoa na NVG</Portuguese>
+            <Czech>Míra mlhy pro noktovizor</Czech>
+            <Spanish>Escala de niebla NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_fogScaling_Description">
             <English>Fog is used to limit visibility.</English>
             <Japanese>霧は視界制限のために使われます。</Japanese>
             <Italian>La nebbia viene utilizzata per limitare la visibilità.</Italian>
             <German>Nebel wird genutzt, um die Sichtbarkeit einzuschränken.</German>
-            <Chinese>透過霧氣來縮減夜視鏡的可視距離。</Chinese>
+            <Chinese>透過霧氣來縮減夜視鏡的可視距離</Chinese>
             <Chinesesimp>透过雾气来缩减夜视镜的可视距离。</Chinesesimp>
+            <French>Le brouillard est utilisé pour limiter la visibilité.</French>
+            <Polish>Mgła jest wykorzystywana do ograniczenia widoczności.</Polish>
+            <Russian>Туман используется для ограничения видимости</Russian>
+            <Portuguese>Névoa é usada para limitar visibilidade.</Portuguese>
+            <Czech>Mlha je použita pro omezení dohledu.</Czech>
+            <Spanish>Niebla es usada para limitar la visibilidad</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_DisplayName">
             <English>NVG Effect Scale</English>
@@ -268,6 +300,12 @@
             <German>Nachtsichteffekte</German>
             <Chinese>夜視鏡效果程度</Chinese>
             <Chinesesimp>夜视镜效果程度</Chinesesimp>
+            <French>Intensité des effets</French>
+            <Polish>Skala Efektów NVG</Polish>
+            <Russian>Степень эффектов ПНВ</Russian>
+            <Portuguese>Intensidade de efeito da Visão Noturna</Portuguese>
+            <Czech>Míra efektu pro noktovizor</Czech>
+            <Spanish>Escala del efecto NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_effectScaling_Description">
             <English>Blur and brightness effects [Setting to 0 will disable ALL nightvision effects]</English>
@@ -276,31 +314,82 @@
             <German>Unschärfe und Helligkeitseffekte [Dies auf 0 zu setzen deaktiviert SÄMTLICHE Nachtsichteffekte]</German>
             <Chinese>調整模糊與亮度的效果。[設值為0會關閉所有夜視鏡的特殊效果]</Chinese>
             <Chinesesimp>调整模糊与亮度的效果。[设值为0会关闭所有夜视镜的特殊效果]</Chinesesimp>
+            <French>Effets de flou et de luminosité. [Régler cette option sur 0 désactivera TOUS les effets de vision nocturne.]</French>
+            <Polish>Efekty rozmazania i jasności [Ustawienie na 0 wyłączy WSZYSTKIE efekty noktowizji]</Polish>
+            <Russian>Эффекты размытия и яркости [Установка на 0 отключит ВСЕ эффекты ПНВ]</Russian>
+            <Portuguese>Efeitos de borrão e brilho [Definir 0 desativa TODOS os efeitos da Visão Noturna]</Portuguese>
+            <Czech>Rozostření a jas [Nastavení na 0 vypne VŠECHNY efekty nočního vidění]</Czech>
+            <Spanish>Efectos de emborronado y brillo [Configuración a 0 deshabilita todos los efectos de visión nocturna]</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_aimDownSightsBlur_DisplayName">
             <English>Aim Down Sights Blur</English>
-            <Japanese>照準器を使用時にぼかし</Japanese>
+            <Japanese>照準器を覗く時にぼかし</Japanese>
             <German>Visierunschärfe</German>
             <Chinese>瞄準具模糊程度</Chinese>
             <Chinesesimp>瞄准具模糊程度</Chinesesimp>
+            <French>Flou de visée</French>
+            <Italian>Blur durante la mira</Italian>
+            <Polish>Rozmazanie podczas celowania z narządów celowniczych</Polish>
+            <Russian>Размытие при опущеном прицеле</Russian>
+            <Portuguese>Borrão ao mirar</Portuguese>
+            <Czech>Rozostření při použití mířidel</Czech>
+            <Spanish>Emborronado al mirar</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_DisplayName">
             <English>NVG Noise Scale</English>
             <German>Intensität des Bildrauschens</German>
             <Chinese>夜視鏡雜訊程度</Chinese>
             <Chinesesimp>夜视镜杂讯程度</Chinesesimp>
+            <Japanese>暗視装置のノイズ度</Japanese>
+            <French>Intensité du bruit (JVN)</French>
+            <Italian>Fattore di Disturbo del NVG</Italian>
+            <Polish>Skala Szumu NVG</Polish>
+            <Russian>Степень шума ПНВ</Russian>
+            <Portuguese>Intensidade de Ruído/Efeito Granulado</Portuguese>
+            <Czech>Míra šumu pro noktovizor</Czech>
+            <Spanish>Escala de ruido/granulado NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_noiseScaling_Description">
             <English>Image noise intensity when wearing NVGs</English>
             <German>Intensität des Bildrauschens im Nachtsichtgerät</German>
             <Chinese>調整配戴夜視鏡時畫面雜訊的多寡。</Chinese>
             <Chinesesimp>调整配戴夜视镜时画面杂讯的多寡。</Chinesesimp>
+            <Japanese>暗視装置を使用時に起きる画像ノイズの強度です</Japanese>
+            <French>Intensité du bruit de l'image lorsque vous portez des JVN.</French>
+            <Italian>Intensità del disturbo dell'immagine quando i NVG sono equipaggiati</Italian>
+            <Polish>Intensywność efektu szumu podczas noszenia gogli noktowizyjnych</Polish>
+            <Russian>Интенсивность шума при использовании ПНВ</Russian>
+            <Portuguese>Intensidade de Ruído de Imagem ao utilizar Visão Noturna</Portuguese>
+            <Czech>Intezita šumu při používání noktovizoru</Czech>
+            <Spanish>Intensidad de ruido de la imagen cuando se usa NVG</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_DisplayName">
             <English>Shutter Effects</English>
+            <German>Rolling-Shutter-Effekt</German>
+            <Japanese>シャッター効果</Japanese>
+            <Chinesesimp>快门效果</Chinesesimp>
+            <Chinese>快門效果</Chinese>
+            <French>Effets d'obturateur</French>
+            <Italian>Effetti lampeggianti</Italian>
+            <Polish>Efekt Shutter</Polish>
+            <Russian>Эффекты затвора</Russian>
+            <Portuguese>Efeito de Obturador</Portuguese>
+            <Czech>Efekt závěrky</Czech>
+            <Spanish>Efecto de obturador</Spanish>
         </Key>
         <Key ID="STR_ACE_NightVision_shutterEffects_description">
             <English>Rolling shutter effect from muzzle flashes</English>
+            <German>Rolling-Shutter-Effekt bei Müdungsfeuer</German>
+            <Japanese>発射炎が作るローリング シャッター効果です</Japanese>
+            <Chinesesimp>枪械开火时产生瞬间快门效果</Chinesesimp>
+            <Chinese>槍開火時瞬間產生快門效果</Chinese>
+            <French>Effet d'obturateur à rideau dû aux flashs du canon.</French>
+            <Italian>Effetto lampeggiante dato dal lampo dello sparo</Italian>
+            <Polish>Efekt rolling shutter z błysków wylotowych</Polish>
+            <Russian>Эффект затвора при вспышках выстрелов</Russian>
+            <Portuguese>Efeito de rolamento de Obturador de flashes de focinho</Portuguese>
+            <Czech>Efekt závěrky z důsledku výšlehu při střelbě</Czech>
+            <Spanish>Efecto obturador por los fogonazos de la boca del cañón</Spanish>
         </Key>
     </Package>
 </Project>

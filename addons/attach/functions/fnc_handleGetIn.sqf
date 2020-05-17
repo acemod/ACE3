@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles when a unit gets in to a vehicle.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "", "_unit"];
 TRACE_1("params",_unit);

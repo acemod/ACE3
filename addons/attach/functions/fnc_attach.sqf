@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: eRazeri, esteldunedain, PabstMirror
  * Attach an item to the unit
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_attachToVehicle","_unit","_args", ["_silentScripted", false]];
 _args params [["_itemClassname","", [""]]];
@@ -74,7 +74,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
         };
         private _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
-        private _lineInterection = lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player];
+        private _lineInterection = !((lineIntersectsSurfaces [eyePos ACE_player, _virtualPosASL, ACE_player]) isEqualTo []);
 
         //Don't allow placing in a bad position:
         if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
@@ -106,7 +106,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 if (_screenPos isEqualTo []) exitWith {
                     ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
                 };
-                private _realDistance = (_virtualPos distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
+                private _realDistance = (_virtualPos distance (positionCameraToWorld [0,0,0])) / (([] call CBA_fnc_getFov) select 1);
                 _screenPos = [(_screenPos select 0), _realDistance, (_screenPos select 1)];
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
                 private _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);

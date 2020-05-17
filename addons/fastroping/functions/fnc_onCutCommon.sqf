@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Function for closing doors and retracting the hook for most vanilla and older Arma helos.
@@ -9,12 +10,10 @@
  * Amount of time to wait before cutting ropes <NUMBER>
  *
  * Example:
- * [_vehicle] call ace_fastroping_fnc_onCutRopesCommon
+ * [_vehicle] call ace_fastroping_fnc_onCutCommon
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle"];
 
 private _fries = _vehicle getVariable [QGVAR(FRIES), objNull];

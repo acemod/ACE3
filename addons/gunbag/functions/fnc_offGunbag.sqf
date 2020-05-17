@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ir0n1E
  * Get weapon out of gunbag.
@@ -10,11 +11,10 @@
  * None
  *
  * Example:
- * [player, target] call ace_gunbag_fnc_toGunbag
+ * [player, target] call ace_gunbag_fnc_offGunbag
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 

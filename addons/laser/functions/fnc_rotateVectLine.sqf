@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -9,12 +10,10 @@
  * None
  *
  * Example:
- * call ace_laser_fnc_rotateVectline
+ * call ace_laser_fnc_rotateVectLine
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_map", "_theta"];
 _map params ["_p", "_p1", "_p2", "_q1", "_q2", "_u", "_d"];

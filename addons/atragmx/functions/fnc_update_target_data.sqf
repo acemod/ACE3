@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all target column input fields
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * call ace_atragmx_fnc_update_target
+ * call ace_atragmx_fnc_update_target_data
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ctrlSetText [140000, Str(Round((GVAR(latitude) select GVAR(currentTarget)) * 100) / 100)];
 ctrlSetText [140010, Str(Round((GVAR(directionOfFire) select GVAR(currentTarget)) * 100) / 100)];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Checks if a vehicle is equipped with an FCS and if so, adds the fired event handler. Execute on server.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 
@@ -21,6 +21,11 @@ params ["_vehicle"];
     private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) then {
+        if (isNil QGVAR(jipID)) then {
+            GVAR(jipID) = [QGVAR(addFiredEH), [], QGVAR(addFiredEH)] call CBA_fnc_globalEventJIP;
+            TRACE_1("Adding fired EH for players",GVAR(jipID));
+        };
+
         _vehicle setVariable [format ["%1_%2", QGVAR(Distance),  _x],  0, true];
         _vehicle setVariable [format ["%1_%2", QGVAR(Magazines), _x], [], true];
         _vehicle setVariable [format ["%1_%2", QGVAR(Elevation), _x], [], true];
@@ -41,5 +46,4 @@ params ["_vehicle"];
             _vehicle setVariable [format ["%1_%2", QGVAR(ViewDiff), _x],         0, true];
         };
     };
-    false
-} count allTurrets _vehicle;
+} forEach allTurrets _vehicle;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Auomatically deploy a helicopter filled with AI units.
@@ -15,8 +16,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 params [["_vehicle", objNull, [objNull]], ["_deploySpecial", false, [true]], ["_createDeploymentGroup", true, [true]]];
 
 if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
@@ -60,10 +59,13 @@ if (_createDeploymentGroup) then {
 };
 
 private  _deployTime = 0;
+
 if (getText (_config >> QGVAR(onPrepare)) != "") then {
     _deployTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onPrepare))));
 };
-[{[_this] call FUNC(deployRopes)}, _vehicle, _deployTime] call CBA_fnc_waitAndExecute;
+
+[FUNC(deployRopes), _vehicle, _deployTime] call CBA_fnc_waitAndExecute;
+
 driver _vehicle disableAI "MOVE";
 
 DFUNC(deployAIRecursive) = {

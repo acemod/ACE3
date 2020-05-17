@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou, PabstMirror
  * Shoots a ray from a source to a direction and finds first intersction and distance.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 BEGIN_COUNTER(shootRay);
 
@@ -46,7 +46,7 @@ if (!(_intersects isEqualTo [])) then {
 TRACE_3("", _resultPos, _distance, _intersects);
 
 #ifdef DRAW_LASER_INFO
-if !(isNil "_resultPos") then {
+if (!isNil "_resultPos") then {
     private _text = [_distance, 4, 0] call CBA_fnc_formatNumber;
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0, 1, 0, 1], ASLtoAGL _resultPos, 0.5, 0.5, 0, _text, 0.4, 0.025, "TahomaB"];
     drawLine3D [ASLtoAGL _posASL, ASLtoAGL _resultPos, [0,1,0,1]];

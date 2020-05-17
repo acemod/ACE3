@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus / nou, PabstMirror
  * Do seeker search
@@ -11,12 +12,10 @@
  * Missile Aim PosASL <ARRAY>
  *
  * Example:
- * [[], [], []] call ace_missileguidance_fnc_seekerType_Optic;
+ * [[], [], []] call ace_missileguidance_fnc_doSeekerSearch;
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["", "_args", "", "_lastKnownPosState"];
 _args params ["", "_launchParams"];

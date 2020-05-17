@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix
  * Receives and draws map gestures from nearby players.
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * [findDisplay 12 displayCtrl 51] call ace_map_gesutres_fnc_drawMapGestures
+ * [findDisplay 12 displayCtrl 51] call ace_map_gestures_fnc_drawMapGestures
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 BEGIN_COUNTER(draw);
 

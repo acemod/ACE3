@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns array of uav dummy ais.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_vehicle", objNull, [objNull]]];
 
