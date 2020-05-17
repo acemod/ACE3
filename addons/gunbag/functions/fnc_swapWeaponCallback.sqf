@@ -71,8 +71,6 @@ _newWeaponMagazines = _newWeaponMagazines apply {_x select 0};
 
 private _newWeaponMass     = [_newWeapon, _newWeaponItems, _newWeaponMagazines] call FUNC(calculateMass);
 
-// remove virtual load
-[_target, _gunbag, -_newWeaponMass] call EFUNC(movement,addLoadToUnitContainer);
-// add virtual load
-[_target, _gunbag, _currentWeaponMass] call EFUNC(movement,addLoadToUnitContainer);
+// update virtual load
+[_target, _gunbag, _currentWeaponMass - _newWeaponMass] call EFUNC(movement,addLoadToUnitContainer);
 _gunbag setVariable [QGVAR(gunbagWeapon), [_currentWeapon, _currentWeaponItems, _currentWeaponMagazines], true]; //Replace weapon in gunbag
