@@ -30,8 +30,8 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage"];
-TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
+_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage","_overpressureFunnel"];
+TRACE_4("cache",_overpressureAngle,_overpressureRange,_overpressureDamage,_overpressureFunnel);
 
 {
     if (local _x && {_x != _firer} && {vehicle _x == _x}) then {
@@ -45,10 +45,9 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
         private _line2 = [_posASL, _targetPositionASL];
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
-        if (_angle < _overpressureAngle && {_distance < _overpressureRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
-
+        if (_angle < _overpressureAngle && _angle >= _overpressureFunnel && _distance < _overpressureRange && {!lineIntersects _line && {!terrainIntersectASL _line2}}) then {
             private _alpha = sqrt (1 - _distance / _overpressureRange);
-            private _beta = sqrt (1 - _angle / _overpressureAngle);
+            private _beta = sqrt (1 - _angle - _overpressureFunnel / (_overpressureAngle - _overpressureFunnel));
 
             private _damage = _alpha * _beta * _overpressureDamage;
             TRACE_1("",_damage);
