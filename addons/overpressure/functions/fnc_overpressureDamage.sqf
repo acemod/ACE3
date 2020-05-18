@@ -30,8 +30,8 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage"];
-TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
+_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage","_overpressureFunnel"];
+TRACE_4("cache",_overpressureAngle,_overpressureRange,_overpressureDamage,_overpressureFunnel);
 
 {
     if (local _x && {_x != _firer} && {vehicle _x == _x}) then {
@@ -41,12 +41,15 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
         private _distance = vectorMagnitude _relativePosition;
         private _angle = acos (_axisDistance / _distance);
 
-        private _line = [_posASL, _targetPositionASL, _firer, _x];
-        private _line2 = [_posASL, _targetPositionASL];
+        private _line = [_posASL, _targetPositionASL];
+        private _line2 = [_posASL, _targetPositionASL, _firer, _x];
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
-        if (_angle < _overpressureAngle && {_distance < _overpressureRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
+        // Funnel determines offset angle from the _direction.
+        // Absolute value is needed to make it symmetrical towards and outwards the _direction.
+        if (_overpressureFunnel > 0) then {_angle = abs (_angle - _overpressureFunnel)};
 
+        if (_angle < _overpressureAngle && _distance < _overpressureRange && {!terrainIntersectASL _line && {!lineIntersects _line2}}) then {
             private _alpha = sqrt (1 - _distance / _overpressureRange);
             private _beta = sqrt (1 - _angle / _overpressureAngle);
 

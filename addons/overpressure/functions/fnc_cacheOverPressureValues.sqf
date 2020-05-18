@@ -14,8 +14,9 @@
  *  0: Angle <Number>
  *  1: Range <Number>
  *  2: Damage <Number>
+ *  3: Funnel <Number>
  *
- * Example: 
+ * Example:
  * ["cannon_125mm","Sh_125mm_APFSDS_T_Green","24Rnd_125mm_APFSDS_T_Green"] call ace_overpressure_fnc_cacheOverPressureValues
  *
  * Public: No
@@ -47,7 +48,8 @@ TRACE_1("ConfigPath",_config);
 private _return = [
     (getNumber (_config >> QGVAR(angle))),
     (getNumber (_config >> QGVAR(range))) * GVAR(distanceCoefficient),
-    (getNumber (_config >> QGVAR(damage)))
+    (getNumber (_config >> QGVAR(damage))),
+    (getNumber (_config >> QGVAR(funnel)))
 ];
 
 private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];

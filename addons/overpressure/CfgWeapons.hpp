@@ -7,6 +7,7 @@ class CfgWeapons {
         GVAR(angle) = 60;
         GVAR(range) = 10;
         GVAR(damage) = 0.7;
+        GVAR(funnel) = 0; // Funnel shaped backblast does not affect units standing directly behind the launcher. Example: RPG-76 Komar
     };
 
     class Launcher_Base_F: Launcher {};
