@@ -12,7 +12,7 @@ class CfgVehicles {
                 };
                 class GVAR(weaponSwap) {
                     displayName = CSTRING(swapWeapon);
-                    condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 2});
+                    condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 2} && (GVAR(weaponSwapEnabled)));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(swapWeapon));
                     showDisabled = 0;
                     icon = QPATHTOF(ui\gunbag_icon_ca.paa);
@@ -50,7 +50,7 @@ class CfgVehicles {
                     };
                     class GVAR(weaponSwap) {
                         displayName = CSTRING(swapWeapon);
-                        condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 2);
+                        condition = QUOTE(([ARR_2(_player,_player)] call FUNC(canInteract) == 2) && (GVAR(weaponSwapEnabled)));
                         statement = QUOTE([ARR_2(_player,_player)] call FUNC(swapWeapon));
                         showDisabled = 0;
                         icon = QPATHTOF(ui\gunbag_icon_ca.paa);
