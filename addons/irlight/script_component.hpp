@@ -15,3 +15,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define IN_NVGS (currentVisionMode ACE_player == 1)
