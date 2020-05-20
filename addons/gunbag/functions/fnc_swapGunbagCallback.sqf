@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, target] call ace_gunbag_fnc_swapWeapon
+ * [player, target] call ace_gunbag_fnc_swapGunbag
  *
  * Public: No
  */

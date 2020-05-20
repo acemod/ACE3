@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, target] call ace_gunbag_fnc_swapWeapon
+ * [player, target] call ace_gunbag_fnc_swapGunbag
  *
  * Public: No
  */
@@ -28,7 +28,7 @@ if (["ace_backpacks"] call EFUNC(common,isModLoaded)) then {
 };
 
 [(PROGRESSBAR_TIME * 1.5), _this, {
-    (_this select 0) call FUNC(swapWeaponCallback)
+    (_this select 0) call FUNC(swapGunbagCallback)
 }, {}, localize LSTRING(swapGunbag),
 {(_this select 0) call FUNC(canInteract) == 2}
 ] call EFUNC(common,progressBar);

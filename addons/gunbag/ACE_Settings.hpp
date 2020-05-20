@@ -1,11 +1,11 @@
 
 class ACE_Settings {
-    class GVAR(weaponSwapEnabled) {
+    class GVAR(swapGunbagEnabled) {
         category = CSTRING(DisplayName);
         value = 0;
         typeName = "BOOL";
         isClientSettable = 0;
-        displayName = CSTRING(weaponSwapEnabled);
-        description = CSTRING(weaponSwapEnabledDesc);
+        displayName = CSTRING(SwapGunbagEnabled);
+        description = CSTRING(SwapGunbagEnabledDesc);
     };
 };

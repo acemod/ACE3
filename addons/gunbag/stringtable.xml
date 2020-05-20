@@ -52,10 +52,10 @@
         <Key ID="STR_ACE_Gunbag_SwapGunbag">
             <English>Exchange weapon in gunbag</English>
         </Key>
-        <Key ID="STR_ACE_Gunbag_swapWeaponEnabled">
+        <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled">
             <English>Enable Weapon Swap</English>
         </Key>
-        <Key ID="STR_ACE_Gunbag_swapWeaponEnabledDesc">
+        <Key ID="STR_ACE_Gunbag_SwapGunbagEnabledDesc">
             <English>Allows interaction to directly swap the primary weapon and stored weapon.</English>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
