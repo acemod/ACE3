@@ -116,7 +116,8 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
         if (_value isEqualTo "") then {
             _value = "_";
         };
-        _panel lbSetText [_i, _value];
+        // systemChat format ["%1 - %2 = %3", _item, _statement, _value];
+        _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
     };
 
     lbSort [_panel, "ASC"];

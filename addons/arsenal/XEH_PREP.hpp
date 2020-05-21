@@ -64,6 +64,7 @@ PREP(showItem);
 PREP(sortPanel);
 PREP(sortStatement_mass);
 PREP(sortStatement_rateOfFire);
+PREP(sortStatement_mod);
 PREP(statBarStatement_accuracy);
 PREP(statBarStatement_default);
 PREP(statBarStatement_impact);

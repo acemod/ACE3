@@ -20,4 +20,4 @@ private _fireRate = [];
 } foreach _fireModes;
 
 _fireRate sort true;
-_fireRate param [0, 0]
+round (60 / (_fireRate param [0, 0]))
