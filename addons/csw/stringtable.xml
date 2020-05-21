@@ -24,6 +24,7 @@
             <Czech>Položit trojnožku</Czech>
             <Polish>Rozłóż Trójnóg</Polish>
             <Spanish>Colocar trípode</Spanish>
+            <Turkish>Üçayağı Yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -37,6 +38,7 @@
             <Spanish>Desmonta</Spanish>
             <Japanese>解体</Japanese>
             <Chinese>拆解</Chinese>
+            <Turkish>Bin</Turkish>
         </Key>
         <Key ID="STR_ACE_CSW_GetIn_displayName">
             <English>Get In</English>
@@ -64,6 +66,7 @@
             <Portuguese>Carregar %1</Portuguese>
             <Japanese>%1 を装填</Japanese>
             <Chinese>裝填 %1</Chinese>
+            <Turkish>Yükle %1</Turkish>
         </Key>
         <Key ID="STR_ACE_CSW_unloadX">
             <English>Unload %1</English>
@@ -78,6 +81,7 @@
             <Portuguese>Descarregar %1</Portuguese>
             <Japanese>%1 を除去</Japanese>
             <Chinese>卸載 %1</Chinese>
+            <Turkish>Boşalt %1</Turkish>
         </Key>
         <Key ID="STR_ACE_CSW_actionLink">
             <English>Link %1</English>
@@ -370,6 +374,8 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
+            <Czech>[CSW] Statická zbraň M2 se štítem</Czech>
+            <French>[CSW] Mitrailleuse statique M2 ac. bouclier</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>

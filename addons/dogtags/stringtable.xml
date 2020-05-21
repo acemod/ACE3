@@ -95,6 +95,7 @@
             <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
             <Portuguese>Alguém já pegou essa dogtag...</Portuguese>
             <Spanish>Alguien más ha tomado la placa de identidad</Spanish>
+            <Turkish>Başka biri zaten künyeyi almış</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_IGUI_Description">
             <English>Onscreen display for checking dogtags</English>
@@ -108,6 +109,7 @@
             <Spanish>Visualización en pantalla para</Spanish>
             <French>Affichage à l'écran pour le contrôle des plaques.</French>
             <Czech>Okno na obrazovce pro kontrolu známek</Czech>
+            <Turkish>Künye gösteriliyor</Turkish>
         </Key>
     </Package>
 </Project>

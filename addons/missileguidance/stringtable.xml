@@ -16,6 +16,7 @@
             <Korean>고급 미사일 유도</Korean>
             <Chinesesimp>进阶飞弹制导</Chinesesimp>
             <Chinese>進階飛彈制導</Chinese>
+            <Turkish>Gelişmiş Füze Güdüm Sistemi</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Desc">
             <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
@@ -32,6 +33,7 @@
             <Korean>고급 미사일 유도 혹은 AMG 는 표적 획득 및 발사를 위한 여러 기능을 제공합니다. 미사일 종류에따라 체계가 필요합니다.</Korean>
             <Chinesesimp>进阶飞弹制导增强了多种导弹锁定和射击的能力。此系统适用于所有飞弹类型的武器。</Chinesesimp>
             <Chinese>進階飛彈制導增強了多種導彈鎖定和射擊的能力。此系統適用於所有飛彈類型的武器</Chinese>
+            <Turkish>Gelişmiş füze rehberliği veya AMG, füze kilitleme ve ateşleme için çoklu geliştirmeler sağlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
@@ -48,6 +50,7 @@
             <Korean>Hydra-70 DAGR 미사일</Korean>
             <Chinesesimp>九头蛇-70 直接攻击导引飞弹</Chinesesimp>
             <Chinese>九頭蛇-70 直接攻擊導引飛彈</Chinese>
+            <Turkish>Hydra-70 DAGR Füze</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Short">
             <English>DAGR</English>
@@ -81,7 +84,7 @@
             <Korean>Hydra-70 DAGR 레이저 유도 미사일</Korean>
             <Chinesesimp>九头蛇-70mm 制导航空火箭弹</Chinesesimp>
             <Chinese>九頭蛇-70 直接攻擊雷射導引飛彈</Chinese>
-            <Turkish>Hydra-70 DAGR Laser Guided Missile</Turkish>
+            <Turkish>Hydra-70 DAGR Lazer Güdümlü Füze</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -98,7 +101,7 @@
             <Korean>Hellfire II AGM-114K 미사일</Korean>
             <Chinesesimp>地狱火II型AGM-114K空地制导破甲弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 導彈</Chinese>
-            <Turkish>Hellfire II AGM-114K Missile</Turkish>
+            <Turkish>Hellfire II AGM-114K Füze</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_Short">
             <English>AGM-114K</English>
@@ -132,7 +135,7 @@
             <Korean>Hellfire II AGM-114K 레이저 유도 미사일</Korean>
             <Chinesesimp>地狱火II型AGM-114K空地制导破甲弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 雷射導引飛彈</Chinese>
-            <Turkish>Hellfire II AGM-114K Laser Guided Missile</Turkish>
+            <Turkish>Hellfire II AGM-114K Lazer Güdümlü Füze</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Off">
             <English>Off</English>

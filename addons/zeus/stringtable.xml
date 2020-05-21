@@ -273,6 +273,7 @@
             <Chinesesimp>防御区域</Chinesesimp>
             <Chinese>防禦區域</Chinese>
             <Portuguese>Defender Área</Portuguese>
+            <Turkish>Bölgeyi Koru</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
             <English>Update Editable Objects</English>
@@ -898,6 +899,7 @@
             <Korean>대상이 반드시 살아있어야 합니다</Korean>
             <Chinesesimp>单位必须是活着</Chinesesimp>
             <Chinese>單位必須是活著</Chinese>
+            <Turkish>Birliğin yaşaması gerekiyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyInfantry">
             <English>Unit must be infantry</English>
@@ -1152,6 +1154,7 @@
             <Portuguese>Selecione objeto para descarregar</Portuguese>
             <Czech>Vyberte náklad na vyložení</Czech>
             <French>Sélectionner une cargaison à décharger</French>
+            <Turkish>Seçilen kargo boşaltıldı</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1297,6 +1300,7 @@
             <Russian>Добавить/Убрать ПНВ у юнитов</Russian>
             <Portuguese>Adiciona ou remove visão noturna de unidades</Portuguese>
             <Czech>Přidat nebo odebrat noktovizory jednotkám</Czech>
+            <Turkish>Gece Görüşü ekle veya kaldır</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
@@ -1385,6 +1389,7 @@
             <Russian>Добавить снаряжение</Russian>
             <Portuguese>Adicionar equipamento</Portuguese>
             <Czech>Přidat vybavení</Czech>
+            <Turkish>Tekerlek Ekle</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
             <English>Garrison Group</English>
@@ -1546,6 +1551,7 @@
             <Portuguese>Definir como veículo de reparo</Portuguese>
             <Russian>Назначить ремонтный автомобиль</Russian>
             <Spanish>Asignar vehículo de reparación</Spanish>
+            <Turkish>Tamir Aracı Yap</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetRepairFacility_DisplayName">
             <English>Assign Repair Facility</English>
@@ -1562,6 +1568,7 @@
             <Portuguese>Definir como oficina de reparo</Portuguese>
             <Russian>Назначить ремонтный комплекс</Russian>
             <Spanish>Asignar instalación de reparación</Spanish>
+            <Turkish>Tamir Tesisi Yap</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetEngineer_DisplayName">
             <English>Assign Engineer</English>
@@ -1629,6 +1636,7 @@
             <Portuguese>Bombardeiro suicida</Portuguese>
             <Russian>Террорист-смертник</Russian>
             <Spanish>Bombardeo suicida</Spanish>
+            <Turkish>Intihar Bombacısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ActivationSide">
             <English>Activation Side</English>
