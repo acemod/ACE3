@@ -37,6 +37,9 @@ _ctrlPanel ctrlCommit FADE_DELAY;
 
 _ctrlPanel lbSetCurSel -1;
 
+// Fill sort options
+[_display, _control] call FUNC(fillSort);
+
 // Handle icons and filling
 switch true do {
     case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
@@ -138,8 +141,8 @@ switch true do {
                 {
                     {
                         if (
-                            getnumber (_x >> "disabled") == 0 && 
-                            {getText (_x >> "head") != ""} && 
+                            getnumber (_x >> "disabled") == 0 &&
+                            {getText (_x >> "head") != ""} &&
                             {configName _x != "Default"}
                         ) then {
                             private _configName = configName _x;
@@ -162,7 +165,7 @@ switch true do {
                 {
                     ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
                 } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
-                
+
                 {
                     private _displayName = getText (_x >> "displayName");
                     private _className = configName _x;

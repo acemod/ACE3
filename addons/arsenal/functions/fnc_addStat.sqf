@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Tabs to add the stat to (ARRAY of ARRAYS)
-   * 0.1: Left tab indexes (ARRAY of NUMBERS)
+   * 0.1 Left tab indexes (ARRAY of NUMBERS)
    * 0.2 Right tab indexes (ARRAY of NUMBERS)
  * 1: Stat class (STRING) (A unique string for each stat)
  * 2: Config entries to pass (ARRAY of STRINGS)
@@ -14,7 +14,7 @@
    * 4.1 Show bar (BOOL)
    * 4.2 Show text (BOOL)
  * 5: Array of statements (ARRAY of ARRAYS)
-   * 5.1: Bar code (CODE)
+   * 5.1 Bar code (CODE)
    * 5.2 Text code (CODE)
    * 5.3 Condition code (CODE)
  * 6: Priority (NUMBER) (Optional)
