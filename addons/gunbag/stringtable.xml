@@ -33,7 +33,7 @@
             <Turkish>Silah Çantası (Tan)</Turkish>
             <Spanish>Funda de arma (Tan)</Spanish>
         </Key>
-         <Key ID="STR_ACE_Gunbag_DisplayName_Settings">
+        <Key ID="STR_ACE_Gunbag_DisplayName_Settings">
             <English>ACE Gunbag</English>
             <German>ACE Waffentasche</German>
             <French>ACE Housse d'arme</French>
