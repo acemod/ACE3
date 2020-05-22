@@ -73,12 +73,12 @@ Each pathway has different properties: They store different amounts of ATP and c
 
 #### 2.2.1 Anaerobic Pathway
 
-This pathway is essentially responsible for your short term stamina. It has a very small capacity of ATP available (2300mmol), which is can provide a lot of ATP very fast (113.3mmol/s), but also replenished very quickly (56.7mmol/s). This pathway is pretty much what limits how long you can jog or sprint in one go, which is why we use it as an indicator for the stamina bar.
+This pathway is essentially responsible for your short term stamina. It has a very small capacity of ATP available (2300 mmol), which is can provide a lot of ATP very fast (113.3 mmol/s), but also replenished very quickly (56.7 mmol/s). This pathway is pretty much what limits how long you can jog or sprint in one go, which is why we use it as an indicator for the stamina bar.
 
 
 #### 2.2.2 Aerobic Pathways
 
-The two aerobic pathways store way bigger amounts of ATP than the anaerobic one, the first one stores over 1700 times as much ATP (4000 mol) and the second one still over 36 times as much ATP (84 mol) as the anaerobic pathway. However, they can also provide (13.3 and 16.7mmol) and replenish (6.6 and 5.83mmol) a lot less ATP then the anaerobic pathway.
+The two aerobic pathways store way bigger amounts of ATP than the anaerobic one, the first one stores over 1700 times as much ATP (4000 mol) and the second one still over 36 times as much ATP (84 mol) as the anaerobic pathway. However, they can also provide (13.3 and 16.7 mmol) and replenish (6.6 and 5.83 mmol) a lot less ATP then the anaerobic pathway.
 
 This means that while these will last a lot longer, they do not have such a large impact on your short term performance. Instead, they will drain slowly during the day, which means that at the end you will have less power available than at the beginning, depending on how much you exhausted yourself. However, at that point they will start influencing your short term performance.
 
