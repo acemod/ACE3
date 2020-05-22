@@ -34,6 +34,13 @@ class GVAR(sorts) {
         statement = QUOTE(getContainerMaxLoad configName _this);
     };
 
+    class ACE_accuracy: sortBase {
+        scope = 2;
+        displayName = "Sort by accuracy";
+        tabs[] = {{0,1,2}, {}};
+        statement = QUOTE(_this call FUNC(sortStatement_accuracy));
+    };
+
     class ACE_rateOfFire: sortBase {
         scope = 2;
         displayName = "Sort by rate of fire";
