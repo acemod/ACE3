@@ -12,8 +12,13 @@
  * Public: No
 */
 
-private _class = configName _this;
-private _hierarchy = configHierarchy _this;
-private _parent = _hierarchy select ((count _hierarchy) - 1)
+private _dlc = "";
+private _addons = configSourceAddonList _this;
+if (count _addons > 0) then {
+    private _mods = configSourceModList (configfile >> "CfgPatches" >> _addons select 0);
+    if (count _mods > 0) then {
+        _dlc = _mods select 0;
+    };
+};
 
-(modParams [(getAssetDLCInfo [_class, _parent]) select 5, ["logo"]]) param [0, ""]
+(modParams [_dlc, ["name"]]) param [0, ""]
