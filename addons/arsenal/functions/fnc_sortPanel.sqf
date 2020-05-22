@@ -54,7 +54,7 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
                 default { "CfgWeapons" };
             },
             GVAR(sortListRightPanel) select (
-                switch (GVAR(currentLeftPanel)) do {
+                switch (GVAR(currentRightPanel)) do {
                     case IDC_buttonOptic: { 0 };
                     case IDC_buttonItemAcc: { 1 };
                     case IDC_buttonMuzzle: { 2 };
@@ -111,7 +111,7 @@ if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC
         if (_value isEqualTo "") then {
             _value = "_";
         };
-        // systemChat format ["%1 - %2 = %3", _item, _statement, _value];
+        systemChat format ["%1 - %2 = %3", _item, _statement, _value];
         _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
     };
 

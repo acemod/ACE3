@@ -23,7 +23,7 @@ class GVAR(sorts) {
     class ACE_mass: sortBase {
         scope = 2;
         displayName = "Sort by weight";
-        tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}, {}};
+        tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}, {0,1,2,3,4,5,6,7}};
         statement = QUOTE(_this call FUNC(sortStatement_mass));
     };
 
@@ -46,5 +46,19 @@ class GVAR(sorts) {
         displayName = "Sort by rate of fire";
         tabs[] = {{0,1,2}, {}};
         statement = QUOTE(_this call FUNC(sortStatement_rateOfFire));
+    };
+
+    class ACE_scopeMag: sortBase {
+        scope = 2;
+        displayName = "Sort by magnification";
+        tabs[] = {{}, {0}};
+        statement = QUOTE(_this call FUNC(sortStatement_scopeMag));
+    };
+
+    class ACE_magCount: sortBase {
+        scope = 2;
+        displayName = "Sort by ammo count";
+        tabs[] = {{}, {4}};
+        statement = QUOTE(_this call FUNC(sortStatement_magCount));
     };
 };

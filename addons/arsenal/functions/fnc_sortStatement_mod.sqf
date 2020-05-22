@@ -7,7 +7,7 @@
  * 0: item config path (CONFIG)
  *
  * Return Value:
- * Mod image to sort by
+ * Mod name to sort by
  *
  * Public: No
 */
