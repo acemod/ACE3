@@ -28,11 +28,11 @@ Example: M4
 class CfgWeapons {
     class yourWeaponClass {
         // >1:7 inch rifle twist
-        // 7 inches * 25.4(mm/in) = 177.8 mm
+        // 7 inches * 25.4(mm/in) = 177.8mm
         // Same as the Capital T in [Miller twist rule](https://en.wikipedia.org/wiki/Miller_twist_rule){:target="_blank"} (convert to metric)
         ACE_barrelTwist = 177.8;
 
-        // >14.5 in (370 mm)
+        // >14.5 in (370mm)
         ACE_barrelLength = 368.3;
 
         // Right handed is 1, Left is -1, none is 0

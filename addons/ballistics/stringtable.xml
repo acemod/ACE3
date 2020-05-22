@@ -21,7 +21,7 @@
             <Italian>#00 Buckshot</Italian>
             <Japanese>#00 バックショット</Japanese>
             <French>Chevrotine #00</French>
-            <Czech>#00 Broky velké - kalibr 8.38 mm</Czech>
+            <Czech>#00 Broky velké - kalibr 8.38mm</Czech>
             <Polish>#00 Śrut</Polish>
             <Portuguese>#00 Chumbo</Portuguese>
             <Turkish>#00 Irisaçma</Turkish>
@@ -45,7 +45,7 @@
             <Italian>#0 Buckshot</Italian>
             <Japanese>#0 バックショット</Japanese>
             <French>Chevrotine #0</French>
-            <Czech>#0 Broky velké -  kalibr 8.1 mm</Czech>
+            <Czech>#0 Broky velké -  kalibr 8.1mm</Czech>
             <Polish>#0 Śrut</Polish>
             <Portuguese>#0 Chumbo</Portuguese>
             <Turkish>#0 Irisaçma</Turkish>
@@ -69,7 +69,7 @@
             <Italian>#1 Buckshot</Italian>
             <Japanese>#1 バックショット</Japanese>
             <French>Chevrotine #1</French>
-            <Czech>#1 Broky velké -  kalibr 7.6 mm</Czech>
+            <Czech>#1 Broky velké -  kalibr 7.6mm</Czech>
             <Polish>#1 Śrut</Polish>
             <Portuguese>#1 Chumbo</Portuguese>
             <Turkish>#1 Irisaçma</Turkish>
@@ -93,7 +93,7 @@
             <Italian>#2 Buckshot</Italian>
             <Japanese>#2 バックショット</Japanese>
             <French>Chevrotine #2</French>
-            <Czech>#2 Broky velké -  kalibr 6.9 mm</Czech>
+            <Czech>#2 Broky velké -  kalibr 6.9mm</Czech>
             <Polish>#2 Śrut</Polish>
             <Portuguese>#2 Chumbo</Portuguese>
             <Turkish>#2 Irisaçma</Turkish>
@@ -117,7 +117,7 @@
             <Italian>#3 Buckshot</Italian>
             <Japanese>#3 バックショット</Japanese>
             <French>Chevrotine #3</French>
-            <Czech>#3 Broky velké -  kalibr 6.4 mm</Czech>
+            <Czech>#3 Broky velké -  kalibr 6.4mm</Czech>
             <Polish>#3 Śrut</Polish>
             <Portuguese>#3 Chumbo</Portuguese>
             <Turkish>#3 Irisaçma</Turkish>
@@ -141,7 +141,7 @@
             <Italian>#4 Buckshot</Italian>
             <Japanese>#4 バックショット</Japanese>
             <French>Chevrotine #4</French>
-            <Czech>#4 Broky velké -  kalibr 6.1 mm</Czech>
+            <Czech>#4 Broky velké -  kalibr 6.1mm</Czech>
             <Polish>#4 Śrut</Polish>
             <Portuguese>#4 Chumbo</Portuguese>
             <Turkish>#4 Irisaçma</Turkish>
@@ -164,7 +164,7 @@
             <Italian>#7 Birdshot</Italian>
             <Japanese>#7 バックショット</Japanese>
             <French>Grenaille No.4</French>
-            <Czech>#7 Broky malé - kalibr 2.54 mm</Czech>
+            <Czech>#7 Broky malé - kalibr 2.54mm</Czech>
             <Polish>#7 Śrut Drobny (Birdshot)</Polish>
             <Turkish>#7 Küçük saçma</Turkish>
         </Key>
@@ -175,7 +175,7 @@
             <Italian>12 Gauge 2Rnd #00 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #00 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #00</French>
-            <Czech>2x #00 Broky velké (kalibr 8.38 mm)</Czech>
+            <Czech>2x #00 Broky velké (kalibr 8.38mm)</Czech>
             <Polish>12 Gauge 2 naboje #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 2 Tiros</Portuguese>
         </Key>
@@ -186,7 +186,7 @@
             <Italian>12 Gauge 2Rnd #0 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #0 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #0</French>
-            <Czech>2x #0 Broky velké (kalibr 8.1 mm)</Czech>
+            <Czech>2x #0 Broky velké (kalibr 8.1mm)</Czech>
             <Polish>12 Gauge 2 naboje #0 Śrut</Polish>
             <Portuguese>Chumbo #0 Calibre Doze 2 Tiros</Portuguese>
         </Key>
@@ -197,7 +197,7 @@
             <Italian>12 Gauge 2Rnd #1 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #1 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #1</French>
-            <Czech>2x #1 Broky velké (kalibr 7.6 mm)</Czech>
+            <Czech>2x #1 Broky velké (kalibr 7.6mm)</Czech>
             <Polish>12 Gauge 2 naboje #1 Śrut</Polish>
             <Portuguese>Chumbo #1 Calibre Doze 2 Tiros</Portuguese>
         </Key>
@@ -208,7 +208,7 @@
             <Italian>12 Gauge 2Rnd #2 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #2 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #2</French>
-            <Czech>2x #2 Broky velké (kalibr 6.9 mm)</Czech>
+            <Czech>2x #2 Broky velké (kalibr 6.9mm)</Czech>
             <Polish>12 Gauge 2 naboje #2 Śrut</Polish>
             <Portuguese>Chumbo #2 Calibre Doze 2 Tiros</Portuguese>
         </Key>
@@ -219,7 +219,7 @@
             <Italian>12 Gauge 2Rnd #3 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #3 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #3</French>
-            <Czech>2x #3 Broky velké (kalibr 6.4 mm)</Czech>
+            <Czech>2x #3 Broky velké (kalibr 6.4mm)</Czech>
             <Polish>12 Gauge 2 naboje #3 Śrut</Polish>
             <Portuguese>Chumbo #3 Calibre Doze 2 Tiros</Portuguese>
         </Key>
@@ -230,7 +230,7 @@
             <Italian>12 Gauge 2Rnd #4 Buckshot</Italian>
             <Japanese>12 ゲージ 2 発入り #4 バックショット</Japanese>
             <French>2 balles cal. 12 Chevrotine #4</French>
-            <Czech>2x #4 Broky velké (kalibr 6.1 mm)</Czech>
+            <Czech>2x #4 Broky velké (kalibr 6.1mm)</Czech>
             <Polish>12 Gauge 2 naboje #4 Śrut</Polish>
             <Portuguese>Chumbo #4 Calibre Doze 2 Tiros</Portuguese>
         </Key>
@@ -241,7 +241,7 @@
             <Italian>12 Gauge 2Rnd #7 Birdshot</Italian>
             <Japanese>12 ゲージ 2 発入り #7 バックショット</Japanese>
             <French>2 balles cal. 12 Grenaille No.4</French>
-            <Czech>2x #7 Broky malé (kalibr 2.54 mm)</Czech>
+            <Czech>2x #7 Broky malé (kalibr 2.54mm)</Czech>
             <Polish>12 Gauge 2 naboje #7 Śrut</Polish>
             <Portuguese>Chumbo #7 Calibre Doze 2 Tiros</Portuguese>
         </Key>
@@ -252,7 +252,7 @@
             <Italian>12 Gauge 6Rnd #00 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #00 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #00</French>
-            <Czech>6x #00 Broky velké (kalibr 8.38 mm)</Czech>
+            <Czech>6x #00 Broky velké (kalibr 8.38mm)</Czech>
             <Polish>12 Gauge 6 naboi #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 6 Tiros</Portuguese>
         </Key>
@@ -263,7 +263,7 @@
             <Italian>12 Gauge 6Rnd #0 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #0 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #0</French>
-            <Czech>6x #0 Broky velké (kalibr 8.1 mm)</Czech>
+            <Czech>6x #0 Broky velké (kalibr 8.1mm)</Czech>
             <Polish>12 Gauge 6 naboi #0 Śrut</Polish>
             <Portuguese>Chumbo #0 Calibre Doze 6 Tiros</Portuguese>
         </Key>
@@ -274,7 +274,7 @@
             <Italian>12 Gauge 6Rnd #1 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #1 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #1</French>
-            <Czech>6x #1 Broky velké (kalibr 7.6 mm)</Czech>
+            <Czech>6x #1 Broky velké (kalibr 7.6mm)</Czech>
             <Polish>12 Gauge 6 naboi #1 Śrut</Polish>
             <Portuguese>Chumbo #1 Calibre Doze 6 Tiros</Portuguese>
         </Key>
@@ -285,7 +285,7 @@
             <Italian>12 Gauge 6Rnd #2 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #2 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #2</French>
-            <Czech>6x #2 Broky velké (kalibr 6.9 mm)</Czech>
+            <Czech>6x #2 Broky velké (kalibr 6.9mm)</Czech>
             <Polish>12 Gauge 6 naboi #2 Śrut</Polish>
             <Portuguese>Chumbo #2 Calibre Doze 6 Tiros</Portuguese>
         </Key>
@@ -296,7 +296,7 @@
             <Italian>12 Gauge 6Rnd #3 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #3 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #3</French>
-            <Czech>6x #3 Broky velké (kalibr 6.4 mm)</Czech>
+            <Czech>6x #3 Broky velké (kalibr 6.4mm)</Czech>
             <Polish>12 Gauge 6 naboi #3 Śrut</Polish>
             <Portuguese>Chumbo #3 Calibre Doze 6 Tiros</Portuguese>
         </Key>
@@ -307,7 +307,7 @@
             <Italian>12 Gauge 6Rnd #4 Buckshot</Italian>
             <Japanese>12 ゲージ 6 発入り #4 バックショット</Japanese>
             <French>6 balles cal. 12 Chevrotine #4</French>
-            <Czech>6x #4 Broky velké (kalibr 6.1 mm)</Czech>
+            <Czech>6x #4 Broky velké (kalibr 6.1mm)</Czech>
             <Polish>12 Gauge 6 naboi #4 Śrut</Polish>
             <Portuguese>Chumbo #4 Calibre Doze 6 Tiros</Portuguese>
         </Key>
@@ -318,7 +318,7 @@
             <Italian>12 Gauge 6Rnd #7 Birdshot</Italian>
             <Japanese>12 ゲージ 6 発入り #7 バックショット</Japanese>
             <French>6 balles cal. 12 Grenaille No.4</French>
-            <Czech>6x #7 Broky malé (kalibr 2.54 mm)</Czech>
+            <Czech>6x #7 Broky malé (kalibr 2.54mm)</Czech>
             <Polish>12 Gauge 6 naboi #7 Śrut</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
@@ -328,7 +328,7 @@
             <Italian>12 Gauge 15Rnd #00 Buckshot</Italian>
             <Japanese>12 ゲージ 15 発入り #00 バックショット</Japanese>
             <French>15 balles cal. 12 Chevrotine #00</French>
-            <Czech>15x #00 Broky velké (kalibr 8.38 mm)</Czech>
+            <Czech>15x #00 Broky velké (kalibr 8.38mm)</Czech>
             <Polish>12 Gauge 15 naboi #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 15 Tiros</Portuguese>
         </Key>
@@ -1593,7 +1593,7 @@
             <Spanish>Calibre: 5.56x45mm NATO (Mk262)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (Mk262)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 5,56x45mm NATO (Mk262)&lt;br /&gt;Patronen: 30</German>
-            <Italian>Calibro: 5.56x45 mm NATO (Mk262)&lt;br /&gt;Munizioni: 30</Italian>
+            <Italian>Calibro: 5.56x45mm NATO (Mk262)&lt;br /&gt;Munizioni: 30</Italian>
             <Czech>Ráže: 5.56x45mm NATO (Mk262)&lt;br /&gt;Nábojů: 30</Czech>
             <Portuguese>Calibre: 5.56x45mm NATO (Mk262)&lt;br/&gt;Cartuchos: 30</Portuguese>
             <Hungarian>Kaliber: 5,56x45mm NATO (Mk262)&lt;br /&gt;Lövedékek: 30</Hungarian>
@@ -1642,7 +1642,7 @@
             <Spanish>Calibre: 5.56x45mm NATO (Mk318)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (Mk318)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 5,56x45mm NATO (Mk318)&lt;br /&gt;Patronen: 30</German>
-            <Italian>Calibro: 5.56x45 mm NATO (Mk318)&lt;br /&gt;Munizioni: 30</Italian>
+            <Italian>Calibro: 5.56x45mm NATO (Mk318)&lt;br /&gt;Munizioni: 30</Italian>
             <Czech>Ráže: 5.56x45mm NATO (Mk318)&lt;br /&gt;Nábojů: 30</Czech>
             <Portuguese>Calibre: 5.56x45mm NATO (Mk318)&lt;br/&gt;Cartuchos: 30</Portuguese>
             <Hungarian>Kaliber: 5,56x45mm NATO (Mk318)&lt;br /&gt;Lövedékek: 30</Hungarian>
@@ -1691,7 +1691,7 @@
             <Spanish>Calibre: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Balas: 30</Spanish>
             <Russian>Калибр: 5,56x45 мм NATO (M995 бронебойные)&lt;br /&gt;Патронов: 30</Russian>
             <German>Kaliber: 5,56x45mm NATO (M995 AP)&lt;br /&gt;Patronen: 30</German>
-            <Italian>Calibro: 5.56x45 mm NATO (M995 AP)&lt;br /&gt;Munizioni: 30</Italian>
+            <Italian>Calibro: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Munizioni: 30</Italian>
             <Czech>Ráže: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Nábojů: 30</Czech>
             <Portuguese>Calibre: 5.56x45mm NATO (M995 AP)&lt;br/&gt;Cartuchos: 30</Portuguese>
             <Hungarian>Kaliber: 5,56x45mm NATO (M995 páncéltörő)&lt;br /&gt;Lövedékek: 30</Hungarian>
@@ -1740,7 +1740,7 @@
             <Spanish>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M118LR)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Patronen: 10</German>
-            <Italian>Calibro: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Munizioni: 10</Italian>
+            <Italian>Calibro: 7.62x51mm NATO (M118LR)&lt;br /&gt;Munizioni: 10</Italian>
             <Czech>Ráže: 7.62x51mm NATO (M118LR)&lt;br /&gt;Nábojů: 10</Czech>
             <Portuguese>Calibre: 7.26x51mm NATO (M118LR)&lt;br/&gt;Cartuchos: 10</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Lövedékek: 10</Hungarian>
@@ -1789,7 +1789,7 @@
             <Spanish>Calibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M118LR)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x51 mm NATO (M118LR)&lt;br /&gt;Munizioni: 20</Italian>
+            <Italian>Calibro: 7.62x51mm NATO (M118LR)&lt;br /&gt;Munizioni: 20</Italian>
             <Czech>Ráže: 7.62x51mm NATO (M118LR)&lt;br /&gt;Nábojů: 20</Czech>
             <Portuguese>Calibre: 7.26x51mm NATO (M118LR)&lt;br/&gt;Cartuchos: 20</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (M118LR)&lt;br /&gt;Lövedékek: 20</Hungarian>
@@ -1838,7 +1838,7 @@
             <Spanish>Calibre: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk316 Mod 0)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Patronen: 10</German>
-            <Italian>Calibro: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Munizioni: 10</Italian>
+            <Italian>Calibro: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Munizioni: 10</Italian>
             <Czech>Ráže: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Nábojů: 10</Czech>
             <Portuguese>Calibre: 7.26x51mm NATO (Mk316 Mod 0)&lt;br/&gt;Cartuchos: 10</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Lövedékek: 10</Hungarian>
@@ -1887,7 +1887,7 @@
             <Spanish>Calibre: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk316 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x51 mm NATO (Mk316 Mod 0)&lt;br /&gt;Munizioni: 20</Italian>
+            <Italian>Calibro: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Munizioni: 20</Italian>
             <Czech>Ráže: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Nábojů: 20</Czech>
             <Portuguese>Calibre: 7.26x51mm NATO (Mk316 Mod 0)&lt;br/&gt;Cartuchos: 20</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Lövedékek: 20</Hungarian>
@@ -1936,7 +1936,7 @@
             <Spanish>Calibre: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk319 Mod 0)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Patronen: 10</German>
-            <Italian>Calibro: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Munizioni: 10</Italian>
+            <Italian>Calibro: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Munizioni: 10</Italian>
             <Czech>Ráže: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Nábojů: 10</Czech>
             <Portuguese>Calibre: 7.26x51mm NATO (Mk319 Mod 0)&lt;br/&gt;Cartuchos: 10</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Lövedékek: 10</Hungarian>
@@ -1985,7 +1985,7 @@
             <Spanish>Calibre: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (Mk319 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x51 mm NATO (Mk319 Mod 0)&lt;br /&gt;Munizioni: 20</Italian>
+            <Italian>Calibro: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Munizioni: 20</Italian>
             <Czech>Ráže: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Nábojů: 20</Czech>
             <Portuguese>Calibre: 7.26x51mm NATO (Mk319 Mod 0)&lt;br/&gt;Cartuchos: 20</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Lövedékek: 20</Hungarian>
@@ -2034,7 +2034,7 @@
             <Spanish>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Balas: 10</Spanish>
             <Russian>Калибр: 7,62x51 мм NATO (M993 бронебойные)&lt;br /&gt;Патронов: 10</Russian>
             <German>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Patronen: 10</German>
-            <Italian>Calibro: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Munizioni: 10</Italian>
+            <Italian>Calibro: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Munizioni: 10</Italian>
             <Czech>Ráže: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Nábojů: 10</Czech>
             <Portuguese>Calibre: 7.26x51mm NATO (M993 AP)&lt;br/&gt;Cartuchos: 10</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (M993 páncéltörő)&lt;br /&gt;Lövedékek: 10</Hungarian>
@@ -2082,8 +2082,8 @@
             <French>Calibre: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Cartouches: 20</French>
             <Russian>Калибр: 7,62x51 мм NATO (M993 бронебойные)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (M993 AP)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Munizioni: 20</Italian>
-            <Spanish>Calibre: 7.62x51 mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
+            <Italian>Calibro: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Munizioni: 20</Italian>
+            <Spanish>Calibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Balas: 20</Spanish>
             <Czech>Ráže: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Nábojů: 20</Czech>
             <Portuguese>Calibre: 7.26x51mm NATO (M993 AP)&lt;br/&gt;Cartuchos: 20</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (M993 páncéltörő)&lt;br /&gt;Lövedékek: 20</Hungarian>
@@ -2132,7 +2132,7 @@
             <Spanish>Calibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Mk248 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Munizioni: 20</Italian>
+            <Italian>Calibro: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Munizioni: 20</Italian>
             <Czech>Ráže: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Nábojů: 20</Czech>
             <Portuguese>Calibre: 7.26x67mm NATO (Mk248 Mod 0)&lt;br/&gt;Cartuchos: 20</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;Lövedékek: 20</Hungarian>
@@ -2181,7 +2181,7 @@
             <Spanish>Calibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Mk248 Mod 1)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Munizioni: 20</Italian>
+            <Italian>Calibro: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Munizioni: 20</Italian>
             <Czech>Ráže: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Nábojů: 20</Czech>
             <Portuguese>Calibre: 7.26x67mm NATO (Mk248 Mod 1)&lt;br/&gt;Cartuchos: 20</Portuguese>
             <Hungarian>Kaliber: 7,62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;Lövedékek: 20</Hungarian>
@@ -2230,7 +2230,7 @@
             <Spanish>Calibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 20</Spanish>
             <Russian>Калибр: 7,62x67 мм NATO (Berger Hybrid OTM)&lt;br /&gt;Патронов: 20</Russian>
             <German>Kaliber: 7,62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Munizioni: 20</Italian>
+            <Italian>Calibro: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Munizioni: 20</Italian>
             <Czech>Ráže: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Nábojů: 20</Czech>
             <Portuguese>Calibre: 7.26x67mm NATO (Berger Hybrid OTM)&lt;br/&gt;Cartuchos: 20</Portuguese>
             <Hungarian>Kaliber: 7,62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Lövedékek: 20</Hungarian>

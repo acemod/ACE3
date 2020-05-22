@@ -93,7 +93,7 @@ class CfgWeapons {
     class arifle_Mk20_GL_plain_F: arifle_Mk20_GL_F {
         displayName = CSTRING(arifle_Mk20_GL_plain_Name);
     };
-    
+
     // P90 (1.86)
     class SMG_03_TR_BASE;
     class SMG_03_TR_black: SMG_03_TR_BASE {
@@ -145,8 +145,8 @@ class CfgWeapons {
     class SMG_03C_hex: SMG_03C_black {
         displayName = CSTRING(P90_Hex_Name);
     };
-    
-    
+
+
 
     // Vector
     class SMG_01_Base;
@@ -271,79 +271,79 @@ class CfgWeapons {
         displayName = CSTRING(srifle_DMR_02_sniper); //MAR-10 .338 (Sand);
     };
     class DMR_03_base_F: Rifle_Long_Base_F {
-        displayName = CSTRING(DMR_03); //Mk-I EMR 7.62 mm;
+        displayName = CSTRING(DMR_03); //Mk-I EMR 7.62mm;
     };
 
     class srifle_DMR_03_F: DMR_03_base_F {
-        displayName = CSTRING(srifle_DMR_03); //Mk-I EMR 7.62 mm (Black);
+        displayName = CSTRING(srifle_DMR_03); //Mk-I EMR 7.62mm (Black);
     };
 
     class srifle_DMR_03_khaki_F: srifle_DMR_03_F {
-        displayName = CSTRING(srifle_DMR_03_khaki); //Mk-I EMR 7.62 mm (Khaki);
+        displayName = CSTRING(srifle_DMR_03_khaki); //Mk-I EMR 7.62mm (Khaki);
     };
 
     class srifle_DMR_03_tan_F: srifle_DMR_03_F {
-        displayName = CSTRING(srifle_DMR_03_tan); //Mk-I EMR 7.62 mm (Sand);
+        displayName = CSTRING(srifle_DMR_03_tan); //Mk-I EMR 7.62mm (Sand);
     };
 
     class srifle_DMR_03_multicam_F: srifle_DMR_03_F {
-        displayName = CSTRING(srifle_DMR_03_multicam); //Mk-I EMR 7.62 mm (Camo);
+        displayName = CSTRING(srifle_DMR_03_multicam); //Mk-I EMR 7.62mm (Camo);
     };
 
     class srifle_DMR_03_woodland_F: srifle_DMR_03_F {
-        displayName = CSTRING(srifle_DMR_03_woodland); //Mk-I EMR 7.62 mm (Woodland);
+        displayName = CSTRING(srifle_DMR_03_woodland); //Mk-I EMR 7.62mm (Woodland);
     };
 
     class DMR_04_base_F: Rifle_Long_Base_F {
-        displayName = CSTRING(DMR_04); //ASP-1 Kir 12.7 mm;
+        displayName = CSTRING(DMR_04); //ASP-1 Kir 12.7mm;
     };
 
     class srifle_DMR_04_F: DMR_04_base_F {
-        displayName = CSTRING(srifle_DMR_04); //ASP-1 Kir 12.7 mm (Black);
+        displayName = CSTRING(srifle_DMR_04); //ASP-1 Kir 12.7mm (Black);
     };
 
     class srifle_DMR_04_Tan_F: srifle_DMR_04_F {
-        displayName = CSTRING(srifle_DMR_04_Tan); //ASP-1 Kir 12.7 mm (Tan);
+        displayName = CSTRING(srifle_DMR_04_Tan); //ASP-1 Kir 12.7mm (Tan);
     };
 
     class DMR_05_base_F: Rifle_Long_Base_F {
-        displayName = CSTRING(DMR_05); //Cyrus 9.3 mm;
+        displayName = CSTRING(DMR_05); //Cyrus 9.3mm;
     };
 
     class srifle_DMR_05_blk_F: DMR_05_base_F {
-        displayName = CSTRING(srifle_DMR_05_blk); //Cyrus 9.3 mm (Black)
+        displayName = CSTRING(srifle_DMR_05_blk); //Cyrus 9.3mm (Black)
     };
 
     class srifle_DMR_05_hex_F: srifle_DMR_05_blk_F {
-        displayName = CSTRING(srifle_DMR_05_hex); //Cyrus 9.3 mm (Hex);
+        displayName = CSTRING(srifle_DMR_05_hex); //Cyrus 9.3mm (Hex);
     };
 
     class srifle_DMR_05_tan_f: srifle_DMR_05_blk_F {
-        displayName = CSTRING(srifle_DMR_05_tan); //Cyrus 9.3 mm (Tan);
+        displayName = CSTRING(srifle_DMR_05_tan); //Cyrus 9.3mm (Tan);
     };
     class DMR_06_base_F: Rifle_Long_Base_F {
-        displayName = CSTRING(DMR_06); //Mk14 7.62 mm;
+        displayName = CSTRING(DMR_06); //Mk14 7.62mm;
     };
 
     class srifle_DMR_06_camo_F: DMR_06_base_F {
-        displayName = CSTRING(srifle_DMR_06_camo); //Mk14 7.62 mm (Camo)
+        displayName = CSTRING(srifle_DMR_06_camo); //Mk14 7.62mm (Camo)
     };
 
     class srifle_DMR_06_olive_F: srifle_DMR_06_camo_F {
-        displayName = CSTRING(srifle_DMR_06_olive); //Mk14 7.62 mm (Olive);
+        displayName = CSTRING(srifle_DMR_06_olive); //Mk14 7.62mm (Olive);
     };
 
     // marksmen mgs
     class MMG_01_base_F: Rifle_Long_Base_F {
-        displayName = CSTRING(MMG_01); //Navid 9.3 mm;
+        displayName = CSTRING(MMG_01); //Navid 9.3mm;
     };
 
     class MMG_01_hex_F: MMG_01_base_F {
-        displayName = CSTRING(MMG_01_hex); //Navid 9.3 mm (Hex);
+        displayName = CSTRING(MMG_01_hex); //Navid 9.3mm (Hex);
     };
 
     class MMG_01_tan_F: MMG_01_hex_F {
-        displayName = CSTRING(MMG_01_tan); //Navid 9.3 mm (Tan);
+        displayName = CSTRING(MMG_01_tan); //Navid 9.3mm (Tan);
     };
     class MMG_02_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(MMG_02); //SPMG .338;
@@ -596,7 +596,7 @@ class CfgWeapons {
     class cannon_125mm: CannonCore {
         displayName = "2A46";
     };
-    
+
     class cannon_125mm_advanced : cannon_125mm {
         displayName = "2A82-1M";
     };
@@ -666,7 +666,7 @@ class CfgWeapons {
             displayName = "L21A1 RARDEN";
         };
     };
-    
+
     class autocannon_30mm_RCWS : autocannon_Base_F {
         displayName = "2A42";
     };
@@ -725,7 +725,7 @@ class CfgWeapons {
     class optic_ERCO_snd_f : optic_ERCO_blk_f {
         displayName = CSTRING(optic_erco_snd);
     };
-    
+
     class optic_LRPS : ItemCore {
         displayName = CSTRING(optic_lrps);
     };
@@ -738,7 +738,7 @@ class CfgWeapons {
     class ACE_optic_LRPS_2D : optic_LRPS {
         displayName = CSTRING(optic_lrps_2d);
     };
-    
+
     class optic_AMS_base;
     class optic_AMS: optic_AMS_base {
         displayName = CSTRING(optic_ams);
@@ -749,7 +749,7 @@ class CfgWeapons {
     class optic_AMS_snd: optic_AMS {
         displayName = CSTRING(optic_ams_snd);
     };
-    
+
     class optic_KHS_base;
     class optic_KHS_blk: optic_KHS_base {
         displayName = CSTRING(optic_khs_blk);
@@ -763,7 +763,7 @@ class CfgWeapons {
     class optic_KHS_tan: optic_KHS_blk {
         displayName = CSTRING(optic_khs_tan);
     };
-    
+
     class optic_DMS : ItemCore {
         displayName = CSTRING(optic_dms);
     };

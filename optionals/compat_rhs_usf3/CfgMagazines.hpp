@@ -2,18 +2,18 @@ class cfgMagazines {
     class CA_Magazine;
     class VehicleMagazine;
     class rhsusf_mag_40Rnd_46x30_AP: CA_Magazine {
-        descriptionShort = "Caliber: 4.6x30 mm<br/>Rounds: 40<br/>Used in: MP7A2";
+        descriptionShort = "Caliber: 4.6x30mm<br/>Rounds: 40<br/>Used in: MP7A2";
         initSpeed = 680; // according with the ACE_muzzleVelocities at 15°C, default RHS value 680.1
     };
     class rhsusf_mag_40Rnd_46x30_FMJ: CA_Magazine {
-        descriptionShort = "Caliber: 4.6x30 mm<br/>Rounds: 40<br/>Used in: MP7A2";
+        descriptionShort = "Caliber: 4.6x30mm<br/>Rounds: 40<br/>Used in: MP7A2";
         initSpeed = 620; // default RHS value according with the ACE_muzzleVelocities at 15°C
         lastRoundsTracer = 0;
         picture = "\rhsusf\addons\rhsusf_weapons2\glock17g4\data\rhs_mag1_glock17g4_ca.paa";
         tracersEvery = 0;
     };
     class rhsusf_mag_40Rnd_46x30_JHP: CA_Magazine {
-        descriptionShort = "Caliber: 4.6x30 mm<br/>Rounds: 40<br/>Used in: MP7A2";
+        descriptionShort = "Caliber: 4.6x30mm<br/>Rounds: 40<br/>Used in: MP7A2";
         initSpeed = 690; // according with the ACE_muzzleVelocities at 15°C, default RHS value 620
     };
     class rhs_mag_30Rnd_556x45_M855A1_Stanag;

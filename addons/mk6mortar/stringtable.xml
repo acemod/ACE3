@@ -5,7 +5,7 @@
             <English>82mm Rangetable</English>
             <German>82mm Distanztabelle</German>
             <Polish>Tabela strzelnicza 82mm</Polish>
-            <French>Table de tir 82 mm</French>
+            <French>Table de tir 82mm</French>
             <Russian>82 мм Таблица дальностей и прицелов</Russian>
             <Spanish>Tabla de distancias de 82mm</Spanish>
             <Hungarian>82mm hatótáv-tábla</Hungarian>
@@ -22,7 +22,7 @@
             <English>Range Table for the Mk6 82mm Mortar</English>
             <German>Distanztabelle für den Mk6 82mm Mortar</German>
             <Polish>Tabela strzelnicza dla moździerza 82mm Mk6</Polish>
-            <French>Table de tir pour le mortier Mk6 82 mm.</French>
+            <French>Table de tir pour le mortier Mk6 82mm.</French>
             <Russian>Таблица дальностей и прицелов для Mk6 82 мм мортиры</Russian>
             <Spanish>Tabla de distancias para el mortero Mk6 de 82mm</Spanish>
             <Hungarian>Hatótáv-tábla a Mk6 82mm-es mozsárhoz</Hungarian>
@@ -39,7 +39,7 @@
             <English>Open 82mm Rangetable</English>
             <German>Öffne 82mm Distanztabelle</German>
             <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
-            <French>Ouvrir la table de tir 82 mm</French>
+            <French>Ouvrir la table de tir 82mm</French>
             <Russian>Открыть 82 мм Таблицу дальностей и прицелов</Russian>
             <Spanish>Abrir tabla de distancias de 82mm</Spanish>
             <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
@@ -394,7 +394,7 @@
             <German>82mm Sprengpatrone</German>
             <Spanish>Ronda 82mm HE</Spanish>
             <Polish>Pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE</French>
+            <French>Obus de 82mm HE</French>
             <Italian>Proiettile da 82mm HE</Italian>
             <Czech>82mm HE náboj</Czech>
             <Portuguese>Munição 82mm HE</Portuguese>
@@ -410,7 +410,7 @@
             <German>82mm Nebelpatrone</German>
             <Spanish>Ronda 82mm Humo</Spanish>
             <Polish>Pocisk dymny kal. 82mm</Polish>
-            <French>Obus de 82 mm fumigène</French>
+            <French>Obus de 82mm fumigène</French>
             <Italian>Proiettile Fumogeno da 82mm</Italian>
             <Czech>82mm Kouřový náboj</Czech>
             <Portuguese>Munição 82mm Fumaça</Portuguese>
@@ -426,7 +426,7 @@
             <German>82mm Leuchtpatrone</German>
             <Spanish>Ronda 82mm Iluminación</Spanish>
             <Polish>Pocisk oświetlający kal. 82mm</Polish>
-            <French>Obus de 82 mm éclairant</French>
+            <French>Obus de 82mm éclairant</French>
             <Italian>Proiettile illuminante da 82mm</Italian>
             <Czech>82mm Osvětlovací náboj</Czech>
             <Portuguese>Munição 82mm Iluminação</Portuguese>
@@ -442,7 +442,7 @@
             <German>82mm gelenkte Sprengpatrone</German>
             <Spanish>Ronda 82mm Guiada</Spanish>
             <Polish>Kierowany pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE guidé</French>
+            <French>Obus de 82mm HE guidé</French>
             <Italian>Proiettile HE guidato</Italian>
             <Czech>82mm HE náboj (naváděný)</Czech>
             <Portuguese>Munição 82mm HE Guiada</Portuguese>
@@ -458,7 +458,7 @@
             <German>82mm lasergelenkte Sprengpatrone</German>
             <Spanish>Ronda 82mm Guiada por Laser</Spanish>
             <Polish>Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
-            <French>Obus de 82 mm HE guidé au laser</French>
+            <French>Obus de 82mm HE guidé au laser</French>
             <Italian>Proiettile HE a guida laser</Italian>
             <Czech>82mm HE náboj (naváděný laserem)</Czech>
             <Portuguese>Munição 82mm HE Guiada por Laser </Portuguese>
@@ -489,7 +489,7 @@
             <German>[ACE] 82mm Sprengpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm HE</Spanish>
             <Polish>[ACE] Skrzynka amunicji wybuchowej 82mm</Polish>
-            <French>[ACE] Obus de 82 mm HE</French>
+            <French>[ACE] Obus de 82mm HE</French>
             <Italian>[ACE] Scatola proiettili espolisvi ad alto potenziale (HE) da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm HE)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm HE</Portuguese>
@@ -505,7 +505,7 @@
             <German>[ACE] 82mm Nebelpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm Humo</Spanish>
             <Polish>[ACE] Skrzynka amunicji dymnej 82mm</Polish>
-            <French>[ACE] Obus de 82 mm fumigène</French>
+            <French>[ACE] Obus de 82mm fumigène</French>
             <Italian>[ACE] Scatola fumogeni da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm Dýmovnice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Fumaça</Portuguese>
@@ -521,7 +521,7 @@
             <German>[ACE] 82mm Leuchtpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm Iluminacion</Spanish>
             <Polish>[ACE] Skrzynka amunicji oświetlającej 82mm</Polish>
-            <French>[ACE] Obus de 82 mm éclairants</French>
+            <French>[ACE] Obus de 82mm éclairants</French>
             <Italian>[ACE] Scatola illuminanti da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm Světlice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Iluminação</Portuguese>
@@ -537,7 +537,7 @@
             <German>[ACE] 82mm Standardkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm por defecto</Spanish>
             <Polish>[ACE] Skrzynka amunicji standardowej 82mm</Polish>
-            <French>[ACE] Obus de 82 mm par défaut</French>
+            <French>[ACE] Obus de 82mm par défaut</French>
             <Italian>[ACE] Scatola proiettili 82mm standard</Italian>
             <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
