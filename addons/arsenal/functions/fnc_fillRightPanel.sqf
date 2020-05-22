@@ -326,28 +326,13 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
-private _sortRightCurSel = lbCurSel _sortRightCtrl;
+// private _sortRightCurSel = lbCurSel _sortRightCtrl;
 
-if (lbSize _sortRightCtrl == 3) then {
-    _sortRightCtrl lbDelete 2;
-};
+// if (lbSize _sortRightCtrl == 3) then {
+//     _sortRightCtrl lbDelete 2;
+// };
 
-if (_leftPanelState) then {
-    _sortRightCtrl lbDelete 1;
-    _sortRightCtrl lbAdd (localize "STR_a3_rscdisplayarsenal_sort_mod");
-    _sortRightCtrl lbSetValue [1, 1];
-
-    _sortRightCtrl lbSetCurSel ([0, _sortRightCurSel] select (_sortRightCurSel != 2));
-} else {
-    _sortRightCtrl lbDelete 1;
-    _sortRightCtrl lbAdd localize LSTRING(sortByWeightText);
-    _sortRightCtrl lbSetValue [1, 1];
-
-    _sortRightCtrl lbAdd localize LSTRING(sortByAmountText);
-    _sortRightCtrl lbSetValue [2, 2];
-
-    _sortRightCtrl lbSetCurSel _sortRightCurSel;
-};
+[_display, _control, _sortRightCtrl] call FUNC(fillSort);
 
 [_sortRightCtrl, _sortRightCtrl lbValue (lbCurSel _sortRightCtrl)] call FUNC(sortPanel);
 

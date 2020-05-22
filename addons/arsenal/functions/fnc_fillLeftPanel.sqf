@@ -38,7 +38,8 @@ _ctrlPanel ctrlCommit FADE_DELAY;
 _ctrlPanel lbSetCurSel -1;
 
 // Fill sort options
-[_display, _control] call FUNC(fillSort);
+private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
+[_display, _control, _sortLeftCtrl] call FUNC(fillSort);
 
 // Handle icons and filling
 switch true do {
@@ -190,7 +191,6 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
-private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
 [_sortLeftCtrl, _sortLeftCtrl lbValue (lbCurSel _sortLeftCtrl)] call FUNC(sortPanel);
 
 //Select current item

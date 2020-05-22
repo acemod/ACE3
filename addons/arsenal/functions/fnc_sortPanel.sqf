@@ -42,70 +42,65 @@ private _to_string = {
 
 // Right panel
 if (ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]}) then {
-    _panel = _display displayCtrl IDC_rightTabContentListnBox;
-    _curSel = lnbCurSelRow _panel;
-    _selected = _panel lnbData [_curSel, 0];
-
-    switch (_mode) do {
-        // Alphabetically
-        case 0: {
-            _panel lnbSort [1, false];
-        };
-
-        // Weight
-        case 1: {
-            _panel lnbSortByValue [0, false];
-        };
-
-        // Amount
-        case 2: {
-            for "_i" from 0 to (((lnbsize _panel) select 0) - 1) do {
-                _panel lnbSetText [[_i, 2], str (parseNumber (_panel lnbText [_i, 2]) / 1000)];
-            };
-
-            _panel lnbSort [2, true];
-
-
-            for "_i" from 0 to (((lnbsize _panel) select 0) - 1) do {
-                _panel lnbSetText [[_i, 2], str (parseNumber (_panel lnbText [_i, 2]) * 1000)];
-            };
-        };
-    };
-
-    if (_cursel >= 0) then {
-        for '_i' from 0 to (((lnbsize _panel) select 0) - 1) do {
-            if ((_panel lnbdata [_i, 0]) == _selected) exitwith {_panel lnbSetCurSelRow _i};
-        };
-    };
+    systemChat "sort right";
 // Left panel
 } else {
-    _panel = _display displayCtrl ([IDC_leftTabContent, IDC_rightTabContent] select (ctrlIDC _control == 17));
+    if (ctrlIDC _control == 17) then {
+        [
+            _display displayCtrl IDC_rightTabContent,
+            switch (GVAR(currentRightPanel)) do {
+                case IDC_buttonCurrentMag;
+                case IDC_buttonCurrentMag2: { "CfgMagazines" };
+                default { "CfgWeapons" };
+            },
+            GVAR(sortListRightPanel) select (
+                switch (GVAR(currentLeftPanel)) do {
+                    case IDC_buttonOptic: { 0 };
+                    case IDC_buttonItemAcc: { 1 };
+                    case IDC_buttonMuzzle: { 2 };
+                    case IDC_buttonBipod: { 3 };
+                    case IDC_buttonCurrentMag;
+                    case IDC_buttonCurrentMag2;
+                    case IDC_buttonMag;
+                    case IDC_buttonMagALL: { 4 };
+                    case IDC_buttonThrow: { 5 };
+                    case IDC_buttonPut: { 6 };
+                    case IDC_buttonMisc: { 7 };
+                }
+            )
+        ]
+    } else {
+        [
+            _display displayCtrl IDC_leftTabContent,
+            switch (GVAR(currentLeftPanel)) do {
+                case IDC_buttonBackpack: { "CfgVehicles" };
+                case IDC_buttonGoggles: { "CfgGlasses" };
+                default { "CfgWeapons" };
+            },
+            (GVAR(sortListLeftPanel) select ([
+                IDC_buttonPrimaryWeapon,
+                IDC_buttonHandgun,
+                IDC_buttonSecondaryWeapon,
+                IDC_buttonUniform,
+                IDC_buttonVest,
+                IDC_buttonBackpack,
+                IDC_buttonHeadgear,
+                IDC_buttonGoggles,
+                IDC_buttonNVG,
+                IDC_buttonBinoculars,
+                IDC_buttonMap,
+                IDC_buttonGPS,
+                IDC_buttonRadio,
+                IDC_buttonCompass,
+                IDC_buttonWatch
+            ] find GVAR(currentLeftPanel)))
+        ]
+    } params ["_panel", "_cfgClass", "_sorts"];
+
     _curSel = lbCurSel _panel;
     _selected = _panel lbData _curSel;
 
-    private _cfgClass = switch (GVAR(currentLeftPanel)) do {
-        case IDC_buttonBackpack: {"CfgVehicles"};
-        case IDC_buttonGoggles: {"CfgGlasses"};
-        default {"CfgWeapons"};
-    };
-    private _statement = (GVAR(sortListLeftPanel) select ([
-            IDC_buttonPrimaryWeapon,
-            IDC_buttonHandgun,
-            IDC_buttonSecondaryWeapon,
-            IDC_buttonUniform,
-            IDC_buttonVest,
-            IDC_buttonBackpack,
-            IDC_buttonHeadgear,
-            IDC_buttonGoggles,
-            IDC_buttonNVG,
-            IDC_buttonBinoculars,
-            IDC_buttonMap,
-            IDC_buttonGPS,
-            IDC_buttonRadio,
-            IDC_buttonCompass,
-            IDC_buttonWatch
-        ] find GVAR(currentLeftPanel))) select _mode select 2;
-
+    private _statement = _sorts select _mode select 2;
     for '_i' from 1 to (lbsize _panel - 1) do {
         private _item = _panel lbData _i;
         private _itemCfg = (configFile >> _cfgClass >> _item);
