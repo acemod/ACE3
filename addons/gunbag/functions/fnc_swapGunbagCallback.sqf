@@ -69,7 +69,7 @@ _unit selectWeapon _newWeapon;
 
 _newWeaponMagazines = _newWeaponMagazines apply {_x select 0};
 
-private _newWeaponMass     = [_newWeapon, _newWeaponItems, _newWeaponMagazines] call FUNC(calculateMass);
+private _newWeaponMass = [_newWeapon, _newWeaponItems, _newWeaponMagazines] call FUNC(calculateMass);
 
 // update virtual load
 [_target, _gunbag, _currentWeaponMass - _newWeaponMass] call EFUNC(movement,addLoadToUnitContainer);
