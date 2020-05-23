@@ -6,4 +6,4 @@
     LSTRING(DisplayName_Settings),
     false, // default value
     true // isGlobal
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
