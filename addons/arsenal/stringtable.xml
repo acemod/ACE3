@@ -1307,7 +1307,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_statTTL">
             <English>Time to live</English>
-            <Spanish>Tiempo de vida (TTL)</Spanish>
+            <Spanish>Tiempo de vida</Spanish>
             <German>Lebenszeit</German>
             <French>Durée d'expiration</French>
             <Japanese>有効時間</Japanese>
