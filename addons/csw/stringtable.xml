@@ -177,7 +177,7 @@
             <Italian>Coefficente per il tempo di interazione</Italian>
             <Czech>Koeficient času interakce</Czech>
             <Polish>Współczynnik czasu interakcji</Polish>
-            <Spanish>Coheficiente de tiempo de interacción</Spanish>
+            <Spanish>Coeficiente de tiempo de interacción</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
@@ -309,7 +309,7 @@
             <Italian>Abilita l'abilità dell'equipaggio su quest'arma</Italian>
             <Czech>Zapne CSW funkce na této zbrani</Czech>
             <Polish>Włącza opcje systemu CSW na tej broni</Polish>
-            <Spanish>Activa la habilidad de tripulación en esta arma</Spanish>
+            <Spanish>Habilitar este arma para manejo de uso colectivo</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableAndEmpty">
             <English>Enabled and Leave Weapon Empty</English>
@@ -338,6 +338,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticATBag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AT)</English>
+            <Spanish>[CSW] Lanzador estático Mini-Spike (AT)</Spanish>
             <German>[CSW] Statische Lenkwaffe "Mini-Spike" (AT)</German>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AT)</Portuguese>
             <French>[CSW] Lanceur statique Mini-Spike (AT)</French>
@@ -350,6 +351,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AA)</English>
+            <Spanish>[CSW] Lanzador estático Mini-Spike (AA)</Spanish>
             <German>[CSW] Statische Lenkwaffe "Mini-Spike" (AA)</German>
             <Portuguese>[CSW] Lançador Estático - Mini-Spike (AA)</Portuguese>
             <French>[CSW] Lanceur statique Mini-Spike (AA)</French>
@@ -362,6 +364,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
             <English>[CSW] Static XM312 Gun</English>
+            <Spanish>[CSW] Arma estática XM312</Spanish>
             <German>[CSW] Statische XM312</German>
             <Portuguese>[CSW] Arma Estática - XM312</Portuguese>
             <French>[CSW] Mitrailleuse statique XM312</French>
@@ -374,11 +377,13 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
+            <Spanish>[CSW] M2 estática con escudo</Spanish>
             <Czech>[CSW] Statická zbraň M2 se štítem</Czech>
             <French>[CSW] Mitrailleuse statique M2 ac. bouclier</French>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
+            <Spanish>[CSW] Arma estática XM312 (Autónoma)</Spanish>
             <German>[CSW] Statische XM312 (Autonom)</German>
             <Portuguese>[CSW] Arma Estática - XM312 (Autônoma)</Portuguese>
             <French>[CSW] Mitrailleuse statique XM312 (Autonome)</French>
@@ -391,6 +396,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[CSW] Static XM307 Gun</English>
+            <Spanish>[CSW] Arma estática XM307</Spanish>
             <German>[CSW] Statische XM307</German>
             <Portuguese>[CSW] Arma Estática - XM307</Portuguese>
             <French>[CSW] Lance-grenades statique XM307</French>
@@ -403,6 +409,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[CSW] Static XM307 Gun (Autonomous)</English>
+            <Spanish>[CSW] Arma estática XM307 (Autónoma)</Spanish>
             <German>[CSW] Statische XM307 (Autonom)</German>
             <Portuguese>[CSW] Arma Estática - XM307 (Autônoma)</Portuguese>
             <French>[CSW] Lance-grenades statique XM307 (Autonome)</French>
@@ -415,6 +422,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>
+            <Spanish>[CSW] Cinta de munición 12.7x108mm HMG</Spanish>
             <German>[CSW] 12.7x108mm HMG-Gurt</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x108mm HMG</Portuguese>
             <French>[CSW] Bande 12,7x108 mm HMG</French>
@@ -427,6 +435,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_127x99_displayName">
             <English>[CSW] 12.7x99mm HMG Belt</English>
+            <Spanish>[CSW] Cinta de munición 12.7x99mm HMG</Spanish>
             <German>[CSW] 12.7x99mm HMG-Gurt</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG</French>
@@ -439,6 +448,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Red)</English>
+            <Spanish>[CSW] Cinta de munición 12.7x99mm HMG Trazadora (Roja)</Spanish>
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Rot)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Vermelho)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Rouges)</French>
@@ -451,6 +461,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Green)</English>
+            <Spanish>[CSW] Cinta de munición 12.7x99mm HMG Trazadora (Verde)</Spanish>
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Grün)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Verde)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Vertes)</French>
@@ -463,6 +474,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</English>
+            <Spanish>[CSW] Cinta de munición 12.7x99mm HMG Trazadora (Amarilla)</Spanish>
             <German>[CSW] 12.7x99mm Leuchtspur HMG-Gurt (Gelb)</German>
             <Portuguese>[CSW] Cinto de Munição - 12.7x99mm HMG (Traçante Amarelo)</Portuguese>
             <French>[CSW] Bande 12,7x99 mm HMG traçantes (Jaunes)</French>
@@ -475,6 +487,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[CSW] 20mm Grenade GMG Belt</English>
+            <Spanish>[CSW] Cinta de munición de granadas 20mm GMG</Spanish>
             <German>[CSW] 20mm Granate GMG-Gurt</German>
             <Portuguese>[CSW] Cinto de Munição - Granada 20mm GMG</Portuguese>
             <French>[CSW] Bande grenades 20 mm GMG</French>
@@ -487,6 +500,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>
+            <Spanish>Trípode M3</Spanish>
             <German>M3 Dreibein</German>
             <Portuguese>M3 Tripé</Portuguese>
             <French>Trépied M3</French>
@@ -499,6 +513,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFolded_displayName">
             <English>[CSW] 6P57 Deployable Tripod</English>
+            <Spanish>[CSW] Trípode desplegable 6P57</Spanish>
             <German>[CSW] 6P57 aufstellbares Dreibein</German>
             <Portuguese>[CSW] 6P57 Tripé Ajustável</Portuguese>
             <French>[CSW] 6P57 Trépied déployable</French>
@@ -511,6 +526,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFoldedLow_displayName">
             <English>[CSW] 6P57 Deployable Tripod (Low)</English>
+            <Spanish>[CSW] Trípode desplegable 6P57 (Bajo)</Spanish>
             <German>[CSW] 6P57 aufstellbares Dreibein (Niedrig)</German>
             <Portuguese>[CSW] 6P57 Tripé Ajustável (Baixo)</Portuguese>
             <French>[CSW] 6P57 Trépied déployable (Bas)</French>
@@ -523,6 +539,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
             <English>[CSW] M220 Deployable Tripod</English>
+            <Spanish>[CSW] Trípode desplegable M220</Spanish>
             <German>[CSW] M220 aufstellbares Dreibein</German>
             <Portuguese>[CSW] M220 Tripé Ajustável</Portuguese>
             <French>[CSW] M220 Trépied déployable</French>
@@ -535,6 +552,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_sag30TripodFolded_displayName">
             <English>[CSW] SAG-30 Deployable Tripod</English>
+            <Spanish>[CSW] Trípode desplegable SAG-30</Spanish>
             <German>[CSW] SAG-30 aufstellbares Dreibein</German>
             <Portuguese>[CSW] SAG-30 Tripé Ajustável</Portuguese>
             <French>[CSW] SAG-30 Trépied déployable</French>
@@ -547,6 +565,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_kordTripod_displayName">
             <English>6P57 Tripod</English>
+            <Spanish>Trípode desplegable 6P57</Spanish>
             <German>6P57 Dreibein</German>
             <Portuguese>Tripé 6P57</Portuguese>
             <French>Trépied 6P57</French>
@@ -559,6 +578,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_sag30Tripod_displayName">
             <English>SAG-30 Tripod</English>
+            <Spanish>Trípode SAG-30</Spanish>
             <German>SAG-30 Dreibein</German>
             <Portuguese>Tripe SAG-30</Portuguese>
             <French>Trépied SAG-30</French>
@@ -571,6 +591,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_m220Tripod_displayName">
             <English>M220 Tripod</English>
+            <Spanish>Trípode M220</Spanish>
             <German>M220 Dreibein</German>
             <Portuguese>Tripé M220</Portuguese>
             <French>Trépied M220</French>
@@ -583,6 +604,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodFolded_displayName">
             <English>[CSW] M3 Deployable Tripod</English>
+            <Spanish>[CSW] Trípode desplegable M3</Spanish>
             <German>[CSW] M3 aufstellbares Dreibein</German>
             <Portuguese>[CSW] M3 Tripe Ajustável</Portuguese>
             <French>[CSW] M3 Trépied déployable</French>
@@ -595,6 +617,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodLowFolded_displayName">
             <English>[CSW] M3 Deployable Tripod (Low)</English>
+            <Spanish>[CSW] Trípode desplegable M3 (Bajo)</Spanish>
             <German>[CSW] M3 aufstellbares Dreibein (Niedrig)</German>
             <Portuguese>[CSW] M3 Tripe Ajustável (Baixo)</Portuguese>
             <French>[CSW] M3 Trépied déployable (Bas)</French>
@@ -607,6 +630,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplateBag_displayName">
             <English>[CSW] Mortar Baseplate</English>
+            <Spanish>[CSW] Placa base de mortero</Spanish>
             <German>[CSW] M3 Mörsergrundplatte</German>
             <Portuguese>[CSW] Placa base de Morteiro</Portuguese>
             <French>[CSW] Plaque de base pour mortier</French>
@@ -619,6 +643,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
             <English>Mortar Baseplate</English>
+            <Spanish>Placa base de mortero</Spanish>
             <German>Mörsergrundplatte</German>
             <Portuguese>Placa base de Morteiro</Portuguese>
             <French>Plaque de base pour mortier</French>
@@ -631,6 +656,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_mk6MortarBag_displayName">
             <English>[CSW] Mk6 Mortar Tube</English>
+            <Spanish>[CSW] Mk6 Tubo de mortero</Spanish>
             <German>[CSW] Mk6 Mörserrohr</German>
             <Portuguese>[CSW] Tubo de Morteiro - Mk6</Portuguese>
             <French>[CSW] Tube mortier Mk6</French>
@@ -643,6 +669,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_m252_tube">
             <English>[CSW] M252 Tube Bag</English>
+            <Spanish>[CSW] M252 Tubo de mortero</Spanish>
             <German>[CSW] M252 Mörser Rohr Transporttasche</German>
             <Portuguese>[CSW] Tubo de Morteiro - M252</Portuguese>
             <French>[CSW] Sac tube M252</French>
@@ -655,6 +682,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_m2_gun">
             <English>[CSW] M2 Gun Bag</English>
+            <Spanish>[CSW] M2 Bolsa de arma</Spanish>
             <German>[CSW] M2 Waffentasche</German>
             <Portuguese>[CSW] Bolsa de Arma - M2</Portuguese>
             <French>[CSW] Sac M2</French>
@@ -667,6 +695,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_mk19_gun">
             <English>[CSW] MK19 Gun Bag</English>
+            <Spanish>[CSW] MK19 Bolsa de arma</Spanish>
             <German>[CSW] MK19 Waffentasche</German>
             <Portuguese>[CSW] Bolsa de Arma - MK19</Portuguese>
             <French>[CSW] Sac MK19</French>
@@ -679,6 +708,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>
+            <Spanish>[CSW] BGM-71 TOW Bolsa de lanzador</Spanish>
             <German>[CSW] BGM-71 TOW Werfer Transporttasche</German>
             <Portuguese>[CSW] Bolsa de Lançador - BGM-71 TOW</Portuguese>
             <French>[CSW] Sac lanceur BGM-71 TOW</French>
@@ -691,6 +721,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_dshk_gun">
             <English>[CSW] DSHK Gun Bag</English>
+            <Spanish>[CSW] DSHK Bolsa de arma</Spanish>
             <German>[CSW] DSHK Waffentasche</German>
             <Portuguese>[CSW] Bolsa de Arma - DSHK</Portuguese>
             <French>[CSW] Sac DSHK</French>
@@ -703,6 +734,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_2b14_tube">
             <English>[CSW] 2B14 Tube Bag</English>
+            <Spanish>[CSW] 2B14 Tubo de mortero</Spanish>
             <German>[CSW] 2B14 Werfer Transporttasche</German>
             <Portuguese>[CSW] Bolsa de Arma - 2B14</Portuguese>
             <French>[CSW] Sac tube 2B14</French>
@@ -715,6 +747,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_nsv_gun">
             <English>[CSW] NSV Gun Bag</English>
+            <Spanish>[CSW] NSV Bolsa de arma</Spanish>
             <German>[CSW] NSV Waffentasche</German>
             <Portuguese>[CSW] Bolsa de Arma - NSV</Portuguese>
             <French>[CSW] Sac NSV</French>
@@ -727,6 +760,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_kord_gun">
             <English>[CSW] KORD Gun Bag</English>
+            <Spanish>[CSW] KORD Bolsa de arma</Spanish>
             <German>[CSW] KORD Waffentasche</German>
             <Portuguese>[CSW] Bolsa de Arma - KORD</Portuguese>
             <French>[CSW] Sac KORD</French>
@@ -739,6 +773,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_ags30_gun">
             <English>[CSW] AGS-30 Gun Bag</English>
+            <Spanish>[CSW] AGS-30 Bolsa de arma</Spanish>
             <German>[CSW] AGS-30 Waffentasche</German>
             <Portuguese>[CSW] Bolsa de Arma - AGS-30</Portuguese>
             <French>[CSW] Sac AGS-30</French>
@@ -751,6 +786,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_metis_tube">
             <English>[CSW] 9K115 Metis Launcher Bag</English>
+            <Spanish>[CSW] 9K115 Metis Bolsa de lanzador</Spanish>
             <German>[CSW] 9K115 Metis  Werfer Transporttasche</German>
             <Portuguese>[CSW] Bolsa de Arma - 9K115 Metis</Portuguese>
             <French>[CSW] Sac lanceur 9K115 Metis</French>
@@ -763,6 +799,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_kornet_launcher">
             <English>[CSW] 9M113 Kornet Launcher</English>
+            <Spanish>[CSW] 9M113 Kornet Bolsa de lanzador</Spanish>
             <German>[CSW] 9M113 Kornet Werfer</German>
             <Portuguese>[CSW] Bolsa de Arma - 9M113 Kornet</Portuguese>
             <French>[CSW] Sac lanceur 9M113 Kornet</French>
@@ -775,6 +812,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_spg9_Tripod">
             <English>SPG-9 Tripod</English>
+            <Spanish>SPG-9 Trípode</Spanish>
             <German>SPG-9 Dreibein</German>
             <Portuguese>Tripé SPG-9</Portuguese>
             <French>Trépied SPG-9</French>
@@ -787,6 +825,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_spg9_TripodFolded">
             <English>[CSW] SPG-9 Deployable Tripod</English>
+            <Spanish>[CSW] SPG-9 Trípode desplegable</Spanish>
             <German>[CSW] SPG-9 aufstellbares Dreibein</German>
             <Portuguese>[CSW] SPG-9 Tripe Ajustável (Baixo)</Portuguese>
             <French>[CSW] SPG-9 Trépied déployable</French>
@@ -799,6 +838,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_spg9_tube">
             <English>[CSW] SPG-9 Launcher Bag</English>
+            <Spanish>[CSW] SPG-9 Bolsa de lanzador</Spanish>
             <German>[CSW] SPG-9 Werfer Transporttasche</German>
             <Portuguese>[CSW] Bolsa de Lançador - SPG-9</Portuguese>
             <French>[CSW] Sac lanceur SPG-9</French>
@@ -811,6 +851,7 @@
         </Key>
         <Key ID="STR_ACE_CSW_spg9m_tube">
             <English>[CSW] SPG-9M Launcher Bag</English>
+            <Spanish>[CSW] SPG-9M Bolsa de lanzador</Spanish>
             <German>[CSW] SPG-9M Werfer Transporttasche</German>
             <Portuguese>[CSW] Bolsa de Lançador - SPG-9M</Portuguese>
             <French>[CSW] Sac lanceur SPG-9M</French>
