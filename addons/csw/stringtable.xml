@@ -309,7 +309,7 @@
             <Italian>Abilita l'abilità dell'equipaggio su quest'arma</Italian>
             <Czech>Zapne CSW funkce na této zbrani</Czech>
             <Polish>Włącza opcje systemu CSW na tej broni</Polish>
-            <Spanish>Habilitar este arma para manejo de uso colectivo</Spanish>
+            <Spanish>Habilitar el manejo de uso colectivo para esta arma</Spanish>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableAndEmpty">
             <English>Enabled and Leave Weapon Empty</English>
