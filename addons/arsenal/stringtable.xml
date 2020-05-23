@@ -1268,7 +1268,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeImport_Tooltip">
             <English>Import items list array from clipboard (should be the same format as export)</English>
-            <Spanish>Importar array de lista de objetos desde el portapapeles (debe ser el mismo formato que la lista exportada)</Spanish>
+            <Spanish>Importar tabla de lista de objetos desde el portapapeles (debe ser el mismo formato que la lista exportada)</Spanish>
             <German>Importiert alles aus der Zwischenablage (Sollte im gleichen Format sein, wie beim Exportieren)</German>
             <Polish>Zaimportuj listę przedmiotów ze schowka (lista musi być w tym samym formacie jak przy exporcie)</Polish>
             <Japanese>クリップボードからアイテムリストをアレイでインポートします (エクスポートと同じフォーマットである必要があります)</Japanese>
