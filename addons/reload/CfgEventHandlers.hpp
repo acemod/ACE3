@@ -20,7 +20,15 @@ class Extended_PostInit_EventHandlers {
 class Extended_Take_EventHandlers {
     class CAManBase {
         class ACE_AmmoIndicatorReload {
-            clientTake = QUOTE(params ['_unit']; if (_unit == ACE_player && {GVAR(DisplayText)} && {(_this select 1) in [ARR_3(uniformContainer _unit, vestContainer _unit, backpackContainer _unit)]} && {_this select 2 == currentMagazine _unit}) then {[ARR_2(_unit, vehicle _unit)] call FUNC(displayAmmo)};);
+            clientTake = QUOTE( \
+                params [ARR_3('_unit', '_container', '_item')]; \
+                if ( \
+                    _unit == ACE_player \
+                    && {GVAR(DisplayText)} \
+                    && {_container in [ARR_3(uniformContainer _unit, vestContainer _unit, backpackContainer _unit)]} \
+                    && {_item == currentMagazine _unit} \
+                ) then {_unit call DFUNC(displayAmmo)}; \
+            );
         };
     };
 };
