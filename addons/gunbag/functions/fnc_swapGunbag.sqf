@@ -29,6 +29,6 @@ if (["ace_backpacks"] call EFUNC(common,isModLoaded)) then {
 
 [(PROGRESSBAR_TIME * 1.5), _this, {
     (_this select 0) call FUNC(swapGunbagCallback)
-}, {}, localize LSTRING(swapGunbag),
+}, {}, LLSTRING(swapGunbag),
 {(_this select 0) call FUNC(canInteract) == 2}
 ] call EFUNC(common,progressBar);
