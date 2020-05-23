@@ -303,7 +303,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsTooltip">
             <English>Loadouts made available by the mission maker</English>
-            <Spanish>Equipamientos disponibles del creador de la misión</Spanish>
+            <Spanish>Equipamientos disponibles del editor de la misión</Spanish>
             <French>Sets d'équipement mis à disposition par le créateur de mission.</French>
             <German>Ausrüstungen, die durch den Missionsersteller zur Verfügung gestellt worden sind</German>
             <Polish>Zestawy udostępnione przez twórcę misji</Polish>
