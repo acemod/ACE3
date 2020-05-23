@@ -41,7 +41,7 @@ private _currentWeaponMass = [_currentWeapon, _currentWeaponItems, _currentWeapo
 private _newWeaponState = _gunbag getVariable [QGVAR(gunbagWeapon), []];
 
 if (_newWeaponState isEqualTo []) exitWith {
-    [localize LSTRING(empty)] call EFUNC(common,displayTextStructured);
+    [LLSTRING(empty)] call EFUNC(common,displayTextStructured);
 };
 
 _newWeaponState params ["_newWeapon", "_newWeaponItems", "_newWeaponMagazines"];
