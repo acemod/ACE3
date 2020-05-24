@@ -357,4 +357,22 @@ class CfgVehicles {
             ammoUnloadTime = 5;
         };
     };
+
+    // ACE Explosives
+    class Items_base_F;
+    class ACE_Explosives_Place: Items_base_F {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_tm62m_Mine: ACE_Explosives_Place {
+        displayName = "$STR_RHS_CFGMAGAZINES_TM62M0";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_tm62m";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.022,-0.02,0.062]";
+            };
+        };
+    };
 };

@@ -146,4 +146,15 @@ class cfgMagazines {
         picture = QPATHTOEF(csw,UI\ammoBox_50bmg_ca.paa);
     };
 
+    // ACE Explosives
+    class ATMine_Range_Mag;
+    class rhs_mine_tm62m_mag: ATMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_tm62m_Mine";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.1;
+            };
+        };
+    };
 };
