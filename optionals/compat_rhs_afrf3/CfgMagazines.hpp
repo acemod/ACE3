@@ -149,12 +149,80 @@ class cfgMagazines {
     // ACE Explosives
     class ATMine_Range_Mag;
     class rhs_mine_tm62m_mag: ATMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_tm62m_Mine";
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_tm62m";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
-                digDistance = 0.1;
+                digDistance = 0.09;
             };
         };
+    };
+
+    class rhs_mine_pmn2_mag: ATMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_pmn2";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.02;
+            };
+        };
+    };
+
+    class rhs_mag_mine_ptm1: ATMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_ptm1";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.04;
+            };
+        };
+    };
+
+    class rhs_mag_mine_pfm1: ATMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_pfm1";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.02;
+            };
+        };
+    };
+
+    class rhs_ec75_mag: ATMine_Range_Mag {
+        ace_explosives_DelayTime = 1;
+        ace_explosives_Placeable = 1;
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_ec75";
+        useAction = 0;
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+            class DeadmanSwitch: Command {};
+        };
+    };
+
+    class rhs_ec75_sand_mag: rhs_ec75_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_ec75_sand";
+    };
+
+    class rhs_ec200_mag: rhs_ec75_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_ec200";
+    };
+
+    class rhs_ec200_sand_mag: rhs_ec200_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_ec200_sand";
+    };
+
+    class rhs_ec400_mag: rhs_ec75_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_ec400";
+    };
+
+    class rhs_ec400_sand_mag: rhs_ec400_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_ec400_sand";
     };
 };
