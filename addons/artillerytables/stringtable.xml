@@ -45,9 +45,9 @@
             <Turkish>Hava Direnci</Turkish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_description">
-            <English>For Player Shots, Model Air Resistance and Wind Effects</English>
+            <English>For player shots, model air resistance and wind effects</English>
             <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza Mk6 przez graczy</Polish>
-            <Spanish>Para disparos del jugador, modelo de resistencia al aire y efectos de viento</Spanish>
+            <Spanish>Para disparos del jugador, modelar la resistencia del aire y los efectos de viento</Spanish>
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
             <Czech>Pro střelbu hráče používat odpor vzduchu a vliv větru</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
