@@ -326,12 +326,6 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
-// private _sortRightCurSel = lbCurSel _sortRightCtrl;
-
-// if (lbSize _sortRightCtrl == 3) then {
-//     _sortRightCtrl lbDelete 2;
-// };
-
 [_display, _control, _sortRightCtrl] call FUNC(fillSort);
 
 [_sortRightCtrl, _sortRightCtrl lbValue (lbCurSel _sortRightCtrl)] call FUNC(sortPanel);

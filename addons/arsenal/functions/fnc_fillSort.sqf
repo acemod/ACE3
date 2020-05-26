@@ -3,48 +3,28 @@
 
 params ["_display", "_control", "_sortCtrl"];
 
-lbClear _sortCtrl;;
+lbClear _sortCtrl;
 
-if (ctrlIDC _sortCtrl == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]}) then {
-    systemChat "running right";
-    private _handleStatsFnc = {
-        {
-            _sortCtrl lbAdd (_x select 1);
-        } forEach GVAR(sortRightLeftPanel) select _this;
-    };
-    switch (GVAR(currentRightPanel)) do {
-        case IDC_buttonOptic: {
-            0 call _handleStatsFnc;
-        };
-        case IDC_buttonItemAcc: {
-            1 call _handleStatsFnc;
-        };
-        case IDC_buttonMuzzle: {
-            2 call _handleStatsFnc;
-        };
-        case IDC_buttonBipod: {
-            3 call _handleStatsFnc;
-        };
-        case IDC_buttonCurrentMag;
-        case IDC_buttonCurrentMag2;
-        case IDC_buttonMag;
-        case IDC_buttonMagALL: {
-            4 call _handleStatsFnc;
-        };
-        case IDC_buttonThrow: {
-            5 call _handleStatsFnc;
-        };
-        case IDC_buttonPut: {
-            6 call _handleStatsFnc;
-        };
-        case IDC_buttonMisc: {
-            7 call _handleStatsFnc;
-        };
-    };
+private _sorts = if (ctrlIDC _sortCtrl == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]}) then {
+    GVAR(sortListRightPanel) select (
+        switch (GVAR(currentRightPanel)) do {
+            case IDC_buttonOptic: { 0 };
+            case IDC_buttonItemAcc: { 1 };
+            case IDC_buttonMuzzle: { 2 };
+            case IDC_buttonBipod: { 3 };
+            case IDC_buttonCurrentMag;
+            case IDC_buttonCurrentMag2;
+            case IDC_buttonMag;
+            case IDC_buttonMagALL: { 4 };
+            case IDC_buttonThrow: { 5 };
+            case IDC_buttonPut: { 6 };
+            case IDC_buttonMisc: { 7 };
+        }
+    )
 } else {
     private _sidc = ctrlIDC _sortCtrl;
     private _idc = ctrlIDC _control;
-    private _sorts = switch true do {
+    switch true do {
         case (_sidc == 17): { // Right panel weapon attachment
             GVAR(sortListRightPanel) select (
                 switch (_idc) do {
@@ -84,11 +64,11 @@ if (ctrlIDC _sortCtrl == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,ID
                 IDC_buttonWatch
             ] find _idc)
         };
-    };
-    {
-        if (_x isEqualTo []) exitWith {};
-        _sortCtrl lbAdd (_x select 1);
-    } forEach _sorts;
-    // TODO select the last sort if available
-    _sortCtrl lbSetCurSel 0;
+    }
 };
+{
+    if (_x isEqualTo []) exitWith {};
+    _sortCtrl lbAdd (_x select 1);
+} forEach _sorts;
+// TODO select the last sort if available
+_sortCtrl lbSetCurSel 0;
