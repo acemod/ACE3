@@ -106,4 +106,9 @@ class CfgAmmo {
     class rhs_mine_stockmine43_4m_ammo: rhs_mine_stockmine43_2m_ammo {
         ace_explosives_defuseObjectPosition[] = {-2, 0, 0.25};
     };
+
+    class DemoCharge_Remote_Ammo;
+    class rhs_charge_M2tet_x2_ammo: DemoCharge_Remote_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0.095, 0, 0.055};
+    };
 };

@@ -208,4 +208,14 @@ class CfgVehicles {
             };
         };
     };
+
+    class ACE_Explosives_Place_rhs_charge_M2tet_x2: ACE_Explosives_Place {
+        displayName = "Tetrytol Charge (2.5lb Placed)";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\M2_TETRYTOL_x2\M2TET_x2_ITEM";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.125, 0, 0.055]";
+            };
+        };
+    };
 };

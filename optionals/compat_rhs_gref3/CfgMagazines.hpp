@@ -185,4 +185,20 @@ class CfgMagazines {
             };
         };
     };
+
+    class DemoCharge_Remote_Mag;
+    class rhs_charge_M2tet_x2_mag: DemoCharge_Remote_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_charge_M2tet_x2";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+            class DeadmanSwitch: Command {};
+        };
+    };
 };
