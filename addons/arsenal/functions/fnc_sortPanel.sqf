@@ -115,7 +115,7 @@ private _statement = _sorts select _mode select 2;
 private _for = if (_right) then {
     for '_i' from 0 to ((lnbSize _panel select 0) - 1)
 } else {
-    for '_i' from 0 to (lbSize _panel - 1)
+    for '_i' from 1 to (lbSize _panel - 1)
 };
 
 _for do {
