@@ -22,42 +22,42 @@ class GVAR(sorts) {
 
     class ACE_mass: sortBase {
         scope = 2;
-        displayName = "Sort by weight";
+        displayName = CSTRING(sortByWeightText);
         tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}, {0,1,2,3,4,5,6,7}};
         statement = QUOTE(_this call FUNC(sortStatement_mass));
     };
 
     class ACE_load: sortBase {
         scope = 2;
-        displayName = "Sort by load";
+        displayName = CSTRING(sortByLoadText);
         tabs[] = {{3,4,5}, {}};
         statement = QUOTE(getContainerMaxLoad configName _this);
     };
 
     class ACE_accuracy: sortBase {
         scope = 2;
-        displayName = "Sort by accuracy";
+        displayName = CSTRING(sortByAccuracyText);
         tabs[] = {{0,1,2}, {}};
         statement = QUOTE(_this call FUNC(sortStatement_accuracy));
     };
 
     class ACE_rateOfFire: sortBase {
         scope = 2;
-        displayName = "Sort by rate of fire";
+        displayName = CSTRING(sortByRateOfFireText);
         tabs[] = {{0,1,2}, {}};
         statement = QUOTE(_this call FUNC(sortStatement_rateOfFire));
     };
 
     class ACE_scopeMag: sortBase {
         scope = 2;
-        displayName = "Sort by magnification";
+        displayName = CSTRING(sortByMagnificationText);
         tabs[] = {{}, {0}};
         statement = QUOTE(_this call FUNC(sortStatement_scopeMag));
     };
 
     class ACE_magCount: sortBase {
         scope = 2;
-        displayName = "Sort by ammo count";
+        displayName = CSTRING(sortByMagCountText);
         tabs[] = {{}, {4}};
         statement = QUOTE(_this call FUNC(sortStatement_magCount));
     };

@@ -356,6 +356,26 @@
             <Czech>Seřadit podle množství</Czech>
             <Turkish>Miktara göre sırala</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_sortByLoadText">
+            <English>Sort by load</English>
+            <German>Nach Tragelast sortieren</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
+            <English>Sort by accuracy</English>
+            <German>Nach Genauigkeit sortieren</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
+            <English>Sort by rate of fire</English>
+            <German>Nach Genauigkeit sortieren</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
+            <English>Sort by magnification</English>
+            <German>Nach Vergrößerung sortieren</German>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortByMagCountText">
+            <English>Sort by ammo count</English>
+            <German>Nach Munitionszahl sortieren</German>
+        </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
             <French>Partager ou cesser de partager le set d'équipement sélectionné.</French>
