@@ -388,42 +388,43 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Explosives_Place_rhsusf_m112_DemoCharge: ACE_Explosives_Place {
+    // ACE Explosives
+    class ACE_Explosives_Place_rhsusf_explosive_m112: ACE_Explosives_Place {
         displayName = "$STR_RHSUSF_M112_EXPLOSIVE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x1_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[-0.155,0,0.01]";
+                position = "[-0.055, 0, 0.038]";
             };
         };
     };
 
-    class ACE_Explosives_Place_rhsusf_m112x4_DemoCharge: ACE_Explosives_Place {
+    class ACE_Explosives_Place_rhsusf_explosive_m112x4: ACE_Explosives_Place {
         displayName = "$STR_RHSUSF_M112X4_EXPLOSIVE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x4_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[-0.155,0.025,0.01]";
+                position = "[-0.055, 0.025, 0.102]";
             };
         };
     };
 
-    class ACE_Explosives_Place_rhs_mine_M19_Mine: ACE_Explosives_Place {
+    class ACE_Explosives_Place_rhsusf_mine_M19: ACE_Explosives_Place {
         displayName = "$STR_RHSUSF_M19_ATMINE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m19_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[0.011,0.011,0.045]";
+                position = "[-0.014, -0.002, 0.046]";
             };
         };
     };
 
-    class ACE_Explosives_Place_rhsusf_mine_m14_mag_Mine: ACE_Explosives_Place {
+    class ACE_Explosives_Place_rhsusf_mine_m14: ACE_Explosives_Place {
         displayName = "$STR_RHSUSF_M14_APMINE_DISPLAY_NAME";
-        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m14_e";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m14_d";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[0.02,0.015,0.02]";
+                position = "[-0.002, 0.022, 0.02]";
             };
         };
     };

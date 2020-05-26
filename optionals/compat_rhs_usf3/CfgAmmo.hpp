@@ -298,22 +298,22 @@ class CfgAmmo {
         ACE_caliber = 9;
     };
 
+    // ACE Explosives
     class PipeBombBase;
     class rhsusf_m112_ammo: PipeBombBase {
-        ace_explosives_magazine = "rhsusf_m112_mag";
-        ace_explosives_Explosive = "rhsusf_m112_ammo_scripted";
-        ace_explosives_size = 0;
-        ace_explosives_defuseObjectPosition[] = {-0.155,0,0.01};
-        soundActivation[] = {"", 0, 0, 0};
-        soundDeactivation[] = {"", 0, 0, 0};
+        ace_explosives_defuseObjectPosition[] = {0.055, 0, 0.038};
     };
 
     class rhsusf_m112x4_ammo: PipeBombBase {
-        ace_explosives_magazine = "rhsusf_m112x4_mag";
-        ace_explosives_Explosive = "rhsusf_m112x4_ammo_scripted";
-        ace_explosives_size = 0;
-        ace_explosives_defuseObjectPosition[] = {-0.155,0.025,0.01};
-        soundActivation[] = {"", 0, 0, 0};
-        soundDeactivation[] = {"", 0, 0, 0};
+        ace_explosives_defuseObjectPosition[] = {0.055, -0.025, 0.102};
+    };
+
+    class MineBase;
+    class rhsusf_mine_m19_ammo: MineBase {
+        ace_explosives_defuseObjectPosition[] = {0, 0.02, 0.046};
+    };
+
+    class rhsusf_mine_m14_ammo: MineBase {
+        ace_explosives_defuseObjectPosition[] = {-0.02, -0.015, 0.02};
     };
 };
