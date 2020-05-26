@@ -38,4 +38,29 @@ class CfgAmmo {
     class rhs_mine_a200_dz35_ammo: rhs_mine_a200_bz_ammo {
         ace_explosives_defuseObjectPosition[] = {0, 0, 0.02};
     };
+
+    class rhs_mine_glasmine43_hz_ammo: APERSMine_Range_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.015};
+    };
+
+    class rhs_mine_glasmine43_bz_ammo: rhs_mine_glasmine43_hz_ammo {
+        ace_minedetector_detectable = 0;
+    };
+
+    class rhs_mine_bounding_trigger_base;
+    class rhs_mine_m2a3b_press_ammo: rhs_mine_bounding_trigger_base {
+        ace_explosives_defuseObjectPosition[] = {0, 0.046, 0.02};
+    };
+
+    class rhs_mine_m2a3b_wire_ammo: rhs_mine_m2a3b_press_ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0.046, 0.125};
+    };
+
+    class rhs_mine_M3_pressure_ammo: APERSMine_Range_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.015};
+    };
+    
+    class rhs_mine_M3_tripwire_ammo: rhs_mine_M3_pressure_ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.055};
+    };
 };

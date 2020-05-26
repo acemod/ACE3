@@ -28,4 +28,60 @@ class CfgMagazines {
             };
         };
     };
+
+    class rhs_mine_glasmine43_hz_mag: APERSMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_glasmine43_hz";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.01;
+            };
+        };
+    };
+
+    class rhs_mine_glasmine43_bz_mag: rhs_mine_glasmine43_hz_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_glasmine43_bz";
+    };
+
+    class APERSBoundingMine_Range_Mag;
+    class rhs_mine_m2a3b_press_mag: APERSBoundingMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_m2a3b_press";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.185;
+            };
+        };
+    };
+
+    class rhs_mine_m2a3b_trip_mag: rhs_mine_m2a3b_press_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_m2a3b_trip";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire"};
+            class Tripwire {
+                digDistance = 0.13;
+            };
+        };
+    };
+
+    class rhs_mine_m3_pressure_mag: APERSMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_m3_pressure";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = -0.015;
+            };
+        };
+    };
+
+    class APERSTripMine_Wire_Mag;
+    class rhs_mine_M3_tripwire_mag: APERSTripMine_Wire_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_M3_tripwire";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire"};
+            class Tripwire {
+                digDistance = 0;
+            };
+        };
+    };
 };
