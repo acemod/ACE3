@@ -190,7 +190,6 @@ class cfgMagazines {
 
     class rhs_ec75_mag: ATMine_Range_Mag {
         ace_explosives_DelayTime = 1;
-        ace_explosives_Placeable = 1;
         ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_ec75";
         useAction = 0;
         class ACE_Triggers {
@@ -282,7 +281,6 @@ class cfgMagazines {
 
     class rhs_mine_ozm72_c_mag: rhs_mine_ozm72_a_mag {
         ace_explosives_DelayTime = 1;
-        ace_explosives_Placeable = 1;
         ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_ozm72_c";
         useAction = 0;
         class ACE_Triggers {
