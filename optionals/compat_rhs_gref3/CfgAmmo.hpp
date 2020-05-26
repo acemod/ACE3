@@ -28,4 +28,14 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={785, 800, 815};
         ACE_barrelLengths[]={508.0, 599.948, 660.4};
     };
+
+    // ACE Explosives
+    class APERSMine_Range_Ammo;
+    class rhs_mine_a200_bz_ammo: APERSMine_Range_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.035};
+    };
+
+    class rhs_mine_a200_dz35_ammo: rhs_mine_a200_bz_ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.02};
+    };
 };

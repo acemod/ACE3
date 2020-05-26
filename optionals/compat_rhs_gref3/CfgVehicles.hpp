@@ -25,4 +25,32 @@ class CfgVehicles {
             disassembleTurret = QEGVAR(csw,kordTripodLow);
         };
     };
+
+    // ACE Explosives
+    class Items_base_F;
+    class ACE_Explosives_Place: Items_base_F {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_a200_bz: ACE_Explosives_Place {
+        displayName = "Beh.Schu.Mi.A200 (B.Z.) AP Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\A200\A200_BZ_ITEM";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.095]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_a200_dz35: ACE_Explosives_Place_rhs_mine_a200_bz {
+        displayName = "Beh.Schu.Mi.A200 (D.Z.35) AP Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\A200\A200_DZ35_ITEM";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.125]";
+            };
+        };
+    };
 };
