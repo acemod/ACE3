@@ -52,8 +52,8 @@ class CfgAmmo {
         ace_explosives_defuseObjectPosition[] = {0, 0.046, 0.02};
     };
 
-    class rhs_mine_m2a3b_wire_ammo: rhs_mine_m2a3b_press_ammo {
-        ace_explosives_defuseObjectPosition[] = {0, 0.046, 0.125};
+    class rhs_mine_m2a3b_trip_ammo: rhs_mine_m2a3b_press_ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0.046, 0.055};
     };
 
     class rhs_mine_M3_pressure_ammo: APERSMine_Range_Ammo {
@@ -61,6 +61,23 @@ class CfgAmmo {
     };
     
     class rhs_mine_M3_tripwire_ammo: rhs_mine_M3_pressure_ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.055};
+    };
+
+    class ATMine_Range_Ammo;
+    class rhs_mine_TM43_ammo: ATMine_Range_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.072};
+    };
+
+    class rhs_mine_M7A2_ammo: APERSMine_Range_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.067};
+    };
+
+    class rhs_mine_Mk2_pressure_ammo: APERSMine_Range_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0, 0.02};
+    };
+
+    class rhs_mine_Mk2_tripwire_ammo: rhs_mine_Mk2_pressure_ammo {
         ace_explosives_defuseObjectPosition[] = {0, 0, 0.055};
     };
 };

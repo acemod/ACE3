@@ -108,4 +108,44 @@ class CfgVehicles {
             };
         };
     };
+
+    class ACE_Explosives_Place_rhs_mine_TM43: ACE_Explosives_Place {
+        displayName = "Tellermine 43";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\TM43\TM43";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.072]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_M7A2: ACE_Explosives_Place {
+        displayName = "M7A2 AP Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\M7A2\M7A2_ITEM";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.066]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_mk2_pressure: ACE_Explosives_Place {
+        displayName = "Mk 2 AP Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\MKII_BOOBYTRAP\MKII_TRAP_ITEM";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.09, 0, 0.011]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_Mk2_tripwire: ACE_Explosives_Place {
+        displayName = "Mk 2 (Tripwire) AP Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\M3\M6M7FUZE_HELPER_TRIPWIRE";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.055]";
+            };
+        };
+    };
 };

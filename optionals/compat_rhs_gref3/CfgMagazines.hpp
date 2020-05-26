@@ -84,4 +84,45 @@ class CfgMagazines {
             };
         };
     };
+
+    class ATMine_Range_Mag;
+    class rhs_mine_TM43_mag: ATMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_TM43";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.057;
+            };
+        };
+    };
+
+    class rhs_mine_M7A2_mag: APERSMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_M7A2";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.062;
+            };
+        };
+    };
+
+    class rhs_mine_mk2_pressure_mag: APERSMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_mk2_pressure";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0;
+            };
+        };
+    };
+
+    class rhs_mine_Mk2_tripwire_mag: APERSTripMine_Wire_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_Mk2_tripwire";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire"};
+            class Tripwire {
+                digDistance = 0;
+            };
+        };
+    };
 };
