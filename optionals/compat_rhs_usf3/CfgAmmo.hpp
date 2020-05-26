@@ -1,4 +1,3 @@
-
 class CfgAmmo {
     class BulletBase;
     class B_127x99_Ball;
@@ -315,5 +314,10 @@ class CfgAmmo {
 
     class rhsusf_mine_m14_ammo: MineBase {
         ace_explosives_defuseObjectPosition[] = {-0.02, -0.015, 0.02};
+    };
+
+    class APERSMine_Range_Ammo;
+    class rhsusf_mine_m49a1_3m_ammo: APERSMine_Range_Ammo {
+        ace_explosives_defuseObjectPosition[] = {0, 0.016, 0.296};
     };
 };

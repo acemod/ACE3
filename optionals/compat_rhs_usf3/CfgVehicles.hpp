@@ -428,4 +428,24 @@ class CfgVehicles {
             };
         };
     };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_3m: ACE_Explosives_Place {
+        displayName = "M49A1 (3m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_a_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, -0.016, 0.296]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_6m: ACE_Explosives_Place_rhsusf_mine_m49a1_3m {
+        displayName = "M49A1 (6m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_b_e";
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_10m: ACE_Explosives_Place_rhsusf_mine_m49a1_3m {
+        displayName = "M49A1 (10m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_c_e";
+    };
 };

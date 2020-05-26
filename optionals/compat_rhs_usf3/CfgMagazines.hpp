@@ -100,6 +100,24 @@ class cfgMagazines {
         };
     };
 
+    class rhsusf_mine_m49a1_3m_mag: ATMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhsusf_mine_m49a1_3m";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire"};
+            class Tripwire {
+                digDistance = 0.125;
+            };
+        };
+    };
+
+    class rhsusf_mine_m49a1_6m_mag: rhsusf_mine_m49a1_3m_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhsusf_mine_m49a1_6m";
+    };
+
+    class rhsusf_mine_m49a1_10m_mag: rhsusf_mine_m49a1_3m_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhsusf_mine_m49a1_10m";
+    };
+
    // RHS magazines for crew handled ammo
     class rhs_mag_TOW;
     class GVAR(mag_TOW): rhs_mag_TOW {
