@@ -148,4 +148,64 @@ class CfgVehicles {
             };
         };
     };
+
+    class ACE_Explosives_Place_rhs_mine_smine35_press: ACE_Explosives_Place {
+        displayName = "S.Mi.35 (S.Mi.Z.35) APB Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\Smine35\SMI35_ITEM_PRESS";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.217]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_smine35_trip: ACE_Explosives_Place {
+        displayName = "S.Mi.35 (W) APB Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\Smine35\SMI35_HELPER_TRIP";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.02]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_smine44_trip: ACE_Explosives_Place {
+        displayName = "S.Mi.44 (W) APB Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\Smine44\SMI44_HELPER_TRIP";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.03, 0, 0.015]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_smine44_press: ACE_Explosives_Place {
+        displayName = "S.Mi.44 (S.Mi.Z.44) APB Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\Smine44\SMI44_ITEM_PRESS";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.02, 0, 0.21]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_stockmine43_2m: ACE_Explosives_Place {
+        displayName = "St.Mi.43/I (2m) AP Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\Stockmine43\STMI43_HELPER_2M";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[1, 0, 0.25]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_stockmine43_4m: ACE_Explosives_Place {
+        displayName = "St.Mi.43/II (4m) AP Mine";
+        model = "\rhsgref\addons\rhsgref_weapons2\mines\Stockmine43\STMI43_HELPER_4M";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[2, 0, 0.25]";
+            };
+        };
+    };
 };

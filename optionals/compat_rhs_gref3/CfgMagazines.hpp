@@ -125,4 +125,64 @@ class CfgMagazines {
             };
         };
     };
+
+    class rhs_mine_smine35_press_mag: APERSBoundingMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_smine35_press";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.18;
+            };
+        };
+    };
+
+    class rhs_mine_smine35_trip_mag: rhs_mine_smine35_press_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_smine35_trip";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire"};
+            class Tripwire {
+                digDistance = 0;
+            };
+        };
+    };
+
+    class rhs_mine_smine44_trip_mag: APERSBoundingMine_Range_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_smine44_trip";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire"};
+            class Tripwire {
+                digDistance = 0;
+            };
+        };
+    };
+
+    class rhs_mine_smine44_press_mag: rhs_mine_smine44_trip_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_smine44_press";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"PressurePlate"};
+            class PressurePlate {
+                digDistance = 0.175;
+            };
+        };
+    };
+
+    class rhs_mine_stockmine43_2m_mag: APERSTripMine_Wire_Mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_stockmine43_2m";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire"};
+            class Tripwire {
+                digDistance = 0.25;
+            };
+        };
+    };
+
+    class rhs_mine_stockmine43_4m_mag: rhs_mine_stockmine43_2m_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_stockmine43_4m";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire"};
+            class Tripwire {
+                digDistance = 0.25;
+            };
+        };
+    };
 };
