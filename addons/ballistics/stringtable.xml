@@ -14,6 +14,7 @@
             <Polish>#00 Śrut</Polish>
             <Portuguese>#00 Chumbo</Portuguese>
             <Turkish>#00 Irisaçma</Turkish>
+            <Russian>#00 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_Description">
             <English>#00 Buckshot</English>
@@ -27,6 +28,7 @@
             <Polish>#00 Śrut</Polish>
             <Portuguese>#00 Chumbo</Portuguese>
             <Turkish>#00 Irisaçma</Turkish>
+            <Russian>#00 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_NameShort">
             <English>#0 Buckshot</English>
@@ -40,6 +42,7 @@
             <Polish>#0 Śrut</Polish>
             <Portuguese>#0 Chumbo</Portuguese>
             <Turkish>#0 Irisaçma</Turkish>
+            <Russian>#0 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No0_Buck_Description">
             <English>#0 Buckshot</English>
@@ -53,6 +56,7 @@
             <Polish>#0 Śrut</Polish>
             <Portuguese>#0 Chumbo</Portuguese>
             <Turkish>#0 Irisaçma</Turkish>
+            <Russian>#0 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_NameShort">
             <English>#1 Buckshot</English>
@@ -66,6 +70,7 @@
             <Polish>#1 Śrut</Polish>
             <Portuguese>#1 Chumbo</Portuguese>
             <Turkish>#1 Irisaçma</Turkish>
+            <Russian>#1 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No1_Buck_Description">
             <English>#1 Buckshot</English>
@@ -79,6 +84,7 @@
             <Polish>#1 Śrut</Polish>
             <Portuguese>#1 Chumbo</Portuguese>
             <Turkish>#1 Irisaçma</Turkish>
+            <Russian>#1 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_NameShort">
             <English>#2 Buckshot</English>
@@ -92,6 +98,7 @@
             <Polish>#2 Śrut</Polish>
             <Portuguese>#2 Chumbo</Portuguese>
             <Turkish>#2 Irisaçma</Turkish>
+            <Russian>#2 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No2_Buck_Description">
             <English>#2 Buckshot</English>
@@ -105,6 +112,7 @@
             <Polish>#2 Śrut</Polish>
             <Portuguese>#2 Chumbo</Portuguese>
             <Turkish>#2 Irisaçma</Turkish>
+            <Russian>#2 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_NameShort">
             <English>#3 Buckshot</English>
@@ -118,6 +126,7 @@
             <Polish>#3 Śrut</Polish>
             <Portuguese>#3 Chumbo</Portuguese>
             <Turkish>#3 Irisaçma</Turkish>
+            <Russian>#3 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No3_Buck_Description">
             <English>#3 Buckshot</English>
@@ -131,6 +140,7 @@
             <Polish>#3 Śrut</Polish>
             <Portuguese>#3 Chumbo</Portuguese>
             <Turkish>#3 Irisaçma</Turkish>
+            <Russian>#3 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_NameShort">
             <English>#4 Buckshot</English>
@@ -144,6 +154,7 @@
             <Polish>#4 Śrut</Polish>
             <Portuguese>#4 Chumbo</Portuguese>
             <Turkish>#4 Irisaçma</Turkish>
+            <Russian>#4 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Buck_Description">
             <English>#4 Buckshot</English>
@@ -157,6 +168,7 @@
             <Polish>#4 Śrut</Polish>
             <Portuguese>#4 Chumbo</Portuguese>
             <Turkish>#4 Irisaçma</Turkish>
+            <Russian>#4 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
             <English>#7 Birdshot</English>
@@ -169,6 +181,7 @@
             <Czech>#7 Broky malé</Czech>
             <Polish>#7 Śrut Drobny</Polish>
             <Turkish>#7 Küçük saçma</Turkish>
+            <Russian>#7 Дробь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
             <English>#7 Birdshot</English>
@@ -181,6 +194,7 @@
             <Czech>#7 Broky malé - kalibr 2.54 mm</Czech>
             <Polish>#7 Śrut Drobny (Birdshot)</Polish>
             <Turkish>#7 Küçük saçma</Turkish>
+            <Russian>#7 Дробь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
@@ -193,6 +207,7 @@
             <Czech>2x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 2 naboje #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 2 Tiros</Portuguese>
+            <Russian>12 Калибр 2 п. ##0 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 2Rnd #0 Buckshot</English>
@@ -205,6 +220,7 @@
             <Czech>2x #0 Broky velké (kalibr 8.1 mm)</Czech>
             <Polish>12 Gauge 2 naboje #0 Śrut</Polish>
             <Portuguese>Chumbo #0 Calibre Doze 2 Tiros</Portuguese>
+            <Russian>12 Калибр 2 п. #0 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 2Rnd #1 Buckshot</English>
@@ -217,6 +233,7 @@
             <Czech>2x #1 Broky velké (kalibr 7.6 mm)</Czech>
             <Polish>12 Gauge 2 naboje #1 Śrut</Polish>
             <Portuguese>Chumbo #1 Calibre Doze 2 Tiros</Portuguese>
+            <Russian>12 Калибр 2 п. #1 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 2Rnd #2 Buckshot</English>
@@ -229,6 +246,7 @@
             <Czech>2x #2 Broky velké (kalibr 6.9 mm)</Czech>
             <Polish>12 Gauge 2 naboje #2 Śrut</Polish>
             <Portuguese>Chumbo #2 Calibre Doze 2 Tiros</Portuguese>
+            <Russian>12 Калибр 2 п. #2 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 2Rnd #3 Buckshot</English>
@@ -241,6 +259,7 @@
             <Czech>2x #3 Broky velké (kalibr 6.4 mm)</Czech>
             <Polish>12 Gauge 2 naboje #3 Śrut</Polish>
             <Portuguese>Chumbo #3 Calibre Doze 2 Tiros</Portuguese>
+            <Russian>12 Калибр 2 п. #3 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 2Rnd #4 Buckshot</English>
@@ -253,6 +272,7 @@
             <Czech>2x #4 Broky velké (kalibr 6.1 mm)</Czech>
             <Polish>12 Gauge 2 naboje #4 Śrut</Polish>
             <Portuguese>Chumbo #4 Calibre Doze 2 Tiros</Portuguese>
+            <Russian>12 Калибр 2 п. #4 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 2Rnd #7 Birdshot</English>
@@ -265,6 +285,7 @@
             <Czech>2x #7 Broky malé (kalibr 2.54 mm)</Czech>
             <Polish>12 Gauge 2 naboje #7 Śrut</Polish>
             <Portuguese>Chumbo #7 Calibre Doze 2 Tiros</Portuguese>
+            <Russian>12 Калибр 2 п. #7 Дробь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 6Rnd #00 Buckshot</English>
@@ -277,6 +298,7 @@
             <Czech>6x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 6 naboi #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 6 Tiros</Portuguese>
+            <Russian>12 Калибр 6 п. ##0 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 6Rnd #0 Buckshot</English>
@@ -289,6 +311,7 @@
             <Czech>6x #0 Broky velké (kalibr 8.1 mm)</Czech>
             <Polish>12 Gauge 6 naboi #0 Śrut</Polish>
             <Portuguese>Chumbo #0 Calibre Doze 6 Tiros</Portuguese>
+            <Russian>12 Калибр 6 п. #0 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 6Rnd #1 Buckshot</English>
@@ -301,6 +324,7 @@
             <Czech>6x #1 Broky velké (kalibr 7.6 mm)</Czech>
             <Polish>12 Gauge 6 naboi #1 Śrut</Polish>
             <Portuguese>Chumbo #1 Calibre Doze 6 Tiros</Portuguese>
+            <Russian>12 Калибр 6 п. #1 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 6Rnd #2 Buckshot</English>
@@ -313,6 +337,7 @@
             <Czech>6x #2 Broky velké (kalibr 6.9 mm)</Czech>
             <Polish>12 Gauge 6 naboi #2 Śrut</Polish>
             <Portuguese>Chumbo #2 Calibre Doze 6 Tiros</Portuguese>
+            <Russian>12 Калибр 6 п. #2 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 6Rnd #3 Buckshot</English>
@@ -325,6 +350,7 @@
             <Czech>6x #3 Broky velké (kalibr 6.4 mm)</Czech>
             <Polish>12 Gauge 6 naboi #3 Śrut</Polish>
             <Portuguese>Chumbo #3 Calibre Doze 6 Tiros</Portuguese>
+            <Russian>12 Калибр 6 п. #3 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 6Rnd #4 Buckshot</English>
@@ -337,6 +363,7 @@
             <Czech>6x #4 Broky velké (kalibr 6.1 mm)</Czech>
             <Polish>12 Gauge 6 naboi #4 Śrut</Polish>
             <Portuguese>Chumbo #4 Calibre Doze 6 Tiros</Portuguese>
+            <Russian>12 Калибр 6 п. #4 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 6Rnd #7 Birdshot</English>
@@ -348,6 +375,7 @@
             <French>6 balles cal. 12 Grenaille No.4</French>
             <Czech>6x #7 Broky malé (kalibr 2.54 mm)</Czech>
             <Polish>12 Gauge 6 naboi #7 Śrut</Polish>
+            <Russian>12 Калибр 6 п. #7 Дробь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
@@ -360,6 +388,7 @@
             <Czech>15x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 15 naboi #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 15 Tiros</Portuguese>
+            <Russian>12 Калибр 15 п. ##0 Картечь</Russian>
         </Key>
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">

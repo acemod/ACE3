@@ -489,6 +489,7 @@
             <Polish>Określa akcję, która ma być podjęta, jeśli gracz nie ma właściwych PBO.</Polish>
             <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
             <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
+            <Russian>Определяет какое действие будет предпринято если игрок не имеет корректные PBO.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -513,6 +514,7 @@
             <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
             <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
             <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
+            <Russian>Проверить все аддоны, а не только ACE.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -537,6 +539,7 @@
             <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
             <Japanese>許可するアドオンを定義します。</Japanese>
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
+            <Russian>Определить список независимых разрешённых аддонов.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -1403,6 +1406,7 @@
             <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
             <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
             <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
+            <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
         </Key>
     </Package>
 </Project>
