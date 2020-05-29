@@ -19,4 +19,6 @@
 
 params ["_medic", "_patient", "_bodyPart"];
 
+ QGVAR(checkPulse) cutText ["", "PLAIN"]; 
+
 [QGVAR(checkPulseLocal), [_medic, _patient, _bodyPart], _patient] call CBA_fnc_targetEvent;
