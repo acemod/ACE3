@@ -245,7 +245,9 @@ class GVAR(actions) {
         medicRequired = 0;
         treatmentTime = 15;
         items[] = {"ACE_bodyBag"};
-        condition = QUOTE(!alive _patient);
+        // 'vehicle _patient' always returns the body
+        // '_patient in _patient' always false for body
+        condition = QUOTE(!alive _patient && {isNull objectParent _patient});
         callbackSuccess = QFUNC(placeInBodyBag);
         consumeItem = 1;
         litter[] = {};
