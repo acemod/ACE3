@@ -535,8 +535,8 @@ class RscTitles {
         class controls {
             class PatientInfoContainer: RscControlsGroupNoScrollbars {
                 idc = -1;
-                x = safeZoneX;
-                y = safeZoneY;
+                x = safeZoneX + PATIENT_INFO_IGUI_OFFSET_X;
+                y = safeZoneY + PATIENT_INFO_IGUI_OFFSET_Y;
                 w = safeZoneW;
                 h = safeZoneH;
 

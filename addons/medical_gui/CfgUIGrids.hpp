@@ -5,8 +5,8 @@ class CfgUIGrids {
                 class Variables {
                     GVAR(patientInfo)[] = {
                         {
-                            safeZoneX + POS_W(2),
-                            safeZoneY + POS_H(1),
+                            PATIENTINFO_IGUI_BASE_X,
+                            PATIENTINFO_IGUI_BASE_Y,
                             POS_W(9),
                             POS_H(20)
                         },
