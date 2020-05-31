@@ -12,6 +12,7 @@
             <Czech>Posádkou obsluhované zbraně (CSW)</Czech>
             <Polish>Broń ciężka (CSW)</Polish>
             <Spanish>Armas provistas por la tripulación</Spanish>
+            <Russian>Групповое вооружение (CSW)</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_displayName">
             <English>Place Tripod</English>
@@ -25,6 +26,7 @@
             <Polish>Rozłóż Trójnóg</Polish>
             <Spanish>Colocar trípode</Spanish>
             <Turkish>Üçayağı Yerleştir</Turkish>
+            <Russian>Разложить треногу</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_displayName">
             <English>Disassemble</English>
@@ -94,6 +96,7 @@
             <Czech>Spojit %1</Czech>
             <Polish>Połącz %1</Polish>
             <Spanish>Conectar %1</Spanish>
+            <Russian>Соединить %1</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
             <English>Advanced assembly</English>
@@ -106,6 +109,7 @@
             <Czech>Pokročilé skládání</Czech>
             <Polish>Zaawansowane składanie</Polish>
             <Spanish>Ensamblado avanzado</Spanish>
+            <Russian>Продвинутая сборка</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_description">
             <English>Use ace for Assemble/Disassemble of supported static weapons. Loaded ammo is reduced to a single magazine.</English>
@@ -118,6 +122,7 @@
             <Czech>Použít ACE pro složení/rozložení podporovaných statických zbraní. Nabitá munice je snížená na jeden zásobník.</Czech>
             <Polish>Użyj ACE do składania/rozkładania broni statycznych. Załadowana amunicja zostaje zredukowana do jednego magazynku.</Polish>
             <Spanish>Usar el ACE para el ensamblado/desamblado de armas estáticas soportadas. La munición cargada es reducida a un sólo cargador</Spanish>
+            <Russian>Использовать ACE для сборки/разборки поддерживаемого статического оружия. Заряженные боеприпасы будут сокращены в единственный магазин.</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_displayName">
             <English>Save extra ammo</English>
@@ -130,6 +135,7 @@
             <Czech>Uložit munici navíc.</Czech>
             <Polish>Zapisz dodatkową amunicje</Polish>
             <Spanish>Guardar munición extra</Spanish>
+            <Russian>Сохранить дополнительные боеприпасы</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_handleExtraMagazines_description">
             <English>Store extra magazines next to static weapon</English>
@@ -142,6 +148,7 @@
             <Czech>Ukládat munici navíc vedle statické zbraně.</Czech>
             <Polish>Dodatkowe magazynki przechowuj obok broni statycznej</Polish>
             <Spanish>Almacenar cargadores extra junto al arma estática</Spanish>
+            <Russian>Хранить дополнительные магазины рядом со статическим оружием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_displayName">
             <English>Ammo handling</English>
@@ -154,6 +161,7 @@
             <Czech>Manipulace s municí</Czech>
             <Polish>Obsługa amunicji</Polish>
             <Spanish>Manejo de munición</Spanish>
+            <Russian>Обслуживание боеприпасов</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_ammoHandling_description">
             <English>Allow loading and unloading magazines</English>
@@ -166,6 +174,7 @@
             <Czech>Povolit nabíjení a vybíjení zásobníků.</Czech>
             <Polish>Zezwalaj na ładowanie i rozładowywanie magazynków</Polish>
             <Spanish>Permitir la carga y descarga de cargadores</Spanish>
+            <Russian>Разрешить загрузку и разгрузку магазинов</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_displayName">
             <English>Interaction Time Coefficent</English>
@@ -178,6 +187,7 @@
             <Czech>Koeficient času interakce</Czech>
             <Polish>Współczynnik czasu interakcji</Polish>
             <Spanish>Coeficiente de tiempo de interacción</Spanish>
+            <Russian>Коэффициент времени взаимодействия</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_progressBarTimeCoefficent_description">
             <English>Scales time required to assemble and reload static weapons</English>
@@ -190,6 +200,7 @@
             <Czech>Škáluje čas potřebný ke skládání a přebíjení statických zbraní.</Czech>
             <Polish>Definiuje czas potrzebny do złożenia i przeładowania broni statycznej</Polish>
             <Spanish>Escala el tiempo requerida para ensamblar y recargar el arma estática</Spanish>
+            <Russian>Изменяет время, необходимое для сборки и перезарядки статического оружия</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_displayName">
             <English>Drag tripods after deploying</English>
@@ -202,6 +213,7 @@
             <Czech>Tahat trojnožku po položení</Czech>
             <Polish>Przeciągnij statyw po rozmieszczeniu</Polish>
             <Spanish>Arrastrar trípodes despues de desplegarlos</Spanish>
+            <Russian>Тащить треногу после развертывания</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_dragAfterDeploy_description">
             <English>After deploying a tripod, start dragging it to a precise location</English>
@@ -214,6 +226,7 @@
             <Czech>Po položení trojnožky začít automaticky tahání pro lepší polohu.</Czech>
             <Polish>Po rozłożeniu trójnogu zacznij od przeciągania go w określone miejsce</Polish>
             <Spanish>Después de desplegar un trípode, comenzar a arrastrarlo hacia la ubicación precisa</Spanish>
+            <Russian>После развертывания начать тащить треногу на другое место</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_Pickup_displayName">
             <English>Pickup Tripod</English>
@@ -226,6 +239,7 @@
             <Czech>Složit trojnožku</Czech>
             <Polish>Podnieś Trójnóg</Polish>
             <Spanish>Recoger trípode</Spanish>
+            <Russian>Подобрать треногу</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_MountWeapon_displayName">
             <English>Mount Weapon</English>
@@ -238,6 +252,7 @@
             <Czech>Připevnit zbraň</Czech>
             <Polish>Zamontuj Broń</Polish>
             <Spanish>Montar arma</Spanish>
+            <Russian>Установить оружие</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_DisassembleCSW_progressBar">
             <English>Disassembling Gun...</English>
@@ -250,6 +265,7 @@
             <Czech>Rozkládám zbraň...</Czech>
             <Polish>Rozkładanie Broni...</Polish>
             <Spanish>Desensamblando arma...</Spanish>
+            <Russian>Разборка оружия...</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_AssembleCSW_progressBar">
             <English>Assembling Gun...</English>
@@ -262,6 +278,7 @@
             <Czech>Skládám zbraň...</Czech>
             <Polish>Składanie Broni...</Polish>
             <Spanish>Ensamblando arma...</Spanish>
+            <Russian>Сборка оружия...</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_PickupTripod_progressBar">
             <English>Picking Up Tripod...</English>
@@ -274,6 +291,7 @@
             <Czech>Zvedám trojnožku...</Czech>
             <Polish>Podnoszenie Trójnogu...</Polish>
             <Spanish>Recogiendo trípode...</Spanish>
+            <Russian>Поднятие треноги...</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_PlaceTripod_progressBar">
             <English>Placing Tripod...</English>
@@ -286,6 +304,7 @@
             <Czech>Pokládám trojnožku...</Czech>
             <Polish>Rozmieszczanie Trójnogu...</Polish>
             <Spanish>Ubicando trípode...</Spanish>
+            <Russian>Размещение треноги...</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW">
             <English>Enable CSW</English>
@@ -298,6 +317,7 @@
             <Czech>Povolit posádkou obsluhované zbraně (CSW)</Czech>
             <Polish>Włącz CSW</Polish>
             <Spanish>Habilitar CSW</Spanish>
+            <Russian>Включить CSW</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableCSW_tooltip">
             <English>Enables Crew Served ability on this weapon</English>
@@ -310,6 +330,7 @@
             <Czech>Zapne CSW funkce na této zbrani</Czech>
             <Polish>Włącza opcje systemu CSW na tej broni</Polish>
             <Spanish>Habilitar el manejo de uso colectivo para esta arma</Spanish>
+            <Russian>Включает CSW на этом оружии</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_eden_enableAndEmpty">
             <English>Enabled and Leave Weapon Empty</English>
@@ -322,6 +343,7 @@
             <Czech>Povolit a nechat zbraň prázdnou</Czech>
             <Polish>Włącz i pozostaw broń pustą</Polish>
             <Spanish>Habilitar y dejar el arma vacía</Spanish>
+            <Russian>Включено и оставить оружие пустым</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_genericTripod_displayName">
             <English>Tripod</English>
@@ -335,6 +357,7 @@
             <Japanese>三脚</Japanese>
             <Chinese>三腳架</Chinese>
             <Czech>Trojnožka</Czech>
+            <Russian>Тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticATBag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AT)</English>
@@ -348,6 +371,7 @@
             <Czech>[CSW] Statický raketomet Mini-Spike (protitankový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AT)</Turkish>
             <Polish>[CSW] Mini-Spike Przeciwpancerny pocisk rakietowy</Polish>
+            <Russian>[CSW] Станковый Mini-Spike ПТРК</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAABag_displayName">
             <English>[CSW] Static Mini-Spike Launcher (AA)</English>
@@ -361,6 +385,7 @@
             <Czech>[CSW] Statický raketomet Mini-Spike (protiletadlový)</Czech>
             <Turkish>[CSW] Static Mini-Spike Launcher (AA)</Turkish>
             <Polish>[CSW] Mini-Spike Przeciwlotniczy pocisk rakietowy</Polish>
+            <Russian>[CSW] Станковый Mini-Spike ЗРК</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticHMGBag_displayName">
             <English>[CSW] Static XM312 Gun</English>
@@ -374,12 +399,14 @@
             <Czech>[CSW] Statická zbraň XM312</Czech>
             <Turkish>[CSW] Static XM312 Gun</Turkish>
             <Polish>[CSW] Statyczny karabin maszynowy XM312</Polish>
+            <Russian>[CSW] Станковый XM312 пулемёт</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticM2ShieldBag_displayName">
             <English>[CSW] Static M2 w/ Shield</English>
             <Spanish>[CSW] M2 estática con escudo</Spanish>
             <Czech>[CSW] Statická zbraň M2 se štítem</Czech>
             <French>[CSW] Mitrailleuse statique M2 ac. bouclier</French>
+            <Russian>[CSW] Станковый M2 со щитом</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>
@@ -393,6 +420,7 @@
             <Czech>[CSW] Statická zbraň XM312 (autonomická)</Czech>
             <Turkish>[CSW] Static XM312 Gun (Autonomous)</Turkish>
             <Polish>[CSW] Statyczny karabin maszynowy XM312 (Dron)</Polish>
+            <Russian>[CSW] Станковый XM312 пулемёт (автономный)</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticGMGBag_displayName">
             <English>[CSW] Static XM307 Gun</English>
@@ -406,6 +434,7 @@
             <Czech>[CSW] Statická zbraň XM307</Czech>
             <Turkish>[CSW] Static XM307 Gun</Turkish>
             <Polish>[CSW] Statyczny granatnik automatyczny XM307</Polish>
+            <Russian>[CSW] Станковый XM307 гранатомёт</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoGMGBag_displayName">
             <English>[CSW] Static XM307 Gun (Autonomous)</English>
@@ -419,6 +448,7 @@
             <Czech>[CSW] Statická zbraň XM307 (autonomická)</Czech>
             <Turkish>[CSW] Static XM307 Gun (Autonomous)</Turkish>
             <Polish>[CSW] Statyczny granatnik automatyczny XM307 (Dron)</Polish>
+            <Russian>[CSW] Станковый XM307 гранатомёт (автономный)</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_127x108_displayName">
             <English>[CSW] 12.7x108mm HMG Belt</English>
@@ -432,6 +462,7 @@
             <Czech>[CSW] Pás 12.7×108mm pro těžký kulomet</Czech>
             <Turkish>[CSW] 12.7x108mm HMG Belt</Turkish>
             <Polish>[CSW] Taśma 12.7x108mm CKM</Polish>
+            <Russian>[CSW] 12.7x108 мм пулемётная лента</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_displayName">
             <English>[CSW] 12.7x99mm HMG Belt</English>
@@ -445,6 +476,7 @@
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet</Czech>
             <Turkish>[CSW] 12.7x99mm HMG Belt</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM</Polish>
+            <Russian>[CSW] 12.7x99 мм пулемётная лента</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_red_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Red)</English>
@@ -458,6 +490,7 @@
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (červená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Red)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Czerwona)</Polish>
+            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (Красный)</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_green_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Green)</English>
@@ -471,6 +504,7 @@
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (zelená stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Green)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Zielona)</Polish>
+            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (Зелёный)</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_127x99_yellow_displayName">
             <English>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</English>
@@ -484,6 +518,7 @@
             <Czech>[CSW] Pás 12.7×99mm pro těžký kulomet (žlutá stopovka)</Czech>
             <Turkish>[CSW] 12.7x99mm Tracer HMG Belt (Yellow)</Turkish>
             <Polish>[CSW] Taśma 12.7x99mm CKM Smugowa (Żółta)</Polish>
+            <Russian>[CSW] 12.7x99 мм трасс. пулемётная лента (Жёлтый)</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_GMGBelt_displayName">
             <English>[CSW] 20mm Grenade GMG Belt</English>
@@ -497,6 +532,7 @@
             <Czech>[CSW] Pás 20mm granátů pro granátomet</Czech>
             <Turkish>[CSW] 20mm Grenade GMG Belt</Turkish>
             <Polish>[CSW] Taśma 20mm do granatnika</Polish>
+            <Russian>[CSW] Лента 20-мм гранат для ст. гранатомёта</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>
@@ -510,6 +546,7 @@
             <Czech>M3 trojnožka</Czech>
             <Turkish>M3 Tripod</Turkish>
             <Polish>Trójnóg M3</Polish>
+            <Russian>Станок M3</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFolded_displayName">
             <English>[CSW] 6P57 Deployable Tripod</English>
@@ -523,6 +560,7 @@
             <Czech>[CSW] 6P57 trojnožka</Czech>
             <Turkish>[CSW] 6P57 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany 6P57</Polish>
+            <Russian>[CSW] 6P67 Развертываемая тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripodFoldedLow_displayName">
             <English>[CSW] 6P57 Deployable Tripod (Low)</English>
@@ -536,6 +574,7 @@
             <Czech>[CSW] 6P57 trojnožka (nízká)</Czech>
             <Turkish>[CSW] 6P57 Deployable Tripod (Low)</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany 6P57 (Niski)</Polish>
+            <Russian>[CSW] 6P67 Развертываемая тренога (Низкая)</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_m220TripodFolded_displayName">
             <English>[CSW] M220 Deployable Tripod</English>
@@ -549,6 +588,7 @@
             <Czech>[CSW] M220 trojnožka</Czech>
             <Turkish>[CSW] M220 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany M220</Polish>
+            <Russian>[CSW] M220 Развертываемая тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_sag30TripodFolded_displayName">
             <English>[CSW] SAG-30 Deployable Tripod</English>
@@ -562,6 +602,7 @@
             <Czech>[CSW] SAG-30 trojnožka</Czech>
             <Turkish>[CSW] SAG-30 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany SAG-30</Polish>
+            <Russian>[CSW] SAG-30 Развертываемая тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_kordTripod_displayName">
             <English>6P57 Tripod</English>
@@ -575,6 +616,7 @@
             <Czech>6P57 trojnožka</Czech>
             <Turkish>6P57 Tripod</Turkish>
             <Polish>Trójnóg 6P57</Polish>
+            <Russian>6P67 Тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_sag30Tripod_displayName">
             <English>SAG-30 Tripod</English>
@@ -588,6 +630,7 @@
             <Czech>SAG-30 trojnožka</Czech>
             <Turkish>SAG-30 Tripod</Turkish>
             <Polish>Trójnóg SAG-30</Polish>
+            <Russian>SAG-30 Тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_m220Tripod_displayName">
             <English>M220 Tripod</English>
@@ -601,6 +644,7 @@
             <Czech>M220 trojnožka</Czech>
             <Turkish>M220 Tripod</Turkish>
             <Polish>Trójnóg M220</Polish>
+            <Russian>M220 Тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodFolded_displayName">
             <English>[CSW] M3 Deployable Tripod</English>
@@ -614,6 +658,7 @@
             <Czech>[CSW] M3 trojnožka</Czech>
             <Turkish>[CSW] M3 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany M3</Polish>
+            <Russian>[CSW] M3 Развертываемая тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_m3TripodLowFolded_displayName">
             <English>[CSW] M3 Deployable Tripod (Low)</English>
@@ -627,6 +672,7 @@
             <Czech>[CSW] M3 trojnožka (nízká)</Czech>
             <Turkish>[CSW] M3 Deployable Tripod (Low)</Turkish>
             <Polish>[CSW] Trójnóg Rozkładany M3 (Niski)</Polish>
+            <Russian>[CSW] M3 Развертываемая тренога (Низкая)</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplateBag_displayName">
             <English>[CSW] Mortar Baseplate</English>
@@ -640,6 +686,7 @@
             <Czech>[CSW] Podstavec pro minomet</Czech>
             <Turkish>[CSW] Mortar Baseplate</Turkish>
             <Polish>[CSW] Podstawa Moździerza</Polish>
+            <Russian>[CSW] Миномётная плита</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_mortarBaseplate_displayName">
             <English>Mortar Baseplate</English>
@@ -653,6 +700,7 @@
             <Czech>Podstavec pro minomet</Czech>
             <Turkish>Mortar Baseplate</Turkish>
             <Polish>Podstawa Moździerza</Polish>
+            <Russian>Миномётная плита</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_mk6MortarBag_displayName">
             <English>[CSW] Mk6 Mortar Tube</English>
@@ -666,6 +714,7 @@
             <Czech>[CSW] Minomet Mk6 hlaveň</Czech>
             <Turkish>[CSW] Mk6 Mortar Tube</Turkish>
             <Polish>[CSW] Rura Moździerza Mk6</Polish>
+            <Russian>[CSW] Сумка с Mk6 трубой</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_m252_tube">
             <English>[CSW] M252 Tube Bag</English>
@@ -679,6 +728,7 @@
             <Czech>[CSW] M252 minometná hlaveň v pouzdře</Czech>
             <Turkish>[CSW] M252 Tube Bag</Turkish>
             <Polish>[CSW] Torba na M252</Polish>
+            <Russian>[CSW] Сумка с M252 орудием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_m2_gun">
             <English>[CSW] M2 Gun Bag</English>
@@ -692,6 +742,7 @@
             <Czech>[CSW] M2 zbraň v pouzdře</Czech>
             <Turkish>[CSW] M2 Gun Bag</Turkish>
             <Polish>[CSW] Torba na  M2</Polish>
+            <Russian>[CSW] Сумка с M2 орудием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_mk19_gun">
             <English>[CSW] MK19 Gun Bag</English>
@@ -705,6 +756,7 @@
             <Czech>[CSW] MK19 zbraň v pouzdře</Czech>
             <Turkish>[CSW] MK19 Gun Bag</Turkish>
             <Polish>[CSW] Torba na MK19</Polish>
+            <Russian>[CSW] Сумка с MK19 орудием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>
@@ -718,6 +770,7 @@
             <Czech>[CSW] BGM-71 TOW raketomet v pouzdře</Czech>
             <Turkish>[CSW] BGM-71 TOW Launcher Bag</Turkish>
             <Polish>[CSW] Torba na BGM-71 TOW</Polish>
+            <Russian>[CSW] Сумка с BGM-71 TOW установкой</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_dshk_gun">
             <English>[CSW] DSHK Gun Bag</English>
@@ -731,6 +784,7 @@
             <Czech>[CSW] DSHK zbraň v pouzdře</Czech>
             <Turkish>[CSW] DSHK Gun Bag</Turkish>
             <Polish>[CSW] Torba na DSzK</Polish>
+            <Russian>[CSW] Сумка с ДШК орудием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_2b14_tube">
             <English>[CSW] 2B14 Tube Bag</English>
@@ -744,6 +798,7 @@
             <Czech>[CSW] 2B14 minometná hlaveň v pouzdře</Czech>
             <Turkish>[CSW] 2B14 Tube Bag</Turkish>
             <Polish>[CSW] Torba na 2B14</Polish>
+            <Russian>[CSW] Сумка с 2Б14 трубой</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_nsv_gun">
             <English>[CSW] NSV Gun Bag</English>
@@ -757,6 +812,7 @@
             <Czech>[CSW] NSV zbraň v pouzdře</Czech>
             <Turkish>[CSW] NSV Gun Bag</Turkish>
             <Polish>[CSW] Torba na NSV</Polish>
+            <Russian>[CSW] Сумка с НСВ орудием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_kord_gun">
             <English>[CSW] KORD Gun Bag</English>
@@ -770,6 +826,7 @@
             <Czech>[CSW] KORD zbraň v pouzdře</Czech>
             <Turkish>[CSW] KORD Gun Bag</Turkish>
             <Polish>[CSW] Torba na KORD</Polish>
+            <Russian>[CSW] Сумка с Корд орудием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_ags30_gun">
             <English>[CSW] AGS-30 Gun Bag</English>
@@ -783,6 +840,7 @@
             <Czech>[CSW] ASG-30 zbraň v pouzdře</Czech>
             <Turkish>[CSW] AGS-30 Gun Bag</Turkish>
             <Polish>[CSW] Torba na AGS-30</Polish>
+            <Russian>[CSW] Сумка с АГС-30 орудием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_metis_tube">
             <English>[CSW] 9K115 Metis Launcher Bag</English>
@@ -796,6 +854,7 @@
             <Czech>[CSW] 9K115 Metis raketomet v pouzdře</Czech>
             <Polish>[CSW] Torba na 9K115 Metis</Polish>
             <Turkish>[CSW] 9k115 Metis Launcher Bag</Turkish>
+            <Russian>[CSW] Сумка с 9К115 Метис установкой</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_kornet_launcher">
             <English>[CSW] 9M113 Kornet Launcher</English>
@@ -809,6 +868,7 @@
             <Czech>[CSW] 9M113 Kornet raketomet</Czech>
             <Polish>[CSW] Wyrzutnia 9M113 Kornet</Polish>
             <Turkish>[CSW] 9m113 Kornet Launcher</Turkish>
+            <Russian>[CSW] Сумка с 9К135 Корнет установкой</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_Tripod">
             <English>SPG-9 Tripod</English>
@@ -822,6 +882,7 @@
             <Czech>SPG-9 trojnožka</Czech>
             <Turkish>SPG-9 Tripod</Turkish>
             <Polish>Trójnóg SPG-9</Polish>
+            <Russian>СПГ-9 Тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_TripodFolded">
             <English>[CSW] SPG-9 Deployable Tripod</English>
@@ -835,6 +896,7 @@
             <Czech>[CSW] SPG-9 trojnožka</Czech>
             <Turkish>[CSW] SPG-9 Deployable Tripod</Turkish>
             <Polish>[CSW] Trójnóg rozkładany SPG-9</Polish>
+            <Russian>[CSW] СПГ-9 Развертываемая тренога</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_spg9_tube">
             <English>[CSW] SPG-9 Launcher Bag</English>
@@ -848,6 +910,7 @@
             <Czech>[CSW] SPG-9 raketomet v pouzdře</Czech>
             <Turkish>[CSW] SPG-9 Launcher Bag</Turkish>
             <Polish>[CSW] Torba na SPG-9</Polish>
+            <Russian>[CSW] Сумка с СПГ-9 орудием</Russian>
         </Key>
         <Key ID="STR_ACE_CSW_spg9m_tube">
             <English>[CSW] SPG-9M Launcher Bag</English>
@@ -861,6 +924,7 @@
             <Czech>[CSW] SPG-9M raketomet v pouzdře</Czech>
             <Turkish>[CSW] SPG-9M Launcher Bag</Turkish>
             <Polish>[CSW] Torba na SPG-9M</Polish>
+            <Russian>[CSW] Сумка с СПГ-9М орудием</Russian>
         </Key>
     </Package>
 </Project>
