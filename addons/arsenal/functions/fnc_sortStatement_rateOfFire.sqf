@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: Alganthe, SynixeBrett
- * Statement for the rate of fire sort.
+ * Statement to sort weapons by their rate of fire.
  *
  * Arguments:
- * 0: item config path (CONFIG)
+ * 0: Item Config <CONFIG>
  *
  * Return Value:
- * Number to sort by
+ * Sorting Value <NUMBER>
  *
  * Public: No
 */
@@ -16,8 +16,9 @@ private _fireModes = getArray (_this >> "modes");
 private _fireRate = [];
 
 {
-    _fireRate pushBackUnique (getNumber (_this >> _x >> "reloadTime"));
+    _fireRate pushBackUnique getNumber (_this >> _x >> "reloadTime");
 } foreach _fireModes;
 
 _fireRate sort true;
+
 round (60 / (_fireRate param [0, 0]))

@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: Alganthe, SynixeBrett
- * Statement for the accuracy sort.
+ * Statement to sort weapons by their accuracy.
  *
  * Arguments:
- * 0: item config path (CONFIG)
+ * 0: Item Config <CONFIG>
  *
  * Return Value:
- * Number to sort by
+ * Sorting Value <NUMBER>
  *
  * Public: No
 */
@@ -19,9 +19,12 @@ private _dispersion = [];
 
 {
     if (getNumber (_config >> _x >> "showToPlayer") != 0) then {
-        private _n = log (getNumber (_config >> _x >> "dispersion"));
+        private _n = log getNumber (_config >> _x >> "dispersion");
 
-        if (!finite _n) then {_n = 0;};
+        if (!finite _n) then {
+            _n = 0;
+        };
+
         _dispersion pushBackUnique _n;
     };
 } foreach _fireModes;

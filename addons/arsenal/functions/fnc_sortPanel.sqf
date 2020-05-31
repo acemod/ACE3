@@ -124,9 +124,9 @@ _for do {
     } else {
         _panel lbData _i
     };
-    private _itemCfg = (configFile >> _cfgClass >> _item);
+    private _itemCfg = configFile >> _cfgClass >> _item;
     private _value = _itemCfg call _statement;
-    if (typeName _value isEqualTo "SCALAR") then {
+    if (_value isEqualType 0) then {
         _value = _value call _to_string;
     };
     if (_value isEqualTo "") then {

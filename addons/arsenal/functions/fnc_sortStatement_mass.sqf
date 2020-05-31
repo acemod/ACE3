@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: Alganthe, SynixeBrett
- * Statement for the mass sort.
+ * Statement to sort items by their mass.
  *
  * Arguments:
- * 0: item config path (CONFIG)
+ * 0: Item Config <CONFIG>
  *
  * Return Value:
- * Number to sort by
+ * Sorting Value <NUMBER>
  *
  * Public: No
 */

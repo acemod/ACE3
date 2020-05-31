@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: Alganthe, SynixeBrett
- * Statement for the scope magnification sort.
+ * Statement to sort optics by their magnification.
  *
  * Arguments:
- * 0: item config path (CONFIG)
+ * 0: Item Config <CONFIG>
  *
  * Return Value:
- * Number to sort by
+ * Sorting Value <NUMBER|STRING>
  *
  * Public: No
 */
@@ -16,9 +16,9 @@ params ["_config"];
 
 private _minZoom = 999; // FOV, so smaller is more zoomed in
 {
-    _minZoom = _minZoom min (getNumber (_x >> "opticsZoomMin"));
+    _minZoom = _minZoom min getNumber (_x >> "opticsZoomMin");
 } forEach configProperties [_config >> "ItemInfo" >> "OpticsModes"];
 
 if (_minZoom in [0, 999]) exitWith {"?"};
 
-round ((0.25/_minZoom) * 10)
+round ((0.25 / _minZoom) * 10)

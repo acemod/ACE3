@@ -1,24 +1,24 @@
 #include "script_component.hpp"
 /*
  * Author: SynixeBrett
- * Statement for the mod sort.
+ * Statement to sort items by the mod they belong to.
  *
  * Arguments:
- * 0: item config path (CONFIG)
+ * 0: Item Config <CONFIG>
  *
  * Return Value:
- * Mod name to sort by
+ * Mod Name to Sort By <STRING>
  *
  * Public: No
 */
 
 private _dlc = "";
 private _addons = configSourceAddonList _this;
-if (count _addons > 0) then {
+if !(_addons isEqualTo []) then {
     private _mods = configSourceModList (configfile >> "CfgPatches" >> _addons select 0);
-    if (count _mods > 0) then {
+    if !(_mods isEqualTo []) then {
         _dlc = _mods select 0;
     };
 };
 
-(modParams [_dlc, ["name"]]) param [0, ""]
+modParams [_dlc, ["name"]] param [0, ""]

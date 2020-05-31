@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: SynixeBrett
- * Statement for the mod sort.
+ * Statement to sort magazines by their ammo count.
  *
  * Arguments:
- * 0: item config path (CONFIG)
+ * 0: Item Config <CONFIG>
  *
  * Return Value:
- * Number to sort by
+ * Sorting Value <NUMBER>
  *
  * Public: No
 */

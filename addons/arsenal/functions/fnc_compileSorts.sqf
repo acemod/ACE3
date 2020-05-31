@@ -18,9 +18,9 @@ private _fnc_addToTabs = {
     params ["_tabsList", "_tabsToAddTo", "_sideString"];
     {
         private _arrayToSave = +_finalArray;
-        _arrayToSave set [0, ([_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString "")];
+        _arrayToSave set [0, [_class, _sideString, [str _x, format ["0%1", _x]] select (_x < 10)] joinString ""];
         (_tabsList select _x) pushBack _arrayToSave;
-    } foreach _tabsToAddTo;
+    } forEach _tabsToAddTo;
 };
 
 private _sortListLeftPanel = [
@@ -69,11 +69,11 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
 
     _finalArray = ["", _displayName, _statement];
 
-    if (count _leftTabsList > 0) then {
+    if !(_leftTabsList isEqualTo []) then {
         [_sortListLeftPanel, _leftTabsList, "L"] call _fnc_addToTabs;
     };
 
-    if (count _rightTabsList > 0) then {
+    if !(_rightTabsList isEqualTo []) then {
         [_sortListRightPanel, _rightTabsList, "R"] call _fnc_addToTabs;
     };
 } foreach _configEntries;
