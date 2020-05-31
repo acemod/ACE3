@@ -53,7 +53,7 @@
             <Chinese>載具已滿</Chinese>
             <Polish>Pojazd pełny</Polish>
             <Korean>만차</Korean>
-            <Russian>Транспорт полон</Russian>
+            <Russian>Мест нет</Russian>
             <Portuguese>Veículo cheio</Portuguese>
             <French>Véhicule plein</French>
             <Czech>Vozidlo je plné</Czech>
@@ -69,7 +69,7 @@
             <Italian>Questa opzione permette l'entrata rapida nel veicolo che si sta guardando.</Italian>
             <Turkish>Bu seçenek, doğrudan bakmakta olduğunuz araca hızlı giriş sağlar.</Turkish>
             <Czech>Tato možnost umožňuje rychle nastoupit do vozidla na které se díváte.</Czech>
-            <Russian>Эта опция разрешает быстро залесть в транспорт на который Вы смотрите.</Russian>
+            <Russian>Эта опция разрешает быстро залезть в транспорт, на который вы смотрите.</Russian>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>

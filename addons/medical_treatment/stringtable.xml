@@ -116,7 +116,7 @@
             <Polish>Usuń uraz po zabandażowaniu</Polish>
             <Italian>Rimozione ferite bendate</Italian>
             <German>Entferne Trauma nach Bandagierung.</German>
-            <Russian>Удалять рану после перевязки</Russian>
+            <Russian>Удалять травму после перевязки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
             <English>Controls whether fully bandaged body parts are healed.</English>
@@ -731,7 +731,7 @@
             <Czech>Vyžadováno schování zbraně</Czech>
             <Polish>Wymagana broń w kaburze</Polish>
             <German>Holstern benötigt</German>
-            <Russian>Необходимость в кобуре</Russian>
+            <Russian>Необходимость убирать оружие</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
@@ -742,7 +742,7 @@
             <Polish>Kontroluje, czy broń musi być schowana/opuszczona w celu wykonania leczenia pacjenta.\n Za wyjątkiem diagnozowania - umożliwia wykonywanie czynności kontrolnych (sprawdzanie tętna, ciśnienia krwi, reakcji) przez cały czas, niezależnie od ustawienia Wymagana broń w kaburze.</Polish>
             <Italian>Controlla se le armi devono essere tenute nella fondina / abbassate per poter eseguire le azioni mediche.\Except Exam - Permette azioni di esame (controllo del polso, della pressione sanguigna, della risposta) in ogni momento indipendentemente dall'impostazione della fondina richiesta.</Italian>
             <German>Kontrolliert, ob Waffen geholstert/gesenkt werden müssen, um medizinische Aktionen durchzuführen.\nAusgenommen die eingestellten Untersuchungsoptionen erlauben Diagnose-Aktionen (Überprüfung von Puls, Blutdruck, Reaktion) jederzeit.</German>
-            <Russian>Нужно ли опускать или прятать оружие в кобуру для проведения медицинских действий.\nОпция «Проверка разрешена» разрешает проверять пульс, кровяное давление или реакцию независимо от этого параметра.</Russian>
+            <Russian>Нужно ли убирать оружие для проведения медицинских действий.\nОпция «Проверка разрешена» разрешает проверять пульс, кровяное давление или реакцию независимо от этого параметра.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
@@ -753,7 +753,7 @@
             <Czech>Snížena nebo Schována</Czech>
             <Polish>Opuszczona lub w kaburze</Polish>
             <German>Gesenkt oder Geholstert</German>
-            <Russian>Опущено или спрятано</Russian>
+            <Russian>Опущено или убрано</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
             <English>Lowered or Holstered (Except Exam)</English>
@@ -764,7 +764,7 @@
             <Czech>Snížena nebo Schována (kromě Diagnózy)</Czech>
             <Polish>Opuszczona lub w kaburze (oprócz diagnozowania)</Polish>
             <German>Gesenkt oder Geholstert (Ausnahme Untersuchung)</German>
-            <Russian>Опущено или спрятано (Проверка разрешена)</Russian>
+            <Russian>Опущено или убрано (Проверка разрешена)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
             <English>Holstered Only</English>
@@ -775,7 +775,7 @@
             <Czech>Pouze Schována</Czech>
             <Polish>Tylko w Kaburze</Polish>
             <German>Nur geholstert</German>
-            <Russian>Спрятано только</Russian>
+            <Russian>Только убрано</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
             <English>Holstered Only (Except Exam)</English>
@@ -786,7 +786,7 @@
             <Czech>Pouze Schována (kromě Diagnózy)</Czech>
             <Polish>Tylko w Kaburze (oprócz diagnozowania)</Polish>
             <German>Nur geholstert (Ausnahme Untersuchung)</German>
-            <Russian>Спрятано только (Проверка разрешена)</Russian>
+            <Russian>Только убрано (Проверка разрешена)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>

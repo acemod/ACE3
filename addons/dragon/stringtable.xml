@@ -12,7 +12,7 @@
             <Czech>[CSW] M47 Super-Dragon</Czech>
             <Polish>[CSW] M47 Super-Dragon</Polish>
             <Turkish>[CSW] M47 Super-Dragon</Turkish>
-            <Russian>[CSW] M47 Супер-Драгон</Russian>
+            <Russian>[CSW] M47 Super-Dragon</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
@@ -25,7 +25,7 @@
             <Czech>M47 Super-Dragon</Czech>
             <Polish>M47 Super-Dragon</Polish>
             <Turkish>M47 Super-Dragon</Turkish>
-            <Russian>M47 Супер-Драгон</Russian>
+            <Russian>M47 Super-Dragon</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_attachSight">
             <English>Attach Sight</English>
@@ -74,7 +74,7 @@
             <Italian>Una luce,un mirino usato per le operazioni diurne.Contiene il computer di guida per l'intero sistema </Italian>
             <Czech>Lehký a levný puškohled pro použití za denního světla. Obsahuje navigační počítač pro celý systém.</Czech>
             <Polish>Lekki, tani celownik używany do działania w trakcie dnia. Zawiera komputer naprowadząjący dla całego systemu</Polish>
-            <Russian>Легкий, дешевый прицел, используемый для дневных операций. Содержит компьютер для всей системы</Russian>
+            <Russian>Легкий дешёвый прицел, используемый для дневных операций. Содержит компьютер для всей системы</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>

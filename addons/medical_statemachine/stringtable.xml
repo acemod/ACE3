@@ -25,7 +25,7 @@
             <Italian>Lesioni mortali del giocatore</Italian>
             <Turkish>Oyuncu Ölümcül Yaralanmaları</Turkish>
             <German>Tödliche Spielerverletzungen</German>
-            <Russian>Смертельные раны игрока</Russian>
+            <Russian>Смертельные травмы игрока</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_Description">
             <English>Controls when players can receive fatal injuries. A fatal injury is caused by significant damage to the head or torso.</English>
@@ -38,7 +38,7 @@
             <Italian>Controlla quando i giocatori possono ricevere infortuni mortali. Una lesione mortale è causata da un danno significativo alla testa o al busto.</Italian>
             <Polish>Definiuje, kiedy gracze mogą otrzymać śmiertelne obrażenia. Śmiertelne obrażenia są spowodowane znacznym uszkodzeniem głowy lub torsu.</Polish>
             <German>Legt fest, wann Spieler tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Torso verursacht.</German>
-            <Russian>Определяет могут ли игроки получить смертельные травмы. Смертельная травма вызывается значительным повреждением головы или туловища.</Russian>
+            <Russian>Определяет, могут ли игроки получить смертельные травмы. Смертельная травма вызывается значительным повреждением головы или туловища.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
             <English>AI Fatal Injuries</English>
@@ -51,7 +51,7 @@
             <Italian>AI Lesioni mortali</Italian>
             <Turkish>AI Ölümcül Yaralanmaları</Turkish>
             <German>Tödliche KI-Verletzungen</German>
-            <Russian>Смертельные раны ИИ</Russian>
+            <Russian>Смертельные травмы ИИ</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_Description">
             <English>Controls when AI can receive fatal injuries. A fatal injury is caused by significant damage to the head or troso.\nWhen set to "Always", this effectively produces "AI Instant Death" behaviour as AI will immediately die from any fatal injury.\nNOTE: Any mode other than "Always" requires AI Unconsciousness to be enabled.</English>

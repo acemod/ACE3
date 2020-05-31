@@ -1088,7 +1088,7 @@
             <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
             <Polish>Jest EOD</Polish>
-            <Russian>Это специалист ОВБ</Russian>
+            <Russian>Сапёр</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1099,7 +1099,7 @@
             <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
-            <Russian>Контролирует есть ли юнит специалистом по взрывчатке.</Russian>
+            <Russian>Определяет, является ли юнит сапёром.</Russian>
         </Key>
     </Package>
 </Project>

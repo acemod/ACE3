@@ -3,7 +3,7 @@
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Category">
             <English>ACE Medical</English>
-            <Russian>ACE: медицина</Russian>
+            <Russian>ACE Медицина</Russian>
             <Polish>ACE Opcje medyczne</Polish>
             <Spanish>Médico ACE</Spanish>
             <German>ACE-Medicsystem</German>
@@ -52,7 +52,7 @@
             <German>Erhöhung der Aufwachüberprüfungsrate durch Epinephrin</German>
             <Japanese>アドレナリン覚醒率の上昇</Japanese>
             <Czech>Zvýšení pravděpodobnosti probuzení s Epinefrinem</Czech>
-            <Russian>Адреналин Увеличение шанса очнуться</Russian>
+            <Russian>Увеличение шанса очнуться от адреналина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>

@@ -1898,7 +1898,7 @@
             <Portuguese>Items necessários para reparar uma peça específica ou remover/substituir lagarta.</Portuguese>
             <Spanish>Objetos necesarios para reparar un componente específico del vehículo o quitar/reemplazar las orugas.</Spanish>
             <Italian>Elementi necessari per riparare un componente specifico del veicolo o per rimuovere/sostituire i cingoli</Italian>
-            <Russian>Предметы необходимые для ремонта отдельных компонентов или снятия/замены гусеницы.</Russian>
+            <Russian>Предметы, необходимые для ремонта отдельных компонентов или снятия/замены гусеницы.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
@@ -1924,7 +1924,7 @@
             <Portuguese>Itens requeridos para realizar um reparo veicular completo.</Portuguese>
             <Spanish>Objetos requeridos para una reparación completa</Spanish>
             <Italian>Elementi necessari per eseguire una riparazione completa del veicolo.</Italian>
-            <Russian>Предметы необходимые для полного ремонта техники.</Russian>
+            <Russian>Предметы, необходимые для полного ремонта техники.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>
