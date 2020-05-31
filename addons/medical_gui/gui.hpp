@@ -539,7 +539,6 @@ class RscTitles {
                 y = safeZoneY + PATIENT_INFO_IGUI_OFFSET_Y;
                 w = safeZoneW;
                 h = safeZoneH;
-
                 class controls {
                     class BodyImage: GVAR(BodyImage) {
                         x = POS_W(2.25);

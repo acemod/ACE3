@@ -22,7 +22,7 @@ class CfgUIGrids {
                 displayName = COMPONENT_NAME;
                 description = CSTRING(IGUI_PatientInfo);
                 preview = QPATHTOF(ui\patient_info_preview_ca.paa);
-                saveToProfile[] = {0, 1, 2, 3};
+                saveToProfile[] = {0, 1};
                 canResize = 0;
             };
         };
