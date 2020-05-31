@@ -31,6 +31,7 @@
             <Portuguese>Preparar %1</Portuguese>
             <Czech>Připravit %1</Czech>
             <Spanish>Preparar %1</Spanish>
+            <Turkish>Hazırlanıyor %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
@@ -46,6 +47,7 @@
             <Portuguese>%1&lt;br/&gt;Preparado</Portuguese>
             <Czech>%1&lt;br/&gt;Připraveno</Czech>
             <Spanish>%1&lt;br/&gt;Preparado</Spanish>
+            <Turkish>%1&lt;br/&gt; Hazırlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Inventory_Full">
             <English>No inventory space</English>
@@ -78,6 +80,7 @@
             <Portuguese>[ACE] Bastões de Luz</Portuguese>
             <Czech>[ACE] Chemická světla</Czech>
             <Spanish>[ACE] Luces químicas</Spanish>
+            <Turkish>[ACE] Işık Çubukları</Turkish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayName">
             <English>Chemlight (Orange)</English>

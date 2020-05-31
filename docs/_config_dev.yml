@@ -9,16 +9,16 @@ ace:
   version:
     major: 3
     minor: 13
-    patch: 1
-    build: 46
+    patch: 2
+    build: 49
 
 acex:
   githubUrl: https://github.com/acemod/ACEX
   version:
     major: 3
     minor: 5
-    patch: 1
-    build: 16
+    patch: 2
+    build: 19
 
 
 markdown: kramdown

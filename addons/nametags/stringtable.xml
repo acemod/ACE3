@@ -116,6 +116,7 @@
             <Korean>키를 누를경우만</Korean>
             <Chinesesimp>只有按按键时</Chinesesimp>
             <Chinese>只有按按鍵時</Chinese>
+            <Turkish>Yalnızca Tuşa Basmada</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursorAndKeypress">
             <English>Only on Cursor and Keypress</English>
@@ -384,6 +385,7 @@
             <Korean>이름표 크기</Korean>
             <Chinesesimp>玩家名字标记大小</Chinesesimp>
             <Chinese>玩家名稱標記大小</Chinese>
+            <Turkish>Isim Etiketi Büyüklüğü</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Description">
             <English>Text and Icon Size Scaling</English>
@@ -432,6 +434,7 @@
             <Korean>강제로 숨기기</Korean>
             <Chinesesimp>强制隐藏</Chinesesimp>
             <Chinese>強迫隱藏</Chinese>
+            <Turkish>Gizlemeye Zorla</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShow">
             <English>Force Show</English>
@@ -448,6 +451,7 @@
             <Korean>강제로 표시</Korean>
             <Chinesesimp>强制显示</Chinesesimp>
             <Chinese>強迫顯示</Chinese>
+            <Turkish>Göstermeye Zorla</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
             <English>Force Show Only on Cursor</English>

@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * function = "ace_cargo_fnc_loadItem"
+ * [] call ace_cargo_fnc_moduleSettings
  *
  * Public: No
  */

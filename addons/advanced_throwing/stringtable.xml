@@ -3,6 +3,7 @@
     <Package name="Advanced_Throwing">
         <Key ID="STR_ACE_Advanced_Throwing_Category">
             <English>Advanced Throwing</English>
+            <Spanish>Lanzamiento Avanzado</Spanish>
             <Russian>Улучшенный бросок гранат</Russian>
             <Japanese>アドバンスド スローイング</Japanese>
             <Polish>Zaawansowane rzucanie</Polish>
@@ -18,6 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
             <English>Allows changing advanced throwing behaviour.</English>
+            <Spanish>Permite modificar el comportamiento del lanzamiento avanzado</Spanish>
             <Russian>Позволяет настраивать поведение улучшенного броска гранат.</Russian>
             <Japanese>アドバンスド スローイングの動作挙動を変更します。</Japanese>
             <Polish>Zezwala na zmianę zachowania zaawansowanego trybu rzucania.</Polish>
@@ -32,8 +34,9 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
+            <Spanish>Activar Lanzamiento Avanzado</Spanish>
             <Russian>Включить улучшенный бросок</Russian>
-            <Japanese>アドバンスド スローイングを有効化する</Japanese>
+            <Japanese>アドバンスド スローイングを有効化</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
             <German>Aktiviere erweitertes Wurfsystem</German>
             <Korean>고급 투척 활성화 </Korean>
@@ -47,6 +50,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>
+            <Spanish>Activa el Lanzamiento Avanzado</Spanish>
             <Russian>Включает систему улучшенного броска.</Russian>
             <Japanese>アドバンスド スローイングを有効化します。</Japanese>
             <Polish>Aktywuje system zaawansowanego rzucania.</Polish>
@@ -62,8 +66,9 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
+            <Spanish>Mostrar Arco de Lanzamiento</Spanish>
             <Russian>Показать траекторию броска</Russian>
-            <Japanese>投てき軌道を表示する</Japanese>
+            <Japanese>投てき軌道を表示</Japanese>
             <Polish>Pokaż trasę lotu</Polish>
             <German>Zeige Wurfbogen</German>
             <Korean>투척 궤적 표시</Korean>
@@ -77,6 +82,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_Description">
             <English>Enables visualization of the throw arc (where throwable will fly).</English>
+            <Spanish>Activa la visualización del arco de lanzamiento (donde irá el objeto lanzado)</Spanish>
             <Russian>Включает визуализацию траектории броска (как полетит граната).</Russian>
             <Japanese>投てき軌道 (投てき物がどこに飛ぶか) の表示を有効化します。</Japanese>
             <Polish>Wyświetla wizualizację trasy przelotu granatu.</Polish>
@@ -91,8 +97,9 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
             <English>Show Throwing Mouse Controls</English>
+            <Spanish>Mostrar controles de ratón de lanzamiento</Spanish>
             <Russian>Показывать управление мышью</Russian>
-            <Japanese>投てきのマウス操作を表示する</Japanese>
+            <Japanese>投てきのマウス操作を表示</Japanese>
             <Polish>Pokaż podpowiedzi sterowania myszą</Polish>
             <German>Zeige Maussteuerung beim Werfen</German>
             <Korean>마우스 조작 표시</Korean>
@@ -105,6 +112,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_Description">
             <English>Enables visual cues for mouse controls when throwable is prepared.</English>
+            <Spanish>Activa muestras visuales para los controles del ratón cuando el objeto lanzable está preparado</Spanish>
             <Russian>Включает отображение подсказок по управлению мышью, когда граната подготовлена.</Russian>
             <Japanese>投てき物を構える時、マウス操作の説明表示を有効化します。</Japanese>
             <Polish>Wyświetla podpowiedzi sterowania myszą kiedy obiekt miotany jest w ręku.</Polish>
@@ -119,8 +127,9 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
+            <Spanish>Habilitar recoger objetos lanzados</Spanish>
             <Russian>Включить подбор гранат</Russian>
-            <Japanese>投てき物の拾い上げを有効化する</Japanese>
+            <Japanese>投てき物の拾い上げを有効化</Japanese>
             <Polish>Zezwól na podnoszenie obiektów miotanych</Polish>
             <German>Aktiviere Aufheben von Wurfobjekten</German>
             <Korean>투척물 줍기 활성화</Korean>
@@ -133,6 +142,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_Description">
             <English>Enables ability to pick up throwables from the ground.</English>
+            <Spanish>Activa la habilidad de coger objetos lanzados del suelo</Spanish>
             <Russian>Включает возможность подбирать гранаты с земли.</Russian>
             <Japanese>地面に落ちている投てき物を拾い上げる機能を有効化します。</Japanese>
             <Polish>Umożliwia podnoszenie obiektów miotanych z ziemi.</Polish>
@@ -147,8 +157,9 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
+            <Spanish>Activar coger objetos lanzables que se enganchan</Spanish>
             <Russian>Включить подбор прикрепленных гранат</Russian>
-            <Japanese>取り付けられた投てき物の拾い上げを有効化する</Japanese>
+            <Japanese>取り付けられた投てき物の拾い上げを有効化</Japanese>
             <Polish>Zezwól na podnoszenie przyczepionych obiektów miotanych</Polish>
             <German>Aktiviere erneute Aufnahme befestigter Wurfobjekte</German>
             <Korean>부착 투척물 줍기 활성화</Korean>
@@ -161,8 +172,9 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_Description">
             <English>Enables ability to pick up throwables from attached objects.</English>
+            <Spanish>Activa la habilidad de lanzar objetos enganchados</Spanish>
             <Russian>Включает возможность подбирать гранаты, прикрепленные к объектам.</Russian>
-            <Japanese>取り付けられた投てき物を、取り付け先から拾い上げる機能を有効化します。</Japanese>
+            <Japanese>取り付けられた投てき物を拾い上げる機能を有効化します。</Japanese>
             <Polish>Umożliwia podnoszenie obiektów miotanych przyczepionych do innych obiektów.</Polish>
             <German>Aktiviert die Möglichkeit, befestigte Wurfobjekte erneut aufzunehmen.</German>
             <Korean>부착된 투척물을 주울 수 있게 해줍니다.</Korean>
@@ -175,6 +187,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>
+            <Spanish>Preparar/Cambiar objetos lanzables</Spanish>
             <Russian>Подготовить/заменить гранату</Russian>
             <Japanese>投てき物の準備/変更</Japanese>
             <Polish>Przygotuj/zmień ob. miotany</Polish>
@@ -189,6 +202,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_dropModeHold">
             <English>Throwable Drop Mode (Hold)</English>
+            <Spanish>Modo soltar objeto lanzable (Mantener pulsado)</Spanish>
             <Russian>Режим броска гранаты (удерживать)</Russian>
             <Japanese>投てきモード (押している間)</Japanese>
             <Polish>Tryb upuszczania ob. miotanego (przytrzymaj)</Polish>
@@ -203,6 +217,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
             <English>Throwable Drop Mode (Toggle)</English>
+            <Spanish>Modo soltar objeto lanzable (interruptor)</Spanish>
             <Russian>Режим броска гранаты (переключить)</Russian>
             <Japanese>投てきモード (切り替え)</Japanese>
             <Polish>Tryb upuszczania ob. miotanego (przełącz)</Polish>
@@ -217,6 +232,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Primed">
             <English>Primed</English>
+            <Spanish>Preparado</Spanish>
             <Russian>Подготовлена</Russian>
             <Japanese>点火</Japanese>
             <Polish>Odbezpieczony</Polish>
@@ -231,6 +247,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
+            <Spanish>Lanzar</Spanish>
             <Russian>Бросить</Russian>
             <Japanese>投げる</Japanese>
             <Polish>Rzuć</Polish>
@@ -246,6 +263,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
             <English>(Scroll) Change Mode</English>
+            <Spanish>(Scroll) Cambiar Modo</Spanish>
             <Russian>(Скролл) Изменить режим</Russian>
             <Japanese>(スクロール) モード変更</Japanese>
             <Polish>(Kółko m.) zmień tryb</Polish>
@@ -261,6 +279,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Extend">
             <English>(Scroll) Extend</English>
+            <Spanish>(Scroll) Extender</Spanish>
             <Russian>(Скролл) Увеличить</Russian>
             <Japanese>(スクロール) 腕を伸ばす</Japanese>
             <Polish>(Kółko m.) przedłuż</Polish>
@@ -276,6 +295,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
+            <Spanish>(Click) Cebar</Spanish>
             <Russian>(Клик) Подготовить</Russian>
             <Japanese>(クリック) 点火する</Japanese>
             <Polish>(Kliknięcie) Odbezpiecz</Polish>
@@ -291,6 +311,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_PickUp">
             <English>Pick Up</English>
+            <Spanish>Coger</Spanish>
             <Russian>Подобрать</Russian>
             <Japanese>拾い上げる</Japanese>
             <Polish>Podnieś</Polish>

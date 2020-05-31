@@ -33,6 +33,7 @@
             <Korean>무인기 배터리가 필요합니다</Korean>
             <Chinesesimp>你需要一个无人载具电池</Chinesesimp>
             <Chinese>你需要一個無人載具電池</Chinese>
+            <Turkish>UAV Bataryaya ihtiyacın var</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Recharge">
             <English>Recharge</English>
@@ -66,6 +67,7 @@
             <Korean>무인기 배터리</Korean>
             <Chinesesimp>无人载具电池</Chinesesimp>
             <Chinese>無人載具電池</Chinese>
+            <Turkish>UAV Batarya</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Description">
             <English>Used to refuel Carried UAV's</English>
@@ -82,6 +84,7 @@
             <Korean>무인기를 재충전 할때 씁니다.</Korean>
             <Chinesesimp>对可携式无人载具进行充电</Chinesesimp>
             <Chinese>對可攜式無人載具進行充電</Chinese>
+            <Turkish>Used to refuel Carried UAV's</Turkish>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
             <English>Recharging...</English>

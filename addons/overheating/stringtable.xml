@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Overheating_DisplayName">
             <English>Overheating</English>
             <German>Heißlaufen</German>
+            <Spanish>Sobrecalentamiento</Spanish>
             <Italian>Surriscaldamento</Italian>
             <Chinese>過熱</Chinese>
             <Chinesesimp>过热</Chinesesimp>
@@ -89,7 +90,7 @@
             <Czech>Částicové efekty přehřívání pro všechny</Czech>
             <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
             <Russian>Эффект частиц при перегреве для всех</Russian>
-            <Japanese>過熱の視覚表現を全員に与えます</Japanese>
+            <Japanese>過熱の視覚表現を全員に</Japanese>
             <Korean>모두에게 과열 입자 효과 적용</Korean>
             <Chinesesimp>显示其他玩家的枪管过热特效</Chinesesimp>
             <Chinese>顯示其他玩家的槍管過熱特效</Chinese>
@@ -105,7 +106,7 @@
             <Portuguese>Mostra efeito de partículas quando a arma de outros jogadores superaquece</Portuguese>
             <Russian>Показывать эффект частиц, когда оружие других игроков перегревается</Russian>
             <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
-            <Japanese>他のプレイヤの過熱の視覚表現を表示します</Japanese>
+            <Japanese>他のプレイヤーの過熱の視覚表現を表示します</Japanese>
             <Korean>모든 인원이 무기가 과열될시 입자 효과가 나타납니다.</Korean>
             <Chinesesimp>当其他玩家的武器过热时显示特效</Chinesesimp>
             <Chinese>當其他玩家的武器過熱時顯示特效</Chinese>
@@ -400,6 +401,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
             <English>Check spare barrels temperatures</English>
+            <Spanish>Comprobar temperatura de los cañones de repuesto</Spanish>
             <Portuguese>Verifica temperatura de canos reservas</Portuguese>
             <French>Vérifier la température des canons de rechange</French>
             <Russian>Проверить температуру запасных стволов</Russian>
@@ -414,6 +416,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
+            <Spanish>Comprobando temperatura de los cañones de repuesto</Spanish>
             <Portuguese>Verificando temperatura de canos reservas</Portuguese>
             <French>Vérification de la température des canons de rechange...</French>
             <Russian>Проверка температуры запасных стволов...</Russian>
@@ -444,6 +447,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelCool">
             <English>Cool Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto frio/s</Spanish>
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
             <French>Canon(s) de rechange froid(s).</French>
             <Russian>Прохладные</Russian>
@@ -458,6 +462,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto templado/s</Spanish>
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
             <French>Canon(s) de rechange tiède(s).</French>
             <Russian>Теплые</Russian>
@@ -472,6 +477,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto caliente/s</Spanish>
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
             <French>Canon(s) de rechange chaud(s).</French>
             <Russian>Горячие</Russian>
@@ -486,6 +492,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto muy caliente/s</Spanish>
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
             <French>Canon(s) de rechange très chaud(s).</French>
             <Russian>Очень горячие</Russian>
@@ -500,6 +507,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto extremadamente caliente/s</Spanish>
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
             <French>Canon(s) de rechange extrêmement chaud(s).</French>
             <Russian>Запредельно горячие</Russian>
@@ -515,7 +523,7 @@
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
             <German>Überhitzung aktiviert</German>
-            <Spanish>Activada Sobrecalentamiento</Spanish>
+            <Spanish>Activado Sobrecalentamiento</Spanish>
             <Portuguese>Superaquecimento ativado</Portuguese>
             <French>Surchauffe activée</French>
             <Russian>Перегрев включен</Russian>
@@ -529,6 +537,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
+            <Spanish>Activación maestra para Sobrecalentamiento</Spanish>
             <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
             <French>Active le module de surchauffe/d'enrayement.</French>
             <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>

@@ -89,6 +89,9 @@
         <Key ID="STR_ACE_Dragging_RaiseLowerRotate">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
             <German>Heben/Senken | (Strg + Scrollen) Drehen</German>
+            <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
+            <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
+            <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
         </Key>
     </Package>
 </Project>

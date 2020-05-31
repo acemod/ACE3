@@ -51,6 +51,7 @@
             <Chinese>腎上腺素甦醒率加成</Chinese>
             <German>Erhöhung der Aufwachüberprüfungsrate durch Epinephrin</German>
             <Japanese>アドレナリン覚醒率の上昇</Japanese>
+            <Czech>Zvýšení pravděpodobnosti probuzení s Epinefrinem</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -170,11 +171,13 @@
             <English>Fracture Chance</English>
             <French>Chance de fracture</French>
             <Japanese>骨折確率</Japanese>
+            <Czech>Šance na zlomeninu</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
             <French>La probabilité pour qu'une blessure pouvant causer une fracture en crée effectivement une.</French>
             <Japanese>骨折の原因となる負傷で骨折する確率を決定します。</Japanese>
+            <Czech>Výška šance kdy zranění způsobující zlomeniny skutečně způsobí zlomeninu.</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -303,6 +306,7 @@
             <Korean>안정된</Korean>
             <Chinesesimp>稳定状态下</Chinesesimp>
             <Chinese>穩定狀態下</Chinese>
+            <Turkish>Dengeli</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Category_Medical">
             <English>Medical</English>
@@ -319,6 +323,7 @@
             <Korean>의료</Korean>
             <Chinesesimp>医疗设定</Chinesesimp>
             <Chinese>醫療設定</Chinese>
+            <Turkish>Medikal</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_DistanceToFar">
             <English>Distance to %1 has become too far for treatment</English>

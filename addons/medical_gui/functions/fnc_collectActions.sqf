@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [] call ace_medical_gui_fnc_collectAction
+ * [] call ace_medical_gui_fnc_collectActions
  *
  * Public: No
  */

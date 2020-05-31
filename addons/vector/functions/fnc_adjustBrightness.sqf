@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [5] call ace_vector_fnc_adjustBrigthness
+ * [5] call ace_vector_fnc_adjustBrightness
  *
  * Public: No
  */

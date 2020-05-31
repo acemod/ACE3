@@ -13,7 +13,7 @@ class CfgWeapons {
 
     class Pistol_Base_F;
     class Rifle_Base_F;
-    class srifle_EBR_F;
+    class rhs_weap_m14ebrri_base;
     class launch_O_Titan_F;
     class GM6_base_F;
     class rhs_weap_M107_Base_F: GM6_base_F {
@@ -90,7 +90,7 @@ class CfgWeapons {
         ACE_barrelLength = 629.92;
         ACE_Overheating_allowSwapBarrel = 1;
     };
-    class rhs_weap_m14ebrri: srifle_EBR_F {
+    class rhs_weap_m14ebrri: rhs_weap_m14ebrri_base {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
         ACE_Overheating_dispersion = 0.75;

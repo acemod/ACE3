@@ -10,7 +10,7 @@
  * wind speed <NUMBER>
  *
  * Example:
- * call ace_kestrel4500_fnc_canShow
+ * call ace_kestrel4500_fnc_measureWindSpeed
  *
  * Public: No
  */
