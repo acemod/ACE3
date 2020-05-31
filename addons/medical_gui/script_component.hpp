@@ -27,12 +27,12 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-#define PATIENTINFO_IGUI_BASE_X (safeZoneX + POS_W(2))
-#define PATIENTINFO_IGUI_BASE_Y (safeZoneY + POS_H(1))
-#define PATIENTINFO_IGUI_X (profilenamespace getVariable ['TRIPLES(IGUI,GVAR(patientInfo),X)', 0])
-#define PATIENTINFO_IGUI_Y (profilenamespace getVariable ['TRIPLES(IGUI,GVAR(patientInfo),Y)', 0])
-#define PATIENT_INFO_IGUI_OFFSET_X (PATIENTINFO_IGUI_X - PATIENTINFO_IGUI_BASE_X)
-#define PATIENT_INFO_IGUI_OFFSET_Y (PATIENTINFO_IGUI_Y - PATIENTINFO_IGUI_BASE_Y)
+#define PATIENT_INFO_IGUI_BASE_X (safeZoneX + POS_W(2))
+#define PATIENT_INFO_IGUI_BASE_Y (safeZoneY + POS_H(1))
+#define PATIENT_INFO_IGUI_X (profilenamespace getVariable ['TRIPLES(IGUI,GVAR(patientInfo),X)', 0])
+#define PATIENT_INFO_IGUI_Y (profilenamespace getVariable ['TRIPLES(IGUI,GVAR(patientInfo),Y)', 0])
+#define PATIENT_INFO_IGUI_OFFSET_X (PATIENT_INFO_IGUI_X - PATIENT_INFO_IGUI_BASE_X)
+#define PATIENT_INFO_IGUI_OFFSET_Y (PATIENT_INFO_IGUI_Y - PATIENT_INFO_IGUI_BASE_Y)
 
 #define IDD_MEDICAL_MENU 38580
 
