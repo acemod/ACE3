@@ -65,7 +65,7 @@
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
             <German>Erhöht wie oft Aufwachprüfungen passieren, wenn ein Patient Epinephrin im Blutkreislauf hat.</German>
-            <Russian>Увеличивает частоту проверок на спонтанное пробуждение когда пациент под действием адреналина.</Russian>
+            <Russian>Увеличивает частоту проверок на спонтанное пробуждение, когда пациент под действием адреналина.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
