@@ -53,8 +53,7 @@ if (isNil "ACE_maxWeightCarry") then {
 
     [ACE_player, _cursor] call FUNC(startDrag);
     false
-}, {
-}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
+}, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
 
 ["ACE3 Common", QGVAR(carry), (localize LSTRING(CarryKeybind)), {
     if (!alive ACE_player) exitWith {false};
@@ -76,5 +75,4 @@ if (isNil "ACE_maxWeightCarry") then {
 
     [ACE_player, _cursor] call FUNC(startCarry);
     false
-}, {
-}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
+}, {}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
