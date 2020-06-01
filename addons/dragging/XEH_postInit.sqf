@@ -73,7 +73,7 @@ if (isNil "ACE_maxWeightCarry") then {
 
     private _cursor = cursorObject;
     if ((isNull _cursor) || {(_cursor distance ACE_player) > 2.6}) exitWith {false};
-    if (!([ACE_player, _cursor] call FUNC(canDrag))) exitWith {false};
+    if (!([ACE_player, _cursor] call FUNC(canCarry))) exitWith {false};
 
     [ACE_player, _cursor] call FUNC(startCarry);
     false
