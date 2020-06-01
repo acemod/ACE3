@@ -52,6 +52,9 @@
             <Chinesesimp>拖拉/放开物品</Chinesesimp>
             <Turkish>Objeyi Sürükle/Bırak</Turkish>
         </Key>
+        <Key ID="STR_ACE_Dragging_CarryKeybind">
+            <English>Carry/Release Object</English>
+        </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
             <German>Gegenstand ist zu schwer</German>
