@@ -113,8 +113,8 @@
             <Czech>Zranění ran znovu</Czech>
             <Russian>Рана вновь открывается шанс</Russian>
         </Key>
-            <Key ID="Controls the chance of wounds reopening if Advanced Bandages, Can Reopen is enabled. A value of 2 is 200%, while a value of 0 is 0%.">
-            <English>Enabled &amp; Can Reopen</English>
+            <Key ID="WoundReopenChance_Description">
+            <English>Controls the chance of wounds reopening if Advanced Bandages, Can Reopen is enabled. A value of 2 is 200%, while a value of 0 is 0%.</English>
             <French>Contrôle les chances de réouverture des blessures si les bandages avancés, la réouverture peut être activée. Une valeur de 2 est de 200%, tandis qu'une valeur de 0 est de 0%.</French>
             <Czech>Řídí šanci na opětovné otevření ran, pokud je povoleno Advanced Bandage, Can Reopen. Hodnota 2 je 200%, zatímco hodnota 0 je 0%.</Czech>
             <Russian>Управляет шансом повторного открытия ран, если включены дополнительные повязки, Can Reopen. Значение 2 составляет 200%, а значение 0 - 0%.</Russian>
