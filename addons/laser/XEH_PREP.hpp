@@ -1,7 +1,6 @@
 
 PREP(addLaserTarget);
 PREP(dev_drawVisibleLaserTargets);
-PREP(drawLaserLine);
 PREP(findLaserSource);
 PREP(handleLaserTargetCreation);
 PREP(keyLaserCodeChange);
@@ -9,7 +8,6 @@ PREP(laserOff);
 PREP(laserOn);
 PREP(laserPointTrack);
 PREP(laserTargetPFH);
-PREP(manageMarkers);
 PREP(onLaserDesignatorDraw);
 PREP(rotateVectLine);
 PREP(rotateVectLineGetMap);
@@ -18,4 +16,3 @@ PREP(shootCone);
 PREP(shootRay);
 PREP(showVehicleHud);
 PREP(toggleLST);
-PREP(toggleMarker);
