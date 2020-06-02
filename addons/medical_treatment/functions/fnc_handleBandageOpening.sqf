@@ -26,7 +26,7 @@ private _className = EGVAR(medical_damage,woundClassNamesComplex) select _classI
 private _reopeningChance = DEFAULT_BANDAGE_REOPENING_CHANCE;
 private _reopeningMinDelay = DEFAULT_BANDAGE_REOPENING_MIN_DELAY;
 private _reopeningMaxDelay = DEFAULT_BANDAGE_REOPENING_MAX_DELAY;
-
+private _reopeningModifer = 0.5;
 // Get the default values for the used bandage
 private _config = configFile >> QUOTE(ADDON) >> "Bandaging";
 
@@ -84,7 +84,7 @@ _target setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
 
 TRACE_1("",_reopeningChance);
 // Check if we are ever going to reopen this
-if (random 1 <= _reopeningChance) then {
+if (random 1 <= _reopeningChance * _reopeningModifer) then {
     private _delay = _reopeningMinDelay + random (_reopeningMaxDelay - _reopeningMinDelay);
     TRACE_1("Will open",_delay);
     [{
