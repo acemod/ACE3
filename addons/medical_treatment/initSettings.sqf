@@ -26,6 +26,16 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(woundReopenChance),
+    "SLIDER",
+    [LSTRING(WoundReopenChance_DisplayName), LSTRING(WoundReopenChance_Description)],
+    [ELSTRING[medical,Category, LSTRING(SubCategory_Treatment)],
+    [0, 2, 1, 2, true],
+    true
+    call CBA_settings_fnc_init;
+]
+
+[
     QGVAR(clearTraumaAfterBandage),
     "CHECKBOX",
     [LSTRING(ClearTraumaAfterBandage_DisplayName), LSTRING(ClearTraumaAfterBandage_Description)],

@@ -26,7 +26,7 @@ private _className = EGVAR(medical_damage,woundClassNamesComplex) select _classI
 private _reopeningChance = DEFAULT_BANDAGE_REOPENING_CHANCE;
 private _reopeningMinDelay = DEFAULT_BANDAGE_REOPENING_MIN_DELAY;
 private _reopeningMaxDelay = DEFAULT_BANDAGE_REOPENING_MAX_DELAY;
-private _reopeningModifer = 0.5;
+private _reopeningModifer = GVAR(woundReopenChance);
 // Get the default values for the used bandage
 private _config = configFile >> QUOTE(ADDON) >> "Bandaging";
 
