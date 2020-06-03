@@ -107,13 +107,13 @@
             <Czech>Zapnuto &amp; Úrazy se mohou znovu otevřít</Czech>
             <Russian>Включено и может открыться заново</Russian>
         </Key>
-            <Key ID="WoundReopenChance_DisplayName">
+        <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_DisplayName">
             <English>Wound Reopen Chance</English>
             <French>Chance de réouverture de blessure</French>
             <Czech>Zranění ran znovu</Czech>
             <Russian>Рана вновь открывается шанс</Russian>
         </Key>
-            <Key ID="WoundReopenChance_Description">
+        <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_Description">
             <English>Controls the chance of wounds reopening if Advanced Bandages, Can Reopen is enabled. A value of 2 is 200%, while a value of 0 is 0%.</English>
             <French>Contrôle les chances de réouverture des blessures si les bandages avancés, la réouverture peut être activée. Une valeur de 2 est de 200%, tandis qu'une valeur de 0 est de 0%.</French>
             <Czech>Řídí šanci na opětovné otevření ran, pokud je povoleno Advanced Bandage, Can Reopen. Hodnota 2 je 200%, zatímco hodnota 0 je 0%.</Czech>

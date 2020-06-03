@@ -29,11 +29,10 @@
     QGVAR(woundReopenChance),
     "SLIDER",
     [LSTRING(WoundReopenChance_DisplayName), LSTRING(WoundReopenChance_Description)],
-    [ELSTRING[medical,Category, LSTRING(SubCategory_Treatment)],
-    [0, 2, 1, 2, true],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 2, 1, 2],
     true
-    call CBA_settings_fnc_init;
-]
+] call CBA_settings_fnc_init;
 
 [
     QGVAR(clearTraumaAfterBandage),

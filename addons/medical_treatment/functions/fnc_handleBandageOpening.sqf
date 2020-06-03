@@ -27,6 +27,7 @@ private _reopeningChance = DEFAULT_BANDAGE_REOPENING_CHANCE;
 private _reopeningMinDelay = DEFAULT_BANDAGE_REOPENING_MIN_DELAY;
 private _reopeningMaxDelay = DEFAULT_BANDAGE_REOPENING_MAX_DELAY;
 private _reopeningModifer = GVAR(woundReopenChance);
+
 // Get the default values for the used bandage
 private _config = configFile >> QUOTE(ADDON) >> "Bandaging";
 
@@ -43,7 +44,7 @@ if (isClass (_config >> _className)) then {
     private _woundTreatmentConfig = _config >> _className;
 
     if (isNumber (_woundTreatmentConfig >> "reopeningChance")) then {
-        _reopeningChance = getNumber (_woundTreatmentConfig >> "reopeningChance");
+        _reopeningChance = getNumber (_woundTreatmentConfig >> "reopeningChance");        
     };
 
     if (isNumber (_woundTreatmentConfig >> "reopeningMinDelay")) then {
