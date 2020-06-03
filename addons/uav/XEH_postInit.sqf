@@ -20,7 +20,7 @@
             _vehicle animateSource ["mainTurret", _pilotCameraRotation select 0];
             _vehicle animateSource ["mainGun", -(_pilotCameraRotation select 1)];
 
-        }, 0, [_vehicle]] call CBA_fnc_addPerFrameHandler;
+        }, 0.1, [_vehicle]] call CBA_fnc_addPerFrameHandler;
         _vehicle setVariable [QGVAR(pfhID), _pfhID];
     };
 }, true, [], true] call CBA_fnc_addClassEventHandler;

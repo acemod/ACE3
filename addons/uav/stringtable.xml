@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="UAV">
+        <Key ID="STR_ACE_UAV_DisplayName">
+            <English>UAV</English>
+        </Key>
+        <Key ID="STR_ACE_UAV_ACE_UAV_01_Name">
+            <English>AR-2 Darter (Pilot Cam)</English>
+        </Key>
+        <Key ID="STR_ACE_UAV_ACE_UAV_01_O_Name">
+            <English>Tayran AR-2 (Pilot Cam)</English>
+        </Key>
+        <Key ID="STR_ACE_UAV_ACE_UAV_02_Name">
+            <English>YABHON-R3 (Pilot Camera)</English>
+        </Key>
+        <Key ID="STR_ACE_UAV_ACE_UAV_03_Name">
+            <English>MQ-12 Falcon (Pilot Cam)</English>
+        </Key>
+        <Key ID="STR_ACE_UAV_ACE_UAV_04_Name">
+            <English>Burraq UCAV (Pilot Cam)</English>
+        </Key> 
+        <Key ID="STR_ACE_UAV_ACE_UAV_05_Name">
+            <English>UCAV Sentinel (Pilot Cam)</English>
+        </Key> 
+    </Package>
+</Project>
