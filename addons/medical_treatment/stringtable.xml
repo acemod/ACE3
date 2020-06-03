@@ -108,16 +108,18 @@
             <Russian>Включено и может открыться заново</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_DisplayName">
-            <English>Wound Reopen Chance</English>
-            <French>Chance de réouverture de blessure</French>
-            <Czech>Zranění ran znovu</Czech>
-            <Russian>Рана вновь открывается шанс</Russian>
+            <English>Wound Reopening Coefficient</English>
+            <French>Coefficient de réouverture des plaies</French>
+            <German>Wundwiederöffnungskoeffizient</German>
+            <Czech>Koeficient opětovného otevření rány</Czech>
+            <Russian>Коэффициент повторного открытия раны</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_Description">
-            <English>Controls the chance of wounds reopening if Advanced Bandages, Can Reopen is enabled. A value of 2 is 200%, while a value of 0 is 0%.</English>
-            <French>Contrôle les chances de réouverture des blessures si les bandages avancés, la réouverture peut être activée. Une valeur de 2 est de 200%, tandis qu'une valeur de 0 est de 0%.</French>
-            <Czech>Řídí šanci na opětovné otevření ran, pokud je povoleno Advanced Bandage, Can Reopen. Hodnota 2 je 200%, zatímco hodnota 0 je 0%.</Czech>
-            <Russian>Управляет шансом повторного открытия ран, если включены дополнительные повязки, Can Reopen. Значение 2 составляет 200%, а значение 0 - 0%.</Russian>
+            <English>Coefficient for controlling the wound reopening chance. The final reopening chance is determined by multiplying this value with the specific reopening chance for the wound type and bandage used.</English>
+            <French>Coefficient de contrôle des chances de réouverture de la plaie. La chance de réouverture finale est déterminée en multipliant cette valeur par la chance de réouverture spécifique pour le type de plaie et le bandage utilisés.</French>
+            <German>Koeffizient zur Kontrolle der Wundöffnungswahrscheinlichkeit. Die endgültige Wiedereröffnungschance wird bestimmt, indem dieser Wert mit der spezifischen Wiedereröffnungschance für den verwendeten Wundtyp und Verband multipliziert wird.</German>
+            <Czech>Koeficient pro řízení šance na opětovné otevření rány. Konečná šance na opětovné otevření se stanoví vynásobením této hodnoty specifickou šancí na opětovné otevření pro použitý typ rány a obvaz.</Czech>
+            <Russian>Коэффициент контроля вероятности повторного открытия раны. Окончательный шанс повторного открытия определяется путем умножения этого значения на определенный шанс повторного открытия для используемого типа раны и повязки.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
