@@ -20,6 +20,7 @@
 #define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 params ["_unit", "_vehicle", ["_unloader", objNull]];
+TRACE_3("unloadPersonLocal",_unit,_vehicle,_unloader);
 
 //This covers testing vehicle stability and finding a safe position
 private _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
