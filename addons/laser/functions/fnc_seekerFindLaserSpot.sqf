@@ -27,7 +27,7 @@ BEGIN_COUNTER(seekerFindLaserSpot);
 
 params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", "_ignoreObj", "_ignoreBy"];
 
-if(isNil "_ignoreBy") then {
+if (isNil "_ignoreBy") then {
     _ignoreBy = objNull;
 };
 
@@ -49,7 +49,6 @@ private _finalOwner = objNull;
     TRACE_6("laser",_obj,_owner,_laserMethod,_emitterWavelength,_laserCode,_divergence);
 
     if (alive _obj && {_emitterWavelength >= _seekerWavelengthMin} && {_emitterWavelength <= _seekerWavelengthMax} && {_laserCode == _seekerCode}) then {
-
         private _laser = [];
         // Find laser pos and dir of the laser depending on type
         if (IS_STRING(_laserMethod)) then {
@@ -84,7 +83,7 @@ private _finalOwner = objNull;
                 private _testPointVector = _posASL vectorFromTo _testPoint;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
                 if ((_testDotProduct > _seekerCos) && {(_testPoint vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
-                    if(_owner != _ignoreBy) then {
+                    if (_owner != _ignoreBy) then {
                         _spots pushBack [_testPoint, _owner];
                     };
                 };

@@ -19,7 +19,7 @@ params [["_codeChange", 0, [0]]];
 
 TRACE_1("params",_codeChange);
 
-if (( !alive ACE_player) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {false};
+if ((!alive ACE_player) || {!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {false};
 
 private _currentShooter = objNull;
 private _currentWeapon = "";
@@ -66,7 +66,7 @@ if (_oldLaserCode != _newLaserCode) then {
 private _string = "";
 if (_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false]) then {
     private _LSTmessage = localize ([LSTRING(LSTOff), LSTRING(LSTOn)] select (_currentShooter getVariable [QGVAR(laserSpotTrackerOn), false]));
-    _string = format ["%1<br/>", _LSTmessage];
+    _string = _LSTmessage + "<br/>";
 };
 _string = format ["%1%2: %3", _string, localize LSTRING(laserCode), _newLaserCode];
 [_string] call EFUNC(common,displayTextStructured);
