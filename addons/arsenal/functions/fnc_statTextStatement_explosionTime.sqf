@@ -18,7 +18,11 @@
 
 params ["", "_config"];
 
-private _explosionTime = getNumber (configFile >> "CfgAmmo" >> getText (_config >> "ammo") >> "explosionTime");
+private _ammo = getText (_config >> "ammo");
+private _timeToLive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
+private _explosionTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
+
+if (_explosionTime > _timeToLive) exitWith { "-" };
 
 if (_explosionTime == -1) exitWith {
     localize LSTRING(DetonatesOnImpact)
