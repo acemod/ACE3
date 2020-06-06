@@ -18,11 +18,13 @@
 
 params ["", "_config"];
 
-private _ammo = getText (_config >> "ammo");
-private _timeToLive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
-private _explosionTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
+private _ammoConfig = configFile >> "CfgAmmo" >> getText (_config >> "ammo");
+private _timeToLive = getNumber (_ammoConfig >> "timeToLive");
+private _explosionTime = getNumber (_ammoConfig >> "explosionTime");
 
-if (_explosionTime > _timeToLive) exitWith { "-" };
+if (_explosionTime > _timeToLive) exitWith {
+    "-" // Handle IR grenades
+};
 
 if (_explosionTime == -1) exitWith {
     localize LSTRING(DetonatesOnImpact)
