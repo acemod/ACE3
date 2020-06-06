@@ -19,6 +19,8 @@ params ["_display"];
 
 uiNamespace setVariable [QGVAR(display), _display];
 
+[QGVAR(displayLoaded), _display] call CBA_fnc_localEvent;
+
 // Handle ACRE2 Toggle Spectator (if present)
 if (!isNil "acre_api_fnc_addDisplayPassthroughKeys") then {
     [_display] call acre_api_fnc_addDisplayPassthroughKeys;
