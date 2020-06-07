@@ -51,5 +51,13 @@
             <Czech>Redukce G Force</Czech>
             <Spanish>Reducción de fuerzas G</Spanish>
         </Key>
+        <Key ID="STR_ACE_GForces_Coefficient_DisplayName">
+            <English>G-Force coefficient</English>
+            <Polish>Współczynnk przeciążenia</Polish>
+        </Key>
+        <Key ID="STR_ACE_GForces_Coefficient_Description">
+            <English>Controls strenght of G-Force affecting players</English>
+            <Polish>Wpływa na siłe przeciążeń oddziałujących na graczy</Polish>
+        </Key>
     </Package>
 </Project>
