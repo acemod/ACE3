@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="GForces">
+        <Key ID="STR_ACE_GForces_Category">
+            <English>ACE GForces</English>
+            <Polish>ACE Przeciążenia</Polish>
+        </Key>
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
             <German>Effekte der G-Kräfte</German>
