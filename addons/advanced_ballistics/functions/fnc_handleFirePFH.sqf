@@ -36,8 +36,4 @@ private _deleted = false;
 
 if (_deleted) then {
     GVAR(allBullets) = GVAR(allBullets) - [objNull];
-    if (GVAR(allBullets) isEqualTo []) then {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
-        GVAR(BulletPFH) = nil;
-    };
 };
