@@ -1074,23 +1074,6 @@
             <German>Partiell %1</German>
             <Turkish>Parsiyel %1</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_IGUI_Category">
-            <English>ACE Medical</English>
-            <Russian>ACE Медицина</Russian>
-            <Polish>ACE Opcje medyczne</Polish>
-            <Spanish>Médico ACE</Spanish>
-            <German>ACE-Medicsystem</German>
-            <Czech>ACE Zdravotnické</Czech>
-            <Portuguese>ACE Médico</Portuguese>
-            <French>ACE Médical</French>
-            <Hungarian>ACE Orvosi Rendszer</Hungarian>
-            <Italian>ACE Medical</Italian>
-            <Korean>ACE 의료</Korean>
-            <Chinesesimp>ACE 医疗系统</Chinesesimp>
-            <Chinese>ACE 醫療系統</Chinese>
-            <Turkish>ACE Medikal</Turkish>
-            <Japanese>ACE 医療</Japanese>
-        </Key>
         <Key ID="STR_ACE_Medical_GUI_IGUI_PatientInfo">
             <English>Patient Info</English>
             <Polish>Informacje o pacjencie</Polish>
