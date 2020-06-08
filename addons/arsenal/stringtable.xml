@@ -1319,5 +1319,14 @@
             <Czech>Time to live</Czech>
             <Turkish>Bitme Süresi</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_StatExplosionTime">
+            <English>Fuse Time</English>
+            <French>Retard avant détonation</French>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
+            <English>Detonates on impact</English>
+            <German>Aufschlagzünder</German>
+            <French>Détonation à l'impact</French>
+        </Key>
     </Package>
 </Project>
