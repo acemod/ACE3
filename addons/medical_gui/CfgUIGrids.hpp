@@ -19,7 +19,7 @@ class CfgUIGrids {
 
         class Variables {
             class GVAR(patientInfo) {
-                displayName = CSTRING(IGUI_Category);
+                displayName = ECSTRING(medical,Category);
                 description = CSTRING(IGUI_PatientInfo);
                 preview = QPATHTOF(ui\patient_info_preview_ca.paa);
                 saveToProfile[] = {0, 1};
