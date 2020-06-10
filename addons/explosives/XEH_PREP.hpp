@@ -24,7 +24,6 @@ PREP(getPlacedExplosives);
 PREP(getSpeedDialExplosive);
 PREP(module);
 PREP(onIncapacitated);
-PREP(onRespawn);
 PREP(onInventoryChanged);
 PREP(openTimerUI);
 PREP(placeExplosive);
