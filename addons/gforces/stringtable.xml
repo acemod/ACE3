@@ -2,7 +2,7 @@
 <Project name="ACE">
     <Package name="GForces">
         <Key ID="STR_ACE_GForces_Category">
-            <English>ACE GForces</English>
+            <English>ACE G-Forces</English>
             <Polish>ACE Przeciążenia</Polish>
         </Key>
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
@@ -52,11 +52,11 @@
             <Spanish>Reducción de fuerzas G</Spanish>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_DisplayName">
-            <English>G-Force coefficient</English>
+            <English>G-Force Coefficient</English>
             <Polish>Współczynnk przeciążenia</Polish>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_Description">
-            <English>Controls strength of G-Force affecting players</English>
+            <English>Controls strength of G-Force affecting players.</English>
             <Polish>Wpływa na siłe przeciążeń oddziałujących na graczy</Polish>
         </Key>
     </Package>
