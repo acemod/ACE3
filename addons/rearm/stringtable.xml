@@ -670,6 +670,7 @@
             <Italian>Distanza di riarmo</Italian>
             <Czech>Přezbrojovací vzdálenost</Czech>
             <Polish>Odległość przezbrojenia</Polish>
+            <Russian>Дистанция перевооружения</Russian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_distance_Description">
             <English>The maximum distance a vehicle can be rearmed at</English>
@@ -681,6 +682,7 @@
             <Italian>La distanza massima a cui un veicolo può essere riarmato</Italian>
             <Czech>Maximální vzdálenost na jakou může být vozidlo přezbrojeno</Czech>
             <Polish>Maksymalna odległość na jakiej pojazd może zostać przezbrojony</Polish>
+            <Russian>Максимальная дистанция для перевооружения</Russian>
         </Key>
     </Package>
 </Project>

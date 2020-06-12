@@ -123,6 +123,7 @@
             <Japanese>マグライト ML300L</Japanese>
             <Turkish>Maglite ML300L</Turkish>
             <Spanish>Maglite ML300L</Spanish>
+            <Russian>Maglite ML300L</Russian>
         </Key>
         <Key ID="STR_ACE_Flashlights_Maglite_ML300L_Description">
             <English>Powerful LED flashlight.</English>
@@ -135,6 +136,7 @@
             <Japanese>協力な LED のフラッシュライト。</Japanese>
             <Turkish>Güçlü LED el feneri</Turkish>
             <Spanish>Linterna LED potente</Spanish>
+            <Russian>Мощный светодиодный фонарь.</Russian>
         </Key>
     </Package>
 </Project>

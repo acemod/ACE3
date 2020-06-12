@@ -1073,6 +1073,7 @@
             <Spanish>Parcial %1</Spanish>
             <German>Partiell %1</German>
             <Turkish>Parsiyel %1</Turkish>
+            <Russian>Частичное %1</Russian>
         </Key>
     </Package>
 </Project>

@@ -18,8 +18,7 @@
  * Public: No
  */
 
-params ["_faction", "_pos"];
-_faction params ["", "_sides"];
+params ["_sides", "_pos"];
 
 private _nearestObjects = nearestObjects [_pos, ["Man"], 15];
 
