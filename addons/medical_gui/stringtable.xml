@@ -1075,5 +1075,9 @@
             <Turkish>Parsiyel %1</Turkish>
             <Russian>Частичное %1</Russian>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_IGUI_PatientInfo">
+            <English>Patient Info</English>
+            <Polish>Informacje o pacjencie</Polish>
+        </Key>
     </Package>
 </Project>
