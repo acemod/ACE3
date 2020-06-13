@@ -19,7 +19,7 @@
 params ["_positions", "_range"];
 
 private _proximityPlayers = [];
-if (_positions isEqualType objNull || _positions isEqualTypeArray [0, 0, 0] || _positions isEqualTypeArray [0, 0]) then {
+if (_positions isEqualType objNull || { _positions isEqualTypeArray [0, 0, 0] } || { _positions isEqualTypeArray [0, 0] }) then {
     _positions = [_positions];
 };
 

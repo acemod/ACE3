@@ -35,8 +35,8 @@ params ["_mapHandle", "_positions"];
 {
     private _pos = _x getVariable QGVAR(pointPosition);
     // Only render if the unit is alive and transmitting
-    if (alive _x && !isNil "_pos") then {
-        if (_x == ACE_player && !isNil QGVAR(cursorPosition)) then {
+    if (alive _x && { !isNil "_pos" }) then {
+        if (_x == ACE_player && { !isNil QGVAR(cursorPosition) }) then {
             _pos = GVAR(cursorPosition);
         };
 
