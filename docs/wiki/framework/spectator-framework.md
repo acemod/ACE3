@@ -51,6 +51,8 @@ Note that these settings govern the default spectator behaviour. Through the use
 Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
 `ace_spectatorSet` | [_isSpectator, _player] | Global | Player's spectator status was changed
+`ace_spectator_displayLoaded` | _display | Local | Spectator display was loaded
+`ace_spectator_displayUnloaded` | _display | Local | Spectator display was unloaded
 
 ## 4. Scripting
 
@@ -94,7 +96,7 @@ Note that this function takes local effect, so only the local player will see th
  * Example:
  * [allPlayers, [player]] call ace_spectator_fnc_updateUnits
  ```
- 
+
 ### 4.3 Add/Remove sides available to spectate
 
 `ace_spectator_fnc_updateSides`
@@ -117,7 +119,7 @@ Note that this function takes local effect, so only the local player will see th
 ### 4.4 Add/Remove available camera modes
 
 `ace_spectator_fnc_updateCameraModes`
-You can change the spectator camera modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have a free camera). Remember that the **Camera modes** setting will change which modes are available to everyone by default - changes with this function will override that. 
+You can change the spectator camera modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have a free camera). Remember that the **Camera modes** setting will change which modes are available to everyone by default - changes with this function will override that.
 
 Note that this function takes local effect, so only the local player will experience these changes.
 
@@ -141,7 +143,7 @@ Note that this function takes local effect, so only the local player will experi
 ### 4.5 Add/Remove available vision modes
 
 `ace_spectator_fnc_updateVisionModes`
-You can change the spectator vision modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have night vision). Remember that the **Vision modes** setting will change which modes are available to everyone by default (if thermal is enabled via the setting then both black and white hot are available) - changes with this function will override that. 
+You can change the spectator vision modes available at any point during the mission and independently on different machines with this function (e.g. if you only want one side of players to have night vision). Remember that the **Vision modes** setting will change which modes are available to everyone by default (if thermal is enabled via the setting then both black and white hot are available) - changes with this function will override that.
 
 Note that this function takes local effect, so only the local player will experience these changes.
 

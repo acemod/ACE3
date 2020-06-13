@@ -105,6 +105,7 @@
             <French>Activé &amp; peuvent se rouvrir</French>
             <Japanese>有効 &amp; 再開放</Japanese>
             <Czech>Zapnuto &amp; Úrazy se mohou znovu otevřít</Czech>
+            <Russian>Включено и может открыться заново</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
@@ -115,6 +116,7 @@
             <Polish>Usuń uraz po zabandażowaniu</Polish>
             <Italian>Rimozione ferite bendate</Italian>
             <German>Entferne Trauma nach Bandagierung.</German>
+            <Russian>Удалять травму после перевязки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
             <English>Controls whether fully bandaged body parts are healed.</English>
@@ -125,6 +127,7 @@
             <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
             <Chinese>控制說當傷口處理好的時候是否直接痊癒。</Chinese>
             <Czech>Nastavuje zda jsou plně obvázané části těla vyléčena.</Czech>
+            <Russian>Контролирует то, что полностью перевязанные раны целиком исцеляют часть тела.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
@@ -344,6 +347,7 @@
             <Polish>Używanie apteczki osobistej na sobie</Polish>
             <Japanese>応急処置キットの自己使用</Japanese>
             <Czech>Samo-použití osobní lékárničky (PAK)</Czech>
+            <Russian>Использование аптечки на себе</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
@@ -354,6 +358,7 @@
             <Polish>Pozwala na użycie apteczki osobistej na sobie</Polish>
             <Japanese>応急処置キットを使って、自分を治療できるようにします。</Japanese>
             <Czech>Umožňuje použít osobní lékárničku (PAK) na sama sebe.</Czech>
+            <Russian>Позволяют использовать аптечку на себе в одиночку.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -461,6 +466,7 @@
             <Czech>Samo-zašívání</Czech>
             <Polish>Zszywanie własnych ran</Polish>
             <German>Selbstnähen</German>
+            <Russian>Зашивание своей раны</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_Description">
             <English>Enables the use of surgical kits to stitch oneself.</English>
@@ -472,6 +478,7 @@
             <Polish>Umożliwia użycie Zestawu Chirurgicznego na sobie.</Polish>
             <Italian>Permette l'uso di kit chirurgici per ricucirsi.</Italian>
             <German>Ermöglicht die Benutzung des Operations-Sets, um sich selbst zu nähen.</German>
+            <Russian>Включает использование хирургического набора на себе.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -505,6 +512,7 @@
             <Chinese>允許操作點滴</Chinese>
             <Japanese>IV 輸血の制限</Japanese>
             <Czech>Povolit IV transfuzi</Czech>
+            <Russian>Разрешить переливание IV группы крови</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
@@ -514,6 +522,7 @@
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
+            <Russian>Уровень навыка требуемый для переливания крови IV группы.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -722,6 +731,7 @@
             <Czech>Vyžadováno schování zbraně</Czech>
             <Polish>Wymagana broń w kaburze</Polish>
             <German>Holstern benötigt</German>
+            <Russian>Необходимость убирать оружие</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
@@ -732,6 +742,7 @@
             <Polish>Kontroluje, czy broń musi być schowana/opuszczona w celu wykonania leczenia pacjenta.\n Za wyjątkiem diagnozowania - umożliwia wykonywanie czynności kontrolnych (sprawdzanie tętna, ciśnienia krwi, reakcji) przez cały czas, niezależnie od ustawienia Wymagana broń w kaburze.</Polish>
             <Italian>Controlla se le armi devono essere tenute nella fondina / abbassate per poter eseguire le azioni mediche.\Except Exam - Permette azioni di esame (controllo del polso, della pressione sanguigna, della risposta) in ogni momento indipendentemente dall'impostazione della fondina richiesta.</Italian>
             <German>Kontrolliert, ob Waffen geholstert/gesenkt werden müssen, um medizinische Aktionen durchzuführen.\nAusgenommen die eingestellten Untersuchungsoptionen erlauben Diagnose-Aktionen (Überprüfung von Puls, Blutdruck, Reaktion) jederzeit.</German>
+            <Russian>Нужно ли убирать оружие для проведения медицинских действий.\nОпция «Проверка разрешена» разрешает проверять пульс, кровяное давление или реакцию независимо от этого параметра.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
@@ -742,6 +753,7 @@
             <Czech>Snížena nebo Schována</Czech>
             <Polish>Opuszczona lub w kaburze</Polish>
             <German>Gesenkt oder Geholstert</German>
+            <Russian>Опущено или убрано</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
             <English>Lowered or Holstered (Except Exam)</English>
@@ -752,6 +764,7 @@
             <Czech>Snížena nebo Schována (kromě Diagnózy)</Czech>
             <Polish>Opuszczona lub w kaburze (oprócz diagnozowania)</Polish>
             <German>Gesenkt oder Geholstert (Ausnahme Untersuchung)</German>
+            <Russian>Опущено или убрано (Проверка разрешена)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
             <English>Holstered Only</English>
@@ -762,6 +775,7 @@
             <Czech>Pouze Schována</Czech>
             <Polish>Tylko w Kaburze</Polish>
             <German>Nur geholstert</German>
+            <Russian>Только убрано</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
             <English>Holstered Only (Except Exam)</English>
@@ -772,6 +786,7 @@
             <Czech>Pouze Schována (kromě Diagnózy)</Czech>
             <Polish>Tylko w Kaburze (oprócz diagnozowania)</Polish>
             <German>Nur geholstert (Ausnahme Untersuchung)</German>
+            <Russian>Только убрано (Проверка разрешена)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>

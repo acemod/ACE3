@@ -139,6 +139,7 @@ class CfgVehicles {
     class Heli_Transport_02_base_F;
     class RHS_CH_47F_base: Heli_Transport_02_base_F {
         EGVAR(refuel,fuelCapacity) = 3914;
+        class UserActions;
     };
 
     class RHS_CH_47F: RHS_CH_47F_base {
@@ -147,7 +148,7 @@ class CfgVehicles {
         EGVAR(fastroping,onCut) = QFUNC(onCut);
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
 
-        class UserActions {
+        class UserActions: UserActions {
             class OpenCargoDoor;
             class CloseCargoDoor: OpenCargoDoor {
                 condition = QUOTE([ARR_2(this,'ramp_anim')] call FUNC(canCloseDoor));

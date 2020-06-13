@@ -102,6 +102,7 @@
             <Spanish>Solo efecto de dolor fuerte</Spanish>
             <Turkish>Sadece yüksek ağrı etkisi</Turkish>
             <German>Nur bei starken Schmerzen</German>
+            <Russian>Эффект только сильной боли</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
             <English>Low Blood Volume Effect Type</English>

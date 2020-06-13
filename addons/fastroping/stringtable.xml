@@ -330,6 +330,7 @@
             <Polish>Zjazd na linach</Polish>
             <Turkish>Halatla Kayma</Turkish>
             <Czech>Slaňování</Czech>
+            <Russian>Спуск по канату</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>

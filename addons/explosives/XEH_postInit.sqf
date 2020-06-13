@@ -60,3 +60,8 @@ GVAR(CurrentSpeedDial) = 0;
     _this call FUNC(interactEH);
 
 }] call CBA_fnc_addEventHandler;
+
+["unit", {
+    params ["_player"];
+    [_player, QGVAR(explosiveActions)] call EFUNC(common,eraseCache);
+}] call CBA_fnc_addPlayerEventHandler;
