@@ -18,6 +18,7 @@ Janus
 jokoho482 <jokoho482@gmail.com>
 Jonpas <jonpas33@gmail.com>
 Kieran
+mharis001 <mhariszakar@gmail.com>
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
 Ruthberg <ulteq@web.de>
@@ -114,7 +115,6 @@ Luigi "Luigium" Myrini <luigium@outlook.fr>
 Macusercom <macusercom@gmail.com>
 MarcBook
 meat <p.humberdroz@gmail.com>
-mharis001 <mhariszakar@gmail.com>
 Michail Nikolaev
 MikeMatrix <m.braun92@gmail.com>
 nic547 <nic547@outlook.com>
