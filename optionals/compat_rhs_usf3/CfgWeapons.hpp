@@ -126,15 +126,15 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.13689;
     };
     class rhs_weap_SCAR_H_Base;
-    class rhs_weap_SCAR_H_CQC_Base : rhs_weap_SCAR_H_Base {
+    class rhs_weap_SCAR_H_CQC_Base: rhs_weap_SCAR_H_Base {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 330.0;
     };
-    class rhs_weap_SCAR_H_LB_Base : rhs_weap_SCAR_H_CQC_Base {
+    class rhs_weap_SCAR_H_LB_Base: rhs_weap_SCAR_H_CQC_Base {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 508.0;
     };
-    class rhs_weap_SCAR_H_STD_Base : rhs_weap_SCAR_H_LB_Base {
+    class rhs_weap_SCAR_H_STD_Base: rhs_weap_SCAR_H_LB_Base {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 406.0;
     };
