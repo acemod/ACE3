@@ -53,7 +53,7 @@ class CfgWeapons {
         ACE_barrelLength = 375;
     };
     class Rifle_Base_F;
-    class rhs_weap_savz58_base : Rifle_Base_F {
+    class rhs_weap_savz58_base: Rifle_Base_F {
         ACE_barrelTwist = 240;
         ACE_barrelLength = 390;
     };
@@ -108,11 +108,11 @@ class CfgWeapons {
         ACE_barrelTwist = 240.0;
         ACE_barrelLength = 420.0;
     };
-    class rhs_weap_m3a1_base : Rifle_Base_F {
+    class rhs_weap_m3a1_base: Rifle_Base_F {
         ACE_barrelTwist = 406.0;
         ACE_barrelLength = 203.2;
     };
-    class rhs_weap_M1garand_Base_F : Rifle_Base_F {
+    class rhs_weap_M1garand_Base_F: Rifle_Base_F {
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 610.0;
     };
