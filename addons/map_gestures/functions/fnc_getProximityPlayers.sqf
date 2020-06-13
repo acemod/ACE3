@@ -35,7 +35,7 @@ _proximityPlayers = _proximityPlayers arrayIntersect _proximityPlayers;
 _proximityPlayers = _proximityPlayers select { [_x, false] call EFUNC(common,isPlayer); };
 
 if (GVAR(onlyShowFriendlys)) then {
-    _proximityPlayers = _proximityPlayers select { [playerSide, side _x] call BIS_fnc_areFriendly; };
+    _proximityPlayers = _proximityPlayers select { [side group ace_player, side _x] call BIS_fnc_areFriendly; };
 };
 
 _proximityPlayers
