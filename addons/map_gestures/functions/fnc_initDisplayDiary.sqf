@@ -17,20 +17,10 @@
 params ["_mapCtrl"];
 TRACE_1("initDisplayDiary",_mapCtrl);
 
-if (!isNil QGVAR(DrawMapHandlerID)) then {
-    _mapCtrl ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)];
-    GVAR(DrawMapHandlerID) = nil;
-};
-
-GVAR(DrawMapHandlerID) = _mapCtrl ctrlAddEventHandler ["Draw", { [_this select 0, [ACE_player]] call FUNC(drawMapGestures); }];
+_mapCtrl ctrlAddEventHandler ["Draw", { [_this select 0, [ACE_player]] call FUNC(drawMapGestures); }];
 
 // MouseMoving EH.
-if (!isNil QGVAR(MouseMoveHandlerID)) then {
-    _mapCtrl ctrlRemoveEventHandler ["MouseMoving", GVAR(MouseMoveHandlerID)];
-    GVAR(MouseMoveHandlerID) = nil;
-};
-
-GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
+_mapCtrl ctrlAddEventHandler ["MouseMoving", {
     if (!GVAR(enabled)) exitWith {};
     params ["_control", "_posX", "_posY"];
     private _position = _control ctrlMapScreenToWorld [_posX, _posY];
@@ -43,12 +33,7 @@ GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
 }];
 
 // MouseDown EH
-if (!isNil QGVAR(MouseDownHandlerID)) then {
-    _mapCtrl ctrlRemoveEventHandler ["MouseButtonDown",GVAR(MouseDownHandlerID)];
-    GVAR(MouseDownHandlerID) = nil;
-};
-
-GVAR(MouseDownHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonDown", {
+_mapCtrl ctrlAddEventHandler ["MouseButtonDown", {
     if (getClientStateNumber < 10) exitWith {};
     if (!GVAR(enabled)) exitWith {};
         params ["", "_button", "_x", "_y", "_shift", "_ctrl", "_alt"];
@@ -58,12 +43,7 @@ GVAR(MouseDownHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonDown", {
 }];
 
 // MouseUp EH
-if (!isNil QGVAR(MouseUpHandlerID)) then {
-    _mapCtrl ctrlRemoveEventHandler ["MouseButtonUp", GVAR(MouseUpHandlerID)];
-    GVAR(MouseUpHandlerID) = nil;
-};
-
-GVAR(MouseUpHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseButtonUp", {
+_mapCtrl ctrlAddEventHandler ["MouseButtonUp", {
     if (getClientStateNumber < 10) exitWith {};
     if (!GVAR(enabled)) exitWith {};
     params ["", "_button"];

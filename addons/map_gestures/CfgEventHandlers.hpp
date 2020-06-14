@@ -23,7 +23,7 @@ class Extended_DisplayLoad_EventHandlers {
     class RscDisplayEGSpectator {
         ADDON = QUOTE((((_this select 0) displayCtrl ID_EG_MAP_CONTROL) controlsGroupCtrl ID_EG_MAP_CONTROLGROUP) call FUNC(initDisplaySpectator));
     };
-    class RscDiary {
-        ADDON = QUOTE(((_this select 0) displayCtrl ID_DIARY_MAP) call FUNC(initDisplayDiary));
+    class RscDiary { // for loading saves use uiNamespace because missionNamespace is not restored before map is loaded
+        ADDON = QUOTE(((_this select 0) displayCtrl ID_DIARY_MAP) call (uiNamespace getVariable 'DFUNC(initDisplayDiary)'));
     };
 };
