@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Map Handle <CONTROL>
- * 1: Position based on what should be drawn <POSITION>
+ * 1: Positions (objects or positions) <ARRAY>
  *
  * Return Value:
  * None
@@ -50,7 +50,6 @@ params ["_mapHandle", "_positions"];
         _mapHandle drawIcon ["\a3\ui_f\data\gui\cfg\Hints\icon_text\group_1_ca.paa", _color, _pos, ICON_RENDER_SIZE, ICON_RENDER_SIZE, ICON_ANGLE, "", ICON_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
         _mapHandle drawIcon ["#(argb,8,8,3)color(0,0,0,0)", GVAR(nameTextColor), _pos, TEXT_ICON_RENDER_SIZE, TEXT_ICON_RENDER_SIZE, ICON_ANGLE, name _x, TEXT_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
     };
-    nil
-} count ([_positions, GVAR(maxRange)] call FUNC(getProximityPlayers));
+} forEach ([_positions, GVAR(maxRange)] call FUNC(getProximityPlayers));
 
 END_COUNTER(draw);

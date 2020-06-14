@@ -15,6 +15,8 @@
  * Public: No
  */
 params ["_mapCtrl"];
+TRACE_1("initDisplayDiary",_mapCtrl);
+
 if (!isNil QGVAR(DrawMapHandlerID)) then {
     _mapCtrl ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)];
     GVAR(DrawMapHandlerID) = nil;

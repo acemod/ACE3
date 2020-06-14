@@ -4,7 +4,7 @@
  * Returns all players in a given range and in the units vehicle.
  *
  * Arguments:
- * 0: Positions <ARRY<OBJECT, ARRAY>, BOOL>
+ * 0: Positions (objects or positions) <ARRAY>
  * 1: Range <NUMBER>
  *
  * Return Value:
@@ -19,9 +19,6 @@
 params ["_positions", "_range"];
 
 private _proximityPlayers = [];
-if (_positions isEqualType objNull || { _positions isEqualTypeArray [0, 0, 0] } || { _positions isEqualTypeArray [0, 0] }) then {
-    _positions = [_positions];
-};
 
 {
     _proximityPlayers append (_x nearEntities [["CAMAnBase"], _range]);

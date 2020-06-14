@@ -15,5 +15,6 @@
  * Public: No
  */
 params ["_mapCtrl"];
+TRACE_1("initDisplayCurator",_mapCtrl);
 
 _mapCtrl ctrlAddEventHandler ["Draw", { [_this select 0, [ACE_player, positionCameraToWorld [0, 0, 0]]] call FUNC(drawMapGestures);}];
