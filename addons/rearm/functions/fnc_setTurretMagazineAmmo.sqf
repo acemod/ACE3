@@ -57,7 +57,7 @@ if (!_magLoadedInWeapon) then {
      * To prevent that, we must remove all magazines that would fit into the weapon and then add
      * them back with the magazine-to-be-loaded being the first. */
 
-    private _allowedMagClassesInWeapon = [_loadedWeapon] call CBA_fnc_compatibleMagazines;
+    private _allowedMagClassesInWeapon = [_loadedWeapon, true] call CBA_fnc_compatibleMagazines;
 
     /* Current ammo counts of all allowed magazine classes in weapon.
      * Example: [["8Rnd_82mm_Mo_shells", [8, 8, 2]], ["8Rnd_82mm_Mo_Flare_white", [7]]] */
