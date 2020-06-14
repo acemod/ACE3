@@ -19,8 +19,14 @@ TRACE_1("initDisplaySpectator",_mapCtrl);
 
 _mapCtrl ctrlAddEventHandler ["Draw", {
     private _targets = [positionCameraToWorld [0, 0, 0]];
-    if !(isNull EGVAR(spectator,camFocus)) then {
-        _targets pushback EGVAR(spectator,camFocus);
+
+    private _aceSpectatorFocus = missionNamespace getVariable [QEGVAR(spectator,camFocus), objNull];
+    if (!isNull _aceSpectatorFocus) then {
+        _targets pushback _aceSpectatorFocus;
+    };
+    private _vanillaSpectatorFocus = uiNamespace getVariable ["RscEGSpectator_focus", objNull];
+    if (!isNull _vanillaSpectatorFocus) then {
+        _targets pushback _vanillaSpectatorFocus;
     };
     [_this select 0, _targets] call FUNC(drawMapGestures);
 }];

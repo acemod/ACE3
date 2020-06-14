@@ -16,6 +16,7 @@
  * Public: No
  */
 
+
 BEGIN_COUNTER(draw);
 
 #define ICON_RENDER_SIZE 55
@@ -31,6 +32,7 @@ if (!GVAR(enabled)) exitWith {};
 
 params ["_mapHandle", "_positions"];
 
+private _players = [[_positions, GVAR(maxRange)], FUNC(getProximityPlayers), missionNamespace, QGVAR(proximityPlayersCache), 1] call EFUNC(common,cachedCall);
 // Iterate over all nearby players and render their pointer if player is transmitting.
 {
     private _pos = _x getVariable QGVAR(pointPosition);
@@ -50,6 +52,6 @@ params ["_mapHandle", "_positions"];
         _mapHandle drawIcon ["\a3\ui_f\data\gui\cfg\Hints\icon_text\group_1_ca.paa", _color, _pos, ICON_RENDER_SIZE, ICON_RENDER_SIZE, ICON_ANGLE, "", ICON_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
         _mapHandle drawIcon ["#(argb,8,8,3)color(0,0,0,0)", GVAR(nameTextColor), _pos, TEXT_ICON_RENDER_SIZE, TEXT_ICON_RENDER_SIZE, ICON_ANGLE, name _x, TEXT_SHADOW, TEXT_SIZE, TEXT_FONT, ICON_TEXT_ALIGN];
     };
-} forEach ([_positions, GVAR(maxRange)] call FUNC(getProximityPlayers));
+} forEach _players;
 
 END_COUNTER(draw);
