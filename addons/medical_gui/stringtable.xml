@@ -1078,6 +1078,7 @@
         <Key ID="STR_ACE_Medical_GUI_IGUI_PatientInfo">
             <English>Patient Info</English>
             <Polish>Informacje o pacjencie</Polish>
+            <French>Informations patient</French>
         </Key>
     </Package>
 </Project>
