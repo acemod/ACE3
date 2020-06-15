@@ -515,11 +515,11 @@
 {% endif %}
 
 {% if include.component == "compat_rhs_afrf3" %}
-`ace_csw`, `ace_rearm`, `ace_refuel`, `ace_repair`, `rhs_c_weapons`, `rhs_c_troops`, `rhs_c_bmd`, `rhs_c_bmp`, `rhs_c_bmp3`, `rhs_c_a2port_armor`, `rhs_c_btr`, `rhs_c_sprut`, `rhs_c_t72`, `rhs_c_tanks`, `rhs_c_a2port_air`, `rhs_c_a2port_car`, `rhs_c_cars`, `rhs_c_trucks`, `rhs_c_2s3`, `rhs_c_rva`, `rhs_c_heavyweapons`
+`ace_explosives`, `ace_csw`, `ace_rearm`, `ace_refuel`, `ace_repair`, `rhs_c_weapons`, `rhs_c_airweapons`, `rhs_c_troops`, `rhs_c_bmd`, `rhs_c_bmp`, `rhs_c_bmp3`, `rhs_c_a2port_armor`, `rhs_c_btr`, `rhs_c_sprut`, `rhs_c_t72`, `rhs_c_tanks`, `rhs_c_a2port_air`, `rhs_c_a2port_car`, `rhs_c_cars`, `rhs_c_trucks`, `rhs_c_2s3`, `rhs_c_rva`, `rhs_c_heavyweapons`
 {% endif %}
 
 {% if include.component == "compat_rhs_gref3" %}
-`ace_csw`, `rhsgref_main`, `rhsgref_c_weapons`
+`ace_explosives`, `ace_csw`, `rhsgref_main`, `rhsgref_c_weapons`
 {% endif %}
 
 {% if include.component == "compat_rhs_usf3" %}
