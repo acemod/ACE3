@@ -17,7 +17,7 @@
 
 {
     private _class = configName _x;
-    private _result = [_x, false] call ace_tagging_fnc_parseConfigTag;
+    private _result = [_x, false] call FUNC(parseConfigTag);
 
     if !(_result isEqualTo []) then {
         _result params ["_tagInfo", "_requiredItem"];
@@ -29,7 +29,7 @@
 
 {
     private _class = configName _x;
-    private _result = [_x, true] call ace_tagging_fnc_parseConfigTag;
+    private _result = [_x, true] call FUNC(parseConfigTag);
 
     if !(_result isEqualTo []) then {
         _result params ["_tagInfo", "_requiredItem"];
