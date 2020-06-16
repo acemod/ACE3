@@ -1,4 +1,4 @@
-class UAVPod {
+class GVAR(UAVPod) {
     class OpticsIn {
         class Wide {
             opticsDisplayName = "WFOV";
@@ -49,7 +49,7 @@ class UAVPod {
     controllable = true;
 };
 
-class UAVOptics {
+class GVAR(UAVOptics) {
     initAngleX = 0;
     initAngleY = 0;
     initFov = 1.25;
@@ -97,8 +97,8 @@ class CfgVehicles {
             };
         };
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
     };
     
     class O_UAV_01_F: UAV_01_Base_F {
@@ -124,8 +124,8 @@ class CfgVehicles {
             };
         };
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
         
         class ADDON {
             trackPilotCamera = 1;
@@ -155,8 +155,8 @@ class CfgVehicles {
             };
         };
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
 
         class ADDON {
             trackPilotCamera = 1;
@@ -186,8 +186,8 @@ class CfgVehicles {
             };
         };
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
 
         class ADDON {
             trackPilotCamera = 1;
@@ -219,8 +219,8 @@ class CfgVehicles {
             };
         };
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
 
         class ADDON {
             trackPilotCamera = 1;
@@ -250,8 +250,8 @@ class CfgVehicles {
             };
         };
 
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
 
         class ADDON {
             trackPilotCamera = 1;
@@ -281,8 +281,8 @@ class CfgVehicles {
             };
         };
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
 
         class ADDON {
             trackPilotCamera = 1;
@@ -312,8 +312,8 @@ class CfgVehicles {
             };
         };
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
 
         class ADDON {
             trackPilotCamera = 1;
@@ -342,8 +342,8 @@ class CfgVehicles {
             };
         };   
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
 
         class ADDON {
             trackPilotCamera = 1;
@@ -378,8 +378,8 @@ class CfgVehicles {
             };
         };
         
-        class Viewoptics: UAVOptics{};
-        class PilotCamera: UAVPod{};
+        class Viewoptics: GVAR(UAVOptics){};
+        class PilotCamera: GVAR(UAVPod){};
 
         class ADDON {
             trackPilotCamera = 1;
