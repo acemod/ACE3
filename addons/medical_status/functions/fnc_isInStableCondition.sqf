@@ -27,6 +27,7 @@ private _requiredBloodVolume = DEFAULT_BLOOD_VOLUME * (EGVAR(medical_treatment,m
 if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith { false };
 
 if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith { false };
+if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { !(GET_FRACTURES(_unit) isEqualTo []) }) exitWith { false };
 
 private _requiredWoundState = EGVAR(medical_treatment,requiredWoundStatePAK);
 

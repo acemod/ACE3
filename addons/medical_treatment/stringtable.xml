@@ -390,6 +390,12 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowPainPAK_Description">
             <English>Enables the use of PAKs on patients in pain.</English>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowFracturesPAK_DisplayName">
+            <English>Allow Fractures PAK</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowFracturesPAK_Description">
+            <English>Enables the use of PAKs on patients with untreated fractures.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MinBloodPAK_DisplayName">
             <English>Min Blood PAK</English>
         </Key>
