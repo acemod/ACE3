@@ -37,7 +37,7 @@
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
-            <Russian>Тащить/Отпустить Объекты</Russian>
+            <Russian>Тащить/Отпустить Объект</Russian>
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
             <Polish>Ciągnij/Puść Obiekt</Polish>
             <Czech>Táhnout/Položit Objekt</Czech>
@@ -55,6 +55,7 @@
         <Key ID="STR_ACE_Dragging_CarryKeybind">
             <English>Carry/Release Object</English>
             <French>Porter/Lâcher un objet</French>
+            <Russian>Нести/Отпустить Объект</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
