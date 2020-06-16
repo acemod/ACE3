@@ -1255,7 +1255,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
-            <Spanish>Exportar la lista actual de objetos como una tabla para su uso en scripts&gt;</Spanish>
+            <Spanish>Exportar la lista actual de objetos como una tabla para su uso en scripts</Spanish>
             <German>Exportiert aktuelle Gegenstände als Array, um es in Scripten zu verwenden</German>
             <Japanese>スクリプト用に現在のアイテム リストをアレイでエクスポートします</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
