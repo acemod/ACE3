@@ -366,7 +366,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
             <English>Sort by rate of fire</English>
-            <German>Nach Genauigkeit sortieren</German>
+            <German>Nach Schussrate sortieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
