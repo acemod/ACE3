@@ -30,6 +30,8 @@ if (_rightSort) then {
         switch (GVAR(currentRightPanel)) do {
             case IDC_buttonCurrentMag;
             case IDC_buttonCurrentMag2;
+            case IDC_buttonThrow;
+            case IDC_buttonPut;
             case IDC_buttonMag;
             case IDC_buttonMagALL: { "CfgMagazines" };
             default { "CfgWeapons" };
