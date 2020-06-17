@@ -12,11 +12,13 @@
  * Public: No
 */
 
-private _fireModes = getArray (_this >> "modes");
+params ["_config"];
+
+private _fireModes = getArray (_config >> "modes");
 private _fireRate = [];
 
 {
-    _fireRate pushBackUnique getNumber (_this >> _x >> "reloadTime");
+    _fireRate pushBackUnique getNumber (_config >> _x >> "reloadTime");
 } foreach _fireModes;
 
 _fireRate sort true;

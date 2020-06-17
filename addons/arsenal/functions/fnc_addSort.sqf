@@ -16,17 +16,17 @@
  *
  * Example:
  *  [[[0, 1]], "fireRateSort", "Sort by fire rate", {
-        params ["_itemCfg"];
-        private _fireModes = getArray (_itemCfg >> "modes");
-        private _fireRate = [];
-
-        {
-            _fireRate pushBackUnique (getNumber (_itemCfg >> _x >> "reloadTime"));
-        } foreach _fireModes;
-
-        _fireRate sort true;
-        _fireRate param [0, 0]
-    }] call ace_arsenal_fnc_addSort
+ *      params ["_itemCfg"];
+ *      private _fireModes = getArray (_itemCfg >> "modes");
+ *      private _fireRate = [];
+ *
+ *      {
+ *          _fireRate pushBackUnique (getNumber (_itemCfg >> _x >> "reloadTime"));
+ *      } foreach _fireModes;
+ *
+ *      _fireRate sort true;
+ *      _fireRate param [0, 0]
+ *  }] call ACE_arsenal_fnc_addSort;
  *
  * Public: Yes
  */

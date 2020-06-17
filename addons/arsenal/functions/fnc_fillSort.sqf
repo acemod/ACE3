@@ -1,5 +1,19 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
+/*
+ * Author: Alganthe, SynixeBrett
+ * Fill right panel.
+ *
+ * Arguments:
+ * 0: Arsenal display <DISPLAY>
+ * 1: Tab control <CONTROL>
+ * 2: Sort control <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+*/
 
 params ["_display", "_control", "_sortCtrl"];
 

@@ -12,9 +12,11 @@
  * Public: No
 */
 
+params ["_config"];
+
 private _dlc = "";
-private _addons = configSourceAddonList _this;
 if !(_addons isEqualTo []) then {
+private _addons = configSourceAddonList _config;
     private _mods = configSourceModList (configfile >> "CfgPatches" >> _addons select 0);
     if !(_mods isEqualTo []) then {
         _dlc = _mods select 0;

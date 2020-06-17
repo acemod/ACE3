@@ -31,4 +31,4 @@ private _dispersion = [];
 
 _dispersion sort true;
 
-round (_dispersion#0 * 100000)
+round (_dispersion param [0, 0] * 100000)

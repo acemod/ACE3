@@ -18,28 +18,7 @@ params ["_control", "_mode"];
 
 private _display = ctrlParent _control;
 
-private _to_string = {
-    switch true do {
-        case (_this < 10): {
-            format ["00000%1", _this]
-        };
-        case (_this < 100): {
-            format ["0000%1", _this]
-        };
-        case (_this < 1000): {
-            format ["000%1", _this]
-        };
-        case (_this < 10000): {
-            format ["00%1", _this]
-        };
-        case (_this < 100000): {
-            format ["0%1", _this]
-        };
-        default { _this };
-    }
-};
-
-private _right = ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]};
+private _right = ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]};
 
 if (ctrlIDC _control == 17) then {
     [
@@ -127,12 +106,11 @@ _for do {
     private _itemCfg = configFile >> _cfgClass >> _item;
     private _value = _itemCfg call _statement;
     if (_value isEqualType 0) then {
-        _value = _value call _to_string;
+        _value = [_value, 8] call CBA_fnc_formatNumber;
     };
     if (_value isEqualTo "") then {
         _value = "_";
     };
-    // systemChat format ["%1 - %2 = %3", _item, _statement, _value];
     if (_right) then {
         _panel lnbSetText [[_i, 1], format ["%1%2", _value, _panel lnbText [_i, 1]]];
     } else {
