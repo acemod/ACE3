@@ -191,7 +191,7 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
-[_sortLeftCtrl, _sortLeftCtrl lbValue (lbCurSel _sortLeftCtrl)] call FUNC(sortPanel);
+[_sortLeftCtrl] call FUNC(sortPanel);
 
 //Select current item
 private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)]) apply {tolower _x};

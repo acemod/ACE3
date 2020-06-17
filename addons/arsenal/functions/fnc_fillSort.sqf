@@ -19,7 +19,11 @@ params ["_display", "_control", "_sortCtrl"];
 
 lbClear _sortCtrl;
 
-private _sorts = if (ctrlIDC _sortCtrl == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]}) then {
+private _right = false;
+private _rightSort = ctrlIDC _sortCtrl == 17;
+
+private _sorts = if (_rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform ,IDC_buttonVest, IDC_buttonBackpack]}) then {
+    _right = true;
     GVAR(sortListRightPanel) select (
         switch (GVAR(currentRightPanel)) do {
             case IDC_buttonOptic: { 0 };
@@ -80,9 +84,16 @@ private _sorts = if (ctrlIDC _sortCtrl == 17 && {GVAR(currentLeftPanel) in [IDC_
         };
     }
 };
+
+private _lastSort = [GVAR(lastSortLeft), GVAR(lastSortRight)] select _rightSort;
+private _sortIndex = 0;
+
 {
     if (_x isEqualTo []) exitWith {};
     _sortCtrl lbAdd (_x select 1);
+    if ((_x select 1) isEqualTo _lastSort) then {
+        _sortIndex = _forEachIndex;
+    };
 } forEach _sorts;
-// TODO select the last sort if available
-_sortCtrl lbSetCurSel 0;
+
+_sortCtrl lbSetCurSel _sortIndex;

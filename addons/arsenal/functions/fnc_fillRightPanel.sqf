@@ -328,7 +328,7 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
 [_display, _control, _sortRightCtrl] call FUNC(fillSort);
 
-[_sortRightCtrl, _sortRightCtrl lbValue (lbCurSel _sortRightCtrl)] call FUNC(sortPanel);
+[_sortRightCtrl] call FUNC(sortPanel);
 
 // Select current data if not in a container
 if !(_itemsToCheck isEqualTo []) then {

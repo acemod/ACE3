@@ -5,8 +5,7 @@
  * Sort arsenal panel.
  *
  * Arguments:
- * 0: Panel's control to sort <CONTROL>
- * 1: Sorting mode <SCALAR>
+ * 0: Sort control <CONTROL>
  *
  * Return Value:
  * None
@@ -14,13 +13,14 @@
  * Public: No
 */
 
-params ["_control", "_mode"];
+params ["_sortControl"];
 
-private _display = ctrlParent _control;
+private _display = ctrlParent _sortControl;
 
-private _right = ctrlIDC _control == 17 && {GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]};
+private _rightSort = ctrlIDC _sortControl == 17;
+private _right = _rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]};
 
-if (ctrlIDC _control == 17) then {
+if (_rightSort) then {
     [
         if (_right) then {
             _display displayCtrl IDC_rightTabContentListnBox
@@ -89,7 +89,13 @@ private _selected = if (_right) then {
     _panel lbData _curSel
 };
 
+private _mode = 0 max lbCurSel _sortControl;
 private _statement = _sorts select _mode select 2;
+
+missionNamespace setVariable [
+    [QGVAR(lastSortLeft), QGVAR(lastSortRight)] select _sortRight,
+    _sorts select _mode select 1
+];
 
 private _for = if (_right) then {
     for '_i' from 0 to ((lnbSize _panel select 0) - 1)
