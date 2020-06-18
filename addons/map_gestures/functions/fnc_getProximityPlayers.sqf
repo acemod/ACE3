@@ -4,7 +4,7 @@
  * Returns all players in a given range and in the units vehicle.
  *
  * Arguments:
- * 0: Positions (objects or positions) <ARRAY>
+ * 0: Positions (objects or posAGLs) <ARRAY>
  * 1: Range <NUMBER>
  *
  * Return Value:

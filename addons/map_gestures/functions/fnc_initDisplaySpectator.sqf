@@ -4,7 +4,7 @@
  * Binds Draw EventHandlers to Spectator map.
  *
  * Arguments:
- * None
+ * 0: Map Handle from a spectator gui <CONTROL>
  *
  * Return Value:
  * None

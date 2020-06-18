@@ -5,13 +5,13 @@
  *
  * Arguments:
  * 0: Map Handle <CONTROL>
- * 1: Positions (objects or positions) <ARRAY>
+ * 1: Positions (objects or posAGLs) <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [findDisplay 12 displayCtrl 51] call ace_map_gestures_fnc_drawMapGestures
+ * [findDisplay 12 displayCtrl 51, [player]] call ace_map_gestures_fnc_drawMapGestures
  *
  * Public: No
  */
