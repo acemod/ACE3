@@ -1255,7 +1255,7 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_AttributeExport_Tooltip">
             <English>Export current items list as an array for use in scripts</English>
-            <Spanish>Exportar la lista actual de objetos como una tabla para su uso en scripts></Spanish>
+            <Spanish>Exportar la lista actual de objetos como una tabla para su uso en scripts</Spanish>
             <German>Exportiert aktuelle Gegenstände als Array, um es in Scripten zu verwenden</German>
             <Japanese>スクリプト用に現在のアイテム リストをアレイでエクスポートします</Japanese>
             <Italian>Esporta l'attuale lista di elementi come un array, per essere usati negli script</Italian>
@@ -1322,11 +1322,13 @@
         <Key ID="STR_ACE_Arsenal_StatExplosionTime">
             <English>Fuse Time</English>
             <French>Retard avant détonation</French>
+            <Russian>Задержка детонации</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
             <German>Aufschlagzünder</German>
             <French>Détonation à l'impact</French>
+            <Russian>Детонация от удара</Russian>
         </Key>
     </Package>
 </Project>
