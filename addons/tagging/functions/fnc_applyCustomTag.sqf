@@ -10,6 +10,7 @@
  * 3: Textures Paths <ARRAY>
  * 4: Icon Path <STRING> (default: "")
  * 5: Material Paths <ARRAY>
+ * 6: Tag Model <STRING> (optional)
  *
  * Return Value:
  * None
