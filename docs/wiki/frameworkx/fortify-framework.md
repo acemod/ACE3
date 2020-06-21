@@ -65,7 +65,7 @@ class ACEX_Fortify_Presets {
 };
  ```
 
-Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or using the chat command: `#ace-fortify blufor myMissionObjects`.
+Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or the chat command: `#ace-fortify blufor myMissionObjects`.
  
 ## 1.3 Adding custom deploy handlers
 
