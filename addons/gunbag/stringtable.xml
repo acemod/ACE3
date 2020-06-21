@@ -67,12 +67,15 @@
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbag">
             <English>Exchange weapon in gunbag</English>
+            <Russian>Заменить оружие в чехле</Russian>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_DisplayName">
             <English>Enable Weapon Swap</English>
+            <Russian>Включить обмен оружием</Russian>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_Description">
             <English>Allows interaction to directly swap the primary weapon and stored weapon.</English>
+            <Russian>Разрешает действие прямого обмена основного оружия и спрятанного в чехле.</Russian>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
