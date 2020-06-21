@@ -31,7 +31,34 @@ if ((_vehicle emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUncons
     };
 };
 
-if (!_slotsOpen) exitWith { WARNING_2("no open seats %1->%2",_unit,_vehicle); };
+if (_slotsOpen) then {
+    private _loaded = _vehicle getVariable [QGVAR(loaded_persons),[]];
+    _loaded pushBack _unit;
+
+    _vehicle setVariable [QGVAR(loaded_persons), _loaded, true];
+
+    if !([_unit] call FUNC(isAwake)) then {
+        [{
+            (_this select 0) params ["_unit", "_vehicle"];
+
+            // wait until the unit is in the vehicle
+            if (vehicle _unit != _vehicle) exitWith {
+                // kill this pfh if either one is deleted
+                if (isNull _unit || isNull _vehicle) then {
+                    [_this select 1] call CBA_fnc_removePerFrameHandler;
+                };
+            };
+
+            _unit setVariable [QEGVAR(medical,vehicleAwakeAnim), [_vehicle, animationState _unit]];
+
+            [_unit, [_unit] call FUNC(getDeathAnim), 1, true] call FUNC(doAnimation);
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+        }, 0.5, [_unit, _vehicle]] call CBA_fnc_addPerFrameHandler;
+    };
+} else {
+    WARNING_2("no open seats %1->%2",_unit,_vehicle);
+};
 
 [{ // just for error reporting
     params ["_unit", "_vehicle"];
