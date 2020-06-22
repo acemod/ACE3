@@ -373,7 +373,7 @@
             <Italian>Guarda Triage Card</Italian>
             <Japanese>トリアージ カードを見る</Japanese>
             <Korean>부상자 카드 보기</Korean>
-            <Chinesesimp>查看诊断卡</Chinesesimp>
+            <Chinesesimp>查看分诊卡</Chinesesimp>
             <Chinese>查看診斷卡</Chinese>
             <Turkish>Triyaj Kartını Görüntüle</Turkish>
         </Key>
@@ -405,7 +405,7 @@
             <Italian>Bendaggi/Fratture</Italian>
             <Japanese>包帯 / 骨折</Japanese>
             <Korean>붕대 / 골절</Korean>
-            <Chinesesimp>绷带 / 骨折</Chinesesimp>
+            <Chinesesimp>包扎 / 骨折</Chinesesimp>
             <Chinese>繃帶 / 骨折</Chinese>
             <Turkish>Bandaj / Kırıklar</Turkish>
         </Key>
@@ -739,7 +739,7 @@
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
             <Japanese>開いている傷口が %2 %1 ほどある</Japanese>
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
-            <Chinesesimp>有 %2 %1 开放性伤口</Chinesesimp>
+            <Chinesesimp>有 %2 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SINGLE_OPEN_WOUND">
@@ -769,7 +769,7 @@
             <Italian>C'è 1 parziale %1 Ferita Aperta</Italian>
             <Japanese>部分的に開いている %1 の傷口がある</Japanese>
             <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有部分未处理的 %1 伤口</Chinesesimp>
+            <Chinesesimp>有未完全处理的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MULTIPLE_BANDAGED_WOUNDS">
@@ -814,7 +814,7 @@
             <Italian>C'è 1 parziale %1 Ferita Bendata</Italian>
             <Japanese>患者には %1 の包帯で処置された傷がある</Japanese>
             <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有部分包扎过的 %1 伤口</Chinesesimp>
+            <Chinesesimp>有未包扎完全的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_NORMAL_BREATHING">
@@ -925,7 +925,7 @@
             <Italian>Perso molto Sangue</Italian>
             <Japanese>大量失血した</Japanese>
             <Korean>많은 피를 흘림</Korean>
-            <Chinesesimp>已失血</Chinesesimp>
+            <Chinesesimp>失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
             <Turkish>Çok fazla kan kaybı var</Turkish>
         </Key>
@@ -1079,7 +1079,7 @@
             <German>Partiell %1</German>
             <Turkish>Parsiyel %1</Turkish>
             <Russian>Частичное %1</Russian>
-            <Chinesesimp>部分 %1</Chinesesimp>
+            <Chinesesimp>未完全处理的 %1</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_IGUI_PatientInfo">
             <English>Patient Info</English>
