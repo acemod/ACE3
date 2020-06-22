@@ -1323,12 +1323,14 @@
             <English>Fuse Time</English>
             <French>Retard avant détonation</French>
             <Russian>Задержка детонации</Russian>
+            <Polish>Opoźnienie zapalnika</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
             <German>Aufschlagzünder</German>
             <French>Détonation à l'impact</French>
             <Russian>Детонация от удара</Russian>
+            <Polish>Detonuj przy uderzeniu</Polish>
         </Key>
     </Package>
 </Project>
