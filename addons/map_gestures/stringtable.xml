@@ -267,10 +267,12 @@
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_displayName">
             <English>Only Show Friendly Gestures</English>
+            <Russian>Показывать только союзные жесты</Russian>
             <Polish>Pokazuj jedynie sojusznicze gesty</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_description">
             <English>Shows only Gestures from Units that are from the same side or a Friendly side.</English>
+            <Russian>Показывать жесты только от игроков союзной стороны.</Russian>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>
