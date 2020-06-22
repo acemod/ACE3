@@ -56,6 +56,7 @@
             <English>Carry/Release Object</English>
             <French>Porter/Lâcher un objet</French>
             <Russian>Нести/Отпустить Объект</Russian>
+            <Polish>Nieś/Puść objekt</Polish>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -98,6 +99,7 @@
             <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
             <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
             <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
+            <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
         </Key>
     </Package>
 </Project>
