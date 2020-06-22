@@ -2675,7 +2675,7 @@
             <Czech>Minimální</Czech>
             <Polish>Minimalny</Polish>
             <Spanish>Mínimo</Spanish>
-            <Chinesesimp>轻伤</Chinesesimp>
+            <Chinesesimp>轻微</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -2690,7 +2690,7 @@
             <Portuguese>Atrasado</Portuguese>
             <Japanese>待機的治療群</Japanese>
             <Korean>늦어짐</Korean>
-            <Chinesesimp>搁置</Chinesesimp>
+            <Chinesesimp>延后</Chinesesimp>
             <Chinese>延後</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Immediate">
@@ -2722,7 +2722,7 @@
             <Portuguese>Falecido</Portuguese>
             <Japanese>死亡群</Japanese>
             <Korean>사망</Korean>
-            <Chinesesimp>已死亡</Chinesesimp>
+            <Chinesesimp>死亡</Chinesesimp>
             <Chinese>死亡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_None">
