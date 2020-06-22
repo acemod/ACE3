@@ -1021,7 +1021,7 @@
             <Portuguese>Bandagem(Básico)</Portuguese>
             <Japanese>包帯 (緊急圧迫)</Japanese>
             <Korean>붕대 (기본)</Korean>
-            <Chinesesimp>基础绷带</Chinesesimp>
+            <Chinesesimp>绷带 (基础型)</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Basic_Desc_Short">
@@ -1069,7 +1069,7 @@
             <Czech>Obvaz (Tlakový)</Czech>
             <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
-            <Chinesesimp>包扎绷带</Chinesesimp>
+            <Chinesesimp>绷带 (包扎型)</Chinesesimp>
             <Chinese>繃帶（包紮型）</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
@@ -1117,7 +1117,7 @@
             <Portuguese>Bandagem (Elástica)</Portuguese>
             <Japanese>包帯 (伸縮)</Japanese>
             <Korean>붕대 (압박)</Korean>
-            <Chinesesimp>弹性绷带</Chinesesimp>
+            <Chinesesimp>绷带 (弹性型)</Chinesesimp>
             <Chinese>繃帶（彈性型）</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Desc_Short">
@@ -1165,7 +1165,7 @@
             <Portuguese>Torniquete (CAT)</Portuguese>
             <Japanese>止血帯 (CAT)</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <Chinesesimp>军用止血带</Chinesesimp>
+            <Chinesesimp>止血带 (军用型)</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Tourniquet_Desc_Short">
@@ -1181,7 +1181,7 @@
             <Czech>Zpomaluje ztráty krve při krvácení</Czech>
             <Japanese>出血時に失血量を減らします。</Japanese>
             <Korean>출혈 시 혈액손실을 늦춰줍니다</Korean>
-            <Chinesesimp>减缓失血的速度</Chinesesimp>
+            <Chinesesimp>减缓失血速度</Chinesesimp>
             <Chinese>減緩失血的速度</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Tourniquet_Desc_Use">
@@ -1197,7 +1197,7 @@
             <Czech>Zařízení používané ke stlačení venózního a arteriálního oběhu. V důsledku dochází ke zpomalení toku krve a tedy i snížení ztrát krve.</Czech>
             <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れを遅し失血を防ぎます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
-            <Chinesesimp>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的</Chinesesimp>
+            <Chinesesimp>用于压迫静脉与动脉的血液流动, 以达到减缓失血速度的目的</Chinesesimp>
             <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Display">
@@ -1211,6 +1211,7 @@
             <Czech>Dlaha</Czech>
             <Polish>Szyna</Polish>
             <German>Schiene</German>
+            <Chinesesimp>夹板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_splint_Desc_Short">
             <English>Stabilizes a fractured limb</English>
@@ -1223,6 +1224,7 @@
             <Czech>Znehybňuje zlomenou končetinu</Czech>
             <Polish>Stabilizuje złamaną kończynę</Polish>
             <German>Stabilisiere einen Bruch</German>
+            <Chinesesimp>用于固定骨折的肢体</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1253,7 +1255,7 @@
             <Czech>Slouží k tlumení středně těžkých a těžkých bolestí</Czech>
             <Japanese>戦闘が収まった時に痛みに対して使います。</Japanese>
             <Korean>심한 통증을 완화하는데 쓰입니다</Korean>
-            <Chinesesimp>减低中度至重度的疼痛感</Chinesesimp>
+            <Chinesesimp>用于削减中度至重度疼痛</Chinesesimp>
             <Chinese>減低中度至重度的疼痛感</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Desc_Use">
@@ -1269,7 +1271,7 @@
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
             <Japanese>戦闘が収まった時にモルヒネを痛みに対して使います。</Japanese>
             <Korean>심한 통증을 완화하기 위해 쓰이는 진통제입니다.</Korean>
-            <Chinesesimp>止痛药的一种, 用于减低中度至重度的疼痛感</Chinesesimp>
+            <Chinesesimp>一种用于削减中度至重度疼痛的止痛药</Chinesesimp>
             <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Adenosine_Display">
@@ -1299,7 +1301,7 @@
             <Russian>Используется для купирования эффектов адреналина</Russian>
             <Japanese>アドレナリンの反対の効果として使います。</Japanese>
             <Korean>에피네프린 대응책으로 쓰입니다</Korean>
-            <Chinesesimp>用来对付肾上腺素的影响</Chinesesimp>
+            <Chinesesimp>用于中和肾上腺素的影响</Chinesesimp>
             <Chinese>用來對付腎上腺素的影響</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Adenosine_Desc_Use">
@@ -1314,7 +1316,7 @@
             <Russian>Препарат используется для купирования эффектов адреналина</Russian>
             <Japanese>使うとアドレナリンと反対の効果が出ます。</Japanese>
             <Korean>에피네프린에 대응용으로 쓰이는 약품</Korean>
-            <Chinesesimp>一种药物用于减低肾上腺素的效果</Chinesesimp>
+            <Chinesesimp>一种用于中和肾上腺素效果的药物</Chinesesimp>
             <Chinese>一種藥物用於減低腎上腺素的效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Atropine_Display">
@@ -1394,7 +1396,7 @@
             <Czech>Zvyšuje srdeční frekvenci a chrání před alergickými reakcemi</Czech>
             <Japanese>心拍数を増加させたり、アレルギー反応を収める効果もあります。</Japanese>
             <Korean>심박수를 높이며 알러지반응의 대응책입니다</Korean>
-            <Chinesesimp>增加心跳速率的一种药物</Chinesesimp>
+            <Chinesesimp>用于提升心率的一种药物</Chinesesimp>
             <Chinese>增加心跳速率的一種藥物</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Epinephrine_Desc_Use">
@@ -1589,7 +1591,7 @@
             <Czech>Fyziologický roztok (1000ml)</Czech>
             <Japanese>生理食塩水 IV (1000ml)</Japanese>
             <Korean>생리식염수 IV (1000ml)</Korean>
-            <Chinesesimp>生理食盐水 (1000ml)</Chinesesimp>
+            <Chinesesimp>生理盐水 (1000ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 1000毫升)</Chinese>
             <Turkish>Serum IV (1000ml)</Turkish>
         </Key>
@@ -1606,7 +1608,7 @@
             <Czech>Fyziologický roztok se aplikuje intravenózně a slouží k obnově pacientovi krve</Czech>
             <Japanese>生理食塩水 IV は、患者の血液量を補助します</Japanese>
             <Korean>생리식염수, 환자의 혈액량을 보충할때 쓰입니다</Korean>
-            <Chinesesimp>生理食盐水, 用于恢复伤者血液</Chinesesimp>
+            <Chinesesimp>生理盐水, 用于恢复伤者血液</Chinesesimp>
             <Chinese>生理食鹽水, 用於恢復傷者血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Saline_IV_Desc_Use">
@@ -1638,7 +1640,7 @@
             <Czech>Fyziologický roztok (500ml)</Czech>
             <Japanese>生理食塩水 IV (500ml)</Japanese>
             <Korean>생리식염수 IV (500ml)</Korean>
-            <Chinesesimp>生理食盐水 (500ml)</Chinesesimp>
+            <Chinesesimp>生理盐水 (500ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 500毫升)</Chinese>
             <Turkish>Serum IV (500ml)</Turkish>
         </Key>
@@ -1655,7 +1657,7 @@
             <Czech>Fyziologický roztok (250ml)</Czech>
             <Japanese>生理食塩水 IV (250ml)</Japanese>
             <Korean>생리식염수 IV (250ml)</Korean>
-            <Chinesesimp>生理食盐水 (250ml)</Chinesesimp>
+            <Chinesesimp>生理盐水 (250ml)</Chinesesimp>
             <Chinese>點滴 (食鹽水 250毫升)</Chinese>
             <Turkish>Serum IV (250ml)</Turkish>
         </Key>
@@ -1672,7 +1674,7 @@
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
             <Japanese>緊急圧迫止血包帯 (クイッククロット)</Japanese>
             <Korean>필드 드레싱 (퀵 클롯)</Korean>
-            <Chinesesimp>基本战地包扎 (止血粉)</Chinesesimp>
+            <Chinesesimp>绷带 (止血型)</Chinesesimp>
             <Chinese>繃帶 (止血粉)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Desc_Short">
@@ -2007,7 +2009,7 @@
             <Portuguese>Transfundir Soro</Portuguese>
             <Japanese>生理食塩水を投与</Japanese>
             <Korean>생리식염수 수혈</Korean>
-            <Chinesesimp>注射生理食盐水</Chinesesimp>
+            <Chinesesimp>注射生理盐水</Chinesesimp>
             <Chinese>注射生理食鹽水</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Apply_Tourniquet">
@@ -2230,7 +2232,7 @@
             <Portuguese>Transfundindo Soro...</Portuguese>
             <Japanese>生理食塩水を投与しています・・・</Japanese>
             <Korean>생리식염수 수혈중...</Korean>
-            <Chinesesimp>施打生理食盐水中 ...</Chinesesimp>
+            <Chinesesimp>施打生理盐水中 ...</Chinesesimp>
             <Chinese>施打生理食鹽水中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Transfusing_Plasma">
@@ -2624,7 +2626,7 @@
             <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
             <Japanese>生理食塩水 IV (1000ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
-            <Chinesesimp>注射生理食盐水 (1000ml)</Chinesesimp>
+            <Chinesesimp>注射生理盐水 (1000ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (1000毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Saline4_500">
@@ -2640,7 +2642,7 @@
             <Portuguese>Administrar Soro IV (500ml)</Portuguese>
             <Japanese>生理食塩水 IV (500ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
-            <Chinesesimp>注射生理食盐水 (500ml)</Chinesesimp>
+            <Chinesesimp>注射生理盐水 (500ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (500毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_Saline4_250">
@@ -2656,7 +2658,7 @@
             <Portuguese>Administrar Soro IV (250ml)</Portuguese>
             <Japanese>生理食塩水 IV (250ml) を投与</Japanese>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
-            <Chinesesimp>注射生理食盐水 (250ml)</Chinesesimp>
+            <Chinesesimp>注射生理盐水 (250ml)</Chinesesimp>
             <Chinese>注射生理食鹽水 (250毫升)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Triage_Status_Minimal">
@@ -3127,7 +3129,7 @@
             <Czech>Kontroluji puls...</Czech>
             <Japanese>脈拍数を測定しています・・・</Japanese>
             <Korean>맥박 확인중...</Korean>
-            <Chinesesimp>检查心跳中...</Chinesesimp>
+            <Chinesesimp>测量脉搏中...</Chinesesimp>
             <Chinese>檢查心跳中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Checked_Medic">
@@ -3143,7 +3145,7 @@
             <Czech>Zkontroloval si %1</Czech>
             <Japanese>心拍数は %1</Japanese>
             <Korean>나의 맥박은 %1 이다</Korean>
-            <Chinesesimp>你已经检查 %1</Chinesesimp>
+            <Chinesesimp>你已检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Log">
@@ -3159,7 +3161,7 @@
             <Portuguese>%1 verificou a frequência cardíaca: %2</Portuguese>
             <Japanese>%1 が測った心拍数は: %2</Japanese>
             <Korean>%1 (이)가 맥박을 측정했습니다: %2</Korean>
-            <Chinesesimp>已由%1确认心跳: %2</Chinesesimp>
+            <Chinesesimp>%1 测量心跳: %2</Chinesesimp>
             <Chinese>已由%1確認心跳: %2</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_None">
@@ -3239,7 +3241,7 @@
             <Czech>Nahmatal jsi srdeční tep u %2</Czech>
             <Japanese>心拍数は %2</Japanese>
             <Korean>맥박이 %2 이다</Korean>
-            <Chinesesimp>心跳为%2</Chinesesimp>
+            <Chinesesimp>心跳为 %2</Chinesesimp>
             <Chinese>心跳為%2</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Pulse_Output_2">
@@ -3303,7 +3305,7 @@
             <Czech>Žádný puls</Czech>
             <Japanese>心拍数を測れなかった</Japanese>
             <Korean>맥박을 찾을 수가 없다</Korean>
-            <Chinesesimp>量不到心跳</Chinesesimp>
+            <Chinesesimp>测量不到心跳</Chinesesimp>
             <Chinese>量不到心跳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response">
@@ -3335,7 +3337,7 @@
             <Czech>Zkontroloval jsi reakci pacienta</Czech>
             <Japanese>患者からの反応をみる</Japanese>
             <Korean>대상의 반응 확인중</Korean>
-            <Chinesesimp>检查伤者的反应</Chinesesimp>
+            <Chinesesimp>检查伤员反应</Chinesesimp>
             <Chinese>檢查傷者的反應</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Responsive">
@@ -3383,7 +3385,7 @@
             <Czech>Zkontroloval jsi %1</Czech>
             <Japanese>%1 を見た</Japanese>
             <Korean>%1 을 확인함</Korean>
-            <Chinesesimp>你已经检查 %1</Chinesesimp>
+            <Chinesesimp>你已检查 %1</Chinesesimp>
             <Chinese>你已經檢查 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_diagnoseMessage">
@@ -3399,7 +3401,7 @@
             <Portuguese>Paciente %1&lt;br/&gt;é %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Portuguese>
             <Japanese>患者 %1&lt;br/&gt;は %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Japanese>
             <Korean>환자 %1&lt;br/&gt;는 %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Korean>
-            <Chinesesimp>伤者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinesesimp>
+            <Chinesesimp>伤员 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinesesimp>
             <Chinese>傷者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_diagnoseAlive">
