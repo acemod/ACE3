@@ -33,17 +33,17 @@
     [ARR_5( \
         {!isNull objectParent (_this select 0)}, \
         { \
-            params [ARR_2("_player","_damageBlocked")]; \
-            if (_damageBlocked) then {_player allowDamage true}; \
-            LOG_1("moved in in %1 frames",diag_frameno-GVAR(frame)); \
+            LOG_1("moved in after %1 frames",diag_frameno-GVAR(frame)); \
+            (_this select 0) enableSimulation true; \
         }, \
-        [ARR_4(_player,_damageBlocked,_moveBackCode,_moveBackParams)], \
+        [ARR_3(_player,_moveBackCode,_moveBackParams)], \
         TAKEN_SEAT_TIMEOUT, \
         { \
-            params [ARR_4("_player","_damageBlocked","_moveBackCode","_moveBackParams")]; \
+            params [ARR_3("_player","_moveBackCode","_moveBackParams")]; \
+            WARNING_1("failed move in after %1 frames",diag_frameno-GVAR(frame)); \
             [ARR_2(_player,_moveBackParams)] call _moveBackCode; \
-            if (_damageBlocked) then {_player allowDamage true}; \
             localize "str_mis_state_failed" call EFUNC(common,displayTextStructured); \
+            _player enableSimulation true; \
         } \
     )] call CBA_fnc_waitUntilAndExecute;
 
@@ -62,18 +62,10 @@ private _fnc_move = {
     (_this select 2) params ["_moveInCode", "_moveInParams", "_currentTurret", "_moveBackCode", "_moveBackParams", ["_enabledByAnimationSource", ""]];
     TRACE_7("fnc_move params",_moveInCode,_moveInParams,_currentTurret,_moveBackCode,_moveBackParams,_enabledByAnimationSource,call {GVAR(frame)=diag_frameno});
 
-    // check bugged FFV
-    if (
-        !("" isEqualTo _enabledByAnimationSource)
-        && {1 > _target doorPhase _enabledByAnimationSource}
-    ) exitWith {};
-
     // workaround getting damage when moveOut while vehicle is moving
-    private _damageBlocked = false;
-    if (isDamageAllowed _player) then {
-        _player allowDamage false;
-        _damageBlocked = true;
-    };
+    // also this helps with arma bug when unit is stuck in wrong anim when move in turret with configured enabledByAnimationSource
+    _player enableSimulation false;
+
     private _preserveEngineOn = _player == driver _target && {isEngineOn _target};
     moveOut _player;
     if (_preserveEngineOn) then {_target engineOn true};
@@ -89,12 +81,12 @@ private _fnc_move = {
     [
         {params ["_target", "_player", "_currentTurret"]; IS_MOVED_OUT},
         {
-            params ["", "_player", "", "_moveInCode", "_moveInParams", "_moveBackCode", "_moveBackParams", "_damageBlocked"];
-            LOG_2("moved out in %1 frames",diag_frameno-GVAR(frame),call {GVAR(frame)=diag_frameno; 0});
+            params ["", "_player", "", "_moveInCode", "_moveInParams", "_moveBackCode", "_moveBackParams"];
+            LOG_2("moved out after %1 frames",diag_frameno-GVAR(frame),call {GVAR(frame)=diag_frameno; 0});
             [_player, _moveInParams] call _moveInCode;
             WAIT_IN_OR_MOVE_BACK;
         },
-        [_target, _player, _currentTurret, _moveInCode, _moveInParams, _moveBackCode, _moveBackParams, _damageBlocked]
+        [_target, _player, _currentTurret, _moveInCode, _moveInParams, _moveBackCode, _moveBackParams]
     ] call CBA_fnc_waitUntilAndExecute;
 };
 
@@ -216,12 +208,6 @@ private _cargoNumber = -1;
                     private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
                     TO_COMPARTMENT_STRING(_gunnerCompartments);
                     if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
-                    // due to arma bug the unit is stuck in wrong anim when move in turret with configured enabledByAnimationSource
-                    private _enabledByAnimationSource = getText (_turretConfig >> "enabledByAnimationSource");
-                    if (
-                        !("" isEqualTo _enabledByAnimationSource)
-                        && {1 > _vehicle doorPhase _enabledByAnimationSource}
-                    ) then {breakTo "crewLoop"};
                     _params = [{MOVE_IN_CODE(moveInTurret)}, [_vehicle, _turretPath], _currentTurret, _moveBackCode, _moveBackParams, _enabledByAnimationSource];
                     _statement = _fnc_move;
                 };

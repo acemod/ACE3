@@ -265,6 +265,15 @@
             <Chinese>改變與此同步小隊隊員的指示器顏色</Chinese>
             <Czech>Barva pro členy skupin které jsou synchronizované s tímto modulem.</Czech>
         </Key>
+        <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_displayName">
+            <English>Only Show Friendly Gestures</English>
+            <Russian>Показывать только союзные жесты</Russian>
+            <Polish>Pokazuj jedynie sojusznicze gesty</Polish>
+        </Key>
+        <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_description">
+            <English>Shows only Gestures from Units that are from the same side or a Friendly side.</English>
+            <Russian>Показывать жесты только от игроков союзной стороны.</Russian>
+        </Key>
         <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>
             <Portuguese>Gestos no mapa - Definições de Grupo</Portuguese>
@@ -281,20 +290,20 @@
             <Chinese>地圖指示器 - 隊伍設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_mapGestures_category">
-            <English>Map Gestures</English>
-            <Portuguese>Gestos no mapa</Portuguese>
-            <Polish>Gesty na mapie</Polish>
-            <Russian>Жесты на карте</Russian>
-            <Czech>Ukazování v mapě</Czech>
-            <Italian>Gesti Mappa</Italian>
-            <German>Kartenzeichen</German>
-            <Spanish>Gestos en mapa</Spanish>
-            <French>Pointage sur carte</French>
-            <Japanese>マップ ジェスチャー</Japanese>
-            <Korean>지도 신호</Korean>
-            <Chinesesimp>地图标识器</Chinesesimp>
-            <Chinese>地圖指示器</Chinese>
-            <Turkish>Harita Hareketleri</Turkish>
+            <English>ACE Map Gestures</English>
+            <Portuguese>ACE Gestos no mapa</Portuguese>
+            <Polish>ACE Gesty na mapie</Polish>
+            <Russian>ACE Жесты на карте</Russian>
+            <Czech>ACE Ukazování v mapě</Czech>
+            <Italian>ACE Gesti Mappa</Italian>
+            <German>ACE Kartenzeichen</German>
+            <Spanish>ACE Gestos en mapa</Spanish>
+            <French>ACE Pointage sur carte</French>
+            <Japanese>ACE マップ ジェスチャー</Japanese>
+            <Korean>ACE 지도 신호</Korean>
+            <Chinesesimp>ACE 地图标识器</Chinesesimp>
+            <Chinese>ACE 地圖指示器</Chinese>
+            <Turkish>ACE Harita Hareketleri</Turkish>
         </Key>
     </Package>
 </Project>

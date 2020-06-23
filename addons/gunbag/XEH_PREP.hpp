@@ -1,6 +1,8 @@
 
 PREP(toGunbag);
 PREP(toGunbagCallback);
+PREP(swapGunbag);
+PREP(swapGunbagCallback);
 PREP(offGunbag);
 PREP(offGunbagCallback);
 PREP(status);
