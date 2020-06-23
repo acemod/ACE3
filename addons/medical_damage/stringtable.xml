@@ -650,7 +650,7 @@
             <Japanese>ユニットが気絶するまで許容できるダメージ値を設定できます。標準: 0</Japanese>
             <Czech>Určuje kolik poškození může jednotka utrpět než upadne do bezvědomí. (pro použití standardní hodnoty mise zadejte 0)</Czech>
             <Russian>Устанавливает количество урона, которое может получить юнит перед тем, как потерять сознание. (0 для значения миссии)</Russian>
-            <Polish>Ustawia Próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
+            <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
         </Key>
     </Package>
 </Project>
