@@ -380,6 +380,7 @@
             <Korean>행동 취소됨.</Korean>
             <Chinese>動作已被取消</Chinese>
             <Chinesesimp>动作已被取消</Chinesesimp>
+            <Turkish>Işlem iptal edildi.</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_MiscItems">
             <English>[ACE] Miscellaneous Items</English>
@@ -488,6 +489,7 @@
             <Polish>Określa akcję, która ma być podjęta, jeśli gracz nie ma właściwych PBO.</Polish>
             <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
             <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
+            <Russian>Определяет, какое действие будет предпринято, если игрок не имеет корректные PBO.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -512,6 +514,7 @@
             <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
             <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
             <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
+            <Russian>Проверять все аддоны, а не только ACE.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -536,6 +539,7 @@
             <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
             <Japanese>許可するアドオンを定義します。</Japanese>
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
+            <Russian>Задать список непроверяемых аддонов.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -1172,6 +1176,7 @@
             <Korean>ACE 장비</Korean>
             <Chinese>ACE 裝備按鍵</Chinese>
             <Chinesesimp>ACE 装备按键</Chinesesimp>
+            <Turkish>ACE Ekipmanlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE Common</English>
@@ -1202,6 +1207,7 @@
             <Korean>ACE 무기</Korean>
             <Chinese>ACE 武器按鍵</Chinese>
             <Chinesesimp>ACE 武器按键</Chinesesimp>
+            <Turkish>ACE Silahlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE Movement</English>
@@ -1247,6 +1253,7 @@
             <Korean>ACE 차량</Korean>
             <Chinese>ACE 載具按鍵</Chinese>
             <Chinesesimp>ACE 载具按键</Chinesesimp>
+            <Turkish>ACE Araçlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1398,6 +1405,8 @@
             <Japanese>セルフ インタラクションに動作を表示</Japanese>
             <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
             <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
+            <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
+            <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
         </Key>
     </Package>
 </Project>

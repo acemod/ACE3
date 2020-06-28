@@ -83,3 +83,6 @@ private _mass = _target getVariable [QGVAR(originalMass), 0];
 if (_mass != 0) then {
     [QEGVAR(common,setMass), [_target, _mass], _target] call CBA_fnc_targetEvent;
 };
+
+// reset temp direction
+_target setVariable [QGVAR(carryDirection_temp), nil];

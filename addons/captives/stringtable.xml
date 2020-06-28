@@ -219,7 +219,6 @@
             <Korean>투항시키기</Korean>
             <Chinese>使單位投降</Chinese>
             <Chinesesimp>使单位投降</Chinesesimp>
-            <Turkish>Birimi Kelepçele</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.</English>
@@ -251,6 +250,7 @@
             <Korean>포박하기</Korean>
             <Chinese>使單位戴上手銬</Chinese>
             <Chinesesimp>使单位戴上手铐</Chinesesimp>
+            <Turkish>Birimi Kelepçele</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.</English>
@@ -266,6 +266,7 @@
             <Korean>수갑을 채우기 위해 동기화합니다.</Korean>
             <Chinese>使單位戴上手銬</Chinese>
             <Chinesesimp>使单位戴上手铐</Chinesesimp>
+            <Turkish>Birim kelepçelendi</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>

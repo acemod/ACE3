@@ -7,7 +7,8 @@ class CfgWeapons {
 
     // Rifle_Long_Base_F Sniper Marksman
     // GM6 Lynx
-    class GM6_base_F: Rifle_Long_Base_F {
+    class GM6_base_F: Rifle_Long_Base_F {};
+    class srifle_GM6_F: GM6_base_F {
         ACE_barrelLength = 730;
         ACE_barrelTwist = 381.0;
         initSpeed = -1.0;
@@ -17,7 +18,8 @@ class CfgWeapons {
     };
 
     // M200 Intervention
-    class LRR_base_F: Rifle_Long_Base_F {
+    class LRR_base_F: Rifle_Long_Base_F {};
+    class srifle_LRR_F: LRR_base_F {
         ACE_barrelLength = 736.6;
         ACE_barrelTwist = 330.2;
         initSpeed = -1.0;
@@ -27,28 +29,32 @@ class CfgWeapons {
     };
 
     // Mk14 Mod 1 EBR
-    class EBR_base_F: Rifle_Long_Base_F {
+    class EBR_base_F: Rifle_Long_Base_F {};
+    class srifle_EBR_F: EBR_base_F {
         ACE_barrelLength = 457.2;
         ACE_barrelTwist = 304.8;
         initSpeed = -0.979444;
     };
 
     // VS-121
-    class DMR_01_base_F: Rifle_Long_Base_F {
+    class DMR_01_base_F: Rifle_Long_Base_F {};
+    class srifle_DMR_01_F: DMR_01_base_F {
         ACE_barrelLength = 609.6;
         ACE_barrelTwist = 241.3;
         initSpeed = -1.00019;
     };
 
     // Noreen "Bad News" ULR
-    class DMR_02_base_F: Rifle_Long_Base_F {
+    class DMR_02_base_F: Rifle_Long_Base_F {};
+    class srifle_DMR_02_F: DMR_02_base_F {
         ACE_barrelLength = 508.0;
         ACE_barrelTwist = 254.0;
         initSpeed = -1.0;
     };
 
     // SIG 556
-    class DMR_03_base_F: Rifle_Long_Base_F {
+    class DMR_03_base_F: Rifle_Long_Base_F {};
+    class srifle_DMR_03_F: DMR_03_base_F {
         ACE_barrelLength = 508.0;
         ACE_barrelTwist = 254.0;
         initSpeed = -0.991536;
@@ -58,21 +64,24 @@ class CfgWeapons {
     };
 
     // ASP-1 Kir
-    class DMR_04_base_F: Rifle_Long_Base_F {
+    class DMR_04_base_F: Rifle_Long_Base_F {};
+    class srifle_DMR_04_F: DMR_04_base_F {
         ACE_barrelLength = 450.088;
         ACE_barrelTwist = 203.2;
         initSpeed = -1.0;
     };
 
     // Cyrus
-    class DMR_05_base_F: Rifle_Long_Base_F {
+    class DMR_05_base_F: Rifle_Long_Base_F {};
+    class srifle_DMR_05_blk_F: DMR_05_base_F {
         ACE_barrelLength = 620.0;
         ACE_barrelTwist = 360.0;
         initSpeed = -1.0; // 780 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
     };
 
     // M14
-    class DMR_06_base_F: Rifle_Long_Base_F {
+    class DMR_06_base_F: Rifle_Long_Base_F {};
+    class srifle_DMR_06_camo_F: DMR_06_base_F {
         ACE_barrelLength = 558.8;
         ACE_barrelTwist = 304.8;
         initSpeed = -0.999395;
@@ -112,14 +121,16 @@ class CfgWeapons {
     };
 
     // HK121
-    class MMG_01_base_F: Rifle_Long_Base_F { // https://www.heckler-koch.com/en/products/military/machine-guns/mg5/mg5/technical-data.html93x
+    class MMG_01_base_F: Rifle_Long_Base_F {}; // https://www.heckler-koch.com/en/products/military/machine-guns/mg5/mg5/technical-data.html
+    class MMG_01_hex_F: MMG_01_base_F {
         ACE_barrelLength = 550.0;
         ACE_barrelTwist = 360.0;
         initSpeed = -1.0; // 768 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C)
     };
 
     // LWMMG
-    class MMG_02_base_F: Rifle_Long_Base_F {
+    class MMG_02_base_F: Rifle_Long_Base_F {};
+    class MMG_02_camo_F: MMG_02_base_F {
         ACE_barrelLength = 609.6;
         ACE_barrelTwist = 234.95;
         initSpeed = -1.0;
@@ -127,31 +138,33 @@ class CfgWeapons {
 
     // Rifle_Base_F
     // MX variants
-    class arifle_MX_Base_F: Rifle_Base_F {
-        ACE_barrelTwist = 228.6;
-    };
+    class arifle_MX_Base_F: Rifle_Base_F {};
 
     // MX LSW
     class arifle_MX_SW_F: arifle_MX_Base_F {
         ACE_barrelLength = 406.4;
+        ACE_barrelTwist = 228.6;
         initSpeed = -0.981912;
     };
 
     // MXM
     class arifle_MXM_F: arifle_MX_Base_F {
         ACE_barrelLength = 457.2;
+        ACE_barrelTwist = 228.6;
         initSpeed = -1.0;
     };
 
     // MX
     class arifle_MX_F: arifle_MX_Base_F {
         ACE_barrelLength = 368.3;
+        ACE_barrelTwist = 228.6;
         initSpeed = -0.972222;
     };
 
     // MX 3GL
     class arifle_MX_GL_F: arifle_MX_Base_F {
         ACE_barrelLength = 368.3;
+        ACE_barrelTwist = 228.6;
         initSpeed = -0.972222;
     };
 
@@ -163,42 +176,43 @@ class CfgWeapons {
     };
 
     // KH2002 Sama variants
-    class arifle_katiba_Base_F: Rifle_Base_F {
-        ACE_barrelTwist = 203.2;
-    };
+    class arifle_katiba_Base_F: Rifle_Base_F {};
 
     // KH2002 Sama
     class arifle_Katiba_F: arifle_katiba_Base_F {
         ACE_barrelLength = 508.0;
+        ACE_barrelTwist = 203.2;
         initSpeed = -1.0;
     };
 
     // KH2002C Sama
     class arifle_Katiba_C_F: arifle_katiba_Base_F {
         ACE_barrelLength = 393.7;
+        ACE_barrelTwist = 203.2;
         initSpeed = -0.961294;
     };
 
     // KH2002 Sama KGL
     class arifle_Katiba_GL_F: arifle_katiba_Base_F {
         ACE_barrelLength = 508.0;
+        ACE_barrelTwist = 203.2;
         initSpeed = -1.0;
     };
 
     // CTAR-21 variants
-    class Tavor_base_F: Rifle_Base_F {
-        ACE_barrelTwist = 177.8;
-    };
+    class Tavor_base_F: Rifle_Base_F {};
 
      // CTAR-21
     class arifle_TRG20_F: Tavor_base_F {
         ACE_barrelLength = 381.0;
+        ACE_barrelTwist = 177.8;
         initSpeed = -0.961496;
     };
 
     // TAR-21
     class arifle_TRG21_F: Tavor_base_F {
         ACE_barrelLength = 459.74;
+        ACE_barrelTwist = 177.8;
         initSpeed = -1.0;
     };
 
@@ -208,25 +222,26 @@ class CfgWeapons {
     };
 
     // F2000 variants
-    class mk20_base_F: Rifle_Base_F {
-        ACE_barrelTwist = 177.8;
-    };
+    class mk20_base_F: Rifle_Base_F {};
 
     // F2000
     class arifle_Mk20_F: mk20_base_F {
         ACE_barrelLength = 441.96;
+        ACE_barrelTwist = 177.8;
         initSpeed = -0.992849;
     };
 
     // F2000 Tactical
     class arifle_Mk20C_F: mk20_base_F {
         ACE_barrelLength = 406.4;
+        ACE_barrelTwist = 177.8;
         initSpeed = -0.974297;
     };
 
     // F2000 EGLM
     class arifle_Mk20_GL_F: mk20_base_F {
         ACE_barrelLength = 406.4;
+        ACE_barrelTwist = 177.8;
         initSpeed = -0.974297;
     };
 
@@ -266,7 +281,8 @@ class CfgWeapons {
     };
 
     // RFB SDAR
-    class SDAR_base_F: Rifle_Base_F {
+    class SDAR_base_F: Rifle_Base_F {};
+    class arifle_SDAR_F: SDAR_base_F {
         ACE_barrelLength = 457.2;
         ACE_barrelTwist = 285.75;
         initSpeed = -0.998321;
@@ -343,32 +359,26 @@ class CfgWeapons {
 
     // Rifle_Short_Base_F
     // CPW
-    class pdw2000_base_F: Rifle_Short_Base_F {
+    class pdw2000_base_F: Rifle_Short_Base_F {};
+    class hgun_PDW2000_F: pdw2000_base_F {
         ACE_barrelLength = 177.8;
         ACE_barrelTwist = 228.6;
-    };
-
-    class hgun_PDW2000_F: pdw2000_base_F {
         initSpeed = -0.994186;
     };
 
     // Vector SMG
-    class SMG_01_Base: Rifle_Short_Base_F {
+    class SMG_01_Base: Rifle_Short_Base_F {};
+    class SMG_01_F: SMG_01_Base {
         ACE_barrelLength = 139.7;
         ACE_barrelTwist = 406.4;
-    };
-
-    class SMG_01_F: SMG_01_Base {
         initSpeed = -1.00148;
     };
 
     // Scorpion Evo 3 A1
-    class SMG_02_base_F: Rifle_Short_Base_F  {
+    class SMG_02_base_F: Rifle_Short_Base_F  {};
+    class SMG_02_F: SMG_02_base_F  {
         ACE_barrelLength = 195.58;
         ACE_barrelTwist = 254.0;
-    };
-
-    class SMG_02_F: SMG_02_base_F  {
         initSpeed = -1.00029;
     };
 

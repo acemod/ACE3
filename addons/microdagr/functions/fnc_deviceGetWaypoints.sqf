@@ -11,7 +11,7 @@
  * Waypoints <ARRAY>
  *
  * Example:
- * [["Hill 55", [41,324, 12]]] = [] call ace_microdagr_fnc_deviceGetWaypoint
+ * [["Hill 55", [41,324, 12]]] = [] call ace_microdagr_fnc_deviceGetWaypoints
  *
  * Public: No
  */

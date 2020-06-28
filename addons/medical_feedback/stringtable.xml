@@ -25,7 +25,7 @@
             <French>Effet de douleur</French>
             <Hungarian>Fájdalom-effekt típusa</Hungarian>
             <Portuguese>Tipo do efeito de dor</Portuguese>
-            <Czech>Typ bolesti - efekt</Czech>
+            <Czech>Efekt pro bolest</Czech>
             <Japanese>痛み効果種類</Japanese>
             <Korean>고통 효과 종류</Korean>
             <Chinese>疼痛效果類型</Chinese>
@@ -102,36 +102,47 @@
             <Spanish>Solo efecto de dolor fuerte</Spanish>
             <Turkish>Sadece yüksek ağrı etkisi</Turkish>
             <German>Nur bei starken Schmerzen</German>
+            <Russian>Эффект только сильной боли</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
             <English>Low Blood Volume Effect Type</English>
             <Russian>Визуальный эффект низкого объема крови</Russian>
             <French>Effet de faible volume sanguin</French>
             <Japanese>低血液量時の効果種類</Japanese>
+            <Czech>Efekt pro nízké množství krve</Czech>
+            <Polish>Efekt po utracie znacznej ilości krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
             <English>Selects the used low blood volume effect type.</English>
             <Russian>Выбирает тип визуализации эффекта низкого объема крови.</Russian>
             <French>Permet de choisir quel effet provoque un faible volume sanguin.</French>
             <Japanese>低血液量時の効果を選択できます。</Japanese>
+            <Czech>Nastavuje který efekt pro nízké množství krve bude používán.</Czech>
+            <Polish>Wybiera efekt ktory będzie pokazywany po utracie znacznej ilości krwi.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>
             <Russian>Потеря цветности</Russian>
             <French>Atténuation des couleurs</French>
             <Japanese>退色</Japanese>
+            <Czech>Ztráta barev</Czech>
+            <Polish>Zanikanie kolorów</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
             <Russian>Иконка</Russian>
             <French>Icône</French>
             <Japanese>アイコン</Japanese>
+            <Czech>Ikona</Czech>
+            <Polish>Ikona</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
             <English>Icon + Color Fading</English>
             <Russian>Иконка + Потеря цветности</Russian>
             <French>Icône + Atténuation des couleurs</French>
             <Japanese>アイコンと退色</Japanese>
+            <Czech>Ikona + Ztráta barev</Czech>
+            <Polish>Ikona + Zanikanie kolorów</Polish>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">

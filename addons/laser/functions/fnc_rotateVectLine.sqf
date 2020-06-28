@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_laser_fnc_rotateVectline
+ * call ace_laser_fnc_rotateVectLine
  *
  * Public: No
  */

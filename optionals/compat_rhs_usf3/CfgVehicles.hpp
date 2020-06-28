@@ -139,6 +139,7 @@ class CfgVehicles {
     class Heli_Transport_02_base_F;
     class RHS_CH_47F_base: Heli_Transport_02_base_F {
         EGVAR(refuel,fuelCapacity) = 3914;
+        class UserActions;
     };
 
     class RHS_CH_47F: RHS_CH_47F_base {
@@ -147,7 +148,7 @@ class CfgVehicles {
         EGVAR(fastroping,onCut) = QFUNC(onCut);
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
 
-        class UserActions {
+        class UserActions: UserActions {
             class OpenCargoDoor;
             class CloseCargoDoor: OpenCargoDoor {
                 condition = QUOTE([ARR_2(this,'ramp_anim')] call FUNC(canCloseDoor));
@@ -388,43 +389,64 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Explosives_Place_rhsusf_m112_DemoCharge: ACE_Explosives_Place {
+    // ACE Explosives
+    class ACE_Explosives_Place_rhsusf_explosive_m112: ACE_Explosives_Place {
         displayName = "$STR_RHSUSF_M112_EXPLOSIVE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x1_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[-0.155,0,0.01]";
+                position = "[-0.055, 0, 0.038]";
             };
         };
     };
 
-    class ACE_Explosives_Place_rhsusf_m112x4_DemoCharge: ACE_Explosives_Place {
+    class ACE_Explosives_Place_rhsusf_explosive_m112x4: ACE_Explosives_Place {
         displayName = "$STR_RHSUSF_M112X4_EXPLOSIVE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x4_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[-0.155,0.025,0.01]";
+                position = "[-0.055, 0.025, 0.102]";
             };
         };
     };
 
-    class ACE_Explosives_Place_rhs_mine_M19_Mine: ACE_Explosives_Place {
+    class ACE_Explosives_Place_rhsusf_mine_M19: ACE_Explosives_Place {
         displayName = "$STR_RHSUSF_M19_ATMINE_DISPLAY_NAME";
         model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m19_e";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[0.011,0.011,0.045]";
+                position = "[-0.014, -0.002, 0.046]";
             };
         };
     };
 
-    class ACE_Explosives_Place_rhsusf_mine_m14_mag_Mine: ACE_Explosives_Place {
+    class ACE_Explosives_Place_rhsusf_mine_m14: ACE_Explosives_Place {
         displayName = "$STR_RHSUSF_M14_APMINE_DISPLAY_NAME";
-        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m14_e";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m14_d";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[0.02,0.015,0.02]";
+                position = "[-0.002, 0.022, 0.02]";
             };
         };
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_3m: ACE_Explosives_Place {
+        displayName = "M49A1 (3m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_a_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, -0.016, 0.296]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_6m: ACE_Explosives_Place_rhsusf_mine_m49a1_3m {
+        displayName = "M49A1 (6m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_b_e";
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_10m: ACE_Explosives_Place_rhsusf_mine_m49a1_3m {
+        displayName = "M49A1 (10m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_c_e";
     };
 };

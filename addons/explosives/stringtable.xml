@@ -783,7 +783,7 @@
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
-            <Japanese>特技兵を必要としますか?</Japanese>
+            <Japanese>特技兵を必須</Japanese>
             <Korean>전문가가 필요합니까?</Korean>
             <Chinesesimp>需要专家?</Chinesesimp>
             <Chinese>需要專家?</Chinese>
@@ -799,7 +799,7 @@
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
-            <Japanese>爆発物を無効化するには、爆発物の特技兵を必要としますか? 標準: 無効化</Japanese>
+            <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。標準: 無効化</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要炸弹专家才能拆除炸弹? 预设: 否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
@@ -815,7 +815,7 @@
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
-            <Japanese>非特技兵へ足かせを与えますか?</Japanese>
+            <Japanese>非特技兵へ足かせ</Japanese>
             <Korean>비-전문가에 불이익을 줍니까?</Korean>
             <Chinesesimp>折磨非专业人员?</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
@@ -831,7 +831,7 @@
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
-            <Japanese>非特技兵へ動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
+            <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
             <Korean>비-전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间? 预设: 是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
@@ -847,7 +847,7 @@
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
-            <Japanese>解除中に爆発させますか?</Japanese>
+            <Japanese>解除中に爆発</Japanese>
             <Korean>해제시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆?</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
@@ -863,7 +863,7 @@
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
-            <Japanese>特定の爆発物を解除中に爆発させますか? 標準: 有効化</Japanese>
+            <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
             <Korean>특정 폭발물이 해제시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后, 某些炸弹会在拆除时引爆? 预设: 是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
@@ -1088,6 +1088,7 @@
             <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
             <Polish>Jest EOD</Polish>
+            <Russian>Сапёр</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1098,6 +1099,7 @@
             <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
+            <Russian>Определяет, является ли юнит сапёром.</Russian>
         </Key>
     </Package>
 </Project>

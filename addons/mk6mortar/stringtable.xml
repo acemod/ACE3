@@ -33,6 +33,7 @@
             <Korean>Mk6 82mm 박격포 사격을 위한 사거리표</Korean>
             <Chinesesimp>MK6 82mm迫击炮射表</Chinesesimp>
             <Chinese>MK6 82毫米迫擊炮射表</Chinese>
+            <Turkish>Mk6 82mm için Menzil Tablosu</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -80,7 +81,7 @@
             <Russian>Миномет Mk6</Russian>
             <Portuguese>Morteiro Mk6</Portuguese>
             <Czech>Minomet Mk6</Czech>
-            <Turkish>Mk6 Mortar</Turkish>
+            <Turkish>Mk6 Havan</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -147,6 +148,7 @@
             <Korean>Mk6 탄도계산컴퓨터 허가</Korean>
             <Chinesesimp>允许使用MK6射控电脑</Chinesesimp>
             <Chinese>允許使用MK6射控電腦</Chinese>
+            <Turkish>Mk6 bilgisayarına izin ver</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
@@ -179,6 +181,7 @@
             <Korean>Mk6 나침반 허용</Korean>
             <Chinesesimp>允许使用MK6指北针</Chinesesimp>
             <Chinese>允許使用MK6指北針</Chinese>
+            <Turkish>Mk6 pusulasına izin ver</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the Mk6 Digital Compass</English>
@@ -195,6 +198,7 @@
             <Korean>Mk6 에서 전자 나침반을 보여줍니다</Korean>
             <Chinesesimp>显示MK6的数位指北针</Chinesesimp>
             <Chinese>顯示MK6的數位指北針</Chinese>
+            <Turkish>Mk6 Dijital Pusulasını göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
             <English>This module allows you to setup Mk6 mortar settings.</English>
@@ -255,6 +259,7 @@
             <Korean>탄약 제거</Korean>
             <Chinesesimp>卸除弹头</Chinesesimp>
             <Chinese>卸除彈頭</Chinese>
+            <Turkish>Mermiyi Boşalt</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
@@ -270,6 +275,7 @@
             <Korean>탄약 장전</Korean>
             <Chinesesimp>装载弹头</Chinesesimp>
             <Chinese>裝載彈頭</Chinese>
+            <Turkish>Havanı Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
             <English>Unloading Round</English>
@@ -285,6 +291,7 @@
             <Chinesesimp>卸除弹头中</Chinesesimp>
             <Chinese>卸除彈頭中</Chinese>
             <Czech>Vybít minomet</Czech>
+            <Turkish>Mermi Boşaltılıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -300,6 +307,7 @@
             <Korean>탄약 준비중</Korean>
             <Chinesesimp>准备弹头中</Chinesesimp>
             <Chinese>準備彈頭中</Chinese>
+            <Turkish>Mermi Hazırlanıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
             <English>Load HE</English>
@@ -315,6 +323,7 @@
             <Korean>고폭탄 장전</Korean>
             <Chinesesimp>装载高爆弹</Chinesesimp>
             <Chinese>裝載高爆彈</Chinese>
+            <Turkish>HE Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
             <English>Load Smoke</English>
@@ -330,6 +339,7 @@
             <Korean>연막탄 장전</Korean>
             <Chinesesimp>装载烟雾弹</Chinesesimp>
             <Chinese>裝載煙霧彈</Chinese>
+            <Turkish>Sis Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
             <English>Load Illumination</English>
@@ -345,6 +355,7 @@
             <Korean>조명탄 장전</Korean>
             <Chinesesimp>装载照明弹</Chinesesimp>
             <Chinese>裝載照明彈</Chinese>
+            <Turkish>Aydınlatma Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
             <English>Load Guided HE</English>
@@ -360,6 +371,7 @@
             <Korean>유도 고폭탄 장전</Korean>
             <Chinesesimp>装载导引高爆弹</Chinesesimp>
             <Chinese>裝載導引高爆彈</Chinese>
+            <Turkish>Güdümlü HE Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
             <English>Load Laser Guided HE</English>
@@ -375,6 +387,7 @@
             <Korean>레이저 유도 고폭탄 장전</Korean>
             <Chinesesimp>装载雷射导引高爆弹</Chinesesimp>
             <Chinese>裝載雷射導引高爆彈</Chinese>
+            <Turkish>Lazer Güdümlü HE Yükle</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
             <English>82mm HE Round</English>
@@ -390,6 +403,7 @@
             <Korean>82mm 고폭탄</Korean>
             <Chinesesimp>82mm高爆弹</Chinesesimp>
             <Chinese>82毫米高爆彈</Chinese>
+            <Turkish>82mm HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
@@ -405,6 +419,7 @@
             <Korean>82mm 연막탄</Korean>
             <Chinesesimp>82mm烟雾弹</Chinesesimp>
             <Chinese>82毫米煙霧彈</Chinese>
+            <Turkish>82mm Sis Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
@@ -420,6 +435,7 @@
             <Korean>82mm 조명탄</Korean>
             <Chinesesimp>82mm照明弹</Chinesesimp>
             <Chinese>82毫米照明彈</Chinese>
+            <Turkish>82mm Işık Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
@@ -435,6 +451,7 @@
             <Korean>82mm 유도 고폭탄</Korean>
             <Chinesesimp>82mm导引高爆弹</Chinesesimp>
             <Chinese>82毫米導引高爆彈</Chinese>
+            <Turkish>82mm Güdümlü HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
@@ -450,6 +467,7 @@
             <Korean>82mm 레이저 유도 고폭탄</Korean>
             <Chinesesimp>82mm雷射导引高爆弹</Chinesesimp>
             <Chinese>82毫米雷射導引高爆彈</Chinese>
+            <Turkish>82mm Lazer Güdümlü HE Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
@@ -480,6 +498,7 @@
             <Korean>[ACE] 82mm 고폭탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm高爆弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米高爆彈藥箱</Chinese>
+            <Turkish>[ACE] 82mm HE Mermisi Kutusu</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
@@ -495,6 +514,7 @@
             <Korean>[ACE] 82mm 연막탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm烟雾弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米煙霧彈藥箱</Chinese>
+            <Turkish>[ACE] 82mm Sis Mermisi Kutusu</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
@@ -510,6 +530,7 @@
             <Korean>[ACE] 82mm 조명탄 상자</Korean>
             <Chinesesimp>[ACE] 82mm照明弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米照明彈藥箱</Chinese>
+            <Turkish>[ACE] 82mm Işık Mermisi Kutusu</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
@@ -525,6 +546,7 @@
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
             <Chinesesimp>[ACE] 82mm预设弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>
+            <Turkish>[ACE] 82mm Varsayılan Teçhizat Kutusu</Turkish>
         </Key>
     </Package>
 </Project>

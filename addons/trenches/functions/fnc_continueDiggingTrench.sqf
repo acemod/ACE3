@@ -19,7 +19,7 @@
 params ["_trench", "_unit"];
 TRACE_2("continueDiggingTrench",_trench,_unit);
 
-private _actualProgress = _trench getVariable [QGVAR(progress), 0];
+private _actualProgress = _trench getVariable [QGVAR(progress), 1];
 if(_actualProgress == 1) exitWith {};
 
 // Mark trench as being worked on

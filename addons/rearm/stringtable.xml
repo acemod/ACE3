@@ -273,6 +273,7 @@
             <Korean>재보급</Korean>
             <Chinesesimp>整装</Chinesesimp>
             <Chinese>整裝</Chinese>
+            <Turkish>Yeniden Doldur</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmAction">
             <English>Rearming %1 with %2...</English>
@@ -333,6 +334,7 @@
             <Korean>탄약 가지기</Korean>
             <Chinesesimp>取得弹药</Chinesesimp>
             <Chinese>取得彈藥</Chinese>
+            <Turkish>Cephane al</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_PickUpAmmo">
             <English>Pick up ammo</English>
@@ -348,6 +350,7 @@
             <Korean>탄약 줍기</Korean>
             <Chinesesimp>捡起弹药</Chinesesimp>
             <Chinese>撿起彈藥</Chinese>
+            <Turkish>Cephaneyi al</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_StoreAmmo">
             <English>Store ammo</English>
@@ -423,6 +426,7 @@
             <Korean>연막 차장</Korean>
             <Chinesesimp>烟幕弹</Chinesesimp>
             <Chinese>煙幕彈</Chinese>
+            <Turkish>Sis Ekranı</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_60Rnd_CMFlareMagazine">
             <English>Flares</English>
@@ -438,6 +442,7 @@
             <Korean>기만체</Korean>
             <Chinesesimp>热焰弹</Chinesesimp>
             <Chinese>熱焰彈</Chinese>
+            <Turkish>Flareler</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_1000Rnd_Gatling_30mm_Plane_CAS_01_F">
             <English>30mm HEI</English>
@@ -453,6 +458,7 @@
             <Korean>30mm 고폭소이탄</Korean>
             <Chinesesimp>30mm 高爆燃烧弹</Chinesesimp>
             <Chinese>30mm 高爆燃燒彈</Chinese>
+            <Turkish>30mm HEI</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_500Rnd_Cannon_30mm_Plane_CAS_02_F">
             <English>30mm HEI-T</English>
@@ -468,6 +474,7 @@
             <Korean>30mm 고폭소이예광탄</Korean>
             <Chinesesimp>30mm 高爆燃烧曳光弹</Chinesesimp>
             <Chinese>30mm 高爆燃燒曳光彈</Chinese>
+            <Turkish>30mm HEI-T</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_04_F">
             <English>AIM-9 Sidewinder</English>
@@ -483,6 +490,7 @@
             <Korean>AIM-9 Sidewinder</Korean>
             <Chinesesimp>AIM-9 响尾蛇</Chinesesimp>
             <Chinese>AIM-9 響尾蛇</Chinese>
+            <Turkish>AIM-9 Sidewinder</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_03_F">
             <English>Wympel R-73</English>
@@ -498,6 +506,7 @@
             <Korean>Vympel R-73</Korean>
             <Chinesesimp>Wympel R-73</Chinesesimp>
             <Chinese>Wympel R-73</Chinese>
+            <Turkish>Wympel R-73</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_6Rnd_Missile_AGM_02_F">
             <English>AGM-65 Maverick</English>
@@ -513,6 +522,7 @@
             <Korean>AGM-65 Maverick</Korean>
             <Chinesesimp>AGM-65 小牛</Chinesesimp>
             <Chinese>AGM-65 小牛</Chinese>
+            <Turkish>AGM-65 Maverick</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_4Rnd_Missile_AGM_01_F">
             <English>Kh-25MTP</English>
@@ -528,6 +538,7 @@
             <Korean>Kh-25MTP</Korean>
             <Chinesesimp>Kh-25MTP</Chinesesimp>
             <Chinese>Kh-25MTP</Chinese>
+            <Turkish>Kh-25MTP</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_HE_F">
             <English>Hydra 70 HE</English>
@@ -543,6 +554,7 @@
             <Korean>Hydra 70 고폭탄</Korean>
             <Chinesesimp>九头蛇 70 高爆弹</Chinesesimp>
             <Chinese>九頭蛇 70 高爆彈</Chinese>
+            <Turkish>Hydra 70 HE</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_HE_F">
             <English>S-8 HE</English>
@@ -558,6 +570,7 @@
             <Korean>S-8 고폭탄</Korean>
             <Chinesesimp>S-8 高爆弹</Chinesesimp>
             <Chinese>S-8 高爆彈</Chinese>
+            <Turkish>S-8 HE</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_AP_F">
             <English>Hydra 70 AP</English>
@@ -573,6 +586,7 @@
             <Korean>Hydra 70 철갑탄</Korean>
             <Chinesesimp>九头蛇 70 反人员弹</Chinesesimp>
             <Chinese>九頭蛇 70 反人員彈</Chinese>
+            <Turkish>Hydra 70 AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_AP_F">
             <English>S-8 AP</English>
@@ -588,6 +602,7 @@
             <Korean>S-8 철갑탄</Korean>
             <Chinesesimp>S-8 反人员弹</Chinesesimp>
             <Chinese>S-8 反人員彈</Chinese>
+            <Turkish>S-8 AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_4Rnd_Bomb_04_F">
             <English>GBU-12</English>
@@ -603,6 +618,7 @@
             <Korean>GBU-12</Korean>
             <Chinesesimp>GBU-12</Chinesesimp>
             <Chinese>GBU-12</Chinese>
+            <Turkish>GBU-12</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Bomb_03_F">
             <English>FAB-250M-54</English>
@@ -618,6 +634,7 @@
             <Korean>FAB-250M-54</Korean>
             <Chinesesimp>FAB-250M-54</Chinesesimp>
             <Chinese>FAB-250M-54</Chinese>
+            <Turkish>FAB-250M-54</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_rearmCargo_edenName">
             <English>Rearm Cargo</English>
@@ -653,6 +670,7 @@
             <Italian>Distanza di riarmo</Italian>
             <Czech>Přezbrojovací vzdálenost</Czech>
             <Polish>Odległość przezbrojenia</Polish>
+            <Russian>Дистанция перевооружения</Russian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_distance_Description">
             <English>The maximum distance a vehicle can be rearmed at</English>
@@ -664,6 +682,7 @@
             <Italian>La distanza massima a cui un veicolo può essere riarmato</Italian>
             <Czech>Maximální vzdálenost na jakou může být vozidlo přezbrojeno</Czech>
             <Polish>Maksymalna odległość na jakiej pojazd może zostać przezbrojony</Polish>
+            <Russian>Максимальная дистанция для перевооружения</Russian>
         </Key>
     </Package>
 </Project>

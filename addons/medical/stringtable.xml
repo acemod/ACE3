@@ -3,7 +3,7 @@
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Category">
             <English>ACE Medical</English>
-            <Russian>ACE: медицина</Russian>
+            <Russian>ACE Медицина</Russian>
             <Polish>ACE Opcje medyczne</Polish>
             <Spanish>Médico ACE</Spanish>
             <German>ACE-Medicsystem</German>
@@ -26,6 +26,7 @@
             <French>Chance de reprendre connaissance</French>
             <Portuguese>Chance de recuperar consciência</Portuguese>
             <Chinese>從無意識中甦醒機率</Chinese>
+            <Chinesesimp>ACE 从无意识中苏醒概率</Chinesesimp>
             <Italian>Chance di rialzarsi</Italian>
             <Czech>Pravděpodobnost probuzení se z bezvědomí</Czech>
             <Polish>Szansa na wybudzenie nieprzytomnego</Polish>
@@ -39,6 +40,7 @@
             <French>La probabilité pour qu'une unité inconsciente en état stable reprenne conscience spontanément (état vérifié toutes les 15 secondes).</French>
             <Portuguese>A probabilidade que uma unidade com vitais estabilizados possa recuperar consciências (verificado a cada 15 segundos)</Portuguese>
             <Chinese>生命跡象穩定的單位從無意識狀態中甦醒的機率（每十五秒確認一次）</Chinese>
+            <Chinesesimp>生命迹象稳定的单位从无意识状态中苏醒的概率（每十五秒确认一次）</Chinesesimp>
             <Italian>La probabilità che un'unità con i segni vitali stabili si risvegli dall'incoscienza (controllata ogni 15 secondi).</Italian>
             <Czech>Pravděpodobnost, že se jednotka se stabilními životními známkami probudí z bezvědomí (zkoušeno každých 15 vteřin).</Czech>
             <Polish>Prawdopodobieństwo, że jednostka ze stabilnymi parametrami życiowymi obudzi się z nieprzytomności (sprawdzane co 15 sekund).</Polish>
@@ -49,13 +51,17 @@
             <French>L'épinéphrine augmente les chances de réveil</French>
             <Polish>Zwiększenie szansy na wybudzenie po podaniu epinefryny</Polish>
             <Chinese>腎上腺素甦醒率加成</Chinese>
+            <Chinesesimp>肾上腺素苏醒概率加成</Chinesesimp>
             <German>Erhöhung der Aufwachüberprüfungsrate durch Epinephrin</German>
             <Japanese>アドレナリン覚醒率の上昇</Japanese>
+            <Czech>Zvýšení pravděpodobnosti probuzení s Epinefrinem</Czech>
+            <Russian>Увеличение шанса очнуться от адреналина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
             <Japanese>患者がアドレナリンを投与されると自発的に覚醒する確率を上昇させます。</Japanese>
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
+            <Chinesesimp>增加因病患的循环系统里面的肾上腺素自我苏醒的机率。</Chinesesimp>
             <French>Augmente la fréquence des tests de réveil lorsque le patient a de l'épinéphrine dans son système sanguin.\n(L'épinéphrine n'accélère pas la reprise de conscience si la valeur est définie sur 1.)</French>
             <Italian>Aumenta la frequenza dei controlli al risveglio spontaneo quando il paziente ha l'Epinefrina nel suo corpo</Italian>
             <Czech>Zvyšuje jak často je proveden test na probuzení z bezvědomí pokud má pacient Epinefrin ve svém krevním oběhu.</Czech>
@@ -63,6 +69,7 @@
             <Portuguese>Aumenta o quão frequentemente checagens de acordar acontecem quando o paciente possui epinefrina no seu sistema</Portuguese>
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
             <German>Erhöht wie oft Aufwachprüfungen passieren, wenn ein Patient Epinephrin im Blutkreislauf hat.</German>
+            <Russian>Увеличивает частоту проверок на спонтанное пробуждение, когда пациент под действием адреналина.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -71,6 +78,7 @@
             <French>Boitement</French>
             <Portuguese>Mancando</Portuguese>
             <Chinese>跛腳</Chinese>
+            <Chinesesimp>跛脚</Chinesesimp>
             <Italian>Zoppicare</Italian>
             <Czech>Kulhání</Czech>
             <Polish>Kuśtykanie</Polish>
@@ -81,6 +89,7 @@
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
             <Japanese>創傷開放か傷があると跛行するかどうかを決定できます。</Japanese>
             <Chinese>控制裂開或者已包紮傷口是否會讓人跛腳。</Chinese>
+            <Chinesesimp>控制裂开或者已包扎伤口是否会让人跛脚。</Chinesesimp>
             <French>Permet de définir si les plaies ouvertes ou pansées font boiter une personne.</French>
             <Italian>Controlla se le ferite aperte o bendate fanno zoppicare una persona.</Italian>
             <Czech>Nastavuje zda otevřená nebo zavázaná zranění způsobují kulhání.</Czech>
@@ -88,6 +97,7 @@
             <Portuguese>Controla se ferimentos abertos ou enfaixados causam a pessoa a mancar  </Portuguese>
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
             <German>Stellt ein, ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
+            <Russian>Контролирует хромоту в случае открытых или забинтованных ран.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -96,6 +106,7 @@
             <French>Boiter si plaies ouvertes</French>
             <Portuguese>Mancar se possuir feridas abertas</Portuguese>
             <Chinese>傷口裂開時跛腳</Chinese>
+            <Chinesesimp>伤口裂开时跛脚</Chinesesimp>
             <Italian>Zoppo per via delle ferite aperte</Italian>
             <Czech>Kulhat s otevřeným zraněním</Czech>
             <Polish>Kuśtykanie przy otwartych ranach</Polish>
@@ -109,6 +120,7 @@
             <French>Boiter si plaies ouvertes ou pansées</French>
             <Portuguese>Mancar se possuir feridas abertas ou atadas</Portuguese>
             <Chinese>使裂開或者包紮過的傷口讓人跛腳</Chinese>
+            <Chinesesimp>使裂开或者包扎过的伤口让人跛脚</Chinesesimp>
             <Italian>Zoppicare su ferite aperte o bendate</Italian>
             <Czech>Kulhat s otevřeným i zavázaným zraněním</Czech>
             <Polish>Kuśtykanie przy otwartych ranach lub zabandażowanych ranach</Polish>
@@ -122,6 +134,7 @@
             <French>Fractures</French>
             <Portuguese>Fraturas</Portuguese>
             <Chinese>骨折</Chinese>
+            <Chinesesimp>骨折</Chinesesimp>
             <Italian>Fratture</Italian>
             <Czech>Zlomeniny</Czech>
             <Polish>Złamania</Polish>
@@ -132,6 +145,7 @@
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
             <Japanese>医療機能で骨折に添え木効果を使うかどうかを決定できます。\n無効化すると、骨折効果は表れません。</Japanese>
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
+            <Chinesesimp>控制是否让固定版能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
             <French>Permet de définir le niveau d'efficacité des attelles pour le traitement des fractures.\nSi l'option est désactivée, les blessures ne causent pas de fractures.</French>
             <Italian>Controlla l'effetto dell'utilizzo di stecche per curare le fratture. Quando disabilitato, le lesioni non causano fratture.</Italian>
             <Czech>Nastavuje efekt dlahy při léčení zlomenin.\nPokud je tato možnost vypnuta, zranění nebudou způsobovat zlomeniny.</Czech>
@@ -139,6 +153,7 @@
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas. \nQunado desabilitado, ferimentos não causam fraturas. </Portuguese>
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
             <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
+            <Russian>Управляет эффектом использования шин для лечения переломов.\nПри отключении травмы не вызывают переломов.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -147,6 +162,7 @@
             <French>Les attelles guérissent complètement les fractures</French>
             <Portuguese>Tala cura fraturas completamente</Portuguese>
             <Chinese>固定板完全治癒骨折</Chinese>
+            <Chinesesimp>固定板完全治愈骨折</Chinesesimp>
             <Italian>Le gessature curano al massimo le fratture</Italian>
             <Czech>Dlahy kompletně léčí zlomeniny</Czech>
             <Polish>Szyny leczą zupełnie złamania</Polish>
@@ -160,6 +176,7 @@
             <French>Les attelles guérissent les fractures, mais empêchent de sprinter</French>
             <Portuguese>Talas curam (mas não consegue correr)</Portuguese>
             <Chinese>固定版能治癒骨折，但無法奔跑</Chinese>
+            <Chinesesimp>固定版能治愈骨折，但无法奔跑</Chinesesimp>
             <Italian>Le gessature curano, ma non puoi correre</Italian>
             <Czech>Dlahy léčí, ale zněmožňují sprintování</Czech>
             <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
@@ -170,11 +187,19 @@
             <English>Fracture Chance</English>
             <French>Chance de fracture</French>
             <Japanese>骨折確率</Japanese>
+            <Chinesesimp>骨折概率</Chinesesimp>
+            <Czech>Šance na zlomeninu</Czech>
+            <Russian>Шанс перелома</Russian>
+            <Polish>Szansa na złamanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
             <French>La probabilité pour qu'une blessure pouvant causer une fracture en crée effectivement une.</French>
             <Japanese>骨折の原因となる負傷で骨折する確率を決定します。</Japanese>
+            <Chinesesimp>骨折导致的伤口再次骨折的可能性。</Chinesesimp>
+            <Czech>Výška šance kdy zranění způsobující zlomeniny skutečně způsobí zlomeninu.</Czech>
+            <Russian>Вероятность перелома при получении соответствующих ран.</Russian>
+            <Polish>Prawdopodobieństwo złamania kości w wyniku rany mogącej powodować złamania.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -303,6 +328,7 @@
             <Korean>안정된</Korean>
             <Chinesesimp>稳定状态下</Chinesesimp>
             <Chinese>穩定狀態下</Chinese>
+            <Turkish>Dengeli</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Category_Medical">
             <English>Medical</English>
@@ -319,6 +345,7 @@
             <Korean>의료</Korean>
             <Chinesesimp>医疗设定</Chinesesimp>
             <Chinese>醫療設定</Chinese>
+            <Turkish>Medikal</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_DistanceToFar">
             <English>Distance to %1 has become too far for treatment</English>

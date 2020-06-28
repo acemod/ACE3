@@ -18,6 +18,7 @@ PREP(getDown);
 PREP(sendAway);
 PREP(canJoinGroup);
 PREP(modifyJoinGroupAction);
+PREP(modifyTeamManagementAction);
 PREP(canJoinTeam);
 PREP(joinTeam);
 PREP(canPassMagazine);
