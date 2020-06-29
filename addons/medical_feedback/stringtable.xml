@@ -118,7 +118,7 @@
             <French>Permet de choisir quel effet provoque un faible volume sanguin.</French>
             <Japanese>低血液量時の効果を選択できます。</Japanese>
             <Czech>Nastavuje který efekt pro nízké množství krve bude používán.</Czech>
-            <Polish>Wybiera efekt ktory bedzie pokazywany po utracie znacznej ilości krwi</Polish>
+            <Polish>Wybiera efekt ktory będzie pokazywany po utracie znacznej ilości krwi.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>

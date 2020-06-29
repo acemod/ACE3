@@ -23,8 +23,8 @@ PROJECT_NAME = "ACE"
 def check_stringtable(filepath):
     try:
         tree = ET.parse(filepath)
-    except:
-        print("  ERROR: Failed to parse file.")
+    except Exception as e:
+        print("  ERROR: Failed to parse file. {}".format(e))
         return 1
 
     errors = 0
