@@ -172,10 +172,12 @@
 #define FADE_DELAY 0.15
 #define CAM_DIS_MAX 5
 
+#define RIGHT_PANEL_CUSTOM_BUTTONS 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+#define RIGHT_PANEL_CUSTOM_BACKGROUND 60, 62, 64, 66, 68, 70, 72, 74, 76, 78
 #define RIGHT_PANEL_ACC_IDCS IDC_buttonOptic, IDC_buttonItemAcc, IDC_buttonMuzzle, IDC_buttonBipod
 #define RIGHT_PANEL_ACC_BACKGROUND_IDCS IDC_iconBackgroundOptic, IDC_iconBackgroundItemAcc, IDC_iconBackgroundMuzzle, IDC_iconBackgroundBipod
-#define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc
-#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc
+#define RIGHT_PANEL_ITEMS_IDCS IDC_buttonMag, IDC_buttonMagALL, IDC_buttonThrow, IDC_buttonPut, IDC_buttonMisc, RIGHT_PANEL_CUSTOM_BUTTONS
+#define RIGHT_PANEL_ITEMS_BACKGROUND_IDCS IDC_iconBackgroundMag, IDC_iconBackgroundMagALL, IDC_iconBackgroundThrow, IDC_iconBackgroundPut, IDC_iconBackgroundMisc, RIGHT_PANEL_CUSTOM_BACKGROUND
 #define ARROWS_IDCS IDC_arrowMinus, IDC_arrowPlus
 
 #define GETDLC\
@@ -304,7 +306,38 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
 } foreach [\
     IDC_blockRightFrame,\
     IDC_blockRighttBackground\
-];
+];\
+if (!isNil QGVAR(customRightPanelButtons)) then {\
+    private _miscOffset = 0;\
+    {\
+        if (!isNil "_x") then {\
+            _x params ["", "_picture", "_tooltip"];\
+            _miscOffset = _forEachIndex + 1;\
+            private _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Background), 60 + (_forEachIndex * 2)];\
+            _ctrl ctrlSetPosition [\
+                safezoneW + safezoneX - 13 * GRID_W,\
+                safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
+            ];\
+            _ctrl ctrlCommit 0;\
+            _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + (_forEachIndex * 2)];\
+            _ctrl ctrlSetPosition [\
+                safezoneW + safezoneX - 10 * GRID_W,\
+                safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
+            ];\
+            _ctrl ctrlSetText _picture;\
+            _ctrl ctrlSetTooltip _tooltip;\
+            _ctrl ctrlCommit 0;\
+        };\
+    } forEach GVAR(customRightPanelButtons);\
+    {\
+        _x = _display displayCtrl _x;\
+        _x ctrlSetPosition [\
+            safezoneW + safezoneX - (10 + (3 * _forEachIndex)) * GRID_W,\
+            safezoneY + (88 + (10 * _miscOffset)) * GRID_H\
+        ];\
+        _x ctrlCommit 0;\
+    } forEach [IDC_buttonMisc, IDC_iconBackgroundMisc];\
+};
 
 #define TOGGLE_RIGHT_PANEL_HIDE\
 {\
