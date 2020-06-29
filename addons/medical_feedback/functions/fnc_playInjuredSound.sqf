@@ -27,6 +27,15 @@ if (!local _unit) exitWith { ERROR_2("playInjuredSound: Unit not local or null [
 
 if !(_unit call EFUNC(common,isAwake)) exitWith {};
 
+// Limit network traffic by only sending the event to players who can potentially hear it
+private _distance = if (_type == "hit") then {
+    [50, 60, 70] select _severity;
+} else {
+    [10, 15, 20] select _severity;
+};
+private _targets = allPlayers inAreaArray [getPosWorld _unit, _distance, _distance, 0, false, _distance];
+if (_targets isEqualTo []) exitWith {};
+
 // Handle timeout
 if (_unit getVariable [QGVAR(soundTimeout) + _type, -1] > CBA_missionTime) exitWith {};
 private _timeOut = if (_type == "moan") then { TIME_OUT_MOAN # _severity } else { TIME_OUT_HIT };
@@ -45,11 +54,6 @@ if (isNull (configFile >> "CfgSounds" >> format ["ACE_moan_%1_low_1", _speaker])
 
 // Select actual sound
 private _variation = ["low", "mid", "high"] select _severity;
-private _distance = if (_type == "hit") then {
-    [50, 60, 70] select _severity;
-} else {
-    [10, 15, 20] select _severity;
-};
 
 private _cfgSounds = configFile >> "CfgSounds";
 private _targetClass = format ["ACE_%1_%2_%3_", _type, _speaker, _variation];
@@ -62,6 +66,4 @@ while {isClass (_cfgSounds >> (_targetClass + str _index))} do {
 private _sound = configName selectRandom _sounds;
 if (isNil "_sound") exitWith { WARNING_1("no sounds for target [%1]",_targetClass); };
 
-// Limit network traffic by only sending the event to players who can potentially hear it
-private _targets = _unit nearEntities ["CAManBase", _distance];
 [QGVAR(forceSay3D), [_unit, _sound, _distance], _targets] call CBA_fnc_targetEvent;

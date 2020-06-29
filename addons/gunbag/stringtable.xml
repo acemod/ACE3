@@ -33,6 +33,22 @@
             <Turkish>Silah Çantası (Tan)</Turkish>
             <Spanish>Funda de arma (Tan)</Spanish>
         </Key>
+        <Key ID="STR_ACE_Gunbag_DisplayName_Settings">
+            <English>ACE Gunbag</English>
+            <German>ACE Waffentasche</German>
+            <French>ACE Housse d'arme</French>
+            <Russian>ACE Чехол</Russian>
+            <Czech>ACE Pouzdro na zbraň</Czech>
+            <Japanese>ACE ガンバッグ</Japanese>
+            <Polish>ACE Torba na broń</Polish>
+            <Korean>ACE 총가방</Korean>
+            <Italian>ACE Borsa per Armi</Italian>
+            <Chinesesimp>ACE 枪袋</Chinesesimp>
+            <Chinese>ACE 槍袋</Chinese>
+            <Portuguese>ACE Bolsa de Arma</Portuguese>
+            <Turkish>ACE Silah Çantası</Turkish>
+            <Spanish>ACE Funda de arma</Spanish>
+        </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
             <German>Lege Waffe in Waffentasche</German>
@@ -49,10 +65,28 @@
             <Turkish>Silahını silah çantasına koy</Turkish>
             <Spanish>Poner el arma en la funda</Spanish>
         </Key>
+        <Key ID="STR_ACE_Gunbag_SwapGunbag">
+            <English>Exchange weapon in gunbag</English>
+            <Polish>Wymień broń w torbie</Polish>
+            <Russian>Заменить оружие в чехле</Russian>
+            <French>Échanger les armes</French>
+        </Key>
+        <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_DisplayName">
+            <English>Enable Weapon Swap</English>
+            <Polish>Aktywuj wymianę broni</Polish>
+            <Russian>Включить обмен оружием</Russian>
+            <French>Activer l'échange d'arme</French>
+        </Key>
+        <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_Description">
+            <English>Allows interaction to directly swap the primary weapon and stored weapon.</English>
+            <Polish>Pozwala na interakcje do wymiany broni głównej na bron schowaną.</Polish>
+            <Russian>Разрешает действие прямого обмена основного оружия и спрятанного в чехле.</Russian>
+            <French>Permet d'échanger directement l'arme primaire et l'arme stockée dans la housse, via le menu d'interaction personnelle.</French>
+        </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
             <German>Hole Waffe aus Waffentasche</German>
-            <French>Extraire l'arme de la housse</French>
+            <French>Prendre l'arme de la housse</French>
             <Russian>Расчехлить оружие</Russian>
             <Czech>Vytáhnout zbraň z pouzdra</Czech>
             <Japanese>ガンバッグから武器を出す</Japanese>

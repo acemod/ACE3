@@ -18,6 +18,7 @@ Janus
 jokoho482 <jokoho482@gmail.com>
 Jonpas <jonpas33@gmail.com>
 Kieran
+mharis001 <mhariszakar@gmail.com>
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
 Ruthberg <ulteq@web.de>
@@ -43,7 +44,6 @@ Andrea "AtixNeon" Verano <veranoandrea88@gmail.com>
 Anthariel <Contact@storm-simulation.com>
 Arcanum417 <lubos.len@gmail.com>
 Anton
-Arcanum417 <lubos.len@gmail.com>
 Arkhir <wonsz666@gmail.com >
 Asgar Serran <piechottaf@web.de>
 BaerMitUmlaut
@@ -63,6 +63,7 @@ Codingboy
 Coren <coren4@gmail.com>
 Crusty
 C0kkie
+dgibso29 <gibson@earringpranks.com>
 Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
 Dimaslg <dimaslg@telecable.es>
 diwako
@@ -113,7 +114,6 @@ Luigi "Luigium" Myrini <luigium@outlook.fr>
 Macusercom <macusercom@gmail.com>
 MarcBook
 meat <p.humberdroz@gmail.com>
-mharis001 <mhariszakar@gmail.com>
 Michail Nikolaev
 MikeMatrix <m.braun92@gmail.com>
 nic547 <nic547@outlook.com>
@@ -138,8 +138,10 @@ Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
 Rutger "RedBery" Meijering <c.redbery@gmail.com>
 Schwaggot <tom.ryan@posteo.de>
+shukari
 simon84 <badguy360th@gmail.com>
 Skengman2
+Smith <smitt14ua@gmail.com>
 Sniperwolf572 <tenga6@gmail.com>
 System98
 SzwedzikPL <szwedzikpl@gmail.com>
@@ -158,3 +160,4 @@ Winter <simon@agius-muscat.net>
 xrufix
 Zakant <Zakant@gmx.de>
 zGuba
+Fyuran <dankemedic@hotmail.com>

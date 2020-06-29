@@ -84,7 +84,7 @@ _target setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
 
 TRACE_1("",_reopeningChance);
 // Check if we are ever going to reopen this
-if (random 1 <= _reopeningChance) then {
+if (random 1 <= _reopeningChance * GVAR(woundReopenChance)) then {
     private _delay = _reopeningMinDelay + random (_reopeningMaxDelay - _reopeningMinDelay);
     TRACE_1("Will open",_delay);
     [{

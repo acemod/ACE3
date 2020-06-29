@@ -155,6 +155,7 @@
             <French>Pas du limiteur de vitesse</French>
             <Japanese>設定速度の増減量</Japanese>
             <Czech>Krokování omezovače rychlosti</Czech>
+            <Russian>Шаг ограничителя скорости</Russian>
         </Key>
     </Package>
 </Project>

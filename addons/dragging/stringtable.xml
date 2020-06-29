@@ -37,7 +37,7 @@
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
-            <Russian>Тащить/Отпустить Объекты</Russian>
+            <Russian>Тащить/Отпустить Объект</Russian>
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
             <Polish>Ciągnij/Puść Obiekt</Polish>
             <Czech>Táhnout/Položit Objekt</Czech>
@@ -51,6 +51,12 @@
             <Chinese>拖拉/放開物品</Chinese>
             <Chinesesimp>拖拉/放开物品</Chinesesimp>
             <Turkish>Objeyi Sürükle/Bırak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Dragging_CarryKeybind">
+            <English>Carry/Release Object</English>
+            <French>Porter/Lâcher un objet</French>
+            <Russian>Нести/Отпустить Объект</Russian>
+            <Polish>Nieś/Puść objekt</Polish>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -92,6 +98,8 @@
             <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
             <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
             <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
+            <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
+            <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
         </Key>
     </Package>
 </Project>

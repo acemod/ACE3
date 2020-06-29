@@ -273,9 +273,20 @@ switch (_ctrlIDC) do {
     };
 
     case IDC_buttonMisc : {
+        // hide custom button items
+        private _blockItems = [];
+        if (!isNil QGVAR(customRightPanelButtons)) then {
+            {
+                if (!isNil "_x") then {
+                    _blockItems append (_x select 0);
+                };
+            } forEach GVAR(customRightPanelButtons);
+        };
+        
         {
             ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 17);
+        } forEach ((GVAR(virtualItems) select 17) select {!((toLower _x) in _blockItems)});
+        
         {
             ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 18);
@@ -285,6 +296,20 @@ switch (_ctrlIDC) do {
         {
             ["CfgGlasses", _x, false, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 24);
+    };
+    
+    default {
+        private _index = [RIGHT_PANEL_CUSTOM_BUTTONS] find _ctrlIDC;
+        if (_index != -1) then {
+            private _data = GVAR(customRightPanelButtons) param [_index];
+            
+            if (!isNil "_data") then {
+                private _items = _data select 0;
+                {
+                    ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
+                } foreach ((GVAR(virtualItems) select 17) select {(toLower _x) in _items});
+            };
+        };
     };
 };
 

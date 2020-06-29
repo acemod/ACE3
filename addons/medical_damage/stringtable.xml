@@ -640,6 +640,8 @@
             <French>Seuil de dégâts</French>
             <Japanese>ユニットのダメージしきい値</Japanese>
             <Czech>Práh poškození</Czech>
+            <Russian>Порог урона</Russian>
+            <Polish>Próg obrażeń jednostki</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
             <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
@@ -647,6 +649,8 @@
             <French>Définit la quantité de dégâts que l'unité peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).\n(0 utilise la valeur définie dans la mission.)</French>
             <Japanese>ユニットが気絶するまで許容できるダメージ値を設定できます。標準: 0</Japanese>
             <Czech>Určuje kolik poškození může jednotka utrpět než upadne do bezvědomí. (pro použití standardní hodnoty mise zadejte 0)</Czech>
+            <Russian>Устанавливает количество урона, которое может получить юнит перед тем, как потерять сознание. (0 для значения миссии)</Russian>
+            <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
         </Key>
     </Package>
 </Project>
