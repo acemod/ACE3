@@ -18,7 +18,7 @@
  */
 params [["_vehicle", objNull, [objNull]], ["_deploySpecial", false, [true]], ["_createDeploymentGroup", true, [true]]];
 
-if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
+if (isNull _vehicle || {!((_vehicle isKindOf "Helicopter") || (_vehicle isKindOf "Plane"))}) exitWith {
     if (hasInterface) then {
         // Note: BIS_fnc_guiMessage causes a CTD with call, so spawn is used instead.
         ["deployAI was called with an invalid or non-existant vehicle.", QFUNC(deployAI)] spawn BIS_fnc_guiMessage;
