@@ -5,13 +5,13 @@
  *
  * Arguments:
  * 0: Map Handle <CONTROL>
- * 1: Positions (objects or posAGLs) <ARRAY>
+ * 1: Positions (objects or posAGLs) with render distance <ARRAY<ARRAY<OBJECT,NUMBER>>>
  *
  * Return Value:
  * None
  *
  * Example:
- * [findDisplay 12 displayCtrl 51, [player]] call ace_map_gestures_fnc_drawMapGestures
+ * [findDisplay 12 displayCtrl 51, [[player, 0]]] call ace_map_gestures_fnc_drawMapGestures
  *
  * Public: No
  */
@@ -29,10 +29,8 @@ BEGIN_COUNTER(draw);
 #define TEXT_SHADOW 0
 
 if (!GVAR(enabled)) exitWith {};
-
 params ["_mapHandle", "_positions"];
-
-private _players = [[_positions, GVAR(maxRange)], FUNC(getProximityPlayers), missionNamespace, QGVAR(proximityPlayersCache), 1] call EFUNC(common,cachedCall);
+private _players = [_positions, FUNC(getProximityPlayers), missionNamespace, QGVAR(proximityPlayersCache), 1] call EFUNC(common,cachedCall);
 // Iterate over all nearby players and render their pointer if player is transmitting.
 {
     private _pos = _x getVariable QGVAR(pointPosition);
