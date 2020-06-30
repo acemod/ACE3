@@ -211,7 +211,7 @@
             <French>Menu médical</French>
             <Japanese>治療メニュー</Japanese>
             <Korean>의료 메뉴</Korean>
-            <Chinesesimp>医疗选单</Chinesesimp>
+            <Chinesesimp>医疗菜单</Chinesesimp>
             <Chinese>醫療選單</Chinese>
             <Turkish>Medikal Menü</Turkish>
         </Key>
@@ -227,7 +227,7 @@
             <French>Ouvir le menu médical</French>
             <Japanese>治療メニューを開く</Japanese>
             <Korean>의료 메뉴 열기</Korean>
-            <Chinesesimp>开起医疗选单</Chinesesimp>
+            <Chinesesimp>打开医疗菜单</Chinesesimp>
             <Chinese>開起醫療選單</Chinese>
             <Turkish>Medikal Menüyü Aç</Turkish>
         </Key>
@@ -244,7 +244,7 @@
             <Czech>Naložit pacienta</Czech>
             <Japanese>患者を載せる</Japanese>
             <Korean>환자 싣기</Korean>
-            <Chinesesimp>将伤者放入</Chinesesimp>
+            <Chinesesimp>将伤者装入</Chinesesimp>
             <Chinese>將傷者放入</Chinese>
             <Turkish>Kişiyi Bindir</Turkish>
         </Key>
@@ -308,7 +308,7 @@
             <Italian>PANORAMICA</Italian>
             <Japanese>オーバービュー</Japanese>
             <Korean>개요</Korean>
-            <Chinesesimp>概述</Chinesesimp>
+            <Chinesesimp>总览</Chinesesimp>
             <Chinese>概述</Chinese>
             <Turkish>GENEL BAKIŞ</Turkish>
         </Key>
@@ -324,7 +324,7 @@
             <Italian>LOG ATTIVITA'</Italian>
             <Japanese>治療履歴</Japanese>
             <Korean>활동 로그</Korean>
-            <Chinesesimp>医疗纪录</Chinesesimp>
+            <Chinesesimp>医疗记录</Chinesesimp>
             <Chinese>醫療紀錄</Chinese>
             <Turkish>AKTIVITE GÜNLÜĞÜ</Turkish>
         </Key>
@@ -357,7 +357,7 @@
             <Portuguese>FERIMENTOS</Portuguese>
             <Japanese>負傷</Japanese>
             <Korean>부상</Korean>
-            <Chinesesimp>受伤</Chinesesimp>
+            <Chinesesimp>负伤</Chinesesimp>
             <Chinese>受傷</Chinese>
             <Turkish>YARALANMALARI</Turkish>
         </Key>
@@ -373,7 +373,7 @@
             <Italian>Guarda Triage Card</Italian>
             <Japanese>トリアージ カードを見る</Japanese>
             <Korean>부상자 카드 보기</Korean>
-            <Chinesesimp>查看诊断卡</Chinesesimp>
+            <Chinesesimp>查看分诊卡</Chinesesimp>
             <Chinese>查看診斷卡</Chinese>
             <Turkish>Triyaj Kartını Görüntüle</Turkish>
         </Key>
@@ -389,7 +389,7 @@
             <Italian>Esamina Paziente</Italian>
             <Japanese>患者を調べる</Japanese>
             <Korean>환자 검사하기</Korean>
-            <Chinesesimp>检查伤者</Chinesesimp>
+            <Chinesesimp>检查伤员</Chinesesimp>
             <Chinese>檢查傷者</Chinese>
             <Turkish>Hastayı Incele</Turkish>
         </Key>
@@ -405,7 +405,7 @@
             <Italian>Bendaggi/Fratture</Italian>
             <Japanese>包帯 / 骨折</Japanese>
             <Korean>붕대 / 골절</Korean>
-            <Chinesesimp>绷带 / 骨折</Chinesesimp>
+            <Chinesesimp>包扎 / 骨折</Chinesesimp>
             <Chinese>繃帶 / 骨折</Chinese>
             <Turkish>Bandaj / Kırıklar</Turkish>
         </Key>
@@ -515,7 +515,7 @@
             <Italian>Torso</Italian>
             <Japanese>胴体</Japanese>
             <Korean>몸통</Korean>
-            <Chinesesimp>身体</Chinesesimp>
+            <Chinesesimp>躯干</Chinesesimp>
             <Chinese>身體</Chinese>
             <Turkish>Gövde</Turkish>
         </Key>
@@ -531,7 +531,7 @@
             <Italian>Braccio Sinistro</Italian>
             <Japanese>左腕</Japanese>
             <Korean>왼쪽 팔</Korean>
-            <Chinesesimp>左手</Chinesesimp>
+            <Chinesesimp>左臂</Chinesesimp>
             <Chinese>左手</Chinese>
             <Turkish>Sol Kol</Turkish>
         </Key>
@@ -547,7 +547,7 @@
             <Italian>Braccio Destro</Italian>
             <Japanese>右腕</Japanese>
             <Korean>오른쪽 팔</Korean>
-            <Chinesesimp>右手</Chinesesimp>
+            <Chinesesimp>右臂</Chinesesimp>
             <Chinese>右手</Chinese>
             <Turkish>Sağ Kol</Turkish>
         </Key>
@@ -563,7 +563,7 @@
             <Italian>Gamba Sinistra</Italian>
             <Japanese>左足</Japanese>
             <Korean>왼쪽 다리</Korean>
-            <Chinesesimp>左脚</Chinesesimp>
+            <Chinesesimp>左腿</Chinesesimp>
             <Chinese>左腳</Chinese>
             <Turkish>Sol Bacak</Turkish>
         </Key>
@@ -579,7 +579,7 @@
             <Italian>Gamba Destra</Italian>
             <Japanese>右足</Japanese>
             <Korean>오른쪽 다리</Korean>
-            <Chinesesimp>右脚</Chinesesimp>
+            <Chinesesimp>右腿</Chinesesimp>
             <Chinese>右腳</Chinese>
             <Turkish>Sağ Bacak</Turkish>
         </Key>
@@ -611,7 +611,7 @@
             <Italian>Seleziona Torso</Italian>
             <Japanese>胴体を選ぶ</Japanese>
             <Korean>몸통 선택</Korean>
-            <Chinesesimp>选择身体</Chinesesimp>
+            <Chinesesimp>选择躯干</Chinesesimp>
             <Chinese>選擇身體</Chinese>
             <Turkish>Gövdeyi Seç</Turkish>
         </Key>
@@ -627,7 +627,7 @@
             <Italian>Seleziona Braccio Sinistro</Italian>
             <Japanese>左腕を選ぶ</Japanese>
             <Korean>왼쪽 팔 선택</Korean>
-            <Chinesesimp>选择左手</Chinesesimp>
+            <Chinesesimp>选择左臂</Chinesesimp>
             <Chinese>選擇左手</Chinese>
             <Turkish>Sol Kolu Seç</Turkish>
         </Key>
@@ -643,7 +643,7 @@
             <Italian>Seleziona Braccio Destro</Italian>
             <Japanese>右腕を選ぶ</Japanese>
             <Korean>오른쪽 팔 선택</Korean>
-            <Chinesesimp>选择右手</Chinesesimp>
+            <Chinesesimp>选择右臂</Chinesesimp>
             <Chinese>選擇右手</Chinese>
             <Turkish>Sağ Kolu Seç</Turkish>
         </Key>
@@ -659,7 +659,7 @@
             <Italian>Seleziona Gamba Sinistra</Italian>
             <Japanese>左足を選ぶ</Japanese>
             <Korean>왼쪽 다리 선택</Korean>
-            <Chinesesimp>选择左脚</Chinesesimp>
+            <Chinesesimp>选择左腿</Chinesesimp>
             <Chinese>選擇左腳</Chinese>
             <Turkish>Sol Bacağı Seç</Turkish>
         </Key>
@@ -675,7 +675,7 @@
             <Italian>Seleziona Gamba Destra</Italian>
             <Japanese>右足を選ぶ</Japanese>
             <Korean>오른쪽 다리 선택</Korean>
-            <Chinesesimp>选择右脚</Chinesesimp>
+            <Chinesesimp>选择右腿</Chinesesimp>
             <Chinese>選擇右腳</Chinese>
             <Turkish>Sağ Bacağı Seç</Turkish>
         </Key>
@@ -739,7 +739,7 @@
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
             <Japanese>開いている傷口が %2 %1 ほどある</Japanese>
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
-            <Chinesesimp>有 %2 %1 开放性伤口</Chinesesimp>
+            <Chinesesimp>有 %2 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SINGLE_OPEN_WOUND">
@@ -754,7 +754,7 @@
             <Italian>C'è 1 %1 Ferita Aperta</Italian>
             <Japanese>1 つの空いている %1 傷口</Japanese>
             <Korean>여기 %1 크기의 열린 상처가 있다</Korean>
-            <Chinesesimp>有 1 %1 开放性伤口</Chinesesimp>
+            <Chinesesimp>有 1 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PARTIAL_OPEN_WOUND">
@@ -769,7 +769,7 @@
             <Italian>C'è 1 parziale %1 Ferita Aperta</Italian>
             <Japanese>部分的に開いている %1 の傷口がある</Japanese>
             <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有部分 %1 开放性伤口</Chinesesimp>
+            <Chinesesimp>有未完全处理的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MULTIPLE_BANDAGED_WOUNDS">
@@ -784,7 +784,7 @@
             <Italian>Ci sono %2 %1 Ferite Bendate</Italian>
             <Japanese>ここには %2 %1 の処置された傷がある</Japanese>
             <Korean>여기에 붕대를 감은 %2 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有 %2 %1 包扎过伤口</Chinesesimp>
+            <Chinesesimp>有 %2 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SINGLE_BANDAGED_WOUND">
@@ -799,7 +799,7 @@
             <Italian>C'è 1 %1 Ferita Bendata</Italian>
             <Japanese>1 つの包帯で巻かれている %1 傷</Japanese>
             <Korean>여기에 붕대를 감은 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有 1 %1 包扎过伤口</Chinesesimp>
+            <Chinesesimp>有 1 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PARTIAL_BANDAGED_WOUND">
@@ -814,7 +814,7 @@
             <Italian>C'è 1 parziale %1 Ferita Bendata</Italian>
             <Japanese>患者には %1 の包帯で処置された傷がある</Japanese>
             <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有部分 %1 包扎过伤口</Chinesesimp>
+            <Chinesesimp>有未包扎完全的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_NORMAL_BREATHING">
@@ -829,7 +829,7 @@
             <Italian>Respirazione Normale</Italian>
             <Japanese>通常の呼吸</Japanese>
             <Korean>정상 호흡</Korean>
-            <Chinesesimp>正常呼吸</Chinesesimp>
+            <Chinesesimp>呼吸正常</Chinesesimp>
             <Chinese>正常呼吸</Chinese>
             <Turkish>Normal solunum</Turkish>
         </Key>
@@ -877,7 +877,7 @@
             <Italian>Quasi nessuna Respirazione</Italian>
             <Japanese>ほとんど呼吸していない</Japanese>
             <Korean>호흡이 거의 없음</Korean>
-            <Chinesesimp>几乎没有呼吸</Chinesesimp>
+            <Chinesesimp>呼吸微弱</Chinesesimp>
             <Chinese>幾乎沒有呼吸</Chinese>
             <Turkish>Neredeyse hiç nefes almıyor</Turkish>
         </Key>
@@ -893,7 +893,7 @@
             <Italian>Sanguinamento</Italian>
             <Japanese>出血中</Japanese>
             <Korean>출혈</Korean>
-            <Chinesesimp>出血中</Chinesesimp>
+            <Chinesesimp>流血中</Chinesesimp>
             <Chinese>出血中</Chinese>
             <Turkish>Kanama var</Turkish>
         </Key>
@@ -925,7 +925,7 @@
             <Italian>Perso molto Sangue</Italian>
             <Japanese>大量失血した</Japanese>
             <Korean>많은 피를 흘림</Korean>
-            <Chinesesimp>大量失血</Chinesesimp>
+            <Chinesesimp>失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
             <Turkish>Çok fazla kan kaybı var</Turkish>
         </Key>
@@ -940,6 +940,7 @@
             <Czech>Zlomené</Czech>
             <Polish>Złamanie</Polish>
             <Spanish>Fracturada</Spanish>
+            <Chinesesimp>骨折</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
@@ -952,6 +953,7 @@
             <Czech>Dlaha aplikována</Czech>
             <Polish>Szyna założona</Polish>
             <Spanish>Tablilla aplicada</Spanish>
+            <Chinesesimp>已用夹板固定</Chinesesimp>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -967,6 +969,7 @@
             <Polish>Stracił trochę krwi</Polish>
             <Spanish>Algo de sangre perdida</Spanish>
             <Turkish>Az kan kaybı var</Turkish>
+            <Chinesesimp>轻微失血</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
             <English>Lost a lot of blood</English>
@@ -981,7 +984,7 @@
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Japanese>大量失血した</Japanese>
             <Korean>많은 양의 혈액을 잃음</Korean>
-            <Chinesesimp>大量失血中</Chinesesimp>
+            <Chinesesimp>大量失血</Chinesesimp>
             <Chinese>大量失血中</Chinese>
             <Turkish>Çok fazla kan kaybı var</Turkish>
         </Key>
@@ -998,6 +1001,7 @@
             <Polish>Stracił dużą ilość krwi</Polish>
             <Spanish>Perdida gran cantidad de sangre</Spanish>
             <Turkish>Çok miktarda kan kaybetti</Turkish>
+            <Chinesesimp>严重失血</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
             <English>Lost a fatal amount of blood</English>
@@ -1012,6 +1016,7 @@
             <Polish>Stracił krytyczną ilość krwi</Polish>
             <Spanish>Perdida una cantidad fatal de sangre</Spanish>
             <Turkish>Ölümcül miktarda kan kaybetti</Turkish>
+            <Chinesesimp>致命失血</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -1025,7 +1030,7 @@
             <Italian>Laccio Emostatico [CAT]</Italian>
             <Japanese>止血帯 [CAT]</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <Chinesesimp>军用止血带</Chinesesimp>
+            <Chinesesimp>止血带 (军用型)</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
             <Turkish>Turnike [CAT]</Turkish>
         </Key>
@@ -1057,7 +1062,7 @@
             <Portuguese>Cartão de Triagem</Portuguese>
             <Japanese>トリアージ カード</Japanese>
             <Korean>부상자 분류 카드</Korean>
-            <Chinesesimp>检伤分类卡</Chinesesimp>
+            <Chinesesimp>分诊卡</Chinesesimp>
             <Chinese>檢傷分類卡</Chinese>
             <Turkish>Triyaj Kartı</Turkish>
         </Key>
@@ -1074,12 +1079,14 @@
             <German>Partiell %1</German>
             <Turkish>Parsiyel %1</Turkish>
             <Russian>Частичное %1</Russian>
+            <Chinesesimp>未完全处理的 %1</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_IGUI_PatientInfo">
             <English>Patient Info</English>
             <Polish>Informacje o pacjencie</Polish>
             <French>Informations patient</French>
             <Russian>Информация о пациенте</Russian>
+            <Chinesesimp>伤员信息</Chinesesimp>
         </Key>
     </Package>
 </Project>
