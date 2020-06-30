@@ -25,6 +25,10 @@ class Extended_DisplayLoad_EventHandlers {
     };
 
     class RscDiary { // for loading saves use uiNamespace because missionNamespace is not restored before map is loaded
+#ifdef DISABLE_COMPILE_CACHE
         ADDON = QUOTE(((_this select 0) displayCtrl ID_DIARY_MAP) call (missionNamespace getVariable [ARR_2('DFUNC(initDisplayDiary)', uiNamespace getVariable 'DFUNC(initDisplayDiary)')]););
+#else
+        ADDON = QUOTE(((_this select 0) displayCtrl ID_DIARY_MAP) call (uiNamespace getVariable 'DFUNC(initDisplayDiary)'););
+#endif
     };
 };
