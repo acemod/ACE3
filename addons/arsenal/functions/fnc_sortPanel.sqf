@@ -95,7 +95,7 @@ private _mode = 0 max lbCurSel _sortControl;
 private _statement = _sorts select _mode select 2;
 
 missionNamespace setVariable [
-    [QGVAR(lastSortLeft), QGVAR(lastSortRight)] select _sortRight,
+    [QGVAR(lastSortLeft), QGVAR(lastSortRight)] select _rightSort,
     _sorts select _mode select 1
 ];
 
