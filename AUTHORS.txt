@@ -6,6 +6,7 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+Brandon (TCVM) <brandondanyluk366@gmail.com>
 bux578 <github@jonathandavid.de>
 commy2
 esteldunedain <nicolas.d.badano@gmail.com>
@@ -17,6 +18,7 @@ Janus
 jokoho482 <jokoho482@gmail.com>
 Jonpas <jonpas33@gmail.com>
 Kieran
+mharis001 <mhariszakar@gmail.com>
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
 Ruthberg <ulteq@web.de>
@@ -40,11 +42,13 @@ Aleksey EpMAK Yermakov <epmak777@gmail.com>
 Alganthe <alganthe@live.fr>
 Andrea "AtixNeon" Verano <veranoandrea88@gmail.com>
 Anthariel <Contact@storm-simulation.com>
+Arcanum417 <lubos.len@gmail.com>
 Anton
 Arkhir <wonsz666@gmail.com >
 Asgar Serran <piechottaf@web.de>
 BaerMitUmlaut
 Bamse <bamsis@gmail.com>
+Barman75
 Bla1337
 BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
@@ -58,6 +62,8 @@ Clon1998 <ps.patti1998@gmail.com>
 Codingboy
 Coren <coren4@gmail.com>
 Crusty
+C0kkie
+dgibso29 <gibson@earringpranks.com>
 Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
 Dimaslg <dimaslg@telecable.es>
 diwako
@@ -72,11 +78,13 @@ eRazeri
 evromalarkey <evromalarkey@gmail.com>
 F3 Project <alanr@ferstaberinde.com>
 Falke75
+Fatal <tahakocalgs@gmail.com>
 Ferenczi
 Ferenzi
 FFAAMOD <modffaa@gmail.com>
 Filip Basara <filip.basara93@googlemail.com>
 fr89k <kaschitoku@web.de>
+Fragment
 FreeZbe <freeseb@gmail.com>
 geraldbolso1899
 Ghost
@@ -97,6 +105,7 @@ Karneck <dschultz26@hotmail.com>
 Kavinsky <nmunozfernandez@gmail.com>
 Keithen <Keithen.Neu@gmail.com>
 Kllrt <kllrtik@gmail.com>
+KokaKolaA3
 legman <juicemelon@msn.com>
 Legolasindar "Viper" <legolasindar@gmail.com>
 licht-im-Norden87 <lichtimnorden87@gmail.com>
@@ -106,7 +115,6 @@ Luigi "Luigium" Myrini <luigium@outlook.fr>
 Macusercom <macusercom@gmail.com>
 MarcBook
 meat <p.humberdroz@gmail.com>
-mharis001 <mhariszakar@gmail.com>
 Michail Nikolaev
 MikeMatrix <m.braun92@gmail.com>
 nic547 <nic547@outlook.com>
@@ -115,10 +123,13 @@ nomisum <nomisum@gmail.com>
 OnkelDisMaster <onkeldismaster@gmail.com>
 Orbis2358 <mgkid3310@naver.com>
 oscarmolinadev
+Panisher (Tushino Serious Games) <panisher333@gmail.com>
 PaxJaromeMalues <seemax1991@gmail.com>
+PiZZADOX <509thParachuteInfantry@gmail.com>
 Phyma <sethramstrom@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
+Pterolatypus <pterolatypus@gmail.com>
 QuickDagger
 rakowozz
 ramius86 <pasini86@hotmail.com>
@@ -126,8 +137,12 @@ Raspu86
 Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
+Rutger "RedBery" Meijering <c.redbery@gmail.com>
+Schwaggot <tom.ryan@posteo.de>
+shukari
 simon84 <badguy360th@gmail.com>
 Skengman2
+Smith <smitt14ua@gmail.com>
 Sniperwolf572 <tenga6@gmail.com>
 System98
 SzwedzikPL <szwedzikpl@gmail.com>
@@ -139,8 +154,11 @@ Tonic
 Tourorist <tourorist@gmail.com>
 Tuupertunut
 Valentin Torikian <valentin.torikian@gmail.com>
+veteran29
 voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
 Winter <simon@agius-muscat.net>
 xrufix
+Zakant <Zakant@gmx.de>
 zGuba
+Fyuran <dankemedic@hotmail.com>

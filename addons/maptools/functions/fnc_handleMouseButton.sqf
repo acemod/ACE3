@@ -24,8 +24,10 @@ TRACE_2("params",_dir,_params);
 if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
     if (GVAR(freedrawing) && {_dir == 0}) then {
         GVAR(freedrawing) = false;
-        GVAR(drawPosEnd) = _control ctrlMapScreenToWorld [_screenPosX, _screenPosY];
-        TRACE_1("Ending Line",GVAR(freedrawing),GVAR(drawPosEnd));
+        if (_shiftKey) exitWith {
+            TRACE_1("using vanilla straight line",_shiftKey);
+        };
+        TRACE_2("Ending Line",GVAR(freedrawing),GVAR(freeDrawingData));
         [{
             if (allMapMarkers isEqualTo []) exitWith {};
             private _markerName = allMapMarkers select (count allMapMarkers - 1);

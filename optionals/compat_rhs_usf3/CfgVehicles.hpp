@@ -139,6 +139,7 @@ class CfgVehicles {
     class Heli_Transport_02_base_F;
     class RHS_CH_47F_base: Heli_Transport_02_base_F {
         EGVAR(refuel,fuelCapacity) = 3914;
+        class UserActions;
     };
 
     class RHS_CH_47F: RHS_CH_47F_base {
@@ -147,7 +148,7 @@ class CfgVehicles {
         EGVAR(fastroping,onCut) = QFUNC(onCut);
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
 
-        class UserActions {
+        class UserActions: UserActions {
             class OpenCargoDoor;
             class CloseCargoDoor: OpenCargoDoor {
                 condition = QUOTE([ARR_2(this,'ramp_anim')] call FUNC(canCloseDoor));
@@ -300,6 +301,70 @@ class CfgVehicles {
                 selection = "main_gun";
             };
         };
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            magazineLocation = "";
+            proxyWeapon = QGVAR(rhs_mortar_81mm);
+            disassembleWeapon = QGVAR(m252_carry); // carry weapon [CfgWeapons]
+            disassembleTurret = QEGVAR(csw,mortarBaseplate); // turret [CfgVehicles]
+            desiredAmmo = 1;
+            ammoLoadTime = 3;
+            ammoUnloadTime = 3;
+        };
+    };
+
+    class StaticMGWeapon: StaticWeapon {};
+
+    class rhs_m2staticmg_base: StaticMGWeapon {
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_M2);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(m2_carry);
+            disassembleTurret = QEGVAR(csw,m3Tripod);
+            desiredAmmo = 100;
+            ammoLoadTime = 10;
+            ammoUnloadTime = 8;
+        };
+    };
+
+    class RHS_M2StaticMG_MiniTripod_base: rhs_m2staticmg_base {
+        class ACE_CSW: ACE_CSW {
+            enabled = 1;
+            disassembleTurret = QEGVAR(csw,m3TripodLow);
+        };
+    };
+
+    class StaticGrenadeLauncher: StaticWeapon {};
+    class RHS_MK19_TriPod_base: StaticGrenadeLauncher {
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_MK19);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(mk19_carry);
+            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            desiredAmmo = 48;
+            ammoLoadTime = 10;
+            ammoUnloadTime = 8;
+        };
+    };
+
+    class StaticATWeapon: StaticWeapon {};
+    class RHS_TOW_TriPod_base: StaticATWeapon {
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_TOW_Launcher_static);
+            magazineLocation = "_target selectionPosition 'tube'";
+            disassembleWeapon = QGVAR(tow_carry);
+            disassembleTurret = QEGVAR(csw,m220Tripod);
+            desiredAmmo = 1;
+            ammoLoadTime = 8;
+            ammoUnloadTime = 5;
+        };
     };
 
     class rhsusf_infantry_usmc_base;
@@ -315,5 +380,73 @@ class CfgVehicles {
     class rhsusf_usmc_marpat_wd_rifleman_m4;
     class rhsusf_airforce_jetpilot: rhsusf_usmc_marpat_wd_rifleman_m4 {
         ace_gforcecoef = 0.55;
+    };
+
+    class Items_base_F;
+    class ACE_Explosives_Place: Items_base_F {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+
+    // ACE Explosives
+    class ACE_Explosives_Place_rhsusf_explosive_m112: ACE_Explosives_Place {
+        displayName = "$STR_RHSUSF_M112_EXPLOSIVE_DISPLAY_NAME";
+        model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x1_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.055, 0, 0.038]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_explosive_m112x4: ACE_Explosives_Place {
+        displayName = "$STR_RHSUSF_M112X4_EXPLOSIVE_DISPLAY_NAME";
+        model = "\rhsusf\addons\rhsusf_weapons\explosives\rhsusf_m112x4_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.055, 0.025, 0.102]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_M19: ACE_Explosives_Place {
+        displayName = "$STR_RHSUSF_M19_ATMINE_DISPLAY_NAME";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m19_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.014, -0.002, 0.046]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m14: ACE_Explosives_Place {
+        displayName = "$STR_RHSUSF_M14_APMINE_DISPLAY_NAME";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m14_d";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.002, 0.022, 0.02]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_3m: ACE_Explosives_Place {
+        displayName = "M49A1 (3m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_a_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, -0.016, 0.296]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_6m: ACE_Explosives_Place_rhsusf_mine_m49a1_3m {
+        displayName = "M49A1 (6m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_b_e";
+    };
+
+    class ACE_Explosives_Place_rhsusf_mine_m49a1_10m: ACE_Explosives_Place_rhsusf_mine_m49a1_3m {
+        displayName = "M49A1 (10m)";
+        model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_c_e";
     };
 };

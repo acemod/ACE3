@@ -10,6 +10,9 @@
             <Japanese>再武装</Japanese>
             <French>Réarmement</French>
             <Polish>Dozbrajanie</Polish>
+            <Russian>Перевооружение</Russian>
+            <Portuguese>Rearme</Portuguese>
+            <Czech>Přezbrojení</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
             <English>Rearm Settings</English>
@@ -35,7 +38,7 @@
             <Czech>Tento modul umožňuje upravovat systém přezbrojení.</Czech>
             <Italian>Questo modulo ti consente di cambiare le impostazioni del sistema Riarmo.</Italian>
             <Spanish>Este módulo permite cambiar los parámetros de rearme.</Spanish>
-            <French>Ce module autorise l'amélioration du système de réarmement.</French>
+            <French>Ce module vous permet d'ajuster les paramètres du système de réarmement.</French>
             <Japanese>再武装システムの設定を微調整します。</Japanese>
             <Korean>이 모듈은 재보급시의 설정을 바꿀수 있게해줍니다.</Korean>
             <Chinesesimp>此模块允许你调整整装系统设定</Chinesesimp>
@@ -45,7 +48,7 @@
             <English>Rearm Amount</English>
             <German>Aufmunitioniermenge</German>
             <Polish>Szybkość dozbrajania</Polish>
-            <Russian>Количество вооружения</Russian>
+            <Russian>Степень перевооружения</Russian>
             <Portuguese>Quantidade de rearme</Portuguese>
             <Czech>Rychlost přezbrojení</Czech>
             <Italian>Ammontare Riarmo</Italian>
@@ -60,12 +63,12 @@
             <English>How fast should a vehicle be rearmed?</English>
             <German>Wie schnell soll ein Fahrzeug aufmunitioniert werden?</German>
             <Polish>Jak szybko pojazd zostanie dozbrajania?</Polish>
-            <Russian>Как быстро техника должна перевооружаться?</Russian>
+            <Russian>Насколько быстро должна перевооружаться техника?</Russian>
             <Portuguese>Quão rápido o veículo deve ser rearmado?</Portuguese>
             <Czech>Jak rychle bude vozidlo přezbrojeno?</Czech>
             <Italian>Quanto velocemente dovrebbe essere riarmato un veicolo?</Italian>
             <Spanish>Cuán rápido es el proceso de rearme?</Spanish>
-            <French>A quelle vitesse devrait être réarmé un véhicule ?</French>
+            <French>Définit la vitesse à laquelle s'effectue le réarmement.</French>
             <Japanese>車両を再武装する早さを設定します。</Japanese>
             <Korean>차량을 얼마나 빨리 재보급 시킵니까?</Korean>
             <Chinesesimp>载具多快会整装完毕?</Chinesesimp>
@@ -75,12 +78,12 @@
             <English>Entire Vehicle</English>
             <German>Gesamtes Fahrzeug</German>
             <Polish>Cały pojazd</Polish>
-            <Russian>Полностью техника</Russian>
+            <Russian>Техника полностью</Russian>
             <Portuguese>Todo o veículo</Portuguese>
             <Czech>Celé vozidlo</Czech>
             <Italian>Tutto il Veicolo</Italian>
             <Spanish>Vehículo completo</Spanish>
-            <French>Véhicule entier</French>
+            <French>Tout le véhicule</French>
             <Japanese>車両全体</Japanese>
             <Korean>모든 차량</Korean>
             <Chinesesimp>整个载具</Chinesesimp>
@@ -90,12 +93,12 @@
             <English>Entire Magazine</English>
             <German>Gesamtes Magazin</German>
             <Polish>Cały magazynek</Polish>
-            <Russian>Полный магазин</Russian>
+            <Russian>Магазин полностью</Russian>
             <Portuguese>Todo o carregador</Portuguese>
             <Czech>Celý zásobník</Czech>
             <Italian>Tutto il Caricatore</Italian>
             <Spanish>Cargador completo</Spanish>
-            <French>Chargeur entier</French>
+            <French>Le chargeur entier</French>
             <Japanese>マガジン全体</Japanese>
             <Korean>모든 탄창</Korean>
             <Chinesesimp>整个弹匣</Chinesesimp>
@@ -105,12 +108,12 @@
             <English>Amount based on caliber</English>
             <German>Kaliberbasierte Anzahl</German>
             <Polish>Ilość zależna od kalibru</Polish>
-            <Russian>Количество зависит от калибра</Russian>
+            <Russian>В зависимости от калибра</Russian>
             <Portuguese>Quantidade baseada no calibre</Portuguese>
             <Czech>Rychlost závisí na ráži</Czech>
             <Italian>Ammontare basato sul calibro</Italian>
             <Spanish>Cantidad basada en el calibre</Spanish>
-            <French>Quantité basée sur le calibre</French>
+            <French>En fonction du calibre</French>
             <Japanese>口径に基づいた量</Japanese>
             <Korean>구경에 따라 수량 설정</Korean>
             <Chinesesimp>基于口径决定所耗时间</Chinesesimp>
@@ -125,7 +128,10 @@
             <Chinese>彈藥補給</Chinese>
             <Polish>Zapas amunicji</Polish>
             <Korean>탄약 보급</Korean>
-            <French>Approvisionnement en munitions</French>
+            <French>Quantité d'approvisionnement</French>
+            <Russian>Запас боеприпасов</Russian>
+            <Portuguese>Suprimento de Munições</Portuguese>
+            <Czech>Zásoba munice</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_Description">
             <English>How much ammunition does an ammo truck carry?</English>
@@ -136,7 +142,10 @@
             <Chinese>彈藥卡車會攜帶多少的彈藥?</Chinese>
             <Polish>Ile amunicji przewozi ciężarówka?</Polish>
             <Korean>탄약 차량은 얼마나 많은 양의 탄약을 가질 수 있음?</Korean>
-            <French>Quelle quantité de munitions un camion doit-il transporter ?</French>
+            <French>Définit la quantité de munitions que le camion de ravitaillement transporte.</French>
+            <Russian>Какой боезапас перевозит грузовик с боеприпасами?</Russian>
+            <Portuguese>Quanta munição um caminhão de munições carrega?</Portuguese>
+            <Czech>Kolik munice naklaďák uveze?</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_unlimited">
             <English>Unlimited ammo supply</English>
@@ -147,7 +156,10 @@
             <Chinese>無限彈藥</Chinese>
             <Polish>Nielimitowany zapas amunicji</Polish>
             <Korean>무한의 탄약</Korean>
-            <French>Approvisionnement en munitions illimité</French>
+            <French>Munitions illimitées</French>
+            <Russian>Неограниченный боезапас</Russian>
+            <Portuguese>Suprimento Ilimitado de Munição</Portuguese>
+            <Czech>Nekonečná zásoba</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_limited">
             <English>Limited ammo supply based on caliber</English>
@@ -158,7 +170,10 @@
             <Chinese>基於口徑限制彈藥數量</Chinese>
             <Polish>Zapas amunicji zależny od kalibru</Polish>
             <Korean>구경에 따라 제한된 탄약</Korean>
-            <French>Approvisionnement en munitions limité basé sur le calibre.</French>
+            <French>En fonction du calibre</French>
+            <Russian>Ограниченный боезапас в зависимости от калибра</Russian>
+            <Portuguese>Munição Limitada ao Calibre</Portuguese>
+            <Czech>Konečná zásoba v závislosti na kalibru</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_magazineSupply">
             <English>Only specific Magazines</English>
@@ -169,7 +184,10 @@
             <Chinese>只有指定的彈藥</Chinese>
             <Polish>Tylko konkretne magazynki</Polish>
             <Korean>특정 탄약만</Korean>
-            <French>Seulement des chargeurs spécifiques</French>
+            <French>Chargeurs spécifiques uniquement</French>
+            <Russian>Только определенные магазины</Russian>
+            <Portuguese>Apenas carregadores específicos</Portuguese>
+            <Czech>Pouze specifické zásobníky</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounter">
             <English>Check remaining ammunition</English>
@@ -181,6 +199,9 @@
             <Polish>Sprawdź ilość amunicji</Polish>
             <Korean>남은 탄약 확인</Korean>
             <French>Vérifier les munitions restantes</French>
+            <Russian>Проверить остаток БК</Russian>
+            <Portuguese>Checar munição restante</Portuguese>
+            <Czech>Zkontrolovat zbývající munici</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounterAction">
             <English>Checking remaining ammunition...</English>
@@ -192,6 +213,9 @@
             <Polish>Sprawdzanie ilości amunicji...</Polish>
             <Korean>남은 탄약 확인중...</Korean>
             <French>Vérification des munitions restantes...</French>
+            <Russian>Проверка остатка боекомплекта...</Russian>
+            <Portuguese>Checando Munição...</Portuguese>
+            <Czech>Kontroluji zbývající munici...</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingSupplyPoints">
             <English>There is ammunition worth %1 points left.</English>
@@ -203,6 +227,9 @@
             <Polish>Pozostało %1 punktów amunicji.</Polish>
             <Korean>여기에는 최소 %1 포인트의 탄약이 남았습니다.</Korean>
             <French>Il reste des munitions d'une valeur de %1 points.</French>
+            <Russian>Остаток единиц БК: %1</Russian>
+            <Portuguese>Possui munição equivalente a %1 pontos restantes.</Portuguese>
+            <Czech>Zbývá ještě %1 muničních bodů.</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingAmmo">
             <English>The following ammunition is left:%1</English>
@@ -213,7 +240,10 @@
             <Chinese>以下剩餘的彈藥:%1</Chinese>
             <Polish>Pozostała amunicja: %1</Polish>
             <Korean>다음의 탄약이 남음 : %1</Korean>
-            <French>Il reste les munitions suivantes %1</French>
+            <French>Il reste les munitions suivantes : %1.</French>
+            <Russian>Оставшийся боекомплект: %1</Russian>
+            <Portuguese>A munição que restou: %1</Portuguese>
+            <Czech>Zbývá následující munice:%1</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_Empty">
             <English>There is no ammunition left.</English>
@@ -224,7 +254,10 @@
             <Chinese>已經沒有剩餘的彈藥了.</Chinese>
             <Polish>Brak amunicji w zapasie.</Polish>
             <Korean>여기에는 탄약이 남지 않았습니다.</Korean>
-            <French>Il n'y a plus de munitions</French>
+            <French>Il n'y a plus de munitions.</French>
+            <Russian>Запас боекомплекта пуст</Russian>
+            <Portuguese>Não há munição sobrando.</Portuguese>
+            <Czech>Už nezbývá žádná munice.</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>
@@ -240,6 +273,7 @@
             <Korean>재보급</Korean>
             <Chinesesimp>整装</Chinesesimp>
             <Chinese>整裝</Chinese>
+            <Turkish>Yeniden Doldur</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmAction">
             <English>Rearming %1 with %2...</English>
@@ -280,7 +314,7 @@
             <Czech>Beru %1 pro %2...</Czech>
             <Italian>Sto prendendo %1 per %2...</Italian>
             <Spanish>Tomando %1 para %2...</Spanish>
-            <French>Prend %1 pour %2...</French>
+            <French>Prise de %1 pour %2...</French>
             <Japanese>%1を%2用として取得中…</Japanese>
             <Korean>%2를 위해 %1 가져오는중...</Korean>
             <Chinesesimp>拿取%1给%2中...</Chinesesimp>
@@ -300,6 +334,7 @@
             <Korean>탄약 가지기</Korean>
             <Chinesesimp>取得弹药</Chinesesimp>
             <Chinese>取得彈藥</Chinese>
+            <Turkish>Cephane al</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_PickUpAmmo">
             <English>Pick up ammo</English>
@@ -315,6 +350,7 @@
             <Korean>탄약 줍기</Korean>
             <Chinesesimp>捡起弹药</Chinesesimp>
             <Chinese>撿起彈藥</Chinese>
+            <Turkish>Cephaneyi al</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_StoreAmmo">
             <English>Store ammo</English>
@@ -359,6 +395,7 @@
             <Korean>탄약 줍는중...</Korean>
             <Chinesesimp>捡起弹药中...</Chinesesimp>
             <Chinese>撿起彈藥中...</Chinese>
+            <Czech>Sbírám munici...</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
@@ -369,7 +406,7 @@
             <Czech>Přezbrojeno % nábojů z %2 u %3</Czech>
             <Italian>Riarmati %1 colpi di %2 su %3</Italian>
             <Spanish>Rearmadas %1 rondas de %2 en %3</Spanish>
-            <French>%1 balles réarmées de %2 dans %3</French>
+            <French>%1 balles réarmées de %2 dans %3.</French>
             <Japanese>%1発の%2を%3に装填しました</Japanese>
             <Korean>%3에 2%의 %1 탄약 재보급</Korean>
             <Chinesesimp>整装了%1发%2到%3上</Chinesesimp>
@@ -389,6 +426,7 @@
             <Korean>연막 차장</Korean>
             <Chinesesimp>烟幕弹</Chinesesimp>
             <Chinese>煙幕彈</Chinese>
+            <Turkish>Sis Ekranı</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_60Rnd_CMFlareMagazine">
             <English>Flares</English>
@@ -404,6 +442,7 @@
             <Korean>기만체</Korean>
             <Chinesesimp>热焰弹</Chinesesimp>
             <Chinese>熱焰彈</Chinese>
+            <Turkish>Flareler</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_1000Rnd_Gatling_30mm_Plane_CAS_01_F">
             <English>30mm HEI</English>
@@ -414,11 +453,12 @@
             <Czech>30mm HEI</Czech>
             <Italian>30mm HEI</Italian>
             <Spanish>30mm HEI</Spanish>
-            <French>30mm HEI</French>
-            <Japanese>30mm 焼夷りゅう弾</Japanese>
+            <French>30 mm HEI</French>
+            <Japanese>30mm HEI</Japanese>
             <Korean>30mm 고폭소이탄</Korean>
             <Chinesesimp>30mm 高爆燃烧弹</Chinesesimp>
             <Chinese>30mm 高爆燃燒彈</Chinese>
+            <Turkish>30mm HEI</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_500Rnd_Cannon_30mm_Plane_CAS_02_F">
             <English>30mm HEI-T</English>
@@ -429,11 +469,12 @@
             <Czech>30mm HEI-T</Czech>
             <Italian>30mm HEI-T</Italian>
             <Spanish>30mm HEI-T</Spanish>
-            <French>30mm HEI-T</French>
-            <Japanese>30mm 焼夷曳光りゅう弾</Japanese>
+            <French>30 mm HEI-T</French>
+            <Japanese>30mm HEI-T</Japanese>
             <Korean>30mm 고폭소이예광탄</Korean>
             <Chinesesimp>30mm 高爆燃烧曳光弹</Chinesesimp>
             <Chinese>30mm 高爆燃燒曳光彈</Chinese>
+            <Turkish>30mm HEI-T</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_04_F">
             <English>AIM-9 Sidewinder</English>
@@ -449,6 +490,7 @@
             <Korean>AIM-9 Sidewinder</Korean>
             <Chinesesimp>AIM-9 响尾蛇</Chinesesimp>
             <Chinese>AIM-9 響尾蛇</Chinese>
+            <Turkish>AIM-9 Sidewinder</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_03_F">
             <English>Wympel R-73</English>
@@ -464,6 +506,7 @@
             <Korean>Vympel R-73</Korean>
             <Chinesesimp>Wympel R-73</Chinesesimp>
             <Chinese>Wympel R-73</Chinese>
+            <Turkish>Wympel R-73</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_6Rnd_Missile_AGM_02_F">
             <English>AGM-65 Maverick</English>
@@ -479,6 +522,7 @@
             <Korean>AGM-65 Maverick</Korean>
             <Chinesesimp>AGM-65 小牛</Chinesesimp>
             <Chinese>AGM-65 小牛</Chinese>
+            <Turkish>AGM-65 Maverick</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_4Rnd_Missile_AGM_01_F">
             <English>Kh-25MTP</English>
@@ -494,6 +538,7 @@
             <Korean>Kh-25MTP</Korean>
             <Chinesesimp>Kh-25MTP</Chinesesimp>
             <Chinese>Kh-25MTP</Chinese>
+            <Turkish>Kh-25MTP</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_HE_F">
             <English>Hydra 70 HE</English>
@@ -505,10 +550,11 @@
             <Italian>Hydra 70 HE</Italian>
             <Spanish>Hydra 70 HE</Spanish>
             <French>Hydra 70 HE</French>
-            <Japanese>ハイドラ 70 りゅう弾</Japanese>
+            <Japanese>ハイドラ 70 HE</Japanese>
             <Korean>Hydra 70 고폭탄</Korean>
             <Chinesesimp>九头蛇 70 高爆弹</Chinesesimp>
             <Chinese>九頭蛇 70 高爆彈</Chinese>
+            <Turkish>Hydra 70 HE</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_HE_F">
             <English>S-8 HE</English>
@@ -520,10 +566,11 @@
             <Italian>S-8 HE</Italian>
             <Spanish>S-8 HE</Spanish>
             <French>S-8 HE</French>
-            <Japanese>S-8 りゅう弾</Japanese>
+            <Japanese>S-8 HE</Japanese>
             <Korean>S-8 고폭탄</Korean>
             <Chinesesimp>S-8 高爆弹</Chinesesimp>
             <Chinese>S-8 高爆彈</Chinese>
+            <Turkish>S-8 HE</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_AP_F">
             <English>Hydra 70 AP</English>
@@ -534,11 +581,12 @@
             <Czech>Hydra 70 AP</Czech>
             <Italian>Hydra 70 AP</Italian>
             <Spanish>Hydra 70 AP</Spanish>
-            <French>Hydra 70 徹甲弾</French>
+            <French>Hydra 70 AP</French>
             <Japanese>ハイドラ 70 AP</Japanese>
             <Korean>Hydra 70 철갑탄</Korean>
             <Chinesesimp>九头蛇 70 反人员弹</Chinesesimp>
             <Chinese>九頭蛇 70 反人員彈</Chinese>
+            <Turkish>Hydra 70 AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_AP_F">
             <English>S-8 AP</English>
@@ -550,10 +598,11 @@
             <Italian>S-8 AP</Italian>
             <Spanish>S-8 AP</Spanish>
             <French>S-8 AP</French>
-            <Japanese>S-8 徹甲弾</Japanese>
+            <Japanese>S-8 AP</Japanese>
             <Korean>S-8 철갑탄</Korean>
             <Chinesesimp>S-8 反人员弹</Chinesesimp>
             <Chinese>S-8 反人員彈</Chinese>
+            <Turkish>S-8 AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_4Rnd_Bomb_04_F">
             <English>GBU-12</English>
@@ -569,6 +618,7 @@
             <Korean>GBU-12</Korean>
             <Chinesesimp>GBU-12</Chinesesimp>
             <Chinese>GBU-12</Chinese>
+            <Turkish>GBU-12</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Bomb_03_F">
             <English>FAB-250M-54</English>
@@ -584,6 +634,7 @@
             <Korean>FAB-250M-54</Korean>
             <Chinesesimp>FAB-250M-54</Chinesesimp>
             <Chinese>FAB-250M-54</Chinese>
+            <Turkish>FAB-250M-54</Turkish>
         </Key>
         <Key ID="STR_ACE_Rearm_rearmCargo_edenName">
             <English>Rearm Cargo</English>
@@ -591,6 +642,11 @@
             <Japanese>再武装用カーゴ</Japanese>
             <Polish>Ładunek Dozbrajający</Polish>
             <Italian>Rifornimento Munizioni</Italian>
+            <Russian>Боеприпасы для перевооружения</Russian>
+            <Portuguese>Carga de Rearme</Portuguese>
+            <Chinese>整裝用貨物</Chinese>
+            <French>Stock de munitions</French>
+            <Czech>Sklad munice</Czech>
         </Key>
         <Key ID="STR_ACE_Rearm_rearmCargo_edenDesc">
             <English>The cargo for rearming (-1 disable)</English>
@@ -598,6 +654,35 @@
             <Japanese>カーゴからの再武装 (-1 で無効化)</Japanese>
             <Polish>Ładunek do dozbrajania (-1 wyłączy)</Polish>
             <Italian>Il rifornimento delle munizioni (-1 per disabilitarlo)</Italian>
+            <Russian>Объем боеприпасов для перевооружения (-1 для отмены)</Russian>
+            <Portuguese>A Carga para Rearmamento (-1 para desativar)</Portuguese>
+            <Chinese>貨物可以提高多少次整裝（-1為停用）</Chinese>
+            <French>Le quantité de munitions (en points), qui est disponible pour du réarmement (-1 pour désactiver).</French>
+            <Czech>Objekt pro přezbrojování (-1 pro vypnutí)</Czech>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_distance_DisplayName">
+            <English>Rearm distance</English>
+            <French>Distance de réarmement</French>
+            <German>Aufrüstbereich</German>
+            <Portuguese>Distância para Rearmar</Portuguese>
+            <Japanese>再武装距離</Japanese>
+            <Chinese>整裝距離</Chinese>
+            <Italian>Distanza di riarmo</Italian>
+            <Czech>Přezbrojovací vzdálenost</Czech>
+            <Polish>Odległość przezbrojenia</Polish>
+            <Russian>Дистанция перевооружения</Russian>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_distance_Description">
+            <English>The maximum distance a vehicle can be rearmed at</English>
+            <French>Distance maximale à laquelle un véhicule peut être réarmé.</French>
+            <German>Die maximale Distanz, über die ein Fahrzeug Aufmunitioniert werden kann</German>
+            <Portuguese>A distância máxima que um veículo pode ser rearmado/municiado.</Portuguese>
+            <Japanese>車両から再武装できる範囲を決定します。</Japanese>
+            <Chinese>與載具之最大可整裝距離</Chinese>
+            <Italian>La distanza massima a cui un veicolo può essere riarmato</Italian>
+            <Czech>Maximální vzdálenost na jakou může být vozidlo přezbrojeno</Czech>
+            <Polish>Maksymalna odległość na jakiej pojazd może zostać przezbrojony</Polish>
+            <Russian>Максимальная дистанция для перевооружения</Russian>
         </Key>
     </Package>
 </Project>

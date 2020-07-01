@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [bob, kevin, "ID", "Message", {Callback}] call ace_common_fnc_recieveRequest
+ * [bob, kevin, "ID", "Message", {Callback}] call ace_common_fnc_receiveRequest
  *
  * Public: No
  */
@@ -33,7 +33,7 @@ if (isLocalized _requestMessage) then {
 
 hint format ["%1", _requestMessage]; // @todo ?
 
-if !(isNil QGVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT)) then {
+if (!isNil QGVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT)) then {
     terminate GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT);
 };
 

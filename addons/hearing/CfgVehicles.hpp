@@ -7,7 +7,7 @@ class CfgVehicles {
                     displayName = CSTRING(EarPlugs_On);
                     condition = QUOTE(GVAR(EnableCombatDeafness) && {!([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarPlugs' in items _player}});
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-                    statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
+                    statement = QUOTE( ARR_2([_player, true]) call FUNC(putInEarPlugs) );
                     showDisabled = 0;
                     icon = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
                 };
@@ -15,7 +15,7 @@ class CfgVehicles {
                     displayName = CSTRING(EarPlugs_Off);
                     condition = QUOTE( GVAR(EnableCombatDeafness) && {[_player] call FUNC(hasEarPlugsIn)});
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-                    statement = QUOTE( [_player] call FUNC(removeEarPlugs) );
+                    statement = QUOTE( ARR_2([_player, true]) call FUNC(removeEarPlugs) );
                     showDisabled = 0;
                     icon = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
                 };

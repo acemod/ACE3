@@ -20,7 +20,7 @@
 params ["_trench", "_unit", ["_switchingDigger", false, [true]]];
 TRACE_2("removeTrench", _trench, _unit, _switchingDigger);
 
-private _actualProgress = _trench getVariable [QGVAR(progress), 0];
+private _actualProgress = _trench getVariable [QGVAR(progress), 1];
 if (_actualProgress <= 0) exitWith {};
 
 // Mark trench as being worked on
@@ -37,6 +37,9 @@ if (_diggerCount > 0) then {
 };
 
 private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeOf _trench) >> QGVAR(removalDuration)), 20];
+if (isNil {_trench getVariable QGVAR(placeData)}) then {
+    _trench setVariable [QGVAR(placeData), [getPosASL _trench, [vectorDir _trench, vectorUp _trench]], true];
+};
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
 _placeData params ["", "_vecDirAndUp"];
 
@@ -74,12 +77,12 @@ private _fnc_onFailure = {
     [_unit, "", 1] call EFUNC(common,doAnimation);
 };
 private _fnc_condition = {
-    (_this select 0) params ["", "_trench"];
+    (_this select 0) params ["_unit", "_trench"];
 
     if !(_trench getVariable [QGVAR(digging), false]) exitWith {false};
     if (count (_trench getVariable [QGVAR(diggers),[]]) <= 0) exitWith {false};
-    if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0})  exitWith {false};
-    true
+    if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0}) exitWith {false};
+    "ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))
 };
 [_removeTime, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench), _fnc_condition, [], ((_trench getVariable [QGVAR(progress), 1]) <= 0)] call EFUNC(common,progressBar);
 

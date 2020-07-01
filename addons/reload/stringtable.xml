@@ -8,7 +8,7 @@
             <Russian>Проверять боезапас при перезарядке</Russian>
             <Czech>Zkontrolovat munici při nabití</Czech>
             <Polish>Sprawdź stan amunicji przy przeładowaniu broni</Polish>
-            <French>Vérification des munitions au rechargement</French>
+            <French>Vérifier les munitions au rechargement</French>
             <Hungarian>Lőszer ellenőrzése a fegyver újratöltésekor</Hungarian>
             <Italian>Controlla le munizioni durante il ricaricamento</Italian>
             <Portuguese>Conferir munição ao recarregar a arma</Portuguese>
@@ -24,7 +24,7 @@
             <Russian>Проверяет количество патронов в новом магазине при перезарядке.</Russian>
             <Czech>Kontroluje munice při nabití nového zásobníku.</Czech>
             <Polish>Pokaż stan amunicji w nowym magazynku przy przeładowaniu broni</Polish>
-            <French>Vérification du nombre de munition au rechargement</French>
+            <French>Vérifie les munitions du nouveau chargeur lors du rechargement d'une arme.</French>
             <Hungarian>A lőszer ellenőrzése az új tárad behelyezésekor újratöltés közben.</Hungarian>
             <Italian>Controlla le munizioni rimanenti nel caricatore in fase di cambio caricatore.</Italian>
             <Portuguese>Confere a munição no seu novo carregador ao recarregar a arma</Portuguese>
@@ -33,12 +33,34 @@
             <Chinesesimp>在重新装填时检查新弹匣上的弹药.</Chinesesimp>
             <Chinese>在重新裝填時檢查新彈匣上的彈藥.</Chinese>
         </Key>
+        <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelf">
+            <English>Always show check ammo self interaction</English>
+            <Polish>Zawsze pokazuj interakcję od sprawdzania amunicji</Polish>
+            <Italian>Mostra sempre l'interazione di autocontrollo delle munizioni</Italian>
+            <Czech>Vždy zobrazit kontrolu munice v menu vlastní interakce</Czech>
+            <Japanese>セルフ インタラクションへ弾薬確認を常に表示</Japanese>
+            <Chinese>總是在自我互動中顯示檢查彈藥動作</Chinese>
+            <French>Toujours afficher l'action de vérification des munitions</French>
+            <Portuguese>Sempre mostrar a opção de checar a própria munição</Portuguese>
+            <Russian>Всегда показывать проверку боеприпасов в меню взаимодействия с собой</Russian>
+        </Key>
+        <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelfDesc">
+            <English>Shows check ammo self interaction even when not in static weapons.</English>
+            <Polish>Pokazuje interakcję od sprawdzania amunicji poza bronią statyczną.</Polish>
+            <Italian>Mostra il controllo dell'interazione tra le munizioni anche quando non sono in armi statiche.</Italian>
+            <Czech>Zobrazuje kontrolu munice v menu vlastní interakce i pokud hráč nepoužívá statickou zbraň.</Czech>
+            <Japanese>設置型火器を使っていなくても、セルフ インタラクションへ弾薬確認を常に表示します。</Japanese>
+            <Chinese>即使不是固定式支援武器也依然在自我互動中顯示檢查彈藥動作</Chinese>
+            <French>Permet d'afficher l'action de vérification des munitions du menu d'interaction personnel, même si le joueur n'utilise pas d'arme statique.</French>
+            <Portuguese>Mostra a opção de ver sua própria munição mesmo quando não em armas estáticas.</Portuguese>
+            <Russian>Показывать проверку боеприпасов даже вне стационарного орудия</Russian>
+        </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>
             <German>Munition prüfen</German>
             <Spanish>Comprobar munición</Spanish>
             <Polish>Sprawdź amunicję</Polish>
-            <French>Vérifier Munitions</French>
+            <French>Vérifier les munitions</French>
             <Hungarian>Lőszerellenőrzés</Hungarian>
             <Czech>Zkontrolovat Munici</Czech>
             <Italian>Controlla le munizioni</Italian>
@@ -48,6 +70,7 @@
             <Korean>장탄수 확인</Korean>
             <Chinesesimp>检查弹药</Chinesesimp>
             <Chinese>檢查彈藥</Chinese>
+            <Turkish>Cephaneni Kontrol Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Reload_Ammo">
             <English>Ammo</English>
@@ -64,6 +87,7 @@
             <Korean>장탄수</Korean>
             <Chinesesimp>弹药</Chinesesimp>
             <Chinese>彈藥</Chinese>
+            <Turkish>Cephane</Turkish>
         </Key>
         <Key ID="STR_ACE_Reload_LinkBelt">
             <English>Link belt</English>
@@ -76,14 +100,14 @@
             <Hungarian>Töltényheveder összekötése</Hungarian>
             <Italian>Attacca la tracolla</Italian>
             <Portuguese>Ligar cintos de munição</Portuguese>
-            <Japanese>ベルトをつなげる</Japanese>
+            <Japanese>ベルトを繋げる</Japanese>
             <Korean>벨트 연결</Korean>
             <Chinesesimp>连接弹链</Chinesesimp>
             <Chinese>連接彈鏈</Chinese>
         </Key>
         <Key ID="STR_ACE_Reload_LinkingBelt">
             <English>Linking belt...</English>
-            <French>Attache d'une bande...</French>
+            <French>Attachage d'une bande...</French>
             <Spanish>Enlazando cinta...</Spanish>
             <Russian>Сцепка лент...</Russian>
             <Czech>Spojuji pás...</Czech>
@@ -92,7 +116,7 @@
             <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
             <Italian>Attaccando la tracolla...</Italian>
             <Portuguese>Ligando cintos...</Portuguese>
-            <Japanese>ベルトをつなげています・・・</Japanese>
+            <Japanese>ベルトを繋げています・・・</Japanese>
             <Korean>벨트 연결중...</Korean>
             <Chinesesimp>连接弹链中...</Chinesesimp>
             <Chinese>連接彈鏈中...</Chinese>

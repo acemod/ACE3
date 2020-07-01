@@ -3,12 +3,17 @@
     <Package name="MagazineRepack">
         <Key ID="STR_ACE_MagazineRepack_DisplayName">
             <English>Magazine Repack</English>
+            <German>Magazine umpacken</German>
             <Italian>Riempimento Caricatori</Italian>
             <Chinese>重新整理彈匣</Chinese>
             <Chinesesimp>重新整理弹匣</Chinesesimp>
             <Japanese>弾倉詰め替え</Japanese>
             <Korean>탄약 채우기</Korean>
             <Polish>Przepakowywanie magazynków</Polish>
+            <Russian>Перепаковка Магазинов</Russian>
+            <Portuguese>Preenchimento de Carregador</Portuguese>
+            <French>Remplissage des chargeurs</French>
+            <Czech>Přepáskování zásobníků</Czech>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
@@ -19,6 +24,10 @@
             <Japanese>弾頭毎の所有時間</Japanese>
             <Korean>구경 당 시간</Korean>
             <Polish>Czas na nabój</Polish>
+            <Russian>Время на патрон</Russian>
+            <Portuguese>Tempo por projétil</Portuguese>
+            <French>Temps par cartouche</French>
+            <Czech>Čas na náboj</Czech>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
@@ -29,6 +38,10 @@
             <Japanese>弾倉毎の所有時間</Japanese>
             <Korean>탄창 당 시간</Korean>
             <Polish>Czas na magazynek</Polish>
+            <Russian>Время на магазин</Russian>
+            <Portuguese>Tempo por carregador</Portuguese>
+            <French>Temps par chargeur</French>
+            <Czech>Čas na zásobník</Czech>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
@@ -39,12 +52,16 @@
             <Japanese>ベルトリンク毎の所有時間</Japanese>
             <Korean>탄약띠 당 시간</Korean>
             <Polish>Czas na taśmę</Polish>
+            <Russian>Время на звено ленты</Russian>
+            <Portuguese>Tempo por carregador de cinto</Portuguese>
+            <French>Temps par bande</French>
+            <Czech>Čas na článek pásu</Czech>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
             <English>Repack Magazines</English>
             <German>Magazine umpacken</German>
             <Spanish>Reorganizar cargadores</Spanish>
-            <French>Réorganiser les chargeurs</French>
+            <French>Remplir les chargeurs</French>
             <Polish>Przepakuj magazynki</Polish>
             <Czech>Přepáskovat zásobníky</Czech>
             <Italian>Riempi Caricatori</Italian>
@@ -60,7 +77,7 @@
             <English>Repacking Magazines...</English>
             <German>Magazine umpacken...</German>
             <Spanish>Reorganizando cargadores...</Spanish>
-            <French>Réorganisation des chargeurs...</French>
+            <French>Remplissage des chargeurs...</French>
             <Polish>Przepakowywanie magazynków...</Polish>
             <Czech>Přepáskovávám zásobník...</Czech>
             <Italian>Riempendo i caricatori...</Italian>
@@ -76,7 +93,7 @@
             <English>%1 full mag(s) and %2 extra round(s)</English>
             <German>%1 volle(s) Magazin(e) und %2 übrig gebliebene Patrone(n)</German>
             <Spanish>%1 cargador(es) completo(s) y %2 bala(s) extra(s)</Spanish>
-            <French>%1 chargeur(s) plein(s) et %2 cartouche(s) en rab</French>
+            <French>%1 chargeur(s) plein(s) et %2 cartouche(s) en surplus.</French>
             <Polish>Pełnych magazynków: %1.&lt;br/&gt;Dodatkowych naboi: %2.</Polish>
             <Czech>%1 plný zásobník(y) a %2 munice navíc</Czech>
             <Italian>%1 caricatore(i) pieno e %2 munizione(i) extra</Italian>
@@ -90,7 +107,7 @@
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
-            <French>Réorganisation terminée</French>
+            <French>Remplissage terminé.</French>
             <German>Wiederverpacken fertig</German>
             <Spanish>Reorganización finalizada</Spanish>
             <Russian>Перепаковка завершена</Russian>
@@ -106,7 +123,7 @@
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
-            <French>Réorganisation interrompue</French>
+            <French>Remplissage interrompu.</French>
             <German>Umpacken unterbrochen</German>
             <Spanish>Reorganización interrumpida</Spanish>
             <Russian>Перепаковка прервана</Russian>
@@ -122,7 +139,7 @@
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
-            <French>%1 plein(s) et %2 partiel(s)</French>
+            <French>%1 chargeur(s) plein(s) et %2 chargeur(s) partiel(s).</French>
             <German>%1 volle(s) Magazin(e) und %2 angefangene(s) Magazin(e)</German>
             <Spanish>%1 Llenos y %2 Incompletos</Spanish>
             <Russian>%1 полных и %2 неполных</Russian>

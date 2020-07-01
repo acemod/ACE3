@@ -1,0 +1,16 @@
+name: Release Drafter
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release Drafter
+        if: github.repository == 'acemod/ACE3'
+        uses: release-drafter/release-drafter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

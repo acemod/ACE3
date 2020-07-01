@@ -33,7 +33,7 @@ There are two ways of adding custom presets to your mission, either via code or 
 
 To add a preset via code you use the function `call acex_fortify_fnc_registerObjects`. Also enables Fortify.
 
-```
+```cpp
 * Registers the given objects in the given side's player interaction menu.
 * Players on that side must have the `Fortify Tool` item in their inventory to access the menu.
 * Classnames must be in the format [<classname>, <cost>]
@@ -53,25 +53,27 @@ To add a preset via code you use the function `call acex_fortify_fnc_registerObj
 
 Adding it through `description.ext` you use:
 
-```c++
+```cpp
 class ACEX_Fortify_Presets {
     class myMissionObjects {
+        displayName = "My Preset";
         objects[] = {
             {"Sandbag", 5},
             {"Bunker", 50}
         };
     };
+};
  ```
 
- Then you will have to set the mission preset to `myMissionObjects` with `#fortify blufor myMissionObjects` to enable it.
+Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or the chat command: `#ace-fortify blufor myMissionObjects`.
  
 ## 1.3 Adding custom deploy handlers
 
 A custom deploy handler allows missions makers to decide if an object can be placed or not.
 
-To verify that an object isn't above a certain terrain height we can check the heigt of the object before it is confirmed as placed. Returning `false` from the code block means that placement is not allowed.
+To verify that an object isn't above a certain terrain height we can check the height of the object before it is confirmed as placed. Returning `false` from the code block means that placement is not allowed.
 
-```sqf
+```cpp
 [{
     params ["_unit", "_object", "_cost"];
     private _return = (getPosATL _object) select 2 < 1;

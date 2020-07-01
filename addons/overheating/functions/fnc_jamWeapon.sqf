@@ -40,6 +40,14 @@ if (_ammo > 0) then {
     }, [_unit, _weapon, _ammo]] call CBA_fnc_execNextFrame;
 };
 
+if (_weapon == primaryWeapon _unit) then {
+    playSound QGVAR(jamming_rifle);
+} else {
+    if (_weapon == handgunWeapon _unit) then {
+        playSound QGVAR(jamming_pistol);
+    };
+};
+
 // only display the hint once, after you try to shoot an already jammed weapon
 GVAR(knowAboutJam) = false;
 
@@ -55,7 +63,7 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
     };
 
     private _statement = {
-        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _this select 0];
+        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _this select 0, false, eyePos (_this select 0), 1, 1, 15];
 
         if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {(_this select 1) ammo currentWeapon (_this select 1) > 0} && {GVAR(DisplayTextOnJam)}) then {
             [localize LSTRING(WeaponJammed)] call EFUNC(common,displayTextStructured);

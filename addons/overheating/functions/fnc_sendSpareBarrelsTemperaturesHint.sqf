@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [bob, "bob"] call ace_overheating_fnc_sendSpareBarrelsIsTemperaturesHint
+ * [bob, "bob"] call ace_overheating_fnc_sendSpareBarrelsTemperaturesHint
  *
  *
  * Public: No

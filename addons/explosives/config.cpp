@@ -16,6 +16,7 @@ class CfgPatches {
 
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
+#include "Cfg3DEN.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
@@ -44,6 +45,9 @@ class CfgActions {
         show = 0;
     };
     class DeactivateMine:None {
+        show = 0;
+    };
+    class UseContainerMagazine: None {
         show = 0;
     };
 };

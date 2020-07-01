@@ -358,6 +358,11 @@ class CfgVehicles {
         GVAR(canReceive) = 0;
     };
 
+    class UGV_02_Base_F: Tank_F {
+        // ED-1D and ED-1E are electrical
+        GVAR(canReceive) = 0;
+    };
+
     class UAV: Plane {};
 
     class UAV_02_base_F: UAV {

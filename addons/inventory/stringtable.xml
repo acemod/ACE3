@@ -8,7 +8,7 @@
             <Russian>Изменить размер окна инвентаря</Russian>
             <Czech>Zvětšit zobrazení inventáře</Czech>
             <Polish>Powiększ UI ekwipunku</Polish>
-            <French>Agrandir la taille d'affichage de l'inventaire</French>
+            <French>Agrandir l'affichage de l'inventaire</French>
             <Hungarian>Legyen a felszerelés menüje nagyobb</Hungarian>
             <Italian>Ingrandisci il menù inventario</Italian>
             <Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
@@ -16,6 +16,7 @@
             <Korean>소지품 화면을 더 크게 합니다</Korean>
             <Chinesesimp>使物品显示清单更大</Chinesesimp>
             <Chinese>使物品顯示清單更大</Chinese>
+            <Turkish>Envanter Görüntüsünü Daha Büyük Yap</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_SettingDescription">
             <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
@@ -24,7 +25,7 @@
             <Russian>Обычно, размер окна инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря, не увеличивая размеры шрифтов, так что отображется большее количество строк.</Russian>
             <Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
             <Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
-            <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de lignes.</French>
+            <French>En principe, l'affichage de l'inventaire est dimensionné par la taille de l'IU. Cette option permet d'agrandir l'IU de l'inventaire, mais sans augmenter la taille des polices, ce qui permet d'afficher plus de lignes.</French>
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni dell'interfaccia. Questa opzione permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
@@ -32,6 +33,7 @@
             <Korean>보통 소지품 화면은 사용자 인터페이스 크기에 비례합니다. 이 항목은 소지품의 사용자 인터페이스를 확대를 가능케하면서 글씨는 그대로 냅두게 해줍니다.</Korean>
             <Chinesesimp>一般来说，物品清单尺寸是由使用者介面来决定的。此选项能让你的物品显示清单更大但不会增加字体大小，此举可增加更多能被显示的描述行数!</Chinesesimp>
             <Chinese>一般來說，物品清單尺寸是由使用者介面來決定的。此選項能讓你的物品顯示清單更大但不會增加字體大小，此舉可增加更多能被顯示的描述行數!</Chinese>
+            <Turkish>Normalde envanter görüntüleme, kullanıcı arayüzü boyutuna göre ölçeklenir. Bu, Envanter kullanıcı arayüzü boyutunu büyütmeye izin verir, ancak daha fazla satır görüntülenmesine izin vermek için yazı tipi boyutunu büyütmez.</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Backpacks">
             <English>Backpacks</English>
@@ -47,6 +49,7 @@
             <Korean>가방</Korean>
             <Chinesesimp>背包</Chinesesimp>
             <Chinese>背包</Chinese>
+            <Turkish>Çantalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -62,6 +65,7 @@
             <Korean>헬멧</Korean>
             <Chinesesimp>头盔</Chinesesimp>
             <Chinese>頭盔</Chinese>
+            <Turkish>Kasklar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -77,6 +81,7 @@
             <Korean>안경</Korean>
             <Chinesesimp>眼镜</Chinesesimp>
             <Chinese>眼鏡</Chinese>
+            <Turkish>Gözlükler</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -92,6 +97,7 @@
             <Korean>복장</Korean>
             <Chinesesimp>服装</Chinesesimp>
             <Chinese>服裝</Chinese>
+            <Turkish>Üniformalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -107,6 +113,7 @@
             <Korean>조끼</Korean>
             <Chinesesimp>背心</Chinesesimp>
             <Chinese>背心</Chinese>
+            <Turkish>Yelekler</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -122,6 +129,7 @@
             <Korean>수류탄</Korean>
             <Chinesesimp>手榴弹</Chinesesimp>
             <Chinese>手榴彈</Chinese>
+            <Turkish>Bombalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -137,6 +145,7 @@
             <Korean>의료</Korean>
             <Chinesesimp>医疗</Chinesesimp>
             <Chinese>醫療</Chinese>
+            <Turkish>Sağlık</Turkish>
         </Key>
     </Package>
 </Project>

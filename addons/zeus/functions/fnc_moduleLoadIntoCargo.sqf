@@ -43,7 +43,7 @@ if (!alive _cargo) exitWith {
         params ["_successful", "_cargo", "_mousePosASL"];
         if (!_successful) exitWith {};
 
-        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 5, true]) param [0, objNull]; // 2d distance search
+        private _holder = (nearestObjects [ASLToAGL _mousePosASL, EGVAR(cargo,cargoHolderTypes), 15, true]) param [0, objNull]; // 2d distance search
         if (isNull _holder) exitWith {
             [LSTRING(NothingSelected)] call FUNC(showMessage);
         };
@@ -56,6 +56,7 @@ if (!alive _cargo) exitWith {
             private _loadedItem = [localize ELSTRING(cargo,LoadedItem), "<br/>", " "] call CBA_fnc_replace;
             private _holderDisplayName = [_holder] call EFUNC(common,getName);
             [_loadedItem, _displayName, _holderDisplayName] call FUNC(showMessage);
+            ["ace_cargoLoaded", [_cargo, _holder]] call CBA_fnc_globalEvent;
         } else {
             private _loadingFailed = [localize ELSTRING(cargo,LoadingFailed), "<br/>", " "] call CBA_fnc_replace;
             [_loadingFailed, _displayName] call FUNC(showMessage);

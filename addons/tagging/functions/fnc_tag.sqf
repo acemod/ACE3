@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
  * 2: Material of the tag <STRING> (Optional)
+ * 3: Tag Model <STRING> (optional)
  *
  * Return Value:
  * Sucess <BOOL>
@@ -20,7 +21,8 @@
 params [
     ["_unit", objNull, [objNull]],
     ["_texture", "", [""]],
-    ["_material", "", [""]]
+    ["_material", "", [""]],
+    ["_tagModel", "UserTexture1m_F", [""]]
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
@@ -37,7 +39,7 @@ private _intersections = lineIntersectsSurfaces [_startPosASL, _endPosASL, _unit
 
 // If there's no intersections
 if (_intersections isEqualTo []) exitWith {
-    TRACE_3("No intersections",_intersections);
+    TRACE_1("No intersections",_intersections);
     false
 };
 
@@ -95,7 +97,7 @@ if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([ 0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}) exitWith {
-    TRACE_3("Unsuitable location:",_touchingPoint);
+    TRACE_1("Unsuitable location:",_touchingPoint);
     false
 };
 
@@ -108,10 +110,10 @@ private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
     params ["", "", "", "", "_unit"];
     TRACE_2("Unit:",_unit,_this);
 
-    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
+    playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 5, 1, 15];
 
     // Tell the server to create the tag and handle its destruction
     [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material], 0.6] call CBA_fnc_waitAndExecute;
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material, _tagModel], 0.6] call CBA_fnc_waitAndExecute;
 
 true

@@ -64,6 +64,9 @@ GVAR(currentHeightChange) = 0;
 // prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
+// fixes not being able to move when in combat pace
+[_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+
 if !(_UAVCrew isEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;
     _target setVariable [QGVAR(isUAV), true, true];

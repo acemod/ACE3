@@ -21,6 +21,8 @@ params ["_truck", "_unit"];
 private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
 if (isNull _attachedDummy) exitwith {};
 
+private _magazineClass = _attachedDummy getVariable [QGVAR(magazineClass), "#noVar"];
+
 [
     TIME_PROGRESSBAR(5),
     [_unit, _truck, _attachedDummy],
@@ -31,7 +33,7 @@ if (isNull _attachedDummy) exitwith {};
         [_unit, true, true] call FUNC(dropAmmo);
     },
     "",
-    format [localize LSTRING(StoreAmmoAction), getText(configFile >> "CfgMagazines" >> (_attachedDummy getVariable QGVAR(magazineClass)) >> "displayName"), getText(configFile >> "CfgVehicles" >> (typeOf _truck) >> "displayName")],
+    format [localize LSTRING(StoreAmmoAction), _magazineClass call FUNC(getMagazineName), getText(configFile >> "CfgVehicles" >> (typeOf _truck) >> "displayName")],
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

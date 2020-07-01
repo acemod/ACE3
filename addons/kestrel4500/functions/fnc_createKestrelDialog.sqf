@@ -15,12 +15,10 @@
  * Public: No
  */
 
-if (GVAR(Kestrel4500)) exitWith { false };
-if (underwater ACE_player) exitWith { false };
-if (!("ACE_Kestrel4500" in (uniformItems ACE_player)) && !("ACE_Kestrel4500" in (vestItems ACE_player))) exitWith { false };
+if (GVAR(Kestrel4500) || {underwater ACE_player} || {!(call FUNC(canShow))}) exitWith {false};
 
 GVAR(Overlay) = false;
-3 cutText ["", "PLAIN"];
+QGVAR(Layer) cutText ["", "PLAIN"];
 
 GVAR(Kestrel4500) = true;
 createDialog 'Kestrel4500_Display';

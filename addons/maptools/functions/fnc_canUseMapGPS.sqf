@@ -10,7 +10,7 @@
  * Boolean <BOOL>
  *
  * Example:
- * call ACE_map_fnc_canUseMapGPS
+ * call ACE_maptools_fnc_canUseMapGPS
  *
  * Public: No
  */

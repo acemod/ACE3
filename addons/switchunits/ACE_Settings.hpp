@@ -1,6 +1,7 @@
 class ACE_Settings {
     class GVAR(enableSwitchUnits) {
         category = CSTRING(DisplayName);
+        displayName = CSTRING(EnableSwitchUnits_DisplayName);
         value = 0;
         typeName = "BOOL";
     };

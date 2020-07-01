@@ -20,7 +20,7 @@
 params ["_trench", "_unit", ["_switchingDigger", false, [true]]];
 TRACE_2("continueDiggingTrench", _trench, _unit, _switchingDigger);
 
-private _actualProgress = _trench getVariable [QGVAR(progress), 0];
+private _actualProgress = _trench getVariable [QGVAR(progress), 1];
 if (_actualProgress >= 1) exitWith {};
 
 // Mark trench as being worked on
@@ -76,12 +76,12 @@ private _fnc_onFailure = {
     [_unit, "", 1] call EFUNC(common,doAnimation);
 };
 private _fnc_condition = {
-    (_this select 0) params ["", "_trench"];
+    (_this select 0) params ["_unit", "_trench"];
 
     if !(_trench getVariable [QGVAR(digging), false]) exitWith {false};
     if (count (_trench getVariable [QGVAR(diggers),[]]) <= 0) exitWith {false};
     if (GVAR(stopBuildingAtFatigueMax) && {EGVAR(advanced_fatigue,anReserve) <= 0})  exitWith {false};
-    true
+    "ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))
 };
 
 [_digTime, [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition, [], ((_trench getVariable [QGVAR(progress), 0]) >= 1)] call EFUNC(common,progressBar);

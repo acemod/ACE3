@@ -57,7 +57,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         case (_itemInfoType == TYPE_HEADGEAR): {
             (_cargo select 3) pushBackUnique _className;
         };
-        /* Uniform */\
+        /* Uniform */
         case (_itemInfoType == TYPE_UNIFORM): {
             (_cargo select 4) pushBackUnique _className;
         };

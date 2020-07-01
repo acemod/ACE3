@@ -15,6 +15,7 @@
             <Chinesesimp>ACE 后勤</Chinesesimp>
             <Chinese>ACE 後勤</Chinese>
             <Korean>ACE 논리</Korean>
+            <Turkish>ACE Lojistik</Turkish>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>http://ace3mod.com/</English>
@@ -30,6 +31,8 @@
             <Japanese>http://ace3mod.com/</Japanese>
             <Chinesesimp>http://ace3mod.com/</Chinesesimp>
             <Chinese>http://ace3mod.com/</Chinese>
+            <Hungarian>http://ace3mod.com/</Hungarian>
+            <Turkish>http://ace3mod.com/</Turkish>
         </Key>
     </Package>
 </Project>
