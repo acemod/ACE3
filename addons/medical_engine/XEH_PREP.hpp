@@ -6,3 +6,4 @@ PREP(setStructuralDamage);
 PREP(setUnconsciousAnim);
 PREP(getHitpointArmor);
 PREP(getItemArmor);
+PREP(applyAnimAfterRagdoll);
