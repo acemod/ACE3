@@ -269,10 +269,12 @@
             <English>Only Show Friendly Gestures</English>
             <Russian>Показывать только союзные жесты</Russian>
             <Polish>Pokazuj jedynie sojusznicze gesty</Polish>
+            <French>Afficher uniquement le pointage des alliés</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_description">
             <English>Shows only Gestures from Units that are from the same side or a Friendly side.</English>
             <Russian>Показывать жесты только от игроков союзной стороны.</Russian>
+            <French>Affiche uniquement les pointages effectués par des unités qui sont du même camp, ou d'un camp allié.</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>

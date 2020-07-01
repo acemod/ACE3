@@ -787,7 +787,7 @@ class GVAR(display) {
             colorBackground[]={0,0,0,1};
             fade=1;
             enable=0;
-            x = QUOTE(safezoneW  + safezoneX - 13 * GRID_W);
+            x = QUOTE(safezoneW + safezoneX - 13 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
             w = QUOTE(12 * GRID_W);
             h = QUOTE(9 * GRID_H);
@@ -798,7 +798,7 @@ class GVAR(display) {
             text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
             onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(fillRightPanel));
             colorBackground[]={0,0,0,0.5};
-            x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
+            x = QUOTE(safezoneW + safezoneX - 10 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
@@ -903,6 +903,7 @@ class GVAR(display) {
             tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
             y = QUOTE(safezoneY + 88 * GRID_H);
         };
+        
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
             text = QPATHTOF(data\iconClearContainer.paa);
@@ -911,7 +912,7 @@ class GVAR(display) {
             onButtonClick = QUOTE(ctrlParent (_this select 0) call FUNC(buttonClearAll));
             fade=1;
             enable=0;
-            x = QUOTE(safezoneW  + safezoneX - 11 * GRID_W);
+            x = QUOTE(safezoneW + safezoneX - 11 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 29 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
@@ -926,7 +927,7 @@ class GVAR(loadoutsDisplay) {
     class controls {
         class centerBox: ctrlControlsGroupNoScrollbars {
             idc = IDC_centerBox;
-            x = QUOTE(safezoneW  + safezoneX - (180 * GRID_W));
+            x = QUOTE(safezoneW + safezoneX - (180 * GRID_W));
             y = QUOTE(safezoneY + (5 * GRID_H));
             w = QUOTE(160 * GRID_W);
             h = QUOTE(safezoneH - (34 * GRID_H));
@@ -1056,7 +1057,7 @@ class GVAR(loadoutsDisplay) {
         };
         class buttonClose: ctrlButton {
             idc = -1;
-            x = QUOTE(safezoneW  + safezoneX - 32 * GRID_W);
+            x = QUOTE(safezoneW + safezoneX - 32 * GRID_W);
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
             w = QUOTE(30 * GRID_W);
             h = QUOTE(7 * GRID_H);
