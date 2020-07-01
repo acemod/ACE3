@@ -66,16 +66,16 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class ace_unconscious_10: KIA_driver_boat01 {
         };
 
-        class GVAR(faceDown): Unconscious {
+        class GVAR(faceDown_unconscious): Unconscious {
         };
 
-        class GVAR(faceLeft): Unconscious {
+        class GVAR(faceLeft_unconscious): Unconscious {
         };
 
-        class GVAR(faceRight): Unconscious {
+        class GVAR(faceRight_unconscious): Unconscious {
         };
 
-        class GVAR(faceUp): Unconscious {
+        class GVAR(faceUp_unconscious): Unconscious {
         };
 
         class AmovPpneMstpSnonWnonDnon;
