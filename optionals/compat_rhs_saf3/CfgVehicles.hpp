@@ -37,4 +37,24 @@ class CfgVehicles {
             };
         };
     };
+
+    class ACE_Explosives_Place_rhssaf_mine_pma3: ACE_Explosives_Place {
+        displayName = $STR_RHSSAF_PMA3_DISPLAYNAME;
+        model = "\rhssaf\addons\rhssaf_m_explosives\mines_ap\pma\rhssaf_pma3_d";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.02]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhssaf_mine_tma4: ACE_Explosives_Place {
+        displayName = $STR_RHSSAF_TMA4_DISPLAYNAME;
+        model = "\rhssaf\addons\rhssaf_m_explosives\mines_at\tma4\rhssaf_tma4_d";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.024]";
+            };
+        };
+    };
 };
