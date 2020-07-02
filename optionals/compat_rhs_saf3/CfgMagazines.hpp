@@ -47,4 +47,29 @@ class CfgMagazines {
             };
         };
     };
+
+    class CA_Magazine;
+    class rhssaf_tm100_mag: CA_Magazine {
+        ace_explosives_DelayTime = 1;
+        ace_explosives_Placeable = 1;
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhssaf_tm100";
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter"};
+            class Timer {
+                FuseTime = 0.5;
+            };
+            class Command {
+                FuseTime = 0.5;
+            };
+            class MK16_Transmitter: Command {};
+        };
+    };
+
+    class rhssaf_tm200_mag: rhssaf_tm100_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhssaf_tm200";
+    };
+
+    class rhssaf_tm500_mag: rhssaf_tm100_mag {
+        ace_explosives_SetupObject = "ACE_Explosives_Place_rhssaf_tm500";
+    };
 };

@@ -57,4 +57,34 @@ class CfgVehicles {
             };
         };
     };
+
+    class ACE_Explosives_Place_rhssaf_tm100: ACE_Explosives_Place {
+        displayName = $STR_RHSSAF_TM100_DISPLAYNAME;
+        model = "\rhssaf\addons\rhssaf_m_explosives\tm500\rhssaf_tm100_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.055, 0, 0.014]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhssaf_tm200: ACE_Explosives_Place {
+        displayName = $STR_RHSSAF_TM200_DISPLAYNAME;
+        model = "\rhssaf\addons\rhssaf_m_explosives\tm500\rhssaf_tm200_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.055, 0, 0.018]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhssaf_tm500: ACE_Explosives_Place {
+        displayName = $STR_RHSSAF_TM500_DISPLAYNAME;
+        model = "\rhssaf\addons\rhssaf_m_explosives\tm500\rhssaf_tm500_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.056, 0, 0.028]";
+            };
+        };
+    };
 };
