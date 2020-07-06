@@ -175,7 +175,7 @@ if (_isBurning) exitWith {};
             _lastIntensityUpdate = CBA_missionTime;
             _intensity = _intensity - INTENSITY_LOSS - (rain / 10);
             if (local _unit) then {
-                if (!isNull _unit && { alive _unit }) then {
+                if (!(isNull _unit) && { alive _unit }) then {
                     if !(IS_UNCONSCIOUS(_unit)) then {
                         if !(isPlayer _unit) then {
                             private _sdr = _unit getVariable [QGVAR(stopDropRoll), false];
@@ -219,22 +219,20 @@ if (_isBurning) exitWith {};
                             };
                         };
                     
-                        if (_unit isEqualTo vehicle _unit) then {
-                            if !(currentWeapon _unit isEqualTo "") then {
-                                private _gwh = createVehicle ["WeaponHolderSimulated", [0, 0, 0], [], 0, "NONE"];
-                                _gwh setPosASL (_unit modelToWorldVisualWorld (_unit selectionPosition "righthand"));
-                                
-                                private _weapon = currentWeapon _unit;
-                                _unit removeWeapon _weapon;
-                                _gwh addweaponCargoGlobal [_weapon, 1];
-                                
-                                _gwh setDir (90 - getDir _unit);
-                                _gwh addTorque [random 100, random 100, random 100];
-                                
-                                private _massGwh = getMass _gwh;
-                                private _forceNeededForVelocity = _massGwh * speed _unit;
-                                _gwh addForce [(vectorNormalized velocity _unit) vectorMultiply _forceNeededForVelocity, [0, 0, 0]]
-                            };
+                        if ((_unit isEqualTo vehicle _unit) && { !(currentWeapon _unit isEqualTo "") }) then {
+                            private _gwh = createVehicle ["WeaponHolderSimulated", [0, 0, 0], [], 0, "NONE"];
+                            _gwh setPosASL (_unit modelToWorldVisualWorld (_unit selectionPosition "righthand"));
+                            
+                            private _weapon = currentWeapon _unit;
+                            _unit removeWeapon _weapon;
+                            _gwh addweaponCargoGlobal [_weapon, 1];
+                            
+                            _gwh setDir (90 - getDir _unit);
+                            _gwh addTorque [random 100, random 100, random 100];
+                            
+                            private _massGwh = getMass _gwh;
+                            private _forceNeededForVelocity = _massGwh * speed _unit;
+                            _gwh addForce [(vectorNormalized velocity _unit) vectorMultiply _forceNeededForVelocity, [0, 0, 0]];
                         };
                         
                         private _soundID = floor (1 + random 15);
