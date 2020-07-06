@@ -175,81 +175,82 @@ if (_isBurning) exitWith {};
             _lastIntensityUpdate = CBA_missionTime;
             _intensity = _intensity - INTENSITY_LOSS - (rain / 10);
             if (local _unit) then {
-                if !(IS_UNCONSCIOUS(_unit)) then {
-                    if !(isPlayer _unit) then {
-                        private _sdr = _unit getVariable [QGVAR(stopDropRoll), false];
-                        if ((_unit isEqualTo vehicle _unit) && (_sdr || ({ 0.05 > random 1 }))) then {
-                            _unit setVariable [QGVAR(stopDropRoll), true];
-                            if !(_sdr) then {
-                                TRACE_1("stop, drop, roll!", _unit);
-                                _unit setUnitPos "DOWN";
-                                doStop _unit;
-                            };
-                            // queue up a bunch of animations
-                            for "_i" from 0 to 2 do {
-                                [_unit, selectRandom ["amovppnemstpsnonwnondnon_amovppnemevasnonwnondl", "amovppnemstpsnonwnondnon_amovppnemevasnonwnondr"], 0] call EFUNC(common,doAnimation);
-                            };
-                            _intensity = _intensity - (1 / _intensity);
-                        } else {
-                            private _group = (group _unit);
-                            private _vehicle = vehicle _unit;
-                            
-                            if (_vehicle != _unit) then {
-                                TRACE_1("Ejecting", _unit);
-                                _unit leaveVehicle _vehicle;
-                                unassignVehicle _unit;
-                                _unit action ["eject",_vehicle];
-                            };
-                            _unit disableAI "TARGET";
-                            _unit disableAI "AUTOTARGET";
+                if (!isNull _unit && { alive _unit }) then {
+                    if !(IS_UNCONSCIOUS(_unit)) then {
+                        if !(isPlayer _unit) then {
+                            private _sdr = _unit getVariable [QGVAR(stopDropRoll), false];
+                            if ((_unit isEqualTo vehicle _unit) && (_sdr || ({ 0.05 > random 1 }))) then {
+                                _unit setVariable [QGVAR(stopDropRoll), true];
+                                if !(_sdr) then {
+                                    TRACE_1("stop, drop, roll!", _unit);
+                                    _unit setUnitPos "DOWN";
+                                    doStop _unit;
+                                };
+                                // queue up a bunch of animations
+                                for "_i" from 0 to 2 do {
+                                    [_unit, selectRandom ["amovppnemstpsnonwnondnon_amovppnemevasnonwnondl", "amovppnemstpsnonwnondnon_amovppnemevasnonwnondr"], 0] call EFUNC(common,doAnimation);
+                                };
+                                _intensity = _intensity - (1 / _intensity);
+                            } else {
+                                private _group = (group _unit);
+                                private _vehicle = vehicle _unit;
+                                
+                                if (_vehicle != _unit) then {
+                                    TRACE_1("Ejecting", _unit);
+                                    _unit leaveVehicle _vehicle;
+                                    unassignVehicle _unit;
+                                    _unit action ["eject",_vehicle];
+                                };
+                                _unit disableAI "TARGET";
+                                _unit disableAI "AUTOTARGET";
 
-                            // Run away
-                            if (leader _group != _unit) then {
-                                [_unit] join grpNull;
+                                // Run away
+                                if (leader _group != _unit) then {
+                                    [_unit] join grpNull;
+                                };
+                                _unit doMove ((getPosATL _unit) getPos [20 + random 35, floor (random 360)]);
+                                _unit setSpeedMode "FULL";
+                                _unit setSuppression 1;
                             };
-                            _unit doMove ((getPosATL _unit) getPos [20 + random 35, floor (random 360)]);
-                            _unit setSpeedMode "FULL";
-                            _unit setSuppression 1;
+                        } else {
+                            if ((animationState _unit) in PRONE_ROLLING_ANIMS) then {
+                                // decrease intensity of burn, but if its too high this wont do anything substantial
+                                _intensity = _intensity - (1 / _intensity);
+                            };
                         };
-                    } else {
-                        if ((animationState _unit) in PRONE_ROLLING_ANIMS) then {
-                            // decrease intensity of burn, but if its too high this wont do anything substantial
-                            _intensity = _intensity - (1 / _intensity);
+                    
+                        if (_unit isEqualTo vehicle _unit) then {
+                            if !(currentWeapon _unit isEqualTo "") then {
+                                private _gwh = createVehicle ["WeaponHolderSimulated", [0, 0, 0], [], 0, "NONE"];
+                                _gwh setPosASL (_unit modelToWorldVisualWorld (_unit selectionPosition "righthand"));
+                                
+                                private _weapon = currentWeapon _unit;
+                                _unit removeWeapon _weapon;
+                                _gwh addweaponCargoGlobal [_weapon, 1];
+                                
+                                _gwh setDir (90 - getDir _unit);
+                                _gwh addTorque [random 100, random 100, random 100];
+                                
+                                private _massGwh = getMass _gwh;
+                                private _forceNeededForVelocity = _massGwh * speed _unit;
+                                _gwh addForce [(vectorNormalized velocity _unit) vectorMultiply _forceNeededForVelocity, [0, 0, 0]]
+                            };
                         };
-                    };
-                
-                    if (_unit isEqualTo vehicle _unit) then {
-                        if !(currentWeapon _unit isEqualTo "") then {
-                            private _gwh = createVehicle ["WeaponHolderSimulated", [0, 0, 0], [], 0, "NONE"];
-                            _gwh setPosASL (_unit modelToWorldVisualWorld (_unit selectionPosition "righthand"));
-                            
-                            private _weapon = currentWeapon _unit;
-                            _unit removeWeapon _weapon;
-                            _gwh addweaponCargoGlobal [_weapon, 1];
-                            
-                            _gwh setDir (90 - getDir _unit);
-                            _gwh addTorque [random 100, random 100, random 100];
-                            
-                            private _massGwh = getMass _gwh;
-                            private _forceNeededForVelocity = _massGwh * speed _unit;
-                            _gwh addForce [(vectorNormalized velocity _unit) vectorMultiply _forceNeededForVelocity, [0, 0, 0]]
-                        };
+                        
+                        private _soundID = floor (1 + random 15);
+                        private _sound = format [QGVAR(scream_%1), _soundID];
+                        [QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
                     };
                     
-                    private _soundID = floor (1 + random 15);
-                    private _sound = format [QGVAR(scream_%1), _soundID];
-                    [QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
+                    // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
+                    private _woundSelection = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
+                    if (GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)) then {
+                        // keep pain around unconciousness limit to allow for more fun interactions
+                        [_unit, _intensity / MAX_INTENSITY, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
+                    } else {
+                        [_unit, 0.15, _woundSelection, "unknown", _instigator] call EFUNC(medical,addDamageToUnit);
+                    };
                 };
-                
-                // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
-                private _woundSelection = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
-                if (GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)) then {
-                    // keep pain around unconciousness limit to allow for more fun interactions
-                    [_unit, _intensity / MAX_INTENSITY, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
-                } else {
-                    [_unit, 0.15, _woundSelection, "unknown", _instigator] call EFUNC(medical,addDamageToUnit);
-                };
-                
                 _unit setVariable [QGVAR(intensity), _intensity, true]; // globally sync intensity across all clients to make sure simulation is deterministic
             };
         };
