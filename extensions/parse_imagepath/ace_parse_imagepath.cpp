@@ -13,11 +13,10 @@
 
 #include "shared.hpp"
 
-#include <stdlib.h>
-#include <sstream>
-#include <string>
-
 extern "C" {
+    EXPORT void __stdcall RVExtensionVersion(char *output, int outputSize) { 
+		strncpy(output, ACE_FULL_VERSION_STR, outputSize - 1);
+	}
     EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
 }
 

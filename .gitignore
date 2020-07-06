@@ -2,6 +2,8 @@
 *.zip
 release/*
 releases/*
+extensions/vcproj/*
+extensions/vcproj64/*
 hemtt
 hemtt.exe
 tools/temp

@@ -13,20 +13,15 @@
 
 #include "shared.hpp"
 
-#define _USE_MATH_DEFINES
-
-#include <stdlib.h>
-#include <math.h>
-#include <sstream>
-#include <vector>
-#include <string>
-
 #define MAXELEVATION 20
 #define MAXITERATIONS 600
 #define PRECISION 0.1
 #define RADIANS(X) (X / (180 / M_PI))
 
 extern "C" {
+    EXPORT void __stdcall RVExtensionVersion(char *output, int outputSize) { 
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize - 1);
+    }
     EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
 }
 

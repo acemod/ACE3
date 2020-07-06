@@ -4,6 +4,7 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 
+#include "ace_version.hpp"
 #include "targetver.h"
 #include <assert.h>
 #include <stdio.h>
@@ -17,11 +18,11 @@
 #include <memory>
 #include <cstdint>
 #include <streambuf>
-#include "ace_version.hpp"
 #include <algorithm>
 #include <cctype> //std::isspace
 #include <cstring>
 #include <istream>
+#include <sstream>
 
 #ifdef _DEBUG
 #define ZERO_OUTPUT()    { memset(output, 0x00, outputSize); }

@@ -3,12 +3,9 @@
  * Author: PabstMirror
  */
 
+#include "artillerytables.hpp"
 #include <iomanip>
 #include <future>
-#include <sstream>
-
-#include "artillerytables.hpp"
-
 
 // Constants
 static const double timeStep = 1.0 / 60;
