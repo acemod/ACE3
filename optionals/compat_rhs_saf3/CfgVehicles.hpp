@@ -1,6 +1,6 @@
 class CfgVehicles {
 
-    //ACE Explosives
+    // ACE Explosives
     class Items_base_F;
     class ACE_Explosives_Place: Items_base_F {
         class ACE_Actions {
