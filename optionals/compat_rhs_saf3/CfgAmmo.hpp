@@ -10,7 +10,7 @@ class CfgAmmo {
         ACE_ballisticCoefficients[] = {0.315};
         ACE_velocityBoundaries[] = {};
         ACE_standardAtmosphere = "ASM";
-        ACE_dragModel=1;
+        ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {785, 800, 815};
         ACE_barrelLengths[] = {508.0, 599.948, 660.4};
     };

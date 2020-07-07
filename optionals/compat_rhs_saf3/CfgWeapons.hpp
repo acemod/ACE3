@@ -58,4 +58,9 @@ class CfgWeapons {
         ACE_barrelTwist = 240;
         ACE_Overheating_allowSwapBarrel = 1;
     };
+
+    class hgun_P07_F;
+    class rhs_weap_cz99: hgun_P07_F {
+        ACE_barrelLength = 108;
+    };
 };
