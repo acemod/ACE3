@@ -313,20 +313,25 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
         if (!isNil "_x") then {\
             _x params ["", "_picture", "_tooltip"];\
             _miscOffset = _forEachIndex + 1;\
-            private _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Background), 60 + (_forEachIndex * 2)];\
-            _ctrl ctrlSetPosition [\
-                safezoneW + safezoneX - 13 * GRID_W,\
-                safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
-            ];\
-            _ctrl ctrlCommit 0;\
-            _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + (_forEachIndex * 2)];\
-            _ctrl ctrlSetPosition [\
-                safezoneW + safezoneX - 10 * GRID_W,\
-                safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
-            ];\
-            _ctrl ctrlSetText _picture;\
-            _ctrl ctrlSetTooltip _tooltip;\
-            _ctrl ctrlCommit 0;\
+            private _plusId = _forEachIndex * 2;\
+            if (isNull (_display displayCtrl (60 + _plusId))) then {\
+                private _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Background), 60 + _plusId];\
+                _ctrl ctrlSetPosition [\
+                    safezoneW + safezoneX - 13 * GRID_W,\
+                    safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
+                ];\
+                _ctrl ctrlCommit 0;\
+            };\
+            if (isNull (_display displayCtrl (61 + _plusId))) then {\
+                _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + _plusId];\
+                _ctrl ctrlSetPosition [\
+                    safezoneW + safezoneX - 10 * GRID_W,\
+                    safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
+                ];\
+                _ctrl ctrlSetText _picture;\
+                _ctrl ctrlSetTooltip _tooltip;\
+                _ctrl ctrlCommit 0;\
+            };\
         };\
     } forEach GVAR(customRightPanelButtons);\
     {\
