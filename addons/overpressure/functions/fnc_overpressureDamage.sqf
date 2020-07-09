@@ -41,8 +41,8 @@ TRACE_4("cache",_overpressureAngle,_overpressureRange,_overpressureDamage,_overp
         private _distance = vectorMagnitude _relativePosition;
         private _angle = acos (_axisDistance / _distance);
 
-        private _line = [_posASL, _targetPositionASL];
-        private _line2 = [_posASL, _targetPositionASL, _firer, _x];
+        private _line = [_posASL, _targetPositionASL, _firer, _x];
+        private _line2 = [_posASL, _targetPositionASL];
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
         // Funnel determines offset angle from the _direction.
@@ -51,7 +51,7 @@ TRACE_4("cache",_overpressureAngle,_overpressureRange,_overpressureDamage,_overp
             _angle = abs (_angle - _overpressureFunnel);
         };
 
-        if (_angle < _overpressureAngle && _distance < _overpressureRange && {!terrainIntersectASL _line && {!lineIntersects _line2}}) then {
+        if (_angle < _overpressureAngle && {_distance < _overpressureRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
             private _alpha = sqrt (1 - _distance / _overpressureRange);
             private _beta = sqrt (1 - _angle / _overpressureAngle);
 
