@@ -47,7 +47,9 @@ TRACE_4("cache",_overpressureAngle,_overpressureRange,_overpressureDamage,_overp
 
         // Funnel determines offset angle from the _direction.
         // Absolute value is needed to make it symmetrical towards and outwards the _direction.
-        if (_overpressureFunnel > 0) then {_angle = abs (_angle - _overpressureFunnel)};
+        if (_overpressureFunnel > 0) then {
+            _angle = abs (_angle - _overpressureFunnel);
+        };
 
         if (_angle < _overpressureAngle && _distance < _overpressureRange && {!terrainIntersectASL _line && {!lineIntersects _line2}}) then {
             private _alpha = sqrt (1 - _distance / _overpressureRange);
