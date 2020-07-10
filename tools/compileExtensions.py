@@ -30,8 +30,6 @@
 
 ###############################################################################
 
-__version__ = "0.9"
-
 import sys
 import os
 import os.path
@@ -51,7 +49,9 @@ if sys.platform == "win32":
     import winreg
 
 def compile_extensions(force_build):
-    extensions_root = os.getcwd()
+    originalDir = os.getcwd()
+    extensions_root = os.path.join(os.path.dirname(os.getcwd()), "extensions")
+    os.chdir(extensions_root)
     print("\nCompiling extensions in {} with rebuild:{}\n".format(extensions_root,force_build))
 
     if shutil.which("git") == None:
@@ -71,19 +71,19 @@ def compile_extensions(force_build):
         if not os.path.exists(vcproj32): os.mkdir(vcproj32)
         os.chdir(vcproj32)
         subprocess.call(["cmake", "..", "-A", "Win32"])  #note: cmake will update ace_version stuff
-        subprocess.call(["msbuild", "ACE.sln", "/m", "/t:{}".format(buildType), "/p:Configuration=Release"])
+        # subprocess.call(["msbuild", "ACE.sln", "/m", "/t:{}".format(buildType), "/p:Configuration=Release"])
 
         # 64-bit
         vcproj64 = os.path.join(extensions_root,"vcproj64")
         if not os.path.exists(vcproj64): os.mkdir(vcproj64)
         os.chdir(vcproj64)
-        subprocess.call(["cmake", "..", "-A", "x64"])
-        subprocess.call(["msbuild", "ACE.sln", "/m", "/t:{}".format(buildType), "/p:Configuration=Release"])
+        # subprocess.call(["cmake", "..", "-A", "x64"])
+        # subprocess.call(["msbuild", "ACE.sln", "/m", "/t:{}".format(buildType), "/p:Configuration=Release"])
     except Exception as e:
         print("Error: COMPILING EXTENSIONS - {}".format(e))
         raise
     finally:
-        os.chdir(extensions_root)
+        os.chdir(originalDir)
 
 def main(argv):
     if "force" in argv:
