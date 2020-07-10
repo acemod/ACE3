@@ -71,14 +71,14 @@ def compile_extensions(force_build):
         if not os.path.exists(vcproj32): os.mkdir(vcproj32)
         os.chdir(vcproj32)
         subprocess.call(["cmake", "..", "-A", "Win32"])  #note: cmake will update ace_version stuff
-        # subprocess.call(["msbuild", "ACE.sln", "/m", "/t:{}".format(buildType), "/p:Configuration=Release"])
+        subprocess.call(["msbuild", "ACE.sln", "/m", "/t:{}".format(buildType), "/p:Configuration=Release"])
 
         # 64-bit
         vcproj64 = os.path.join(extensions_root,"vcproj64")
         if not os.path.exists(vcproj64): os.mkdir(vcproj64)
         os.chdir(vcproj64)
-        # subprocess.call(["cmake", "..", "-A", "x64"])
-        # subprocess.call(["msbuild", "ACE.sln", "/m", "/t:{}".format(buildType), "/p:Configuration=Release"])
+        subprocess.call(["cmake", "..", "-A", "x64"])
+        subprocess.call(["msbuild", "ACE.sln", "/m", "/t:{}".format(buildType), "/p:Configuration=Release"])
     except Exception as e:
         print("Error: COMPILING EXTENSIONS - {}".format(e))
         raise
