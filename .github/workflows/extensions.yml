@@ -22,7 +22,9 @@ jobs:
     - name: Build
       shell: cmd
       run: |
-        cd extensions/build
+        cd extensions
+        mkdir build
+        cd build
         cmake .. && cmake --build .
     - name: Upload Artifact
       uses: actions/upload-artifact@master
