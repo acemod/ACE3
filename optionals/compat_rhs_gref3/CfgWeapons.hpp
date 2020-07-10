@@ -61,13 +61,6 @@ class CfgWeapons {
         ACE_barrelLength = 583;
     };
 
-    class Rifle_Long_Base_F;
-    class rhs_weap_m84: Rifle_Long_Base_F {
-        ACE_Overheating_allowSwapBarrel = 1;
-        ACE_barrelTwist = 240;
-        ACE_barrelLength = 658;
-    };
-
     class rhs_weap_vhs2_base;
     class rhs_weap_vhsd2: rhs_weap_vhs2_base {
         ACE_barrelTwist = 177.8;
