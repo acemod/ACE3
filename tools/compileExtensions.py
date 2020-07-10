@@ -67,7 +67,7 @@ def compile_extensions(force_build):
     try:
         buildType = "rebuild" if force_build else "build"
         # 32-bit
-        vcproj32 = os.path.join(extensions_root,"vcproj")
+        vcproj32 = os.path.join(extensions_root,"vcproj32")
         if not os.path.exists(vcproj32): os.mkdir(vcproj32)
         os.chdir(vcproj32)
         subprocess.call(["cmake", "..", "-A", "Win32"])  #note: cmake will update ace_version stuff
@@ -98,4 +98,4 @@ if __name__ == "__main__":
     start_time = timeit.default_timer()
     main(sys.argv)
     print("\nTotal Program time elapsed: {0} sec".format(timeit.default_timer() - start_time))
-    # input("Press Enter to continue...")
+    input("Press Enter to continue...")
