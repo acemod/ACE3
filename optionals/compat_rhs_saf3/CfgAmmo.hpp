@@ -15,6 +15,15 @@ class CfgAmmo {
         ACE_barrelLengths[] = {508.0, 599.948, 660.4};
     };
 
+    class rhs_B_762x39_Ball;
+    class rhssaf_ammo_762x39_m82_api: rhs_B_762x39_Ball {
+        ACE_Caliber = 7.8994;
+        ACE_bulletMass = 7.6074;
+        ACE_bulletLength = 27.2796;
+        ACE_muzzleVelocities[] = {650, 700, 748};
+        ACE_barrelLengths[] = {206.85, 329.62, 412.75};
+    };
+
     // ACE Explosives
     class DirectionalBombBase;
     class rhssaf_mine_mrud_a_ammo: DirectionalBombBase {
