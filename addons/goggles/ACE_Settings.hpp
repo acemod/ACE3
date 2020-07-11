@@ -4,7 +4,7 @@ class ACE_Settings {
         category = CSTRING(DisplayName);
         displayName = CSTRING(effects_displayName);
         typeName = "SCALAR";
-        value = 3;
+        value = 2;
         isClientSettable = 1;
         values[] = {ECSTRING(common,Disabled), CSTRING(effects_tintOnly), CSTRING(enabled_tintAndEffects), CSTRING(effects_effectsOnly)};
     };
