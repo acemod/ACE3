@@ -4,9 +4,9 @@ class ACE_Settings {
         category = CSTRING(DisplayName);
         displayName = CSTRING(effects_displayName);
         typeName = "SCALAR";
-        value = 2;
+        value = 3;
         isClientSettable = 1;
-        values[] = {ECSTRING(common,Disabled), CSTRING(effects_tintOnly), CSTRING(enabled_tintAndEffects)};
+        values[] = {ECSTRING(common,Disabled), CSTRING(effects_tintOnly), CSTRING(enabled_tintAndEffects), CSTRING(effects_effectsOnly)};
     };
     class GVAR(showInThirdPerson) {
         category = CSTRING(DisplayName);
