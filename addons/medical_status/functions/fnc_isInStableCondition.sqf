@@ -24,17 +24,15 @@ if (!alive _unit
 ) exitWith {false};
 
 private _requiredBloodVolume = DEFAULT_BLOOD_VOLUME * (EGVAR(medical_treatment,minBloodPAK) / 100);
-if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith { false };
+if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith {false};
 
-if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith { false };
-if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { !(GET_FRACTURES(_unit) isEqualTo []) }) exitWith { false };
-
-private _requiredWoundState = EGVAR(medical_treatment,requiredWoundStatePAK);
+if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith {false};
+if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { !(GET_FRACTURES(_unit) isEqualTo []) }) exitWith {false};
 
 // Require at least bandaged wounds.
-if (_requiredWoundState >= 1 && { !(GET_OPEN_WOUNDS(_unit) isEqualTo []) }) exitWith { false };
+if (EGVAR(medical_treatment,requiredWoundStatePAK) >= 1 && { !(GET_OPEN_WOUNDS(_unit) isEqualTo []) }) exitWith {false};
 
 // Require stitched wounds.
-if (_requiredWoundState == 2 && { !(GET_BANDAGED_WOUNDS(_unit) isEqualTo []) }) exitWith { false };
+if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && { !(GET_BANDAGED_WOUNDS(_unit) isEqualTo []) }) exitWith {false};
 
 true
