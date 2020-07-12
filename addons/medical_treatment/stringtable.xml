@@ -376,7 +376,7 @@
             <English>Required Wound State PAK</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_Description">
-            <English>Which state all wounds on a patient need to be in for PAK to be possible.</English>
+            <English>Controls whether a patient's wounds must be bandaged or stitched in order to use a PAK.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_RequiredWoundStatePAK_Open">
             <English>Open</English>
@@ -388,19 +388,19 @@
             <English>Allow Pain PAK</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowPainPAK_Description">
-            <English>Enables the use of PAKs on patients in pain.</English>
+            <English>Controls whether PAKs can be used on patients in pain.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowFracturesPAK_DisplayName">
             <English>Allow Fractures PAK</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowFracturesPAK_Description">
-            <English>Enables the use of PAKs on patients with untreated fractures.</English>
+            <English>Controls whether PAKs can be used on patients with untreated fractures.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MinBloodPAK_DisplayName">
             <English>Min Blood PAK</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MinBloodPAK_Description">
-            <English>Minimum blood volume required to use a PAK.</English>
+            <English>Minimum blood volume percentage required to use a PAK.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MinHeartRatePAK_DisplayName">
             <English>Min Heart Rate PAK</English>
