@@ -99,6 +99,10 @@ class CfgVehicles {
         
         class Viewoptics: GVAR(UAVOptics){};
         class PilotCamera: GVAR(UAVPod){};
+
+        class ADDON {
+            trackPilotCamera = 1;
+        };
     };
     
     class O_UAV_01_F: UAV_01_Base_F {
@@ -208,8 +212,7 @@ class CfgVehicles {
         class Turrets {};
 
         class AnimationSources: AnimationSources {
-            class mainGun 
-            {
+            class mainGun {
                 source = "user";
                 animperiod = 0.25;
             };
