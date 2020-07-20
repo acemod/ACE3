@@ -191,7 +191,7 @@ class CfgAmmo {
     class B_56x15_dual: BulletBase {
         tracerScale = 0.5;
     };
-    class B_580x42_Ball_F: BulletBase {
+    class B_580x42_Ball_F: BulletBase { // DBP87
         airFriction=-0.00121087;
         ACE_caliber=5.9944;
         ACE_bulletLength=24.2;
@@ -204,6 +204,18 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={790, 930, 950};
         ACE_barrelLengths[]={369.0, 463.0, 600.0};
     };
+
+    class ACE_580x42_DBP88_Ball_F: B_580x42_Ball_F { // DBP88 https://en.wikipedia.org/wiki/5.8%C3%9742mm
+        airFriction = -0.000968;
+        typicalSpeed = 895;
+        ACE_caliber = 6;
+        ACE_bulletLength = 28; // https://files.osgnetworks.tv/2/files/2017/11/DBP87-Specs2.jpg
+        ACE_bulletMass = 5;
+        ACE_ballisticCoefficients[] = {0.21};
+        ACE_muzzleVelocities[] = {903}; // at 21°C, at 15°C 895 m/s according with the 20Rnd_650x39_Cased_Mag_F initSpeep
+        ACE_barrelLengths[] = {640};
+    };
+
     class B_65x39_Caseless : BulletBase {
         airFriction=-0.00077363;
         tracerScale = 1.1; //1.0;
