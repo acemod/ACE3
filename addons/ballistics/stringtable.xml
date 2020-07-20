@@ -2668,5 +2668,141 @@
             <Czech>Úsťová rychlost</Czech>
             <Spanish>Velocidad inicial</Spanish>
         </Key>
+        <Key ID="str_a3_cfgweapons_srifle_dmr_07_wdm_f0">
+            <Original>CMR-76 5.8 mm (Green Hex)</Original>
+            <Chinese>CMR-76 5.8 mm（綠色六邊形）</Chinese>
+            <French>CMR-76 5,8 mm (hex vert)</French>
+            <Spanish>CMR-76 5,8 mm (Hex verde)</Spanish>
+            <Italian>CMR-76 5,8 mm (esag. verde)</Italian>
+            <Polish>CMR-76 5,8 mm (zielony hex)</Polish>
+            <Russian>CMR-76 5,8 мм (зеленый гекс)</Russian>
+            <German>CMR-76 5,8 mm (Grüne Sechsecke)</German>
+            <Czech>CMR-76 5,8 mm (zelený hex)</Czech>
+            <English>CMR-76 5.8 mm (Green Hex)</English>
+            <Portuguese>CMR-76 5,8 mm (verde camuflado)</Portuguese>
+            <Korean>CMR-76 5.8 mm (녹색 헥스)</Korean>
+            <Chinesesimp>CMR-76 5.8 毫米（绿色六角形）</Chinesesimp>
+            <Japanese>CMR-76 5.8 mm（緑六角形）</Japanese>
+            <Turkish>CMR-76 5.8 mm (Yeşil Hex)</Turkish>
+        </Key>
+        <Key ID="str_a3_cfgweapons_srifle_dmr_07_hex_f0">
+            <Original>CMR-76 5.8 mm (Hex)</Original>
+            <Chinese>CMR-76 5.8 mm（六邊形）</Chinese>
+            <French>CMR-76 5,8 mm (hex)</French>
+            <Spanish>CMR-76 5,8 mm (Hex)</Spanish>
+            <Italian>CMR-76 5,8 mm (esag.)</Italian>
+            <Polish>CMR-76 5,8 mm (hex)</Polish>
+            <Russian>CMR-76 5,8 мм (гекс)</Russian>
+            <German>CMR-76 5,8 mm (Sechsecke)</German>
+            <Czech>CMR-76 5,8 mm (hex)</Czech>
+            <English>CMR-76 5.8 mm (Hex)</English>
+            <Portuguese>CMR-76 5,8 mm (Hex)</Portuguese>
+            <Korean>CMR-76 5.8 mm(헥스)</Korean>
+            <Chinesesimp>CMR-76 5.8 毫米（六角形）</Chinesesimp>
+            <Japanese>CMR-76 5.8 mm（六角形）</Japanese>
+            <Turkish>CMR-76 5.8 mm (Hex)</Turkish>
+        </Key>
+        <Key ID="str_a3_cfgweapons_srifle_dmr_07_blk_f0">
+            <Original>CMR-76 5.8 mm (Black)</Original>
+            <Chinese>CMR-76 5.8 mm（黑色）</Chinese>
+            <French>CMR-76 5,8 mm (noir)</French>
+            <Spanish>CMR-76 5,8 mm (negro)</Spanish>
+            <Italian>CMR-76 5,8 mm (nero)</Italian>
+            <Polish>CMR-76 5,8 mm (czarny)</Polish>
+            <Russian>CMR-76 5,8 мм (черный)</Russian>
+            <German>CMR-76 5,8 mm (Schwarz)</German>
+            <Czech>CMR-76 5,8 mm (černá)</Czech>
+            <English>CMR-76 5.8 mm (Black)</English>
+            <Portuguese>CMR-76 5,8 mm (preto)</Portuguese>
+            <Korean>CMR-76 5.8 mm(흑색)</Korean>
+            <Chinesesimp>CMR-76 5.8 毫米 （黑色）</Chinesesimp>
+            <Japanese>CMR-76 5.8 mm（黒）</Japanese>
+            <Turkish>CMR-76 5.8 mm (Siyah)</Turkish>
+        </Key>
+        <Key ID="str_a3_cfgweapons_dmr_07_base_f_library0">
+            <Original>Designated marksman rifle of an Eastern origin. It is a gas operated, semiautomatic rifle of a bullpup construction. The housing is made from polymer. The rifle is chambered in 5.8 mm and therefore is most suited to ranges from 500 to 900 meters. The CMR-76 is missing both the sides and the bottom rails but is by default equipped with a bipod.</Original>
+            <Chinese>來自東方的特等射手指定步槍。氣動式、半自動、犢牛結構步槍。外殼採用合成材料。這支步槍設計為 5.8 mm，因此最適合的射擊距離是 500 到 900 公尺。CMR-76 取消兩旁與底部的導軌，改為二腳架。</Chinese>
+            <French>Cette arme est un fusil de précision de fabrication chinoise. Semi-automatique à emprunt de gaz, doté d'une architecture bullpup et d'une carcasse polymère, il utilise des munitions de 5,8 mm particulièrement adaptées à des distances comprises entre 500 et 900 mètres. Le CMR-76 n'a pas de rails sous le canon ni sur ses côtés, mais il est équipé d'un bipied par défaut.</French>
+            <Spanish>Fusil de precisión de origen oriental. Es un fusil semiautomático de gas y construcción bullpup. El armazón está hecho de polímero. El fusil tiene una cámara de 5,8 mm y, por lo tanto, es apropiado para distancias entre 500 y 900 metros. El CMR-76 carece de los raíles laterales y del inferior, pero viene equipado por defecto con un bípode.</Spanish>
+            <Italian>Fucile da tiratore scelto di origine orientale operato a gas, semiautomatico e con costruzione bullpup. Caratterizzato da un alloggiamento polimerico, è camerato per munizioni da 5,8 mm e risulta pertanto adatto a distanze da 500 a 900 metri. Il CMR-76 non presenta i lati e i supporti a rotaia inferiori ma è dotato di un cavalletto.</Italian>
+            <Polish>Półautomatyczny karabin wyborowy konstrukcji wschodniej w układzie bezkolbowym (tzw. „bullpup”) działający na zasadzie odprowadzenia gazów przez boczny otwór w ściance lufy. Łoże polimerowe. Karabin wykorzystuje naboje 5,8 mm, dlatego sprawdza się najlepiej na dystansach od 500 do 900 m. Wersja podstawowa CMR-76 nie posiada szyn po obu stronach i u dołu łoża, ale wyposażona jest w dwójnóg.</Polish>
+            <Russian>Пехотная снайперская винтовка восточного происхождения. Это полуавтоматическая винтовка с отводом пороховых газов, разработанная по схеме булл-пап. Корпус изготовлен из полимера. Винтовка рассчитана на патрон 5,8 мм и поэтому больше всего подходит для стрельбы на расстояние от 500 до 900 метров. У CMR-76 отсутствуют как боковые, так и нижние планки, но она комплектуется сошкой по умолчанию.</Russian>
+            <German>Ein ausgewiesenes Scharfschützengewehr östlichen Ursprungs. Dieses gasbetriebene halbautomatische Gewehr setzt auf eine Bullpup-Konstruktion. Der Schaft besteht aus einem Polymer. Das Gewehr hat Kaliber 5,8 mm und eignet sich daher für Entfernungen von 500 bis 900 Metern. Dem CMR-76 fehlen die Aufsätze an beiden Seiten und unten, doch es verfügt standardmäßig über ein Zweibein.</German>
+            <Czech>Ostrostřelecká puška východního původu. Jde o poloautomatickou pušku s bullpup uspořádáním a mechanismem na principu odběru prachových plynů. Tělo zbraně je vyrobeno z polymeru. Puška používá střelivo ráže 5,8 mm, a proto je nejvhodnější ke střelbě na vzdálenost 500 až 900 m. Puška CMR-76 není vybavena lištami po stranách, ani pod hlavní, ve výchozí verzi ji však lze vybavit dvounožkou.</Czech>
+            <English>Designated marksman rifle of an Eastern origin. It is a gas operated, semiautomatic rifle of a bullpup construction. The housing is made from polymer. The rifle is chambered in 5.8 mm and therefore is most suited to ranges from 500 to 900 meters. The CMR-76 is missing both the sides and the bottom rails but is by default equipped with a bipod.</English>
+            <Portuguese>Fuzil de atirador de elite originado no leste. É um operado a gás fuzil semiautomático com configuração bullpup (gatilho à frente do carregador). O compartimento é feito de polímero. O fuzil tem câmara em 5,8 mm, sendo, portanto, ideal para distâncias entre 500 e 900 metros. O CMR-76 não possui os trilhos inferiores e das laterais, mas vem equipado com um bípede por padrão.</Portuguese>
+            <Korean>동구권에서 만들어진 지정사수용 소총. 이 총은 불펍식 구조를 갖춘 가스압식 반자동 소총입니다. 덮개는 중합체로 제작되었습니다. 이 소총은 5.8 mm 탄환을 사용하여 500~900m의 사정 거리에서 가장 적합한 화기입니다. CMR-76은 측면과 바닥 레일이 없지만 기본적으로 양각대가 장착되어 있습니다.</Korean>
+            <Chinesesimp>东方原产指定射手步枪。它是一种导气式无托结构半自动步枪。外壳由聚合物制成。此步枪的枪膛为 5.8 毫米，因此最适合 500 至 900 米射程。CMR-76 缺少侧面和底部滑轨，但默认配备两脚架。</Chinesesimp>
+            <Japanese>東欧で生産されたマークスマンライフル。ガス圧式セミオートライフルであり、ブルパップ方式の構造。ハウジングはポリマー素材製。5.8 mm弾用となっており、最適射程距離はおよそ500～900メートル程度と思われる。CMR-76には両側面と下部が無いが、代わりに初めからバイポッドが装着されている。</Japanese>
+            <Turkish>Doğu kökenli bir keskin nişancı tüfeğidir. Gazla çalışan, bulpap yapısına sahip bir yarı otomatik tüfektir. Gövdesi polimerden yapılmıştır. Namlusu 5.8 mm için uygundur ve bu nedenle, en uygun olduğu menziller 500 ila 900 metredir. CMR-76, yan ve alt raylardan yoksundur, ancak varsayılan olarak bir ikili ayakla donanmıştır.</Turkish>
+        </Key>
+        <Key ID="str_a3_cfgweapons_dmr_07_base_f1">
+            <Original>Marksman Rifle&lt;br /&gt;Caliber: 5.8x42 mm</Original>
+            <Chinese>特等射手步槍&lt;br /&gt;口徑：5.8x42 mm</Chinese>
+            <French>Fusil de précision&lt;br /&gt;Calibre : 5,8x42 mm</French>
+            <Spanish>Fusil de precisión&lt;br /&gt;Calibre: 5,8x42 mm</Spanish>
+            <Italian>Fucile da tiratore scelto&lt;br /&gt;Calibro: 5,8x42 mm</Italian>
+            <Polish>Karabin wyborowy&lt;br /&gt;Kaliber: 5,8x42 mm</Polish>
+            <Russian>Снайперская винтовка&lt;br /&gt;Калибр: 5,8x42 мм</Russian>
+            <German>Scharfschützengewehr&lt;br/&gt;Kaliber: 5,8x42 mm</German>
+            <Czech>Ostrostřelecká puška&lt;br /&gt;Ráže: 5,8x42 mm</Czech>
+            <English>Marksman Rifle&lt;br /&gt;Caliber: 5.8x42 mm</English>
+            <Portuguese>Rifle de atirador de elite&lt;br /&gt;Calibre: 5,8x42 mm</Portuguese>
+            <Korean>저격소총&lt;br /&gt;구경: 5.8x42 mm</Korean>
+            <Chinesesimp>精确射手步枪&lt;br /口径：5.8x42 毫米</Chinesesimp>
+            <Japanese>マークスマンライフル&lt;br /&gt;口径：5.8x42 mm</Japanese>
+            <Turkish>Keskin Nişancı Tüfeği&lt;br /&gt;Kalibre: 5.8x42 mm</Turkish>
+        </Key>
+        <Key ID="str_a3_cfgweapons_dmr_07_base_f0">
+            <Original>CMR-76 5.8 mm</Original>
+            <Chinese>CMR-76 5.8 mm</Chinese>
+            <French>CMR-76 5,8 mm</French>
+            <Spanish>CMR-76 5,8 mm</Spanish>
+            <Italian>CMR-76 5,8 mm</Italian>
+            <Polish>CMR-76 5,8 mm</Polish>
+            <Russian>CMR-76 5,8 мм</Russian>
+            <German>CMR-76 5,8 mm</German>
+            <Czech>CMR-76 5,8 mm</Czech>
+            <English>CMR-76 5.8 mm</English>
+            <Portuguese>CMR-76 5,8 mm</Portuguese>
+            <Korean>CMR-76 5.8 mm</Korean>
+            <Chinesesimp>CMR-76 5.8 毫米</Chinesesimp>
+            <Japanese>CMR-76 5.8 mm</Japanese>
+            <Turkish>CMR-76 5.8 mm</Turkish>
+        </Key>
+        <Key ID="str_a3_cfgmagazines_20rnd_650x39_cased_mag_f1">
+            <Original>Caliber: 5.8x42 mm&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: CMR-76</Original>
+            <Chinese>口徑：5.8x42 mm&lt;br /&gt;個數：10&lt;br /&gt;用於：CMR-76</Chinese>
+            <French>Calibre : 5,8x42 mm&lt;br /&gt;Munitions : 10&lt;br /&gt;Application : CMR-76</French>
+            <Spanish>Calibre: 5,8 x 42 mm&lt;br /&gt;Cargas: 10&lt;br /&gt;Usadas en: CMR-76</Spanish>
+            <Italian>Calibro: 5,8x42 mm&lt;br /&gt;Munizioni: 10&lt;br /&gt;Si usa con: CMR-76</Italian>
+            <Polish>Kaliber: 5,8x42 mm&lt;br /&gt;Naboje: 10&lt;br /&gt;Zastosowanie: CMR-76</Polish>
+            <Russian>Калибр: 5,8x42 мм&lt;br /&gt;Боеприпас: 10&lt;br /&gt;Используется в: CMR-76</Russian>
+            <German>Kaliber: 5,8x42 mm&lt;br /&gt;Schuss: 10&lt;br /&gt;Verwendet in: CMR-76</German>
+            <Czech>Ráže: 5,8x42 mm&lt;br /&gt;Kapacita: 10&lt;br /&gt;Použití: CMR-76</Czech>
+            <English>Caliber: 5.8x42 mm&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: CMR-76</English>
+            <Portuguese>Calibre: 5,8x42 mm&lt;br /&gt;Projéteis: 10&lt;br /&gt;Utilizados em: CMR-76</Portuguese>
+            <Korean>구경: 5.8x42 mm&lt;br /&gt;탄 수: 10&lt;br /&gt;용도: CMR-76</Korean>
+            <Chinesesimp>口径：5.8x42 毫米&lt;br /&gt;弹数：10&lt;br /&gt;用于：CMR-76</Chinesesimp>
+            <Japanese>口径：5.8x42 mm&lt;br /&gt;弾数：10&lt;br /&gt;使用武器：CMR-76</Japanese>
+            <Turkish>Kalibre: 5.8x42 mm&lt;br /&gt;Mermi: 10&lt;br /&gt;Kullanıldığı Yer: CMR-76</Turkish>
+        </Key>
+        <Key ID="str_a3_cfgmagazines_20rnd_650x39_cased_mag_f0">
+            <Original>5.8 mm 10Rnd Mag</Original>
+            <Chinese>5.8 mm 10 發彈匣</Chinese>
+            <French>Mag. 10 balles 5,8 mm</French>
+            <Spanish>Cargador de 10 proyectiles de 5,8 mm</Spanish>
+            <Italian>Caricatore 10 colpi 5,8 mm</Italian>
+            <Polish>10-nab. mag. 5,8 mm</Polish>
+            <Russian>Магазин, 10 патр. 5,8 мм</Russian>
+            <German>10-Schuss-5.8mm-Magazin</German>
+            <Czech>5,8 mm, 10ks zásobník</Czech>
+            <English>5.8 mm 10Rnd Mag</English>
+            <Portuguese>Carregador 10Mun. 5,8 mm</Portuguese>
+            <Korean>5.8mm 10발 탄창</Korean>
+            <Chinesesimp>5.8 毫米 10 发弹匣</Chinesesimp>
+            <Japanese>5.8mm 10Rnd マガジン</Japanese>
+            <Turkish>5.8 mm 10 Merm. Şarjör</Turkish>
+        </Key>
     </Package>
 </Project>
