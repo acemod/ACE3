@@ -89,6 +89,30 @@ class CfgAmmo
         ACE_muzzleVelocities[]={785, 883, 925};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
+    class B_580x42_Ball_F: BulletBase { // DBP87
+        airFriction=-0.00121087;
+        ACE_caliber=5.9944;
+        ACE_bulletLength=24.2;
+        ACE_bulletMass=4.15;
+        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[]={0.156};
+        ACE_velocityBoundaries[]={};
+        ACE_standardAtmosphere="ICAO";
+        ACE_dragModel=7;
+        ACE_muzzleVelocities[]={790, 930, 950};
+        ACE_barrelLengths[]={369.0, 463.0, 600.0};
+    };
+
+    class ACE_580x42_DBP88_Ball_F: B_580x42_Ball_F { // DBP88 https://en.wikipedia.org/wiki/5.8%C3%9742mm
+        airFriction = -0.000968;
+        typicalSpeed = 895;
+        ACE_caliber = 6;
+        ACE_bulletLength = 28; // https://files.osgnetworks.tv/2/files/2017/11/DBP87-Specs2.jpg
+        ACE_bulletMass = 5;
+        ACE_ballisticCoefficients[] = {0.21};
+        ACE_muzzleVelocities[] = {903}; // at 21°C, at 15°C 895 m/s according with the 20Rnd_650x39_Cased_Mag_F initSpeep
+        ACE_barrelLengths[] = {640};
+    };
     class B_65x39_Caseless : BulletBase {
         airFriction=-0.000785;
         typicalSpeed=800;
@@ -438,6 +462,20 @@ class CfgAmmo
         ACE_muzzleVelocities[]={850, 870, 880};
         ACE_barrelLengths[]={508.0, 620.014, 660.4};
     };
+    class B_93x64_Ball_ace3.13.x : BulletBase {
+        airFriction = -0.000808; // According with the G1 BC 0.515 and the SVDK muzzle velocity 780 m/s https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
+        ACE_caliber = 9.28; // https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
+        ACE_bulletLength = 35.56; // Average length from bullets with similar mass and BC
+        ACE_bulletMass = 17; // https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
+        ACE_muzzleVelocityVariationSD = 0.4;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[] = {0.515}; // Compromise as close as possible to these velocities and times of flight from this table (unknown measurement conditions) https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=5
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO"; // Better result with ICAO (15°C, 1013,25 hPa, 0%) than ASM conditions (15°C, 999,916 hPa, 78%)
+        ACE_dragModel = 1; // Better result than an equivalent G7 BC
+        ACE_muzzleVelocities[] = {768, 788, 798}; // Default values - 82 m/s at 21°C, at 15°C {760, 780, 790} according with the 10Rnd_93x64_DMR_05_Mag and the 150Rnd_93x64_Mag initSpeed
+        ACE_barrelLengths[] = {508.0, 620.0, 660.4};
+    };
     class B_408_Ball : BulletBase {
         timeToLive=10;
         airFriction=-0.000395;
@@ -586,6 +624,32 @@ class CfgAmmo
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={820};
         ACE_barrelLengths[]={728.98};
+    };
+    class B_50BW_Ball_F: BulletBase { // http://www.alexanderarms.com/images/pdfs/beowulf_ballistics.pdf#page=2
+        airFriction = -0.002098; // According with the G1 BC 0.21 and the muzzle velocity 1800 ft/s: 549 m/s
+        ACE_caliber = 4.55; // instead 12.7 to match with the .50BW adv. ballistics (twist rate 20") overwritten by the Katiba rifle twist 8" until a BI fix
+        ACE_bulletLength = 24.13;
+        ACE_bulletMass = 21.64; // 334 grains
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.21};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ASM";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {550}; // at 21°C, at 15°C 549 m/s according with the 10Rnd_50BW_Mag_F initSpeep
+        ACE_barrelLengths[] = {304.8}; // 12"
+    };
+    class B_570x28_Ball: BulletBase {
+        ACE_caliber = 5.7; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf
+        ACE_bulletLength = 21.6; // http://blog.thejustnation.org/2011/04/5-7x28mm-ammo-review/
+        ACE_bulletMass = 2; // based on the SS190
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.084}; // https://www.thefirearmblog.com/blog/2016/10/24/modern-personal-defense-weapon-calibers-4-6x30mm-hk/
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {716, 776}; // at 21°C, 715-775 m/s at 15°C according with the 50Rnd_570x28_SMG_03 initSpeed
+        ACE_barrelLengths[] = {264, 407};
+        airFriction = -0.002619; // default BI value -0.001412
     };
     class B_45ACP_Ball : BulletBase {
         airFriction=-0.0007182;
@@ -1612,7 +1676,46 @@ class CfgAmmo
         ACE_muzzleVelocities[]={847, 867, 877};
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
-    
+    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball { // RUAG Ammotec: https://www.heckler-koch.com/en/products/military/submachine-guns/mp7a1/mp7a2/ammunition.html
+        ACE_caliber = 4.65; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-en.pdf
+        ACE_bulletLength = 21;
+        ACE_bulletMass = 2.6;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.089};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {621}; // at 21°C, 620 m/s at 15°C according with the 4.6x30 FMJ magazine initSpeed
+        ACE_barrelLengths[] = {180};
+        airFriction = -0.002635; // default RHS value -0.0027667
+    };
+    class rhs_ammo_46x30_JHP: rhs_ammo_46x30_FMJ { // RUAG Ammotec
+        ACE_caliber = 4.65;
+        ACE_bulletLength = 17.4;
+        ACE_bulletMass = 2.0;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.112};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {691}; // at 21°C, 690 m/s at 15°C according with the 4.6x30 JHP magazine initSpeed
+        ACE_barrelLengths[] = {180};
+        airFriction = -0.003723; // default RHS value -0.00348301
+    };
+    class rhs_ammo_46x30_AP: rhs_ammo_46x30_FMJ { // RUAG Ammotec
+        ACE_caliber = 4.65;
+        ACE_bulletLength = 20.3;
+        ACE_bulletMass = 2.0;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.141};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {681}; // at 21°C, 680 m/s at 15°C according with the 4.6x30 AP magazine initSpeed
+        ACE_barrelLengths[] = {180};
+        airFriction = -0.003045; // default RHS value -0.00266241
+    };
+
     class R3F_9x19_Ball: BulletBase
     {
         ACE_caliber=9.017;
