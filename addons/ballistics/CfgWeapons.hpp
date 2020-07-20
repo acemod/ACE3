@@ -81,12 +81,8 @@ class CfgWeapons {
     // QBU-88
     class DMR_07_base_F: Rifle_Long_Base_F {
         ACE_barrelLength = 640.0;
-        ACE_barrelTwist = 228.6;
-        initSpeed = -0.99998;
-        magazines[] += { //No Vanilla magwell
-            "ACE_20Rnd_65x47_Scenar_mag",
-            "ACE_20Rnd_65_Creedmor_mag"
-        };
+        ACE_barrelTwist = 206; // https://en.wikipedia.org/wiki/QBU-88
+        initSpeed = -1;
     };
 
     // Rifle_Long_Base_F MG
