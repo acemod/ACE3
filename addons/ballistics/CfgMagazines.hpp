@@ -100,7 +100,10 @@ class CfgMagazines {
         initSpeed = 950;
     };
     class 20Rnd_650x39_Cased_Mag_F: CA_Magazine {
-        initSpeed = 806;
+        ammo = "ACE_580x42_DBP88_Ball_F";
+        count = 10; // https://en.wikipedia.org/wiki/QBU-88
+        initSpeed = 895; // according with the ACE_ammoTempMuzzleVelocityShifts at the ICAO conditions (15°C)
+        mass = 6;
     };
     class 30Rnd_65x39_caseless_mag: CA_Magazine {
         initSpeed = 774;
