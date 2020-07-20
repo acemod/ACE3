@@ -182,13 +182,18 @@ class CfgWeapons
     };
     class srifle_DMR_05_blk_F: DMR_05_base_F
     {
-        ACE_barrelTwist=359.918;
-        ACE_barrelLength=620.014;
+        ACE_barrelTwist=360.0;
+        ACE_barrelLength=620.0;
     };
     class srifle_DMR_06_camo_F: DMR_06_base_F
     {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=558.8;
+    };
+    class DMR_07_base_F: Rifle_Long_Base_F
+    {
+        ACE_barrelLength=640;
+        ACE_barrelTwist=206; // https://en.wikipedia.org/wiki/QBU-88
     };
     class MMG_01_hex_F: MMG_01_base_F
     {
@@ -1210,7 +1215,12 @@ class CfgWeapons
         ACE_barrelTwist=254.0;
         ACE_barrelLength=609.6;
     };
-    
+    class rhsusf_weap_MP7A1_base_f: SMG_02_base_F
+    {
+        ACE_barrelTwist = 160.0;
+        ACE_barrelLength = 180.0;
+    };
+
     class R3F_PAMAS : Pistol_Base_F
     {
         ACE_barrelTwist=248.92;
