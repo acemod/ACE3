@@ -462,7 +462,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={850, 870, 880};
         ACE_barrelLengths[]={508.0, 620.014, 660.4};
     };
-    class B_93x64_Ball_ace3.13.x : BulletBase {
+    class B_93x64_Ball_ace_3_13 : BulletBase {
         airFriction = -0.000808; // According with the G1 BC 0.515 and the SVDK muzzle velocity 780 m/s https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
         ACE_caliber = 9.28; // https://www.kalashnikov.ru/medialibrary/bd9/72_77.pdf#page=3
         ACE_bulletLength = 35.56; // Average length from bullets with similar mass and BC
@@ -1676,7 +1676,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={847, 867, 877};
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
-    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball { // RUAG Ammotec: https://www.heckler-koch.com/en/products/military/submachine-guns/mp7a1/mp7a2/ammunition.html
+    class rhs_ammo_46x30_FMJ: BulletBase { // RUAG Ammotec: https://www.heckler-koch.com/en/products/military/submachine-guns/mp7a1/mp7a2/ammunition.html
         ACE_caliber = 4.65; // https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-en.pdf
         ACE_bulletLength = 21;
         ACE_bulletMass = 2.6;
