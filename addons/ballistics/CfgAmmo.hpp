@@ -192,23 +192,22 @@ class CfgAmmo {
         tracerScale = 0.5;
     };
     class B_580x42_Ball_F: BulletBase { // DBP87
-        airFriction=-0.00121087;
-        ACE_caliber=5.9944;
-        ACE_bulletLength=24.2;
-        ACE_bulletMass=4.15;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.156};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ICAO";
-        ACE_dragModel=7;
-        ACE_muzzleVelocities[]={790, 930, 950};
-        ACE_barrelLengths[]={369.0, 463.0, 600.0};
+        airFriction = -0.00121087;
+        ACE_caliber = 6;
+        ACE_bulletLength = 24;
+        ACE_bulletMass = 4.15;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[] = {0.156};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {790, 930, 950};
+        ACE_barrelLengths[] = {369.0, 463.0, 600.0};
     };
 
     class ACE_580x42_DBP88_Ball_F: B_580x42_Ball_F { // DBP88 https://en.wikipedia.org/wiki/5.8%C3%9742mm
         airFriction = -0.000968;
         typicalSpeed = 895;
-        ACE_caliber = 6;
         ACE_bulletLength = 28; // https://files.osgnetworks.tv/2/files/2017/11/DBP87-Specs2.jpg
         ACE_bulletMass = 5;
         ACE_ballisticCoefficients[] = {0.21};
