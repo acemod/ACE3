@@ -17,6 +17,8 @@
  */
 
 params ["_unit", "_anim"];
+TRACE_2("applyAnimAfterRagdoll",_unit,_unconsciousAnimation);
+
 if !(IS_UNCONSCIOUS(_unit) &&                   // do not run if unit is conscious
     {alive _unit &&                             // do not run if unit is dead
     {isNull objectParent _unit}}) exitWith {};  // do not run if unit in any vehicle
@@ -25,7 +27,7 @@ private _unconsciousAnimation = selectRandom (GVAR(animations) getVariable [_ani
 
 if (_unconsciousAnimation isEqualTo "") exitWith {
     // not a valid animation found
-    ERROR("No valid animation found!");
+    ERROR_1("No valid animation found! [from anim: %1]",_anim);
 };
 
 // Apply the animation only locally on the machine and do not broadcast it to others
