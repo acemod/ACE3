@@ -106,6 +106,9 @@ def main(argv):
     #RHS Compat GREF - http://steamcommunity.com/sharedfiles/filedetails/?id=884966711
     publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_gref3"), "884966711", changelog_path)
 
+    #RHS Compat SAF - http://steamcommunity.com/sharedfiles/filedetails/?id=2174495332
+    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_saf3"), "2174495332", changelog_path)
+
 
 
 if __name__ == "__main__":
