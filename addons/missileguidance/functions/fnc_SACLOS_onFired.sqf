@@ -18,16 +18,18 @@ params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _stateParams params ["", "_seekerStateParams"];
 
-private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance";
-
-if (_shooter isKindOf "Plane" && { !hasPilotCamera _shooter }) exitWith { WARNING("SACLOS fired from planes without camera unsupported"); };
+private _usePilotCamera = getNumber (([_shooter] call CBA_fnc_getObjectConfig) >> "pilotCamera" >> QGVAR(usePilotCameraForTargeting)) == 1;
 
 private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
 private _turretConfig = [_shooter, _turretPath] call CBA_fnc_getTurret;
 private _memoryPointGunnerOptics = getText(_turretConfig >> "memoryPointGunnerOptics");
 private _animationSourceBody = getText(_turretConfig >> "animationSourceBody");
 private _animationSourceGun = getText(_turretConfig >> "animationSourceGun");
+
 _seekerStateParams set [0, _memoryPointGunnerOptics];
 _seekerStateParams set [1, _animationSourceBody];
 _seekerStateParams set [2, _animationSourceGun];
+_seekerStateParams set [3, _usePilotCamera || { (_shooter isKindOf "Plane") && hasPilotCamera _shooter }];
+
+if ((_shooter isKindOf "Plane") && !hasPilotCamera _shooter) then { WARNING("SACLOS fired from planes without pilot camera unsupported!"); };
 
