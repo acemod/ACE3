@@ -71,13 +71,11 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 410.0;
     };
-
-    class rhs_weap_vhsd2_ct15x: rhs_weap_vhsk2 {
+    class rhs_weap_vhsd2_ct15x: rhs_weap_vhs2_base {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 500.0;
     };
-
-    class rhs_weap_vhsd2_bg: rhs_weap_vhsd2_ct15x {
+    class rhs_weap_vhsd2_bg: rhs_weap_vhs2_base {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 500.0;
     };

@@ -64,12 +64,12 @@ addMissionEventHandler ["Loaded", {
 ["ace_unconscious", {
     params ["_unit", "_active"];
     if (_active) then {
-        if (_unit getVariable [QGVAR(waitForAnim), true]) then {
-            [{(animationState _this) find QGVAR(face) != -1}, {
-                [_this, animationState _this] call FUNC(applyAnimAfterRagdoll);
-            }, _unit, 20] call CBA_fnc_waitUntilAndExecute;
-            _unit setVariable [QGVAR(waitForAnim), false];
-        };
+        // Use object reference to indicate the waitUnit is already running (this prevents issues with respawning units keeping SetVars)
+        if ((_unit getVariable [QGVAR(waitForAnim), objNull]) == _unit) exitWith {};
+        _unit setVariable [QGVAR(waitForAnim), _unit];
+        [{(animationState _this) find QGVAR(face) != -1}, {
+            [_this, animationState _this] call FUNC(applyAnimAfterRagdoll);
+        }, _unit, 20] call CBA_fnc_waitUntilAndExecute;
     } else {
         _unit setVariable [QGVAR(waitForAnim), nil];
         if (local _unit) then {
