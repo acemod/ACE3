@@ -86,7 +86,7 @@ class CfgWeapons {
         magazines[] += { //No Vanilla magwell
             "ACE_20Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65_Creedmor_mag",
-            "ACE_10Rnd_580x42_DBP88_Mag_F"
+            "ACE_10Rnd_580x42_DBP88_Mag"
         };
     };
 
