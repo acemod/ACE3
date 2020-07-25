@@ -211,7 +211,7 @@ class CfgAmmo {
         ACE_bulletLength = 28; // https://files.osgnetworks.tv/2/files/2017/11/DBP87-Specs2.jpg
         ACE_bulletMass = 5;
         ACE_ballisticCoefficients[] = {0.21};
-        ACE_muzzleVelocities[] = {903}; // at 21°C, at 15°C 895 m/s according with the 20Rnd_650x39_Cased_Mag_F initSpeep
+        ACE_muzzleVelocities[] = {903}; // at 21°C, at 15°C 895 m/s according with the ACE_10Rnd_580x42_DBP88_Mag initSpeep
         ACE_barrelLengths[] = {640};
     };
 
