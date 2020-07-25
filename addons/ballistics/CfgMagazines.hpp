@@ -112,6 +112,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(10Rnd_580x42_DBP88_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_580x42_DBP88_Mag_Description);
     };
+
     class 30Rnd_65x39_caseless_mag: CA_Magazine {
         initSpeed = 774;
     };
