@@ -102,6 +102,7 @@ class CfgMagazines {
     class 20Rnd_650x39_Cased_Mag_F: CA_Magazine {
         initSpeed = 806;
     };
+
     class ACE_10Rnd_580x42_DBP88_Mag: 20Rnd_650x39_Cased_Mag_F {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_580x42_DBP88_Ball_F";
