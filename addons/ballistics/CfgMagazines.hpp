@@ -105,7 +105,7 @@ class CfgMagazines {
 
     class ACE_10Rnd_580x42_DBP88_Mag: 20Rnd_650x39_Cased_Mag_F {
         author = ECSTRING(common,ACETeam);
-        ammo = "ACE_580x42_DBP88_Ball_F";
+        ammo = "ACE_580x42_DBP88_Ball";
         count = 10; // https://en.wikipedia.org/wiki/QBU-88
         initSpeed = 895; // according with the ACE_ammoTempMuzzleVelocityShifts at the ICAO conditions (15°C)
         mass = 6;
