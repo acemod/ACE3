@@ -27,6 +27,8 @@ params ["_identifier", "_displayName", "_requiredItem"];
 if !(GVAR(cachedTags) select {_x select 0 == _identifier} isEqualTo []) exitWith {
     INFO_2("Tag with selected identifier already exists: %1 (%2)",_identifier,_displayName)
 };
+_displayName = if (isLocalized _displayName) then {localize _displayName} else {_displayName};
+_this set [1, _displayName];
 _requiredItem = configName (configFile >> "CfgWeapons" >> _requiredItem); // Convert To config case
 _this set [2, _requiredItem];
 

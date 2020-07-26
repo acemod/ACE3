@@ -24,7 +24,7 @@ private _actions = [];
     _actions pushBack [
         [
             format ["ACE_ConfigTag_%1", _class],
-            if (isLocalized _displayName) then {localize _displayName} else {_displayName},
+            _displayName,
             _icon,
             {
                 (_this select 2) params ["_unit", "_class", "_textures", "", "_materials"];
