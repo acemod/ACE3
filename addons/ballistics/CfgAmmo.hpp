@@ -205,7 +205,7 @@ class CfgAmmo {
         ACE_barrelLengths[] = {369.0, 463.0, 600.0};
     };
 
-    class ACE_580x42_DBP88_Ball_F: B_580x42_Ball_F { // DBP88 https://en.wikipedia.org/wiki/5.8%C3%9742mm
+    class ACE_580x42_DBP88_Ball: B_580x42_Ball_F { // DBP88 https://en.wikipedia.org/wiki/5.8%C3%9742mm
         airFriction = -0.000968;
         typicalSpeed = 895;
         ACE_bulletLength = 28; // https://files.osgnetworks.tv/2/files/2017/11/DBP87-Specs2.jpg
