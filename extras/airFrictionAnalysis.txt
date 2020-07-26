@@ -47,7 +47,7 @@ Max. Drop diff (cm): 1.46
 Max. Tof diff (ms): 8.5
 Optimal airFriction: 0.00121087
 ##########################################
-Ammo Class: ACE_580x42_DBP88_Ball_F
+Ammo Class: ACE_580x42_DBP88_Ball
 MaxRanges (m): [950, 950]
 MuzzleVelocities (m/s): [890, 900]
 Max. Velocity diff (m/s): 33.23
