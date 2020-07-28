@@ -16,3 +16,9 @@ class Extended_PostInit_EventHandlers {
         clientInit = QUOTE(call COMPILE_FILE(XEH_clientInit));
     };
 };
+
+class Extended_DisplayUnload_EventHandlers {
+    class RscDisplayOptionsVideo {
+        ADDON = QUOTE([false] call FUNC(adaptViewDistance));
+    };
+};
