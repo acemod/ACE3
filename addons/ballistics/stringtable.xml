@@ -487,6 +487,54 @@
             <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
             <Chinesesimp>口径: 6.5x47mm Creedmor 狙击专用弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: QBU-88</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_580x42_DBP88_Mag_Name">
+            <English>5.8mm DBP88 10Rnd Mag</English>
+            <Polish>Magazynek 5,8mm DBP88 10rd</Polish>
+            <Italian>5.8mm DBP88 10Rnd Mag</Italian>
+            <Russian>Магазин из 10-ти 5,8 мм DBP88</Russian>
+            <German>5,8mm DBP88 10-Patronen-Magazin</German>
+            <Spanish>Cargador de 10 balas DBP88 de 5.8mm</Spanish>
+            <French>Ch. 5,8mm DBP88 10Cps</French>
+            <Czech>5.8mm DBP88 10náb. Zásobník</Czech>
+            <Portuguese>Carregador 5.8mm com 10 cartuchos DBP88</Portuguese>
+            <Hungarian>5,8mm DBP88 10-lövedékes tár</Hungarian>
+            <Japanese>5.8mm DBP88 10発入り 弾倉</Japanese>
+            <Korean>10발들이 5.8mm DBP88 탄창</Korean>
+            <Chinese>5.8毫米 10發 彈匣 (DBP88)</Chinese>
+            <Chinesesimp>5.8mm 10发 弹匣 (DBP88)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_580x42_DBP88_Mag_NameShort">
+            <English>5.8mm DBP88</English>
+            <French>5,8mm DBP88</French>
+            <Spanish>5.8mm DBP88</Spanish>
+            <Polish>5,8mm DBP88</Polish>
+            <Russian>5,8 мм DBP88</Russian>
+            <German>5,8mm DBP88</German>
+            <Italian>5.5mm DBP88</Italian>
+            <Czech>5.8mm DBP88</Czech>
+            <Portuguese>5.8mm DBP88</Portuguese>
+            <Hungarian>5,8mm DBP88</Hungarian>
+            <Japanese>5.8mm DBP88</Japanese>
+            <Korean>5.8mm DBP88</Korean>
+            <Chinese>5.8毫米 DBP88</Chinese>
+            <Chinesesimp>5.8mm DBP88</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_580x42_DBP88_Mag_Description">
+            <English>Caliber: 5.8x42mm DBP88&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: QBU-88</English>
+            <Polish>Kaliber: 5,8x42mm DBP88&lt;br /&gt;Pociski: 10&lt;br /&gt;Używany w: QBU-88</Polish>
+            <German>Kaliber: 5,8x42mm  DBP88&lt;br /&gt;Patronen: 10&lt;br /&gt;Eingesetzt von: QBU-88</German>
+            <French>Calibre: 5,8x42mm DBP88 &lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé avec: QBU-88</French>
+            <Italian>Calibro: 5.8mm DBP88&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: QBU-88</Italian>
+            <Spanish>Calibre: 5.8mm DBP88&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: QBU-88</Spanish>
+            <Russian>Калибр: 5,8x42мм DBP88&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются c: QBU-88</Russian>
+            <Czech>Ráže: 5.8x42mm DBP88&lt;br /&gt;Nábojů: 10&lt;br /&gt;Použití u: QBU-88</Czech>
+            <Portuguese>Calibre: 5.8x42mm DBP88&lt;br/&gt;Cartuchos: 10&lt;br/&gt;Usado em: QBU-88</Portuguese>
+            <Hungarian>Kaliber: 5,8x42mm DBP88&lt;br /&gt;Lövedékek: 10&lt;br /&gt;Használható: QBU-88</Hungarian>
+            <Japanese>口径: 5.8x42mm DBP88&lt;br /&gt;装填数: 10&lt;br /&gt;次で使用: QBU-88</Japanese>
+            <Korean>구경: 5.8x42mm DBP88&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: QBU-88</Korean>
+            <Chinese>口徑: 5.8x42毫米 DBP88&lt;br /&gt;發數: 10&lt;br /&gt;使用於: QBU-88</Chinese>
+            <Chinesesimp>口径: 5.8x42mm DBP88&lt;br /&gt;发数: 10&lt;br /&gt;使用于: QBU-88</Chinesesimp>
+        </Key>
         <!-- MX -->
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 30Rnd Tracer IR-DIM Mag</English>
