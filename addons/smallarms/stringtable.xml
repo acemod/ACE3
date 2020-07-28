@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="SmallArms">
+        <Key ID="STR_ACE_SmallArms_30Rnd_65_Name">
+            <English>6.5mm 30Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_30Rnd_Tracer_MX_Name">
+            <English>6.5mm 30Rnd Tracer Mag (Red)</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_30Rnd_Tracer_Katiba_Name">
+            <English>6.5mm 30Rnd Tracer Magazine (Green)</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_100Rnd_MX_Name">
+            <English>6.5mm 100Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_100Rnd_Tracer_MX_Name">
+            <English>6.5mm 100Rnd Tracer Mag (Red)</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_200Rnd_65_Box_Name">
+            <English>6.5mm 200Rnd Box</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_200Rnd_65_Tracer_Box_Name">
+            <English>6.5mm 200Rnd Tracer Box (Yellow)</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_20Rnd_762_Name">
+            <English>7.62mm 20Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_150Rnd_762_Box_Name">
+            <English>7.62mm 150Rnd Box</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_150Rnd_762_Box_Tracer_Name">
+            <English>7.62mm 150Rnd Tracer Box</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_7Rnd_408_Name">
+            <English>.408 7Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_5Rnd_127_Name">
+            <English>12.7mm 5Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_30Rnd_9x19_Name">
+            <English>9mm 30Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_Name">
+            <English>9mm 17Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_25Rnd_45_Name">
+            <English>.45 25Rnd Mag</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Green_Name">
+            <English>.45 25Rnd Tracer Mag (Green)</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Red_Name">
+            <English>.45 25Rnd Tracer Mag (Red)</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Yellow_Name">
+            <English>.45 25Rnd Tracer Mag (Yellow)</English>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_8Rnd_45_Name">
+            <English>.45 8Rnd Mag</English>
+        </Key>
