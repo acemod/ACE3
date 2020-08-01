@@ -253,7 +253,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
             <English>Small trench remove duration</English>
-            <French>Durée de retrait d'une petite tranchée</French>
+            <French>Petites tranchées - durée de retrait</French>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
             <English>Small trench remove duration in seconds.</English>
