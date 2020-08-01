@@ -249,7 +249,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
             <English>Small trench dig duration in seconds.</English>
-            <French>Durée en secondes nécessaire pour déployer une petite tranchée.</French>
+            <French>Définit la durée nécessaire pour déployer une petite tranchées (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
             <English>Small trench remove duration</English>
@@ -257,7 +257,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
             <English>Small trench remove duration in seconds.</English>
-            <French>Durée en secondes pour retirer une petite tranchée.</French>
+            <French>Définit la durée nécessaire pour retirer une petite tranchées (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
             <English>Big trench dig duration</English>
@@ -265,7 +265,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_Description">
             <English>Big trench dig duration in seconds.</English>
-            <French>Durée en secondes nécessaire pour déployer une grande tranchée.</French>
+            <French>Définit la durée nécessaire pour déployer une grande tranchées (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
             <English>Big trench remove duration</English>
@@ -273,7 +273,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
             <English>Big trench remove duration in seconds.</English>
-            <French>Durée en secondes pour retirer une grande tranchée.</French>
+            <French>Définit la durée nécessaire pour retirer une grande tranchées (en secondes).</French>
         </Key>
     </Package>
 </Project>
