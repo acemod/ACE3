@@ -261,7 +261,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
             <English>Big trench dig duration</English>
-            <French>Durée d'excavation d'une grande tranchée</French>
+            <French>Grandes tranchées - durée d'excavation</French>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_Description">
             <English>Big trench dig duration in seconds.</English>
