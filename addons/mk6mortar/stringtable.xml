@@ -288,7 +288,7 @@
             <Russian>Извлечение снаряда</Russian>
             <Japanese>弾薬を除去しています</Japanese>
             <Korean>탄약 제거중</Korean>
-            <Chinesesimp>卸除弹头中</Chinesesimp>
+            <Chinesesimp>正在卸除弹头</Chinesesimp>
             <Chinese>卸除彈頭中</Chinese>
             <Czech>Vybít minomet</Czech>
             <Turkish>Mermi Boşaltılıyor</Turkish>
@@ -305,7 +305,7 @@
             <Russian>Подготовка снаряда</Russian>
             <Japanese>砲弾を事前装填</Japanese>
             <Korean>탄약 준비중</Korean>
-            <Chinesesimp>准备弹头中</Chinesesimp>
+            <Chinesesimp>正在准备弹头</Chinesesimp>
             <Chinese>準備彈頭中</Chinese>
             <Turkish>Mermi Hazırlanıyor</Turkish>
         </Key>

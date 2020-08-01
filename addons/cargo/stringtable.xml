@@ -188,7 +188,7 @@
             <Japanese>カーゴへ積み込んでいます</Japanese>
             <Korean>화물 싣기</Korean>
             <Chinese>裝載貨物中</Chinese>
-            <Chinesesimp>装载货物中</Chinesesimp>
+            <Chinesesimp>正在装载货物</Chinesesimp>
             <Turkish>Kargo Yükleniyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
@@ -204,7 +204,7 @@
             <Japanese>カーゴから降ろしています</Japanese>
             <Korean>화물 내리기</Korean>
             <Chinese>卸載貨物中</Chinese>
-            <Chinesesimp>卸载货物中</Chinesesimp>
+            <Chinesesimp>正在卸载货物</Chinesesimp>
             <Turkish>Kargo Boşaltılıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">

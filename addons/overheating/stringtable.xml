@@ -332,7 +332,7 @@
             <Italian>Sostituendo la canna...</Italian>
             <Japanese>銃身を交換しています・・・</Japanese>
             <Korean>총열 교체중...</Korean>
-            <Chinesesimp>换枪管中...</Chinesesimp>
+            <Chinesesimp>正在更换枪管...</Chinesesimp>
             <Chinese>換槍管中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappedBarrel">
@@ -396,7 +396,7 @@
             <Russian>Проверка температуры...</Russian>
             <Japanese>温度を測っています・・・</Japanese>
             <Korean>무기 온도 확인중...</Korean>
-            <Chinesesimp>检查枪管温度中...</Chinesesimp>
+            <Chinesesimp>正在检查枪管温度...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
@@ -426,7 +426,7 @@
             <German>Prüfe Temperatur der Wechselläufe ...</German>
             <Korean>총열 온도 확인중...</Korean>
             <Italian>Controllando la temperatura della canna di ricambio...</Italian>
-            <Chinesesimp>检查枪管温度中...</Chinesesimp>
+            <Chinesesimp>正在检查枪管温度...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
