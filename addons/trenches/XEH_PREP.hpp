@@ -3,6 +3,7 @@ PREP(canContinueDiggingTrench);
 PREP(canDigTrench);
 PREP(canRemoveTrench);
 PREP(continueDiggingTrench);
+PREP(getTrenchTexture);
 PREP(handleInteractMenuOpened);
 PREP(handleKilled);
 PREP(handlePlayerChanged);

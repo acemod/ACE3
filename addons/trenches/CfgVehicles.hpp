@@ -62,6 +62,8 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
+        hiddenSelections[] = {"velka"};
+        hiddenSelectionsTextures[] = {"a3\map_data\gdt_marsh_co.paa"};
     };
     class ACE_envelope_big: BagFence_base_F {
         author = ECSTRING(common,ACETeam);
@@ -78,6 +80,8 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
+        hiddenSelections[] = {"velka"};
+        hiddenSelectionsTextures[] = {"a3\map_data\gdt_marsh_co.paa"};
     };
 
     class ACE_envelope_small_NoGeo: ACE_envelope_small {
