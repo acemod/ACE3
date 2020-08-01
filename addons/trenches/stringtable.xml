@@ -273,7 +273,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
             <English>Big trench remove duration in seconds.</English>
-            <French>Définit la durée nécessaire pour retirer une grande tranchées (en secondes).</French>
+            <French>Définit le temps nécessaire pour le retrait des grandes tranchées (en secondes).</French>
         </Key>
     </Package>
 </Project>
