@@ -244,35 +244,35 @@
             <French>ACE Tranchées</French>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
-            <English>Small trench dig duration</English>
+            <English>Small Trench Dig Duration</English>
             <French>Petites tranchées - durée d'excavation</French>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
-            <English>Small trench dig duration in seconds.</English>
+            <English>Time, in seconds, required to dig a small trench.</English>
             <French>Définit le temps nécessaire au déploiement des petites tranchées (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
-            <English>Small trench remove duration</English>
+            <English>Small Trench Remove Duration</English>
             <French>Petites tranchées - durée de retrait</French>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
-            <English>Small trench remove duration in seconds.</English>
+            <English>Time, in seconds, required to remove a small trench.</English>
             <French>Définit le temps nécessaire pour le retrait des petites tranchées (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
-            <English>Big trench dig duration</English>
+            <English>Big Trench Dig Duration</English>
             <French>Grandes tranchées - durée d'excavation</French>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_Description">
-            <English>Big trench dig duration in seconds.</English>
+            <English>Time, in seconds, required to dig a big trench.</English>
             <French>Définit le temps nécessaire au déploiement des grandes tranchées (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
-            <English>Big trench remove duration</English>
+            <English>Big Trench Remove Duration</English>
             <French>Grandes tranchées - durée de retrait</French>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
-            <English>Big trench remove duration in seconds.</English>
+            <English>Time, in seconds, required to remove a big trench.</English>
             <French>Définit le temps nécessaire pour le retrait des grandes tranchées (en secondes).</French>
         </Key>
     </Package>
