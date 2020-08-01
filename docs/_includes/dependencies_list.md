@@ -522,6 +522,10 @@
 `ace_explosives`, `ace_csw`, `rhsgref_main`, `rhsgref_c_weapons`
 {% endif %}
 
+{% if include.component == "compat_rhs_saf3" %}
+`ace_explosives`, `rhssaf_c_weapons`, `rhssaf_main`
+{% endif %}
+
 {% if include.component == "compat_rhs_usf3" %}
 `ace_explosives`, `ace_javelin`, `ace_rearm`, `ace_refuel`, `ace_repair`, `ace_csw`, `rhsusf_c_weapons`, `rhsusf_c_troops`, `rhsusf_c_m1a1`, `rhsusf_c_m1a2`, `RHS_US_A2_AirImport`, `rhsusf_c_m109`, `rhsusf_c_HEMTT_A4`, `rhsusf_c_hmmwv`, `rhsusf_c_rg33`, `rhsusf_c_fmtv`, `rhsusf_c_m113`, `RHS_US_A2Port_Armor`, `rhsusf_c_melb`
 {% endif %}

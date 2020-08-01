@@ -190,6 +190,7 @@
             <Chinesesimp>骨折概率</Chinesesimp>
             <Czech>Šance na zlomeninu</Czech>
             <Russian>Шанс перелома</Russian>
+            <Polish>Szansa na złamanie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
@@ -198,6 +199,7 @@
             <Chinesesimp>骨折导致的伤口再次骨折的可能性。</Chinesesimp>
             <Czech>Výška šance kdy zranění způsobující zlomeniny skutečně způsobí zlomeninu.</Czech>
             <Russian>Вероятность перелома при получении соответствующих ран.</Russian>
+            <Polish>Prawdopodobieństwo złamania kości w wyniku rany mogącej powodować złamania.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>

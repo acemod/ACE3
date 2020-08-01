@@ -207,7 +207,7 @@
             <Czech>2x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 2 naboje #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 2 Tiros</Portuguese>
-            <Russian>12 Калибр 2 патр. ##0 Картечь</Russian>
+            <Russian>12 Калибр 2 патр. #00 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 2Rnd #0 Buckshot</English>
@@ -298,7 +298,7 @@
             <Czech>6x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 6 naboi #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 6 Tiros</Portuguese>
-            <Russian>12 Калибр 6 патр. ##0 Картечь</Russian>
+            <Russian>12 Калибр 6 патр. #00 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 6Rnd #0 Buckshot</English>
@@ -388,7 +388,7 @@
             <Czech>15x #00 Broky velké (kalibr 8.38 mm)</Czech>
             <Polish>12 Gauge 15 naboi #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 15 Tiros</Portuguese>
-            <Russian>12 Калибр 15 патр. ##0 Картечь</Russian>
+            <Russian>12 Калибр 15 патр. #00 Картечь</Russian>
         </Key>
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">

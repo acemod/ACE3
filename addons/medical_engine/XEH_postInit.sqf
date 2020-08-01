@@ -66,7 +66,7 @@
 // Fixes units being stuck in unconscious animation when being knocked over by a PhysX object
 ["CAManBase", "AnimDone", {
     params ["_unit", "_anim"];
-    if (local _unit && {_anim == "unconscious" && {lifeState _unit != "INCAPACITATED"}}) then {
+    if (local _unit && {_anim find QGVAR(face) != -1 && {lifeState _unit != "INCAPACITATED"}}) then {
         [_unit, false] call FUNC(setUnconsciousAnim);
     };
 }] call CBA_fnc_addClassEventHandler;
