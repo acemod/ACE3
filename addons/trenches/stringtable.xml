@@ -269,7 +269,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
             <English>Big trench remove duration</English>
-            <French>Durée de retrait d'une grande tranchée</French>
+            <French>Grandes tranchées - durée de retrait</French>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
             <English>Big trench remove duration in seconds.</English>
