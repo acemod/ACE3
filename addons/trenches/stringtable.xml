@@ -239,5 +239,41 @@
             <Chinese>移除掩體中</Chinese>
             <Turkish>Siper Kaldırılıyor</Turkish>
         </Key>
+        <Key ID="STR_ACE_Trenches_Category">
+            <English>ACE Trenches</English>
+            <French>ACE Tranchées</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
+            <English>Small trench dig duration</English>
+            <French>Durée d'excavation d'une petite tranchée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
+            <English>Small trench dig duration in seconds.</English>
+            <French>Durée en secondes nécessaire pour déployer une petite tranchée.</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
+            <English>Small trench remove duration</English>
+            <French>Durée de retrait d'une petite tranchée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
+            <English>Small trench remove duration in seconds.</English>
+            <French>Durée en secondes pour retirer une petite tranchée.</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
+            <English>Big trench dig duration</English>
+            <French>Durée d'excavation d'une grande tranchée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_Description">
+            <English>Big trench dig duration in seconds.</English>
+            <French>Durée en secondes nécessaire pour déployer une grande tranchée.</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
+            <English>Big trench remove duration</English>
+            <French>Durée de retrait d'une grande tranchée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
+            <English>Big trench remove duration in seconds.</English>
+            <French>Durée en secondes pour retirer une grande tranchée.</French>
+        </Key>
     </Package>
 </Project>
