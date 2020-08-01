@@ -245,7 +245,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
             <English>Small trench dig duration</English>
-            <French>Durée d'excavation d'une petite tranchée</French>
+            <French>Petites tranchées - durée d'excavation</French>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
             <English>Small trench dig duration in seconds.</English>
