@@ -249,7 +249,7 @@
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
             <English>Small trench dig duration in seconds.</English>
-            <French>Définit la durée nécessaire pour déployer une petite tranchées (en secondes).</French>
+            <French>Définit le temps nécessaire au déploiement des petites tranchées (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
             <English>Small trench remove duration</English>
