@@ -36,15 +36,16 @@ _unit setVariable [QGVAR(isPlacing), false, true];
 params ["_unit"];
 if (isNull GVAR(trench)) exitWith {};
 
+// Get current trench texture
+private _texture = (getObjectTextures GVAR(trench)) select 0;
 deleteVehicle GVAR(trench);
 private _trench = createVehicle [GVAR(trenchClass), [0, 0, 0], [], 0, "NONE"];
 _trench setVariable [QGVAR(progress), 0, true];
 // Set trench texture in next frame for MP compatibility
 [{
-    params ["_obj"];
-    private _texture = [_obj] call FUNC(getTrenchTexture);
+    params ["_obj", "_texture"];
     _obj setObjectTextureGlobal [0, _texture];
-}, _trench] call CBA_fnc_execNextFrame;
+}, [_trench, _texture]] call CBA_fnc_execNextFrame;
 
 GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
 private _basePos = GVAR(trenchPos);

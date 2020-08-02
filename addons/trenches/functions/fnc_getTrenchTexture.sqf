@@ -4,18 +4,16 @@
  * Get the adequate texture for a trench
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * None
  *
  * Return Value:
  * Texture path <STRING>
  *
  * Example:
- * [ACE_player] call ace_trenches_fnc_getTrenchTexture
+ * [] call ace_trenches_fnc_getTrenchTexture
  *
  * Public: No
  */
-
-params ["_unit"];
 
 // If we are on Chernarus Winter, set a beautiful snow texture
 if (worldName == "Chernarus_Winter") exitWith {
@@ -35,7 +33,7 @@ if (worldName == "ThirskW" && isClass (configFile >> "CfgWorlds" >> "Chernarus_W
     ]
 };
 
-// Check if RHS PKL is loaded for better default textures !
+// Check if RHS PKL is loaded for better textures !
 if (isClass (configFile >> "CfgWorlds" >> "rhspkl")) exitWith {
     selectRandom [
         "rhspkl\addons\rhspkl_art\data\ground\blud_elvebunn_co.paa", 

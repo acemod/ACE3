@@ -38,7 +38,7 @@ GVAR(trench) = _trench;
 // Set trench texture in next frame for MP compatibility
 [{
     params ["_obj"];
-    private _texture = [_obj] call FUNC(getTrenchTexture);
+    private _texture = [] call FUNC(getTrenchTexture);
     _obj setObjectTextureGlobal [0, _texture];
 }, _trench] call CBA_fnc_execNextFrame;
 
