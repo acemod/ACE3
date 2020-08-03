@@ -8,7 +8,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 
 class Stage1 {
-    texture = "z\ace\addons\microdagr\data\mdagr_nohq.paa";
+    texture = "z\ace\addons\microdagr\data\microdagr_nohq.paa";
     uvSource = "tex";
 
     class uvTransform {
@@ -44,7 +44,7 @@ class Stage3 {
 };
 
 class Stage4 {
-    texture = "z\ace\addons\microdagr\data\mdagr_as.paa";
+    texture = "z\ace\addons\microdagr\data\microdagr_as.paa";
     uvSource = "tex";
 
     class uvTransform {
@@ -56,7 +56,7 @@ class Stage4 {
 };
 
 class Stage5 {
-    texture = "z\ace\addons\microdagr\data\mdagr_smdi.paa";
+    texture = "z\ace\addons\microdagr\data\microdagr_smdi.paa";
     uvSource = "tex";
 
     class uvTransform {
