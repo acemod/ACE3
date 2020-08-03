@@ -2,8 +2,8 @@ ambient[] = {1,1,1,1};
 diffuse[] = {1,1,1,1};
 forcedDiffuse[] = {0,0,0,0};
 emmisive[] = {0,0,0,1};
-specular[] = {0.6,0.6,0.6,1}; //amount of glossiness - the higher the number, the higher the glossiness
-specularPower = 700; //area of glossiness - the higher the number, the smaller the area
+specular[] = {0.4,0.4,0.4,1}; //amount of glossiness - the higher the number, the higher the glossiness
+specularPower = 500; //area of glossiness - the higher the number, the smaller the area
 PixelShaderID = "Super";
 VertexShaderID = "Super";
 
