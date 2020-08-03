@@ -305,15 +305,39 @@
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Group">
             <English>Group</English>
+            <Czech>Skupina</Czech>
+            <French>Groupement</French>
+            <German>Gruppe</German>
+            <Italian>Gruppo</Italian>
+            <Polish>Grupa</Polish>
+            <Portuguese>Grupo</Portuguese>
+            <Russian>Группа</Russian>
+            <Spanish>Grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Side">
             <English>Side</English>
+            <Czech>Strana</Czech>
+            <French>Camp</French>
+            <German>Seite</German>
+            <Italian>Fazione</Italian>
+            <Polish>Strona</Polish>
+            <Portuguese>Lado</Portuguese>
+            <Russian>Сторона</Russian>
+            <Spanish>Bando</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Proximity">
             <English>Proximity</English>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_All">
             <English>All</English>
+            <Czech>Vše</Czech>
+            <French>Tous</French>
+            <German>Alle</German>
+            <Italian>Tutte</Italian>
+            <Polish>Wszystko</Polish>
+            <Portuguese>Tudo</Portuguese>
+            <Russian>Все</Russian>
+            <Spanish>Todas</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>
@@ -348,6 +372,14 @@
         </Key>
         <Key ID="STR_ACE_Map_Gestures_mapGestures_subcategory_colors">
             <English>Colors</English>
+            <Czech>Barvy</Czech>
+            <French>Couleurs</French>
+            <German>Farben</German>
+            <Italian>Colori</Italian>
+            <Polish>Kolory</Polish>
+            <Portuguese>Cores</Portuguese>
+            <Russian>Цвета</Russian>
+            <Spanish>Colores</Spanish>
         </Key>
     </Package>
 </Project>
