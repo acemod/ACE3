@@ -208,7 +208,7 @@
             <German>Überprüfe verbleibende Munition...</German>
             <Italian>Controllando le munizioni rimanenti</Italian>
             <Japanese>残弾薬を確認中…</Japanese>
-            <Chinesesimp>正在检查剩余的弹药中...</Chinesesimp>
+            <Chinesesimp>正在检查剩余的弹药...</Chinesesimp>
             <Chinese>正在檢查剩餘的彈藥中...</Chinese>
             <Polish>Sprawdzanie ilości amunicji...</Polish>
             <Korean>남은 탄약 확인중...</Korean>
@@ -287,7 +287,7 @@
             <French>Réarmement de %1 avec %2...</French>
             <Japanese>%1に%2を再武装中…</Japanese>
             <Korean>%2을 %1에 재보급중...</Korean>
-            <Chinesesimp>%2正整装到%1中...</Chinesesimp>
+            <Chinesesimp>正在整装%2到%1...</Chinesesimp>
             <Chinese>%2正整裝到%1中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Rearm_BasicRearmAction">
@@ -302,7 +302,7 @@
             <French>Réarmement de %1...</French>
             <Japanese>%1を再武装中…</Japanese>
             <Korean>%1 재보급중...</Korean>
-            <Chinesesimp>整装%1中...</Chinesesimp>
+            <Chinesesimp>正在整装%1...</Chinesesimp>
             <Chinese>整裝%1中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Rearm_TakeAction">
@@ -317,7 +317,7 @@
             <French>Prise de %1 pour %2...</French>
             <Japanese>%1を%2用として取得中…</Japanese>
             <Korean>%2를 위해 %1 가져오는중...</Korean>
-            <Chinesesimp>拿取%1给%2中...</Chinesesimp>
+            <Chinesesimp>正在拿取%1给%2...</Chinesesimp>
             <Chinese>拿取%1給%2中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Rearm_TakeAmmo">
@@ -379,7 +379,7 @@
             <French>Stocke %1 dans %2...</French>
             <Japanese>%1を%2へ格納中…</Japanese>
             <Korean>%2에 %1 보관중...</Korean>
-            <Chinesesimp>储存%1到%2中...</Chinesesimp>
+            <Chinesesimp>正在储存%1到%2...</Chinesesimp>
             <Chinese>儲存%1到%2中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Rearm_GrabAction">
@@ -393,7 +393,7 @@
             <French>Ramassage des munitions...</French>
             <Japanese>弾薬を拾得中…</Japanese>
             <Korean>탄약 줍는중...</Korean>
-            <Chinesesimp>捡起弹药中...</Chinesesimp>
+            <Chinesesimp>正在捡起弹药...</Chinesesimp>
             <Chinese>撿起彈藥中...</Chinese>
             <Czech>Sbírám munici...</Czech>
         </Key>

@@ -64,7 +64,7 @@
             <French>Remplacement de la roue...</French>
             <Japanese>タイヤを交換しています・・・</Japanese>
             <Korean>바퀴 교체중...</Korean>
-            <Chinesesimp>更换轮胎中...</Chinesesimp>
+            <Chinesesimp>正在更换轮胎...</Chinesesimp>
             <Chinese>更換輪胎中...</Chinese>
             <Turkish>Tekerlek Takılıyor</Turkish>
         </Key>
@@ -113,7 +113,7 @@
             <French>Démontage de la roue...</French>
             <Japanese>タイヤを外しています・・・</Japanese>
             <Korean>바퀴 제거중...</Korean>
-            <Chinesesimp>卸下轮胎中...</Chinesesimp>
+            <Chinesesimp>正在卸下轮胎...</Chinesesimp>
             <Chinese>卸下輪胎中...</Chinese>
             <Turkish>Tekerlek Sökülüyor</Turkish>
         </Key>
@@ -161,7 +161,7 @@
             <French>Remplacement de la chenille...</French>
             <Japanese>履帯を交換しています・・・</Japanese>
             <Korean>궤도 교체중...</Korean>
-            <Chinesesimp>更换履带中...</Chinesesimp>
+            <Chinesesimp>正在更换履带...</Chinesesimp>
             <Chinese>更換履帶中...</Chinese>
             <Turkish>Parça Değişiyor...</Turkish>
         </Key>
@@ -209,7 +209,7 @@
             <French>Démontage de la chenille...</French>
             <Japanese>履帯を外しています・・・</Japanese>
             <Korean>궤도 제거중...</Korean>
-            <Chinesesimp>卸下履带中...</Chinesesimp>
+            <Chinesesimp>正在卸下履带...</Chinesesimp>
             <Chinese>卸下履帶中...</Chinese>
             <Turkish>Parça Sökülüyor...</Turkish>
         </Key>
@@ -257,7 +257,7 @@
             <French>Réparation du véhicule...</French>
             <Japanese>車両を修理しています・・・</Japanese>
             <Korean>차량 수리중...</Korean>
-            <Chinesesimp>维修载具中...</Chinesesimp>
+            <Chinesesimp>正在维修载具...</Chinesesimp>
             <Chinese>維修載具中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
@@ -415,7 +415,7 @@
             <Russian>Ремонтируем...</Russian>
             <Japanese>修理しています・・・</Japanese>
             <Korean>수리중...</Korean>
-            <Chinesesimp>维修中...</Chinesesimp>
+            <Chinesesimp>正在维修...</Chinesesimp>
             <Chinese>維修中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
@@ -432,7 +432,7 @@
             <Russian>Ремонтируем %1...</Russian>
             <Japanese>%1 を修理しています・・・</Japanese>
             <Korean>%1 수리중...</Korean>
-            <Chinesesimp>维修%1中...</Chinesesimp>
+            <Chinesesimp>正在维修%1...</Chinesesimp>
             <Chinese>維修%1中...</Chinese>
             <Turkish>Tamir Ediliyor %1...</Turkish>
         </Key>

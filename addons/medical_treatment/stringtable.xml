@@ -1136,7 +1136,7 @@
             <Czech>Sada obvazů, Elastická</Czech>
             <Japanese>包帯キット (伸縮)</Japanese>
             <Korean>붕대, 압박</Korean>
-            <Chinesesimp>弹性绷带</Chinesesimp>
+            <Chinesesimp>绷带 (弹性型)</Chinesesimp>
             <Chinese>一個彈性繃帶包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Desc_Use">
@@ -1693,7 +1693,7 @@
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
             <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯 붕대</Korean>
-            <Chinesesimp>止血粉绷带</Chinesesimp>
+            <Chinesesimp>绷带 (止血型)</Chinesesimp>
             <Chinese>止血粉繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_QuikClot_Desc_Use">
@@ -2203,7 +2203,7 @@
             <Portuguese>Injetando Atropina</Portuguese>
             <Japanese>アトロピンを投与しています・・・</Japanese>
             <Korean>아트리핀 주사중...</Korean>
-            <Chinesesimp>阿托品注射中 ...</Chinesesimp>
+            <Chinesesimp>正在注射阿托品...</Chinesesimp>
             <Chinese>阿托品注射中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Transfusing_Blood">
@@ -2267,7 +2267,7 @@
             <Russian>Перевязывание...</Russian>
             <Japanese>包帯を巻いています・・・</Japanese>
             <Korean>붕대감는중...</Korean>
-            <Chinesesimp>包扎中...</Chinesesimp>
+            <Chinesesimp>正在包扎...</Chinesesimp>
             <Chinese>繃帶包紮中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Applying_Tourniquet">
@@ -2299,7 +2299,7 @@
             <Portuguese>Curativo de Campo</Portuguese>
             <Japanese>緊急圧迫包帯</Japanese>
             <Korean>필드 드레싱</Korean>
-            <Chinesesimp>基础绷带</Chinesesimp>
+            <Chinesesimp>绷带 (基础型)</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_PackingBandage">
@@ -2315,7 +2315,7 @@
             <Czech>Obvaz Tlakový</Czech>
             <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
-            <Chinesesimp>包扎绷带</Chinesesimp>
+            <Chinesesimp>绷带 (包扎型)</Chinesesimp>
             <Chinese>包紮繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_ElasticBandage">
@@ -2331,7 +2331,7 @@
             <Portuguese>Bandagem Elástica</Portuguese>
             <Japanese>伸縮包帯</Japanese>
             <Korean>압박 붕대</Korean>
-            <Chinesesimp>弹性绷带</Chinesesimp>
+            <Chinesesimp>绷带 (弹性型)</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_QuikClot">
@@ -2347,7 +2347,7 @@
             <Portuguese>QuikClot</Portuguese>
             <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯</Korean>
-            <Chinesesimp>止血粉</Chinesesimp>
+            <Chinesesimp>绷带 (止血型)</Chinesesimp>
             <Chinese>止血粉</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_CheckPulse">
@@ -2487,7 +2487,7 @@
             <Portuguese>Diagnosticando...</Portuguese>
             <Japanese>診断しています・・・</Japanese>
             <Korean>진단중...</Korean>
-            <Chinesesimp>诊断中...</Chinesesimp>
+            <Chinesesimp>正在诊断...</Chinesesimp>
             <Chinese>診斷中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Actions_CPR">

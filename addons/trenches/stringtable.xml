@@ -190,7 +190,7 @@
             <Russian>Копание окопа</Russian>
             <Japanese>塹壕を掘っている</Japanese>
             <Korean>참호 파는중</Korean>
-            <Chinesesimp>正在盖掩体中</Chinesesimp>
+            <Chinesesimp>正在盖掩体</Chinesesimp>
             <Chinese>正在蓋掩體中</Chinese>
             <Turkish>Siper Kazılıyor</Turkish>
         </Key>
@@ -235,7 +235,7 @@
             <German>Entferne Schützengraben</German>
             <Korean>참호 제거중...</Korean>
             <Italian>Rimuovendo la Trincea</Italian>
-            <Chinesesimp>移除掩体中</Chinesesimp>
+            <Chinesesimp>正在移除掩体</Chinesesimp>
             <Chinese>移除掩體中</Chinese>
             <Turkish>Siper Kaldırılıyor</Turkish>
         </Key>
