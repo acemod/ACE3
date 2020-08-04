@@ -19,4 +19,7 @@ class CfgWeapons {
     class U_O_PilotCoveralls: Uniform_Base {
         ACE_GForceCoef = 0.8;
     };
+    class U_I_E_Uniform_01_coveralls_F: Uniform_Base {
+        ACE_GForceCoef = 0.8;
+    };
 };
