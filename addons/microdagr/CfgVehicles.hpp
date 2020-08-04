@@ -71,8 +71,9 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = CSTRING(itemName);
         author = ECSTRING(common,ACETeam);
-        vehicleClass = "Items";
         icon = QPATHTOF(UI\icon_microDAGR.paa);
+        vehicleClass = "Items";
+        model = "\A3\Weapons_f\DummyWeapon.p3d";
         class TransportItems {
             MACRO_ADDITEM(ACE_microDAGR,1);
         };
