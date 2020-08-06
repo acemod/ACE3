@@ -5,11 +5,11 @@
     if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "trackPilotCamera")) < 1) exitWith {};
     private _isUAV = unitIsUAV _vehicle;
     private _hasPilotCamera = hasPilotCamera _vehicle;
-    if(_isUAV && _hasPilotCamera) then {
+    if(_isUAV && _hasPilotCamera && (local _vehicle)) then {
         _pfhID = [{
             params ["_args", "_pfID"];
             _args params ["_vehicle"];
-
+            if(!alive _vehicle) exitWith {[_pfID] call CBA_fnc_removePerFrameHandler};
             private _pilotCameraTarget = getPilotCameraTarget _vehicle;
             private _pilotCameraRotation = getPilotCameraRotation _vehicle;
             if (_pilotCameraTarget select 0) then {
