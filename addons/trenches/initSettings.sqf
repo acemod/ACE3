@@ -6,7 +6,7 @@
     LSTRING(Category),
     [5, 600, 20], 
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(smallEnvelopeRemoveDuration), 
@@ -15,7 +15,7 @@
     LSTRING(Category),
     [5, 600, 12], 
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(bigEnvelopeDigDuration), 
@@ -24,7 +24,7 @@
     LSTRING(Category),
     [5, 600, 25], 
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(bigEnvelopeRemoveDuration), 
@@ -33,4 +33,4 @@
     LSTRING(Category),
     [5, 600, 15], 
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
