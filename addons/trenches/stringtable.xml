@@ -239,5 +239,41 @@
             <Chinese>移除掩體中</Chinese>
             <Turkish>Siper Kaldırılıyor</Turkish>
         </Key>
+        <Key ID="STR_ACE_Trenches_Category">
+            <English>ACE Trenches</English>
+            <French>ACE Tranchées</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
+            <English>Small Trench Dig Duration</English>
+            <French>Petites tranchées - durée d'excavation</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
+            <English>Time, in seconds, required to dig a small trench.</English>
+            <French>Définit le temps nécessaire au déploiement des petites tranchées (en secondes).</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
+            <English>Small Trench Remove Duration</English>
+            <French>Petites tranchées - durée de retrait</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
+            <English>Time, in seconds, required to remove a small trench.</English>
+            <French>Définit le temps nécessaire pour le retrait des petites tranchées (en secondes).</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
+            <English>Big Trench Dig Duration</English>
+            <French>Grandes tranchées - durée d'excavation</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_Description">
+            <English>Time, in seconds, required to dig a big trench.</English>
+            <French>Définit le temps nécessaire au déploiement des grandes tranchées (en secondes).</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
+            <English>Big Trench Remove Duration</English>
+            <French>Grandes tranchées - durée de retrait</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
+            <English>Time, in seconds, required to remove a big trench.</English>
+            <French>Définit le temps nécessaire pour le retrait des grandes tranchées (en secondes).</French>
+        </Key>
     </Package>
 </Project>
