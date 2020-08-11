@@ -169,7 +169,7 @@
             <Spanish>Férulas sanan completamente las fracturas</Spanish>
             <German>Schienen heilen Knochenbrüche vollständig</German>
         </Key>
-        <Key ID="STR_ACE_Medical_Fractures_SplintHasEffects">
+        <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoSprint">
             <English>Splints Heal, but Cannot Sprint</English>
             <Russian>Шины вылечивают, но не дают бегать</Russian>
             <Japanese>添え木で治癒可能、走れないように</Japanese>
@@ -182,6 +182,9 @@
             <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
             <German>Schienen heilen, aber ermöglichen kein Sprinten</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoJog">
+            <English>Splints Heal, but Cannot Jog</English>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
