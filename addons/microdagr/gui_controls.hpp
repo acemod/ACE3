@@ -136,6 +136,8 @@ class controlsBackground {
         colorBackground[] = {0,0,0,1};
         colorOutside[] = {0,0,0,1};
         moveOnEdges = 0;
+
+        showCountourInterval = 0;
     };
 };
 
