@@ -4,6 +4,7 @@ PREP(canLoadItemIn);
 PREP(canUnloadItem);
 PREP(getCargoSpaceLeft);
 PREP(getSizeItem);
+PREP(handleDeleted);
 PREP(handleDestroyed);
 PREP(initObject);
 PREP(initVehicle);
