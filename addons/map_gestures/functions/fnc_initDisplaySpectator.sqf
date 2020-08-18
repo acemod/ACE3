@@ -18,15 +18,16 @@ params ["_mapCtrl"];
 TRACE_1("initDisplaySpectator",_mapCtrl);
 
 _mapCtrl ctrlAddEventHandler ["Draw", {
-    private _targets = [positionCameraToWorld [0, 0, 0]];
+    if (!GVAR(allowSpectator)) exitWith {};
+    private _targets = [[positionCameraToWorld [0, 0, 0], GVAR(maxRangeCamera)]];
 
     private _aceSpectatorFocus = missionNamespace getVariable [QEGVAR(spectator,camFocus), objNull];
     if (!isNull _aceSpectatorFocus) then {
-        _targets pushback _aceSpectatorFocus;
+        _targets pushback [_aceSpectatorFocus, GVAR(maxRange)];
     };
     private _vanillaSpectatorFocus = uiNamespace getVariable ["RscEGSpectator_focus", objNull];
     if (!isNull _vanillaSpectatorFocus) then {
-        _targets pushback _vanillaSpectatorFocus;
+        _targets pushback [_vanillaSpectatorFocus, GVAR(maxRange)];
     };
     [_this select 0, _targets] call FUNC(drawMapGestures);
 }];
