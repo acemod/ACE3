@@ -523,32 +523,10 @@ class GVAR(display) {
             h = QUOTE(6 * GRID_H);
             onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
             sizeEx = QUOTE(5 * GRID_H);
-            class Items {
-                class Alphabet {
-                    text="$STR_a3_rscdisplayarsenal_sort_alphabet";
-                    default=1;
-                    value= 0;
-                };
-                class Mod {
-                    text="$STR_a3_rscdisplayarsenal_sort_mod";
-                    value= 1;
-                };
-            };
         };
         class sortRightTab: sortLeftTab {
             idc = IDC_sortRightTab;
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
-            class Items {
-                class Alphabet {
-                    text="$STR_a3_rscdisplayarsenal_sort_alphabet";
-                    default=1;
-                    value= 0;
-                };
-                class Weight {
-                    text="$STR_a3_rscdisplayarsenal_sort_mod";
-                    value= 1;
-                };
-            };
         };
         class leftSearchbar: ctrlEdit {
             idc = IDC_leftSearchbar;

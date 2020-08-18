@@ -37,6 +37,10 @@ _ctrlPanel ctrlCommit FADE_DELAY;
 
 _ctrlPanel lbSetCurSel -1;
 
+// Fill sort options
+private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
+[_display, _control, _sortLeftCtrl] call FUNC(fillSort);
+
 // Handle icons and filling
 switch true do {
     case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
@@ -138,8 +142,8 @@ switch true do {
                 {
                     {
                         if (
-                            getnumber (_x >> "disabled") == 0 && 
-                            {getText (_x >> "head") != ""} && 
+                            getnumber (_x >> "disabled") == 0 &&
+                            {getText (_x >> "head") != ""} &&
                             {configName _x != "Default"}
                         ) then {
                             private _configName = configName _x;
@@ -162,7 +166,7 @@ switch true do {
                 {
                     ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
                 } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
-                
+
                 {
                     private _displayName = getText (_x >> "displayName");
                     private _className = configName _x;
@@ -187,8 +191,7 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
-private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
-[_sortLeftCtrl, _sortLeftCtrl lbValue (lbCurSel _sortLeftCtrl)] call FUNC(sortPanel);
+[_sortLeftCtrl] call FUNC(sortPanel);
 
 //Select current item
 private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)]) apply {tolower _x};
