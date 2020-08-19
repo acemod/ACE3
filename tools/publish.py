@@ -96,18 +96,57 @@ def main(argv):
     # Note: command line publisher doesn't like our file structure, just upload this one manually
 
 
-
-    #RHS Compat USA - http://steamcommunity.com/sharedfiles/filedetails/?id=773125288
-    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_usf3"), "773125288", changelog_path)
-
-    #RHS Compat Russians - http://steamcommunity.com/sharedfiles/filedetails/?id=773131200
+    #compat_r3f: r3 - https://steamcommunity.com/sharedfiles/filedetails/?id=2202404402
+    publishFolder(os.path.join(ace_optionals_dir,"@compat_r3f"), "2202404402", changelog_path)
+    
+    #compat_rh_acc: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202407118
+    publishFolder(os.path.join(ace_optionals_dir,"@compat_rh_acc"), "2202407118", changelog_path)
+    
+    #compat_rh_de: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202407963
+    publishFolder(os.path.join(ace_optionals_dir,"@compat_rh_de"), "2202407963", changelog_path)
+    
+    #compat_rh_m4: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202408647
+    publishFolder(os.path.join(ace_optionals_dir,"@compat_rh_m4"), "2202408647", changelog_path)
+    
+    #compat_rh_pdw: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202409303
+    publishFolder(os.path.join(ace_optionals_dir,"@compat_rh_pdw"), "2202409303", changelog_path)
+    
+    #ace_compat_rhs_afrf3: RHS Russians - http://steamcommunity.com/sharedfiles/filedetails/?id=773131200
     publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_afrf3"), "773131200", changelog_path)
 
-    #RHS Compat GREF - http://steamcommunity.com/sharedfiles/filedetails/?id=884966711
+    #ace_compat_rhs_gref3: RHS GREF - http://steamcommunity.com/sharedfiles/filedetails/?id=884966711
     publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_gref3"), "884966711", changelog_path)
 
-    #RHS Compat SAF - http://steamcommunity.com/sharedfiles/filedetails/?id=2174495332
+    #ace_compat_rhs_saf3: RHS SAF - http://steamcommunity.com/sharedfiles/filedetails/?id=2174495332
     publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_saf3"), "2174495332", changelog_path)
+
+    #ace_compat_rhs_usf3: RHS USA - http://steamcommunity.com/sharedfiles/filedetails/?id=773125288
+    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_usf3"), "773125288", changelog_path)
+
+    #compat_rksl_pm_ii: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202410630
+    publishFolder(os.path.join(ace_optionals_dir,"@compat_rksl_pm_ii"), "2202410630", changelog_path)
+    
+    #compat_sma3_iansky: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202411104
+    publishFolder(os.path.join(ace_optionals_dir,"@compat_sma3_iansky"), "2202411104", changelog_path)
+    
+    #noactionmenu: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202412030
+    publishFolder(os.path.join(ace_optionals_dir,"@noactionmenu"), "2202412030", changelog_path)
+    
+    #nocrosshair: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202412481
+    publishFolder(os.path.join(ace_optionals_dir,"@nocrosshair"), "2202412481", changelog_path)
+    
+    #nouniformrestrictions: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202413047
+    publishFolder(os.path.join(ace_optionals_dir,"@nouniformrestrictions"), "2202413047", changelog_path)
+    
+    #particles: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202413537
+    publishFolder(os.path.join(ace_optionals_dir,"@particles"), "2202413537", changelog_path)
+    
+    #realisticdispersion: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202414018
+    publishFolder(os.path.join(ace_optionals_dir,"@realisticdispersion"), "2202414018", changelog_path)
+    
+    #tracers: - https://steamcommunity.com/sharedfiles/filedetails/?id=2202414450
+    publishFolder(os.path.join(ace_optionals_dir,"@tracers"), "2202414450", changelog_path)
+
 
 
 
