@@ -165,7 +165,7 @@ class CfgMagazines {
         };
     };
 
-    class ACE_DemoCharge_Remote_Mag_Throwable: SatchelCharge_Remote_Mag_Throwable {
+    class ACE_DemoCharge_Remote_Mag_Throwable: ACE_SatchelCharge_Remote_Mag_Throwable {
         picture = "\A3\Weapons_F\Data\UI\gear_c4_charge_small_CA.paa";
         model = "\A3\Weapons_F\explosives\c4_charge_small_d";
         descriptionShort = "Type: Charge<br />Rounds: 1<br />Used on: Things that need to die";

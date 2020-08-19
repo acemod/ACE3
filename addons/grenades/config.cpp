@@ -11,10 +11,12 @@ class CfgPatches {
             "ACE_HandFlare_Yellow",
             "ACE_M84",
             "ACE_M14",
-            "ACE_CTS9"
+            "ACE_CTS9",
+            "ACE_SatchelCharge_Remote_Mag_Throwable",
+            "ACE_DemoCharge_Remote_Mag_Throwable"
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_common","ace_explosives"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"commy2","KoffeinFlummi"};
         url = ECSTRING(main,URL);

@@ -62,8 +62,6 @@
         [_mag,_throwableMag]
     ] call CBA_fnc_addItemContextMenuOption;
 } forEach [
-    ["SatchelCharge_Remote_Mag", "SatchelCharge_Remote_Mag_Throwable"],
-    ["DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag_Throwable"]
+    ["SatchelCharge_Remote_Mag", "ACE_SatchelCharge_Remote_Mag_Throwable"],
+    ["DemoCharge_Remote_Mag", "ACE_DemoCharge_Remote_Mag_Throwable"]
 ];
-
-call FUNC(changeFuse);
