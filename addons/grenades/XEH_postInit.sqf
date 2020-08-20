@@ -10,7 +10,7 @@
 ["ace_firedNonPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
-call FUNC(changeFuse);
+[] call FUNC(addChangeFuseItemContextMenuOptions);
 
 GVAR(flashbangPPEffectCC) = ppEffectCreate ["ColorCorrections", 4265];
 GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;

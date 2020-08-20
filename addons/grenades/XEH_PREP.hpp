@@ -5,4 +5,4 @@ PREP(flashbangThrownFuze);
 PREP(incendiary);
 PREP(nextMode);
 PREP(throwGrenade);
-PREP(changeFuse);
+PREP(addChangeFuseItemContextMenuOptions);

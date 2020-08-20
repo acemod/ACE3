@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_grenades_fnc_changeFuse
+ * call ace_grenades_fnc_addChangeFuseItemContextMenuOptions
  *
  * Public: No
  */
