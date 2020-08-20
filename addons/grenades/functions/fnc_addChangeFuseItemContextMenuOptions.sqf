@@ -21,19 +21,19 @@
     [
         _mag,
         "CONTAINER",
-        "Covert to short fuse",
+        LLSTRING(convert_fuse),
         nil,
         "\a3\ui_f\data\igui\cfg\simpletasks\types\destroy_ca.paa",
         [
             {true},
             {
                 params ["", "", "_item", "", "_magArr"];
-                _item isEqualTo (_magArr #0);
+                _item isEqualTo (_magArr select 0);
             }
         ],
         {
             params ["_unit", "", "", "", "_magArr"];
-            _unit addMagazine (_magArr #1);
+            _unit addMagazine (_magArr select 1);
             false;
         },
         true,
@@ -43,19 +43,19 @@
     [
         _throwableMag,
         "CONTAINER",
-        "Remove short fuse",
+        LLSTRING(remove_fuse),
         nil,
         "\a3\ui_f\data\igui\cfg\simpletasks\types\destroy_ca.paa",
         [
             {true},
             {
                 params ["", "", "_item", "", "_magArr"];
-                _item isEqualTo (_magArr #1);
+                _item isEqualTo (_magArr select 1);
             }
         ],
         {
             params ["_unit", "", "", "", "_magArr"];
-            _unit addMagazine (_magArr #0);
+            _unit addMagazine (_magArr select 0);
             false;
         },
         true,

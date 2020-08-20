@@ -140,7 +140,7 @@ class CfgMagazines {
         picture = "\A3\Weapons_f\data\UI\gear_satchel_CA.paa";
         model = "\A3\Weapons_F\Explosives\satchel_i";
         displayName = CSTRING(SatchelCharge_Remote_Mag_Throwable);
-        displayNameShort = CSTRING(SatchelCharge_Name);
+        displayNameShort = "$STR_A3_cfgMagazines_PipeBomb0";
         descriptionShort = CSTRING(SatchelCharge_Description);
         class Library {
             libTextDesc = CSTRING(SatchelCharge_LibText)
@@ -163,7 +163,7 @@ class CfgMagazines {
         picture = "\A3\Weapons_F\Data\UI\gear_c4_charge_small_CA.paa";
         model = "\A3\Weapons_F\explosives\c4_charge_small_d";
         displayName = CSTRING(DemoCharge_Remote_Mag_Throwable);
-        displayNameShort = CSTRING(DemoCharge_Name);
+        displayNameShort = "$STR_A3_cfgMagazines_DemoCharge0";
         descriptionShort = CSTRING(SatchelCharge_Description);
         class Library {
             libTextDesc = CSTRING(DemoCharge_LibText)

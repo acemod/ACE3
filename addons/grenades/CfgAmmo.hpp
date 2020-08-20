@@ -191,8 +191,6 @@ class CfgAmmo {
         deflectionSlowDown = 0.1;
         explosionType = "bomb";
         ACE_damageType = "explosive";
-        EGVAR(explosives,magazine) = "ACE_SatchelCharge_Remote_Mag_Throwable";
-        EGVAR(explosives,explosive) = "SatchelCharge_Remote_Ammo_Scripted";
         EGVAR(frag,skip) = 1;
         EGVAR(advanced_throwing,torqueMagnitude) = "(5 + random 20) * selectRandom [1, -1]";
         GVAR(pullPinSound)[] = {"A3\Sounds_F_Orange\arsenal\explosives\Handling\ExplosiveSatchel_TouchOff_01.wss", 2, 1, 50};
@@ -214,8 +212,6 @@ class CfgAmmo {
         CraterEffects = "MineNondirectionalCraterSmall";
         whistleDist = 32;
         SoundSetExplosion[] = {"ExplosiveCharge_Exp_SoundSet", "ExplosiveCharge_Tail_SoundSet", "Explosion_Debris_SoundSet"};
-        EGVAR(explosives,magazine) = "ACE_DemoCharge_Remote_Mag_Throwable";
-        EGVAR(explosives,explosive) = "DemoCharge_Remote_Ammo_Scripted";
         class CamShakeExplode {
             power = 10;
             duration = 2;

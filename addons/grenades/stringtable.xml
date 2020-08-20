@@ -521,19 +521,6 @@
             <Czech></Czech>
             <Turkish></Turkish>
         </Key>
-        <Key ID="STR_ACE_Grenades_SatchelCharge_Name">
-            <English>Satchel Charge</English>
-            <German></German>
-            <Polish></Polish>
-            <Italian></Italian>
-            <Japanese></Japanese>
-            <Russian></Russian>
-            <Portuguese></Portuguese>
-            <Chinese></Chinese>
-            <French></French>
-            <Czech></Czech>
-            <Turkish></Turkish>
-        </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
             <German></German>
@@ -573,8 +560,8 @@
             <Czech></Czech>
             <Turkish></Turkish>
         </Key>
-        <Key ID="STR_ACE_Grenades_DemoCharge_Name">
-            <English>Explosive Charge</English>
+        <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
+            <English>An explosive charge that is throwable. 7 second fixed fuse</English>
             <German></German>
             <Polish></Polish>
             <Italian></Italian>
@@ -586,8 +573,21 @@
             <Czech></Czech>
             <Turkish></Turkish>
         </Key>
-        <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
-            <English>An explosive charge that is throwable. 7 second fixed fuse</English>
+        <Key ID="STR_ACE_Grenades_Convert_Fuse">
+            <English>Covert to short fuse</English>
+            <German></German>
+            <Polish></Polish>
+            <Italian></Italian>
+            <Japanese></Japanese>
+            <Russian></Russian>
+            <Portuguese></Portuguese>
+            <Chinese></Chinese>
+            <French></French>
+            <Czech></Czech>
+            <Turkish></Turkish>
+        </Key>
+        <Key ID="STR_ACE_Grenades_Remove_Fuse">
+            <English>Remove short fuse</English>
             <German></German>
             <Polish></Polish>
             <Italian></Italian>
