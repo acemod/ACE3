@@ -135,48 +135,41 @@ class CfgMagazines {
     class CA_Magazine;
     class ACE_SatchelCharge_Remote_Mag_Throwable: CA_Magazine {
         author = ECSTRING(common,ACETeam);
+        ammo = "ACE_SatchelCharge_Remote_Ammo_Thrown";
         scope = 1;
         picture = "\A3\Weapons_f\data\UI\gear_satchel_CA.paa";
         model = "\A3\Weapons_F\Explosives\satchel_i";
-        descriptionShort = "Type: Charge<br />Rounds: 1<br />Used on: Things that need to die";
+        displayName = CSTRING(SatchelCharge_Remote_Mag_Throwable);
+        displayNameShort = CSTRING(SatchelCharge_Name);
+        descriptionShort = CSTRING(SatchelCharge_Description);
         class Library {
-            libTextDesc = "An explosive satchel that is throwable. 7 second fixed fuse";
+            libTextDesc = CSTRING(SatchelCharge_LibText)
         };
-        descriptionUse = "";
         type = "2*      256";
         allowedSlots[] = {901};
         value = 5;
-        ammo = "ACE_SatchelCharge_Remote_Ammo_Thrown";
         mass = 80;
         count = 1;
-        initSpeed = 10;
+        initSpeed = 7.5;
         maxLeadSpeed = 0;
-        nameSoundWeapon = "satchelcharge";
         nameSound = "satchelcharge";
-        weaponPoolAvailable = 0;
-        useActionTitle = "";
+        nameSoundWeapon = "satchelcharge";
         sound[] = {"A3\sounds_f\dummysound", 0.000316228, 1, 10};
-        displayName = "Explosive Satchel (Throwable)";
-        displayNameShort = "Satchel Charge";
         useAction = 0;
-        EGVAR(explosives,placeable) = 0;
-        class ACE_Triggers {
-            SupportedTriggers[] = {};
-        };
     };
 
     class ACE_DemoCharge_Remote_Mag_Throwable: ACE_SatchelCharge_Remote_Mag_Throwable {
+        ammo = "ACE_DemoCharge_Remote_Ammo_Thrown";
         picture = "\A3\Weapons_F\Data\UI\gear_c4_charge_small_CA.paa";
         model = "\A3\Weapons_F\explosives\c4_charge_small_d";
-        descriptionShort = "Type: Charge<br />Rounds: 1<br />Used on: Things that need to die";
+        displayName = CSTRING(DemoCharge_Remote_Mag_Throwable);
+        displayNameShort = CSTRING(DemoCharge_Name);
+        descriptionShort = CSTRING(SatchelCharge_Description);
         class Library {
-            libTextDesc = "An explosive charge that is throwable. 7 second fixed fuse";
+            libTextDesc = CSTRING(DemoCharge_LibText)
         };
         allowedSlots[] = {901, 701};
-        ammo = "ACE_DemoCharge_Remote_Ammo_Thrown";
         mass = 20;
-        initSpeed = 15;
-        displayName = "Explosive Charge (Throwable)";
-        displayNameShort = "Explosive Charge";
+        initSpeed = 12.5;
     };
 };
