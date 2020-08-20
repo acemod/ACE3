@@ -143,7 +143,7 @@ class CfgMagazines {
         displayNameShort = "$STR_A3_cfgMagazines_PipeBomb0";
         descriptionShort = CSTRING(SatchelCharge_Description);
         class Library {
-            libTextDesc = CSTRING(SatchelCharge_LibText)
+            libTextDesc = CSTRING(SatchelCharge_LibText);
         };
         type = "2*      256";
         allowedSlots[] = {901};
@@ -166,7 +166,7 @@ class CfgMagazines {
         displayNameShort = "$STR_A3_cfgMagazines_DemoCharge0";
         descriptionShort = CSTRING(SatchelCharge_Description);
         class Library {
-            libTextDesc = CSTRING(DemoCharge_LibText)
+            libTextDesc = CSTRING(DemoCharge_LibText);
         };
         allowedSlots[] = {901, 701};
         mass = 20;
