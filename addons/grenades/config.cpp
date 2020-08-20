@@ -16,7 +16,7 @@ class CfgPatches {
             "ACE_DemoCharge_Remote_Mag_Throwable"
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common","ace_explosives"};
+        requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"commy2","KoffeinFlummi"};
         url = ECSTRING(main,URL);
