@@ -38,7 +38,7 @@
 
 [
     QGVAR(briefingMode), "LIST",
-    [LSTRING(allowCurator_displayName), LSTRING(allowCurator_description)],
+    [LSTRING(briefingMode_displayName), LSTRING(briefingMode_description)],
     LSTRING(mapGestures_category),
     [[0, 1, 2, 3, 4], [LSTRING(briefingMode_All), LSTRING(briefingMode_Group), LSTRING(briefingMode_Side), LSTRING(briefingMode_Proximity), LSTRING(briefingMode_Disabled)], 0]
 ] call CBA_fnc_addSetting;
