@@ -74,7 +74,7 @@
             <Italian>Distanza massima tra giocatori per mostrare i gesti in mappa</Italian>
             <German>Maximale Reichweite zwischen Spielern um Kartenzeichen anzuzeigen</German>
             <Spanish>Máxima distancia a la cual pueden verse el indicador de gestos</Spanish>
-            <French>Définit le rayon au-delà duquel les joueurs ne verront plus l'indicateur de pointage de leurs alliés.</French>
+            <French>Définit le rayon au-delà duquel un joueur ne verra plus l'indicateur de pointage des autres joueurs.</French>
             <Japanese>プレイヤーによるマップ ジェスチャーの表示範囲を設定します</Japanese>
             <Korean>플레이어간에 지도 신호 표시거리를 설정합니다.</Korean>
             <Chinesesimp>设定地图标识器显示的最大范围距离</Chinesesimp>
@@ -278,35 +278,44 @@
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_displayName">
             <English>Max range Camera</English>
+            <French>Portée de la caméra</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_description">
             <English>Max range between a Camera and players to show the map gesture indicator</English>
+            <French>Définit le rayon au-delà duquel une caméra ne verra plus l'indicateur de pointage des autres joueurs.</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_displayName">
             <English>Allow Spectator</English>
+            <French>Autoriser les spectateurs</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_description">
             <English>Allows Spectator to See Map Gestures</English>
+            <French>Permet aux spectateurs de voir le pointage des autres joueurs.</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_displayName">
             <English>Allow Curator</English>
+            <French>Autoriser les curateurs</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_description">
             <English>Allows Curator to See Map Gestures</English>
+            <French>Permet aux curateurs de voir le pointage des autres joueurs.</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_displayName">
             <English>Briefing Mode</English>
+            <French>Visibilité lors du briefing</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_description">
             <English>What player can see what</English>
+            <French>Définit quels pointages les joueurs peuvent voir lors du briefing.</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Disabled">
             <English>Disabled</English>
+            <French>Pointage désactivé</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Group">
             <English>Group</English>
             <Czech>Skupina</Czech>
-            <French>Groupement</French>
+            <French>Groupe</French>
             <German>Gruppe</German>
             <Italian>Gruppo</Italian>
             <Polish>Grupa</Polish>
@@ -327,6 +336,7 @@
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Proximity">
             <English>Proximity</English>
+            <French>Proximité</French>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_All">
             <English>All</English>
