@@ -510,24 +510,31 @@
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Remote_Mag_Throwable">
             <English>Explosive Satchel (Throwable)</English>
+            <French>Charge en sacoche (lançable)</French>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
+            <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
+            <French>Charge explosive lançable. Détonation après 7 secondes.</French>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
+            <French>Charge explosive (lançable)</French>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
+            <French>Bloc explosif lançable. Détonation après 7 secondes.</French>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
+            <French>Mèche lente (7 secondes)</French>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
+            <French>Retirer la mèche lente</French>
         </Key>
     </Package>
 </Project>
