@@ -10,7 +10,6 @@
 ["ace_firedNonPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
-[] call FUNC(addChangeFuseItemContextMenuOptions);
 
 GVAR(flashbangPPEffectCC) = ppEffectCreate ["ColorCorrections", 4265];
 GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
@@ -27,3 +26,7 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     // Statement
     [] call FUNC(nextMode);
 }, {false}, [9, [false, false, false]], false] call CBA_fnc_addKeybind; //8 Key
+
+if (GVAR(enabled)) then {
+    [] call FUNC(addChangeFuseItemContextMenuOptions);
+};
