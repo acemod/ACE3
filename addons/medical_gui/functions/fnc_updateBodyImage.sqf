@@ -51,7 +51,7 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
                 _ctrlBone ctrlSetTextColor [1, 0, 0, 1];
             };
             case -1: {
-                if (EGVAR(medical,fractures) == 2) then {
+                if (EGVAR(medical,fractures) in [2, 3]) then {
                     _ctrlBone ctrlShow true;
                     _ctrlBone ctrlSetTextColor [0, 0, 1, 1];
                 } else {
