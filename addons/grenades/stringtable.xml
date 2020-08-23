@@ -514,7 +514,7 @@
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
-            <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : main</French>
+            <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : à balancer sur des trucs qui doivent mourir</French>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
