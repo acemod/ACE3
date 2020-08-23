@@ -1312,7 +1312,7 @@
             <Spanish>Conjunto de carga de demolición M183</Spanish>
             <Polish>Ładunek burzący M183</Polish>
             <Czech>Demoliční nálož M183</Czech>
-            <French>M183 Charge de Démolition</French>
+            <French>M183 Charge de démolition</French>
             <Russian>M183 Комплектный подрывной заряд</Russian>
             <Portuguese>M183 Sacola de Demolição</Portuguese>
             <Hungarian>M183 romboló töltet</Hungarian>
@@ -1323,13 +1323,17 @@
             <Chinesesimp>M183炸药包</Chinesesimp>
             <Turkish>M183 Demolition Charge Assembly</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_SatchelChargeThrowable_Name">
+            <English>M183 Demolition Charge (Throwable)</English>
+            <French>M183 Charge de démolition (lançable)</French>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
             <German>M112 Sprengladung</German>
             <Spanish>Bloque de demolición M112</Spanish>
             <Polish>Ładunek burzący M112</Polish>
             <Czech>Výbušná nálož M112</Czech>
-            <French>M112 Block de Démolition</French>
+            <French>M112 Bloc de démolition</French>
             <Russian>M112 подрывной заряд</Russian>
             <Portuguese>M112 Carga de Demolição</Portuguese>
             <Hungarian>M112 romboló tömb</Hungarian>
@@ -1339,6 +1343,10 @@
             <Chinese>M112塑性炸藥</Chinese>
             <Chinesesimp>M112塑性炸药</Chinesesimp>
             <Turkish>M112 Demolition Block</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_DemoChargeThrowable_Name">
+            <English>M183 Demolition Charge (Throwable)</English>
+            <French>M112 Bloc de démolition (lançable)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
