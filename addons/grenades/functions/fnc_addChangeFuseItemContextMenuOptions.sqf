@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+ TRACE_1("addChangeFuseItemContextMenuOptions",_this);
 
 {
     _x params ["_mag", "_throwableMag"];

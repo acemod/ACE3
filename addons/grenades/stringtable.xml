@@ -538,11 +538,24 @@
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
+            <German>ACE Granaten</German>
+            <Czech>ACE Granáty</Czech>
+            <Polish>ACE Granaty</Polish>
+            <Italian>ACE Granate</Italian>
+            <Spanish>ACE Granadas</Spanish>
+            <French>ACE Grenades</French>
+            <Portuguese>ACE Granadas</Portuguese>
+            <Russian>ACE Гранаты</Russian>
+            <Japanese>ACE 手榴弾</Japanese>
+            <Korean>ACE 수류탄</Korean>
+            <Chinesesimp>ACE 手榴弹</Chinesesimp>
+            <Chinese>ACE 手榴彈</Chinese>
+            <Turkish>ACE Bombalar</Turkish>
         </Key>
-        <Key ID="STR_ACE_Grenades_Enabled_DisplayName">
+        <Key ID="STR_ACE_Grenades_convertExplosives_DisplayName">
             <English>Allow Explosive Conversion</English>
         </Key>
-        <Key ID="STR_ACE_Grenades_Settings_Description">
+        <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
         </Key>
     </Package>

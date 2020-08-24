@@ -1,6 +1,6 @@
 [
-    QGVAR(enabled), "CHECKBOX",
-    [LSTRING(Enabled_DisplayName), LSTRING(Settings_Description)],
+    QGVAR(convertExplosives), "CHECKBOX",
+    [LSTRING(convertExplosives_DisplayName), LSTRING(convertExplosives_Description)],
     LSTRING(Settings_DisplayName),
     true,
     true,

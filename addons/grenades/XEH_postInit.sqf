@@ -27,6 +27,8 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     [] call FUNC(nextMode);
 }, {false}, [9, [false, false, false]], false] call CBA_fnc_addKeybind; //8 Key
 
-if (GVAR(enabled)) then {
-    [] call FUNC(addChangeFuseItemContextMenuOptions);
-};
+["ace_settingsInitialized", {
+    if (GVAR(convertExplosives)) then {
+        [] call FUNC(addChangeFuseItemContextMenuOptions);
+    };
+}] call CBA_fnc_addEventHandler;
