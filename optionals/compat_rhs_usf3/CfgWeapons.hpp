@@ -121,7 +121,16 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.13162;
     };
     class rhs_weap_sr25_ec: rhs_weap_sr25 {
-        ACE_barrelTwist = 285.75;
+        ACE_barrelLength = 508.0;
+        ACE_RailHeightAboveBore = 3.13689;
+    };
+    class rhs_weap_sr25_d;
+    class rhs_weap_sr25_ec_d: rhs_weap_sr25_d {
+        ACE_barrelLength = 508.0;
+        ACE_RailHeightAboveBore = 3.13689;
+    };
+    class rhs_weap_sr25_wd;
+    class rhs_weap_sr25_ec_wd: rhs_weap_sr25_wd {
         ACE_barrelLength = 508.0;
         ACE_RailHeightAboveBore = 3.13689;
     };
