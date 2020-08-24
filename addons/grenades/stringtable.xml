@@ -508,5 +508,55 @@
             <Czech>M992 Infračervená světlice</Czech>
             <Turkish>M992 Illumination IR Flare</Turkish>
         </Key>
+        <Key ID="STR_ACE_Grenades_SatchelCharge_Remote_Mag_Throwable">
+            <English>Explosive Satchel (Throwable)</English>
+            <French>Charge en sacoche (lançable)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
+            <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
+            <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : à balancer sur des trucs qui doivent mourir</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
+            <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
+            <French>Charge explosive lançable. Détonation après 7 secondes.</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
+            <English>Explosive Charge (Throwable)</English>
+            <French>Charge explosive (lançable)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
+            <English>An explosive charge that is throwable. 7 second fixed fuse</English>
+            <French>Bloc explosif lançable. Détonation après 7 secondes.</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_Convert_Fuse">
+            <English>Convert to short fuse</English>
+            <French>Mèche lente (7 secondes)</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_Remove_Fuse">
+            <English>Remove short fuse</English>
+            <French>Retirer la mèche lente</French>
+        </Key>
+        <Key ID="STR_ACE_Grenades_Settings_DisplayName">
+            <English>ACE Grenades</English>
+            <German>ACE Granaten</German>
+            <Czech>ACE Granáty</Czech>
+            <Polish>ACE Granaty</Polish>
+            <Italian>ACE Granate</Italian>
+            <Spanish>ACE Granadas</Spanish>
+            <French>ACE Grenades</French>
+            <Portuguese>ACE Granadas</Portuguese>
+            <Russian>ACE Гранаты</Russian>
+            <Japanese>ACE 手榴弾</Japanese>
+            <Korean>ACE 수류탄</Korean>
+            <Chinesesimp>ACE 手榴弹</Chinesesimp>
+            <Chinese>ACE 手榴彈</Chinese>
+            <Turkish>ACE Bombalar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Grenades_convertExplosives_DisplayName">
+            <English>Allow Explosive Conversion</English>
+        </Key>
+        <Key ID="STR_ACE_Grenades_convertExplosives_Description">
+            <English>Allow converting explosives to throwables</English>
+        </Key>
     </Package>
 </Project>

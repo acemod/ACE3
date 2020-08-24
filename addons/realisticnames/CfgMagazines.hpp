@@ -390,6 +390,12 @@ class CfgMagazines {
     class DemoCharge_Remote_Mag: SatchelCharge_Remote_Mag {
         displayName = CSTRING(DemoCharge_Name);
     };
+    class ACE_SatchelCharge_Remote_Mag_Throwable: SatchelCharge_Remote_Mag {
+        displayName = CSTRING(SatchelChargeThrowable_Name);
+    };
+    class ACE_DemoCharge_Remote_Mag_Throwable: ACE_SatchelCharge_Remote_Mag_Throwable {
+        displayName = CSTRING(DemoChargeThrowable_Name);
+    };
 
     // hand grenades
     class HandGrenade: CA_Magazine {
@@ -474,7 +480,7 @@ class CfgMagazines {
     };
     class PylonRack_7Rnd_Rocket_04_HE_F: 7Rnd_Rocket_04_HE_F {
         displayName = "Hydra 70 7x HE"; // [vanilla: Shrieker 7x HE - Rocket_04_HE_Plane_CAS_01_F]
-    }; 
+    };
     class PylonRack_7Rnd_Rocket_04_AP_F: 7Rnd_Rocket_04_AP_F {
         displayName = "Hydra 70 7x AP"; // [vanilla: Shrieker 7x AP - Rocket_04_AP_Plane_CAS_01_F]
     };
