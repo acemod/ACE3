@@ -530,11 +530,11 @@
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
-            <French>Retardateur (7 secondes)</French>
+            <French>Appliquer une mèche</French>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
-            <French>Enlever le retardateur</French>
+            <French>Retirer la mèche</French>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -554,11 +554,11 @@
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_DisplayName">
             <English>Allow Explosive Conversion</English>
-            <French>Permettre les retardateurs (charges lançables)</French>
+            <French>Autoriser les mèches (charges lançables)</French>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
-            <French>Cette option permet de rendre les charges explosives lançables, à la manière des grenades.\nPour celà, ouvrir l'inventaire et double-cliquer sur les charges, afin de leur appliquer un retardateur.\nLe retardateur peut se retirer en suivant la même procédure.</French>
+            <French>Cette option permet de rendre les charges explosives lançables, à la manière des grenades.\nPour celà, ouvrir l'inventaire et double-cliquer sur les charges, afin de leur appliquer une mèche.\nLa mèche peut se retirer en suivant la même procédure.</French>
         </Key>
     </Package>
 </Project>
