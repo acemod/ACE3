@@ -122,7 +122,6 @@ _for do {
     if (_right) then {
         _panel lnbSetText [[_i, 1], format ["%1%2", _value, _panel lnbText [_i, 1]]];
     } else {
-        private _text = _panel lbText _i;
         if !(_item isEqualTo "") then {
             _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
         };
