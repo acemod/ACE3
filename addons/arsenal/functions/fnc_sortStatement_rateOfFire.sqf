@@ -23,4 +23,5 @@ private _fireRate = [];
 
 _fireRate sort true;
 
+if (_fireRate == 0) exitWith {0};
 round (60 / (_fireRate param [0, 0]))
