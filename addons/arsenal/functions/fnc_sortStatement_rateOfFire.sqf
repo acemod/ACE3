@@ -25,4 +25,4 @@ _fireRate sort true;
 _fireRate = _fireRate param [0, 0];
 
 if (_fireRate == 0) exitWith {0};
-round (60 / (_fireRate))
+round (60 / _fireRate)
