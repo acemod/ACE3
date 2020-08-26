@@ -22,6 +22,7 @@ private _fireRate = [];
 } foreach _fireModes;
 
 _fireRate sort true;
+_fireRate = _fireRate param [0, 0];
 
 if (_fireRate == 0) exitWith {0};
-round (60 / (_fireRate param [0, 0]))
+round (60 / (_fireRate))
