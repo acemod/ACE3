@@ -60,9 +60,6 @@ private _sorts = if (_rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform
                 }
             )
         };
-        case ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsigna] find _idc > -1): {
-            []
-        };
         default {
             GVAR(sortListLeftPanel) select ([
                 IDC_buttonPrimaryWeapon,
@@ -79,7 +76,10 @@ private _sorts = if (_rightSort && {GVAR(currentLeftPanel) in [IDC_buttonUniform
                 IDC_buttonGPS,
                 IDC_buttonRadio,
                 IDC_buttonCompass,
-                IDC_buttonWatch
+                IDC_buttonWatch,
+                IDC_buttonFace,
+                IDC_buttonVoice,
+                IDC_buttonInsignia
             ] find _idc)
         };
     }

@@ -38,7 +38,10 @@ private _sortListLeftPanel = [
     [], // GPS 11
     [], // Radio 12
     [], // Compass 13
-    [] // Watch 14
+    [], // Watch 14
+    [], // Face 15
+    [], // Voice 16
+    []  // Insignia 17
 ];
 
 private _sortListRightPanel = [

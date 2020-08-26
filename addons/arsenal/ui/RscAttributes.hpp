@@ -753,7 +753,7 @@ class GVAR(display) {
                     y = QUOTE(170 * GRID_H);
                 };
                 class buttonInsigna: buttonPrimaryWeapon {
-                    idc = IDC_buttonInsigna;
+                    idc = IDC_buttonInsignia;
                     tooltip="$STR_A3_RscDisplayArsenal_tab_Insignia";
                     text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Insignia_ca.paa";
                     y = QUOTE(170 * GRID_H);
@@ -881,7 +881,7 @@ class GVAR(display) {
             tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
             y = QUOTE(safezoneY + 88 * GRID_H);
         };
-        
+
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
             text = QPATHTOF(data\iconClearContainer.paa);
