@@ -108,7 +108,7 @@ missionNamespace setVariable [
 private _for = if (_right) then {
     for '_i' from 0 to ((lnbSize _panel select 0) - 1)
 } else {
-    for '_i' from 1 to (lbSize _panel - 1)
+    for '_i' from 0 to (lbSize _panel - 1)
 };
 
 _for do {
@@ -128,7 +128,9 @@ _for do {
     if (_right) then {
         _panel lnbSetText [[_i, 1], format ["%1%2", _value, _panel lnbText [_i, 1]]];
     } else {
-        _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
+        if !(_item isEqualTo "") then {
+            _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
+        };
     };
 };
 
@@ -150,6 +152,9 @@ if (_right) then {
         if (_cursel >= 0) then {
             if (_data == _selected) then {_panel lbSetCurSel _i};
         };
-        _panel lbSetText [_i, getText (_cfgClass >> _data >> "displayName")];
+        private _name = getText (_cfgClass >> _data >> "displayName");
+        if !(_name isEqualTo "") then {
+            _panel lbSetText [_i, _name];
+        };
     };
 };
