@@ -162,7 +162,7 @@ switch true do {
                     ["CfgVoice", configName _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
                 } foreach _voices;
             };
-            case IDC_buttonInsigna : {
+            case IDC_buttonInsignia : {
                 {
                     ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
                 } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));

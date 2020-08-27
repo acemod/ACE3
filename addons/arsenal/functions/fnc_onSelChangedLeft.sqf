@@ -418,7 +418,7 @@ switch (GVAR(currentLeftPanel)) do {
         [_display, _control, _curSel, (configFile >> "CfgVoice" >> _item)] call FUNC(itemInfo);
     };
 
-    case IDC_buttonInsigna : {
+    case IDC_buttonInsignia : {
         [GVAR(center), _item] call bis_fnc_setUnitInsignia;
         GVAR(currentInsignia) = _item;
 
