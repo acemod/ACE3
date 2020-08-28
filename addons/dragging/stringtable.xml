@@ -29,7 +29,7 @@
             <Portuguese>Soltar</Portuguese>
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
-            <Japanese>はなす</Japanese>
+            <Japanese>離す</Japanese>
             <Korean>놓기</Korean>
             <Chinese>放開</Chinese>
             <Chinesesimp>放开</Chinesesimp>
@@ -46,7 +46,7 @@
             <Portuguese>Arrastar/Soltar Objeto</Portuguese>
             <Italian>Trascina/Lascia Oggetto</Italian>
             <Hungarian>Húzás/Elengedés Objektum</Hungarian>
-            <Japanese>オブジェクトを引きずる/はなす</Japanese>
+            <Japanese>オブジェクトを引きずる/離す</Japanese>
             <Korean>물건 끌기/놓기</Korean>
             <Chinese>拖拉/放開物品</Chinese>
             <Chinesesimp>拖拉/放开物品</Chinesesimp>
@@ -57,6 +57,7 @@
             <French>Porter/Lâcher un objet</French>
             <Russian>Нести/Отпустить Объект</Russian>
             <Polish>Nieś/Puść objekt</Polish>
+            <Japanese>オブジェクトを運ぶ/離す</Japanese>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>

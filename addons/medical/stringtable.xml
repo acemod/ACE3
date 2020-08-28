@@ -186,6 +186,7 @@
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoJog">
             <English>Splints Heal, but Cannot Jog</English>
             <French>Les attelles guérissent les fractures, mais empêchent de courir</French>
+            <Japanese>添え木で治癒可能、駆け足できないように</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
