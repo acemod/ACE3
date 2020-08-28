@@ -6,6 +6,7 @@
             <Polish>ACE Przeciążenia</Polish>
             <French>ACE Force gravitationnelle</French>
             <Russian>ACE Перегрузки</Russian>
+            <Japanese>ACE G フォース</Japanese>
         </Key>
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
@@ -58,12 +59,14 @@
             <Polish>Współczynnk przeciążenia</Polish>
             <French>Coefficient de force gravitationnelle</French>
             <Russian>Коэффициент перегрузки</Russian>
+            <Japanese>G 効果係数</Japanese>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_Description">
             <English>Controls strength of G-Force affecting players.</English>
             <Polish>Wpływa na siłe przeciążeń oddziałujących na graczy</Polish>
             <French>Coefficient permettant d'ajuster le niveau de force gravitationnelle affectant les joueurs.</French>
             <Russian>Определяет силу перегрузок, влияющих на игроков.</Russian>
+            <Japanese>G 効果がプレイヤーに与える影響量を設定できます。</Japanese>
         </Key>
     </Package>
 </Project>

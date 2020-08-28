@@ -70,18 +70,21 @@
             <Polish>Wymień broń w torbie</Polish>
             <Russian>Заменить оружие в чехле</Russian>
             <French>Échanger les armes</French>
+            <Japanese>ガンバッグ内の武器を交換</Japanese>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_DisplayName">
             <English>Enable Weapon Swap</English>
             <Polish>Aktywuj wymianę broni</Polish>
             <Russian>Включить обмен оружием</Russian>
             <French>Activer l'échange d'arme</French>
+            <Japanese>武器交換を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Gunbag_SwapGunbagEnabled_Description">
             <English>Allows interaction to directly swap the primary weapon and stored weapon.</English>
             <Polish>Pozwala na interakcje do wymiany broni głównej na bron schowaną.</Polish>
             <Russian>Разрешает действие прямого обмена основного оружия и спрятанного в чехле.</Russian>
             <French>Active le menu d'interaction personnelle permettant d'échanger directement l'arme primaire et l'arme rangée dans la housse.</French>
+            <Japanese>持っている武器とガンバッグ内の武器を交換できるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
@@ -121,7 +124,7 @@
             <French>Housse d'arme vide</French>
             <Russian>Чехол пуст</Russian>
             <Czech>Prázdné pouzdro na zbraň</Czech>
-            <Japanese>ガンバッグは空</Japanese>
+            <Japanese>ガンバッグは空です</Japanese>
             <Polish>Torba jest pusta</Polish>
             <Korean>총가방 비어있음</Korean>
             <Italian>Borsa per armi vuota</Italian>

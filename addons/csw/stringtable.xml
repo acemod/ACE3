@@ -408,6 +408,7 @@
             <French>[CSW] Mitrailleuse statique M2 ac. bouclier</French>
             <Polish>[CSW] Statyczny karabin maszynowy M2 z tarczą</Polish>
             <Russian>[CSW] Станковый M2 со щитом</Russian>
+            <Japanese>[CSW] 設置型 防盾付き M2</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>

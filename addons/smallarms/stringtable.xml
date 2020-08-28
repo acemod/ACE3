@@ -25,6 +25,7 @@
             <German>25-Schuss-.45-ACP-Magazin</German>
             <Czech>.45 ACP, 25ks zásobník</Czech>
             <Turkish>.45 ACP 25 Merm. Şarjör</Turkish>
+            <Japanese>.45 ACP 25Rnd マガジン</Japanese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Green_Name">
             <English>.45 ACP 25Rnd Tracers (Green) Mag</English>
@@ -34,6 +35,7 @@
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Leuchtspur Grün)</German>
             <Czech>.45 ACP, 25ks zásobník stopovky (zelené)</Czech>
             <Turkish>.45 ACP 25 Merm. İzli (Yeşil) Şarjör</Turkish>
+            <Japanese>.45 ACP 25Rnd 曳光弾 (緑) マガジン</Japanese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Red_Name">
             <English>.45 ACP 25Rnd Tracers (Red) Mag</English>
@@ -43,6 +45,7 @@
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Leuchtspur Rot)</German>
             <Czech>.45 ACP, 25ks zásobník stopovky (červené)</Czech>
             <Turkish>.45 ACP 25 Merm. İzli (Kırmızı) Şarjör</Turkish>
+            <Japanese>.45 ACP 25Rnd 曳光弾 (赤) マガジン</Japanese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Yellow_Name">
             <English>.45 ACP 25Rnd Tracers (Yellow) Mag</English>
@@ -52,6 +55,7 @@
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Nachlade-Leuchtspur Gelb)</German>
             <Czech>.45 ACP, 25ks zásobník stopovky (žluté)</Czech>
             <Turkish>.45 ACP 25 Merm. İzli (Sarı) Şarjör</Turkish>
+            <Japanese>.45 ACP 25Rnd 曳光弾 (黄) マガジン</Japanese>
         </Key>
         <Key ID="STR_ACE_SmallArms_8Rnd_45_Name">
             <English>.45 ACP 8Rnd Mag</English>
@@ -61,6 +65,7 @@
             <German>8-Schuss-.45-ACP-Magazin</German>
             <Czech>.45 ACP, 8ks zásobník</Czech>
             <Turkish>.45 ACP 8 Merm. Şarjör</Turkish>
+            <Japanese>.45 ACP 8Rnd マガジン</Japanese>
         </Key>
     </Package>
 </Project>
