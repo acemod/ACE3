@@ -56,9 +56,12 @@ if (_rightSort) then {
     [
         _display displayCtrl IDC_leftTabContent,
         switch (GVAR(currentLeftPanel)) do {
-            case IDC_buttonBackpack: { "CfgVehicles" };
-            case IDC_buttonGoggles: { "CfgGlasses" };
-            default { "CfgWeapons" };
+            case IDC_buttonBackpack: { configFile >> "CfgVehicles" };
+            case IDC_buttonGoggles: { configFile >> "CfgGlasses" };
+            case IDC_buttonFace: { configFile >> "CfgFaces" >> "Man_A3" };
+            case IDC_buttonVoice: { configFile >> "CfgVoice" };
+            case IDC_buttonInsignia: { configFile >> "CfgUnitInsignia" };
+            default { configFile >> "CfgWeapons" };
         },
         (GVAR(sortListLeftPanel) select ([
             IDC_buttonPrimaryWeapon,
@@ -75,7 +78,10 @@ if (_rightSort) then {
             IDC_buttonGPS,
             IDC_buttonRadio,
             IDC_buttonCompass,
-            IDC_buttonWatch
+            IDC_buttonWatch,
+            IDC_buttonFace,
+            IDC_buttonVoice,
+            IDC_buttonInsignia
         ] find GVAR(currentLeftPanel)))
     ]
 } params ["_panel", "_cfgClass", "_sorts"];
@@ -102,7 +108,7 @@ missionNamespace setVariable [
 private _for = if (_right) then {
     for '_i' from 0 to ((lnbSize _panel select 0) - 1)
 } else {
-    for '_i' from 1 to (lbSize _panel - 1)
+    for '_i' from 0 to (lbSize _panel - 1)
 };
 
 _for do {
@@ -111,7 +117,7 @@ _for do {
     } else {
         _panel lbData _i
     };
-    private _itemCfg = configFile >> _cfgClass >> _item;
+    private _itemCfg = _cfgClass >> _item;
     private _value = _itemCfg call _statement;
     if (_value isEqualType 0) then {
         _value = [_value, 8] call CBA_fnc_formatNumber;
@@ -122,7 +128,9 @@ _for do {
     if (_right) then {
         _panel lnbSetText [[_i, 1], format ["%1%2", _value, _panel lnbText [_i, 1]]];
     } else {
-        _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
+        if !(_item isEqualTo "") then {
+            _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
+        };
     };
 };
 
@@ -134,7 +142,7 @@ if (_right) then {
         if (_cursel >= 0) then {
             if (_data == _selected) then {_panel lnbSetCurSelRow _i};
         };
-        _panel lnbSetText [[_i, 1], getText (configFile >> _cfgClass >> _data >> "displayName")];
+        _panel lnbSetText [[_i, 1], getText (_cfgClass >> _data >> "displayName")];
     };
 } else {
     lbSort [_panel, "ASC"];
@@ -144,6 +152,9 @@ if (_right) then {
         if (_cursel >= 0) then {
             if (_data == _selected) then {_panel lbSetCurSel _i};
         };
-        _panel lbSetText [_i, getText (configFile >> _cfgClass >> _data >> "displayName")];
+        private _name = getText (_cfgClass >> _data >> "displayName");
+        if !(_name isEqualTo "") then {
+            _panel lbSetText [_i, _name];
+        };
     };
 };

@@ -115,6 +115,7 @@
             <Czech>Koeficient opětovného otevření rány</Czech>
             <Russian>Коэффициент повторного открытия раны</Russian>
             <Polish>Współczynnik ponownego otwierania ran</Polish>
+            <Japanese>再開放係数</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_Description">
             <English>Coefficient for controlling the wound reopening chance. The final reopening chance is determined by multiplying this value with the specific reopening chance for the wound type and bandage used.</English>
@@ -123,6 +124,7 @@
             <Czech>Koeficient pro řízení šance na opětovné otevření rány. Konečná šance na opětovné otevření se stanoví vynásobením této hodnoty specifickou šancí na opětovné otevření pro použitý typ rány a obvaz.</Czech>
             <Russian>Коэффициент контроля вероятности повторного открытия раны. Окончательный шанс повторного открытия определяется путем умножения этого значения на определенный шанс повторного открытия для используемого типа раны и повязки.</Russian>
             <Polish>Współczynnik kontroluje szanse na ponowne otworzenie rany. Końcowa szansa na otworzenie jest ustalana przez pomnożenie tej wartości z wartością szansy na otworzenie rany dla typu rany oraz typu bandaża.</Polish>
+            <Japanese>傷が再開放する確率の係数を設定できます。再開放は、この数値と傷の種類、そして使用した包帯に応じて左右されます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>

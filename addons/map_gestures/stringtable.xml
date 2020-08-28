@@ -270,47 +270,58 @@
             <Russian>Показывать только союзные жесты</Russian>
             <Polish>Pokazuj jedynie sojusznicze gesty</Polish>
             <French>Afficher uniquement le pointage des alliés</French>
+            <Japanese>友軍ジェスチャーのみ表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_description">
             <English>Shows only Gestures from Units that are from the same side or a Friendly side.</English>
             <Russian>Показывать жесты только от игроков союзной стороны.</Russian>
             <French>Affiche uniquement les pointages effectués par des unités qui sont du même camp, ou d'un camp allié.</French>
+            <Japanese>友軍ユニットのみからジェスチャーを表示します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_displayName">
             <English>Max range Camera</English>
             <French>Portée de la caméra</French>
+            <Japanese>カメラ最大範囲</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_description">
             <English>Max range between a Camera and players to show the map gesture indicator</English>
             <French>Définit le rayon au-delà duquel une caméra ne verra plus l'indicateur de pointage des autres joueurs.</French>
+            <Japanese>プレイヤーが行うマップ ジェスチャーをカメラから確認できる最大範囲を設定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_displayName">
             <English>Allow Spectator</English>
             <French>Autoriser les spectateurs</French>
+            <Japanese>スペクテイターに許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_description">
             <English>Allows Spectator to See Map Gestures</English>
             <French>Permet aux spectateurs de voir le pointage des autres joueurs.</French>
+            <Japanese>スペクテイターからマップ ジェスチャーを表示できるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_displayName">
             <English>Allow Curator</English>
             <French>Autoriser les curateurs</French>
+            <Japanese>キュレーターに許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_description">
             <English>Allows Curator to See Map Gestures</English>
             <French>Permet aux curateurs de voir le pointage des autres joueurs.</French>
+            <Japanese>キュレーターからマップ ジェスチャーを表示できるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_displayName">
             <English>Briefing Mode</English>
             <French>Visibilité lors du briefing</French>
+            <Japanese>ブリーフィング モード</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_description">
             <English>What player can see what</English>
             <French>Définit quels pointages les joueurs peuvent voir lors du briefing.</French>
+            <Japanese>プレイヤーが見ることができる対象を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Disabled">
             <English>Disabled</English>
             <French>Pointage désactivé</French>
+            <Japanese>無効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Group">
             <English>Group</English>
@@ -322,6 +333,7 @@
             <Portuguese>Grupo</Portuguese>
             <Russian>Группа</Russian>
             <Spanish>Grupo</Spanish>
+            <Japanese>グループ</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Side">
             <English>Side</English>
@@ -333,10 +345,12 @@
             <Portuguese>Lado</Portuguese>
             <Russian>Сторона</Russian>
             <Spanish>Bando</Spanish>
+            <Japanese>陣営</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Proximity">
             <English>Proximity</English>
             <French>Proximité</French>
+            <Japanese>付近のみ</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_All">
             <English>All</English>
@@ -348,6 +362,7 @@
             <Portuguese>Tudo</Portuguese>
             <Russian>Все</Russian>
             <Spanish>Todas</Spanish>
+            <Japanese>全て</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_moduleGroupSettings_displayName">
             <English>Map Gestures - Group Settings</English>
@@ -390,6 +405,7 @@
             <Portuguese>Cores</Portuguese>
             <Russian>Цвета</Russian>
             <Spanish>Colores</Spanish>
+            <Japanese>色</Japanese>
         </Key>
     </Package>
 </Project>

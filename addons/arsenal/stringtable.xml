@@ -384,26 +384,31 @@
             <English>Sort by load</English>
             <German>Nach Tragelast sortieren</German>
             <French>Trier par capacité de chargement</French>
+            <Japanese>容量で並び替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
             <English>Sort by accuracy</English>
             <German>Nach Genauigkeit sortieren</German>
             <French>Trier par précision</French>
+            <Japanese>精度で並び替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
             <English>Sort by rate of fire</English>
             <German>Nach Schussrate sortieren</German>
             <French>Trier par cadence de tir</French>
+            <Japanese>連射速度で並び替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
             <German>Nach Vergrößerung sortieren</German>
             <French>Trier par grossissement</French>
+            <Japanese>倍率で並び替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagCountText">
             <English>Sort by ammo count</English>
             <German>Nach Munitionszahl sortieren</German>
             <French>Trier par nombre de munitions</French>
+            <Japanese>装弾数で並び替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -866,7 +871,7 @@
             <Spanish>Cambiar el tamaño de fuente para el texto de los paneles izquierdo y derecho</Spanish>
             <French>Change la taille de police des panneaux latéraux.</French>
             <Polish>Zmień wysokość czcionki dla tekstu lewego i prawego panelu</Polish>
-            <Japanese>右か左パネルにあるフォントの高さを変更します。</Japanese>
+            <Japanese>パネルにあるフォントの高さを変更します。</Japanese>
             <Italian>Cambia l'altezza del font per il testo sul pannello sinistro / destro</Italian>
             <Korean>왼쪽 / 오른쪽 패널 텍스트의 글꼴 높이 변경</Korean>
             <German>Ändert die Schriftgröße für die linke/rechte Leiste</German>
@@ -1349,6 +1354,7 @@
             <French>Retard avant détonation</French>
             <Russian>Задержка детонации</Russian>
             <Polish>Opoźnienie zapalnika</Polish>
+            <Japanese>信管設定時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
@@ -1356,6 +1362,7 @@
             <French>Détonation à l'impact</French>
             <Russian>Детонация от удара</Russian>
             <Polish>Detonuj przy uderzeniu</Polish>
+            <Japanese>着発信管</Japanese>
         </Key>
     </Package>
 </Project>

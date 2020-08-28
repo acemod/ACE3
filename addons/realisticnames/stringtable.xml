@@ -1326,6 +1326,7 @@
         <Key ID="STR_ACE_RealisticNames_SatchelChargeThrowable_Name">
             <English>M183 Demolition Charge (Throwable)</English>
             <French>M183 Charge de démolition (lançable)</French>
+            <Japanese>M183 梱包爆薬 (投てき仕様)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1347,6 +1348,7 @@
         <Key ID="STR_ACE_RealisticNames_DemoChargeThrowable_Name">
             <English>M112 Demolition Charge (Throwable)</English>
             <French>M112 Bloc de démolition (lançable)</French>
+            <Japanese>M112 爆薬ブロック (投てき仕様)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -2505,7 +2507,7 @@
             <Italian>SIG 556 (Khaki)</Italian>
             <Hungarian>SIG 556 (Khaki)</Hungarian>
             <Portuguese>SIG 556 (Caqui)</Portuguese>
-            <Japanese>SIG 556 (土埃)</Japanese>
+            <Japanese>SIG 556 (カーキ)</Japanese>
             <Korean>SIG 556 (카키)</Korean>
             <Chinese>SIG 556精準步槍 (卡其色)</Chinese>
             <Chinesesimp>SIG 556精准步枪 (卡其色)</Chinesesimp>
@@ -2522,7 +2524,7 @@
             <Italian>SIG 556 (Sabbia)</Italian>
             <Hungarian>SIG 556 (Homok)</Hungarian>
             <Portuguese>SIG 556 (Deserto)</Portuguese>
-            <Japanese>SIG 556 (砂地)</Japanese>
+            <Japanese>SIG 556 (サンド)</Japanese>
             <Korean>SIG 556 (모래)</Korean>
             <Chinese>SIG 556精準步槍 (沙色)</Chinese>
             <Chinesesimp>SIG 556精准步枪 (沙色)</Chinesesimp>
@@ -2573,7 +2575,7 @@
             <Polish>ASP-1 Kir</Polish>
             <Hungarian>ASP-1 Kir</Hungarian>
             <Portuguese>ASP-1 Kir</Portuguese>
-            <Japanese>ASP-1 Kir</Japanese>
+            <Japanese>ASP-1 キール</Japanese>
             <Korean>ASP-1 キール</Korean>
             <Chinese>ASP-1"基爾"消音狙擊步槍</Chinese>
             <Chinesesimp>ASP-1"基尔"消音狙击步枪</Chinesesimp>
@@ -2607,7 +2609,7 @@
             <Italian>ASP-1 Kir (Tan)</Italian>
             <Hungarian>ASP-1 Kir (Cserszín)</Hungarian>
             <Portuguese>ASP-1 Kir (Deserto)</Portuguese>
-            <Japanese>ASP-1 キール (黄褐)</Japanese>
+            <Japanese>ASP-1 キール (タン)</Japanese>
             <Korean>ASP-1 Kir (황갈)</Korean>
             <Chinese>ASP-1"基爾"消音狙擊步槍 (黃褐色)</Chinese>
             <Chinesesimp>ASP-1"基尔"消音狙击步枪 (黄褐色)</Chinesesimp>
@@ -2760,7 +2762,7 @@
             <Italian>HK121 (Hex)</Italian>
             <Hungarian>HK121 (Hex)</Hungarian>
             <Portuguese>HK121 (Hex)</Portuguese>
-            <Japanese>HK 121 (蜂巣)</Japanese>
+            <Japanese>HK 121 (ヘックス)</Japanese>
             <Korean>HK121 (육각)</Korean>
             <Chinese>HK121中型機槍 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>HK121中型机枪 (数位蜂巢迷彩)</Chinesesimp>
@@ -2777,7 +2779,7 @@
             <Italian>HK121 (Tan)</Italian>
             <Hungarian>HK121 (Cserszín)</Hungarian>
             <Portuguese>HK121 (Deserto)</Portuguese>
-            <Japanese>HK 121 (黄褐)</Japanese>
+            <Japanese>HK 121 (タン)</Japanese>
             <Korean>HK121 (황갈)</Korean>
             <Chinese>HK121機槍 (黃褐色)</Chinese>
             <Chinesesimp>HK121机枪 (黄褐色)</Chinesesimp>
@@ -2845,7 +2847,7 @@
             <Italian>LWMMG (Sabbia)</Italian>
             <Hungarian>LWMMG (Homok)</Hungarian>
             <Portuguese>LWMMG (Deserto)</Portuguese>
-            <Japanese>LWMMG (砂地)</Japanese>
+            <Japanese>LWMMG (サンド)</Japanese>
             <Korean>LWMMG (모래)</Korean>
             <Chinese>輕量化中型機槍 (沙色)</Chinese>
             <Chinesesimp>轻量化中型机枪 (沙色)</Chinesesimp>
@@ -3060,7 +3062,7 @@
             <Italian>QBZ-95-1 LSW (Nero)</Italian>
             <Hungarian>QBZ-95-1 LSW (Fekete)</Hungarian>
             <Portuguese>QBZ-95-1 LSW (Preto)</Portuguese>
-            <Japanese>QBZ-95-1 LSW (黒)</Japanese>
+            <Japanese>QBZ-95-1 LSW (ブラック)</Japanese>
             <Korean>QBZ-95-1 LSW (검정)</Korean>
             <Chinese>QBZ-95-1式輕機槍 (黑色)</Chinese>
             <Chinesesimp>QBZ-95-1式轻机枪 (黑色)</Chinesesimp>
@@ -3332,7 +3334,7 @@
             <Italian>HK416A5 14.5" (Nero)</Italian>
             <Hungarian>HK416A5 14.5" (Fekete)</Hungarian>
             <Portuguese>HK416A5 14.5" (Preto)</Portuguese>
-            <Japanese>HK416A5 14.5" (黒)</Japanese>
+            <Japanese>HK416A5 14.5" (ブラック)</Japanese>
             <Korean>HK416A5 14.5" (검정)</Korean>
             <Chinese>HK416A5 14.5"突擊步槍 (黑色)</Chinese>
             <Chinesesimp>HK416A5 14.5"突击步枪 (黑色)</Chinesesimp>
@@ -4916,7 +4918,7 @@
             <Portuguese>MSBS Grot MR (Preto)</Portuguese>
             <Korean>MSBS Grot MR (검정)</Korean>
             <Chinesesimp>MSBS Grot MR(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot MR(ブラック)</Japanese>
+            <Japanese>MSBS Grot MR (ブラック)</Japanese>
             <Turkish>MSBS Grot MR (Siyah)</Turkish>
             <Hungarian>MSBS Grot MR (Fekete)</Hungarian>
         </Key>
