@@ -33,8 +33,8 @@ if (_rightSort) then {
             case IDC_buttonThrow;
             case IDC_buttonPut;
             case IDC_buttonMag;
-            case IDC_buttonMagALL: { "CfgMagazines" };
-            default { "CfgWeapons" };
+            case IDC_buttonMagALL: { configFile >> "CfgMagazines" };
+            default { configFile >> "CfgWeapons" };
         },
         GVAR(sortListRightPanel) select (
             switch (GVAR(currentRightPanel)) do {
