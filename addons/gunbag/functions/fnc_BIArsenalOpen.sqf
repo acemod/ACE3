@@ -15,11 +15,6 @@
  * Public: No
  */
 
-systemChat "EH Fired!";
-
 if ([player] call FUNC(hasGunBag)) then {
-    systemChat "Has Gunbag";
     GVAR(arsenalCache) = (backpackContainer player) getVariable [QGVAR(gunbagWeapon), []];
 };
-
-systemChat str GVAR(arsenalCache);

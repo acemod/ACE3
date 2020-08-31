@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mjc4wilton
- * Handle BI arsenal opening
+ * Handle BI arsenal closing
  *
  * Arguments:
  * None
@@ -10,12 +10,10 @@
  * None
  *
  * Example:
- * [] call ace_gunbag_fnc_BIArsenalOpen
+ * [] call ace_gunbag_fnc_BIArsenalClose
  *
  * Public: No
  */
-
-if (is3DEN) exitWith {};
 
 if (!isNil QGVAR(arsenalCache)) then {
     (backpackContainer player) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
