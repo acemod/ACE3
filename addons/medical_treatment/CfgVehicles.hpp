@@ -267,6 +267,8 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_bloodIV,15);
             MACRO_ADDITEM(ACE_bloodIV_500,15);
             MACRO_ADDITEM(ACE_bloodIV_250,15);
+            MACRO_ADDITEM(ACE_tourniquet,10);
+            MACRO_ADDITEM(ACE_splint,10);
             MACRO_ADDITEM(ACE_bodyBag,10);
         };
         class AnimationSources {
