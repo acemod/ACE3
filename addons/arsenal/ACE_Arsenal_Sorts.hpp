@@ -4,6 +4,7 @@ class GVAR(sorts) {
         displayName = "";
         tabs[] = {{}, {}};
         statement = "";
+        condition = "true";
     };
 
     class ACE_alphabetically: sortBase {
@@ -25,6 +26,14 @@ class GVAR(sorts) {
         displayName = CSTRING(sortByWeightText);
         tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}, {0,1,2,3,4,5,6,7}};
         statement = QUOTE(_this call FUNC(sortStatement_mass));
+    };
+
+    class ACE_amount: sortBase {
+        scope = 2;
+        displayName = CSTRING(sortByAmountText);
+        tabs[] = {{}, {0,1,2,3,4,5,6,7}};
+        statement = QUOTE(_this call FUNC(sortStatement_amount));
+        condition = QUOTE(_this select 0); // Only show for containers
     };
 
     class ACE_load: sortBase {
