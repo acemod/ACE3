@@ -29,7 +29,7 @@ GVAR(trackedLaserTargets) = GVAR(trackedLaserTargets) select {
         TRACE_1("Laser off:", _laserUuid);
         false
     } else {
-        private _newCode = _owner getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+        private _newCode = _owner getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
         if (_laserCode != _newCode) then {
             TRACE_2("code change",_newCode,_laserCode);
             [QGVAR(updateCode), [_laserUuid, _newCode]] call CBA_fnc_globalEvent;

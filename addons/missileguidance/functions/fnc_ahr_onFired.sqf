@@ -24,6 +24,10 @@ _target = missileTarget _projectile;
 if (isNull _target && isVehicleRadarOn vehicle _shooter) then {
     _target = cursorTarget;
 };
+private _isRemoteTarget = ((listRemoteTargets side _shooter) findIf {_x#0 == cursorTarget}) != -1;
+if (isNull _target && _isRemoteTarget) then {
+    _target = cursorTarget;
+};
 if !(_target isKindOf "AllVehicles") then {
     _target = nil;
 };
@@ -56,7 +60,7 @@ private _shooterHasActiveRadar = {
     false
 } forEach listVehicleSensors vehicle _shooter;
 
-if !(isVehicleRadarOn vehicle _shooter) then {
+if (!(isVehicleRadarOn vehicle _shooter) && !_isRemoteTarget) then {
     _isActive = true;
 };
 

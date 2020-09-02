@@ -43,13 +43,13 @@ private _config = configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON);
 private _target = _shooter getVariable [QGVAR(target), nil];
 private _targetPos = _shooter getVariable [QGVAR(targetPosition), nil];
 private _seekerType = _shooter getVariable [QGVAR(seekerType), nil];
-private _attackProfile = _shooter getVariable [QGVAR(attackProfile), nil];
+private _attackProfile = (vehicle _shooter) getVariable [QGVAR(attackProfile), nil];
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "useModeForAttackProfile")) == 1) then {
     _attackProfile = getText (configFile >> "CfgWeapons" >> _weapon >> _mode >> QGVAR(attackProfile))
 };
-private _lockMode = _shooter getVariable [QGVAR(lockMode), nil];
 
-private _laserCode = _shooter getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+private _lockMode = _shooter getVariable [QGVAR(lockMode), nil];
+private _laserCode = (vehicle _shooter) getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
 private _laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
 
 TRACE_6("getVars",_target,_targetPos,_seekerType,_attackProfile,_lockMode,_laserCode);
