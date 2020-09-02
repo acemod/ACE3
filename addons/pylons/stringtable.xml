@@ -105,7 +105,7 @@
             <Japanese>パイロン%1を作業し残り%2・・・</Japanese>
             <Italian>Sostituendo pilone %1 al posto di %2...</Italian>
             <Chinese>共有%2個派龍架，正在整補%1號派龍架中...</Chinese>
-            <Chinesesimp>共有%2个发射架，正在整装%1号挂架中...</Chinesesimp>
+            <Chinesesimp>共有%2个发射架，正在整装%1号挂架...</Chinesesimp>
             <Korean>교체중 (%2 -&gt; %1)</Korean>
             <German>Ersetze Außenlaststation %1 von insgesamt %2</German>
             <French>Remplacement du pylône %1 sur %2...</French>
@@ -119,7 +119,7 @@
             <Japanese>パイロン%1で停止しました!</Japanese>
             <Italian>Fermato al pilone %1!</Italian>
             <Chinese>已停止在%1號派龍架!</Chinese>
-            <Chinesesimp>已停止在%1号挂架!</Chinesesimp>
+            <Chinesesimp>已在整装%1号挂架时停止!</Chinesesimp>
             <Korean>%1 파일런이 멈춤</Korean>
             <German>Gestoppt bei Außenlaststation %1</German>
             <French>Arrêté au pylône %1 !</French>

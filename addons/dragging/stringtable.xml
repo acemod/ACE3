@@ -29,7 +29,7 @@
             <Portuguese>Soltar</Portuguese>
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
-            <Japanese>はなす</Japanese>
+            <Japanese>離す</Japanese>
             <Korean>놓기</Korean>
             <Chinese>放開</Chinese>
             <Chinesesimp>放开</Chinesesimp>
@@ -37,7 +37,7 @@
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
-            <Russian>Тащить/Отпустить Объекты</Russian>
+            <Russian>Тащить/Отпустить Объект</Russian>
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
             <Polish>Ciągnij/Puść Obiekt</Polish>
             <Czech>Táhnout/Položit Objekt</Czech>
@@ -46,11 +46,18 @@
             <Portuguese>Arrastar/Soltar Objeto</Portuguese>
             <Italian>Trascina/Lascia Oggetto</Italian>
             <Hungarian>Húzás/Elengedés Objektum</Hungarian>
-            <Japanese>オブジェクトを引きずる/はなす</Japanese>
+            <Japanese>オブジェクトを引きずる/離す</Japanese>
             <Korean>물건 끌기/놓기</Korean>
             <Chinese>拖拉/放開物品</Chinese>
             <Chinesesimp>拖拉/放开物品</Chinesesimp>
             <Turkish>Objeyi Sürükle/Bırak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Dragging_CarryKeybind">
+            <English>Carry/Release Object</English>
+            <French>Porter/Lâcher un objet</French>
+            <Russian>Нести/Отпустить Объект</Russian>
+            <Polish>Nieś/Puść objekt</Polish>
+            <Japanese>オブジェクトを運ぶ/離す</Japanese>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -91,6 +98,9 @@
             <German>Heben/Senken | (Strg + Scrollen) Drehen</German>
             <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
             <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
+            <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
+            <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
+            <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
         </Key>
     </Package>
 </Project>

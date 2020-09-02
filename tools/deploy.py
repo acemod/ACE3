@@ -4,7 +4,7 @@
 # ACE3 automatic deployment script #
 # ================================ #
 # This is not meant to be run      #
-# directly!                        #
+# directly!!                       #
 ####################################
 
 import os

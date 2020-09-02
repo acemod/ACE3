@@ -45,7 +45,7 @@
             <Russian>Попытка переключения</Russian>
             <Japanese>切り替えを試す</Japanese>
             <Korean>전환 시도중</Korean>
-            <Chinesesimp>尝试切换中</Chinesesimp>
+            <Chinesesimp>正在尝试切换</Chinesesimp>
             <Chinese>嘗試切換中</Chinese>
             <Turkish>Birlik değiştirilme deneniyor</Turkish>
         </Key>
@@ -74,6 +74,7 @@
             <Polish>Włącz zmiane strony</Polish>
             <Portuguese>Habilita troca de time</Portuguese>
             <Japanese>陣営切り替えを有効化</Japanese>
+            <Russian>Включить смену стороны</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>

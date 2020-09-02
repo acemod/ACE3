@@ -23,8 +23,8 @@ PROJECT_NAME = "ACE"
 def check_stringtable(filepath):
     try:
         tree = ET.parse(filepath)
-    except:
-        print("  ERROR: Failed to parse file.")
+    except Exception as e:
+        print("  ERROR: Failed to parse file. {}".format(e))
         return 1
 
     errors = 0
@@ -129,7 +129,7 @@ def check_stringtable(filepath):
            if line_clean.startswith("</key") or line_clean.startswith("</package") or line_clean.startswith("</project") or line_clean.startswith("</container"):
                spacing_depth -= 4
 
-           line_spacing = len(line) - len(line_clean)
+           line_spacing = len(line.lower()) - len(line_clean)
 
            if line_spacing != spacing_depth:
                print("  ERROR: Incorrect number of indenting spaces on line {}, currently {}, should be {}.".format(line_number, line_spacing, spacing_depth))
@@ -162,13 +162,11 @@ def main():
     bad_count = 0
 
     for filepath in stringtable_files:
-        print("\nChecking {}:".format(os.path.relpath(filepath, root_dir)))
+        print("Checking {}:".format(os.path.relpath(filepath, root_dir)))
 
         errors = check_stringtable(filepath)
 
-        if errors == 0:
-            print("No errors found.")
-        else:
+        if errors != 0:
             print("Found {} error(s).".format(errors))
             bad_count += 1
 

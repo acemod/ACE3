@@ -86,7 +86,7 @@
             <Russian>Перепаковка магазинов...</Russian>
             <Japanese>弾倉を詰め替えしています・・・</Japanese>
             <Korean>다시 채우는중...</Korean>
-            <Chinesesimp>重新整理弹匣中 ...</Chinesesimp>
+            <Chinesesimp>正在整理弹匣 ...</Chinesesimp>
             <Chinese>重新整理彈匣中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesDetail">
@@ -134,7 +134,7 @@
             <Portuguese>Reorganização Interrompida</Portuguese>
             <Japanese>詰め替えを中断しました</Japanese>
             <Korean>탄창 채우기 방해받음</Korean>
-            <Chinesesimp>重整被中断</Chinesesimp>
+            <Chinesesimp>弹匣整理被打断</Chinesesimp>
             <Chinese>重整被中斷</Chinese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">

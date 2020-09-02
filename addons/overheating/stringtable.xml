@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Overheating_DisplayName">
             <English>Overheating</English>
             <German>Heißlaufen</German>
+            <Spanish>Sobrecalentamiento</Spanish>
             <Italian>Surriscaldamento</Italian>
             <Chinese>過熱</Chinese>
             <Chinesesimp>过热</Chinesesimp>
@@ -331,7 +332,7 @@
             <Italian>Sostituendo la canna...</Italian>
             <Japanese>銃身を交換しています・・・</Japanese>
             <Korean>총열 교체중...</Korean>
-            <Chinesesimp>换枪管中...</Chinesesimp>
+            <Chinesesimp>正在更换枪管...</Chinesesimp>
             <Chinese>換槍管中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_SwappedBarrel">
@@ -395,11 +396,12 @@
             <Russian>Проверка температуры...</Russian>
             <Japanese>温度を測っています・・・</Japanese>
             <Korean>무기 온도 확인중...</Korean>
-            <Chinesesimp>检查枪管温度中...</Chinesesimp>
+            <Chinesesimp>正在检查枪管温度...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
             <English>Check spare barrels temperatures</English>
+            <Spanish>Comprobar temperatura de los cañones de repuesto</Spanish>
             <Portuguese>Verifica temperatura de canos reservas</Portuguese>
             <French>Vérifier la température des canons de rechange</French>
             <Russian>Проверить температуру запасных стволов</Russian>
@@ -414,6 +416,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
+            <Spanish>Comprobando temperatura de los cañones de repuesto</Spanish>
             <Portuguese>Verificando temperatura de canos reservas</Portuguese>
             <French>Vérification de la température des canons de rechange...</French>
             <Russian>Проверка температуры запасных стволов...</Russian>
@@ -423,7 +426,7 @@
             <German>Prüfe Temperatur der Wechselläufe ...</German>
             <Korean>총열 온도 확인중...</Korean>
             <Italian>Controllando la temperatura della canna di ricambio...</Italian>
-            <Chinesesimp>检查枪管温度中...</Chinesesimp>
+            <Chinesesimp>正在检查枪管温度...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
@@ -444,6 +447,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelCool">
             <English>Cool Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto frio/s</Spanish>
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
             <French>Canon(s) de rechange froid(s).</French>
             <Russian>Прохладные</Russian>
@@ -458,6 +462,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto templado/s</Spanish>
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
             <French>Canon(s) de rechange tiède(s).</French>
             <Russian>Теплые</Russian>
@@ -472,6 +477,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto caliente/s</Spanish>
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
             <French>Canon(s) de rechange chaud(s).</French>
             <Russian>Горячие</Russian>
@@ -486,6 +492,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto muy caliente/s</Spanish>
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
             <French>Canon(s) de rechange très chaud(s).</French>
             <Russian>Очень горячие</Russian>
@@ -500,6 +507,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
+            <Spanish>Cañon/es de repuesto extremadamente caliente/s</Spanish>
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
             <French>Canon(s) de rechange extrêmement chaud(s).</French>
             <Russian>Запредельно горячие</Russian>
@@ -515,7 +523,7 @@
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
             <German>Überhitzung aktiviert</German>
-            <Spanish>Activada Sobrecalentamiento</Spanish>
+            <Spanish>Activado Sobrecalentamiento</Spanish>
             <Portuguese>Superaquecimento ativado</Portuguese>
             <French>Surchauffe activée</French>
             <Russian>Перегрев включен</Russian>
@@ -529,6 +537,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
+            <Spanish>Activación maestra para Sobrecalentamiento</Spanish>
             <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
             <French>Active le module de surchauffe/d'enrayement.</French>
             <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>

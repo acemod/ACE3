@@ -27,7 +27,7 @@ private _abort = !local _unit;
 if (_abort) then {
     private _bulletVelocity = velocity _projectile;
     private _muzzleVelocity = vectorMagnitude _bulletVelocity;
-    
+
     private _maxRange = uiNamespace getVariable format[QGVAR(maxRange_%1), _ammo];
     if (isNil "_maxRange") then {
         private _airFriction = getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction");
@@ -40,12 +40,12 @@ if (_abort) then {
         uiNamespace setVariable [format[QGVAR(maxRange_%1), _ammo], _maxRange];
     };
     if (ACE_player distance _unit > _maxRange && {ACE_player distance ((getPosASL _unit) vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply _maxRange)) > _maxRange}) exitWith {};
-    
+
     private _ammoCount = (_unit ammo _muzzle) + 1;
     private _tracersEvery = getNumber(configFile >> "CfgMagazines" >> _magazine >> "tracersEvery");
     private _lastRoundsTracer = getNumber(configFile >> "CfgMagazines" >> _magazine >> "lastRoundsTracer");
     if (_ammoCount <= _lastRoundsTracer || {_tracersEvery > 0 && {(_ammoCount - _lastRoundsTracer) % _tracersEvery == 0}}) exitWith { _abort = false };
-    
+
     if (GVAR(bulletTraceEnabled) && {_muzzleVelocity > BULLET_TRACE_MIN_VELOCITY} && {cameraView == "GUNNER"}) then {
         if (currentWeapon ACE_player == binocular ACE_player) exitWith { _abort = false };
         if (currentWeapon ACE_player == primaryWeapon ACE_player && {count primaryWeaponItems ACE_player > 2}) then {
@@ -89,7 +89,7 @@ if (GVAR(muzzleVelocityVariationEnabled)) then {
     private _seed = 0.5 * (_time + _ammoCount) * (_time + _ammoCount + 1) + _ammoCount;
     // Generate normally distributed random number (via Box–Muller transform)
     private _z = sqrt(-2.0 * ln(0.00000001 max (-_seed random 1))) * cos(_seed random 360);
-    
+
     _muzzleVelocity = _muzzleVelocity * (_z * _muzzleVelocityVariationSD + 1);
 };
 
@@ -123,7 +123,3 @@ GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
 "ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _ammoCount, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _transonicStabilityCoef, getPosASL _projectile, _bulletVelocity, EGVAR(common,mapLatitude), EGVAR(weather,currentTemperature), EGVAR(common,mapAltitude), EGVAR(weather,currentHumidity), EGVAR(weather,currentOvercast), CBA_missionTime toFixed 6];
 
 GVAR(allBullets) pushBack [_projectile, _caliber, _bulletTraceVisible, GVAR(currentbulletID)];
-
-if (isNil QGVAR(BulletPFH)) then {
-    GVAR(BulletPFH) = [FUNC(handleFirePFH), GVAR(simulationInterval), []] call CBA_fnc_addPerFrameHandler;
-};

@@ -175,6 +175,7 @@
             <French>Vérifier la température</French>
             <Portuguese>Checar a temperatura do ar </Portuguese>
             <Turkish>Hava Sıcaklığını Kontrol Et</Turkish>
+            <Russian>Проверить температуру воздуха</Russian>
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
@@ -187,6 +188,7 @@
             <French>Afficher l'interaction "Vérifier la température"</French>
             <Portuguese>Mostrar a ação "Checar a temperatura do ar"</Portuguese>
             <Turkish>Hava Sıcaklığını Kontrol Etme Eylemini Göster</Turkish>
+            <Russian>Показывать действие проверки температуры</Russian>
         </Key>
     </Package>
 </Project>

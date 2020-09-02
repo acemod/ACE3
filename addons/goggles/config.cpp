@@ -229,6 +229,19 @@ class CfgGlasses {
         ACE_Resistance = 1;
         ACE_Protection = 1;
     };
+
+    class G_AirPurifyingRespirator_01_base_F: None {
+        ACE_Overlay = "a3\ui_f_enoch\data\objects\data\optics_apr_ca.paa";
+        ACE_OverlayCracked = "";
+        ACE_Resistance = 2;
+        ACE_Protection = 1;
+    };
+    class G_AirPurifyingRespirator_02_base_F: G_AirPurifyingRespirator_01_base_F {
+        ACE_Overlay = "a3\ui_f_enoch\data\objects\data\optics_APR_02_CA.paa";
+    };
+    class G_RegulatorMask_base_F: None {
+        ACE_Overlay = "a3\ui_f_enoch\data\objects\data\optics_regulator_ca.paa";
+    };
 };
 
 #include "RscTitles.hpp"

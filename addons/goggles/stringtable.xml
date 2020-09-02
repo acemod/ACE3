@@ -99,6 +99,22 @@
             <Spanish>Tinte</Spanish>
             <Turkish>Ton</Turkish>
         </Key>
+        <Key ID="STR_ACE_Goggles_effects_effectsOnly">
+            <English>Effects</English>
+            <Russian>эффекты</Russian>
+            <Japanese>効果</Japanese>
+            <Polish>Efekty</Polish>
+            <German>Effekte</German>
+            <Korean>효과</Korean>
+            <French>Effets</French>
+            <Italian>Effetti</Italian>
+            <Chinesesimp>影响</Chinesesimp>
+            <Chinese>影響</Chinese>
+            <Portuguese>Efeitos</Portuguese>
+            <Czech>Efekty</Czech>
+            <Spanish>Efectos</Spanish>
+            <Turkish>Efektler</Turkish>
+        </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
             <Russian>Тонировка + эффекты</Russian>
@@ -127,6 +143,7 @@
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
+            <Russian>Показывать Протереть очки в меню взаимодействия с собой</Russian>
         </Key>
     </Package>
 </Project>

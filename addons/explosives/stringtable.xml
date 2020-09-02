@@ -502,7 +502,7 @@
             <Russian>Обезвреживание...</Russian>
             <Japanese>爆発物を無力化しています・・・</Japanese>
             <Korean>폭발물 해체중...</Korean>
-            <Chinesesimp>炸弹拆除中...</Chinesesimp>
+            <Chinesesimp>正在拆除炸弹...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
             <Turkish>Patlayıcı Imha Ediliyor...</Turkish>
         </Key>
@@ -1088,6 +1088,7 @@
             <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
             <Polish>Jest EOD</Polish>
+            <Russian>Сапёр</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1098,6 +1099,7 @@
             <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
+            <Russian>Определяет, является ли юнит сапёром.</Russian>
         </Key>
     </Package>
 </Project>

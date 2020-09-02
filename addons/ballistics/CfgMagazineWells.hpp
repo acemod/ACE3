@@ -35,14 +35,20 @@ class CfgMagazineWells {
     class MX_65x39 { //Vanilla magwell
         ADDON[] = {
             "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim",
             "ACE_30Rnd_65x47_Scenar_mag",
             "ACE_30Rnd_65_Creedmor_mag"
         };
     };
+
     class MX_65x39_Large { //Vanilla magwell
         ADDON[] = {
             "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim"
+        };
+    };
+
+    class Katiba_65x39 {
+        ADDON[] = {
+            "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim"
         };
     };
 
@@ -60,6 +66,7 @@ class CfgMagazineWells {
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
     };
+
     class STANAG_556x45 { //Vanilla magwell
         ADDON[] = {
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
@@ -84,6 +91,7 @@ class CfgMagazineWells {
             "ACE_20Rnd_762x51_M993_AP_Mag"
         };
     };
+
     class CBA_762x51_HK417 {
         ADDON[] = {
             "ACE_20Rnd_762x51_Mag_Tracer",
@@ -99,6 +107,7 @@ class CfgMagazineWells {
             "ACE_20Rnd_762x51_M993_AP_Mag"
         };
     };
+
     class CBA_762x51_SR25 {
         ADDON[] = {
             "ACE_20Rnd_762x51_Mag_Tracer",
@@ -114,6 +123,7 @@ class CfgMagazineWells {
             "ACE_20Rnd_762x51_M993_AP_Mag"
         };
     };
+
     class CBA_762x51_G3 {
         ADDON[] = {
             "ACE_20Rnd_762x51_Mag_Tracer",
@@ -175,16 +185,19 @@ class CfgMagazineWells {
             "ACE_16Rnd_9x19_mag"
         };
     };
+
     class CBA_9x19_P228 { // SIG P228
         ADDON[] = {
             "ACE_16Rnd_9x19_mag"
         };
     };
+
     class CBA_9x19_P239 { // SIG P239
         ADDON[] = {
             "ACE_16Rnd_9x19_mag"
         };
     };
+
     class CBA_9x19_HiPower {
         ADDON[] = {
             "ACE_16Rnd_9x19_mag"
@@ -196,6 +209,7 @@ class CfgMagazineWells {
             "ACE_10Rnd_762x54_Tracer_mag"
         };
     };
+
     class CBA_762x54R_SVD {
         ADDON[] = {
             "ACE_10Rnd_762x54_Tracer_mag"

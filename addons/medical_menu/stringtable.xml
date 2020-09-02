@@ -13,7 +13,7 @@
             <French>Menu médical</French>
             <Japanese>治療メニュー</Japanese>
             <Korean>의료 메뉴</Korean>
-            <Chinesesimp>医疗选单</Chinesesimp>
+            <Chinesesimp>医疗菜单</Chinesesimp>
             <Chinese>醫療選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow">
@@ -118,9 +118,10 @@
             <French>Ouvir le menu médical</French>
             <Japanese>治療メニューを開く</Japanese>
             <Korean>의료 메뉴 열기</Korean>
-            <Chinesesimp>开起医疗选单</Chinesesimp>
+            <Chinesesimp>打开医疗菜单</Chinesesimp>
             <Chinese>開起醫療選單</Chinese>
         </Key>
+<<<<<<< HEAD:addons/medical_menu/stringtable.xml
         <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
             <English>Medical Menu Settings</English>
             <German>Sanitätsmenü Einstellungen</German>
@@ -152,6 +153,43 @@
             <Chinese>設置醫療選單的使用</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
+=======
+        <Key ID="STR_ACE_Medical_GUI_LoadPatient">
+            <English>Load Patient</English>
+            <Spanish>Cargar al paciente en</Spanish>
+            <Russian>Погрузить пациента</Russian>
+            <German>Patient einladen</German>
+            <Polish>Załaduj pacjenta</Polish>
+            <French>Embarquer le patient</French>
+            <Hungarian>Sebesült berakása</Hungarian>
+            <Italian>Carica il paziente</Italian>
+            <Portuguese>Carregar Paciente Em</Portuguese>
+            <Czech>Naložit pacienta</Czech>
+            <Japanese>患者を載せる</Japanese>
+            <Korean>환자 싣기</Korean>
+            <Chinesesimp>将伤者装入</Chinesesimp>
+            <Chinese>將傷者放入</Chinese>
+            <Turkish>Kişiyi Bindir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_UnloadPatient">
+            <English>Unload Patient</English>
+            <Spanish>Descargar al paciente</Spanish>
+            <Russian>Выгрузить пациента</Russian>
+            <German>Patient ausladen</German>
+            <Polish>Wyładuj pacjenta</Polish>
+            <French>Débarquer le patient</French>
+            <Hungarian>Sebesült kihúzása</Hungarian>
+            <Italian>Scarica il paziente</Italian>
+            <Portuguese>Descarregar Paciente</Portuguese>
+            <Czech>Vyložit pacienta</Czech>
+            <Japanese>患者を降ろす</Japanese>
+            <Korean>환자 내리기</Korean>
+            <Chinesesimp>将伤者背出</Chinesesimp>
+            <Chinese>將傷者背出</Chinese>
+            <Turkish>Kişiyi Indir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_EXAMINE_TREATMENT">
+>>>>>>> 6140a94efedb7df1291070e5ba49b8800bf5b15d:addons/medical_gui/stringtable.xml
             <English>EXAMINE &amp; TREATMENT</English>
             <German>Untersuchung &amp; Behandlung</German>
             <Russian>ОСМОТР И ЛЕЧЕНИЕ</Russian>
@@ -193,7 +231,7 @@
             <Italian>PANORAMICA</Italian>
             <Japanese>オーバービュー</Japanese>
             <Korean>개요</Korean>
-            <Chinesesimp>概述</Chinesesimp>
+            <Chinesesimp>总览</Chinesesimp>
             <Chinese>概述</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ACTIVITY_LOG">
@@ -208,7 +246,7 @@
             <Italian>LOG ATTIVITA'</Italian>
             <Japanese>治療履歴</Japanese>
             <Korean>활동 로그</Korean>
-            <Chinesesimp>医疗纪录</Chinesesimp>
+            <Chinesesimp>医疗记录</Chinesesimp>
             <Chinese>醫療紀錄</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_QUICK_VIEW">
@@ -225,6 +263,27 @@
             <Korean>퀵 뷰</Korean>
             <Chinesesimp>快速检查</Chinesesimp>
             <Chinese>快速檢查</Chinese>
+<<<<<<< HEAD:addons/medical_menu/stringtable.xml
+=======
+            <Turkish>HIZLI GÖRÜNÜM</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_INJURIES">
+            <English>INJURIES</English>
+            <German>VERLETZUNGEN</German>
+            <Italian>FERITE</Italian>
+            <Russian>ТРАВМЫ</Russian>
+            <French>BLESSURES</French>
+            <Polish>OBRAŻENIA</Polish>
+            <Spanish>HERIDAS</Spanish>
+            <Hungarian>SÉRÜLÉSEK</Hungarian>
+            <Czech>ZRANĚNÍ</Czech>
+            <Portuguese>FERIMENTOS</Portuguese>
+            <Japanese>負傷</Japanese>
+            <Korean>부상</Korean>
+            <Chinesesimp>负伤</Chinesesimp>
+            <Chinese>受傷</Chinese>
+            <Turkish>YARALANMALARI</Turkish>
+>>>>>>> 6140a94efedb7df1291070e5ba49b8800bf5b15d:addons/medical_gui/stringtable.xml
         </Key>
         <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
             <English>View triage Card</English>
@@ -238,7 +297,7 @@
             <Italian>Guarda Triage Card</Italian>
             <Japanese>トリアージ カードを見る</Japanese>
             <Korean>부상자 카드 보기</Korean>
-            <Chinesesimp>查看诊断卡</Chinesesimp>
+            <Chinesesimp>查看分诊卡</Chinesesimp>
             <Chinese>查看診斷卡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_PATIENT">
@@ -253,7 +312,7 @@
             <Italian>Esamina Paziente</Italian>
             <Japanese>患者を調べる</Japanese>
             <Korean>환자 검사하기</Korean>
-            <Chinesesimp>检查伤者</Chinesesimp>
+            <Chinesesimp>检查伤员</Chinesesimp>
             <Chinese>檢查傷者</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_BANDAGE_FRACTURES">
@@ -268,7 +327,7 @@
             <Italian>Bendaggi/Fratture</Italian>
             <Japanese>包帯 / 骨折</Japanese>
             <Korean>붕대 / 골절</Korean>
-            <Chinesesimp>绷带 / 骨折</Chinesesimp>
+            <Chinesesimp>包扎 / 骨折</Chinesesimp>
             <Chinese>繃帶 / 骨折</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDICATION">
@@ -285,6 +344,7 @@
             <Korean>약물 치료</Korean>
             <Chinesesimp>药物</Chinesesimp>
             <Chinese>藥物</Chinese>
+            <Turkish>Ilaç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_AIRWAY_MANAGEMENT">
             <English>Airway Management</English>
@@ -300,6 +360,7 @@
             <Korean>기도 관리</Korean>
             <Chinesesimp>呼吸道管理</Chinesesimp>
             <Chinese>呼吸道管理</Chinese>
+            <Turkish>Hava Yolu Yönetimi</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ADVANCED_TREATMENT">
             <English>Advanced Treatments</English>
@@ -346,6 +407,7 @@
             <Chinesesimp>切换 (自己)</Chinesesimp>
             <Chinese>切換 (自己)</Chinese>
         </Key>
+<<<<<<< HEAD:addons/medical_menu/stringtable.xml
         <Key ID="STR_ACE_Medical_Menu_SELECT_TRIAGE_STATUS">
             <English>Select triage status</English>
             <German>Setze Status auf der Triagekarte</German>
@@ -362,6 +424,105 @@
             <Chinese>選擇分診狀態</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
+=======
+        <Key ID="STR_ACE_Medical_GUI_Head">
+            <English>Head</English>
+            <German>Kopf</German>
+            <Russian>Голова</Russian>
+            <Spanish>Cabeza</Spanish>
+            <French>Tête</French>
+            <Polish>Głowa</Polish>
+            <Portuguese>Caebça</Portuguese>
+            <Czech>Hlava</Czech>
+            <Italian>Testa</Italian>
+            <Japanese>頭部</Japanese>
+            <Korean>머리</Korean>
+            <Chinesesimp>头部</Chinesesimp>
+            <Chinese>頭部</Chinese>
+            <Turkish>Kafa</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Torso">
+            <English>Torso</English>
+            <German>Torso</German>
+            <Russian>Торс</Russian>
+            <French>Torse</French>
+            <Polish>Tors</Polish>
+            <Portuguese>Torso</Portuguese>
+            <Czech>Trup</Czech>
+            <Spanish>Torso</Spanish>
+            <Italian>Torso</Italian>
+            <Japanese>胴体</Japanese>
+            <Korean>몸통</Korean>
+            <Chinesesimp>躯干</Chinesesimp>
+            <Chinese>身體</Chinese>
+            <Turkish>Gövde</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftArm">
+            <English>Left Arm</English>
+            <German>Linker Arm</German>
+            <Russian>Левая рука</Russian>
+            <Spanish>Brazo Izquierdo</Spanish>
+            <French>Bras gauche</French>
+            <Polish>Lewa ręka</Polish>
+            <Portuguese>Braço Esquerdo</Portuguese>
+            <Czech>Levá Ruka</Czech>
+            <Italian>Braccio Sinistro</Italian>
+            <Japanese>左腕</Japanese>
+            <Korean>왼쪽 팔</Korean>
+            <Chinesesimp>左臂</Chinesesimp>
+            <Chinese>左手</Chinese>
+            <Turkish>Sol Kol</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightArm">
+            <English>Right Arm</English>
+            <German>Rechter Arm</German>
+            <Russian>Правая рука</Russian>
+            <Spanish>Brazo Derecho</Spanish>
+            <French>Bras droit</French>
+            <Polish>Prawa ręka</Polish>
+            <Portuguese>Braço Direito</Portuguese>
+            <Czech>Pravá Ruka</Czech>
+            <Italian>Braccio Destro</Italian>
+            <Japanese>右腕</Japanese>
+            <Korean>오른쪽 팔</Korean>
+            <Chinesesimp>右臂</Chinesesimp>
+            <Chinese>右手</Chinese>
+            <Turkish>Sağ Kol</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftLeg">
+            <English>Left Leg</English>
+            <German>Linkes Bein</German>
+            <Russian>Левая нога</Russian>
+            <Spanish>Pierna Izquierda</Spanish>
+            <French>Jambe gauche</French>
+            <Polish>Lewa noga</Polish>
+            <Portuguese>Perna Esquerda</Portuguese>
+            <Czech>Levá Noha</Czech>
+            <Italian>Gamba Sinistra</Italian>
+            <Japanese>左足</Japanese>
+            <Korean>왼쪽 다리</Korean>
+            <Chinesesimp>左腿</Chinesesimp>
+            <Chinese>左腳</Chinese>
+            <Turkish>Sol Bacak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightLeg">
+            <English>Right Leg</English>
+            <German>Rechtes Bein</German>
+            <Russian>Правая нога</Russian>
+            <Spanish>Pierna Derecha</Spanish>
+            <French>Jambe droite</French>
+            <Polish>Prawa noga</Polish>
+            <Portuguese>Perna Direita</Portuguese>
+            <Czech>Pravá Noha</Czech>
+            <Italian>Gamba Destra</Italian>
+            <Japanese>右足</Japanese>
+            <Korean>오른쪽 다리</Korean>
+            <Chinesesimp>右腿</Chinesesimp>
+            <Chinese>右腳</Chinese>
+            <Turkish>Sağ Bacak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectHead">
+>>>>>>> 6140a94efedb7df1291070e5ba49b8800bf5b15d:addons/medical_gui/stringtable.xml
             <English>Select Head</English>
             <German>Wähle Kopf</German>
             <Russian>Выбрать голову</Russian>
@@ -388,7 +549,7 @@
             <Italian>Seleziona Torso</Italian>
             <Japanese>胴体を選ぶ</Japanese>
             <Korean>몸통 선택</Korean>
-            <Chinesesimp>选择身体</Chinesesimp>
+            <Chinesesimp>选择躯干</Chinesesimp>
             <Chinese>選擇身體</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_L">
@@ -403,7 +564,7 @@
             <Italian>Seleziona Braccio Sinistro</Italian>
             <Japanese>左腕を選ぶ</Japanese>
             <Korean>왼쪽 팔 선택</Korean>
-            <Chinesesimp>选择左手</Chinesesimp>
+            <Chinesesimp>选择左臂</Chinesesimp>
             <Chinese>選擇左手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_R">
@@ -418,7 +579,7 @@
             <Italian>Seleziona Braccio Destro</Italian>
             <Japanese>右腕を選ぶ</Japanese>
             <Korean>오른쪽 팔 선택</Korean>
-            <Chinesesimp>选择右手</Chinesesimp>
+            <Chinesesimp>选择右臂</Chinesesimp>
             <Chinese>選擇右手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_L">
@@ -433,7 +594,7 @@
             <Italian>Seleziona Gamba Sinistra</Italian>
             <Japanese>左足を選ぶ</Japanese>
             <Korean>왼쪽 다리 선택</Korean>
-            <Chinesesimp>选择左脚</Chinesesimp>
+            <Chinesesimp>选择左腿</Chinesesimp>
             <Chinese>選擇左腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_R">
@@ -448,7 +609,7 @@
             <Italian>Seleziona Gamba Destra</Italian>
             <Japanese>右足を選ぶ</Japanese>
             <Korean>오른쪽 다리 선택</Korean>
-            <Chinesesimp>选择右脚</Chinesesimp>
+            <Chinesesimp>选择右腿</Chinesesimp>
             <Chinese>選擇右腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_HEAD">
@@ -613,7 +774,7 @@
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
             <Japanese>開いている傷口が %2 %1 ほどあります</Japanese>
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
-            <Chinesesimp>有 %2 %1 开放性伤口</Chinesesimp>
+            <Chinesesimp>有 %2 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_OPEN_WOUND">
@@ -628,7 +789,7 @@
             <Italian>C'è 1 %1 Ferita Aperta</Italian>
             <Japanese>1 つの空いている %1 傷口</Japanese>
             <Korean>여기 %1 크기의 열린 상처가 있다</Korean>
-            <Chinesesimp>有 1 %1 开放性伤口</Chinesesimp>
+            <Chinesesimp>有 1 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_OPEN_WOUND">
@@ -643,7 +804,7 @@
             <Italian>C'è 1 parziale %1 Ferita Aperta</Italian>
             <Japanese>部分的に開いている %1 の傷口があります</Japanese>
             <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有部分 %1 开放性伤口</Chinesesimp>
+            <Chinesesimp>有未完全处理的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 開放性傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
@@ -658,7 +819,7 @@
             <Italian>Ci sono %2 %1 Ferite Bendate</Italian>
             <Japanese>ここには %2 %1 の処置された傷があります</Japanese>
             <Korean>여기에 붕대를 감은 %2 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有 %2 %1 包扎过伤口</Chinesesimp>
+            <Chinesesimp>有 %2 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_BANDAGED_WOUND">
@@ -673,7 +834,7 @@
             <Italian>C'è 1 %1 Ferita Bendata</Italian>
             <Japanese>1 つの包帯で巻かれている %1 傷</Japanese>
             <Korean>여기에 붕대를 감은 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有 1 %1 包扎过伤口</Chinesesimp>
+            <Chinesesimp>有 1 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_BANDAGED_WOUND">
@@ -688,7 +849,7 @@
             <Italian>C'è 1 parziale %1 Ferita Bendata</Italian>
             <Japanese>患者には %1 の包帯で処置された傷があります</Japanese>
             <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
-            <Chinesesimp>有部分 %1 包扎过伤口</Chinesesimp>
+            <Chinesesimp>有未包扎完全的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 包紮過傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NORMAL_BREATHING">
@@ -703,8 +864,9 @@
             <Italian>Respirazione Normale</Italian>
             <Japanese>通常の呼吸</Japanese>
             <Korean>정상 호흡</Korean>
-            <Chinesesimp>正常呼吸</Chinesesimp>
+            <Chinesesimp>呼吸正常</Chinesesimp>
             <Chinese>正常呼吸</Chinese>
+            <Turkish>Normal solunum</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NO_BREATHING">
             <English>No breathing</English>
@@ -720,6 +882,7 @@
             <Korean>호흡이 없음</Korean>
             <Chinesesimp>没有呼吸</Chinesesimp>
             <Chinese>沒有呼吸</Chinese>
+            <Turkish>Solunum yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DIFFICULT_BREATHING">
             <English>Difficult breathing</English>
@@ -735,6 +898,7 @@
             <Korean>호흡 곤란</Korean>
             <Chinesesimp>呼吸困难</Chinesesimp>
             <Chinese>呼吸困難</Chinese>
+            <Turkish>Nefes almada zorluk</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ALMOST_NO_BREATHING">
             <English>Almost no breathing</English>
@@ -748,8 +912,9 @@
             <Italian>Quasi nessuna Respirazione</Italian>
             <Japanese>ほとんど呼吸していません</Japanese>
             <Korean>호흡이 거의 없음</Korean>
-            <Chinesesimp>几乎没有呼吸</Chinesesimp>
+            <Chinesesimp>呼吸微弱</Chinesesimp>
             <Chinese>幾乎沒有呼吸</Chinese>
+            <Turkish>Neredeyse hiç nefes almıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_BLEEDING">
             <English>Bleeding</English>
@@ -763,8 +928,9 @@
             <Italian>Sanguinamento</Italian>
             <Japanese>出血中</Japanese>
             <Korean>출혈</Korean>
-            <Chinesesimp>出血中</Chinesesimp>
+            <Chinesesimp>正在流血</Chinesesimp>
             <Chinese>出血中</Chinese>
+            <Turkish>Kanama var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_PAIN">
             <English>in Pain</English>
@@ -780,6 +946,7 @@
             <Korean>고통</Korean>
             <Chinesesimp>疼痛中</Chinesesimp>
             <Chinese>疼痛中</Chinese>
+            <Turkish>Ağrısı var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_LOST_BLOOD">
             <English>Lost a lot of Blood</English>
@@ -793,10 +960,104 @@
             <Italian>Perso molto Sangue</Italian>
             <Japanese>大量失血しています</Japanese>
             <Korean>많은 피를 흘림</Korean>
-            <Chinesesimp>大量失血</Chinesesimp>
+            <Chinesesimp>失血</Chinesesimp>
             <Chinese>大量失血</Chinese>
+            <Turkish>Çok fazla kan kaybı var</Turkish>
         </Key>
+<<<<<<< HEAD:addons/medical_menu/stringtable.xml
         <Key ID="STR_ACE_Medical_Menu_STATUS_TOURNIQUET_APPLIED">
+=======
+        <Key ID="STR_ACE_Medical_GUI_Status_Fractured">
+            <English>Fractured</English>
+            <Russian>Перелом</Russian>
+            <Japanese>骨折している</Japanese>
+            <French>Fracturé</French>
+            <Portuguese>Fraturado</Portuguese>
+            <Chinese>骨折</Chinese>
+            <Italian>Frattura</Italian>
+            <Czech>Zlomené</Czech>
+            <Polish>Złamanie</Polish>
+            <Spanish>Fracturada</Spanish>
+            <Chinesesimp>骨折</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
+            <English>Splint Applied</English>
+            <Russian>Наложена шина</Russian>
+            <Japanese>添え木を当てている</Japanese>
+            <French>Attelle appliquée</French>
+            <Portuguese>Tala Aplicada</Portuguese>
+            <Chinese>已使用固定板</Chinese>
+            <Italian>Gessatura applicata</Italian>
+            <Czech>Dlaha aplikována</Czech>
+            <Polish>Szyna założona</Polish>
+            <Spanish>Tablilla aplicada</Spanish>
+            <Chinesesimp>已用夹板固定</Chinesesimp>
+        </Key>
+        <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
+            <English>Lost some blood</English>
+            <German>Hat etwas Blut verloren</German>
+            <Japanese>いくらか失血した</Japanese>
+            <Russian>Небольшая кровопотеря</Russian>
+            <French>A perdu une faible quantité de sang</French>
+            <Portuguese>Perdeu um pouco de Sangue</Portuguese>
+            <Chinese>輕微失血</Chinese>
+            <Italian>Ha perso un po' di sangue</Italian>
+            <Czech>Ztratil trochu krve</Czech>
+            <Polish>Stracił trochę krwi</Polish>
+            <Spanish>Algo de sangre perdida</Spanish>
+            <Turkish>Az kan kaybı var</Turkish>
+            <Chinesesimp>轻微失血</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood2">
+            <English>Lost a lot of blood</English>
+            <German>Hat eine große Menge Blut verloren</German>
+            <Russian>Большая кровопотеря</Russian>
+            <Spanish>Mucha sangre perdida</Spanish>
+            <French>A perdu une quantité modérée de sang</French>
+            <Polish>Stracił dużo krwi</Polish>
+            <Czech>Ztratil hodně krve</Czech>
+            <Hungarian>Sok vért vesztett</Hungarian>
+            <Italian>Ha perso parecchio sangue</Italian>
+            <Portuguese>Perdeu muito sangue</Portuguese>
+            <Japanese>大量失血した</Japanese>
+            <Korean>많은 양의 혈액을 잃음</Korean>
+            <Chinesesimp>大量失血</Chinesesimp>
+            <Chinese>大量失血中</Chinese>
+            <Turkish>Çok fazla kan kaybı var</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood3">
+            <English>Lost a large amount of blood</English>
+            <German>Hat eine sehr große Menge Blut verloren</German>
+            <Japanese>かなり酷く大量失血した</Japanese>
+            <Russian>Огромная кровопотеря</Russian>
+            <French>A perdu une importante quantité de sang</French>
+            <Portuguese>Perdeu uma quantidade grande de sangue</Portuguese>
+            <Chinese>極大量失血中</Chinese>
+            <Italian>Ha perso una grande quantità di sangue</Italian>
+            <Czech>Ztratil velké množství krve</Czech>
+            <Polish>Stracił dużą ilość krwi</Polish>
+            <Spanish>Perdida gran cantidad de sangre</Spanish>
+            <Turkish>Çok miktarda kan kaybetti</Turkish>
+            <Chinesesimp>严重失血</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Lost_Blood4">
+            <English>Lost a fatal amount of blood</English>
+            <German>Hat eine kritische Menge an Blut verloren</German>
+            <Japanese>致命的な程失血した</Japanese>
+            <Russian>Фатальная кровопотеря</Russian>
+            <French>A perdu une quantité critique de sang</French>
+            <Portuguese>Perdeu uma quantidade fatal de sangue</Portuguese>
+            <Chinese>致命性失血中</Chinese>
+            <Italian>Ha perso una quantità fatale di sangue</Italian>
+            <Czech>Vykrvácel</Czech>
+            <Polish>Stracił krytyczną ilość krwi</Polish>
+            <Spanish>Perdida una cantidad fatal de sangre</Spanish>
+            <Turkish>Ölümcül miktarda kan kaybetti</Turkish>
+            <Chinesesimp>致命失血</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_STATUS_TOURNIQUET_APPLIED">
+>>>>>>> 6140a94efedb7df1291070e5ba49b8800bf5b15d:addons/medical_gui/stringtable.xml
             <English>Tourniquet [CAT]</English>
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
@@ -808,8 +1069,9 @@
             <Italian>Laccio Emostatico [CAT]</Italian>
             <Japanese>止血帯 [CAT]</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <Chinesesimp>军用止血带</Chinesesimp>
+            <Chinesesimp>止血带 (军用型)</Chinesesimp>
             <Chinese>軍用止血帶</Chinese>
+            <Turkish>Turnike [CAT]</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_NPA_APPLIED">
             <English>Nasopharyngeal Tube [NPA]</English>
@@ -826,6 +1088,7 @@
             <Chinesesimp>鼻咽管</Chinesesimp>
             <Chinese>鼻咽管</Chinese>
         </Key>
+<<<<<<< HEAD:addons/medical_menu/stringtable.xml
         <Key ID="STR_ACE_Medical_Menu_maxRange">
             <English>Medical Menu maximum range</English>
             <Japanese>治療メニューの最大範囲</Japanese>
@@ -841,6 +1104,47 @@
             <Chinesesimp>医疗选单可以开启的最大距离</Chinesesimp>
             <Italian>Massima distanza dalla quale si può aprire il menù medico.</Italian>
             <Polish>Maksymalny dystans skąd menu medyczne może być otwarte.</Polish>
+=======
+        <Key ID="STR_ACE_Medical_GUI_Actions_TriageCard">
+            <English>Triage Card</English>
+            <German>Triagekarte</German>
+            <Spanish>Tarjeta de clasificación</Spanish>
+            <Russian>Медкарта</Russian>
+            <Polish>Karta segregacyjna</Polish>
+            <Czech>Štítek</Czech>
+            <French>Fiche de triage</French>
+            <Hungarian>Orvosi lap</Hungarian>
+            <Italian>Triage Card</Italian>
+            <Portuguese>Cartão de Triagem</Portuguese>
+            <Japanese>トリアージ カード</Japanese>
+            <Korean>부상자 분류 카드</Korean>
+            <Chinesesimp>分诊卡</Chinesesimp>
+            <Chinese>檢傷分類卡</Chinese>
+            <Turkish>Triyaj Kartı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_PartialX">
+            <English>Partial %1</English>
+            <Japanese>部分的な%1</Japanese>
+            <Chinese>部分 %1</Chinese>
+            <French>Partiel %1</French>
+            <Italian>Parziale %1</Italian>
+            <Czech>Parciální %1</Czech>
+            <Polish>Częściowe %1</Polish>
+            <Portuguese>Parcial%1</Portuguese>
+            <Spanish>Parcial %1</Spanish>
+            <German>Partiell %1</German>
+            <Turkish>Parsiyel %1</Turkish>
+            <Russian>Частичное %1</Russian>
+            <Chinesesimp>未完全处理的 %1</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_IGUI_PatientInfo">
+            <English>Patient Info</English>
+            <Polish>Informacje o pacjencie</Polish>
+            <French>Informations patient</French>
+            <Russian>Информация о пациенте</Russian>
+            <Chinesesimp>伤员信息</Chinesesimp>
+            <Japanese>患者情報</Japanese>
+>>>>>>> 6140a94efedb7df1291070e5ba49b8800bf5b15d:addons/medical_gui/stringtable.xml
         </Key>
     </Package>
 </Project>
