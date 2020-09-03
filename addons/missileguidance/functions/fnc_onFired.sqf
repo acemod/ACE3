@@ -40,16 +40,27 @@ TRACE_4("enabled",_shooter,_ammo,_projectile,typeOf _shooter);
 
 private _config = configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON);
 
+private _configurationSource = _shooter;
+if (isNull (ACE_controlledUAV param [0, objNull])) then {
+    if (((vehicle _shooter) == _shooter) || {_shooter call CBA_fnc_canUseWeapon}) then {
+        _configurationSource = _shooter;
+    } else {
+        _configurationSource = vehicle _shooter;
+    };
+} else {
+    _configurationSource = ACE_controlledUAV select 0;
+};
+
 private _target = _shooter getVariable [QGVAR(target), nil];
 private _targetPos = _shooter getVariable [QGVAR(targetPosition), nil];
 private _seekerType = _shooter getVariable [QGVAR(seekerType), nil];
-private _attackProfile = (vehicle _shooter) getVariable [QGVAR(attackProfile), nil];
+private _attackProfile = _configurationSource getVariable [QGVAR(attackProfile), nil];
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "useModeForAttackProfile")) == 1) then {
     _attackProfile = getText (configFile >> "CfgWeapons" >> _weapon >> _mode >> QGVAR(attackProfile))
 };
 
 private _lockMode = _shooter getVariable [QGVAR(lockMode), nil];
-private _laserCode = (vehicle _shooter) getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+private _laserCode = _configurationSource getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
 private _laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
 
 TRACE_6("getVars",_target,_targetPos,_seekerType,_attackProfile,_lockMode,_laserCode);
