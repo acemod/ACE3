@@ -30,6 +30,7 @@ GVAR(enabled)
 }
 && {alive _vehicle}
 && {2 > locked _vehicle}
+&& {simulationEnabled _vehicle}
 && {
     -1 == crew _vehicle findIf {alive _x}
     || {0.6 <= side group _unit getFriend side group _vehicle}
