@@ -33,6 +33,11 @@ if (hasInterface) then {
             if (player isKindOf QGVAR(virtual)) then { [true] call FUNC(setSpectator); };
         }
     ] call CBA_fnc_waitUntilAndExecute;
+    
+    // Add ACRE2 Notification Display (if present)
+    if (!isNil "acre_api_fnc_addNotificationDisplay") then {
+        [IDD_SPEC_DISPLAY] call acre_api_fnc_addNotificationDisplay;
+    };
 };
 
 ["ace_spectator", {GETMVAR(GVAR(isSet),false)}] call CBA_fnc_registerFeatureCamera;
