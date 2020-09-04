@@ -83,3 +83,8 @@ GVAR(lastSortRight) = "";
         };
     };
 }] call CBA_fnc_addEventHandler;
+
+// Add ACRE2 Notification Display (if present)
+if (!isNil "acre_api_fnc_addNotificationDisplay") then {
+    [IDD_ace_arsenal] call acre_api_fnc_addNotificationDisplay;
+};
