@@ -136,7 +136,7 @@
             <French>Temps en secondes nécessaire pour appliquer un garrot.</French>
             <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
         </Key>
-            <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSyringe_DisplayName">
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSyringe_DisplayName">
             <English>Syringe Treatment Time</English>
             <French>Temps de traitement de la seringue</French>
             <German>Spritzenbehandlungszeit</German>
@@ -146,7 +146,7 @@
             <French>Temps en secondes nécessaire pour appliquer une seringue.</French>
             <German>Zeit in Sekunden, die zum Auftragen einer Spritze benötigt wird.</German>
         </Key>
-            <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
             <French>Temps de traitement du sac IV</French>
             <German>IV Beutelbehandlungszeit</German>
@@ -156,7 +156,7 @@
             <French>Temps en secondes nécessaire pour appliquer un sac IV.</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
         </Key>
-            <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
             <French>Temps de traitement de l'attelle</French>
             <German>Schienenbehandlungszeit</German>
@@ -166,7 +166,7 @@
             <French>Temps en secondes nécessaire pour appliquer une attelle.</French>
             <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
         </Key>
-            <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
             <French>Temps d'utilisation du sac mortuaire</French>
             <German>Anwendungszeit für Leichensack</German>
