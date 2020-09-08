@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Glowbal, anden3
+ * Author: Glowbal, anden3, dgibso29
  * Check if a unit is in a stable condition, needed for PersonalAidKit treatment
  *
  * Arguments:
