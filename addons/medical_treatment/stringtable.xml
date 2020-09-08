@@ -130,14 +130,13 @@
             <English>Tourniquet Treatment Time</English>
             <French>Temps de traitement du tourniquet</French>
             <German>Tourniquet-Behandlungszeit</German>
-
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time in seconds it takes to apply a tourniquet.</English>
             <French>Temps en secondes nécessaire pour appliquer un garrot.</French>
             <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
         </Key>
-             <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSyringe_DisplayName">
+            <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSyringe_DisplayName">
             <English>Syringe Treatment Time</English>
             <French>Temps de traitement de la seringue</French>
             <German>Spritzenbehandlungszeit</German>
@@ -176,7 +175,7 @@
             <English>Time in seconds it takes to apply a body bag.</English>
             <French>Temps en secondes qu'il faut pour appliquer un sac mortuaire.</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
-       </Key>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>
