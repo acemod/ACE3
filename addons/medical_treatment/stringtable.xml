@@ -126,6 +126,57 @@
             <Polish>Współczynnik kontroluje szanse na ponowne otworzenie rany. Końcowa szansa na otworzenie jest ustalana przez pomnożenie tej wartości z wartością szansy na otworzenie rany dla typu rany oraz typu bandaża.</Polish>
             <Japanese>傷が再開放する確率の係数を設定できます。再開放は、この数値と傷の種類、そして使用した包帯に応じて左右されます。</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
+            <English>Tourniquet Treatment Time</English>
+            <French>Temps de traitement du tourniquet</French>
+            <German>Tourniquet-Behandlungszeit</German>
+
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
+            <English>Time in seconds it takes to apply a tourniquet.</English>
+            <French>Temps en secondes nécessaire pour appliquer un garrot.</French>
+            <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
+        </Key>
+             <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSyringe_DisplayName">
+            <English>Syringe Treatment Time</English>
+            <French>Temps de traitement de la seringue</French>
+            <German>Spritzenbehandlungszeit</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSyringe_Description">
+            <English>Time in seconds it takes to apply a syringe.</English>
+            <French>Temps en secondes nécessaire pour appliquer une seringue.</French>
+            <German>Zeit in Sekunden, die zum Auftragen einer Spritze benötigt wird.</German>
+        </Key>
+            <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
+            <English>IV Bag Treatment Time</English>
+            <French>Temps de traitement du sac IV</French>
+            <German>IV Beutelbehandlungszeit</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
+            <English>Time in seconds it takes to apply an IV bag.</English>
+            <French>Temps en secondes nécessaire pour appliquer un sac IV.</French>
+            <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
+        </Key>
+            <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
+            <English>Splint Treatment Time</English>
+            <French>Temps de traitement de l'attelle</French>
+            <German>Schienenbehandlungszeit</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
+            <English>Time in seconds it takes to apply a splint.</English>
+            <French>Temps en secondes nécessaire pour appliquer une attelle.</French>
+            <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
+        </Key>
+            <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
+            <English>Body Bag Use Time</English>
+            <French>Temps d'utilisation du sac mortuaire</French>
+            <German>Anwendungszeit für Leichensack</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
+            <English>Time in seconds it takes to apply a body bag.</English>
+            <French>Temps en secondes qu'il faut pour appliquer un sac mortuaire.</French>
+            <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
+       </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>

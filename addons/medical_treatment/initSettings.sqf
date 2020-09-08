@@ -35,6 +35,52 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(treatmentTimeTourniquet),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTourniquet_DisplayName), LSTRING(TreatmentTimeTourniquet_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 30, 7, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeSplint),
+    "SLIDER",
+    [LSTRING(TreatmentTimeSplint_DisplayName), LSTRING(TreatmentTimeSplint_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 30, 7, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeIV),
+    "SLIDER",
+    [LSTRING(TreatmentTimeIV_DisplayName), LSTRING(TreatmentTimeIV_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 36, 12, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeSyringe),
+    "SLIDER",
+    [LSTRING(TreatmentTimeSyringe_DisplayName), LSTRING(TreatmentTimeSyringe_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 30, 5, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeBodyBag),
+    "SLIDER",
+    [LSTRING(TreatmentTimeBodyBag_DisplayName), LSTRING(TreatmentTimeBodyBag_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 60, 15, 2],
+    true
+] call CBA_settings_fnc_init;
+
+
+[
     QGVAR(clearTraumaAfterBandage),
     "CHECKBOX",
     [LSTRING(ClearTraumaAfterBandage_DisplayName), LSTRING(ClearTraumaAfterBandage_Description)],
