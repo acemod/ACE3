@@ -30,7 +30,15 @@ if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWit
 if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { !(GET_FRACTURES(_unit) isEqualTo []) }) exitWith {false};
 
 // Require at least bandaged wounds.
-if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1 && { !(count GET_OPEN_WOUNDS(_unit) == (count GET_BANDAGED_WOUNDS(_unit) + count GET_STITCHED_WOUNDS(_unit))) }) exitWith {false};
+if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1) then {
+    _openWounds = GET_OPEN_WOUNDS(_unit);
+    {
+        // private _current = _x select 2;
+        // if(_current > 0) exitWith {false};
+        if(_x select 2 > 0) exitWith {false};
+    } forEach _openWounds;
+};
+
 
 // Require stitched wounds.
 if (EGVAR(medical_treatment,requiredWoundStatePAK) == 2 && { !(count GET_OPEN_WOUNDS(_unit) ==  count GET_STITCHED_WOUNDS(_unit)) }) exitWith {false};
