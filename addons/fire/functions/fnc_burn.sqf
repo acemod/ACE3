@@ -144,6 +144,10 @@ if (_isBurning) exitWith {};
     };
     
     if !(isGamePaused) then {
+        if (_isThisUnitAlive) then {
+            _isThisUnitAlive = (!(isNull _unit) && { !(_unit getVariable [QGVAR(killed), false]) });
+        };
+    
         // propagate fire
         if ((CBA_missionTime - _lastPropogateUpdate) >= BURN_PROPOGATE_UPDATE) then {
             _lastPropogateUpdate = CBA_missionTime;
@@ -175,7 +179,7 @@ if (_isBurning) exitWith {};
             _lastIntensityUpdate = CBA_missionTime;
             _intensity = _intensity - INTENSITY_LOSS - (rain / 10);
             if (local _unit) then {
-                if (!(isNull _unit) && { alive _unit }) then {
+                if (_isThisUnitAlive) then {
                     if !(IS_UNCONSCIOUS(_unit)) then {
                         if !(isPlayer _unit) then {
                             private _sdr = _unit getVariable [QGVAR(stopDropRoll), false];
@@ -254,7 +258,7 @@ if (_isBurning) exitWith {};
         };
         
         private _burnIndicatorPFH = _unit getVariable [QGVAR(burnUIPFH), -1];
-        if (_unit isEqualTo ACE_PLAYER && { _burnIndicatorPFH < 0 }) then {
+        if (_unit isEqualTo ACE_PLAYER && { _isThisUnitAlive } && { _burnIndicatorPFH < 0 }) then {
             _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
@@ -318,6 +322,8 @@ if (_isBurning) exitWith {};
     
     _lastIntensityUpdate = 0;
     _lastPropogateUpdate = 0;
+    
+    _isThisUnitAlive = true;
 }, {
     (_this getVariable "params") params ["_unit"];
 
@@ -342,4 +348,4 @@ if (_isBurning) exitWith {};
     // exit condition
     (_this getVariable "params") params ["_unit"];
     (isNull _unit) || { (_unit != vehicle _unit) && { isNull vehicle _unit } } || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) };
-}, ["_intensity", "_fireParticle", "_smokeParticle", "_fireLight", "_fireSound", "_lightFlare", "_lastIntensityUpdate", "_lastPropogateUpdate"]] call CBA_fnc_createPerFrameHandlerObject
+}, ["_intensity", "_fireParticle", "_smokeParticle", "_fireLight", "_fireSound", "_lightFlare", "_lastIntensityUpdate", "_lastPropogateUpdate", "_isThisUnitAlive"]] call CBA_fnc_createPerFrameHandlerObject

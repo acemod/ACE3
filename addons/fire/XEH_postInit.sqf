@@ -10,6 +10,12 @@
     TRACE_1("settingsInit", GVAR(enabled));
     if !(GVAR(enabled)) exitWith {};
 
+    // we track when units die to stop adding damage to them
+    ["CAManBase", "killed", {
+        params ["_unit"];
+        _unit setVariable [QGVAR(killed), true];
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+
     if (isServer) then {
         [QGVAR(addFireSource), {
             params ["_source", "_radius", "_intensity", "_key", ["_condition", { true }], ["_conditionArgs", []]];
