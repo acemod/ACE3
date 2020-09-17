@@ -2,6 +2,7 @@ class ACE_Settings {
     class GVAR(enabled) {
         category = CSTRING(Module_DisplayName);
         typeName = "BOOL";
+        isClientSettable = 1;
         value = 1;
         displayName = CSTRING(enabled_DisplayName);
         description = CSTRING(enabled_Description);
