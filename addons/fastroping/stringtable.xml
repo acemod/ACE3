@@ -61,6 +61,7 @@
             <French>Désactiver le système d'aérocordage</French>
             <Czech>Odložit systém slaňování</Czech>
             <Spanish>Recoger sistema de Cuerda Rápida</Spanish>
+            <Turkish>Halatla inme sistemini yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -250,6 +251,7 @@
             <Italian>Utilizzato per distribuire corde da un elicottero compatibile</Italian>
             <Czech>Používané na přípravu lan na slaňování z kompatibilních helikoptér</Czech>
             <Spanish>Usar para desplegar cuerdas desde helicopteros compatibles</Spanish>
+            <Turkish>Halatları uyumlu helikopterlerden salmak için kullanır</Turkish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Rope_12_Display">
             <English>Rope 12.2 meters</English>

@@ -40,7 +40,7 @@
             <Spanish>Desmonta</Spanish>
             <Japanese>解体</Japanese>
             <Chinese>拆解</Chinese>
-            <Turkish>Bin</Turkish>
+            <Turkish>Sök</Turkish>
         </Key>
         <Key ID="STR_ACE_CSW_GetIn_displayName">
             <English>Get In</English>
@@ -54,6 +54,7 @@
             <Spanish>Entrar</Spanish>
             <Japanese>乗る</Japanese>
             <Chinese>進入</Chinese>
+            <Turkish>Bin</Turkish>
         </Key>
         <Key ID="STR_ACE_CSW_loadX">
             <English>Load %1</English>

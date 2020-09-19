@@ -1327,6 +1327,7 @@
             <English>M183 Demolition Charge (Throwable)</English>
             <French>M183 Charge de démolition (lançable)</French>
             <Japanese>M183 梱包爆薬 (投てき仕様)</Japanese>
+            <Turkish>M183 Demolition Charge (Throwable)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1349,6 +1350,7 @@
             <English>M112 Demolition Charge (Throwable)</English>
             <French>M112 Bloc de démolition (lançable)</French>
             <Japanese>M112 爆薬ブロック (投てき仕様)</Japanese>
+            <Turkish>M112 Demolition Charge (Throwable)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>

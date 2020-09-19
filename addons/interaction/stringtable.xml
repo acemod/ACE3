@@ -1108,6 +1108,7 @@
             <Korean>탄창 건네기</Korean>
             <Chinesesimp>给予弹匣</Chinesesimp>
             <Chinese>給予彈匣</Chinese>
+            <Turkish>Sarjörleri birleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
@@ -1185,6 +1186,7 @@
             <French>Retirer le corps</French>
             <Czech>Vytáhnout tělo</Czech>
             <Spanish>Sacar cuerpo</Spanish>
+            <Turkish>Vücudu dışarı çıkart</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_SmashWindshield">
             <English>Smash windshield</English>
@@ -1199,6 +1201,7 @@
             <Portuguese>Quebrar pára-brisa</Portuguese>
             <Chinese>踹開擋風玻璃</Chinese>
             <Spanish>Romper parabrisas</Spanish>
+            <Turkish>Ön camı parçala</Turkish>
         </Key>
     </Package>
 </Project>

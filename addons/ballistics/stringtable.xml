@@ -208,6 +208,7 @@
             <Polish>12 Gauge 2 naboje #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #00 Картечь</Russian>
+            <Turkish>12 kalibre 2 mermi #00 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 2Rnd #0 Buckshot</English>
@@ -221,6 +222,7 @@
             <Polish>12 Gauge 2 naboje #0 Śrut</Polish>
             <Portuguese>Chumbo #0 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #0 Картечь</Russian>
+            <Turkish>12 kalibre 2 mermi #0 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 2Rnd #1 Buckshot</English>
@@ -234,6 +236,7 @@
             <Polish>12 Gauge 2 naboje #1 Śrut</Polish>
             <Portuguese>Chumbo #1 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #1 Картечь</Russian>
+            <Turkish>12 kalibre 2 mermi #1 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 2Rnd #2 Buckshot</English>
@@ -247,6 +250,7 @@
             <Polish>12 Gauge 2 naboje #2 Śrut</Polish>
             <Portuguese>Chumbo #2 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #2 Картечь</Russian>
+            <Turkish>12 kalibre 2 mermi #2 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 2Rnd #3 Buckshot</English>
@@ -260,6 +264,7 @@
             <Polish>12 Gauge 2 naboje #3 Śrut</Polish>
             <Portuguese>Chumbo #3 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #3 Картечь</Russian>
+            <Turkish>12 kalibre 2 mermi #3 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 2Rnd #4 Buckshot</English>
@@ -273,6 +278,7 @@
             <Polish>12 Gauge 2 naboje #4 Śrut</Polish>
             <Portuguese>Chumbo #4 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #4 Картечь</Russian>
+            <Turkish>12 kalibre 2 mermi #4 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 2Rnd #7 Birdshot</English>
@@ -286,6 +292,7 @@
             <Polish>12 Gauge 2 naboje #7 Śrut</Polish>
             <Portuguese>Chumbo #7 Calibre Doze 2 Tiros</Portuguese>
             <Russian>12 Калибр 2 патр. #7 Дробь</Russian>
+            <Turkish>12 kalibre 2 mermi #5 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 6Rnd #00 Buckshot</English>
@@ -299,6 +306,7 @@
             <Polish>12 Gauge 6 naboi #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #00 Картечь</Russian>
+            <Turkish>12 kalibre 6 mermi #00 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No0_Buck_Name">
             <English>12 Gauge 6Rnd #0 Buckshot</English>
@@ -312,6 +320,7 @@
             <Polish>12 Gauge 6 naboi #0 Śrut</Polish>
             <Portuguese>Chumbo #0 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #0 Картечь</Russian>
+            <Turkish>12 kalibre 6 mermi #0 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No1_Buck_Name">
             <English>12 Gauge 6Rnd #1 Buckshot</English>
@@ -325,6 +334,7 @@
             <Polish>12 Gauge 6 naboi #1 Śrut</Polish>
             <Portuguese>Chumbo #1 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #1 Картечь</Russian>
+            <Turkish>12 kalibre 6 mermi #1 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No2_Buck_Name">
             <English>12 Gauge 6Rnd #2 Buckshot</English>
@@ -338,6 +348,7 @@
             <Polish>12 Gauge 6 naboi #2 Śrut</Polish>
             <Portuguese>Chumbo #2 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #2 Картечь</Russian>
+            <Turkish>12 kalibre 6 mermi #2 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No3_Buck_Name">
             <English>12 Gauge 6Rnd #3 Buckshot</English>
@@ -351,6 +362,7 @@
             <Polish>12 Gauge 6 naboi #3 Śrut</Polish>
             <Portuguese>Chumbo #3 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #3 Картечь</Russian>
+            <Turkish>12 kalibre 6 mermi #3 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Buck_Name">
             <English>12 Gauge 6Rnd #4 Buckshot</English>
@@ -364,6 +376,7 @@
             <Polish>12 Gauge 6 naboi #4 Śrut</Polish>
             <Portuguese>Chumbo #4 Calibre Doze 6 Tiros</Portuguese>
             <Russian>12 Калибр 6 патр. #4 Картечь</Russian>
+            <Turkish>12 kalibre 6 mermi #4 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
             <English>12 Gauge 6Rnd #7 Birdshot</English>
@@ -376,6 +389,7 @@
             <Czech>6x #7 Broky malé (kalibr 2.54 mm)</Czech>
             <Polish>12 Gauge 6 naboi #7 Śrut</Polish>
             <Russian>12 Калибр 6 патр. #7 Дробь</Russian>
+            <Turkish>12 kalibre 6 mermi #7 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
@@ -389,6 +403,7 @@
             <Polish>12 Gauge 15 naboi #00 Śrut</Polish>
             <Portuguese>Chumbo #00 Calibre Doze 15 Tiros</Portuguese>
             <Russian>12 Калибр 15 патр. #00 Картечь</Russian>
+            <Turkish>12 kalibre 15 mermi #00 İrisaçma</Turkish>
         </Key>
         <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">
@@ -406,6 +421,7 @@
             <Korean>20발들이 6.5x47mm (HPBT Scenar)</Korean>
             <Chinese>6.5x47毫米 20發 彈匣 (拉普 空尖艇尾狙擊專用彈)</Chinese>
             <Chinesesimp>6.5x47mm 20发 弹匣 (Lapua 空尖艇尾狙击专用弹)</Chinesesimp>
+            <Turkish>6.5x47mm 20Rnd Mag (HPBT Scenar)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5mm Lapua</English>
@@ -422,6 +438,7 @@
             <Korean>6.5mm Lapua</Korean>
             <Chinese>6.5毫米 拉普 空尖艇尾狙擊專用彈</Chinese>
             <Chinesesimp>6.5mm Lapua 空尖艇尾狙击专用弹</Chinesesimp>
+            <Turkish>6.5mm Lapua</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Description">
             <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
@@ -438,6 +455,7 @@
             <Korean>구경: 6.5x47mm (HPBT Scenar)&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: QBU-88</Korean>
             <Chinese>口徑: 6.5x47毫米 (拉普 空尖艇尾狙擊專用彈)&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
             <Chinesesimp>口径: 6.5x47mm (Lapua 空尖艇尾狙击专用弹)&lt;br /&gt;发数: 20&lt;br /&gt;使用于: QBU-88</Chinesesimp>
+            <Turkish>Kalibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: QBU-88</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Name">
             <English>6.5mm Creedmor 20Rnd Mag</English>
@@ -454,6 +472,7 @@
             <Korean>20발들이 6.5mm Creedmor 탄창</Korean>
             <Chinese>6.5毫米 20發 彈匣 (克里德莫爾(CM) 狙擊專用彈)</Chinese>
             <Chinesesimp>6.5mm 20发 弹匣 (Creedmor 狙击专用弹)</Chinesesimp>
+            <Turkish>6.5mm Creedmor 20Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -470,6 +489,7 @@
             <Korean>6.5mm CM</Korean>
             <Chinese>6.5毫米 CM 狙擊專用彈</Chinese>
             <Chinesesimp>6.5mm CM 狙击专用弹</Chinesesimp>
+            <Turkish>6.5mm CM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Description">
             <English>Caliber: 6.5x47mm Creedmor&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
@@ -486,6 +506,7 @@
             <Korean>구경: 6.5x47mm Creedmor&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: QBU-88</Korean>
             <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: QBU-88</Chinese>
             <Chinesesimp>口径: 6.5x47mm Creedmor 狙击专用弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: QBU-88</Chinesesimp>
+            <Turkish>Kalibre: 6.5x47mm Creedmor&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: QBU-88</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_580x42_DBP88_Mag_Name">
             <English>5.8mm DBP88 10Rnd Mag</English>
@@ -502,6 +523,7 @@
             <Korean>10발들이 5.8mm DBP88 탄창</Korean>
             <Chinese>5.8毫米 10發 彈匣 (DBP88)</Chinese>
             <Chinesesimp>5.8mm 10发 弹匣 (DBP88)</Chinesesimp>
+            <Turkish>5.8mm DBP88 10Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_580x42_DBP88_Mag_NameShort">
             <English>5.8mm DBP88</English>
@@ -518,6 +540,7 @@
             <Korean>5.8mm DBP88</Korean>
             <Chinese>5.8毫米 DBP88</Chinese>
             <Chinesesimp>5.8mm DBP88</Chinesesimp>
+            <Turkish>5.8mm DBP88</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_580x42_DBP88_Mag_Description">
             <English>Caliber: 5.8x42mm DBP88&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: QBU-88</English>
@@ -534,6 +557,7 @@
             <Korean>구경: 5.8x42mm DBP88&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: QBU-88</Korean>
             <Chinese>口徑: 5.8x42毫米 DBP88&lt;br /&gt;發數: 10&lt;br /&gt;使用於: QBU-88</Chinese>
             <Chinesesimp>口径: 5.8x42mm DBP88&lt;br /&gt;发数: 10&lt;br /&gt;使用于: QBU-88</Chinesesimp>
+            <Turkish>Kalibre: 5.8x42mm DBP88&lt;br /&gt;Mermi: 10&lt;br /&gt;Kullanıyor: QBU-88</Turkish>
         </Key>
         <!-- MX -->
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_Tracer_DimName">
@@ -551,6 +575,7 @@
             <Korean>30발들이 6.5mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>6.5毫米 30發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 低视度红外线曳光弹 弹匣</Chinesesimp>
+            <Turkish>6.5mm 30Rnd Tracer IR-DIM Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -567,6 +592,7 @@
             <Korean>6.5mm IR-DIM 예광탄</Korean>
             <Chinese>6.5毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>6.5mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>6.5mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_Tracer_DimDescription">
             <English>Caliber: 6.5x39mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -583,6 +609,7 @@
             <Korean>구경: 6.5x39mm IR-DIM 예광탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
             <Chinese>口徑: 6.5x39毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
             <Chinesesimp>口径: 6.5x39mm 低视度红外线曳光弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MX/C/M/SW/3GL</Chinesesimp>
+            <Turkish>Kalibre: 6.5x39mm Tracer IR-DIM&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MX/C/M/SW/3GL</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_SDName">
             <English>6.5mm 30Rnd SD Mag</English>
@@ -599,6 +626,7 @@
             <Korean>30발들이 6.5mm 아음속탄 탄창</Korean>
             <Chinese>6.5毫米 30發 消音彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 消音弹 弹匣</Chinesesimp>
+            <Turkish>6.5mm 30Rnd SD Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_SDNameShort">
             <English>6.5mm SD</English>
@@ -615,6 +643,7 @@
             <Korean>6.5mm 아음속탄</Korean>
             <Chinese>6.5毫米 消音彈</Chinese>
             <Chinesesimp>6.5mm 消音弹</Chinesesimp>
+            <Turkish>6.5mm SD</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_SDDescription">
             <English>Caliber: 6.5x39mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -631,6 +660,7 @@
             <Korean>구경: 6.5x39mm SD&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
             <Chinese>口徑: 6.5x39毫米 消音彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
             <Chinesesimp>口径: 6.5x39mm 消音弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MX/C/M/SW/3GL</Chinesesimp>
+            <Turkish>Kalibre: 6.5x39mm SD&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MX/C/M/SW/3GL</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_APName">
             <English>6.5mm 30Rnd AP Mag</English>
@@ -647,6 +677,7 @@
             <Korean>30발들이 6.5mm 철갑탄 탄창</Korean>
             <Chinese>6.5毫米30發 穿甲彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 穿甲弹 弹匣</Chinesesimp>
+            <Turkish>6.5mm 30Rnd AP Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_APNameShort">
             <English>6.5mm AP</English>
@@ -663,6 +694,7 @@
             <Korean>6.5mm 철갑탄</Korean>
             <Chinese>6.5毫米 穿甲彈</Chinese>
             <Chinesesimp>6.5mm 穿甲弹</Chinesesimp>
+            <Turkish>6.5mm AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_APDescription">
             <English>Caliber: 6.5x39mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
@@ -679,6 +711,7 @@
             <Korean>구경: 6.5x39mm 철갑탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
             <Chinese>口徑: 6.5x39毫米 穿甲彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MX/C/M/SW/3GL</Chinese>
             <Chinesesimp>口径: 6.5x39mm 穿甲弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MX/C/M/SW/3GL</Chinesesimp>
+            <Turkish>Kalibre: 6.5x39mm AP&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MX/C/M/SW/3GL</Turkish>
         </Key>
         <!-- KATIBA -->
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_Tracer_DimName">
@@ -696,6 +729,7 @@
             <Korean>30발들이 6.5mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>6.5毫米 30發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 低视度红外线曳光弹 弹匣</Chinesesimp>
+            <Turkish>6.5mm 30Rnd Tracer IR-DIM Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -712,6 +746,7 @@
             <Korean>6.5mm IR-DIM 예광탄</Korean>
             <Chinese>6.5毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>6.5mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>6.5mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_Tracer_DimDescription">
             <English>Caliber: 6.5x39mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
@@ -728,6 +763,7 @@
             <Korean>구경: 6.5x39mm IR-DIM 예광탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: Katiba</Korean>
             <Chinese>口徑: 6.5x39毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
             <Chinesesimp>口径: 6.5x39mm 低视度红外线曳光弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: Katiba</Chinesesimp>
+            <Turkish>Kalibre: 6.5x39mm Tracer IR-DIM&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: Katiba</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_SDName">
             <English>6.5mm 30Rnd SD Mag</English>
@@ -744,6 +780,7 @@
             <Korean>30발들이 6.5mm 아음속탄 탄창</Korean>
             <Chinese>6.5毫米 30發 消音彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 消音弹 弹匣</Chinesesimp>
+            <Turkish>6.5mm 30Rnd SD Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_SDNameShort">
             <English>6.5mm SD</English>
@@ -760,6 +797,7 @@
             <Korean>6.5mm 아음속탄</Korean>
             <Chinese>6.5毫米 消音彈</Chinese>
             <Chinesesimp>6.5mm 消音弹</Chinesesimp>
+            <Turkish>6.5mm SD</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_SDDescription">
             <English>Caliber: 6.5x39mm SD&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
@@ -776,6 +814,7 @@
             <Korean>구경: 6.5x39mm 아음속탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: Katiba</Korean>
             <Chinese>口徑: 6.5x39毫米 消音彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
             <Chinesesimp>口径: 6.5x39mm 消音弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: Katiba</Chinesesimp>
+            <Turkish>Kalibre: 6.5x39mm SD&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: Katiba</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_APName">
             <English>6.5mm 30Rnd AP Mag</English>
@@ -792,6 +831,7 @@
             <Korean>30발들이 6.5mm 철갑탄 탄창</Korean>
             <Chinese>6.5毫米 30發 穿甲彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 30发 穿甲弹 弹匣</Chinesesimp>
+            <Turkish>6.5mm 30Rnd AP Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_APNameShort">
             <English>6.5mm AP</English>
@@ -808,6 +848,7 @@
             <Korean>6.5mm 철갑탄</Korean>
             <Chinese>6.5毫米 穿甲彈</Chinese>
             <Chinesesimp>6.5mm 穿甲弹</Chinesesimp>
+            <Turkish>6.5mm AP</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_APDescription">
             <English>Caliber: 6.5x39mm AP&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
@@ -824,6 +865,7 @@
             <Korean>구경: 6.5x39mm 철갑탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: Katiba</Korean>
             <Chinese>口徑: 6.5x39m毫米 穿甲彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Katiba</Chinese>
             <Chinesesimp>口径: 6.5x39mm 穿甲弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: Katiba</Chinesesimp>
+            <Turkish>Kalibre: 6.5x39mm AP&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: Katiba</Turkish>
         </Key>
         <!-- 5.56x45mm -->
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_mag_Tracer_DimName">
@@ -841,6 +883,7 @@
             <Korean>30발 들이 5.56mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>5.56毫米 30發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>5.56mm 30发 低视度红外线曳光弹 弹匣</Chinesesimp>
+            <Turkish>5.56mm 30rnd Tracer IR-DIM Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_mag_Tracer_DimNameShort">
             <English>5.56mm IR-DIM</English>
@@ -857,6 +900,7 @@
             <Korean>5.56mm IR-DIM 예광탄</Korean>
             <Chinese>5.56毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>5.56mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>5.56mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_mag_Tracer_DimDescription">
             <English>Caliber: 5.56x45mm Tracer IR-DIM&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
@@ -873,6 +917,7 @@
             <Korean>구경: 5.56x45mm IR-DIM 예광탄&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Korean>
             <Chinese>口徑: 5.56x45毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Chinese>
             <Chinesesimp>口径: 5.56x45mm 低视度红外线曳光弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Chinesesimp>
+            <Turkish>Kalibre: 5.56x45mm Tracer IR-DIM&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Turkish>
         </Key>
         <!-- 7.62x51mm -->
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_TracerName">
@@ -890,6 +935,7 @@
             <Korean>20발들이 7.62mm 예광탄 탄창</Korean>
             <Chinese>7.62毫米 20發 曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62mm 20发 曳光弹 弹匣</Chinesesimp>
+            <Turkish>7.62mm 20rnd Tracer Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_TracerNameShort">
             <English>7.62mm Tracer</English>
@@ -906,6 +952,7 @@
             <Korean>7.62mm 예광탄</Korean>
             <Chinese>7.62毫米 曳光彈</Chinese>
             <Chinesesimp>7.62mm 曳光弹</Chinesesimp>
+            <Turkish>7.62mm İzli</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_TracerDescription">
             <English>Caliber: 7.62x51mm Tracer&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
@@ -922,6 +969,7 @@
             <Korean>구경: 7.62x51mm 예광탄&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: Mk18 ABR</Korean>
             <Chinese>口徑: 7.62x51毫米 曳光彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
             <Chinesesimp>口径: 7.62x51mm 曳光弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm Tracer&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_Tracer_DimName">
             <English>7.62mm 20rnd Tracer IR-DIM Mag</English>
@@ -938,6 +986,7 @@
             <Korean>20발들이 7.62mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>7.62毫米 20發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62mm 20发 低视度红外线曳光弹 弹匣</Chinesesimp>
+            <Turkish>7.62mm 20rnd Tracer IR-DIM Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_Tracer_DimNameShort">
             <English>7.62mm IR-DIM</English>
@@ -954,6 +1003,7 @@
             <Korean>7.62mm IR-DIM 예광탄</Korean>
             <Chinese>7.62毫米 低視紅外曳光彈</Chinese>
             <Chinesesimp>7.62mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>7.62mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_Tracer_DimDescription">
             <English>Caliber: 7.62x51mm Tracer IR-DIM&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
@@ -970,6 +1020,7 @@
             <Korean>구경: 7.62x51mm IR-DIM 예광탄&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: Mk18 ABR</Korean>
             <Chinese>口徑: 7.62x51毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
             <Chinesesimp>口径: 7.62x51mm 低视度红外线曳光弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm Tracer IR-DIM&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_SDName">
             <English>7.62mm 20Rnd SD Mag</English>
@@ -986,6 +1037,7 @@
             <Korean>20발들이 7.62mm 아음속탄 탄창</Korean>
             <Chinese>7.62毫米 20發 消音彈 彈匣</Chinese>
             <Chinesesimp>7.62mm 20发 消音弹 弹匣</Chinesesimp>
+            <Turkish>7.62mm 20Rnd SD Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_SDNameShort">
             <English>7.62mm SD</English>
@@ -1002,6 +1054,7 @@
             <Korean>7.62mm 아음속탄</Korean>
             <Chinese>7.62毫米 消音彈</Chinese>
             <Chinesesimp>7.62mm 消音弹</Chinesesimp>
+            <Turkish>7.62mm SD</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_SDDescription">
             <English>Caliber: 7.62x51mm SD&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
@@ -1018,6 +1071,7 @@
             <Korean>구경: 7.62x51mm SD&lt;br /&gt;장탄수: 20&lt;br /&gt;사용처: Mk18 ABR</Korean>
             <Chinese>口徑: 7.62x51毫米 消音彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
             <Chinesesimp>口径: 7.62x51mm 消音弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm SD&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
         </Key>
         <!-- .338 Norma Magnum -->
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_TracerName">
@@ -1035,6 +1089,7 @@
             <Korean>130발들이 .338 NM 예광탄 벨트</Korean>
             <Chinese>.338 拉普麥格農(NM) 130發 曳光彈 彈鏈</Chinese>
             <Chinesesimp>.338 NM 130发 曳光弹 弹链</Chinesesimp>
+            <Turkish>.338 NM 130Rnd Tracer Belt</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_TracerNameShort">
             <English>.338 NM Tracer</English>
@@ -1051,7 +1106,7 @@
             <Korean>.338 NM 예광탄</Korean>
             <Chinese>.338 NM 曳光彈</Chinese>
             <Chinesesimp>.338 NM 曳光弹</Chinesesimp>
-            <Turkish>.338 NM Tracer</Turkish>
+            <Turkish>.338 NM İzli</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_TracerDescription">
             <English>Caliber: .338 Norma Magnum Tracer&lt;br /&gt;Rounds: 130&lt;br /&gt;Used in: SPMG</English>
@@ -1068,6 +1123,7 @@
             <Korean>구경: .338 Norma 매그넘 예광탄&lt;br /&gt;장탄수: 130&lt;br /&gt;사용처: SPMG</Korean>
             <Chinese>口徑: .338 拉普麥格農 曳光彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
             <Chinesesimp>口径: .338 Norma Magnum 曳光弹&lt;br /&gt;发数: 130&lt;br /&gt;使用于: SPMG</Chinesesimp>
+            <Turkish>Kalibre: .338 Norma Magnum Tracer&lt;br /&gt;Mermi: 130&lt;br /&gt;Kullanıyor: SPMG</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_Tracer_DimName">
             <English>.338 NM 130Rnd IR-DIM Belt</English>
@@ -1084,6 +1140,7 @@
             <Korean>130발들이 .338 NM IR-DIM 예광탄 벨트</Korean>
             <Chinese>.338 拉普麥格農(NM) 130發 低視度紅外線曳光彈 彈鏈</Chinese>
             <Chinesesimp>.338 NM 130发 低视度红外线曳光弹 弹链</Chinesesimp>
+            <Turkish>.338 NM 130Rnd IR-DIM Belt</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_Tracer_DimNameShort">
             <English>.338 NM IR-DIM</English>
@@ -1117,6 +1174,7 @@
             <Korean>구경: .338 Norma 매그넘 IR-DIM 예광탄&lt;br /&gt;장탄수: 130&lt;br /&gt;사용처: SPMG</Korean>
             <Chinese>口徑: .338 拉普麥格農 低視度紅外線曳光彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
             <Chinesesimp>口径: .338 Norma Magnum 低视度红外线曳光弹&lt;br /&gt;发数: 130&lt;br /&gt;使用于: SPMG</Chinesesimp>
+            <Turkish>Kalibre: .338 Norma Magnum Tracer IR-DIM&lt;br /&gt;Mermi: 130&lt;br /&gt;Kullanıyor: SPMG</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_APName">
             <English>.338 NM 130Rnd AP Belt</English>
@@ -1133,6 +1191,7 @@
             <Korean>130발들이 .338 NM 철갑탄 벨트</Korean>
             <Chinese>.338 拉普麥格農(NM) 130發 穿甲彈 彈鏈</Chinese>
             <Chinesesimp>.338 NM 130发 穿甲弹 弹链</Chinesesimp>
+            <Turkish>.338 NM 130Rnd AP Belt</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_APNameShort">
             <English>.338 NM AP</English>
@@ -1166,6 +1225,7 @@
             <Korean>구경: .338 Norma 매그넘 철갑탄&lt;br /&gt;장탄수: 130&lt;br /&gt;사용처: SPMG</Korean>
             <Chinese>口徑: .338 拉普麥格農 穿甲彈&lt;br /&gt;發數: 130&lt;br /&gt;使用於: SPMG</Chinese>
             <Chinesesimp>口径: .338 Norma Magnum 穿甲弹&lt;br /&gt;发数: 130&lt;br /&gt;使用于: SPMG</Chinesesimp>
+            <Turkish>Kalibre: .338 Norma Magnum AP&lt;br /&gt;Mermi: 130&lt;br /&gt;Kullanıyor: SPMG</Turkish>
         </Key>
         <!-- 9.3x64mm 10Rnd -->
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_TracerName">
@@ -1183,6 +1243,7 @@
             <Korean>10발들이 9.3mm 예광탄 탄창</Korean>
             <Chinese>9.3毫米 10發 曳光彈 彈匣</Chinese>
             <Chinesesimp>9.3mm 10发 曳光弹 弹匣</Chinesesimp>
+            <Turkish>9.3mm 10Rnd Tracer Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_TracerNameShort">
             <English>9.3mm Tracer</English>
@@ -1216,6 +1277,7 @@
             <Korean>구경: 9.3x64mm 예광탄&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: Cyrus</Korean>
             <Chinese>口徑: 9.3x64毫米 曳光彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Cyrus</Chinese>
             <Chinesesimp>口径: 9.3x64mm 曳光弹&lt;br /&gt;发数: 10&lt;br /&gt;使用于: Cyrus</Chinesesimp>
+            <Turkish>Kalibre: 9.3x64mm Tracer&lt;br /&gt;Mermi: 10&lt;br /&gt;Kullanıyor: Cyrus</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_Tracer_DimName">
             <English>9.3mm 10Rnd Tracer IR-DIM Mag</English>
@@ -1232,6 +1294,7 @@
             <Korean>10발들이 9.3mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>9.3毫米 10發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>9.3mm 10发 低视度红外线曳光弹 弹匣</Chinesesimp>
+            <Turkish>9.3mm 10Rnd Tracer IR-DIM Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_Tracer_DimNameShort">
             <English>9.3mm IR-DIM</English>
@@ -1265,6 +1328,7 @@
             <Korean>구경: 9.3x64mm IR-DIM 예광탄&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: Cyrus</Korean>
             <Chinese>口徑: 9.3x64毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Cyrus</Chinese>
             <Chinesesimp>口径: 9.3x64mm 低视度红外线曳光弹&lt;br /&gt;发数: 10&lt;br /&gt;使用于: Cyrus</Chinesesimp>
+            <Turkish>Kalibre: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Mermi: 10&lt;br /&gt;Kullanıyor: Cyrus</Turkish>
         </Key>
         <!-- 9.3x64mm 150Rnd Belt-->
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_TracerName">
@@ -1282,6 +1346,7 @@
             <Korean>150발들이 9.3mm 예광탄 벨트</Korean>
             <Chinese>9.3毫米 150發 曳光彈 彈鏈</Chinese>
             <Chinesesimp>9.3mm 150发 曳光弹 弹链</Chinesesimp>
+            <Turkish>9.3mm 150Rnd Tracer Belt</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_TracerNameShort">
             <English>9.3mm Tracer</English>
@@ -1315,6 +1380,7 @@
             <Korean>구경: 9.3x64mm 예광탄&lt;br /&gt;장탄수: 150&lt;br /&gt;사용처: Navid</Korean>
             <Chinese>口徑: 9.3x64m毫米 曳光彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
             <Chinesesimp>口径: 9.3x64mm 曳光弹&lt;br /&gt;发数: 150&lt;br /&gt;使用于: Navid</Chinesesimp>
+            <Turkish>Kalibre: 9.3x64mm Tracer&lt;br /&gt;Mermi: 150&lt;br /&gt;Kullanıyor: Navid</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_Tracer_DimName">
             <English>9.3mm 150Rnd Tracer IR-DIM Belt</English>
@@ -1331,6 +1397,7 @@
             <Korean>150발들이 9.3mm IR-DIM 예광탄 벨트</Korean>
             <Chinese>9.3毫米 150發 低視度紅外線曳光彈 彈鏈</Chinese>
             <Chinesesimp>9.3mm 150发 低视度红外线曳光弹 弹链</Chinesesimp>
+            <Turkish>9.3mm 150Rnd Tracer IR-DIM Belt</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_Tracer_DimNameShort">
             <English>9.3mm IR-DIM</English>
@@ -1364,6 +1431,7 @@
             <Korean>구경: 9.3x64mm IR-DIM 예광탄&lt;br /&gt;장탄수: 150&lt;br /&gt;사용처: Navid</Korean>
             <Chinese>口徑: 9.3x64毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
             <Chinesesimp>口径: 9.3x64mm 低视度红外线曳光弹&lt;br /&gt;发数: 150&lt;br /&gt;使用于: Navid</Chinesesimp>
+            <Turkish>Kalibre: 9.3x64mm Tracer IR-DIM&lt;br /&gt;Mermi: 150&lt;br /&gt;Kullanıyor: Navid</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_APName">
             <English>9.3mm 150Rnd AP Belt</English>
@@ -1380,6 +1448,7 @@
             <Korean>150발들이 9.3mm 철갑탄 벨트</Korean>
             <Chinese>9.3毫米 150發 穿甲彈 彈鏈</Chinese>
             <Chinesesimp>9.3mm 150发 穿甲弹 弹链</Chinesesimp>
+            <Turkish>9.3mm 150Rnd AP Belt</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_APNameShort">
             <English>9.3mm AP</English>
@@ -1413,6 +1482,7 @@
             <Korean>구경: 9.3x64mm 철갑탄&lt;br /&gt;장탄수: 150&lt;br /&gt;사용처: Navid</Korean>
             <Chinese>口徑: 9.3x64毫米 穿甲彈&lt;br /&gt;發數: 150&lt;br /&gt;使用於: Navid</Chinese>
             <Chinesesimp>口径: 9.3x64mm 穿甲弹&lt;br /&gt;发数: 150&lt;br /&gt;使用于: Navid</Chinesesimp>
+            <Turkish>Kalibre: 9.3x64mm AP&lt;br /&gt;Mermi: 150&lt;br /&gt;Kullanıyor: Navid</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_16Rnd_9x19_mag_Name">
             <English>9x19mm 16Rnd Mag</English>
@@ -1429,6 +1499,7 @@
             <Korean>16발들이 9x19mm 탄창</Korean>
             <Chinese>9x19毫米 16發 彈匣</Chinese>
             <Chinesesimp>9x19mm 16发 弹匣</Chinesesimp>
+            <Turkish>9x19mm 16Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_16Rnd_9x19_mag_NameShort">
             <English>9x19mm</English>
@@ -1462,6 +1533,7 @@
             <Korean>30발들이 9x19mm 탄창</Korean>
             <Chinese>9x19毫米 30發 彈匣</Chinese>
             <Chinesesimp>9x19mm 30发 弹匣</Chinesesimp>
+            <Turkish>9x19mm 30Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_9x19_mag_Name">
             <English>9x19mm 30Rnd Mag</English>
@@ -1478,6 +1550,7 @@
             <Korean>30발들이 9x19mm 탄창</Korean>
             <Chinese>9x19毫米 30發 彈匣</Chinese>
             <Chinesesimp>9x19mm 30发 弹匣</Chinesesimp>
+            <Turkish>9x19mm 30Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_9x19_mag_NameShort">
             <English>9x19mm</English>
@@ -1511,6 +1584,7 @@
             <Korean>30발들이 9x19mm 탄창</Korean>
             <Chinese>9x19毫米 30發 彈匣</Chinese>
             <Chinesesimp>9x19mm 30发 弹匣</Chinesesimp>
+            <Turkish>9x19mm 30Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x54_Tracer_mag_Name">
             <English>7.62x54mm 10Rnd Tracer Mag</English>
@@ -1527,6 +1601,7 @@
             <Korean>10발들이 7.62x54mm 예광탄 탄창</Korean>
             <Chinese>7.62x54毫米 10發 曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62x54mm 10发 曳光弹 弹匣</Chinesesimp>
+            <Turkish>7.62x54mm 10Rnd Tracer Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x54_Tracer_mag_NameShort">
             <English>7.62mm</English>
@@ -1560,6 +1635,7 @@
             <Korean>10발들이 7.62x54mm 예광탄 탄창</Korean>
             <Chinese>7.62x54毫米 10發 曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62x54mm 10发 曳光弹 弹匣</Chinesesimp>
+            <Turkish>7.62x54mm 10Rnd Tracer Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 100Rnd Tracer IR-DIM Mag</English>
@@ -1576,6 +1652,7 @@
             <Korean>100발들이 6.5mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>6.5毫米 100發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>6.5mm 100发 低视度红外线曳光弹 弹匣</Chinesesimp>
+            <Turkish>6.5mm 100Rnd Tracer IR-DIM Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_100Rnd_65x39_caseless_mag_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -1609,6 +1686,7 @@
             <Korean>100발들이 6.5mm IR-DIM 예광탄 탄창&lt;br /&gt;장탄수: 100&lt;br /&gt;사용처: MX LSW</Korean>
             <Chinese>6.5毫米 100發 低視度紅外線曳光彈&lt;br /&gt;發數: 100&lt;br /&gt;使用於: MX LSW</Chinese>
             <Chinesesimp>6.5mm 100发 低视度红外线曳光弹&lt;br /&gt;发数: 100&lt;br /&gt;使用于: MX LSW</Chinesesimp>
+            <Turkish>6.5mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Mermi: 100&lt;br /&gt;Kullanıyor: MX LSW</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimName">
             <English>6.5mm 200Rnd Tracer IR-DIM Belt</English>
@@ -1625,6 +1703,7 @@
             <Korean>200발들이 6.5mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>6.5毫米 200發 低視度紅外線曳光彈 彈鏈</Chinese>
             <Chinesesimp>6.5mm 200发 低视度红外线曳光弹 弹链</Chinesesimp>
+            <Turkish>6.5mm 200Rnd Tracer IR-DIM Belt</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
             <English>6.5mm IR-DIM</English>
@@ -1658,6 +1737,7 @@
             <Korean>200발들이 6.5mm IR-DIM 예광탄 벨트&lt;br /&gt;장탄수: 200&lt;br /&gt;사용처: Stoner 99 LMG</Korean>
             <Chinese>6.5毫米 200發 低視度紅外線曳光彈&lt;br /&gt;發數: 200&lt;br /&gt;使用於: Stoner 99 重機槍</Chinese>
             <Chinesesimp>6.5mm 200发 低视度红外线曳光弹&lt;br /&gt;发数: 200&lt;br /&gt;使用于: Stoner 99 LMG</Chinesesimp>
+            <Turkish>6.5mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Mermi: 200&lt;br /&gt;Kullanıyor: Stoner 99 LMG</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk262)</English>
@@ -1674,6 +1754,7 @@
             <Korean>30발들이 5.56mm 탄창 (Mk262)</Korean>
             <Chinese>5.56毫米 30發 彈匣 (Mk262 狙擊專用彈)</Chinese>
             <Chinesesimp>5.56mm 30发 弹匣 (Mk262 狙击专用弹)</Chinesesimp>
+            <Turkish>5.56mm 30Rnd Mag (Mk262)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_NameShort">
             <English>5.56mm Mk262</English>
@@ -1707,6 +1788,7 @@
             <Korean>구경: 5.56x45mm NATO (Mk262)&lt;br /&gt;장탄수: 30</Korean>
             <Chinese>口徑: 5.56x45毫米 NATO標準 (Mk262 狙擊專用彈)&lt;br /&gt;發數: 30</Chinese>
             <Chinesesimp>口径: 5.56x45mm NATO标准 (Mk262 狙击专用弹)&lt;br /&gt;发数: 30</Chinesesimp>
+            <Turkish>Kalibre: 5.56x45mm NATO (Mk262)&lt;br /&gt;Mermi: 30</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk318_mag_Name">
             <English>5.56mm 30Rnd Mag (Mk318)</English>
@@ -1723,6 +1805,7 @@
             <Korean>30발들이 5.56mm 탄창 (Mk318)</Korean>
             <Chinese>5.56毫米 30發 彈匣 (Mk318 特戰專用彈)</Chinese>
             <Chinesesimp>5.56mm 30发 弹匣 (Mk318 特战专用弹)</Chinesesimp>
+            <Turkish>5.56mm 30Rnd Mag (Mk318)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk318_mag_NameShort">
             <English>5.56mm Mk318</English>
@@ -1756,6 +1839,7 @@
             <Korean>구경: 5.56x45mm NATO (Mk318)&lt;br /&gt;장탄수: 30</Korean>
             <Chinese>口徑: 5.56x45毫米 NATO標準 (Mk318 特戰專用彈)&lt;br /&gt;發數: 30</Chinese>
             <Chinesesimp>口径: 5.56x45mm NATO标准 (Mk318 特战专用弹)&lt;br /&gt;发数: 30</Chinesesimp>
+            <Turkish>Kalibre: 5.56x45mm NATO (Mk318)&lt;br /&gt;Mermi: 30</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_Name">
             <English>5.56mm 30Rnd Mag (M995 AP)</English>
@@ -1772,6 +1856,7 @@
             <Korean>30발들이 5.56mm 탄창 (Mk995 철갑탄)</Korean>
             <Chinese>5.56毫米 30發 彈匣 (M995 穿甲彈)</Chinese>
             <Chinesesimp>5.56mm 30发 弹匣 (M995 穿甲弹)</Chinesesimp>
+            <Turkish>5.56mm 30Rnd Mag (M995 AP)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_M995_AP_mag_NameShort">
             <English>5.56mm AP</English>
@@ -1805,6 +1890,7 @@
             <Korean>구경: 5.56x45mm NATO (Mk995 철갑탄)&lt;br /&gt;장탄수: 30</Korean>
             <Chinese>口徑: 5.56x45毫米 NATO標準 (M995 穿甲彈)&lt;br /&gt;發數: 30</Chinese>
             <Chinesesimp>口径: 5.56x45mm NATO标准 (M995 穿甲弹)&lt;br /&gt;发数: 30</Chinesesimp>
+            <Turkish>Kalibre: 5.56x45mm NATO (M995 AP)&lt;br /&gt;Mermi: 30</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 10Rnd Mag (M118LR)</English>
@@ -1821,6 +1907,7 @@
             <Korean>10발들이 7.62mm 탄창 (M118LR)</Korean>
             <Chinese>7.62毫米 10發 彈匣 (M118LR 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 10发 弹匣 (M118LR 狙击专用弹)</Chinesesimp>
+            <Turkish>7.62mm 10Rnd Mag (M118LR)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M118LR_Mag_NameShort">
             <English>7.62mm M118LR</English>
@@ -1854,6 +1941,7 @@
             <Korean>구경: 7.62x51mm NATO (M118LR)&lt;br /&gt;장탄수: 10</Korean>
             <Chinese>口徑: 7.62x51毫米 NATO標準 (M118LR 狙擊專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (M118LR 狙击专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M118LR_Mag_Name">
             <English>7.62mm 20Rnd Mag (M118LR)</English>
@@ -1870,6 +1958,7 @@
             <Korean>20발들이 7.62mm 탄창 (M118LR)</Korean>
             <Chinese>7.62毫米 20發 彈匣 (M118LR 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (M118LR 狙击专用弹)</Chinesesimp>
+            <Turkish>7.62mm 20Rnd Mag (M118LR)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M118LR_Mag_NameShort">
             <English>7.62mm M118LR</English>
@@ -1903,6 +1992,7 @@
             <Korean>구경: 7.62x51mm NATO (M118LR)&lt;br /&gt;장탄수: 20</Korean>
             <Chinese>口徑: 7.62x51毫米 NATO標準 (M118LR 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (M118LR 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm NATO (M118LR)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk316_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk316 Mod 0)</English>
@@ -1919,6 +2009,7 @@
             <Korean>10발들이 7.62mm 탄창 (Mk316 Mod 0)</Korean>
             <Chinese>7.62毫米 10發 彈匣 (Mk316 Mod 0 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 10发 弹匣 (Mk316 Mod 0 狙击专用弹)</Chinesesimp>
+            <Turkish>7.62mm 10Rnd Mag (Mk316 Mod 0)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk316_Mod_0_Mag_NameShort">
             <English>7.62mm Mk316</English>
@@ -1952,6 +2043,7 @@
             <Korean>구경: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;장탄수: 10</Korean>
             <Chinese>口徑: 7.62x51毫米 NATO標準 (Mk316 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (Mk316 Mod 0 狙击专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk316_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk316 Mod 0)</English>
@@ -1968,6 +2060,7 @@
             <Korean>20발들이 7.62mm 탄창 (Mk316 Mod 0)</Korean>
             <Chinese>7.62毫米 20發 彈匣 (Mk316 Mod 0 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Mk316 Mod 0 狙击专用弹)</Chinesesimp>
+            <Turkish>7.62mm 20Rnd Mag (Mk316 Mod 0)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk316_Mod_0_Mag_NameShort">
             <English>7.62mm Mk316</English>
@@ -2001,6 +2094,7 @@
             <Korean>구경: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;장탄수: 20</Korean>
             <Chinese>口徑: 7.62x51毫米 NATO標準 (Mk316 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (Mk316 Mod 0 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm NATO (Mk316 Mod 0)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 10Rnd Mag (Mk319 Mod 0)</English>
@@ -2017,6 +2111,7 @@
             <Korean>10발들이 7.62mm 탄창 (Mk319 Mod 0)</Korean>
             <Chinese>7.62毫米 10發 彈匣 (Mk319 Mod 0 特戰專用彈)</Chinese>
             <Chinesesimp>7.62mm 10发 弹匣 (Mk319 Mod 0 特战专用弹)</Chinesesimp>
+            <Turkish>7.62mm 10Rnd Mag (Mk319 Mod 0)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
@@ -2050,6 +2145,7 @@
             <Korean>구경: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;장탄수: 10</Korean>
             <Chinese>口徑: 7.62x51毫米 NATO標準 (Mk319 Mod 0 特戰專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (Mk319 Mod 0 特战专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk319_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk319 Mod 0)</English>
@@ -2066,6 +2162,7 @@
             <Korean>20발들이 7.62mm 탄창 (Mk319 Mod 0)</Korean>
             <Chinese>7.62毫米 20發 彈匣 (Mk319 Mod 0 特戰專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Mk319 Mod 0 特战专用弹)</Chinesesimp>
+            <Turkish>7.62mm 20Rnd Mag (Mk319 Mod 0)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_Mk319_Mod_0_Mag_NameShort">
             <English>7.62mm Mk319</English>
@@ -2099,6 +2196,7 @@
             <Korean>구경: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;장탄수: 20</Korean>
             <Chinese>口徑: 7.62x51毫米 NATO標準 (Mk319 Mod 0 特戰專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (Mk319 Mod 0 特战专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm NATO (Mk319 Mod 0)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M993_AP_Mag_Name">
             <English>7.62mm 10Rnd Mag (M993 AP)</English>
@@ -2115,6 +2213,7 @@
             <Korean>10발들이 7.62mm 탄창 (M993 철갑탄)</Korean>
             <Chinese>7.62毫米 10發 彈匣 (M993 穿甲專用彈)</Chinese>
             <Chinesesimp>7.62mm 10发 弹匣 (M993 穿甲专用弹)</Chinesesimp>
+            <Turkish>7.62mm 10Rnd Mag (M993 AP)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_762x51_M993_AP_Mag_NameShort">
             <English>7.62mm AP</English>
@@ -2148,6 +2247,7 @@
             <Korean>구경: 7.62x51mm NATO (M993 철갑탄)&lt;br /&gt;장탄수: 10</Korean>
             <Chinese>口徑: 7.62x51毫米 NATO標準 (M993 穿甲專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (M993 穿甲专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M993_AP_Mag_Name">
             <English>7.62mm 20Rnd Mag (M993 AP)</English>
@@ -2164,6 +2264,7 @@
             <Korean>20발들이 7.62mm 탄창 (M993 철갑탄)</Korean>
             <Chinese>7.62毫米 20發 彈匣 (M993 穿甲專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (M993 穿甲专用弹)</Chinesesimp>
+            <Turkish>7.62mm 20Rnd Mag (M993 AP)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_M993_AP_Mag_NameShort">
             <English>7.62mm AP</English>
@@ -2197,6 +2298,7 @@
             <Korean>구경: 7.62x51mm NATO (M993 철갑탄)&lt;br /&gt;장탄수: 20</Korean>
             <Chinese>口徑: 7.62x51毫米 NATO標準 (M993 穿甲專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x51mm NATO标准 (M993 穿甲专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
@@ -2213,6 +2315,7 @@
             <Korean>20발들이 7.62mm 탄창 (Mk248 Mod 0)</Korean>
             <Chinese>7.62毫米 20發 彈匣 (Mk248 Mod 0 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Mk248 Mod 0 狙击专用弹)</Chinesesimp>
+            <Turkish>7.62mm 20Rnd Mag (Mk248 Mod 0)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
             <English>7.62mm Mk248</English>
@@ -2246,6 +2349,7 @@
             <Korean>구경: 7.62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;장탄수: 20</Korean>
             <Chinese>口徑: 7.62x67毫米 NATO標準 (Mk248 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x67mm NATO标准 (Mk248 Mod 0 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_Name">
             <English>7.62mm 20Rnd Mag (Mk248 Mod 1)</English>
@@ -2262,6 +2366,7 @@
             <Korean>20발들이 7.62mm 탄창 (Mk248 Mod 1)</Korean>
             <Chinese>7.62毫米 20發 彈匣 (Mk248 Mod 1 狙擊專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Mk248 Mod 1 狙击专用弹)</Chinesesimp>
+            <Turkish>7.62mm 20Rnd Mag (Mk248 Mod 1)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
             <English>7.62mm Mk248</English>
@@ -2295,6 +2400,7 @@
             <Korean>구경: 7.62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;장탄수: 20</Korean>
             <Chinese>口徑: 7.62x67毫米 NATO標準 (Mk248 Mod 1 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x67mm NATO标准 (Mk248 Mod 1 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
             <English>7.62mm 20Rnd Mag (Berger Hybrid OTM)</English>
@@ -2311,6 +2417,7 @@
             <Korean>20발들이 7.62mm 탄창 (Berger Hybrid OTM)</Korean>
             <Chinese>7.62毫米 20發 彈匣 (Berger Hybrid 空尖比賽專用彈)</Chinese>
             <Chinesesimp>7.62mm 20发 弹匣 (Berger Hybrid 空尖比赛专用弹)</Chinesesimp>
+            <Turkish>7.62mm 20Rnd Mag (Berger Hybrid OTM)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
             <English>7.62mm OTM</English>
@@ -2344,6 +2451,7 @@
             <Korean>구경: 7.62x51mm NATO (Berger Hybrid OTM)&lt;br /&gt;장탄수: 20</Korean>
             <Chinese>口徑: 7.62x67毫米 NATO標準 (Berger Hybrid 空尖比賽專用彈)&lt;br /&gt;發數: 20</Chinese>
             <Chinesesimp>口径: 7.62x67mm NATO标准 (Berger Hybrid 空尖比赛专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
@@ -2360,6 +2468,7 @@
             <Korean>30발들이 6.5x47mm 탄창 (HPBT Scenar)</Korean>
             <Chinese>6.5x47毫米 30發 彈匣 (拉普 空尖艇尾狙擊專用彈)</Chinese>
             <Chinesesimp>6.5x47mm 30发 弹匣 (Lapua 空尖艇尾狙击专用弹)</Chinesesimp>
+            <Turkish>6.5x47mm 30Rnd Mag (HPBT Scenar)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5mm Lapua</English>
@@ -2393,6 +2502,7 @@
             <Korean>구경: 6.5x47mm (HPBT Scenar)&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MXM</Korean>
             <Chinese>口徑: 6.5x47毫米 (拉普 空尖艇尾狙擊專用彈)&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
             <Chinesesimp>口径: 6.5x47mm (Lapua 空尖艇尾狙击专用弹)&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MXM</Chinesesimp>
+            <Turkish>Kalibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MXM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Name">
             <English>6.5mm Creedmor 30Rnd Mag</English>
@@ -2409,6 +2519,7 @@
             <Korean>30발들이 6.5mm Creedmor 탄창</Korean>
             <Chinese>6.5毫米 30發 彈匣 (克里德莫爾(CM) 狙擊專用彈)</Chinese>
             <Chinesesimp>6.5mm 30发 弹匣 (Creedmor 狙击专用弹)</Chinesesimp>
+            <Turkish>6.5mm Creedmor 30Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -2442,6 +2553,7 @@
             <Korean>구경: 6.5x47mm Creedmor&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: MXM</Korean>
             <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
             <Chinesesimp>口径: 6.5x47mm Creedmor 狙击专用弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MXM</Chinesesimp>
+            <Turkish>Kalibre: 6.5x47mm Creedmor&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MXM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 10Rnd Mag (300gr Lapua Scenar)</English>
@@ -2458,6 +2570,7 @@
             <Korean>10발들이 .338 탄창 (300gr Lapua Scenar)</Korean>
             <Chinese>.338 10發 彈匣 (300公克 Lapua Scenar)</Chinese>
             <Chinesesimp>.338 10发 弹匣 (300公克 Lapua Scenar)</Chinesesimp>
+            <Turkish>.338 10Rnd Mag (300gr Lapua Scenar)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_NameShort">
             <English>.338 Scenar</English>
@@ -2491,6 +2604,7 @@
             <Korean>구경: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;장탄수: 10</Korean>
             <Chinese>口徑: 8.6x70毫米 (300公克 Lapua Scenar)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 8.6x70mm (300公克 Lapua Scenar)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_API526_Mag_Name">
             <English>.338 10Rnd Mag (API526)</English>
@@ -2507,6 +2621,7 @@
             <Korean>10발들이 .338 탄창 (API526)</Korean>
             <Chinese>.338 10發 彈匣 (API526 穿甲燃燒彈)</Chinese>
             <Chinesesimp>.338 10发 弹匣 (API526 穿甲燃烧弹)</Chinesesimp>
+            <Turkish>.338 10Rnd Mag (API526)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_API526_Mag_NameShort">
             <English>.338 AP</English>
@@ -2540,6 +2655,7 @@
             <Korean>구경: 8.6x70mm (API526)&lt;br /&gt;장탄수: 10</Korean>
             <Chinese>口徑: 8.6x70毫米 (API526 穿甲燃燒彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 8.6x70mm (API526 穿甲燃烧弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 8.6x70mm (API526)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Name">
             <English>.408 7Rnd Mag (305gr)</English>
@@ -2556,6 +2672,7 @@
             <Korean>7발들이 .408 탄창 (305gr)</Korean>
             <Chinese>.408 7發 彈匣 (305公克)</Chinese>
             <Chinesesimp>.408 7发 弹匣 (305公克)</Chinesesimp>
+            <Turkish>.408 7Rnd Mag (305gr)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_NameShort">
             <English>.408</English>
@@ -2589,6 +2706,7 @@
             <Korean>구경: .408 CheyTac (305gr)&lt;br /&gt;장탄수: 7</Korean>
             <Chinese>口徑: .408 夏伊戰術狙擊彈 (305公克)&lt;br /&gt;發數: 7</Chinese>
             <Chinesesimp>口径: .408 夏伊战术狙击弹 (305公克)&lt;br /&gt;发数: 7</Chinesesimp>
+            <Turkish>Kalibre: .408 CheyTac (305gr)&lt;br /&gt;Mermi: 7</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
@@ -2605,6 +2723,7 @@
             <Korean>5발들이 12.7x99mm 탄창</Korean>
             <Chinese>12.7x99毫米 5發 彈匣</Chinese>
             <Chinesesimp>12.7x99mm 5发 弹匣</Chinesesimp>
+            <Turkish>12.7x99mm 5Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_NameShort">
             <English>12.7mm</English>
@@ -2638,6 +2757,7 @@
             <Korean>구경: 12.7x99mm&lt;br /&gt;장탄수: 5</Korean>
             <Chinese>口徑: 12.7x99毫米&lt;br /&gt;發數: 5</Chinese>
             <Chinesesimp>口径: 12.7x99mm&lt;br /&gt;发数: 5</Chinesesimp>
+            <Turkish>Kalibre: 12.7x99mm&lt;br /&gt;Mermi: 5</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_Name">
             <English>12.7x99mm API 5Rnd Mag</English>
@@ -2654,6 +2774,7 @@
             <Korean>5발들이 12.7x99mm 철갑소이탄 탄창</Korean>
             <Chinese>12.7x99毫米 穿甲燃燒彈 5發 彈匣</Chinese>
             <Chinesesimp>12.7x99mm 穿甲燃烧弹 5发 弹匣</Chinesesimp>
+            <Turkish>12.7x99mm API 5Rnd Mag</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_NameShort">
             <English>12.7mm API</English>
@@ -2687,6 +2808,7 @@
             <Korean>구경: 12.7x99mm 철갑소이탄&lt;br /&gt;장탄수: 5</Korean>
             <Chinese>口徑: 12.7x99毫米 穿甲燃燒彈&lt;br /&gt;發數: 5</Chinese>
             <Chinesesimp>口径: 12.7x99mm 穿甲燃烧弹&lt;br /&gt;发数: 5</Chinesesimp>
+            <Turkish>Kalibre: 12.7x99mm API&lt;br /&gt;Mermi: 5</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 5Rnd Mag (AMAX)</English>
