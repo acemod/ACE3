@@ -37,10 +37,10 @@ GVAR(armorCache) = false call CBA_fnc_createNamespace;
 GVAR(fixedStatics) = [];
 
 GVAR(animations) = [] call CBA_fnc_createNamespace;
-GVAR(animations) setVariable [QGVAR(faceUp_unconscious), ["ace_unconscious_2","ace_unconscious_2_1","ace_unconscious_7_1","ace_unconscious_8_1","ace_unconscious_5_1","ace_unconscious_6_1"]];
-GVAR(animations) setVariable [QGVAR(faceDown_unconscious), ["ace_unconscious_1", "ace_unconscious_3", "ace_unconscious_4","unconscious","ace_unconscious_9","ace_unconscious_3_1","ace_unconscious_4_1"]];
-GVAR(animations) setVariable [QGVAR(faceLeft_unconscious), ["ace_unconscious_7","ace_unconscious_8","ace_unconscious_1_1","ace_unconscious_7_1","ace_unconscious_8_1"]];
-GVAR(animations) setVariable [QGVAR(faceRight_unconscious), ["ace_unconscious_5","ace_unconscious_6","ace_unconscious_10","ace_unconscious_5_1","ace_unconscious_6_1"]];
+GVAR(animations) setVariable [QUNCON_ANIM(faceUp), [QUNCON_ANIM(2),QUNCON_ANIM(2_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
+GVAR(animations) setVariable [QUNCON_ANIM(faceDown), [QUNCON_ANIM(1),QUNCON_ANIM(3),QUNCON_ANIM(4),"unconscious",QUNCON_ANIM(9),QUNCON_ANIM(3_1),QUNCON_ANIM(4_1)]];
+GVAR(animations) setVariable [QUNCON_ANIM(faceLeft), [QUNCON_ANIM(7),QUNCON_ANIM(8),QUNCON_ANIM(1_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1)]];
+GVAR(animations) setVariable [QUNCON_ANIM(faceRight), [QUNCON_ANIM(5),QUNCON_ANIM(6),QUNCON_ANIM(10),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
 
 private _fnc_fixStatic = {
     params ["_vehicle"];

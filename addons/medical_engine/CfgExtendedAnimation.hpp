@@ -1,9 +1,9 @@
 
 class CfgExtendedAnimation {
     class Revive {
-        left = QGVAR(faceLeft_unconscious);
-        right = QGVAR(faceRight_unconscious);
-        front = QGVAR(faceDown_unconscious);
-        back = QGVAR(faceUp_unconscious);
+        left = QUNCON_ANIM(faceLeft);
+        right = QUNCON_ANIM(faceRight);
+        front = QUNCON_ANIM(faceDown);
+        back = QUNCON_ANIM(faceUp);
     };
 };
