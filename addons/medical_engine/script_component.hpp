@@ -36,3 +36,6 @@
 // don't change, these reflect hard coded engine behaviour
 #define DAMAGED_MIN_THRESHOLD 0.45
 #define LIMPING_MIN_DAMAGE 0.5
+
+#define UNCON_ANIM(var1) DOUBLES(GVAR(uncon_anim),var1)
+#define QUNCON_ANIM(var1) QUOTE(UNCON_ANIM(var1))
