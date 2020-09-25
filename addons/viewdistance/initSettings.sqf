@@ -1,8 +1,8 @@
-#define DISTANCES_ARR [ \
-    [0,                      1,     2,      3,      4,      5,      6,      7,      8,      9,      10,     11,     12,     13,     14], \
-    [LSTRING(videosettings), "500", "1000", "1500", "2000", "2500", "3000", "3500", "4000", "5000", "6000", "7000", "8000", "9000", "10000"], \
-    0 \
-]
+private _distArr = [
+    [0,                      1,     2,      3,      4,      5,      6,      7,      8,      9,      10,     11,     12,     13,     14],
+    [LSTRING(videosettings), "500", "1000", "1500", "2000", "2500", "3000", "3500", "4000", "5000", "6000", "7000", "8000", "9000", "10000"],
+    0
+];
 
 private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 
@@ -22,7 +22,7 @@ private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     "LIST",
     [LSTRING(onFoot_DisplayName),LSTRING(onFoot_Description)],
     _categoryStr,
-    DISTANCES_ARR,
+    _distArr,
     false,
     {[time < 5] call FUNC(adaptViewDistance);} // Do not show prompt during mission start
 ] call CBA_fnc_addSetting;
@@ -32,7 +32,7 @@ private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     "LIST",
     [LSTRING(landVehicle_DisplayName),LSTRING(landVehicle_Description)],
     _categoryStr,
-    DISTANCES_ARR,
+    _distArr,
     false,
     {[time < 5] call FUNC(adaptViewDistance);}
 ] call CBA_fnc_addSetting;
@@ -42,7 +42,7 @@ private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     "LIST",
     [LSTRING(airVehicle_DisplayName),LSTRING(airVehicle_Description)],
     _categoryStr,
-    DISTANCES_ARR,
+    _distArr,
     false,
     {[time < 5] call FUNC(adaptViewDistance);}
 ] call CBA_fnc_addSetting;
