@@ -436,5 +436,8 @@
             <Chinese>影像設定</Chinese>
             <Turkish>Grafik Ayarları</Turkish>
         </Key>
+        <Key ID="STR_ACE_ViewDistance_videosettings_disabled">
+            <English>This setting has been overwritten by ACE View Distance, see Addon Options for details.</English>
+        </Key>
     </Package>
 </Project>

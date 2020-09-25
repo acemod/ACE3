@@ -11,7 +11,7 @@ private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     "CHECKBOX",
     [LSTRING(Module_DisplayName),LSTRING(enabled_Description)],
     _categoryStr,
-    true,
+    false,
     false,
     {},
     true
@@ -24,7 +24,7 @@ private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     _categoryStr,
     DISTANCES_ARR,
     false,
-    {[ADDON] call FUNC(adaptViewDistance);} // Do not show prompt for initialization
+    {[time < 5] call FUNC(adaptViewDistance);} // Do not show prompt during mission start
 ] call CBA_fnc_addSetting;
 
 [
@@ -34,7 +34,7 @@ private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     _categoryStr,
     DISTANCES_ARR,
     false,
-    {[ADDON] call FUNC(adaptViewDistance);}
+    {[time < 5] call FUNC(adaptViewDistance);}
 ] call CBA_fnc_addSetting;
 
 [
@@ -44,7 +44,7 @@ private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     _categoryStr,
     DISTANCES_ARR,
     false,
-    {[ADDON] call FUNC(adaptViewDistance);}
+    {[time < 5] call FUNC(adaptViewDistance);}
 ] call CBA_fnc_addSetting;
 
 [
@@ -66,7 +66,8 @@ private _categoryStr = format ["ACE %1", localize LSTRING(Module_DisplayName)];
         [LSTRING(object_off), LSTRING(object_verylow), LSTRING(object_low), LSTRING(object_medium), LSTRING(object_high), LSTRING(object_veryhigh), LSTRING(object_fovBased)],
         0
     ],
-    false
+    false,
+    {[time < 5] call FUNC(adaptViewDistance);}
 ] call CBA_fnc_addSetting;
 
 

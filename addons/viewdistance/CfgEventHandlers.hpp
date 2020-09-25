@@ -11,8 +11,14 @@ class Extended_PreInit_EventHandlers {
     };
 };
 
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayOptionsVideo {
+        ADDON = QUOTE((_this + ['onLoad']) call FUNC(RscDisplayOptionsVideo));
+    };
+};
+
 class Extended_DisplayUnload_EventHandlers {
     class RscDisplayOptionsVideo {
-        ADDON = QUOTE([false] call FUNC(adaptViewDistance));
+        ADDON = QUOTE((_this + ['onUnload']) call FUNC(RscDisplayOptionsVideo));
     };
 };
