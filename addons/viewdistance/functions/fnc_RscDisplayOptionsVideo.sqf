@@ -15,8 +15,6 @@
  * Public: No
  */
 
-disableSerialization;
-
 if !(GVAR(enabled)) exitWith {
     setViewDistance (viewDistance min GVAR(limitViewDistance));
 };
