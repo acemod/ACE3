@@ -1102,22 +1102,22 @@
             <Russian>Определяет, является ли юнит сапёром.</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
-            <English>Minimum timer</English>
+            <English>Minimum Time</English>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
-            <English>Maximum timer</English>
+            <English>Maximum Time</English>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
-            <English>Default timer</English>
+            <English>Default Time</English>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
-            <English>Time in seconds</English>
+            <English>Minimum time value (in seconds) for the explosive timer.</English>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
-            <English>Time in seconds</English>
+            <English>Maximum time value (in seconds) for the explosive timer.</English>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
-            <English>Time in seconds</English>
+            <English>Default time value (in seconds) for the explosive timer.</English>
         </Key>
     </Package>
 </Project>
