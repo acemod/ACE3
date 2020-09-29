@@ -37,14 +37,14 @@ class GVAR(sorts) {
     class ACE_accuracy: sortBase {
         scope = 2;
         displayName = CSTRING(sortByAccuracyText);
-        tabs[] = {{0,1,2}, {}};
+        tabs[] = {{0,1}, {}};
         statement = QUOTE(_this call FUNC(sortStatement_accuracy));
     };
 
     class ACE_rateOfFire: sortBase {
         scope = 2;
         displayName = CSTRING(sortByRateOfFireText);
-        tabs[] = {{0,1,2}, {}};
+        tabs[] = {{0,1}, {}};
         statement = QUOTE(_this call FUNC(sortStatement_rateOfFire));
     };
 
