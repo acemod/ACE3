@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, PiZZADOX
+ * Author: commy2, PiZZADOX, Malbryn
  * Start the dragging process.
  *
  * Arguments:
@@ -35,7 +35,11 @@ if (primaryWeapon _unit isEqualto "") then {
 };
 
 // select primary, otherwise the drag animation actions don't work.
-_unit selectWeapon primaryWeapon _unit;
+if (handgunWeapon _unit == "") then {
+    _unit selectWeapon primaryWeapon _unit;
+} else {
+    _unit selectWeapon handgunWeapon _unit;
+};
 
 [_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
 

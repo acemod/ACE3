@@ -20,7 +20,8 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // remove drop action
-[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
+//[_unit, "zoomtemp", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
+(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown", GVAR(unit) getVariable [QGVAR(ReleaseActionID), -1]];
 
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
