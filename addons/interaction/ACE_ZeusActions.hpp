@@ -46,8 +46,7 @@ class ACE_ZeusActions {
                 )]; \
                 bis_fnc_curatorObjectPlaced_mouseOver = [ARR_2('OBJECT',_unit)]; \
                 private _rc = group _target createUnit [ARR_5('ModuleRemoteControl_F',[ARR_3(0,0,0)],[],0,'NONE')]; \
-                _rc setVariable [ARR_2('BIS_fnc_initModules_disableAutoActivation',false)]; \
-            );
+                _rc setVariable [ARR_2('BIS_fnc_initModules_disableAutoActivation',false)];);
         };
 
         class GVAR(repair) {

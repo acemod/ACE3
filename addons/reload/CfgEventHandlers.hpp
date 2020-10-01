@@ -27,8 +27,7 @@ class Extended_Take_EventHandlers {
                     && {GVAR(DisplayText)} \
                     && {_container in [ARR_3(uniformContainer _unit, vestContainer _unit, backpackContainer _unit)]} \
                     && {_item == currentMagazine _unit} \
-                ) then {_unit call DFUNC(displayAmmo)}; \
-            );
+                ) then {_unit call DFUNC(displayAmmo)};);
         };
     };
 };
