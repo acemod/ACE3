@@ -97,7 +97,7 @@ typedef struct _OBJECT_TYPE_INFORMATION
     ULONG NonPagedPoolUsage;
 } OBJECT_TYPE_INFORMATION, *POBJECT_TYPE_INFORMATION;
 
-PVOID GetLibraryProcAddress(PSTR LibraryName, PSTR ProcName)
+PVOID GetLibraryProcAddress(LPCSTR LibraryName, LPCSTR ProcName)
 {
     return GetProcAddress(GetModuleHandleA(LibraryName), ProcName);
 }
