@@ -135,7 +135,7 @@ if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
         TRACE_2("syncing",_unitBaseAngle,_player getVariable QGVAR(baseAngle));
         _player setVariable [QGVAR(baseAngle), _unitBaseAngle, true];
     };
-    if (_unitBoreHeight isEquaisNotEqualTolTo (_player getVariable [QGVAR(boreHeight), [0,0,0]])) then {
+    if (_unitBoreHeight isNotEqualTo (_player getVariable [QGVAR(boreHeight), [0,0,0]])) then {
         TRACE_2("syncing",_unitBoreHeight,_player getVariable QGVAR(boreHeight));
         _player setVariable [QGVAR(boreHeight), _unitBoreHeight, true];
     };

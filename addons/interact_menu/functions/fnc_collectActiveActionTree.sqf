@@ -25,7 +25,7 @@ private _target = _object;
 private _player = ACE_player;
 
 // Check if the function should be modified first
-if !((_origActionData select 10) isEqualTo {}) then {
+if ((_origActionData select 10) isNotEqualTo {}) then {
     // It should, so make a copy and pass it to the modifierFunction
     _origActionData = +_origActionData;
     [_target, ACE_player, _origActionData select 6, _origActionData] call (_origActionData select 10);
@@ -48,7 +48,7 @@ _fullPath pushBack _actionName;
 private _activeChildren = [];
 
 // If there's a statement to dynamically insert children then execute it
-if !({} isEqualTo _insertChildrenCode) then {
+if ({} isNotEqualTo _insertChildrenCode) then {
     private _dynamicChildren = [_target, ACE_player, _customParams] call _insertChildrenCode;
 
     // Collect dynamic children class actions
