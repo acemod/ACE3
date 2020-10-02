@@ -10,6 +10,7 @@ class CfgMovesBasic {
         };
         class MoveWithInjuredManDraggerPst;
         class ace_MoveWithInjuredManDraggerPst: MoveWithInjuredManDraggerPst {
+            PrimaryWeapon = "";
             Stop = "ace_dragging_static";
             StopRelaxed = "ace_dragging_static";
             WalkLB = "ace_dragging";
@@ -32,6 +33,23 @@ class CfgMovesBasic {
             grabDrag = "ace_dragging_static";
             Default = "ace_dragging_static";
             HandGunOn = "ace_dragging_static";
+            TactF="AmovPknlMtacSrasWpstDf";
+			TactLF="AmovPknlMtacSrasWpstDfl";
+			TactRF="AmovPknlMtacSrasWpstDfr";
+			TactL="AmovPknlMtacSrasWpstDl";
+			TactR="AmovPknlMtacSrasWpstDr";
+			TactLB="AmovPknlMtacSrasWpstDbl";
+			TactRB="AmovPknlMtacSrasWpstDbr";
+			TactB="AmovPknlMtacSrasWpstDb";
+            PlayerTactF="AmovPknlMtacSrasWpstDf";
+			PlayerTactLF="AmovPknlMtacSrasWpstDfl";
+			PlayerTactRF="AmovPknlMtacSrasWpstDfr";
+			PlayerTactL="AmovPknlMtacSrasWpstDl";
+			PlayerTactR="AmovPknlMtacSrasWpstDr";
+			PlayerTactLB="AmovPknlMtacSrasWpstDbl";
+			PlayerTactRB="AmovPknlMtacSrasWpstDbr";
+			PlayerTactB="AmovPknlMtacSrasWpstDb";
+            released="ace_dragging_drop";
         };
     };
 };

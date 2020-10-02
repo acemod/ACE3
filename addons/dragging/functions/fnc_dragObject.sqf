@@ -43,24 +43,11 @@ _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 
 // add drop action
-/*
-_unit setVariable [QGVAR(ReleaseActionID), [
-    _unit, "zoomtemp",
-    {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
-    {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
-] call EFUNC(common,addActionEventHandler)];
-*/
-
 GVAR(unit) = _unit;
-GVAR(target) = _target;
 
-_unit setVariable [QGVAR(ReleaseActionID), 
-    (findDisplay 46) displayAddEventHandler ["MouseButtonDown", {
-        if ((_this select 1) == 1) then {
-            [GVAR(unit), GVAR(unit) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
-        };
-    }]
-];
+GVAR(releaseActionID) = [0xF1, [false, false, false], {
+    [GVAR(unit), GVAR(unit) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
+}, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;
 
 // add anim changed EH
 [_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;

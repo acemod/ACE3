@@ -62,28 +62,31 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             showHandGun = 1;
             looped = 1;
             duty = 0.6;
-            interpolationSpeed = 30;
+            interpolationSpeed = 5;
             disableWeapons = 0;
+            enableBinocular = 0;
             canPullTrigger = 1;
-            limitGunMovement = 0.15;
+            limitGunMovement = 0.2;
             canReload = 0;
-            aimingBody = "aimingUpDefault";
-            aiming = "aimingDefault";
+            aimingBody = "aimingPistol";
+            aiming = "aimingPistol";
             aimPrecision = 5;
-            turnSpeed = 0.1;
+            turnSpeed = 0.5;
             ConnectTo[]=
             {
                 "ace_dragging",
-                0.1
+                0.1,
+                "ace_dragging_drop",
+                0.2
             };
             InterpolateTo[]=
             {
                 "ace_dragging_static",
-                0.1,
+                0.1/*,
                 "AcinPknlMwlkSnonWpstDb_death",
                 0.2,
                 "AcinPknlMwlkSnonWpstDb_agony",
-                0.2
+                0.2*/
             };
         };
         class ace_dragging_static: ace_dragging {
@@ -92,22 +95,41 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             ConnectTo[]=
             {
                 "ace_dragging",
-                0.1
+                0.1,
+                "ace_dragging_drop",
+                0.2
             };
             InterpolateTo[]=
             {
                 /*"AcinPknlMwlkSnonWpstDb_AmovPercMstpSrasWpstDnon",
-                0.15000001,
-                "AcinPknlMstpSnonWpstDnon_AmovPknlMstpSrasWpstDnon",
+                0.15000001,*/
+                /*"AcinPknlMstpSnonWpstDnon_AmovPknlMstpSrasWpstDnon",
                 0.1,*/
                 "ace_dragging",
                 0.1,
+                "ace_dragging_drop",
+                0.2/*,
                 "AcinPknlMwlkSnonWpstDb_death",
                 0.2,
                 "AcinPknlMwlkSnonWpstDb_agony",
                 0.2,
-                /*"Helper_SwitchToCarrynon_pst",
+                "Helper_SwitchToCarrynon_pst",
                 0.1*/
+            };
+        };
+        class ace_dragging_drop: ace_dragging {
+            file = QPATHTO_T(anim\ace_dragging_drop.rtm);
+            looped = 0;
+            interpolationSpeed = 1;
+            ConnectTo[]=
+            {
+                "AmovPknlMstpSrasWpstDnon",
+				0.1
+            };
+            InterpolateTo[]=
+            {
+				"Unconscious",
+				0.02
             };
         };
     };
