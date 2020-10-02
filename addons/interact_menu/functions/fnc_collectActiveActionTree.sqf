@@ -48,7 +48,7 @@ _fullPath pushBack _actionName;
 private _activeChildren = [];
 
 // If there's a statement to dynamically insert children then execute it
-if ({} isNotEqualTo _insertChildrenCode) then {
+if (_insertChildrenCode isNotEqualTo {}) then {
     private _dynamicChildren = [_target, ACE_player, _customParams] call _insertChildrenCode;
 
     // Collect dynamic children class actions
