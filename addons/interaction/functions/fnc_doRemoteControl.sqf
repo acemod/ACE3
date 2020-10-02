@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: ?
+ * Author: SilentSpike, joko
  *
  * Arguments:
  * None
