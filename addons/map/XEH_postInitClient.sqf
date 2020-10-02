@@ -47,7 +47,7 @@ GVAR(flashlights) = [] call CBA_fnc_createNamespace;
                 private _unitLight = _player getVariable [QGVAR(flashlight), ["", objNull]];
                 _unitLight params ["_flashlight", "_glow"];
                 if (_mapOn) then {
-                    if (_flashlight isNotEqualTo "") && {isNull _glow}) then {
+                    if (!(_flashlight isEqualTo "") && {isNull _glow}) then {
                         [_player, _flashlight] call FUNC(flashlightGlow);
                         if ([_player, _flashlight] call FUNC(needPlaySound)) then {playSound QGVAR(flashlightClick)};
                     };
