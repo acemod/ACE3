@@ -55,7 +55,7 @@
 
     //check if entity under mouse is a user marker
     if (_mouseOverType isEqualTo "marker") then {
-        if (!((_marker find "_USER_DEFINED") isEqualTo -1) && ((markerShape _marker) isEqualTo "ICON")) then {
+        if (((_marker find "_USER_DEFINED") isNotEqualTo -1) && ((markerShape _marker) isEqualTo "ICON")) then {
             GVAR(editingMarker) = _marker;
             //hide marker which is being edited because if the user cancels editing, it will still exist unchanged
             GVAR(editingMarker) setMarkerAlphaLocal 0;
@@ -71,7 +71,7 @@
 
     ////////////////////
     // Calculate center position of the marker placement ctrl
-    if !(GVAR(editingMarker) isEqualTo "") then {
+    if (GVAR(editingMarker) isNotEqualTo "") then {
         //prevent changing the original marker position
         GVAR(currentMarkerPosition) = markerPos GVAR(editingMarker);
     } else {
@@ -86,7 +86,7 @@
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
-    if !((markerText GVAR(editingMarker)) isEqualTo "") then {
+    if (markerText GVAR(editingMarker) isNotEqualTo "") then {
         //fill text input with text from marker which is being edited
         _text ctrlSetText (markerText GVAR(editingMarker));
     };
@@ -172,7 +172,7 @@
             };
         };
 
-        private _selectChannel = if !(GVAR(editingMarker) isEqualTo "") then {
+        private _selectChannel = if (GVAR(editingMarker) isNotEqualTo "") then {
             //get the channel where the marker was placed in
             parseNumber ((GVAR(editingMarker) splitString "/") param [2, "3"])
         } else {
@@ -261,7 +261,7 @@
     // init marker angle slider
     _aceAngleSlider sliderSetRange [-180, 180];
 
-    if !(GVAR(editingMarker) isEqualTo "") then {
+    if (GVAR(editingMarker) isNotEqualTo "") then {
         //get the original direction
         GVAR(currentMarkerAngle) = markerDir GVAR(editingMarker);
     };

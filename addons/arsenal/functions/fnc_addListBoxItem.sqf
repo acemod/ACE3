@@ -32,9 +32,9 @@ if (_cachedItemInfo isEqualTo []) then {//Not in cache. So get info and put into
     //get name of DLC
     private _dlcName = "";
     private _addons = configsourceaddonlist _configPath;
-    if !(_addons isEqualTo []) then {
+    if (_addons isNotEqualTo []) then {
         private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _addons select 0);
-        if !(_mods isEqualTo []) then {
+        if (_mods isNotEqualTo []) then {
             _dlcName = _mods select 0;
         };
     };

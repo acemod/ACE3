@@ -37,7 +37,7 @@ TRACE_1("",_magsInWeapon);
 
 // Remove any empty mags from start:
 private _ammoInFirstMag = 0;
-while {(!(_magsInWeapon isEqualTo [])) && {_ammoInFirstMag = _magsInWeapon deleteAt 0; (_ammoInFirstMag == 0)}} do {
+while {(_magsInWeapon isNotEqualTo []) && {_ammoInFirstMag = _magsInWeapon deleteAt 0; (_ammoInFirstMag == 0)}} do {
     TRACE_1("Removing empty mag",_ammoInFirstMag);
     _vehicle removeMagazineTurret [_vehMag, _turretPath];
 };

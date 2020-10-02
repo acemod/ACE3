@@ -40,15 +40,15 @@ if (_toggle) then {
             // Get NVG item and helmet from unit config
             private _linkedItems = getArray (_cfgVehicles >> typeOf _x >> "linkedItems");
             private _nvgItem = _linkedItems select {_x isKindOf ["NVGoggles", _cfgWeapons]};
-            private _nvgHelmet = _linkedItems select {!(getArray (_cfgWeapons >> _x >> "subItems") isEqualTo [])};
+            private _nvgHelmet = _linkedItems select {getArray (_cfgWeapons >> _x >> "subItems") isNotEqualTo []};
 
             // Add NVG helmet if defined
-            if !(_nvgHelmet isEqualTo []) exitWith {
+            if (_nvgHelmet isNotEqualTo []) exitWith {
                 _x addHeadgear (_nvgHelmet select 0);
             };
 
             // Add NVGs if defined
-            if !(_nvgItem isEqualTo []) exitWith {
+            if (_nvgItem isNotEqualTo []) exitWith {
                 _x linkItem (_nvgItem select 0);
             };
 
@@ -67,7 +67,7 @@ if (_toggle) then {
             removeHeadgear _x;
         };
 
-        if !(_nvgItem isEqualTo "") then {
+        if (_nvgItem isNotEqualTo "") then {
             _x unlinkItem _nvgItem;
         };
     } forEach _units;

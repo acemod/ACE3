@@ -34,7 +34,7 @@ class EGVAR(arsenal,stats) {
         displayName= CSTRING(statBallisticCoef);
         showText= 1;
         textStatement = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); private _ballisticCoef = getArray (_ammoCfg >> _stat select 1); _ballisticCoef sort false; format [ARR_4('%1 G%2 (%3)', _ballisticCoef select 0 ,getNumber (_ammoCfg >> _stat select 0), getText (_ammoCfg >> _stat select 2))]);
-        condition = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); !(getArray (_ammoCfg >> _stat select 1) isEqualTo []));
+        condition = QUOTE(params[ARR_2('_stat', '_config')]; private _ammoCfg = (configFile >> 'CfgAmmo' >> (getText (_config >> 'ammo'))); (getArray (_ammoCfg >> _stat select 1) isNotEqualTo []));
         tabs[] ={{}, {4}};
     };
     class ACE_bulletMass: statBase {

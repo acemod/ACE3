@@ -48,7 +48,7 @@ private _vehicle = vehicle _unit;
 // Do not obscure the map if the player is on a enclosed vehicle (assume internal illumination)
 if ((_vehicle != _unit) && {(!isTurnedOut _unit)} && GVAR(vehicleLightCondition) && {!((_unit call CBA_fnc_turretPath) in GVAR(vehicleExteriorTurrets))}) exitWith {
     TRACE_1("Player in a enclosed vehicle",GVAR(vehicleLightColor));
-    [!(GVAR(vehicleLightColor) isEqualTo [1,1,1,0]), GVAR(vehicleLightColor)]
+    [GVAR(vehicleLightColor) isNotEqualTo [1,1,1,0], GVAR(vehicleLightColor)]
 };
 
 // Player is not in a vehicle
@@ -64,7 +64,7 @@ TRACE_1("Player is on foot or in an open vehicle","");
 // Using chemlights
 private _nearObjects = (_unit nearObjects ["Chemlight_base", 4]) select {alive _x};
 
-if !(_nearObjects isEqualTo []) then {
+if (_nearObjects isNotEqualTo []) then {
     private _nearestlight = _nearObjects select 0;
     private _lightLevelTemp = (1 - ((((_unit distance _nearestlight) - 2) / 2) max 0)) * 0.4;
     if (_lightLevelTemp > _lightLevel) then {

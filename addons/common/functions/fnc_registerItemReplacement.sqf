@@ -62,7 +62,7 @@ private _fnc_replaceItems = {
         };
 
         // Replace all items of current class in list
-        if !(_replacements isEqualTo []) then {
+        if (_replacements isNotEqualTo []) then {
             TRACE_3("replace",_item,_count,_replacements);
             _unit removeItems _item;
 

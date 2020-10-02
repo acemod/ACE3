@@ -19,7 +19,7 @@
 params ["_display", "_closeNum"];
 TRACE_2("params",_display,_closeNum);
 
-private _editingMarker = !(GVAR(editingMarker) isEqualTo "");
+private _editingMarker = (GVAR(editingMarker) isNotEqualTo "");
 
 if (_closeNum isEqualTo 1) then {
     if (_editingMarker) then {
@@ -48,7 +48,7 @@ if (_closeNum isEqualTo 1) then {
 
         // provide hook for external scripts
         [QGVAR(markerPlaced),[_newestMarker, _editingMarker]] call CBA_fnc_localEvent;
-        
+
         // Add to list of user placed markers, and then filter for deleted
         GVAR(userPlacedMarkers) pushBack _newestMarker;
         GVAR(userPlacedMarkers) = GVAR(userPlacedMarkers) select {!((getMarkerPos _x) isEqualTo [0,0,0])};

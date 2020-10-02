@@ -74,8 +74,8 @@ private _newOptics = [_player] call FUNC(getOptics);
         (GVAR(scopeAdjust) select _forEachIndex) set [1, _verticalIncrement];
         (GVAR(scopeAdjust) select _forEachIndex) set [2, _maxHorizontal];
         (GVAR(scopeAdjust) select _forEachIndex) set [3, _horizontalIncrement];
-        GVAR(canAdjustElevation) set [_forEachIndex, (_verticalIncrement > 0) && !(_maxVertical isEqualTo [0, 0])];
-        GVAR(canAdjustWindage) set [_forEachIndex, (_horizontalIncrement > 0) && !(_maxHorizontal isEqualTo [0, 0])];
+        GVAR(canAdjustElevation) set [_forEachIndex, (_verticalIncrement > 0) && (_maxVertical isNotEqualTo [0, 0])];
+        GVAR(canAdjustWindage) set [_forEachIndex, (_horizontalIncrement > 0) && (_maxHorizontal isNotEqualTo [0, 0])];
     };
 } forEach GVAR(Optics);
 
@@ -112,8 +112,8 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             (GVAR(scopeAdjust) select _x) set [1, _verticalIncrement];
             (GVAR(scopeAdjust) select _x) set [2, _maxHorizontal];
             (GVAR(scopeAdjust) select _x) set [3, _horizontalIncrement];
-            GVAR(canAdjustElevation) set [_x, (_verticalIncrement > 0) && !(_maxVertical isEqualTo [0, 0])];
-            GVAR(canAdjustWindage) set [_x, (_horizontalIncrement > 0) && !(_maxHorizontal isEqualTo [0, 0])];
+            GVAR(canAdjustElevation) set [_x, (_verticalIncrement > 0) && (_maxVertical isNotEqualTo [0, 0])];
+            GVAR(canAdjustWindage) set [_x, (_horizontalIncrement > 0) && (_maxHorizontal isNotEqualTo [0, 0])];
         };
 
         // The optic or the weapon changed, reset the adjustment
@@ -123,7 +123,7 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             _persistentZero = 0;
         };
         private _defaultElevation = [0, 300] select GVAR(simplifiedZeroing);
-        if (!((_adjustment select _forEachIndex) isEqualTo [_defaultElevation, 0, _persistentZero])) then {
+        if ((_adjustment select _forEachIndex) isNotEqualTo [_defaultElevation, 0, _persistentZero]) then {
             _adjustment set [_forEachIndex, [_defaultElevation, 0, _persistentZero]];
             _updateAdjustment = true;
         };
@@ -131,11 +131,11 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
 } forEach [0, 1, 2];
 
 if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
-    if (!(_unitBaseAngle isEqualTo (_player getVariable [QGVAR(baseAngle), [0,0,0]]))) then {
+    if (_unitBaseAngle isNotEqualTo (_player getVariable [QGVAR(baseAngle), [0,0,0]])) then {
         TRACE_2("syncing",_unitBaseAngle,_player getVariable QGVAR(baseAngle));
         _player setVariable [QGVAR(baseAngle), _unitBaseAngle, true];
     };
-    if (!(_unitBoreHeight isEqualTo (_player getVariable [QGVAR(boreHeight), [0,0,0]]))) then {
+    if (_unitBoreHeight isEquaisNotEqualTolTo (_player getVariable [QGVAR(boreHeight), [0,0,0]])) then {
         TRACE_2("syncing",_unitBoreHeight,_player getVariable QGVAR(boreHeight));
         _player setVariable [QGVAR(boreHeight), _unitBoreHeight, true];
     };

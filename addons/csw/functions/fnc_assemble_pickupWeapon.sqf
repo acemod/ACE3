@@ -26,7 +26,7 @@
     TRACE_4("",typeOf _staticWeapon,_carryWeaponClassname,_turretClassname,_pickupTime);
     if (!isClass (configFile >> "CfgWeapons" >> _carryWeaponClassname)) exitWith {ERROR_1("bad weapon classname [%1]",_carryWeaponClassname);};
     // Turret classname can equal nothing if the deploy bag is the "whole" weapon. e.g Kornet, Metis, other ATGMs
-    if (!(_turretClassname isEqualTo "") && {!isClass (configFile >> "CfgVehicles" >> _turretClassname)}) exitWith {ERROR_1("bad turret classname [%1]",_turretClassname);};
+    if ((_turretClassname isNotEqualTo "") && {!isClass (configFile >> "CfgVehicles" >> _turretClassname)}) exitWith {ERROR_1("bad turret classname [%1]",_turretClassname);};
 
     private _onFinish = {
         params ["_args"];
@@ -54,7 +54,7 @@
             };
         } forEach (magazinesAllTurrets _staticWeapon);
 
-        if !(_turretClassname isEqualTo "") then {
+        if (_turretClassname isNotEqualTo "") then {
             private _cswTripod = createVehicle [_turretClassname, [0, 0, 0], [], 0, "NONE"];
             // Delay a frame so weapon has a chance to be deleted
             [{

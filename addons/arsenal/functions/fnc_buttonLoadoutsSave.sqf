@@ -124,7 +124,7 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
         };
 
-        if (GVAR(shiftState) && {is3DEN} && {!(_loadoutName isEqualTo "")} && {_cursSelRow != -1} && {!(_loadoutIndex isEqualto -1)}) exitwith {
+        if (GVAR(shiftState) && {is3DEN} && {_loadoutName isNotEqualTo ""} && {_cursSelRow != -1} && {_loadoutIndex isNotEqualTo -1}) exitwith {
             private _defaultLoadoutsSearch = GVAR(defaultLoadoutsList) findIf {(_x select 0) == _loadoutName};
             if (_defaultLoadoutsSearch isEqualto -1) then {
                 GVAR(defaultLoadoutsList) pushBack [_loadoutName, _curSelLoadout];

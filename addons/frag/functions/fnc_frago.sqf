@@ -95,7 +95,7 @@ private _fragArcs = [];
 _fragArcs set [360, 0];
 
 private _doRandom = true;
-if (!(_objects isEqualTo [])) then {
+if (_objects isNotEqualTo []) then {
     if (GVAR(reflectionsEnabled)) then {
         [_lastPos, _shellType] call FUNC(doReflections);
     };

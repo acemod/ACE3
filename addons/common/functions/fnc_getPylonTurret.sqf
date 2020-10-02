@@ -22,7 +22,7 @@ params ["_vehicle", "_pylonIndex"];
 private _pylonTurrets = _vehicle getVariable ["ace_pylonTurrets", []];
 private _returnValue = _pylonTurrets param [_pylonIndex, []];
 
-if (!(_returnValue isEqualTo [])) then {
+if (_returnValue isNotEqualTo []) then {
     TRACE_1("Using ace_pylonTurrets value",_returnValue);
 } else {
     // Attempt to determine turret owner based on magazines in the vehicle

@@ -18,5 +18,5 @@ params ["_vehicle"];
 
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 
-!(_deployedRopes isEqualTo []) &&
+(_deployedRopes isNotEqualTo []) &&
 {{(_x select 5)} count (_deployedRopes) == 0}

@@ -68,9 +68,9 @@ if (_items isEqualType true) then {
 
     private _itemCount = {
         if (_x isEqualTo (_cargo select 0) || {_x isEqualTo (_cargo select 1)}) then {
-            !(_x isEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]})
+            (_x isNotEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]})
         } else {
-            !(_x isEqualTo [])
+            (_x isNotEqualTo [])
         };
     } count _cargo;
 

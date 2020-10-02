@@ -53,7 +53,7 @@ private _testDotProduct = (_lookDirection vectorDotProduct _testPointVector);
 
 private _testIntersections = lineIntersectsSurfaces [_shooterPos, _projPos, _shooter];
 
-if ((_testDotProduct < (cos _seekerAngle)) || { !(_testIntersections isEqualTo []) }) exitWith {
+if ((_testDotProduct < (cos _seekerAngle)) || {_testIntersections isNotEqualTo []}) exitWith {
     // out of LOS of seeker
     [0, 0, 0]
 };

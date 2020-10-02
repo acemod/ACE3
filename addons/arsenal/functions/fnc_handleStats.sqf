@@ -64,7 +64,7 @@ if (!isNil "_itemCfg") then {
 
         // Handle titles, bars and text
         _statsList = _statsList select [0, 5];
-        if !(_statsList isEqualTo []) then {
+        if (_statsList isNotEqualTo []) then {
             {
                 _x params ["_ID", "_configEntry", "_title", "_bools", "_statements"];
                 _bools params ["_showBar", "_showText"];

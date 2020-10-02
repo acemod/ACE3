@@ -47,7 +47,7 @@ if (GVAR(quickTag) == 3) then {
 };
 
 // Tag
-if !(_possibleTags isEqualTo []) then {
+if (_possibleTags isNotEqualTo []) then {
     private _availableTags = _possibleTags select {(_x select 2) in (_unit call EFUNC(common,uniqueItems))};
     (selectRandom _availableTags) params ["", "", "", "_textures", "", "_materials", "_tagModel"];
 

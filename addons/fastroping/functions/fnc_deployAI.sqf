@@ -75,7 +75,7 @@ DFUNC(deployAIRecursive) = {
     unassignVehicle _unit;
     [_unit, _vehicle] call FUNC(fastRope);
 
-    if !(_unitsToDeploy isEqualTo []) then {
+    if (_unitsToDeploy isNotEqualTo []) then {
         [{
             [{
                 params ["_vehicle"];

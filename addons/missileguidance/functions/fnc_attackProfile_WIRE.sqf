@@ -41,7 +41,7 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
 
 if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
     // cut wire if its caught on terrain
-    /*if !(lineIntersectsSurfaces [getPosASL _shooter, _projectilePos, _shooter] isEqualTo []) then {
+    /*if (lineIntersectsSurfaces [getPosASL _shooter, _projectilePos, _shooter] isNotEqualTo []) then {
         _attackProfileStateParams set [1, true];
     };*/
     // return position 50m infront of projectile

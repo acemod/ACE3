@@ -16,11 +16,11 @@ PREP_RECOMPILE_END;
         private _newBackpack = backpackContainer _unit;
         private _oldBackpack = backpackContainer _corpse;
 
-        if !(typeOf _newBackpack isEqualTo typeOf _oldBackpack) exitWith {};
+        if (typeOf _newBackpack isNotEqualTo typeOf _oldBackpack) exitWith {};
 
         private _state = _oldBackpack getVariable [QGVAR(gunbagWeapon), []];
 
-        if !(_state isEqualTo []) then {
+        if (_state isNotEqualTo []) then {
             _newBackpack setVariable [QGVAR(gunbagWeapon), _state, true];
         };
     }, _this] call CBA_fnc_execNextFrame;

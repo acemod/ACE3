@@ -30,7 +30,7 @@ private _end = AGLToASL screenToWorld getMousePosition;
 if ((_start distanceSqr _end) <= DISTANCE_NAMES_SQR) then {
     private _intersections = lineIntersectsSurfaces [_start, _end, _camTarget, _camTargetVeh];
 
-    if !(_intersections isEqualTo []) then {
+    if (_intersections isNotEqualTo []) then {
         _cursorObject = effectiveCommander ((_intersections select 0) select 3);
     };
 };
@@ -112,7 +112,7 @@ if !(GVAR(uiMapVisible)) then {
                 private _oldLoc = [];
                 {
                     _x params ["_locNew", "_colorNew"];
-                    if !(_oldLoc isEqualTo []) then {
+                    if (_oldLoc isNotEqualTo []) then {
                         drawLine3D [_oldLoc, _locNew, _colorNew];
                     };
                     _oldLoc = _locNew;

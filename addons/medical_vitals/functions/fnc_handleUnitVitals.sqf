@@ -53,7 +53,7 @@ if (_hemorrhage != GET_HEMORRHAGE(_unit)) then {
 private _woundBloodLoss = GET_WOUND_BLEEDING(_unit);
 
 private _inPain = GET_PAIN_PERCEIVED(_unit) > 0;
-if !(_inPain isEqualTo IS_IN_PAIN(_unit)) then {
+if (_inPain isNotEqualTo IS_IN_PAIN(_unit)) then {
     _unit setVariable [VAR_IN_PAIN, _inPain, true];
 };
 
@@ -75,7 +75,7 @@ private _painSupressAdjustment = 0;
 private _peripheralResistanceAdjustment = 0;
 private _adjustments = _unit getVariable [VAR_MEDICATIONS,[]];
 
-if !(_adjustments isEqualTo []) then {
+if (_adjustments isNotEqualTo []) then {
     private _deleted = false;
     {
         _x params ["_medication", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust"];

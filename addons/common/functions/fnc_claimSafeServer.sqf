@@ -36,7 +36,7 @@ _target setVariable [QGVAR(owner), _unit, true];
 
 // lock target object
 if (_lockTarget) then {
-    private _canBeDisassembled = !([] isEqualTo getArray (_target call CBA_fnc_getObjectConfig >> "assembleInfo" >> "dissasembleTo")) && { !([false, true] select (_target getVariable [QEGVAR(csw,assemblyMode), 0])) };
+    private _canBeDisassembled = ([] isNotEqualTo getArray (_target call CBA_fnc_getObjectConfig >> "assembleInfo" >> "dissasembleTo")) && { !([false, true] select (_target getVariable [QEGVAR(csw,assemblyMode), 0])) };
     if (!isNull _unit) then {
         [QGVAR(lockVehicle), _target, _target] call CBA_fnc_targetEvent;
         if (_canBeDisassembled) then {

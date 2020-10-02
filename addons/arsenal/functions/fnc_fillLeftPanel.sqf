@@ -199,7 +199,7 @@ private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace)
 for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
     private _currentData = _ctrlPanel lbData _lbIndex;
 
-    if (!(_currentData isEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
+    if ((_currentData isNotEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
         _ctrlPanel lbSetCurSel _lbIndex;
     };
 };

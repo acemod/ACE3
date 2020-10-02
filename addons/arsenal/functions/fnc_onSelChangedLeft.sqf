@@ -60,7 +60,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                if !(_compatibleMags isEqualTo []) then {
+                if (_compatibleMags isNotEqualTo []) then {
                     GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
                 };
 
@@ -102,7 +102,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                if !(_compatibleMags isEqualTo []) then {
+                if (_compatibleMags isNotEqualTo []) then {
                     GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
                 };
 
@@ -143,7 +143,7 @@ switch (GVAR(currentLeftPanel)) do {
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
-                if !(_compatibleMags isEqualTo []) then {
+                if (_compatibleMags isNotEqualTo []) then {
                     GVAR(center) addWeaponItem [_item, [_compatibleMags select 0]];
                 };
 

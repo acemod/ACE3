@@ -41,7 +41,7 @@ private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf
     private _pylonMagazine = (getPylonMagazines _vehicle) select (_pylonIndex - 1);
 
     // Only care about pylons that have a magazine.
-    if (!(_pylonMagazine isEqualTo "")) then {
+    if (_pylonMagazine isNotEqualTo "") then {
 
         private _maxRounds = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
         private _currentRounds = _vehicle ammoOnPylon _pylonIndex;

@@ -37,7 +37,7 @@ TRACE_3("",_cargoIndex,_cargoNumber,_turretPath);
 private _preserveEngineOn = false;
 
 // first get in to target seat
-if (!(_turretPath isEqualTo [])) then {
+if (_turretPath isNotEqualTo []) then {
     _unit action ["GetInTurret", _vehicle, _turretPath];
 } else {
     if (_cargoIndex > -1) then {

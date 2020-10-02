@@ -43,7 +43,7 @@ private _vehicleActions = [];
 
     TRACE_2("can add",_x,_magazineHelper);
 
-    if (!(_magazineHelper isEqualTo [])) then {
+    if (_magazineHelper isNotEqualTo []) then {
         private _icon = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Icon");
         if !((_icon select [0, 1]) == "\") then {
             _icon = "";
@@ -92,7 +92,7 @@ private _vehicleActions = [];
     };
 } forEach _vehicles;
 
-if (!(_cswCarryMagazines isEqualTo [])) then {
+if (_cswCarryMagazines isNotEqualTo []) then {
     _cswCarryMagazines = _cswCarryMagazines arrayIntersect _cswCarryMagazines;
     _cswCarryMagazines = _cswCarryMagazines select {[_truck, _x] call FUNC(hasEnoughSupply)};
     private _baseAction = [QGVAR(cswTake), "CSW", "", {}, {true}] call EFUNC(interact_menu,createAction);

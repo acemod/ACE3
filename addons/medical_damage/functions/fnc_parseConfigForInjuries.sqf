@@ -38,7 +38,7 @@ private _classID = 0;
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0) == 1;
     private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0) == 1;
 
-    if !(_causes isEqualTo []) then {
+    if (_causes isNotEqualTo []) then {
         GVAR(woundClassNames) pushBack _className;
         GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping, _causeFracture];
         {

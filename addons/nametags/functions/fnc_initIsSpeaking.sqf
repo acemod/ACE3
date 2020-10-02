@@ -56,7 +56,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
         [{
             private _oldSetting = ACE_player getVariable [QGVAR(isSpeakingInGame), false];
             private _newSetting = (!(isNull findDisplay 55));
-            if (!(_oldSetting isEqualTo _newSetting)) then {
+            if (_oldSetting isNotEqualTo _newSetting) then {
                 ACE_player setVariable [QGVAR(isSpeakingInGame), _newSetting, true];
             };
         } , 0.1, []] call CBA_fnc_addPerFrameHandler;

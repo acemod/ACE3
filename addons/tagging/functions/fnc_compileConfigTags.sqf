@@ -19,7 +19,7 @@
     private _class = configName _x;
     private _result = [_x, false] call FUNC(parseConfigTag);
 
-    if !(_result isEqualTo []) then {
+    if (_result isNotEqualTo []) then {
         _result params ["_tagInfo", "_requiredItem"];
 
         GVAR(cachedTags) pushBack _tagInfo;
@@ -31,7 +31,7 @@
     private _class = configName _x;
     private _result = [_x, true] call FUNC(parseConfigTag);
 
-    if !(_result isEqualTo []) then {
+    if (_result isNotEqualTo []) then {
         _result params ["_tagInfo", "_requiredItem"];
 
         GVAR(cachedTags) pushBack _tagInfo;

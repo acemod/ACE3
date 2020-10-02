@@ -27,7 +27,7 @@ private _seekerFunction = getText (configFile >> QGVAR(SeekerTypes) >> _seekerTy
 private _seekerTargetPos = _this call (missionNamespace getVariable _seekerFunction);
 
 if ((isNil "_seekerTargetPos") || {_seekerTargetPos isEqualTo [0,0,0]}) then { // A return of nil or [0,0,0] indicates the seeker has no target
-    if (_seekLastTargetPos && {!(_lastKnownPos isEqualTo [0,0,0])}) then { // if enabled for the ammo, use last known position if we have one stored
+    if (_seekLastTargetPos && {_lastKnownPos isNotEqualTo [0,0,0]}) then { // if enabled for the ammo, use last known position if we have one stored
         TRACE_2("seeker returned bad pos - using last known",_seekLastTargetPos,_lastKnownPos);
         _seekerTargetPos = _lastKnownPos;
         #ifdef DRAW_GUIDANCE_INFO

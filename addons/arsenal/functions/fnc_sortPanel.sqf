@@ -128,7 +128,7 @@ _for do {
     if (_right) then {
         _panel lnbSetText [[_i, 1], format ["%1%2", _value, _panel lnbText [_i, 1]]];
     } else {
-        if !(_item isEqualTo "") then {
+        if (_item isNotEqualTo "") then {
             _panel lbSetText [_i, format ["%1%2", _value, _panel lbText _i]];
         };
     };
@@ -153,7 +153,7 @@ if (_right) then {
             if (_data == _selected) then {_panel lbSetCurSel _i};
         };
         private _name = getText (_cfgClass >> _data >> "displayName");
-        if !(_name isEqualTo "") then {
+        if (_name isNotEqualTo "") then {
             _panel lbSetText [_i, _name];
         };
     };
