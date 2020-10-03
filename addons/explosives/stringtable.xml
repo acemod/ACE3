@@ -1101,5 +1101,23 @@
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
             <Russian>Определяет, является ли юнит сапёром.</Russian>
         </Key>
+        <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
+            <English>Minimum Time</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
+            <English>Maximum Time</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
+            <English>Default Time</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMin_Description">
+            <English>Minimum time value (in seconds) for the explosive timer.</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMax_Description">
+            <English>Maximum time value (in seconds) for the explosive timer.</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerDefault_Description">
+            <English>Default time value (in seconds) for the explosive timer.</English>
+        </Key>
     </Package>
 </Project>
