@@ -125,12 +125,12 @@ class CfgAmmo {
     // https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN18072_TC%203-22x84%20FINAL%20WEB.pdf (page 99, Table A-6. HE 441D RS, 84-mm projectile)
     class R_MRAAWS_HEAT_F;
     class R_MRAAWS_HE_F: R_MRAAWS_HEAT_F {
-        ace_frag_enabled = 1;
-        ace_frag_metal = 2300;
-        ace_frag_charge = 590;
-        ace_frag_gurney_c = 2800;
-        ace_frag_gurney_k = 1/2;
-        ace_frag_classes[] = {"ACE_frag_small"};
+        GVAR(enabled) = 1;
+        GVAR(metal) = 2300;
+        GVAR(charge) = 590;
+        GVAR(gurney_c) = 2800;
+        GVAR(gurney_k) = 1/2;
+        GVAR(classes)[] = {"ACE_frag_small"};
     };
 
 
