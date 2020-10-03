@@ -51,27 +51,27 @@ class CfgVehicles {
             class ACE_deployRopes12 {
                 displayName = CSTRING(Interaction_deployRopes12);
                 condition = QUOTE([ARR_3(_target,_player,'ACE_rope12')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope12'))]] call CBA_fnc_serverEvent);
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope12')])] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes15 {
                 displayName = CSTRING(Interaction_deployRopes15);
                 condition = QUOTE([ARR_3(_target,_player,'ACE_rope15')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope15'))]] call CBA_fnc_serverEvent);
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope15')])] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes18 {
                 displayName = CSTRING(Interaction_deployRopes18);
                 condition = QUOTE([ARR_3(_target,_player,'ACE_rope18')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope18'))]] call CBA_fnc_serverEvent);
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope18')])] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes27 {
                 displayName = CSTRING(Interaction_deployRopes27);
                 condition = QUOTE([ARR_3(_target,_player,'ACE_rope27')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope27'))]] call CBA_fnc_serverEvent);
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope27')])] call CBA_fnc_serverEvent);
             };
             class ACE_deployRopes36 {
                 displayName = CSTRING(Interaction_deployRopes36);
                 condition = QUOTE([ARR_4(_target,_player,'ACE_rope36',true)] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope36'))]] call CBA_fnc_serverEvent);
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope36')])] call CBA_fnc_serverEvent);
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
@@ -221,7 +221,7 @@ class CfgVehicles {
         class UserActions {
             class Ramp_Open;
             class Ramp_Close: Ramp_Open {
-                condition = QUOTE([ARR_5(this,'CargoRamp_Open',[[0],[1],[2]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'CargoRamp_Open',[[0],[1],[2]])] call FUNC(canCloseRamp));
             };
         };
     };
@@ -234,7 +234,7 @@ class CfgVehicles {
         class UserActions {
             class Ramp_Open;
             class Ramp_Close: Ramp_Open {
-                condition = QUOTE([ARR_5(this,'Door_rear_source',[[0],[3],[4]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'Door_rear_source',[[0],[3],[4]])] call FUNC(canCloseRamp));
             };
         };
     };
@@ -268,7 +268,7 @@ class CfgVehicles {
         class UserActions: UserActions {
             class CloseDoor_6;
             class Ramp_Close: CloseDoor_6 {
-                condition = QUOTE([ARR_6(this,'Door_6_source',[[0],[1],[2],[3]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'Door_6_source',[[0],[1],[2],[3]])] call FUNC(canCloseRamp));
             };
         };
     };
