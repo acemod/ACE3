@@ -1,9 +1,10 @@
 class CfgMovesBasic {
+    class ManActions {
+        ACE_dragWithPistol = "ace_dragging";
+        ACE_dragWithRifle = "AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2";
+    };
+
     class Actions {
-        class NoActions;
-        class PistolStandActions: NoActions {
-            grabDrag = "ace_dragging";
-        };
         class MoveWithInjuredManDragger;
         class MoveWithInjuredManDraggerRfl: MoveWithInjuredManDragger {
             Up = "amovpercmstpsraswrfldnon";

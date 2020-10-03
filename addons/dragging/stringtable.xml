@@ -102,5 +102,17 @@
             <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
         </Key>
+        <Key ID="STR_ACE_Dragging_SettingsName">
+            <English>ACE Dragging</English>
+            <Hungarian>Húzás</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
+            <English>Drag and fire</English>
+            <Hungarian>Húzás és tüzelés</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Dragging_DragAndFire_Description">
+            <English>Allow firing primary/secondary weapon when dragging</English>
+            <Hungarian>Az elsődleges és másodlagos fegyverek használatának engedélyezése húzás közben</Hungarian>
+        </Key>
     </Package>
 </Project>
