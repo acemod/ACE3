@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
- * Calculates the directional vector of the marking laser.
+ * Calculates the directional vector of a pilot camera mounted marking laser.
+ * Uses interpolation of regular network updates because camera direction is local.
  *
  * Arguments:
  * 0: Aircraft <OBJECT>
@@ -11,14 +12,17 @@
  * Directional vector of laser in world space <ARRAY>
  *
  * Example:
- * [plane, laser] call ace_markinglaser_fnc_getVector
+ * [plane, laser] call ace_markinglaser_fnc_getPilotCamVector
  *
  * Public: No
  */
+
 params ["_aircraft", "_laser"];
 
 #ifndef DEBUG_MODE_FULL
-if (local _aircraft) exitWith {
+// If player is controlling the camera, no need to interpolate
+// Interpolate local AI vehicles, getPilotCameraDirection does not work with AI
+if (local _aircraft && {cameraOn == _aircraft}) exitWith {
     _aircraft vectorModelToWorldVisual getPilotCameraDirection _aircraft
 };
 #endif
@@ -30,8 +34,8 @@ if (local _aircraft) exitWith {
 private _laserInfo = _laser getVariable [QGVAR(laserInfo), []];
 _laserInfo params ["_type", "_target", "_time", ["_isNewInfo", true]];
 
-private _originModel = _aircraft getVariable [QGVAR(laserOrigin), [0, 0, 0]];
-private _origin = _aircraft modelToWorldVisualWorld _originModel;
+private _originModel = _aircraft getVariable [QGVAR(laserOrigin), ""];
+private _origin = _aircraft modelToWorldVisualWorld (_aircraft selectionPosition _originModel);
 private _deltaTime = CBA_missionTime - _time;
 
 // If an update is older than 2s, the laser movement is stopped

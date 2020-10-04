@@ -7,9 +7,19 @@
 
 // Keybinds
 ["ACE3 Vehicles", QGVAR(toggleLaser), localize LSTRING(ToggleLaser), {
-    private _vehicle = vehicle ACE_Player;
+    private _vehicle = cameraOn;
+    if !(_vehicle getVariable [QGVAR(enabled), false]) exitWith {false};
 
-    if (_vehicle isKindOf "Air" && {hasPilotCamera _vehicle}) then {
+    private _controlledUnit = [ACE_player, ACE_controlledUAV#1] select unitIsUAV _vehicle;
+
+    private _canTurnOn = if (_vehicle getVariable [QGVAR(useTurret), false]) then {
+        private _turretInfo = _vehicle getVariable [QGVAR(turretInfo), []];
+        _controlledUnit == _vehicle turretUnit _turretInfo#0
+    } else {
+        _controlledUnit == driver _vehicle
+    };
+
+    if (_canTurnOn) then {
         if (_vehicle getVariable [QGVAR(laserOn), false]) then {
             [QGVAR(laserOff), [_vehicle]] call CBA_fnc_globalEvent;
         } else {

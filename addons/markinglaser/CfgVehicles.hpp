@@ -1,16 +1,17 @@
-class CBA_Extended_EventHandlers;
+class CBA_Extended_EventHandlers_base;
 
 class CfgVehicles {
-    class FloatingStructure_F;
-    class ACE_MarkingLaser: FloatingStructure_F {
+    class NonStrategic;
+    class ACE_MarkingLaser: NonStrategic {
         class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
 
-        scope = 2;
+        scope = 1;
         displayName = "";
         model = QPATHTOF(data\laser.p3d);
         hiddenSelections[] = {"camo"};
+        featureType = 2;
 
         class AnimationSources {
             class AdjustLength {
@@ -23,48 +24,63 @@ class CfgVehicles {
         };
 
         class Reflectors {
-            class LightEnd {
-                position = "light_end";
-                direction = "end";
-                selection = "end";
-                hitpoint = "";
-                innerAngle = 360;
-                outerAngle = 360;
-                coneFadeCoef = 1;
-                ambient[] = {1, 1, 1};
-                color[] = {1, 1, 1};
-                dayLight = 0;
-                useFlare = 0;
-                size = 1;
-                intensity = 1000;
-                class Attenuation {
-                    start = 0.1;
-                    constant = 0;
-                    linear = 1000;
-                    quadratic = 10;
-                    hardLimitStart = 10;
-                    hardLimitEnd = 15;
-                };
-            };
-
-            class LightStart: LightEnd {
+            class LightStart {
                 position = "start";
                 direction = "end";
                 selection = "start";
                 innerAngle = 1;
                 outerAngle = 135;
+                coneFadeCoef = 1;
+
+                hitpoint = "";
+                size = 1;
+                color[] = {1, 1, 1};
                 ambient[] = {0.1, 0.1, 0.1};
+                dayLight = 0;
                 useFlare = 1;
-                flareSize = 1.5;
+                flareSize = 5;
                 flareMaxDistance = 10000;
-                class Attenuation: Attenuation {
+                intensity = 1000;
+
+                class Attenuation {
+                    constant = 0;
+                    linear = 0;
+                    quadratic = 1;
                     start = 0;
-                    constant = 2;
-                    linear = 10;
-                    quadratic = 20;
-                    hardLimitStart = 5;
-                    hardLimitEnd = 6;
+                    hardLimitStart = 100;
+                    hardLimitEnd = 100;
                 };
+            };
+
+            class LightEnd: LightStart {
+                position = "light_end";
+                direction = "start";
+                selection = "end";
+                innerAngle = 360;
+                outerAngle = 360;
+
+                color[] = {1, 1, 1};
+                ambient[] = {1, 1, 1};
+                useFlare = 1;
+                flareSize = 5;
+                flareMaxDistance = 100;
+                intensity = 1000;
+            };
+        };
+    };
+
+    class AllVehicles;
+    class Air: AllVehicles {
+        class Attributes {
+            class GVAR(enabled) {
+                displayName = CSTRING(Attribute_Enabled_DisplayName);
+                tooltip = CSTRING(Attribute_Enabled_Tooltip);
+                property = QGVAR(enabled);
+                control = "Checkbox";
+                typeName = "BOOL";
+                expression = QUOTE(_this setVariable [ARR_3('GVAR(enabled)',_value,true)]);
+                defaultValue = "(true)";
+                condition = "objectVehicle";
             };
         };
     };

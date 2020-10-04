@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_aircraft"];
 
 private _laser = _aircraft getVariable [QGVAR(laser), objNull];

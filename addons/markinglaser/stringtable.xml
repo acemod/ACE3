@@ -5,5 +5,21 @@
             <English>Toggle IR marking laser</English>
             <German>IR Markierungslaser umschalten</German>
         </Key>
+        <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_DisplayName">
+            <English>Equip with IR marking laser</English>
+            <German>Mit IR Markierungslaser ausstatten</German>
+        </Key>
+        <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_Tooltip">
+            <English>Equips the aircrafts main turret or pilot camera with an IR marking laser.</English>
+            <German>Rüstet das Hauptgeschütz oder die Pilotenkamera des Luftfahrzeugs mit einem IR Markierungslaser aus.</German>
+        </Key>
+        <Key ID="STR_ACE_Markinglaser_Setting_Enabled_DisplayName">
+            <English>Enable IR marking lasers for aircraft</English>
+            <German>IR Markierungslaser für Luftfahrzeuge aktivieren</German>
+        </Key>
+        <Key ID="STR_ACE_Markinglaser_Setting_Enabled_Tooltip">
+            <English>Enables the useage of IR marking lasers for aircraft.</English>
+            <German>Ermöglicht die Nutzung von IR Markierungslasern für Luftfahrzeuge.</German>
+        </Key>
     </Package>
 </Project>

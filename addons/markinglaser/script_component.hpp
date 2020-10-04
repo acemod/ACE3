@@ -16,7 +16,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define IN_NVGS (currentVisionMode ACE_player == 1)
 #define LASER_MAX 10000
 #define LIS_LIMIT 5000
 #define UPDATE_INTERVAL 1
