@@ -6,6 +6,7 @@ PREP(bandageLocal);
 PREP(bodyCleanupLoop);
 PREP(canBandage);
 PREP(canCPR);
+PREP(canPlaceInBodyBag);
 PREP(canSplint);
 PREP(canStitch);
 PREP(canTreat);

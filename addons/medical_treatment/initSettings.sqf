@@ -189,6 +189,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(allowBodyBagUnconscious),
+    "CHECKBOX",
+    [LSTRING(AllowBodyBagUnconscious_DisplayName), LSTRING(AllowBodyBagUnconscious_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    false,
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(cprSuccessChance),
     "SLIDER",
     [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],

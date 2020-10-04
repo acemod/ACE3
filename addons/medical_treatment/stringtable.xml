@@ -556,6 +556,12 @@
             <Polish>Pozwala przetoczyć płyny IV samemu sobie</Polish>
             <Italian>Abilita la trasfusione in endovena su se stessi.</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_DisplayName">
+            <English>Allow Unconscious Body Bag</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
+            <English>Enables placing an unconscious patient in a body bag.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
             <German>Erlaube Bluttransfusionen</German>
