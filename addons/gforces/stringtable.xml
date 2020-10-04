@@ -7,6 +7,7 @@
             <French>ACE Force gravitationnelle</French>
             <Russian>ACE Перегрузки</Russian>
             <Japanese>ACE G フォース</Japanese>
+            <Turkish>ACE G-Kuvveti</Turkish>
         </Key>
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
@@ -53,6 +54,7 @@
             <Portuguese>Redução de Força-G</Portuguese>
             <Czech>Redukce G Force</Czech>
             <Spanish>Reducción de fuerzas G</Spanish>
+            <Turkish>G-Kuvvetinde azalma</Turkish>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_DisplayName">
             <English>G-Force Coefficient</English>
@@ -60,6 +62,7 @@
             <French>Coefficient de force gravitationnelle</French>
             <Russian>Коэффициент перегрузки</Russian>
             <Japanese>G 効果係数</Japanese>
+            <Turkish>G-Kuvvet Katsayısı</Turkish>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_Description">
             <English>Controls strength of G-Force affecting players.</English>
@@ -67,6 +70,7 @@
             <French>Coefficient permettant d'ajuster le niveau de force gravitationnelle affectant les joueurs.</French>
             <Russian>Определяет силу перегрузок, влияющих на игроков.</Russian>
             <Japanese>G 効果がプレイヤーに与える影響量を設定できます。</Japanese>
+            <Turkish>Oyuncuları etkileyen G-Force'un gücünü kontrol eder.</Turkish>
         </Key>
     </Package>
 </Project>

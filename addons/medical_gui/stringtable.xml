@@ -41,6 +41,7 @@
             <Czech>Povolit zdravotnické akce pro menu interakcí a vybrat jejich styl.</Czech>
             <Polish>Umożliwia akcje medyczne w menu interakcji i wybiera ich styl.</Polish>
             <Spanish>Habilita acciones médicas para el menú de interacción y selecciona su estilo.</Spanish>
+            <Turkish>Etkileşim Menüsü için tıbbi eylemleri etkinleştirir ve stillerini seçer.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Selections3D">
             <English>Selections (3D)</English>
@@ -102,6 +103,7 @@
             <Czech>Povoluje zdravotnické akce v menu vlastních interakcí.</Czech>
             <Polish>Umożliwia działania medyczne w menu własnej interakcji.</Polish>
             <Spanish>Activa las acciones médicas para el menú de interacción personal</Spanish>
+            <Turkish>Kişisel Etkileşim Menüsü için tıbbi eylemleri etkinleştirir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_DisplayName">
             <English>Enable Medical Menu</English>
@@ -129,6 +131,7 @@
             <Czech> Povoluje používání Zdravotnického menu klávesovou zkratku nebo skrze menu interakcí.</Czech>
             <Polish>Umożliwia korzystanie z menu medycznego poprzez  skrót lub menu interakcji.</Polish>
             <Spanish>Activa el uso del menú médico a través de la tecla o del menú de interacción</Spanish>
+            <Turkish>Medikal Menünün bir tuşla veya etkileşim menüsü aracılığıyla kullanılmasını sağlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_DisplayName">
             <English>Reopen Medical Menu</English>
@@ -142,6 +145,7 @@
             <Czech>Znovu otevřít Zdravotnické menu</Czech>
             <Polish>Otwiera ponownie menu medyczne</Polish>
             <Spanish>Reabrir menú médico</Spanish>
+            <Turkish>Medikal Menüyü Yeniden Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_OpenAfterTreatment_Description">
             <English>Reopen the Medical Menu after successful treatment.</English>
@@ -155,6 +159,7 @@
             <Czech>Otevře Zdravotnické menu po úspěšném dokončení zdravotnické akce.</Czech>
             <Polish>Otwiera ponownie menu medyczne po udanym leczeniu.</Polish>
             <Spanish>Reabrir menú médico después de completar un tratamiento</Spanish>
+            <Turkish>Başarılı bir tedaviden sonra Tıbbi Menüyü yeniden açın.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -168,6 +173,7 @@
             <Czech>Maximální vzdálenost</Czech>
             <Polish>Maksymalny dystans</Polish>
             <Spanish>Distancia máxima</Spanish>
+            <Turkish>Maksimum Mesafe</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
@@ -181,6 +187,7 @@
             <Czech>Maximální vzdálenost ze které je možné otevřít Zdravotnické menu.</Czech>
             <Polish>Maksymalny dystans w którym menu medyczne może zostać otwarte.</Polish>
             <Spanish>Distancia máxima desde el paciente para que el menú pueda ser abierto</Spanish>
+            <Turkish>Tıbbi Menünün açılabileceği maksimum mesafe.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -279,6 +286,7 @@
             <Korean>검사 / 치료</Korean>
             <Chinesesimp>检查 &amp; 治疗</Chinesesimp>
             <Chinese>檢查 &amp; 治療</Chinese>
+            <Turkish>MUAYENE &amp; TEDAVİ</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS">
             <English>STATUS</English>
@@ -455,6 +463,7 @@
             <Korean>고급 치료</Korean>
             <Chinesesimp>进阶治疗</Chinesesimp>
             <Chinese>進階治療</Chinese>
+            <Turkish>Gelişmiş Tedaviler</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DragCarry">
             <English>Drag / Carry</English>
@@ -486,6 +495,7 @@
             <Korean>토글 (자신)</Korean>
             <Chinesesimp>切换 (自己)</Chinesesimp>
             <Chinese>切換 (自己)</Chinese>
+            <Turkish>Değiştir (Şahsi)</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Head">
             <English>Head</English>
@@ -741,6 +751,7 @@
             <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
             <Chinesesimp>有 %2 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 開放性傷口</Chinese>
+            <Turkish>% 2% 1 Açık Yara Var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SINGLE_OPEN_WOUND">
             <English>There is 1 %1 Open Wound</English>
@@ -756,6 +767,7 @@
             <Korean>여기 %1 크기의 열린 상처가 있다</Korean>
             <Chinesesimp>有 1 处未处理的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 開放性傷口</Chinese>
+            <Turkish>% 1 Açık Yara Var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PARTIAL_OPEN_WOUND">
             <English>There is a partial %1 Open wound</English>
@@ -771,6 +783,7 @@
             <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有未完全处理的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 開放性傷口</Chinese>
+            <Turkish>% 1 Yarım Açık yara var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_MULTIPLE_BANDAGED_WOUNDS">
             <English>There are %2 %1 Bandaged Wounds</English>
@@ -786,6 +799,7 @@
             <Korean>여기에 붕대를 감은 %2 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有 %2 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 %2 %1 包紮過傷口</Chinese>
+            <Turkish>% 2% 1 Sargılı Yaralar Var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SINGLE_BANDAGED_WOUND">
             <English>There is 1 %1 Bandaged Wound</English>
@@ -801,6 +815,7 @@
             <Korean>여기에 붕대를 감은 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有 1 处包扎过的 %1 伤口</Chinesesimp>
             <Chinese>有 1 %1 包紮過傷口</Chinese>
+            <Turkish>% 1 Sargılı Yara Var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PARTIAL_BANDAGED_WOUND">
             <English>There is a partial %1 Bandaged wound</English>
@@ -816,6 +831,7 @@
             <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
             <Chinesesimp>有未包扎完全的 %1 伤口</Chinesesimp>
             <Chinese>有部分 %1 包紮過傷口</Chinese>
+            <Turkish>i% 1 Yarı sargılı yara var</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_NORMAL_BREATHING">
             <English>Normal breathing</English>
@@ -941,6 +957,7 @@
             <Polish>Złamanie</Polish>
             <Spanish>Fracturada</Spanish>
             <Chinesesimp>骨折</Chinesesimp>
+            <Turkish>Kırık</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
@@ -954,6 +971,7 @@
             <Polish>Szyna założona</Polish>
             <Spanish>Tablilla aplicada</Spanish>
             <Chinesesimp>已用夹板固定</Chinesesimp>
+            <Turkish>Atel Uygulandı</Turkish>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1048,6 +1066,7 @@
             <Korean>비-인두 기도기 [NPA]</Korean>
             <Chinesesimp>鼻咽管</Chinesesimp>
             <Chinese>鼻咽管</Chinese>
+            <Turkish>Nazofarengeal Tüp [NPA]</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Actions_TriageCard">
             <English>Triage Card</English>
@@ -1088,6 +1107,7 @@
             <Russian>Информация о пациенте</Russian>
             <Chinesesimp>伤员信息</Chinesesimp>
             <Japanese>患者情報</Japanese>
+            <Turkish>Hasta Bilgileri</Turkish>
         </Key>
     </Package>
 </Project>

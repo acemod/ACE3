@@ -99,6 +99,7 @@
             <Portuguese>Expande o clima existente com temperatura, humidade e pressão do ar.</Portuguese>
             <Czech>Rozšiřuje stávající počasí o teplotu, vlhkost a tlak vzduchu.</Czech>
             <French>Améliore le module météo existant en y ajoutant la température, l'humidité et la pression atmosphérique.</French>
+            <Turkish>Mevcut havayı sıcaklık, nem ve hava basıncı ile genişletir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
