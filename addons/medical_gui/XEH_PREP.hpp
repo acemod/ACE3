@@ -9,7 +9,7 @@ PREP(handleToggle);
 PREP(handleTriageSelect);
 PREP(menuPFH);
 PREP(modifyAction);
-PREP(modifyManMainAction);
+PREP(modifyActionTriageLevel);
 PREP(onMenuClose);
 PREP(onMenuOpen);
 PREP(openMenu);

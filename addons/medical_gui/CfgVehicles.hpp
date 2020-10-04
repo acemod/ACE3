@@ -19,7 +19,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotInside", "isNotSwimming"};
                 statement = QUOTE(_target call FUNC(openMenu));
                 icon = QPATHTOF(ui\cross.paa);
-                modifierFunction = QUOTE(call FUNC(modifyManMainAction));
+                modifierFunction = QUOTE(call FUNC(modifyActionTriageLevel));
             };
         };
         class ACE_Actions {
@@ -27,7 +27,7 @@ class CfgVehicles {
             #include "InteractionBodyParts.hpp"
             #undef ACTION_CONDITION
             class ACE_MainActions {
-                modifierFunction = QUOTE(call FUNC(modifyManMainAction));
+                modifierFunction = QUOTE(call FUNC(modifyActionTriageLevel));
 
                 class ACE_Medical_Menu {
                     displayName = CSTRING(MedicalMenu);
@@ -35,7 +35,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSwimming"};
                     statement = QUOTE(_target call FUNC(openMenu));
                     icon = QPATHTOF(ui\cross.paa);
-                    modifierFunction = QUOTE(call FUNC(modifyManMainAction));
+                    modifierFunction = QUOTE(call FUNC(modifyActionTriageLevel));
                 };
                 class ACE_Medical_Radial {
                     displayName = CSTRING(Medical);
