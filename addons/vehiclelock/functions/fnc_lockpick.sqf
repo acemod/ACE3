@@ -53,10 +53,12 @@ switch (_funcType) do {
         _returnValue = !([_unit, _veh] call FUNC(hasKeyForVehicle)) && {(locked _veh) in [2, 3]};
     };
     case "startLockpick": {
+        [QGVAR(start), [_veh]] call CBA_fnc_localEvent;
         [_vehLockpickStrength, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);
     };
     case "finishLockpick": {
         [QGVAR(setVehicleLock), [_veh, false], [_veh]] call CBA_fnc_targetEvent;
+        [QGVAR(finished), [_veh]] call CBA_fnc_localEvent;
     };
     default {
         ERROR("bad function type");
