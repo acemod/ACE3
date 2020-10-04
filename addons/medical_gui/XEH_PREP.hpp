@@ -9,6 +9,7 @@ PREP(handleToggle);
 PREP(handleTriageSelect);
 PREP(menuPFH);
 PREP(modifyAction);
+PREP(modifyManMainAction);
 PREP(onMenuClose);
 PREP(onMenuOpen);
 PREP(openMenu);
