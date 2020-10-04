@@ -26,6 +26,9 @@ private _direction = _target getVariable [QGVAR(carryDirection), 0];
 
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
+    if (!alive _target) then {
+        _target = [_target] call FUNC(createClone);
+    };
 
     [_unit, "AcinPercMstpSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
     [_target, "AinjPfalMstpSnonWnonDf_carried_dead", 2, true] call EFUNC(common,doAnimation);

@@ -24,6 +24,11 @@ TRACE_1("params",_this);
 
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
+// drop cloned dead units
+if (_target isKindOf QGVAR(clone)) then {
+    _target = [_target] call FUNC(dropClone);
+};
+
 // prevent collision damage
 [QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
 [QEGVAR(common,fixCollision), _target, _target] call CBA_fnc_targetEvent;

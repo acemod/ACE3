@@ -27,6 +27,14 @@ if (isNil "ACE_maxWeightCarry") then {
 // handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
+// handle local effect commands for clones
+[QGVAR(cloneCreated), {
+    params ["_unit", "_clone"];
+
+    _clone setFace face _unit;
+    _clone setMimic "unconscious";
+}] call CBA_fnc_addEventHandler;
+
 // display event handler
 ["MouseZChanged", {_this select 1 call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
 
