@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: SynixeBrett
- * Modifies the ACE_JoinGroup action to show group name.
+ * Modifies the action color to match the triage level.
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -22,7 +22,6 @@ params ["_target", "_player", "", "_actionData"];
 _actionData params ["", "", "_style"];
 _style params ["_icon"];
 
-// Set color to triage level
 private _color = switch (_target getVariable [QEGVAR(medical,triageLevel),0]) do {
     case 1: {[TRIAGE_COLOR_MINIMAL]};
     case 2: {[TRIAGE_COLOR_DELAYED]};
