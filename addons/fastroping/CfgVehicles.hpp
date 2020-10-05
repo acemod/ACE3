@@ -221,7 +221,7 @@ class CfgVehicles {
         class UserActions {
             class Ramp_Open;
             class Ramp_Close: Ramp_Open {
-                condition = QUOTE([ARR_5(this,'CargoRamp_Open',[[0],[1],[2]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'CargoRamp_Open',[ARR_3([0],[1],[2])])] call FUNC(canCloseRamp));
             };
         };
     };
@@ -234,7 +234,7 @@ class CfgVehicles {
         class UserActions {
             class Ramp_Open;
             class Ramp_Close: Ramp_Open {
-                condition = QUOTE([ARR_5(this,'Door_rear_source',[[0],[3],[4]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'Door_rear_source',[ARR_3([0],[3],[4])])] call FUNC(canCloseRamp));
             };
         };
     };
@@ -268,7 +268,7 @@ class CfgVehicles {
         class UserActions: UserActions {
             class CloseDoor_6;
             class Ramp_Close: CloseDoor_6 {
-                condition = QUOTE([ARR_6(this,'Door_6_source',[[0],[1],[2],[3]])] call FUNC(canCloseRamp));
+                condition = QUOTE([ARR_3(this,'Door_6_source',[ARR_4([0],[1],[2],[3])])] call FUNC(canCloseRamp));
             };
         };
     };
