@@ -136,7 +136,7 @@
             <French>Réouvre le menu médical suite à l'application d'un soin.</French>
             <Portuguese>Reabrir Menu Médico após um tratamento com sucesso</Portuguese>
             <Chinese>當治療完成後二度打開醫療選單</Chinese>
-            <Italian>Riaprire il menu medico dopo il trattamento con successo.</Italian>
+            <Italian>Riaprire il menu medico dopo un trattamento con successo.</Italian>
             <Czech>Otevře Zdravotnické menu po úspěšném dokončení zdravotnické akce.</Czech>
             <Spanish>Reabrir menú médico después de completar un tratamiento</Spanish>
         </Key>
@@ -148,7 +148,7 @@
             <French>Distance maximale</French>
             <Portuguese>Distância Máxima</Portuguese>
             <Chinese>最大醫療距離</Chinese>
-            <Italian>Massima distanza</Italian>
+            <Italian>Distanza massima</Italian>
             <Czech>Maximální vzdálenost</Czech>
             <Spanish>Distancia máxima</Spanish>
         </Key>
@@ -447,7 +447,7 @@
             <Spanish>Alternar</Spanish>
             <Portuguese>Alternar (Si mesmo)</Portuguese>
             <Czech>Přepnout (na sebe)</Czech>
-            <Italian>Attiva (Te Stesso)</Italian>
+            <Italian>Scambia (Te Stesso)</Italian>
             <Japanese>切り替え (自分)</Japanese>
             <Korean>토글 (자신)</Korean>
             <Chinesesimp>切换 (自己)</Chinesesimp>

@@ -48,7 +48,7 @@
         <Key ID="STR_ACE_Medical_Damage_Abrasion">
             <English>Scrape</English>
             <German>Kratzer</German>
-            <Italian>Scorticatura</Italian>
+            <Italian>Escoriazione</Italian>
             <Russian>Ссадина</Russian>
             <French>Écorchure</French>
             <Polish>Draśnięcie</Polish>
@@ -63,7 +63,7 @@
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Minor">
             <English>Minor Scrape</English>
             <German>Kleiner Kratzer</German>
-            <Italian>Minima Scorticatura</Italian>
+            <Italian>Minima Escoriazione</Italian>
             <Russian>Малая ссадина</Russian>
             <French>Petite écorchure</French>
             <Polish>Pomniejsze draśnięcie</Polish>
@@ -78,7 +78,7 @@
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Medium">
             <English>Medium Scrape</English>
             <German>Mittlerer Kratzer</German>
-            <Italian>Media Scorticatura</Italian>
+            <Italian>Media Escoriazione</Italian>
             <Russian>Средняя ссадина</Russian>
             <French>Moyenne écorchure</French>
             <Polish>Średnie draśnięcie</Polish>
@@ -93,7 +93,7 @@
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Large">
             <English>Large Scrape</English>
             <German>Großer Kratzer</German>
-            <Italian>Alta Scorticatura</Italian>
+            <Italian>Alta Escoriazione</Italian>
             <Russian>Большая ссадина</Russian>
             <French>Grande écorchure</French>
             <Polish>Duże draśnięcie</Polish>
@@ -243,7 +243,7 @@
         <Key ID="STR_ACE_Medical_Damage_Crush_Minor">
             <English>Minor crushed tissue</English>
             <German>Kleine Quetschverletzung</German>
-            <Italian>Minimo Tessuto Schiacciato</Italian>
+            <Italian>Tessuto Schiacciato Minore</Italian>
             <Russian>Малая компрессионная травма</Russian>
             <French>Tissu légèrement écrasé</French>
             <Polish>Pomniejsze zgniecienie tkanek miękkich</Polish>
@@ -258,7 +258,7 @@
         <Key ID="STR_ACE_Medical_Damage_Crush_Medium">
             <English>Medium crushed tissue</English>
             <German>Mittlere Quetschverletzung</German>
-            <Italian>Medio Tessuto Schiacciato</Italian>
+            <Italian>Tessuto Schiacciato Medio</Italian>
             <Russian>Средняя компрессионная травма</Russian>
             <French>Tissu moyennement écrasé</French>
             <Polish>Średnie zgniecienie tkanek miękkich</Polish>
@@ -273,7 +273,7 @@
         <Key ID="STR_ACE_Medical_Damage_Crush_Large">
             <English>Large crushed tissue</English>
             <German>Große Quetschverletzung</German>
-            <Italian>Alto Tessuto Schiacciato</Italian>
+            <Italian>Tessuto Schiacciato Maggiore</Italian>
             <Russian>Большая компрессионная травма</Russian>
             <French>Tissu fortement écrasé</French>
             <Polish>Duże zgniecienie tkanek miękkich</Polish>
@@ -408,7 +408,7 @@
         <Key ID="STR_ACE_Medical_Damage_VelocityWound">
             <English>Velocity Wound</English>
             <German>Ballistisches Trauma</German>
-            <Italian>Velocità Ferita</Italian>
+            <Italian>Ferita da Alta Velocità</Italian>
             <Russian>Огнестрельная рана</Russian>
             <Polish>Rana postrzałowa</Polish>
             <French>Plaie pénétrante</French>
@@ -423,7 +423,7 @@
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Minor">
             <English>Small Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
-            <Italian>Lenta Velocità Ferita</Italian>
+            <Italian>Piccola Ferita da alta Velocità</Italian>
             <Russian>Малая огнестрельная рана</Russian>
             <Polish>Pomniejsza rana postrzałowa</Polish>
             <Spanish>Herida de bala menor</Spanish>
@@ -438,7 +438,7 @@
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
             <German>Mittleres Ballistisches Trauma</German>
-            <Italian>Media Velocità Ferita</Italian>
+            <Italian>Media Ferita da alta Velocità</Italian>
             <Russian>Средняя огнестрельная рана</Russian>
             <Polish>Średnia rana postrzałowa</Polish>
             <Spanish>Herida de bala media</Spanish>
@@ -453,7 +453,7 @@
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Large">
             <English>Large Velocity Wound</English>
             <German>Großes Ballistisches Trauma</German>
-            <Italian>Alta Velocità Ferita</Italian>
+            <Italian>Grande Ferita da alta Velocità</Italian>
             <Russian>Большая огнестрельная рана</Russian>
             <Polish>Duża rana postrzałowa</Polish>
             <Spanish>Herida de bala severa</Spanish>
@@ -468,7 +468,7 @@
         <Key ID="STR_ACE_Medical_Damage_PunctureWound">
             <English>Puncture Wound</English>
             <German>Stichwunde</German>
-            <Italian>Puntura Ferita</Italian>
+            <Italian>Ferita da Perforazione</Italian>
             <Russian>Колотая рана</Russian>
             <Polish>Rana kłuta</Polish>
             <French>Blessure par perforation</French>
@@ -483,7 +483,7 @@
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
             <German>Kleine Stichwunde</German>
-            <Italian>Piccola Puntura Ferita</Italian>
+            <Italian>Piccola Ferita da Perforazione</Italian>
             <Russian>Малая колотая рана</Russian>
             <Polish>Pomniejsza rana kłuta</Polish>
             <Spanish>Herida punzante menor</Spanish>
@@ -498,7 +498,7 @@
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
             <German>Mittlere Stichwunde</German>
-            <Italian>Media Puntura Ferita</Italian>
+            <Italian>Media Ferita da Perforazione</Italian>
             <Russian>Средняя колотая рана</Russian>
             <Polish>Średnia rana kłuta</Polish>
             <Spanish>Herida punzante media</Spanish>
@@ -513,7 +513,7 @@
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Large">
             <English>Large Puncture Wound</English>
             <German>Große Stichwunde</German>
-            <Italian>Grande Puntura Ferita</Italian>
+            <Italian>Grande Ferita da Perforazione</Italian>
             <Russian>Большая колотая рана</Russian>
             <Polish>Duża rana kłuta</Polish>
             <Spanish>Herida punzante severa</Spanish>

@@ -10,7 +10,7 @@
             <French>Changer le mode de jet des grenades</French>
             <Russian>Сменить режим броска гранаты</Russian>
             <Hungarian>Gránátkezelési mód váltása</Hungarian>
-            <Italian>Cambia tipo di granata</Italian>
+            <Italian>Cambia modalità della granata</Italian>
             <Portuguese>Alternar Modo de Granada</Portuguese>
             <Japanese>投てき方法を切り替え</Japanese>
             <Korean>투척 종류 전환</Korean>
@@ -408,7 +408,7 @@
         <Key ID="STR_ACE_Grenades_parachute_flare_description">
             <English>Type: Star Parachute Flare</English>
             <Polish>Typ: Gwiezdna Flara Spadochronowa</Polish>
-            <Italian>Tipo: Granata a paracadute con bengala</Italian>
+            <Italian>Tipo: Bengala a paracadute</Italian>
             <Japanese>種類: パラシュート式照明弾 (星弾)</Japanese>
             <Russian>Тип: Осветительная ракета - звезда на парашюте</Russian>
             <Portuguese>Tipo: Sinalizador de pára-quedas estrela</Portuguese>
@@ -452,7 +452,7 @@
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
             <Polish>Typ: Spadochronowa Flara IR</Polish>
-            <Italian>Tipo: Granata a paracadute con infrarosso</Italian>
+            <Italian>Tipo: Granata IR con paracadure</Italian>
             <Japanese>種類: パラシュート式赤外線照明弾</Japanese>
             <Russian>Тип: ИК-осветительная ракета на парашюте</Russian>
             <Portuguese>Tipo: Sinalizador Infravermelho de Pára-quedas</Portuguese>
@@ -463,7 +463,7 @@
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
             <Polish>M992 Oświetlająca flara IR</Polish>
-            <Italian>M992 Granata con infrarosso</Italian>
+            <Italian>M992 Granata IR</Italian>
             <Japanese>M992 赤外線照明弾</Japanese>
             <Russian>M992 ИК-осветительная ракета</Russian>
             <Portuguese>M992 Sinalizador de Iluminação Infravermelho</Portuguese>

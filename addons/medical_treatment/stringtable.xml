@@ -725,7 +725,7 @@
             <Portuguese>É médico</Portuguese>
             <French>Qualification médicale</French>
             <Hungarian>Orvos-e</Hungarian>
-            <Italian>E' Medico</Italian>
+            <Italian>È Medico</Italian>
             <Japanese>衛生兵に</Japanese>
             <Korean>의무병</Korean>
             <Chinesesimp>是医疗兵</Chinesesimp>
@@ -789,7 +789,7 @@
             <Portuguese>É um veículo médico</Portuguese>
             <French>Est un véhicule sanitaire</French>
             <Hungarian>Orvosi jármű-e</Hungarian>
-            <Italian>E' Veicolo Medico</Italian>
+            <Italian>È Veicolo Medico</Italian>
             <Japanese>医療車両に</Japanese>
             <Korean>의료 차량</Korean>
             <Chinesesimp>是医疗载具</Chinesesimp>
@@ -805,7 +805,7 @@
             <Portuguese>É uma instalação médica</Portuguese>
             <French>Est une installation sanitaire</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
-            <Italian>E' Struttura Medica</Italian>
+            <Italian>È Struttura Medica</Italian>
             <Japanese>医療施設に</Japanese>
             <Korean>의료시설</Korean>
             <Chinesesimp>是医疗设施</Chinesesimp>
@@ -2179,7 +2179,7 @@
             <Czech>QuikClot</Czech>
             <French>Bandage hémostatique</French>
             <Hungarian>QuikClot</Hungarian>
-            <Italian>QuikClot (polvere emostatica)</Italian>
+            <Italian>QuikClot</Italian>
             <Portuguese>QuikClot</Portuguese>
             <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯</Korean>
@@ -2629,7 +2629,7 @@
             <Polish>Prawie brak oddechu</Polish>
             <Czech>Skoro nedýchá</Czech>
             <Hungarian>Alig van légzés</Hungarian>
-            <Italian>Respira a fatica</Italian>
+            <Italian>Respira con estrema fatica</Italian>
             <Portuguese>Quase não respira</Portuguese>
             <Japanese>ほとんど呼吸をしていない</Japanese>
             <Korean>호흡이 없음</Korean>
@@ -2860,7 +2860,7 @@
             <Polish>Nie udało Ci się sprawdzić ciśnienia krwi</Polish>
             <German>Du konntest keinen Blutdruck feststellen</German>
             <Hungarian>Nem sikerült a vérnyomás megmérése</Hungarian>
-            <Italian>Manca strumento per misurare pressione sanguigna</Italian>
+            <Italian>Non sei riuscito a determinare la pressione sanguigna</Italian>
             <Portuguese>Você falhou em aferir a Pressão Arterial</Portuguese>
             <Czech>Nedokázal si změřit krevní tlak</Czech>
             <Japanese>血圧を測るのに失敗</Japanese>
