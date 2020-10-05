@@ -27,7 +27,7 @@ private _color = switch (_target getVariable [QEGVAR(medical,triageLevel), 0]) d
     case 2: {[TRIAGE_COLOR_DELAYED]};
     case 3: {[TRIAGE_COLOR_IMMEDIATE]};
     case 4: {[TRIAGE_COLOR_DECEASED]};
-    default {[1,1,1,1]};
+    default {[1, 1, 1, 1]};
 };
 
 _actionData set [2, [_icon, _color call BIS_fnc_colorRGBtoHTML]];
