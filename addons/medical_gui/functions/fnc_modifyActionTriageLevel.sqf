@@ -22,7 +22,7 @@ params ["_target", "_player", "", "_actionData"];
 _actionData params ["", "", "_style"];
 _style params ["_icon"];
 
-private _color = switch (_target getVariable [QEGVAR(medical,triageLevel),0]) do {
+private _color = switch (_target getVariable [QEGVAR(medical,triageLevel), 0]) do {
     case 1: {[TRIAGE_COLOR_MINIMAL]};
     case 2: {[TRIAGE_COLOR_DELAYED]};
     case 3: {[TRIAGE_COLOR_IMMEDIATE]};
