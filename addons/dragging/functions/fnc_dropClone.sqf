@@ -10,7 +10,7 @@
  * Original unit.
  *
  * Example:
- * [player] call ace_dragging_fnc_createClone;
+ * [player] call ace_dragging_fnc_dropClone;
  *
  * Public: No
  */
