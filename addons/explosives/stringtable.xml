@@ -548,7 +548,7 @@
             <German>Zeit einstellen</German>
             <Spanish>Configurar tiempo</Spanish>
             <Polish>Ustaw czas</Polish>
-            <French>Régler le minuteur</French>
+            <French>Valider la durée</French>
             <Czech>Nastavit čas</Czech>
             <Italian>Modifica il conto alla rovescia</Italian>
             <Hungarian>Idő beállítása</Hungarian>
@@ -1085,7 +1085,7 @@
             <Polish>Czasomierz Wybuchu</Polish>
             <Russian>Таймер взрывчатки</Russian>
             <Portuguese>Timer de explosão</Portuguese>
-            <French>Minuteur de détonation</French>
+            <French>Minuteur pour explosifs</French>
             <Chinese>引爆倒數</Chinese>
             <Czech>Časovač exploze</Czech>
             <Turkish>Patlayıcı Zamanlayıcı</Turkish>
@@ -1114,21 +1114,27 @@
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
+            <French>Durée minimale</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
+            <French>Durée maximale</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
+            <French>Durée par défaut</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée minimale paramétrable sur le minuteur.</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée maximale paramétrable sur le minuteur.</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
         </Key>
     </Package>
 </Project>
