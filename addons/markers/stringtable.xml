@@ -150,5 +150,17 @@
             <Czech>Tvůrce</Czech>
             <Turkish>Yaratıcı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Markers_TimestampEnabled">
+            <English>Allow Timestamps</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
+            <English>Whether to allow timestamps to be automatically applied to markers</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTooltip">
+            <English>Add Timestamp</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
+            <English>Watch Required</English>
+        </Key>
     </Package>
 </Project>

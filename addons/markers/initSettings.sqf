@@ -1,7 +1,9 @@
+private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayName)];
+
 [
     QGVAR(moveRestriction), "LIST",
     [LSTRING(MoveRestriction), LSTRING(MoveRestriction_Description)],
-    [format ["ACE %1", localize ELSTRING(map,Module_DisplayName)], localize LSTRING(Module_DisplayName)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
     [
         [
             MOVE_RESTRICTION_NOBODY,
@@ -22,3 +24,10 @@
         1
     ]
 ] call cba_settings_fnc_init;
+
+[
+    QGVAR(timestampEnabled), "CHECKBOX",
+    [LSTRING(TimestampEnabled),LSTRING(TimestampEnabledDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    true
+] call CBA_fnc_addSetting;

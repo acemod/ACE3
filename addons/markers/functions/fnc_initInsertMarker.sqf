@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\A3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: BIS, commy2, Timi007
  * Sets up the marker placement
@@ -29,26 +30,27 @@
     };
 
     //BIS Controls:
-    private _text = _display displayctrl 101;
-    private _picture = _display displayctrl 102;
-    private _channel = _display displayctrl 103;
-    private _buttonOK = _display displayctrl 1;
-    private _buttonCancel = _display displayctrl 2;
-    private _description = _display displayctrl 1100;
-    private _title = _display displayctrl 1001;
-    private _descriptionChannel = _display displayctrl 1101;
+    private _text =                 _display displayctrl IDC_INSERT_MARKER;
+    private _picture =              _display displayctrl IDC_INSERT_MARKER_PICTURE;
+    private _channel =              _display displayctrl IDC_INSERT_MARKER_CHANNELS;
+    private _buttonOK =             _display displayctrl IDC_OK;
+    private _buttonCancel =         _display displayctrl IDC_CANCEL;
+    private _description =          _display displayctrl 1100;
+    private _title =                _display displayctrl 1001;
+    private _descriptionChannel =   _display displayctrl 1101;
 
     //ACE Controls:
     // _sizeX = _display displayctrl 1200;
     // _sizeY = _display displayctrl 1201;
-    private _aceShapeLB = _display displayctrl 1210;
-    private _aceColorLB = _display displayctrl 1211;
-    private _aceAngleSlider = _display displayctrl 1220;
-    private _aceAngleSliderText = _display displayctrl 1221;
+    private _aceTimestamp =         _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
+    private _aceShapeLB =           _display displayctrl IDC_ACE_INSERT_MARKER_SHAPE;
+    private _aceColorLB =           _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
+    private _aceAngleSlider =       _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE;
+    private _aceAngleSliderText =   _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
 
-    private _mapDisplay = displayParent _display;
+    private _mapDisplay =           displayParent _display;
     if (isNull _mapDisplay) exitWith {ERROR("No Map");};
-    private _mapCtrl = _mapDisplay displayCtrl 51;
+    private _mapCtrl = _mapDisplay displayCtrl IDC_MAP;
 
     GVAR(editingMarker) = "";
     (ctrlMapMouseOver _mapCtrl) params ["_mouseOverType", "_marker"];
@@ -118,7 +120,23 @@
     _description ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", localize "str_lib_label_description"];
     _description ctrlCommit 0;
 
+    //--- Timestamp
+    if (GVAR(timestampEnabled)) then {
+        _pos set [0, _posX + _posW - _posH];
+        _pos set [2, _posH];
+        _pos set [3, _posH];
+        _aceTimestamp ctrlSetPosition _pos;
+        _aceTimestamp ctrlCommit 0;
+        if !([ACE_player] call FUNC(canTimestamp)) then {
+            _aceTimestamp ctrlEnable false;
+            _aceTimestamp ctrlSetTooltip (LLSTRING(TimestampTooltip) + "\n" + LLSTRING(TimestampTooltipNoWatch));
+        } else {
+            _aceTimestamp cbSetChecked GETUVAR(GVAR(timestampChecked),false);
+        };
+    };
+
     //--- Shape
+    _pos set [0, _posX];
     _pos set [1, _posY + 1 * _posH + 2 * BORDER];
     _pos set [2, _posW];
     _pos set [3, _posH];
@@ -212,6 +230,30 @@
     _pos set [3, _posH];
     _buttonCancel ctrlSetPosition _pos;
     _buttonCancel ctrlCommit 0;
+
+    ////////////////////
+    // init marker timestamp cb
+
+    if (GVAR(timestampEnabled) && [ACE_player] call FUNC(canTimestamp)) then {
+        _buttonOK ctrlAddEventHandler ['ButtonClick', {
+            if (GETUVAR(GVAR(timestampChecked),false)) then {
+                params ["_buttonOk"];
+                private _description = (ctrlParent _buttonOk) displayctrl IDC_INSERT_MARKER;
+
+                _description ctrlSetText format [ // Add timestamp suffix
+                    "%1 [%2]",
+                    ctrlText _description,
+                    [daytime, "HH:MM"] call BIS_fnc_timeToString
+                ];
+            };
+            false
+        }];
+
+        _aceTimestamp ctrlAddEventHandler ['CheckedChanged', {
+            params ["_cbTimestamp","_checked"];
+            SETUVAR(GVAR(timestampChecked),(_checked == 1));
+        }];
+    };
 
     ////////////////////
     // init marker shape lb

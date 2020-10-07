@@ -14,3 +14,4 @@ PREP(canMove);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(movePFH);
+PREP(canTimestamp);
