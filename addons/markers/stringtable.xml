@@ -162,5 +162,27 @@
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
             <English>Watch Required</English>
         </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormat">
+            <English>Timestamp Format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription">
+            <English>Changes the timestamp format\n
+"HH" - Hour\n
+"MM" - Minute\n
+"SS" - Seconds\n
+"MM" - Milliseconds</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat">
+            <English>Timestamp Hour Format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat24">
+            <English>24-Hour Clock</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat12">
+            <English>12-Hour Clock</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
+            <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
+        </Key>
     </Package>
 </Project>

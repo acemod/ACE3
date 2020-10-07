@@ -238,12 +238,20 @@
         _buttonOK ctrlAddEventHandler ['ButtonClick', {
             if (GETUVAR(GVAR(timestampChecked),false)) then {
                 params ["_buttonOk"];
+
                 private _description = (ctrlParent _buttonOk) displayctrl IDC_INSERT_MARKER;
+                private _time = daytime;
+                private _ampm = switch (true) do {
+                    case (GVAR(timestampHourFormat) == 24): {""};
+                    case (_time < 12): {" am"};
+                    case (_time > 12): {SUB(_time,12); " pm"};
+                };
 
                 _description ctrlSetText format [ // Add timestamp suffix
-                    "%1 [%2]",
+                    "%1 [%2%3]",
                     ctrlText _description,
-                    [daytime, "HH:MM"] call BIS_fnc_timeToString
+                    [_time, GVAR(timestampFormat)] call BIS_fnc_timeToString,
+                    _ampm
                 ];
             };
             false

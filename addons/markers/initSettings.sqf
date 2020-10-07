@@ -31,3 +31,41 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
     [_categoryName, LLSTRING(Module_DisplayName)],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(timestampHourFormat), "LIST",
+    [LSTRING(TimestampHourFormat), LSTRING(TimestampHourFormatDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    [
+        [
+            24,
+            12
+        ],
+        [
+            LSTRING(TimestampHourFormat24),
+            LSTRING(TimestampHourFormat12)
+        ],
+        0
+    ]
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(timestampFormat), "LIST",
+    [LSTRING(timestampFormat), LSTRING(timestampFormatDescription)],
+    [_categoryName, LLSTRING(Module_DisplayName)],
+    [
+        [
+            "HH",
+            "HH:MM",
+            "HH:MM:SS",
+            "HH:MM:SS:MM"
+        ],
+        [
+            "HH",
+            "HH:MM",
+            "HH:MM:SS",
+            "HH:MM:SS:MM"
+        ],
+        1
+    ]
+] call CBA_fnc_addSetting;
