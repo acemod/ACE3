@@ -137,6 +137,7 @@
         _pos set [1, _posY + 1 * _posH + 2 * BORDER];
         _pos set [2, _posW - _posH];
         _pos set [3, _posH];
+        _aceTimestampText ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", LLSTRING(Timestamp)];
         _aceTimestampText ctrlSetPosition _pos;
         _aceTimestampText ctrlCommit 0;
 
@@ -145,10 +146,18 @@
         _pos set [3, _posH];
         _aceTimestamp ctrlSetPosition _pos;
         _aceTimestamp ctrlCommit 0;
+
         if !([ACE_player] call FUNC(canTimestamp)) then {
             _aceTimestamp ctrlEnable false;
             _aceTimestamp ctrlSetTooltip LLSTRING(TimestampTooltipNoWatch);
+        } else {
+            _aceTimestamp cbSetChecked GETUVAR(GVAR(timestampChecked),false);
         };
+    } else {
+        _aceTimestampText ctrlEnable false;
+        _aceTimestampText ctrlShow false;
+        _aceTimestamp ctrlEnable false;
+        _aceTimestamp ctrlShow false;
     };
 
     //--- Shape
@@ -252,7 +261,6 @@
 
     _buttonOK ctrlAddEventHandler ['ButtonClick', FUNC(onButtonClickConfirm)];
     _aceTimestamp ctrlAddEventHandler ['CheckedChanged', FUNC(onCheckedChangedTimestamp)];
-    _aceTimestamp cbSetChecked GETUVAR(GVAR(timestampChecked),false);
 
     ////////////////////
     // init marker shape lb
