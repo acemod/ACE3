@@ -156,8 +156,9 @@
         <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
             <English>Whether to allow timestamps to be automatically applied to markers</English>
         </Key>
+
         <Key ID="STR_ACE_Markers_TimestampTooltip">
-            <English>Add Timestamp</English>
+            <English>&lt;t size='0.8'&gt;Add Timestamp:&lt;/t&gt;</English>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
             <English>Watch Required</English>
@@ -165,12 +166,20 @@
         <Key ID="STR_ACE_Markers_TimestampFormat">
             <English>Timestamp Format</English>
         </Key>
-        <Key ID="STR_ACE_Markers_TimestampFormatDescription">
-            <English>Changes the timestamp format\n
-"HH" - Hour\n
-"MM" - Minute\n
-"SS" - Seconds\n
-"MM" - Milliseconds</English>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
+            <English>Changes the timestamp format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
+            <English>"HH" - Hour</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
+            <English>"MM" - Minute</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
+            <English>"SS" - Seconds</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
+            <English>"MM" - Milliseconds</English>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>

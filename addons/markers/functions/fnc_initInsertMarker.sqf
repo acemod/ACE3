@@ -43,6 +43,7 @@
     // _sizeX =                     _display displayctrl 1200;
     // _sizeY =                     _display displayctrl 1201;
     private _aceTimestamp =         _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
+    private _aceTimestampText =     _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP_TEXT;
     private _aceShapeLB =           _display displayctrl IDC_ACE_INSERT_MARKER_SHAPE;
     private _aceColorLB =           _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
     private _aceAngleSlider =       _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE;
@@ -78,7 +79,10 @@
         GVAR(currentMarkerPosition) = markerPos GVAR(editingMarker);
     } else {
         private _pos = ctrlPosition _picture;
-        _pos = [(_pos select 0) + (_pos select 2) / 2, (_pos select 1) + (_pos select 3) / 2];
+        _pos = [
+            (_pos select 0) + (_pos select 2) / 2,
+            (_pos select 1) + (_pos select 3) / 2
+        ];
         GVAR(currentMarkerPosition) = _mapCtrl ctrlMapScreenToWorld _pos;
     };
 
@@ -114,14 +118,28 @@
 
     //--- Description
     _pos set [1, _posY - 1 * _posH];
-    _pos set [3,6 * _posH + 6 * BORDER];
+    if (GVAR(timestampEnabled)) then {
+        _pos set [3,7 * _posH + 7 * BORDER];
+    } else {
+        _pos set [3,6 * _posH + 6 * BORDER];
+    };
     _description ctrlEnable false;
     _description ctrlSetPosition _pos;
     _description ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", localize "str_lib_label_description"];
     _description ctrlCommit 0;
 
     //--- Timestamp
+    private _timestampOffset = 0;
     if (GVAR(timestampEnabled)) then {
+        _timestampOffset = _posH + BORDER;
+
+        _pos set [0, _posX];
+        _pos set [1, _posY + 1 * _posH + 2 * BORDER];
+        _pos set [2, _posW - _posH];
+        _pos set [3, _posH];
+        _aceTimestampText ctrlSetPosition _pos;
+        _aceTimestampText ctrlCommit 0;
+
         _pos set [0, _posX + _posW - _posH];
         _pos set [2, _posH];
         _pos set [3, _posH];
@@ -129,34 +147,32 @@
         _aceTimestamp ctrlCommit 0;
         if !([ACE_player] call FUNC(canTimestamp)) then {
             _aceTimestamp ctrlEnable false;
-            _aceTimestamp ctrlSetTooltip (LLSTRING(TimestampTooltip) + "\n" + LLSTRING(TimestampTooltipNoWatch));
-        } else {
-            _aceTimestamp cbSetChecked GETUVAR(GVAR(timestampChecked),false);
+            _aceTimestamp ctrlSetTooltip LLSTRING(TimestampTooltipNoWatch);
         };
     };
 
     //--- Shape
     _pos set [0, _posX];
-    _pos set [1, _posY + 1 * _posH + 2 * BORDER];
+    _pos set [1, _posY + 1 * _posH + 2 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _pos set [3, _posH];
     _aceShapeLB ctrlSetPosition _pos;
     _aceShapeLB ctrlCommit 0;
 
     //--- Color
-    _pos set [1, _posY + 2 * _posH + 3 * BORDER];
+    _pos set [1, _posY + 2 * _posH + 3 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceColorLB ctrlSetPosition _pos;
     _aceColorLB ctrlCommit 0;
 
     //--- Angle
-    _pos set [1, _posY + 3 * _posH + 4 * BORDER];
+    _pos set [1, _posY + 3 * _posH + 4 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceAngleSlider ctrlSetPosition _pos;
     _aceAngleSlider ctrlCommit 0;
 
     //--- Angle Text
-    _pos set [1, _posY + 4 * _posH + 5 * BORDER];
+    _pos set [1, _posY + 4 * _posH + 5 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceAngleSliderText ctrlSetPosition _pos;
     _aceAngleSliderText ctrlCommit 0;
@@ -164,13 +180,13 @@
     private _offsetButtons = 0;
 
     if (isMultiplayer) then {
-        _pos set [1,_posY + 5 * _posH + 7 * BORDER];
+        _pos set [1,_posY + 5 * _posH + 7 * BORDER + _timestampOffset];
         _pos set [3,_posH];
         _descriptionChannel ctrlSetStructuredText parseText format ["<t size='0.8'>%1:</t>", localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0"];
         _descriptionChannel ctrlSetPosition _pos;
         _descriptionChannel ctrlCommit 0;
 
-        _pos set [1,_posY + 6 * _posH + 7 * BORDER];
+        _pos set [1,_posY + 6 * _posH + 7 * BORDER + _timestampOffset];
         _pos set [3,_posH];
         _channel ctrlSetPosition _pos;
         _channel ctrlCommit 0;
@@ -217,7 +233,7 @@
     };
 
     //--- ButtonOK
-    _pos set [1, _posY + _offsetButtons];
+    _pos set [1, _posY + _offsetButtons + _timestampOffset];
     _pos set [2, _posW / 2 - BORDER];
     _pos set [3, _posH];
     _buttonOk ctrlSetPosition _pos;
@@ -225,7 +241,7 @@
 
     //--- ButtonCancel
     _pos set [0, _posX + _posW / 2];
-    _pos set [1, _posY + _offsetButtons];
+    _pos set [1, _posY + _offsetButtons + _timestampOffset];
     _pos set [2, _posW / 2];
     _pos set [3, _posH];
     _buttonCancel ctrlSetPosition _pos;
@@ -234,34 +250,9 @@
     ////////////////////
     // init marker timestamp cb
 
-    if (GVAR(timestampEnabled) && {[ACE_player] call FUNC(canTimestamp)}) then {
-        _buttonOK ctrlAddEventHandler ['ButtonClick', {
-            if (GETUVAR(GVAR(timestampChecked),false)) then {
-                params ["_buttonOk"];
-
-                private _description = (ctrlParent _buttonOk) displayctrl IDC_INSERT_MARKER;
-                private _time = daytime;
-                private _ampm = switch (true) do {
-                    case (GVAR(timestampHourFormat) == 24): {""};
-                    case (_time < 12): {" am"};
-                    case (_time > 12): {SUB(_time,12); " pm"};
-                };
-
-                _description ctrlSetText format [ // Add timestamp suffix
-                    "%1 [%2%3]",
-                    ctrlText _description,
-                    [_time, GVAR(timestampFormat)] call BIS_fnc_timeToString,
-                    _ampm
-                ];
-            };
-            false
-        }];
-
-        _aceTimestamp ctrlAddEventHandler ['CheckedChanged', {
-            params ["_cbTimestamp", "_checked"];
-            SETUVAR(GVAR(timestampChecked),(_checked == 1));
-        }];
-    };
+    _buttonOK ctrlAddEventHandler ['ButtonClick', FUNC(onButtonClickConfirm)];
+    _aceTimestamp ctrlAddEventHandler ['CheckedChanged', FUNC(onCheckedChangedTimestamp)];
+    _aceTimestamp cbSetChecked GETUVAR(GVAR(timestampChecked),false);
 
     ////////////////////
     // init marker shape lb

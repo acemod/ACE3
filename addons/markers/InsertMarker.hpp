@@ -17,9 +17,12 @@ class RscDisplayInsertMarker {
     movingEnable = 1;
 
     class controls {
+        class TimeStampText: RscStructuredText {
+            text = CSTRING(TimestampTooltip);
+            idc = IDC_ACE_INSERT_MARKER_TIMESTAMP_TEXT;
+        };
         class TimeStamp: RscCheckBox {
             idc = IDC_ACE_INSERT_MARKER_TIMESTAMP;
-            tooltip = CSTRING(TimestampTooltip);
         };
         class MarkerShape: RscCombo {
             idc = IDC_ACE_INSERT_MARKER_SHAPE;

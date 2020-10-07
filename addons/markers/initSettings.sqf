@@ -49,9 +49,17 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
     ]
 ] call CBA_fnc_addSetting;
 
+private _formatDescription = [
+    LLSTRING(TimestampFormatDescription0),
+    LLSTRING(TimestampFormatDescription1),
+    LLSTRING(TimestampFormatDescription2),
+    LLSTRING(TimestampFormatDescription3),
+    LLSTRING(TimestampFormatDescription4)
+] joinString "\n";
+
 [
     QGVAR(timestampFormat), "LIST",
-    [LSTRING(timestampFormat), LSTRING(timestampFormatDescription)],
+    [LSTRING(timestampFormat), _formatDescription],
     [_categoryName, LLSTRING(Module_DisplayName)],
     [
         [
