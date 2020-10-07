@@ -80,7 +80,7 @@ if (isMultiplayer) then {
     [QGVAR(center) + "_voice", GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
 };
 
-GVAR(currentBox) = nil;
+GVAR(currentBox) = objNull;
 
 GVAR(camera) = nil;
 GVAR(cameraHelper) = nil;

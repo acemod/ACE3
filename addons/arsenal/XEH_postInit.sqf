@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
-GVAR(currentBox) = nil;
+GVAR(currentBox) = objNull;
 
 GVAR(EH_ID) = 0;
 GVAR(lastSearchTextLeft) = "";
