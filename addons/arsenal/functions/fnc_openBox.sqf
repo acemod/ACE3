@@ -34,6 +34,8 @@ if (canSuspend) exitWith {
     [{_this call FUNC(openBox)}, _this] call CBA_fnc_directCall;
 };
 
+GVAR(currentBox) = _object;
+
 private _displayToUse = [findDisplay 46, findDIsplay 312] select (!isNull findDisplay 312);
 _displayToUse = [_displayToUse, findDisplay 313] select (is3DEN);
 
