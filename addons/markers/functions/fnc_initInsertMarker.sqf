@@ -234,7 +234,7 @@
     ////////////////////
     // init marker timestamp cb
 
-    if (GVAR(timestampEnabled) && [ACE_player] call FUNC(canTimestamp)) then {
+    if (GVAR(timestampEnabled) && {[ACE_player] call FUNC(canTimestamp)}) then {
         _buttonOK ctrlAddEventHandler ['ButtonClick', {
             if (GETUVAR(GVAR(timestampChecked),false)) then {
                 params ["_buttonOk"];
