@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params [["_unit",ACE_Player]];
+params [["_unit", ACE_player]];
 
 private _assignedItems = assignedItems _unit;
 
