@@ -40,8 +40,8 @@
     private _descriptionChannel =   _display displayctrl 1101;
 
     //ACE Controls:
-    // _sizeX = _display displayctrl 1200;
-    // _sizeY = _display displayctrl 1201;
+    // _sizeX =                     _display displayctrl 1200;
+    // _sizeY =                     _display displayctrl 1201;
     private _aceTimestamp =         _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
     private _aceShapeLB =           _display displayctrl IDC_ACE_INSERT_MARKER_SHAPE;
     private _aceColorLB =           _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
@@ -250,7 +250,7 @@
         }];
 
         _aceTimestamp ctrlAddEventHandler ['CheckedChanged', {
-            params ["_cbTimestamp","_checked"];
+            params ["_cbTimestamp", "_checked"];
             SETUVAR(GVAR(timestampChecked),(_checked == 1));
         }];
     };

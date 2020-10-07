@@ -27,7 +27,7 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
 
 [
     QGVAR(timestampEnabled), "CHECKBOX",
-    [LSTRING(TimestampEnabled),LSTRING(TimestampEnabledDescription)],
+    [LSTRING(TimestampEnabled), LSTRING(TimestampEnabledDescription)],
     [_categoryName, LLSTRING(Module_DisplayName)],
     true
 ] call CBA_fnc_addSetting;
