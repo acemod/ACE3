@@ -156,7 +156,6 @@
         <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
             <English>Whether to allow timestamps to be automatically applied to markers</English>
         </Key>
-
         <Key ID="STR_ACE_Markers_TimestampTooltip">
             <English>&lt;t size='0.8'&gt;Add Timestamp:&lt;/t&gt;</English>
         </Key>
