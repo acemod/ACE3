@@ -223,6 +223,7 @@
     [0, 1, 0.4, 2, true],
     true
 ] call CBA_settings_fnc_init;
+
 [
     QGVAR(cprTime),
     "SLIDER",
