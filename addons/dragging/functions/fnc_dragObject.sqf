@@ -46,7 +46,7 @@ _unit setVariable [QGVAR(draggedObject), _target, true];
 if (GVAR(dragAndFire)) then {
     GVAR(unit) = _unit;
 
-    // Using CBA keyhandler because addActionEventHandler doesn't support right click it seems
+    // Using CBA keyhandler because addActionEventHandler doesn't seem to support right click
     GVAR(releaseActionID) = [0xF1, [false, false, false], {
         [GVAR(unit), GVAR(unit) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
     }, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;

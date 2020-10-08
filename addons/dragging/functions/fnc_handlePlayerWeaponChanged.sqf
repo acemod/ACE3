@@ -22,7 +22,7 @@ TRACE_2("params",_unit,_weapon);
 if (_unit getVariable [QGVAR(isDragging), false]) then {
 
     // drop dragged object when selecting a non-primary weapon
-    if (_weapon != GVAR(currentWeapon)) then {
+    if (_weapon != _unit getVariable [QGVAR(currentWeapon), ""]) then {
         private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
 
         [_unit, _draggedObject] call FUNC(dropObject);

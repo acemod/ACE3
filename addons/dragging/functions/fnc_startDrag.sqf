@@ -50,7 +50,7 @@ if (GVAR(dragAndFire)) then {
 };
 
 // Save the weapon so we can monitor if it changes
-GVAR(currentWeapon) = currentWeapon _unit;
+_unit setVariable [QGVAR(currentWeapon), currentWeapon _unit];
 
 [_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
 
@@ -60,7 +60,9 @@ GVAR(currentWeapon) = currentWeapon _unit;
 // can't play action that depends on weapon if it was added the same frame
 if !(_unit call EFUNC(common,isSwimming)) then {
     [{
-        if (GVAR(currentWeapon) isKindOf ["Pistol", configFile >> "CfgWeapons"]) then {
+        private _unitWeapon = _this getVariable [QGVAR(currentWeapon), ""];
+
+        if (_unitWeapon isKindOf ["Pistol", configFile >> "CfgWeapons"]) then {
             [_this, "ACE_dragWithPistol"] call EFUNC(common,doGesture);
         } else {
             [_this, "ACE_dragWithRifle"] call EFUNC(common,doGesture);

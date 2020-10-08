@@ -8,9 +8,11 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon: InjuredMovedBase {
             speed = -10; // 1/10
         };
+
         class AinjPfalMstpSnonWrflDnon_carried_Up: AgonyBaseRfl {
             speed = -10; // 1/10
         };
+
         class AmovPercMstpSrasWpstDnon: StandBase {
             ConnectTo[] = {
                 "AmovPercMstpSrasWpstDnon",
@@ -55,15 +57,15 @@ class CfgMovesMaleSdr: CfgMovesBasic {
                 0.1
             };
         };
+
         class ace_dragging: DraggerBase {
             actions = "ace_MoveWithInjuredManDraggerPst";
             aiming = "aimingPistol";
             aimingBody = "aimingPistol";
-            aimPrecision = 5;
+            aimPrecision = 1;
             canPullTrigger = 1;
             canReload = 0;
-            ConnectTo[]=
-            {
+            ConnectTo[] = {
                 "ace_dragging",
                 0.1,
                 "ace_dragging_drop",
@@ -73,8 +75,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             duty = 0.6;
             enableBinocular = 0;
             file = QPATHTO_T(anim\ace_dragging.rtm);
-            InterpolateTo[]=
-            {
+            InterpolateTo[] = {
                 "ace_dragging_static",
                 0.1
             };
@@ -84,16 +85,15 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             showHandGun = 1;
             turnSpeed = 0.5;
         };
+
         class ace_dragging_static: ace_dragging {
-            ConnectTo[]=
-            {
+            ConnectTo[] = {
                 "ace_dragging",
                 0.1,
                 "ace_dragging_drop",
                 0.2
             };
-            InterpolateTo[]=
-            {
+            InterpolateTo[] = {
                 "ace_dragging",
                 0.1,
                 "ace_dragging_drop",
@@ -102,19 +102,18 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             looped = 1;
             speed = 0;
         };
+        
         class ace_dragging_drop: ace_dragging {
-            ConnectTo[]=
-            {
+            ConnectTo[] = {
                 "AmovPknlMstpSrasWpstDnon",
                 0.1
             };
             file = QPATHTO_T(anim\ace_dragging_drop.rtm);
-            InterpolateTo[]=
-            {
+            InterpolateTo[] = {
                 "Unconscious",
                 0.02
             };
-            interpolationSpeed = 2;
+            interpolationSpeed = 5;
             looped = 0;
         };
     };
