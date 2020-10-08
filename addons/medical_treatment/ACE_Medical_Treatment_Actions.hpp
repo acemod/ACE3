@@ -79,7 +79,7 @@ class GVAR(actions) {
         icon = QPATHTOEF(medical_gui,ui\tourniquet.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_tourniquet"};
-        treatmentTime = 7;
+        treatmentTime = QFUNC(tourniquetTime);
         condition = QUOTE(!([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo)));
         callbackSuccess = QFUNC(tourniquet);
         litter[] = {};
@@ -100,7 +100,7 @@ class GVAR(actions) {
         icon = QPATHTOEF(medical_gui,ui\splint.paa);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_splint"};
-        treatmentTime = 7;
+        treatmentTime = QFUNC(splintTime);
         callbackSuccess = QFUNC(splint);
         condition = QFUNC(canSplint);
         litter[] = {
@@ -117,7 +117,7 @@ class GVAR(actions) {
         category = "medication";
         items[] = {"ACE_morphine"};
         condition = "";
-        treatmentTime = 5;
+        treatmentTime = QFUNC(autoInjectorTime);
         callbackSuccess = QFUNC(medication);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
@@ -148,7 +148,7 @@ class GVAR(actions) {
         allowSelfTreatment = QGVAR(allowSelfIV);
         category = "advanced";
         medicRequired = QGVAR(medicIV);
-        treatmentTime = 12;
+        treatmentTime = QFUNC(transfuseIVTime);
         items[] = {"ACE_bloodIV"};
         condition = "";
         callbackSuccess = QFUNC(ivBag);
@@ -261,7 +261,7 @@ class GVAR(actions) {
         allowedSelections[] = {"Body"};
         allowSelfTreatment = 0;
         medicRequired = 0;
-        treatmentTime = 15;
+        treatmentTime = QFUNC(cprTime);
         items[] = {};
         condition = QFUNC(canCPR);
         callbackSuccess = QFUNC(cprSuccess);

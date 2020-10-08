@@ -90,6 +90,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(autoInjectorTime),
+    "SLIDER",
+    [LSTRING(AutoInjectorTime_DisplayName), LSTRING(AutoInjectorTime_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.01, 10, 5, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(medicPAK),
     "LIST",
     [LSTRING(MedicPAK_DisplayName), LSTRING(MedicPAK_Description)],
@@ -171,6 +180,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(stitchTimeCoef),
+    "SLIDER",
+    [LSTRING(StitchTimeCoef_DisplayName), LSTRING(StitchTimeCoef_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.01, 10, 5, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(medicIV),
     "LIST",
     [LSTRING(MedicIV_DisplayName), LSTRING(MedicIV_Description)],
@@ -189,11 +207,28 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(transfuseIVTime),
+    "SLIDER",
+    [LSTRING(TransfuseIVTime_DisplayName), LSTRING(TransfuseIVTime)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 24, 12, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(cprSuccessChance),
     "SLIDER",
     [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 1, 0.4, 2, true],
+    true
+] call CBA_settings_fnc_init;
+[
+    QGVAR(cprTime),
+    "SLIDER",
+    [LSTRING(CprTime_DisplayName), LSTRING(CprTime_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 30, 15, 1],
     true
 ] call CBA_settings_fnc_init;
 
@@ -203,6 +238,24 @@
     [LSTRING(HolsterRequired_DisplayName), LSTRING(HolsterRequired_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2, 3, 4], [ELSTRING(common,Disabled), LSTRING(HolsterRequired_Lowered), LSTRING(HolsterRequired_LoweredExam), LSTRING(HolsterRequired_Holstered), LSTRING(HolsterRequired_HolsteredExam)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(tourniquetTime),
+    "SLIDER",
+    [LSTRING(TourniquetTime_DisplayName), LSTRING(TourniquetTime_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 14, 7, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(splintTime),
+    "SLIDER",
+    [LSTRING(SplintTime_DisplayName), LSTRING(SplintTime_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 14, 7, 1],
     true
 ] call CBA_settings_fnc_init;
 

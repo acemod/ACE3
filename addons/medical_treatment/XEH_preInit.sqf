@@ -44,4 +44,11 @@ GVAR(facilityClasses) = [];
     } forEach getArray _x;
 } forEach configProperties [configFile >> QEGVAR(medical,facilities), "isArray _x"];
 
+// treatment time functions that do not need PREP
+FUNC(tourniquetTime) = {GVAR(tourniquetTime)};
+FUNC(splintTime) = {GVAR(splintTime)};
+FUNC(transfuseIVTime) = {GVAR(transfuseIVTime)};
+FUNC(cprTime) = {GVAR(cprTime)};
+FUNC(autoInjectorTime) = {GVAR(autoInjectorTime)};
+
 ADDON = true;

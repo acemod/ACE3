@@ -114,7 +114,7 @@
 #define DEFAULT_BANDAGE_REOPENING_MAX_DELAY 200
 
 // Time it takes to stitch one wound
-#define WOUND_STITCH_TIME 5
+#define WOUND_STITCH_TIME EGVAR(medical_treatment,stitchTimeCoef)
 
 #define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
 
