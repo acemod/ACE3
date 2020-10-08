@@ -3,6 +3,7 @@ class CfgMovesBasic {
         ACE_dragWithPistol = "ace_dragging";
         ACE_dragWithRifle = "AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2";
     };
+    
     class Actions {
         class MoveWithInjuredManDragger;
         class MoveWithInjuredManDraggerRfl: MoveWithInjuredManDragger {
