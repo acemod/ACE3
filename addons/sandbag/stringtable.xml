@@ -135,6 +135,7 @@
             <Korean>설치 확인</Korean>
             <Chinesesimp>确认布署</Chinesesimp>
             <Chinese>確認佈署</Chinese>
+            <Turkish>Yerleştirmeyi Onayla</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_CancelDeployment">
             <English>Cancel Deployment</English>
@@ -151,6 +152,7 @@
             <Korean>설치 취소</Korean>
             <Chinesesimp>取消布署</Chinesesimp>
             <Chinese>取消佈署</Chinese>
+            <Turkish>Yerleştirmeyi İptal Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_DeploySandbag">
             <English>Deploy Sandbag</English>
@@ -167,6 +169,7 @@
             <Korean>모래주머니 설치</Korean>
             <Chinesesimp>布署沙包</Chinesesimp>
             <Chinese>佈署沙包</Chinese>
+            <Turkish>Kum Torbasını Yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_SANDBOX">
             <English>Sandbag Box</English>
@@ -200,6 +203,7 @@
             <Korean>흙이 없습니다</Korean>
             <Chinesesimp>这里没有沙</Chinesesimp>
             <Chinese>這裡沒有沙</Chinese>
+            <Turkish>Burada Kum Yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
             <English>Rotate</English>

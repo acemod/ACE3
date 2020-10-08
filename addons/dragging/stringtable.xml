@@ -58,6 +58,7 @@
             <Russian>Нести/Отпустить Объект</Russian>
             <Polish>Nieś/Puść objekt</Polish>
             <Japanese>オブジェクトを運ぶ/離す</Japanese>
+            <Turkish>Objeyi Taşı/Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -101,6 +102,7 @@
             <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
             <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
+            <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
             <English>ACE Dragging</English>
