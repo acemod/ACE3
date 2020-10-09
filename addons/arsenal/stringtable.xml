@@ -416,6 +416,9 @@
             <Japanese>装弾数で並び替え</Japanese>
             <Turkish>Mermi sayısına göre sırala</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_sortByProtection">
+            <English>Sort by protection</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
             <Spanish>Compartir o dejar de compartir el equipamiento seleccionado</Spanish>

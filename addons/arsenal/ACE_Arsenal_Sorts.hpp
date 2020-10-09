@@ -61,4 +61,11 @@ class GVAR(sorts) {
         tabs[] = {{}, {4}};
         statement = QUOTE(_this call FUNC(sortStatement_magCount));
     };
+
+    class ACE_protection: sortBase {
+        scope = 2;
+        displayName = CSTRING(sortByProtection);
+        tabs[] = {{3,4,6}, {}};
+        statement = QUOTE(call FUNC(sortStatement_protection));
+    };
 };
