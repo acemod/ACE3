@@ -106,22 +106,22 @@
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
             <English>ACE Dragging</English>
-            <French>ACE Trainage</French>
+            <French>ACE Traînage d'objets et d'unités</French>
             <German>ACE Ziehen</German>
             <Hungarian>ACE Húzás</Hungarian>
             <Russian>ACE Перетаскивание</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
-            <French>Autorise le tir pendant le trainage</French>
-            <German>Erlaubt schießen während ziehen</German>
+            <French>Tir possible durant le traînage (arme de poing)</French>
+            <German>Schießen während des Ziehens erlauben</German>
             <Hungarian>Húzás közbeni tüzelés engedélyezése</Hungarian>
             <Russian>Стрельба во время перетаскивания</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
-            <French>Autorise le joueur d'utiliser leur arme pendant qu'il traîne quelqu'un.</French>
-            <German>Erlaubt der Spieler das Schießen der Waffe, während des Ziehens.</German>
+            <French>Cette option permet au joueur d'utiliser son arme de poing pendant qu'il traîne un objet ou une unité.</French>
+            <German>Erlaubt dem Spieler während des Ziehens das Schießen der Waffe.</German>
             <Hungarian>Húzás közben a játékos elsütheti a fegyverét.</Hungarian>
             <Russian>Позволяет игроку стрелять во время перетаскивания</Russian>
         </Key>
