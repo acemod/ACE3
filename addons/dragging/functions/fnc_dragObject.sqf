@@ -43,25 +43,22 @@ _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 
 // add drop action
-if (GVAR(dragAndFire)) then {
-    GVAR(unit) = _unit;
+GVAR(unit) = _unit;
 
-    // Using CBA keyhandler because addActionEventHandler doesn't seem to support right click
-    GVAR(releaseActionID) = [0xF1, [false, false, false], {
-        [GVAR(unit), GVAR(unit) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
-    }, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;
+GVAR(releaseActionID) = [0xF1, [false, false, false], {
+    [GVAR(unit), GVAR(unit) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
+}, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;
 
-    // show mouse hint - right click
-    ["", localize LSTRING(Drop)] call EFUNC(interaction,showMouseHint);
-} else {
-    _unit setVariable [QGVAR(ReleaseActionID), [
+// show mouse hint
+["", localize LSTRING(Drop)] call EFUNC(interaction,showMouseHint);
+
+// block firing
+if !(GVAR(dragAndFire)) then {
+    _unit setVariable [QGVAR(blockFire), [
         _unit, "DefaultAction",
-        {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
-        {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
+        {true},
+        {}
     ] call EFUNC(common,addActionEventHandler)];
-
-    // show mouse hint - left click
-    [localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);
 };
 
 // add anim changed EH
