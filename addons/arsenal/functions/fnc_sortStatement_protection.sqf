@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Statement to sort items by their protection (combonation of ballistic and explosive).
+ * Statement to sort items by their protection (combination of ballistic and explosive).
  *
  * Arguments:
  * 0: Item Config <CONFIG>
