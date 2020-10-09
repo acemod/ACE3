@@ -58,7 +58,7 @@ switch (_funcType) do {
     };
     case "finishLockpick": {
         [QGVAR(setVehicleLock), [_veh, false], [_veh]] call CBA_fnc_targetEvent;
-        [QGVAR(finished), [_veh]] call CBA_fnc_localEvent;
+        [QGVAR(finishedLockpick), [_veh]] call CBA_fnc_localEvent;
     };
     default {
         ERROR("bad function type");
