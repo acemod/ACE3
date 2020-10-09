@@ -24,6 +24,9 @@
     localize "str_channel_vehicle" \
 ]
 
+// 129 just looks like a space
+#define TIMESTAMP_SPACE (toString [129])
+
 #define MOVE_RESTRICTION_NOBODY                -1
 #define MOVE_RESTRICTION_ALL                    0
 #define MOVE_RESTRICTION_ADMINS                 1

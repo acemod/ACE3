@@ -17,9 +17,12 @@
  */
 params ["_buttonOk"];
 
+private _display = ctrlParent _buttonOk;
+private _description = _display displayctrl IDC_INSERT_MARKER;
+private _aceTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
+
 // Handle timestamp
-if (GETUVAR(GVAR(timestampChecked),false) && {[ACE_player] call FUNC(canTimestamp)}) then {
-    private _description = (ctrlParent _buttonOk) displayctrl IDC_INSERT_MARKER;
+if (cbChecked _aceTimestamp && {[ACE_player] call FUNC(canTimestamp)}) then {
     private _time = daytime;
     private _ampm = switch (true) do {
         case (GVAR(timestampHourFormat) == 24): {""};
@@ -28,8 +31,9 @@ if (GETUVAR(GVAR(timestampChecked),false) && {[ACE_player] call FUNC(canTimestam
     };
 
     _description ctrlSetText format [ // Add timestamp suffix
-        "%1 [%2%3]",
+        "%1%2[%2%3]",
         ctrlText _description,
+        TIMESTAMP_SPACE,
         [_time, GVAR(timestampFormat)] call BIS_fnc_timeToString,
         _ampm
     ];

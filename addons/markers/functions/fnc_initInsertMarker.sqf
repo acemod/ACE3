@@ -92,9 +92,19 @@
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
+    private _hasTimestamp = false;
     if !((markerText GVAR(editingMarker)) isEqualTo "") then {
-        //fill text input with text from marker which is being edited
-        _text ctrlSetText (markerText GVAR(editingMarker));
+        // fill text input with text from marker which is being edited
+
+        private _originalText = markerText GVAR(editingMarker);
+        private _timeIndex = _originalText find (TIMESTAMP_SPACE + "[");
+        if (_timeIndex > 0 ) then {
+            // Shave off timestamp
+            _hasTimestamp = true;
+            _originalText = _originalText select [0,_timeIndex];
+        };
+
+        _text ctrlSetText _originalText;
     };
 
     //Focus on the text input
@@ -151,7 +161,7 @@
             _aceTimestamp ctrlEnable false;
             _aceTimestamp ctrlSetTooltip LLSTRING(TimestampTooltipNoWatch);
         } else {
-            _aceTimestamp cbSetChecked GETUVAR(GVAR(timestampChecked),false);
+            _aceTimestamp cbSetChecked (GETUVAR(GVAR(timestampChecked),false) || _hasTimestamp);
         };
     } else {
         _aceTimestampText ctrlEnable false;
