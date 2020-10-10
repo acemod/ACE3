@@ -5,6 +5,8 @@
  *
  * Arguments:
  * 0: Item Config <CONFIG>
+ * 1: Ballistic (passthrough) coefficent <NUMBER>
+ * 2: Explosive (armor) coefficent <NUMBER>
  *
  * Return Value:
  * Sorting Value <NUMBER>
@@ -12,12 +14,10 @@
  * Public: No
 */
 
-params ["_config"];
+params ["_itemCfg", "_ballisticCo", "_explosiveCo"];
 
-private _stats = [[_config], ["passthrough", "armor"]] call BIS_fnc_configExtremes;
-private _passthroughMax = _stats # 1 # 0; // ballistic
-private _armorMax = _stats # 1 # 1; // explosive
+(([[_itemCfg], ["passthrough", "armor"]] call BIS_fnc_configExtremes) select 1) params [["_passthroughMax", 0], ["_armorMax", 0]];
 
-private _protectionCombined = _passthroughMax * 200000 + _armorMax * 100000;
+private _protectionCombined = _passthroughMax * _ballisticCo + _armorMax * _explosiveCo;
 
 _protectionCombined
