@@ -18,6 +18,7 @@ params ["_unit"];
 
 private _clone = QGVAR(clone) createVehicle [0, 0, 0];
 _clone setUnitLoadout getUnitLoadout _unit;
+_clone allowDamage false;
 _clone setVariable [QGVAR(original), _unit];
 _unit setPosATL [0, 0, -10];
 
