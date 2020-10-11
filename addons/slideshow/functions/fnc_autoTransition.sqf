@@ -37,7 +37,6 @@ private _image = _images select _currentSlide;
     _x setObjectTextureGlobal [0, _image];
 } count _objects;
 
-//Raise event upon slide change
 [QGVAR(slideChanged), [_image, _currentSlideshow]] call CBA_fnc_localEvent;
 
 // Log current slide and execute Next slide
