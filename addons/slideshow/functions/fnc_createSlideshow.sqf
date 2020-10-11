@@ -12,7 +12,7 @@
  * 5: Set Name <STRING> (default: localized "Slides")
  *
  * Return Value:
- * None
+ * Slideshow ID <NUMBER>
  *
  * Example:
  * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5, "My Slides"] call ace_slideshow_fnc_createSlideshow
@@ -102,3 +102,4 @@ if (_duration == 0) then {
     // Automatic transitions handler
     [FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration], _duration] call CBA_fnc_waitAndExecute;
 };
+_currentSlideshow;
