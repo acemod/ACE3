@@ -30,14 +30,16 @@ _currentSlide = (_currentSlide + 1) mod (count _images);
 // Save slide back into global variable (PFH's local variables do not persist through PFH run)
 missionNamespace setVariable [_varString, _currentSlide];
 
+private _image = _images select _currentSlide;
+
 // Set slide
 {
-    _x setObjectTextureGlobal [0, _images select _currentSlide];
+    _x setObjectTextureGlobal [0, _image];
 } count _objects;
 
 //Raise event upon slide change
-[QGVAR(slideChanged), [_images select _currentSlide, _currentSlideshow]] call CBA_fnc_localEvent;
+[QGVAR(slideChanged), [_image, _currentSlideshow]] call CBA_fnc_localEvent;
 
 // Log current slide and execute Next slide
-TRACE_4("Auto-transition",_images select _currentSlide,_currentSlide,count _images,_duration);
+TRACE_4("Auto-transition",_image,_currentSlide,count _images,_duration);
 [FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration], _duration] call CBA_fnc_waitAndExecute;
