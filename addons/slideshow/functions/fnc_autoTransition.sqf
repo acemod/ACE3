@@ -7,7 +7,8 @@
  * 0: Objects <ARRAY>
  * 1: Image Paths <ARRAY>
  * 2: State Variable Name <ARRAY>
- * 3: Duration <NUMBER> (0 disables automatic transitions)
+ * 3: Current Slideshow <NUMBER>
+ * 4: Duration <NUMBER> (0 disables automatic transitions)
  *
  * Return Value:
  * None
