@@ -19,7 +19,7 @@ params ["_unit"];
 private _clone = QGVAR(clone) createVehicle [0, 0, 0];
 _clone setUnitLoadout getUnitLoadout _unit;
 _clone setVariable [QGVAR(original), _unit];
-_unit hideObjectGlobal true;
+_unit setPosATL [0, 0, -10];
 
 [QGVAR(cloneCreated), [_unit, _clone]] call CBA_fnc_globalEvent;
 

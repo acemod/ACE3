@@ -18,7 +18,6 @@ params ["_clone"];
 
 private _unit = _clone getVariable [QGVAR(original), objNull];
 _unit setPosASL getPosASL _clone;
-_unit hideObjectGlobal false;
 
 // Detach first to prevent objNull in attachedObjects
 detach _clone;
