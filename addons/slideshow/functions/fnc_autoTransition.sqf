@@ -40,4 +40,4 @@ missionNamespace setVariable [_varString, _currentSlide];
 
 // Log current slide and execute Next slide
 TRACE_4("Auto-transition",_images select _currentSlide,_currentSlide,count _images,_duration);
-[FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call CBA_fnc_waitAndExecute;
+[FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration], _duration] call CBA_fnc_waitAndExecute;
