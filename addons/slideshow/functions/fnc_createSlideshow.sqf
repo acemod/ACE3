@@ -102,4 +102,5 @@ if (_duration == 0) then {
     // Automatic transitions handler
     [FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration], _duration] call CBA_fnc_waitAndExecute;
 };
-_currentSlideshow;
+
+_currentSlideshow
