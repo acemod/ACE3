@@ -17,4 +17,5 @@
 
 (getSuppression _this == 0)
 && {CBA_missionTime - (_this getVariable [QGVAR(lastFired), -30]) > 30}
+&& {CBA_missionTime - (_this getVariable [QGVAR(lastHit), -30]) > 30}
 && {!(_this getVariable [QEGVAR(captives,isHandcuffed), false])}
