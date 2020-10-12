@@ -113,14 +113,14 @@
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
-            <French>Tir possible durant le traînage (arme de poing)</French>
+            <French>Arme utilisable durant le traînage</French>
             <German>Schießen während des Ziehens erlauben</German>
             <Hungarian>Húzás közbeni tüzelés engedélyezése</Hungarian>
             <Russian>Стрельба во время перетаскивания</Russian>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
-            <French>Cette option permet au joueur d'utiliser son arme de poing pendant qu'il traîne un objet ou une unité.</French>
+            <French>Cette option permet aux joueurs de faire usage de leur arme pendant qu'ils traînent un objet ou une unité.\nL'arme secondaire est utilisée si le joueur en est équipé.</French>
             <German>Erlaubt dem Spieler während des Ziehens das Abfeuern der Waffe.</German>
             <Hungarian>Húzás közben a játékos elsütheti a fegyverét.</Hungarian>
             <Russian>Позволяет игроку стрелять во время перетаскивания</Russian>
