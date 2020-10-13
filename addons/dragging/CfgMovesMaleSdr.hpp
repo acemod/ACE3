@@ -2,6 +2,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class InjuredMovedBase;
         class AgonyBaseRfl;
         class StandBase;
+        class AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1;
         class DraggerBase;
 
     class States {
@@ -58,11 +59,17 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             };
         };
 
+        class AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2: AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1 {
+            aiming = "aimingDefault";
+            aimingBody = "aimingUpDefault";
+            aimPrecision = 5; // default: 1
+        };
+
         class ace_dragging: DraggerBase {
             actions = "ace_MoveWithInjuredManDraggerPst";
             aiming = "aimingPistol";
             aimingBody = "aimingPistol";
-            aimPrecision = 1;
+            aimPrecision = 2; // default: 1
             canPullTrigger = 1;
             canReload = 0;
             ConnectTo[] = {
