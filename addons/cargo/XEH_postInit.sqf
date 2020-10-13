@@ -51,11 +51,7 @@
     _item hideObjectGlobal false;
     _item setPosASL (AGLtoASL _emptyPosAGL);
 
-    private _simulationType = toLower getText (configFile >> "CfgVehicles" >> typeOf _item >> "simulation");
-    if (_simulationType in ["carx", "tankx"]) then {
-        TRACE_1("re-enabling vehicle damage",_item);
-        [_item, "blockDamage", "ACE_cargo", false] call EFUNC(common,statusEffect_set);
-    };
+    [_item, "blockDamage", "ACE_cargo", false] call EFUNC(common,statusEffect_set);
 }] call CBA_fnc_addEventHandler;
 
 // Private events to handle adding actions globally via public functions
