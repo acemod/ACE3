@@ -37,13 +37,19 @@ if !(GVAR(dragAndFire)) then {
         _unit selectWeapon primaryWeapon _unit;
     };
 } else { // Making sure the unit is holding a primary weapon or handgun
-    private _allowedWeapons = [primaryWeapon _unit, handgunWeapon _unit];
-
-    if (_allowedWeapons findIf {_x isEqualTo (currentWeapon _unit)} == -1) then {
-        if ((_allowedWeapons select 0) isEqualto "") then {
-            _unit selectWeapon (_allowedWeapons select 1);
+    if !(currentWeapon _unit in [primaryWeapon _unit, handgunWeapon _unit]) then {
+        if (primaryWeapon _unit != "") then {
+            // Use primary if possible
+            _unit selectWeapon primaryWeapon _unit;
         } else {
-            _unit selectWeapon (_allowedWeapons select 0);
+            if (handgunWeapon _unit != "") then {
+                // Use pistol if unit has no primary
+                _unit selectWeapon handgunWeapon _unit;
+            } else {
+                // Add fake weapon if no weapons besides launcher are available
+                _unit addWeapon "ACE_FakePrimaryWeapon";
+                _unit selectWeapon primaryWeapon _unit;
+            };
         };
     };
 };
