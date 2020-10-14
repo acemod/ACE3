@@ -28,19 +28,8 @@ if (!GETVAR(_target,GVAR(ignoreWeightDrag),false) && {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
-if (GVAR(dragAndFire)) then {
-    // Check if the unit has a handgun
-    if !(handgunWeapon _unit isEqualTo "") then {
-        [_unit, handgunWeapon _unit] call CBA_fnc_selectWeapon;
-    } else { // No handgun, use primary instead
-        if (primaryWeapon _unit isEqualTo "") then {
-            _unit addWeapon "ACE_FakePrimaryWeapon";
-            [_unit, primaryWeapon _unit] call CBA_fnc_selectWeapon;
-        } else {
-            [_unit, primaryWeapon _unit] call CBA_fnc_selectWeapon;
-        };
-    };
-} else {
+// Add a primary weapon if the unit has none
+if !(GVAR(dragAndFire)) then {
     if (primaryWeapon _unit isEqualto "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
         _unit selectWeapon primaryWeapon _unit;
