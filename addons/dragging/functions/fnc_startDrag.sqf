@@ -36,6 +36,16 @@ if !(GVAR(dragAndFire)) then {
     } else {
         _unit selectWeapon primaryWeapon _unit;
     };
+} else { // Making sure the unit is holding a primary weapon or handgun
+    private _allowedWeapons = [primaryWeapon _unit, handgunWeapon _unit];
+
+    if (_allowedWeapons findIf {_x isEqualTo (currentWeapon _unit)} == -1) then {
+        if ((_allowedWeapons select 0) isEqualto "") then {
+            _unit selectWeapon (_allowedWeapons select 1);
+        } else {
+            _unit selectWeapon (_allowedWeapons select 0);
+        };
+    };
 };
 
 // Save the weapon so we can monitor if it changes
