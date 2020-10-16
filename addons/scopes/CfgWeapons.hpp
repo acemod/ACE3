@@ -243,11 +243,11 @@ class CfgWeapons {
 
     class arifle_SPAR_01_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.20768;
-        ACE_IronSightBaseAngle = -0.166678;
+        ACE_IronSightBaseAngle = 0.002856;
     };
     class arifle_SPAR_02_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.22175;
-        ACE_IronSightBaseAngle = -0.184641;
+        ACE_IronSightBaseAngle = -0.018908;
     };
     class arifle_SPAR_03_base_F: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.71491;
