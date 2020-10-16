@@ -41,11 +41,22 @@
 // this handles moving units into vehicles via load functions or zeus
 // needed, because the vanilla INCAPACITATED state does not handle vehicles
 ["CAManBase", "GetInMan", {
-    params ["_unit"];
-    if (!local _unit) exitWith {};
+    params ["_unit", "", "_vehicle"];
 
-    if (lifeState _unit == "INCAPACITATED") then {
+    if (local _unit && {lifeState _unit == "INCAPACITATED"}) then {
         [_unit, true] call FUNC(setUnconsciousAnim);
+    };
+
+    if (local _vehicle) then {
+        [_unit] call FUNC(lockUnconsciousSeat);
+    };
+}] call CBA_fnc_addClassEventHandler;
+
+["CAManBase", "GetOutMan", {
+    params ["_unit", "", "_vehicle"];
+
+    if (local _vehicle) then {
+        [_unit] call FUNC(unlockUnconsciousSeat);
     };
 }] call CBA_fnc_addClassEventHandler;
 
@@ -70,3 +81,15 @@
         [_unit, false] call FUNC(setUnconsciousAnim);
     };
 }] call CBA_fnc_addClassEventHandler;
+
+["ace_unconscious", {
+    params ["_unit", "_unconscious"];
+
+    if (vehicle _unit != _unit && {local vehicle _unit}) then {
+        if (_unconscious) then {
+            [_unit] call FUNC(lockUnconsciousSeat);
+        } else {
+            [_unit] call FUNC(unlockUnconsciousSeat);
+        };
+    };
+}] call CBA_fnc_addEventHandler;
