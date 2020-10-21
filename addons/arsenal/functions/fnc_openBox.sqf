@@ -34,14 +34,14 @@ if (canSuspend) exitWith {
     [{_this call FUNC(openBox)}, _this] call CBA_fnc_directCall;
 };
 
-GVAR(currentBox) = _object;
-
 private _displayToUse = [findDisplay 46, findDIsplay 312] select (!isNull findDisplay 312);
 _displayToUse = [_displayToUse, findDisplay 313] select (is3DEN);
 
 if (isNil "_displayToUse" || {!isnil QGVAR(camera)}) exitWith {
     [localize LSTRING(CantOpenDisplay), false, 5, 1] call EFUNC(common,displayText);
 };
+
+GVAR(currentBox) = _object;
 
 if (_mode) then {
     GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
