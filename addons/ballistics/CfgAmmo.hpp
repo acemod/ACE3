@@ -188,9 +188,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {743, 848, 891, 900}; // at 21°C, at 15°C {735, 840, 883, 892} according with the AKS initSpeed
         ACE_barrelLengths[] = {210, 314, 415, 508.0}; // respectively {AKS74U / AK105,AK12K / AK74 / default}
     };
-    class B_56x15_dual: BulletBase {
-        tracerScale = 0.5;
-    };
+
     class B_580x42_Ball_F: BulletBase { // DBP87
         airFriction = -0.00121087;
         ACE_caliber = 6;
