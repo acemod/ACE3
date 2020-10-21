@@ -24,7 +24,7 @@ GVAR(ppeffectBlur) = -1;
 GVAR(isUsingMagnification) = false;
 
 ["ace_settingsInitialized", {
-    TRACE_4("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling));
+    TRACE_5("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling),GVAR(scotopicEffects));
 
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
     ["loadout", LINKFUNC(onLoadoutChanged), true] call CBA_fnc_addPlayerEventHandler;
@@ -46,6 +46,19 @@ GVAR(isUsingMagnification) = false;
             [true] call FUNC(setupDisplayEffects);
         };
     }];
+
+    if (GVAR(scotopicEffects)) then {
+
+GVAR(scoTestToggle) = true;
+["test", "test", "test", {
+    GVAR(scoTestToggle) = !GVAR(scoTestToggle);
+}, {false}, [0x21, [false, false, false]], false] call CBA_fnc_addKeybind; // F Key
+
+
+        GVAR(scotopicCC) = ppEffectCreate ["colorCorrections", 1502];
+        GVAR(scotopicCC) ppEffectForceInNVG false;
+        [FUNC(scotopicEffects), [], 1] call CBA_fnc_waitAndExecute;
+    };
 }] call CBA_fnc_addEventHandler;
 
 
