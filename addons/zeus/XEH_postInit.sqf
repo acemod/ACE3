@@ -81,4 +81,9 @@ if (hasInterface) then {
         GVAR(zeus) = _zeus;
         [localize "str_a3_cfgvehicles_moduletasksetstate_f_arguments_state_values_created_0"] call EFUNC(common,displayTextStructured);
     }] call CBA_fnc_addEventHandler;
+
+    // Check if a zeus module exists.
+    if (!isNull getAssignedCuratorLogic player) then {
+        GVAR(zeus) = getAssignedCuratorLogic player;
+    };
 };
