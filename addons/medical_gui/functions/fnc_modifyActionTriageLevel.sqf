@@ -19,21 +19,28 @@
  */
 
 params ["_target", "_player", "", "_actionData"];
-_actionData params ["", "", "_icon"];
-
-private _colorHex = "#FFFFFF";
-
 if (
-    (GVAR(interactionMenuShowTriage) == 1) || // anyone
-    {(GVAR(interactionMenuShowTriage) == 2) && {[_player] call EFUNC(medical_treatment,isMedic)}} // isMedic
+    GVAR(interactionMenuShowTriage) == 1 // Anyone
+    || {GVAR(interactionMenuShowTriage) == 2 && {[_player] call EFUNC(medical_treatment,isMedic)}} // Medics & Doctors
 ) then {
-    switch (_target getVariable [QEGVAR(medical,triageLevel), 0]) do {
-        case 0: {};
-        case 1: { _colorHex = [TRIAGE_COLOR_MINIMAL] call BIS_fnc_colorRGBtoHTML };
-        case 2: { _colorHex = [TRIAGE_COLOR_DELAYED] call BIS_fnc_colorRGBtoHTML };
-        case 3: { _colorHex = [TRIAGE_COLOR_IMMEDIATE] call BIS_fnc_colorRGBtoHTML };
-        case 4: { _colorHex = [TRIAGE_COLOR_DECEASED]call BIS_fnc_colorRGBtoHTML };
+    private _colorHex = switch (_target getVariable [QEGVAR(medical,triageLevel), 0]) do {
+        case 1: {
+            [TRIAGE_COLOR_MINIMAL] call BIS_fnc_colorRGBtoHTML
+        };
+        case 2: {
+            [TRIAGE_COLOR_DELAYED] call BIS_fnc_colorRGBtoHTML
+        };
+        case 3: {
+            [TRIAGE_COLOR_IMMEDIATE] call BIS_fnc_colorRGBtoHTML
+        };
+        case 4: {
+            [TRIAGE_COLOR_DECEASED] call BIS_fnc_colorRGBtoHTML
+        };
+        default {
+            "#FFFFFF"
+        };
     };
+    
+    _actionData params ["", "", "_icon"];
+    _icon set [1, _colorHex];
 };
-
-_icon set [1, _colorHex];

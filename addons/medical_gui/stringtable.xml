@@ -189,11 +189,11 @@
             <Spanish>Distancia máxima desde el paciente para que el menú pueda ser abierto</Spanish>
             <Turkish>Tıbbi Menünün açılabileceği maksimum mesafe.</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_interactionMenuShowTriage_DisplayName">
-            <English>Show triage level in interaction menu.</English>
+        <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_DisplayName">
+            <English>Show Triage Level in Interaction Menu</English>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_interactionMenuShowTriage_Description">
-            <English>Shows the patient's triage level by changing the color of the medical interaction node.</English>
+        <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_Description">
+            <English>Shows the patient's triage level by changing the color of the main and medical menu actions.</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>

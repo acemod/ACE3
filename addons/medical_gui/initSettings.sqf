@@ -46,8 +46,8 @@
 [
     QGVAR(interactionMenuShowTriage),
     "LIST",
-    [LSTRING(interactionMenuShowTriage_DisplayName), LSTRING(interactionMenuShowTriage_Description)],
+    [LSTRING(InteractionMenuShowTriage_DisplayName), LSTRING(InteractionMenuShowTriage_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [[0, 1, 2], [LELSTRING(common,Disabled), LELSTRING(Medical_Treatment,Anyone), LELSTRING(Medical_Treatment,Medics)], 1],
-    true
+    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(Medical_Treatment,Anyone), ELSTRING(Medical_Treatment,Medics)], 1],
+    false
 ] call CBA_settings_fnc_init;

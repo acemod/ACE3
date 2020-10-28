@@ -28,7 +28,6 @@ class CfgVehicles {
             #undef ACTION_CONDITION
             class ACE_MainActions {
                 modifierFunction = QUOTE(call FUNC(modifyActionTriageLevel));
-
                 class ACE_Medical_Menu {
                     displayName = CSTRING(MedicalMenu);
                     condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
