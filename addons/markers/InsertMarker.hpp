@@ -5,6 +5,7 @@ class RscStructuredText;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscButtonMenu;
+class RscCheckBox;
 class RscEdit;
 class RscCombo;
 class RscSlider;
@@ -16,17 +17,23 @@ class RscDisplayInsertMarker {
     movingEnable = 1;
 
     class controls {
+        class TimeStampText: RscStructuredText {
+            idc = IDC_ACE_INSERT_MARKER_TIMESTAMP_TEXT;
+        };
+        class TimeStamp: RscCheckBox {
+            idc = IDC_ACE_INSERT_MARKER_TIMESTAMP;
+        };
         class MarkerShape: RscCombo {
-            idc = 1210;
+            idc = IDC_ACE_INSERT_MARKER_SHAPE;
         };
         class MarkerColor: RscCombo {
-            idc = 1211;
+            idc = IDC_ACE_INSERT_MARKER_COLOR;
         };
         class MarkerAngle: RscXSliderH {
-            idc = 1220;
+            idc = IDC_ACE_INSERT_MARKER_ANGLE;
         };
         class MarkerAngleText: RscText {
-            idc = 1221;
+            idc = IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
         };
     };
 };

@@ -150,5 +150,47 @@
             <Czech>Tvůrce</Czech>
             <Turkish>Yaratıcı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Markers_TimestampEnabled">
+            <English>Allow Timestamps</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
+            <English>Whether to allow timestamps to be automatically applied to markers</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_Timestamp">
+            <English>Add Timestamp:</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
+            <English>Watch Required</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormat">
+            <English>Timestamp Format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
+            <English>Changes the timestamp format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
+            <English>"HH" - Hour</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
+            <English>"MM" - Minute</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
+            <English>"SS" - Seconds</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
+            <English>"MM" - Milliseconds</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat">
+            <English>Timestamp Hour Format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat24">
+            <English>24-Hour Clock</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat12">
+            <English>12-Hour Clock</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
+            <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
+        </Key>
     </Package>
 </Project>
