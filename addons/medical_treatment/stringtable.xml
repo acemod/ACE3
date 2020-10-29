@@ -183,6 +183,18 @@
             <French>Temps en secondes qu'il faut pour appliquer un sac mortuaire.</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeStich_DisplayName">
+            <English>Stitching time per wound</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeStich_Description">
+            <English>Time that is needed to stitch one wound</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeCPR_DisplayName">
+            <English>Time to give CPR</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeCPR_Description">
+            <English>Time in seconds how long the CPR action takes to complete</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>
