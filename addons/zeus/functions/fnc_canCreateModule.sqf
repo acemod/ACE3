@@ -15,6 +15,9 @@
  * Public: No
  */
 
+// Don't allow if we already are a zeus, intentionally using player instead of ace_player
+ if (!isNull getAssignedCuratorLogic player) exitWith { false };
+
 (isNil QGVAR(zeus)) && {
     switch (GVAR(canCreateZeus)) do {
         case CAN_CREATE_ADMIN:   {isServer || {IS_ADMIN_LOGGED}};

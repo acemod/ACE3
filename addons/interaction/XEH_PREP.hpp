@@ -25,6 +25,7 @@ PREP(canPassMagazine);
 PREP(passMagazine);
 PREP(canBecomeLeader);
 PREP(doBecomeLeader);
+PREP(doRemoteControl);
 PREP(canTapShoulder);
 PREP(tapShoulder);
 PREP(canPardon);
