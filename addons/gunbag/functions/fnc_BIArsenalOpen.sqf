@@ -4,7 +4,7 @@
  * Handle BI arsenal opening
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
@@ -15,6 +15,8 @@
  * Public: No
  */
 
-if ([player] call FUNC(hasGunBag)) then {
-    GVAR(arsenalCache) = (backpackContainer player) getVariable [QGVAR(gunbagWeapon), []];
+params ["_unit"];
+
+if ([_unit] call FUNC(hasGunBag)) then {
+    GVAR(arsenalCache) = backpackContainer _unit getVariable [QGVAR(gunbagWeapon), []];
 };

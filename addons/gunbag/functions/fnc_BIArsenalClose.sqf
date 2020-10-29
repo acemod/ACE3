@@ -4,7 +4,7 @@
  * Handle BI arsenal closing
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
@@ -15,8 +15,12 @@
  * Public: No
  */
 
+params ["_unit"];
+
 if (!isNil QGVAR(arsenalCache)) then {
-    (backpackContainer player) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
+    (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
 };
 
 GVAR(arsenalCache) = nil;
+
+nil

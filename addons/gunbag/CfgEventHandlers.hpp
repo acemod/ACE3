@@ -16,13 +16,13 @@ class RscPicture;
 class RscDisplayArsenal {
     class Controls {
         class IconBackgroundPrimaryWeapon: RscPicture {
-            onLoad = QUOTE(_this call FUNC(BIArsenalOpen));
+            onLoad = QUOTE([ACE_player] call FUNC(BIArsenalOpen));
         };
     };
 };
 
 class Extended_DisplayUnload_EventHandlers {
     class RscDisplayArsenal {
-        ADDON = QUOTE(_this call FUNC(BIArsenalClose));
+        ADDON = QUOTE([ACE_player] call FUNC(BIArsenalClose));
     };
 };
