@@ -183,6 +183,18 @@
             <French>Temps en secondes qu'il faut pour appliquer un sac mortuaire.</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeStich_DisplayName">
+            <English>Stitching time per wound</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeStich_Description">
+            <English>Time that is needed to stitch one wound</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeCPR_DisplayName">
+            <English>Time to give CPR</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeCPR_Description">
+            <English>Time in seconds how long the CPR action takes to complete</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>
@@ -4281,42 +4293,6 @@
             <Chinesesimp>该部位没有使用止血带!</Chinesesimp>
             <Chinese>這部位沒有止血帶!</Chinese>
             <Turkish>Bu vücut kısmında turnike yok!</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_StitchTimeCoef_DisplayName">
-            <English>Stitching time per wound coefficient</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_StitchTimeCoef_Description">
-            <English>Coefficient for time that is needed to stitch one wound</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TourniquetTime_DisplayName">
-            <English>Time to tourniquet</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TourniquetTime_Description">
-            <English>Time in seconds how long it takes to apply or remove tourniquets</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_SplintTime_DisplayName">
-            <English>Time to splint</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_SplintTime_Description">
-            <English>Time in seconds how long it takes to apply a splint</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TransfuseIVTime_DisplayName">
-            <English>Time to transfuse an IV bag</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TransfuseIVTime_Description">
-            <English>Time in seconds how long it takes to apply an IV bag</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CprTime_DisplayName">
-            <English>Time to give CPR</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CprTime_Description">
-            <English>Time in seconds how long the CPR action takes to complete</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AutoInjectorTime_DisplayName">
-            <English>Time to administer an autoinjector</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AutoInjectorTime_Description">
-            <English>Time in seconds how long it takes to administer an autoinjector such as adenosine, epinephrine or morphine</English>
         </Key>
     </Package>
 </Project>
