@@ -159,13 +159,6 @@ class CfgMagazineWells {
         };
     };
 
-    class CBA_338LM_AI { //338 Lapua Magnum Accuracy International
-        ADDON[] = {
-            "ACE_10Rnd_338_300gr_HPBT_Mag",
-            "ACE_10Rnd_338_API526_Mag"
-        };
-    };
-
     class CBA_408CT_Inter {
         ADDON[] = {
             "ACE_7Rnd_408_305gr_Mag"
