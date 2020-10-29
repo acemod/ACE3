@@ -98,7 +98,7 @@ private _selected = if (_right) then {
 };
 
 private _sortName = _sortControl lbData (0 max lbCurSel _sortControl);
-private _sortConfig = _sorts select (_sorts findIf {(_x select 0) isEqualTo _sortName});
+private _sortConfig = _sorts select (0 max (_sorts findIf {(_x select 0) isEqualTo _sortName}));
 private _statement = _sortConfig select 2;
 
 missionNamespace setVariable [
