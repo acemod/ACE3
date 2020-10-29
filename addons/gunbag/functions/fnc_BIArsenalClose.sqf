@@ -18,7 +18,7 @@
 params ["_unit"];
 
 if (!isNil QGVAR(arsenalCache)) then {
-    (backpackContainer _unit) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
+    backpackContainer _unit setVariable [QGVAR(gunbagWeapon), GVAR(arsenalCache), true];
 };
 
 GVAR(arsenalCache) = nil;
