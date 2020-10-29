@@ -61,4 +61,16 @@ class GVAR(sorts) {
         tabs[] = {{}, {4}};
         statement = QUOTE(_this call FUNC(sortStatement_magCount));
     };
+
+    class ACE_protectionBallistic: sortBase {
+        scope = 2;
+        displayName = CSTRING(sortByProtectionBallistic);
+        tabs[] = {{3,4,6}, {}};
+        statement = QUOTE([ARR_3(_this, 1000000, 1000)] call FUNC(sortStatement_protection));
+    };
+
+    class ACE_protectionExplosive: ACE_protectionBallistic {
+        displayName = CSTRING(sortByProtectionExplosive);
+        statement = QUOTE([ARR_3(_this, 1000, 1000000)] call FUNC(sortStatement_protection));
+    };
 };

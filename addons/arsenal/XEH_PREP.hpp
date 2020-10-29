@@ -67,6 +67,7 @@ PREP(sortStatement_accuracy);
 PREP(sortStatement_magCount);
 PREP(sortStatement_mass);
 PREP(sortStatement_mod);
+PREP(sortStatement_protection);
 PREP(sortStatement_rateOfFire);
 PREP(sortStatement_scopeMag);
 PREP(statBarStatement_accuracy);
