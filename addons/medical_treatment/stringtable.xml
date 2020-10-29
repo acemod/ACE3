@@ -4238,5 +4238,8 @@
             <Chinese>這部位沒有止血帶!</Chinese>
             <Turkish>Bu vücut kısmında turnike yok!</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
+            <English>The body twitched and may not be dead!</English>
+        </Key>
     </Package>
 </Project>

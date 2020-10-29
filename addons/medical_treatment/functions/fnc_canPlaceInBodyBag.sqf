@@ -21,12 +21,4 @@
 
 params ["", "_patient"];
 
-if (isNull objectParent _patient) exitWith {
-    if (GVAR(allowBodybagUnconscious)) then {
-        !(_patient call EFUNC(common,isAwake))
-    } else {
-        !(alive _patient)
-    }
-};
-
-false
+(isNull objectParent _patient) && {!(_patient call EFUNC(common,isAwake))}
