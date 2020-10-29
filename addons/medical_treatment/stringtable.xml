@@ -133,68 +133,6 @@
             <Japanese>傷が再開放する確率の係数を設定できます。再開放は、この数値と傷の種類、そして使用した包帯に応じて左右されます。</Japanese>
             <Turkish>Yaranın yeniden açılma şansını kontrol etme katsayısı. Son yeniden açılma şansı, bu değerin kullanılan yara tipi ve bandaj için spesifik yeniden açılma şansı ile çarpılmasıyla belirlenir.</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
-            <English>Tourniquet Treatment Time</English>
-            <French>Temps de traitement du tourniquet</French>
-            <German>Tourniquet-Behandlungszeit</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
-            <English>Time in seconds it takes to apply a tourniquet.</English>
-            <French>Temps en secondes nécessaire pour appliquer un garrot.</French>
-            <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSyringe_DisplayName">
-            <English>Syringe Treatment Time</English>
-            <French>Temps de traitement de la seringue</French>
-            <German>Spritzenbehandlungszeit</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSyringe_Description">
-            <English>Time in seconds it takes to apply a syringe.</English>
-            <French>Temps en secondes nécessaire pour appliquer une seringue.</French>
-            <German>Zeit in Sekunden, die zum Auftragen einer Spritze benötigt wird.</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
-            <English>IV Bag Treatment Time</English>
-            <French>Temps de traitement du sac IV</French>
-            <German>IV Beutelbehandlungszeit</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
-            <English>Time in seconds it takes to apply an IV bag.</English>
-            <French>Temps en secondes nécessaire pour appliquer un sac IV.</French>
-            <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
-            <English>Splint Treatment Time</English>
-            <French>Temps de traitement de l'attelle</French>
-            <German>Schienenbehandlungszeit</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
-            <English>Time in seconds it takes to apply a splint.</English>
-            <French>Temps en secondes nécessaire pour appliquer une attelle.</French>
-            <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
-            <English>Body Bag Use Time</English>
-            <French>Temps d'utilisation du sac mortuaire</French>
-            <German>Anwendungszeit für Leichensack</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
-            <English>Time in seconds it takes to apply a body bag.</English>
-            <French>Temps en secondes qu'il faut pour appliquer un sac mortuaire.</French>
-            <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeStich_DisplayName">
-            <English>Stitching time per wound</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeStich_Description">
-            <English>Time that is needed to stitch one wound</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeCPR_DisplayName">
-            <English>Time to give CPR</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_treatmentTimeCPR_Description">
-            <English>Time in seconds how long the CPR action takes to complete</English>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
             <Japanese>治療後に外傷を削除</Japanese>
@@ -299,6 +237,52 @@
             <Polish>Najpierw sprzęt medyka</Polish>
             <German>Ausrüstung des Sanitäters zuerst</German>
             <Turkish>İlk Sıhhiyenin Ekipmanı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_DisplayName">
+            <English>Autoinjector Treatment Time</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
+            <English>Time, in seconds, required to administer medication using an autoinjector.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
+            <English>Tourniquet Treatment Time</English>
+            <French>Temps de traitement du tourniquet</French>
+            <German>Tourniquet-Behandlungszeit</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
+            <English>Time, in seconds, required to apply/remove a tourniquet.</English>
+            <French>Temps en secondes nécessaire pour appliquer un garrot.</French>
+            <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
+            <English>IV Bag Treatment Time</English>
+            <French>Temps de traitement du sac IV</French>
+            <German>IV Beutelbehandlungszeit</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
+            <English>Time, in seconds, required to administer an IV bag.</English>
+            <French>Temps en secondes nécessaire pour appliquer un sac IV.</French>
+            <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
+            <English>Splint Treatment Time</English>
+            <French>Temps de traitement de l'attelle</French>
+            <German>Schienenbehandlungszeit</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
+            <English>Time, in seconds, required to apply a splint.</English>
+            <French>Temps en secondes nécessaire pour appliquer une attelle.</French>
+            <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
+            <English>Body Bag Use Time</English>
+            <French>Temps d'utilisation du sac mortuaire</French>
+            <German>Anwendungszeit für Leichensack</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
+            <English>Time, in seconds, required to put a patient in a body bag.</English>
+            <French>Temps en secondes qu'il faut pour appliquer un sac mortuaire.</French>
+            <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -594,6 +578,12 @@
             <German>Ermöglicht die Benutzung des Operations-Sets, um sich selbst zu nähen.</German>
             <Russian>Включает использование хирургического набора на себе.</Russian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_DisplayName">
+            <English>Wound Stitch Time</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
+            <English>Time, in seconds, required to stitch a single wound.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
             <German>Eigennutzung von Bluttransfusionen</German>
@@ -851,6 +841,12 @@
             <Polish>Prawdopodobieństwo przwyrócenia akcji serca poprzez wykonanie RKO</Polish>
             <German>Wahrscheinlichkeit, dass HLW bei der Wiederherstellung des Herzrhythmus erfolgreich sein wird.</German>
             <Turkish>Kalp ritmini geri kazanmada CPR'nin başarılı olma olasılığı.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
+            <English>CPR Treatment Time</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
+            <English>Time, in seconds, required to perform CPR on a patient.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
