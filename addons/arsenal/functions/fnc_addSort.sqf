@@ -10,12 +10,13 @@
  * 1: Sort Class (a unique string for each algorithm) <STRING>
  * 2: Display Name <STRING>
  * 3: Algorithm <CODE>
+ * 4: Condition (Optional)<CODE>
  *
  * Return Value:
  * 0: Array of IDs (ARRAY of STRINGS)
  *
  * Example:
- *  [[[0, 1]], "fireRateSort", "Sort by fire rate", {
+ *  [[[0, 1], []], "fireRateSort", "Sort by fire rate", {
  *      params ["_itemCfg"];
  *      private _fireModes = getArray (_itemCfg >> "modes");
  *      private _fireRate = [];
@@ -35,7 +36,8 @@ params [
     ["_tabs", [[], []], [[]], 2],
     ["_class", "", [""]],
     ["_displayName", "", [""]],
-    ["_statement", {}, [{}]]
+    ["_statement", {}, [{}]],
+    ["_condition", {true}, [{}]]
 ];
 
 _tabs params [
@@ -57,7 +59,7 @@ private _fnc_addToTabs = {
     } forEach _tabsToAddTo;
 };
 
-_finalArray = ["", _displayName, _statement];
+_finalArray = ["", _displayName, _statement, _condition];
 
 if !(_leftTabs isEqualTo []) then {
     [GVAR(sortListLeftPanel), _leftTabs, "L", 0] call _fnc_addToTabs;
