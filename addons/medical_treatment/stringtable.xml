@@ -1367,7 +1367,7 @@
             <Turkish>Kırık bir uzvu stabilize eder</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Morphine_Display">
-            <English>Morphine autoinjector</English>
+            <English>Morphine Autoinjector</English>
             <German>Morphium-Autoinjektor</German>
             <Russian>Морфин в пневмошприце</Russian>
             <Spanish>Morfina auto-inyectable</Spanish>
@@ -1416,7 +1416,7 @@
             <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Adenosine_Display">
-            <English>Adenosine autoinjector</English>
+            <English>Adenosine Autoinjector</English>
             <German>Adenosin-Autoinjektor</German>
             <Spanish>Asenosina auto-inyectable</Spanish>
             <Polish>Autostrzykawka z adenozyną</Polish>
@@ -1462,7 +1462,7 @@
             <Chinese>一種藥物用於減低腎上腺素的效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Atropine_Display">
-            <English>Atropine autoinjector</English>
+            <English>Atropine Autoinjector</English>
             <Russian>Атропин в пневмошприце</Russian>
             <Spanish>Atropina auto-inyectable</Spanish>
             <French>Auto-injecteur d'atropine</French>
@@ -1511,7 +1511,7 @@
             <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Epinephrine_Display">
-            <English>Epinephrine autoinjector</English>
+            <English>Epinephrine Autoinjector</English>
             <Russian>Адреналин в пневмошприце</Russian>
             <Spanish>Epinefrina auto-inyectable</Spanish>
             <French>Auto-injecteur d'épinéphrine</French>
