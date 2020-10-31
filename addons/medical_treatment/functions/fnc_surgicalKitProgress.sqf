@@ -28,7 +28,7 @@ private _stitchableWounds = _patient call FUNC(getStitchableWounds);
 if (_stitchableWounds isEqualTo []) exitWith {false};
 
 // Not enough time has elapsed to stitch a wound
-if (_totalTime - _elapsedTime > (count _stitchableWounds - 1) * GVAR(treatmentTimeStich)) exitWith {true};
+if (_totalTime - _elapsedTime > (count _stitchableWounds - 1) * GVAR(woundStitchTime)) exitWith {true};
 
 private _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);
 private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);

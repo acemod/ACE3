@@ -117,7 +117,7 @@ class GVAR(actions) {
         category = "medication";
         items[] = {"ACE_morphine"};
         condition = "";
-        treatmentTime = QGVAR(treatmentTimeSyringe);
+        treatmentTime = QGVAR(treatmentTimeAutoinjector);
         callbackSuccess = QFUNC(medication);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};

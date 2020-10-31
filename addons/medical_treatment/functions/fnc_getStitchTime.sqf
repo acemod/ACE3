@@ -18,4 +18,4 @@
 
 params ["", "_patient"];
 
-count (_patient call FUNC(getStitchableWounds)) * GVAR(treatmentTimeStich)
+count (_patient call FUNC(getStitchableWounds)) * GVAR(woundStitchTime)
