@@ -377,13 +377,14 @@ class CfgVehicles {
         // can not take damage individually though, because of limitations of the thingX simulation type
         class HitPoints {
             class HitBody {
-                armor = 0.6;
+                armor = 1;
                 material = -1;
                 name = "mat_rim";
                 visual = "mat_rim";
                 passThrough = 1;
                 radius = 0.1;
                 explosionShielding = 1;
+                minimalHit = 1;
             };
         };
 
