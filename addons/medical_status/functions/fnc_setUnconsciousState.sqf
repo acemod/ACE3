@@ -52,9 +52,20 @@ if (_active) then {
         // Do "Unlock controls" user action, co-pilot will then have to do the "Take Controls" actions
         _unit action ["UnlockVehicleControl", vehicle _unit];
     };
+
+    // Disable AI aiming
+    if (!isPlayer _unit && {_unit checkAIFeature "WEAPONAIM"}) then {
+        _unit disableAI "WEAPONAIM";
+        _unit setVariable [QGVAR(reenableWeaponAim), true];
+    };
 } else {
     // Unit has woken up, no longer need to track this
     _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil];
+
+    // Reenable AI aiming
+    if (_unit getVariable [QGVAR(reenableWeaponAim), false]) then {
+        _unit enableAI "WEAPONAIM";
+    };
 };
 
 // This event doesn't correspond to unconscious in statemachine
