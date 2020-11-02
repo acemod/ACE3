@@ -90,9 +90,13 @@ private _sortIndex = 0;
 
 {
     if (_x isEqualTo []) exitWith {};
-    _sortCtrl lbAdd (_x select 1);
-    if ((_x select 1) isEqualTo _lastSort) then {
-        _sortIndex = _forEachIndex;
+    _x params ["_sortName", "_displayName", "", "_condition"]
+    if ([_right] call _condition) then {
+        private _index = _sortCtrl lbAdd _displayName;
+        _sortCtrl lbSetData [_index, _sortName];
+        if (_displayName isEqualTo _lastSort) then {
+            _sortIndex = _index;
+        };
     };
 } forEach _sorts;
 
