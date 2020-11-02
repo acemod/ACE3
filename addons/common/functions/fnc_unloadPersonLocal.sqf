@@ -49,6 +49,16 @@ unassignVehicle _unit;
 TRACE_1("Ejecting", alive _unit);
 _unit action ["Eject", vehicle _unit];
 
+// Failsafe - sometimes eject alone doesn't work, but moveOut does
+[{
+    params ["_unit"];
+
+    if (vehicle _unit != _unit) then {
+        TRACE_1("failsafe",_unit);
+        moveOut _unit;
+    };
+}, [_unit], 1] call CBA_fnc_waitAndExecute;
+
 [{
     params ["_unit", "_emptyPos"];
     (alive _unit) && {(vehicle _unit) != _unit}

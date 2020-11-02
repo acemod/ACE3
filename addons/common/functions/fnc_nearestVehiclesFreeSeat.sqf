@@ -22,5 +22,5 @@ private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F", 
 _nearVehicles select {
     // Filter cargo seats that will eject unconscious units (e.g. quad bike)
     ((_x emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUnconscious', false])} || {(getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> "ejectDeadCargo")) == 0})
-    || {_x emptyPositions "gunner" > 0}
+    || {{isNull (_x#0)} count fullCrew [_x, "", true] > _x emptyPositions "driver"}
 }
