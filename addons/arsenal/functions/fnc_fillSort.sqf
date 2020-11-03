@@ -90,7 +90,7 @@ private _sortIndex = 0;
 
 {
     if (_x isEqualTo []) exitWith {};
-    _x params ["_sortName", "_displayName", "", "_condition"]
+    _x params ["_sortName", "_displayName", "", "_condition"];
     if ([_right] call _condition) then {
         private _index = _sortCtrl lbAdd _displayName;
         _sortCtrl lbSetData [_index, _sortName];
