@@ -926,6 +926,12 @@
             <Turkish>CPR Başarı Şansı</Turkish>
             <Spanish>Probabilidad de éxito del RCP</Spanish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_DisplayName">
+            <English>CPR Success Chance Minimum</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
+            <English>CPR Success Chance Maximum</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_Description">
             <English>Probability that CPR will be successful in restoring heart rhythm.</English>
             <Japanese>心肺蘇生によって心拍を戻せる確率を決定できます。</Japanese>
@@ -939,6 +945,12 @@
             <German>Wahrscheinlichkeit, dass HLW bei der Wiederherstellung des Herzrhythmus erfolgreich sein wird.</German>
             <Turkish>Kalp ritmini geri kazanmada CPR'nin başarılı olma olasılığı.</Turkish>
             <Spanish>Probabilidad de que el RCP sea exitoso restaurando el ritmo cardíaco.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
+            <English>Minimum probability that CPR will be successful in restoring heart rhythm. Actual probability is interpolated based on blood volume.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
+            <English>Maximum probability that CPR will be successful in restoring heart rhythm. Actual probability is interpolated based on blood volume.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
