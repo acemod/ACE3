@@ -340,7 +340,7 @@ class CfgWeapons {
     
     class arifle_SDAR_F: SDAR_base_F {
         ACE_RailHeightAboveBore = 0;
-        ACE_IronSightBaseAngle = -0.037242;
+        ACE_IronSightBaseAngle = -0.042972;
     };
 
     class SMG_01_Base: Rifle_Short_Base_F {
