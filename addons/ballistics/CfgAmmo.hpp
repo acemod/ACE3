@@ -130,6 +130,14 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
+
+    class B_556x45_dual: B_556x45_Ball {
+        airFriction = -0.00055;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_muzzleVelocities[] = {268}; // at 21°C, at 15°C 267 m/s according with the 20Rnd_556x45_UW_mag initSpeed
+        ACE_barrelLengths[] = {457.2}; // according with the SDAR barrel length: https://en.wikipedia.org/wiki/Kel-Tec_RFB
+    };
+
     class ACE_556x45_Ball_Mk262 : B_556x45_Ball {
         airFriction=-0.00111805;
         ACE_caliber=5.69;
