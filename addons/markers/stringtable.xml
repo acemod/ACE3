@@ -50,7 +50,7 @@
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
             <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
-            <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をさせられるか制限できます。</Japanese>
+            <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をできるか制限できます。</Japanese>
             <Korean>Alt 키를 누른 상태에서 마커를 움직일 수있는 플레이어를 제한합니다.</Korean>
             <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
             <Chinesesimp>设定谁可以透过按住Alt键来移动标志。</Chinesesimp>
@@ -60,6 +60,7 @@
             <Portuguese>Restringe quais jogadores podem mover os marcadores do mapa enquanto seguram a tecla ALT.</Portuguese>
             <French>Définit quels joueurs peuvent déplacer des marqueurs en maintenant la touche Alt enfoncée.</French>
             <Czech>Omezuje kdo může pohybovat se značkami při podržení klávesy Alt.</Czech>
+            <Turkish>Alt tuşunu basılı tutarken hangi işaretçilerin hareket edebileceğini sınırlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
@@ -148,6 +149,48 @@
             <Italian>Creatore</Italian>
             <Czech>Tvůrce</Czech>
             <Turkish>Yaratıcı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampEnabled">
+            <English>Allow Timestamps</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
+            <English>Whether to allow timestamps to be automatically applied to markers</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_Timestamp">
+            <English>Add Timestamp:</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
+            <English>Watch Required</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormat">
+            <English>Timestamp Format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
+            <English>Changes the timestamp format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
+            <English>"HH" - Hour</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
+            <English>"MM" - Minute</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
+            <English>"SS" - Seconds</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
+            <English>"MM" - Milliseconds</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat">
+            <English>Timestamp Hour Format</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat24">
+            <English>24-Hour Clock</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat12">
+            <English>12-Hour Clock</English>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
+            <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
         </Key>
     </Package>
 </Project>

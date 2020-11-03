@@ -8,6 +8,76 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             weaponIK = 0;
         };
 
+        class Unconscious;
+        class DeadState;
+        class ace_unconscious_1: DeadState {
+            file = QPATHTO_T(data\ace_unconscious_1.rtm);
+        };
+        class ace_unconscious_2: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_2.rtm);
+        };
+        class ace_unconscious_3: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_3.rtm);
+        };
+        class ace_unconscious_4: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_4.rtm);
+        };
+        class ace_unconscious_5: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_5.rtm);
+        };
+        class ace_unconscious_6: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_6.rtm);
+        };
+        class ace_unconscious_7: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_7.rtm);
+        };
+        class ace_unconscious_8: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_8.rtm);
+        };
+        class ace_unconscious_1_1: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_1_1.rtm);
+        };
+        class ace_unconscious_2_1: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_2_1.rtm);
+        };
+        class ace_unconscious_3_1: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_3_1.rtm);
+        };
+        class ace_unconscious_4_1: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_4_1.rtm);
+        };
+        class ace_unconscious_5_1: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_5_1.rtm);
+        };
+        class ace_unconscious_6_1: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_6_1.rtm);
+        };
+        class ace_unconscious_7_1: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_7_1.rtm);
+        };
+        class ace_unconscious_8_1: ace_unconscious_1 {
+            file = QPATHTO_T(data\ace_unconscious_8_1.rtm);
+        };
+        /* added for the "ace_unc" part */
+        class KIA_passenger_boat_holdleft;
+        class ace_unconscious_9: KIA_passenger_boat_holdleft {
+        };
+        class KIA_driver_boat01;
+        class ace_unconscious_10: KIA_driver_boat01 {
+        };
+
+        class GVAR(faceDown_unconscious): Unconscious {
+        };
+
+        class GVAR(faceLeft_unconscious): Unconscious {
+        };
+
+        class GVAR(faceRight_unconscious): Unconscious {
+        };
+
+        class GVAR(faceUp_unconscious): Unconscious {
+        };
+
         class AmovPpneMstpSnonWnonDnon;
         class ACE_UnconsciousOutProne: AmovPpneMstpSnonWnonDnon {
             //file = "\A3\anims_f\Data\Anim\Sdr\dth\pne\stp\ras\Rfl\AdthPpneMstpSrasWrflDnon_1";

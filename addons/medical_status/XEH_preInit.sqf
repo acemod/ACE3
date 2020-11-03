@@ -23,4 +23,6 @@ PREP_RECOMPILE_END;
     #endif
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
+addMissionEventHandler ["EntityKilled", {_this call FUNC(handleKilledMission)}];
+
 ADDON = true;

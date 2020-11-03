@@ -69,6 +69,7 @@
             <Korean>긁힘</Korean>
             <Chinese>擦傷</Chinese>
             <Turkish>Sıyrık</Turkish>
+            <Chinesesimp>擦伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Minor">
             <English>Minor Scrape</English>
@@ -85,6 +86,7 @@
             <Korean>조금 긁힘</Korean>
             <Chinese>小擦傷</Chinese>
             <Turkish>Küçük Sıyrık</Turkish>
+            <Chinesesimp>轻度擦伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Medium">
             <English>Medium Scrape</English>
@@ -101,6 +103,7 @@
             <Korean>꽤 긁힘</Korean>
             <Chinese>中度擦傷</Chinese>
             <Turkish>Orta Sıyrık</Turkish>
+            <Chinesesimp>中度擦伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Abrasion_Large">
             <English>Large Scrape</English>
@@ -117,6 +120,7 @@
             <Korean>심하게 긁힘</Korean>
             <Chinese>嚴重擦傷</Chinese>
             <Turkish>Büyük Sıyrık</Turkish>
+            <Chinesesimp>重度擦伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion">
             <English>Avulsion</English>
@@ -133,6 +137,7 @@
             <Korean>떨어져나감</Korean>
             <Chinese>撕除傷</Chinese>
             <Turkish>Kopma</Turkish>
+            <Chinesesimp>撕脱伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion_Minor">
             <English>Minor Avulsion</English>
@@ -149,6 +154,7 @@
             <Korean>조금 떨어져나감</Korean>
             <Chinese>小撕除傷</Chinese>
             <Turkish>Küçük Kopuk</Turkish>
+            <Chinesesimp>轻度撕脱伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion_Medium">
             <English>Medium Avulsion</English>
@@ -165,6 +171,7 @@
             <Korean>꽤 떨어져나감</Korean>
             <Chinese>中度撕除傷</Chinese>
             <Turkish>Orta Kopuk</Turkish>
+            <Chinesesimp>中度撕脱伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion_Large">
             <English>Large Avulsion</English>
@@ -181,6 +188,7 @@
             <Korean>크게 떨어져나감</Korean>
             <Chinese>嚴重撕除傷</Chinese>
             <Turkish>Büyük Kopuk</Turkish>
+            <Chinesesimp>重度撕脱伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Contusion">
             <English>Bruise</English>
@@ -197,6 +205,7 @@
             <Korean>멍</Korean>
             <Chinese>挫傷</Chinese>
             <Turkish>Yara</Turkish>
+            <Chinesesimp>挫伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Contusion_Minor">
             <English>Minor Bruise</English>
@@ -213,6 +222,7 @@
             <Korean>조금 멍듬</Korean>
             <Chinese>小挫傷</Chinese>
             <Turkish>Küçük Yara</Turkish>
+            <Chinesesimp>轻度挫伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Contusion_Medium">
             <English>Medium Bruise</English>
@@ -229,6 +239,7 @@
             <Korean>꽤 멍듬</Korean>
             <Chinese>中度挫傷</Chinese>
             <Turkish>Orta Yara</Turkish>
+            <Chinesesimp>中度挫伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Contusion_Large">
             <English>Large Bruise</English>
@@ -245,6 +256,7 @@
             <Korean>심하게 멍듬</Korean>
             <Chinese>嚴重挫傷</Chinese>
             <Turkish>Büyük Yara</Turkish>
+            <Chinesesimp>重度挫伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush">
             <English>Crushed tissue</English>
@@ -261,6 +273,7 @@
             <Korean>뭉개짐</Korean>
             <Chinese>壓迫傷</Chinese>
             <Turkish>Ezilmiş Doku</Turkish>
+            <Chinesesimp>挤压伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Minor">
             <English>Minor crushed tissue</English>
@@ -277,6 +290,7 @@
             <Korean>조금 뭉개짐</Korean>
             <Chinese>小壓迫傷</Chinese>
             <Turkish>Küçük Ezilmiş Doku</Turkish>
+            <Chinesesimp>轻度挤压伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Medium">
             <English>Medium crushed tissue</English>
@@ -293,6 +307,7 @@
             <Korean>꽤 뭉개짐</Korean>
             <Chinese>中度壓迫傷</Chinese>
             <Turkish>Orta Ezilmiş Doku</Turkish>
+            <Chinesesimp>中度挤压伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Crush_Large">
             <English>Large crushed tissue</English>
@@ -309,6 +324,7 @@
             <Korean>심하게 뭉개짐</Korean>
             <Chinese>嚴重壓迫傷</Chinese>
             <Turkish>Büyük Ezilmiş Doku</Turkish>
+            <Chinesesimp>重度挤压伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Cut">
             <English>Cut</English>
@@ -325,6 +341,7 @@
             <Korean>베임</Korean>
             <Chinese>割傷</Chinese>
             <Turkish>Kesik</Turkish>
+            <Chinesesimp>割伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Cut_Minor">
             <English>Small Cut</English>
@@ -341,6 +358,7 @@
             <Korean>조금 베임</Korean>
             <Chinese>小割傷</Chinese>
             <Turkish>Küçük Kesik</Turkish>
+            <Chinesesimp>轻度割伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Cut_Medium">
             <English>Medium Cut</English>
@@ -357,6 +375,7 @@
             <Korean>꽤 베임</Korean>
             <Chinese>中度割傷</Chinese>
             <Turkish>Orta Kesik</Turkish>
+            <Chinesesimp>中度割伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Cut_Large">
             <English>Large Cut</English>
@@ -373,6 +392,7 @@
             <Korean>심하게 베임</Korean>
             <Chinese>嚴重割傷</Chinese>
             <Turkish>Büyük Kesik</Turkish>
+            <Chinesesimp>重度割伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration">
             <English>Tear</English>
@@ -388,6 +408,8 @@
             <Japanese>裂傷</Japanese>
             <Korean>찢어짐</Korean>
             <Chinese>撕裂傷</Chinese>
+            <Turkish>Yırtık</Turkish>
+            <Chinesesimp>裂伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Minor">
             <English>Small Tear</English>
@@ -403,6 +425,8 @@
             <Japanese>小さな裂傷</Japanese>
             <Korean>조금 찢어짐</Korean>
             <Chinese>小撕裂傷</Chinese>
+            <Turkish>Küçük Yırtık</Turkish>
+            <Chinesesimp>轻度裂伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Medium">
             <English>Medium Tear</English>
@@ -418,6 +442,8 @@
             <Japanese>中くらいの裂傷</Japanese>
             <Korean>꽤 찢어짐</Korean>
             <Chinese>中度撕裂傷</Chinese>
+            <Turkish>Orta Yırtık</Turkish>
+            <Chinesesimp>中度裂伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Laceration_Large">
             <English>Large Tear</English>
@@ -433,6 +459,8 @@
             <Japanese>大きな裂傷</Japanese>
             <Korean>심하게 찢어짐</Korean>
             <Chinese>嚴重撕裂傷</Chinese>
+            <Chinesesimp>重度裂伤</Chinesesimp>
+            <Turkish>Büyük Yırtık</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound">
             <English>Velocity Wound</English>
@@ -449,6 +477,7 @@
             <Korean>총상</Korean>
             <Chinese>槍傷</Chinese>
             <Turkish>Hız Yarası</Turkish>
+            <Chinesesimp>穿透伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Minor">
             <English>Small Velocity Wound</English>
@@ -465,6 +494,7 @@
             <Korean>소형 총상</Korean>
             <Chinese>小槍傷</Chinese>
             <Turkish>Küçük Hız Yarası</Turkish>
+            <Chinesesimp>轻度穿透伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
@@ -481,6 +511,7 @@
             <Korean>중형 총상</Korean>
             <Chinese>中度槍傷</Chinese>
             <Turkish>Orta Hız Yarası</Turkish>
+            <Chinesesimp>中度穿透伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound_Large">
             <English>Large Velocity Wound</English>
@@ -497,6 +528,7 @@
             <Korean>대형 총상</Korean>
             <Chinese>嚴重槍傷</Chinese>
             <Turkish>Büyük Hız Yarası</Turkish>
+            <Chinesesimp>重度穿透伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PunctureWound">
             <English>Puncture Wound</English>
@@ -513,6 +545,7 @@
             <Korean>관통상</Korean>
             <Chinese>刺傷</Chinese>
             <Turkish>Delinme Yarası</Turkish>
+            <Chinesesimp>刺伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
@@ -529,6 +562,7 @@
             <Korean>소형 관통상</Korean>
             <Chinese>小刺傷</Chinese>
             <Turkish>Küçük Delinme Yarası</Turkish>
+            <Chinesesimp>轻度刺伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
@@ -545,6 +579,7 @@
             <Korean>중형 관통상</Korean>
             <Chinese>中度刺傷</Chinese>
             <Turkish>Orta Delinme Yarası</Turkish>
+            <Chinesesimp>中度刺伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PunctureWound_Large">
             <English>Large Puncture Wound</English>
@@ -561,6 +596,7 @@
             <Korean>대형 관통상</Korean>
             <Chinese>嚴重刺傷</Chinese>
             <Turkish>Büyük Delinme Yarası</Turkish>
+            <Chinesesimp>重度刺伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_DisplayName">
             <English>Fatal Damage Source</English>
@@ -630,6 +666,26 @@
             <Spanish>Ambos</Spanish>
             <Turkish>Ikisinden biri</Turkish>
             <German>Beide</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
+            <English>Unit Damage Threshold</English>
+            <German>Schwelle für Schaden</German>
+            <French>Seuil de dégâts</French>
+            <Japanese>ユニットのダメージしきい値</Japanese>
+            <Czech>Práh poškození</Czech>
+            <Russian>Порог урона</Russian>
+            <Polish>Próg obrażeń jednostki</Polish>
+            <Turkish>Birim Hasar Katsayısı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
+            <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
+            <German>Legt die Höhe des Schadens fest, den eine Einheit erhalten kann, bevor diese ohnmächtig wird. (0 für Misionsnormalwert)</German>
+            <French>Définit la quantité de dégâts que l'unité peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).\n(0 utilise la valeur définie dans la mission.)</French>
+            <Japanese>ユニットが気絶するまで許容できるダメージ値を設定できます。標準: 0</Japanese>
+            <Czech>Určuje kolik poškození může jednotka utrpět než upadne do bezvědomí. (pro použití standardní hodnoty mise zadejte 0)</Czech>
+            <Russian>Устанавливает количество урона, которое может получить юнит перед тем, как потерять сознание. (0 для значения миссии)</Russian>
+            <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
+            <Turkish>Bilinçsiz duruma geçmeden önce bir birimin alabileceği hasar miktarını ayarlar. (Görev varsayılanı için 0)</Turkish>
         </Key>
     </Package>
 </Project>

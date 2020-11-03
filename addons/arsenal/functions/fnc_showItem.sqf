@@ -43,7 +43,7 @@ private _nextAction = switch (GVAR(currentLeftPanel)) do {
     case IDC_buttonBinoculars : {
         ["Civil", "Binoculars"] select (GVAR(currentItems) select 9 != "")
     };
-    case IDC_buttonInsigna : {
+    case IDC_buttonInsignia : {
         "Salute"
     };
     case IDC_buttonVoice : {

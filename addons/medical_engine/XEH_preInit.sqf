@@ -28,10 +28,19 @@ if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIB
     FATAL_SUM_DAMAGE_WEIBULL_L = _x1 / _b1^(1/FATAL_SUM_DAMAGE_WEIBULL_K);
 };
 
+// Cache for armor values of equipped items (vests etc)
+GVAR(armorCache) = false call CBA_fnc_createNamespace;
+
 // Hack for #3168 (units in static weapons do not take any damage):
 // Doing a manual pre-load with a small distance seems to fix the LOD problems
 // with handle damage not returning full results.
 GVAR(fixedStatics) = [];
+
+GVAR(animations) = [] call CBA_fnc_createNamespace;
+GVAR(animations) setVariable [QGVAR(faceUp_unconscious), ["ace_unconscious_2","ace_unconscious_2_1","ace_unconscious_7_1","ace_unconscious_8_1","ace_unconscious_5_1","ace_unconscious_6_1"]];
+GVAR(animations) setVariable [QGVAR(faceDown_unconscious), ["ace_unconscious_1", "ace_unconscious_3", "ace_unconscious_4","unconscious","ace_unconscious_9","ace_unconscious_3_1","ace_unconscious_4_1"]];
+GVAR(animations) setVariable [QGVAR(faceLeft_unconscious), ["ace_unconscious_7","ace_unconscious_8","ace_unconscious_1_1","ace_unconscious_7_1","ace_unconscious_8_1"]];
+GVAR(animations) setVariable [QGVAR(faceRight_unconscious), ["ace_unconscious_5","ace_unconscious_6","ace_unconscious_10","ace_unconscious_5_1","ace_unconscious_6_1"]];
 
 private _fnc_fixStatic = {
     params ["_vehicle"];
@@ -51,5 +60,22 @@ addMissionEventHandler ["Loaded", {
         PRELOAD_CLASS(_x);
     } forEach GVAR(fixedStatics);
 }];
+
+["ace_unconscious", {
+    params ["_unit", "_active"];
+    if (_active) then {
+        // Use object reference to indicate the waitUnit is already running (this prevents issues with respawning units keeping SetVars)
+        if ((_unit getVariable [QGVAR(waitForAnim), objNull]) == _unit) exitWith {};
+        _unit setVariable [QGVAR(waitForAnim), _unit];
+        [{(animationState _this) find QGVAR(face) != -1}, {
+            [_this, animationState _this] call FUNC(applyAnimAfterRagdoll);
+        }, _unit, 20] call CBA_fnc_waitUntilAndExecute;
+    } else {
+        _unit setVariable [QGVAR(waitForAnim), nil];
+        if (local _unit) then {
+            [_unit, _active] call FUNC(setUnconsciousAnim);
+        };
+    };
+}] call CBA_fnc_addEventhandler;
 
 ADDON = true;

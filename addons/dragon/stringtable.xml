@@ -12,6 +12,7 @@
             <Czech>[CSW] M47 Super-Dragon</Czech>
             <Polish>[CSW] M47 Super-Dragon</Polish>
             <Turkish>[CSW] M47 Super-Dragon</Turkish>
+            <Russian>[CSW] M47 Super-Dragon</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonName">
             <English>M47 Super-Dragon</English>
@@ -24,6 +25,7 @@
             <Czech>M47 Super-Dragon</Czech>
             <Polish>M47 Super-Dragon</Polish>
             <Turkish>M47 Super-Dragon</Turkish>
+            <Russian>M47 Super-Dragon</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_attachSight">
             <English>Attach Sight</English>
@@ -35,6 +37,7 @@
             <Italian>Monta mirino</Italian>
             <Czech>Připojit puškohled</Czech>
             <Polish>Dołącz Optykę</Polish>
+            <Russian>Прикрепить прицел</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_detachSight">
             <English>Detach Sight</English>
@@ -46,6 +49,7 @@
             <Italian>Smonta mirino</Italian>
             <Czech>Odpojit puškohled</Czech>
             <Polish>Odczep Optykę</Polish>
+            <Russian>Открепить прицел</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_sightName">
             <English>SU-36/P Daysight</English>
@@ -58,6 +62,7 @@
             <Czech>SU-36/P denní puškohled</Czech>
             <Polish>SU-36/P Celownik dzienny</Polish>
             <Turkish>SU-36/P Daysight</Turkish>
+            <Russian>SU-36/P Дневной</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_sightDescription">
             <English>A light, cheap sight used for daytime operations. Contains the guidance computer for the whole system</English>
@@ -69,6 +74,7 @@
             <Italian>Una luce,un mirino usato per le operazioni diurne.Contiene il computer di guida per l'intero sistema </Italian>
             <Czech>Lehký a levný puškohled pro použití za denního světla. Obsahuje navigační počítač pro celý systém.</Czech>
             <Polish>Lekki, tani celownik używany do działania w trakcie dnia. Zawiera komputer naprowadząjący dla całego systemu</Polish>
+            <Russian>Легкий дешёвый прицел, используемый для дневных операций. Содержит компьютер для всей системы</Russian>
         </Key>
         <Key ID="STR_ACE_Dragon_dragonDescription">
             <English>A Wire-Guided SACLOS missile with a unique flight characteristic</English>
@@ -80,6 +86,7 @@
             <Italian>Un missile SACLOS  filo-guidato con uniche caratterische di volo </Italian>
             <Czech>Drátem naváděná SACLOS raketa s unikátními letovými vlastnostmi</Czech>
             <Polish>Naprowadzany przewodowo rakietowy pocisk SACLOS o unikalnej charakterystyce lotu</Polish>
+            <Russian>Ракета SACLOS с проводным наведением с уникальной характеристикой полета</Russian>
         </Key>
     </Package>
 </Project>

@@ -19,15 +19,18 @@
 params ["_trench", "_unit"];
 TRACE_2("removeTrench",_trench,_unit);
 
-private _actualProgress = _trench getVariable [QGVAR(progress), 0];
+private _actualProgress = _trench getVariable [QGVAR(progress), 1];
 if(_actualProgress == 0) exitWith {};
 
 // Mark trench as being worked on
 _trench setVariable [QGVAR(digging), true, true];
 
-private _removeTime = getNumber (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(removalDuration));
+private _removeTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(removalDuration)), 12];
 private _removeTimeLeft = _removeTime * _actualProgress;
 
+if (isNil {_trench getVariable QGVAR(placeData)}) then {
+    _trench setVariable [QGVAR(placeData), [getPosASL _trench, [vectorDir _trench, vectorUp _trench]], true];
+};
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
 _placeData params ["_basePos", "_vecDirAndUp"];
 

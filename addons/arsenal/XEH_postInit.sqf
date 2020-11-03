@@ -1,10 +1,14 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
+GVAR(currentBox) = objNull;
+
 GVAR(EH_ID) = 0;
 GVAR(lastSearchTextLeft) = "";
 GVAR(lastSearchTextRight) = "";
 GVAR(lastSearchTextLoadouts) = "";
+GVAR(lastSortLeft) = "";
+GVAR(lastSortRight) = "";
 
 [QGVAR(initBox), {_this call FUNC(initBox)}] call CBA_fnc_addEventHandler;
 [QGVAR(removeBox), {_this call FUNC(removeBox)}] call CBA_fnc_addEventHandler;

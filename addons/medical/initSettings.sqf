@@ -14,7 +14,7 @@
     "LIST",
     [LSTRING(Fractures_DisplayName), LSTRING(Fractures_Description)],
     LSTRING(Category),
-    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(Fractures_SplintHealsFully), LSTRING(Fractures_SplintHasEffects)], 1],
+    [[0, 1, 2, 3], [ELSTRING(common,Disabled), LSTRING(Fractures_SplintHealsFully), LSTRING(Fractures_SplintHealsNoSprint), LSTRING(Fractures_SplintHealsNoJog)], 1],
     true,
     {},
     true

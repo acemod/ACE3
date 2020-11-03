@@ -17,7 +17,7 @@ This page describes how you can setup your development environment for ACE3, all
 - P-drive
 - Run Arma 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - [Python 3.x](https://www.python.org/)
-- [Mikero Tools](https://mikero.bytex.digital/Downloads): DePbo, DeOgg, Rapify, MakePbo, PboProject >=1.70
+- [Mikero Tools](https://mikero.bytex.digital/Downloads): DePbo, DeOgg, DeTex, Rapify, MakePbo, PboProject >=1.70
   - `*.hpp` removed from PboProject's "Exclude From Pbo" list
   - `-F rebuild RequiredAddons` disabled
 - Python, Mikero Tools and Git in PATH environment variable

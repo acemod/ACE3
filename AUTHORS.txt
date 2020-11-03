@@ -6,6 +6,7 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+Brandon (TCVM) <brandondanyluk366@gmail.com>
 bux578 <github@jonathandavid.de>
 commy2
 esteldunedain <nicolas.d.badano@gmail.com>
@@ -17,11 +18,13 @@ Janus
 jokoho482 <jokoho482@gmail.com>
 Jonpas <jonpas33@gmail.com>
 Kieran
+mharis001 <mhariszakar@gmail.com>
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
 Ruthberg <ulteq@web.de>
 SilentSpike <SilentSpike100@gmail.com>
 tpM
+veteran29
 ViperMaul
 VKing <kauestad@gmail.com>
 Walter Pearce <jaynus@gmail.com>
@@ -42,7 +45,6 @@ Andrea "AtixNeon" Verano <veranoandrea88@gmail.com>
 Anthariel <Contact@storm-simulation.com>
 Arcanum417 <lubos.len@gmail.com>
 Anton
-Arcanum417 <lubos.len@gmail.com>
 Arkhir <wonsz666@gmail.com >
 Asgar Serran <piechottaf@web.de>
 BaerMitUmlaut
@@ -52,7 +54,6 @@ Bla1337
 BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
 Brakoviejo
-Brandon (TCVM) <brandondanyluk366@gmail.com>
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>
@@ -63,6 +64,7 @@ Codingboy
 Coren <coren4@gmail.com>
 Crusty
 C0kkie
+dgibso29 <gibson@earringpranks.com>
 Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
 Dimaslg <dimaslg@telecable.es>
 diwako
@@ -72,16 +74,19 @@ Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Drofseh <drofseh@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
 Eclipser <jms@modeemi.fi>
+Elgin675
 ElTyranos
 eRazeri
 evromalarkey <evromalarkey@gmail.com>
 F3 Project <alanr@ferstaberinde.com>
 Falke75
+Fatal <tahakocalgs@gmail.com>
 Ferenczi
 Ferenzi
 FFAAMOD <modffaa@gmail.com>
 Filip Basara <filip.basara93@googlemail.com>
 fr89k <kaschitoku@web.de>
+Fragment
 FreeZbe <freeseb@gmail.com>
 geraldbolso1899
 Ghost
@@ -102,6 +107,7 @@ Karneck <dschultz26@hotmail.com>
 Kavinsky <nmunozfernandez@gmail.com>
 Keithen <Keithen.Neu@gmail.com>
 Kllrt <kllrtik@gmail.com>
+KokaKolaA3
 legman <juicemelon@msn.com>
 Legolasindar "Viper" <legolasindar@gmail.com>
 licht-im-Norden87 <lichtimnorden87@gmail.com>
@@ -111,9 +117,9 @@ Luigi "Luigium" Myrini <luigium@outlook.fr>
 Macusercom <macusercom@gmail.com>
 MarcBook
 meat <p.humberdroz@gmail.com>
-mharis001 <mhariszakar@gmail.com>
 Michail Nikolaev
 MikeMatrix <m.braun92@gmail.com>
+mjc4wilton <mjc4wilton@gmail.com>
 nic547 <nic547@outlook.com>
 nikolauska <nikolauska1@gmail.com>
 nomisum <nomisum@gmail.com>
@@ -136,8 +142,10 @@ Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
 Rutger "RedBery" Meijering <c.redbery@gmail.com>
 Schwaggot <tom.ryan@posteo.de>
+shukari
 simon84 <badguy360th@gmail.com>
 Skengman2
+Smith <smitt14ua@gmail.com>
 Sniperwolf572 <tenga6@gmail.com>
 System98
 SzwedzikPL <szwedzikpl@gmail.com>
@@ -149,10 +157,11 @@ Tonic
 Tourorist <tourorist@gmail.com>
 Tuupertunut
 Valentin Torikian <valentin.torikian@gmail.com>
-veteran29
 voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
+Walthzer <walthzer.69@gmail.com>
 Winter <simon@agius-muscat.net>
 xrufix
 Zakant <Zakant@gmx.de>
 zGuba
+Fyuran <dankemedic@hotmail.com>

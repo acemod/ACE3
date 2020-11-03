@@ -85,7 +85,7 @@ if (!hasInterface) exitWith {};
 
 
     // // ---Add the Dust/Dirt/Rain Effects---
-    if (GVAR(effects) == 2) then {
+    if (GVAR(effects) in [2, 3]) then {
 
         // Register fire event handler
         ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;

@@ -1,8 +1,8 @@
 {
-  "name": "ACE3",
+  "name": "ace3",
   "version": "0.1.0",
   "dependencies": {
-    "lodash": "^4.17.13"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "grunt": "^1.0.4",

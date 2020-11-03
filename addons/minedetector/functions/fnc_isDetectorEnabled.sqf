@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * ["example"] call ace_minedetector_fnc_[functionName]
+ * ["example"] call ace_minedetector_fnc_isDetectorEnabled
  *
  * Public: No
  */

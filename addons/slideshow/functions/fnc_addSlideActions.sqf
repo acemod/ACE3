@@ -30,14 +30,15 @@ private _actions = [];
             _names select _forEachIndex,
             "",
             {
-                (_this select 2) params ["_objects", "_image"];
+                (_this select 2) params ["_objects", "_image", "_currentSlideshow"];
                 {
                     _x setObjectTextureGlobal [0, _image]
                 } count _objects;
+                [QGVAR(slideChanged), [_image, _currentSlideshow]] call CBA_fnc_localEvent;
             },
             {true},
             {},
-            [_objects, _x]
+            [_objects, _x, _currentSlideshow]
         ] call EFUNC(interact_menu,createAction),
         [],
         _controller

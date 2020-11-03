@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [CONTROL, _target] call ace_medical_menu_fnc_updateBodyImage
+ * [CONTROL, _target] call ace_medical_gui_fnc_updateBodyImage
  *
  * Public: No
  */
@@ -51,7 +51,7 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
                 _ctrlBone ctrlSetTextColor [1, 0, 0, 1];
             };
             case -1: {
-                if (EGVAR(medical,fractures) == 2) then {
+                if (EGVAR(medical,fractures) in [2, 3]) then {
                     _ctrlBone ctrlShow true;
                     _ctrlBone ctrlSetTextColor [0, 0, 1, 1];
                 } else {

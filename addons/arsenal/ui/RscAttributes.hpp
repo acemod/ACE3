@@ -408,7 +408,7 @@ class GVAR(display) {
             idc = IDC_statsButton;
             style= 2;
             text=">";
-            onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton), [ctrlParent (_this select 0)]]) call CBA_fnc_localEvent);
+            onButtonClick = QUOTE([ARR_2(QQGVAR(statsButton), [ctrlParent (_this select 0)])] call CBA_fnc_localEvent);
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(6 * GRID_W);
@@ -421,7 +421,7 @@ class GVAR(display) {
             text="<";
             colorBackground[]={0,0,0,0};
             colorBackgroundDisabled[]= {0,0,0,0};
-            onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, false)]]) call CBA_fnc_localEvent);
+            onButtonClick = QUOTE([ARR_2(QQGVAR(statsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, false)])] call CBA_fnc_localEvent);
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(5 * GRID_W);
@@ -431,7 +431,7 @@ class GVAR(display) {
         class statsNextPage: statsPreviousPage {
             idc =  IDC_statsNextPage;
             text = ">";
-            onButtonClick = QUOTE(ARR_2([QQGVAR(statsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, true)]]) call CBA_fnc_localEvent);
+            onButtonClick = QUOTE([ARR_2(QQGVAR(statsChangePage),[ARR_3(ctrlParent (_this select 0), _this select 0, true)])] call CBA_fnc_localEvent);
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP + 30 * GRID_W);
         };
         class statsCurrentPage: RscText {
@@ -450,7 +450,7 @@ class GVAR(display) {
             idc = IDC_statsButtonClose;
             colorBackground[]={0,0,0,0};
             text="\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa";
-            onButtonClick = QUOTE(ARR_2([QQGVAR(statsButton), [ctrlParent (_this select 0)]]) call CBA_fnc_localEvent);
+            onButtonClick = QUOTE([ARR_2(QQGVAR(statsButton), [ctrlParent (_this select 0)])] call CBA_fnc_localEvent);
             x = QUOTE((0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP + 42 * GRID_W);
             y = QUOTE(safezoneY + 1.8 * GRID_H);
             w = QUOTE(5 * GRID_W);
@@ -523,32 +523,10 @@ class GVAR(display) {
             h = QUOTE(6 * GRID_H);
             onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
             sizeEx = QUOTE(5 * GRID_H);
-            class Items {
-                class Alphabet {
-                    text="$STR_a3_rscdisplayarsenal_sort_alphabet";
-                    default=1;
-                    value= 0;
-                };
-                class Mod {
-                    text="$STR_a3_rscdisplayarsenal_sort_mod";
-                    value= 1;
-                };
-            };
         };
         class sortRightTab: sortLeftTab {
             idc = IDC_sortRightTab;
             x = QUOTE(safezoneX + safezoneW - 93 * GRID_W);
-            class Items {
-                class Alphabet {
-                    text="$STR_a3_rscdisplayarsenal_sort_alphabet";
-                    default=1;
-                    value= 0;
-                };
-                class Weight {
-                    text="$STR_a3_rscdisplayarsenal_sort_mod";
-                    value= 1;
-                };
-            };
         };
         class leftSearchbar: ctrlEdit {
             idc = IDC_leftSearchbar;
@@ -775,7 +753,7 @@ class GVAR(display) {
                     y = QUOTE(170 * GRID_H);
                 };
                 class buttonInsigna: buttonPrimaryWeapon {
-                    idc = IDC_buttonInsigna;
+                    idc = IDC_buttonInsignia;
                     tooltip="$STR_A3_RscDisplayArsenal_tab_Insignia";
                     text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\Insignia_ca.paa";
                     y = QUOTE(170 * GRID_H);
@@ -787,7 +765,7 @@ class GVAR(display) {
             colorBackground[]={0,0,0,1};
             fade=1;
             enable=0;
-            x = QUOTE(safezoneW  + safezoneX - 13 * GRID_W);
+            x = QUOTE(safezoneW + safezoneX - 13 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
             w = QUOTE(12 * GRID_W);
             h = QUOTE(9 * GRID_H);
@@ -798,7 +776,7 @@ class GVAR(display) {
             text="\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\ItemOptic_ca.paa";
             onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(fillRightPanel));
             colorBackground[]={0,0,0,0.5};
-            x = QUOTE(safezoneW  + safezoneX - 10 * GRID_W);
+            x = QUOTE(safezoneW + safezoneX - 10 * GRID_W);
             y = QUOTE(safezoneY + 8 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
@@ -903,6 +881,7 @@ class GVAR(display) {
             tooltip="$STR_A3_RscDisplayArsenal_tab_CargoMisc";
             y = QUOTE(safezoneY + 88 * GRID_H);
         };
+
         class buttonRemoveAll: ctrlButtonPicture {
             idc = IDC_buttonRemoveAll;
             text = QPATHTOF(data\iconClearContainer.paa);
@@ -911,7 +890,7 @@ class GVAR(display) {
             onButtonClick = QUOTE(ctrlParent (_this select 0) call FUNC(buttonClearAll));
             fade=1;
             enable=0;
-            x = QUOTE(safezoneW  + safezoneX - 11 * GRID_W);
+            x = QUOTE(safezoneW + safezoneX - 11 * GRID_W);
             y = QUOTE(safeZoneH + safezoneY - 29 * GRID_H);
             w = QUOTE(9 * GRID_W);
             h = QUOTE(9 * GRID_H);
@@ -926,7 +905,7 @@ class GVAR(loadoutsDisplay) {
     class controls {
         class centerBox: ctrlControlsGroupNoScrollbars {
             idc = IDC_centerBox;
-            x = QUOTE(safezoneW  + safezoneX - (180 * GRID_W));
+            x = QUOTE(safezoneW + safezoneX - (180 * GRID_W));
             y = QUOTE(safezoneY + (5 * GRID_H));
             w = QUOTE(160 * GRID_W);
             h = QUOTE(safezoneH - (34 * GRID_H));
@@ -1056,7 +1035,7 @@ class GVAR(loadoutsDisplay) {
         };
         class buttonClose: ctrlButton {
             idc = -1;
-            x = QUOTE(safezoneW  + safezoneX - 32 * GRID_W);
+            x = QUOTE(safezoneW + safezoneX - 32 * GRID_W);
             y = QUOTE(safezoneH + safezoneY - 9 * GRID_H);
             w = QUOTE(30 * GRID_W);
             h = QUOTE(7 * GRID_H);

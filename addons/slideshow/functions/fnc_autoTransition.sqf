@@ -7,7 +7,8 @@
  * 0: Objects <ARRAY>
  * 1: Image Paths <ARRAY>
  * 2: State Variable Name <ARRAY>
- * 3: Duration <NUMBER> (0 disables automatic transitions)
+ * 3: Current Slideshow <NUMBER>
+ * 4: Duration <NUMBER> (0 disables automatic transitions)
  *
  * Return Value:
  * None
@@ -18,7 +19,7 @@
  * Public: No
  */
 
-params ["_objects", "_images", "_varString", "_duration"];
+params ["_objects", "_images", "_varString", "_currentSlideshow", "_duration"];
 
 // Get current slide number of this slideshow
 private _currentSlide = missionNamespace getVariable [_varString, 0];
@@ -29,11 +30,15 @@ _currentSlide = (_currentSlide + 1) mod (count _images);
 // Save slide back into global variable (PFH's local variables do not persist through PFH run)
 missionNamespace setVariable [_varString, _currentSlide];
 
+private _image = _images select _currentSlide;
+
 // Set slide
 {
-    _x setObjectTextureGlobal [0, _images select _currentSlide];
+    _x setObjectTextureGlobal [0, _image];
 } count _objects;
 
+[QGVAR(slideChanged), [_image, _currentSlideshow]] call CBA_fnc_localEvent;
+
 // Log current slide and execute Next slide
-TRACE_4("Auto-transition",_images select _currentSlide,_currentSlide,count _images,_duration);
-[FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call CBA_fnc_waitAndExecute;
+TRACE_4("Auto-transition",_image,_currentSlide,count _images,_duration);
+[FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration], _duration] call CBA_fnc_waitAndExecute;

@@ -40,10 +40,9 @@ jobs:
     - name: Build using HEMTT
       uses: arma-actions/hemtt@master
       with:
-        command: build --ci  # no --release due to https://github.com/synixebrett/HEMTT/issues/227
-    # https://github.com/actions/upload-artifact/issues/3#issuecomment-524442814
-    # - name: Upload Artifact
-    #   uses: actions/upload-artifact@master
-    #   with:
-    #     name: ace3-${{ github.sha }}-nobin
-    #     path: '@ace'
+        command: build --release --ci
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2-preview
+      with:
+        name: ace3-${{ github.sha }}-nobin
+        path: releases/ace3_*.zip

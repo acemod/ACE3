@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [module, [player], true] call ace_map_gestures_fnc_moduleGroupSettings
+ * [module, [player], true] call ace_map_gestures_fnc_moduleSettings
  *
  * Public: No
  */

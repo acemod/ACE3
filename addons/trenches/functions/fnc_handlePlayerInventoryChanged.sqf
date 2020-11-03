@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [bob, "weapon"] call ace_trenches_fnc_handlePlayerInverntoryChanged
+ * [bob, "weapon"] call ace_trenches_fnc_handlePlayerInventoryChanged
  *
  * Public: No
 */

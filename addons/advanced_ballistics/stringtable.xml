@@ -63,7 +63,7 @@
             <Hungarian>Fejlett ballisztika</Hungarian>
             <Russian>Продвинутая баллистика</Russian>
             <Italian>Balistica Avanzata</Italian>
-            <Japanese>アドバンスド バリスティックス</Japanese>
+            <Japanese>アドバンスド バリスティックスを有効化</Japanese>
             <Korean>고급 탄도학</Korean>
             <Chinese>先進彈道系統</Chinese>
             <Chinesesimp>先进弹道系统</Chinesesimp>
@@ -88,8 +88,9 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_DisplayName">
             <English>Enable Muzzle Velocity Variation</English>
+            <Spanish>Activar variación de velocidad inicial</Spanish>
             <German>Variation der Mündungsgeschwindigkeit aktivieren</German>
-            <Japanese>銃口初速の変動を有効化する</Japanese>
+            <Japanese>銃口初速の変動を有効化</Japanese>
             <Italian>Abilita Variazione Velocità Volata</Italian>
             <Korean>총구속도 변화적용</Korean>
             <Chinese>啟用槍口初速變化</Chinese>
@@ -103,6 +104,7 @@
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
+            <Spanish>Simula variaciones ligeras de velocidad entre cada disparo</Spanish>
             <German>Simuliert leichte Variationen der Mündungsgeschwindigkeit zwischen jedem Schuss.</German>
             <Japanese>発射毎の銃口初速の変動をシミュレートします。</Japanese>
             <Italian>Simula lievi variazioni della velocità della volata tra un colpo e l'altro</Italian>
@@ -114,6 +116,7 @@
             <Russian>Имитирует небольшие изменения начальной скорости при каждом выстреле</Russian>
             <Portuguese>Simula pequenas variações na velocidade do Freio de Boca entre cada tiro</Portuguese>
             <Czech>Simuluje malé odchylky v úsťové rychlosti mezi jednotlivými výstřely</Czech>
+            <Turkish>Her atış arasında namlu çıkış hızındaki küçük değişiklikleri simüle eder</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
@@ -126,7 +129,7 @@
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция температуры для боеприпасов</Russian>
             <Italian>Abilita simulazione della temperatura delle munizioni</Italian>
-            <Japanese>弾薬温度のシミュレーションを有効化する</Japanese>
+            <Japanese>弾薬温度のシミュレーションを有効化</Japanese>
             <Korean>탄약 온도 구현 적용</Korean>
             <Chinese>啟用彈藥溫度模擬系統</Chinese>
             <Chinesesimp>启用弹药温度模拟系统</Chinesesimp>
@@ -147,6 +150,7 @@
             <Korean>탄약 온도에 비례해 총구 속도가 달라집니다</Korean>
             <Chinese>子彈初速將隨彈藥溫度而有所變化</Chinese>
             <Chinesesimp>子弹初速将随弹药温度而有所变化</Chinesesimp>
+            <Turkish>Mermi çıkış hızı cephane sıcaklığına göre değişir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_barrelLengthInfluenceEnabled_DisplayName">
             <English>Enable Barrel Length Simulation</English>
@@ -159,10 +163,11 @@
             <Hungarian>Csőhossz-szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция длины ствола</Russian>
             <Italian>Abilita simulazione della lunghezza della canna</Italian>
-            <Japanese>銃身長のシミュレーションを有効化する</Japanese>
+            <Japanese>銃身長のシミュレーションを有効化</Japanese>
             <Korean>총열 길이 구현 적용</Korean>
             <Chinese>啟用槍管長度模擬系統</Chinese>
             <Chinesesimp>启用枪管长度模拟系统</Chinesesimp>
+            <Turkish>Namlu Uzunluğu Simülasyonunu Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_barrelLengthInfluenceEnabled_Description">
             <English>Muzzle velocity varies with barrel length</English>
@@ -179,6 +184,7 @@
             <Korean>총구 속도가 총열에 비례해 달라집니다</Korean>
             <Chinese>子彈初速將隨槍管長度而有所變化</Chinese>
             <Chinesesimp>子弹初速将随枪管长度而有所变化</Chinesesimp>
+            <Turkish>Mermi çıkış hızı namlu uzunluğuna göre değişir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_bulletTraceEnabled_DisplayName">
             <English>Enable Bullet Trace Effect</English>
@@ -191,10 +197,11 @@
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
-            <Japanese>弾丸の軌跡エフェクトを有効化する</Japanese>
+            <Japanese>弾丸の軌跡エフェクトを有効化</Japanese>
             <Korean>예광탄 효과 적용</Korean>
             <Chinese>啟用曳光彈效果</Chinese>
             <Chinesesimp>启用曳光弹效果</Chinesesimp>
+            <Turkish>İzli Mermi Etkisini Etkinleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_bulletTraceEnabled_Description">
             <English>Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)</English>
@@ -211,6 +218,7 @@
             <Korean>대구경 탄환에 예광탄 효과를 적용합니다(오직 고성능 조준경 사용시에만 보입니다)</Korean>
             <Chinese>啟用曳光彈效果給大口徑子彈 (只有透過高倍率光學瞄鏡才能看到)</Chinese>
             <Chinesesimp>启用曳光弹效果给大口径子弹 (只有透过高倍率光学瞄镜才能看到)</Chinesesimp>
+            <Turkish>Yüksek kalibreli mermilere mermi izleme efekti sağlar (yalnızca yüksek güçlü optiklerden bakıldığında görülebilir)</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -223,7 +231,7 @@
             <Hungarian>Szimuláció intervalluma</Hungarian>
             <Russian>Интервал симуляции</Russian>
             <Italian>Intervallo Simulazione</Italian>
-            <Japanese>シミュレーションの間隔</Japanese>
+            <Japanese>シミュレーション間隔</Japanese>
             <Korean>구현 간격</Korean>
             <Chinese>模擬間隔</Chinese>
             <Chinesesimp>模拟间隔</Chinesesimp>
@@ -239,7 +247,7 @@
             <Hungarian>Meghatározza a számítási lépések közötti időintervallumot</Hungarian>
             <Russian>Определяет временной интервал между вычислениями</Russian>
             <Italian>Definisce l'intervallo tra ogni step di calcolo</Italian>
-            <Japanese>各計算毎の間隔を定義します。</Japanese>
+            <Japanese>各シミュレーション毎の間隔を定義します。</Japanese>
             <Korean>각 계산 단위의 간격을 정의합니다</Korean>
             <Chinese>定義每個模擬計算之間的時間間隔</Chinese>
             <Chinesesimp>定义每个模拟计算之间的时间间隔</Chinesesimp>
@@ -276,6 +284,7 @@
             <Korean>플레이어 주위의 발사체를 고급 탄도학으로 정의하는 범위를 정합니다(미터)</Korean>
             <Chinese>以玩家的半徑距離(公尺)定義先進彈道系統啟用範圍</Chinese>
             <Chinesesimp>以玩家的半径距离(公尺)定义先进弹道系统启用范围</Chinesesimp>
+            <Turkish>Mermilere gelişmiş balistik uygulandığı oyuncunun etrafındaki yarıçapı (metre cinsinden) tanımlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_Description">
             <English>This module enables advanced ballistics simulation - meaning the trajectory of projectiles is influenced by variables like air temperature, atmospheric pressure, humidity, gravity, the type of ammunition and the weapon from which it was fired.</English>

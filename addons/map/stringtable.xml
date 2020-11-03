@@ -45,7 +45,7 @@
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
             <Czech>Simulovat nasvícení mapy v závisloti na okolí a předmětů hráče?</Czech>
             <Italian>Simula illuminazione della mappa in base alla luce ambientale e agli oggetti del giocatore?</Italian>
-            <Japanese>地図へ環境光やプレイヤーのアイテムに基づいた光のシミュレーションをおこないますか?</Japanese>
+            <Japanese>地図へ環境光やプレイヤーのアイテムに基づいた光のシミュレーションを行うかどうかを設定できます。</Japanese>
             <Korean>주변 환경및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
             <Chinesesimp>透过环境光与玩家的手电筒来决定地图亮度.</Chinesesimp>
             <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
@@ -60,7 +60,7 @@
             <Czech>Nasvícení mapy pomocí baterky</Czech>
             <Italian>Luce della torcia in mappa</Italian>
             <French>Lueur lampe carte</French>
-            <Japanese>地図をライトで照らしますか</Japanese>
+            <Japanese>地図をライトで照らす</Japanese>
             <Korean>지도 조명이 빛이 납니까</Korean>
             <Chinesesimp>增加地图亮度</Chinesesimp>
             <Chinese>增加地圖亮度</Chinese>
@@ -75,7 +75,7 @@
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
             <Czech>Přidat externí záři hráči který používá baterku v mapě?</Czech>
             <Italian>Aggiungi luce esterna a giocatori che usano la torcia in mappa?</Italian>
-            <Japanese>プレイヤが地図上でフラッシュライトを使うと、照らすようにしますか?</Japanese>
+            <Japanese>プレイヤーが地図をフラッシュライトで照らせられるように設定します。</Japanese>
             <Korean>지도에 불빛을 비치는 플레이어를 조금 더 밝게 합니까?</Korean>
             <Chinesesimp>当玩家打开手电筒时，增加地图亮度.</Chinesesimp>
             <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
@@ -91,7 +91,7 @@
             <Hungarian>Térkép-rázkódás</Hungarian>
             <Russian>Тряска карты</Russian>
             <Italian>Scuoti la mappa</Italian>
-            <Japanese>地図を揺らしますか</Japanese>
+            <Japanese>地図を揺らす</Japanese>
             <Korean>지도 흔들림</Korean>
             <Chinesesimp>地图震动</Chinesesimp>
             <Chinese>地圖震動</Chinese>
@@ -108,7 +108,7 @@
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
-            <Japanese>歩いているときは地図を揺らしますか?</Japanese>
+            <Japanese>歩いているときは地図を揺らすかかどうかを設定できます。</Japanese>
             <Korean>걸을때 지도보면 흔들리게 합니까?</Korean>
             <Chinesesimp>走路时打开地图会产生晃动.</Chinesesimp>
             <Chinese>走路時讓地圖有震動的感覺?</Chinese>
@@ -124,7 +124,7 @@
             <Hungarian>Térkép-nagyítás korlátozása</Hungarian>
             <Russian>Ограничить приближение карты</Russian>
             <Italian>Limita lo zoom in mappa</Italian>
-            <Japanese>地図の拡大を制限しますか</Japanese>
+            <Japanese>地図の拡大を制限</Japanese>
             <Korean>지도 확대 제한</Korean>
             <Chinesesimp>限制地图缩放倍率</Chinesesimp>
             <Chinese>限制地圖縮放倍率</Chinese>
@@ -140,7 +140,7 @@
             <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
             <Russian>Ограничить максимальное приближение, доступное на карте?</Russian>
             <Italian>Limita l'ammontare di zoom disponibile per la mappa?</Italian>
-            <Japanese>地図上で利用できる拡大倍率を制限しますか?</Japanese>
+            <Japanese>地図上で利用できる拡大倍率を制限できます。</Japanese>
             <Korean>지도 확대에 제한을 둡니까?</Korean>
             <Chinesesimp>限制地图上可允许缩放的倍率?</Chinesesimp>
             <Chinese>限制地圖上可允許縮放的倍率?</Chinese>
@@ -156,7 +156,7 @@
             <Hungarian>Kurzor-koordináták mutatása</Hungarian>
             <Russian>Показывать координаты курсора</Russian>
             <Italian>Mostra coordinate sul cursore</Italian>
-            <Japanese>カーソル先で座標を表示しますか</Japanese>
+            <Japanese>カーソル先で座標を表示</Japanese>
             <Korean>커서에 좌표를 보이게 합니까</Korean>
             <Chinesesimp>显示游标的座标</Chinesesimp>
             <Chinese>顯示游標的座標</Chinese>
@@ -172,7 +172,7 @@
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
             <Italian>Mostra la griglia coordinate sul cursore mouse?</Italian>
-            <Japanese>カーソルに合わせた先を地図座標で表示しますか?</Japanese>
+            <Japanese>カーソルで合わせた先を地図座標で表示するかどうかを設定できます。</Japanese>
             <Korean>지도에서 커서 옆에 좌표가 뜨게 합니까?</Korean>
             <Chinesesimp>显示滑鼠游标所在的网格座标?</Chinesesimp>
             <Chinese>顯示滑鼠游標所在的網格座標?</Chinese>
@@ -284,7 +284,7 @@
             <Hungarian>AI csoportok elrejtése</Hungarian>
             <Russian>Скрыть группы ботов</Russian>
             <Italian>Nascondere gruppi IA</Italian>
-            <Japanese>AI グループを非表示にしますか</Japanese>
+            <Japanese>AI グループを非表示</Japanese>
             <Korean>인공지능 그룹을 숨깁니까</Korean>
             <Chinesesimp>隐藏AI小队</Chinesesimp>
             <Chinese>隱藏AI小隊</Chinese>
@@ -300,7 +300,7 @@
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
             <Italian>Nascondi markers per gruppi di sole IA?</Italian>
-            <Japanese>'AI のみ'グループのマーカを隠しますか?</Japanese>
+            <Japanese>'AI のみ'グループのマーカー表示有無を設定できます。</Japanese>
             <Korean>인공지능만 있는 그룹의 마커를 숨깁니까?</Korean>
             <Chinesesimp>隐藏'AI小队'的踪迹?</Chinesesimp>
             <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>
@@ -316,7 +316,7 @@
             <Hungarian>Itt található az a játékos nevét</Hungarian>
             <Russian>Показать имена игроков</Russian>
             <Italian>Mostra i nomi dei giocatori</Italian>
-            <Japanese>プレイヤ名を表示しますか</Japanese>
+            <Japanese>プレイヤー名を表示</Japanese>
             <Korean>플레이어 이름을 표시합니까</Korean>
             <Chinesesimp>显示玩家名称</Chinesesimp>
             <Chinese>顯示玩家名稱</Chinese>
@@ -332,7 +332,7 @@
             <Hungarian>Itt található az adott játékos neveket?</Hungarian>
             <Russian>Показать отдельные имена игроков?</Russian>
             <Italian>Mostra i nomi dei giocatori singoli?</Italian>
-            <Japanese>プレイヤの名前を表示しますか?</Japanese>
+            <Japanese>プレイヤーの名前の表示有無を設定できます。</Japanese>
             <Korean>각 플레이어의 이름을 표시합니까?</Korean>
             <Chinesesimp>显示玩家的个别名称?</Chinesesimp>
             <Chinese>顯示玩家的個別名稱?</Chinese>

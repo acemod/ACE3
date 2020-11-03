@@ -132,9 +132,12 @@ class controlsBackground {
         h = H_PART(19);
         onDraw = QUOTE(_this call FUNC(mapOnDrawEH));
 
+        showMarkers = 0;
         colorBackground[] = {0,0,0,1};
         colorOutside[] = {0,0,0,1};
         moveOnEdges = 0;
+
+        showCountourInterval = 0;
     };
 };
 
