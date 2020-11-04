@@ -46,9 +46,11 @@ TRACE_2("",_realHitPoints,_dependentHitPoints);
 if (_dependentHitPoints isEqualTo []) exitWith {};
 
 
-// Define global variables
-Total = damage _vehicle;
+// Define global variables and save original values
+private _savedGlobals = [["total", total]];
+total = damage _vehicle;
 {
+    _savedGlobals pushBack [_x, missionNamespace getVariable _x];
     missionNamespace setVariable [_x, _vehicle getHitPointDamage _x];
 } forEach _realHitPoints;
 
@@ -58,3 +60,8 @@ Total = damage _vehicle;
     TRACE_2("setting depend hitpoint", _x, _damage);
     _vehicle setHitPointDamage [_x, _damage];
 } forEach _dependentHitPoints;
+
+// Restore global variables
+{
+    missionNamespace setVariable _x;
+} forEach _savedGlobals;
