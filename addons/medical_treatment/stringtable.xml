@@ -305,7 +305,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
             <Japanese>アドレナリンの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Définit quelle qualification médicale est requise pour pouvoir utiliser l'épinéphrine.</French>
+            <French>Définit la qualification médicale requise pour utiliser l'épinéphrine.</French>
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar epinefrina.</Portuguese>
             <Chinese>要受過何種程度的醫療訓練才可以使用腎上腺素</Chinese>
@@ -334,7 +334,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
             <Japanese>アドレナリンが使える場所を決定します。</Japanese>
-            <French>Définit où l'épinéphrine peut être utilisée.</French>
+            <French>Définit les lieux où l'usage d'épinéphrine est autorisé.</French>
             <Russian>Контролирует, где можно использовать Адреналин.</Russian>
             <Portuguese>Controla onde Epinefrina pode ser utilizada.</Portuguese>
             <Chinese>控制何處能使用腎上腺素</Chinese>
@@ -364,7 +364,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
             <Japanese>応急処置キットの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Définit quelle qualification médicale est requise pour pouvoir utiliser la trousse sanitaire.</French>
+            <French>Définit la qualification médicale requise pour utiliser la trousse sanitaire.</French>
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
             <Chinese>要受過何種程度的醫療訓練才可以使用個人急救包</Chinese>
@@ -394,7 +394,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
             <Japanese>応急処置キットが使える場所を決定します。</Japanese>
-            <French>Définit où la trousse sanitaire peut être utilisée.</French>
+            <French>Définit les lieux où l'usage de la trousse sanitaire est autorisé.</French>
             <Russian>Контролирует, где можно использовать Аптечку.</Russian>
             <Portuguese>Controla onde o KPS pode ser utilizado.</Portuguese>
             <Chinese>控制何處能使用個人急救包</Chinese>
@@ -496,7 +496,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
             <Japanese>縫合キットの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Définit quelle qualification médicale est requise pour pouvoir utiliser une trousse chirurgicale.</French>
+            <French>Définit la qualification médicale requise pour utiliser la trousse chirurgicale.</French>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
@@ -522,7 +522,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
             <Japanese>縫合キットが使える場所を決定します。</Japanese>
-            <French>Définit où la trousse chirurgicale peut être utilisée.</French>
+            <French>Définit les lieux où l'usage de la trousse chirurgicale est autorisé.</French>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
             <Portuguese>Controle onde o Kit Cirúrgico pode ser utilizado.</Portuguese>
             <Chinese>控制何處能使用手術包</Chinese>
@@ -558,7 +558,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
-            <French>Suturer soi-même</French>
+            <French>Auto-suture</French>
             <Portuguese>Auto-Cirurgia</Portuguese>
             <Japanese>自己縫合</Japanese>
             <Chinese>自我縫合</Chinese>
@@ -591,7 +591,7 @@
             <German>Eigennutzung von Bluttransfusionen</German>
             <Russian>Внутривенное переливание на себе</Russian>
             <Japanese>自己 IV 輸血</Japanese>
-            <French>Autotransfusion d'IV</French>
+            <French>Auto-pose d'IV</French>
             <Portuguese>Autotransfusão de IV</Portuguese>
             <Chinese>自我注射點滴</Chinese>
             <Czech>Samoaplikace IV transfuze</Czech>
@@ -603,7 +603,7 @@
             <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
             <Japanese>自らに対して IV 輸血を可能にします。</Japanese>
-            <French>Permet de poser des IV sur soi-même.</French>
+            <French>Active la possibilité de s'auto-poser des IVs.</French>
             <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
             <Czech>Umožňuje aplikovat IV transfuze na sama sebe.</Czech>
@@ -620,7 +620,7 @@
             <English>Allow IV Transfusion</English>
             <German>Erlaube Bluttransfusionen</German>
             <Polish>Zezwalaj na przetaczanie płynów IV</Polish>
-            <French>Pose de perfusion autorisée pour</French>
+            <French>Pose de perfusions autorisée pour</French>
             <Chinese>允許操作點滴</Chinese>
             <Japanese>IV 輸血の制限</Japanese>
             <Czech>Povolit IV transfuzi</Czech>
@@ -630,7 +630,7 @@
             <English>Training level required to transfuse IVs.</English>
             <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfundieren.</German>
             <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
-            <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
+            <French>Définit la qualification médicale est requise pour poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
