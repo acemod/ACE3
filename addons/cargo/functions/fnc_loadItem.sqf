@@ -35,11 +35,13 @@ _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
 if (_item isEqualType objNull) then {
     detach _item;
-    _item attachTo [_vehicle,[0,0,-100]];
-    [QEGVAR(common,hideObjectGlobal), [_item, true]] call CBA_fnc_serverEvent;
+    if !(_vehicle setVehicleCargo _item) then {
+        _item attachTo [_vehicle,[0,0,-100]];
+        [QEGVAR(common,hideObjectGlobal), [_item, true]] call CBA_fnc_serverEvent;
 
-    // Some objects below water will take damage over time and eventualy become "water logged" and unfixable (because of negative z attach)
-    [_item, "blockDamage", "ACE_cargo", true] call EFUNC(common,statusEffect_set);
+        // Some objects below water will take damage over time and eventualy become "water logged" and unfixable (because of negative z attach)
+        [_item, "blockDamage", "ACE_cargo", true] call EFUNC(common,statusEffect_set);
+    };
 };
 
 true
