@@ -246,42 +246,42 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
-            <French>Temps de traitement du tourniquet</French>
+            <French>Durée d'interaction - Garrots</French>
             <German>Tourniquet-Behandlungszeit</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
-            <French>Temps en secondes nécessaire pour appliquer un garrot.</French>
+            <French>Définit le temps nécessaire à l'application ou au retrait d'un garrot (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
-            <French>Temps de traitement du sac IV</French>
+            <French>Durée d'interaction - IVs</French>
             <German>IV Beutelbehandlungszeit</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
-            <French>Temps en secondes nécessaire pour appliquer un sac IV.</French>
+            <French>Définit le temps nécessaire à la pose d'une perfusion IV (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
-            <French>Temps de traitement de l'attelle</French>
+            <French>Durée d'interaction - Attelles</French>
             <German>Schienenbehandlungszeit</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
-            <French>Temps en secondes nécessaire pour appliquer une attelle.</French>
+            <French>Définit le temps nécessaire à l'application d'une attelle (en secondes).</French>
             <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
-            <French>Temps d'utilisation du sac mortuaire</French>
+            <French>Durée d'interaction - Housses mortuaires</French>
             <German>Anwendungszeit für Leichensack</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
-            <French>Temps en secondes qu'il faut pour appliquer un sac mortuaire.</French>
+            <French>Définit le temps nécessaire à la mise en housse d'un corps (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
