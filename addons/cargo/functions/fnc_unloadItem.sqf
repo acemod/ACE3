@@ -48,10 +48,15 @@ private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 if (_item isEqualType objNull) then {
-    detach _item;
-    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
-    // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
+    if (isVehicleCargo _item) then {
+        objNull setVehicleCargo _item;
+        _item setPosASL (AGLtoASL _emptyPosAGL);
+    } else {
+        detach _item;
+        // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
+        // do both on server to ensure they are executed in the correct order
+        [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
+    };
 } else {
     private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
     _newItem setPosASL (AGLtoASL _emptyPosAGL);
