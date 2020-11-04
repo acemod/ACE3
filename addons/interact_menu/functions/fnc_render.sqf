@@ -91,12 +91,15 @@ if (GVAR(openedMenuType) >= 0) then {
                 };
             };
             if (_runOnHover) then {
-                this = GVAR(selectedTarget);
                 private _player = ACE_Player;
                 private _target = GVAR(selectedTarget);
 
                 // Clear the conditions caches
                 [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
+
+                // Use global variable this for action condition and action code
+                private _savedThis = this;
+                this = GVAR(selectedTarget);
 
                 // Check the action conditions
                 private _actionData = GVAR(selectedAction) select 0;
@@ -107,6 +110,9 @@ if (GVAR(openedMenuType) >= 0) then {
                     // Clear the conditions caches again if the action was performed
                     [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
                 };
+
+                // Restore this variable
+                this = _savedThis;
             };
         };
     };
