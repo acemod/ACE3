@@ -178,7 +178,7 @@
             <English>"SS" - Seconds</English>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
-            <English>"MM" - Milliseconds</English>
+            <English>"MS" - Milliseconds</English>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
