@@ -48,14 +48,23 @@ private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 if (_item isEqualType objNull) then {
-    if (isVehicleCargo _item) then {
-        objNull setVehicleCargo _item;
-        _item setPosASL (AGLtoASL _emptyPosAGL);
-    } else {
+    if (isNull isVehicleCargo _item) then {
         detach _item;
         // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
         // do both on server to ensure they are executed in the correct order
         [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
+
+        private _cargoNet = _item getVariable [QGVAR(cargoNet), objNull];
+        if !(isNull _cargoNet) then {
+            private _itemsRemaining = _loaded select {_x getVariable [QGVAR(cargoNet), objNull] isEqualTo _cargoNet};
+            if (_itemsRemaining isEqualTo []) then {
+                objNull setVehicleCargo _cargoNet;
+                deleteVehicle _cargoNet;
+            };
+        };
+    } else {
+        objNull setVehicleCargo _item;
+        _item setPosASL (AGLtoASL _emptyPosAGL);
     };
 } else {
     private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];

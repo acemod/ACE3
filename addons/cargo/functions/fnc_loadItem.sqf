@@ -40,24 +40,32 @@ if (_item isEqualType objNull) then {
         if (
             (_vehicle canVehicleCargo _item) isEqualTo [false, true] && // Could be loaded if _vehicle was empty
             {_vehicleCargo findIf {
-                !(_x in _loaded) &&
+                !(_x in _loaded) && // Don't use ViV if ViV was used outside of ACE Cargo
                 !(typeOf _x isEqualTo "CargoNet_01_box_F")
-            } isEqualTo -1} // Don't use ViV if ViV was used outside of ACE Cargo
+            } isEqualTo -1}
         ) then {
-            private _cargoBox = createVehicle ["CargoNet_01_box_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
-            if ((_vehicle canVehicleCargo _cargoBox) select 1) then {
-                while {!(_vehicle setVehicleCargo _cargoBox)} do { // Move ViV cargo to ACE Cargo
+            private _cargoNet = createVehicle ["CargoNet_01_box_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+            if ((_vehicle canVehicleCargo _cargoNet) select 1) then {
+                while {!(_vehicle setVehicleCargo _cargoNet)} do { // Move ViV cargo to ACE Cargo
                     private _itemViV = _vehicleCargo deleteAt 0;
-                    if !(objNull setVehicleCargo _itemViV) exitWith {deleteVehicle _cargoBox;};
+                    if (typeOf _itemViV isEqualTo "CargoNet_01_box_F") exitWith { // The vehicle is already full of "CargoNet_01_box_F")
+                        deleteVehicle _cargoNet;
+                        _item setVariable [QGVAR(cargoNet), _itemViV, true];
+                    };
+                    if !(objNull setVehicleCargo _itemViV) exitWith {deleteVehicle _cargoNet;};
 
-                    _itemViV attachTo [_vehicle,[0,0,-100]];
+                    _itemViV setVariable [QGVAR(cargoNet), _cargoNet, true];
+                    _itemViV attachTo [_vehicle, [0,0,-100]];
                     [QEGVAR(common,hideObjectGlobal), [_itemViV, true]] call CBA_fnc_serverEvent;
 
                     // Some objects below water will take damage over time and eventualy become "water logged" and unfixable (because of negative z attach)
                     [_itemViV, "blockDamage", "ACE_cargo", true] call EFUNC(common,statusEffect_set);
                 };
+                if !(isNull _cargoNet) then {
+                    _item setVariable [QGVAR(cargoNet), _cargoNet, true];
+                };
             } else {
-                deleteVehicle _cargoBox;
+                deleteVehicle _cargoNet;
             };
         };
         _item attachTo [_vehicle, [0,0,-100]];
