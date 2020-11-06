@@ -1,6 +1,7 @@
 PREP(addCargoItem);
 PREP(addCargoVehiclesActions);
 PREP(canLoadItemIn);
+PREP(canShowUnloadAllVehicles);
 PREP(canUnloadItem);
 PREP(getCargoSpaceLeft);
 PREP(getSizeItem);
@@ -17,5 +18,6 @@ PREP(setSize);
 PREP(setSpace);
 PREP(startLoadIn);
 PREP(startUnload);
+PREP(unloadAllVehicles);
 PREP(unloadItem);
 PREP(validateCargoSpace);
