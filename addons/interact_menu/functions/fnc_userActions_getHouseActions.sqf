@@ -63,7 +63,7 @@ private _fnc_userAction_Condition = {
     private _savedThis = this;
     this = _target getVariable [QGVAR(building), objNull];
 
-    private _result = call _actionStatement;
+    private _result = call _actionCondition;
 
     // Restore this variable
     this = _savedThis;
