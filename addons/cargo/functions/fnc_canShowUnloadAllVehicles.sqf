@@ -23,4 +23,4 @@ params [
 
 driver _vehicle isEqualTo _unit &&
 {isClass (configOf _vehicle >> "VehicleTransport" >> "Carrier")} &&
-{!(getVehicleCargo _vehicle - (_vehicle getVariable [QGVAR(loaded), []]) isEqualTo [])}
+{!([_vehicle] call ace_cargo_fnc_getVehicleCargo isEqualTo [])}

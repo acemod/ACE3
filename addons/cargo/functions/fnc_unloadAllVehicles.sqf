@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Loaded vehiclesnot part of ACE Cargo <ARRAY>
+ * Loaded vehicles not part of ACE Cargo <ARRAY>
  *
  * Example:
  * [vehicle player] call ace_cargo_fnc_unloadAllVehicles
@@ -17,7 +17,7 @@
 
 params ["_vehicle"];
 
-private _loadedVehicles = getVehicleCargo _vehicle - (_vehicle getVariable [QGVAR(loaded), []]);
+private _loadedVehicles = [_vehicle] call ace_cargo_fnc_getVehicleCargo;
 private _unloadingInterval = getNumber (configOf _vehicle >> "VehicleTransport" >> "Carrier" >> "unloadingInterval");
 {
     [{objnull setVehicleCargo _this}, _x, _forEachIndex * _unloadingInterval] call CBA_fnc_waitAndExecute;

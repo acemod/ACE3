@@ -41,14 +41,14 @@ if (_item isEqualType objNull) then {
             (_vehicle canVehicleCargo _item) isEqualTo [false, true] && // Could be loaded if _vehicle was empty
             {_vehicleCargo findIf {
                 !(_x in _loaded) && // Don't use ViV if ViV was used outside of ACE Cargo
-                !(typeOf _x isEqualTo "CargoNet_01_box_F")
+                !(_x getVariable [QGVAR(isCargoNet), false])
             } isEqualTo -1}
         ) then {
             private _cargoNet = createVehicle ["CargoNet_01_box_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
             if ((_vehicle canVehicleCargo _cargoNet) select 1) then {
                 while {!(_vehicle setVehicleCargo _cargoNet)} do { // Move ViV cargo to ACE Cargo
                     private _itemViV = _vehicleCargo deleteAt 0;
-                    if (typeOf _itemViV isEqualTo "CargoNet_01_box_F") exitWith { // The vehicle is already full of "CargoNet_01_box_F")
+                    if (_itemViV getVariable [QGVAR(isCargoNet), false]) exitWith { // The vehicle is already full of cargo net
                         deleteVehicle _cargoNet;
                         _item setVariable [QGVAR(cargoNet), _itemViV, true];
                     };
@@ -62,6 +62,7 @@ if (_item isEqualType objNull) then {
                     [_itemViV, "blockDamage", "ACE_cargo", true] call EFUNC(common,statusEffect_set);
                 };
                 if !(isNull _cargoNet) then {
+                    _cargoNet setVariable [QGVAR(isCargoNet), true, true];
                     _item setVariable [QGVAR(cargoNet), _cargoNet, true];
                 };
             } else {

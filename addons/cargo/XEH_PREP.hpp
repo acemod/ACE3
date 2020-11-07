@@ -5,6 +5,7 @@ PREP(canShowUnloadAllVehicles);
 PREP(canUnloadItem);
 PREP(getCargoSpaceLeft);
 PREP(getSizeItem);
+PREP(getVehicleCargo);
 PREP(handleDeleted);
 PREP(handleDestroyed);
 PREP(initObject);
