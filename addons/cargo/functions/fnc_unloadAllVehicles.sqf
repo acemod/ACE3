@@ -18,7 +18,7 @@
 params ["_vehicle"];
 
 private _loadedVehicles = getVehicleCargo _vehicle - (_vehicle getVariable [QGVAR(loaded), []]);
-private _unloadingInterval = getNumber (configfile >> "CfgVehicles" >> typeOf _vehicle >> "VehicleTransport" >> "Carrier" >> "unloadingInterval");
+private _unloadingInterval = getNumber (configOf _vehicle >> "VehicleTransport" >> "Carrier" >> "unloadingInterval");
 {
     [{objnull setVehicleCargo _this}, _x, _forEachIndex * _unloadingInterval] call CBA_fnc_waitAndExecute;
 } forEach _loadedVehicles;
