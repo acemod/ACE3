@@ -240,48 +240,50 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_DisplayName">
             <English>Autoinjector Treatment Time</English>
+            <French>Durée d'interaction - Auto-injecteurs</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
+            <French>Définit le temps nécessaire à l'administration d'une substance auto-injectable (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
-            <French>Temps de traitement du tourniquet</French>
+            <French>Durée d'interaction - Garrots</French>
             <German>Tourniquet-Behandlungszeit</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
-            <French>Temps en secondes nécessaire pour appliquer un garrot.</French>
+            <French>Définit le temps nécessaire à l'application ou au retrait d'un garrot (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
-            <French>Temps de traitement du sac IV</French>
+            <French>Durée d'interaction - IVs</French>
             <German>IV Beutelbehandlungszeit</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
-            <French>Temps en secondes nécessaire pour appliquer un sac IV.</French>
+            <French>Définit le temps nécessaire à la pose d'une perfusion IV (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
-            <French>Temps de traitement de l'attelle</French>
+            <French>Durée d'interaction - Attelles</French>
             <German>Schienenbehandlungszeit</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
-            <French>Temps en secondes nécessaire pour appliquer une attelle.</French>
+            <French>Définit le temps nécessaire à l'application d'une attelle (en secondes).</French>
             <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
-            <French>Temps d'utilisation du sac mortuaire</French>
+            <French>Durée d'interaction - Housses mortuaires</French>
             <German>Anwendungszeit für Leichensack</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
-            <French>Temps en secondes qu'il faut pour appliquer un sac mortuaire.</French>
+            <French>Définit le temps nécessaire à la mise en housse d'un corps (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
@@ -303,7 +305,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
             <Japanese>アドレナリンの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Définit quelle qualification médicale est requise pour pouvoir utiliser l'épinéphrine.</French>
+            <French>Définit la qualification médicale requise pour utiliser l'épinéphrine.</French>
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar epinefrina.</Portuguese>
             <Chinese>要受過何種程度的醫療訓練才可以使用腎上腺素</Chinese>
@@ -332,7 +334,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
             <Japanese>アドレナリンが使える場所を決定します。</Japanese>
-            <French>Définit où l'épinéphrine peut être utilisée.</French>
+            <French>Définit les lieux où l'usage d'épinéphrine est autorisé.</French>
             <Russian>Контролирует, где можно использовать Адреналин.</Russian>
             <Portuguese>Controla onde Epinefrina pode ser utilizada.</Portuguese>
             <Chinese>控制何處能使用腎上腺素</Chinese>
@@ -362,7 +364,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
             <Japanese>応急処置キットの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Définit quelle qualification médicale est requise pour pouvoir utiliser la trousse sanitaire.</French>
+            <French>Définit la qualification médicale requise pour utiliser la trousse sanitaire.</French>
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
             <Chinese>要受過何種程度的醫療訓練才可以使用個人急救包</Chinese>
@@ -392,7 +394,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
             <Japanese>応急処置キットが使える場所を決定します。</Japanese>
-            <French>Définit où la trousse sanitaire peut être utilisée.</French>
+            <French>Définit les lieux où l'usage de la trousse sanitaire est autorisé.</French>
             <Russian>Контролирует, где можно использовать Аптечку.</Russian>
             <Portuguese>Controla onde o KPS pode ser utilizado.</Portuguese>
             <Chinese>控制何處能使用個人急救包</Chinese>
@@ -494,7 +496,7 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
             <Japanese>縫合キットの使用に訓練レベルを必要とさせます。</Japanese>
-            <French>Définit quelle qualification médicale est requise pour pouvoir utiliser une trousse chirurgicale.</French>
+            <French>Définit la qualification médicale requise pour utiliser la trousse chirurgicale.</French>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
@@ -520,7 +522,7 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
             <Japanese>縫合キットが使える場所を決定します。</Japanese>
-            <French>Définit où la trousse chirurgicale peut être utilisée.</French>
+            <French>Définit les lieux où l'usage de la trousse chirurgicale est autorisé.</French>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
             <Portuguese>Controle onde o Kit Cirúrgico pode ser utilizado.</Portuguese>
             <Chinese>控制何處能使用手術包</Chinese>
@@ -556,7 +558,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
-            <French>Suturer soi-même</French>
+            <French>Réaliser des sutures sur soi-même</French>
             <Portuguese>Auto-Cirurgia</Portuguese>
             <Japanese>自己縫合</Japanese>
             <Chinese>自我縫合</Chinese>
@@ -580,16 +582,18 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_DisplayName">
             <English>Wound Stitch Time</English>
+            <French>Durée d'interaction - Sutures</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
+            <French>Définit le temps nécessaire à la suture d'une plaie (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
             <German>Eigennutzung von Bluttransfusionen</German>
             <Russian>Внутривенное переливание на себе</Russian>
             <Japanese>自己 IV 輸血</Japanese>
-            <French>Autotransfusion d'IV</French>
+            <French>Pose d'IV sur soi-même</French>
             <Portuguese>Autotransfusão de IV</Portuguese>
             <Chinese>自我注射點滴</Chinese>
             <Czech>Samoaplikace IV transfuze</Czech>
@@ -601,7 +605,7 @@
             <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
             <Japanese>自らに対して IV 輸血を可能にします。</Japanese>
-            <French>Permet de poser des IV sur soi-même.</French>
+            <French>Active la possibilité de s'auto-poser des IVs.</French>
             <Portuguese>Permite utilizar bolsas de IV para transfusão em si mesmo</Portuguese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
             <Czech>Umožňuje aplikovat IV transfuze na sama sebe.</Czech>
@@ -610,15 +614,17 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_DisplayName">
             <English>Allow Unconscious Body Bag</English>
+            <French>Housse mortuaire - Autoriser patients inconscients</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
+            <French>Active la possibilité de placer des patients inconscients dans les housses mortuaires.\nAttention : le cas échéant cela provoquera la mort du patient.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
             <German>Erlaube Bluttransfusionen</German>
             <Polish>Zezwalaj na przetaczanie płynów IV</Polish>
-            <French>Pose de perfusion autorisée pour</French>
+            <French>Pose de perfusions autorisée pour</French>
             <Chinese>允許操作點滴</Chinese>
             <Japanese>IV 輸血の制限</Japanese>
             <Czech>Povolit IV transfuzi</Czech>
@@ -628,7 +634,7 @@
             <English>Training level required to transfuse IVs.</English>
             <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfundieren.</German>
             <Polish>Poziom wyszkolenia potrzebny aby móc przetaczać płyny IV.</Polish>
-            <French>Définit quelle qualification médicale est requise pour pouvoir poser des perfusions intraveineuses.</French>
+            <French>Définit la qualification médicale requise pour poser des perfusions intraveineuses.</French>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
@@ -844,9 +850,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
+            <French>Durée d'interaction - RCP</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
+            <French>Définit le temps nécessaire à la mise en œuvre d'une RCP (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
