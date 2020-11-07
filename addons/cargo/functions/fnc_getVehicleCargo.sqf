@@ -18,5 +18,5 @@
 params ["_vehicle"];
 
 (getVehicleCargo _vehicle - (_vehicle getVariable [QGVAR(loaded), []])) select {
-	!(_x getVariable [QGVAR(isCargoNet), false])
+    !(_x getVariable [QGVAR(isCargoNet), false])
 }
