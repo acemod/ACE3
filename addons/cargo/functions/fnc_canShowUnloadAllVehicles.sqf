@@ -22,5 +22,5 @@ params [
 ];
 
 driver _vehicle isEqualTo _unit &&
-{isClass (configfile >> "CfgVehicles" >> typeOf _vehicle >> "VehicleTransport" >> "Carrier")} &&
+{isClass (configOf _vehicle >> "VehicleTransport" >> "Carrier")} &&
 {!(getVehicleCargo _vehicle - (_vehicle getVariable [QGVAR(loaded), []]) isEqualTo [])}
