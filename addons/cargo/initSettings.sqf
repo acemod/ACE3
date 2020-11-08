@@ -24,3 +24,12 @@
     true,
     {[QGVAR(paradropTimeCoefficent), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(cargoNetType), "LIST",
+    [LSTRING(cargoNetType), LSTRING(cargoNetType_description)],
+    [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(openMenu)],
+    [["CargoNet_01_box_F", "Land_WoodenBox_02_F"], [LSTRING(cargoNetType_modernStyle), LSTRING(cargoNetType_ww2)], 0],
+    true,
+    {[QGVAR(cargoNetType), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;

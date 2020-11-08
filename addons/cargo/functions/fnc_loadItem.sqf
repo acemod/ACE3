@@ -37,7 +37,7 @@ if (_item isEqualType objNull) then {
     detach _item;
     if !(_vehicle setVehicleCargo _item) then {
         private _itemsCargo = _loaded arrayIntersect getVehicleCargo _vehicle;
-        private _cargoNet = createVehicle ["CargoNet_01_box_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+        private _cargoNet = createVehicle [GVAR(cargoNetType), [0, 0, 0], [], 0, "CAN_COLLIDE"];
         if ([_vehicle, _cargoNet, _itemsCargo] call FUNC(canItemCargo)) then {
             while {!(_vehicle setVehicleCargo _cargoNet)} do { // Move ViV cargo to ACE Cargo
                 if (_itemsCargo isEqualTo []) exitWith {deleteVehicle _cargoNet; /*Should not happen*/};

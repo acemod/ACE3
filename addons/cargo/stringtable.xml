@@ -387,5 +387,17 @@
             <Czech>Upravuje jak dlouho nakládají/vykládání trvá.\nVýsledkem je čas v sekundách - velikost objektu vynásobená touto hodnotou.</Czech>
             <Spanish>Modifica el tiempo de carga/descarga de objetos.\n El Tiempo en segundos, es el tamño del objeto multiplicado por este valor.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Cargo_cargoNetType">
+            <English>Type of cargo</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_cargoNetType_description">
+            <English>Choose which cargo type will fit the period of history you are playing.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_cargoNetType_modernStyle">
+            <English>Modern style</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_cargoNetType_ww2">
+            <English>World War 2</English>
+        </Key>
     </Package>
 </Project>
