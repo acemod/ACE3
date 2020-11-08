@@ -596,7 +596,6 @@ GVAR(menuRun) = true;
         GVAR(F1) = false;
         GVAR(MENU_B) = false;
         GVAR(SEL) = false;
-        DAGR_NEXT = false;
         GVAR(RIGHT) = false;
         GVAR(LEFT) = false;
         GVAR(UP) = false;
