@@ -82,7 +82,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
 |`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered
-|`ace_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive
+|`ace_explosives_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive
 
 ### 2.9 Logistics Wirecutter (`ace_logistics`)
 
