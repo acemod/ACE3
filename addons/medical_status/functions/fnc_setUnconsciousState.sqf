@@ -56,7 +56,7 @@ if (_active) then {
     // Disable AI aiming
     if (!isPlayer _unit && {_unit checkAIFeature "WEAPONAIM"}) then {
         _unit disableAI "WEAPONAIM";
-        _unit setVariable [QGVAR(reenableWeaponAim), true];
+        _unit setVariable [QGVAR(reenableWeaponAim), true, true];
     };
 } else {
     // Unit has woken up, no longer need to track this
