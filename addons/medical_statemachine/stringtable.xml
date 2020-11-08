@@ -136,11 +136,11 @@
             <Turkish>Kalbi Durdu</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_DisplayName">
-            <English>Bleedout during cardiac arrest</English>
+            <English>Bleedout During Cardiac Arrest</English>
             <German>Ausbluten im Herzstillstand</German>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_Description">
-            <English>Controls whether you can die in cardiac arrest by blood loss before the cardiac arrest time runs out.</English>
+            <English>Controls whether a person can die in cardiac arrest by blood loss before the cardiac arrest time runs out.</English>
             <German>Legt fest, ob man während des Herzstillstands durch Blutverlust sterben kann, auch wenn die Überlebenszeit im Herzstillstand noch nicht ausgelaufen ist.</German>
         </Key>
     </Package>
