@@ -41,3 +41,12 @@
     [1, 3600, 300],
     true
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(cardiacArrestBleedoutEnabled),
+    "CHECKBOX",
+    [LSTRING(CardiacArrestBleedout_DisplayName), LSTRING(CardiacArrestBleedout_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    true,
+    true
+] call CBA_settings_fnc_init;

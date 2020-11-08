@@ -98,7 +98,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
             <English>Cardiac Arrest Time</English>
-            <German>Zeit bis zum Herzstillstand</German>
+            <German>Überlebenszeit im Herzstillstand</German>
             <Japanese>心停止時間</Japanese>
             <Russian>Длительность остановки сердца</Russian>
             <French>Durée de l'arrêt cardiaque</French>
@@ -119,6 +119,7 @@
             <Italian>Controlla quanto tempo ci vuole per morire di arresto cardiaco.</Italian>
             <Czech>Nastavuje po jak dlouhé době pacient zemře kvůli srdeční zástavě.</Czech>
             <Polish>Definiuje czas potrzebny na śmierć z powodu zatrzymania akcji serca.</Polish>
+            <German>Bestimmt die Dauer bis zum Tod durch Herzstillstand.</German>
             <Turkish>Ne kadar süre de kalbi durarak ölmesini belirleyin.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_InCardiacArrest">
@@ -133,6 +134,14 @@
             <Czech>V srdeční zástavě</Czech>
             <Polish>Zatrzymanie Akcji Serca</Polish>
             <Turkish>Kalbi Durdu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_DisplayName">
+            <English>Bleedout During Cardiac Arrest</English>
+            <German>Ausbluten im Herzstillstand</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_Description">
+            <English>Controls whether a person can die in cardiac arrest by blood loss before the cardiac arrest time runs out.</English>
+            <German>Legt fest, ob man während des Herzstillstands durch Blutverlust sterben kann, auch wenn die Überlebenszeit im Herzstillstand noch nicht ausgelaufen ist.</German>
         </Key>
     </Package>
 </Project>
