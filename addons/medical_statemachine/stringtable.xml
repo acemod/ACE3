@@ -138,10 +138,12 @@
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_DisplayName">
             <English>Bleedout During Cardiac Arrest</English>
             <German>Ausbluten im Herzstillstand</German>
+            <French>Saignement durant l'arrêt cardiaque</French>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_Description">
             <English>Controls whether a person can die in cardiac arrest by blood loss before the cardiac arrest time runs out.</English>
             <German>Legt fest, ob man während des Herzstillstands durch Blutverlust sterben kann, auch wenn die Überlebenszeit im Herzstillstand noch nicht ausgelaufen ist.</German>
+            <French>Définit si un joueur en arrêt cardiaque peut mourir par exsanguination, avant que la durée de l'arrêt cardiaque définie ci-dessus ne soit écoulée.</French>
         </Key>
     </Package>
 </Project>
