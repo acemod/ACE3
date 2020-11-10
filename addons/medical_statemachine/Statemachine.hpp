@@ -103,7 +103,7 @@ class ACE_Medical_StateMachine {
         };
         class Bleedout {
             targetState = "Dead";
-            condition = QGVAR(cardiacArrestBleedoutEnabled);
+            condition = QUOTE((GVAR(cardiacArrestBleedoutEnabled))); // wrap to ensure cba uses this as code and not a direct variable
             events[] = {QEGVAR(medical,Bleedout)};
         };
     };
