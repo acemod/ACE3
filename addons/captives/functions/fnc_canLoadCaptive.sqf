@@ -34,7 +34,7 @@ if (isNull _target || {(vehicle _target) != _target} || {!(_target getVariable [
 
 if (isNull _vehicle) then {
     // Looking at a captive unit, get nearest vehicle with valid seat:
-    _vehicle = (_target call EFUNC(common,nearestVehiclesFreeSeat)) param [0, objNull];
+    _vehicle = ([_target, nil, true] call EFUNC(common,nearestVehiclesFreeSeat)) param [0, objNull];
 } else {
     // We have a vehicle picked, make sure it has empty seats:
     if (_vehicle emptyPositions "cargo" == 0 && {_vehicle emptyPositions "gunner" == 0}) then {

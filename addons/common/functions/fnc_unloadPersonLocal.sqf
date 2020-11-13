@@ -54,7 +54,7 @@ _unit action ["Eject", vehicle _unit];
     params ["_unit"];
 
     if (vehicle _unit != _unit) then {
-        TRACE_1("failsafe",_unit);
+        WARNING_1("UnloadPersonLocal [%1] did not eject normally",_unit);
         moveOut _unit;
     };
 }, [_unit], 1] call CBA_fnc_waitAndExecute;
