@@ -21,11 +21,30 @@ params ["_unit", "_vehicle", ["_caller", objNull]];
 TRACE_3("loadPersonLocal",_unit,_vehicle,_caller);
 
 private _slotsOpen = false;
-if ((_vehicle emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUnconscious', false])} || {(getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "ejectDeadCargo")) == 0}) then {
+if ((_vehicle emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUnconscious', false]) || {(getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "ejectDeadCargo")) == 0}}) then {
     _unit moveInCargo _vehicle;
+    TRACE_1("moveInCargo",_vehicle);
     _slotsOpen = true;
 } else {
-    if (_vehicle emptyPositions "gunner" > 0) then {
+    // Check if an empty turret is available
+    // This already excludes FFV seats, which count as cargo positions
+    private _turrets = fullCrew [_vehicle, "turret", true];
+    private _index = _turrets findIf {isNull (_x#0)};
+    if (_index >= 0) exitWith {
+        _unit moveInTurret [_vehicle, _turrets#_index#3];
+        TRACE_2("moveInTurret",_vehicle,_turrets#_index#3);
+        _slotsOpen = true;
+    };
+
+    // Check if the commander seat is available
+    if (_vehicle emptyPositions "commander" > 0) exitWith {
+        _unit moveInCommander _vehicle;
+        TRACE_1("moveInCommander",_vehicle);
+        _slotsOpen = true;
+    };
+
+    // Lastly, check if the gunner seat is available
+    if (_vehicle emptyPositions "gunner" > 0) exitWith {
         _unit moveInGunner _vehicle;
         _slotsOpen = true;
     };
