@@ -13,32 +13,25 @@ class CfgActions {
     class FirstAid: None {
         show = 0;
     };
-    class UnloadUnconsciousUnits: None
-    {
+    class UnloadUnconsciousUnits: None {
         show = 0;
     };
-    class UnloadFromDriver: None
-    {
+    class UnloadFromDriver: None {
         show = 0;
     };
-    class UnloadFromPilot: None
-    {
+    class UnloadFromPilot: None {
         show = 0;
     };
-    class UnloadFromCargo: None
-    {
+    class UnloadFromCargo: None {
         show = 0;
     };
-    class UnloadFromCommander: None
-    {
+    class UnloadFromCommander: None {
         show = 0;
     };
-    class UnloadFromGunner: None
-    {
+    class UnloadFromGunner: None {
         show = 0;
     };
-    class UnloadFromTurret: None
-    {
+    class UnloadFromTurret: None {
         show = 0;
     };
 };
