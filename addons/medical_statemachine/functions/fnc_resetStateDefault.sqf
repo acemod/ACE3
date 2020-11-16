@@ -17,7 +17,4 @@
 
 params ["_unit"];
 
-// Statemachine only handles local units
-if !(local _unit) exitWith {};
-
 [_unit, EGVAR(medical,STATE_MACHINE), "Dead", "Default"] call CBA_statemachine_fnc_manualTransition;

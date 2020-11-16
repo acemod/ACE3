@@ -418,9 +418,11 @@
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
+            <French>Trier par protection balistique</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
+            <French>Trier par résistance aux explosifs</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>

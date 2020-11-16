@@ -14,7 +14,8 @@
  * Public: No
 */
 
-params ["_itemCfg", "_ballisticCo", "_explosiveCo"];
+params ["_itemInfo", "_ballisticCo", "_explosiveCo"];
+_itemInfo params ["_itemCfg"];
 
 (([[_itemCfg], ["passthrough", "armor"]] call BIS_fnc_configExtremes) select 1) params [["_passthroughMax", 0], ["_armorMax", 0]];
 
