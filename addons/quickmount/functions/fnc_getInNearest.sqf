@@ -37,7 +37,7 @@ if ((isNull _target) && {alive _interactionTarget}) then {
     _target = (_objects param [0, []]) param [2, objNull];
 };
 
-if (locked _target in [2,3]) exitWith {
+if (locked _target in [2,3] || {!simulationEnabled _target}) exitWith {
     [localize LSTRING(VehicleLocked)] call EFUNC(common,displayTextStructured);
     true
 };

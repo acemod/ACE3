@@ -130,6 +130,14 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
+
+    class B_556x45_dual: B_556x45_Ball {
+        airFriction = -0.00055;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_muzzleVelocities[] = {268}; // at 21°C, at 15°C 267 m/s according with the 20Rnd_556x45_UW_mag initSpeed
+        ACE_barrelLengths[] = {457.2}; // according with the SDAR barrel length: https://en.wikipedia.org/wiki/Kel-Tec_RFB
+    };
+
     class ACE_556x45_Ball_Mk262 : B_556x45_Ball {
         airFriction=-0.00111805;
         ACE_caliber=5.69;
@@ -188,22 +196,31 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {743, 848, 891, 900}; // at 21°C, at 15°C {735, 840, 883, 892} according with the AKS initSpeed
         ACE_barrelLengths[] = {210, 314, 415, 508.0}; // respectively {AKS74U / AK105,AK12K / AK74 / default}
     };
-    class B_56x15_dual: BulletBase {
-        tracerScale = 0.5;
+
+    class B_580x42_Ball_F: BulletBase { // DBP87
+        airFriction = -0.00121087;
+        ACE_caliber = 6;
+        ACE_bulletLength = 24;
+        ACE_bulletMass = 4.15;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
+        ACE_ballisticCoefficients[] = {0.156};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {790, 930, 950};
+        ACE_barrelLengths[] = {369.0, 463.0, 600.0};
     };
-    class B_580x42_Ball_F: BulletBase {
-        airFriction=-0.00121087;
-        ACE_caliber=5.9944;
-        ACE_bulletLength=24.2;
-        ACE_bulletMass=4.15;
-        ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.156};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ICAO";
-        ACE_dragModel=7;
-        ACE_muzzleVelocities[]={790, 930, 950};
-        ACE_barrelLengths[]={369.0, 463.0, 600.0};
+
+    class ACE_580x42_DBP88_Ball: B_580x42_Ball_F { // DBP88 https://en.wikipedia.org/wiki/5.8%C3%9742mm
+        airFriction = -0.000968;
+        typicalSpeed = 895;
+        ACE_bulletLength = 28; // https://files.osgnetworks.tv/2/files/2017/11/DBP87-Specs2.jpg
+        ACE_bulletMass = 5;
+        ACE_ballisticCoefficients[] = {0.21};
+        ACE_muzzleVelocities[] = {903}; // at 21°C, at 15°C 895 m/s according with the ACE_10Rnd_580x42_DBP88_Mag initSpeep
+        ACE_barrelLengths[] = {640};
     };
+
     class B_65x39_Caseless : BulletBase {
         airFriction=-0.00077363;
         tracerScale = 1.1; //1.0;

@@ -533,115 +533,124 @@ class RscTitles {
         movingEnable = 0;
         onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscPatientInfo), _this select 0)]);
         class controls {
-            class BodyImage: GVAR(BodyImage) {
-                x = safeZoneX + POS_W(2.25);
-                y = safeZoneY + POS_H(1.5);
-                w = POS_W(8.5);
-                h = POS_H(8.5);
-                class controls: controls {
-                    class Background: Background {
+            class PatientInfoContainer: RscControlsGroupNoScrollbars {
+                idc = -1;
+                x = safeZoneX + PATIENT_INFO_IGUI_OFFSET_X;
+                y = safeZoneY + PATIENT_INFO_IGUI_OFFSET_Y;
+                w = safeZoneW;
+                h = safeZoneH;
+                class controls {
+                    class BodyImage: GVAR(BodyImage) {
+                        x = POS_W(2.25);
+                        y = POS_H(1.5);
                         w = POS_W(8.5);
                         h = POS_H(8.5);
+                        class controls: controls {
+                            class Background: Background {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class Head: Head {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class Torso: Torso {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class ArmLeft: ArmLeft {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class ArmRight: ArmRight {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class LegLeft: LegLeft {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class LegRight: LegRight {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class ArmLeftB: ArmLeftB {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class ArmRightB: ArmRightB {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class LegLeftB: LegLeftB {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class LegRightB: LegRightB {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class ArmLeftT: ArmLeftT {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class ArmRightT: ArmRightT {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class LegLeftT: LegLeftT {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                            class LegRightT: LegRightT {
+                                w = POS_W(8.5);
+                                h = POS_H(8.5);
+                            };
+                        };
                     };
-                    class Head: Head {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
+                    class InjuriesLabel: RscText {
+                        idc = -1;
+                        text = CSTRING(INJURIES);
+                        x = POS_W(2);
+                        y = POS_H(10.2);
+                        w = POS_W(9);
+                        h = POS_H(0.7);
+                        sizeEx = POS_H(0.7);
+                        colorBackground[] = GUI_BCG_COLOR;
                     };
-                    class Torso: Torso {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
+                    class Injuries: RscListBox {
+                        idc = IDC_INJURIES;
+                        x = POS_W(2);
+                        y = POS_H(11);
+                        w = POS_W(9);
+                        h = POS_H(9);
+                        sizeEx = POS_H(0.7);
+                        colorSelect[] = {1, 1, 1, 1};
+                        colorSelect2[] = {1, 1, 1, 1};
+                        colorBackground[] = {0, 0, 0, 0.2};
+                        colorSelectBackground[] = {0, 0, 0, 0};
+                        colorSelectBackground2[] = {0, 0, 0, 0};
+                        colorScrollbar[] = {0.9, 0.9, 0.9, 1};
                     };
-                    class ArmLeft: ArmLeft {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
+                    class TriageStatus: RscText {
+                        idc = IDC_TRIAGE_STATUS;
+                        x = POS_W(2);
+                        y = POS_H(20.2);
+                        w = POS_W(9);
+                        h = POS_H(0.7);
+                        sizeEx = POS_H(0.7);
+                        shadow = 0;
                     };
-                    class ArmRight: ArmRight {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class LegLeft: LegLeft {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class LegRight: LegRight {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class ArmLeftB: ArmLeftB {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class ArmRightB: ArmRightB {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class LegLeftB: LegLeftB {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class LegRightB: LegRightB {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class ArmLeftT: ArmLeftT {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class ArmRightT: ArmRightT {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class LegLeftT: LegLeftT {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
-                    };
-                    class LegRightT: LegRightT {
-                        w = POS_W(8.5);
-                        h = POS_H(8.5);
+                    class Activity: Injuries {
+                        idc = IDC_ACTIVITY;
+                        x = POS_W(1.75);
+                        y = POS_H(21);
+                        w = POS_W(15);
+                        h = POS_H(7);
+                        shadow = 2;
+                        colorBackground[] = {0, 0, 0, 0};
                     };
                 };
-            };
-            class InjuriesLabel: RscText {
-                idc = -1;
-                text = CSTRING(INJURIES);
-                x = safeZoneX + POS_W(2);
-                y = safeZoneY + POS_H(10.2);
-                w = POS_W(9);
-                h = POS_H(0.7);
-                sizeEx = POS_H(0.7);
-                colorBackground[] = GUI_BCG_COLOR;
-            };
-            class Injuries: RscListBox {
-                idc = IDC_INJURIES;
-                x = safeZoneX + POS_W(2);
-                y = safeZoneY + POS_H(11);
-                w = POS_W(9);
-                h = POS_H(9);
-                sizeEx = POS_H(0.7);
-                colorSelect[] = {1, 1, 1, 1};
-                colorSelect2[] = {1, 1, 1, 1};
-                colorBackground[] = {0, 0, 0, 0.2};
-                colorSelectBackground[] = {0, 0, 0, 0};
-                colorSelectBackground2[] = {0, 0, 0, 0};
-                colorScrollbar[] = {0.9, 0.9, 0.9, 1};
-            };
-            class TriageStatus: RscText {
-                idc = IDC_TRIAGE_STATUS;
-                x = safeZoneX + POS_W(2);
-                y = safeZoneY + POS_H(20.2);
-                w = POS_W(9);
-                h = POS_H(0.7);
-                sizeEx = POS_H(0.7);
-                shadow = 0;
-            };
-            class Activity: Injuries {
-                idc = IDC_ACTIVITY;
-                x = safeZoneX + POS_W(1.75);
-                y = safeZoneY + POS_H(21);
-                w = POS_W(15);
-                h = POS_H(7);
-                shadow = 2;
-                colorBackground[] = {0, 0, 0, 0};
             };
         };
     };

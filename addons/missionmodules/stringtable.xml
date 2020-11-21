@@ -66,6 +66,7 @@
             <Korean>재생되는 환경 효과음의 단위와 이름입니다. ','로 구분됩니다.</Korean>
             <Chinesesimp>输入想使用的环境声音classname。每个classname用','做区隔</Chinesesimp>
             <Chinese>輸入想使用的環境聲音classname。每個classname用','做區隔</Chinese>
+            <Turkish>Çalınacak ambiyans seslerinin sınıf isimleri.</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName">
             <English>Minimal Distance</English>
@@ -267,6 +268,7 @@
             <Korean>재생되는 소리의 볼륨</Korean>
             <Chinesesimp>调整声音的音量</Chinesesimp>
             <Chinese>調整聲音的音量</Chinese>
+            <Turkish>Çalınan seslerin seviyesi</Turkish>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_Description">
             <English>Ambiance sounds loop (synced across MP)</English>
@@ -283,6 +285,7 @@
             <Korean>환경 효과음 반복 (멀티플레이 전반적으로 동기화됨)</Korean>
             <Chinesesimp>循环的环境声音 (在多人游戏中会同步所有玩家的播放状态)</Chinesesimp>
             <Chinese>循環的環境聲音 (在多人遊戲中會同步所有玩家的播放狀態)</Chinese>
+            <Turkish>Ambiyans sesleri döngüsü (MP üzerinden senkronize edilir)</Turkish>
         </Key>
     </Package>
 </Project>

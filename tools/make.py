@@ -1499,6 +1499,9 @@ if __name__ == "__main__":
     print("\nTotal Program time elapsed: {0:2}h {1:2}m {2:4.5f}s".format(h,m,s))
 
     if ciBuild:
-        sys.exit(0)
+        if len(failedBuilds) > 0:
+            sys.exit(1)
+        else:
+            sys.exit(0)
 
     input("Press Enter to continue...")

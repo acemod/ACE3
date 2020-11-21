@@ -29,7 +29,7 @@ private _accel = ((_newVel vectorDiff GVAR(oldVel)) vectorMultiply (1 / INTERVAL
 // Cap maximum G's to +- 10 to avoid g-effects when the update is low fps.
 private _currentGForce = (((_accel vectorDotProduct vectorUp (vehicle ACE_player)) / 9.8) max -10) min 10;
 
-GVAR(GForces) set [GVAR(GForces_Index), _currentGForce];
+GVAR(GForces) set [GVAR(GForces_Index), _currentGForce * GVAR(coef)];
 GVAR(GForces_Index) = (GVAR(GForces_Index) + 1) % 30; // 30 = round (AVERAGEDURATION / INTERVAL);
 GVAR(oldVel) = _newVel;
 

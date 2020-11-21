@@ -68,7 +68,12 @@
     "gm_fence_wirefence_01_03.p3d",\
     "gm_gc_g501_sm70_01.p3d",\
     "gm_gc_g501_sm70_02.p3d",\
-    "gm_gc_g501_sm70_03.p3d"\
+    "gm_gc_g501_sm70_03.p3d",\
+    "netfence_03_m_3m_f.p3d",\
+    "netfence_03_m_3m_corner_f.p3d",\
+    "netfence_03_m_9m_f.p3d",\
+    "vineyardfence_01_f.p3d",\
+    "gameprooffence_01_l_5m_f.p3d"\
 ]
 
 #define SOUND_CLIP_TIME_SPACING 1.5

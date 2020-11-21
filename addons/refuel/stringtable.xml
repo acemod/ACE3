@@ -93,7 +93,7 @@
             <French>Prise du pistolet...</French>
             <Japanese>給油ノズルを取っています・・・</Japanese>
             <Korean>주유기 획득중...</Korean>
-            <Chinesesimp>拿取燃料喷嘴中...</Chinesesimp>
+            <Chinesesimp>正在拿取燃料喷嘴...</Chinesesimp>
             <Chinese>拿取燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Alınıyor...</Turkish>
         </Key>
@@ -125,7 +125,7 @@
             <French>Introduction du pistolet...</French>
             <Japanese>給油ノズルを接続しています・・・</Japanese>
             <Korean>주유기 꼽는중...</Korean>
-            <Chinesesimp>连结燃料喷嘴中...</Chinesesimp>
+            <Chinesesimp>正在连结燃料喷嘴...</Chinesesimp>
             <Chinese>連結燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Bağlanıyor...</Turkish>
         </Key>
@@ -189,7 +189,7 @@
             <French>Vérification du carburant restant...</French>
             <Japanese>残燃料を見ています・・・</Japanese>
             <Korean>남은 연료 확인중...</Korean>
-            <Chinesesimp>检查剩余燃料中...</Chinesesimp>
+            <Chinesesimp>正在检查剩余燃料...</Chinesesimp>
             <Chinese>檢查剩餘燃料中...</Chinese>
             <Turkish>Kalan Yakıt Kontrol Ediliyor...</Turkish>
         </Key>
@@ -302,6 +302,7 @@
             <Portuguese>Não foi possível ativar o bico de combustível</Portuguese>
             <French>Impossible de démarrer la pompe</French>
             <Czech>Nepodařilo se zapnout trysku</Czech>
+            <Turkish>Yakıt pompası başlatılamadı</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -427,7 +428,7 @@
             <French>Rangement du pistolet...</French>
             <Japanese>給油ノズルを戻しています・・・</Japanese>
             <Korean>주유기 반환중</Korean>
-            <Chinesesimp>放回燃料喷嘴中...</Chinesesimp>
+            <Chinesesimp>正在放回燃料喷嘴...</Chinesesimp>
             <Chinese>放回燃料噴嘴中...</Chinese>
             <Turkish>Yakıt Pompası Geri Koyuluyor</Turkish>
         </Key>
@@ -461,6 +462,7 @@
             <Korean>%1 리터가 재급유되었습니다.</Korean>
             <Chinesesimp>已加入%1公升</Chinesesimp>
             <Chinese>已加入%1公升</Chinese>
+            <Turkish>%1 litre dolduruldu</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>

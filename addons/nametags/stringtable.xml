@@ -84,6 +84,7 @@
             <Korean>플레이어 이름의 표시와 설정을 활성화합니다. 기본설정: 활성화</Korean>
             <Chinesesimp>显示玩家的名字并设置其启动方式。预设: 启用</Chinesesimp>
             <Chinese>顯示玩家的名稱並設置其啟動方式。預設: 啟用</Chinese>
+            <Turkish>Oyuncu adlarını gösterin ve etkinleştirmelerini ayarlayın. Varsayılan: Etkin</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
             <English>Only on Cursor</English>
@@ -100,6 +101,7 @@
             <Korean>커서만 해당</Korean>
             <Chinesesimp>只有准心指到时</Chinesesimp>
             <Chinese>只有準心指到時</Chinese>
+            <Turkish>Yalnızca İmleçte</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyKeypress">
             <English>Only on Keypress</English>
@@ -133,6 +135,7 @@
             <Korean>커서와 키를 누를경우만</Korean>
             <Chinesesimp>只有在准心指到和按按键时</Chinesesimp>
             <Chinese>只有在準心指到和按按鍵時</Chinese>
+            <Turkish>Yalnızca İmleç ve Tuşa Basıldığında</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_FadeOnBorder">
             <English>Fade on screen border</English>
@@ -148,6 +151,7 @@
             <Portuguese>Ocultar na borda da tela</Portuguese>
             <Czech>Zeslábnout poblíž okrajů obrazovky</Czech>
             <Spanish>Difuminar en el borde de pantalla</Spanish>
+            <Turkish>Ekran kenarında karart</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
             <English>Show player ranks (requires player names)</English>
@@ -164,6 +168,7 @@
             <Korean>플레이어 계급 표시 (플레이어 이름 필요)</Korean>
             <Chinesesimp>显示玩家军阶 (玩家必须有设定名字)</Chinesesimp>
             <Chinese>顯示玩家軍階 (玩家必須有設定名稱)</Chinese>
+            <Turkish>Oyuncu rütbelerini göster (oyuncu isimleri açılması gerektirir)</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
@@ -180,6 +185,7 @@
             <Korean>차량 승무원 정보 표시</Korean>
             <Chinesesimp>显示载具成员信息</Chinesesimp>
             <Chinese>顯示載具成員信息</Chinese>
+            <Turkish>Araç mürettebatı bilgilerini göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo_Desc">
             <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
@@ -196,6 +202,7 @@
             <Korean>승무원 정보를 표시하거나 플레이어가 직접 고르게 냅둡니다. 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示载具成员讯息。在预设的情况下，系统允许玩家自己决定开关此讯息。预设: 不显示</Chinesesimp>
             <Chinese>顯示載具成員訊息。在預設的情況下，系統允許玩家自己決定開關此訊息。預設: 不顯示</Chinese>
+            <Turkish>Araç mürettebat bilgilerini gösterin veya varsayılan olarak oyuncuların kendi başlarına seçmelerine izin verir. Varsayılan: Zorlama</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI">
             <English>Show name tags for AI units</English>
@@ -212,6 +219,7 @@
             <Korean>인공지능 인원 이름 표시</Korean>
             <Chinesesimp>显示AI单位名字</Chinesesimp>
             <Chinese>顯示AI單位名稱</Chinese>
+            <Turkish>AI birimleri için ad etiketlerini göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI_Desc">
             <English>Show the name and rank tags for friendly AI units? Default: Do not force</English>
@@ -228,6 +236,7 @@
             <Korean>아군 인공지능의 계급을 표시합니까? 기본설정: 강제하지 않음</Korean>
             <Chinesesimp>显示友军AI的名字和军阶? 预设: 不显示</Chinesesimp>
             <Chinese>顯示友軍AI的名稱和軍階? 預設: 不顯示</Chinese>
+            <Turkish>Dost AI birimleri için ad ve rütbe etiketleri gösterilsin mi? Varsayılan: Zorlama</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_DisplayName">
             <English>Show for Vehicles</English>
@@ -244,6 +253,7 @@
             <Korean>차량 표시</Korean>
             <Chinesesimp>显示给载具指挥官</Chinesesimp>
             <Chinese>顯示給載具指揮官</Chinese>
+            <Turkish>Araçlar için Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_Description">
             <English>Show cursor NameTag for vehicle commander (only if client has name tags enabled) Default: No</English>
@@ -259,6 +269,7 @@
             <Korean>차량의 사령관의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화 할시에만 보입니다) 기본설정: 아니요</Korean>
             <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名字 (仅当客户端的名字功能已启用)。预设: 关闭</Chinesesimp>
             <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用)。預設: 關閉</Chinese>
+            <Turkish>Araç komutanı için Gösterge İsim Etiketini göster (yalnızca istemcide ad etiketleri etkinse) Varsayılan: Hayır</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves">
             <English>Show SoundWaves (requires player names)</English>
@@ -275,6 +286,7 @@
             <Korean>음파 표시 (플레이어 이름 필요)</Korean>
             <Chinesesimp>当玩家讲话时，显示声波图案 (玩家必须有设定名字)</Chinesesimp>
             <Chinese>當玩家講話時，顯示聲波圖案 (玩家必須有設定名稱)</Chinese>
+            <Turkish>Ses Dalgalarını Göster (oyuncu isimleri gerektirir)</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
             <English>Effect of sound waves above the heads of speaking players after holding the PTT key. This option works with TFAR and ACRE2.</English>
@@ -291,6 +303,7 @@
             <Korean>플레이어가 PTT로 말할시 머리위에 음파효과를 적용합니다. 이 옵션은 TFAR과 ACRE2가 있을때만 적용됩니다.</Korean>
             <Chinesesimp>当玩家使用按键发话时，其头上的角色名字旁会显示声波的图案。此功能可搭配TFAR、ACRE2等模组使用。</Chinesesimp>
             <Chinese>當玩家使用按鍵發話時，其頭上的角色名稱旁會顯示聲波的圖案。此功能可搭配TFAR、ACRE2等模組使用。</Chinese>
+            <Turkish>Bas Konuş tuşunu basılı tuttuktan sonra ses dalgalarının konuşan oyuncuların başlarının üzerindeki etkisi. Bu seçenek TFAR ve ACRE2 ile çalışır.</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
@@ -307,6 +320,7 @@
             <Korean>이름표 설정 사용</Korean>
             <Chinesesimp>玩家名字设定</Chinesesimp>
             <Chinese>玩家名稱設定</Chinese>
+            <Turkish>İsim etiketi ayarlarını kullan</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_AlwaysShowAll">
             <English>Always Show All</English>
@@ -323,6 +337,7 @@
             <Korean>항상 모두 표시</Korean>
             <Chinesesimp>永远显示全部</Chinesesimp>
             <Chinese>永遠顯示全部</Chinese>
+            <Turkish>Her Zaman Tümünü Göster</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
             <English>Player Names View Dist.</English>
@@ -339,6 +354,7 @@
             <Korean>플레이어 이름 표시 거리</Korean>
             <Chinesesimp>玩家名字显示距离</Chinesesimp>
             <Chinese>玩家名稱顯示距離</Chinese>
+            <Turkish>Oyuncu Adlarını Görüntüleme Mes.</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
             <English>Distance in meters at which player names are shown. Default: 5</English>
@@ -355,6 +371,7 @@
             <Korean>플레이어 이름이 표시되는 미터. 기본설정: 5</Korean>
             <Chinesesimp>设定名字在多少距离以内显示。预设:5公尺</Chinesesimp>
             <Chinese>設定名稱在多少距離以內顯示。預設:5公尺</Chinese>
+            <Turkish>Oyuncu adlarının gösterildiği metre cinsinden mesafe. Varsayılan: 5</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesMaxAlpha">
             <English>Player tags transparency</English>
@@ -369,6 +386,7 @@
             <French>Transparence des noms</French>
             <Czech>Průhlednost jmenovek</Czech>
             <Spanish>Transparencia de etiquetas de jugadores</Spanish>
+            <Turkish>Oyuncu etiketlerinde şeffaflık</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
@@ -402,6 +420,7 @@
             <Korean>글자와 아이콘 크기 비례</Korean>
             <Chinesesimp>文字和图示大小设定</Chinesesimp>
             <Chinese>文字和圖示大小設定</Chinese>
+            <Turkish>Metin ve Simge Boyutu Ölçeklendirme</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
             <English>Default Nametag Color (Non Group Members)</English>
@@ -418,6 +437,7 @@
             <Korean>기본 이름표 색상 (비-그룹 멤버)</Korean>
             <Chinesesimp>预设名字颜色 (非同小队队友) </Chinesesimp>
             <Chinese>預設名稱顏色 (非同小隊隊友) </Chinese>
+            <Turkish>Varsayılan İsim Etiketi Rengi (Grup Üyeleri Olmayanlar)</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceHide">
             <English>Force Hide</English>
@@ -468,6 +488,7 @@
             <Korean>커서만 강제로 해당</Korean>
             <Chinesesimp>强制仅显示在准心指到时</Chinesesimp>
             <Chinese>強制僅顯示在準心指到時</Chinese>
+            <Turkish>Göstermeyi Yalnızca İmleç Üzerinde Zorla</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
             <English>Force Show Only on Keypress</English>
@@ -484,6 +505,7 @@
             <Korean>키를 누를경우만 강제로 해당</Korean>
             <Chinesesimp>强制仅显示在按按键时</Chinesesimp>
             <Chinese>強制僅顯示在按按鍵時</Chinese>
+            <Turkish>Gösteriyi Yalnızca Tuşa Basıldığında Zorla</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress">
             <English>Force Show Only on Cursor and Keypress</English>
@@ -500,6 +522,7 @@
             <Korean>커서와 키를 누를경우만 강제로 해당</Korean>
             <Chinesesimp>强制显示在准心指到和按按键时</Chinesesimp>
             <Chinese>強制顯示在準心指到和按按鍵時</Chinese>
+            <Turkish>Göstermeyi Yalnızca İmleç ve Tuşa Basmaya Zorla</Turkish>
         </Key>
     </Package>
 </Project>

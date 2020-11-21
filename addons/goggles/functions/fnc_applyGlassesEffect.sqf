@@ -33,7 +33,7 @@ private _config = configFile >> "CfgGlasses" >> _glasses;
 private _postProcessColour = getArray (_config >> "ACE_Color");
 private _postProcessTintAmount = getNumber (_config >> "ACE_TintAmount");
 
-if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
+if (_postProcessTintAmount != 0 && {GVAR(UsePP)} && GVAR(effects) in [1, 2]) then {
     _postProcessColour set [3, _postProcessTintAmount/100];
     GVAR(PostProcess) ppEffectAdjust[0.9, 1.1, 0.004, _postProcessColour, [0,0,0,1],[0,0,0,0]];
     GVAR(PostProcess) ppEffectCommit 0;
@@ -50,7 +50,7 @@ if (_imagePath != "") then {
     (GLASSDISPLAY displayCtrl 10650) ctrlSetText _imagePath;
 };
 
-if (GVAR(effects) == 2) then {
+if (GVAR(effects) in [2, 3]) then {
     if (GETDIRT) then {
         call FUNC(applyDirtEffect);
     };

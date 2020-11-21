@@ -16,40 +16,25 @@
  */
 
 {
-    private _failure = false;
     private _class = configName _x;
+    private _result = [_x, false] call FUNC(parseConfigTag);
 
-    private _displayName = getText (_x >> "displayName");
-    if (_displayName == "") then {
-        ERROR_1("Failed compiling ACE_Tags for tag: %1 - missing displayName",_class);
-        _failure = true;
-    };
+    if !(_result isEqualTo []) then {
+        _result params ["_tagInfo", "_requiredItem"];
 
-    private _requiredItem = getText (_x >> "requiredItem");
-    if (_requiredItem == "") then {
-        ERROR_1("Failed compiling ACE_Tags for tag: %1 - missing requiredItem",_class);
-        _failure = true;
-    } else {
-        if (!isClass (configFile >> "CfgWeapons" >> _requiredItem)) then {
-            ERROR_2("Failed compiling ACE_Tags for tag: %1 - requiredItem %2 does not exist",_class,_requiredItem);
-            _failure = true;
-        } else {
-            _requiredItem = configName (configFile >> "CfgWeapons" >> _requiredItem); // convert to config case
-        };
-    };
-
-    private _textures = getArray (_x >> "textures");
-    if (_textures isEqualTo []) then {
-        ERROR_1("Failed compiling ACE_Tags for tag: %1 - missing textures",_class);
-        _failure = true;
-    };
-
-    private _materials = getArray (_x >> "materials");
-
-    private _icon = getText (_x >> "icon");
-
-    if (!_failure) then {
-        GVAR(cachedTags) pushBack [_class, _displayName, _requiredItem, _textures, _icon, _materials];
+        GVAR(cachedTags) pushBack _tagInfo;
         GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
     };
 } forEach ("true" configClasses (configFile >> "ACE_Tags"));
+
+{
+    private _class = configName _x;
+    private _result = [_x, true] call FUNC(parseConfigTag);
+
+    if !(_result isEqualTo []) then {
+        _result params ["_tagInfo", "_requiredItem"];
+
+        GVAR(cachedTags) pushBack _tagInfo;
+        GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
+    };
+} forEach ("true" configClasses (missionConfigFile >> "ACE_Tags"));

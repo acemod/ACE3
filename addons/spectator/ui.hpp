@@ -20,6 +20,7 @@ class GVAR(display) {
     closeOnMissionEnd = 1;
 
     onLoad = QUOTE(_this call FUNC(ui_handleLoad));
+    onUnload = QUOTE(_this call FUNC(ui_handleUnload));
 
     onKeyDown = QUOTE(_this call FUNC(ui_handleKeyDown));
     onKeyUp = QUOTE(_this call FUNC(ui_handleKeyUp));
