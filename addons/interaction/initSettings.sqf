@@ -24,7 +24,7 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(weaponAttachmentsEnabled), "CHECKBOX",
+    QGVAR(enableWeaponAttachments), "CHECKBOX",
     "str_a3_cfgeditorcategories_edcat_weaponattachments0",
     format ["ACE %1", LLSTRING(DisplayName)],
     true

@@ -315,7 +315,7 @@ class CfgVehicles {
 
                 class GVAR(weaponAttachments) {
                     displayName = "$STR_A3_CfgEditorSubcategories_EdSubcat_SideSlot0";
-                    condition = QGVAR(weaponAttachments);
+                    condition = QGVAR(enableWeaponAttachments);
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     insertChildren = QUOTE(call DFUNC(getWeaponAttachmentsActions));
                     modifierFunction = QUOTE(_this select 3 set [ARR_2(2, getText (configFile >> 'CfgWeapons' >> currentWeapon (_this select 0) >> 'picture'))];);
