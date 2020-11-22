@@ -314,7 +314,7 @@ class CfgVehicles {
                 icon = "";  // @todo
 
                 class GVAR(weaponAttachments) {
-                    displayName = "$STR_A3_CfgEditorCategories_EdCat_WeaponAttachments0";
+                    displayName = "$STR_A3_CfgEditorSubcategories_EdSubcat_SideSlot0";
                     condition = QGVAR(weaponAttachments);
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     insertChildren = QUOTE(call DFUNC(getWeaponAttachmentsActions));
