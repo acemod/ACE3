@@ -22,13 +22,13 @@ params ["_unit"];
 
     private _currentWeapon = currentWeapon _unit;
     if (_currentWeapon isEqualTo "") exitWith {[]};
-    private _weaponItems = _unit weaponAccessories _currentWeapon apply {toLower _x};
+    private _weaponItems = _unit weaponAccessories _currentWeapon;
     private _cfgWeapons = configFile >> "CfgWeapons";
     private _actions = [];
 
     // "attach" actions
-    private _items = _unit call EFUNC(common,uniqueItems) apply {toLower _x};
-    private _compatibleItems = _currentWeapon call CBA_fnc_compatibleItems apply {toLower _x};
+    private _items = _unit call EFUNC(common,uniqueItems);
+    private _compatibleItems = _currentWeapon call CBA_fnc_compatibleItems;
     {
         private _config = _cfgWeapons >> _x;
         private _name = format [LLSTRING(weaponAttachmentsAttach), getText (_config >> "displayName")];
