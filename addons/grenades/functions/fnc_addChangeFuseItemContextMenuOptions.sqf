@@ -34,8 +34,8 @@
         ],
         {
             params ["_unit", "", "", "_slot", "_magArr"];
-            private _containerStr = toLower ((_slot splitString "_") select 0);
-            [_unit, (_magArr select 1), _containerStr, -1] call ace_common_fnc_addToInventory;
+            private _containerStr = toLower (_slot splitString "_" select 0);
+            [_unit, _magArr select 1, _containerStr] call EFUNC(common,addToInventory);
             false;
         },
         true,
