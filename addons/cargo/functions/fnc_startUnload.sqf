@@ -77,7 +77,7 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
         localize LSTRING(UnloadingItem),
         {
             (_this select 0) params ["_item", "_target", "_player"];
-            
+
             (alive _target)
             && {locked _target < 2}
             && {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
@@ -87,7 +87,7 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     ] call EFUNC(common,progressBar);
 } else {
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
-    private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
+    private _displayName = if (_item isEqualType "") then {getText (configfile >> "CfgVehicles" >> _itemClass >> "displayName")} else {_item getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> _itemClass >> "displayName")]};
 
     [[LSTRING(UnloadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };

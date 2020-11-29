@@ -44,7 +44,7 @@ if (GVAR(interactionParadrop)) then {
     lbClear _ctrl;
     {
         private _class = if (_x isEqualType "") then {_x} else {typeOf _x};
-        private _displayName = getText (configfile >> "CfgVehicles" >> _class >> "displayName");
+        private _displayName = if (_x isEqualType "") then {getText (configfile >> "CfgVehicles" >> _class >> "displayName")} else {_x getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> _class >> "displayName")]};
         if (GVAR(interactionParadrop)) then {
             _ctrl lbAdd format ["%1 (%2s)", _displayName, GVAR(paradropTimeCoefficent) * ([_class] call FUNC(getSizeItem))];
         } else {

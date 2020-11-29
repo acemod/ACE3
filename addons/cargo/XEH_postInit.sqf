@@ -11,7 +11,7 @@
 
     // Show hint as feedback
     private _hint = [LSTRING(LoadingFailed), LSTRING(LoadedItem)] select _loaded;
-    private _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
+    private _itemName = if (_item isEqualType "") then {getText (configfile >> "CfgVehicles" >> typeOf _item >> "displayName")} else {_item getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> typeOf _item >> "displayName")]};
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
     [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
@@ -32,7 +32,7 @@
 
     // Show hint as feedback
     private _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
-    private _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
+    private _itemName = if (_item isEqualType "") then {getText (configfile >> "CfgVehicles" >> _itemClass >> "displayName")} else {_item getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> _itemClass >> "displayName")]};
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
     [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
@@ -78,28 +78,44 @@ GVAR(vehicleAction) = [
     }
 ] call EFUNC(interact_menu,createAction);
 
-GVAR(objectAction) = [
-    QGVAR(load), localize LSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
-    {
-        params ["_target", "_player"];
-        [_player, _target] call FUNC(startLoadIn);
-    },
-    {
-        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-        GVAR(enable) &&
-        {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
-        {locked _target < 2} &&
-        {alive _target} &&
-        {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-        {((nearestObjects [_target, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]) findIf {
-            private _hasCargoConfig = 1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo));
-            private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
-            (_hasCargoConfig || {_hasCargoPublic}) && {_x != _target} && {alive _x} && {locked _x < 2} &&
-            {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
-        }) > -1}
-    },
-    LINKFUNC(addCargoVehiclesActions)
-] call EFUNC(interact_menu,createAction);
+GVAR(objectActions)= [
+    [QGVAR(renameObject), localize LSTRING(renameObject), "", //TODO: add icon, maybe a pencil couldn't find it before.
+        {
+            params ["_target"];
+            [_target] spawn FUNC(renameObject);
+        },
+        {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            GVAR(enable) &&
+            {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
+            {alive _target} &&
+            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {!((typeOf _target) in ["ACE_Wheel", "ACE_Track"])} && // Exclude Wheel and Track
+            {!(_target iskindOf "Land_CanisterFuel_F")} // Exclude Fuel Canisters
+        }
+    ] call EFUNC(interact_menu,createAction),
+    [QGVAR(load), localize LSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
+        {
+            params ["_target", "_player"];
+            [_player, _target] call FUNC(startLoadIn);
+        },
+        {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            GVAR(enable) &&
+            {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
+            {locked _target < 2} &&
+            {alive _target} &&
+            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {((nearestObjects [_target, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]) findIf {
+                private _hasCargoConfig = 1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo));
+                private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
+                (_hasCargoConfig || {_hasCargoPublic}) && {_x != _target} && {alive _x} && {locked _x < 2} &&
+                {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+            }) > -1}
+        },
+        LINKFUNC(addCargoVehiclesActions)
+    ] call EFUNC(interact_menu,createAction)
+];
 
 // find all remaining configured classes and init them, see XEH_preStart.sqf
 private _vehicleClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedVehicleClasses), {[]}]);
@@ -110,7 +126,8 @@ GVAR(initializedVehicleClasses) append _vehicleClassesAddAction;
 
 private _objectClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedItemClasses), {[]}]);
 {
-    [_x, 0, ["ACE_MainActions"], GVAR(objectAction)] call EFUNC(interact_menu,addActionToClass);
+    [_x, 0, ["ACE_MainActions"], GVAR(objectActions) select 0] call EFUNC(interact_menu,addActionToClass);
+    [_x, 0, ["ACE_MainActions"], GVAR(objectActions) select 1] call EFUNC(interact_menu,addActionToClass);
 } forEach _objectClassesAddAction;
 GVAR(initializedItemClasses) append _objectClassesAddAction;
 

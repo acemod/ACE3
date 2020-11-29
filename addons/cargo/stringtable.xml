@@ -33,6 +33,12 @@
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
         </Key>
+        <Key ID="STR_ACE_Cargo_renameObject">
+            <English>Rename</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_renamedObject">
+            <English>Renamed to:&lt;br/&gt;%1</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
             <German>Fracht</German>
@@ -238,6 +244,12 @@
             <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
             <Turkish>%1&lt;br/&gt; kargo boşaltılamadı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Cargo_customName_edenName">
+            <English>Custom Name</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_customName_edenDesc">
+            <English>Set a custom cargo name used in the cargo interface</English>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
