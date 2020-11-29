@@ -32,7 +32,7 @@ _display displayAddEventHandler ["Unload", {
 
 // add Background
 private _ctrlBackground = _display ctrlCreate ["RscStructuredText", -1];
-_ctrlBackground ctrlSetStructuredText parseText "<t size=1 align='center'>Set New Name:</t> ";
+_ctrlBackground ctrlSetStructuredText parseText (["<t size=1 align='center'>", localize LSTRING(renameObjectUI), "</t>"] joinString "");
 _ctrlBackground ctrlSetBackgroundColor [0,0,0,0.5];
 _ctrlBackground ctrlSetPosition [
 	safeZoneX + 0.4 * safeZoneW - 0.025,

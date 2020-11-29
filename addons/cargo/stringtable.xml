@@ -39,6 +39,9 @@
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
         </Key>
+        <Key ID="STR_ACE_Cargo_renameObjectUI">
+            <English>Set New Name:</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
             <German>Fracht</German>
