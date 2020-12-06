@@ -112,3 +112,13 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
     if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
     if (_menuBackgroundSetting == 2) exitWith {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call CBA_fnc_addEventHandler;
+
+
+// init menu reordering
+if (GVAR(allowReorderSelf)) then {
+    [QGVAR(newControllableObject), {
+        params ["_type"];
+        if !(_type isKindOf "CAManBase") exitWith {};
+        _type call FUNC(initMenuReorder);
+    }] call CBA_fnc_addEventHandler;
+};

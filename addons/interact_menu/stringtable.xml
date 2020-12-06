@@ -489,5 +489,13 @@
             <Spanish>Selector de color</Spanish>
             <Turkish>Seçici Renk</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_allowReorderSetting">
+            <English>Allow reordering</English>
+            <Russian>Разрешить переупорядочивание</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_allowReorderSettingDescription">
+            <English>Creates settings sections for menu item reordering</English>
+            <Russian>Создает разделы настроек для перемещения элементов меню</Russian>
+        </Key>
     </Package>
 </Project>
