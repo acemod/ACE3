@@ -5,8 +5,17 @@
         <Key ID="STR_ACE_NonLethal_Category">
             <English>ACE Non-Lethal</English>
         </Key>
+        <Key ID="STR_ACE_NonLethal_Category_Common">
+            <English>Common</English>
+        </Key>
         <Key ID="STR_ACE_NonLethal_Category_AI">
             <English>AI</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_ThresholdFactor_DisplayName">
+            <English>Threshold Factor</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_ThresholdFactor_Description">
+            <English>Damage taken by the unit is multiplied by this factor</English>
         </Key>
         <Key ID="STR_ACE_NonLethal_LimpChance_DisplayName">
             <English>Limp Chance</English>
@@ -40,7 +49,7 @@
         </Key>
         <!--Magazines-->
         <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_Name">
-            <English>2Rnd Rubber Slug</English>
+            <English>12 Gauge 2Rnd Rubber Slug</English>
         </Key>
         <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_NameShort">
             <English>Rubber Slug</English>

@@ -1,4 +1,12 @@
 [
+    QGVAR(thresholdFactor), "SLIDER",
+    [LSTRING(ThresholdFactor_DisplayName), LSTRING(ThresholdFactor_Description)],
+    [LSTRING(Category), LSTRING(Category_Common)],
+    [1, 10, 3, 1], // [_min, _max, _default, _trailingDecimals]
+    true // isGlobal
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(limpChance), "SLIDER",
     [LSTRING(LimpChance_DisplayName), LSTRING(LimpChance_Description)],
     [LSTRING(Category), LSTRING(Category_AI)],

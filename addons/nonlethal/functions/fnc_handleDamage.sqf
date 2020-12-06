@@ -23,7 +23,7 @@ private _nonlethalType = getText (configFile >> "CfgAmmo" >> _projectile >> "ACE
 if (_nonlethalType isEqualTo "") exitWith {};
 
 // Calculate how much of an effect the nonlethal has had on the unit
-private _threshold = (_unit getVariable [QGVAR(threshold), 0]) + (_damage * ((1 - (_unit skill "courage")) * 2));
+private _threshold = (_unit getVariable [QGVAR(threshold), 0]) + (_damage * (0.01 max (1 - (_unit skill "courage"))) * GVAR(thresholdFactor));
 _unit setVariable [QGVAR(threshold), _threshold];
 
 // Update unit status
