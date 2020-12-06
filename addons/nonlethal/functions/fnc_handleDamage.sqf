@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: mjc4wilton
- * Dammaged EH
+ * handleDamage EH.
  *
  * Arguments:
  * None
@@ -10,17 +10,16 @@
  * None
  *
  * Example:
- * ["_unit", "_selection", "_damage", "_hitIndex", "_hitPoint", "_shooter", "_projectile"] call ace_nonlethal_fnc_dammaged
+ * ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"] call ace_nonlethal_fnc_handleDamage
  *
  * Public: No
  */
 
-params ["_unit", "_selection", "_damage", "_hitIndex", "_hitPoint", "_shooter", "_projectile"];
+params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
 
 systemChat "EH Fired!";
-systemChat str _this;
 // Exit if bullet is not part of NonLethal
-private _nonlethalType = getText (configFile >> "CfgAmmo" >> typeOf _projectile >> "ACE_nonLethalType");
+private _nonlethalType = getText (configFile >> "CfgAmmo" >> _projectile >> "ACE_nonLethalType");
 if (_nonlethalType isEqualTo null) exitWith {};
 
 // Calculate how much of an effect the nonlethal has had on the unit
@@ -35,7 +34,7 @@ if !(_unit getVariable [QGVAR(limp), false]) then {
 };
 
 if !(_unit getVariable [QGVAR(surrendering), false]) then {
-    if ((_threshold >= 5) && (random 1 >= 0.2)) then {
+    if (((_threshold > 0) && ((_unit skill "courage") < 0.25)) || ((_threshold >= 3) && (random 1 >= 0.2))) then {
         [_unit, true] call EFUNC(captives,setSurrendered);
     };
 };

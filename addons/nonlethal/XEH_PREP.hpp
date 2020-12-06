@@ -1,1 +1,1 @@
-PREP(dammaged);
+PREP(handleDamage);

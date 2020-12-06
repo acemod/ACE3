@@ -6,8 +6,10 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-if (ifServer) then {
-    //["CAManBase", "Dammaged", {_this call FUNC(dammaged)}] call CBA_fnc_addClassEventHandler;
-};
+["CAManBase", "init", {
+    (_this select 0) addEventHandler ["HandleDamage", {
+        _this call FUNC(handleDamage);
+    }];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
 ADDON = true;
