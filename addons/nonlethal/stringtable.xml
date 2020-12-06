@@ -2,7 +2,16 @@
 <Project name="ACE">
     <Package name="NonLethal">
         <Key ID="STR_ACE_NonLethal_Category">
-            <English>ACE NonLethal</English>
+            <English>ACE Non-Lethal</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_Name">
+            <English>2Rnd Rubber Slug</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_NameShort">
+            <English>Rubber Slug</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_Description">
+            <English>Non-Lethal Single Rubber Slug</English>
         </Key>
     </Package>
 </Project>

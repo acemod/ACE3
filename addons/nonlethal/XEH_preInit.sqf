@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-//#include "initSettings.sqf"
+if (ifServer) then {
+    //["CAManBase", "Dammaged", {_this call FUNC(dammaged)}] call CBA_fnc_addClassEventHandler;
+};
 
 ADDON = true;

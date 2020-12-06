@@ -15,3 +15,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define EHAMMOS ["ACE_NonLethal_12Gauge_Slug"]
