@@ -31,14 +31,14 @@ if (isPlayer _unit) then {
 
 } else {
     if !(_unit getVariable [QGVAR(limp), false]) then {
-        if ((_threshold >= QGVAR(limpThreshold)) && (random 1 <= QGVAR(limpChance))) then {
+        if ((_threshold >= GVAR(limpThreshold)) && (random 1 <= GVAR(limpChance))) then {
             [_unit, "forceWalk", QGVAR(sumDamage), true] call EFUNC(common,statusEffect_set);
             _unit setVariable [QGVAR(limp), true];
         };
     };
 
     if !(_unit getVariable [QGVAR(surrendering), false]) then {
-        if (((_threshold > 0) && ((_unit skill "courage") < QGVAR(surrenderCourage))) || ((_threshold >= QGVAR(surrenderThreshold)) && (random 1 >= QGVAR(surrenderChance)))) then {
+        if (((_threshold > 0) && ((_unit skill "courage") < GVAR(surrenderCourage))) || ((_threshold >= GVAR(surrenderThreshold)) && (random 1 >= GVAR(surrenderChance)))) then {
             [_unit, true] call EFUNC(captives,setSurrendered);
             _unit setVariable [QGVAR(surrendering), true];
         };
