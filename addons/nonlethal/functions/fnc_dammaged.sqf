@@ -20,7 +20,8 @@ params ["_unit", "_selection", "_damage", "_hitIndex", "_hitPoint", "_shooter", 
 systemChat "EH Fired!";
 systemChat str _this;
 // Exit if bullet is not part of NonLethal
-if !(typeOf _projectile in EHAMMOS) exitWith {};
+private _nonlethalType = getText (configFile >> "CfgAmmo" >> typeOf _projectile >> "ACE_nonLethalType");
+if (_nonlethalType isEqualTo null) exitWith {};
 
 // Calculate how much of an effect the nonlethal has had on the unit
 private _threshold = (_unit getVariable [QGVAR(threshold), 0]) + (_damage * ((1 - (_unit skill "courage")) * 2));

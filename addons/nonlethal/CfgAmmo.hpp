@@ -7,5 +7,6 @@ class CfgAmmo {
         deflectionSlowDown = 0.8;
         hit = 2.0;
         ACE_damageType = "punch";
+        ACE_nonLethalType = "rubber";
     };
 };
