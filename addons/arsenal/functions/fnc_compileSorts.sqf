@@ -64,13 +64,18 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
     private _class = configName _x;
     private _displayName = getText (_x >> "displayName");
     private _statement = getText (_x >> "statement");
+    private _condition = getText (_x >> "condition");
     (getArray (_x >> "tabs")) params ["_leftTabsList", "_rightTabsList"];
 
     if (_statement != "") then {
         _statement = compile _statement;
     };
 
-    _finalArray = ["", _displayName, _statement];
+    if (_condition != "") then {
+        _condition = compile _condition;
+    };
+
+    _finalArray = ["", _displayName, _statement, _condition];
 
     if !(_leftTabsList isEqualTo []) then {
         [_sortListLeftPanel, _leftTabsList, "L"] call _fnc_addToTabs;

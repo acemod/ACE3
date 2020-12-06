@@ -302,6 +302,7 @@
             <Portuguese>Não foi possível ativar o bico de combustível</Portuguese>
             <French>Impossible de démarrer la pompe</French>
             <Czech>Nepodařilo se zapnout trysku</Czech>
+            <Turkish>Yakıt pompası başlatılamadı</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -461,6 +462,7 @@
             <Korean>%1 리터가 재급유되었습니다.</Korean>
             <Chinesesimp>已加入%1公升</Chinesesimp>
             <Chinese>已加入%1公升</Chinese>
+            <Turkish>%1 litre dolduruldu</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>

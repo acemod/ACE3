@@ -117,6 +117,7 @@
             <Korean>대상이 가리키는곳을 보이게 합니다.</Korean>
             <Chinesesimp>显示指向标记给玩家自己。此选项设定并不影响其他玩家能否看到指示标记</Chinesesimp>
             <Chinese>顯示指向指示器給玩家自己。此選項設定並不影響其他玩家能否看到指示器</Chinese>
+            <Turkish>İşaret eden oyuncu için göstergeyi oluşturun. Bu seçenek, diğer oyuncuların göstergeyi görüp görmeyeceğini etkilemez</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorColor_name">
             <English>Pointing indicator</English>
@@ -167,6 +168,7 @@
             <Korean>"손가락으로 가리키기"행동</Korean>
             <Chinesesimp>使"手指指向在"</Chinesesimp>
             <Chinese>使"手指指向在"</Chinese>
+            <Turkish>Animasyon "Parmakla Gösterme"</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>

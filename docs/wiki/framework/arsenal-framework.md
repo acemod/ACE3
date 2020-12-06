@@ -183,13 +183,13 @@ class ace_arsenal_stats {
 
     class TAG_myStat: statBase {
         scope = 2; // Only scope 2 show up in arsenal, scope 1 is used for base classes.
-        displayName= "Test entry title"; // Title of the stat.
+        displayName = "Test entry title"; // Title of the stat.
         priority = 0; // A higher value means the stat will be displayed higher on the page.
         stats[] = {"mySuperStat"}; // Array of strings to pass to the statements, typically
         showBar = 1; // 0 disabled; 1 enabled;
         showText = 1; // 0 disabled; 1 enabled;
         barStatement = "1"; // Statement evaluated to set the bar progress, needs to return a NUMBER.
-        textStatement = "test entry" // statement evaluated to set the text entry, can return anything.
+        textStatement = "test entry"; // statement evaluated to set the text entry, can return anything.
         condition = "true"; // Condition for the stats to be displayed, default is true if not defined, needs to return a BOOL.
         tabs[] = { {0,1,2}, { } }; // Arrays of tabs, left array is left tabs, right array is right tabs.
     };

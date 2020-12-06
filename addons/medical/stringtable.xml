@@ -31,6 +31,7 @@
             <Czech>Pravděpodobnost probuzení se z bezvědomí</Czech>
             <Polish>Szansa na wybudzenie nieprzytomnego</Polish>
             <Spanish>Posibilidad de recuperar la conciencia</Spanish>
+            <Turkish>Bayılmış Bir Kişinin Uyanma Şansı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_Description">
             <English>The probability that a person with stable vitals will wake up from unconsciousness (checked every 15 seconds).</English>
@@ -45,6 +46,7 @@
             <Czech>Pravděpodobnost, že se jednotka se stabilními životními známkami probudí z bezvědomí (zkoušeno každých 15 vteřin).</Czech>
             <Polish>Prawdopodobieństwo, że jednostka ze stabilnymi parametrami życiowymi obudzi się z nieprzytomności (sprawdzane co 15 sekund).</Polish>
             <Spanish>La probabilidad de que una unidad estabilizada recupere la conciencia y se levante (se comprueba cada 15 segundos)</Spanish>
+            <Turkish>Hayati değerleri stabil olan bir kişinin bilinçsizlikten uyanma olasılığı (her 15 saniyede bir kontrol edilir).</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_DisplayName">
             <English>Epinephrine Wake Up Chance Boost</English>
@@ -56,6 +58,7 @@
             <Japanese>アドレナリン覚醒率の上昇</Japanese>
             <Czech>Zvýšení pravděpodobnosti probuzení s Epinefrinem</Czech>
             <Russian>Увеличение шанса очнуться от адреналина</Russian>
+            <Turkish>Epinefrin Uyanma Şansı Artışı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>Increases how often spontaneous wake up checks happen when patient has Epinephrine in their system.</English>
@@ -70,6 +73,7 @@
             <Spanish>Incrementa con que frecuencia se comprueba el despertar cuando el paciente tiene epinefrina en su sistema</Spanish>
             <German>Erhöht wie oft Aufwachprüfungen passieren, wenn ein Patient Epinephrin im Blutkreislauf hat.</German>
             <Russian>Увеличивает частоту проверок на спонтанное пробуждение, когда пациент под действием адреналина.</Russian>
+            <Turkish>Hastanın sisteminde Epinefrin olduğunda rasgele uyanma kontrollerinin ne sıklıkla gerçekleştiğini artırır.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
@@ -84,6 +88,7 @@
             <Polish>Kuśtykanie</Polish>
             <Spanish>Cojera</Spanish>
             <German>Humpeln</German>
+            <Turkish>Topallama</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_Description">
             <English>Controls whether open or bandaged wounds cause a person to limp.</English>
@@ -98,6 +103,7 @@
             <Spanish>Controla si las heridas abiertas o vendadas hacen que una persona cojee.</Spanish>
             <German>Stellt ein, ob offene oder bandagierte Wunden eine Person zum Humpeln bringen.</German>
             <Russian>Контролирует хромоту в случае открытых или забинтованных ран.</Russian>
+            <Turkish>Açık veya sargılı yaraların bir kişinin topallamasına neden olup olmadığını kontrol eder.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpOnOpenWounds">
             <English>Limp on Open Wounds</English>
@@ -112,6 +118,7 @@
             <Polish>Kuśtykanie przy otwartych ranach</Polish>
             <Spanish>Cojera en heridas abiertas</Spanish>
             <German>Humpeln bei offenen Wunden</German>
+            <Turkish>Açık Yaralarda Topallama</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Limping_LimpRequiresStitching">
             <English>Limp on Open or Bandaged Wounds</English>
@@ -126,6 +133,7 @@
             <Polish>Kuśtykanie przy otwartych ranach lub zabandażowanych ranach</Polish>
             <Spanish>Cojera en heridas abiertas o vendadas</Spanish>
             <German>Humpeln bei offenen oder bandagierten Wunden</German>
+            <Turkish>Açık veya Sargılı Yaralarda Topallama</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_DisplayName">
             <English>Fractures</English>
@@ -140,6 +148,7 @@
             <Polish>Złamania</Polish>
             <Spanish>Fracturas</Spanish>
             <German>Brüche</German>
+            <Turkish>Kırıklar</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_Description">
             <English>Controls the effect of using splints to treat fractures.\nWhen disabled, injuries will not cause fractures.</English>
@@ -154,6 +163,7 @@
             <Spanish>Controla el efecto del uso de férulas para tratar fracturas. \n Cuando está desactivado, las lesiones no causan fracturas.</Spanish>
             <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
             <Russian>Управляет эффектом использования шин для лечения переломов.\nПри отключении травмы не вызывают переломов.</Russian>
+            <Turkish>Kırıkları tedavi etmek için atel kullanmanın etkisini kontrol eder. \ Devre dışı bırakıldığında, yaralanmalar kırılmaya neden olmaz.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsFully">
             <English>Splints Fully Heal Fractures</English>
@@ -168,6 +178,7 @@
             <Polish>Szyny leczą zupełnie złamania</Polish>
             <Spanish>Férulas sanan completamente las fracturas</Spanish>
             <German>Schienen heilen Knochenbrüche vollständig</German>
+            <Turkish>Ateller Kırıkları Tamamen İyileştirir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoSprint">
             <English>Splints Heal, but Cannot Sprint</English>
@@ -182,11 +193,13 @@
             <Polish>Szyny leczą, ale uniemożliwiają sprint</Polish>
             <Spanish>Las férulas sanan, pero no pueden correr</Spanish>
             <German>Schienen heilen, aber ermöglichen kein Sprinten</German>
+            <Turkish>Ateller İyileştirir, ancak Koşamaz</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoJog">
             <English>Splints Heal, but Cannot Jog</English>
             <French>Les attelles guérissent les fractures, mais empêchent de courir</French>
             <Japanese>添え木で治癒可能、駆け足できないように</Japanese>
+            <Turkish>Ateller İyileştirir, Ama Koşu Yapamaz</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
@@ -196,6 +209,7 @@
             <Czech>Šance na zlomeninu</Czech>
             <Russian>Шанс перелома</Russian>
             <Polish>Szansa na złamanie</Polish>
+            <Turkish>Kırılma Şansı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
@@ -205,6 +219,7 @@
             <Czech>Výška šance kdy zranění způsobující zlomeniny skutečně způsobí zlomeninu.</Czech>
             <Russian>Вероятность перелома при получении соответствующих ран.</Russian>
             <Polish>Prawdopodobieństwo złamania kości w wyniku rany mogącej powodować złamania.</Polish>
+            <Turkish>Yaraya neden olan bir kırığın kırılma olasılığı.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -221,6 +236,7 @@
             <Korean>활성</Korean>
             <Chinesesimp>被启用给</Chinesesimp>
             <Chinese>被啟用給</Chinese>
+            <Turkish>İçin etkinleştirildi</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
@@ -237,6 +253,7 @@
             <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시요.</Korean>
             <Chinesesimp>选择进阶医疗系统影响的对象</Chinesesimp>
             <Chinese>選擇進階醫療系統影響的對象</Chinese>
+            <Turkish>Gelişmiş tıbbi sistemin hangi üniteler için etkinleştirileceğini seçin</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_playeronly">
             <English>Players only</English>
@@ -253,6 +270,7 @@
             <Korean>플레이어만</Korean>
             <Chinesesimp>只限玩家</Chinesesimp>
             <Chinese>只限玩家</Chinese>
+            <Turkish>Sadece oyuncular</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_playersandai">
             <English>Players and AI</English>
@@ -269,6 +287,7 @@
             <Korean>플레이어 및 인공지능</Korean>
             <Chinesesimp>玩家与AI</Chinesesimp>
             <Chinese>玩家與AI</Chinese>
+            <Turkish>Oyuncular ve AI</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableVehicleCrashes_DisplayName">
             <English>Vehicle Crashes</English>
@@ -285,6 +304,7 @@
             <Korean>차량 사고</Korean>
             <Chinesesimp>载具碰撞</Chinesesimp>
             <Chinese>載具碰撞</Chinese>
+            <Turkish>Araç Kazaları</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableVehicleCrashes_Description">
             <English>Do units take damage from a vehicle crash?</English>
@@ -301,6 +321,7 @@
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
             <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
+            <Turkish>Birimler bir araç kazasından hasar alır mı?</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>
@@ -317,6 +338,7 @@
             <Korean>언제나</Korean>
             <Chinesesimp>任何时间</Chinesesimp>
             <Chinese>任何時間</Chinese>
+            <Turkish>Her Zaman</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
@@ -366,6 +388,7 @@
             <Korean>%1 부터의 거리가 너무 멀어 치료할 수 없습니다</Korean>
             <Chinesesimp>设定当距离超过%1将不能使用治疗动作</Chinesesimp>
             <Chinese>設定當距離超過%1將不能使用治療動作</Chinese>
+            <Turkish>% 1'e olan mesafe tedavi için çok uzak</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_openLid">
             <English>Open lid</English>
@@ -381,6 +404,7 @@
             <Portuguese>Abrir Tampa</Portuguese>
             <Czech>Otevřít víko</Czech>
             <Spanish>Abrir tapa</Spanish>
+            <Turkish>Açık Gözkapağı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_closeLid">
             <English>Close lid</English>
@@ -396,6 +420,7 @@
             <Portuguese>Fechar Tampa</Portuguese>
             <Czech>Zavřít víko</Czech>
             <Spanish>Cerrar tapa</Spanish>
+            <Turkish>Kapalı Gözkapağı</Turkish>
         </Key>
     </Package>
 </Project>

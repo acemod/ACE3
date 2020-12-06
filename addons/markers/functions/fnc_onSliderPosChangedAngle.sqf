@@ -25,6 +25,6 @@ if (_direction < 0) then {
     _direction = _direction + 360;
 };
 
-((ctrlParent _ctrl) displayCtrl 1221) ctrlSetText format [localize LSTRING(MarkerDirection), _direction];
+((ctrlParent _ctrl) displayCtrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT) ctrlSetText format [localize LSTRING(MarkerDirection), _direction];
 
 GVAR(currentMarkerAngle) = _data;

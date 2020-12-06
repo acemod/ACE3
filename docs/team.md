@@ -38,7 +38,7 @@ This lists all the maintainers responsible for project management and the overal
   - Coding, Performance, SME
 - [jokoho48](https://github.com/jokoho48){:target="_blank"}
   - Scripting, Model Editing / Import
-- [SilentSpike](https://github.com/SilentSpike){:target="_blank"}
+- [SilentSpike](https://github.com/kymckay){:target="_blank"}
   - Scripting, Config
 - [Ruthberg](https://github.com/ulteq){:target="_blank"}
   - Scripting, Config
@@ -61,6 +61,7 @@ This lists all the maintainers responsible for project management and the overal
 - [mharis001](https://github.com/mharis001){:target="_blank"}
 - [Brandon (TCVM)](https://github.com/TheCandianVendingMachine){:target="_blank"}
 - [veteran29](https://github.com/veteran29){:target="_blank"}
+- [Dahlgren](https://github.com/Dahlgren){:target="_blank"}
 
 ## Contributors
 

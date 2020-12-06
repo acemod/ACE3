@@ -460,6 +460,7 @@
             <Korean>심하게 찢어짐</Korean>
             <Chinese>嚴重撕裂傷</Chinese>
             <Chinesesimp>重度裂伤</Chinesesimp>
+            <Turkish>Büyük Yırtık</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_VelocityWound">
             <English>Velocity Wound</English>
@@ -674,6 +675,7 @@
             <Czech>Práh poškození</Czech>
             <Russian>Порог урона</Russian>
             <Polish>Próg obrażeń jednostki</Polish>
+            <Turkish>Birim Hasar Katsayısı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
             <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
@@ -683,6 +685,7 @@
             <Czech>Určuje kolik poškození může jednotka utrpět než upadne do bezvědomí. (pro použití standardní hodnoty mise zadejte 0)</Czech>
             <Russian>Устанавливает количество урона, которое может получить юнит перед тем, как потерять сознание. (0 для значения миссии)</Russian>
             <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
+            <Turkish>Bilinçsiz duruma geçmeden önce bir birimin alabileceği hasar miktarını ayarlar. (Görev varsayılanı için 0)</Turkish>
         </Key>
     </Package>
 </Project>

@@ -92,7 +92,6 @@ if (({((_x select 0) in _listOfItemsToRemove) && {(getNumber (configFile >> "Cfg
 };
 //Verify holder has mags unit had
 if (!([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd] call FUNC(verifyMagazinesMoved))) then {
-    ERR = [_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd];
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Crate Magazines not in holder"] call FUNC(eventTargetFinish);
 };
