@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NonLethal">
+        <!--CBA Settings-->
         <Key ID="STR_ACE_NonLethal_Category">
             <English>ACE Non-Lethal</English>
         </Key>
+        <Key ID="STR_ACE_NonLethal_Category_AI">
+            <English>AI</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_LimpChance_DisplayName">
+            <English>Limp Chance</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_LimpChance_Description">
+            <English>Chance unit will start limping once reaching threshold</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_LimpThreshold_DisplayName">
+            <English>Limp Threshold</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_LimpThreshold_Description">
+            <English>Non-Lethal damage threshold for unit to start limping</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_SurrenderChance_DisplayName">
+            <English>Surrender Chance</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_SurrenderChance_Description">
+            <English>Chance unit will surrender once reaching threshold</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_SurrenderThreshold_DisplayName">
+            <English>Surrender Threshold</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_SurrenderThreshold_Description">
+            <English>Non-Lethal damage threshold for unit to surrender</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_SurrenderCourage_DisplayName">
+            <English>Automatic Surrender Courage</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_SurrenderCourage_Description">
+            <English>Any unit with courage below this value will surrender automatically</English>
+        </Key>
+        <!--Magazines-->
         <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_Name">
             <English>2Rnd Rubber Slug</English>
         </Key>
