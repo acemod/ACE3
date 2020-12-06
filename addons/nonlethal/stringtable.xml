@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="NonLethal">
+        <Key ID="STR_ACE_NonLethal_Category">
+            <English>ACE NonLethal</English>
+        </Key>
+    </Package>
+</Project>
