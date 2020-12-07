@@ -89,11 +89,11 @@
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
-    private _hasTimestamp = false;
-    if !(markerText GVAR(editingMarker) isEqualTo "") then {
+    private _markerText = markerText GVAR(editingMarker);
+    if (_markerText != "") then {
         // fill text input with text from marker which is being edited
-        private _originalText = markerText GVAR(editingMarker) call FUNC(removeTimestamp);
-        _text ctrlSetText _originalText;
+        _markerText = _markerText call FUNC(removeTimestamp);
+        _text ctrlSetText _markerText;
     };
 
     //Focus on the text input
@@ -152,7 +152,7 @@
             _ctrlTimestamp ctrlEnable false;
             _ctrlTimestamp ctrlSetTooltip LLSTRING(TimestampTooltipNoWatch);
         } else {
-            _ctrlTimestamp cbSetChecked (GETUVAR(GVAR(timestampChecked),false) || _hasTimestamp);
+            _ctrlTimestamp cbSetChecked (uiNamespace getVariable [QGVAR(timestampChecked), false]);
         };
     } else {
         _ctrlTimestampText ctrlEnable false;
