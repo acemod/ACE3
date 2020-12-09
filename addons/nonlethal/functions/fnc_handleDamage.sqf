@@ -35,7 +35,7 @@ if (_nonLethalType isEqualTo "taser") then {
     private _taserWorked = random 1 <= GVAR(taserWorkChance);
     if (_taserWorked) then {
         _threshold =  _threshold + (_damage * GVAR(thresholdFactor)) + 10;
-        private _initPain = _unit getVariable [QEGVAR(medical,pain), 0]
+        private _initPain = _unit getVariable [QEGVAR(medical,pain), 0];
         [_unit, 1] call ace_medical_fnc_adjustPainLevel;
         if !(currentWeapon _unit isEqualTo "") then {
             [_unit, currentWeapon _unit] call CBA_fnc_dropWeapon;
