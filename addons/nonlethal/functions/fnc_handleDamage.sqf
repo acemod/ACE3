@@ -35,7 +35,8 @@ if (_nonLethalType isEqualTo "taser") then {
     private _taserWorked = random 1 <= GVAR(taserWorkChance);
     if (_taserWorked) then {
         _threshold =  _threshold + (_damage * GVAR(thresholdFactor)) + 10;
-        [_unit, (0.3 max (random 0.6))] call ace_medical_fnc_adjustPainLevel;
+        private _initPain = _unit getVariable [QEGVAR(medical,pain), 0]
+        [_unit, 1] call ace_medical_fnc_adjustPainLevel;
         if !(currentWeapon _unit isEqualTo "") then {
             [_unit, currentWeapon _unit] call CBA_fnc_dropWeapon;
         };
@@ -43,9 +44,11 @@ if (_nonLethalType isEqualTo "taser") then {
         [_unit, "ApanPercMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon", 1] call EFUNC(common,doAnimation); //fall to ground
         _unit setVariable [QGVAR(threshold), _threshold];
         [{
-            [_this, "", 1] call EFUNC(common,doAnimation);
-            [QEGVAR(common,setAnimSpeedCoef), [_this, 1]] call CBA_fnc_globalEvent;
-        }, _unit, 2] call CBA_fnc_waitAndExecute;
+            params ["_unit", "_initPain"];
+            [_unit, "", 1] call EFUNC(common,doAnimation);
+            [QEGVAR(common,setAnimSpeedCoef), [_unit, 1]] call CBA_fnc_globalEvent;
+            [_unit, (_initPain - 1)] call ace_medical_fnc_adjustPainLevel;
+        }, [_unit, _initPain], 2] call CBA_fnc_waitAndExecute;
     };
 };
 
