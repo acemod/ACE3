@@ -22,6 +22,7 @@
         </Key>
         <Key ID="STR_ACE_NonLethal_TaserWorkChance_Description">
             <English>Chance that a deployed taser will work</English>
+        </Key>
         <Key ID="STR_ACE_NonLethal_LimpChance_DisplayName">
             <English>Limp Chance</English>
         </Key>
