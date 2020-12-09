@@ -27,6 +27,7 @@ private _threshold = _unit getVariable [QGVAR(threshold), 0];
 
 if (_nonLethalType isEqualTo "rubber") then {
     _threshold =  _threshold + (_damage * (0.01 max (1 - (_unit skill "courage"))) * GVAR(thresholdFactor));
+    [_unit, (0.1 max (random 0.35))] call ace_medical_fnc_adjustPainLevel;
     _unit setVariable [QGVAR(threshold), _threshold];
 };
 
@@ -34,6 +35,7 @@ if (_nonLethalType isEqualTo "taser") then {
     private _taserWorked = random 1 <= GVAR(taserWorkChance);
     if (_taserWorked) then {
         _threshold =  _threshold + (_damage * GVAR(thresholdFactor)) + 10;
+        [_unit, (0.3 max (random 0.6))] call ace_medical_fnc_adjustPainLevel;
         if !(currentWeapon _unit isEqualTo "") then {
             [_unit, currentWeapon _unit] call CBA_fnc_dropWeapon;
         };
