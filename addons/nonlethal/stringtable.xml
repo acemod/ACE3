@@ -23,6 +23,12 @@
         <Key ID="STR_ACE_NonLethal_TaserWorkChance_Description">
             <English>Chance that a deployed taser will work</English>
         </Key>
+        <Key ID="STR_ACE_NonLethal_TaserPain_DisplayName">
+            <English>Lingering Taser Pain</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_TaserPain_Description">
+            <English>Pain that will remain on the unit after recovering from being tased.</English>
+        </Key>
         <Key ID="STR_ACE_NonLethal_LimpChance_DisplayName">
             <English>Limp Chance</English>
         </Key>

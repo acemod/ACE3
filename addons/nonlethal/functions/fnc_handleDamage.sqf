@@ -40,15 +40,17 @@ if (_nonLethalType isEqualTo "taser") then {
         if !(currentWeapon _unit isEqualTo "") then {
             [_unit, currentWeapon _unit] call CBA_fnc_dropWeapon;
         };
-        [QEGVAR(common,setAnimSpeedCoef), [_unit, 2]] call CBA_fnc_globalEvent;
-        [_unit, "ApanPercMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon", 1] call EFUNC(common,doAnimation); //fall to ground
+        if !(isPlayer _unit) then {
+            _unit setUnitPos "DOWN"; //fall to ground
+        };
         _unit setVariable [QGVAR(threshold), _threshold];
         [{
             params ["_unit", "_initPain"];
-            [_unit, "", 1] call EFUNC(common,doAnimation);
-            [QEGVAR(common,setAnimSpeedCoef), [_unit, 1]] call CBA_fnc_globalEvent;
-            [_unit, (_initPain - 1)] call ace_medical_fnc_adjustPainLevel;
-        }, [_unit, _initPain], 2] call CBA_fnc_waitAndExecute;
+            if !(isPlayer _unit) then {
+                _unit setUnitPos "AUTO"; //allow to resume stances
+            };
+            [_unit, (_initPain - 1) + GVAR(taserPain)] call ace_medical_fnc_adjustPainLevel;
+        }, [_unit, _initPain], 3] call CBA_fnc_waitAndExecute;
     };
 };
 

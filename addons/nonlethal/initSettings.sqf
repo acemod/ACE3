@@ -15,6 +15,14 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(taserPain), "SLIDER",
+    [LSTRING(TaserPain_DisplayName), LSTRING(TaserPain_Description)],
+    [LSTRING(Category), LSTRING(Category_Common)],
+    [0, 1, 0.2, 3], // [_min, _max, _default, _trailingDecimals]
+    true // isGlobal
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(limpChance), "SLIDER",
     [LSTRING(LimpChance_DisplayName), LSTRING(LimpChance_Description)],
     [LSTRING(Category), LSTRING(Category_AI)],
