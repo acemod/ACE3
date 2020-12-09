@@ -3,12 +3,12 @@
 if (!hasInterface) exitWith {};
 
 ["ACE3 Common", QGVAR(wipeGlasses), localize LSTRING(WipeGlasses), {
-    if (GVAR(effects) != 2) exitWith {false}; //Can only wipe if full effects setting is set
-    if (!GETVAR(ace_player,ACE_isUnconscious,false)) exitWith {
-        call FUNC(clearGlasses);
-        true
-    };
-    false
+    // Conditions: specific
+    if !(call FUNC(canWipeGlasses)) exitWith {false};
+
+    call FUNC(clearGlasses);
+
+    true
 },
 {false},
 [20, [true, true, false]], false] call CBA_fnc_addKeybind;
@@ -85,7 +85,7 @@ if (!hasInterface) exitWith {};
 
 
     // // ---Add the Dust/Dirt/Rain Effects---
-    if (GVAR(effects) == 2) then {
+    if (GVAR(effects) in [2, 3]) then {
 
         // Register fire event handler
         ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
@@ -133,12 +133,16 @@ if (!hasInterface) exitWith {};
 
         }] call CBA_fnc_addEventHandler;
 
+        // Handle "rain is snow" maps like CUP's Chernarus Winter
+        private _rainSpeed = getNumber (configFile >> "CfgWorlds" >> worldName >> "RainParticles" >> "dropSpeed");
+        GVAR(mapHasRain) = _rainSpeed > 10; // CAWorld default is 25, Chernarus_Winter is 1
+
         // goggles effects main PFH
         [{
             BEGIN_COUNTER(goggles);
 
             // rain
-            call FUNC(applyRainEffect);
+            if (GVAR(mapHasRain)) then FUNC(applyRainEffect);
 
             // auto remove effects under water
             if (GVAR(EffectsActive) && {underwater ACE_player} && {[goggles ACE_player] call FUNC(isDivingGoggles)}) then {

@@ -35,7 +35,7 @@ if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
 // same as dragObjectPFH, checks if object is deleted or dead OR (target moved away from carrier (weapon disasembled))
 if (!alive _target || {_unit distance _target > 10}) then {
     TRACE_4("dead/distance",_unit,_target,_timeOut,CBA_missionTime);
-    [_unit, _target] call FUNC(dropObject);
+    [_unit, _target] call FUNC(dropObject_carry);
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
@@ -54,11 +54,11 @@ if (_target isKindOf "CAManBase") then {
 
         // drop if in timeout
         private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
-        [_unit, _draggedObject] call FUNC(dropObject);
+        [_unit, _draggedObject] call FUNC(dropObject_carry);
     };
 
     // wait for the unit to stand up
-    if (stance _unit == "STAND") exitWith {
+    if (stance _unit isEqualto "STAND") exitWith {
         TRACE_4("Start carry object",_unit,_target,_timeOut,CBA_missionTime);
         [_unit, _target] call FUNC(carryObject);
 

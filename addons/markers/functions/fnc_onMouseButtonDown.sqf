@@ -27,7 +27,7 @@ if (_button != 0 || {!([_shift, _ctrl, _alt] isEqualTo [false, false, true])}) e
 
 ctrlMapMouseOver _ctrlMap params [["_type", ""], "_marker"];
 
-if (_type == "marker" && {_marker find "_USER_DEFINED" != -1 && {call FUNC(canMove)}}) then {
+if (_type == "marker" && {_marker find "_USER_DEFINED" != -1 && {_marker call FUNC(canMove)}}) then {
     _ctrlMap ctrlMapCursor ["Track", "Move"];
 
     private _originalPos = getMarkerPos _marker;

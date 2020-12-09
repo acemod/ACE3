@@ -16,6 +16,7 @@
             <Korean>레이저 지시기</Korean>
             <Chinesesimp>雷射指示器</Chinesesimp>
             <Chinese>雷射指示器</Chinese>
+            <Turkish>Lazer Işaretleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_red">
             <English>Laser Pointer (red)</English>
@@ -32,6 +33,7 @@
             <Korean>레이저 지시기 (빨강)</Korean>
             <Chinesesimp>雷射指示器 (红色)</Chinesesimp>
             <Chinese>雷射指示器 (紅色)</Chinese>
+            <Turkish>Lazer Işaretleyici (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_green">
             <English>Laser Pointer (green)</English>
@@ -48,6 +50,7 @@
             <Korean>레이저 지시기 (초록)</Korean>
             <Chinesesimp>雷射指示器 (绿色)</Chinesesimp>
             <Chinese>雷射指示器 (綠色)</Chinese>
+            <Turkish>Lazer Işaretleyici (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Description">
             <English>Emits visible light. </English>
@@ -64,11 +67,12 @@
             <Korean>밝은 곳에서도 보임</Korean>
             <Chinesesimp>发射出可见光</Chinesesimp>
             <Chinese>發射出可見光</Chinese>
+            <Turkish>Görünür ışık yayar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_useLaser">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
             <Czech>&lt;t color='#9cf953'&gt;Použití: &lt;/t&gt;Zapnout/vypnout laser</Czech>
-            <French>&lt;t color='#9cf953'&gt;Utiliser : &lt;/t&gt;laser allumé/éteint</French>
+            <French>&lt;t color='#9cf953'&gt;Utilisation : &lt;/t&gt;Allumer/Éteindre le laser</French>
             <German>&lt;t color='#9cf953'&gt;Benutzen: &lt;/t&gt;Laser EIN/AUS</German>
             <Italian>&lt;t color='#9cf953'&gt;Uso: &lt;/t&gt;Laser ON/OFF</Italian>
             <Polish>&lt;t color='#9cf953'&gt;Użyj: &lt;/t&gt;wł./wył. laser</Polish>
@@ -80,6 +84,7 @@
             <Korean>&lt;t color='#9cf953'&gt;사용키: &lt;/t&gt;레이저 켜기/끄기</Korean>
             <Chinesesimp>&lt;t color='#9cf953'&gt;使用: &lt;/t&gt;雷射开启/关闭</Chinesesimp>
             <Chinese>&lt;t color='#9cf953'&gt;使用: &lt;/t&gt;雷射開啟/關閉</Chinese>
+            <Turkish>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Laser">
             <English>Laser</English>
@@ -96,6 +101,7 @@
             <Korean>레이저</Korean>
             <Chinesesimp>雷射</Chinesesimp>
             <Chinese>雷射</Chinese>
+            <Turkish>Lazer</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -112,13 +118,14 @@
             <Korean>적외선 레이저</Korean>
             <Chinesesimp>红外线雷射</Chinesesimp>
             <Chinese>紅外線雷射</Chinese>
+            <Turkish>IR Lazer</Turkish>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>
             <German>Umschalten Laser / IR-Laser</German>
             <Polish>Przełącz Laser / Laser IR</Polish>
             <Russian>Изменить режим Лазер / ИК-лазер</Russian>
-            <French>Changer Laser / Laser IR</French>
+            <French>Alterner laser/laser IR</French>
             <Italian>Alterna Laser / IR Laser</Italian>
             <Spanish>Cambiar láser / Láser IR</Spanish>
             <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
@@ -128,6 +135,7 @@
             <Korean>레이저 / 적외선 레이저 전환</Korean>
             <Chinesesimp>切换雷射/红外线雷射</Chinesesimp>
             <Chinese>切換雷射/紅外線雷射</Chinese>
+            <Turkish>Değiştir Lazer/IR Lazer</Turkish>
         </Key>
     </Package>
 </Project>

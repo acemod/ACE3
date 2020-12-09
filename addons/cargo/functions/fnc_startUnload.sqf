@@ -72,10 +72,17 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     [
         GVAR(loadTimeCoefficient) * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
-        {["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
-        {},
+        {TRACE_1("unload finish",_this); ["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
+        {TRACE_1("unload fail",_this);},
         localize LSTRING(UnloadingItem),
-        {true},
+        {
+            (_this select 0) params ["_item", "_target", "_player"];
+            
+            (alive _target)
+            && {locked _target < 2}
+            && {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+            && {_item in (_target getVariable [QGVAR(loaded), []])}
+        },
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
 } else {

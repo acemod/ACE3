@@ -211,7 +211,7 @@ for "_dataIndex" from 0 to 9 do {
         };
 
         case 9: {
-            for "_subIndex" from 0 to 4 do {
+            for "_subIndex" from 0 to 5 do {
                 private _item = (_loadout select _dataIndex) select _subIndex;
 
                 if (_item != "") then {

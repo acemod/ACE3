@@ -18,14 +18,14 @@
 params ["_player"];
 
 if (GVAR(EnableSwitchUnits)) then {
-    private _sides = [];
+    GVAR(switchableSides) = [];
 
-    if (GVAR(SwitchToWest)) then {_sides pushBack west;};
-    if (GVAR(SwitchToEast)) then {_sides pushBack east;};
-    if (GVAR(SwitchToIndependent)) then {_sides pushBack independent;};
-    if (GVAR(SwitchToCivilian)) then {_sides pushBack civilian;};
+    if (GVAR(SwitchToWest)) then {GVAR(switchableSides) pushBack west;};
+    if (GVAR(SwitchToEast)) then {GVAR(switchableSides) pushBack east;};
+    if (GVAR(SwitchToIndependent)) then {GVAR(switchableSides) pushBack independent;};
+    if (GVAR(SwitchToCivilian)) then {GVAR(switchableSides) pushBack civilian;};
 
     if (_player getVariable ["ACE_CanSwitchUnits", false]) then {
-        [_player, _sides] call FUNC(initPlayer);
+        [_player] call FUNC(initPlayer);
     };
 };

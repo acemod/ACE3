@@ -29,6 +29,7 @@ class CfgAmmo {
             // Attack profile type selection
             defaultAttackProfile = QGVAR(directAttack);
             attackProfiles[] = {QGVAR(directAttack), QGVAR(overflyTopAttack)};
+            useModeForAttackProfile = 1;
             showHintOnCycle = 1;
 
             // Run once at fired event

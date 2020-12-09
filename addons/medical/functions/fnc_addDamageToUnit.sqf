@@ -2,61 +2,68 @@
 /*
  * Author: PabstMirror
  * Manually Apply Damage to a unit (can cause lethal damage)
- * NOTE: because of caching, this will not have instant effects (~3 frame delay)
  *
  * Arguments:
  * 0: The Unit <OBJECT>
  * 1: Damage to Add <NUMBER>
- * 2: Selection ("head", "body", "hand_l", "hand_r", "leg_l", "leg_r") <STRING>
+ * 2: Body part ("Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg") <STRING>
  * 3: Projectile Type <STRING>
+ * 4: Source <OBJECT>
+ * 5: Non-directional damage source array (Optional) <ARRAY>
  *
  * Return Value:
- * HandleDamage's return <NUMBER>
+ * Successful <BOOL>
  *
  * Example:
- * [player, 0.8, "leg_r", "bullet"] call ace_medical_fnc_addDamageToUnit
- * [cursorTarget, 1, "body", "stab"] call ace_medical_fnc_addDamageToUnit
+ * [player, 0.8, "rightleg", "bullet"] call ace_medical_fnc_addDamageToUnit
+ * [cursorTarget, 1, "body", "stab", player] call ace_medical_fnc_addDamageToUnit
  *
  * Public: Yes
  */
 // #define DEBUG_TESTRESULTS
 
-params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_selection", "", [""]], ["_typeOfDamage", "", [""]]];
-TRACE_4("params",_unit,_damageToAdd,_selection,_typeOfDamage);
+params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_bodyPart", "", [""]], ["_typeOfDamage", "", [""]], ["_instigator", objNull, [objNull]], ["_damageSelectionArray", [], [[]]]];
+TRACE_6("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray);
 
-_selection = toLower _selection;
-if ((isNull _unit) || {!local _unit} || {!alive _unit}) exitWith {ERROR_1("addDamageToUnit - badUnit %1", _this); -1};
-if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this); -1};
-if (!(_selection in GVAR(SELECTIONS))) exitWith {ERROR_1("addDamageToUnit - bad selection %1", _this); -1};
+_bodyPart = toLower _bodyPart;
+private _bodyPartIndex = ALL_BODY_PARTS find _bodyPart;
+if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }; // 2nd attempt with selection names ("hand_l", "hand_r", "leg_l", "leg_r")
+if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1", _this); false};
+if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]", _this, local _unit); false};
+if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this); false};
 
-//Get the hitpoint and the index
-private _hitpoint = [_unit, _selection, true] call ace_medical_fnc_translateSelections;
-(getAllHitPointsDamage _unit) params [["_allHitPoints", []]];
-private _hitpointIndex = -1;
-{   //case insensitive find
-    if (_x == _hitpoint) exitWith {_hitpointIndex = _forEachIndex;};
-} forEach _allHitPoints;
-if (_hitpointIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad hitpointIndex %1", _this); -1};
+// Extension is case sensitive and expects this format (different from ALL_BODY_PARTS)
+_bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;
 
-private _currentDamage = _unit getHitIndex _hitpointIndex;
+if (_damageSelectionArray isEqualTo []) then { // this will only be used if damage type is not location specific
+    _damageSelectionArray = [HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1, HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1];
+};
+
+if (!isNull _instigator) then {
+    _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
+    _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
+};
 
 #ifdef DEBUG_TESTRESULTS
-private _checkAtFrame = diag_frameno + 5;
-private _partNumber = [_selection] call FUNC(selectionNameToNumber);
-private _startDmg = (_unit getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _partNumber;
-private _debugCode = {
-    params ["", "_unit", "_startDmg", "_damageToAdd", "_partNumber"];
-    private _endDmg = (_unit getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _partNumber;
-    if ((!alive _unit) || {_endDmg > _startDmg}) then {
-        INFO_6("addDamageToUnit - PASSED - [unit:%1, partNo:%2, addDmg:%3] results:[alive:%4 old:%5 new:%6]", _unit, _partNumber, _damageToAdd, alive _unit, _startDmg, _endDmg);
-    } else {
-        ERROR_6("addDamageToUnit - FAILED - [unit:%1, partNo:%2, addDmg:%3] results:[alive:%4 old:%5 new:%6]", _unit, _partNumber, _damageToAdd, alive _unit, _startDmg, _endDmg);
-    };
-};
-[{diag_frameno > (_this select 0)}, _debugCode, [_checkAtFrame, _unit, _startDmg, _damageToAdd, _partNumber]] call CBA_fnc_waitUntilAndExecute;
+private _startDmg = +(_unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]);
+private _startPain = GET_PAIN(_unit);
 #endif
 
-private _return = [_unit, _selection, (_currentDamage + _damageToAdd), _unit, _typeOfDamage, _hitpointIndex, objNull] call FUNC(handleDamage);
-TRACE_1("handleDamage called",_return);
+[QEGVAR(medical,woundReceived), [_unit, _bodyPart, _damageToAdd, _instigator, _typeOfDamage, _damageSelectionArray]] call CBA_fnc_localEvent;
 
-_return
+#ifdef DEBUG_TESTRESULTS
+private _endDmg = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _endPain = GET_PAIN(_unit);
+private _typeOfDamageAdj = _typeOfDamage call EFUNC(medical_damage,getTypeOfDamage);
+private _config = configFile >> "ACE_Medical_Injuries" >> "damageTypes" >> _typeOfDamageAdj;
+private _selectionSpecific = true;
+if (isClass _config) then {
+    _selectionSpecific = (getNumber (_config >> "selectionSpecific")) == 1;
+} else {
+    WARNING_2("Damage type not in config [%1:%2]", _typeOfDamage, _config);
+};
+INFO_4("Debug AddDamageToUnit: Type [%1] - Selection Specific [%2] - HitPoint [%3 -> %4]",_typeOfDamage,_selectionSpecific,_startDmg select _bodyPartIndex,_endDmg select _bodyPartIndex);
+INFO_4("Pain Change [%1 -> %2] - BodyPartDamage Change [%3 -> %4]",_startPain,_endPain,_startDmg,_endDmg);
+#endif
+
+true

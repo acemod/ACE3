@@ -29,11 +29,16 @@ _nozzle setVelocity [0, 0, 0];
 
 private _groundPosition = getPosASL _nozzle;
 private _posA = (getPosASL _nozzle) vectorAdd [0,0,0.05];
-private _posB = (getPosASL _nozzle) vectorAdd [0,0,-1000];
+private _posB = (getPosASL _nozzle) vectorAdd [0,0,- GVAR(hoseLength)];
 private _intersections = lineIntersectsSurfaces [_posA, _posB, _unit, _nozzle, true, 1, "GEOM"];
 TRACE_1("",_intersections);
 if (_intersections isEqualTo []) then {
-    _groundPosition set [2, (getTerrainHeightASL _groundPosition) + 0.005];
+    WARNING_1("no ground intersections for nozzle drop @ %1",_groundPosition);
+    if (!isNull _unit) then {
+        _groundPosition = getPosASL _unit; // place at unit's feet
+    } else {
+        _groundPosition set [2, (getTerrainHeightASL _groundPosition) + 0.005];
+    };
 } else {
     _groundPosition = ((_intersections select 0) select 0) vectorAdd [0,0,0.005];
 };

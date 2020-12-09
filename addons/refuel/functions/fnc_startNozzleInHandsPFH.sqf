@@ -72,7 +72,7 @@ TRACE_2("start",_unit,_nozzle);
     };
 
     if !(_unit == vehicle _unit && {_unit isEqualTo ACE_player}) exitWith {
-        TRACE_1("stop vehicle/player",_unit,vehicle _unit);
+        TRACE_2("stop vehicle/player",_unit,vehicle _unit);
         DROP_NOZZLE
         UNHOLSTER_WEAPON
         END_PFH

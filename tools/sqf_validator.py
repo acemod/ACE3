@@ -48,6 +48,7 @@ def check_sqf_syntax(filepath):
 
         lastIsCurlyBrace = False
         checkForSemicolon = False
+        onlyWhitespace = True
 
         # Extra information so we know what line we find errors at
         lineNumber = 1
@@ -61,6 +62,7 @@ def check_sqf_syntax(filepath):
                 checkForSemicolon = not re.search('findIf', content, re.IGNORECASE)
 
             if c == '\n': # Keeping track of our line numbers
+                onlyWhitespace = True # reset so we can see if # is for a preprocessor command
                 lineNumber += 1 # so we can print accurate line number information when we detect a possible error
             if (isInString): # while we are in a string, we can ignore everything else, except the end of the string
                 if (c == inStringType):
@@ -84,7 +86,7 @@ def check_sqf_syntax(filepath):
                         if (c == '"' or c == "'"):
                             isInString = True
                             inStringType = c
-                        elif (c == '#'):
+                        elif (c == '#' and onlyWhitespace):
                             ignoreTillEndOfLine = True
                         elif (c == '/'):
                             checkIfInComment = True
@@ -113,6 +115,9 @@ def check_sqf_syntax(filepath):
                         elif (c== '\t'):
                             print("ERROR: Tab detected at {0} Line number: {1}".format(filepath,lineNumber))
                             bad_count_file += 1
+
+                        if (c not in [' ', '\t', '\n']):
+                            onlyWhitespace = False
 
                         if (checkForSemicolon):
                             if (c not in [' ', '\t', '\n', '/']): # keep reading until no white space or comments

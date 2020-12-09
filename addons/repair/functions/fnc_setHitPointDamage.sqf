@@ -62,6 +62,11 @@ if (_hitPointDamageSumOld > 0) then {
 TRACE_5("structuralDamage",_damageOld,_damageNew,_hitPointDamageRepaired,_hitPointDamageSumOld,_realHitpointCount);
 
 // set new structural damage value
+private _damageDisabled = !isDamageAllowed _vehicle;
+if (_damageDisabled) then {
+    _vehicle allowDamage true;
+};
+
 _vehicle setDamage [_damageNew, _useEffects];
 
 //Repair the hitpoint in the damages array:
@@ -74,3 +79,7 @@ _allHitPointDamages set [_hitPointIndex, _hitPointDamage];
 
 // normalize hitpoints
 [_vehicle] call FUNC(normalizeHitPoints);
+
+if (_damageDisabled) then {
+    _vehicle allowDamage false;
+};

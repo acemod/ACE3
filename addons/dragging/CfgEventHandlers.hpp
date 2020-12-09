@@ -21,6 +21,7 @@ class Extended_Init_EventHandlers {
     class CAManBase {
         class ADDON {
             init = QUOTE(_this call DFUNC(initPerson));
+            exclude[] = {"VirtualMan_F"};
         };
     };
     class StaticWeapon {
@@ -50,11 +51,5 @@ class Extended_Killed_EventHandlers {
         class ADDON {
             killed = QUOTE(_this call DFUNC(handleKilled));
         };
-    };
-};
-
-class Extended_DisplayLoad_EventHandlers {
-    class RscDisplayMission {
-        ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
     };
 };

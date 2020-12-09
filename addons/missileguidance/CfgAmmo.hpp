@@ -93,6 +93,7 @@ class CfgAmmo {
             // Attack profile type selection
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
+            useModeForAttackProfile = 1;
         };
     };
     class ACE_Javelin_FGM148_static: ACE_Javelin_FGM148 {

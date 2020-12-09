@@ -16,6 +16,7 @@
  * Public: No
  */
 params ["_unit", "_vehicle"];
+TRACE_2("fastRope",_unit,_vehicle);
 
 //Select unoccupied rope
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];

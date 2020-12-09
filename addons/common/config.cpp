@@ -10,7 +10,7 @@ class CfgPatches {
         author = CSTRING(ACETeam);
         authors[] = {"KoffeinFlummi"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG_COMMON;
+        VERSION_CONFIG;
     };
 };
 
@@ -67,9 +67,7 @@ class ACE_Rsc_Control_Base {
 #include "CompassControl.hpp"
 #include "CfgUIGrids.hpp"
 
-class ACE_Extensions {
-    extensions[] = {};
-};
+class ACE_Extensions {};
 
 class ACE_Tests {
     vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);

@@ -18,7 +18,7 @@ params ["_display", "_control"];
 
 private _ctrlIDC = ctrlIDC _control;
 
-if !(isNil QGVAR(currentLeftPanel)) then {
+if (!isNil QGVAR(currentLeftPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLeftPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
     _previousCtrlBackground ctrlCommit FADE_DELAY;
@@ -36,6 +36,10 @@ _ctrlPanel ctrlSetFade 0;
 _ctrlPanel ctrlCommit FADE_DELAY;
 
 _ctrlPanel lbSetCurSel -1;
+
+// Fill sort options
+private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
+[_display, _control, _sortLeftCtrl] call FUNC(fillSort);
 
 // Handle icons and filling
 switch true do {
@@ -138,8 +142,8 @@ switch true do {
                 {
                     {
                         if (
-                            getnumber (_x >> "disabled") == 0 && 
-                            {getText (_x >> "head") != ""} && 
+                            getnumber (_x >> "disabled") == 0 &&
+                            {getText (_x >> "head") != ""} &&
                             {configName _x != "Default"}
                         ) then {
                             private _configName = configName _x;
@@ -149,8 +153,8 @@ switch true do {
                             _ctrlPanel lbSetTooltip [_lbAdd,format ["%1\n%2",_displayName, _configName]];
                             _x call ADDMODICON;
                         };
-                    } foreach ("isClass _x" configClasses _x);
-                } foreach ("isClass _x" configClasses (configfile >> "cfgfaces"));
+                    } foreach ("true" configClasses _x);
+                } foreach ("true" configClasses (configfile >> "cfgfaces"));
             };
             case IDC_buttonVoice : {
                 private _voices = (configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [(configfile >> "CfgVoice" >> "NoVoice")];
@@ -158,11 +162,11 @@ switch true do {
                     ["CfgVoice", configName _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
                 } foreach _voices;
             };
-            case IDC_buttonInsigna : {
+            case IDC_buttonInsignia : {
                 {
                     ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
                 } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
-                
+
                 {
                     private _displayName = getText (_x >> "displayName");
                     private _className = configName _x;
@@ -187,8 +191,7 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
-private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
-[_sortLeftCtrl, _sortLeftCtrl lbValue (lbCurSel _sortLeftCtrl)] call FUNC(sortPanel);
+[_sortLeftCtrl] call FUNC(sortPanel);
 
 //Select current item
 private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)]) apply {tolower _x};

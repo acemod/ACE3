@@ -29,3 +29,6 @@ if (isServer) then {
 [QGVAR(rearmSuccessEH), LINKFUNC(rearmSuccess)] call CBA_fnc_addEventHandler;
 [QGVAR(rearmSuccessLocalEH), LINKFUNC(rearmSuccessLocal)] call CBA_fnc_addEventHandler;
 
+
+GVAR(magazineNameCache) = [] call CBA_fnc_createNamespace;
+GVAR(originalMagazineNames) = [];

@@ -80,3 +80,23 @@ To create a custom FRIES you will need to look out for a few things:
 The `onCut` and `onPrepare` functions are responsible for opening/closing the helicopter doors and animating the FRIES (if equipped) when the FRIES gets prepared and the ropes get cut.
 
 ACE3 provides two functions that are compatible with most helicopters and all ACE3 FRIES. It is recommended to use the naming scheme for doors that is present in the base game so you can use the already existing functions `ace_fastroping_fnc_onCutCommon` and `ace_fastroping_fnc_onPrepareCommon`. You can however define your own functions if you so desire. Note that these functions run in the unscheduled environment, so commands like `sleep` and `waitUntil` will not work unless you use `spawn`. It is recommended to use `ace_common_fnc_waitAndExecute` and `ace_common_fnc_waitUntilAndExecute` instead though.
+
+## 4. Scripting
+
+### 4.1. Add FRIES to helicopter
+
+`ace_fastroping_fnc_equipFRIES`
+
+|   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Helicopter | Object | Required
+**R** | None | None | Return value
+
+### 4.2. Remove FRIES from helicopter
+
+`ace_fastroping_fnc_unequipFRIES`
+
+|   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Helicopter | Object | Required
+**R** | None | None | Return value

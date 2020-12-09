@@ -59,10 +59,13 @@ if (_createDeploymentGroup) then {
 };
 
 private  _deployTime = 0;
+
 if (getText (_config >> QGVAR(onPrepare)) != "") then {
     _deployTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onPrepare))));
 };
-[{[_this] call FUNC(deployRopes)}, _vehicle, _deployTime] call CBA_fnc_waitAndExecute;
+
+[FUNC(deployRopes), _vehicle, _deployTime] call CBA_fnc_waitAndExecute;
+
 driver _vehicle disableAI "MOVE";
 
 DFUNC(deployAIRecursive) = {

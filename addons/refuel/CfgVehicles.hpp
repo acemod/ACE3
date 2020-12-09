@@ -80,6 +80,7 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 1;
         model = QPATHTOF(data\nozzle.p3d);
+        destrType = "DestructNo";
     };
 
     class All;
@@ -355,6 +356,11 @@ class CfgVehicles {
     };
     class UAV_06_base_F: Helicopter_Base_F {
         // Orange UAV is electrical
+        GVAR(canReceive) = 0;
+    };
+
+    class UGV_02_Base_F: Tank_F {
+        // ED-1D and ED-1E are electrical
         GVAR(canReceive) = 0;
     };
 

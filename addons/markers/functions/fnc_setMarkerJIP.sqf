@@ -18,7 +18,7 @@
  */
 
 params ["_allMapMarkers", "_allMapMarkersProperties"];
-TRACE_3("params",_allMapMarkers,_allMapMarkersProperties);
+TRACE_2("params",_allMapMarkers,_allMapMarkersProperties);
 
 {
     private _index = _allMapMarkers find _x;

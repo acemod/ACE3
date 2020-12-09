@@ -8,6 +8,8 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
+GVAR(flashlights) = [] call CBA_fnc_createNamespace;
+
 ["ace_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
         //Set the chat channel once the map has finished loading
@@ -22,12 +24,6 @@ call FUNC(determineZoom);
                 ERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
-    };
-
-    // Start Blue Force Tracking if Enabled
-    if (GVAR(BFT_Enabled)) then {
-        GVAR(BFT_markers) = [];
-        [FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
     };
 
     //illumination settings
@@ -114,6 +110,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
         switch (true) do {
             case (_vehicle isKindOf "Tank");
             case (_vehicle isKindOf "Wheeled_APC"): { {true} };
+            case (_vehicle isKindOf "ParachuteBase"): { {false} };
             case (_vehicle isKindOf "Helicopter");
             case (_vehicle isKindOf "Plane"): { {(driver _vehicle == _unit) || {gunner _vehicle == _unit}} };
             default { {false} };

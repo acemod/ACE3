@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Medical System
-description: ACE3 provides users with a more realistic medical system and comes in both a basic and advanced version. Both versions have overlap but each have their own unique characteristics.
+description: ACE3 provides users with a more realistic medical system.
 group: feature
 order: 4
 category: realism
@@ -12,402 +12,250 @@ version:
   minor: 0
   patch: 0
 ---
-**Disclaimer:** With the documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
 
 ## 1. Overview
-ACE3 provides users with a more realistic medical system and comes in both a basic and an advanced version. This page will detail the differences between both systems and what they do as well as how to use them efficiently.
+ACE3 provides users with a more realistic medical system.
 
-### 1.1 Basic medical
-ACE3's basic medical system is quite a bit more complex than Arma 3's default system, but not really difficult to grasp. ACE3 basic medical is a mixture between the ACE2 and AGM medical systems.
-All interactions in the medical system are done with the interaction menu. Non-medics can - by default - not perform all actions (Epinephrine and IVs) and their actions take more time as when performed by trained medics.
+The old documentation (pre medical rewrite) can be [found on github](https://github.com/acemod/ACE3/blob/v3.12.6/docs/wiki/feature/medical-system.md){:target="_blank"}
 
-### 1.2 Revive system
-The revive system lets you bring downed units back up.
-Upon receiving a deadly amount of damage a unit will fall unconscious for a determined amount of time. In that time a medic will need to treat them and give them epinephrine to bring them back up.
+The medical rewrite has changed the focus from "basic" or "advanced" levels to a more personally tailored method by having users configure it exactly as they want it.
 
-### 1.3 Advanced medical
+### 1.1 Settings
 
-The advanced medical system provides a more complex and detailed medical simulation and is based off the CSE CMS. It focuses on a more realistic model for injuries and treatments, thus resulting in a more important and prominent role for combat medics, and a bigger incentive to avoid getting shot.
+#### 1.1.1 Wounds
 
-The system behind advanced medical is designed to attempt to mimic important parts of the human body, as well as react to any injuries sustained and treatments applied in a realistic manner. The available treatments and supplies in advanced medical are based off the Tactical Combat Casualty Care (TCCC) guidelines, which are the same guidelines used by real-life combat medics around the world.
+##### 1.1.1.1 Limping
 
-Besides the 4 elements introduced by basic medical, advanced introduces the following:
+Controls whether or not a leg wound will cause you to limp, can be set to "Disabled", "Open Wounds" or "Limp on Open or Bandaged Wounds". This effect will be removed upon Stitching or using a Personal Aid Kit respectively.
 
-- More detailed wound system.
-- Accurate blood loss based upon sustained injuries.
-- Vitals, including heart rate and blood pressure.
-- Cardiac Arrest.
-- Various treatment methods such as CPR, different kinds of IVs and a working tourniquet.
-- A basic medication simulation.
+##### 1.1.1.2 Fractures
 
-### 1.4 Tweaked hitpoints
-Base soldiers hitpoints values tweaked.
+Fractures: Fractured limbs cause pain, increased weapon sway or inability to jog or run, can be set to "Disabled", "Splints Fully Heal Fractures" or "Splints Heal, but Cannot Sprint".
 
-## 2. Usage
+Fracture Chance: The probability of a fracture causing wound to actually cause one.
 
-### 2.1 Basic
+##### 1.1.1.3 Unconscious Wake Up Chance
 
-When hit, units start to lose blood depending on the severity of their wounds. Once the level of blood falls below a certain threshold, the unit will fall unconscious and eventually die. Units will also fall unconscious when sustaining large amounts of damage at once or from high amounts of pain.
+Every 15 seconds during unconscious, a check is performed for stable vitals. By default this setting is set to 5% meaning that every 15 seconds there is a 5% chance a stable person will wake up from unconsciousness.
+Additionally Epinephrine can boost the chances of waking up by increasing the amount of checks the wake up chance does while Epinephrine is in the patients system.
 
-#### 2.1.1 Wounds, bandages and medications
+##### 1.1.1.4 Fatal Damage Source
 
+Fatal damage is now controlled by either "Large hits to vital organs", "Sum of trauma" or "Either". This means carefully placed shots or simply higher amounts of wounds can be fatal to players or AI.
 
-##### 2.1.1.1 Wounds
+##### 1.1.1.5 Damage Threshold
 
-It's pretty straightforward compared to advanced, you only have two types of wounds.
+Two sliders that dictate how much damage players and ai can take before going unconscious or dying if Sum of Trauma is enabled. Set to higher values to make units stronger, lower to make them weaker.
 
-- Yellow: Small - medium sized wound, a single bandage is usually enough.
-- Red: Large wound, 2 or more bandages are usually needed.
+#### 1.1.2 AI
 
-##### 2.1.1.2 Bandages
+##### 1.1.2.1 Medic AI
 
-- All of them have the same effect.
+Medic AI means any AI set as a Medic will actually perform medical actions on group members if they are unsuppressed or safe.
 
-##### 2.1.1.3 Tourniquet
+#### 1.1.3 Blood
 
-- Serves no use in basic
+##### 1.1.3.1 Blood Drops
 
-##### 2.1.1.4 IVs
+Blood drops are generated by bleeding units, this can be a good indicator for teams that somebody hasn't noticed they are bleeding. This can be set to "Disabled", "Only Players" or "Enabled".
 
-IV | Effect
----------- | ---------- |
-Saline | Serves no use in basic
-Plasma | Serves no use in basic
-Blood | Restores the blood of the patient
+##### 1.1.3.2 Max Blood Objects
 
-Use the appropriate amount depending on the situation (low / heavy loss of blood) (250, 500 or 1 000 mL)
+By default this setting is set to 500, ideally this number shouldn't be set too high as excessive amounts will cause FPS drops.
 
+##### 1.1.3.3 Blood Lifetime
 
-##### 2.1.1.5 Autoinjectors
+Blood droplets are still classed as objects, this sets the timer at which they will be cleaned up and removed. By default this is 15 minutes.
 
-Autoinjector | Effect
----------- | ---------- |
-Morphine | Removes pain
-Epinephrine | Wakes up the patient
-Atropine | Serves no use in basic
-Adenosine | Serves no use in basic
+#### 1.1.4 Feedback
 
-#### 2.1.2 Treating the patient
+##### 1.1.4.1 Pain Effect Type
 
-**Step 1:** Is the patient responsive?
+When in pain the player will recieve a visual indicator in the form of either "White Flashing", "Pulsing Blur", "Chromatic Abberation" or "Only high pain effect". By default this is set to "White Flashing". This is personal preference and only impacts individuals.
 
- - **Yes:** Ask him if he has wounds / he is in pain.
- - **No:** Go to step 2.
+##### 1.1.4.2 Low Blood Volume Effect Type
 
+When a player has lost a larger amount of blood they will receive a visual indicator in the form of either "Color Fading", "Icon" or "Icon + Color Fading". This is personal preference and only impacts individuals.
 
-**Step 2:** Is the patient wounded?
+#### 1.1.5 GUI
 
- - **Yes:** Treat the wounds and go to step 3.
- - **No:** Skip this step.
+##### 1.1.5.1 Enable Medical Actions
 
+Sets availability and type of medical actions through ACE interaction. Can be set to "Selections (3D)", "Radial" or Disabled. Disabling this setting will only allow you to treat others via Medical menu. (If enabled.)
 
-**Step 3:** Is the patient in pain?
+##### 1.1.5.2 Enable Medical Self Actions
 
- - **Yes:** Give him morphine.
- - **No:** Skip this step.
+Much the same as Medical Actions, This is a checkbox for Enabling/Disabling ACE self-interaction medical options.
 
+##### 1.1.5.3 Medical Menu
 
-**Step 4:** Did the patient lose a lot of blood?
+Medical Menu: By default bound to "H", it can be accessed via ACE interaction/Self interaction. Usage of this comes down to personal preference as it offers a much easier method of actively treating patients where time is of essence. It can be set to "Enabled", "Disabled" or "Vehicles Only".
 
- - **Yes:** Give blood via IV.
- - **No:** Go to step 5.
- - **No and patient responsive:** You're done.
+Reopen Medical Menu: After initially treating a wound it will automatically re-open the menu so you can continue treating the patient, set by an Enabled/Disabled checkbox.
 
+Maximum Distance: How far in meters you can be from your patient before the medical menu is unavailable or automatically closed.
 
-**Step 5**
+#### 1.1.6 Litter
 
- - If at this point the patient is still not back on its feet it's time to use an epinephrine Autoinjector.
+##### 1.1.6.1 Litter Objects
 
-#### 2.1.3 Additional informations
+Enable Litter: A checkbox for Enabling/Disabling litter creation after medical treatment.
 
-- If the revive system is in place your character will not die until the revive timer is at 0. Even if a tank shoots your ass off an epinephrine shot will bring you back up after your wounds are treated. (The timer is invisible and may vary from mission to mission, it also depends on the amount of lives remaining you have.)
-- You can't do an overdose in basic.
+Max Litter Objects: By default this is set to 500 and it is not recommended to increase it, high amounts of objects can cause FPS loss.
 
-#### 2.1.4 Revive (Basic Medical)
-For the following procedure to work revive need to be enabled.
+Litter Lifetime: Controls the lifetime of objects in seconds, this by default is set to 600 seconds (10 Minutes). It can be set to -1 for an infinite lifetime but this is not recommended for longer missions.
 
-- A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
-- A unit in the revive state can't die from any source of damage, only the timer reaching 0 can kill it.
-- Each successful CPR will increase the time the unit can stay in the revive state.
-- To wake up a patient treat all of his wounds, make sure he isn't in pain and then use epinephrine.
-- Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
+#### 1.1.7 States
 
-### 2.2 Advanced
+##### 1.1.7.1 Fatal Injuries
 
-Same as with basic, when hit an injury is sustained. Different though is that the type of injury and the severity of it are based upon how the damage was done and what caused it. This affects both blood loss and immediate consequences, such as being knocked out or being killed right away. When a player has sustained an injury, this will be indicated by flashing red on the screen; this means the player is bleeding.
+Player Fatal Injuries: This controls whether or not players will die to significant damage to the head or torso. Can be set to "Always", "In Cardiac Arrest" or "Never". If set to Cardiac Arrest you cannot be outright killed without first going unconscious.
 
-#### 2.2.1 Wounds, bandages and medications
+AI Fatal Injuries: This works exactly the same way as for Players.
 
+##### 1.1.7.2 Unconsciousness & Cardiac Arrest
 
-##### 2.2.1.1 Abrasions (or scrapes)
+AI Unconsciousness: An enable/disable checkbox to set whether or not AI can fall into unconsciousness through damage. If AI Fatal Injuries is set to "In Cardiac Arrest" then unconsciousness must be enabled.
 
-- They occur when the skin is rubbed away by friction against another rough surface (e.g. rope burns and skinned knees).
-- Sources: falling, rope burn, vehicle crashes.
-- Effects: pain - extremely light, bleeding - extremely slowly.
+Cardiac Arrest Time: By default this is set to 5 minutes, Once a patients heart has stopped this begins a 5 minute countdown. If the patient is not stabilised and revived they will die.
 
-##### 2.2.1.2 Avulsions
+#### 1.1.8 Status
 
-- Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
-- Sources: explosions, vehicle crashes, grenades, artillery shells, bullets, backblast, bites.
-- Effects: pain - extremely high, bleeding - extremely fast (depends on wound size).
+##### 1.1.8.1 Bleeding, Pain and IVs
 
-##### 2.2.1.3 Contusions
+Bleeding Coefficient: Controls bleeding speeds, set higher for faster, lower for slower.
 
-- Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
-- Sources: bullets, backblast, punches, vehicle crashes, falling.
-- Effects: pain - light, no bleeding.
+Pain Coefficient: Controls intensity of pain, set higher for stronger intensity, lower for weaker intensity.
 
-##### 2.2.1.4 Crush wounds
+IV Transfusion Flow Rate: By default this slider is set to 1, increasing it will increase how fast IVs run into patients and decreasing it will slow the flow rate down.
 
-- Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
-- Sources: falling, vehicle crashes, punches.
-- Effects: pain - light, bleeding - extremely slowly.
+#### 1.1.9 Treatment
 
-##### 2.2.1.5 Cut wounds
+##### 1.1.9.1 Diagnose, Medication and Bandages
 
-- Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
-- Sources: vehicle crashes, grenades, explosions, artillery shells, backblast, stabs.
-- Effects: pain - light, bleeding - speed depends on length and size of the wound.
+Advanced Diagnose: Checkbox to enable "Check Pulse", "Check Blood Pressure" and "Check Response" treatment actions, if disabled CPR will only be shown when performing CPR is necessary. This setting is imperative to determining if a patient is unconscious or in cardiac arrest.
 
+Advanced Medication: Checkbox to enable more in-depth usage of morphine, Epinephrine and enables the use of adenosine.
 
-##### 2.2.1.6 Lacerations (tears)
+Advanced Bandages: Enables treatment actions for different bandage types, can be set to "Enabled", "Disabled" and "Enabled & Can Reopen". To enable stitching this setting needs to be set to "Enabled & Can Reopen".
 
-- these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source or from an external source like a punch.
-- Sources: vehicle crashes, punches.
-- Effects: pain - light, bleeding - slow to medium speed (depends on wound size).
+Clear Trauma After Bandage: Checkbox to enable/disable full healing of body parts after medical attention.
 
-##### 2.2.1.7 Velocity wound
+##### 1.1.9.2 Medic Settings
 
-- They are caused by an object entering the body at a high speed, typically a bullet or small pieces of shrapnel.
-- Sources: bullets, grenades, explosions, artillery shells.
-- Effects: pain - extremely high, bleeding - medium speed (depends on wound size).
+Locations Boost Training: Checkbox to enable/disable medical facilities/vehicles boosting the level of medic, untrained becomes medic and medic becomes doctor when in the locations.
 
+Allow Shared Equipment: Setting to control equipment shared between patient and medic. Can be set to "Patient's Equipment First", "Medic's Equipment First" or "No". By setting to Patient or Medics equipment first it controls from which inventory any medical supplies are taken from first until they run out. When setting to "No" any medic can only utilise what they have in their inventory and cannot use the patients equipment.
 
-##### 2.2.1.8 Puncture wounds
+Convert Vanilla Items: Controls whether Vanilla items are converted to ACE medical supplies. Can be set to "Enabled", "Disabled" or "Ignore". By enabling this will convert First Aid Kits into a small amount of basic medical equipment, a Medikit will convert into a medium sized amount of advanced medical equipment. Using "Ignore" as the setting it will simply leave you with a First Aid Kit or Medikit.
 
-- Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
-- Sources: stabs, grenades.
-- Effects: pain - light, bleeding - slowly.
+Allow Epinephrine: This setting controls who can utilise epinephrine. Can be set to "Anyone", "Medics" or "Doctors".
 
-In order to stop the bleeding, all bleeding injuries on every body part requires treatment. This is done by either applying a tourniquet to legs or arms as a temporary solution, or by using bandages to stop the bleeding as a more permanent fix.
+Allow PAK: See "Allow Epinephrine".
 
+Allow Surgical Kit: See "Allow Epinephrine".
 
-##### 2.2.1.9 Bandages effectiveness
+Allow IV Transfusion: See "Allow Epinephrine".
 
-(Click the image for a better view)
+Locations Epinephrine: This setting controls where epinephrine can be utilised. Can be set to "Anywhere", "Medical Vehicles", "Medical Facilities", "Vehicles & Facilities" or "Disabled". If set to "Vehicles & Facilities" this requires that the vehicle or facility in question is set as a medical facility or vehicle.
 
-<ul class="clearing-thumbs small-block-grid-1" data-clearing>
-    <li><a href="{{ site.baseurl }}/img/wiki/feature/medical1.jpg"><img class="th" data-caption="Bandages table" src="{{ site.baseurl }}/img/wiki/feature/medical1.jpg"></a></li>
+Locations PAK: See "Locations Epinephrine".
 
-</ul>
+Locations Surgical Kit: See "Locations Epinephrine".
 
-Table legend:
+Consume PAK: This setting controls if a Personal Aid Kit is consumed after a single use. By default this is set to "No".
 
- - **Efficiency**: Bandage efficiency, _higher is better_.
- - **Reopening chance**: Reopening chance when advanced wounds are enabled, _lower is better_.
+Consume Surgical Kit: See "Consume PAK".
 
-##### 2.2.1.10 Tourniquet
+Self PAK Usage: This setting controls the ability to use a Personal Aid Kit on yourself. This is combined with the "Allow PAK" setting.
 
-- Can only be applied on limbs.
-- Stops bleeding from wounds.
-- Should be taken off as fast as possible and applied only to give medic time to bandage all the wounds.
-- If not taken off for a while it will cause pain to the patient.
+Self Stitching: See "Self PAK Usage".
 
-##### 2.2.1.11 IVs
+Self IV Transfusion: See "Self PAK Usage".
 
-IV | Effect
----------- | ---------- |
-Saline plasma and blood | All three restore the volume of liquid in the blood stream. as a result blood pressure is raised for all of them.
+Time Coefficient PAK: This setting controls how long a PAK takes to apply. Set to higher values to increase, lower to decrease. PAK has a minimum of 10 seconds usage time.
 
-Use the appropriate amount depending on the situation (heavy loss of blood, blood pressure too low) (250, 500 or 1 000 mL)
+CPR Success Chance: This setting controls the chance of a successful round of CPR. By default this is set to 40%.
 
-##### 2.2.1.12 Autoinjectors
+Holster Required: This setting controls whether or not you must first lower or holster your weapon to perform medical actions, with the exception of "Check Pulse", "Check Blood Pressure" and "Check Response".
 
-Autoinjector | Effect
----------- | ---------- |
-Morphine | Decreases the blood viscosity, suppress pain
-Epinephrine | Raises the heart rate of the patient
-Adenosine | Lowers the heart rate
-Atropine | Lowers the heart rate of the patient
+## 2. Curated Medical Settings
 
-Note: Morphine stays much longer in the system compared to other medications.
+These settings are curated presets for different playstyles. They are meant to be used with the user config for the [CBA settings system](https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System){:target="_blank"}.
 
-##### 2.2.1.13 Surgical kit
+Feel free to tweak the values of the settings to adjust it to your likings.
 
-- Is only useful when advanced wounds (reopening) is enabled.
-- Stitch a wound to stop it from reopening.
-- It's use may be limited to a certain class and / or near a vehicle / facility.
-- It's use can also be limited according to the condition of the patient, you might need to stabilize him first before using it.
+### 2.1 Settings for Co-Op missions
 
-##### 2.2.1.14 PAK
+#### 2.1.1 Preset 1
 
-- Used to fully heal someone. (Removes any injury, restore vitals to a stable state and reset the medical history, clears all medication in the system.)
-- It's use may be limited to a certain class and / or near a vehicle / facility.
-- It's use can also be limited according to the condition of the patient, you might need to stabilize him first before using it.
+```c++
+force ace_medical_fatalDamageSource = 1; // Sum of Trauma death condition
+force ace_medical_AIDamageThreshold = 0.2; // Decreased AI damage threshold so AI dies in single headshot and few torso taps depending on vest
+force ace_medical_playerDamageThreshold = 3.5; // Increased damage threshold for players, high caliber weapons should still be fatal
+force ace_medical_bleedingCoefficient = 0.25;
+force ace_medical_spontaneousWakeUpChance = 0.85; // Stabilised players will wake up fast
+force ace_medical_spontaneousWakeUpEpinephrineBoost = 3;
+force ace_medical_statemachine_AIUnconsciousness = true;
+force ace_medical_statemachine_cardiacArrestTime = 630;
+```
 
-#### 2.2.2 Vitals
+#### 2.1.2 "Basic" Preset
 
-##### 2.2.2.1 Blood pressure
+```c++
+force ace_medical_AIDamageThreshold = 0.2; // Decreased AI damage threshold so AI dies in single headshot and few torso taps depending on vest
+force ace_medical_playerDamageThreshold = 3.5; // Increased damage threshold for players, high caliber weapons should still be fatal
+force ace_medical_bleedingCoefficient = 0.25;
+force ace_medical_fatalDamageSource = 1; // Sum of Trauma death condition
+force ace_medical_fractures = 0; // Disabled Fractures
+force ace_medical_limping = 0; // Disabled Limping
+force ace_medical_statemachine_fatalInjuriesPlayer = 2; // Disabled fatal injuries by damage to head or torso
+force ace_medical_treatment_advancedBandages = 0; // Disabled advanced bandages
+force ace_medical_treatment_advancedDiagnose = false; // Disabled advanced diagnose
+force ace_medical_treatment_advancedMedication = false; // Disabled advanced medication
+```
 
- NOTE:the `systolic` blood pressure is the number on the left, the `diastolic` blood pressure is the number on the right.
+#### 2.1.3 "Advanced" Preset
 
-- Blood pressure is affected by the amount of blood lost as well as IVs and medication.
- - **Non existent:** 0 - 20 `systolic`.
- - **Low:** 20 - 100 `systolic`.
- - **Normal:** 100 - 160 `systolic`.
- - **High:** 160 and above `systolic`.
+```c++
+force ace_medical_fractures = 1; // Splints Fully Heal Fractures - set to "2" to keep sprinting disabled after fracture
+force ace_medical_limping = 1; // Limp on Open Wounds
+force ace_medical_spontaneousWakeUpChance = 0.15; // 15% chance of waking up from unconscious after stable
+force ace_medical_spontaneousWakeUpEpinephrineBoost = 1; // Epinephrine boosts wake up chance
+force ace_medical_statemachine_fatalInjuriesPlayer = 1; // Fatal injuries only occur in Cardiac Arrest
+force ace_medical_treatment_advancedBandages = 2; // Wounds can re-open until stitched.
+force ace_medical_treatment_advancedDiagnose = true; // Enabled Advanced Diagnosis
+force ace_medical_treatment_advancedMedication = true; // Enabled Advanced Medication
+force ace_medical_treatment_allowSelfIV = 1; // Medics can Self-IV
+force ace_medical_treatment_allowSelfPAK = 1; // Medics can Self-PAK
+force ace_medical_treatment_allowSelfStitch = 1; // Medics can Self-Stitch
+force ace_medical_treatment_clearTraumaAfterBandage = true; // Fully heals body part after bandage/stitch
+force ace_medical_treatment_consumeSurgicalKit = 0; // Does not consume Surgical Kit
+force ace_medical_treatment_cprSuccessChance = 0.4; // 40% chance of successful CPR
+force ace_medical_treatment_locationEpinephrine = 0; // Epinephrine anywhere
+force ace_medical_treatment_locationPAK = 3; // PAK only in Vehicles & Facilities
+force ace_medical_treatment_locationSurgicalKit = 0; // Surgical Kit anywhere
+force ace_medical_treatment_medicEpinephrine = 1; // Medics can use Epinephrine
+force ace_medical_treatment_medicIV = 1; // Medics can give IVs
+force ace_medical_treatment_medicPAK = 1; // Medics can PAK
+force ace_medical_treatment_medicSurgicalKit = 1; // Medics can stitch
+```
 
-##### 2.2.2.2 Heart rate
+### 2.2 Settings for PvP missions
 
-The heart rate (pulse) is affected by the amount of blood lost and medications.
+#### 2.2.1 Preset 1
 
-- **Low:** 45 and below
-- **Normal:** between 46 and 119
-- **High:** 120 and above
+```c++
+force ace_medical_fatalDamageSource = 1; // Sum of Trauma death condition
+force ace_medical_feedback_painEffectType = 2; // Forced pain effect type to ensure that everyone is handicapped in the same way
+force ace_medical_spontaneousWakeUpChance = 0.15; // don't let players wake up too fast
+force ace_medical_statemachine_cardiacArrestTime = 300; // players should die fast once they are down and not treated
+force ace_medical_treatment_allowSelfStitch = 1;
+force ace_medical_treatment_clearTraumaAfterBandage = true; // to increase the flow of the PvP match (reduce limping)
+```
 
+_more tbd_
 
-##### 2.2.2.3 Cardiac arrest
-
-A patient will enter cardiac arrest when:
-
-- The heart rate is below 20.
-- The heart rate is above 200.
-- The systolic blood pressure is above 260.
-- The diastolic blood pressure is below 40 and the heart rate is above 190.
-- The systolic blood pressure is above 145 and the heart rate is above 150.
-
-
-#### 2.2.3 Treating the patient
-This is a step by step guide, follow the steps from 1 to 6 in order unless stated otherwise.
-
-- Keeping the patient's vitals stable is your first priority.
-- If advanced wounds are enabled make sure from time to time that they didn't reopen.
-- If a limb has a wound with a high bleeding rate (or multiple) such as a large avulsion or large cut; use a tourniquet immediately on it, otherwise the patient might loose large amounts of blood while you try to treat it.
-
-
-**Step 1:** Is the patient responsive?
-
- - **Yes:** Ask him if he has wounds / he is in pain and act accordingly.
- - **No:** Go to step 2.
-
-
- **Step 2:** Is the patient wounded?
-
-  - **Yes**: Treat the wounds.
-  - **No:** Skip this step.
-
-
-**Step 3:** Does the patient have a pulse?
-
- - **Yes:** Go to step 4.
- - **No:** If you are alone provide CPR, if you have someone else get him to do CPR while you treat the patient's wounds. Skip to step 4 or 5 depending on the situation.
-
-
-**Step 4:** Did the patient lose a lot of blood?
-
- - **Yes:** Use IVs to restore the volume of liquid in the blood stream of the patient.
- - **No:** Skip this step.
-
-
-**Step 5:** Is the patient in pain?
-
- - **Yes and stable pulse:** Give him morphine.
- - **Yes and unstable heart rate:** Stabilize the heart rate before administrating morphine.
- - **No:** You're done.
-
-
-**Step 6:** is the patient awake now?
-
- - **Yes:** You're done.
- - **No:** Stabilize his pulse / make sure he isn't in pain or missing blood.
-
-
-#### 2.2.4 Additional informations
-
-- As an infantryman you can use a tourniquet to stop a limb from bleeding, note that this is supposed to be a temporary solution and leaving the tourniquet more than 5 minutes will induce pain.
-- Pain is only suppressed and not removed by default.
-- You don't have to take epinephrine after you take morphine, just wait until your pulse stabilizes by itself (Provided that you are in a stable condition).
-
-#### 2.2.5 Revive (Advanced Medical)
-For the following procedure to work revive needs to be enabled.
-
-- A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
-- A unit in the revive state can't die from any source of damage, only the timer reaching 0 can kill it.
-- Each successful CPR will increase the time the unit can stay in the revive state.
-- To wake up a patient the use of a PAK is required.
-- Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
-- Each successful round of CPR (filled up completion bar) increases the time left in the revive state.
-
-## 3. Guides
-
-### 3.1 Example loadouts
-
-#### 3.1.1 Basic
-
-Soldier:
-
- - 10 × Bandage (Basic)
- - 3 × Morphine Autoinjector
- - 1 × Epinephrine Autoinjector
-
-Medic:
-
- - 15-25 × Bandage (Basic)
- - 10 × Morphine Autoinjector
- - 10 × Epinephrine Autoinjector
- - 6 × Blood IV (500ml)
-
-#### 3.1.2 Advanced
-
-Soldier :
-
- - 3-6 × Bandage (Basic)
- - 3-6 × Bandage (Elastic)
- - 3-6 × Packing Bandage
- - 3-6 × Basic Field Dressing (QuikClot)
- - 1 × Morphine Autoinjector
- - 1 × Epinephrine Autoinjector
- - 1 × Tourniquet (CAT)
- - **Optional**: 1 × Saline IV (500ml) - used only by a qualified medic
-
-
-Combat First Responder (CFR):
-
- - 10-15 × Bandage (Basic)
- - 10-15 × Bandage (Elastic)
- - 10-15 × Packing Bandage
- - 10-15 × Basic Field Dressing (QuikClot)
- - 8 × Atropine Autoinjector
- - 5 × Morphine Autoinjector
- - 5 × Epinephrine Autoinjector
- - 3 × Tourniquet (CAT)
- - 4 × Saline IV (500ml)
-
-
-Medic:
-
- - 10-15 × Bandage (Basic)
- - 15-20 × Bandage (Elastic)
- - 15-20 × Packing Bandage
- - 10-15 × Basic Field Dressing (QuikClot)
- - 12 × Atropine Autoinjector
- - 8 × Morphine Autoinjector
- - 8 × Epinephrine Autoinjector
- - 5 × Tourniquet (CAT)
- - 6 × Saline IV (500ml)
- - 1-3 × *Surgical Kit*
- - 1-3 × *Personal Aid Kit*
-
-
-Paramedic:
-
- - 10-15 × Bandage (Basic)
- - 15-20 × Bandage (Elastic)
- - 15-20 × Packing Bandage
- - 10-15 × Basic Field Dressing (QuikClot)
- - 5 × Tourniquet (CAT)
- - 2 × Saline IV (500ml)
-
-## 4. Dependencies
+## 3. Dependencies
 
 {% include dependencies_list.md component="medical" %}

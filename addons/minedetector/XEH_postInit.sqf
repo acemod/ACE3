@@ -5,16 +5,12 @@ GVAR(detectorConfigs) = call CBA_fnc_createNamespace;
 
 // Create a dictionary of detectable classnames
 GVAR(detectableClasses) = call CBA_fnc_createNamespace;
+
+private _detectableClasses = call (uiNamespace getVariable [QGVAR(detectableClasses), {[]}]); //See XEH_preStart.sqf
 {
-    if ((getNumber (_x >> QGVAR(detectable))) == 1) then {
-        GVAR(detectableClasses) setVariable [configName _x, true];
-    };
-} forEach (configProperties [configFile >> "CfgVehicles", "isClass _x", true]);
-{
-    if ((getNumber (_x >> QGVAR(detectable))) == 1) then {
-        GVAR(detectableClasses) setVariable [configName _x, true];
-    };
-} forEach (configProperties [configFile >> "CfgAmmo", "isClass _x", true]);
+    GVAR(detectableClasses) setVariable [_x, true];
+} forEach _detectableClasses;
+TRACE_1("built cache",count allVariables GVAR(detectableClasses));
 
 [QGVAR(enableDetector), FUNC(enableDetector)] call CBA_fnc_addEventHandler;
 [QGVAR(disableDetector), FUNC(disableDetector)] call CBA_fnc_addEventHandler;

@@ -201,7 +201,6 @@ class DAGR_Menu {
 
     class DAGR_NEXT_Button : DAGR_Button {
         idc = 266868;
-        action = QUOTE(DAGR_NEXT = true);
         x = 0.60;
         y = 0.65;
     };

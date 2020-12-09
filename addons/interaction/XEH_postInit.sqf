@@ -135,21 +135,3 @@ GVAR(isOpeningDoor) = false;
         }];
     };
 }] call CBA_fnc_addEventHandler;
-
-
-// to make "Camping Lantern (Off)" be turned on we replace it with "Camping Lantern"
-private _action = [
-    QGVAR(TurnOn),
-    localize LSTRING(TurnOn),
-    "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa",
-    {
-        private _position = getPosATL _target;
-        private _vectorDirAndUp = [vectorDir _target, vectorUp _target];
-        deleteVehicle _target;
-        private _newLamp = "Land_Camping_Light_F" createVehicle [0,0,0];
-        _newLamp setPosATL _position;
-        _newLamp setVectorDirAndUp _vectorDirAndUp;
-    },
-    {alive _target}
-] call EFUNC(interact_menu,createAction);
-["Land_Camping_Light_off_F", 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);

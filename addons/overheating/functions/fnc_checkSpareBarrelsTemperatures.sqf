@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call ace_overheating_fnc_checkSpareBarrelsTemperature
+ * [bob] call ace_overheating_fnc_checkSpareBarrelsTemperatures
  *
  *
  * Public: No

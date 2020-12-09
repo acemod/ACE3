@@ -16,7 +16,7 @@
  */
 
 // Exit if the action menu is already compiled for zeus
-if !(isNil {missionNamespace getVariable [QGVAR(ZeusActions), nil]}) exitWith {};
+if (!isNil {missionNamespace getVariable [QGVAR(ZeusActions), nil]}) exitWith {};
 
 private _recurseFnc = {
     params ["_actionsCfg"];
@@ -24,7 +24,7 @@ private _recurseFnc = {
 
     {
         private _entryCfg = _x;
-        if(isClass _entryCfg) then {
+        if (isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
 
             private _icon = if (isArray (_entryCfg >> "icon")) then {

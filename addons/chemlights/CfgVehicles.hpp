@@ -246,6 +246,7 @@ class CfgVehicles {
         transportMaxItems = 9002;
         maximumload = 9002;
         model = "\A3\weapons_F\AmmoBoxes\WpnsBox_large_F";
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_WpsSpecial_F.jpg";
 
         class TransportItems {
             MACRO_ADDITEM(ACE_Chemlight_Shield,20);

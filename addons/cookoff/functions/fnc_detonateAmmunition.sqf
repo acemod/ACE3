@@ -87,7 +87,7 @@ if (_amountOfMagazines > 0) exitWith {
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1300];
 
         if (random 1 < 0.15) then {
-            [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
+            [_vehicle, _ammo, _speed, true] call _spawnProjectile;
         };
     };
     if (toLower _simType == "shotgrenade") then {

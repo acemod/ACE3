@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Ruthberg
- * Returns the the first intersection with terrain between two positions. @todo rewrite using lineIntersectsSurfaces?
+ * Returns the the first intersection with terrain between two positions.
  *
  * Arguments:
  * 0: PositionASL <ARRAY>
@@ -18,31 +18,14 @@
  * Public: Yes
  */
 
-params ["_source", "_destination", "_accuracy"];
+params ["_source", "_destination"];
 
 private _result = [false, [0, 0, 0]];
-
-private _distance = _source vectorDistance _destination;
-
-if !(lineIntersectsWith [_source, _destination] isEqualTo []) then {
-    private _lower = 0;
-    private _upper = 1;
-    private _mid = 0.5;
-
-    private _dir = _source vectorFromTo _destination;
-
-    while {(_upper - _lower) * _distance > _accuracy} do {
-        _mid = _lower + (_upper - _lower) / 2;
-
-        if !(lineIntersectsWith [_source, _source vectorAdd (_dir vectorMultiply (_mid * _distance))] isEqualTo []) then {
-            _upper = _mid;
-        } else {
-            _lower = _mid;
-        };
+private _hits = lineIntersectsSurfaces [_source, _destination, objNull, objNull, true, -1];
+{
+    _x params ["_pos", "", "_obj"];
+    if (!isNull _obj) exitWith {
+        _result = [true, _pos];
     };
-
-    _mid = _lower + (_upper - _lower) / 2;
-    _result = [true, _source vectorAdd (_dir vectorMultiply (_mid * _distance))];
-};
-
+} forEach _hits;
 _result

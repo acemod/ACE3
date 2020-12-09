@@ -34,4 +34,8 @@ if (_value select 1 > 0) then {
     (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_LIST_RIGHT) ctrlSetText SYMBOL_ITEM_REMOVE;
 };
 
-[_controlsGroup] call FUNC(attributeAddItems);
+// Trigger category selection for last selected category to populate list
+private _category = uiNamespace getVariable [QGVAR(attributeCategory), 0];
+(_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY) lbSetCurSel _category;
+
+[_controlsGroup, _category] call FUNC(attributeCategory);

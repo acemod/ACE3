@@ -1,10 +1,14 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
+GVAR(currentBox) = objNull;
+
 GVAR(EH_ID) = 0;
 GVAR(lastSearchTextLeft) = "";
 GVAR(lastSearchTextRight) = "";
 GVAR(lastSearchTextLoadouts) = "";
+GVAR(lastSortLeft) = "";
+GVAR(lastSortRight) = "";
 
 [QGVAR(initBox), {_this call FUNC(initBox)}] call CBA_fnc_addEventHandler;
 [QGVAR(removeBox), {_this call FUNC(removeBox)}] call CBA_fnc_addEventHandler;
@@ -24,7 +28,7 @@ GVAR(lastSearchTextLoadouts) = "";
 [QGVAR(loadoutUnshared), {
     params ["_contentPanelCtrl" , "_playerName", "_loadoutName"];
 
-    if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
+    if (!isNil QGVAR(currentLoadoutsTab) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
         private _dataToCheck = _playerName + _loadoutName;
 
@@ -52,7 +56,7 @@ GVAR(lastSearchTextLoadouts) = "";
     params ["_contentPanelCtrl" ,"_loadoutArgs"];
     _loadoutArgs params ["_playerName", "_loadoutName", "_loadoutData"];
 
-    if (!(isNil QGVAR(currentLoadoutsTab)) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
+    if (!isNil QGVAR(currentLoadoutsTab) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
 
         private _curSelData =_contentPanelCtrl lnbData [(lnbCurSelRow _contentPanelCtrl), 1];
         ([_loadoutData] call FUNC(verifyLoadout)) params ["_loadout", "_nullItemsAmount", "_unavailableItemsAmount"];

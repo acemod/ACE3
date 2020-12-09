@@ -124,7 +124,17 @@ switch (GVAR(currentLoadoutsTab)) do {
             };
         };
 
-        if (_loadoutIndex == -1) then {
+        if (GVAR(shiftState) && {is3DEN} && {!(_loadoutName isEqualTo "")} && {_cursSelRow != -1} && {!(_loadoutIndex isEqualto -1)}) exitwith {
+            private _defaultLoadoutsSearch = GVAR(defaultLoadoutsList) findIf {(_x select 0) == _loadoutName};
+            if (_defaultLoadoutsSearch isEqualto -1) then {
+                GVAR(defaultLoadoutsList) pushBack [_loadoutName, _curSelLoadout];
+            } else {
+                GVAR(defaultLoadoutsList) set [_defaultLoadoutsSearch , [ _loadoutName, _curSelLoadout]];
+            };
+            set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
+        };
+
+        if (_loadoutIndex isEqualto -1) then {
             _data pushBack [_editBoxContent, _loadout];
         } else {
             _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];

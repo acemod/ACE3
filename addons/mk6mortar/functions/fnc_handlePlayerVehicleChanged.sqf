@@ -21,20 +21,6 @@ params ["_player", "_newVehicle"];
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
 
-// Run magazine handling initialization if enabled
-if (!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])) then {
-    // Make sure that mortar init is executed after settings init
-    [{
-        params ["_mortar"];
-        if (GVAR(useAmmoHandling) && {!(_mortar getVariable [QGVAR(initialized),false]) && !(_mortar getVariable [QGVAR(exclude),false])}) then {
-            //wait for proper turret locality change
-            [{
-                ["ace_initMortar", [_this], [_this]] call CBA_fnc_globalEvent;
-            }, _mortar, 0.05] call CBA_fnc_waitAndExecute;
-        };
-    }, _newVehicle] call EFUNC(common,runAfterSettingsInit);
-};
-
 private _tubeWeaponName = (weapons _newVehicle) select 0;
 private _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
 
@@ -70,40 +56,13 @@ if (_lastFireMode != -1) then {
         private _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
         if (isNull _display) exitWith {}; //It may be null for the first frame
 
-        private _chargeText = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize LSTRING(rangetable_charge)), _currentChargeMode, QPATHTOF(UI\ui_charges.paa)];
-
         //Hud should hidden in 3rd person
         private _notGunnerView = cameraView != "GUNNER";
 
-        //Calc real azimuth/elevation
-        //(looking at the sky VS looking at ground will radicaly change fire direction because BIS)
-        private _realAzimuth = -1;
-        private _realElevation = -1;
-
-        private _useRealWeaponDir = (ctrlText (_display displayCtrl 173)) == "--";
-        if (_useRealWeaponDir && {(_mortarVeh ammo (currentWeapon _mortarVeh)) == 0}) then {
-            // With no ammo, distance display will be empty, but gun will still fire at wonky angle if aimed at ground
-            private _testSeekerPosASL = AGLtoASL (positionCameraToWorld [0,0,0]);
-            private _testSeekerDir = _testSeekerPosASL vectorFromTo (AGLtoASL (positionCameraToWorld [0,0,1]));
-            private _testPoint = _testSeekerPosASL vectorAdd (_testSeekerDir vectorMultiply viewDistance);
-            if ((terrainIntersectASL [_testSeekerPosASL, _testPoint]) || {lineIntersects [_testSeekerPosASL, _testPoint]}) then {
-                _useRealWeaponDir = false; // If we are not looking at infinity (based on viewDistance)
-            };
-        };
-
-        if (_useRealWeaponDir) then {
-            //No range (looking at sky), it will follow weaponDir:
-            private _weaponDir = _mortarVeh weaponDirection (currentWeapon _mortarVeh);
-            _realAzimuth = (_weaponDir select 0) atan2 (_weaponDir select 1);
-            _realElevation = asin (_weaponDir select 2);
-        } else {
-            //Valid range, will fire at camera dir
-            private _lookVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
-            _realAzimuth = ((_lookVector select 0) atan2 (_lookVector select 1));
-            private _upVectorDir = (((vectorUp _mortarVeh) select 0) atan2 ((vectorUp _mortarVeh) select 1));
-            private _elevationDiff = (cos (_realAzimuth - _upVectorDir)) * acos ((vectorUp _mortarVeh) select 2);
-            _realElevation = ((180 / PI) * (_mortarVeh animationPhase "mainGun")) + 75 - _elevationDiff;
-        };
+        // Get aiming values from ace_artillerytables
+        // Note: it also handles displaying the "charge" level
+        private _realAzimuth = missionNamespace getVariable [QEGVAR(artillerytables,predictedAzimuth), -1];
+        private _realElevation = missionNamespace getVariable [QEGVAR(artillerytables,predictedElevation), -1];
 
         //Update Heading Display:
         if (_notGunnerView || (!GVAR(allowCompass))) then {
@@ -116,13 +75,10 @@ if (_lastFireMode != -1) then {
             };
         };
 
-        //Update CurrentElevation Display and "charge" text
+        //Update CurrentElevation Display
         if (_notGunnerView) then {
-            (_display displayCtrl 80085) ctrlSetStructuredText parseText "";
             (_display displayCtrl 80175) ctrlSetText "";
         } else {
-            (_display displayCtrl 80085) ctrlSetStructuredText parseText _chargeText;
-
             if (_useMils) then {
                 (_display displayCtrl 80175) ctrlSetText str ((round (_realElevation * 6400 / 360)) % 6400);
             } else {

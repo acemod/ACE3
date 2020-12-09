@@ -1,25 +1,26 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, PiZZADOX
  * Enable the object to be dragged.
  *
  * Arguments:
  * 0: Any object <OBJECT>
  * 1: true to enable dragging, false to disable <BOOL>
- * 2: Position offset for attachTo command (optinal; default: [0,0,0])<ARRAY>
+ * 2: Position offset for attachTo command (optional; default: [0,0,0])<ARRAY>
  * 3: Direction in degree to rotate the object after attachTo (optional; default: 0) <NUMBER>
+ * 4: Override weight limit (optional; default: false) <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [object, true, [0,0,0], 0] call ace_dragging_fnc_setDraggable;
+ * [object, true, [0,0,0], 0, false] call ace_dragging_fnc_setDraggable;
  *
  * Public: Yes
  */
 
 //IGNORE_PRIVATE_WARNING ["_player", "_target"];
-params ["_object", "_enableDrag", "_position", "_direction"];
+params ["_object", "_enableDrag", "_position", "_direction", ["_ignoreWeightDrag", false, [false]]];
 
 if (isNil "_position") then {
     _position = _object getVariable [QGVAR(dragPosition), [0,0,0]];
@@ -33,6 +34,7 @@ if (isNil "_direction") then {
 _object setVariable [QGVAR(canDrag), _enableDrag];
 _object setVariable [QGVAR(dragPosition), _position];
 _object setVariable [QGVAR(dragDirection), _direction];
+_object setVariable [QGVAR(ignoreWeightDrag), _ignoreWeightDrag];
 
 // add action to class if it is not already present
 private _type = typeOf _object;

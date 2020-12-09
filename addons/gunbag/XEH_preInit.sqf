@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 // restore gunbag info after respawn
 ["CAManBase", "respawn", {
     [{
@@ -35,7 +37,7 @@ PREP_RECOMPILE_END;
 
 [QEGVAR(arsenal,displayClosed), {
 
-    if !(isNil QGVAR(arsenalCache)) then {
+    if (!isNil QGVAR(arsenalCache)) then {
         (backpackContainer EGVAR(arsenal,center)) setVariable [QGVAR(gunbagWeapon),GVAR(arsenalCache), true];
     };
 

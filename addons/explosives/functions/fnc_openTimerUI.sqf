@@ -23,6 +23,9 @@ private _display = uiNamespace getVariable [QGVAR(timerDisplay), displayNull];
 
 // Update slider speed to 1s
 (_display displayCtrl IDC_TIMER_SLIDER) sliderSetSpeed [1, 1];
+(_display displayCtrl IDC_TIMER_SLIDER) sliderSetRange [GVAR(customTimerMin), GVAR(customTimerMax)];
+(_display displayCtrl IDC_TIMER_SLIDER) sliderSetPosition (GVAR(customTimerDefault) max GVAR(customTimerMin) min GVAR(customTimerMax));
+
 
 // Add confirm button action
 GVAR(explosive) = _explosive;
@@ -52,7 +55,7 @@ _display displayAddEventHandler ["MouseZChanged", {
     if (cba_events_control) then {_change = _change * 10};
 
     private _slider = _display displayCtrl IDC_TIMER_SLIDER;
-    private _value = (sliderPosition _slider + _change) max TIMER_VALUE_MIN min TIMER_VALUE_MAX;
+    private _value = (sliderPosition _slider + _change) max GVAR(customTimerMin) min GVAR(customTimerMax);
     _slider sliderSetPosition _value;
 }];
 

@@ -25,7 +25,7 @@ private _statement = {
 private _vehicles = (nearestObjects [_target, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]) select {
     private _hasCargoConfig = 1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo));
     private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
-    (_hasCargoConfig || {_hasCargoPublic}) && {_x != _target} &&
+    (_hasCargoConfig || {_hasCargoPublic}) && {_x != _target} && {alive _x} && {locked _x < 2} &&
     {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
 };
 

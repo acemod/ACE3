@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Element Name <STRING>
  * 1: Show/Hide Element <BOOL>
- * 2: Show Hint <BOOL>
+ * 2: Show Hint <BOOL> (default: false)
  * 3: Force change even when disallowed <BOOL> (default: false)
  *
  * Return Value:
@@ -18,12 +18,13 @@
  * Public: No
  */
 
-params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]] ];
+params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]]];
 
 private _cachedElement = GVAR(configCache) getVariable _element;
-if (isNil "_cachedElement") exitWith {};
+if (isNil "_cachedElement") exitWith {TRACE_1("nil element",_this)};
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
+    TRACE_1("not allowed",_this);
     [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured);
     false
 };
@@ -31,8 +32,14 @@ if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
 _cachedElement params ["_idd", "_elements", "_location", "_conditions"];
 
 // Exit if main vehicle type condition not fitting
-private _canUseWeapon = ACE_player call CBA_fnc_canUseWeapon;
-if ((_canUseWeapon && {_location == 2}) || {!_canUseWeapon && {_location == 1}}) exitWith {false};
+private _canUseWeaponOrInCargo = ACE_player call CBA_fnc_canUseWeapon || {-1 < vehicle ACE_player getCargoIndex ACE_player};
+if (
+    (_canUseWeaponOrInCargo && {_location == VEHICLE_ONLY})
+    || {!_canUseWeaponOrInCargo && {_location == GROUND_ONLY}}
+) exitWith {
+    TRACE_3("skip location",_this,_canUseWeaponOrInCargo,_location);
+    false
+};
 
 // Get setting from config API
 {
@@ -59,7 +66,7 @@ if (!_force) then {
     };
 };
 
-_show = [1, 0] select _show;
+private _fade = [1, 0] select _show;
 
 // Disable/Enable elements
 private _success = false;
@@ -69,9 +76,9 @@ private _success = false;
     // Loop through IGUI displays as they can be present several times for some reason
     {
         if (_idd == ctrlIDD _x) then {
-            //TRACE_3("Setting Element Visibility",_show,_idd,_idc);
+            TRACE_4("Setting Element Visibility",_element,_fade,_idd,_idc);
 
-            (_x displayCtrl _idc) ctrlSetFade _show;
+            (_x displayCtrl _idc) ctrlSetFade _fade;
             (_x displayCtrl _idc) ctrlCommit 0;
 
             _success = true;

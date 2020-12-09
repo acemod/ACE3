@@ -229,7 +229,10 @@ private _enginePosition = _vehicle modelToWorld (_vehicle selectionPosition _eng
 if (_position distance _enginePosition < EFFECT_SIZE * 2) then {
     _vehicle setHit [_engineSelection, 1];
 
-    if ("ace_cookoff" call EFUNC(common,isModLoaded) && {EGVAR(cookoff,enable)}) then {
-        _vehicle call EFUNC(cookoff,engineFire);
+    if ("ace_cookoff" call EFUNC(common,isModLoaded)) then {
+        private _enabled = _vehicle getVariable [QEGVAR(cookoff,enable), EGVAR(cookoff,enable)];
+        if (_enabled in [2, true] || {_enabled isEqualTo 1 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} != -1}}) then {
+            _vehicle call EFUNC(cookoff,engineFire);
+        };
     };
 };

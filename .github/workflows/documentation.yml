@@ -1,0 +1,24 @@
+name: Documentation
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Install Python packages
+      run: |
+        pip3 install wheel
+        pip3 install setuptools
+        pip3 install pygithub
+        pip3 install pygithub3
+    - name: Deploy
+      if: github.repository == 'acemod/ACE3' && ! contains(github.event.head_commit.message, '[ci skip]')
+      env:
+        GH_TOKEN: ${{ secrets.DOCS_TOKEN }}
+      run: python3 tools/deploy.py

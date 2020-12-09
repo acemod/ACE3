@@ -20,7 +20,7 @@
  * Public: No
  */
 
-params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]]];
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", "UserTexture1m_F", [""]]];
 TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
@@ -28,7 +28,7 @@ if (_texture == "") exitWith {
     false
 };
 
-private _tag = createSimpleObject ["UserTexture1m_F", _tagPosASL];
+private _tag = createSimpleObject [_tagModel, _tagPosASL];
 _tag setObjectTextureGlobal [0, _texture];
 if (_material != "") then { _tag setObjectMaterialGlobal [0, _material] };
 _tag setVectorDirAndUp _vectorDirAndUp;
@@ -46,7 +46,7 @@ if (_object getVariable [QGVAR(testVar), false]) then {
 
     // If the object already has tags attached, just add the new one to the list
     private _attachedTags = _object getVariable QGVAR(attachedTags);
-    if !(isNil  "_attachedTags ") exitWith {
+    if (!isNil "_attachedTags") exitWith {
         _attachedTags pushBack _tag;
     };
 

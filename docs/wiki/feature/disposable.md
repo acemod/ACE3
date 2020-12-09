@@ -14,7 +14,7 @@ version:
 
 ## 1. Overview
 
-The NLAW is shoulder fired and disposable, firing just once before being needed to be disposed of. This feature makes the NLAW disposable and provides the tools for other addons to do the same.
+The NLAW is shoulder fired and disposable, firing just once before being needed to be disposed of. This feature makes the NLAW disposable.
 
 ## 2. Dependencies
 

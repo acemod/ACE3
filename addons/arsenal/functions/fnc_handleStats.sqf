@@ -46,7 +46,7 @@ private _hideUnusedFnc = {
     } forEach _numbers;
 };
 
-if !(isNil "_itemCfg") then {
+if (!isNil "_itemCfg") then {
 
     private _handleStatsFnc = {
         params ["_statsIndex", "_leftPanel"];
@@ -152,7 +152,7 @@ if !(isNil "_itemCfg") then {
 
     if (ctrlIDC _control == IDC_leftTabContent) then {
 
-        if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsigna] find GVAR(currentLeftPanel) > -1) then {
+        if ([IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia] find GVAR(currentLeftPanel) > -1) then {
 
             [[1, 2, 3, 4, 5]] call _hideUnusedFnc;
             _statsBoxCtrl ctrlSetPosition [

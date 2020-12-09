@@ -50,6 +50,7 @@ if (isServer) then {
         missionNamespace setVariable [format [QGVAR(zeus_%1), _owner], _zeus];
         _zeus setVariable ["owner", _owner, true];
         _zeus setVariable ["Addons", 3, true];
+        _zeus setVariable ["BIS_fnc_initModules_disableAutoActivation", false];
         _zeus setCuratorCoef ["Place", 0];
         _zeus setCuratorCoef ["Delete", 0];
         _group deleteGroupWhenEmpty true;
@@ -80,36 +81,4 @@ if (hasInterface) then {
         GVAR(zeus) = _zeus;
         [localize "str_a3_cfgvehicles_moduletasksetstate_f_arguments_state_values_created_0"] call EFUNC(common,displayTextStructured);
     }] call CBA_fnc_addEventHandler;
-
-    private _action = [
-        QGVAR(create),
-        LLSTRING(CreateZeus),
-        "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa",
-        {
-            GVAR(zeus) = objNull; // to disable menu while zeus is being created
-            [QGVAR(createZeus), ACE_player] call CBA_fnc_serverEvent;
-        },
-        {
-            switch (GVAR(canCreateZeus)) do {
-                case CAN_CREATE_ADMIN:   {isServer || {IS_ADMIN_LOGGED}};
-                case CAN_CREATE_CONSOLE: {call BIS_fnc_isDebugConsoleAllowed};
-                case CAN_CREATE_ALL:     {true};
-                default {false};
-            }
-            && {isNil QGVAR(zeus)}
-        }
-    ] call EFUNC(interact_menu,createAction);
-    ["CAManBase", 1, ["ACE_SelfActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
-
-    _action = [
-        QGVAR(delete),
-        LLSTRING(DeleteZeus),
-        "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa",
-        {
-            deleteVehicle GVAR(zeus);
-            GVAR(zeus) = nil;
-        },
-        {!(isNil QGVAR(zeus) || {isNull GVAR(zeus)})}
-    ] call EFUNC(interact_menu,createAction);
-    ["CAManBase", 1, ["ACE_SelfActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
 };

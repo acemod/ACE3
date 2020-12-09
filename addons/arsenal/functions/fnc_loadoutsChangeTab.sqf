@@ -48,6 +48,7 @@ switch (ctrlIDC _control) do {
     case IDC_buttonMyLoadouts: {
         _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabMyLoadoutsText));
 
+        if (is3den) then { _saveButtonCtrl ctrlSetTooltip format ["%1\n%2", localize LSTRING(buttonSaveTooltip), localize LSTRING(buttonSaveTooltip_shiftClick)]; };
         _saveButtonCtrl ctrlEnable true;
         _saveButtonCtrl ctrlCommit 0;
     };
@@ -55,6 +56,7 @@ switch (ctrlIDC _control) do {
     case IDC_buttonDefaultLoadouts: {
         _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabDefaultLoadoutsText));
 
+        if (is3den) then { _saveButtonCtrl ctrlSetTooltip localize LSTRING(buttonSaveTooltip); };
         _saveButtonCtrl ctrlEnable (is3DEN);
         _saveButtonCtrl ctrlCommit 0;
     };
@@ -62,6 +64,7 @@ switch (ctrlIDC _control) do {
     case IDC_buttonSharedLoadouts: {
         _centerBoxTitleCtrl ctrlSetText (localize LSTRING(tabSharedLoadoutsText));
 
+        if (is3den) then { _saveButtonCtrl ctrlSetTooltip localize LSTRING(buttonSaveTooltip); };
         _saveButtonCtrl ctrlEnable false;
         _saveButtonCtrl ctrlCommit 0;
     };

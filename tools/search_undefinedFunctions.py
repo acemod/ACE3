@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 
 import fnmatch
 import os
@@ -7,52 +7,68 @@ import ntpath
 import sys
 import argparse
 
+# handle x64 python clipboard, ref https://forums.autodesk.com/t5/maya-programming/ctypes-bug-cannot-copy-data-to-clipboard-via-python/m-p/9197068/highlight/true#M10992
 import ctypes
+from ctypes import wintypes
+CF_UNICODETEXT = 13
 
-#from http://stackoverflow.com/a/3429034
-#Get required functions, strcpy..
-strcpy = ctypes.cdll.msvcrt.strcpy
-ocb = ctypes.windll.user32.OpenClipboard    #Basic Clipboard functions
-ecb = ctypes.windll.user32.EmptyClipboard
-gcd = ctypes.windll.user32.GetClipboardData
-scd = ctypes.windll.user32.SetClipboardData
-ccb = ctypes.windll.user32.CloseClipboard
-ga = ctypes.windll.kernel32.GlobalAlloc    # Global Memory allocation
-gl = ctypes.windll.kernel32.GlobalLock     # Global Memory Locking
-gul = ctypes.windll.kernel32.GlobalUnlock
-GMEM_DDESHARE = 0x2000
 
-def Get( ):
-  ocb(None) # Open Clip, Default task
-  pcontents = gcd(1) # 1 means CF_TEXT.. too lazy to get the token thingy ...
-  data = ctypes.c_char_p(pcontents).value
-  #gul(pcontents) ?
-  ccb()
-  return data
+user32 = ctypes.WinDLL('user32')
+kernel32 = ctypes.WinDLL('kernel32')
+
+OpenClipboard = user32.OpenClipboard
+OpenClipboard.argtypes = wintypes.HWND,
+OpenClipboard.restype = wintypes.BOOL
+CloseClipboard = user32.CloseClipboard
+CloseClipboard.restype = wintypes.BOOL
+EmptyClipboard = user32.EmptyClipboard
+EmptyClipboard.restype = wintypes.BOOL
+GetClipboardData = user32.GetClipboardData
+GetClipboardData.argtypes = wintypes.UINT,
+GetClipboardData.restype = wintypes.HANDLE
+SetClipboardData = user32.SetClipboardData
+SetClipboardData.argtypes = (wintypes.UINT, wintypes.HANDLE)
+SetClipboardData.restype = wintypes.HANDLE
+GlobalLock = kernel32.GlobalLock
+GlobalLock.argtypes = wintypes.HGLOBAL,
+GlobalLock.restype = wintypes.LPVOID
+GlobalUnlock = kernel32.GlobalUnlock
+GlobalUnlock.argtypes = wintypes.HGLOBAL,
+GlobalUnlock.restype = wintypes.BOOL
+GlobalAlloc = kernel32.GlobalAlloc
+GlobalAlloc.argtypes = (wintypes.UINT, ctypes.c_size_t)
+GlobalAlloc.restype = wintypes.HGLOBAL
+GlobalSize = kernel32.GlobalSize
+GlobalSize.argtypes = wintypes.HGLOBAL,
+GlobalSize.restype = ctypes.c_size_t
+
+GMEM_MOVEABLE = 0x0002
+GMEM_ZEROINIT = 0x0040
 
 def Paste( data ):
-  ocb(None) # Open Clip, Default task
-  ecb()
-  hCd = ga( GMEM_DDESHARE, len( bytes(data,"ascii") )+1 )
-  pchData = gl(hCd)
-  strcpy(ctypes.c_char_p(pchData),bytes(data,"ascii"))
-  gul(hCd)
-  scd(1,hCd)
-  ccb()
+    data = data.encode('utf-16le')
+    OpenClipboard(None)
+    EmptyClipboard()
+    handle = GlobalAlloc(GMEM_MOVEABLE | GMEM_ZEROINIT, len(data) + 2)
+    pcontents = GlobalLock(handle)
+    ctypes.memmove(pcontents, data, len(data))
+    GlobalUnlock(handle)
+    SetClipboardData(CF_UNICODETEXT, handle)
+    CloseClipboard()   
 
 
 def getFunctions(filepath):
-    selfmodule = (re.search('addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
+    selfmodule = (re.search(r'addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
     # print("Checking {0} from {1}".format(filepath,selfmodule))
 
     with open(filepath, 'r') as file:
         content = file.read()
 
-        srch = re.compile('[^E]FUNC\(([_a-zA-Z0-9]*)\)')
+        srch = re.compile(r'[^E]FUNC\(([_a-zA-Z0-9]*)\)')
         modfuncs = srch.findall(content)
         modfuncs = sorted(set(modfuncs))
 
-        srch = re.compile('EFUNC\(([_a-zA-Z0-9]*),([_a-zA-Z0-9]*)\)')
+        srch = re.compile(r'EFUNC\(([_a-zA-Z0-9]*),([_a-zA-Z0-9]*)\)')
         exfuncs = srch.findall(content)
         exfuncs = sorted(set(exfuncs))
 
@@ -67,17 +83,17 @@ def getFunctions(filepath):
 
 
 def getStrings(filepath):
-    selfmodule = (re.search('addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
+    selfmodule = (re.search(r'addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
     # print("Checking {0} from {1}".format(filepath,selfmodule))
 
     with open(filepath, 'r') as file:
         content = file.read()
 
-        srch = re.compile('[^E][CL]STRING\(([_a-zA-Z0-9]*)\)')
+        srch = re.compile(r'[^E][CL]STRING\(([_a-zA-Z0-9]*)\)')
         modStrings = srch.findall(content)
         modStrings = sorted(set(modStrings))
 
-        srch = re.compile('E[CL]STRING\(([_a-zA-Z0-9]*),([_a-zA-Z0-9]*)\)')
+        srch = re.compile(r'E[CL]STRING\(([_a-zA-Z0-9]*),([_a-zA-Z0-9]*)\)')
         exStrings = srch.findall(content)
         exStrings = sorted(set(exStrings))
 
@@ -126,7 +142,7 @@ def main():
     outputCode = "{0} allFunctions = {1}; allStrings = {2}; {3} {4}".format(codeHeader, list(set(allFunctions)), list(set(allStrings)), codeFuncCheck, codeStringCheck)
 
     print(outputCode)
-    Paste(outputCode);
+    Paste(outputCode)
 
     print ("")
     print ("Copied to clipboard, [funcs {0} / strings {1}]'".format(len(set(allFunctions)), len(set(allStrings))))

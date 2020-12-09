@@ -10,7 +10,6 @@
  *     0 = PlayMove
  *     1 = PlayMoveNow
  *     2 = SwitchMove (no transitional animation, doesn't overwrite priority 1)
- * 3: Force overwritting unconscious (default: false) <BOOL>
  *
  * Return Value:
  * None
@@ -21,14 +20,8 @@
  * Public: Yes
  */
 
-params ["_unit", "_animation", ["_priority", 0], ["_force", false]];
-TRACE_4("params",_unit,_animation,_priority,_force);
-
-// don't overwrite more important animations
-if (_unit getVariable ["ACE_isUnconscious", false] && {(_animation != "Unconscious")} && {!_force}) exitWith {};
-
-// don't go unconscious if the unit isn't unconscious
-if (_animation == "Unconscious" && {!((_unit getVariable ["ACE_isUnconscious", false]) || (_unit getVariable ["ACE_isDead", false]))}) exitWith {};
+params ["_unit", "_animation", ["_priority", 0]];
+TRACE_3("params",_unit,_animation,_priority);
 
 // switchMove "" no longer works in dev 1.37
 if (_animation == "") then {
@@ -43,7 +36,7 @@ switch (_priority) do {
         if (_unit == vehicle _unit) then {
             [QGVAR(playMove), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
-            // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
+            // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have local effects when executed on remote machines inside vehicles.
             [QGVAR(playMove), [_unit, _animation]] call CBA_fnc_globalEvent;
         };
     };
@@ -51,7 +44,7 @@ switch (_priority) do {
         if (_unit == vehicle _unit) then {
             [QGVAR(playMoveNow), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
-            // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
+            // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have local effects when executed on remote machines inside vehicles.
             [QGVAR(playMoveNow), [_unit, _animation]] call CBA_fnc_globalEvent;
         };
     };
@@ -60,7 +53,7 @@ switch (_priority) do {
         if (_unit == vehicle _unit) then {
             [QGVAR(playMoveNow), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
-            // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
+            // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have local effects when executed on remote machines inside vehicles.
             [QGVAR(playMoveNow), [_unit, _animation]] call CBA_fnc_globalEvent;
         };
 
