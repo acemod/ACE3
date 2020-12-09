@@ -23,8 +23,29 @@ private _nonlethalType = getText (configFile >> "CfgAmmo" >> _projectile >> "ACE
 if (_nonlethalType isEqualTo "") exitWith {};
 
 // Calculate how much of an effect the nonlethal has had on the unit
-private _threshold = (_unit getVariable [QGVAR(threshold), 0]) + (_damage * (0.01 max (1 - (_unit skill "courage"))) * GVAR(thresholdFactor));
-_unit setVariable [QGVAR(threshold), _threshold];
+private _threshold = _unit getVariable [QGVAR(threshold), 0];
+
+if (_nonLethalType isEqualTo "rubber") then {
+    _threshold =  _threshold + (_damage * (0.01 max (1 - (_unit skill "courage"))) * GVAR(thresholdFactor));
+    _unit setVariable [QGVAR(threshold), _threshold];
+};
+
+if (_nonLethalType isEqualTo "taser") then {
+    private _taserWorked = random 1 <= GVAR(taserWorkChance);
+    if (_taserWorked) then {
+        _threshold =  _threshold + (_damage * GVAR(thresholdFactor)) + 10;
+        if !(currentWeapon _unit isEqualTo "") then {
+            [_unit, currentWeapon _unit] call CBA_fnc_dropWeapon;
+        };
+        [QEGVAR(common,setAnimSpeedCoef), [_unit, 2]] call CBA_fnc_globalEvent;
+        [_unit, "ApanPercMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon", 1] call EFUNC(common,doAnimation); //fall to ground
+        _unit setVariable [QGVAR(threshold), _threshold];
+        [{
+            [_this, "", 1] call EFUNC(common,doAnimation);
+            [QEGVAR(common,setAnimSpeedCoef), [_this, 1]] call CBA_fnc_globalEvent;
+        }, _unit, 2] call CBA_fnc_waitAndExecute;
+    };
+};
 
 // Update unit status
 if (isPlayer _unit) then {

@@ -17,6 +17,11 @@
         <Key ID="STR_ACE_NonLethal_ThresholdFactor_Description">
             <English>Damage taken by the unit is multiplied by this factor</English>
         </Key>
+        <Key ID="STR_ACE_NonLethal_TaserWorkChance_DisplayName">
+            <English>Taser Work Chance</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_TaserWorkChance_Description">
+            <English>Chance that a deployed taser will work</English>
         <Key ID="STR_ACE_NonLethal_LimpChance_DisplayName">
             <English>Limp Chance</English>
         </Key>
@@ -56,6 +61,15 @@
         </Key>
         <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_Description">
             <English>Non-Lethal Single Rubber Slug</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_Name">
+            <English>12 Gauge 2Rnd Taser XREP</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_NameShort">
+            <English>Taser XREP</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_Description">
+            <English>Non-Lethal XREP Taser Shot</English>
         </Key>
     </Package>
 </Project>
