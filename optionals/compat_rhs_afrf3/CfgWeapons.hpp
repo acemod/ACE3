@@ -334,12 +334,10 @@ class CfgWeapons {
     };
     
     class rhs_uniform_flora;
-    class rhs_uniform_df15: rhs_uniform_flora
-    {
-        ACE_GForceCoef=0.8;
+    class rhs_uniform_df15: rhs_uniform_flora {
+        ACE_GForceCoef = 0.8;
     };
-    class rhs_uniform_df15_tan: rhs_uniform_df15
-    {
-        ACE_GForceCoef=0.8;
+    class rhs_uniform_df15_tan: rhs_uniform_df15 {
+        ACE_GForceCoef = 0.8;
     };
 };
