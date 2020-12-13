@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+
 params ["", "_patient"];
 
 [_patient] call FUNC(isBurning);

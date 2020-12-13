@@ -17,6 +17,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_chance", "_count", ["_source", objNull]];
 TRACE_4("adding damage to units", _vehicle, _chance, _count, _source);
 

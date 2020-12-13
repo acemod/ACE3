@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params["_vehicle"];
 TRACE_2("addEventHandler",_vehicle,GVAR(enabled));
 

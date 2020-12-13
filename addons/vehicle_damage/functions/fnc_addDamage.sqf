@@ -18,6 +18,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_hitIndex", "_hitPoint", "_damage", ["_capDamageAtCurret", true]];
 
 private _currentDamage = _vehicle getHitPointDamage _hitPoint;

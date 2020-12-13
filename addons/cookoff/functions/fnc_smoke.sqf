@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", ["_positions", []]];
  
 private _turretConfig = [_vehicle, [0]] call CBA_fnc_getTurret;

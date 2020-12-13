@@ -19,6 +19,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_chanceOfDetonate", "_vehicleAmmo", "_explosiveAmmoCount", "_nonExplosiveAmmoCount", ["_injurer", objNull]];
 private _alreadyDetonating = _vehicle getVariable [QGVAR(detonating), false];
 private _isKnockedOut = _explosiveAmmoCount > 0;

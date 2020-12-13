@@ -18,6 +18,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_magazines", "_totalAmmo"];
 
 if (isNull _vehicle) exitWith {}; // vehicle got deleted

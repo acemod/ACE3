@@ -19,6 +19,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_chanceOfFire", "_intensity", ["_injurer", objNull], ["_hitPart", ""], ["_canRing", false]];
 
 private _alreadyCookingOff = _vehicle getVariable [QGVAR(cookingOff), false];

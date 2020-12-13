@@ -16,6 +16,7 @@
  *
  * Public: No
  */
+
 params ["_unit", "_pfhHandle"];
 
 if !(IS_UNCONSCIOUS(_unit)) then {

@@ -19,6 +19,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_projectile", "_hitIndex", "_newDamage", "_hitpointData", "_injurer"];
 _hitpointData params ["_hitArea", "_hitpointConfig", "_hitpointName"];
 

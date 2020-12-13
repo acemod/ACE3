@@ -21,6 +21,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "", "_damage", "", "_projectile", "_hitIndex", "", "_hitPoint"];
 if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
     if (local _vehicle) then {

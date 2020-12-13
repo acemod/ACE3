@@ -16,6 +16,7 @@
  *
  * Public: No
  */
+
 params ["_args", "_handle"];
 
 [GVAR(fireSources), {

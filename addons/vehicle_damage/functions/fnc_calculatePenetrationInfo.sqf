@@ -17,6 +17,7 @@
  *
  * Public: No
  */
+
 params ["_source", "_vehicle", "_projectileData", "_hitpointConfig"];
 _projectileData params ["_projectileType", "_projectileConfig"];
 /*

@@ -22,6 +22,7 @@
  *
  * Public: No
  */
+
 params["_vehicle", "_hitPoint", "_hitIndex", "_injurer", "_oldDamage", "_newDamage", "_projectile", "_selection"];
 TRACE_6("handleVehicleDamage",_vehicle,_hitPoint,_hitIndex,_injurer,_oldDamage,_newDamage);
 if !(alive _vehicle) exitWith {

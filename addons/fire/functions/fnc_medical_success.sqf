@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+
 params ["_medic", "_patient"];
 
 private _intensity = _patient getVariable [QGVAR(intensity), 0];

@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle"];
 TRACE_2("abandon",_vehicle,(crew _vehicle) select {alive _x});
 

@@ -16,6 +16,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", ["_injurer", objNull], ["_vehicleAmmo", []]];
 
 if (_vehicleAmmo isEqualTo []) then {

@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle"];
 private _hash = _vehicle getVariable [QGVAR(hitpointHash), nil];
 if (isNil "_hash") exitWith {};

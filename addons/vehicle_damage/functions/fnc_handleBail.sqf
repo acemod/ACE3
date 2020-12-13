@@ -16,6 +16,7 @@
  *
  * Public: No
  */
+
 params ["_vehicle", "_canMove", "_canShoot"];
 private _isCar = (_vehicle isKindOf "Car" && { !(_vehicle isKindOf "Wheeled_APC_F") });
 
