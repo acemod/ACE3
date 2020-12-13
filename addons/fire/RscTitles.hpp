@@ -1,6 +1,7 @@
 class RscTitles {
     class RscPicture;
     class GVAR(onFire1) {
+        idd = -1;
         movingEnable = "true";
         duration = 0.1;
         fadein = 0.15;
@@ -27,6 +28,7 @@ class RscTitles {
     };
     
     class GVAR(onFire2): GVAR(onFire1) {
+        idd = -1;
         name = QGVAR(onFire2);
         onload = QUOTE(with uiNamespace do {GVAR(onFireIndicator2) = _this select 0});
         
