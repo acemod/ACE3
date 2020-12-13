@@ -15,7 +15,7 @@ version:
 
 ## 1. Events
 
-Events are only called on the server. Use `CBA_fnc_globalEvent` to call.
+Use `CBA_fnc_globalEvent` to use the following features. Events are defined only on the server in the system so you don't need to worry about this running multiple times for a global call.
 
 ### 1.1 Adding a new fire source
 
