@@ -1,11 +1,11 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Starts vehicle barrel smoke effect
+ * Starts vehicle barrel smoke effect.
  *
  * Arguments:
- * 0: Vehicle <Object>
- * 1. Selections for smoke to come out of (Optional) <Array>
+ * 0: Vehicle <OBJECT>
+ * 1. Selections for smoke to come out of <ARRAY> (default: [])
  *
  * Return Value:
  * None

@@ -1,20 +1,21 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Process hit by projectile against vehicle and apply appropiate damage to part
+ * Process hit by projectile against vehicle and apply appropiate damage to part.
  *
  * Arguments:
- * 0: The vehicle
- * 1: Projectile that hit
- * 2: Hit index of potentially damaged part
- * 3: New damage done to part
+ * 0: The vehicle <OBJECT>
+ * 1: Projectile that hit <OBJECT>
+ * 2: Hit index of potentially damaged part <NUMBER>
+ * 3: New damage done to part <NUMBER>
+ * 4: Information about hitpoint <ARRAY>
+ * 5: Person who caused damage <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
  * [myVehicle, projectile, 5, 0.663] call ace_vehicle_damage_fnc_processHit;
- *
  *
  * Public: No
  */

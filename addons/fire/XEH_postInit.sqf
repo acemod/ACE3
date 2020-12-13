@@ -38,4 +38,3 @@
         GVAR(fireSources) = [[], nil] call CBA_fnc_hashCreate;
     };
 }] call CBA_fnc_addEventHandler;
-

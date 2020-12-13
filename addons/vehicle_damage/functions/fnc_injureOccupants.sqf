@@ -1,20 +1,19 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Injures occupants in a vehicle based on percent chance of injury
+ * Injures occupants in a vehicle based on percent chance of injury.
  *
  * Arguments:
- * 0: The vehicle
- * 1: Injury Chance
- * 2: Maximum people to injure
- * 3: Projectile source
+ * 0: The vehicle <OBJECT>
+ * 1: Injury Chance <NUMBER>
+ * 2: Maximum people to injure <NUMBER>
+ * 3: Projectile source <OBJECT> (default: objNull)
  *
  * Return Value:
  * None
  *
  * Example:
  * [myVehicle, 0.6, 10] call ace_vehicle_damage_fnc_injureOccupants;
- *
  *
  * Public: No
  */
@@ -60,4 +59,3 @@ private _injuryCount = 0;
     
     if (_injuryCount >= _count) exitWith {};
 } forEach _vehicleCrew;
-

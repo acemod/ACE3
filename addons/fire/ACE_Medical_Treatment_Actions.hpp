@@ -1,4 +1,4 @@
-class ace_medical_treatment_actions {
+class EGVAR(medical_treatment,actions) {
     class BasicBandage;
     class PatDown: BasicBandage {
         displayName = CSTRING(Actions_PatDown);
@@ -18,3 +18,4 @@ class ace_medical_treatment_actions {
         litter[] = {};
     };
 };
+

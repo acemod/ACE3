@@ -4,7 +4,7 @@
  * Check if object is burning.
  *
  * Arguments:
- * 0: Vehicle <Object>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * None

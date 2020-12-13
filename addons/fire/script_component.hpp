@@ -16,6 +16,7 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 
 #define FIRE_MANAGER_PFH_DELAY 0.25
 #define FLARE_SIZE_MODIFIER 5

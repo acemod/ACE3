@@ -1,7 +1,6 @@
 class RscTitles {
     class RscPicture;
     class GVAR(onFire1) {
-        idd = 210220201;
         movingEnable = "true";
         duration = 0.1;
         fadein = 0.15;
@@ -27,15 +26,15 @@ class RscTitles {
         };
     };
     
-    class GVAR(onFire2) : GVAR(onFire1) {
-        idd = 210220202;
+    class GVAR(onFire2): GVAR(onFire1) {
         name = QGVAR(onFire2);
         onload = QUOTE(with uiNamespace do {GVAR(onFireIndicator2) = _this select 0});
         
-        class controls : controls {
-            class GVAR(indicator) : GVAR(indicator) {
+        class controls: controls {
+            class GVAR(indicator): GVAR(indicator) {
                 text = PATHTOF(data\overlay_burn_2.paa);
             };
         };
     };
 };
+

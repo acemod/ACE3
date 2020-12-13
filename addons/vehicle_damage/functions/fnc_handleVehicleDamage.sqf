@@ -1,20 +1,24 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Process vehicle hit
+ * Process vehicle hit.
  *
  * Arguments:
- * 0: The vehicle
- * 1: The selection which got hit
- * 2: The index of what got hit
- * 3: The damage that the new part took
+ * 0: The vehicle <OBJECT>
+ * 1: The hitpoint which got hit <STRING>
+ * 2: The index of what got hit <NUMBER>
+ * 3: The damage that the new part took <NUMBER>
+ * 4: Person who hit vehicle <OBJECT>
+ * 5: Damage before hit <NUMBER>
+ * 6: Damage after hit <NUMBER>
+ * 7: Projectile <OBJECT>
+ * 8: Selection that got hit <STIRNG>
  *
  * Return Value:
  * Whether or not to continue handling last frame's damage
  *
  * Example:
  * [ace_vehicle_damage_fnc_handleTankDamage, tank1, "Hit_Engine", 12]] call CBA_fnc_execNextFrame
- *
  *
  * Public: No
  */

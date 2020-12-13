@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Returns if unit can pat down fire or not
+ * Returns if unit can pat down fire or not.
  *
  * Arguments:
  * 0: Medic (not used) <OBJECT>
@@ -18,4 +18,3 @@
 params ["", "_patient"];
 
 [_patient] call FUNC(isBurning);
-

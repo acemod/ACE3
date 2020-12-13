@@ -1,20 +1,20 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Sets vehicle damage based on HitIndex. Failing that it falls back to HitPoint name
+ * Sets vehicle damage based on HitIndex. Failing that it falls back to HitPoint name.
  *
  * Arguments:
- * 0: The vehicle
- * 1: Hit Index
- * 2: Hit Point
- * 3: Damage
+ * 0: The vehicle <OBJECT>
+ * 1: Hit Index <NUMBER>
+ * 2: Hit Point <STRING>
+ * 3: Damage <NUMBER>
+ * 4: Whether or not to cap the damage to maximum part damage <BOOL> (default: True)
  *
  * Return Value:
  * None
  *
  * Example:
  * [vehicle player, 234, "HitHull"] call ace_vehicle_damage_fnc_knockOut
- *
  *
  * Public: No
  */
@@ -39,4 +39,3 @@ if (_hitIndex >= 0) then {
 if (_hitPoint isEqualTo "hitengine" && { _damage > 0.9 }) then {
     _vehicle call EFUNC(cookoff,engineFire);
 };
-

@@ -2,7 +2,7 @@
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 /*
  * Author: Brandon (TCVM)
- * Run once per second in a PFH. Update screen effects with burn indicator
+ * Run once per second in a PFH. Update screen effects with burn indicator.
  *
  * Arguments:
  * 0: Unit on fire <OBJECT>
@@ -17,6 +17,7 @@
  * Public: No
  */
 params ["_unit", "_pfhHandle"];
+
 if !(IS_UNCONSCIOUS(_unit)) then {
     private _iteration = _unit getVariable [QGVAR(indicatorIteration), 0];
     if (_iteration == 0) then {

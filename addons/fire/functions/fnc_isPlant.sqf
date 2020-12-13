@@ -4,10 +4,10 @@
  * Check if object is a map placed bush or tree.
  *
  * Arguments:
- * 0: Object <Object>
+ * 0: Object <OBJECT>
  *
  * Return Value:
- * Is bush or tree? <BOOLEAN>
+ * Is bush or tree? <BOOL>
  *
  * Example:
  * cursorObject call ace_fire_fnc_isPlant

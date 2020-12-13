@@ -17,5 +17,3 @@
     {[QGVAR(flareEnabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_settings_fnc_init;
-
-

@@ -1,23 +1,22 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Handles whether or not the crew should bail
+ * Handles whether or not the crew should bail.
  *
  * Arguments:
- * 0: The vehicle
- * 1: Can the vehicle move?
- * 2: Can the vehicle shoot?
+ * 0: The vehicle <OBJECT>
+ * 1: Can the vehicle move? <BOOL>
+ * 2: Can the vehicle shoot? <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [tank1, false, true] call ace_vehicle_damage_fnc_determineGenericSelectionType
- *
+ * [tank1, false, true] call ace_vehicle_damage_fnc_handleBail
  *
  * Public: No
  */
-params["_vehicle", "_canMove", "_canShoot"];
+params ["_vehicle", "_canMove", "_canShoot"];
 private _isCar = (_vehicle isKindOf "Car" && { !(_vehicle isKindOf "Wheeled_APC_F") });
 
 if (_canMove) then {

@@ -1,20 +1,23 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Called by "HandleDamage" event handler. Sets up hit array for this frame's damage
+ * Called by "HandleDamage" event handler. Sets up hit array for this frame's damage.
  *
  * Arguments:
- * 0: The vehicle
- * 1: Projectile that hit
- * 2: Hit index of potentially damaged part
- * 3: New damage done to part
+ * 0: The vehicle <OBJECT>
+ * 1: Name of selection where unit was damaged <STRING> (unused)
+ * 2: Damage taken <NUMBER>
+ * 3: Source unit of damage <OBJECT> (unused)
+ * 4: Projectile that caused damage <STRING>
+ * 5: Hit part index of hit point <NUMBER>
+ * 6: Instigator of damage <OBJECT> (unused)
+ * 7: Hit point config name <STRING>
  *
  * Return Value:
- * 0
+ * Current or maximum damage of part
  *
  * Example:
  * [myVehicle, projectile, 5, 0.663] call ace_vehicle_damage_fnc_handleDamage;
- *
  *
  * Public: No
  */
@@ -74,4 +77,3 @@ if (_hitPoint isEqualTo "" && _hitIndex < 0) then {
 };
 
 _returnHit
-

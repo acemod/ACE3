@@ -1,17 +1,16 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Knock out vehicle from battle. Destroy all internal hitpoints
+ * Knock out vehicle from battle. Destroy all internal hitpoints.
  *
  * Arguments:
- * 0: The vehicle
+ * 0: The vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
  * [vehicle player] call ace_vehicle_damage_fnc_knockOut
- *
  *
  * Public: No
  */
@@ -34,3 +33,4 @@ if (isNil "_hash") exitWith {};
         };
     };
 }] call CBA_fnc_hashEachPair;
+

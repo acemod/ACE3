@@ -25,7 +25,7 @@ private _config = _vehicle call CBA_fnc_getObjectConfig;
 private _positions = getArray (_config >> QGVAR(cookoffSelections)) select {!((_vehicle selectionPosition _x) isEqualTo [0,0,0])};
 
 if (_positions isEqualTo []) then {
-    WARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
+    WARNING_1("no valid selection for cookoff found. %1",typeOf _vehicle);
     {
         private _pos = _vehicle selectionPosition _x;
         if (_pos isEqualTo [0, 0, 0]) exitWith {};
@@ -63,6 +63,10 @@ if (_smokeDelayEnabled) then {
         
         private _lastFlameTime = _vehicle getVariable [QGVAR(lastFlame), 0];
         private _nextFlameTime = _vehicle getVariable [QGVAR(nextFlame), 0];
+        
+        // Wait until we are ready for the next flame
+        // dt = Tcurrent - Tlast
+        // dt >= Tnext
         if ((CBA_missionTime - _lastFlameTime) >= _nextFlameTime) then {
             private _ring = (0.2 > random 1);
             if (!_ring && _intensity >= 2) then {

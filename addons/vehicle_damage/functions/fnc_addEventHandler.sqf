@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Adds the event handler to a vehicle
+ * Adds the event handler to a vehicle.
  *
  * Arguments:
- * 0: The vehicle in which to add the event handler to
+ * 0: The vehicle in which to add the event handler to <OBJECT>
  *
  * Return Value:
  * None
@@ -51,7 +51,7 @@ private _iterateThroughConfig = {
     private _isSlat = _configName in _slatHitpoints;
     private _isMisc = false;
     
-    // prevent incompatabilites with old mods
+    // prevent incompatibilites with old mods
     if ((toLower _configName) isEqualTo "hitturret") then {
         _isTurret = true;
     };
@@ -107,4 +107,3 @@ if (isNil "_eh") then {
         _vehicle setVariable [QGVAR(handleDamage), _hd];
     }, [_vehicle]] call CBA_fnc_execNextFrame;
 };
-

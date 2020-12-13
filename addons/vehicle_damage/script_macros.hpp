@@ -25,4 +25,3 @@
 
 
 #define CREATE_INCENDIARY_AMMO(ammo,base,inc) class ammo : base { GVAR(incendiary) = inc; }
-

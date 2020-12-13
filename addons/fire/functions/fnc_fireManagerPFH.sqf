@@ -1,12 +1,12 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Handles various fire objects and determines if local units deserves to get burned
- * Used to handle external burning objects, not used internally because internal methods more performant
+ * Handles various fire objects and determines if local units deserves to get burned.
+ * Used to handle external burning objects, not used internally because internal methods more performant.
  *
  * Arguments:
- * 0: PFH args
- * 1: PFH Handle
+ * 0: Unit on fire <OBJECT>
+ * 1: PFH Handle <NUMBER>
  *
  * Return Value:
  * None

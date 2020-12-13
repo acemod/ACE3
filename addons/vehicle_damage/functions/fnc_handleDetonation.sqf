@@ -1,18 +1,21 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Checks hitpoint damage and determines if a vehicle should cookoff
+ * Checks hitpoint damage and determines if a vehicle should cookoff.
  *
  * Arguments:
- * 0: The vehicle
- * 1: Chance of detonation
+ * 0: The vehicle <OBJECT>
+ * 1: Chance of detonation <NUMBER>
+ * 2: Vehicle ammo array <ARRAY>
+ * 3: How much explosive ammo is inside vehicle <NUMBER>
+ * 4: How much non-explosive ammo inside vehicle <NUMBER>
+ * 5: Person who instigated damage <OBJECT> (default: objNull)
  *
  * Return Value:
  * Detonated <BOOL>
  *
  * Example:
  * [tank2, 0.5] call ace_vehicle_damage_fnc_handleDetonation;
- *
  *
  * Public: No
  */

@@ -15,7 +15,7 @@ version:
 
 ## 1. Events
 
-Events are only called on the server. Use `cba_fnc_globalEvent` to call.
+Events are only called on the server. Use `CBA_fnc_globalEvent` to call.
 
 ### 1.1 Adding a new fire source
 

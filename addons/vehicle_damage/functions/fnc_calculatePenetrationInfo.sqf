@@ -1,20 +1,19 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Calculates whether or not hit penetrated given armour or not. Only enabled with advanced penetration simulation turned on
+ * Calculates whether or not hit penetrated given armour or not. Only enabled with advanced penetration simulation turned on.
  *
  * Arguments:
- * 0: Source of damage
- * 1: The vehicle
- * 2: Projectile that hit
- * 3: Hitpoint damaged
+ * 0: Source of damage <OBJECT>
+ * 1: The vehicle <OBJECT>
+ * 2: Projectile that hit <OBJECT>
+ * 3: Hitpoint damaged <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
  * [myVehicle, projectile, 5, 0.663] call ace_vehicle_damage_fnc_calculatePenetrationInfo;
- *
  *
  * Public: No
  */
@@ -116,4 +115,3 @@ private _hitpointEffectiveSlope = [_hitpointConfig >> QGVAR(slope), "NUMBER", 0]
 _penetrationDistance = _penetrationDistance * cos (_hitpointEffectiveSlope);
 
 [_penetrationDistance > _hitpointEffectiveArmour, _penetrationDistance - _hitpointEffectiveArmour, _penetrationDistance, _perforationDistance, _hitpointEffectiveArmour]
-

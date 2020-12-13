@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Vehicle Damage
-description: Enhances vanilla armoured vehicle damage simulation
+description: Enhances vanilla armoured vehicle damage simulation.
 group: feature
 category: realism
 parent: wiki
@@ -14,7 +14,7 @@ version:
 
 ## 1. Overview
 
-Removes hit-point based damage on armoured vehicles
+Removes hit-point based damage on armoured vehicles.
 
 ### 1.1 Differences from vanilla
 
@@ -23,10 +23,10 @@ When you are hit, a calculation takes place and determines which people inside t
 
 ### 1.2 How is damage calculated
 
-Damage takes into account what warhead hits you, the speed it hits you at, and how much armour it hit
+Damage takes into account what warhead hits you, the speed it hits you at, and how much armour it hit.
 
 If you are hit with a HEAT warhead, the system will check if you hit any ERA or SLAT armour and if so it negates all damage from hitting your vehicle and instead the component absorbs it.
-Once the SLAT or ERA is destroyed, if hit again in the same spot the warhead will penetrate. Tandem HEAT will penetrate and destroy the armour, however. AP ammo has a chance to destroy it
+Once the SLAT or ERA is destroyed, if hit again in the same spot the warhead will penetrate. Tandem HEAT will penetrate and destroy the armour, however. AP ammo has a chance to destroy it.
 
 All ammunition shot at a vehicle is considered into the calculation. If the ammo is incendiary and it penetrates into a vital component there is a chance for cook-off to occur.
 
@@ -118,17 +118,17 @@ When hit, HEAT warheads will be defeated and no damage will be applied. If hit w
 
 ## 3. Addon Options
 
-### 3.1 enabled
+### 3.1 Enable
 
 - Enables/Disables the vehicle damage simulation
 - Default: On
 
-### 3.2 removeAmmoDuringCookoff
+### 3.2 Enable/Disable Ammo Removal During Cook-Off
 
 - Enables/Disables whether or not vehicle ammo will be fully removed upon cooking-off
 - Default: On
 
-### 3.3 enableCarDamage
+### 3.3 Enable/Disable advanced car damage (Experimental)
 
 - Enable experimental car damage. System will apply vehicle damage simulation to "car" types (trucks, SUVs, Humvees, etc.). Not fully tested and could be immbalanced causing weird behaviours.
 - Default: Off
