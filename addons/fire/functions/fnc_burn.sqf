@@ -3,6 +3,7 @@
 /*
  * Author: Brandon (TCVM)
  * Makes object catch fire. Only call from events. Local effects only
+ * Arbitrary values to ignite people. Assumed maximum is "10"
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
