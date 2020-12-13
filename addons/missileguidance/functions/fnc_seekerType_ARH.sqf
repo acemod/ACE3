@@ -71,7 +71,6 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             };
         };
         _nearestObjects = _nearestObjects select { !isNull _x };
-        
         // Select closest object to the expected position to be the current radar target
         if ((count _nearestObjects) <= 0) exitWith {
             _projectile setMissileTarget objNull;
