@@ -51,7 +51,7 @@
                 [_unit, _magArr select 1, _container] call EFUNC(common,addToInventory);
             };
 
-            false;
+            false
         },
         true,
         [_mag,_throwableMag]
@@ -89,7 +89,7 @@
                 [_unit, _magArr select 0, _container] call EFUNC(common,addToInventory);
             };
 
-            false;
+            false
         },
         true,
         [_mag,_throwableMag]
