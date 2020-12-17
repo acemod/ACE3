@@ -55,5 +55,5 @@ if (!_addNew) exitWith {};
 [{
     params ["_unit", "_weapon", "_newAttachment"];
     _unit addWeaponItem [_weapon, _newAttachment];
-    ["", getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture")] call EFUNC(common,displayTextPicture);
+    [[getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture"), 4], true] call CBA_fnc_notify;
 }, [_unit, _weapon, _newAttachment], 1] call CBA_fnc_waitAndExecute;
