@@ -489,5 +489,9 @@
             <Spanish>Selector de color</Spanish>
             <Turkish>Seçici Renk</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_combineParentWithSingleChild">
+            <English>Combine parent menu with single child item</English>
+            <Russian>Объединять родительское меню с единственным дочерним меню</Russian>
+        </Key>
     </Package>
 </Project>

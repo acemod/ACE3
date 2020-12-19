@@ -9,6 +9,14 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(combineParentWithSingleChild),
+    "CHECKBOX",
+    [LSTRING(combineParentWithSingleChild), LSTRING(combineParentWithSingleChild)],
+    format ["ACE %1", LLSTRING(Category_InteractionMenu)],
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(alwaysUseCursorInteraction),
     "CHECKBOX",
     LSTRING(AlwaysUseCursorInteraction),
