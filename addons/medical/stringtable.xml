@@ -197,12 +197,14 @@
         </Key>
         <Key ID="STR_ACE_Medical_Fractures_SplintHealsNoJog">
             <English>Splints Heal, but Cannot Jog</English>
+            <German>Schinen heilen Knochenbrüche, erlauben aber nicht das laufen</German>
             <French>Les attelles guérissent les fractures, mais empêchent de courir</French>
             <Japanese>添え木で治癒可能、駆け足できないように</Japanese>
             <Turkish>Ateller İyileştirir, Ama Koşu Yapamaz</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
+            <German>Knochenbruch Chance</German>
             <French>Chance de fracture</French>
             <Japanese>骨折確率</Japanese>
             <Chinesesimp>骨折概率</Chinesesimp>

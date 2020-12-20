@@ -191,10 +191,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_DisplayName">
             <English>Show Triage Level in Interaction Menu</English>
+            <German>Triage Stufe im Interaktions Menü anzeigen</German>
             <French>Couleur de triage dans le menu d'interaction</French>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_Description">
             <English>Shows the patient's triage level by changing the color of the main and medical menu actions.</English>
+            <German>Zeigt die Triage Stufe des Patienten, durch das Ändern der Farbe der Haupt- und Sanitätsmenü-Aktionen.</German>
             <French>Modifie la couleur du menu d'interactions et du sous-menu médical en fonction de la fiche de triage du patient.</French>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
@@ -955,6 +957,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_Fractured">
             <English>Fractured</English>
+            <German>Gebrochen</German>
             <Russian>Перелом</Russian>
             <Japanese>骨折している</Japanese>
             <French>Fracturé</French>
@@ -969,6 +972,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
+            <German>Schiene angewendet</German>
             <Russian>Наложена шина</Russian>
             <Japanese>添え木を当てている</Japanese>
             <French>Attelle appliquée</French>
@@ -1110,6 +1114,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_IGUI_PatientInfo">
             <English>Patient Info</English>
+            <German>Patienten Information</German>
             <Polish>Informacje o pacjencie</Polish>
             <French>Informations patient</French>
             <Russian>Информация о пациенте</Russian>

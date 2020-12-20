@@ -106,6 +106,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_EnabledCanReopen">
             <English>Enabled &amp; Can Reopen</English>
+            <German>Aktiviert &amp; Wundwiederöffnung aktiviert</German>
+			//meh translation
             <French>Activé &amp; peuvent se rouvrir</French>
             <Japanese>有効 &amp; 再開放</Japanese>
             <Czech>Zapnuto &amp; Úrazy se mohou znovu otevřít</Czech>
@@ -240,10 +242,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_DisplayName">
             <English>Autoinjector Treatment Time</English>
+            <German>Autoinjektor Behandlungszeit</German>
             <French>Durée d'interaction - Auto-injecteurs</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
+            <German>Zeit, in Sekunden, benötigt um Medizin mit einem Autoinjektor zu verabreichen.</German>
             <French>Définit le temps nécessaire à l'administration d'une substance auto-injectable (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
@@ -582,10 +586,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_DisplayName">
             <English>Wound Stitch Time</English>
+            <German>Zeit benötigt um Wunden zu nähen</German>
             <French>Durée d'interaction - Sutures</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
+            <German>Zeit, in Sekunden, die benötigt wird um eine Wunden zu nähen.</German>
             <French>Définit le temps nécessaire à la suture d'une plaie (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
@@ -614,10 +620,13 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_DisplayName">
             <English>Allow Unconscious Body Bag</English>
+            <German>Platzieren von Bewustlosen Personen in Leichensäcken erlauben</German>
+            //too long?
             <French>Housse mortuaire - Autoriser patients inconscients</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
+            <German>Erlaubt das platzieren von Bewustlosen Personen in Leichensäcken.</German>
             <French>Active la possibilité de placer des patients inconscients dans les housses mortuaires.\nAttention : le cas échéant cela provoquera la mort du patient.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
@@ -850,10 +859,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
+            <German>HLW Behandlungszeit</German>
             <French>Durée d'interaction - RCP</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
+            <German>Zeit, in Sekunden, die benötigt wird um Herz-Lungen-Wiederbelebung duchzuführen.</German>
             <French>Définit le temps nécessaire à la mise en œuvre d'une RCP (en secondes).</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
@@ -4306,6 +4317,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
             <English>The body twitched and may not be dead!</English>
+            <German>Der Körper hat gezuckt, und ist vielleicht nicht tot!</German>
             <French>L'unité a bougé et n'est peut-être pas morte !</French>
         </Key>
     </Package>

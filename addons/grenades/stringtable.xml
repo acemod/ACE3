@@ -513,36 +513,43 @@
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Remote_Mag_Throwable">
             <English>Explosive Satchel (Throwable)</English>
+            <German>Rucksackladung (Werfbar)</German>
             <French>Charge en sacoche (lançable)</French>
             <Japanese>梱包爆薬 (投てき仕様)</Japanese>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
+            <German>Typ: Ladung&lt;br /&gt;Ladungen: 1&lt;br /&gt;Anwendbar für: Dinge die sterben sollen</German>
             <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : à balancer sur des trucs qui doivent mourir</French>
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
+            <German>Eine werfbare Rucksackladung, 7 Sekunden Zünder</German>
             <French>Charge explosive lançable. Détonation après 7 secondes.</French>
             <Japanese>投げられる梱包爆薬。起爆までの時間は 7 秒間</Japanese>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
+            <German>Sprengladung (Werfbar)</German>
             <French>Charge explosive (lançable)</French>
             <Japanese>爆薬ブロック (投てき仕様)</Japanese>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
+            <German>Eine werfbare Sprengladung, 7 Sekunden Zünder</German>
             <French>Bloc explosif lançable. Détonation après 7 secondes.</French>
             <Japanese>投げられる爆薬ブロック。起爆までの時間は 7 秒間</Japanese>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
+            <German>Zu Kurzzünder konvertieren</German>
             <French>Appliquer une mèche</French>
             <Japanese>短信管へ変更</Japanese>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
+            <German>Kurzzünder entfernen</German>
             <French>Retirer la mèche</French>
             <Japanese>短信管を削除</Japanese>
         </Key>
@@ -564,11 +571,13 @@
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_DisplayName">
             <English>Allow Explosive Conversion</English>
+            <German>Erlaube Sprengstoff Konvertierungen</German>
             <French>Autoriser les mèches (charges lançables)</French>
             <Japanese>爆薬変更を許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
+            <German>Erlaubt das konvertieren von Sprengstoff zu Wurfgegenständen</German>
             <French>Cette option permet de rendre les charges explosives lançables, à la manière des grenades.\nPour celà, ouvrir l'inventaire et double-cliquer sur les charges, afin de leur appliquer une mèche.\nLa mèche peut se retirer en suivant la même procédure.</French>
             <Japanese>爆発物を投てき仕様へ交換できるようにします。</Japanese>
         </Key>

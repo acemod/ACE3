@@ -1114,26 +1114,32 @@
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
+            <German>Minimale Zeit</German>
             <French>Durée minimale</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
+            <German>Maximale Zeit</German>
             <French>Durée maximale</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
+            <German>Standard Zeit</German>
             <French>Durée par défaut</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
+            <German>Minimaler Wert (in Sekunden) für die Detonationszeit.</German>
             <French>Définit la durée minimale paramétrable sur le minuteur.</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
+            <German>Maximaler Wert (in Sekunden) für die Detonationszeit.</German>
             <French>Définit la durée maximale paramétrable sur le minuteur.</French>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
+            <German>Standard Wert (in Sekunden) für die Detonationszeit.</German>
             <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
         </Key>
     </Package>

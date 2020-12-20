@@ -1325,6 +1325,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_SatchelChargeThrowable_Name">
             <English>M183 Demolition Charge (Throwable)</English>
+            <German>M183 Sprengladung (Werfbar)</German>
             <French>M183 Charge de démolition (lançable)</French>
             <Japanese>M183 梱包爆薬 (投てき仕様)</Japanese>
             <Turkish>M183 Demolition Charge (Throwable)</Turkish>
@@ -1348,6 +1349,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoChargeThrowable_Name">
             <English>M112 Demolition Charge (Throwable)</English>
+            <German>M112 Sprengladung (Werfbar)</German>
             <French>M112 Bloc de démolition (lançable)</French>
             <Japanese>M112 爆薬ブロック (投てき仕様)</Japanese>
             <Turkish>M112 Demolition Charge (Throwable)</Turkish>
@@ -3760,6 +3762,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
             <English>ELCAN SpecterOS (Green Hex)</English>
+            <German>ELCAN SpecterOS (Grün Hex)</German>
             <Chinese>ELCAN SpecterOS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>ELCAN SpecterOS (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>ELCAN SpecterOS (緑ヘックス)</Japanese>
@@ -3829,6 +3832,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
+            <German>Nightforce NXS</German>
             <Chinese>Nightforce NXS</Chinese>
             <Chinesesimp>Nightforce NXS</Chinesesimp>
             <Japanese>Nightforce NXS</Japanese>
@@ -3842,6 +3846,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
+            <German>Nightforce NXS (Grün Hex)</German>
             <Chinese>Nightforce NXS (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Nightforce NXS (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>Nightforce NXS (緑ヘックス)</Japanese>
@@ -3869,6 +3874,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_2d">
             <English>Nightforce NXS (2D)</English>
+            <German>Nightforce NXS (2D)</German>
             <Chinese>Nightforce NXS (2D)</Chinese>
             <Chinesesimp>Nightforce NXS (2D)</Chinesesimp>
             <Japanese>Nightforce NXS (2D)</Japanese>
@@ -3882,6 +3888,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
+            <German>US Optics MR-10 (Schwarz)</German>
             <Chinese>US Optics MR-10 (Black)</Chinese>
             <Chinesesimp>US Optics MR-10 (Black)</Chinesesimp>
             <Japanese>US Optics MR-10 (ブラック)</Japanese>
@@ -3895,6 +3902,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
+            <German>US Optics MR-10 (Khaki)</German>
             <Chinese>US Optics MR-10 (Khaki)</Chinese>
             <Chinesesimp>US Optics MR-10 (Khaki)</Chinesesimp>
             <Japanese>US Optics MR-10 (カーキ)</Japanese>
@@ -3908,6 +3916,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
+            <German>US Optics MR-10 (Sand)</German>
             <Chinese>US Optics MR-10 (Sand)</Chinese>
             <Chinesesimp>US Optics MR-10 (Sand)</Chinesesimp>
             <Japanese>US Optics MR-10 (サンド)</Japanese>
@@ -3921,6 +3930,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
+            <German>KAHLES Helia (Schwarz)</German>
             <Chinese>KAHLES Helia (Black)</Chinese>
             <Chinesesimp>KAHLES Helia (Black)</Chinesesimp>
             <Japanese>KAHLES ヘリア (ブラック)</Japanese>
@@ -3934,6 +3944,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
+            <German>KAHLES Helia (Hex)</German>
             <Chinese>KAHLES Helia (Hex)</Chinese>
             <Chinesesimp>KAHLES Helia (Hex)</Chinesesimp>
             <Japanese>KAHLES ヘリア (ヘックス)</Japanese>
@@ -3947,6 +3958,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
+            <German>KAHLES Helia (Alt)</German>
             <Chinese>KAHLES Helia (Old)</Chinese>
             <Chinesesimp>KAHLES Helia (Old)</Chinesesimp>
             <Japanese>KAHLES ヘリア (使い古し)</Japanese>
@@ -3960,6 +3972,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
+            <German>KAHLES Helia (Beige)</German>
             <Chinese>KAHLES Helia (Tan)</Chinese>
             <Chinesesimp>KAHLES Helia (Tan)</Chinesesimp>
             <Japanese>KAHLES Helia (タン)</Japanese>
@@ -3973,6 +3986,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
+            <German>Burris XTR II</German>
             <Chinese>Burris XTR II</Chinese>
             <Chinesesimp>Burris XTR II</Chinesesimp>
             <Japanese>Burris XTR II</Japanese>
@@ -3986,6 +4000,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
+            <German>Burris XTR II (Grün Hex)</German>
             <Chinese>Burris XTR II (綠色數位蜂巢迷彩)</Chinese>
             <Chinesesimp>Burris XTR II (绿色数位蜂巢迷彩)</Chinesesimp>
             <Japanese>Burris XTR II (緑ヘックス)</Japanese>
@@ -4083,6 +4098,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
+            <German>IOR-Valdada Pitbull 2</German>
             <Chinese>IOR-Valdada Pitbull 2</Chinese>
             <Chinesesimp>IOR-Valdada Pitbull 2</Chinesesimp>
             <Japanese>IOR-Valdada ピットブル 2</Japanese>
@@ -4096,6 +4112,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_2d">
             <English>IOR-Valdada Pitbull 2 (2D)</English>
+            <German>IOR-Valdada Pitbull 2 (2D)</German>
             <Chinese>IOR-Valdada Pitbull 2 (2D)</Chinese>
             <Chinesesimp>IOR-Valdada Pitbull 2 (2D)</Chinesesimp>
             <Japanese>IOR-Valdada ピットブル 2 (2D)</Japanese>
@@ -4109,6 +4126,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
+            <German>Burris FastFire 2</German>
             <Chinese>Burris FastFire 2</Chinese>
             <Chinesesimp>Burris FastFire 2</Chinesesimp>
             <Japanese>Burris ファストファイア 2</Japanese>
