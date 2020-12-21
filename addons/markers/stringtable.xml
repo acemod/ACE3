@@ -152,12 +152,12 @@
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabled">
             <English>Allow Timestamps</English>
-            <German>Erlaube Zeitstempel</German>
+            <German>Zeitstempel erlauben</German>
             <French>Permettre l'horodatage</French>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
             <English>Whether to allow timestamps to be automatically applied to markers</English>
-            <German>Erlaubt das automatische Anwenden von Zeitstempeln, auf Markierungen</German>
+            <German>Erlaubt das automatische Anwenden von Zeitstempeln auf Markierungen.</German>
             <French>Active une interface permettant d'apposer un horodatage sur les marqueurs.</French>
         </Key>
         <Key ID="STR_ACE_Markers_Timestamp">
@@ -172,12 +172,12 @@
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormat">
             <English>Timestamp Format</English>
-            <German>Zeitstempel Format</German>
+            <German>Zeitstempelformat</German>
             <French>Horodatage - Format</French>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
             <English>Changes the timestamp format</English>
-            <German>Ändert das Zeitstempel Format</German>
+            <German>Ändert das Zeitstempelformat</German>
             <French>Modifie le format de l'horodatage.</French>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
@@ -202,22 +202,22 @@
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
-            <German>Zeitstempel Stunden Format</German>
+            <German>Zeitstempel Stundenformat</German>
             <French>Horodatage - Système horaire</French>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat24">
             <English>24-Hour Clock</English>
-            <German>24 Stunden Uhr</German>
+            <German>24-Stunden Uhr</German>
             <French>Format 24 heures</French>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat12">
             <English>12-Hour Clock</English>
-            <German>12 Stunden Uhr</German>
+            <German>12-Stunden Uhr</German>
             <French>Format 12 heures</French>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
             <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
-            <German>Ändert das Zeitstempel Format, um entweder das 24 Stunden oder 12 Stunden Format zu benutzen.</German>
+            <German>Ändert das Zeitstempelformat, um entweder das 24-Stunden oder 12-Stunden Format zu benutzen.</German>
             <French>Permet de choisir le système d'horodatage souhaité, au format 12 ou 24 heures.</French>
         </Key>
     </Package>

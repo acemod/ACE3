@@ -275,14 +275,14 @@
         </Key>
         <Key ID="STR_ACE_Map_Gestures_onlyShowFriendlys_description">
             <English>Shows only Gestures from Units that are from the same side or a Friendly side.</English>
-            <German>Zeige nur Gesten von Einheiten, die der gleichen oder einer Freundlichen Seite angehören.</German>
+            <German>Zeige nur Gesten von Einheiten, die der gleichen oder einer freundlichen Seite angehören.</German>
             <Russian>Показывать жесты только от игроков союзной стороны.</Russian>
             <French>Affiche uniquement les pointages effectués par des unités qui sont du même camp, ou d'un camp allié.</French>
             <Japanese>友軍ユニットのみからジェスチャーを表示します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_displayName">
             <English>Max range Camera</English>
-            <German>Maxmimale Kamera Reichweite</German>
+            <German>Maxmimale Kamerareichweite</German>
             <French>Portée de la caméra</French>
             <Japanese>カメラ最大範囲</Japanese>
         </Key>
@@ -294,31 +294,31 @@
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_displayName">
             <English>Allow Spectator</English>
-            <German>Erlaube Zuschauer</German>
+            <German>Zuschauer erlauben</German>
             <French>Autoriser les spectateurs</French>
             <Japanese>スペクテイターに許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_description">
             <English>Allows Spectator to See Map Gestures</English>
-            <German>Erlaube Zuschauern, die Kartengesten zu sehen</German>
+            <German>Erlaube Zuschauern, die Kartengesten zu sehen.</German>
             <French>Permet aux spectateurs de voir le pointage des autres joueurs.</French>
             <Japanese>スペクテイターからマップ ジェスチャーを表示できるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_displayName">
             <English>Allow Curator</English>
-            <German>Erlaube Kurator</German>
+            <German>Kuratoren erlauben</German>
             <French>Autoriser les curateurs</French>
             <Japanese>キュレーターに許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_description">
             <English>Allows Curator to See Map Gestures</English>
-            <German>Erlaube Kuratoren, die Kartengesten zu sehen</German>
+            <German>Erlaube Kuratoren, die Kartengesten zu sehen.</German>
             <French>Permet aux curateurs de voir le pointage des autres joueurs.</French>
             <Japanese>キュレーターからマップ ジェスチャーを表示できるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_displayName">
             <English>Briefing Mode</English>
-            <German>Briefing Modus</German>
+            <German>Briefing-Modus</German>
             <French>Visibilité lors du briefing</French>
             <Japanese>ブリーフィング モード</Japanese>
         </Key>

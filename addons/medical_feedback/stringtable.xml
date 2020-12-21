@@ -106,7 +106,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
             <English>Low Blood Volume Effect Type</English>
-            <German>Niedriger Blutstand Effekt Typ</German>
+            <German>Niedriger Blutstand Effekttyp</German>
             <Russian>Визуальный эффект низкого объема крови</Russian>
             <French>Effet de faible volume sanguin</French>
             <Japanese>低血液量時の効果種類</Japanese>

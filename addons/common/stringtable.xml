@@ -517,7 +517,7 @@
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAllDesc">
             <English>Check all addons, not only those of ACE.</English>
-            <German>Alle Addons überprüfen, nicht nur die von ACE</German>
+            <German>Alle Addons überprüfen, nicht nur die von ACE.</German>
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
@@ -543,7 +543,7 @@
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelistDesc">
             <English>Define a list of regardless allowed addons.</English>
-            <German>Definiere eine Liste der erlaubten Addons</German>
+            <German>Definiere eine Liste der erlaubten Addons.</German>
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Chinese>定義哪些插件是允許使用的。</Chinese>
             <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
