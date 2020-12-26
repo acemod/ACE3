@@ -38,7 +38,6 @@ class CfgAmmo {
     };
     
     class Sh_82mm_AMOS;
-    //PGMM
     class Sh_82mm_DEBUG: Sh_82mm_AMOS {
         class ADDON {
             enabled = 1;
@@ -69,7 +68,6 @@ class CfgAmmo {
     };
 
     class G_40mm_HE;
-    //Raytheon 'Pike'
     class G_40mm_DEBUG: G_40mm_HE {
         timeToLive = 30;
         class ADDON {
@@ -131,16 +129,11 @@ class CfgAmmo {
         };
     };
 
-    //RGM-109 Tomahawk
+
     class ammo_Missile_Cruise_01;
     class ammo_Missile_Cruise_DEBUG: ammo_Missile_Cruise_01 {
         class ADDON {
             enabled = 1;
-            
-            seekers[] = {"GPS"};
-            seekerDirection[] = {};
-            fuzes[] = {};
-            fuzeDirection[] = {};
 
             minDeflection = 0.0005;      // Minium flap deflection for guidance
             maxDeflection = 0.0025;       // Maximum flap deflection for guidance
@@ -168,17 +161,10 @@ class CfgAmmo {
     };
 
     class MissileBase;
-    
-    //Rafael Spike-MR 'Gil'
     class M_Titan_AT: MissileBase {
             class ADDON {
             enabled = 1;
             
-            seekers[] = {"TitanAT"};
-            seekerDirection[] = {};
-            fuzes[] = {};
-            fuzeDirection[] = {};
-            
             defaultSeekerType = "MCLOS";
             seekerTypes[] = {"MCLOS"};
 
@@ -196,23 +182,10 @@ class CfgAmmo {
             attackProfiles[] = {"AGM"};
         };
     };
-    
-    //Rafael Mini-Spike
     class M_Titan_AP: M_Titan_AT {
         class ADDON {
             enabled = 1;
             
-            seekers[] = {"TitanAT"};
-            seekerDirection[] = {};
-            fuzes[] = {};
-            fuzeDirection[] = {};
-            
-            modes[] = {};
-            flightProfile = "flightProfileDefault";
-
-            degreesPerSecond = 15;
-
-            
             defaultSeekerType = "MCLOS";
             seekerTypes[] = {"MCLOS"};
 
@@ -231,19 +204,10 @@ class CfgAmmo {
         };
     };
     
-    // FIM-92 Stinger
+    
     class M_Titan_AA: MissileBase {
         class ADDON {
             enabled = 1;
-            
-            seekers[] = {"AIMIR"};
-            seekerDirection[] = {};
-            fuzes[] = {};
-            fuzeDirection[] = {};
-            
-            degreesPerSecond = 5;
-            
-          
 
             minDeflection = 0.0005;      // Minium flap deflection for guidance
             maxDeflection = 0.0025;       // Maximum flap deflection for guidance
@@ -270,17 +234,9 @@ class CfgAmmo {
         };
     };
 
-    //AGM-65 Maverick
     class Missile_AGM_02_F : MissileBase {
         class ADDON {
             enabled = 1;
-            
-            seekers[] = {"Maverick"};
-            seekerDirection[] = {0, 1, 0};
-            fuzes[] = {};
-            fuzeDirection[] = {};
-
-            degreesPerSecond = 15;
 
             minDeflection = 0.0005;      // Minium flap deflection for guidance
             maxDeflection = 0.0025;       // Maximum flap deflection for guidance
@@ -307,19 +263,11 @@ class CfgAmmo {
         };
     };
     
+    // HARM
     class ammo_Missile_AntiRadiationBase: MissileBase {};
-
-    // AGM-88 HARM
     class ammo_Missile_HARM: ammo_Missile_AntiRadiationBase {
         class ADDON {
             enabled = 1;
-            
-            seekers[] = {"ARM"};
-            seekerDirection[] = {0, 1, 0};
-            fuzes[] = {};
-            fuzeDirection[] = {};
-            
-            degreesPerSecond = 15;
 
             minDeflection = 0.0005;      // Minium flap deflection for guidance
             maxDeflection = 0.0025;       // Maximum flap deflection for guidance
@@ -349,18 +297,9 @@ class CfgAmmo {
     class BombCore;
     class LaserBombCore: BombCore {};
     class ammo_Bomb_LaserGuidedBase: LaserBombCore {};
-    
-    // GBU-12 Paveway II
     class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
         class ADDON {
             enabled = 1;
-            
-            seekers[] = {"LGB"};
-            seekerDirection[] = {0, 1, 0};
-            fuzes[] = {};
-            fuzeDirection[] = {};
-            
-            degreesPerSecond = 5;
                 
             // Guidance type for munitions
             defaultSeekerType = "SALH";
@@ -380,19 +319,11 @@ class CfgAmmo {
             attackProfiles[] = {"GBU"};
         };
     };
-
-    // GBU-39 Small-Diameter Bomb    
+    
     class ammo_Bomb_SmallDiameterBase: ammo_Bomb_LaserGuidedBase {};
     class ammo_Bomb_SDB: ammo_Bomb_SmallDiameterBase {
         class ADDON {
             enabled = 1;
-            
-            seekers[] = {"SDB"};
-            seekerDirection[] = {0, 1, 0};
-            fuzes[] = {};
-            fuzeDirection[] = {};
-            
-            degreesPerSecond = 15;
                 
             // Guidance type for munitions
             defaultSeekerType = "GPS";

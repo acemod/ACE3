@@ -23,6 +23,12 @@ class Extended_FiredBIS_EventHandlers {
     };
 };
 
+class Extended_Reloaded_EventHandlers {
+    class ALL {
+            ADDON = QUOTE(_this call FUNC(onReloaded));
+    };
+};
+
 class Extended_IncomingMissile_EventHandlers {
     class All {
         ADDON = QUOTE(_this call FUNC(onIncomingMissile));

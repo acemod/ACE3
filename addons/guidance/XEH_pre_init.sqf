@@ -11,4 +11,15 @@ PREP_RECOMPILE_END;
 // As weapons take config changes, there is little point in being able to disable guidance
 if (isNil QGVAR(enabled)) then { GVAR(enabled) = 2; };
 
+GVAR(guidedWeapons) = [];
+GVAR(seekers) = [];
+GVAR(sensors) = [];
+GVAR(activeSensors) = [];
+GVAR(flightProfiles) = [];
+GVAR(projectiles) = [];
+GVAR(countermeasures) = [];
+GVAR(fuzes) = [];
+GVAR(timeVars) = [0, 0, 0, 0];
+
+
 ADDON = true;

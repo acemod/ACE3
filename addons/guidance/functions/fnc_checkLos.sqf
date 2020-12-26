@@ -1,46 +1,25 @@
 #include "script_component.hpp"
-/*
- * Author: jaynus
- * Returns whether the seeker object can see the target position with checkVisibility
- *
- * Arguments:
- * 0: Seeker <OBJECT>
- * 1: Target <OBJECT>
- * 2: Whether or not to use checkVisibility to test for LOS <BOOLEAN>
- *
- * Return Value:
- * Has LOS <BOOL>
- *
- * Example:
- * [player, cursorTarget] call ace_missileguidance_fnc_checkLOS;
- *
- * Public: No
- */
 
-params ["_seeker", "_target", ["_checkVisibilityTest", true]];
 
-// Boolean checkVisibilityTest so that if the seeker type is one that ignores smoke we revert back to raw LOS checking.
-if (_checkVisibilityTest) exitWith {
-    private _visibility = [_seeker, "VIEW", _target] checkVisibility [getPosASL _seeker, aimPos _target];
-    _visibility > 0.001
-};
-if ((isNil "_seeker") || {isNil "_target"}) exitWith {
-    ERROR_2("nil",_seeker,_target);
-    false
-};
+params ["_startPos", "_targetObject", "_ignoreObject", "_forLaser"];
 
-private _targetPos = getPosASL _target;
-private _targetAimPos = aimPos _target;
-private _seekerPos = getPosASL _seeker;
-private _return = true;
+if (isNil "_ignoreObject") then {_ignoreObject = objNull};
+if (isNil "_forLaser") then {_forLaser = false};
 
-if (!((terrainIntersectASL [_seekerPos, _targetPos]) && {terrainIntersectASL [_seekerPos, _targetAimPos]})) then {
-    if (lineIntersects [_seekerPos, _targetPos, _seeker, _target]) then {
-        _return = false;
-    };
-} else {
-    _return = false;
-};
+private _boundingBox = boundingBoxReal _targetObject;
+_boundingBox params ["_minimums", "_maximums", "_circle"];
+_minimums params ["_minX", "_minY", "_minZ"];
+_maximums params ["_maxX", "_maxY", "_maxZ"];
 
-_return
+private _pointsList = [[_minX, _minY, _minZ],[_minX, _minY, _maxZ],[_minX, _maxY, _minZ],[_minX, _maxY, _maxZ],[_maxX, _minY, _minZ],[_maxX, _minY, _maxZ],[_maxX, _maxY, _minZ],[_maxX, _maxY, _maxZ]];
+private _LOD = "VIEW";
 
+private _visibility = 0; 
+{
+    private _result = [_targetObject, _LOD, _ignoreObject] checkVisibility [_startPos, _targetObject modelToWorldVisualWorld _x];
+    _visibility = _visibility + _result;
+} forEach _pointsList;
+
+_visibility = _visibility / 8;
+
+_visibility > ([0.35, 0.8] select _forLaser)
