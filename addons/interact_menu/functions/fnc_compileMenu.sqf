@@ -69,11 +69,14 @@ private _recurseFnc = {
             };
 
             private _condition = getText (_entryCfg >> "condition");
-            if (_condition == "") then {_condition = "true"};
 
-            // Add canInteract (including exceptions) and canInteractWith to condition
-            if ((configName _entryCfg) != "ACE_MainActions") then {
-                _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            if (configName _entryCfg == "ACE_MainActions") then {
+                if (_condition isEqualTo "") then {_condition = "true"};
+            } else {
+                // Add canInteract (including exceptions) and canInteractWith to condition
+                private _canInteractCondition = format [QUOTE([ARR_3(ACE_player,_target,%1)] call EFUNC(common,canInteractWith)), getArray (_entryCfg >> "exceptions")];
+                private _conditionFormatPattern = ["%1 && {%2}", "%2"] select (_condition isEqualTo "" || {_condition == "true"});
+                _condition = format [_conditionFormatPattern, _condition, _canInteractCondition];
             };
 
             private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
