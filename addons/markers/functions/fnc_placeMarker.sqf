@@ -58,7 +58,8 @@ if (_closeNum isEqualTo 1) then {
                 GETGVAR(currentMarkerConfigName,""),
                 GETGVAR(currentMarkerColorConfigName,""),
                 GETGVAR(currentMarkerPosition,[]),
-                GETGVAR(currentMarkerAngle,0)
+                GETGVAR(currentMarkerAngle,0),
+                GETGVAR(currentMarkerScale,1)
             ]
         ]] call CBA_fnc_globalEvent;
 
