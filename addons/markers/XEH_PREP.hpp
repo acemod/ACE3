@@ -6,6 +6,7 @@ PREP(onLBSelChangedChannel);
 PREP(onLBSelChangedColor);
 PREP(onLBSelChangedShape);
 PREP(onSliderPosChangedAngle);
+PREP(onSliderPosChangedScale);
 PREP(placeMarker);
 PREP(sendMarkersJIP);
 PREP(setMarkerJIP);
