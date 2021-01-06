@@ -18,3 +18,4 @@ PREP(movePFH);
 PREP(canTimestamp);
 PREP(onButtonClickConfirm);
 PREP(onCheckedChangedTimestamp);
+PREP(removeTimestamp);
