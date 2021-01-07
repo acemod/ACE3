@@ -54,12 +54,12 @@ if (_scaledTemperature > 0.1) then {
         [_projectile, _dispersionX * _dispersion, _dispersionY * _dispersion, _slowdownFactor * vectorMagnitude (velocity _projectile)] call EFUNC(common,changeProjectileDirection);
         TRACE_PROJECTILE_INFO(_projectile);
     };
-    
+
     // Particle Effects
     if (GVAR(showParticleEffects)
         && {GVAR(showParticleEffectsForEveryone) || {_unit == ACE_player} || {_unit distance ACE_player <= 20}}
         && {CBA_missionTime > (_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40}) then {
-        
+
         _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
 
         private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
@@ -94,9 +94,12 @@ if ((_unit ammo _weapon) % 3 == 0) then {
     _this call FUNC(overheat);
 };
 
+//Don't bother with jamming when weapons can never jam.
+if (GVAR(jamChanceCoef) == 0) exitWith {END_COUNTER(firedEH);};
+
 private _value = 5 * _scaledTemperature;
 private _array = [0.5, 1, 2, 8, 20, 150];
-_jamChance = _jamChance * linearConversion [0, 1, _value % 1, _array select floor _value, _array select ceil _value];
+_jamChance = _jamChance * GVAR(jamChanceCoef) * linearConversion [0, 1, _value % 1, _array select floor _value, _array select ceil _value];
 
 TRACE_3("check for random jam",_unit,_weapon,_jamChance);
 

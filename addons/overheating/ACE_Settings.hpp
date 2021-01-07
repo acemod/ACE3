@@ -37,6 +37,14 @@ class ACE_Settings {
         displayName = CSTRING(DisplayTextOnJam_displayName);
         description = CSTRING(DisplayTextOnJam_description);
     };
+    class GVAR(jamChanceCoef) {
+        category = CSTRING(DisplayName);
+        typeName = "SCALAR";
+        value = 1;
+        displayName = CSTRING(jamChanceCoef_displayName);
+        description = CSTRING(jamChanceCoef_description);
+        sliderSettings[] = {0, 10, 1, 2};
+    };
     class GVAR(unJamOnreload) {
         category = CSTRING(DisplayName);
         typeName = "BOOL";

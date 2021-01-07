@@ -144,6 +144,12 @@
             <Chinese>過熱的武器將會有打不準和減少射擊初速的情況。適用於所有玩家</Chinese>
             <Hungarian>A túlmelegedett fegyverek kevésbé lesznek pontosak és csökkent a lövés sebessége. Minden játékosra vonatkozik.</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
+            <English>Jam Chance Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
+            <English>Modifier for the chance that weapon will jam from overheating [Setting to 0 will disable jamming].</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
             <German>Behebt Ladehemmung beim Nachladen</German>
