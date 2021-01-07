@@ -43,7 +43,7 @@ class ACE_Settings {
         value = 1;
         displayName = CSTRING(jamChanceCoef_displayName);
         description = CSTRING(jamChanceCoef_description);
-        sliderSettings[] = {0, 10, 1, 2};
+        sliderSettings[] = {0, 5, 1, 2};
     };
     class GVAR(unJamOnreload) {
         category = CSTRING(DisplayName);
