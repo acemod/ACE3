@@ -9,9 +9,9 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(combineParentWithSingleChild),
+    QGVAR(consolidateSingleChild),
     "CHECKBOX",
-    [LSTRING(combineParentWithSingleChild), LSTRING(combineParentWithSingleChild)],
+    [LSTRING(consolidateSingleChild), LSTRING(consolidateSingleChild_Description)],
     format ["ACE %1", LLSTRING(Category_InteractionMenu)],
     false
 ] call CBA_fnc_addSetting;

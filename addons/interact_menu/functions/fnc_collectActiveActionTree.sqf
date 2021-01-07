@@ -101,7 +101,7 @@ if ((_activeChildren isEqualTo []) && {_statementCode isEqualTo {}}) exitWith {
     []
 };
 
-if (GVAR(combineParentWithSingleChild) && {count _activeChildren == 1} && {_statementCode isEqualTo {}}) then {
+if (GVAR(consolidateSingleChild) && {count _activeChildren == 1} && {_statementCode isEqualTo {}}) then {
     _activeChildren select 0 params ["_childActionData", "_childChildren"];
     _childActionData params ["", "_displayNameChild", "_iconChild", "_statementChild", "", "", "_customParamsChild", "", "", "_paramsChild"];
     _origActionData = [
