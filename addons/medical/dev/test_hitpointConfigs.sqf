@@ -26,12 +26,6 @@ private _testPass = true;
     // _typeOf createUnit [position player, group player, "z = this"];
     // deleteVehicle z;
 
-    private _lastHitpoint = (_hitpoints param [(count _hitpoints) - 1, "#array"]);
-    if (_lastHitpoint != "ACE_HDBracket") then {
-        WARNING_2("%1 has bad last hitpoint: %2",_typeOf,_hitpoints);
-        _testPass = false;
-    };
-
     if (((_hitpoints findIf {_x == "HitLeftArm"}) == -1) || {(_hitpoints findIf {_x == "HitRightArm"}) == -1}
             || {(_hitpoints findIf {_x == "HitLeftLeg"}) == -1} || {(_hitpoints findIf {_x == "HitRightLeg"}) == -1}
             || {(_hitpoints findIf {_x == "HitHead"}) == -1} || {(_hitpoints findIf {_x == "HitBody"}) == -1}) then {

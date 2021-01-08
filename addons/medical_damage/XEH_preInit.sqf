@@ -25,11 +25,26 @@ addMissionEventHandler ["Loaded",{
     DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandlerSQF);
 // };
 
-[QEGVAR(medical,woundReceived), {
-    params ["_unit", "_woundedHitPoint", "_receivedDamage", "", "_ammo", "_damageSelectionArray"];
+[QEGVAR(medical,damageReceived), LINKFUNC(applyDamage)] call CBA_fnc_addEventHandler;
+[QEGVAR(medical,woundReceived), {_this call FUNC(woundsHandlerActive);}] call CBA_fnc_addEventHandler;
 
-    private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
-    [_unit, _woundedHitPoint, _receivedDamage, _typeOfDamage, _damageSelectionArray] call FUNC(woundsHandlerActive);
-}] call CBA_fnc_addEventHandler;
+GVAR(bodyPartsToHitpoints) = [
+    ["Head", ["hitface", "hitneck", "hithead"]],
+    ["Body", ["hitchest", "hitdiaphragm", "hitabdomen", "hitpelvis"]],
+    ["LeftArm",["hitleftarm"]],
+    ["RightArm",["hitrightarm"]],
+    ["LeftLeg",["hitleftleg"]],
+    ["RightLeg",["hitrightleg"]]
+];
+
+GVAR(structuralDamageToBodyPartCoeff) = [0.8, 0.33, 0.7, 0.7, 0.7, 0.7];
+
+
+GVAR(usefulHitpoints) = [];
+{ 
+    {
+        GVAR(usefulHitpoints) pushBack _x;
+    } forEach _x#1; 
+} forEach GVAR(bodyPartsToHitpoints);
 
 ADDON = true;

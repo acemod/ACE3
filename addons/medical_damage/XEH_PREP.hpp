@@ -1,3 +1,5 @@
+PREP(applyDamage);
+PREP(getArmor);
 PREP(determineIfFatal);
 PREP(getTypeOfDamage);
 PREP(handleIncapacitation);

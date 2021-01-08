@@ -5,20 +5,20 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Body Part (not used) <STRING>
+ * 1: Shooter <OBJECT>
+ * 2: Ammo (not used) <STRING>
  * 2: Damage <NUMBER>
- * 3: Shooter <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "Body", 0.5, badGuy] call ace_medical_blood_fnc_handleWoundReceived
+ * [player, badGuy, "", 0.5] call ace_medical_blood_fnc_handleWoundReceived
  *
  * Public: No
  */
 
-params ["_unit", "", "_damage", "_shooter"];
+params ["_unit", "_shooter", "", "_damage"];
 
 // Don't bleed when players only and a non-player unit is wounded
 if (GVAR(enabledFor) == BLOOD_ONLY_PLAYERS && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
