@@ -10,9 +10,10 @@ PREFIX = "ace_"
 ##########################
 
 def tryHemttBuild(projectpath):
-    hemttPath = os.path.join(projectpath, "hemtt.exe")
-    if os.path.isfile(hemttPath):
-        ret = subprocess.check_output([hemttPath, "pack"], stderr=subprocess.STDOUT)
+    hemttExe = os.path.join(projectpath, "hemtt.exe")
+    if os.path.isfile(hemttExe):
+        os.chdir(projectpath)
+        ret = subprocess.call([hemttExe, "pack"], stderr=subprocess.STDOUT)
         print("Using hemtt: {}".format(ret));
         return True
     else:
