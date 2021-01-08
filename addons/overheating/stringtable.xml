@@ -145,7 +145,7 @@
             <Hungarian>A túlmelegedett fegyverek kevésbé lesznek pontosak és csökkent a lövés sebessége. Minden játékosra vonatkozik.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_displayName">
-            <English>Distance for Particle Effect and Overheating Dispersion</English>
+            <English>Distance for Effects and Dispersion</English>
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
             <English>Overheating particle effects and dispersion will only be show for other player units closer than this. Value is in metres.</English>

@@ -33,7 +33,7 @@ class ACE_Settings {
         category = CSTRING(DisplayName);
         typeName = "SCALAR";
         isClientSettable = 1;
-        value = 1;
+        value = 3000;
         displayName = CSTRING(particleEffectsAndDispersionDistance_displayName);
         description = CSTRING(particleEffectsAndDispersionDistance_description);
         sliderSettings[] = {1, 5000, 3000, 0};

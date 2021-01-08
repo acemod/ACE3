@@ -26,7 +26,7 @@ if (_assistant isEqualTo _gunner) then {
     playSound "ACE_BarrelSwap";
 };
 
-if (GVAR(unJamOnSwapBarrel)) then {
+if (GVAR(unJamOnSwapBarrel) && {[_gunner] call FUNC(canUnjam)}) then {
     [ARR_3(_gunner, currentMuzzle _gunner, true)] call FUNC(clearJam);
 };
 
