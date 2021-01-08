@@ -28,8 +28,6 @@ _jammedWeapons pushBack _weapon;
 
 _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 
-
-
 // Stop current burst
 if (_ammo > 0) then {
     _unit setAmmo [_weapon, 0];

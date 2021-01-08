@@ -26,6 +26,10 @@ if (_assistant isEqualTo _gunner) then {
     playSound "ACE_BarrelSwap";
 };
 
+if (GVAR(unJamOnSwapBarrel)) then {
+    [ARR_3(_gunner, currentMuzzle _gunner, true)] call FUNC(clearJam);
+};
+
 // don't consume the barrel, but rotate through them.
 [localize LSTRING(SwappedBarrel), QPATHTOF(UI\spare_barrel_ca.paa)] call EFUNC(common,displayTextPicture);
 

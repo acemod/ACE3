@@ -29,6 +29,22 @@ class ACE_Settings {
         displayName = CSTRING(overheatingDispersion_displayName);
         description = CSTRING(overheatingDispersion_description);
     };
+    class GVAR(particleEffectsAndDispersionDistance) {
+        category = CSTRING(DisplayName);
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        value = 1;
+        displayName = CSTRING(particleEffectsAndDispersionDistance_displayName);
+        description = CSTRING(particleEffectsAndDispersionDistance_description);
+        sliderSettings[] = {1, 5000, 3000, 0};
+    };
+    class GVAR(overheatingRateOfFire) {
+        category = CSTRING(DisplayName);
+        typeName = "BOOL";
+        value = 1;
+        displayName = CSTRING(overheatingRateOfFire_displayName);
+        description = CSTRING(overheatingRateOfFire_description);
+    };
     class GVAR(displayTextOnJam) {
         category = CSTRING(DisplayName);
         typeName = "BOOL";
@@ -45,12 +61,19 @@ class ACE_Settings {
         description = CSTRING(jamChanceCoef_description);
         sliderSettings[] = {0, 5, 1, 2};
     };
-    class GVAR(unJamOnreload) {
+    class GVAR(unJamOnReload) {
         category = CSTRING(DisplayName);
         typeName = "BOOL";
         value = 0;
-        displayName = CSTRING(unJamOnreload_displayName);
-        description = CSTRING(unJamOnreload_description);
+        displayName = CSTRING(unJamOnReload_displayName);
+        description = CSTRING(unJamOnReload_description);
+    };
+    class GVAR(unJamOnSwapBarrel) {
+        category = CSTRING(DisplayName);
+        typeName = "BOOL";
+        value = 0;
+        displayName = CSTRING(unJamOnSwapBarrel_displayName);
+        description = CSTRING(unJamOnSwapBarrel_description);
     };
     class GVAR(unJamFailChance) {
         category = CSTRING(DisplayName);

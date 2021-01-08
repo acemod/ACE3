@@ -20,7 +20,7 @@ TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectil
 
 BEGIN_COUNTER(firedEH);
 
-if ((_unit distance ACE_player) > 3000
+if ((_unit distance ACE_player) > GVAR(particleEffectsAndDispersionDistance)
     || {(_muzzle != (primaryWeapon _unit)) && {_muzzle != (handgunWeapon _unit)}}) exitWith { // Only rifle or pistol muzzles (ignore grenades / GLs)
     END_COUNTER(firedEH);
 };
@@ -94,7 +94,13 @@ if ((_unit ammo _weapon) % 3 == 0) then {
     _this call FUNC(overheat);
 };
 
-//Don't bother with jamming when weapons can never jam.
+// decrease time to next shot as heat increases, value is a coef where 1 is unchanged and 0 is instant, 0.8 is a 25% faster ROF.
+// this could be filtered by weapon type, but I think the heat gain and rate of fire on non-automatic weapons is low enough not to bother
+if (GVAR(overheatingRateOfFire)) then {
+    _unit setWeaponReloadingTime [_unit, _muzzle, linearConversion [0, 1, _scaledTemperature, 1, 0.8, true]];
+};
+
+//Don't bother with jamming if coef makes the chance 0.
 if (GVAR(jamChanceCoef) == 0) exitWith {END_COUNTER(firedEH);};
 
 private _value = 5 * _scaledTemperature;
