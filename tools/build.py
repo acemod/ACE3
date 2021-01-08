@@ -9,6 +9,16 @@ MAINPREFIX = "z"
 PREFIX = "ace_"
 ##########################
 
+def tryHemttBuild(projectpath):
+    hemttPath = os.path.join(projectpath, "hemtt.exe")
+    if os.path.isfile(hemttPath):
+        ret = subprocess.check_output([hemttPath, "pack"], stderr=subprocess.STDOUT)
+        print("Using hemtt: {}".format(ret));
+        return True
+    else:
+        print("hemtt not installed");
+    return False
+    
 def mod_time(path):
     if not os.path.isdir(path):
         return os.path.getmtime(path)
@@ -39,6 +49,8 @@ def main():
     scriptpath = os.path.realpath(__file__)
     projectpath = os.path.dirname(os.path.dirname(scriptpath))
     addonspath = os.path.join(projectpath, "addons")
+
+    if (tryHemttBuild(projectpath)): return
 
     os.chdir(addonspath)
 
