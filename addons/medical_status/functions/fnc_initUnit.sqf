@@ -69,6 +69,7 @@ if (_isRespawn) then {
 
     // Damage storage
     _unit setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
+    _unit setVariable [QEGVAR(medical,structuralDamage), 0, true];
 
     // Medication
     _unit setVariable [VAR_MEDICATIONS, [], true];
