@@ -2,6 +2,7 @@
 
 //If no sensors (which all guided weapons need, or if countermeasures with nothing to shoot at them), save the CPU power
 
+
 //Time setup
 GVAR(timeVars) params ["_lastRunTime", "_deltaTime", "_lastDiagTime", "_diagDeltaTime"];
 
@@ -87,8 +88,9 @@ GVAR(timeVars) set [3, diag_tickTime - _lastDiagTime];
         GVAR(activeSensors) deleteAt _forEachIndex;
     };
 
-    //if is in enabled array and not enabled; remove it
+    //if is in enabled array and not enabled; zero it out and remove it
     if(!_enabled) exitWith {
+        _x set [13, []]; // _sensorMisc;
         GVAR(activeSensors) deleteAt _forEachIndex;
         //_x set [13, []]; // _sensorMisc;
     };
@@ -96,12 +98,13 @@ GVAR(timeVars) set [3, diag_tickTime - _lastDiagTime];
     //Get Config and sensor function;
     private _cfg = configFile >> QGVAR(SensorTypes) >> _sensorType;
     private _function = getText (_cfg >> "function");
+    private _miscFunction = getText (_cfg >> "miscFunction");
     
     //Convert 'sensor direction' to world vector from model vector;
     private _sensorVector = _object vectorModelToWorldVisual _sensorDirection;
 
     //Run and return our sensor function
-    private _functionReturns = [_object, _sensorType, _sensorVector, _sensorAngle, _sensorLookVector, _sensorLookAngle, _range, _sensorMisc, _function] call FUNC(runSensor);
+    private _functionReturns = [_object, _sensorType, _sensorVector, _sensorAngle, _sensorLookVector, _sensorLookAngle, _range, _sensorMisc, _function, _miscFunction] call FUNC(runSensor);
     _functionReturns params ["_sensorReturns", "_originalSensorLookVector", "_sensorCrossvector", "_sensorAngleDif"];
 
     //Parse our two returns into four;
@@ -132,6 +135,7 @@ GVAR(timeVars) set [3, diag_tickTime - _lastDiagTime];
     /////
     
 } forEach GVAR(activeSensors);
+
 
 
 
@@ -252,7 +256,7 @@ GVAR(timeVars) set [3, diag_tickTime - _lastDiagTime];
         _lastSensorReturns params ["_lastSensorReturnVector", "_lastSensorReturnPos", "_lastSensorReturnDir", "_lastSensorReturnRelPos", "_lastSensorCrossVector", "_lastSensorAngleDif"];
 
         //make sure the sensors follow the seeker's look vector
-        player groupChat str _seekerLookVector;
+
         _x set [7, _seekerLookVector]; // _sensorLookVector
         
         if !(_lastSensorReturnVector isEqualTo [0, 0, 0]) then {
@@ -393,6 +397,7 @@ GVAR(timeVars) set [3, diag_tickTime - _lastDiagTime];
 
 
 
+
 // Projectile loop; APPROVED
 {
     _x params ["_object", "_eh", "_fuze", "_seekers", "_flightProfile", "_flightParams"];
@@ -406,27 +411,33 @@ GVAR(timeVars) set [3, diag_tickTime - _lastDiagTime];
 
     _flightParams params ["_degreesPerSecond", "_launchTime", "_launchPos", "_launchVector"];
 
+
     //If no object/projectile, stop everything
     if ((!alive _object) || (isNull _object)) exitWith {
         GVAR(projectiles) deleteAt _forEachIndex;
     };
 
-    private _toVector = +_lastProfileReturnVector;
+    private _toVector = vectorNormalized _lastProfileReturnVector;
     
     if !(_toVector isEqualTo [0, 0, 0]) then {
         private _velocity = velocity _projectile;
         private _vectorDir =  vectorDir _projectile;
-        private _angleDif = acos (_vectorDir vectorDotProduct _toVector);
+        
+        toFixed 20;
+        diag_log format ["%1\n%2\n%3", _vectorDir, _toVector, (_vectorDir vectorDotProduct _toVector)];
+        private _angleDif = acos(_vectorDir vectorDotProduct _toVector);
         private _crossVector =  _velocity vectorCrossProduct _toVector;
-    
+
+
         private _vectorUp = vectorUp _projectile; 
         private _newVectorDir = [_vectorDir, _crossVector, _angleDif min (_deltaTime * _degreesPerSecond)] call CBA_fnc_vectRotate3D;
         private _newVectorUp = [_vectorUp, _crossVector, _angleDif min (_deltaTime * _degreesPerSecond)] call CBA_fnc_vectRotate3D;
         
+        hint format ["%1\n%2\n%3", _newVectorDir, vectorNormalized _velocity, _newVectorDir vectorDotProduct vectorNormalized _velocity];    
         _projectile setVectorDir _newVectorDir;
         _projectile setVectorUp _newVectorUp;
-        _projectile setVelocity ( ((_newVectorDir) vectorMultiply (vectorMagnitude _velocity))   vectorAdd [0,0,-9.80665 * _deltaTime]);
-
+        _projectile setVelocity ( ((_newVectorDir) vectorMultiply (vectorMagnitude _velocity)) vectorAdd [0, 0, -9.80665 * _deltaTime] );
+        
     };
 
 } forEach GVAR(projectiles);

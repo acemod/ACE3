@@ -1,5 +1,7 @@
 LOG("prep");
 
+PREP(checkLOS);
+
 PREP(createGuidedWeapon);
 PREP(createSeeker);
 PREP(createSensor);
@@ -18,5 +20,6 @@ PREP(sensorDefault);
 PREP(sensorEO);
 PREP(sensorAAIR);
 PREP(sensorGPS);
+PREP(sensorSALH);
 
 

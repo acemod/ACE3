@@ -1,6 +1,5 @@
 #include "script_component.hpp"
 
-
 params ["_startPos", "_targetObject", "_ignoreObject", "_forLaser"];
 
 if (isNil "_ignoreObject") then {_ignoreObject = objNull};

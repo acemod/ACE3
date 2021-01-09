@@ -12,7 +12,7 @@ _sensorLookAngle = 30;
 private _pos = _object modelToWorldVisualWorld [0, 0, 0];
 
 //Get Targets and Countermeasures
-_nearObjects = ((ASLToAGL _pos) nearEntities [["Air"], _range]);
+_nearObjects = ((ASLToAGL _pos) nearEntities [["AllVehicles"], _range]);
 private _targetsList = [];
 {
     private _targetPos = _x modelToWorldVisualWorld (_x selectionPosition ["HitEngine","HitPoints"]);

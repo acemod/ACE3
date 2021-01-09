@@ -169,6 +169,118 @@ class CfgAmmo {
 
     class MissileBase;
     
+    //AIM-9 Sidewinder
+    class Missile_AA_04_F: MissileBase {
+            class ADDON {
+            enabled = 1;
+            
+            seekers[] = {"Sidewinder"};
+            seekerDirection[] = {};
+            fuzes[] = {};
+            fuzeDirection[] = {};
+            
+            defaultSeekerType = "IR";
+            seekerTypes[] = {"IR"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "AGM";
+            attackProfiles[] = {"AGM"};
+        };
+    };
+
+    //AIM-9X Sidewinder
+    class ammo_Missile_BIM9X: MissileBase {
+            class ADDON {
+            enabled = 1;
+            
+            seekers[] = {"SidewinderX"};
+            seekerDirection[] = {};
+            fuzes[] = {};
+            fuzeDirection[] = {};
+            
+            defaultSeekerType = "IR";
+            seekerTypes[] = {"IR"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "AGM";
+            attackProfiles[] = {"AGM"};
+        };
+    };
+    
+    //AIM-132 ASRAAM
+    class M_Air_AA: MissileBase {
+            class ADDON {
+            enabled = 1;
+            
+            seekers[] = {"seekerAAIR"};
+            seekerDirection[] = {};
+            fuzes[] = {};
+            fuzeDirection[] = {};
+            
+            defaultSeekerType = "IR";
+            seekerTypes[] = {"IR"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "AGM";
+            attackProfiles[] = {"AGM"};
+        };
+    };
+    
+    //AIM-120D AMRAAM
+    class ammo_Missile_AMRAAM_D: MissileBase {
+            class ADDON {
+            enabled = 1;
+            
+            seekers[] = {"seekerAAIR"};
+            seekerDirection[] = {};
+            fuzes[] = {};
+            fuzeDirection[] = {};
+            
+            defaultSeekerType = "IR";
+            seekerTypes[] = {"IR"};
+
+            defaultSeekerLockMode = "LIN";
+            seekerLockModes[] = {"LIN"};
+
+            seekerAngle = 90;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
+
+            seekerMinRange = 0;
+            seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "AGM";
+            attackProfiles[] = {"AGM"};
+        };
+    };
+    
     //Rafael Spike-MR 'Gil'
     class M_Titan_AT: MissileBase {
             class ADDON {
@@ -307,14 +419,12 @@ class CfgAmmo {
         };
     };
     
-    class ammo_Missile_AntiRadiationBase: MissileBase {};
-
     // AGM-88 HARM
-    class ammo_Missile_HARM: ammo_Missile_AntiRadiationBase {
+    class ammo_Missile_AntiRadiationBase: MissileBase {
         class ADDON {
             enabled = 1;
             
-            seekers[] = {"ARM"};
+            seekers[] = {"seekerARM"};
             seekerDirection[] = {0, 1, 0};
             fuzes[] = {};
             fuzeDirection[] = {};

@@ -182,9 +182,32 @@ class GVAR(SeekerTypes) {
         miscFunction = QFUNC(seekerARMMisc);
     };
 
-
-
-
+    class Sidewinder {
+        name = "Sidewinder";
+        
+        ACEModes[] = {};
+        slaves[] = {};
+        
+        seekerDirection[] = {};
+        sensors[] = {"AAIR"};
+        
+        priority = 100;
+        
+        miscFunction = "";
+    };
+    class SidewinderX {
+        name = "SidewinderX";
+        
+        ACEModes[] = {};
+        slaves[] = {};
+        
+        seekerDirection[] = {};
+        sensors[] = {"AAIR"};
+        
+        priority = 100;
+        
+        miscFunction = "";
+    };
     class TitanAT {
         name = "Titan Anti-Tank";
         
@@ -284,8 +307,8 @@ class GVAR(SensorTypes) {
     class SALH {
         name = "Semi-Active Laser Homing";
 
-        range = 0;
-        angle = 0;
+        range = 5000;
+        angle = 22.5;
         lookAngle = 0;
         priority = 100000;
         
@@ -320,9 +343,9 @@ class GVAR(SensorTypes) {
     class AAIR {
         name = "Anti-Air InfraRed";
 
-        range = 0;
-        angle = 0;
-        lookAngle = 0;
+        range = 5000;
+        angle = 60;
+        lookAngle = 20;
         priority = 100000;
         
         function = QFUNC(sensorAAIR);

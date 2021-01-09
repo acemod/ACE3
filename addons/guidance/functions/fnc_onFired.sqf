@@ -95,6 +95,7 @@ private _crossVector = _weaponDirection vectorCrossProduct _projectileDir;
         // _x params ["_object", "_weapon", "_magazine", "_sensorType", "_enabled", "_sensorDirection", "_sensorAngle", "_sensorLookVector", "_sensorLookDirection", "_sensorLookAngle", "_range", "_priority", "_lastSensorReturns", "_sensorMisc"];
         _x set [0, _projectile]; 
         _x set [4, true]; // _enabled;
+        hint str ((_x select 7) vectorDotProduct (_y select 6));
         GVAR(sensors) pushBack _x;
     } forEach (_y select 13); // _sensorArray
     GVAR(seekers) pushback _y;

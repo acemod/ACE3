@@ -16,6 +16,7 @@ private _weaponIndex = -1;
     };
 } forEach _weaponEntries;
 
+if (_weaponIndex < 0) exitWith {};
 private _magazineEntries = (_weaponEntries select _weaponIndex) select 1;
 if (count _magazineEntries < 1) exitWith {};
 private _magazineIndex = -1;
@@ -28,10 +29,15 @@ if (_weaponIndex > -1) then {
     } forEach _magazineEntries;
 };
 
+
+
+if (_magazineIndex < 0) exitWith {};
 private _seekerEntries = (_magazineEntries select _magazineIndex) select 1;
 if (count _seekerEntries < 1) exitWith {};
 
+
 private _seeker = _seekerEntries select 0;
+
 _seeker params ["_object", "_weapon", "_magazine", "_seekerType", "_enabled", "_seekerDirection", "_seekerLookVector", "_seekerLookDirection", "_caged", "_slaves", "_tracking", "_launched", "_lastSeekerReturns", "_sensorArray", "_seekerEH", "_seekerMisc"];
 
 switch (_keyNumber) do {
