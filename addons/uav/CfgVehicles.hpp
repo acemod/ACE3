@@ -212,8 +212,7 @@ class CfgVehicles {
         class Turrets {};
 
         class AnimationSources: AnimationSources {
-            class mainGun 
-            {
+            class mainGun {
                 source = "user";
                 animperiod = 0.25;
             };
