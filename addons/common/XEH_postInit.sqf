@@ -75,7 +75,7 @@
         _vis = _object getVariable [QGVAR(oldVisibility), _vis];
         _object setUnitTrait ["camouflageCoef", _vis];
         _aud = _object getVariable [QGVAR(oldAudibleCoef), _aud];
-        _object setUnitTrait ["audibleCoef", _vis];
+        _object setUnitTrait ["audibleCoef", _aud];
     };
 }] call CBA_fnc_addEventHandler;
 
