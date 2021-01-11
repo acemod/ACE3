@@ -55,7 +55,7 @@ if (hasInterface) then {
         ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
     };
 
-    //Reset ammo temperature on reload
+    // Reset ammo temperature on reload
     if (GVAR(cookoff)) then {
         ["CAManBase", "Reloaded", {
             params ["_unit", "_weapon"];
