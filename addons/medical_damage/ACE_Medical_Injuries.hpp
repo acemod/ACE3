@@ -10,7 +10,7 @@ class ACE_Medical_Injuries {
             causes[] = {"falling", "ropeburn", "vehiclecrash", "collision", "unknown"};
             bleeding = 0.001;
             pain = 0.4;
-            minDamage = 0.01;
+            minDamage = 0.001;
             maxDamage = 0.30;
         };
         // Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
@@ -81,27 +81,27 @@ class ACE_Medical_Injuries {
             selectionSpecific = 1;
         };
         class grenade {
-            thresholds[] = {{0.1, 3}, {0, 1}};
+            thresholds[] = {{1.5, 2}, {0, 1}};
             selectionSpecific = 0;
         };
         class explosive {
-            thresholds[] = {{1, 6}, {0.1, 4}, {0, 1}};
+            thresholds[] = {{1.5, 2}, {0, 1}};
             selectionSpecific = 0;
         };
         class shell {
-            thresholds[] = {{1, 7}, {0.1, 5}, {0, 1}};
+            thresholds[] = {{1.5, 2}, {0, 1}};
             selectionSpecific = 0;
         };
         class vehiclecrash {
-            thresholds[] = {{1.5, 3}, {1, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            thresholds[] = {{1.5, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
         };
         class collision {
-            thresholds[] = {{1.5, 3}, {1, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            thresholds[] = {{1.5, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
         };
         class backblast {
-            thresholds[] = {{1, 6}, {0.55, 5}, {0, 2}};
+            thresholds[] = {{1.5, 2}, {0, 2}};
             selectionSpecific = 0;
         };
         class stab {
@@ -113,7 +113,7 @@ class ACE_Medical_Injuries {
             selectionSpecific = 1;
         };
         class falling {
-            thresholds[] = {{1.5, 3}, {1, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            thresholds[] = {{1.5, 2}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
         };
         class ropeburn {
@@ -125,7 +125,7 @@ class ACE_Medical_Injuries {
             thresholds[] = {{0, 0}};
         };
         class unknown {
-            thresholds[] = {{0.1, 1}};
+            thresholds[] = {{0, 1}};
         };
     };
 };

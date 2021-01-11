@@ -4,10 +4,10 @@
  * Parses saved HandleDamage events to separate hits
  *
  * Arguments:
- * 0: The Unit <OBJECT>
+ * Array of HandleDamage events [[_hitPointIndex, _damage, _source, _instigator, _ammo]]
  *
  * Return Value:
- * None
+ * Array of parsed hits [[_frameNo, _structuralDamage, _source, _instigator, _ammo, _hitpointDamages]]
  *
  * Public: No
  */
@@ -16,71 +16,81 @@ params ["_unit"];
 
 /*
  * Grammar for HandleDamage event stream
- * - structural - event with hitPointIndex==-1
- * - head - event with hitPointIndex==2
- * - hps - sequence (1 or more) of events with increacing hitPointIndex, hitPointIndex >= 0
+ * - STRUCTURAL - event with hitPointIndex==-1
+ * - HEAD - event with hitPointIndex==2
+ * - HPS - sequence (1 or more) of events with increacing hitPointIndex, hitPointIndex >= 0
  *
- * Ordinal hits if target or shooter is not local: ((structural,hps){N}) where N - count Hit events will be rised by this projectile
- * Ordinal hits if target and shooter is local: ((head,structural?){N},(structural,hps){N}) 
- * structural in prefix can be missed if newDamage==0 for hitPointIndex==-1
+ * Ordinal hits if target or shooter is not local: ((STRUCTURAL,HPS){N}) where N - count Hit events will be rised by this projectile
+ * Ordinal hits if target and shooter is local: ((HEAD{1,2},STRUCTURAL?){N},(STRUCTURAL,HPS?){N}) 
+ * STRUCTURAL in prefix can be missed if newDamage==0 for hitPointIndex==-1
  * 
- * Environmental (source is null) or die-in-exploded-vehicle events: (structural)
+ * Environmental (source is null) or die-in-exploded-vehicle events: (STRUCTURAL)
  * Large explosions and vehicle crew hits can rise ordinal hit and environmental event streams
  */
 
+#define IDX 0
+#define DMG 1
+#define SRC 2
+#define AMM 4
 
-// Format of saved events [[_hitPointIndex, _damage, _source, _instigator, _ammo]]
-private _events = _unit getVariable [QGVAR(events), []];
-private _newHits = [];
+#define STRUCTURAL -1
+#define HEAD 2
 
-while { count _events > 0 } do {
-    private _i = count _events;
-    private _hpDamages = [];
-    private _event = [];
-    private _cnt = 0;
 
-    // Read events from end, until hitPointIndex==-1
-    while { 
-        _i = _i-1;
-        _event = _events select _i; 
-        _cnt = _cnt + 1;
-        _event#0 > -1
-    } do {
-        if(_event#1 > 0) then {
-            _hpDamages set [_event#0,_event#1];
-        };
-    };
-    // Save read events as Hit
-    _events deleteRange [_i, _cnt];
-    private _newHit = [diag_frameNo];
-    _newHit append (_event select [1,4]);
-    _newHit pushBack _hpDamages;
+private _result = [];
 
-    //Hit format [_frameNo, _damage, _source, _instigator, _ammo, _hpDamages]
-    _newHits pushBack _newHit; 
+private _event = _this deleteAt 0;
+#define CONSUME _event = _this deleteAt 0
+#define PEEK(n) (_this select n)
+#define EOF (isNil { _event })
 
-    // Try to consume head prefix from start of stream 
-    if(count _events > 0 && {_events#0#0 == 2}) then {
-        _events deleteAt 0;
+// _this fromat [[_hitPointIndex, _damage, _source, _instigator, _ammo]]
+while { not EOF } do {
+    if (_event#IDX == HEAD) then {
+        // Consume HEAD prefix 
+        CONSUME;
 
-        // Peeking following structural event
-        if (count _events > 0 && {_events#0#0 == -1}) then {
-            // Checking structural event is not start of hit, it's followed by head or structural event
-            if(count _events == 1 or {
-                _events#1#0 == -1 or _events#1#0 == 2
+        // Peek following STRUCTURAL damage event
+        if (not EOF and _event#IDX == STRUCTURAL) then {
+            // Check STRUCTURAL event is not start of hit, it's followed by HEAD or STRUCTURAL damage event 
+            if (count _this > 0 and {
+                PEEK(0)#IDX == STRUCTURAL or {
+                    PEEK(0)#IDX == HEAD and count _this > 1 and { PEEK(1)#IDX in [STRUCTURAL, HEAD] }
+                }
             }) then {
-                _events deleteAt 0;
+                CONSUME;
             };
+        };        
+    } else {
+        // Parse hit, start with STRUCTURAL damage event
+        if (_event#IDX == STRUCTURAL) then {
+            private _hit = [diag_frameNo];
+            _hit append (_event select [DMG, (count _event) - 1]);
+
+            private _idx = _event#IDX;
+            private _src = _event#SRC;
+            private _ammo = _event#AMM;
+            CONSUME;
+
+            private _hpDamages = [];
+            // Consume events with same source and ammo with increacing hitPointIndex
+            while { not EOF and { 
+                _event#IDX > _idx and _event#SRC isEqualTo _src and _event#AMM isEqualTo _ammo
+            }} do {
+                if (_event#DMG > 0) then {
+                    _hpDamages set [_event#IDX, _event#DMG];
+                };
+                _idx = _event#IDX;
+                CONSUME;
+            };
+            _hit pushBack _hpDamages;
+
+            _result pushBack _hit;             
+        } else {
+            ERROR_1("Error parsing HandleDamage events %1",_event);
+            CONSUME;
         };
     };
 };
 
-// Add parsed hits to collection, remove old hits not complemented by Hit event
-if( count _newHits > 0) then {
-    private _hits = _unit getVariable [QGVAR(hits), []];
-    reverse _newHits;
-    _hits = _hits select {_x#0 + 100 < diag_frameNo};
-    _hits append _newHits;
-
-    _unit setVariable [QGVAR(hits), _hits];
-};
+_result

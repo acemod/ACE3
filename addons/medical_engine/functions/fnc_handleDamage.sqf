@@ -98,9 +98,9 @@ _unit setVariable [QGVAR(events), _events];
 
 if (_damage >= 1) then {
     // Damage to vital organs - powerfull headshots, explosion damages head 
-    if (_hitPointIndex in (_unit getVariable QGVAR(HeadHitPointIdxs))) then {     
+    if (_newDamage>=1 and _hitPointIndex in (_unit getVariable QGVAR(HeadHitPointIdxs))) then {     
         if (EGVAR(medical,fatalDamageSource) in [0, 2]) then {
-            TRACE_1("handleDmage: lethal headshot",_damage);
+            TRACE_1("handleDamage: lethal headshot",_newDamage);
         } else {
             _damage = _damage min 0.99;
         };
@@ -111,8 +111,8 @@ if (_damage >= 1) then {
         _damage = _damage min 0.99;
     };
 
-    // Do not change inflicted structural damage (hitpointIndex==-1)
-    // HandleDamage event with hitpointIndex=-1 and _damage=1 is raised when unit dies in exploded vehicle
+    // Do not change inflicted structural damage (_hitPointIndex==-1)
+    // HandleDamage event with _hitPointIndex=-1 and _damage=1 is raised when unit dies in exploded vehicle
 };
 
 _damage

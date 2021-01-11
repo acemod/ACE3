@@ -26,27 +26,18 @@ diag_log formatText ["Hit %1", _this];
 _unit setVariable [QEGVAR(medical,lastDamageSource), _source];
 _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
-
-// Fire damage can occur as lots of minor damage events
+// Fire damage
 if (
     isNull _source && 
     isBurning _unit
 ) exitWith {
-    private _combinedDamage = _damage + (_unit getVariable [QGVAR(triviaDamage), 0]);
-    if(_combinedDamage > 0.1) then {
-        [QEGVAR(medical,damageReceived), [
-            _unit, 
-            _source, 
-            "fire", 
-            _damage
-        ]] call CBA_fnc_localEvent;
-        
-        _unit setVariable [QGVAR(triviaDamage), 0];
-    } else {
-        _unit setVariable [QGVAR(triviaDamage), _combinedDamage];
-    };
+    [QEGVAR(medical,damageReceived), [
+        _unit, 
+        _source, 
+        "fire", 
+        _damage
+    ]] call CBA_fnc_localEvent;
 };
-
 
 // Drowning damage occurs in consistent increments
 if (
@@ -62,10 +53,15 @@ if (
     ]] call CBA_fnc_localEvent;
 };
 
-call FUNC(parseDamageEvents);
-
-// _damage in Hit EH equals to _newDamage from HandleDamage EH for hitPointIndex=-1
 private _hits = _unit getVariable [QGVAR(hits), []];
+private _newHits = (_unit getVariable [QGVAR(events), []]) call FUNC(parseDamageEvents);
+if (count _newHits > 0) then {
+    _hits = _hits select {_x#0 + 100 < diag_frameNo};
+    _hits append _newHits;
+    _unit setVariable [QGVAR(hits), _hits];
+};
+
+// _damage in Hit EH equals to _newDamage from HandleDamage EH for structural damage
 private _hitIdx = _hits findIf {
     _x params ["_frameNo","_dmg", "_src", "_inst"];
 
@@ -85,7 +81,7 @@ if (_hitIdx == -1) then {
         _damage
     ]] call CBA_fnc_localEvent;
 } else {
-    private _hit = _hits select _hitIdx;
+    private _hit = _hits deleteAt _hitIdx;
     _hit params ["","", "_source", "_instigator", "_ammo", "_hpDamages"];
     [_unit, _hpDamages] call FUNC(processLimbsDamage);
 
@@ -93,8 +89,9 @@ if (_hitIdx == -1) then {
         _unit, 
         if (!isNull _instigator) then {_instigator} else {_source}, 
         _ammo, 
-        _damage, _hpDamages
+        _damage, 
+        _hpDamages
     ]] call CBA_fnc_localEvent;
 
-    _hits deleteAt _hitIdx;
+    ;
 };
