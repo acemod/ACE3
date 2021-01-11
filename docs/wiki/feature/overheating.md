@@ -46,7 +46,7 @@ Adds the ability to changes barrels on machine guns to compensate for those effe
 Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
 
 ### 2.4 Avoiding cookoffs
-- After a firefight unload closed bolt firearms (most rifles) until the barrel temperature has gone down to less than 180°c (two sections or less on the bar).
+- After a firefight unload closed bolt firearms (most rifles) until the barrel temperature has gone down to less than 180°C (two sections or less on the bar).
 - Clear failure to fire jams quickly
 
 ## 3. Dependencies
