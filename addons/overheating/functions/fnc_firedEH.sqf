@@ -106,7 +106,7 @@ if (GVAR(overheatingRateOfFire)) then {
     _unit setWeaponReloadingTime [_unit, _muzzle, linearConversion [0, 0.5, _scaledTemperature, 1, 0.9, true]];
 };
 
-//Don't bother with jamming if coef makes the chance 0.
+// Don't bother with jamming if coef makes the chance 0.
 if (GVAR(jamChanceCoef) == 0) exitWith {END_COUNTER(firedEH);};
 
 private _value = 5 * _scaledTemperature;
