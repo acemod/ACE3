@@ -47,6 +47,15 @@ if (_weapon in _jammedWeapons) then {
         // Success
         _jammedWeapons = _jammedWeapons - [_weapon];
         _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
+
+        // If the round is a dud eject the round
+        if (_unit getVariable [format [QGVAR(%1_jamType), _weapon], "None"] isEqualTo "Dud") then {
+            private _ammo = _unit ammo _weapon;
+            _unit setAmmo [_weapon, _ammo - 1];
+        };
+
+        _unit setVariable [format [QGVAR(%1_jamType), _weapon], "None"];
+
         if (_jammedWeapons isEqualTo []) then {
             private _id = _unit getVariable [QGVAR(JammingActionID), -1];
             [_unit, "DefaultAction", _id] call EFUNC(common,removeActionEventHandler);

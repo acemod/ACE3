@@ -15,14 +15,16 @@ version:
 ## 1. Overview
 
 ### 1.1 Weapon Jamming
-Adds a probability to jam a weapon when firing. Jams can be cleared by reloading or by using the clear jam-key.
+Adds a probability to jam a weapon when firing. Jams can be cleared by reloading, using the clear jam-key, or using the self interaction menu.
 
 ### 1.2 Temperature simulation
-Introduces weapon temperature simulation depending on weapon and bullet mass. Hot weapons are more prone to jamming. Depending on weapon type the accuracy and in extreme cases the muzzle velocity might be reduced on high temperatures. Adds smoke puff and heat refraction effects to indicate this.
+Introduces weapon temperature simulation depending on weapon and bullet mass. Hot weapons are more prone to jamming and will have an increase in their cyclic rate of fire. Depending on weapon type the accuracy and in extreme cases the muzzle velocity might be reduced on high temperatures. Adds smoke puff and heat refraction effects to indicate this.
 
-### 1.3 Spare barrels
-Adds the ability to changes barrels on machine guns to compensate for those effects.
+### 1.3 Cookoff
+Hot weapons can also cause chambered ammunition to spontaneously ignite. The higher the temperature of the gun the sooner a cookoff can happen. Open bolt weapons (most machineguns) cannot cookoff unless jammed. Jammed weapons will not cookoff unless the jam is a failure to fire.
 
+### 1.4 Spare barrels
+Adds the ability to changes barrels on machine guns to compensate for those effects. Changing the barrel can also unjam the gun.
 
 ## 2. Usage
 
@@ -42,6 +44,10 @@ Adds the ability to changes barrels on machine guns to compensate for those effe
 
 **NOTE** When the bar is half full (yellow) it means the barrel is around 500°c.
 Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
+
+### 2.4 Avoiding cookoffs
+- After a firefight unload closed bolt firearms (most rifles) until the barrel temperature has gone down to less than 180°c (two sections or less on the bar).
+- Clear failure to fire jams quickly
 
 ## 3. Dependencies
 

@@ -232,6 +232,18 @@
             <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
             <Hungarian>Valószínűsége annak, hogy egy akadály eltávolítás művelet kudarcot vall, megismétlést igényel.</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Overheating_cookoff_displayName">
+            <English>Overheating Cookoff</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_cookoff_description">
+            <English>Weapons that are overheating have a chance of cooking off and firing a round.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_cookoffCoef_displayName">
+            <English>Overheating Cookoff Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_cookoffCoef_description">
+            <English>Modifier for the time it takes for cookoffs to occur [Lower takes more heat to cookoff].</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
             <German>Ersatzlauf</German>
@@ -279,6 +291,18 @@
             <Korean>탄걸림!</Korean>
             <Chinesesimp>武器卡弹!</Chinesesimp>
             <Chinese>武器卡彈!</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToEject">
+            <English>Failure to eject.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToExtract">
+            <English>Failure to extract.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToFeed">
+            <English>Failure to feed.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToFire">
+            <English>Failure to fire.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_UnjamWeapon">
             <English>Clear jam</English>

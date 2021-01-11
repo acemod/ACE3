@@ -55,6 +55,21 @@ if (hasInterface) then {
         ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
     };
 
+    //Reset ammo temperature on reload
+    if (GVAR(cookoff)) then {
+        ["CAManBase", "Reloaded", {
+            params ["_unit", "_weapon"];
+            _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];
+        }] call CBA_fnc_addClassEventHandler;
+
+        ["CAManBase", "Take", {
+            params ["_unit"];
+            // primary and handgun both have to be reset because there isn't an easy way to know which weapon had a magazine dragged onto it.
+            _unit setVariable [format [QGVAR(%1_ammoTemp), primaryWeapon _unit], 0];
+            _unit setVariable [format [QGVAR(%1_ammoTemp), handgunWeapon _unit], 0];
+        }] call CBA_fnc_addClassEventHandler;
+    };
+
     // Schedule cool down calculation of player weapons at (infrequent) regular intervals
     [] call FUNC(updateTemperatureThread);
 

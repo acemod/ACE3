@@ -17,7 +17,11 @@
 
 private _currentWeapon = currentWeapon ACE_player;
 if ((_currentWeapon != "") && {_currentWeapon == primaryWeapon ACE_player || {_currentWeapon == handgunWeapon ACE_player}}) then {
-    [ACE_player, _currentWeapon, 0] call FUNC(updateTemperature);
+    private _temperature = [ACE_player, _currentWeapon, 0] call FUNC(updateTemperature);
+
+    if (GVAR(cookoff)) then {
+        [ACE_player, _currentWeapon, _temperature] call FUNC(updateAmmoTemperature);
+    };
 };
 
 // Schedule for execution again after 5 seconds

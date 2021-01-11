@@ -30,6 +30,12 @@ if (_totalTime > 1800) exitWith {0};
 //So Area = 210 * 1.1 * (mass / 7850) = mass * 0.029427 (for steel near that diameter)
 
 private _barrelSurface = _barrelMass * 0.029427;
+private _convectionRate = 25;
+
+// increased convection rate if weapon in/under water
+if (((getPosASL ACE_player) select 2) < -1.5) then {
+    _convectionRate = 125;
+};
 
 TRACE_4("cooling",_temperature,_totalTime,_barrelMass,_barrelSurface);
 
@@ -38,13 +44,10 @@ while {true} do {
     private _deltaTime = (_totalTime - _time) min 20;
 
     _temperature = _temperature - (
-    // Convective cooling
-    25 * _barrelSurface * _temperature
-    // Radiative cooling
-    + 0.4 * 5.67e-8 * _barrelSurface *
-    ( (_temperature + 273.15)*(_temperature + 273.15)
-    * (_temperature + 273.15)*(_temperature + 273.15)
-    - 273.15 * 273.15 * 273.15 *273.15 )
+        // Convective cooling
+        _convectionRate * _barrelSurface * _temperature
+        // Radiative cooling
+        + 0.4 * 5.67e-8 * _barrelSurface * ((_temperature + 273.15) ^ 4 - 273.15 ^ 4)
     ) * _deltaTime / (_barrelMass * 466);
 
     if (_temperature < 1) exitWith {0};

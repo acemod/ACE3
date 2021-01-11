@@ -27,7 +27,7 @@ if (_assistant isEqualTo _gunner) then {
 };
 
 if (GVAR(unJamOnSwapBarrel) && {[_gunner] call FUNC(canUnjam)}) then {
-    [ARR_3(_gunner, currentMuzzle _gunner, true)] call FUNC(clearJam);
+    [_gunner, currentMuzzle _gunner, true] call FUNC(clearJam);
 };
 
 // don't consume the barrel, but rotate through them.

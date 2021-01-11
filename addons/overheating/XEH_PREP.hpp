@@ -17,6 +17,7 @@ PREP(sendSpareBarrelsTemperaturesHint);
 PREP(swapBarrel);
 PREP(swapBarrelAssistant);
 PREP(swapBarrelCallback);
+PREP(updateAmmoTemperature);
 PREP(updateSpareBarrelsTemperaturesThread);
 PREP(updateTemperature);
 PREP(updateTemperatureThread);
