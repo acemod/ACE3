@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: target <OBJECT>
- * 1: check for vanilla rearm vehicle <BOOL> (default: false)
+ * 1: (ignored) check for vanilla rearm vehicle <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -27,4 +27,4 @@ private _vanillaCargoConfig = getNumber (_vehCfg >> "transportAmmo");
 private _rearmCargoConfig = getNumber (_vehCfg >> QGVAR(defaultSupply));
 private _supplyVehicle = _target getVariable [QGVAR(isSupplyVehicle), false];
 
-_rearmCargoConfig > 0 || {_supplyVehicle} || {_testVanillaRearm && _vanillaCargoConfig > 0}
+_rearmCargoConfig > 0 || {_supplyVehicle} || {_vanillaCargoConfig > 0}

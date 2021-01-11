@@ -15,17 +15,25 @@
  * Public: No
  */
 
-if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-clients
-
 params ["_vehicle"];
 private _typeOf = typeOf _vehicle;
 TRACE_2("initSupplyVehicle",_vehicle,_typeOf);
 
+if (local _vehicle && {getAmmoCargo _vehicle > 0}) then {
+    _vehicle setAmmoCargo 0;
+};
+
+if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-clients
+
 if (!alive _vehicle) exitWith {};
 
-private _configSupply = getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(defaultSupply));
+private _config = configFile >> "CfgVehicles" >> _typeOf;
+private _configSupply = getNumber (_config >> QGVAR(defaultSupply));
+if (_configSupply == 0) then {
+    _configSupply = getNumber (_config >> "transportAmmo");
+};
 private _isSupplyVehicle = _vehicle getVariable [QGVAR(isSupplyVehicle), false];
-private _oldRearmConfig = isClass (configFile >> "CfgVehicles" >> _typeOf >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(takeAmmo));
+private _oldRearmConfig = isClass (_config >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(takeAmmo));
 TRACE_3("",_configSupply,_isSupplyVehicle,_oldRearmConfig);
 
 if ((_configSupply <= 0) && {!_isSupplyVehicle} && {!_oldRearmConfig}) exitWith {}; // Ignore if not enabled
