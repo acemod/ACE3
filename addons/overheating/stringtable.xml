@@ -148,7 +148,7 @@
             <English>Distance for Effects and Dispersion</English>
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
-            <English>Overheating particle effects and dispersion will only be show for other player units closer than this. Value is in metres.</English>
+            <English>Overheating particle effects and dispersion will only be shown for other player units closer than this. Value is in metres.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
             <English>Increase rate of fire with heat</English>
