@@ -36,3 +36,18 @@ class CfgWeapons {
     };
 };
 ```
+
+### 1.3 Cook Off
+```cpp
+class CfgWeapons {
+    class Rifle_Long_Base_F ;
+
+    class MySniper : Rifle_Long_Base_F {
+        ACE_clearclosedBolt = 1; // Closed bolt, can cook off from barrel heat.
+    };
+
+    class MyMG : Rifle_Long_Base_F {
+        ACE_clearclosedBolt = 0; // Open bolt, can only cook off on failure to fire type jams.
+    };
+};
+```
