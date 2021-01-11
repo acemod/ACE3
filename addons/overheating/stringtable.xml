@@ -195,7 +195,7 @@
             <Hungarian>Az újratöltés megszünteti a fegyver elakadását.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_displayName">
-            <English>Unjam weapon on barrel swap</English>
+            <English>Unjam on barrel swap</English>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
             <English>Swapping barrels clears a weapon jam.</English>
