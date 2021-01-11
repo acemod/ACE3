@@ -101,8 +101,8 @@ if (!isNil {_woundedHitPoint}) then {
         };
         case "drowning": {
             TRACE_2("Drowning",_unit,_structuralDamage);
-            _woundedBodyPartIdx = 1;
-            _bodyPartDamage pushBack [1, _structuralDamage / GVAR(structuralDamageToBodyPartCoeff)#1];
+            _woundedBodyPartIdx = HITPOINT_INDEX_BODY;
+            _bodyPartDamage pushBack [HITPOINT_INDEX_BODY, _structuralDamage / GVAR(structuralDamageToBodyPartCoeff)#1];
         };
         case "vehiclecrash":{
             TRACE_2("Vehicle crash",_unit,_structuralDamage);
@@ -139,7 +139,7 @@ private _sum = 0;
 if (_structuralDamage > 2 * _sum) then { 
     private _additionalDamage = _structuralDamage - 2 * _sum;
     private _additionalBodyPart = _woundedBodyPartIdx;
-    if(!_isSelectionSpecific) then {
+    if (!_isSelectionSpecific) then {
         private _damageSelectionArray = [
             HITPOINT_INDEX_HEAD, 0.2, 
             HITPOINT_INDEX_BODY, 1, 
