@@ -29,22 +29,15 @@ addMissionEventHandler ["Loaded",{
 [QEGVAR(medical,woundReceived), {_this call FUNC(woundsHandlerActive);}] call CBA_fnc_addEventHandler;
 
 GVAR(bodyPartsToHitpoints) = [
-    ["Head", ["hitface", "hitneck", "hithead"]],
-    ["Body", ["hitchest", "hitdiaphragm", "hitabdomen", "hitpelvis"]],
-    ["LeftArm",["hitleftarm"]],
-    ["RightArm",["hitrightarm"]],
-    ["LeftLeg",["hitleftleg"]],
-    ["RightLeg",["hitrightleg"]]
+    ["hitface", "hitneck", "hithead"],
+    ["hitchest", "hitdiaphragm", "hitabdomen", "hitpelvis"],
+    ["hitleftarm"],
+    ["hitrightarm"],
+    ["hitleftleg"],
+    ["hitrightleg"]
 ];
 
 GVAR(structuralDamageToBodyPartCoeff) = [0.8, 0.33, 0.7, 0.7, 0.7, 0.7];
 
-
-GVAR(usefulHitpoints) = [];
-{ 
-    {
-        GVAR(usefulHitpoints) pushBack _x;
-    } forEach _x#1; 
-} forEach GVAR(bodyPartsToHitpoints);
 
 ADDON = true;

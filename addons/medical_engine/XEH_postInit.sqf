@@ -25,8 +25,8 @@
 
     _unit setVariable [QEGVAR(medical,HitPoints), _allHitPoints];
 
-    _unit setVariable [QGVAR(HeadHitPointIdxs), ["hitface", "hitneck", "hithead"]  apply {_allHitPoints find _x} ]; 
-    _unit setVariable [QGVAR(BodyHitPointIdxs), ["hitchest", "hitdiaphragm", "hitabdomen", "hitpelvis"]  apply {_allHitPoints find _x} ]; 
+    _unit setVariable [QEGVAR(medical,HeadHitPointIdxs), ["hitface", "hitneck", "hithead"]  apply {_allHitPoints find _x} ]; 
+    _unit setVariable [QEGVAR(medical,BodyHitPointIdxs), ["hitchest", "hitdiaphragm", "hitabdomen", "hitpelvis"]  apply {_allHitPoints find _x} ]; 
     
     _unit setVariable [QEGVAR(medical,HitPoints), _allHitPoints];
     {

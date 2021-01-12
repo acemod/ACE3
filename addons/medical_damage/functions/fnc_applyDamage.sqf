@@ -26,73 +26,14 @@ if (alive _unit) then { _unit setDamage 0; };
 private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
 TRACE_6("Received hit",_unit,_source,_ammo,_typeOfDamage,_structuralDamage,_hitpointDamages);
 
-
 private _damageTypeInfo = [GVAR(allDamageTypesData) getVariable _typeOfDamage] param [0, [[], false, []]];
 _damageTypeInfo params ["", "_isSelectionSpecific", ""];
 
-private _hitPoints = _unit getVariable QEGVAR(medical,HitPoints);
-private _unitArmor = call FUNC(getArmor);
-
-private _hpDamages = [];
-{
-    if (!isNil {_x}) then {
-        private _realDamage = _x; 
-        private _armor = _unitArmor select _forEachIndex;
-        
-        // Only for direct damage
-        if (_isSelectionSpecific) then {
-            _realDamage = _x * _armor;
-        };
-        _hpDamages set [_forEachIndex, [_realDamage, _x, _hitPoints select _forEachIndex]];
-    };
-} forEach _hitpointDamages;
-TRACE_4("incoming",_typeOfDamage,_structuralDamage,_hpDamages,_isSelectionSpecific);
-
-
-// Sort descending all hitpoint first by real damage, then by inflicted damage
-// Hitpoint with most real damage is the place where bullet hit
-private _hpDamagesSorted = _hpDamages select { (!isNil {_x}) && { _x#2 in GVAR(usefulHitpoints) && _x#0 > 0} };
-_hpDamagesSorted sort false;
-
-(_hpDamagesSorted#0) params ["", "_receivedDamage", "_woundedHitPoint"];
-// hitdiaphragm and hitchest can receive same damage when bullet hits chest
-if (_woundedHitPoint isEqualTo "hitdiaphragm" && {_hpDamagesSorted#1#2 isEqualTo "hitchest" && _hpDamagesSorted#1#1 == _receivedDamage }) then {
-    _woundedHitPoint = "hitchest";
-};
 private _woundedBodyPartIdx = HITPOINT_INDEX_BODY;
 private _bodyPartDamage = [];
 
-if (!isNil {_woundedHitPoint}) then {
-    TRACE_2("Detected hit",_woundedHitPoint,_receivedDamage);
-
-    // Detect heartshot
-    if (_isSelectionSpecific && EGVAR(medical,fatalDamageSource) in [0, 2] && _woundedHitPoint isEqualTo "hitchest") then {
-        // Emulate damage to vital organs -  random torso shots
-        if (_receivedDamage >= ORGAN_DAMAGE_THRESHOLD && {random 1 < HEART_HIT_CHANCE}) then {
-            // Heart shot is lethal
-            TRACE_1("applyDamage: lethal heartshot",_receivedDamage);
-            [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
-        };
-    };
-
-    private _woundedBodyPart = (GVAR(bodyPartsToHitpoints) select {_woundedHitPoint in _x#1})#0#0;
-    _woundedBodyPartIdx = ALL_BODY_PARTS find toLower _woundedBodyPart;
-
-    _hpDamages params (_hitPoints apply { ["_" + _x,[0,0,""]] });
-    private _headHitpoints = GVAR(bodyPartsToHitpoints)#HITPOINT_INDEX_HEAD#1;
-    private _bodyHitpoints = GVAR(bodyPartsToHitpoints)#HITPOINT_INDEX_BODY#1;
-    private _damageHead = selectMax (_hpDamages select { _x#2 in _headHitpoints } apply { _x#1 });
-    private _damageBody = selectMax (_hpDamages select { _x#2 in _bodyHitpoints } apply { _x#1 });
-
-    _bodyPartDamage append ([
-        [HITPOINT_INDEX_HEAD, _damageHead], 
-        [HITPOINT_INDEX_BODY, _damageBody], 
-        [HITPOINT_INDEX_LARM, _hitleftarm#1], 
-        [HITPOINT_INDEX_RARM, _hitrightarm#1], 
-        [HITPOINT_INDEX_LLEG, _hitleftleg#1], 
-        [HITPOINT_INDEX_RLEG, _hitrightleg#1] 
-    ] select { _x#1 > 0 });
-} else {
+if (_hitpointDamages isEqualTo []) then {
+    // Special cases
     switch (_ammo) do {
         case "fire": {
             TRACE_2("Burning",_unit,_structuralDamage);        
@@ -123,6 +64,73 @@ if (!isNil {_woundedHitPoint}) then {
                 _woundedBodyPartIdx = selectRandomWeighted _damageSelectionArray;
                 _bodyPartDamage pushBack [_woundedBodyPartIdx, _headBodyDamage / (GVAR(structuralDamageToBodyPartCoeff) select _woundedBodyPartIdx)];
             };
+        };
+    };
+} else {
+    // Translate hitpoint damages to bodypart damages
+    private _headHipoints = _unit getVariable QEGVAR(medical,HeadHitPointIdxs);
+    private _bodyHipoints = _unit getVariable QEGVAR(medical,BodyHitPointIdxs);
+    private _hitleftarmIdx = _unit getVariable "hitleftarmIdx";
+    private _hitrightarmIdx = _unit getVariable "hitrightarmIdx";
+    private _hitleftlegIdx = _unit getVariable "hitleftlegIdx",
+    private _hitrightlegIdx = _unit getVariable "hitrightlegIdx";
+
+    _bodyPartDamage append ([
+        [HITPOINT_INDEX_HEAD, selectMax (_headHipoints apply { _hitpointDamages select _x })], 
+        [HITPOINT_INDEX_BODY, selectMax (_bodyHipoints apply { _hitpointDamages select _x })], 
+        [HITPOINT_INDEX_LARM, _hitpointDamages param [_hitleftarmIdx]], 
+        [HITPOINT_INDEX_RARM, _hitpointDamages param [_hitrightarmIdx]], 
+        [HITPOINT_INDEX_LLEG, _hitpointDamages param [_hitleftlegIdx]], 
+        [HITPOINT_INDEX_RLEG, _hitpointDamages param [_hitrightlegIdx]] 
+    ] select { _x#1 > 0 });
+
+    // If damage is selection-specific try to find wounded hitpoint
+    if (_isSelectionSpecific) then {
+        private _hitPoints = _unit getVariable QEGVAR(medical,HitPoints);
+        private _unitArmor = call FUNC(getArmor);
+        private _usefulHitpoints = _unit getVariable QEGVAR(medical,UsefulHitpoints);
+        if (isNil { _usefulHitpoints }) then {
+            _usefulHitpoints = _headHipoints + _bodyHipoints + [
+                _hitleftarmIdx, _hitrightarmIdx,
+                _hitleftlegIdx, _hitrightlegIdx
+            ];
+            _unit setVariable [QEGVAR(medical,UsefulHitpoints), _usefulHitpoints];
+        };
+
+        private _hpDamagesSorted = [];
+        {
+            if (!isNil {_x} && _forEachIndex in _usefulHitpoints) then {
+                private _armor = _unitArmor select _forEachIndex;
+                private _realDamage = _x * _armor; 
+                _hpDamagesSorted pushBack [_x * _armor, _x, _hitPoints select _forEachIndex];
+            };
+        } forEach _hitpointDamages;
+
+        // Sort descending all hitpoint first by real damage, then by inflicted damage
+        // Hitpoint with most real damage is the place where bullet hit
+        _hpDamagesSorted sort false;
+        (_hpDamagesSorted#0) params ["", "_receivedDamage", "_woundedHitPoint"];
+        
+        // hitdiaphragm and hitchest can receive same damage when bullet hits chest
+        if (_woundedHitPoint isEqualTo "hitdiaphragm" && count _hpDamagesSorted > 1 && {
+            _hpDamagesSorted#1#2 isEqualTo "hitchest" && _hpDamagesSorted#1#1 == _receivedDamage 
+        }) then {
+            _woundedHitPoint = "hitchest";
+        };
+        TRACE_3("Detected hit",_woundedHitPoint,_receivedDamage,_hpDamagesSorted);
+
+        // Detect heartshot
+        if (EGVAR(medical,fatalDamageSource) in [0, 2] && _woundedHitPoint isEqualTo "hitchest") then {
+            // Emulate damage to vital organs -  random torso shots
+            if (_receivedDamage >= ORGAN_DAMAGE_THRESHOLD && {random 1 < HEART_HIT_CHANCE}) then {
+                // Heart shot is lethal
+                TRACE_1("applyDamage: lethal heartshot",_receivedDamage);
+                [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+            };
+        };
+
+        if (!isNil { _woundedHitPoint }) then {
+            _woundedBodyPartIdx = GVAR(bodyPartsToHitpoints) findIf {_woundedHitPoint in _x};
         };
     };
 };
@@ -168,4 +176,3 @@ if (_structuralDamage > 1E-3 or (count _bodyPartDamage) > 0) then {
         _bodyPartDamage
     ]] call CBA_fnc_localEvent;
 };
-

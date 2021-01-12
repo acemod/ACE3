@@ -109,7 +109,7 @@ if (_damage >= 1) then {
         // Arma will kill unit if damage to head hitpoints >= 1
         // Reduce damage to non-lethal if there is no single Hit with _newDamage>=1 or setting prevent instant kill
         // Handle powerful headshots, large explosions damages head
-        if (_hitPointIndex in (_unit getVariable QGVAR(HeadHitPointIdxs))) then {     
+        if (_hitPointIndex in (_unit getVariable QEGVAR(medical,HeadHitPointIdxs))) then {     
             if (_newDamage >= 1 and EGVAR(medical,fatalDamageSource) in [0, 2]) then {
                 TRACE_1("handleDamage: lethal headshot",_newDamage);
             } else {
@@ -119,7 +119,7 @@ if (_damage >= 1) then {
 
         // Arma will kill unit if damage to body hitpoints >= 1
         // Handle torso shots after detecting hitpoint, reduce damage to non-lethal here
-        if (_hitPointIndex in (_unit getVariable QGVAR(BodyHitPointIdxs))) then {     
+        if (_hitPointIndex in (_unit getVariable QEGVAR(medical,BodyHitPointIdxs))) then {     
             _damage = 0.99;
         };
      };
