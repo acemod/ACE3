@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params ["_unit",  "_bodyPartDamage", "_woundDamage"];
+params ["_unit"];
 
 scopeName "main";
 
@@ -30,7 +30,7 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
 
     private _vitalDamage = ((_headDamage - _headThreshhold) max 0) + ((_bodyDamage - _bodyThreshhold) max 0);
     private _chanceFatal = 1 - exp -((_vitalDamage / FATAL_SUM_DAMAGE_WEIBULL_L) ^ FATAL_SUM_DAMAGE_WEIBULL_K);
-    TRACE_3("",_headDamage,_bodyDamage,_vitalDamage,_chanceFatal);
+    TRACE_4("",_headDamage,_bodyDamage,_vitalDamage,_chanceFatal);
 
     if (_chanceFatal > random 1) exitWith {
         TRACE_2("determineIfFatal: lethal trauma",_headDamage,_bodyDamage);
