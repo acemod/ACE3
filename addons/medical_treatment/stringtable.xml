@@ -947,10 +947,10 @@
             <Spanish>Probabilidad de que el RCP sea exitoso restaurando el ritmo cardíaco.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
-            <English>Minimum probability that CPR will be successful in restoring heart rhythm. Actual probability is interpolated based on blood volume.</English>
+            <English>Lowest probability that CPR will restore heart rhythm, when blood loss is greater.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
-            <English>Maximum probability that CPR will be successful in restoring heart rhythm. Actual probability is interpolated based on blood volume.</English>
+            <English>Highest probability that CPR will restore heart rhythm, when blood loss is less.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
