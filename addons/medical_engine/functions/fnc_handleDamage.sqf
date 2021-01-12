@@ -97,22 +97,32 @@ _events pushBack [_hitPointIndex, _newDamage, _source, _instigator, _ammo];
 _unit setVariable [QGVAR(events), _events];
 
 if (_damage >= 1) then {
-    // Damage to vital organs - powerfull headshots, explosion damages head 
-    if (_newDamage>=1 and _hitPointIndex in (_unit getVariable QGVAR(HeadHitPointIdxs))) then {     
-        if (EGVAR(medical,fatalDamageSource) in [0, 2]) then {
-            TRACE_1("handleDamage: lethal headshot",_newDamage);
-        } else {
-            _damage = _damage min 0.99;
-        };
-    };
-
-    // Handle torso shots after detecting hitpoint
-    if (_hitPointIndex in (_unit getVariable QGVAR(BodyHitPointIdxs))) then {     
-        _damage = _damage min 0.99;
-    };
-
-    // Do not change inflicted structural damage (_hitPointIndex==-1)
+    // Do not change inflicted structural damage (_hitPointIndex==-1) if _newDamage >= 1
     // HandleDamage event with _hitPointIndex=-1 and _damage=1 is raised when unit dies in exploded vehicle
+     if (_hitPointIndex == -1) then {
+          if (_newDamage >= 1) then {
+            TRACE_1("handleDamage: lethal structural damage",_newDamage);
+          } else {
+            _damage = 0.99;
+          };
+     } else {         
+        // Arma will kill unit if damage to head hitpoints >= 1
+        // Reduce damage to non-lethal if there is no single Hit with _newDamage>=1 or setting prevent instant kill
+        // Handle powerful headshots, large explosions damages head
+        if (_hitPointIndex in (_unit getVariable QGVAR(HeadHitPointIdxs))) then {     
+            if (_newDamage >= 1 and EGVAR(medical,fatalDamageSource) in [0, 2]) then {
+                TRACE_1("handleDamage: lethal headshot",_newDamage);
+            } else {
+                _damage = 0.99;
+            };
+        };
+
+        // Arma will kill unit if damage to body hitpoints >= 1
+        // Handle torso shots after detecting hitpoint, reduce damage to non-lethal here
+        if (_hitPointIndex in (_unit getVariable QGVAR(BodyHitPointIdxs))) then {     
+            _damage = 0.99;
+        };
+     };
 };
 
 _damage
