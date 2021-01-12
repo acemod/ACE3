@@ -79,14 +79,14 @@ if (!isNil {_woundedHitPoint}) then {
     _woundedBodyPartIdx = ALL_BODY_PARTS find toLower _woundedBodyPart;
 
     _hpDamages params (_hitPoints apply { ["_" + _x,[0,0,""]] });
-    private _headHitpoints = GVAR(bodyPartsToHitpoints)#0#1;
-    private _bodyHitpoints = GVAR(bodyPartsToHitpoints)#1#1;
-    private _damageHead = (_hpDamagesSorted select { _x#2 in _headHitpoints }) param [0, [0,0,""]];
-    private _damageBody = (_hpDamagesSorted select { _x#2 in _bodyHitpoints }) param [0, [0,0,""]];
+    private _headHitpoints = GVAR(bodyPartsToHitpoints)#HITPOINT_INDEX_HEAD#1;
+    private _bodyHitpoints = GVAR(bodyPartsToHitpoints)#HITPOINT_INDEX_BODY#1;
+    private _damageHead = selectMax (_hpDamages select { _x#2 in _headHitpoints } apply { _x#1 });
+    private _damageBody = selectMax (_hpDamages select { _x#2 in _bodyHitpoints } apply { _x#1 });
 
     _bodyPartDamage append ([
-        [HITPOINT_INDEX_HEAD, _damageHead#1], 
-        [HITPOINT_INDEX_BODY, _damageBody#1], 
+        [HITPOINT_INDEX_HEAD, _damageHead], 
+        [HITPOINT_INDEX_BODY, _damageBody], 
         [HITPOINT_INDEX_LARM, _hitleftarm#1], 
         [HITPOINT_INDEX_RARM, _hitrightarm#1], 
         [HITPOINT_INDEX_LLEG, _hitleftleg#1], 
