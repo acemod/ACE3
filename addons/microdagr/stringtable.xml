@@ -535,6 +535,7 @@
             <French>100 m</French>
             <Chinese>一百公尺</Chinese>
             <Czech>100 m</Czech>
+            <Turkish>100m</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -547,6 +548,7 @@
             <French>10 m</French>
             <Chinese>十公尺</Chinese>
             <Czech>10 m</Czech>
+            <Turkish>10m</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -559,6 +561,7 @@
             <French>1 m</French>
             <Chinese>一公尺</Chinese>
             <Czech>1 m</Czech>
+            <Turkish>1m</Turkish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>

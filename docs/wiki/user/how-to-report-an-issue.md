@@ -7,6 +7,11 @@ order: 10
 parent: wiki
 ---
 
+<a href="{{ site.baseurl }}/img/wiki/user/issue_flowchart.png" target="_blank">
+    <center><img src="{{ site.baseurl }}/img/wiki/user/issue_flowchart.png" width="200" alt="Issue Flowchart" /></center>
+    <center><i>Issue Flowchart - click to enlarge</i></center>
+</a>
+
 ### Before reporting
 
 If you have found an issue with ACE3 please make sure that ACE3 is really the cause of the problem. To do this try to reproduce the issue with using only `@CBA_A3` and `@ace` on a newly created mission.

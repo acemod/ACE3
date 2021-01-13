@@ -14,7 +14,7 @@
  * Has Item <BOOL>
  *
  * Example:
- * [player, cursorObject, ["ACE_fieldDressing"]] call ace_medical_treatment_fnc_hasItems
+ * [player, cursorObject, ["ACE_fieldDressing"]] call ace_medical_treatment_fnc_hasItem
  *
  * Public: No
  */

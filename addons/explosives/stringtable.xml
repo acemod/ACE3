@@ -235,6 +235,7 @@
             <Korean>원격으로 폭발물을 폭파시킬때 씁니다.</Korean>
             <Chinesesimp>用于远端引爆炸药</Chinesesimp>
             <Chinese>用於遠端引爆炸藥</Chinese>
+            <Turkish>Bombaları uzaktan patlatmak için kullanılır</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_clacker_displayName">
             <English>M57 Firing Device</English>
@@ -353,6 +354,7 @@
             <Korean>단축키에 지정</Korean>
             <Chinesesimp>增加到快速拨号</Chinesesimp>
             <Chinese>增加到快速撥號</Chinese>
+            <Turkish>Hızlı Aramaya Ekle</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Clear">
             <English>Clear</English>
@@ -386,6 +388,7 @@
             <Korean>다이얼</Korean>
             <Chinesesimp>拨号</Chinesesimp>
             <Chinese>撥號</Chinese>
+            <Turkish>Numarayı Çevir</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Up">
             <English>Up</English>
@@ -502,7 +505,7 @@
             <Russian>Обезвреживание...</Russian>
             <Japanese>爆発物を無力化しています・・・</Japanese>
             <Korean>폭발물 해체중...</Korean>
-            <Chinesesimp>炸弹拆除中...</Chinesesimp>
+            <Chinesesimp>正在拆除炸弹...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
             <Turkish>Patlayıcı Imha Ediliyor...</Turkish>
         </Key>
@@ -545,7 +548,7 @@
             <German>Zeit einstellen</German>
             <Spanish>Configurar tiempo</Spanish>
             <Polish>Ustaw czas</Polish>
-            <French>Régler le minuteur</French>
+            <French>Valider la durée</French>
             <Czech>Nastavit čas</Czech>
             <Italian>Modifica il conto alla rovescia</Italian>
             <Hungarian>Idő beállítása</Hungarian>
@@ -657,6 +660,7 @@
             <Korean>%1(을)를 작동할 장치가 없습니다.</Korean>
             <Chinesesimp>没有适合%1的触发器</Chinesesimp>
             <Chinese>沒有適合%1的觸發器</Chinese>
+            <Turkish>% 1 için tetikleyici yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_SLAME_IRSensor">
             <English>IR Sensor (Side Attack)</English>
@@ -705,6 +709,7 @@
             <Korean>격발기에 등록된 폭발물이 없습니다.</Korean>
             <Chinesesimp>触发器上并没有炸药</Chinesesimp>
             <Chinese>觸發器上並沒有炸藥</Chinese>
+            <Turkish>Tetikte patlayıcı yok.</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_displayName">
             <English>Dead Man's Switch</English>
@@ -737,6 +742,7 @@
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
             <Chinesesimp>当放开按钮时, 将会引爆炸弹.</Chinesesimp>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
+            <Turkish>Patlayıcıları serbest bırakıldığında uzaktan tetiklemek için kullanılır.</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
@@ -783,10 +789,11 @@
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
-            <Japanese>特技兵を必要としますか?</Japanese>
+            <Japanese>特技兵を必須</Japanese>
             <Korean>전문가가 필요합니까?</Korean>
             <Chinesesimp>需要专家?</Chinesesimp>
             <Chinese>需要專家?</Chinese>
+            <Turkish>Uzmanlara ihtiyaç var mı?</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
@@ -799,10 +806,11 @@
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
-            <Japanese>爆発物を無効化するには、爆発物の特技兵を必要としますか? 標準: 無効化</Japanese>
+            <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。標準: 無効化</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要炸弹专家才能拆除炸弹? 预设: 否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
+            <Turkish>Patlayıcı uzmanlarının patlayıcıları etkisiz hale getirmesini ister misiniz? Varsayılan: Hayır</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
@@ -815,7 +823,7 @@
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
-            <Japanese>非特技兵へ足かせを与えますか?</Japanese>
+            <Japanese>非特技兵へ足かせ</Japanese>
             <Korean>비-전문가에 불이익을 줍니까?</Korean>
             <Chinesesimp>折磨非专业人员?</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
@@ -831,7 +839,7 @@
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
-            <Japanese>非特技兵へ動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
+            <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
             <Korean>비-전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间? 预设: 是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
@@ -847,7 +855,7 @@
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
-            <Japanese>解除中に爆発させますか?</Japanese>
+            <Japanese>解除中に爆発</Japanese>
             <Korean>해제시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆?</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
@@ -863,7 +871,7 @@
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
-            <Japanese>特定の爆発物を解除中に爆発させますか? 標準: 有効化</Japanese>
+            <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
             <Korean>특정 폭발물이 해제시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后, 某些炸弹会在拆除时引爆? 预设: 是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
@@ -1025,6 +1033,7 @@
             <Korean>%1에 연결중</Korean>
             <Chinesesimp>连接到%1</Chinesesimp>
             <Chinese>連接到%1</Chinese>
+            <Turkish>Bağlandı %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name">
             <English>Tripwire Flare</English>
@@ -1066,6 +1075,7 @@
             <Russian>Дальность подрыва</Russian>
             <Portuguese>Alcance do explosivo</Portuguese>
             <Czech>Dosah exploze</Czech>
+            <Turkish>Patlayıcı menzili</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
@@ -1075,9 +1085,10 @@
             <Polish>Czasomierz Wybuchu</Polish>
             <Russian>Таймер взрывчатки</Russian>
             <Portuguese>Timer de explosão</Portuguese>
-            <French>Minuteur de détonation</French>
+            <French>Minuteur pour explosifs</French>
             <Chinese>引爆倒數</Chinese>
             <Czech>Časovač exploze</Czech>
+            <Turkish>Patlayıcı Zamanlayıcı</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
@@ -1088,6 +1099,7 @@
             <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
             <Polish>Jest EOD</Polish>
+            <Russian>Сапёр</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1098,6 +1110,31 @@
             <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
+            <Russian>Определяет, является ли юнит сапёром.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
+            <English>Minimum Time</English>
+            <French>Durée minimale</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
+            <English>Maximum Time</English>
+            <French>Durée maximale</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
+            <English>Default Time</English>
+            <French>Durée par défaut</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMin_Description">
+            <English>Minimum time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée minimale paramétrable sur le minuteur.</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMax_Description">
+            <English>Maximum time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée maximale paramétrable sur le minuteur.</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerDefault_Description">
+            <English>Default time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
         </Key>
     </Package>
 </Project>

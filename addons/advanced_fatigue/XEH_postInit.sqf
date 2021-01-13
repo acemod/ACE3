@@ -8,13 +8,13 @@ if (!hasInterface) exitWith {};
 
     switch (stance _unit) do {
         case ("CROUCH"): {
-            1.0 + _fatigue ^ 2 * 0.1
+            (1.0 + _fatigue ^ 2 * 0.1) * GVAR(swayFactor)
         };
         case ("PRONE"): {
-            1.0 + _fatigue ^ 2 * 2.0
+            (1.0 + _fatigue ^ 2 * 2.0) * GVAR(swayFactor)
         };
         default {
-            1.5 + _fatigue ^ 2 * 3.0
+            (1.5 + _fatigue ^ 2 * 3.0) * GVAR(swayFactor)
         };
     };
 }] call EFUNC(common,arithmeticSetSource);

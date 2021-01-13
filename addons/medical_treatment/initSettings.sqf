@@ -26,6 +26,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(woundReopenChance),
+    "SLIDER",
+    [LSTRING(WoundReopenChance_DisplayName), LSTRING(WoundReopenChance_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 5, 1, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(clearTraumaAfterBandage),
     "CHECKBOX",
     [LSTRING(ClearTraumaAfterBandage_DisplayName), LSTRING(ClearTraumaAfterBandage_Description)],
@@ -59,6 +68,42 @@
     [LSTRING(ConvertItems_DisplayName), LSTRING(ConvertItems_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [ELSTRING(common,Enabled), LSTRING(ConvertItems_RemoveOnly), ELSTRING(common,Disabled)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeAutoinjector),
+    "SLIDER",
+    [LSTRING(TreatmentTimeAutoinjector_DisplayName), LSTRING(TreatmentTimeAutoinjector_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 60, 5, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeTourniquet),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTourniquet_DisplayName), LSTRING(TreatmentTimeTourniquet_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 60, 7, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeSplint),
+    "SLIDER",
+    [LSTRING(TreatmentTimeSplint_DisplayName), LSTRING(TreatmentTimeSplint_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 60, 7, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeBodyBag),
+    "SLIDER",
+    [LSTRING(TreatmentTimeBodyBag_DisplayName), LSTRING(TreatmentTimeBodyBag_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 60, 15, 1],
     true
 ] call CBA_settings_fnc_init;
 
@@ -162,6 +207,15 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(woundStitchTime),
+    "SLIDER",
+    [LSTRING(WoundStitchTime_DisplayName), LSTRING(WoundStitchTime_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 60, 5, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(medicIV),
     "LIST",
     [LSTRING(MedicIV_DisplayName), LSTRING(MedicIV_Description)],
@@ -180,11 +234,38 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(treatmentTimeIV),
+    "SLIDER",
+    [LSTRING(TreatmentTimeIV_DisplayName), LSTRING(TreatmentTimeIV_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 60, 12, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(cprSuccessChance),
     "SLIDER",
     [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 1, 0.4, 2, true],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(treatmentTimeCPR),
+    "SLIDER",
+    [LSTRING(TreatmentTimeCPR_DisplayName), LSTRING(TreatmentTimeCPR_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0.1, 60, 15, 1],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(allowBodyBagUnconscious),
+    "CHECKBOX",
+    [LSTRING(AllowBodyBagUnconscious_DisplayName), LSTRING(AllowBodyBagUnconscious_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    false,
     true
 ] call CBA_settings_fnc_init;
 

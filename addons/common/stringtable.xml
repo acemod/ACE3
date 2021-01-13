@@ -133,6 +133,7 @@
             <Korean>북북동</Korean>
             <Chinese>北北東</Chinese>
             <Chinesesimp>北北东</Chinesesimp>
+            <Turkish>KKD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NE">
             <English>NE</English>
@@ -166,6 +167,7 @@
             <Korean>동북동</Korean>
             <Chinese>東北東</Chinese>
             <Chinesesimp>东北东</Chinesesimp>
+            <Turkish>DKD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_E">
             <English>E</English>
@@ -199,6 +201,7 @@
             <Korean>동남동</Korean>
             <Chinese>東南東</Chinese>
             <Chinesesimp>东南东</Chinesesimp>
+            <Turkish>DGD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_SE">
             <English>SE</English>
@@ -232,6 +235,7 @@
             <Korean>남남동</Korean>
             <Chinese>南南東</Chinese>
             <Chinesesimp>南南东</Chinesesimp>
+            <Turkish>GGD</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_S">
             <English>S</English>
@@ -265,6 +269,7 @@
             <Korean>남남서</Korean>
             <Chinese>南南西</Chinese>
             <Chinesesimp>南南西</Chinesesimp>
+            <Turkish>GGB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_SW">
             <English>SW</English>
@@ -298,6 +303,7 @@
             <Korean>서남서</Korean>
             <Chinese>西南西</Chinese>
             <Chinesesimp>西南西</Chinesesimp>
+            <Turkish>BGB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_W">
             <English>W</English>
@@ -331,6 +337,7 @@
             <Korean>서북서</Korean>
             <Chinese>西北西</Chinese>
             <Chinesesimp>西北西</Chinesesimp>
+            <Turkish>BKB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NW">
             <English>NW</English>
@@ -364,6 +371,7 @@
             <Korean>북북서</Korean>
             <Chinese>北北西</Chinese>
             <Chinesesimp>北北西</Chinesesimp>
+            <Turkish>KKB</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ActionAborted">
             <English>Action cancelled.</English>
@@ -380,6 +388,7 @@
             <Korean>행동 취소됨.</Korean>
             <Chinese>動作已被取消</Chinese>
             <Chinesesimp>动作已被取消</Chinesesimp>
+            <Turkish>Işlem iptal edildi.</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_MiscItems">
             <English>[ACE] Miscellaneous Items</English>
@@ -488,6 +497,7 @@
             <Polish>Określa akcję, która ma być podjęta, jeśli gracz nie ma właściwych PBO.</Polish>
             <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
             <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
+            <Russian>Определяет, какое действие будет предпринято, если игрок не имеет корректные PBO.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -512,6 +522,7 @@
             <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
             <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
             <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
+            <Russian>Проверять все аддоны, а не только ACE.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -536,6 +547,7 @@
             <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
             <Japanese>許可するアドオンを定義します。</Japanese>
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
+            <Russian>Задать список непроверяемых аддонов.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -805,6 +817,7 @@
             <Korean>경고 한 번</Korean>
             <Chinese>警告 (一次)</Chinese>
             <Chinesesimp>警告 (一次)</Chinesesimp>
+            <Turkish>UYAR</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
             <English>Warn (permanent)</English>
@@ -821,6 +834,7 @@
             <Korean>경고 (영구적)</Korean>
             <Chinese>警告 (持續)</Chinese>
             <Chinesesimp>警告 (持续)</Chinesesimp>
+            <Turkish>UYAR (KALICI)</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
             <English>Kick</English>
@@ -837,6 +851,7 @@
             <Korean>추방</Korean>
             <Chinese>踢除</Chinese>
             <Chinesesimp>踢除</Chinesesimp>
+            <Turkish>AT</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
             <English>Check all addons</English>
@@ -885,6 +900,7 @@
             <Korean>화이트리스트</Korean>
             <Chinese>白名單</Chinese>
             <Chinesesimp>白名单</Chinesesimp>
+            <Turkish>Beyaz Liste</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
@@ -996,6 +1012,7 @@
             <Korean>비활성화</Korean>
             <Chinese>停用</Chinese>
             <Chinesesimp>停用</Chinesesimp>
+            <Turkish>Devre Dışı</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Enabled">
             <English>Enabled</English>
@@ -1011,6 +1028,7 @@
             <Korean>활성화</Korean>
             <Chinese>啟用</Chinese>
             <Chinesesimp>启用</Chinesesimp>
+            <Turkish>Etkin</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Always">
             <English>Always</English>
@@ -1024,6 +1042,7 @@
             <Italian>Sempre</Italian>
             <Czech>Vždy</Czech>
             <Polish>Zawsze</Polish>
+            <Turkish>Her Zaman</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1039,6 +1058,7 @@
             <Japanese>どこでも</Japanese>
             <Korean>어디서나</Korean>
             <Chinese>任何地方</Chinese>
+            <Turkish>Herhangi bir yer</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Basic">
             <English>Basic</English>
@@ -1054,6 +1074,7 @@
             <Japanese>ベーシック</Japanese>
             <Korean>기본</Korean>
             <Chinese>基礎</Chinese>
+            <Turkish>Basit</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Vehicle">
             <English>Medical Vehicles</English>
@@ -1069,6 +1090,7 @@
             <Japanese>医療車両のみ</Japanese>
             <Korean>의료차량</Korean>
             <Chinese>醫療載具</Chinese>
+            <Turkish>Medikal Araçlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Yes">
             <English>Yes</English>
@@ -1085,6 +1107,7 @@
             <Korean>예</Korean>
             <Chinese>是</Chinese>
             <Chinesesimp>是</Chinesesimp>
+            <Turkish>Evet</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_No">
             <English>No</English>
@@ -1101,6 +1124,7 @@
             <Korean>아니오</Korean>
             <Chinese>否</Chinese>
             <Chinesesimp>否</Chinesesimp>
+            <Turkish>Hayır</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Confirm">
             <English>Confirm</English>
@@ -1114,6 +1138,7 @@
             <Italian>Conferma</Italian>
             <Czech>Potvrdit</Czech>
             <Polish>Potwierdź</Polish>
+            <Turkish>Onayla</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Never">
             <English>Never</English>
@@ -1127,6 +1152,7 @@
             <Italian>Mai</Italian>
             <Czech>Nikdy</Czech>
             <Polish>Nigdy</Polish>
+            <Turkish>Hiçbir zaman</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -1142,6 +1168,7 @@
             <Korean>차량 전용</Korean>
             <Chinese>只有載具</Chinese>
             <Chinesesimp>只有载具</Chinesesimp>
+            <Turkish>Sadece Arabalar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
@@ -1157,6 +1184,7 @@
             <Korean>강제하지 말것</Korean>
             <Chinese>不要強行</Chinese>
             <Chinesesimp>不要强行</Chinesesimp>
+            <Turkish>Zorlama</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
             <English>ACE Equipment</English>
@@ -1172,6 +1200,7 @@
             <Korean>ACE 장비</Korean>
             <Chinese>ACE 裝備按鍵</Chinese>
             <Chinesesimp>ACE 装备按键</Chinesesimp>
+            <Turkish>ACE Ekipmanlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE Common</English>
@@ -1187,6 +1216,7 @@
             <Korean>ACE 일반</Korean>
             <Chinese>ACE 通用按鍵</Chinese>
             <Chinesesimp>ACE 通用按键</Chinesesimp>
+            <Turkish>ACE Common</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE Weapons</English>
@@ -1202,6 +1232,7 @@
             <Korean>ACE 무기</Korean>
             <Chinese>ACE 武器按鍵</Chinese>
             <Chinesesimp>ACE 武器按键</Chinesesimp>
+            <Turkish>ACE Silahlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE Movement</English>
@@ -1217,6 +1248,7 @@
             <Korean>ACE 움직임</Korean>
             <Chinese>ACE 動作按鍵</Chinese>
             <Chinesesimp>ACE 动作按键</Chinesesimp>
+            <Turkish>ACE Hareket</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE Scope Adjustment</English>
@@ -1247,6 +1279,7 @@
             <Korean>ACE 차량</Korean>
             <Chinese>ACE 載具按鍵</Chinese>
             <Chinesesimp>ACE 载具按键</Chinesesimp>
+            <Turkish>ACE Araçlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1278,6 +1311,7 @@
             <Korean>토글</Korean>
             <Chinese>切換</Chinese>
             <Chinesesimp>切换</Chinesesimp>
+            <Turkish>Değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Weight">
             <English>Weight:</English>
@@ -1294,6 +1328,7 @@
             <Korean>무게:</Korean>
             <Chinesesimp>重量:</Chinesesimp>
             <Chinese>重量:</Chinese>
+            <Turkish>Ağırlık:</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusic">
             <English>Allow turning down music</English>
@@ -1309,6 +1344,7 @@
             <French>Permission d'abaisser la musique</French>
             <Czech>Povolit snížení hlasitosti hudby</Czech>
             <Spanish>Permitir reducir el volumen de la música</Spanish>
+            <Turkish>Müziği kısmaya izin ver</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_AllowFadeMusicTooltip">
             <English>Allow ACE scripts to turn down the music.</English>
@@ -1324,6 +1360,7 @@
             <French>Autorise les scripts ACE à baisser le volume de la musique.</French>
             <Czech>Povolit ACE skriptům snížit hlasitost hudby</Czech>
             <Spanish>Permitir a los scripts de ACE reducir el volumen la música</Spanish>
+            <Turkish>ACE scripti müziği kısmana izin verir</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1398,6 +1435,9 @@
             <Japanese>セルフ インタラクションに動作を表示</Japanese>
             <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
             <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
+            <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
+            <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
+            <Turkish>Kendi etkileşimim menüsünde animasyonları göster</Turkish>
         </Key>
     </Package>
 </Project>

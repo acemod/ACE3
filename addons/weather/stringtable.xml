@@ -99,6 +99,7 @@
             <Portuguese>Expande o clima existente com temperatura, humidade e pressão do ar.</Portuguese>
             <Czech>Rozšiřuje stávající počasí o teplotu, vlhkost a tlak vzduchu.</Czech>
             <French>Améliore le module météo existant en y ajoutant la température, l'humidité et la pression atmosphérique.</French>
+            <Turkish>Mevcut havayı sıcaklık, nem ve hava basıncı ile genişletir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Weather_updateInterval_DisplayName">
             <English>Update Interval</English>
@@ -175,6 +176,7 @@
             <French>Vérifier la température</French>
             <Portuguese>Checar a temperatura do ar </Portuguese>
             <Turkish>Hava Sıcaklığını Kontrol Et</Turkish>
+            <Russian>Проверить температуру воздуха</Russian>
         </Key>
         <Key ID="STR_ACE_Weather_showCheckAirTemperature_DisplayName">
             <English>Show Check Air Temperature Action</English>
@@ -187,6 +189,7 @@
             <French>Afficher l'interaction "Vérifier la température"</French>
             <Portuguese>Mostrar a ação "Checar a temperatura do ar"</Portuguese>
             <Turkish>Hava Sıcaklığını Kontrol Etme Eylemini Göster</Turkish>
+            <Russian>Показывать действие проверки температуры</Russian>
         </Key>
     </Package>
 </Project>

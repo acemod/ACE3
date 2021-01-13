@@ -9,6 +9,11 @@
         _unit setVariable [QGVAR(lastFired), CBA_missionTime];
     }] call CBA_fnc_addEventHandler;
 
+    ["CAManBase", "Hit", {
+        params ["_unit"];
+        _unit setVariable [QGVAR(lastHit), CBA_missionTime];
+    }] call CBA_fnc_addClassEventHandler;
+
     #include "stateMachine.sqf"
 }] call CBA_fnc_addEventHandler;
 

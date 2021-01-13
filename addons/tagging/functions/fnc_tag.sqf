@@ -7,6 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
  * 2: Material of the tag <STRING> (Optional)
+ * 3: Tag Model <STRING> (optional)
  *
  * Return Value:
  * Sucess <BOOL>
@@ -20,7 +21,8 @@
 params [
     ["_unit", objNull, [objNull]],
     ["_texture", "", [""]],
-    ["_material", "", [""]]
+    ["_material", "", [""]],
+    ["_tagModel", "UserTexture1m_F", [""]]
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
@@ -68,13 +70,20 @@ if (_surfaceNormal vectorDotProduct  (_endPosASL vectorDiff _startPosASL) > 0) t
 
 // Check if its a valid surface: big enough, reasonably plane
 private _v1 = vectorNormalized (_surfaceNormal vectorMultiply -1);
-private _v2 = vectorNormalized (_v1 vectorCrossProduct (_endPosASL vectorDiff _startPosASL));
+private _v2 = [];
+private _v3 = [];
 // If the surface is not horizontal (>20º), create vup _v2 pointing upward instead of away
-if (abs (_v1 select 2) < 0.94) then {
-    private _v3Temp = _v1 vectorCrossProduct [0, 0, 1];
-    _v2 = _v3Temp vectorCrossProduct _v1;
+private _vectorDirAndUp = if (abs (_v1 select 2) < 0.94) then {
+    _v3 = _v1 vectorCrossProduct [0, 0, 1];
+    _v2 = _v3 vectorCrossProduct _v1;
+    TRACE_2("Wall Placement",_v1,_v2);
+    [_v1, _v2]
+} else {
+    _v2 = vectorNormalized (_v1 vectorCrossProduct (_endPosASL vectorDiff _startPosASL));
+    _v3 = _v2 vectorCrossProduct _v1;
+    TRACE_2("Ground Placement",_v1,_v3);
+    [_v1, _v3]
 };
-private _v3 = _v2 vectorCrossProduct _v1;
 
 TRACE_3("Reference:", _v1, _v2, _v3);
 
@@ -99,7 +108,6 @@ if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
     false
 };
 
-private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
 
 // Everything ok, make the unit create the tag
 [_unit, "PutDown"] call EFUNC(common,doGesture);
@@ -112,6 +120,6 @@ private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
 
     // Tell the server to create the tag and handle its destruction
     [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material], 0.6] call CBA_fnc_waitAndExecute;
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit, _material, _tagModel], 0.6] call CBA_fnc_waitAndExecute;
 
 true

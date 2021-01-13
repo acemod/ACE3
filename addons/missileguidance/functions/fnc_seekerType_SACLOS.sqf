@@ -20,13 +20,13 @@ _args params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _seekerParams params ["_seekerAngle"];
 _stateParams params ["", "_seekerStateParams"];
-_seekerStateParams params ["_memoryPointGunnerOptics", "_animationSourceBody", "_animationSourceGun"];
+_seekerStateParams params ["_memoryPointGunnerOptics", "_animationSourceBody", "_animationSourceGun", "_usePilotCamera"];
 
 private _shooterPos = AGLToASL (_shooter modelToWorld(_shooter selectionPosition _memoryPointGunnerOptics));
 private _projPos = getPosASL _projectile;
 
 private _lookDirection = if !(_shooter isKindOf "CAManBase" || {_shooter isKindOf "StaticWeapon"}) then {
-    private _finalLookDirection = if (_shooter isKindOf "Plane") then {
+    private _finalLookDirection = if (_usePilotCamera) then {
         _shooterPos = _shooter modelToWorldVisualWorld getPilotCameraPosition _shooter;
         private _trackingTarget = getPilotCameraTarget _shooter;
         _trackingTarget params ["_isTracking", "_trackingPos"];

@@ -10,7 +10,7 @@
  * Marker Type <STRING>
  *
  * Example:
- * ["GROUP"] call ace_common_fnc_getmarkerType
+ * ["GROUP"] call ace_common_fnc_getMarkerType
  *
  * Public: No
  */

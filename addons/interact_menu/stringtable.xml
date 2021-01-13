@@ -16,6 +16,7 @@
             <Korean>자기상호작용시 항상 커서를 보이기</Korean>
             <Chinesesimp>自我互动时永远显示游标</Chinesesimp>
             <Chinese>自我互動時永遠顯示游標</Chinese>
+            <Turkish>Kendi kendine etkileşim için daima imleci göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
             <English>Always display cursor for interaction</English>
@@ -32,6 +33,7 @@
             <Korean>상호작용시 항상 커서를 보이기</Korean>
             <Chinesesimp>互动时永远显示游标</Chinesesimp>
             <Chinese>互動時永遠顯示游標</Chinese>
+            <Turkish>Etkileşim için her zaman imleci göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -48,6 +50,7 @@
             <Korean>상호작용메뉴를 리스트화 해서 보이기</Korean>
             <Chinesesimp>以列表方式显示互动表单</Chinesesimp>
             <Chinese>以列表方式顯示互動表單</Chinese>
+            <Turkish>Etkileşim menülerini listeler halinde görüntüle</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -149,6 +152,7 @@
             <Korean>상호작용 - 문자색깔</Korean>
             <Chinesesimp>互动-文字颜色最大值</Chinesesimp>
             <Chinese>互動 - 文字最大化</Chinese>
+            <Turkish>Etkileşim - Maksimum Metin</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -165,6 +169,7 @@
             <Korean>상호작용 - 문자배경색</Korean>
             <Chinesesimp>互动-文字颜色最小值</Chinesesimp>
             <Chinese>互動 - 文字最小化</Chinese>
+            <Turkish>Etkileşim - Minumum Metin </Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -181,6 +186,7 @@
             <Korean>상호작용 - 문자그림자색</Korean>
             <Chinesesimp>互动 - 阴影最大值</Chinesesimp>
             <Chinese>互動 - 陰影最大化</Chinese>
+            <Turkish>Etkileşim - Maksimum Gölge</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -197,6 +203,7 @@
             <Korean>상호작용 - 문자그림자배경색</Korean>
             <Chinesesimp>互动 - 阴影最小值</Chinesesimp>
             <Chinese>互動 - 陰影最小化</Chinese>
+            <Turkish>Etkileşim - Minumum Gölge</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
             <English>Keep cursor centered</English>
@@ -213,6 +220,7 @@
             <Korean>커서를 항상 가운데에 둡니다</Korean>
             <Chinesesimp>保持游标在中心点</Chinesesimp>
             <Chinese>保持游標在中心點</Chinese>
+            <Turkish>İmleci Ortada tut</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
@@ -229,6 +237,7 @@
             <Korean>커서를 항상 가운데에 두고 메뉴를 움직입니다. 화면의 크기가 제한되있을때 유용합니다.</Korean>
             <Chinesesimp>保持游标在中心点并平移周遭的选项选单。这对在荧幕尺寸有限的玩家很有用!</Chinesesimp>
             <Chinese>保持游標在中心點並平移周遭的選項選單。這對在螢幕尺寸有限的玩家很有用!</Chinese>
+            <Turkish>İmleci ortalanmış halde tutar ve seçenek menüsünü kaydırır. Ekran boyutu sınırlıysa kullanışlıdır.</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
@@ -245,6 +254,7 @@
             <Korean>메뉴키를 놓을때 행동하기</Korean>
             <Chinesesimp>当放开选单键后就执行动作</Chinesesimp>
             <Chinese>當放開選單鍵後就執行動作</Chinese>
+            <Turkish>Menü tuşunu bırakırken işlem yap</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_textSize">
             <English>Interaction Text Size</English>
@@ -261,6 +271,7 @@
             <Korean>상호작용 - 문자크기</Korean>
             <Chinesesimp>互动选单文字大小</Chinesesimp>
             <Chinese>互動選單文字大小</Chinese>
+            <Turkish>Etkileşim Metni Boyutu</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowSetting">
             <English>Interaction Text Shadow</English>
@@ -277,6 +288,7 @@
             <Korean>상호작용 - 문자그림자</Korean>
             <Chinesesimp>互动选单文字阴影</Chinesesimp>
             <Chinese>互動選單文字陰影</Chinese>
+            <Turkish>Etkileşim Metni Gölgesi</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
@@ -293,6 +305,7 @@
             <Korean>문자의 그림자를 조절하는것을 가능케합니다. 외각선은 임의의 그림자색을 무시합니다.</Korean>
             <Chinesesimp>允许控制文字阴影。轮廓部分则会忽略自定义的阴影颜色。</Chinesesimp>
             <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色</Chinese>
+            <Turkish>Metin gölgesinin kontrolüne izin verir. Dış çizgi, özel gölge renklerini yok sayar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowOutline">
             <English>Outline</English>
@@ -309,6 +322,7 @@
             <Korean>외각선</Korean>
             <Chinesesimp>只显示轮廓</Chinesesimp>
             <Chinese>只顯示輪廓</Chinese>
+            <Turkish>Dış Çizgi</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_background">
             <English>Interaction menu background</English>
@@ -325,6 +339,7 @@
             <Korean>상호작용 메뉴 배경</Korean>
             <Chinesesimp>互动选单背景</Chinesesimp>
             <Chinese>互動選單背景</Chinese>
+            <Turkish>Etkileşim menüsü arka planı</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
@@ -341,6 +356,7 @@
             <Korean>상호작용 메뉴가 열릴시 배경을 흐릿하게 처리합니다.</Korean>
             <Chinesesimp>当互动选单开启时，模糊背景画面。</Chinesesimp>
             <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
+            <Turkish>Etkileşim menüsü açıkken arka planı bulanıklaştırın.</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -391,6 +407,7 @@
             <Korean>건물에 행동을 취함</Korean>
             <Chinesesimp>显示建筑物可用的动作</Chinesesimp>
             <Chinese>顯示建築物可用的動作</Chinese>
+            <Turkish>Binalar için eylemleri göster</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
             <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
@@ -407,6 +424,7 @@
             <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
             <Chinesesimp>增加互动选单的功能在可开启的门与建筑物的梯子上。(注意: 此功能有可能会降低系统效能，特别是在城镇区更明显)</Chinesesimp>
             <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上。(注意: 此功能有可能會降低系統效能，特別是在城鎮區更明顯)</Chinese>
+            <Turkish>Binalara kapıları açmak ve merdivenleri monte etmek için etkileşim eylemleri ekler. (Not: Etkileşim menüsünü açarken, özellikle şehirlerde bir performansı etkiler)</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
@@ -422,6 +440,7 @@
             <Korean>상호작용 메뉴</Korean>
             <Chinesesimp>互动选单</Chinesesimp>
             <Chinese>互動選單</Chinese>
+            <Turkish>Etkileşim Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
@@ -437,6 +456,7 @@
             <Korean>상호작용 움직임 속도</Korean>
             <Chinesesimp>互动选单动画速度</Chinesesimp>
             <Chinese>互動選單動畫速度</Chinese>
+            <Turkish>Etkileşim Animasyon Hızı</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
@@ -452,6 +472,7 @@
             <Chinesesimp>使选单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
             <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
             <Korean>상호 작용을 표시하기 위해 메뉴 애니메이션을 빠르게 만들고 마우스를 가져 오는 데 필요한 시간을 줄입니다.</Korean>
+            <Turkish>Menü animasyonlarını daha hızlı hale getirir ve alt eylemleri göstermek için fareyle üzerine gelmek için gereken süreyi azaltır</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelectorColor">
             <English>Selector Color</English>
@@ -466,6 +487,7 @@
             <French>Couleur du sélecteur</French>
             <Czech>Barva selektoru</Czech>
             <Spanish>Selector de color</Spanish>
+            <Turkish>Seçici Renk</Turkish>
         </Key>
     </Package>
 </Project>

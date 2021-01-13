@@ -54,67 +54,99 @@
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionHEI">
             <English>30mm High-Explosive Incendiary</English>
+            <Spanish>30mm Alto Explosivo Incendiaria</Spanish>
             <Chinese>30毫米高爆燃燒彈</Chinese>
             <French>30 mm High-Explosive Incendiary</French>
             <Polish>30mm Odłamkowo-Burzące - Zapalające</Polish>
+            <Turkish>30mm Yüksek Patlayıcı </Turkish>
             <German>30mm Hochexplosiv/Brandladung</German>
             <Japanese>30mm 焼夷りゅう弾</Japanese>
+            <Czech>30mm Tříštivo-trhavá zápalná střela</Czech>
+            <Russian>30мм Осколочно-Фугасный Зажигательный</Russian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
             <English>30mm HEI</English>
+            <Spanish>30mm AEI</Spanish>
             <Chinese>30毫米高爆燃燒</Chinese>
             <French>30 mm HEI</French>
             <Polish>30mm OB-Z</Polish>
+            <Turkish>30mm HEI</Turkish>
             <German>30mm HEB</German>
             <Japanese>30mm HEI</Japanese>
+            <Czech>30mm HEI</Czech>
+            <Russian>30мм ОФЗ</Russian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionAP">
             <English>30mm DU Armor Piercing</English>
+            <Spanish>30mm UE Perforante de Blindaje</Spanish>
             <Chinese>30毫米貧化鈾穿甲彈 </Chinese>
             <French>30 mm UA Armor Piercing</French>
             <Polish>30mm Zubożony Uran - Przebijające</Polish>
+            <Turkish>30mm DU Zırh Delici</Turkish>
             <German>30mm abgereichertes panzerbrechendes Uraniumgeschoss</German>
             <Japanese>30mm DU 徹甲弾</Japanese>
+            <Czech>30mm Protipancéřová střela z ochuzeného Uranu</Czech>
+            <Russian>30мм ОУ Бронебойный Снаряд</Russian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortAP">
             <English>30mm DU AP</English>
+            <Spanish>30mm UE AP</Spanish>
             <Chinese>30毫米貧鈾穿甲</Chinese>
             <French>30 mm UA AP</French>
             <Polish>30mm ZU-P</Polish>
+            <Turkish>30mm DU AP</Turkish>
             <German>30mm DU-PB</German>
             <Japanese>30mm DU AP</Japanese>
+            <Czech>30 mm DU AP</Czech>
+            <Russian>30мм ОУ БС</Russian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM41">
             <English>30mm Combat Mix 4:1 DU:HEI</English>
+            <Spanish>30mm Mezcla de Combate 4:1 UE:AEI</Spanish>
             <Chinese>30毫米戰鬥混合彈4:1 穿甲:高爆</Chinese>
             <French>30 mm Mix de Combat 4:1 UA:HEI</French>
             <Polish>30mm Mieszanka bojowa 4:1 ZU:OB-Z</Polish>
+            <Turkish>30mm Combat Mix 4:1 DU:HEI</Turkish>
             <German>30mm Kampfmischung 4:1 DU:HEB</German>
             <Japanese>30mm コンバット ミックス 4:1 DU:HEI</Japanese>
+            <Czech>30mm Bojový Mix 4:1 DU:HEI</Czech>
+            <Russian>30мм Смешанное боепитание 4:1 ОУ:ОФЗ</Russian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM41">
             <English>30mm CM 4:1</English>
+            <Spanish>30mm MC 4:1</Spanish>
             <Chinese>30毫米 穿高混合 4:1</Chinese>
             <French>30 mm MdC 4:1</French>
             <Polish>30mm MB 4:1</Polish>
+            <Turkish>30mm CM 4:1</Turkish>
             <German>30mm KM 4:1</German>
             <Japanese>30mm CM 4:1</Japanese>
+            <Czech>30mm BM 4:1</Czech>
+            <Russian>30мм СБ 4:1</Russian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM51">
             <English>30mm Combat Mix 5:1 DU:HEI</English>
+            <Spanish>30mm Mezcla de Combate 5:1 UE:AEI</Spanish>
             <Chinese>30毫米戰鬥混合彈5:1 穿甲:高爆</Chinese>
             <French>30 mm Mix de Combat 5:1 UA:HEI</French>
             <Polish>30mm Mieszanka bojowa 5:1 ZU:OB-Z</Polish>
+            <Turkish>30mm Combat Mix 5:1 DU:HEI</Turkish>
             <German>30mm Kampfmischung 5:1 DU:HEB</German>
             <Japanese>30mm コンバット ミックス 5:1 DU:HEI</Japanese>
+            <Czech>30mm Bojový Mix 5:1 DU:HEI</Czech>
+            <Russian>30мм Смешанное боепитание 5:1 ОУ:ОФЗ</Russian>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM51">
             <English>30mm CM 5:1</English>
+            <Spanish>30mm MC 5:1</Spanish>
             <Chinese>30毫米 穿高混合 5:1</Chinese>
             <French>30 mm MdC 5:1</French>
             <Polish>30mm MB 5:1</Polish>
+            <Turkish>30mm CM 5:1</Turkish>
             <German>30mm KM 5:1</German>
             <Japanese>30mm CM 5:1</Japanese>
+            <Czech>30mm BM 5:1</Czech>
+            <Russian>30мм СБ 5:1</Russian>
         </Key>
     </Package>
 </Project>
