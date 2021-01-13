@@ -16,6 +16,12 @@
             <French>Surchauffe</French>
             <Czech>Přehřívání</Czech>
         </Key>
+        <Key ID="STR_ACE_Overheating_heatCoef_displayName">
+            <English>Heating Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_heatCoef_description">
+            <English>Coefficient for the amount of heat a weapon generates per shot.\nHigher value increases heat.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
             <German>Zeige Text bei Ladehemmung</German>
@@ -148,22 +154,22 @@
             <English>Distance for Effects and Dispersion</English>
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
-            <English>Overheating particle effects and dispersion will only be shown for other player units closer than this. Value is in metres.</English>
+            <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
-            <English>Increase rate of fire with heat</English>
+            <English>Heat Increases Fire Rate</English>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_description">
-            <English>As weapons heat up their rate of fire increases up to 20%.</English>
+            <English>As weapons heat up, their rate of fire increases by up to 10%.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
             <English>Jam Chance Coefficient</English>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
-            <English>Modifier for the chance that weapon will jam from overheating [Setting to 0 will disable jamming].</English>
+            <English>Coefficient for the chance that a weapon will jam from overheating.\nHigher value make jams more likely.\nSet to 0 to disable jamming.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnReload_displayName">
-            <English>Unjam weapon on reload</English>
+            <English>Unjam Weapon on Reload</English>
             <German>Behebt Ladehemmung beim Nachladen</German>
             <Spanish>Desencasquillar el arma al recargar.</Spanish>
             <Polish>Usuń zacięcie przy przeładowaniu</Polish>
@@ -198,7 +204,7 @@
             <English>Unjam on barrel swap</English>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
-            <English>Swapping barrels clears a weapon jam.</English>
+            <English>Controls whether swapping barrels clears a weapon jam.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
@@ -232,17 +238,11 @@
             <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
             <Hungarian>Valószínűsége annak, hogy egy akadály eltávolítás művelet kudarcot vall, megismétlést igényel.</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Overheating_cookoff_displayName">
-            <English>Overheating Cookoff</English>
-        </Key>
-        <Key ID="STR_ACE_Overheating_cookoff_description">
-            <English>Weapons that are overheating have a chance of cooking off and firing a round.</English>
-        </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_displayName">
             <English>Overheating Cookoff Coefficient</English>
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_description">
-            <English>Modifier for the time it takes for cookoffs to occur [Lower takes more heat to cookoff].</English>
+            <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>

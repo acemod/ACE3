@@ -32,11 +32,6 @@ if (_totalTime > 1800) exitWith {0};
 private _barrelSurface = _barrelMass * 0.029427;
 private _convectionRate = 25;
 
-// increased convection rate if weapon in/under water
-if (((getPosASL ACE_player) select 2) < -1.5) then {
-    _convectionRate = 125;
-};
-
 TRACE_4("cooling",_temperature,_totalTime,_barrelMass,_barrelSurface);
 
 private _time = 0;

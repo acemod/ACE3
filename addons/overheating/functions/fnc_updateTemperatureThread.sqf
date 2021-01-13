@@ -19,7 +19,7 @@ private _currentWeapon = currentWeapon ACE_player;
 if ((_currentWeapon != "") && {_currentWeapon == primaryWeapon ACE_player || {_currentWeapon == handgunWeapon ACE_player}}) then {
     private _temperature = [ACE_player, _currentWeapon, 0] call FUNC(updateTemperature);
 
-    if (GVAR(cookoff)) then {
+    if (GVAR(cookoffCoef) > 0) then {
         [ACE_player, _currentWeapon, _temperature] call FUNC(updateAmmoTemperature);
     };
 };

@@ -56,7 +56,7 @@ if (hasInterface) then {
     };
 
     // Reset ammo temperature on reload
-    if (GVAR(cookoff)) then {
+    if (GVAR(cookoffCoef) > 0) then {
         ["CAManBase", "Reloaded", {
             params ["_unit", "_weapon"];
             _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];

@@ -6,6 +6,14 @@ class ACE_Settings {
         displayName = CSTRING(enabled_displayName);
         description = CSTRING(enabled_description);
     };
+    class GVAR(heatCoef) {
+        category = CSTRING(DisplayName);
+        typeName = "SCALAR";
+        value = 1;
+        displayName = CSTRING(heatCoef_displayName);
+        description = CSTRING(heatCoef_description);
+        sliderSettings[] = {0, 5, 1, 2};
+    };
     class GVAR(showParticleEffects) {
         category = CSTRING(DisplayName);
         typeName = "BOOL";
@@ -83,19 +91,12 @@ class ACE_Settings {
         description = CSTRING(unJamFailChance_description);
         sliderSettings[] = {0, 1, 0.1, 2};
     };
-    class GVAR(cookoff) {
-        category = CSTRING(DisplayName);
-        typeName = "BOOL";
-        value = 1;
-        displayName = CSTRING(cookoff_displayName);
-        description = CSTRING(cookoff_description);
-    };
     class GVAR(cookoffCoef) {
         category = CSTRING(DisplayName);
         typeName = "SCALAR";
         value = 1;
         displayName = CSTRING(cookoffCoef_displayName);
         description = CSTRING(cookoffCoef_description);
-        sliderSettings[] = {0.01, 5, 1, 2};
+        sliderSettings[] = {0, 5, 1, 2};
     };
 };
