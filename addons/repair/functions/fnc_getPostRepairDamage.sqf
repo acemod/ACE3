@@ -7,7 +7,7 @@
  * 0: Unit that does the repairing <OBJECT>
  *
  * Return Value:
- * 0: Rpair Damage Threshold <NUMBER>
+ * 0: Repair Damage Threshold <NUMBER>
  *
  * Example:
  * [unit] call ace_repair_fnc_getPostRepairDamage

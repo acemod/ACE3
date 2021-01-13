@@ -10,7 +10,7 @@
  * Is inside a repair facility <BOOL>
  *
  * Example:
- * [unit] call ace_repair_fnc_isInRepairFacility
+ * player call ace_repair_fnc_isInRepairFacility
  *
  * Public: Yes
  */
@@ -22,8 +22,13 @@ private _position = getPosASL _object;
 private _isInBuilding = false;
 
 private _checkObject = {
+    private _config = configFile >> "CfgVehicles" >> typeOf _x;
+    private _canRepair = getNumber (_config >> QGVAR(canRepair));
+    if (_canRepair == 0) then {
+        _canRepair = getNumber (_config >> "transportRepair");
+    };
     if (
-        _x getVariable ["ACE_isRepairFacility", getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(canRepair))] > 0
+        _x getVariable ["ACE_isRepairFacility", _canRepair > 0] in [1, true] // can be integer or boolean
         && {!(_x isKindOf "AllVehicles")} // check if it's not repair vehicle
         && {alive _x}
     ) exitWith {
