@@ -37,7 +37,6 @@ GVAR(bodyPartsToHitpoints) = [
     ["hitrightleg"]
 ];
 
-GVAR(structuralDamageToBodyPartCoeff) = [0.8, 0.33, 0.7, 0.7, 0.7, 0.7];
-
+GVAR(structuralDamageToBodyPartCoeff) = [0.8, 0.8, 0.7, 0.7, 0.7, 0.7];
 
 ADDON = true;

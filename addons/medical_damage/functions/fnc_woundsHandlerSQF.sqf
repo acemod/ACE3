@@ -47,10 +47,9 @@ _damageTypeInfo params ["_thresholds", "_isSelectionSpecific", "_woundTypes"];
 // Administration for open wounds and ids
 private _openWounds = GET_OPEN_WOUNDS(_unit);
 
-private _updateDamageEffects = true;
+private _updateDamageEffects = false;
 private _painLevel = 0;
 private _critialDamage = false;
-private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
 
 {
     _x params ["_bodyPartNToAdd", "_damage"];
@@ -97,9 +96,6 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
                 };
 
                 _oldInjury params ["_woundClassIDToAdd", "", "_injuryBleedingRate", "_injuryPain", "", "", "", "_causeLimping", "_causeFracture"];
-
-
-                _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
                 // More wounds means more likely to get nasty wound
                 private _countModifier = 1 + random(_i - 1);
@@ -197,7 +193,8 @@ _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
 [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
 
-_bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
+// Update visuals on each hit because setDamage 0 is called in applyDamage
+[_unit, true, true, true, true] call EFUNC(medical_engine,updateBodyPartVisuals);
 
 [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 

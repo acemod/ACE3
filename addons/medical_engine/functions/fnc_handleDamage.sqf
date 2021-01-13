@@ -37,7 +37,7 @@ if !(simulationEnabled _unit && isDamageAllowed _unit && {_unit getVariable [QEG
 if (
     isNull _source && 
     _ammo isEqualTo "" && 
-    isBurning _unit
+    (isBurning _unit || _newDamage < 1e-3)
 ) exitWith {    
     _oldDamage
 };
