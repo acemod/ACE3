@@ -8,9 +8,9 @@ ace:
   githubUrl: https://github.com/acemod/ACE3
   version:
     major: 3
-    minor: 14
-    patch: 3
-    build: 55
+    minor: 13
+    patch: 5
+    build: 57
 
 acex:
   githubUrl: https://github.com/acemod/ACEX
