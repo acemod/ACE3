@@ -4,8 +4,8 @@ class CfgAmmo {
     class B_12Gauge_Slug;
     class ACE_NonLethal_12Gauge_Rubber_Buck: B_12Gauge_Pellets_Submunition {
         submunitionAmmo = "ACE_NonLethal_12Gauge_Rubber_Buck_Deploy";
-		submunitionConeAngle = 0.8;
-		submunitionConeType[] = {"random",15};
+        submunitionConeAngle = 0.8;
+        submunitionConeType[] = {"random",15};
     };
     class ACE_NonLethal_12Gauge_Rubber_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy { //12 Gauge Non-Lethal rubber slug
         airFriction = -0.0085;
