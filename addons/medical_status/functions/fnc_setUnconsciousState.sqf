@@ -28,12 +28,8 @@ _unit setVariable [VAR_UNCON, _active, true];
 // Toggle unit ragdoll state
 [_unit, _active] call EFUNC(medical_engine,setUnconsciousAnim);
 
-// Change unit's side to civilian. We use switchToGroupSide over setCaptive to avoid handcuffed units
-// changing faction on reanimation.
-[_unit, _active, GROUP_SWITCH_ID, civilian] call EFUNC(common,switchToGroupSide);
-
-// Stop AI firing at unconscious units in most situations (global effect)
-[_unit, "setHidden", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
+// Stop enemy AI targeting the unit
+[_unit, "setCaptive", QGVAR(Unconscious), _active] call EFUNC(common,statusEffect_set);
 
 if (_active) then {
     // Don't bother setting this if not used
