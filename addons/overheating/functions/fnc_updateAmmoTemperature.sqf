@@ -69,6 +69,10 @@ if (_ammoTemperature > (GUNPOWDER_IGNITION_TEMP * GVAR(cookoffCoef))) then {
         {
             params ["_unit", "_weapon"];
             _unit forceWeaponFire [_weapon, currentWeaponMode _unit];
+            [
+                [localize LSTRING(WeaponCookedOff)],
+                true // allows the hint to be overwritten by another hint, such as a jam or another cookoff
+            ] call CBA_fnc_notify;
         },
         [_unit, _weapon],
         getNumber (configfile >> "CfgWeapons" >> _weapon >> _mode >> "reloadTime")

@@ -322,6 +322,9 @@
             <Chinesesimp>武器卡弹!</Chinesesimp>
             <Chinese>武器卡彈!</Chinese>
         </Key>
+        <Key ID="STR_ACE_Overheating_WeaponCookedOff">
+            <English>Weapon cooked off!</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_FailureToEject">
             <English>Failure to eject.</English>
         </Key>
