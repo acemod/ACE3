@@ -1,20 +1,49 @@
 class CfgAmmo {
+    class B_12Gauge_Pellets_Submunition;
+    class B_12Gauge_Pellets_Submunition_Deploy;
     class B_12Gauge_Slug;
-    class ACE_NonLethal_12Gauge_Slug: B_12Gauge_Slug {
-        airFriction = -0.01; //30m max effective range
+    class ACE_NonLethal_12Gauge_Rubber_Buck: B_12Gauge_Pellets_Submunition {
+        submunitionAmmo = "ACE_NonLethal_12Gauge_Rubber_Buck_Deploy";
+		submunitionConeAngle = 0.8;
+		submunitionConeType[] = {"random",15};
+    };
+    class ACE_NonLethal_12Gauge_Rubber_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy { //12 Gauge Non-Lethal rubber slug
+        airFriction = -0.0085;
         caliber = 0.2;
         deflecting = 90;
         deflectionSlowDown = 1;
-        hit = 2.0;
+        hit = 1.0;
+        timeToLive = 0.18; //450 m/s
         ACE_damageType = "punch";
         ACE_nonLethalType = "rubber";
     };
-    class ACE_NonLethal_12Gauge_Slug_XREP: ACE_NonLethal_12Gauge_Slug {
-        airFriction = -0.02; //20m max effective range
+    class ACE_NonLethal_12Gauge_M1012: B_12Gauge_Slug { //12 Gauge Non-Lethal rubber slug
+        airFriction = -0.0075; //30m max effective range
+        caliber = 0.8;
+        deflecting = 90;
+        deflectionSlowDown = 1;
+        hit = 3.0;
+        timeToLive = 0.19;
+        ACE_damageType = "punch";
+        ACE_nonLethalType = "rubber";
+    };
+    class ACE_NonLethal_12Gauge_XM1116: B_12Gauge_Slug { //12 Gauge Non-Lethal rubber slug
+        airFriction = -0.0069; //Longer range than M1012
+        caliber = 0.8;
+        deflecting = 90;
+        deflectionSlowDown = 1;
+        hit = 3.0;
+        timeToLive = 0.38;
+        ACE_damageType = "punch";
+        ACE_nonLethalType = "rubber";
+    };
+    class ACE_NonLethal_12Gauge_XREP_G1: B_12Gauge_Slug {
+        airFriction = -0.0084; //20m max effective range
         caliber = 0.2;
         deflecting = 0;
         deflectionSlowDown = 0;
-        hit = 0.5;
+        hit = 2.0;
+        timeToLive = 0.55;
         hitarmor[] = {"soundDefault1", 1};
         hitbuilding[] = {"soundDefault1", 1};
         hitconcrete[] = {"soundDefault1", 1};
@@ -35,5 +64,9 @@ class CfgAmmo {
         soundHit[] = {QPATHTOF(sounds\StunGun_01.wss), 4, 1, 75};
         ACE_damageType = "punch";
         ACE_nonLethalType = "taser";
+    };
+    class ACE_NonLethal_12Gauge_XREP_G2: ACE_NonLethal_12Gauge_Slug_XREP_G1 {
+        airFriction = -0.00805; //20m max effective range
+        timeToLive = 0.58;
     };
 };

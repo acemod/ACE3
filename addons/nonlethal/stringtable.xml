@@ -60,23 +60,50 @@
             <English>Any unit with courage below this value will surrender automatically</English>
         </Key>
         <!--Magazines-->
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_Name">
-            <English>12 Gauge 2Rnd Rubber Slug</English>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Rubber_Buck_Name">
+            <English>12 Gauge 2Rnd Rubber Buckshot</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_NameShort">
-            <English>Rubber Slug</English>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Rubber_Buck_NameShort">
+            <English>Rubber Buck</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_Description">
-            <English>Non-Lethal Single Rubber Slug</English>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Rubber_Buck_Description">
+            <English>Non-Lethal 15 Pellet Rubber Buckshot</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_Name">
-            <English>12 Gauge 2Rnd Taser XREP</English>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_M1012_Name">
+            <English>12 Gauge 2Rnd M1012 Rubber Slug</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_NameShort">
-            <English>Taser XREP</English>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_M1012_NameShort">
+            <English>M1012</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_Description">
-            <English>Non-Lethal XREP Taser Shot</English>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_M1012_Description">
+            <English>Non-Lethal M1012 Rubber Slug</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XM1116_Name">
+            <English>12 Gauge 2Rnd XM1116 Rubber Slug</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XM1116_NameShort">
+            <English>XM1116</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XM1116_Description">
+            <English>Non-Lethal XM1116 Rubber Slug</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G1_Name">
+            <English>12 Gauge 2Rnd Taser XREP G1</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G1_NameShort">
+            <English>XREP G1</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G1_Description">
+            <English>Non-Lethal First Generation Taser XREP Shot</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G2_Name">
+            <English>12 Gauge 2Rnd Taser XREP G2</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G2_NameShort">
+            <English>XREP G2</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G2_Description">
+            <English>Non-Lethal Second Generation Taser XREP Shot</English>
         </Key>
     </Package>
 </Project>
