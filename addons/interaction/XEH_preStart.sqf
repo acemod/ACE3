@@ -1,3 +1,27 @@
 #include "script_component.hpp"
 
 #include "XEH_PREP.hpp"
+
+if !hasInterface exitWith {};
+
+private _replaceTerrainClasses = QUOTE( \
+    getNumber (_x >> 'scope') == 2 \
+    && {getNumber (_x >> QQGVAR(replaceTerrainObject)) > 0} \
+) configClasses (configFile >> "CfgVehicles");
+
+private _cacheReplaceTerrainModels = [];
+private _cacheReplaceTerrainClasses = [];
+{
+    private _model = toLower getText (_x >> "model");
+    if (_model select [0, 1] == "\") then {
+        _model = _model select [1];
+    };
+    if ((_model select [count _model - 4]) != ".p3d") then {
+        _model = _model + ".p3d"
+    };
+    if (-1 < _cacheReplaceTerrainModels pushBackUnique _model) then {
+        _cacheReplaceTerrainClasses pushBack configName _x;
+    };
+} forEach _replaceTerrainClasses;
+
+uiNamespace setVariable [QGVAR(cacheReplaceTerrainClasses), compileFinal str [_cacheReplaceTerrainModels, _cacheReplaceTerrainClasses]];

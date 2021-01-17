@@ -77,7 +77,24 @@ ACE_Modifier = 0;
     };
 }] call CBA_fnc_addEventHandler;
 
+if (isServer) then {
+    [QGVAR(replaceTerrainObject), FUNC(replaceTerrainObject)] call CBA_fnc_addEventHandler;
+};
+
 if (!hasInterface) exitWith {};
+
+[QEGVAR(interact_menu,renderNearbyActions), {
+    if !GVAR(interactWithTerrainObjects) exitWith {};
+    {
+        if (!isObjectHidden _x && {_x getVariable [QGVAR(terrainObjectNotReplaced), true]} && {typeOf _x isEqualTo ""}) then {
+            private _model = getModelInfo _x select 1;
+            private _class = GVAR(replaceTerrainClasses) getVariable [_model, ""];
+            if (_class isEqualTo "") exitWith {};
+            _x setVariable [QGVAR(terrainObjectNotReplaced), false];
+            [QGVAR(replaceTerrainObject), [_x, _class]] call CBA_fnc_serverEvent;
+        };
+    } forEach nearestTerrainObjects [ACE_player, [], 5, false];
+}] call CBA_fnc_addEventHandler;
 
 GVAR(isOpeningDoor) = false;
 

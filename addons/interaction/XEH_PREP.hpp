@@ -44,4 +44,6 @@ PREP(openDoor);
 PREP(canPush);
 PREP(push);
 
+// misc
 PREP(canFlip);
+PREP(replaceTerrainObject);
