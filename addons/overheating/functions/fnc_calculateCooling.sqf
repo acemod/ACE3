@@ -37,7 +37,7 @@ if (ACE_player call EFUNC(common,isSwimming)) then {
     _convectionRate = 500;
 } else {
     _convectionRate = _convectionRate * linearConversion [0,1,rain,1,5,true];
-}
+};
 
 TRACE_4("cooling",_temperature,_totalTime,_barrelMass,_barrelSurface);
 
