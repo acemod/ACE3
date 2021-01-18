@@ -43,11 +43,11 @@ class CfgWeapons {
     class Rifle_Long_Base_F ;
 
     class MySniper : Rifle_Long_Base_F {
-        ACE_clearclosedBolt = 1; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_closedBolt = 1; // Closed bolt, can cook off from barrel heat.
     };
 
     class MyMG : Rifle_Long_Base_F {
-        ACE_clearclosedBolt = 0; // Open bolt, can only cook off on failure to fire type jams.
+        ace_overheating_closedBolt = 0; // Open bolt, can only cook off on failure to fire type jams.
     };
 };
 ```
