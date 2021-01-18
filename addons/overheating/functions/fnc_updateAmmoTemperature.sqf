@@ -42,12 +42,12 @@ private _ammoTemperature = _unit getVariable [_ammoTempVarName, 0];
 if (_ammoTemperature < _barrelTemperature) then {
     // this is functional and feels ok, but someone please do better heat transfer math here, my head hurts.
     private _temperatureDifference = _barrelTemperature - _ammoTemperature;
-    _ammoTemperature = _ammoTemperature + (1 max (_temperatureDifference / 3.5 - 40));
+    _ammoTemperature = _ammoTemperature + (1 max ((_temperatureDifference / 2.5) - 75));
 } else {
     _ammoTemperature = _barrelTemperature;
 };
 
-// cook off and reset temp for next round
+// check for cook off
 if (_ammoTemperature > (GUNPOWDER_IGNITION_TEMP * GVAR(cookoffCoef))) then {
 
     // a weapon with a failure to fire or dud type jam will be unjammed from cooking off
@@ -64,20 +64,40 @@ if (_ammoTemperature > (GUNPOWDER_IGNITION_TEMP * GVAR(cookoffCoef))) then {
         };
     };
 
-    // delay cookoff to ensure any previous animation from a firing event is finished
+    // get valid mode and muzzle for the main weapon, we don't want the cookoff to come from an underbarrel launcher
+    ([_weapon] call FUNC(getWeaponData)) params ["", "", "", "_modes", "_muzzle", "_reloadTime"];
+
+    // get an appropriate firemode and muzzle, cache the current muzzle
+    // trying to match firemodes and switching back to the cached muzzle will hide the change from the player and prevent unexpected mode/muzzle changes (going from full auto to semi auto, or from underbarrel GL to rifle for example)
+    private _muzzleCache = currentMuzzle _unit;
+    private _mode = currentWeaponMode _unit;
+    if !(_mode in _modes) then {
+        _mode = _modes select 0;
+    };
+
+    // delay cookoff to ensure any previous animation from a fired event is finished
     [
         {
-            params ["_unit", "_weapon"];
-            _unit forceWeaponFire [_weapon, currentWeaponMode _unit];
+            params ["_unit", "_muzzleCache", "_mode", "_muzzle"];
+
+            // fire the cookoff 
+            _unit forceWeaponFire [_muzzle, _mode];
+
+            // switch back to the cached muzzle if required
+            if (_muzzle != _muzzleCache) then {
+                _unit selectWeapon _muzzleCache;
+            };
+
             [
                 [localize LSTRING(WeaponCookedOff)],
                 true // allows the hint to be overwritten by another hint, such as a jam or another cookoff
             ] call CBA_fnc_notify;
         },
-        [_unit, _weapon],
-        getNumber (configfile >> "CfgWeapons" >> _weapon >> _mode >> "reloadTime")
+        [_unit, _muzzleCache, _mode, _muzzle],
+        _reloadTime
     ] call CBA_fnc_waitAndExecute;
 
+    // if the cookoff happened then the next round should start at 0
     _ammoTemperature = 0;
 };
 

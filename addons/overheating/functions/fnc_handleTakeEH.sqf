@@ -18,8 +18,6 @@
  * Public: No
  */
 
-if !(GVAR(unJamOnReload)) exitWith {};
-
 params ["_unit", "_container", "_item"];
 TRACE_3("params",_unit,_container,_item);
 
@@ -28,7 +26,12 @@ if ((_unit == ACE_player)
     && {_item == currentMagazine _unit}
 ) then { //Todo: should this be any valid magazine for any jammed gun?
 
-    TRACE_1("clearing jam",currentWeapon _unit);
-    [_unit, currentWeapon _unit, true] call FUNC(clearJam)
+    if (GVAR(unJamOnReload)) then {
+        TRACE_1("clearing jam",currentWeapon _unit);
+        [_unit, currentWeapon _unit, true] call FUNC(clearJam);
+    };
 
+    if (GVAR(cookoffCoef) > 0) then {
+        _unit setVariable [format [QGVAR(%1_ammoTemp), currentWeapon _unit], 0];
+    };
 };

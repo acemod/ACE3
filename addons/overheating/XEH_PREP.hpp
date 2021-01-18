@@ -18,6 +18,7 @@ PREP(swapBarrel);
 PREP(swapBarrelAssistant);
 PREP(swapBarrelCallback);
 PREP(updateAmmoTemperature);
+PREP(updateAmmoTemperatureThread);
 PREP(updateSpareBarrelsTemperaturesThread);
 PREP(updateTemperature);
 PREP(updateTemperatureThread);

@@ -15,12 +15,19 @@
  * Public: No
  */
 
-private _currentWeapon = currentWeapon ACE_player;
-if ((_currentWeapon != "") && {_currentWeapon == primaryWeapon ACE_player || {_currentWeapon == handgunWeapon ACE_player}}) then {
-    private _temperature = [ACE_player, _currentWeapon, 0] call FUNC(updateTemperature);
-
-    if (GVAR(cookoffCoef) > 0) then {
-        [ACE_player, _currentWeapon, _temperature] call FUNC(updateAmmoTemperature);
+if (ACE_player call EFUNC(common,isSwimming)) then { // cool off both weapons while swimming because currentWeapon == ""
+    private _primaryWeapon = primaryWeapon ACE_player;
+    private _handgunWeapon = handgunWeapon ACE_player;
+    if (_primaryWeapon != "") then {
+        [ACE_player, _primaryWeapon, 0] call FUNC(updateTemperature);
+    };
+    if (_handgunWeapon != "") then {
+        [ACE_player, _handgunWeapon, 0] call FUNC(updateTemperature);
+    };
+} else {
+    private _currentWeapon = currentWeapon ACE_player;
+    if ((_currentWeapon != "") && {_currentWeapon == primaryWeapon ACE_player || {_currentWeapon == handgunWeapon ACE_player}}) then {
+        [ACE_player, _currentWeapon, 0] call FUNC(updateTemperature);
     };
 };
 

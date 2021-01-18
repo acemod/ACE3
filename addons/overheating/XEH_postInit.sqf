@@ -45,8 +45,10 @@ if (hasInterface) then {
     GVAR(cacheAmmoData) = call CBA_fnc_createNamespace;
     GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
 
-    //Add Take EH (for reload)
-    ["CAManBase", "Take", {_this call FUNC(handleTakeEH);}] call CBA_fnc_addClassEventHandler;
+    //Add Take EH if required
+    if (GVAR(unJamOnReload) || {GVAR(cookoffCoef) > 0}) then {
+        ["CAManBase", "Take", {_this call FUNC(handleTakeEH);}] call CBA_fnc_addClassEventHandler;
+    };
 
     // Register fire event handler
     ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
@@ -55,23 +57,21 @@ if (hasInterface) then {
         ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
     };
 
-    // Reset ammo temperature on reload
-    if (GVAR(cookoffCoef) > 0) then {
-        ["CAManBase", "Reloaded", {
-            params ["_unit", "_weapon"];
-            _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];
-        }] call CBA_fnc_addClassEventHandler;
-
-        ["CAManBase", "Take", {
-            params ["_unit"];
-            // primary and handgun both have to be reset because there isn't an easy way to know which weapon had a magazine dragged onto it.
-            _unit setVariable [format [QGVAR(%1_ammoTemp), primaryWeapon _unit], 0];
-            _unit setVariable [format [QGVAR(%1_ammoTemp), handgunWeapon _unit], 0];
-        }] call CBA_fnc_addClassEventHandler;
-    };
-
     // Schedule cool down calculation of player weapons at (infrequent) regular intervals
     [] call FUNC(updateTemperatureThread);
+
+    //Add event handlers and start ammo heating loop for cookoff
+    if (GVAR(cookoffCoef) > 0) then {
+        [] call FUNC(updateAmmoTemperatureThread);
+
+        // Reset ammo temperature on reload, unless the reload is a second muzzle.
+        ["CAManBase", "Reloaded", {
+            params ["_unit", "_weapon", "_muzzle"];
+            if (_muzzle == _weapon) then {
+                _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];
+            };
+        }] call CBA_fnc_addClassEventHandler;
+    };
 
     // Install event handler to display temp when a barrel was swapped
     [QGVAR(showWeaponTemperature), DFUNC(displayTemperature)] call CBA_fnc_addEventHandler;

@@ -32,6 +32,13 @@ if (_totalTime > 1800) exitWith {0};
 private _barrelSurface = _barrelMass * 0.029427;
 private _convectionRate = 25;
 
+//provide additional cooling if swimming or raining
+if (ACE_player call EFUNC(common,isSwimming)) then {
+    _convectionRate = 500;
+} else {
+    _convectionRate = _convectionRate * linearConversion [0,1,rain,1,5,true];
+}
+
 TRACE_4("cooling",_temperature,_totalTime,_barrelMass,_barrelSurface);
 
 private _time = 0;
