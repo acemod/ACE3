@@ -42,7 +42,7 @@ private _ammoTemperature = _unit getVariable [_ammoTempVarName, 0];
 if (_ammoTemperature < _barrelTemperature) then {
     // this is functional and feels ok, but someone please do better heat transfer math here, my head hurts.
     private _temperatureDifference = _barrelTemperature - _ammoTemperature;
-    _ammoTemperature = _ammoTemperature + (1 max ((_temperatureDifference / 2.5) - 75));
+    _ammoTemperature = _ammoTemperature + (1 max ((_temperatureDifference / 2.75) - 100));
 } else {
     _ammoTemperature = _barrelTemperature;
 };
