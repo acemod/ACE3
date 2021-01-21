@@ -103,7 +103,8 @@ class CfgWeapons {
     class R3F_HK416M_M203: R3F_HK416M {
         muzzles[] = {"this","Lance_Grenades"};
     };
-    class R3F_HK416S_HG: R3F_HK416M {
+    class R3F_HK416M_HG: R3F_HK416M {};
+    class R3F_HK416S_HG: R3F_HK416M_HG {
         ACE_barrelLength = 279.4;
     };
     class R3F_SIG551: Rifle_Base_F { // http://www.sigsauer.swiss
