@@ -117,6 +117,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 4.21816;
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 146;
+        initSpeed = -0.94; // 400*0.94= 376 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C), R3F default value 0
         muzzles[] = {"this"};
     };
     class R3F_MP5A5: R3F_MP5SD { // https://www.heckler-koch.com/en/products/military/submachine-guns/mp5/mp5/overview.html
