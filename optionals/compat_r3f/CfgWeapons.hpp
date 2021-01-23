@@ -122,6 +122,7 @@ class CfgWeapons {
     };
     class R3F_MP5A5: R3F_MP5SD { // https://www.heckler-koch.com/en/products/military/submachine-guns/mp5/mp5/overview.html
         ACE_barrelLength = 225;
+        initSpeed = -1; // 400 m/s according with the ACE_ammoTempMuzzleVelocityShifts at the normal conditions (15°C), R3F default value 0
         muzzles[] = {"this"};
     };
     class R3F_M4S90: Rifle_Base_F { // https://www.benelli.it
