@@ -1,5 +1,20 @@
 class CfgActions {
     class None;
+    class SwitchToUAVDriver: None {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class SwitchToUAVGunner: None {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class SwitchWeapon: None {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
     class ActivateBreathingBomb: None {
         show = 0;
         showIn3D = 0;
@@ -35,12 +50,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class APUOff: None {
+    class APUOn: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class APUOn: None {
+    class APUOff: APUOn {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -60,7 +75,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class AutoHoverCancel: None {
+    class AutoHoverCancel: AutoHover {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -70,12 +85,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class BatteriesOff: None {
+    class BatteriesOn: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class BatteriesOn: None {
+    class BatteriesOff: BatteriesOn {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -115,12 +130,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class CloseLeftVehicleDisplay: None {
+    class CloseRightVehicleDisplay: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class CloseRightVehicleDisplay: None {
+    class CloseLeftVehicleDisplay: CloseRightVehicleDisplay {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -130,7 +145,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class CollisionLightOn: None {
+    class CollisionLightOn: CollisionLightOff {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -305,7 +320,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class HandGunOffStand: None {
+    class HandGunOffStand: HandGunOff {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -315,7 +330,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class HandGunOnStand: None {
+    class HandGunOnStand: HandGunOn {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -380,7 +395,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class HideWeapon: None {
+    class HideWeapon: SwitchWeapon {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -440,12 +455,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class LandGearUp: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class LightOff: None {
+    class LandGearUp: LandGear {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -455,17 +465,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class ListLeftVehicleDisplay: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class ListPrevLeftVehicleDisplay: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class ListPrevRightVehicleDisplay: None {
+    class LightOff: LightOn {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -475,7 +475,17 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class LoadEmptyMagazine: None {
+    class ListLeftVehicleDisplay: ListRightVehicleDisplay {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class ListPrevRightVehicleDisplay: None {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class ListPrevLeftVehicleDisplay: ListPrevRightVehicleDisplay {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -485,7 +495,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class LoadOtherMagazine: None {
+    class LoadEmptyMagazine: LoadMagazine {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class LoadOtherMagazine: LoadMagazine {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -515,7 +530,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class MarkWeapon: None {
+    class MarkWeapon: MarkEntity {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -555,7 +570,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class MoveToPilot: None {
+    class MoveToPilot: MoveToDriver {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -565,12 +580,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class NextModeLeftVehicleDisplay: None {
+    class NextModeRightVehicleDisplay: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class NextModeRightVehicleDisplay: None {
+    class NextModeLeftVehicleDisplay: NextModeRightVehicleDisplay {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -580,7 +595,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class NVGogglesOff: None {
+    class NVGogglesOff: NVGoggles {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -655,12 +670,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class PutMagazine: None {
+    class PutMagazine: DropMagazine {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class PutWeapon: None {
+    class PutWeapon: DropWeapon {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -715,12 +730,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class SearchLightOff: None {
+    class SearchLightOn: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class SearchLightOn: None {
+    class SearchLightOff: SearchLightOn {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -740,21 +755,6 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class StarterOff1: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class StarterOff2: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class StarterOff3: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
     class StarterOn1: None {
         show = 0;
         showIn3D = 0;
@@ -770,7 +770,22 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class StartTimer: None {
+    class StarterOff1: StarterOn1 {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class StarterOff2: StarterOn2 {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class StarterOff3: StarterOn3 {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class StartTimer: SetTimer {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -795,7 +810,7 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class SwitchMagazine: None {
+    class SwitchMagazine: SwitchWeapon {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -810,12 +825,22 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class TakeDropMagazine: None {
+    class TakeMagazine: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class TakeDropWeapon: None {
+    class TakeDropMagazine: TakeMagazine {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class TakeWeapon: None {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class TakeDropWeapon: TakeWeapon {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -835,22 +860,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class TakeMagazine: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
     class TakeMine: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
     class TakeVehicleControl: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class TakeWeapon: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -875,36 +890,6 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class ThrottleFull1: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class ThrottleFull2: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class ThrottleFull3: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class ThrottleIdle1: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class ThrottleIdle2: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
-    class ThrottleIdle3: None {
-        show = 0;
-        showIn3D = 0;
-        showWindow = 0;
-    };
     class ThrottleOff1: None {
         show = 0;
         showIn3D = 0;
@@ -916,6 +901,36 @@ class CfgActions {
         showWindow = 0;
     };
     class ThrottleOff3: None {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class ThrottleFull1: ThrottleOff1 {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class ThrottleFull2: ThrottleOff2 {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class ThrottleFull3: ThrottleOff3 {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class ThrottleIdle1: ThrottleOff1 {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class ThrottleIdle2: ThrottleOff2 {
+        show = 0;
+        showIn3D = 0;
+        showWindow = 0;
+    };
+    class ThrottleIdle3: ThrottleOff3 {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -1070,12 +1085,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class VTOLVectoring: None {
+    class VTOLVectoring: AutoHover {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class VTOLVectoringCancel: None {
+    class VTOLVectoringCancel: AutoHover {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
@@ -1095,12 +1110,12 @@ class CfgActions {
         showIn3D = 0;
         showWindow = 0;
     };
-    class WheelsBreakOff: None {
+    class WheelsBreakOn: None {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
     };
-    class WheelsBreakOn: None {
+    class WheelsBreakOff: WheelsBreakOn {
         show = 0;
         showIn3D = 0;
         showWindow = 0;
