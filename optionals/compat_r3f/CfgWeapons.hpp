@@ -497,11 +497,11 @@ class CfgWeapons {
 class ACE_ATragMX_Presets {
     class R3F_PGM_Hecate_II {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"R3F PGM M33", 780, 100, 0.0845596, -0.00086, 6.35, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15, 761},{0, 768},{10, 775},{15, 780},{25, 794},{30, 803},{35, 814}}, {{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0}}};
+        preset[] = {"R3F PGM M33", 780, 100, 0.0845596, -0.00086, 6.35, 0, 2, 10, 120, 0, 0, 41.92, 12.18, 38.10, 0.670, 1, "ASM", {{-15, 761},{0, 768},{10, 775},{15, 780},{25, 794},{30, 803},{35, 814}}, {{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0}}};
     };
     class R3F_M107 {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"R3F M107 M33", 850, 100, 0.0841653, -0.00061813, 7.62, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM", {{-15, 831},{0, 838},{10, 845},{15, 850},{25, 864},{30, 873},{35, 884}}, {{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0}}};
+        preset[] = {"R3F M107 M33", 850, 100, 0.0841653, -0.00061813, 7.62, 0, 2, 10, 120, 0, 0, 41.92, 12.19, 38.10, 0.670, 1, "ASM", {{-15, 831},{0, 838},{10, 845},{15, 850},{25, 864},{30, 873},{35, 884}}, {{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0},{0, 0}}};
     };
     class R3F_TAC50 {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
@@ -509,10 +509,10 @@ class ACE_ATragMX_Presets {
     };
     class R3F_FRF2 {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"R3F FRF2 M993", 850, 100, 0.0783702, -0.00095, 6.35, 0, 2, 10, 120, 0, 0, 8.23, 7.82, 29.46, 0.359, 1, "ICAO", {{-15, 831},{0, 838},{10, 845},{15, 850},{25, 864},{30, 873},{35, 884}}, {{0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}}};
+        preset[] = {"R3F FRF2 M993", 850, 100, 0.0783702, -0.00095, 6.35, 0, 2, 10, 120, 0, 0, 8.23, 7.35, 29.46, 0.359, 1, "ICAO", {{-15, 831},{0, 838},{10, 845},{15, 850},{25, 864},{30, 873},{35, 884}}, {{0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}}};
     };
     class R3F_HK417L {
         // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation
-        preset[] = {"R3F HK417L M80", 820, 100, 0.0884448, -0.00095, 7.62, 0, 2, 10, 120, 0, 0, 9.461, 7.82, 27.94, 0.398, 1, "ICAO", {{-15, 801},{0, 808},{10, 815},{15, 820},{25, 834},{30, 843},{35, 854}}, {{200, 0.398}, {400, 0.398}, {600, 0.398}, {800, 0.39}, {1000, 0.383}, {1200, 0.379}, {1400, 0.378}}};
+        preset[] = {"R3F HK417L M80", 820, 100, 0.0884758, -0.00095, 7.62, 0, 2, 10, 120, 0, 0, 9.46, 8.02, 27.94, 0.394, 1, "ICAO", {{-15, 801},{0, 808},{10, 815},{15, 820},{25, 834},{30, 843},{35, 854}}, {{0, 0.394}, {700, 0.394}, {800, 0.391}, {900, 0.386}, {1000, 0.383}, {1100, 0.381}, {1300, 0.379}}};
     };
 };
