@@ -16,6 +16,6 @@
  * Public: No
  */
 
- params ["_vehicle", "_pylonIndex"];
+params ["_vehicle", "_pylonIndex"];
 
- getAllPylonsInfo _vehicle param [_pylonIndex, []] param [2, [-1]]
+getAllPylonsInfo _vehicle param [_pylonIndex, []] param [2, [-1]]
