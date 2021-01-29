@@ -165,6 +165,9 @@
 #define IDC_ATTRIBUTE_IMPORT_BUTTON 8109
 #define IDC_ATTRIBUTE_ADD_COMPATIBLE 8110
 
+// Indexes of virtual items array
+#define IDX_VIRT_WEAPONS 0
+
 #define SYMBOL_ITEM_NONE "−"
 #define SYMBOL_ITEM_REMOVE "×"
 #define SYMBOL_ITEM_VIRTUAL "∞"

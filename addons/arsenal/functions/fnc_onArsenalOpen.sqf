@@ -64,7 +64,7 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 for "_index" from 0 to 10 do {
     switch (_index) do {
         // primary, secondary, handgun weapons
-        case 0: {
+        case IDX_VIRT_WEAPONS: {
             private _array = LIST_DEFAULTS select _index;
 
             if !((_array select 0) isEqualTo "") then {

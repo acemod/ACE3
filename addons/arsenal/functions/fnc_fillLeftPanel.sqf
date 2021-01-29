@@ -51,7 +51,7 @@ switch true do {
 
         {
             ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-        } foreach ((GVAR(virtualItems) select 0) select ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find _ctrlIDC));
+        } foreach ((GVAR(virtualItems) select IDX_VIRT_WEAPONS) select ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find _ctrlIDC));
     };
 
     case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {

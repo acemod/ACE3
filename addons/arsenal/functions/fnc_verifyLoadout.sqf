@@ -19,7 +19,7 @@ private _weaponCfg = configFile >> "CfgWeapons";
 private _magCfg = configFile >> "CfgMagazines";
 private _vehcCfg = configFile >> "CfgVehicles";
 private _glassesCfg = configFile >> "CfgGlasses";
-private _weaponsArray = GVAR(virtualItems) select 0;
+private _weaponsArray = GVAR(virtualItems) select IDX_VIRT_WEAPONS;
 private _accsArray = GVAR(virtualItems) select 1;
 
 private _nullItemsAmount = 0;
