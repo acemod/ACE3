@@ -61,7 +61,7 @@ private _configGlasses = configFile >> "CfgGlasses";
         // acc
         case (
                 isClass (_configCfgWeapons >> _x) &&
-                {!(_x in ((GVAR(virtualItems) select 1) select 0))} &&
+                {!(_x in ((GVAR(virtualItems) select IDX_VIRT_ATTACHEMENTS) select 0))} &&
                 {_x in ((_itemsCache select 1) select 0)}
             ): {
             ((GVAR(virtualItems) select 22) select 0) pushBackUnique _x;
@@ -70,7 +70,7 @@ private _configGlasses = configFile >> "CfgGlasses";
         // acc
         case (
                 isClass (_configCfgWeapons >> _x) &&
-                {!(_x in ((GVAR(virtualItems) select 1) select 1))} &&
+                {!(_x in ((GVAR(virtualItems) select IDX_VIRT_ATTACHEMENTS) select 1))} &&
                 {_x in ((_itemsCache select 1) select 1)}
             ): {
             ((GVAR(virtualItems) select 22) select 1) pushBackUnique _x;
@@ -79,7 +79,7 @@ private _configGlasses = configFile >> "CfgGlasses";
         // acc
         case (
                 isClass (_configCfgWeapons >> _x) &&
-                {!(_x in ((GVAR(virtualItems) select 1) select 2))} &&
+                {!(_x in ((GVAR(virtualItems) select IDX_VIRT_ATTACHEMENTS) select 2))} &&
                 {_x in ((_itemsCache select 1) select 2)}
             ): {
             ((GVAR(virtualItems) select 22) select 2) pushBackUnique _x;
@@ -87,7 +87,7 @@ private _configGlasses = configFile >> "CfgGlasses";
         // acc
         case (
                 isClass (_configCfgWeapons >> _x) &&
-                {!(_x in ((GVAR(virtualItems) select 1) select 3))} &&
+                {!(_x in ((GVAR(virtualItems) select IDX_VIRT_ATTACHEMENTS) select 3))} &&
                 {_x in ((_itemsCache select 1) select 3)}
             ): {
             ((GVAR(virtualItems) select 22) select 3) pushBackUnique _x;

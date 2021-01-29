@@ -167,6 +167,7 @@
 
 // Indexes of virtual items array
 #define IDX_VIRT_WEAPONS 0
+#define IDX_VIRT_ATTACHEMENTS 1
 
 #define SYMBOL_ITEM_NONE "−"
 #define SYMBOL_ITEM_REMOVE "×"
