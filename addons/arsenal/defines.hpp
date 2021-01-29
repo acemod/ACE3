@@ -170,6 +170,7 @@
 #define IDX_VIRT_ATTACHEMENTS 1
 
 #define IDX_VIRT_ITEMS_ALL 2
+
 #define IDX_VIRT_HEADGEAR 3
 
 #define SYMBOL_ITEM_NONE "−"

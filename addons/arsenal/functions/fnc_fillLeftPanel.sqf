@@ -96,7 +96,7 @@ switch true do {
             case IDC_buttonHeadgear: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 3);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_HEADGEAR);
             };
             case IDC_buttonGoggles : {
                 {

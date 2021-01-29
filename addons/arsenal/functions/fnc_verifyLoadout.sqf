@@ -173,7 +173,7 @@ for "_dataIndex" from 0 to 9 do {
 
                 if (isClass (_weaponCfg >> _item)) then {
 
-                    if !(_item in (GVAR(virtualItems) select 3)) then {
+                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_HEADGEAR)) then {
 
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
