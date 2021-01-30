@@ -175,6 +175,7 @@
 #define IDX_VIRT_UNIFORM 4
 #define IDX_VIRT_VEST 5
 #define IDX_VIRT_BACKPACK 6
+#define IDX_VIRT_GOGGLES 7
 
 #define SYMBOL_ITEM_NONE "−"
 #define SYMBOL_ITEM_REMOVE "×"

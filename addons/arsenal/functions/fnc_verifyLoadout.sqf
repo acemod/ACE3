@@ -195,7 +195,7 @@ for "_dataIndex" from 0 to 9 do {
 
                 if (isClass (_glassesCfg >> _item)) then {
 
-                    if !(_item in (GVAR(virtualItems) select 7)) then {
+                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_GOGGLES)) then {
 
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];

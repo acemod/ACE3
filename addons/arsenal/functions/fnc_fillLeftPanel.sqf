@@ -101,7 +101,7 @@ switch true do {
             case IDC_buttonGoggles : {
                 {
                     ["CfgGlasses", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 7);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_GOGGLES);
             };
             case IDC_buttonNVG : {
                 {
