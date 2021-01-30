@@ -77,7 +77,7 @@ switch true do {
             case IDC_buttonBackpack : {
                 {
                     ["CfgVehicles", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 6);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_BACKPACK);
             };
         };
     };
