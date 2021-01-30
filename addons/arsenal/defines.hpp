@@ -172,6 +172,7 @@
 #define IDX_VIRT_ITEMS_ALL 2
 
 #define IDX_VIRT_HEADGEAR 3
+#define IDX_VIRT_UNIFORM 4
 
 #define SYMBOL_ITEM_NONE "−"
 #define SYMBOL_ITEM_REMOVE "×"

@@ -65,7 +65,7 @@ switch true do {
             case IDC_buttonUniform : {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 4);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_UNIFORM);
             };
 
             case IDC_buttonVest : {
