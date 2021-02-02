@@ -30,6 +30,6 @@
     "SLIDER",
     [LSTRING(painUnconsciousChance_DisplayName), LSTRING(painUnconsciousChance_Description)],
     ELSTRING(medical,Category),
-    [0, 1, 0.1, 2],
+    [0, 1, 0.1, 2, true],
     true
 ] call CBA_settings_fnc_init;
