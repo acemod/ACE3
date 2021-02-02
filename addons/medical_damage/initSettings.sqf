@@ -28,7 +28,7 @@
 [
     QEGVAR(medical,painUnconsciousChance),
     "SLIDER",
-    [LSTRING(painUnconsciousChance_DisplayName), LSTRING(painUnconsciousChance_Description)],
+    [LSTRING(PainUnconsciousChance_DisplayName), LSTRING(PainUnconsciousChance_Description)],
     ELSTRING(medical,Category),
     [0, 1, 0.1, 2, true],
     true
