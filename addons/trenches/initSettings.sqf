@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 // Trenches dig/remove durations
 [
     QGVAR(smallEnvelopeDigDuration), 

@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 ["ACE3 Equipment", QGVAR(KestrelDialogKey), localize LSTRING(KestrelDialogKey),
 {
     // Conditions: canInteract

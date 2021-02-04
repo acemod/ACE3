@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 ["ACE3 Equipment", QGVAR(AzimuthKey), localize LSTRING(AzimuthKey), {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};

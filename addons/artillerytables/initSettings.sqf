@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 // CBA Settings [ADDON: ace_artillerytables]:
 
 private _categoryName = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"], LLSTRING(rangetable_displayName)];

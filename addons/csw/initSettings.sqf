@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 // CBA Settings [ADDON: ace_csw]:
 
 private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];

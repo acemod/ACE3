@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 // CBA Settings [ADDON: ace_fastroping]:
 
 private _category = ["ACE Uncategorized", LLSTRING(setting_categoryMenu_displayName)];

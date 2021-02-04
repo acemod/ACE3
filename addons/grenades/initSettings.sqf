@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 [
     QGVAR(convertExplosives), "CHECKBOX",
     [LSTRING(convertExplosives_DisplayName), LSTRING(convertExplosives_Description)],

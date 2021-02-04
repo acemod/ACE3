@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 [
     QGVAR(selectorColor),
     "COLOR",

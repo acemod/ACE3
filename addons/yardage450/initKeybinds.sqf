@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 
 ["ACE3 Equipment", QGVAR(DistanceKey), LLSTRING(PowerButtonKey),
 {

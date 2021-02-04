@@ -1,3 +1,4 @@
+//pragma SKIP_COMPILE
 [
     QEGVAR(medical,fatalDamageSource),
     "LIST",
