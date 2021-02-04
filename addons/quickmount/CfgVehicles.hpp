@@ -51,8 +51,7 @@ class CfgVehicles {
             class GVAR(ChangeSeat) { \
                 displayName = CSTRING(ChangeSeat); \
                 condition = QUOTE(call DFUNC(canShowFreeSeats)); \
-                statement = ""; \
-                insertChildren = QUOTE((_this select 2) param [ARR_2(0, [])]); \
+                insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
             }; \
         }
 
