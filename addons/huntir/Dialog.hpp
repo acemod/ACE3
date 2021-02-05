@@ -60,7 +60,7 @@
 
 class GVAR(cam_dialog) {
     idd = 18880;
-    movingEnable = true;
+    movingEnable = 1;
     controlsBackground[] = { };
     objects[] = { };
     controls[] = {
