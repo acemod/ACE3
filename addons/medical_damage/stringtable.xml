@@ -692,7 +692,7 @@
             <Polish>Szansa na nieprzytomność przez ból</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
-            <English>The probability of a person falling unconscious when their pain is above the tolerance threshold.</English>
+            <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu.</Polish>
         </Key>
     </Package>
