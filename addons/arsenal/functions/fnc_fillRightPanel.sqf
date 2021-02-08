@@ -289,13 +289,13 @@ switch (_ctrlIDC) do {
         
         {
             ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 18);
+        } foreach ((GVAR(virtualItems) select 18) select {!((toLower _x) in _blockItems)});
         {
             ["CfgVehicles", _x, false, true]  call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 23);
+        } foreach ((GVAR(virtualItems) select 23) select {!((toLower _x) in _blockItems)});
         {
             ["CfgGlasses", _x, false, true]  call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 24);
+        } foreach ((GVAR(virtualItems) select 24) select {!((toLower _x) in _blockItems)});
     };
     
     default {
@@ -308,6 +308,16 @@ switch (_ctrlIDC) do {
                 {
                     ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
                 } foreach ((GVAR(virtualItems) select 17) select {(toLower _x) in _items});
+
+                {
+                    ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
+                } foreach ((GVAR(virtualItems) select 18) select {(toLower _x) in _items});
+                {
+                    ["CfgVehicles", _x, false, true]  call _fnc_fill_right_Container;
+                } foreach ((GVAR(virtualItems) select 23) select {(toLower _x) in _items});
+                {
+                    ["CfgGlasses", _x, false, true]  call _fnc_fill_right_Container;
+                } foreach ((GVAR(virtualItems) select 24) select {(toLower _x) in _items});
             };
         };
     };
