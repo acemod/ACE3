@@ -24,3 +24,12 @@
     [0, 25, 1, 2],
     true
 ] call CBA_settings_fnc_init;
+
+[
+    QEGVAR(medical,painUnconsciousChance),
+    "SLIDER",
+    [LSTRING(PainUnconsciousChance_DisplayName), LSTRING(PainUnconsciousChance_Description)],
+    ELSTRING(medical,Category),
+    [0, 1, 0.1, 2, true],
+    true
+] call CBA_settings_fnc_init;
