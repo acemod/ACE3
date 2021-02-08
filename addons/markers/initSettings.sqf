@@ -23,7 +23,7 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
         ],
         1
     ]
-] call cba_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(timestampEnabled), "CHECKBOX",
