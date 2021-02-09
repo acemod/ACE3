@@ -23,7 +23,7 @@ TRACE_2("openDoor",_house,_door);
 
 if (isNull _house) exitWith {};
 
-if ((configProperties [configFile >> "CfgVehicles" >> (typeOf _house) >> "UserActions"]) isEqualTo []) exitWith {
+if ((configProperties [configOf _house >> "UserActions"]) isEqualTo []) exitWith {
     TRACE_1("Ignore houses with no UserActions",typeOf _house); // Fix problem with Shoothouse Walls
 };
 
@@ -38,8 +38,8 @@ private _lockedVariable = format ["bis_disabled_%1", _door];
 // Check if the door can be locked aka have locked variable, otherwhise cant lock it
 if ((_house animationPhase (_animations select 0) <= 0) && {_house getVariable [_lockedVariable, 0] == 1}) exitWith {
     private _lockedAnimation = format ["%1_locked_source", _door];
-    TRACE_3("locked",_house,_lockedAnimation,isClass (configfile >> "CfgVehicles" >> (typeOf _house) >> "AnimationSources" >> _lockedAnimation));
-    if (isClass (configfile >> "CfgVehicles" >> (typeOf _house) >> "AnimationSources" >> _lockedAnimation)) then {
+    TRACE_3("locked",_house,_lockedAnimation,isClass (configOf _house >> "AnimationSources" >> _lockedAnimation));
+    if (isClass (configOf _house >> "AnimationSources" >> _lockedAnimation)) then {
         // from: a3\structures_f\scripts\fn_door.sqf: - wiggles the door handle (A3 buildings)
         _house animateSource [_lockedAnimation, (1 - (_house animationSourcePhase _lockedAnimation))];
     };

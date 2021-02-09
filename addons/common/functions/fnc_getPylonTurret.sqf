@@ -27,7 +27,7 @@ if (!(_returnValue isEqualTo [])) then {
 } else {
     // Attempt to determine turret owner based on magazines in the vehicle
     private _pyMags = getPylonMagazines _vehicle;
-    private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> typeOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
+    private _pylonConfigs = configProperties [configOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
     if (_pylonIndex >= (count _pyMags)) exitWith {ERROR("out of bounds");};
     if (_pylonIndex >= (count _pylonConfigs)) exitWith {ERROR("out of bounds");};
 

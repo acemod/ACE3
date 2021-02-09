@@ -19,9 +19,9 @@
     params ["_staticWeapon", "_player"];
     TRACE_2("assemble_pickupWeapon",_staticWeapon,_player);
 
-    private _onDisassembleFunc = getText(configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "disassembleFunc");
-    private _carryWeaponClassname = getText(configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "disassembleWeapon");
-    private _turretClassname = getText(configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "disassembleTurret");
+    private _onDisassembleFunc = getText(configOf _staticWeapon >> QUOTE(ADDON) >> "disassembleFunc");
+    private _carryWeaponClassname = getText(configOf _staticWeapon >> QUOTE(ADDON) >> "disassembleWeapon");
+    private _turretClassname = getText(configOf _staticWeapon >> QUOTE(ADDON) >> "disassembleTurret");
     private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "pickupTime");
     TRACE_4("",typeOf _staticWeapon,_carryWeaponClassname,_turretClassname,_pickupTime);
     if (!isClass (configFile >> "CfgWeapons" >> _carryWeaponClassname)) exitWith {ERROR_1("bad weapon classname [%1]",_carryWeaponClassname);};

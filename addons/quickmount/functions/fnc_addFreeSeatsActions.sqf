@@ -94,7 +94,7 @@ scopeName "main";
 
 params ["_vehicle", "_player"];
 
-private _vehicleConfig = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _vehicleConfig = configOf _vehicle;
 private _isInVehicle = _player in _vehicle;
 private _fullCrew = fullCrew [_vehicle, "", true];
 

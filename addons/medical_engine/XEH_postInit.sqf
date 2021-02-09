@@ -53,7 +53,7 @@
 ["Air", "Killed", {
     params ["_vehicle", "_killer"];
     TRACE_3("air killed",_vehicle,typeOf _vehicle,velocity _vehicle);
-    if ((getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "destrType")) == "") exitWith {};
+    if ((getText (configOf _vehicle >> "destrType")) == "") exitWith {};
     if (unitIsUAV _vehicle) exitWith {};
 
     private _lethality = linearConversion [0, 25, (vectorMagnitude velocity _vehicle), 0.5, 1];
