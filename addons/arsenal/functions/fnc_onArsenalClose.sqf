@@ -69,7 +69,7 @@ camDestroy GVAR(camera);
 if (!isNil QGVAR(moduleUsed)) then {
     GVAR(moduleUsed) = nil;
     objNull remoteControl GVAR(center);
-    player switchCamera cameraView;
+    ACE_player switchCamera cameraView;
 };
 
 if (isMultiplayer) then {
