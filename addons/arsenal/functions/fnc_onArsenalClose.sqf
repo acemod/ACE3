@@ -69,6 +69,8 @@ camDestroy GVAR(camera);
 if (!isNil QGVAR(moduleUsed)) then {
     GVAR(moduleUsed) = nil;
     objNull remoteControl GVAR(center);
+    player switchCamera cameraView;
+    GVAR(center) setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
 };
 
 if (isMultiplayer) then {
