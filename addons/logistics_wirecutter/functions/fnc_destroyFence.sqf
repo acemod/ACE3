@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_fence"];
 
 private _fenceModel = toLower ((getModelInfo _fence)#0);
