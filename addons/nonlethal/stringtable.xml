@@ -44,10 +44,10 @@
         <Key ID="STR_ACE_NonLethal_SurrenderCourage_DisplayName">
             <English>Automatic Surrender Courage</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_SurrenderThreshold_DisplayName">
+        <Key ID="STR_ACE_NonLethal_PainSurrenderThreshold_DisplayName">
             <English>Pain Surrender Threshold</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_SurrenderThreshold_Description">
+        <Key ID="STR_ACE_NonLethal_PainSurrenderThreshold_Description">
             <English>Pain threshold for unit to surrender</English>
         </Key>
         <Key ID="STR_ACE_NonLethal_SurrenderCourage_Description">
