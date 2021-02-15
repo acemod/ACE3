@@ -7,7 +7,7 @@ class CfgAmmo {
         submunitionConeAngle = 0.8;
         submunitionConeType[] = {"random",15};
     };
-    class ACE_NonLethal_12Gauge_Rubber_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy { //12 Gauge Non-Lethal rubber slug
+    class ACE_NonLethal_12Gauge_Rubber_Buck_Deploy: B_12Gauge_Pellets_Submunition_Deploy {
         airFriction = -0.0085;
         caliber = 0.2;
         deflecting = 90;
@@ -65,7 +65,7 @@ class CfgAmmo {
         ACE_damageType = "punch";
         ACE_nonLethalType = "taser";
     };
-    class ACE_NonLethal_12Gauge_XREP_G2: ACE_NonLethal_12Gauge_Slug_XREP_G1 {
+    class ACE_NonLethal_12Gauge_XREP_G2: ACE_NonLethal_12Gauge_XREP_G1 {
         airFriction = -0.00805; //20m max effective range
         timeToLive = 0.58;
     };

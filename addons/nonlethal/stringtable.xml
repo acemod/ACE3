@@ -29,18 +29,6 @@
         <Key ID="STR_ACE_NonLethal_TaserPain_Description">
             <English>Pain that will remain on the unit after recovering from being tased.</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_LimpChance_DisplayName">
-            <English>Limp Chance</English>
-        </Key>
-        <Key ID="STR_ACE_NonLethal_LimpChance_Description">
-            <English>Chance unit will start limping once reaching threshold</English>
-        </Key>
-        <Key ID="STR_ACE_NonLethal_LimpThreshold_DisplayName">
-            <English>Limp Threshold</English>
-        </Key>
-        <Key ID="STR_ACE_NonLethal_LimpThreshold_Description">
-            <English>Non-Lethal damage threshold for unit to start limping</English>
-        </Key>
         <Key ID="STR_ACE_NonLethal_SurrenderChance_DisplayName">
             <English>Surrender Chance</English>
         </Key>
@@ -55,6 +43,12 @@
         </Key>
         <Key ID="STR_ACE_NonLethal_SurrenderCourage_DisplayName">
             <English>Automatic Surrender Courage</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_SurrenderThreshold_DisplayName">
+            <English>Pain Surrender Threshold</English>
+        </Key>
+        <Key ID="STR_ACE_NonLethal_SurrenderThreshold_Description">
+            <English>Pain threshold for unit to surrender</English>
         </Key>
         <Key ID="STR_ACE_NonLethal_SurrenderCourage_Description">
             <English>Any unit with courage below this value will surrender automatically</English>
@@ -87,22 +81,22 @@
         <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XM1116_Description">
             <English>Non-Lethal XM1116 Rubber Slug</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G1_Name">
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XREP_G1_Name">
             <English>12 Gauge 2Rnd Taser XREP G1</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G1_NameShort">
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XREP_G1_NameShort">
             <English>XREP G1</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G1_Description">
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XREP_G1_Description">
             <English>Non-Lethal First Generation Taser XREP Shot</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G2_Name">
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XREP_G2_Name">
             <English>12 Gauge 2Rnd Taser XREP G2</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G2_NameShort">
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XREP_G2_NameShort">
             <English>XREP G2</English>
         </Key>
-        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_Slug_XREP_G2_Description">
+        <Key ID="STR_ACE_NonLethal_2Rnd_12Gauge_XREP_G2_Description">
             <English>Non-Lethal Second Generation Taser XREP Shot</English>
         </Key>
     </Package>
