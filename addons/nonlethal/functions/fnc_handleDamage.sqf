@@ -18,7 +18,7 @@
 params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
 
 // Exit if bullet is not part of NonLethal
-private _nonlethalType = getText (configFile >> "CfgAmmo" >> _projectile >> "ACE_nonLethalType");
+private _nonlethalType = getText (configOf _projectile >> "ACE_nonLethalType");
 if (_nonlethalType isEqualTo "") exitWith {};
 
 // Calculate how much of an effect the nonlethal has had on the unit
