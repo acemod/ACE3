@@ -640,6 +640,18 @@
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
             <Russian>Уровень навыка требуемый для переливания крови IV группы.</Russian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSaline_DisplayName">
+            <English>Locations Saline</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSaline_Description">
+            <English>Controls where IV saline can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationPlasmaBlood_DisplayName">
+            <English>Locations Plasma and Blood</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationPlasmaBlood_Description">
+            <English>Controls where IV plasma and blood can be used.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>

@@ -225,6 +225,24 @@
 ] call CBA_settings_fnc_init;
 
 [
+    QGVAR(locationSaline),
+    "LIST",
+    [LSTRING(LocationSaline_DisplayName), LSTRING(LocationSaline_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(locationPlasmaBlood),
+    "LIST",
+    [LSTRING(LocationPlasmaBlood_DisplayName), LSTRING(LocationPlasmaBlood_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
     QGVAR(allowSelfIV),
     "LIST",
     [LSTRING(AllowSelfIV_DisplayName), LSTRING(AllowSelfIV_Description)],
