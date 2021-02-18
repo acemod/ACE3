@@ -86,7 +86,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
 ["vehicle", {
     params ["_unit", "_vehicle"];
     if ((isNull _vehicle) || {_unit == _vehicle}) exitWith {};
-    private _cfg = configfile >> "CfgVehicles" >> (typeOf _vehicle);
+    private _cfg = configOf _vehicle;
     GVAR(vehicleExteriorTurrets) = getArray (_cfg >> QGVAR(vehicleExteriorTurrets));
     GVAR(vehicleLightColor) = [_cfg >> QGVAR(vehicleLightColor), "array", [1,1,1,0]] call CBA_fnc_getConfigEntry;
 

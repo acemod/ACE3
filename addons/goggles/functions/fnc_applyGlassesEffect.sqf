@@ -24,7 +24,7 @@ TRACE_2("applyGlassesEffect",_player,_glasses);
 // remove old effect
 call FUNC(removeGlassesEffect);
 
-if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _player) >> "isPlayableLogic")) == 1) exitWith {
+if ((getNumber (configOf _player >> "isPlayableLogic")) == 1) exitWith {
     TRACE_1("skipping playable logic",typeOf _player); // VirtualMan_F (placeable logic zeus / spectator)
 };
 

@@ -20,7 +20,7 @@ params ["_vehicle", "_turret", "_carryMag"];
 TRACE_3("reload_getVehicleMagazine",_vehicle,_turret,_carryMag);
 
 private _carryGroupCfg = configFile >> QGVAR(groups) >> _carryMag;
-private _desiredAmmo = getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "desiredAmmo");
+private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
 
 private _bestMag = "#";
