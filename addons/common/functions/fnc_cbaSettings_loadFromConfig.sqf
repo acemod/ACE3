@@ -100,6 +100,6 @@ TRACE_2("setting",_cbaSettingType,_cbaValueInfo);
 TRACE_4("",_isForced,_cbaIsGlobal,_category,_cbaValueInfo);
 private _return = [_varName, _cbaSettingType, [_localizedName, _localizedDescription], _category, _cbaValueInfo, _cbaIsGlobal, _code, _warnIfChangedMidMission] call CBA_fnc_addSetting;
 TRACE_1("returned",_return);
-if ((isNil "_return") || {_return != 0}) then {ERROR_1("Setting [%1] - CBA Error",_varName);};
+if ((isNil "_return") || {!_return}) then {ERROR_1("Setting [%1] - CBA Error",_varName);};
 _return
 
