@@ -20,7 +20,7 @@
     params ["_tripod", "_player"];
     TRACE_2("assemble_pickupTripod",_tripod,_player);
 
-    private _tripodClassname = getText(configFile >> "CfgVehicles" >> (typeof _tripod) >> QUOTE(ADDON) >> "disassembleTo");
+    private _tripodClassname = getText(configOf _tripod >> QUOTE(ADDON) >> "disassembleTo");
     private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _tripodClassname >> QUOTE(ADDON) >> "pickupTime");
 
     private _onFinish = {

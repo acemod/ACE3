@@ -15,7 +15,7 @@
     if (GVAR(advancedCorrections)) then {
         ["LandVehicle", "init", {
             params ["_vehicle"];
-            private _vehicleCfg = configFile >> "CfgVehicles" >> typeOf _vehicle;
+            private _vehicleCfg = configOf _vehicle;
             // config "ace_artillerytables_applyCorrections" [0 disabled, 1 enabled] falls back to artilleryScanner
             private _applyCorrections = if (isNumber (_vehicleCfg >> QGVAR(applyCorrections))) then {
                 getNumber (_vehicleCfg >> QGVAR(applyCorrections))

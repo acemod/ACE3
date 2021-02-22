@@ -2,7 +2,7 @@
 
 class GVAR(menu) {
     idd = 314614;
-    movingEnable = true;
+    movingEnable = 1;
     onLoad = QUOTE([_this select 0] call FUNC(onMenuOpen));
     onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(menuDisplay)),nil)];);
     class controlsBackground {

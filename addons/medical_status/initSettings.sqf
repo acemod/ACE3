@@ -5,7 +5,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [0, 25, 1, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QEGVAR(medical,painCoefficient),
@@ -14,7 +14,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [0, 25, 1, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QEGVAR(medical,ivFlowRate),
@@ -23,4 +23,4 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [0, 25, 1, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

@@ -30,7 +30,7 @@ params ["_vehicle"];
 private _magazineInfo = [];
 
 // 1.70 pylons
-private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
+private _pylonConfigs = configProperties [configOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
 {
     private _pylonConfig = _x;
 

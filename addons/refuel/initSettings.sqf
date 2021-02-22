@@ -7,7 +7,7 @@
     [0,25,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true, // isGlobal
     {[QGVAR(rate), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(hoseLength), "SLIDER",
@@ -16,4 +16,4 @@
     [0,50,12,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true, // isGlobal
     {[QGVAR(hoseLength), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

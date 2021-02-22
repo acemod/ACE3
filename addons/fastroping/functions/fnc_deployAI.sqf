@@ -26,7 +26,7 @@ if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
     ERROR('FUNC(deployAI): deployAI was called with an invalid or non-existant vehicle.');
 };
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 private _configEnabled = getNumber (_config >> QGVAR(enabled));
 if (_configEnabled == 0) exitWith {
     if (hasInterface) then {

@@ -1,7 +1,7 @@
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 
 #define DEFAULT_ISENGINEER ([ARR_2(0,1)] select (_this getUnitTrait 'engineer'))
-#define DEFAULT_ISREPAIRVEHICLE GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(canRepair),0)
+#define DEFAULT_ISREPAIRVEHICLE GET_NUMBER(configOf _this >> QQGVAR(canRepair),0)
 
 class ctrlToolbox;
 

@@ -17,7 +17,7 @@
 
 params ["_vehicle"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 if !(isNumber (_config >> QGVAR(enabled))) then {
     ["%1 has not been configured for ACE_Fastroping.", getText (_config >> "displayName")] call BIS_fnc_error;
 } else {
