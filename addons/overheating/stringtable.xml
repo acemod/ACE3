@@ -14,8 +14,7 @@
             <Portuguese>Super Aquecimento</Portuguese>
             <Hungarian>Túlmelegedés</Hungarian>
             <French>Surchauffe</French>
-            <Czech>Přehřívání</Czech>
-            <Spanish>Sobrecalentamiento</Spanish>
+            <Czech>Přehřívání</Czech>            
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
@@ -413,12 +412,10 @@
             <Korean>총열 온도 확인</Korean>
             <Italian>Controlla la temperatura della canna di ricambio</Italian>
             <Chinesesimp>检查备用枪管温度</Chinesesimp>
-            <Chinese>檢查備用槍管溫度</Chinese>
-            <Spanish>Comprobar temperatura de los cañones de recambio</Spanish>
+            <Chinese>檢查備用槍管溫度</Chinese>            
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
-            <English>Checking spare barrels temperatures...</English>
-            <Spanish>Comprobando temperatura de los cañones de repuesto</Spanish>
+            <English>Checking spare barrels temperatures...</English>            
             <Portuguese>Verificando temperatura de canos reservas</Portuguese>
             <French>Vérification de la température des canons de rechange...</French>
             <Russian>Проверка температуры запасных стволов...</Russian>
@@ -449,8 +446,7 @@
             <Chinese>溫度</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelCool">
-            <English>Cool Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto frio/s</Spanish>
+            <English>Cool Spare Barrel/s</English>            
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
             <French>Canon(s) de rechange froid(s).</French>
             <Russian>Прохладные</Russian>
@@ -462,11 +458,10 @@
             <Italian>Canna/e di Ricambio Fredda</Italian>
             <Chinesesimp>备用枪管温度正常</Chinesesimp>
             <Chinese>備用槍管溫度正常</Chinese>
-            <Spanish>Cañón de recambio frío</Spanish>
+            <Spanish>Cañón(es) de recambio frío(s)</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
-            <English>Warm Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto templado/s</Spanish>
+            <English>Warm Spare Barrel/s</English>            
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
             <French>Canon(s) de rechange tiède(s).</French>
             <Russian>Теплые</Russian>
@@ -478,11 +473,10 @@
             <Italian>Canna/e di Ricambio Calda</Italian>
             <Chinesesimp>备用枪管温度偏温</Chinesesimp>
             <Chinese>備用槍管溫度偏溫</Chinese>
-            <Spanish>Cañón de recambio templado</Spanish>
+            <Spanish>Cañón(es) de recambio templado(s)</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
-            <English>Hot Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto caliente/s</Spanish>
+            <English>Hot Spare Barrel/s</English>            
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
             <French>Canon(s) de rechange chaud(s).</French>
             <Russian>Горячие</Russian>
@@ -494,11 +488,10 @@
             <Italian>Canna/e di Ricambio Molto Calda</Italian>
             <Chinesesimp>备用枪管温度偏热</Chinesesimp>
             <Chinese>備用槍管溫度偏熱</Chinese>
-            <Spanish>Cañón de recambio caliente</Spanish>
+            <Spanish>Cañón(es) de recambio caliente(s)</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
-            <English>Very Hot Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto muy caliente/s</Spanish>
+            <English>Very Hot Spare Barrel/s</English>            
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
             <French>Canon(s) de rechange très chaud(s).</French>
             <Russian>Очень горячие</Russian>
@@ -510,11 +503,10 @@
             <Italian>Canna/e di Ricambio Estremamente Calda</Italian>
             <Chinesesimp>备用枪管温度过热</Chinesesimp>
             <Chinese>備用槍管溫度過熱</Chinese>
-            <Spanish>Cañón de recambio muy caliente</Spanish>
+            <Spanish>Cañón(es) de recambio muy caliente(s)</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
-            <English>Extremely Hot Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto extremadamente caliente/s</Spanish>
+            <English>Extremely Hot Spare Barrel/s</English>            
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
             <French>Canon(s) de rechange extrêmement chaud(s).</French>
             <Russian>Запредельно горячие</Russian>
@@ -526,7 +518,7 @@
             <Italian>Canna/e di Ricambio Rovente</Italian>
             <Chinesesimp>备用枪管温度超级热</Chinesesimp>
             <Chinese>備用槍管溫度超級熱</Chinese>
-            <Spanish>Cañón de recambio extremadamente caliente</Spanish>
+            <Spanish>Cañón(es) de recambio extremadamente caliente(s)</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
@@ -544,8 +536,7 @@
             <Chinese>啟用過熱</Chinese>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
-            <English>Master enable for the overheating/jamming module</English>
-            <Spanish>Activación maestra para Sobrecalentamiento</Spanish>
+            <English>Master enable for the overheating/jamming module</English>            
             <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
             <French>Active le module de surchauffe/d'enrayement.</French>
             <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
@@ -557,7 +548,7 @@
             <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
             <Chinese>啟用槍管過熱/干擾模塊</Chinese>
             <Czech>Hlavní přepínač pro modul přehřívání/zasekávání</Czech>
-            <Spanish>Activado maestro para el módulo de sobrecalentamiento/atasco</Spanish>
+            <Spanish>Activado maestro para el módulo de sobrecalentamiento/encasquillado</Spanish>
         </Key>
     </Package>
 </Project>
