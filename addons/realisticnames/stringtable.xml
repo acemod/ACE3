@@ -1674,6 +1674,7 @@
             <Polish>Metis-M</Polish>
             <Portuguese>Metis-M</Portuguese>
             <Czech>Metis-M</Czech>
+            <Spanish>Metis-M</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Vorona_brown">
             <English>Metis-M (Brown)</English>
@@ -2707,6 +2708,7 @@
             <Portuguese>Jeep Wrangler (SPG-9)</Portuguese>
             <French>Jeep Wrangler (SPG-9)</French>
             <Czech>Jeep Wrangler (SPG-9)</Czech>
+            <Spanish>Jeep Wrangler (SPG-9)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_lmg">
             <English>Jeep Wrangler (LMG)</English>
@@ -2720,6 +2722,7 @@
             <Portuguese>Jeep Wrangler (LMG)</Portuguese>
             <French>Jeep Wrangler (LMG)</French>
             <Czech>Jeep Wrangler (LMG)</Czech>
+            <Spanish>Jeep Wrangler (LMG)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>

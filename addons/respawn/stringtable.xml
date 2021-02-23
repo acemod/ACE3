@@ -13,6 +13,7 @@
             <Portuguese>Ressurgimento</Portuguese>
             <French>Réapparition</French>
             <Czech>Znovuzrození</Czech>
+            <Spanish>Reaparición</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
@@ -298,6 +299,7 @@
             <Portuguese>Tempo para remover corpo</Portuguese>
             <French>Minuterie enlèvement corps</French>
             <Czech>Časovač odstranění mrtvol</Czech>
+            <Spanish>Temporizador para eliminar cuerpos</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>

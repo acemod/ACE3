@@ -13,6 +13,7 @@
             <Portuguese>Silenciar Jogador</Portuguese>
             <French>Joueur en sourdine</French>
             <Czech>Ztlumit hráče</Czech>
+            <Spanish>Ensordecer jugador</Spanish>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting_tooltip">
             <English>Mutes the controlled player avatar.</English>
@@ -26,6 +27,7 @@
             <Portuguese>Silencia o avatar do Jogador controlado</Portuguese>
             <French>Met en sourdine l'avatar du joueur.</French>
             <Czech>Vypne hlas charakteru hráče.</Czech>
+            <Spanish>Ensordecer el avatar del jugador controlado</Spanish>
         </Key>
     </Package>
 </Project>
