@@ -37,7 +37,7 @@ if ((isNull _target) && {alive _interactionTarget}) then {
     _target = (_objects param [0, []]) param [2, objNull];
 };
 
-if (locked _target in [2,3]) exitWith {
+if (locked _target in [2,3] || {!simulationEnabled _target}) exitWith {
     [localize LSTRING(VehicleLocked)] call EFUNC(common,displayTextStructured);
     true
 };
@@ -72,7 +72,7 @@ if (!isNull _target &&
                 private _effectiveRole = toLower _role;
 
                 if ((_effectiveRole in ["driver", "gunner"]) && {unitIsUAV _target}) exitWith {}; // Ignoring UAV Driver/Gunner
-                if ((_effectiveRole == "driver") && {(getNumber (([_target] call CBA_fnc_getObjectConfig) >> "hasDriver")) == 0}) exitWith {}; // Ignoring Non Driver (static weapons)
+                if ((_effectiveRole == "driver") && {(getNumber (configOf _target >> "hasDriver")) == 0}) exitWith {}; // Ignoring Non Driver (static weapons)
 
                 // Seats can be locked independently of the main vehicle
                 if ((_role == "driver") && {lockedDriver _target}) exitWith {TRACE_1("lockedDriver",_x);};

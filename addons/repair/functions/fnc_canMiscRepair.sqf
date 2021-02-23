@@ -24,7 +24,7 @@ params ["_caller", "_target", "_hitPointIndex"];
 if !([_caller, _target, ["isNotDragging", "isNotCarrying", "isNotSwimming", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
 // Get hitpoint groups if available
-private _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroups);
+private _hitpointGroupConfig = configOf _target >> QGVAR(hitpointGroups);
 private _hitpointGroup = [];
 if (isArray _hitpointGroupConfig) then {
     private _hitPointClassname = _allHitPoints select _hitPointIndex;

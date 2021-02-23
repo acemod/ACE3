@@ -7,7 +7,7 @@
     [0.77, 0.51, 0.08, 1],
     false, // isGlobal
     {[QGVAR(defaultNametagColor), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(nametagColorMain), "COLOR",
@@ -16,7 +16,7 @@
     [1.00, 1.00, 1.00, 1],
     false, // isGlobal
     {[QGVAR(nametagColorMain), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(nametagColorRed), "COLOR",
@@ -25,7 +25,7 @@
     [1.00, 0.67, 0.67, 1],
     false, // isGlobal
     {[QGVAR(nametagColorRed), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(nametagColorGreen), "COLOR",
@@ -34,7 +34,7 @@
     [0.67, 1.00, 0.67, 1],
     false, // isGlobal
     {[QGVAR(nametagColorGreen), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(nametagColorBlue), "COLOR",
@@ -43,7 +43,7 @@
     [0.67, 0.67, 1.00, 1],
     false, // isGlobal
     {[QGVAR(nametagColorBlue), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(nametagColorYellow),
@@ -53,4 +53,4 @@
     [1.00, 1.00, 0.67, 1],
     false, // isGlobal
     {[QGVAR(nametagColorYellow), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

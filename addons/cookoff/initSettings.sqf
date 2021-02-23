@@ -8,7 +8,7 @@
     true, // isGlobal
     {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableAmmobox), "CHECKBOX",
@@ -18,7 +18,7 @@
     true, // isGlobal
     {[QGVAR(enableAmmobox), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableAmmoCookoff), "CHECKBOX",
@@ -28,7 +28,7 @@
     true, // isGlobal
     {[QGVAR(enableAmmoCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(ammoCookoffDuration), "SLIDER",
@@ -38,7 +38,7 @@
     true, // isGlobal
     {[QGVAR(ammoCookoffDuration), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(probabilityCoef), "SLIDER",
@@ -48,4 +48,4 @@
     true, // isGlobal
     {[QGVAR(probabilityCoef), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

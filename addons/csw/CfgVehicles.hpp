@@ -169,6 +169,31 @@ class CfgVehicles {
         };
     };
 
+    class HMG_02_base_F: StaticMGWeapon {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_M2_Mounted);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(staticM2ShieldCarry); // carry weapon [CfgWeapons]
+            disassembleTurret = QGVAR(m3TripodLow); // turret [CfgVehicles]
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+    class HMG_02_high_base_F: HMG_02_base_F {
+        class ADDON {
+            enabled = 1;
+            proxyWeapon = QGVAR(HMG_M2_Mounted);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(staticM2ShieldCarry); // carry weapon [CfgWeapons]
+            disassembleTurret = QGVAR(m3Tripod); // turret [CfgVehicles]
+            desiredAmmo = 100;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
 
     class GMG_TriPod;
     class GMG_01_base_F: GMG_TriPod {

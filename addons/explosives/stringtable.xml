@@ -16,6 +16,7 @@
             <Korean>폭발물</Korean>
             <Chinesesimp>炸药</Chinesesimp>
             <Chinese>炸藥</Chinese>
+            <Turkish>Patlayıcılar</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Place">
             <English>Place</English>
@@ -32,6 +33,7 @@
             <Korean>설치</Korean>
             <Chinesesimp>放置</Chinesesimp>
             <Chinese>放置</Chinese>
+            <Turkish>Yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Detonate">
             <English>Detonate</English>
@@ -48,6 +50,7 @@
             <Korean>폭파</Korean>
             <Chinesesimp>引爆</Chinesesimp>
             <Chinese>引爆</Chinese>
+            <Turkish>Patlat</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateAll">
             <English>Detonate All</English>
@@ -63,6 +66,7 @@
             <Korean>모두 폭파</Korean>
             <Chinesesimp>引爆全部</Chinesesimp>
             <Chinese>引爆全部</Chinese>
+            <Turkish>Hepsini Patlat</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -79,6 +83,7 @@
             <Korean>폭파 코드: %1</Korean>
             <Chinesesimp>炸药代码: %1</Chinesesimp>
             <Chinese>炸藥代號: %1</Chinese>
+            <Turkish>Patlayıcı Kodu: %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceAction">
             <English>Place</English>
@@ -95,6 +100,7 @@
             <Korean>설치</Korean>
             <Chinesesimp>放置</Chinesesimp>
             <Chinese>放置</Chinese>
+            <Turkish>Yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_AttachAction">
             <English>Attach</English>
@@ -111,6 +117,7 @@
             <Korean>부착</Korean>
             <Chinesesimp>连接</Chinesesimp>
             <Chinese>連接</Chinese>
+            <Turkish>Bağla</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_BlockedAction">
             <English>Blocked</English>
@@ -126,6 +133,7 @@
             <Korean>막힘</Korean>
             <Chinesesimp>断开</Chinesesimp>
             <Chinese>斷開</Chinese>
+            <Turkish>Bloke Edilmiş</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">
             <English>Cancel</English>
@@ -142,6 +150,7 @@
             <Korean>취소</Korean>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_ScrollAction">
             <English>Rotate</English>
@@ -158,6 +167,7 @@
             <Korean>회전</Korean>
             <Chinesesimp>旋转</Chinesesimp>
             <Chinese>旋轉</Chinese>
+            <Turkish>Döndür</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Jammer_TurnOn">
             <English>Turn On Thor III</English>
@@ -174,6 +184,7 @@
             <Korean>Thor III 켜기</Korean>
             <Chinesesimp>开启索尔三型</Chinesesimp>
             <Chinese>開啟索爾三型</Chinese>
+            <Turkish>Thor III ü aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Jammer_TurnOff">
             <English>Turn Off Thor III</English>
@@ -190,6 +201,7 @@
             <Korean>Thor III 끄기</Korean>
             <Chinesesimp>关闭索尔三型</Chinesesimp>
             <Chinese>關閉索爾三型</Chinese>
+            <Turkish>Thor III ü kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_displayName">
             <English>Cellphone</English>
@@ -206,6 +218,7 @@
             <Korean>휴대전화</Korean>
             <Chinesesimp>手机</Chinesesimp>
             <Chinese>手機</Chinese>
+            <Turkish>Cep Telefonu</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>
@@ -222,6 +235,7 @@
             <Korean>원격으로 폭발물을 폭파시킬때 씁니다.</Korean>
             <Chinesesimp>用于远端引爆炸药</Chinesesimp>
             <Chinese>用於遠端引爆炸藥</Chinese>
+            <Turkish>Bombaları uzaktan patlatmak için kullanılır</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_clacker_displayName">
             <English>M57 Firing Device</English>
@@ -238,6 +252,7 @@
             <Korean>M57 격발기</Korean>
             <Chinesesimp>M57 引爆装置</Chinesesimp>
             <Chinese>M57 引爆裝置</Chinese>
+            <Turkish>M57 Ateşleme Cihazı</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_clacker_description">
             <English>Used to remotely trigger explosives</English>
@@ -254,6 +269,7 @@
             <Korean>원격으로 폭발물을 폭파시킬때 씁니다.</Korean>
             <Chinesesimp>用于远端引爆炸药</Chinesesimp>
             <Chinese>用於遠端引爆炸藥</Chinese>
+            <Turkish>Patlayıcıları uzaktan tetiklemek için kullanılır</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_M152_Clacker_displayName">
             <English>M152 Firing Device</English>
@@ -270,6 +286,7 @@
             <Korean>M152 격발기</Korean>
             <Chinesesimp>M152 引爆装置</Chinesesimp>
             <Chinese>M152 引爆裝置</Chinese>
+            <Turkish>M152 Ateşleme Cihazı</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_M152_displayName">
             <English>M152 RAMS</English>
@@ -286,6 +303,7 @@
             <Korean>M152 RAMS</Korean>
             <Chinesesimp>M152 远端炸药引爆系统</Chinesesimp>
             <Chinese>M152 遠端炸藥引爆系統</Chinese>
+            <Turkish>M152 RAMS</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusalKit_displayName">
             <English>Defusal Kit</English>
@@ -302,6 +320,7 @@
             <Korean>해체 장비</Korean>
             <Chinesesimp>拆弹工具</Chinesesimp>
             <Chinese>拆彈工具</Chinese>
+            <Turkish>Imha Kiti</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusalKit_description">
             <English>Allows defusing of explosives</English>
@@ -318,6 +337,7 @@
             <Korean>폭발물을 해체할 수 있게 해줍니다</Korean>
             <Chinesesimp>可以用来拆除炸弹</Chinesesimp>
             <Chinese>可以用來拆除炸彈</Chinese>
+            <Turkish>Patlayıcıların etkisiz hale gelmesini sağlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_AddToSpeedDial">
             <English>Add to Speed Dial</English>
@@ -334,6 +354,7 @@
             <Korean>단축키에 지정</Korean>
             <Chinesesimp>增加到快速拨号</Chinesesimp>
             <Chinese>增加到快速撥號</Chinese>
+            <Turkish>Hızlı Aramaya Ekle</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Clear">
             <English>Clear</English>
@@ -350,6 +371,7 @@
             <Korean>삭제</Korean>
             <Chinesesimp>清除</Chinesesimp>
             <Chinese>清除</Chinese>
+            <Turkish>Temiz</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Dial">
             <English>Dial</English>
@@ -366,6 +388,7 @@
             <Korean>다이얼</Korean>
             <Chinesesimp>拨号</Chinesesimp>
             <Chinese>撥號</Chinese>
+            <Turkish>Numarayı Çevir</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Up">
             <English>Up</English>
@@ -382,6 +405,7 @@
             <Korean>위</Korean>
             <Chinesesimp>上</Chinesesimp>
             <Chinese>上</Chinese>
+            <Turkish>Yukarı</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Phone_Down">
             <English>Down</English>
@@ -398,6 +422,7 @@
             <Korean>아래</Korean>
             <Chinesesimp>下</Chinesesimp>
             <Chinese>下</Chinese>
+            <Turkish>Aşağı</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Cancel">
             <English>Cancel</English>
@@ -414,6 +439,7 @@
             <Korean>취소</Korean>
             <Chinesesimp>取消</Chinesesimp>
             <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateMenu">
             <English>Detonate Menu</English>
@@ -430,6 +456,7 @@
             <Korean>폭파 메뉴</Korean>
             <Chinesesimp>引爆选单</Chinesesimp>
             <Chinese>引爆選單</Chinese>
+            <Turkish>Patlatma Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_PlaceMenu">
             <English>Place Menu</English>
@@ -446,6 +473,7 @@
             <Korean>설치 메뉴</Korean>
             <Chinesesimp>放置选单</Chinesesimp>
             <Chinese>放置選單</Chinese>
+            <Turkish>Yerleştirme Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Defuse">
             <English>Defuse</English>
@@ -462,6 +490,7 @@
             <Korean>해체</Korean>
             <Chinesesimp>拆除</Chinesesimp>
             <Chinese>拆除</Chinese>
+            <Turkish>Imha</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DefusingExplosive">
             <English>Defusing Explosive...</English>
@@ -476,8 +505,9 @@
             <Russian>Обезвреживание...</Russian>
             <Japanese>爆発物を無力化しています・・・</Japanese>
             <Korean>폭발물 해체중...</Korean>
-            <Chinesesimp>炸弹拆除中...</Chinesesimp>
+            <Chinesesimp>正在拆除炸弹...</Chinesesimp>
             <Chinese>炸彈拆除中...</Chinese>
+            <Turkish>Patlayıcı Imha Ediliyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_timerName">
             <English>Timer</English>
@@ -494,6 +524,7 @@
             <Korean>타이머</Korean>
             <Chinesesimp>计时器</Chinesesimp>
             <Chinese>計時器</Chinese>
+            <Turkish>Zamanlayıcı</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMenu">
             <English>Time: %1m %2s</English>
@@ -510,13 +541,14 @@
             <Korean>시간: %1분 %2초</Korean>
             <Chinesesimp>时间: %1分%2秒</Chinesesimp>
             <Chinese>時間: %1分%2秒</Chinese>
+            <Turkish>Süre: %1m %2s</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_SetTime">
             <English>Set Time</English>
             <German>Zeit einstellen</German>
             <Spanish>Configurar tiempo</Spanish>
             <Polish>Ustaw czas</Polish>
-            <French>Régler le minuteur</French>
+            <French>Valider la durée</French>
             <Czech>Nastavit čas</Czech>
             <Italian>Modifica il conto alla rovescia</Italian>
             <Hungarian>Idő beállítása</Hungarian>
@@ -526,6 +558,7 @@
             <Korean>시간 설정</Korean>
             <Chinesesimp>设定时间</Chinesesimp>
             <Chinese>設定時間</Chinese>
+            <Turkish>Süreyi Ayarla</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_TriggerMenu">
             <English>Select a Trigger</English>
@@ -542,6 +575,7 @@
             <Korean>작동방식 선택</Korean>
             <Chinesesimp>选择一个触发器</Chinesesimp>
             <Chinese>選擇一個觸發器</Chinese>
+            <Turkish>Tetikleyici seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_SelectTrigger">
             <English>Select</English>
@@ -558,6 +592,7 @@
             <Korean>선택</Korean>
             <Chinesesimp>选择</Chinesesimp>
             <Chinese>選擇</Chinese>
+            <Turkish>Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_PressurePlate">
             <English>Pressure Plate</English>
@@ -574,6 +609,7 @@
             <Korean>압력식</Korean>
             <Chinesesimp>压力盘</Chinesesimp>
             <Chinese>壓力盤</Chinese>
+            <Turkish>Basınç Plakası</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
@@ -590,6 +626,7 @@
             <Korean>인계철선</Korean>
             <Chinesesimp>绊线</Chinesesimp>
             <Chinese>絆線</Chinese>
+            <Turkish>Telli tuzak</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_IRSensor">
             <English>IR Sensor</English>
@@ -606,6 +643,7 @@
             <Korean>적외선 센서</Korean>
             <Chinesesimp>红外线感应器</Chinesesimp>
             <Chinese>紅外線感應器</Chinese>
+            <Turkish>IR Sensörü</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_NoTriggersAvailable">
             <English>No triggers available for %1</English>
@@ -622,6 +660,7 @@
             <Korean>%1(을)를 작동할 장치가 없습니다.</Korean>
             <Chinesesimp>没有适合%1的触发器</Chinesesimp>
             <Chinese>沒有適合%1的觸發器</Chinese>
+            <Turkish>% 1 için tetikleyici yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_SLAME_IRSensor">
             <English>IR Sensor (Side Attack)</English>
@@ -670,6 +709,7 @@
             <Korean>격발기에 등록된 폭발물이 없습니다.</Korean>
             <Chinesesimp>触发器上并没有炸药</Chinesesimp>
             <Chinese>觸發器上並沒有炸藥</Chinese>
+            <Turkish>Tetikte patlayıcı yok.</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_displayName">
             <English>Dead Man's Switch</English>
@@ -702,6 +742,7 @@
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
             <Chinesesimp>当放开按钮时, 将会引爆炸弹.</Chinesesimp>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
+            <Turkish>Patlayıcıları serbest bırakıldığında uzaktan tetiklemek için kullanılır.</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Pickup">
             <English>Pick up</English>
@@ -718,6 +759,7 @@
             <Korean>줍기</Korean>
             <Chinesesimp>捡起</Chinesesimp>
             <Chinese>撿起</Chinese>
+            <Turkish>Al</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_DisplayName">
             <English>Explosive System</English>
@@ -734,6 +776,7 @@
             <Korean>폭발물 시스템</Korean>
             <Chinesesimp>炸药系统</Chinesesimp>
             <Chinese>炸藥系統</Chinese>
+            <Turkish>Patlayıcı Sistemi</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_DisplayName">
             <English>Require specialists?</English>
@@ -746,10 +789,11 @@
             <Hungarian>Specialisták igénylése?</Hungarian>
             <Russian>Требуется специалист?</Russian>
             <Italian>Richiedi specialisti?</Italian>
-            <Japanese>特技兵を必要としますか?</Japanese>
+            <Japanese>特技兵を必須</Japanese>
             <Korean>전문가가 필요합니까?</Korean>
             <Chinesesimp>需要专家?</Chinesesimp>
             <Chinese>需要專家?</Chinese>
+            <Turkish>Uzmanlara ihtiyaç var mı?</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_RequireSpecialist_Description">
             <English>Require explosive specialists to disable explosives? Default: No</English>
@@ -762,10 +806,11 @@
             <Hungarian>Szükséges-e egy specialista a robbanóanyagok hatástalanításához? Alapértelmezett: Nem</Hungarian>
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По-умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Default: No</Italian>
-            <Japanese>爆発物を無効化するには、爆発物の特技兵を必要としますか? 標準: 無効化</Japanese>
+            <Japanese>爆発物を無効化するには特技兵である必要かどうかを設定できます。標準: 無効化</Japanese>
             <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要炸弹专家才能拆除炸弹? 预设: 否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
+            <Turkish>Patlayıcı uzmanlarının patlayıcıları etkisiz hale getirmesini ister misiniz? Varsayılan: Hayır</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_PunishNonSpecialists_DisplayName">
             <English>Punish non-specialists?</English>
@@ -778,7 +823,7 @@
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
             <Russian>Штраф не-специалистам?</Russian>
             <Italian>Punisci non-specialisti?</Italian>
-            <Japanese>非特技兵へ足かせを与えますか?</Japanese>
+            <Japanese>非特技兵へ足かせ</Japanese>
             <Korean>비-전문가에 불이익을 줍니까?</Korean>
             <Chinesesimp>折磨非专业人员?</Chinesesimp>
             <Chinese>折磨非專業人員?</Chinese>
@@ -794,7 +839,7 @@
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
             <Russian>Увеличивать время завершения действий для не-специалистов? По-умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Default: Si</Italian>
-            <Japanese>非特技兵へ動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
+            <Japanese>非特技兵は動作完了までの時間を増加させますか? 標準: 有効化</Japanese>
             <Korean>비-전문가가 폭발물을 해제시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间? 预设: 是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
@@ -810,7 +855,7 @@
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
             <Russian>Взрыв при разминир.?</Russian>
             <Italian>Fai esplodere quando disarmato?</Italian>
-            <Japanese>解除中に爆発させますか?</Japanese>
+            <Japanese>解除中に爆発</Japanese>
             <Korean>해제시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆?</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
@@ -826,7 +871,7 @@
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По-умолчанию: Да</Russian>
             <Italian>Abilita alcuni esplosivi per esplosione al disarmo? Default: Si</Italian>
-            <Japanese>特定の爆発物を解除中に爆発させますか? 標準: 有効化</Japanese>
+            <Japanese>特定の爆発物を解除中に爆発させるかどうかを設定できます。? 標準: 有効化</Japanese>
             <Korean>특정 폭발물이 해제시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后, 某些炸弹会在拆除时引爆? 预设: 是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
@@ -988,6 +1033,7 @@
             <Korean>%1에 연결중</Korean>
             <Chinesesimp>连接到%1</Chinesesimp>
             <Chinese>連接到%1</Chinese>
+            <Turkish>Bağlandı %1</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name">
             <English>Tripwire Flare</English>
@@ -1029,6 +1075,7 @@
             <Russian>Дальность подрыва</Russian>
             <Portuguese>Alcance do explosivo</Portuguese>
             <Czech>Dosah exploze</Czech>
+            <Turkish>Patlayıcı menzili</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
@@ -1038,9 +1085,10 @@
             <Polish>Czasomierz Wybuchu</Polish>
             <Russian>Таймер взрывчатки</Russian>
             <Portuguese>Timer de explosão</Portuguese>
-            <French>Minuteur de détonation</French>
+            <French>Minuteur pour explosifs</French>
             <Chinese>引爆倒數</Chinese>
             <Czech>Časovač exploze</Czech>
+            <Turkish>Patlayıcı Zamanlayıcı</Turkish>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
@@ -1050,6 +1098,8 @@
             <Chinese>是EOD</Chinese>
             <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
+            <Polish>Jest EOD</Polish>
+            <Russian>Сапёр</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1059,6 +1109,32 @@
             <Chinese>控制該單位是否是爆裂物處置專家</Chinese>
             <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
+            <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
+            <Russian>Определяет, является ли юнит сапёром.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
+            <English>Minimum Time</English>
+            <French>Durée minimale</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
+            <English>Maximum Time</English>
+            <French>Durée maximale</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
+            <English>Default Time</English>
+            <French>Durée par défaut</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMin_Description">
+            <English>Minimum time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée minimale paramétrable sur le minuteur.</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerMax_Description">
+            <English>Maximum time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée maximale paramétrable sur le minuteur.</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TimerDefault_Description">
+            <English>Default time value (in seconds) for the explosive timer.</English>
+            <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
         </Key>
     </Package>
 </Project>

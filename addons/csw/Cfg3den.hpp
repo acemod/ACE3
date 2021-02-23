@@ -1,10 +1,15 @@
 class ctrlCombo;
 class Cfg3DEN {
     class Attributes {
-        class Title;
-        class Combo: Title {
+        class Default;
+        class Title: Default {
             class Controls {
                 class Title;
+            };
+        };
+        class Combo: Title {
+           class Controls: Controls {
+                class Title: Title{};
                 class Value;
             };
         };

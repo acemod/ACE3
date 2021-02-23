@@ -54,6 +54,7 @@
             if ((_tripodPos select 2) < 0.5) then {
                 _csw setVectorUp (surfaceNormal _tripodPos);
             };
+            [QGVAR(deployWeaponSucceeded), [_csw]] call CBA_fnc_localEvent;
             TRACE_2("csw placed",_csw,_assembledClassname);
         }, [_assembledClassname, _tripodDir, _tripodPos]] call CBA_fnc_execNextFrame;
     };

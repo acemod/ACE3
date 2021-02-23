@@ -41,6 +41,8 @@ if (isNil "_displayToUse" || {!isnil QGVAR(camera)}) exitWith {
     [localize LSTRING(CantOpenDisplay), false, 5, 1] call EFUNC(common,displayText);
 };
 
+GVAR(currentBox) = _object;
+
 if (_mode) then {
     GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
 } else {

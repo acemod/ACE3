@@ -47,10 +47,10 @@ if (_isUnconscious) then {
     } else {
         // and on foot
         TRACE_1("onfoot - playing standard anim",_unit);
-        [_unit, "AmovPpneMstpSnonWnonDnon"] call EFUNC(common,doAnimation);
+        [_unit, "AmovPpneMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
 
         if (currentWeapon _unit == secondaryWeapon _unit && {currentWeapon _unit != ""}) then {
-            [_unit, "AmovPknlMstpSrasWlnrDnon"] call EFUNC(common,doAnimation);
+            [_unit, "AmovPknlMstpSrasWlnrDnon", 2] call EFUNC(common,doAnimation);
         };
 
         [{
@@ -58,7 +58,8 @@ if (_isUnconscious) then {
             TRACE_3("after delay",_unit,animationState _unit,lifeState _unit);
             if (!alive _unit) exitWith {};
             // Fix unit being in locked animation with switchMove (If unit was unloaded from a vehicle, they may be in deadstate instead of unconscious)
-            if (((animationState _unit == "unconscious") || {animationState _unit == "deadstate"}) && {lifeState _unit != "INCAPACITATED"}) then {
+            private _animation = animationState _unit;
+            if ((_animation == "unconscious" || {_animation == "deadstate" || {_animation find "ace_unconscious_" != -1}}) && {lifeState _unit != "INCAPACITATED"}) then {
                 [_unit, "AmovPpneMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
                 TRACE_1("forcing SwitchMove",animationState _unit);
             };

@@ -20,8 +20,6 @@
 ///////////////
 private _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
-INFO_1("ACE is version %1.",_version);
-
 //CBA Versioning check - close main display if using incompatible version
 private _cbaVersionAr = getArray (configFile >> "CfgPatches" >> "cba_main" >> "versionAr");
 private _cbaRequiredAr = getArray (configFile >> "CfgSettings" >> "CBA" >> "Versioning" >> "ACE" >> "dependencies" >> "CBA") select 1;
@@ -29,7 +27,7 @@ private _cbaRequiredAr = getArray (configFile >> "CfgSettings" >> "CBA" >> "Vers
 private _cbaVersionStr = _cbaVersionAr joinString ".";
 private _cbaRequiredStr = _cbaRequiredAr joinString ".";
 
-INFO_2("CBA is version %1 (min required %2)",_cbaVersionStr,_cbaRequiredStr);
+INFO_3("ACE is version %1 - CBA is version %2 (min required %3)",_version,_cbaVersionStr,_cbaRequiredStr);
 
 if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) then {
     private _errorMsg = format ["CBA version %1 is outdated (required %2)", _cbaVersionStr, _cbaRequiredStr];

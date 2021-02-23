@@ -14,7 +14,7 @@
             <Portuguese>NLAW Rastrear Alvo (Segurar)</Portuguese>
             <French>NLAW suivre la cible (maintenir)</French>
             <Czech>NLAW sledování cíle (držet)</Czech>
-            <Spanish>NLAW Seguir objetivo (Mantener)</Spanish>
+            <Turkish>NLAW Track Target (Basılı Tut)</Turkish>
         </Key>
         <Key ID="STR_ACE_NLAW_directAttack">
             <English>Direct Attack</English>
@@ -29,7 +29,7 @@
             <Portuguese>Ataque Direto</Portuguese>
             <French>Attaque directe</French>
             <Czech>Přímý útok</Czech>
-            <Spanish>Ataque directo</Spanish>
+            <Turkish>Doğrudan Saldırı</Turkish>
         </Key>
         <Key ID="STR_ACE_NLAW_overflyTopAttack">
             <English>Overfly Top Attack</English>
@@ -44,7 +44,7 @@
             <Portuguese>Ataque por cima</Portuguese>
             <French>Attaque par le haut</French>
             <Czech>Útok zvrchu při přeletu</Czech>
-            <Spanish>Ataque desde arriba</Spanish>
+            <Turkish>Yüksek Uçuş Saldırı</Turkish>
         </Key>
     </Package>
 </Project>

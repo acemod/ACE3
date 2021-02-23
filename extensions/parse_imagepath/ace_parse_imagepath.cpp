@@ -40,9 +40,9 @@ std::string getImagePathFromStructuredText(const std::string & input) {
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     ZERO_OUTPUT();
     if (!strcmp(function, "version")) {
-        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize - 1);
     } else {
-        strncpy(output, getImagePathFromStructuredText(function).c_str(), outputSize);
+        strncpy(output, getImagePathFromStructuredText(function).c_str(), outputSize - 1);
     }
     EXTENSION_RETURN();
 }

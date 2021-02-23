@@ -48,7 +48,7 @@
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
             <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
-            <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をさせられるか制限できます。</Japanese>
+            <Japanese>どのプレイヤーが Alt キーを押しながらマーカー移動をできるか制限できます。</Japanese>
             <Korean>Alt 키를 누른 상태에서 마커를 움직일 수있는 플레이어를 제한합니다.</Korean>
             <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
             <Chinesesimp>设定谁可以透过按住Alt键来移动标志。</Chinesesimp>
@@ -58,6 +58,7 @@
             <Portuguese>Restringe quais jogadores podem mover os marcadores do mapa enquanto seguram a tecla ALT.</Portuguese>
             <French>Définit quels joueurs peuvent déplacer des marqueurs en maintenant la touche Alt enfoncée.</French>
             <Czech>Omezuje kdo může pohybovat se značkami při podržení klávesy Alt.</Czech>
+            <Turkish>Alt tuşunu basılı tutarken hangi işaretçilerin hareket edebileceğini sınırlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
@@ -140,6 +141,62 @@
             <French>Créateur</French>
             <Italian>Creatore</Italian>
             <Czech>Tvůrce</Czech>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampEnabled">
+            <English>Allow Timestamps</English>
+            <French>Permettre l'horodatage</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
+            <English>Whether to allow timestamps to be automatically applied to markers</English>
+            <French>Active une interface permettant d'apposer un horodatage sur les marqueurs.</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_Timestamp">
+            <English>Add Timestamp:</English>
+            <French>Ajouter l'horodatage</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
+            <English>Watch Required</English>
+            <French>Une montre est requise.</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormat">
+            <English>Timestamp Format</English>
+            <French>Horodatage - Format</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
+            <English>Changes the timestamp format</English>
+            <French>Modifie le format de l'horodatage.</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
+            <English>"HH" - Hour</English>
+            <French>"HH" - Heures</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
+            <English>"MM" - Minute</English>
+            <French>"MM" - Minutes</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
+            <English>"SS" - Seconds</English>
+            <French>"SS" - Secondes</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
+            <English>"MM" - Milliseconds</English>
+            <French>"MS" - Millisecondes</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat">
+            <English>Timestamp Hour Format</English>
+            <French>Horodatage - Système horaire</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat24">
+            <English>24-Hour Clock</English>
+            <French>Format 24 heures</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat12">
+            <English>12-Hour Clock</English>
+            <French>Format 12 heures</French>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
+            <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
+            <French>Permet de choisir le système d'horodatage souhaité, au format 12 ou 24 heures.</French>
         </Key>
     </Package>
 </Project>

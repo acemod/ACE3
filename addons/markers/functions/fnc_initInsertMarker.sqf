@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\A3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: BIS, commy2, Timi007
  * Sets up the marker placement
@@ -29,26 +30,28 @@
     };
 
     //BIS Controls:
-    private _text = _display displayctrl 101;
-    private _picture = _display displayctrl 102;
-    private _channel = _display displayctrl 103;
-    private _buttonOK = _display displayctrl 1;
-    private _buttonCancel = _display displayctrl 2;
-    private _description = _display displayctrl 1100;
-    private _title = _display displayctrl 1001;
-    private _descriptionChannel = _display displayctrl 1101;
+    private _text =                 _display displayctrl IDC_INSERT_MARKER;
+    private _picture =              _display displayctrl IDC_INSERT_MARKER_PICTURE;
+    private _channel =              _display displayctrl IDC_INSERT_MARKER_CHANNELS;
+    private _buttonOK =             _display displayctrl IDC_OK;
+    private _buttonCancel =         _display displayctrl IDC_CANCEL;
+    private _description =          _display displayctrl 1100;
+    private _title =                _display displayctrl 1001;
+    private _descriptionChannel =   _display displayctrl 1101;
 
     //ACE Controls:
-    // _sizeX = _display displayctrl 1200;
-    // _sizeY = _display displayctrl 1201;
-    private _aceShapeLB = _display displayctrl 1210;
-    private _aceColorLB = _display displayctrl 1211;
-    private _aceAngleSlider = _display displayctrl 1220;
-    private _aceAngleSliderText = _display displayctrl 1221;
+    // _sizeX =                     _display displayctrl 1200;
+    // _sizeY =                     _display displayctrl 1201;
+    private _aceTimestamp =         _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
+    private _aceTimestampText =     _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP_TEXT;
+    private _aceShapeLB =           _display displayctrl IDC_ACE_INSERT_MARKER_SHAPE;
+    private _aceColorLB =           _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
+    private _aceAngleSlider =       _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE;
+    private _aceAngleSliderText =   _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
 
-    private _mapDisplay = displayParent _display;
+    private _mapDisplay =           displayParent _display;
     if (isNull _mapDisplay) exitWith {ERROR("No Map");};
-    private _mapCtrl = _mapDisplay displayCtrl 51;
+    private _mapCtrl = _mapDisplay displayCtrl IDC_MAP;
 
     GVAR(editingMarker) = "";
     (ctrlMapMouseOver _mapCtrl) params ["_mouseOverType", "_marker"];
@@ -76,7 +79,10 @@
         GVAR(currentMarkerPosition) = markerPos GVAR(editingMarker);
     } else {
         private _pos = ctrlPosition _picture;
-        _pos = [(_pos select 0) + (_pos select 2) / 2, (_pos select 1) + (_pos select 3) / 2];
+        _pos = [
+            (_pos select 0) + (_pos select 2) / 2,
+            (_pos select 1) + (_pos select 3) / 2
+        ];
         GVAR(currentMarkerPosition) = _mapCtrl ctrlMapScreenToWorld _pos;
     };
 
@@ -86,9 +92,19 @@
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
+    private _hasTimestamp = false;
     if !((markerText GVAR(editingMarker)) isEqualTo "") then {
-        //fill text input with text from marker which is being edited
-        _text ctrlSetText (markerText GVAR(editingMarker));
+        // fill text input with text from marker which is being edited
+
+        private _originalText = markerText GVAR(editingMarker);
+        private _timeIndex = _originalText find (TIMESTAMP_SPACE + "[");
+        if (_timeIndex > 0 ) then {
+            // Shave off timestamp
+            _hasTimestamp = true;
+            _originalText = _originalText select [0,_timeIndex];
+        };
+
+        _text ctrlSetText _originalText;
     };
 
     //Focus on the text input
@@ -112,33 +128,70 @@
 
     //--- Description
     _pos set [1, _posY - 1 * _posH];
-    _pos set [3,6 * _posH + 6 * BORDER];
+    if (GVAR(timestampEnabled)) then {
+        _pos set [3,7 * _posH + 7 * BORDER];
+    } else {
+        _pos set [3,6 * _posH + 6 * BORDER];
+    };
     _description ctrlEnable false;
     _description ctrlSetPosition _pos;
     _description ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", localize "str_lib_label_description"];
     _description ctrlCommit 0;
 
+    //--- Timestamp
+    private _timestampOffset = 0;
+    if (GVAR(timestampEnabled)) then {
+        _timestampOffset = _posH + BORDER;
+
+        _pos set [0, _posX];
+        _pos set [1, _posY + 1 * _posH + 2 * BORDER];
+        _pos set [2, _posW - _posH];
+        _pos set [3, _posH];
+        _aceTimestampText ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", LLSTRING(Timestamp)];
+        _aceTimestampText ctrlSetPosition _pos;
+        _aceTimestampText ctrlCommit 0;
+
+        _pos set [0, _posX + _posW - _posH];
+        _pos set [2, _posH];
+        _pos set [3, _posH];
+        _aceTimestamp ctrlSetPosition _pos;
+        _aceTimestamp ctrlCommit 0;
+
+        if !([ACE_player] call FUNC(canTimestamp)) then {
+            _aceTimestamp ctrlEnable false;
+            _aceTimestamp ctrlSetTooltip LLSTRING(TimestampTooltipNoWatch);
+        } else {
+            _aceTimestamp cbSetChecked (GETUVAR(GVAR(timestampChecked),false) || _hasTimestamp);
+        };
+    } else {
+        _aceTimestampText ctrlEnable false;
+        _aceTimestampText ctrlShow false;
+        _aceTimestamp ctrlEnable false;
+        _aceTimestamp ctrlShow false;
+    };
+
     //--- Shape
-    _pos set [1, _posY + 1 * _posH + 2 * BORDER];
+    _pos set [0, _posX];
+    _pos set [1, _posY + 1 * _posH + 2 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _pos set [3, _posH];
     _aceShapeLB ctrlSetPosition _pos;
     _aceShapeLB ctrlCommit 0;
 
     //--- Color
-    _pos set [1, _posY + 2 * _posH + 3 * BORDER];
+    _pos set [1, _posY + 2 * _posH + 3 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceColorLB ctrlSetPosition _pos;
     _aceColorLB ctrlCommit 0;
 
     //--- Angle
-    _pos set [1, _posY + 3 * _posH + 4 * BORDER];
+    _pos set [1, _posY + 3 * _posH + 4 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceAngleSlider ctrlSetPosition _pos;
     _aceAngleSlider ctrlCommit 0;
 
     //--- Angle Text
-    _pos set [1, _posY + 4 * _posH + 5 * BORDER];
+    _pos set [1, _posY + 4 * _posH + 5 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceAngleSliderText ctrlSetPosition _pos;
     _aceAngleSliderText ctrlCommit 0;
@@ -146,13 +199,13 @@
     private _offsetButtons = 0;
 
     if (isMultiplayer) then {
-        _pos set [1,_posY + 5 * _posH + 7 * BORDER];
+        _pos set [1,_posY + 5 * _posH + 7 * BORDER + _timestampOffset];
         _pos set [3,_posH];
         _descriptionChannel ctrlSetStructuredText parseText format ["<t size='0.8'>%1:</t>", localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0"];
         _descriptionChannel ctrlSetPosition _pos;
         _descriptionChannel ctrlCommit 0;
 
-        _pos set [1,_posY + 6 * _posH + 7 * BORDER];
+        _pos set [1,_posY + 6 * _posH + 7 * BORDER + _timestampOffset];
         _pos set [3,_posH];
         _channel ctrlSetPosition _pos;
         _channel ctrlCommit 0;
@@ -199,7 +252,7 @@
     };
 
     //--- ButtonOK
-    _pos set [1, _posY + _offsetButtons];
+    _pos set [1, _posY + _offsetButtons + _timestampOffset];
     _pos set [2, _posW / 2 - BORDER];
     _pos set [3, _posH];
     _buttonOk ctrlSetPosition _pos;
@@ -207,11 +260,17 @@
 
     //--- ButtonCancel
     _pos set [0, _posX + _posW / 2];
-    _pos set [1, _posY + _offsetButtons];
+    _pos set [1, _posY + _offsetButtons + _timestampOffset];
     _pos set [2, _posW / 2];
     _pos set [3, _posH];
     _buttonCancel ctrlSetPosition _pos;
     _buttonCancel ctrlCommit 0;
+
+    ////////////////////
+    // init marker timestamp cb
+
+    _buttonOK ctrlAddEventHandler ['ButtonClick', FUNC(onButtonClickConfirm)];
+    _aceTimestamp ctrlAddEventHandler ['CheckedChanged', FUNC(onCheckedChangedTimestamp)];
 
     ////////////////////
     // init marker shape lb

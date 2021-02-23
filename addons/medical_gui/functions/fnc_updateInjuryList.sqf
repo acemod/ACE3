@@ -65,8 +65,8 @@ switch (GET_FRACTURES(_target) select _selectionN) do {
         _entries pushBack [localize LSTRING(Status_Fractured), [1, 0, 0, 1]];
     };
     case -1: {
-        if (EGVAR(medical,fractures) == 2) then { // Ignore if the splint has no effect
-            _entries pushBack [localize LSTRING(Status_SplintApplied), [1, 1, 1, 1]];
+        if (EGVAR(medical,fractures) in [2, 3]) then { // Ignore if the splint has no effect
+            _entries pushBack [localize LSTRING(Status_SplintApplied), [0.2, 0.2, 1, 1]];
         };
     };
 };

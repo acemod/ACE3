@@ -76,6 +76,7 @@
             <Korean>고통의 정도를 계수만큼 변경합니다</Korean>
             <Chinesesimp>修改疼痛强度的系数</Chinesesimp>
             <Chinese>修改疼痛強度的係數</Chinese>
+            <Turkish>Ağrı ayarlamalarının yoğunluğunu kontrol etmek için katsayı.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_DisplayName">
             <English>IV Transfusion Flow Rate</English>
@@ -88,6 +89,7 @@
             <Italian>IV Portata della trasfusione</Italian>
             <Czech>Rychlost IV transfuze </Czech>
             <Spanish>IV Flujo de transfusión</Spanish>
+            <Turkish>IV Transfüzyon Akış Hızı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
@@ -100,6 +102,7 @@
             <Italian>Controlla la velocità con cui il fluido esce dalle sacche per flebo. La variazione di volume delle sacche IV è calcolata come:\intervallo di tempo (s) * variazione iv al secondo (4,1667 mL/s) * portata (questo coefficiente).</Italian>
             <Czech>Nastavuje jak rychle tekutiny vytékají z IV sáčku. Zbývající objem IV sáčku je vypočítáván následovně:\nčasový interval (s) * změna iv za sekundu (4,1667 mL/s) * rychlost toku (tento koeficient).</Czech>
             <Spanish>Controla la rapidez con que fluye el líquido de las bolsas intravenosas. El cambio de volumen de la bolsa IV se calcula como: \n intervalo (s) de tiempo * cambio iv por segundo (4.1667 mL/s) * velocidad de flujo (este coeficiente).</Spanish>
+            <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
         </Key>
     </Package>
 </Project>

@@ -56,14 +56,16 @@ Adding it through `description.ext` you use:
 ```cpp
 class ACEX_Fortify_Presets {
     class myMissionObjects {
+        displayName = "My Preset";
         objects[] = {
             {"Sandbag", 5},
             {"Bunker", 50}
         };
     };
+};
  ```
 
- Then you will have to set the mission preset to `myMissionObjects` with `#ace-fortify blufor myMissionObjects` to enable it.
+Then you will have to set the mission preset to `myMissionObjects` by either using the Fortify editor module or the chat command: `#ace-fortify blufor myMissionObjects`.
  
 ## 1.3 Adding custom deploy handlers
 

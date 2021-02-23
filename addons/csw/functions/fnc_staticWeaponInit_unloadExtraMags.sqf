@@ -20,7 +20,7 @@ params ["_staticWeapon", "_assemblyMode", "_emptyWeapon"];
 TRACE_3("staticWeaponInit_unloadExtraMags",_staticWeapon,_assemblyMode,_emptyWeapon);
 if (!_assemblyMode) exitWith {};
 
-private _desiredAmmo = getNumber (configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "desiredAmmo");
+private _desiredAmmo = getNumber (configOf _staticWeapon >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
 if (_emptyWeapon) then {
     _desiredAmmo = 0;
