@@ -50,6 +50,7 @@ class CfgVehicles {
         class ACE_SelfActions { \
             class GVAR(ChangeSeat) { \
                 displayName = CSTRING(ChangeSeat); \
+                icon = QPATHTOF(UI\Seats_ca.paa); \
                 condition = QUOTE(call DFUNC(canShowFreeSeats)); \
                 insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
             }; \
