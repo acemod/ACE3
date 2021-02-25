@@ -1,3 +1,5 @@
+#if __has_include("\rhsafrf\addons\rhs_c_weapons\config.bin")
+
 #include "script_component.hpp"
 #include "\z\ace\addons\csw\script_config_macros_csw.hpp"
 
@@ -21,3 +23,5 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgMagazineGroups.hpp"
+
+#endif
