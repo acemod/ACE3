@@ -5,6 +5,7 @@ GVAR(vehicleMagCache) = call CBA_fnc_createNamespace;
 ["ace_settingsInitialized", {
     TRACE_3("settingsInit",GVAR(defaultAssemblyMode),GVAR(handleExtraMagazines),GVAR(ammoHandling));
     ["StaticWeapon", "init", LINKFUNC(staticWeaponInit), true, [], true] call CBA_fnc_addClassEventHandler;
+    ["StaticWeapon", "killed", LINKFUNC(staticWeaponKilled), true, [], true] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;
 
 
@@ -18,7 +19,6 @@ GVAR(vehicleMagCache) = call CBA_fnc_createNamespace;
 [QGVAR(addTurretMag), LINKFUNC(reload_handleAddTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(removeTurretMag), LINKFUNC(reload_handleRemoveTurretMag)] call CBA_fnc_addEventHandler;
 [QGVAR(returnAmmo), LINKFUNC(reload_handleReturnAmmo)] call CBA_fnc_addEventHandler;
-
 
 
 #ifdef DEBUG_MODE_FULL
