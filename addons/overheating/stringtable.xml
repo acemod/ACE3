@@ -510,6 +510,24 @@
             <Chinesesimp>正在检查枪管温度...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
         </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponWithItem">
+            <English>Cool weapon with...</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolingWeaponWithItem">
+            <English>Cooling %1 with %2.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponWithWaterSource">
+            <English>Cool weapon in water source.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolingWeaponWithWaterSource">
+            <English>Cooling weapon in water source.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponNotEnoughWater">
+            <English>Container doesn't have enough water.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponIsCool">
+            <English>Weapon is cool enough the water has stopped boiling.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
             <German>Temperatur</German>

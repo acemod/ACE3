@@ -34,7 +34,7 @@ if (GVAR(unJamOnSwapBarrel) && {[_gunner] call FUNC(canUnjam)}) then {
 [localize LSTRING(SwappedBarrel), QPATHTOF(UI\spare_barrel_ca.paa)] call EFUNC(common,displayTextPicture);
 
 private _temp = _gunner getVariable [format [QGVAR(%1_temp), _weapon], 0];
-private _barrelMass = METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+private _barrelMass = _weapon call FUNC(getBarrelMass);
 
 // Instruct the server to load the coolest spare barrel into the weapon and
 // store the removed barrel with the former weapon temperature. The server

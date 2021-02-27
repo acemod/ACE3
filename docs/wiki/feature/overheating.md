@@ -45,7 +45,13 @@ Adds the ability to changes barrels on machine guns to compensate for those effe
 **NOTE** When the bar is half full (yellow) it means the barrel is around 500°c.
 Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
 
-### 2.4 Avoiding cookoffs
+### 2.4 Cooling your weapon
+- Weapons and spare barrels will cool off over time.
+- Cooling speed of weapons in increased in windy or rainy weather, and when swimming.
+- If AceX Field Rations is loaded then weapons can be cooled with canteens, water bottles, or other beverage items. This does not require the Field Rations system to be enabled.
+- If AceX Field Rations is enabled then weapons can also be cooled with the same water sources used to refill canteens and water bottles.
+
+### 2.5 Avoiding cookoffs
 - After a firefight unload closed bolt firearms (most rifles) until the barrel temperature has gone down to less than 180°C (two sections or less on the bar).
 - Clear failure to fire jams quickly
 
