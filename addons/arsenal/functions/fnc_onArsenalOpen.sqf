@@ -64,7 +64,7 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 for "_index" from 0 to 10 do {
     switch (_index) do {
         // primary, secondary, handgun weapons
-        case 0: {
+        case IDX_VIRT_WEAPONS: {
             private _array = LIST_DEFAULTS select _index;
 
             if ((_array select 0) isNotEqualTo "") then {
@@ -81,7 +81,7 @@ for "_index" from 0 to 10 do {
         };
 
         // Accs for the weapons above
-        case 1: {
+        case IDX_VIRT_ATTACHEMENTS: {
             private _array = LIST_DEFAULTS select _index;
             _array params ["_accsArray", "_magsArray"];
 
@@ -99,18 +99,18 @@ for "_index" from 0 to 10 do {
                 if (_x isNotEqualTo []) then {
 
                     if (_x select 0 != "") then {
-                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 0);
+                        (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 0);
                     };
 
                     if (count _x > 1 && {_x select 1 != ""}) then {
-                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 1);
+                        (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 1);
                     };
                 };
             } forEach _magsArray;
         };
 
         // Inventory items
-        case 2: {
+        case IDX_VIRT_ITEMS_ALL: {
                 call FUNC(updateUniqueItemsList);
             };
 

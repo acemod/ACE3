@@ -224,7 +224,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsPrimaryMuzzle);
+            } foreach ((GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) arrayIntersect _compatibleMagsPrimaryMuzzle);
         };
     };
 
@@ -232,14 +232,14 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsSecondaryMuzzle);
+            } foreach ((GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) arrayIntersect _compatibleMagsSecondaryMuzzle);
         };
     };
 
     case IDC_buttonMag : {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 2) arrayIntersect _allCompatibleMags);
+        } foreach ((GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) arrayIntersect _allCompatibleMags);
         {
             ["CfgMagazines", _x, true, true] call _fnc_fill_right_Container;
         } foreach ((GVAR(virtualItems) select 19) arrayIntersect _allCompatibleMags);
@@ -248,7 +248,7 @@ switch (_ctrlIDC) do {
     case IDC_buttonMagALL : {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 2);
+        } foreach (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
         {
             ["CfgMagazines", _x, true, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 19);
