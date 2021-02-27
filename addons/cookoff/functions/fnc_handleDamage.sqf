@@ -28,7 +28,7 @@ if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] in [0, false]) exitWith {
 if (
     _vehicle getVariable [QGVAR(enable), GVAR(enable)] isEqualTo 1
     && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} == -1}
-    && {!(_simulationType isEqualTo "box")}
+    && {_simulationType isNotEqualTo "box"}
 ) exitWith {};
 
 // get hitpoint name
