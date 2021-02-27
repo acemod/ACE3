@@ -1,4 +1,4 @@
-//pragma SKIP_COMPILE
+//pragma SKIP_COMPILE - Inline file
 
 GVAR(stateMachine) = [{call EFUNC(common,getLocalUnits)}, true] call CBA_statemachine_fnc_create;
 

@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 [
     QGVAR(enable), "CHECKBOX",
     [LSTRING(ModuleSettings_enable), LSTRING(ModuleSettings_enable_Description)],

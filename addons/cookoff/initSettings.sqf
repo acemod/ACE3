@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 // CBA Settings [ADDON: ace_cookoff]:
 
 [

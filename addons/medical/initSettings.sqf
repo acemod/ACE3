@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 [
     QGVAR(limping),
     "LIST",

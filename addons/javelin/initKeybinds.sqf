@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 // by commy2
 
 ["ACE3 Weapons", QGVAR(lockTarget), localize LSTRING(LockTarget),

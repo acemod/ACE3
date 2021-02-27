@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 // by commy2
 
 ["ACE3 Vehicles", QGVAR(lazeTarget), localize LSTRING(LaseTarget),

@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 
 
 ["ACE3 Equipment", QGVAR(LaserCodeUp), localize LSTRING(laserCodeUp),

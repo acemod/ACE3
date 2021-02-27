@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 
 ["ACE3 Equipment", QGVAR(MenuKey), localize LSTRING(ConfigureDAGR),
 {

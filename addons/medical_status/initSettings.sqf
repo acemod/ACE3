@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 [
     QEGVAR(medical,bleedingCoefficient),
     "SLIDER",

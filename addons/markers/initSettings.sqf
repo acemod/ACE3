@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayName)];
 
 [

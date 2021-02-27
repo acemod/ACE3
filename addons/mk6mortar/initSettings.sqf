@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 // CBA Settings [ADDON: ace_mk6mortar]:
 // These settings effect gameplay difficutly:  defaults will leave the mortar the same as vanilla
 

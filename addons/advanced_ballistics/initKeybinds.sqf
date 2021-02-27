@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 ["ACE3 Equipment", QGVAR(ProtractorKey), localize LSTRING(ProtractorKey),
 {
     // Conditions: canInteract

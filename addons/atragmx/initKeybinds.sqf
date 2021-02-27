@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 ["ACE3 Equipment", QGVAR(ATragMXDialogKey), localize LSTRING(ATragMXDialogKey),
 {
     // Conditions: canInteract

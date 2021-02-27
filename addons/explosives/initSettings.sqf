@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
 
 [

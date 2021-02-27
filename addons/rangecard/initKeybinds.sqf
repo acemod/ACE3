@@ -1,4 +1,3 @@
-//pragma SKIP_COMPILE
 ["ACE3 Equipment", QGVAR(RangeCardDialogKey), LLSTRING(RangeCardDialogKey),
 {
     // Conditions: canInteract, canShow

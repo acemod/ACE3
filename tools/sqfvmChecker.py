@@ -3,35 +3,40 @@ import sys
 import subprocess
 import concurrent.futures
 
-addonBasePath = os.path.dirname(os.getcwd())
-v_paths = [
-    "P:/a3|/a3",
+addon_base_path = os.path.dirname(os.getcwd())
+
+files_to_ignore_lower = [
+    x.lower() for x in ["initSettings.sqf", "initKeybinds.sqf", "XEH_PREP.sqf"]
+]
+sqfvm_exe = os.path.join(addon_base_path, "sqfvm.exe")
+virtual_paths = [
+    # would need to add more even more to /include to use it
+    "P:/a3|/a3",  # "{}|/a3".format(os.path.join(addon_base_path, "include", "a3")),
     "P:/a3|/A3",
     "P:/x/cba|/x/cba",
-    # "{}|/a3".format(os.path.join(addonBasePath, "include", "a3")),
-    # "{}|/x/cba".format(os.path.join(addonBasePath, "include", "x", "cba")),
-    "{}|/z/ace".format(addonBasePath),
+    "{}|/z/ace".format(addon_base_path),
 ]
 
 
-def getFiles(basePath):
+def get_files_to_process(basePath):
     arma_files = []
-    for root, _dirs, files in os.walk(os.path.join(addonBasePath, "addons")):
+    for root, _dirs, files in os.walk(os.path.join(addon_base_path, "addons")):
         for file in files:
             if file.endswith(".sqf") or file == "config.cpp":
+                if file.lower() in files_to_ignore_lower:
+                    continue
                 filePath = os.path.join(root, file)
                 arma_files.append(filePath)
     return arma_files
 
 
-def processFile(filePath, skipA3Warnings=True):
+def process_file(filePath, skipA3Warnings=True):
     with open(filePath, "r", encoding="utf-8", errors="ignore") as file:
         content = file.read()
         if content.startswith("//pragma SKIP_COMPILE"):
             return False
-    sqfvm = os.path.join(addonBasePath, "sqfvm.exe")
-    cmd = [sqfvm, "--input", filePath, "--parse-only", "--automated"]
-    for v in v_paths:
+    cmd = [sqfvm_exe, "--input", filePath, "--parse-only", "--automated"]
+    for v in virtual_paths:
         cmd.append("-v")
         cmd.append(v)
     # cmd.append("-V")
@@ -64,14 +69,19 @@ def processFile(filePath, skipA3Warnings=True):
 
 
 def main():
+    if not os.path.isfile(sqfvm_exe):
+        print("Error: sqfvm.exe not found in base folder [{}]".format(sqfvm_exe))
+        return 1
+
     error_count = 0
-    arma_files = getFiles(addonBasePath)
+    arma_files = get_files_to_process(addon_base_path)
+    print("Checking {} files".format(len(arma_files)))
     with concurrent.futures.ThreadPoolExecutor(max_workers=12) as executor:
-        for fileError in executor.map(processFile, arma_files):
+        for fileError in executor.map(process_file, arma_files):
             if fileError:
                 error_count += 1
 
-    print("Checked {} files - errors: {}".format(len(arma_files), error_count))
+    print("Errors: {}".format(error_count))
     return error_count
 
 
