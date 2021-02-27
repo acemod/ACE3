@@ -495,7 +495,7 @@
 {% endif %}
 
 {% if include.component == "compat_r3f" %}
-`r3f_armes_c`, `R3F_G17_addons`, `r3f_acc`
+`r3f_armes_c`, `r3f_acc`, `R3F_G17_addons`, `R3F_G_SCAR`, `R3F_SCAR_H`, `R3F_SCAR_L`, `R3F_FN_MAG`
 {% endif %}
 
 {% if include.component == "compat_rh_acc" %}

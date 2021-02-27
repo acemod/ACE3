@@ -153,8 +153,8 @@ switch true do {
                             _ctrlPanel lbSetTooltip [_lbAdd,format ["%1\n%2",_displayName, _configName]];
                             _x call ADDMODICON;
                         };
-                    } foreach ("isClass _x" configClasses _x);
-                } foreach ("isClass _x" configClasses (configfile >> "cfgfaces"));
+                    } foreach ("true" configClasses _x);
+                } foreach ("true" configClasses (configfile >> "cfgfaces"));
             };
             case IDC_buttonVoice : {
                 private _voices = (configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [(configfile >> "CfgVoice" >> "NoVoice")];

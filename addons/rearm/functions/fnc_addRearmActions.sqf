@@ -44,7 +44,7 @@ private _vehicleActions = [];
     TRACE_2("can add",_x,_magazineHelper);
 
     if (_magazineHelper isNotEqualTo []) then {
-        private _icon = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Icon");
+        private _icon = getText(configOf _vehicle >> "Icon");
         if !((_icon select [0, 1]) == "\") then {
             _icon = "";
         };
@@ -52,7 +52,7 @@ private _vehicleActions = [];
             // [Level 0] adds a single action to rearm the entire vic
             private _action = [
                 _vehicle,
-                getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"),
+                getText(configOf _vehicle >> "displayName"),
                 _icon,
                 {_this call FUNC(rearmEntireVehicle)},
                 {true},
@@ -79,7 +79,7 @@ private _vehicleActions = [];
 
             private _action = [
                 _vehicle,
-                getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"),
+                getText(configOf _vehicle >> "displayName"),
                 _icon,
                 {},
                 {true},

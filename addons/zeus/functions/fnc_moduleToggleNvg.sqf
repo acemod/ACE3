@@ -31,14 +31,13 @@ if (_target == -1) then {
 };
 
 // Add or remove NVGs from units
-private _cfgVehicles = configFile >> "CfgVehicles";
 private _cfgWeapons = configFile >> "CfgWeapons";
 
 if (_toggle) then {
     {
         if (hmd _x isEqualTo "") then {
             // Get NVG item and helmet from unit config
-            private _linkedItems = getArray (_cfgVehicles >> typeOf _x >> "linkedItems");
+            private _linkedItems = getArray (configOf _x >> "linkedItems");
             private _nvgItem = _linkedItems select {_x isKindOf ["NVGoggles", _cfgWeapons]};
             private _nvgHelmet = _linkedItems select {getArray (_cfgWeapons >> _x >> "subItems") isNotEqualTo []};
 

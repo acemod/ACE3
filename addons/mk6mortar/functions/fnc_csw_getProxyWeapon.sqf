@@ -55,7 +55,7 @@ if (_proxyWeaponNeeded || GVAR(useAmmoHandling)) then {
                     };
                 };
             } else {
-                WARNING("unknown mag %1", _xMag);
+                WARNING_1("unknown mag %1", _xMag);
             };
         };
     } forEach (magazinesAllTurrets _mortar);

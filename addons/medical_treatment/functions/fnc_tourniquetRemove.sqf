@@ -40,7 +40,7 @@ TRACE_1("clearConditionCaches: tourniquetRemove",_nearPlayers);
 
 // Add tourniquet item to medic's inventory
 // todo: should there be a setting to select who receives the removed tourniquet?
-[_medic, "ACE_tourniquet", true] call EFUNC(common,addToInventory);
+[_medic, "ACE_tourniquet"] call EFUNC(common,addToInventory);
 
 // Handle occluded medications that were blocked due to tourniquet
 private _occludedMedications = _patient getVariable [QEGVAR(medical,occludedMedications), []];

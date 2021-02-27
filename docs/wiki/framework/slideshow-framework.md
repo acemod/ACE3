@@ -25,11 +25,6 @@ Important notes:
 - You can have multiple sets of images on different screens by using multiple modules/function calls.
 - It is advisable images resolution sizes are powers of 2 (eg. 512x512) to avoid graphical glitches in them.
 
-<div class="panel callout">
-<h5>Note:</h5>
-<p>Mission MUST be in a PBO format (not bare folder) when used on a dedicated server with slideshow images inside a mission due to an <a href="https://feedback.bistudio.com/T80668">issue</a> to prevent errors.</p>
-</div>
-
 
 ## 2. Scripting
 

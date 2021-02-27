@@ -219,6 +219,7 @@
             <Korean>투항시키기</Korean>
             <Chinese>使單位投降</Chinese>
             <Chinesesimp>使单位投降</Chinesesimp>
+            <Turkish>Teslim olmaya zorla</Turkish>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.</English>

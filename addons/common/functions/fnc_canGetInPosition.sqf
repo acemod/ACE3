@@ -31,7 +31,7 @@ if (!alive _vehicle || {locked _vehicle > 1}) exitWith {false};
 
 private ["_selectionPosition", "_selectionPosition2"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 private _turret = [];
 
 private _radius = 0;

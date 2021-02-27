@@ -16,6 +16,6 @@ PREP_RECOMPILE_END;
     true,
     false,
     {[QGVAR(hideAltimeter), _this, false] call EFUNC(common,cbaSettings_settingChanged)}
-] call cba_settings_fnc_init; 
+] call CBA_fnc_addSetting;
 
 ADDON = true;

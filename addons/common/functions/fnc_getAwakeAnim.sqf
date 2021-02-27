@@ -23,7 +23,7 @@ private _vehicle = vehicle _unit;
 if (_vehicle isEqualTo _unit) exitWith {""};
 
 // --- driver
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 if (_unit == driver _vehicle) exitWith {
     getText (configFile >> "CfgMovesBasic" >> "ManActions" >> getText (_config >> "driverAction")) // return

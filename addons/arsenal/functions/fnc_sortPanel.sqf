@@ -97,12 +97,13 @@ private _selected = if (_right) then {
     _panel lbData _curSel
 };
 
-private _mode = 0 max lbCurSel _sortControl;
-private _statement = _sorts select _mode select 2;
+private _sortName = _sortControl lbData (0 max lbCurSel _sortControl);
+private _sortConfig = _sorts select (0 max (_sorts findIf {(_x select 0) isEqualTo _sortName}));
+private _statement = _sortConfig select 2;
 
 missionNamespace setVariable [
     [QGVAR(lastSortLeft), QGVAR(lastSortRight)] select _rightSort,
-    _sorts select _mode select 1
+    _sortConfig select 1
 ];
 
 private _for = if (_right) then {
@@ -117,8 +118,13 @@ _for do {
     } else {
         _panel lbData _i
     };
+    private _quantity = if (_right) then {
+        parseNumber (_panel lnbText [_i, 2])
+    } else {
+        0
+    };
     private _itemCfg = _cfgClass >> _item;
-    private _value = _itemCfg call _statement;
+    private _value = [_itemCfg, _item, _quantity] call _statement;
     if (_value isEqualType 0) then {
         _value = [_value, 8] call CBA_fnc_formatNumber;
     };

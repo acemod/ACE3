@@ -30,7 +30,7 @@ params ["_vehicle"];
 private _magazineInfo = [];
 
 // 1.70 pylons
-private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
+private _pylonConfigs = configProperties [configOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
 {
     private _pylonConfig = _x;
 
@@ -48,7 +48,7 @@ private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf
 
         if (_currentRounds < _maxRounds) then {
             // getPylonTurret expects 0 based index, and returns driver turret as [-1]
-            private _pylonTurret = [_vehicle, (_pylonIndex - 1)] call EFUNC(common,getPylonTurret);
+            private _pylonTurret = [_vehicle, _forEachIndex] call EFUNC(common,getPylonTurret);
 
             _magazineInfo pushBack [_pylonMagazine, _pylonTurret, true, _pylonIndex, 1, 1, _maxRounds, [_currentRounds]];
         };

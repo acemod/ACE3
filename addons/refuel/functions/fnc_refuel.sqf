@@ -20,7 +20,7 @@
 
 params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _sink;
+private _config = configOf _sink;
 
 private _rate =  getNumber (_config >> QGVAR(flowRate)) * GVAR(rate);
 private _maxFuel = getNumber (_config >> QGVAR(fuelCapacity));

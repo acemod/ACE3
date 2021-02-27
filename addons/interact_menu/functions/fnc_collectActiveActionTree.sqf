@@ -13,7 +13,7 @@
  * Active children <ARRAY>
  *
  * Example:
- * [bob, [array], [array], 5] call ACE_interact_menu_fnc_collectActoveActionTree
+ * [bob, [array], [array], 5] call ACE_interact_menu_fnc_collectActiveActionTree
  *
  * Public: No
  */
@@ -31,7 +31,17 @@ if ((_origActionData select 10) isNotEqualTo {}) then {
     [_target, ACE_player, _origActionData select 6, _origActionData] call (_origActionData select 10);
 };
 
-_origActionData params ["_actionName", "", "", "_statementCode", "_conditionCode", "_insertChildrenCode", "_customParams", "", "_distance"];
+_origActionData params [
+    "_actionName",
+    "_displayName",
+    "",
+    "_statementCode",
+    "_conditionCode",
+    "_insertChildrenCode",
+    "_customParams",
+    "_position",
+    "_distance"
+];
 
 // Return nothing if the action itself is not active
 if !([_target, ACE_player, _customParams] call _conditionCode) exitWith {
@@ -91,5 +101,23 @@ if ((_activeChildren isEqualTo []) && {_statementCode isEqualTo {}}) exitWith {
     []
 };
 
+if (GVAR(consolidateSingleChild) && {count _activeChildren == 1} && {_statementCode isEqualTo {}}) then {
+    _activeChildren select 0 params ["_childActionData", "_childChildren", "_childObject"];
+    _childActionData params ["", "_displayNameChild", "_iconChild", "_statementChild", "", "", "_customParamsChild", "", "", "_paramsChild"];
+    _origActionData = [
+        _actionName,
+        format ["%1 > %2", _displayName, _displayNameChild],
+        _iconChild,
+        _statementChild,
+        _conditionCode,
+        _insertChildrenCode,
+        _customParamsChild,
+        _position,
+        _distance,
+        _paramsChild
+    ];
+    _activeChildren = _childChildren;
+    _object = _childObject;
+};
 
 [_origActionData, _activeChildren, _object]

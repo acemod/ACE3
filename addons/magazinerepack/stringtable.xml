@@ -14,6 +14,7 @@
             <Portuguese>Preenchimento de Carregador</Portuguese>
             <French>Remplissage des chargeurs</French>
             <Czech>Přepáskování zásobníků</Czech>
+            <Turkish>Şarjör Yeniden Doldurma</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
@@ -28,6 +29,7 @@
             <Portuguese>Tempo por projétil</Portuguese>
             <French>Temps par cartouche</French>
             <Czech>Čas na náboj</Czech>
+            <Turkish>Süre başına mermi</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
@@ -42,6 +44,7 @@
             <Portuguese>Tempo por carregador</Portuguese>
             <French>Temps par chargeur</French>
             <Czech>Čas na zásobník</Czech>
+            <Turkish>Süre başına şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
@@ -72,6 +75,7 @@
             <Korean>탄창 다시 채우기</Korean>
             <Chinesesimp>重新整理弹匣</Chinesesimp>
             <Chinese>重新整理彈匣</Chinese>
+            <Turkish>Şarjörleri Yeniden Doldur</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackingMagazine">
             <English>Repacking Magazines...</English>
@@ -88,6 +92,7 @@
             <Korean>다시 채우는중...</Korean>
             <Chinesesimp>正在整理弹匣 ...</Chinesesimp>
             <Chinese>重新整理彈匣中 ...</Chinese>
+            <Turkish>Şarjör Yeniden Dolduruluyor...</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesDetail">
             <English>%1 full mag(s) and %2 extra round(s)</English>
@@ -104,6 +109,7 @@
             <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
             <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
             <Chinese>%1個滿的彈匣與%2發額外子彈</Chinese>
+            <Turkish>%1 Dolu şarjör ve %2  fazladan mermi</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
@@ -120,6 +126,7 @@
             <Korean>탄창 채우기 끝남</Korean>
             <Chinesesimp>重整完成</Chinesesimp>
             <Chinese>重整完成</Chinese>
+            <Turkish>Yeniden Doldurma Bitti</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
@@ -136,6 +143,7 @@
             <Korean>탄창 채우기 방해받음</Korean>
             <Chinesesimp>弹匣整理被打断</Chinesesimp>
             <Chinese>重整被中斷</Chinese>
+            <Turkish>Yeniden Doldurma Durduruldu</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
@@ -152,6 +160,7 @@
             <Korean>%1 꽉찼고 %2 부분참</Korean>
             <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
             <Chinese>%1個滿的與%2個部分的</Chinese>
+            <Turkish>%1 Dolu ve %2 Partial</Turkish>
         </Key>
     </Package>
 </Project>

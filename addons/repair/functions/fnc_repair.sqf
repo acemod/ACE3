@@ -181,7 +181,7 @@ private _soundPosition = AGLToASL (_caller modelToWorldVisual (_caller selection
 
 // Get repair time
 private _repairTime = [
-    configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
+    configOf _target >> QGVAR(repairTimes) >> configName _config,
     "number",
     -1
 ] call CBA_fnc_getConfigEntry;
