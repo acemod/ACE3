@@ -671,6 +671,12 @@
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
             <Russian>Уровень навыка требуемый для переливания крови IV группы.</Russian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
+            <English>Locations IV Transfusion</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
+            <English>Controls where IV transfusions can be performed.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
             <German>Standard Arma-Equipment in ACE-Items umwandeln</German>

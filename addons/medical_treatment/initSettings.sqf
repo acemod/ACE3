@@ -225,6 +225,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(locationIV),
+    "LIST",
+    [LSTRING(LocationIV_DisplayName), LSTRING(LocationIV_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(allowSelfIV),
     "LIST",
     [LSTRING(AllowSelfIV_DisplayName), LSTRING(AllowSelfIV_Description)],
