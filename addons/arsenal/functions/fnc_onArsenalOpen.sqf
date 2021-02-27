@@ -67,15 +67,15 @@ for "_index" from 0 to 10 do {
         case 0: {
             private _array = LIST_DEFAULTS select _index;
 
-            if !((_array select 0) isEqualTo "") then {
+            if ((_array select 0) isNotEqualTo "") then {
                 ((GVAR(virtualItems) select _index) select 0) pushBackUnique (_array select 0);
             };
 
-            if !((_array select 1) isEqualTo "") then {
+            if ((_array select 1) isNotEqualTo "") then {
                 ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 1);
             };
 
-            if !((_array select 2) isEqualTo "") then {
+            if ((_array select 2) isNotEqualTo "") then {
                  ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
             };
         };
@@ -96,7 +96,7 @@ for "_index" from 0 to 10 do {
             } forEach _accsArray;
 
             {
-                if !(_x isEqualTo []) then {
+                if (_x isNotEqualTo []) then {
 
                     if (_x select 0 != "") then {
                         (GVAR(virtualItems) select 2) pushBackUnique (_x select 0);
@@ -116,8 +116,8 @@ for "_index" from 0 to 10 do {
 
         // The rest
         default {
-            private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
-            if !(_array isEqualTo []) then {
+            private _array = (LIST_DEFAULTS select _index) select {_x isNotEqualTo ""};
+            if (_array isNotEqualTo []) then {
                 {(GVAR(virtualItems) select _index) pushBackUnique _x} forEach _array;
             };
         };

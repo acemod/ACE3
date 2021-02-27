@@ -137,7 +137,7 @@ _theMap drawIcon ['iconStaticMG',[1,0,0,1],_posTopRight,24,24,getDir player,'1,1
 _theMap drawIcon ['iconStaticMG',[1,0,0,1],_posTopLeft,24,24,getDir player,'-1,1',1,0.03,'TahomaB','right'];
 _theMap drawIcon ['iconStaticMG',[1,0,0,1],_posBottomLeft,24,24,getDir player,'-1,-1',1,0.03,'TahomaB','right'];
 _theMap drawIcon ['iconStaticMG',[1,0,0,1],_posBottomRight,24,24,getDir player,'1,-1',1,0.03,'TahomaB','right'];
-if !(GVAR(freeDrawingData) isEqualTo []) then {
+if (GVAR(freeDrawingData) isNotEqualTo []) then {
     _theMap drawIcon ['iconStaticMG',[0,0,1,1],GVAR(freeDrawingData) select 1,24,24,getDir player,'1,-1',1,0.03,'TahomaB','right'];
     _theMap drawIcon ['iconStaticMG',[0,0,1,1],GVAR(freeDrawingData) select 2,24,24,getDir player,'1,-1',1,0.03,'TahomaB','right'];
 };

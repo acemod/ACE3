@@ -25,7 +25,7 @@ private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
         private _attachedObjects = attachedObjects _dummy;
         //Rope is considered occupied when it's broken as well, so check if array is empty
         //Note: ropes are not considered attached objects by Arma
-        if !(_attachedObjects isEqualTo []) then {
+        if (_attachedObjects isNotEqualTo []) then {
             detach ((attachedObjects _dummy) select 0);
         };
     };

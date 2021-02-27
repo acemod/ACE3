@@ -36,7 +36,7 @@ private _menuInSelectedPath = true;
     if (_forEachIndex >= (count GVAR(menuDepthPath))) exitWith {
         _menuInSelectedPath = false;
     };
-    if !(_x isEqualTo (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
+    if (_x isNotEqualTo (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
         _menuInSelectedPath = false;
     };
 } forEach _path;

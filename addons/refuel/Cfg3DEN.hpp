@@ -25,7 +25,7 @@ class Cfg3DEN {
                         tooltip = CSTRING(hooks_edenDesc);
                         property = QGVAR(hooks);
                         control = "EditXYZ";
-                        expression = QUOTE(if !(_value isEqualTo DEFAULT_HOOKS) then {_this setVariable [ARR_3('%s',[_value],true)]});
+                        expression = QUOTE(if (_value isNotEqualTo DEFAULT_HOOKS) then {_this setVariable [ARR_3('%s',[_value],true)]});
                         defaultValue = QUOTE(DEFAULT_HOOKS);
                         condition = "(1-objectBrain)*(1-objectAgent)";
                     };

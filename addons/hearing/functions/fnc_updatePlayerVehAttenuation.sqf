@@ -24,7 +24,7 @@ if (ACE_player != _vehicle) then {
     private _turretPath = [ACE_player] call EFUNC(common,getTurretIndex);
     private _effectType = getText (configOf _vehicle >> "attenuationEffectType");
 
-    if (!(_turretPath isEqualTo [])) then {
+    if (_turretPath isNotEqualTo []) then {
         private _turretConfig = [(configOf _vehicle), _turretPath] call EFUNC(common,getTurretConfigPath);
 
         if ((getNumber (_turretConfig >> "disableSoundAttenuation")) == 1) then {

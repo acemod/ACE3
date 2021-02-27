@@ -61,11 +61,11 @@ private _fnc_addToTabs = {
 
 _finalArray = ["", _displayName, _statement, _condition];
 
-if !(_leftTabs isEqualTo []) then {
+if (_leftTabs isNotEqualTo []) then {
     [GVAR(sortListLeftPanel), _leftTabs, "L", 0] call _fnc_addToTabs;
 };
 
-if !(_rightTabs isEqualTo []) then {
+if (_rightTabs isNotEqualTo []) then {
     [GVAR(sortListRightPanel), _rightTabs, "R", 1] call _fnc_addToTabs;
 };
 
