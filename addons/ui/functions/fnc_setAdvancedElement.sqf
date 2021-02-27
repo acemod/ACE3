@@ -76,18 +76,15 @@ private _success = false;
 
     // Loop through IGUI displays as they can be present several times for some reason
     {
+        _success = true;
+
         private _control = _x displayCtrl _idc;
-        if (ctrlFade _control == _fade) then {
-            _success = true;
-            continue;
-        };
+        if (ctrlFade _control == _fade) then {continue};
 
         TRACE_4("Setting Element Visibility",_element,_fade,_idd,_idc);
 
         _control ctrlSetFade _fade;
         _control ctrlCommit 0;
-
-        _success = true;
     } count _displays;
     nil
 } count _elements;
