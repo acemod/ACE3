@@ -11,10 +11,10 @@ version:
   patch: 0
 ---
 
-## 1. Disabling pick up of specific ammo
+## 1. Disabling pick up of ammo attached to an object
 
-Pick-up interaction can be disabled for specific ammo. Use settings to disable it globally.
+Pick-up interaction can be disabled for ammo (e.g. chemlights) attached to an object.
 
 ```js
-AMMO setVariable ["ace_advanced_throwing_disablePickUp", true, true];
+OBJECT setVariable ["ace_advanced_throwing_disablePickUp", true, true];
 ```
