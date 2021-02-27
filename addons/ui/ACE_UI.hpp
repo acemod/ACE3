@@ -3,6 +3,9 @@ class ACE_UI {
         idd = IDD_MISSION;
         elements[] = {11400};
         location = ANYWHERE;
+        class conditions {
+            isDevelopmentBranch = QUOTE(productVersion select 4 == 'Development');
+        };
     };
     class weaponName {
         idd = IDD_UNITINFO;

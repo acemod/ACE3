@@ -45,14 +45,6 @@ class ACE_Settings {
     };
 
 // ADVANCED
-    // general
-    class GVAR(devWatermark) {
-        category = CSTRING(Category);
-        displayName = CSTRING(devWatermark);
-        typeName = "BOOL";
-        value = 1;
-        isClientSettable = 1;
-    };
     // Soldier
     class GVAR(weaponName) {
         category = CSTRING(Category);
