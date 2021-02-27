@@ -26,7 +26,7 @@ if (!alive _vehicle) exitWith { [false, "", -1, false] };
 // Verify unit has carry magazine
 if ((!isNull _unit) && {((_vehicle distance _unit) > 5) || {((magazines _unit) findIf {_x == _carryMag}) == -1}}) exitWith { [false, "", -2, false] };
 
-private _desiredAmmo = getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "desiredAmmo");
+private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
 private _ammoNeeded = _desiredAmmo min getNumber (configFile >> "CfgMagazines" >> _carryMag >> "count"); // assume it needs full carry mag
 private _loadedMag = "";

@@ -32,7 +32,7 @@ private _unitTypePicture = "";
 private _vehicleTypePicture = "";
 private _vehiclePositionPicture = "";
 if (_focus != vehicle _focus) then {
-    _vehicleTypePicture = getText (configFile >> "CfgVehicles" >> typeOf vehicle _focus >> "Picture");
+    _vehicleTypePicture = getText (configOf vehicle _focus >> "Picture");
 
     _vehiclePositionPicture = switch (_focus) do {
         case (commander vehicle _focus): {IMG_COMMANDER};

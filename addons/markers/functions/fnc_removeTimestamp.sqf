@@ -13,6 +13,8 @@
  * "abc [12:00 am]" call ace_markers_fnc_removeTimestamp // "abc"
  * "[13:37]" call ace_markers_fnc_removeTimestamp // ""
  * "xyz [123]" call ace_markers_fnc_removeTimestamp // "xyz [123]"
+ * "xyz [12]" call ace_markers_fnc_removeTimestamp // "xyz"
+ * "xyz [12 pm]" call ace_markers_fnc_removeTimestamp // "xyz"
  *
  * Public: No
  */
@@ -37,10 +39,32 @@ _string = toString _string;
 
 if (_string select [0, 1] != "[") exitWith {_original};
 
-if !(_string select [1, 1] in DIGITS) exitWith {_original};
-if !(_string select [2, 1] in DIGITS) exitWith {_original};
-if (_string select [3, 1] != ":") exitWith {_original};
-if !(_string select [4, 1] in DIGITS) exitWith {_original};
-if !(_string select [5, 1] in DIGITS) exitWith {_original};
+private _index = 1;
+private _keepCheckingDigits = true;
+private _validTimestamp = true;
+while {_keepCheckingDigits} do {
+    if (!(_string select [_index, 1] in DIGITS)) exitWith { _validTimestamp = false; };
+    if (!(_string select [_index+1, 1] in DIGITS)) exitWith { _validTimestamp = false; };
+    switch (_string select [_index+2, 1]) do {
+        case (":"): {
+            _index = _index + 3;
+        };
+        case ("]"): {
+            _keepCheckingDigits = false; 
+        };
+        case (" "): {
+            _keepCheckingDigits = false;
+            if (!(_string select [_index+3, 3] in ["am]", "pm]"])) then {_validTimestamp = false; };
+        };
+        default {
+            _keepCheckingDigits = false; 
+            _validTimestamp = false;
+        };
+    };
+};
 
-[_original select [0, count _original - _timestampLength], " "] call CBA_fnc_rightTrim // return
+if (_validTimestamp) then {
+    [_original select [0, count _original - _timestampLength], " "] call CBA_fnc_rightTrim // return
+} else {
+    _original // return
+}

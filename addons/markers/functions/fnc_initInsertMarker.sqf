@@ -105,11 +105,8 @@
     private _pos = ctrlposition _text;
     _pos params ["_posX", "_posY", "_posW", "_posH"];
     _posX = _posX + 0.01;
-<<<<<<< HEAD
     _posY = _posY min ((safeZoneH + safeZoneY) - (11 * _posH + 11 * BORDER));  //prevent buttons being placed below bottom edge of screen
-=======
-    _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER)); //prevent buttons being placed below bottom edge of screen
->>>>>>> origin/fix-broken-timestamps
+
     _pos set [0, _posX];
     _pos set [1, _posY];
     _text ctrlSetPosition _pos;

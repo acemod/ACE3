@@ -67,5 +67,5 @@ private _mass = getMass _target;
 
 if (_mass > 1) then {
     _target setVariable [QGVAR(originalMass), _mass, true];
-    [QEGVAR(common,setMass), [_target, 1e-12], _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,setMass), [_target, 1e-12]] call CBA_fnc_globalEvent; // force global sync
 };
