@@ -22,7 +22,7 @@ private _turrets = allTurrets [_vehicle, true];
 private _doorTurrets = [];
 
 {
-    private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    private _config = configOf _vehicle;
 
     _config = [_config, _x] call FUNC(getTurretConfigPath);
 

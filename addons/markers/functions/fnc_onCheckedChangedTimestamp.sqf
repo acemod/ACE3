@@ -1,8 +1,7 @@
 #include "script_component.hpp"
-#include "\a3\ui_f\hpp\defineResincl.inc"
 /*
- * Author: Freddo
- * When the timestamp checkbox is toggled
+ * Author: Freddo, commy2
+ * When the timestamp checkbox is toggled.
  *
  * Arguments:
  * 0: Checkbox <CONTROL>
@@ -12,12 +11,10 @@
  * None
  *
  * Example:
- * [_cbTimestamp,1] call ACE_markers_fnc_onCheckedChangedTimestamp
+ * [controlNull, 1] call ACE_markers_fnc_onCheckedChangedTimestamp;
  *
  * Public: No
  */
-params ["_cbTimestamp", "_checked"];
+params ["", "_checked"];
 
-SETUVAR(GVAR(timestampChecked),(_checked == 1));
-
-nil
+uiNamespace setVariable [QGVAR(timestampChecked), _checked == 1]

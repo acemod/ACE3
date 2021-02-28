@@ -57,7 +57,7 @@ if (GVAR(supply) == 2) then {
     private _magazineIdx = -1;
     {
         _x params ["_magazine"];
-        if ((_magazine isEqualTo _magazineClass)) exitWith {
+        if (_magazine isEqualTo _magazineClass) exitWith {
             _magazineIdx = _forEachIndex;
         };
     } forEach _magazineSupply;

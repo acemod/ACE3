@@ -22,8 +22,8 @@ params ["_vehicle", "_turret", "_carryMag", "_unit"];
 TRACE_4("loadMagazine",_vehicle,_turret,_carryMag,_unit);
 
 private _timeToLoad = 1;
-if (!isNull(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "ammoLoadTime")) then {
-    _timeToLoad = getNumber(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "ammoLoadTime");
+if (!isNull(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime")) then {
+    _timeToLoad = getNumber(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime");
 };
 
 private _displayName = format [localize LSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];

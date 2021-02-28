@@ -36,7 +36,7 @@ if (_patient call EFUNC(common,isAwake)) exitWith {
     params ["_unit", "_vehicle"];
     TRACE_2("success",_unit,_vehicle);
     private _patientName = [_unit, false, true] call EFUNC(common,getName);
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    private _vehicleName = getText (configOf _vehicle >> "displayName");
     [[LSTRING(UnloadedFrom), _patientName, _vehicleName], 3] call EFUNC(common,displayTextStructured);
 }, [_patient, vehicle _patient], 3, {
     params ["_unit", "_vehicle"];

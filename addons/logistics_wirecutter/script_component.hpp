@@ -70,6 +70,7 @@
     "gm_gc_g501_sm70_02.p3d",\
     "gm_gc_g501_sm70_03.p3d",\
     "netfence_03_m_3m_f.p3d",\
+    "netfence_03_m_3m_hole_f.p3d",\
     "netfence_03_m_3m_corner_f.p3d",\
     "netfence_03_m_9m_f.p3d",\
     "vineyardfence_01_f.p3d",\

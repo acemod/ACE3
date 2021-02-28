@@ -54,7 +54,7 @@ if ((_projPos distance _launchPos) >= 20) then {
 
         // Limit scan to 5 meters directly down (shaped charge jet has a very limited range)
         private _res = lineIntersectsSurfaces [_virtualPos, (_virtualPos vectorAdd [0,0,-5]), _projectile];
-        if (!(_res isEqualTo [])) then {
+        if (_res isNotEqualTo []) then {
             (_res select 0) params ["_targetPos", "", "_target"];
             if ((_target isKindOf "Tank") || {_target isKindOf "Car"} || {_target isKindOf "Air"}) exitWith {
                 TRACE_3("Firing shaped charge down",_target,_targetPos distance _virtualPos,_frameDistance);
@@ -74,7 +74,7 @@ if ((_projPos distance _launchPos) >= 20) then {
                 _shapedCharage setVelocity [0,0,-300];
 
                 _seekerStateParams set [1, true];
-       
+
                 END_COUNTER(targetScan);
                 breakOut "targetScan";
             };

@@ -159,8 +159,8 @@
             <French>Active une interface permettant d'apposer un horodatage sur les marqueurs.</French>
         </Key>
         <Key ID="STR_ACE_Markers_Timestamp">
-            <English>Add Timestamp:</English>
-            <French>Ajouter l'horodatage</French>
+            <English>Timestamp</English>
+            <French>Horodatage</French>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
             <English>Watch Required</English>

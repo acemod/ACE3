@@ -63,4 +63,12 @@ class CfgWeapons {
     class rhs_weap_cz99: hgun_P07_F {
         ACE_barrelLength = 108;
     };
+
+    class Uniform_Base;
+    class rhssaf_uniform_mig29_pilot: Uniform_Base {
+        ACE_GForceCoef = 0.8;
+    };
+    class rhssaf_uniform_heli_pilot: Uniform_Base {
+        ACE_GForceCoef = 0.8;
+    };
 };

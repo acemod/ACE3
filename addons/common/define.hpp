@@ -159,7 +159,7 @@ class ACE_gui_buttonBase {
   colorBackgroundFocused[] = {1,1,1,1};
   periodFocus = 1.2;
   periodOver = 0.8;
-  default = false;
+  default = 0;
   class HitZone {
     left = 0.00;
     top = 0.00;

@@ -40,7 +40,7 @@ class GVAR(sorts) {
         scope = 2;
         displayName = CSTRING(sortByLoadText);
         tabs[] = {{3,4,5}, {}};
-        statement = QUOTE(getContainerMaxLoad configName _this);
+        statement = QUOTE(getContainerMaxLoad (_this select 1));
     };
 
     class ACE_accuracy: sortBase {

@@ -30,6 +30,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         _seekerStateParams set [6, true];
         TRACE_1("Missile Pitbull",_seekerStateParams);
     };
+    
     // Internal radar homing
     // For performance reasons only poll for target every so often instead of each frame
     if ((_lastTargetPollTime + ACTIVE_RADAR_POLL_FREQUENCY) - CBA_missionTime < 0) then {
@@ -59,7 +60,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             _seekerBaseRadiusAdjusted = _seekerBaseRadiusAtGround;
         };
         // Look in front of seeker for any targets
-        private _nearestObjects = nearestObjects [_searchPos, ["Air", "LandVehicle", "Ship"], _seekerBaseRadiusAdjusted, false];
+        private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, ["Air", "LandVehicle", "Ship"], _seekerBaseRadiusAdjusted, false];
 
         _nearestObjects = _nearestObjects apply {
             // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
@@ -70,7 +71,6 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             };
         };
         _nearestObjects = _nearestObjects select { !isNull _x };
-
         // Select closest object to the expected position to be the current radar target
         if ((count _nearestObjects) <= 0) exitWith {
             _projectile setMissileTarget objNull;
@@ -83,6 +83,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
                 _target = _x;
             };
         } forEach _nearestObjects;
+        
         _expectedTargetPos = _searchPos;
     };
 
