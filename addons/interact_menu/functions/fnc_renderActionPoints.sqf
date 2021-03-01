@@ -35,48 +35,47 @@ private _fnc_renderNearbyActions = {
         private _target = _x;
 
         // Quick oclussion test. Skip objects more than 1 m behind the camera plane
-        private _lambda = ((getPosASL _x) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir);
-        if ((_lambda > -1) && {!isObjectHidden _target}) then {
-            private _numInteractions = 0;
+        private _lambda = getPosASL _target vectorDiff GVAR(cameraPosASL) vectorDotProduct GVAR(cameraDir);
+        if (
+            _lambda <= -1
+            || {isObjectHidden _target}
             // Prevent interacting with yourself or your own vehicle
-            if (_target != ACE_player && {_target != vehicle ACE_player}) then {
+            || {_target in [ACE_player, vehicle ACE_player]}
+        ) then {continue};
 
-                // Iterate through object actions, find base level actions and render them if appropiate
-                GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
-                {
-                    // Only render them directly if they are base level actions
-                    if ((_x select 1) isEqualTo []) then {
-                        // Try to render the menu
-                        private _action = _x;
-                        if ([_target, _action] call FUNC(renderBaseMenu)) then {
-                            _numInteractions = _numInteractions + 1;
-                            GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
-                        };
-                    };
-                    nil
-                } count GVAR(objectActionList);
+        private _hasInteractions = false;
 
-                // Iterate through base level class actions and render them if appropiate
-                private _namespace = GVAR(ActNamespace);
-                private _classActions = _namespace getVariable typeOf _target;
-
-                {
-                    private _action = _x;
-                    // Try to render the menu
-                    if ([_target, _action] call FUNC(renderBaseMenu)) then {
-                        _numInteractions = _numInteractions + 1;
-                        GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
-                    };
-                    nil
-                } count _classActions;
-
-                // Limit the amount of objects the player can interact with
-                if (_numInteractions > 0) then {
-                    _numInteractObjects = _numInteractObjects + 1;
-                };
+        // Iterate through object actions, find base level actions and render them if appropiate
+        GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
+        {
+            // Only render them directly if they are base level actions
+            if (_x select 1 isNotEqualTo []) then {continue};
+            // Try to render the menu
+            private _action = _x;
+            if ([_target, _action] call FUNC(renderBaseMenu)) then {
+                _hasInteractions = true;
+                GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
             };
+            nil
+        } count GVAR(objectActionList);
+
+        // Iterate through base level class actions and render them if appropiate
+        private _classActions = GVAR(ActNamespace) getVariable [typeOf _target, []];
+        {
+            private _action = _x;
+            // Try to render the menu
+            if ([_target, _action] call FUNC(renderBaseMenu)) then {
+                _hasInteractions = true;
+                GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
+            };
+            nil
+        } count _classActions;
+
+        // Limit the amount of objects the player can interact with
+        if (_hasInteractions) then {
+            INC(_numInteractObjects);
+            if (_numInteractObjects >= MAXINTERACTOBJECTS) then {break};
         };
-        if (_numInteractObjects >= MAXINTERACTOBJECTS) exitWith {};
 
         nil
     } count _nearestObjects;
