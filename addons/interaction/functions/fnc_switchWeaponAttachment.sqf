@@ -23,8 +23,8 @@ TRACE_3("Switching attachment",_weapon,_newAttachment,_oldAttachment);
 
 [_unit, "Gear"] call EFUNC(common,doGesture);
 
-private _addNew = !(_newAttachment isEqualTo "");
-private _removeOld = !(_oldAttachment isEqualTo "");
+private _addNew = _newAttachment isNotEqualTo "";
+private _removeOld = _oldAttachment isNotEqualTo "";
 
 if (_addNew) then {
     _unit removeItem _newAttachment;

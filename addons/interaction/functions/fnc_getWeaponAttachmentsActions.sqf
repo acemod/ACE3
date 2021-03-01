@@ -48,20 +48,20 @@ params ["_unit"];
 
     // "detach" actions
     {
-        if !(_x isEqualTo "") then {
-            private _config = _cfgWeapons >> _x;
-            private _name = format [LLSTRING(weaponAttachmentsDetach), getText (_config >> "displayName")];
-            private _picture = getText (_config >> "picture");
+        if (_x isEqualTo "") then {continue};
 
-            private _action = [
-                _x, _name, _picture,
-                LINKFUNC(switchWeaponAttachment),
-                {true},
-                {},
-                [_currentWeapon, "", _x]
-            ] call EFUNC(interact_menu,createAction);
-            _actions pushBack [_action, [], _unit];
-        };
+        private _config = _cfgWeapons >> _x;
+        private _name = format [LLSTRING(weaponAttachmentsDetach), getText (_config >> "displayName")];
+        private _picture = getText (_config >> "picture");
+
+        private _action = [
+            _x, _name, _picture,
+            LINKFUNC(switchWeaponAttachment),
+            {true},
+            {},
+            [_currentWeapon, "", _x]
+        ] call EFUNC(interact_menu,createAction);
+        _actions pushBack [_action, [], _unit];
     } forEach _weaponItems;
 
     _actions
