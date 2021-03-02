@@ -30,7 +30,7 @@ private _problemUIs = [];
                 };
             } forEach _weapons;
 
-            if (!(_weapons isEqualTo [])) then {
+            if (_weapons isNotEqualTo []) then {
                 private _fcsMsg = switch (true) do {
                 // case ((!_vanillaFCS) && {!_aceFCS}): {"No FCS"};
                 // case ((_vanillaFCS) && {_aceFCS}): {"CONFLICT FCS"};

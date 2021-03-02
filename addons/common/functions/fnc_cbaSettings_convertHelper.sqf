@@ -123,7 +123,7 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
         _output pushBack format ["    {[""%1"", _this] call ace_common_fnc_cbaSettings_settingChanged},", _varName];
     };
     _output pushBack format ["    %1 // Needs mission restart", _warnIfChangedMidMission];
-    _output pushBack "] call CBA_settings_fnc_init;";
+    _output pushBack "] call CBA_fnc_addSetting;";
 } forEach _settings;
 
 copyToClipboard (_output joinString endl);

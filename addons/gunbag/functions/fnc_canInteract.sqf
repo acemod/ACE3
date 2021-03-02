@@ -26,10 +26,10 @@ if ((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo [] && {_weapon != 
     _result = 0;
 };
 
-if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {_weapon == ""}) then {
+if ((_gunbag getVariable [QGVAR(gunbagWeapon), []] isNotEqualTo []) && {_weapon == ""}) then {
     _result = 1;
 };
-if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {_weapon != ""}) then {
+if ((_gunbag getVariable [QGVAR(gunbagWeapon), []] isNotEqualTo []) && {_weapon != ""}) then {
     _result = 2;
 };
 _result

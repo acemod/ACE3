@@ -41,7 +41,7 @@ private _currentSupply = if (_addToCurrent) then {
 
 _source setVariable [QGVAR(currentSupply), _currentSupply + _rearmCargo, true];
 
-private _rearmCargoConfig = getNumber (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(defaultSupply));
+private _rearmCargoConfig = getNumber (configOf _source >> QGVAR(defaultSupply));
 
 // already initialized because this is a config rearm vehicle
 if (_rearmCargoConfig > 0 || _source getVariable [QGVAR(isSupplyVehicle), false]) exitWith {};

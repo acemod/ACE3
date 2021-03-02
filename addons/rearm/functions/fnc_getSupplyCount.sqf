@@ -25,8 +25,8 @@ if (GVAR(supply) != 1) exitWith {
 private _supply = _truck getVariable QGVAR(currentSupply);
 
 if (isNil "_supply") then {
-    if (isNumber (configFile >> "CfgVehicles" >> typeOf _truck >> QGVAR(defaultSupply))) then {
-        _supply = getNumber (configFile >> "CfgVehicles" >> typeOf _truck >> QGVAR(defaultSupply));
+    if (isNumber (configOf _truck >> QGVAR(defaultSupply))) then {
+        _supply = getNumber (configOf _truck >> QGVAR(defaultSupply));
     } else {
         _supply = 1200;
     };

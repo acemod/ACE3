@@ -20,6 +20,6 @@ params ["_vehicle"];
 deleteVehicle (_vehicle getVariable [QGVAR(FRIES), objNull]);
 _vehicle setVariable [QGVAR(FRIES), nil, true];
 
-if !(_vehicle getVariable [QGVAR(deployedRopes), []] isEqualTo []) then {
+if (_vehicle getVariable [QGVAR(deployedRopes), []] isNotEqualTo []) then {
     [_vehicle] call FUNC(cutRopes);
 };

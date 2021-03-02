@@ -5,7 +5,7 @@
     [ELSTRING(medical,Category)],
     [[0, 1, 2], [LSTRING(fatalDamageSource_vitalShotsOnly), LSTRING(fatalDamageSource_trauma), LSTRING(fatalDamageSource_both)], 0],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QEGVAR(medical,playerDamageThreshold),
@@ -14,7 +14,7 @@
     ELSTRING(medical,Category),
     [0, 25, 1, 2],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QEGVAR(medical,AIDamageThreshold),
@@ -23,7 +23,7 @@
     ELSTRING(medical,Category),
     [0, 25, 1, 2],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QEGVAR(medical,painUnconsciousChance),
@@ -32,4 +32,4 @@
     ELSTRING(medical,Category),
     [0, 1, 0.1, 2, true],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

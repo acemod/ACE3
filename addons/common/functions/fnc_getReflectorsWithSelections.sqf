@@ -21,7 +21,7 @@
 
 params ["_vehicle"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 private _hitpoints = [];
 private _selections = [];

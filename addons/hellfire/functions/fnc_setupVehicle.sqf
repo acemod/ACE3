@@ -41,7 +41,7 @@ if (!_enabled) exitWith {TRACE_3("Not enabled",_enabled,_vehicle,_turretPath);};
 
 
 // Add laser if vehicle is configured for one:
-if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QGVAR(addLaserDesignator))) == 1) then {  
+if ((getNumber (configOf _vehicle >> QGVAR(addLaserDesignator))) == 1) then {  
     [{
         params ["_vehicle", "_turretPath"];
         TRACE_3("checking for laser",_vehicle,_turretPath,_vehicle turretLocal _turretPath);

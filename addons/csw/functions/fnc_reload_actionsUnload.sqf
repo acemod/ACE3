@@ -24,8 +24,8 @@ private _statement = {
     TRACE_5("starting unload",_target,_turretPath,_player,_carryMag,_vehMag);
 
     private _timeToUnload = 1;
-    if (!isNull(configFile >> "CfgVehicles" >> (typeOf _target) >> QUOTE(ADDON) >> "ammoUnloadTime")) then {
-        _timeToUnload = getNumber(configFile >> "CfgVehicles" >> (typeOf _target) >> QUOTE(ADDON) >> "ammoUnloadTime");
+    if (!isNull(configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime")) then {
+        _timeToUnload = getNumber(configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime");
     };
 
     [

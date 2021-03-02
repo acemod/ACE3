@@ -21,7 +21,7 @@ params ["_unit", "_vehicle", ["_caller", objNull]];
 TRACE_3("loadPersonLocal",_unit,_vehicle,_caller);
 
 private _slotsOpen = false;
-if ((_vehicle emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUnconscious', false]) || {(getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "ejectDeadCargo")) == 0}}) then {
+if ((_vehicle emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUnconscious', false]) || {(getNumber (configOf _vehicle >> "ejectDeadCargo")) == 0}}) then {
     _unit moveInCargo _vehicle;
     TRACE_1("moveInCargo",_vehicle);
     _slotsOpen = true;

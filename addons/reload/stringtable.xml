@@ -43,6 +43,7 @@
             <French>Toujours afficher l'action de vérification des munitions</French>
             <Portuguese>Sempre mostrar a opção de checar a própria munição</Portuguese>
             <Russian>Всегда показывать проверку боеприпасов в меню взаимодействия с собой</Russian>
+            <Spanish>Mostrar siempre la autointeracción de comprobar munición</Spanish>
         </Key>
         <Key ID="STR_ACE_Reload_SettingShowCheckAmmoSelfDesc">
             <English>Shows check ammo self interaction even when not in static weapons.</English>
@@ -54,6 +55,7 @@
             <French>Permet d'afficher l'action de vérification des munitions du menu d'interaction personnel, même si le joueur n'utilise pas d'arme statique.</French>
             <Portuguese>Mostra a opção de ver sua própria munição mesmo quando não em armas estáticas.</Portuguese>
             <Russian>Показывать проверку боеприпасов даже вне стационарного орудия</Russian>
+            <Spanish>Mostrar la comprobación de la munición incluso cuando no está en armas estáticas</Spanish>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>

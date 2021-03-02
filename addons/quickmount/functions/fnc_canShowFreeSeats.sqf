@@ -45,6 +45,6 @@ GVAR(enabled)
         // we have to cache subactions in args and reuse them in insertChildren code
         private _subActions = _this call FUNC(addFreeSeatsActions);
         _args set [0, _subActions];
-        !([] isEqualTo _subActions)
+        [] isNotEqualTo _subActions
     }
 }

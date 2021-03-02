@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#include "\a3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: commy2
  * When the shape list box is changed.
