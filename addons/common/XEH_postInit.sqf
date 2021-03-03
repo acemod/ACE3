@@ -398,24 +398,26 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 GVAR(isReloading) = false;
 GVAR(reloadMutex_lastMagazines) = [];
-GVAR(reloadMutex_lastMagazinesCount) = 0;
+// When reloading, the new magazine is removed from inventory, an animation plays and then the old magazine is added
+// If the animation is interrupted, the new magazine will be lost
 ["loadout", {
     params ["_unit", "_newLoadout"];
     private _mags = magazines _unit;
     // if our magazine count dropped by 1, we might be reloading
-    if (GVAR(reloadMutex_lastMagazinesCount) - (count _mags) == 1) then {
+    if ((count GVAR(reloadMutex_lastMagazines)) - (count _mags) == 1) then {
         private _weapon = currentWeapon _unit;
         private _muzzle = currentMuzzle _unit;
         if (_weapon == "") exitWith {};
-        private _wpnConfig = configFile >> "CfgWeapons" >> _weapon;
-        if (_muzzle != _weapon) then { _wpnConfig = _wpnConfig >> _muzzle; };
-        private _compatMags = [_wpnConfig] call CBA_fnc_compatibleMagazines;
+        private _wpnMzlConfig = configFile >> "CfgWeapons" >> _weapon;
+        if (_muzzle != _weapon) then { _wpnMzlConfig = _wpnMzlConfig >> _muzzle; };
+
+        private _compatMags = [_wpnMzlConfig] call CBA_fnc_compatibleMagazines;
         private _lastCompatMagCount = {_x in _compatMags} count GVAR(reloadMutex_lastMagazines);
         private _curCompatMagCount = {_x in _compatMags} count _mags;
-        TRACE_3("",_wpnConfig,_lastCompatMagCount,_curCompatMagCount);
-        if (_lastCompatMagCount - _curCompatMagCount != 1) exitWith {}; // magazines for our specific muzzle dropped by 1
+        TRACE_3("",_wpnMzlConfig,_lastCompatMagCount,_curCompatMagCount);
+        if (_lastCompatMagCount - _curCompatMagCount != 1) exitWith {}; // check if magazines for our specific muzzle dropped by 1
 
-        private _gesture = getText (_wpnConfig >> "reloadAction");
+        private _gesture = getText (_wpnMzlConfig >> "reloadAction");
         if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
         private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
         private _animConfig = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
@@ -441,7 +443,6 @@ GVAR(reloadMutex_lastMagazinesCount) = 0;
         };
     };
     GVAR(reloadMutex_lastMagazines) = _mags;
-    GVAR(reloadMutex_lastMagazinesCount) = count _mags;
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 //////////////////////////////////////////////////
