@@ -25,7 +25,7 @@ PREP_RECOMPILE_END;
 
 addMissionEventHandler ["EntityKilled", {_this call FUNC(handleKilledMission)}];
 
-if (hasInterface) {
+if (hasInterface) then {
     //Add Inventory action to uncon units
     ["CAManBase", "init", {
         params ["_unit"];
