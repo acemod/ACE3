@@ -17,13 +17,10 @@
  * Public: No
  */
 
-params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
-
-// Bail on not missile
-if (!(_ammo isKindOf "MissileBase")) exitWith {};
+params ["_shooter","_weapon","","_mode","_ammo","","_projectile","_gunner"];
 
 // Bail if guidance is disabled for this ammo
-if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
+if ((getNumber (configOf _projectile >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
 
 // Bail on locality of the projectile, it should be local to us
 if (GVAR(enabled) < 1 || {!local _projectile} ) exitWith {};
@@ -31,12 +28,23 @@ if (GVAR(enabled) < 1 || {!local _projectile} ) exitWith {};
 // Bail if shooter isn't player AND system not enabled for AI:
 if ( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith {};
 
+// For submuntion's that will become missiles - Note that _projectile will be local to everyone
+private _submunitionCondition = getText (configOf _projectile >> QUOTE(ADDON) >> "submunitionCondition");
+if ((_submunitionCondition != "") && {!local _gunner}) exitWith {};
+
 // Verify ammo has explicity added guidance config (ignore inheritances)
 private _configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
 if ((count _configs) < 1) exitWith {};
 
 // MissileGuidance is enabled for this shot
 TRACE_4("enabled",_shooter,_ammo,_projectile,typeOf _shooter);
+
+private _submunitionArray = [];
+if (_submunitionCondition != "") then {
+    TRACE_1("using submunition for seeker/attack configs",_ammo);
+    _ammo = getText (configOf _projectile>> "submunitionAmmo");
+    _submunitionArray = [_submunitionCondition, _ammo, []];
+};
 
 private _config = configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON);
 
@@ -107,7 +115,8 @@ private _args = [_this,
             [
                 getNumber ( _config >> "minDeflection" ),
                 getNumber ( _config >> "maxDeflection" ),
-                getNumber ( _config >> "incDeflection" )
+                getNumber ( _config >> "incDeflection" ),
+                1 == getNumber ( _config >> "useVanillaDeflection" )
             ],
             [
                 getNumber ( _config >> "seekerAngle" ),
@@ -115,24 +124,21 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState]
+            [ cba_missionTime, [], [], _lastKnownPosState, _submunitionArray ]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
-TRACE_1("",_onFiredFunc);
+TRACE_1("seeker",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
-
 _onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
-TRACE_1("",_onFiredFunc);
+TRACE_1("attackProfile",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
-
-// Run the "onFired" function passing the full guidance args array
 _onFiredFunc = getText (_config >> "onFired");
-TRACE_1("",_onFiredFunc);
+TRACE_1("ammo",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
@@ -142,10 +148,10 @@ if (_onFiredFunc != "") then {
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 //      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo"];
 //          _targetLaunchParams params ["_target", "_targetPos", "_launchPos"];
-//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
+//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_submunitionArray"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
-[FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
+[FUNC(guidancePFH), 0, _args] call CBA_fnc_addPerFrameHandler;
 
 
 /* Clears locking settings
