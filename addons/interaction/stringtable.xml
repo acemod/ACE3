@@ -1203,5 +1203,17 @@
             <Spanish>Romper parabrisas</Spanish>
             <Turkish>Ön camı parçala</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
+            <English>Attach %1</English>
+            <Russian>Установить %1</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
+            <English>Detach %1</English>
+            <Russian>Снять %1</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
+            <English>Enables attach/detach weapon attachment actions for current weapon.</English>
+            <Russian>Включает действия Установить/Снять для приспособлений текущего оружия.</Russian>
+        </Key>
     </Package>
 </Project>
