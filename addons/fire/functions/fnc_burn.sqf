@@ -149,7 +149,7 @@ if (_isBurning) exitWith {};
         // If the unit goes to spectator alive _unit == true and they will be on fire and still take damage
         // Only workaround I could think of, kinda clunky
         if (_isThisUnitAlive) then {
-            _isThisUnitAlive = (!(isNull _unit) && { !(_unit getVariable [QGVAR(killed), false]) });
+            _isThisUnitAlive = (alive _unit) && { getNumber ((configOf _unit) >> "isPlayableLogic") != 1 };
         };
     
         // propagate fire
@@ -351,5 +351,9 @@ if (_isBurning) exitWith {};
 }, {
     // exit condition
     (_this getVariable "params") params ["_unit"];
-    (isNull _unit) || { (_unit != vehicle _unit) && { isNull vehicle _unit } } || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) };
+    
+    private _unitAlive = (alive _unit) && { getNumber ((configOf _unit) >> "isPlayableLogic") != 1 };
+    private _unitIsUnit = { (_unit != vehicle _unit) && { isNull vehicle _unit } };
+    
+    !_unitAlive || _unitIsUnit || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) };
 }, ["_intensity", "_fireParticle", "_smokeParticle", "_fireLight", "_fireSound", "_lightFlare", "_lastIntensityUpdate", "_lastPropogateUpdate", "_isThisUnitAlive"]] call CBA_fnc_createPerFrameHandlerObject;
