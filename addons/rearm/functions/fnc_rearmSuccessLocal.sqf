@@ -34,7 +34,7 @@ if (_pylon > 0) exitWith {
         _vehicle setPylonLoadOut [_pylon, _magazineClass, true, _turretPath];
         [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _rounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
+            getText(configOf _vehicle >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
     } else {
         // Fill only at most _numRounds
         if (_turretPath isEqualTo [-1]) then {_turretPath = [];}; // Convert back to pylon turret format
@@ -45,7 +45,7 @@ if (_pylon > 0) exitWith {
         _vehicle setAmmoOnPylon [_pylon, _newCount];
         [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _numRounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
+            getText(configOf _vehicle >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
     };
 };
 
@@ -90,4 +90,4 @@ if (_ammoAdded == 0) exitWith {ERROR_1("could not load any ammo - %1",_this);};
 
 [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _ammoAdded,
 _magazineClass call FUNC(getMagazineName),
-getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
+getText(configOf _vehicle >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;

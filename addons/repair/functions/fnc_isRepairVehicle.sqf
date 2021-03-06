@@ -20,7 +20,7 @@ TRACE_1("params",_vehicle);
 
 if (_vehicle isKindOf "CAManBase") exitWith {false};
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 private _canRepair = getNumber (_config >> QGVAR(canRepair));
 if (_canRepair == 0) then {
     _canRepair = getNumber (_config >> "transportRepair");

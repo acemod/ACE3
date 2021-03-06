@@ -75,7 +75,7 @@ GVAR(currentHeightChange) = 0;
 // prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
-if !(_UAVCrew isEqualTo []) then {
+if (_UAVCrew isNotEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;
     _target setVariable [QGVAR(isUAV), true, true];
 };

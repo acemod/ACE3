@@ -227,6 +227,17 @@ def find_bi_tools(work_drive):
     else:
         raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
+def mikero_windows_registry(path, access=winreg.KEY_READ):
+    try:
+        return winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Mikero\{}".format(path), access=access)
+    except FileNotFoundError:
+        try:
+            return winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(path), access=access)
+        except FileNotFoundError:
+            try:
+                return winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Wow6432Node\Mikero\{}".format(path), access=access)
+            except FileNotFoundError:
+                return winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Wow6432Node\Mikero\{}".format(path), access=access)
 
 def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
@@ -235,20 +246,8 @@ def find_depbo_tools():
 
     for tool in requiredToolPaths:
         try:
-            try:
-                k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Mikero\{}".format(tool))
-                path = winreg.QueryValueEx(k, "exe")[0]
-            except FileNotFoundError:
-                try:
-                    k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(tool))
-                    path = winreg.QueryValueEx(k, "exe")[0]
-                except FileNotFoundError:
-                    try:
-                        k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Wow6432Node\Mikero\{}".format(tool))
-                        path = winreg.QueryValueEx(k, "exe")[0]
-                    except FileNotFoundError:
-                        k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Wow6432Node\Mikero\{}".format(tool))
-                        path = winreg.QueryValueEx(k, "exe")[0]
+            k = mikero_windows_registry(tool)
+            path = winreg.QueryValueEx(k, "exe")[0]           
         except FileNotFoundError:
             print_error("Could not find {}".format(tool))
             failed = True
@@ -263,6 +262,17 @@ def find_depbo_tools():
         raise Exception("BadDePBO", "DePBO tools not installed correctly")
 
     return requiredToolPaths
+
+def pboproject_settings():
+    """Use registry entries to configure needed pboproject settings."""
+    value_exclude = "thumbs.db,*.txt,*.h,*.dep,*.cpp,*.bak,*.png,*.log,*.pew,source,*.tga"
+
+    try:
+        k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
+        winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
+        winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
+    except:
+        raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
 
 
 def color(color):
@@ -1031,6 +1041,8 @@ See the make.cfg file for additional build options.
             pboproject = depbo_tools["pboProject"]
             rapifyTool = depbo_tools["rapify"]
             makepboTool = depbo_tools["MakePbo"]
+
+            pboproject_settings()
         except:
             raise
             print_error("Could not find dePBO tools. Download the needed tools from: https://dev.withsix.com/projects/mikero-pbodll/files")
@@ -1268,7 +1280,7 @@ See the make.cfg file for additional build options.
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
-                        cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
                     color("grey")
                     if quiet:

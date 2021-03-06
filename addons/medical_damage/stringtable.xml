@@ -687,5 +687,15 @@
             <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
             <Turkish>Bilinçsiz duruma geçmeden önce bir birimin alabileceği hasar miktarını ayarlar. (Görev varsayılanı için 0)</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
+            <English>Pain Unconscious Chance</English>
+            <Polish>Szansa na nieprzytomność przez ból</Polish>
+            <Japanese>気絶確立</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
+            <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
+            <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
+            <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確立を設定します。</Japanese>
+        </Key>
     </Package>
 </Project>

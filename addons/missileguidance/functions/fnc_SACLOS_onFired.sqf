@@ -18,7 +18,7 @@ params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _stateParams params ["", "_seekerStateParams"];
 
-private _usePilotCamera = getNumber (([_shooter] call CBA_fnc_getObjectConfig) >> "pilotCamera" >> QGVAR(usePilotCameraForTargeting)) == 1;
+private _usePilotCamera = getNumber (configOf _shooter >> "pilotCamera" >> QGVAR(usePilotCameraForTargeting)) == 1;
 
 private _turretPath = [_shooter, _weapon] call CBA_fnc_turretPathWeapon;
 private _turretConfig = [_shooter, _turretPath] call CBA_fnc_getTurret;

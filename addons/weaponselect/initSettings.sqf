@@ -5,4 +5,4 @@
 localize ELSTRING(common,ACEKeybindCategoryWeapons),
 true, // default value
 false, // isGlobal
-{[QGVAR(displayText), _this] call EFUNC(common,cbaSettings_settingChanged)}] call CBA_settings_fnc_init;
+{[QGVAR(displayText), _this] call EFUNC(common,cbaSettings_settingChanged)}] call CBA_fnc_addSetting;

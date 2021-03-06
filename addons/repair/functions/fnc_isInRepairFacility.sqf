@@ -22,7 +22,7 @@ private _position = getPosASL _object;
 private _isInBuilding = false;
 
 private _checkObject = {
-    private _config = configFile >> "CfgVehicles" >> typeOf _x;
+    private _config = configOf _x;
     private _canRepair = getNumber (_config >> QGVAR(canRepair));
     if (_canRepair == 0) then {
         _canRepair = getNumber (_config >> "transportRepair");
