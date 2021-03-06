@@ -42,7 +42,7 @@ TRACE_1("params",_this);
     if ((alive ACE_player) && {_vehicle != ACE_player}) then {
         private _turretPath = if (ACE_player == (driver _vehicle)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
         TRACE_1("",_turretPath);
-        if (!(_turretPath isEqualTo [])) then {
+        if (_turretPath isNotEqualTo []) then {
             private _currentWeapon = _vehicle currentWeaponTurret _turretPath;
             TRACE_1("",_currentWeapon);
             if ((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 1) then {

@@ -419,10 +419,12 @@
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
             <French>Trier par protection balistique</French>
+            <Japanese>防弾性能で並び替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
             <French>Trier par résistance aux explosifs</French>
+            <Japanese>防爆性能で並び替え</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -1092,7 +1094,6 @@
             <Spanish>Niveles de potasio</Spanish>
             <German>Kaliumspiegel</German>
             <French>Taux de potassium</French>
-            <Japanese>カリウム レベル</Japanese>
             <Chinesesimp>钾水平</Chinesesimp>
             <Chinese>鉀水平</Chinese>
             <Italian>Ilvello di potassio</Italian>
@@ -1101,6 +1102,7 @@
             <Portuguese>Níveis de Potássio</Portuguese>
             <Czech>Úrovně draslíku</Czech>
             <Turkish>Potasyum seviyeleri</Turkish>
+            <Japanese>カリウム含有量</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
             <English>Magnification</English>

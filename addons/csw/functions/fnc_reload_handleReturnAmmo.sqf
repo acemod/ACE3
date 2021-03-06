@@ -25,11 +25,11 @@ private _fullMagazines = floor (_ammo / _carryMaxAmmo);
 private _bulletsRemaining = _ammo % _carryMaxAmmo;
 
 if (_unloadTo isKindOf "CaManBase") then {
-    while {(_fullMagazines > 0) && {_unloadTo canAdd _carryMag}} do {
+    while {(_fullMagazines > 0) && {[_unloadTo, _carryMag] call CBA_fnc_canAddItem}} do {
         _unloadTo addMagazine [_carryMag, _carryMaxAmmo];
         _fullMagazines = _fullMagazines - 1;
     };
-    if ((_bulletsRemaining > 0) && {_unloadTo canAdd _carryMag}) then {
+    if ((_bulletsRemaining > 0) && {[_unloadTo, _carryMag] call CBA_fnc_canAddItem}) then {
         _unloadTo addMagazine [_carryMag, _bulletsRemaining];
         _bulletsRemaining = 0;
     };

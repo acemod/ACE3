@@ -27,7 +27,7 @@ if (_unit isKindOf "CAManBase") then {
     if (_showEffective) then {
         _name = [effectiveCommander _unit, false, _useRaw] call FUNC(getName);
     } else {
-        _name = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+        _name = getText (configOf _unit >> "displayName");
     };
 };
 

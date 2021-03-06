@@ -21,7 +21,7 @@
 params ["_logic", "_units", "_activated"];
 
 if (_activated) then {
-    _explosive = gettext (configfile >> "cfgvehicles" >> typeof _logic >> "explosive");
+    _explosive = gettext (configOf _logic >> "explosive");
     if (_explosive != "") then {
         _explosive = createvehicle [_explosive,position _logic,[],0,"none"];
         _explosive attachto [_logic];

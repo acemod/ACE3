@@ -81,8 +81,8 @@ if (_reloadSource isKindOf "CaManBase") then {
 };
 
 private _timeToLoad = 1;
-if (!isNull(configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "ammoLoadTime")) then {
-    _timeToLoad = getNumber(configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "ammoLoadTime");
+if (!isNull(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime")) then {
+    _timeToLoad = getNumber(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime");
 };
 
 TRACE_1("Reloading in progress",_timeToLoad);

@@ -18,7 +18,7 @@
 
 params ["_vehicle", "_turret"];
 
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
 // Update display for infantry rangefinders
 if (_vehicle == ACE_player) exitWith {[5,5500,25,true] call FUNC(getRange)};
