@@ -26,12 +26,17 @@
 
 params ["_unit"];
 
-private _bloodVolumeRatio = GET_BLOOD_VOLUME(_unit) / DEFAULT_BLOOD_VOLUME;
 private _heartRate = GET_HEART_RATE(_unit);
 
+if  (_heartRate <= 1) exitwith {0};
+
+private _strokeVol = [_unit] call FUNC(getStrokeVolume);
+
+/*
 // Blood volume ratio dictates how much is entering the ventricle (this is an approximation)
 private _entering = linearConversion [0.5, 1, _bloodVolumeRatio, 0, 1, true];
+*/
 
-private _cardiacOutput = (_entering * VENTRICLE_STROKE_VOL) * _heartRate / 60;
+private _cardiacOutput = _strokeVol * _heartRate / 60;
 
 0 max _cardiacOutput

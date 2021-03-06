@@ -54,6 +54,11 @@
 #define BLOOD_VOLUME_CLASS_4_HEMORRHAGE 3.600 // lost more than 40% blood, Class IV Hemorrhage
 #define BLOOD_VOLUME_FATAL 3.0 // Lost more than 50% blood, Unrecoverable
 
+#define DEFAULT_BP_MEAN 107
+#define DEFAULT_BP_HIGH 120
+#define DEFAULT_BP_LOW 80
+#define DEFAULT_BLOOD_PRESSURE [DEFAULT_BP_LOW,DEFAULT_BP_HIGH,DEFAULT_BP_MEAN] // at default heart rate
+
 // IV Change per second calculation:
 // 250 ml should take 60 seconds to fill. 250 ml / 60 s ~ 4.1667 ml/s.
 #define IV_CHANGE_PER_SECOND 4.1667 // in milliliters per second
