@@ -37,7 +37,7 @@
 [
     QEGVAR(medical,enableVehicleCrashes),
     "CHECKBOX",
-    [LSTRING(enableVehicleCrashes_DisplayName), LSTRING(enableVehicleCrashes_Description)],
+    [LSTRING(EnableVehicleCrashes_DisplayName), LSTRING(EnableVehicleCrashes_Description)],
     ELSTRING(medical,Category),
     true,
     true
