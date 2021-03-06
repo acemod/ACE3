@@ -17,12 +17,6 @@
  * Public: No
  */
 
-// Value is taken because with cardic output and resistance at default values, it will put blood pressure High at 120.
-#define MODIFIER_BP_HIGH    9.4736842
-
-// Value is taken because with cardic output and resistance at default values, it will put blood pressure Low at 80.
-#define MODIFIER_BP_LOW     6.3157894
-
 // Value that gives MAP=107 at default values
 #define MODIFIER_BP 8.2168
 
@@ -33,8 +27,12 @@ private _resistance = _unit getVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES];
 private _meanPressure = _cardiacOutput * _resistance * MODIFIER_BP;
 
 private _heartRate = GET_HEART_RATE(_unit);
-private _stFraction = 0.01*exp(4.14-40.74/_heartRate);
-private _strokeVol = [_unit] call FUNC(getStrokeVolume);
-private _pulsePressure = 40*(_strokeVol/0.095)*(_resistance/DEFAULT_PERIPH_RES);
 
-[round(_meanPressure - _pulsePressure*_stFraction), round(_meanPressure + _pulsePressure*_stFraction), round _meanPressure];
+//https://www.researchgate.net/publication/14609651_Calculation_of_Mean_Arterial_Pressure_During_Exercise_as_a_Function_of_Heart_Rate
+private _stFraction = 0 max (0.01*exp(4.14-40.74/_heartRate)) min 0.5;
+
+private _strokeVol = [_unit] call FUNC(getStrokeVolume);
+private _pulsePressure = (DEFAULT_BP_HIGH - DEFAULT_BP_LOW) * (_strokeVol / DEFAULT_STROKE_VOLUME) * (_resistance / DEFAULT_PERIPH_RES);
+
+private _bpLow = _meanPressure - _pulsePressure*_stFraction;
+[round _bpLow, round (_bpLow + _pulsePressure), round _meanPressure];

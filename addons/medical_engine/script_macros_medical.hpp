@@ -43,6 +43,7 @@
 
 #define DEFAULT_HEART_RATE 80
 #define DEFAULT_PERIPH_RES 100
+#define DEFAULT_STROKE_VOLUME 95e-3
 
 // --- blood
 // 0.077 l/kg * 80kg = 6.16l
