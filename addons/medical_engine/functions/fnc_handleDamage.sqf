@@ -200,16 +200,12 @@ if (
     0
 };
 
-// No need to go any further if vehicle crash damage is disabled
-if (!EGVAR(medical,enableVehicleCrashes)) exitWith {
-    0
-};
-
 // Crashing a vehicle doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // It does fire the EH multiple times, but this seems to scale with the intensity of the crash
 private _vehicle = vehicle _unit;
 if (
-    _hitPoint isEqualTo "#structural" &&
+    EGVAR(medical,enableVehicleCrashes) &&
+    {_hitPoint isEqualTo "#structural"} &&
     {_ammo isEqualTo ""} &&
     {_vehicle != _unit} &&
     {vectorMagnitude (velocity _vehicle) > 5}
