@@ -31,7 +31,7 @@ if (alive ACE_player) then {
         // Test if we are using player's nvg or if sourced from vehicle:
 
         private _currentVehicle = vehicle ACE_player;
-        private _vehConfig = configFile >> "CfgVehicles" >> (typeOf _currentVehicle);
+        private _vehConfig = configOf _currentVehicle;
 
         if (cameraView != "GUNNER") exitWith {true};  // asume hmd usage outside of gunner view
         if ([ACE_player] call CBA_fnc_canUseWeapon) exitWith {true}; // FFV

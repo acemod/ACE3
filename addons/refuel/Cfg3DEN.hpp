@@ -1,5 +1,5 @@
 #define GET_1ST_ARRAY(config) (if (isArray (config)) then {getArray (config) select 0} else {[ARR_3(0,0,0)]})
-#define DEFAULT_HOOKS GET_1ST_ARRAY(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(hooks))
+#define DEFAULT_HOOKS GET_1ST_ARRAY(configOf _this >> QQGVAR(hooks))
 
 class Cfg3DEN {
     class Object {
@@ -22,7 +22,7 @@ class Cfg3DEN {
                         tooltip = CSTRING(hooks_edenDesc);
                         property = QGVAR(hooks);
                         control = "EditXYZ";
-                        expression = QUOTE(if !(_value isEqualTo DEFAULT_HOOKS) then {_this setVariable [ARR_3('%s',[_value],true)]});
+                        expression = QUOTE(if (_value isNotEqualTo DEFAULT_HOOKS) then {_this setVariable [ARR_3('%s',[_value],true)]});
                         defaultValue = QUOTE(DEFAULT_HOOKS);
                         condition = "(1-objectBrain)*(1-objectAgent)";
                     };
