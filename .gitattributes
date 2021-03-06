@@ -3,7 +3,7 @@
 *.jpg binary
 *.paa binary
 
-# Change GitHub language categorisation
+# Change GitHub language categorization
 addons/**/*.cpp linguist-language=SQF
 addons/**/*.hpp linguist-language=SQF
 
