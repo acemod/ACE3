@@ -94,7 +94,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // represents all incoming damage for selecting a non-selectionSpecific wound location, (used for selectRandomWeighted [value1,weight1,value2....])
     private _damageSelectionArray = [
-        HITPOINT_INDEX_HEAD, _damageHead select 1, HITPOINT_INDEX_BODY, _damageBody select 1, HITPOINT_INDEX_LARM, _damageLeftArm select 1, 
+        HITPOINT_INDEX_HEAD, _damageHead select 1, HITPOINT_INDEX_BODY, _damageBody select 1, HITPOINT_INDEX_LARM, _damageLeftArm select 1,
         HITPOINT_INDEX_RARM, _damageRightArm select 1, HITPOINT_INDEX_LLEG, _damageLeftLeg select 1, HITPOINT_INDEX_RLEG, _damageRightLeg select 1
     ];
 
@@ -211,9 +211,12 @@ if (
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
     private _damageSelectionArray = [
-        HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1, 
+        HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1,
         HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1
     ];
+    if !(EGVAR(medical,enableVehicleCrashes)) then {
+      _newDamage = 0;
+    };
     [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
 

@@ -33,3 +33,12 @@
     [0, 1, 0.1, 2, true],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QEGVAR(medical,enableVehicleCrashes),
+    "CHECKBOX",
+    [LSTRING(enableVehicleCrashes_DisplayName), LSTRING(enableVehicleCrashes_Description)],
+    ELSTRING(medical,Category),
+    true,
+    true
+] call CBA_fnc_addSetting;

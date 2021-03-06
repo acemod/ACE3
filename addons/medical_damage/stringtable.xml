@@ -697,5 +697,37 @@
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
             <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確立を設定します。</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_enableVehicleCrashes_DisplayName">
+            <English>Vehicle Crashes</English>
+            <Russian>Аварии транспорта</Russian>
+            <Polish>Obrażenia od kolizji</Polish>
+            <Spanish>Accidentes de vehículos</Spanish>
+            <German>Fahrzeugunfälle</German>
+            <Czech>Poškození z kolize</Czech>
+            <Portuguese>Colisão de veículos</Portuguese>
+            <French>Accident en véhicule</French>
+            <Hungarian>Járműbalesetek</Hungarian>
+            <Italian>Schianto Veicoli</Italian>
+            <Japanese>車両の衝突</Japanese>
+            <Korean>차량 사고</Korean>
+            <Chinesesimp>载具碰撞</Chinesesimp>
+            <Chinese>載具碰撞</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_enableVehicleCrashes_Description">
+            <English>Do units take damage from a vehicle crash?</English>
+            <Russian>Должны ли юниты получать повреждения от аварий на транспорте?</Russian>
+            <Polish>Czy jednostki otrzymują obrażenia w wyniku kolizji pojazdów?</Polish>
+            <Spanish>¿Las unidades reciben daño de un accidente de tráfico?</Spanish>
+            <German>Verursacht ein Fahrzeugunfall Verletzungen</German>
+            <Czech>Dostane jednotka poškození při autonehodě?</Czech>
+            <Portuguese>As unidades recebem dano de uma colisão de veículo?</Portuguese>
+            <French>Les unités subissent des dégats lors d'accident</French>
+            <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
+            <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
+            <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか?</Japanese>
+            <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
+            <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
+            <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
+        </Key>
     </Package>
 </Project>
