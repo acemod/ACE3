@@ -136,6 +136,12 @@ GVAR(isOpeningDoor) = false;
     };
 }] call CBA_fnc_addEventHandler;
 
+{
+    [_x, {
+        [QGVAR(clearWeaponAttachmentsActionsCache)] call CBA_fnc_localEvent;
+    }] call CBA_fnc_addPlayerEventHandler;
+} forEach ["loadout", "weapon"];
+
 
 // add "Take _weapon_" action to dropped weapons
 private _action = [

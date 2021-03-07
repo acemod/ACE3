@@ -20,7 +20,7 @@
 params ["_vehicle", ["_player", objNull], ["_ropeClass", ""]];
 TRACE_3("deployRopes",_vehicle,_player,_ropeClass);
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 private _ropeOrigins = getArray (_config >> QGVAR(ropeOrigins));
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];

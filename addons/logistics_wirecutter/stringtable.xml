@@ -65,7 +65,7 @@
             <Russian>Разрезаем забор / провода...</Russian>
             <Japanese>フェンス/ワイヤを切断しています・・・</Japanese>
             <Korean>철망/철조망 자르는중...</Korean>
-            <Chinesesimp>剪断护栏/刺网中...</Chinesesimp>
+            <Chinesesimp>正在剪断护栏/刺网...</Chinesesimp>
             <Chinese>剪斷護欄/刺網中...</Chinese>
             <Turkish>Kesiliyor Çit/Tel</Turkish>
         </Key>
@@ -84,6 +84,7 @@
             <Korean>절단됨</Korean>
             <Chinesesimp>护栏已被剪断</Chinesesimp>
             <Chinese>護欄已被剪斷</Chinese>
+            <Turkish>Çit kesme</Turkish>
         </Key>
     </Package>
 </Project>

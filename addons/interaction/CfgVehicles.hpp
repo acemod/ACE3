@@ -72,9 +72,9 @@ class CfgVehicles {
                     displayName = CSTRING(TeamManagement);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
                     statement = "";
+                    modifierFunction = QUOTE([ARR_3(assignedTeam _target, 'PATHTOF(UI\team\team_management_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                     class ACE_AssignTeamRed {
                         displayName = CSTRING(AssignTeamRed);
@@ -82,7 +82,7 @@ class CfgVehicles {
                         statement = QUOTE([ARR_3(_target,'RED',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_red_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('RED', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_AssignTeamGreen {
                         displayName = CSTRING(AssignTeamGreen);
@@ -90,7 +90,7 @@ class CfgVehicles {
                         statement = QUOTE([ARR_3(_target,'GREEN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_green_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('GREEN', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_AssignTeamBlue {
                         displayName = CSTRING(AssignTeamBlue);
@@ -98,7 +98,7 @@ class CfgVehicles {
                         statement = QUOTE([ARR_3(_target,'BLUE',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_blue_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('BLUE', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_AssignTeamYellow {
                         displayName = CSTRING(AssignTeamYellow);
@@ -106,7 +106,7 @@ class CfgVehicles {
                         statement = QUOTE([ARR_3(_target,'YELLOW',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_yellow_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('YELLOW', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_UnassignTeam {
                         displayName = CSTRING(LeaveTeam);
@@ -114,7 +114,7 @@ class CfgVehicles {
                         statement = QUOTE([ARR_3(_target,'MAIN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_white_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('MAIN', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                 };
 
@@ -250,8 +250,8 @@ class CfgVehicles {
                 condition = QUOTE(GVAR(EnableTeamManagement));
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                 statement = "";
+                modifierFunction = QUOTE([ARR_3(assignedTeam _target, 'PATHTOF(UI\team\team_management_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                 showDisabled = 1;
-                icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
@@ -259,7 +259,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'RED',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_red_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('RED', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_JoinTeamGreen {
                     displayName = CSTRING(JoinTeamGreen);
@@ -267,7 +267,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'GREEN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_green_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('GREEN', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_JoinTeamBlue {
                     displayName = CSTRING(JoinTeamBlue);
@@ -275,7 +275,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'BLUE',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_blue_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('BLUE', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_JoinTeamYellow {
                     displayName = CSTRING(JoinTeamYellow);
@@ -283,7 +283,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'YELLOW',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_yellow_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('YELLOW', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_LeaveTeam {
                     displayName = CSTRING(LeaveTeam);
@@ -291,7 +291,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'MAIN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_white_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('MAIN', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_BecomeLeader {
                     displayName = CSTRING(BecomeLeader);
@@ -305,7 +305,7 @@ class CfgVehicles {
                     displayName = CSTRING(LeaveGroup);
                     condition = QUOTE(count (units group _player) > 1);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
+                    statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side group _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
@@ -318,6 +318,14 @@ class CfgVehicles {
                 statement = "";
                 showDisabled = 1;
                 icon = "";  // @todo
+
+                class GVAR(weaponAttachments) {
+                    displayName = "$STR_A3_CfgEditorSubcategories_EdSubcat_SideSlot0";
+                    condition = QGVAR(enableWeaponAttachments);
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                    insertChildren = QUOTE(call DFUNC(getWeaponAttachmentsActions));
+                    modifierFunction = QUOTE(_this select 3 set [ARR_2(2, getText (configFile >> 'CfgWeapons' >> currentWeapon (_this select 0) >> 'picture'))];);
+                };
             };
         };
     };
@@ -626,7 +634,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_OpenBox {
                     displayName = CSTRING(OpenBox);
-                    condition = QUOTE((alive _target) && {(getNumber (configFile >> 'CfgVehicles' >> (typeOf _target) >> 'disableInventory')) == 0});
+                    condition = QUOTE((alive _target) && {(getNumber (configOf _target >> 'disableInventory')) == 0});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
                     showDisabled = 0;
                 };

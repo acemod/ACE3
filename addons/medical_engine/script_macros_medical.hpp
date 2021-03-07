@@ -113,9 +113,6 @@
 #define DEFAULT_BANDAGE_REOPENING_MIN_DELAY 120
 #define DEFAULT_BANDAGE_REOPENING_MAX_DELAY 200
 
-// Time it takes to stitch one wound
-#define WOUND_STITCH_TIME 5
-
 #define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
 
 #define DEFAULT_FRACTURE_VALUES [0,0,0,0,0,0]
@@ -179,6 +176,7 @@
 #define GET_OPEN_WOUNDS(unit)       (unit getVariable [VAR_OPEN_WOUNDS, []])
 #define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, []])
 #define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, []])
+#define GET_DAMAGE_THRESHOLD(unit)  (unit getVariable [QEGVAR(medical,damageThreshold), [EGVAR(medical,AIDamageThreshold),EGVAR(medical,playerDamageThreshold)] select (isPlayer unit)])
 
 // The following function calls are defined here just for consistency
 #define GET_BLOOD_LOSS(unit)        ([unit] call EFUNC(medical_status,getBloodLoss))

@@ -44,7 +44,7 @@
             <Polish>Włącz efekty gogli w trzeciej osobie</Polish>
             <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
             <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
-            <Japanese>三人称視点でもゴーグルによる効果を出す</Japanese>
+            <Japanese>三人称視点でもゴーグルによる効果を表示</Japanese>
             <Korean>3인칭시에도 고글 효과를 보이게 합니다</Korean>
             <Chinesesimp>在第三人称视角显示护目镜效果</Chinesesimp>
             <Chinese>在第三人稱視角顯示護目鏡效果</Chinese>
@@ -99,6 +99,22 @@
             <Spanish>Tinte</Spanish>
             <Turkish>Ton</Turkish>
         </Key>
+        <Key ID="STR_ACE_Goggles_effects_effectsOnly">
+            <English>Effects</English>
+            <Russian>эффекты</Russian>
+            <Japanese>効果</Japanese>
+            <Polish>Efekty</Polish>
+            <German>Effekte</German>
+            <Korean>효과</Korean>
+            <French>Effets</French>
+            <Italian>Effetti</Italian>
+            <Chinesesimp>影响</Chinesesimp>
+            <Chinese>影響</Chinese>
+            <Portuguese>Efeitos</Portuguese>
+            <Czech>Efekty</Czech>
+            <Spanish>Efectos</Spanish>
+            <Turkish>Efektler</Turkish>
+        </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
             <Russian>Тонировка + эффекты</Russian>
@@ -121,12 +137,13 @@
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
             <Italian>Mostra interazione automatica per la pulizia degli occhiali</Italian>
             <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>
-            <Japanese>ゴーグルの拭き取りをセルフ インタラクションに表示</Japanese>
+            <Japanese>ゴーグル拭き取りをｾﾙﾌ ｲﾝﾀﾗｸｼｮﾝに表示</Japanese>
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
+            <Russian>Показывать Протереть очки в меню взаимодействия с собой</Russian>
         </Key>
     </Package>
 </Project>

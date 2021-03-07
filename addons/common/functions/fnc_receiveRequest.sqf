@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [bob, kevin, "ID", "Message", {Callback}] call ace_common_fnc_recieveRequest
+ * [bob, kevin, "ID", "Message", {Callback}] call ace_common_fnc_receiveRequest
  *
  * Public: No
  */

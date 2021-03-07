@@ -7,12 +7,13 @@
             <Chinese>火炮射程表</Chinese>
             <Italian>Tavola balistica per artigliria </Italian>
             <Czech>Dělostřelecké tabulky střelby</Czech>
-            <Japanese>火砲射程</Japanese>
+            <Japanese>火砲射表</Japanese>
             <Polish>Tabela Strzelnicza</Polish>
             <French>Table de tir d'artillerie</French>
             <Portuguese>Tabela de Artilharia</Portuguese>
             <Spanish>Tabla de distancias de artillería</Spanish>
             <Turkish>Topçu Menzil Tablosu</Turkish>
+            <Russian>Артиллерийская баллистическая таблица</Russian>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_rangetable_description">
             <English>Universal Artillery Rangetable</English>
@@ -25,6 +26,8 @@
             <French>Table de tir universelle pour l'artillerie.</French>
             <Portuguese>Tabela de Artilharia Universal</Portuguese>
             <Spanish>Tabla de distancias universal de artillería</Spanish>
+            <Turkish>Uluslar arası Topçu Menzil Tablosu</Turkish>
+            <Russian>Универсальная артиллерийская баллистическая таблица</Russian>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_displayName">
             <English>Air Resistance</English>
@@ -44,9 +47,9 @@
             <Turkish>Hava Direnci</Turkish>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_advancedCorrections_description">
-            <English>For Player Shots, Model Air Resistance and Wind Effects</English>
+            <English>For player shots, model air resistance and wind effects</English>
             <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza Mk6 przez graczy</Polish>
-            <Spanish>Para disparos del jugador, modelo de resistencia al aire y efectos de viento</Spanish>
+            <Spanish>Para disparos del jugador, modelar la resistencia del aire y los efectos de viento</Spanish>
             <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
             <Czech>Pro střelbu hráče používat odpor vzduchu a vliv větru</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
@@ -72,6 +75,7 @@
             <Portuguese>Computador de Artilharia Desabilitado</Portuguese>
             <Spanish>Computadora de artillería deshabilitada</Spanish>
             <Turkish>Topçu Bilgisayarı Devre Dışı</Turkish>
+            <Russian>Артиллерийский Компьютер Отключён</Russian>
         </Key>
         <Key ID="STR_ACE_ArtilleryTables_disableArtilleryComputer_description">
             <English>Disable the vanilla artillery computers</English>
@@ -85,6 +89,7 @@
             <Portuguese>Desabilitar o computador de artilharia padrão</Portuguese>
             <Spanish>Deshabilita la computadora de artillería por defecto de Arma 3</Spanish>
             <Turkish>Topçu bilgisayarını devre dışı bırak</Turkish>
+            <Russian>Отключить ванильный артиллерийский компьютер</Russian>
         </Key>
     </Package>
 </Project>

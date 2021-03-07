@@ -25,7 +25,7 @@ private _targetClass = typeOf _target;
 // a static weapon has to be empty for dragging (ignore UAV AI)
 if (
     _targetClass isKindOf "StaticWeapon"
-    && {-1 < crew _target findIf {(getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation")) != "UAVPilot"}}
+    && {-1 < crew _target findIf {getText (configOf _x >> "simulation") != "UAVPilot"}}
 ) exitWith {false};
 
 alive _target

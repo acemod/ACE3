@@ -18,6 +18,7 @@ class CfgPatches {
 #include "ACE_Medical_Injuries.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
+#include "CfgEden.hpp"
 
 /*
 class ACE_Extensions {

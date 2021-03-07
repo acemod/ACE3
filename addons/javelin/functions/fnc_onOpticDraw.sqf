@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [] call ace_javelin_fnc_mapHelperDraw
+ * [] call ace_javelin_fnc_onOpticDraw
  *
  * Public: No
  */

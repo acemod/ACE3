@@ -6,4 +6,4 @@
     false, // isGlobal
     {[QGVAR(quickTag), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

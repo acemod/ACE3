@@ -57,7 +57,7 @@ if (!_magLoadedInWeapon) then {
      * To prevent that, we must remove all magazines that would fit into the weapon and then add
      * them back with the magazine-to-be-loaded being the first. */
 
-    private _allowedMagClassesInWeapon = [_loadedWeapon] call CBA_fnc_compatibleMagazines;
+    private _allowedMagClassesInWeapon = [_loadedWeapon, true] call CBA_fnc_compatibleMagazines;
 
     /* Current ammo counts of all allowed magazine classes in weapon.
      * Example: [["8Rnd_82mm_Mo_shells", [8, 8, 2]], ["8Rnd_82mm_Mo_Flare_white", [7]]] */
@@ -77,7 +77,7 @@ if (!_magLoadedInWeapon) then {
     {
         _x params ["_loopMagClass", "_loopAmmoCounts"];
 
-        if (!(_loopMagClass isEqualTo _magazineClass)) then {
+        if (_loopMagClass isNotEqualTo _magazineClass) then {
             {
                 _vehicle addMagazineTurret [_loopMagClass, _turretPath, _x];
             } forEach _loopAmmoCounts;

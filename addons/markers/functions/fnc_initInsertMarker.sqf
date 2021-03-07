@@ -25,37 +25,37 @@
 
     //Can't place markers when can't interact
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {
-        _display closeDisplay 2;  //emulate "Cancel" button
+        _display closeDisplay 2; //emulate "Cancel" button
     };
 
     //BIS Controls:
-    private _text = _display displayctrl 101;
-    private _picture = _display displayctrl 102;
-    private _channel = _display displayctrl 103;
-    private _buttonOK = _display displayctrl 1;
-    private _buttonCancel = _display displayctrl 2;
+    private _text = _display displayctrl IDC_INSERT_MARKER;
+    private _picture = _display displayctrl IDC_INSERT_MARKER_PICTURE;
+    private _channel = _display displayctrl IDC_INSERT_MARKER_CHANNELS;
+    private _buttonOK = _display displayctrl IDC_OK;
+    private _buttonCancel = _display displayctrl IDC_CANCEL;
     private _description = _display displayctrl 1100;
     private _title = _display displayctrl 1001;
     private _descriptionChannel = _display displayctrl 1101;
 
     //ACE Controls:
-    // _sizeX = _display displayctrl 1200;
-    // _sizeY = _display displayctrl 1201;
-    private _aceShapeLB = _display displayctrl 1210;
-    private _aceColorLB = _display displayctrl 1211;
-    private _aceAngleSlider = _display displayctrl 1220;
-    private _aceAngleSliderText = _display displayctrl 1221;
+    private _ctrlTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
+    private _ctrlTimestampText = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP_TEXT;
+    private _aceShapeLB = _display displayctrl IDC_ACE_INSERT_MARKER_SHAPE;
+    private _aceColorLB = _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
+    private _aceAngleSlider = _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE;
+    private _aceAngleSliderText = _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
 
     private _mapDisplay = displayParent _display;
     if (isNull _mapDisplay) exitWith {ERROR("No Map");};
-    private _mapCtrl = _mapDisplay displayCtrl 51;
+    private _mapCtrl = _mapDisplay displayCtrl IDC_MAP;
 
     GVAR(editingMarker) = "";
     (ctrlMapMouseOver _mapCtrl) params ["_mouseOverType", "_marker"];
 
     //check if entity under mouse is a user marker
     if (_mouseOverType isEqualTo "marker") then {
-        if (!((_marker find "_USER_DEFINED") isEqualTo -1) && ((markerShape _marker) isEqualTo "ICON")) then {
+        if (((_marker find "_USER_DEFINED") isNotEqualTo -1) && ((markerShape _marker) isEqualTo "ICON")) then {
             GVAR(editingMarker) = _marker;
             //hide marker which is being edited because if the user cancels editing, it will still exist unchanged
             GVAR(editingMarker) setMarkerAlphaLocal 0;
@@ -71,12 +71,15 @@
 
     ////////////////////
     // Calculate center position of the marker placement ctrl
-    if !(GVAR(editingMarker) isEqualTo "") then {
+    if (GVAR(editingMarker) isNotEqualTo "") then {
         //prevent changing the original marker position
         GVAR(currentMarkerPosition) = markerPos GVAR(editingMarker);
     } else {
         private _pos = ctrlPosition _picture;
-        _pos = [(_pos select 0) + (_pos select 2) / 2, (_pos select 1) + (_pos select 3) / 2];
+        _pos = [
+            (_pos select 0) + (_pos select 2) / 2,
+            (_pos select 1) + (_pos select 3) / 2
+        ];
         GVAR(currentMarkerPosition) = _mapCtrl ctrlMapScreenToWorld _pos;
     };
 
@@ -86,9 +89,11 @@
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
-    if !((markerText GVAR(editingMarker)) isEqualTo "") then {
-        //fill text input with text from marker which is being edited
-        _text ctrlSetText (markerText GVAR(editingMarker));
+    private _markerText = markerText GVAR(editingMarker);
+    if (_markerText != "") then {
+        // fill text input with text from marker which is being edited
+        _markerText = _markerText call FUNC(removeTimestamp);
+        _text ctrlSetText _markerText;
     };
 
     //Focus on the text input
@@ -98,7 +103,7 @@
     private _pos = ctrlposition _text;
     _pos params ["_posX", "_posY", "_posW", "_posH"];
     _posX = _posX + 0.01;
-    _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER));  //prevent buttons being placed below bottom edge of screen
+    _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER)); //prevent buttons being placed below bottom edge of screen
     _pos set [0, _posX];
     _pos set [1, _posY];
     _text ctrlSetPosition _pos;
@@ -112,33 +117,72 @@
 
     //--- Description
     _pos set [1, _posY - 1 * _posH];
-    _pos set [3,6 * _posH + 6 * BORDER];
+    if (GVAR(timestampEnabled)) then {
+        _pos set [3,7 * _posH + 7 * BORDER];
+    } else {
+        _pos set [3,6 * _posH + 6 * BORDER];
+    };
     _description ctrlEnable false;
     _description ctrlSetPosition _pos;
     _description ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", localize "str_lib_label_description"];
     _description ctrlCommit 0;
 
+    //--- Timestamp
+    private _timestampOffset = 0;
+    if (GVAR(timestampEnabled)) then {
+        _timestampOffset = _posH + BORDER;
+
+        private _left = _posX;
+        private _top = _posY + 1 * _posH + 2 * BORDER;
+        private _width = _posH * safeZoneH / safeZoneW;
+        private _height = _posH;
+
+        _ctrlTimestamp ctrlSetPosition [_left, _top, _width, _height];
+        _ctrlTimestamp ctrlCommit 0;
+
+        _ctrlTimestampText ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", LLSTRING(Timestamp)];
+
+        _left = _left + _width;
+        _width = _posW - _width;
+        _top = _top + 0.1 * _height;
+        _ctrlTimestampText ctrlSetPosition [_left, _top, _width, _height];
+        _ctrlTimestampText ctrlCommit 0;
+
+        if !([ACE_player] call FUNC(canTimestamp)) then {
+            _ctrlTimestamp ctrlEnable false;
+            _ctrlTimestamp ctrlSetTooltip LLSTRING(TimestampTooltipNoWatch);
+        } else {
+            _ctrlTimestamp cbSetChecked (uiNamespace getVariable [QGVAR(timestampChecked), false]);
+        };
+    } else {
+        _ctrlTimestampText ctrlEnable false;
+        _ctrlTimestampText ctrlShow false;
+        _ctrlTimestamp ctrlEnable false;
+        _ctrlTimestamp ctrlShow false;
+    };
+
     //--- Shape
-    _pos set [1, _posY + 1 * _posH + 2 * BORDER];
+    _pos set [0, _posX];
+    _pos set [1, _posY + 1 * _posH + 2 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _pos set [3, _posH];
     _aceShapeLB ctrlSetPosition _pos;
     _aceShapeLB ctrlCommit 0;
 
     //--- Color
-    _pos set [1, _posY + 2 * _posH + 3 * BORDER];
+    _pos set [1, _posY + 2 * _posH + 3 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceColorLB ctrlSetPosition _pos;
     _aceColorLB ctrlCommit 0;
 
     //--- Angle
-    _pos set [1, _posY + 3 * _posH + 4 * BORDER];
+    _pos set [1, _posY + 3 * _posH + 4 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceAngleSlider ctrlSetPosition _pos;
     _aceAngleSlider ctrlCommit 0;
 
     //--- Angle Text
-    _pos set [1, _posY + 4 * _posH + 5 * BORDER];
+    _pos set [1, _posY + 4 * _posH + 5 * BORDER + _timestampOffset];
     _pos set [2, _posW];
     _aceAngleSliderText ctrlSetPosition _pos;
     _aceAngleSliderText ctrlCommit 0;
@@ -146,13 +190,13 @@
     private _offsetButtons = 0;
 
     if (isMultiplayer) then {
-        _pos set [1,_posY + 5 * _posH + 7 * BORDER];
+        _pos set [1,_posY + 5 * _posH + 7 * BORDER + _timestampOffset];
         _pos set [3,_posH];
         _descriptionChannel ctrlSetStructuredText parseText format ["<t size='0.8'>%1:</t>", localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0"];
         _descriptionChannel ctrlSetPosition _pos;
         _descriptionChannel ctrlCommit 0;
 
-        _pos set [1,_posY + 6 * _posH + 7 * BORDER];
+        _pos set [1,_posY + 6 * _posH + 7 * BORDER + _timestampOffset];
         _pos set [3,_posH];
         _channel ctrlSetPosition _pos;
         _channel ctrlCommit 0;
@@ -172,7 +216,7 @@
             };
         };
 
-        private _selectChannel = if !(GVAR(editingMarker) isEqualTo "") then {
+        private _selectChannel = if (GVAR(editingMarker) isNotEqualTo "") then {
             //get the channel where the marker was placed in
             parseNumber ((GVAR(editingMarker) splitString "/") param [2, "3"])
         } else {
@@ -199,7 +243,7 @@
     };
 
     //--- ButtonOK
-    _pos set [1, _posY + _offsetButtons];
+    _pos set [1, _posY + _offsetButtons + _timestampOffset];
     _pos set [2, _posW / 2 - BORDER];
     _pos set [3, _posH];
     _buttonOk ctrlSetPosition _pos;
@@ -207,11 +251,16 @@
 
     //--- ButtonCancel
     _pos set [0, _posX + _posW / 2];
-    _pos set [1, _posY + _offsetButtons];
+    _pos set [1, _posY + _offsetButtons + _timestampOffset];
     _pos set [2, _posW / 2];
     _pos set [3, _posH];
     _buttonCancel ctrlSetPosition _pos;
     _buttonCancel ctrlCommit 0;
+
+    ////////////////////
+    // init marker timestamp cb
+    _buttonOK ctrlAddEventHandler ["ButtonClick", FUNC(onButtonClickConfirm)];
+    _ctrlTimestamp ctrlAddEventHandler ["CheckedChanged", FUNC(onCheckedChangedTimestamp)];
 
     ////////////////////
     // init marker shape lb
@@ -261,7 +310,7 @@
     // init marker angle slider
     _aceAngleSlider sliderSetRange [-180, 180];
 
-    if !(GVAR(editingMarker) isEqualTo "") then {
+    if (GVAR(editingMarker) isNotEqualTo "") then {
         //get the original direction
         GVAR(currentMarkerAngle) = markerDir GVAR(editingMarker);
     };

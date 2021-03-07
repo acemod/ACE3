@@ -16,6 +16,7 @@
             <Korean>HuntIR 수송함</Korean>
             <Chinesesimp>高空战术摄像头运输箱</Chinesesimp>
             <Chinese>高空戰術成像器運輸箱</Chinese>
+            <Turkish>HuntIR Taşıma Kutusu</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_magazine_displayName">
             <English>HuntIR Round</English>
@@ -32,6 +33,7 @@
             <Korean>HuntIR 유탄</Korean>
             <Chinesesimp>高空战术摄像头弹药</Chinesesimp>
             <Chinese>高空戰術成像器彈藥</Chinese>
+            <Turkish>HuntIR Mermisi</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_monitor_displayName">
             <English>HuntIR monitor</English>
@@ -48,6 +50,7 @@
             <Korean>HuntIR 모니터</Korean>
             <Chinesesimp>高空战术摄像头显示面板</Chinesesimp>
             <Chinese>高空戰術成像器顯示面板</Chinese>
+            <Turkish>HuntIR Ekranı</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_activateMonitor">
             <English>Activate HuntIR monitor</English>
@@ -64,6 +67,7 @@
             <Korean>HuntIR 모니터 켜기</Korean>
             <Chinesesimp>开启高空战术摄像头显示面板</Chinesesimp>
             <Chinese>開啟高空戰術成像器顯示面板</Chinese>
+            <Turkish>HuntIR Ekranı Aktif</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_CAM">
             <English>Camera:</English>
@@ -80,6 +84,7 @@
             <Korean>카메라:</Korean>
             <Chinesesimp>摄像头:</Chinesesimp>
             <Chinese>攝影機:</Chinese>
+            <Turkish>Kamera:</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_ALT">
             <English>Altitude:</English>
@@ -96,6 +101,7 @@
             <Korean>고도:</Korean>
             <Chinesesimp>高度:</Chinesesimp>
             <Chinese>高度:</Chinese>
+            <Turkish>Yükseklik:</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_TIME">
             <English>Recording Time:</English>
@@ -112,6 +118,7 @@
             <Korean>녹화시간:</Korean>
             <Chinesesimp>记录时间:</Chinesesimp>
             <Chinese>記錄時間:</Chinese>
+            <Turkish>Kayıt süresi:</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_ESC">
             <English>Press ESC to quit camera</English>
@@ -128,6 +135,7 @@
             <Korean>ESC를 눌러 카메라 나가기</Korean>
             <Chinesesimp>按下ESC退出摄像头</Chinesesimp>
             <Chinese>按下ESC退出攝影機</Chinese>
+            <Turkish>ESC'ye basarak çıkış yap</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP">
             <English>Help</English>
@@ -144,6 +152,7 @@
             <Korean>도움말</Korean>
             <Chinesesimp>帮助</Chinesesimp>
             <Chinese>幫助</Chinese>
+            <Turkish>Yardım</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_ZOOM">
             <English>A/D - Cycle zoom</English>
@@ -160,6 +169,7 @@
             <Korean>A/D - 줌 전환</Korean>
             <Chinesesimp>A/D - 切换放大倍率</Chinesesimp>
             <Chinese>A/D - 切換放大倍率</Chinese>
+            <Turkish>A/D Uzaklığı değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_CAM">
             <English>W/S - Select camera</English>
@@ -176,6 +186,7 @@
             <Korean>W/S - 카메라 선택</Korean>
             <Chinesesimp>W/S - 切换摄像头</Chinesesimp>
             <Chinese>W/S - 切換攝影機</Chinese>
+            <Turkish>W/S- Kamerayı seç</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_ROT">
             <English>Left/Right - Rotate camera</English>
@@ -192,6 +203,7 @@
             <Korean>좌/우 - 카메라 돌리기</Korean>
             <Chinesesimp>左/右 - 旋转摄像头</Chinesesimp>
             <Chinese>左/右 - 旋轉攝影機</Chinese>
+            <Turkish>Sol/Sağ Kamerayı döndür</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_ELV">
             <English>Up/Down - Elevate/lower camera</English>
@@ -208,6 +220,7 @@
             <Korean>상/하 카메라 올리기/내리기</Korean>
             <Chinesesimp>上/下 - 上升/下降摄像头</Chinesesimp>
             <Chinese>上/下 - 上升/下降攝影機</Chinese>
+            <Turkish>Yukarı/Asağı- Kamerayı yukarı aşağı oynat</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_MOD">
             <English>N - Cycle IT modes</English>
@@ -224,6 +237,7 @@
             <Korean>N - IT모드 순환</Korean>
             <Chinesesimp>N - 切换热显模式</Chinesesimp>
             <Chinese>N - 切換熱顯模式</Chinese>
+            <Turkish>N- IT modülünü değiştir</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_RES">
             <English>R - Reset camera</English>
@@ -240,6 +254,7 @@
             <Korean>R - 카메라 초기화</Korean>
             <Chinesesimp>R - 重置摄像头</Chinesesimp>
             <Chinese>R - 重置攝影機</Chinese>
+            <Turkish>R- Kamerayı sıfırla</Turkish>
         </Key>
         <Key ID="STR_ACE_HuntIR_HELP_EXIT">
             <English>Esc - Exit help</English>
@@ -256,6 +271,7 @@
             <Korean>Esc - 도움말 나가기</Korean>
             <Chinesesimp>Esc - 离开帮助</Chinesesimp>
             <Chinese>Esc - 離開幫助</Chinese>
+            <Turkish>Esc- Çıkış Yardım</Turkish>
         </Key>
     </Package>
 </Project>
