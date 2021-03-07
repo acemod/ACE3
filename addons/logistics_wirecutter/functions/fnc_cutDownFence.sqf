@@ -35,7 +35,7 @@ if !(_unit call EFUNC(common,isSwimming)) then {
         TRACE_1("Fence cutting successful",_this);
         (_this select 0) params ["_unit", "_fence"];
 
-        _fence setDamage 1;
+        [QGVAR(destroyFence), [_fence]] call CBA_fnc_serverEvent;
         if !(_unit call EFUNC(common,isSwimming)) then {
             [_unit, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
         };

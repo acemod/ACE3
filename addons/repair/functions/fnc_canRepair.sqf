@@ -95,7 +95,7 @@ if (!_return) exitWith {false};
 
 //Check that there are required objects nearby
 private _requiredObjects = getArray (_config >> "claimObjects");
-if (!(_requiredObjects isEqualTo [])) then {
+if (_requiredObjects isNotEqualTo []) then {
     private _objectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
     if (_objectsAvailable isEqualTo []) then {
             TRACE_2("Missing Required Objects",_requiredObjects,_objectsAvailable);

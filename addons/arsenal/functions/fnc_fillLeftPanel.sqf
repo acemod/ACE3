@@ -51,7 +51,7 @@ switch true do {
 
         {
             ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-        } foreach ((GVAR(virtualItems) select 0) select ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find _ctrlIDC));
+        } foreach ((GVAR(virtualItems) select IDX_VIRT_WEAPONS) select ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find _ctrlIDC));
     };
 
     case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
@@ -65,19 +65,19 @@ switch true do {
             case IDC_buttonUniform : {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 4);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_UNIFORM);
             };
 
             case IDC_buttonVest : {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 5);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_VEST);
             };
 
             case IDC_buttonBackpack : {
                 {
                     ["CfgVehicles", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 6);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_BACKPACK);
             };
         };
     };
@@ -96,12 +96,12 @@ switch true do {
             case IDC_buttonHeadgear: {
                 {
                     ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 3);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_HEADGEAR);
             };
             case IDC_buttonGoggles : {
                 {
                     ["CfgGlasses", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 7);
+                } foreach (GVAR(virtualItems) select IDX_VIRT_GOGGLES);
             };
             case IDC_buttonNVG : {
                 {
@@ -199,7 +199,7 @@ private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace)
 for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
     private _currentData = _ctrlPanel lbData _lbIndex;
 
-    if (!(_currentData isEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
+    if ((_currentData isNotEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
         _ctrlPanel lbSetCurSel _lbIndex;
     };
 };

@@ -20,8 +20,8 @@ params ["_player", ["_displayHint", false, [false]]];
 
 if (!GVAR(EnableCombatDeafness)) exitWith {};
 
-if !(_player canAdd "ACE_EarPlugs") exitWith { // inventory full
-    [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
+if !([_player, "ACE_EarPlugs"] call CBA_fnc_canAddItem) exitWith { // inventory full
+    [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
 // Plugs already in and removing them.

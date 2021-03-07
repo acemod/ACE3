@@ -7,7 +7,7 @@ class RscTitles{
         onUnload = "uiNamespace setVariable ['ACE_Goggles_Display', displayNull]";
         fadeIn=0.5;
         fadeOut=0.5;
-        movingEnable = false;
+        movingEnable = 0;
         duration = 10e10;
         name = "RscACE_Goggles_BaseTitle";
         class controls;

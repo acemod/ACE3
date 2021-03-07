@@ -23,9 +23,9 @@ private _side = side _leader;
 
 if (_vehicle == _leader) exitWith {
     if (
-        getNumber (configFile >> "CfgVehicles" >> typeOf _leader >> "detectSkill") > 20 ||
-        getNumber (configFile >> "CfgVehicles" >> typeOf _leader >> "camouflage") < 1 ||
-        getText   (configFile >> "CfgVehicles" >> typeOf _leader >> "textsingular") == "diver"
+        getNumber (configOf _leader >> "detectSkill") > 20 ||
+        getNumber (configOf _leader >> "camouflage") < 1 ||
+        getText   (configOf _leader >> "textsingular") == "diver"
     ) then {
         ["n_recon", "b_recon", "o_recon"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)
     } else {
@@ -33,16 +33,16 @@ if (_vehicle == _leader) exitWith {
     };
 };
 
-if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "attendant") == 1) exitWith {
+if (getNumber (configOf _vehicle >> "attendant") == 1) exitWith {
     ["n_med", "b_med", "o_med"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)
 };
 
 if (
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportRepair") > 0 ||
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportFuel") > 0 ||
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportAmmo") > 0 ||
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ACE_canRepair") > 0 ||
-    getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ACE_fuelCapacityCargo") > 0
+    getNumber (configOf _vehicle >> "transportRepair") > 0 ||
+    getNumber (configOf _vehicle >> "transportFuel") > 0 ||
+    getNumber (configOf _vehicle >> "transportAmmo") > 0 ||
+    getNumber (configOf _vehicle >> "ACE_canRepair") > 0 ||
+    getNumber (configOf _vehicle >> "ACE_fuelCapacityCargo") > 0
 ) exitWith {
     ["n_maint", "b_maint", "o_maint"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)
 };
@@ -59,7 +59,7 @@ if (_vehicle isKindOf "StaticMortar") exitWith {
     ["n_mortar", "b_mortar", "o_mortar"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)
 };
 
-if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "artilleryScanner") == 1) exitWith {
+if (getNumber (configOf _vehicle >> "artilleryScanner") == 1) exitWith {
     ["n_art", "b_art", "o_art"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)
 };
 
@@ -68,7 +68,7 @@ if (_vehicle isKindOf "Car") exitWith {
 };
 
 if (_vehicle isKindOf "Tank") exitWith {
-    if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportSoldier") > 0) then {
+    if (getNumber (configOf _vehicle >> "transportSoldier") > 0) then {
         ["n_mech_inf", "b_mech_inf", "o_mech_inf"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)
     } else {
         ["n_armor", "b_armor", "o_armor"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)

@@ -1296,6 +1296,23 @@
             <Chinesesimp>没有空间可卸载</Chinesesimp>
             <Korean>언로드 할 공간이 없습니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Common_Inventory_Full">
+            <English>No inventory space</English>
+            <German>Kein Platz im Inventar</German>
+            <Spanish>Sin espacio en inventario</Spanish>
+            <Polish>Brak miejsca w ekwipunku</Polish>
+            <French>Pas de place dans l'inventaire</French>
+            <Czech>Nedostatek místa v inventáři</Czech>
+            <Portuguese>Sem espaço no inventário</Portuguese>
+            <Italian>Non hai più spazio</Italian>
+            <Hungarian>Nincs több hely</Hungarian>
+            <Russian>В инвентаре нет места</Russian>
+            <Japanese>インベントリに空きがない</Japanese>
+            <Korean>넣을 공간이 없음</Korean>
+            <Chinese>無可用空間</Chinese>
+            <Chinesesimp>无可用空间</Chinesesimp>
+            <Turkish>Envanter de alan yok</Turkish>
+        </Key>
         <Key ID="STR_ACE_Common_KeybindToggle">
             <English>Toggle</English>
             <Polish>переключить</Polish>

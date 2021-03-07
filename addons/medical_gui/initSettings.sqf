@@ -5,7 +5,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [[0, 1, 2], [LSTRING(Selections3D), LSTRING(Radial), ELSTRING(common,Disabled)], 0],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableSelfActions),
@@ -14,7 +14,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableMedicalMenu),
@@ -23,7 +23,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), ELSTRING(common,VehiclesOnly)], 1],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(openAfterTreatment),
@@ -32,7 +32,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     true,
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(maxDistance),
@@ -41,7 +41,7 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [0, 10, 3, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(interactionMenuShowTriage),
@@ -50,4 +50,4 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(Medical_Treatment,Anyone), ELSTRING(Medical_Treatment,Medics)], 1],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

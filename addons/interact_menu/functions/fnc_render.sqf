@@ -62,7 +62,7 @@ if (GVAR(openedMenuType) >= 0) then {
     GVAR(selectedAction) = _action select 1;
     GVAR(selectedTarget) = (GVAR(selectedAction)) select 2;
 
-    private _misMatch = !(GVAR(lastPath) isEqualTo _hoverPath);
+    private _misMatch = (GVAR(lastPath) isNotEqualTo _hoverPath);
 
     if(_misMatch && {diag_tickTime-GVAR(expandedTime) > linearConversion [0, 2, GVAR(menuAnimationSpeed), 0.25, 0.08333333]}) then {
         GVAR(startHoverTime) = diag_tickTime;
