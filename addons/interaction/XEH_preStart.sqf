@@ -9,8 +9,7 @@ private _replaceTerrainClasses = QUOTE( \
     && {getNumber (_x >> QQGVAR(replaceTerrainObject)) > 0} \
 ) configClasses (configFile >> "CfgVehicles");
 
-private _cacheReplaceTerrainModels = [];
-private _cacheReplaceTerrainClasses = [];
+private _cacheReplaceTerrainModels = createHashMap;
 {
     private _model = toLower getText (_x >> "model");
     if (_model select [0, 1] == "\") then {
@@ -19,9 +18,8 @@ private _cacheReplaceTerrainClasses = [];
     if ((_model select [count _model - 4]) != ".p3d") then {
         _model = _model + ".p3d"
     };
-    if (-1 < _cacheReplaceTerrainModels pushBackUnique _model) then {
-        _cacheReplaceTerrainClasses pushBack configName _x;
-    };
+    if (_model in _cacheReplaceTerrainModels) then {continue};
+    _cacheReplaceTerrainModels set [_model, configName _x];
 } forEach _replaceTerrainClasses;
 
-uiNamespace setVariable [QGVAR(cacheReplaceTerrainClasses), compileFinal str [_cacheReplaceTerrainModels, _cacheReplaceTerrainClasses]];
+uiNamespace setVariable [QGVAR(cacheReplaceTerrainModels), compileFinal str _cacheReplaceTerrainModels];

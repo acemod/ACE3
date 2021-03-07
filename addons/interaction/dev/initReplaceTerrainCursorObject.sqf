@@ -1,17 +1,17 @@
 // execVM "z\ace\addons\interaction\dev\initReplaceTerrainCursorObject.sqf";
-// use "J" key to replace terrain object and add dragging actions to cursorObject
+// use "J" key to replace terrain cursorObject and add dragging actions to it
 
 #include "\z\ace\addons\interaction\script_component.hpp"
 
-DFUNC(replaceTerrainClassesAdd) = {
+DFUNC(replaceTerrainModelsAdd) = {
     params ["_model", ["_class", ""]];
     if (_model isEqualType objNull) then {
         _model = getModelInfo _model select 1;
     };
     if (_model isEqualTo "") exitWith {systemChat "fail model"; false};
 
-    private _savedClass = GVAR(replaceTerrainClasses) getVariable [_model, ""];
-    if (_savedClass != "") exitWith {systemChat ("was " + _savedClass); true};
+    private _savedClass = GVAR(replaceTerrainModels) get _model;
+    if (!isNil "_savedClass") exitWith {systemChat ("was " + _savedClass); true};
 
     private _parent = "";
     if (_class isEqualTo "") then {
@@ -24,11 +24,15 @@ DFUNC(replaceTerrainClassesAdd) = {
             if ((_xmodel select [count _xmodel - 4]) != ".p3d") then {
                 _xmodel = _xmodel + ".p3d"
             };
-            if (_model == _xmodel) exitWith {_class = configName _x; _parent = configName inheritsFrom _x;}
+            if (_model == _xmodel) then {
+                _class = configName _x;
+                _parent = configName inheritsFrom _x;
+                break;
+            }
         } forEach _configClasses;
     };
     if (_class isEqualTo "") exitWith {systemChat "fail class"; false};
-    GVAR(replaceTerrainClasses) setVariable [_model, _class];
+    GVAR(replaceTerrainModels) set [_model, _class];
     QEGVAR(interact_menu,renderNearbyActions) call CBA_fnc_localEvent;
     systemChat ("found " + _class);
     diag_log format ["replaceTerrain: class %1: %2", _class, _parent];
@@ -38,9 +42,10 @@ DFUNC(replaceTerrainClassesAdd) = {
 // DIK_J
 [0x24, [false, false, false], {
     if (
-        cursorObject call FUNC(replaceTerrainClassesAdd)
+        cursorObject call FUNC(replaceTerrainModelsAdd)
         && {["ace_dragging"] call EFUNC(common,isModLoaded)}
     ) then {
+        // wait while server replaces object, then init dragging on all clients
         [{
             if (typeOf cursorObject == "") exitwith {};
             [cursorObject, {

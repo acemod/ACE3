@@ -16,12 +16,7 @@ DFUNC(repair_Statement) = { // moved from config because of build problems
 };
 
 if hasInterface then {
-    GVAR(replaceTerrainClasses) = call CBA_fnc_createNamespace;
-    private _cacheReplaceTerrainArray = call (uiNamespace getVariable [QGVAR(cacheReplaceTerrainClasses), {[[],[]]}]);
-    _cacheReplaceTerrainArray params ["_cacheReplaceTerrainModels", "_cacheReplaceTerrainClasses"];
-    {
-        GVAR(replaceTerrainClasses) setVariable [_x, _cacheReplaceTerrainClasses select _forEachIndex];
-    } forEach _cacheReplaceTerrainModels;
+    GVAR(replaceTerrainModels) = createHashMapFromArray call (uiNamespace getVariable QGVAR(cacheReplaceTerrainModels));
 };
 
 ADDON = true;

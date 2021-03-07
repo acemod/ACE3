@@ -86,13 +86,13 @@ if (!hasInterface) exitWith {};
 [QEGVAR(interact_menu,renderNearbyActions), {
     if !GVAR(interactWithTerrainObjects) exitWith {};
     {
-        if (!isObjectHidden _x && {_x getVariable [QGVAR(terrainObjectNotReplaced), true]} && {typeOf _x isEqualTo ""}) then {
-            private _model = getModelInfo _x select 1;
-            private _class = GVAR(replaceTerrainClasses) getVariable [_model, ""];
-            if (_class isEqualTo "") exitWith {};
-            _x setVariable [QGVAR(terrainObjectNotReplaced), false];
-            [QGVAR(replaceTerrainObject), [_x, _class]] call CBA_fnc_serverEvent;
-        };
+        if (isObjectHidden _x || {_x getVariable [QGVAR(terrainObjectReplaced), false]} || {typeOf _x isNotEqualTo ""}) then {continue};
+
+        private _model = getModelInfo _x select 1;
+        private _class = GVAR(replaceTerrainModels) get _model;
+        if (isNil "_class") then {continue};
+        _x setVariable [QGVAR(terrainObjectReplaced), true];
+        [QGVAR(replaceTerrainObject), [_x, _class]] call CBA_fnc_serverEvent;
     } forEach nearestTerrainObjects [ACE_player, [], 5, false];
 }] call CBA_fnc_addEventHandler;
 
