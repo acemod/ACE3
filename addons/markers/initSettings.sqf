@@ -23,7 +23,7 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
         ],
         1
     ]
-] call cba_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(timestampEnabled), "CHECKBOX",
@@ -37,14 +37,8 @@ private _categoryName = format ["ACE %1", localize ELSTRING(map,Module_DisplayNa
     [LSTRING(TimestampHourFormat), LSTRING(TimestampHourFormatDescription)],
     [_categoryName, LLSTRING(Module_DisplayName)],
     [
-        [
-            24,
-            12
-        ],
-        [
-            LSTRING(TimestampHourFormat24),
-            LSTRING(TimestampHourFormat12)
-        ],
+        [24, 12],
+        [LSTRING(TimestampHourFormat24), LSTRING(TimestampHourFormat12)],
         0
     ]
 ] call CBA_fnc_addSetting;
@@ -55,25 +49,15 @@ private _formatDescription = [
     LLSTRING(TimestampFormatDescription2),
     LLSTRING(TimestampFormatDescription3),
     LLSTRING(TimestampFormatDescription4)
-] joinString "\n";
+] joinString endl;
 
 [
     QGVAR(timestampFormat), "LIST",
     [LSTRING(timestampFormat), _formatDescription],
     [_categoryName, LLSTRING(Module_DisplayName)],
     [
-        [
-            "HH",
-            "HH:MM",
-            "HH:MM:SS",
-            "HH:MM:SS:MM"
-        ],
-        [
-            "HH",
-            "HH:MM",
-            "HH:MM:SS",
-            "HH:MM:SS:MM"
-        ],
+        ["HH", "HH:MM", "HH:MM:SS", "HH:MM:SS:MM"],
+        ["HH", "HH:MM", "HH:MM:SS", "HH:MM:SS:MM"],
         1
     ]
 ] call CBA_fnc_addSetting;

@@ -43,7 +43,7 @@ if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
     params ["_unit", "_vehicle"];
     TRACE_2("success",_unit,_vehicle);
     private _patientName = [_unit, false, true] call EFUNC(common,getName);
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    private _vehicleName = getText (configOf _vehicle >> "displayName");
     [[LSTRING(LoadedInto), _patientName, _vehicleName], 3] call EFUNC(common,displayTextStructured);
 }, [_patient, _vehicle], 3, {
     params ["_unit", "_emptyPos"];
