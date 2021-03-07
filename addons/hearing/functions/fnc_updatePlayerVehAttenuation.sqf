@@ -22,10 +22,10 @@ if (isNull _vehicle) exitWith {};
 private _newAttenuation = 1;
 if (ACE_player != _vehicle) then {
     private _turretPath = [ACE_player] call EFUNC(common,getTurretIndex);
-    private _effectType = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "attenuationEffectType");
+    private _effectType = getText (configOf _vehicle >> "attenuationEffectType");
 
-    if (!(_turretPath isEqualTo [])) then {
-        private _turretConfig = [(configFile >> "CfgVehicles" >> (typeOf _vehicle)), _turretPath] call EFUNC(common,getTurretConfigPath);
+    if (_turretPath isNotEqualTo []) then {
+        private _turretConfig = [(configOf _vehicle), _turretPath] call EFUNC(common,getTurretConfigPath);
 
         if ((getNumber (_turretConfig >> "disableSoundAttenuation")) == 1) then {
             _effectType = "";
@@ -40,7 +40,7 @@ if (ACE_player != _vehicle) then {
         case (_effectType == ""): {1};
         case (_effectType == "CarAttenuation");
         case (_effectType == "RHS_CarAttenuation"): { // Increase protection for armored cars
-            private _armor = getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "HitPoints" >> "HitBody" >> "armor");
+            private _armor = getNumber (configOf _vehicle >> "HitPoints" >> "HitBody" >> "armor");
             linearConversion [2, 8, _armor, 0.5, 0.3, true];};
         case (_effectType == "OpenCarAttenuation"): {1};
         case (_effectType == "TankAttenuation"): {0.1};

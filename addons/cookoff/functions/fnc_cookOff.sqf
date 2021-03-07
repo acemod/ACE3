@@ -28,7 +28,7 @@ if (local _vehicle) then {
     params ["_vehicle"];
 
     private _config = _vehicle call CBA_fnc_getObjectConfig;
-    private _positions = getArray (_config >> QGVAR(cookoffSelections)) select {!((_vehicle selectionPosition _x) isEqualTo [0,0,0])};
+    private _positions = getArray (_config >> QGVAR(cookoffSelections)) select {(_vehicle selectionPosition _x) isNotEqualTo [0,0,0]};
 
     if (_positions isEqualTo []) then {
         WARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
@@ -48,7 +48,7 @@ if (local _vehicle) then {
     {
         private _position = [0,-2,0];
 
-        if !(_x isEqualTo "#noselection") then {
+        if (_x isNotEqualTo "#noselection") then {
             _position = _vehicle selectionPosition _x;
         };
 
@@ -79,7 +79,7 @@ if (local _vehicle) then {
         {
             private _position = [0,-2,0];
 
-            if !(_x isEqualTo "#noselection") then {
+            if (_x isNotEqualTo "#noselection") then {
                 _position = _vehicle selectionPosition _x;
             };
 

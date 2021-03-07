@@ -17,7 +17,7 @@
 
 params ["_object"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _object;
+private _config = configOf _object;
 
 if (getNumber (_config >> QGVAR(canDrag)) == 1) then {
     private _position = [_config >> QGVAR(dragPosition), "ARRAY", [0,1.5,0]] call CBA_fnc_getConfigEntry;

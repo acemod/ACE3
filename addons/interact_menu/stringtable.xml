@@ -489,5 +489,15 @@
             <Spanish>Selector de color</Spanish>
             <Turkish>Seçici Renk</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
+            <English>Consolidate single child actions</English>
+            <Russian>Объединять с единственным дочерним действием</Russian>
+            <Japanese>サブ動作を統合</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
+            <English>Combines parent action with only one child action together.</English>
+            <Russian>Объединять родительское действие с единственным дочерним действием в одно.</Russian>
+            <Japanese>メインの動作とサブ動作一つを統合して表示します。</Japanese>
+        </Key>
     </Package>
 </Project>

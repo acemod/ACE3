@@ -31,6 +31,6 @@ _weapon = configName (configFile >> "CfgWeapons" >> _weapon);
 
 private _muzzle = currentMuzzle _unit;
 
-if !(_state isEqualTo (_weapon in _safedWeapons)) then {
+if (_state isNotEqualTo (_weapon in _safedWeapons)) then {
     [_unit, _weapon, _muzzle] call FUNC(lockSafety);
 };

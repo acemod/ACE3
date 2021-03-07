@@ -3,7 +3,7 @@ class ACE_ZeusActions {
     class ZeusUnits {
         displayName = "$STR_A3_RscDisplayCurator_ModeUnits_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
-        condition = QUOTE(!([] isEqualTo (curatorSelected select 0)));
+        condition = QUOTE([] isNotEqualTo (curatorSelected select 0));
 
         class stance {
             displayName = "$STR_A3_RscAttributeUnitPos_Title";
@@ -49,7 +49,7 @@ class ACE_ZeusActions {
     class ZeusGroups {
         displayName = "$STR_A3_RscDisplayCurator_ModeGroups_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
-        condition = QUOTE(!([] isEqualTo (curatorSelected select 1)));
+        condition = QUOTE([] isNotEqualTo (curatorSelected select 1));
 
         class behaviour {
             displayName = "$STR_Combat_Mode";
@@ -157,7 +157,7 @@ class ACE_ZeusActions {
     class ZeusWaypoints {
         displayName = "Waypoints";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeRecent_ca.paa";
-        condition = QUOTE(!([] isEqualTo (curatorSelected select 2)));
+        condition = QUOTE([] isNotEqualTo (curatorSelected select 2));
 
         class behaviour {
             displayName = "$STR_Combat_Mode";
@@ -265,6 +265,6 @@ class ACE_ZeusActions {
     class ZeusMarkers {
         displayName = "$STR_A3_RscDisplayCurator_ModeMarkers_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeMarkers_ca.paa";
-        condition = QUOTE(!([] isEqualTo (curatorSelected select 3)));
+        condition = QUOTE([] isNotEqualTo (curatorSelected select 3));
     };
 };

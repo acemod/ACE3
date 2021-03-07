@@ -7,7 +7,7 @@
     {
         private _currentValue = missionNamespace getVariable [_x, "$"];
         private _defaultValue = (cba_settings_default getVariable [_x, []]) param [0, "#"];
-        if !(_currentValue isEqualTo _defaultValue) then {
+        if (_currentValue isNotEqualTo _defaultValue) then {
             diag_log text format ["%1: [Current %2] [Default: %3]", _x, _currentValue, _defaultValue];
         };
     } forEach _medicalSettings;

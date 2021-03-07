@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#include "\A3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: BIS, commy2, Timi007
  * Sets up the marker placement
@@ -26,30 +25,28 @@
 
     //Can't place markers when can't interact
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {
-        _display closeDisplay 2;  //emulate "Cancel" button
+        _display closeDisplay 2; //emulate "Cancel" button
     };
 
     //BIS Controls:
-    private _text =                 _display displayctrl IDC_INSERT_MARKER;
-    private _picture =              _display displayctrl IDC_INSERT_MARKER_PICTURE;
-    private _channel =              _display displayctrl IDC_INSERT_MARKER_CHANNELS;
-    private _buttonOK =             _display displayctrl IDC_OK;
-    private _buttonCancel =         _display displayctrl IDC_CANCEL;
-    private _description =          _display displayctrl 1100;
-    private _title =                _display displayctrl 1001;
-    private _descriptionChannel =   _display displayctrl 1101;
+    private _text = _display displayctrl IDC_INSERT_MARKER;
+    private _picture = _display displayctrl IDC_INSERT_MARKER_PICTURE;
+    private _channel = _display displayctrl IDC_INSERT_MARKER_CHANNELS;
+    private _buttonOK = _display displayctrl IDC_OK;
+    private _buttonCancel = _display displayctrl IDC_CANCEL;
+    private _description = _display displayctrl 1100;
+    private _title = _display displayctrl 1001;
+    private _descriptionChannel = _display displayctrl 1101;
 
     //ACE Controls:
-    // _sizeX =                     _display displayctrl 1200;
-    // _sizeY =                     _display displayctrl 1201;
-    private _aceTimestamp =         _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
-    private _aceTimestampText =     _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP_TEXT;
-    private _aceShapeLB =           _display displayctrl IDC_ACE_INSERT_MARKER_SHAPE;
-    private _aceColorLB =           _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
-    private _aceAngleSlider =       _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE;
-    private _aceAngleSliderText =   _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
+    private _ctrlTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
+    private _ctrlTimestampText = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP_TEXT;
+    private _aceShapeLB = _display displayctrl IDC_ACE_INSERT_MARKER_SHAPE;
+    private _aceColorLB = _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
+    private _aceAngleSlider = _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE;
+    private _aceAngleSliderText = _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
 
-    private _mapDisplay =           displayParent _display;
+    private _mapDisplay = displayParent _display;
     if (isNull _mapDisplay) exitWith {ERROR("No Map");};
     private _mapCtrl = _mapDisplay displayCtrl IDC_MAP;
 
@@ -58,7 +55,7 @@
 
     //check if entity under mouse is a user marker
     if (_mouseOverType isEqualTo "marker") then {
-        if (!((_marker find "_USER_DEFINED") isEqualTo -1) && ((markerShape _marker) isEqualTo "ICON")) then {
+        if (((_marker find "_USER_DEFINED") isNotEqualTo -1) && ((markerShape _marker) isEqualTo "ICON")) then {
             GVAR(editingMarker) = _marker;
             //hide marker which is being edited because if the user cancels editing, it will still exist unchanged
             GVAR(editingMarker) setMarkerAlphaLocal 0;
@@ -74,7 +71,7 @@
 
     ////////////////////
     // Calculate center position of the marker placement ctrl
-    if !(GVAR(editingMarker) isEqualTo "") then {
+    if (GVAR(editingMarker) isNotEqualTo "") then {
         //prevent changing the original marker position
         GVAR(currentMarkerPosition) = markerPos GVAR(editingMarker);
     } else {
@@ -92,19 +89,11 @@
     // prevent vanilla key input
     _display displayAddEventHandler ["KeyDown", {(_this select 1) in [200, 208]}];
 
-    private _hasTimestamp = false;
-    if !((markerText GVAR(editingMarker)) isEqualTo "") then {
+    private _markerText = markerText GVAR(editingMarker);
+    if (_markerText != "") then {
         // fill text input with text from marker which is being edited
-
-        private _originalText = markerText GVAR(editingMarker);
-        private _timeIndex = _originalText find (TIMESTAMP_SPACE + "[");
-        if (_timeIndex > 0 ) then {
-            // Shave off timestamp
-            _hasTimestamp = true;
-            _originalText = _originalText select [0,_timeIndex];
-        };
-
-        _text ctrlSetText _originalText;
+        _markerText = _markerText call FUNC(removeTimestamp);
+        _text ctrlSetText _markerText;
     };
 
     //Focus on the text input
@@ -114,7 +103,7 @@
     private _pos = ctrlposition _text;
     _pos params ["_posX", "_posY", "_posW", "_posH"];
     _posX = _posX + 0.01;
-    _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER));  //prevent buttons being placed below bottom edge of screen
+    _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER)); //prevent buttons being placed below bottom edge of screen
     _pos set [0, _posX];
     _pos set [1, _posY];
     _text ctrlSetPosition _pos;
@@ -143,31 +132,33 @@
     if (GVAR(timestampEnabled)) then {
         _timestampOffset = _posH + BORDER;
 
-        _pos set [0, _posX];
-        _pos set [1, _posY + 1 * _posH + 2 * BORDER];
-        _pos set [2, _posW - _posH];
-        _pos set [3, _posH];
-        _aceTimestampText ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", LLSTRING(Timestamp)];
-        _aceTimestampText ctrlSetPosition _pos;
-        _aceTimestampText ctrlCommit 0;
+        private _left = _posX;
+        private _top = _posY + 1 * _posH + 2 * BORDER;
+        private _width = _posH * safeZoneH / safeZoneW;
+        private _height = _posH;
 
-        _pos set [0, _posX + _posW - _posH];
-        _pos set [2, _posH];
-        _pos set [3, _posH];
-        _aceTimestamp ctrlSetPosition _pos;
-        _aceTimestamp ctrlCommit 0;
+        _ctrlTimestamp ctrlSetPosition [_left, _top, _width, _height];
+        _ctrlTimestamp ctrlCommit 0;
+
+        _ctrlTimestampText ctrlSetStructuredText parseText format ["<t size='0.8'>%1</t>", LLSTRING(Timestamp)];
+
+        _left = _left + _width;
+        _width = _posW - _width;
+        _top = _top + 0.1 * _height;
+        _ctrlTimestampText ctrlSetPosition [_left, _top, _width, _height];
+        _ctrlTimestampText ctrlCommit 0;
 
         if !([ACE_player] call FUNC(canTimestamp)) then {
-            _aceTimestamp ctrlEnable false;
-            _aceTimestamp ctrlSetTooltip LLSTRING(TimestampTooltipNoWatch);
+            _ctrlTimestamp ctrlEnable false;
+            _ctrlTimestamp ctrlSetTooltip LLSTRING(TimestampTooltipNoWatch);
         } else {
-            _aceTimestamp cbSetChecked (GETUVAR(GVAR(timestampChecked),false) || _hasTimestamp);
+            _ctrlTimestamp cbSetChecked (uiNamespace getVariable [QGVAR(timestampChecked), false]);
         };
     } else {
-        _aceTimestampText ctrlEnable false;
-        _aceTimestampText ctrlShow false;
-        _aceTimestamp ctrlEnable false;
-        _aceTimestamp ctrlShow false;
+        _ctrlTimestampText ctrlEnable false;
+        _ctrlTimestampText ctrlShow false;
+        _ctrlTimestamp ctrlEnable false;
+        _ctrlTimestamp ctrlShow false;
     };
 
     //--- Shape
@@ -225,7 +216,7 @@
             };
         };
 
-        private _selectChannel = if !(GVAR(editingMarker) isEqualTo "") then {
+        private _selectChannel = if (GVAR(editingMarker) isNotEqualTo "") then {
             //get the channel where the marker was placed in
             parseNumber ((GVAR(editingMarker) splitString "/") param [2, "3"])
         } else {
@@ -268,9 +259,8 @@
 
     ////////////////////
     // init marker timestamp cb
-
-    _buttonOK ctrlAddEventHandler ['ButtonClick', FUNC(onButtonClickConfirm)];
-    _aceTimestamp ctrlAddEventHandler ['CheckedChanged', FUNC(onCheckedChangedTimestamp)];
+    _buttonOK ctrlAddEventHandler ["ButtonClick", FUNC(onButtonClickConfirm)];
+    _ctrlTimestamp ctrlAddEventHandler ["CheckedChanged", FUNC(onCheckedChangedTimestamp)];
 
     ////////////////////
     // init marker shape lb
@@ -320,7 +310,7 @@
     // init marker angle slider
     _aceAngleSlider sliderSetRange [-180, 180];
 
-    if !(GVAR(editingMarker) isEqualTo "") then {
+    if (GVAR(editingMarker) isNotEqualTo "") then {
         //get the original direction
         GVAR(currentMarkerAngle) = markerDir GVAR(editingMarker);
     };

@@ -6,7 +6,7 @@
     false,
     false,
     LINKFUNC(switchPersistentLaser)
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(allowFadeMusic),
@@ -15,4 +15,4 @@
     localize LSTRING(ACEKeybindCategoryCommon),
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
