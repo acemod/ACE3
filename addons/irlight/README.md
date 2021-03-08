@@ -1,7 +1,7 @@
 ace_irlight
 ===================
 
-Adds scripted IR flashlights.
+Adds IR flashlights.
 
 
 ## Maintainers
