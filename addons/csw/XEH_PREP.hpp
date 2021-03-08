@@ -32,4 +32,4 @@ PREP(reload_loadMagazine);
 
 PREP(staticWeaponInit);
 PREP(staticWeaponInit_unloadExtraMags);
-PREP(staticWeaponKilled);
+PREP(staticWeaponDrag);
