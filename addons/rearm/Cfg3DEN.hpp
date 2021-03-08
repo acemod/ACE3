@@ -1,4 +1,4 @@
-#define VANILLA_REARMCARGO (if (getRearmCargo _this > 0) then {getRearmCargo _this} else {-1})
+#define VANILLA_REARMCARGO (if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 #define DEFAULT_REARMCARGO GET_NUMBER(configOf _this >> QQGVAR(defaultSupply),VANILLA_REARMCARGO)
 
