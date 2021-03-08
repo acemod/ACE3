@@ -49,6 +49,7 @@ GVAR(bloodTickCounter) = 0;
     private _volume = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), VOL_UNCONSCIOUS];
     [QUOTE(ADDON), _volume, _unconscious] call EFUNC(common,setHearingCapability);
 
+    [_unconscious, 1] call FUNC(effectUnconscious);
     [true] call FUNC(handleEffects);
     ["unconscious", _unconscious] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addEventHandler;
