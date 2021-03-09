@@ -110,7 +110,6 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
 
     private _gvarName = _varName select [_addonSearchCount];
 
-    _output pushBack "";
     _output pushBack format ["["];
     _output pushBack format ["    QGVAR(%1), ""%2"",", _gvarName, _cbaSettingType];
     _output pushBack format ["    [LSTRING(), LSTRING()], // %1, %2", _localizedName, _localizedDescription]; //IGNORE_STRING_WARNING(str_ace_common_);
@@ -124,6 +123,7 @@ private _settings = configProperties [configFile >> "ACE_Settings", "(isClass _x
     };
     _output pushBack format ["    %1 // Needs mission restart", _warnIfChangedMidMission];
     _output pushBack "] call CBA_fnc_addSetting;";
+    _output pushBack "";
 } forEach _settings;
 
 copyToClipboard (_output joinString endl);

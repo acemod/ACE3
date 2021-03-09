@@ -254,50 +254,60 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_DisplayName">
             <English>Autoinjector Treatment Time</English>
             <French>Durée d'interaction - Auto-injecteurs</French>
+            <Japanese>注射器の使用時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
             <French>Définit le temps nécessaire à l'administration d'une substance auto-injectable (en secondes).</French>
+            <Japanese>注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
             <French>Durée d'interaction - Garrots</French>
             <German>Tourniquet-Behandlungszeit</German>
+            <Japanese>止血帯の使用時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
             <French>Définit le temps nécessaire à l'application ou au retrait d'un garrot (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
+            <Japanese>止血帯の使用/排除に掛かる時間 (秒) を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
             <French>Durée d'interaction - IVs</French>
             <German>IV Beutelbehandlungszeit</German>
+            <Japanese>点滴の使用時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
             <French>Définit le temps nécessaire à la pose d'une perfusion IV (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
+            <Japanese>点滴の投与に掛かる時間 (秒) を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
             <French>Durée d'interaction - Attelles</French>
             <German>Schienenbehandlungszeit</German>
+            <Japanese>添え木の使用時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
             <French>Définit le temps nécessaire à l'application d'une attelle (en secondes).</French>
             <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
+            <Japanese>添え木の使用に掛かる時間 (秒) を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
             <French>Durée d'interaction - Housses mortuaires</French>
             <German>Anwendungszeit für Leichensack</German>
+            <Japanese>死体袋の使用時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
             <French>Définit le temps nécessaire à la mise en housse d'un corps (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
+            <Japanese>死体袋の使用に掛かる時間 (秒) を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -612,10 +622,12 @@
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_DisplayName">
             <English>Wound Stitch Time</English>
             <French>Durée d'interaction - Sutures</French>
+            <Japanese>縫合時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
             <French>Définit le temps nécessaire à la suture d'une plaie (en secondes).</French>
+            <Japanese>縫合に掛かる時間 (秒) を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -646,10 +658,12 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_DisplayName">
             <English>Allow Unconscious Body Bag</English>
             <French>Housse mortuaire - Autoriser patients inconscients</French>
+            <Japanese>無意識者を死体袋に</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
             <French>Active la possibilité de placer des patients inconscients dans les housses mortuaires.\nAttention : le cas échéant cela provoquera la mort du patient.</French>
+            <Japanese>気絶しているプレイヤーを死体袋へ入れられるかどうかを決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -673,9 +687,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
             <English>Locations IV Transfusion</English>
+            <Japanese>IV 輸血の場所制限</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
+            <Japanese>IV 輸血を行える場所を決定できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -902,10 +918,12 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
             <French>Durée d'interaction - RCP</French>
+            <Japanese>CPR の動作時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
             <French>Définit le temps nécessaire à la mise en œuvre d'une RCP (en secondes).</French>
+            <Japanese>心肺蘇生にかかる時間 (秒) を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
@@ -2541,7 +2559,7 @@
             <Hungarian>Zárókötszer</Hungarian>
             <Italian>Bendaggio rapido</Italian>
             <Portuguese>Curativo de Campo</Portuguese>
-            <Japanese>緊急圧迫包帯</Japanese>
+            <Japanese>緊急圧迫包帯を巻く</Japanese>
             <Korean>필드 드레싱</Korean>
             <Chinesesimp>绷带 (基础型)</Chinesesimp>
             <Chinese>基礎繃帶</Chinese>
@@ -2557,7 +2575,7 @@
             <French>Bandage compressif</French>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz Tlakový</Czech>
-            <Japanese>弾性包帯</Japanese>
+            <Japanese>弾性包帯を巻く</Japanese>
             <Korean>거즈 붕대</Korean>
             <Chinesesimp>绷带 (包扎型)</Chinesesimp>
             <Chinese>包紮繃帶</Chinese>
@@ -2574,7 +2592,7 @@
             <Hungarian>Rögzitő kötszer</Hungarian>
             <Italian>Bendaggio elastico</Italian>
             <Portuguese>Bandagem Elástica</Portuguese>
-            <Japanese>伸縮包帯</Japanese>
+            <Japanese>伸縮包帯を巻く</Japanese>
             <Korean>압박 붕대</Korean>
             <Chinesesimp>绷带 (弹性型)</Chinesesimp>
             <Chinese>彈性繃帶</Chinese>
@@ -2591,7 +2609,7 @@
             <Hungarian>QuikClot</Hungarian>
             <Italian>QuikClot (polvere emostatica)</Italian>
             <Portuguese>QuikClot</Portuguese>
-            <Japanese>クイッククロット</Japanese>
+            <Japanese>クイッククロットを巻く</Japanese>
             <Korean>퀵 클롯</Korean>
             <Chinesesimp>绷带 (止血型)</Chinesesimp>
             <Chinese>止血粉</Chinese>
@@ -3759,7 +3777,7 @@
             <Hungarian>Valamennyi vért vesztett</Hungarian>
             <Czech>Ztratil trochu krve</Czech>
             <Portuguese>Ele perdeu um pouco de sangue</Portuguese>
-            <Japanese>彼は出血している</Japanese>
+            <Japanese>患者は出血している</Japanese>
             <Korean>적은 양의 피를 잃었다</Korean>
             <Chinesesimp>他轻微失血</Chinesesimp>
             <Chinese>他流失一些血液</Chinese>
@@ -3776,7 +3794,7 @@
             <Czech>Ztratil hodně krve</Czech>
             <Portuguese>Ele perdeu muito sangue</Portuguese>
             <Italian>Ha perso molto sangue</Italian>
-            <Japanese>彼は大量失血している</Japanese>
+            <Japanese>患者は大量失血している</Japanese>
             <Korean>많은 양의 피를 잃었다</Korean>
             <Chinesesimp>他大量失血</Chinesesimp>
             <Chinese>他流失大量血液</Chinese>
@@ -3793,7 +3811,7 @@
             <Hungarian>Nem vesztett vért</Hungarian>
             <Czech>Neztratil žádnou krev</Czech>
             <Portuguese>Ele não perdeu sangue</Portuguese>
-            <Japanese>彼は失血していない</Japanese>
+            <Japanese>患者は失血していない</Japanese>
             <Korean>피를 잃지 않았다</Korean>
             <Chinesesimp>他没有失血</Chinesesimp>
             <Chinese>他並沒有失血</Chinese>
@@ -3810,7 +3828,7 @@
             <Hungarian>Fájdalmai vannak</Hungarian>
             <Czech>Je v bolestech</Czech>
             <Portuguese>Ele está com dor</Portuguese>
-            <Japanese>彼には痛みがあるようだ</Japanese>
+            <Japanese>患者は痛いようだ</Japanese>
             <Korean>통증이 있다</Korean>
             <Chinesesimp>他感到疼痛</Chinesesimp>
             <Chinese>他感到疼痛中</Chinese>
@@ -3827,7 +3845,7 @@
             <Hungarian>Nincsenek fájdalmai</Hungarian>
             <Czech>Nemá žádné bolesti</Czech>
             <Portuguese>Ele não está com dor</Portuguese>
-            <Japanese>彼には痛みがないようだ</Japanese>
+            <Japanese>患者は痛くないようだ</Japanese>
             <Korean>통증이 없다</Korean>
             <Chinesesimp>他没有感到疼痛</Chinesesimp>
             <Chinese>他沒感到疼痛中</Chinese>
@@ -4366,6 +4384,7 @@
         <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
             <English>The body twitched and may not be dead!</English>
             <French>L'unité a bougé et n'est peut-être pas morte !</French>
+            <Japanese>身体が動き死んでないようだ!</Japanese>
         </Key>
     </Package>
 </Project>
