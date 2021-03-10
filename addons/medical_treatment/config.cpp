@@ -1,3 +1,7 @@
+#if __has_include("\z\ace\addons\nomedical\script_component.hpp")
+
+#else
+
 #include "script_component.hpp"
 
 class CfgPatches {
@@ -22,3 +26,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "Cfg3DEN.hpp"
+
+#endif

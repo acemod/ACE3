@@ -1,3 +1,7 @@
+#if __has_include("\z\ace\addons\norealisticnames\script_component.hpp")
+
+#else
+
 #include "script_component.hpp"
 
 class CfgPatches {
@@ -20,3 +24,5 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+#endif

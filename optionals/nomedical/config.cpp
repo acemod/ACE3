@@ -1,7 +1,3 @@
-#if __has_include("\z\ace\addons\nomedical\script_component.hpp")
-
-#else
-
 #include "script_component.hpp"
 
 class CfgPatches {
@@ -10,15 +6,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_medical_engine"};
+        requiredAddons[] = {};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Glowbal", "KoffeinFlummi"};
+        authors[] = {"Dystopian"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
-
-#include "ACE_settings.hpp"
-#include "CfgEventHandlers.hpp"
-
-#endif
