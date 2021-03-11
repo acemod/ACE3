@@ -42,10 +42,10 @@ GVAR(selfInteractionActions) = [];
             private _start = AGLToASL positionCameraToWorld [0, 0, 0];
             private _end = AGLToASL positionCameraToWorld [0, 0, GVAR(maxDistance)];
             private _intersections = lineIntersectsSurfaces [_start, _end, ACE_player, objNull, true, -1, "FIRE"];
-            _target = {
+            {
                 _x params ["", "", "_intersectObject"];
                 if (_intersectObject != ACE_player && {_intersectObject isKindOf "CAManBase" && {[ACE_player, _intersectObject] call FUNC(canOpenMenu)}}) exitWith {
-                    _intersectObject
+                    _target =_intersectObject
                 };
             } forEach _intersections;
             if !(_target isKindOf "CAManBase" && {[ACE_player, _target] call FUNC(canOpenMenu)}) then {
