@@ -95,7 +95,7 @@ private _fnc_isOk = {
     // If there's no intersections
     if (_intersections isEqualTo []) exitWith {false;};
 
-    if !(((_intersections select 0) select 3) isEqualTo _object) exitWith {false;};
+    if (((_intersections select 0) select 3) isNotEqualTo _object) exitWith {false;};
 
     true
 };

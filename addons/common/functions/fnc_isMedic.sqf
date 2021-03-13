@@ -17,6 +17,6 @@
 
 params ["_unit"];
 
-private _isMedic = _unit getVariable [QEGVAR(medical,medicClass), getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "attendant")];
+private _isMedic = _unit getVariable [QEGVAR(medical,medicClass), getNumber (configOf _unit >> "attendant")];
 
 _isMedic > 0

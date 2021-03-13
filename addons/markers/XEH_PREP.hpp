@@ -14,3 +14,7 @@ PREP(canMove);
 PREP(onMouseButtonDown);
 PREP(onMouseButtonUp);
 PREP(movePFH);
+PREP(canTimestamp);
+PREP(onButtonClickConfirm);
+PREP(onCheckedChangedTimestamp);
+PREP(removeTimestamp);

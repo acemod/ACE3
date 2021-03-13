@@ -27,8 +27,8 @@ private _baseClasses = [];
 } count (
     ("!isNull (_x >> 'modelSides') &&" +
     "{(_x >> 'modelSides') in (configProperties [_x, 'true', false])} &&" +
-    "{!(getArray (_x >> 'modelSides') isEqualTo [6])} &&" +
-    "{!(getArray (_x >> 'modelSides') isEqualTo [0,1,2,3])}")
+    "{getArray (_x >> 'modelSides') isNotEqualTo [6]} &&" +
+    "{getArray (_x >> 'modelSides') isNotEqualTo [0,1,2,3]}")
     configClasses (configFile >> "CfgVehicles")
 );
 

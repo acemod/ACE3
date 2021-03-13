@@ -37,7 +37,7 @@ private _fnc_setSelections = {
     } forEach GVAR(comboBoxes);
 };
 
-private _pylonComponent = configFile >> "CfgVehicles" >> typeOf GVAR(currentAircraft) >> "Components" >> "TransportPylonsComponent";
+private _pylonComponent = configOf GVAR(currentAircraft) >> "Components" >> "TransportPylonsComponent";
 private _loadoutFound = {
     if (getText (_x >> "displayName") isEqualTo _loadoutName) exitWith {
         // Get default turrets from config

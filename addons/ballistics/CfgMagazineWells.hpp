@@ -67,6 +67,15 @@ class CfgMagazineWells {
         };
     };
 
+    class CBA_556x45_SCAR_EGLM {
+        ADDON[] = {
+            "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk262_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk318_mag",
+            "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+        };
+    };
+
     class STANAG_556x45 { //Vanilla magwell
         ADDON[] = {
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
@@ -156,13 +165,6 @@ class CfgMagazineWells {
             "ACE_20Rnd_65_Creedmor_mag",
             "ACE_30Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65x47_Scenar_mag"
-        };
-    };
-
-    class CBA_338LM_AI { //338 Lapua Magnum Accuracy International
-        ADDON[] = {
-            "ACE_10Rnd_338_300gr_HPBT_Mag",
-            "ACE_10Rnd_338_API526_Mag"
         };
     };
 
