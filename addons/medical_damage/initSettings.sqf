@@ -35,9 +35,9 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QEGVAR(medical,deathChance),
+    QEGVAR(medical,survivalChance),
     "SLIDER",
-    [LSTRING(deathChance_DisplayName), LSTRING(deathChance_Description)],
+    [LSTRING(survivalChance_DisplayName), LSTRING(survivalChance_Description)],
     ELSTRING(medical,Category),
     [0, 1, 1, 2, true],
     true

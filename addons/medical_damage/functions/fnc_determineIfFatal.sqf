@@ -26,12 +26,12 @@ scopeName "main";
 
 if (EGVAR(medical,fatalDamageSource) in [0, 2]) then {
     // Emulate damage to vital organs - Original rewrite logic, only powerfull headshots or random torso shots
-    if (_part == 0 && {_woundDamage >= HEAD_DAMAGE_THRESHOLD} && {random 1 < EGVAR(medical,deathChance)}) exitWith {
+    if (_part == 0 && {_woundDamage >= HEAD_DAMAGE_THRESHOLD} && {random 1 < EGVAR(medical,survivalChance)}) exitWith {
         // Fatal damage to the head is guaranteed death
         TRACE_1("determineIfFatal: lethal headshot",_woundDamage);
         true breakOut "main";
     };
-    if (_part == 1 && {_woundDamage >= ORGAN_DAMAGE_THRESHOLD} && {random 1 < HEART_HIT_CHANCE} && {random 1 < EGVAR(medical,deathChance)}) exitWith {
+    if (_part == 1 && {_woundDamage >= ORGAN_DAMAGE_THRESHOLD} && {random 1 < HEART_HIT_CHANCE} && {random 1 < EGVAR(medical,survivalChance)}) exitWith {
         // Fatal damage to torso has various results based on organ hit - Heart shot is lethal
         TRACE_1("determineIfFatal: lethal heartshot",_woundDamage);
         true breakOut "main";
@@ -49,7 +49,7 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     private _chanceFatal = 1 - exp -((_vitalDamage/FATAL_SUM_DAMAGE_WEIBULL_L)^FATAL_SUM_DAMAGE_WEIBULL_K);
     TRACE_3("",_bodyPartDamage,_vitalDamage,_chanceFatal);
 
-    if (_chanceFatal > random 1 && {random 1 < EGVAR(medical,deathChance)}) exitWith {
+    if (_chanceFatal > random 1 && {random 1 < EGVAR(medical,survivalChance)}) exitWith {
         TRACE_1("determineIfFatal: lethal trauma",_woundDamage);
         true breakOut "main";
     };
