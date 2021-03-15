@@ -49,7 +49,7 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     private _chanceFatal = 1 - exp -((_vitalDamage/FATAL_SUM_DAMAGE_WEIBULL_L)^FATAL_SUM_DAMAGE_WEIBULL_K);
     TRACE_3("",_bodyPartDamage,_vitalDamage,_chanceFatal);
 
-    if (_chanceFatal > random 1) exitWith {
+    if (_chanceFatal > random 1 && {random 1 < EGVAR(medical,deathChance)}) exitWith {
         TRACE_1("determineIfFatal: lethal trauma",_woundDamage);
         true breakOut "main";
     };
