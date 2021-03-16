@@ -18,6 +18,6 @@
 params ["_mine"];
 TRACE_1("params",_mine);
 
-if (!(_mine in AllMines)) exitWith {-1};
+if (!(_mine in allMines)) exitWith {-1};
 
 GVAR(excludedMines) pushBackUnique _mine;
