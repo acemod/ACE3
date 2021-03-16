@@ -20,6 +20,6 @@ TRACE_1("params",_mine);
 
 if (!(_mine in GVAR(excludedMines))) exitWith {false};
 
-GVAR(excludedMines) =  GVAR(excludedMines) - [_mine];
+GVAR(excludedMines) = GVAR(excludedMines) - [_mine];
 
 true
