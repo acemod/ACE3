@@ -37,3 +37,5 @@ PREP(spawnFlare);
 PREP(startDefuse);
 PREP(startTimer);
 PREP(triggerType);
+PREP(excludeMine);
+PREP(stopExcludingMine);
