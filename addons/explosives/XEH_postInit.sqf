@@ -46,7 +46,7 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
 GVAR(PlacedCount) = 0;
-GVAR(noDefusalAction) = [];
+GVAR(excludedMines) = [];
 GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
