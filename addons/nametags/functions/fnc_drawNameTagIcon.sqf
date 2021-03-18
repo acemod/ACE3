@@ -34,7 +34,7 @@ _fnc_parameters = {
         _icon = format [QPATHTOF(UI\soundwave%1.paa), floor random 10];
     } else {
         if (_drawRank) then {
-            _icon = _target getVariable "ace_nametags_customRankIcon";
+            _icon = _target getVariable "ace_nametags_rankIcon";
             if (isNil "_icon" && {rank _target != ""}) then {
                 _icon = GVAR(factionRanks) getVariable (_target getVariable [QGVAR(faction), faction _target]);
                 if (!isNil "_icon") then {
