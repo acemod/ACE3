@@ -24,7 +24,7 @@ params ["_args", "_pfID"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams"];
-_stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
+_stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_pidData"];
 
 if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     [_pfID] call CBA_fnc_removePerFrameHandler;
@@ -57,46 +57,76 @@ private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStat
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
 if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos isNotEqualTo [0,0,0]}) then {
+    // Get a commanded acceleration via proportional navigation (https://youtu.be/Osb7anMm1AY)
+    // Use a simple PID controller to get the desired pitch, yaw, and roll
+    // Simulate moving servos by moving in each DOF by a fixed amount per frame
+    // Then setVectorDirAndUp to allow ARMA to translate the velocity to whatever PhysX says
 
-    private _targetVector = _projectilePos vectorFromTo _profileAdjustedTargetPos;
-    private _adjustVector = _targetVector vectorDiff (vectorDir _projectile);
-    _adjustVector params ["_adjustVectorX", "_adjustVectorY", "_adjustVectorZ"];
+    private _rollDegreesPerSecond = 15;
+    private _yawDegreesPerSecond = 15;
+    private _pitchDegreesPerSecond = 15;
 
-    private _yaw = 0;
-    private _pitch = 0;
-    private _roll = 0;
+    private _proportionalGain = 1.6;
+    private _integralGain = 0;
+    private _derivativeGain = 0;
 
-    if (_adjustVectorX < 0) then {
-        _yaw = - ( (_minDeflection max ((abs _adjustVectorX) min _maxDeflection) ) );
-    } else {
-        if (_adjustVectorX > 0) then {
-            _yaw = ( (_minDeflection max (_adjustVectorX min _maxDeflection) ) );
-        };
-    };
-    if (_adjustVectorY < 0) then {
-        _roll = - ( (_minDeflection max ((abs _adjustVectorY) min _maxDeflection) ) );
-    } else {
-        if (_adjustVectorY > 0) then {
-            _roll = ( (_minDeflection max (_adjustVectorY min _maxDeflection) ) );
-        };
-    };
-    if (_adjustVectorZ < 0) then {
-        _pitch = - ( (_minDeflection max ((abs _adjustVectorZ) min _maxDeflection) ) );
-    } else {
-        if (_adjustVectorZ > 0) then {
-            _pitch = ( (_minDeflection max (_adjustVectorZ min _maxDeflection) ) );
-        };
-    };
-    private _finalAdjustVector = [_yaw, _roll, _pitch];
+    _pidData params ["_pid", "_lastTargetPosition", "_lastLineOfSight", "_currentPitchYawRoll"];
+    _currentPitchYawRoll params ["_pitch", "_yaw", "_roll"];
 
-    TRACE_3("", _pitch, _yaw, _roll);
-    TRACE_3("", _targetVector, _adjustVector, _finalAdjustVector);
+    private _navigationGain = 3;
+
+    private _lineOfSight = (_projectile vectorWorldToModelVisual (_profileAdjustedTargetPos vectorDiff _projectilePos));
+
+    private _losDelta = _lineOfSight vectorDiff _lastLineOfSight;
+    private _losRate = (vectorMagnitude _losDelta) / _runtimeDelta;
+    private _closingVelocity = -_losRate;
+
+    private _commandedLateralAcceleration = _navigationGain * _losRate * _closingVelocity;
+
+    private _commandedAcceleration = [_lineOfSight#2, -(_lineOfSight#0), 0] vectorMultiply _commandedLateralAcceleration;
+
+    private _acceleration = [0, 0];
+    {
+        (_pid select _forEachIndex) params ["", "_lastDerivative", "_integral"];
+        // think about this in xz plane where x = yaw, z = pitch
+
+        private _commandedAccelerationAxis = _commandedAcceleration select _forEachIndex;
+
+        private _proportional = _commandedAccelerationAxis * _proportionalGain;
+
+        private _d0 = _commandedAccelerationAxis * _derivativeGain;
+        private _derivative = (_d0 - _lastDerivative) / _runtimeDelta;
+
+        _integral = _integral + (_d0 * _runtimeDelta * _integralGain);
+
+        private _pidSum = _proportional + _integral + _derivative;
+
+        (_pid select _forEachIndex) set [1, _d0];
+        (_pid select _forEachIndex) set [2, _integral];
+
+        _acceleration set [_forEachIndex, _pidSum];
+    } forEach _acceleration;
 
     if (accTime > 0) then {
-        private _changeVector = (vectorDir _projectile) vectorAdd _finalAdjustVector;
-        TRACE_2("",_projectile,_changeVector);
-        [_projectile, _changeVector] call FUNC(changeMissileDirection);
+        _acceleration params ["_pitchChange", "_yawChange"];
+
+        private _clampedPitch = (-_pitchChange min _pitchDegreesPerSecond) max -_pitchDegreesPerSecond;
+        private _clampedYaw = (_yawChange min _yawDegreesPerSecond) max -_yawDegreesPerSecond;
+
+        _pitch = _pitch + _clampedPitch * _runtimeDelta;
+        _yaw = _yaw + _clampedYaw * _runtimeDelta;
+
+        [_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
+
+        _currentPitchYawRoll set [0, _pitch];
+        _currentPitchYawRoll set [1, _yaw];
     };
+
+    _pidData set [0, _pid];
+    _pidData set [1, _profileAdjustedTargetPos];
+    _pidData set [2, _lineOfSight];
+    _pidData set [3, _currentPitchYawRoll];
+    _stateParams set [4, _pidData];
 };
 
 #ifdef DRAW_GUIDANCE_INFO
@@ -105,7 +135,7 @@ drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLto
 
 private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
 _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
-_PS setDropInterval 3.0;
+_PS setDropInterval 1.0;
 #endif
 
 _stateParams set [0, diag_tickTime];

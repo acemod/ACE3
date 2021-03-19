@@ -95,6 +95,9 @@ if (_seekLastTargetPos && {!isNil "_target"}) then {
     _lastKnownPosState set [1, [0,0,0]];
 };
 
+private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
+private _pidData = [[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [0, 0, 0], [0, 1, 0], [_pitchYaw select 0, _pitchYaw select 1, 0]];
+
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
 private _args = [_this,
             [   _shooter,
@@ -115,7 +118,7 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState]
+            [ diag_tickTime, [], [], _lastKnownPosState, _pidData]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
