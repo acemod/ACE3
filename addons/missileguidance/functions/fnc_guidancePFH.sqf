@@ -107,7 +107,14 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
         _acceleration set [_forEachIndex, _pidSum];
     } forEach _acceleration;
 
-    if (accTime > 0) then {
+    #ifdef DRAW_GUIDANCE_INFO
+    TRACE_1("",_acceleration);
+    private _projectilePosAGL = ASLToAGL _projectilePos;
+    private _debugAcceleration = [_acceleration#0, 0, _acceleration#1];
+    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd ((_projectile vectorModelToWorldVisual _debugAcceleration) vectorMultiply 5), [1, 0, 0, 1]];
+    #endif
+
+    if (!isGamePaused && accTime > 0) then {
         _acceleration params ["_pitchChange", "_yawChange"];
 
         private _clampedPitch = (-_pitchChange min _pitchDegreesPerSecond) max -_pitchDegreesPerSecond;
