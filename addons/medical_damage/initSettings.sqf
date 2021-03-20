@@ -39,6 +39,6 @@
     "SLIDER",
     [LSTRING(survivalChance_DisplayName), LSTRING(survivalChance_Description)],
     ELSTRING(medical,Category),
-    [0, 1, 1, 2, true],
+    [0, 1, 0, 2, true],
     true
 ] call CBA_fnc_addSetting;
