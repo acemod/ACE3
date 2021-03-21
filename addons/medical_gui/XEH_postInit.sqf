@@ -44,6 +44,8 @@ GVAR(selfInteractionActions) = [];
             private _intersections = lineIntersectsSurfaces [_start, _end, ACE_player, objNull, true, -1, "FIRE"];
             {
                 _x params ["", "", "_intersectObject"];
+                // Only look "through" player and player's vehicle
+                if (!(_intersectObject isKindOf "CAManBase") && {_intersectObject != vehicle ACE_player}) exitWith {};
                 if (_intersectObject != ACE_player && {_intersectObject isKindOf "CAManBase" && {[ACE_player, _intersectObject] call FUNC(canOpenMenu)}}) exitWith {
                     _target =_intersectObject
                 };
