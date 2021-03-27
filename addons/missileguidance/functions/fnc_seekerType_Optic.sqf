@@ -47,7 +47,7 @@ private _eta = _distanceToTarget / _projectileSpeed;
 
 private _adjustDistance = (velocity _target) vectorMultiply _eta;
 TRACE_3("leading target",_distanceToTarget,_eta,_adjustDistance);
-_foundTargetPos = _foundTargetPos vectorAdd _adjustDistance;
+//_foundTargetPos = _foundTargetPos vectorAdd _adjustDistance;
 
 TRACE_2("return",_foundTargetPos,(aimPos _target) distance _foundTargetPos);
 _foundTargetPos;
