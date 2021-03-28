@@ -60,7 +60,7 @@
 
 class GVAR(cam_dialog) {
     idd = 18880;
-    movingEnable = true;
+    movingEnable = 1;
     controlsBackground[] = { };
     objects[] = { };
     controls[] = {
@@ -144,8 +144,8 @@ class GVAR(cam_dialog) {
         idc = -1;
         type = 0;
         style = 48;
-        colorText[ ]={ 1,1,1,1 };
-        colorBackground[ ]={ 0.4,0.4,0.4,1 };
+        colorText[]={ 1,1,1,1 };
+        colorBackground[]={ 0.4,0.4,0.4,1 };
         font = "RobotoCondensed";
         sizeEx = 0.021;
         lineSpacing = 1;

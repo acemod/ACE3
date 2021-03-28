@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Disables being able to rearm a vehicle's turrets. [Global Effects]
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [
     ["_vehicle", objNull, [objNull]],

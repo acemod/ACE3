@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: VKing, PabstMirror
  * Gets a 10-digit map grid for the given world position
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_pos", ["_returnSingleString", false]];
 

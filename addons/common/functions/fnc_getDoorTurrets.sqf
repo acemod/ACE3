@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Returns all turret indecies of door gunners.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 
@@ -22,7 +22,7 @@ private _turrets = allTurrets [_vehicle, true];
 private _doorTurrets = [];
 
 {
-    private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    private _config = configOf _vehicle;
 
     _config = [_config, _x] call FUNC(getTurretConfigPath);
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Places an explosive at the requested position.
@@ -19,7 +20,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_pos", "_dir", "_magazineClass", "_triggerConfig", "_triggerSpecificVars", ["_setupPlaceholderObject", objNull]];
 TRACE_7("params",_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars,_setupPlaceholderObject);

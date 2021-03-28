@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO
  * Function used to handle map draw
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define MAP_MIN_ENTITY_DISTANCE 30
 
 // Moved timer into map controls group, update here
@@ -64,8 +63,7 @@ private _handledVehicles = [];
 
         _map drawIcon [_vehicleTexture, _sideColor, getPosASLVisual _vehicle, 24, 24, getDirVisual _vehicle, _text, 1, 0.04, "TahomaB", "right"];
     };
-    nil // Speed loop
-} count ([] call FUNC(getTargetEntities));
+} forEach ([] call FUNC(getTargetEntities));
 
 // Set highlighted unit
 private _text = if (isNull _nearestEntity) then {
@@ -78,7 +76,7 @@ GVAR(uiMapHighlighted) = _nearestEntity;
 CTRL_MAP_FOOTER ctrlSetText _text;
 
 // Draw camera icon
-if !(isNil QGVAR(camera)) then {
+if (!isNil QGVAR(camera)) then {
     private _cameraPos = getPosASLVisual GVAR(camera);
     private _cameraDir = getDirVisual GVAR(camera);
     _map drawIcon [ICON_CAMERA, [0.5, 1, 0.5, 1], _cameraPos, 32, 48, _cameraDir, "", 1, 0.05, "TahomaB", "right"];

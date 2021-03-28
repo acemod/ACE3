@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Cycles through the target directions left/right
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * call ace_atragmx_fnc_cycle_target_direction
+ * call ace_atragmx_fnc_cycle_target_speed_direction
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if ((ctrlText 140051) == ">") then {
     ctrlSetText [140051, "<"];

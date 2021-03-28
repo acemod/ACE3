@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Collect the temperature of all the spare barrels a unit has and send a hint
@@ -11,12 +12,11 @@
  * None
  *
  * Example:
- * [bob, "bob"] call ace_overheating_fnc_sendSpareBarrelsIsTemperaturesHint
+ * [bob, "bob"] call ace_overheating_fnc_sendSpareBarrelsTemperaturesHint
  *
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player","_unit"];
 

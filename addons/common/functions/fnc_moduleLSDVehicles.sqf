@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, joko // Jonas
  * Nothing to see here, move along.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["", "_units", "_activated"];
 
@@ -24,7 +24,7 @@ if (isNil QGVAR(LSD_Vehicles)) then {
 };
 
 {
-    _hSCount = count (getArray (configFile >> "CfgVehicles" >> typeOf _x >> "hiddenSelections"));
+    _hSCount = count (getArray (configOf _x >> "hiddenSelections"));
     if (_hSCount > 0) then {
         GVAR(LSD_Vehicles) pushBack [_x, _hSCount];
     };

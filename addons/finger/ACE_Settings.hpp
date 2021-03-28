@@ -4,6 +4,7 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
         displayName = CSTRING(enabled_displayName);
+        description = CSTRING(enabled_description);
     };
     class GVAR(maxRange) {
         category = CSTRING(DisplayName);
@@ -11,6 +12,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         displayName = CSTRING(maxRange_displayName);
         description = CSTRING(maxRange_description);
+        sliderSettings[] = {0, 50, 4, 1};
     };
     class GVAR(indicatorForSelf) {
         category = CSTRING(DisplayName);

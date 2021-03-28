@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, ViperMaul
  * Check if item can be unloaded.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_item", "_vehicle", ["_unloader", objNull]];
 TRACE_2("params",_item,_vehicle);

@@ -23,5 +23,12 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 
 class ACE_Extensions {
-    extensions[] += {"ace_break_line", "ace_parse_imagepath"};
+    class ace_break_line {
+        windows = 1;
+        client = 1;
+    };
+    class ace_parse_imagepath {
+        windows = 1;
+        client = 1;
+    };
 };

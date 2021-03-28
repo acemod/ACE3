@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas, DaC
  * Prepares necessary variables and default image.
@@ -11,14 +12,13 @@
  * 5: Set Name <STRING> (default: localized "Slides")
  *
  * Return Value:
- * None
+ * Slideshow ID <NUMBER>
  *
  * Example:
  * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5, "My Slides"] call ace_slideshow_fnc_createSlideshow
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [
     ["_objects", [], [[]] ],
@@ -49,10 +49,10 @@ if (isServer) then {
     {
         _x setObjectTextureGlobal [0, _images select 0];
     } count _objects;
-
-    // Number of slideshows (multiple modules support)
-    GVAR(slideshows) = GVAR(slideshows) + 1;
 };
+
+// Number of slideshows (multiple modules support)
+GVAR(slideshows) = GVAR(slideshows) + 1;
 
 private _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets changed during execution of below code
 
@@ -64,6 +64,11 @@ if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions
 if (_duration == 0) then {
+
+    // Reverse the arrays so that the interactions will be added in the right order
+    reverse _images;
+    reverse _names;
+
     {
         if (_setName == "") then {
             _setName = localize LSTRING(Interaction);
@@ -95,5 +100,7 @@ if (_duration == 0) then {
     missionNamespace setVariable [_varString, 0];
 
     // Automatic transitions handler
-    [FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call CBA_fnc_waitAndExecute;
+    [FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration], _duration] call CBA_fnc_waitAndExecute;
 };
+
+_currentSlideshow

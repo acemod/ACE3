@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Finds real x/y offset and map step for a 10 digit grid
@@ -11,11 +12,10 @@
  * None
  *
  * Example:
- * [] call ace_map_fnc_getMapGridData
+ * [] call ace_common_fnc_getMapGridData
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(mapGridData) = [];
 

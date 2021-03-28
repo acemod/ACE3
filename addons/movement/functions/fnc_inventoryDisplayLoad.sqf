@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Executed every time an inventory display is opened.
@@ -13,17 +14,26 @@
  *
  * Public: No
  */
- #include "script_component.hpp"
 
-disableSerialization;
+params ["_display"];
 
-[{
-    disableSerialization;
-    params ["_dialog"];
+// forces player name control to display irrespective of isStreamFriendlyUIEnabled
+(_display displayCtrl 111) ctrlShow true;
 
-    if (isNull _dialog) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
-    };
+private _fnc_update = {
+    params ["_display"];
+    private _control = _display displayCtrl 111;
+    private _format = ["%1 - %2 %3 (%4)", "%2 %3 (%4)"] select isStreamFriendlyUIEnabled;
 
-    (_dialog displayCtrl 111) ctrlSetText format ["%1 - %2 %3", [ACE_player, false, true] call EFUNC(common,getName), localize ELSTRING(common,Weight), [ACE_player] call EFUNC(common,getWeight)];
-}, 0, _this select 0] call CBA_fnc_addPerFrameHandler;
+    _control ctrlSetText format [_format,
+        [ACE_player, false, true] call EFUNC(common,getName),
+        localize ELSTRING(common,Weight),
+        [ACE_player] call EFUNC(common,getWeight),
+        [ACE_player, true] call EFUNC(common,getWeight)
+    ];
+};
+
+_display displayAddEventHandler ["MouseMoving", _fnc_update];
+_display displayAddEventHandler ["MouseHolding", _fnc_update];
+
+_display call _fnc_update;

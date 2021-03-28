@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Module for adjusting the cargo settings
@@ -11,11 +12,10 @@
  * None
  *
  * Example:
- * function = "ace_cargo_fnc_loadItem"
+ * [] call ace_cargo_fnc_moduleSettings
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "", "_activated"];
 

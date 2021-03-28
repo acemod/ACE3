@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Called when current loadout name is changed.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if ((ctrlText ID_EDIT_LOADOUTNAME) in GVAR(defaultLoadoutNames)) then {
     ctrlEnable [ID_BUTTON_SAVE, false];

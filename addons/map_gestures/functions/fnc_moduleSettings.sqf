@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix
  * Initializes Settings for the module and transcodes settings to a useable format.
@@ -11,11 +12,10 @@
  * None
  *
  * Example:
- * [module, [player], true] call ace_map_gestures_fnc_moduleGroupSettings
+ * [module, [player], true] call ace_map_gestures_fnc_moduleSettings
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "", "_activated"];
 

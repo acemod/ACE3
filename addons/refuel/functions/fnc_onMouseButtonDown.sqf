@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Mouse button down event.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _button = _this select 1;
 private _unit = ACE_player;
@@ -45,7 +45,7 @@ if (cameraView == "EXTERNAL") then {
 if (
     !isNull _cursorObject
     && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}
-    && {1 == getNumber (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> QGVAR(canReceive))}
+    && {1 == getNumber (configOf _cursorObject >> QGVAR(canReceive))}
     && {isNull (_cursorObject getVariable [QGVAR(nozzle), objNull])}
     && {!lineIntersects [eyePos _unit, _virtualPosASL, _unit]}
 ) then {

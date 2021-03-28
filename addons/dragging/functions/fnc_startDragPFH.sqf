@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Drag PFH
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #ifdef DEBUG_ENABLED_DRAGGING
     systemChat format ["%1 startDragPFH running", CBA_missionTime];

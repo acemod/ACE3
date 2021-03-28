@@ -58,3 +58,36 @@ extensions\
 ```
 
 ### 2.2 Creating a new Extension
+
+#### 2.2.1 Arma Config
+
+ACE3 loads extensions defined in `ACE_Extensions` root config class and supports the following entries:
+
+```cpp
+// Platform
+windows = 1; // Load on Windows
+linux = 1;   // Load on Linux
+
+// Type
+client = 1;  // Load on Client
+server = 1;  // Load on Server
+```
+
+```cpp
+class ACE_Extensions {
+    // Windows Client only extension
+    class tag_extension {
+       windows = 1;
+       client = 1;
+    };
+
+    // Any platform Server extension
+    class tag_extension2 {
+        windows = 1;
+        linux = 1;
+        server = 1;
+    };
+};
+```
+
+Combining platform and client/server values is possible to get all combinations currently supported by the game and more.

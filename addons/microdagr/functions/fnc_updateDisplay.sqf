@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 private _display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
@@ -70,7 +70,7 @@ case (APP_MODE_INFODISPLAY): {
             _aboveSeaLevelText = "----";
 
             if (GVAR(currentWaypoint) == -2) then {
-                if (!(GVAR(rangeFinderPositionASL) isEqualTo [])) then {
+                if (GVAR(rangeFinderPositionASL) isNotEqualTo []) then {
                     private _targetPos = [GVAR(rangeFinderPositionASL)] call EFUNC(common,getMapGridFromPos);
                     _targetPosName = format ["[%1 %2 %3]", EGVAR(common,MGRS_data) select 1, _targetPos select 0, _targetPos select 1];
                     _targetPosLocationASL = GVAR(rangeFinderPositionASL);
@@ -81,7 +81,7 @@ case (APP_MODE_INFODISPLAY): {
                 _targetPosLocationASL = (_waypoints select GVAR(currentWaypoint)) select 1;
             };
 
-            if (!(_targetPosLocationASL isEqualTo [])) then {
+            if (_targetPosLocationASL isNotEqualTo []) then {
                 private _bearing = [(getPosASL ACE_player), _targetPosLocationASL] call BIS_fnc_dirTo;
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
@@ -89,7 +89,7 @@ case (APP_MODE_INFODISPLAY): {
                     ([_bearing, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
                 private _2dDistanceKm = ((getPosASL ACE_player) distance2D _targetPosLocationASL) / 1000;
-                _rangeText = format ["%1km", _2dDistanceKm toFixed 3];
+                _rangeText = format ["%1km", _2dDistanceKm toFixed GVAR(waypointPrecision)];
                 private _numASL = (_targetPosLocationASL select 2) + EGVAR(common,mapAltitude);
                 _aboveSeaLevelText = [_numASL, 5, 0] call CBA_fnc_formatNumber;
                 _aboveSeaLevelText = if (_numASL > 0) then {"+" + _aboveSeaLevelText + " MSL"} else {_aboveSeaLevelText + " MSL"};
@@ -123,7 +123,7 @@ case (APP_MODE_COMPASS): {
             private _targetPosLocationASL = [];
 
             if (GVAR(currentWaypoint) == -2) then {
-                if (!(GVAR(rangeFinderPositionASL) isEqualTo [])) then {
+                if (GVAR(rangeFinderPositionASL) isNotEqualTo []) then {
                     private _targetPos = [GVAR(rangeFinderPositionASL)] call EFUNC(common,getMapGridFromPos);
                     _targetPosName = format ["[%1 %2 %3]", EGVAR(common,MGRS_data) select 1, _targetPos select 0, _targetPos select 1];
                     _targetPosLocationASL = GVAR(rangeFinderPositionASL);
@@ -137,7 +137,7 @@ case (APP_MODE_COMPASS): {
             _bearingText = "---";
             _rangeText = "---";
 
-            if (!(_targetPosLocationASL isEqualTo [])) then {
+            if (_targetPosLocationASL isNotEqualTo []) then {
                 private _bearing = [(getPosASL ACE_player), _targetPosLocationASL] call BIS_fnc_dirTo;
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
@@ -145,7 +145,7 @@ case (APP_MODE_COMPASS): {
                     ([_bearing, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
                 private _2dDistanceKm = ((getPosASL ACE_player) distance2D _targetPosLocationASL) / 1000;
-                _rangeText = format ["%1km", _2dDistanceKm toFixed 3];
+                _rangeText = format ["%1km", _2dDistanceKm toFixed GVAR(waypointPrecision)];
             };
 
             (_display displayCtrl IDC_MODECOMPASS_BEARING) ctrlSetText _bearingText;
@@ -163,11 +163,13 @@ case (APP_MODE_WAYPOINTS): {
             _x params ["_wpName", "_wpPos"];
             _wpListBox lbAdd _wpName;
             private _2dDistanceKm = ((getPosASL ACE_player) distance2D _wpPos) / 1000;
-            _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed 3])];
+            _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed GVAR(waypointPrecision)])];
         } forEach _waypoints;
 
         _currentIndex = (_currentIndex max 0) min (count _waypoints);
-        _wpListBox lbSetCurSel _currentIndex;
+        if ((lbCurSel _wpListBox) != _currentIndex) then {
+            _wpListBox lbSetCurSel _currentIndex;
+        };
 
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
         ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);

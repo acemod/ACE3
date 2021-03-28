@@ -91,6 +91,13 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 - Press <kbd>R</kbd> until the desired units are displayed.
 - Tap <kbd>Tab&nbsp;↹</kbd> five times fast to save the selection.
 
-## 3. Dependencies
+## 3. Resources
+
+Polish version of this manual with some comments and small additional section
+/polska wersja tego dokumentu opatrzona komentarzami oraz niewielkim dodatkiem:
+
+http://pgm.armaonline.pl/forum/viewtopic.php?f=15&t=548
+
+## 4. Dependencies
 
 {% include dependencies_list.md component="vector" %}

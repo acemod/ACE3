@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Detonates ammunition from a vehicle until no ammo left
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 #define MAX_TIME_BETWEEN_AMMO_DET 25
 
 params ["_vehicle", "_magazines", "_totalAmmo"];
@@ -86,7 +86,7 @@ switch (_simType) do {
     case ("shotshell"): {
         [QGVAR(playCookoffSound), [_vehicle, _simType, 1300]] call CBA_fnc_globalEvent;
         if (random 1 < 0.15) then {
-            [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
+            [_vehicle, _ammo, _speed, true] call _spawnProjectile;
         };
     };
     case ("shotgrenade"): {

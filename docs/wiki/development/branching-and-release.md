@@ -40,7 +40,7 @@ During this release process between the Friday and Tuesday, the day of release, 
 ### 3.1 Branching
 
 * New features, bug fixes that are not a hotfix or other work will always be branched off `master` or another branch but never a `hotfix` or the `release` branch.
-* Hotfixes are always branched off the `release` branch
+* Hotfixes are always branched off the `release` branch.
 * The `release` branch is never merged or deleted. Only `master` or hotfixes are allowed to merge into the `release` branch.
 
 ### 3.2 Diagram

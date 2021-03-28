@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Mark a component as deprecated and switches it to a new component if that is available
@@ -15,7 +16,6 @@
  * Example:
  * [["ace_sitting", "ace_sitting_enabled"], ["acex_sitting", "acex_sitting_enabled"], "3.7.0"] call ace_common_fnc_deprecateComponent;
  */
-#include "script_component.hpp"
 
 params ["_oldComponent", "_newComponent", "_version"];
 

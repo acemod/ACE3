@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the speed of sound for a given temperature
@@ -13,6 +14,5 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 (331.3 * sqrt(1 + (_this / 273.15)))

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko
  * Calculate the maximum zoom level allowed for the current map
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _grids = (configFile >> "CfgWorlds" >> worldName >> "Grid");
 private _fourSize = -1;

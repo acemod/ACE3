@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the range card data
@@ -29,7 +30,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params [
     "_scopeBaseAngle", "_boreHeight", "_airFriction", "_muzzleVelocity",
     "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps",

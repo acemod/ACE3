@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Render all available nearby interactions
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-// #define ENABLE_PERFORMANCE_COUNTERS
-#include "script_component.hpp"
 
 BEGIN_COUNTER(fnc_render);
 
@@ -28,7 +27,7 @@ if (GVAR(openedMenuType) >= 0) then {
     // Render all available nearby interactions
     call FUNC(renderActionPoints);
 
-    // Draw the red selector only when there's no cursor
+    // Draw the selector only when there's no cursor
     if !(uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
         [[0.5,0.5], "\a3\ui_f\data\IGUI\Cfg\Cursors\selected_ca.paa"] call FUNC(renderSelector);
     };
@@ -63,7 +62,7 @@ if (GVAR(openedMenuType) >= 0) then {
     GVAR(selectedAction) = _action select 1;
     GVAR(selectedTarget) = (GVAR(selectedAction)) select 2;
 
-    private _misMatch = !(GVAR(lastPath) isEqualTo _hoverPath);
+    private _misMatch = (GVAR(lastPath) isNotEqualTo _hoverPath);
 
     if(_misMatch && {diag_tickTime-GVAR(expandedTime) > linearConversion [0, 2, GVAR(menuAnimationSpeed), 0.25, 0.08333333]}) then {
         GVAR(startHoverTime) = diag_tickTime;
@@ -92,12 +91,15 @@ if (GVAR(openedMenuType) >= 0) then {
                 };
             };
             if (_runOnHover) then {
-                this = GVAR(selectedTarget);
                 private _player = ACE_Player;
                 private _target = GVAR(selectedTarget);
 
                 // Clear the conditions caches
                 [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
+
+                // Use global variable this for action condition and action code
+                private _savedThis = this;
+                this = GVAR(selectedTarget);
 
                 // Check the action conditions
                 private _actionData = GVAR(selectedAction) select 0;
@@ -108,6 +110,9 @@ if (GVAR(openedMenuType) >= 0) then {
                     // Clear the conditions caches again if the action was performed
                     [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
                 };
+
+                // Restore this variable
+                this = _savedThis;
             };
         };
     };

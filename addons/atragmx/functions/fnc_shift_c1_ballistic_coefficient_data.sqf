@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Shifts all c1 ballistic coefficient entries in the c1 ballistic coefficient vs. distance interpolation table
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (_this == 0) exitWith {};
 

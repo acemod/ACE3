@@ -71,4 +71,43 @@ class CfgMagazines {
         displayNameShort = CSTRING(L_MAG_short);
         pylonWeapon = QGVAR(L_Launcher);
     };
+
+    // KH-25
+    class 4Rnd_Missile_AGM_01_F;
+    class PylonRack_1Rnd_Missile_AGM_01_F : 4Rnd_Missile_AGM_01_F {};
+    class magazine_Missile_AGM_KH25_x1 : VehicleMagazine {};
+    class PylonMissile_Missile_AGM_KH25_x1 : magazine_Missile_AGM_KH25_x1 {};
+    class PylonMissile_Missile_AGM_KH25_INT_x1 : PylonMissile_Missile_AGM_KH25_x1 {};
+
+    class ace_kh25ml_pylonrack_x1 : PylonRack_1Rnd_Missile_AGM_01_F {
+        ammo = "ace_kh25ml";
+        author = "xrufix";
+        descriptionShort = CSTRING(KH25ML_MAG_DESCR);
+        displayName = CSTRING(KH25ML_MAG_x1);
+        displayNameShort = CSTRING(L_MAG_short);
+        pylonWeapon = "ace_kh25ml_launcher";
+    };
+    class ace_kh25ml_magazine_x1 : magazine_Missile_AGM_KH25_x1 {
+        ammo = "ace_kh25ml";
+        author = "xrufix";
+        descriptionShort = CSTRING(KH25ML_MAG_DESCR);
+        displayName = CSTRING(KH25ML_MAG_x1);
+        displayNameShort = CSTRING(L_MAG_short);
+    };
+    class ace_kh25ml_pylonmissile_x1 : PylonMissile_Missile_AGM_KH25_x1 {
+        ammo = "ace_kh25ml";
+        author = "xrufix";
+        descriptionShort = CSTRING(KH25ML_MAG_DESCR);
+        displayName = CSTRING(KH25ML_MAG_x1);
+        displayNameShort = CSTRING(L_MAG_short);
+        pylonWeapon = "ace_kh25ml_launcher";
+    };
+    class ace_kh25ml_pylonmissile_int_x1 : PylonMissile_Missile_AGM_KH25_INT_x1 {
+        ammo = "ace_kh25ml";
+        author = "xrufix";
+        descriptionShort = CSTRING(KH25ML_MAG_DESCR);
+        displayName = CSTRING(KH25ML_MAG_x1);
+        displayNameShort = CSTRING(L_MAG_short);
+        pylonWeapon = "ace_kh25ml_launcher";
+    };
 };

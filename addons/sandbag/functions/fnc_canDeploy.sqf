@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg, commy2
  * Checks if the player can deploy a sandbag.
@@ -13,10 +14,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
-if !("ACE_Sandbag_empty" in items _unit) exitWith {false};
+if !("ACE_Sandbag_empty" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 
 _unit call EFUNC(common,canDig)

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Initializes the module.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Exit on Headless Client
 if (!hasInterface && !isDedicated) exitWith {};
@@ -42,4 +42,4 @@ private _duration = _logic getVariable ["Duration", 0];
 // Prepare with actions
 [_objects, _controllers, _images, _names, _duration, _setName] call FUNC(createSlideshow);
 
-INFO_1("Slideshow Module Initialized on %1 Objects", count _objects);
+INFO_1("Slideshow Module Initialized on %1 Objects",(count _objects));

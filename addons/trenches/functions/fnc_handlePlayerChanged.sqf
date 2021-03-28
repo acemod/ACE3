@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle player changes.
@@ -14,7 +15,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_newPlayer", "_oldPlayer"];
 

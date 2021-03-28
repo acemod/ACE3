@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Inserts entry in the muzzle velocity vs. temperature interpolation table
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_temperature", "_muzzleVelocity"];
 

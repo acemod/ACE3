@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
  * Stops simulation and opens a textbox with error message.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 endLoadingScreen;
@@ -38,7 +38,7 @@ if (_textMessage isEqualType "") then {
     _textMessage = parseText _textMessage;
 };
 
-(ARR_SELECT(_this,4,call BIS_fnc_displayMission)) createDisplay "RscDisplayCommonMessagePause";
+ARR_SELECT(_this,4,call BIS_fnc_displayMission) createDisplay "RscDisplayCommonMessagePause";
 
 private _display = uiNamespace getVariable "RscDisplayCommonMessage_display";
 private _ctrlRscMessageBox =          _display displayCtrl 2351;

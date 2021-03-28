@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_caller", "_target"];
 #define DEFUALTPATH "\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa"
 //Sanity Checks

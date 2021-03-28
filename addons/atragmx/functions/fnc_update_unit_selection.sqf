@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all input fields based on the currently selected unit
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ((uiNamespace getVariable "ATragMX_Display") displayCtrl 600) ctrlEnable true;
 ((uiNamespace getVariable "ATragMX_Display") displayCtrl 601) ctrlEnable true;

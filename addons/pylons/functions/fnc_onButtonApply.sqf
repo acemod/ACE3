@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Starts the pylon configuration.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Check for FRIES change
 private _checkbox = CONTROL(ID_DIALOG) ID_CHECKBOX_FRIES;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles ropes breaking when deployed.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_ehArgs", "_part"];
 _ehArgs params ["_rope", "_helper1", "_helper2"];
 
@@ -36,14 +35,14 @@ private _brokenRope = [];
         _brokenRope = _x;
     };
 } forEach _deployedRopes;
-_brokenRope set [5, true];
+_brokenRope set [6, true];
 _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 
 private _unit = {
     if (_x isKindOf "CAManBase") exitWith {_x};
 } forEach (attachedObjects (_brokenRope select 3));
 
-if !(isNil "_unit") then {
+if (!isNil "_unit") then {
     if (_part == "top") then {
         detach _unit;
     } else {

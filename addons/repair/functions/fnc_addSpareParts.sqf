@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Adds spare parts to the vehicle. Before SettingsInitialized only collect for later execution.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", ["_amount", 1], ["_part", ""], ["_force", false]];
 TRACE_2("params",_vehicle,_amount);

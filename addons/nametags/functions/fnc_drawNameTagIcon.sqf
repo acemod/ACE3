@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, esteldunedain
  * Draw the nametag and rank icon.
@@ -20,8 +21,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 TRACE_1("drawName:", _this);
 
 params ["", "_target", "", "_heightOffset"];
@@ -31,10 +30,8 @@ _fnc_parameters = {
 
     //Set Icon:
     private _icon = "";
-    private _size = 0;
     if (_drawSoundwave) then {
         _icon = format [QPATHTOF(UI\soundwave%1.paa), floor random 10];
-        _size = 1;
     } else {
         if (_drawRank && {rank _target != ""}) then {
             _icon = GVAR(factionRanks) getVariable (_target getVariable [QGVAR(faction), faction _target]);
@@ -43,7 +40,6 @@ _fnc_parameters = {
             } else {
                 _icon = format ["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", rank _target];
             };
-            _size = 1;
         };
     };
 
@@ -58,10 +54,18 @@ _fnc_parameters = {
     private _color = [1, 1, 1, _alpha];
     if ((group _target) != (group _player)) then {
         _color = +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
-        _color set [3, (_color select 3) * _alpha];
     } else {
-        _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find ([assignedTeam _target] param [0, "MAIN"])) max 0);
+        _color = +([
+            GVAR(nametagColorMain),
+            GVAR(nametagColorRed),
+            GVAR(nametagColorGreen),
+            GVAR(nametagColorBlue),
+            GVAR(nametagColorYellow)
+        ] select (
+            (["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find ([assignedTeam _target] param [0, "MAIN"])) max 0
+        ));
     };
+    _color set [3, (_color select 3) * _alpha];
 
     private _scale = [0.333, 0.5, 0.666, 0.83333, 1] select GVAR(tagSize);
 
@@ -69,8 +73,8 @@ _fnc_parameters = {
         _icon,
         _color,
         [],
-        (_size * _scale),
-        (_size * _scale),
+        _scale,
+        _scale,
         0,
         _name,
         2,

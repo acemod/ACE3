@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the Kestrel 4500 Impeller state
@@ -12,7 +13,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _windSpeed = call FUNC(measureWindSpeed);
 

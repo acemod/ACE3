@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Gets all placed explosives by unit, optionally filtered by specific trigger type.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_allExplosives,_deadmanExplosives);
 
 params ["_unit"];

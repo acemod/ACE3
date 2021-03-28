@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: AACO
  * Function used to get the vehicle icon for provided object (cached for repeat use)
@@ -13,15 +14,11 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 #define DEFAULT_TEXTURE "\A3\ui_f\data\Map\VehicleIcons\iconVehicle_ca.paa"
 
 params [["_object", objNull, [objNull, ""]]];
 
 if ((_object isEqualType objNull && {isNull _object}) || {_object isEqualType "" && {_object == ""}}) exitWith { DEFAULT_TEXTURE };
-
-ISNILS(GVAR(vehicleIconCache),call CBA_fnc_createNamespace);
 
 private _objectType = if (_object isEqualType objNull) then {
     typeOf _object

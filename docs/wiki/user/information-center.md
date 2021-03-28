@@ -30,7 +30,7 @@ Downloaded ACE3 and have no idea where to start? This page serves as a starting 
 
 ### 1.2 Issues
 
-**Q:** Experiencing DLL errors.  
+**Q:** Experiencing extension errors.  
 **A:** Start the game once with the Arma 3 Launcher, close it, then start the game with your usual launcher (ArmA3Sync, Play withSix, etc &hellip;).  
 
 >The simple explanation is that the BattlEye process wasn't ended properly and is unable to start again properly, launching it with the Arma 3 Launcher is the only known solution to fix it.

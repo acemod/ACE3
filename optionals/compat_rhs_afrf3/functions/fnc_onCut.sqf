@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Function for closing doors and retracting the hooks for RHS USF helos.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle"];
 
 _vehicle setVariable [QEGVAR(fastroping,doorsLocked), false, true];

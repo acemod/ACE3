@@ -51,7 +51,7 @@ import traceback
 import time
 import timeit
 import re
-import fileinput
+from tempfile import mkstemp
 
 if sys.platform == "win32":
     import winreg
@@ -72,8 +72,8 @@ dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
-versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
+importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "docs\\README.zh-TW.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
+versionFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "docs\\README.zh-TW.md"]
 
 ciBuild = False # Used for CI builds
 
@@ -227,6 +227,17 @@ def find_bi_tools(work_drive):
     else:
         raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
+def mikero_windows_registry(path, access=winreg.KEY_READ):
+    try:
+        return winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Mikero\{}".format(path), access=access)
+    except FileNotFoundError:
+        try:
+            return winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(path), access=access)
+        except FileNotFoundError:
+            try:
+                return winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Wow6432Node\Mikero\{}".format(path), access=access)
+            except FileNotFoundError:
+                return winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Wow6432Node\Mikero\{}".format(path), access=access)
 
 def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
@@ -235,12 +246,8 @@ def find_depbo_tools():
 
     for tool in requiredToolPaths:
         try:
-            try:
-                k = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Mikero\{}".format(tool))
-                path = winreg.QueryValueEx(k, "exe")[0]
-            except FileNotFoundError:
-                k = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Mikero\{}".format(tool))
-                path = winreg.QueryValueEx(k, "exe")[0]
+            k = mikero_windows_registry(tool)
+            path = winreg.QueryValueEx(k, "exe")[0]           
         except FileNotFoundError:
             print_error("Could not find {}".format(tool))
             failed = True
@@ -255,6 +262,17 @@ def find_depbo_tools():
         raise Exception("BadDePBO", "DePBO tools not installed correctly")
 
     return requiredToolPaths
+
+def pboproject_settings():
+    """Use registry entries to configure needed pboproject settings."""
+    value_exclude = "thumbs.db,*.txt,*.h,*.dep,*.cpp,*.bak,*.png,*.log,*.pew,source,*.tga"
+
+    try:
+        k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
+        winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
+        winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
+    except:
+        raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
 
 
 def color(color):
@@ -326,11 +344,11 @@ def copy_important_files(source_dir,destination_dir):
         print_error("COPYING IMPORTANT FILES.")
         raise
 
-    # Copy all extension DLL's
+    # Copy all extensions
     try:
         os.chdir(os.path.join(source_dir))
         print_blue("\nSearching for DLLs in {}".format(os.getcwd()))
-        filenames = glob.glob("*.dll")
+        filenames = glob.glob("*.dll") + glob.glob("*.so")
 
         if not filenames:
             print ("Empty SET")
@@ -414,17 +432,25 @@ def cleanup_optionals(mod):
 
             try:
                 file_name = "{}{}.pbo".format(pbo_name_prefix,dir_name)
+                folder= "@{}{}".format(pbo_name_prefix,dir_name)
                 src_file_path = os.path.join(release_dir, project, "addons", file_name)
-                dst_file_path = os.path.join(release_dir, project, "optionals", file_name)
+                dst_file_path = os.path.join(release_dir, project, "optionals",folder,"addons",file_name)
 
                 sigFile_name = "{}.{}.bisign".format(file_name,key_name)
                 src_sig_path = os.path.join(release_dir, project, "addons", sigFile_name)
-                dst_sig_path = os.path.join(release_dir, project, "optionals", sigFile_name)
+                dst_sig_path = os.path.join(release_dir, project, "optionals",folder,"addons", sigFile_name)
+
 
                 if (os.path.isfile(src_file_path)):
+                    if (os.path.isfile(dst_file_path)):
+                        # print("Cleanuping up old file {}".format(dst_file_path))
+                        os.remove(dst_file_path);
                     #print("Preserving {}".format(file_name))
                     os.renames(src_file_path,dst_file_path)
                 if (os.path.isfile(src_sig_path)):
+                    if (os.path.isfile(dst_sig_path)):
+                        # print("Cleanuping up old file {}".format(dst_sig_path))
+                        os.remove(dst_sig_path);
                     #print("Preserving {}".format(sigFile_name))
                     os.renames(src_sig_path,dst_sig_path)
             except FileExistsError:
@@ -566,9 +592,15 @@ def get_project_version(version_increments=[]):
 
 
 def replace_file(filePath, oldSubstring, newSubstring):
-    for line in fileinput.input(filePath, inplace=True):
-        # Use stdout directly, print() adds newlines automatically
-        sys.stdout.write(line.replace(oldSubstring,newSubstring))
+    fh, absPath = mkstemp()
+    with open(absPath, "w", encoding="utf-8") as newFile:
+        with open(filePath, encoding="utf-8") as oldFile:
+            for line in oldFile:
+                newFile.write(line.replace(oldSubstring, newSubstring))
+
+    newFile.close()
+    os.remove(filePath)
+    shutil.move(absPath, filePath)
 
 
 def set_version_in_files():
@@ -587,7 +619,7 @@ def set_version_in_files():
         try:
             # Save the file contents to a variable if the file exists
             if os.path.isfile(filePath):
-                f = open(filePath, "r+")
+                f = open(filePath, "r+", encoding="utf-8")
                 fileText = f.read()
                 f.close()
 
@@ -820,7 +852,6 @@ make.py [help] [test] [force] [key <name>] [target <name>] [release <version>]
 test -- Copy result to Arma 3.
 release <version> -- Make archive with <version>.
 force -- Ignore cache and build all.
-checkexternal -- Check External Files
 target <name> -- Use rules in make.cfg under heading [<name>] rather than
    default [Make]
 key <name> -- Use key in working directory with <name> to sign. If it does not
@@ -878,12 +909,6 @@ See the make.cfg file for additional build options.
         quiet = True
         argv.remove("quiet")
 
-    if "checkexternal" in argv:
-        argv.remove("checkexternal")
-        check_external = True
-    else:
-        check_external = False
-
     if "version" in argv:
         argv.remove("version")
         version_update = True
@@ -907,8 +932,6 @@ See the make.cfg file for additional build options.
     if "ci" in argv:
         argv.remove("ci")
         ciBuild = True
-
-    print_yellow("\nCheck external references is set to {}".format(str(check_external)))
 
     # Get the directory the make script is in.
     make_root = os.path.dirname(os.path.realpath(__file__))
@@ -1018,6 +1041,8 @@ See the make.cfg file for additional build options.
             pboproject = depbo_tools["pboProject"]
             rapifyTool = depbo_tools["rapify"]
             makepboTool = depbo_tools["MakePbo"]
+
+            pboproject_settings()
         except:
             raise
             print_error("Could not find dePBO tools. Download the needed tools from: https://dev.withsix.com/projects/mikero-pbodll/files")
@@ -1252,13 +1277,10 @@ See the make.cfg file for additional build options.
 
                     if os.path.isfile(nobinFilePath):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
-                        cmd = [makepboTool, "-P","-A","-G","-N","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
+                        cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
-                        if check_external:
-                            cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "+X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
-                        else:
-                            cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "-X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
                     color("grey")
                     if quiet:
@@ -1489,6 +1511,9 @@ if __name__ == "__main__":
     print("\nTotal Program time elapsed: {0:2}h {1:2}m {2:4.5f}s".format(h,m,s))
 
     if ciBuild:
-        sys.exit(0)
+        if len(failedBuilds) > 0:
+            sys.exit(1)
+        else:
+            sys.exit(0)
 
     input("Press Enter to continue...")

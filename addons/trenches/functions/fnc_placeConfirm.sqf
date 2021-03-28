@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support and esteldunedain
  * Confirms trench dig
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -38,6 +38,7 @@ if (isNull GVAR(trench)) exitWith {};
 
 deleteVehicle GVAR(trench);
 private _trench = createVehicle [GVAR(trenchClass), [0, 0, 0], [], 0, "NONE"];
+_trench setVariable [QGVAR(progress), 0, true];
 
 GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
 private _basePos = GVAR(trenchPos);

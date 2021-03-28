@@ -8,13 +8,19 @@ class ACE_Settings {
     };
     class GVAR(earplugsVolume) {
         category = CSTRING(Module_DisplayName);
+        displayName = CSTRING(earplugsVolume_DisplayName);
+        description = CSTRING(earplugsVolume_Description);
         value = 0.5;
         typeName = "SCALAR";
+        sliderSettings[] = {0, 1, 0.5, 1};
     };
     class GVAR(unconsciousnessVolume) {
         category = CSTRING(Module_DisplayName);
+        displayName = CSTRING(unconsciousnessVolume_DisplayName);
+        description = CSTRING(unconsciousnessVolume_Description);
         value = 0.4;
         typeName = "SCALAR";
+        sliderSettings[] = {0, 1, 0.4, 1};
     };
     class GVAR(disableEarRinging) {
         category = CSTRING(Module_DisplayName);

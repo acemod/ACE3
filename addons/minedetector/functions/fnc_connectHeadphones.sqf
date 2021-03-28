@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Connect/disconnect headphones to the mine detector
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit", "_state"];
 _unit setVariable [QGVAR(isUsingHeadphones), _state];

@@ -29,3 +29,6 @@
 #define FLAME_EFFECT_DELAY 0.4
 
 #define SPEED_OF_SOUND 343
+
+#define EJECT_IF_DESTROYED_VEHICLES ["Boat_Transport_02_base_F", "Rubber_duck_base_F"]
+

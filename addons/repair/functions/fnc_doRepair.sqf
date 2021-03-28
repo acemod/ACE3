@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_vehicle", "_hitPointIndex"];
 TRACE_3("params",_unit,_vehicle,_hitPointIndex);
@@ -39,7 +39,7 @@ if (_hitPointNewDamage < _hitPointCurDamage) then {
 };
 
 // Get hitpoint groups if available
-private _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroups);
+private _hitpointGroupConfig = configOf _vehicle >> QGVAR(hitpointGroups);
 if (isArray _hitpointGroupConfig) then {
     // Retrieve hitpoint subgroup if current hitpoint is main hitpoint of a group
     {
@@ -47,9 +47,10 @@ if (isArray _hitpointGroupConfig) then {
         // Exit using found hitpoint group if this hitpoint is leader of any
         if (_masterHitpoint == _hitPointClassname) exitWith {
             {
-                private _subHitIndex = _allHitPoints find _x; //convert hitpoint classname to index
+                private _subHitpoint = _x;
+                private _subHitIndex = _allHitPoints findIf {_x == _subHitpoint}; //convert hitpoint classname to index
                 if (_subHitIndex == -1) then {
-                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_x,_vehicle);
+                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_vehicle);
                 } else {
                     private _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
                     private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;

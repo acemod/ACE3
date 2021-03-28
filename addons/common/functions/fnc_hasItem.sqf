@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if unit has item. Note: case-sensitive.
@@ -14,8 +15,7 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_item", "", [""]]];
 
-_item in items _unit
+_item in (_unit call EFUNC(common,uniqueItems))

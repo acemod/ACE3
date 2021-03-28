@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Mouse scroll wheel changed event.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {};
 

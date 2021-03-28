@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus / nou
  * Change a projectile's direction, maintaing speed
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_projectile", "_v"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: rocko
  * Fixes animation issues that may get you stuck
@@ -15,7 +16,6 @@
  *
  * Note: Has to be spawned not called
  */
-#include "script_component.hpp"
 
 private _unit = ACE_player;
 private _anim = animationState _unit;

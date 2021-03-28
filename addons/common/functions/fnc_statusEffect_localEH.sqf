@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles locality switch, runs a respawn check and then reapplies all effect events.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_object", "_isLocal"];
 TRACE_2("params",_object,_isLocal);

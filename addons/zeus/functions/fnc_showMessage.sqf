@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Shows a Zeus message through the BIS function, handles localization.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!(_this isEqualTypeParams [""])) exitWith {ERROR_1("First arg must be string [%1]",_this);};
 

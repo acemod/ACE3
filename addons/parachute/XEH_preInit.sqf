@@ -1,19 +1,6 @@
-/*
- * Author: Garth 'L-H' de Wet
- * Initialises the parachute system.
- *
- * Arguments:
- * None
- *
- * Return Value:
- * None
- *
- * Example:
- * None
- *
- * Public: No
- */
 #include "script_component.hpp"
+// Author: Garth 'L-H' de Wet
+// Initialises the parachute system.
 
 ADDON = false;
 
@@ -29,6 +16,6 @@ PREP_RECOMPILE_END;
     true,
     false,
     {[QGVAR(hideAltimeter), _this, false] call EFUNC(common,cbaSettings_settingChanged)}
-] call cba_settings_fnc_init; 
+] call CBA_fnc_addSetting;
 
 ADDON = true;

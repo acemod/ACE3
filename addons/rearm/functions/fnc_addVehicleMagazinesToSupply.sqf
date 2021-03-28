@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Adds all magazines of a vehicle to the supply.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if !(EGVAR(common,settingsInitFinished)) exitWith { // only run this after the settings are initialized
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addVehicleMagazinesToSupply), _this];

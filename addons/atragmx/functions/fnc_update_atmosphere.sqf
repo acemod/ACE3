@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all atmosphere column input fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (GVAR(currentUnit) == 2) then {
     ctrlSetText [200, Str(Round(GVAR(temperature) * 10) / 10)];

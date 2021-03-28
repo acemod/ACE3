@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  * Dev things
@@ -14,12 +15,10 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_args", "_pfhID"];
 _args params ["_tracerObj", "_index"];
 
-if (alive _tracerObj && {!(GVAR(traces) isEqualTo [])}) then {
+if (alive _tracerObj && {GVAR(traces) isNotEqualTo []}) then {
     private _data = GVAR(traces) select _index;
     private _positions = _data select 4;
     _positions pushBack [getPos _tracerObj, vectorMagnitude (velocity _tracerObj)];

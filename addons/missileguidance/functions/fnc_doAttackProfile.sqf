@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus / nou, PabstMirror
  * Do attack profile with a valid seeker target location
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_seekerTargetPos", "_args"];
 _args params ["", "_launchParams"];

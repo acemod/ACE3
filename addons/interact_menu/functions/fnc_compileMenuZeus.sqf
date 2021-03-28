@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Compile the zeus action menu (only to be done once)
@@ -13,10 +14,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Exit if the action menu is already compiled for zeus
-if !(isNil {missionNamespace getVariable [QGVAR(ZeusActions), nil]}) exitWith {};
+if (!isNil {missionNamespace getVariable [QGVAR(ZeusActions), nil]}) exitWith {};
 
 private _recurseFnc = {
     params ["_actionsCfg"];
@@ -24,14 +24,22 @@ private _recurseFnc = {
 
     {
         private _entryCfg = _x;
-        if(isClass _entryCfg) then {
+        if (isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
 
-            private _icon = getText (_entryCfg >> "icon");
+            private _icon = if (isArray (_entryCfg >> "icon")) then {
+                getArray (_entryCfg >> "icon");
+            } else {
+                [getText (_entryCfg >> "icon"), "#FFFFFF"];
+            };
             private _statement = compile (getText (_entryCfg >> "statement"));
 
             private _condition = getText (_entryCfg >> "condition");
-            if (_condition == "") then {_condition = "true"};
+            if (_condition == "") then {
+                _condition = {true};
+            } else {
+                _condition = compile _condition;
+            };
 
             private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
             private _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
@@ -46,7 +54,6 @@ private _recurseFnc = {
                 _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
             };
 
-            private _condition = compile _condition;
             private _children = [_entryCfg] call _recurseFnc;
 
             private _entry = [

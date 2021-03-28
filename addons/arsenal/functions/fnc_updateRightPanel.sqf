@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Update the right panel (listnbox).
@@ -11,8 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_control", "_maxLoad"];
 
@@ -47,7 +47,7 @@ if (progressPosition _loadIndicatorBarCtrl > 0) then {
     _removeAllCtrl ctrlCommit FADE_DELAY;
 };
 
-(_display displayCtrl IDC_totalWeightText) ctrlSetText ([[GVAR(center), 1] call EFUNC(common,getWeight), [GVAR(center), 2] call EFUNC(common,getWeight)] joinString " / ");
+(_display displayCtrl IDC_totalWeightText) ctrlSetText (format ["%1 (%2)", [GVAR(center), 2] call EFUNC(common,getWeight), [GVAR(center), 1] call EFUNC(common,getWeight)]);
 
 // change button color if unique or too big
 if (_curSel != -1) then {

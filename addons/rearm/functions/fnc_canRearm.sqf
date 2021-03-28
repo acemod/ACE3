@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Check if a unit can rearm.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_unit"];
 

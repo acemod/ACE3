@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Karel Moricky, modified by Alganthe
  * Update the camera position and pitch/bank.
@@ -15,8 +17,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["", "_args"];
 
@@ -43,11 +43,6 @@ if (count _LMB > 0) then {
     ] call bis_fnc_relpos;
 
     _helperPos set [2,(_helperPos select 2) max ((boundingboxreal GVAR(center) select 0 select 2) + 0.2)];
-
-    //--- Do not let target go below ground
-    private _posZmin = 0.1;
-    private _targetWorldPosZ = (GVAR(center) modeltoworldvisual _helperPos) select 2;
-    if (_targetWorldPosZ < _posZmin) then {_helperPos set [2,(_helperPos select 2) - _targetWorldPosZ + _posZmin];};
 
     GVAR(cameraPosition) set [3,_helperPos];
 };

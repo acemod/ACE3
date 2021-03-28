@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-
-//fnc_findReflections.sqf
-#include "script_component.hpp"
 
 BEGIN_COUNTER(fnc_findReflections);
 params ["_args", "_pfhID"];

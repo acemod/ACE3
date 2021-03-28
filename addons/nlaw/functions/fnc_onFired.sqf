@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Sets up missile guidance state arrays (called from missileGuidance's onFired).
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","","","_projectile"];

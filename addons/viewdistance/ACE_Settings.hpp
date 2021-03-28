@@ -39,6 +39,7 @@ class ACE_Settings {
         value = 10000; // Value, NOT index. 10000 is the maximum in A3
         displayName = CSTRING(limit_DisplayName);
         description = CSTRING(limit_setting);
+        sliderSettings[] = {500, 12000, 10000, 0};
     };
     class GVAR(objectViewDistanceCoeff) {
         category = CSTRING(Module_DisplayName);

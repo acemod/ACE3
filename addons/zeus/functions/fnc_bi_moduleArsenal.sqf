@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function to open a full arsenal on a unit
@@ -16,8 +17,6 @@
  *
  * Public: No
 */
-
-#include "script_component.hpp"
 
 params ["_logic", "", "_activated"];
 
@@ -39,6 +38,9 @@ if (_activated && local _logic) then {
 
                 [{
                     params ["_unit"];
+
+                    player remoteControl _unit;
+                    EGVAR(arsenal,moduleUsed) = true;
 
                     [_unit, _unit, true] call EFUNC(arsenal,openBox);
                 }, [_unit]] call CBA_fnc_directCall;

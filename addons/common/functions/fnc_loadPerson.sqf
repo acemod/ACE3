@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Loads a specified unit into any nearby vehicle, or _vehicle parameter.
@@ -15,13 +16,13 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 params ["_caller", "_unit", ["_vehicle", objNull]];
+TRACE_3("loadPerson",_caller,_unit,_vehicle);
 
-if (!([_caller, _unit, ["isNotDragging", "isNotCarrying", "isNotSwimming"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith {_vehicle};
+if (!([_caller, _unit, ["isNotDragging", "isNotCarrying", "isNotSwimming"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith { objNull };
 
 // Try to use nearest vehicle if a vehicle hasn't been supplied
 if (isNull _vehicle) then {
@@ -30,6 +31,7 @@ if (isNull _vehicle) then {
 
 if (!isNull _vehicle) then {
     [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
+    TRACE_3("sending ace_loadPersonEvent",_unit,_vehicle,_caller);
     ["ace_loadPersonEvent", [_unit, _vehicle, _caller], _unit] call CBA_fnc_targetEvent;
 };
 

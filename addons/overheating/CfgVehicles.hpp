@@ -10,7 +10,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_2(_player, currentMuzzle _player)] call FUNC(clearJam); );
                     showDisabled = 0;
-                    priority = 4;
                     icon = QPATHTOEF(common,UI\repack_ca.paa);
                 };
                 class GVAR(SwapBarrel) {
@@ -19,7 +18,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_3(_player, _player, currentWeapon _player)] call FUNC(swapBarrel); );
                     showDisabled = 0;
-                    priority = 3;
                     icon = QPATHTOF(UI\spare_barrel_ca.paa);
                 };
                 class GVAR(CheckTemperature) {
@@ -28,7 +26,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_3(_player, _player, currentWeapon _player)] call FUNC(checkTemperature); );
                     showDisabled = 0;
-                    priority = 2.9;
                     icon = QPATHTOF(UI\temp_ca.paa);
                 };
                 class GVAR(CheckTemperatureSpareBarrels) {
@@ -37,7 +34,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(checkSpareBarrelsTemperatures); );
                     showDisabled = 0;
-                    priority = 2.8;
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
                 };
             };

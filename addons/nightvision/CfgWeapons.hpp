@@ -12,7 +12,10 @@ class CfgWeapons {
         GVAR(bluRadius) = 0.26;
     };
     class NVGogglesB_grn_F: NVGoggles { // APEX NVG/Thermal
-        modelOptics = "\A3\weapons_f\reticle\optics_night"; // use vanilla modelOptics so it will show in IR mode
+        modelOptics = "\A3\weapons_f_exp\reticle\ENVG.p3d"; // use vanilla modelOptics so it will show in IR mode
+    };
+    class NVGogglesB_gry_F: NVGoggles {
+        modelOptics = "\A3\weapons_f_exp\reticle\ENVG.p3d";
     };
     class NVGoggles_OPFOR: NVGoggles {
         modelOptics = "";

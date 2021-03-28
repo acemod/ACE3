@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Makes an object into a refuel source.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!isServer) exitWith {};
 
@@ -32,7 +32,7 @@ params [
 ];
 TRACE_3("makeSource",_source,_fuelCargo,_hooks);
 
-private _fuelCargoConfig = getNumber (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(fuelCargo));
+private _fuelCargoConfig = getNumber (configOf _source >> QGVAR(fuelCargo));
 
 if (
     isNull _source

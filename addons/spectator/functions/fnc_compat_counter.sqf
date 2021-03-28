@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Handles integrating the counter respawn template into the spectator UI
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define IDC_COUNTER_TITLE 1001
 #define IDC_COUNTER_BACK 1002
 #define IDC_COUNTER_TEXT 1003

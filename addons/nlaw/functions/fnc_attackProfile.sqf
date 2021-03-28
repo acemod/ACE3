@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * NLAW missile guidance attack profile.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH", "_launchParams"];
@@ -24,7 +24,7 @@ _targetLaunchParams params ["", "", "_launchPos"];
 _firedEH params ["","","","","","","_projectile"];
 
 // Use seeker (if terminal)
-if (!(_seekerTargetPos isEqualTo [0,0,0])) exitWith {_seekerTargetPos};
+if (_seekerTargetPos isNotEqualTo [0,0,0]) exitWith {_seekerTargetPos};
 
 _attackProfileStateParams params ["_startTime", "_startLOS", "_yawChange", "_pitchChange"];
 (_startLOS call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];

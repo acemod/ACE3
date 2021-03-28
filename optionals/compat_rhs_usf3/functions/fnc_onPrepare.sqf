@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Function for opening doors and extending the hook for most vanilla helos.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle"];
 
 _vehicle setVariable [QEGVAR(fastroping,doorsLocked), true, true];

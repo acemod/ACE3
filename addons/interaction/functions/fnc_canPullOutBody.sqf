@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Checks if unit can pull target body out of vehicle.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_body", "_unit"];
 
@@ -34,7 +34,7 @@ if (
 
 ((fullCrew [_vehicle, ""] select {_body == _x select 0}) select 0) params ["", "", "_cargoIndex", "_turretPath"];
 
-private _locked = if (!(_turretPath isEqualTo [])) then {
+private _locked = if (_turretPath isNotEqualTo []) then {
     _vehicle lockedTurret _turretPath;
 } else {
     if (_cargoIndex > -1) then {

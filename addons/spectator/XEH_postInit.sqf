@@ -24,8 +24,6 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
-[QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;
-
 // A virtual spectator cannot exist without an interface
 if (hasInterface) then {
     // Local player (not ACE_Player) must be initalized to check
@@ -36,3 +34,5 @@ if (hasInterface) then {
         }
     ] call CBA_fnc_waitUntilAndExecute;
 };
+
+["ace_spectator", {GETMVAR(GVAR(isSet),false)}] call CBA_fnc_registerFeatureCamera;

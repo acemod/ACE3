@@ -4,4 +4,17 @@
 [QGVAR(setVehicleHitPointDamage), {_this call FUNC(setHitPointDamage)}] call CBA_fnc_addEventHandler;
 
 // wheels
-[QGVAR(setWheelHitPointDamage), {(_this select 0) setHitPointDamage [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
+[QGVAR(setWheelHitPointDamage), {
+    params ["_object", "_hitPoint", "_damage"];
+    private _damageDisabled = !isDamageAllowed _object;
+
+    if (_damageDisabled) then {
+        _object allowDamage true;
+    };
+
+    _object setHitPointDamage [_hitPoint, _damage];
+
+    if (_damageDisabled) then {
+        _object allowDamage false;
+    };
+}] call CBA_fnc_addEventHandler;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2
  * Handle "take" event
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if !(GVAR(unJamOnreload)) exitWith {};
 

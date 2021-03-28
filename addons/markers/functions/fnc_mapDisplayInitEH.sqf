@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles XEH DisplayLoad for the various map displays (RscDiary)
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
-
-disableSerialization;
 
 params ["_display"];
 TRACE_1("params",_display);
@@ -32,3 +30,8 @@ private _curSelColor = missionNamespace getVariable [QGVAR(curSelMarkerColor), 0
 TRACE_2("color",_bisColorLB,_curSelColor);
 _bisColorLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
 _bisColorLB lbSetCurSel _curSelColor;
+
+// movable markers
+private _ctrlMap = _display displayCtrl 51;
+_ctrlMap ctrlAddEventHandler ["MouseButtonDown", {_this call FUNC(onMouseButtonDown)}];
+_ctrlMap ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onMouseButtonUp)}];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Generates the Kestrel 4500 output text.
@@ -29,7 +30,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (diag_tickTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
 

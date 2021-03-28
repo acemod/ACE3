@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: aeroson
  * Sets the text on the dialog.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define TextIDC 11123
 

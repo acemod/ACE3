@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Deletes the selected pylon configuration from profileNamespace.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _loadoutName = lbText [ID_LIST_LOADOUTS, lbCurSel ID_LIST_LOADOUTS];
 

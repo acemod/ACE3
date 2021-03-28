@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Export current loadout / default loadouts list to clipboard.
@@ -10,7 +11,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_display"];
 
@@ -49,3 +49,5 @@ if (GVAR(shiftState)) then {
 
     [_display, localize LSTRING(exportCurrent)] call FUNC(message);
 };
+
+[QGVAR(loadoutExported), [_display, GVAR(shiftState)]] call CBA_fnc_localEvent;

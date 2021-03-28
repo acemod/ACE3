@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Returns if user has a valid key for the vehicle
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_veh"];
 TRACE_2("params",_unit,_veh);
@@ -22,19 +22,16 @@ TRACE_2("params",_unit,_veh);
 if (isNull _unit) exitWith {ERROR("null unit"); false};
 if (isNull _veh) exitWith {ERROR("null vehicle"); false};
 
-private _returnValue = false;
-
 //Master can open anything "no matter what"
-if ("ACE_key_master" in (items _unit)) then {_returnValue = true};
+private _items = _unit call EFUNC(common,uniqueItems);
+if ("ACE_key_master" in _items) exitWith {true};
 
 //Check side key
 private _sideKeyName = [_veh] call FUNC(getVehicleSideKey);
-if (_sideKeyName in (items _unit)) then {_returnValue = true};
+if (_sideKeyName in _items) exitWith {true};
 
 //Check custom keys
 private _customKeys = _veh getVariable [QGVAR(customKeys), []];
-{
-    if (_x in (magazinesDetail _unit)) then {_returnValue = true;};
-} forEach _customKeys;
+private _magazines = magazinesDetail _unit;
 
-_returnValue
+(_customKeys findIf {_x in _magazines}) != -1

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle unconsciousness.
@@ -13,7 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_unit"];
 

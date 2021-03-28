@@ -59,28 +59,8 @@ class CfgVehicles {
     class rhs_a3spruttank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 400;
     };
-
-#define ERA(num) QUOTE(era_##num##_hitpoint)
-#define ERA_2_28 ERA(2), ERA(3), ERA(4), ERA(5), ERA(6), ERA(7), ERA(8), ERA(9), ERA(10), ERA(11), ERA(12), ERA(13), ERA(14), ERA(15), ERA(16), ERA(17), ERA(18), ERA(19), ERA(20), ERA(21), ERA(22), ERA(23), ERA(24), ERA(25), ERA(26), ERA(27), ERA(28)
-#define ERA_2_31 ERA_2_28, ERA(29), ERA(30), ERA(31)
-#define ERA_2_32 ERA_2_31, ERA(32)
-#define ERA_2_35 ERA_2_32, ERA(33), ERA(34), ERA(35)
-#define ERA_2_36 ERA_2_35, ERA(36)
-
     class rhs_a3t72tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
-    };
-    class rhs_t72bb_tv: rhs_a3t72tank_base {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_31}}};
-    };
-    class rhs_t72bc_tv: rhs_a3t72tank_base {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_32}}};
-    };
-    class rhs_t72bd_tv: rhs_a3t72tank_base {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_32}}};
     };
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
@@ -152,60 +132,20 @@ class CfgVehicles {
     };
 
     class Heli_Attack_02_base_F: Helicopter_Base_F {};
-    class rhs_mi28_base: Heli_Attack_02_base_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0; // Note: This is still required because of inheritance from Heli_Attack_02_base_F
-            };
-        };
-    };
-
     class RHS_Ka52_base: Heli_Attack_02_base_F {
         EGVAR(refuel,fuelCapacity) = 1870;
         EGVAR(fastroping,enabled) = 0;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0; // Note: This is still required because of inheritance from Heli_Attack_02_base_F
-            };
-        };
     };
 
     class RHS_Mi24_base: Heli_Attack_02_base_F {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(refuel,fuelCapacity) = 1851;
         EGVAR(fastroping,enabled) = 0;
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                EGVAR(fcs,enabled) = 0; // Note: This is still required because of inheritance from Heli_Attack_02_base_F
-            };
-        };
     };
 
     class rhs_t80b: rhs_tank_base {
         EGVAR(refuel,fuelCapacity) = 1100;
     };
-    class rhs_t80bv: rhs_t80b {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_28}}};
-    };
-    class rhs_t80a: rhs_t80bv {};
-    class rhs_t80u: rhs_t80a {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_35}}};
-    };
-    class rhs_t80uk: rhs_t80u {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_36}}};
-    };
-    class rhs_t80ue1: rhs_t80a {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_36}}};
-    };
-    class rhs_t80um: rhs_t80u {
-        ace_repair_hitpointPositions[] = {{ERA(1), {0,0,0}}};
-        ace_repair_hitpointGroups[] = {{ERA(1), {ERA_2_36}}};
-    };
-
     class Truck_F: Car_F {};
     class RHS_Ural_BaseTurret: Truck_F {
         EGVAR(refuel,fuelCapacity) = 360;
@@ -277,5 +217,307 @@ class CfgVehicles {
 
     class OTR21_Base: Truck_F {
         EGVAR(refuel,fuelCapacity) = 500;
+    };
+
+    class StaticWeapon: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class StaticMGWeapon: StaticWeapon {};
+    class AT_01_base_F: StaticMGWeapon {};
+
+    class rhs_SPG9_base: AT_01_base_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "";
+            };
+        };
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_SPG9);
+            magazineLocation = "_target selectionPosition 'breach'";
+            disassembleWeapon = QGVAR(spg9_carry);
+            disassembleTurret = QEGVAR(csw,spg9Tripod);
+            desiredAmmo = 1;
+            ammoLoadTime = 5;
+            ammoUnloadTime = 3;
+        };
+    };
+    class rhs_Kornet_Base: AT_01_base_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "";
+                selection = "tripod";
+            };
+        };
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_9K133_launcher);
+            magazineLocation = "_target selectionPosition 'gun'";
+            disassembleWeapon = QGVAR(kornet_carry);
+            disassembleTurret = "";
+            desiredAmmo = 1;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    class rhs_assault_umbts;
+    class rhs_assault_umbts_engineer: rhs_assault_umbts {
+        EGVAR(logistics_wirecutter,hasWirecutter) = 1;
+    };
+
+    class StaticMortar: StaticWeapon {};
+    class rhs_2b14_82mm_Base: StaticMortar {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "";
+                selection = ""; // no good selections for this mortar
+            };
+        };
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            magazineLocation = "";
+            proxyWeapon = QGVAR(rhs_weap_2b14);
+            disassembleWeapon = QGVAR(2b14_carry); // carry weapon [CfgWeapons]
+            disassembleTurret = QEGVAR(csw,mortarBaseplate); // turret [CfgVehicles]
+            desiredAmmo = 1;
+            ammoLoadTime = 3;
+            ammoUnloadTime = 3;
+        };
+    };
+
+    class rhs_nsv_tripod_base: StaticMGWeapon {
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_nsvt_effects);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(nsv_carry);
+            disassembleTurret = QEGVAR(csw,kordTripodLow);
+            desiredAmmo = 50;
+            ammoLoadTime = 10;
+            ammoUnloadTime = 8;
+        };
+    };
+
+    class RHS_KORD_Base: rhs_nsv_tripod_base {
+        class ACE_CSW: ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_KORD);
+            disassembleWeapon = QGVAR(kord_carry);
+            disassembleTurret = QEGVAR(csw,kordTripodLow);
+        };
+    };
+
+    class RHS_KORD_high_base: RHS_KORD_Base {
+        class ACE_CSW: ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_KORD);
+            disassembleWeapon = QGVAR(kord_carry);
+            disassembleTurret = QEGVAR(csw,kordTripod);
+        };
+    };
+
+    class StaticGrenadeLauncher: StaticWeapon {};
+    class RHS_AGS30_TriPod_base: StaticGrenadeLauncher {
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_AGS30);
+            magazineLocation = "_target selectionPosition 'magazine'";
+            disassembleWeapon = QGVAR(ags30_carry);
+            disassembleTurret = QEGVAR(csw,sag30Tripod);
+            desiredAmmo = 30;
+            ammoLoadTime = 10;
+            ammoUnloadTime = 8;
+        };
+    };
+
+    class rhs_SPG9M_base: rhs_SPG9_base {
+        class ACE_CSW: ACE_CSW {
+            enabled = 1;
+            disassembleWeapon = QGVAR(spg9m_carry);
+        };
+    };
+
+    class rhs_Metis_Base: AT_01_base_F {
+        // ENABLE_CSW_ATTRIBUTE;
+        class ACE_CSW {
+            enabled = 1;
+            proxyWeapon = QGVAR(rhs_weap_9K115_2_launcher);
+            magazineLocation = "_target selectionPosition 'gun'";
+            disassembleWeapon = QGVAR(metis_carry);
+            disassembleTurret = "";
+            desiredAmmo = 1;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
+        };
+    };
+
+    // ACE Explosives
+    class Items_base_F;
+    class ACE_Explosives_Place: Items_base_F {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_tm62m: ACE_Explosives_Place {
+        displayName = "$STR_RHS_CFGMAGAZINES_TM62M0";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_tm62m";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0.005, -0.025, 0.06]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_pmn2: ACE_Explosives_Place {
+        displayName = "$STR_RHS_CFGMAGAZINES_PMN20";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_pmn2";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, 0, 0.012]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_ptm1: ACE_Explosives_Place {
+        displayName = "$STR_RHS_PTM1_NAME";
+        model = "\rhsafrf\addons\rhs_airweapons\rhs_m_ptm1_d";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, -0.17, 0.02]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_pfm1: ACE_Explosives_Place {
+        displayName = "$STR_RHS_PFM1_NAME";
+        model = "\rhsafrf\addons\rhs_airweapons\rhs_m_pfm1_d";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.015, 0.018, 0]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_ec75: ACE_Explosives_Place {
+        displayName = "$STR_RHS_CFGMAGAZINES_EC75";
+        model = "\rhsafrf\addons\rhs_weapons2\explosives\rhs_ec75_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, -0.04, 0.02]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_ec75_sand: ACE_Explosives_Place_rhs_ec75 {
+        displayName = "$STR_RHS_CFGMAGAZINES_EC75_SAND";
+        model = "\rhsafrf\addons\rhs_weapons2\explosives\rhs_ec75_sand_e";
+    };
+
+    class ACE_Explosives_Place_rhs_ec200: ACE_Explosives_Place {
+        displayName = "$STR_RHS_CFGMAGAZINES_EC200";
+        model = "\rhsafrf\addons\rhs_weapons2\explosives\rhs_ec200_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, -0.05, 0.008]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_ec200_sand: ACE_Explosives_Place_rhs_ec200 {
+        displayName = "$STR_RHS_CFGMAGAZINES_EC200_SAND";
+        model = "\rhsafrf\addons\rhs_weapons2\explosives\rhs_ec200_sand_e";
+    };
+
+    class ACE_Explosives_Place_rhs_ec400: ACE_Explosives_Place {
+        displayName = "$STR_RHS_CFGMAGAZINES_EC400";
+        model = "\rhsafrf\addons\rhs_weapons2\explosives\rhs_ec400_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0, -0.03, 0.02]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_ec400_sand: ACE_Explosives_Place_rhs_ec400 {
+        displayName = "$STR_RHS_CFGMAGAZINES_EC400_SAND";
+        model = "\rhsafrf\addons\rhs_weapons2\explosives\rhs_ec400_sand_e";
+    };
+
+    class ACE_Explosives_Place_rhs_mine_msk40p_white: ACE_Explosives_Place {
+        displayName = "$STR_RHS_MINE_MSK40P_W_MAG_DISPLAYNAME";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_msk40p_white_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+               position = "[-0.025, 0, 0.4]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_msk40p_red: ACE_Explosives_Place_rhs_mine_msk40p_white {
+        displayName = "$STR_RHS_MINE_MSK40P_R_MAG_DISPLAYNAME";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_msk40p_red_e";
+    };
+
+    class ACE_Explosives_Place_rhs_mine_msk40p_green: ACE_Explosives_Place_rhs_mine_msk40p_white {
+        displayName = "$STR_RHS_MINE_MSK40P_G_MAG_DISPLAYNAME";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_msk40p_green_e";
+    };
+
+    class ACE_Explosives_Place_rhs_mine_msk40p_blue: ACE_Explosives_Place_rhs_mine_msk40p_white {
+        displayName = "$STR_RHS_MINE_MSK40P_B_MAG_DISPLAYNAME";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_msk40p_blue_e";
+    };
+
+    class ACE_Explosives_Place_rhs_mine_sm320_white: ACE_Explosives_Place {
+        displayName = "$STR_RHS_MINE_SM320_W_MAG_DISPLAYNAME";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_sm320_white_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+               position = "[-0.01, 0, 0.25]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_sm320_red: ACE_Explosives_Place_rhs_mine_sm320_white {
+        displayName = "$STR_RHS_MINE_SM320_R_MAG_DISPLAYNAME";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_sm320_red_e";
+    };
+
+    class ACE_Explosives_Place_rhs_mine_sm320_green: ACE_Explosives_Place_rhs_mine_sm320_white {
+        displayName = "$STR_RHS_MINE_SM320_G_MAG_DISPLAYNAME";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_sm320_green_e";
+    };
+
+    class ACE_Explosives_Place_rhs_mine_ozm72_a: ACE_Explosives_Place {
+        displayName = "$STR_RHS_CFGMAGAZINES_OZM72A";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_ozm72_a_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+               position = "[0, 0.125, 0.11]";
+            };
+        };
+    };
+
+    class ACE_Explosives_Place_rhs_mine_ozm72_b: ACE_Explosives_Place_rhs_mine_ozm72_a {
+        displayName = "$STR_RHS_CFGMAGAZINES_OZM72B";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_ozm72_b_e";
+    };
+
+    class ACE_Explosives_Place_rhs_mine_ozm72_c: ACE_Explosives_Place_rhs_mine_ozm72_a {
+        displayName = "$STR_RHS_CFGMAGAZINES_OZM72C";
+        model = "\rhsafrf\addons\rhs_weapons\mines\rhs_ozm72_c_e";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+               position = "[0, 0.015, 0.12]";
+            };
+        };
     };
 };

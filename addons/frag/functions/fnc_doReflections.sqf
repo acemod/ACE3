@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  * Dev things
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-
-//fnc_doReflections.sqf
-#include "script_component.hpp"
 
 params ["_pos", "_ammo", ["_depth", 1]];
 

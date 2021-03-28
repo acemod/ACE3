@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk et.al.
  * Calculates a connection for refueling.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startingPosASL", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
 
@@ -125,7 +125,7 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
             _unit setVariable [QGVAR(tempFuel), nil];
             [_unit, _nozzle] call FUNC(turnOn);
         } else {
-            [LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+            [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
         };
     },
     "",

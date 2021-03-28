@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Cut deployed ropes.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle"];
 
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
@@ -26,7 +25,7 @@ private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
         private _attachedObjects = attachedObjects _dummy;
         //Rope is considered occupied when it's broken as well, so check if array is empty
         //Note: ropes are not considered attached objects by Arma
-        if !(_attachedObjects isEqualTo []) then {
+        if (_attachedObjects isNotEqualTo []) then {
             detach ((attachedObjects _dummy) select 0);
         };
     };
@@ -39,4 +38,7 @@ private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];
-_vehicle setVariable [QGVAR(deploymentStage), 2, true];
+
+// Set new state (0 if no FRIES, 2 if FRIES for manual stowing)
+private _newState = [0, 2] select (isText (configOf _vehicle >> QGVAR(onCut)));
+_vehicle setVariable [QGVAR(deploymentStage), _newState, true];

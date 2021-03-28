@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix, PabstMirror
  * Adds a group id color mapping.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!params [["_group", "", [grpNull, ""]], ["_leadColor", [1,1,1,1], [[]], 4], ["_unitColor", [1,1,1,1], [[]], 4]]) exitWith {
     ERROR_1("Bad Params: %1",_this);

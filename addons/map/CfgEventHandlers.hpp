@@ -17,3 +17,9 @@ class Extended_PostInit_EventHandlers {
         serverInit = QUOTE(call COMPILE_FILE(XEH_postInitServer));
     };
 };
+
+class Extended_DisplayLoad_EventHandlers {
+    class RscDiary {
+        GVAR(initMainMap) = QUOTE((_this select 0) call (uiNamespace getVariable 'FUNC(initMainMap)'));
+    };
+};

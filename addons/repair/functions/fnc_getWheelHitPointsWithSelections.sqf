@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns the wheel hitpoints and their selections.
@@ -14,13 +15,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 TRACE_1("params",_vehicle);
 
 // get the vehicles wheel config
-private _wheels = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Wheels";
+private _wheels = configOf _vehicle >> "Wheels";
 
 // exit with nothing if the vehicle has no wheels class
 if !(isClass _wheels) exitWith {TRACE_1("No Wheels",_wheels); [[],[]]};

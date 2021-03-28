@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Ruthberg
  * Applies the adjustment for the current scope
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_elevation", "_windage", "_zero"];
 

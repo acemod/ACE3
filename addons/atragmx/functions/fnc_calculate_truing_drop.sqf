@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the truing drop and updates the output fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _parseInput = _this;
 
@@ -60,7 +60,7 @@ if (_parseInput) then {
     _subsonicDrop = _transonicDrop max _subsonicDrop;
 };
 
-if ((GVAR(truingDropDropData) select 0) == 0 || {!([_transonicRange, _subsonicRange] isEqualTo GVAR(truingDropRangeData))}) then {
+if ((GVAR(truingDropDropData) select 0) == 0 || {[_transonicRange, _subsonicRange] isNotEqualTo GVAR(truingDropRangeData)}) then {
     if (isNil QGVAR(targetSolutionInput)) then {
         call FUNC(calculate_target_solution);
     };

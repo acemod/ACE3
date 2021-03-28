@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO
  * Function used to handle mouse scroll event
@@ -15,13 +16,10 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-#define FOLLOW_CAMERA_MAX_DISTANCE 5
-
 if (GVAR(camMode) == MODE_FOLLOW) then {
     if ((_this select 1) > 0) then {
         GVAR(camDistance) = (GVAR(camDistance) - 1) max 0;
     } else {
-        GVAR(camDistance) = (GVAR(camDistance) + 1) min FOLLOW_CAMERA_MAX_DISTANCE;
+        GVAR(camDistance) = (GVAR(camDistance) + 1) min GVAR(maxFollowDistance);
     };
 };

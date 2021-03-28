@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Scans for nearby "Static" objects (buildings) and adds the UserActions to them.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_interactionType"];
 
@@ -38,7 +38,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
         //Make the common case fast (cursorTarget is looking at a door):
         if ((!isNull cursorTarget) && {cursorTarget isKindOf "Static"} && {!(cursorTarget in _housesScaned)}) then {
-            if (((count (configFile >> "CfgVehicles" >> (typeOf cursorTarget) >> "UserActions")) > 0) || {(count (getArray (configFile >> "CfgVehicles" >> (typeOf cursorTarget) >> "ladders"))) > 0}) then {
+            if (((count (configOf cursorTarget >> "UserActions")) > 0) || {(count (getArray (configOf cursorTarget >> "ladders"))) > 0}) then {
                 _housesToScanForActions = [cursorTarget];
             } else {
                 _housesScaned pushBack cursorTarget;

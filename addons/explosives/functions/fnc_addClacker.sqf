@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Adds an explosive as a clacker item to the passed unit if the unit has the required item.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_explosive", "_magazineClass"];
 TRACE_3("params",_unit,_explosive,_magazineClass);
@@ -46,3 +46,5 @@ _unit setVariable [QGVAR(Clackers), _clacker, true];
 
 //display clacker code message:
 [format [localize LSTRING(DetonateCode), GVAR(PlacedCount)]] call EFUNC(common,displayTextStructured);
+
+[QGVAR(clackerAdded), [_unit, _explosive, GVAR(PlacedCount)]] call CBA_fnc_localEvent;

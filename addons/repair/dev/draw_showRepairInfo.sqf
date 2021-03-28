@@ -5,7 +5,7 @@
 
 addMissionEventHandler ["Draw3D", {
     if !((cursorObject isKindOf "Car") || (cursorObject isKindOf "Tank") || (cursorObject isKindOf "Air")) exitWith {};
-    private _config = configFile >> "CfgVehicles" >> (typeOf cursorObject);
+    private _config = configOf cursorObject;
 
     private _hitpointPositions = getArray (_config >> QGVAR(hitpointPositions));
     private _hitpointGroups = getArray (_config >> QGVAR(hitpointGroups));
@@ -64,6 +64,6 @@ addMissionEventHandler ["Draw3D", {
             _output pushBack format ["%1: %2[%3] = %4", _forEachIndex, _hitPoint, _selection, cursorObject getHitIndex _forEachIndex];
             _output pushBack format ["- %1 -",_info];
         };
-    } forEach _hitPoints;
+    } forEach _hitSelections;
     hintSilent (_output joinString "\n");
 }];

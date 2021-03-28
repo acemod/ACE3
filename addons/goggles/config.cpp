@@ -16,6 +16,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
 
 #define COMBAT_GOGGLES         ACE_Overlay = QPATHTOF(textures\HUD\CombatGoggles.paa); \
         ACE_OverlayCracked = QPATHTOF(textures\HUD\CombatGogglesCracked.paa); \
@@ -34,7 +35,18 @@ class CfgGlasses {
         ACE_DustPath = QPATHTOF(textures\fx\dust\%1.paa);
     };
 
+    class G_Blindfold_01_base_F: None {
+        ACE_Overlay = QPATHTOF(textures\HUD\blindfold_ca.paa);
+        ACE_OverlayCracked = "";
+        ACE_Resistance = 2;
+        ACE_Protection = 1;
+    };
+
     class G_Combat:None {
+        COMBAT_GOGGLES
+    };
+
+    class G_Combat_Goggles_tna_F: None {
         COMBAT_GOGGLES
     };
 
@@ -179,6 +191,16 @@ class CfgGlasses {
         ACE_Protection = 1;
     };
 
+    class G_Balaclava_TI_blk_F;
+    class G_Balaclava_TI_G_blk_F: G_Balaclava_TI_blk_F {
+        COMBAT_GOGGLES
+    };
+
+    class G_Balaclava_TI_tna_F;
+    class G_Balaclava_TI_G_tna_F: G_Balaclava_TI_tna_F {
+        COMBAT_GOGGLES
+    };
+
     class G_Bandanna_blk;
     class G_Bandanna_shades:G_Bandanna_blk {
         ACE_TintAmount=COLOUR*2;
@@ -196,6 +218,29 @@ class CfgGlasses {
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
         ACE_Protection = 1;
+    };
+
+    class G_EyeProtectors_base_F;
+    class G_EyeProtectors_F: G_EyeProtectors_base_F {
+        ACE_Resistance = 1;
+        ACE_Protection = 1;
+    };
+    class G_EyeProtectors_Earpiece_F: G_EyeProtectors_base_F {
+        ACE_Resistance = 1;
+        ACE_Protection = 1;
+    };
+
+    class G_AirPurifyingRespirator_01_base_F: None {
+        ACE_Overlay = "a3\ui_f_enoch\data\objects\data\optics_apr_ca.paa";
+        ACE_OverlayCracked = "";
+        ACE_Resistance = 2;
+        ACE_Protection = 1;
+    };
+    class G_AirPurifyingRespirator_02_base_F: G_AirPurifyingRespirator_01_base_F {
+        ACE_Overlay = "a3\ui_f_enoch\data\objects\data\optics_APR_02_CA.paa";
+    };
+    class G_RegulatorMask_base_F: None {
+        ACE_Overlay = "a3\ui_f_enoch\data\objects\data\optics_regulator_ca.paa";
     };
 };
 

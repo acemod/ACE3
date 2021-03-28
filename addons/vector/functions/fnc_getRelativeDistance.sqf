@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  *
@@ -14,17 +15,11 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
-private _distanceP1 = GVAR(pData) select 0;
-private _directionP1 = GVAR(pData) select 1;
-private _azimuthP1 = _directionP1 select 0;
-private _inclinationP1 = _directionP1 select 1;
-
+GVAR(pData) params ["_distanceP1", "_directionP1"];
+_directionP1 params ["_azimuthP1", "_inclinationP1"];
 private _distanceP2 = call FUNC(getDistance);
 private _directionP2 = call FUNC(getDirection);
-private _azimuthP2 = _directionP2 select 0;
-private _inclinationP2 = _directionP2 select 1;
+_directionP2 params ["_azimuthP2", "_inclinationP2"];
 
 
 private _relDirection = sqrt ((_azimuthP1 - _azimuthP2) ^ 2 + (_inclinationP1 - _inclinationP2) ^ 2);

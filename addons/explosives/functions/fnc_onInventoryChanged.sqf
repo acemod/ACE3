@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * When a take/put event handler fires and a detonator is changed hands.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_receiver", "_giver", "_item"];
 TRACE_3("params",_receiver,_giver,_item);

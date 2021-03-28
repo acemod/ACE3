@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to draw the 3D icons and track the cursor object
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define HEIGHT_OFFSET 1.5
 
 BEGIN_COUNTER(updateCursor);
@@ -31,7 +30,7 @@ private _end = AGLToASL screenToWorld getMousePosition;
 if ((_start distanceSqr _end) <= DISTANCE_NAMES_SQR) then {
     private _intersections = lineIntersectsSurfaces [_start, _end, _camTarget, _camTargetVeh];
 
-    if !(_intersections isEqualTo []) then {
+    if (_intersections isNotEqualTo []) then {
         _cursorObject = effectiveCommander ((_intersections select 0) select 3);
     };
 };
@@ -72,9 +71,7 @@ if !(GVAR(uiMapVisible)) then {
 
             // Draw icon
             drawIcon3D _icon;
-
-            nil // Speed loop
-        } count GVAR(iconsToDraw);
+        } forEach GVAR(iconsToDraw);
         END_COUNTER(drawTags);
     };
 
@@ -115,17 +112,13 @@ if !(GVAR(uiMapVisible)) then {
                 private _oldLoc = [];
                 {
                     _x params ["_locNew", "_colorNew"];
-                    if !(_oldLoc isEqualTo []) then {
+                    if (_oldLoc isNotEqualTo []) then {
                         drawLine3D [_oldLoc, _locNew, _colorNew];
                     };
                     _oldLoc = _locNew;
-
-                    nil // Speed loop
-                } count _segments;
+                } forEach _segments;
             };
-
-            nil // Speed loop
-        } count GVAR(projectilesToDraw);
+        } forEach GVAR(projectilesToDraw);
         GVAR(projectilesToDraw) = _projectilesNew;
 
         {
@@ -138,9 +131,7 @@ if !(GVAR(uiMapVisible)) then {
                 // Store grenade for next frame
                 _grenadesNew pushBack _x;
             };
-
-            nil // Speed loop
-        } count GVAR(grenadesToDraw);
+        } forEach GVAR(grenadesToDraw);
 
         GVAR(grenadesToDraw) = _grenadesNew;
         END_COUNTER(drawTracers);

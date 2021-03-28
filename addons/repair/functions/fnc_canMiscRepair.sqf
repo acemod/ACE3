@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Check if misc repair action can be done, called from callbackSuccess.
@@ -16,8 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_caller", "_target", "_hitPointIndex"];
 
 (getAllHitPointsDamage _target) params ["_allHitPoints", "", "_allHitPointDamages"];
@@ -25,7 +24,7 @@ params ["_caller", "_target", "_hitPointIndex"];
 if !([_caller, _target, ["isNotDragging", "isNotCarrying", "isNotSwimming", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
 // Get hitpoint groups if available
-private _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hitpointGroups);
+private _hitpointGroupConfig = configOf _target >> QGVAR(hitpointGroups);
 private _hitpointGroup = [];
 if (isArray _hitpointGroupConfig) then {
     private _hitPointClassname = _allHitPoints select _hitPointIndex;
@@ -36,9 +35,10 @@ if (isArray _hitpointGroupConfig) then {
         // Exit using found hitpoint group if this hitpoint is leader of any
         if (_masterHitpoint == _hitPointClassname) exitWith {
             {
-                private _subHitIndex = _allHitPoints find _x;
+                private _subHitpoint = _x;
+                private _subHitIndex = _allHitPoints findIf {_x == _subHitpoint};
                 if (_subHitIndex == -1) then {
-                    ERROR("Hitpoint Not Found");
+                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_target);
                 } else {
                     _hitpointGroup pushBack _subHitIndex;
                 };

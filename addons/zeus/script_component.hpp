@@ -17,9 +17,14 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 // UI grid
-#define SIZEX ((safezoneW / safezoneH) min 1.2)
+#define SIZEX ((safeZoneW / safeZoneH) min 1.2)
 #define SIZEY (SIZEX / 1.2)
 #define W_PART(num) (num * (SIZEX / 40))
 #define H_PART(num) (num * (SIZEY / 25))
-#define X_PART(num) (W_PART(num) + (safezoneX + (safezoneW - SIZEX)/2))
-#define Y_PART(num) (H_PART(num) + (safezoneY + (safezoneH - SIZEY)/2))
+#define X_PART(num) (W_PART(num) + (safeZoneX + (safeZoneW - SIZEX) / 2))
+#define Y_PART(num) (H_PART(num) + (safeZoneY + (safeZoneH - SIZEY) / 2))
+
+#define CAN_CREATE_NONE    -1
+#define CAN_CREATE_ADMIN    0
+#define CAN_CREATE_CONSOLE  1
+#define CAN_CREATE_ALL      2

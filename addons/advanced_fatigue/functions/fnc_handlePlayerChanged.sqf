@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles switching units (once on init and afterwards via Zeus).
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_newUnit", "_oldUnit"];
 TRACE_2("unit changed",_newUnit,_oldUnit);
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: CBA Team
  * Throws Fired XEH.
@@ -19,10 +20,14 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 TRACE_1("Fired",_this);
 
 {
     _this call _x;
 } forEach ((_this select 0) getVariable "cba_xeh_fired");
+
+// Call muzzle fired EH
+{
+    _this call compile getText (_x >> "fired");
+} forEach (configProperties [configFile >> "CfgWeapons" >> "Throw" >> (_this select 2) >> "EventHandlers", "isClass _x", true]);

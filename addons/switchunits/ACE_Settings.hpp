@@ -1,6 +1,7 @@
 class ACE_Settings {
     class GVAR(enableSwitchUnits) {
         category = CSTRING(DisplayName);
+        displayName = CSTRING(EnableSwitchUnits_DisplayName);
         value = 0;
         typeName = "BOOL";
     };
@@ -45,5 +46,6 @@ class ACE_Settings {
         description = CSTRING(SafeZoneRadius_Description);
         value = 100;
         typeName = "SCALAR";
+        sliderSettings[] = {0, 1000, 100, 0};
     };
 };

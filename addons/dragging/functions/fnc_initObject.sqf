@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Initialize variables for drag or carryable objects. Called from init EH.
@@ -13,11 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _object;
+private _config = configOf _object;
 
 if (getNumber (_config >> QGVAR(canDrag)) == 1) then {
     private _position = getArray (_config >> QGVAR(dragPosition));

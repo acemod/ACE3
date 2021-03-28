@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Function for setup module.  Sets default lockpick strength and default lock state.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "_syncedUnits", "_activated"];
 TRACE_3("params",_logic,_syncedUnits,_activated);

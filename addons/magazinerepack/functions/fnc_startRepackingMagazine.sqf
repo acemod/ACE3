@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror (based on repack from commy2, esteldunedain, Ruthberg)
  * Starts repacking a specific magazine classname.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_player", "_magazineClassname"];
 
@@ -39,7 +39,7 @@ private _startingAmmoCounts = [];
     if (_xClassname == _magazineClassname && {_xCount != _fullMagazineCount && {_xCount > 0}}) then {
         if (_xLoaded) then {
             //Try to Remove from weapon and add to inventory, otherwise ignore
-            if (_player canAdd _magazineClassname) then {
+            if ([_player, _magazineClassname] call CBA_fnc_canAddItem) then {
                 switch (_xType) do {
                     case (1): {_player removePrimaryWeaponItem _magazineClassname};
                     case (2): {_player removeHandgunItem _magazineClassname};

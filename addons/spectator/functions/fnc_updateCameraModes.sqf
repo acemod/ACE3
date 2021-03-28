@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Adds or removes spectator camera modes from the selection available to the local player.
@@ -20,8 +21,6 @@
  *
  * Public: Yes
  */
-
-#include "script_component.hpp"
 
 if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [DFUNC(updateCameraModes),_this];
@@ -46,7 +45,7 @@ if (_newModes isEqualTo []) then {
 };
 
 // Update camera in case of change
-if !(isNil QGVAR(camera)) then {
+if (!isNil QGVAR(camera)) then {
     // If mode was free and no longer available, find a focus
     if (!(MODE_FREE in _newModes) && {GVAR(camMode) == MODE_FREE} && {isNull GVAR(camFocus)}) then {
         [true] call FUNC(setFocus);

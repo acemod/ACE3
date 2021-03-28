@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Sets newly placed marker
@@ -11,11 +12,10 @@
  * None
  *
  * Example:
- * [[],[],dummyLogic] call ace_markers_fnc_setMarkerJIP;
+ * [[],[],dummyLogic] call ace_markers_fnc_setMarkerNetwork;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_marker", "_data"];
 TRACE_2("params",_marker,_data);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Called at pre-init: Loads all ace_settings and converts them to CBA Settings.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 LOG("Adding ACE_Settings to CBA_settings");
 
@@ -22,6 +21,9 @@ LOG("Adding ACE_Settings to CBA_settings");
 GVAR(cbaSettings_forcedSettings) = [];
 GVAR(cbaSettings_missionSettings) = [];
 GVAR(settings) = []; // will stay empty - for BWC?
+#ifdef DEBUG_MODE_FULL
+GVAR(settingsMovedToSQF) = [];
+#endif
 
 // Add Event Handlers:
 [QGVAR(setSetting), {
@@ -67,6 +69,13 @@ GVAR(settings) = []; // will stay empty - for BWC?
         false
     } count GVAR(runAtSettingsInitialized);
     GVAR(runAtSettingsInitialized) = nil; //cleanup
+
+    #ifdef DEBUG_MODE_FULL
+    INFO_1("checking settingsMovedToSQF [%1]",count GVAR(settingsMovedToSQF));
+    {
+        if (isNil _x) then { WARNING_1("setting [%1] NOT moved to sqf",_x); };
+    } forEach GVAR(settingsMovedToSQF);
+    #endif
 }] call CBA_fnc_addEventHandler;
 
 private _start = diag_tickTime;
@@ -76,24 +85,31 @@ private _countOptions = count _settingsConfig;
 TRACE_1("Reading settings from configFile",_countOptions);
 for "_index" from 0 to (_countOptions - 1) do {
     private _optionEntry = _settingsConfig select _index;
-    if (isNil (configName _optionEntry)) then {
-        [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
+    if ((getNumber (_optionEntry >> "movedToSQF")) == 0) then {
+        if (isNil (configName _optionEntry)) then {
+            [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
+        } else {
+            WARNING_1("Setting [%1] - Already defined from somewhere else??",_varName);
+        };
+        #ifdef DEBUG_MODE_FULL
     } else {
-        WARNING_1("Setting [%1] - Already defined from somewhere else??",_varName);
+        GVAR(settingsMovedToSQF) pushBack configName _optionEntry;
+        #endif
     };
 };
 
-_settingsConfig = missionConfigFile >> "ACE_Settings";
-_countOptions = count _settingsConfig;
+private _missionSettingsConfig = missionConfigFile >> "ACE_Settings";
+_countOptions = count _missionSettingsConfig;
 TRACE_1("Reading settings from missionConfigFile",_countOptions);
 for "_index" from 0 to (_countOptions - 1) do {
-    private _optionEntry = _settingsConfig select _index;
+    private _optionEntry = _missionSettingsConfig select _index;
     private _settingName = configName _optionEntry;
     if ((toLower _settingName) in GVAR(cbaSettings_forcedSettings)) then {
         WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",_varName);
     } else {
-        if (isNil _settingName) then {
+        if ((isNil _settingName) && {(getNumber (_settingsConfig >> _settingName >> "movedToSQF")) == 0}) then {
             // New setting, that was first defined in missionConfigFile
+            INFO_1("Creating new CBA setting for ace_setting from mission config [%1]",_settingName);
             [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
         } else {
             private _value = (_optionEntry >> "value") call BIS_fnc_getCfgData;

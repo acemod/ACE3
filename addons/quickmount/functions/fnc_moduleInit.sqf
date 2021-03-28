@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Kingsley
  * Initializes the quick-mount module.
@@ -12,7 +13,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!isServer) exitWith {};
 

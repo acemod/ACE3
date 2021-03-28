@@ -1,18 +1,9 @@
-////////////////////////////////////////////////////////////////////
-//Produced from mikero's Dos Tools using dll 3.17
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
-#define _ARMA_
-
-//Class weapons : Data\bullettracer\Data\tracer_red.rvmat{
-ambient[] = {1.0,1.0,1.0,3.25};
-diffuse[] = {1.0,1.0,1.0,1.0};
-forcedDiffuse[] = {0.0,0.0,0.0,0.0};
-emmisive[] = {1.0,1.0,1.0,1.0};
-specular[] = {0.0,0.0,0.0,1.0};
+ambient[] = {1,1,1,3.25};
+diffuse[] = {1,1,1,1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {1000, 100, 10, 1};
+specular[] = {0,0,0,1};
 specularPower = 1.0;
-renderFlags[] = {"NoZWrite","AddBlend"};
+renderFlags[] = {"NoZWrite", "NoAlphaWrite", "AddBlend"};
 PixelShaderID = "Normal";
 VertexShaderID = "Basic";
-//};

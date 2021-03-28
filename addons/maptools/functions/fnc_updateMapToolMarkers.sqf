@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Update the map tool markers, position, size, rotation and visibility.
@@ -13,11 +14,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_theMap"];
 
-if ((GVAR(mapTool_Shown) == 0) || {!("ACE_MapTools" in items ACE_player)}) exitWith {};
+if ((GVAR(mapTool_Shown) == 0) || {!("ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems)))}) exitWith {};
 
 private _rotatingTexture = "";
 private _textureWidth = 0;

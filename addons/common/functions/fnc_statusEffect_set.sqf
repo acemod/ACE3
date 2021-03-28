@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Adds or removes an id to a status effect and will send an event to apply.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_effectName", "", [""]], ["_ID", "", [""]], ["_set", true, [false]]];
 TRACE_4("params",_object,_effectName,_ID,_set);

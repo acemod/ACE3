@@ -43,14 +43,13 @@
         interval = 1; \
     }; \
 }
-#define MERGE(var1,var2) ##var1####var2
-#define EFFECT_AFTER_WATER(color) class ACE_SmokeAfterWater##color##: ACE_SmokeAfterWaterWhite { \
+#define EFFECT_AFTER_WATER(color) class ACE_SmokeAfterWater##color: ACE_SmokeAfterWaterWhite { \
     class SmokeAfterWater: SmokeAfterWater { \
-        type = QUOTE(MERGE(ACE_SmokeAfterWater,color)); \
+        type = QUOTE(ACE_SmokeAfterWater##color); \
     }; \
 }
 
 #define CLOUDLET_UNDERWATER(color) class SmokeShell##color##UW; \
 class SmokeShell##color##2UW: SmokeShell##color##UW { \
-    postEffects = QUOTE(MERGE(ACE_SmokeAfterWater,color)); \
+    postEffects = QUOTE(ACE_SmokeAfterWater##color); \
 }

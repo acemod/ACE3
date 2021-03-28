@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Glowbal, PabstMirror
  * Draw progress bar and execute given function if succesful.
@@ -20,7 +21,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_totalTime", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
 

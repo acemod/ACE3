@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, commy2
  * Handles the player dying.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
@@ -22,7 +22,7 @@ if (GVAR(effects) == 0) exitWith {true};
 
 call FUNC(removeGlassesEffect);
 
-if (GVAR(effects) == 2) then {
+if (GVAR(effects) in [2, 3]) then {
     GVAR(PostProcessEyes) ppEffectEnable false;
 
     SETGLASSES(_unit,GLASSESDEFAULT);

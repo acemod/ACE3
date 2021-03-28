@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Used to un-garrison units.
@@ -14,44 +15,37 @@
  * Public: Yes
  *
 */
-#include "script_component.hpp"
 
 params [["_units", [], [[]]]];
 
 _units = _units select {local _x};
 
 {
-    if (!isPlayer _x && {local _x}) then {
-        _x enableAI "PATH";
-        _x enableAI "FSM";
+    private _unit = _x;
+    if (!isPlayer _unit && {local _unit}) then {
+        _unit enableAI "PATH";
+        _unit enableAI "FSM";
 
-        private _leader = leader _x;
+        private _leader = leader _unit;
 
-        TRACE_3("fnc_ungarrison: unit and leader",_x , _leader, (_leader == _x));
+        TRACE_3("fnc_ungarrison: unit and leader",_unit , _leader, (_leader == _unit));
 
-        _x setVariable [QGVAR(garrisonned), false, true];
+        _unit setVariable [QGVAR(garrisonned), false, true];
 
-        if (_leader != _x) then {
-            doStop _x;
-            _x doFollow _leader;
+        private _unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
+       _unitMoveList deleteAt (_unitMoveList findIf {_x select 0 == _unit});
+
+        if (_leader != _unit) then {
+            doStop _unit;
+            _unit doFollow _leader;
 
         } else {
-            _x doMove ((nearestBuilding (getPos _x)) buildingExit 0);
+            _unit doMove ((nearestBuilding (getPos _unit)) buildingExit 0);
         };
 
-        private _fnc_countGarrisonnedUnits = {
-            params ["_unit", "_bool"];
-            if (_bool) then {
-                ({(_x getVariable [QGVAR(garrisonned), false]) && {!isPlayer _x}} count units _unit)
-            } else {
-                ({!(_x getVariable [QGVAR(garrisonned), false]) && {!isPlayer _x}} count units _unit)
-            };
-            
-        };
-
-        if ([_x, true] call _fnc_countGarrisonnedUnits == ({!isPlayer _x} count (units _x)) - 1 || {[_x, false] call _fnc_countGarrisonnedUnits == {!isPlayer _x} count (units _x)}) then {
+        if ((units _unit) findif {(_x getVariable [QGVAR(garrisonned), false]) && !isPlayer _x} == -1) then {
             LOG("fnc_ungarrison: enableAttack true");
-            (group _x) enableAttack true;
+            (group _unit) enableAttack true;
         };
     };
 } foreach _units;

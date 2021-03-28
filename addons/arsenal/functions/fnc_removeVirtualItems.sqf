@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Remove virtual items to the provided target.
@@ -16,7 +17,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [ ["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]] ];
 
@@ -44,9 +44,11 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
     [ ] // InventoryItems 17
 ]];
 
-if (_items isEqualType true && {_items}) then {
-    [_object, _global] call FUNC(removeBox);
-    _object setVariable [QGVAR(virtualItems), nil, _global];
+if (_items isEqualType true) then {
+    if (_items) then {
+        [_object, _global] call FUNC(removeBox);
+        _object setVariable [QGVAR(virtualItems), nil, _global];
+    };
 } else {
 
     // Make sure all items are in string form
@@ -66,9 +68,9 @@ if (_items isEqualType true && {_items}) then {
 
     private _itemCount = {
         if (_x isEqualTo (_cargo select 0) || {_x isEqualTo (_cargo select 1)}) then {
-            !(_x isEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]})
+            (_x isNotEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]})
         } else {
-            !(_x isEqualTo [])
+            (_x isNotEqualTo [])
         };
     } count _cargo;
 

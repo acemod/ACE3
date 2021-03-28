@@ -45,4 +45,22 @@ class CfgWeapons {
         EGVAR(laser,showHud) = 1; // show attack profile / lock on hud
         GVAR(enabled) = 1;
     };
+
+    class weapon_AGM_KH25Launcher : MissileLauncher {};
+    class ace_kh25ml_launcher : weapon_AGM_KH25Launcher {
+        author = "xrufix";
+        displayName = CSTRING(KH25ML);
+        magazines[] = {
+            "ace_kh25ml_pylonrack_x1",
+            "ace_kh25ml_magazine_x1",
+            "ace_kh25ml_pylonmissile_x1",
+            "ace_kh25ml_pylonmissile_int_x1"
+        };
+        weaponLockDelay = 0.1;
+        weaponLockSystem = 0;
+        
+        EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
+        EGVAR(laser,showHud) = 1; // show attack profile / lock on hud
+        GVAR(enabled) = 1;
+    };
 };

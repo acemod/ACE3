@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handle death.
@@ -13,10 +14,9 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_unit"];
 
-if (!isNull (GETMVAR(ladder,objNull)) && {GVAR(ladder) in attachedObjects _unit}) then {
-    [_unit, GVAR(ladder)] call FUNC(cancelTLdeploy);
+if (!isNull GETMVAR(ladder,objNull) && {GVAR(ladder) in attachedObjects _unit}) then {
+    [_unit, 1] call FUNC(cancelTLdeploy);
 };

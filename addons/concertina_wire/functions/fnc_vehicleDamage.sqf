@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko
  * Handles vehicle damage from hitting wire
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_wire", "_vehicle"];
 
 private _type = typeOf _wire;
@@ -96,8 +96,8 @@ if (_mode == 1) then {
 if (canMove _vehicle) then {
     {
         private _selectionPart = "hit" + _x;
-        if (isText(configFile >> "CfgVehicles" >> typeOf _vehicle >> "hitpoints" >> _selectionPart >> "name")) then {
-            private _selection = getText(configFile >> "CfgVehicles" >> typeOf _vehicle  >> "hitpoints" >> _selectionPart >> "name");
+        if (isText(configOf _vehicle >> "hitpoints" >> _selectionPart >> "name")) then {
+            private _selection = getText(configOf _vehicle  >> "hitpoints" >> _selectionPart >> "name");
             // TODO: Only the tires that have touched the wire should burst.
             _vehicle setHit [_selection, 1];
         };

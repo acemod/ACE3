@@ -158,18 +158,4 @@ class CfgWeapons {
             };
         };
     };
-
-    /* Flashlights */
-    class InventoryFlashLightItem_Base_F;
-
-    class RH_SFM952V: ItemCore {
-        class ItemInfo: InventoryFlashLightItem_Base_F {
-            class FlashLight {
-                ACE_Flashlight_Colour = "white";
-                ACE_Flashlight_Beam = QPATHTOEF(map,UI\Flashlight_beam_white_ca.paa);
-                ACE_Flashlight_Size = 2.75;
-                ACE_Flashlight_Sound = 1;
-            };
-        };
-    };
 };

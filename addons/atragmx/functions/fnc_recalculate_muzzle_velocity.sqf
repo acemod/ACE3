@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Recalculates the muzzle velocity based on the muzzle velocity vs. temperature interpolation input
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_parseInput", "_updateDisplay"];
 

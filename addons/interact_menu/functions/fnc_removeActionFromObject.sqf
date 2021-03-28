@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, NouberNou and esteldunedain
  * Removes an action from an object
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_typeNum", "_fullPath"];
 

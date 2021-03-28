@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Adjust the grenades throwing direction and speed to the selected throwing mode. Called from the unified fired EH only for CAManBase
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
@@ -31,15 +31,37 @@ private _config = configFile >> "CfgAmmo" >> _ammo;
 if (local _unit) then {
     // handle priming sound, if present
     private _soundConfig = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(pullPinSound));
-    if !(_soundConfig isEqualTo []) then {
+    if (_soundConfig isNotEqualTo []) then {
         _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
         playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
     };
 
     if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
-        private _fuzeTime = getNumber (_config >> "explosionTime");
+        private _bangs = 1;
+        private _entry = _config >> QGVAR(flashbangBangs);
+        if (isNumber _entry || isText _entry) then {
+            _bangs = getNumber _entry;
+        };
 
-        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CBA_fnc_waitAndExecute;
+        private _fuzeTimeBase = getNumber (_config >> "explosionTime");
+
+        private _interval = 0.5;
+        _entry = _config >> QGVAR(flashbangInterval);
+        if (isNumber _entry || isText _entry) then {
+            _interval = getNumber _entry;
+        };
+
+        private _maxDeviation = 0.1;
+        _entry = _config >> QGVAR(flashbangIntervalMaxDeviation);
+        if (isNumber _entry || isText _entry) then {
+            _maxDeviation = getNumber _entry;
+        };
+
+        for "_i" from 0 to (_bangs - 1) do {
+            private _fuzeTime = _fuzeTimeBase + _i*_interval + random [- _maxDeviation, 0, _maxDeviation];
+
+            [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CBA_fnc_waitAndExecute;
+        };
     };
 };
 

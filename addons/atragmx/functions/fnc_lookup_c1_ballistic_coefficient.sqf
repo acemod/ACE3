@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Lookup the correct C1 ballistic coefficient in the c1 ballistic coefficient vs. distance interpolation table
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_targetRange"];
 

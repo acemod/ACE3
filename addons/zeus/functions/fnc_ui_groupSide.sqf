@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Initalises the `group side` zeus module display
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define IDCs [31201,31200,31202,31203]
 
 params ["_control"];
@@ -115,7 +114,7 @@ private _fnc_onUnload = {
 };
 
 private _fnc_onConfirm = {
-    params [["_ctrlButtonOK", controlNull, [controlNull]]];
+    params ["_ctrlButtonOK"];
 
     private _display = ctrlparent _ctrlButtonOK;
     if (isNull _display) exitWith {};

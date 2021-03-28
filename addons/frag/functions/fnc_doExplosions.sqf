@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -13,9 +14,6 @@
  *
  * Public: No
  */
-
-//fnc_doExplosions.sqf
-#include "script_component.hpp"
 
 params ["_args", "_pfhID"];
 _args params ["_explosions", "_index"];

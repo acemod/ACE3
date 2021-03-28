@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: ACE-Team
- *
+ * Handles the HitPart event
  *
  * Arguments:
  * None
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 //player sideChat format ["f: %1 c: %2", (_this select 0), (count GVAR(spallHPData))];
 

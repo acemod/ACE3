@@ -14,18 +14,8 @@ version:
 
 ## 1. Overview
 
-ACE3 Weather overrides weather settings (editor, mission settings) and automatically calculates wind, temperature and pressure according to map location, date, time of day and cloud coverage and allows the weather to evolve realistically as the simulation progresses.
+ACE3 Weather extends the existing weather by temperature, humidity and air pressure according to the geographic location, season and time of day.
 
-Weather synchronization occurs between all clients.
+The additional wind simulation, which is also influenced by the season and the geographical location, can be deactivated if necessary.
 
-Adjustment of the weather is possible by modifying the `overcast` value (for example: `0.7` may result in intermittent rain).
-
-### 1.1 Weather Propagation
-
-Weather propagation is responsible for synchronizing weather between all clients. Disabling it is **NOT** recommended.
-
-### 1.2 Using ACE3 Weather
-
-ACE3 Weather overrides the default weather a custom system (map based).
-
-This can be disabled without affecting the weather propagation above. Useful if you prefer changing weather settings manually.
+Cloud cover, rain and fog can still be set via the mission settings.

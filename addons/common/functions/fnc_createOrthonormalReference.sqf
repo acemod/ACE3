@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Returns a orthonormal system of reference aligned with the supplied vector
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 [_this] params [["_vector", [0,0,1], [[]], 3]];
 

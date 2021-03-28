@@ -1,22 +1,21 @@
+#include "script_component.hpp"
 /*
  * Author: CAA-Picard
  * Check if the player can check the ammo of the target.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Target <OBJECT>
  *
  * Return Value:
- * Can link belt<BOOL> 
+ * Can link belt<BOOL>
  *
  * Example:
- * [player, bob] call ace_reload_fnc_canCheckAmmo
+ * [cursorObject] call ace_reload_fnc_canCheckAmmo
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["", "_target"];
+params ["_target"];
 
 // Return true for static weapons if they have been fired once, @todo 1.40 this work-around doesn't work anymore
 if (_target isKindOf "StaticWeapon") exitWith {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Shows multiple watched variables on the main display (for easy debugging).
@@ -19,14 +20,12 @@
  * Example:
  * ["CBA_missionTime"] call ace_common_fnc_watchVariable // Uses title as code
  * ["diag_frameNo", {diag_frameNo}, [false]] call ace_common_fnc_watchVariable // Won't show delta
- * ["blood", {player getVariable "ace_medical_bloodVolume"}, [true, 0, 100]] call ace_common_fnc_watchVariable // Shows slider
+ * ["blood", {player getVariable "ace_medical_bloodVolume"}, [true, 0, 6]] call ace_common_fnc_watchVariable // Shows slider
  * ["multiLine text", {"Line 1 <br/>Line 2"}, [2]] call ace_common_fnc_watchVariable
  * ["player names", {allPlayers apply {name _x}}, [5]] call ace_common_fnc_watchVariable // handles any data types
  *
  * Public: Yes
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 #define TEXT_HEIGHT 16
 

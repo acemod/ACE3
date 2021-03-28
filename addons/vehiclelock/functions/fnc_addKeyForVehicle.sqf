@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Adds a key to a unit that will open a vehicle
@@ -16,7 +17,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if (!params [["_unit", objNull, [objNull]], ["_veh", objNull, [objNull]], ["_useCustom", false, [false]]]) exitWith {
     ERROR("Input wrong type");
