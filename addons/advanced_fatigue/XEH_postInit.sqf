@@ -7,10 +7,10 @@ if (!hasInterface) exitWith {};
     private _fatigue = _unit getVariable [QGVAR(aimFatigue), 0];
 
     switch (stance _unit) do {
-        case ("CROUCH"): {
+        case "PRONE": {
             (1.0 + _fatigue ^ 2 * 0.1) * GVAR(swayFactor)
         };
-        case ("PRONE"): {
+        case "CROUCH": {
             (1.0 + _fatigue ^ 2 * 2.0) * GVAR(swayFactor)
         };
         default {
