@@ -44,14 +44,14 @@
             };
         };
     }
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 [
     QGVAR(fogScaling), "SLIDER",
     [LSTRING(fogScaling_DisplayName), LSTRING(fogScaling_Description)],
     localize LSTRING(Category),
     [0,2,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true // isGlobal
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(noiseScaling), "SLIDER",
@@ -59,7 +59,7 @@
     localize LSTRING(Category),
     [0,2,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true // isGlobal
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(aimDownSightsBlur), "SLIDER",
@@ -67,7 +67,7 @@
     localize LSTRING(Category),
     [0,2,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true // isGlobal
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(disableNVGsWithSights), "CHECKBOX",
@@ -75,7 +75,7 @@
     localize LSTRING(Category),
     false, // default value
     true // isGlobal
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(shutterEffects), "CHECKBOX",
@@ -83,4 +83,4 @@
     localize LSTRING(Category),
     true, // default value
     false // isGlobal
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

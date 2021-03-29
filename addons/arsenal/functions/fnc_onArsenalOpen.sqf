@@ -64,24 +64,24 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 for "_index" from 0 to 10 do {
     switch (_index) do {
         // primary, secondary, handgun weapons
-        case 0: {
+        case IDX_VIRT_WEAPONS: {
             private _array = LIST_DEFAULTS select _index;
 
-            if !((_array select 0) isEqualTo "") then {
+            if ((_array select 0) isNotEqualTo "") then {
                 ((GVAR(virtualItems) select _index) select 0) pushBackUnique (_array select 0);
             };
 
-            if !((_array select 1) isEqualTo "") then {
+            if ((_array select 1) isNotEqualTo "") then {
                 ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 1);
             };
 
-            if !((_array select 2) isEqualTo "") then {
+            if ((_array select 2) isNotEqualTo "") then {
                  ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
             };
         };
 
         // Accs for the weapons above
-        case 1: {
+        case IDX_VIRT_ATTACHEMENTS: {
             private _array = LIST_DEFAULTS select _index;
             _array params ["_accsArray", "_magsArray"];
 
@@ -96,28 +96,28 @@ for "_index" from 0 to 10 do {
             } forEach _accsArray;
 
             {
-                if !(_x isEqualTo []) then {
+                if (_x isNotEqualTo []) then {
 
                     if (_x select 0 != "") then {
-                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 0);
+                        (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 0);
                     };
 
                     if (count _x > 1 && {_x select 1 != ""}) then {
-                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 1);
+                        (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 1);
                     };
                 };
             } forEach _magsArray;
         };
 
         // Inventory items
-        case 2: {
+        case IDX_VIRT_ITEMS_ALL: {
                 call FUNC(updateUniqueItemsList);
             };
 
         // The rest
         default {
-            private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
-            if !(_array isEqualTo []) then {
+            private _array = (LIST_DEFAULTS select _index) select {_x isNotEqualTo ""};
+            if (_array isNotEqualTo []) then {
                 {(GVAR(virtualItems) select _index) pushBackUnique _x} forEach _array;
             };
         };

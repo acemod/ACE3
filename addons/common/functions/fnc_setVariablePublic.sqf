@@ -46,7 +46,7 @@ TRACE_2("Starting Embargo", _varName, _delay);
     TRACE_4("End of embargo", _object, _varName, _value, _curValue);
 
     //If value at start of embargo doesn't equal current, then broadcast and start new embargo
-    if (!(_value isEqualTo _curValue)) then {
+    if (_value isNotEqualTo _curValue) then {
         _this set [2, _curValue];
         _this call FUNC(setVariablePublic);
     };

@@ -23,7 +23,7 @@ _seekerParams params ["", "", "_seekerMaxRange", "_seekerMinRange"];
 _shooter setVariable [QGVAR(fired), true, true];
 _shooter animate ["missile_hide", 1];
 
-private _config = ([_projectile] call CBA_fnc_getObjectConfig) >> "ace_missileguidance";
+private _config = configOf _projectile >> "ace_missileguidance";
 
 private _serviceInterval = [_config >> "serviceInterval", "NUMBER", 0.33] call CBA_fnc_getConfigEntry;
 private _serviceChargeCount = [_config >> "serviceCharges", "NUMBER", 60] call CBA_fnc_getConfigEntry;

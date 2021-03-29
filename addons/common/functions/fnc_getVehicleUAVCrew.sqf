@@ -17,4 +17,4 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-crew _vehicle select {getText (configFile >> "CfgVehicles" >> typeOf _x >> "simulation") == "UAVPilot"} // return
+crew _vehicle select {getText (configOf _x >> "simulation") == "UAVPilot"} // return

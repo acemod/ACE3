@@ -59,7 +59,6 @@ if (is3DEN) then {
         curatorcamera cameraEffect ["internal","back"];
     } else {
         GVAR(camera) cameraEffect ["terminate","back"];
-        ACE_player switchCamera GVAR(cameraView);
     };
 };
 
@@ -70,6 +69,8 @@ if (!isNil QGVAR(moduleUsed)) then {
     GVAR(moduleUsed) = nil;
     objNull remoteControl GVAR(center);
 };
+
+ACE_player switchCamera GVAR(cameraView);
 
 if (isMultiplayer) then {
 

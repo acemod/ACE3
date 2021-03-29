@@ -5,7 +5,7 @@
     true,
     true,
     {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(loadTimeCoefficient), "SLIDER",
@@ -14,7 +14,7 @@
     [0, 10, 5, 1],
     true,
     {[QGVAR(loadTimeCoefficient), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(paradropTimeCoefficent), "SLIDER",
@@ -23,6 +23,7 @@
     [0, 10, 2.5, 1],
     true,
     {[QGVAR(paradropTimeCoefficent), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
+
 ] call CBA_settings_fnc_init;
 
 [
@@ -32,4 +33,4 @@
     [["CargoNet_01_box_F", "Land_WoodenBox_02_F"], [LSTRING(cargoNetType_modernStyle), LSTRING(cargoNetType_ww2)], 0],
     true,
     {[QGVAR(cargoNetType), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

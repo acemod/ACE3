@@ -303,6 +303,7 @@
             <French>Impossible de démarrer la pompe</French>
             <Czech>Nepodařilo se zapnout trysku</Czech>
             <Turkish>Yakıt pompası başlatılamadı</Turkish>
+            <Spanish>No se pudo activar la boquilla de la manguera</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -494,6 +495,7 @@
             <French>Volume de la citerne</French>
             <Czech>Objem palivové cisterny</Czech>
             <Turkish>Doldurma Hız</Turkish>
+            <Spanish>Volumen del depósito</Spanish>
         </Key>
         <!-- REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL are used here -->
         <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
@@ -509,6 +511,7 @@
             <Portuguese>Quantidade de combustível disponível para abastecer (-1 para desativar, -10 para infinito)</Portuguese>
             <French>Le volume de carburant disponible pour le ravitaillement (-1 pour désactiver, -10 pour quantité illimitée).</French>
             <Czech>Objem paliva k tankování (-1 pro vypnutí, -10 pro nekonečno)</Czech>
+            <Spanish>El volumen de combustible disponible para llenar (-1 desactivado, -10 es infinito)</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenName">
             <English>Refuel Hose attach coordinates</English>
@@ -523,6 +526,7 @@
             <Portuguese>Coords. do encaixe para Mangueira</Portuguese>
             <French>Coordonnées du pistolet</French>
             <Czech>Souřadnice pro připojení hadice na palivo</Czech>
+            <Spanish>Coordenadas de la boquilla de la manguera</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_hooks_edenDesc">
             <English>Model coordinates used to attach refuel hose</English>
@@ -537,6 +541,7 @@
             <Portuguese>As coordenadas do modelo usado para conectar a mangueira ao veículo</Portuguese>
             <French>Coordonnées du modèle 3D où est attaché le tuyau ravitaillement.</French>
             <Czech>Souřadnice na modelu pro připojení hadice na palivo.</Czech>
+            <Spanish>Coordenadas del modelo usado para la boquilla de la manguera</Spanish>
         </Key>
     </Package>
 </Project>

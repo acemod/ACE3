@@ -36,4 +36,4 @@ if (hasInterface) then {
         [ACE_player, "isPlayer"] call EFUNC(common,unmuteUnit);
     };
 }, true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
