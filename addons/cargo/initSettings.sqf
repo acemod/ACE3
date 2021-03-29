@@ -23,8 +23,7 @@
     [0, 10, 2.5, 1],
     true,
     {[QGVAR(paradropTimeCoefficent), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
-
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(cargoNetType), "LIST",
