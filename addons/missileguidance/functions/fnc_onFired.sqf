@@ -96,7 +96,7 @@ if (_seekLastTargetPos && {!isNil "_target"}) then {
 };
 
 private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
-private _pidData = [[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0]], [0, 1, 0], [_pitchYaw select 0, _pitchYaw select 1, 0]];
+private _pidData = [[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], 0], [_pitchYaw select 0, _pitchYaw select 1, 0]];
 
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
 private _args = [_this,
@@ -148,7 +148,7 @@ if (_onFiredFunc != "") then {
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
-[FUNC(guidancePFH),0, _args ] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(guidancePFH),0, _args ] call CBA_fnc_addPerFrameHandler;
 
 
 /* Clears locking settings

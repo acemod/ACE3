@@ -70,71 +70,45 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     private _integralGain = 0;
     private _derivativeGain = 0;
 
-    _pidData params ["_pid", "_lastTargetDetails", "_lastLineOfSight", "_currentPitchYawRoll"];
+    _pidData params ["_pid", "_lastMissileFrame", "_currentPitchYawRoll"];
     _currentPitchYawRoll params ["_pitch", "_yaw", "_roll"];
-    _lastTargetDetails params ["_lastTargetPosition", "_lastTargetVelocity"];
+    _lastMissileFrame params ["_lastTargetPosition", "_lastTargetVelocity", "_lastAngle"];
 
     private _navigationGain = 3;
-    private _targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / TIMESTEP_FACTOR);
-    private _targetAcceleration = (_targetVelocity vectorDiff _lastTargetVelocity) vectorMultiply (1 / TIMESTEP_FACTOR);
+    // integrate target velocity for realistic inference of velocity
+    private _targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / diag_deltaTime);
+    private _targetAcceleration = (_targetVelocity vectorDiff _lastTargetVelocity) vectorMultiply (1 / diag_deltaTime);
 
-    private _lineOfSight = _projectile vectorWorldToModelVisual vectorNormalized (_profileAdjustedTargetPos vectorDiff _projectilePos);
-    private _losNormal = [(_lineOfSight#2), -(_lineOfSight#0), 0];
+    private _currentLineOfSight = vectorNormalized (_profileAdjustedTargetPos vectorDiff _projectilePos);
+    private _targetVelocityAtPositon = _profileAdjustedTargetPos vectorAdd _targetVelocity;
+    private _lineOfSightAtPosition = _projectilePos vectorAdd _currentLineOfSight;
 
-    private _deltaLOS = _lineOfSight vectorDiff _lastLineOfSight;
-    private _rotationRate = vectorMagnitude _deltaLOS;
-    private _closingVelocity = -_rotationRate;
+    // get angle between LOS's
+    private _angleNow = acos (_targetVelocityAtPositon vectorCos _lineOfSightAtPosition);
+    private _losChange = (_angleNow - _lastAngle) / diag_deltaTime;
 
-    private _lateralAcceleration = _navigationGain * _rotationRate * _closingVelocity;
-    private _commandedAcceleration = _losNormal vectorMultiply _lateralAcceleration;
-    //_commandedAcceleration = _commandedAcceleration vectorAdd (_losNormal vectorMultiply (_navigationGain * 0.5 * TIMESTEP_FACTOR * (9.81 + 150)));
+    private _closingVelocity = (velocity _projectile) vectorDiff _targetVelocity;
 
-    //systemChat str vectorMagnitude _targetAcceleration;
-
-    TRACE_5("PN", CBA_missionTime, _lineOfSight, _lastLineOfSight, _rotationRate, _deltaLOS);
-
-    private _acceleration = [0, 0];
-    {
-        (_pid select _forEachIndex) params ["", "_lastDerivative", "_integral"];
-        // think about this in xz plane where x = yaw, z = pitch
-
-        private _commandedAccelerationAxis = _commandedAcceleration select _forEachIndex;
-
-        private _proportional = _commandedAccelerationAxis * _proportionalGain;
-
-        private _d0 = _commandedAccelerationAxis * _derivativeGain;
-        private _derivative = (_d0 - _lastDerivative) / TIMESTEP_FACTOR;
-
-        _integral = _integral + (_d0 * TIMESTEP_FACTOR * _integralGain);
-
-        private _pidSum = _proportional + _integral + _derivative;
-
-        (_pid select _forEachIndex) set [1, _d0];
-        (_pid select _forEachIndex) set [2, _integral];
-
-        _acceleration set [_forEachIndex, _pidSum];
-    } forEach _acceleration;
+    private _commandedAcceleration = _closingVelocity vectorMultiply (_navigationGain * _losChange);
+    _commandedAcceleration = _projectile vectorWorldToModelVisual _commandedAcceleration;
+    
+    private _relativeLOS = _projectile vectorWorldToModelVisual (_currentLineOfSight vectorCrossProduct velocity _projectile);
+    _commandedAcceleration = _relativeLOS vectorMultiply (vectorMagnitude _commandedAcceleration);
 
     #ifdef DRAW_GUIDANCE_INFO
-    TRACE_1("",_acceleration);
+    TRACE_1("",_commandedAcceleration);
     private _projectilePosAGL = ASLToAGL _projectilePos;
-    private _debugAcceleration = [_acceleration#0, 0, _acceleration#1];
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_lineOfSight vectorMultiply 15), [1, 0, 0, 1]];
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_lastLineOfSight vectorMultiply 5), [0, 1, 0, 1]];
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd ([_lineOfSight#2, -(_lineOfSight#0), 0] vectorMultiply 5), [0, 0, 1, 1]];
-
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], [0, 0, 4] vectorAdd ASLtoAGL _projectilePos, 0.75, 0.75, 0, str _rotationRate, 1, 0.025, "TahomaB"];
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], [0, 0, 3] vectorAdd ASLtoAGL _projectilePos, 0.75, 0.75, 0, str vectorMagnitude _targetAcceleration, 1, 0.025, "TahomaB"];
+    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd ((_projectile vectorModelToWorldVisual _relativeLOS) vectorMultiply 15), [1, 0, 0, 1]];
     #endif
 
     if (!isGamePaused && accTime > 0) then {
-        _acceleration params ["_pitchChange", "_yawChange"];
+        _commandedAcceleration params ["_pitchChange", "_yawChange"];
 
         private _clampedPitch = (-_pitchChange min _pitchDegreesPerSecond) max -_pitchDegreesPerSecond;
         private _clampedYaw = (_yawChange min _yawDegreesPerSecond) max -_yawDegreesPerSecond;
 
-        _pitch = _pitch + _clampedPitch * TIMESTEP_FACTOR;
-        _yaw = _yaw + _clampedYaw * TIMESTEP_FACTOR;
+        _pitch = _pitch + _clampedPitch * diag_deltaTime;
+        _yaw = _yaw + _clampedYaw * diag_deltaTime;
 
         [_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
 
@@ -144,10 +118,9 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
 
     _pidData set [0, _pid];
     if (accTime > 0) then {
-        _pidData set [1, [_seekerTargetPos, _targetVelocity]];
+        _pidData set [1, [_seekerTargetPos, _targetVelocity, _angleNow]];
     };
-    _pidData set [2, _lineOfSight];
-    _pidData set [3, _currentPitchYawRoll];
+    _pidData set [2, _currentPitchYawRoll];
     _stateParams set [4, _pidData];
     _args set [4, _stateParams];
 };
@@ -156,9 +129,11 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
 TRACE_3("",_projectilePos,_seekerTargetPos,_profileAdjustedTargetPos);
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
 
-private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
-_PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
-_PS setDropInterval 1.0;
+if (!isGamePaused && accTime > 0) then {
+    private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
+    _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
+    _PS setDropInterval 1.0;
+};
 #endif
 
 _stateParams set [0, diag_tickTime];
