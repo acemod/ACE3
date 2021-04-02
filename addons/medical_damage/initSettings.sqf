@@ -33,3 +33,12 @@
     [0, 1, 0.1, 2, true],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QEGVAR(medical,deathChance),
+    "SLIDER",
+    [LSTRING(deathChance_DisplayName), LSTRING(deathChance_Description)],
+    ELSTRING(medical,Category),
+    [0, 1, 0, 2, true],
+    true
+] call CBA_fnc_addSetting;

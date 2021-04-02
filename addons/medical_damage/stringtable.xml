@@ -697,5 +697,11 @@
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
             <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確立を設定します。</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
+            <English>Fatal Injury Death Chance</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
+            <English>The chance of dying to a fatal injury.</English>
+        </Key>
     </Package>
 </Project>
