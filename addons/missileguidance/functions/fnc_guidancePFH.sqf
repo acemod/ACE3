@@ -74,35 +74,43 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     _currentPitchYawRoll params ["_pitch", "_yaw", "_roll"];
     _lastMissileFrame params ["_lastTargetPosition", "_lastTargetVelocity", "_lastAngle"];
 
+    // Proportional navigation implemented via "Fundamentals of proportional navigation" by Stephen Murtaugh and Harry Criel
     private _navigationGain = 3;
     // integrate target velocity for realistic inference of velocity
     private _targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / diag_deltaTime);
     private _targetAcceleration = (_targetVelocity vectorDiff _lastTargetVelocity) vectorMultiply (1 / diag_deltaTime);
 
-    private _currentLineOfSight = vectorNormalized (_profileAdjustedTargetPos vectorDiff _projectilePos);
-    private _targetVelocityAtPositon = _profileAdjustedTargetPos vectorAdd _targetVelocity;
+    private _currentLineOfSight = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos);
+    private _targetVelocityAtPositon = _seekerTargetPos vectorAdd _targetVelocity;
     private _lineOfSightAtPosition = _projectilePos vectorAdd _currentLineOfSight;
-
     // get angle between LOS's
-    private _angleNow = acos (_targetVelocityAtPositon vectorCos _lineOfSightAtPosition);
+    private _angleNow = acos (1 min (_targetVelocityAtPositon vectorCos _lineOfSightAtPosition));
     private _losChange = (_angleNow - _lastAngle) / diag_deltaTime;
 
     private _closingVelocity = (velocity _projectile) vectorDiff _targetVelocity;
+    private _commandedAcceleration = vectorMagnitude (_closingVelocity vectorMultiply (_navigationGain * _losChange));
 
-    private _commandedAcceleration = _closingVelocity vectorMultiply (_navigationGain * _losChange);
-    _commandedAcceleration = _projectile vectorWorldToModelVisual _commandedAcceleration;
-    
-    private _relativeLOS = _projectile vectorWorldToModelVisual (_currentLineOfSight vectorCrossProduct velocity _projectile);
-    _commandedAcceleration = _relativeLOS vectorMultiply (vectorMagnitude _commandedAcceleration);
+    // commanded acceleration is normal to LOS   
+    private _relativeLOS = vectorNormalized (_projectile vectorWorldToModelVisual (_currentLineOfSight vectorCrossProduct velocity _projectile));
+    _commandedAcceleration = _relativeLOS vectorMultiply _commandedAcceleration;
 
     #ifdef DRAW_GUIDANCE_INFO
-    TRACE_1("",_commandedAcceleration);
+    TRACE_1("",_losChange);
     private _projectilePosAGL = ASLToAGL _projectilePos;
     drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd ((_projectile vectorModelToWorldVisual _relativeLOS) vectorMultiply 15), [1, 0, 0, 1]];
+    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_currentLineOfSight vectorMultiply 15), [0, 0, 1, 1]];
+    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd ((vectorNormalized velocity _projectile) vectorMultiply 15), [0, 1, 0, 1]];
+
+    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_projectile vectorModelToWorldVisual _commandedAcceleration), [1, 1, 0, 1]];
+
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 0.75], 0.75, 0.75, 0, str _losChange, 1, 0.025, "TahomaB"];
+
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL (_seekerTargetPos vectorAdd _targetVelocity), 0.75, 0.75, 0, "Predicted Position", 1, 0.025, "TahomaB"];
     #endif
 
     if (!isGamePaused && accTime > 0) then {
-        _commandedAcceleration params ["_pitchChange", "_yawChange"];
+        _commandedAcceleration params ["_pitchChange", "_yawChange", ""];
 
         private _clampedPitch = (-_pitchChange min _pitchDegreesPerSecond) max -_pitchDegreesPerSecond;
         private _clampedYaw = (_yawChange min _yawDegreesPerSecond) max -_yawDegreesPerSecond;
