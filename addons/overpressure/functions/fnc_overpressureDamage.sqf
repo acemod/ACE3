@@ -46,11 +46,12 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
         if (_angle < _overpressureAngle && {_distance < _overpressureRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
-
-            private _alpha = sqrt (1 - _distance / _overpressureRange);
-            private _beta = sqrt (1 - _angle / _overpressureAngle);
-
-            private _damage = _alpha * _beta * _overpressureDamage;
+            // Distance factor follow the curve that has slight plateau between 50% and 80%
+            private _distanceFactor = 1 - _distance / _overpressureRange;
+            private _distanceFactor1 = 0.65 * _distanceFactor^6;
+            private _distanceFactor2 = 0.35 * sqrt _distanceFactor;
+            private _angleFactor = sqrt (1 - _angle / _overpressureAngle);
+            private _damage = (_distanceFactor1 + _distanceFactor2) * _angleFactor * _overpressureDamage;
             TRACE_1("",_damage);
 
             // If the target is the ACE_player
