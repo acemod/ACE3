@@ -12,5 +12,5 @@
 }
 
 class CfgVehicles {
-
+	#include "CfgVehicles/units.hpp";
 };
