@@ -44,6 +44,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         [_onAttachText, 2] call EFUNC(common,displayTextStructured);
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
+    [QGVAR(attached), [_attachedItem, _itemClassname]] call CBA_fnc_localEvent;
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
