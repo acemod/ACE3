@@ -41,6 +41,13 @@ class CfgWeapons {
         GVAR(damage) = 0.7;
     };
 
+    class launch_MRAWS_base_F: Launcher_Base_F {
+        GVAR(priority) = 1;
+        GVAR(angle) = 70;
+        GVAR(range) = 15;
+        GVAR(damage) = 0.75;
+    };
+
     class CannonCore;
     class cannon_120mm: CannonCore {
         GVAR(priority) = 1;
