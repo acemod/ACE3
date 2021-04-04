@@ -12,5 +12,7 @@
 }
 
 class CfgVehicles {
+	#include "CfgVehicles/helicopters.hpp";
+	#include "CfgVehicles/planes.hpp";
 	#include "CfgVehicles/units.hpp";
 };
