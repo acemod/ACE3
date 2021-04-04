@@ -96,7 +96,7 @@ if (_seekLastTargetPos && {!isNil "_target"}) then {
 };
 
 private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
-private _pidData = [[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], 0], [_pitchYaw select 0, _pitchYaw select 1, 0]];
+private _pidData = [[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]], [_pitchYaw select 0, _pitchYaw select 1, 0]];
 
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
 private _args = [_this,

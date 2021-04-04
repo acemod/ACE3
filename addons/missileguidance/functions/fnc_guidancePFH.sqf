@@ -46,13 +46,13 @@ private _minDeflection = ((_flightParams select 0) - ((_flightParams select 0) *
 private _maxDeflection = (_flightParams select 1) * _adjustTime;
 // private _incDeflection = _flightParams select 2; // todo
 
-private _projectilePos = getPosASLVisual _projectile;
-
 // Run seeker function:
 private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState] call FUNC(doSeekerSearch);
 
 // Run attack profile function:
 private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams] call FUNC(doAttackProfile);
+
+private _projectilePos = getPosASLVisual _projectile;
 
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
@@ -70,9 +70,11 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     private _integralGain = 0;
     private _derivativeGain = 0;
 
+    private _projectileSpeed = vectorMagnitude velocity _projectile;
+
     _pidData params ["_pid", "_lastMissileFrame", "_currentPitchYawRoll"];
     _currentPitchYawRoll params ["_pitch", "_yaw", "_roll"];
-    _lastMissileFrame params ["_lastTargetPosition", "_lastTargetVelocity", "_lastAngle"];
+    _lastMissileFrame params ["_lastTargetPosition", "_lastTargetVelocity", "_lastAngles"];
 
     // Proportional navigation implemented via "Fundamentals of proportional navigation" by Stephen Murtaugh and Harry Criel
     private _navigationGain = 3;
@@ -80,44 +82,47 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     private _targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / diag_deltaTime);
     private _targetAcceleration = (_targetVelocity vectorDiff _lastTargetVelocity) vectorMultiply (1 / diag_deltaTime);
 
-    private _currentLineOfSight = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos);
-    private _targetVelocityAtPositon = _seekerTargetPos vectorAdd _targetVelocity;
-    private _lineOfSightAtPosition = _projectilePos vectorAdd _currentLineOfSight;
-    // get angle between LOS's
-    private _angleNow = acos (1 min (_targetVelocityAtPositon vectorCos _lineOfSightAtPosition));
-    private _losChange = (_angleNow - _lastAngle) / diag_deltaTime;
+    private _lineOfSight = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos);
 
-    private _closingVelocity = (velocity _projectile) vectorDiff _targetVelocity;
-    private _commandedAcceleration = vectorMagnitude (_closingVelocity vectorMultiply (_navigationGain * _losChange));
+    _lastAngles params ["_lastAngleXY", "_lastAngleYZ", "_lastAngleXZ"];
+    // solve for xy frame
+    private _angleXY = (_lineOfSight#0) atan2 (_lineOfSight#1);
+    private _deltaAngleXY = (_angleXY - _lastAngleXY) / TIMESTEP_FACTOR;
+    private _commandedAccelerationX = _navigationGain * _deltaAngleXY * _projectileSpeed;
 
-    // commanded acceleration is normal to LOS   
-    private _relativeLOS = vectorNormalized (_projectile vectorWorldToModelVisual (_currentLineOfSight vectorCrossProduct velocity _projectile));
-    _commandedAcceleration = _relativeLOS vectorMultiply _commandedAcceleration;
+    // solve for xz frame
+    private _angleXZ = (_lineOfSight#0) atan2 (_lineOfSight#2);
+    private _deltaAngleXZ = (_angleXZ - _lastAngleXZ) / TIMESTEP_FACTOR;
+    private _commandedAccelerationY = _navigationGain * _deltaAngleXZ * _projectileSpeed;
+
+    // solve for yz frame
+    private _angleYZ = (_lineOfSight#1) atan2 (_lineOfSight#2);
+    private _deltaAngleYZ = (_angleYZ - _lastAngleYZ) / TIMESTEP_FACTOR;
+    private _commandedAccelerationZ = _navigationGain * _deltaAngleYZ * _projectileSpeed;
+
+    private _commandedAcceleration = _projectile vectorWorldToModelVisual [_commandedAccelerationX, _commandedAccelerationY, _commandedAccelerationZ];
+    
+    systemChat str [_deltaAngleXY, _deltaAngleXZ, _deltaAngleYZ];
 
     #ifdef DRAW_GUIDANCE_INFO
-    TRACE_1("",_losChange);
     private _projectilePosAGL = ASLToAGL _projectilePos;
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd ((_projectile vectorModelToWorldVisual _relativeLOS) vectorMultiply 15), [1, 0, 0, 1]];
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_currentLineOfSight vectorMultiply 15), [0, 0, 1, 1]];
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd ((vectorNormalized velocity _projectile) vectorMultiply 15), [0, 1, 0, 1]];
-
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_projectile vectorModelToWorldVisual _commandedAcceleration), [1, 1, 0, 1]];
-
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 0.75], 0.75, 0.75, 0, str _losChange, 1, 0.025, "TahomaB"];
-
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL (_seekerTargetPos vectorAdd _targetVelocity), 0.75, 0.75, 0, "Predicted Position", 1, 0.025, "TahomaB"];
+
+    private _seekerPosAGL = ASLToAGL _seekerTargetPos;
+    drawLine3D [_seekerPosAGL, _seekerPosAGL vectorAdd _targetVelocity, [0, 1, 1, 1]];
+    drawLine3D [_seekerPosAGL, _seekerPosAGL vectorAdd (_projectilePos vectorDiff _seekerTargetPos), [0, 1, 1, 1]];
     #endif
 
     if (!isGamePaused && accTime > 0) then {
-        _commandedAcceleration params ["_pitchChange", "_yawChange", ""];
-
-        private _clampedPitch = (-_pitchChange min _pitchDegreesPerSecond) max -_pitchDegreesPerSecond;
-        private _clampedYaw = (_yawChange min _yawDegreesPerSecond) max -_yawDegreesPerSecond;
+        _commandedAcceleration params ["_yawChange", "", "_pitchChange"];
+        
+        private _clampedPitch = (_pitchChange min _pitchDegreesPerSecond) max -_pitchDegreesPerSecond;
+        private _clampedYaw = (-_yawChange min _yawDegreesPerSecond) max -_yawDegreesPerSecond;
 
         _pitch = _pitch + _clampedPitch * diag_deltaTime;
         _yaw = _yaw + _clampedYaw * diag_deltaTime;
-
+        
         [_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
 
         _currentPitchYawRoll set [0, _pitch];
@@ -126,7 +131,7 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
 
     _pidData set [0, _pid];
     if (accTime > 0) then {
-        _pidData set [1, [_seekerTargetPos, _targetVelocity, _angleNow]];
+        _pidData set [1, [_seekerTargetPos, _targetVelocity, [_angleXY, _angleYZ, _angleXZ]]];
     };
     _pidData set [2, _currentPitchYawRoll];
     _stateParams set [4, _pidData];
