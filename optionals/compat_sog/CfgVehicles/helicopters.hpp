@@ -26,6 +26,11 @@ class vn_air_ch34_01_base: vn_helicopter_base {
     EGVAR(refuel,fuelCapacity) = 962;
 };
 
+// OH-6 - https://en.wikipedia.org/wiki/MD_Helicopters_MH-6_Little_Bird
+class vn_air_oh6a_base: vn_helicopter_base {
+    EGVAR(refuel,fuelCapacity) = 242;
+};
+
 // AH-1G - http://all-aero.com/index.php/35-helicopters/copters/1479-bell-209-ah-1-249
 class vn_air_ah1g_01_base: vn_helicopter_base {
     EGVAR(refuel,fuelCapacity) = 980;
