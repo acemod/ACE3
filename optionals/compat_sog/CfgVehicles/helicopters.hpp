@@ -40,7 +40,3 @@ class vn_air_ah1g_01_base: vn_helicopter_base {
 class vn_air_mi2_base: vn_helicopter_base {
     EGVAR(refuel,fuelCapacity) = 600;
 };
-// Mi-2 with external fuel tanks - https://fas.org/man/dod-101/sys/ac/row/mi-2.htm
-class vn_air_mi2_03_01_base: vn_air_mi2_01_base {
-    EGVAR(refuel,fuelCapacity) = 1076;
-};
