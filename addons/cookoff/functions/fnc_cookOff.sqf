@@ -18,6 +18,9 @@
 
 params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false], ["_fireSource", ""], ["_canRing", true]];
 
+if (GVAR(enable) == 0) exitWith {};
+if !(GVAR(enableFire)) exitWith {};
+
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _vehicle setVariable [QGVAR(isCookingOff), true, true];
 

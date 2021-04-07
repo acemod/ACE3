@@ -30,6 +30,9 @@
         };
 
         // blow off turret effect
+        /*
+        Disabled temporarily due to issues with being able to repair tanks after death. Needs work
+        */
         /*["Tank", "killed", {
             if (random 1 < 0.15) then {
                 (_this select 0) call FUNC(blowOffTurret);
