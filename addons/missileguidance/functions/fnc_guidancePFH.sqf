@@ -70,11 +70,12 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     private _integralGain = 0;
     private _derivativeGain = 0;
 
-    private _projectileSpeed = vectorMagnitude velocity _projectile;
+    private _projectileVelocity = velocity _projectile;
+    private _projectileSpeed = vectorMagnitude _projectileVelocity;
 
     _pidData params ["_pid", "_lastMissileFrame", "_currentPitchYawRoll"];
     _currentPitchYawRoll params ["_pitch", "_yaw", "_roll"];
-    _lastMissileFrame params ["_lastTargetPosition", "_lastTargetVelocity", "_lastAngles"];
+    _lastMissileFrame params ["_lastTargetPosition", "_lastTargetVelocity", "_lastLineOfSight"];
 
     // Proportional navigation implemented via "Fundamentals of proportional navigation" by Stephen Murtaugh and Harry Criel
     private _navigationGain = 3;
@@ -82,32 +83,35 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     private _targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / diag_deltaTime);
     private _targetAcceleration = (_targetVelocity vectorDiff _lastTargetVelocity) vectorMultiply (1 / diag_deltaTime);
 
-    private _lineOfSight = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos);
+    private _lineOfSight = vectorNormalized (_profileAdjustedTargetPos vectorDiff _projectilePos);
 
-    _lastAngles params ["_lastAngleXY", "_lastAngleYZ", "_lastAngleXZ"];
-    // solve for xy frame
-    private _angleXY = (_lineOfSight#0) atan2 (_lineOfSight#1);
-    private _deltaAngleXY = (_angleXY - _lastAngleXY) / TIMESTEP_FACTOR;
-    private _commandedAccelerationX = _navigationGain * _deltaAngleXY * _projectileSpeed;
+    private _losDelta = _lineOfSight vectorDiff _lastLineOfSight;
+    private _losRate = (vectorMagnitude _losDelta) / TIMESTEP_FACTOR;
 
-    // solve for xz frame
-    private _angleXZ = (_lineOfSight#0) atan2 (_lineOfSight#2);
-    private _deltaAngleXZ = (_angleXZ - _lastAngleXZ) / TIMESTEP_FACTOR;
-    private _commandedAccelerationY = _navigationGain * _deltaAngleXZ * _projectileSpeed;
+    private _closingVelocity = vectorMagnitude (_projectileVelocity vectorDiff _targetVelocity);
 
-    // solve for yz frame
-    private _angleYZ = (_lineOfSight#1) atan2 (_lineOfSight#2);
-    private _deltaAngleYZ = (_angleYZ - _lastAngleYZ) / TIMESTEP_FACTOR;
-    private _commandedAccelerationZ = _navigationGain * _deltaAngleYZ * _projectileSpeed;
+    private _lateralAcceleration = (_navigationGain * _losRate * _closingVelocity * 10000000);
+    private _commandedAcceleration = (_projectile vectorWorldToModelVisual _lineOfSight) vectorMultiply _lateralAcceleration;
 
-    private _commandedAcceleration = _projectile vectorWorldToModelVisual [_commandedAccelerationX, _commandedAccelerationY, _commandedAccelerationZ];
-    
-    systemChat str [_deltaAngleXY, _deltaAngleXZ, _deltaAngleYZ];
+    private _normalA = ((vectorDirVisual _projectile) vectorCrossProduct _lineOfSight);
+    private _b = ((vectorUpVisual _projectile) vectorCrossProduct _lineOfSight);
+    private _normalAMagnitude = vectorMagnitude _normalA;
+
+    private _t = _normalA vectorDotProduct _b;
+
+    private _normalASign = _t / abs _t;
+
+    private _normalB = (vectorUpVisual _projectile) vectorMultiply (-_normalASign * _normalAMagnitude);
+
+    _commandedAcceleration set [2, _lateralAcceleration * (_normalB#2)];
 
     #ifdef DRAW_GUIDANCE_INFO
     private _projectilePosAGL = ASLToAGL _projectilePos;
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL (_seekerTargetPos vectorAdd _targetVelocity), 0.75, 0.75, 0, "Predicted Position", 1, 0.025, "TahomaB"];
+
+    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_normalA vectorMultiply 15), [1, 0, 1, 1]];
+    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_normalB vectorMultiply 15), [0, 1, 1, 1]];
 
     private _seekerPosAGL = ASLToAGL _seekerTargetPos;
     drawLine3D [_seekerPosAGL, _seekerPosAGL vectorAdd _targetVelocity, [0, 1, 1, 1]];
@@ -118,12 +122,13 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
         _commandedAcceleration params ["_yawChange", "", "_pitchChange"];
         
         private _clampedPitch = (_pitchChange min _pitchDegreesPerSecond) max -_pitchDegreesPerSecond;
-        private _clampedYaw = (-_yawChange min _yawDegreesPerSecond) max -_yawDegreesPerSecond;
+        private _clampedYaw = (_yawChange min _yawDegreesPerSecond) max -_yawDegreesPerSecond;
 
         _pitch = _pitch + _clampedPitch * diag_deltaTime;
         _yaw = _yaw + _clampedYaw * diag_deltaTime;
         
         [_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
+        _projectile setVelocityModelSpace [0, _projectileSpeed, 0];
 
         _currentPitchYawRoll set [0, _pitch];
         _currentPitchYawRoll set [1, _yaw];
@@ -131,7 +136,7 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
 
     _pidData set [0, _pid];
     if (accTime > 0) then {
-        _pidData set [1, [_seekerTargetPos, _targetVelocity, [_angleXY, _angleYZ, _angleXZ]]];
+        _pidData set [1, [_seekerTargetPos, _targetVelocity, _lineOfSight]];
     };
     _pidData set [2, _currentPitchYawRoll];
     _stateParams set [4, _pidData];
