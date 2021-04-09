@@ -37,20 +37,20 @@ private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 4; // 4 meters beh
 TRACE_1("",_distBehind);
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
-
+private _dropVelocity = ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 private _itemObject = if (_item isEqualType objNull) then {
     detach _item;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_item, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
+    [QGVAR(serverParadrop), [_item, _posBehindVehicleAGL,_dropVelocity]] call CBA_fnc_serverEvent;
     _item
 } else {
     private _newItem = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
     _newItem setPosASL (AGLtoASL _posBehindVehicleAGL);
+    _newItem setVelocity _dropVelocity;
     _newItem
 };
 
-_itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 
 // open parachute and ir light effect
 [{

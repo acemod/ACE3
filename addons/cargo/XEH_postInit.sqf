@@ -54,6 +54,21 @@
     [_item, "blockDamage", "ACE_cargo", false] call EFUNC(common,statusEffect_set);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(ownerParadrop), {
+    params ["_item","_dropVelocity"];
+    
+    _item setVelocity _dropVelocity;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(serverParadrop), {
+    params ["_item", "_emptyPosAGL","_dropVelocity"];
+
+    _item hideObjectGlobal false;
+    _item setPosASL (AGLtoASL _emptyPosAGL);
+    [QGVAR(ownerParadrop), [_item,_dropVelocity],owner _item] call CBA_fnc_ownerEvent;
+    [_item, "blockDamage", "ACE_cargo", false] call EFUNC(common,statusEffect_set);
+}] call CBA_fnc_addEventHandler;
+
 // Private events to handle adding actions globally via public functions
 [QGVAR(initObject), DFUNC(initObject)] call CBA_fnc_addEventHandler;
 [QGVAR(initVehicle), DFUNC(initVehicle)] call CBA_fnc_addEventHandler;
