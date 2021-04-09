@@ -107,6 +107,6 @@ if (_showHint) then {
 };
 
 // Invoke listenable event
-["ace_cargoUnloaded", [_item, _vehicle, "paradrop"]] call CBA_fnc_globalEvent;
+["ace_cargoUnloaded", [_itemObject, _vehicle, "paradrop"]] call CBA_fnc_globalEvent;
 
 true
