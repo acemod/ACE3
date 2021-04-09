@@ -38,7 +38,7 @@ TRACE_1("",_distBehind);
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
 
-private _object=_item;
+private _object = _item;
 if (_item isEqualType objNull) then {
     detach _item;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
