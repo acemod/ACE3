@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {""};
+        requiredAddons[] = {"vn_weapons"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"BaerMitUmlaut", "veteran29"};
         url = ECSTRING(main,URL);
@@ -14,6 +14,7 @@ class CfgPatches {
     };
 };
 
+#include "ACE_CSW_Groups.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgGlasses.hpp"
