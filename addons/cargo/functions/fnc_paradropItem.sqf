@@ -48,8 +48,9 @@ if (_item isEqualType objNull) then {
     _object = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
     _object setPosASL (AGLtoASL _posBehindVehicleAGL);
 };
+private _velocity = ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
+[QEGVAR(common,setVelocity), [_itemObject, _velocity],_item] call CBA_fnc_targetEvent;
 
-_object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 
 // open parachute and ir light effect
 [{
