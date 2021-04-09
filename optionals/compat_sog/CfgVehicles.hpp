@@ -15,6 +15,7 @@ class CfgVehicles {
 	#include "CfgVehicles\helicopters.hpp"
 	#include "CfgVehicles\planes.hpp"
 	#include "CfgVehicles\tracked.hpp"
+	#include "CfgVehicles\turrets.hpp"
 	#include "CfgVehicles\units.hpp"
 	#include "CfgVehicles\wheeled.hpp"
 };
