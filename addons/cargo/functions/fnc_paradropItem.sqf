@@ -38,19 +38,18 @@ TRACE_1("",_distBehind);
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
 
-private _itemObject = if (_item isEqualType objNull) then {
+private _object=_item;
+if (_item isEqualType objNull) then {
     detach _item;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
     [QGVAR(serverUnload), [_item, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
-    _item
 } else {
-    private _newItem = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
-    _newItem setPosASL (AGLtoASL _posBehindVehicleAGL);
-    _newItem
+    _object = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
+    _object setPosASL (AGLtoASL _posBehindVehicleAGL);
 };
 
-_itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
+_object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 
 // open parachute and ir light effect
 [{
@@ -74,7 +73,7 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
         _light attachTo [_item, [0,0,0]];
     };
 
-}, [_itemObject], 0.7] call CBA_fnc_waitAndExecute;
+}, [_object], 0.7] call CBA_fnc_waitAndExecute;
 
 // smoke effect when crate landed
 [{
@@ -93,7 +92,7 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-}, 1, [_itemObject]] call CBA_fnc_addPerFrameHandler;
+}, 1, [_object]] call CBA_fnc_addPerFrameHandler;
 
 if (_showHint) then {
     [
@@ -107,6 +106,6 @@ if (_showHint) then {
 };
 
 // Invoke listenable event
-["ace_cargoUnloaded", [_itemObject, _vehicle, "paradrop"]] call CBA_fnc_globalEvent;
+["ace_cargoUnloaded", [_object, _vehicle, "paradrop"]] call CBA_fnc_globalEvent;
 
 true
