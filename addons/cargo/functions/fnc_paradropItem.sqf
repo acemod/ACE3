@@ -51,6 +51,7 @@ if (_item isEqualType objNull) then {
 
 _object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 
+
 // open parachute and ir light effect
 [{
     params ["_item"];
