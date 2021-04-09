@@ -52,6 +52,7 @@ private _velocity = ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir
 [QEGVAR(common,setVelocity), [_itemObject, _velocity],_item] call CBA_fnc_targetEvent;
 
 
+
 // open parachute and ir light effect
 [{
     params ["_item"];
