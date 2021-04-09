@@ -194,7 +194,6 @@ class vn_static_dshkm_low_02_base: vn_static_dshkm_low_01_base {
 };
 
 // RPD - High
-class vn_static_dp28_high_base: vn_static_m2_high_base {};
 class vn_static_rpd_high_base: vn_static_dp28_high_base {
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
@@ -244,5 +243,58 @@ class vn_static_pk_low_base: vn_static_pk_high_base {
 
     class ACE_CSW: ACE_CSW {
         disassembleTurret = QEGVAR(csw,m3TripodLow);
+    };
+};
+
+// M29 Mortar
+class StaticMortar: StaticWeapon {};
+class Mortar_01_base_F: StaticMortar {};
+class vn_static_mortar_m29_base: Mortar_01_base_F {
+    EGVAR(draggin,canCarry) = 0;
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "";
+            selection = "otochlaven";
+        };
+    };
+
+    class ACE_CSW {
+        enabled = 1;
+        proxyWeapon = QGVAR(vn_mortar_m29);
+        magazineLocation = "_target selectionPosition 'pohon'";
+        disassembleWeapon = QGVAR(mortar_m29_carry);
+        disassembleTurret = QEGVAR(csw,mortarBaseplate);
+        ammoLoadTime = 3;
+        ammoUnloadTime = 3;
+        desiredAmmo = 1;
+    };
+};
+
+// M2 / Type 63 Mortar
+class vn_static_mortar_m2_base: vn_static_mortar_m29_base {
+    class ACE_CSW: ACE_CSW {
+        enabled = 1;
+        proxyWeapon = QGVAR(vn_mortar_m2);
+        magazineLocation = "_target selectionPosition 'pohon'";
+        disassembleWeapon = QGVAR(mortar_m2_carry);
+        disassembleTurret = QEGVAR(csw,mortarBaseplate);
+        ammoLoadTime = 3;
+        ammoUnloadTime = 3;
+        desiredAmmo = 1;
+    };
+};
+
+// Type 53 Mortar
+class vn_static_mortar_type53_base: vn_static_mortar_m29_base {
+    class ACE_CSW: ACE_CSW {
+        enabled = 1;
+        proxyWeapon = QGVAR(vn_mortar_type53);
+        magazineLocation = "_target selectionPosition 'pohon'";
+        disassembleWeapon = QGVAR(mortar_type53_carry);
+        disassembleTurret = QEGVAR(csw,mortarBaseplate);
+        ammoLoadTime = 3;
+        ammoUnloadTime = 3;
+        desiredAmmo = 1;
     };
 };

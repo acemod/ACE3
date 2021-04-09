@@ -32,3 +32,93 @@ class GVAR(dshkm_50): vn_dshkm_v_50_mag {
     model = "\vn\objects_f_vietnam\supply\a2_ammo\pavn\vn_pavn_50_can.p3d";
     ACE_isBelt = 1;
 };
+
+class vn_mortar_m29_mag_he_x8;
+class GVAR(81mm_he): vn_mortar_m29_mag_he_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_he.p3d);
+    mass = 91;
+};
+
+class vn_mortar_m29_mag_wp_x8;
+class GVAR(81mm_wp): vn_mortar_m29_mag_wp_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_he.p3d);
+    mass = 91;
+};
+
+class vn_mortar_m29_mag_chem_x8;
+class GVAR(81mm_chem): vn_mortar_m29_mag_chem_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_smk_white.p3d);
+    mass = 91;
+};
+
+class vn_mortar_m29_mag_lume_x8;
+class GVAR(81mm_lume): vn_mortar_m29_mag_lume_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_illum.p3d);
+    mass = 91;
+};
+
+class vn_mortar_m2_mag_he_x8;
+class GVAR(60mm_he): vn_mortar_m2_mag_he_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_he.p3d);
+    mass = 37;
+};
+
+class vn_mortar_m2_mag_wp_x8;
+class GVAR(60mm_wp): vn_mortar_m2_mag_wp_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_he.p3d);
+    mass = 37;
+};
+
+class vn_mortar_m2_mag_lume_x8;
+class GVAR(60mm_lume): vn_mortar_m2_mag_lume_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_illum.p3d);
+    mass = 37;
+};
+
+class vn_mortar_type53_mag_he_x8;
+class GVAR(82mm_he): vn_mortar_type53_mag_he_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_he.p3d);
+    mass = 70;
+};
+
+class vn_mortar_type53_mag_wp_x8;
+class GVAR(82mm_wp): vn_mortar_type53_mag_wp_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_he.p3d);
+    mass = 70;
+};
+
+class vn_mortar_type53_mag_lume_x8;
+class GVAR(82mm_lume): vn_mortar_type53_mag_lume_x8 {
+    scope = 2;
+    type = 256;
+    count = 1;
+    model = QPATHTOEF(mk6mortar,data\l16_ammo_illum.p3d);
+    mass = 70;
+};

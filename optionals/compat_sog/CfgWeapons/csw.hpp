@@ -7,6 +7,9 @@ CREATE_CSW_PROXY(vn_missile_tow_launcher);
 CREATE_CSW_PROXY(vn_dshkm_v_01);
 CREATE_CSW_PROXY(vn_rpd_v_01);
 CREATE_CSW_PROXY(vn_pk_v_01);
+CREATE_CSW_PROXY(vn_mortar_m29);
+CREATE_CSW_PROXY(vn_mortar_m2);
+CREATE_CSW_PROXY(vn_mortar_type53);
 
 class Launcher;
 class Launcher_Base_F: Launcher {
@@ -271,5 +274,83 @@ class GVAR(pk_carry): Launcher_Base_F {
             iconScale = 0.1;
         };
         mass = 198;
+    };
+};
+
+class GVAR(mortar_m29_carry): Launcher_Base_F {
+    displayName = ECSTRING(csw,dshk_gun);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 20;
+        pickupTime = 25;
+
+        class assembleTo {
+            EGVAR(csw,mortarBaseplate) = "vn_b_army_static_mortar_m29";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 730;
+    };
+};
+
+class GVAR(mortar_m2_carry): Launcher_Base_F {
+    displayName = ECSTRING(csw,dshk_gun);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 20;
+        pickupTime = 25;
+
+        class assembleTo {
+            EGVAR(csw,mortarBaseplate) = "vn_b_army_static_mortar_m2";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 300;
+    };
+};
+
+class GVAR(mortar_type53_carry): Launcher_Base_F {
+    displayName = ECSTRING(csw,dshk_gun);
+    author = ECSTRING(common,ACETeam);
+    scope = 2;
+    model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
+    modes[] = {};
+    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+
+    class ACE_CSW {
+        type = "weapon";
+        deployTime = 20;
+        pickupTime = 25;
+
+        class assembleTo {
+            EGVAR(csw,mortarBaseplate) = "vn_o_nva_static_mortar_type53";
+        };
+    };
+
+    class WeaponSlotsInfo: WeaponSlotsInfo {
+        class MuzzleSlot {
+            iconScale = 0.1;
+        };
+        mass = 860;
     };
 };

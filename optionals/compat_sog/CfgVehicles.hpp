@@ -12,6 +12,7 @@
 }
 
 class CfgVehicles {
+	#include "CfgVehicles\boxes.hpp"
 	#include "CfgVehicles\helicopters.hpp"
 	#include "CfgVehicles\planes.hpp"
 	#include "CfgVehicles\tracked.hpp"
