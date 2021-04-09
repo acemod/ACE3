@@ -98,7 +98,7 @@ if (_showHint) then {
     [
         [
             LSTRING(UnloadedItem),
-            getText (configOf _itemObject >> "displayName"),
+            getText (configOf _object >> "displayName"),
             getText (configOf _vehicle >> "displayName")
         ],
         3
