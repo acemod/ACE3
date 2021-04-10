@@ -29,6 +29,9 @@ PREP(attackProfile_BEAM);
 PREP(attackProfile_JAV_DIR);
 PREP(attackProfile_JAV_TOP);
 
+// Navigation Profiles
+PREP(navigationType_proNav);
+
 // Seeker search functions
 PREP(seekerType_SALH);
 PREP(seekerType_Optic);
@@ -41,3 +44,6 @@ PREP(wire_onFired);
 // Seeker OnFired
 PREP(SACLOS_onFired);
 PREP(ahr_onFired);
+
+// Navigation OnFired
+PREP(proNav_onFired);

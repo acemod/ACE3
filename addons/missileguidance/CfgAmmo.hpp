@@ -69,9 +69,8 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
 
-            minDeflection = 0.00005;      // Minium flap deflection for guidance
-            maxDeflection = 0.025;       // Maximum flap deflection for guidance
-            incDeflection = 0.00005;      // The incrmeent in which deflection adjusts.
+            pitchRate = 40; // degrees per second
+            yawRate = 40;
 
             canVanillaLock = 0;
 
@@ -81,6 +80,11 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
+            
+            defaultNavigationType = "ProportionalNavigation";
+            navigationTypes[] = { "ProportionalNavigation" };
+
+            navigationGain = 3;
 
             seekerAngle = 180;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier

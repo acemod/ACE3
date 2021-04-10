@@ -91,3 +91,12 @@ class GVAR(SeekerTypes) {
         onFired = QFUNC(ahr_onFired);
     };
 };
+
+class GVAR(NavigationTypes) {
+    class ProportionalNavigation {
+        name = "Proportional Navigation";
+        
+        functionName = QFUNC(navigationType_proNav);
+        onFired = QFUNC(proNav_onFired);
+    };
+};

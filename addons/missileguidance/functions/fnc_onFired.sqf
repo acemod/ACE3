@@ -44,6 +44,7 @@ private _target = _shooter getVariable [QGVAR(target), nil];
 private _targetPos = _shooter getVariable [QGVAR(targetPosition), nil];
 private _seekerType = _shooter getVariable [QGVAR(seekerType), nil];
 private _attackProfile = _shooter getVariable [QGVAR(attackProfile), nil];
+private _navigationType = _shooter getVariable [QGVAR(navigationType), nil];
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "useModeForAttackProfile")) == 1) then {
     _attackProfile = getText (configFile >> "CfgWeapons" >> _weapon >> _mode >> QGVAR(attackProfile))
 };
@@ -52,7 +53,7 @@ private _lockMode = _shooter getVariable [QGVAR(lockMode), nil];
 private _laserCode = _shooter getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
 private _laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
 
-TRACE_6("getVars",_target,_targetPos,_seekerType,_attackProfile,_lockMode,_laserCode);
+TRACE_7("getVars",_target,_targetPos,_seekerType,_attackProfile,_lockMode,_laserCode,_navigationType);
 
 private _launchPos = getPosASL (vehicle _shooter);
 
@@ -65,6 +66,9 @@ if (isNil "_attackProfile" || {!(_attackProfile in (getArray (_config >> "attack
 if (isNil "_lockMode" || {!(_lockMode in (getArray (_config >> "seekerLockModes")))}) then {
     _lockMode = getText (_config >> "defaultSeekerLockMode");
 };
+if (isNil "_navigationType" || {!(_navigationType in (getArray (_config >> "navigationTypes")))}) then {
+    _navigationType = getText (_config >> "defaultNavigationType");
+};
 
 // If we didn't get a target, try to fall back on tab locking
 if (isNil "_target") then {
@@ -76,7 +80,7 @@ if (isNil "_target") then {
         private _canUseLock = getNumber (_config >> "canVanillaLock");
         // @TODO: Get vanilla target
         if (_canUseLock > 0 || difficulty < 1) then {
-            private _vanillaTarget = cursorTarget;
+            private _vanillaTarget = missileTarget _projectile;
 
             TRACE_1("Using Vanilla Locking", _vanillaTarget);
             if (!isNil "_vanillaTarget") then {
@@ -95,22 +99,23 @@ if (_seekLastTargetPos && {!isNil "_target"}) then {
     _lastKnownPosState set [1, [0,0,0]];
 };
 
-private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
-private _pidData = [[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]], [_pitchYaw select 0, _pitchYaw select 1, 0]];
+private _navigationParameters = [
+    // set up in navigation type onFired function
+];
 
-TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
+TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
 private _args = [_this,
             [   _shooter,
                 [_target, _targetPos, _launchPos],
                 _seekerType,
                 _attackProfile,
                 _lockMode,
-                _laserInfo
+                _laserInfo,
+                _navigationType
             ],
             [
-                getNumber ( _config >> "minDeflection" ),
-                getNumber ( _config >> "maxDeflection" ),
-                getNumber ( _config >> "incDeflection" )
+                getNumber ( _config >> "pitchRate" ),
+                getNumber ( _config >> "yawRate" )
             ],
             [
                 getNumber ( _config >> "seekerAngle" ),
@@ -118,7 +123,7 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState, _pidData]
+            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
@@ -128,6 +133,12 @@ if (_onFiredFunc != "") then {
 };
 
 _onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
+TRACE_1("",_onFiredFunc);
+if (_onFiredFunc != "") then {
+    _args call (missionNamespace getVariable _onFiredFunc);
+};
+
+_onFiredFunc = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "onFired");
 TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
@@ -143,9 +154,9 @@ if (_onFiredFunc != "") then {
 // Reverse:
 //  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];
-//      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo"];
+//      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];
 //          _targetLaunchParams params ["_target", "_targetPos", "_launchPos"];
-//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
+//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState","_navigationParams"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
 [LINKFUNC(guidancePFH),0, _args ] call CBA_fnc_addPerFrameHandler;
