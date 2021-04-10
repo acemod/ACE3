@@ -83,35 +83,26 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     private _targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / diag_deltaTime);
     private _targetAcceleration = (_targetVelocity vectorDiff _lastTargetVelocity) vectorMultiply (1 / diag_deltaTime);
 
-    private _lineOfSight = vectorNormalized (_profileAdjustedTargetPos vectorDiff _projectilePos);
+    private _lineOfSight = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos);
 
     private _losDelta = _lineOfSight vectorDiff _lastLineOfSight;
     private _losRate = (vectorMagnitude _losDelta) / TIMESTEP_FACTOR;
 
-    private _closingVelocity = vectorMagnitude (_projectileVelocity vectorDiff _targetVelocity);
+    private _closingVelocity = _targetVelocity vectorDiff _projectileVelocity;
 
-    private _lateralAcceleration = (_navigationGain * _losRate * _closingVelocity * 10000000);
-    private _commandedAcceleration = (_projectile vectorWorldToModelVisual _lineOfSight) vectorMultiply _lateralAcceleration;
+    private _lateralAcceleration = (_navigationGain * _losRate * 10000000);
+    private _commandedAcceleration = _closingVelocity vectorMultiply _lateralAcceleration;
 
-    private _normalA = ((vectorDirVisual _projectile) vectorCrossProduct _lineOfSight);
-    private _b = ((vectorUpVisual _projectile) vectorCrossProduct _lineOfSight);
-    private _normalAMagnitude = vectorMagnitude _normalA;
-
-    private _t = _normalA vectorDotProduct _b;
-
-    private _normalASign = _t / abs _t;
-
-    private _normalB = (vectorUpVisual _projectile) vectorMultiply (-_normalASign * _normalAMagnitude);
-
-    _commandedAcceleration set [2, _lateralAcceleration * (_normalB#2)];
+    // we need acceleration normal to our LOS
+    private _commandedAccelerationProjected = _lineOfSight vectorMultiply (_commandedAcceleration vectorDotProduct _lineOfSight);
+    _commandedAcceleration = _commandedAcceleration vectorDiff _commandedAccelerationProjected;
 
     #ifdef DRAW_GUIDANCE_INFO
     private _projectilePosAGL = ASLToAGL _projectilePos;
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL (_seekerTargetPos vectorAdd _targetVelocity), 0.75, 0.75, 0, "Predicted Position", 1, 0.025, "TahomaB"];
 
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_normalA vectorMultiply 15), [1, 0, 1, 1]];
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd (_normalB vectorMultiply 15), [0, 1, 1, 1]];
+    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd _commandedAcceleration, [1, 0, 1, 1]];
 
     private _seekerPosAGL = ASLToAGL _seekerTargetPos;
     drawLine3D [_seekerPosAGL, _seekerPosAGL vectorAdd _targetVelocity, [0, 1, 1, 1]];
@@ -119,6 +110,7 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     #endif
 
     if (!isGamePaused && accTime > 0) then {
+        _commandedAcceleration = _projectile vectorWorldToModelVisual _commandedAcceleration;
         _commandedAcceleration params ["_yawChange", "", "_pitchChange"];
         
         private _clampedPitch = (_pitchChange min _pitchDegreesPerSecond) max -_pitchDegreesPerSecond;
