@@ -70,6 +70,11 @@ if (isNil "_navigationType" || {!(_navigationType in (getArray (_config >> "navi
     _navigationType = getText (_config >> "defaultNavigationType");
 };
 
+if (isNil "_navigationType") then {
+    // most missiles use ProNav by default
+    _navigationType = "ProportionalNavigation";
+};
+
 // If we didn't get a target, try to fall back on tab locking
 if (isNil "_target") then {
     if (!isPlayer _shooter) then {
