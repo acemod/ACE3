@@ -62,9 +62,9 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     // Simulate moving servos by moving in each DOF by a fixed amount per frame
     // Then setVectorDirAndUp to allow ARMA to translate the velocity to whatever PhysX says
 
-    private _rollDegreesPerSecond = 30;
-    private _yawDegreesPerSecond = 30;
-    private _pitchDegreesPerSecond = 30;
+    private _rollDegreesPerSecond = 60;
+    private _yawDegreesPerSecond = 60;
+    private _pitchDegreesPerSecond = 60;
 
     private _proportionalGain = 1;
     private _integralGain = 0;
@@ -83,14 +83,16 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     private _targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / diag_deltaTime);
     private _targetAcceleration = (_targetVelocity vectorDiff _lastTargetVelocity) vectorMultiply (1 / diag_deltaTime);
 
-    private _lineOfSight = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos);
-
-    private _losDelta = _lineOfSight vectorDiff _lastLineOfSight;
-    private _losRate = (vectorMagnitude _losDelta) / TIMESTEP_FACTOR;
-
     private _closingVelocity = _targetVelocity vectorDiff _projectileVelocity;
 
-    private _lateralAcceleration = (_navigationGain * _losRate * 10000000);
+    private _lineOfSight = vectorNormalized (_profileAdjustedTargetPos vectorDiff _projectilePos);
+
+    // the los rate is tiny, so we multiply by a constant of a power of ten to get more aggressive acceleration
+    // this is just due to how we measure our LOS delta, the vectors involved are _tiny_
+    private _losDelta = _lineOfSight vectorDiff _lastLineOfSight;
+    private _losRate = 1000 * (vectorMagnitude _losDelta) / TIMESTEP_FACTOR;
+
+    private _lateralAcceleration = (_navigationGain * _losRate);
     private _commandedAcceleration = _closingVelocity vectorMultiply _lateralAcceleration;
 
     // we need acceleration normal to our LOS
