@@ -18,7 +18,7 @@
  */
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
-_args params ["_firedEH", "_launchParams", "", "", "_stateParams"];
+_args params ["_firedEH", "_launchParams", "_flightParams", "", "_stateParams"];
 _stateParams params ["", "_seekerStateParams"];
 _launchParams params ["","_targetLaunchParams","_seekerType"];
 
@@ -29,69 +29,72 @@ _firedEH params ["","","","","","","_projectile"];
 if (_attackProfileStateParams isEqualTo []) then {
     _this call FUNC(getAttackProfileSettings);
 };
-_attackProfileStateParams params ["_attackStage", "_configLaunchHeightClear"];
-
+_attackProfileStateParams params ["_attackStage", "_configLaunchHeightClear", "_missileStateData"];
 
 private _projectilePos = getPosASL _projectile;
 private _distanceFromLaunch2d = _launchPos distance2d _projectilePos;
 private _heightAboveLaunch = (_projectilePos select 2) - (_launchPos select 2);
 
 // Add height depending on distance for compensate
-private _returnTargetPos = nil;
+private _returnTargetPos = _seekerTargetPos;
+
+private _closingRate = vectorMagnitude velocity _projectile;
+private _timeToGo = (_projectilePos distance2d _seekerTargetPos) / _closingRate;
+
+private _los = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos); 
+
+_flightParams params ["_pitchRate", "_yawRate"];
+
+private _angleToTarget = acos ((vectorDir _projectile) vectorCos _los);
+private _atMinRotationAngle = _angleToTarget >= (0.5 * _pitchRate * _timeToGo);
 
 switch (_attackStage) do {
     case STAGE_LAUNCH: { // Gain height quickly to pass terrain mask
-        _returnTargetPos = _projectilePos getPos [100, getDir _projectile];
-        _returnTargetPos set [2, (_projectilePos select 2) + 36.4]; // 100 and 36.4 gives a 20 deg angle
+        _missileStateData params ["_heightBeforeStateSwitch", "_initialDistanceToTarget"];
+        _returnTargetPos set [2, _heightBeforeStateSwitch + (_initialDistanceToTarget * sin 20)]; // 100 and 36.4 gives a 20 deg angle
 
         if (_heightAboveLaunch > _configLaunchHeightClear) then {
             _attackProfileStateParams set [0, STAGE_SEEK_CRUISE];
             TRACE_2("New Stage: STAGE_SEEK_CRUISE",_distanceFromLaunch2d,_heightAboveLaunch);
         };
+
+        if (_atMinRotationAngle) then {
+            _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
+            TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
+        };
     };
     case STAGE_SEEK_CRUISE: { // Slowly gain altitude while searching for target
+        _missileStateData params ["_heightBeforeStateSwitch", "_initialDistanceToTarget"];
         // Before 4000 cruise at 5.7 degrees up, then level out
-        private _cruiseHeight = linearConversion [3000, 5000, _distanceFromLaunch2d, 10, 0, true];
-
-        _returnTargetPos = _projectilePos getPos [100, getDir _projectile];
-        _returnTargetPos set [2, (_projectilePos select 2) + _cruiseHeight];
-
+        _returnTargetPos set [2, _heightBeforeStateSwitch + (_initialDistanceToTarget * sin 5.7)];
+        
         if (_seekerTargetPos isNotEqualTo [0,0,0]) then {
             _attackProfileStateParams set [0, STAGE_ATTACK_CRUISE];
+            
+            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2d _projectilePos]];
             TRACE_1("New Stage: STAGE_ATTACK_CRUISE",_distanceFromLaunch2d);
         };
     };
     case STAGE_ATTACK_CRUISE: {
+        _missileStateData params ["_heightBeforeStateSwitch", "_initialDistanceToTarget"];
+
         private _currentHeightOverTarget = (_projectilePos select 2) - (_seekerTargetPos select 2);
         private _distanceToTarget2d = _seekerTargetPos distance2d _projectilePos;
-        private _distToGoRatio = _distanceToTarget2d / (_launchPos distance2d _seekerTargetPos);
 
-        // arcing up at 7 degrees to start until 50% left, then smooth curve to a downward attack
-        private _gainSlope = linearConversion [0.5, 0.1, _distToGoRatio, 7, -7, true];
-        _returnTargetPos = +_seekerTargetPos;
-        _returnTargetPos set [2, ((_projectilePos select 2) + (_distanceToTarget2d * sin _gainSlope)) max (_seekerTargetPos select 2)];
+        _returnTargetPos set [2, _heightBeforeStateSwitch + (_initialDistanceToTarget * sin 7)];
 
-        if ((_distanceToTarget2d < 500) || {(_currentHeightOverTarget atan2 _distanceToTarget2d) > 15}) then { // Wait until we can come down at a sharp angle
+        // if we are at the rotation limit, rotate to target
+        if (_atMinRotationAngle || {(_currentHeightOverTarget atan2 _distanceToTarget2d) > 15}) then { // Wait until we can come down at a sharp angle
             _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
             TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
         };
     };
     case STAGE_ATTACK_TERMINAL: {
-        private _distanceToTarget2d = _seekerTargetPos distance2d _projectilePos;
-        _returnTargetPos = _seekerTargetPos vectorAdd [0, 0, _distanceToTarget2d * 0.02];
     };
 };
 
-// Special radar case. Adjust target position such that we are leading it
-if (_attackStage >= 3 && { _seekerType isEqualTo "ARH" }) then {
-    _seekerStateParams params ["", "", "", "", "", "", "", "_lastKnownVelocity"];
-    private _projectileVelocity = velocity _projectile;
-    if (_projectileVelocity#2 < 0) then {
-        private _projectileSpeed = vectorMagnitude _projectileVelocity; // this gives a precise impact time versus using speed _projectile. Dont change
-        private _timeUntilImpact = (_seekerTargetPos distance _projectilePos) / _projectileSpeed;
-        _returnTargetPos = _returnTargetPos vectorAdd (_lastKnownVelocity vectorMultiply _timeUntilImpact);
-    };
-};
+// missile guidance defines this variable in doAttackProfile
+_attackProfileName = ["na", "hellfire - LAUNCH", "hellfire - SEEK CRUISE", "hellfire - ATTACK CRUISE", "hellfire - TERMINAL"] select _attackStage;
 
-// TRACE_1("Adjusted target position", _returnTargetPos);
+TRACE_1("Adjusted target position", _returnTargetPos);
 _returnTargetPos;

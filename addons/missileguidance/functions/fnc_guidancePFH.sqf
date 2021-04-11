@@ -18,7 +18,7 @@
 
 BEGIN_COUNTER(guidancePFH);
 
-#define TIMESTEP_FACTOR 0.01
+#define TIMESTEP_FACTOR diag_deltaTime
 
 params ["_args", "_pfID"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
@@ -31,24 +31,12 @@ if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     END_COUNTER(guidancePFH);
 };
 
-private _runtimeDelta = diag_tickTime - _lastRunTime;
-private _adjustTime = 1;
-
-if (accTime > 0) then {
-    _adjustTime = 1/accTime;
-    _adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
-    TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
-} else {
-    _adjustTime = 0;
-};
-
-private _pitchRate = _flightParams select 0;
-private _yawRate = _flightParams select 1;
+_flightParams params ["_pitchRate", "_yawRate"];
 
 // Run seeker function:
 private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState] call FUNC(doSeekerSearch);
-
 // Run attack profile function:
+_seekerTargetPos = AGLtoASL ASLToAGL _seekerTargetPos;
 private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams] call FUNC(doAttackProfile);
 
 private _projectilePos = getPosASLVisual _projectile;

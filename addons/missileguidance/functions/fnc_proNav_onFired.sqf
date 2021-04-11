@@ -23,12 +23,14 @@ _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_se
 
 private _ammoConfig = configOf _projectile;
 private _navigationGain = getNumber (_ammoConfig >> QUOTE(ADDON) >> "navigationGain");
+if (_navigationGain == 0) then {
+	_navigationGain = 3;
+};
 
 private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
-
 _navigationParams = [
 	[   // Last Missile Frame
-		[0, 0, 0],  // Last target position
+		[0, 0, 0],  // Last target position array
 		[0, 0, 0],  // Last target velocity
 		[0, 0, 0]   // Last line of sight
 	], 

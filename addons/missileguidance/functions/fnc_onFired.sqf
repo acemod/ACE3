@@ -70,7 +70,7 @@ if (isNil "_navigationType" || {!(_navigationType in (getArray (_config >> "navi
     _navigationType = getText (_config >> "defaultNavigationType");
 };
 
-if (isNil "_navigationType") then {
+if (isNil "_navigationType" || _navigationType isEqualTo "") then {
     // most missiles use ProNav by default
     _navigationType = "ProportionalNavigation";
 };
@@ -108,6 +108,14 @@ private _navigationParameters = [
     // set up in navigation type onFired function
 ];
 
+// default config values to make sure there is backwards compat
+private _pitchRate = 30;
+private _yawRate = 30;
+if (isNumber (_config >> "pitchRate")) then {
+    _pitchRate = getNumber ( _config >> "pitchRate" );
+    _yawRate = getNumber ( _config >> "yawRate" );
+};
+
 TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
 private _args = [_this,
             [   _shooter,
@@ -119,8 +127,8 @@ private _args = [_this,
                 _navigationType
             ],
             [
-                getNumber ( _config >> "pitchRate" ),
-                getNumber ( _config >> "yawRate" )
+                _pitchRate,
+                _yawRate
             ],
             [
                 getNumber ( _config >> "seekerAngle" ),
