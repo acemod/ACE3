@@ -1,0 +1,29 @@
+Weapon Configs:
+    Hellfire - Laser
+    AGM-65 - Laser
+    DAGR - Laser
+    GBU-12 - Laser
+
+    Dragon - SACLOS
+    Metis - SACLOS
+    HOT - SACLOS
+
+    Javelin - Optical
+    NLAW - PLOS
+
+Seeker Types:
+    Laser - causes lots of weapon noise, causing bad guidance
+
+Navigation Types:
+    GBU-12 - LOS Guidance
+    NLAW - LOS Guidance
+    Dragon - LOS Guidance
+    Metis - LOS Guidance
+    HOT - LOS Guidance
+
+    Javelin - Pro Nav
+    Hellfire - Pro Nav
+    AGM-65 - Pro Nav
+    DAGR - Pro Nav
+
+

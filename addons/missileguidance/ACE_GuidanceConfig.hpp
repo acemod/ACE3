@@ -93,9 +93,11 @@ class GVAR(SeekerTypes) {
 };
 
 class GVAR(NavigationTypes) {
-    class ProportionalNavigation {
-        name = "Proportional Navigation";
-        
+    class LineOfSight {
+        functionName = QFUNC(navigationType_lineOfSight);
+        onFired = QFUNC(lineOfSight_onFired);
+    };
+    class ProportionalNavigation {       
         functionName = QFUNC(navigationType_proNav);
         onFired = QFUNC(proNav_onFired);
     };

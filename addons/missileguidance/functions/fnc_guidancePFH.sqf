@@ -66,8 +66,16 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
 
         // controls are either on or off, no proportional
         if (_isBangBangGuidance) then {
-            private _pitchSign = _clampedPitch / abs _clampedPitch;
-            private _yawSign = _clampedYaw / abs _clampedYaw;
+            private _pitchSign = if (_clampedPitch == 0) then {
+                0
+            } else {
+                _clampedPitch / abs _clampedPitch
+            };
+            private _yawSign = if (_clampedYaw == 0) then {
+                0
+            } else {
+                _clampedYaw / abs _clampedYaw
+            };
             _clampedPitch = _pitchSign * _pitchRate;
             _clampedYaw = _yawSign * _clampedYaw;
         };

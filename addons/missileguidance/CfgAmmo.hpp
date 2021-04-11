@@ -72,6 +72,8 @@ class CfgAmmo {
             pitchRate = 40; // degrees per second
             yawRate = 40;
 
+            bangBangGuidance = 0;
+
             canVanillaLock = 0;
 
             // Guidance type for munitions
