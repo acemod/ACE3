@@ -9,16 +9,21 @@ categories:
   - title: '**ADDED:**'
     labels:
       - 'kind/feature request'
-      - 'kind/enhancement'
-      - 'area/translations'
+      - 'kind/added feature'
   - title: '**FIXED:**'
     labels:
       - 'kind/bug fix'
-  - title: '**CHANGED:**'
+  - title: '**IMPROVED:**'
     labels:
       - 'kind/enhancement'
+      - 'kind/optimization'
+  - title: '**CHANGED:**'
+    labels:
       - 'kind/cleanup'
       - 'area/compatibility'
+  - title: '**TRANSLATIONS:**'
+    labels:
+      - 'area/translations'
 
 exclude-labels:
   - 'ignore changelog'
@@ -33,5 +38,5 @@ template: |
 
 replacers:
   # Category titles
-  - search: '/\#\# (\*\*(ADDED|FIXED|CHANGED):\*\*)/g'
+  - search: '/\#\# (\*\*(ADDED|FIXED|IMPROVED|CHANGED|TRANSLATIONS):\*\*)/g'
     replace: '$1'

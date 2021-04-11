@@ -4,7 +4,7 @@
  * Get the type of damage based upon the projectile.
  *
  * Arguments:
- * 0: The projectile classname or object <STRING>
+ * 0: The projectile classname OR the name of a damage type <STRING>
  *
  * Return Value:
  * Type of damage <STRING>
@@ -17,24 +17,24 @@
 
 params ["_typeOfProjectile"];
 
-// --- projectiles
-if (_typeOfProjectile isKindOf "BulletBase") exitWith {"bullet"};
-if (_typeOfProjectile isKindOf "ShotgunBase") exitWith {"bullet"};
-if (_typeOfProjectile isKindOf "GrenadeCore") exitWith {"grenade"};
-if (_typeOfProjectile isKindOf "TimeBombCore") exitWith {"explosive"};
-if (_typeOfProjectile isKindOf "MineCore") exitWith {"explosive"};
-if (_typeOfProjectile isKindOf "FuelExplosion") exitWith {"explosive"};
-if (_typeOfProjectile isKindOf "ShellBase") exitWith {"shell"};
-if (_typeOfProjectile isKindOf "RocketBase") exitWith {"explosive"};
-if (_typeOfProjectile isKindOf "MissileBase") exitWith {"explosive"};
-if (_typeOfProjectile isKindOf "LaserBombCore") exitWith {"explosive"};
-if (_typeOfProjectile isKindOf "BombCore") exitWith {"explosive"};
-if (_typeOfProjectile isKindOf "Grenade") exitWith {"grenade"};
+private _damageType = GVAR(damageTypeCache) getVariable _typeOfProjectile;
 
-// --- non-projectiles reported by custom handleDamge wrapper
-if ((_typeOfProjectile select [0,1]) isEqualTo "#") then {
-    _typeOfProjectile = _typeOfProjectile select [1];
+if (isNil "_damageType") then {
+    if (isText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType")) then {
+        _damageType = getText (configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType");
+    } else {
+        WARNING_1("Ammo type [%1] has no ACE_damageType",_typeOfProjectile);
+        _damageType = "unknown";
+    };
+
+    // config may define an invalid damage type
+    if (isNil {GVAR(allDamageTypesData) getVariable _damageType}) then {
+        WARNING_2("Damage type [%1] for ammo [%2] not found",_typeOfDamage,_typeOfProjectile);
+        _damageType = "unknown";
+    };
+
+    TRACE_2("getTypeOfDamage caching",_typeOfProjectile,_damageType);
+    GVAR(damageTypeCache) setVariable [_typeOfProjectile, _damageType];
 };
 
-// --- otherwise
-toLower _typeOfProjectile
+_damageType // return

@@ -23,5 +23,4 @@
 
 params ["_vehicle", "_turretPath", "_magazineClass"];
 
-private _ammo = magazinesAllTurrets _vehicle select {(_x select 0) isEqualTo _magazineClass && {(_x select 1) isEqualTo _turretPath}} apply {_x select 2};
-_ammo
+magazinesAllTurrets _vehicle select {(_x select 0) == _magazineClass && {(_x select 1) isEqualTo _turretPath}} apply {_x select 2}

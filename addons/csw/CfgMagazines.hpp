@@ -9,6 +9,7 @@ class CfgMagazines {
         mass = 96;
         ACE_isBelt = 1;
     };
+
     class 100Rnd_127x99_mag_Tracer_Red;
     class GVAR(100Rnd_127x99_mag_red): 100Rnd_127x99_mag_Tracer_Red {
         author = ECSTRING(common,ACETeam);
@@ -19,6 +20,7 @@ class CfgMagazines {
         mass = 96;
         ACE_isBelt = 1;
     };
+
     class 100Rnd_127x99_mag_Tracer_Green;
     class GVAR(100Rnd_127x99_mag_green): 100Rnd_127x99_mag_Tracer_Green {
         author = ECSTRING(common,ACETeam);
@@ -29,6 +31,7 @@ class CfgMagazines {
         mass = 96;
         ACE_isBelt = 1;
     };
+
     class 100Rnd_127x99_mag_Tracer_Yellow;
     class GVAR(100Rnd_127x99_mag_yellow): 100Rnd_127x99_mag_Tracer_Yellow {
         author = ECSTRING(common,ACETeam);

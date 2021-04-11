@@ -38,10 +38,6 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - `OPTIONS` / `CONTROLS` / `CONFIGURE ADDONS` / `ACE3 Equipment`
 
-#### 3.1.3 Inventory
-
-<img src="{{ site.baseurl }}/img/wiki/feature/abtools_inventory.png" width="900" height="450" alt="Inventory management" />
-
 ### 3.2 Example with M14 and default 7.62mm 20Rnd Mag
 
 **Start of the mission:**

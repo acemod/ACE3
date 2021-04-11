@@ -16,6 +16,7 @@
             <Korean>로프 사다리</Korean>
             <Chinesesimp>伸缩梯子</Chinesesimp>
             <Chinese>伸縮梯子</Chinese>
+            <Turkish>Katlanabilir Merdiven</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Deploy">
             <English>Deploy ladder</English>
@@ -32,6 +33,7 @@
             <Korean>사다리 배치</Korean>
             <Chinesesimp>布署梯子</Chinesesimp>
             <Chinese>佈署梯子</Chinese>
+            <Turkish>Merdiveni Konuşlandır</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Drop">
             <English>Drop ladder</English>
@@ -48,6 +50,7 @@
             <Korean>사다리 놓기</Korean>
             <Chinesesimp>降下梯子</Chinesesimp>
             <Chinese>降下梯子</Chinese>
+            <Turkish>Merdiveni Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
             <English>Extend</English>
@@ -63,6 +66,7 @@
             <Korean>늘리기</Korean>
             <Chinesesimp>伸长梯子</Chinesesimp>
             <Chinese>伸長梯子</Chinese>
+            <Turkish>Uzat</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_AdjustTilt">
             <English>+Ctrl tilt</English>
@@ -94,6 +98,7 @@
             <Korean>사다리 위치</Korean>
             <Chinesesimp>梯子位置</Chinesesimp>
             <Chinese>梯子位置</Chinese>
+            <Turkish>Merdiveni Taşı</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Pickup">
             <English>Pickup ladder</English>
@@ -110,6 +115,7 @@
             <Korean>사다리 줍기</Korean>
             <Chinesesimp>捡起梯子</Chinesesimp>
             <Chinese>撿起梯子</Chinese>
+            <Turkish>Merdiveni Al</Turkish>
         </Key>
     </Package>
 </Project>

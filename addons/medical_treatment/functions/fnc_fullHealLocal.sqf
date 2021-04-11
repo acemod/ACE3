@@ -67,7 +67,7 @@ if IS_UNCONSCIOUS(_patient) then {
     [QEGVAR(medical,WakeUp), _patient] call CBA_fnc_localEvent;
     _state = GET_SM_STATE(_patient);
     TRACE_1("after WakeUp",_state);
-    if IS_UNCONSCIOUS(_patient) then { ERROR_1("fullheal [unit %1][state %2] failed to wake up patient",_patient,_state); };
+    if IS_UNCONSCIOUS(_patient) then { ERROR_2("fullheal [unit %1][state %2] failed to wake up patient",_patient,_state); };
 };
 
 // Generic medical admin

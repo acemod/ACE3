@@ -113,4 +113,12 @@ class CfgVehicles {
             ADD_ACE_HITPOINTS(3,3);
         };
     };
+
+    // Enoch
+    class I_E_Man_Base_F;
+    class I_E_Uniform_01_coveralls_F: I_E_Man_Base_F {
+        class HitPoints {
+            ADD_ACE_HITPOINTS(2,2);
+        };
+    };
 };

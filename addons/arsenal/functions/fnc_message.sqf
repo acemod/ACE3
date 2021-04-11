@@ -19,7 +19,7 @@ params ["_display", "_message"];
 private _messageBoxCtrl = _display displayCtrl IDC_message;
 private _handle = _messageBoxCtrl getVariable QGVAR(messageBoxHandle);
 
-if !(isNil "_handle") then {
+if (!isNil "_handle") then {
     terminate _handle;
 };
 

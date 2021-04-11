@@ -14,6 +14,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_FEEDBACK
 #endif
 
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 #include "\z\ace\addons\main\script_macros.hpp"
 
@@ -42,3 +43,15 @@
 #define FX_PAIN_PULSATING_BLUR 1
 #define FX_PAIN_CHROMATIC_ABERRATION 2
 #define FX_PAIN_ONLY_BASE 3
+
+#define FX_BLOODVOLUME_COLOR_CORRECTION 0
+#define FX_BLOODVOLUME_ICON 1
+#define FX_BLOODVOLUME_BOTH 2
+
+#define ICON_BLOODVOLUME_IDX_MIN 0
+#define ICON_BLOODVOLUME_IDX_MAX 6
+#define ICON_BLOODVOLUME_PATH(num) format [QPATHTOF(data\bloodVolume_%1.paa), num]
+#define ICON_BLOODVOLUME_COLOR_NONE [0, 0, 0, 0]
+#define ICON_BLOODVOLUME_COLOR_WHITE [1, 1, 1, 1]
+#define ICON_BLOODVOLUME_COLOR_ORANGE [1, 0.6, 0, 1]
+#define ICON_BLOODVOLUME_COLOR_RED [0.8, 0.2, 0, 1]

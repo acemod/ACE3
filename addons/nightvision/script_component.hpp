@@ -46,3 +46,5 @@
 
 #define ST_NVG_NOISESHARPNESS_MIN 1.2
 #define ST_NVG_NOISESHARPNESS_MAX 1
+
+#define IS_MAGNIFIED (0.75 call CBA_fnc_getFOV select 1 > 3.01)

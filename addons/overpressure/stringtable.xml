@@ -33,7 +33,7 @@
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
-            <German>Rückstoßbereich</German>
+            <German>Rückstrahlzone</German>
             <Japanese>後方噴射の範囲</Japanese>
             <Chinesesimp>向后喷射的范围</Chinesesimp>
             <Chinese>後方尾焰的範圍</Chinese>
@@ -47,7 +47,7 @@
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastAngle">
             <English>Backblast angle</English>
-            <German>Rückstoßwinkel</German>
+            <German>Rückstrahlwinkel</German>
             <Japanese>後方噴射の角度</Japanese>
             <Chinesesimp>向后喷射的角度</Chinesesimp>
             <Chinese>後方尾焰的角度</Chinese>

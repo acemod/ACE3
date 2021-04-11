@@ -24,8 +24,8 @@ private _statement = {
     TRACE_5("starting unload",_target,_turretPath,_player,_carryMag,_vehMag);
 
     private _timeToUnload = 1;
-    if (!isNull(configFile >> "CfgVehicles" >> (typeOf _target) >> QUOTE(ADDON) >> "ammoUnloadTime")) then {
-        _timeToUnload = getNumber(configFile >> "CfgVehicles" >> (typeOf _target) >> QUOTE(ADDON) >> "ammoUnloadTime");
+    if (!isNull(configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime")) then {
+        _timeToUnload = getNumber(configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime");
     };
 
     [
@@ -61,7 +61,7 @@ private _handeledMagTypes = [];
         private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
 
         if (isNil "_carryMag") then {
-            private _groups = "getNumber (_x >> _xMag) == 1" configClasses (configFile >> QGVAR(groups));
+            private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
             _carryMag = configName (_groups param [0, configNull]);
             GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
             TRACE_2("setting cache",_xMag,_carryMag);

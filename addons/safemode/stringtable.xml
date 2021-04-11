@@ -16,6 +16,7 @@
             <Korean>안전 모드</Korean>
             <Chinesesimp>保险模式</Chinesesimp>
             <Chinese>保險模式</Chinese>
+            <Turkish>Emniyet Modu</Turkish>
         </Key>
         <Key ID="STR_ACE_SafeMode_TakeOffSafety">
             <English>Take off Safety</English>
@@ -48,6 +49,7 @@
             <Korean>안전장치 적용</Korean>
             <Chinesesimp>关保险</Chinesesimp>
             <Chinese>關保險</Chinese>
+            <Turkish>Emniyete alındı</Turkish>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">
             <English>Took off Safety</English>
@@ -64,6 +66,7 @@
             <Korean>안전장치 해제됨</Korean>
             <Chinesesimp>已开保险</Chinesesimp>
             <Chinese>已開保險</Chinese>
+            <Turkish>Emniyetten çıkartıldı</Turkish>
         </Key>
     </Package>
 </Project>

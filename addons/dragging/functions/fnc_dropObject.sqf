@@ -77,9 +77,12 @@ if (_target getVariable [QGVAR(isUAV), false]) then {
     createVehicleCrew _target;
 };
 
+// fixes not being able to move when in combat pace
+[_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+
 // reset mass
 private _mass = _target getVariable [QGVAR(originalMass), 0];
 
 if (_mass != 0) then {
-    [QEGVAR(common,setMass), [_target, _mass], _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,setMass), [_target, _mass]] call CBA_fnc_globalEvent; // force global sync
 };

@@ -48,3 +48,9 @@
 
 #define LITTER_CLEANUP_CHECK_DELAY 30
 #define BODY_CLEANUP_CHECK_DELAY 20
+
+// Animations that would be played slower than this are instead played exactly as slow as this. (= Progress bar will take longer than the slowed down animation).
+#define ANIMATION_SPEED_MIN_COEFFICIENT 0.5
+
+// Animations that would be played faster than this are instead skipped. (= Progress bar too quick for animation).
+#define ANIMATION_SPEED_MAX_COEFFICIENT 2.5

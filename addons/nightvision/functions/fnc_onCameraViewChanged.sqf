@@ -20,7 +20,7 @@ params ["_unit", "_cameraView"];
 TRACE_2("onCameraViewChanged",_unit,_cameraView);
 
 // Refresh goggle effect (e.g. switching to vehicle's NVG)
-[] call FUNC(refreshGoggleType);
+call FUNC(refreshGoggleType);
 
 if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
     if ((vehicle _unit == _unit)

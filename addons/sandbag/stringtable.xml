@@ -16,6 +16,7 @@
             <Korean>모래주머니</Korean>
             <Chinesesimp>沙包</Chinesesimp>
             <Chinese>沙包</Chinese>
+            <Turkish>Kum Torbası</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
             <English>Sandbag (empty)</English>
@@ -32,6 +33,7 @@
             <Korean>모래주머니(비어있음)</Korean>
             <Chinesesimp>沙包 (空)</Chinesesimp>
             <Chinese>沙包 (空)</Chinese>
+            <Turkish>Kum Torbası (Boş)</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_CANNOTSB">
             <English>Cannot build here</English>
@@ -48,6 +50,7 @@
             <Korean>여기에 지을 수 없습니다</Korean>
             <Chinesesimp>无法放置在此</Chinesesimp>
             <Chinese>無法放置在此</Chinese>
+            <Turkish>Buraya inşa edilemez</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_PICKUPSB">
             <English>Pick up Sandbag</English>
@@ -64,6 +67,7 @@
             <Korean>모래주머니 줍기</Korean>
             <Chinesesimp>捡起沙包</Chinesesimp>
             <Chinese>撿起沙包</Chinese>
+            <Turkish>Kum torbasını al</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_CARRYSB">
             <English>Carry Sandbag</English>
@@ -80,6 +84,7 @@
             <Korean>모래주머니 옮기기</Korean>
             <Chinesesimp>搬运沙包</Chinesesimp>
             <Chinese>搬運沙包</Chinese>
+            <Turkish>Kum torbasını taşı</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_ENDCARRYSB">
             <English>End Carrying</English>
@@ -96,6 +101,7 @@
             <Korean>그만 옮기기</Korean>
             <Chinesesimp>停止搬运</Chinesesimp>
             <Chinese>停止搬運</Chinese>
+            <Turkish>Taşımayı bitir</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_DropSandbag">
             <English>Drop Sandbag</English>
@@ -112,6 +118,7 @@
             <Korean>여기에 놓기</Korean>
             <Chinesesimp>放下沙包</Chinesesimp>
             <Chinese>放下沙包</Chinese>
+            <Turkish>Kum Torbasını Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_ConfirmDeployment">
             <English>Confirm Deployment</English>
@@ -128,6 +135,7 @@
             <Korean>설치 확인</Korean>
             <Chinesesimp>确认布署</Chinesesimp>
             <Chinese>確認佈署</Chinese>
+            <Turkish>Yerleştirmeyi Onayla</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_CancelDeployment">
             <English>Cancel Deployment</English>
@@ -144,6 +152,7 @@
             <Korean>설치 취소</Korean>
             <Chinesesimp>取消布署</Chinesesimp>
             <Chinese>取消佈署</Chinese>
+            <Turkish>Yerleştirmeyi İptal Et</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_DeploySandbag">
             <English>Deploy Sandbag</English>
@@ -160,6 +169,7 @@
             <Korean>모래주머니 설치</Korean>
             <Chinesesimp>布署沙包</Chinesesimp>
             <Chinese>佈署沙包</Chinese>
+            <Turkish>Kum Torbasını Yerleştir</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_SANDBOX">
             <English>Sandbag Box</English>
@@ -176,6 +186,7 @@
             <Korean>모래주머니 상자</Korean>
             <Chinesesimp>沙包箱</Chinesesimp>
             <Chinese>沙包箱</Chinese>
+            <Turkish>Kum Torbası Kutusu</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_NOSAND">
             <English>Here is no sand</English>
@@ -192,6 +203,7 @@
             <Korean>흙이 없습니다</Korean>
             <Chinesesimp>这里没有沙</Chinesesimp>
             <Chinese>這裡沒有沙</Chinese>
+            <Turkish>Burada Kum Yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
             <English>Rotate</English>
@@ -208,6 +220,7 @@
             <Korean>돌리기</Korean>
             <Chinesesimp>旋转</Chinesesimp>
             <Chinese>旋轉</Chinese>
+            <Turkish>Yönlendir</Turkish>
         </Key>
     </Package>
 </Project>

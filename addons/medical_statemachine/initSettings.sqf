@@ -9,7 +9,7 @@
         0
     ],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(fatalInjuriesAI),
@@ -22,7 +22,7 @@
         0
     ],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(AIUnconsciousness),
@@ -31,13 +31,22 @@
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(cardiacArrestTime),
     "TIME",
     [LSTRING(CardiacArrestTime_DisplayName), LSTRING(CardiacArrestTime_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
-    [1, 3600, 30],
+    [1, 3600, 300],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cardiacArrestBleedoutEnabled),
+    "CHECKBOX",
+    [LSTRING(CardiacArrestBleedout_DisplayName), LSTRING(CardiacArrestBleedout_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    true,
+    true
+] call CBA_fnc_addSetting;

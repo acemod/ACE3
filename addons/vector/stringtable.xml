@@ -16,6 +16,7 @@
             <Korean>Vector 21 Nite</Korean>
             <Chinesesimp>Vector 21 Nite</Chinesesimp>
             <Chinese>Vector 21 Nite</Chinese>
+            <Turkish>Vector 21 Nite</Turkish>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDayName">
             <English>Vector 21</English>
@@ -32,6 +33,7 @@
             <Korean>Vector 21</Korean>
             <Chinesesimp>Vector 21</Chinesesimp>
             <Chinese>Vector 21</Chinese>
+            <Turkish>Vector 21</Turkish>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDescription">
             <English>Rangefinder</English>
@@ -48,6 +50,7 @@
             <Korean>거리측정기</Korean>
             <Chinesesimp>测距仪</Chinesesimp>
             <Chinese>測距儀</Chinese>
+            <Turkish>Menzil Bulucu</Turkish>
         </Key>
         <Key ID="STR_ACE_Vector_AzimuthKey">
             <English>Vector - Azimuth Key</English>
@@ -64,6 +67,7 @@
             <Korean>Vector - 방위각 키</Korean>
             <Chinesesimp>Vector - 方位按键</Chinesesimp>
             <Chinese>Vector - 方位按鍵</Chinese>
+            <Turkish>Vector - Azimuth Tuşu</Turkish>
         </Key>
         <Key ID="STR_ACE_Vector_DistanceKey">
             <English>Vector - Distance Key</English>
@@ -80,6 +84,7 @@
             <Korean>Vector - 거리 키</Korean>
             <Chinesesimp>Vector - 距离按键</Chinesesimp>
             <Chinese>Vector - 距離按鍵</Chinese>
+            <Turkish>Vector - Mesafe Tuşu</Turkish>
         </Key>
     </Package>
 </Project>

@@ -10,7 +10,7 @@
  * Can deploy <BOOL>
  *
  * Example:
- * [player] call ace_csw_fnc_canDeployTripod
+ * [player] call ace_csw_fnc_assemble_canDeployTripod
  *
  * Public: No
  */

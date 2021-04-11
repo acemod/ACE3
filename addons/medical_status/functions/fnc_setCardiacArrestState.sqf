@@ -28,7 +28,9 @@ if (_active isEqualTo IN_CRDC_ARRST(_unit)) exitWith { TRACE_2("no change",_acti
 _unit setVariable [VAR_CRDC_ARRST, _active, true];
 _unit setVariable [VAR_HEART_RATE, [40, 0] select _active, true];
 
-// Cardiac arrest is an extension of unconsciousness
-[_unit, _active] call FUNC(setUnconsciousState);
+// Cardiac arrest is an extension of unconsciousness, but only set when entering Cardiac arrest
+if (_active) then {
+    [_unit, true] call FUNC(setUnconsciousState);
+};
 
 ["ace_cardiacArrest", [_unit, _active]] call CBA_fnc_localEvent;

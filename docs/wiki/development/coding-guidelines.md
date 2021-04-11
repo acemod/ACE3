@@ -397,6 +397,23 @@ Magic numbers are any of the following:
 
 [Source](http://en.wikipedia.org/wiki/Magic_number_%28programming%29){:target="_blank"}
 
+### 5.7 Spaces between array elements
+When using array notation `[]`, always use a space between elements to improve code readability.
+
+Good:
+
+```js
+params ["_unit", "_vehicle"];
+private _pos = [0, 0, 0];
+```
+
+Bad:
+
+```js
+params ["_unit","_vehicle"];
+private _pos = [0,0,0];
+```
+
 
 ## 6. Code Standards
 
@@ -606,14 +623,12 @@ Event handlers in ACE3 are implemented through the CBA event system (ACE3's own 
 
 More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events){:target="_blank"} pages.
 
-<div class="panel info">
-    <h5>Warning about BIS event handlers:</h5>
-    <p>BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.</p>
-    ```js
-    player addEventHandler ["Fired", FUNC(handleFired)]; // bad
-    player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
-    ```
-</div>
+**Warning about BIS event handlers:**
+BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.
+```js
+player addEventHandler ["Fired", FUNC(handleFired)]; // bad
+player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
+```
 
 ### 7.4 Hashes
 

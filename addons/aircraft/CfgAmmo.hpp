@@ -48,7 +48,7 @@ class CfgAmmo {
         tracerStartTime = 0.02; // default: 0.1
         timeToLive = 40; // default: 6
     };
-   
+
     // adjust damage and splash damage, AP Rounds
     class ACE_Gatling_30mm_AP_Plane_CAS_01_F: Gatling_30mm_HE_Plane_CAS_01_F {
        explosive = 0.05; // default: 0.4
@@ -75,14 +75,14 @@ class CfgAmmo {
         submunitionAmmo = "ACE_Gatling_30mm_AP_Plane_CAS_01_F";
         ACE_caliber = 1.4;
    };
-   
+
     class ACE_Gatling_30mm_Sub_CM41: ACE_Gatling_30mm_Sub_HEI {
-        submunitionAmmo[] = {"ACE_Gatling_30mm_AP_Plane_CAS_01_F",0.8,"Cannon_30mm_HE_Plane_CAS_01_F",0.2};
+        submunitionAmmo[] = {"ACE_Gatling_30mm_AP_Plane_CAS_01_F",0.8,"Gatling_30mm_HE_Plane_CAS_01_F",0.2};
         ACE_caliber = 1.4;
     };
 
     class ACE_Gatling_30mm_Sub_CM51: ACE_Gatling_30mm_Sub_HEI {
-        submunitionAmmo[] = {"ACE_Gatling_30mm_AP_Plane_CAS_01_F",0.83,"Cannon_30mm_HE_Plane_CAS_01_F",0.17};
+        submunitionAmmo[] = {"ACE_Gatling_30mm_AP_Plane_CAS_01_F",0.83,"Gatling_30mm_HE_Plane_CAS_01_F",0.17};
         ACE_caliber = 1.4;
     };
 

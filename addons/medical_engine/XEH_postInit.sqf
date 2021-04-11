@@ -15,7 +15,7 @@
     reverse _allHitPoints;
 
     if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
-        private _config = [_unit] call CBA_fnc_getObjectConfig;
+        private _config = configOf _unit;
         if (getText (_config >> "simulation") == "UAVPilot") exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
         if (getNumber (_config >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
         ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
@@ -53,7 +53,7 @@
 ["Air", "Killed", {
     params ["_vehicle", "_killer"];
     TRACE_3("air killed",_vehicle,typeOf _vehicle,velocity _vehicle);
-    if ((getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "destrType")) == "") exitWith {};
+    if ((getText (configOf _vehicle >> "destrType")) == "") exitWith {};
     if (unitIsUAV _vehicle) exitWith {};
 
     private _lethality = linearConversion [0, 25, (vectorMagnitude velocity _vehicle), 0.5, 1];
@@ -62,3 +62,11 @@
         [QEGVAR(medical,woundReceived), [_x, "Head", _lethality, _killer, "#vehiclecrash", [HITPOINT_INDEX_HEAD,1]], _x] call CBA_fnc_targetEvent;
     } forEach (crew _vehicle);
 }, true, ["ParachuteBase"]] call CBA_fnc_addClassEventHandler;
+
+// Fixes units being stuck in unconscious animation when being knocked over by a PhysX object
+["CAManBase", "AnimDone", {
+    params ["_unit", "_anim"];
+    if (local _unit && {_anim find QGVAR(face) != -1 && {lifeState _unit != "INCAPACITATED"}}) then {
+        [_unit, false] call FUNC(setUnconsciousAnim);
+    };
+}] call CBA_fnc_addClassEventHandler;

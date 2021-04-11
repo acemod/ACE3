@@ -121,6 +121,18 @@ class CfgAmmo {
         GVAR(classes)[] = {"ACE_frag_medium_HD"};
     };
 
+    // https://ofb.gov.in/product/products/product-details/84-mm-he-round-ffv-441-b
+    // https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN18072_TC%203-22x84%20FINAL%20WEB.pdf (page 99, Table A-6. HE 441D RS, 84-mm projectile)
+    class R_MRAAWS_HEAT_F;
+    class R_MRAAWS_HE_F: R_MRAAWS_HEAT_F {
+        GVAR(enabled) = 1;
+        GVAR(metal) = 2300;
+        GVAR(charge) = 590;
+        GVAR(gurney_c) = 2800;
+        GVAR(gurney_k) = 1/2;
+        GVAR(classes)[] = {"ACE_frag_small"};
+    };
+
 
     // ~~~~ Missiles:
     class M_PG_AT;

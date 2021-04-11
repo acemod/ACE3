@@ -12,7 +12,7 @@ class RscTitles {
         onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(menuBackground)),displayNull)]);
         fadeIn = 0.25;
         fadeOut = 0.25;
-        movingEnable = false;
+        movingEnable = 0;
         duration = 10e10;
         name = QGVAR(menuBackground);
         class controls {};

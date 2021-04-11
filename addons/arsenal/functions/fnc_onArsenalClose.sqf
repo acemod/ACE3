@@ -59,7 +59,6 @@ if (is3DEN) then {
         curatorcamera cameraEffect ["internal","back"];
     } else {
         GVAR(camera) cameraEffect ["terminate","back"];
-        ACE_player switchCamera GVAR(cameraView);
     };
 };
 
@@ -71,6 +70,8 @@ if (!isNil QGVAR(moduleUsed)) then {
     objNull remoteControl GVAR(center);
 };
 
+ACE_player switchCamera GVAR(cameraView);
+
 if (isMultiplayer) then {
 
     [QGVAR(broadcastFace), [GVAR(center), GVAR(currentFace)], QGVAR(center) + "_face"] call CBA_fnc_globalEventJIP;
@@ -79,6 +80,8 @@ if (isMultiplayer) then {
     [QGVAR(broadcastVoice), [GVAR(center), GVAR(currentVoice)], QGVAR(center) + "_voice"] call CBA_fnc_globalEventJIP;
     [QGVAR(center) + "_voice", GVAR(center)] call CBA_fnc_removeGlobalEventJIP;
 };
+
+GVAR(currentBox) = objNull;
 
 GVAR(camera) = nil;
 GVAR(cameraHelper) = nil;

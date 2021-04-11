@@ -20,7 +20,7 @@ params ["_staticWeapon", "_assemblyMode", "_emptyWeapon"];
 TRACE_3("staticWeaponInit_unloadExtraMags",_staticWeapon,_assemblyMode,_emptyWeapon);
 if (!_assemblyMode) exitWith {};
 
-private _desiredAmmo = getNumber (configFile >> "CfgVehicles" >> (typeOf _staticWeapon) >> QUOTE(ADDON) >> "desiredAmmo");
+private _desiredAmmo = getNumber (configOf _staticWeapon >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
 if (_emptyWeapon) then {
     _desiredAmmo = 0;
@@ -38,7 +38,7 @@ private _containerMagazineCount = [];
 
     private _carryMag = GVAR(vehicleMagCache) getVariable _xMag;
     if (isNil "_carryMag") then {
-        private _groups = "getNumber (_x >> _xMag) == 1" configClasses (configFile >> QGVAR(groups));
+        private _groups = "getNumber (_x >> _xMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
         _carryMag = configName (_groups param [0, configNull]);
         GVAR(vehicleMagCache) setVariable [_xMag, _carryMag];
         TRACE_2("setting cache",_xMag,_carryMag);

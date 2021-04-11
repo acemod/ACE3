@@ -21,7 +21,7 @@
  */
 
 params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_unit"];
-TRACE_6("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unit);
+TRACE_5("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unit);
 
 TRACE_3("",local _vehicle, _vehicle turretLocal _turretPath,local _unit);
 if (!(_vehicle turretLocal _turretPath)) exitWith {};
@@ -37,7 +37,7 @@ TRACE_1("",_magsInWeapon);
 
 // Remove any empty mags from start:
 private _ammoInFirstMag = 0;
-while {(!(_magsInWeapon isEqualTo [])) && {_ammoInFirstMag = _magsInWeapon deleteAt 0; (_ammoInFirstMag == 0)}} do {
+while {(_magsInWeapon isNotEqualTo []) && {_ammoInFirstMag = _magsInWeapon deleteAt 0; (_ammoInFirstMag == 0)}} do {
     TRACE_1("Removing empty mag",_ammoInFirstMag);
     _vehicle removeMagazineTurret [_vehMag, _turretPath];
 };

@@ -69,7 +69,8 @@ GVAR(dev_watchVariableRunning) = true;
 
     private _fractures = GET_FRACTURES(_unit);
     private _canSprint = if (isSprintAllowed _unit) then {""} else {"[<t color ='#FFCC22'>Sprint Blocked</t>]"};
-    _return pushBack format ["Fractures: %1 %2", _fractures, _canSprint];
+    private _forceWalk = if (isForcedWalk _unit) then {"[<t color ='#FF9922'>Forced Walking</t>]"} else {""};
+    _return pushBack format ["Fractures: %1 %2%3", _fractures, _canSprint, _forceWalk];
 
 
     // Tourniquets:

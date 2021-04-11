@@ -11,7 +11,7 @@
  * true <BOOL>
  *
  * Example:
- * [_group, [6560, 12390, 0]] call ace_fastroping_fnc_deployAIWayoint
+ * [_group, [6560, 12390, 0]] call ace_fastroping_fnc_deployAIWaypoint
  *
  * Public: No
  */
@@ -33,7 +33,7 @@ if (_vehicle distance2D _position > 50) then {
 
 // - Deployment ---------------------------------------------------------------
 [_vehicle] call FUNC(deployAI);
-waitUntil {!((_vehicle getVariable [QGVAR(deployedRopes), []]) isEqualTo [])};
+waitUntil {(_vehicle getVariable [QGVAR(deployedRopes), []]) isNotEqualTo []};
 waitUntil {(_vehicle getVariable [QGVAR(deployedRopes), []]) isEqualTo []};
 _group setSpeedMode _speedMode;
 

@@ -77,7 +77,7 @@ if (!("All" in _repairLocations)) then {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
         if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
-        if !(isNil _x) exitWith {
+        if (!isNil _x) exitWith {
             private _val = missionNamespace getVariable _x;
             if (_val isEqualType 0) then {
                 _return = switch (_val) do {
@@ -95,7 +95,7 @@ if (!_return) exitWith {false};
 
 //Check that there are required objects nearby
 private _requiredObjects = getArray (_config >> "claimObjects");
-if (!(_requiredObjects isEqualTo [])) then {
+if (_requiredObjects isNotEqualTo []) then {
     private _objectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
     if (_objectsAvailable isEqualTo []) then {
             TRACE_2("Missing Required Objects",_requiredObjects,_objectsAvailable);

@@ -22,7 +22,7 @@
 params ["_medic", "_patient", "_bodyPart", "_bandage"];
 
 // Bandage type and bandage setting XNOR to show only active actions
-if ((_bandage == "BasicBandage") isEqualTo GVAR(advancedBandages)) exitWith {false};
+if ((_bandage == "BasicBandage") isEqualTo (GVAR(advancedBandages) != 0)) exitWith {false};
 
 private _index = ALL_BODY_PARTS find toLower _bodyPart;
 private _canBandage = false;
