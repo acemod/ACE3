@@ -23,7 +23,7 @@ BEGIN_COUNTER(guidancePFH);
 params ["_args", "_pfID"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
-_launchParams params ["","_targetLaunchParams"];
+_launchParams params ["","_targetLaunchParams","","","","","_navigationType"];
 _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_navigationParameters"];
 
 if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
@@ -44,7 +44,8 @@ private _projectilePos = getPosASLVisual _projectile;
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
 if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqualTo [0,0,0]}) then {
-    private _commandedAcceleration = [_args, TIMESTEP_FACTOR, _seekerTargetPos, _profileAdjustedTargetPos] call FUNC(navigationType_proNav);
+    private _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName");
+    private _commandedAcceleration = [_args, TIMESTEP_FACTOR, _seekerTargetPos, _profileAdjustedTargetPos] call (missionNamespace getVariable _navigationFunction);
 
     #ifdef DRAW_GUIDANCE_INFO
     private _projectilePosAGL = ASLToAGL _projectilePos;
