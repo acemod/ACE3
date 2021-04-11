@@ -111,9 +111,11 @@ private _navigationParameters = [
 // default config values to make sure there is backwards compat
 private _pitchRate = 30;
 private _yawRate = 30;
+private _bangBang = false;
 if (isNumber (_config >> "pitchRate")) then {
     _pitchRate = getNumber ( _config >> "pitchRate" );
     _yawRate = getNumber ( _config >> "yawRate" );
+    _bangBang = 1 == getNumber (_config >> "bangBangGuidance");
 };
 
 TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
@@ -128,7 +130,8 @@ private _args = [_this,
             ],
             [
                 _pitchRate,
-                _yawRate
+                _yawRate,
+                _bangBang
             ],
             [
                 getNumber ( _config >> "seekerAngle" ),

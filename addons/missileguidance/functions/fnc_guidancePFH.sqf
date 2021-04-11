@@ -31,7 +31,7 @@ if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     END_COUNTER(guidancePFH);
 };
 
-_flightParams params ["_pitchRate", "_yawRate"];
+_flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance"];
 
 // Run seeker function:
 private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState] call FUNC(doSeekerSearch);
@@ -63,6 +63,14 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         
         private _clampedPitch = (_pitchChange min _pitchRate) max -_pitchRate;
         private _clampedYaw = (_yawChange min _yawRate) max -_yawRate;
+
+        // controls are either on or off, no proportional
+        if (_isBangBangGuidance) then {
+            private _pitchSign = _clampedPitch / abs _clampedPitch;
+            private _yawSign = _clampedYaw / abs _clampedYaw;
+            _clampedPitch = _pitchSign * _pitchRate;
+            _clampedYaw = _yawSign * _clampedYaw;
+        };
 
         TRACE_9("pitch/yaw/roll",_pitch,_yaw,_roll,_yawChange,_pitchChange,_pitchRate,_yawRate,_clampedPitch,_clampedYaw);
 
