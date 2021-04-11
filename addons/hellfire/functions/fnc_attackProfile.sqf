@@ -39,8 +39,9 @@ private _heightAboveLaunch = (_projectilePos select 2) - (_launchPos select 2);
 private _returnTargetPos = _seekerTargetPos;
 
 private _closingRate = vectorMagnitude velocity _projectile;
-private _timeToGo = (_projectilePos distance2d _seekerTargetPos) / _closingRate;
+private _timeToGo = (_projectilePos distance _seekerTargetPos) / _closingRate;
 
+// we could do stuff like desired attack angle, but I'm not going that far today
 private _los = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos); 
 
 _flightParams params ["_pitchRate", "_yawRate"];
@@ -55,11 +56,15 @@ switch (_attackStage) do {
 
         if (_heightAboveLaunch > _configLaunchHeightClear) then {
             _attackProfileStateParams set [0, STAGE_SEEK_CRUISE];
+
+            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2d _projectilePos]];
             TRACE_2("New Stage: STAGE_SEEK_CRUISE",_distanceFromLaunch2d,_heightAboveLaunch);
         };
 
         if (_atMinRotationAngle) then {
             _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
+
+            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2d _projectilePos]];
             TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
         };
     };
@@ -86,6 +91,8 @@ switch (_attackStage) do {
         // if we are at the rotation limit, rotate to target
         if (_atMinRotationAngle || {(_currentHeightOverTarget atan2 _distanceToTarget2d) > 15}) then { // Wait until we can come down at a sharp angle
             _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
+
+            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2d _projectilePos]];
             TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
         };
     };
