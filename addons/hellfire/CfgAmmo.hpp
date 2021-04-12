@@ -26,9 +26,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            minDeflection = 0.0005;      // Minium flap deflection for guidance
-            maxDeflection = 0.01;       // Maximum flap deflection for guidance
-            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
+            pitchRate = 40; // degrees per second
+            yawRate = 40;
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -38,6 +37,9 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
+
+            defaultNavigationType = "ProportionalNavigation";
+            navigationTypes[] = { "ProportionalNavigation" };
 
             seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 70;           // Angle in front of the missile which can be searched

@@ -22,7 +22,7 @@ Navigation Types:
     X HOT - LOS Guidance
 
     X Javelin - Pro Nav
-    Hellfire - Pro Nav
+    X Hellfire - Pro Nav
     AGM-65 - Pro Nav
     DAGR - Pro Nav
 
