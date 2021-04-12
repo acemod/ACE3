@@ -31,7 +31,8 @@ PREP(attackProfile_JAV_TOP);
 
 // Navigation Profiles
 PREP(navigationType_proNav);
-PREP(navigationType_lineOfSight)
+PREP(navigationType_simpleProNav);
+PREP(navigationType_lineOfSight);
 
 // Seeker search functions
 PREP(seekerType_SALH);
@@ -48,4 +49,5 @@ PREP(ahr_onFired);
 
 // Navigation OnFired
 PREP(proNav_onFired);
-PREP(lineOfSight_onFired);
+PREP(simpleProNav_onFired);
+
