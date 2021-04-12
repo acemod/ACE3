@@ -10,9 +10,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            minDeflection = 0;          // Minium flap deflection for guidance
-            maxDeflection = 0.0027;     // Maximum flap deflection for guidance
-            incDeflection = 0.0005;     // The incrmeent in which deflection adjusts.
+            pitchRate = 25;          // Minium flap deflection for guidance
+            yawRate = 25;     // Maximum flap deflection for guidance
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -22,6 +21,9 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
+
+            defaultNavigationType = "LineOfSight";
+            navigationTypes[] = { "LineOfSight" };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 15;           // Angle from the shooter's view that can track the missile
@@ -50,9 +52,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            minDeflection = 0;          // Minium flap deflection for guidance
-            maxDeflection = 0.0027;     // Maximum flap deflection for guidance
-            incDeflection = 0.0005;     // The incrmeent in which deflection adjusts.
+            pitchRate = 25;          // Minium flap deflection for guidance
+            yawRate = 25;     // Maximum flap deflection for guidance
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -63,6 +64,9 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
+            defaultNavigationType = "LineOfSight";
+            navigationTypes[] = { "LineOfSight" };
+
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 15;           // Angle from the shooter's view that can track the missile
             seekerAccuracy = 1;         // seeker accuracy multiplier
@@ -70,7 +74,7 @@ class CfgAmmo {
             seekerMinRange = 80;
             seekerMaxRange = 2000;      // Range from the missile which the seeker can visually search
 
-            correctionDistance = 3; // distance from center of crosshair where missile slows down
+            correctionDistance = 6; // distance from center of crosshair where missile slows down
             offsetFromCrosshair[] = { 0, 0, 0 }; // where the missile wants to stay in relation to the center of the crosshair.
 
             // Attack profile type selection

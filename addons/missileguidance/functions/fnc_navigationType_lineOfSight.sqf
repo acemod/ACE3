@@ -19,4 +19,4 @@ _args params ["_firedEH"];
 _firedEH params ["","","","","","","_projectile"];
 
 private _lineOfSight = vectorNormalized (_profileAdjustedTargetPos vectorDiff getPosASLVisual _projectile);
-_lineOfSight
+_lineOfSight vectorMultiply 50

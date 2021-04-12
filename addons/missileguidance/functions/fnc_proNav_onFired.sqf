@@ -27,14 +27,12 @@ if (_navigationGain == 0) then {
 	_navigationGain = 3;
 };
 
-private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
 _navigationParams = [
 	[   // Last Missile Frame
 		[0, 0, 0],  // Last target position array
 		[0, 0, 0],  // Last target velocity
 		[0, 0, 0]   // Last line of sight
 	], 
-	[_pitchYaw select 1, 0, _pitchYaw select 2], // current yaw/roll/pitch
 	_navigationGain // navigation gain of missile. Set in the navigation onFired function
 ];
 _stateParams set [4, _navigationParams];

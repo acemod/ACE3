@@ -24,7 +24,7 @@ params ["_args", "_pfID"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","","","","_navigationType"];
-_stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_navigationParameters"];
+_stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_navigationParameters", "_guidanceParameters"];
 
 if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     [_pfID] call CBA_fnc_removePerFrameHandler;
@@ -55,8 +55,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
 
     // activate missile servos and change direction
     if (!isGamePaused && accTime > 0) then {
-        _navigationParameters params ["", "_currentPitchYawRoll"];
-        _currentPitchYawRoll params ["_yaw", "_roll", "_pitch"];
+        _guidanceParameters params ["_yaw", "_roll", "_pitch"];
 
         _commandedAcceleration = _projectile vectorWorldToModelVisual _commandedAcceleration;
         _commandedAcceleration params ["_yawChange", "", "_pitchChange"];
@@ -90,10 +89,10 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         [_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
         _projectile setVelocityModelSpace [0, vectorMagnitude velocity _projectile, 0];
 
-        _currentPitchYawRoll set [0, _yaw];
-        _currentPitchYawRoll set [2, _pitch];
+        _guidanceParameters set [0, _yaw];
+        _guidanceParameters set [2, _pitch];
 
-        _navigationParameters set [1, _currentPitchYawRoll];
+        _stateParams set [5, _guidanceParameters];
     };
 
     _stateParams set [4, _navigationParameters];

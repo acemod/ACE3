@@ -118,6 +118,7 @@ if (isNumber (_config >> "pitchRate")) then {
     _bangBang = 1 == getNumber (_config >> "bangBangGuidance");
 };
 
+private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
 TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
 private _args = [_this,
             [   _shooter,
@@ -139,7 +140,7 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters]
+            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_pitchYaw select 1, 0, _pitchYaw select 2]]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");

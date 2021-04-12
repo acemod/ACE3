@@ -18,7 +18,7 @@ params ["_args", "_timestep", "_seekerTargetPos", "_profileAdjustedTargetPos"];
 _args params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["","","","","","","_projectile"];
 _stateParams params ["", "", "", "","_navigationParams"];
-_navigationParams params ["_lastMissileFrame", "", "_navigationGain"];
+_navigationParams params ["_lastMissileFrame", "_navigationGain"];
 _lastMissileFrame params ["_lastTargetPosition", "_lastTargetVelocity", "_lastLineOfSight"];
 
 // Proportional navigation implemented via "Fundamentals of proportional navigation" by Stephen Murtaugh and Harry Criel

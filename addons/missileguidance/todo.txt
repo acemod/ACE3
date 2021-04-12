@@ -15,7 +15,7 @@ Seeker Types:
     Laser - causes lots of weapon noise, causing bad guidance
 
 Navigation Types:
-    GBU-12 - LOS Guidance
+    GBU-12 - Simple ProNav Guidance
     NLAW - LOS Guidance
     Dragon - LOS Guidance
     Metis - LOS Guidance

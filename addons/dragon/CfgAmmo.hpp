@@ -36,9 +36,8 @@ class CfgAmmo {
         maxControlRange = 1500;
 
         class ace_missileguidance {
-            minDeflection = 0;
-            maxDeflection = 0;
-            incDeflection = 0;
+            pitchRate = 0;
+            yawRate = 0;
 
             canVanillaLock = 0;
 
@@ -48,6 +47,9 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
+
+            defaultNavigationType = "LineOfSight";
+            navigationTypes[] = { "LineOfSight" };
 
             seekLastTargetPos = 0;
             seekerAngle = 30;
