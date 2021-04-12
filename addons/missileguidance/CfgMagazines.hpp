@@ -24,4 +24,26 @@ class CfgMagazines {
         descriptionShort = "24 Round DAGR";
         weight = 72;
     };
+
+    class PylonRack_12Rnd_PG_missiles;
+    class PylonRack_6Rnd_ACE_DAGR: PylonRack_12Rnd_PG_missiles {
+        ammo = "ACE_Hydra70_DAGR";
+        displayName = "6x DAGR [ACE]";
+        count = 6;
+        pylonWeapon = QGVAR(dagr);
+    };
+
+    class PylonRack_12Rnd_ACE_DAGR: PylonRack_12Rnd_PG_missiles {
+        ammo = "ACE_Hydra70_DAGR";
+        displayName = "12x DAGR [ACE]";
+        count = 12;
+        pylonWeapon = QGVAR(dagr);
+    };
+
+    class PylonRack_24Rnd_ACE_DAGR: PylonRack_12Rnd_PG_missiles {
+        ammo = "ACE_Hydra70_DAGR";
+        displayName = "24x DAGR [ACE]";
+        count = 24;
+        pylonWeapon = QGVAR(dagr);
+    };
 };

@@ -29,6 +29,10 @@ private _laserResult = [(getPosASL _projectile), (velocity _projectile), _seeker
 private _foundTargetPos = _laserResult select 0;
 TRACE_1("Search", _laserResult);
 
+if (isNil "_foundTargetPos") exitWith {
+	[0, 0, 0]
+};
+
 // average out any error from laser jump
 private _positionSum = [0, 0, 0];
 {

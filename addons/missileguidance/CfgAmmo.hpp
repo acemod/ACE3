@@ -20,18 +20,20 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
 
-            minDeflection = 0.0005;      // Minium flap deflection for guidance
-            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
-            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
+            pitchRate = 50; // degrees per second
+            yawRate = 50;
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
             // Guidance type for munitions
             defaultSeekerType = "SALH";
-            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };
+            seekerTypes[] = { "SALH" };
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
+
+            defaultNavigationType = "ProportionalNavigation";
+            navigationTypes[] = { "ProportionalNavigation" };
 
             seekerAngle = 90;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
