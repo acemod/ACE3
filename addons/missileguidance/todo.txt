@@ -16,10 +16,10 @@ Seeker Types:
 
 Navigation Types:
     GBU-12 - Simple ProNav Guidance
-    NLAW - LOS Guidance
-    Dragon - LOS Guidance
-    Metis - LOS Guidance
-    HOT - LOS Guidance
+    X NLAW - LOS Guidance
+    X Dragon - LOS Guidance
+    X Metis - LOS Guidance
+    X HOT - LOS Guidance
 
     Javelin - Pro Nav
     Hellfire - Pro Nav
