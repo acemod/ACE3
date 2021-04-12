@@ -75,8 +75,8 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
             } else {
                 _clampedYaw / abs _clampedYaw
             };
-            _clampedPitch = _pitchSign * _pitchRate;
-            _clampedYaw = _yawSign * _clampedYaw;
+            _clampedPitch = _pitchSign * 50;
+            _clampedYaw = _yawSign * 50;
         };
 
         TRACE_9("pitch/yaw/roll",_pitch,_yaw,_roll,_yawChange,_pitchChange,_pitchRate,_yawRate,_clampedPitch,_clampedYaw);

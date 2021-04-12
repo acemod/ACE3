@@ -96,10 +96,6 @@ class GVAR(NavigationTypes) {
     class LineOfSight {
         functionName = QFUNC(navigationType_lineOfSight);
     };
-    class SimpleProportionalNavigation {
-        functionName = QFUNC(navigationType_simpleProNav);
-        onFired = QFUNC(simpleProNav_onFired);
-    };
     class ProportionalNavigation {       
         functionName = QFUNC(navigationType_proNav);
         onFired = QFUNC(proNav_onFired);

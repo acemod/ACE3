@@ -19,9 +19,6 @@
 
 params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
 
-// Bail on not missile
-if (!(_ammo isKindOf "MissileBase")) exitWith {};
-
 // Bail if guidance is disabled for this ammo
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
 
