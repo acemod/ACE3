@@ -40,10 +40,10 @@ private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
 private _object = _item;
 if (_item isEqualType objNull) then {
-    detach _item;
+    detach _object;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_item, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
+    [QGVAR(serverUnload), [_object, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
 } else {
     _object = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
     _object setPosASL (AGLtoASL _posBehindVehicleAGL);
