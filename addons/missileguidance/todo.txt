@@ -12,7 +12,7 @@ Weapon Configs:
     NLAW - PLOS
 
 Seeker Types:
-    Laser - causes lots of weapon noise, causing bad guidance
+    X Laser - causes lots of weapon noise, causing bad guidance
 
 Navigation Types:
     GBU-12 - Simple ProNav Guidance
