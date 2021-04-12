@@ -2,6 +2,7 @@ class CfgAmmo {
     class Bo_GBU12_LGB;
     class GVAR(12): Bo_GBU12_LGB {
         maneuvrability = 0; // no maneuvrability so that default guidance doesnt work
+        airFriction = 0.25; // bombs have high drag who woulda thunk
         class ace_missileguidance {
             enabled = 1;
 
