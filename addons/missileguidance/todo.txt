@@ -21,9 +21,10 @@ Navigation Types:
     X Metis - LOS Guidance
     X HOT - LOS Guidance
 
-    Javelin - Pro Nav
+    X Javelin - Pro Nav
     Hellfire - Pro Nav
     AGM-65 - Pro Nav
     DAGR - Pro Nav
 
-
+Navigation States:
+    Todo
