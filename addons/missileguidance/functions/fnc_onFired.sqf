@@ -119,7 +119,7 @@ private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
 TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
 private _args = [_this,
             [   _shooter,
-                [_target, _targetPos, _launchPos],
+                [_target, _targetPos, _launchPos, vectorDirVisual vehicle _shooter],
                 _seekerType,
                 _attackProfile,
                 _lockMode,
@@ -141,26 +141,26 @@ private _args = [_this,
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
-TRACE_1("",_onFiredFunc);
+TRACE_1("seeker on fired",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
 
 _onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
-TRACE_1("",_onFiredFunc);
+TRACE_1("attack on fired",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
 
 _onFiredFunc = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "onFired");
-TRACE_1("",_onFiredFunc);
+TRACE_1("navigation on fired",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
 
 // Run the "onFired" function passing the full guidance args array
 _onFiredFunc = getText (_config >> "onFired");
-TRACE_1("",_onFiredFunc);
+TRACE_1("general on fired",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
@@ -169,7 +169,7 @@ if (_onFiredFunc != "") then {
 //  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 //      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];
-//          _targetLaunchParams params ["_target", "_targetPos", "_launchPos"];
+//          _targetLaunchParams params ["_target", "_targetPos", "_launchPos"m "_launchDir"];
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState","_navigationParams"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 

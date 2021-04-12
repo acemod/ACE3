@@ -59,10 +59,17 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
 
         _commandedAcceleration = _projectile vectorWorldToModelVisual _commandedAcceleration;
         _commandedAcceleration params ["_yawChange", "", "_pitchChange"];
+
+        if (isNil "_yawChange") then {
+            _yawChange = 0;
+        };
+        if (isNil "_pitchChange") then {
+            _pitchChange = 0;
+        };
         
         private _clampedPitch = (_pitchChange min _pitchRate) max -_pitchRate;
         private _clampedYaw = (_yawChange min _yawRate) max -_yawRate;
-
+        
         // controls are either on or off, no proportional
         if (_isBangBangGuidance) then {
             private _pitchSign = if (_clampedPitch == 0) then {

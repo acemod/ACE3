@@ -22,7 +22,7 @@ _args params ["_firedEH", "_launchParams", "_flightParams", "", "_stateParams"];
 _stateParams params ["", "_seekerStateParams"];
 _launchParams params ["","_targetLaunchParams","_seekerType"];
 
-_targetLaunchParams params ["", "", "_launchPos"];
+_targetLaunchParams params ["", "", "_launchPos", "_launchDir"];
 _firedEH params ["","","","","","","_projectile"];
 
 // Get state params:
@@ -37,6 +37,10 @@ private _heightAboveLaunch = (_projectilePos select 2) - (_launchPos select 2);
 
 // Add height depending on distance for compensate
 private _returnTargetPos = _seekerTargetPos;
+if (_returnTargetPos isEqualTo [0, 0, 0]) then {
+    _initialDistanceToTarget = 8000;
+    _returnTargetPos = _launchPos vectorAdd (_launchDir vectorMultiply _initialDistanceToTarget);
+};
 
 private _closingRate = vectorMagnitude velocity _projectile;
 private _timeToGo = (_projectilePos distance _seekerTargetPos) / _closingRate;
@@ -52,6 +56,7 @@ private _atMinRotationAngle = _angleToTarget >= (0.5 * _pitchRate * _timeToGo);
 switch (_attackStage) do {
     case STAGE_LAUNCH: { // Gain height quickly to pass terrain mask
         _missileStateData params ["_heightBeforeStateSwitch", "_initialDistanceToTarget"];
+
         _returnTargetPos set [2, _heightBeforeStateSwitch + (_initialDistanceToTarget * sin 20)]; // 100 and 36.4 gives a 20 deg angle
 
         if (_heightAboveLaunch > _configLaunchHeightClear) then {
@@ -70,6 +75,7 @@ switch (_attackStage) do {
     };
     case STAGE_SEEK_CRUISE: { // Slowly gain altitude while searching for target
         _missileStateData params ["_heightBeforeStateSwitch", "_initialDistanceToTarget"];
+        
         // Before 4000 cruise at 5.7 degrees up, then level out
         _returnTargetPos set [2, _heightBeforeStateSwitch + (_initialDistanceToTarget * sin 5.7)];
         
