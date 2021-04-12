@@ -53,40 +53,40 @@ _object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir
 
 // open parachute and ir light effect
 [{
-    params ["_item"];
+    params ["_object"];
 
-    if (isNull _item || {getPos _item select 2 < 1}) exitWith {};
+    if (isNull _object || {getPos _object select 2 < 1}) exitWith {};
 
     private _parachute = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 
     // cannot use setPos on parachutes without them closing down
-    _parachute attachTo [_item, [0,0,0]];
+    _parachute attachTo [_object, [0,0,0]];
     detach _parachute;
 
-    private _velocity = velocity _item;
+    private _velocity = velocity _object;
 
-    _item attachTo [_parachute, [0,0,1]];
+    _object attachTo [_parachute, [0,0,1]];
     _parachute setVelocity _velocity;
 
-    if ((GVAR(disableParadropEffectsClasstypes) findIf {_item isKindOf _x}) == -1) then {
+    if ((GVAR(disableParadropEffectsClasstypes) findIf {_object isKindOf _x}) == -1) then {
         private _light = "Chemlight_yellow" createVehicle [0,0,0];
-        _light attachTo [_item, [0,0,0]];
+        _light attachTo [_object, [0,0,0]];
     };
 
 }, [_object], 0.7] call CBA_fnc_waitAndExecute;
 
 // smoke effect when crate landed
 [{
-    (_this select 0) params ["_item"];
+    (_this select 0) params ["_object"];
 
-    if (isNull _item) exitWith {
+    if (isNull _object) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (getPos _item select 2 < 1) then {
-        if ((GVAR(disableParadropEffectsClasstypes) findIf {_item isKindOf _x}) == -1) then {
+    if (getPos _object select 2 < 1) then {
+        if ((GVAR(disableParadropEffectsClasstypes) findIf {_object isKindOf _x}) == -1) then {
             private _smoke = "SmokeshellYellow" createVehicle [0,0,0];
-            _smoke attachTo [_item, [0,0,0]];
+            _smoke attachTo [_object, [0,0,0]];
         };
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
