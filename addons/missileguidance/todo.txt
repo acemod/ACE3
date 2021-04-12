@@ -23,7 +23,7 @@ Navigation Types:
 
     X Javelin - Pro Nav
     X Hellfire - Pro Nav
-    AGM-65 - Pro Nav
+    X AGM-65 - Pro Nav
     DAGR - Pro Nav
 
 Navigation States:

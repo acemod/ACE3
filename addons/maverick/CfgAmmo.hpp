@@ -16,9 +16,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            minDeflection = 0;
-            maxDeflection = 0.002;
-            incDeflection = 0.001;
+            pitchRate = 30;
+            yawRate = 30;
 
             canVanillaLock = 0;
 
@@ -27,6 +26,9 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = {"LOAL","LOBL"};
+
+            defaultNavigationType = "ProportionalNavigation";
+            navigationTypes[] = { "ProportionalNavigation" };
 
             seekLastTargetPos = 1;
             seekerAngle = 60;
@@ -49,9 +51,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            minDeflection = 0;
-            maxDeflection = 0.002;
-            incDeflection = 0.001;
+            pitchRate = 45;
+            yawRate = 45;
 
             canVanillaLock = 0;
 
@@ -60,6 +61,9 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = {"LOAL"};
+
+            defaultNavigationType = "ProportionalNavigation";
+            navigationTypes[] = { "ProportionalNavigation" };
 
             seekLastTargetPos = 1;
             seekerAngle = 40;
