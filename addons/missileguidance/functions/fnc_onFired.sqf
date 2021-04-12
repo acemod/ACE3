@@ -175,6 +175,10 @@ if (_onFiredFunc != "") then {
 
 [LINKFUNC(guidancePFH),0, _args ] call CBA_fnc_addPerFrameHandler;
 
+#ifdef ENABLE_PROJECTILE_CAMERA
+[_projectile] call GVAR(dev_fnc_projectileCamera);
+#endif
+
 
 /* Clears locking settings
 (vehicle _shooter) setVariable [QGVAR(target), nil];

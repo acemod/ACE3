@@ -3,6 +3,7 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
  #define DRAW_GUIDANCE_INFO
+ #define ENABLE_PROJECTILE_CAMERA
  #define DEBUG_MODE_FULL
  #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
