@@ -18,8 +18,6 @@
 
 BEGIN_COUNTER(guidancePFH);
 
-#define TIMESTEP_FACTOR diag_deltaTime
-
 params ["_args", "_pfID"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
@@ -30,6 +28,8 @@ if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     [_pfID] call CBA_fnc_removePerFrameHandler;
     END_COUNTER(guidancePFH);
 };
+
+private _timestep = diag_deltaTime * accTime;
 
 _flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance"];
 
@@ -45,7 +45,7 @@ private _projectilePos = getPosASLVisual _projectile;
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
 if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqualTo [0,0,0]}) then {
     private _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName");
-    private _commandedAcceleration = [_args, TIMESTEP_FACTOR, _seekerTargetPos, _profileAdjustedTargetPos] call (missionNamespace getVariable _navigationFunction);
+    private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos] call (missionNamespace getVariable _navigationFunction);
 
     #ifdef DRAW_GUIDANCE_INFO
     private _projectilePosAGL = ASLToAGL _projectilePos;
@@ -81,13 +81,12 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
 
         TRACE_9("pitch/yaw/roll",_pitch,_yaw,_roll,_yawChange,_pitchChange,_pitchRate,_yawRate,_clampedPitch,_clampedYaw);
 
-        _pitch = _pitch + _clampedPitch * TIMESTEP_FACTOR;
-        _yaw = _yaw + _clampedYaw * TIMESTEP_FACTOR;
+        _pitch = _pitch + _clampedPitch * _timestep;
+        _yaw = _yaw + _clampedYaw * _timestep;
 
         TRACE_3("new pitch/yaw/roll",_pitch,_yaw,_roll);
         
         [_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
-        _projectile setVelocityModelSpace [0, vectorMagnitude velocity _projectile, 0];
 
         _guidanceParameters set [0, _yaw];
         _guidanceParameters set [2, _pitch];

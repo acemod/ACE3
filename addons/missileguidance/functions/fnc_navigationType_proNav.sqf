@@ -25,8 +25,10 @@ _lastMissileFrame params ["_lastTargetPosition", "_lastTargetVelocity", "_lastLi
 private _projectileVelocity = velocity _projectile;
 
 // integrate target velocity for realistic inference of velocity
-private _targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / _timestep);
-private _targetAcceleration = (_targetVelocity vectorDiff _lastTargetVelocity) vectorMultiply (1 / _timestep);
+private _targetVelocity = _lastTargetVelocity;
+if (_timestep != 0) then {
+	_targetVelocity = (_seekerTargetPos vectorDiff _lastTargetPosition) vectorMultiply (1 / _timestep);
+};
 
 private _closingVelocity = _targetVelocity vectorDiff _projectileVelocity;
 
@@ -35,7 +37,11 @@ private _lineOfSight = vectorNormalized (_profileAdjustedTargetPos vectorDiff ge
 // the los rate is tiny, so we multiply by a constant of a power of ten to get more aggressive acceleration
 // this is just due to how we measure our LOS delta, the vectors involved are _tiny_
 private _losDelta = _lineOfSight vectorDiff _lastLineOfSight;
-private _losRate = 1000 * (vectorMagnitude _losDelta) / _timestep;
+private _losRate = if (_timestep == 0) then {
+	0
+} else {
+	10 * (vectorMagnitude _losDelta) / _timestep; 
+};
 
 private _lateralAcceleration = (_navigationGain * _losRate);
 private _commandedAcceleration = _closingVelocity vectorMultiply _lateralAcceleration;
