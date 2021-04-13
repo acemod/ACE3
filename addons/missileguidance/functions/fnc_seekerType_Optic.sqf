@@ -17,7 +17,7 @@
  */
 
 params ["", "_args"];
-_args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
+_args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["","","","","","","_projectile"];
 _launchParams params ["", "_targetParams"];
 _targetParams params ["_target"];
@@ -40,14 +40,14 @@ TRACE_2("", _angleOkay, _losOkay);
 if (!_angleOkay || !_losOkay) exitWith {[0,0,0]};
 
 TRACE_2("", _target, _foundTargetPos);
-// @TODO: Configurable lead for seekers
 private _projectileSpeed = (vectorMagnitude velocity _projectile);
 private _distanceToTarget = (getPosASL _projectile) vectorDistance _foundTargetPos;
 private _eta = _distanceToTarget / _projectileSpeed;
 
-private _adjustDistance = (velocity _target) vectorMultiply _eta;
-TRACE_3("leading target",_distanceToTarget,_eta,_adjustDistance);
-//_foundTargetPos = _foundTargetPos vectorAdd _adjustDistance;
+_targetData set [0, (getPosASL _projectile) vectorFromTo _foundTargetPos];
+_targetData set [1, _distanceToTarget];
+_targetData set [2, velocity _target];
+_targetData set [3, 0];
 
 TRACE_2("return",_foundTargetPos,(aimPos _target) distance _foundTargetPos);
 _foundTargetPos;

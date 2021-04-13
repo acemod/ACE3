@@ -93,6 +93,7 @@ class GVAR(SeekerTypes) {
 class GVAR(NavigationTypes) {
     class LineOfSight {
         functionName = QFUNC(navigationType_lineOfSight);
+        onFired = QFUNC(proNav_onFired);
     };
     class ProportionalNavigation {       
         functionName = QFUNC(navigationType_proNav);
@@ -101,5 +102,8 @@ class GVAR(NavigationTypes) {
     class AugmentedProportionalNavigation {       
         functionName = QFUNC(navigationType_augmentedProNav);
         onFired = QFUNC(proNav_onFired);
+    };
+    class ZeroEffortMiss {
+        functionName = QFUNC(navigationType_zeroEffortMiss);
     };
 };

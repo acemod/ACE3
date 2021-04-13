@@ -60,7 +60,7 @@ Navigation States:
 
 Navigation Types:
     X Augmented Pro-Nav
-    Zero Effort Miss
+    X Zero Effort Miss
 
 General To-Do:
     Add more weapons

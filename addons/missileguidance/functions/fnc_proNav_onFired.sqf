@@ -29,8 +29,6 @@ if (_navigationGain == 0) then {
 
 _navigationParams = [
 	[   // Last Missile Frame
-		[0, 0, 0],  // Last target position array
-		[0, 0, 0],  // Last target velocity
 		[0, 0, 0]   // Last line of sight
 	], 
 	_navigationGain // navigation gain of missile. Set in the navigation onFired function

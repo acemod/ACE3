@@ -22,8 +22,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            defaultNavigationType = "AugmentedProportionalNavigation";
-            navigationTypes[] = { "AugmentedProportionalNavigation" };
+            defaultNavigationType = "ZeroEffortMiss";
+            navigationTypes[] = { "ZeroEffortMiss" };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 50;           // Angle from the shooter's view that can track the missile
@@ -62,8 +62,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            defaultNavigationType = "AugmentedProportionalNavigation";
-            navigationTypes[] = { "AugmentedProportionalNavigation" };
+            defaultNavigationType = "ZeroEffortMiss";
+            navigationTypes[] = { "ZeroEffortMiss" };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 50;           // Angle from the shooter's view that can track the missile

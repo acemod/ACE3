@@ -16,7 +16,7 @@
  * Public: No
  */
 params ["", "_args"];
-_args params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
+_args params ["_firedEH", "", "", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _seekerParams params ["_seekerAngle"];
 _stateParams params ["", "_seekerStateParams"];
@@ -57,6 +57,8 @@ if ((_testDotProduct < (cos _seekerAngle)) || {_testIntersections isNotEqualTo [
     // out of LOS of seeker
     [0, 0, 0]
 };
+
+_targetData set [0, _lookDirection];
 
 _shooterPos vectorAdd (_lookDirection vectorMultiply _distanceToProj);
 

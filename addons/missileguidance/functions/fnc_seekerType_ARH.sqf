@@ -16,7 +16,7 @@
  * Public: No
  */
 params ["", "_args", "_seekerStateParams"];
-_args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
+_args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["_target","","","",""];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
@@ -116,7 +116,13 @@ if !(isNull _target) then {
     _seekerStateParams set [7, velocity _target];
     _seekerStateParams set [8, CBA_missionTime];
     _seekerStateParams set [9, false];
+
+    _targetData set [1, _projectile distance _target];
+    _targetData set [2, velocity _target];
+    _targetData set [3, 0]; // todo: acceleration
 };
+
+_targetData set [0, _projectile vectorFromTo _expectedTargetPos];
 
 _seekerStateParams set [3, _expectedTargetPos];
 _launchParams set [0, _target];

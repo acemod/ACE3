@@ -19,7 +19,7 @@
 #define MAX_AVERAGES 15
 
 params ["", "_args"];
-_args params ["_firedEH", "_launchParams", "", "_seekerParams"];
+_args params ["_firedEH", "_launchParams", "", "_seekerParams", "", "_targetData"];
 _firedEH params ["","","","","","","_projectile"];
 _launchParams params ["","","","","","_laserParams"];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange", "", ["_lastPositions", []], ["_lastPositionIndex", 0]];
@@ -51,6 +51,11 @@ if (MAX_AVERAGES == count _lastPositions) then {
 } else {
 	_positionSum = _positionSum vectorMultiply (1 / count _lastPositions);
 };
+
+_targetData set [0, (getPosASL _projectile) vectorFromTo _positionSum];
+_targetData set [1, 0];
+_targetData set [2, 0];
+_targetData set [3, 0];
 
 TRACE_3("laser target found",_foundTargetPos,_positionSum,count _lastPositions);
 

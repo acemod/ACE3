@@ -137,7 +137,14 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_pitchYaw select 1, 0, _pitchYaw select 2]]
+            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_pitchYaw select 1, 0, _pitchYaw select 2]],
+            [
+                // target data from missile. Must be filled by seeker for navigation to work
+                [0, 0, 0],  // direction to target
+                0,          // range to target
+                [0, 0, 0],  // target velocity
+                [0, 0, 0]   // target acceleration
+            ]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
@@ -166,13 +173,14 @@ if (_onFiredFunc != "") then {
 };
 
 // Reverse:
-//  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
+//  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData"];
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 //      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];
 //          _targetLaunchParams params ["_target", "_targetPos", "_launchPos", "_launchDir", "_launchTime"];
 //      _flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance"];
-//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState","_navigationParams"];
+//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState","_navigationParams", "_guidanceParameters"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
+//      _targetData params ["_targetDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
 [LINKFUNC(guidancePFH),0, _args ] call CBA_fnc_addPerFrameHandler;
 
