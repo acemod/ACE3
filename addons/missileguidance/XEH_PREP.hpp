@@ -19,9 +19,8 @@ PREP(handleHandoff);
 // Attack Profiles
 PREP(attackProfile_AIR);
 PREP(attackProfile_DIR);
-PREP(attackProfile_HI);
 PREP(attackProfile_LIN);
-PREP(attackProfile_MID);
+PREP(attackProfile_LOFT);
 PREP(attackProfile_WIRE);
 PREP(attackProfile_BEAM);
 

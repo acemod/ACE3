@@ -3,6 +3,9 @@ class CfgAmmo {
     class GVAR(c): ammo_Missile_AMRAAM_C {
         author = "Brandon (TCVM)";
         maneuvrability = 0;
+        flightProfiles[] = {"Direct", "Loft"};
+        class Direct {}; // dummy to allow for F cycling of missile mode
+        class Loft {};
         class ace_missileguidance {
             enabled = 1;
 
@@ -30,8 +33,9 @@ class CfgAmmo {
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
 
             // Attack profile type selection
-            defaultAttackProfile = "LIN";
-            attackProfiles[] = {"LIN"};
+            defaultAttackProfile = "DIR";
+            attackProfiles[] = {"DIR", "LOFT"};
+            useModeForAttackProfile = 1;
         };
     };
     
@@ -39,6 +43,9 @@ class CfgAmmo {
     class GVAR(d): ammo_Missile_AMRAAM_D {
         author = "Brandon (TCVM)";
         maneuvrability = 0;
+        flightProfiles[] = {"Direct", "TopDown"};
+        class Direct {}; // dummy to allow for F cycling of missile mode
+        class TopDown {};
         class ace_missileguidance {
             enabled = 1;
 
@@ -66,8 +73,9 @@ class CfgAmmo {
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
 
             // Attack profile type selection
-            defaultAttackProfile = "LIN";
-            attackProfiles[] = {"LIN"};
+            defaultAttackProfile = "DIR";
+            attackProfiles[] = {"DIR", "LOFT"};
+            useModeForAttackProfile = 1;
         };
     };
 };

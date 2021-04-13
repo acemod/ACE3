@@ -6,6 +6,11 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_LIN);
     };
+    // empty classes for backwards compat
+    class MID: LIN {
+    };
+    class HI: LIN {
+    };
     class DIR {
         name = "";
         visualName = "";
@@ -13,21 +18,14 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_DIR);
     };
-    class MID {
+    class LOFT {
         name = "";
         visualName = "";
         description = "";
 
-        functionName = QFUNC(attackProfile_MID);
+        functionName = QFUNC(attackProfile_LOFT);
     };
-    class HI {
-        name = "";
-        visualName = "";
-        description = "";
-
-        functionName = QFUNC(attackProfile_HI);
-    };
-     class JAV_DIR {
+    class JAV_DIR {
         name = "";
         visualName = "";
         description = "";
