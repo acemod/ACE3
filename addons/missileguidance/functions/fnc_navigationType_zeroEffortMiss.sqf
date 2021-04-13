@@ -21,6 +21,8 @@ _stateParams params ["", "", "", "","_navigationParams"];
 _navigationParams params ["", "_navigationGain"];
 _targetData params ["_targetDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
+_navigationGain = 3;
+
 private _vectorToTarget = _targetDirection vectorMultiply _targetRange;
 private _closingVelocity = _targetVelocity vectorDiff velocity _projectile;
 private _timeToGo = _targetRange / vectorMagnitude _closingVelocity;

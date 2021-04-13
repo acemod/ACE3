@@ -122,7 +122,7 @@ if !(isNull _target) then {
     _targetData set [3, 0]; // todo: acceleration
 };
 
-_targetData set [0, _projectile vectorFromTo _expectedTargetPos];
+_targetData set [0, (getPosASLVisual _projectile) vectorFromTo _expectedTargetPos];
 
 _seekerStateParams set [3, _expectedTargetPos];
 _launchParams set [0, _target];

@@ -47,6 +47,10 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
     private _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName");
     private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos] call (missionNamespace getVariable _navigationFunction);
 
+    if (isNil "_commandedAcceleration") exitWith {
+        ERROR_MSG("_commandedAcceleration is nil! Guidance cancelled");
+    };
+
     #ifdef DRAW_GUIDANCE_INFO
     private _projectilePosAGL = ASLToAGL _projectilePos;
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];

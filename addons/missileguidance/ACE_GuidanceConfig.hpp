@@ -105,5 +105,6 @@ class GVAR(NavigationTypes) {
     };
     class ZeroEffortMiss {
         functionName = QFUNC(navigationType_zeroEffortMiss);
+        onFired = QFUNC(proNav_onFired);
     };
 };
