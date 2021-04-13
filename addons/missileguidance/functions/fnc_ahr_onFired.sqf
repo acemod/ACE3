@@ -38,6 +38,8 @@ private _activeRadarDistance = [_config >> "activeRadarEngageDistance", "NUMBER"
 private _projectileThrust = [_projectileConfig >> "thrust", "NUMBER", 0] call CBA_fnc_getConfigEntry;
 private _projectileThrustTime = [_projectileConfig >> "thrustTime", "NUMBER", 0] call CBA_fnc_getConfigEntry;
 
+private _lockTypes = [_config >> "lockableTypes", "ARRAY", ["Air", "LandVehicle", "Ship"]] call CBA_fnc_getConfigEntry;
+
 private _velocityAtImpact = _projectileThrust * _projectileThrustTime;
 private _timeToActive = 0;
 if (!isNil "_target" && _velocityAtImpact > 0) then {
@@ -70,4 +72,5 @@ _seekerStateParams set [6, false];
 _seekerStateParams set [7, [0, 0, 0]];
 _seekerStateParams set [8, CBA_missionTime];
 _seekerStateParams set [9, isNull _target];
+_seekerStateParams set [10, _lockTypes];
 

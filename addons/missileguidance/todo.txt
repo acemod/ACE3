@@ -29,9 +29,10 @@ Weapon Configs:
     KH-58 - Passive Radar Homing
 
 Seeker Types:
-    X Laser - causes lots of weapon noise, causing bad guidance
+    X Laser
     Optical
     Infrared
+    GPS/INS
 
 Navigation Types:
     X GBU-12 - LOS Guidance

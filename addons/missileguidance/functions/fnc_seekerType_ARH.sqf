@@ -20,7 +20,7 @@ _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["_target","","","",""];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
-_seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownVelocity", "_lastTimeSeen", "_doesntHaveTarget"];
+_seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownVelocity", "_lastTimeSeen", "_doesntHaveTarget", "_lockTypes"];
 
 if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     if !(_isActive) then {
@@ -60,7 +60,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             _seekerBaseRadiusAdjusted = _seekerBaseRadiusAtGround;
         };
         // Look in front of seeker for any targets
-        private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, ["Air", "LandVehicle", "Ship"], _seekerBaseRadiusAdjusted, false];
+        private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
         _nearestObjects = _nearestObjects apply {
             // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
             if ([_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && { ([_projectile, _x, true] call FUNC(checkLOS)) || { ([_projectile, _x, false] call FUNC(checkLOS)) } }) then {
