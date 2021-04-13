@@ -53,9 +53,6 @@ if (MAX_AVERAGES == count _lastPositions) then {
 };
 
 _targetData set [0, (getPosASL _projectile) vectorFromTo _positionSum];
-_targetData set [1, 0];
-_targetData set [2, 0];
-_targetData set [3, 0];
 
 TRACE_3("laser target found",_foundTargetPos,_positionSum,count _lastPositions);
 
