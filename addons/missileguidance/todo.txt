@@ -11,8 +11,27 @@ Weapon Configs:
     Javelin - Optical
     NLAW - PLOS
 
+    Vikhr - Beam Rider SACLOS
+
+    R-73 - Infrared
+    AIM-9 - Infrared
+
+    R-77 - AHR
+    AIM-120 - AHR
+    AIM-132 - AHR
+
+    KH-25 - Optical
+    AGM-65 - Optical
+
+    GBU-SDB - GPS/INS
+
+    AGM-88 - Passive Radar Homing
+    KH-58 - Passive Radar Homing
+
 Seeker Types:
     X Laser - causes lots of weapon noise, causing bad guidance
+    Optical
+    Infrared
 
 Navigation Types:
     X GBU-12 - LOS Guidance
@@ -20,11 +39,20 @@ Navigation Types:
     X Dragon - LOS Guidance
     X Metis - LOS Guidance
     X HOT - LOS Guidance
+    Vikhr - LOS Guidance
+    GBU-SDB - LOS Guidance
 
     X Javelin - Pro Nav
     X Hellfire - Pro Nav
     X AGM-65 - Pro Nav
     X DAGR - Pro Nav
+    R-73 - Pro Nav
+    R-77 - Pro Nav
+    AIM-120 - Pro Nav
+    AIM-132 - Pro Nav
+    KH-25 - Pro Nav
+    AGM-88 - Pro Nav
+    KH-58 - Pro Nav
 
 Navigation States:
     Todo
@@ -32,3 +60,4 @@ Navigation States:
 General To-Do:
     Add more weapons
     X Fix GBU drag
+    Make sure all applicable pylons can hold all applicable weapons
