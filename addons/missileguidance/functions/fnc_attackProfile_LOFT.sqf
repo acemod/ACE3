@@ -32,6 +32,7 @@ if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith {
 };
 
 private _projectilePos = getPosASLVisual _projectile;
+private _distanceToTarget2d = _projectilePos distance2d _seekerTargetPos;
 
 private _closingRate = vectorMagnitude velocity _projectile;
 private _timeToGo = (_projectilePos distance _seekerTargetPos) / _closingRate;
@@ -44,7 +45,7 @@ private _atMinRotationAngle = _angleToTarget >= (0.5 * _pitchRate * _timeToGo);
 
 private _returnTargetPos = _seekerTargetPos;
 
-if !(_atMinRotationAngle) then {
+if (!_atMinRotationAngle && _distanceToTarget2d >= 500 && _timeToGo >= 10) then {
 	// 10 degree pitch up
 	_returnTargetPos = _seekerTargetPos vectorAdd [0, 0, (_projectilePos distance _seekerTargetPos) * sin 10];
 };

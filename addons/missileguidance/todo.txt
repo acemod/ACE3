@@ -1,24 +1,24 @@
 Weapon Configs:
-    Hellfire - Laser
-    AGM-65 - Laser
-    DAGR - Laser
-    GBU-12 - Laser
+    X Hellfire - Laser
+    X AGM-65 - Laser
+    X DAGR - Laser
+    X GBU-12 - Laser
 
-    Dragon - SACLOS
-    Metis - SACLOS
-    HOT - SACLOS
+    X Dragon - SACLOS
+    X Metis - SACLOS
+    X HOT - SACLOS
 
-    Javelin - Optical
-    NLAW - PLOS
+    X Javelin - Optical
+    X NLAW - PLOS
 
     Vikhr - Beam Rider SACLOS
 
     R-73 - Infrared
     AIM-9 - Infrared
+    AIM-132 - Infrared
 
     R-77 - AHR
-    AIM-120 - AHR
-    AIM-132 - AHR
+    X AIM-120 - AHR
 
     KH-25 - Optical
     AGM-65 - Optical
@@ -57,6 +57,10 @@ Navigation Types:
 
 Navigation States:
     Todo
+
+Navigation Types:
+    X Augmented Pro-Nav
+    Zero Effort Miss
 
 General To-Do:
     Add more weapons

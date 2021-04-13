@@ -29,6 +29,7 @@ PREP(attackProfile_JAV_DIR);
 PREP(attackProfile_JAV_TOP);
 
 // Navigation Profiles
+PREP(navigationType_augmentedProNav);
 PREP(navigationType_proNav);
 PREP(navigationType_lineOfSight);
 

@@ -98,4 +98,8 @@ class GVAR(NavigationTypes) {
         functionName = QFUNC(navigationType_proNav);
         onFired = QFUNC(proNav_onFired);
     };
+    class AugmentedProportionalNavigation {       
+        functionName = QFUNC(navigationType_augmentedProNav);
+        onFired = QFUNC(proNav_onFired);
+    };
 };

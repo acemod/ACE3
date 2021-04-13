@@ -83,6 +83,10 @@ class CfgAmmo {
 
             activeRadarEngageDistance = 1000;
             seekerMaxRange = 2000; // distance that the hellfire internal radar can scan
+
+            // we can get target acceleration data from radar
+            defaultNavigationType = "AugmentedProportionalNavigation";
+            navigationTypes[] = { "AugmentedProportionalNavigation" };
         };
 
         // Vanilla lock system vars
