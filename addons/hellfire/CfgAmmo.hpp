@@ -38,8 +38,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            defaultNavigationType = "ProportionalNavigation";
-            navigationTypes[] = { "ProportionalNavigation" };
+            defaultNavigationType = "ZeroEffortMiss";
+            navigationTypes[] = { "ZeroEffortMiss" };
 
             seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 70;           // Angle in front of the missile which can be searched
@@ -83,10 +83,6 @@ class CfgAmmo {
 
             activeRadarEngageDistance = 1000;
             seekerMaxRange = 2000; // distance that the hellfire internal radar can scan
-
-            // we can get target acceleration data from radar
-            defaultNavigationType = "AugmentedProportionalNavigation";
-            navigationTypes[] = { "AugmentedProportionalNavigation" };
         };
 
         // Vanilla lock system vars

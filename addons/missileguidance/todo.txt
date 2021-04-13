@@ -41,22 +41,25 @@ Navigation Types:
     X Metis - LOS Guidance
     X HOT - LOS Guidance
     Vikhr - LOS Guidance
-    GBU-SDB - LOS Guidance
 
-    X Javelin - Pro Nav
-    X Hellfire - Pro Nav
-    X AGM-65 - Pro Nav
-    X DAGR - Pro Nav
-    R-73 - Pro Nav
-    R-77 - Pro Nav
-    AIM-120 - Pro Nav
-    AIM-132 - Pro Nav
+    X DAGR - APN
+    X AGM-65 - APN
+    X KH-25 - APN
+    R-73 - APN
+    AGM-88 - APN
+    KH-58 - APN
+    AIM-9 - APN
+
+    X Javelin - ZEM
+    X Hellfire - ZEM
+    R-77 - ZEM
+    AIM-120 - ZEM
+    AIM-132 - ZEM
     KH-25 - Pro Nav
-    AGM-88 - Pro Nav
-    KH-58 - Pro Nav
+    GBU-SDB - ZEM
 
-Navigation States:
-    Todo
+Navigation State Machine:
+    Todo: Will allow for changing of navigation type in flight to get a more realistic flight profile
 
 Navigation Types:
     X Augmented Pro-Nav

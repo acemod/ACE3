@@ -27,8 +27,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = {"LOAL","LOBL"};
 
-            defaultNavigationType = "ProportionalNavigation";
-            navigationTypes[] = { "ProportionalNavigation" };
+            defaultNavigationType = "AugmentedProportionalNavigation";
+            navigationTypes[] = { "AugmentedProportionalNavigation" };
 
             seekLastTargetPos = 1;
             seekerAngle = 60;
@@ -62,8 +62,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = {"LOAL"};
 
-            defaultNavigationType = "ProportionalNavigation";
-            navigationTypes[] = { "ProportionalNavigation" };
+            defaultNavigationType = "AugmentedProportionalNavigation";
+            navigationTypes[] = { "AugmentedProportionalNavigation" };
 
             seekLastTargetPos = 1;
             seekerAngle = 40;

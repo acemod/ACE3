@@ -32,8 +32,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            defaultNavigationType = "ProportionalNavigation";
-            navigationTypes[] = { "ProportionalNavigation" };
+            defaultNavigationType = "AugmentedProportionalNavigation";
+            navigationTypes[] = { "AugmentedProportionalNavigation" };
 
             seekerAngle = 90;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
@@ -85,8 +85,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
             
-            defaultNavigationType = "ProportionalNavigation";
-            navigationTypes[] = { "ProportionalNavigation" };
+            defaultNavigationType = "ZeroEffortMiss";
+            navigationTypes[] = { "ZeroEffortMiss" };
 
             navigationGain = 3;
 
