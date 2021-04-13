@@ -13,5 +13,20 @@ class CfgMagazines {
         ammo = QGVAR(12);
         pylonWeapon = QGVAR(12);
     };
+
+    class magazine_Bomb_KAB250_x1;
+    class GVAR(1Rnd_FAB250): magazine_Bomb_KAB250_x1 {
+        displayName = "KAB-250M-54 [ACE]";
+        author = "Brandon (TCVM)";
+        ammo = QGVAR(FAB250);
+    };
+
+    class PylonMissile_Bomb_KAB250_x1;
+    class GVAR(1_PylonMissile_1Rnd_FAB250): PylonMissile_Bomb_KAB250_x1 {
+        displayName = "KAB-250M-54 [ACE]";
+        author = "Brandon (TCVM)";
+        ammo = QGVAR(FAB250);
+        pylonWeapon = QGVAR(FAB250);
+    };
 };
 

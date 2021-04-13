@@ -31,4 +31,4 @@ Navigation States:
 
 General To-Do:
     Add more weapons
-    Fix GBU drag
+    X Fix GBU drag
