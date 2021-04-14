@@ -19,7 +19,7 @@
 BEGIN_COUNTER(guidancePFH);
 
 params ["_args", "_pfID"];
-_args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
+_args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","","","","_navigationType"];
 _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_navigationParameters", "_guidanceParameters"];
@@ -40,6 +40,8 @@ _seekerTargetPos = AGLtoASL ASLToAGL _seekerTargetPos;
 private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams] call FUNC(doAttackProfile);
 
 private _projectilePos = getPosASLVisual _projectile;
+_targetData set [1, _projectilePos vectorFromTo _profileAdjustedTargetPos];
+
 
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
@@ -70,7 +72,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         if (isNil "_pitchChange") then {
             _pitchChange = 0;
         };
-        
+
         private _clampedPitch = (_pitchChange min _pitchRate) max -_pitchRate;
         private _clampedYaw = (_yawChange min _yawRate) max -_yawRate;
         

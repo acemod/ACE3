@@ -19,14 +19,14 @@ _args params ["_firedEH", "", "", "", "_stateParams", "_targetData"];
 _firedEH params ["","","","","","","_projectile"];
 _stateParams params ["", "", "", "","_navigationParams"];
 _navigationParams params ["", "_navigationGain"];
-_targetData params ["_targetDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
+_targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
-private _vectorToTarget = _targetDirection vectorMultiply _targetRange;
+private _vectorToTarget = _attackProfileDirection vectorMultiply _targetRange;
 private _closingVelocity = _targetVelocity vectorDiff velocity _projectile;
 private _timeToGo = _targetRange / vectorMagnitude _closingVelocity;
 
 private _zeroEffortMiss = _vectorToTarget vectorAdd (_closingVelocity vectorMultiply _timeToGo);
-private _zeroEffortMissProjectiled = _targetDirection vectorMultiply (_zeroEffortMiss vectorDotProduct _targetDirection);
+private _zeroEffortMissProjectiled = _attackProfileDirection vectorMultiply (_zeroEffortMiss vectorDotProduct _attackProfileDirection);
 private _zeroEffortMissNormal = _zeroEffortMiss vectorDiff _zeroEffortMissProjectiled;
 
 private _commandedAcceleration = _zeroEffortMissNormal vectorMultiply (_navigationGain / (_timeToGo * _timeToGo));

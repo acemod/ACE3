@@ -141,6 +141,7 @@ private _args = [_this,
             [
                 // target data from missile. Must be filled by seeker for navigation to work
                 [0, 0, 0],  // direction to target
+                [0, 0, 0],  // direction to attack profile
                 0,          // range to target
                 [0, 0, 0],  // target velocity
                 [0, 0, 0]   // target acceleration
@@ -180,7 +181,7 @@ if (_onFiredFunc != "") then {
 //      _flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance"];
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState","_navigationParams", "_guidanceParameters"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
-//      _targetData params ["_targetDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
+//      _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
 [LINKFUNC(guidancePFH),0, _args ] call CBA_fnc_addPerFrameHandler;
 
