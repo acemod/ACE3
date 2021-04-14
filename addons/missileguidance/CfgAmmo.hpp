@@ -85,8 +85,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
             
-            defaultNavigationType = "ZeroEffortMiss";
-            navigationTypes[] = { "ZeroEffortMiss" };
+            defaultNavigationType = "LineOfSight";
+            navigationTypes[] = { "LineOfSight", "ZeroEffortMiss" };
 
             navigationGain = 3;
 
@@ -102,6 +102,19 @@ class CfgAmmo {
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
             useModeForAttackProfile = 1;
+
+            class navigationStates {
+                class initial {
+                    transitionCondition = QFUNC(javelin_midCourseTransition);
+                    navigationType = "LineOfSight";
+                };
+                class terminal {
+                    transitionCondition = "";
+                    navigationType = "ZeroEffortMiss";
+                };
+                // transitions from initial -> termimal
+                states[] = {"initial", "terminal"};
+            };
         };
     };
     class ACE_Javelin_FGM148_static: ACE_Javelin_FGM148 {

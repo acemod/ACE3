@@ -19,10 +19,11 @@
 BEGIN_COUNTER(guidancePFH);
 
 params ["_args", "_pfID"];
-_args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData"];
+_args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData", "_navigationStateParams"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","","","","_navigationType"];
 _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_navigationParameters", "_guidanceParameters"];
+_navigationStateParams params ["_currentState", "_navigationStateData"];
 
 if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     [_pfID] call CBA_fnc_removePerFrameHandler;
@@ -47,15 +48,30 @@ _targetData set [1, _projectilePos vectorFromTo _profileAdjustedTargetPos];
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
 if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqualTo [0,0,0]}) then {
     private _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName");
+    if (_navigationStateData isNotEqualTo []) then {
+        (_navigationStateData select _currentState) params ["_transitionCondition"];
+        private _transition = (_args call (missionNamespace getVariable [_transitionCondition, { false }]));
+        if (_transition) then {
+            _currentState = _currentState + 1;
+            _navigationStateParams set [0, _currentState];
+        };
+
+        _navigationType = (_navigationStateData select _currentState) select 1;
+        _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName")
+    };
+
+    
     private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos] call (missionNamespace getVariable _navigationFunction);
 
     if (isNil "_commandedAcceleration") exitWith {
+        systemChat _navigationFunction;
         ERROR_MSG("_commandedAcceleration is nil! Guidance cancelled");
     };
 
     #ifdef DRAW_GUIDANCE_INFO
     private _projectilePosAGL = ASLToAGL _projectilePos;
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], _projectilePosAGL vectorAdd [0, 0, 2], 0.75, 0.75, 0, _navigationType, 1, 0.025, "TahomaB"];
     drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd _commandedAcceleration, [1, 0, 1, 1]];
     #endif
 

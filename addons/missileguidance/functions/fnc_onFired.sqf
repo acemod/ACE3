@@ -92,6 +92,8 @@ if (isNil "_target") then {
     };
 };
 
+_targetPos = getPosASLVisual _target;
+
 // Array for seek last target position
 private _seekLastTargetPos = (getNumber ( _config >> "seekLastTargetPos")) == 1;
 private _lastKnownPosState = [_seekLastTargetPos];
@@ -114,6 +116,24 @@ if (isNumber (_config >> "pitchRate")) then {
     _yawRate = getNumber ( _config >> "yawRate" );
     _bangBang = 1 == getNumber (_config >> "bangBangGuidance");
 };
+
+private _navigationStateSubclass = _config >> "navigationStates";
+private _states = getArray (_navigationStateSubclass >> "states");
+
+private _navigationStateData = [];
+private _initialState = "";
+
+if (_states isNotEqualTo []) then {
+    _initialState = _states select 0;
+    {
+        private _stateClass = _navigationStateSubclass >> _x;
+        _navigationStateData pushBack [
+            getText (_stateClass >> "transitionCondition"),
+            getText (_stateClass >> "navigationType")
+        ];
+    } forEach _states;
+};
+
 
 private _pitchYaw = (vectorDir _projectile) call CBA_fnc_vect2Polar;
 TRACE_5("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile,_navigationType);
@@ -145,7 +165,8 @@ private _args = [_this,
                 0,          // range to target
                 [0, 0, 0],  // target velocity
                 [0, 0, 0]   // target acceleration
-            ]
+            ],
+            [0, _navigationStateData]
         ];
 
 private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
@@ -174,7 +195,7 @@ if (_onFiredFunc != "") then {
 };
 
 // Reverse:
-//  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData"];
+//  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData", "_navigationStateData"];
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 //      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];
 //          _targetLaunchParams params ["_target", "_targetPos", "_launchPos", "_launchDir", "_launchTime"];

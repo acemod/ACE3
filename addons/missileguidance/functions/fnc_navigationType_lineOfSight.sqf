@@ -30,7 +30,7 @@ private _losDelta = _attackProfileDirection vectorDiff _lastLineOfSight;
 private _losRate = if (_timestep == 0) then {
 	0
 } else {
-	1 * (vectorMagnitude _losDelta) / _timestep; 
+	10 * (vectorMagnitude _losDelta) / _timestep; 
 };
 
 private _closingVelocity = _targetVelocity vectorDiff (velocity _projectile);

@@ -52,3 +52,6 @@ PREP(IR_onFired);
 // Navigation OnFired
 PREP(proNav_onFired);
 
+// State transitions
+PREP(javelin_midCourseTransition);
+
