@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["", "_args", "_seekerStateParams"];
+params ["", "_args", "_seekerStateParams", "", "", "_targetData"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
 _firedEH params ["","","","","","","_projectile"];
 _launchParams params ["", "_targetLaunchParams", "", "_attackProfile"];

@@ -16,7 +16,7 @@
  * Public: No
  */
 #ifdef DEBUG_MODE_FULL
-#define TRACK_ON_PAUSE true
+#define TRACK_ON_PAUSE false
 #else
 #define TRACK_ON_PAUSE false
 #endif
@@ -92,7 +92,6 @@ if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
 				private _flareRelativeVelocity = (velocity _x) vectorDiff _projectileVelocity;
 				private _angleBetweenVelocities = acos (_closingVelocity vectorCos _flareRelativeVelocity);
 
-				systemChat str [_angleBetweenVelocities, _flareAngleFilter];
 				if (_angleBetweenVelocities <= _flareAngleFilter) then {
 						_considering = true;
 						if (_seekerAccuracy <= random 1) then {

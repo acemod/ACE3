@@ -6,8 +6,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 20;      // Minium flap deflection for guidance
-            yawRate = 20;      // Maximum flap deflection for guidance
+            pitchRate = 5;      // Minium flap deflection for guidance
+            yawRate = 10;      // Maximum flap deflection for guidance
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 

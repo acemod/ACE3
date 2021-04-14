@@ -30,7 +30,7 @@ Weapon Configs:
 
 Seeker Types:
     X Laser
-    Optical
+    X Optical
     X Infrared
     GPS/INS
 
