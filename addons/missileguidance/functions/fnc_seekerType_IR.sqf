@@ -63,7 +63,7 @@ if (isNull _trackingTarget) then {
 
 if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
 	// If there are flares nearby, check if they will confuse missile
-	private _nearby = _trackingTarget nearObjects 50;
+	private _nearby = _trackingTarget nearObjects _flareDistanceFilter;
 	_nearby = _nearby select {
 		// 2 = IR blocking
 		private _blocking = configOf _x >> "weaponLockSystem";

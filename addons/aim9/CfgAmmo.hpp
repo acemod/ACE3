@@ -26,7 +26,7 @@ class CfgAmmo {
             navigationTypes[] = { "AugmentedProportionalNavigation" };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            seekerAngle = 30;           // Angle from the shooter's view that can track the missile
+            seekerAngle = 45;           // Angle from the shooter's view that can track the missile
             seekerAccuracy = 0.8;         // seeker accuracy multiplier
 
             seekerMinRange = 75;
@@ -65,7 +65,7 @@ class CfgAmmo {
             navigationTypes[] = { "AugmentedProportionalNavigation" };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            seekerAngle = 60;           // Angle from the shooter's view that can track the missile
+            seekerAngle = 120;           // Angle from the shooter's view that can track the missile
             seekerAccuracy = 0.95;         // seeker accuracy multiplier
 
             seekerMinRange = 75;
