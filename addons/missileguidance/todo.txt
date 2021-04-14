@@ -37,7 +37,7 @@ Seeker Types:
 Navigation Types:
     X GBU-12 - LOS Guidance
     X NLAW - LOS Guidance
-    
+
     X Dragon - NA
 
     Metis - Wire/Beam Guidance
@@ -57,7 +57,6 @@ Navigation Types:
     R-77 - ZEM
     AIM-120 - ZEM
     AIM-132 - ZEM
-    KH-25 - Pro Nav
     GBU-SDB - ZEM
 
 Navigation State Machine:

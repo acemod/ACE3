@@ -25,6 +25,10 @@ private _vectorToTarget = _attackProfileDirection vectorMultiply _targetRange;
 private _closingVelocity = _targetVelocity vectorDiff velocity _projectile;
 private _timeToGo = _targetRange / vectorMagnitude _closingVelocity;
 
+if (_timeToGo == 0) then {
+	_timeToGo = 0.001;
+};
+
 private _zeroEffortMiss = _vectorToTarget vectorAdd (_closingVelocity vectorMultiply _timeToGo);
 private _zeroEffortMissProjectiled = _attackProfileDirection vectorMultiply (_zeroEffortMiss vectorDotProduct _attackProfileDirection);
 private _zeroEffortMissNormal = _zeroEffortMiss vectorDiff _zeroEffortMissProjectiled;
