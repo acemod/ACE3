@@ -37,10 +37,12 @@ Seeker Types:
 Navigation Types:
     X GBU-12 - LOS Guidance
     X NLAW - LOS Guidance
-    X Dragon - LOS Guidance
-    X Metis - LOS Guidance
-    X HOT - LOS Guidance
-    Vikhr - LOS Guidance
+    
+    X Dragon - NA
+
+    Metis - Wire/Beam Guidance
+    HOT - Wire/Beam Guidance
+    Vikhr - Wire/Beam Guidance
 
     X DAGR - APN
     X AGM-65 - APN
@@ -64,6 +66,7 @@ Navigation State Machine:
 Navigation Types:
     X Augmented Pro-Nav
     X Zero Effort Miss
+    Wire/Beam Guided
 
 General To-Do:
     Add more weapons

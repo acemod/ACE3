@@ -25,7 +25,7 @@ _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
 
 if (isNil "_target") exitWith {[0,0,0]};
 
-private _foundTargetPos = aimPos _target;
+private _foundTargetPos = _target modelToWorldVisualWorld getCenterOfMass _target;
 
 // @TODO: This is seeker LOS and angle checks for LOAL only; LOBL does not need visual
 private _angleOkay = [_projectile, _foundTargetPos, _seekerAngle] call FUNC(checkSeekerAngle);
@@ -40,9 +40,7 @@ TRACE_2("", _angleOkay, _losOkay);
 if (!_angleOkay || !_losOkay) exitWith {[0,0,0]};
 
 TRACE_2("", _target, _foundTargetPos);
-private _projectileSpeed = (vectorMagnitude velocity _projectile);
 private _distanceToTarget = (getPosASL _projectile) vectorDistance _foundTargetPos;
-private _eta = _distanceToTarget / _projectileSpeed;
 
 _targetData set [0, (getPosASL _projectile) vectorFromTo _foundTargetPos];
 _targetData set [2, _distanceToTarget];

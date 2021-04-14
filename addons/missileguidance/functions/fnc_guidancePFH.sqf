@@ -34,10 +34,10 @@ private _timestep = diag_deltaTime * accTime;
 _flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance"];
 
 // Run seeker function:
-private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState] call FUNC(doSeekerSearch);
+private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState, _timestep] call FUNC(doSeekerSearch);
 // Run attack profile function:
 _seekerTargetPos = AGLtoASL ASLToAGL _seekerTargetPos;
-private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams] call FUNC(doAttackProfile);
+private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams, _timestep] call FUNC(doAttackProfile);
 
 private _projectilePos = getPosASLVisual _projectile;
 _targetData set [1, _projectilePos vectorFromTo _profileAdjustedTargetPos];

@@ -48,16 +48,5 @@ if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMin
     _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 0])
 };
 
-private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);
-_relativeCorrection = _relativeCorrection vectorDiff _crosshairOffset;
+_seekerTargetPos vectorAdd (_shooterDir vectorMultiply 30);
 
-private _magnitude = vectorMagnitude [_relativeCorrection select 0, 0, _relativeCorrection select 2];
-private _fovImpulse = 1 min (_magnitude / _maxCorrectableDistance); // the simulated impulse for the missile being close to the center of the crosshair
-
-// Adjust the impulse due to near-zero values creating wobbly missiles?
-private _correction = _fovImpulse;
-
-
-_relativeCorrection = (vectorNormalized _relativeCorrection) vectorMultiply _correction;
-private _returnPos = _projectilePos vectorDiff (_projectile vectorModelToWorld _relativeCorrection);
-_returnPos vectorAdd (_shooterDir vectorMultiply _distanceAheadOfMissile)
