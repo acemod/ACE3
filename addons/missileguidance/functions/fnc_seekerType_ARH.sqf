@@ -119,7 +119,7 @@ if !(isNull _target) then {
 
     _targetData set [2, _projectile distance _target];
     _targetData set [3, velocity _target];
-    _targetData set [4, 0]; // todo: acceleration
+    _targetData set [4, [0, 0, 0]]; // todo: acceleration
 };
 
 _targetData set [0, (getPosASLVisual _projectile) vectorFromTo _expectedTargetPos];

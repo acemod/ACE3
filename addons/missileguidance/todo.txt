@@ -14,7 +14,7 @@ Weapon Configs:
     Vikhr - Beam Rider SACLOS
 
     R-73 - Infrared
-    AIM-9 - Infrared
+    X AIM-9 - Infrared
     AIM-132 - Infrared
 
     R-77 - AHR
@@ -31,7 +31,7 @@ Weapon Configs:
 Seeker Types:
     X Laser
     Optical
-    Infrared
+    X Infrared
     GPS/INS
 
 Navigation Types:
@@ -50,7 +50,7 @@ Navigation Types:
     R-73 - APN
     AGM-88 - APN
     KH-58 - APN
-    AIM-9 - APN
+    X AIM-9 - APN
 
     X Javelin - ZEM
     X Hellfire - ZEM
