@@ -22,5 +22,37 @@ class CfgMagazines {
         ammo = QGVAR(m);
         pylonWeapon = QGVAR(m);
     };
+
+    class magazine_Missile_BIM9X_x1;
+    class PylonMissile_Missile_BIM9X_x1;
+    class PylonRack_Missile_BIM9X_x1;
+    class PylonRack_Missile_BIM9X_x2;
+
+    class GVAR(magazine_Missile_9x): magazine_Missile_BIM9X_x1 {
+        author = "Brandon (TCVM)";
+        displayName = "1x AIM-9X [ACE]";
+        ammo = QGVAR(x);
+    };
+
+    class GVAR(PylonMissile_Missile_9x): PylonMissile_Missile_BIM9X_x1 {
+        author = "Brandon (TCVM)";
+        displayName = "1x AIM-9X [ACE]";
+        ammo = QGVAR(x);
+        pylonWeapon = QGVAR(x);
+    };
+
+    class GVAR(PylonRack_Missile_9x): PylonRack_Missile_BIM9X_x1 {
+        author = "Brandon (TCVM)";
+        displayName = "1x AIM-9X [ACE]";
+        ammo = QGVAR(x);
+        pylonWeapon = QGVAR(x);
+    };
+
+    class GVAR(PylonRack_Missile_9x_2): PylonRack_Missile_BIM9X_x2 {
+        author = "Brandon (TCVM)";
+        displayName = "2x AIM-9X [ACE]";
+        ammo = QGVAR(x);
+        pylonWeapon = QGVAR(x);
+    };
 };
 

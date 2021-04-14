@@ -15,6 +15,12 @@
  *
  * Public: No
  */
+#ifdef DEBUG_MODE_FULL
+#define TRACK_ON_PAUSE true
+#else
+#define TRACK_ON_PAUSE false
+#endif
+
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];
@@ -25,10 +31,6 @@ _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_se
 _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
 _seekerStateParams params ["_flareDistanceFilter", "_flareAngleFilter", "_trackingTarget"];
-
-_flareDistanceFilter = 15; //debug temp
-_flareAngleFilter = 2.0; // debug temp
-_seekerAccuracy = 0.95; // debug temp
 
 private _projectileVelocity = velocity _projectile;
 private _closingVelocity = _targetVelocity vectorDiff _projectileVelocity;
@@ -59,9 +61,9 @@ if (isNull _trackingTarget) then {
 	} forEach _potentialTargets;
 };
 
-if (accTime > 0 && !isGamePaused) then {
+if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
 	// If there are flares nearby, check if they will confuse missile
-	private _nearby = _trackingTarget nearObjects _flareDistanceFilter;
+	private _nearby = _trackingTarget nearObjects 50;
 	_nearby = _nearby select {
 		// 2 = IR blocking
 		private _blocking = configOf _x >> "weaponLockSystem";
@@ -79,19 +81,19 @@ if (accTime > 0 && !isGamePaused) then {
 
 		(_x isEqualTo _target && _trackingTarget isNotEqualTo _target) || { (_withinView && _canSee && _isFlare) }
 	};
-
+	
 	private _foundDecoy = false;
 	{
 		if (_trackingTarget isNotEqualTo _x) then {
 			private _considering = false;
 
 			private _distanceToFlare = _trackingTarget distanceSqr _x;
-			if (!_foundDecoy && _distanceToFlare <= _flareDistanceFilter * _flareDistanceFilter) then {
+			if !(_foundDecoy) then {
 				private _flareRelativeVelocity = (velocity _x) vectorDiff _projectileVelocity;
 				private _angleBetweenVelocities = acos (_closingVelocity vectorCos _flareRelativeVelocity);
 
+				systemChat str [_angleBetweenVelocities, _flareAngleFilter];
 				if (_angleBetweenVelocities <= _flareAngleFilter) then {
-						systemChat str _angleBetweenVelocities;
 						_considering = true;
 						if (_seekerAccuracy <= random 1) then {
 							_trackingTarget = _x;
