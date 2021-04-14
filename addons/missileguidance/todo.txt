@@ -66,8 +66,10 @@ Navigation Types:
     X Augmented Pro-Nav
     X Zero Effort Miss
     Wire/Beam Guided
+    Predicted Line of Sight
 
 General To-Do:
     Add more weapons
     X Fix GBU drag
     Make sure all applicable pylons can hold all applicable weapons
+    NLAW is busted: figure out PLOS navigation system
