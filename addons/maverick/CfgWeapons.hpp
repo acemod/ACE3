@@ -6,6 +6,22 @@ class CfgWeapons {
     class MissileLauncher : LauncherCore {};
     class Missile_AGM_02_Plane_CAS_01_F : MissileLauncher {};
 
+    class GVAR(D_Launcher): Missile_AGM_02_Plane_CAS_01_F {
+        author = "Brandon (TCVM)";
+        displayname = "AGM-65D [ACE]";
+        magazines[] = {QGVAR(D_magazine), QGVAR(D_pylonRack_1Rnd), QGVAR(D_pylonRack_3Rnd)};
+        weaponLockDelay = 0.1;
+        weaponLockSystem = 2;
+    };
+
+    class GVAR(G_Launcher): weapon_AGM_65Launcher {
+        author = "Brandon (TCVM)";
+        displayname = "AGM-65G [ACE]";
+        magazines[] = {QGVAR(G_magazine_x1), QGVAR(G_pylonmissile_x1), QGVAR(G_pylonmissile_x2), QGVAR(G_pylonRack_1Rnd), QGVAR(G_PylonRack_3Rnd), QGVAR(G_PylonRack_x1), QGVAR(G_PylonRack_x2)};
+        weaponLockDelay = 0.1;
+        weaponLockSystem = 2;
+    };
+
     class GVAR(L_Launcher) : weapon_AGM_65Launcher {
         author = "xrufix";
         displayname = CSTRING(L);

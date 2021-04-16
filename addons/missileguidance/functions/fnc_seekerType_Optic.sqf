@@ -45,7 +45,6 @@ private _distanceToTarget = (getPosASL _projectile) vectorDistance _foundTargetP
 _targetData set [0, (getPosASL _projectile) vectorFromTo _foundTargetPos];
 _targetData set [2, _distanceToTarget];
 _targetData set [3, velocity _target];
-_targetData set [4, 0];
 
 TRACE_2("return",_foundTargetPos,(aimPos _target) distance _foundTargetPos);
 _foundTargetPos;

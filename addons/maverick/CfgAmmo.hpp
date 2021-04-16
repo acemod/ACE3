@@ -5,6 +5,45 @@ class CfgAmmo {
     };
     class Missile_AGM_02_F : MissileBase {};
 
+    class GVAR(D): Missile_AGM_02_F {
+        author = "Brandon (TCVM)";
+        missileLockMaxDistance = 14000;
+        maneuvrability = 0;
+        class ace_missileguidance {
+            enabled = 1;
+
+            pitchRate = 10;
+            yawRate = 10;
+
+            canVanillaLock = 1;
+
+            defaultSeekerType = "Optic";
+            seekerTypes[] = {"Optic"};
+
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = {"LOBL"};
+
+            defaultNavigationType = "AugmentedProportionalNavigation";
+            navigationTypes[] = { "AugmentedProportionalNavigation" };
+
+            seekLastTargetPos = 1;
+            seekerAngle = 60;
+            seekerAccuracy = 1;
+
+            seekerMinRange = 1;
+            seekerMaxRange = 14000;
+
+            defaultAttackProfile = "maverick";
+            attackProfiles[] = {"maverick"};
+        };
+    };
+
+    class GVAR(G): GVAR(D) {
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+        };
+    };
+
     class GVAR(L) : Missile_AGM_02_F {
         author = "xrufix";
         autoSeekTarget = 0;
