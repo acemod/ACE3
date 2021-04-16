@@ -101,17 +101,17 @@ if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
 					};
 			};
 
-			#ifdef DRAW_GUIDANCE_INFO
-			private _flarePos = ASLToAGL getPosASLVisual _x;
-			private _colour = [1, 0, 0, 1];
-			if (_considering) then {
-				_colour = [0, 1, 0, 1];
+			if (GVAR(debug_drawGuidanceInfo)) then {
+				private _flarePos = ASLToAGL getPosASLVisual _x;
+				private _colour = [1, 0, 0, 1];
+				if (_considering) then {
+					_colour = [0, 1, 0, 1];
+				};
+				if (_trackingTarget isEqualTo _x) then {
+					_colour = [0, 0, 1, 1];
+				};
+				drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _flarePos, 0.75, 0.75, 0, "F", 1, 0.025, "TahomaB"];
 			};
-			if (_trackingTarget isEqualTo _x) then {
-				_colour = [0, 0, 1, 1];
-			};
-			drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _flarePos, 0.75, 0.75, 0, "F", 1, 0.025, "TahomaB"];
-			#endif
 		};
 	} forEach _nearby;
 

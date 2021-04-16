@@ -68,12 +68,12 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         ERROR_MSG("_commandedAcceleration is nil! Guidance cancelled");
     };
 
-    #ifdef DRAW_GUIDANCE_INFO
-    private _projectilePosAGL = ASLToAGL _projectilePos;
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], _projectilePosAGL vectorAdd [0, 0, 2], 0.75, 0.75, 0, _navigationType, 1, 0.025, "TahomaB"];
-    drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd _commandedAcceleration, [1, 0, 1, 1]];
-    #endif
+    if (GVAR(debug_drawGuidanceInfo)) then {
+        private _projectilePosAGL = ASLToAGL _projectilePos;
+        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];
+        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], _projectilePosAGL vectorAdd [0, 0, 2], 0.75, 0.75, 0, _navigationType, 1, 0.025, "TahomaB"];
+        drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd _commandedAcceleration, [1, 0, 1, 1]];
+    };
 
     // activate missile servos and change direction
     if (!isGamePaused && accTime > 0) then {
@@ -127,16 +127,16 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
     _args set [4, _stateParams];
 };
 
-#ifdef DRAW_GUIDANCE_INFO
-TRACE_3("",_projectilePos,_seekerTargetPos,_profileAdjustedTargetPos);
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
+if (GVAR(debug_drawGuidanceInfo)) then {
+    TRACE_3("",_projectilePos,_seekerTargetPos,_profileAdjustedTargetPos);
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
 
-if (!isGamePaused && accTime > 0) then {
-    private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
-    _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
-    _PS setDropInterval 1.0;
+    if (!isGamePaused && accTime > 0) then {
+        private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
+        _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
+        _PS setDropInterval 1.0;
+    };
 };
-#endif
 
 _stateParams set [0, diag_tickTime];
 

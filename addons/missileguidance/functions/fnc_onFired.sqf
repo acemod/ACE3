@@ -206,9 +206,9 @@ if (_onFiredFunc != "") then {
 
 [LINKFUNC(guidancePFH),0, _args ] call CBA_fnc_addPerFrameHandler;
 
-#ifdef ENABLE_PROJECTILE_CAMERA
-[_projectile] call GVAR(dev_fnc_projectileCamera);
-#endif
+if (GVAR(debug_enableMissileCamera)) then {
+    [_projectile] call GVAR(dev_fnc_projectileCamera);
+};
 
 
 /* Clears locking settings

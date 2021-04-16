@@ -89,9 +89,9 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
 
     _projectile setMissileTarget _target;
 } else {
-    #ifdef DRAW_GUIDANCE_INFO
-    _seekerTypeName = "AHR - EXT";
-    #endif
+    if (GVAR(debug_drawGuidanceInfo)) then {
+        _seekerTypeName = "MWR - EXT";
+    };
     // External radar homing
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
     private _remoteTargets = listRemoteTargets side _shooter;
@@ -104,9 +104,9 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     };
 };
 
-#ifdef DRAW_GUIDANCE_INFO
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _expectedTargetPos, 0.75, 0.75, 0, "expected target pos", 1, 0.025, "TahomaB"];
-#endif
+if (GVAR(debug_drawGuidanceInfo)) then {
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _expectedTargetPos, 0.75, 0.75, 0, "expected target pos", 1, 0.025, "TahomaB"];
+};
 
 if !(isNull _target) then {
     private _centerOfObject = getCenterOfMass _target;

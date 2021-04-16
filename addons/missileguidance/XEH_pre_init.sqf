@@ -11,4 +11,7 @@ PREP_RECOMPILE_END;
 // As weapons take config changes, there is little point in being able to disable guidance
 if (isNil QGVAR(enabled)) then { GVAR(enabled) = 2; };
 
+GVAR(debug_enableMissileCamera) = true;
+GVAR(debug_drawGuidanceInfo) = false;
+
 ADDON = true;

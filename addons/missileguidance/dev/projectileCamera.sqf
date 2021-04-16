@@ -26,8 +26,10 @@ _camera camCommitPrepared 0;
 		[_pfh] call CBA_fnc_removePerFrameHandler;
 	};
 
-	_camera camPrepareTarget _projectile;
-	_camera camPrepareRelPos [0, -5, 1];
+	private _currentProjectilePos = getPosATLVisual _projectile;
+
+	_camera camPrepareTarget _currentProjectilePos;
+	_camera camPreparePos (_currentProjectilePos vectorDiff ((vectorNormalized velocity _projectile) vectorMultiply 5));
 	_camera camCommitPrepared 0;
 
 	_args set [2, getPosATL _projectile];

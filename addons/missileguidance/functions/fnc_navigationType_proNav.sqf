@@ -31,7 +31,7 @@ private _losDelta = _attackProfileDirection vectorDiff _lastLineOfSight;
 private _losRate = if (_timestep == 0) then {
 	0
 } else {
-	10 * (vectorMagnitude _losDelta) / _timestep; 
+	1 * (vectorMagnitude _losDelta) / _timestep; 
 };
 
 private _lateralAcceleration = _navigationGain * _losRate;

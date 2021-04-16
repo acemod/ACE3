@@ -103,17 +103,17 @@ if !(_maskedByGround) exitWith {
 			};
 		};
 
-		#ifdef DRAW_GUIDANCE_INFO
-		private _chaffPos = ASLToAGL getPosASLVisual _x;
-		private _colour = [1, 0, 0, 1];
-		if (_considering) then {
-			_colour = [0, 1, 0, 1];
+		if (GVAR(debug_drawGuidanceInfo)) then {
+			private _chaffPos = ASLToAGL getPosASLVisual _x;
+			private _colour = [1, 0, 0, 1];
+			if (_considering) then {
+				_colour = [0, 1, 0, 1];
+			};
+			if (_foundDecoy) then {
+				_colour = [0, 0, 1, 1];
+			};
+			drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _chaffPos, 0.75, 0.75, 0, "C", 1, 0.025, "TahomaB"];
 		};
-		if (_foundDecoy) then {
-			_colour = [0, 0, 1, 1];
-		};
-		drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _chaffPos, 0.75, 0.75, 0, "C", 1, 0.025, "TahomaB"];
-		#endif
 	} forEach _nearby;
 
 	_foundDecoy
