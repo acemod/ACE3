@@ -90,25 +90,17 @@ if !(_maskedByGround) exitWith {
 		private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
 		private _canSee = [_projectile, _x, false] call FUNC(checkLos);
 
-		{ (_withinView && _canSee && _isChaff) }
+		(_withinView && _canSee && _isChaff)
 	};
 
 	private _foundDecoy = false;
-	private _projectileVelocity = velocity _projectile;
 	{
 		private _considering = false;
-
-		private _distanceToFlare = _target distanceSqr _x;
 		if !(_foundDecoy) then {
-			private _chaffRelativeVelocity = (velocity _x) vectorDiff _projectileVelocity;
-			private _angleBetweenVelocities = acos (_closingVelocity vectorCos _chaffRelativeVelocity);
-
-			if (_angleBetweenVelocities <= 2) then {
-					_considering = true;
-					if (0.95 <= random 1) then {
-						_foundDecoy = true;
-					};
-				};
+			_considering = true;
+			if (0.95 <= random 1) then {
+				_foundDecoy = true;
+			};
 		};
 
 		#ifdef DRAW_GUIDANCE_INFO
@@ -120,7 +112,7 @@ if !(_maskedByGround) exitWith {
 		if (_foundDecoy) then {
 			_colour = [0, 0, 1, 1];
 		};
-		drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _chaffPos, 0.75, 0.75, 0, "F", 1, 0.025, "TahomaB"];
+		drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _chaffPos, 0.75, 0.75, 0, "C", 1, 0.025, "TahomaB"];
 		#endif
 	} forEach _nearby;
 
