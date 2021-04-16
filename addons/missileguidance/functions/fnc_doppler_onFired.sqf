@@ -40,6 +40,10 @@ private _projectileThrustTime = [_projectileConfig >> "thrustTime", "NUMBER", 0]
 
 private _lockTypes = [_config >> "lockableTypes", "ARRAY", ["Air", "LandVehicle", "Ship"]] call CBA_fnc_getConfigEntry;
 
+private _minimumFilterSpeed = [_config >> "minimumSpeedFilter", "NUMBER", 30] call CBA_fnc_getConfigEntry;
+private _minimumFilterTime = [_config >> "minimumTimeFilter", "NUMBER", 1e-4] call CBA_fnc_getConfigEntry;
+private _maxTerrainCheck = [_config >> "maxTerrainCheck", "NUMBER", 16000] call CBA_fnc_getConfigEntry;
+
 private _velocityAtImpact = _projectileThrust * _projectileThrustTime;
 private _timeToActive = 0;
 if (!isNil "_target" && _velocityAtImpact > 0) then {
@@ -73,4 +77,7 @@ _seekerStateParams set [7, [0, 0, 0]];
 _seekerStateParams set [8, CBA_missionTime];
 _seekerStateParams set [9, isNull _target];
 _seekerStateParams set [10, _lockTypes];
+_seekerStateParams set [11, _minimumFilterSpeed];
+_seekerStateParams set [12, _minimumFilterTime];
+_seekerStateParams set [13, _maxTerrainCheck];
 

@@ -9,8 +9,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 60;          // Minium flap deflection for guidance
-            yawRate = 60;            // Maximum flap deflection for guidance
+            pitchRate = 40;          // Minium flap deflection for guidance
+            yawRate = 40;            // Maximum flap deflection for guidance
 
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -18,6 +18,10 @@ class CfgAmmo {
             defaultSeekerType = "DopplerRadar";
             seekerTypes[] = { "DopplerRadar" };
             lockableTypes[] = {"Air"};
+
+            minimumSpeedFilter = 25;    // filter out targets that have a closing velocity less than this
+            minimumTimeFilter = 0.0001; // filter out targets that are this close to the ground (speed of light)
+            maxTerrainCheck = 16000;    // How far we should check for terrain
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
@@ -49,8 +53,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 80;          // Minium flap deflection for guidance
-            yawRate = 80;            // Maximum flap deflection for guidance
+            pitchRate = 50;          // Minium flap deflection for guidance
+            yawRate = 50;            // Maximum flap deflection for guidance
 
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -58,6 +62,10 @@ class CfgAmmo {
             defaultSeekerType = "DopplerRadar";
             seekerTypes[] = { "DopplerRadar" };
             lockableTypes[] = {"Air"};
+
+            minimumSpeedFilter = 15;    // filter out targets that have a closing velocity less than this
+            minimumTimeFilter = 0.00005; // filter out targets that are this close to the ground (speed of light)
+            maxTerrainCheck = 16000;    // How far we should check for terrain
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };

@@ -20,11 +20,7 @@ _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams", 
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["_target","","","",""];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
-_seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownVelocity", "_lastTimeSeen", "_doesntHaveTarget", "_lockTypes"];
-
-private _minimumFilterSpeed = 25;
-private _minimumFilterTime = 1e-4;
-private _maxTerrainCheck = 16000;
+_seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownVelocity", "_lastTimeSeen", "_doesntHaveTarget", "_lockTypes", "_minimumFilterSpeed", "_minimumFilterTime", "_maxTerrainCheck"];
 
 if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     if !(_isActive) then {
