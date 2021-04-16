@@ -76,8 +76,8 @@ class CfgAmmo {
             canVanillaLock = 1;
             enabled = 1; // Missile Guidance must be explicitly enabled
             seekLastTargetPos = 0;
-            defaultSeekerType = "ARH";
-            seekerTypes[] = { "ARH" };
+            defaultSeekerType = "MillimeterWaveRadar";
+            seekerTypes[] = { "MillimeterWaveRadar" };
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
 

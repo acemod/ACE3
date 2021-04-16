@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Sets up Active Radar state arrays (called from missileGuidance's onFired).
+ * Sets up MWR state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
  * Guidance Arg Array <ARRAY>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_missileguidance_fnc_ahr_onFired
+ * [] call ace_missileguidance_fnc_mwr_onFired
  *
  * Public: No
  */

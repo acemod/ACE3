@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Active Radar Homing seeker
+ * millimeter wave radar seeker
  *
  * Arguments:
  * 1: Guidance Arg Array <ARRAY>
@@ -11,11 +11,11 @@
  * Seeker Pos <ARRAY>
  *
  * Example:
- * [] call call ace_missileguidance_fnc_seekerType_ARH;
+ * [] call call ace_missileguidance_fnc_seekerType_MWR;
  *
  * Public: No
  */
-params ["", "_args", "_seekerStateParams"];
+params ["", "_args", "_seekerStateParams", "", "_timestep"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["_target","","","",""];
@@ -119,7 +119,11 @@ if !(isNull _target) then {
 
     _targetData set [2, _projectile distance _target];
     _targetData set [3, velocity _target];
-    _targetData set [4, [0, 0, 0]]; // todo: acceleration
+
+    if (_timestep != 0) then {
+        private _acceleration = ((velocity _target) vectorDiff _lastKnownVelocity) vectorMultiply (1 / _timestep);
+        _targetData set [4, _acceleration];
+    };
 };
 
 _targetData set [0, (getPosASLVisual _projectile) vectorFromTo _expectedTargetPos];

@@ -15,8 +15,8 @@ class CfgAmmo {
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
             // Guidance type for munitions
-            defaultSeekerType = "ARH";
-            seekerTypes[] = { "ARH" };
+            defaultSeekerType = "DopplerRadar";
+            seekerTypes[] = { "DopplerRadar" };
             lockableTypes[] = {"Air"};
 
             defaultSeekerLockMode = "LOAL";
@@ -55,8 +55,8 @@ class CfgAmmo {
             canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
             // Guidance type for munitions
-            defaultSeekerType = "ARH";
-            seekerTypes[] = { "ARH" };
+            defaultSeekerType = "DopplerRadar";
+            seekerTypes[] = { "DopplerRadar" };
             lockableTypes[] = {"Air"};
 
             defaultSeekerLockMode = "LOAL";

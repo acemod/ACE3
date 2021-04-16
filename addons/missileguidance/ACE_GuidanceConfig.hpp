@@ -80,13 +80,21 @@ class GVAR(SeekerTypes) {
         functionName = QFUNC(seekerType_SACLOS);
         onFired = QFUNC(SACLOS_onFired);
     };
-    class ARH {
+    class MillimeterWaveRadar {
         name = "";
         visualName = "";
         description = "";
         
-        functionName = QFUNC(seekerType_ARH);
-        onFired = QFUNC(ahr_onFired);
+        functionName = QFUNC(seekerType_MWR);
+        onFired = QFUNC(mwr_onFired);
+    };
+    class DopplerRadar {
+        name = "";
+        visualName = "";
+        description = "";
+        
+        functionName = QFUNC(seekerType_Doppler);
+        onFired = QFUNC(doppler_onFired);
     };
     class IR {
         name = "";
