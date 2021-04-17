@@ -91,7 +91,6 @@ if (isNil "_target") then {
         };
     };
 };
-systemChat str _target;
 _targetPos = getPosASLVisual _target;
 
 // Array for seek last target position

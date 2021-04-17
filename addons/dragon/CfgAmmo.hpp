@@ -82,6 +82,9 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
+            pitchRate = 0;
+            yawRate = 0;
+
             // Guidance type for munitions
             defaultSeekerType = "SACLOS";
             seekerTypes[] = { "SACLOS" };
