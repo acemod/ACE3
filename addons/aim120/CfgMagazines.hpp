@@ -8,6 +8,30 @@ class CfgMagazines {
     class PylonRack_Missile_AMRAAM_D_x1;
     class PylonRack_Missile_AMRAAM_D_x2;
 
+    class 4Rnd_GAA_missiles;
+    class PylonRack_1Rnd_GAA_missiles;
+    class PylonMissile_1Rnd_GAA_missiles;
+
+    class GVAR(a): 4Rnd_GAA_missiles {
+        author = "Brandon (TCVM)";
+        displayName = "1x AIM-120A [ACE]";
+        ammo = QGVAR(a);
+    };
+
+    class GVAR(PylonRack_1Rnd_a): PylonRack_1Rnd_GAA_missiles {
+        author = "Brandon (TCVM)";
+        displayName = "1x AIM-120A [ACE]";
+        ammo = QGVAR(a);
+        pylonWeapon = GVAR(aim120Launcher);
+    };
+
+    class GVAR(PylonMissile_1Rnd_a): PylonMissile_1Rnd_GAA_missiles {
+        author = "Brandon (TCVM)";
+        displayName = "1x AIM-120A [ACE]";
+        ammo = QGVAR(a);
+        pylonWeapon = GVAR(aim120Launcher);
+    };
+
     // AIM-120
     class GVAR(c): magazine_Missile_AMRAAM_C_x1 {
         author = "Brandon (TCVM)";
