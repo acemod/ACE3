@@ -13,14 +13,13 @@ Weapon Configs:
 
     Vikhr - Beam Rider SACLOS
 
-    R-73 - Infrared
+    X R-73 - Infrared
     X AIM-9 - Infrared
     X AIM-132 - Infrared
 
     X R-77 - AHR
     X AIM-120 - AHR
 
-    KH-25 - Optical
     X AGM-65 - Optical
 
     GBU-SDB - GPS/INS
@@ -32,7 +31,8 @@ Seeker Types:
     X Laser
     X Optical
     X Infrared
-    GPS/INS
+    GPS/INS - I want a UI to select Pre-Briefed or TOO modes with coordinate boxes for current target. As well as angle of attack
+    Passive-Radar Homing
 
 Navigation Types:
     X GBU-12 - LOS Guidance
@@ -71,5 +71,5 @@ Navigation Types:
 General To-Do:
     Add more weapons
     X Fix GBU drag
-    Make sure all applicable pylons can hold all applicable weapons
+    X Make sure all applicable pylons can hold all applicable weapons
     NLAW is busted: figure out PLOS navigation system
