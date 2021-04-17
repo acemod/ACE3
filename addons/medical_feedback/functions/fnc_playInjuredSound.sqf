@@ -33,7 +33,7 @@ private _distance = if (_type == "hit") then {
 } else {
     [10, 15, 20] select _severity;
 };
-private _targets = allPlayers inAreaArray [getPosWorld _unit, _distance, _distance, 0, false, _distance];
+private _targets = allPlayers inAreaArray [ASLToAGL getPosASL _unit, _distance, _distance, 0, false, _distance];
 if (_targets isEqualTo []) exitWith {};
 
 // Handle timeout
