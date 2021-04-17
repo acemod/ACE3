@@ -26,8 +26,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 40; // degrees per second
-            yawRate = 40;
+            pitchRate = 30; // degrees per second
+            yawRate = 30;
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 

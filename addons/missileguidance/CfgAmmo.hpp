@@ -20,8 +20,8 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
 
-            pitchRate = 50; // degrees per second
-            yawRate = 50;
+            pitchRate = 40; // degrees per second
+            yawRate = 40;
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -71,8 +71,8 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
 
-            pitchRate = 40; // degrees per second
-            yawRate = 40;
+            pitchRate = 25; // degrees per second
+            yawRate = 25;
 
             bangBangGuidance = 0;
 

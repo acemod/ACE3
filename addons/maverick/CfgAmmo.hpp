@@ -12,8 +12,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 10;
-            yawRate = 10;
+            pitchRate = 15;
+            yawRate = 15;
 
             canVanillaLock = 1;
 
@@ -55,8 +55,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 30;
-            yawRate = 30;
+            pitchRate = 15;
+            yawRate = 15;
 
             canVanillaLock = 0;
 
@@ -90,8 +90,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 45;
-            yawRate = 45;
+            pitchRate = 20;
+            yawRate = 20;
 
             canVanillaLock = 0;
 

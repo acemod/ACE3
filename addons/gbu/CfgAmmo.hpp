@@ -6,8 +6,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 15;
-            yawRate = 15;
+            pitchRate = 5;
+            yawRate = 5;
 
             bangBangGuidance = 1;
 
@@ -43,8 +43,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 23;
-            yawRate = 23;
+            pitchRate = 8;
+            yawRate = 8;
 
             bangBangGuidance = 1;
 
