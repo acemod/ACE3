@@ -1,4 +1,5 @@
 class CfgWeapons {
+	// AIM-9
 	class Missile_AA_04_Plane_CAS_01_F;
 	class GVAR(m): Missile_AA_04_Plane_CAS_01_F {
 		lockAcquire = 1; // auto lock
@@ -17,6 +18,25 @@ class CfgWeapons {
         displayName = "AIM-9X [ACE]";
         weaponLockDelay = 0.5;
 		magazines[] = { QGVAR(magazine_Missile_9x), QGVAR(PylonMissile_Missile_9x), QGVAR(PylonRack_Missile_9x), QGVAR(PylonRack_Missile_9x_2) };
+	};
+
+	// ASRAAM
+	class missiles_ASRAAM;
+	class GVAR(aim132): missiles_ASRAAM {
+		lockAcquire = 1; // auto lock
+
+		author = "Brandon (TCVM)";
+        displayName = "AIM-132 [ACE]";
+        weaponLockDelay = 0.5;
+		magazines[] = {
+			QGVAR(aim132_2Rnd),
+			QGVAR(aim132_2Rnd_MI02),
+			QGVAR(aim132_2Rnd_MI06),
+			QGVAR(aim132_4Rnd),
+			QGVAR(aim132_4Rnd_MI02),
+			QGVAR(PylonRack_1Rnd_aim132),
+			QGVAR(PylonMissile_1Rnd_aim132)
+		};
 	};
 };
 
