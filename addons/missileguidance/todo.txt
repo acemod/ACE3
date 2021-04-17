@@ -15,13 +15,13 @@ Weapon Configs:
 
     R-73 - Infrared
     X AIM-9 - Infrared
-    AIM-132 - Infrared
+    X AIM-132 - Infrared
 
-    R-77 - AHR
+    X R-77 - AHR
     X AIM-120 - AHR
 
     KH-25 - Optical
-    AGM-65 - Optical
+    X AGM-65 - Optical
 
     GBU-SDB - GPS/INS
 
@@ -54,9 +54,9 @@ Navigation Types:
 
     X Javelin - ZEM
     X Hellfire - ZEM
-    R-77 - ZEM
-    AIM-120 - ZEM
-    AIM-132 - ZEM
+    X R-77 - ZEM
+    X AIM-120 - ZEM
+    X AIM-132 - ZEM
     GBU-SDB - ZEM
 
 Navigation State Machine:

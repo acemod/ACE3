@@ -38,5 +38,35 @@ class CfgWeapons {
 			QGVAR(PylonMissile_1Rnd_aim132)
 		};
 	};
+
+	// R-73
+	class weapon_R73Launcher;
+	class GVAR(r73): weapon_R73Launcher {
+		lockAcquire = 1; // auto lock
+
+		author = "Brandon (TCVM)";
+        displayName = "R-73 [ACE]";
+        weaponLockDelay = 0.5;
+
+		magazines[] = {
+			QGVAR(r73),
+			QGVAR(PylonMissile_Missile_R73_x1)
+		};
+	};
+
+	class Missile_AA_03_Plane_CAS_02_F;
+	class GVAR(r74): Missile_AA_03_Plane_CAS_02_F {
+		lockAcquire = 1; // auto lock
+
+		author = "Brandon (TCVM)";
+        displayName = "R-74 [ACE]";
+        weaponLockDelay = 0.5;
+
+		magazines[] = {
+			QGVAR(2Rnd_Missile_R74),
+			QGVAR(PylonRack_1Rnd_Missile_R74),
+			QGVAR(PylonMissile_1Rnd_Missile_R74)
+		};
+	};
 };
 

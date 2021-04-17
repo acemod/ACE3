@@ -131,5 +131,94 @@ class CfgAmmo {
             attackProfiles[] = {"DIR"};
         };
     };
+
+    // R-73
+    class ammo_Missile_AA_R73;
+    class GVAR(r73): ammo_Missile_AA_R73 {
+        missileLockCone = 40;
+        missileKeepLockedCone = 40;
+        missileLockMaxDistance = 5000;
+        missileLockMinDistance = 250;
+
+        author = "Brandon (TCVM)";
+        maneuvrability = 0;
+
+        class ace_missileguidance {
+            enabled = 1;
+
+            pitchRate = 25;          // Minium flap deflection for guidance
+            yawRate = 25;            // Maximum flap deflection for guidance
+
+            canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+            // Guidance type for munitions
+            defaultSeekerType = "IR";
+            seekerTypes[] = { "IR" };
+
+            flareDistanceFilter = 50;
+            flareAngleFilter = 0.8; // can filter out flares that are >= flareAngleFilter to known target velocity
+
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = { "LOBL" };
+
+            defaultNavigationType = "AugmentedProportionalNavigation";
+            navigationTypes[] = { "AugmentedProportionalNavigation" };
+
+            seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+            seekerAngle = 40;           // Angle from the shooter's view that can track the missile
+            seekerAccuracy = 0.85;         // seeker accuracy multiplier
+
+            seekerMinRange = 75;
+            seekerMaxRange = 5000;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "DIR";
+            attackProfiles[] = {"DIR"};
+        };
+    };
+
+    class Missile_AA_03_F;
+    class GVAR(r74): Missile_AA_03_F {
+        missileLockCone = 75;
+        missileKeepLockedCone = 75;
+        missileLockMaxDistance = 8000;
+        missileLockMinDistance = 250;
+
+        author = "Brandon (TCVM)";
+        maneuvrability = 0;
+
+        class ace_missileguidance {
+            enabled = 1;
+
+            pitchRate = 40;          // Minium flap deflection for guidance
+            yawRate = 40;            // Maximum flap deflection for guidance
+
+            canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+            // Guidance type for munitions
+            defaultSeekerType = "IR";
+            seekerTypes[] = { "IR" };
+
+            flareDistanceFilter = 50;
+            flareAngleFilter = 0.8; // can filter out flares that are >= flareAngleFilter to known target velocity
+
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = { "LOBL" };
+
+            defaultNavigationType = "AugmentedProportionalNavigation";
+            navigationTypes[] = { "AugmentedProportionalNavigation" };
+
+            seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+            seekerAngle = 75;           // Angle from the shooter's view that can track the missile
+            seekerAccuracy = 0.95;         // seeker accuracy multiplier
+
+            seekerMinRange = 75;
+            seekerMaxRange = 8000;      // Range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "DIR";
+            attackProfiles[] = {"DIR"};
+        };
+    };
 };
 
