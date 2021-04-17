@@ -1,5 +1,5 @@
 Weapon Configs:
-    X Hellfire - Laser
+    X Hellfire - Laser/Millimeter Wave Radar
     X AGM-65 - Laser
     X DAGR - Laser
     X GBU-12 - Laser
@@ -17,8 +17,8 @@ Weapon Configs:
     X AIM-9 - Infrared
     X AIM-132 - Infrared
 
-    X R-77 - AHR
-    X AIM-120 - AHR
+    X R-77 - Doppler Radar
+    X AIM-120 - Doppler Radar
 
     X AGM-65 - Optical
 
@@ -26,6 +26,16 @@ Weapon Configs:
 
     AGM-88 - Passive Radar Homing
     KH-58 - Passive Radar Homing
+
+    Titan MRPL - Infrared
+    AWC Nyx SAAMI - Infrared
+    IFV-6a Cheetah AA - Infrared
+    ZSU-39 Tigris AA - Infrared
+    Mk49 Spartan - Infrared
+
+    Mk21 Centurion - Doppler Radar
+    MIM-145 - Doppler Radar
+    S-750 - Doppler Radar
 
 Seeker Types:
     X Laser
@@ -51,6 +61,11 @@ Navigation Types:
     AGM-88 - APN
     KH-58 - APN
     X AIM-9 - APN
+    Titan MRPL - APN
+    AWC Nyx SAAMI - APN
+    IFV-6a Cheetah AA - APN
+    ZSU-39 Tigris AA - APN
+    Mk21 Centurion - APN
 
     X Javelin - ZEM
     X Hellfire - ZEM
@@ -58,6 +73,9 @@ Navigation Types:
     X AIM-120 - ZEM
     X AIM-132 - ZEM
     GBU-SDB - ZEM
+    MIM-145 - ZEM
+    S-750 - ZEM
+    Mk49 Spartan - ZEM
 
 Navigation State Machine:
     Todo: Will allow for changing of navigation type in flight to get a more realistic flight profile
