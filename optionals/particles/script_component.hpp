@@ -30,14 +30,14 @@
 #define EFFECT_40MM(color) class ACE_40mmSmokeShell##color##Effect: ACE_40mmSmokeShellWhiteEffect { \
     class SmokeShellUW { \
         simulation = "particles"; \
-        type = QUOTE(SmokeShell##color##UW); \
+        type = SmokeShell##color##UW; \
         position[] = {0, 0, 0}; \
         intensity = 1; \
         interval = 1; \
     }; \
     class SmokeShell2UW { \
         simulation = "particles"; \
-        type = QUOTE(SmokeShell##color##2UW); \
+        type = SmokeShell##color##2UW; \
         position[] = {0, 0, 0}; \
         intensity = 1; \
         interval = 1; \
@@ -45,11 +45,11 @@
 }
 #define EFFECT_AFTER_WATER(color) class ACE_SmokeAfterWater##color: ACE_SmokeAfterWaterWhite { \
     class SmokeAfterWater: SmokeAfterWater { \
-        type = QUOTE(ACE_SmokeAfterWater##color); \
+        type = ACE_SmokeAfterWater##color; \
     }; \
 }
 
 #define CLOUDLET_UNDERWATER(color) class SmokeShell##color##UW; \
 class SmokeShell##color##2UW: SmokeShell##color##UW { \
-    postEffects = QUOTE(DOUBLES(ACE_SmokeAfterWater,color)); \
+    postEffects = ACE_SmokeAfterWater,color; \
 }
