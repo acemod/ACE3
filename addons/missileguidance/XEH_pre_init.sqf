@@ -11,6 +11,20 @@ PREP_RECOMPILE_END;
 // As weapons take config changes, there is little point in being able to disable guidance
 if (isNil QGVAR(enabled)) then { GVAR(enabled) = 2; };
 
+GVAR(gps_currentSettings) = [
+	[0, 0, 0], 	// attack position
+	-1,			// impact angle
+	-1			// attack heading
+];
+
+GVAR(gps_pbMode) = 0;
+GVAR(gps_settings) = createHashMap;
+for "_i" from 0 to MAX_PB_MODES do {
+	GVAR(gps_settings) set [_i, GVAR(currentSettings)];
+};
+
+GVAR(mode) = "pb";
+
 GVAR(debug_enableMissileCamera) = true;
 GVAR(debug_drawGuidanceInfo) = false;
 

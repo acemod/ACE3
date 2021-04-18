@@ -59,3 +59,12 @@ PREP(proNav_onFired);
 // State transitions
 PREP(javelin_midCourseTransition);
 
+// GPS ui
+PREP(gps_onLoad);
+PREP(gps_onUnload);
+PREP(gps_pbModeCycle);
+PREP(gps_confirm);
+PREP(gps_modeSelect);
+PREP(gps_saveAttackSettings);
+PREP(gps_loadAttackSettings);
+
