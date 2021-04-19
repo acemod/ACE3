@@ -80,7 +80,7 @@ class CfgWeapons {
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_Wide_brown);
     };
-    class ACE_NVG_Wide_Green: NVGoggles {
+    class ACE_NVG_Wide_Green: NVGoggles_INDEP {
         author = ECSTRING(common,ACETeam);
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_Wide_green);
