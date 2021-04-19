@@ -18,7 +18,7 @@
 	params ["_display"];
 	uiNamespace setVariable [QGVAR(gpsAttackOptionDisplay), _display];
 
-	private _mode = if (GVAR(mode) isEqualTo "too") then {
+	private _mode = if (GVAR(gps_mode) isEqualTo "too") then {
 		GPS_UI_TOO
 	} else {
 		GPS_UI_PB
@@ -29,7 +29,7 @@
 
 	// update current settings
 	GVAR(gps_uiPerFrameHandler) = [{
-		if (GVAR(mode) isEqualTo "too") then {
+		if (GVAR(gps_mode) isEqualTo "too") then {
 			// update coordinates based on TGP position
 			private _target = getPilotCameraTarget (vehicle ACE_PLAYER);
 			_target params ["_tracking", "_position", "_object"];

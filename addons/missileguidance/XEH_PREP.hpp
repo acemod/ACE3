@@ -25,6 +25,7 @@ PREP(attackProfile_LIN);
 PREP(attackProfile_LOFT);
 PREP(attackProfile_WIRE);
 PREP(attackProfile_BEAM);
+PREP(attackProfile_JDAM);
 
 // Javelin profiles
 PREP(attackProfile_JAV_DIR);
@@ -43,15 +44,18 @@ PREP(seekerType_SACLOS);
 PREP(seekerType_Doppler);
 PREP(seekerType_MWR);
 PREP(seekerType_IR);
+PREP(seekerType_GPS);
 
 // Attack Profiles OnFired
 PREP(wire_onFired);
+PREP(gps_attackOnFired);
 
 // Seeker OnFired
 PREP(SACLOS_onFired);
 PREP(doppler_onFired);
 PREP(mwr_onFired);
 PREP(IR_onFired);
+PREP(gps_seekerOnFired);
 
 // Navigation OnFired
 PREP(proNav_onFired);
@@ -67,4 +71,5 @@ PREP(gps_confirm);
 PREP(gps_modeSelect);
 PREP(gps_saveAttackSettings);
 PREP(gps_loadAttackSettings);
+PREP(gps_getAttackData);
 

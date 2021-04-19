@@ -45,12 +45,12 @@ private _selectedColour = [
 
 ctrlSetFocus (_display displayCtrl _mode);
 if (_mode == GPS_UI_TOO) then {
-	GVAR(mode) = "too";
+	GVAR(gps_mode) = "too";
 	if !(_onLoad) then {
 		[GVAR(gps_pbMode)] call FUNC(gps_saveAttackSettings);
 	};
 } else {
-	GVAR(mode) = "pb";
+	GVAR(gps_mode) = "pb";
 	[GVAR(gps_pbMode)] call FUNC(gps_loadAttackSettings);
 };
 
