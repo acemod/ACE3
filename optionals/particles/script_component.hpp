@@ -51,5 +51,5 @@
 
 #define CLOUDLET_UNDERWATER(color) class SmokeShell##color##UW; \
 class SmokeShell##color##2UW: SmokeShell##color##UW { \
-    postEffects = ACE_SmokeAfterWater,color; \
+    postEffects = ACE_SmokeAfterWater##color; \
 }
