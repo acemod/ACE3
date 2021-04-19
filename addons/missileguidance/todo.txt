@@ -22,7 +22,7 @@ Weapon Configs:
 
     X AGM-65 - Optical
 
-    GBU-SDB - GPS/INS
+    X GBU-SDB - GPS/INS
 
     AGM-88 - Passive Radar Homing
     KH-58 - Passive Radar Homing
@@ -41,7 +41,7 @@ Seeker Types:
     X Laser
     X Optical
     X Infrared
-    GPS/INS - I want a UI to select Pre-Briefed or TOO modes with coordinate boxes for current target. As well as angle of attack
+    X GPS/INS - I want a UI to select Pre-Briefed or TOO modes with coordinate boxes for current target. As well as angle of attack
     Passive-Radar Homing
 
 Navigation Types:
@@ -72,7 +72,7 @@ Navigation Types:
     X R-77 - ZEM
     X AIM-120 - ZEM
     X AIM-132 - ZEM
-    GBU-SDB - ZEM
+    X GBU-SDB - ZEM
     MIM-145 - ZEM
     S-750 - ZEM
     Mk49 Spartan - ZEM
