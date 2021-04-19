@@ -17,6 +17,16 @@ private _closeCode = {
 };
 [(localize LSTRING(itemName)), QPATHTOF(images\microDAGR_item.paa), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
 
+// Mode keybinds:
+["ACE3 Equipment", QGVAR(previousMode), LLSTRING(previousMode), {
+    private _newMode = (GVAR(currentApplicationPage) - 1) max 0;
+    [_newMode] call FUNC(saveCurrentAndSetNewMode);
+}, ""] call CBA_fnc_addKeybind;
+
+["ACE3 Equipment", QGVAR(nextMode), LLSTRING(nextMode), {
+    private _newMode = (GVAR(currentApplicationPage) + 1) min 6;
+    [_newMode] call FUNC(saveCurrentAndSetNewMode);
+}, ""] call CBA_fnc_addKeybind;
 
 //Add Eventhandler:
 [QEGVAR(vector,rangefinderData), {_this call FUNC(recieveRangefinderData)}] call CBA_fnc_addEventHandler;
