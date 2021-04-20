@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Malbryn
  * Drag an object. Called from ace_dragging_fnc_startDrag
  *
  * Arguments:
@@ -43,17 +43,26 @@ _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 
 // add drop action
-_unit setVariable [QGVAR(ReleaseActionID), [
-    _unit, "DefaultAction",
-    {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
-    {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
-] call EFUNC(common,addActionEventHandler)];
+GVAR(unit) = _unit;
+
+GVAR(releaseActionID) = [0xF1, [false, false, false], {
+    [GVAR(unit), GVAR(unit) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
+}, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;
+
+// show mouse hint
+["", localize LSTRING(Drop)] call EFUNC(interaction,showMouseHint);
+
+// block firing
+if !(GVAR(dragAndFire)) then {
+    _unit setVariable [QGVAR(blockFire), [
+        _unit, "DefaultAction",
+        {true},
+        {}
+    ] call EFUNC(common,addActionEventHandler)];
+};
 
 // add anim changed EH
 [_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
-
-// show mouse hint
-[localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);
 
 // check everything
 [FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
