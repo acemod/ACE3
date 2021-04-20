@@ -27,7 +27,7 @@ if (_allow && {!([_mine] call FUNC(isAllowedDefuse))}) exitWith {
 };
 
 if (!_allow) exitWith {
-    (GVAR(excludedMines) pushBackUnique _mine != -1
+    GVAR(excludedMines) pushBackUnique _mine != -1
 };
 
 false
