@@ -703,5 +703,11 @@
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_DisplayName">
+            <English>Enable Vehicle Crash Damage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_Description">
+            <English>Controls whether crew receives damage from vehicle collisions.</English>
+        </Key>
     </Package>
 </Project>
