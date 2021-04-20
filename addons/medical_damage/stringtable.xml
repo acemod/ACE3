@@ -701,7 +701,7 @@
             <English>Enable Vehicle Crash Damage</English>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_Description">
-            <English>Controls whether passengers receive damage from vehicle collisions.</English>
+            <English>Controls whether crew receives damage from vehicle collisions.</English>
         </Key>
     </Package>
 </Project>
