@@ -18,4 +18,4 @@
 params [["_mine", objNull, [objNull]]];
 TRACE_1("params",_mine);
 
-!(_mine in GVAR(excludedMines));
+!(_mine in GVAR(excludedMines))
