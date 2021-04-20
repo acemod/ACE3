@@ -21,3 +21,4 @@ _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _attackProfileStateParams set [0, [] call FUNC(gps_getAttackData)];
 _attackProfileStateParams set [1, (getPosASL _projectile) select 2];
 _attackProfileStateParams set [2, false];
+_attackProfileStateParams set [3, 0];

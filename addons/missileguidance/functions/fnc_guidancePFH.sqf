@@ -70,7 +70,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
 
     if (GVAR(debug_drawGuidanceInfo)) then {
         private _projectilePosAGL = ASLToAGL _projectilePos;
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, str _commandedAcceleration, 1, 0.025, "TahomaB"];
+        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _projectilePosAGL vectorAdd [0, 0, 1], 0.75, 0.75, 0, format ["cmdPitch: %1 cmdYaw %2", _commandedAcceleration#2, _commandedAcceleration#0], 1, 0.025, "TahomaB"];
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], _projectilePosAGL vectorAdd [0, 0, 2], 0.75, 0.75, 0, _navigationType, 1, 0.025, "TahomaB"];
         drawLine3D [_projectilePosAGL, _projectilePosAGL vectorAdd _commandedAcceleration, [1, 0, 1, 1]];
     };
@@ -104,8 +104,8 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
             } else {
                 _clampedYaw / abs _clampedYaw
             };
-            _clampedPitch = _pitchSign * 50;
-            _clampedYaw = _yawSign * 50;
+            _clampedPitch = _pitchSign * _pitchRate;
+            _clampedYaw = _yawSign * _yawRate;
         };
 
         TRACE_9("pitch/yaw/roll",_pitch,_yaw,_roll,_yawChange,_pitchChange,_pitchRate,_yawRate,_clampedPitch,_clampedYaw);
@@ -162,8 +162,6 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         private _up = [_quaternion, [0, 0, 1]] call _multiplyVector;
 
         _projectile setVectorDirAndUp [_dir, _up];
-
-        systemChat str [_pitch, _yaw];
 
         //[_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
 
