@@ -21,10 +21,13 @@ TRACE_1("params",_mine,_allow);
 
 if !(_mine in allMines) exitWith {false};
 
-if (_allow) then {
-    if ([_mine] call FUNC(isAllowedDefuse)) exitWith {false};
+if (_allow && {!([_mine] call FUNC(isAllowedDefuse))}) exitWith {
     GVAR(excludedMines) = GVAR(excludedMines) - [_mine];
     true
-} else {
-    not ((GVAR(excludedMines) pushBackUnique _mine) == -1);
 };
+
+if (!_allow) exitWith {
+    (GVAR(excludedMines) pushBackUnique _mine != -1
+};
+
+false
