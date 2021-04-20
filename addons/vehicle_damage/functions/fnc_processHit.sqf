@@ -145,6 +145,7 @@ private _currentVehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
 private _chanceOfDetonation = 0;
 private _explosiveAmmoCount = 0;
 private _nonExplosiveAmmoCount = 0;
+
 if !(count (_currentVehicleAmmo select 0) isEqualTo 0) then {
     private _magConfig = configFile >> "CfgMagazines";
     private _ammoConfig = configFile >> "CfgAmmo";

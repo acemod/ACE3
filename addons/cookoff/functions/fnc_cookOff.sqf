@@ -21,6 +21,8 @@ params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled
 if (GVAR(enable) == 0) exitWith {};
 if !(GVAR(enableFire)) exitWith {};
 
+TRACE_8("cooking off",_vehicle,_intensity,_instigator,_smokeDelayEnabled,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing);
+
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _vehicle setVariable [QGVAR(isCookingOff), true, true];
 
@@ -49,13 +51,14 @@ if (_smokeDelayEnabled) then {
 [{
     params ["_vehicle", "_positions", "_intensity", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing"];
     _vehicle setVariable [QGVAR(intensity), _intensity];
+    private _smokeEffects = _vehicle getVariable [QGVAR(effects), []];
 
     [{
         params ["_args", "_pfh"];
-        _args params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing"];
+        _args params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_instigator", "_fireSource", "_canRing", "_smokeEffects"];
         private _intensity = _vehicle getVariable [QGVAR(intensity), 0];
-        if (_intensity <= 1) exitWith {
-            [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
+        if (isNull _vehicle || {_intensity <= 1}) exitWith {
+            [QGVAR(cleanupEffects), [_vehicle, _smokeEffects]] call CBA_fnc_globalEvent;
             _vehicle setVariable [QGVAR(isCookingOff), false, true];
             [_pfh] call CBA_fnc_removePerFrameHandler;
             
@@ -112,5 +115,5 @@ if (_smokeDelayEnabled) then {
                 _vehicle setVariable [QGVAR(nextExplosiveDetonation), random 60];
             };
         };
-    }, 0.25, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing]] call CBA_fnc_addPerFrameHandler
+    }, 0.25, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing, _smokeEffects]] call CBA_fnc_addPerFrameHandler
 }, [_vehicle, _positions, _intensity, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing], _delay] call CBA_fnc_waitAndExecute;

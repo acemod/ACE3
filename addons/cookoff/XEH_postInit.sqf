@@ -12,9 +12,9 @@
 [QGVAR(cookOffBox), FUNC(cookOffBox)] call CBA_fnc_addEventHandler;
 
 [QGVAR(cleanupEffects), {
-    params ["_vehicle"];
+    params ["_vehicle", ["_effects", []]];
     
-    private _effects = _vehicle getVariable [QGVAR(effects), []];
+    _effects = _effects + _vehicle getVariable [QGVAR(effects), []];
     if !(_effects isEqualTo []) then {
          { deleteVehicle _x } count _effects;
     };

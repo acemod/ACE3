@@ -44,8 +44,15 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     [_vehicle] spawn FUNC(abandon);
     LOG_1("[%1] is on fire is bailing",_vehicle);
     
+    // cant setVehicleAmmo 0 here because it removes FFV unit's ammo
     if (GVAR(removeAmmoDuringCookoff)) then {
-        _vehicle setVehicleAmmo 0;
+        private _ammo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
+        _ammo params ["_magazines"];
+        TRACE_1("removing magazines",_magazines);
+        {
+            _x params ["_magazine"];
+            _vehicle removeMagazines _magazine;
+        } forEach _magazines;
     };
     true
 };
