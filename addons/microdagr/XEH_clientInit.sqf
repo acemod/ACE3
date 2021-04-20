@@ -19,12 +19,18 @@ private _closeCode = {
 
 // Mode keybinds:
 ["ACE3 Equipment", QGVAR(previousMode), LLSTRING(previousMode), {
-    private _newMode = (GVAR(currentApplicationPage) - 1) max 0;
+    private _newMode = GVAR(currentApplicationPage) - 1;
+    if (_newMode < 0) then {
+        _newMode = 6;
+    };
     [_newMode] call FUNC(saveCurrentAndSetNewMode);
 }, ""] call CBA_fnc_addKeybind;
 
 ["ACE3 Equipment", QGVAR(nextMode), LLSTRING(nextMode), {
-    private _newMode = (GVAR(currentApplicationPage) + 1) min 6;
+    private _newMode = GVAR(currentApplicationPage) + 1;
+    if (_newMode > 6) then {
+        _newMode = 0;
+    };
     [_newMode] call FUNC(saveCurrentAndSetNewMode);
 }, ""] call CBA_fnc_addKeybind;
 
