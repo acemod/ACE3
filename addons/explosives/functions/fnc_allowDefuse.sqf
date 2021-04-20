@@ -20,12 +20,12 @@ params [["_mine", objNull, [objNull]], ["_allow", true, [true]]];
 TRACE_1("params",_mine,_allow);
 
 if (!(_mine in allMines)) exitWith {false};
-	
+    
 if (_allow) then {
-	if ([_mine] call FUNC(isAllowedDefuse)) exitWith {false};
-	GVAR(excludedMines) = GVAR(excludedMines) - [_mine];
+    if ([_mine] call FUNC(isAllowedDefuse)) exitWith {false};
+    GVAR(excludedMines) = GVAR(excludedMines) - [_mine];
 } else {
-	if((GVAR(excludedMines) pushBackUnique _mine) == -1) exitWith {false};
+    if((GVAR(excludedMines) pushBackUnique _mine) == -1) exitWith {false};
 };
 
 true
