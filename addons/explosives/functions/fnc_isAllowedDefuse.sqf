@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Walthzer
- * Check if Ace is allowed to add a defusal action to a mine.
+ * Check if a mine is allowed to recieve a dynamic defuse action.
  *
  * Arguments:
  * 0: Mine <OBJECT>

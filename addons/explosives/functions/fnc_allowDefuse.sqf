@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Walthzer
- * Excludes a passed mine from the dynamic defuse action.
+ * Sets if a dynamic defuse action is allowed to be added to a mine.
  *
  * Arguments:
  * 0: Mine <OBJECT>
