@@ -16,6 +16,7 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#include "\a3\ui_f\hpp\defineResincl.inc"
 
 // Basic Elements
 #define ELEMENTS_BASIC [QGVAR(soldierVehicleWeaponInfo), QGVAR(vehicleRadar), QGVAR(vehicleCompass), QGVAR(commandMenu), QGVAR(groupBar)]
