@@ -1,3 +1,6 @@
+#ifndef _RESINCL_HPP
+#define _RESINCL_HPP
+
 /*******************/
 /*  Tactical menu  */
 /*******************/
@@ -3168,3 +3171,6 @@ enum
 #define HZ_VEH_CMDTRRT_TOTAL 31
 
 #define HZ_TANK_BOTH_TRACKS 32
+
+
+#endif
