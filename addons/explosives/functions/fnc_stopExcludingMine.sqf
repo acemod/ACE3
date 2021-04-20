@@ -7,10 +7,10 @@
  * 0: Mine <OBJECT>
  *
  * Return Value:
- * Succes <BOOLEAN>
+ * Success <BOOL>
  *
  * Example:
- * [_mine] call ace_explosives_fnc_stopExcludingMine;
+ * [_mine] call ace_explosives_fnc_stopExcludingMine
  *
  * Public: Yes
  */

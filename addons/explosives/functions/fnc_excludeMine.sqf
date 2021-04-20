@@ -7,10 +7,10 @@
  * 0: Mine <OBJECT>
  *
  * Return Value:
- * Index in ace_explosives_fnc_excludedMines (or -1) <NUMBER>
+ * Index in ace_explosives_excludedMines (or -1) <NUMBER>
  *
  * Example:
- * [_mine] call ace_explosives_fnc_excludeMine;
+ * [_mine] call ace_explosives_fnc_excludeMine
  *
  * Public: Yes
  */
