@@ -11,17 +11,15 @@ PREP_RECOMPILE_END;
 if (hasInterface && !is3DEN) then {
 
     ["CBA_settingsInitialized", {
-        if (GVAR(enabled)) then {
+        if (!GVAR(enabled)) exitWith {};
 
-            ["vehicle",{
-                [false] call FUNC(adaptViewDistance);
-            }] call CBA_fnc_addPlayerEventHandler;
+        ["vehicle",{
+            [false] call FUNC(adaptViewDistance);
+        }] call CBA_fnc_addPlayerEventHandler;
 
-            ["ACE_controlledUAV", {
-                [false] call FUNC(adaptViewDistance);
-            }] call CBA_fnc_addEventHandler;
-
-        };
+        ["ACE_controlledUAV", {
+            [false] call FUNC(adaptViewDistance);
+        }] call CBA_fnc_addEventHandler;
     }] call CBA_fnc_addEventHandler;
 
 };
