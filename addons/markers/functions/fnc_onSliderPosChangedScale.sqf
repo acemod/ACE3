@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: frankplow
- * Scale Slider Pos changed
+ * Applies scale from on slider position change.
  *
  * Arguments:
  * 0: Slider (idc 1420) <CONTROL>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [Slider, 1.5] call ace_markers_fnc_onSliderPosChangedScale;
+ * [slider, 1.5] call ace_markers_fnc_onSliderPosChangedScale
  *
  * Public: No
  */
