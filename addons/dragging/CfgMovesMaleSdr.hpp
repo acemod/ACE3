@@ -1,9 +1,9 @@
 class CfgMovesMaleSdr: CfgMovesBasic {
-        class InjuredMovedBase;
-        class AgonyBaseRfl;
-        class StandBase;
-        class AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1;
-        class DraggerBase;
+    class InjuredMovedBase;
+    class AgonyBaseRfl;
+    class StandBase;
+    class AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1;
+    class DraggerBase;
 
     class States {
         class AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon: InjuredMovedBase {
@@ -109,7 +109,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             looped = 1;
             speed = 0;
         };
-        
+
         class ace_dragging_drop: ace_dragging {
             ConnectTo[] = {
                 "AmovPknlMstpSrasWpstDnon",
