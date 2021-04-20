@@ -156,6 +156,10 @@
             <Spanish>Barra de grupo</Spanish>
             <Turkish>Grup Göstergesi</Turkish>
         </Key>
+        <Key ID="STR_ACE_UI_devWatermark">
+            <English>Development Build Watermark</English>
+            <Russian>Водяной знак Development Build</Russian>
+        </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
             <Czech>Název zbraně</Czech>
