@@ -114,8 +114,58 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         _yaw = _yaw + _clampedYaw * _timestep;
 
         TRACE_3("new pitch/yaw/roll",_pitch,_yaw,_roll);
+
+        private _multiplyQuat = {
+            params ["_qLHS", "_qRHS"];
+            _qLHS params ["_lhsX", "_lhsY", "_lhsZ", "_lhsW"];
+            _qRHS params ["_rhsX", "_rhsY", "_rhsZ", "_rhsW"];
+
+            private _lhsImaginary = [_lhsX, _lhsY, _lhsZ];
+            private _rhsImaginary = [_rhsX, _rhsY, _rhsZ];
+
+            private _scalar = _lhsW * _rhsW - (_lhsImaginary vectorDotProduct _rhsImaginary);
+            private _imginary = (_rhsImaginary vectorMultiply _lhsW) vectorAdd (_lhsImaginary vectorMultiply _rhsW) vectorAdd (_lhsImaginary vectorCrossProduct _rhsImaginary);
+
+            _imginary + [_scalar]
+        };
+
+        private _multiplyVector = {
+            params ["_quaternion", "_vector"];
+
+            private _real = _quaternion#3;
+            private _imaginary = [
+                _quaternion#0,
+                _quaternion#1,
+                _quaternion#2
+            ];
+            
+            private _vectorReturn = _vector vectorAdd ((
+                _imaginary vectorCrossProduct (
+                    (_imaginary vectorCrossProduct _vector) vectorAdd (
+                        _vector vectorMultiply _real
+                    )
+                )
+            ) vectorMultiply 2);
+
+            _vectorReturn
+        };
+
+        private _quaternion = [0, 0, 0, 1];
+
+        private _temp = [0, 0, sin (-_yaw / 2), cos (-_yaw / 2)];
+        _quaternion = [_quaternion, _temp] call _multiplyQuat;
+
+        _temp = [sin (_pitch / 2), 0, 0, cos (_pitch / 2)];
+        _quaternion = [_quaternion, _temp] call _multiplyQuat;
         
-        [_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
+        private _dir = [_quaternion, [0, 1, 0]] call _multiplyVector;
+        private _up = [_quaternion, [0, 0, 1]] call _multiplyVector;
+
+        _projectile setVectorDirAndUp [_dir, _up];
+
+        systemChat str [_pitch, _yaw];
+
+        //[_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
 
         _guidanceParameters set [0, _yaw];
         _guidanceParameters set [2, _pitch];
