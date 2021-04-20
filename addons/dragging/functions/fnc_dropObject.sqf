@@ -24,6 +24,11 @@ TRACE_2("params",_unit,_target);
 
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
+// drop cloned dead units
+if (_target isKindOf QGVAR(clone)) then {
+    _target = [_target] call FUNC(dropClone);
+};
+
 if !(_unit getVariable ["ACE_isUnconscious", false]) then {
     // play release animation
     [_unit, "released"] call EFUNC(common,doGesture);
