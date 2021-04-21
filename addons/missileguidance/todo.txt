@@ -57,7 +57,7 @@ Navigation Types:
     X DAGR - APN
     X AGM-65 - APN
     X KH-25 - APN
-    R-73 - APN
+    X R-73 - APN
     AGM-88 - APN
     KH-58 - APN
     X AIM-9 - APN
