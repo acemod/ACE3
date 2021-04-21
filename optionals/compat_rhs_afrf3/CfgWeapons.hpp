@@ -57,15 +57,14 @@ class CfgWeapons {
     class rhs_weap_svds_npz: rhs_weap_svds {
         ACE_RailHeightAboveBore = 4.3348;
     };
+    class rhs_weap_rpk74_base;
+    class rhs_weap_rpk74m : rhs_weap_rpk74_base {
+        ACE_barrelLength = 590.00;
+    };
     class rhs_pkp_base;
     class rhs_weap_pkp: rhs_pkp_base {
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 657.86;
-    };
-    class rhs_weap_pkm: rhs_weap_pkp {
-        ACE_Overheating_allowSwapBarrel = 1;
-        ACE_barrelTwist = 240.03;
-        ACE_barrelLength = 645.16;
     };
     class rhs_weap_rpk74: rhs_weap_pkp {
         ACE_barrelTwist = 195.072;
