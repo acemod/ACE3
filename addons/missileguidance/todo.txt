@@ -33,9 +33,9 @@ Weapon Configs:
     ZSU-39 Tigris AA - Infrared
     Mk49 Spartan - Infrared
 
-    Mk21 Centurion - Doppler Radar
-    MIM-145 - Doppler Radar
-    S-750 - Doppler Radar
+    X Mk21 Centurion - Doppler Radar
+    X MIM-145 - Doppler Radar
+    X S-750 - Doppler Radar
 
 Seeker Types:
     X Laser
@@ -73,9 +73,9 @@ Navigation Types:
     X AIM-120 - ZEM
     X AIM-132 - ZEM
     X GBU-SDB - ZEM
-    MIM-145 - ZEM
-    S-750 - ZEM
-    Mk49 Spartan - ZEM
+    X MIM-145 - ZEM
+    X S-750 - ZEM
+    X Mk49 Spartan - ZEM
 
 Navigation State Machine:
     Todo: Will allow for changing of navigation type in flight to get a more realistic flight profile
