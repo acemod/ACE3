@@ -24,7 +24,6 @@ _attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_random
 private _projectilePos = getPosASL _projectile;
 private _shooterPos = getPosASL _shooter;
 
-private _shooterDir = vectorNormalized(_seekerTargetPos vectorDiff _shooterPos);
 private _distanceToProjectile = _shooterPos vectorDistanceSqr _projectilePos;
 
 if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
@@ -44,9 +43,9 @@ if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMin
     /*if (lineIntersectsSurfaces [getPosASL _shooter, _projectilePos, _shooter] isNotEqualTo []) then {
         _attackProfileStateParams set [1, true];
     };*/
-    // return position 50m infront of projectile
-    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 0])
+    // return position 50m infront of projectile and a bit up to get out of the way of the ground
+    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 3])
 };
 
-_seekerTargetPos vectorAdd (_shooterDir vectorMultiply 30);
+_seekerTargetPos vectorAdd _crosshairOffset
 

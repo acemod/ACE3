@@ -36,6 +36,7 @@ PREP(navigationType_zeroEffortMiss);
 PREP(navigationType_augmentedProNav);
 PREP(navigationType_proNav);
 PREP(navigationType_lineOfSight);
+PREP(navigationType_line);
 
 // Seeker search functions
 PREP(seekerType_SALH);
@@ -59,6 +60,7 @@ PREP(gps_seekerOnFired);
 
 // Navigation OnFired
 PREP(proNav_onFired);
+PREP(line_onFired);
 
 // State transitions
 PREP(javelin_midCourseTransition);

@@ -156,7 +156,7 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_pitchYaw select 1, 0, _pitchYaw select 2]],
+            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_pitchYaw select 1, 0, 1.5 + (_pitchYaw select 2)]],
             [
                 // target data from missile. Must be filled by seeker for navigation to work
                 [0, 0, 0],  // direction to target
@@ -199,7 +199,7 @@ if (_onFiredFunc != "") then {
 //      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];
 //          _targetLaunchParams params ["_target", "_targetPos", "_launchPos", "_launchDir", "_launchTime"];
 //      _flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance"];
-//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState","_navigationParams", "_guidanceParameters"];
+//      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_navigationParams", "_guidanceParameters"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 //      _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 

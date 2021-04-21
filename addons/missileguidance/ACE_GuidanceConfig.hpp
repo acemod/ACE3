@@ -123,6 +123,10 @@ class GVAR(SeekerTypes) {
 };
 
 class GVAR(NavigationTypes) {
+    class Line {
+        functionName = QFUNC(navigationType_line);
+        onFired = QFUNC(line_onFired);
+    };
     class LineOfSight {
         functionName = QFUNC(navigationType_lineOfSight);
         onFired = QFUNC(proNav_onFired);

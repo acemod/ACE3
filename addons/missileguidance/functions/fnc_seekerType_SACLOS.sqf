@@ -58,7 +58,10 @@ if ((_testDotProduct < (cos _seekerAngle)) || {_testIntersections isNotEqualTo [
     [0, 0, 0]
 };
 
-_targetData set [0, _lookDirection];
+private _returnPos = _shooterPos vectorAdd (_lookDirection vectorMultiply _distanceToProj);
 
-_shooterPos vectorAdd (_lookDirection vectorMultiply _distanceToProj);
+_targetData set [0, _lookDirection];
+_targetData set [2, _returnPos distance getPosASLVisual _projectile];
+
+_returnPos
 

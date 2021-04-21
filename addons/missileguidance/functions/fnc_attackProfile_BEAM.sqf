@@ -24,24 +24,12 @@ _attackProfileStateParams params["_maxCorrectableDistance", "_wireCut", "_random
 private _projectilePos = getPosASL _projectile;
 private _shooterPos = getPosASL _shooter;
 
-private _shooterDir = vectorNormalized(_seekerTargetPos vectorDiff _shooterPos);
 private _distanceToProjectile = _shooterPos vectorDistanceSqr _projectilePos;
 
-if (_distanceToProjectile > _seekerMaxRangeSqr || { _seekerTargetPos isEqualTo [0, 0, 0] } || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
-    // return position 50m infront of projectile
-    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 0])
+if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
+    // return position 50m infront of projectile and a bit up to get out of the way of the ground
+    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 3])
 };
 
-private _relativeCorrection = _projectile vectorWorldToModel (_projectilePos vectorDiff _seekerTargetPos);
-_relativeCorrection = _relativeCorrection vectorDiff _crosshairOffset;
+_seekerTargetPos vectorAdd _crosshairOffset
 
-private _magnitude = vectorMagnitude [_relativeCorrection select 0, 0, _relativeCorrection select 2];
-private _fovImpulse = 1 min (_magnitude / _maxCorrectableDistance); // the simulated impulse for the missile being close to the center of the crosshair
-
-// Adjust the impulse due to near-zero values creating wobbly missiles?
-private _correction = _fovImpulse;
-
-
-_relativeCorrection = (vectorNormalized _relativeCorrection) vectorMultiply _correction;
-private _returnPos = _projectilePos vectorDiff (_projectile vectorModelToWorld _relativeCorrection);
-_returnPos vectorAdd (_shooterDir vectorMultiply _distanceAheadOfMissile)

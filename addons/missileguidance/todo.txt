@@ -50,8 +50,8 @@ Navigation Types:
 
     X Dragon - NA
 
-    Metis - Wire/Beam Guidance
-    HOT - Wire/Beam Guidance
+    X Metis - Wire/Beam Guidance
+    X HOT - Wire/Beam Guidance
     Vikhr - Wire/Beam Guidance
 
     X DAGR - APN
@@ -83,7 +83,7 @@ Navigation State Machine:
 Navigation Types:
     X Augmented Pro-Nav
     X Zero Effort Miss
-    Wire/Beam Guided
+    X Wire/Beam Guided
     Predicted Line of Sight
 
 General To-Do:

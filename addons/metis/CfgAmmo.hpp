@@ -22,8 +22,11 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            defaultNavigationType = "LineOfSight";
-            navigationTypes[] = { "LineOfSight" };
+            defaultNavigationType = "Line";
+            navigationTypes[] = { "Line" };
+
+            lineGainP = 3;
+            lineGainD = 2.1;
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 15;           // Angle from the shooter's view that can track the missile
@@ -64,8 +67,11 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            defaultNavigationType = "LineOfSight";
-            navigationTypes[] = { "LineOfSight" };
+            defaultNavigationType = "Line";
+            navigationTypes[] = { "Line" };
+
+            lineGainP = 3;
+            lineGainD = 3;
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 15;           // Angle from the shooter's view that can track the missile
@@ -74,7 +80,7 @@ class CfgAmmo {
             seekerMinRange = 80;
             seekerMaxRange = 2000;      // Range from the missile which the seeker can visually search
 
-            correctionDistance = 6; // distance from center of crosshair where missile slows down
+            correctionDistance = 1; // distance from center of crosshair where missile slows down
             offsetFromCrosshair[] = { 0, 0, 0 }; // where the missile wants to stay in relation to the center of the crosshair.
 
             // Attack profile type selection

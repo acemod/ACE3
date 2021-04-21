@@ -61,10 +61,10 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
     };
 
     
-    private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos] call (missionNamespace getVariable _navigationFunction);
+    private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos, _targetData, _navigationParameters] call (missionNamespace getVariable _navigationFunction);
 
     if (isNil "_commandedAcceleration") exitWith {
-        systemChat _navigationFunction;
+        systemChat format ["Error in %1", _navigationFunction];
         ERROR_MSG("_commandedAcceleration is nil! Guidance cancelled");
     };
 

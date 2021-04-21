@@ -46,3 +46,4 @@ _attackProfileStateParams set [5, _minDistanceSqr];
 _attackProfileStateParams set [6, _wireCutSource];
 _attackProfileStateParams set [7, _distanceAheadOfMissile];
 
+
