@@ -38,6 +38,7 @@ class CfgWeapons {
 ```
 
 ### 1.3 Cook Off
+
 ```cpp
 class CfgWeapons {
     class Rifle_Long_Base_F ;
