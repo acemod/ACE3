@@ -22,7 +22,7 @@ class CfgAmmo {
             seekerTypes[] = { "IR" };
 
             flareDistanceFilter = 100;
-            flareAngleFilter = 2.0; // can filter out flares that are >= flareAngleFilter to known target velocity
+            flareAngleFilter = 1.6; // can filter out flares that are >= flareAngleFilter to known target velocity
 
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };

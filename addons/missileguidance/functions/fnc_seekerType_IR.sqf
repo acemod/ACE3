@@ -91,7 +91,7 @@ if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
 			if !(_foundDecoy) then {
 				private _flareRelativeVelocity = (velocity _x) vectorDiff _projectileVelocity;
 				private _angleBetweenVelocities = acos (_closingVelocity vectorCos _flareRelativeVelocity);
-
+				systemChat str [_angleBetweenVelocities, _flareAngleFilter];
 				if (_angleBetweenVelocities <= _flareAngleFilter) then {
 						_considering = true;
 						if (_seekerAccuracy <= random 1) then {

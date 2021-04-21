@@ -27,11 +27,11 @@ Weapon Configs:
     AGM-88 - Passive Radar Homing
     KH-58 - Passive Radar Homing
 
-    Titan MRPL - Infrared
-    AWC Nyx SAAMI - Infrared
-    IFV-6a Cheetah AA - Infrared
-    ZSU-39 Tigris AA - Infrared
-    Mk49 Spartan - Infrared
+    X Titan MRPL - Infrared
+    X AWC Nyx SAAMI - Infrared
+    X IFV-6a Cheetah AA - Infrared
+    X ZSU-39 Tigris AA - Infrared
+    X Mk49 Spartan - Infrared
 
     X Mk21 Centurion - Doppler Radar
     X MIM-145 - Doppler Radar
@@ -61,11 +61,10 @@ Navigation Types:
     AGM-88 - APN
     KH-58 - APN
     X AIM-9 - APN
-    Titan MRPL - APN
-    AWC Nyx SAAMI - APN
-    IFV-6a Cheetah AA - APN
-    ZSU-39 Tigris AA - APN
-    Mk21 Centurion - APN
+    X Titan MRPL - APN
+    X AWC Nyx SAAMI - APN
+    X IFV-6a Cheetah AA - APN
+    X ZSU-39 Tigris AA - APN
 
     X Javelin - ZEM
     X Hellfire - ZEM
@@ -76,6 +75,7 @@ Navigation Types:
     X MIM-145 - ZEM
     X S-750 - ZEM
     X Mk49 Spartan - ZEM
+    X Mk21 Centurion - ZEM
 
 Navigation State Machine:
     Todo: Will allow for changing of navigation type in flight to get a more realistic flight profile
@@ -87,7 +87,7 @@ Navigation Types:
     X Predicted Line of Sight
 
 General To-Do:
-    Add more weapons
+    X Add more weapons
     X Fix GBU drag
     X Make sure all applicable pylons can hold all applicable weapons
     X NLAW is busted: figure out PLOS navigation system
