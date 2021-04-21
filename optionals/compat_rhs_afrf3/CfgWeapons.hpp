@@ -66,9 +66,10 @@ class CfgWeapons {
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 657.86;
     };
-    class rhs_weap_rpk74: rhs_weap_pkp {
-        ACE_barrelTwist = 195.072;
-        ACE_barrelLength = 589.28;
+    class rhs_weap_pkm: rhs_weap_pkp {
+        ACE_Overheating_allowSwapBarrel = 1;
+        ACE_barrelTwist = 240.03;
+        ACE_barrelLength = 645.16;
     };
     class rhs_weap_orsis_Base_F;
     class rhs_weap_t5000: rhs_weap_orsis_Base_F { // http://en.orsis.com/production/catalog/19046/
