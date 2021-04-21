@@ -20,5 +20,11 @@ if (GVAR(gps_mode) isEqualTo "too") then {
 	_target params ["_tracking", "_position", "_object"];
 	GVAR(gps_currentSettings) set [0, _position]
 };
-GVAR(gps_currentSettings)
+
+// create a copy of this array to make sure values are not overwritten
+[
+	GVAR(gps_currentSettings)#0,
+	GVAR(gps_currentSettings)#1,
+	GVAR(gps_currentSettings)#2
+]
 

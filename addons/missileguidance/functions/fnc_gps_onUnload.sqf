@@ -15,4 +15,4 @@
  * Public: No
  */
 [GVAR(gps_uiPerFrameHandler)] call CBA_fnc_removePerFrameHandler;
-systemChat "unload";
+

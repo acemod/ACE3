@@ -74,4 +74,5 @@ PREP(gps_modeSelect);
 PREP(gps_saveAttackSettings);
 PREP(gps_loadAttackSettings);
 PREP(gps_getAttackData);
+PREP(gps_setupVehicle);
 
