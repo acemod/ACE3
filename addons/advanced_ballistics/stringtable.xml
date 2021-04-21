@@ -100,6 +100,7 @@
             <Portuguese>Ativar Variação de Velocidade no Freio de boca </Portuguese>
             <Czech>Povoluje variantu rychlosti ústí</Czech>
             <Turkish>Namlu Hızı Değişimini Etkinleştir</Turkish>
+            <Spanish>Activa la variación de velocidad en boca</Spanish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_muzzleVelocityVariationEnabled_Description">
             <English>Simulates slight variations in muzzle velocity between each shot</English>
@@ -114,6 +115,7 @@
             <Russian>Имитирует небольшие изменения начальной скорости при каждом выстреле</Russian>
             <Portuguese>Simula pequenas variações na velocidade do Freio de Boca entre cada tiro</Portuguese>
             <Czech>Simuluje malé odchylky v úsťové rychlosti mezi jednotlivými výstřely</Czech>
+            <Spanish>Simula ligeras variaciones de velocidad en boca entre cada disparo</Spanish>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>

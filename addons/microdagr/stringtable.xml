@@ -511,9 +511,10 @@
             <French>Précision des points de passage</French>
             <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
             <Czech>MicroDAGR - přesnost Waypointů</Czech>
+            <Spanish>MicroDAGR - Precisión de puntos de ruta</Spanish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_Description">
-            <English>Controls how precise the waypointdistance can be displayed</English>
+            <English>Controls how precise the waypoint distance can be displayed</English>
             <German>Legt die Genauigkeit der Entfernung von Wegpunkten fest</German>
             <Italian>Controlla quanto precisamente può essere visualizzato il waypoint a distanza</Italian>
             <Japanese>表示されるウェイポイントの精度を設定します</Japanese>
@@ -523,6 +524,7 @@
             <French>Définit la précision d'affichage des points de passage.</French>
             <Chinese>控制顯示的導航點精確度為多少</Chinese>
             <Czech>Nastavuje jak přesně je vzdálenost waypointů zobrazena.</Czech>
+            <Spanish>Controla con qué precisión se muestran los puntos de ruta</Spanish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_medium">
             <English>100m</English>
@@ -535,6 +537,7 @@
             <French>100 m</French>
             <Chinese>一百公尺</Chinese>
             <Czech>100 m</Czech>
+            <Spanish>100m</Spanish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_close">
             <English>10m</English>
@@ -547,6 +550,7 @@
             <French>10 m</French>
             <Chinese>十公尺</Chinese>
             <Czech>10 m</Czech>
+            <Spanish>10m</Spanish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_WaypointPrecision_exact">
             <English>1m</English>
@@ -559,6 +563,7 @@
             <French>1 m</French>
             <Chinese>一公尺</Chinese>
             <Czech>1 m</Czech>
+            <Spanish>1m</Spanish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>

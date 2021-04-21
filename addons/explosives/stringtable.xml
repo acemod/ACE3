@@ -1039,6 +1039,7 @@
             <Chinese>絆線閃光地雷</Chinese>
             <Portuguese>Tripwire (Sinalizador)</Portuguese>
             <Czech>Světlice na nástražném drátu</Czech>
+            <Spanish>Bengala con cable trampa</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Description">
             <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
@@ -1053,6 +1054,7 @@
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
             <Portuguese>Tipo: Flare de Tripwire - Acende um sinalizador não letal quando acionado.&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Chão</Portuguese>
             <Czech>Typ: Světlice na nástražném drátu - Zapálí světlici při aktivaci.&lt;br/&gt;Pouze 1 použití&lt;br/&gt;Použít na zem</Czech>
+            <Spanish>Tipo: Bengala con cable trampa - Enciende una bengala no letal cuando es activado.&lt;br /&gt;Rondas: 1&lt;br /&gt;Usado en: Tierra</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_statExploRange">
             <English>Explosive range</English>
@@ -1066,6 +1068,7 @@
             <Russian>Дальность подрыва</Russian>
             <Portuguese>Alcance do explosivo</Portuguese>
             <Czech>Dosah exploze</Czech>
+            <Spanish>Alcance explosivo</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_ExplosiveTimer">
             <English>Explosive Timer</English>
@@ -1078,6 +1081,7 @@
             <French>Minuteur de détonation</French>
             <Chinese>引爆倒數</Chinese>
             <Czech>Časovač exploze</Czech>
+            <Spanish>Temporizador de explosivo</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_DisplayName">
             <English>Is EOD</English>
@@ -1088,6 +1092,7 @@
             <Italian>è EOD</Italian>
             <Czech>Je specilista na výbušniny (EOD)</Czech>
             <Polish>Jest EOD</Polish>
+            <Spanish>¿Es EOD?</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_IsEOD_Description">
             <English>Controls whether the unit is an explosive specialist.</English>
@@ -1098,6 +1103,7 @@
             <Italian>Controlla se l'unità è uno specialista di esplosivi.</Italian>
             <Czech>Určuje jestli je jednotka specialista na výbušniny.</Czech>
             <Polish>Kontroluje, czy jednostka jest specjalistą od materiałów wybuchowych.</Polish>
+            <Spanish>Controla si la unidad es un especialista en explosivos</Spanish>
         </Key>
     </Package>
 </Project>

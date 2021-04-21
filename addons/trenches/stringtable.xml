@@ -208,6 +208,7 @@
             <Chinesesimp>继续盖掩体</Chinesesimp>
             <Chinese>繼續蓋掩體</Chinese>
             <Turkish>Kazmaya Devam Et</Turkish>
+            <Spanish>Continuar cavando trinchera</Spanish>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
@@ -223,6 +224,7 @@
             <Chinesesimp>移除掩体</Chinesesimp>
             <Chinese>移除掩體</Chinese>
             <Turkish>Siperi Kaldır</Turkish>
+            <Spanish>Eliminar trinchera</Spanish>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -238,6 +240,7 @@
             <Chinesesimp>移除掩体中</Chinesesimp>
             <Chinese>移除掩體中</Chinese>
             <Turkish>Siper Kaldırılıyor</Turkish>
+            <Spanish>Eliminando trinchera</Spanish>
         </Key>
     </Package>
 </Project>

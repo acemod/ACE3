@@ -14,6 +14,7 @@
             <Hungarian>Túlmelegedés</Hungarian>
             <French>Surchauffe</French>
             <Czech>Přehřívání</Czech>
+            <Spanish>Sobrecalentamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display text on jam</English>
@@ -411,6 +412,7 @@
             <Italian>Controlla la temperatura della canna di ricambio</Italian>
             <Chinesesimp>检查备用枪管温度</Chinesesimp>
             <Chinese>檢查備用槍管溫度</Chinese>
+            <Spanish>Comprobar temperatura de cañones de repuesto</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
@@ -425,6 +427,7 @@
             <Italian>Controllando la temperatura della canna di ricambio...</Italian>
             <Chinesesimp>检查枪管温度中...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
+            <Spanish>Comprobando temperatura de cañones de repuesto</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -455,6 +458,7 @@
             <Italian>Canna/e di Ricambio Fredda</Italian>
             <Chinesesimp>备用枪管温度正常</Chinesesimp>
             <Chinese>備用槍管溫度正常</Chinese>
+            <Spanish>Cañon/es de repuesto frío/s</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
@@ -469,6 +473,7 @@
             <Italian>Canna/e di Ricambio Calda</Italian>
             <Chinesesimp>备用枪管温度偏温</Chinesesimp>
             <Chinese>備用槍管溫度偏溫</Chinese>
+            <Spanish>Cañon/es de repuesto templado/s</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
@@ -483,6 +488,7 @@
             <Italian>Canna/e di Ricambio Molto Calda</Italian>
             <Chinesesimp>备用枪管温度偏热</Chinesesimp>
             <Chinese>備用槍管溫度偏熱</Chinese>
+            <Spanish>Cañon/es de repuesto caliente/s</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
@@ -497,6 +503,7 @@
             <Italian>Canna/e di Ricambio Estremamente Calda</Italian>
             <Chinesesimp>备用枪管温度过热</Chinesesimp>
             <Chinese>備用槍管溫度過熱</Chinese>
+            <Spanish>Cañon/es de repuesto muy caliente/s</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
@@ -511,6 +518,7 @@
             <Italian>Canna/e di Ricambio Rovente</Italian>
             <Chinesesimp>备用枪管温度超级热</Chinesesimp>
             <Chinese>備用槍管溫度超級熱</Chinese>
+            <Spanish>Cañon/es de repuesto extremadamente caliente/s</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
@@ -540,6 +548,7 @@
             <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
             <Chinese>啟用槍管過熱/干擾模塊</Chinese>
             <Czech>Hlavní přepínač pro modul přehřívání/zasekávání</Czech>
+            <Spanish>Activación maestra del módulo de sobrecalentamiento/encasquillamiento</Spanish>
         </Key>
     </Package>
 </Project>

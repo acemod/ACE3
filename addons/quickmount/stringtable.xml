@@ -14,6 +14,7 @@
             <Portuguese>Entrada Rápida</Portuguese>
             <French>Entrée rapide</French>
             <Czech>Rychlé nastoupení</Czech>
+            <Spanish>Entrada rápida</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindName">
             <English>Vehicle quick mount</English>
@@ -28,6 +29,7 @@
             <Portuguese>Entrada Rápida em Veículo</Portuguese>
             <French>Entrée rapide véhicules</French>
             <Czech>Rychlé nastoupení do vozidla</Czech>
+            <Spanish>Entrada rápida en vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindDescription">
             <English>Quickly enter the vehicle you are directly looking at.</English>
@@ -42,6 +44,7 @@
             <Portuguese>Rapidamente entra no veículo que você está olhando diretamente.</Portuguese>
             <French>Permet d'entrer rapidement dans le véhicule que vous regardez.</French>
             <Czech>Rychle nastoupit do vozidla na které se díváte.</Czech>
+            <Spanish>Entrar rápidamente en el vehículo al que se está mirando directamente.</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleFull">
             <English>Vehicle Full</English>
@@ -57,6 +60,7 @@
             <French>Véhicule plein</French>
             <Czech>Vozidlo je plné</Czech>
             <Turkish>Araç Dolu</Turkish>
+            <Spanish>Vehículo lleno</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_EnabledDescription">
             <English>This option allows quick entry into the vehicle you are directly looking at.</English>
@@ -66,6 +70,7 @@
             <Portuguese>Esta opção permite entrada rápida para o veículo que você está olhando</Portuguese>
             <Japanese>この機能により直接見ている車両へすぐさま搭乗できます。</Japanese>
             <Italian>Questa opzione permette l'entrata rapida nel veicolo che si sta guardando.</Italian>
+            <Spanish>Esta opción permite una entrada rápida en el vehículo al que se está mirando directamente.</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
@@ -81,6 +86,7 @@
             <French>Distance</French>
             <Czech>Vzdálenost</Czech>
             <Turkish>Mesafe</Turkish>
+            <Spanish>Distancia</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_DistanceDescription">
             <English>Maximum distance to check for vehicles.</English>
@@ -96,6 +102,7 @@
             <French>Distance de vérification maximale des véhicules.</French>
             <Czech>Maximální vzdálenost od vozidel.</Czech>
             <Turkish>Araçların kontrol edilmesi için maksimum mesafe.</Turkish>
+            <Spanish>Máxima distancia para localizar vehículos</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleLocked">
             <English>Vehicle Locked</English>
@@ -111,6 +118,7 @@
             <French>Véhicule verrouillé</French>
             <Czech>Vozidlo je zamčeno</Czech>
             <Turkish>Araç Kilitli</Turkish>
+            <Spanish>Vehículo bloqueado</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_Speed">
             <English>Maximum Speed (km/h)</English>
@@ -126,6 +134,7 @@
             <French>Vitesse maximale (km/h)</French>
             <Czech>Maximální rychlost (km/h)</Czech>
             <Turkish>Yüksek Hız (km/h)</Turkish>
+            <Spanish>Máxima velocidad (km/h)</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_SpeedDescription">
             <English>Maximum vehicle speed (km/h) allowed for player entry</English>
@@ -141,6 +150,7 @@
             <French>Définit la vitesse maximale que peut avoir un véhicule en mouvement pour qu'un joueur réussisse à y entrer.</French>
             <Czech>Maximální rychlost vozidla (km/h) při které hráči mohou nastoupit do vozidla</Czech>
             <Turkish>Oyuncu binmesi için izin verilen maksimum araç hızı (km / s)</Turkish>
+            <Spanish>Máxima velocidad del vehículo (km/h) para permitir al jugador entrar al vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
             <English>Prioritize Seat</English>
@@ -156,6 +166,7 @@
             <French>Place prioritaire</French>
             <Czech>Priorita sedadel</Czech>
             <Turkish>Koltuğa Öncelik Ver</Turkish>
+            <Spanish>Priorizar asiento</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_PriorityDescription">
             <English>Seat priority on entry</English>
@@ -171,6 +182,7 @@
             <French>Définit à quel poste s'asseoir en priorité lors de l'embarquement.</French>
             <Czech>Priorita sedadla při nástupu</Czech>
             <Turkish>Araça binerken koltuk önceliği</Turkish>
+            <Spanish>Prioridad de asiento al entrar</Spanish>
         </Key>
         <Key ID="STR_ACE_QuickMount_ChangeSeat">
             <English>Change seat</English>
@@ -184,6 +196,7 @@
             <French>Changer de place</French>
             <Czech>Změnit sedadlo</Czech>
             <Turkish>Koltuk Değiştir</Turkish>
+            <Spanish>Cambiar asiento</Spanish>
         </Key>
     </Package>
 </Project>

@@ -15,6 +15,7 @@
             <French>ACE Verrouillage véhicule</French>
             <Czech>ACE Zamykání Vozidel</Czech>
             <Turkish>ACE Araç Kilidi</Turkish>
+            <Spanish>ACE Bloqueo de vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>

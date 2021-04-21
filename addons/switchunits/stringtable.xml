@@ -15,6 +15,7 @@
             <Czech>Přepnout jednotky</Czech>
             <French>Changement de camp</French>
             <Turkish>Birlik Değiştir</Turkish>
+            <Spanish>Cambiar unidades</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
             <English>Switched unit</English>
@@ -74,6 +75,7 @@
             <Polish>Włącz zmiane strony</Polish>
             <Portuguese>Habilita troca de time</Portuguese>
             <Japanese>陣営切り替えを有効化</Japanese>
+            <Spanish>Habilitar cambio de bando</Spanish>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
