@@ -18,4 +18,13 @@ PREP_RECOMPILE_END;
     {[QGVAR(hideAltimeter), _this, false] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(failureChance),
+    "SLIDER",
+    LSTRING(FailureChance),
+    ["ACE Uncategorized", localize "str_dn_parachute"],
+    [0, 1, 0, 2, true],
+    1
+] call CBA_fnc_addSetting;
+
 ADDON = true;

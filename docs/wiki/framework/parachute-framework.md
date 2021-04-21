@@ -22,3 +22,13 @@ class CfgVehicles {
     };
 };
 ```
+
+## 2. Adding failure cut delay
+
+```cpp
+class CfgVehicles {
+    class BananaParachute {
+        ace_parachute_failureDelay = 2;  // Add delay before parachute fails (time in seconds)
+    };
+};
+```
