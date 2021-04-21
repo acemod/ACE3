@@ -11,7 +11,7 @@
 #endif
 
 #ifdef DEBUG_SETTINGS_AIM120
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_GBU
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_AIM120
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"

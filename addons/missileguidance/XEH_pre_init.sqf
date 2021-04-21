@@ -30,7 +30,7 @@ GVAR(debug_drawGuidanceInfo) = false;
 
 #ifdef DRAW_GUIDANCE_INFO
 GVAR(debug_drawGuidanceInfo) = true;
-#else
+#endif
 
 #ifdef ENABLE_PROJECTILE_CAMERA
 GVAR(debug_enableMissileCamera) = true;
