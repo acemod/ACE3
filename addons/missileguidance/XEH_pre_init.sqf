@@ -26,11 +26,11 @@ for "_i" from 0 to MAX_PB_MODES do {
 GVAR(gps_mode) = "pb";
 
 GVAR(debug_enableMissileCamera) = false;
-GVAR(debug_drawGuidanceInfo) = true;
+GVAR(debug_drawGuidanceInfo) = false;
 
 #ifdef DRAW_GUIDANCE_INFO
 GVAR(debug_drawGuidanceInfo) = true;
-#endif
+#else
 
 #ifdef ENABLE_PROJECTILE_CAMERA
 GVAR(debug_enableMissileCamera) = true;

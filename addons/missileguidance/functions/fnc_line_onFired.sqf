@@ -23,6 +23,10 @@ private _p = getNumber (_ammoConfig >> QUOTE(ADDON) >> "lineGainP");
 private _d = getNumber (_ammoConfig >> QUOTE(ADDON) >> "lineGainD");
 private _correctionDistance = getNumber (_ammoConfig >> QUOTE(ADDON) >> "correctionDistance");
 
+if (_correctionDistance == 0) then {
+	_correctionDistance = 1;
+};
+
 _navigationParams set [0, _p];
 _navigationParams set [1, _i];
 _navigationParams set [2, _d];

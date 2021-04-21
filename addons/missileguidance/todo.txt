@@ -11,7 +11,7 @@ Weapon Configs:
     X Javelin - Optical
     X NLAW - PLOS
 
-    Vikhr - Beam Rider SACLOS
+    X Vikhr - Beam Rider SACLOS
 
     X R-73 - Infrared
     X AIM-9 - Infrared
@@ -52,7 +52,7 @@ Navigation Types:
 
     X Metis - Wire/Beam Guidance
     X HOT - Wire/Beam Guidance
-    Vikhr - Wire/Beam Guidance
+    X Vikhr - Wire/Beam Guidance
 
     X DAGR - APN
     X AGM-65 - APN
