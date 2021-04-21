@@ -18,8 +18,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = {"LOBL"};
 
-            defaultNavigationType = "LineOfSight";
-            navigationTypes[] = { "LineOfSight" };
+            defaultNavigationType = QGVAR(PLOS);
+            navigationTypes[] = { QGVAR(PLOS) };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 45;           // Angle in front of the missile which can be searched

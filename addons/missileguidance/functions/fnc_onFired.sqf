@@ -156,7 +156,7 @@ private _args = [_this,
                 getNumber ( _config >> "seekerMaxRange" ),
                 getNumber ( _config >> "seekerMinRange" )
             ],
-            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_pitchYaw select 1, 0, 1.5 + (_pitchYaw select 2)]],
+            [ diag_tickTime, [], [], _lastKnownPosState, _navigationParameters, [_pitchYaw select 1, 0, _pitchYaw select 2]],
             [
                 // target data from missile. Must be filled by seeker for navigation to work
                 [0, 0, 0],  // direction to target
