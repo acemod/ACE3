@@ -18,7 +18,7 @@
 
 params ["_unit", "_vehicle"];
 
-if !(_vehicle isKindOf "ParachuteBase" && {GVAR(failureChance) > 0}) exitWith {};
+if !(_vehicle isKindOf "ParachuteBase" || {GVAR(failureChance) > 0}) exitWith {};
 
 if (random 1 < GVAR(failureChance)) then {
     private _failureDelay = getNumber (configFile >> "CfgVehicles" >> str typeOf _vehicle >> QGVAR(failureDelay))
