@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Markers">
+        <Key ID="STR_ACE_Markers_MarkerScale">
+            <English>Scale: %1</English>
+        </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
             <German>Drehung: %1°</German>
