@@ -4,13 +4,14 @@
 private _aceWhitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
 private _files = CBA_common_addons select {
     (_x select [0,3] != "a3_") &&
-    {_x select [0,4] != "ace_"} && 
+    {_x select [0,4] != "ace_"} &&
     {!((toLower _x) in _aceWhitelist)}
 };
 
 private _versions = [];
 {
-    private _version = parseNumber getText (configFile >> "CfgPatches" >> _x >> "version");
+    getText (configFile >> "CfgPatches" >> _x >> "version") splitString "." params [["_major", "0"], ["_minor", "0"]];
+    private _version = parseNumber _major + parseNumber _minor/100;
     _versions set [_forEachIndex, _version];
 } forEach _files;
 
@@ -98,6 +99,7 @@ if (!isServer) then {
 
         diag_log text _error;
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
     };
 
     private _missingAddonServer = false;
@@ -115,6 +117,7 @@ if (!isServer) then {
 
         diag_log text _error;
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
     };
 
     private _oldVersionClient = false;
@@ -132,6 +135,7 @@ if (!isServer) then {
 
         diag_log text _error;
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
     };
 
     private _oldVersionServer = false;
@@ -149,6 +153,7 @@ if (!isServer) then {
 
         diag_log text _error;
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
     };
 
     ACE_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];

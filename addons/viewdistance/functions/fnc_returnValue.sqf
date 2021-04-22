@@ -10,7 +10,7 @@
  * View Distance <NUMBER>
  *
  * Example:
- * [2] call ace_viewdistance_fnc_returnViewDistanceValue
+ * [2] call ace_viewdistance_fnc_returnValue
  *
  * Public: No
  */

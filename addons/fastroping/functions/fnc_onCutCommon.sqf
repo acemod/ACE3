@@ -10,7 +10,7 @@
  * Amount of time to wait before cutting ropes <NUMBER>
  *
  * Example:
- * [_vehicle] call ace_fastroping_fnc_onCutRopesCommon
+ * [_vehicle] call ace_fastroping_fnc_onCutCommon
  *
  * Public: No
  */

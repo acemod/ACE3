@@ -33,6 +33,7 @@ if (_track) then {
 };
 
 // Prepare first part of the string from stringtable
+//IGNORE_STRING_WARNING(str_ace_repair_hit);
 private _text = LSTRING(Hit);
 
 // Remove "Hit" from hitpoint name if one exists

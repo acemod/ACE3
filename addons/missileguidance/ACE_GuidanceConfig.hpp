@@ -41,6 +41,22 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_JAV_TOP);
     };
+    class WIRE {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(attackProfile_WIRE);
+        onFired = QFUNC(wire_onFired);
+    };
+    class BEAM {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(attackProfile_BEAM);
+        onFired = QFUNC(wire_onFired); // since Beam guidance is pretty much the same as Wire guidance, we can reuse this
+    };
 };
 
 class GVAR(SeekerTypes) {
@@ -57,5 +73,21 @@ class GVAR(SeekerTypes) {
         description = "";
 
         functionName = QFUNC(seekerType_Optic);
+    };
+    class SACLOS {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(seekerType_SACLOS);
+        onFired = QFUNC(SACLOS_onFired);
+    };
+    class ARH {
+        name = "";
+        visualName = "";
+        description = "";
+        
+        functionName = QFUNC(seekerType_ARH);
+        onFired = QFUNC(ahr_onFired);
     };
 };

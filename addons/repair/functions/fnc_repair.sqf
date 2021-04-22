@@ -43,16 +43,11 @@ if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWi
     false
 };
 
-//Items can be an array of required items or a string to a ACE_Setting array
+// Items can be an array of required items or a string to a missionNamespace variable
 private _items = if (isArray (_config >> "items")) then {
     getArray (_config >> "items");
 } else {
-    private _settingName = getText (_config >> "items");
-    private _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
-    if ((isNil _settingName) || {(missionNamespace getVariable _settingName) >= (count _settingItemsArray)}) exitWith {
-        ERROR("bad setting"); ["BAD"]
-    };
-    _settingItemsArray select (missionNamespace getVariable _settingName);
+    missionNamespace getVariable [getText (_config >> "items"), []]
 };
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
@@ -87,7 +82,7 @@ if (!("All" in _repairLocations)) then {
         if (_x == "field") exitWith {_return = true;};
         if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
         if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
-        if !(isNil _x) exitWith {
+        if (!isNil _x) exitWith {
             private _val = missionNamespace getVariable _x;
             if (_val isEqualType 0) then {
                 _return = switch (_val) do {
@@ -104,7 +99,7 @@ if (!("All" in _repairLocations)) then {
 
 private _requiredObjects = getArray (_config >> "claimObjects");
 private _claimObjectsAvailable = [];
-if (!(_requiredObjects isEqualTo [])) then {
+if (_requiredObjects isNotEqualTo []) then {
     _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
     if (_claimObjectsAvailable isEqualTo []) then {
         TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
@@ -186,7 +181,7 @@ private _soundPosition = AGLToASL (_caller modelToWorldVisual (_caller selection
 
 // Get repair time
 private _repairTime = [
-    configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
+    configOf _target >> QGVAR(repairTimes) >> configName _config,
     "number",
     -1
 ] call CBA_fnc_getConfigEntry;

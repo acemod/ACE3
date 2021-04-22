@@ -34,7 +34,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
             private _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
             _layer cutText ["", "PLAIN", 0];
 
-            if !(isNil QGVAR(fadePFH)) then {
+            if (!isNil QGVAR(fadePFH)) then {
                 [GVAR(fadePFH)] call CBA_fnc_removePerFrameHandler;
                 GVAR(fadePFH) = nil;
             };

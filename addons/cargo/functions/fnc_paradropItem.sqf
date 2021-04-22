@@ -69,8 +69,10 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
     _item attachTo [_parachute, [0,0,1]];
     _parachute setVelocity _velocity;
 
-    private _light = "Chemlight_yellow" createVehicle [0,0,0];
-    _light attachTo [_item, [0,0,0]];
+    if ((GVAR(disableParadropEffectsClasstypes) findIf {_item isKindOf _x}) == -1) then {
+        private _light = "Chemlight_yellow" createVehicle [0,0,0];
+        _light attachTo [_item, [0,0,0]];
+    };
 
 }, [_itemObject], 0.7] call CBA_fnc_waitAndExecute;
 
@@ -83,8 +85,10 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
     };
 
     if (getPos _item select 2 < 1) then {
-        private _smoke = "SmokeshellYellow" createVehicle [0,0,0];
-        _smoke attachTo [_item, [0,0,0]];
+        if ((GVAR(disableParadropEffectsClasstypes) findIf {_item isKindOf _x}) == -1) then {
+            private _smoke = "SmokeshellYellow" createVehicle [0,0,0];
+            _smoke attachTo [_item, [0,0,0]];
+        };
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
@@ -95,8 +99,8 @@ if (_showHint) then {
     [
         [
             LSTRING(UnloadedItem),
-            getText (configFile >> "CfgVehicles" >> typeOf _itemObject >> "displayName"),
-            getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
+            getText (configOf _itemObject >> "displayName"),
+            getText (configOf _vehicle >> "displayName")
         ],
         3
     ] call EFUNC(common,displayTextStructured);

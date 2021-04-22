@@ -13,7 +13,7 @@ class Display3DEN {
             };
             class aceArsenal: virtualArsenal {
                 text = "ACE Arsenal";
-                action = QUOTE(call FUNC(open3DEN));
+                action = QUOTE(call DFUNC(open3DEN));
             };
         };
     };
@@ -21,12 +21,12 @@ class Display3DEN {
         class MenuStrip: ctrlMenuStrip {
             class Items {
                 class Tools {
-                    items[] += {"ACE_arsenal_portVALoadouts"};
+                    items[] += {QGVAR(portVALoadouts)};
                 };
-                class ACE_arsenal_portVALoadouts {
+                class GVAR(portVALoadouts) {
                     text = CSTRING(portLoadoutsText);
                     picture = QPATHTOEF(common,data\logo_ace3_ca.paa);
-                    action = "call ace_arsenal_fnc_portVALoadouts;";
+                    action = QUOTE(call DFUNC(portVALoadouts););
                 };
             };
         };

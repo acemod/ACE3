@@ -43,15 +43,15 @@ class CfgVehicles {
                     condition = QUOTE(call DFUNC(canShowFreeSeats)); \
                     statement = QUOTE(call DFUNC(getInNearest)); \
                     exceptions[] = {"isNotSwimming"}; \
-                    insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
+                    insertChildren = QUOTE((_this select 2) param [ARR_2(0, [])]); \
                 }; \
             }; \
         }; \
         class ACE_SelfActions { \
             class GVAR(ChangeSeat) { \
                 displayName = CSTRING(ChangeSeat); \
+                icon = QPATHTOF(UI\Seats_ca.paa); \
                 condition = QUOTE(call DFUNC(canShowFreeSeats)); \
-                statement = ""; \
                 insertChildren = QUOTE(call DFUNC(addFreeSeatsActions)); \
             }; \
         }

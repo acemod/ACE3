@@ -26,7 +26,7 @@ if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
     ERROR('FUNC(deployAI): deployAI was called with an invalid or non-existant vehicle.');
 };
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 private _configEnabled = getNumber (_config >> QGVAR(enabled));
 if (_configEnabled == 0) exitWith {
     if (hasInterface) then {
@@ -59,10 +59,13 @@ if (_createDeploymentGroup) then {
 };
 
 private  _deployTime = 0;
+
 if (getText (_config >> QGVAR(onPrepare)) != "") then {
     _deployTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onPrepare))));
 };
-[{[_this] call FUNC(deployRopes)}, _vehicle, _deployTime] call CBA_fnc_waitAndExecute;
+
+[FUNC(deployRopes), _vehicle, _deployTime] call CBA_fnc_waitAndExecute;
+
 driver _vehicle disableAI "MOVE";
 
 DFUNC(deployAIRecursive) = {
@@ -72,7 +75,7 @@ DFUNC(deployAIRecursive) = {
     unassignVehicle _unit;
     [_unit, _vehicle] call FUNC(fastRope);
 
-    if !(_unitsToDeploy isEqualTo []) then {
+    if (_unitsToDeploy isNotEqualTo []) then {
         [{
             [{
                 params ["_vehicle"];

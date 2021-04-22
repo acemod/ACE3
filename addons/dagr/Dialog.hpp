@@ -139,7 +139,7 @@ class DAGR_Menu_Text {
 
 class DAGR_Menu {
     idd = 266860;
-    movingEnable = false;
+    movingEnable = 0;
     duration = 100000;
     fadein = 0;
     fadeout = 0;
@@ -201,7 +201,6 @@ class DAGR_Menu {
 
     class DAGR_NEXT_Button : DAGR_Button {
         idc = 266868;
-        action = QUOTE(DAGR_NEXT = true);
         x = 0.60;
         y = 0.65;
     };

@@ -29,7 +29,7 @@ private _accel = ((_newVel vectorDiff GVAR(oldVel)) vectorMultiply (1 / INTERVAL
 // Cap maximum G's to +- 10 to avoid g-effects when the update is low fps.
 private _currentGForce = (((_accel vectorDotProduct vectorUp (vehicle ACE_player)) / 9.8) max -10) min 10;
 
-GVAR(GForces) set [GVAR(GForces_Index), _currentGForce];
+GVAR(GForces) set [GVAR(GForces_Index), _currentGForce * GVAR(coef)];
 GVAR(GForces_Index) = (GVAR(GForces_Index) + 1) % 30; // 30 = round (AVERAGEDURATION / INTERVAL);
 GVAR(oldVel) = _newVel;
 
@@ -72,7 +72,7 @@ private _gBlackOut = MAXVIRTUALG / _classCoef + MAXVIRTUALG / _suitCoef - MAXVIR
 
 // Unconsciousness
 if ((_average > _gBlackOut) and {isClass (configFile >> "CfgPatches" >> "ACE_Medical") and {!(ACE_player getVariable ["ACE_isUnconscious", false])}}) then {
-    [ACE_player, true, (10 + floor(random 5))] call EFUNC(medical,setUnconscious);
+    [ACE_player, true, (10 + floor(random 5)), true] call EFUNC(medical,setUnconscious);
 };
 
 GVAR(GForces_CC) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[10,10,0,0,0,0.1,0.5]];

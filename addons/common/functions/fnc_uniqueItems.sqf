@@ -11,7 +11,7 @@
  * Items <ARRAY>
  *
  * Example:
- * [_player] call ace_common_fnc_uniqueItems
+ * [player] call ace_common_fnc_uniqueItems
  *
  * Public: No
  */
@@ -28,12 +28,10 @@ private _fnc_getItems = {
 
 // Use cached items list if unit is ACE_player
 if (_unit isEqualTo ACE_player) then {
-    private _items = GVAR(uniqueItemsCache);
-    if (isNil "_items") then {
-        _items = call _fnc_getItems;
-        GVAR(uniqueItemsCache) = _items;
+    if (isNil QGVAR(uniqueItemsCache)) then {
+        GVAR(uniqueItemsCache) = call _fnc_getItems;
     };
-    +_items
+    +GVAR(uniqueItemsCache)
 } else {
     call _fnc_getItems;
 };

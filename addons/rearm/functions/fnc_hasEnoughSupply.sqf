@@ -1,20 +1,20 @@
 #include "script_component.hpp"
 /*
-* Author: GitHawk
-* Check whether enough supply is left to take the magazine.
-*
-* Arguments:
-* 0: Ammo Truck <OBJECT>
-* 1: Magazine Classname <STRING>
-*
-* Return Value:
-* Enough supply <BOOL>
-*
-* Example:
-* [ammo_truck, "500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_hasEnoughSupply
-*
-* Public: No
-*/
+ * Author: GitHawk
+ * Check whether enough supply is left to take the magazine.
+ *
+ * Arguments:
+ * 0: Ammo Truck <OBJECT>
+ * 1: Magazine Classname <STRING>
+ *
+ * Return Value:
+ * Enough supply <BOOL>
+ *
+ * Example:
+ * [ammo_truck, "500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_hasEnoughSupply
+ *
+ * Public: No
+ */
 
 params ["_truck", "_magazineClass"];
 

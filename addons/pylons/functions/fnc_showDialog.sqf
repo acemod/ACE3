@@ -1,20 +1,20 @@
 #include "script_component.hpp"
 /*
-* Author: 654wak654
-* Shows the aircraft loadout dialog for given aircraft.
-*
-* Arguments:
-* 0: Aircraft <OBJECT>
-* 1: Is curator. Disables time and resource requirements. <BOOL> (default: false)
-*
-* Return Value:
-* None
-*
-* Example:
-* [vehicle ace_player] call ace_pylons_fnc_showDialog
-*
-* Public: Yes
-*/
+ * Author: 654wak654
+ * Shows the aircraft loadout dialog for given aircraft.
+ *
+ * Arguments:
+ * 0: Aircraft <OBJECT>
+ * 1: Is curator. Disables time and resource requirements. <BOOL> (default: false)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [vehicle ace_player] call ace_pylons_fnc_showDialog
+ *
+ * Public: Yes
+ */
 
 params ["_aircraft", ["_isCurator", false]];
 
@@ -48,7 +48,7 @@ if (GVAR(rearmNewPylons) || {_isCurator}) then {
     ctrlShow [ID_TEXT_BANNER, false];
 };
 
-private _config = configFile >> "CfgVehicles" >> typeOf _aircraft;
+private _config = configOf _aircraft;
 private _pylonComponent = _config >> "Components" >> "TransportPylonsComponent";
 
 ctrlSetText [ID_PICTURE_AIRCRAFT, getText (_pylonComponent >> "uiPicture")];

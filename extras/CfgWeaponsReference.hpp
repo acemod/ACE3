@@ -182,13 +182,18 @@ class CfgWeapons
     };
     class srifle_DMR_05_blk_F: DMR_05_base_F
     {
-        ACE_barrelTwist=359.918;
-        ACE_barrelLength=620.014;
+        ACE_barrelTwist=360.0;
+        ACE_barrelLength=620.0;
     };
     class srifle_DMR_06_camo_F: DMR_06_base_F
     {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=558.8;
+    };
+    class DMR_07_base_F: Rifle_Long_Base_F
+    {
+        ACE_barrelLength=640;
+        ACE_barrelTwist=206; // https://en.wikipedia.org/wiki/QBU-88
     };
     class MMG_01_hex_F: MMG_01_base_F
     {
@@ -205,7 +210,18 @@ class CfgWeapons
         ACE_barrelTwist=304.8;
         ACE_barrelLength=1143.0;
     };
-    
+    // P90 (1.86) variants
+    class SMG_03_TR_BASE: Rifle_Base_F {
+        ACE_barrelLength = 407;
+        ACE_barrelTwist = 228.6; // 1:9 inch twist
+        initSpeed = -1.083916; // 775 m/s according with the ACE_muzzleVelocities at 15°C, default BI value -1.1 (786 m/s)
+        modes[] = {"Single"};
+    };
+
+    class SMG_03C_BASE: SMG_03_TR_BASE {
+        ACE_barrelLength = 264;
+        modes[] = {"Single", "FullAuto"};
+    };
     class RH_deagle : Pistol_Base_F
     {
         ACE_barrelTwist=482.6;
@@ -1210,7 +1226,10 @@ class CfgWeapons
         ACE_barrelTwist=254.0;
         ACE_barrelLength=609.6;
     };
-    
+    class rhsusf_weap_MP7A1_base_f: SMG_02_base_F {
+        ACE_barrelTwist = 160.0;
+        ACE_barrelLength = 180.0;
+    };
     class R3F_PAMAS : Pistol_Base_F
     {
         ACE_barrelTwist=248.92;

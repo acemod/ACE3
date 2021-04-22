@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 
 class Stage1 {
-	texture="z\ace\addons\flashlights\data\MX_991_nohq.paa";
+	texture="z\ace\addons\flashlights\data\textures\mx_991_nohq.paa";
 	uvSource="tex";
 	class uvTransform	{
 		aside[]={1,0,0};

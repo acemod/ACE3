@@ -25,7 +25,7 @@ if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exit
 };
 params ["_wire", "_unit"];
 
-private _config = (configFile >> "CfgVehicles" >> typeOf _unit);
+private _config = (configOf _unit);
 private _delay = [45, 30] select ([_unit] call EFUNC(common,isEngineer) || {[_unit] call EFUNC(common,isEOD)});
 
 // TODO: Animation?
@@ -34,7 +34,7 @@ private _delay = [45, 30] select ([_unit] call EFUNC(common,isEngineer) || {[_un
     [_wire],
     {(_this select 0) call FUNC(dismountSuccess)},
     {},
-    localize "STR_ACE_UNROLLWIRE",
+    LLSTRING(UnrollWire),
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

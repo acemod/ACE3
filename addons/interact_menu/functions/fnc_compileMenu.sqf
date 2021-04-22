@@ -24,15 +24,15 @@ if (_target isEqualType objNull) then {
 private _namespace = GVAR(ActNamespace);
 
 // Exit if the action menu is already compiled for this class
-if !(isNil {_namespace getVariable _objectType}) exitWith {};
+if (!isNil {_namespace getVariable _objectType}) exitWith {};
+
+if (_objectType isKindOf "VirtualMan_F") exitWith { // these have config: isPlayableLogic = 1
+    TRACE_1("skipping playable logic",_objectType);
+    _namespace setVariable [_objectType, []];
+};
 
 if ((_objectType isKindOf "CAManBase") && {!isNil QGVAR(cacheManActions)}) exitWith {
     _namespace setVariable [_objectType, +GVAR(cacheManActions)]; // copy
-};
-
-if ((getNumber (configFile >> "CfgVehicles" >> _objectType >> "isPlayableLogic")) == 1) exitWith {
-    TRACE_1("skipping playable logic",_objectType);
-    _namespace setVariable [_objectType, []];
 };
 
 private _recurseFnc = {
@@ -41,7 +41,7 @@ private _recurseFnc = {
 
     {
         private _entryCfg = _x;
-        if(isClass _entryCfg) then {
+        if (isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
             private _distance = _parentDistance;
             if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
@@ -69,11 +69,14 @@ private _recurseFnc = {
             };
 
             private _condition = getText (_entryCfg >> "condition");
-            if (_condition == "") then {_condition = "true"};
 
-            // Add canInteract (including exceptions) and canInteractWith to condition
-            if ((configName _entryCfg) != "ACE_MainActions") then {
-                _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            if (configName _entryCfg == "ACE_MainActions") then {
+                if (_condition isEqualTo "") then {_condition = "true"};
+            } else {
+                // Add canInteract (including exceptions) and canInteractWith to condition
+                private _canInteractCondition = format [QUOTE([ARR_3(ACE_player,_target,%1)] call EFUNC(common,canInteractWith)), getArray (_entryCfg >> "exceptions")];
+                private _conditionFormatPattern = ["%1 && {%2}", "%2"] select (_condition isEqualTo "" || {_condition == "true"});
+                _condition = format [_conditionFormatPattern, _condition, _canInteractCondition];
             };
 
             private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
@@ -122,7 +125,7 @@ private _actions = [_actionsCfg, 0] call _recurseFnc;
 
 // ace_interaction_fnc_addPassengerAction expects ACE_MainActions to be first
 // Other mods can change the order that configs are added, so we should verify this now and resort if needed
-if (_objectType isKindOf "CaManBase") then {
+if (_objectType isKindOf "CAManBase") then {
     if ((((_actions select 0) select 0) select 0) != "ACE_MainActions") then {
         INFO_1("ACE_MainActions not first for man [%1]",_objectType);
         private _mainActions = [];

@@ -19,7 +19,7 @@ params ["_display", "_control"];
 private _ctrlIDC = ctrlIDC _control;
 
 // Fade old control background
-if !(isNil QGVAR(currentRightPanel)) then {
+if (!isNil QGVAR(currentRightPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentRightPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
     _previousCtrlBackground ctrlCommit FADE_DELAY;
@@ -78,7 +78,7 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
         private _index = _forEachIndex;
 
         {
-            private _subIndex = _forEachIndex;
+            private _subIndex = _forEachIndex min 1;
             {
                 ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
@@ -224,7 +224,7 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsPrimaryMuzzle);
+            } foreach ((GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) arrayIntersect _compatibleMagsPrimaryMuzzle);
         };
     };
 
@@ -232,14 +232,14 @@ switch (_ctrlIDC) do {
         if (_leftPanelState) then {
             {
                 ["CfgMagazines", _x, _ctrlPanel] call FUNC(addListBoxItem);
-            } foreach ((GVAR(virtualItems) select 2) arrayIntersect _compatibleMagsSecondaryMuzzle);
+            } foreach ((GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) arrayIntersect _compatibleMagsSecondaryMuzzle);
         };
     };
 
     case IDC_buttonMag : {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
-        } foreach ((GVAR(virtualItems) select 2) arrayIntersect _allCompatibleMags);
+        } foreach ((GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) arrayIntersect _allCompatibleMags);
         {
             ["CfgMagazines", _x, true, true] call _fnc_fill_right_Container;
         } foreach ((GVAR(virtualItems) select 19) arrayIntersect _allCompatibleMags);
@@ -248,7 +248,7 @@ switch (_ctrlIDC) do {
     case IDC_buttonMagALL : {
         {
             ["CfgMagazines", _x, true] call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 2);
+        } foreach (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL);
         {
             ["CfgMagazines", _x, true, true]  call _fnc_fill_right_Container;
         } foreach (GVAR(virtualItems) select 19);
@@ -273,18 +273,53 @@ switch (_ctrlIDC) do {
     };
 
     case IDC_buttonMisc : {
+        // hide custom button items
+        private _blockItems = [];
+        if (!isNil QGVAR(customRightPanelButtons)) then {
+            {
+                if (!isNil "_x") then {
+                    _blockItems append (_x select 0);
+                };
+            } forEach GVAR(customRightPanelButtons);
+        };
+
         {
             ["CfgWeapons", _x, false]  call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 17);
+        } forEach ((GVAR(virtualItems) select 17) select {!((toLower _x) in _blockItems)});
+
         {
             ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 18);
+        } foreach ((GVAR(virtualItems) select 18) select {!((toLower _x) in _blockItems)});
         {
             ["CfgVehicles", _x, false, true]  call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 23);
+        } foreach ((GVAR(virtualItems) select 23) select {!((toLower _x) in _blockItems)});
         {
             ["CfgGlasses", _x, false, true]  call _fnc_fill_right_Container;
-        } foreach (GVAR(virtualItems) select 24);
+        } foreach ((GVAR(virtualItems) select 24) select {!((toLower _x) in _blockItems)});
+    };
+
+    default {
+        private _index = [RIGHT_PANEL_CUSTOM_BUTTONS] find _ctrlIDC;
+        if (_index != -1) then {
+            private _data = GVAR(customRightPanelButtons) param [_index];
+
+            if (!isNil "_data") then {
+                private _items = _data select 0;
+                {
+                    ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
+                } foreach ((GVAR(virtualItems) select 17) select {(toLower _x) in _items});
+
+                {
+                    ["CfgWeapons", _x, false, true]  call _fnc_fill_right_Container;
+                } foreach ((GVAR(virtualItems) select 18) select {(toLower _x) in _items});
+                {
+                    ["CfgVehicles", _x, false, true]  call _fnc_fill_right_Container;
+                } foreach ((GVAR(virtualItems) select 23) select {(toLower _x) in _items});
+                {
+                    ["CfgGlasses", _x, false, true]  call _fnc_fill_right_Container;
+                } foreach ((GVAR(virtualItems) select 24) select {(toLower _x) in _items});
+            };
+        };
     };
 };
 
@@ -326,33 +361,12 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
-private _sortRightCurSel = lbCurSel _sortRightCtrl;
+[_display, _control, _sortRightCtrl] call FUNC(fillSort);
 
-if (lbSize _sortRightCtrl == 3) then {
-    _sortRightCtrl lbDelete 2;
-};
-
-if (_leftPanelState) then {
-    _sortRightCtrl lbDelete 1;
-    _sortRightCtrl lbAdd (localize "STR_a3_rscdisplayarsenal_sort_mod");
-    _sortRightCtrl lbSetValue [1, 1];
-
-    _sortRightCtrl lbSetCurSel ([0, _sortRightCurSel] select (_sortRightCurSel != 2));
-} else {
-    _sortRightCtrl lbDelete 1;
-    _sortRightCtrl lbAdd localize LSTRING(sortByWeightText);
-    _sortRightCtrl lbSetValue [1, 1];
-
-    _sortRightCtrl lbAdd localize LSTRING(sortByAmountText);
-    _sortRightCtrl lbSetValue [2, 2];
-
-    _sortRightCtrl lbSetCurSel _sortRightCurSel;
-};
-
-[_sortRightCtrl, _sortRightCtrl lbValue (lbCurSel _sortRightCtrl)] call FUNC(sortPanel);
+[_sortRightCtrl] call FUNC(sortPanel);
 
 // Select current data if not in a container
-if !(_itemsToCheck isEqualTo []) then {
+if (_itemsToCheck isNotEqualTo []) then {
     for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
         private _currentData = _ctrlPanel lbData _lbIndex;
 

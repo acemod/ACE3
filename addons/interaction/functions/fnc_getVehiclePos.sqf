@@ -56,7 +56,7 @@ if (_cameraPosASL select 2 >= 0) then {
     _pos set [2, (_pos select 2) min _dz];
 };
 
-TRACE_4("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
+TRACE_5("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
 _pos
 
 ///////////////////

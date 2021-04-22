@@ -36,6 +36,12 @@ if (_menuType == 0) then {
     GVAR(keyDownSelfAction) = true;
 };
 GVAR(keyDownTime) = diag_tickTime;
+
+// Raise MenuClosed event whenever one type is replaced with another, because KeyUp code is not guaranteed.
+if (GVAR(openedMenuType) != -1) then {
+    ["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
+};
+
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
@@ -44,8 +50,8 @@ GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       (!(isNull (ACE_controlledUAV select 0))) ||
                       visibleMap ||
                       (!isNull curatorCamera) ||
-                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
-                      {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
+                      {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(alwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
+                      {(_menuType == 0) && GVAR(alwaysUseCursorInteraction)};
 
 // Delete existing controls in case there's any left
 GVAR(iconCount) = 0;

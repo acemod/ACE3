@@ -9,11 +9,8 @@ class CfgVehicles {
                 class ACE_Chemlights {
                     displayName = CSTRING(Action_Chemlights);
                     icon = "\a3\ui_f\data\gui\cfg\Hints\chemlights_ca.paa";
-                    condition = QUOTE(count ([ACE_player] call FUNC(getShieldComponents)) > 0);
-                    statement = "true";
                     exceptions[] = {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting"};
-                    insertChildren = QUOTE(_this call DFUNC(compileChemlightMenu));
-                    showDisabled = 0;
+                    insertChildren = QUOTE(call DFUNC(compileChemlightMenu));
                 };
             };
         };
@@ -246,6 +243,7 @@ class CfgVehicles {
         transportMaxItems = 9002;
         maximumload = 9002;
         model = "\A3\weapons_F\AmmoBoxes\WpnsBox_large_F";
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_WpsSpecial_F.jpg";
 
         class TransportItems {
             MACRO_ADDITEM(ACE_Chemlight_Shield,20);

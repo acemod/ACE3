@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
-#include "\A3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: Alganthe
  * Handles keyboard inputs in arsenal.
@@ -25,7 +25,7 @@ GVAR(shiftState) = _shiftState;
 private _return = true;
 private _loadoutsDisplay = findDisplay IDD_loadouts_display;
 
-if !(_loadoutsDisplay isEqualTo displayNull) then {
+if (_loadoutsDisplay isNotEqualTo displayNull) then {
     if !(GVAR(loadoutsSearchbarFocus)) then {
         switch true do {
             // Close button
@@ -171,7 +171,7 @@ if !(_loadoutsDisplay isEqualTo displayNull) then {
             case (_keyPressed == DIK_RETURN): {
                 if (GVAR(leftSearchbarFocus)) then {
                     [_display, _display displayCtrl IDC_leftSearchbar] call FUNC(handleSearchBar);
-                }; 
+                };
                 if (GVAR(rightSearchbarFocus)) then {
                     [_display, _display displayCtrl IDC_rightSearchbar] call FUNC(handleSearchBar);
                 };

@@ -67,7 +67,7 @@ class RscACE_SelectAnItem {
             text = "";
         };
         class itemList: RscListBox {
-            onMouseButtonDblClick = "_this call ACE_Interaction_fnc_onSelectMenuDblClick";
+            onMouseButtonDblClick = QUOTE(_this call DFUNC(onSelectMenuDblClick));
             idc = 8866;
             x = X_OFFSET + 0.005;
             w = 0.59;
@@ -106,7 +106,7 @@ class RscACE_SelectAnItem {
             y = 0.605;
             style = 2;
             text = CSTRING(Back);
-            action = "call ACE_Interaction_fnc_hideMenu;";   //'Default' call ACE_Interaction_fnc_openMenu;    'Default' call ACE_Interaction_fnc_openMenuSelf;
+            action = QUOTE(call DFUNC(hideMenu););   //'Default' call DFUNC(openMenu);    'Default' call DFUNC(openMenuSelf);
             colorBackground[] = {0,0,0,0};
             colorBackgroundDisabled[] = {0,0,0,0};
             colorBackgroundActive[] = {1,1,1,0.2};
@@ -120,7 +120,7 @@ class RscACE_SelectAnItem {
             w = 0.15;
             style = 2;
             text = CSTRING(MakeSelection);
-            action = "call ACE_Interaction_fnc_hideMenu;";
+            action = QUOTE(call DFUNC(hideMenu););
             colorBackground[] = {0,0,0,0};
             colorBackgroundDisabled[] = {0,0,0,0};
             colorBackgroundActive[] = {1,1,1,0.2};

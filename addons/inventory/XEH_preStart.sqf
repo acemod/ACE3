@@ -36,14 +36,10 @@ _grenades_ItemList = _grenades_ItemList arrayIntersect _grenades_ItemList;
 uiNamespace setVariable [QGVAR(Grenades_ItemList), _grenades_ItemList];
 
 // generate list of medical items
-private _medical_ItemList = [];
-
+private _medical_ItemList = ["FirstAidKit", "Medikit"];
 {
     _medical_ItemList append getArray (_x >> "items");
-} forEach (
-    ("true" configClasses (configFile >> QEGVAR(Medical,Actions) >> "Basic")) +
-    ("true" configClasses (configFile >> QEGVAR(Medical,Actions) >> "Advanced"))
-);
+} forEach ("true" configClasses (configFile >> QEGVAR(medical_treatment,Actions)));
 
 // remove all numbers from list
 _medical_ItemList = _medical_ItemList select {_x isEqualType ""};

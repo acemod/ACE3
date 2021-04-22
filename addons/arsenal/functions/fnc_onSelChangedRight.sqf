@@ -42,6 +42,7 @@ private _fnc_selectItem = {
 
         case 19: {
             if (_item == "") then {
+                if (cba_disposable_replaceDisposableLauncher && !isNil {cba_disposable_LoadedLaunchers getVariable secondaryWeapon GVAR(center)}) exitWith { TRACE_1("ignoring unload of disposable",secondaryWeapon GVAR(center)); };
                 GVAR(center) removeSecondaryWeaponItem ((GVAR(currentItems) select 19) select _itemIndex);
                 private _secondaryMags = secondaryWeaponMagazine GVAR(center);
                 GVAR(currentItems) set [19, (secondaryWeaponItems GVAR(center)) + ([_secondaryMags + [""], _secondaryMags] select (count _secondaryMags > 1))];
@@ -70,7 +71,7 @@ private _fnc_selectItem = {
 
 [
     _item,
-    18 + ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find GVAR(currentLeftPanel)), 
+    18 + ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find GVAR(currentLeftPanel)),
     [IDC_buttonMuzzle, IDC_buttonItemAcc, IDC_buttonOptic, IDC_buttonBipod, IDC_buttonCurrentMag, IDC_buttonCurrentMag2] find GVAR(currentRightPanel)
 ] call _fnc_selectItem;
 

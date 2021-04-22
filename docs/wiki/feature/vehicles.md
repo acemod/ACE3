@@ -41,6 +41,11 @@ The rate of fire of vehicle mounted miniguns and machine guns is adjusted to mat
 ### 1.9 120mm gun and mortar behaviour
 MBT main guns and mortars can no longer lock on enemies. The AT rounds of both now have raised cost values to encourage the AI to not use those rounds against foot soldiers over their machine guns or HE rounds.
 
+### 1.10 Disable automatic engine shut-off
+`Added in 3.13.0`
+
+Adds the ability to prevent the automatic shut-off of the engine when exiting vehicles.
+
 ## 2. Usage
 
 ### 2.1 Turning the engine on / off

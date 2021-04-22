@@ -29,6 +29,7 @@ if (isNil QGVAR(factionRanks)) then {
 };
 
 params [["_faction", "", [""]], ["_icons", [], [[]], [7]]];
+TRACE_2("setFactionRankIcons",_faction,_icons);
 
 if !(_faction != "" && {_icons isEqualTypeAll ""}) exitWith {false};
 

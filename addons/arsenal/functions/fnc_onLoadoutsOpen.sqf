@@ -30,9 +30,6 @@ GVAR(currentLoadoutsTab) = -1;
 GVAR(loadoutsSearchbarFocus) = false;
 GVAR(loadoutsPanelFocus) =  false;
 
-GVAR(previousCameraPos) = GVAR(cameraPosition);
-GVAR(cameraPosition) = [5,0,20,[-0.85,0,0.85]];
-
 private _panelContentCtrl = _display displayCtrl IDC_contentPanel;
 _panelContentCtrl ctrlSetFontHeight (4.5 * GRID_H);
 _panelContentCtrl ctrlCommit 0;
