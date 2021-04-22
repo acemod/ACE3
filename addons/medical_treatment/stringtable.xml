@@ -3703,7 +3703,7 @@
             <Turkish>%1 tepki vermiyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
-            <English>%1 is not responsive, taking shallow gasps and seizuring</English>
+            <English>%1 is not responsive, taking shallow gasps and convulsing</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
