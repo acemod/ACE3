@@ -20,7 +20,7 @@ params ["_newMode"];
 disableSerialization;
 private _display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(DialogDisplay)] select (GVAR(currentShowMode) == DISPLAY_MODE_DIALOG), displayNull];
 
-if (isNull _display) exitWith {ERROR("No Display");};
+if (isNull _display) exitWith {LOG("No Display");};
 
 if (GVAR(currentApplicationPage) == 2) then {
     private _theMap = [_display displayCtrl IDC_MAPDETAILS, _display displayCtrl IDC_MAPPLAIN] select (!GVAR(mapShowTexture));
