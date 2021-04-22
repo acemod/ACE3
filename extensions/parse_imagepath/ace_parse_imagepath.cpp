@@ -19,6 +19,9 @@
 
 extern "C" {
     EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
+    EXPORT void __stdcall RVExtensionVersion(char *output, int outputSize) {
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize - 1);
+    }
 }
 
 std::string getImagePathFromStructuredText(const std::string & input) {
