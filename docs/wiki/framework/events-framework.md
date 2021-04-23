@@ -112,7 +112,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
 |`ace_attach_attached` | [_attachedObject, _itemClassname] | Local | Listen | After an item was attached to a unit/vehicle
-|`ace_attach_detach` | [_attachedObject, _itemName] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle
+|`ace_attach_detaching` | [_attachedObject, _itemName] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
