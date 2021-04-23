@@ -524,6 +524,7 @@
             <Russian>Отключить BFT</Russian>
             <Portuguese>Desativar BFT</Portuguese>
             <Czech>Vypnout sledování přátelských jednotek (BFT).</Czech>
+            <Spanish>Desabilitar BFT</Spanish>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT_description">
             <English>Always disable Blue Force Tracking for this group.</English>
@@ -538,6 +539,7 @@
             <Russian>Всегда отключать Blue Force Tracking для этой группы</Russian>
             <Portuguese>Sempre desativar Rastreio Blue Force (BFT) para esse grupo.</Portuguese>
             <Czech>Vždy vypne sledování přátelských jednotek (BFT) pro tuto skupinu.</Czech>
+            <Spanish>Deshabilitar siempre Blue Force Tracking para este grupo.</Spanish>
         </Key>
     </Package>
 </Project>
