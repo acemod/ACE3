@@ -12,7 +12,7 @@ class Cfg3DEN {
                         expression = QUOTE(_this setVariable [ARR_3(QQGVAR(customName), _value, true)];);
                         defaultValue = "''";
 
-                        condition = "objectHasInventoryCargo-objectVehicle";
+                        condition = "objectHasInventoryCargo - objectVehicle";
                         typeName = "STRING";
                     };
                     class GVAR(space) {

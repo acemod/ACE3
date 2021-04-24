@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: JasperRab
- * Shows rename UI and renames object once completed
+ * Shows rename UI and renames object once completed.
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [crate_7] call ace_cargo_fnc_renameObject;
+ * [crate_7] call ace_cargo_fnc_renameObject
  *
  * Public: Yes
  */
