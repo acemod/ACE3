@@ -20,3 +20,4 @@ PREP(startUnload);
 PREP(unloadItem);
 PREP(validateCargoSpace);
 PREP(renameObject);
+PREP(getNameItem);

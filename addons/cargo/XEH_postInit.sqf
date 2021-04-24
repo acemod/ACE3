@@ -11,7 +11,7 @@
 
     // Show hint as feedback
     private _hint = [LSTRING(LoadingFailed), LSTRING(LoadedItem)] select _loaded;
-    private _itemName = if (_item isEqualType "") then {getText (configfile >> "CfgVehicles" >> typeOf _item >> "displayName")} else {_item getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> typeOf _item >> "displayName")]};
+    private _itemName = [_item, true] call FUNC(getNameItem);
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
     [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
@@ -32,7 +32,7 @@
 
     // Show hint as feedback
     private _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
-    private _itemName = if (_item isEqualType "") then {getText (configfile >> "CfgVehicles" >> _itemClass >> "displayName")} else {_item getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> _itemClass >> "displayName")]};
+    private _itemName = [_item, true] call FUNC(getNameItem);
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
     [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);

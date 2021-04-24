@@ -60,8 +60,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     ] call EFUNC(common,progressBar);
     _return = true;
 } else {
-    private _displayName = if (_object isEqualType "") then {getText (configfile >> "CfgVehicles" >> typeOf _object >> "displayName")} else {_object getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> typeOf _object >> "displayName")]};
-
+    private _displayName = [_object, true] call FUNC(getNameItem);
     [[LSTRING(LoadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };
 

@@ -99,7 +99,7 @@ if (_showHint) then {
     [
         [
             LSTRING(UnloadedItem),
-            if (_itemObject isEqualType "") then {getText (configfile >> "CfgVehicles" >> typeOf _itemObject >> "displayName")} else {_itemObject getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> typeOf _itemObject >> "displayName")]},
+            [_itemObject, true] call FUNC(getNameItem),
             getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
         ],
         3

@@ -86,8 +86,7 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);
 } else {
-    private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
-    private _displayName = if (_item isEqualType "") then {getText (configfile >> "CfgVehicles" >> _itemClass >> "displayName")} else {_item getVariable [QGVAR(customName), getText (configfile >> "CfgVehicles" >> _itemClass >> "displayName")]};
+    private _displayName = [_item, true] call FUNC(getNameItem);
 
     [[LSTRING(UnloadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };

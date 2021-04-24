@@ -10,7 +10,7 @@ class Cfg3DEN {
                         control = "Edit";
 
                         expression = QUOTE(_this setVariable [ARR_3(QQGVAR(customName), _value, true)];);
-                        defaultValue = QUOTE(getText(configFile >> 'CfgVehicles' >> typeOf _this >> 'displayName'));
+                        defaultValue = "''";
 
                         condition = "objectHasInventoryCargo-objectVehicle";
                         typeName = "STRING";

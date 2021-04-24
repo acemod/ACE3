@@ -44,7 +44,7 @@ _ctrlBackground ctrlCommit 0;
 
 // add Edit Field
 private _ctrlEdit = _display ctrlCreate ["RscEdit", -1];
-_ctrlEdit ctrlSetText (_target getVariable ["ace_cargo_customName", getText (configfile >> "CfgVehicles" >> typeOf _target >> "displayName")]);
+_ctrlEdit ctrlSetText (_target getVariable ["ace_cargo_customName", ""]);
 _ctrlEdit ctrlSetBackgroundColor [0,0,0,1];
 _ctrlEdit ctrlSetPosition [
     safeZoneX + 0.4 * safeZoneW,
