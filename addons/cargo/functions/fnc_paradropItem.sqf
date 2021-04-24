@@ -100,7 +100,7 @@ if (_showHint) then {
         [
             LSTRING(UnloadedItem),
             [_itemObject, true] call FUNC(getNameItem),
-            getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
+            getText (configOf _vehicle >> "displayName")
         ],
         3
     ] call EFUNC(common,displayTextStructured);

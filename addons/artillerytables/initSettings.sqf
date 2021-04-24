@@ -10,7 +10,7 @@ private _categoryName = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"
     true, // isGlobal
     {[QGVAR(advancedCorrections), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(disableArtilleryComputer), "CHECKBOX",
@@ -20,4 +20,4 @@ private _categoryName = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"
     true, // isGlobal
     {[QGVAR(disableArtilleryComputer), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // Needs mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

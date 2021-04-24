@@ -33,9 +33,25 @@
             }
         ],
         {
-            params ["_unit", "", "", "", "_magArr"];
-            _unit addMagazine (_magArr select 1);
-            false;
+            params ["_unit", "", "", "_slot", "_magArr"];
+            private _container = "";
+            switch _slot do {
+                case "UNIFORM_CONTAINER": {
+                    _container = "uniform";
+                };
+                case "VEST_CONTAINER": {
+                    _container = "vest";
+                };
+                case "BACKPACK_CONTAINER": {
+                    _container = "backpack";
+                };
+            };
+
+            if (_container != "") then {
+                [_unit, _magArr select 1, _container] call EFUNC(common,addToInventory);
+            };
+
+            false
         },
         true,
         [_mag,_throwableMag]
@@ -55,9 +71,25 @@
             }
         ],
         {
-            params ["_unit", "", "", "", "_magArr"];
-            _unit addMagazine (_magArr select 0);
-            false;
+            params ["_unit", "", "", "_slot", "_magArr"];
+            private _container = "";
+            switch _slot do {
+                case "UNIFORM_CONTAINER": {
+                    _container = "uniform";
+                };
+                case "VEST_CONTAINER": {
+                    _container = "vest";
+                };
+                case "BACKPACK_CONTAINER": {
+                    _container = "backpack";
+                };
+            };
+
+            if (_container != "") then {
+                [_unit, _magArr select 0, _container] call EFUNC(common,addToInventory);
+            };
+
+            false
         },
         true,
         [_mag,_throwableMag]

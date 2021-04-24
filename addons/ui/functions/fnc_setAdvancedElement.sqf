@@ -66,6 +66,7 @@ if (!_force) then {
     };
 };
 
+private _displays = ((uiNamespace getVariable "IGUI_displays") + [findDisplay IDD_MISSION]) select {_idd == ctrlIDD _x};
 private _fade = [1, 0] select _show;
 
 // Disable/Enable elements
@@ -75,15 +76,16 @@ private _success = false;
 
     // Loop through IGUI displays as they can be present several times for some reason
     {
-        if (_idd == ctrlIDD _x) then {
-            TRACE_4("Setting Element Visibility",_element,_fade,_idd,_idc);
+        _success = true;
 
-            (_x displayCtrl _idc) ctrlSetFade _fade;
-            (_x displayCtrl _idc) ctrlCommit 0;
+        private _control = _x displayCtrl _idc;
+        if (ctrlFade _control == _fade) then {continue};
 
-            _success = true;
-        };
-    } count (uiNamespace getVariable "IGUI_displays");
+        TRACE_4("Setting Element Visibility",_element,_fade,_idd,_idc);
+
+        _control ctrlSetFade _fade;
+        _control ctrlCommit 0;
+    } count _displays;
     nil
 } count _elements;
 

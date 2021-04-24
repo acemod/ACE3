@@ -57,7 +57,7 @@ private _oldCompats = [];
     };
     false
 } count _addons;
-if (!(_oldCompats isEqualTo [])) then {
+if (_oldCompats isNotEqualTo []) then {
     [{
         // Lasts for ~10 seconds
         ERROR_WITH_TITLE_1("The following ACE compatiblity PBOs are outdated", "%1", _this);
@@ -138,7 +138,7 @@ if (isMultiplayer) then {
             };
 
             _addons = _addons - GVAR(ServerAddons);
-            if !(_addons isEqualTo []) then {
+            if (_addons isNotEqualTo []) then {
                 private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
                 ERROR(_errorMsg);

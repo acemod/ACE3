@@ -197,7 +197,7 @@ Author:
 ------------------------------------------- */
 #ifdef DEBUG_MODE_FULL
 
-#define LOG(MESSAGE) LOG_SYS_FILELINENUMBERS('LOG',MESSAGE)
+#define LOG(MESSAGE) LOG_SYS('LOG',MESSAGE)
 #define LOG_1(MESSAGE,ARG1) LOG(FORMAT_1(MESSAGE,ARG1))
 #define LOG_2(MESSAGE,ARG1,ARG2) LOG(FORMAT_2(MESSAGE,ARG1,ARG2))
 #define LOG_3(MESSAGE,ARG1,ARG2,ARG3) LOG(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
@@ -265,7 +265,7 @@ Author:
 ------------------------------------------- */
 #ifdef DEBUG_MODE_NORMAL
 
-#define WARNING(MESSAGE) LOG_SYS_FILELINENUMBERS('WARNING',MESSAGE)
+#define WARNING(MESSAGE) LOG_SYS('WARNING',MESSAGE)
 #define WARNING_1(MESSAGE,ARG1) WARNING(FORMAT_1(MESSAGE,ARG1))
 #define WARNING_2(MESSAGE,ARG1,ARG2) WARNING(FORMAT_2(MESSAGE,ARG1,ARG2))
 #define WARNING_3(MESSAGE,ARG1,ARG2,ARG3) WARNING(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
@@ -304,7 +304,7 @@ Example:
 Author:
     Spooner
 ------------------------------------------- */
-#define ERROR(MESSAGE) LOG_SYS_FILELINENUMBERS('ERROR',MESSAGE)
+#define ERROR(MESSAGE) LOG_SYS('ERROR',MESSAGE)
 #define ERROR_1(MESSAGE,ARG1) ERROR(FORMAT_1(MESSAGE,ARG1))
 #define ERROR_2(MESSAGE,ARG1,ARG2) ERROR(FORMAT_2(MESSAGE,ARG1,ARG2))
 #define ERROR_3(MESSAGE,ARG1,ARG2,ARG3) ERROR(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
@@ -1812,9 +1812,9 @@ Author:
 
 /* -------------------------------------------
 Macro: FILE_EXISTS
-    Check if a file exists on machines with interface
+    Check if a file exists
 
-    Reports "false" if the file does not exist and throws an error in RPT.
+    Reports "false" if the file does not exist.
 
 Parameters:
     FILE - Path to the file
@@ -1828,17 +1828,4 @@ Example:
 Author:
     commy2
 ------------------------------------------- */
-#define FILE_EXISTS(FILE) (call {\
-    private _return = false;\
-    isNil {\
-        private _control = (uiNamespace getVariable ["RscDisplayMain", displayNull]) ctrlCreate ["RscHTML", -1];\
-        if (isNull _control) then {\
-            _return = loadFile (FILE) != "";\
-        } else {\
-            _control htmlLoad (FILE);\
-            _return = ctrlHTMLLoaded _control;\
-            ctrlDelete _control;\
-        };\
-    };\
-    _return\
-})
+#define FILE_EXISTS(FILE) (fileExists (FILE))

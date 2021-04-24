@@ -12,7 +12,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [player, bob, true] call ACE_captives_fnc_doEscorteCaptive;
+ * [player, bob, true] call ACE_captives_fnc_doEscortCaptive;
  *
  * Public: No
  */

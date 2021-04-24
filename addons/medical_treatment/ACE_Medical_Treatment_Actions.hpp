@@ -150,6 +150,7 @@ class GVAR(actions) {
         medicRequired = QGVAR(medicIV);
         treatmentTime = QGVAR(treatmentTimeIV);
         items[] = {"ACE_bloodIV"};
+        treatmentLocations = QGVAR(locationIV);
         condition = "";
         callbackSuccess = QFUNC(ivBag);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";

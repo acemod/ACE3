@@ -12,7 +12,7 @@
     // Show hint as feedback
     private _hint = [LSTRING(LoadingFailed), LSTRING(LoadedItem)] select _loaded;
     private _itemName = [_item, true] call FUNC(getNameItem);
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    private _vehicleName = getText (configOf _vehicle >> "displayName");
 
     [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
@@ -31,7 +31,7 @@
     // Show hint as feedback
     private _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
     private _itemName = [_item, true] call FUNC(getNameItem);
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    private _vehicleName = getText (configOf _vehicle >> "displayName");
 
     [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
@@ -68,7 +68,7 @@ GVAR(vehicleAction) = [
     {
         //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         GVAR(enable) &&
-        {(_target getVariable [QGVAR(hasCargo), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(hasCargo)) == 1])} &&
+        {(_target getVariable [QGVAR(hasCargo), getNumber (configOf _target >> QGVAR(hasCargo)) == 1])} &&
         {locked _target < 2} &&
         {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE} &&
         {alive _target} &&
@@ -86,7 +86,7 @@ GVAR(objectActions)= [
             //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             GVAR(enable) &&
             !GVAR(hideRename) &&
-            {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
+            {(_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad))]) in [true, 1]} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
             {!((typeOf _target) in ["ACE_Wheel", "ACE_Track"])} && // Exclude Wheel and Track
@@ -101,12 +101,12 @@ GVAR(objectActions)= [
         {
             //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             GVAR(enable) &&
-            {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
+            {(_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad))]) in [true, 1]} &&
             {locked _target < 2} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
             {((nearestObjects [_target, GVAR(cargoHolderTypes), (MAX_LOAD_DISTANCE + 10)]) findIf {
-                private _hasCargoConfig = 1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo));
+                private _hasCargoConfig = 1 == getNumber (configOf _x >> QGVAR(hasCargo));
                 private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
                 (_hasCargoConfig || {_hasCargoPublic}) && {_x != _target} && {alive _x} && {locked _x < 2} &&
                 {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}

@@ -23,7 +23,7 @@ if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []]];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints";
+private _config = configOf _vehicle >> "HitPoints";
 
 private _realHitPoints = [];
 private _dependentHitPoints = [];

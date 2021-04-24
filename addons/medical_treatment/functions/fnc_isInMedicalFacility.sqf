@@ -21,7 +21,7 @@ params ["_unit"];
 
 private _fnc_check = {
     private _position = _unit modelToWorldVisual [0, 0, eyePos _unit select 2];
-    CHECK_OBJECTS(ARR_5(lineIntersectsWith [_position, _position vectorAdd [0, 0, 10], _unit])) || {CHECK_OBJECTS(_unit nearObjects 7.5)}
+    CHECK_OBJECTS(lineIntersectsWith [ARR_3(_position, _position vectorAdd [ARR_3(0, 0, 10)], _unit)]) || {CHECK_OBJECTS(_unit nearObjects 7.5)}
 };
 
 [[], _fnc_check, _unit, QGVAR(inMedicalFacilityCache), IN_MEDICAL_FACILITY_CACHE_EXPIRY] call EFUNC(common,cachedCall);

@@ -104,5 +104,26 @@
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
         </Key>
+        <Key ID="STR_ACE_Dragging_SettingsName">
+            <English>ACE Dragging</English>
+            <French>ACE Traînage d'objets et d'unités</French>
+            <German>ACE Ziehen</German>
+            <Hungarian>ACE Húzás</Hungarian>
+            <Russian>ACE Перетаскивание</Russian>
+        </Key>
+        <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
+            <English>Allow firing while dragging</English>
+            <French>Arme utilisable durant le traînage</French>
+            <German>Schießen während des Ziehens erlauben</German>
+            <Hungarian>Húzás közbeni tüzelés engedélyezése</Hungarian>
+            <Russian>Стрельба во время перетаскивания</Russian>
+        </Key>
+        <Key ID="STR_ACE_Dragging_DragAndFire_Description">
+            <English>Allow the player to fire their gun while dragging.</English>
+            <French>Cette option permet aux joueurs de faire usage de leur arme pendant qu'ils traînent un objet ou une unité.\nL'arme secondaire est utilisée si le joueur en est équipé.</French>
+            <German>Erlaubt dem Spieler während des Ziehens das Abfeuern der Waffe.</German>
+            <Hungarian>Húzás közben a játékos elsütheti a fegyverét.</Hungarian>
+            <Russian>Позволяет игроку стрелять во время перетаскивания</Russian>
+        </Key>
     </Package>
 </Project>
