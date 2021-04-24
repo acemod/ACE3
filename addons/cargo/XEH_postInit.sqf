@@ -28,8 +28,6 @@
 
     private _unloaded = [_item, _vehicle, _unloader] call FUNC(unloadItem); //returns true if sucessful
 
-    private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
-
     // Show hint as feedback
     private _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
     private _itemName = [_item, true] call FUNC(getNameItem);
@@ -87,6 +85,7 @@ GVAR(objectActions)= [
         {
             //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             GVAR(enable) &&
+            !GVAR(hideRename) &&
             {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) in [true, 1]} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&

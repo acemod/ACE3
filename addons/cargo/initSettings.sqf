@@ -24,3 +24,12 @@
     true,
     {[QGVAR(paradropTimeCoefficent), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(hideRename), "CHECKBOX",
+    [LSTRING(ModuleSettings_hideRename), LSTRING(ModuleSettings_hideRename_Description)],
+    [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(openMenu)],
+    false,
+    false,
+    {[QGVAR(hideRename), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_settings_fnc_init;
