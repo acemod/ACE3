@@ -36,5 +36,6 @@
     format ["ACE %1", LLSTRING(DisplayName)],
     true,
     true,
-    LINKFUNC(switchAnimActions)
+    {},
+    true
 ] call CBA_fnc_addSetting;

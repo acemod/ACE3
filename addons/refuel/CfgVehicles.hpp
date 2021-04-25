@@ -216,8 +216,8 @@ class CfgVehicles {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class showCanisters {
                 phase = 0;
-                position[] = {{-1.188,-3.87,-0.769}, {1.638,-3.87,-0.769}};
-                item[] = {"Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F"};
+                positions[] = {{-1.188,-3.87,-0.769}, {1.638,-3.87,-0.769}};
+                items[] = {"Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F"};
             };
         };
     };
@@ -320,8 +320,8 @@ class CfgVehicles {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class showCanisters {
                 phase = 0;
-                position[] = {{-2,-1.95,-1}, {2,-1.95,-1}, {1.7,-4.898,-0.4}};
-                item[] = {"Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F"};
+                positions[] = {{-2,-1.95,-1}, {2,-1.95,-1}, {1.7,-4.898,-0.4}};
+                items[] = {"Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F"};
             };
         };
     };
@@ -333,8 +333,8 @@ class CfgVehicles {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class showCanisters {
                 phase = 0;
-                position[] = {{1.7,-4.8,-0.5}};
-                item = "Land_CanisterFuel_F";
+                positions[] = {{1.7,-4.8,-0.5}};
+                items[] = {"Land_CanisterFuel_F"};
             };
         };
     };

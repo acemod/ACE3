@@ -15,4 +15,8 @@ DFUNC(repair_Statement) = { // moved from config because of build problems
     } forEach (curatorSelected select 0)
 };
 
+if (hasInterface) then {
+    GVAR(initializedAnimClasses) = [];
+};
+
 ADDON = true;

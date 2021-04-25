@@ -457,8 +457,8 @@ class CfgVehicles {
         class EGVAR(interaction,anims) {
             class showTracks {
                 phase = 0;
-                position[] = {{-1.7,-3.875,-0.7}, {1.7,-3.875,-0.7}};
-                item[] = {"ACE_Track", "ACE_Track", "ACE_Track"};
+                positions[] = {{-1.7,-3.875,-0.7}, {1.7,-3.875,-0.7}};
+                items[] = {"ACE_Track", "ACE_Track", "ACE_Track"};
             };
         };
     };
@@ -475,8 +475,8 @@ class CfgVehicles {
     class Offroad_02_base_F: Car_F {
         class EGVAR(interaction,anims) {
             class hideSpareWheel {
-                selection = "spare_wheel";
-                item = "ACE_Wheel";
+                selections[] = {"spare_wheel"};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -532,8 +532,8 @@ class CfgVehicles {
     class Van_02_base_F: Truck_F {
         class EGVAR(interaction,anims) {
             class spare_tyre_hide {
-                position[] = {{-0.45,-3.5,-0.4}};
-                item = "ACE_Wheel";
+                positions[] = {{-0.45,-3.5,-0.4}};
+                items[] = {"ACE_Wheel"};
             };
         };
     };

@@ -141,3 +141,8 @@ GVAR(isOpeningDoor) = false;
         [QGVAR(clearWeaponAttachmentsActionsCache)] call CBA_fnc_localEvent;
     }] call CBA_fnc_addPlayerEventHandler;
 } forEach ["loadout", "weapon"];
+
+{
+    if (count (inheritsFrom _x >> QGVAR(anims)) > 0) then {continue};
+    [configName _x, "initPost", {_this call FUNC(initAnimActions)}, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach (QUOTE(count (_x >> QQGVAR(anims)) > 0) configClasses (configFile >> "CfgVehicles"));

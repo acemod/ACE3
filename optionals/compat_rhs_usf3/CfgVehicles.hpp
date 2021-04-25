@@ -199,8 +199,8 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 219;
         class EGVAR(interaction,anims) {
             class hide_spare {
-                position = "[1,1.4,0]";
-                item = "ACE_Wheel";
+                positions[] = {{1,1.4,0}};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -209,7 +209,7 @@ class CfgVehicles {
     class rhsusf_M1078A1P2_B_M2_fmtv_usarmy: rhsusf_M1078A1P2_B_fmtv_usarmy {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class hide_spare: hide_spare {
-                position = "[1,1.4,-0.5]";
+                positions[] = {{1,1.4,-0.5}};
             };
         };
     };
@@ -223,7 +223,7 @@ class CfgVehicles {
         EGVAR(repair,canRepair) = 1;
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class hide_spare: hide_spare {
-                position = "[1,1,0]";
+                positions[] = {{1,1,0}};
             };
         };
     };
@@ -232,28 +232,28 @@ class CfgVehicles {
     class rhsusf_M1083A1P2_B_M2_fmtv_usarmy: rhsusf_M1083A1P2_B_fmtv_usarmy {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class hide_spare: hide_spare {
-                position = "[1,1.4,-0.5]";
+                positions[] = {{1,1.4,-0.5}};
             };
         };
     };
     class rhsusf_M1084A1P2_fmtv_usarmy: rhsusf_M1083A1P2_fmtv_usarmy {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class hide_spare: hide_spare {
-                position = "[1,1.8,0]";
+                positions[] = {{1,1.8,0}};
             };
         };
     };
     class rhsusf_M1084A1P2_B_M2_fmtv_usarmy: rhsusf_M1083A1P2_B_M2_fmtv_usarmy {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class hide_spare: hide_spare {
-                position = "[1,1.8,-0.5]";
+                positions[] = {{1,1.8,-0.5}};
             };
         };
     };
     class rhsusf_M1085A1P2_B_Medical_fmtv_usarmy: rhsusf_M1083A1P2_B_fmtv_usarmy {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class hide_spare: hide_spare {
-                position = "[1,6.1,0]";
+                positions[] = {{1,6.1,0}};
             };
         };
     };
@@ -261,8 +261,8 @@ class CfgVehicles {
     class rhsusf_HEMTT_A4_base: Truck_01_base_F {
         class EGVAR(interaction,anims) {
             class hide_spare {
-                position = "[1,2.2,2]";
-                item = "ACE_Wheel";
+                positions[] = {"_target selectionPosition 'sparewheel' vectorAdd [0.6,0.6,-0.4]"};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -278,13 +278,7 @@ class CfgVehicles {
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
-    class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {
-        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
-            class hide_spare: hide_spare {
-                position = "[1,2.2,1.2]";
-            };
-        };
-    };
+    class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
         transportAmmo = 0;
         EGVAR(rearm,defaultSupply) = 1200;

@@ -362,8 +362,8 @@ class CfgVehicles {
     class Offroad_01_base_F: Car_F {
         class GVAR(anims) {
             class HideBackpacks {
-                position[] = {{-1.15,-1.15,-0.2}, {1.1,-1.15,-0.2}, {1.1,-2.5,-0.2}};
-                item[] = {"B_TacticalPack_blk", "B_TacticalPack_blk", "B_Carryall_khk", "B_Carryall_khk"};
+                positions[] = {{-1.15,-1.15,-0.2}, {1.1,-1.15,-0.2}, {1.1,-2.5,-0.2}};
+                items[] = {"B_TacticalPack_blk", "B_TacticalPack_blk", "B_Carryall_khk", "B_Carryall_khk"};
             };
         };
     };
@@ -406,8 +406,8 @@ class CfgVehicles {
             class showBags {
                 phase = 0;
                 //selection = "vhc_bags";
-                position[] = {{-0.685,-2.863,0.218}, {0.685,-2.863,0.218}};
-                item[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                positions[] = {{-0.685,-2.863,0.218}, {0.685,-2.863,0.218}};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
             };
         };
     };
@@ -418,8 +418,8 @@ class CfgVehicles {
         class GVAR(anims): GVAR(anims) {
             class showBags {
                 phase = 0;
-                selection = "vhc_bags";
-                item = "B_Carryall_cbr";
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr"};
             };
         };
     };
@@ -427,8 +427,8 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                selection = "vhc_bags";
-                item[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
             };
         };
     };
@@ -465,11 +465,11 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                selection = "vhc_bags";
-                item = "B_Carryall_cbr";
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr"};
             };
             class showBags2: showBags {
-                selection = "vhc_bags2";
+                selections[] = {"vhc_bags2"};
             };
         };
     };
@@ -478,18 +478,18 @@ class CfgVehicles {
         class GVAR(anims);
     };
     class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
-        class GVAR(anims):GVAR(anims) {
+        class GVAR(anims): GVAR(anims) {
             class showBags {
                 phase = 0;
-                selection = "vhc_bags";
-                item[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
             };
         };
     };
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         class GVAR(anims): GVAR(anims) {
             class showBags: showBags {
-                item[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
             };
         };
     };
@@ -502,8 +502,8 @@ class CfgVehicles {
         class GVAR(anims): GVAR(anims) {
             class showBags {
                 phase = 0;
-                selection = "vhc_bags";
-                item[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
             };
         };
     };
@@ -512,8 +512,8 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                selection = "vhc_bags";
-                item[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
             };
         };
     };
@@ -526,8 +526,8 @@ class CfgVehicles {
         class GVAR(anims): GVAR(anims) {
             class showBags {
                 phase = 0;
-                selection = "vhc_bags";
-                item[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
             };
         };
     };

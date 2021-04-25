@@ -58,12 +58,12 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 300;
         class EGVAR(interaction,anims) {
             class wheel_1_unhide {
-                position = "[-0.8,-2,0]";
-                item = "ACE_Wheel";
+                positions[] = {{-0.8,-2,0}};
+                items[] = {"ACE_Wheel"};
             };
             class wheel_2_unhide {
-                position = "[0.5,-3.3,-0.3]";
-                item = "ACE_Wheel";
+                positions[] = {{0.5,-3.3,-0.3}};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -74,10 +74,10 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 350;
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class wheel_1_unhide: wheel_1_unhide {
-                position = "[-1.2,-2.5,0.2]";
+                positions[] = {{-1.2,-2.5,0.2}};
             };
             class wheel_2_unhide: wheel_2_unhide {
-                position = "[0,-4.2,0]";
+                positions[] = {{0,-4.2,0}};
             };
         };
     };
@@ -86,7 +86,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 300;
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class wheel_1_unhide: wheel_1_unhide {
-                position = "[-1,-2.5,0.7]";
+                positions[] = {{-1,-2.5,0.7}};
             };
             class wheel_2_unhide: wheel_2_unhide {
                 enabled = 0;
@@ -189,8 +189,8 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 360;
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selection = "spare";
-                item = "ACE_Wheel";
+                selections[] = {"spare"};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -212,8 +212,8 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 210;
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selection = "spare";
-                item = "ACE_Wheel";
+                selections[] = {"spare"};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -233,8 +233,8 @@ class CfgVehicles {
     class rhs_kamaz5350: O_Truck_02_covered_F {
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selection = "spare";
-                item = "ACE_Wheel";
+                selections[] = {"spare"};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -244,8 +244,8 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 138;
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selection = "spare";
-                item = "ACE_Wheel";
+                selections[] = {"spare"};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -255,8 +255,8 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 78;
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selection = "spare";
-                item = "ACE_Wheel";
+                selections[] = {"spare"};
+                items[] = {"ACE_Wheel"};
             };
         };
     };
@@ -264,8 +264,8 @@ class CfgVehicles {
     class rhs_zil131_base: Truck_F {
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selection = "spare";
-                item = "ACE_Wheel";
+                selections[] = {"spare"};
+                items[] = {"ACE_Wheel"};
             };
         };
     };

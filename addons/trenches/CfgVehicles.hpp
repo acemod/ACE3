@@ -106,8 +106,8 @@ class CfgVehicles {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class showTools {
                 phase = 0;
-                position[] = {{-1.108,-1.47,-0.769}};
-                item = "ACE_EntrenchingTool";
+                positions[] = {{-1.108,-1.47,-0.769}};
+                items[] = {"ACE_EntrenchingTool"};
             };
         };
     };
@@ -115,8 +115,8 @@ class CfgVehicles {
         class EGVAR(interaction,anims) {
             class showTools {
                 phase = 0;
-                position[] = {{-0.9,-3,-0.5}};
-                item = "ACE_EntrenchingTool";
+                positions[] = {{-0.9,-3,-0.5}};
+                items[] = {"ACE_EntrenchingTool"};
             };
         };
     };
@@ -125,8 +125,8 @@ class CfgVehicles {
         class EGVAR(interaction,anims) {
             class showTools {
                 phase = 0;
-                position[] = {{0.6,0,-0.3}};
-                item = "ACE_EntrenchingTool";
+                positions[] = {{0.6,0,-0.3}};
+                items[] = {"ACE_EntrenchingTool"};
             };
         };
     };

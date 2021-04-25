@@ -49,4 +49,4 @@ PREP(canPush);
 PREP(push);
 
 PREP(canFlip);
-PREP(switchAnimActions);
+PREP(initAnimActions);
