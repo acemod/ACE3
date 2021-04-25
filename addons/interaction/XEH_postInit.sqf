@@ -143,6 +143,6 @@ GVAR(isOpeningDoor) = false;
 } forEach ["loadout", "weapon"];
 
 {
-    if (count (inheritsFrom _x >> QGVAR(anims)) > 0) then {continue};
+    if (isClass (inheritsFrom _x >> QGVAR(anims))) then {continue};
     [configName _x, "initPost", {_this call FUNC(initAnimActions)}, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach (QUOTE(count (_x >> QQGVAR(anims)) > 0) configClasses (configFile >> "CfgVehicles"));
+} forEach (QUOTE(isClass (_x >> QQGVAR(anims))) configClasses (configFile >> "CfgVehicles"));
