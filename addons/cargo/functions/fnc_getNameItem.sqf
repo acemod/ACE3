@@ -8,7 +8,7 @@
  * 1: Add custom name part <BOOL>
  *
  * Return Value:
- * The display name
+ * Item Name <STRING>
  *
  * Example:
  * [crate_7] call ace_cargo_fnc_getNameItem
@@ -21,7 +21,7 @@ params ["_object", ["_addCustomPart", false]];
 private _class = if (_object isEqualType "") then {_object} else {typeOf _object};
 private _displayName = getText (configFile >> "CfgVehicles" >> _class >> "displayName");
 
-if (!(_object isEqualType "") && _addCustomPart) then {
+if (_addCustomPart && {!(_object isEqualType "")}) then {
     private _customPart = _object getVariable [QGVAR(customName), ""];
 
     if (_customPart isNotEqualTo "") then {

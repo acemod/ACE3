@@ -76,7 +76,7 @@ GVAR(vehicleAction) = [
     }
 ] call EFUNC(interact_menu,createAction);
 
-GVAR(objectActions)= [
+GVAR(objectActions) = [
     [QGVAR(renameObject), localize LSTRING(renameObject), "", //TODO: add icon, maybe a pencil couldn't find it before.
         {
             params ["_target"];
@@ -85,7 +85,7 @@ GVAR(objectActions)= [
         {
             //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             GVAR(enable) &&
-            !GVAR(hideRename) &&
+            {GVAR(enableRename)} &&
             {(_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad))]) in [true, 1]} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
@@ -125,8 +125,10 @@ GVAR(initializedVehicleClasses) append _vehicleClassesAddAction;
 
 private _objectClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedItemClasses), {[]}]);
 {
-    [_x, 0, ["ACE_MainActions"], GVAR(objectActions) select 0] call EFUNC(interact_menu,addActionToClass);
-    [_x, 0, ["ACE_MainActions"], GVAR(objectActions) select 1] call EFUNC(interact_menu,addActionToClass);
+    private _objectClass = _x;
+    {
+        [_objectClass, 0, ["ACE_MainActions"], _x] call EFUNC(interact_menu,addActionToClass);
+    } forEach GVAR(objectActions);
 } forEach _objectClassesAddAction;
 GVAR(initializedItemClasses) append _objectClassesAddAction;
 

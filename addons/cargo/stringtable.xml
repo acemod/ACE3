@@ -42,11 +42,11 @@
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
         </Key>
-        <Key ID="STR_ACE_Cargo_ModuleSettings_hideRename">
-            <English>Hide Rename Action</English>
+        <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
+            <English>Enable Rename Action</English>
         </Key>
-        <Key ID="STR_ACE_Cargo_ModuleSettings_hideRename_Description">
-            <English>Hides the rename action from renamable objects</English>
+        <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
+            <English>Enables the rename action for renamable objects</English>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
