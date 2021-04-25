@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [crate_7] spawn ace_cargo_fnc_renameObject
+ * [crate_7] call ace_cargo_fnc_renameObject
  *
  * Public: Yes
  */
