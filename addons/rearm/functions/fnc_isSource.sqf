@@ -15,10 +15,7 @@
  *
  * Public: Yes
  */
-params [
-        ["_target", objNull, [objNull]],
-        ["_testVanillaRearm", false, [false]]
-    ];
+params [["_target", objNull, [objNull]]];
 
 if ((_target getVariable [QGVAR(currentSupply), 0]) < 0) exitWith {false};
     
