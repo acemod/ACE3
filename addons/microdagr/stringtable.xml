@@ -586,9 +586,11 @@
         </Key>
         <Key ID="STR_ACE_MicroDAGR_previousMode">
             <English>MicroDAGR - Previous Mode</English>
+            <Spanish>MicroDAGR - Modo anterior</Spanish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_nextMode">
             <English>MicroDAGR - Next Mode</English>
+            <Spanish>MicroDAGR - Modo siguiente</Spanish>
         </Key>
     </Package>
 </Project>
