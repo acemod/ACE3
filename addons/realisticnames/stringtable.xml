@@ -1328,6 +1328,7 @@
             <French>M183 Charge de démolition (lançable)</French>
             <Japanese>M183 梱包爆薬 (投てき仕様)</Japanese>
             <Turkish>M183 Demolition Charge (Throwable)</Turkish>
+            <Spanish>Carga de demolición M183 (Lanzable)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1351,6 +1352,7 @@
             <French>M112 Bloc de démolition (lançable)</French>
             <Japanese>M112 爆薬ブロック (投てき仕様)</Japanese>
             <Turkish>M112 Demolition Charge (Throwable)</Turkish>
+            <Spanish>Bloque de demolición M112 (Lanzable)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -3494,6 +3496,7 @@
             <French>Polaris DAGOR (XM312)</French>
             <Czech>Polaris DAGOR (XM312)</Czech>
             <Turkish>Polaris DAGOR (XM312)</Turkish>
+            <Spanish>Polaris DAGOR (XM312)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
@@ -3508,6 +3511,7 @@
             <French>Polaris DAGOR (Mini-Spike AC)</French>
             <Czech>Polaris DAGOR (Mini-Spike AT)</Czech>
             <Turkish>Polaris DAGOR (Mini-Spike AT)</Turkish>
+            <Spanish>Polaris DAGOR (Mini-Spike AT)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3522,6 +3526,7 @@
             <French>Polaris DAGOR</French>
             <Czech>Polaris DAGOR</Czech>
             <Turkish>Polaris DAGOR</Turkish>
+            <Spanish>Polaris DAGOR</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
@@ -3536,6 +3541,7 @@
             <French>Polaris DAGOR (léger)</French>
             <Czech>Polaris DAGOR (lehký)</Czech>
             <Turkish>Polaris DAGOR (light)</Turkish>
+            <Spanish>Polaris DAGOR (ligero)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_armed">
             <English>LSV Mk. II (M134)</English>
@@ -3550,6 +3556,7 @@
             <French>LSV Mk. II (M134)</French>
             <Czech>LSV Mk. II (M134)</Czech>
             <Turkish>LSV Mk. II (M134)</Turkish>
+            <Spanish>LSV Mk. II (M134)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -3564,6 +3571,7 @@
             <French>LSV Mk. II (Metis-M)</French>
             <Czech>LSV Mk. II (Metis-M)</Czech>
             <Turkish>LSV Mk. II (Metis-M)</Turkish>
+            <Spanish>LSV Mk. II (Metis-M)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_unarmed">
             <English>LSV Mk. II</English>
@@ -3578,6 +3586,7 @@
             <French>LSV Mk. II</French>
             <Czech>LSV Mk. II</Czech>
             <Turkish>LSV Mk. II</Turkish>
+            <Spanish>LSV Mk. II</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01">
             <English>Rooikat 120</English>
@@ -3592,6 +3601,7 @@
             <French>Rooikat 120</French>
             <Czech>Rooikat 120</Czech>
             <Turkish>Rooikat 120</Turkish>
+            <Spanish>Rooikat 120</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_afv_wheeled_01_up">
             <English>Rooikat 120 UP</English>
@@ -3606,6 +3616,7 @@
             <French>Rooikat 120 UP</French>
             <Czech>Rooikat 120 UP</Czech>
             <Turkish>Rooikat 120 UP</Turkish>
+            <Spanish>Rooikat 120 UP</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_cannon">
             <English>T-14 Armata</English>
@@ -3620,6 +3631,7 @@
             <French>T-14 Armata</French>
             <Czech>T-14 Armata</Czech>
             <Turkish>T-14 Armata</Turkish>
+            <Spanish>T-14 Armata</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_04_command">
             <English>T-14K Armata</English>
@@ -3634,6 +3646,7 @@
             <French>T-14K Armata</French>
             <Czech>T-14K Armata</Czech>
             <Turkish>T-14K Armata</Turkish>
+            <Spanish>T-14K Armata</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AA">
             <English>Wiesel 2 Ozelot (AA)</English>
@@ -3648,6 +3661,7 @@
             <French>Wiesel 2 Ozelot (AA)</French>
             <Czech>Wiesel 2 Ozelot (AA)</Czech>
             <Turkish>Wiesel 2 Ozelot (AA)</Turkish>
+            <Spanish>Wiesel 2 Ozelot (AA)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
@@ -3662,6 +3676,7 @@
             <French>Wiesel 2 (ATGM)</French>
             <Czech>Wiesel 2 (ATGM)</Czech>
             <Turkish>Wiesel 2 (ATGM)</Turkish>
+            <Spanish>Wiesel 2 (ATGM)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
@@ -3676,6 +3691,7 @@
             <French>Wiesel 2 (MK20)</French>
             <Czech>Wiesel 2 (MK20)</Czech>
             <Turkish>Wiesel 2 (MK20)</Turkish>
+            <Spanish>Wiesel 2 (MK20)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_scout">
             <English>Wiesel 2 RFCV (Radar)</English>
@@ -3690,6 +3706,7 @@
             <French>Wiesel 2 RFCV (Radar)</French>
             <Czech>Wiesel 2 RFCV (Radar)</Czech>
             <Turkish>Wiesel 2 RFCV (Radar)</Turkish>
+            <Spanish>Wiesel 2 RFCV (Radar)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -3704,6 +3721,7 @@
             <French>Leupold Mark 4 HAMR</French>
             <Czech>Leupold Mark 4 HAMR</Czech>
             <Turkish>Leupold Mark 4 HAMR</Turkish>
+            <Spanish>Leupold Mark 4 HAMR</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_khk">
             <English>Leupold Mark 4 HAMR (Khaki)</English>
@@ -3718,6 +3736,7 @@
             <French>Leupold Mark 4 HAMR (Kaki)</French>
             <Czech>Leupold Mark 4 HAMR (Khaki)</Czech>
             <Turkish>Leupold Mark 4 HAMR (Haki)</Turkish>
+            <Spanish>Leupold Mark 4 HAMR (Caqui)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr_2d">
             <English>Leupold Mark 4 HAMR (2D)</English>
@@ -3732,6 +3751,7 @@
             <French>Leupold Mark 4 HAMR (2D)</French>
             <Czech>Leupold Mark 4 HAMR (2D)</Czech>
             <Turkish>Leupold Mark 4 HAMR (2D)</Turkish>
+            <Spanish>Leupold Mark 4 HAMR (2D)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
@@ -3746,6 +3766,7 @@
             <French>ELCAN SpecterOS (Tan)</French>
             <Czech>ELCAN SpecterOS (Žlutohnědá)</Czech>
             <Turkish>ELCAN SpecterOS (Tan)</Turkish>
+            <Spanish>ELCAN SpecterOS (Tan)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_blk">
             <English>ELCAN SpecterOS (Black)</English>
@@ -3760,6 +3781,7 @@
             <French>ELCAN SpecterOS (Noire)</French>
             <Czech>ELCAN SpecterOS (Černá)</Czech>
             <Turkish>ELCAN SpecterOS (Siyah)</Turkish>
+            <Spanish>ELCAN SpecterOS (Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ghex">
             <English>ELCAN SpecterOS (Green Hex)</English>
@@ -3773,6 +3795,7 @@
             <French>ELCAN SpecterOS (Hex Verte)</French>
             <Czech>ELCAN SpecterOS (Zelený Hex)</Czech>
             <Turkish>ELCAN SpecterOS (Yeşil Hex)</Turkish>
+            <Spanish>ELCAN SpecterOS (Verde Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_2d">
             <English>ELCAN SpecterOS (2D)</English>
@@ -3787,6 +3810,7 @@
             <French>ELCAN SpecterOS (2D)</French>
             <Czech>ELCAN SpecterOS (2D)</Czech>
             <Turkish>ELCAN SpecterOS (2D)</Turkish>
+            <Spanish>ELCAN SpecterOS (2D)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3801,6 +3825,7 @@
             <French>SIG BRAVO4 / ROMEO3 (Noire)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Černá)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Siyah)</Turkish>
+            <Spanish>SIG BRAVO4 / ROMEO3 (Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_khk">
             <English>SIG BRAVO4 / ROMEO3 (Khaki)</English>
@@ -3815,6 +3840,7 @@
             <French>SIG BRAVO4 / ROMEO3 (Kaki)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Khaki)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Haki)</Turkish>
+            <Spanish>SIG BRAVO4 / ROMEO3 (Caqui)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_snd">
             <English>SIG BRAVO4 / ROMEO3 (Sand)</English>
@@ -3829,6 +3855,7 @@
             <French>SIG BRAVO4 / ROMEO3 (Beige)</French>
             <Czech>SIG BRAVO4 / ROMEO3 (Písková)</Czech>
             <Turkish>SIG BRAVO4 / ROMEO3 (Kum)</Turkish>
+            <Spanish>SIG BRAVO4 / ROMEO3 (Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps">
             <English>Nightforce NXS</English>
@@ -3842,6 +3869,7 @@
             <French>Nightforce NXS</French>
             <Czech>Nightforce NXS</Czech>
             <Turkish>Nightforce NXS</Turkish>
+            <Spanish>Nightforce NXS</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
@@ -3855,6 +3883,7 @@
             <French>Nightforce NXS (Hex Verte)</French>
             <Czech>Nightforce NXS (Zelený Hex)</Czech>
             <Turkish>Nightforce NXS (Yeşil Hex)</Turkish>
+            <Spanish>Nightforce NXS (Verde Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -3869,6 +3898,7 @@
             <French>Nightforce NXS (Jungle)</French>
             <Czech>Nightforce NXS (Džungle)</Czech>
             <Turkish>Nightforce NXS (Orman)</Turkish>
+            <Spanish>Nightforce NXS (Jungla)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_2d">
             <English>Nightforce NXS (2D)</English>
@@ -3882,6 +3912,7 @@
             <French>Nightforce NXS (2D)</French>
             <Czech>Nightforce NXS (2D)</Czech>
             <Turkish>Nightforce NXS (2D)</Turkish>
+            <Spanish>Nightforce NXS (2D)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -3895,6 +3926,7 @@
             <French>US Optics MR-10 (Noire)</French>
             <Czech>US Optics MR-10 (Černá)</Czech>
             <Turkish>US Optics MR-10 (Siyah)</Turkish>
+            <Spanish>US Optics MR-10 (Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -3908,6 +3940,7 @@
             <French>US Optics MR-10 (Kaki)</French>
             <Czech>US Optics MR-10 (Khaki)</Czech>
             <Turkish>US Optics MR-10 (Haki)</Turkish>
+            <Spanish>US Optics MR-10 (Caqui)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -3921,6 +3954,7 @@
             <French>US Optics MR-10 (Beige)</French>
             <Czech>US Optics MR-10 (Písková)</Czech>
             <Turkish>US Optics MR-10 (Kum)</Turkish>
+            <Spanish>US Optics MR-10 (Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -3934,6 +3968,7 @@
             <French>KAHLES Helia (Noire)</French>
             <Czech>KAHLES Helia (Černá)</Czech>
             <Turkish>KAHLES Helia (Siyah)</Turkish>
+            <Spanish>KAHLES Helia (Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -3947,6 +3982,7 @@
             <French>KAHLES Helia (Hex)</French>
             <Czech>KAHLES Helia (Hex)</Czech>
             <Turkish>KAHLES Helia (Hex)</Turkish>
+            <Spanish>KAHLES Helia (Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -3960,6 +3996,7 @@
             <French>KAHLES Helia (Usée)</French>
             <Czech>KAHLES Helia (Stará)</Czech>
             <Turkish>KAHLES Helia (Eski)</Turkish>
+            <Spanish>KAHLES Helia (Vieja)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -3973,6 +4010,7 @@
             <French>KAHLES Helia (Tan)</French>
             <Czech>KAHLES Helia (Žlutohnědá)</Czech>
             <Turkish>KAHLES Helia (Tan)</Turkish>
+            <Spanish>KAHLES Helia (Tan)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
@@ -3986,6 +4024,7 @@
             <French>Burris XTR II</French>
             <Czech>Burris XTR II</Czech>
             <Turkish>Burris XTR II</Turkish>
+            <Spanish>Burris XTR II</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
@@ -3999,6 +4038,7 @@
             <French>Burris XTR II (Hex Verte)</French>
             <Czech>Burris XTR II (Zelený Hex)</Czech>
             <Turkish>Burris XTR II (Yeşil Hex)</Turkish>
+            <Spanish>Burris XTR II (Verde Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4013,6 +4053,7 @@
             <French>EOTech XPS3 (Tan)</French>
             <Czech>EOTech XPS3 (Žlutohnědá)</Czech>
             <Turkish>EOTech XPS3 (Tan)</Turkish>
+            <Spanish>EOTech XPS3 (Tan)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_blk">
             <English>EOTech XPS3 (Black)</English>
@@ -4027,6 +4068,7 @@
             <French>EOTech XPS3 (Noire)</French>
             <Czech>EOTech XPS3 (Černá)</Czech>
             <Turkish>EOTech XPS3 (Siyah)</Turkish>
+            <Spanish>EOTech XPS3 (Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_khk">
             <English>EOTech XPS3 (Khaki)</English>
@@ -4041,6 +4083,7 @@
             <French>EOTech XPS3 (Kaki)</French>
             <Czech>EOTech XPS3 (Khaki)</Czech>
             <Turkish>EOTech XPS3 (Haki)</Turkish>
+            <Spanish>EOTech XPS3 (Caqui)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4055,6 +4098,7 @@
             <French>EOTech XPS3 SMG (Tan)</French>
             <Czech>EOTech XPS3 SMG (Žlutohnědá)</Czech>
             <Turkish>EOTech XPS3 SMG (Tan)</Turkish>
+            <Spanish>EOTech XPS3 SMG (Tan)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_blk">
             <English>EOTech XPS3 SMG (Black)</English>
@@ -4069,6 +4113,7 @@
             <French>EOTech XPS3 SMG (Noire)</French>
             <Czech>EOTech XPS3 SMG (Černá)</Czech>
             <Turkish>EOTech XPS3 SMG (Siyah)</Turkish>
+            <Spanish>EOTech XPS3 SMG (Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg_khk">
             <English>EOTech XPS3 SMG (Khaki)</English>
@@ -4083,6 +4128,7 @@
             <French>EOTech XPS3 SMG (Kaki)</French>
             <Czech>EOTech XPS3 SMG (Khaki)</Czech>
             <Turkish>EOTech XPS3 SMG (Hakii)</Turkish>
+            <Spanish>EOTech XPS3 SMG (Caqui)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco">
             <English>IOR-Valdada Pitbull 2</English>
@@ -4096,6 +4142,7 @@
             <French>IOR-Valdada Pitbull 2</French>
             <Czech>IOR-Valdada Pitbull 2</Czech>
             <Turkish>IOR-Valdada Pitbull 2</Turkish>
+            <Spanish>IOR-Valdada Pitbull 2</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_2d">
             <English>IOR-Valdada Pitbull 2 (2D)</English>
@@ -4109,6 +4156,7 @@
             <French>IOR-Valdada Pitbull 2 (2D)</French>
             <Czech>IOR-Valdada Pitbull 2 (2D)</Czech>
             <Turkish>IOR-Valdada Pitbull 2 (2D)</Turkish>
+            <Spanish>IOR-Valdada Pitbull 2 (2D)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -4122,6 +4170,7 @@
             <French>Burris FastFire 2</French>
             <Czech>Burris FastFire 2</Czech>
             <Turkish>Burris FastFire 2</Turkish>
+            <Spanish>Burris FastFire 2</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>
@@ -4136,6 +4185,7 @@
             <French>C-More Railway (Rouge)</French>
             <Czech>C-More Railway (Červený)</Czech>
             <Turkish>C-More Railway (Kırmızı)</Turkish>
+            <Spanish>C-More Railway (Roja)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn">
             <English>C-More Railway (Green)</English>
@@ -4150,6 +4200,7 @@
             <French>C-More Railway (Verte)</French>
             <Czech>C-More Railway (Zelený)</Czech>
             <Turkish>C-More Railway (Yeşil)</Turkish>
+            <Spanish>C-More Railway (Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_smg">
             <English>C-More Railway SMG (Red)</English>
@@ -4164,6 +4215,7 @@
             <French>C-More Railway SMG (Rouge)</French>
             <Czech>C-More Railway SMG (Červený)</Czech>
             <Turkish>C-More Railway SMG (Kırmızı)</Turkish>
+            <Spanish>C-More Railway SMG (Roja)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO_grn_smg">
             <English>C-More Railway SMG (Green)</English>
@@ -4178,6 +4230,7 @@
             <French>C-More Railway SMG (Verte)</French>
             <Czech>C-More Railway SMG (Zelený)</Czech>
             <Turkish>C-More Railway SMG (Yeşil)</Turkish>
+            <Spanish>C-More Railway SMG (Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_P90_TR_Black_Name">
             <English>P90 TR (Black)</English>
