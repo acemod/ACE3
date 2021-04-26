@@ -27,7 +27,8 @@ class CfgVehicles {
 
 ```cpp
 class CfgVehicles {
-    class BananaParachute {
+    class ParachuteBase;
+    class BananaParachute: ParachuteBase {
         ace_parachute_failureDelay = 2;  // Add delay before parachute fails (time in seconds)
     };
 };

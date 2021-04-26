@@ -5,22 +5,22 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 0: Vehicle <OBJECT>
+ * 1: Vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, vehicle player] call FUNC(handleFailureChance)
+ * [player, vehicle player] call ace_parachute_handleFailureChance
  *
  * Public: No
  */
 
 params ["_unit", "_vehicle"];
 
-if !(GVAR(failureChance) > 0 || {_vehicle isKindOf "ParachuteBase"}) exitWith {};
+if !(_vehicle isKindOf "ParachuteBase") exitWith {};
 
 if (random 1 < GVAR(failureChance)) then {
     private _failureDelay = getNumber (configOf _vehicle >> QGVAR(failureDelay));
-    [{[(_this select 0), (_this select 1)] call FUNC(cutParachute)}, [_unit, _vehicle], _failureDelay] call cba_fnc_waitAndExecute;
+    [FUNC(cutParachute), [_unit, _vehicle], _failureDelay] call CBA_fnc_waitAndExecute;
 };
