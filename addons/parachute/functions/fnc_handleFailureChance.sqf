@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, vehicle player] call ace_parachute_handleFailureChance
+ * [player, vehicle player] call ace_parachute_fnc_handleFailureChance
  *
  * Public: No
  */
