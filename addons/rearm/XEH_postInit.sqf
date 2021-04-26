@@ -4,7 +4,7 @@
 [QGVAR(rearmEntireVehicleSuccessEH), LINKFUNC(rearmEntireVehicleSuccess)] call CBA_fnc_addEventHandler;
 [QGVAR(rearmEntireVehicleSuccessLocalEH), LINKFUNC(rearmEntireVehicleSuccessLocal)] call CBA_fnc_addEventHandler;
 
-if !GVAR(enabled) exitWith {};
+if (!GVAR(enabled)) exitWith {};
 
 GVAR(hardpointGroupsCache) = [] call CBA_fnc_createNamespace;
 GVAR(configTypesAdded) = [];

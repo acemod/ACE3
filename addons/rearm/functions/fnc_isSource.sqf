@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: target <OBJECT>
- * 1: (ignored) check for vanilla rearm vehicle <BOOL> (default: false)
+ * 1: check for vanilla rearm vehicle <BOOL> (unused)
  *
  * Return Value:
  * None
