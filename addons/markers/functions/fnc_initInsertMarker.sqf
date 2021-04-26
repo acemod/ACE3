@@ -343,7 +343,7 @@
 
     if !(GVAR(editingMarker) isEqualTo "") then {
         //get the original scale
-        GVAR(currentMarkerScale) = markerSize GVAR(editingMarker);
+        GVAR(currentMarkerScale) = (markerSize GVAR(editingMarker)) param [0, 1];
     };
 
     private _curSelScale = GETGVAR(currentMarkerScale,1);
