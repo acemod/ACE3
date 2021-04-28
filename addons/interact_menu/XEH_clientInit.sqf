@@ -117,8 +117,8 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
 // init menu reordering
 if (GVAR(allowReorderSelf)) then {
     [QGVAR(newControllableObject), {
-        params ["_type"];
-        if !(_type isKindOf "CAManBase") exitWith {};
-        _type call FUNC(initMenuReorder);
+        params ["_class"];
+        if !(_class isKindOf "CAManBase") exitWith {};
+        _class call FUNC(initMenuReorder);
     }] call CBA_fnc_addEventHandler;
 };
