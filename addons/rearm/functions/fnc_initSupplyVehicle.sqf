@@ -27,7 +27,7 @@ if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-c
 
 if (!alive _vehicle) exitWith {};
 
-private _config = configFile >> "CfgVehicles" >> _typeOf;
+private _config = configOf _vehicle;
 private _configSupply = getNumber (_config >> QGVAR(defaultSupply));
 if (_configSupply == 0) then {
     _configSupply = getNumber (_config >> "transportAmmo");
