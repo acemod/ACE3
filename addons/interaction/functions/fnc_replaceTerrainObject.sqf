@@ -23,6 +23,9 @@ TRACE_2("",_terrainObject,_class);
 if (isObjectHidden _terrainObject) exitWith {};
 
 private _position = getPosATL _terrainObject;
+if (_position select 2 < 0) then {
+    _position set [2, 0];
+};
 private _vectorDirAndUp = [vectorDir _terrainObject, vectorUp _terrainObject];
 
 hideObjectGlobal _terrainObject;
