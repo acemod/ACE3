@@ -32,7 +32,7 @@
 
 [
     QGVAR(interactWithTerrainObjects), "CHECKBOX",
-    "str_a3_modules_moduleomquest_defend_f_attributes_useterrainobject0",
+    ["str_a3_modules_moduleomquest_defend_f_attributes_useterrainobject0", LSTRING(interactWithTerrainObjects_Description)],
     format ["ACE %1", LLSTRING(DisplayName)],
     false,
     true

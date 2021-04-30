@@ -1218,5 +1218,9 @@
             <Russian>Включает действия Установить/Снять для приспособлений текущего оружия.</Russian>
             <Japanese>インタラクションから使用中の武器に対してのアタッチメント取り外しを可能にします。</Japanese>
         </Key>
+        <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
+            <English>Warning: can cause some objects to collide with others.</English>
+            <Russian>Внимание: может вызвать отталкивание некоторых объектов друг от друга.</Russian>
+        </Key>
     </Package>
 </Project>
