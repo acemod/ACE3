@@ -133,5 +133,8 @@
             <Spanish>Oculta la altitud y la velocidad que se muestran en caída libre o en paracaídas.</Spanish>
             <Turkish>Serbest düşme veya paraşütle atlama sırasında gösterilen yüksekliği ve hızı gizler.</Turkish>
         </Key>
+        <Key ID="STR_ACE_Parachute_FailureChance">
+            <English>Parachute Failure Chance</English>
+        </Key>
     </Package>
 </Project>
