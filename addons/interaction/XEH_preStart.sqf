@@ -2,7 +2,7 @@
 
 #include "XEH_PREP.hpp"
 
-if !hasInterface exitWith {};
+if (!hasInterface) exitWith {};
 
 private _replaceTerrainClasses = QUOTE( \
     getNumber (_x >> 'scope') == 2 \
