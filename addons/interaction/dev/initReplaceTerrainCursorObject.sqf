@@ -28,7 +28,7 @@ DFUNC(replaceTerrainModelsAdd) = {
                 _class = configName _x;
                 _parent = configName inheritsFrom _x;
                 break;
-            }
+            };
         } forEach _configClasses;
     };
     if (_class isEqualTo "") exitWith {systemChat "fail class"; false};

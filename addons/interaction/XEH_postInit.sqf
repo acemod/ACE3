@@ -83,11 +83,16 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
+GVAR(isOpeningDoor) = false;
+
 [QEGVAR(interact_menu,renderNearbyActions), {
     if !GVAR(interactWithTerrainObjects) exitWith {};
     {
-        if (isObjectHidden _x || {_x getVariable [QGVAR(terrainObjectReplaced), false]} || {typeOf _x isNotEqualTo ""}) then {continue};
-
+        if (
+            isObjectHidden _x // after hiding on server 
+            || {_x getVariable [QGVAR(terrainObjectReplaced), false]} // after checking but before hiding
+            || {typeOf _x isNotEqualTo ""}
+        ) then {continue};
         private _model = getModelInfo _x select 1;
         private _class = GVAR(replaceTerrainModels) get _model;
         if (isNil "_class") then {continue};
@@ -95,8 +100,6 @@ if (!hasInterface) exitWith {};
         [QGVAR(replaceTerrainObject), [_x, _class]] call CBA_fnc_serverEvent;
     } forEach nearestTerrainObjects [ACE_player, [], 5, false];
 }] call CBA_fnc_addEventHandler;
-
-GVAR(isOpeningDoor) = false;
 
 [QGVAR(tapShoulder), {
     params ["_unit", "_shoulderNum"];
