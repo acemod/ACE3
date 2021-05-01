@@ -37,7 +37,7 @@ private _fnc_processNode = {
 
     // don't add already added setting
     if (isNil {missionNamespace getVariable _varName}) then {
-        [_varName, "CHECKBOX", _titleFull, [_settingCategory, _rootActionTitle], false, false, {}, true] call CBA_fnc_addSetting;
+        [_varName, "CHECKBOX", _titleFull, [_settingCategory, _rootActionTitle], false, 2, {}, true] call CBA_fnc_addSetting;
     };
 
     if (missionNamespace getVariable [_varName, false]) then {
@@ -79,7 +79,7 @@ private _settingCategory = _settingCategoryPrefix + localize "str_more_menu";
     if (_name isEqualTo QGVAR(more)) then {continue};
 
     private _varName = QGVAR(more__) + _name;
-    [_varName, "CHECKBOX", _title, _settingCategory, false, false, {}, true] call CBA_fnc_addSetting;
+    [_varName, "CHECKBOX", _title, _settingCategory, false, 2, {}, true] call CBA_fnc_addSetting;
     if !(missionNamespace getVariable [_varName, false]) then {continue};
 
     private _newActionData = +(_actionData);
