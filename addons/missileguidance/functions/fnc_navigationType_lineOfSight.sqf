@@ -45,5 +45,5 @@ if (accTime > 0) then {
 	_navigationParams set [0, [_attackProfileDirection]];
 };
 
-_commandedAcceleration
+_targetDirection
 

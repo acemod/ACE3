@@ -123,6 +123,10 @@ class GVAR(SeekerTypes) {
 };
 
 class GVAR(NavigationTypes) {
+    class Direct {
+        functionName = QFUNC(navigationType_direct);
+        onFired = "";
+    };
     class Line {
         functionName = QFUNC(navigationType_line);
         onFired = QFUNC(line_onFired);

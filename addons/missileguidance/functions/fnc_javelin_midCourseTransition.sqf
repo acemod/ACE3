@@ -23,5 +23,6 @@ _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateP
 _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
-_targetRange <= 500
+_attackProfileStateParams params ["_state"];
+_state isEqualTo STAGE_TERMINAL
 

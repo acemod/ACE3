@@ -37,6 +37,7 @@ PREP(navigationType_augmentedProNav);
 PREP(navigationType_proNav);
 PREP(navigationType_lineOfSight);
 PREP(navigationType_line);
+PREP(navigationType_direct);
 
 // Seeker search functions
 PREP(seekerType_SALH);

@@ -85,8 +85,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
             
-            defaultNavigationType = "LineOfSight";
-            navigationTypes[] = { "LineOfSight", "ZeroEffortMiss" };
+            defaultNavigationType = "Direct";
+            navigationTypes[] = { "Direct", "ZeroEffortMiss" };
 
             navigationGain = 3;
 
@@ -106,7 +106,7 @@ class CfgAmmo {
             class navigationStates {
                 class initial {
                     transitionCondition = QFUNC(javelin_midCourseTransition);
-                    navigationType = "LineOfSight";
+                    navigationType = "Direct";
                 };
                 class terminal {
                     transitionCondition = "";
