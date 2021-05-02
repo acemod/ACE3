@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Aircraft">
+        <Key ID="STR_ACE_aim9_m">
+            <English>AIM-9M [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_x">
+            <English>AIM-9X [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_aim132">
+            <English>AIM-132 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_r73">
+            <English>R-73 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_r74">
+            <English>R-74 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_m_1x">
+            <English>1x AIM-9M [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_m_2x">
+            <English>2x AIM-9M [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_x_1x">
+            <English>1x AIM-9X [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_x_2x">
+            <English>2x AIM-9X [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_aim132_1x">
+            <English>1x AIM-132 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_aim132_2x">
+            <English>2x AIM-132 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_aim132_4x">
+            <English>4x AIM-132 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_r73_1x">
+            <English>1x R-73 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_r74_1x">
+            <English>1x R-74 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim9_r74_2x">
+            <English>2x R-74 [ACE]</English>
+        </Key>
+    </Package>
+</Project>

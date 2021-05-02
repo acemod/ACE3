@@ -5,7 +5,7 @@ class CfgWeapons {
 		lockAcquire = 1; // auto lock
 
 		author = "Brandon (TCVM)";
-        displayName = "AIM-9M [ACE]";
+        displayName = CSTRING(m);
         weaponLockDelay = 0.5;
 		magazines[] = {QGVAR(2Rnd_Missile_9m), QGVAR(PylonRack_1Rnd_Missile_9m), QGVAR(PylonMissile_1Rnd_Missile_9m)};
 	};
@@ -15,7 +15,7 @@ class CfgWeapons {
 		lockAcquire = 1; // auto lock
 
 		author = "Brandon (TCVM)";
-        displayName = "AIM-9X [ACE]";
+        displayName = CSTRING(x);
         weaponLockDelay = 0.5;
 		magazines[] = { QGVAR(magazine_Missile_9x), QGVAR(PylonMissile_Missile_9x), QGVAR(PylonRack_Missile_9x), QGVAR(PylonRack_Missile_9x_2) };
 	};
@@ -26,7 +26,7 @@ class CfgWeapons {
 		lockAcquire = 1; // auto lock
 
 		author = "Brandon (TCVM)";
-        displayName = "AIM-132 [ACE]";
+        displayName = CSTRING(aim132);
         weaponLockDelay = 0.5;
 		magazines[] = {
 			QGVAR(aim132_2Rnd),
@@ -45,7 +45,7 @@ class CfgWeapons {
 		lockAcquire = 1; // auto lock
 
 		author = "Brandon (TCVM)";
-        displayName = "R-73 [ACE]";
+        displayName = CSTRING(r73);
         weaponLockDelay = 0.5;
 
 		magazines[] = {
@@ -59,7 +59,7 @@ class CfgWeapons {
 		lockAcquire = 1; // auto lock
 
 		author = "Brandon (TCVM)";
-        displayName = "R-74 [ACE]";
+        displayName = CSTRING(r74);
         weaponLockDelay = 0.5;
 
 		magazines[] = {

@@ -25,14 +25,17 @@
         <Key ID="STR_ACE_aim120_d_2x">
             <English>2x AIM-120D [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim120_weapon">
-            <English>AIM-120 [ACE]</English>
-        </Key>
         <Key ID="STR_ACE_aim120_r77">
             <English>R-77 [ACE]</English>
         </Key>
         <Key ID="STR_ACE_aim120_r77_1x">
             <English>1x R-77 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_aim120">
+            <English>AIM-120 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_direct">
+            <English>Direct</English>
         </Key>
     </Package>
 </Project>
