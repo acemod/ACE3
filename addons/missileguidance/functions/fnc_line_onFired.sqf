@@ -16,7 +16,6 @@
  */
 params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["","","","","","","_projectile"];
-_stateParams params ["", "", "", "", "_navigationParams"];
 
 private _ammoConfig = configOf _projectile;
 private _p = getNumber (_ammoConfig >> QUOTE(ADDON) >> "lineGainP");
@@ -27,11 +26,11 @@ if (_correctionDistance == 0) then {
 	_correctionDistance = 1;
 };
 
-_navigationParams set [0, _p];
-_navigationParams set [1, _i];
-_navigationParams set [2, _d];
-
-_navigationParams set [3, 0];
-_navigationParams set [4, 0];
-_navigationParams set [5, _correctionDistance];
+private _navigationParams = [
+	_p, _i, _d,
+	0,
+	0,
+	_correctionDistance
+];
+_navigationParams
 

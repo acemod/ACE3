@@ -38,5 +38,4 @@ private _commandedAcceleration = _zeroEffortMissNormal vectorMultiply (_navigati
 if (accTime > 0) then {
 	_navigationParams set [0, [_lineOfSight]];
 };
-
 _commandedAcceleration

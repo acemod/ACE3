@@ -14,6 +14,11 @@
  *
  * Public: No
  */
+#define STAGE_LAUNCH 1
+#define STAGE_CLIMB 2
+#define STAGE_COAST 3
+#define STAGE_TERMINAL 4
+
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData", "_navigationStateData"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];

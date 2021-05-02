@@ -131,7 +131,8 @@ if (_states isNotEqualTo []) then {
         private _stateClass = _navigationStateSubclass >> _x;
         _navigationStateData pushBack [
             getText (_stateClass >> "transitionCondition"),
-            getText (_stateClass >> "navigationType")
+            getText (_stateClass >> "navigationType"),
+            []
         ];
     } forEach _states;
 };
@@ -184,10 +185,22 @@ if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
 
-_onFiredFunc = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "onFired");
-TRACE_1("navigation on fired",_onFiredFunc);
-if (_onFiredFunc != "") then {
-    _args call (missionNamespace getVariable _onFiredFunc);
+if (_states isEqualTo []) then {
+    _onFiredFunc = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "onFired");
+    TRACE_1("navigation on fired",_onFiredFunc);
+    if (_onFiredFunc != "") then {
+        private _navState = (_args call (missionNamespace getVariable _onFiredFunc));
+        (_navigationStateData select 4) set [4, _navState];
+    };
+} else {
+    {
+        _onFiredFunc = getText (configFile >> QGVAR(NavigationTypes) >> _x >> "onFired");
+        TRACE_1("navigation on fired",_onFiredFunc);
+        if (_onFiredFunc != "") then {
+            private _navState = (_args call (missionNamespace getVariable _onFiredFunc));
+            (_navigationStateData select _forEachIndex) set [2, _navState];
+        };
+    } forEach getArray (_config >> "navigationTypes");
 };
 
 // Run the "onFired" function passing the full guidance args array

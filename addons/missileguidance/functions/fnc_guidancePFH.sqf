@@ -57,10 +57,11 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         };
 
         _navigationType = (_navigationStateData select _currentState) select 1;
-        _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName")
-    };
+        _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName");
 
-    
+        _navigationParameters = (_navigationStateData select _currentState) select 2;
+        _stateParams set [4, _navigationParameters];
+    };
     private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos, _targetData, _navigationParameters] call (missionNamespace getVariable _navigationFunction);
 
     if (isNil "_commandedAcceleration") exitWith {
