@@ -16,9 +16,9 @@
  * Public: No
  */
 #ifdef DEBUG_MODE_FULL
-#define TRACK_ON_PAUSE false
+#define TRACK_ON_PAUSE true
 #else
-#define TRACK_ON_PAUSE false
+#define TRACK_ON_PAUSE true
 #endif
 
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData"];
@@ -31,9 +31,6 @@ _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_se
 _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
 _seekerStateParams params ["_flareDistanceFilter", "_flareAngleFilter", "_trackingTarget"];
-
-private _projectileVelocity = velocity _projectile;
-private _closingVelocity = _targetVelocity vectorDiff _projectileVelocity;
 
 private _withinView = [_projectile, getPosASLVisual _trackingTarget, _seekerAngle] call FUNC(checkSeekerAngle);
 private _canSee = [_projectile, _trackingTarget, false] call FUNC(checkLos);
@@ -81,16 +78,18 @@ if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
 
 		(_x isEqualTo _target && _trackingTarget isNotEqualTo _target) || { (_withinView && _canSee && _isFlare) }
 	};
-	
+
+	private _relativeTargetVelocity = _projectile vectorWorldToModelVisual velocity _trackingTarget;
+	_relativeTargetVelocity set [1, 0];
 	private _foundDecoy = false;
 	{
 		if (_trackingTarget isNotEqualTo _x) then {
 			private _considering = false;
 
-			private _distanceToFlare = _trackingTarget distanceSqr _x;
+			private _flareRelativeVelocity = _projectile vectorWorldToModelVisual velocity _x;
+			_flareRelativeVelocity set [1, 0];
+			private _angleBetweenVelocities = acos (_relativeTargetVelocity vectorCos _flareRelativeVelocity);
 			if !(_foundDecoy) then {
-				private _flareRelativeVelocity = (velocity _x) vectorDiff _projectileVelocity;
-				private _angleBetweenVelocities = acos (_closingVelocity vectorCos _flareRelativeVelocity);
 				if (_angleBetweenVelocities <= _flareAngleFilter) then {
 						_considering = true;
 						if (_seekerAccuracy <= random 1) then {
@@ -109,7 +108,7 @@ if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
 				if (_trackingTarget isEqualTo _x) then {
 					_colour = [0, 0, 1, 1];
 				};
-				drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _flarePos, 0.75, 0.75, 0, "F", 1, 0.025, "TahomaB"];
+				drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _flarePos, 0.75, 0.75, 0, format ["F %1", _angleBetweenVelocities], 1, 0.025, "TahomaB"];
 			};
 		};
 	} forEach _nearby;

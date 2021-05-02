@@ -190,7 +190,7 @@ if (_states isEqualTo []) then {
     TRACE_1("navigation on fired",_onFiredFunc);
     if (_onFiredFunc != "") then {
         private _navState = (_args call (missionNamespace getVariable _onFiredFunc));
-        (_navigationStateData select 4) set [4, _navState];
+        (_args select 4) set [4, _navState];
     };
 } else {
     {

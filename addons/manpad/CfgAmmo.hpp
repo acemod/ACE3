@@ -4,6 +4,11 @@ class CfgAmmo {
         maneuvrability = 0;
         missileLockMaxSpeed = 2000;
 
+        missileLockCone = 3; // caged lock
+        missileKeepLockedCone = 45;
+        missileLockMaxDistance = 5000;
+        missileLockMinDistance = 250;
+
         class ace_missileguidance {
             enabled = 1;
 
@@ -42,6 +47,11 @@ class CfgAmmo {
     class GVAR(stinger): M_70mm_SAAMI {
         maneuvrability = 0;
         missileLockMaxSpeed = 2000;
+
+        missileLockCone = 3; // caged lock
+        missileKeepLockedCone = 45;
+        missileLockMaxDistance = 5000;
+        missileLockMinDistance = 250;
 
         class ace_missileguidance {
             enabled = 1;
