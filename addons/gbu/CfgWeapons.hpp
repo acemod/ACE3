@@ -1,7 +1,7 @@
 class CfgWeapons {
     class weapon_LGBLauncherBase;
     class GVAR(12): weapon_LGBLauncherBase {
-        displayName = "GBU-12 [ACE]";
+        displayName = CSTRING(12);
         magazines[] = {
             QGVAR(2Rnd_12),
             QGVAR(2Rnd_GBU12_LGB_MI10),
@@ -17,7 +17,7 @@ class CfgWeapons {
     };
 
     class GVAR(FAB250): weapon_LGBLauncherBase {
-        displayName = "FAB-250M-54 [ACE]";
+        displayName = CSTRING(fab250);
         magazines[] = {
             QGVAR(1Rnd_FAB250),
             QGVAR(2Rnd_FAB250),

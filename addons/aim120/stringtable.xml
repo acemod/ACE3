@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Aircraft">
+    <Package name="aim120">
         <Key ID="STR_ACE_aim120_a">
             <English>AIM-120A [ACE]</English>
         </Key>
