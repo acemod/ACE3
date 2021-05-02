@@ -11,7 +11,7 @@ class CfgVehicles {
 	
 	// RIM-162
 	class SAM_System_02_base_F: StaticMGWeapon {
-		displayName = "Mk-29";
+		displayName = CSTRING(essm);
 		class AnimationSources {
             class Missiles_revolving {
                 source = "revolving";
@@ -20,7 +20,7 @@ class CfgVehicles {
         };
 		class Turrets: Turrets {
             class MainTurret: MainTurret {
-				gunnerName = "Mk-29 Operator";
+				gunnerName = CSTRING(essm_operator);
 				weapons[] = {
 					QGVAR(RIM162)
 				};
@@ -32,7 +32,7 @@ class CfgVehicles {
 	};
 	// Patriot
 	class SAM_System_03_base_F: StaticMGWeapon {
-		displayName = "MIM-104 Patriot";
+		displayName = CSTRING(patriot);
 		class AnimationSources {
             class Missiles_revolving {
                 source = "revolving";
@@ -41,7 +41,7 @@ class CfgVehicles {
 		};
 		class Turrets: Turrets {
             class MainTurret: MainTurret {
-				gunnerName = "MIM-104 Patriot Operator";
+				gunnerName = CSTRING(patriot_operator);
 				weapons[] = {
 					QGVAR(patriot)
 				};
@@ -53,7 +53,7 @@ class CfgVehicles {
 	};
 	// S-400
 	class SAM_System_04_base_F: StaticMGWeapon {
-		displayName = "S-400";
+		displayName = CSTRING(s400);
 		class AnimationSources {
             class Missiles_revolving {
                 source = "revolving";
@@ -62,7 +62,7 @@ class CfgVehicles {
 		};
 		class Turrets: Turrets {
             class MainTurret: MainTurret {
-				gunnerName = "S-400 Operator";
+				gunnerName = CSTRING(s400_operator);
 				weapons[] = {
 					QGVAR(s400)
 				};
