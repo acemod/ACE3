@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="manpad">
+        <Key ID="STR_ACE_gbu_12">
+            <English>GBU-12 [ACE]</English>
+        </Key>
+    </Package>
+</Project>
