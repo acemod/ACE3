@@ -32,5 +32,5 @@ if (_direction > 0) then {
 };
 
 [GVAR(gps_pbMode)] call FUNC(gps_loadAttackSettings);
-(_display displayCtrl GPS_UI_PB_MISSION) ctrlSetText format ["PP %1", GVAR(gps_pbMode) + 1];
+(_display displayCtrl GPS_UI_PB_MISSION) ctrlSetText format ["%1 %2", localize LSTRING(GPS_ui_pp_short), GVAR(gps_pbMode) + 1];
 

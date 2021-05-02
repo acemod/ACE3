@@ -205,5 +205,47 @@
             <Chinese>循環切換開火模式</Chinese>
             <Turkish>Ateşleme Modunu Değiştir</Turkish>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_6x">
+            <English>6x DAGR [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_12x">
+            <English>12x DAGR [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_24x">
+            <English>24x DAGR [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
+            <English>GPS Weapon Setup</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
+            <English>TARGET OF OPPORTUNITY</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp">
+            <English>PRE-PLANNED</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_easting">
+            <English>Easting</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_northing">
+            <English>Northing</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_altitude">
+            <English>Altitude</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
+            <English>Impact Angle</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
+            <English>Attack Heading</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_cancel">
+            <English>Cancel</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_confirm">
+            <English>Confirm</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
+            <English>PP</English>
+        </Key>
     </Package>
 </Project>

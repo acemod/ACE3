@@ -16,7 +16,7 @@ class GVAR(gpsAttackOptionsUI) {
     class controlsBackground {
         class Header: RscText {
             idc = -1;
-            text = "temp a [header]";
+            text = CSTRING(GPS_ui_header);
             x = 13.5 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 5 * GUI_GRID_H + GUI_GRID_CENTER_Y;
             w = 18 * GUI_GRID_W;
@@ -36,7 +36,7 @@ class GVAR(gpsAttackOptionsUI) {
     class controls {
 		class TOOButton: RscButton {
 			idc = GPS_UI_TOO;
-            text = "TARGET OF OPPORTUNITY";
+            text = CSTRING(GPS_ui_too);
             onButtonClick = QUOTE([GPS_UI_TOO] call FUNC(gps_modeSelect));
             x = 14 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 6.3 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -49,7 +49,7 @@ class GVAR(gpsAttackOptionsUI) {
 
 		class PPButton: RscButton {
 			idc = GPS_UI_PB;
-            text = "PRE-PLANNED";
+            text = CSTRING(GPS_ui_pp);
             onButtonClick = QUOTE([GPS_UI_PB] call FUNC(gps_modeSelect));
             x = 26 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 6.3 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -62,7 +62,7 @@ class GVAR(gpsAttackOptionsUI) {
 
 		class PPMission: RscText {
 			idc = GPS_UI_PB_MISSION;
-            text = "PP 1";
+            text = CSTRING(GPS_ui_pp_short);
             onButtonClick = "";
             x = 27.5 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 7.5 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -103,7 +103,7 @@ class GVAR(gpsAttackOptionsUI) {
 
 		class TargetPosXText: RscText {
 			idc = -1;
-            text = "Easting";
+            text = CSTRING(GPS_ui_easting);
             x = 14 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 8.5 * GUI_GRID_H + GUI_GRID_CENTER_Y;
             w = 3 * GUI_GRID_W;
@@ -128,7 +128,7 @@ class GVAR(gpsAttackOptionsUI) {
 
 		class TargetPosYText: RscText {
 			idc = -1;
-            text = "Northing";
+            text = CSTRING(GPS_ui_northing);
             x = 14 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 9.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
             w = 3 * GUI_GRID_W;
@@ -146,7 +146,7 @@ class GVAR(gpsAttackOptionsUI) {
 
 		class TargetPosHeightText: RscText {
 			idc = -1;
-            text = "Height";
+            text = CSTRING(GPS_ui_altitude);
             x = 14 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 11.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
             w = 3 * GUI_GRID_W;
@@ -176,7 +176,7 @@ class GVAR(gpsAttackOptionsUI) {
 
 		class ImpactAngleText: RscText {
 			idc = -1;
-            text = "Impact Angle";
+            text = CSTRING(GPS_ui_impact_angle);
             x = 21 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 9.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
             w = 4 * GUI_GRID_W;
@@ -201,7 +201,7 @@ class GVAR(gpsAttackOptionsUI) {
 
 		class AttackHeadingText: RscText {
 			idc = -1;
-            text = "Attack Heading";
+            text = CSTRING(GPS_ui_attack_heading);
             x = 21 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 11 * GUI_GRID_H + GUI_GRID_CENTER_Y;
             w = 5 * GUI_GRID_W;
@@ -226,7 +226,7 @@ class GVAR(gpsAttackOptionsUI) {
 
         class CancelButton: RscButton {
             idc = -1;
-            text = "temp b [cancel]";
+            text = CSTRING(GPS_ui_cancel);
             onButtonClick = QUOTE(closeDialog 0);
             x = 13.5 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 14.2 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -238,7 +238,7 @@ class GVAR(gpsAttackOptionsUI) {
         };
         class ConfirmButton: CancelButton {
             idc = IDC_TIMER_CONFIRM;
-            text = "temp c [confirm]";
+            text = CSTRING(GPS_ui_confirm);
             onButtonClick = QUOTE([] call FUNC(gps_confirm));
             x = 26.5 * GUI_GRID_W + GUI_GRID_CENTER_X;
         };
