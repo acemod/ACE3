@@ -62,7 +62,7 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_JDAM);
         onFired = QFUNC(gps_attackOnFired);
-    }
+    };
 };
 
 class GVAR(SeekerTypes) {

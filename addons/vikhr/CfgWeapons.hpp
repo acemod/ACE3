@@ -12,6 +12,6 @@ class CfgWeapons {
             QGVAR(PylonRack_3Rnd),
             QGVAR(PylonRack_4Rnd)
         };
-    }
+    };
 };
 
