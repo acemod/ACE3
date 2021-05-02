@@ -32,7 +32,7 @@ if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
 
 private _timestep = diag_deltaTime * accTime;
 
-_flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance"];
+_flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance", "_stabilityCoefficient"];
 
 // Run seeker function:
 private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState, _timestep] call FUNC(doSeekerSearch);
@@ -110,8 +110,18 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         };
 
         TRACE_9("pitch/yaw/roll",_pitch,_yaw,_roll,_yawChange,_pitchChange,_pitchRate,_yawRate,_clampedPitch,_clampedYaw);
-        _pitch = _pitch + _clampedPitch * _timestep;
-        _yaw = _yaw + _clampedYaw * _timestep;
+        // directional stability
+        private _localVelocity = _projectile vectorWorldToModelVisual (velocity _projectile);
+
+        private _velocityAngleYaw = (_localVelocity#0) atan2 (_localVelocity#1);
+        private _velocityAnglePitch = (_localVelocity#2) atan2 (_localVelocity#1);
+
+        // bastardized version of direction stability https://en.wikipedia.org/wiki/Directional_stability#Steering_forces
+        private _forceYaw = _stabilityCoefficient * _velocityAngleYaw + _clampedYaw;
+        private _forcePitch = _stabilityCoefficient * _velocityAnglePitch + _clampedPitch;
+
+        _pitch = _pitch + _forcePitch * _timestep;
+        _yaw = _yaw + _forceYaw * _timestep;
 
         TRACE_3("new pitch/yaw/roll",_pitch,_yaw,_roll);
 
@@ -184,6 +194,8 @@ if (GVAR(debug_drawGuidanceInfo)) then {
         _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
         _PS setDropInterval 1.0;
     };
+
+    drawLine3D [ASLtoAGL _projectilePos, (ASLtoAGL _projectilePos) vectorAdd velocity _projectile, [1, 1, 1, 1]];
 };
 
 _stateParams set [0, diag_tickTime];

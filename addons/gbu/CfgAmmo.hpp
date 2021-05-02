@@ -10,6 +10,7 @@ class CfgAmmo {
             yawRate = 5;
 
             bangBangGuidance = 1;
+            stabilityCoefficient = 0.4; // how much this projectile likes to "weathervane" (keep direction toward velocity)
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
