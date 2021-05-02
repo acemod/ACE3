@@ -38,8 +38,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
 
-            defaultNavigationType = "ZeroEffortMiss";
-            navigationTypes[] = { "ZeroEffortMiss" };
+            defaultNavigationType = "Direct";
+            navigationTypes[] = { "Direct", "ZeroEffortMiss" };
 
             seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 70;           // Angle in front of the missile which can be searched
@@ -51,6 +51,19 @@ class CfgAmmo {
             // Attack profile type selection
             defaultAttackProfile = "hellfire";
             attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"};
+
+            class navigationStates {
+                class initial {
+                    transitionCondition = QFUNC(midCourseTransition);
+                    navigationType = "Direct";
+                };
+                class terminal {
+                    transitionCondition = "";
+                    navigationType = "ZeroEffortMiss";
+                };
+                // transitions from initial -> termimal
+                states[] = {"initial", "terminal"};
+            };
         };
     };
     class ACE_Hellfire_AGM114N: ACE_Hellfire_AGM114K {

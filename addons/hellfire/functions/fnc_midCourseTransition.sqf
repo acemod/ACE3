@@ -10,14 +10,10 @@
  * None
  *
  * Example:
- * [] call ace_missileguidance_fnc_javelin_midCourseTransition
+ * [] call ace_hellfire_fnc_midCourseTransition
  *
  * Public: No
  */
-#define STAGE_LAUNCH 1
-#define STAGE_CLIMB 2
-#define STAGE_COAST 3
-#define STAGE_TERMINAL 4
 
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData", "_navigationStateData"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
@@ -29,5 +25,5 @@ _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_se
 _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
 _attackProfileStateParams params ["_state"];
-_state isEqualTo STAGE_TERMINAL
+_state in [STAGE_ATTACK_TERMINAL, STAGE_ATTACK_CRUISE];
 
