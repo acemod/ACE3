@@ -18,13 +18,13 @@
 #ifdef DEBUG_MODE_FULL
 #define TRACK_ON_PAUSE true
 #else
-#define TRACK_ON_PAUSE true
+#define TRACK_ON_PAUSE false
 #endif
 
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];
-_targetLaunchParams params ["_target", "_targetPos", "_launchPos", "_launchDir", "_launchTime"];
+_targetLaunchParams params ["_target", "", "_launchPos", "_launchDir", "_launchTime"];
 _flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance"];
 _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState","_navigationParams", "_guidanceParameters"];
 _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
@@ -32,13 +32,16 @@ _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange
 
 _seekerStateParams params ["_flareDistanceFilter", "_flareAngleFilter", "_trackingTarget"];
 
-private _withinView = [_projectile, getPosASLVisual _trackingTarget, _seekerAngle] call FUNC(checkSeekerAngle);
-private _canSee = [_projectile, _trackingTarget, false] call FUNC(checkLos);
-
-if (!_withinView || !_canSee) then {
-    _trackingTarget = objNull;
+private _distanceFromLaunch = _launchPos distanceSqr getPosASLVisual _projectile;
+if (_distanceFromLaunch <= _seekerMinRange * _seekerMinRange) exitWith {
+    [0, 0, 0]
 };
 
+private _withinView = [_projectile, getPosASLVisual _trackingTarget, _seekerAngle] call FUNC(checkSeekerAngle);
+private _canSee = [_projectile, _trackingTarget, false] call FUNC(checkLos);
+if (_trackingTarget isNotEqualTo objNull && ({ !_withinView || !_canSee })) then {
+    _trackingTarget = objNull;
+};
 if (isNull _trackingTarget) then {
     // find any target within seeker range
     private _potentialTargets = _projectile nearEntities ["Air", _seekerMaxRange];
