@@ -43,15 +43,17 @@ if (_returnTargetPos isEqualTo [0, 0, 0]) then {
 };
 
 private _closingRate = vectorMagnitude velocity _projectile;
-private _timeToGo = (_projectilePos distance _seekerTargetPos) / _closingRate;
+// subtract 500 meters to account for the fact that we don't want to be at the perfect pitch exactly when we cross the target
+// 500 seemed good in testing
+private _timeToGo = ((_projectilePos distance2d _seekerTargetPos) - 500) / _closingRate;
 
 // we could do stuff like desired attack angle, but I'm not going that far today
-private _los = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos); 
+private _los = _projectilePos vectorFromTo _seekerTargetPos; 
 
 _flightParams params ["_pitchRate", "_yawRate"];
 
 private _angleToTarget = acos ((vectorDir _projectile) vectorCos _los);
-private _atMinRotationAngle = _angleToTarget >= (0.5 * _pitchRate * _timeToGo);
+private _atMinRotationAngle = _angleToTarget >= (_pitchRate * _timeToGo);
 
 switch (_attackStage) do {
     case STAGE_LAUNCH: { // Gain height quickly to pass terrain mask

@@ -25,5 +25,5 @@ _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_se
 _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange", "_targetVelocity", "_targetAcceleration"];
 
 _attackProfileStateParams params ["_state"];
-_state in [STAGE_ATTACK_TERMINAL, STAGE_ATTACK_CRUISE];
+_state isEqualTo STAGE_ATTACK_TERMINAL;
 
