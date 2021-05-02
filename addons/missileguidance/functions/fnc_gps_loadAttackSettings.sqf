@@ -26,23 +26,23 @@ private _grid = [_position] call EFUNC(common,getMapGridFromPos);
 _grid params ["_easting", "_northing"];
 
 if (_angle < 0) then {
-	_angle = "";
+    _angle = "";
 } else {
-	_angle = str _angle;
+    _angle = str _angle;
 };
 
 if (_heading < 0) then {
-	_heading = "";
+    _heading = "";
 } else {
-	_heading = str _heading;
+    _heading = str _heading;
 };
 
 if (0 == parseNumber _easting) then {
-	_easting = "";
+    _easting = "";
 };
 
 if (0 == parseNumber _northing) then {
-	_northing = "";
+    _northing = "";
 };
 
 (_display displayCtrl GPS_UI_EASTING) ctrlSetText _easting;

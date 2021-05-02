@@ -20,15 +20,15 @@ private _display = uiNamespace getVariable QGVAR(gpsAttackOptionDisplay);
 [GVAR(gps_pbMode)] call FUNC(gps_saveAttackSettings);
 
 if (_direction > 0) then {
-	// right
-	GVAR(gps_pbMode) = (GVAR(gps_pbMode) + 1) % MAX_PB_MODES
+    // right
+    GVAR(gps_pbMode) = (GVAR(gps_pbMode) + 1) % MAX_PB_MODES
 } else {
-	// left
-	GVAR(gps_pbMode) = (GVAR(gps_pbMode) - 1);
-	if (GVAR(gps_pbMode) < 0) then {
-		GVAR(gps_pbMode) = MAX_PB_MODES - 1;
-	};
-	GVAR(gps_pbMode) = GVAR(gps_pbMode) % MAX_PB_MODES;
+    // left
+    GVAR(gps_pbMode) = (GVAR(gps_pbMode) - 1);
+    if (GVAR(gps_pbMode) < 0) then {
+        GVAR(gps_pbMode) = MAX_PB_MODES - 1;
+    };
+    GVAR(gps_pbMode) = GVAR(gps_pbMode) % MAX_PB_MODES;
 };
 
 [GVAR(gps_pbMode)] call FUNC(gps_loadAttackSettings);

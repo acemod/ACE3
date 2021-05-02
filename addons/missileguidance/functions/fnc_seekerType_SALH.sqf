@@ -31,36 +31,36 @@ private _foundTargetPos = _laserResult select 0;
 TRACE_1("Search", _laserResult);
 
 if (isNil "_foundTargetPos") exitWith {
-	[0, 0, 0]
+    [0, 0, 0]
 };
 
 // average out any error from laser jump
 private _positionSum = [0, 0, 0];
 {
-	_positionSum = _positionSum vectorAdd _x;
+    _positionSum = _positionSum vectorAdd _x;
 } forEach _lastPositions;
 
 if (_foundTargetPos isNotEqualTo [0, 0, 0]) then {
-	_lastPositions set [_lastPositionIndex % MAX_AVERAGES, _foundTargetPos];
-	_seekerParams set [4, _lastPositions];
-	_seekerParams set [5, _lastPositionIndex + 1];
+    _lastPositions set [_lastPositionIndex % MAX_AVERAGES, _foundTargetPos];
+    _seekerParams set [4, _lastPositions];
+    _seekerParams set [5, _lastPositionIndex + 1];
 };
 
 private _aproximateVelocity = [0, 0, 0];
 _positionSum = _positionSum vectorAdd _foundTargetPos;
 if (MAX_AVERAGES == count _lastPositions) then {
-	_positionSum = _positionSum vectorMultiply (1 / (1 + count _lastPositions));
+    _positionSum = _positionSum vectorMultiply (1 / (1 + count _lastPositions));
 
-	// if we are within a meter of the previous average, just use the previous average
-	if (_positionSum distanceSqr _lastPositionSum < MINIMUM_DISTANCE_UNTIL_NEW_POS * MINIMUM_DISTANCE_UNTIL_NEW_POS) then {
-		_positionSum = _lastPositionSum;
-	};
+    // if we are within a meter of the previous average, just use the previous average
+    if (_positionSum distanceSqr _lastPositionSum < MINIMUM_DISTANCE_UNTIL_NEW_POS * MINIMUM_DISTANCE_UNTIL_NEW_POS) then {
+        _positionSum = _lastPositionSum;
+    };
 
-	if (_timestep != 0) then {
-		_aproximateVelocity = (_positionSum vectorDiff _lastPositionSum) vectorMultiply (1 / _timestep);
-	};
+    if (_timestep != 0) then {
+        _aproximateVelocity = (_positionSum vectorDiff _lastPositionSum) vectorMultiply (1 / _timestep);
+    };
 } else {
-	_positionSum = _positionSum vectorMultiply (1 / count _lastPositions);
+    _positionSum = _positionSum vectorMultiply (1 / count _lastPositions);
 };
 
 _seekerParams set [6, _positionSum];

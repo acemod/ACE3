@@ -32,9 +32,9 @@ _targetAcceleration = _targetAcceleration vectorDiff _targetAccelerationProjecte
 // this is just due to how we measure our LOS delta, the vectors involved are _tiny_
 private _losDelta = _attackProfileDirection vectorDiff _lastLineOfSight;
 private _losRate = if (_timestep == 0) then {
-	0
+    0
 } else {
-	1 * (vectorMagnitude _losDelta) / _timestep; 
+    1 * (vectorMagnitude _losDelta) / _timestep; 
 };
 
 private _lateralAcceleration = _navigationGain * _losRate;
@@ -46,7 +46,7 @@ private _commandedAccelerationProjected = _attackProfileDirection vectorMultiply
 _commandedAcceleration = _commandedAcceleration vectorDiff _commandedAccelerationProjected;
 
 if (accTime > 0) then {
-	_navigationParams set [0, [_seekerTargetPos, _targetVelocity, _attackProfileDirection]];
+    _navigationParams set [0, [_seekerTargetPos, _targetVelocity, _attackProfileDirection]];
 };
 
 _commandedAcceleration

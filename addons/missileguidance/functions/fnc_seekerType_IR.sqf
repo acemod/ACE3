@@ -36,85 +36,85 @@ private _withinView = [_projectile, getPosASLVisual _trackingTarget, _seekerAngl
 private _canSee = [_projectile, _trackingTarget, false] call FUNC(checkLos);
 
 if (!_withinView || !_canSee) then {
-	_trackingTarget = objNull;
+    _trackingTarget = objNull;
 };
 
 if (isNull _trackingTarget) then {
-	// find any target within seeker range
-	private _potentialTargets = _projectile nearEntities ["Air", _seekerMaxRange];
-	private _bestAngle = 90;
-	{
-		private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
-		private _canSee = [_projectile, _x, false] call FUNC(checkLos);
+    // find any target within seeker range
+    private _potentialTargets = _projectile nearEntities ["Air", _seekerMaxRange];
+    private _bestAngle = 90;
+    {
+        private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
+        private _canSee = [_projectile, _x, false] call FUNC(checkLos);
 
-		if (_withinView && _canSee) then {
-			private _los = (getPosASLVisual _projectile) vectorFromTo (getPosASLVisual _x);
-			private _losAngle = (_los#2 atan2 _los#0);
-			if (_losAngle < _bestAngle) then {
-				_trackingTarget = _x;
-				_bestAngle = _losAngle;
-			};
-		};
-	} forEach _potentialTargets;
+        if (_withinView && _canSee) then {
+            private _los = (getPosASLVisual _projectile) vectorFromTo (getPosASLVisual _x);
+            private _losAngle = (_los#2 atan2 _los#0);
+            if (_losAngle < _bestAngle) then {
+                _trackingTarget = _x;
+                _bestAngle = _losAngle;
+            };
+        };
+    } forEach _potentialTargets;
 };
 
 if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
-	// If there are flares nearby, check if they will confuse missile
-	private _nearby = _trackingTarget nearObjects _flareDistanceFilter;
-	_nearby = _nearby select {
-		// 2 = IR blocking
-		private _blocking = configOf _x >> "weaponLockSystem";
-		private _isFlare = false;
-		if (isNumber _blocking) then {
-			_isFlare = (2 == getNumber _blocking);
-		};
+    // If there are flares nearby, check if they will confuse missile
+    private _nearby = _trackingTarget nearObjects _flareDistanceFilter;
+    _nearby = _nearby select {
+        // 2 = IR blocking
+        private _blocking = configOf _x >> "weaponLockSystem";
+        private _isFlare = false;
+        if (isNumber _blocking) then {
+            _isFlare = (2 == getNumber _blocking);
+        };
 
-		if (isText _blocking) then {
-			_isFlare = ("2" in getText _blocking);
-		};
+        if (isText _blocking) then {
+            _isFlare = ("2" in getText _blocking);
+        };
 
-		private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
-		private _canSee = [_projectile, _x, false] call FUNC(checkLos);
+        private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
+        private _canSee = [_projectile, _x, false] call FUNC(checkLos);
 
-		(_x isEqualTo _target && _trackingTarget isNotEqualTo _target) || { (_withinView && _canSee && _isFlare) }
-	};
+        (_x isEqualTo _target && _trackingTarget isNotEqualTo _target) || { (_withinView && _canSee && _isFlare) }
+    };
 
-	private _relativeTargetVelocity = _projectile vectorWorldToModelVisual velocity _trackingTarget;
-	_relativeTargetVelocity set [1, 0];
-	private _foundDecoy = false;
-	{
-		if (_trackingTarget isNotEqualTo _x) then {
-			private _considering = false;
+    private _relativeTargetVelocity = _projectile vectorWorldToModelVisual velocity _trackingTarget;
+    _relativeTargetVelocity set [1, 0];
+    private _foundDecoy = false;
+    {
+        if (_trackingTarget isNotEqualTo _x) then {
+            private _considering = false;
 
-			private _flareRelativeVelocity = _projectile vectorWorldToModelVisual velocity _x;
-			_flareRelativeVelocity set [1, 0];
-			private _angleBetweenVelocities = acos (_relativeTargetVelocity vectorCos _flareRelativeVelocity);
-			if !(_foundDecoy) then {
-				if (_angleBetweenVelocities <= _flareAngleFilter) then {
-						_considering = true;
-						if (_seekerAccuracy <= random 1) then {
-							_trackingTarget = _x;
-							_foundDecoy = true;
-						};
-					};
-			};
+            private _flareRelativeVelocity = _projectile vectorWorldToModelVisual velocity _x;
+            _flareRelativeVelocity set [1, 0];
+            private _angleBetweenVelocities = acos (_relativeTargetVelocity vectorCos _flareRelativeVelocity);
+            if !(_foundDecoy) then {
+                if (_angleBetweenVelocities <= _flareAngleFilter) then {
+                        _considering = true;
+                        if (_seekerAccuracy <= random 1) then {
+                            _trackingTarget = _x;
+                            _foundDecoy = true;
+                        };
+                    };
+            };
 
-			if (GVAR(debug_drawGuidanceInfo)) then {
-				private _flarePos = ASLToAGL getPosASLVisual _x;
-				private _colour = [1, 0, 0, 1];
-				if (_considering) then {
-					_colour = [0, 1, 0, 1];
-				};
-				if (_trackingTarget isEqualTo _x) then {
-					_colour = [0, 0, 1, 1];
-				};
-				drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _flarePos, 0.75, 0.75, 0, format ["F %1", _angleBetweenVelocities], 1, 0.025, "TahomaB"];
-			};
-		};
-	} forEach _nearby;
+            if (GVAR(debug_drawGuidanceInfo)) then {
+                private _flarePos = ASLToAGL getPosASLVisual _x;
+                private _colour = [1, 0, 0, 1];
+                if (_considering) then {
+                    _colour = [0, 1, 0, 1];
+                };
+                if (_trackingTarget isEqualTo _x) then {
+                    _colour = [0, 0, 1, 1];
+                };
+                drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _flarePos, 0.75, 0.75, 0, format ["F %1", _angleBetweenVelocities], 1, 0.025, "TahomaB"];
+            };
+        };
+    } forEach _nearby;
 
-	_seekerStateParams set [2, _trackingTarget];
-	
+    _seekerStateParams set [2, _trackingTarget];
+    
 };
 
 private _targetPosition = _trackingTarget modelToWorldVisualWorld getCenterOfMass _trackingTarget;

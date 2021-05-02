@@ -28,8 +28,8 @@ TRACE_5("should filter target",_projectile,_target,_minimumSpeed,_minimumTime,_m
 
 // helicopter blades will always produce a doppler shift due to their nature. Don't filter
 if (_target isKindOf "Helicopter" && isEngineOn _target) exitWith {
-	TRACE_2("dont filter helicopters",_target isKindOf "Helicopter",isEngineOn _target);
-	false
+    TRACE_2("dont filter helicopters",_target isKindOf "Helicopter",isEngineOn _target);
+    false
 };
 
 private _lineOfSight = (getPosASLVisual _projectile) vectorFromTo (getPosASLVisual _target);
@@ -39,8 +39,8 @@ private _closingSpeed = vectorMagnitude _closingVelocity;
 
 // if relative target velocity is greather than threshold, we can easily see it. Don't filter
 if (_closingSpeed > _minimumSpeed) exitWith {
-	TRACE_2("dont filter fast objects approaching",_closingSpeed,_minimumSpeed);
-	false
+    TRACE_2("dont filter fast objects approaching",_closingSpeed,_minimumSpeed);
+    false
 };
 
 private _projectilePos = getPosASLVisual _projectile;
@@ -52,71 +52,71 @@ private _maskedByGround = false;
 
 // Check for all surfaces until we reach our max range
 for "_i" from 0 to _maximumTerrainCheck step MAX_LINE_DISTANCE do {
-	// determine if target is masked by ground
-	private _endPos = _checkPos vectorAdd _stepDistance;
-	private _groundHit = lineIntersectsSurfaces [_checkPos, _endPos, _projectile, _target];
+    // determine if target is masked by ground
+    private _endPos = _checkPos vectorAdd _stepDistance;
+    private _groundHit = lineIntersectsSurfaces [_checkPos, _endPos, _projectile, _target];
 
-	_maskedByGround = _groundHit isNotEqualTo [];
+    _maskedByGround = _groundHit isNotEqualTo [];
 
-	_checkPos = _endPos;
+    _checkPos = _endPos;
 
-	if (_maskedByGround || (_checkPos select 2) <= 0) then {
-		// for ease assume that we can't check underwater
-		if ((_checkPos select 2) < 0) then {
-			_checkPos set [2, 0];
-		};
-		break
-	};
+    if (_maskedByGround || (_checkPos select 2) <= 0) then {
+        // for ease assume that we can't check underwater
+        if ((_checkPos select 2) < 0) then {
+            _checkPos set [2, 0];
+        };
+        break
+    };
 };
 
 // looking at sky, target is clear as day. Check for chaff before filtering
 if !(_maskedByGround) exitWith {
-	TRACE_1("dont filter stuff in the sky",_maskedByGround);
+    TRACE_1("dont filter stuff in the sky",_maskedByGround);
 
-	// If there is chaff nearby, check if they will confuse missile
-	private _nearby = _target nearObjects 50;
-	_nearby = _nearby select {
-		// 8 = radar blocking
-		private _blocking = configOf _x >> "weaponLockSystem";
-		private _isChaff = false;
-		if (isNumber _blocking) then {
-			_isChaff = (8 == getNumber _blocking);
-		};
+    // If there is chaff nearby, check if they will confuse missile
+    private _nearby = _target nearObjects 50;
+    _nearby = _nearby select {
+        // 8 = radar blocking
+        private _blocking = configOf _x >> "weaponLockSystem";
+        private _isChaff = false;
+        if (isNumber _blocking) then {
+            _isChaff = (8 == getNumber _blocking);
+        };
 
-		if (isText _blocking) then {
-			_isChaff = ("8" in getText _blocking);
-		};
+        if (isText _blocking) then {
+            _isChaff = ("8" in getText _blocking);
+        };
 
-		private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
-		private _canSee = [_projectile, _x, false] call FUNC(checkLos);
+        private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
+        private _canSee = [_projectile, _x, false] call FUNC(checkLos);
 
-		(_withinView && _canSee && _isChaff)
-	};
+        (_withinView && _canSee && _isChaff)
+    };
 
-	private _foundDecoy = false;
-	{
-		private _considering = false;
-		if !(_foundDecoy) then {
-			_considering = true;
-			if (0.95 <= random 1) then {
-				_foundDecoy = true;
-			};
-		};
+    private _foundDecoy = false;
+    {
+        private _considering = false;
+        if !(_foundDecoy) then {
+            _considering = true;
+            if (0.95 <= random 1) then {
+                _foundDecoy = true;
+            };
+        };
 
-		if (GVAR(debug_drawGuidanceInfo)) then {
-			private _chaffPos = ASLToAGL getPosASLVisual _x;
-			private _colour = [1, 0, 0, 1];
-			if (_considering) then {
-				_colour = [0, 1, 0, 1];
-			};
-			if (_foundDecoy) then {
-				_colour = [0, 0, 1, 1];
-			};
-			drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _chaffPos, 0.75, 0.75, 0, "C", 1, 0.025, "TahomaB"];
-		};
-	} forEach _nearby;
+        if (GVAR(debug_drawGuidanceInfo)) then {
+            private _chaffPos = ASLToAGL getPosASLVisual _x;
+            private _colour = [1, 0, 0, 1];
+            if (_considering) then {
+                _colour = [0, 1, 0, 1];
+            };
+            if (_foundDecoy) then {
+                _colour = [0, 0, 1, 1];
+            };
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _chaffPos, 0.75, 0.75, 0, "C", 1, 0.025, "TahomaB"];
+        };
+    } forEach _nearby;
 
-	_foundDecoy
+    _foundDecoy
 };
 
 private _distanceToTerrain = _checkPos vectorDistance _projectilePos;
@@ -124,8 +124,8 @@ private _checkTime = _distanceToTerrain / 3e8;
 
 // Time to ground is large enough to know if we are looking at a target, don't filter
 if (_checkTime > _minimumTime) exitWith {
-	TRACE_2("dont filter targets that we can see in ground clutter",_checkTime,_minimumTime);
-	false
+    TRACE_2("dont filter targets that we can see in ground clutter",_checkTime,_minimumTime);
+    false
 };
 
 // filter out the target since we can't reasonably see it

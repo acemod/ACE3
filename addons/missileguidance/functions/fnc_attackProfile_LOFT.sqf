@@ -28,7 +28,7 @@ _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateP
 _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
 if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith {
-	_seekerTargetPos
+    _seekerTargetPos
 };
 
 private _projectilePos = getPosASLVisual _projectile;
@@ -46,8 +46,8 @@ private _atMinRotationAngle = _angleToTarget >= (0.5 * _pitchRate * _timeToGo);
 private _returnTargetPos = _seekerTargetPos;
 
 if (!_atMinRotationAngle && _distanceToTarget2d >= 500 && _timeToGo >= 10) then {
-	// 10 degree pitch up
-	_returnTargetPos = _seekerTargetPos vectorAdd [0, 0, (_projectilePos distance _seekerTargetPos) * sin 10];
+    // 10 degree pitch up
+    _returnTargetPos = _seekerTargetPos vectorAdd [0, 0, (_projectilePos distance _seekerTargetPos) * sin 10];
 };
 
 _returnTargetPos

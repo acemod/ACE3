@@ -26,11 +26,11 @@ _targetData params ["_directionToTarget", "", "_distanceToTarget"];
 _flightParams params ["_pitchRate", "_yawRate"];
 
 if (_impactAngle <= 0) then {
-	_impactAngle = 360; // immediate pitch over to attack
+    _impactAngle = 360; // immediate pitch over to attack
 };
 
 if (_attackDirection < 0) then {
-	_attackDirection = direction _projectile;
+    _attackDirection = direction _projectile;
 };
 
 private _projectilePos = getPosASLVisual _projectile;
@@ -39,40 +39,40 @@ private _targetDir = _projectilePos vectorFromTo _seekerTargetPos;
 
 private _targetPos = _seekerTargetPos;
 if !(_terminal) then {
-	_targetPos = [
-		_targetPos#0,
-		_targetPos#1,
-		(_seekerTargetPos select 2) + 500
-	];
-	
-	private _lineDir = [1, 180 + _attackDirection, _impactAngle] call CBA_fnc_polar2vect;
+    _targetPos = [
+        _targetPos#0,
+        _targetPos#1,
+        (_seekerTargetPos select 2) + 500
+    ];
+    
+    private _lineDir = [1, 180 + _attackDirection, _impactAngle] call CBA_fnc_polar2vect;
 
-	private _v = _projectilePos vectorDiff _seekerTargetPos;
-	private _d = _v vectorDotProduct _lineDir;
-	private _closestPoint = _seekerTargetPos vectorAdd (_lineDir vectorMultiply _d);
+    private _v = _projectilePos vectorDiff _seekerTargetPos;
+    private _d = _v vectorDotProduct _lineDir;
+    private _closestPoint = _seekerTargetPos vectorAdd (_lineDir vectorMultiply _d);
 
-	private _timeToGo = (_projectilePos distance _closestPoint) / vectorMagnitude velocity _projectile;
+    private _timeToGo = (_projectilePos distance _closestPoint) / vectorMagnitude velocity _projectile;
 
-	private _projectileAngleFromTarget = acos ((vectorDir _projectile) vectorCos _targetDir);
-	private _availablePitch = _pitchRate * _timeToGo;
+    private _projectileAngleFromTarget = acos ((vectorDir _projectile) vectorCos _targetDir);
+    private _availablePitch = _pitchRate * _timeToGo;
 
-	private _neededPitch = _impactAngle + _projectilePitch;
+    private _neededPitch = _impactAngle + _projectilePitch;
 
-	private _atMinRotationAngle = _availablePitch <= _neededPitch;
-	_attackProfileStateParams set [2, (_atMinRotationAngle || (_neededPitch <= _projectileAngleFromTarget))];
+    private _atMinRotationAngle = _availablePitch <= _neededPitch;
+    _attackProfileStateParams set [2, (_atMinRotationAngle || (_neededPitch <= _projectileAngleFromTarget))];
 
-	if (GVAR(debug_drawGuidanceInfo)) then {
-		_attackProfileName = format ["JDAM [Pitch Available - %1 Needed Pitch - %2 TTP - %3]", _availablePitch, _neededPitch, (_availablePitch - _neededPitch) / _pitchRate];
-		drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _closestPoint, 0.75, 0.75, 0, "P", 1, 0.025, "TahomaB"];
-	};
+    if (GVAR(debug_drawGuidanceInfo)) then {
+        _attackProfileName = format ["JDAM [Pitch Available - %1 Needed Pitch - %2 TTP - %3]", _availablePitch, _neededPitch, (_availablePitch - _neededPitch) / _pitchRate];
+        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _closestPoint, 0.75, 0.75, 0, "P", 1, 0.025, "TahomaB"];
+    };
 } else {
-	_attackProfileName = format ["JDAM [Pitch - %1  Impact Pitch - %2]", _projectilePitch, _impactAngle];
+    _attackProfileName = format ["JDAM [Pitch - %1  Impact Pitch - %2]", _projectilePitch, _impactAngle];
 };
 
 if (GVAR(debug_drawGuidanceInfo)) then {
-	private _desiredAngle = [5000, 180 + _attackDirection, _impactAngle] call CBA_fnc_polar2vect;
-	private _targetPosAGL = ASLtoAGL _seekerTargetPos;
-	drawLine3D [_targetPosAGL, _targetPosAGL vectorAdd _desiredAngle, [1, 1, 1, 1]];
+    private _desiredAngle = [5000, 180 + _attackDirection, _impactAngle] call CBA_fnc_polar2vect;
+    private _targetPosAGL = ASLtoAGL _seekerTargetPos;
+    drawLine3D [_targetPosAGL, _targetPosAGL vectorAdd _desiredAngle, [1, 1, 1, 1]];
 };
 
 _targetPos;

@@ -28,25 +28,25 @@ private _errorY = 1 min (_targetDistance#2 / _correctionDistance);
 
 private _pX = _proportionalGain * _errorX;
 private _dX = if (_timestep != 0) then {
-	_derivativeGain * (_errorX - _lastErrorX) / _timestep
+    _derivativeGain * (_errorX - _lastErrorX) / _timestep
 } else {
-	0
+    0
 };
 
 private _pY = _proportionalGain * _errorY;
 private _dY = if (_timestep != 0) then {
-	_derivativeGain * (_errorY - _lastErrorY) / _timestep
+    _derivativeGain * (_errorY - _lastErrorY) / _timestep
 } else {
-	0
+    0
 };
 
 private _accelerationX = _pX + _dX;
 private _accelerationY = _pY + _dY;
 
 private _commandedAcceleration = [
-	_accelerationX,
-	0,
-	_accelerationY
+    _accelerationX,
+    0,
+    _accelerationY
 ];
 
 _navigationParams set [3, _errorX];

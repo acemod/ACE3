@@ -15,7 +15,7 @@
  * Public: No
  */
 if (GVAR(gps_mode) isEqualTo "pb") then {
-	[GVAR(gps_pbMode)] call FUNC(gps_saveAttackSettings);
+    [GVAR(gps_pbMode)] call FUNC(gps_saveAttackSettings);
 };
 closeDialog 0;
 
