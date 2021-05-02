@@ -95,6 +95,27 @@
                 <Czech>1x Kh-25ML [ACE]</Czech>
                 <Turkish>1x Kh-25ML [ACE]</Turkish>
             </Key>
+            <Key ID="STR_ACE_Maverick_d">
+                <English>AGM-65 Maverick D</English>
+            </Key>
+            <Key ID="STR_ACE_Maverick_g">
+                <English>AGM-65 Maverick G</English>
+            </Key>
+            <Key ID="STR_ACE_Maverick_d_mag_x1">
+                <English>AGM-65 Maverick D [ACE]</English>
+            </Key>
+            <Key ID="STR_ACE_Maverick_d_mag_x3">
+                <English>3x AGM-65 Maverick D [ACE]</English>
+            </Key>
+            <Key ID="STR_ACE_Maverick_g_mag_x1">
+                <English>AGM-65 Maverick G [ACE]</English>
+            </Key>
+            <Key ID="STR_ACE_Maverick_g_mag_x2">
+                <English>2x AGM-65 Maverick G [ACE]</English>
+            </Key>
+            <Key ID="STR_ACE_Maverick_g_mag_x3">
+                <English>3x AGM-65 Maverick G [ACE]</English>
+            </Key>
         </Container>
         <Container name="weapons">
             <Key ID="STR_ACE_Maverick_l">

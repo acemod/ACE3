@@ -17,62 +17,62 @@ class CfgMagazines {
     class GVAR(D_magazine): 6Rnd_Missile_AGM_02_F {
         ammo = QGVAR(D);
         author = "Brandon (TCVM)";
-        displayName = "AGM-65D [ACE]";
+        displayName = CSTRING(d_mag_x1);
     };
     class GVAR(D_pylonRack_1Rnd): PylonRack_1Rnd_Missile_AGM_02_F {
         ammo = QGVAR(D);
         author = "Brandon (TCVM)";
-        displayName = "1x AGM-65D [ACE]";
+        displayName = CSTRING(d_mag_x1);
         pylonWeapon = QGVAR(D_Launcher);
     };
     class GVAR(D_pylonRack_3Rnd): PylonRack_3Rnd_Missile_AGM_02_F {
         ammo = QGVAR(D);
         author = "Brandon (TCVM)";
-        displayName = "3x AGM-65D [ACE]";
+        displayName = CSTRING(d_mag_x3);
         pylonWeapon = QGVAR(D_Launcher);
     };
 
     class GVAR(G_magazine_x1) : magazine_Missile_AGM_02_x1 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
-        displayName = "AGM-65G [ACE]";
+        displayName = CSTRING(g_mag_x1);
     };
     class GVAR(G_pylonmissile_x1) : PylonMissile_Missile_AGM_02_x1 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
-        displayName = "1x AGM-65G [ACE]";
+        displayName = CSTRING(g_mag_x1);
         pylonWeapon = QGVAR(G_Launcher);
     };
     class GVAR(G_pylonmissile_x2) : PylonMissile_Missile_AGM_02_x2 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
-        displayName = "2x AGM-65G [ACE]";
+        displayName = CSTRING(g_mag_x2);
         pylonWeapon = QGVAR(G_Launcher);
     };
 
     class GVAR(G_pylonRack_1Rnd) : PylonRack_1Rnd_Missile_AGM_02_F {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
-        displayName = "1x AGM-65G [ACE]";
+        displayName = CSTRING(g_mag_x1);
         pylonWeapon = QGVAR(G_Launcher);
     };
     class GVAR(G_PylonRack_3Rnd) : PylonRack_3Rnd_Missile_AGM_02_F {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
-        displayName = "3x AGM-65G [ACE]";
+        displayName = CSTRING(g_mag_x3);
         pylonWeapon = QGVAR(G_Launcher);
     };
     
     class GVAR(G_PylonRack_x1) : PylonRack_Missile_AGM_02_x1 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
-        displayName = "1x AGM-65G [ACE]";
+        displayName = CSTRING(g_mag_x1);
         pylonWeapon = QGVAR(G_Launcher);
     };
     class GVAR(G_PylonRack_x2) : PylonRack_Missile_AGM_02_x2 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
-        displayName = "2x AGM-65G [ACE]";
+        displayName = CSTRING(g_mag_x2);
         pylonWeapon = QGVAR(G_Launcher);
     };
 
