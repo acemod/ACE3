@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Aircraft">
+        <Key ID="STR_ACE_aim120_a">
+            <English>AIM-120A [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_a_1x">
+            <English>1x AIM-120A [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_c">
+            <English>AIM-120C [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_c_1x">
+            <English>1x AIM-120C [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_c_2x">
+            <English>2x AIM-120C [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_d">
+            <English>AIM-120D [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_d_1x">
+            <English>1x AIM-120D [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_d_2x">
+            <English>2x AIM-120D [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_weapon">
+            <English>AIM-120 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_r77">
+            <English>R-77 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_aim120_r77_1x">
+            <English>1x R-77 [ACE]</English>
+        </Key>
+    </Package>
+</Project>

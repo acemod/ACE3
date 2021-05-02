@@ -4,7 +4,7 @@ class CfgWeapons {
 
     class GVAR(aim120Launcher): weapon_AMRAAMLauncher {
         author = "Brandon (TCVM)";
-        displayName = "AIM-120 [ACE]";
+        displayName = CSTRING(aim120);
         weaponLockDelay = 0.5;
 
         magazines[] = { 
@@ -25,7 +25,7 @@ class CfgWeapons {
     
         modes[] = {"Direct", "Loft"};
         class Direct: MissileLauncher {
-            displayName = "Direct";
+            displayName = CSTRING(direct);
             textureType = "direct";
             reloadTime = 0.1;
             magazineReloadTime = 0.1;
@@ -51,7 +51,7 @@ class CfgWeapons {
             EGVAR(missileGuidance,attackProfile) = "DIR";
         };
         class Loft: Direct {
-            displayName = "Loft";
+            displayName = CSTRING(loft);
             textureType = "topdown";
 
             minRange = 4000;
@@ -68,14 +68,14 @@ class CfgWeapons {
     class weapon_R77Launcher;
     class GVAR(r77Launcher): weapon_R77Launcher {
         author = "Brandon (TCVM)";
-        displayName = "R-77 [ACE]";
+        displayName = CSTRING(r77);
         weaponLockDelay = 0.5;
 
         magazines[] = {QGVAR(r77), QGVAR(PylonMissile_Missile_R77_x1), QGVAR(PylonMissile_Missile_R77__INT_x1)};
 
         modes[] = {"Direct", "Loft"};
         class Direct: MissileLauncher {
-            displayName = "Direct";
+            displayName = CSTRING(direct);
             textureType = "direct";
             reloadTime = 0.1;
             magazineReloadTime = 0.1;
@@ -101,7 +101,7 @@ class CfgWeapons {
             EGVAR(missileGuidance,attackProfile) = "DIR";
         };
         class Loft: Direct {
-            displayName = "Loft";
+            displayName = CSTRING(loft);
             textureType = "topdown";
 
             minRange = 4000;
