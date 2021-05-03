@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"vn_weapons"};
+        requiredAddons[] = {"vn_weapons", "vn_emm"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"BaerMitUmlaut", "veteran29"};
         url = ECSTRING(main,URL);
