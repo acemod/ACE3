@@ -21,3 +21,4 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "EMM_mainMenu_CfgMenus.hpp"
