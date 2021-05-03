@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2, PiZZADOX
+ * Author: commy2, PiZZADOX, Malbryn
  * Start the dragging process.
  *
  * Arguments:
@@ -28,14 +28,34 @@ if (!GETVAR(_target,GVAR(ignoreWeightDrag),false) && {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
-// add a primary weapon if the unit has none.
-// @todo prevent opening inventory when equipped with a fake weapon
-if (primaryWeapon _unit isEqualto "") then {
-    _unit addWeapon "ACE_FakePrimaryWeapon";
+// Add a primary weapon if the unit has none
+if !(GVAR(dragAndFire)) then {
+    if (primaryWeapon _unit isEqualto "") then {
+        _unit addWeapon "ACE_FakePrimaryWeapon";
+        _unit selectWeapon primaryWeapon _unit;
+    } else {
+        _unit selectWeapon primaryWeapon _unit;
+    };
+} else { // Making sure the unit is holding a primary weapon or handgun
+    if !(currentWeapon _unit in [primaryWeapon _unit, handgunWeapon _unit]) then {
+        if (primaryWeapon _unit != "") then {
+            // Use primary if possible
+            _unit selectWeapon primaryWeapon _unit;
+        } else {
+            if (handgunWeapon _unit != "") then {
+                // Use pistol if unit has no primary
+                _unit selectWeapon handgunWeapon _unit;
+            } else {
+                // Add fake weapon if no weapons besides launcher are available
+                _unit addWeapon "ACE_FakePrimaryWeapon";
+                _unit selectWeapon primaryWeapon _unit;
+            };
+        };
+    };
 };
 
-// select primary, otherwise the drag animation actions don't work.
-_unit selectWeapon primaryWeapon _unit;
+// Save the weapon so we can monitor if it changes
+_unit setVariable [QGVAR(currentWeapon), currentWeapon _unit];
 
 [_unit, "blockThrow", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
 
@@ -45,7 +65,13 @@ _unit selectWeapon primaryWeapon _unit;
 // can't play action that depends on weapon if it was added the same frame
 if !(_unit call EFUNC(common,isSwimming)) then {
     [{
-        [_this, "grabDrag"] call EFUNC(common,doGesture);
+        private _unitWeapon = _this getVariable [QGVAR(currentWeapon), ""];
+
+        if (_unitWeapon isKindOf ["Pistol", configFile >> "CfgWeapons"]) then {
+            [_this, "ACE_dragWithPistol"] call EFUNC(common,doGesture);
+        } else {
+            [_this, "ACE_dragWithRifle"] call EFUNC(common,doGesture);
+        };
     }, _unit] call CBA_fnc_execNextFrame;
 };
 

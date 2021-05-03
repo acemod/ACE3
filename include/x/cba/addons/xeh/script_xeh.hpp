@@ -54,7 +54,9 @@ reloaded = "call cba_xeh_fnc_reloaded"; \
 firedMan = "call cba_xeh_fnc_firedMan"; \
 turnIn = "call cba_xeh_fnc_turnIn"; \
 turnOut = "call cba_xeh_fnc_turnOut"; \
-deleted = "call cba_xeh_fnc_deleted";
+deleted = "call cba_xeh_fnc_deleted"; \
+disassembled = "call cba_xeh_fnc_disassembled"; \
+Suppressed = "call cba_xeh_fnc_Suppressed";
 
 /*
    MACRO: DELETE_EVENTHANDLERS
@@ -107,4 +109,6 @@ reloaded = ""; \
 firedMan = ""; \
 turnIn = ""; \
 turnOut = ""; \
-deleted = "";
+deleted = ""; \
+disassembled = ""; \
+Suppressed = "";
