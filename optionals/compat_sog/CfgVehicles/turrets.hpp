@@ -5,6 +5,8 @@ class StaticWeapon: LandVehicle {
     };
 };
 
+// --- Gun Turrets -------------------------------------------------------------
+
 // M2 Browning - High
 class StaticMGWeapon: StaticWeapon {};
 class vn_static_m2_high_base: StaticMGWeapon {
@@ -122,7 +124,7 @@ class vn_static_m60_low_base: vn_static_m60_high_base {
 // TOW
 class vn_static_at3_base: StaticMGWeapon {};
 class vn_static_tow_base: vn_static_at3_base {
-    EGVAR(draggin,canCarry) = 0;
+    EGVAR(dragging,canCarry) = 0;
 
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
@@ -172,7 +174,7 @@ class vn_static_dshkm_high_02_base: vn_static_dshkm_high_01_base {
 
 // DShKM - Low, with shield
 class vn_static_dshkm_low_01_base: vn_static_dshkm_high_01_base {
-    EGVAR(draggin,canCarry) = 0;
+    EGVAR(dragging,canCarry) = 0;
 
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
@@ -246,11 +248,13 @@ class vn_static_pk_low_base: vn_static_pk_high_base {
     };
 };
 
+// --- Mortars -----------------------------------------------------------------
+
 // M29 Mortar
 class StaticMortar: StaticWeapon {};
 class Mortar_01_base_F: StaticMortar {};
 class vn_static_mortar_m29_base: Mortar_01_base_F {
-    EGVAR(draggin,canCarry) = 0;
+    EGVAR(dragging,canCarry) = 0;
 
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
@@ -297,4 +301,50 @@ class vn_static_mortar_type53_base: vn_static_mortar_m29_base {
         ammoUnloadTime = 3;
         desiredAmmo = 1;
     };
+};
+
+// --- Non-CSW Static Weapons --------------------------------------------------
+
+class vn_static_m45_base: vn_static_m2_high_base {
+    EGVAR(dragging,canCarry) = 0;
+    EGVAR(dragging,canDrag) = 0;
+
+    class ACE_CSW: ACE_CSW {
+        enabled = 0;
+    };
+};
+
+class vn_static_zpu4_base: vn_static_m2_high_base {
+    EGVAR(dragging,canCarry) = 0;
+    EGVAR(dragging,canDrag) = 0;
+
+    class ACE_CSW: ACE_CSW {
+        enabled = 0;
+    };
+};
+
+class vn_o_static_rsna75: StaticMGWeapon {
+    EGVAR(dragging,canCarry) = 0;
+    EGVAR(dragging,canDrag) = 0;
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "";
+            selection = "mainturret";
+        };
+    };
+
+    class ACE_CSW {
+        enabled = 0;
+    };
+};
+
+class vn_sa2: StaticMGWeapon {
+    EGVAR(dragging,canCarry) = 0;
+    EGVAR(dragging,canDrag) = 0;
+};
+
+class vn_o_vc_spiderhole_01: StaticWeapon {
+    EGVAR(dragging,canCarry) = 0;
+    EGVAR(dragging,canDrag) = 0;
 };
