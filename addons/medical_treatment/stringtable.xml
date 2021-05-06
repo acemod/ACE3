@@ -919,10 +919,10 @@
             <English>CPR Success Chance Maximum</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
-            <English>Lowest probability that CPR will restore heart rhythm, when blood loss is greater.</English>
+            <English>Minimum probability that performing CPR will restore heart rhythm.\nThis minimum value is used when the patient has at least "Lost a fatal amount of blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
-            <English>Highest probability that CPR will restore heart rhythm, when blood loss is less.</English>
+            <English>Maximum probability that performing CPR will restore heart rhythm.\nThis maximum value is used when the patient has at most "Lost some blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
