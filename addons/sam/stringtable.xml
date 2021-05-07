@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="sam">
-        <Key ID="STR_ACE_sam_patriot">
+    <Package name="SAM">
+        <Key ID="STR_ACE_SAM_patriot">
             <English>MIM-104 Patriot</English>
         </Key>
-        <Key ID="STR_ACE_sam_patriot_operator">
+        <Key ID="STR_ACE_SAM_patriot_operator">
             <English>MIM-104 Operator</English>
         </Key>
-        <Key ID="STR_ACE_sam_patriot_missile">
+        <Key ID="STR_ACE_SAM_patriot_missile">
             <English>Patriot Missile</English>
         </Key>
-        <Key ID="STR_ACE_sam_essm">
+        <Key ID="STR_ACE_SAM_essm">
             <English>Mk-29 ESSM</English>
         </Key>
-        <Key ID="STR_ACE_sam_essm_operator">
+        <Key ID="STR_ACE_SAM_essm_operator">
             <English>Mk-29 Operator</English>
         </Key>
-        <Key ID="STR_ACE_sam_essm_missile">
+        <Key ID="STR_ACE_SAM_essm_missile">
             <English>RIM-162 ESSM</English>
         </Key>
-        <Key ID="STR_ACE_sam_s400">
+        <Key ID="STR_ACE_SAM_s400">
             <English>S-400</English>
         </Key>
-        <Key ID="STR_ACE_sam_s400_operator">
+        <Key ID="STR_ACE_SAM_s400_operator">
             <English>S-400 Operator</English>
         </Key>
-        <Key ID="STR_ACE_sam_s400_missile">
+        <Key ID="STR_ACE_SAM_s400_missile">
             <English>S-400 Missile</English>
         </Key>
     </Package>

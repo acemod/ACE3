@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="malyutka">
+    <Package name="Malyutka">
+        <Key ID="STR_ACE_Malyutka_9m14">
+            <English>[CSW] 9M14 Malyutka</English>
+        </Key>
+        <Key ID="STR_ACE_Malyutka_9m14_missile">
+            <English>9M14</English>
+        </Key>
+        <Key ID="STR_ACE_Malyutka_9m14_missile_description">
+            <English>MCLOS, wire-guided missile</English>
+        </Key>
+        <Key ID="STR_ACE_Malyutka_9m14_missile_descriptionShort">
+            <English>MCLOS, wire-guided missile</English>
+        </Key>
     </Package>
 </Project>

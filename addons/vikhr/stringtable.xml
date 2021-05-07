@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="vikhr">
-        <Key ID="STR_ACE_vikhr_9k121">
+    <Package name="Vikhr">
+        <Key ID="STR_ACE_Vikhr_9k121">
             <English>9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_vikhr_1x">
+        <Key ID="STR_ACE_Vikhr_1x">
             <English>1x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_vikhr_2x">
+        <Key ID="STR_ACE_Vikhr_2x">
             <English>2x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_vikhr_3x">
+        <Key ID="STR_ACE_Vikhr_3x">
             <English>3x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_vikhr_4x">
+        <Key ID="STR_ACE_Vikhr_4x">
             <English>4x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_vikhr_6x">
+        <Key ID="STR_ACE_Vikhr_6x">
             <English>6x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_vikhr_8x">
+        <Key ID="STR_ACE_Vikhr_8x">
             <English>8x 9k121 Vikhr [ACE]</English>
         </Key>
     </Package>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="sdb">
-        <Key ID="STR_ACE_sdb_39">
+    <Package name="SDB">
+        <Key ID="STR_ACE_SDB_39">
             <English>GBU-39 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_sdb_39_1x">
+        <Key ID="STR_ACE_SDB_39_1x">
             <English>1x GBU-39 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_sdb_39_4x">
+        <Key ID="STR_ACE_SDB_39_4x">
             <English>4x GBU-39 [ACE]</English>
         </Key>
     </Package>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="manpad">
-        <Key ID="STR_ACE_manpad_stinger">
+    <Package name="MANPAD">
+        <Key ID="STR_ACE_MANPAD_stinger">
             <English>FIM-92 Stinger [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_manpad_rim116">
+        <Key ID="STR_ACE_MANPAD_rim116">
             <English>RIM-116 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_manpad_rim116_21x">
+        <Key ID="STR_ACE_MANPAD_rim116_21x">
             <English>21x RIM-116 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_manpad_stinger_4x">
+        <Key ID="STR_ACE_MANPAD_stinger_4x">
             <English>4x FIM-92 Stinger [ACE]</English>
         </Key>
     </Package>

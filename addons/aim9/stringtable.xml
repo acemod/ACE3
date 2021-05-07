@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="aim9">
-        <Key ID="STR_ACE_aim9_m">
+    <Package name="AIM9">
+        <Key ID="STR_ACE_AIM9_m">
             <English>AIM-9M [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_x">
+        <Key ID="STR_ACE_AIM9_x">
             <English>AIM-9X [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_aim132">
+        <Key ID="STR_ACE_AIM9_aim132">
             <English>AIM-132 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_r73">
+        <Key ID="STR_ACE_AIM9_r73">
             <English>R-73 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_r74">
+        <Key ID="STR_ACE_AIM9_r74">
             <English>R-74 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_m_1x">
+        <Key ID="STR_ACE_AIM9_m_1x">
             <English>1x AIM-9M [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_m_2x">
+        <Key ID="STR_ACE_AIM9_m_2x">
             <English>2x AIM-9M [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_x_1x">
+        <Key ID="STR_ACE_AIM9_x_1x">
             <English>1x AIM-9X [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_x_2x">
+        <Key ID="STR_ACE_AIM9_x_2x">
             <English>2x AIM-9X [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_aim132_1x">
+        <Key ID="STR_ACE_AIM9_aim132_1x">
             <English>1x AIM-132 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_aim132_2x">
+        <Key ID="STR_ACE_AIM9_aim132_2x">
             <English>2x AIM-132 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_aim132_4x">
+        <Key ID="STR_ACE_AIM9_aim132_4x">
             <English>4x AIM-132 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_r73_1x">
+        <Key ID="STR_ACE_AIM9_r73_1x">
             <English>1x R-73 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_r74_1x">
+        <Key ID="STR_ACE_AIM9_r74_1x">
             <English>1x R-74 [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_aim9_r74_2x">
+        <Key ID="STR_ACE_AIM9_r74_2x">
             <English>2x R-74 [ACE]</English>
         </Key>
     </Package>
