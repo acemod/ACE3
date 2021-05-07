@@ -3,7 +3,7 @@ class CfgMagazines {
     class GVAR(9m14): 12Rnd_PG_missiles {
         count = 1;
         initSpeed = 100;
-        //ammo = QGVAR(9m14);
+        ammo = QGVAR(9m14_ammo);
         displayName = CSTRING(9m14_missile);
         displayNameShort = CSTRING(9m14_missile);
         descriptionShort = CSTRING(9m14_missile_descriptionShort);

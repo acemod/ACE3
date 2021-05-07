@@ -2,7 +2,7 @@ class CfgWeapons {
     class MissileLauncher;
 	class GVAR(9m14): MissileLauncher {
         scope = 2;
-        //displayName = CSTRING(9m14_missile);
+        displayName = CSTRING(9m14_missile);
         magazines[] = { QGVAR(9m14) };
         initSpeed = 100;
         autoFire = 0;
