@@ -15,7 +15,7 @@ class CfgVehicles {
         faction = "BLU_F";
         crew = "B_UAV_AI";
         author = "Brandon (TCVM)";
-        //displayName = CSTRING(9m14);
+        displayName = CSTRING(9m14);
         model = QPATHTOF(data\9m14_mount.p3d);
         picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
         UiPicture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
@@ -58,7 +58,7 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
 
-                //displayName = CSTRING(9m14);
+                displayName = CSTRING(9m14);
 
                 class ViewOptics {
                     initAngleX = 0;
@@ -73,11 +73,11 @@ class CfgVehicles {
                     visionMode[] = {"Normal"};
                     thermalMode[] = {0};
                 };
-                gunnerRightHandAnimName = "OtocHlaven_shake";
-                gunnerLeftHandAnimName = "OtocHlaven_shake";
-                gunBeg = "spice rakety";
-                gunEnd = "konec rakety";
-                memoryPointGunnerOptics = "look";
+                gunnerRightHandAnimName = "";
+                gunnerLeftHandAnimName = "";
+                gunBeg = "missile_begin";
+                gunEnd = "missile_end";
+                memoryPointGunnerOptics = "";
             };
         };
 
@@ -91,7 +91,7 @@ class CfgVehicles {
 
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                //displayName = CSTRING(9m14);
+                displayName = CSTRING(9m14);
             };
         };
 
