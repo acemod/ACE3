@@ -94,6 +94,91 @@ class CfgVehicles {
                 displayName = CSTRING(9m14);
             };
         };
+    };
 
+    class GVAR(9m14_joystick): StaticATWeapon {
+        scope = 2;
+        side = 1;
+        faction = "BLU_F";
+        crew = "B_Soldier_F";
+        author = "Brandon (TCVM)";
+        displayName = CSTRING(9s415);
+        model = QPATHTOF(data\9m14_joystick.p3d);
+        picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
+        UiPicture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
+        icon = "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AT_CA.paa";
+        threat[] = {0.7,1.0,0.1};
+        cost = 100000;
+        class Damage {
+            tex[] = {};
+            mat[] = {
+                "a3\static_f_gamma\data\staticturret_01.rvmat",
+                "a3\static_f_gamma\data\staticturret_01_damage.rvmat",
+                "a3\static_f_gamma\data\staticturret_01_destruct.rvmat",
+                "a3\static_f_gamma\data\staticturret_02.rvmat",
+                "a3\static_f_gamma\data\staticturret_02_damage.rvmat",
+                "a3\static_f_gamma\data\staticturret_02_destruct.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_launcher.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_launcher_damage.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_launcher_destruct.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_mtube.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_mtube_damage.rvmat",
+                "a3\weapons_f_beta\launchers\titan\data\titan_mtube_destruct.rvmat"
+            };
+        };
+
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                optics = 1;
+                turretInfoType = "RscWeaponEmpty";
+                gunnerOpticsModel = "";
+                minElev = 0;
+                maxElev = 0;
+                weapons[] = { QGVAR(9s415_dummy) };
+                magazines[] = { QGVAR(9s415_dummy) };
+
+                gunnerAction = "";
+                gunnergetInAction = "";
+                gunnergetOutAction = "";
+
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+
+                displayName = CSTRING(9s415);
+
+                class ViewOptics {
+                    initAngleX = 0;
+                    minAngleX = -90;
+                    maxAngleX = 90;
+                    initAngleY = 0;
+                    minAngleY = -100;
+                    maxAngleY = 100;
+                    initFov = 0.055;
+                    minFov = 0.055; // 6 degree FOV
+                    maxFov = 0.055;
+                    visionMode[] = {"Normal"};
+                    thermalMode[] = {0};
+                };
+                gunnerRightHandAnimName = "";
+                gunnerLeftHandAnimName = "";
+                gunBeg = "";
+                gunEnd = "";
+                memoryPointGunnerOptics = "";
+            };
+        };
+
+        soundGetOut[] = {"A3\sounds_f\dummysound",0.001,1,5};
+        soundGetIn[] = {"A3\sounds_f\dummysound",0.00031622776,1,5};
+        armorStructural = 10.0;
+
+        class ACE_CSW {
+            disassembleTo = QGVAR(super);
+        };
+
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                displayName = CSTRING(9s415);
+            };
+        };
     };
 };

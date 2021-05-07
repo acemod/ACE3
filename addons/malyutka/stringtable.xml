@@ -13,5 +13,8 @@
         <Key ID="STR_ACE_Malyutka_9m14_missile_descriptionShort">
             <English>MCLOS, wire-guided missile</English>
         </Key>
+        <Key ID="STR_ACE_Malyutka_9s415">
+            <English>[CSW] 9S415 Control Unit</English>
+        </Key>
     </Package>
 </Project>
