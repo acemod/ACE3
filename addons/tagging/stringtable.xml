@@ -15,6 +15,7 @@
             <Portuguese>Marcação</Portuguese>
             <Czech>Označování</Czech>
             <Turkish>Işaretleme</Turkish>
+            <Spanish>Marcado</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
@@ -29,6 +30,7 @@
             <Chinese>定義噴漆系統預設設定</Chinese>
             <Portuguese>Configura como o sistema de Marcação funcionará como padrão. (Tagging)</Portuguese>
             <Czech>Nakonfigurujte, jak bude systém značkování ve výchozím nastavení fungovat.</Czech>
+            <Spanish>Configura cómo funciona el sistema de marcado por defecto.</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Spray Paint - Quick Tag</English>
@@ -44,6 +46,7 @@
             <Portuguese>Lata de Tinta - Marcação Rápida</Portuguese>
             <Czech>Stříkací barva - Rychlá značka</Czech>
             <Turkish>Sprey Boya- Hızlı Işaretleme</Turkish>
+            <Spanish>Pintada con spray - Marcado rápido</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
@@ -58,6 +61,7 @@
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
             <Portuguese>Ação executada no ponto principal de marcação</Portuguese>
             <Czech>Akce prováděná v hlavním bodě značky interakce.</Czech>
+            <Spanish>Acción realizada en el punto de interacción de marcado principal.</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
@@ -73,6 +77,7 @@
             <Portuguese>Último usado</Portuguese>
             <Czech>Naposledy použitý</Czech>
             <Turkish>Son Kullanan</Turkish>
+            <Spanish>Último usado</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
@@ -88,6 +93,7 @@
             <Portuguese>Aleatório X</Portuguese>
             <Czech>Náhodné X</Czech>
             <Turkish>Rasgele X</Turkish>
+            <Spanish>Aleatorio X</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
@@ -103,6 +109,7 @@
             <Portuguese>Aleatório</Portuguese>
             <Czech>Náhodný</Czech>
             <Turkish>Rasgele</Turkish>
+            <Spanish>Aleatorio</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>

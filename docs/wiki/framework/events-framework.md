@@ -106,6 +106,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_cookoff_cookOffBox` | _box | Global | Listen | Ammo box cook off has started
 |`ace_cookoff_engineFire` | _vehicle | Global | Listen | Engine fire has started
 
+
+### 2.11 Attach (`ace_attach`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_attach_attached` | [_attachedObject, _itemClassname] | Local | Listen | After an item was attached to a unit/vehicle
+|`ace_attach_detaching` | [_attachedObject, _itemName] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 
