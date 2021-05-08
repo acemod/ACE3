@@ -49,6 +49,6 @@ if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMin
     // return position 50m infront of projectile and a bit up to get out of the way of the ground
     _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 3])
 };
-systemChat str _crosshairOffset;
+
 _seekerTargetPos vectorAdd _crosshairOffset
 
