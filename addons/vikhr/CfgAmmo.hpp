@@ -10,6 +10,7 @@ class CfgAmmo {
 
         class ace_missileguidance {
             enabled = 1;
+            showTrail = 1;
 
             pitchRate = 10;          // Minium flap deflection for guidance
             yawRate = 10;            // Maximum flap deflection for guidance
