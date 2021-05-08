@@ -15,6 +15,7 @@
  *
  * Public: No
  */
+#define TRAIL_COLOUR(multiplier) [1 * multiplier, 1 * multiplier, 0.3 * multiplier, 0.7 * multiplier]
 
 BEGIN_COUNTER(guidancePFH);
 
@@ -24,15 +25,40 @@ _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","","","","_navigationType"];
 _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState", "_navigationParameters", "_guidanceParameters"];
 _navigationStateParams params ["_currentState", "_navigationStateData"];
+_flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance", "_stabilityCoefficient", "_showTrail"];
 
 if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
     [_pfID] call CBA_fnc_removePerFrameHandler;
     END_COUNTER(guidancePFH);
 };
 
-private _timestep = diag_deltaTime * accTime;
+if (_showTrail) then {
+    drop [
+        "\a3\data_f\kouleSvetlo", "", "Billboard", 
+        100,
+        0.03,
+        _projectile modelToWorld [0, 0, 0],
+        [0, 0, 0],
+        0,
+        1.25,
+        1,
+        0.05,
+        [0.5],
+        [TRAIL_COLOUR(1)],
+        [0],
+        0,
+        0,
+        "",
+        "",
+        "",
+        0,
+        false,
+        -1,
+        [TRAIL_COLOUR(10000)]
+    ];
+};
 
-_flightParams params ["_pitchRate", "_yawRate", "_isBangBangGuidance", "_stabilityCoefficient"];
+private _timestep = diag_deltaTime * accTime;
 
 // Run seeker function:
 private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState, _timestep] call FUNC(doSeekerSearch);

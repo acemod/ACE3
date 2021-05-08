@@ -15,6 +15,8 @@ class CfgAmmo {
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
+            showTrail = 1;
+
             // Guidance type for munitions
             defaultSeekerType = "SACLOS";
             seekerTypes[] = { "SACLOS" };

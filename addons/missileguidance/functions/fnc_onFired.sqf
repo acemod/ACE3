@@ -113,11 +113,14 @@ private _bangBang = false;
 if (isNumber (_config >> "pitchRate")) then {
     _pitchRate = getNumber ( _config >> "pitchRate" );
     _yawRate = getNumber ( _config >> "yawRate" );
-    _bangBang = 1 == getNumber (_config >> "bangBangGuidance");
+    _bangBang = (1 == getNumber (_config >> "bangBangGuidance"));
 };
 
 // How much this projectile likes to stay toward current velocity
 private _stabilityCoefficient = getNumber (_config >> "stabilityCoefficient");
+
+// show a light trail in flight
+private _showTrail = (1 == getNumber (_config >> "showTrail"));
 
 private _navigationStateSubclass = _config >> "navigationStates";
 private _states = getArray (_navigationStateSubclass >> "states");
@@ -153,7 +156,8 @@ private _args = [_this,
                 _pitchRate,
                 _yawRate,
                 _bangBang,
-                _stabilityCoefficient
+                _stabilityCoefficient,
+                _showTrail
             ],
             [
                 getNumber ( _config >> "seekerAngle" ),
