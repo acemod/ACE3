@@ -2,6 +2,13 @@ class CfgAmmo {
     class M_Scalpel_AT;
     class ammo_Penetrator_Base;
 
+    class GVAR(9s415_dummy_ammo): M_Scalpel_AT {
+        aiAmmoUsageFlags = 0;
+        model = "";
+        proxyShape = "";
+        effectsMissile = "";
+    };
+
     class GVAR(9m14_penetrator): ammo_Penetrator_Base {
         caliber = 60;
         warheadName = "HEAT";
@@ -46,10 +53,12 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            pitchRate = 5;          // Minium flap deflection for guidance
-            yawRate = 5;            // Maximum flap deflection for guidance
+            pitchRate = 15;          // Minium flap deflection for guidance
+            yawRate = 15;            // Maximum flap deflection for guidance
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+            showTrail = 1;
 
             // Guidance type for munitions
             defaultSeekerType = "MCLOS";
@@ -61,7 +70,7 @@ class CfgAmmo {
             defaultNavigationType = "Line";
             navigationTypes[] = { "Line" };
 
-            lineGainP = 1;
+            lineGainP = 5;
             lineGainD = 0;
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]

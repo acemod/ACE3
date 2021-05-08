@@ -16,5 +16,20 @@
         <Key ID="STR_ACE_Malyutka_9s415">
             <English>[CSW] 9S415 Control Unit</English>
         </Key>
+        <Key ID="STR_ACE_Malyutka_takePlug">
+            <English>Take Plug</English>
+        </Key>
+        <Key ID="STR_ACE_Malyutka_attachPlug">
+            <English>Attach Plug</English>
+        </Key>
+        <Key ID="STR_ACE_Malyutka_plug">
+            <English>Plug</English>
+        </Key>
+        <Key ID="STR_ACE_Malyutka_pickupPlug">
+            <English>Pickup Plug</English>
+        </Key>
+        <Key ID="STR_ACE_Malyutka_returnPlug">
+            <English>Return Plug</English>
+        </Key>
     </Package>
 </Project>

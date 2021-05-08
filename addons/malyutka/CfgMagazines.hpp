@@ -8,5 +8,13 @@ class CfgMagazines {
         displayNameShort = CSTRING(9m14_missile);
         descriptionShort = CSTRING(9m14_missile_descriptionShort);
     };
+
+    class GVAR(9s415_dummy): 12Rnd_PG_missiles {
+        count = 4;
+        ammo = QGVAR(9s415_dummy_ammo);
+        displayName = CSTRING(9m14_missile);
+        displayNameShort = CSTRING(9m14_missile);
+        descriptionShort = CSTRING(9m14_missile_descriptionShort);
+    };
 };
 
