@@ -247,5 +247,17 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosUp">
+            <English>MCLOS Up</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosDown">
+            <English>MCLOS Down</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosRight">
+            <English>MCLOS Right</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosLeft">
+            <English>MCLOS Left</English>
+        </Key>
     </Package>
 </Project>

@@ -35,7 +35,10 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
 
         playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLtoASL (_shooter modelToWorld _wireCutSource), 5, 1, 150];
     };
-    _projectilePos vectorAdd _randomVector
+    private _randomDir = _projectilePos vectorAdd _randomVector;
+    _targetData set [0, _projectilePos vectorFromTo _randomDir];
+    _targetData set [2, _randomDir distance _projectilePos];
+    _randomDir
 };
 
 if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
@@ -46,6 +49,6 @@ if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMin
     // return position 50m infront of projectile and a bit up to get out of the way of the ground
     _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 3])
 };
-
+systemChat str _crosshairOffset;
 _seekerTargetPos vectorAdd _crosshairOffset
 

@@ -18,6 +18,8 @@ PREP(handleHandoff);
 
 PREP(shouldFilterRadarHit);
 
+PREP(mclosButtonPressed);
+
 // Attack Profiles
 PREP(attackProfile_AIR);
 PREP(attackProfile_DIR);
@@ -43,6 +45,7 @@ PREP(navigationType_direct);
 PREP(seekerType_SALH);
 PREP(seekerType_Optic);
 PREP(seekerType_SACLOS);
+PREP(seekerType_MCLOS);
 PREP(seekerType_Doppler);
 PREP(seekerType_MWR);
 PREP(seekerType_IR);
@@ -54,6 +57,7 @@ PREP(gps_attackOnFired);
 
 // Seeker OnFired
 PREP(SACLOS_onFired);
+PREP(MCLOS_onFired);
 PREP(doppler_onFired);
 PREP(mwr_onFired);
 PREP(IR_onFired);
