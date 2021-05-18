@@ -47,6 +47,7 @@ if (_idleLaunchers isNotEqualTo []) then {
             if (_projectile distanceSqr _tracker <= _range * _range) exitWith {
                 GVAR(trackingProjectiles) pushBack [_projectile, 0];
                 _keep = false;
+                [QGVAR(projectileInRange), [_projectile, _tracker]] call CBA_fnc_localEvent;
             };
         } forEach GVAR(trackers);
 
