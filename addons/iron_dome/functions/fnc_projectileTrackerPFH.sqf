@@ -17,7 +17,10 @@
  */
 
 GVAR(trackers) = GVAR(trackers) select {
-    _x params ["_tracker"];
+    _x params ["_tracker", "_range"];
+    #ifdef DRAW_TRACKING_INFO
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], getPos _tracker, 0.75, 0.75, 0, format ["TRACKER [%1m]", _range], 1, 0.025, "TahomaB"];
+    #endif
     alive _tracker
 };
 

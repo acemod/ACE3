@@ -9,9 +9,11 @@ PREP_RECOMPILE_END;
 ADDON = true;
 
 // Server handles the tracking of all projectiles. It dispatches events to launchers to fire at specific targets
+// The tracker and launcher array are global to allow for early-out if it is impossible to kill any projectiles to avoid wasting bandwidth
+GVAR(trackers) = [];
+GVAR(launchers) = [];
+
 if (isServer) then {
-    GVAR(trackers) = [];
-    GVAR(launchers) = [];
     GVAR(nonTrackingProjectiles) = [];
     GVAR(trackingProjectiles) = [];
 
@@ -24,24 +26,6 @@ if (isServer) then {
         GVAR(nonTrackingProjectiles) pushBack _projectile;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(registerLaunchers), {
-        {
-            GVAR(launchers) pushBackUnique _x;
-            _x setVariable [QGVAR(targetList), []];
-            _x setVariable [QGVAR(launchState), LAUNCH_STATE_IDLE];
-            _x setVariable [QGVAR(lastLaunchTime), 0];
-            _x setVariable [QGVAR(engagedTargets), [[], objNull] call CBA_fnc_hashCreate];
-            _x setVariable [QEGVAR(missileguidance,target), objNull];
-        } forEach _this;
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(registerTrackers), {
-        {
-            _x params ["_tracker", "_range"];
-            GVAR(trackers) pushBack [_tracker, _range];
-        } forEach _this;
-    }] call CBA_fnc_addEventHandler;
-
     [QGVAR(registerInterceptor), {
         params ["_interceptor", "_target"];
         GVAR(interceptors) pushBack [_interceptor, _target, getPosASLVisual _interceptor];
@@ -52,9 +36,15 @@ if (isServer) then {
     [LINKFUNC(proximityFusePFH)] call CBA_fnc_addPerFrameHandler;
 };
 
-// duplicate event to add event handler
-[QGVAR(registerLauncher), {
+[QGVAR(registerLaunchers), {
     {
+        GVAR(launchers) pushBackUnique _x;
+        _x setVariable [QGVAR(targetList), []];
+        _x setVariable [QGVAR(launchState), LAUNCH_STATE_IDLE];
+        _x setVariable [QGVAR(lastLaunchTime), 0];
+        _x setVariable [QGVAR(engagedTargets), [[], objNull] call CBA_fnc_hashCreate];
+        _x setVariable [QEGVAR(missileguidance,target), objNull];
+
         if (local _x) then {
             _x addEventHandler ["Fired", {
                 params ["_launcher", "", "", "", "", "", "_projectile"];
@@ -64,6 +54,13 @@ if (isServer) then {
                 };
             }];
         };
+    } forEach _this;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(registerTrackers), {
+    {
+        _x params ["_tracker", "_range"];
+        GVAR(trackers) pushBack [_tracker, _range];
     } forEach _this;
 }] call CBA_fnc_addEventHandler;
 
@@ -79,7 +76,17 @@ GVAR(projectilesToIntercept) = [];
 ["All", "fired", {
     params ["", "", "", "", "", "", "_projectile"];
     if (local _projectile && { (typeOf _projectile) in GVAR(projectilesToIntercept) }) then {
-        [QGVAR(track), [_projectile]] call CBA_fnc_serverEvent;
+        // avoid extra bandwidth: don't make a call to the server if we don't have any systems up
+        GVAR(launchers) = GVAR(launchers) select {
+            alive _x
+        };
+        GVAR(trackers) = GVAR(trackers) select {
+            _x params ["_tracker"];
+            alive _tracker
+        };
+        if !(GVAR(launchers) isEqualTo [] || { GVAR(trackers) isEqualTo [] }) then {
+            [QGVAR(track), [_projectile]] call CBA_fnc_serverEvent;
+        };
     };
 }] call CBA_fnc_addClassEventHandler;
 
