@@ -20,7 +20,6 @@ _stateParams params ["", "_seekerStateParams"];
 _launchParams params ["","_targetLaunchParams"];
 _targetLaunchParams params ["_target"];
 
-_target = missileTarget _projectile;
 if (isNull _target && isVehicleRadarOn vehicle _shooter) then {
     _target = cursorTarget;
 };
