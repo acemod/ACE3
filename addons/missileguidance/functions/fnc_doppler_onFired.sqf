@@ -24,7 +24,8 @@ _target = missileTarget _projectile;
 if (isNull _target && isVehicleRadarOn vehicle _shooter) then {
     _target = cursorTarget;
 };
-if !(_target isKindOf "AllVehicles") then {
+// always allow tracking of projectiles
+if !(_target isKindOf "AllVehicles" || { _target isKindOf ["Default", configFile >> "CfgAmmo"] }) then {
     _target = nil;
 };
 _launchParams set [0, _target];

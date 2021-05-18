@@ -14,14 +14,16 @@
  *
  * Public: No
  */
-params ["_firedEH", "", "", "", "_stateParams"];
+params ["_firedEH", "_launchParams", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _stateParams params ["", "_seekerStateParams"];
+_launchParams params ["", "_targetLaunchParams"];
+_targetLaunchParams params ["_target"];
 
 private _flareDistanceFilter = getNumber (configOf _projectile >> QUOTE(ADDON) >> "flareDistanceFilter");
 private _flareAngleFilter = getNumber (configOf _projectile >> QUOTE(ADDON) >> "flareAngleFilter");
 
 _seekerStateParams set [0, _flareDistanceFilter];
 _seekerStateParams set [1, _flareAngleFilter];
-_seekerStateParams set [2, missileTarget _projectile];
+_seekerStateParams set [2, _target];
 

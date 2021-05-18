@@ -91,3 +91,7 @@ General To-Do:
     X Fix GBU drag
     X Make sure all applicable pylons can hold all applicable weapons
     X NLAW is busted: figure out PLOS navigation system
+    Add 9m14 textures
+    Add 9m14 animation state where missile doesn't exist
+    Add 9m14 joystick view rotation (+- 5 deg vertical as well)
+    Add 9m14 proxy
