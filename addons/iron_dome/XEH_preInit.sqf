@@ -28,7 +28,7 @@ if (isServer) then {
 
     [QGVAR(registerInterceptor), {
         params ["_interceptor", "_target"];
-        GVAR(interceptors) pushBack [_interceptor, _target, getPosASLVisual _interceptor];
+        GVAR(interceptors) pushBack [_interceptor, _target, getPosASLVisual _interceptor, _interceptor distance _target];
         [GVAR(toBeShot), _target] call CBA_fnc_hashRem;
     }] call CBA_fnc_addEventHandler;
 

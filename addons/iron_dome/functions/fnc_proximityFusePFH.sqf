@@ -16,7 +16,7 @@
  */
 
 GVAR(interceptors) = GVAR(interceptors) select {
-    _x params ["_projectile", "_target", "_lastPosition"];
+    _x params ["_projectile", "_target", "_lastPosition", "_lastDistance"];
     // Sweep along path to ensure we don't overshoot target
     private _minDistance = 0;
 
@@ -35,13 +35,17 @@ GVAR(interceptors) = GVAR(interceptors) select {
     };
 
     _x set [2, _currentPosition];
+    _x set [3, _minDistance];
 
     #ifdef DRAW_TRACKING_INFO
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,1,1], (getPos _target) vectorAdd [0, 0, 0.5], 0.75, 0.75, 0, format ["%1m", _minDistance], 1, 0.025, "TahomaB"];
     #endif
-    if (!alive _target || { _minDistance <= PROX_RANGE }) then {
+    if (!alive _target || { _minDistance <= PROX_RANGE } || { _minDistance > _lastDistance }) then {
         triggerAmmo _projectile;
-        deleteVehicle _target;
+        // if we overshot target, dont take out target
+        if (_minDistance <= _lastDistance) then {
+            deleteVehicle _target;
+        };
         false
     } else {
         true
