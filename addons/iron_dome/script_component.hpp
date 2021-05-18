@@ -4,7 +4,7 @@
 
 // #define DRAW_TRACKING_INFO
 // #define DEBUG_MODE_FULL
- #define DISABLE_COMPILE_CACHE
+// #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_IRON_DOME
@@ -21,9 +21,11 @@
 #define LAUNCH_STATE_COOLDOWN 3
 
 // How long it takes to recycle a target
-#define RECYCLE_TIME 5
+#define RECYCLE_TIME 2
 // how many error degrees the launcher has to be pointing toward the target
 #define LAUNCH_ACCEPTABLE_ANGLE 10
+// How many degrees up this needs to point for a valid firing solution
+#define LAUNCH_ACCEPTABLE_ELEVATION 5
 // How fast the launcher launches
 #define TIME_BETWEEN_LAUNCHES 1
 // how many seconds does a launcher have to wait before re-engaging the same target

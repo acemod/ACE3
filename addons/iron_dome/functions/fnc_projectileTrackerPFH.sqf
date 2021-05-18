@@ -152,13 +152,17 @@ if (_idleLaunchers isNotEqualTo []) then {
             } else {
                 private _directionToTarget = (getPosASLVisual _launcher) vectorFromTo (getPosASLVisual _target);
                 private _turretDirection = _launcher weaponDirection currentWeapon _launcher;
+                private _localDirection = _launcher vectorWorldToModelVisual _turretDirection;
+                
+                private _elevation = 90 - ((_localDirection#1) atan2 (_localDirection#2));
                 private _angle = acos (_turretDirection vectorCos _directionToTarget);
-                if (_angle <= LAUNCH_ACCEPTABLE_ANGLE) then {
+
+                if (_angle <= LAUNCH_ACCEPTABLE_ANGLE && _elevation >= LAUNCH_ACCEPTABLE_ELEVATION) then {
                     _launcher setVariable [QGVAR(launchState), LAUNCH_STATE_FIRING];
                 };
 
                 #ifdef DRAW_TRACKING_INFO
-                drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0, 0, 1, 1], getPos _launcher, 0.75, 0.75, 0, format ["TRACKING: %1", _angle], 1, 0.025, "TahomaB"];
+                drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0, 0, 1, 1], getPos _launcher, 0.75, 0.75, 0, format ["TRACKING: %1 %2", _angle, _elevation], 1, 0.025, "TahomaB"];
                 drawLine3D [getPos _launcher, getPos _target, [0, 0, 1, 1]];
                 #endif
             };            
