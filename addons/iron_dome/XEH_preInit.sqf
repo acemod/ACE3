@@ -16,7 +16,8 @@ if (isServer) then {
     GVAR(trackingProjectiles) = [];
 
     GVAR(interceptors) = [];
-    GVAR(toBeShot) = [];
+    // Put these into hash table to avoid massive amounts of loops
+    GVAR(toBeShot) = call CBA_fnc_hashCreate;
 
     [QGVAR(track), {
         params ["_projectile"];
@@ -41,8 +42,7 @@ if (isServer) then {
     [QGVAR(registerInterceptor), {
         params ["_interceptor", "_target"];
         GVAR(interceptors) pushBack [_interceptor, _target, getPosASLVisual _interceptor];
-
-        GVAR(toBeShot) deleteAt (GVAR(toBeShot) find _target);
+        [GVAR(toBeShot), _target] call CBA_fnc_hashRem;
     }] call CBA_fnc_addEventHandler;
 
     [LINKFUNC(projectileTrackerPFH)] call CBA_fnc_addPerFrameHandler;

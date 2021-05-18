@@ -25,7 +25,7 @@ if (isNull _target && isVehicleRadarOn vehicle _shooter) then {
     _target = cursorTarget;
 };
 // always allow tracking of projectiles
-if !(_target isKindOf "AllVehicles" || { _target isKindOf ["Default", configFile >> "CfgAmmo"] }) then {
+if !(_target isKindOf "AllVehicles" || { (typeOf _target) isKindOf ["Default", configFile >> "CfgAmmo"] }) then {
     _target = nil;
 };
 _launchParams set [0, _target];

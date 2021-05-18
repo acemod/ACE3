@@ -25,90 +25,90 @@ GVAR(launchers) = GVAR(launchers) select {
     alive _x
 };
 
-GVAR(toBeShot) = GVAR(toBeShot) select {
-    _x params ["", "_shotTime"];
-    (CBA_missionTime - _shotTime) < RECYCLE_TIME
+[GVAR(toBeShot), {
+    (CBA_missionTime - _value) < RECYCLE_TIME
+}] call CBA_fnc_hashFilter;
+
+private _idleLaunchers = GVAR(launchers) select {
+    (_x getVariable QGVAR(launchState)) isEqualTo LAUNCH_STATE_IDLE && { someAmmo _x }
 };
 
-GVAR(nonTrackingProjectiles) = GVAR(nonTrackingProjectiles) select {
-    private _projectile = _x;
-    private _keep = true;
-    private _bestRange = 1e10;
-    
-    {
-        _x params ["_tracker", "_range"];
-        _bestRange = _bestRange min (_projectile distanceSqr _tracker);
-        if (_projectile distanceSqr _tracker <= _range * _range) exitWith {
-            GVAR(trackingProjectiles) pushBack [_projectile, 0];
-            _keep = false;
-        };
-    } forEach GVAR(trackers);
+// no point filtering if we don't have a launcher. Don't waste cycles
+if (_idleLaunchers isNotEqualTo []) then {
 
-    #ifdef DRAW_TRACKING_INFO
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], getPos _projectile, 0.75, 0.75, 0, format ["%1 %2m", typeOf _projectile, sqrt _bestRange], 1, 0.025, "TahomaB"];
-    #endif
-
-    _keep
-};
-
-GVAR(trackingProjectiles) = GVAR(trackingProjectiles) select {
-    _x params ["_projectile", "_lastFired"];
-
-    private _keep = false;
-    if (alive _projectile) then {
+    GVAR(nonTrackingProjectiles) = GVAR(nonTrackingProjectiles) select {
+        private _projectile = _x;
+        private _keep = true;
+        private _bestRange = 1e10;
+        
         {
             _x params ["_tracker", "_range"];
-            private _withinRange = _projectile distanceSqr _tracker <= _range * _range;
-
-            if (_withinRange) exitWith {
-                _keep = true;
+            _bestRange = _bestRange min (_projectile distanceSqr _tracker);
+            if (_projectile distanceSqr _tracker <= _range * _range) exitWith {
+                GVAR(trackingProjectiles) pushBack [_projectile, 0];
+                _keep = false;
             };
-
         } forEach GVAR(trackers);
 
-        if !(_keep) then {
-            GVAR(nonTrackingProjectiles) pushBack _projectile;
-        } else {
-            private _bestLauncher = objNull;
-            private _bestAmmo = 0;
+        #ifdef DRAW_TRACKING_INFO
+        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], getPos _projectile, 0.75, 0.75, 0, format ["%1 %2m", typeOf _projectile, sqrt _bestRange], 1, 0.025, "TahomaB"];
+        #endif
 
-            private _engagedFuture = GVAR(toBeShot) findIf {
-                _x params ["_target", "_timeShot"];
-                _projectile isEqualTo _target
-            };
-
-            private _engagedPast = GVAR(interceptors) findIf {
-                _x params ["", "_target"];
-                _projectile isEqualTo _target;
-            };
-
-            private _engaged = (_engagedFuture != -1) || (_engagedPast != -1);
-            if !(_engaged) then {
-                // launch a missile
-                {
-                    // try to get a launcher with the most ammo that is the closest to the incoming projectile
-                    private _state = _x getVariable QGVAR(launchState);
-                    private _ammo = parseNumber (((currentMagazineDetail _x) splitString "([ ]/:)") select 3);
-                    if (_state == LAUNCH_STATE_IDLE && { _ammo >= _bestAmmo }) then {
-                        _bestAmmo = _ammo;
-                        _bestLauncher = _x;
-                    };
-                } forEach GVAR(launchers);
-
-                private _targetList = _bestLauncher getVariable QGVAR(targetList);
-                _targetList pushBackUnique _projectile;
-                _bestLauncher setVariable [QGVAR(targetList), _targetList];
-
-                GVAR(toBeShot) pushBackUnique [_projectile, CBA_missionTime];
-            };
-
-            #ifdef DRAW_TRACKING_INFO
-            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], getPos _projectile, 0.75, 0.75, 0, format ["%1 %2m %3s", typeOf _projectile, _bestLauncher distance _projectile], 1, 0.025, "TahomaB"];
-            #endif
-        };
+        _keep
     };
 
-    _keep
+    GVAR(trackingProjectiles) = GVAR(trackingProjectiles) select {
+        _x params ["_projectile", "_lastFired"];
+
+        private _keep = false;
+        if (alive _projectile) then {
+            {
+                _x params ["_tracker", "_range"];
+                private _withinRange = _projectile distanceSqr _tracker <= _range * _range;
+
+                if (_withinRange) exitWith {
+                    _keep = true;
+                };
+
+            } forEach GVAR(trackers);
+
+            if !(_keep) then {
+                GVAR(nonTrackingProjectiles) pushBack _projectile;
+            } else {
+                private _bestLauncher = objNull;
+                private _bestAmmo = 0;
+
+                private _engagedFuture = [GVAR(toBeShot), _projectile] call CBA_fnc_hashHasKey;
+
+                private _engagedPast = GVAR(interceptors) findIf {
+                    _x params ["", "_target"];
+                    _projectile isEqualTo _target;
+                };
+
+                private _engaged = _engagedFuture || (_engagedPast != -1);
+                if !(_engaged) then {
+                    // launch a missile
+                    // pick first idle launcher. Could use a heuristic, but that would require O(k*l) operations, and that could be a lot
+                    // 20 launchers * 100 projectiles = 2000 loops. Way too slow
+                    private _bestLauncher = _idleLaunchers select 0;
+                    _idleLaunchers deleteAt 0;
+
+                    private _targetList = _bestLauncher getVariable QGVAR(targetList);
+                    _targetList pushBackUnique _projectile;
+                    _bestLauncher setVariable [QGVAR(targetList), _targetList];
+
+                    // avoid re-engaging same target
+                    [GVAR(toBeShot), _projectile, CBA_missionTime] call CBA_fnc_hashSet;
+                };
+
+                #ifdef DRAW_TRACKING_INFO
+                drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], getPos _projectile, 0.75, 0.75, 0, format ["%1 %2m %3s", typeOf _projectile, _bestLauncher distance _projectile], 1, 0.025, "TahomaB"];
+                #endif
+            };
+        };
+
+        _keep
+    };
 };
 
 {
@@ -140,7 +140,7 @@ GVAR(trackingProjectiles) = GVAR(trackingProjectiles) select {
             };
 
             #ifdef DRAW_TRACKING_INFO
-            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 1, 1, 1], getPos _launcher, 0.75, 0.75, 0, format ["IDLE"], 1, 0.025, "TahomaB"];
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 1, 1, 1], getPos _launcher, 0.75, 0.75, 0, format ["IDLE [AMMO: %1]", someAmmo _launcher], 1, 0.025, "TahomaB"];
             #endif
         };
         case LAUNCH_STATE_TRACKING: {
