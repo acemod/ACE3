@@ -20,18 +20,4 @@
 #define LAUNCH_STATE_FIRING 2
 #define LAUNCH_STATE_COOLDOWN 3
 
-// How long it takes to recycle a target
-#define RECYCLE_TIME 2
-// how many error degrees the launcher has to be pointing toward the target
-#define LAUNCH_ACCEPTABLE_ANGLE 10
-// How many degrees up this needs to point for a valid firing solution
-#define LAUNCH_ACCEPTABLE_ELEVATION 5
-// How fast the launcher launches
-#define TIME_BETWEEN_LAUNCHES 1
-// how many seconds does a launcher have to wait before re-engaging the same target
-#define RE_ENGAGEMENT_TIME 5
-
-// Proximity fuse range
-#define PROX_RANGE 10
-
 #include "\z\ace\addons\main\script_macros.hpp"

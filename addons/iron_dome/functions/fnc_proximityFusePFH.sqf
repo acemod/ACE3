@@ -40,10 +40,11 @@ GVAR(interceptors) = GVAR(interceptors) select {
     #ifdef DRAW_TRACKING_INFO
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,1,1], (getPos _target) vectorAdd [0, 0, 0.5], 0.75, 0.75, 0, format ["%1m", _minDistance], 1, 0.025, "TahomaB"];
     #endif
-    if (!alive _target || { _minDistance <= PROX_RANGE } || { _minDistance > _lastDistance }) then {
+    if (!alive _target || { _minDistance <= GVAR(proximityFuseRange) } || { _minDistance > _lastDistance }) then {
         triggerAmmo _projectile;
         // if we overshot target, dont take out target
-        if (_minDistance <= _lastDistance) then {
+        if (_minDistance <= _lastDistance && { GVAR(proximityFuseFailureChance) <= random 1 }) then {
+            private _explosion = createVehicle ["SmallSecondary", _target, [], 0, "CAN_COLLIDE"];
             deleteVehicle _target;
         };
         false

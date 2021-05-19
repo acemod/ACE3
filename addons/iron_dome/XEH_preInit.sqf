@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-ADDON = true;
+#include "initSettings.sqf"
 
 // Server handles the tracking of all projectiles. It dispatches events to launchers to fire at specific targets
 // The tracker and launcher array are global to allow for early-out if it is impossible to kill any projectiles to avoid wasting bandwidth
@@ -89,4 +89,6 @@ GVAR(projectilesToIntercept) = [];
         };
     };
 }] call CBA_fnc_addClassEventHandler;
+
+ADDON = true;
 

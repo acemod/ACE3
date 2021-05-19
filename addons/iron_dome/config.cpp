@@ -6,7 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        // no point having this system without missile guidance: nothing would happen
+        requiredAddons[] = {"ace_common","ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Brandon (TCVM)"};
         url = ECSTRING(main,URL);
@@ -15,3 +16,4 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+

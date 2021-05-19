@@ -29,7 +29,7 @@ GVAR(launchers) = GVAR(launchers) select {
 };
 
 [GVAR(toBeShot), {
-    (CBA_missionTime - _value) < RECYCLE_TIME
+    (CBA_missionTime - _value) < GVAR(targetRecycleTime)
 }] call CBA_fnc_hashFilter;
 
 private _idleLaunchers = GVAR(launchers) select {
@@ -126,7 +126,7 @@ if (_idleLaunchers isNotEqualTo []) then {
 
             _targetList = _targetList select {
                 private _timeFiredAt = [_engagedTargets, _x, 0] call CBA_fnc_hashGet;
-                alive _x && { (CBA_missionTime - _timeFiredAt) >= RE_ENGAGEMENT_TIME }
+                alive _x && (_timeFiredAt == 0 || { (CBA_missionTime - _timeFiredAt) >= GVAR(targetRecycleTime) })
             };
 
             private _bestTarget = objNull;
@@ -161,7 +161,7 @@ if (_idleLaunchers isNotEqualTo []) then {
                 private _elevation = 90 - ((_localDirection#1) atan2 (_localDirection#2));
                 private _angle = acos (_turretDirection vectorCos _directionToTarget);
 
-                if (_angle <= LAUNCH_ACCEPTABLE_ANGLE && _elevation >= LAUNCH_ACCEPTABLE_ELEVATION) then {
+                if (_angle <= GVAR(launchAcceptableAngle) && _elevation >= GVAR(launchAcceptableElevation)) then {
                     _launcher setVariable [QGVAR(launchState), LAUNCH_STATE_FIRING];
                 };
 
@@ -189,7 +189,7 @@ if (_idleLaunchers isNotEqualTo []) then {
         };
         case LAUNCH_STATE_COOLDOWN: {
             private _lastLaunchTime = _launcher getVariable QGVAR(lastLaunchTime);
-            if (CBA_missionTime - _lastLaunchTime >= TIME_BETWEEN_LAUNCHES) then {
+            if (CBA_missionTime - _lastLaunchTime >= GVAR(timeBetweenLaunches)) then {
                 _launcher setVariable [QGVAR(launchState), LAUNCH_STATE_IDLE];
             };
 
