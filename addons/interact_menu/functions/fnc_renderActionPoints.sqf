@@ -56,8 +56,7 @@ private _fnc_renderNearbyActions = {
                 _hasInteractions = true;
                 GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
             };
-            nil
-        } count GVAR(objectActionList);
+        } forEach GVAR(objectActionList);
 
         // Iterate through base level class actions and render them if appropiate
         private _classActions = GVAR(ActNamespace) getVariable [typeOf _target, []];
@@ -68,17 +67,14 @@ private _fnc_renderNearbyActions = {
                 _hasInteractions = true;
                 GVAR(foundActions) pushBack [_target, _action, GVAR(objectActionList)];
             };
-            nil
-        } count _classActions;
+        } forEach _classActions;
 
         // Limit the amount of objects the player can interact with
         if (_hasInteractions) then {
             INC(_numInteractObjects);
             if (_numInteractObjects >= MAXINTERACTOBJECTS) then {break};
         };
-
-        nil
-    } count _nearestObjects;
+    } forEach _nearestObjects;
 };
 
 private _fnc_renderLastFrameActions = {
@@ -87,8 +83,7 @@ private _fnc_renderLastFrameActions = {
 
         GVAR(objectActionList) = _objectActionList;
         [_target, _action] call FUNC(renderBaseMenu);
-        nil
-    } count GVAR(foundActions);
+    } forEach GVAR(foundActions);
 };
 
 private _fnc_renderSelfActions = {
@@ -111,16 +106,14 @@ private _fnc_renderSelfActions = {
     {
         _action = _x;
         [_target, _action, _pos] call FUNC(renderBaseMenu);
-        nil
-    } count _classActions;
+    } forEach _classActions;
 };
 
 private _fnc_renderZeusActions = {
     {
         private _action = _x;
         [_this, _action, [0.5, 0.5]] call FUNC(renderBaseMenu);
-        nil
-    } count GVAR(ZeusActions);
+    } forEach GVAR(ZeusActions);
 };
 
 
@@ -177,5 +170,4 @@ if (count GVAR(collectedActionPoints) > 1) then {
 {
     _x params ["_z", "_sPos", "_activeActionTree"];
     [[], _activeActionTree, _sPos, [180,360]] call FUNC(renderMenu);
-    nil
-} count GVAR(collectedActionPoints);
+} forEach GVAR(collectedActionPoints);
