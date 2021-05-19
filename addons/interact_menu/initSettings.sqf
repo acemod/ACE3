@@ -87,14 +87,3 @@
     [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", LLSTRING(backgroundBlur), LLSTRING(backgroundBlack)], 0],
     false
 ] call CBA_fnc_addSetting;
-
-[
-    QGVAR(allowReorderSelf),
-    "CHECKBOX",
-    [LLSTRING(allowReorderSetting), LLSTRING(allowReorderSettingDescription)],
-    [format ["ACE %1", LLSTRING(Category_InteractionMenu)], LELSTRING(Interaction,InteractionMenuSelf)],
-    false,
-    false,
-    {},
-    true
-] call CBA_fnc_addSetting;
