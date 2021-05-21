@@ -28,6 +28,7 @@ private _statuses = _controlBox getVariable QGVAR(plugStatus);
 private _availableIndex = _statuses findIf { (_x isNotEqualTo objNull) && (someAmmo _x) };
 if (_availableIndex >= 0) then {
     private _malyutka = _statuses select _availableIndex;
+    _malyutka animate ["missile_hide", 1];
     [_malyutka, QGVAR(9m14)] call BIS_fnc_fire;
 } else {
     // how did we get here?

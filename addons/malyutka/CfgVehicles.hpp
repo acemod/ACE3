@@ -99,31 +99,14 @@ class CfgVehicles {
                 };
             };
         };
-    };
 
-    class ThingX;
-    class GVAR(plug): ThingX {
-        displayName = QGVAR(plug);
-        scope = 1;
-        scopeCurator = 1;
-        model = "\a3\Structures_F_Orange\VR\Helpers\Sign_sphere10cm_Geometry_F.p3d";
-        destrType = "DestructNo";
-
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = CSTRING(plug);
-                condition = "true";
-                distance = 2;
-                class GVAR(pickup) {
-                    displayName = CSTRING(pickupPlug);
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canPickupPlug));
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickupPlug));
-                };
-                class GVAR(unattach) {
-                    displayName = CSTRING(unattachPlug);
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canUnattachPlug));
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(unattachPlug));
-                };
+        class AnimationSources {
+            class missile_hide {
+                source = "user";
+                animPeriod = 0.0001;
+                initPhase = 0;
+                maxValue = "1";
+                minValue = "0";
             };
         };
     };
@@ -165,8 +148,8 @@ class CfgVehicles {
                 optics = 1;
                 turretInfoType = "RscWeaponEmpty";
                 gunnerOpticsModel = "\a3\weapons_f_gamma\reticle\GMG_01_Optics_Gunner_F";
-                minElev = 0;
-                maxElev = 0;
+                minElev = -30;
+                maxElev = 20;
                 weapons[] = { QGVAR(9s415_dummy_weapon) };
                 magazines[] = { QGVAR(9s415_dummy) };
 
@@ -211,6 +194,34 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 displayName = CSTRING(9s415);
+                selection = "center";
+            };
+        };
+    };
+
+    class ThingX;
+    class GVAR(plug): ThingX {
+        displayName = QGVAR(plug);
+        scope = 1;
+        scopeCurator = 1;
+        model = "\a3\Structures_F_Orange\VR\Helpers\Sign_sphere10cm_Geometry_F.p3d";
+        destrType = "DestructNo";
+
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(plug);
+                condition = "true";
+                distance = 2;
+                class GVAR(pickup) {
+                    displayName = CSTRING(pickupPlug);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canPickupPlug));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickupPlug));
+                };
+                class GVAR(unattach) {
+                    displayName = CSTRING(unattachPlug);
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canUnattachPlug));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(unattachPlug));
+                };
             };
         };
     };
