@@ -156,6 +156,7 @@
             <Japanese>設定速度の増減量</Japanese>
             <Czech>Krokování omezovače rychlosti</Czech>
             <Russian>Шаг ограничителя скорости</Russian>
+            <Spanish>Salto de limitador de vehículo</Spanish>
         </Key>
     </Package>
 </Project>

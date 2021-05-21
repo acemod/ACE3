@@ -27,7 +27,7 @@ _unit setUnconscious _isUnconscious;
 
 if (_isUnconscious) then {
     // eject from static weapon
-    if (vehicle _unit isKindOf "StaticWeapon") then {
+    if (vehicle _unit isKindOf "StaticWeapon" && {!(vehicle _unit isKindOf "Pod_Heli_Transport_04_crewed_base_F")}) then {
         TRACE_2("ejecting from static weapon",_unit,vehicle _unit);
         [_unit] call EFUNC(common,unloadPerson);
     };
