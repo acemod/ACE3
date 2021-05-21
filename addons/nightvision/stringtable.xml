@@ -18,21 +18,27 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_brown">
             <English>NV Goggles (Gen1, Brown)</English>
+            <French>JVN (Gen1, marron)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_black">
             <English>NV Goggles (Gen1, Black)</English>
+            <French>JVN (Gen1, noires)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_green">
             <English>NV Goggles (Gen1, Green)</English>
+            <French>JVN (Gen1, vertes)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_brown">
             <English>NV Goggles (Gen2, Brown)</English>
+            <French>JVN (Gen2, marron)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_black">
             <English>NV Goggles (Gen2, Black)</English>
+            <French>JVN (Gen2, noires)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_green">
             <English>NV Goggles (Gen2, Green)</English>
+            <French>NV Goggles (Gen2, vertes)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -104,21 +110,27 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_brown">
             <English>NV Goggles (Gen4, Brown)</English>
+            <French>JVN (Gen4, marron)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
             <English>NV Goggles (Gen4, Black)</English>
+            <French>JVN (Gen4, noires)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
             <English>NV Goggles (Gen4, Green)</English>
+            <French>JVN (Gen4, vertes)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
             <English>NV Goggles (Wide, Brown)</English>
+            <French>JVN (Large, marron)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
             <English>NV Goggles (Wide, Black)</English>
+            <French>JVN (Large, noires)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
             <English>NV Goggles (Wide, Green)</English>
+            <French>JVN (Large, vertes)</French>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>

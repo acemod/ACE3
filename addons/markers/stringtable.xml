@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Markers_MarkerScale">
             <English>Scale: %1</English>
             <Spanish>Escala: %1</Spanish>
+            <French>Échelle : %1</French>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
@@ -219,7 +220,7 @@
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
             <English>"MM" - Milliseconds</English>
-            <French>"MS" - Millisecondes</French>
+            <French>"MM" - Millisecondes</French>
             <Japanese>"MM" - ミリ秒</Japanese>
             <Spanish>"MM" - Milisegundos</Spanish>
         </Key>
