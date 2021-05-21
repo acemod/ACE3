@@ -1,7 +1,7 @@
 class CfgAmmo {
     class ammo_Missile_mim145;
-	class GVAR(patriot): ammo_Missile_mim145 {
-		author = "Brandon (TCVM)";
+    class GVAR(patriot): ammo_Missile_mim145 {
+        author = "Brandon (TCVM)";
         maneuvrability = 0;
         class ace_missileguidance {
             enabled = 1;
@@ -37,11 +37,11 @@ class CfgAmmo {
             defaultAttackProfile = "DIR";
             attackProfiles[] = {"DIR"};
         };
-	};
+    };
 
-	class ammo_Missile_rim162;
-	class GVAR(RIM162): ammo_Missile_rim162 {
-		author = "Brandon (TCVM)";
+    class ammo_Missile_rim162;
+    class GVAR(RIM162): ammo_Missile_rim162 {
+        author = "Brandon (TCVM)";
         maneuvrability = 0;
         class ace_missileguidance {
             enabled = 1;
@@ -77,11 +77,11 @@ class CfgAmmo {
             defaultAttackProfile = "DIR";
             attackProfiles[] = {"DIR"};
         };
-	};
+    };
 
-	class ammo_Missile_s750;
-	class GVAR(s400): ammo_Missile_s750 {
-		author = "Brandon (TCVM)";
+    class ammo_Missile_s750;
+    class GVAR(s400): ammo_Missile_s750 {
+        author = "Brandon (TCVM)";
         maneuvrability = 0;
         class ace_missileguidance {
             enabled = 1;
@@ -117,6 +117,6 @@ class CfgAmmo {
             defaultAttackProfile = "DIR";
             attackProfiles[] = {"DIR"};
         };
-	};
+    };
 };
 
