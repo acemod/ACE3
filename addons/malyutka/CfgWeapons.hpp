@@ -1,6 +1,6 @@
 class CfgWeapons {
     class MissileLauncher;
-	class GVAR(9m14): MissileLauncher {
+    class GVAR(9m14): MissileLauncher {
         displayName = CSTRING(9m14_missile);
         magazines[] = { QGVAR(9m14) };
         initSpeed = 100;

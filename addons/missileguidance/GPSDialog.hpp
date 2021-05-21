@@ -34,8 +34,8 @@ class GVAR(gpsAttackOptionsUI) {
         };
     };
     class controls {
-		class TOOButton: RscButton {
-			idc = GPS_UI_TOO;
+        class TOOButton: RscButton {
+            idc = GPS_UI_TOO;
             text = CSTRING(GPS_ui_too);
             onButtonClick = QUOTE([GPS_UI_TOO] call FUNC(gps_modeSelect));
             x = 14 * GUI_GRID_W + GUI_GRID_CENTER_X;
@@ -45,10 +45,10 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = GUI_BCG_COLOR;
             colorFocused[] = {0, 0, 0, 0.8};
-		};
+        };
 
-		class PPButton: RscButton {
-			idc = GPS_UI_PB;
+        class PPButton: RscButton {
+            idc = GPS_UI_PB;
             text = CSTRING(GPS_ui_pp);
             onButtonClick = QUOTE([GPS_UI_PB] call FUNC(gps_modeSelect));
             x = 26 * GUI_GRID_W + GUI_GRID_CENTER_X;
@@ -58,10 +58,10 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = GUI_BCG_COLOR;
             colorFocused[] = {0, 0, 0, 0.8};
-		};
+        };
 
-		class PPMission: RscText {
-			idc = GPS_UI_PB_MISSION;
+        class PPMission: RscText {
+            idc = GPS_UI_PB_MISSION;
             text = CSTRING(GPS_ui_pp_short);
             onButtonClick = "";
             x = 27.5 * GUI_GRID_W + GUI_GRID_CENTER_X;
@@ -71,12 +71,12 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 1};
             colorFocused[] = {0, 0, 0, 0.8};
-			align = "CENTER";
-  			style = 2;
-		};
+            align = "CENTER";
+              style = 2;
+        };
 
-		class PPMissionBackward: RscButton {
-			idc = GPS_UI_PB_MISSION_BACKWARD;
+        class PPMissionBackward: RscButton {
+            idc = GPS_UI_PB_MISSION_BACKWARD;
             text = "<<";
             onButtonClick = QUOTE([-1] call FUNC(gps_pbModeCycle));
             x = 26 * GUI_GRID_W + GUI_GRID_CENTER_X;
@@ -86,10 +86,10 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0.8};
             colorFocused[] = {0, 0, 0, 0.8};
-		};
+        };
 
-		class PPMissionForward: RscButton {
-			idc = GPS_UI_PB_MISSION_FORWARD;
+        class PPMissionForward: RscButton {
+            idc = GPS_UI_PB_MISSION_FORWARD;
             text = ">>";
             onButtonClick = QUOTE([1] call FUNC(gps_pbModeCycle));
             x = 30 * GUI_GRID_W + GUI_GRID_CENTER_X;
@@ -99,10 +99,10 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0.8};
             colorFocused[] = {0, 0, 0, 0.8};
-		};
+        };
 
-		class TargetPosXText: RscText {
-			idc = -1;
+        class TargetPosXText: RscText {
+            idc = -1;
             text = CSTRING(GPS_ui_easting);
             x = 14 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 8.5 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -111,10 +111,10 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 10;
-		};
-		class TargetPosX: RscEdit {
-			idc = GPS_UI_EASTING;
+            maxChars = 10;
+        };
+        class TargetPosX: RscEdit {
+            idc = GPS_UI_EASTING;
             text = "";
             x = 17.3 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 8.5 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -123,11 +123,11 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0.8};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 5;
-		};
+            maxChars = 5;
+        };
 
-		class TargetPosYText: RscText {
-			idc = -1;
+        class TargetPosYText: RscText {
+            idc = -1;
             text = CSTRING(GPS_ui_northing);
             x = 14 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 9.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -136,16 +136,16 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 5;
-		};
-		class TargetPosY: TargetPosX {
-			idc = GPS_UI_NORTHING;
+            maxChars = 5;
+        };
+        class TargetPosY: TargetPosX {
+            idc = GPS_UI_NORTHING;
             x = 17.3 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 9.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
-		};
+        };
 
-		class TargetPosHeightText: RscText {
-			idc = -1;
+        class TargetPosHeightText: RscText {
+            idc = -1;
             text = CSTRING(GPS_ui_altitude);
             x = 14 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 11.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -154,15 +154,15 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 5;
-		};
-		class TargetPosHeight: TargetPosX {
-			idc = GPS_UI_HEIGHT;
+            maxChars = 5;
+        };
+        class TargetPosHeight: TargetPosX {
+            idc = GPS_UI_HEIGHT;
             x = 17.3 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 11.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
-		};
-		class TargetPosHeightUnits: RscText {
-			idc = -1;
+        };
+        class TargetPosHeightUnits: RscText {
+            idc = -1;
             text = "m";
             x = 19.6 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 11.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -171,11 +171,11 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 5;
-		};
+            maxChars = 5;
+        };
 
-		class ImpactAngleText: RscText {
-			idc = -1;
+        class ImpactAngleText: RscText {
+            idc = -1;
             text = CSTRING(GPS_ui_impact_angle);
             x = 21 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 9.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -184,23 +184,23 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 5;
-		};
-		class ImpactAngle: RscEdit {
-			idc = GPS_UI_ANGLE;
+            maxChars = 5;
+        };
+        class ImpactAngle: RscEdit {
+            idc = GPS_UI_ANGLE;
             x = 26.3 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 9.7 * GUI_GRID_H + GUI_GRID_CENTER_Y;
-			w = 2 * GUI_GRID_W;
+            w = 2 * GUI_GRID_W;
             h = GUI_GRID_H;
             text = "";
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0.8};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 2;
-		};
+            maxChars = 2;
+        };
 
-		class AttackHeadingText: RscText {
-			idc = -1;
+        class AttackHeadingText: RscText {
+            idc = -1;
             text = CSTRING(GPS_ui_attack_heading);
             x = 21 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 11 * GUI_GRID_H + GUI_GRID_CENTER_Y;
@@ -209,20 +209,20 @@ class GVAR(gpsAttackOptionsUI) {
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 5;
-		};
-		class AttackHeading: RscEdit {
-			idc = GPS_UI_HEADING;
+            maxChars = 5;
+        };
+        class AttackHeading: RscEdit {
+            idc = GPS_UI_HEADING;
             x = 26.3 * GUI_GRID_W + GUI_GRID_CENTER_X;
             y = 11 * GUI_GRID_H + GUI_GRID_CENTER_Y;
-			w = 2 * GUI_GRID_W;
+            w = 2 * GUI_GRID_W;
             h = GUI_GRID_H;
             text = "";
             colorActive[] = {0, 0, 0, 1};
             colorBackground[] = {0, 0, 0, 0.8};
             colorFocused[] = {0, 0, 0, 0.8};
-			maxChars = 3;
-		};
+            maxChars = 3;
+        };
 
         class CancelButton: RscButton {
             idc = -1;
