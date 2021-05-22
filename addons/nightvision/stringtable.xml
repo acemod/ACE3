@@ -18,21 +18,27 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_brown">
             <English>NV Goggles (Gen1, Brown)</English>
+            <Russian>ПНВ (Gen1, Коричневый)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_black">
             <English>NV Goggles (Gen1, Black)</English>
+            <Russian>ПНВ (Gen1, Чёрный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_green">
             <English>NV Goggles (Gen1, Green)</English>
+            <Russian>ПНВ (Gen1, Зелёный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_brown">
             <English>NV Goggles (Gen2, Brown)</English>
+            <Russian>ПНВ (Gen2, Коричневый)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_black">
             <English>NV Goggles (Gen2, Black)</English>
+            <Russian>ПНВ (Gen2, Чёрный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_green">
             <English>NV Goggles (Gen2, Green)</English>
+            <Russian>ПНВ (Gen2, Зелёный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -104,21 +110,27 @@
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_brown">
             <English>NV Goggles (Gen4, Brown)</English>
+            <Russian>ПНВ (Gen4, Коричневый)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
             <English>NV Goggles (Gen4, Black)</English>
+            <Russian>ПНВ (Gen4, Чёрный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
             <English>NV Goggles (Gen4, Green)</English>
+            <Russian>ПНВ (Gen4, Зелёный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
             <English>NV Goggles (Wide, Brown)</English>
+            <Russian>ПНВ (Широкий, Коричневый)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
             <English>NV Goggles (Wide, Black)</English>
+            <Russian>ПНВ (Широкий, Чёрный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
             <English>NV Goggles (Wide, Green)</English>
+            <Russian>ПНВ (Широкий, Зелёный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
