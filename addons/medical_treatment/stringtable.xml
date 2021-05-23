@@ -712,11 +712,13 @@
             <English>Locations IV Transfusion</English>
             <Japanese>IV 輸血の場所制限</Japanese>
             <Spanish>Ubicación para transfusiones IV</Spanish>
+            <French>Lieux perfusions IV</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
             <Japanese>IV 輸血を行える場所を決定できます。</Japanese>
             <Spanish>Controla dónde pueden ser realizadas las transfusiones IV.</Spanish>
+            <French>Définit les lieux où la pose de perfusions est autorisée.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
