@@ -694,28 +694,34 @@
             <Polish>Szansa na nieprzytomność przez ból</Polish>
             <Japanese>気絶確立</Japanese>
             <Spanish>Probabilidad de inconsciencia por dolor</Spanish>
+            <French>Douleur - Chance d'évanouissement</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
             <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
             <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確立を設定します。</Japanese>
             <Spanish>La probabilidad de que una persona caiga inconsciente cuando su dolor está por encima del umbral al haber recibido daño.</Spanish>
+            <French>La probabilité pour qu'une personne perde connaissance lorsque la douleur ressentie est supérieure à son seuil de tolérance.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
             <Spanish>Probabilidad de muerte por herida fatal</Spanish>
+            <French>Blessure mortelle - Chance de décès</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
             <Spanish>La probabilidad de morir a causa de una herida fatal.</Spanish>
+            <French>La probabilité de mourir lors d'une "blessure mortelle".\nUne blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_DisplayName">
             <English>Enable Vehicle Crash Damage</English>
             <Spanish>Activar daño por accidente de vehículo</Spanish>
+            <French>Blessures de collision (véhicules)</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_Description">
             <English>Controls whether crew receives damage from vehicle collisions.</English>
             <Spanish>Controla si la tripulación recibe daño debido a colisiones en vehículo.</Spanish>
+            <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident'.</French>
         </Key>
     </Package>
 </Project>

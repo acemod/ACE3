@@ -161,6 +161,7 @@
             <English>Development Build Watermark</English>
             <Russian>Водяной знак Development Build</Russian>
             <Spanish>Marca de agua para compilación de desarrollo</Spanish>
+            <French>Filigrane version de développement</French>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
