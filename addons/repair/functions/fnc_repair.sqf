@@ -99,7 +99,7 @@ if (!("All" in _repairLocations)) then {
 
 private _requiredObjects = getArray (_config >> "claimObjects");
 private _claimObjectsAvailable = [];
-if (!(_requiredObjects isEqualTo [])) then {
+if (_requiredObjects isNotEqualTo []) then {
     _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
     if (_claimObjectsAvailable isEqualTo []) then {
         TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
@@ -181,7 +181,7 @@ private _soundPosition = AGLToASL (_caller modelToWorldVisual (_caller selection
 
 // Get repair time
 private _repairTime = [
-    configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
+    configOf _target >> QGVAR(repairTimes) >> configName _config,
     "number",
     -1
 ] call CBA_fnc_getConfigEntry;

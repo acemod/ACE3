@@ -23,7 +23,7 @@ private _vehicle = vehicle _unit;
 if (_vehicle isEqualTo _unit) exitWith {""};
 
 // --- driver
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 if (_unit == driver _vehicle) exitWith {
     getText (configFile >> "CfgMovesBasic" >> "ManActions" >> getText (_config >> "driverAction")) // return
@@ -32,7 +32,7 @@ if (_unit == driver _vehicle) exitWith {
 // --- turret
 private _turret = _unit call CBA_fnc_turretPath;
 
-if !(_turret isEqualTo []) exitWith {
+if (_turret isNotEqualTo []) exitWith {
     private _turretConfig = [_vehicle, _turret] call CBA_fnc_getTurret;
 
     getText (configFile >> "CfgMovesBasic" >> "ManActions" >> getText (_turretConfig >> "gunnerAction")) // return

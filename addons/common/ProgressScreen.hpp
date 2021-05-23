@@ -1,6 +1,6 @@
 class GVAR(ProgressBar_Dialog) {
     idd = -1;
-    movingEnable = false;
+    movingEnable = 0;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBG)),(_this select 0) displayCtrl 1)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBar)),(_this select 0) displayCtrl 2)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBarTitle)),(_this select 0) displayCtrl 3)];);
     objects[] = {};
 
@@ -52,7 +52,7 @@ class GVAR(ProgressBar_Dialog) {
 
 class GVAR(DisableMouse_Dialog) {
     idd = -1;
-    movingEnable = false;
+    movingEnable = 0;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),_this select 0)];);
     objects[] = {};
     class controlsBackground {

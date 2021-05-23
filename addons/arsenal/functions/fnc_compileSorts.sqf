@@ -77,11 +77,11 @@ private _configEntries = "(getNumber (_x >> 'scope')) == 2" configClasses (confi
 
     _finalArray = ["", _displayName, _statement, _condition];
 
-    if !(_leftTabsList isEqualTo []) then {
+    if (_leftTabsList isNotEqualTo []) then {
         [_sortListLeftPanel, _leftTabsList, "L"] call _fnc_addToTabs;
     };
 
-    if !(_rightTabsList isEqualTo []) then {
+    if (_rightTabsList isNotEqualTo []) then {
         [_sortListRightPanel, _rightTabsList, "R"] call _fnc_addToTabs;
     };
 } foreach _configEntries;

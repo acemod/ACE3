@@ -75,8 +75,9 @@ class CfgVehicles {
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = QUOTE(true);
-                statement = "";
+                condition = QUOTE([_target] call FUNC(canCutRopes));
+                // should not be empty to work with EGVAR(interact_menu,consolidateSingleChild) setting
+                statement = QUOTE(true);
                 class confirmCutRopes {
                     displayName = ECSTRING(common,confirm);
                     condition = QUOTE([_target] call FUNC(canCutRopes));

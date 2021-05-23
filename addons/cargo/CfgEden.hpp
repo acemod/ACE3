@@ -10,7 +10,7 @@ class Cfg3DEN {
                         control = "Edit";
 
                         expression = QUOTE([ARR_2(_this,_value)] call DFUNC(setSpace););
-                        defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(space),0));
+                        defaultValue = QUOTE(GET_NUMBER(configOf _this >> QQGVAR(space),0));
 
                         validate = "number";
                         condition = "objectHasInventoryCargo";
@@ -24,7 +24,7 @@ class Cfg3DEN {
 
                         // Expression only runs on the server, must handle actions for all machines and future JIPs (Why BI?!)
                         expression = QUOTE([ARR_2(_this,_value)] call DFUNC(setSize););
-                        defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(size),-1));
+                        defaultValue = QUOTE(GET_NUMBER(configOf _this >> QQGVAR(size),-1));
 
                         validate = "number";
                         condition = "1-objectBrain";

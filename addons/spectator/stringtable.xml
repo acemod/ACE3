@@ -15,6 +15,7 @@
             <Portuguese>Espectador</Portuguese>
             <Czech>Divák</Czech>
             <Turkish>Izleyici</Turkish>
+            <Spanish>Espectador</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>ACE Spectator</English>
@@ -30,6 +31,7 @@
             <Portuguese>ACE Espectador</Portuguese>
             <Czech>ACE Divák</Czech>
             <Turkish>ACE Izleyici</Turkish>
+            <Spanish>ACE Espectador</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -60,6 +62,7 @@
             <Portuguese>IA Ativado</Portuguese>
             <Czech>AI povoleno</Czech>
             <Turkish>AI Etkin</Turkish>
+            <Spanish>IA Activada</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
             <English>Make AI viewable in spectator</English>
@@ -74,6 +77,7 @@
             <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
             <Portuguese>Permite que IA seja visivel no espectador</Portuguese>
             <Czech>Umožňuje sledovat AI v módu diváka</Czech>
+            <Spanish>Permitir ver a la IA en espectador</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -212,6 +216,7 @@
             <Italian>Distanza massima per seguire</Italian>
             <Czech>Maximální vzdálenost sledování objektu</Czech>
             <Polish>Maksymalna odległość śledzenia</Polish>
+            <Spanish>Distancia máxima de seguimiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
             <English>Maximum distance the follow camera can be from the target</English>
@@ -224,6 +229,7 @@
             <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
             <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
             <Polish>Maksymalna odległość na jakiej kamera może podążać od celu</Polish>
+            <Spanish>Distancia máxima que la cámara de seguimiento puede estar del objetivo</Spanish>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
@@ -321,6 +327,7 @@
             <Portuguese>Ícones</Portuguese>
             <Czech>Ikony</Czech>
             <Turkish>Ikonlar</Turkish>
+            <Spanish>Iconos</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_uiProjectiles">
             <English>Projectiles</English>
@@ -336,6 +343,7 @@
             <Portuguese>Projéteis</Portuguese>
             <Czech>Projektily</Czech>
             <Turkish>Mermiler</Turkish>
+            <Spanish>Proyectiles</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -383,6 +391,7 @@
             <Portuguese>Modo de Visão</Portuguese>
             <Czech>Režim sledování</Czech>
             <Turkish>Görüş Modu</Turkish>
+            <Spanish>Modo de visión</Spanish>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
@@ -398,6 +407,7 @@
             <Portuguese>Velocidade Lenta</Portuguese>
             <Czech>Pomalá rychlost</Czech>
             <Turkish>Yavaş Hız</Turkish>
+            <Spanish>Velocidad lenta</Spanish>
         </Key>
     </Package>
 </Project>

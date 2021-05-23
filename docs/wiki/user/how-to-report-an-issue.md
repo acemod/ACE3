@@ -26,6 +26,6 @@ Indicate if the issue appears on stable or development version. In case it is th
 
 ### Reporting the issue
 
-Head over to the [ACE3 GitHub issue tracker]({{ site.ace.githubUrl }}/issues){:target="_blank"} and press the ["New Issue"]({{ site.ace.githubUrl }}/issues/new){:target="_blank"} button in the top right corner. Fill out the issue template. Add a link ([gist](https://gist.github.com){:target="_blank"} or [pastebin](http://pastebin.com){:target="_blank"}) to the client and/or server RPT file. An instruction to find your RPT files can be found [here](https://community.bistudio.com/wiki/Crash_Files#Arma_3){:target="_blank"}.
+Head over to the [ACE3 GitHub issue tracker]({{ site.ace.githubUrl }}/issues){:target="_blank"} and press the ["New Issue"]({{ site.ace.githubUrl }}/issues/new/choose){:target="_blank"} button in the top right corner. Fill out the issue template. Add a link ([gist](https://gist.github.com){:target="_blank"} or [pastebin](http://pastebin.com){:target="_blank"}) to the client and/or server RPT file. An instruction to find your RPT files can be found [here](https://community.bistudio.com/wiki/Crash_Files#Arma_3){:target="_blank"}.
 
 A short video clip of the issue might be helpful in resolving it faster.
