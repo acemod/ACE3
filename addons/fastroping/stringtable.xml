@@ -154,6 +154,7 @@
             <Chinese>讓單位快速繩降</Chinese>
             <Korean>패스트 로프를 놓음</Korean>
             <Czech>UMOŽNIT JEDNOTKÁM SLAŇOVAT</Czech>
+            <Spanish>INDICAR A LAS UNIDADES DESCENDER POR LA CUERDA</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>

@@ -14,6 +14,7 @@
             <Russian>СНАРЯЖЕНИЕ САМОЛЕТА</Russian>
             <Portuguese>LOADOUT DA AERONAVE</Portuguese>
             <Czech>VÝZBROJ LETADLA</Czech>
+            <Spanish>ARMAMENTO DE AERONAVE</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_LoadoutsFor">
             <English>Loadouts for %1</English>
@@ -28,6 +29,7 @@
             <Russian>Оснащение %1</Russian>
             <Portuguese>Loadouts para %1</Portuguese>
             <Czech>Sady výzbroje pro %1</Czech>
+            <Spanish>Armamento para %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylons">
             <English>Configure Pylons</English>
@@ -42,6 +44,7 @@
             <Russian>Настройка Пилонов</Russian>
             <Portuguese>Configurar Pylons</Portuguese>
             <Czech>Nastavit pylony</Czech>
+            <Spanish>Configurar pilones</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_Category_Pylons">
             <English>ACE Pylons</English>
@@ -56,6 +59,7 @@
             <Russian>ACE Пилоны</Russian>
             <Portuguese>ACE Pylons</Portuguese>
             <Czech>ACE Pylony</Czech>
+            <Spanish>ACE Pilones</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_Empty">
             <English>&lt;empty&gt;</English>
@@ -71,6 +75,7 @@
             <Portuguese>&lt;vazio&gt;</Portuguese>
             <Czech>&lt;prázdné&gt;</Czech>
             <Turkish>&lt;boş&gt;</Turkish>
+            <Spanish>&lt;vacío&gt;</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_BannerText">
             <English>Pylons that are colored red will have to be manually rearmed.</English>
@@ -85,6 +90,7 @@
             <Russian>Пилоны, окрашенные красным, должны быть переоборудованы вручную</Russian>
             <Portuguese>Pylons que estão coloridos de vermelho, precisarão ser rearmados manualmente.</Portuguese>
             <Czech>Pylony označené červeně budou muset být manuálně přezbrojeny.</Czech>
+            <Spanish>Pilones de color rojo deben ser rearmados manualmente.</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_InUse">
             <English>%1 is already configuring this aircraft!</English>
@@ -99,6 +105,7 @@
             <Russian>%1 уже настраивает эту авиатехнику!</Russian>
             <Portuguese>%1 já está configurando essa aeronave!</Portuguese>
             <Czech>%1 už nastavuje výzbroj tohoto letadla!</Czech>
+            <Spanish>%1 ya está configurando esta aeronave!</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_ReplacingPylon">
             <English>Replacing pylon %1 out of %2...</English>
@@ -113,6 +120,7 @@
             <Russian>Замена пилона %1 из %2...</Russian>
             <Portuguese>Substituindo pylon %1 de %2...</Portuguese>
             <Czech>Nahrazuji pylon %1 z %2...</Czech>
+            <Spanish>Reemplazando pilón %1 de %2...</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_Stopped">
             <English>Stopped at pylon %1!</English>
@@ -127,6 +135,7 @@
             <Russian>Остановлено на пилоне %1!</Russian>
             <Portuguese>Parado no pylon %1!</Portuguese>
             <Czech>Přerušeno na pylonu %1!</Czech>
+            <Spanish>Parado en pilón %1!</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_TooFar">
             <English>Vehicle too far</English>
@@ -141,6 +150,7 @@
             <Russian>Техника слишком далеко</Russian>
             <Portuguese>Veículo muito longe</Portuguese>
             <Czech>Vozidlo je příliš daleko</Czech>
+            <Spanish>Vehículo demasiado alejado</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus">
             <English>Enable Pylons Menu for Zeus</English>
@@ -154,6 +164,7 @@
             <Russian>Активировать Меню пилонов для Зевса</Russian>
             <Portuguese>Ativar Menu de Pylon para Zeus</Portuguese>
             <Czech>Povolit menu s pylony pro Zeuse</Czech>
+            <Spanish>Habilitar menú de pilones para Zeus</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledForZeus_description">
             <English>Enables use of the zeus module.</English>
@@ -167,6 +178,7 @@
             <Russian>Позволяет использовать модуль Зевса</Russian>
             <Portuguese>Permite usar o módulo de Zeus</Portuguese>
             <Czech>Povoluje použití daného Zeus modulu.</Czech>
+            <Spanish>Habilita el uso del módulo de Zeus.</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks">
             <English>Enable Pylons Menu from Ammo Trucks</English>
@@ -180,6 +192,7 @@
             <Russian>Меню пилонов из грузовика боеприпасов</Russian>
             <Portuguese>Ativar Menu de Pylons de Caminhões de Munição</Portuguese>
             <Czech>Povolit menu s pylony z muničních náklaďáků.</Czech>
+            <Spanish>Habilitar menú de pilones desde camiones de munición</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_EnabledFromAmmoTrucks_description">
             <English>Enables use of pylons menu from ammo trucks.</English>
@@ -193,6 +206,7 @@
             <Russian>Позволяет использовать меню пилонов из грузовика с боеприпасами</Russian>
             <Portuguese>Permite abrir o menu de pylons através de veículos de munição.</Portuguese>
             <Czech>Povoluje použití menu na nastavení pylonů z náklaďáků s municí.</Czech>
+            <Spanish>Habilita el uso del menú de pilones desde camiones de munición.</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_AircraftDoesntHavePylons">
             <English>This aircraft doesn't have pylons</English>
@@ -206,6 +220,7 @@
             <Russian>Эта авиатехника не имеет пилонов</Russian>
             <Portuguese>Essa aeronave não possui pylons</Portuguese>
             <Czech>Toto letadlo nemá pylony</Czech>
+            <Spanish>Esta aeronave no tiene pilones</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_ConfigurePylonsDisabledForZeus">
             <English>Configure pylons module is disabled for zeus</English>
@@ -219,6 +234,7 @@
             <Russian>Модуль Настройка пилонов отключен для Zeus</Russian>
             <Portuguese>O Módulo de configurar pylons está desativado para o Zeus</Portuguese>
             <Czech>Nastavení pylonů je vypnuto pro Zeuse</Czech>
+            <Spanish>La configuración del módulo de pilones está deshabilitada para Zeus</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons">
             <English>Rearm New Pylons</English>
@@ -233,6 +249,7 @@
             <Russian>Перевооружать новые пилоны</Russian>
             <Portuguese>Rearmar novos pylons</Portuguese>
             <Czech>Přezbrojit nové pylony</Czech>
+            <Spanish>Rearmar nuevos pilones</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_RearmNewPylons_description">
             <English>Automatically rearm new pylons from the nearest rearm vehicle.</English>
@@ -247,6 +264,7 @@
             <Russian>Автоматически перевооружать новые пилоны из ближайшей техники с боеприпасами</Russian>
             <Portuguese>Automaticamente rearmas novos pylons com o veículo de munição mais próximo</Portuguese>
             <Czech>Automaticky přezbrojit nové pylony z nejbližšího vozidla s municí.</Czech>
+            <Spanish>Rearma automáticamente nuevos pilones desde el vehículo de rearme más cercano.</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon">
             <English>Time Per Pylon</English>
@@ -261,6 +279,7 @@
             <Russian>Время на пилон</Russian>
             <Portuguese>Tempo por pylon</Portuguese>
             <Czech>Čas na pylon</Czech>
+            <Spanish>Tiempo por pilón</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
             <English>The time it takes to replace each pylon (in seconds).</English>
@@ -275,6 +294,7 @@
             <Russian>Время для замены каждого пилона (в секундах)</Russian>
             <Portuguese>O tempo necessário para substituir cada pylon (em segundos)</Portuguese>
             <Czech>Udává čas jaký trvá nahrazení každého pylonu (ve vteřinách).</Czech>
+            <Spanish>El tiempo que lleva reemplazar cada pilón (en segundos).</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance">
             <English>Search Distance</English>
@@ -289,6 +309,7 @@
             <Russian>Дальность поиска</Russian>
             <Portuguese>Distância de procura</Portuguese>
             <Czech>Vzdálenost hledání munice</Czech>
+            <Spanish>Distancia de búsqueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_SearchDistance_description">
             <English>The distance an aircraft needs to be from a rearm vehicle.</English>
@@ -303,6 +324,7 @@
             <Russian>Дальность от авиатехники до грузовика (пункта) с боеприпасами</Russian>
             <Portuguese>A distância que a aeronave precisa estar de um veículo de munições.</Portuguese>
             <Czech>Maximální vzdálenost ze které je možné letadlo přezbrojit s vozidlem s municí.</Czech>
+            <Spanish>La distancia a la que debe estar una aeronave de un vehículo de rearme.</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer">
             <English>Require Engineer</English>
@@ -317,6 +339,7 @@
             <Russian>Требуется Инженер</Russian>
             <Portuguese>Requer um engenheiro</Portuguese>
             <Czech>Vyžadovat Inženýra</Czech>
+            <Spanish>Requerir Ingeniero</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireEngineer_description">
             <English>Require an engineer.</English>
@@ -331,6 +354,7 @@
             <Russian>Требуется роль Инженера</Russian>
             <Portuguese>É necessário uma unidade definida como engenheiro para interagir com pylons.</Portuguese>
             <Czech>Vyžaduje, aby hráč byl Inženýr.</Czech>
+            <Spanish>Requerir un Ingeniero.</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit">
             <English>Require Toolkit</English>
@@ -345,6 +369,7 @@
             <Russian>Требуется Набор инструментов</Russian>
             <Portuguese>Requer Kit de Ferramentas</Portuguese>
             <Czech>Vyžadovat sadu nářadí (toolkit).</Czech>
+            <Spanish>Requerir Kit de herramientas</Spanish>
         </Key>
         <Key ID="STR_ACE_Pylons_RequireToolkit_description">
             <English>Require a toolkit in inventory.</English>
@@ -359,6 +384,7 @@
             <Russian>Требуется наличие Набора инструментов в инвентаре</Russian>
             <Portuguese>Requer um Kit de Ferramentas no inventário.</Portuguese>
             <Czech>Vyžaduje, aby hráč měl ve svém inventáři sadu nářadí (toolkit).</Czech>
+            <Spanish>Requiere un Kit de herramientas en el inventario</Spanish>
         </Key>
     </Package>
 </Project>

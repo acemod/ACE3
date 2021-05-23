@@ -178,6 +178,7 @@
             <Russian>Установить имя</Russian>
             <Portuguese>Definir Nome</Portuguese>
             <Czech>Jméno setu</Czech>
+            <Spanish>Definir nombre</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
@@ -192,6 +193,7 @@
             <Russian>Имя, которое будет использоваться для основных взаимодействий (для различения нескольких слайдов). По умолчанию: «Slides»</Russian>
             <Portuguese>Nome que será usado para a entrada principal de interação (para separar vários slideshows). Padrão: "Slides"</Portuguese>
             <Czech>Jméno, které bude použito pro hlavní interakci (pro rozlišení více prezentací). Standard: Snímky</Czech>
+            <Spanish>Nombre usado para la entrada principal de interacción (para distinguir entre diferentes diapositivas). Por defecto: "Diapositivas"</Spanish>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>

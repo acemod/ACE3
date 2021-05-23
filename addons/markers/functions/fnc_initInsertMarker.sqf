@@ -45,6 +45,8 @@
     private _aceColorLB = _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
     private _aceAngleSlider = _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE;
     private _aceAngleSliderText = _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
+    private _aceScaleSlider = _display displayctrl IDC_ACE_INSERT_MARKER_SCALE;
+    private _aceScaleSliderText = _display displayctrl IDC_ACE_INSERT_MARKER_SCALE_TEXT;
 
     private _mapDisplay = displayParent _display;
     if (isNull _mapDisplay) exitWith {ERROR("No Map");};
@@ -103,7 +105,8 @@
     private _pos = ctrlposition _text;
     _pos params ["_posX", "_posY", "_posW", "_posH"];
     _posX = _posX + 0.01;
-    _posY = _posY min ((safeZoneH + safeZoneY) - (8 * _posH + 8 * BORDER)); //prevent buttons being placed below bottom edge of screen
+    _posY = _posY min ((safeZoneH + safeZoneY) - (11 * _posH + 11 * BORDER));  //prevent buttons being placed below bottom edge of screen
+
     _pos set [0, _posX];
     _pos set [1, _posY];
     _text ctrlSetPosition _pos;
@@ -118,9 +121,9 @@
     //--- Description
     _pos set [1, _posY - 1 * _posH];
     if (GVAR(timestampEnabled)) then {
-        _pos set [3,7 * _posH + 7 * BORDER];
+        _pos set [3,9 * _posH + 9 * BORDER];
     } else {
-        _pos set [3,6 * _posH + 6 * BORDER];
+        _pos set [3,10 * _posH + 10 * BORDER];
     };
     _description ctrlEnable false;
     _description ctrlSetPosition _pos;
@@ -187,16 +190,28 @@
     _aceAngleSliderText ctrlSetPosition _pos;
     _aceAngleSliderText ctrlCommit 0;
 
+    //--- Scale
+    _pos set [1, _posY + 5 * _posH + 6 * BORDER + _timestampOffset];
+    _pos set [2, _posW];
+    _aceScaleSlider ctrlSetPosition _pos;
+    _aceScaleSlider ctrlCommit 0;
+
+    //--- Scale Text
+    _pos set [1, _posY + 6 * _posH + 7 * BORDER + _timestampOffset];
+    _pos set [2, _posW];
+    _aceScaleSliderText ctrlSetPosition _pos;
+    _aceScaleSliderText ctrlCommit 0;
+
     private _offsetButtons = 0;
 
     if (isMultiplayer) then {
-        _pos set [1,_posY + 5 * _posH + 7 * BORDER + _timestampOffset];
+        _pos set [1,_posY + 7 * _posH + 9 * BORDER + _timestampOffset];
         _pos set [3,_posH];
         _descriptionChannel ctrlSetStructuredText parseText format ["<t size='0.8'>%1:</t>", localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0"];
         _descriptionChannel ctrlSetPosition _pos;
         _descriptionChannel ctrlCommit 0;
 
-        _pos set [1,_posY + 6 * _posH + 7 * BORDER + _timestampOffset];
+        _pos set [1,_posY + 8 * _posH + 9 * BORDER + _timestampOffset];
         _pos set [3,_posH];
         _channel ctrlSetPosition _pos;
         _channel ctrlCommit 0;
@@ -235,11 +250,11 @@
 
         _channel ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedChannel)}];
 
-        _offsetButtons = 7 * _posH + 8 * BORDER;
+        _offsetButtons = 9 * _posH + 10 * BORDER;
     } else {
         _descriptionChannel ctrlShow false;
         _channel ctrlShow false;
-        _offsetButtons = 5 * _posH + 7 * BORDER;
+        _offsetButtons = 7 * _posH + 9 * BORDER;
     };
 
     //--- ButtonOK
@@ -321,4 +336,20 @@
     //Update now and add eventHandler:
     [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
     _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
+
+    ////////////////////
+    // init marker scale slider
+    _aceScaleSlider sliderSetRange [0.5, 2.0];
+
+    if !(GVAR(editingMarker) isEqualTo "") then {
+        //get the original scale
+        GVAR(currentMarkerScale) = (markerSize GVAR(editingMarker)) param [0, 1];
+    };
+
+    private _curSelScale = GETGVAR(currentMarkerScale,1);
+    _aceScaleSlider sliderSetPosition _curSelScale;
+
+    //Update now and add eventHandler:
+    [_aceScaleSlider, _curSelScale] call FUNC(onSliderPosChangedScale);
+    _aceScaleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedScale)}];
 }, _this] call CBA_fnc_execNextFrame;

@@ -61,9 +61,9 @@ class ACE_Rsc_Control_Base {
 
 #include "ACE_Settings.hpp"
 #include "define.hpp"
-#include <ProgressScreen.hpp>
-#include <HintConfig.hpp>
-#include <RscInfoType.hpp>
+#include "ProgressScreen.hpp"
+#include "HintConfig.hpp"
+#include "RscInfoType.hpp"
 #include "CompassControl.hpp"
 #include "CfgUIGrids.hpp"
 

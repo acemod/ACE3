@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, Malbryn
  * Drop a dragged object.
  *
  * Arguments:
@@ -20,7 +20,12 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // remove drop action
-[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
+[QGVAR(releaseActionID), "keydown"] call CBA_fnc_removeKeyHandler;
+
+// stop blocking
+if !(GVAR(dragAndFire)) then {
+    [_unit, "DefaultAction", _unit getVariable [QGVAR(blockFire), -1]] call EFUNC(common,removeActionEventHandler);
+};
 
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
