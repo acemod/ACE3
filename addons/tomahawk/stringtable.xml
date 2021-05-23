@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="TOMAHAWK">
+        <Key ID="STR_ACE_TOMAHAWK_vls_c">
+            <English>[ACE] Mk41 VLS [BGM-109C]</English>
+        </Key>
         <Key ID="STR_ACE_TOMAHAWK_c">
             <English>BGM-109C</English>
+        </Key>
+        <Key ID="STR_ACE_TOMAHAWK_c_description">
+            <English>Cruise missile with terrain-following capabilites and an HE warhead</English>
+        </Key>
+        <Key ID="STR_ACE_TOMAHAWK_vls_d">
+            <English>[ACE] Mk41 VLS [BGM-109D]</English>
+        </Key>
+        <Key ID="STR_ACE_TOMAHAWK_d">
+            <English>BGM-109D</English>
+        </Key>
+        <Key ID="STR_ACE_TOMAHAWK_d_description">
+            <English>Cruise missile with terrain-following capabilites and a cluster-munition warhead</English>
         </Key>
     </Package>
 </Project>

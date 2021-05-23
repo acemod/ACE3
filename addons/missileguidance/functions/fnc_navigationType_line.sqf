@@ -23,6 +23,9 @@ _navigationParams params ["_proportionalGain", "", "_derivativeGain", "_lastErro
 private _targetDistance = _projectile vectorWorldToModelVisual (_targetDir vectorMultiply _distance);
 private _relativeDirection = _projectile vectorWorldToModelVisual _targetDir;
 
+_proportionalGain = 50;
+_derivativeGain = 50;
+
 private _errorX = -1 max (1 min (_targetDistance#0 / _correctionDistance));
 private _errorY = -1 max (1 min (_targetDistance#2 / _correctionDistance));
 

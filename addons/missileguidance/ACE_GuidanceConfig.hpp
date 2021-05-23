@@ -128,6 +128,14 @@ class GVAR(SeekerTypes) {
         functionName = QFUNC(seekerType_GPS);
         onFired = QFUNC(gps_seekerOnFired);
     };
+    class TERCOM {
+        name = "";
+        visualName = "";
+        description = "";
+        
+        functionName = QFUNC(seekerType_TERCOM);
+        onFired = QFUNC(tercom_onFired);
+    };
 };
 
 class GVAR(NavigationTypes) {

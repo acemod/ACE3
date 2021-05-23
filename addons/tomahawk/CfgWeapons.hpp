@@ -1,7 +1,12 @@
 class CfgWeapons {
+    class weapon_VLS_01;
     class GVAR(c): weapon_VLS_01 {
-        displayName = "Venator Cruise Missile";
-        magazines[] = {"magazine_Missiles_Cruise_01_x18", "magazine_Missiles_Cruise_01_Cluster_x18"};
+        displayName = CSTRING(c);
+        magazines[] = { QGVAR(c) };
+    };
+    class GVAR(d): weapon_VLS_01 {
+        displayName = CSTRING(d);
+        magazines[] = { QGVAR(d) };
     };
 };
 

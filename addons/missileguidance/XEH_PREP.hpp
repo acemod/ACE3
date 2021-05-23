@@ -50,6 +50,7 @@ PREP(seekerType_Doppler);
 PREP(seekerType_MWR);
 PREP(seekerType_IR);
 PREP(seekerType_GPS);
+PREP(seekerType_TERCOM);
 
 // Attack Profiles OnFired
 PREP(wire_onFired);
@@ -62,6 +63,7 @@ PREP(doppler_onFired);
 PREP(mwr_onFired);
 PREP(IR_onFired);
 PREP(gps_seekerOnFired);
+PREP(tercom_onFired);
 
 // Navigation OnFired
 PREP(proNav_onFired);
