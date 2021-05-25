@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 /*
  * Author: Brandon (TCVM)
  * Run once per second in a PFH. Update screen effects with burn indicator.

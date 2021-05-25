@@ -35,7 +35,7 @@ if (_isBurning) exitWith {};
 [{
     // looped function
     (_this getVariable "params") params ["_unit", "", "_instigator"];
-    private _unitPos = getPos _unit;
+    private _unitPos = getPosASL _unit;
     
     _intensity = _unit getVariable [QGVAR(intensity), 0];
     
