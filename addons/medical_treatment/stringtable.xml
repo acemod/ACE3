@@ -4412,6 +4412,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
             <English>The body twitched and may not be dead!</English>
+            <Russian>Тело дернулось и, возможно, не умерло!</Russian>
             <French>L'unité a bougé et n'est peut-être pas morte !</French>
             <Japanese>身体が動き死んでないようだ!</Japanese>
             <Spanish>¡El cuerpo se retorció y puede que no esté muerto!</Spanish>
