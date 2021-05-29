@@ -26,3 +26,16 @@ class vn_mine_punji_03_ammo: vn_mine_punji_01_ammo {
         };
     };
 };
+
+
+class DirectionalBombBase;
+class vn_mine_m18_ammo: DirectionalBombBase {
+    EGVAR(Explosives,defuseObjectPosition)[] = {0, 0, 0.15};
+    EGVAR(Explosives,size) = 1;
+    EGVAR(Explosives,explosive) = "vn_mine_m18_ammo_scripted";
+};
+
+class vn_mine_m18_x3_ammo: vn_mine_m18_ammo {
+    EGVAR(Explosives,defuseObjectPosition)[] = {0, 0, 0.1};
+    EGVAR(Explosives,explosive) = "vn_mine_m18_x3_ammo_scripted";
+};
