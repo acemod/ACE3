@@ -40,3 +40,21 @@ class EXPLOSIVES_PLACE(m16): EGVAR(Explosives,Place) {
     displayName = "$STR_VN_MINE_M16_MAG_DN";
     model = "\vn\weapons_f_vietnam\mines\m16\vn_mine_m16_mag";
 };
+
+// Bounding Mine (Trip Wire 2m)
+class EXPLOSIVES_PLACE(m16_tripwire_2m): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_TRIPWIRE_M16_04_MAG_DN";
+    model = "\vn\weapons_f_vietnam\mines\m16\vn_mine_tripwire_m16_02";
+
+    class ACE_Actions: ACE_Actions {
+        class ACE_MainActions: ACE_MainActions {
+            position = "[0, 0.0093, 0.088]";
+        };
+    };
+};
+
+// Bounding Mine (Trip Wire 4m)
+class EXPLOSIVES_PLACE(m16_tripwire_4m): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_TRIPWIRE_M16_04_MAG_DN";
+    model = "\vn\weapons_f_vietnam\mines\m16\vn_mine_tripwire_m16_04";
+};

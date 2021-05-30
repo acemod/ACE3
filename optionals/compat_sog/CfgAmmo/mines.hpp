@@ -39,3 +39,7 @@ class vn_mine_m18_x3_ammo: vn_mine_m18_ammo {
     EGVAR(Explosives,defuseObjectPosition)[] = {0, 0, 0.1};
     EGVAR(Explosives,explosive) = "vn_mine_m18_x3_ammo_scripted";
 };
+
+class vn_mine_tripwire_m16_02_ammo: APERSBoundingMine_Range_Ammo {
+    EGVAR(Explosives,defuseObjectPosition)[] = {0, -0.01, 0.088};
+};

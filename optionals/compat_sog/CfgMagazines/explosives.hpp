@@ -74,3 +74,25 @@ class vn_mine_m16_mag: vn_mine_m18_mag {
         };
     };
 };
+
+class vn_mine_tripwire_m16_02_mag: vn_mine_m16_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m16_tripwire_2m);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Tripwire"};
+        class Tripwire {
+            digDistance = 0.02;
+        };
+    };
+};
+
+class vn_mine_tripwire_m16_04_mag: vn_mine_tripwire_m16_02_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m16_tripwire_4m);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Tripwire"};
+        class Tripwire {
+            digDistance = 0.02;
+        };
+    };
+};
