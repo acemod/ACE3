@@ -13,7 +13,7 @@ class vn_mine_m18_mag: vn_magazine {
         SupportedTriggers[] = {"Command", "MK16_Transmitter"};
         class Command {
             digDistance = -0.05;
-            FuseTime = 0.5;
+            fuseTime = 0.5;
         };
         class MK16_Transmitter: Command {};
     };
@@ -35,7 +35,8 @@ class vn_mine_m18_x3_mag: vn_mine_m18_mag {
     class ACE_Triggers {
         SupportedTriggers[] = {"Command", "MK16_Transmitter"};
         class Command {
-            FuseTime = 0.5;
+            digDistance = 0.02;
+            fuseTime = 0.5;
         };
         class MK16_Transmitter: Command {};
     };
@@ -45,7 +46,7 @@ class vn_mine_m18_x3_range_mag: vn_mine_m18_x3_mag {
     class ACE_Triggers {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
-            digDistance = 0.05;
+            digDistance = 0.02;
         };
     };
 };
