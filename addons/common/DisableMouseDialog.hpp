@@ -7,7 +7,7 @@ class GVAR(DisableMouse_Dialog) {
     class controlsBackground {
         // Transparent map allows setting custom cursor
         class Background: ctrlMapEmpty {
-            idc = -1;
+            idc = 101;
             fade = 1;
             x = "safezoneXAbs";
             y = "safezoneY";
