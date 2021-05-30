@@ -28,3 +28,15 @@ class EXPLOSIVES_PLACE(m18_x3): EGVAR(Explosives,Place) {
         };
     };
 };
+
+// Toe-Popper
+class EXPLOSIVES_PLACE(m14): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_M14_MAG_DN";
+    model = "\vn\weapons_f_vietnam\mines\m14\vn_mine_m14_mag";
+};
+
+// Bounding Mine
+class EXPLOSIVES_PLACE(m16): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_M16_MAG_DN";
+    model = "\vn\weapons_f_vietnam\mines\m16\vn_mine_m16_mag";
+};

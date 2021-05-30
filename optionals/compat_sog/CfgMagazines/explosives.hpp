@@ -50,3 +50,27 @@ class vn_mine_m18_x3_range_mag: vn_mine_m18_x3_mag {
         };
     };
 };
+
+// Toe-Popper
+class vn_mine_m14_mag: vn_mine_m18_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m14);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0.001;
+        };
+    };
+};
+
+// Bounding Mine
+class vn_mine_m16_mag: vn_mine_m18_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m16);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0.02;
+        };
+    };
+};
