@@ -157,7 +157,7 @@
     "SLIDER",
     [LSTRING(MinBloodPAK_DisplayName), LSTRING(MinBloodPAK_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [0, 100, 85, 0],
+    [0, 1, 0.85, 0],
     true
 ] call CBA_fnc_addSetting;
 
