@@ -29,13 +29,24 @@ if (GET_BLOOD_VOLUME(_unit) < _requiredBloodVolume) exitWith {false};
 if (EGVAR(medical_treatment,allowPainPAK) == 0 && { IS_IN_PAIN(_unit) }) exitWith {false};
 if (EGVAR(medical_treatment,allowFracturesPAK) == 0 && { !(GET_FRACTURES(_unit) isEqualTo []) }) exitWith {false};
 
-// Require at least bandaged wounds.
-if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1) then {
+
+// Handle requiring at least bandaged wounds.
+private _hasUnbandagedWounds = false;
+
+if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1) then
+ {
     _openWounds = GET_OPEN_WOUNDS(_unit);
     {
-        if(_x select 2 > 0) exitWith {false};
+        if(_x select 2 > 0) then
+        {
+            _hasUnbandagedWounds = true;
+            exitWith { false };
+        };
+
     } forEach _openWounds;
 };
+
+if(_hasUnbandagedWounds) exitWith { false };
 
 
 // Require stitched wounds.
