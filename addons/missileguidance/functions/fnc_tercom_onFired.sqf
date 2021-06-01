@@ -19,7 +19,7 @@ _firedEH params ["","","","","","","_projectile"];
 _stateParams params ["", "_seekerStateParams"];
 
 // need a number that denotes maximum grid width at specified resolution
-// 3 grid cells in either direction
+// 5 grid cells in either direction
 #define MAX_GRID_WIDTH 5
 
 private _minResolution = 50;
@@ -64,7 +64,7 @@ private _maxWaypoints = (count _waypoints) - 1;
             _firstHeightmapCell pushBack [_gridPos#0, _gridPos#1, _heightAtPos];
             _gridPos = _gridPos vectorAdd (_direction vectorMultiply _resolution);
         };
-        _heightmap pushBack [_firstHeightmapCell, _resolution * MAX_GRID_WIDTH];
+        _heightmap pushBack [_firstHeightmapCell, _resolution * MAX_GRID_WIDTH, _resolution, MAX_GRID_WIDTH, _x];
     };
 
 } forEach _waypoints;
@@ -86,9 +86,11 @@ private _maxWaypoints = (count _waypoints) - 1;
 } forEach _waypoints;
 
 _seekerStateParams set [0, []]; // internal buffer of heights
-_seekerStateParams set [1, getPosASLVisual _projectile]; // calculated current position - simulating INS guidance
-_seekerStateParams set [2, TERCOM_STATE_SEEKING_BASKET]; // current state
-_seekerStateParams set [3, 0]; // current waypoint
-_seekerStateParams set [4, _waypoints];
-_seekerStateParams set [5, _heightmap];
+_seekerStateParams set [1, []]; // Height strips
+_seekerStateParams set [2, [0, 0, 0]]; // Last assumed grid position
+_seekerStateParams set [3, getPosASLVisual _projectile]; // calculated current position - simulating INS guidance
+_seekerStateParams set [4, TERCOM_STATE_SEEKING_BASKET]; // current state
+_seekerStateParams set [5, 0]; // current waypoint
+_seekerStateParams set [6, _waypoints];
+_seekerStateParams set [7, _heightmap];
 

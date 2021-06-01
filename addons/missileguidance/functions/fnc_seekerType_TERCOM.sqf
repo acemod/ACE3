@@ -21,7 +21,7 @@
 params ["", "_args", "_seekerStateParams", "", "_timestep"];
 _args params ["_firedEH", "_launchParams", "", "", "", "_targetData"];
 _firedEH params ["","","","","","","_projectile"];
-_seekerStateParams params ["_heightBuffer", "_insPosition", "_seekerState", "_currentWaypoint", "_waypoints", "_heightmap"];
+_seekerStateParams params ["_heightBuffer", "_heightStrip", "_lastMeasurePos", "_insPosition", "_seekerState", "_currentWaypoint", "_waypoints", "_heightmap"];
 _launchParams params ["", "_targetLaunchParams"];
 _targetLaunchParams params ["", "", "_launchPos"];
 
@@ -48,13 +48,53 @@ switch (_seekerState) do {
         _targetData set [2, _distance];
         _finalPosition = _missilePosProjected;
 
-        (_heightmap select 0) params ["", "_resolution"];
-        if (_insPosition inArea [_position, _resolution, _resolution, (_direction#0) atan2 (_direction#1), true]) then {
-            _seekerStateParams set [2, TERCOM_STATE_FOLLOWING_TERRAIN];
+        (_heightmap select 0) params ["", "_gridSize"];
+        if (_insPosition inArea [_position, _gridSize, _gridSize, (_direction#0) atan2 (_direction#1), true]) then {
+            _seekerStateParams set [4, TERCOM_STATE_FOLLOWING_TERRAIN];
+            _seekerStateParams set [2, _insPosition];
         };
     };
     case TERCOM_STATE_FOLLOWING_TERRAIN: {
+        (_heightmap select _currentWaypoint) params ["_grid", "_gridSize", "_cellResolution", "_gridWidth", "_gridHeight"];
+
         // just brute force it, we won't usually have a lot of grids to check
+        if (_insPosition vectorDistance _lastMeasurePos < _cellResolution) then {
+            _heightBuffer pushBack getTerrainHeightASL _insPosition;
+        } else {
+            private _averageHeight = 0;
+            {
+                _averageHeight = _averageHeight + _x;
+            } forEach _heightBuffer;
+            _averageHeight = _averageHeight / count _heightBuffer;
+            _heightStrip pushBack _averageHeight;
+            
+            // find all strips in heightmap that match the direction we are moving
+            // Start from edge and go in
+            // Match strip to what we found that best fits
+
+            private _direction = _insPosition vectorFromTo _lastMeasurePos;
+
+            private _possibleStrips = [];
+            private _xDir = 0;
+            if ((_direction select 0) < 0) then {
+                _xDir = -1;
+            } else {
+                _xDir = 1;
+            };
+
+            private _yDir = 0;
+            if ((_direction select 2) < 0) then {
+                _yDir = -1;
+            } else {
+                _yDir = 1;
+            };
+
+            _heightBuffer = [];
+            _seekerStateParams set [1, _heightStrip];
+            _seekerStateParams set [2, _insPosition];
+        };
+
+        _seekerStateParams set [0, _heightBuffer];
     };
     case TERCOM_STATE_TERMINAL: {
 
@@ -65,7 +105,7 @@ if (!isGamePaused && accTime > 0) then {
     private _projectileVelocity = velocity _projectile;
     _insPosition = _insPosition vectorAdd (_projectileVelocity vectorMultiply _timestep);
 
-    _seekerStateParams set [1, _insPosition];
+    _seekerStateParams set [3, _insPosition];
 };
 
 _finalPosition
