@@ -46,7 +46,7 @@ class vn_mine_tripwire_m16_02_ammo: APERSBoundingMine_Range_Ammo {
 
 class APERSTripMine_Wire_Ammo;
 class vn_mine_tripwire_f1_02_ammo: APERSTripMine_Wire_Ammo {
-    EGVAR(Explosives,defuseObjectPosition)[] = {0, 0.011, 0.18};
+    EGVAR(Explosives,defuseObjectPosition)[] = {0, -0.01, 0.18};
 };
 
 class vn_mine_tripwire_arty_ammo: vn_mine_tripwire_f1_02_ammo {
