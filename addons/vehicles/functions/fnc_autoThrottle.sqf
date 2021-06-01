@@ -71,3 +71,4 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
     _args set [2, _autothrottleParameters];
 
 }, 0, [_driver, _vehicle, [0, 0]]] call CBA_fnc_addPerFrameHandler;
+
