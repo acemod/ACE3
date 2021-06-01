@@ -31,6 +31,7 @@ if (GVAR(isSpeedLimiter)) exitWith {
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
+// Convert forward speed to KM/H. `speed _vehicle` isnt accurate enough for this controller to work well, so its easier to use M/S. The system assumes it is KM/H so we need the conversion
 GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
 
 [{
@@ -47,8 +48,10 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
     };
 
     private _forwardVelocity = (velocityModelSpace _vehicle) select 1;
+    // convert from KM/H to M/S
     private _velocityError = (GVAR(speedLimit) / 3.6) - _forwardVelocity;
 
+    // strictly speaking this would work better if this error was time to zero acceleration. I can't find the acceleration values in config, however, so this works instead
     private _errorDiff = _velocityError - _lastVelocity;
 
     private _p = PID_P * _velocityError;
@@ -58,6 +61,7 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
     private _outputBeforeSaturation = _p + _i + _d;
     private _throttle = 0 max (_outputBeforeSaturation min 1);
 
+    // if we are saturated, we clamp the integral value to avoid integral windup
     if (_outputBeforeSaturation != _throttle) then {
         // saturated
         _i = _integralValue;
