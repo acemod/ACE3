@@ -104,3 +104,7 @@ class vn_mine_tripwire_f1_02_mag: vn_mine_tripwire_m16_02_mag {
 class vn_mine_tripwire_f1_04_mag: vn_mine_tripwire_f1_02_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(f1_tripwire_4m);
 };
+
+class vn_mine_tripwire_arty_mag: vn_mine_tripwire_m16_02_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(arty_tripwire_4m);
+};
