@@ -86,3 +86,21 @@ class EXPLOSIVES_PLACE(arty_tripwire_4m): EGVAR(Explosives,Place) {
         };
     };
 };
+
+// Satchel Charge
+class EXPLOSIVES_PLACE(satchel_remote_02): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_SATCHEL_REMOTE_02_MAG_DN";
+    model = "\vn\characters_f_vietnam\OPFOR\vests\items\vn_mine_satchel_02.p3d";
+};
+
+// TM57 Anti-Tank Mine
+class EXPLOSIVES_PLACE(tm57): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_TM57_MAG_DN";
+    model = "vn\weapons_f_vietnam\mines\tm57\vn_mine_tm57_mag";
+};
+
+// M15 Anti-Tank Mine
+class EXPLOSIVES_PLACE(m15): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_M15_MAG_DN";
+    model = "vn\weapons_f_vietnam\mines\m15\vn_mine_m15_mag";
+};

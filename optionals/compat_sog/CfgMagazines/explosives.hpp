@@ -108,3 +108,39 @@ class vn_mine_tripwire_f1_04_mag: vn_mine_tripwire_f1_02_mag {
 class vn_mine_tripwire_arty_mag: vn_mine_tripwire_m16_02_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(arty_tripwire_4m);
 };
+
+class vn_mine_satchel_remote_02_mag: vn_mine_m18_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(satchel_remote_02);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+        class Timer {
+            fuseTime = 0.5;
+        };
+        class Command {
+            fuseTime = 0.5;
+        };
+        class MK16_Transmitter: Command {};
+        class DeadmanSwitch: Command {};
+    };
+};
+
+class vn_mine_tm57_mag: vn_mine_m18_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(tm57);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {};
+    };
+};
+
+class vn_mine_m15_mag: vn_mine_tm57_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m15);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            digDistance = 0.03;
+        };
+    };
+};
