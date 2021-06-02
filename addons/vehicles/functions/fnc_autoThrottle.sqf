@@ -38,6 +38,8 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
     params ["_args", "_idPFH"];
     _args params ["_driver", "_vehicle", "_autothrottleParameters"];
     _autothrottleParameters params ["_lastVelocity", "_integralValue", "_lastTime"];
+
+    // this will take into account game being pausesd
     private _deltaTime = CBA_missionTime - _lastTime;
 
     if (_driver != driver _vehicle) then {
