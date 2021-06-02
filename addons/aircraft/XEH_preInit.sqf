@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 if (hasInterface) then {
     ["CBA_settingsInitialized", {
         private _ejectAction = configFile >> "CfgActions" >> "Eject";
