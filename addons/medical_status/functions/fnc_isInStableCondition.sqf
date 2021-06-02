@@ -40,7 +40,7 @@ if (EGVAR(medical_treatment,requiredWoundStatePAK) == 1) then
         if(_x select 2 > 0) then
         {
             _hasUnbandagedWounds = true;
-            exitWith { false };
+            break;
         };
 
     } forEach _openWounds;
