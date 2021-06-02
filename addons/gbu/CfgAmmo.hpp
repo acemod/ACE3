@@ -21,8 +21,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL" };
 
-            defaultNavigationType = "LineOfSight";
-            navigationTypes[] = { "LineOfSight" };
+            defaultNavigationType = "ProportionalNavigation";
+            navigationTypes[] = { "ProportionalNavigation" };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 60;           // Angle from the shooter's view that can track the missile
@@ -48,6 +48,7 @@ class CfgAmmo {
             yawRate = 8;
 
             bangBangGuidance = 1;
+            stabilityCoefficient = 0.4; // how much this projectile likes to "weathervane" (keep direction toward velocity)
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -58,8 +59,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL" };
 
-            defaultNavigationType = "LineOfSight";
-            navigationTypes[] = { "LineOfSight" };
+            defaultNavigationType = "ProportionalNavigation";
+            navigationTypes[] = { "ProportionalNavigation" };
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 60;           // Angle from the shooter's view that can track the missile
