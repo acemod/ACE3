@@ -75,6 +75,7 @@ class vn_mine_m16_mag: vn_mine_m18_mag {
     };
 };
 
+// Bounding Mine (Trip Wire 2m)
 class vn_mine_tripwire_m16_02_mag: vn_mine_m16_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m16_tripwire_2m);
 
@@ -85,7 +86,7 @@ class vn_mine_tripwire_m16_02_mag: vn_mine_m16_mag {
         };
     };
 };
-
+// Bounding Mine (Trip Wire 4m)
 class vn_mine_tripwire_m16_04_mag: vn_mine_tripwire_m16_02_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m16_tripwire_4m);
 
@@ -97,18 +98,21 @@ class vn_mine_tripwire_m16_04_mag: vn_mine_tripwire_m16_02_mag {
     };
 };
 
+// F1 (Trip Wire 2m)
 class vn_mine_tripwire_f1_02_mag: vn_mine_tripwire_m16_02_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(f1_tripwire_2m);
 };
-
+// F1 (Trip Wire 4m)
 class vn_mine_tripwire_f1_04_mag: vn_mine_tripwire_f1_02_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(f1_tripwire_4m);
 };
 
+// Arty Shell (Trip Wire 4m)
 class vn_mine_tripwire_arty_mag: vn_mine_tripwire_m16_02_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(arty_tripwire_4m);
 };
 
+// Satchel Charge
 class vn_mine_satchel_remote_02_mag: vn_mine_m18_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(satchel_remote_02);
 
@@ -125,6 +129,7 @@ class vn_mine_satchel_remote_02_mag: vn_mine_m18_mag {
     };
 };
 
+// TM57 Anti-Tank Mine
 class vn_mine_tm57_mag: vn_mine_m18_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(tm57);
 
@@ -134,6 +139,7 @@ class vn_mine_tm57_mag: vn_mine_m18_mag {
     };
 };
 
+// M15 Anti-Tank Mine
 class vn_mine_m15_mag: vn_mine_tm57_mag {
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m15);
 
@@ -143,4 +149,26 @@ class vn_mine_m15_mag: vn_mine_tm57_mag {
             digDistance = 0.03;
         };
     };
+};
+
+// Punji large
+class vn_mine_punji_01_mag: vn_mine_m18_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_01);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"PressurePlate"};
+        class PressurePlate {
+            displayName = CSTRING(Action_DigIn);
+        };
+    };
+};
+
+// Punji small
+class vn_mine_punji_02_mag: vn_mine_punji_01_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_02);
+};
+
+// Punji whip
+class vn_mine_punji_03_mag: vn_mine_punji_01_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(punji_03);
 };

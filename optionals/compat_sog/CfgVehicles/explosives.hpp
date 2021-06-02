@@ -75,7 +75,7 @@ class EXPLOSIVES_PLACE(f1_tripwire_4m): EXPLOSIVES_PLACE(f1_tripwire_2m) {
     model = "\vn\weapons_f_vietnam\mines\tripwire_f1\vn_mine_tripwire_f1_04";
 };
 
-// Arty Shell (Trip Wire)
+// Arty Shell (Trip Wire 4m)
 class EXPLOSIVES_PLACE(arty_tripwire_4m): EGVAR(Explosives,Place) {
     displayName = "$STR_VN_MINE_TRIPWIRE_ARTY_MAG_DN";
     model = "\vn\weapons_f_vietnam\mines\tripwire_arty\vn_mine_tripwire_arty";
@@ -103,4 +103,22 @@ class EXPLOSIVES_PLACE(tm57): EGVAR(Explosives,Place) {
 class EXPLOSIVES_PLACE(m15): EGVAR(Explosives,Place) {
     displayName = "$STR_VN_MINE_M15_MAG_DN";
     model = "vn\weapons_f_vietnam\mines\m15\vn_mine_m15_mag";
+};
+
+// Punji large
+class EXPLOSIVES_PLACE(punji_01): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_PUNJI_01_MAG_DN";
+    model = "\vn\weapons_f_vietnam\mines\punji\vn_mine_punji_01_mag";
+};
+
+// Punji small
+class EXPLOSIVES_PLACE(punji_02): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_PUNJI_01_MAG_DN";
+    model = "\vn\weapons_f_vietnam\mines\punji\vn_mine_punji_02_mag";
+};
+
+// Punji whip
+class EXPLOSIVES_PLACE(punji_03): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_PUNJI_01_MAG_DN";
+    model = "\vn\weapons_f_vietnam\mines\punji\vn_mine_punji_03_mag";
 };
