@@ -53,3 +53,8 @@ class vn_mine_tripwire_f1_02_ammo: APERSTripMine_Wire_Ammo {
 class vn_mine_tripwire_arty_ammo: vn_mine_tripwire_f1_02_ammo {
     EGVAR(Explosives,defuseObjectPosition)[] = {0, -0.01, 0.126};
 };
+
+class DemoCharge_Remote_Ammo;
+class vn_mine_m112_remote_ammo: DemoCharge_Remote_Ammo {
+    EGVAR(Explosives,defuseObjectPosition)[] = {0, 0.22, 0.75};
+};

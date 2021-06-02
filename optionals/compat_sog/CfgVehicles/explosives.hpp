@@ -105,6 +105,12 @@ class EXPLOSIVES_PLACE(m15): EGVAR(Explosives,Place) {
     model = "vn\weapons_f_vietnam\mines\m15\vn_mine_m15_mag";
 };
 
+// M112 Breaching charge
+class EXPLOSIVES_PLACE(m112): EGVAR(Explosives,Place) {
+    displayName = "$STR_VN_MINE_M112_REMOTE_MAG_DN";
+    model = "\vn\weapons_f_vietnam\mines\m112\vn_mine_m112_mag";
+};
+
 // Punji large
 class EXPLOSIVES_PLACE(punji_01): EGVAR(Explosives,Place) {
     displayName = "$STR_VN_MINE_PUNJI_01_MAG_DN";

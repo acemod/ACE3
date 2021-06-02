@@ -114,6 +114,7 @@ class vn_mine_tripwire_arty_mag: vn_mine_tripwire_m16_02_mag {
 
 // Satchel Charge
 class vn_mine_satchel_remote_02_mag: vn_mine_m18_mag {
+    useAction = 0;
     EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(satchel_remote_02);
 
     class ACE_Triggers {
@@ -148,6 +149,25 @@ class vn_mine_m15_mag: vn_mine_tm57_mag {
         class PressurePlate {
             digDistance = 0.03;
         };
+    };
+};
+
+// M112 Breaching charge
+class vn_mine_m112_remote_mag: vn_mine_m18_mag {
+    EGVAR(Explosives,SetupObject) = QEXPLOSIVES_PLACE(m112);
+
+    class ACE_Triggers {
+        SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
+        class Timer {
+            fuseTime = 0.5;
+            digDistance = 1;
+        };
+        class Command {
+            fuseTime = 0.5;
+            digDistance = 1
+        };
+        class MK16_Transmitter: Command {};
+        class DeadmanSwitch: Command {};
     };
 };
 
