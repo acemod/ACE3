@@ -37,7 +37,8 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
 [{
     params ["_args", "_idPFH"];
     _args params ["_driver", "_vehicle", "_autothrottleParameters"];
-    _autothrottleParameters params ["_lastVelocity", "_integralValue"];
+    _autothrottleParameters params ["_lastVelocity", "_integralValue", "_lastTime"];
+    private _deltaTime = CBA_missionTime - _lastTime;
 
     if (_driver != driver _vehicle) then {
         GVAR(isSpeedLimiter) = false;
@@ -47,6 +48,8 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
+    if (_deltaTime == 0) exitWith {};
+
     private _forwardVelocity = (velocityModelSpace _vehicle) select 1;
     // convert from KM/H to M/S
     private _velocityError = (GVAR(speedLimit) / 3.6) - _forwardVelocity;
@@ -55,8 +58,8 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
     private _errorDiff = _velocityError - _lastVelocity;
 
     private _p = PID_P * _velocityError;
-    private _i = _integralValue + (PID_I * _errorDiff * diag_deltaTime);
-    private _d = PID_D * _errorDiff / diag_deltaTime;
+    private _i = _integralValue + (PID_I * _errorDiff * _deltaTime);
+    private _d = PID_D * _errorDiff / _deltaTime;
 
     private _outputBeforeSaturation = _p + _i + _d;
     private _throttle = 0 max (_outputBeforeSaturation min 1);
@@ -72,7 +75,8 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
 
     _autothrottleParameters set [0, _d];
     _autothrottleParameters set [1, _i];
+    _autothrottleParameters set [2, CBA_missionTime];
     _args set [2, _autothrottleParameters];
 
-}, 0, [_driver, _vehicle, [0, 0]]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_driver, _vehicle, [0, 0, CBA_missionTime]]] call CBA_fnc_addPerFrameHandler;
 
