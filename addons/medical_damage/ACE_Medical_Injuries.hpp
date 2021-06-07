@@ -79,19 +79,22 @@ class ACE_Medical_Injuries {
     };
 
     class damageTypes {
-        // thresholds[] {{<min damage>, <max number of wounds>}, {...}}
+        // thresholds[] {{<damage>, <number of wounds>}, {...}}
+        // if damage is between two points, number is interpolated and then rounded by chance based on the decimal part
+        // e.g. a value of 2.7 has 70% chance to give 3 and 30% to give 2
+        // put damage values in descending order; uses the first value found that is below the wound damage, and the point immediately before that
         thresholds[] = {{0.1, 1}};
+
+        // if 1, wounds are only applied to the hitpoint that took the most damage. othewrise, wounds are applied to all damaged hitpoints
         selectionSpecific = 1;
+        
+        // this can also be overridden for each damage type
         woundsHandler = QFUNC(woundsHandlerActive);
 
         class bullet {
-            // at damage, number of wounds. if damage is between two points, number is interpolated and then rounded by chance based on the decimal part
-            // e.g. a value of 2.7 has 70% chance to give 3 and 30% to give 2
-            // put damage values in descending order; uses the first value found that is below the wound damage, and the point immediately before that
             thresholds[] = {{0.1, 1}};
             selectionSpecific = 1;
-            // woundsHandler = QFUNC(woundsHandlerActive); // used to override handling for specific wound types
-
+            
             class Avulsion {
                 // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
                 // as with thresholds, but result is not rounded (decimal values used as-is)
