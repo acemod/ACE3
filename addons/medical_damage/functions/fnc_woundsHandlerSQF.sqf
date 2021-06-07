@@ -65,7 +65,7 @@ for "_i" from 1 to _nWounds do {
     private _woundClassIDToAdd = GVAR(woundClassNames) find _woundTypeToAdd;
     
     // Add a bit of random variance to wounds
-    private _woundDamage = _dmgPerWound * random [0.9, 1, 1.1];
+    private _woundDamage = _dmgPerWound * _dmgMultiplier * random [0.9, 1, 1.1];
 
     _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
     _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
