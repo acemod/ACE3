@@ -13,7 +13,7 @@
  * Interpolated result <NUMBER>
  *
  * Example:
- * [0.2, [[1,0], [0.5,1], [0,0]]] call ace_medical_damage_fnc_woundReceived
+ * [0.2, [[1,0], [0.5,1], [0,0]]] call ace_medical_damage_fnc_interpolatePoints
  *
  * Public: No
  */
@@ -21,6 +21,7 @@ params ["_input", "_points", ["_randomRound", false]];
 
 if (count _points < 1) exitwith {
 	//TODO: sensible default/error value
+	0
 };
 if (count _points == 1) exitwith {_points select 0 select 1};
 
