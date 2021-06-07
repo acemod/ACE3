@@ -60,7 +60,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 for "_i" from 1 to _nWounds do {
 
     // Select the injury we are going to add
-    selectRandomWeighted _weightedWoundTypes params ["_woundTypeToAdd", "", "_dmgMultiplier", "_bleedMultiplier", "_sizeMultiplier"];
+    selectRandomWeighted _weightedWoundTypes params ["_woundTypeToAdd", "", "_dmgMultiplier", "_bleedMultiplier", "_sizeMultiplier", "_painMultiplier", "_fractureMultiplier"];
     GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","","_causeLimping","_causeFracture"];
     private _woundClassIDToAdd = GVAR(woundClassNames) find _woundTypeToAdd;
     
@@ -78,8 +78,7 @@ for "_i" from 1 to _nWounds do {
     // Worse wound correlates to higher damage, damage is not capped at 1
     private _woundSize = linearConversion [0.1, _worstDamage, _woundDamage * _sizeMultiplier, 0.25, 1, true];
     
-    private _painModifier = (_woundSize * random [0.7, 1, 1.3]) min 1; // Pain isn't directly scaled to bleeding
-    private _pain = _injuryPain * _painModifier;
+    private _pain = _woundSize * _painMultiplier * _injuryPain;
     _painLevel = _painLevel + _pain;
 
     private _bleeding = _woundSize * _bleedMultiplier * _injuryBleedingRate;
@@ -112,7 +111,7 @@ for "_i" from 1 to _nWounds do {
             && {EGVAR(medical,fractures) > 0}
             && {_bodyPartNToAdd > 1}
             && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}
-            && {random 1 < EGVAR(medical,fractureChance)}
+            && {random 1 < (_fractureMultiplier * EGVAR(medical,fractureChance))}
         ): {
             private _fractures = GET_FRACTURES(_unit);
             _fractures set [_bodyPartNToAdd, 1];

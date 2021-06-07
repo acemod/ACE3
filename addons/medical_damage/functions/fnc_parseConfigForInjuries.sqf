@@ -114,7 +114,9 @@ private _woundsHandlerDefault = getText (_damageTypesConfig >> "woundsHandler");
                 private _dmgMulti = GET_NUMBER(_x >> "damageMultiplier", 1);
                 private _bleedMulti = GET_NUMBER(_x >> "bleedingMultiplier", 1);
                 private _sizeMulti = GET_NUMBER(_x >> "sizeMultiplier", 1);
-                _damageWoundDetails pushBack [_woundType, _weighting, _dmgMulti, _bleedMulti, _sizeMulti];
+                private _painMulti = GET_NUMBER(_x >> "painMultiplier", 1);
+                private _fractureMulti = GET_NUMBER(_x >> "fractureMultiplier", 1);
+                _damageWoundDetails pushBack [_woundType, _weighting, _dmgMulti, _bleedMulti, _sizeMulti, _painMulti, _fractureMulti];
             } else {
                 WARNING_2("Damage type %1 refers to wound %2, but it doesn't exist: skipping.",_className,className _x);
             };

@@ -98,6 +98,8 @@ class ACE_Medical_Injuries {
                 damageMultiplier = 1;
                 bleedingMultiplier = 1;
                 sizeMultiplier = 1;
+                painMultiplier = 1;
+                fractureMultiplier = 1;
             };
             class VelocityWound {
                 weighting[] = {{0.35, 1}, {0.35, 0}};
