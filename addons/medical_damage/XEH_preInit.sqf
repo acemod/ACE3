@@ -25,11 +25,6 @@ addMissionEventHandler ["Loaded",{
     DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandlerSQF);
 // };
 
-[QEGVAR(medical,woundReceived), {
-    params ["_unit", "_woundedHitPoint", "_receivedDamage", "", "_ammo", "_damageSelectionArray"];
-
-    private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
-    [_unit, _woundedHitPoint, _receivedDamage, _typeOfDamage, _damageSelectionArray] call FUNC(woundsHandlerActive);
-}] call CBA_fnc_addEventHandler;
+[QEGVAR(medical,woundReceived), FUNC(woundReceived)] call CBA_fnc_addEventHandler;
 
 ADDON = true;

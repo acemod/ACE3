@@ -99,7 +99,8 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     ];
 
     _allDamages sort false;
-    (_allDamages select 0) params ["", "_receivedDamage", "", "_woundedHitPoint"];
+    _allDamages = _allDamages apply {[_x select 1, _x select 3]};
+    (_allDamages select 0) params ["_receivedDamage", "_woundedHitPoint"];
     private _receivedDamageHead = _damageHead select 1;
     if (_receivedDamageHead >= HEAD_DAMAGE_THRESHOLD) then {
         TRACE_3("reporting fatal head damage instead of max",_receivedDamageHead,_receivedDamage,_woundedHitPoint);
@@ -171,7 +172,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     // No wounds for minor damage
     if (_receivedDamage > 1E-3) then {
         TRACE_3("received",_receivedDamage,_woundedHitPoint,_damageSelectionArray);
-        [QEGVAR(medical,woundReceived), [_unit, _woundedHitPoint, _receivedDamage, _shooter, _ammo, _damageSelectionArray]] call CBA_fnc_localEvent;
+        [QEGVAR(medical,woundReceived), [_unit, _allDamages, _shooter, _ammo, _damageSelectionArray]] call CBA_fnc_localEvent;
     };
 
     // Clear stored damages otherwise they will influence future damage events
@@ -194,7 +195,7 @@ if (
     {getOxygenRemaining _unit <= 0.5} &&
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
-    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "drowning", [HITPOINT_INDEX_BODY, 1]]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [_newDamage, "Body"], _unit, "drowning", [HITPOINT_INDEX_BODY, 1]]] call CBA_fnc_localEvent;
     TRACE_5("Drowning",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
@@ -215,7 +216,7 @@ if (
         HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1,
         HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1
     ];
-    [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [_newDamage, "Body"], _unit, "vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
 
     0
