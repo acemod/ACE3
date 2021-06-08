@@ -195,8 +195,8 @@ if (
     {getOxygenRemaining _unit <= 0.5} &&
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
-    [QEGVAR(medical,woundReceived), [_unit, [_newDamage, "Body"], _unit, "drowning", [HITPOINT_INDEX_BODY, 1]]] call CBA_fnc_localEvent;
     TRACE_5("Drowning",_unit,_shooter,_instigator,_damage,_newDamage);
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, "Body"]], _unit, "drowning", [HITPOINT_INDEX_BODY, 1]]] call CBA_fnc_localEvent;
 
     0
 };
@@ -216,8 +216,10 @@ if (
         HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1,
         HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1
     ];
-    [QEGVAR(medical,woundReceived), [_unit, [_newDamage, "Body"], _unit, "vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
+    //TODO: this should probably be spread between hitpoints, or just sent to a random one
+    private _hitPart = selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPart]], _unit, "vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
 
     0
 };

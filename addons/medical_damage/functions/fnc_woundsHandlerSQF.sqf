@@ -34,6 +34,7 @@ if ((_typeOfDamage isEqualTo "") || {isNil {GVAR(allDamageTypesData) getVariable
 GVAR(damageTypeDetails) get _typeOfDamage params ["_thresholds", "", "", "_damageWoundDetails"];
 // determine how many wounds to create
 private _nWounds = [_damage, _thresholds, true] call FUNC(interpolatePoints);
+if (_nWounds < 1) exitwith {TRACE_2("Damage created zero wounds",_damage,_typeOfDamage);};
 private _dmgPerWound = _damage/_nWounds;
 
 // find the available injuries for this damage type and damage amount
@@ -158,7 +159,6 @@ for "_i" from 1 to _nWounds do {
         _openWounds pushBack _injury;
     };
 };
-// };
 
 if (_updateDamageEffects) then {
     [_unit] call EFUNC(medical_engine,updateDamageEffects);

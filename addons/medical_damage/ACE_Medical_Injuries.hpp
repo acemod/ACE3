@@ -99,14 +99,16 @@ class ACE_Medical_Injuries {
                 // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
                 // as with thresholds, but result is not rounded (decimal values used as-is)
                 weighting[] = {{0.01, 1}, {0.01, 0}};
-            };
-            class Contusion {
-                weighting[] = {{0.35, 0}, {0.35, 1}};
+                /*
                 damageMultiplier = 1;
                 sizeMultiplier = 1;
                 bleedingMultiplier = 1;
                 painMultiplier = 1;
                 fractureMultiplier = 1;
+                */
+            };
+            class Contusion {
+                weighting[] = {{0.35, 0}, {0.35, 1}};
             };
             class VelocityWound {
                 weighting[] = {{0.35, 1}, {0.35, 0}};
@@ -151,7 +153,7 @@ class ACE_Medical_Injuries {
             };
         };
         class shell {
-            thresholds[] = {{1, 7}, {1, 5, {0.1, 5}, {0.1, 1}};
+            thresholds[] = {{1, 7}, {1, 5}, {0.1, 5}, {0.1, 1}};
             selectionSpecific = 0;
             class Avulsion {
                 weighting[] = {{0.01, 1}, {0.01, 0}};
@@ -250,7 +252,7 @@ class ACE_Medical_Injuries {
             };
         };
         class falling {
-            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1},| {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
+            thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
             class Abrasion {
                 weighting[] = {{0.30, 0}, {0.30, 1}};
