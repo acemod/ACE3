@@ -20,8 +20,8 @@
 params ["_input", "_points", ["_randomRound", false]];
 
 if (count _points < 1) exitwith {
-	//TODO: sensible default/error value
-	0
+    //TODO: sensible default/error value
+    0
 };
 if (count _points == 1) exitwith {_points select 0 select 1};
 
@@ -34,12 +34,12 @@ _lower = _points select _lower;
 _output = linearConversion [_lower select 0, _upper select 0, _input, _lower select 1, _upper select 1, true];
 
 if (_randomRound) then {
-	_chanceCeil = _output - floor _output;
-	if (_chanceCeil > random 1) then {
-		_output = ceil _output;
-	} else {
-		_output = floor _output;
-	};
+    _chanceCeil = _output - floor _output;
+    if (_chanceCeil > random 1) then {
+        _output = ceil _output;
+    } else {
+        _output = floor _output;
+    };
 };
 
 _output //return
