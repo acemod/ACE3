@@ -282,6 +282,21 @@ class ACE_Medical_Injuries {
             //No related wounds as drowning should not cause wounds/bleeding. Can be extended for internal injuries if they are added.
             thresholds[] = {{0, 0}};
         };
+        class burning {
+            //TODO: burning damage used to be type 'unknown' so this is a copy-paste of that
+            thresholds[] = {{0.1, 1}, {0.1, 0}};
+            selectionSpecific = 0;
+            woundsHandler = QFUNC(woundsHandlerBurning);
+            class Abrasion {
+                weighting[] = {{0.30, 0}, {0.30, 1}};
+            };
+            class Cut {
+                weighting[] = {{0.1, 1}, {0.1, 0}};
+            };
+            class VelocityWound {
+                weighting[] = {{0.35, 1}, {0.35, 0}};
+            };
+        };
         class unknown {
             thresholds[] = {{0.1, 1}, {0.1, 0}};
             class Abrasion {

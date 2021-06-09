@@ -5,4 +5,5 @@ PREP(interpolatePoints);
 PREP(parseConfigForInjuries);
 PREP(woundReceived);
 PREP(woundsHandler);
+PREP(woundsHandlerBurning);
 PREP(woundsHandlerSQF);

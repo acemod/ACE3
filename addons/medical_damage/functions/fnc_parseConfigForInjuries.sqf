@@ -105,24 +105,22 @@ private _woundsHandlerDefault = getText (_damageTypesConfig >> "woundsHandler");
     // TRACE_1("",_extensionRes);
     */
     private _woundsHandler = GET_STRING(_damageTypeSubClassConfig >> "woundsHandler",_woundsHandlerDefault);
-    if (_woundsHandler == _woundsHandlerDefault) then {
-        private _damageWoundDetails = [];
-        {
-            private _woundType = configName _x;
-            if (_woundType in keys GVAR(woundDetails)) then {
-                private _weighting = GET_ARRAY(_x >> "weighting",ARR_2([[0,1]]));
-                private _dmgMulti = GET_NUMBER(_x >> "damageMultiplier", 1);
-                private _bleedMulti = GET_NUMBER(_x >> "bleedingMultiplier", 1);
-                private _sizeMulti = GET_NUMBER(_x >> "sizeMultiplier", 1);
-                private _painMulti = GET_NUMBER(_x >> "painMultiplier", 1);
-                private _fractureMulti = GET_NUMBER(_x >> "fractureMultiplier", 1);
-                _damageWoundDetails pushBack [_woundType, _weighting, _dmgMulti, _bleedMulti, _sizeMulti, _painMulti, _fractureMulti];
-            } else {
-                WARNING_2("Damage type %1 refers to wound %2, but it doesn't exist: skipping.",_className,className _x);
-            };
-        } forEach configProperties [_damageTypeSubClassConfig, "isClass _x"];
-        GVAR(damageTypeDetails) set [_className, [_thresholds, _selectionSpecific, _woundsHandler, _damageWoundDetails]];
-    };
+    private _damageWoundDetails = [];
+    {
+        private _woundType = configName _x;
+        if (_woundType in keys GVAR(woundDetails)) then {
+            private _weighting = GET_ARRAY(_x >> "weighting",ARR_2([[0,1]]));
+            private _dmgMulti = GET_NUMBER(_x >> "damageMultiplier", 1);
+            private _bleedMulti = GET_NUMBER(_x >> "bleedingMultiplier", 1);
+            private _sizeMulti = GET_NUMBER(_x >> "sizeMultiplier", 1);
+            private _painMulti = GET_NUMBER(_x >> "painMultiplier", 1);
+            private _fractureMulti = GET_NUMBER(_x >> "fractureMultiplier", 1);
+            _damageWoundDetails pushBack [_woundType, _weighting, _dmgMulti, _bleedMulti, _sizeMulti, _painMulti, _fractureMulti];
+        } else {
+            WARNING_2("Damage type %1 refers to wound %2, but it doesn't exist: skipping.",_className,className _x);
+        };
+    } forEach configProperties [_damageTypeSubClassConfig, "isClass _x"];
+    GVAR(damageTypeDetails) set [_className, [_thresholds, _selectionSpecific, _woundsHandler, _damageWoundDetails]];
 } forEach configProperties [_damageTypesConfig, "isClass _x"];
 
 /*

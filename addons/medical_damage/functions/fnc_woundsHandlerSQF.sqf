@@ -8,13 +8,12 @@
  * 1: Name Of Body Part <STRING>
  * 2: Amount Of Damage <NUMBER>
  * 3: Type of the damage done <STRING>
- * 4: Weighted array of damaged selections <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "Body", 0.5, "bullet", [1, 1]] call ace_medical_damage_fnc_woundsHandlerSQF
+ * [player, "Body", 0.5, "bullet"] call ace_medical_damage_fnc_woundsHandlerSQF
  *
  * Public: No
  */
