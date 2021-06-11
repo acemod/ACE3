@@ -114,7 +114,7 @@ private _fnc_processWounds = {
             private _classIndex = _woundClassID / 10;
             private _category   = _woundClassID % 10;
 
-            private _className = EGVAR(medical_damage,woundsData) select _classIndex select 6;
+            private _className = EGVAR(medical_damage,woundDetails) get _classIndex select 6;
             private _suffix = ["Minor", "Medium", "Large"] select _category;
             private _woundName = localize format [ELSTRING(medical_damage,%1_%2), _className, _suffix];
 

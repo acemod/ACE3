@@ -20,9 +20,9 @@
 params ["_unit", "_allDamages", "", "_ammo"];
 
 private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
-if (_typeOfDamage in keys GVAR(damageTypeDetails)) then {
+if (_typeOfDamage in GVAR(damageTypeDetails)) then {
     (GVAR(damageTypeDetails) get _typeOfDamage) params ["_thresholds", "_selectionSpecific", "_woundsHandler", "_damageWoundDetails"];
-    private _handlerFnc = missionNamespace getVariable [_woundsHandler, FUNC(woundsHandlerActive)];
+    private _handlerFnc = missionNamespace getVariable [_woundsHandler, FUNC(defaultWoundHandler)];
 
     if (_selectionSpecific > 0) then {
         (_allDamages select 0) params ["_damage", "_hitpoint"];

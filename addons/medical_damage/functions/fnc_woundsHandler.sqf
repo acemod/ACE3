@@ -27,7 +27,7 @@ if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
 };
 
-if (isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage} ) then {
+if !(_typeOfDamage in GVAR(damageTypeDetails)) then {
     _typeOfDamage = "unknown";
 };
 

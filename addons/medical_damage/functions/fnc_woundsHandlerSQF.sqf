@@ -25,7 +25,7 @@ TRACE_4("woundsHandlerSQF",_unit,_bodyPart,_damage,_typeOfDamage);
 private _bodyPartNToAdd = ALL_BODY_PARTS find toLower _bodyPart;
 if (_bodyPartNToAdd < 0) exitWith { ERROR_1("invalid body part %1",_bodyPart); };
 
-if ((_typeOfDamage isEqualTo "") || {isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage}}) then {
+if !(_typeOfDamage in GVAR(damageTypeDetails)) then {
     WARNING_1("damage type not found",_typeOfDamage);
     _typeOfDamage = "unknown";
 };
@@ -61,7 +61,7 @@ for "_i" from 1 to _nWounds do {
 
     // Select the injury we are going to add
     selectRandomWeighted _weightedWoundTypes params ["_woundTypeToAdd", "", "_dmgMultiplier", "_bleedMultiplier", "_sizeMultiplier", "_painMultiplier", "_fractureMultiplier"];
-    GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","","_causeLimping","_causeFracture"];
+    GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture"];
     private _woundClassIDToAdd = GVAR(woundClassNames) find _woundTypeToAdd;
     
     // Add a bit of random variance to wounds

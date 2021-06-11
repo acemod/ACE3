@@ -27,7 +27,7 @@ private _storedDamage = _unit getVariable [_varName, 0];
 private _newDamage = _storedDamage + _damage;
 
 if (_newDamage > 0.25) then {
-	[_unit, _bodyPart, _newDamage, _typeOfDamage] call FUNC(woundsHandlerActive);
+	[_unit, _bodyPart, _newDamage, _typeOfDamage] call FUNC(defaultWoundHandler);
 	_newDamage = 0;
 };
 
