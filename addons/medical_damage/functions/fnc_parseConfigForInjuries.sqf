@@ -32,9 +32,6 @@ private _classID = 0;
     private _selections = GET_ARRAY(_entry >> "selections",["All"]);
     private _bleeding = GET_NUMBER(_entry >> "bleeding",0);
     private _pain = GET_NUMBER(_entry >> "pain",0);
-    private _minDamage = GET_NUMBER(_entry >> "minDamage",0);
-    private _maxDamage = GET_NUMBER(_entry >> "maxDamage",-1);
-    private _causes = GET_ARRAY(_entry >> "causes",[]);
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0) == 1;
     private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0) == 1;
 
