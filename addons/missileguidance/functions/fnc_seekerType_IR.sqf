@@ -61,7 +61,7 @@ if (isNull _trackingTarget) then {
     } forEach _potentialTargets;
 };
 
-if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
+if (true || {accTime > 0 && !isGamePaused}) then {
     // If there are flares nearby, check if they will confuse missile
     private _nearby = _trackingTarget nearObjects _flareDistanceFilter;
     _nearby = _nearby select {
@@ -92,10 +92,12 @@ if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
             private _flareRelativeVelocity = _projectile vectorWorldToModelVisual velocity _x;
             _flareRelativeVelocity set [1, 0];
             private _angleBetweenVelocities = acos (_relativeTargetVelocity vectorCos _flareRelativeVelocity);
+            // further away targets are filtered out by assumption that target cant move instantenously
+            private _chanceToDecoy = 1 - (_trackingTarget distance _x) / _flareDistanceFilter;
             if !(_foundDecoy) then {
                 if (_angleBetweenVelocities <= _flareAngleFilter) then {
                         _considering = true;
-                        if (_seekerAccuracy <= random 1) then {
+                        if (_seekerAccuracy <= random _chanceToDecoy) then {
                             _trackingTarget = _x;
                             _foundDecoy = true;
                         };
@@ -111,7 +113,7 @@ if (TRACK_ON_PAUSE || {accTime > 0 && !isGamePaused}) then {
                 if (_trackingTarget isEqualTo _x) then {
                     _colour = [0, 0, 1, 1];
                 };
-                drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _flarePos, 0.75, 0.75, 0, format ["F %1", _angleBetweenVelocities], 1, 0.025, "TahomaB"];
+                drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", _colour, _flarePos, 0.75, 0.75, 0, format ["F %1 C %2", _angleBetweenVelocities, _chanceToDecoy], 1, 0.025, "TahomaB"];
             };
         };
     } forEach _nearby;
