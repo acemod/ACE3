@@ -7,7 +7,7 @@ class CfgAmmo {
             enabled = 1;
 
             pitchRate = 15;
-            yawRate = 5;
+            yawRate = 20;
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -18,8 +18,11 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
 
-            defaultNavigationType = "ZeroEffortMiss";
-            navigationTypes[] = { "ZeroEffortMiss" };
+            defaultNavigationType = "LINE";
+            navigationTypes[] = { "LINE" };
+
+            lineGainP = 50;
+            lineGainD = 1;
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 60;           // Angle from the shooter's view that can track the missile

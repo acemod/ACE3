@@ -21,10 +21,9 @@ _flightParams params ["_pitchRate", "_yawRate"];
 
 _navigationParams params ["_proportionalGain", "", "_derivativeGain", "_lastErrorX", "_lastErrorY", "_correctionDistance"];
 private _targetDistance = _projectile vectorWorldToModelVisual (_targetDir vectorMultiply _distance);
-private _relativeDirection = _projectile vectorWorldToModelVisual _targetDir;
 
-private _errorX = -1 max (1 min (_targetDistance#0 / _correctionDistance));
-private _errorY = -1 max (1 min (_targetDistance#2 / _correctionDistance));
+private _errorX = _targetDistance#0 / _correctionDistance;
+private _errorY = _targetDistance#2 / _correctionDistance;
 
 private _pX = _proportionalGain * _errorX;
 private _dX = if (_timestep != 0) then {
