@@ -344,7 +344,32 @@ class vn_sa2: StaticMGWeapon {
     EGVAR(dragging,canDrag) = 0;
 };
 
+// --- Spiderholes -------------------------------------------------------------
+
 class vn_o_vc_spiderhole_01: StaticWeapon {
     EGVAR(dragging,canCarry) = 0;
     EGVAR(dragging,canDrag) = 0;
+
+    EGVAR(trenches,diggingDuration) = QEGVAR(trenches,smallEnvelopeDigDuration);
+    EGVAR(trenches,removalDuration) = QEGVAR(trenches,smallEnvelopeRemoveDuration);
+    EGVAR(trenches,noGeoClass) = QGVAR(spiderhole_01_nogeo);
+    EGVAR(trenches,placementData)[] = {1.5, 1.5, 0.1};
+    EGVAR(trenches,grassCuttingPoints)[] = {};
+};
+class vn_o_vc_spiderhole_02: vn_o_vc_spiderhole_01 {
+    EGVAR(trenches,noGeoClass) = QGVAR(spiderhole_02_nogeo);
+};
+class vn_o_vc_spiderhole_03: vn_o_vc_spiderhole_01 {
+    EGVAR(trenches,noGeoClass) = QGVAR(spiderhole_03_nogeo);
+    EGVAR(trenches,placementData)[] = {1.5, 2.5, 0.1};
+};
+
+class GVAR(spiderhole_01_nogeo): vn_o_vc_spiderhole_01 {
+    scope = 1;
+};
+class GVAR(spiderhole_02_nogeo): vn_o_vc_spiderhole_02 {
+    scope = 1;
+};
+class GVAR(spiderhole_03_nogeo): vn_o_vc_spiderhole_03 {
+    scope = 1;
 };
