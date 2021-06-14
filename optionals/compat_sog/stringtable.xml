@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_SOG">
+        <Key ID="STR_ACE_Compat_SOG_Action_DigIn">
+            <English>Dig in</English>
+            <Polish>Zakop</Polish>
+        </Key>
+    </Package>
+</Project>
