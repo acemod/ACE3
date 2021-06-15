@@ -19,30 +19,30 @@
 params ["_unit", "_allDamages", "_typeOfDamage"];
 
 {
-	_x params ["_damage", "_bodyPart"];
-	// Ensure target selection is valid
-	if !((toLower _bodyPart) in ALL_BODY_PARTS) then {
-		ERROR_1("invalid body part %1",_bodyPart);
-		continue
-	};
+    _x params ["_damage", "_bodyPart"];
+    // Ensure target selection is valid
+    if !((toLower _bodyPart) in ALL_BODY_PARTS) then {
+        ERROR_1("invalid body part %1",_bodyPart);
+        continue
+    };
 
-	private _varName = format [QGVAR(storedBurnDamage_%1), _bodyPart];
-	private _storedDamage = _unit getVariable [_varName, 0];
-	private _newDamage = _storedDamage + _damage;
+    private _varName = format [QGVAR(storedBurnDamage_%1), _bodyPart];
+    private _storedDamage = _unit getVariable [_varName, 0];
+    private _newDamage = _storedDamage + _damage;
 
-	// schedule a task to convert stored damage to wounds after 1s
-	// because the task resets stored damage to zero, if it isn't currently zero that means there is a task already waiting
-	if (_storedDamage == 0 && _newDamage > 0) then {
-		[{
-			params ["_unit", "_bodyPart", "_typeOfDamage"];
+    // schedule a task to convert stored damage to wounds after 1s
+    // because the task resets stored damage to zero, if it isn't currently zero that means there is a task already waiting
+    if (_storedDamage == 0 && _newDamage > 0) then {
+        [{
+            params ["_unit", "_bodyPart", "_typeOfDamage"];
 
-			private _varName = format [QGVAR(storedBurnDamage_%1), _bodyPart];
-			private _storedDamage = _unit getVariable [_varName, 0];
-			[_unit, [[_storedDamage, _bodyPart]], _typeOfDamage] call FUNC(defaultWoundHandler);
-			_unit setVariable [_varName, 0, true];
-		},
-		[_unit, _bodyPart, _typeOfDamage], 1] call CBA_fnc_waitAndExecute;
-	};
+            private _varName = format [QGVAR(storedBurnDamage_%1), _bodyPart];
+            private _storedDamage = _unit getVariable [_varName, 0];
+            [_unit, [[_storedDamage, _bodyPart]], _typeOfDamage] call FUNC(defaultWoundHandler);
+            _unit setVariable [_varName, 0, true];
+        },
+        [_unit, _bodyPart, _typeOfDamage], 1] call CBA_fnc_waitAndExecute;
+    };
 
-	_unit setVariable [_varName, _newDamage];
+    _unit setVariable [_varName, _newDamage];
 } forEach _allDamages;

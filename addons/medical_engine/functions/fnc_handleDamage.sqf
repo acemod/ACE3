@@ -111,8 +111,6 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         // Any collision with terrain/vehicle/object has a shooter
         // Check this first because burning can happen at any velocity
         if !(isNull _shooter) then {
-            _ammo = "collision";
-
             /*
               If shooter != unit then they hit unit, otherwise it could be:
                - Unit hitting anything at speed
@@ -124,16 +122,18 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
                 _ammo = "falling";
                 TRACE_5("Fall",_unit,_shooter,_instigator,_damage,_receivedDamage);
             } else {
+                _ammo = "collision";
                 TRACE_5("Collision",_unit,_shooter,_instigator,_damage,_receivedDamage);
             };
         } else {
             // Anything else is almost guaranteed to be fire damage
-            TRACE_5("Burning",_unit,_shooter,_instigator,_damage,_receivedDamage);
             _ammo = "burning";
+            TRACE_5("Burning",_unit,_shooter,_instigator,_damage,_receivedDamage);
         };
     };
 
     // No wounds for minor damage
+    // TODO check if this needs to be changed for burning damage (occurs as lots of small events that we add together)
     if (_receivedDamage > 1E-3) then {
         TRACE_1("received",_allDamages);
         [QEGVAR(medical,woundReceived), [_unit, _allDamages, _shooter, _ammo]] call CBA_fnc_localEvent;
