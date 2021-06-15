@@ -55,7 +55,7 @@ if (!_isLimping && {EGVAR(medical,limping) > 0}) then {
     {
         _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "", "_xDamage"];
         if ((_xBodyPartN > 3) && {_xAmountOf > 0} && {_xDamage > LIMPING_DAMAGE_THRESHOLD} && {
-                    (EGVAR(medical_damage,woundDetails) get (_xClassID / 10)) select 7}) exitWith { // select _causeLimping from woundDetails
+                    (EGVAR(medical_damage,woundDetails) get (_xClassID / 10)) select 3}) exitWith { // select _causeLimping from woundDetails
             TRACE_1("limping because of wound",_x);
             _isLimping = true;
         };

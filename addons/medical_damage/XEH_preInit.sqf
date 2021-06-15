@@ -8,14 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
-call FUNC(parseConfigForInjuries);
-
-addMissionEventHandler ["Loaded",{
-    INFO("Mission Loaded - Reloading medical configs for extension");
-    // Reload configs into extension (handle full game restart)
-    call FUNC(parseConfigForInjuries);
-}];
-
 // decide which woundsHandler to use by whether the extension is present or not
 // if ("ace_medical" callExtension "version" != "") then {
 
@@ -24,6 +16,14 @@ addMissionEventHandler ["Loaded",{
     // INFO("Using woundsHandlerSQF");
     DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandlerSQF);
 // };
+
+call FUNC(parseConfigForInjuries);
+
+addMissionEventHandler ["Loaded",{
+    INFO("Mission Loaded - Reloading medical configs for extension");
+    // Reload configs into extension (handle full game restart)
+    call FUNC(parseConfigForInjuries);
+}];
 
 [QEGVAR(medical,woundReceived), FUNC(woundReceived)] call CBA_fnc_addEventHandler;
 
