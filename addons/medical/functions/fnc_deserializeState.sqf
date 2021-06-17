@@ -22,7 +22,7 @@ if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit) };
 
 // If unit is not initialized yet, wait until event is raised
 if !(_unit getVariable [QGVAR(initialized), false]) exitWith {
-    [QGVAR(initialized), {
+    [QEGVAR(medical_status,initialized), {
         params ["_unit"];
         _thisArgs params ["_target"];
 
