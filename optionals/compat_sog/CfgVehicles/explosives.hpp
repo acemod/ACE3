@@ -7,7 +7,7 @@ class EGVAR(Explosives,Place): Items_base_F {
 
 // Claymore
 class EXPLOSIVES_PLACE(m18): EGVAR(Explosives,Place) {
-displayName = "$STR_VN_MINE_M18_MAG_DN";
+    displayName = "$STR_VN_MINE_M18_MAG_DN";
     model = "\vn\weapons_f_vietnam\mines\m18\vn_mine_m18";
 
     class ACE_Actions: ACE_Actions {

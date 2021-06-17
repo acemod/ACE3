@@ -164,7 +164,7 @@ class vn_mine_m112_remote_mag: vn_mine_m18_mag {
         };
         class Command {
             fuseTime = 0.5;
-            digDistance = 1
+            digDistance = 1;
         };
         class MK16_Transmitter: Command {};
         class DeadmanSwitch: Command {};

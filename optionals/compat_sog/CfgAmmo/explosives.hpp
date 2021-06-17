@@ -10,6 +10,7 @@ class vn_mine_m18_x3_ammo: vn_mine_m18_ammo {
     EGVAR(Explosives,explosive) = "vn_mine_m18_x3_ammo_scripted";
 };
 
+class APERSBoundingMine_Range_Ammo;
 class vn_mine_tripwire_m16_02_ammo: APERSBoundingMine_Range_Ammo {
     EGVAR(Explosives,defuseObjectPosition)[] = {0, -0.01, 0.088};
 };
@@ -30,7 +31,6 @@ class vn_mine_m112_remote_ammo: DemoCharge_Remote_Ammo {
 
 // Disable engine damage of punji traps, script damage manually
 // This allows a tighter control of caused wounds and removes ear ringing
-class APERSBoundingMine_Range_Ammo;
 class vn_mine_punji_01_ammo: APERSBoundingMine_Range_Ammo {
     EGVAR(Minedetector,detectable) = 0;
     hit = 0;
