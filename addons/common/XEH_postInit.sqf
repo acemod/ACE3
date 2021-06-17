@@ -358,6 +358,14 @@ addMissionEventHandler ["PlayerViewChanged", {
 [QGVAR(displayTextStructured), {_this call FUNC(displayTextStructured)}] call CBA_fnc_addEventHandler;
 [QGVAR(displayTextPicture), {_this call FUNC(displayTextPicture)}] call CBA_fnc_addEventHandler;
 
+["ace_unconscious", {
+    params ["_unit", "_isUnconscious"];
+
+    if (local _unit && {!_isUnconscious}) then {
+        [_unit, false, QFUNC(loadPerson), west /* dummy side */] call FUNC(switchToGroupSide);
+    };
+}] call CBA_fnc_addEventHandler;
+
 ["ace_useItem", DFUNC(useItem)] call CBA_fnc_addEventHandler;
 
 
