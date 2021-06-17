@@ -4,6 +4,47 @@
         <Key ID="STR_ACE_Compat_SOG_Action_DigIn">
             <English>Dig in</English>
             <Polish>Zakop</Polish>
+            <German>Eingraben</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_HE">
+            <English>M49A2 60mm HE</English>
+            <German>M49A2 60mm HE</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_WP">
+            <English>M302 60mm WP</English>
+            <German>M302 60mm Weißer Phosphor</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_Lume">
+            <English>M83 60mm Lume</English>
+            <German>M83 60mm Leuchtpatrone</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_HE">
+            <English>M374 81mm HE</English>
+            <German>M374 81mm HE</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_WP">
+            <English>M375 81mm WP</English>
+            <German>M375 81mm Weißer Phosphor</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Lume">
+            <English>M301A3 81mm Lume</English>
+            <German>M301A3 81mm Leuchtpatrone</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Smoke">
+            <English>M57 81mm Smoke</English>
+            <German>M57 81mm Nebelpatrone</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_HE">
+            <English>O-832D 82mm HE</English>
+            <German>O-832D 82mm HE</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_WP">
+            <English>D-832 82mm WP</English>
+            <German>D-832 82mm Weißer Phosphor</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_Lume">
+            <English>S-832S 82mm Lume</English>
+            <German>S-832S 82mm Leuchtpatrone</German>
         </Key>
     </Package>
 </Project>
