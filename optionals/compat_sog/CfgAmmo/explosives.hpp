@@ -33,8 +33,12 @@ class vn_mine_m112_remote_ammo: DemoCharge_Remote_Ammo {
 // This allows a tighter control of caused wounds and removes ear ringing
 class vn_mine_punji_01_ammo: APERSBoundingMine_Range_Ammo {
     EGVAR(Minedetector,detectable) = 0;
-    hit = 0;
-    indirectHit = 0;
+
+    hit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(hit)'));
+    GVAR(hit) = QUOTE([ARR_2(0,1)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
+
+    indirectHit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_01_ammo' >> 'GVAR(indirectHit)'));
+    GVAR(indirectHit) = QUOTE([ARR_2(0,10)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 
     class EventHandlers {
         class ADDON {
@@ -44,8 +48,8 @@ class vn_mine_punji_01_ammo: APERSBoundingMine_Range_Ammo {
 };
 
 class vn_mine_punji_02_ammo: vn_mine_punji_01_ammo {
-    hit = 0;
-    indirectHit = 0;
+    indirectHit = QUOTE(call compile getText (configFile >> 'CfgAmmo' >> 'vn_mine_punji_02_ammo' >> 'GVAR(indirectHit)'));
+    GVAR(indirectHit) = QUOTE([ARR_2(0,5)] select isNull (configFile >> 'CfgPatches' >> 'ace_medical'));
 };
 
 class vn_mine_punji_03_ammo: vn_mine_punji_01_ammo {

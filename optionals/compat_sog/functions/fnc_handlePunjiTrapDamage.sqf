@@ -16,6 +16,8 @@
  */
 params ["_trap"];
 
+if (isNull (configFile >> "CfgPatches" >> "ace_medical")) exitWith {};
+
 private _radius = getNumber (configOf _trap >> "indirectHitRange");
 private _affectedUnits = (_trap nearEntities ["CAManBase", _radius]) select {local _x};
 (getShotParents _trap) params ["", "_instigator"];
