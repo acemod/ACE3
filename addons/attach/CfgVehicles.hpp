@@ -86,7 +86,7 @@ class CfgVehicles {
             dayLight = 0;
             onlyInNvg = 1;
             useFlare = 0;
-            maxLifetime = 28800; // 8 hours
+            maxLifetime = 8 * 60 * 60;
             blinkingPattern[] = {0.1, 0.9}; // 0.1 s on, 0.9 s off
             blinkingStartsOn = 1;
             blinkingPatternGuarantee = 1;
