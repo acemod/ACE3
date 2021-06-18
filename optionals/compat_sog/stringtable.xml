@@ -98,5 +98,45 @@
             <English>Dig Spiderhole (Dual)</English>
             <German>Doppelschlupfloch graben</German>
         </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M1919A4">
+            <English>[CSW] M1919A4 Gun Bag</English>
+            <German>[CSW] M1919A4 Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M1919A6">
+            <English>[CSW] M1919A6 Gun Bag</English>
+            <German>[CSW] M1919A6 Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M60">
+            <English>[CSW] M60 Gun Bag</English>
+            <German>[CSW] M60 Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_Shield">
+            <English>[CSW] DShK (Shield) Gun Bag</English>
+            <German>[CSW] DShK (Schutzschild) Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_AA">
+            <English>[CSW] DShK (AA) Gun Bag</English>
+            <German>[CSW] DShK (AA) Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_RPD">
+            <English>[CSW] RPD Gun Bag</English>
+            <German>[CSW] RPD Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_PK">
+            <English>[CSW] PK Gun Bag</English>
+            <German>[CSW] PK Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M29">
+            <English>[CSW] M29 Mortar Tube</English>
+            <German>[CSW] M29 Mörserrohr</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M2">
+            <English>[CSW] M2 Mortar Tube</English>
+            <German>[CSW] M2 Mörserrohr</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_Type53">
+            <English>[CSW] Type 53 Mortar Tube</English>
+            <German>[CSW] Typ 53 Mörserrohr</German>
+        </Key>
     </Package>
 </Project>

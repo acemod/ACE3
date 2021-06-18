@@ -22,7 +22,7 @@ class GVAR(m2_carry): Launcher_Base_F {
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_m2b_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -43,13 +43,13 @@ class GVAR(m2_carry): Launcher_Base_F {
     };
 };
 
-class GVAR(m1919A4_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,m2_gun);
+class GVAR(m1919a4_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_m1919a4);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_m1919a4_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -70,13 +70,13 @@ class GVAR(m1919A4_carry): Launcher_Base_F {
     };
 };
 
-class GVAR(m1919A6_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,m2_gun);
+class GVAR(m1919a6_carry): Launcher_Base_F {
+    displayName = CSTRING(csw_m1919a4);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_m1919a6_ca.paa);
 
     class ACE_CSW {
         type = "mount";
@@ -94,12 +94,12 @@ class GVAR(m1919A6_carry): Launcher_Base_F {
 };
 
 class GVAR(m60_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,m2_gun);
+    displayName = CSTRING(csw_m60);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_m60_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -126,7 +126,7 @@ class GVAR(tow_carry): Launcher_Base_F {
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_tow_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -152,7 +152,7 @@ class GVAR(dshkm_carry): Launcher_Base_F {
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_dshkm_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -174,12 +174,12 @@ class GVAR(dshkm_carry): Launcher_Base_F {
 };
 
 class GVAR(dshkm_shield_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,dshk_gun);
+    displayName = CSTRING(csw_dshkm_shield);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_dshkm_shield_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -200,12 +200,12 @@ class GVAR(dshkm_shield_carry): Launcher_Base_F {
 };
 
 class GVAR(dshkm_AA_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,dshk_gun);
+    displayName = CSTRING(csw_dshkm_aa);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_dshkm_aa_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -226,12 +226,12 @@ class GVAR(dshkm_AA_carry): Launcher_Base_F {
 };
 
 class GVAR(rpd_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,dshk_gun);
+    displayName = CSTRING(csw_rpd);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_rpd_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -252,12 +252,12 @@ class GVAR(rpd_carry): Launcher_Base_F {
 };
 
 class GVAR(pk_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,dshk_gun);
+    displayName = CSTRING(csw_pk);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_pk_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -278,12 +278,12 @@ class GVAR(pk_carry): Launcher_Base_F {
 };
 
 class GVAR(mortar_m29_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,dshk_gun);
+    displayName = CSTRING(csw_m29);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_m29_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -304,12 +304,12 @@ class GVAR(mortar_m29_carry): Launcher_Base_F {
 };
 
 class GVAR(mortar_m2_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,dshk_gun);
+    displayName = CSTRING(csw_m2);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_m2_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
@@ -330,12 +330,12 @@ class GVAR(mortar_m2_carry): Launcher_Base_F {
 };
 
 class GVAR(mortar_type53_carry): Launcher_Base_F {
-    displayName = ECSTRING(csw,dshk_gun);
+    displayName = CSTRING(csw_type53);
     author = ECSTRING(common,ACETeam);
     scope = 2;
     model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
     modes[] = {};
-    picture = "\vn\static_f_vietnam\ui\pic_vn_static_m2_high_01_ca.paa";
+    picture = QPATHTOF(UI\csw_type53_ca.paa);
 
     class ACE_CSW {
         type = "weapon";
