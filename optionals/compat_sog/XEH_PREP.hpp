@@ -1,1 +1,2 @@
+PREP(disableCookoff);
 PREP(handlePunjiTrapDamage);
