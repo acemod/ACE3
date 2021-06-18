@@ -31,7 +31,7 @@ params ["_unit", "_allDamages", "_typeOfDamage"];
     private _newDamage = _storedDamage + _damage;
 
     // schedule a task to convert stored damage to wounds after 1s
-    // because the task resets stored damage to zero, if it isn't currently zero that means there is a task already waiting
+    // the task resets stored damage to zero, so if it isn't currently zero that means there is a task already waiting
     if (_storedDamage == 0 && _newDamage > 0) then {
         [{
             params ["_unit", "_bodyPart", "_typeOfDamage"];

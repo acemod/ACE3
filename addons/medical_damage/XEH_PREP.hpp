@@ -1,3 +1,4 @@
+PREP(debug_explosiveTest);
 PREP(determineIfFatal);
 PREP(getTypeOfDamage);
 PREP(handleIncapacitation);
