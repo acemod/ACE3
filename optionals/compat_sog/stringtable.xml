@@ -46,5 +46,57 @@
             <English>S-832S 82mm Lume</English>
             <German>S-832S 82mm Leuchtpatrone</German>
         </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_HE">
+            <English>[ACE] M49A2 60mm HE Box</English>
+            <German>[ACE] M49A2 60mm HE Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_WP">
+            <English>[ACE] M302 60mm WP Box</English>
+            <German>[ACE] M302 60mm Weißer Phosphor Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_Lume">
+            <English>[ACE] M83 60mm Lume Box</English>
+            <German>[ACE] M83 60mm Leuchtpatrone Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_HE">
+            <English>[ACE] M374 81mm HE Box</English>
+            <German>[ACE] M374 81mm HE Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_WP">
+            <English>[ACE] M375 81mm WP Box</English>
+            <German>[ACE] M375 81mm Weißer Phosphor Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_Lume">
+            <English>[ACE] M301A3 81mm Lume Box</English>
+            <German>[ACE] M301A3 81mm Leuchtpatrone Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_Smoke">
+            <English>[ACE] M57 81mm Smoke Box</English>
+            <German>[ACE] M57 81mm Nebelpatrone Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_HE">
+            <English>[ACE] O-832D 82mm HE Box</English>
+            <German>[ACE] O-832D 82mm HE Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_WP">
+            <English>[ACE] D-832 82mm WP Box</English>
+            <German>[ACE] D-832 82mm Weißer Phosphor Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_Lume">
+            <English>[ACE] S-832S 82mm Lume Box</English>
+            <German>[ACE] S-832S 82mm Leuchtpatrone Box</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderhole">
+            <English>Dig Spiderhole</English>
+            <German>Schlupfloch graben</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeAngled">
+            <English>Dig Spiderhole (Angled Cover)</English>
+            <German>Schlupfloch graben (Abgeschrägte Abdeckung)</German>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeDual">
+            <English>Dig Spiderhole (Dual)</English>
+            <German>Doppelschlupfloch graben</German>
+        </Key>
     </Package>
 </Project>
