@@ -88,15 +88,15 @@
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderhole">
             <English>Dig Spiderhole</English>
-            <German>Schlupfloch graben</German>
+            <German>Schützenloch graben</German>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeAngled">
             <English>Dig Spiderhole (Angled Cover)</English>
-            <German>Schlupfloch graben (Abgeschrägte Abdeckung)</German>
+            <German>Schützenloch graben (Abgeschrägte Abdeckung)</German>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeDual">
             <English>Dig Spiderhole (Dual)</English>
-            <German>Doppelschlupfloch graben</German>
+            <German>Großes Schützenloch graben</German>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M1919A4">
             <English>[CSW] M1919A4 Gun Bag</English>
