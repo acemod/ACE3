@@ -122,8 +122,10 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
                 _critialDamage = true;
             };
             if ([_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)) then {
-                TRACE_1("determineIfFatal returned true",_woundDamage);
-                [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+                if (!isPlayer _unit || {random 1 < EGVAR(medical,deathChance)}) then {
+                    TRACE_1("determineIfFatal returned true",_woundDamage);
+                    [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
+                };
             };
 
             #ifdef DEBUG_MODE_FULL

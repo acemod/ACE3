@@ -4,7 +4,7 @@
 
 private _cacheStaticModels = [];
 
-private _vehicleClasses = "isClass _x && (configName _x) isKindOf 'Static'" configClasses (configFile >> "CfgVehicles");
+private _vehicleClasses = "(configName _x) isKindOf 'Static'" configClasses (configFile >> "CfgVehicles");
 
 // Consider static everything vehicle that inherit from Static
 // This include houses (which we don't need), but also walls, that we do
@@ -16,7 +16,7 @@ private _vehicleClasses = "isClass _x && (configName _x) isKindOf 'Static'" conf
     };
 } forEach _vehicleClasses;
 
-private _nonAIVehicleClasses = "isClass _x" configClasses (configFile >> "CfgNonAIVehicles");
+private _nonAIVehicleClasses = "true" configClasses (configFile >> "CfgNonAIVehicles");
 
 // Also consider static all object inheriting from bridges
 private _cfgBase = configFile >> "CfgNonAIVehicles";

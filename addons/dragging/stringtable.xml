@@ -29,7 +29,7 @@
             <Portuguese>Soltar</Portuguese>
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
-            <Japanese>はなす</Japanese>
+            <Japanese>離す</Japanese>
             <Korean>놓기</Korean>
             <Chinese>放開</Chinese>
             <Chinesesimp>放开</Chinesesimp>
@@ -37,7 +37,7 @@
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
-            <Russian>Тащить/Отпустить Объекты</Russian>
+            <Russian>Тащить/Отпустить Объект</Russian>
             <Spanish>Arrastrar/Soltar Objeto</Spanish>
             <Polish>Ciągnij/Puść Obiekt</Polish>
             <Czech>Táhnout/Položit Objekt</Czech>
@@ -46,11 +46,20 @@
             <Portuguese>Arrastar/Soltar Objeto</Portuguese>
             <Italian>Trascina/Lascia Oggetto</Italian>
             <Hungarian>Húzás/Elengedés Objektum</Hungarian>
-            <Japanese>オブジェクトを引きずる/はなす</Japanese>
+            <Japanese>オブジェクトを引きずる/離す</Japanese>
             <Korean>물건 끌기/놓기</Korean>
             <Chinese>拖拉/放開物品</Chinese>
             <Chinesesimp>拖拉/放开物品</Chinesesimp>
             <Turkish>Objeyi Sürükle/Bırak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Dragging_CarryKeybind">
+            <English>Carry/Release Object</English>
+            <French>Porter/Lâcher un objet</French>
+            <Russian>Нести/Отпустить Объект</Russian>
+            <Polish>Nieś/Puść objekt</Polish>
+            <Japanese>オブジェクトを運ぶ/離す</Japanese>
+            <Turkish>Objeyi Taşı/Bırak</Turkish>
+            <Spanish>Arrastrar/Soltar Objeto</Spanish>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -92,6 +101,34 @@
             <French>Lever/Baisser | (Ctrl + Scroll) Rotation</French>
             <Japanese>上げる/下げる | (Ctrl + スクロール) 回転</Japanese>
             <Czech>Zvednout/Snížit | (Ctrl + Kolečko myši) Otáčet</Czech>
+            <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
+            <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
+            <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
+            <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Dragging_SettingsName">
+            <English>ACE Dragging</English>
+            <French>ACE Traînage d'objets et d'unités</French>
+            <German>ACE Ziehen</German>
+            <Hungarian>ACE Húzás</Hungarian>
+            <Russian>ACE Перетаскивание</Russian>
+            <Spanish>ACE Arrastrar</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
+            <English>Allow firing while dragging</English>
+            <French>Arme utilisable durant le traînage</French>
+            <German>Schießen während des Ziehens erlauben</German>
+            <Hungarian>Húzás közbeni tüzelés engedélyezése</Hungarian>
+            <Russian>Стрельба во время перетаскивания</Russian>
+            <Spanish>Permitir disparar mientras se arrastra</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Dragging_DragAndFire_Description">
+            <English>Allow the player to fire their gun while dragging.</English>
+            <French>Cette option permet aux joueurs de faire usage de leur arme pendant qu'ils traînent un objet ou une unité.\nL'arme secondaire est utilisée si le joueur en est équipé.</French>
+            <German>Erlaubt dem Spieler während des Ziehens das Abfeuern der Waffe.</German>
+            <Hungarian>Húzás közben a játékos elsütheti a fegyverét.</Hungarian>
+            <Russian>Позволяет игроку стрелять во время перетаскивания</Russian>
+            <Spanish>Permite al jugador disparar mientras está arrastrando.</Spanish>
         </Key>
     </Package>
 </Project>

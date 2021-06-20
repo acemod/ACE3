@@ -78,7 +78,7 @@ while {_rangeToCheck < _maxDistance} do {
         //Shoot a ray down, and make sure we hit something solid like a building or the ground:
         private _belowRoundArray = lineIntersectsSurfaces [(AGLtoASL _roundAGL) vectorAdd [0,0,0.5], (AGLtoASL _roundAGL) vectorAdd [0,0,-1]];
         TRACE_4("Testing for solid",_roundDistance,_roundAngle,_roundAGL,_belowRoundArray);
-        if (!(_belowRoundArray isEqualTo [])) then {
+        if (_belowRoundArray isNotEqualTo []) then {
             private _aboveBuilding = (_belowRoundArray select 0) select 2;
             //Point is above something: Terrain(null) or Building
             if ((isNull _aboveBuilding) || {_aboveBuilding isKindOf "Building"}) then {
@@ -110,14 +110,14 @@ while {_rangeToCheck < _maxDistance} do {
                     _testIntersections = [];
                 };
             };
-            if (!(_testIntersections isEqualTo [])) exitWith {
+            if (_testIntersections isNotEqualTo []) exitWith {
                 TRACE_2("collision low/high",_roundAGL,_testIntersections);
                 _roundPointIsValid = false;
             };
             _point1ASL = (AGLtoASL _roundAGL) vectorAdd [_radiusOfItem * cos _angle, _radiusOfItem * sin _angle, 0.5];
             _point2ASL = (AGLtoASL _roundAGL) vectorAdd [-_radiusOfItem * cos _angle, -_radiusOfItem * sin _angle, 1];
             _testIntersections = lineIntersectsSurfaces [_point1ASL, _point2ASL];
-            if (!(_testIntersections isEqualTo [])) exitWith {
+            if (_testIntersections isNotEqualTo []) exitWith {
                 TRACE_2("collision mid",_roundAGL,_testIntersections);
                 _roundPointIsValid = false;
             };

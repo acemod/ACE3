@@ -3,7 +3,7 @@
 class RscTitles {
     class GVAR(cam_rose) {
         idd=-1;
-        movingEnable = true;
+        movingEnable = 1;
         fadein = 0;
         fadeout = 1;
         duration = 1e+011;

@@ -30,7 +30,7 @@ REARM_HOLSTER_WEAPON;
 private _targetName = if (_vehicle == _unit) then {
     "CSW"
 } else {
-    getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")
+    getText(configOf _vehicle >> "displayName")
 };
 
 [

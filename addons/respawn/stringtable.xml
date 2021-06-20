@@ -14,6 +14,7 @@
             <French>Réapparition</French>
             <Czech>Znovuzrození</Czech>
             <Turkish>Yeniden Doğma</Turkish>
+            <Spanish>Reaparición</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
@@ -304,6 +305,7 @@
             <French>Minuterie enlèvement corps</French>
             <Czech>Časovač odstranění mrtvol</Czech>
             <Turkish>Bedenin Silinme Süresi</Turkish>
+            <Spanish>Temporizador para eliminar cuerpos</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>

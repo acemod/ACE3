@@ -4,20 +4,22 @@
  * Cleans up pylons on client disconnect.
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * 0: Unit (not used) <OBJECT>
+ * 1: ID (not used) <NUMBER>
+ * 2: UID <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_pylons_fnc_handleDisconnect
+ * [_unit, _id, _uid] call ace_pylons_fnc_handleDisconnect
  *
  * Public: No
  */
 
 params ["", "", "_uid"];
 
-private _aircraft = GVAR(currentAircraftNamespace) getVariable ["_uid", objNull];
+private _aircraft = GVAR(currentAircraftNamespace) getVariable [_uid, objNull];
 if (!isNull _aircraft) then {
     _aircraft setVariable [QGVAR(currentUser), objNull, true];
 
