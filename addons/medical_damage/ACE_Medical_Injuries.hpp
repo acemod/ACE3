@@ -97,7 +97,7 @@ class ACE_Medical_Injuries {
             };
         };
         class grenade {
-            thresholds[] = {{0.1, 3}, {0.1, 1}, {0, 1}};
+            thresholds[] = {{0.9, 3}, {0.5, 2}, {0.1, 1}, {0, 0}};
             selectionSpecific = 0;
             class Avulsion {
                 weighting[] = {{0.01, 1}, {0.01, 0}};
@@ -116,7 +116,7 @@ class ACE_Medical_Injuries {
             };
         };
         class explosive {
-            thresholds[] = {{1, 6}, {1, 4}, {0.1, 4}, {0.1, 1}};
+            thresholds[] = {{2, 3}, {1.2, 2}, {0.4, 1}, {0,0}};
             selectionSpecific = 0;
             class Avulsion {
                 weighting[] = {{0.01, 1}, {0.01, 0}};
@@ -135,7 +135,7 @@ class ACE_Medical_Injuries {
             };
         };
         class shell {
-            thresholds[] = {{1, 7}, {1, 5}, {0.1, 5}, {0.1, 1}};
+            thresholds[] = {{2, 3}, {1.2, 2}, {0.4, 1}, {0,0}};
             selectionSpecific = 0;
             class Avulsion {
                 weighting[] = {{0.01, 1}, {0.01, 0}};
