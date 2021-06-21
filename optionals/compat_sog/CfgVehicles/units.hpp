@@ -2,6 +2,7 @@ class Man;
 class CAManBase: Man {
     class ACE_SelfActions {
         class ACE_Equipment {
+            class EGVAR(trenches,digEnvelopeSmall);
             class GVAR(digSpiderhole): EGVAR(trenches,digEnvelopeSmall) {
                 displayName = CSTRING(Action_DigSpiderhole);
                 statement = QUOTE([ARR_2({_this call EFUNC(trenches,placeTrench)},[ARR_2(_this select 0,'vn_o_vc_spiderhole_01')])] call CBA_fnc_execNextFrame);
