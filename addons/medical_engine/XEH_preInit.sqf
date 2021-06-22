@@ -78,4 +78,6 @@ addMissionEventHandler ["Loaded", {
     };
 }] call CBA_fnc_addEventhandler;
 
+[] call FUNC(disableThirdParty);
+
 ADDON = true;
