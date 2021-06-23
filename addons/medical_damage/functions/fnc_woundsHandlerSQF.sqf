@@ -18,7 +18,7 @@
  */
 
 params ["_unit", "_allDamages", "_typeOfDamage"];
-TRACE_4("woundsHandlerSQF",_unit,_bodyPart,_damage,_typeOfDamage);
+TRACE_4("woundsHandlerSQF",_unit,_allDamages,_typeOfDamage);
 
 
 if !(_typeOfDamage in GVAR(damageTypeDetails)) then {
@@ -96,7 +96,13 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         private _bleeding = _woundSize * _bleedMultiplier * _injuryBleedingRate;
 
         // wound category (minor [0.25-0.5], medium [0.5-0.75], large [0.75+])
-        private _category = floor linearConversion [0.25, 0.75, _woundSize, 0, 2, true];
+        //private _category = floor linearConversion [0.25, 0.75, _woundSize, 0, 2, true];
+
+        #define LARGE_WOUND_THRESHOLD 0.63
+        // large wounds are > LARGE_WOUND_THRESHOLD
+        // medium is > LARGE_WOUND_THRESHOLD^2
+        // minor is > LARGE_WOUND_THRESHOLD^3
+        private _category = 0  max (2 - floor (ln _woundSize / ln LARGE_WOUND_THRESHOLD)) min 2;
 
         private _classComplex = 10 * _woundClassIDToAdd + _category;
 

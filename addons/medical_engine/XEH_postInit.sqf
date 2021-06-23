@@ -59,7 +59,7 @@
     private _lethality = linearConversion [0, 25, (vectorMagnitude velocity _vehicle), 0.5, 1];
     TRACE_2("air crash",_lethality,crew _vehicle);
     {
-        [QEGVAR(medical,woundReceived), [_x, "Head", _lethality, _killer, "#vehiclecrash", [HITPOINT_INDEX_HEAD,1]], _x] call CBA_fnc_targetEvent;
+        [QEGVAR(medical,woundReceived), [_x, [["Head", _lethality]], _killer, "#vehiclecrash"] call CBA_fnc_targetEvent;
     } forEach (crew _vehicle);
 }, true, ["ParachuteBase"]] call CBA_fnc_addClassEventHandler;
 
