@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SynixeBrett
+ * Author: Brett Mayson
  * Add a custom sorting method.
  *
  * Arguments:
