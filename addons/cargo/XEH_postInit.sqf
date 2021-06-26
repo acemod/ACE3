@@ -123,3 +123,10 @@ private _objectClassesAddClassEH = call (uiNamespace getVariable [QGVAR(objectCl
 {
     [_x, "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
 } forEach _objectClassesAddClassEH;
+
+if (isServer) then {
+    ["ace_placedInBodyBag", {
+        params ["_target", "_bodyBag"];
+        _bodyBag setVariable [QGVAR(label), [_target, false, true] call EFUNC(common,getName), true];
+    }] call CBA_fnc_addEventHandler;
+};
