@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SynixeBrett
+ * Author: Brett Mayson
  * Statement to sort items by the mod they belong to.
  *
  * Arguments:
