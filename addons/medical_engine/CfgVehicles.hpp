@@ -6,7 +6,7 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
 
@@ -16,14 +16,14 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(2,2);
+            ADD_ACE_HITPOINTS;
         };
     };
     class B_Soldier_05_f: B_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(2,2);
+            ADD_ACE_HITPOINTS;
         };
     };
 
@@ -33,14 +33,14 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(2,2);
+            ADD_ACE_HITPOINTS;
         };
     };
     class I_Soldier_04_F: I_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(2,2);
+            ADD_ACE_HITPOINTS;
         };
     };
 
@@ -50,28 +50,28 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(2,2);
+            ADD_ACE_HITPOINTS;
         };
     };
     class O_Soldier_02_F: O_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(2,2);
+            ADD_ACE_HITPOINTS;
         };
     };
     class O_officer_F: O_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,2);
+            ADD_ACE_HITPOINTS;
         };
     };
     class O_Soldier_diver_base_F: O_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
 
@@ -80,42 +80,42 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
     class B_Protagonist_VR_F: B_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
     class O_Soldier_VR_F: O_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
     class I_Soldier_VR_F: I_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
     class I_Protagonist_VR_F: I_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
     class O_Protagonist_VR_F: O_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
     class C_man_1;
@@ -123,7 +123,7 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
 
@@ -132,7 +132,7 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(1,1);
+            ADD_ACE_HITPOINTS;
         };
     };
 
@@ -141,14 +141,14 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(3,3);
+            ADD_ACE_HITPOINTS;
         };
     };
     class O_V_Soldier_base_F: O_Soldier_base_F {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(3,3);
+            ADD_ACE_HITPOINTS;
         };
     };
 
@@ -158,7 +158,7 @@ class CfgVehicles {
         class HitPoints {
             class HitHands;
             class HitLegs;
-            ADD_ACE_HITPOINTS(2,2);
+            ADD_ACE_HITPOINTS;
         };
     };
 };

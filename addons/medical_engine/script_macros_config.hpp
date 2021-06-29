@@ -7,7 +7,9 @@
         class My_AwesomeUnit_base;
         class My_AwesomeUnit: My_AwesomeUnit_base {
             class HitPoints {
-                ADD_ACE_HITPOINTS(2,2);
+                class HitHands;
+                class HitLegs;
+                ADD_ACE_HITPOINTS;
             };
         };
     };
@@ -24,7 +26,7 @@
 // the hit point itself should not take any damage
 // It is important that the "ACE_HDBracket" hit point is the last in the config,
 // but has the same selection as the first one (always "HitHead" for soldiers).
-#define ADD_ACE_HITPOINTS(arm_armor,leg_armor)\
+#define ADD_ACE_HITPOINTS\
     class HitLeftArm: HitHands {\
         material = -1;\
         name = "hand_l";\
