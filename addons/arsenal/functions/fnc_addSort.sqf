@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Tabs to add stat to <ARRAY>
- *   0: Left Tab Indexes <ARRAY>
- *   1: Right Tab Indexes <ARRAY>
+ *   0.0: Left Tab Indexes <ARRAY>
+ *   0.1: Right Tab Indexes <ARRAY>
  * 1: Sort Class (a unique string for each algorithm) <STRING>
  * 2: Display Name <STRING>
  * 3: Algorithm <CODE>

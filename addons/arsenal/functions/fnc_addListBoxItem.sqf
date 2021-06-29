@@ -4,7 +4,7 @@
  * Add a listbox row.
  *
  * Arguments:
- * 0: Config category <STRING> (must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice")
+ * 0: Config category, must be "CfgWeapons", "CfgVehicles", "CfgMagazines", "CfgVoice" <STRING>
  * 1: Classname <STRING>
  * 2: Panel control <CONTROL>
  * 3: Name of the picture entry in that Cfg class <STRING>

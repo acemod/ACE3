@@ -7,9 +7,9 @@
  * 0: Tabs to add the stat to (ARRAY of ARRAYS)
    * 0.1 Left tab indexes (ARRAY of NUMBERS)
    * 0.2 Right tab indexes (ARRAY of NUMBERS)
- * 1: Stat class (STRING) (A unique string for each stat)
+ * 1: Stat class <STRING> (A unique string for each stat)
  * 2: Config entries to pass (ARRAY of STRINGS)
- * 3: Title (STRING)
+ * 3: Title <STRING>
  * 4: Show bar / show text bools (ARRAY of BOOLS)
    * 4.1 Show bar (BOOL)
    * 4.2 Show text (BOOL)
@@ -17,7 +17,7 @@
    * 5.1 Bar code (CODE)
    * 5.2 Text code (CODE)
    * 5.3 Condition code (CODE)
- * 6: Priority (NUMBER) (Optional)
+ * 6: Priority <NUMBER> (Optional)
  *
  * Return Value:
  * 0: Array of IDs (ARRAY of STRINGS)
