@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_medical_engine_fnc_disableThirdParty;
+ * [] call ace_medical_engine_fnc_disableThirdParty
  *
  * Public: No
  */
