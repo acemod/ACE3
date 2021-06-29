@@ -25,26 +25,20 @@
 // It is important that the "ACE_HDBracket" hit point is the last in the config,
 // but has the same selection as the first one (always "HitHead" for soldiers).
 #define ADD_ACE_HITPOINTS(arm_armor,leg_armor)\
-    class HitLeftArm {\
-        armor = arm_armor;\
+    class HitLeftArm: HitHands {\
         material = -1;\
         name = "hand_l";\
-        passThrough = 1;\
         radius = 0.08;\
-        explosionShielding = 1;\
         visual = "injury_hands";\
         minimalHit = 0.01;\
     };\
     class HitRightArm: HitLeftArm {\
         name = "hand_r";\
     };\
-    class HitLeftLeg {\
-        armor = leg_armor;\
+    class HitLeftLeg: HitLegs {\
         material = -1;\
         name = "leg_l";\
-        passThrough = 1;\
         radius = 0.1;\
-        explosionShielding = 1;\
         visual = "injury_legs";\
         minimalHit = 0.01;\
     };\

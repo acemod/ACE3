@@ -31,6 +31,7 @@ GVAR(damageTypeDetails) get _typeOfDamage params ["_thresholds", "", "", "_damag
 // Administration for open wounds and ids
 private _openWounds = GET_OPEN_WOUNDS(_unit);
 
+private _createdWounds = false;
 private _updateDamageEffects = false;
 private _painLevel = 0;
 private _criticalDamage = false;
@@ -40,6 +41,11 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 // process wounds separately for each body part hit
 {   // forEach _allDamages
     _x params ["_damage", "_bodyPart"];
+
+    // silently ignore structural damage
+    if (_bodyPart == "#structural") then {
+        continue
+    };
 
     // Convert the selectionName to a number and ensure it is a valid selection.
     private _bodyPartNToAdd = ALL_BODY_PARTS find toLower _bodyPart;
@@ -74,6 +80,10 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
         // Select the injury we are going to add
         selectRandomWeighted _weightedWoundTypes params ["_woundTypeToAdd", "", "_dmgMultiplier", "_bleedMultiplier", "_sizeMultiplier", "_painMultiplier", "_fractureMultiplier"];
+        if (isNil "_woundTypeToAdd") then {
+            WARNING_4("No valid wound types",_damage,_dmgPerWound,_typeOfDamage,_bodyPart);
+            continue
+        };
         GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture"];
         private _woundClassIDToAdd = GVAR(woundClassNames) find _woundTypeToAdd;
     
@@ -86,9 +96,11 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         // Anything above this value is guaranteed worst wound possible
         private _worstDamage = 2;
 
+        #define LARGE_WOUND_THRESHOLD 0.5
+
         // Config specifies bleeding and pain for worst possible wound
         // Worse wound correlates to higher damage, damage is not capped at 1
-        private _woundSize = linearConversion [0.1, _worstDamage, _woundDamage * _sizeMultiplier, 0.25, 1, true];
+        private _woundSize = linearConversion [0.1, _worstDamage, _woundDamage * _sizeMultiplier, LARGE_WOUND_THRESHOLD^3, 1, true];
     
         private _pain = _woundSize * _painMultiplier * _injuryPain;
         _painLevel = _painLevel + _pain;
@@ -98,7 +110,6 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         // wound category (minor [0.25-0.5], medium [0.5-0.75], large [0.75+])
         //private _category = floor linearConversion [0.25, 0.75, _woundSize, 0, 2, true];
 
-        #define LARGE_WOUND_THRESHOLD 0.63
         // large wounds are > LARGE_WOUND_THRESHOLD
         // medium is > LARGE_WOUND_THRESHOLD^2
         // minor is > LARGE_WOUND_THRESHOLD^3
@@ -175,6 +186,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             TRACE_1("adding new wound",_injury);
             _openWounds pushBack _injury;
         };
+        _createdWounds = true;
     };
 } forEach _allDamages;
 
@@ -182,17 +194,19 @@ if (_updateDamageEffects) then {
     [_unit] call EFUNC(medical_engine,updateDamageEffects);
 };
 
-_unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
-_unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+if (_createdWounds) then {
+    _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
+    _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
-[_unit] call EFUNC(medical_status,updateWoundBloodLoss);
+    [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
 
-_bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
+    _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
-[QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
 
-if (_criticalDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
-    [_unit] call FUNC(handleIncapacitation);
+    if (_criticalDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
+        [_unit] call FUNC(handleIncapacitation);
+    };
+
+    TRACE_4("exit",_unit,_painLevel,GET_PAIN(_unit),GET_OPEN_WOUNDS(_unit));
 };
-
-TRACE_4("exit",_unit,_painLevel,GET_PAIN(_unit),GET_OPEN_WOUNDS(_unit));

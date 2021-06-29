@@ -55,8 +55,8 @@ GVAR(damageTypeCache) = createHashMap;
 private _damageTypesConfig = _injuriesConfigRoot >> "damageTypes";
 private _thresholdsDefault = getArray (_damageTypesConfig >> "thresholds");
 private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionSpecific");
-private _woundsHandlerDefault = getText (_damageTypesConfig >> "woundsHandler");
-FUNC(defaultWoundHandler) = missionNamespace getVariable [_woundsHandlerDefault, FUNC(woundsHandlerActive)];
+private _woundsHandlerDefault = GET_STRING(_damageTypesConfig >> "woundsHandler",QFUNC(woundsHandlerActive));
+FUNC(defaultWoundHandler) = call compile _woundsHandlerDefault;
 
 // Collect all available damage types from the config
 {
@@ -70,7 +70,7 @@ FUNC(defaultWoundHandler) = missionNamespace getVariable [_woundsHandlerDefault,
 
     private _thresholds = GET_ARRAY(_damageTypeSubClassConfig >> "thresholds",_thresholdsDefault);
     private _selectionSpecific = GET_NUMBER(_damageTypeSubClassConfig >> "selectionSpecific",_selectionSpecificDefault);
-    private _woundsHandler = GET_STRING(_damageTypeSubClassConfig >> "woundsHandler",_woundsHandlerDefault);
+    private _woundsHandler = call compile GET_STRING(_damageTypeSubClassConfig >> "woundsHandler",_woundsHandlerDefault);
 
     /*
     // extension loading

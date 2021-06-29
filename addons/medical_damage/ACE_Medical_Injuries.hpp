@@ -70,17 +70,19 @@ class ACE_Medical_Injuries {
         // if 1, wounds are only applied to the hitpoint that took the most damage. othewrise, wounds are applied to all damaged hitpoints
         selectionSpecific = 1;
         
+        // SQF expression that returns a function - see documentation
         // this can also be overridden for each damage type
         woundsHandler = QFUNC(woundsHandlerActive);
 
         class bullet {
-            thresholds[] = {{0.1, 1}, {0.1, 0}};
+            // bullets only create multiple wounds when the damage is very high
+            thresholds[] = {{20, 10}, {4.5, 2}, {3, 1}, {0, 1}};
             selectionSpecific = 1;
             
             class Avulsion {
                 // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
                 // as with thresholds, but result is not rounded (decimal values used as-is)
-                weighting[] = {{0.01, 1}, {0.01, 0}};
+                weighting[] = {{1, 1}, {0.35, 0}};
                 /*
                 damageMultiplier = 1;
                 sizeMultiplier = 1;
@@ -91,71 +93,82 @@ class ACE_Medical_Injuries {
             };
             class Contusion {
                 weighting[] = {{0.35, 0}, {0.35, 1}};
+                // bruises caused by bullets hitting the plate are big
+                sizeMultiplier = 3.2;
+                // tone down the pain a tiny bit to compensate
+                painMultiplier = 0.8;
             };
             class VelocityWound {
-                weighting[] = {{0.35, 1}, {0.35, 0}};
+                // velocity wounds are only in the 0.35-1.5 range
+                weighting[] = {{1.5, 0}, {1.5, 1}, {0.35, 1}, {0.35, 0}};
+                // velocity wounds will tend to be medium or large
+                sizeMultiplier = 0.9;
             };
         };
         class grenade {
-            thresholds[] = {{0.9, 3}, {0.5, 2}, {0.1, 1}, {0, 0}};
+            // at low damage numbers, chance to create no wounds - makes it a bit more random instead of consistently covering people in bruises
+            thresholds[] = {{20, 10}, {10, 5}, {4, 3}, {1.5, 2}, {0.8, 2}, {0.3, 1}, {0, 0}};
             selectionSpecific = 0;
             class Avulsion {
-                weighting[] = {{0.01, 1}, {0.01, 0}};
-            };
-            class Cut {
-                weighting[] = {{0.1, 1}, {0.1, 0}};
+                weighting[] = {{1.5, 1}, {1.1, 0}};
             };
             class VelocityWound {
-                weighting[] = {{0.35, 1}, {0.35, 0}};
+                weighting[] = {{1.5, 0}, {1.1, 1}, {0.7, 0}};
             };
             class PunctureWound {
-                weighting[] = {{0.02, 1}, {0.02, 0}};
+                weighting[] = {{0.9, 0}, {0.7, 1}, {0.35, 0}};
+            };
+            class Cut {
+                weighting[] = {{0.7, 0}, {0.35, 1}, {0.35, 0}};
             };
             class Contusion {
-                weighting[] = {{0.35, 0}, {0.35, 1}};
+                weighting[] = {{0.5, 0}, {0.35, 1}};
+                sizeMultiplier = 2;
+                painMultiplier = 0.9;
             };
         };
         class explosive {
-            thresholds[] = {{2, 3}, {1.2, 2}, {0.4, 1}, {0,0}};
+            // explosives create more and smaller wounds than grenades
+            thresholds[] = {{20, 15}, {8, 7}, {2, 3}, {1.2, 2}, {0.4, 1}, {0,0}};
             selectionSpecific = 0;
             class Avulsion {
-                weighting[] = {{0.01, 1}, {0.01, 0}};
+                weighting[] = {{1, 1}, {0.8, 0}};
             };
             class Cut {
-                weighting[] = {{0.1, 1}, {0.1, 0}};
-            };
-            class VelocityWound {
-                weighting[] = {{0.35, 1}, {0.35, 0}};
-            };
-            class PunctureWound {
-                weighting[] = {{0.02, 1}, {0.02, 0}};
+                weighting[] = {{1.5, 0}, {0.35, 1}, {0, 0}};
             };
             class Contusion {
-                weighting[] = {{0.35, 0}, {0.35, 1}};
+                weighting[] = {{0.5, 0}, {0.35, 1}};
+                sizeMultiplier = 2;
+                painMultiplier = 0.9;
             };
         };
         class shell {
-            thresholds[] = {{2, 3}, {1.2, 2}, {0.4, 1}, {0,0}};
+            // shells tend to involve big pieces of shrapnel, so create fewer and larger wounds
+            thresholds[] = {{20, 10}, {10, 5}, {4.5, 2}, {2, 2}, {0.8, 1}, {0.2, 1}, {0, 0}};
             selectionSpecific = 0;
             class Avulsion {
-                weighting[] = {{0.01, 1}, {0.01, 0}};
-            };
-            class Cut {
-                weighting[] = {{0.1, 1}, {0.1, 0}};
+                weighting[] = {{1.5, 1}, {1.1, 0}};
             };
             class VelocityWound {
-                weighting[] = {{0.35, 1}, {0.35, 0}};
+                weighting[] = {{1.5, 0}, {1.1, 1}, {0.7, 0}};
             };
             class PunctureWound {
-                weighting[] = {{0.02, 1}, {0.02, 0}};
+                weighting[] = {{0.9, 0}, {0.7, 1}, {0.35, 0}};
+            };
+            class Cut {
+                weighting[] = {{0.7, 0}, {0.35, 1}, {0.35, 0}};
             };
             class Contusion {
-                weighting[] = {{0.35, 0}, {0.35, 1}};
+                weighting[] = {{0.5, 0}, {0.35, 1}};
+                sizeMultiplier = 2;
+                painMultiplier = 0.9;
             };
         };
         class vehiclecrash {
             thresholds[] = {{1.5, 3}, {1.5, 2}, {1, 2}, {1, 1}, {0.05, 1}}; // prevent subdividing wounds past FRACTURE_DAMAGE_THRESHOLD to ensure limp/fractue is triggered
             selectionSpecific = 0;
+            woundsHandler = QFUNC(woundsHandlerVehiclecrash);
             class Abrasion {
                 weighting[] = {{0.30, 0}, {0.30, 1}};
             };
@@ -263,6 +276,7 @@ class ACE_Medical_Injuries {
         class drowning {
             //No related wounds as drowning should not cause wounds/bleeding. Can be extended for internal injuries if they are added.
             thresholds[] = {{0, 0}};
+            woundsHandler = "{}";
         };
         class burning {
             //TODO: burning damage used to be type 'unknown' so this is a copy-paste of that

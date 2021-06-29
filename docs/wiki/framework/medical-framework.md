@@ -157,7 +157,7 @@ class ACE_Medical_Injuries {
             // if 1, wounds are only applied to the most-damaged body part. if 0, wounds are applied to all damaged parts
             selectionSpecific = 1;
 
-            // name of the function that will handle this damage type
+            // SQF expression that returns the wound handler function for this damage type
             woundsHandler = "MY_fnc_woundsHandler";
 
             // one class for each type of wound this damage type is allowed to create

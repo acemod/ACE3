@@ -8,3 +8,4 @@ PREP(woundReceived);
 PREP(woundsHandler);
 PREP(woundsHandlerBurning);
 PREP(woundsHandlerSQF);
+PREP(woundsHandlerVehiclecrash);
