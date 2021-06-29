@@ -160,13 +160,13 @@ class FunctionFile:
 
         arguments = []
         for argument in lines:
-            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w]+?)\>(\s\(default: (.+)\))?$", argument)
+            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w]+?)\>( \([Oo]ptional\))?(\s\(default: (.+)\))?$", argument)
 
             if valid:
                 arg_index = valid.group(1)
                 arg_name = valid.group(2)
                 arg_types = valid.group(3)
-                arg_default = valid.group(5)
+                arg_default = valid.group(6)
                 arg_notes = []
 
                 if arg_index != str(len(arguments)):
