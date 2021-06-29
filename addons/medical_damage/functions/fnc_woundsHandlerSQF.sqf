@@ -107,9 +107,6 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
         private _bleeding = _woundSize * _bleedMultiplier * _injuryBleedingRate;
 
-        // wound category (minor [0.25-0.5], medium [0.5-0.75], large [0.75+])
-        //private _category = floor linearConversion [0.25, 0.75, _woundSize, 0, 2, true];
-
         // large wounds are > LARGE_WOUND_THRESHOLD
         // medium is > LARGE_WOUND_THRESHOLD^2
         // minor is > LARGE_WOUND_THRESHOLD^3

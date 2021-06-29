@@ -22,7 +22,7 @@
 // #define DEBUG_TESTRESULTS
 
 params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_bodyPart", "", [""]], ["_typeOfDamage", "", [""]], ["_instigator", objNull, [objNull]]];
-TRACE_56("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator);
+TRACE_5("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator);
 
 _bodyPart = toLower _bodyPart;
 private _bodyPartIndex = ALL_BODY_PARTS find _bodyPart;

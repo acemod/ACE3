@@ -20,7 +20,7 @@ params ["_unit", "_allDamages", "_typeOfDamage"];
 
 // randomise all hit selections
 private _newDamages = _allDamages apply {
-	[_x select 0, selectRandom ALL_HITPOINTS, _x select 2];
+    [_x select 0, selectRandom ALL_HITPOINTS, _x select 2];
 };
 
 [_unit, _newDamages, _typeOfDamage] call FUNC(defaultWoundHandler);
