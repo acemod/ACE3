@@ -16,7 +16,7 @@
  */
 
 // SOG:PF CDLC revive system
-// Pretend revive system was alread initialized.
+// Pretend revive system was already initialized.
 // See: vn_fnc_module_advancedrevive
 vn_advanced_revive_started = true;
 
