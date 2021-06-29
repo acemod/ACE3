@@ -160,7 +160,7 @@ class FunctionFile:
 
         arguments = []
         for argument in lines:
-            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w]+?)\>( \([Oo]ptional\))?(\s\(default: (.+)\))?$", argument)
+            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w,\|]+?)\>( \([Oo]ptional\))?(\s\(default: (.+)\))?$", argument)
 
             if valid:
                 arg_index = valid.group(1)
