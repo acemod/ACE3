@@ -38,7 +38,7 @@ private _newDamage = _damage - _oldDamage;
 // Get armor value of hitpoint and calculate damage before armor
 private _armor = [_unit, _hitpoint] call FUNC(getHitpointArmor);
 private _realDamage = _newDamage * _armor;
-TRACE_3("Received hit",_hitpoint,_newDamage,_realDamage);
+TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
 
 // Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
 // Damage occurs in consistent increments
@@ -66,6 +66,33 @@ if (
 ) exitWith {
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
     [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _unit, "vehiclecrash"]] call CBA_fnc_localEvent;
+
+    0
+};
+
+// Being inside an exploding vehicle doesn't trigger for each hitpoint
+// It seems to fire twice with ammo type "FuelExplosion" or "FuelExplosionBig"
+if (
+    _hitPoint isEqualTo "#structural" &&
+    {_damage == 1} &&
+    {_ammo isKindOf "FuelExplosion"} &&
+    {_vehicle != _unit}
+) exitwith {
+    // triggers twice, so do half damage each time. not very important as it's basically always lethal
+    private _hit = GET_NUMBER(configFile >> "CfgAmmo" >> _ammo >> "indirectHit", 10)/2;
+    private _uniform = uniform _unit;
+    if (_uniform isEqualTo "") then {
+        _uniform = getText (configOf _unit >> "nakedUniform");
+    };
+    private _uniformClass = GET_STRING(configFile >> "CfgWeapons" >> _uniform >> "ItemInfo" >> "uniformClass", "U_BasicBody");
+    private _damages = [];
+    {
+        private _armor = [_unit, _x] call FUNC(getHitpointArmor);
+        private _shielding = GET_NUMBER(configFile >> "CfgVehicles" >> _uniformClass >> "Hitpoints" >> _x >> "explosionShielding", 1);
+        _damages pushBack [_hit*_shielding/_armor, ALL_BODY_PARTS select _forEachIndex, _hit*_shielding]
+    } forEach ALL_HITPOINTS;
+    TRACE_6("Vehicle explosion",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
+    [QEGVAR(medical,woundReceived), [_unit, _damages, _unit, _ammo]] call CBA_fnc_localEvent;
 
     0
 };

@@ -43,7 +43,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     _x params ["_damage", "_bodyPart"];
 
     // silently ignore structural damage
-    if (_bodyPart == "#structural") then {
+    if (toLower _bodyPart isEqualTo "#structural") then {
         continue
     };
 
