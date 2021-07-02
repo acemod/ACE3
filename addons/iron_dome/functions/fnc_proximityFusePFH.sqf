@@ -45,7 +45,7 @@ GVAR(interceptors) = GVAR(interceptors) select {
         // if we overshot target, dont take out target
         if (_minDistance <= _lastDistance && { GVAR(proximityFuseFailureChance) <= random 1 }) then {
             private _explosion = createVehicle ["SmallSecondary", _target, [], 0, "CAN_COLLIDE"];
-            deleteVehicle _target;
+            [QGVAR(destroyProjectile), [_target]] call CBA_fnc_globalEvent;
         };
         false
     } else {

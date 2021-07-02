@@ -90,5 +90,11 @@ GVAR(projectilesToIntercept) = [];
     };
 }] call CBA_fnc_addClassEventHandler;
 
+// Needed on all clients to properly destroy it. Despite the fact that deleteVehicle is AG EG, unless if you delete it on all clients there will still be missiles seen
+[QGVAR(destroyProjectile), {
+    params ["_projectile"];
+    deleteVehicle _projectile;
+}] call CBA_fnc_addEventHandler;
+
 ADDON = true;
 
