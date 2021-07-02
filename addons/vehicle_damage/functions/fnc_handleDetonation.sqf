@@ -34,5 +34,5 @@ if (!_alreadyDetonating && { _chanceOfDetonate >= random 1 }) exitWith {
 // Avoid RPT spam
 if (_alreadyDetonating) exitWith { _isKnockedOut };
 
-LOG_5("[%1] No Detonation - Chance of detonation [%2]",_vehicle,_chanceOfDetonate);
+LOG_2("[%1] No Detonation - Chance of detonation [%2]",_vehicle,_chanceOfDetonate);
 false

@@ -275,7 +275,7 @@ class CfgVehicles {
     class APC_Tracked_03_base_F;
     class RHS_M2A2_Base : APC_Tracked_03_base_F {
         EGVAR(refuel,fuelCapacity) = 746;
-		EGVAR(vehicle_damage,canHaveFireRing) = 1;
+        EGVAR(vehicle_damage,canHaveFireRing) = 1;
         EGVAR(vehicle_damage,hullDetonationProb) = 0.2;
         EGVAR(vehicle_damage,turretDetonationProb) = 0.2;
         EGVAR(vehicle_damage,engineDetonationProb) = 0;

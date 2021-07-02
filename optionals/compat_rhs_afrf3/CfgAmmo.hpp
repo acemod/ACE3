@@ -279,7 +279,7 @@ class CfgAmmo {
     class rhs_ammo_atgmCore_base: M_Titan_AT {
         EGVAR(vehicle_damage,incendiary) = 1.0;
     };
-	class rhs_ammo_atgmBase_base: M_Titan_AT {
+    class rhs_ammo_atgmBase_base: M_Titan_AT {
         EGVAR(vehicle_damage,incendiary) = 1.0;
     };
     

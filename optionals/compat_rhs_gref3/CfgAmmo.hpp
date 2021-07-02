@@ -115,7 +115,7 @@ class CfgAmmo {
     };
     
     class rhs_ammo_3bk12_penetrator;
-	class rhsgref_ammo_rkg3em_penetrator: rhs_ammo_3bk12_penetrator {
+    class rhsgref_ammo_rkg3em_penetrator: rhs_ammo_3bk12_penetrator {
         EGVAR(vehicle_damage,incendiary) = 1.0;
     };
     class rhs_ammo_rpg75_penetrator: rhs_ammo_3bk12_penetrator {
