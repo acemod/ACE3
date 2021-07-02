@@ -175,5 +175,11 @@
             <Portuguese>Multiplicador para a chance de cozinhamento. Valores mais altos aumentam as chances de ocorrer.</Portuguese>
             <Czech>Multiplikátor pro pravděpodobnost vznícení munice. Vyšší hodnota znamená vyšší šanci vznícení munice.</Czech>
         </Key>
+        <Key ID="STR_ACE_CookOff_enableFire_name">
+            <English>Enable Cook-Off Vehicle Fire</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableFire_tooltip">
+            <English>Whether or not vehicles will catch on fire during cook-off</English>
+        </Key>
     </Package>
 </Project>
