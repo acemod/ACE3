@@ -261,12 +261,14 @@
             <French>Durée d'interaction - Auto-injecteurs</French>
             <Japanese>注射器の使用時間</Japanese>
             <Spanish>Tiempo de tratamiento de autoinyección</Spanish>
+            <Russian>Время ввода автоинъектора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
             <French>Définit le temps nécessaire à l'administration d'une substance auto-injectable (en secondes).</French>
             <Japanese>注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para administrar medicación utilizando un autoinyectador.</Spanish>
+            <Russian>Время, необходимое для введения медикаментов автоинъектором (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
@@ -274,6 +276,7 @@
             <German>Tourniquet-Behandlungszeit</German>
             <Japanese>止血帯の使用時間</Japanese>
             <Spanish>Tiempo de tratamiento de torniquete</Spanish>
+            <Russian>Время наложения/снятия жгута</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
@@ -281,6 +284,7 @@
             <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
             <Japanese>止血帯の使用/排除に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para aplicar/quitar un torniquete.</Spanish>
+            <Russian>Время, необходимое для наложения/снятия жгута (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
@@ -288,6 +292,7 @@
             <German>IV Beutelbehandlungszeit</German>
             <Japanese>点滴の使用時間</Japanese>
             <Spanish>Tiempo de tratamiento de bolsa de IV</Spanish>
+            <Russian>Время применения пакета внутривенного переливания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
@@ -295,6 +300,7 @@
             <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
             <Japanese>点滴の投与に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para administrar una bolsa de IV.</Spanish>
+            <Russian>Время, необходимое для применения пакета внутривенного переливания (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
@@ -302,6 +308,7 @@
             <German>Schienenbehandlungszeit</German>
             <Japanese>添え木の使用時間</Japanese>
             <Spanish>TIempo de tratamiento de férula</Spanish>
+            <Russian>Время наложения шины</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
@@ -309,6 +316,7 @@
             <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
             <Japanese>添え木の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>TIempo, en segundos, requerido para aplicar una férula.</Spanish>
+            <Russian>Время, необходимое для наложения шины (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
@@ -316,6 +324,7 @@
             <German>Anwendungszeit für Leichensack</German>
             <Japanese>死体袋の使用時間</Japanese>
             <Spanish>TIempo de uso de bolsa para cuerpos</Spanish>
+            <Russian>Время использования мешка для трупов</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
@@ -323,6 +332,7 @@
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
             <Japanese>死体袋の使用に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para poner a un paciente en una bolsa para cuerpos.</Spanish>
+            <Russian>Время, необходимое для того чтобы упаковать труп в мешок (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -641,12 +651,14 @@
             <French>Durée d'interaction - Sutures</French>
             <Japanese>縫合時間</Japanese>
             <Spanish>Tiempo de sutura de herida</Spanish>
+            <Russian>Время зашивания ран</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
             <French>Définit le temps nécessaire à la suture d'une plaie (en secondes).</French>
             <Japanese>縫合に掛かる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para suturar una única herida.</Spanish>
+            <Russian>Время, необходимое для зашивания одной раны (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -679,12 +691,14 @@
             <French>Housse mortuaire - Autoriser patients inconscients</French>
             <Japanese>無意識者を死体袋に</Japanese>
             <Spanish>Permitir bolsa para cuerpos inconsciente</Spanish>
+            <Russian>Разрешить упаковывать пациентов без сознания в мешки для трупов</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
             <French>Active la possibilité de placer des patients inconscients dans les housses mortuaires.\nAttention : le cas échéant cela provoquera la mort du patient.</French>
             <Japanese>気絶しているプレイヤーを死体袋へ入れられるかどうかを決定します。</Japanese>
             <Spanish>Permitir colocar a un paciente inconsciente en una bolsa para cuerpos.</Spanish>
+            <Russian>Разрешает упаковывать пациентов без сознания в мешки для трупов.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -694,7 +708,7 @@
             <Chinese>允許操作點滴</Chinese>
             <Japanese>IV 輸血の制限</Japanese>
             <Czech>Povolit IV transfuzi</Czech>
-            <Russian>Разрешить переливание IV группы крови</Russian>
+            <Russian>Разрешить внутривенное переливание</Russian>
             <Spanish>Permitir transfusión de IV</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
@@ -705,7 +719,7 @@
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
-            <Russian>Уровень навыка требуемый для переливания крови IV группы.</Russian>
+            <Russian>Уровень навыка, требуемый для осуществления внутривенного переливания.</Russian>
             <Spanish>Nivel de capacitación requerido para transfusiones de IV.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
@@ -713,12 +727,14 @@
             <Japanese>IV 輸血の場所制限</Japanese>
             <Spanish>Ubicación para transfusiones IV</Spanish>
             <French>Lieux perfusions IV</French>
+            <Russian>Места введения пакетов внутривенного переливания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
             <Japanese>IV 輸血を行える場所を決定できます。</Japanese>
             <Spanish>Controla dónde pueden ser realizadas las transfusiones IV.</Spanish>
             <French>Définit les lieux où la pose de perfusions est autorisée.</French>
+            <Russian>Определяет к каким частям тела разрешено применять пакеты внутренного переливания.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -947,12 +963,14 @@
             <French>Durée d'interaction - RCP</French>
             <Japanese>CPR の動作時間</Japanese>
             <Spanish>Tiempo de tratamiento de RCP</Spanish>
+            <Russian>Время проведения СЛР</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
             <French>Définit le temps nécessaire à la mise en œuvre d'une RCP (en secondes).</French>
             <Japanese>心肺蘇生にかかる時間 (秒) を決定します。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para realizar RCP en un paciente.</Spanish>
+            <Russian>Время, необходимое для проведения сердечно-лёгочной реанимации (СЛР) (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
@@ -4412,7 +4430,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
             <English>The body twitched and may not be dead!</English>
-            <Russian>Тело дернулось и, возможно, не умерло!</Russian>
+            <Russian>Тело дернулось и, возможно, пациент жив!</Russian>
             <French>L'unité a bougé et n'est peut-être pas morte !</French>
             <Japanese>身体が動き死んでないようだ!</Japanese>
             <Spanish>¡El cuerpo se retorció y puede que no esté muerto!</Spanish>

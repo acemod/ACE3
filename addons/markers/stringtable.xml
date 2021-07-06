@@ -5,6 +5,7 @@
             <English>Scale: %1</English>
             <Spanish>Escala: %1</Spanish>
             <French>Échelle : %1</French>
+            <Russian>Масштаб: %1</Russian>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
