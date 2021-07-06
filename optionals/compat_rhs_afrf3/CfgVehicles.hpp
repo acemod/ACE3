@@ -163,6 +163,10 @@ class CfgVehicles {
         transportRepair = 0;
         EGVAR(repair,canRepair) = 1;
     };
+    class RHS_Ural_Ammo_Base: RHS_Ural_Base {
+        transportAmmo = 0;
+        ace_rearm_defaultSupply = 1200;
+    };
 
     class rhs_truck: Truck_F {
         EGVAR(refuel,fuelCapacity) = 210;
@@ -175,6 +179,12 @@ class CfgVehicles {
     };
 
     class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
+        transportAmmo = 0;
+        ace_rearm_defaultSupply = 1200;
+    };
+
+    class rhs_kamaz5350: rhs_truck {};
+    class rhs_kamaz5350_ammo_base: rhs_kamaz5350 {
         transportAmmo = 0;
         ace_rearm_defaultSupply = 1200;
     };
