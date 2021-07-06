@@ -70,33 +70,6 @@ if (
     0
 };
 
-// Being inside an exploding vehicle doesn't trigger for each hitpoint
-// It seems to fire twice with ammo type "FuelExplosion" or "FuelExplosionBig"
-if (
-    _hitPoint isEqualTo "#structural" &&
-    {_damage == 1} &&
-    {_ammo isKindOf "FuelExplosion"} &&
-    {_vehicle != _unit}
-) exitwith {
-    // triggers twice, so do half damage each time. not very important as it's basically always lethal
-    private _hit = GET_NUMBER(configFile >> "CfgAmmo" >> _ammo >> "indirectHit", 10)/2;
-    private _uniform = uniform _unit;
-    if (_uniform isEqualTo "") then {
-        _uniform = getText (configOf _unit >> "nakedUniform");
-    };
-    private _uniformClass = GET_STRING(configFile >> "CfgWeapons" >> _uniform >> "ItemInfo" >> "uniformClass", "U_BasicBody");
-    private _damages = [];
-    {
-        private _armor = [_unit, _x] call FUNC(getHitpointArmor);
-        private _shielding = GET_NUMBER(configFile >> "CfgVehicles" >> _uniformClass >> "Hitpoints" >> _x >> "explosionShielding", 1);
-        _damages pushBack [_hit*_shielding/_armor, ALL_BODY_PARTS select _forEachIndex, _hit*_shielding]
-    } forEach ALL_HITPOINTS;
-    TRACE_6("Vehicle explosion",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
-    [QEGVAR(medical,woundReceived), [_unit, _damages, _unit, _ammo]] call CBA_fnc_localEvent;
-
-    0
-};
-
 // This hitpoint is set to trigger last, evaluate all the stored damage values
 // to determine where wounds are applied
 if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
