@@ -279,6 +279,16 @@ class CfgVehicles {
     class rhs_assault_umbts_engineer: rhs_assault_umbts {
         EGVAR(logistics_wirecutter,hasWirecutter) = 1;
     };
+    
+    class rhs_rk_sht_30_emr;
+    class rhs_rk_sht_30_emr_engineer: rhs {
+        EGVAR(logistics_wirecutter,hasWirecutter) = 1;
+    };
+    
+    class rhs_rk_sht_30_olive;
+    class rhs_rk_sht_30_olive_engineer: rhs {
+        EGVAR(logistics_wirecutter,hasWirecutter) = 1;
+    };
 
     class StaticMortar: StaticWeapon {};
     class rhs_2b14_82mm_Base: StaticMortar {
