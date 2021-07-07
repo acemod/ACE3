@@ -281,12 +281,12 @@ class CfgVehicles {
     };
     
     class rhs_rk_sht_30_emr;
-    class rhs_rk_sht_30_emr_engineer: rhs {
+    class rhs_rk_sht_30_emr_engineer: rhs_rk_sht_30_emr {
         EGVAR(logistics_wirecutter,hasWirecutter) = 1;
     };
     
     class rhs_rk_sht_30_olive;
-    class rhs_rk_sht_30_olive_engineer: rhs {
+    class rhs_rk_sht_30_olive_engineer: rhs_rk_sht_30_olive {
         EGVAR(logistics_wirecutter,hasWirecutter) = 1;
     };
 
