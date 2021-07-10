@@ -421,12 +421,4 @@ class DAGR_Menu {
         w = 0.01;
         h = 0.003;
     };
-
-    class DAGR_MENU_PSELECTION8 : DAGR_Menu_Pic {
-        idc = 2668795;
-        x = 0.549;
-        y = 0.352;
-        w = 0.01;
-        h = 0.003;
-    };
 };
