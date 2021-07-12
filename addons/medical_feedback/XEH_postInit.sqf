@@ -46,8 +46,10 @@ GVAR(bloodTickCounter) = 0;
     [!_unconscious, _unit] call EFUNC(common,setVolume);
 
     // Greatly reduce player's hearing ability while unconscious (affects radio addons)
-    [QUOTE(ADDON), VOL_UNCONSCIOUS, _unconscious] call EFUNC(common,setHearingCapability);
+    private _volume = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), VOL_UNCONSCIOUS];
+    [QUOTE(ADDON), _volume, _unconscious] call EFUNC(common,setHearingCapability);
 
+    [_unconscious, 1] call FUNC(effectUnconscious);
     [true] call FUNC(handleEffects);
     ["unconscious", _unconscious] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addEventHandler;
@@ -70,7 +72,8 @@ GVAR(bloodTickCounter) = 0;
 
     [!_status, _new] call EFUNC(common,setVolume);
 
-    [QUOTE(ADDON), VOL_UNCONSCIOUS, _status] call EFUNC(common,setHearingCapability);
+    private _volume = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), VOL_UNCONSCIOUS];
+    [QUOTE(ADDON), _volume, _status] call EFUNC(common,setHearingCapability);
     [true] call FUNC(handleEffects);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addPlayerEventHandler;

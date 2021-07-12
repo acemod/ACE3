@@ -31,7 +31,7 @@ if ({local _x} count (objectcurators _logic) > 0) then {
 if !(isserver) exitwith {};
 
 if (_activated) then {
-    _ammo = _logic getvariable ["type",gettext (configfile >> "cfgvehicles" >> typeof _logic >> "ammo")];
+    _ammo = _logic getvariable ["type",gettext (configOf _logic >> "ammo")];
     if (_ammo != "") then {
         _cfgAmmo = configfile >> "cfgammo" >> _ammo;
         //if !(isclass _cfgAmmo) exitwith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};

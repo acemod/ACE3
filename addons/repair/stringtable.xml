@@ -64,7 +64,7 @@
             <French>Remplacement de la roue...</French>
             <Japanese>タイヤを交換しています・・・</Japanese>
             <Korean>바퀴 교체중...</Korean>
-            <Chinesesimp>更换轮胎中...</Chinesesimp>
+            <Chinesesimp>正在更换轮胎...</Chinesesimp>
             <Chinese>更換輪胎中...</Chinese>
             <Turkish>Tekerlek Takılıyor</Turkish>
         </Key>
@@ -113,7 +113,7 @@
             <French>Démontage de la roue...</French>
             <Japanese>タイヤを外しています・・・</Japanese>
             <Korean>바퀴 제거중...</Korean>
-            <Chinesesimp>卸下轮胎中...</Chinesesimp>
+            <Chinesesimp>正在卸下轮胎...</Chinesesimp>
             <Chinese>卸下輪胎中...</Chinese>
             <Turkish>Tekerlek Sökülüyor</Turkish>
         </Key>
@@ -161,7 +161,7 @@
             <French>Remplacement de la chenille...</French>
             <Japanese>履帯を交換しています・・・</Japanese>
             <Korean>궤도 교체중...</Korean>
-            <Chinesesimp>更换履带中...</Chinesesimp>
+            <Chinesesimp>正在更换履带...</Chinesesimp>
             <Chinese>更換履帶中...</Chinese>
             <Turkish>Parça Değişiyor...</Turkish>
         </Key>
@@ -209,7 +209,7 @@
             <French>Démontage de la chenille...</French>
             <Japanese>履帯を外しています・・・</Japanese>
             <Korean>궤도 제거중...</Korean>
-            <Chinesesimp>卸下履带中...</Chinesesimp>
+            <Chinesesimp>正在卸下履带...</Chinesesimp>
             <Chinese>卸下履帶中...</Chinese>
             <Turkish>Parça Sökülüyor...</Turkish>
         </Key>
@@ -257,7 +257,7 @@
             <French>Réparation du véhicule...</French>
             <Japanese>車両を修理しています・・・</Japanese>
             <Korean>차량 수리중...</Korean>
-            <Chinesesimp>维修载具中...</Chinesesimp>
+            <Chinesesimp>正在维修载具...</Chinesesimp>
             <Chinese>維修載具中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
@@ -415,7 +415,7 @@
             <Russian>Ремонтируем...</Russian>
             <Japanese>修理しています・・・</Japanese>
             <Korean>수리중...</Korean>
-            <Chinesesimp>维修中...</Chinesesimp>
+            <Chinesesimp>正在维修...</Chinesesimp>
             <Chinese>維修中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
@@ -432,7 +432,7 @@
             <Russian>Ремонтируем %1...</Russian>
             <Japanese>%1 を修理しています・・・</Japanese>
             <Korean>%1 수리중...</Korean>
-            <Chinesesimp>维修%1中...</Chinesesimp>
+            <Chinesesimp>正在维修%1...</Chinesesimp>
             <Chinese>維修%1中...</Chinese>
             <Turkish>Tamir Ediliyor %1...</Turkish>
         </Key>
@@ -1885,6 +1885,7 @@
             <Polish>Rózne wymagania do naprawy</Polish>
             <Portuguese>Requerimentos para reparo miscelâneo</Portuguese>
             <Spanish>Requisitos de objetos misceláneos de reparación</Spanish>
+            <Russian>Требования к разному ремонту</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_Description">
             <English>Items required to repair a specific vehicle component or remove/replace tracks.</English>
@@ -1897,6 +1898,7 @@
             <Portuguese>Items necessários para reparar uma peça específica ou remover/substituir lagarta.</Portuguese>
             <Spanish>Objetos necesarios para reparar un componente específico del vehículo o quitar/reemplazar las orugas.</Spanish>
             <Italian>Elementi necessari per riparare un componente specifico del veicolo o per rimuovere/sostituire i cingoli</Italian>
+            <Russian>Предметы, необходимые для ремонта отдельных компонентов или снятия/замены гусеницы.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_DisplayName">
             <English>Full Repair Requirements</English>
@@ -1909,6 +1911,7 @@
             <Polish>Wymagania pełnej naprawy</Polish>
             <Portuguese>Requerimentos de Reparo Completo</Portuguese>
             <Spanish>Requisitos para reparación completa</Spanish>
+            <Russian>Требования к полному ремонту</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_FullRepairRequiredItems_Description">
             <English>Items required to perform a full vehicle repair.</English>
@@ -1921,6 +1924,7 @@
             <Portuguese>Itens requeridos para realizar um reparo veicular completo.</Portuguese>
             <Spanish>Objetos requeridos para una reparación completa</Spanish>
             <Italian>Elementi necessari per eseguire una riparazione completa del veicolo.</Italian>
+            <Russian>Предметы, необходимые для полного ремонта техники.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_shutOffEngineWarning">
             <English>Engine must be off to repair</English>

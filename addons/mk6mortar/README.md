@@ -1,7 +1,7 @@
 ace_mk6mortar
 ==========
 
-Tweaks the Nk6 Mortar system.
+Tweaks the Mk6 Mortar system.
 
 
 ## Maintainers

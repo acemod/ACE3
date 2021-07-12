@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: PabstMirror
- * Draws the current temp marker.  Allows rotation.
+ * Draws the current temp marker.  Allows rotation and scale.
  *
  * Arguments:
  * 0: TheMap <Control>
@@ -25,8 +25,8 @@ if (GVAR(currentMarkerConfigName) == "" || {GVAR(currentMarkerColorConfigName) =
     ERROR("Bad Data");
 };
 
-private _sizeX = 1;
-private _sizeY = 1;
+private _sizeX = GVAR(currentMarkerScale);
+private _sizeY = GVAR(currentMarkerScale);
 
 private _textureConfig = configFile >> "CfgMarkers" >> GVAR(currentMarkerConfigName);
 private _texture = getText (_textureConfig >> "icon");

@@ -36,7 +36,7 @@ private _rand = random 1;
 if (_isCar) then {
     if !(_canMove) then {
         [_vehicle] spawn FUNC(abandon);
-        LOG_4("[%1] can't move and is bailing and is a car [%2 | %3]",_vehicle,_canMove,_isCar);
+        LOG_3("[%1] can't move and is bailing and is a car [%2 | %3]",_vehicle,_canMove,_isCar);
     };
 } else {
     if (!_canMove && !_canShoot ) exitWith { // If you can't move and you can't shoot, you better GTFO

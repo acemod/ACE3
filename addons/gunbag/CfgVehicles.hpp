@@ -10,6 +10,13 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
+                class GVAR(weaponSwap) {
+                    displayName = CSTRING(SwapGunbag);
+                    condition = QUOTE((GVAR(swapGunbagEnabled)) && ([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 2});
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(swapGunbag));
+                    showDisabled = 0;
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
+                };
                 class GVAR(weaponOff) {
                     displayName = CSTRING(OffGunbag);
                     condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 1});
@@ -38,6 +45,13 @@ class CfgVehicles {
                         displayName = CSTRING(ToGunbag);
                         condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 0);
                         statement = QUOTE([ARR_2(_player,_player)] call FUNC(toGunbag));
+                        showDisabled = 0;
+                        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
+                    };
+                    class GVAR(weaponSwap) {
+                        displayName = CSTRING(SwapGunbag);
+                        condition = QUOTE((GVAR(swapGunbagEnabled)) && ([ARR_2(_player,_player)] call FUNC(canInteract) == 2));
+                        statement = QUOTE([ARR_2(_player,_player)] call FUNC(swapGunbag));
                         showDisabled = 0;
                         icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };

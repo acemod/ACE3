@@ -50,7 +50,7 @@ private _ffvTurrets = fullCrew [_vehicle, "", true] select {_x select 4} apply {
 } forEach (magazinesAmmoCargo _vehicle);
 
 // Get ammo from transportAmmo / ace_rearm
-private _vehCfg = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _vehCfg = configOf _vehicle;
 
 private _configSupply = (getNumber (_vehCfg >> "transportAmmo")) max (getNumber (_vehCfg >> QEGVAR(rearm,defaultSupply)));
 if (_vehicle getVariable [QEGVAR(rearm,isSupplyVehicle), (_configSupply > 0)]) then {

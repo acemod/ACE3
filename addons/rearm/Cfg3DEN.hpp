@@ -1,5 +1,5 @@
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
-#define DEFAULT_REARMCARGO GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(defaultSupply),-1)
+#define DEFAULT_REARMCARGO GET_NUMBER(configOf _this >> QQGVAR(defaultSupply),-1)
 
 
 class Cfg3DEN {

@@ -15,6 +15,7 @@
             <French>ACE Verrouillage véhicule</French>
             <Czech>ACE Zamykání Vozidel</Czech>
             <Turkish>ACE Araç Kilidi</Turkish>
+            <Spanish>ACE Bloqueo de vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
@@ -80,7 +81,7 @@
             <Portuguese>Usando Mixa...</Portuguese>
             <Japanese>鍵をこじ開けている・・・</Japanese>
             <Korean>문따는중...</Korean>
-            <Chinesesimp>解锁中...</Chinesesimp>
+            <Chinesesimp>正在开锁...</Chinesesimp>
             <Chinese>解鎖中...</Chinese>
             <Turkish>Maymuncuklanıyor...</Turkish>
         </Key>
@@ -276,6 +277,11 @@
             <Chinesesimp>设定所有载具的初始上锁状态 (移除不明确的锁定状态)</Chinesesimp>
             <Chinese>設定所有載具的初始上鎖狀態 (移除不明確的鎖定狀態)</Chinese>
         </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_RemoveAmbiguousLockState">
+            <English>Remove Ambiguous Lock State</English>
+            <Spanish>Eliminar estado de bloqueo ambiguo</Spanish>
+            <French>Supprimer les états de verrouillage ambigus</French>
+        </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
             <Polish>Jak jest</Polish>
@@ -339,6 +345,7 @@
             <Korean>기본 해정도구 설정</Korean>
             <Chinesesimp>预设开锁能力</Chinesesimp>
             <Chinese>預設開鎖能力</Chinese>
+            <Turkish>Varsayılan Maymuncuk Gücü</Turkish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_DefaultLockpickStrength_Description">
             <English>Default Time to lockpick (in seconds). Default: 10</English>

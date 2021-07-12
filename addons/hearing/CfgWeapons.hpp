@@ -88,4 +88,19 @@ class CfgWeapons {
     class H_HelmetO_ViperSP_hex_f: H_HelmetB {
         HEARING_PROTECTION_PELTOR
     };
+
+    class H_HelmetAggressor_base_F: HelmetBase {
+        HEARING_PROTECTION_PELTOR
+    };
+
+    class H_HelmetHBK_base_F;
+    class H_HelmetHBK_chops_base_F: H_HelmetHBK_base_F {
+        HEARING_PROTECTION_PELTOR
+    };
+    class H_HelmetHBK_ear_base_F: H_HelmetHBK_base_F {
+        HEARING_PROTECTION_PELTOR
+    };
+    class H_HelmetHBK_headset_base_F: H_HelmetHBK_base_F {
+        HEARING_PROTECTION_PELTOR
+    };
 };

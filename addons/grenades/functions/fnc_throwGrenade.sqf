@@ -31,7 +31,7 @@ private _config = configFile >> "CfgAmmo" >> _ammo;
 if (local _unit) then {
     // handle priming sound, if present
     private _soundConfig = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(pullPinSound));
-    if !(_soundConfig isEqualTo []) then {
+    if (_soundConfig isNotEqualTo []) then {
         _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
         playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
     };

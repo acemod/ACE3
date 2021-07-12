@@ -28,16 +28,16 @@ private _addedToUnit = false;
 
 switch (_container) do {
     case "vest": {
-        _canAdd = _unit canAddItemToVest _classname;
+        _canAdd = [_unit, _classname, 1, false, true, false] call CBA_fnc_canAddItem;
     };
     case "backpack": {
-        _canAdd = _unit canAddItemToBackpack _classname;
+        _canAdd = [_unit, _classname, 1, false, false, true] call CBA_fnc_canAddItem;
     };
     case "uniform": {
-        _canAdd = _unit canAddItemToUniform _classname;
+        _canAdd = [_unit, _classname, 1, true, false, false] call CBA_fnc_canAddItem;
     };
     default {
-        _canAdd = _unit canAdd _classname;
+        _canAdd = [_unit, _classname] call CBA_fnc_canAddItem;
     };
 };
 

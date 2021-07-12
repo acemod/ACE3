@@ -39,7 +39,7 @@ if (_hitPointNewDamage < _hitPointCurDamage) then {
 };
 
 // Get hitpoint groups if available
-private _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroups);
+private _hitpointGroupConfig = configOf _vehicle >> QGVAR(hitpointGroups);
 if (isArray _hitpointGroupConfig) then {
     // Retrieve hitpoint subgroup if current hitpoint is main hitpoint of a group
     {

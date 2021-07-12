@@ -1,174 +1,182 @@
 class ACE_UI {
+    class devWatermark {
+        idd = IDD_MISSION;
+        elements[] = {11400};
+        location = ANYWHERE;
+        class conditions {
+            isDevelopmentBranch = QUOTE(productVersion select 4 == 'Development');
+        };
+    };
     class weaponName {
-        idd = 300;
-        elements[] = {118};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_WEAPON};
         location = GROUND_ONLY;
         class conditions {};
     };
     class weaponNameBackground {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {1001, 1008};
         location = GROUND_ONLY;
         class conditions {};
     };
     class firingMode {
-        idd = 300;
-        elements[] = {187, 1203};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_WEAPON_MODE_TEXTURE, 1203};
         location = GROUND_ONLY;
         class conditions {};
     };
     class ammoType {
-        idd = 300;
-        elements[] = {155};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_WEAPON_AMMO};
         location = GROUND_ONLY;
         class conditions {};
     };
     class ammoCount {
-        idd = 300;
-        elements[] = {184};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_AMMOCOUNT};
         location = GROUND_ONLY;
         class conditions {};
     };
     class magCount {
-        idd = 300;
-        elements[] = {185};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_MAGCOUNT};
         location = GROUND_ONLY;
         class conditions {};
     };
     class throwableName {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {152};
         location = GROUND_ONLY;
         class conditions {};
     };
     class throwableCount {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {151};
         location = GROUND_ONLY;
         class conditions {};
     };
     class zeroing {
-        idd = 300;
-        elements[] = {168};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_WEAPON_ELEVATION};
         location = GROUND_ONLY;
         class conditions {};
     };
     class weaponLowerInfoBackground {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {1202};
         location = GROUND_ONLY;
         class conditions {};
     };
     class staminaBar {
-        idd = 305;
-        elements[] = {193};
+        idd = IDD_STAMINA_BAR;
+        elements[] = {IDC_IGUI_STAMINA_BAR};
         location = GROUND_ONLY;
         class conditions {};
     };
     class stance {
-        idd = 303;
-        elements[] = {188, 1201};
+        idd = IDD_STANCEINFO;
+        elements[] = {IDC_IGUI_STANCE_INDICATOR, 1201};
         location = GROUND_ONLY;
         class conditions {};
     };
     class gunnerWeaponName {
-        idd = 300;
-        elements[] = {118};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_WEAPON};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerWeaponNameBackground {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {1001, 1008};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerFiringMode {
-        idd = 300;
-        elements[] = {187, 1203};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_WEAPON_MODE_TEXTURE, 1203};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerAmmoType {
-        idd = 300;
-        elements[] = {155};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_WEAPON_AMMO};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerAmmoCount {
-        idd = 300;
-        elements[] = {184};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_AMMOCOUNT};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerMagCount {
-        idd = 300;
-        elements[] = {185};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_MAGCOUNT};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerLaunchableName {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {152};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerLaunchableCount {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {151};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerZeroing {
-        idd = 300;
-        elements[] = {168};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_WEAPON_ELEVATION};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class gunnerWeaponLowerInfoBackground {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {1202};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class vehicleName {
-        idd = 300;
-        elements[] = {120};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_VEHICLE};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class vehicleNameBackground {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {1000, 1013};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class vehicleFuelBar {
-        idd = 300;
-        elements[] = {113, 1202};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_VALUE_FUEL, 1202};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class vehicleSpeed {
-        idd = 300;
-        elements[] = {121, 1004, 1006};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_SPEED, 1004, 1006};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class vehicleAltitude {
-        idd = 300;
-        elements[] = {122, 1005, 1014};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_ALT, 1005, 1014};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class vehicleDamage {
-        idd = 300;
-        elements[] = {111};
+        idd = IDD_UNITINFO;
+        elements[] = {IDC_IGUI_HITZONES};
         location = VEHICLE_ONLY;
         class conditions {};
     };
     class vehicleInfoBackground {
-        idd = 300;
+        idd = IDD_UNITINFO;
         elements[] = {1200};
         location = VEHICLE_ONLY;
         class conditions {};
