@@ -8,6 +8,7 @@
  * 1: Injury Chance <NUMBER>
  * 2: Maximum people to injure <NUMBER>
  * 3: Projectile source <OBJECT> (default: objNull)
+ * 4: Modifiers for probability for each crew type to be injured. <ARRAY> (In order of: driver, gunner, commander, cargo)
  *
  * Return Value:
  * None
@@ -18,7 +19,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_chance", "_count", ["_source", objNull]];
+params ["_vehicle", "_chance", "_count", ["_source", objNull], ["_probabilityModifier", [1, 1, 1, 1]]];
 TRACE_4("adding damage to units", _vehicle, _chance, _count, _source);
 
 private _vehicleCrew = crew _vehicle;
@@ -30,12 +31,25 @@ private _crewInjuryIndices = [];
     _crewInjuryIndices pushBack _forEachIndex;
 } forEach _vehicleCrew;
 
+_crewInjuryIndices = _crewInjuryIndices call BIS_fnc_arrayShuffle;
+
 private _injuryCount = 0;
 // Not actually doing anything to any initial vehicle crew in this forEach - just a way to loop through all crew at least once
 {
     private _indexToInjure = -1;
     {
-        if (_chance > random 1) exitWith {
+        private _modifier = _probabilityModifier select 3;
+        if ((_vehicleCrew select _x) isEqualTo driver _vehicle) then {
+            _modifier = _probabilityModifier select 0;
+        };
+        if ((_vehicleCrew select _x) isEqualTo gunner _vehicle) then {
+            _modifier = _probabilityModifier select 1;
+        };
+        if ((_vehicleCrew select _x) isEqualTo commander _vehicle) then {
+            _modifier = _probabilityModifier select 2;
+        };
+
+        if ((_chance * _modifier) > random 1) exitWith {
             _indexToInjure = _forEachIndex;
         };
     } forEach _crewInjuryIndices;
