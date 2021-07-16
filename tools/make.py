@@ -366,7 +366,7 @@ def copy_important_files(source_dir,destination_dir):
 
 
 def copy_optionals_for_building(mod,pbos):
-    src_directories = os.listdir(optionals_root)
+    src_directories = next(os.walk(optionals_root))[1]
     current_dir = os.getcwd()
 
     print_blue("\nChecking optionals folder...")

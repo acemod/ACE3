@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, Dedmen, SynixeBrett
+ * Author: Alganthe, Dedmen, Brett Mayson
  * Sort arsenal panel.
  *
  * Arguments:
