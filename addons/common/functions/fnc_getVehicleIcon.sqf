@@ -25,7 +25,7 @@ private _objectType = if (_object isEqualType objNull) then {
 } else {
     _object
 };
-private _cachedValue = GVAR(vehicleIconCache) getOrDefault [_objectType];
+private _cachedValue = GVAR(vehicleIconCache) get _objectType;
 
 if (isNil "_cachedValue") then {
     private _vehicleValue = getText (configfile >> "CfgVehicles" >> _objectType >> "icon");
