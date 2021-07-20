@@ -332,7 +332,7 @@
 
     private _curSelAngle = GETGVAR(currentMarkerAngle,0);
     _aceAngleSlider sliderSetPosition _curSelAngle;
-    _aceAngleSlider ctrlSetTooltip LLSTRING(MarkerDirectionSlider_Tooltip);
+    _aceAngleSlider ctrlSetTooltip LLSTRING(MarkerDirectionScaleSlider_Tooltip);
 
     //Update now and add eventHandler:
     [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
@@ -350,7 +350,7 @@
 
     private _curSelScale = GETGVAR(currentMarkerScale,1);
     _aceScaleSlider sliderSetPosition _curSelScale;
-    _aceScaleSlider ctrlSetTooltip LLSTRING(MarkerScaleSlider_Tooltip);
+    _aceScaleSlider ctrlSetTooltip LLSTRING(MarkerDirectionScaleSlider_Tooltip);
 
     //Update now and add eventHandler:
     [_aceScaleSlider, _curSelScale] call FUNC(onSliderPosChangedScale);
