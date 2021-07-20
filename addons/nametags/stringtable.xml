@@ -524,5 +524,13 @@
             <Chinese>強制顯示在準心指到和按按鍵時</Chinese>
             <Turkish>Göstermeyi Yalnızca İmleç ve Tuşa Basmaya Zorla</Turkish>
         </Key>
+        <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectViewDist_DisplayName">
+            <English>Ambient brightness affect view distance</English>
+            <Russian>Освещение влияет на дальность отображения</Russian>
+        </Key>
+        <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectViewDist_Description">
+            <English>Player nametags view distance depends on ambient brightness</English>
+            <Russian>Дистанция отображения имен зависит от окружающего освещения</Russian>
+        </Key>
     </Package>
 </Project>

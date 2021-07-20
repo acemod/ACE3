@@ -50,7 +50,11 @@ switch (GVAR(showPlayerNames)) do {
     };
 };
 
-private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
-private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
+private _ambientBrightness = 1;
+if (GVAR(ambientBrightnessAffectViewDist)) then {
+    _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
+};
+
+private _maxDistance = _ambientBrightness * GVAR(playerNamesViewDistance);
 
 [_drawName, GVAR(showPlayerRanks),_enabledTagsNearby,_enabledTagsCursor,_maxDistance]

@@ -54,3 +54,12 @@
     false, // isGlobal
     {[QGVAR(nametagColorYellow), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(ambientBrightnessAffectViewDist),
+    "CHECKBOX",
+    [LSTRING(AmbientBrightnessAffectViewDist_DisplayName), LSTRING(AmbientBrightnessAffectViewDist_Description)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    true,
+    true
+] call CBA_fnc_addSetting;
