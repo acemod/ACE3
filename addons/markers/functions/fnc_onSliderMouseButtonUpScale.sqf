@@ -19,7 +19,7 @@
 params ["_aceScaleSlider", "_button", "", "", "", "", ""];
 TRACE_2("params",_aceAngleSlider,_button);
 
-if (_button != 1) exitWith {};
+if (_button isNotEqualTo 1) exitWith {};
 
 _aceScaleSlider sliderSetPosition 1;
 [_aceScaleSlider, 1] call FUNC(onSliderPosChangedScale);
