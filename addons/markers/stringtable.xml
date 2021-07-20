@@ -56,7 +56,7 @@
             <Turkish>Click RMB to reset to 1</Turkish>
             <Spanish>Click RMB to reset to 1</Spanish>
         </Key>
-		<Key ID="STR_ACE_Markers_Module_DisplayName">
+        <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
             <German>Markierungen</German>
             <Japanese>マーカー</Japanese>
