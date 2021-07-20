@@ -24,7 +24,39 @@
             <Chinese>方位: %1°</Chinese>
             <Turkish>Yön: %1°</Turkish>
         </Key>
-        <Key ID="STR_ACE_Markers_Module_DisplayName">
+        <Key ID="STR_ACE_Markers_MarkerDirectionSlider_Tooltip">
+            <English>Click RMB to reset to 0</English>
+            <German>Click RMB to reset to 0</German>
+            <Japanese>Click RMB to reset to 0</Japanese>
+            <Italian>Click RMB to reset to 0</Italian>
+            <Chinese>Click RMB to reset to 0</Chinese>
+            <Chinesesimp>Click RMB to reset to 0</Chinesesimp>
+            <Korean>Click RMB to reset to 0</Korean>
+            <Polish>Click RMB to reset to 0</Polish>
+            <Russian>Кликните ПКМ чтобы сбросить на 0</Russian>
+            <Portuguese>Click RMB to reset to 0</Portuguese>
+            <French>Click RMB to reset to 0</French>
+            <Czech>Click RMB to reset to 0</Czech>
+            <Turkish>Click RMB to reset to 0</Turkish>
+            <Spanish>Click RMB to reset to 0</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_MarkerScaleSlider_Tooltip">
+            <English>Click RMB to reset to 1</English>
+            <German>Click RMB to reset to 1</German>
+            <Japanese>Click RMB to reset to 1</Japanese>
+            <Italian>Click RMB to reset to 1</Italian>
+            <Chinese>Click RMB to reset to 1</Chinese>
+            <Chinesesimp>Click RMB to reset to 1</Chinesesimp>
+            <Korean>Click RMB to reset to 1</Korean>
+            <Polish>Click RMB to reset to 1</Polish>
+            <Russian>Кликните ПКМ чтобы сбросить на 1</Russian>
+            <Portuguese>Click RMB to reset to 1</Portuguese>
+            <French>Click RMB to reset to 1</French>
+            <Czech>Click RMB to reset to 1</Czech>
+            <Turkish>Click RMB to reset to 1</Turkish>
+            <Spanish>Click RMB to reset to 1</Spanish>
+        </Key>
+		<Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
             <German>Markierungen</German>
             <Japanese>マーカー</Japanese>
