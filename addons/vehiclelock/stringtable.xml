@@ -281,6 +281,7 @@
             <English>Remove Ambiguous Lock State</English>
             <Spanish>Eliminar estado de bloqueo ambiguo</Spanish>
             <French>Supprimer les états de verrouillage ambigus</French>
+            <Russian>Устранить неоднозначные состояния замков</Russian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>

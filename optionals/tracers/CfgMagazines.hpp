@@ -1,3 +1,4 @@
+//IGNORE_STRING_WARNING(str_ace_tracers_magazine);
 #define STRINGS(magazine) author = ECSTRING(common,ACETeam); displayName = CSTRING(magazine)
 
 class CfgMagazines {
@@ -82,7 +83,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(100Rnd_580x42_Drum_tracer_yellow_description);
     };
 
-	// 6.5mm Caseless MX
+    // 6.5mm Caseless MX
     class 30Rnd_65x39_caseless_mag;
     class ACE_30Rnd_65x39_mx_green : 30Rnd_65x39_caseless_mag {
         ammo = "B_65x39_Caseless_green";

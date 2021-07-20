@@ -12,7 +12,7 @@ PREP_RECOMPILE_END;
     QGVAR(hideAltimeter),
     "CHECKBOX",
     [LSTRING(HideAltimeter), LSTRING(HideAltimeter_tooltip)],
-    format ["ACE %1", localize ELSTRING(common,DisplayName)],
+    ["ACE Uncategorized", localize "str_dn_parachute"],
     true,
     false,
     {[QGVAR(hideAltimeter), _this, false] call EFUNC(common,cbaSettings_settingChanged)}
