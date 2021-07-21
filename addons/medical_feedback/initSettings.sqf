@@ -41,16 +41,16 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(tourniquetsAndSplintsIndication),
+    QGVAR(GUIIndication),
     "CHECKBOX",
-    [LSTRING(TourniquetsAndSplintsIndication_DisplayName), LSTRING(TourniquetsAndSplintsIndication_Description)],
+    [LSTRING(GUIIndication_DisplayName), LSTRING(GUIIndication_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     true,
     false,
     {
         // --- Drop indication on disabling
         if (!_this) exitWith {
-            [true] call FUNC(handleTourniquetsAndSplintsIndication);
+            [true] call FUNC(handleGUIIndication);
         };
     }
 ] call CBA_fnc_addSetting;

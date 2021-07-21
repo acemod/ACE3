@@ -58,9 +58,9 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 [!_unconscious, _pain] call FUNC(effectPain);
 [!_unconscious, _bleedingStrength, _manualUpdate] call FUNC(effectBleeding);
 
-// - Tourniquets and Splints indication ---------------------------------------
-if (GVAR(tourniquetsAndSplintsIndication)) then {
-    [] call FUNC(handleTourniquetsAndSplintsIndication);
+// - Tourniquets, fractures and splints indication ---------------------------------------
+if (GVAR(GUIIndication)) then {
+    [] call FUNC(handleGUIIndication);
 };
 
 END_COUNTER(handleEffects);
