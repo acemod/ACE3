@@ -24,6 +24,7 @@ params ["_unit", "_classname", ["_container", ""], ["_ammoCount", -1]];
 private _type = _classname call FUNC(getItemType);
 
 private _canAdd = false;
+private _canFitWeaponSlot = false;
 private _addedToUnit = false;
 
 switch (_container) do {
@@ -38,12 +39,26 @@ switch (_container) do {
     };
     default {
         _canAdd = [_unit, _classname] call CBA_fnc_canAddItem;
+        if (_canAdd) then {
+            private _slot = [_classname] call ace_common_fnc_getItemType;
+            switch (_slot select 1) do {
+                case "primary": {
+                    _canFitWeaponSlot = primaryWeapon _unit == "";
+                };
+                case "secondary": {
+                    _canFitWeaponSlot = secondaryWeapon _unit == "";
+                };
+                case "handgun": {
+                    _canFitWeaponSlot = handgunWeapon _unit == "";
+                };
+            };
+        };
     };
 };
 
 switch (_type select 0) do {
     case "weapon": {
-        if (_canAdd) then {
+        if (_canAdd || {_canFitWeaponSlot}) then {
             _addedToUnit = true;
 
             switch (_container) do {
@@ -57,7 +72,34 @@ switch (_type select 0) do {
                     (uniformContainer _unit) addWeaponCargoGlobal [_classname, 1];
                 };
                 default {
-                    _unit addWeaponGlobal _classname;
+                    if (_canFitWeaponSlot) then {
+                        _unit addWeaponGlobal _classname;
+                    } else {
+                        private _containerWithSpace = "";
+                        {
+                            _x params ["_parameters", "_container"];
+
+                            if (_parameters call CBA_fnc_canAddItem) exitWith {
+                                _containerWithSpace = _container;
+                            };
+                        } forEach [
+                            [[_unit, _classname, 1, false, false, true], "backpack"],
+                            [[_unit, _classname, 1, false, true, false], "vest"],
+                            [[_unit, _classname, 1, true, false, false], "uniform"]
+                        ];
+
+                        switch (_containerWithSpace) do {
+                            case "vest": {
+                                (vestContainer _unit) addWeaponCargoGlobal [_classname, 1];
+                            };
+                            case "backpack": {
+                                (backpackContainer _unit) addWeaponCargoGlobal [_classname, 1];
+                            };
+                            case "uniform": {
+                                (uniformContainer _unit) addWeaponCargoGlobal [_classname, 1];
+                            };
+                        };
+                    };
                 };
             };
         } else {
