@@ -12,7 +12,7 @@
     QGVAR(allowFadeMusic),
     "CHECKBOX",
     [LSTRING(AllowFadeMusic), LSTRING(AllowFadeMusicTooltip)],
-    localize LSTRING(ACEKeybindCategoryCommon),
+    format ["ACE %1", localize LSTRING(DisplayName)],
     true,
     true
 ] call CBA_fnc_addSetting;
