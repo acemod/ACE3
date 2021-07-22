@@ -20,6 +20,8 @@ params ["_vehicle", "_isEngineOn"];
 
 if (!_isEngineOn || {floor abs speed _vehicle > 0 || {!isNull isVehicleCargo _vehicle}}) exitWith {};
 
+private _startupDelay = getNumber(configOf _vehicle >> QGVAR(engineStartDelay));
+
 [{
     params ["_args", "_idPFH"];
     _args params ["_vehicle", "_time", "_direction"];
@@ -29,4 +31,4 @@ if (!_isEngineOn || {floor abs speed _vehicle > 0 || {!isNull isVehicleCargo _ve
     _vehicle setVelocity [0, 0, 0];
     _vehicle setVectorDirAndUp _direction;
 
-} , 0, [_vehicle, CBA_missionTime + STARTUP_DELAY, [vectorDir _vehicle, vectorUp _vehicle]]] call CBA_fnc_addPerFrameHandler;
+} , 0, [_vehicle, CBA_missionTime + _startupDelay, [vectorDir _vehicle, vectorUp _vehicle]]] call CBA_fnc_addPerFrameHandler;
