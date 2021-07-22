@@ -40,7 +40,7 @@ switch (_container) do {
     default {
         _canAdd = [_unit, _classname] call CBA_fnc_canAddItem;
         if (_canAdd) then {
-            private _slot = [_classname] call ace_common_fnc_getItemType;
+            private _slot = [_classname] call FUNC(getItemType);
             switch (_slot select 1) do {
                 case "primary": {
                     _canFitWeaponSlot = primaryWeapon _unit == "";
