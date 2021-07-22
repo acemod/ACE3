@@ -17,7 +17,7 @@
  */
 
 params ["_aceScaleSlider", "_button", "", "", "", "", ""];
-TRACE_2("params",_aceAngleSlider,_button);
+TRACE_2("params",_aceScaleSlider,_button);
 
 if (_button isNotEqualTo 1) exitWith {};
 
