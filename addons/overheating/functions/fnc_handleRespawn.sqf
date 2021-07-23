@@ -2,6 +2,8 @@
 /*
  * Author: 10Dozen
  * Handle respawn events and clears list of jammed weapons.
+ * DefaultAction that blocks firing is removed by the game (remains on corpse?),
+ * but variables need to be cleared manually.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -19,6 +21,6 @@
 params ["_unit","_dead"];
 if !(local _unit) exitWith {};
 
-// --- Reset variables, DefaultAction is removed by game (remains on corpse?)
+// --- Reset variables related to jamming
 _unit setVariable [QGVAR(jammedWeapons), nil];
 _unit setVariable [QGVAR(JammingActionID), nil];
