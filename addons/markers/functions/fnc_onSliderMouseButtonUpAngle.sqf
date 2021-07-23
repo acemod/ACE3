@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [Slider, 1] call ace_markers_fnc_onSliderMouseButtonUpAngle;
+ * [Slider, 1] call ace_markers_fnc_onSliderMouseButtonUpAngle
  *
  * Public: No
  */
