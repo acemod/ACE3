@@ -930,33 +930,17 @@
             <Turkish>Araçlar ve Tesisler</Turkish>
             <Spanish>Vehículos e instalaciones médicas</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_DisplayName">
-            <English>CPR Success Chance</English>
-            <Japanese>心肺蘇生の成功率</Japanese>
-            <French>Chance de réussite de la RCP</French>
-            <Russian>Шанс успешной реанимации</Russian>
-            <Portuguese>Chance de ter sucesso com SBV</Portuguese>
-            <Chinese>心肺復甦術成功率</Chinese>
-            <Czech>Pravděpodobnost úspěchu CPR</Czech>
-            <Italian>Possibilità di successo della RCP</Italian>
-            <Polish>Szansa powodzenia RKO</Polish>
-            <German>HLW Erfolgsrate</German>
-            <Turkish>CPR Başarı Şansı</Turkish>
-            <Spanish>Probabilidad de éxito del RCP</Spanish>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_DisplayName">
+            <English>CPR Success Chance Minimum</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_Description">
-            <English>Probability that CPR will be successful in restoring heart rhythm.</English>
-            <Japanese>心肺蘇生によって心拍を戻せる確率を決定できます。</Japanese>
-            <French>Probabilité de rétablir un rythme cardiaque suite à une RCP.</French>
-            <Russian>Вероятность успешного проведения сердечно-лёгочной реанимации (СЛР).</Russian>
-            <Portuguese>Probabilidade que um SBV restaurará o batimento cardíaco.</Portuguese>
-            <Chinese>心肺復甦術恢復心率的機率。</Chinese>
-            <Czech>Pravděpodobnost, že CPR obnoví srdeční tep.</Czech>
-            <Italian>E' probabile che la rianimazione RCP abbia successo nel ripristinare il ritmo cardiaco.</Italian>
-            <Polish>Prawdopodobieństwo przwyrócenia akcji serca poprzez wykonanie RKO</Polish>
-            <German>Wahrscheinlichkeit, dass HLW bei der Wiederherstellung des Herzrhythmus erfolgreich sein wird.</German>
-            <Turkish>Kalp ritmini geri kazanmada CPR'nin başarılı olma olasılığı.</Turkish>
-            <Spanish>Probabilidad de que el RCP sea exitoso restaurando el ritmo cardíaco.</Spanish>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
+            <English>CPR Success Chance Maximum</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
+            <English>Minimum probability that performing CPR will restore heart rhythm.\nThis minimum value is used when the patient has at least "Lost a fatal amount of blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
+            <English>Maximum probability that performing CPR will restore heart rhythm.\nThis maximum value is used when the patient has at most "Lost some blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>

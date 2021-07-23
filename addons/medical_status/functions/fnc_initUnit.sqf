@@ -80,5 +80,7 @@ if (_isRespawn) then {
 [{
     params ["_unit"];
     TRACE_3("Unit Init",_unit,local _unit,typeOf _unit);
+
+    _unit setVariable [QEGVAR(medical,initialized), true, true];
     [QGVAR(initialized), [_unit]] call CBA_fnc_localEvent;
 }, [_unit], 0.5] call CBA_fnc_waitAndExecute;

@@ -24,6 +24,10 @@
             <Chinese>方位: %1°</Chinese>
             <Turkish>Yön: %1°</Turkish>
         </Key>
+        <Key ID="STR_ACE_Markers_MarkerDirectionScaleSlider_Tooltip">
+            <English>Click RMB to reset</English>
+            <Russian>Нажми ПКМ чтобы сбросить</Russian>
+        </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
             <German>Markierungen</German>
