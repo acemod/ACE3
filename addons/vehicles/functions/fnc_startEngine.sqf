@@ -20,7 +20,7 @@ params ["_vehicle", "_isEngineOn"];
 
 if (!_isEngineOn || {floor abs speed _vehicle > 0 || {!isNull isVehicleCargo _vehicle}}) exitWith {};
 
-private _startupDelay = getNumber(configOf _vehicle >> QGVAR(engineStartDelay));
+private _startupDelay = getNumber (configOf _vehicle >> QGVAR(engineStartDelay));
 
 [{
     params ["_args", "_idPFH"];
