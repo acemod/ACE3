@@ -58,7 +58,7 @@
 [
     QGVAR(ambientBrightnessAffectViewDist),
     "CHECKBOX",
-    [LSTRING(AmbientBrightnessAffectViewDist_DisplayName), LSTRING(AmbientBrightnessAffectViewDist_Description)],
+    [LSTRING(AmbientBrightnessAffectsViewDist_DisplayName), LSTRING(AmbientBrightnessAffectsViewDist_Description)],
     format ["ACE %1", localize LSTRING(Module_DisplayName)],
     true,
     true
