@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [alive, body] call ACE_overheating_fnc_handleRespawn;
+ * [alive, body] call ace_overheating_fnc_handleRespawn
  *
  * Public: No
  */
