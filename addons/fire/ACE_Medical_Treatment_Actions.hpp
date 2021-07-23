@@ -18,4 +18,3 @@ class EGVAR(medical_treatment,actions) {
         litter[] = {};
     };
 };
-

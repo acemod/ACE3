@@ -24,4 +24,3 @@ class CfgSounds {
     CREATE_SCREAM(14);
     CREATE_SCREAM(15);
 };
-

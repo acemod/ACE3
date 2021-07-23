@@ -3,12 +3,12 @@
 [QGVAR(burn), FUNC(burn)] call CBA_fnc_addEventHandler;
 [QGVAR(playScream), {
     params ["_scream", "_source"];
-    _source say3d _scream;
+    _source say3D _scream;
 }] call CBA_fnc_addEventHandler;
 
 ["ace_settingsInitialized", {
     TRACE_1("settingsInit", GVAR(enabled));
-    if !(GVAR(enabled)) exitWith {};
+    if (!GVAR(enabled)) exitWith {};
 
     if (isServer) then {
         [QGVAR(addFireSource), {

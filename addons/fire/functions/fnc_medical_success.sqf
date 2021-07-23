@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Makes object catch fire. Only call from events
+ * Makes object catch fire. Only call from events.
  *
  * Arguments:
  * 0: Medic <OBJECT>

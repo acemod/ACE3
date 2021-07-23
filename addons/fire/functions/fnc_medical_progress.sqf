@@ -20,4 +20,4 @@
 params ["_args"];
 _args params ["_medic", "_patient"];
 
-[_patient] call FUNC(isBurning);
+[_patient] call FUNC(isBurning)

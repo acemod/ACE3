@@ -2,7 +2,7 @@
 /*
  * Author: Brandon (TCVM)
  * Handles various fire objects and determines if local units deserves to get burned.
- * Used to handle external burning objects, not used internally because internal methods more performant.
+ * Used to handle external burning objects, not used internally because internal methods are more performant.
  *
  * Arguments:
  * 0: Unit on fire <OBJECT>
@@ -41,4 +41,3 @@ params ["_args", "_handle"];
         };
     } forEach _nearEntities;
 }] call CBA_fnc_hashEachPair;
- 

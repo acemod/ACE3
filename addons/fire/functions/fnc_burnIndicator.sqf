@@ -34,4 +34,3 @@ if (!([_unit] call FUNC(isBurning)) || { !alive _unit }) then {
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
     _unit setVariable [QGVAR(burnUIPFH), -1];
 };
-

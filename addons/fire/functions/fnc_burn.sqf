@@ -25,9 +25,10 @@
 #define BURN_PROPOGATE_COUNTER_MAX 5
 #define MAX_INTENSITY 10
 #define MIN_INTENSITY 1
+
 params ["_unit", "_intensity", ["_instigator", objNull]];
 
-if !(GVAR(enabled)) exitWith {};
+if (!GVAR(enabled)) exitWith {};
 
 private _isBurning = [_unit] call FUNC(isBurning);
 if (_isBurning) exitWith {};
@@ -131,7 +132,7 @@ if (_isBurning) exitWith {};
     _fireLight setLightAttenuation [1, 10 max (5 min (10 - _intensity)), 0, 15];
     _lightFlare setLightFlareSize (_intensity * (3 / 4)) * FLARE_SIZE_MODIFIER;
     
-    if !(GVAR(enableFlare)) then {
+    if (!GVAR(enableFlare)) then {
         _lightFlare setLightFlareSize 0;
     };
     
@@ -145,7 +146,7 @@ if (_isBurning) exitWith {};
         _lightFlare attachTo [_unit, _relativeAttachPoint];
     };
     
-    if !(isGamePaused) then {
+    if (!isGamePaused) then {
         // If the unit goes to spectator alive _unit == true and they will be on fire and still take damage
         // Only workaround I could think of, kinda clunky
         if (_isThisUnitAlive) then {
@@ -327,7 +328,7 @@ if (_isBurning) exitWith {};
     deleteVehicle _fireSound;
     
     if (local _unit) then {
-        if !(isPlayer _unit) then {
+        if (!isPlayer _unit) then {
             _unit setUnitPos "AUTO";
             _unit setVariable [QGVAR(stopDropRoll), false];
         };
@@ -343,5 +344,5 @@ if (_isBurning) exitWith {};
     private _unitAlive = (alive _unit) && { getNumber ((configOf _unit) >> "isPlayableLogic") != 1 };
     private _unitIsUnit = { (_unit != vehicle _unit) && { isNull vehicle _unit } };
     
-    !_unitAlive || _unitIsUnit || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) };
+    !_unitAlive || _unitIsUnit || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) }
 }, ["_intensity", "_fireParticle", "_smokeParticle", "_fireLight", "_fireSound", "_lightFlare", "_lastIntensityUpdate", "_lastPropogateUpdate", "_isThisUnitAlive"]] call CBA_fnc_createPerFrameHandlerObject;
