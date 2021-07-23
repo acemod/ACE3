@@ -50,6 +50,9 @@ switch (_container) do {
                 case "handgun": {
                     _canFitWeaponSlot = handgunWeapon _unit == "";
                 };
+                case "binocular": {
+                    _canFitWeaponSlot = binocular _unit == "";
+                };
             };
         };
     };
