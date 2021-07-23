@@ -78,7 +78,7 @@ switch (_type select 0) do {
                             _x params ["_parameters", "_container"];
 
                             if (_parameters call CBA_fnc_canAddItem) exitWith {
-                                _container addWeaponCargoGlobal [_classname, 1];
+                                _container addWeaponCargoGlobal [_classname, 1]; // addWeaponGlobal will replace the weapon currently in a slot
                             };
                         } forEach [
                             [[_unit, _classname, 1, false, false, true], backpackContainer _unit],
