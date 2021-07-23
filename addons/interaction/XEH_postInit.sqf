@@ -86,7 +86,7 @@ if (!hasInterface) exitWith {};
 GVAR(isOpeningDoor) = false;
 
 [QEGVAR(interact_menu,renderNearbyActions), {
-    if !GVAR(interactWithTerrainObjects) exitWith {};
+    if (!GVAR(interactWithTerrainObjects)) exitWith {};
     {
         if (
             isObjectHidden _x // after hiding on server 
