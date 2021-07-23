@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: severgun
- * Add engine startup delay to specific vehicle.
+ * Set engine startup delay to specific vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [hemmt, 3.2] call ace_vehicles_fnc_addStartupDelayToObject
+ * [hemmt, 3.2] call ace_vehicles_fnc_setVehicleStartDelay
  *
  * Public: Yes
  */

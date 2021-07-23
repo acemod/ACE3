@@ -1,4 +1,4 @@
 
 PREP(speedLimiter);
 PREP(startEngine);
-PREP(addStartupDelayToObject);
+PREP(setVehicleStartDelay);

@@ -35,7 +35,7 @@ class CfgVehicles {
 
 ### 1.2 Setting the startup delay by script
 
-`ace_vehicles_fnc_addStartupDelayToObject`
+`ace_vehicles_fnc_setVehicleStartDelay`
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -46,7 +46,7 @@ class CfgVehicles {
 
 #### 1.2.1 Example
 
-`[myCar, 2.2] call ace_vehicles_fnc_addStartupDelayToObject;`
+`[myCar, 2.2] call ace_vehicles_fnc_setVehicleStartDelay;`
 
    | Arguments | Explanation
 ---| --------- | -----------
