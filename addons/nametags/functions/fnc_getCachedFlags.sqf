@@ -52,7 +52,11 @@ switch (GVAR(showPlayerNames)) do {
 
 private _ambientBrightness = 1;
 if (GVAR(ambientBrightnessAffectViewDist)) then {
-    _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
+    _ambientBrightness = [] call EFUNC(common,ambientBrightness);
+    if (currentVisionMode ace_player != 0) then {
+        _ambientBrightness = _ambientBrigthness + 0.4;
+    };
+    _ambientBrightness = (_ambientBrigthness min 1) max 0; // constrain to [0, 1]
 };
 
 private _maxDistance = _ambientBrightness * GVAR(playerNamesViewDistance);
