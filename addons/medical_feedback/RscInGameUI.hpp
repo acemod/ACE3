@@ -24,12 +24,10 @@ class RscInGameUI {
         };
         class GVAR(stateIndicator2): GVAR(stateIndicator1) {
             onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(stateIndicator2), _this select 0)]);
-            x = IGUI_GRID_STANCE_X + IGUI_GRID_STANCE_WAbs * 3 / 4;
             y = IGUI_GRID_STANCE_Y + IGUI_GRID_STANCE_HAbs / 4;
         };
         class GVAR(stateIndicator3): GVAR(stateIndicator1) {
             onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(stateIndicator3), _this select 0)]);
-            x = IGUI_GRID_STANCE_X + IGUI_GRID_STANCE_WAbs * 3 / 4;
             y = IGUI_GRID_STANCE_Y + IGUI_GRID_STANCE_HAbs * 2 / 4;
         };
     };
