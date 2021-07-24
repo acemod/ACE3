@@ -41,16 +41,16 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(GUIIndication),
+    QGVAR(enableHUDIndication),
     "CHECKBOX",
-    [LSTRING(GUIIndication_DisplayName), LSTRING(GUIIndication_Description)],
+    [LSTRING(enableHUDIndication_DisplayName), LSTRING(enableHUDIndication_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     true,
     false,
     {
         // --- Drop indication on disabling
         if (!_this) exitWith {
-            [true] call FUNC(handleGUIIndication);
+            [true] call FUNC(handleHUDIndication);
         };
     }
 ] call CBA_fnc_addSetting;

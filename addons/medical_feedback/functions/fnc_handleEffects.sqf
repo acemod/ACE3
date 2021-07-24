@@ -59,8 +59,8 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 [!_unconscious, _bleedingStrength, _manualUpdate] call FUNC(effectBleeding);
 
 // - Tourniquets, fractures and splints indication ---------------------------------------
-if (GVAR(GUIIndication)) then {
-    [] call FUNC(handleGUIIndication);
+if (GVAR(enableHUDIndication)) then {
+    [] call FUNC(handleHUDIndication);
 };
 
 END_COUNTER(handleEffects);

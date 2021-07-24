@@ -189,12 +189,12 @@
                 <Chinese>啟用傷者的尖叫聲</Chinese>
                 <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
             </Key>
-            <Key ID="STR_ACE_Medical_Feedback_GUIIndication_DisplayName">
-                <English>Enable Fractures/CATs Indication</English>
+            <Key ID="STR_ACE_Medical_Feedback_enableHUDIndication_DisplayName">
+                <English>Enable Fractures/Tourniquets Indication</English>
                 <Russian>Включить индикацию переломов/жгутов</Russian>
             </Key>
-            <Key ID="STR_ACE_Medical_Feedback_GUIIndication_Description">
-                <English>Enables the indication of the fractures, applied CATs and splints over the Stance indicator.</English>
+            <Key ID="STR_ACE_Medical_Feedback_enableHUDIndication_Description">
+                <English>Enables the indication of the fractures, applied tourniquets and splints over the Stance indicator.</English>
                 <Russian>Включает индикацию переломов, а также наложенных жгутов и шин поверх индикатора положения тела.</Russian>
             </Key>
         </Container>

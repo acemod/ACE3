@@ -5,17 +5,17 @@
  * Draws an icon if there is at least 1 fracture/splint/tourniquet applied.
  *
  * Arguments:
- * 0: Drop indicator <BOOL>
+ * 0: Flag to drop all indicators (optional) <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [false] call ace_medical_feedback_fnc_handleGUIIndication
+ * [false] call ace_medical_feedback_fnc_handleHUDIndication
  *
  * Public: No
  */
-params [["_dropIndicator", false]];
+params [["_dropAllIndicators", false]];
 
 private _indicatorSlots = [
     uiNamespace getVariable [QGVAR(stateIndicator1), controlNull],
@@ -24,7 +24,7 @@ private _indicatorSlots = [
 ];
 
 // --- Removes any indication and exit
-if (_dropIndicator) exitWith {
+if (_dropAllIndicators) exitWith {
     {
         _x ctrlSetText "";
     } forEach _indicatorSlots;
@@ -32,7 +32,7 @@ if (_dropIndicator) exitWith {
 
 // --- Tourniquets
 private _hasTourniquets = GET_TOURNIQUETS(ACE_player) findIf {_x > 0} > -1;
-private _tourniquetIcon = ["",ICON_TOURNIQUET_PATH] select _hasTourniquets;
+private _tourniquetIcon = ["", ICON_TOURNIQUET_PATH] select _hasTourniquets;
 
 // --- Fractures and Splints
 private _fractureSettings = EGVAR(medical,fractures);
@@ -42,12 +42,12 @@ private _splintIcon = "";
 if (_fractureSettings > 0) then {
     // --- Fractures enabled: check for fracture indication
     private _hasFractures = GET_FRACTURES(ACE_player) findIf {_x > 0} > -1;
-    _fractureIcon = ["",ICON_FRACTURE_PATH] select _hasFractures;
+    _fractureIcon = ["", ICON_FRACTURE_PATH] select _hasFractures;
 
     if (_fractureSettings > 1) then {
         // --- Fractures can not be fully healed: check for splint indication
-        private _hasSplints = GET_FRACTURES(ACE_player) findIf {_x isEqualTo -1} > -1;
-        _splintIcon = ["",ICON_SPLINT_PATH] select _hasSplints;
+        private _hasSplints = GET_FRACTURES(ACE_player) findIf {_x == -1} > -1;
+        _splintIcon = ["", ICON_SPLINT_PATH] select _hasSplints;
     };
 };
 
