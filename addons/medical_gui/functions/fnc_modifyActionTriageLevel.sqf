@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: SynixeBrett
+ * Author: Brett Mayson
  * Modifies the action color to match the triage level.
  *
  * Arguments:
@@ -40,7 +40,7 @@ if (
             "#FFFFFF"
         };
     };
-    
+
     _actionData params ["", "", "_icon"];
     _icon set [1, _colorHex];
 };

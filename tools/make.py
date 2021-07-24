@@ -366,7 +366,7 @@ def copy_important_files(source_dir,destination_dir):
 
 
 def copy_optionals_for_building(mod,pbos):
-    src_directories = os.listdir(optionals_root)
+    src_directories = next(os.walk(optionals_root))[1]
     current_dir = os.getcwd()
 
     print_blue("\nChecking optionals folder...")
@@ -592,7 +592,9 @@ def get_project_version(version_increments=[]):
 
 
 def replace_file(filePath, oldSubstring, newSubstring):
-    fh, absPath = mkstemp()
+    global work_drive
+    fh, absPath = mkstemp(None, None, work_drive + "temp")
+    os.close(fh)
     with open(absPath, "w", encoding="utf-8") as newFile:
         with open(filePath, encoding="utf-8") as oldFile:
             for line in oldFile:

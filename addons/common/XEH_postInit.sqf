@@ -420,13 +420,18 @@ GVAR(reloadMutex_lastMagazines) = [];
         private _gesture = getText (_wpnMzlConfig >> "reloadAction");
         if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
         private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
-        private _animConfig = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
-        private _duration = getNumber (configfile >> _animConfig >> "States" >> _gesture >> "speed");
+        private _duration = 0;
+        if (_isLauncher) then {
+            _duration = getNumber (configfile >> "CfgMovesMaleSdr" >> "States" >> _gesture >> "speed");
+        };
+        if (_duration == 0) then {
+            _duration = getNumber (configfile >> "CfgGesturesMale" >> "States" >> _gesture >> "speed");
+        };
 
         if (_duration != 0) then {
             _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
         } else {
-            _duration = 3;
+            _duration = 6;
         };
 
         TRACE_2("Reloading, blocking gestures",_weapon,_duration);

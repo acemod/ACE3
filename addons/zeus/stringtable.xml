@@ -275,6 +275,7 @@
             <Chinese>防禦區域</Chinese>
             <Portuguese>Defender Área</Portuguese>
             <Turkish>Bölgeyi Koru</Turkish>
+            <Spanish>Defender área</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
             <English>Update Editable Objects</English>
@@ -289,6 +290,7 @@
             <Russian>Обновить редактируемые объекты</Russian>
             <Portuguese>Atualizar objetos editáveis</Portuguese>
             <Czech>Aktualizujte upravitelné objekty</Czech>
+            <Spanish>Actualizar objetos editables</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode">
             <English>Editing Mode</English>
@@ -301,6 +303,7 @@
             <Portuguese>Modo de edição</Portuguese>
             <Czech>Režim úprav</Czech>
             <French>Mode d'édition</French>
+            <Spanish>Modo de edición</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_EditingMode_Tooltip">
             <English>Add or remove editable objects from Zeus</English>
@@ -313,6 +316,7 @@
             <Portuguese>Adiciona ou remove objetos editáveis do Zeus</Portuguese>
             <Czech>Přidej nebo odeber upravitelné objekty ze Zeusu</Czech>
             <French>Ajoute ou supprime les objets modifiables depuis Zeus.</French>
+            <Spanish>Añadir o eliminar objetos editables desde Zeus</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AddObjects">
             <English>Add Objects</English>
@@ -326,6 +330,7 @@
             <Czech>Přidat objekty</Czech>
             <French>Ajouter des objets</French>
             <Turkish>Obje Ekle</Turkish>
+            <Spanish>Añadir objetos</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_RemoveObjects">
             <English>Remove Objects</English>
@@ -341,6 +346,7 @@
             <Portuguese>Remover Objetos</Portuguese>
             <Czech>Odebrat objekty</Czech>
             <Turkish>Objeyi Kaldır</Turkish>
+            <Spanish>Eliminar objetos</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators">
             <English>All Curators</English>
@@ -355,6 +361,7 @@
             <Russian>Все кураторы</Russian>
             <Portuguese>Todos os Curadores</Portuguese>
             <Czech>Všichni kurátoři</Czech>
+            <Spanish>Todos los curadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AllCurators_Tooltip">
             <English>Apply changes to all curators</English>
@@ -369,6 +376,7 @@
             <Russian>Применить изменения ко всем кураторам</Russian>
             <Portuguese>Aplicar mudanças à todos os Curadores</Portuguese>
             <Czech>Použít změny na všechny kurátory</Czech>
+            <Spanish>Aplicar cambios a todos los curadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects">
             <English>Additional Objects</English>
@@ -381,6 +389,7 @@
             <Czech>Další objekty</Czech>
             <Chinese>額外物件</Chinese>
             <French>Objets supplémentaires</French>
+            <Spanish>Objetos adicionales</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_AdditionalObjects_Tooltip">
             <English>Additional objects to include in the action regardless of Task Radius</English>
@@ -393,6 +402,7 @@
             <Czech>Další objekty, které mají být zahrnuty do akce, bez ohledu na poloměr úlohy</Czech>
             <Chinese>無論任務範圍何處，都在行動中包含著額外的物件</Chinese>
             <French>Objets supplémentaires à intégrer dans l'action, quel que soit le rayon de la tâche.</French>
+            <Spanish>Objetos adicionales para incluir en la acción al margen del Radio de Tarea</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -408,6 +418,7 @@
             <Chinese>AI技巧設定</Chinese>
             <Portuguese>Habilidade Global da IA</Portuguese>
             <Turkish>Genel AI Yetenekleri</Turkish>
+            <Spanish>Habilidad de IA Global</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
@@ -423,6 +434,7 @@
             <Chinese>總體技巧</Chinese>
             <Portuguese>Habilidade Geral</Portuguese>
             <Turkish>Genel Yetenekler</Turkish>
+            <Spanish>Habilidad general</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
@@ -437,6 +449,7 @@
             <Chinesesimp>改变: 战斗技巧，指挥技巧，勇气大小</Chinesesimp>
             <Chinese>改變: 戰鬥技巧，指揮技巧，勇氣大小</Chinese>
             <Portuguese>Muda: general, commanding, courage</Portuguese>
+            <Spanish>Cambios: general, commanding, courage</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
@@ -451,6 +464,7 @@
             <Chinesesimp>精确度</Chinesesimp>
             <Chinese>精確度</Chinese>
             <Portuguese>Precisão</Portuguese>
+            <Spanish>Precisión</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
@@ -465,6 +479,7 @@
             <Chinesesimp>改变: 瞄准精确度</Chinesesimp>
             <Chinese>改變: 瞄準精確度</Chinese>
             <Portuguese>Muda: aimingAccuracy</Portuguese>
+            <Spanish>Cambios: aimingAccuracy</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
             <English>Weapon Handling</English>
@@ -479,6 +494,7 @@
             <Chinesesimp>武器掌握</Chinesesimp>
             <Chinese>武器掌握</Chinese>
             <Portuguese>Uso de Arma</Portuguese>
+            <Spanish>Manejo de arma</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
@@ -493,6 +509,7 @@
             <Chinesesimp>改变: 手晃幅度，瞄准速度， 重新装填速度</Chinesesimp>
             <Chinese>改變: 手晃幅度，瞄準速度， 重新裝填速度</Chinese>
             <Portuguese>Muda: aimingShake, aimingSpeed, reloadSpeed</Portuguese>
+            <Spanish>Cambios: aimingShake, aimingSpeed, reloadSpeed</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
@@ -507,6 +524,7 @@
             <Chinesesimp>索敌能力</Chinesesimp>
             <Chinese>索敵能力</Chinese>
             <Portuguese>Detecção</Portuguese>
+            <Spanish>Detección</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
@@ -521,6 +539,7 @@
             <Chinesesimp>改变: 搜索距离, 发现时间</Chinesesimp>
             <Chinese>改變: 搜索距離, 發現時間</Chinese>
             <Portuguese>Muda: spotDistance, spotTime</Portuguese>
+            <Spanish>Cambios: spotDistance, spotTime</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
@@ -535,6 +554,7 @@
             <Chinesesimp>寻找掩护</Chinesesimp>
             <Chinese>尋找掩護</Chinese>
             <Portuguese>Procurar Cobertura</Portuguese>
+            <Spanish>Buscar cobertura</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
@@ -549,6 +569,7 @@
             <Chinesesimp>决定AI是否会寻找掩护</Chinesesimp>
             <Chinese>決定AI是否會尋找掩護</Chinese>
             <Portuguese>A IA dever buscar cobertura</Portuguese>
+            <Spanish>La IA debe buscar cobertura</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
             <English>Auto Combat</English>
@@ -563,6 +584,7 @@
             <Chinesesimp>自动交战</Chinesesimp>
             <Chinese>自動交戰</Chinese>
             <Portuguese>Combate automático</Portuguese>
+            <Spanish>Combate automático</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
             <English>Should AI automatically switch to combat mode</English>
@@ -577,6 +599,7 @@
             <Chinesesimp>决定AI是否会自动与敌人交战</Chinesesimp>
             <Chinese>決定AI是否會自動與敵人交戰</Chinese>
             <Portuguese>A IA deveria automaticamente mudar para modo de combate</Portuguese>
+            <Spanish>La IA debe automáticamente cambiar a modo de combate</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
             <English>Group Side</English>
@@ -592,6 +615,7 @@
             <Chinese>小隊陣營</Chinese>
             <Portuguese>Lado do Grupo</Portuguese>
             <Turkish>Tarafı Değiştir</Turkish>
+            <Spanish>Bando de grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
             <English>Patrol Area</English>
@@ -607,6 +631,7 @@
             <Chinese>巡邏區域</Chinese>
             <Portuguese>Patrulhar Área</Portuguese>
             <Turkish>Devriye ayarla</Turkish>
+            <Spanish>Patrullar área</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -639,6 +664,7 @@
             <Portuguese>Adicionar/Remover FRIES</Portuguese>
             <Czech>Přidat/Odebrat FRIES (slaňování)</Czech>
             <Turkish>Ekle/Kaldır FRIES</Turkish>
+            <Spanish>Añadir/Eliminar FRIES</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
@@ -653,6 +679,7 @@
             <Russian>%1 несовместим с быстрым спуском</Russian>
             <Portuguese>%1 não é compatível com sistema de corda.</Portuguese>
             <Czech>%1 není kompatibilní se slaňováním.</Czech>
+            <Spanish>%1 no es compatible con descenso por cuerda.</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
             <English>Unable to remove FRIES, ropes are deployed.</English>
@@ -667,6 +694,7 @@
             <Russian>Невозможно удалить FRIES, канаты развернуты.</Russian>
             <Portuguese>Não foi possível remover o FRIES, as cordas estão soltas.</Portuguese>
             <Czech>Nemohu odebrat FRIES, lana jsou vytažena.</Czech>
+            <Spanish>No es posible eliminar FRIES, las cuerdas están desplegadas-</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
@@ -713,6 +741,7 @@
             <Chinesesimp>传送选定的玩家至模块位置</Chinesesimp>
             <Chinese>傳送選定的玩家至模塊位置</Chinese>
             <Portuguese>Teleporta o jogador selecionado para a posição do módulo</Portuguese>
+            <Spanish>Teleportar al jugador seleccionado a la posición del módulo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
             <English>Teleport Group</English>
@@ -728,6 +757,7 @@
             <Chinese>傳送小隊</Chinese>
             <Portuguese>Teleportar Grupo</Portuguese>
             <Turkish>Grubu ışınla</Turkish>
+            <Spanish>Teleportar al grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
             <English>Teleports all units in group</English>
@@ -1143,6 +1173,7 @@
             <Chinese>貨物:</Chinese>
             <Portuguese>Carga:</Portuguese>
             <Turkish>Kargo:</Turkish>
+            <Spanish>Carga:</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectCargo">
             <English>Select cargo to unload</English>
@@ -1156,6 +1187,7 @@
             <Czech>Vyberte náklad na vyložení</Czech>
             <French>Sélectionner une cargaison à décharger</French>
             <Turkish>Seçilen kargo boşaltıldı</Turkish>
+            <Spanish>Seleccionar carga para descargar:</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -1185,6 +1217,7 @@
             <Chinese>設定目標範圍半徑</Chinese>
             <Portuguese>Raio para se executar uma tarefa</Portuguese>
             <Czech>Okruh ve kterém bude úkol vykonán</Czech>
+            <Spanish>Radio en dentro del cual realizar la tarea</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
@@ -1199,6 +1232,7 @@
             <Chinesesimp>错误的半径值</Chinesesimp>
             <Chinese>錯誤的半徑值</Chinese>
             <Portuguese>Raio inválido inserido</Portuguese>
+            <Spanish>Radio inválido introducido</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuppressiveFire_DisplayName">
             <English>Suppressive Fire</English>
@@ -1229,6 +1263,7 @@
             <Portuguese>Adicionar Arsenal Completo</Portuguese>
             <Czech>Přidat plný arzenál</Czech>
             <Turkish>Arsenal Ekle</Turkish>
+            <Spanish>Añadir Arsenal completo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleRemoveArsenal_DisplayName">
             <English>Remove Arsenal</English>
@@ -1244,6 +1279,7 @@
             <Portuguese>Remover Arsenal</Portuguese>
             <Czech>Odebrat arzenál</Czech>
             <Turkish>Arsenali Kaldır</Turkish>
+            <Spanish>Eliminar Arsenal</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
@@ -1258,6 +1294,7 @@
             <Portuguese>Carregar na carga</Portuguese>
             <Czech>Naložit do nákladového prostoru</Czech>
             <French>Charger dans le véhicule</French>
+            <Spanish>Cargar en la carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
@@ -1272,6 +1309,7 @@
             <Russian>Вкл/Выкл ПНВ</Russian>
             <Portuguese>Alternar Visão Noturna</Portuguese>
             <Czech>Přepnout noktovizory</Czech>
+            <Spanish>Alternar visión nocturna</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment">
             <English>NVG Equipment</English>
@@ -1287,6 +1325,7 @@
             <Portuguese>Equipamento de Visão Noturna</Portuguese>
             <Czech>Noktovizory - vybavení</Czech>
             <Turkish>Gece Görüşü Ekipmanı</Turkish>
+            <Spanish>Equipamiento de visión nocturna</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_NvgEquipment_tooltip">
             <English>Add or remove NVGs from units</English>
@@ -1302,6 +1341,7 @@
             <Portuguese>Adiciona ou remove visão noturna de unidades</Portuguese>
             <Czech>Přidat nebo odebrat noktovizory jednotkám</Czech>
             <Turkish>Gece Görüşü ekle veya kaldır</Turkish>
+            <Spanish>Añadir o eliminar visión nocturna de las unidades</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>
@@ -1329,6 +1369,7 @@
             <Portuguese>Unidades afetadas pela alteração</Portuguese>
             <Czech>Jednotky ovlivněné přepnutím</Czech>
             <French>Unités affectées par le changement.</French>
+            <Spanish>Unidades afectadas por esta alternancia</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_SelectedGroup">
             <English>Selected Group</English>
@@ -1344,6 +1385,7 @@
             <Portuguese>Grupo Selecionado</Portuguese>
             <Czech>Vybraná skupina</Czech>
             <Turkish>Seçilen Grup</Turkish>
+            <Spanish>Grupo seleccionado</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleFlashlight_DisplayName">
             <English>Toggle Flashlights</English>
@@ -1391,6 +1433,7 @@
             <Portuguese>Adicionar equipamento</Portuguese>
             <Czech>Přidat vybavení</Czech>
             <Turkish>Tekerlek Ekle</Turkish>
+            <Spanish>Añadir equipamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
             <English>Garrison Group</English>
@@ -1405,6 +1448,7 @@
             <Russian>Разместить группу в здании</Russian>
             <Portuguese>Guarnecer grupo</Portuguese>
             <Czech>Umístit posádku (jednotka)</Czech>
+            <Spanish>Guarnicionar grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
             <English>Fill from top to bottom</English>
@@ -1419,6 +1463,7 @@
             <Russian>Занять здание сверху до низу</Russian>
             <Portuguese>Preencher de cima para baixo</Portuguese>
             <Czech>Naplnit odshora dolů</Czech>
+            <Spanish>Rellenar de arriba hacia abajo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
             <English>Fill buildings from the highest position first</English>
@@ -1433,6 +1478,7 @@
             <Russian>Занять здание начиная с верхних позиций</Russian>
             <Portuguese>Preencher construções do lugar mais alto primeiro</Portuguese>
             <Czech>Naplní nejdříve nejvyšší pozice v budovách</Czech>
+            <Spanish>Rellenar edificios comenzando por la posición más elevada</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
             <English>Building filling mode</English>
@@ -1447,6 +1493,7 @@
             <Russian>Режим заполнения здания</Russian>
             <Portuguese>Modo de preenchimento da construção</Portuguese>
             <Czech>Režim plnění budov</Czech>
+            <Spanish>Modo de rellenar edificios</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
             <English>Even filling</English>
@@ -1461,6 +1508,7 @@
             <Russian>Равномерно</Russian>
             <Portuguese>Preenchimento equilibrado</Portuguese>
             <Czech>Rovnoměrné plnění</Czech>
+            <Spanish>Rellenado equilibrado</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
             <English>Building by building</English>
@@ -1475,6 +1523,7 @@
             <Russian>Здание за зданием</Russian>
             <Portuguese>Construção por construção</Portuguese>
             <Czech>Budova za budovou</Czech>
+            <Spanish>Edificio a edificio</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
             <English>Random filling</English>
@@ -1489,6 +1538,7 @@
             <Russian>Случайно</Russian>
             <Portuguese>Preenchimento aleatório</Portuguese>
             <Czech>Náhodné plnění</Czech>
+            <Spanish>Rellenado aleatorio</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGarrison_TeleportText">
             <English>Teleport</English>
@@ -1519,6 +1569,7 @@
             <Russian>Вывести группу из здания</Russian>
             <Portuguese>Desguarnecer grupo</Portuguese>
             <Czech>Zrušit posádku - uvolnit jednotku</Czech>
+            <Spanish>Desaguarnicionar grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_noneFound">
             <English>No players found</English>
@@ -1810,6 +1861,7 @@
             <Czech>"%1" menu</Czech>
             <French>Menu "%1"</French>
             <Turkish>"%1" menü</Turkish>
+            <Spanish>"%1" menu</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleCargoParadrop_DisplayName">
             <English>Paradrop Cargo</English>
@@ -1823,6 +1875,7 @@
             <Czech>Výsadek nákladu</Czech>
             <French>Paralargage de cargaison</French>
             <Turkish>Paraşüt Kargosu</Turkish>
+            <Spanish>Carga mediante paracaidas</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_paradrop_noCargoLoaded">
             <English>No cargo loaded</English>

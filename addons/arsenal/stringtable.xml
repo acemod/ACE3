@@ -388,6 +388,8 @@
             <German>Nach Tragelast sortieren</German>
             <French>Trier par capacité de chargement</French>
             <Japanese>容量で並び替え</Japanese>
+            <Spanish>Ordenar por capacidad</Spanish>
+            <Russian>Сортировка по вместимости</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
             <English>Sort by accuracy</English>
@@ -395,6 +397,8 @@
             <French>Trier par précision</French>
             <Japanese>精度で並び替え</Japanese>
             <Turkish>Isabet doğruluğuna göre sırala</Turkish>
+            <Spanish>Ordenar por precisión</Spanish>
+            <Russian>Сортировка по точности</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
             <English>Sort by rate of fire</English>
@@ -402,12 +406,16 @@
             <French>Trier par cadence de tir</French>
             <Japanese>連射速度で並び替え</Japanese>
             <Turkish>Atış hızına göre sırala</Turkish>
+            <Spanish>Ordenar por cadencia de tiro</Spanish>
+            <Russian>Сортировка по темпу стрельбы</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
             <German>Nach Vergrößerung sortieren</German>
             <French>Trier par grossissement</French>
             <Japanese>倍率で並び替え</Japanese>
+            <Spanish>Ordenar por magnificación</Spanish>
+            <Russian>Сортировка по кратности приближения</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagCountText">
             <English>Sort by ammo count</English>
@@ -415,16 +423,22 @@
             <French>Trier par nombre de munitions</French>
             <Japanese>装弾数で並び替え</Japanese>
             <Turkish>Mermi sayısına göre sırala</Turkish>
+            <Spanish>Ordenar por cantidad de munición</Spanish>
+            <Russian>Сортировка по количеству боеприпасов</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
             <French>Trier par protection balistique</French>
             <Japanese>防弾性能で並び替え</Japanese>
+            <Spanish>Ordenar por protección balística</Spanish>
+            <Russian>Сортировка по баллистической защите</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
             <French>Trier par résistance aux explosifs</French>
             <Japanese>防爆性能で並び替え</Japanese>
+            <Spanish>Ordenar por protección de explosivos</Spanish>
+            <Russian>Сортировка по защите от взрывов</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -1380,6 +1394,7 @@
             <Russian>Задержка детонации</Russian>
             <Polish>Opoźnienie zapalnika</Polish>
             <Japanese>信管設定時間</Japanese>
+            <Spanish>Tiempo de espoleta</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
@@ -1388,6 +1403,7 @@
             <Russian>Детонация от удара</Russian>
             <Polish>Detonuj przy uderzeniu</Polish>
             <Japanese>着発信管</Japanese>
+            <Spanish>Detona mediante impacto</Spanish>
         </Key>
     </Package>
 </Project>

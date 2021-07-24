@@ -261,6 +261,46 @@ class CfgWeapons {
     class rhsusf_acc_M8541_low: rhsusf_acc_M8541 {
         ACE_ScopeHeightAboveRail = 2.9789;
     };
+    class rhsusf_acc_nxs_3515x50_base: ItemCore { // http://www.nightforceusa.com/PDF/nightforce-2011-catalog.pdf#page=12
+        ACE_ScopeAdjust_Vertical[] = {0, 30};
+        ACE_ScopeAdjust_Horizontal[] = {-10.9, 10.9};
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class nxs_scope {
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class rhsusf_acc_nxs_3515x50f1_base: rhsusf_acc_sniper_base { // http://www.nightforceusa.com/PDF/nightforce-2011-catalog.pdf#page=12
+        ACE_ScopeAdjust_Vertical[] = {0, 30};
+        ACE_ScopeAdjust_Horizontal[] = {-10.9, 10.9};
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class nxs_scope {
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+    class rhsusf_acc_nxs_5522x56_base: ItemCore { // http://www.nightforceusa.com/PDF/nightforce-2011-catalog.pdf#page=12
+        ACE_ScopeAdjust_Vertical[] = {0, 27.3};
+        ACE_ScopeAdjust_Horizontal[] = {-8.2, 8.2};
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class nxs_scope {
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
     // RHS lauchers
     class rhs_weap_fgm148: launch_O_Titan_F {
         ace_javelin_enabled = 1;
