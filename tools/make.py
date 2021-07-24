@@ -1191,17 +1191,15 @@ See the make.cfg file for additional build options.
                     os.remove(os.path.join(root, file))
         if sqfc_compiling:
             print_blue("\nCompiling to sqfc...")
-            try:
-                compiler_exe = os.path.join(module_root_parent, "ArmaScriptCompiler.exe")
-                if not os.path.isfile(compiler_exe):
-                    raise Exception("ArmaScriptCompiler.exe not found in base folder")
-                # compile new sqfc
+            compiler_exe = os.path.join(module_root_parent, "ArmaScriptCompiler.exe")
+            if not os.path.isfile(compiler_exe):
+                print_yellow("ArmaScriptCompiler.exe not found in base mod folder - skipping")
+            else:
                 ret = subprocess.call([compiler_exe], cwd=module_root_parent, stdout=False)
-                if ret != 0:
-                    raise Exception("ArmaScriptCompiler.exe returned {}".format(ret))
-            except Exception as e:
-                print_yellow("sqfc_compiling error detected: {}".format(e))
-                # raise
+                if ret == 0:
+                    print_green("sqfc finished")
+                else:
+                    print_error("ArmaScriptCompiler.exe returned unexpected {}".format(ret))
 
         # For each module, prep files and then build.
         print_blue("\nBuilding...")
