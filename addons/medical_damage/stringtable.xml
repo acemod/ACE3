@@ -727,7 +727,7 @@
             <English>Controls whether crew receives damage from vehicle collisions.</English>
             <Russian>Контролирует, получает ли экипаж урон от столкновения транспортного средства.</Russian>
             <Spanish>Controla si la tripulación recibe daño debido a colisiones en vehículo.</Spanish>
-            <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident'.</French>
+            <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident.</French>
         </Key>
     </Package>
 </Project>

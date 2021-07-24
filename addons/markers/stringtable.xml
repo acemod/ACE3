@@ -27,6 +27,7 @@
         <Key ID="STR_ACE_Markers_MarkerDirectionScaleSlider_Tooltip">
             <English>Click RMB to reset</English>
             <Russian>Нажми ПКМ чтобы сбросить</Russian>
+            <French>Clic droit pour réinitialiser</French>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
