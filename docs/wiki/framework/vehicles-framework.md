@@ -36,6 +36,7 @@ class CfgVehicles {
 ### 1.2 Setting the startup delay by script
 
 `ace_vehicles_fnc_setVehicleStartDelay`
+Has global effects.
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
