@@ -4,9 +4,9 @@
 
 if (!hasInterface) exitWith {};
 
-private _replaceTerrainClasses = QUOTE( \
-    getNumber (_x >> 'scope') == 2 \
-    && {getNumber (_x >> QQGVAR(replaceTerrainObject)) > 0} \
+private _replaceTerrainClasses = QUOTE(
+    getNumber (_x >> QQGVAR(replaceTerrainObject)) > 0
+    && {getNumber (_x >> 'scope') == 2}
 ) configClasses (configFile >> "CfgVehicles");
 
 private _cacheReplaceTerrainModels = createHashMap;
