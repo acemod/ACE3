@@ -15,6 +15,7 @@
             <French>Remplissage des chargeurs</French>
             <Czech>Přepáskování zásobníků</Czech>
             <Turkish>Şarjör Yeniden Doldurma</Turkish>
+            <Spanish>Reempaquetado de cargadores</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
             <English>Time per round</English>
@@ -30,6 +31,7 @@
             <French>Temps par cartouche</French>
             <Czech>Čas na náboj</Czech>
             <Turkish>Süre başına mermi</Turkish>
+            <Spanish>Tiempo por cartucho</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
             <English>Time per magazine</English>
@@ -45,6 +47,7 @@
             <French>Temps par chargeur</French>
             <Czech>Čas na zásobník</Czech>
             <Turkish>Süre başına şarjör</Turkish>
+            <Spanish>Tiempo por cargador</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
             <English>Time per belt link</English>
@@ -59,6 +62,7 @@
             <Portuguese>Tempo por carregador de cinto</Portuguese>
             <French>Temps par bande</French>
             <Czech>Čas na článek pásu</Czech>
+            <Spanish>Tiempo por enganche de cinta</Spanish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
             <English>Repack Magazines</English>

@@ -27,23 +27,63 @@ class CfgWeapons {
     };
     class ACE_NVG_Gen1: NVGoggles_OPFOR {
         author = ECSTRING(common,ACETeam);
-        displayName = CSTRING(NVG_Gen1);
+        displayName = CSTRING(NVG_Gen1_black);
         GVAR(generation) = 1;
+    };
+    class ACE_NVG_Gen1_Brown: NVGoggles {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(NVG_Gen1_brown);
+        GVAR(generation) = 1;
+    };
+    class ACE_NVG_Gen1_Green: NVGoggles_INDEP {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(NVG_Gen1_green);
+        GVAR(generation) = 1;
+    };
+    class ACE_NVG_Gen2_Black: NVGoggles_OPFOR {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(NVG_Gen2_black);
+        GVAR(generation) = 2;
+    };
+    class ACE_NVG_Gen2_Brown: NVGoggles {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(NVG_Gen2_brown);
+        GVAR(generation) = 2;
     };
     class ACE_NVG_Gen2: NVGoggles_INDEP {
         author = ECSTRING(common,ACETeam);
-        displayName = CSTRING(NVG_Gen2);
+        displayName = CSTRING(NVG_Gen2_green);
         GVAR(generation) = 2;
+    };
+    class ACE_NVG_Gen4_Black: NVGoggles_OPFOR {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(NVG_Gen4_black);
+        GVAR(generation) = 4;
     };
     class ACE_NVG_Gen4: NVGoggles {
         author = ECSTRING(common,ACETeam);
-        displayName = CSTRING(NVG_Gen4);
+        displayName = CSTRING(NVG_Gen4_brown);
         GVAR(generation) = 4;
+    };
+    class ACE_NVG_Gen4_Green: NVGoggles_INDEP {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(NVG_Gen4_green);
+        GVAR(generation) = 4;
+    };
+    class ACE_NVG_Wide_Black: NVGoggles_OPFOR {
+        author = ECSTRING(common,ACETeam);
+        modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
+        displayName = CSTRING(NVG_Wide_black);
     };
     class ACE_NVG_Wide: NVGoggles {
         author = ECSTRING(common,ACETeam);
         modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
-        displayName = CSTRING(NVG_FullScreen);
+        displayName = CSTRING(NVG_Wide_brown);
+    };
+    class ACE_NVG_Wide_Green: NVGoggles_INDEP {
+        author = ECSTRING(common,ACETeam);
+        modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
+        displayName = CSTRING(NVG_Wide_green);
     };
 
 

@@ -33,16 +33,19 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     }] call CBA_fnc_addEventHandler;
 
     // On changing settings
-    ["ace_settingChanged", {
-        params ["_name"];
+    ["CBA_SettingChanged", {
+        params ["_name", "_value"];
+
+        private _delimPos = count QUOTE(DOUBLES(ADDON,));
+        if (_name select [0, _delimPos] != QUOTE(DOUBLES(ADDON,))) exitWith {};
 
         if (_name in ELEMENTS_BASIC) then {
             [true] call FUNC(setElements);
         } else {
-            private _nameNoPrefix = toLower (_name select [7]);
+            private _nameNoPrefix = toLower (_name select [_delimPos]);
             private _cachedElement = GVAR(configCache) getVariable _nameNoPrefix;
             if (!isNil "_cachedElement") then {
-                [_nameNoPrefix, missionNamespace getVariable _name, true] call FUNC(setAdvancedElement);
+                [_nameNoPrefix, _value, true] call FUNC(setAdvancedElement);
             };
         };
     }] call CBA_fnc_addEventHandler;

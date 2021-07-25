@@ -112,6 +112,7 @@
             <Czech>Efekt pro nízké množství krve</Czech>
             <Polish>Efekt po utracie znacznej ilości krwi</Polish>
             <Turkish>Düşük Kan Efekt Türü</Turkish>
+            <Spanish>Tipo de efecto por volumen bajo de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
             <English>Selects the used low blood volume effect type.</English>
@@ -121,6 +122,7 @@
             <Czech>Nastavuje který efekt pro nízké množství krve bude používán.</Czech>
             <Polish>Wybiera efekt ktory będzie pokazywany po utracie znacznej ilości krwi.</Polish>
             <Turkish>Kullanılan düşük kan hacmi efekt türünü seçer.</Turkish>
+            <Spanish>Selecciona el tipo de efecto a causa de un volumen bajo de sangre.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>
@@ -130,6 +132,7 @@
             <Czech>Ztráta barev</Czech>
             <Polish>Zanikanie kolorów</Polish>
             <Turkish>Renk Soldurma</Turkish>
+            <Spanish>Atenuación del color</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
             <English>Icon</English>
@@ -139,6 +142,7 @@
             <Czech>Ikona</Czech>
             <Polish>Ikona</Polish>
             <Turkish>Simge</Turkish>
+            <Spanish>Icono</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
             <English>Icon + Color Fading</English>
@@ -148,6 +152,7 @@
             <Czech>Ikona + Ztráta barev</Czech>
             <Polish>Ikona + Zanikanie kolorów</Polish>
             <Turkish>Simge + Renk Soldurma</Turkish>
+            <Spanish>Icono + Atenuación del color</Spanish>
         </Key>
         <Container name="Settings">
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">

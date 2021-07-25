@@ -49,29 +49,3 @@ class GVAR(ProgressBar_Dialog) {
         };
     };
 };
-
-class GVAR(DisableMouse_Dialog) {
-    idd = -1;
-    movingEnable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),_this select 0)];);
-    objects[] = {};
-    class controlsBackground {
-        class Background {
-            idc = -1;
-            moving = 0;
-            font = "TahomaB";
-            text = "";
-            sizeEx = 0;
-            lineSpacing = 0;
-            type = 0;
-            style = 0;
-            size = 1;
-            colorBackground[] = {0, 0, 0, 0};//0.5
-            colorText[] = {0, 0, 0, 0};
-            x = "safezoneX";
-            y = "safezoneY";
-            w = "safezoneW";
-            h = "safezoneH";
-        };
-    };
-};

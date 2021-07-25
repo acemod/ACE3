@@ -285,6 +285,7 @@
             <Russian>Защита слуха</Russian>
             <Portuguese>Proteção Auditiva</Portuguese>
             <Czech>Ochrana sluchu</Czech>
+            <Spanish>Protección auditiva</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
@@ -298,6 +299,7 @@
             <Russian>Глушение звука</Russian>
             <Portuguese>Abafamento de Volume</Portuguese>
             <Czech>Snížení hlasitosti</Czech>
+            <Spanish>Atenuación de volumen</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
@@ -311,6 +313,7 @@
             <Portuguese>Volume do Protetor Auricular</Portuguese>
             <French>Volume bouchons anti bruit</French>
             <Czech>Hlasitost se špunty</Czech>
+            <Spanish>Volumen de protectores auditivos</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
@@ -324,6 +327,7 @@
             <Portuguese>Volume quando estiver utilizando um Protetor Auricular</Portuguese>
             <French>Volume audio perçu par les joueurs portant des bouchons anti bruit.</French>
             <Czech>Hlasitost při používání špuntů do uší.</Czech>
+            <Spanish>Volumen cuando se utilizan protectores auditivos.</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
@@ -337,6 +341,7 @@
             <Portuguese>Volume Inconsciente</Portuguese>
             <French>Volume inconscience</French>
             <Czech>Hlasitost při ztrátě vědomí</Czech>
+            <Spanish>Volumen inconsciente</Spanish>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
@@ -350,6 +355,7 @@
             <Portuguese>Volume enquanto inconsciente</Portuguese>
             <French>Volume perçu par les joueurs inconscients.</French>
             <Czech>Hlasitost během ztráty vědomí.</Czech>
+            <Spanish>Volumen durante la inconsciencia.</Spanish>
         </Key>
     </Package>
 </Project>

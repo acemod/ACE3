@@ -41,6 +41,10 @@ if (_state) then {
 
         private _display = uiNamespace getVariable QGVAR(dlgDisableMouse);
 
+        // Hide cursor by using custom transparent cursor
+        private _map = _display displayCtrl 101;
+        _map ctrlMapCursor ["", QGVAR(blank)];
+
         _display displayAddEventHandler ["KeyDown", {
             params ["", "_key"];
 
