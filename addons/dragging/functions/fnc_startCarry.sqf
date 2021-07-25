@@ -19,9 +19,10 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
+private _weight = [_target] call FUNC(getWeight);
+
 // exempt from weight check if object has override variable set
 if (!GETVAR(_target,GVAR(ignoreWeightCarry),false) && {
-    private _weight = [_target] call FUNC(getWeight);
     _weight > GETMVAR(ACE_maxWeightCarry,1E11)
 }) exitWith {
     // exit if object weight is over global var value
@@ -56,7 +57,15 @@ if (_target isKindOf "CAManBase") then {
     _unit action ["SwitchWeapon", _unit, _unit, 299];
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
-    [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+    // objects other than containers have calculated weight == 0 so we use getMass
+    if (-1 == ["ReammoBox_F", "WeaponHolder", "WeaponHolderSimulated"] findIf {_target isKindOf _x}) then {
+        _weight = getMass _target;
+    };
+    if (_weight > MAX_WEIGHT_RUN) then {
+        [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+    } else {
+        [_unit, "blockSprint", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+    };
 
 };
 
