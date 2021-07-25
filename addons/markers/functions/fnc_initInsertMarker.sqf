@@ -332,10 +332,12 @@
 
     private _curSelAngle = GETGVAR(currentMarkerAngle,0);
     _aceAngleSlider sliderSetPosition _curSelAngle;
+    _aceAngleSlider ctrlSetTooltip LLSTRING(MarkerDirectionScaleSlider_Tooltip);
 
     //Update now and add eventHandler:
     [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
     _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
+    _aceAngleSlider ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onSliderMouseButtonUpAngle)}];
 
     ////////////////////
     // init marker scale slider
@@ -343,13 +345,15 @@
 
     if !(GVAR(editingMarker) isEqualTo "") then {
         //get the original scale
-        GVAR(currentMarkerScale) = markerSize GVAR(editingMarker);
+        GVAR(currentMarkerScale) = (markerSize GVAR(editingMarker)) param [0, 1];
     };
 
     private _curSelScale = GETGVAR(currentMarkerScale,1);
     _aceScaleSlider sliderSetPosition _curSelScale;
+    _aceScaleSlider ctrlSetTooltip LLSTRING(MarkerDirectionScaleSlider_Tooltip);
 
     //Update now and add eventHandler:
     [_aceScaleSlider, _curSelScale] call FUNC(onSliderPosChangedScale);
     _aceScaleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedScale)}];
+    _aceScaleSlider ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onSliderMouseButtonUpScale)}];
 }, _this] call CBA_fnc_execNextFrame;

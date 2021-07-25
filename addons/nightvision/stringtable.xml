@@ -16,39 +16,35 @@
             <Turkish>ACE Gece Görüşü</Turkish>
             <Spanish>ACE visión nocturna</Spanish>
         </Key>
-        <Key ID="STR_ACE_NightVision_NVG_Gen1">
-            <English>NV Goggles (Gen1)</English>
-            <Czech>Noktovizor (Gen1)</Czech>
-            <French>JVN (Gen1)</French>
-            <German>NS-Brille (1. Gen.)</German>
-            <Italian>Occhiali notturni (Gen1)</Italian>
-            <Polish>Gogle noktowizyjne (Gen1)</Polish>
-            <Portuguese>Óculos de visão noturna (Gen1)</Portuguese>
-            <Russian>ПНВ (Gen1)</Russian>
-            <Spanish>Gafas de visión nocturna (Gen1)</Spanish>
-            <Hungarian>Éjjellátó szemüveg (1. Gen.)</Hungarian>
-            <Japanese>暗視装置 (第1世代)</Japanese>
-            <Korean>야투경 (1세대)</Korean>
-            <Chinesesimp>夜视镜 (初代)</Chinesesimp>
-            <Chinese>夜視鏡 (初代)</Chinese>
-            <Turkish>GG Gözlüğü (1. Jen)</Turkish>
+        <Key ID="STR_ACE_NightVision_NVG_Gen1_brown">
+            <English>NV Goggles (Gen1, Brown)</English>
+            <French>JVN (Gen1, marron)</French>
+            <Russian>ПНВ (Gen1, Коричневый)</Russian>
         </Key>
-        <Key ID="STR_ACE_NightVision_NVG_Gen2">
-            <English>NV Goggles (Gen2)</English>
-            <Czech>Noktovizor (Gen2)</Czech>
-            <French>JVN (Gen2)</French>
-            <German>NS-Brille (2. Gen.)</German>
-            <Italian>Occhiali notturni (Gen2)</Italian>
-            <Polish>Gogle noktowizyjne (Gen2)</Polish>
-            <Portuguese>Óculos de visão noturna (Gen2)</Portuguese>
-            <Russian>ПНВ (Gen2)</Russian>
-            <Spanish>Gafas de visión nocturna (Gen2)</Spanish>
-            <Hungarian>Éjjellátó szemüveg (2. Gen.)</Hungarian>
-            <Japanese>暗視装置 (第2世代)</Japanese>
-            <Korean>야투경 (2세대)</Korean>
-            <Chinesesimp>夜视镜 (二代)</Chinesesimp>
-            <Chinese>夜視鏡 (二代)</Chinese>
-            <Turkish>GG Gözlüğü (2. Jen)</Turkish>
+        <Key ID="STR_ACE_NightVision_NVG_Gen1_black">
+            <English>NV Goggles (Gen1, Black)</English>
+            <French>JVN (Gen1, noires)</French>
+            <Russian>ПНВ (Gen1, Чёрный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen1_green">
+            <English>NV Goggles (Gen1, Green)</English>
+            <French>JVN (Gen1, vertes)</French>
+            <Russian>ПНВ (Gen1, Зелёный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen2_brown">
+            <English>NV Goggles (Gen2, Brown)</English>
+            <French>JVN (Gen2, marron)</French>
+            <Russian>ПНВ (Gen2, Коричневый)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen2_black">
+            <English>NV Goggles (Gen2, Black)</English>
+            <French>JVN (Gen2, noires)</French>
+            <Russian>ПНВ (Gen2, Чёрный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen2_green">
+            <English>NV Goggles (Gen2, Green)</English>
+            <French>NV Goggles (Gen2, vertes)</French>
+            <Russian>ПНВ (Gen2, Зелёный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -118,39 +114,35 @@
             <Chinese>夜視鏡 (三代, 黑色)</Chinese>
             <Turkish>GG Gözlüğü (3. Jen Siyah)</Turkish>
         </Key>
-        <Key ID="STR_ACE_NightVision_NVG_Gen4">
-            <English>NV Goggles (Gen4)</English>
-            <Czech>Noktovizor (Gen4)</Czech>
-            <French>JVN (Gen4)</French>
-            <German>NS-Brille (4. Gen.)</German>
-            <Italian>Occhiali notturni (Gen4)</Italian>
-            <Polish>Gogle noktowizyjne (Gen4)</Polish>
-            <Portuguese>Óculos de visão noturna (Gen4)</Portuguese>
-            <Russian>ПНВ (Gen4)</Russian>
-            <Spanish>Gafas de visión nocturna (Gen4)</Spanish>
-            <Hungarian>Éjjellátó szemüveg (4. Gen.)</Hungarian>
-            <Japanese>暗視装置 (第4世代)</Japanese>
-            <Korean>야투경 (4세대)</Korean>
-            <Chinesesimp>夜视镜 (四代)</Chinesesimp>
-            <Chinese>夜視鏡 (四代)</Chinese>
-            <Turkish>GG Gözlüğü (4. Jen)</Turkish>
+        <Key ID="STR_ACE_NightVision_NVG_Gen4_brown">
+            <English>NV Goggles (Gen4, Brown)</English>
+            <French>JVN (Gen4, marron)</French>
+            <Russian>ПНВ (Gen4, Коричневый)</Russian>
         </Key>
-        <Key ID="STR_ACE_NightVision_NVG_FullScreen">
-            <English>NV Goggles (Wide)</English>
-            <German>NS-Brille (Weitwinkel)</German>
-            <Spanish>Gafas de visión nocturna (Panorámicas)</Spanish>
-            <Polish>Gogle noktowizyjne (panoramiczne)</Polish>
-            <Czech>Noktovizor (Širokoúhlý)</Czech>
-            <Russian>ПНВ (Широкоугольный)</Russian>
-            <French>JVN (Large)</French>
-            <Hungarian>Éjjellátó szemüveg (széles látószögű)</Hungarian>
-            <Portuguese>Óculos de visão noturna (Panorâmico)</Portuguese>
-            <Italian>Occhiali notturni (Larghi)</Italian>
-            <Japanese>暗視装置 (ワイド)</Japanese>
-            <Korean>야투경 (넓음)</Korean>
-            <Chinesesimp>夜视镜 (宽版)</Chinesesimp>
-            <Chinese>夜視鏡 (寬版)</Chinese>
-            <Turkish>GG Gözlüğü (Geniş)</Turkish>
+        <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
+            <English>NV Goggles (Gen4, Black)</English>
+            <French>JVN (Gen4, noires)</French>
+            <Russian>ПНВ (Gen4, Чёрный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
+            <English>NV Goggles (Gen4, Green)</English>
+            <French>JVN (Gen4, vertes)</French>
+            <Russian>ПНВ (Gen4, Зелёный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
+            <English>NV Goggles (Wide, Brown)</English>
+            <French>JVN (Large, marron)</French>
+            <Russian>ПНВ (Широкий, Коричневый)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Wide_black">
+            <English>NV Goggles (Wide, Black)</English>
+            <French>JVN (Large, noires)</French>
+            <Russian>ПНВ (Широкий, Чёрный)</Russian>
+        </Key>
+        <Key ID="STR_ACE_NightVision_NVG_Wide_green">
+            <English>NV Goggles (Wide, Green)</English>
+            <French>JVN (Large, vertes)</French>
+            <Russian>ПНВ (Широкий, Зелёный)</Russian>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>

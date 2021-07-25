@@ -14,10 +14,10 @@ class CfgPatches {
     };
 };
 
-#include "CfgEventHandlers.hpp"
-
 #include "CfgActions.hpp"
-#include "CfgMoves.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgExtendedAnimation.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

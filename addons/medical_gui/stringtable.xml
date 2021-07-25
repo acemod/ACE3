@@ -193,11 +193,15 @@
             <English>Show Triage Level in Interaction Menu</English>
             <French>Couleur de triage dans le menu d'interaction</French>
             <Japanese>インタラクションにトリアージ レベル表示</Japanese>
+            <Spanish>Mostrar nivel de triado en menú de interacción</Spanish>
+            <Russian>Показывать группу триажа в меню взаимодействий</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_Description">
             <English>Shows the patient's triage level by changing the color of the main and medical menu actions.</English>
             <French>Modifie la couleur du menu d'interactions et du sous-menu médical en fonction de la fiche de triage du patient.</French>
             <Japanese>メニューと医療メニューの色を変更し、患者のトリアージ レベルを表示します。</Japanese>
+            <Spanish>Mostrar el nivel de triado en el paciente cambiando el color de acciones de menú principales y médicas </Spanish>
+            <Russian>Отображает установленную группу карты медицинской сортировки (триажа), изменяя цвет действий основного и медицинского меню.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -1118,6 +1122,7 @@
             <Chinesesimp>伤员信息</Chinesesimp>
             <Japanese>患者情報</Japanese>
             <Turkish>Hasta Bilgileri</Turkish>
+            <Spanish>Información de paciente</Spanish>
         </Key>
     </Package>
 </Project>

@@ -64,7 +64,7 @@ class CfgAmmo {
    class ACE_Gatling_30mm_Sub_HEI: SubmunitionBullet {
        submunitionAmmo = "Gatling_30mm_HE_Plane_CAS_01_F";
        weaponType = "cannon";
-       submunitionConeType[] = {"poissondisccenter", 3};
+       submunitionConeType[] = {"randomcenter", 3};
        submunitionConeAngle = 0.056; // in degrees, 0.055 ~= 0.001 mils minute, but present
        model = "\A3\Weapons_f\Data\bullettracer\tracer_red.p3d";
        triggerTime = 0.005;

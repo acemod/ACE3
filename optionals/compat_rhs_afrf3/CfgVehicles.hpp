@@ -207,6 +207,10 @@ class CfgVehicles {
         transportRepair = 0;
         EGVAR(repair,canRepair) = 1;
     };
+    class RHS_Ural_Ammo_Base: RHS_Ural_Base {
+        transportAmmo = 0;
+        ace_rearm_defaultSupply = 1200;
+    };
 
     class rhs_truck: Truck_F {
         EGVAR(refuel,fuelCapacity) = 210;
@@ -237,6 +241,9 @@ class CfgVehicles {
                 items[] = {"ACE_Wheel"};
             };
         };
+    class rhs_kamaz5350_ammo_base: rhs_kamaz5350 {
+        transportAmmo = 0;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class MRAP_02_base_F;
@@ -336,6 +343,16 @@ class CfgVehicles {
 
     class rhs_assault_umbts;
     class rhs_assault_umbts_engineer: rhs_assault_umbts {
+        EGVAR(logistics_wirecutter,hasWirecutter) = 1;
+    };
+    
+    class rhs_rk_sht_30_emr;
+    class rhs_rk_sht_30_emr_engineer: rhs_rk_sht_30_emr {
+        EGVAR(logistics_wirecutter,hasWirecutter) = 1;
+    };
+    
+    class rhs_rk_sht_30_olive;
+    class rhs_rk_sht_30_olive_engineer: rhs_rk_sht_30_olive {
         EGVAR(logistics_wirecutter,hasWirecutter) = 1;
     };
 

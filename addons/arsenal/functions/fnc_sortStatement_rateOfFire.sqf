@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: Alganthe, SynixeBrett
+ * Author: Alganthe, Brett Mayson
  * Statement to sort weapons by their rate of fire.
  *
  * Arguments:

@@ -854,6 +854,8 @@ Author:
 #define COMPILE_FILE2(var1) COMPILE_FILE2_SYS('var1')
 #define COMPILE_FILE2_CFG(var1) COMPILE_FILE2_CFG_SYS('var1')
 
+#define COMPILE_SCRIPT(var1) compileScript ['PATHTO_SYS(PREFIX,COMPONENT_F,var1)']
+
 
 #define VERSIONING_SYS(var1) class CfgSettings \
 { \

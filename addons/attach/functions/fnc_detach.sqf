@@ -50,6 +50,8 @@ if (!([_unit, _itemName] call CBA_fnc_canAddItem) && {!_isChemlight}) exitWith {
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
+[QGVAR(detaching), [_attachedObject, _itemName]] call CBA_fnc_localEvent;
+
 // Add item to inventory (unless it's a chemlight)
 if (!_isChemlight) then {
     _unit addItem _itemName;
