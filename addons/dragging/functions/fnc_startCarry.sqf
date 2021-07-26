@@ -61,7 +61,7 @@ if (_target isKindOf "CAManBase") then {
     if (-1 == ["ReammoBox_F", "WeaponHolder", "WeaponHolderSimulated"] findIf {_target isKindOf _x}) then {
         _weight = getMass _target;
     };
-    if (_weight > MAX_WEIGHT_RUN) then {
+    if (_weight > GVAR(maxWeightCarryRun)) then {
         [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
     } else {
         [_unit, "blockSprint", "ACE_dragging", true] call EFUNC(common,statusEffect_set);

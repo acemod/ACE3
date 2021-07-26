@@ -15,6 +15,9 @@ if (isNil "ACE_maxWeightDrag") then {
 if (isNil "ACE_maxWeightCarry") then {
     ACE_maxWeightCarry = 600;
 };
+if (isNil QGVAR(maxWeightCarryRun)) then {
+    GVAR(maxWeightCarryRun) = 50;
+};
 
 ["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
