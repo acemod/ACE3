@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [false] call ace_medical_feedback_fnc_handleHUDIndication
+ * [false] call ace_medical_feedback_fnc_handleHUDIndicators
  *
  * Public: No
  */

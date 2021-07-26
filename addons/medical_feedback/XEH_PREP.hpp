@@ -5,7 +5,7 @@ PREP(effectHeartBeat);
 PREP(effectIncapacitated);
 PREP(effectPain);
 PREP(effectUnconscious);
-PREP(handleHUDIndication);
+PREP(handleHUDIndicators);
 PREP(handleEffects);
 PREP(initEffects);
 PREP(playInjuredSound);
