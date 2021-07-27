@@ -56,7 +56,7 @@ if (GVAR(ambientBrightnessAffectViewDist)) then {
     if (currentVisionMode ace_player != 0) then {
         _ambientBrightness = _ambientBrigthness + 0.4;
     };
-    _ambientBrightness = (_ambientBrigthness min 1) max 0; // constrain to [0, 1]
+    _ambientBrightness = (_ambientBrightness min 1) max 0; // constrain to [0, 1]
 };
 
 private _maxDistance = _ambientBrightness * GVAR(playerNamesViewDistance);
