@@ -16,7 +16,9 @@ class CfgVehicles {
         class CommanderOptics;//: NewTurret {};
     };
 
-    class Car: LandVehicle {};
+    class Car: LandVehicle {
+        GVAR(engineStartDelay) = 1.3;
+    };
 
     class Tank: LandVehicle {
         class Turrets {
