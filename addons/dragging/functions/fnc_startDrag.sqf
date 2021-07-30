@@ -80,7 +80,7 @@ if (_target isKindOf "CAManBase") then {
     _target setDir (getDir _unit + 180);
     _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));
 
-    [_target, "AinjPpneMrunSnonWnonDb_grab", 2, true] call EFUNC(common,doAnimation);
+    [_target, "AinjPpneMrunSnonWnonDb_grab", 2] call EFUNC(common,doAnimation);
 };
 
 // prevents draging and carrying at the same time
