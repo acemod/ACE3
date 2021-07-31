@@ -79,8 +79,8 @@ GVAR(vehicleAction) = [
 GVAR(objectActions) = [
     [QGVAR(renameObject), localize LSTRING(renameObject), "", //TODO: add icon, maybe a pencil couldn't find it before.
         {
-            params ["_target"];
-            [{_this call FUNC(renameObject)}, [_target]] call CBA_fnc_execNextFrame;
+            GVAR(interactionVehicle) = _target;
+            createDialog QGVAR(renameMenu);
         },
         {
             //IGNORE_PRIVATE_WARNING ["_target", "_player"];

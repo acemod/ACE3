@@ -39,6 +39,9 @@
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
         </Key>
+        <Key ID="STR_ACE_Cargo_clearedCustomName">
+            <English>Custom name has been cleared.</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
         </Key>
@@ -46,7 +49,7 @@
             <English>Enable Rename Action</English>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
-            <English>Enables the rename action for renamable objects</English>
+            <English>Enables the rename action for renamable objects.</English>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -258,7 +261,7 @@
             <English>Custom Name</English>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
-            <English>Set a custom cargo name used in the cargo interface</English>
+            <English>Set a custom cargo name used in the cargo interface.</English>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>

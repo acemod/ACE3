@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Add custom name part <BOOL>
+ * 1: Add custom name part <BOOL> (default: false)
  *
  * Return Value:
  * Item Name <STRING>
