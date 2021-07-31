@@ -24,5 +24,4 @@ if (_ctrlEditText isEqualTo "") then { // custom name has been removed
 } else {
     [[LSTRING(renamedObject), _ctrlEditText], 3] call EFUNC(common,displayTextStructured);
 };
-//[[LSTRING(renamedObject), _ctrlEditText], 3] call EFUNC(common,displayTextStructured);
 GVAR(interactionVehicle) setVariable [QGVAR(customName), _ctrlEditText, true];
