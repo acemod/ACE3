@@ -20,7 +20,7 @@ params [
     ["_group", grpNull, [grpNull]],
     ["_newName", "", [""]]
 ];
-if (_newName isEqualTo (groupID _group)) exitWith {};
+if (_newName isEqualTo (groupID _group)) exitWith {true};
 
 _nameAlreadyTaken = (toLower _newName) in (allGroups apply {toLower (groupID _x)});
 
