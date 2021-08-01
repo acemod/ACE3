@@ -323,6 +323,15 @@
             <Chinese>成為隊長</Chinese>
             <Turkish>Lider ol</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interaction_renameGroup">
+            <English>Rename Group</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_renameGroupAlreadyExistsError">
+            <English>This group name is already in use.</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_renameGroupInput">
+            <English>New group name:</English>
+        </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
             <German>TANZEN!</German>
@@ -1223,6 +1232,12 @@
             <Japanese>インタラクションから使用中の武器に対してのアタッチメント取り外しを可能にします。</Japanese>
             <Spanish>Activar acciones de acoplar/desacoplar accesorios para el arma actual.</Spanish>
             <French>Cette option permet de fixer/retirer des accessoires d'arme à partir du menu d'interaction personnel.</French>
+        </Key>
+        <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
+            <English>Allow group renaming</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
+            <English>Allows a group leader to rename their group if the name is not alreay taken.</English>
         </Key>
     </Package>
 </Project>
