@@ -69,12 +69,12 @@ if (GVAR(clearTrauma == 2)) then {
     _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
     TRACE_2("clearTrauma - healed damage",_partIndex,_treatedDamageOf);
 
-      switch (_partIndex) do {
-          case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-          case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-          case 2;
-          case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-          default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        switch (_partIndex) do {
+            case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+            case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+            case 2;
+            case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+            default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
     };
 };
 
