@@ -2,7 +2,7 @@
 #define FONT_W (FONT_H / pixelH * pixelW)
 #define GAP_W (pixelW * 2)
 #define GAP_H (pixelH * 2)
-#define TOTAL_W FONT_W * 50
+#define TOTAL_W FONT_W * 20
 #define TOTAL_H FONT_H * 3 + GAP_H
 
 class ctrlStatic;
@@ -30,20 +30,34 @@ class GVAR(groupNameDisplay)
 	{
 		class Input: ctrlEdit
 		{
+			idc = 451;
 			x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W + FONT_W / 2);
 			y = QUOTE(safeZoneY + (safeZoneH / 2) - TOTAL_H + FONT_H / 2);
-			w = QUOTE(FONT_W * 49);
+			w = QUOTE((FONT_W * 50) - FONT_W);
 			h = QUOTE(FONT_H);
 			sizeEx = QUOTE(FONT_H);
 		};
 
 		class OkButton: ctrlButton
 		{
+			idc = 1;
 			x = QUOTE(safeZoneX + (safeZoneW / 2) + TOTAL_W - FONT_W * 5);
 			y = QUOTE(safeZoneY + (safeZoneH / 2) + TOTAL_H - FONT_H);
 			w = QUOTE(FONT_W * 5);
 			h = QUOTE(FONT_H);
 			sizeEx = QUOTE(FONT_H);
+			text = CSTRING(RenameGroup);
+		};
+
+		class CancelButton: ctrlButton
+		{
+			idc = 2;
+			x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W - FONT_W * 5);
+			y = QUOTE(safeZoneY + (safeZoneH / 2) + TOTAL_H - FONT_H);
+			w = QUOTE(FONT_W * 5);
+			h = QUOTE(FONT_H);
+			sizeEx = QUOTE(FONT_H);
+			text = CSTRING(CancelSelection);
 		};
 	};
 };

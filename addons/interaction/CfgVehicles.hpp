@@ -307,7 +307,7 @@ class CfgVehicles {
                     displayName = CSTRING(RenameGroup);
                     condition = QUOTE(_player call FUNC(canRenameGroup));
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE(_player call FUNC(renameGroupUI));
+                    statement = QUOTE(_player spawn FUNC(renameGroupUI)); // createDisplay must be spawned
                     showDisabled =1;
                 };
             };

@@ -10,31 +10,25 @@
  * None
  *
  * Example:
- * player call ace_interaction_fnc_renameGroupUI
+ * player spawn ace_interaction_fnc_renameGroupUI
  *
  * Public: No
  */
 
+if !(canSuspend) exitWith {}; // createDisplay must be spawned
 params [["_unit", objNull, [objNull]]];
-[
-    LLSTRING(renameGroup),
-    [
-        [
-            "EDIT",
-            LLSTRING(renameGroupInput),
-            [
-                groupID  group _unit,
-                {},
-                5
-            ],
-            true
-        ]
-    ],
+private _display = findDisplay 46 createDisplay "ace_interaction_groupNameDisplay";
+private _textCtrl = _display displayCtrl 451;
+_textCtrl ctrlSetText (groupID group _unit);
+_display setVariable [QGVAR(renamedGroup), group _unit];
+_display displayAddEventHandler [
+    "Unload", 
     {
-        params ["_dialog_data", "_unit"]; 
-        _dialog_data params ["_newName"]; 
-        [group _unit, _newName] call FUNC(renameGroup);
-    },
-    {},
-    _unit
-] call zen_dialog_fnc_create
+        params ["_display", "_exitCode"];
+        if !(_exitCode isEqualTo 1) exitWith {};
+        private _group = _display getVariable QGVAR(renamedGroup);
+        private _textCtrl = _display displayCtrl 451;
+        private _newName = ctrlText _textCtrl;
+        [_group, _newName] call FUNC(renameGroup);
+    }
+];
