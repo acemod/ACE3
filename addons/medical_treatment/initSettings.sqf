@@ -35,11 +35,11 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(clearTraumaAfterBandage),
-    "CHECKBOX",
-    [LSTRING(ClearTraumaAfterBandage_DisplayName), LSTRING(ClearTraumaAfterBandage_Description)],
+    QGVAR(clearTrauma),
+    "LIST",
+    [LSTRING(ClearTrauma_DisplayName), LSTRING(ClearTrauma_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    false,
+    [[0, 1, 2], [ELSTRING(common,Never),  LSTRING(ClearTrauma_AfterStitch), LSTRING(ClearTrauma_AfterBandage)], 1],
     true
 ] call CBA_fnc_addSetting;
 

@@ -144,31 +144,17 @@
             <Turkish>Yaranın yeniden açılma şansını kontrol etme katsayısı. Son yeniden açılma şansı, bu değerin kullanılan yara tipi ve bandaj için spesifik yeniden açılma şansı ile çarpılmasıyla belirlenir.</Turkish>
             <Spanish>Coeficiente que controla la probabilidad de reapertura de heridas. La probabilidad final de reapertura de heridas queda determinada multiplicando este valor por la probabilidad específica del tipo de herida y venda usada.</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
-            <English>Clear Trauma After Bandage</English>
-            <Japanese>治療後に外傷を削除</Japanese>
-            <Chinese>包紮即痊癒</Chinese>
-            <French>Guérir les blessures pansées</French>
-            <Czech>Odebrat úraz po obvázání</Czech>
-            <Polish>Usuń uraz po zabandażowaniu</Polish>
-            <Italian>Rimozione ferite bendate</Italian>
-            <German>Entferne Trauma nach Bandagierung.</German>
-            <Russian>Удалять травму после перевязки</Russian>
-            <Turkish>Bandaj Sonrası Travmayı Temizle</Turkish>
-            <Spanish>Quitar trauma despues de vendaje</Spanish>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_DisplayName">
+            <English>Clear Trauma</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_Description">
-            <English>Controls whether fully bandaged body parts are healed.</English>
-            <Japanese>全ての傷に対して包帯を巻いた部分を治癒するかどうかを決定します。</Japanese>
-            <Polish>Kontroluje czy w pełni zabandażowane części ciała są uleczone.</Polish>
-            <French>Définit s'il faut guérir les parties du corps entièrement bandées.</French>
-            <Italian>Controlla se le parti del corpo completamente bendate sono guarite.</Italian>
-            <German>Kontrolliert, ob voll bandagierte Körperteile geheilt werden.</German>
-            <Chinese>控制說當傷口處理好的時候是否直接痊癒。</Chinese>
-            <Czech>Nastavuje zda jsou plně obvázané části těla vyléčena.</Czech>
-            <Russian>Контролирует то, что полностью перевязанные раны целиком исцеляют часть тела.</Russian>
-            <Turkish>Tamamen sargılı vücut kısımlarının iyileşip iyileşmediğini kontrol eder.</Turkish>
-            <Spanish>Controla si las partes del cuerpo completamente vendadas se curan.</Spanish>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_Description">
+            <English>Controls when hitpoint damage from wounds is healed.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterBandage">
+            <English>After Bandage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
+            <English>After Stitch</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>

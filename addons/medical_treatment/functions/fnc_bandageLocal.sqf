@@ -39,8 +39,31 @@ private _amountOf = _wound select 2;
 private _impact = _effectiveness min _amountOf;
 _amountOf = _amountOf - _impact;
 _wound set [2, _amountOf];
-_openWounds set [_woundIndex, _wound];
 
+if (GVAR(clearTrauma == 2)) then {
+    TRACE_2("clearTrauma - clearing trauma after bandage",_partIndex,_openWounds);
+    private _woundDamage = _wound select 4;
+    private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+    private _treatedDamageOf = _woundDamage * _impact;
+    private _newDam = (_bodyPartDamage select _partIndex) - _treatedDamageOf;
+    if (_newDam < 0.05) then { // Prevent obscenely small damage from lack of floating precision
+      _bodyPartDamage set [_partIndex, 0];
+    } else {
+      _bodyPartDamage set [_partIndex, _newDam];
+    };
+    _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+    TRACE_2("clearTrauma - healed damage",_partIndex,_treatedDamageOf);
+
+    switch (_partIndex) do {
+        case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        case 2;
+        case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
+    };
+};
+
+_openWounds set [_woundIndex, _wound];
 _patient setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
@@ -53,28 +76,6 @@ if (_impact > 0 && {GVAR(advancedBandages) == 2}) then {
 // Check if we fixed limping from this treatment
 if (EGVAR(medical,limping) == 1 && {_partIndex > 3} && {_amountOf <= 0} && {_patient getVariable [QEGVAR(medical,isLimping), false]}) then {
     [_patient] call EFUNC(medical_engine,updateDamageEffects);
-};
-
-if (GVAR(clearTraumaAfterBandage)) then {
-    TRACE_2("clearTraumaAfterBandage - checking open wounds",_partIndex,_openWounds);
-    if ((_openWounds findIf {
-                    _x params ["", "_xBodyPartN", "_xAmountOf"];
-                    (_partIndex ==_xBodyPartN) && {_xAmountOf > 0}
-                }) == -1) then {
-
-        private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
-        _bodyPartDamage set [_partIndex, 0];
-        _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
-        TRACE_2("fully healed",_partIndex,_bodyPartDamage);
-
-        switch (_partIndex) do {
-            case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            case 2;
-            case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
-        };
-    };
 };
 
 if (_amountOf <= 0) then { // Reset treatment condition cache for nearby players if we stopped all bleeding
