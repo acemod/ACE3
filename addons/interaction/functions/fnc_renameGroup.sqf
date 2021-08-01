@@ -20,13 +20,14 @@ params [
     ["_group", grpNull, [grpNull]],
     ["_newName", "", [""]]
 ];
+if (_newName isEqualTo (groupID _group)) exitWith {};
 
 _nameAlreadyTaken = (toLower _newName) in (allGroups apply {toLower (groupID _x)});
 
-if !(_nameAlreadyTaken) then {
-    _group setGroupIdGlobal [_newName];
-    true
+if (_nameAlreadyTaken) then {
+    hint LLSTRING(RenameGroupAlreadyExists);
 } else {
-    hint LLSTRING(renameGroupAlreadyExistsError);
-    false
-}
+    _group setGroupIdGlobal [_newName];
+};
+
+!_nameAlreadyTaken

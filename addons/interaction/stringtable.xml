@@ -323,13 +323,13 @@
             <Chinese>成為隊長</Chinese>
             <Turkish>Lider ol</Turkish>
         </Key>
-        <Key ID="STR_ACE_Interaction_renameGroup">
+        <Key ID="STR_ACE_Interaction_RenameGroup">
             <English>Rename Group</English>
         </Key>
-        <Key ID="STR_ACE_Interaction_renameGroupAlreadyExistsError">
+        <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
         </Key>
-        <Key ID="STR_ACE_Interaction_renameGroupInput">
+        <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>New group name:</English>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
@@ -1237,7 +1237,7 @@
             <English>Allow group renaming</English>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
-            <English>Allows a group leader to rename their group if the name is not alreay taken.</English>
+            <English>Allows a group leader to rename their group if the name is not already taken.</English>
         </Key>
     </Package>
 </Project>
