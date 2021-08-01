@@ -40,6 +40,7 @@ private _impact = _effectiveness min _amountOf;
 _amountOf = _amountOf - _impact;
 _wound set [2, _amountOf];
 _openWounds set [_woundIndex, _wound];
+
 _patient setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
