@@ -104,10 +104,10 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
                 };
             } forEach _turretPaths;
             if (_armorComponent == "") then {
-              private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
-              if ((getText (_hitpointsCfg # 0 >> "visual")) != "") then {
-                _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
-              };
+                private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
+                if ((getText (_hitpointsCfg # 0 >> "visual")) != "") then {
+                    _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
+                };
             };
             if (_armorComponent != "") then { INFO_3("%1: %2 no selection: using armorComponent %3",_type,_hitpoint,_armorComponent); };
         };
