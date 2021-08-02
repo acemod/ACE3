@@ -19,7 +19,7 @@ params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_statePa
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","_attackProfile"];
 _targetLaunchParams params ["_target"];
-_stateParams params ["", "", "_attackProfileStateParams"];
+_stateParams params ["", "_seekerStateParams", "_attackProfileStateParams"];
 
 // Reset _launchPos origin as projectile's height instead of player's foot
 _targetLaunchParams set [2, getPosASL _projectile];
@@ -54,6 +54,10 @@ if (_shooter == ACE_player) then {
 // Limit Max Deflection
 _yawChange = -10 max _yawChange min 10;
 _pitchChange = -10 max _pitchChange min 10;
+
+_seekerStateParams set [2, _yawChange];
+_seekerStateParams set [3, _pitchChange];
+_seekerStateParams set [4, CBA_missionTime]
 
 TRACE_3("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange);
 _attackProfileStateParams set [0, CBA_missionTime];

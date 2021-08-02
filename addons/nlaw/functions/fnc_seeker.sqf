@@ -22,8 +22,16 @@ _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
 _firedEH params ["","","","","","","_projectile"];
 _launchParams params ["", "_targetLaunchParams", "", "_attackProfile"];
 _targetLaunchParams params ["", "", "_launchPos"];
+_stateParams params ["", "", "", "", "_navigationParams"];
 
 if (_attackProfile == QGVAR(directAttack)) exitWith {[0,0,0]};
+
+_seekerStateParams params ["", "", "", "_originalPitchRate", "_startTime"];
+_navigationParams params ["", "_pitchRate"];
+
+// pitch up for the first second of flight to begin an over-fly trajectory
+private _pitchChange = linearConversion [0, 1, CBA_missionTime - _startTime, 1, 0, true];
+_navigationParams set [1, _originalPitchRate + _pitchChange];
 
 private _projPos = getPosASL _projectile;
 
