@@ -7,7 +7,7 @@
  * Guidance Arg Array <ARRAY>
  *
  * Return Value:
- * None
+ * Navigation Parameters <ARRAY>
  *
  * Example:
  * [] call ace_nlaw_fnc_onFired
@@ -55,8 +55,12 @@ if (_shooter == ACE_player) then {
 _yawChange = -10 max _yawChange min 10;
 _pitchChange = -10 max _pitchChange min 10;
 
+((velocity _projectile) call CBA_fnc_vect2polar) params ["", "_currentYaw", "_currentPitch"];
+
 TRACE_3("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange);
 _navigationParams set [0, _yawChange];
 _navigationParams set [1, _pitchChange];
-_navigationParams set [2, CBA_missionTime];
+_navigationParams set [3, _currentPitch]; // last pitch
+_navigationParams set [4, _currentYaw]; // last yaw
+_navigationParams
 
