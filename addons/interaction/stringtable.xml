@@ -330,7 +330,7 @@
             <English>This group name is already in use.</English>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
-            <English>New group name:</English>
+            <English>NEW GROUP NAME:</English>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
