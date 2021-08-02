@@ -94,8 +94,8 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
                 private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
                 if (_hitpointsCfg isNotEqualTo []) exitWith {
                     TRACE_2("turret hitpoint configFound",_hitpoint,_x);
-                     // only do turret hitpoints for now or we get some weird stuff
-                    if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1}) then {
+                     // only do turret hitpoints or stuff linked to visuals for now or we apparently get some weird stuff
+                    if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1} || {getText (_hitpointsCfg # 0 >> "visual") != ""}) then {
                         _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
                     };
                 };
