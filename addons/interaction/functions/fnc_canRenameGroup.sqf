@@ -16,4 +16,4 @@
  */
 
 params ["_unit"];
-GVAR(enableGroupRenaming) && _unit isEqualTo leader _unit
+GVAR(enableGroupRenaming) && {_unit == leader _unit}

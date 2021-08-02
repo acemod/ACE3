@@ -9,6 +9,7 @@
 class ctrlStatic;
 class ctrlButton;
 class ctrlEdit;
+class ctrlStaticTitle;
 
 class GVAR(groupNameDisplay) 
 {
@@ -17,7 +18,7 @@ class GVAR(groupNameDisplay)
     
     class ControlsBackground
     {
-        class Title: ctrlStatic 
+        class Title: ctrlStaticTitle 
         {
             colorBackground[] = {
                 "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
