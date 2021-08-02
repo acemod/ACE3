@@ -43,9 +43,9 @@ private _accelerationX = _pX + _dX;
 private _accelerationY = _pY + _dY;
 
 private _commandedAcceleration = [
-    _accelerationX,
+    _accelerationX * _yawRate,
     0,
-    _accelerationY
+    _accelerationY * _pitchRate
 ];
 
 _navigationParams set [3, _errorX];

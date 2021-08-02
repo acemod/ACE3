@@ -42,12 +42,7 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
 };
 
 if (_seekerTargetPos isEqualTo [0, 0, 0] || { _distanceToProjectile < _seekerMinRangeSqr }) exitWith {
-    // cut wire if its caught on terrain
-    /*if (lineIntersectsSurfaces [getPosASL _shooter, _projectilePos, _shooter] isNotEqualTo []) then {
-        _attackProfileStateParams set [1, true];
-    };*/
-    // return position 50m infront of projectile and a bit up to get out of the way of the ground
-    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 3])
+    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 5, 5])
 };
 
 _seekerTargetPos vectorAdd _crosshairOffset

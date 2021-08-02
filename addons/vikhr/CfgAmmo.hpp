@@ -28,8 +28,8 @@ class CfgAmmo {
             navigationTypes[] = { "Line" };
 
             lineGainP = 25;
-            lineGainD = 22;
-            correctionDistance = 30;
+            lineGainD = 20;
+            correctionDistance = 2;
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 15;           // Angle from the shooter's view that can track the missile
