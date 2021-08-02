@@ -38,7 +38,7 @@ _navigationParams set [2, _currentPitch];
 private _pitchModifier = if (_pitchChange == 0) then {
     1
 } else {
-    abs (_pitchRate / _pitchChange);
+    abs (_pitchRate / _pitchChange)
 };
 private _desiredPitchChange = (_pitchChange - _pitchRate) * PROPORTIONALITY_CONSTANT * _pitchModifier;
 
@@ -52,7 +52,7 @@ _navigationParams set [3, _currentYaw];
 private _yawModifier = if (_yawChange == 0) then {
     1
 } else {
-    abs (_yawRate / _yawChange);
+    abs (_yawRate / _yawChange)
 };
 private _desiredYawChange = (_yawChange - _yawRate) * PROPORTIONALITY_CONSTANT * _yawModifier;
 
@@ -61,6 +61,7 @@ drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLto
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, 1] vectorAdd ASLtoAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["pitch proportional [%1] yaw proportional [%2]", _pitchModifier, _yawModifier], 1, 0.025, "TahomaB"];
 #endif
 
+TRACE_4("nlaw pitch/yaw info",_currentPitch,_lastPitch,_currentYaw,_lastYaw);
 TRACE_6("nlaw navigation",_yawChange,_desiredYawChange,_pitchChange,_desiredPitchChange,_yawRate,_pitchRate);
 
 _projectile vectorModelToWorldVisual [_yawChange + _desiredYawChange, 0, _pitchChange + _desiredPitchChange]

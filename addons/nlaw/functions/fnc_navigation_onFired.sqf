@@ -57,10 +57,10 @@ _pitchChange = -10 max _pitchChange min 10;
 
 ((velocity _projectile) call CBA_fnc_vect2polar) params ["", "_currentYaw", "_currentPitch"];
 
-TRACE_3("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange);
+TRACE_5("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange,_currentPitch,_currentYaw);
 _navigationParams set [0, _yawChange];
 _navigationParams set [1, _pitchChange];
-_navigationParams set [3, _currentPitch]; // last pitch
-_navigationParams set [4, _currentYaw]; // last yaw
+_navigationParams set [2, _currentPitch]; // last pitch
+_navigationParams set [3, _currentYaw]; // last yaw
 _navigationParams
 
