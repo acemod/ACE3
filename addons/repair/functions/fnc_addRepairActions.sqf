@@ -98,9 +98,6 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
                     if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1} || {(getText (_hitpointsCfg # 0 >> "visual")) != ""}) then {
                         _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
                     };
-                    if (_armorComponent == "" && {(getText (_hitpointsCfg # 0 >> "visual")) != ""}) then {
-                        _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
-                    };
                 };
             } forEach _turretPaths;
             if (_armorComponent == "") then {
