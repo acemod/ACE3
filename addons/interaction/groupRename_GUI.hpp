@@ -12,68 +12,68 @@ class ctrlEdit;
 
 class GVAR(groupNameDisplay) 
 {
-	idd = -1;
-	enableSimulation = 1;
-	
-	class ControlsBackground
-	{
-		class Title: ctrlStatic 
-		{
-			colorBackground[] = {
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.51])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.08])",
-				1
-			};
-			x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
-			y = QUOTE(safeZoneY + (safeZoneH / 2) - (FONT_H * 1.2) - GAP_H);
-			w = QUOTE(TOTAL_W);
-			h = QUOTE(FONT_H * 1.2);
-			sizeEx = QUOTE(FONT_H * 1.2);
-			text = CSTRING(renameGroupInput);
-		};
-		class Background: ctrlStatic 
-		{
-			colorBackground[] = {0, 0, 0, 0.8};
-			x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
-			y = QUOTE(safeZoneY + (safeZoneH / 2));
-			w = QUOTE(TOTAL_W);
-			h = QUOTE(ELEMENT_HEIGHT);
-		};
-	};
+    idd = -1;
+    enableSimulation = 1;
+    
+    class ControlsBackground
+    {
+        class Title: ctrlStatic 
+        {
+            colorBackground[] = {
+                "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
+                "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.51])",
+                "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.08])",
+                1
+            };
+            x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
+            y = QUOTE(safeZoneY + (safeZoneH / 2) - (FONT_H * 1.2) - GAP_H);
+            w = QUOTE(TOTAL_W);
+            h = QUOTE(FONT_H * 1.2);
+            sizeEx = QUOTE(FONT_H * 1.2);
+            text = CSTRING(renameGroupInput);
+        };
+        class Background: ctrlStatic 
+        {
+            colorBackground[] = {0, 0, 0, 0.8};
+            x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
+            y = QUOTE(safeZoneY + (safeZoneH / 2));
+            w = QUOTE(TOTAL_W);
+            h = QUOTE(ELEMENT_HEIGHT);
+        };
+    };
 
-	class controls
-	{
-		class Input: ctrlEdit
-		{
-			idc = 451;
-			x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2 + FONT_W/2);
-			y = QUOTE(safeZoneY + (safeZoneH / 2) + FONT_W/2);
-			w = QUOTE(TOTAL_W - FONT_W);
-			h = QUOTE(ELEMENT_HEIGHT - FONT_W);
-			sizeEx = QUOTE(FONT_H);
-		};
+    class controls
+    {
+        class Input: ctrlEdit
+        {
+            idc = 451;
+            x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2 + FONT_W/2);
+            y = QUOTE(safeZoneY + (safeZoneH / 2) + FONT_W/2);
+            w = QUOTE(TOTAL_W - FONT_W);
+            h = QUOTE(ELEMENT_HEIGHT - FONT_W);
+            sizeEx = QUOTE(FONT_H);
+        };
 
-		class OkButton: ctrlButton
-		{
-			idc = 1;
-			x = QUOTE(safeZoneX + (safeZoneW / 2) + TOTAL_W/2 - FONT_W * 15);
-			y = QUOTE(safeZoneY + (safeZoneH / 2) + ELEMENT_HEIGHT + GAP_H);
-			w = QUOTE(FONT_W * 15);
-			h = QUOTE(ELEMENT_HEIGHT - FONT_W);
-			sizeEx = QUOTE(FONT_H);
-			text = CSTRING(RenameGroup);
-		};
+        class OkButton: ctrlButton
+        {
+            idc = 1;
+            x = QUOTE(safeZoneX + (safeZoneW / 2) + TOTAL_W/2 - FONT_W * 15);
+            y = QUOTE(safeZoneY + (safeZoneH / 2) + ELEMENT_HEIGHT + GAP_H);
+            w = QUOTE(FONT_W * 15);
+            h = QUOTE(ELEMENT_HEIGHT - FONT_W);
+            sizeEx = QUOTE(FONT_H);
+            text = CSTRING(RenameGroup);
+        };
 
-		class CancelButton: ctrlButton
-		{
-			idc = 2;
-			x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
-			y = QUOTE(safeZoneY + (safeZoneH / 2) + ELEMENT_HEIGHT + GAP_H);
-			w = QUOTE(FONT_W * 6);
-			h = QUOTE(ELEMENT_HEIGHT - FONT_W);
-			sizeEx = QUOTE(FONT_H);
-			text = CSTRING(CancelSelection);
-		};
-	};
+        class CancelButton: ctrlButton
+        {
+            idc = 2;
+            x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
+            y = QUOTE(safeZoneY + (safeZoneH / 2) + ELEMENT_HEIGHT + GAP_H);
+            w = QUOTE(FONT_W * 6);
+            h = QUOTE(ELEMENT_HEIGHT - FONT_W);
+            sizeEx = QUOTE(FONT_H);
+            text = CSTRING(CancelSelection);
+        };
+    };
 };
