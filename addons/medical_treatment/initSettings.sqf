@@ -252,9 +252,18 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(cprSuccessChance),
+    QGVAR(cprSuccessChanceMin),
     "SLIDER",
-    [LSTRING(CPRSuccessChance_DisplayName), LSTRING(CPRSuccessChance_Description)],
+    [LSTRING(CPRSuccessChanceMin_DisplayName), LSTRING(CPRSuccessChanceMin_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [0, 1, 0.4, 2, true],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(cprSuccessChanceMax),
+    "SLIDER",
+    [LSTRING(CPRSuccessChanceMax_DisplayName), LSTRING(CPRSuccessChanceMax_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [0, 1, 0.4, 2, true],
     true
