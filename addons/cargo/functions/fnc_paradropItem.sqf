@@ -24,30 +24,12 @@ private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
 if !(_item in _loaded) exitWith {false};
 
-// unload item from cargo
-_loaded deleteAt (_loaded find _item);
-_vehicle setVariable [QGVAR(loaded), _loaded, true];
-
-private _cargoSpace = [_vehicle] call FUNC(getCargoSpaceLeft);
-private _itemSize = [_item] call FUNC(getSizeItem);
-_vehicle setVariable [QGVAR(space), (_cargoSpace + _itemSize), true];
-
 (boundingBoxReal _vehicle) params ["_bb1", "_bb2"];
 private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 4; // 4 meters behind max bounding box
 TRACE_1("",_distBehind);
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
-
-private _object = _item;
-if (_item isEqualType objNull) then {
-    detach _object;
-    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
-    // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_object, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
-} else {
-    _object = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
-    _object setPosASL (AGLtoASL _posBehindVehicleAGL);
-};
+[_item, _posBehindVehicleAGL, _loaded, _vehicle] call ace_cargo_fnc_unload;
 
 _object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 
