@@ -1124,5 +1124,101 @@
             <Turkish>Hasta Bilgileri</Turkish>
             <Spanish>Información de paciente</Spanish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColors">
+            <English>Blood Loss Colors</English>
+            <Russian>Цвета кровопотери</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_Description">
+            <English>Blood Loss Colors, That Used in Medical GUI. 10 Color Gradient.</English>
+            <Russian>Цвета кровопотери, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_0_DisplayName">
+            <English>Blood Loss Color 0</English>
+            <Russian>Цвет кровопотери 0</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_1_DisplayName">
+            <English>Blood Loss Color 1</English>
+            <Russian>Цвет кровопотери 1</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_2_DisplayName">
+            <English>Blood Loss Color 2</English>
+            <Russian>Цвет кровопотери 2</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_3_DisplayName">
+            <English>Blood Loss Color 3</English>
+            <Russian>Цвет кровопотери 3</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_4_DisplayName">
+            <English>Blood Loss Color 4</English>
+            <Russian>Цвет кровопотери 4</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_5_DisplayName">
+            <English>Blood Loss Color 5</English>
+            <Russian>Цвет кровопотери 5</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_6_DisplayName">
+            <English>Blood Loss Color 6</English>
+            <Russian>Цвет кровопотери 6</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_7_DisplayName">
+            <English>Blood Loss Color 7</English>
+            <Russian>Цвет кровопотери 7</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_8_DisplayName">
+            <English>Blood Loss Color 8</English>
+            <Russian>Цвет кровопотери 8</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_BloodLossColor_9_DisplayName">
+            <English>Blood Loss Color 9</English>
+            <Russian>Цвет кровопотери 9</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColors">
+            <English>Damage Colors</English>
+            <Russian>Цвета урона</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
+            <English>Damage Colors, That Used in Medical GUI. 10 Color Gradient.</English>
+            <Russian>Цвета урона, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_0_DisplayName">
+            <English>Damage Color 0</English>
+            <Russian>Цвет урона 0</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_1_DisplayName">
+            <English>Damage Color 1</English>
+            <Russian>Цвет урона 1</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_2_DisplayName">
+            <English>Damage Color 2</English>
+            <Russian>Цвет урона 2</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_3_DisplayName">
+            <English>Damage Color 3</English>
+            <Russian>Цвет урона 3</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_4_DisplayName">
+            <English>Damage Color 4</English>
+            <Russian>Цвет урона 4</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_5_DisplayName">
+            <English>Damage Color 5</English>
+            <Russian>Цвет урона 5</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_6_DisplayName">
+            <English>Damage Color 6</English>
+            <Russian>Цвет урона 6</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_7_DisplayName">
+            <English>Damage Color 7</English>
+            <Russian>Цвет урона 7</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_8_DisplayName">
+            <English>Damage Color 8</English>
+            <Russian>Цвет урона 8</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_DamageColor_9_DisplayName">
+            <English>Damage Color 9</English>
+            <Russian>Цвет урона 9</Russian>
+        </Key>
     </Package>
 </Project>
