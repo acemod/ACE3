@@ -8,6 +8,7 @@
  * 1: Empty position <ARRAY>
  * 2: Items loaded in cargo <ARRAY>
  * 3: Vehicle with the item loaded <OBJECT>
+ * 4: Avoid creation of a parachute by A3 <BOOL>
  *
  * Return Value:
  * Object unloaded <OBJECT>
@@ -18,7 +19,7 @@
  * Public: No
  */
 
-params ["_item", "_posAGL", "_loaded", "_vehicle"];
+params ["_item", "_posAGL", "_loaded", "_vehicle", "_isParadrop"];
 
 _loaded deleteAt (_loaded find _item);
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
@@ -46,7 +47,11 @@ if (_object isEqualType objNull) then {
             };
         };
     } else {
-        objNull setVehicleCargo _object;
+        if (_isParadrop) then {
+            detach _object; // Don't create a parachute by A3 engine
+        } else {
+            objNull setVehicleCargo _object;
+        };
         _object setPosASL (AGLtoASL _posAGL);
     };
 } else {

@@ -17,7 +17,7 @@
 
 params ["_vehicle"];
 
-private _loadedVehicles = [_vehicle] call ace_cargo_fnc_getVehicleCargo;
+private _loadedVehicles = [_vehicle] call FUNC(getVehicleCargo);
 private _unloadingInterval = getNumber (configOf _vehicle >> "VehicleTransport" >> "Carrier" >> "unloadingInterval");
 {
     [{objnull setVehicleCargo _this}, _x, _forEachIndex * _unloadingInterval] call CBA_fnc_waitAndExecute;

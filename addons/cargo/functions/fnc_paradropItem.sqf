@@ -29,7 +29,7 @@ private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 4; // 4 meters beh
 TRACE_1("",_distBehind);
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
-private _object = [_item, _posBehindVehicleAGL, _loaded, _vehicle] call ace_cargo_fnc_unload;
+private _object = [_item, _posBehindVehicleAGL, _loaded, _vehicle, true] call FUNC(unload);
 
 _object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 

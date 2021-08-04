@@ -40,7 +40,7 @@ if !(_item in _loaded) exitWith {
     false
 };
 
-private _object = [_item, _emptyPosAGL, _loaded, _vehicle] call ace_cargo_fnc_unload;
+private _object = [_item, _emptyPosAGL, _loaded, _vehicle, false] call FUNC(unload);
 
 // Invoke listenable event
 ["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;
