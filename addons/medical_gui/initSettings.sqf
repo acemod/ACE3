@@ -58,7 +58,7 @@
     [LSTRING(BloodLossColor_0_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 1.00, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -67,7 +67,7 @@
     [LSTRING(BloodLossColor_1_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.95, 0.64, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -76,7 +76,7 @@
     [LSTRING(BloodLossColor_2_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.87, 0.46, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -85,7 +85,7 @@
     [LSTRING(BloodLossColor_3_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.80, 0.33, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -94,7 +94,7 @@
     [LSTRING(BloodLossColor_4_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.72, 0.24, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -103,7 +103,7 @@
     [LSTRING(BloodLossColor_5_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.63, 0.15, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -112,7 +112,7 @@
     [LSTRING(BloodLossColor_6_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.54, 0.08, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -121,7 +121,7 @@
     [LSTRING(BloodLossColor_7_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.43, 0.02, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -130,7 +130,7 @@
     [LSTRING(BloodLossColor_8_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.30, 0.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -139,7 +139,7 @@
     [LSTRING(BloodLossColor_9_DisplayName), LSTRING(BloodLossColor_Description)],
     [ELSTRING(medical,Category), LSTRING(BloodLossColors)],
     [1.00, 0.00, 0.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -148,7 +148,7 @@
     [LSTRING(DamageColor_0_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [1.00, 1.00, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -157,7 +157,7 @@
     [LSTRING(DamageColor_1_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.75, 0.95, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -166,7 +166,7 @@
     [LSTRING(DamageColor_2_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.62, 0.86, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -175,7 +175,7 @@
     [LSTRING(DamageColor_3_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.54, 0.77, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -184,7 +184,7 @@
     [LSTRING(DamageColor_4_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.48, 0.67, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -193,7 +193,7 @@
     [LSTRING(DamageColor_5_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.42, 0.57, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -202,7 +202,7 @@
     [LSTRING(DamageColor_6_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.37, 0.47, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -211,7 +211,7 @@
     [LSTRING(DamageColor_7_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.31, 0.36, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -220,7 +220,7 @@
     [LSTRING(DamageColor_8_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.22, 0.23, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -229,5 +229,5 @@
     [LSTRING(DamageColor_9_DisplayName), LSTRING(DamageColor_Description)],
     [ELSTRING(medical,Category), LSTRING(DamageColors)],
     [0.00, 0.00, 1.00, 1],
-    false, // isGlobal
+    false // isGlobal
 ] call CBA_fnc_addSetting;
