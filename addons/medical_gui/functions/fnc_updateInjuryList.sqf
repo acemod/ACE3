@@ -41,13 +41,13 @@ if (IS_BLEEDING(_target)) then {
 // Give a qualitative description of the blood volume lost
 switch (GET_HEMORRHAGE(_target)) do {
     case 1: {
-        _entries pushBack [localize LSTRING(Lost_Blood1), [1, 0, 0, 1]];
+        _entries pushBack [localize LSTRING(Lost_Blood1), [1, 1, 0, 1]];
     };
     case 2: {
-        _entries pushBack [localize LSTRING(Lost_Blood2), [1, 0, 0, 1]];
+        _entries pushBack [localize LSTRING(Lost_Blood2), [1, 0.67, 0, 1]];
     };
     case 3: {
-        _entries pushBack [localize LSTRING(Lost_Blood3), [1, 0, 0, 1]];
+        _entries pushBack [localize LSTRING(Lost_Blood3), [1, 0.33, 0, 1]];
     };
     case 4: {
         _entries pushBack [localize LSTRING(Lost_Blood4), [1, 0, 0, 1]];
