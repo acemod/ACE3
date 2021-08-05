@@ -76,4 +76,10 @@ class CfgMagazines {
 
         count = 8;
     };
+
+    class 11Rnd_45ACP_Mag : CA_Magazine {
+      displayname = CSTRING(15Rnd_45_Name);
+
+      count = 15;
+    };
 };
