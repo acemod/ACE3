@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Item Classname <STRING>
+ * 1: Item Classname <STRING or ARRAY of STRING>
  *
  * Return Value:
  * Unit has Item <BOOL>
@@ -16,6 +16,17 @@
  * Public: Yes
  */
 
-params [["_unit", objNull, [objNull]], ["_item", "", [""]]];
+params [["_unit", objNull, [objNull]], ["_item", "", ["", [""]]]];
 
-_item in (_unit call EFUNC(common,uniqueItems))
+if (_item isEqualType "") then {
+    _item = [_item];
+};
+
+private _return = false;
+private _unitItems = _unit call EFUNC(common,uniqueItems);
+{
+    _return = _x in _unitItems;
+    if (!_return) then {break};
+} forEach _item;
+
+_return
