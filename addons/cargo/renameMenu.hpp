@@ -15,7 +15,7 @@ class GVAR(renameMenu) {
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0)";
         };
-		class CenterBackground: HeaderBackground {
+        class CenterBackground: HeaderBackground {
             y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             h = "2.9 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0.8)";
@@ -39,16 +39,16 @@ class GVAR(renameMenu) {
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = CSTRING(renameObjectUI);
         };
-		class edit: ACE_gui_editBase {
+        class edit: ACE_gui_editBase {
             onLoad = QUOTE((_this select 0) ctrlSetText (GVAR(interactionVehicle) getVariable [ARR_2(QUOTE(QGVAR(customName)), '')]));
-			idc = 100;
-			canModify = 1;
-			x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
+            idc = 100;
+            canModify = 1;
+            x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             y = "2.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "12.8 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			SizeEx = "1.5 * (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
-		}
+            SizeEx = "1.5 * (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+        }
         class btnCancel: ACE_gui_buttonBase {
             text = "$STR_DISP_CANCEL";
             idc = 11;
