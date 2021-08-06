@@ -16,4 +16,4 @@
  */
 
 !underwater ACE_player &&
-{"ACE_ATragMX" in ([ACE_player] call EFUNC(common,uniqueItems))}
+{[ACE_Player, "ACE_ATragMX"] call EFUNC(common, hasItem)}
