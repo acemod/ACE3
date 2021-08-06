@@ -57,9 +57,8 @@ if (EGVAR(medical,limping) == 1 && {_partIndex > 3} && {_amountOf <= 0} && {_pat
 
 if (GVAR(clearTrauma) == 2) then {
     TRACE_2("clearTrauma - clearing trauma after bandage",_partIndex,_openWounds);
-    private _woundDamage = _wound select 4;
+    private _treatedDamageOf = (_wound select 4) * _impact;
     private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
-    private _treatedDamageOf = _woundDamage * _impact;
     private _newDam = (_bodyPartDamage select _partIndex) - _treatedDamageOf;
     if (_newDam < 0.05) then { // Prevent obscenely small damage from lack of floating precision
         _bodyPartDamage set [_partIndex, 0];
