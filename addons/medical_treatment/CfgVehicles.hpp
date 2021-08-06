@@ -254,7 +254,6 @@ class CfgVehicles {
     };
     class ACE_medicalSupplyCrate: NATO_Box_Base {
         scope = 2;
-        scopeCurator = 2;
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = QPATHTOF(data\ace_medcrate.p3d);
