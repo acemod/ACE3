@@ -4,7 +4,7 @@
  * Checks if the unit is allowed to rename its group.
  *
  * Arguments:
- * 0: Unit <Object>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Is this unit allowed to rename its group? <BOOL>
@@ -15,5 +15,6 @@
  * Public: No
  */
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
+
 GVAR(enableGroupRenaming) && {_unit == leader _unit}

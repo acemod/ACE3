@@ -11,15 +11,12 @@ class ctrlButton;
 class ctrlEdit;
 class ctrlStaticTitle;
 
-class GVAR(groupNameDisplay) 
-{
+class GVAR(groupNameDisplay) {
     idd = -1;
     enableSimulation = 1;
     
-    class ControlsBackground
-    {
-        class Title: ctrlStaticTitle 
-        {
+    class ControlsBackground {
+        class Title: ctrlStaticTitle {
             colorBackground[] = {
                 "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
                 "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.51])",
@@ -33,8 +30,7 @@ class GVAR(groupNameDisplay)
             sizeEx = QUOTE(FONT_H * 1.2);
             text = CSTRING(renameGroupInput);
         };
-        class Background: ctrlStatic 
-        {
+        class Background: ctrlStatic {
             colorBackground[] = {0, 0, 0, 0.8};
             x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
             y = QUOTE(safeZoneY + (safeZoneH / 2));
@@ -43,10 +39,8 @@ class GVAR(groupNameDisplay)
         };
     };
 
-    class controls
-    {
-        class Input: ctrlEdit
-        {
+    class controls {
+        class Input: ctrlEdit {
             idc = 451;
             x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2 + FONT_W/2);
             y = QUOTE(safeZoneY + (safeZoneH / 2) + FONT_W/2);
@@ -55,8 +49,7 @@ class GVAR(groupNameDisplay)
             sizeEx = QUOTE(FONT_H);
         };
 
-        class OkButton: ctrlButton
-        {
+        class OkButton: ctrlButton {
             idc = 1;
             x = QUOTE(safeZoneX + (safeZoneW / 2) + TOTAL_W/2 - FONT_W * 15);
             y = QUOTE(safeZoneY + (safeZoneH / 2) + ELEMENT_HEIGHT + GAP_H);
@@ -66,8 +59,7 @@ class GVAR(groupNameDisplay)
             text = CSTRING(RenameGroup);
         };
 
-        class CancelButton: ctrlButton
-        {
+        class CancelButton: ctrlButton {
             idc = 2;
             x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
             y = QUOTE(safeZoneY + (safeZoneH / 2) + ELEMENT_HEIGHT + GAP_H);

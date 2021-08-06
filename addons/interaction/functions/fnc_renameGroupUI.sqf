@@ -4,7 +4,7 @@
  * Shows a UI to allow a unit to change its group ID.
  *
  * Arguments:
- * 0: The unit renaming their group.
+ * 0: The unit renaming their group <OBJECT>
  *
  * Return Value:
  * None
@@ -16,8 +16,10 @@
  */
 
 if !(canSuspend) exitWith {}; // createDisplay must be spawned
+
 params [["_unit", objNull, [objNull]]];
-private _display = findDisplay 46 createDisplay "ace_interaction_groupNameDisplay";
+
+private _display = findDisplay 46 createDisplay QGVAR(groupNameDisplay);
 private _textCtrl = _display displayCtrl 451;
 _textCtrl ctrlSetText (groupID group _unit);
 _display setVariable [QGVAR(renamedGroup), group _unit];
