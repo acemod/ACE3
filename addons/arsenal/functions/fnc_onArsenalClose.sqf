@@ -70,6 +70,9 @@ if (!isNil QGVAR(moduleUsed)) then {
     objNull remoteControl GVAR(center);
 };
 
+// Update player unique items cache
+ACE_player call EFUNC(common,uniqueItems);
+
 ACE_player switchCamera GVAR(cameraView);
 
 if (isMultiplayer) then {
