@@ -21,11 +21,4 @@
 
 params ["_medic", "_patient", "_items"];
 
-private _fnc_checkItems = {
-    params ["_unit"];
-
-    private _unitItems = _unit call EFUNC(common,uniqueItems);
-    _items findIf {_x in _unitItems} != -1
-};
-
-_medic call _fnc_checkItems || {GVAR(allowSharedEquipment) != 2 && {_patient call _fnc_checkItems}}
+[_medic, _items] call EFUNC(common,hasItem) || {GVAR(allowSharedEquipment) != 2 && {[_patient, _items] call EFUNC(common,hasItem)}}
