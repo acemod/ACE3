@@ -402,28 +402,28 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
 ]
 
 #define CHECK_WEAPON_OR_ACC\
-    (_weaponsArray select 0) findIf {_x == _item} > -1 ||\
-    {(_weaponsArray select 1) findIf {_x == _item} > -1} ||\
-    {(_weaponsArray select 2)  findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 9) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 0) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 1 findIf {_x == _item} > -1)} ||\
-    {(_accsArray select 2) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 3) findIf {_x == _item} > -1}
+    _item in (_weaponsArray select 0) ||\
+    {_item in (_weaponsArray select 1)} ||\
+    {_item in (_weaponsArray select 2)} ||\
+    {_item in (GVAR(virtualItems) select 9)} ||\
+    {_item in (_accsArray select 0)} ||\
+    {_item in (_accsArray select 1)} ||\
+    {_item in (_accsArray select 2)} ||\
+    {_item in (_accsArray select 3)}
 
 // PboProject 2.45 has problems with these macros for some reason, adding a single space before the \ fixes
 #define CHECK_ASSIGNED_ITEMS \
-    (GVAR(virtualItems) select 10) findIf {_x == _item} > -1 ||\
-    {(GVAR(virtualItems) select 11) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 12) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 13) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 14) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 8) findIf {_x == _item} > -1}
+    _item in (GVAR(virtualItems) select 10) ||\
+    {_item in (GVAR(virtualItems) select 11)} ||\
+    {_item in (GVAR(virtualItems) select 12)} ||\
+    {_item in (GVAR(virtualItems) select 13)} ||\
+    {_item in (GVAR(virtualItems) select 14)} ||\
+    {_item in (GVAR(virtualItems) select 8)}
 
 #define CHECK_CONTAINER \
-    (GVAR(virtualItems) select 4) findIf {_x == _item} > -1 ||\
-    {(GVAR(virtualItems) select 5) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 6) findIf {_x == _item} > -1}
+    _item in (GVAR(virtualItems) select 4) ||\
+    {_item in (GVAR(virtualItems) select 5)} ||\
+    {_item in (GVAR(virtualItems) select 6)}
 
 #define CLASS_CHECK_ITEM\
     isClass (_weaponCfg >> _item) ||\
@@ -432,24 +432,23 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     {isClass (_magCfg >> _item)}
 
 #define CHECK_CONTAINER_ITEMS \
-    (GVAR(virtualItems) select 3) findIf {_x == _item} > -1 ||\
-    {(_accsArray select 0) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 1) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 2) findIf {_x == _item} > -1} ||\
-    {(_accsArray select 3) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 4) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 5) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 6) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 7) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 8) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 10) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 11) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 12) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 13) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 14) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 15) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 16) findIf {_x == _item} > -1} ||\
-    {(GVAR(virtualItems) select 17) findIf {_x == _item} > -1}
+    _item in (GVAR(virtualItems) select 3) ||\
+    {_item in (_accsArray select 0)} ||\
+    {_item in (_accsArray select 1)} ||\
+    {_item in (_accsArray select 2)} ||\
+    {_item in (_accsArray select 3)} ||\
+    {_item in (GVAR(virtualItems) select 4)} ||\
+    {_item in (GVAR(virtualItems) select 5)} ||\
+    {_item in (GVAR(virtualItems) select 6)} ||\
+    {_item in (GVAR(virtualItems) select 7)} ||\
+    {_item in (GVAR(virtualItems) select 8)} ||\
+    {_item in (GVAR(virtualItems) select 11)} ||\
+    {_item in (GVAR(virtualItems) select 12)} ||\
+    {_item in (GVAR(virtualItems) select 13)} ||\
+    {_item in (GVAR(virtualItems) select 14)} ||\
+    {_item in (GVAR(virtualItems) select 15)} ||\
+    {_item in (GVAR(virtualItems) select 16)} ||\
+    {_item in (GVAR(virtualItems) select 17)}
 
 #define ADD_LOADOUTS_LIST_PICTURES\
     _contentPanelCtrl lnbSetPicture [[_newRow, 2], getText (configFile >> "cfgWeapons" >> ((_loadout select 0) select 0) >> "picture")];\
