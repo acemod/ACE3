@@ -51,7 +51,7 @@ if (_woundIndex == -1) then {
     _wound set [2, (_wound select 2) + _treatedAmountOf];
 };
 
-if (GVAR(clearTrauma == 1)) then {
+if (GVAR(clearTrauma) == 1) then {
     TRACE_2("clearTrauma - clearing trauma after stitching",_partIndex,_treatedWound);
     private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), []];
     _bodyPartDamage set [_treatedBodyPartN, (_bodyPartDamage select _treatedBodyPartN) - _treatedDamageOf];

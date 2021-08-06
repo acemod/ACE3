@@ -55,7 +55,7 @@ if (EGVAR(medical,limping) == 1 && {_partIndex > 3} && {_amountOf <= 0} && {_pat
     [_patient] call EFUNC(medical_engine,updateDamageEffects);
 };
 
-if (GVAR(clearTrauma == 2)) then {
+if (GVAR(clearTrauma) == 2) then {
     TRACE_2("clearTrauma - clearing trauma after bandage",_partIndex,_openWounds);
     private _woundDamage = _wound select 4;
     private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
@@ -69,12 +69,12 @@ if (GVAR(clearTrauma == 2)) then {
     _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
     TRACE_2("clearTrauma - healed damage",_partIndex,_treatedDamageOf);
 
-        switch (_partIndex) do {
-            case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            case 2;
-            case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
+    switch (_partIndex) do {
+        case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        case 2;
+        case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
     };
 };
 
