@@ -194,12 +194,12 @@ GVAR(currentLeftPanel) = _ctrlIDC;
 [_sortLeftCtrl] call FUNC(sortPanel);
 
 //Select current item
-private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)]) apply {tolower _x};
+private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)]);
 
 for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
     private _currentData = _ctrlPanel lbData _lbIndex;
 
-    if ((_currentData isNotEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
+    if ((_currentData isNotEqualTo "") && {_currentData in _itemsToCheck}) exitWith {
         _ctrlPanel lbSetCurSel _lbIndex;
     };
 };

@@ -182,7 +182,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
         _magList append _magazines;
     } foreach configProperties [_x, "isArray _x", true];
 
-    [_magazineGroups, toLower configName _x, _magList arrayIntersect _magList] call CBA_fnc_hashSet;
+    [_magazineGroups, configName _x, _magList arrayIntersect _magList] call CBA_fnc_hashSet;
 } foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
 
 uiNamespace setVariable [QGVAR(configItems), _cargo];

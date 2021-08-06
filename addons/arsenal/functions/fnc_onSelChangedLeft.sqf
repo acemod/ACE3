@@ -56,7 +56,7 @@ switch (GVAR(currentLeftPanel)) do {
             if ((GVAR(currentItems) select 0) != _item && {_baseWeapon != _item}) then {
                 call _fnc_clearPreviousWepMags;
 
-                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _compatibleItems = _item call bis_fnc_compatibleItems;
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
@@ -65,7 +65,7 @@ switch (GVAR(currentLeftPanel)) do {
                 };
 
                 {
-                    if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
+                    if (_x in _compatibleItems || {_x in _compatibleMags}) then {
                         GVAR(center) addPrimaryWeaponItem _x;
                     };
                 } foreach (GVAR(currentItems) select 18);
@@ -98,7 +98,7 @@ switch (GVAR(currentLeftPanel)) do {
             if ((GVAR(currentItems) select 2) != _item && {_baseWeapon != _item}) then {
                 call _fnc_clearPreviousWepMags;
 
-                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _compatibleItems = _item call bis_fnc_compatibleItems;
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
@@ -107,7 +107,7 @@ switch (GVAR(currentLeftPanel)) do {
                 };
 
                 {
-                    if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
+                    if (_x in _compatibleItems || {_x in _compatibleMags}) then {
                         GVAR(center) addHandgunItem _x;
                     };
                 } foreach (GVAR(currentItems) select 20);
@@ -139,7 +139,7 @@ switch (GVAR(currentLeftPanel)) do {
             if ((GVAR(currentItems) select 1) != _item && {_baseWeapon != _item}) then {
                 call _fnc_clearPreviousWepMags;
 
-                private _compatibleItems = (_item call bis_fnc_compatibleItems) apply {tolower _x};
+                private _compatibleItems = _item call bis_fnc_compatibleItems;
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
@@ -148,7 +148,7 @@ switch (GVAR(currentLeftPanel)) do {
                 };
 
                 {
-                    if (tolower _x in _compatibleItems || {_x in _compatibleMags}) then {
+                    if (_x in _compatibleItems || {_x in _compatibleMags}) then {
                         GVAR(center) addSecondaryWeaponItem _x;
                     };
                 } foreach (GVAR(currentItems) select 19);
