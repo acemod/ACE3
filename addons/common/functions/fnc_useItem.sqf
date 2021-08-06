@@ -22,7 +22,7 @@ private _return = false;
 
 if !(_vehicleUsage) then {
     if (_item != "") then {
-        if (_item in (_unit call EFUNC(common,uniqueItems))) then {
+        if ([_unit, _item] call FUNC(hasItem)) then {
             _unit unassignItem _item;
             _unit removeItem _item;
             _return = true;

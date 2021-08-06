@@ -23,7 +23,7 @@ if (_item isEqualType "") then {
 };
 
 private _return = false;
-private _unitItems = _unit call EFUNC(common,uniqueItems);
+private _unitItems = _unit call FUNC(uniqueItems);
 {
     _return = _x in _unitItems;
     if (!_return) then {break};
