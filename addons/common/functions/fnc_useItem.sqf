@@ -23,13 +23,9 @@ private _return = false;
 if !(_vehicleUsage) then {
     if (_item != "") then {
         if (_item in (_unit call EFUNC(common,uniqueItems))) then {
+            _unit unassignItem _item;
             _unit removeItem _item;
             _return = true;
-        } else {
-            if (_item in assignedItems _unit) then {
-                _unit unlinkItem _item;
-                _return = true;
-            };
         };
     };
 //} else {

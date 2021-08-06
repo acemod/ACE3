@@ -18,20 +18,12 @@
 
 params ["_unit"];
 
-private _fnc_getItems = {
-    private _items = (getItemCargo uniformContainer _unit) select 0;
-    _items append ((getItemCargo vestContainer _unit) select 0);
-    _items append ((getItemCargo backpackContainer _unit) select 0);
-
-    _items arrayIntersect _items
-};
-
 // Use cached items list if unit is ACE_player
 if (_unit isEqualTo ACE_player) then {
     if (isNil QGVAR(uniqueItemsCache)) then {
-        GVAR(uniqueItemsCache) = call _fnc_getItems;
+        GVAR(uniqueItemsCache) = keys uniqueUnitItems _unit;
     };
     +GVAR(uniqueItemsCache)
 } else {
-    call _fnc_getItems;
+    keys uniqueUnitItems _unit;
 };
