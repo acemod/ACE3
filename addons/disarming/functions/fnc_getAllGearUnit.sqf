@@ -18,36 +18,6 @@
 
 params ["_target"];
 
-private _allItems = (((items _target) + (assignedItems _target)) - (weapons _target)) + (weapons _target) + (magazines _target);
+private _uniqueItems = uniqueUnitItems [_target, 1, 2, 2, 2, true];
 
-if ((backpack _target) != "") then {
-    _allItems pushBack (backpack _target);
-};
-if ((vest _target) != "") then {
-    _allItems pushBack (vest _target);
-};
-if ((uniform _target) != "") then {
-    _allItems pushBack (uniform _target);
-};
-if ((headgear _target) != "") then {
-    _allItems pushBack (headgear _target);
-};
-//What kind of asshole takes a man's glasses?
-if ((goggles _target) != "") then {
-    _allItems pushBack (goggles _target);
-};
-
-private _uniqueClassnames = [];
-private _classnamesCount = [];
-//Filter unique and count
-{
-    private _index = _uniqueClassnames find _x;
-    if (_index != -1) then {
-        _classnamesCount set [_index, ((_classnamesCount select _index) + 1)];
-    } else {
-        _uniqueClassnames pushBack _x;
-        _classnamesCount pushBack 1;
-    };
-} forEach _allItems;
-
-[_uniqueClassnames, _classnamesCount]
+[keys _uniqueItems, values _uniqueItems]
