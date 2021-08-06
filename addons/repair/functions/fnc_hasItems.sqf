@@ -19,14 +19,4 @@
 params ["_unit", "_items"];
 TRACE_2("params",_unit,_items);
 
-private _return = true;
-{
-    if ((_x isEqualType []) && {({[_unit, _x] call EFUNC(common,hasItem)} count _x == 0)}) exitWith {
-        _return = false;
-    };
-    if ((_x isEqualType "") && {!([_unit, _x] call EFUNC(common,hasItem))}) exitWith {
-        _return = false;
-    };
-} forEach _items;
-
-_return;
+[_unit, _items] call EFUNC(common, hasItem);
