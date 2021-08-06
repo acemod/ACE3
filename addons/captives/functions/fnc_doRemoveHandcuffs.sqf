@@ -4,7 +4,8 @@
  * Remove handcuffs from a target
  *
  * Arguments:
- * 0: target <OBJECT>
+ * 0: Caller <OBJECT>
+ * 1: Target <OBJECT>
  *
  * Return Value:
  * The return value <BOOL>
@@ -17,4 +18,4 @@
 
 params ["_unit", "_target"];
 
-[QGVAR(setHandcuffed), [_target, false], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(setHandcuffed), [_target, false, _caller], [_target]] call CBA_fnc_targetEvent;
