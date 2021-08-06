@@ -29,5 +29,5 @@ private _config = configOf _vehicle;
     private _deploymentStage = _vehicle getVariable [QGVAR(deploymentStage), 0];
     if (getText (_config >> QGVAR(onPrepare)) == "") then { _deploymentStage == 0 } else { _deploymentStage == 2 };
 } && {
-    (_defaultOption && {!GVAR(requireRopeItems)}) || {(_ropeClass in (_player call EFUNC(common,uniqueItems))) || {_ropeClass in (itemCargo _vehicle)}}
+    (_defaultOption && {!GVAR(requireRopeItems)}) || {[_player, _ropeClass] call EFUNC(common,hasItem) || {_ropeClass in (itemCargo _vehicle)}}
 }

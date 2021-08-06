@@ -15,4 +15,4 @@
  * Public: No
  */
 
-"ACE_Kestrel4500" in ([ACE_player] call EFUNC(common,uniqueItems))
+[ACE_player, "ACE_Kestrel4500"] call EFUNC(common,hasItem)

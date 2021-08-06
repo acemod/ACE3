@@ -24,6 +24,6 @@ visibleMap &&
     } forEach (assignedItems ACE_player);
     false
 } &&
-{"ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems))} &&
+{[ACE_player, "ACE_MapTools"] call EFUNC(common,hasItem)} &&
 {!GVAR(mapTool_isDragging)} &&
 {!GVAR(mapTool_isRotating)}

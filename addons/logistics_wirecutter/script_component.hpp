@@ -82,7 +82,7 @@
 #define CUT_TIME_ENGINEER 7.5
 
 #define HAS_WIRECUTTER(unit) (\
-    "ACE_wirecutter" in (unit call EFUNC(common,uniqueItems)) \
+    ([unit, "ACE_wirecutter"] call EFUNC(common,hasItem)) \
     || {1 == getNumber (configFile >> "CfgVehicles" >> (backpack unit) >> QGVAR(hasWirecutter))} \
     || {1 == getNumber (configFile >> "CfgWeapons" >> (vest unit) >> QGVAR(hasWirecutter))} \
 )
