@@ -17,12 +17,6 @@ class GVAR(groupNameDisplay) {
     
     class ControlsBackground {
         class Title: ctrlStaticTitle {
-            colorBackground[] = {
-                "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77])",
-                "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.51])",
-                "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.08])",
-                1
-            };
             x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);
             y = QUOTE(safeZoneY + (safeZoneH / 2) - (FONT_H * 1.2) - GAP_H);
             w = QUOTE(TOTAL_W);
