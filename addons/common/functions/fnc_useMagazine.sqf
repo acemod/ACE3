@@ -21,7 +21,7 @@ params ["_unit", "_magazine", ["_vehicleUsage", false]];
 private _return = false;
 
 if !(_vehicleUsage) then {
-    if (_magazine != "") then {
+    if (_magazine != "" && {_magazine in magazines _unit}) then {
         _unit removeMagazine _magazine;
         _return = true;
     };
