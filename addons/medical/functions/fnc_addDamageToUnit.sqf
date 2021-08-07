@@ -44,7 +44,7 @@ private _startDmg = +(_unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,
 private _startPain = GET_PAIN(_unit);
 #endif
 
-[QEGVAR(medical,woundReceived), [_unit, [[_bodyPart, _damageToAdd]], _instigator, _typeOfDamage]] call CBA_fnc_localEvent;
+[QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, _typeOfDamage]] call CBA_fnc_localEvent;
 
 #ifdef DEBUG_TESTRESULTS
 private _endDmg = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
