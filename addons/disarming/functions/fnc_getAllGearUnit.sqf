@@ -18,6 +18,4 @@
 
 params ["_target"];
 
-private _uniqueItems = uniqueUnitItems [_target, 1, 2, 2, 2, true];
-
-[keys _uniqueItems, values _uniqueItems]
+toArray uniqueUnitItems [_target, 1, 2, 2, 2, true]

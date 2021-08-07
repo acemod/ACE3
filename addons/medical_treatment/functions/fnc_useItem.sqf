@@ -24,7 +24,7 @@ scopeName "Main";
 private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GVAR(allowSharedEquipment);
 
 {
-    params ["_unit"];
+    private _unit = _x;
     {
         if ([_unit, _x] call EFUNC(common,hasItem)) then {
           _unit removeItem _x;

@@ -19,4 +19,4 @@
 params ["_unit", "_items"];
 TRACE_2("params",_unit,_items);
 
-[_unit, _items] call EFUNC(common, hasItem);
+[_unit, _items] call EFUNC(common,hasItem);
