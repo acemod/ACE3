@@ -101,15 +101,16 @@ private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in va
         /* Weapon, at the bottom to avoid adding binos */
         case (isClass (_x >> "WeaponSlotsInfo") &&
             {getNumber (_x >> 'type') != TYPE_BINOCULAR_AND_NVG}): {
+            private _baseWeapon = _className call bis_fnc_baseWeapon;
             switch (getNumber (_x >> "type")) do {
                 case TYPE_WEAPON_PRIMARY: {
-                    (_cargo select 0) select 0 pushBackUnique (_className call bis_fnc_baseWeapon);
+                    (_cargo select 0) select 0 pushBackUnique ([_baseWeapon, _className] select (_className == _baseWeapon));
                 };
                 case TYPE_WEAPON_HANDGUN: {
-                    (_cargo select 0) select 2 pushBackUnique (_className call bis_fnc_baseWeapon);
+                    (_cargo select 0) select 2 pushBackUnique ([_baseWeapon, _className] select (_className == _baseWeapon));
                 };
                 case TYPE_WEAPON_SECONDARY: {
-                    (_cargo select 0) select 1 pushBackUnique (_className call bis_fnc_baseWeapon);
+                    (_cargo select 0) select 1 pushBackUnique ([_baseWeapon, _className] select (_className == _baseWeapon));
                 };
             };
         };
