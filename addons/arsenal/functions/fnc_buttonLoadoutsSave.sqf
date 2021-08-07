@@ -85,28 +85,38 @@ switch (GVAR(currentLoadoutsTab)) do {
                             {
                                 if (count _x == 2) then {
 
-                                        if ((_x select 0) isEqualType "") then {
+                                    if ((_x select 0) isEqualType "") then {
 
-                                            private _item = (_x select 0);
-                                            if (_item != "") then {
+                                        private _item = (_x select 0);
+                                        if (_item != "") then {
 
-                                                private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                                                if (_uniqueBaseCfgText != "") then {
-
-                                                    _x set [0, _uniqueBaseCfgText];
-                                                };
+                                            private _baseWeapon = _item call BIS_fnc_baseWeapon;
+                                            if (_item != _baseWeapon) then {
+                                                _x set [0, _baseWeapon];
                                             };
-                                        } else {
-                                            private _weapon = (_x select 0) select 0;
-                                            if (_weapon != "") then {
 
+                                            private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
+                                            if (_uniqueBaseCfgText != "") then {
+                                                _x set [0, _uniqueBaseCfgText];
+                                            };
+                                        };
+                                    } else {
+                                        for "_subIndex" from 0 to 6 do {
+                                            private _weapon = (_x select 0) select _subIndex;
+
+                                            // skip magazines
+                                            if (_weapon isEqualType []) then {continue};
+
+                                            if (_weapon != "") then {
                                                 private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+
                                                 if (_weapon != _baseWeapon) then {
-                                                    (_x select 0)set [0, _baseWeapon];
+                                                    (_x select 0) set [_subIndex, _baseWeapon];
                                                 };
                                             };
                                         };
                                     };
+                                };
                             } foreach _containerContents;
                         };
                     };
@@ -213,19 +223,29 @@ switch (GVAR(currentLoadoutsTab)) do {
                                             private _item = (_x select 0);
                                             if (_item != "") then {
 
+                                                private _baseWeapon = _item call BIS_fnc_baseWeapon;
+                                                if (_item != _baseWeapon) then {
+                                                    _x set [0, _baseWeapon];
+                                                };
+
                                                 private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
                                                 if (_uniqueBaseCfgText != "") then {
-
                                                     _x set [0, _uniqueBaseCfgText];
                                                 };
                                             };
                                         } else {
-                                            private _weapon = (_x select 0) select 0;
-                                            if (_weapon != "") then {
+                                            for "_subIndex" from 0 to 6 do {
+                                                private _weapon = (_x select 0) select _subIndex;
 
-                                                private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                                                if (_weapon != _baseWeapon) then {
-                                                    (_x select 0)set [0, _baseWeapon];
+                                                // skip magazines
+                                                if (_weapon isEqualType []) then {continue};
+
+                                                if (_weapon != "") then {
+                                                    private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+
+                                                    if (_weapon != _baseWeapon) then {
+                                                        (_x select 0) set [_subIndex, _baseWeapon];
+                                                    };
                                                 };
                                             };
                                         };
