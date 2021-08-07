@@ -58,12 +58,17 @@ switch (GVAR(currentLoadoutsTab)) do {
                 case 8: {
                     if (count (_loadout select _dataIndex) > 0) then {
 
-                        private _weapon = (_loadout select _dataIndex) select 0;
-                        if (_weapon != "") then {
+                        for "_subIndex" from 0 to 6 do {
+                            private _weapon = (_loadout select _dataIndex) select _subIndex;
+                            if (_weapon isEqualType []) then {continue};
+                            systemChat str _weapon;
+                            if (_weapon != "") then {
 
-                            private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                             if (_weapon != _baseWeapon) then {
-                                (_loadout select _dataIndex) set [0, _baseWeapon];
+                                private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
+                                systemChat str _baseWeapon;
+                                 if (_weapon != _baseWeapon) then {
+                                    (_loadout select _dataIndex) set [_subIndex, _baseWeapon];
+                                };
                             };
                         };
                     };

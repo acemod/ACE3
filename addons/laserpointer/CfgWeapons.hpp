@@ -15,6 +15,7 @@ class CfgWeapons {
 
         displayName = CSTRING(red);
         descriptionUse = CSTRING(useLaser);
+        baseWeapon = "acc_pointer_IR";
     };
 
     class ACE_acc_pointer_red: ItemCore {
@@ -29,6 +30,7 @@ class CfgWeapons {
         scope = 1;
         displayName = CSTRING(red);
         descriptionUse = CSTRING(useLaser);
+        baseWeapon = "acc_pointer_IR";
         picture = "\A3\weapons_F\Data\UI\gear_accv_pointer_CA.paa";
         model = "\A3\weapons_f\acc\accv_pointer_F";
         descriptionShort = CSTRING(Description);
@@ -82,6 +84,7 @@ class CfgWeapons {
         _generalMacro = "ACE_acc_pointer_green";
         scope = 1;
         displayName = CSTRING(green);
+        baseWeapon = "ACE_acc_pointer_green";
     };
 
     class ACE_acc_pointer_green: ACE_acc_pointer_red {
@@ -95,5 +98,6 @@ class CfgWeapons {
         _generalMacro = "ACE_acc_pointer_green";
         scope = 2;
         displayName = CSTRING(green);
+        baseWeapon = "ACE_acc_pointer_green";
     };
 };
