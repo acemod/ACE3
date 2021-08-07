@@ -16,7 +16,7 @@
  */
 
 GVAR(ammoClass) != "" &&
-GVAR(magazineClass) != "" &&
-GVAR(weaponClass) != "" &&
-!GVAR(RangeCardOpened) &&
-"ACE_RangeCard" in ([ACE_player] call EFUNC(common,uniqueItems))
+{GVAR(magazineClass) != ""} &&
+{GVAR(weaponClass) != ""} &&
+{!GVAR(RangeCardOpened)} &&
+{[_player, "ACE_RangeCard"] call EFUNC(common,hasItem)}

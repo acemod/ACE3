@@ -17,6 +17,6 @@
 
 params ["_unit"];
 
-if !("ACE_Sandbag_empty" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
+if !([_unit, "ACE_Sandbag_empty"] call EFUNC(common,hasItem)) exitWith {false};
 
 _unit call EFUNC(common,canDig)

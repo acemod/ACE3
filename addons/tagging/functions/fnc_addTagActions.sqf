@@ -43,7 +43,7 @@ private _actions = [];
             },
             {
                 (_this select 2) params ["_unit", "", "", "_requiredItem"];
-                _requiredItem in (_unit call EFUNC(common,uniqueItems))
+                [_unit, _requiredItem] call EFUNC(common,hasItem)
             },
             {},
             [_unit, _class, _textures, _requiredItem, _materials]
