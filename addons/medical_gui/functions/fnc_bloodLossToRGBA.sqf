@@ -2,8 +2,6 @@
 /*
  * Author: ShackTac, SilentSpike
  * Converts a blood loss value into a representative RGBA colour.
- * Blood loss colouring follows a "white, yellow, red" colour scale with 10 steps, Bezier interpolation and Correct lightness gradient.
- * See: https://gka.github.io/palettes
  *
  * Arguments:
  * 0: The blood loss value (range [0,1]) <NUMBER>

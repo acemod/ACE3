@@ -2,8 +2,6 @@
 /*
  * Author: ShackTac, SilentSpike
  * Converts a damage value into a representative RGBA colour.
- * Damage colouring follows a "white, cyan, blue" colour scale with 10 steps, Bezier interpolation and Correct lightness gradient.
- * See: https://gka.github.io/palettes
  *
  * Arguments:
  * 0: The damage value (range [0,1]) <NUMBER>
