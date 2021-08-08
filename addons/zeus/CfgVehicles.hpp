@@ -331,7 +331,7 @@ class CfgVehicles {
             class GVAR(create) {
                 displayName = CSTRING(CreateZeus);
                 condition = QUOTE(call FUNC(canCreateModule));
-                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                 //Set GVAR(zeus) to null first to disable the action through the isNil check
                 statement = QUOTE(GVAR(zeus) = objNull; [ARR_2(QQGVAR(createZeus), ACE_player)] call CBA_fnc_serverEvent);
                 showDisabled = 1;
@@ -340,7 +340,7 @@ class CfgVehicles {
             class GVAR(delete) {
                 displayName = CSTRING(DeleteZeus);
                 condition = QUOTE(!(isNil QQGVAR(zeus) || {isNull GVAR(zeus)}));
-                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                 statement = QUOTE(deleteVehicle GVAR(zeus); GVAR(zeus) = nil);
                 showDisabled = 1;
                 icon = "\A3\Ui_F_Curator\Data\Logos\arma3_curator_eye_32_ca.paa";

@@ -242,7 +242,7 @@ class CfgVehicles {
             class ACE_TeamManagement {
                 displayName = CSTRING(TeamManagement);
                 condition = QUOTE(GVAR(EnableTeamManagement));
-                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                 statement = "";
                 modifierFunction = QUOTE([ARR_3(assignedTeam _target, 'PATHTOF(UI\team\team_management_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
                 showDisabled = 1;
@@ -250,7 +250,7 @@ class CfgVehicles {
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
                     condition = QUOTE(true);
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                     statement = QUOTE([ARR_3(_player,'RED',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     modifierFunction = QUOTE([ARR_3('RED', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
@@ -258,7 +258,7 @@ class CfgVehicles {
                 class ACE_JoinTeamGreen {
                     displayName = CSTRING(JoinTeamGreen);
                     condition = QUOTE(true);
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                     statement = QUOTE([ARR_3(_player,'GREEN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     modifierFunction = QUOTE([ARR_3('GREEN', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
@@ -266,7 +266,7 @@ class CfgVehicles {
                 class ACE_JoinTeamBlue {
                     displayName = CSTRING(JoinTeamBlue);
                     condition = QUOTE(true);
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                     statement = QUOTE([ARR_3(_player,'BLUE',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     modifierFunction = QUOTE([ARR_3('BLUE', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
@@ -274,7 +274,7 @@ class CfgVehicles {
                 class ACE_JoinTeamYellow {
                     displayName = CSTRING(JoinTeamYellow);
                     condition = QUOTE(true);
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                     statement = QUOTE([ARR_3(_player,'YELLOW',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     modifierFunction = QUOTE([ARR_3('YELLOW', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
@@ -282,7 +282,7 @@ class CfgVehicles {
                 class ACE_LeaveTeam {
                     displayName = CSTRING(LeaveTeam);
                     condition = QUOTE(assignedTeam _player != 'MAIN');
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                     statement = QUOTE([ARR_3(_player,'MAIN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     modifierFunction = QUOTE([ARR_3('MAIN', 'PATHTOF(UI\team\team_white_ca.paa)', _this select 3)] call FUNC(modifyTeamManagementAction));
@@ -290,7 +290,7 @@ class CfgVehicles {
                 class ACE_BecomeLeader {
                     displayName = CSTRING(BecomeLeader);
                     condition = QUOTE(_this call DFUNC(canBecomeLeader));
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                     statement = QUOTE(_this call DFUNC(doBecomeLeader));
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_white_ca.paa);
@@ -298,7 +298,7 @@ class CfgVehicles {
                 class ACE_LeaveGroup {
                     displayName = CSTRING(LeaveGroup);
                     condition = QUOTE(count (units group _player) > 1);
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling", "isNotFreeFalling"};
                     statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side group _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
@@ -308,7 +308,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 displayName = CSTRING(Equipment);
                 condition = QUOTE(true);
-                exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting"};
+                exceptions[] = {"isNotSwimming", "isNotInside", "notOnMap", "isNotSitting", "isNotFreeFalling"};
                 statement = "";
                 showDisabled = 1;
                 icon = "";  // @todo

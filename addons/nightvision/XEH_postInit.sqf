@@ -57,7 +57,7 @@ if (!isNil QGVAR(serverPriorFog)) then {[] call FUNC(nonDedicatedFix);}; // If v
 // Add keybinds
 ["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness), {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting", "isNotRefueling"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting", "isNotRefueling", "isNotFreeFalling"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
     if (!(missionNamespace getVariable [QGVAR(allowBrightnessControl), true])) exitWith {false}; // just a mission setVar (not ace_setting)
@@ -69,7 +69,7 @@ if (!isNil QGVAR(serverPriorFog)) then {[] call FUNC(nonDedicatedFix);}; // If v
 
 ["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness), {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting", "isNotRefueling"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting", "isNotRefueling", "isNotFreeFalling"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
     if (!(missionNamespace getVariable [QGVAR(allowBrightnessControl), true])) exitWith {false}; // just a mission setVar (not ace_setting)
@@ -93,4 +93,3 @@ WARNING("Debug mouse wheel action enabled, this should NOT be in a final release
     };
 }] call CBA_fnc_addDisplayHandler;
 #endif
-
