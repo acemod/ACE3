@@ -35,7 +35,18 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     disableSerialization;
     params ["", "_pfID"];
 
-    if ((!GVAR(WindInfo)) || {!([ACE_player, ACE_player, ["notOnMap", "isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,canInteractWith))}) exitWith {
+    private _playerVehicle = vehicle ACE_player;
+    private _isFreeFalling = (
+        (ACE_player) isEqualTo _playerVehicle &&
+        {!isTouchingGround _playerVehicle} &&
+        {velocity _playerVehicle # 2 < -5}
+    );
+
+    if (
+        (!GVAR(WindInfo)) ||
+        {_isFreeFalling} ||
+        {!([ACE_player, ACE_player, ["notOnMap", "isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,canInteractWith))}
+    ) exitWith {
         TRACE_1("Ending Wind Info PFEH", GVAR(WindInfo));
         GVAR(WindInfo) = false;
         (["RscWindIntuitive"] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
@@ -45,12 +56,14 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     //Keeps the display open:
     (["RscWindIntuitive"] call BIS_fnc_rscLayer) cutRsc ["RscWindIntuitive", "PLAIN", 1, false];
 
-    private _windSpeed = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-        // With wind gradient
-        [eyePos ACE_player, true, true, true] call FUNC(calculateWindSpeed);
+    private _isUsingChute = _playerVehicle isKindOf "ParachuteBase";
+
+    private _windSpeed = if (EGVAR(advanced_ballistics,enabled)) then {
+        // Using wind gradient
+        [eyePos ACE_player, true, true, !_isUsingChute] call FUNC(calculateWindSpeed);
     } else {
-        // Without wind gradient
-        [eyePos ACE_player, false, true, true] call FUNC(calculateWindSpeed);
+        // No wind gradient
+        [eyePos ACE_player, false, true, !_isUsingChute] call FUNC(calculateWindSpeed);
     };
 
 
@@ -85,22 +98,25 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     };
     __ctrl ctrlCommit 0;
 
-    //Update the beaufort balls:
-    (ctrlPosition __ctrl) params ["_ctrlX", "_ctrlY", "_ctrlWidth", "_ctrlHeight"];
-    private _centerX = _ctrlX + _ctrlWidth / 2;
-    private _centerY = _ctrlY + _ctrlHeight / 2;
-    private _ballHeight = _ctrlHeight / 17;
-    private _ballWidth = _ballHeight * 3/4;
+    if (!_isUsingChute) then {
+        //Update the beaufort balls:
+        (ctrlPosition __ctrl) params ["_ctrlX", "_ctrlY", "_ctrlWidth", "_ctrlHeight"];
+        private _centerX = _ctrlX + _ctrlWidth / 2;
+        private _centerY = _ctrlY + _ctrlHeight / 2;
+        private _ballHeight = _ctrlHeight / 17;
+        private _ballWidth = _ballHeight * 3/4;
 
-    for "_index" from 0 to (_beaufortNumber - 1) do {
-        private _ball = __dsp ctrlCreate ["RscPicture", _index];
-        _ball ctrlSetText QPATHTOF(UI\wind_dot_ca.paa);
-        _ball ctrlSetTextColor [1,1,1,1];
-        private _ballCenterX = _centerX - (_ballWidth / 2) + ((sin _windDir) * 0.013333) * (_index - 4.9) + ((cos _windDir) * 0.0125);
-        private _ballCenterY = _centerY - (_ballHeight / 2) - ((1 * cos _windDir) * 4/3*0.013333) * (_index - 4.9) + ((sin _windDir) * 0.0125);
-        _ball ctrlSetPosition [_ballCenterX, _ballCenterY, _ballWidth, _ballHeight];
-        _ball ctrlCommit 0;
+        for "_index" from 0 to (_beaufortNumber - 1) do {
+            private _ball = __dsp ctrlCreate ["RscPicture", _index];
+            _ball ctrlSetText QPATHTOF(UI\wind_dot_ca.paa);
+            _ball ctrlSetTextColor [1,1,1,1];
+            private _ballCenterX = _centerX - (_ballWidth / 2) + ((sin _windDir) * 0.013333) * (_index - 4.9) + ((cos _windDir) * 0.0125);
+            private _ballCenterY = _centerY - (_ballHeight / 2) - ((1 * cos _windDir) * 4/3*0.013333) * (_index - 4.9) + ((sin _windDir) * 0.0125);
+            _ball ctrlSetPosition [_ballCenterX, _ballCenterY, _ballWidth, _ballHeight];
+            _ball ctrlCommit 0;
+        };
     };
+
 
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
