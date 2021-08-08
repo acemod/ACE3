@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Equipment", QGVAR(showAltimeter), localize LSTRING(showAltimeter), {
     // Conditions: canInteract
     if (
-        !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) ||
+        !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotFreeFalling"]] call EFUNC(common,canInteractWith)) ||
         {!('ACE_Altimeter' in assignedItems ACE_player)}
     ) exitWith { false };
 
