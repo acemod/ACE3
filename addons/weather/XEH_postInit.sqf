@@ -4,7 +4,7 @@ GVAR(WindInfo) = false;
 ["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKeyToggle),
 {
     // Conditions: canInteract
-    if !([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, ACE_player, ["notOnMap", "isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     [] call FUNC(displayWindInfo);
@@ -15,7 +15,7 @@ GVAR(WindInfo) = false;
 ["ACE3 Common", QGVAR(WindInfoKey_hold), localize LSTRING(WindInfoKeyHold),
 {
     // Conditions: canInteract
-    if !([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, ACE_player, ["notOnMap", "isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     [] call FUNC(displayWindInfo);
