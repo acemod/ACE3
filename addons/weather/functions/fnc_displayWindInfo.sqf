@@ -35,12 +35,7 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     disableSerialization;
     params ["", "_pfID"];
 
-    private _playerVehicle = vehicle ACE_player;
-    private _isFreeFalling = (
-        (ACE_player) isEqualTo _playerVehicle &&
-        {!isTouchingGround _playerVehicle} &&
-        {velocity _playerVehicle # 2 < -5}
-    );
+    private _isFreeFalling = (animationState ACE_player select [0, 12]) isEqualTo "halofreefall";
 
     if (
         (!GVAR(WindInfo)) ||
@@ -56,7 +51,7 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     //Keeps the display open:
     (["RscWindIntuitive"] call BIS_fnc_rscLayer) cutRsc ["RscWindIntuitive", "PLAIN", 1, false];
 
-    private _isUsingChute = _playerVehicle isKindOf "ParachuteBase";
+    private _isUsingChute = (vehicle ACE_player) isKindOf "ParachuteBase";
 
     private _windSpeed = if (EGVAR(advanced_ballistics,enabled)) then {
         // Using wind gradient
