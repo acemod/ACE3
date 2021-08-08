@@ -32,6 +32,13 @@ The Medical AI will only become active if the AI units use the basic medical sys
 
 AI units will also heal themselves in singleplayer. If the player is in control of an AI group and uses basic medical, Medical AI is also enabled and will run for the players group as well. The AI subordinates will automatically start healing themselves and do not need to be told to do so manually through the command menu, additionally the groups medic will also start healing other units (including the player).
 
+### 2.3 Scripting
+
+To disable an AI unit from automatically healing (say for civilian injuries or triage missions) use the following code:
+
+```sqf
+_unit setVariable ["ace_medical_ai_lastFired", 9999999];
+```
 
 ## 3. Dependencies
 
