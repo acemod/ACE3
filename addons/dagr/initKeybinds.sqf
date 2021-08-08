@@ -31,10 +31,11 @@
 
 //Add deviceKey entry:
 private _conditonCode = {
-    ([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) &&
-    {[ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)}
+    ([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem));
 };
 private _toggleCode = {
+    // Conditions: canInteract
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     [] call FUNC(toggleOverlay);
