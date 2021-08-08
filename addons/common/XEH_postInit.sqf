@@ -392,6 +392,11 @@ addMissionEventHandler ["PlayerViewChanged", {
     lifeState _unit != "INCAPACITATED"
 }] call FUNC(addCanInteractWithCondition);
 
+["isNotFreeFalling", {
+    params ["_unit"];
+    animationState _unit select [0, 12] isNotEqualTo "halofreefall"
+}] call FUNC(addCanInteractWithCondition);
+
 //////////////////////////////////////////////////
 // Set up reload mutex
 //////////////////////////////////////////////////

@@ -35,11 +35,8 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     disableSerialization;
     params ["", "_pfID"];
 
-    private _isFreeFalling = (animationState ACE_player select [0, 12]) isEqualTo "halofreefall";
-
     if (
         (!GVAR(WindInfo)) ||
-        {_isFreeFalling} ||
         {!([ACE_player, ACE_player, ["notOnMap", "isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,canInteractWith))}
     ) exitWith {
         TRACE_1("Ending Wind Info PFEH", GVAR(WindInfo));
