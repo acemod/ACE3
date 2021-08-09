@@ -141,15 +141,6 @@ private _putList = [];
     private _className = configName _x;
 
     switch true do {
-        // Rifle, handgun, secondary weapons mags
-        case (
-                ((getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL,TYPE_MAGAZINE_MISSILE]) ||
-                {(getNumber (_x >> QGVAR(hide))) == -1}) &&
-                {!(_className in _grenadeList)} &&
-                {!(_className in _putList)}
-            ): {
-            (_cargo select 2) pushBackUnique _className;
-        };
         // Grenades
         case (_className in _grenadeList): {
             (_cargo select 15) pushBackUnique _className;
@@ -157,6 +148,13 @@ private _putList = [];
         // Put
         case (_className in _putList): {
             (_cargo select 16) pushBackUnique _className;
+        };
+        // Rifle, handgun, secondary weapons mags
+        case (
+                (getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL,TYPE_MAGAZINE_MISSILE]) ||
+                {getNumber (_x >> QGVAR(hide)) isEqualTo -1}
+            ): {
+            (_cargo select 2) pushBackUnique _className;
         };
     };
 } foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
