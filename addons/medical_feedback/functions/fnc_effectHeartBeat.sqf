@@ -17,6 +17,10 @@
 
 private _heartRate = GET_HEART_RATE(ACE_player);
 
+if (!GVAR(heartBeatEffectRunning)) exitWith {
+    TRACE_1("Ending heart beat effect - force stopped",_heartRate);
+};
+
 if (_heartRate == 0) exitWith {
     TRACE_1("Ending heart beat effect - zero",_heartRate);
     GVAR(heartBeatEffectRunning) = false;

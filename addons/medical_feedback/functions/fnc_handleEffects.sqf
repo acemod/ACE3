@@ -23,6 +23,7 @@ if (EGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
     [false]    call FUNC(effectBloodVolume);
     [false]    call FUNC(effectBloodVolumeIcon);
     [false]    call FUNC(effectBleeding);
+    GVAR(heartBeatEffectRunning) = false;
 };
 
 BEGIN_COUNTER(handleEffects);
