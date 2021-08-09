@@ -254,42 +254,8 @@ force ace_medical_treatment_allowSelfStitch = 1;
 force ace_medical_treatment_clearTraumaAfterBandage = true; // to increase the flow of the PvP match (reduce limping)
 ```
 
-## 3. Scripting
+_more tbd_
 
-### 3.1 Adding Damage to Unit (Oct 2019)
-
-To add damage to a unit, use the function `ace_medical_fnc_addDamageToUnit`
-
-Arguments:
-* 0: The Unit - OBJECT
-* 1: Damage to Add - NUMBER
-* 2: Body part ("Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg") - STRING
-* 3: Projectile Type - STRING
-* 4: Source - OBJECT
-* 5: Non-directional damage source array (Optional) - ARRAY
-
-List of Projectile Types:
-
-* backblast
-* bullet
-* collision
-* drowning
-* explosive
-* falling
-* grenade
-* punch
-* ropeburn
-* shell
-* stab
-* unknown
-* vehiclecrash
-
-Examples
-
-```sqf
-[_unit, 0.5, "LeftArm", "bullet", objNull, []] call ACE_medical_fnc_addDamageToUnit;
-```
-
-## 4. Dependencies
+## 3. Dependencies
 
 {% include dependencies_list.md component="medical" %}
