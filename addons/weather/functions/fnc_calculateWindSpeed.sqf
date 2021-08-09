@@ -27,8 +27,7 @@ private _fnc_polar2vect = {
 };
 
 private _windSpeed = vectorMagnitude wind;
-private _windDir = (wind select 0) atan2 (wind select 1);
-private _windDirAdjusted = _windDir + 180;
+private _windDir = windDir - 180;
 
 // Wind gradient
 if (_windGradientEnabled) then {
@@ -46,15 +45,15 @@ if (_terrainEffectEnabled) then {
     if (_windSpeed > 0.05) then {
         private _newWindSpeed = 0;
         {
-            private _windSource = [100, _windDirAdjusted, _x] call _fnc_polar2vect;
+            private _windSource = [100, _windDir, _x] call _fnc_polar2vect;
             if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
-            _windSource = [100, _windDirAdjusted + _x, 0] call _fnc_polar2vect;
+            _windSource = [100, _windDir + _x, 0] call _fnc_polar2vect;
             if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
-            _windSource = [100, _windDirAdjusted - _x, 0] call _fnc_polar2vect;
+            _windSource = [100, _windDir - _x, 0] call _fnc_polar2vect;
             if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
@@ -69,15 +68,15 @@ if (_obstacleEffectEnabled) then {
     if (_windSpeed > 0.05) then {
         private _newWindSpeed = 0;
         {
-            private _windSource = [20, _windDirAdjusted, _x] call _fnc_polar2vect;
+            private _windSource = [20, _windDir, _x] call _fnc_polar2vect;
             if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
-            _windSource = [20, _windDirAdjusted + _x, 0] call _fnc_polar2vect;
+            _windSource = [20, _windDir + _x, 0] call _fnc_polar2vect;
             if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
-            _windSource = [20, _windDirAdjusted - _x, 0] call _fnc_polar2vect;
+            _windSource = [20, _windDir - _x, 0] call _fnc_polar2vect;
             if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
