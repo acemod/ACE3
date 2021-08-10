@@ -86,7 +86,7 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     if (_isUsingChute) exitWith {
         TRACE_1("using parachute - skipping speed info",_isUsingChute);
     };
-    
+
     //Update the beaufort balls:
     (ctrlPosition __ctrl) params ["_ctrlX", "_ctrlY", "_ctrlWidth", "_ctrlHeight"];
     private _centerX = _ctrlX + _ctrlWidth / 2;
@@ -103,7 +103,6 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
         _ball ctrlSetPosition [_ballCenterX, _ballCenterY, _ballWidth, _ballHeight];
         _ball ctrlCommit 0;
     };
-
 
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
