@@ -41,6 +41,14 @@ if (_causeOfDeath != "#scripted") then {
         _this set [1, _killer];
         _this set [2, _instigator];
     };
+} else { // Handle setDead being skipped (forced respawn)
+    
+    _unit setVariable [VAR_HEART_RATE, 0, true];
+    _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
+
+    _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
+
+    [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
 };
 TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
 
