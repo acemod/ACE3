@@ -929,7 +929,7 @@
             <German>Fahrzeuge und Einrichtungen</German>
             <Turkish>Araçlar ve Tesisler</Turkish>
             <Spanish>Vehículos e instalaciones médicas</Spanish>
-        </Key>        
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_DisplayName">
             <English>CPR Success Chance Minimum</English>
             <French>RCP - Chance minimale de réussite</French>
