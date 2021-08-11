@@ -63,10 +63,6 @@ GVAR(bloodTickCounter) = 0;
     [true, _unit] call EFUNC(common,setVolume);
 
     [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
-
-    //Force stop heart beat effect
-    GVAR(heartBeatEffectRunning) = false;
-    
 }] call CBA_fnc_addEventHandler;
 
 // Update effects to match new unit's current status (this also handles respawn)
