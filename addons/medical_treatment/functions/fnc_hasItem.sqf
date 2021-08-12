@@ -22,11 +22,4 @@
 params ["_medic", "_patient", "_items"];
 
 
-private _return = false;
-{
-    if ([_medic, _x] call EFUNC(common,hasItem) || {GVAR(allowSharedEquipment) != 2 && {[_patient, _x] call EFUNC(common,hasItem)}}) exitWith {
-        _return = true;
-    };
-} forEach _items;
-
-_return
+[_medic, _items, false] call EFUNC(common,hasItem) || {GVAR(allowSharedEquipment) != 2 && {[_patient, _items, false] call EFUNC(common,hasItem)}}
