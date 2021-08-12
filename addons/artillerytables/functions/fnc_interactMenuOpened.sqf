@@ -96,7 +96,7 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
             };
             private _condition = {
                 //IGNORE_PRIVATE_WARNING ["_player"];
-                ([_player, "ACE_artilleryTable"] call EFUNC(common, hasItem)) && {[_player, objNull, ["notOnMap", "isNotSitting", "isNotInside"]] call EFUNC(common,canInteractWith)}
+                ([_player, "ACE_artilleryTable"] call EFUNC(common,hasItem)) && {[_player, objNull, ["notOnMap", "isNotSitting", "isNotInside"]] call EFUNC(common,canInteractWith)}
             };
             private _displayName = format ["%1%2", getText (_vehicleCfg >> "displayName"),["","*"] select _advCorrection];
             private _action = [format ['QGVAR(%1)',_index], _displayName, QPATHTOF(UI\icon_rangeTable.paa), _statement, _condition, {}, _info] call EFUNC(interact_menu,createAction);
