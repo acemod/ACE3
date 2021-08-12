@@ -22,4 +22,4 @@
 params ["_medic", "_patient", "_items"];
 
 
-[_medic, _items, false] call EFUNC(common,hasItem) || {GVAR(allowSharedEquipment) != 2 && {[_patient, _items, false] call EFUNC(common,hasItem)}}
+[_medic, _items] call EFUNC(common,hasItem) || {GVAR(allowSharedEquipment) != 2 && {[_patient, _items] call EFUNC(common,hasItem)}}
