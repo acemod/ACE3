@@ -17,7 +17,7 @@
  * Public: Yes
  */
 
-params [["_unit", objNull, [objNull]], ["_item", "", ["", [""], ["_checkAll", false, [false]]]]];
+params [["_unit", objNull, [objNull]], ["_item", "", ["", [""]]], ["_checkAll", false, [false]]];
 
 if (_item isEqualType "") then {
     _item = [_item];
@@ -25,10 +25,10 @@ if (_item isEqualType "") then {
 
 private _return = false;
 private _unitItems = _unit call FUNC(uniqueItems);
+
 {
     _return = _x in _unitItems;
-    if (_return) then {[break, continue] select _checkAll};
-    break
+    if ([_return, !_return] select _checkAll) then {break};
 } forEach _item;
 
 _return
