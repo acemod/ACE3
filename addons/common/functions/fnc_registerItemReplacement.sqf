@@ -28,7 +28,7 @@ private _fnc_replaceItems = {
     if (_items isEqualTo GVAR(oldItems)) exitWith {};
 
     private _newItems = _items - GVAR(oldItems);
-    private _newItems = _newItems arrayIntersect _newItems; // Get unique items only
+    _newItems = _newItems arrayIntersect _newItems; // Get unique items only
     if (_newItems isEqualTo []) exitWith {
         GVAR(oldItems) = _items;
     };
@@ -101,7 +101,7 @@ if (_newItems isEqualType "") then {
 
 private _oldReplacements = GVAR(itemReplacements) getVariable [_oldItem, []];
 _oldReplacements append _newItems;
-GVAR(itemReplacements) setVariable [_oldItem, _newItems];
+GVAR(itemReplacements) setVariable [_oldItem, _oldReplacements];
 
 // Force item scan when new replacement was registered in PostInit
 if (!isNull ACE_player) then {
