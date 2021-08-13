@@ -1,0 +1,13 @@
+PREP(addActions);
+PREP(addIntel);
+PREP(attributeFocus);
+PREP(canPickup);
+PREP(createControl);
+PREP(deleteControl);
+PREP(handleLoadout);
+PREP(handleMagIndex);
+PREP(onMouseButtonDown);
+PREP(onMouseButtonUp);
+PREP(onMouseMoving);
+PREP(pickup);
+PREP(setObjectData);
