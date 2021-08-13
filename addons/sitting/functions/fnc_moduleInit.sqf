@@ -18,6 +18,6 @@ params ["_logic", "_units", "_activated"];
 
 if (!_activated) exitWith {};
 
-[_logic, QXGVAR(enable), "enable"] call ACEFUNC(common,readSettingFromModule);
+[_logic, QXGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
 
 INFO("Sitting Module Initialized.");

@@ -32,7 +32,7 @@ TRACE_1("Starting interact PFH",_interactionType);
     params ["_args", "_pfhID"];
     _args params ["_setPosition", "_addedHelpers", "_sourcesHelped"];
 
-    if (!GVAR(interact_menu,keyDown)) then {
+    if (!EGVAR(interact_menu,keyDown)) then {
         TRACE_1("Ending interact PFH",_pfhID);
         {detach _x; deleteVehicle _x} forEach _addedHelpers;
         [_pfhID] call CBA_fnc_removePerFrameHandler;

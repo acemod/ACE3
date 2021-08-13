@@ -58,7 +58,7 @@ GVAR(objectRotationZ) = 0;
             [_side, _cost],
             {[0, 0, 0]},
             5
-        ] call ACEFUNC(interact_menu,createAction);
+        ] call EFUNC(interact_menu,createAction);
 
         [_object, 0, ["ACE_MainActions"], _removeAction] call EFUNC(interact_menu,addActionToObject);
     };

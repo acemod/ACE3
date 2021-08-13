@@ -42,7 +42,7 @@
 // ACEX Merge
 #define ACEX_PREFIX acex
 #define XADDON DOUBLES(ACEX_PREFIX,COMPONENT)
-#define XGVAR(var) TRIPLES(ACEX_PREFIX,var)
+#define XGVAR(var) DOUBLES(XADDON,var)
 #define QXGVAR(var) QUOTE(XGVAR(var))
 #define QQXGVAR(var) QUOTE(QXGVAR(var))
 

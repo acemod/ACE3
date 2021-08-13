@@ -3,7 +3,7 @@
 if (!hasInterface) exitWith {};
 
 ["ACEX", QXGVAR(toggle), [LLSTRING(KeybindName), LLSTRING(KeybindDescription)], "", {
-    if (!GXVAR(enabled)) exitWith {
+    if (!XGVAR(enabled)) exitWith {
         if (GVAR(isLowered)) then {
             call FUNC(restoreVolume);
         };
