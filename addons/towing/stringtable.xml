@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Towing">
+        <Key ID="STR_ACE_Towing_displayName">
+            <English>Towing</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_start">
+            <English>Attach Rope</English>
+        </Key>
+    </Package>
+</Project>
