@@ -17,6 +17,11 @@
 
 private _heartRate = GET_HEART_RATE(ACE_player);
 
+if (EGVAR(common,OldIsCamera)) exitWith {
+    TRACE_2("Ending heart beat effect - scripted camera",_heartRate,EGVAR(common,OldIsCamera));
+    GVAR(heartBeatEffectRunning) = false;
+};
+
 if (_heartRate == 0) exitWith {
     TRACE_1("Ending heart beat effect - zero",_heartRate);
     GVAR(heartBeatEffectRunning) = false;
