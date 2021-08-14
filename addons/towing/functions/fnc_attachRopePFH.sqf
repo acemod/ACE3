@@ -46,7 +46,7 @@ if (_intersections isNotEqualTo []) then {
     if (GVAR(canAttach)) then {
         TRACE_4("can attach",_target,_intersectObject,_ignoreParent,_ignoreRope);
         GVAR(attachHelper) setPosASL _intersectPosition;
-        _hintLMB = localize LSTRING(start);
+        _hintLMB = localize LSTRING(attach);
 
         GVAR(attachHelper) setVariable [QGVAR(object), _intersectObject];
     };
@@ -60,6 +60,8 @@ if (_source isNotEqualTo [0, 0, 0]) then {
 
         private _direction = _source vectorFromTo getPosASLVisual GVAR(attachHelper);
         GVAR(attachHelper) setPosASL (_source vectorAdd (_direction vectorMultiply _maxRange));
+
+        _hintLMB = "";
 
         if (_distanceFromSource > _maxRange + 2) then {
             GVAR(cancel) = true;

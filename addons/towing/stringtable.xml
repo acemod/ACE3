@@ -4,6 +4,12 @@
         <Key ID="STR_ACE_Towing_displayName">
             <English>Towing</English>
         </Key>
+        <Key ID="STR_ACE_Towing_attach">
+            <English>Attach Tow Rope</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_canceled">
+            <English>Attaching Cancelled</English>
+        </Key>
         <Key ID="STR_ACE_Towing_start3">
             <English>Attach Tow Rope (3.2m)</English>
         </Key>

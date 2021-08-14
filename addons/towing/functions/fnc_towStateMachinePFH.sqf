@@ -109,11 +109,14 @@ switch (_state) do {
         ropeDestroy _rope;
         [_unit, _ropeClass, true] call CBA_fnc_addItem;
         _args set [0, TOW_STATE_CLEANUP];
+
+        (localize LSTRING(canceled)) call CBA_fnc_notify;
     };
     case TOW_STATE_CLEANUP: {
         TRACE_2("state cleanup",GVAR(attachHelper),_handle);
         deleteVehicle GVAR(attachHelper);
         [_handle] call CBA_fnc_removePerFrameHandler;
+        _unit setVariable [QGVAR(hint), []];
         call EFUNC(interaction,hideMouseHint);
     };
 };
