@@ -74,18 +74,30 @@ switch (_state) do {
         };
 
         [QGVAR(lockVehicle), [_child, true]] call CBA_fnc_globalEvent;
-        _child setTowParent _parent;
+        _child setTowParent _parent; // to:do - call this on the machine local to parent
 
         GVAR(attachHelper) ropeDetach _rope;
         [_child, _relativeAttachPos] ropeAttachTo _rope;
+
+        private _hook = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "NONE"];
+        _hook attachTo [_child, _relativeAttachPos];
+
+        _hook setVariable [QGVAR(parent), _parent, true];
+        _hook setVariable [QGVAR(child), _child, true];
+        _child setVariable [QGVAR(rope), _rope, true];
+        _child setVariable [QGVAR(hook), _hook, true];
+
+        _child setVariable [QGVAR(towing), true, true];
+        _parent setVariable [QGVAR(towing), true, true];
+
         _parent setVariable [QGVAR(ropeBreakEventHandler), _parent addEventHandler ["RopeBreak", {
             params ["_parent", "_rope", "_child"];;
 
-            _child setTowParent objNull;
+            [_parent, _child] call FUNC(detach);
 
             _parent removeEventHandler ["RopeBreak", _parent getVariable QGVAR(ropeBreakEventHandler)];
             _parent setVariable [QGVAR(ropeBreakEventHandler), -1];
-        }]];
+        }], true];
 
         _args set [0, TOW_STATE_CLEANUP];
     };

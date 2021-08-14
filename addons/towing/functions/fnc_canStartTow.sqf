@@ -17,4 +17,4 @@
  */
 params ["_unit", "_target"];
 
-true
+!(_target getVariable [QGVAR(towing), false])

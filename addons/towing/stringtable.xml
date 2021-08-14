@@ -5,7 +5,10 @@
             <English>Towing</English>
         </Key>
         <Key ID="STR_ACE_Towing_start">
-            <English>Attach Rope</English>
+            <English>Attach Tow Rope</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_detach">
+            <English>Detach Tow Rope</English>
         </Key>
     </Package>
 </Project>

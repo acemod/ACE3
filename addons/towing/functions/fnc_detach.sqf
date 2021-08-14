@@ -1,0 +1,30 @@
+#include "script_component.hpp"
+/*
+ * Author: Brandon (TCVM)
+ * Detaches child from parent, and gives rope item back
+ *
+ * Arguments:
+ * 0: Parent <OBJECT>
+ * 1: Child <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, cursorObject] call ace_towing_fnc_detach
+ *
+ * Public: No
+ */
+params ["_parent", "_child"];
+
+private _rope = _child getVariable [QGVAR(rope), objNull];
+ropeDestroy _rope;
+
+private _hook = _child getVariable [QGVAR(hook), objNull];
+deleteVehicle _hook;
+
+_child setTowParent objNull;
+
+_child setVariable [QGVAR(towing), false, true];
+_parent setVariable [QGVAR(towing), false, true];
+
