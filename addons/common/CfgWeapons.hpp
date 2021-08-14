@@ -46,7 +46,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(descriptionShort);
     };
 
-    class ACE_rope3: ACE_ItemCore {
+    class ACE_rope3: ACE_ropeBase {
         scope = 2;
         GVAR(ropeLength) = 3.2;
         displayName = CSTRING(Rope_3_Display);
@@ -54,7 +54,7 @@ class CfgWeapons {
             mass = 6;
         };
     };
-    class ACE_rope6: ACE_ItemCore {
+    class ACE_rope6: ACE_ropeBase {
         scope = 2;
         GVAR(ropeLength) = 6.2;
         displayName = CSTRING(Rope_6_Display);
