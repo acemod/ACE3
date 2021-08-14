@@ -4,6 +4,9 @@
 GVAR(mouseLeft) = false;
 GVAR(mouseRight) = false;
 
+GVAR(cancel) = false;
+GVAR(canAttach) = false;
+
 [QGVAR(lockVehicle), {
     params ["_vehicle", "_lock"];
     if (_lock) then {

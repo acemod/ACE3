@@ -15,10 +15,9 @@
  *
  * Public: No
  */
-params ["_unit", "_target", "_ignoreParent", "_ignoreRope"];
+params ["_unit", "_target", "_ignoreParent", "_ignoreRope", "_source", "_maxRange"];
 
 private _viewDirection = getCameraViewDirection _unit;
-
 GVAR(attachHelper) setPosASL (_unit modelToWorldVisualWorld [0, 1, 1.5]);
 
 private _hintLMB = "";
@@ -52,6 +51,22 @@ if (_intersections isNotEqualTo []) then {
         GVAR(attachHelper) setVariable [QGVAR(object), _intersectObject];
     };
     
+};
+
+if (_source isNotEqualTo [0, 0, 0]) then {
+    private _distanceFromSource = _source vectorDistance getPosASLVisual GVAR(attachHelper);
+    if (_distanceFromSource > _maxRange) then {
+        GVAR(canAttach) = false;
+
+        private _direction = _source vectorFromTo getPosASLVisual GVAR(attachHelper);
+        GVAR(attachHelper) setPosASL (_source vectorAdd (_direction vectorMultiply _maxRange));
+
+        if (_distanceFromSource > _maxRange + 2) then {
+            GVAR(cancel) = true;
+        } else {
+            GVAR(cancel) = false;
+        };
+    };
 };
 
 private _hint = [_hintLMB, _hintRMB];

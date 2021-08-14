@@ -35,7 +35,7 @@ if (_exitCondition) then {
 switch (_state) do {
     case TOW_STATE_ATTACH_PARENT: {
         TRACE_2("state attach parent",_unit,_parent);
-        [_unit, _parent, objNull, objNull] call FUNC(attachRopePFH);
+        [_unit, _parent, objNull, objNull, [0, 0, 0], _length] call FUNC(attachRopePFH);
 
         if (GVAR(canAttach) && { GVAR(mouseLeft) }) then {
             _args set [0, TOW_STATE_ATTACH_CHILD];
@@ -51,14 +51,15 @@ switch (_state) do {
     };
     case TOW_STATE_ATTACH_CHILD: {
         TRACE_3("state attach child",_unit,_parent,_rope);
-        [_unit, objNull, _parent, _rope] call FUNC(attachRopePFH);
+        [_unit, objNull, _parent, _rope, getPosASLVisual _rope, _length] call FUNC(attachRopePFH);
 
         if (GVAR(canAttach) && { GVAR(mouseLeft) }) then {
             _args set [0, TOW_STATE_ATTACH];
         };
 
-        if (GVAR(mouseRight)) then {
+        if (GVAR(mouseRight) || GVAR(cancel)) then {
             _args set [0, TOW_STATE_CANCEL];
+            GVAR(cancel) = false;
         };
     };
     case TOW_STATE_ATTACH: {
