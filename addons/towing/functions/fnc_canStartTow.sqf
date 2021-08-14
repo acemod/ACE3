@@ -18,12 +18,14 @@
 params ["_unit", "_target"];
 
 private _hasRope = (
-    [_unit, "ACE_Rope12"] call EFUNC(common,hasItem) || 
-    { [_unit, "ACE_Rope15"] call EFUNC(common,hasItem)) } ||
-    { [_unit, "ACE_Rope15"] call EFUNC(common,hasItem)) } ||
-    { [_unit, "ACE_Rope18"] call EFUNC(common,hasItem)) } || 
-    { [_unit, "ACE_Rope27"] call EFUNC(common,hasItem)) } ||
-    { [_unit, "ACE_Rope36"] call EFUNC(common,hasItem)) }
+    { [_unit, "ACE_Rope3"] call EFUNC(common,hasItem) } || 
+    { [_unit, "ACE_Rope6"] call EFUNC(common,hasItem) } || 
+    { [_unit, "ACE_Rope12"] call EFUNC(common,hasItem) } || 
+    { [_unit, "ACE_Rope15"] call EFUNC(common,hasItem) } ||
+    { [_unit, "ACE_Rope15"] call EFUNC(common,hasItem) } ||
+    { [_unit, "ACE_Rope18"] call EFUNC(common,hasItem) } || 
+    { [_unit, "ACE_Rope27"] call EFUNC(common,hasItem) } ||
+    { [_unit, "ACE_Rope36"] call EFUNC(common,hasItem) }
 );
 
 !(_target getVariable [QGVAR(towing), false]) && _hasRope;
