@@ -13,3 +13,8 @@ GVAR(mouseRight) = false;
     };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setTowParent), {
+    params ["_parent", "_child"];
+    _child setTowParent _parent;
+}] call CBA_fnc_addEventHandler;
+

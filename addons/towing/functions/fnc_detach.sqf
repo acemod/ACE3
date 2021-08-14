@@ -23,7 +23,8 @@ ropeDestroy _rope;
 private _hook = _child getVariable [QGVAR(hook), objNull];
 deleteVehicle _hook;
 
-_child setTowParent objNull;
+[QGVAR(setTowParent), [objNull, _child], _child] call CBA_fnc_targetEvent;
+[QGVAR(lockVehicle), [_child, false]] call CBA_fnc_globalEvent;
 
 _child setVariable [QGVAR(towing), false, true];
 _parent setVariable [QGVAR(towing), false, true];

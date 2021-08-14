@@ -73,6 +73,7 @@ switch (_state) do {
             ERROR_MSG("_child isEqualTo _parent");
         };
 
+        [QGVAR(setTowParent), [_parent, _child], _parent] call CBA_fnc_targetEvent;
         [QGVAR(lockVehicle), [_child, true]] call CBA_fnc_globalEvent;
         _child setTowParent _parent; // to:do - call this on the machine local to parent
 

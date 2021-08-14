@@ -17,8 +17,6 @@
  */
 params ["_target", "_checkType"];
 
-systemChat str [_this];
-
 // need toLower since apparently this isn't case sensitive
 private _simulationType = getText ((configOf _target) >> "simulation");
 TRACE_1("sim type",_simulationType);
