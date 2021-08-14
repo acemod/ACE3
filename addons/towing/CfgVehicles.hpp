@@ -76,7 +76,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(detach);
-				condition = "true";
+                condition = "true";
                 statement = QUOTE(private _parent = _target getVariable [ARR_2(QQGVAR(parent), objNull)]; private _child = _target getVariable [ARR_2(QQGVAR(child), objNull)]; [ARR_3(_player,_parent,_child)] call FUNC(detach));
                 distance = 2;
             };
