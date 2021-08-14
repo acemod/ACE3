@@ -29,7 +29,7 @@ private _exitCondition = !(
 );
 
 if (_exitCondition) then {
-    _state = TOW_STATE_CLEANUP;
+    _state = TOW_STATE_CANCEL;
 };
 
 switch (_state) do {
@@ -75,7 +75,6 @@ switch (_state) do {
 
         [QGVAR(setTowParent), [_parent, _child], _parent] call CBA_fnc_targetEvent;
         [QGVAR(lockVehicle), [_child, true]] call CBA_fnc_globalEvent;
-        _child setTowParent _parent; // to:do - call this on the machine local to parent
 
         GVAR(attachHelper) ropeDetach _rope;
         [_child, _relativeAttachPos] ropeAttachTo _rope;
@@ -94,9 +93,9 @@ switch (_state) do {
         _parent setVariable [QGVAR(towing), true, true];
 
         _parent setVariable [QGVAR(ropeBreakEventHandler), _parent addEventHandler ["RopeBreak", {
-            params ["_parent", "_rope", "_child"];;
+            params ["_parent", "_rope", "_child"];
 
-            [_parent, _child] call FUNC(detach);
+            [objNull, _parent, _child] call FUNC(detach);
 
             _parent removeEventHandler ["RopeBreak", _parent getVariable QGVAR(ropeBreakEventHandler)];
             _parent setVariable [QGVAR(ropeBreakEventHandler), -1];
@@ -107,7 +106,7 @@ switch (_state) do {
     case TOW_STATE_CANCEL: {
         TRACE_1("state cancel",_rope);
         ropeDestroy _rope;
-        _unit addItem _ropeClass;
+        [_unit, _ropeClass, true] call CBA_fnc_addItem;
         _args set [0, TOW_STATE_CLEANUP];
     };
     case TOW_STATE_CLEANUP: {

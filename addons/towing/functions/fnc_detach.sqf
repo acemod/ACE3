@@ -18,6 +18,9 @@
 params ["_unit", "_parent", "_child"];
 TRACE_3("detach",_unit,_parent,_child);
 
+_parent removeEventHandler ["RopeBreak", _parent getVariable QGVAR(ropeBreakEventHandler)];
+_parent setVariable [QGVAR(ropeBreakEventHandler), -1];
+
 private _rope = _child getVariable [QGVAR(rope), objNull];
 ropeDestroy _rope;
 
