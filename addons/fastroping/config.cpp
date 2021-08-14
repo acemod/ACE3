@@ -19,4 +19,4 @@ class CfgPatches {
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWaypoints.hpp"
-#include "CfgWeapons.hpp"
+
