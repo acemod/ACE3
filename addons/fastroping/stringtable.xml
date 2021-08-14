@@ -156,6 +156,30 @@
             <Czech>UMOŽNIT JEDNOTKÁM SLAŇOVAT</Czech>
             <Spanish>INDICAR A LAS UNIDADES DESCENDER POR LA CUERDA</Spanish>
         </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes3">
+            <English>Deploy 3m ropes</English>
+            <German>3m Seile einsetzen</German>
+            <French>Déployer les cordes de 3 m</French>
+            <Polish>Wysuń linę o długości 3 m.</Polish>
+            <Russian>Выпустить 3 м канат</Russian>
+            <Portuguese>Jogar cordar (3m)</Portuguese>
+            <Italian>Dispiegamento corde 3m</Italian>
+            <Czech>Připravit 3m lana</Czech>
+            <Turkish>3m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 3m</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes6">
+            <English>Deploy 6m ropes</English>
+            <German>6m Seile einsetzen</German>
+            <French>Déployer les cordes de 6 m</French>
+            <Polish>Wysuń linę o długości 6 m.</Polish>
+            <Russian>Выпустить 6 м канат</Russian>
+            <Portuguese>Jogar cordar (6m)</Portuguese>
+            <Italian>Dispiegamento corde 6m</Italian>
+            <Czech>Připravit 6m lana</Czech>
+            <Turkish>6m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 6m</Spanish>
+        </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>
             <German>12m Seile einsetzen</German>

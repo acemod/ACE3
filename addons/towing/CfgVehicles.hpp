@@ -9,10 +9,46 @@ class ACE_Actions {\
             exceptions[] = { INTERACTION_EXCEPTIONS };\
             showDisabled = 0;\
             icon = "";\
-            class GVAR(startTow) {\
-                displayName = CSTRING(start);\
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canStartTow));\
-                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startTow));\
+            class GVAR(startTow3) {\
+                displayName = CSTRING(start3);\
+                condition = QUOTE(([ARR_2(_player,_target)] call FUNC(canStartTow)) && [ARR_2(_player, 'ACE_rope3')] call EFUNC(common,hasItem));\
+                statement = QUOTE([ARR_3(_player,_target,'ACE_rope3')] call FUNC(startTow));\
+                exceptions[] = { INTERACTION_EXCEPTIONS };\
+            };\
+            class GVAR(startTow6) {\
+                displayName = CSTRING(start6);\
+                condition = QUOTE(([ARR_2(_player,_target)] call FUNC(canStartTow)) && [ARR_2(_player, 'ACE_rope6')] call EFUNC(common,hasItem));\
+                statement = QUOTE([ARR_3(_player,_target,'ACE_rope6')] call FUNC(startTow));\
+                exceptions[] = { INTERACTION_EXCEPTIONS };\
+            };\
+            class GVAR(startTow12) {\
+                displayName = CSTRING(start12);\
+                condition = QUOTE(([ARR_2(_player,_target)] call FUNC(canStartTow)) && [ARR_2(_player, 'ACE_rope12')] call EFUNC(common,hasItem));\
+                statement = QUOTE([ARR_3(_player,_target,'ACE_rope12')] call FUNC(startTow));\
+                exceptions[] = { INTERACTION_EXCEPTIONS };\
+            };\
+            class GVAR(startTow15) {\
+                displayName = CSTRING(start15);\
+                condition = QUOTE(([ARR_2(_player,_target)] call FUNC(canStartTow)) && [ARR_2(_player, 'ACE_rope15')] call EFUNC(common,hasItem));\
+                statement = QUOTE([ARR_3(_player,_target,'ACE_rope15')] call FUNC(startTow));\
+                exceptions[] = { INTERACTION_EXCEPTIONS };\
+            };\
+            class GVAR(startTow18) {\
+                displayName = CSTRING(start18);\
+                condition = QUOTE(([ARR_2(_player,_target)] call FUNC(canStartTow)) && [ARR_2(_player, 'ACE_rope18')] call EFUNC(common,hasItem));\
+                statement = QUOTE([ARR_3(_player,_target,'ACE_rope18')] call FUNC(startTow));\
+                exceptions[] = { INTERACTION_EXCEPTIONS };\
+            };\
+            class GVAR(startTow27) {\
+                displayName = CSTRING(start27);\
+                condition = QUOTE(([ARR_2(_player,_target)] call FUNC(canStartTow)) && [ARR_2(_player, 'ACE_rope27')] call EFUNC(common,hasItem));\
+                statement = QUOTE([ARR_3(_player,_target,'ACE_rope27')] call FUNC(startTow));\
+                exceptions[] = { INTERACTION_EXCEPTIONS };\
+            };\
+            class GVAR(startTow36) {\
+                displayName = CSTRING(start36);\
+                condition = QUOTE(([ARR_2(_player,_target)] call FUNC(canStartTow)) && [ARR_2(_player, 'ACE_rope36')] call EFUNC(common,hasItem));\
+                statement = QUOTE([ARR_3(_player,_target,'ACE_rope36')] call FUNC(startTow));\
                 exceptions[] = { INTERACTION_EXCEPTIONS };\
             };\
         };\
@@ -41,7 +77,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(detach);
 				condition = "true";
-                statement = QUOTE(private _parent = _target getVariable [ARR_2(QQGVAR(parent), objNull)]; private _child = _target getVariable [ARR_2(QQGVAR(child), objNull)]; [ARR_2(_parent,_child)] call FUNC(detach));
+                statement = QUOTE(private _parent = _target getVariable [ARR_2(QQGVAR(parent), objNull)]; private _child = _target getVariable [ARR_2(QQGVAR(child), objNull)]; [ARR_3(_player,_parent,_child)] call FUNC(detach));
                 distance = 2;
             };
         };

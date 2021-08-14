@@ -16,7 +16,7 @@
  * Public: No
  */
 params ["_args", "_handle"];
-_args params ["_state", "_unit", "_parent", "_rope"];
+_args params ["_state", "_unit", "_parent", "_rope", "_length", "_ropeClass"];
 
 private _exitCondition = !(
     (alive GVAR(attachHelper)) &&
@@ -39,7 +39,7 @@ switch (_state) do {
 
         if (GVAR(canAttach) && { GVAR(mouseLeft) }) then {
             _args set [0, TOW_STATE_ATTACH_CHILD];
-            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), 15];
+            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), _length];
             [GVAR(attachHelper), [0, 0, 0]] ropeAttachTo _rope;
 
             _args set [3, _rope];
@@ -88,6 +88,8 @@ switch (_state) do {
         _child setVariable [QGVAR(rope), _rope, true];
         _child setVariable [QGVAR(hook), _hook, true];
 
+        _hook setVariable [QGVAR(ropeClass), _ropeClass, true];
+
         _child setVariable [QGVAR(towing), true, true];
         _parent setVariable [QGVAR(towing), true, true];
 
@@ -105,6 +107,7 @@ switch (_state) do {
     case TOW_STATE_CANCEL: {
         TRACE_1("state cancel",_rope);
         ropeDestroy _rope;
+        _unit addItem _ropeClass;
         _args set [0, TOW_STATE_CLEANUP];
     };
     case TOW_STATE_CLEANUP: {
