@@ -16,9 +16,13 @@
  */
 if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle null (Map intros)
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
+
     private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
     _staminaBarContainer ctrlSetFade 1;
     _staminaBarContainer ctrlCommit 1;
+
+    private _speedIndicator = uiNamespace getVariable [QGVAR(speedIndicator), controlNull];
+    _speedIndicator ctrlSetText "";
 };
 
 private _currentWork = REE;
@@ -76,6 +80,10 @@ private _perceivedFatigue = 1 - (_anReservePercentage min _aeReservePercentage);
 
 if (GVAR(enableStaminaBar)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);
+};
+
+if (GVAR(enableSpeedIndicator)) then {
+    [] call FUNC(handleSpeedIndicator);
 };
 
 [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;

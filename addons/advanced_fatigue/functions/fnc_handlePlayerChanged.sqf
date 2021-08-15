@@ -37,6 +37,7 @@ _newUnit enableStamina false;
 if (_newUnit getVariable [QGVAR(animHandler), -1] == -1) then {
     private _animHandler = _newUnit addEventHandler ["AnimChanged", {
         GVAR(animDuty) = _this call FUNC(getAnimDuty);
+        GVAR(animState) = _this select 1;
     }];
     TRACE_1("add new",_animHandler);
     _newUnit setVariable [QGVAR(animHandler), _animHandler];
@@ -63,3 +64,4 @@ GVAR(ae2PathwayPower) = GVAR(peakPower) / (13.3 + 16.7 + 113.3) * 16.7 * ANTPERC
 GVAR(ppeBlackoutLast) = 100;
 GVAR(lastBreath)      = 0;
 GVAR(animDuty)        = [_newUnit, animationState _newUnit] call FUNC(getAnimDuty);
+GVAR(animState)       = animationState _newUnit;
