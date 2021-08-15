@@ -281,7 +281,7 @@ class ACE_Medical_Injuries {
         class burning {
             //burning damage used to be type 'unknown' so this is a copy-paste of that
             //TODO: proper burn wound
-            thresholds[] = {{0.1, 1}, {0.1, 0}};
+            thresholds[] = {{0.01, 1}, {0.01, 0}};
             selectionSpecific = 0;
             woundsHandler = QFUNC(woundsHandlerBurning);
             class Abrasion {
