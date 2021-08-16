@@ -14,8 +14,8 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_ADVANCED_FATIGUE
 #endif
 
-#include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\z\ace\addons\main\script_macros.hpp"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
 
 #define ANTPERCENT 0.8
 #define SIM_BODYMASS 70
