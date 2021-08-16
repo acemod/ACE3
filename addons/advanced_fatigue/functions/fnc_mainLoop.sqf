@@ -16,13 +16,9 @@
  */
 if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle null (Map intros)
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
-
     private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
     _staminaBarContainer ctrlSetFade 1;
     _staminaBarContainer ctrlCommit 1;
-
-    private _speedIndicator = uiNamespace getVariable [QGVAR(speedIndicator), controlNull];
-    _speedIndicator ctrlSetText "";
 };
 
 private _currentWork = REE;
