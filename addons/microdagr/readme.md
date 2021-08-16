@@ -9,7 +9,9 @@ Enter waypoints from the menu or double tapping on the minimap.
 Can interface with the `ace_vector`. Hold Azimuth+Range and release (see page 14 of vector's manual)
 
 #### Items Added:
-`ACE_microDAGR`## For Mission Makers:
+`ACE_microDAGR`
+
+## For Mission Makers:
 
 #### Modules:
 - MicroDAGR Map Fill - Controls the amount of map data available for the minimap. Can limit to just roads/topographical or disable entirely.
