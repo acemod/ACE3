@@ -13,7 +13,7 @@ All contributors may add themselves to the `AUTHORS.txt` file (email address opt
 
 The `authors` array property in `config.cpp` files will generally contain the original component author(s) and is otherwise reserved for individuals who have contributed significantly to a component (decided at the discretion of the ACE team). Do not add yourself without consent.
 
-The `author` string property in `config.cpp` files will always contain the common ACE team string (`ECSTRING(common,ACETeam)`) to reflect component maintanence and keep things consistent.
+The `author` string property in `config.cpp` files will always contain the common ACE team string (`ECSTRING(common,ACETeam)`) to reflect component maintenance and keep things consistent.
 
 #### Merge Criteria
 
