@@ -82,8 +82,4 @@ if (GVAR(enableStaminaBar)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);
 };
 
-if (GVAR(enableSpeedIndicator)) then {
-    [] call FUNC(handleSpeedIndicator);
-};
-
 [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
