@@ -12,7 +12,6 @@ class RscInGameUI {
             y = IGUI_GRID_STANCE_Y + IGUI_GRID_STANCE_HAbs - SPEED_INDICATOR_Y_OFFSET);
             w = SPEED_INDICATOR_W;
             h = SPEED_INDICATOR_H;
-
         };
     };
 };
