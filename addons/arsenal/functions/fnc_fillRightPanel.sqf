@@ -73,12 +73,13 @@ private _fnc_fill_right_Container = {
     _ctrlPanel lbSetTooltip [_lbAdd * _columns,format ["%1\n%2", _displayName, _x]];
 };
 
+private _cfgWeapons = configFile >> "CfgWeapons";
 // Retrieve compatible mags
 private _compatibleItems = [];
 private _compatibleMagazines = [[[], []], [[], []], [[], []]];
 {
     if (_x != "") then {
-        private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
+        private _weaponConfig = (_cfgWeapons >> _x);
         private _index = _forEachIndex;
 
         {
@@ -116,6 +117,7 @@ switch (GVAR(currentLeftPanel)) do {
         _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 0 select 0;
         _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 0 select 1;
         _compatibleItems = (primaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        _compatibleItems apply {configName (_cfgWeapons >> _x)};
         _itemsToCheck = GVAR(currentItems) select 18;
     };
 
@@ -123,6 +125,7 @@ switch (GVAR(currentLeftPanel)) do {
         _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 1 select 0;
         _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 1 select 1;
         _compatibleItems = (handgunWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        _compatibleItems apply {configName (_cfgWeapons >> _x)};
         _itemsToCheck = GVAR(currentItems) select 20;
     };
 
@@ -130,6 +133,7 @@ switch (GVAR(currentLeftPanel)) do {
         _compatibleMagsPrimaryMuzzle = _compatibleMagazines select 2 select 0;
         _compatibleMagsSecondaryMuzzle = _compatibleMagazines select 2 select 1;
         _compatibleItems = (secondaryWeapon GVAR(center)) call bis_fnc_compatibleItems;
+        _compatibleItems apply {configName (_cfgWeapons >> _x)};
         _itemsToCheck = GVAR(currentItems) select 19;
     };
 

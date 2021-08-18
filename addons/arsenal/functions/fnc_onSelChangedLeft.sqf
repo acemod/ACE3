@@ -28,8 +28,10 @@ private _selectCorrectPanelWeapon = [_weaponDefaultRightPanel, _display displayC
 private _containerDefaultRightPanel = _display displayCtrl IDC_buttonMisc;
 private _selectCorrectPanelContainer = [_containerDefaultRightPanel, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
 
+private _cfgWeapons = configFile >> "CfgWeapons";
+
 private _fnc_clearPreviousWepMags = {
-    private _compatibleMags = getArray (configfile >> "cfgweapons" >> _baseWeapon >> "magazines");
+    private _compatibleMags = getArray (_cfgWeapons >> _baseWeapon >> "magazines");
     {
         GVAR(center) removeMagazines _x;
     } foreach _compatibleMags;
@@ -57,6 +59,7 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = _item call bis_fnc_compatibleItems;
+                _compatibleItems apply {configName (_cfgWeapons >> _x)};
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
@@ -99,6 +102,7 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = _item call bis_fnc_compatibleItems;
+                _compatibleItems apply {configName (_cfgWeapons >> _x)};
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
@@ -140,6 +144,7 @@ switch (GVAR(currentLeftPanel)) do {
                 call _fnc_clearPreviousWepMags;
 
                 private _compatibleItems = _item call bis_fnc_compatibleItems;
+                _compatibleItems apply {configName (_cfgWeapons >> _x)};
                 private _cfgMags = configFile >> "CfgMagazines";
                 private _compatibleMags = ([_item, true] call CBA_fnc_compatibleMagazines) select { getNumber (_cfgMags >> _x >> "scope") == 2 };
                 GVAR(center) addWeapon _item;
