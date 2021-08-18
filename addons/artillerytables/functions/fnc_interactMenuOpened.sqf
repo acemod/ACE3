@@ -19,7 +19,7 @@ params ["_menuType"];
 TRACE_1("interactMenuOpened",_menuType);
 
 if (_menuType != 1) exitWith {};
-if !([ace_player, "ACE_artilleryTable"] call EFUNC(common,hasItem)) exitWith {};
+if !([ACE_player, "ACE_artilleryTable"] call EFUNC(common,hasItem)) exitWith {};
 
 private _vehicleAdded = ace_player getVariable [QGVAR(vehiclesAdded), []];
 private _rangeTablesShown = ace_player getVariable [QGVAR(rangeTablesShown), []];
