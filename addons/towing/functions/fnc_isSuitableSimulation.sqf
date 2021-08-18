@@ -15,15 +15,12 @@
  *
  * Public: No
  */
-params ["_target", "_checkType"];
+params ["_target"];
 
 // need toLower since apparently this isn't case sensitive
 private _simulationType = getText ((configOf _target) >> "simulation");
 TRACE_1("sim type",_simulationType);
 
-if (_checkType == 0) then {
-    (toLower _simulationType) in ["tankx", "carx"]
-} else {
-    (toLower _simulationType) in ["carx"]
-}
+// Biki lies, you can both tow and tow as either TankX or CarX
+(toLower _simulationType) in ["tankx", "carx"]
 

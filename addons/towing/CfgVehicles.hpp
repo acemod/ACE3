@@ -4,7 +4,7 @@ class ACE_Actions {\
         class ADDON {\
             displayName = CSTRING(displayName);\
             distance = TOW_ACTION_DISTANCE;\
-            condition = QUOTE([ARR_2(_target, 0)] call FUNC(isSuitableSimulation));\
+            condition = QUOTE([ARR_1(_target)] call FUNC(isSuitableSimulation));\
             statement = "";\
             exceptions[] = { INTERACTION_EXCEPTIONS };\
             showDisabled = 0;\

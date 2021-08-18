@@ -41,7 +41,7 @@ if (_intersections isNotEqualTo []) then {
     _intersectionToUse params ["_intersectPosition", "", "_intersectObject"];
 
     // if we have a target object, we assume we are attaching to the parent. If no target object, we are attaching to child
-    GVAR(canAttach) = (_intersectObject isNotEqualTo _ignoreParent) && { (!isNull _target && { _intersectObject isEqualTo _target }) || { isNull _target && { [_intersectObject, 1] call FUNC(isSuitableSimulation) }}} && { !(_intersectObject getVariable [QGVAR(towing), false]) };
+    GVAR(canAttach) = (_intersectObject isNotEqualTo _ignoreParent) && { (!isNull _target && { _intersectObject isEqualTo _target }) || { isNull _target && { [_intersectObject] call FUNC(isSuitableSimulation) }}} && { !(_intersectObject getVariable [QGVAR(towing), false]) };
 
     if (GVAR(canAttach)) then {
         TRACE_4("can attach",_target,_intersectObject,_ignoreParent,_ignoreRope);
