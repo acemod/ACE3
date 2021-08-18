@@ -151,7 +151,13 @@ private _putList = [];
         };
         // Rifle, handgun, secondary weapons mags
         case (
-                (getNumber (_x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL,TYPE_MAGAZINE_MISSILE]) ||
+                (getNumber (_x >> "type") in [
+                    TYPE_MAGAZINE_PRIMARY_AND_THROW,
+                    TYPE_MAGAZINE_SECONDARY_AND_PUT,
+                    1536, // Magic number, bad touch
+                    TYPE_MAGAZINE_HANDGUN_AND_GL,
+                    TYPE_MAGAZINE_MISSILE
+                ]) ||
                 {getNumber (_x >> QGVAR(hide)) isEqualTo -1}
             ): {
             (_cargo select 2) pushBackUnique _className;
