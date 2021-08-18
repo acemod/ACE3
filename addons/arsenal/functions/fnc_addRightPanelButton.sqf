@@ -47,6 +47,7 @@ if (_position >= 0 && _position <= 9) then {
         {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
         {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"}
     };
+    _items apply {configName (_cfgWeapons >> _x)};
 
     _return = _position;
     GVAR(customRightPanelButtons) set [_position, [_items, _picture, _tooltip]];

@@ -46,6 +46,8 @@ private _cargo = _object getVariable [QGVAR(virtualItems), [
 ]];
 
 private _configCfgWeapons = configFile >> "CfgWeapons"; //Save this lookup in variable for perf improvement
+private _configCfgMagazines = configFile >> "CfgMagazines";
+private _configCfgVehicles = configFile >> "CfgVehicles";
 
 if (_items isEqualType true) then {
     if (_items) then {
@@ -77,6 +79,7 @@ if (_items isEqualType true) then {
             private _simulationType = getText (_configCfgWeapons >> _x >> "simulation");
             switch true do {
                 case (isClass (_configCfgWeapons >> _x)): {
+                    _x = configName (_configCfgWeapons >> _x);
                     switch true do {
                         /* Weapon acc */
                         case (
@@ -175,7 +178,8 @@ if (_items isEqualType true) then {
                         };
                     };
                 };
-                case (isClass (configFile >> "CfgMagazines" >> _x)): {
+                case (isClass (_configCfgMagazines >> _x)): {
+                    _x = configName (_configCfgMagazines >> _x);
                     // Lists to check against
                     private _grenadeList = [];
                     {
@@ -191,15 +195,6 @@ if (_items isEqualType true) then {
 
                     // Check what the magazine actually is
                     switch true do {
-                        // Rifle, handgun, secondary weapons mags
-                        case (
-                                ((getNumber (configFile >> "CfgMagazines" >> _x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) ||
-                                {(getNumber (configFile >> "CfgMagazines" >> _x >> QGVAR(hide))) == -1}) &&
-                                {!(_x in _grenadeList)} &&
-                                {!(_x in _putList)}
-                            ): {
-                            (_cargo select 2) pushBackUnique _x;
-                        };
                         // Grenades
                         case (_x in _grenadeList): {
                             (_cargo select 15) pushBackUnique _x;
@@ -208,14 +203,23 @@ if (_items isEqualType true) then {
                         case (_x in _putList): {
                             (_cargo select 16) pushBackUnique _x;
                         };
+                        // Rifle, handgun, secondary weapons mags
+                        case (
+                                ((getNumber (_configCfgMagazines >> _x >> "type") in [TYPE_MAGAZINE_PRIMARY_AND_THROW,TYPE_MAGAZINE_SECONDARY_AND_PUT,1536,TYPE_MAGAZINE_HANDGUN_AND_GL]) ||
+                                {(getNumber (_configCfgMagazines >> _x >> QGVAR(hide))) == -1})
+                            ): {
+                            (_cargo select 2) pushBackUnique _x;
+                        };
                     };
                 };
-                case (isClass (configFile >> "CfgVehicles" >> _x)): {
-                    if (getNumber (configFile >> "CfgVehicles" >> _x >> "isBackpack") == 1) then {
+                case (isClass (_configCfgVehicles >> _x)): {
+                    _x = configName (_configCfgVehicles >> _x);
+                    if (getNumber (_configCfgVehicles >> _x >> "isBackpack") == 1) then {
                         (_cargo select 6) pushBackUnique _x;
                     };
                 };
                 case (isClass (configFile >> "CfgGlasses" >> _x)): {
+                    _x = configName (configFile >> "CfgGlasses" >> _x);
                     (_cargo select 7) pushBackUnique _x;
                 };
             };

@@ -20,10 +20,11 @@ private _cacheNamespace = _ctrlPanel; //For better readability.
 
 private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_className, []];
 
+private _configPath = configFile >> _configCategory >> _className;
+private _className = configName _configPath;
+
 //_cachedItemInfo == [_displayName, _itemPicture, _modPicture]
 if (_cachedItemInfo isEqualTo []) then {//Not in cache. So get info and put into cache.
-
-    private _configPath = configFile >> _configCategory >> _className;
 
     _cachedItemInfo set [0, getText (_configPath >> "displayName")];
     //if _pictureEntryName is empty then this item has no Icons. (Faces)
