@@ -19,16 +19,10 @@
 
 params [["_unit", objNull, [objNull]], ["_item", "", ["", [""]]], ["_checkAll", false, [false]]];
 
-if (_item isEqualType "") then {
-    _item = [_item];
-};
-
-private _return = false;
 private _unitItems = _unit call FUNC(uniqueItems);
 
-{
-    _return = _x in _unitItems;
-    if ([_return, !_return] select _checkAll) then {break};
-} forEach _item;
+if (_item isEqualType "") exitWith { _item in _unitItems };
 
-_return
+if (_checkAll) exitWith { _item findIf {!(_x in _unitItems)} == -1 };
+
+_item findIf {_x in _unitItems} != -1
