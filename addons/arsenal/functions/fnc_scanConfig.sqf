@@ -169,7 +169,7 @@ private _putList = [];
     (_cargo select 7) pushBackUnique (configName _x);
 } foreach configProperties [(configFile >> "CfgGlasses"), "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
-private _magazineGroups = [[],[]] call CBA_fnc_hashCreate;
+private _magazineGroups = createHashMap;
 
 private _cfgMagazines = configFile >> "CfgMagazines";
 
@@ -181,7 +181,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
         _magList append _magazines;
     } foreach configProperties [_x, "isArray _x", true];
 
-    [_magazineGroups, configName _x, _magList arrayIntersect _magList] call CBA_fnc_hashSet;
+    _magazineGroups set [configName _x, _magList arrayIntersect _magList];
 } foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
 
 uiNamespace setVariable [QGVAR(configItems), _cargo];
