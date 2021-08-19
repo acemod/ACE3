@@ -38,6 +38,7 @@ private _itemsToAdd = [];
 if (_category == 8) then {
     private _magazineGroups = uiNamespace getVariable QGVAR(magazineGroups);
     private _cfgMagazines = configFile >> "CfgMagazines";
+    private _cfgMagazineWells = configFile >> "CfgMagazineWells";
 
     {
         private _weaponConfig = _cfgWeapons >> _x;
@@ -52,7 +53,7 @@ if (_category == 8) then {
 
             {
                 _itemsToAdd append (_magazineGroups get _x);
-            } forEach getArray ((_muzzleConfig >> "magazineWell") apply {configName (_cfgMagazines >> _x)});
+            } forEach getArray ((_muzzleConfig >> "magazineWell") apply {configName (_cfgMagazineWells >> _x)});
         } forEach getArray (_weaponConfig >> "muzzles");
     } forEach _attributeWeapons;
 } else {

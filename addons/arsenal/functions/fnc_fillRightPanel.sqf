@@ -74,6 +74,8 @@ private _fnc_fill_right_Container = {
 };
 
 private _cfgWeapons = configFile >> "CfgWeapons";
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgMagazineWells = configFile >> "CfgMagazineWells";
 // Retrieve compatible mags
 private _compatibleItems = [];
 private _compatibleMagazines = [[[], []], [[], []], [[], []]];
@@ -85,16 +87,21 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
         {
             private _subIndex = _forEachIndex min 1;
             {
-                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
-            } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
+                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (_cfgMagazines >> _x))
+            } foreach ([
+                getArray (_weaponConfig >> _x >> "magazines") apply {configName (_cfgMagazines >> _x)},
+                getArray (_weaponConfig >> "magazines") apply {configName (_cfgMagazines >> _x)}
+            ] select (_x == "this"));
 
             // Magazine groups
             {
                 private _magazineGroups = uiNamespace getVariable QGVAR(magazineGroups);
                 private _magArray = _magazineGroups get _x;
                 {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
-            } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
-
+            } foreach ([
+                getArray (_weaponConfig >> _x >> "magazineWell") apply {configName (_cfgMagazineWells >> _x)},
+                getArray (_weaponConfig >> "magazineWell") apply {configName (_cfgMagazineWells >> _x)}
+            ] select (_x == "this"));
 
         } foreach getArray (_weaponConfig >> "muzzles");
     };
