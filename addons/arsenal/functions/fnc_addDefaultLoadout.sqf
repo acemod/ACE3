@@ -44,12 +44,12 @@ for "_dataIndex" from 0 to 10 do {
                     if (_weapon isEqualType []) then {
                         private _magazine = _weapon select 0;
                         _magazine = configName (_cfgMagazines >> _magazine);
+                        if (_magazine == "") then {continue}; // Skip null class
                         (_loadout select _dataIndex select _subIndex) set [0, _magazine];
                         continue
                     };
-
+                    _weapon = configName (_cfgWeapons >> _weapon);
                     if (_weapon != "") then {
-                        _weapon = configName (_cfgWeapons >> _weapon);
                         private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
                         if (_weapon != _baseWeapon) then { _weapon = _baseWeapon };
                         (_loadout select _dataIndex) set [_subIndex, _weapon];
@@ -104,7 +104,10 @@ for "_dataIndex" from 0 to 10 do {
                             if (count _x == 3) then { // Magazines
                                 private _magazine = _x select 0;
                                 _magazine = configName (_cfgMagazines >> _magazine);
+                                if (_magazine == "") then {continue}; // Skip null class
+                                systemChat _magazine;
                                 _x set [0, _magazine];
+                                systemChat str (_x);
                             };
                     } foreach _containerContents;
                 };
@@ -113,15 +116,15 @@ for "_dataIndex" from 0 to 10 do {
 
         case 6: { // Headgear
             private _item = _loadout select _dataIndex;
+            _item = configName (_cfgWapons >> _item);
             if (_item != "") then {
-                _item = configName (_cfgWapons >> _item);
                 _loadout set [_dataIndex, _item];
             };
         };
         case 7: { // Facewear
             private _item = _loadout select _dataIndex;
+            _item = configName (_cfgGlasses >> _item);
             if (_item != "") then {
-                _item = configName (_cfgGlasses >> _item);
                 _loadout set [_dataIndex, _item];
             };
         };
@@ -129,9 +132,8 @@ for "_dataIndex" from 0 to 10 do {
         case 9: { // Assigned Items
             for "_subIndex" from 0 to 4 do {
                 private _item = (_loadout select _dataIndex) select _subIndex;
-
+                _item = configName (_cfgWeapons >> _item);
                 if (_item != "") then {
-                    _item = configName (_cfgWeapons >> _item);
                     private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
                     if (_uniqueBaseCfgText != "") then { _item = _uniqueBaseCfgText };
                     (_loadout select _dataIndex) set [_subIndex, _item];
