@@ -269,13 +269,5 @@
             <Polish>Dostosowuje przezroczystość paska na podstawie stanu wytrzymałości.</Polish>
             <Portuguese>Ajusta a transparência da barra baseado no status da stamina</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Advanced_Fatigue_EnableSpeedIndicator">
-            <English>Enable movement speed indicator</English>
-            <Polish>Włącz wskaźnik prędkości poruszania</Polish>
-        </Key>
-        <Key ID="STR_ACE_Advanced_Fatigue_EnableSpeedIndicator_Description">
-            <English>Enables movement speed indicator for player character.</English>
-            <Polish>Włącza wskaźnik prędkości poruszania się dla postaci gracza.</Polish>
-        </Key>
     </Package>
 </Project>

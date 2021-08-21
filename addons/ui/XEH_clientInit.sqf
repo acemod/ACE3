@@ -50,3 +50,5 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
         };
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
+
+["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;

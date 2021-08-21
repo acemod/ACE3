@@ -46,20 +46,6 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(enableSpeedIndicator),
-    "CHECKBOX",
-    [LSTRING(EnableSpeedIndicator), LSTRING(EnableSpeedIndicator_Description)],
-    LSTRING(DisplayName),
-    true,
-    true, {
-        if (!_this) then {
-            private _speedIndicator = uiNamespace getVariable [QGVAR(speedIndicator), controlNull];
-            _speedIndicator ctrlSetText "";
-        };
-    }
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(performanceFactor),
     "SLIDER",
     [LSTRING(PerformanceFactor), LSTRING(PerformanceFactor_Description)],
