@@ -22,7 +22,13 @@ params [
 ];
 if (_newName isEqualTo (groupID _group)) exitWith {true};
 
-private _nameAlreadyTaken = (toLower _newName) in (allGroups apply {toLower (groupID _x)});
+//private _nameAlreadyTaken = (toLower _newName) in (allGroups apply {toLower (groupID _x)});
+private _lowerName = toLower _newName; // Stops "Alpha 1-1" and "alpha 1-1" being compatible names etc.
+private _nameAlreadyTaken = allGroups findIf {
+    side _x isEqualTo side _group
+    && {_lowerName isEqualTo toLower (groupID _x)}
+} != -1;
+
 
 if (_nameAlreadyTaken) then {
     hint LLSTRING(RenameGroupAlreadyExists);
