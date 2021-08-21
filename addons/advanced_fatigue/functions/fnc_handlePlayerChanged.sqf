@@ -37,7 +37,6 @@ _newUnit enableStamina false;
 if (_newUnit getVariable [QGVAR(animHandler), -1] == -1) then {
     private _animHandler = _newUnit addEventHandler ["AnimChanged", {
         GVAR(animDuty) = _this call FUNC(getAnimDuty);
-        (_this select 1) call FUNC(handleSpeedIndicator);
     }];
     TRACE_1("add new",_animHandler);
     _newUnit setVariable [QGVAR(animHandler), _animHandler];
