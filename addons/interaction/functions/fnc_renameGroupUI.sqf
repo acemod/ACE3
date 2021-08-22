@@ -15,7 +15,7 @@
  * Public: No
  */
 
-if !(canSuspend) exitWith {}; // createDisplay must be spawned
+if !(canSuspend && hasInterface) exitWith {}; // createDisplay must be spawned
 
 params [["_unit", objNull, [objNull]]];
 
