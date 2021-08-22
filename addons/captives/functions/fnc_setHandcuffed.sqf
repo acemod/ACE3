@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_unit","_state",["_caller", ""]];
+params ["_unit", "_state", ["_caller", objNull]];
 TRACE_3("params",_unit,_state,_caller);
 
 if (!local _unit) exitWith {
