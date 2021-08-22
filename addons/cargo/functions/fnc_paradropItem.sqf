@@ -29,33 +29,41 @@ private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 4; // 4 meters beh
 TRACE_1("",_distBehind);
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
-private _object = [_item, _posBehindVehicleAGL, _loaded, _vehicle, true] call FUNC(unload);
+private _object = [_item, _posBehindVehicleAGL, _loaded, _vehicle] call FUNC(unload);
 
 _object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5));
 
 // open parachute and ir light effect
 [{
-    params ["_object"];
+    params ["_object", "_vehicle"];
 
     if (isNull _object || {getPos _object select 2 < 1}) exitWith {};
 
-    private _parachute = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "CAN_COLLIDE"];
+    private _objectAttachedTo = attachedTo _object;
+    private _parachuteTypeVehicle = getText (configOf _vehicle >> "VehicleTransport" >> "Cargo" >> "parachuteClass");
+    private _parachuteTypeObject = getText (configOf _object >> "VehicleTransport" >> "Carrier" >> "parachuteClassDefault");
+    if (
+        !(_objectAttachedTo isKindOf _parachuteTypeVehicle) &&
+        !(_objectAttachedTo isKindOf _parachuteTypeObject)
+    ) then {
+        private _velocity = velocity _object;
 
-    // cannot use setPos on parachutes without them closing down
-    _parachute attachTo [_object, [0,0,0]];
-    detach _parachute;
+        private _parachute = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 
-    private _velocity = velocity _object;
+        // cannot use setPos on parachutes without them closing down
+        _parachute attachTo [_object, [0,0,0]];
+        detach _parachute;
+        _object attachTo [_parachute, [0,0,1]];
 
-    _object attachTo [_parachute, [0,0,1]];
-    _parachute setVelocity _velocity;
+        _parachute setVelocity _velocity;
+    };
 
     if ((GVAR(disableParadropEffectsClasstypes) findIf {_object isKindOf _x}) == -1) then {
         private _light = "Chemlight_yellow" createVehicle [0,0,0];
         _light attachTo [_object, [0,0,0]];
     };
 
-}, [_object], 0.7] call CBA_fnc_waitAndExecute;
+}, [_object, _vehicle], 0.7] call CBA_fnc_waitAndExecute;
 
 // smoke effect when crate landed
 [{
