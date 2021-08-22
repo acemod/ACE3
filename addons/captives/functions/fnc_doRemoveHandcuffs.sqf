@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [bob, false] call ACE_captives_fnc_doRemoveHandcuffs
+ * [bob, bill] call ACE_captives_fnc_doRemoveHandcuffs
  *
  * Public: No
  */
