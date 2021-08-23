@@ -18,4 +18,4 @@
 
 params ["_unit", "_target"];
 
-[QGVAR(setHandcuffed), [_target, false, _caller], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(setHandcuffed), [_target, false, _unit], [_target]] call CBA_fnc_targetEvent;
