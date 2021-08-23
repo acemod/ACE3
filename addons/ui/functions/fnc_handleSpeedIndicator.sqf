@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * ["amovpercmtacslowwrfldf_ver2"] call ace_advanced_fatigue_fnc_handleSpeedIndicator
+ * ["amovpercmtacslowwrfldf_ver2"] call ace_ui_fnc_handleSpeedIndicator
  *
  * Public: No
  */
