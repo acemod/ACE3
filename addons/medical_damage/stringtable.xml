@@ -717,17 +717,5 @@
             <Spanish>La probabilidad de morir a causa de una herida fatal.</Spanish>
             <French>La probabilité de mourir lors d'une "blessure mortelle".\nUne blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_DisplayName">
-            <English>Enable Vehicle Crash Damage</English>
-            <Russian>Включить урон при аварии в транспортном средстве.</Russian>
-            <Spanish>Activar daño por accidente de vehículo</Spanish>
-            <French>Blessures de collision (véhicules)</French>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_Description">
-            <English>Controls whether crew receives damage from vehicle collisions.</English>
-            <Russian>Контролирует, получает ли экипаж урон от столкновения транспортного средства.</Russian>
-            <Spanish>Controla si la tripulación recibe daño debido a colisiones en vehículo.</Spanish>
-            <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident.</French>
-        </Key>
     </Package>
 </Project>
