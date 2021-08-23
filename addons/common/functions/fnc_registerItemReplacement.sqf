@@ -69,7 +69,13 @@ private _fnc_replaceItems = {
                 if (_x == 0) then {continue};
                 private _container = ["uniform", "vest", "backpack"] select _forEachIndex;
                 for "_j" from 1 to _x do {
-                    { [_unit, _x, _container] call FUNC(addToInventory) } forEach _replacements;
+                    {
+                        if ([_unit, _x, 1, _container == "uniform", _container == "vest", _container == "backpack"] call CBA_fnc_canAddItem) then {
+                            [_unit, _x, _container] call FUNC(addToInventory)  // add to specific container
+                        } else {
+                            [_unit, _x, ""] call FUNC(addToInventory) // no room, add anywhere
+                        }
+                    } forEach _replacements;
                 }
             } forEach _containerCount;
         };
