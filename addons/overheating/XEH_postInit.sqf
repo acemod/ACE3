@@ -1,6 +1,9 @@
 // by esteldunedain
 #include "script_component.hpp"
 
+// Spare barrel item to magazine
+["ACE_SpareBarrel_Item", "ACE_SpareBarrel"] call EFUNC(common,registerItemReplacement);
+
 if (hasInterface) then {
     // Add keybinds
     ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon), {
