@@ -168,6 +168,13 @@ class CfgVehicles {
         ace_rearm_defaultSupply = 1200;
     };
 
+    class rhs_kraz255b1_base;
+    class rhs_kraz255b1_fuel_base: rhs_kraz255b1_base {
+        transportFuel = 0;
+        EGVAR(refuel,hooks)[] = {{-0.05,-3.6,-0.45}};
+        EGVAR(refuel,fuelCargo) = 10000;
+    };
+
     class rhs_truck: Truck_F {
         EGVAR(refuel,fuelCapacity) = 210;
     };
@@ -279,12 +286,12 @@ class CfgVehicles {
     class rhs_assault_umbts_engineer: rhs_assault_umbts {
         EGVAR(logistics_wirecutter,hasWirecutter) = 1;
     };
-    
+
     class rhs_rk_sht_30_emr;
     class rhs_rk_sht_30_emr_engineer: rhs_rk_sht_30_emr {
         EGVAR(logistics_wirecutter,hasWirecutter) = 1;
     };
-    
+
     class rhs_rk_sht_30_olive;
     class rhs_rk_sht_30_olive_engineer: rhs_rk_sht_30_olive {
         EGVAR(logistics_wirecutter,hasWirecutter) = 1;
