@@ -26,6 +26,7 @@
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 ["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -69,6 +70,16 @@
         _vis = _object getVariable [QGVAR(oldVisibility), _vis];
         _object setUnitTrait ["camouflageCoef", _vis];
     };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(blockRadio), {
+    params ["_object", "_set"]
+    TRACE_2("blockRadio EH",_object,_set);
+    if (_object isEqualTo ACE_Player && {_set > 0}) then {
+        call FUNC(endRadioTransmission);
+    };
+    _object setVariable ["tf_unable_to_use_radio", _set > 0, true];
+    _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(blockDamage), { //Name reversed from `allowDamage` because we want NOR logic
