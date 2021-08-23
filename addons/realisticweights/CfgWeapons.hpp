@@ -187,7 +187,7 @@ class CfgWeapons {
         };
     };
     class arifle_MSBS65_Mark_base_F: arifle_MSBS65_base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
+        class WeaponSlotsInfo {
             mass = 101;
         };
     };
@@ -430,14 +430,6 @@ class CfgWeapons {
 
     // - M14 ------------------------------------------------------------------
     class DMR_06_base_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo;
-    };
-    class srifle_DMR_06_camo_F: DMR_06_base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 92;
-        };
-    };
-    class srifle_DMR_06_hunter_F: DMR_06_base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 92;
         };
