@@ -73,7 +73,7 @@
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(blockRadio), {
-    params ["_object", "_set"]
+    params ["_object", "_set"];
     TRACE_2("blockRadio EH",_object,_set);
     if (_object isEqualTo ACE_Player && {_set > 0}) then {
         call FUNC(endRadioTransmission);
