@@ -35,7 +35,7 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QEGVAR(medical,const_painUnconscious),
+    QEGVAR(medical,painUnconsciousThreshold),
     "SLIDER",
     [LSTRING(PainUnconsciousThreshold_DisplayName), LSTRING(PainUnconsciousThreshold_Description)],
     ELSTRING(medical,Category),
