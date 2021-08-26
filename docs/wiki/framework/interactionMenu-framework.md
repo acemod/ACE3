@@ -103,6 +103,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
  * 4: Use Inheritance (Default: False) <BOOL><OPTIONAL>
+ * 5: Classes excluded from inheritance (children included) (Default: []) <ARRAY><OPTIONAL>
  */
 ```
 By default this function will not use inheritance, so actions will only be added to the specific class.
@@ -161,6 +162,10 @@ Using `addActionToClass` inheritance:
 // Adds action to check fuel levels for all land vehicles
 _action = ["CheckFuel", "Check Fuel", "", {hint format ["Fuel: %1", fuel _target]}, {true}] call ace_interact_menu_fnc_createAction;
 ["LandVehicle", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+// Same as above, but children of "MRAP_01_Base" will not have the action
+_action = ["CheckFuel", "Check Fuel", "", {hint format ["Fuel: %1", fuel _target]}, {true}] call ace_interact_menu_fnc_createAction;
+["LandVehicle", 0, ["ACE_MainActions"], _action, true, ["MRAP_01_Base"]] call ace_interact_menu_fnc_addActionToClass;
 
 // Adds action to check external fuel levels on tanks.  Will be a sub action of the previous action.
 _action = ["CheckExtTank","Check External Tank","",{hint format ["Ext Tank: %1", 5]},{true}] call ace_interact_menu_fnc_createAction;
@@ -233,7 +238,7 @@ This is the ideal way to add self interaction actions, as adding them via `addAc
     params ["_type"]; // string of the object's classname
     if (!(_type isKindOf "Car")) exitWith {};
     if ((getNumber (configFile >> "CfgVehicles" >> _type >> "side")) != 3) exitWith {};
-    
+
     private _action = ["playRadio","Play Radio","",{playMusic "NeverGonnaGiveYouUp"},{true}] call ace_interact_menu_fnc_createAction;
     [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 }] call CBA_fnc_addEventHandler;
