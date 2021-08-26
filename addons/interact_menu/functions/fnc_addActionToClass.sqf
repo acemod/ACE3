@@ -10,6 +10,7 @@
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
  * 4: Use Inheritance <BOOL> (default: false)
+ * 5: Classes excluded from inheritance (children included) <ARRAY> (default: [])
  *
  * Return Value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
@@ -25,22 +26,24 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
     ERROR("Bad Params");
     []
 };
-TRACE_4("addActionToClass",_objectType,_typeNum,_parentPath,_action);
+TRACE_6("addActionToClass",_objectType,_typeNum,_parentPath,_action,_useInheritance,_excludeClasses);
+private _useInheritance = _this param [4, false, [false]];
+private _excludeClasses = _this param [5, [], []];
 
-if (param [4, false, [false]]) exitwith {
+if (_useInheritance) exitwith {
     BEGIN_COUNTER(addAction);
     if (_objectType == "CAManBase") then {
-        GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action];
+        GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action, _excludeClasses];
         {
             [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
-        } forEach GVAR(inheritedClassesMan);
+        } forEach (GVAR(inheritedClassesMan) - _excludeClasses);
     } else {
-        GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action];
+        GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action, _excludeClasses];
         {
             if (_x isKindOf _objectType) then {
                 [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
             };
-        } forEach GVAR(inheritedClassesAll);
+        } forEach (GVAR(inheritedClassesAll) - _excludeClasses);
     };
     END_COUNTER(addAction);
 

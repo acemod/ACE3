@@ -7,6 +7,7 @@
  * 0: TypeOf of the class <STRING>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Full path of the new action <ARRAY>
+ * 3: Remove action from child classes <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -17,10 +18,26 @@
  * Public: No
  */
 
-params ["_objectType", "_typeNum", "_fullPath"];
+params ["_objectType", "_typeNum", "_fullPath", ["_inherit", false, [false]]];
 
 private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
+
+if (_inherit) exitWith {
+    private _children = (format ["(configName _x) isKindOf '%1'", _objectType]) configClasses (configFile >> "CfgVehicles");
+    {[configName _x, _typeNum, _fullPath] call FUNC(removeActionFromClass)} count _children;
+
+    private _index = GVAR(inheritedActionsAll) findIf {[_x select 2, _x select 3 select 0] isEqualTo [_parentPath, _actionName]}; // all classes
+    if (_index != -1) then {
+        (GVAR(inheritedActionsAll) select _index select 4) pushBack _objectType; // add to exclude classes
+    };
+    if (_objectType isKindOf "CAManBase") then { // only children of CAManBase
+        private _index = GVAR(inheritedActionsMan) findIf {[_x select 1, _x select 2 select 0] isEqualTo [_parentPath, _actionName]};
+        if (_index != -1) then {
+            (GVAR(inheritedActionsMan) select _index select 3) pushBack _objectType; // different index because array doesn't include _objectType
+        };
+    };
+};
 
 private _namespace = [GVAR(ActNamespace), GVAR(ActSelfNamespace)] select _typeNum;
 private _actionTrees = _namespace getVariable _objectType;
