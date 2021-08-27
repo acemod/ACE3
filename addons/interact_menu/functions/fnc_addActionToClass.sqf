@@ -40,8 +40,9 @@ if (_useInheritance) exitwith {
     } else {
         GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action, _excludeClasses];
         {
-            if (_x isKindOf _objectType) then {
-                [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+            private _type = _x;
+            if (_type isKindOf _objectType && {_excludeClasses isEqualTo [] || {_excludeClasses findIf {_type isKindOf _x} == -1}}) then {
+                [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
             };
         } forEach (GVAR(inheritedClassesAll) - _excludeClasses);
     };
