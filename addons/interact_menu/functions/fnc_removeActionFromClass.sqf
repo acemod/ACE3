@@ -25,7 +25,7 @@ _res params ["_parentPath", "_actionName"];
 
 if (_inherit) exitWith {
     private _children = (format ["(configName _x) isKindOf '%1'", _objectType]) configClasses (configFile >> "CfgVehicles");
-    {[configName _x, _typeNum, _fullPath] call FUNC(removeActionFromClass)} count _children;
+    {[configName _x, _typeNum, _fullPath] call FUNC(removeActionFromClass)} forEach _children;
 
     private _index = GVAR(inheritedActionsAll) findIf { // find same path and actionName, and check if it's a parent class
         [_objectType isKindOf (_x select 0), _x select 2, _x select 3 select 0] isEqualTo [true, _parentPath, _actionName]
