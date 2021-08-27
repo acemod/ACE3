@@ -24,8 +24,7 @@ private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
 
 if (_inherit) exitWith {
-    private _children = "_x isKindOf _objectType" configClasses (configFile >> "CfgVehicles");
-    _children = _children apply {configName _x};
+    private _children = ("_x isKindOf _objectType" configClasses (configFile >> "CfgVehicles")) apply {configName _x};
     {
         [_x, _typeNum, _fullPath] call FUNC(removeActionFromClass)
     } forEach (_children arrayIntersect GVAR(inheritedClassesAll)); // only need to run for classes that have already been initialized
