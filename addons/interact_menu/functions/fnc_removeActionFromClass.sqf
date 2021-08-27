@@ -24,17 +24,24 @@ private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
 
 if (_inherit) exitWith {
-    private _children = (format ["(configName _x) isKindOf '%1'", _objectType]) configClasses (configFile >> "CfgVehicles");
-    {[configName _x, _typeNum, _fullPath] call FUNC(removeActionFromClass)} forEach _children;
+    private _children = "_x isKindOf _objectType" configClasses (configFile >> "CfgVehicles");
+    _children = _children apply {configName _x};
+    {
+        [_x, _typeNum, _fullPath] call FUNC(removeActionFromClass)
+    } forEach (_children arrayIntersect GVAR(inheritedClassesAll)); // only need to run for classes that have already been initialized
 
-    private _index = GVAR(inheritedActionsAll) findIf { // find same path and actionName, and check if it's a parent class
-        [_objectType isKindOf (_x select 0), _x select 2, _x select 3 select 0] isEqualTo [true, _parentPath, _actionName]
+    private _index = GVAR(inheritedActionsAll) findIf { // find same path and actionName, and check if it's a parent class, needs to be checked for all classes
+        params ["_currentType", "", "_currentParentPath", "_currentAction"];
+        [_objectType isKindOf _currentType, _currentParentPath, _currentAction select 0] isEqualTo [true, _parentPath, _actionName]
     };
     if (_index != -1) then {
         (GVAR(inheritedActionsAll) select _index select 4) pushBack _objectType; // add to exclude classes
     };
-    if (_objectType isKindOf "CAManBase") then { // only children of CAManBase
-        private _index = GVAR(inheritedActionsMan) findIf {[_x select 1, _x select 2 select 0] isEqualTo [_parentPath, _actionName]};
+    if (_objectType isKindOf "CAManBase") then { // children of CAManBase need special treatment because of inheritedActionsMan array
+        private _index = GVAR(inheritedActionsMan) findIf {
+            params ["", "_currentParentPath", "_currentAction"];
+            [_currentParentPath, _currentAction select 0] isEqualTo [_parentPath, _actionName]
+        };
         if (_index != -1) then {
             (GVAR(inheritedActionsMan) select _index select 3) pushBack _objectType; // different index because array doesn't include _objectType
         };

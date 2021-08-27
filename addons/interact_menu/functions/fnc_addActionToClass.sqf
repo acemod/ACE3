@@ -26,25 +26,27 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
     ERROR("Bad Params");
     []
 };
-TRACE_6("addActionToClass",_objectType,_typeNum,_parentPath,_action,_useInheritance,_excludeClasses);
 private _useInheritance = _this param [4, false, [false]];
-private _excludeClasses = _this param [5, [], []];
+private _excludedClasses = _this param [5, [], []];
+TRACE_6("addActionToClass",_objectType,_typeNum,_parentPath,_action,_useInheritance,_excludedClasses);
 
 if (_useInheritance) exitwith {
     BEGIN_COUNTER(addAction);
+    private _cfgVehicles = configFile >> "CfgVehicles"; // store this so we don't resolve for every element
+    _excludedClasses = _excludedClasses apply {configName (_cfgVehicles >> _x)}; // ends up being faster than toLower'ing everything else
     if (_objectType == "CAManBase") then {
-        GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action, _excludeClasses];
+        GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action, _excludedClasses];
         {
             [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
-        } forEach (GVAR(inheritedClassesMan) - _excludeClasses);
+        } forEach (GVAR(inheritedClassesMan) - _excludedClasses);
     } else {
-        GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action, _excludeClasses];
+        GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action, _excludedClasses];
         {
             private _type = _x;
-            if (_type isKindOf _objectType && {_excludeClasses isEqualTo [] || {_excludeClasses findIf {_type isKindOf _x} == -1}}) then {
+            if (_type isKindOf _objectType && {_excludedClasses findIf {_type isKindOf _x} == -1}) then {
                 [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
             };
-        } forEach (GVAR(inheritedClassesAll) - _excludeClasses);
+        } forEach (GVAR(inheritedClassesAll) - _excludedClasses);
     };
     END_COUNTER(addAction);
 

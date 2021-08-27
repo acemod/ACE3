@@ -88,8 +88,8 @@ GVAR(inheritedClassesMan) = [];
     if (GVAR(inheritedClassesAll) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
 
     {
-        _x params ["_objectType", "_typeNum", "_parentPath", "_action", "_excludeClasses"];
-        if (_type isKindOf _objectType && {(_excludeClasses isEqualTo []) || {_excludeClasses findIf {_type isKindOf _x} == -1}}) then {
+        _x params ["_objectType", "_typeNum", "_parentPath", "_action", "_excludedClasses"];
+        if (_type isKindOf _objectType && {_excludedClasses findIf {_type isKindOf _x} == -1}) then {
             [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
         };
     } forEach GVAR(inheritedActionsAll);
@@ -102,8 +102,8 @@ GVAR(inheritedClassesMan) = [];
 
     if (GVAR(inheritedClassesMan) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
     {
-        _x params ["_typeNum", "_parentPath", "_action", "_excludeClasses"];
-        if ((_excludeClasses isEqualTo []) || {_excludeClasses findIf {_type isKindOf _x} == -1}) then { // skip excluded classes and children
+        _x params ["_typeNum", "_parentPath", "_action", "_excludedClasses"];
+        if (_excludedClasses findIf {_type isKindOf _x} == -1) then { // skip excluded classes and children
             [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
         };
     } forEach GVAR(inheritedActionsMan);
