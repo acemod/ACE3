@@ -37,9 +37,14 @@ if (_causeOfDeath != "#scripted") then {
     _instigator = _unit getVariable [QEGVAR(medical,lastInstigator), _instigator]; // unit in the turret
 
     // All Killed EHs uses the same array, so we can modify it now to pass the correct killer/instigator
-    if (missionNamespace getVariable [QEGVAR(medical,modifyKilledArray), true]) then { // getVar so this can be disabled
+    if (_modifyKilledArray) then { // getVar so this can be disabled
         _this set [1, _killer];
         _this set [2, _instigator];
+    };
+} else { // in that case, it might've been a forced respawn
+    if (_modifyKilledArray && {isNull _instigator} && {IS_UNCONSCIOUS(_unit)}) then {
+        _this set [1, _unit getVariable [QEGVAR(medical,lastInstigator), _unit]];
+        _this set [2,_unit getVariable [QEGVAR(medical,lastDamageSource), _unit]];
     };
 };
 TRACE_3("killer mission info",_killer,_instigator,_causeOfDeath);

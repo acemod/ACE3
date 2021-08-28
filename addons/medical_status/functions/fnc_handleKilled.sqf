@@ -30,6 +30,7 @@ if (_unit isEqualTo (_unit getVariable [QGVAR(killed), objNull])) exitWith {
 _unit setVariable [QGVAR(killed), _unit];
 
 private _causeOfDeath = _unit getVariable [QEGVAR(medical,causeOfDeath), "#scripted"];
+private _modifyKilledArray = missionNamespace getVariable [QEGVAR(medical,modifyKilledArray), true];
 
 // if undefined then it's a death not caused by ace's setDead (mission setDamage, disconnect)
 if (_causeOfDeath != "#scripted") then {
@@ -37,12 +38,16 @@ if (_causeOfDeath != "#scripted") then {
     _instigator = _unit getVariable [QEGVAR(medical,lastInstigator), _instigator]; // unit in the turret
 
     // All Killed EHs uses the same array, so we can modify it now to pass the correct killer/instigator
-    if (missionNamespace getVariable [QEGVAR(medical,modifyKilledArray), true]) then { // getVar so this can be disabled
+    if (_modifyKilledArray) then { // getVar so this can be disabled
         _this set [1, _killer];
         _this set [2, _instigator];
     };
 } else { // in that case, call setDead manually to prevent any issues
     [_unit, "#scripted"] call FUNC(setDead);
+    if (_modifyKilledArray && {isNull _instigator} && {IS_UNCONSCIOUS(_unit)}) then { // handle force respawn on unconsciousness
+        _this set [1, _unit getVariable [QEGVAR(medical,lastInstigator), _unit]];
+        _this set [2,_unit getVariable [QEGVAR(medical,lastDamageSource), _unit]];
+    };
 };
 TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
 
