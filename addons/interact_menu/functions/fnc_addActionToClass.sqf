@@ -27,7 +27,7 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
     []
 };
 private _useInheritance = _this param [4, false, [false]];
-private _excludedClasses = _this param [5, [], []];
+private _excludedClasses = _this param [5, [], [[]]];
 TRACE_6("addActionToClass",_objectType,_typeNum,_parentPath,_action,_useInheritance,_excludedClasses);
 
 if (_useInheritance) exitwith {
