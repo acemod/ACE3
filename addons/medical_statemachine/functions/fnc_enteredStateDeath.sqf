@@ -23,5 +23,5 @@ TRACE_3("enteredStateDeath",_this,_thisOrigin,_thisTransition);
 
 private _causeOfDeath = format ["%1:%2", _thisOrigin, _thisTransition];
 
-// delay a frame here to fix the double killed EH
-[{[_this select 0, _this select 1] call EFUNC(medical_status,setDead)}, [_unit, _causeOfDeath]] call CBA_fnc_execNextFrame;
+// could delay a frame here to fix the double killed EH, but we lose it being a "native" kill (scoreboard / rating)
+[_unit, _causeOfDeath] call EFUNC(medical_status,setDead);
