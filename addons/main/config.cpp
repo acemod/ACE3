@@ -11,8 +11,6 @@ class CfgPatches {
         url = CSTRING(URL);
         VERSION_CONFIG;
     };
-
-    class XADDON: ADDON {};
 };
 
 class CfgMods {

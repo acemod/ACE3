@@ -7,7 +7,7 @@
     true,
     {},
     true // Needs restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(timeWithoutWater),
@@ -16,7 +16,7 @@
     LSTRING(DisplayName),
     [0.1, 168, 2, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(timeWithoutFood),
@@ -25,7 +25,7 @@
     LSTRING(DisplayName),
     [0.1, 504, 2, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(thirstQuenched),
@@ -34,7 +34,7 @@
     LSTRING(DisplayName),
     [0.1, 10, 1, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(hungerSatiated),
@@ -43,7 +43,7 @@
     LSTRING(DisplayName),
     [0.1, 10, 1, 1],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(waterSourceActions),
@@ -52,7 +52,7 @@
     LSTRING(DisplayName),
     [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(RefillOnly), ELSTRING(common,Enabled)], 2],
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(terrainObjectActions),
@@ -61,7 +61,7 @@
     LSTRING(DisplayName),
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(affectAdvancedFatigue),
@@ -70,7 +70,7 @@
     LSTRING(DisplayName),
     true,
     true
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(hudType),
@@ -82,7 +82,7 @@
     {
         QGVAR(hud) cutFadeOut 0;
     }
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(hudShowLevel),
@@ -91,7 +91,7 @@
     LSTRING(DisplayName),
     [[0, 10, 20, 30, 40, 50, 60, 70], [LSTRING(Always), "10%", "20%", "30%", "40%", "50%", "60%", "70%"], 0],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QXGVAR(hudTransparency),
@@ -100,4 +100,4 @@
     LSTRING(DisplayName),
     [[-1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8], [LSTRING(Dynamic), "0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", 0], 0],
     false
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

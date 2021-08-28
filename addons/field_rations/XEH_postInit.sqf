@@ -11,7 +11,7 @@ if !(hasInterface) exitWith {};
         [QUOTE(ADDON), {
             linearConversion [50, 100, _this getVariable [QGVAR(thirst), 0], 1, 1.4, true] * linearConversion [50, 100, _this getVariable [QGVAR(hunger), 0], 1, 1.1, true]
         }] call EFUNC(advanced_fatigue,addDutyFactor);
-        TRACE_1("Added duty factor",GVAR(affectAdvancedFatigue));
+        TRACE_1("Added duty factor",XGVAR(affectAdvancedFatigue));
     };
 
     // Compile water source actions

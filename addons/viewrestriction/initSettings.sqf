@@ -6,4 +6,4 @@
     false,
     false,
     LINKFUNC(switchPreserveView)
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
