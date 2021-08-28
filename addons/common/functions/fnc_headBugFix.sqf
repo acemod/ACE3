@@ -51,3 +51,5 @@ deleteVehicle _dummy;
 titleCut ["", "PLAIN"];
 
 ["ace_headBugFix", false] call FUNC(setDisableUserInputStatus);
+
+true
