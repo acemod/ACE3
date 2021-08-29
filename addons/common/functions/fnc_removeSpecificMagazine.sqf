@@ -30,12 +30,14 @@ private _fnc_removeMagazine = {
     _allMagazines deleteAt _specificMagazineIndex;
 
     if (_specificMagazineIndex > -1) exitWith {
-        _container addItemCargoGlobal ["ACE_Banana", 1]; // in case _container is GroundWeaponHolder containing only magazines
         clearMagazineCargoGlobal _container;
+        private _containerType = typeOf _container;
+        if (_containerType in ["GroundWeaponHolder", "WeaponHolderSimulated"]) then {
+            _container = createVehicle [_containerType, getPosATL _container, [], 0, "CAN_COLLIDE"];
+        };
         {
             _container addMagazineAmmoCargo [_x select 0, 1, _x select 1];
         } forEach _allMagazines;
-        _container removeItem "ACE_Banana";
         true
     };
     false
