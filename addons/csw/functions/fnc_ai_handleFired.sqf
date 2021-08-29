@@ -23,6 +23,8 @@ if (someAmmo _staticWeapon) exitWith {};
 
 TRACE_2("need ammo",someAmmo _staticWeapon,magazinesAllTurrets _staticWeapon);
 
+systemChat str [_staticWeapon, someAmmo _staticWeapon, magazinesAllTurrets _staticWeapon];
+
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
 private _reloadSource = objNull;
 private _reloadMag = "";
@@ -56,8 +58,11 @@ private _reloadNeededAmmo = -1;
             };
         } forEach _cswMagazines;
     } forEach _compatibleMags;
-} forEach ([_gunner] + (_staticWeapon nearEntities [["groundWeaponHolder", "ReammoBox_F"], 10]));
+} forEach ([_gunner] + (_staticWeapon nearSupplies 10));
 if (_reloadMag == "") exitWith {TRACE_1("could not find mag",_reloadMag);};
+
+systemChat str _reloadSource;
+systemChat str _reloadMag;
 
 // Figure out what we can add from the magazines we have
 private _bestAmmoToSend = -1;
@@ -74,11 +79,7 @@ TRACE_4("",_reloadSource,_reloadMag,_reloadNeededAmmo,_bestAmmoToSend);
 if (_bestAmmoToSend == -1) exitWith {ERROR("No ammo");};
 
 // Remove the mag from the source
-if (_reloadSource isKindOf "CaManBase") then {
-    [_reloadSource, _reloadMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
-} else {
-    [_reloadSource, _reloadMag, 1, _bestAmmoToSend] call CBA_fnc_removeMagazineCargo;
-};
+[_reloadSource, _reloadMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
 
 private _timeToLoad = 1;
 if (!isNull(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime")) then {
