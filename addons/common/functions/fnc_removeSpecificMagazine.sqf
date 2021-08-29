@@ -27,26 +27,22 @@ private _fnc_removeMagazine = {
 
     private _allMagazines = magazinesAmmoCargo _container;
     private _specificMagazineIndex = _allMagazines findIf {_x isEqualTo _magArray};
-    systemChat str _specificMagazineIndex;
     _allMagazines deleteAt _specificMagazineIndex;
 
     if (_specificMagazineIndex > -1) exitWith {
         _container addItemCargoGlobal ["ACE_FakePrimaryWeapon", 1]; // in case _container is GroundWeaponHolder containing only magazines
         clearMagazineCargoGlobal _container;
-        systemChat "mag exists";
         {
             _container addMagazineAmmoCargo [_x select 0, 1, _x select 1];
         } forEach _allMagazines;
         _container removeItem "ACE_FakePrimaryWeapon";
         true
     };
-    systemChat "mag doesn't exist";
     false
 };
 
 private _containerArray = [_unit];
 if (_unit isKindOf "CAManBase") then {
-    systemChat "unit is man";
     _containerArray = [uniformContainer _unit, vestContainer _unit, backpackContainer _unit];
 };
 

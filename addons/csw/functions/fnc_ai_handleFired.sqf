@@ -23,8 +23,6 @@ if (someAmmo _staticWeapon) exitWith {};
 
 TRACE_2("need ammo",someAmmo _staticWeapon,magazinesAllTurrets _staticWeapon);
 
-systemChat str [_staticWeapon, someAmmo _staticWeapon, magazinesAllTurrets _staticWeapon];
-
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
 private _reloadSource = objNull;
 private _reloadMag = "";
@@ -60,9 +58,6 @@ private _reloadNeededAmmo = -1;
     } forEach _compatibleMags;
 } forEach ([_gunner] + (_staticWeapon nearSupplies 10));
 if (_reloadMag == "") exitWith {TRACE_1("could not find mag",_reloadMag);};
-
-systemChat str _reloadSource;
-systemChat str _reloadMag;
 
 // Figure out what we can add from the magazines we have
 private _bestAmmoToSend = -1;
