@@ -22,6 +22,11 @@ private _newViewDistance = [_indexRequested] call FUNC(returnValue); // changes 
 private _objectViewDistanceCoeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.
 private _viewDistanceLimit = GVAR(limitViewDistance); // Grab the limit
 
+if (_newViewDistance == -1) then { // Reset to default
+    setViewDistance -1;
+    _newViewDistance = viewDistance;
+};
+
 TRACE_3("Limit",_newViewDistance,_viewDistanceLimit,_showPrompt);
 setViewDistance (_newViewDistance min _viewDistanceLimit);
 

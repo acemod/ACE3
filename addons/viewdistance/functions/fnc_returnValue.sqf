@@ -18,7 +18,7 @@
 params ["_index"];
 
 switch (_index) do {
-    case 0: {viewDistance}; // Video Settings option
+    case 0: {-1}; // Video Settings option
     case 1: {500};
     case 2: {1000};
     case 3: {1500};

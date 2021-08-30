@@ -4,3 +4,4 @@ PREP(initModule);
 PREP(returnObjectCoeff);
 PREP(returnValue);
 PREP(setFovBasedOvdPFH);
+PREP(RscDisplayOptionsVideo);
