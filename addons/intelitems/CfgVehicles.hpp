@@ -52,7 +52,7 @@ class CfgVehicles {
         editorPreview = "\a3\editorpreviews_f\data\cfgvehicles\land_notepad_f.jpg";
         scope = 2;
         scopeCurator = 2;
-        GVAR(magazine) = QGVAR(notepad);
+        GVAR(magazine) = QXGVAR(notepad);
     };
 
     class XGVAR(document): GVAR(base) {
@@ -62,7 +62,7 @@ class CfgVehicles {
         editorPreview = "\a3\editorpreviews_f\data\cfgvehicles\intel_file2_f.jpg";
         scope = 2;
         scopeCurator = 2;
-        GVAR(magazine) = QGVAR(document);
+        GVAR(magazine) = QXGVAR(document);
     };
 
     class XGVAR(photo): GVAR(base) {
@@ -72,7 +72,7 @@ class CfgVehicles {
         editorPreview = "\a3\editorpreviews_f\data\cfgvehicles\land_filephotos_f.jpg";
         scope = 2;
         scopeCurator = 2;
-        GVAR(magazine) = QGVAR(photo);
+        GVAR(magazine) = QXGVAR(photo);
         class Attributes: Attributes {
             class GVAR(data): GVAR(data) {
                 displayName = CSTRING(Photo_Filename);
