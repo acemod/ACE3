@@ -12,8 +12,6 @@ class CfgPatches {
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
-
-    class XADDON: ADDON {};
 };
 
 #include "CfgEventHandlers.hpp"
