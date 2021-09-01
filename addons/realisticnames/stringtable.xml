@@ -4057,6 +4057,12 @@
             <Turkish>Burris XTR II (Yeşil Hex)</Turkish>
             <Spanish>Burris XTR II (Verde Hex)</Spanish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
+            <English>Burris XTR II (Old)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
+            <English>Burris XTR II (ASP-1 Kir)</English>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
             <German>EOTech XPS3 (Beige)</German>

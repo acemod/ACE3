@@ -785,6 +785,12 @@ class CfgWeapons {
     class optic_DMS_ghex_F: optic_DMS {
         displayName = CSTRING(optic_dms_ghex);
     };
+    class optic_DMS_weathered_F: optic_DMS {
+        displayName = CSTRING(optic_dms_weathered);
+    };
+    class optic_DMS_weathered_Kir_F: optic_DMS_weathered_F
+        displayName = CSTRING(optic_dms_weathered_kir);
+    };
 
     class optic_holosight: ItemCore {
         displayName = CSTRING(optic_holosight);
