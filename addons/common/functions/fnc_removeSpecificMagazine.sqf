@@ -49,10 +49,7 @@ if (_unit isKindOf "CAManBase") then {
 };
 
 {
-    if ([_x, [_magazineType, _ammoCount]] call _fnc_removeMagazine) then {
-        _isRemoved = true;
-        break
-    };
+    if ([_x, [_magazineType, _ammoCount]] call _fnc_removeMagazine) exitWith {_isRemoved = true};
 } forEach _containerArray;
 
 _isRemoved
