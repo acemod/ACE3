@@ -3814,6 +3814,21 @@
             <Turkish>ELCAN SpecterOS (2D)</Turkish>
             <Spanish>ELCAN SpecterOS (2D)</Spanish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
+            <English>ELCAN SpecterOS (Lush)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
+            <English>ELCAN SpecterOS (Arid)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
+            <English>ELCAN SpecterOS 7.62 (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
+            <English>ELCAN SpecterOS 7.62 (Lush)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
+            <English>ELCAN SpecterOS 7.62 (Arid)</English>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
             <German>SIG BRAVO4 / ROMEO3 (Schwarz)</German>
@@ -4086,6 +4101,12 @@
             <Czech>EOTech XPS3 (Khaki)</Czech>
             <Turkish>EOTech XPS3 (Haki)</Turkish>
             <Spanish>EOTech XPS3 (Caqui)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_lush">
+            <English>EOTech XPS3 (Lush)</English>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
+            <English>EOTech XPS3 (Arid)</English>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
