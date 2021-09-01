@@ -40,8 +40,8 @@ _object setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir
     if (isNull _object || {getPos _object select 2 < 1}) exitWith {};
 
     private _objectAttachedTo = attachedTo _object;
-    private _parachuteTypeVehicle = getText (configOf _vehicle >> "VehicleTransport" >> "Cargo" >> "parachuteClass");
-    private _parachuteTypeObject = getText (configOf _object >> "VehicleTransport" >> "Carrier" >> "parachuteClassDefault");
+    private _parachuteTypeVehicle = getText (configOf _vehicle >> "VehicleTransport" >> "Carrier" >> "parachuteClassDefault");
+    private _parachuteTypeObject = getText (configOf _object >> "VehicleTransport" >> "Cargo" >> "parachuteClass");
     if (
         !(_objectAttachedTo isKindOf _parachuteTypeVehicle) &&
         !(_objectAttachedTo isKindOf _parachuteTypeObject)
