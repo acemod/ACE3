@@ -115,3 +115,13 @@
     true, // isGlobal
     {[QGVAR(autoShutOffEngineWhenStartingRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(fullRepairTimeCoef), "SLIDER",
+    [LSTRING(fullRepairTimeCoef_name), LSTRING(fullRepairTimeCoef_description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [0,5,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true,
+    {[QGVAR(fullRepairTimeCoef), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;

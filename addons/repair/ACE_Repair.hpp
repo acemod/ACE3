@@ -71,7 +71,7 @@ class ACE_Repair {
             displayNameProgress = CSTRING(fullyRepairing);
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
-            repairingTime = 30;
+            repairingTime = QUOTE(call FUNC(getFullRepairTime));
             condition = "-1 != ((getAllHitPointsDamage _target param [2,[]]) findIf {_x > 0})";
             callbackSuccess = QUOTE(call FUNC(doFullRepair));
             items = QGVAR(fullRepairRequiredItems);

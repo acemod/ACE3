@@ -2025,5 +2025,11 @@
             <Czech>Automaticky vypne motor při zahájení oprav.</Czech>
             <Spanish>Apagar el motor automáticamente al efectuar una reparación</Spanish>
         </Key>
+        <Key ID="STR_ACE_Repair_fullRepairTimeCoef_name">
+            <English>Full Repair Time Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_autoShutOffEngineWhenStartingRepair_description">
+            <English>Modifies how long it takes to fully repair a vehicle.\nThe repair time is based on the total damage multiplied by this coefficient, with a minimum of 30 seconds.</English>
+        </Key>
     </Package>
 </Project>
