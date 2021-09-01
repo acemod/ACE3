@@ -1860,6 +1860,19 @@
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Khaki_Name">
             <English>MX (Khaki)</English>
             <German>MX (Khaki)</German>
+            <Chinese>MX（卡其）</Chinese>
+            <French>MX (kaki)</French>
+            <Spanish>MX (caqui)</Spanish>
+            <Italian>MX (kaki)</Italian>
+            <Polish>MX (khaki)</Polish>
+            <Russian>MX (хаки)</Russian>
+            <Czech>MX (khaki)</Czech>
+            <English>MX (Khaki)</English>
+            <Portuguese>MX (cáqui)</Portuguese>
+            <Korean>MX (카키)</Korean>
+            <Chinesesimp>MX（卡其色）</Chinesesimp>
+            <Japanese>MX（カーキ）</Japanese>
+            <Turkish>MX (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
@@ -1898,6 +1911,18 @@
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Khaki_Name">
             <English>MXC (Khaki)</English>
             <German>MXC (Khaki)</German>
+            <Chinese>MXC（卡其）</Chinese>
+            <French>MXC (kaki)</French>
+            <Spanish>MXC (caqui)</Spanish>
+            <Italian>MXC (kaki)</Italian>
+            <Polish>MXC (khaki)</Polish>
+            <Russian>MXC (хаки)</Russian>
+            <Czech>MXC (khaki)</Czech>
+            <Portuguese>MXC (cáqui)</Portuguese>
+            <Korean>MXC (카키)</Korean>
+            <Chinesesimp>MXC（卡其色）</Chinesesimp>
+            <Japanese>MXC（カーキ）</Japanese>
+            <Turkish>MXC (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
@@ -1936,6 +1961,18 @@
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Khaki_Name">
             <English>MX 3GL (Khaki)</English>
             <German>MX 3GL (Khaki)</German>
+            <Chinese>MX 3GL（卡其）</Chinese>
+            <French>MX 3GL (kaki)</French>
+            <Spanish>MX 3GL (caqui)</Spanish>
+            <Italian>MX 3GL (kaki)</Italian>
+            <Polish>MX 3GL (khaki)</Polish>
+            <Russian>MX 3GL (хаки)</Russian>
+            <Czech>MX 3GL (khaki)</Czech>
+            <Portuguese>MX 3GL (cáqui)</Portuguese>
+            <Korean>MX 3GL (카키)</Korean>
+            <Chinesesimp>MX 3GL（卡其色）</Chinesesimp>
+            <Japanese>MX 3GL（カーキ）</Japanese>
+            <Turkish>MX 3GL (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
