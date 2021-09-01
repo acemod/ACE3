@@ -1857,6 +1857,9 @@
             <Chinesesimp>MX突击步枪 (黑色)</Chinesesimp>
             <Turkish>MX (Siyah)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MX_Khaki_Name">
+            <English>MX (Khaki)</English>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
             <German>MXC</German>
@@ -1890,6 +1893,9 @@
             <Chinese>MXC卡賓步槍 (黑色)</Chinese>
             <Chinesesimp>MXC卡宾步枪 (黑色)</Chinesesimp>
             <Turkish>MXC (Siyah)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MXC_Khaki_Name">
+            <English>MXC (Khaki)</English>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
@@ -1925,6 +1931,9 @@
             <Chinesesimp>MX突击步枪 (3连装榴弹-黑色)</Chinesesimp>
             <Turkish>MX 3GL (Siyah)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Khaki_Name">
+            <English>MX 3GL (Khaki)</English>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
             <German>MX LSW</German>
@@ -1959,6 +1968,9 @@
             <Chinesesimp>MX轻型机枪 (黑色)</Chinesesimp>
             <Turkish>MX LSW (Siyah)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Khaki_Name">
+            <English>MX LSW (Khaki)</English>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
             <German>MXM</German>
@@ -1992,6 +2004,9 @@
             <Chinese>MXM精準步槍 (黑色)</Chinese>
             <Chinesesimp>MXM精准步枪 (黑色)</Chinesesimp>
             <Turkish>MXM (Siyah)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MXM_Khaki_Name">
+            <English>MXM (Khaki)</English>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KH2002 Sama</English>
