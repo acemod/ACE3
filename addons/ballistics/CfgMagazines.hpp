@@ -547,25 +547,25 @@ class CfgMagazines {
     class ACE_10Rnd_127x99_Mag: ACE_5Rnd_127x99_Mag {
         count = 10;
         mass = 32; // 5Rnd_127x108_Mag mass * 2
-        displayName = CSTRING(5Rnd_127x99_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_Mag_NameShort);
-        descriptionShort = CSTRING(5Rnd_127x99_Mag_Description);
+        displayName = CSTRING(10Rnd_127x99_Mag_Name);
+        displayNameShort = CSTRING(10Rnd_127x99_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_127x99_Mag_Description);
     };
 
     class ACE_10Rnd_127x99_API_Mag: ACE_5Rnd_127x99_API_Mag {
         count = 10;
         mass = 32;
-        displayName = CSTRING(5Rnd_127x99_API_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_API_Mag_NameShort);
-        descriptionShort = CSTRING(5Rnd_127x99_API_Mag_Description);
+        displayName = CSTRING(10Rnd_127x99_API_Mag_Name);
+        displayNameShort = CSTRING(10Rnd_127x99_API_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_127x99_API_Mag_Description);
     };
 
     class ACE_10Rnd_127x99_AMAX_Mag: ACE_5Rnd_127x99_AMAX_Mag {
         count = 10;
         mass = 32;
-        displayName = CSTRING(5Rnd_127x99_AMAX_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_AMAX_Mag_NameShort);
-        descriptionShort = CSTRING(5Rnd_127x99_AMAX_Mag_Description);
+        displayName = CSTRING(10Rnd_127x99_AMAX_Mag_Name);
+        displayNameShort = CSTRING(10Rnd_127x99_AMAX_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_127x99_AMAX_Mag_Description);
     };
 
     class 30Rnd_9x21_Mag: CA_Magazine {
