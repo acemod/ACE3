@@ -45,6 +45,15 @@ if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find
 // Check if item is a chemlight
 private _isChemlight = _attachedObject isKindOf "Chemlight_base";
 
+// check if attached item is created from another itemCargo
+
+
+private _itemUsedClass = getText (configFile >> "CfgWeapons" >> _itemName >> "ACE_ItemUsed");
+
+if (_itemUsedClass == "") then {
+    _itemUsedClass = getText (configFile >> "CfgMagazines" >> _itemName >> "ACE_ItemUsed");
+};
+
 // Exit if can't add the item
 if (!([_unit, _itemName] call CBA_fnc_canAddItem) && {!_isChemlight}) exitWith {
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
@@ -54,6 +63,9 @@ if (!([_unit, _itemName] call CBA_fnc_canAddItem) && {!_isChemlight}) exitWith {
 
 // Add item to inventory (unless it's a chemlight)
 if (!_isChemlight) then {
+    if (_itemUsedClass != "") then {
+        _itemName = _itemUsedClass;
+    };
     _unit addItem _itemName;
 };
 

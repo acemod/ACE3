@@ -26,21 +26,37 @@ if ((_itemClassname == "") || {(!_silentScripted) && {!(_this call FUNC(canAttac
 
 private _itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
 private _onAttachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
+private _attachToLocation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_AttachToLocation");
 
 if (_itemVehClass == "") then {
     _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
     _onAttachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
+    _attachToLocation = getArray (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_AttachToLocation");
 };
-
+if (_attachToLocation isEqualTo []) then {
+    _attachToLocation = [[0.05, -0.09, 0.1],"leftshoulder"];
+};
+_coords = _attachToLocation select 0;
+_bone = _attachToLocation select 1;
 if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
 
 private _onAttachText = format [localize LSTRING(Item_Attached), _onAttachText];
 
+
+private _itemUsedClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_ItemUsed");
+
+if (_itemUsedClass == "") then {
+    _itemUsedClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_ItemUsed");
+};
+
 if (_unit == _attachToVehicle) then {  //Self Attachment
     private _attachedItem = _itemVehClass createVehicle [0,0,0];
-    _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
+    _attachedItem attachTo [_unit, _coords, _bone, true];
     if (!_silentScripted) then {
-        _unit removeItem _itemClassname;  // Remove item
+        if (_itemUsedClass != "") then {
+            _itemClassname = _itemUsedClass;
+        };
+        _unit removeItem _itemClassname;
         [_onAttachText, 2] call EFUNC(common,displayTextStructured);
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
