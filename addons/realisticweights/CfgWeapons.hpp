@@ -155,6 +155,11 @@ class CfgWeapons {
             mass = 65;
         };
     };
+    class arifle_RPK12_base_F: arifle_AK12_base_F { // Estimated difference by comparing RPK to AKM (+1.5kg)
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 115.5;
+        };
+    };
 
     // - AKM ------------------------------------------------------------------
     class arifle_AKM_base_F: Rifle_Base_F {
