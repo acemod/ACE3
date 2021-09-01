@@ -1859,6 +1859,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Khaki_Name">
             <English>MX (Khaki)</English>
+            <German>MX (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
@@ -1896,6 +1897,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Khaki_Name">
             <English>MXC (Khaki)</English>
+            <German>MXC (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
@@ -1933,6 +1935,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Khaki_Name">
             <English>MX 3GL (Khaki)</English>
+            <German>MX 3GL (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
@@ -1970,6 +1973,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Khaki_Name">
             <English>MX LSW (Khaki)</English>
+            <German>MX LSW (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
@@ -2007,6 +2011,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Khaki_Name">
             <English>MXM (Khaki)</English>
+            <German>MXM (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KH2002 Sama</English>
