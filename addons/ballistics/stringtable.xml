@@ -2607,21 +2607,16 @@
             <Turkish>Kalibre: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Name">
-            <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
-            <French>Ch. 6,5x47mm 30Cps (HPBT Scenar)</French>
-            <Spanish>Cargador de 30 balas de 6.5x47mm (HPBT Scenar)</Spanish>
-            <Polish>Magazynek 6,5x47mm 30rd (HPBT Scenar)</Polish>
-            <Russian>Магазин из 30-ти 6,5x47 мм (экспансивные Scenar)</Russian>
-            <German>6,5x47mm 30-Patronen-Magazin (HPBT Scenar)</German>
-            <Italian>6.5x47mm 30Rnd Mag (HPBT Scenar)</Italian>
-            <Czech>6.5x47mm 30náb. Zásobník (HPBT Scenar)</Czech>
-            <Portuguese>Carregador 6.5x47mm com 30 cartuchos (HPBT Scenar)</Portuguese>
-            <Hungarian>6,5x47mm 30-lövedékes tár (HPBT Scenar)</Hungarian>
-            <Japanese>6.5x47mm 30発入り 弾倉 (HPBT Scenar)</Japanese>
-            <Korean>30발들이 6.5x47mm 탄창 (HPBT Scenar)</Korean>
-            <Chinese>6.5x47毫米 30發 彈匣 (拉普 空尖艇尾狙擊專用彈)</Chinese>
-            <Chinesesimp>6.5x47mm 30发 弹匣 (Lapua 空尖艇尾狙击专用弹)</Chinesesimp>
-            <Turkish>6.5x47mm 30Rnd Mag (HPBT Scenar)</Turkish>
+            <English>6.5x47mm 30Rnd Sand Mag (HPBT Scenar)</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_msbs_mag_Name">
+            <English>6.5x47mm 30Rnd Promet Mag (HPBT Scenar)</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_black_mag_Name">
+            <English>6.5x47mm 30Rnd Black Mag (HPBT Scenar)</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_khaki_mag_Name">
+            <English>6.5x47mm 30Rnd Khaki Mag (HPBT Scenar)</English>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5mm Lapua</English>
@@ -2657,22 +2652,34 @@
             <Chinesesimp>口径: 6.5x47mm (Lapua 空尖艇尾狙击专用弹)&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MXM</Chinesesimp>
             <Turkish>Kalibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MXM</Turkish>
         </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_msbs_mag_Description">
+            <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Promet MR</English>
+            <French>Calibre: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: Promet MR</French>
+            <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Promet MR</Spanish>
+            <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 30</Polish>
+            <Russian>Калибр: 6,5x47 мм (экспансивные Scenar)&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Promet MR</Russian>
+            <German>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Promet MR</German>
+            <Italian>Calibro: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Promet MR</Italian>
+            <Czech>Ráže: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použití u: Promet MR</Czech>
+            <Portuguese>Calibre: 6.5x47mm (HPBT Scenar)&lt;br/&gt;Cartuchos: 30&lt;br/&gt;Usado em: Promet MR</Portuguese>
+            <Hungarian>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Promet MR</Hungarian>
+            <Japanese>口径: 6.5x47mm (HPBT Scenar)&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: Promet MR</Japanese>
+            <Korean>구경: 6.5x47mm (HPBT Scenar)&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: Promet MR</Korean>
+            <Chinese>口徑: 6.5x47毫米 (拉普 空尖艇尾狙擊專用彈)&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Promet MR</Chinese>
+            <Chinesesimp>口径: 6.5x47mm (Lapua 空尖艇尾狙击专用弹)&lt;br /&gt;发数: 30&lt;br /&gt;使用于: Promet MR</Chinesesimp>
+            <Turkish>Kalibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: Promet MR</Turkish>
+        </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Name">
-            <English>6.5mm Creedmor 30Rnd Mag</English>
-            <Polish>Magazynek 6,5mm Creedmor 30rd</Polish>
-            <Italian>6.5mm Creedmor 30Rnd Mag</Italian>
-            <Russian>Магазин из 30-ти 6,5 мм Creedmor</Russian>
-            <German>6,5mm Creedmor 30-Patronen-Magazin</German>
-            <Spanish>Cargador de 30 balas Creedmor de 6.5mm</Spanish>
-            <French>Ch. 6,5mm Creedmor 30Cps</French>
-            <Czech>6.5mm Creedmor 30náb. Zásobník</Czech>
-            <Portuguese>Carregador 6.5mm com 30 cartuchos Creedmor</Portuguese>
-            <Hungarian>6,5mm Creedmor 30-lövedékes tár</Hungarian>
-            <Japanese>6.5mm Creedmor 30発入り 弾倉</Japanese>
-            <Korean>30발들이 6.5mm Creedmor 탄창</Korean>
-            <Chinese>6.5毫米 30發 彈匣 (克里德莫爾(CM) 狙擊專用彈)</Chinese>
-            <Chinesesimp>6.5mm 30发 弹匣 (Creedmor 狙击专用弹)</Chinesesimp>
-            <Turkish>6.5mm Creedmor 30Rnd Mag</Turkish>
+            <English>6.5mm Creedmor 30Rnd Sand Mag</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_msbs_mag_Name">
+            <English>6.5mm Creedmor 30Rnd Promet Mag</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_black_mag_Name">
+            <English>6.5mm Creedmor 30Rnd Black Mag</English>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_khaki_mag_Name">
+            <English>6.5mm Creedmor 30Rnd Khaki Mag</English>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5mm CM</English>
@@ -2707,6 +2714,23 @@
             <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: MXM</Chinese>
             <Chinesesimp>口径: 6.5x47mm Creedmor 狙击专用弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: MXM</Chinesesimp>
             <Turkish>Kalibre: 6.5x47mm Creedmor&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MXM</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_msbs_mag_Description">
+            <English>Caliber: 6.5x47mm Creedmor&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Promet MR</English>
+            <Polish>Kaliber: 6,5x47mm Creedmor&lt;br /&gt;Pociski: 30&lt;br /&gt;Używany w: Promet MR</Polish>
+            <German>Kaliber: 6,5x47mm  Creedmor&lt;br /&gt;Patronen: 30&lt;br /&gt;Eingesetzt von: Promet MR</German>
+            <French>Calibre: 6,5x47mm Creedmor &lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: Promet MR</French>
+            <Italian>Calibro: 6.5mm Creedmor&lt;br /&gt;Munizioni: 30&lt;br /&gt;In uso su: Promet MR</Italian>
+            <Spanish>Calibre: 6.5mm Creedmor&lt;br /&gt;Balas: 30&lt;br /&gt;Se usa en: Promet MR</Spanish>
+            <Russian>Калибр: 6,5x47мм Creedmor&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются c: Promet MR</Russian>
+            <Czech>Ráže: 6.5x47mm Creedmor&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použití u: Promet MR</Czech>
+            <Portuguese>Calibre: 6.5x47mm Creedmor&lt;br/&gt;Cartuchos: 30&lt;br/&gt;Usado em: Promet MR</Portuguese>
+            <Hungarian>Kaliber: 6,5x47mm Creedmor&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Promet MR</Hungarian>
+            <Japanese>口径: 6.5x47mm Creedmor&lt;br /&gt;装填数: 30&lt;br /&gt;次で使用: Promet MR</Japanese>
+            <Korean>구경: 6.5x47mm Creedmor&lt;br /&gt;장탄수: 30&lt;br /&gt;사용처: Promet MR</Korean>
+            <Chinese>口徑: 6.5x47毫米 克里德莫爾 狙擊專用彈&lt;br /&gt;發數: 30&lt;br /&gt;使用於: Promet MR</Chinese>
+            <Chinesesimp>口径: 6.5x47mm Creedmor 狙击专用弹&lt;br /&gt;发数: 30&lt;br /&gt;使用于: Promet MR</Chinesesimp>
+            <Turkish>Kalibre: 6.5x47mm Creedmor&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: Promet MR</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Name">
             <English>.338 LM 10Rnd Mag (300gr Lapua Scenar)</English>

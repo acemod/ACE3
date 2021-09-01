@@ -34,9 +34,7 @@ class CfgMagazineWells {
 
     class MX_65x39 { //Vanilla magwell
         ADDON[] = {
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x47_Scenar_mag",
-            "ACE_30Rnd_65_Creedmor_mag"
+            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
         };
     };
 
