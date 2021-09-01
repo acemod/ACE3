@@ -2709,21 +2709,21 @@
             <Turkish>Kalibre: 6.5x47mm Creedmor&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MXM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_Name">
-            <English>.338 10Rnd Mag (300gr Lapua Scenar)</English>
-            <French>Ch. .338 10 Cps (300gr Lapua Scenar)</French>
+            <English>.338 LM 10Rnd Mag (300gr Lapua Scenar)</English>
+            <French>Ch. .338 LM 10 Cps (300gr Lapua Scenar)</French>
             <Spanish>Cargador de 10 balas de 8.6x70mm (300gr Lapua Scenar)</Spanish>
-            <Polish>Magazynek .338 10rd (300gr Lapua Scenar)</Polish>
-            <Russian>Магазин из 10-ти .338 (300 гран Lapua Scenar)</Russian>
-            <German>.338 10-Patronen-Magazin (300gr Lapua Scenar)</German>
-            <Italian>.338 10Munizioni Mag (300gr Lapua Scenar)</Italian>
-            <Czech>.338 10náb. Zásobník (300gr Lapua Scenar)</Czech>
-            <Portuguese>Carregador .338 (300gr Lapua Scenar) com 10 cartuchos </Portuguese>
-            <Hungarian>.338 10-lövedékes tár (300gr Lapua Scenar)</Hungarian>
-            <Japanese>.338 10発入り 弾倉 (300gr Lapua Scenar)</Japanese>
+            <Polish>Magazynek .338 LM 10rd (300gr Lapua Scenar)</Polish>
+            <Russian>Магазин из 10-ти .338 LM (300 гран Lapua Scenar)</Russian>
+            <German>.338 LM 10-Patronen-Magazin (300gr Lapua Scenar)</German>
+            <Italian>.338 LM 10Munizioni Mag (300gr Lapua Scenar)</Italian>
+            <Czech>.338 LM 10náb. Zásobník (300gr Lapua Scenar)</Czech>
+            <Portuguese>Carregador .338 LM (300gr Lapua Scenar) com 10 cartuchos </Portuguese>
+            <Hungarian>.338 LM 10-lövedékes tár (300gr Lapua Scenar)</Hungarian>
+            <Japanese>.338 LM 10発入り 弾倉 (300gr Lapua Scenar)</Japanese>
             <Korean>10발들이 .338 탄창 (300gr Lapua Scenar)</Korean>
             <Chinese>.338 10發 彈匣 (300公克 Lapua Scenar)</Chinese>
-            <Chinesesimp>.338 10发 弹匣 (300公克 Lapua Scenar)</Chinesesimp>
-            <Turkish>.338 10Rnd Mag (300gr Lapua Scenar)</Turkish>
+            <Chinesesimp>.338 LM 10发 弹匣 (300公克 Lapua Scenar)</Chinesesimp>
+            <Turkish>.338 LM 10Rnd Mag (300gr Lapua Scenar)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_300gr_HPBT_Mag_NameShort">
             <English>.338 Scenar</English>
@@ -2760,21 +2760,21 @@
             <Turkish>Kalibre: 8.6x70mm (300gr Lapua Scenar)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_API526_Mag_Name">
-            <English>.338 10Rnd Mag (API526)</English>
-            <French>Ch. .338 10Cps (API526)</French>
-            <Spanish>Cargador de 10 balas de .338 (API526)</Spanish>
-            <Polish>Magazynek .338 10rd (API526)</Polish>
-            <Russian>Магазин из 10-ти .338 (API526)</Russian>
-            <German>.338 10-Patronen-Magazin (API526)</German>
-            <Italian>.338 10Rnd Mag (API526)</Italian>
-            <Czech>.338 10náb. Zásobník (API526)</Czech>
-            <Portuguese>Carregador .338 (API526) com 10 cartuchos </Portuguese>
-            <Hungarian>.338 10-lövedékes tár (API526)</Hungarian>
-            <Japanese>.338 10発入り 弾倉 (API526)</Japanese>
-            <Korean>10발들이 .338 탄창 (API526)</Korean>
+            <English>.338 LM 10Rnd Mag (API526)</English>
+            <French>Ch. .338 LM 10Cps (API526)</French>
+            <Spanish>Cargador de 10 balas de .338 LM (API526)</Spanish>
+            <Polish>Magazynek .338 LM 10rd (API526)</Polish>
+            <Russian>Магазин из 10-ти .338 LM (API526)</Russian>
+            <German>.338 LM 10-Patronen-Magazin (API526)</German>
+            <Italian>.338 LM 10Rnd Mag (API526)</Italian>
+            <Czech>.338 LM 10náb. Zásobník (API526)</Czech>
+            <Portuguese>Carregador .338 LM (API526) com 10 cartuchos </Portuguese>
+            <Hungarian>.338 LM 10-lövedékes tár (API526)</Hungarian>
+            <Japanese>.338 LM 10発入り 弾倉 (API526)</Japanese>
+            <Korean>10발들이 .338 LM 탄창 (API526)</Korean>
             <Chinese>.338 10發 彈匣 (API526 穿甲燃燒彈)</Chinese>
-            <Chinesesimp>.338 10发 弹匣 (API526 穿甲燃烧弹)</Chinesesimp>
-            <Turkish>.338 10Rnd Mag (API526)</Turkish>
+            <Chinesesimp>.338 LM 10发 弹匣 (API526 穿甲燃烧弹)</Chinesesimp>
+            <Turkish>.338 LM 10Rnd Mag (API526)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_338_API526_Mag_NameShort">
             <English>.338 AP</English>
@@ -3013,6 +3013,159 @@
             <Chinese>口徑: 12.7x99毫米 (AMAX 比賽專用彈)&lt;br /&gt;發數: 5</Chinese>
             <Chinesesimp>口径: 12.7x99mm (AMAX 比赛专用弹)&lt;br /&gt;发数: 5</Chinesesimp>
             <Turkish>Kalibre: 12.7x99mm (AMAX)&lt;br /&gt;Mermi: 5</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_Mag_Name">
+            <English>12.7x99mm 10Rnd Mag</English>
+            <French>Ch. 12,7x99mm 10Cps</French>
+            <Spanish>Cargador de 10 balas de 12.7x99mm</Spanish>
+            <Polish>Magazynek 12,7x99mm 10rd</Polish>
+            <Russian>Магазин из 10-ти 12,7x99 мм</Russian>
+            <German>12,7x99mm 10-Patronen-Magazin</German>
+            <Italian>12.7x99mm 10Rnd Mag</Italian>
+            <Czech>12.7x99mm 10náb. Zásobník</Czech>
+            <Portuguese>Carregador 12.7x99mm com 10 cartuchos </Portuguese>
+            <Hungarian>12,7x99mm 10-lövedékes tár</Hungarian>
+            <Japanese>12.7x99mm 10発入り 弾倉</Japanese>
+            <Korean>10발들이 12.7x99mm 탄창</Korean>
+            <Chinese>12.7x99毫米 10發 彈匣</Chinese>
+            <Chinesesimp>12.7x99mm 10发 弹匣</Chinesesimp>
+            <Turkish>12.7x99mm 10Rnd Mag</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_Mag_NameShort">
+            <English>12.7mm</English>
+            <French>12,7mm</French>
+            <Spanish>12.7mm</Spanish>
+            <Polish>12,7mm</Polish>
+            <Russian>12,7 мм</Russian>
+            <German>12,7mm</German>
+            <Italian>12.7mm</Italian>
+            <Czech>12.7mm</Czech>
+            <Portuguese>12.7mm</Portuguese>
+            <Hungarian>12,7mm</Hungarian>
+            <Japanese>12.7mm</Japanese>
+            <Korean>12.7mm</Korean>
+            <Chinese>12.7毫米</Chinese>
+            <Chinesesimp>12.7mm</Chinesesimp>
+            <Turkish>12.7mm</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_Mag_Description">
+            <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 10</English>
+            <French>Calibre: 12,7x99mm&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 12.7x99mm&lt;br /&gt;Balas: 10</Spanish>
+            <Polish>Kaliber: 12,7x99mm&lt;br /&gt;Pociski: 10</Polish>
+            <Russian>Калибр: 12,7x99 мм&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: 12,7x99mm&lt;br /&gt;Patronen: 10</German>
+            <Italian>Calibro: 12.7x99mm&lt;br /&gt;Munizioni: 10</Italian>
+            <Czech>Ráže: 12.7x99mm&lt;br /&gt;Nábojů: 10</Czech>
+            <Portuguese>Calibre: 12.7x99mm&lt;br/&gt;Cartuchos: 10</Portuguese>
+            <Hungarian>Kaliber: 12,7x99mm&lt;br /&gt;Lövedékek: 10</Hungarian>
+            <Japanese>口径: 12.7x99mm&lt;br /&gt;装填数: 10</Japanese>
+            <Korean>구경: 12.7x99mm&lt;br /&gt;장탄수: 10</Korean>
+            <Chinese>口徑: 12.7x99毫米&lt;br /&gt;發數: 10</Chinese>
+            <Chinesesimp>口径: 12.7x99mm&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 12.7x99mm&lt;br /&gt;Mermi: 10</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_API_Mag_Name">
+            <English>12.7x99mm API 10Rnd Mag</English>
+            <French>Ch. 12,7x99mm API 10Cps</French>
+            <Spanish>Cargador de 10 balas de 12.7x99mm API</Spanish>
+            <Polish>Magazynek 12,7x99mm API 10rd</Polish>
+            <Italian>12.7x99mm API 10Rnd Mag</Italian>
+            <Russian>Магазин из 10-ти 12,7x99 мм (бронебойно-зажигательные)</Russian>
+            <German>12,7x99mm 10-Patronen-Magazin (API)</German>
+            <Czech>12.7x99mm API 10náb. Zásobník</Czech>
+            <Portuguese>Carregador 12.7x99mm API com 10 cartuchos </Portuguese>
+            <Hungarian>12,7x99mm 10-lövedékes tár (páncéltörő-gyújtó)</Hungarian>
+            <Japanese>12.7x99mm 10発入り焼夷徹甲弾 弾倉</Japanese>
+            <Korean>10발들이 12.7x99mm 철갑소이탄 탄창</Korean>
+            <Chinese>12.7x99毫米 穿甲燃燒彈 10發 彈匣</Chinese>
+            <Chinesesimp>12.7x99mm 穿甲燃烧弹 10发 弹匣</Chinesesimp>
+            <Turkish>12.7x99mm API 10Rnd Mag</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_API_Mag_NameShort">
+            <English>12.7mm API</English>
+            <French>12,7mm API</French>
+            <Spanish>12.7mm API</Spanish>
+            <Polish>12,7mm API</Polish>
+            <Italian>12.7mm API</Italian>
+            <Russian>12.7 мм бронебойно-зажигательные</Russian>
+            <German>12,7mm API</German>
+            <Czech>12.7mm API</Czech>
+            <Portuguese>12.7mm API</Portuguese>
+            <Hungarian>12,7mm páncéltörő-gyújtó</Hungarian>
+            <Japanese>12.7mm 焼夷徹甲弾</Japanese>
+            <Korean>12.7mm 철갑소이탄</Korean>
+            <Chinese>12.7毫米 穿甲燃燒彈</Chinese>
+            <Chinesesimp>12.7mm 穿甲燃烧弹</Chinesesimp>
+            <Turkish>12.7mm API</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_API_Mag_Description">
+            <English>Caliber: 12.7x99mm API&lt;br /&gt;Rounds: 10</English>
+            <French>Calibre: 12,7x99mm API&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 12.7x99mm API&lt;br /&gt;Balas: 10</Spanish>
+            <Polish>Kaliber: 12,7x99mm API&lt;br /&gt;Pociski: 10</Polish>
+            <Russian>Калибр: 12,7x99 мм бронебойно-зажигательные&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber:12,7x99mm API&lt;br /&gt;Patronen: 10</German>
+            <Italian>Calibro: 12.7x99mm API&lt;br /&gt;Munizioni: 10</Italian>
+            <Czech>Ráže: 12.7x99mm API&lt;br /&gt;Nábojů: 10</Czech>
+            <Portuguese>Calibre: 12.7x99mm API&lt;br/&gt;Cartuchos: 10</Portuguese>
+            <Hungarian>Kaliber: 12,7x99mm API&lt;br /&gt;Lövedékek: 10</Hungarian>
+            <Japanese>口径: 12.7x99mm 焼夷徹甲弾&lt;br /&gt;装填数: 10</Japanese>
+            <Korean>구경: 12.7x99mm 철갑소이탄&lt;br /&gt;장탄수: 10</Korean>
+            <Chinese>口徑: 12.7x99毫米 穿甲燃燒彈&lt;br /&gt;發數: 10</Chinese>
+            <Chinesesimp>口径: 12.7x99mm 穿甲燃烧弹&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 12.7x99mm API&lt;br /&gt;Mermi: 10</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_AMAX_Mag_Name">
+            <English>12.7x99mm 10Rnd Mag (AMAX)</English>
+            <French>Ch. 12,7x99mm 10Cps (AMAX)</French>
+            <Spanish>Cargador de 10 balas de 12.7x99mm (AMAX)</Spanish>
+            <Polish>Magazynek 12,7x99mm 10rd (AMAX)</Polish>
+            <Russian>Магазин из 10-ти 12,7x99 мм (A-MAX)</Russian>
+            <German>12,7x99mm 10-Patronen-Magazin (AMAX)</German>
+            <Italian>12.7x99mm 10Rnd Mag (AMAX)</Italian>
+            <Czech>12.7x99mm 10náb. Zásobník (AMAX)</Czech>
+            <Portuguese>Carregador 12.7x99mm (AMAX) com 10 cartuchos </Portuguese>
+            <Hungarian>12,7x99mm 10-lövedékes tár (AMAX)</Hungarian>
+            <Japanese>12.7x99mm 10発入り 弾倉 (AMAX)</Japanese>
+            <Korean>10발들이 12.7x99mm 탄창 (AMAX)</Korean>
+            <Chinese>12.7x99毫米 10發 彈匣 (AMAX 比賽專用彈)</Chinese>
+            <Chinesesimp>12.7x99mm 10发 弹匣 (AMAX 比赛专用弹)</Chinesesimp>
+            <Turkish>12.7x99mm 10Rnd Şarjör (AMAX)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_AMAX_Mag_NameShort">
+            <English>12.7mm</English>
+            <French>12,7mm</French>
+            <Spanish>12.7mm</Spanish>
+            <Polish>12,7mm</Polish>
+            <Russian>12,7 мм</Russian>
+            <German>12,7mm</German>
+            <Italian>12.7mm</Italian>
+            <Czech>12.7mm</Czech>
+            <Portuguese>12.7mm</Portuguese>
+            <Hungarian>12,7mm</Hungarian>
+            <Japanese>12.7mm</Japanese>
+            <Korean>12.7mm</Korean>
+            <Chinese>12.7毫米 AMAX 比賽專用彈</Chinese>
+            <Chinesesimp>12.7mm AMAX 比赛专用弹</Chinesesimp>
+            <Turkish>12.7mm</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_AMAX_Mag_Description">
+            <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 10</English>
+            <French>Calibre: 12,7x99mm (AMAX)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 10</Spanish>
+            <Polish>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Pociski: 10</Polish>
+            <Russian>Калибр: 12,7x99 мм (A-MAX)&lt;br /&gt;Патронов: 10</Russian>
+            <Italian>Calibro: 12.7x99mm (AMAX)&lt;br /&gt;Munizioni: 10</Italian>
+            <German>Kaliber:12,7x99mm (AMAX)&lt;br /&gt;Patronen: 10</German>
+            <Czech>Ráže: 12.7x99mm (AMAX)&lt;br /&gt;Nábojů: 10</Czech>
+            <Portuguese>Calibre: 12.7x99mm (AMAX)&lt;br/&gt;Cartuchos: 10</Portuguese>
+            <Hungarian>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Lövedékek: 10</Hungarian>
+            <Japanese>口径: 12.7x99mm (AMAX)&lt;br /&gt;装填数: 10</Japanese>
+            <Korean>구경: 12.7x99mm (AMAX)&lt;br /&gt;장탄수: 10</Korean>
+            <Chinese>口徑: 12.7x99毫米 (AMAX 比賽專用彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinesesimp>口径: 12.7x99mm (AMAX 比赛专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: 12.7x99mm (AMAX)&lt;br /&gt;Mermi: 10</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_AmmoSupplyCrate_DisplayName">
             <English>[ACE] Ammo Supply Crate</English>
