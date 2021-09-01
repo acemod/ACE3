@@ -2453,6 +2453,159 @@
             <Chinesesimp>口径: .300 WM NATO标准 (Berger Hybrid 空尖比赛专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
             <Turkish>Kalibre: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Mk248_Mod_0_Mag_Name">
+            <English>.300 WM 10Rnd Mag (Mk248 Mod 0)</English>
+            <Polish>Magazynek .300 WM 10rd (Mk248 Mod 0)</Polish>
+            <French>Ch. .300 WM 10Cps (Mk248 Mod 0)</French>
+            <Spanish>Cargador de 10 balas de .300 WM (Mk248 Mod 0)</Spanish>
+            <Russian>Магазин из 10-ти .300 WM (Mk248 Mod 0)</Russian>
+            <German>.300 WM 10-Patronen-Magazin (Mk248 Mod 0)</German>
+            <Italian>.300 WM 10Rnd Mag (Mk248 Mod 0)</Italian>
+            <Czech>.300 WM 10náb. Zásobník (Mk248 Mod 0)</Czech>
+            <Portuguese>Carregador .300 WM com 10 cartuchos (Mk248 Mod 0)</Portuguese>
+            <Hungarian>.300 WM 10-lövedékes tár (Mk248 Mod 0)</Hungarian>
+            <Japanese>.300 WM 10発入り 弾倉 (Mk248 Mod 0)</Japanese>
+            <Korean>10발들이 .300 WM 탄창 (Mk248 Mod 0)</Korean>
+            <Chinese>.300 萬能(WM) 10發 彈匣 (Mk248 Mod 0 狙擊專用彈)</Chinese>
+            <Chinesesimp>.300 WM 10发 弹匣 (Mk248 Mod 0 狙击专用弹)</Chinesesimp>
+            <Turkish>.300 WM 10Rnd Mag (Mk248 Mod 0)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
+            <English>.300 WM Mk248</English>
+            <Polish>.300 WM Mk248</Polish>
+            <French>.300 WM Mk248</French>
+            <Spanish>.300 WM Mk248</Spanish>
+            <Russian>.300 WM Mk248</Russian>
+            <German>.300 WM Mk248</German>
+            <Italian>.300 WM Mk248</Italian>
+            <Czech>.300 WM Mk248</Czech>
+            <Portuguese>.300 WM Mk248</Portuguese>
+            <Hungarian>.300 WM Mk248</Hungarian>
+            <Japanese>.300 WM Mk248</Japanese>
+            <Korean>.300 WM Mk248</Korean>
+            <Chinese>.300 西米 Mk248 狙擊專用彈</Chinese>
+            <Chinesesimp>.300 WM Mk248 狙击专用弹</Chinesesimp>
+            <Turkish>.300 WM Mk248</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Mk248_Mod_0_Mag_Description">
+            <English>Caliber: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 10</English>
+            <Polish>Kaliber: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Pociski: 10</Polish>
+            <French>Calibre: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 10</Spanish>
+            <Russian>Калибр: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Patronen: 10</German>
+            <Italian>Calibro: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Munizioni: 10</Italian>
+            <Czech>Ráže: .300 WM (Mk248 Mod 0)&lt;br /&gt;Nábojů: 10</Czech>
+            <Portuguese>Calibre: .300 WM NATO (Mk248 Mod 0)&lt;br/&gt;Cartuchos: 10</Portuguese>
+            <Hungarian>Kaliber: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Lövedékek: 10</Hungarian>
+            <Japanese>口径: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;装填数: 10</Japanese>
+            <Korean>구경: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;장탄수: 10</Korean>
+            <Chinese>口徑: .300 西米 NATO標準 (Mk248 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinesesimp>口径: .300 WM NATO标准 (Mk248 Mod 0 狙击专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Mermi: 10</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Mk248_Mod_1_Mag_Name">
+            <English>.300 WM 10Rnd Mag (Mk248 Mod 1)</English>
+            <Polish>Magazynek .300 WM 10rd (Mk248 Mod 1)</Polish>
+            <French>Ch. .300 WM 10Cps (Mk248 Mod 1)</French>
+            <Spanish>Cargador de 10 balas de .300 WM (Mk248 Mod 1)</Spanish>
+            <Russian>Магазин из 10-ти .300 WM (Mk248 Mod 1)</Russian>
+            <German>.300 WM 10-Patronen-Magazin (Mk248 Mod 1)</German>
+            <Italian>.300 WM 10Rnd Mag (Mk248 Mod 1)</Italian>
+            <Czech>.300 WM 10náb. Zásobník (Mk248 Mod 1)</Czech>
+            <Portuguese>Carregador .300 WM com 10 cartuchos (Mk248 Mod 1)</Portuguese>
+            <Hungarian>.300 WM 10-lövedékes tár (Mk248 Mod 1)</Hungarian>
+            <Japanese>.300 WM 10発入り 弾倉 (Mk248 Mod 1)</Japanese>
+            <Korean>10발들이 .300 WM 탄창 (Mk248 Mod 1)</Korean>
+            <Chinese>.300 西米 10發 彈匣 (Mk248 Mod 1 狙擊專用彈)</Chinese>
+            <Chinesesimp>.300 WM 10发 弹匣 (Mk248 Mod 1 狙击专用弹)</Chinesesimp>
+            <Turkish>.300 WM 10Rnd Mag (Mk248 Mod 1)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
+            <English>.300 WM Mk248</English>
+            <Polish>.300 WM Mk248</Polish>
+            <French>.300 WM Mk248</French>
+            <Spanish>.300 WM Mk248</Spanish>
+            <Russian>.300 WM Mk248</Russian>
+            <German>.300 WM Mk248</German>
+            <Italian>.300 WM Mk248</Italian>
+            <Czech>.300 WM Mk248</Czech>
+            <Portuguese>.300 WM Mk248</Portuguese>
+            <Hungarian>.300 WM Mk248</Hungarian>
+            <Japanese>.300 WM Mk248</Japanese>
+            <Korean>.300 WM Mk248</Korean>
+            <Chinese>.300 西米 Mk248 狙擊專用彈</Chinese>
+            <Chinesesimp>.300 WM Mk248 狙击专用弹</Chinesesimp>
+            <Turkish>.300 WM Mk248</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Mk248_Mod_1_Mag_Description">
+            <English>Caliber: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 10</English>
+            <Polish>Kaliber: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Pociski: 10</Polish>
+            <French>Calibre: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 10</Spanish>
+            <Russian>Калибр: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Patronen: 10</German>
+            <Italian>Calibro: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Munizioni: 10</Italian>
+            <Czech>Ráže: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Nábojů: 10</Czech>
+            <Portuguese>Calibre: .300 WM NATO (Mk248 Mod 1)&lt;br/&gt;Cartuchos: 10</Portuguese>
+            <Hungarian>Kaliber: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Lövedékek: 10</Hungarian>
+            <Japanese>口径: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;装填数: 10</Japanese>
+            <Korean>구경: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;장탄수: 10</Korean>
+            <Chinese>口徑: .300 西米 NATO標準 (Mk248 Mod 1 狙擊專用彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinesesimp>口径: .300 WM NATO标准 (Mk248 Mod 1 狙击专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Mermi: 10</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
+            <English>.300 WM 10Rnd Mag (Berger Hybrid OTM)</English>
+            <Polish>Magazynek .300 WM 10rd (Berger Hybrid OTM)</Polish>
+            <French>Ch. .300 WM 10Cps (Berger Hybrid OTM)</French>
+            <Spanish>Cargador de 10 balas de .300 WM (Berger Hybrid OTM)</Spanish>
+            <Russian>Магазин из 10-ти .300 WM (Berger Hybrid OTM)</Russian>
+            <German>.300 WM 10-Patronen-Magazin (Berger Hybrid OTM)</German>
+            <Italian>.300 WM 10Rnd Mag (Berger Hybrid OTM)</Italian>
+            <Czech>.300 WM 10náb. Zásobník (Berger Hybrid OTM)</Czech>
+            <Portuguese>Carregador .300 WM com 10 cartuchos (Berger Hybrid OTM)</Portuguese>
+            <Hungarian>.300 WM 10-lövedékes tár (Berger Hybrid OTM)</Hungarian>
+            <Japanese>.300 WM 10発入り 弾倉 (Berger Hybrid OTM)</Japanese>
+            <Korean>10발들이 .300 WM 탄창 (Berger Hybrid OTM)</Korean>
+            <Chinese>.300 西米 10發 彈匣 (Berger Hybrid 空尖比賽專用彈)</Chinese>
+            <Chinesesimp>.300 WM 10发 弹匣 (Berger Hybrid 空尖比赛专用弹)</Chinesesimp>
+            <Turkish>.300 WM 10Rnd Mag (Berger Hybrid OTM)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
+            <English>.300 WM OTM</English>
+            <Polish>.300 WM OTM</Polish>
+            <French>.300 WM OTM</French>
+            <Spanish>.300 WM OTM</Spanish>
+            <Russian>.300 WM OTM</Russian>
+            <German>.300 WM OTM</German>
+            <Italian>.300 WM OTM</Italian>
+            <Czech>.300 WM OTM</Czech>
+            <Portuguese>.300 WM OTM</Portuguese>
+            <Hungarian>.300 WM OTM</Hungarian>
+            <Japanese>.300 WM OTM</Japanese>
+            <Korean>.300 WM OTM</Korean>
+            <Chinese>.300 西米  空尖比賽專用彈</Chinese>
+            <Chinesesimp>.300 WM 空尖比赛专用弹</Chinesesimp>
+            <Turkish>.300 WM OTM</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
+            <English>Caliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 10</English>
+            <Polish>Kaliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Pociski: 10</Polish>
+            <French>Calibre: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Cartouches: 10</French>
+            <Spanish>Calibre: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 10</Spanish>
+            <Russian>Калибр: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Патронов: 10</Russian>
+            <German>Kaliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Patronen: 10</German>
+            <Italian>Calibro: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Munizioni: 10</Italian>
+            <Czech>Ráže: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Nábojů: 10</Czech>
+            <Portuguese>Calibre: .300 WM OTM NATO (Berger Hybrid OTM)&lt;br/&gt;Cartuchos: 10</Portuguese>
+            <Hungarian>Kaliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Lövedékek: 10</Hungarian>
+            <Japanese>口径: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;装填数: 10</Japanese>
+            <Korean>구경: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;장탄수: 10</Korean>
+            <Chinese>口徑: .300 西米 NATO標準 (Berger Hybrid 空尖比賽專用彈)&lt;br /&gt;發數: 10</Chinese>
+            <Chinesesimp>口径: .300 WM NATO标准 (Berger Hybrid 空尖比赛专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
+            <Turkish>Kalibre: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Mermi: 10</Turkish>
+        </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>
             <French>Ch. 6,5x47mm 30Cps (HPBT Scenar)</French>

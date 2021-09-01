@@ -155,15 +155,16 @@ class CfgMagazineWells {
             "ACE_10Rnd_338_API526_Mag",
             "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
             "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
-            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
+            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag",
+            "ACE_10Rnd_762x67_Mk248_Mod_0_Mag",
+            "ACE_10Rnd_762x67_Mk248_Mod_1_Mag",
+            "ACE_10Rnd_762x67_Berger_Hybrid_OTM_Mag"
         };
     };
 
     class CBA_65C_AR10 {
         ADDON[] = {
-            "ACE_30Rnd_65_Creedmor_mag",
             "ACE_20Rnd_65_Creedmor_mag",
-            "ACE_30Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65x47_Scenar_mag"
         };
     };
@@ -174,11 +175,19 @@ class CfgMagazineWells {
         };
     };
 
-    class CBA_50BMG_M107 {
+    class CBA_50BMG_AS50 {
         ADDON[] = {
             "ACE_5Rnd_127x99_Mag",
             "ACE_5Rnd_127x99_API_Mag",
             "ACE_5Rnd_127x99_AMAX_Mag"
+        };
+    };
+
+    class CBA_50BMG_M107 {
+        ADDON[] = {
+            "ACE_10Rnd_127x99_Mag",
+            "ACE_10Rnd_127x99_API_Mag",
+            "ACE_10Rnd_127x99_AMAX_Mag"
         };
     };
 

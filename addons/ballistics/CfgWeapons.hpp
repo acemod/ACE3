@@ -13,7 +13,7 @@ class CfgWeapons {
         ACE_barrelTwist = 381.0;
         initSpeed = -1.0;
         magazineWell[] += {
-            "CBA_50BMG_M107"
+            "CBA_50BMG_AS50"
         }; // empty in vanilla
     };
 
