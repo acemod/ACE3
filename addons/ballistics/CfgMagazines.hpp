@@ -521,7 +521,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "B_127x99_Ball";
         displayName = CSTRING(5Rnd_127x99_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_Mag_Description);
         initSpeed = 900;
     };
@@ -530,7 +530,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_127x99_API";
         displayName = CSTRING(5Rnd_127x99_API_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_API_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_API_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_API_Mag_Description);
         initSpeed = 900;
     };
@@ -539,7 +539,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_127x99_Ball_AMAX";
         displayName = CSTRING(5Rnd_127x99_AMAX_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_AMAX_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_AMAX_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_AMAX_Mag_Description);
         initSpeed = 860;
     };
@@ -548,7 +548,7 @@ class CfgMagazines {
         count = 10;
         mass = 32; // 5Rnd_127x108_Mag mass * 2
         displayName = CSTRING(10Rnd_127x99_Mag_Name);
-        displayNameShort = CSTRING(10Rnd_127x99_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_127x99_Mag_Description);
     };
 
@@ -556,7 +556,7 @@ class CfgMagazines {
         count = 10;
         mass = 32;
         displayName = CSTRING(10Rnd_127x99_API_Mag_Name);
-        displayNameShort = CSTRING(10Rnd_127x99_API_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_API_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_127x99_API_Mag_Description);
     };
 
@@ -564,7 +564,7 @@ class CfgMagazines {
         count = 10;
         mass = 32;
         displayName = CSTRING(10Rnd_127x99_AMAX_Mag_Name);
-        displayNameShort = CSTRING(10Rnd_127x99_AMAX_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_AMAX_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_127x99_AMAX_Mag_Description);
     };
 

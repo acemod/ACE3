@@ -2878,23 +2878,6 @@
             <Chinesesimp>12.7x99mm 5发 弹匣</Chinesesimp>
             <Turkish>12.7x99mm 5Rnd Mag</Turkish>
         </Key>
-        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_NameShort">
-            <English>12.7mm</English>
-            <French>12,7mm</French>
-            <Spanish>12.7mm</Spanish>
-            <Polish>12,7mm</Polish>
-            <Russian>12,7 мм</Russian>
-            <German>12,7mm</German>
-            <Italian>12.7mm</Italian>
-            <Czech>12.7mm</Czech>
-            <Portuguese>12.7mm</Portuguese>
-            <Hungarian>12,7mm</Hungarian>
-            <Japanese>12.7mm</Japanese>
-            <Korean>12.7mm</Korean>
-            <Chinese>12.7毫米</Chinese>
-            <Chinesesimp>12.7mm</Chinesesimp>
-            <Turkish>12.7mm</Turkish>
-        </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 5</English>
             <French>Calibre: 12,7x99mm&lt;br /&gt;Cartouches: 5</French>
@@ -2911,108 +2894,6 @@
             <Chinese>口徑: 12.7x99毫米&lt;br /&gt;發數: 5</Chinese>
             <Chinesesimp>口径: 12.7x99mm&lt;br /&gt;发数: 5</Chinesesimp>
             <Turkish>Kalibre: 12.7x99mm&lt;br /&gt;Mermi: 5</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_Name">
-            <English>12.7x99mm API 5Rnd Mag</English>
-            <French>Ch. 12,7x99mm API 5Cps</French>
-            <Spanish>Cargador de 5 balas de 12.7x99mm API</Spanish>
-            <Polish>Magazynek 12,7x99mm API 5rd</Polish>
-            <Italian>12.7x99mm API 5Rnd Mag</Italian>
-            <Russian>Магазин из 5-ти 12,7x99 мм (бронебойно-зажигательные)</Russian>
-            <German>12,7x99mm 5-Patronen-Magazin (API)</German>
-            <Czech>12.7x99mm API 5náb. Zásobník</Czech>
-            <Portuguese>Carregador 12.7x99mm API com 5 cartuchos </Portuguese>
-            <Hungarian>12,7x99mm 5-lövedékes tár (páncéltörő-gyújtó)</Hungarian>
-            <Japanese>12.7x99mm 5発入り焼夷徹甲弾 弾倉</Japanese>
-            <Korean>5발들이 12.7x99mm 철갑소이탄 탄창</Korean>
-            <Chinese>12.7x99毫米 穿甲燃燒彈 5發 彈匣</Chinese>
-            <Chinesesimp>12.7x99mm 穿甲燃烧弹 5发 弹匣</Chinesesimp>
-            <Turkish>12.7x99mm API 5Rnd Mag</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_NameShort">
-            <English>12.7mm API</English>
-            <French>12,7mm API</French>
-            <Spanish>12.7mm API</Spanish>
-            <Polish>12,7mm API</Polish>
-            <Italian>12.7mm API</Italian>
-            <Russian>12.7 мм бронебойно-зажигательные</Russian>
-            <German>12,7mm API</German>
-            <Czech>12.7mm API</Czech>
-            <Portuguese>12.7mm API</Portuguese>
-            <Hungarian>12,7mm páncéltörő-gyújtó</Hungarian>
-            <Japanese>12.7mm 焼夷徹甲弾</Japanese>
-            <Korean>12.7mm 철갑소이탄</Korean>
-            <Chinese>12.7毫米 穿甲燃燒彈</Chinese>
-            <Chinesesimp>12.7mm 穿甲燃烧弹</Chinesesimp>
-            <Turkish>12.7mm API</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_Description">
-            <English>Caliber: 12.7x99mm API&lt;br /&gt;Rounds: 5</English>
-            <French>Calibre: 12,7x99mm API&lt;br /&gt;Cartouches: 5</French>
-            <Spanish>Calibre: 12.7x99mm API&lt;br /&gt;Balas: 5</Spanish>
-            <Polish>Kaliber: 12,7x99mm API&lt;br /&gt;Pociski: 5</Polish>
-            <Russian>Калибр: 12,7x99 мм бронебойно-зажигательные&lt;br /&gt;Патронов: 5</Russian>
-            <German>Kaliber:12,7x99mm API&lt;br /&gt;Patronen: 5</German>
-            <Italian>Calibro: 12.7x99mm API&lt;br /&gt;Munizioni: 5</Italian>
-            <Czech>Ráže: 12.7x99mm API&lt;br /&gt;Nábojů: 5</Czech>
-            <Portuguese>Calibre: 12.7x99mm API&lt;br/&gt;Cartuchos: 5</Portuguese>
-            <Hungarian>Kaliber: 12,7x99mm API&lt;br /&gt;Lövedékek: 5</Hungarian>
-            <Japanese>口径: 12.7x99mm 焼夷徹甲弾&lt;br /&gt;装填数: 5</Japanese>
-            <Korean>구경: 12.7x99mm 철갑소이탄&lt;br /&gt;장탄수: 5</Korean>
-            <Chinese>口徑: 12.7x99毫米 穿甲燃燒彈&lt;br /&gt;發數: 5</Chinese>
-            <Chinesesimp>口径: 12.7x99mm 穿甲燃烧弹&lt;br /&gt;发数: 5</Chinesesimp>
-            <Turkish>Kalibre: 12.7x99mm API&lt;br /&gt;Mermi: 5</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_Name">
-            <English>12.7x99mm 5Rnd Mag (AMAX)</English>
-            <French>Ch. 12,7x99mm 5Cps (AMAX)</French>
-            <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
-            <Polish>Magazynek 12,7x99mm 5rd (AMAX)</Polish>
-            <Russian>Магазин из 5-ти 12,7x99 мм (A-MAX)</Russian>
-            <German>12,7x99mm 5-Patronen-Magazin (AMAX)</German>
-            <Italian>12.7x99mm 5Rnd Mag (AMAX)</Italian>
-            <Czech>12.7x99mm 5náb. Zásobník (AMAX)</Czech>
-            <Portuguese>Carregador 12.7x99mm (AMAX) com 5 cartuchos </Portuguese>
-            <Hungarian>12,7x99mm 5-lövedékes tár (AMAX)</Hungarian>
-            <Japanese>12.7x99mm 5発入り 弾倉 (AMAX)</Japanese>
-            <Korean>5발들이 12.7x99mm 탄창 (AMAX)</Korean>
-            <Chinese>12.7x99毫米 5發 彈匣 (AMAX 比賽專用彈)</Chinese>
-            <Chinesesimp>12.7x99mm 5发 弹匣 (AMAX 比赛专用弹)</Chinesesimp>
-            <Turkish>12.7x99mm 5Rnd Şarjör (AMAX)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_NameShort">
-            <English>12.7mm</English>
-            <French>12,7mm</French>
-            <Spanish>12.7mm</Spanish>
-            <Polish>12,7mm</Polish>
-            <Russian>12,7 мм</Russian>
-            <German>12,7mm</German>
-            <Italian>12.7mm</Italian>
-            <Czech>12.7mm</Czech>
-            <Portuguese>12.7mm</Portuguese>
-            <Hungarian>12,7mm</Hungarian>
-            <Japanese>12.7mm</Japanese>
-            <Korean>12.7mm</Korean>
-            <Chinese>12.7毫米 AMAX 比賽專用彈</Chinese>
-            <Chinesesimp>12.7mm AMAX 比赛专用弹</Chinesesimp>
-            <Turkish>12.7mm</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_Description">
-            <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
-            <French>Calibre: 12,7x99mm (AMAX)&lt;br /&gt;Cartouches: 5</French>
-            <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 5</Spanish>
-            <Polish>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Pociski: 5</Polish>
-            <Russian>Калибр: 12,7x99 мм (A-MAX)&lt;br /&gt;Патронов: 5</Russian>
-            <Italian>Calibro: 12.7x99mm (AMAX)&lt;br /&gt;Munizioni: 5</Italian>
-            <German>Kaliber:12,7x99mm (AMAX)&lt;br /&gt;Patronen: 5</German>
-            <Czech>Ráže: 12.7x99mm (AMAX)&lt;br /&gt;Nábojů: 5</Czech>
-            <Portuguese>Calibre: 12.7x99mm (AMAX)&lt;br/&gt;Cartuchos: 5</Portuguese>
-            <Hungarian>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Lövedékek: 5</Hungarian>
-            <Japanese>口径: 12.7x99mm (AMAX)&lt;br /&gt;装填数: 5</Japanese>
-            <Korean>구경: 12.7x99mm (AMAX)&lt;br /&gt;장탄수: 5</Korean>
-            <Chinese>口徑: 12.7x99毫米 (AMAX 比賽專用彈)&lt;br /&gt;發數: 5</Chinese>
-            <Chinesesimp>口径: 12.7x99mm (AMAX 比赛专用弹)&lt;br /&gt;发数: 5</Chinesesimp>
-            <Turkish>Kalibre: 12.7x99mm (AMAX)&lt;br /&gt;Mermi: 5</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_127x99_Mag_Name">
             <English>12.7x99mm 10Rnd Mag</English>
@@ -3031,23 +2912,6 @@
             <Chinesesimp>12.7x99mm 10发 弹匣</Chinesesimp>
             <Turkish>12.7x99mm 10Rnd Mag</Turkish>
         </Key>
-        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_Mag_NameShort">
-            <English>12.7mm</English>
-            <French>12,7mm</French>
-            <Spanish>12.7mm</Spanish>
-            <Polish>12,7mm</Polish>
-            <Russian>12,7 мм</Russian>
-            <German>12,7mm</German>
-            <Italian>12.7mm</Italian>
-            <Czech>12.7mm</Czech>
-            <Portuguese>12.7mm</Portuguese>
-            <Hungarian>12,7mm</Hungarian>
-            <Japanese>12.7mm</Japanese>
-            <Korean>12.7mm</Korean>
-            <Chinese>12.7毫米</Chinese>
-            <Chinesesimp>12.7mm</Chinesesimp>
-            <Turkish>12.7mm</Turkish>
-        </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_127x99_Mag_Description">
             <English>Caliber: 12.7x99mm&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 12,7x99mm&lt;br /&gt;Cartouches: 10</French>
@@ -3064,6 +2928,57 @@
             <Chinese>口徑: 12.7x99毫米&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 12.7x99mm&lt;br /&gt;发数: 10</Chinesesimp>
             <Turkish>Kalibre: 12.7x99mm&lt;br /&gt;Mermi: 10</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_127x99_Mag_NameShort">
+            <English>12.7mm</English>
+            <French>12,7mm</French>
+            <Spanish>12.7mm</Spanish>
+            <Polish>12,7mm</Polish>
+            <Russian>12,7 мм</Russian>
+            <German>12,7mm</German>
+            <Italian>12.7mm</Italian>
+            <Czech>12.7mm</Czech>
+            <Portuguese>12.7mm</Portuguese>
+            <Hungarian>12,7mm</Hungarian>
+            <Japanese>12.7mm</Japanese>
+            <Korean>12.7mm</Korean>
+            <Chinese>12.7毫米</Chinese>
+            <Chinesesimp>12.7mm</Chinesesimp>
+            <Turkish>12.7mm</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_Name">
+            <English>12.7x99mm API 5Rnd Mag</English>
+            <French>Ch. 12,7x99mm API 5Cps</French>
+            <Spanish>Cargador de 5 balas de 12.7x99mm API</Spanish>
+            <Polish>Magazynek 12,7x99mm API 5rd</Polish>
+            <Italian>12.7x99mm API 5Rnd Mag</Italian>
+            <Russian>Магазин из 5-ти 12,7x99 мм (бронебойно-зажигательные)</Russian>
+            <German>12,7x99mm 5-Patronen-Magazin (API)</German>
+            <Czech>12.7x99mm API 5náb. Zásobník</Czech>
+            <Portuguese>Carregador 12.7x99mm API com 5 cartuchos </Portuguese>
+            <Hungarian>12,7x99mm 5-lövedékes tár (páncéltörő-gyújtó)</Hungarian>
+            <Japanese>12.7x99mm 5発入り焼夷徹甲弾 弾倉</Japanese>
+            <Korean>5발들이 12.7x99mm 철갑소이탄 탄창</Korean>
+            <Chinese>12.7x99毫米 穿甲燃燒彈 5發 彈匣</Chinese>
+            <Chinesesimp>12.7x99mm 穿甲燃烧弹 5发 弹匣</Chinesesimp>
+            <Turkish>12.7x99mm API 5Rnd Mag</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_API_Mag_Description">
+            <English>Caliber: 12.7x99mm API&lt;br /&gt;Rounds: 5</English>
+            <French>Calibre: 12,7x99mm API&lt;br /&gt;Cartouches: 5</French>
+            <Spanish>Calibre: 12.7x99mm API&lt;br /&gt;Balas: 5</Spanish>
+            <Polish>Kaliber: 12,7x99mm API&lt;br /&gt;Pociski: 5</Polish>
+            <Russian>Калибр: 12,7x99 мм бронебойно-зажигательные&lt;br /&gt;Патронов: 5</Russian>
+            <German>Kaliber:12,7x99mm API&lt;br /&gt;Patronen: 5</German>
+            <Italian>Calibro: 12.7x99mm API&lt;br /&gt;Munizioni: 5</Italian>
+            <Czech>Ráže: 12.7x99mm API&lt;br /&gt;Nábojů: 5</Czech>
+            <Portuguese>Calibre: 12.7x99mm API&lt;br/&gt;Cartuchos: 5</Portuguese>
+            <Hungarian>Kaliber: 12,7x99mm API&lt;br /&gt;Lövedékek: 5</Hungarian>
+            <Japanese>口径: 12.7x99mm 焼夷徹甲弾&lt;br /&gt;装填数: 5</Japanese>
+            <Korean>구경: 12.7x99mm 철갑소이탄&lt;br /&gt;장탄수: 5</Korean>
+            <Chinese>口徑: 12.7x99毫米 穿甲燃燒彈&lt;br /&gt;發數: 5</Chinese>
+            <Chinesesimp>口径: 12.7x99mm 穿甲燃烧弹&lt;br /&gt;发数: 5</Chinesesimp>
+            <Turkish>Kalibre: 12.7x99mm API&lt;br /&gt;Mermi: 5</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_127x99_API_Mag_Name">
             <English>12.7x99mm API 10Rnd Mag</English>
@@ -3082,23 +2997,6 @@
             <Chinesesimp>12.7x99mm 穿甲燃烧弹 10发 弹匣</Chinesesimp>
             <Turkish>12.7x99mm API 10Rnd Mag</Turkish>
         </Key>
-        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_API_Mag_NameShort">
-            <English>12.7mm API</English>
-            <French>12,7mm API</French>
-            <Spanish>12.7mm API</Spanish>
-            <Polish>12,7mm API</Polish>
-            <Italian>12.7mm API</Italian>
-            <Russian>12.7 мм бронебойно-зажигательные</Russian>
-            <German>12,7mm API</German>
-            <Czech>12.7mm API</Czech>
-            <Portuguese>12.7mm API</Portuguese>
-            <Hungarian>12,7mm páncéltörő-gyújtó</Hungarian>
-            <Japanese>12.7mm 焼夷徹甲弾</Japanese>
-            <Korean>12.7mm 철갑소이탄</Korean>
-            <Chinese>12.7毫米 穿甲燃燒彈</Chinese>
-            <Chinesesimp>12.7mm 穿甲燃烧弹</Chinesesimp>
-            <Turkish>12.7mm API</Turkish>
-        </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_127x99_API_Mag_Description">
             <English>Caliber: 12.7x99mm API&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 12,7x99mm API&lt;br /&gt;Cartouches: 10</French>
@@ -3115,6 +3013,40 @@
             <Chinese>口徑: 12.7x99毫米 穿甲燃燒彈&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 12.7x99mm 穿甲燃烧弹&lt;br /&gt;发数: 10</Chinesesimp>
             <Turkish>Kalibre: 12.7x99mm API&lt;br /&gt;Mermi: 10</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_Name">
+            <English>12.7x99mm 5Rnd Mag (AMAX)</English>
+            <French>Ch. 12,7x99mm 5Cps (AMAX)</French>
+            <Spanish>Cargador de 5 balas de 12.7x99mm (AMAX)</Spanish>
+            <Polish>Magazynek 12,7x99mm 5rd (AMAX)</Polish>
+            <Russian>Магазин из 5-ти 12,7x99 мм (A-MAX)</Russian>
+            <German>12,7x99mm 5-Patronen-Magazin (AMAX)</German>
+            <Italian>12.7x99mm 5Rnd Mag (AMAX)</Italian>
+            <Czech>12.7x99mm 5náb. Zásobník (AMAX)</Czech>
+            <Portuguese>Carregador 12.7x99mm (AMAX) com 5 cartuchos </Portuguese>
+            <Hungarian>12,7x99mm 5-lövedékes tár (AMAX)</Hungarian>
+            <Japanese>12.7x99mm 5発入り 弾倉 (AMAX)</Japanese>
+            <Korean>5발들이 12.7x99mm 탄창 (AMAX)</Korean>
+            <Chinese>12.7x99毫米 5發 彈匣 (AMAX 比賽專用彈)</Chinese>
+            <Chinesesimp>12.7x99mm 5发 弹匣 (AMAX 比赛专用弹)</Chinesesimp>
+            <Turkish>12.7x99mm 5Rnd Şarjör (AMAX)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_5Rnd_127x99_AMAX_Mag_Description">
+            <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 5</English>
+            <French>Calibre: 12,7x99mm (AMAX)&lt;br /&gt;Cartouches: 5</French>
+            <Spanish>Calibre: 12.7x99mm (AMAX)&lt;br /&gt;Balas: 5</Spanish>
+            <Polish>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Pociski: 5</Polish>
+            <Russian>Калибр: 12,7x99 мм (A-MAX)&lt;br /&gt;Патронов: 5</Russian>
+            <Italian>Calibro: 12.7x99mm (AMAX)&lt;br /&gt;Munizioni: 5</Italian>
+            <German>Kaliber:12,7x99mm (AMAX)&lt;br /&gt;Patronen: 5</German>
+            <Czech>Ráže: 12.7x99mm (AMAX)&lt;br /&gt;Nábojů: 5</Czech>
+            <Portuguese>Calibre: 12.7x99mm (AMAX)&lt;br/&gt;Cartuchos: 5</Portuguese>
+            <Hungarian>Kaliber: 12,7x99mm (AMAX)&lt;br /&gt;Lövedékek: 5</Hungarian>
+            <Japanese>口径: 12.7x99mm (AMAX)&lt;br /&gt;装填数: 5</Japanese>
+            <Korean>구경: 12.7x99mm (AMAX)&lt;br /&gt;장탄수: 5</Korean>
+            <Chinese>口徑: 12.7x99毫米 (AMAX 比賽專用彈)&lt;br /&gt;發數: 5</Chinese>
+            <Chinesesimp>口径: 12.7x99mm (AMAX 比赛专用弹)&lt;br /&gt;发数: 5</Chinesesimp>
+            <Turkish>Kalibre: 12.7x99mm (AMAX)&lt;br /&gt;Mermi: 5</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_127x99_AMAX_Mag_Name">
             <English>12.7x99mm 10Rnd Mag (AMAX)</English>
@@ -3133,23 +3065,6 @@
             <Chinesesimp>12.7x99mm 10发 弹匣 (AMAX 比赛专用弹)</Chinesesimp>
             <Turkish>12.7x99mm 10Rnd Şarjör (AMAX)</Turkish>
         </Key>
-        <Key ID="STR_ACE_Ballistics_10Rnd_127x99_AMAX_Mag_NameShort">
-            <English>12.7mm</English>
-            <French>12,7mm</French>
-            <Spanish>12.7mm</Spanish>
-            <Polish>12,7mm</Polish>
-            <Russian>12,7 мм</Russian>
-            <German>12,7mm</German>
-            <Italian>12.7mm</Italian>
-            <Czech>12.7mm</Czech>
-            <Portuguese>12.7mm</Portuguese>
-            <Hungarian>12,7mm</Hungarian>
-            <Japanese>12.7mm</Japanese>
-            <Korean>12.7mm</Korean>
-            <Chinese>12.7毫米 AMAX 比賽專用彈</Chinese>
-            <Chinesesimp>12.7mm AMAX 比赛专用弹</Chinesesimp>
-            <Turkish>12.7mm</Turkish>
-        </Key>
         <Key ID="STR_ACE_Ballistics_10Rnd_127x99_AMAX_Mag_Description">
             <English>Caliber: 12.7x99mm (AMAX)&lt;br /&gt;Rounds: 10</English>
             <French>Calibre: 12,7x99mm (AMAX)&lt;br /&gt;Cartouches: 10</French>
@@ -3166,6 +3081,23 @@
             <Chinese>口徑: 12.7x99毫米 (AMAX 比賽專用彈)&lt;br /&gt;發數: 10</Chinese>
             <Chinesesimp>口径: 12.7x99mm (AMAX 比赛专用弹)&lt;br /&gt;发数: 10</Chinesesimp>
             <Turkish>Kalibre: 12.7x99mm (AMAX)&lt;br /&gt;Mermi: 10</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_127x99_AMAX_Mag_NameShort">
+            <English>12.7mm</English>
+            <French>12,7mm</French>
+            <Spanish>12.7mm</Spanish>
+            <Polish>12,7mm</Polish>
+            <Russian>12,7 мм</Russian>
+            <German>12,7mm</German>
+            <Italian>12.7mm</Italian>
+            <Czech>12.7mm</Czech>
+            <Portuguese>12.7mm</Portuguese>
+            <Hungarian>12,7mm</Hungarian>
+            <Japanese>12.7mm</Japanese>
+            <Korean>12.7mm</Korean>
+            <Chinese>12.7毫米 AMAX 比賽專用彈</Chinese>
+            <Chinesesimp>12.7mm AMAX 比赛专用弹</Chinesesimp>
+            <Turkish>12.7mm</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_AmmoSupplyCrate_DisplayName">
             <English>[ACE] Ammo Supply Crate</English>
