@@ -3755,6 +3755,21 @@
             <Turkish>Leupold Mark 4 HAMR (2D)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (2D)</Spanish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_hamr_pip">
+            <English>Leupold Mark 4 HAMR (PIP)</English>
+            <German>Leupold Mark 4 HAMR (PIP)</German>
+            <Chinese>Leupold Mark 4 HAMR (PIP)</Chinese>
+            <Chinesesimp>Leupold Mark 4 HAMR (PIP)</Chinesesimp>
+            <Japanese>Leupold Mark 4 HAMR (PIP)</Japanese>
+            <Italian>Leupold Mark 4 HAMR (PIP)</Italian>
+            <Polish>Leupold Mark 4 HAMR (PIP)</Polish>
+            <Russian>Leupold Mark 4 HAMR (PIP)</Russian>
+            <Portuguese>Leupold Mark 4 HAMR (PIP)</Portuguese>
+            <French>Leupold Mark 4 HAMR (PIP)</French>
+            <Czech>Leupold Mark 4 HAMR (PIP)</Czech>
+            <Turkish>Leupold Mark 4 HAMR (PIP)</Turkish>
+            <Spanish>Leupold Mark 4 HAMR (PIP)</Spanish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
             <German>ELCAN SpecterOS (Beige)</German>
@@ -3813,6 +3828,21 @@
             <Czech>ELCAN SpecterOS (2D)</Czech>
             <Turkish>ELCAN SpecterOS (2D)</Turkish>
             <Spanish>ELCAN SpecterOS (2D)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_pip">
+            <English>ELCAN SpecterOS (PIP)</English>
+            <German>ELCAN SpecterOS (PIP)</German>
+            <Chinese>ELCAN SpecterOS (PIP)</Chinese>
+            <Chinesesimp>ELCAN SpecterOS (PIP)</Chinesesimp>
+            <Japanese>ELCAN SpecterOS (PIP)</Japanese>
+            <Italian>ELCAN SpecterOS (PIP)</Italian>
+            <Polish>ELCAN SpecterOS (PIP)</Polish>
+            <Russian>ELCAN SpecterOS (PIP)</Russian>
+            <Portuguese>ELCAN SpecterOS (PIP)</Portuguese>
+            <French>ELCAN SpecterOS (PIP)</French>
+            <Czech>ELCAN SpecterOS (PIP)</Czech>
+            <Turkish>ELCAN SpecterOS (PIP)</Turkish>
+            <Spanish>ELCAN SpecterOS (PIP)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
             <English>ELCAN SpecterOS (Lush)</English>
@@ -3930,6 +3960,20 @@
             <Czech>Nightforce NXS (2D)</Czech>
             <Turkish>Nightforce NXS (2D)</Turkish>
             <Spanish>Nightforce NXS (2D)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_lrps_pip">
+            <English>Nightforce NXS (PIP)</English>
+            <Chinese>Nightforce NXS (PIP)</Chinese>
+            <Chinesesimp>Nightforce NXS (PIP)</Chinesesimp>
+            <Japanese>Nightforce NXS (PIP)</Japanese>
+            <Italian>Nightforce NXS (PIP)</Italian>
+            <Polish>Nightforce NXS (PIP)</Polish>
+            <Russian>Nightforce NXS (PIP)</Russian>
+            <Portuguese>Nightforce NXS (PIP)</Portuguese>
+            <French>Nightforce NXS (PIP)</French>
+            <Czech>Nightforce NXS (PIP)</Czech>
+            <Turkish>Nightforce NXS (PIP)</Turkish>
+            <Spanish>Nightforce NXS (PIP)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -4186,6 +4230,20 @@
             <Czech>IOR-Valdada Pitbull 2 (2D)</Czech>
             <Turkish>IOR-Valdada Pitbull 2 (2D)</Turkish>
             <Spanish>IOR-Valdada Pitbull 2 (2D)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrco_pip">
+            <English>IOR-Valdada Pitbull 2 (PIP)</English>
+            <Chinese>IOR-Valdada Pitbull 2 (PIP)</Chinese>
+            <Chinesesimp>IOR-Valdada Pitbull 2 (PIP)</Chinesesimp>
+            <Japanese>IOR-Valdada ピットブル 2 (PIP)</Japanese>
+            <Italian>IOR-Valdada Pitbull 2 (PIP)</Italian>
+            <Polish>IOR-Valdada Pitbull 2 (PIP)</Polish>
+            <Russian>IOR-Valdada Pitbull 2 (PIP)</Russian>
+            <Portuguese>IOR-Valdada Pitbull 2 (PIP)</Portuguese>
+            <French>IOR-Valdada Pitbull 2 (PIP)</French>
+            <Czech>IOR-Valdada Pitbull 2 (PIP)</Czech>
+            <Turkish>IOR-Valdada Pitbull 2 (PIP)</Turkish>
+            <Spanish>IOR-Valdada Pitbull 2 (PIP)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
