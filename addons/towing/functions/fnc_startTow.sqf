@@ -6,12 +6,13 @@
  * Arguments:
  * 0: Unit wanting to start towing <OBJECT>
  * 1: Vehicle to tow from <OBJECT>
+ * 2: Rope Classname <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, cursorObject] call ace_towing_fnc_startTow
+ * [player, cursorObject, "ACE_rope3"] call ace_towing_fnc_startTow
  *
  * Public: No
  */

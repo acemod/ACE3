@@ -43,7 +43,7 @@ class CfgWeapons {
         scope = 1;
         picture = QPATHTOF(data\m_rope_ca);
         model = "\A3\Structures_F_Heli\Items\Tools\Rope_01_F.p3d";
-        descriptionShort = CSTRING(descriptionShort);
+        descriptionShort = CSTRING(rope_descriptionShort);
     };
 
     class ACE_rope3: ACE_ropeBase {
