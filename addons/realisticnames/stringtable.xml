@@ -2011,6 +2011,18 @@
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Khaki_Name">
             <English>MX LSW (Khaki)</English>
             <German>MX LSW (Khaki)</German>
+            <Chinese>MX LSW（卡其）</Chinese>
+            <French>MX LSW (kaki)</French>
+            <Spanish>MX LSW (caqui)</Spanish>
+            <Italian>MX LSW (kaki)</Italian>
+            <Polish>MX LSW (khaki)</Polish>
+            <Russian>MX LSW (хаки)</Russian>
+            <Czech>MX LSW (khaki)</Czech>
+            <Portuguese>MX LSW (cáqui)</Portuguese>
+            <Korean>MX LSW (카키)</Korean>
+            <Chinesesimp>MX LSW（卡其色）</Chinesesimp>
+            <Japanese>MX LSW（カーキ）</Japanese>
+            <Turkish>MX LSW (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
@@ -2049,6 +2061,18 @@
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Khaki_Name">
             <English>MXM (Khaki)</English>
             <German>MXM (Khaki)</German>
+            <Chinese>MXM（卡其）</Chinese>
+            <French>MXM (kaki)</French>
+            <Spanish>MXM (caqui)</Spanish>
+            <Italian>MXM (kaki)</Italian>
+            <Polish>MXM (khaki)</Polish>
+            <Russian>MXM (хаки)</Russian>
+            <Czech>MXM (khaki)</Czech>
+            <Portuguese>MXM (cáqui)</Portuguese>
+            <Korean>MXM (카키)</Korean>
+            <Chinesesimp>MXM（卡其色）</Chinesesimp>
+            <Japanese>MXM（カーキ）</Japanese>
+            <Turkish>MXM (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KH2002 Sama</English>
