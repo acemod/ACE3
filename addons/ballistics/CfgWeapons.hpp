@@ -162,7 +162,7 @@ class CfgWeapons {
             "ACE_30Rnd_65x47_Scenar_khaki_mag"
         };
     };
-    class arifle_MXM_blk_F: arifle_MXM_F { // bleh inheritance
+    class arifle_MXM_Black_F: arifle_MXM_F { // bleh inheritance
         magazines[] += {
             "ACE_30Rnd_65_Creedmor_mag",
             "ACE_30Rnd_65x47_Scenar_mag",
@@ -172,7 +172,7 @@ class CfgWeapons {
             "ACE_30Rnd_65x47_Scenar_khaki_mag"
         };
     };
-    class arifle_MXM_khk_F: arifle_MXM_black_F {
+    class arifle_MXM_khk_F: arifle_MXM_Black_F {
         magazines[] += {
             "ACE_30Rnd_65_Creedmor_mag",
             "ACE_30Rnd_65x47_Scenar_mag",
