@@ -171,6 +171,27 @@
             <Chinesesimp>红外线频闪器</Chinesesimp>
             <Turkish>IR Stroboskop</Turkish>
         </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_mode_1">
+            <English>IR Mode 1</English>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_mode_2">
+            <English>IR Mode 2</English>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_mode_3">
+            <English>IR Mode 3</English>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_mode_4">
+            <English>IR Mode 4</English>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_high_strength">
+            <English>High Power</English>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_med_strength">
+            <English>Medium Power</English>
+        </Key>
+        <Key ID="STR_ACE_Attach_IrStrobe_low_strength">
+            <English>Low Power</English>
+        </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Description">
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
             <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
