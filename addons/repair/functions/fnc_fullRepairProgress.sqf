@@ -27,17 +27,21 @@ _allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
 private _hitPointsToIgnore = [_vehicle] call FUNC(getHitPointsToIgnore);
 
-private _firstDamagedIndex = _damageValues findIf {_x > 0 && {!(_x in _hitPointsToIgnore)}};
+private _firstDamagedIndex = {
+    private _hitPoint = _hitPoints select _forEachIndex;
+    if (_x > 0 && {!(_hitPoint in _hitPointsToIgnore)}) exitWith { _forEachIndex };
+    -1
+} forEach _damageValues;
 
 // Stop repairing if there are no more damaged hitpoints
-if (_firstDamagedIndex == -1) exitWith {false};
+// callBackSuccess to FUNC(doFullRepair) for ignored hitpoints
+if (_firstDamagedIndex == -1) exitWith {true};
 
 // Get amount of needed repairs
 private _repairsNeeded = ([_engineer, _vehicle] call FUNC(getFullRepairTime)) / GVAR(miscRepairTime);
 
 // Not enough time has elapsed to repair a hitpoint
 if (_totalTime - _elapsedTime > ((_repairsNeeded - 1) * GVAR(miscRepairTime))) exitWith {true};
-systemChat format ["Repairing at Time: %1, HitPoint: %2", _elapsedTime, _hitPoints select _firstDamagedIndex];
 
 // Repair the first damaged hitpoint
 [_engineer, _vehicle, _firstDamagedIndex] call FUNC(doRepair);
