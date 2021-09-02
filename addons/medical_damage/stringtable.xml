@@ -710,7 +710,7 @@
             <Russian>Порог боли для потери сознания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
-            <English>Sets the threshold for severe pain, at which unit can lose consciouness when receiving a wound.</English>
+            <English>Sets the threshold for severe pain, at which unit can lose consciousness when receiving a wound.</English>
             <Russian>Устанавливает количество боли от полученной травмы, при котором юнит может потерять сознание.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
