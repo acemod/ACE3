@@ -44,6 +44,6 @@ private _repairsNeeded = ([_engineer, _vehicle] call FUNC(getFullRepairTime)) / 
 if (_totalTime - _elapsedTime > ((_repairsNeeded - 1) * GVAR(miscRepairTime))) exitWith {true};
 
 // Repair the first damaged hitpoint
-[_engineer, _vehicle, _firstDamagedIndex] call FUNC(doRepair);
+[_engineer, _vehicle, _firstDamagedIndex, "FullRepair"] call FUNC(doRepair);
 
 true

@@ -7,6 +7,7 @@
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
  * 2: Selected hitpointIndex <NUMBER>
+ * 3: Action Classname <STRING>
  *
  * Return Value:
  * None
@@ -17,8 +18,8 @@
  * Public: No
  */
 
-params ["_unit", "_vehicle", "_hitPointIndex"];
-TRACE_3("params",_unit,_vehicle,_hitPointIndex);
+params ["_unit", "_vehicle", "_hitPointIndex", "_actionClass"];
+TRACE_3("params",_unit,_vehicle,_hitPointIndex,_actionClass);
 
 private _postRepairDamageMin = [_unit] call FUNC(getPostRepairDamage);
 
@@ -65,7 +66,7 @@ if (isArray _hitpointGroupConfig) then {
 };
 
 // display text message if enabled
-if (GVAR(DisplayTextOnRepair)) then {
+if (GVAR(DisplayTextOnRepair) && {_actionClass isNotEqualTo "FullRepair"}) then {
     // Find localized string
     private _textLocalized = localize ([LSTRING(RepairedHitPointFully), LSTRING(RepairedHitPointPartially)] select (_hitPointCurDamage > 0));
     private _textDefault = localize ([LSTRING(RepairedFully), LSTRING(RepairedPartially)] select (_hitPointCurDamage > 0));
