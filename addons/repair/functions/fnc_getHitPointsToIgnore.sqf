@@ -62,7 +62,7 @@ private _processedSelections = [];
         continue
     };
 
-    if (_hitpoint select [0,1] isEqualTo "#") then { // skip lights
+    if (_hitpoint select [0,1] isEqualTo "#" || {_hitpoint select [0,9] isEqualTo "hit_light"}) then { // skip lights
         TRACE_3("Skipping light",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping light, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
@@ -90,14 +90,14 @@ private _processedSelections = [];
             if (_hitpointsCfg isNotEqualTo []) exitWith {
                 TRACE_2("turret hitpoint configFound",_hitpoint,_x);
                  // only do turret hitpoints and stuff linked to visuals
-                if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1} || {getText (_hitpointsCfg # 0 >> "visuals") != ""}) then {
+                if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1} || {(getText (_hitpointsCfg # 0 >> "visual")) != ""}) then {
                     _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
                 };
             };
         } forEach _turretPaths;
         if (_armorComponent == "") then {
             private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
-            if ((getText (_hitpointsCfg # 0 >> "visual")) != "") then {
+            if (_hitpointsCfg isNotEqualTo [] && {(getText (_hitpointsCfg # 0 >> "visual")) != ""}) then {
                 _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
             };
         };
@@ -105,9 +105,9 @@ private _processedSelections = [];
 
     if ((_selection == "") && {_armorComponent == ""}) then {
         TRACE_3("Skipping no selection OR armor component",_hitpoint,_forEachIndex,_selection);
-        #ifdef DEBUG_MODE_FULL
+        /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping no selection OR armor component, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
-        #endif
+        #endif*/
         _hitPointsToIgnore pushBackUnique _hitpoint;
         _processedSelections pushBack _selection;
         continue
@@ -115,9 +115,9 @@ private _processedSelections = [];
 
     if (!(getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends") in ["", "0"])) then { // skip depends hitpoints, should be normalized by engine
         TRACE_3("Skipping depends hitpoint",_hitpoint,_forEachIndex,_selection);
-        #ifdef DEBUG_MODE_FULL
+        /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping depends hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
-        #endif
+        #endif*/
         _hitPointsToIgnore pushBackUnique _hitpoint;
         _processedSelections pushBack _selection;
         continue
@@ -125,9 +125,9 @@ private _processedSelections = [];
 
     if ((_hitpointGroups findIf {(_x select 1) == _hitpoint}) != -1) then { // skip child hitpoints
         TRACE_3("Skipping child hitpoint",_hitpoint,_forEachIndex,_selection);
-        #ifdef DEBUG_MODE_FULL
+        /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
-        #endif
+        #endif*/
         _hitPointsToIgnore pushBackUnique _hitpoint;
         _processedSelections pushBack _selection;
         continue

@@ -43,6 +43,7 @@ private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 private _vehCfg = configFile >> "CfgVehicles" >> _type;
 // Custom position can be defined via config for associated hitpoint
 private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
+private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehicle, "commander", true])) apply {_x # 3};
 
 {
     private _selection = _x;
@@ -50,9 +51,7 @@ private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
 
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
-        if (_selection in _processedSelections) exitWith {
-            TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);
-        };
+        if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
 
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
 
@@ -80,6 +79,31 @@ private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
         // Skip ignored hitpoints
         if (_hitpoint in _hitPointsToIgnore) exitWith {
             TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
+        };
+
+        // Some hitpoints do not have a selection but do have an armorComponent value (seems to mainly be RHS)
+        // Ref https://community.bistudio.com/wiki/Arma_3_Damage_Enhancement
+        // this code won't support identically named hitpoints (e.g. commander turret: Duplicate HitPoint name 'HitTurret')
+        private _armorComponent = "";
+        if (_selection == "") then {
+            private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
+            if (_hitpointsCfg isNotEqualTo []) then {
+                _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
+            };
+            if (_armorComponent == "") then {
+                {
+                    private _turretHitpointCfg = ([_vehCfg, _x] call CBA_fnc_getTurret) >> "HitPoints";
+                    private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
+                    if (_hitpointsCfg isNotEqualTo []) exitWith {
+                        TRACE_2("turret hitpoint configFound",_hitpoint,_x);
+                        _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
+                    };
+                } forEach _turretPaths;
+            };
+            if (_armorComponent != "") then { INFO_3("%1: %2 no selection: using armorComponent %3",_type,_hitpoint,_armorComponent); };
+        };
+        if ((_selection == "") && {_armorComponent == ""}) exitWith {
+            TRACE_3("Skipping no selection OR armor component",_hitpoint,_forEachIndex,_selection);
         };
 
         // Find the action position
