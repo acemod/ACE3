@@ -25,7 +25,9 @@ _args params ["_engineer", "_vehicle"];
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 _allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
-private _firstDamagedIndex = _damageValues findIf {_x > 0};
+private _hitPointsToIgnore = [_vehicle] call FUNC(getHitPointsToIgnore);
+
+private _firstDamagedIndex = _damageValues findIf {_x > 0 && {!(_x in _hitPointsToIgnore)}};
 
 // Stop repairing if there are no more damaged hitpoints
 if (_firstDamagedIndex == -1) exitWith {false};
