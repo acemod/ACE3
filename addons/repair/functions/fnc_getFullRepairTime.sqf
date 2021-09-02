@@ -6,9 +6,6 @@
  * Arguments:
  * 0: Engineer <OBJECT>
  * 1: Vehicle <OBJECT>
- * 2: Selected hitpoint or hitpointIndex <STRING> or <NUMBER>
- * 3: Repair action classname (not used) <STRING>
- * 4: Skip extra hitpoints (optional, default true) <BOOL>
  *
  * Return Value:
  * Repair Time <NUMBER>
