@@ -48,11 +48,6 @@ private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
     private _selection = _x;
     private _hitpoint = toLower (_hitPoints select _forEachIndex);
 
-    // Skip ignored hitpoints
-    if (_hitpoint in _hitPointsToIgnore) exitWith {
-        TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
-    };
-
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
         if (_selection in _processedSelections) exitWith {
@@ -81,6 +76,11 @@ private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
 
         _processedSelections pushBack _selection;
     } else {
+
+        // Skip ignored hitpoints
+        if (_hitpoint in _hitPointsToIgnore) exitWith {
+            TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
+        };
 
         // Find the action position
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
