@@ -38,38 +38,44 @@ private _processedSelections = [];
     private _hitpoint = toLower (_hitPoints select _forEachIndex);
     private _isWheelOrTrack = _selection in _wheelHitSelections || {_selection in TRACK_HITPOINTS};
 
-    if (_hitPoint isEqualTo "") exitWith { // skip empty hitpoint
-        _hitPointsToIgnore pushBackUnique _hitPoint;
+    if (_hitPoint isEqualTo "") then { // skip empty hitpoint
+        continue
     };
 
-    if (_isWheelOrTrack && {_x in _processedSelections || {_x isEqualTo ""}}) exitWith { // skip duplicate or empty selection wheel/track
+    if (_isWheelOrTrack && {_x in _processedSelections || {_x isEqualTo ""}}) then { // skip duplicate or empty selection wheel/track
         TRACE_3("Skipping duplicate Wheel/Track or empty selection",_hitpoint,_forEachIndex,_selection);
         _hitPointsToIgnore pushBackUnique _hitPoint;
+        continue
     };
 
-    if ("glass" in _hitpoint) exitWith { // skip glass
+    if ("glass" in _hitpoint) then { // skip glass
         TRACE_3("Skipping glass",_hitpoint,_forEachIndex,_selection);
         _hitPointsToIgnore pushBackUnique _hitPoint;
+        continue
     };
 
-    if (_hitPoint select [0,1] isEqualTo "#") exitWith { // skip lights
+    if (_hitPoint select [0,1] isEqualTo "#") then { // skip lights
         TRACE_3("Skipping light",_hitpoint,_forEachIndex,_selection);
         _hitPointsToIgnore pushBackUnique _hitPoint;
+        continue
     };
 
-    if (_hitPoint select [0,7] isEqualTo "hitera_" || {_hitPoint select [0,8] isEqualTo "hitslat_"} || {_hitPoint select [0,4] isEqualTo "era_"}) exitWith { // skip era/slat
+    if (_hitPoint select [0,7] isEqualTo "hitera_" || {_hitPoint select [0,8] isEqualTo "hitslat_"} || {_hitPoint select [0,4] isEqualTo "era_"}) then { // skip era/slat
         TRACE_3("Skipping ERA/Slat HitPoint",_hitpoint,_forEachIndex,_selection);
         _hitPointsToIgnore pushBackUnique _hitPoint;
+        continue
     };
 
-    if ((_hitpointGroups findIf {(_x select 1) == _hitpoint}) != -1) exitWith { // skip child hitpoints
+    if ((_hitpointGroups findIf {(_x select 1) == _hitpoint}) != -1) then { // skip child hitpoints
         TRACE_3("Skipping child hitpoint",_hitpoint,_forEachIndex,_selection);
         _hitPointsToIgnore pushBackUnique _hitPoint;
+        continue
     };
 
-    if (!((getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends")) in ["", "0"])) exitWith { // skip depends hitpoints, normalized by engine
+    if (!((getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends")) in ["", "0"])) then { // skip depends hitpoints, normalized by engine
         TRACE_3("Skipping depends hitpoint",_hitpoint,_forEachIndex,_selection);
         _hitPointsToIgnore pushBackUnique _hitPoint;
+        continue
     };
 
     private _armorComponent = ""; // check for armor component if empty selection
@@ -84,8 +90,9 @@ private _processedSelections = [];
             };
         } forEach _turretPaths;
     };
-    if (_selection == "" && {_armorComponent == ""}) exitWith { // skip hitpoint without an armorComponent
+    if (_selection == "" && {_armorComponent == ""}) then { // skip hitpoint without an armorComponent
         _hitPointsToIgnore pushBackUnique _hitPoint;
+        continue
     };
     _processedSelections pushBack _x;
 } forEach _hitSelections;
