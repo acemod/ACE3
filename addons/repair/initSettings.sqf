@@ -117,11 +117,17 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(fullRepairTimeCoef), "SLIDER",
-    [LSTRING(fullRepairTimeCoef_name), LSTRING(fullRepairTimeCoef_description)],
+    QGVAR(miscRepairTime), "SLIDER",
+    [LSTRING(miscRepairTime_name), LSTRING(miscRepairTime_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
-    [0,5,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true,
-    {[QGVAR(fullRepairTimeCoef), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    [0,60,15,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(wheelRepairTime), "SLIDER",
+    [LSTRING(wheelRepairTime_name), LSTRING(wheelRepairTime_description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    [0,60,10,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    true
 ] call CBA_fnc_addSetting;

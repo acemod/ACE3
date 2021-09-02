@@ -25,6 +25,9 @@ TRACE_2("addRepairActions", _vehicle,_type);
 private _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
 if (_type in _initializedClasses) exitWith {};
 
+// get hitPoints to ignore
+private _hitPointsToIgnore = [_vehicle] call FUNC(getHitPointsToIgnore);
+
 // get all hitpoints and selections
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
 
@@ -40,17 +43,21 @@ private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 private _vehCfg = configFile >> "CfgVehicles" >> _type;
 // Custom position can be defined via config for associated hitpoint
 private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
-// Associated hitpoints can be grouped via config to produce a single repair action
-private _hitpointGroups = getArray (_vehCfg >> QGVAR(hitpointGroups));
-// Get turret paths
-private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehicle, "commander", true])) apply {_x # 3};
 
 {
     private _selection = _x;
     private _hitpoint = toLower (_hitPoints select _forEachIndex);
+
+    // Skip ignored hitpoints
+    if (_hitpoint in _hitPointsToIgnore) exitWith {
+        TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
+    };
+
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
-        if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
+        if (_selection in _processedSelections) exitWith {
+            TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);
+        };
 
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
 
@@ -74,53 +81,6 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
         _processedSelections pushBack _selection;
     } else {
-        // Empty hitpoints don't contain enough information
-        if (_hitpoint isEqualTo "") exitWith { TRACE_3("Skipping Empty Hit",_hitpoint,_forEachIndex,_selection); };
-        // Ignore glass hitpoints
-        if ((_hitpoint find "glass") != -1) exitWith { TRACE_3("Skipping Glass",_hitpoint,_forEachIndex,_selection); };
-        // Ignore hitpoints starting with # (seems to be lights)
-        if ((_hitpoint select [0,1]) == "#") exitWith { TRACE_3("Skipping # hit",_hitpoint,_forEachIndex,_selection); };
-        // Ignore ERA/Slat armor (vanilla uses hitera_/hitslat_, pre-1.82 RHS uses era_)
-        // ToDo: see how community utilizes new armor system, could also check getText (_hitpointConfig >> "simulation")
-        if (((_hitpoint select [0,7]) == "hitera_") || {(_hitpoint select [0,8]) == "hitslat_"} || {(_hitpoint select [0,4]) == "era_"}) exitWith { TRACE_3("Skipping ERA/SLAT",_hitpoint,_forEachIndex,_selection); };
-
-        // Some hitpoints do not have a selection but do have an armorComponent value (seems to mainly be RHS)
-        // Ref https://community.bistudio.com/wiki/Arma_3_Damage_Enhancement
-        // this code won't support identically named hitpoints (e.g. commander turret: Duplicate HitPoint name 'HitTurret')
-        private _armorComponent = "";
-        if (_selection == "") then {
-            {
-                private _turretHitpointCfg = ([_vehCfg, _x] call CBA_fnc_getTurret) >> "HitPoints";
-                private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
-                if (_hitpointsCfg isNotEqualTo []) exitWith {
-                    TRACE_2("turret hitpoint configFound",_hitpoint,_x);
-                     // only do turret hitpoints for now or we get some weird stuff
-                    if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1}) then {
-                        _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
-                    };
-                };
-            } forEach _turretPaths;
-            if (_armorComponent != "") then { INFO_3("%1: %2 no selection: using armorComponent %3",_type,_hitpoint,_armorComponent); };
-        };
-        if ((_selection == "") && {_armorComponent == ""}) exitWith { TRACE_3("Skipping no selection OR armor component",_hitpoint,_forEachIndex,_selection); };
-
-
-        //Depends hitpoints shouldn't be modified directly (will be normalized)
-        // Biki: Clearing 'depends' in case of inheritance cannot be an empty string (rpt warnings), but rather a "0" value.
-        if (!((getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"])) exitWith {
-            TRACE_3("Skip Depends",_hitpoint,_forEachIndex,_selection);
-        };
-
-        private _childHitPoint = false;
-        {
-            {
-                if (_hitpoint == _x) exitWith {
-                    _childHitPoint = true;
-                };
-            } forEach (_x select 1);
-        } forEach _hitpointGroups;
-        // If the current selection is associated with a child hitpoint, then skip
-        if (_childHitPoint) exitWith { TRACE_3("childHitpoint",_hitpoint,_forEachIndex,_selection); };
 
         // Find the action position
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];

@@ -6,7 +6,7 @@ class ACE_Repair {
 
             repairLocations[] = {"All"};
             requiredEngineer = QGVAR(engineerSetting_Wheel);
-            repairingTime = 10;
+            repairingTime = QGVAR(wheelRepairTime);
             repairingTimeSelfCoef = 1;
             items = QGVAR(wheelRepairRequiredItems);
             condition = QUOTE(call FUNC(canReplaceWheel));
@@ -35,7 +35,7 @@ class ACE_Repair {
             displayNameProgress = CSTRING(RepairingHitPoint);
             condition = QUOTE(call FUNC(canMiscRepair));
             requiredEngineer = QGVAR(engineerSetting_Repair);
-            repairingTime = 15;
+            repairingTime = QGVAR(miscRepairTime);
             callbackSuccess = QUOTE(call FUNC(doRepair));
             items = QGVAR(miscRepairRequiredItems);
             itemConsumed = QGVAR(consumeItem_ToolKit);
@@ -72,8 +72,9 @@ class ACE_Repair {
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
             repairingTime = QUOTE(call FUNC(getFullRepairTime));
-            condition = "-1 != ((getAllHitPointsDamage _target param [2,[]]) findIf {_x > 0})";
-            callbackSuccess = QUOTE(call FUNC(doFullRepair));
+            condition = "((getAllHitPointsDamage _target) select 2) findIf {_x > 0} != -1";
+            callbackSuccess = QFUNC(doFullRepair);
+            callbackProgress = QFUNC(fullRepairProgress);
             items = QGVAR(fullRepairRequiredItems);
             itemConsumed = QGVAR(consumeItem_ToolKit);
         };
