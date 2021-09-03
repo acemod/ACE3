@@ -2037,5 +2037,11 @@
         <Key ID="STR_ACE_Repair_wheelRepairTime_description">
             <English>Time in seconds to remove or change a wheel.</English>
         </Key>
+        <Key ID="STR_ACE_Repair_fullRepairFacilitySpeed_name">
+            <English>Full Repair Facility Speed Boost</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_fullRepairFacilitySpeed_description">
+            <English>Time in seconds to complete a full repair is divided by this value while near a repair facility or vehicle.</English>
+        </Key>
     </Package>
 </Project>

@@ -21,6 +21,7 @@ params ["_engineer", "_vehicle"];
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 _allHitPointsDamage params ["_hitPoints", "_selections", "_damageValues"];
 private _postRepairDamageMin = ([_engineer] call FUNC(getPostRepairDamage)) max 0.5; // single repair is capped at 0.5 in doRepair
+private _isNearFacility = [_engineer] call FUNC(isInRepairFacility) || {[_engineer] call FUNC(isNearRepairVehicle)};
 
 // get hitpoints of wheels with their selections
 ([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
@@ -35,5 +36,5 @@ private _repairsNeeded = 0;
     _repairsNeeded = _repairsNeeded + ceil (_damage / (1 - _postRepairDamageMin));
 } forEach _selections;
 
-// time for a repair for ignored hitpoints + actual repairs * time
-GVAR(miscRepairTime) + _repairsNeeded * GVAR(miscRepairTime)
+// time for a repair for ignored hitpoints + actual repairs * time, sped up if near facility
+(GVAR(miscRepairTime) + _repairsNeeded * GVAR(miscRepairTime)) / ([1, GVAR(fullRepairFacilitySpeed)] select _isNearFacility)
