@@ -57,6 +57,9 @@
             <Turkish>Genel Teşhis eylemi yerine Nabzı Kontrol Et, Kan Basıncını Kontrol Et ve Yanıtı Kontrol Et tedavi eylemlerini etkinleştirir. \ Devre dışı bırakıldığında, CPR eylemi yalnızca CPR gerçekleştirilmesi uygun olduğunda gösterilecektir.</Turkish>
             <Spanish>Habilita la comprobación del pulso, presión sanguinea y rsepuesta a las acciones del tratamiento en lugar de la acción de diagnóstico genérico. \n Cuando se deshabilita, la acción RCP solo se mostrará cuando realizar un RCP sea apropiado. \n Las acciones activadas de este ajuste son necesarias para determinar si una persona está inconsciente o en parada cardiaca.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
+            <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
             <German>Erweiterte Medikation</German>
@@ -3737,6 +3740,12 @@
             <Chinesesimp>%1 没有反应</Chinesesimp>
             <Chinese>%1 沒有反應</Chinese>
             <Turkish>%1 tepki vermiyor</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
+            <English>%1 is not responsive, taking shallow gasps and convulsing</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
+            <English>%1 is not responsive, motionless and cold</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
