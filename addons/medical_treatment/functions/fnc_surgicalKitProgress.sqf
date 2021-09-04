@@ -53,7 +53,7 @@ private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
 private _treatedWoundIndex = _bandagedWounds find (_stitchableWounds select 0);
 private _bandagedWound = (_bandagedWounds select _treatedWoundIndex);
 _bandagedWound params ["_bandagedID", "_bandagedBodyPartN", "_bandagedAmountOf"];
-private _treatedWound = +_bandagedWound;
+private _treatedWound = +_bandagedWound; // need a copy so we don't alter the original
 _treatedWound params ["_treatedID", "_treatedBodyPartN", "_treatedAmountOf"];
 
 if (_bandagedAmountOf - 1 <= 0) then {
@@ -63,6 +63,7 @@ if (_bandagedAmountOf - 1 <= 0) then {
     _bandagedWounds set [_treatedWoundIndex, _bandagedWound];
 };
 
+// Can be lazy here, _treatedWound is only used in its entirety when a new wound is being added
 _treatedAmountOf = _treatedAmountOf min 1;
 _treatedWound set [2, _treatedAmountOf];
 
