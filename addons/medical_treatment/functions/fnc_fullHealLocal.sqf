@@ -36,7 +36,9 @@ _patient setVariable [VAR_PAIN, 0, true];
 _patient setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
 
 // Tourniquets
-_patient setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
+private _tourniquets = GET_TOURNIQUETS(_patient);
+_tourniquets apply {[0, CBA_missionTime] select (_x != 0)};
+_patient setVariable [VAR_TOURNIQUET, _tourniquets, true];
 _patient setVariable [QGVAR(occludedMedications), nil, true];
 
 // Wounds and Injuries
