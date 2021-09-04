@@ -54,3 +54,6 @@
 
 // Animations that would be played faster than this are instead skipped. (= Progress bar too quick for animation).
 #define ANIMATION_SPEED_MAX_COEFFICIENT 2.5
+
+// Number of wounds a single surgical kit can close if consume setting is enabled
+#define SURGICAL_KIT_USES 50
