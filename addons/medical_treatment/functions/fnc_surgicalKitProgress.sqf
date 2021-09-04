@@ -31,11 +31,8 @@ if (_stitchableWounds isEqualTo []) exitWith {false};
 private _allMedicMagazines = magazinesAmmo _medic;
 private _hasUsesLeft = _allMedicMagazines findIf {(_x select 0) isEqualTo "ACE_surgicalKit_mag"} != -1;
 
-// Stop treatment & remove empty magazines if there are no more surgical kit uses
-if ((GVAR(consumeSurgicalKit) > 0) && {!_hasUsesLeft}) exitWith {
-    [_medic, "ACE_surgicalKit_mag", 0] call EFUNC(common,removeSpecificMagazine);
-    false
-};
+// Stop treatment if there are no more surgical kit uses
+if ((GVAR(consumeSurgicalKit) > 0) && {!_hasUsesLeft}) exitWith {false};
 
 private _woundCount = 0;
 {
