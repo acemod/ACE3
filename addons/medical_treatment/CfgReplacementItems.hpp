@@ -21,6 +21,6 @@ class EGVAR(medical,replacementItems) {
         {"ACE_adenosine", 1}
     };
     ACE_surgicalKit[] = {
-        {"ACE_surgicalKit_mag", 1};
+        {"ACE_surgicalKit_mag", 1}
     };
 };
