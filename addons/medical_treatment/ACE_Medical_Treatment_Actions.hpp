@@ -279,7 +279,7 @@ class GVAR(actions) {
         displayNameProgress = CSTRING(Stitching);
         icon = QPATHTOEF(medical_gui,ui\surgical_kit.paa);
         category = "advanced";
-        items[] = {"ACE_surgicalKit"};
+        items[] = {"ACE_surgicalKit_mag"};
         treatmentLocations = QGVAR(locationSurgicalKit);
         allowSelfTreatment = QGVAR(allowSelfStitch);
         medicRequired = QGVAR(medicSurgicalKit);
@@ -287,7 +287,7 @@ class GVAR(actions) {
         condition = QFUNC(canStitch);
         callbackSuccess = "";
         callbackProgress = QFUNC(surgicalKitProgress);
-        consumeItem = QGVAR(consumeSurgicalKit);
+        consumeItem = 0;
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         litter[] = {{"ACE_MedicalLitter_gloves"}};
     };
