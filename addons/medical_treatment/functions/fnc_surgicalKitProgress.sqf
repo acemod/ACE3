@@ -68,7 +68,7 @@ _treatedWound set [2, _treatedAmountOf];
 private _woundIndex = _stitchedWounds findIf {
     _x params ["_classID", "_bodyPartN"];
 
-    _classID == _treatedID && {_bodyPartN == _treatedBodyPartN}
+    [_classID, _bodyPartN] isEqualTo [_treatedID, _treatedBodyPartN]
 };
 
 if (_woundIndex == -1) then {
