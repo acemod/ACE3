@@ -7,18 +7,19 @@
  * 0: Patient <OBJECT>
  * 1: Body Part <STRING>
  * 2: Treatment <STRING>
+ * 3: Effectiveness coefficient <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "Head", "FieldDressing"] call ace_medical_treatment_fnc_bandageLocal
+ * [player, "Head", "FieldDressing", 1] call ace_medical_treatment_fnc_bandageLocal
  *
  * Public: No
  */
 
-params ["_patient", "_bodyPart", "_bandage"];
-TRACE_3("bandageLocal",_patient,_bodyPart,_bandage);
+params ["_patient", "_bodyPart", "_bandage", ["_effectCoef", 1]];
+TRACE_3("bandageLocal",_patient,_bodyPart,_bandage,_effectCoef);
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 if (_partIndex < 0) exitWith {};
@@ -26,9 +27,12 @@ if (_partIndex < 0) exitWith {};
 private _openWounds = GET_OPEN_WOUNDS(_patient);
 if (_openWounds isEqualTo []) exitWith {};
 
+// No effectiveness left
+if (_effectCoef == 0) exitWith {};
+
 // Figure out which injury for this bodypart is the best choice to bandage
 // TODO also use up the remainder on left over injuries
-private _targetWound = [_patient, _bandage, _partIndex] call FUNC(findMostEffectiveWound);
+private _targetWound = [_patient, _bandage, _partIndex, _effectCoef] call FUNC(findMostEffectiveWound);
 _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
 
 // Everything is patched up on this body part already
@@ -44,6 +48,12 @@ _openWounds set [_woundIndex, _wound];
 _patient setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
+
+// Use leftover effectiveness on other wounds
+private _remainingEffectivenessCoef = ((_effectiveness - _impact) / _effectiveness);
+if (_remainingEffectivenessCoef > 0) then {
+    [QGVAR(bandageLocal), [_patient, _bodyPart, _bandage, _remainingEffectivenessCoef], _patient] call CBA_fnc_targetEvent;
+};
 
 // Handle the reopening of bandaged wounds
 if (_impact > 0 && {GVAR(advancedBandages) == 2}) then {

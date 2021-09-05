@@ -7,14 +7,15 @@
  * 0: Patient <OBJECT>
  * 1: Treatment classname <STRING>
  * 2: Body part index <NUMBER>
+ * 3: Effectiveness coefficient <NUMBER>
  *
  * Return Value:
- * [Wound, Index, Effectiveness] <ARRAY, NUMBER, NUMBER>
+ * [Wound, Index, Effectiveness] <ARRAY, NUMBER, NUMBER, NUMBER>
  *
  * Public: No
  */
 
-params ["_patient", "_bandage", "_partIndex"];
+params ["_patient", "_bandage", "_partIndex", ["_effectCoef", 1]];
 
 // Get the default effectiveness for the used bandage
 private _config = configFile >> QUOTE(ADDON) >> "Bandaging";
@@ -40,32 +41,35 @@ private _effectivenessFound = -1;
     _x params ["_classID", "_partIndexN", "_amountOf", "_bleeding", "_damage"];
 
     // Ignore wounds on other bodyparts
-    if (_partIndexN == _partIndex) then {
-        private _woundEffectiveness = _effectiveness;
+    if (_partIndexN != _partIndexN) then { continue };
 
-        // Select the classname from the wound classname storage
-        private _className = EGVAR(medical_damage,woundClassNamesComplex) select _classID;
+    private _woundEffectiveness = _effectiveness;
 
-        // Get the effectiveness of the bandage on this wound type
-        if (isClass (_config >> _className)) then {
-            private _woundTreatmentConfig = _config >> _className;
+    // Select the classname from the wound classname storage
+    private _className = EGVAR(medical_damage,woundClassNamesComplex) select _classID;
 
-            if (isNumber (_woundTreatmentConfig >> "effectiveness")) then {
-                _woundEffectiveness = getNumber (_woundTreatmentConfig >> "effectiveness");
-            };
-        } else {
-            // Basic medical bandage just has a base level config (same effectivenes for all wound types)
-            if (_bandage != "BasicBandage") then {
-                WARNING_2("No config for wound type [%1] config base [%2]",_className,_config);
-            };
+    // Get the effectiveness of the bandage on this wound type
+    if (isClass (_config >> _className)) then {
+        private _woundTreatmentConfig = _config >> _className;
+
+        if (isNumber (_woundTreatmentConfig >> "effectiveness")) then {
+            _woundEffectiveness = getNumber (_woundTreatmentConfig >> "effectiveness");
         };
-
-        // Track most effective found so far
-        if (_woundEffectiveness * _amountOf * _bleeding > _effectivenessFound * (_wound select 2) * (_wound select 3)) then {
-            _effectivenessFound = _woundEffectiveness;
-            _woundIndex = _forEachIndex;
-            _wound = _x;
+    } else {
+        // Basic medical bandage just has a base level config (same effectiveness for all wound types)
+        if (_bandage != "BasicBandage") then {
+            WARNING_2("No config for wound type [%1] config base [%2]",_className,_config);
         };
+    };
+
+    // Multiply by coefficient in case this is a leftover bandage
+    _woundEffectiveness = _woundEffectiveness * _effectCoef;
+
+    // Track most effective found so far
+    if (_woundEffectiveness * _amountOf * _bleeding > _effectivenessFound * (_wound select 2) * (_wound select 3)) then {
+        _effectivenessFound = _woundEffectiveness;
+        _woundIndex = _forEachIndex;
+        _wound = _x;
     };
 } forEach _openWounds;
 
