@@ -31,7 +31,6 @@ if (_openWounds isEqualTo []) exitWith {};
 if (_effectCoef == 0) exitWith {};
 
 // Figure out which injury for this bodypart is the best choice to bandage
-// TODO also use up the remainder on left over injuries
 private _targetWound = [_patient, _bandage, _partIndex, _effectCoef] call FUNC(findMostEffectiveWound);
 _targetWound params ["_wound", "_woundIndex", "_effectiveness"];
 
@@ -49,8 +48,8 @@ _patient setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 
 [_patient] call EFUNC(medical_status,updateWoundBloodLoss);
 
-// Use leftover effectiveness on other wounds
-private _remainingEffectivenessCoef = ((_effectiveness - _impact) / _effectiveness);
+// Percentage of bandage remaining, to be used on other wounds
+private _remainingEffectivenessCoef = 1 - _impact / _effectiveness;
 if (_remainingEffectivenessCoef > 0) then {
     [QGVAR(bandageLocal), [_patient, _bodyPart, _bandage, _remainingEffectivenessCoef], _patient] call CBA_fnc_targetEvent;
 };
