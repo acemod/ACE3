@@ -1456,5 +1456,23 @@
             <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
             <Turkish>Kendi etkileşimim menüsünde animasyonları göster</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_SettingProgressbarInfoName">
+            <English>Additional progress bar information</English>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingProgressbarInfoDesc">
+            <English>Controls extra information shown in progress bar</English>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingProgressbarInfoPercentage">
+            <English>Percentage</English>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingProgressbarInfoTime">
+            <English>Time remaining</English>
+        </Key>
+        <Key ID="STR_ACE_Common_None">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_ACE_Common_TimeLeft">
+            <English>Time left: %1s</English>
+        </Key>
     </Package>
 </Project>
