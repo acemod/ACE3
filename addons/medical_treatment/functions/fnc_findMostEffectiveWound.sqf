@@ -7,7 +7,7 @@
  * 0: Patient <OBJECT>
  * 1: Treatment classname <STRING>
  * 2: Body part index <NUMBER>
- * 3: Effectiveness coefficient <NUMBER>
+ * 3: Percentage of bandage remaining <NUMBER>
  *
  * Return Value:
  * [Wound, Index, Effectiveness] <ARRAY, NUMBER, NUMBER, NUMBER>
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params ["_patient", "_bandage", "_partIndex", ["_effectCoef", 1]];
+params ["_patient", "_bandage", "_partIndex", ["_bandageRemaining", 1]];
 
 // Get the default effectiveness for the used bandage
 private _config = configFile >> QUOTE(ADDON) >> "Bandaging";
@@ -41,7 +41,7 @@ private _effectivenessFound = -1;
     _x params ["_classID", "_partIndexN", "_amountOf", "_bleeding", "_damage"];
 
     // Ignore wounds on other bodyparts
-    if (_partIndexN != _partIndexN) then { continue };
+    if (_partIndexN != _partIndex) then { continue };
 
     private _woundEffectiveness = _effectiveness;
 
@@ -63,7 +63,7 @@ private _effectivenessFound = -1;
     };
 
     // Multiply by coefficient in case this is a leftover bandage
-    _woundEffectiveness = _woundEffectiveness * _effectCoef;
+    _woundEffectiveness = _woundEffectiveness * _bandageRemaining;
 
     // Track most effective found so far
     if (_woundEffectiveness * _amountOf * _bleeding > _effectivenessFound * (_wound select 2) * (_wound select 3)) then {
