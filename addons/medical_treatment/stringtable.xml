@@ -59,6 +59,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
+            <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -3743,9 +3744,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
+            <French>%1 est inconscient, respire par intermittence et convulse.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
+            <French>%1 est inconscient, inanimé et froid.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
