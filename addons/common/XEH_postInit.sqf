@@ -398,9 +398,8 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 GVAR(isReloading) = false;
 GVAR(reloadMutex_lastGesture) = "";
-GVAR(reloadMutex_lastMagazines) = [];
 
-ACE_Player addEventHandler ["GestureChanged", {
+["CAManBase", "GestureChanged", {
     params ["_unit", "_gesture"];
     if (_unit isNotEqualTo ACE_Player) exitWith {};
     if (_gesture isEqualTo "") exitWith {};
@@ -413,14 +412,16 @@ ACE_Player addEventHandler ["GestureChanged", {
     if (_muzzle != _weapon) then { _wpnMzlConfig = _wpnMzlConfig >> _muzzle; };
     private _reloadAction = (getText (_wpnMzlConfig >> "reloadAction"));
 
+    // Ignore weapons with no reload gesture (binoculars)
+    if (_reloadAction == "") exitWith {};
+
     if (_gesture == _reloadAction) then {
         GVAR(isReloading) = true;
         GVAR(reloadMutex_lastGesture) = _gesture;
-        systemChat "reloading";
     };
-}];
+}] call CBA_fnc_addClassEventHandler;
 
-ACE_Player addEventHandler ["GestureDone", {
+["CAManBase", "GestureDone", {
     params ["_unit", "_gesture"];
     if (_unit isNotEqualTo ACE_Player) exitWith {};
     if (_gesture isEqualTo "") exitWith {};
@@ -428,61 +429,8 @@ ACE_Player addEventHandler ["GestureDone", {
     if (_gesture == GVAR(reloadMutex_lastGesture)) then {
         GVAR(isReloading) = false;
         GVAR(reloadMutex_lastGesture) = "";
-        systemChat "done reloading";
     };
-}];
-
-// When reloading, the new magazine is removed from inventory, an animation plays and then the old magazine is added
-// If the animation is interrupted, the new magazine will be lost
-["loadout", {
-    params ["_unit", "_newLoadout"];
-    private _mags = magazines _unit;
-    // if our magazine count dropped by 1, we might be reloading
-    if ((count GVAR(reloadMutex_lastMagazines)) - (count _mags) == 1) then {
-        private _weapon = currentWeapon _unit;
-        private _muzzle = currentMuzzle _unit;
-        if (_weapon == "") exitWith {};
-        private _wpnMzlConfig = configFile >> "CfgWeapons" >> _weapon;
-        if (_muzzle != _weapon) then { _wpnMzlConfig = _wpnMzlConfig >> _muzzle; };
-
-        private _compatMags = [_wpnMzlConfig] call CBA_fnc_compatibleMagazines;
-        private _lastCompatMagCount = {_x in _compatMags} count GVAR(reloadMutex_lastMagazines);
-        private _curCompatMagCount = {_x in _compatMags} count _mags;
-        TRACE_3("",_wpnMzlConfig,_lastCompatMagCount,_curCompatMagCount);
-        if (_lastCompatMagCount - _curCompatMagCount != 1) exitWith {}; // check if magazines for our specific muzzle dropped by 1
-
-        private _gesture = getText (_wpnMzlConfig >> "reloadAction");
-        if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
-        private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
-        private _duration = 0;
-        if (_isLauncher) then {
-            _duration = getNumber (configfile >> "CfgMovesMaleSdr" >> "States" >> _gesture >> "speed");
-        };
-        if (_duration == 0) then {
-            _duration = getNumber (configfile >> "CfgGesturesMale" >> "States" >> _gesture >> "speed");
-        };
-
-        if (_duration != 0) then {
-            _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
-        } else {
-            _duration = 6;
-        };
-
-        TRACE_2("Reloading, blocking gestures",_weapon,_duration);
-        GVAR(reloadingETA) = CBA_missionTime + _duration;
-
-        if (!GVAR(isReloading)) then {
-            GVAR(isReloading) = true;
-
-            [{
-                CBA_missionTime > GVAR(reloadingETA)
-            },{
-                GVAR(isReloading) = false;
-            }] call CBA_fnc_waitUntilAndExecute;
-        };
-    };
-    GVAR(reloadMutex_lastMagazines) = _mags;
-}, true] call CBA_fnc_addPlayerEventHandler;
+}] call CBA_fnc_addClassEventHandler;
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
