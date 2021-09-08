@@ -397,7 +397,41 @@ addMissionEventHandler ["PlayerViewChanged", {
 //////////////////////////////////////////////////
 
 GVAR(isReloading) = false;
+GVAR(reloadMutex_lastGesture) = "";
 GVAR(reloadMutex_lastMagazines) = [];
+
+ACE_Player addEventHandler ["GestureChanged", {
+    params ["_unit", "_gesture"];
+    if (_unit isNotEqualTo ACE_Player) exitWith {};
+    if (_gesture isEqualTo "") exitWith {};
+
+    private _weapon = currentWeapon _unit;
+    private _muzzle = currentMuzzle _unit;
+    if (_weapon == "") exitWith {};
+
+    private _wpnMzlConfig = configFile >> "CfgWeapons" >> _weapon;
+    if (_muzzle != _weapon) then { _wpnMzlConfig = _wpnMzlConfig >> _muzzle; };
+    private _reloadAction = (getText (_wpnMzlConfig >> "reloadAction"));
+
+    if (_gesture == _reloadAction) then {
+        GVAR(isReloading) = true;
+        GVAR(reloadMutex_lastGesture) = _gesture;
+        systemChat "reloading";
+    };
+}];
+
+ACE_Player addEventHandler ["GestureDone", {
+    params ["_unit", "_gesture"];
+    if (_unit isNotEqualTo ACE_Player) exitWith {};
+    if (_gesture isEqualTo "") exitWith {};
+
+    if (_gesture == GVAR(reloadMutex_lastGesture)) then {
+        GVAR(isReloading) = false;
+        GVAR(reloadMutex_lastGesture) = "";
+        systemChat "done reloading";
+    };
+}];
+
 // When reloading, the new magazine is removed from inventory, an animation plays and then the old magazine is added
 // If the animation is interrupted, the new magazine will be lost
 ["loadout", {
