@@ -19,6 +19,6 @@
 params ["_unit", "_animation", ["_priority", 0]];
 TRACE_3("params",_unit,_animation,_priority);
 
-if (!GVAR(isReloading) || {_priority > 0}) then {
+if (!([_unit] call FUNC(isReloading)) || {_priority > 0}) then {
     [QGVAR(playActionNow), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
 };

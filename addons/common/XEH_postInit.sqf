@@ -393,47 +393,6 @@ addMissionEventHandler ["PlayerViewChanged", {
 }] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////
-// Set up reload mutex
-//////////////////////////////////////////////////
-
-GVAR(isReloading) = false;
-GVAR(reloadMutex_lastGesture) = "";
-
-["CAManBase", "GestureChanged", {
-    params ["_unit", "_gesture"];
-    if (_unit isNotEqualTo ACE_Player) exitWith {};
-    if (_gesture isEqualTo "") exitWith {};
-
-    private _weapon = currentWeapon _unit;
-    private _muzzle = currentMuzzle _unit;
-    if (_weapon == "") exitWith {};
-
-    private _wpnMzlConfig = configFile >> "CfgWeapons" >> _weapon;
-    if (_muzzle != _weapon) then { _wpnMzlConfig = _wpnMzlConfig >> _muzzle; };
-    private _reloadAction = (getText (_wpnMzlConfig >> "reloadAction"));
-
-    // Ignore weapons with no reload gesture (binoculars)
-    if (_reloadAction == "") exitWith {};
-
-    if (_gesture == _reloadAction) then {
-        TRACE_2("Reloading, blocking gestures",_weapon,_reloadAction);
-        GVAR(isReloading) = true;
-        GVAR(reloadMutex_lastGesture) = _gesture;
-    };
-}] call CBA_fnc_addClassEventHandler;
-
-["CAManBase", "GestureDone", {
-    params ["_unit", "_gesture"];
-    if (_unit isNotEqualTo ACE_Player) exitWith {};
-    if (_gesture isEqualTo "") exitWith {};
-
-    if (_gesture == GVAR(reloadMutex_lastGesture)) then {
-        GVAR(isReloading) = false;
-        GVAR(reloadMutex_lastGesture) = "";
-    };
-}] call CBA_fnc_addClassEventHandler;
-
-//////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
 //////////////////////////////////////////////////
 
