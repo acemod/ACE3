@@ -416,6 +416,7 @@ GVAR(reloadMutex_lastGesture) = "";
     if (_reloadAction == "") exitWith {};
 
     if (_gesture == _reloadAction) then {
+        TRACE_2("Reloading, blocking gestures",_weapon,_reloadAction);
         GVAR(isReloading) = true;
         GVAR(reloadMutex_lastGesture) = _gesture;
     };
