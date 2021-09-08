@@ -116,7 +116,6 @@ PREP(isInBuilding);
 PREP(isMedic);
 PREP(isModLoaded);
 PREP(isPlayer);
-PREP(isReloading);
 PREP(isSwimming);
 PREP(lightIntensityFromObject);
 PREP(loadPerson);
