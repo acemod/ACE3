@@ -111,5 +111,11 @@
             <Spanish>Controla la rapidez con que fluye el líquido de las bolsas intravenosas. El cambio de volumen de la bolsa IV se calcula como: \n intervalo (s) de tiempo * cambio iv por segundo (4.1667 mL/s) * velocidad de flujo (este coeficiente).</Spanish>
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChanse_DisplayName">
+            <English>Chance to Drop Weapon On Loss of Consciousness</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChanse_Description">
+            <English>The probability of a person of dropping their weapon on loss of concussion.</English>
+        </Key>
     </Package>
 </Project>

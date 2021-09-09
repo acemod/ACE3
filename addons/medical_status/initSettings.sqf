@@ -24,3 +24,12 @@
     [0, 25, 1, 1],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QEGVAR(medical,dropWeaponUnconsciousChanse),
+    "SLIDER",
+    [LSTRING(DropWeaponUnconsciousChanse_DisplayName), LSTRING(DropWeaponUnconsciousChanse_Description)],
+    ELSTRING(medical,Category),
+    [0, 1, 0, 2, true],
+    true
+] call CBA_fnc_addSetting;

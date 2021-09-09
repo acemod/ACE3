@@ -42,6 +42,11 @@ if (_active) then {
         _unit setVariable [QEGVAR(medical,lastWakeUpCheck), _lastWakeUpCheck max CBA_missionTime];
     };
 
+    // Player drop weapon chanse
+    if (EGVAR(medical,dropWeaponUnconsciousChanse) != 0 && {_unit == ACE_player && {random 1 <= EGVAR(medical,dropWeaponUnconsciousChanse)}}) then {
+        _unit call EFUNC(hitreactions,throwWeapon);
+    };
+
     if (_unit == ACE_player) then {
         if (visibleMap) then {openMap false};
 
