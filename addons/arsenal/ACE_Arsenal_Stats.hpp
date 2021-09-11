@@ -128,4 +128,13 @@ class GVAR(stats) {
         condition = QUOTE(true);
         tabs[] = {{}, {5}};
     };
+    class ACE_magazineAiUsage: statBase {
+        scope = 2;
+        priority = 0;
+        stats[] = {"aiAmmoUsageFlags"};
+        displayName= "AI Usage";
+        showText= 1;
+        textStatement = QUOTE(call FUNC(statTextStatement_magazineAiUsage));
+        tabs[] = {{}, {4}};
+    };
 };
