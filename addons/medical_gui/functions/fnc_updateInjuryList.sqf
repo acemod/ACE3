@@ -31,26 +31,31 @@ private _bodyPartName = [
     LSTRING(RightLeg)
 ] select _selectionN;
 
-private _bodyPartDamage = (_target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]]) select _selectionN;
-private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
 
-switch (true) do {
-    case (_selectionN > 3): {
-        _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
+
+_entries pushBack [localize _bodyPartName, [1, 1, 1, 1]];
+
+// Damage taken tooltip
+if (GVAR(showDamageToolTip)) then {
+    private _bodyPartDamage = (_target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]]) select _selectionN;
+    private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
+
+    switch (true) do {
+        case (_selectionN > 3): {
+            _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
+        };
+        case (_selectionN > 1): {
+            _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+        };
+        case (_selectionN == 0): {
+            _damageThreshold = _damageThreshold / 2;
+        };
     };
-    case (_selectionN > 1): {
-        _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
-    };
-    case (_selectionN == 0): {
-        _damageThreshold = _damageThreshold / 2;
-    };
+    _bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
+
+    private _damageString = format [localize LSTRING(DamageToolTip), round (_bodyPartDamage * 100), "%"];
+    _entries pushBack [_damageString, [_bodyPartDamage] call FUNC(damageToRGBA)];
 };
-
-_bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
-private _bodyPartString = localize _bodyPartName;
-_bodyPartString = _bodyPartString + " (" + str (round (_bodyPartDamage * 100)) + "%)";
-
-_entries pushBack [_bodyPartString, [1, 1, 1, 1]];
 
 // Indicate if unit is bleeding at all
 if (IS_BLEEDING(_target)) then {

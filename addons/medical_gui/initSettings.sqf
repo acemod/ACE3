@@ -51,3 +51,12 @@
     [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(Medical_Treatment,Anyone), ELSTRING(Medical_Treatment,Medics)], 1],
     false
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showDamageToolTip),
+    "CHECKBOX",
+    [LSTRING(ShowDamageToolTip_DisplayName), LSTRING(ShowDamageToolTip_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    false,
+    true
+] call CBA_fnc_addSetting;
