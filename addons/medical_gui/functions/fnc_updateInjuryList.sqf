@@ -48,7 +48,7 @@ switch (true) do {
 
 _bodyPartDamage = (_bodyPartDamage / _damageThreshold) min 1;
 private _bodyPartString = localize _bodyPartName;
-_bodyPartString = _bodyPartString + " (" + str (round ((1 - _bodyPartDamage) * 100)) + "%)";
+_bodyPartString = _bodyPartString + " (" + str (round (_bodyPartDamage * 100)) + "%)";
 
 _entries pushBack [_bodyPartString, [1, 1, 1, 1]];
 
