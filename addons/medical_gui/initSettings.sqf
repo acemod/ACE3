@@ -53,9 +53,9 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(showDamageToolTip),
+    QGVAR(showDamageEntry),
     "CHECKBOX",
-    [LSTRING(ShowDamageToolTip_DisplayName), LSTRING(ShowDamageToolTip_Description)],
+    [LSTRING(showDamageEntry_DisplayName), LSTRING(showDamageEntry_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     false,
     true

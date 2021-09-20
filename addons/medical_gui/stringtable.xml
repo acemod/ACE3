@@ -1124,11 +1124,11 @@
             <Turkish>Hasta Bilgileri</Turkish>
             <Spanish>Información de paciente</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_ShowDamageToolTip_DisplayName">
-            <English>Show Damage Taken Tooltip</English>
+        <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
+            <English>Show Damage Taken</English>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_ShowDamageToolTip_Description">
-            <English>Controls whether tooltip displaying percentage of damage threshold dealt to a limb is displayed.</English>
+        <Key ID="STR_ACE_Medical_GUI_showDamageEntry_Description">
+            <English>Show Damage Taken in the injury list.</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageToolTip">
             <English>Damage: %1%2</English>
