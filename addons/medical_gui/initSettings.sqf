@@ -51,3 +51,11 @@
     [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(Medical_Treatment,Anyone), ELSTRING(Medical_Treatment,Medics)], 1],
     false
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showBloodlossEntry),
+    "CHECKBOX",
+    [LSTRING(ShowBloodlossEntry_DisplayName), LSTRING(ShowBloodlossEntry_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    true
+] call CBA_fnc_addSetting;
