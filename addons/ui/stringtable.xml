@@ -46,6 +46,7 @@
             <Chinesesimp>此模块允许你调整使用者介面的任何一个元件</Chinesesimp>
             <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
             <Czech>Tento modul umožňuje přepínání viditelných částí uživatelského rozhraní.</Czech>
+            <Spanish>Este módulo permite activar la visibilidad de apartados de la interfaz</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI">
             <English>Allow Selective UI</English>
@@ -159,6 +160,8 @@
         <Key ID="STR_ACE_UI_devWatermark">
             <English>Development Build Watermark</English>
             <Russian>Водяной знак Development Build</Russian>
+            <Spanish>Marca de agua para compilación de desarrollo</Spanish>
+            <French>Filigrane version de développement</French>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -364,6 +367,7 @@
             <Chinese>砲手武器名稱</Chinese>
             <Czech>Jméno zbraně vozidla</Czech>
             <Turkish>Nişancı Silah Ismi</Turkish>
+            <Spanish>Nombre de arma de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
@@ -378,6 +382,7 @@
             <Chinesesimp>炮手武器名称背景</Chinesesimp>
             <Chinese>砲手武器名稱背景</Chinese>
             <Czech>Pozadí jména zbraně vozidla</Czech>
+            <Spanish>Fondo de nombre de arma de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerFiringMode">
             <English>Gunner Firing Mode</English>
@@ -393,6 +398,7 @@
             <Chinese>砲手射擊模式</Chinese>
             <Czech>Režim palby zbraně vozidla</Czech>
             <Turkish>Nişancı Ateşleme Modu</Turkish>
+            <Spanish>Modo de fuego de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoType">
             <English>Gunner Ammo Type</English>
@@ -408,6 +414,7 @@
             <Chinese>砲手彈藥類型</Chinese>
             <Czech>Typ munice zbraně vozidla</Czech>
             <Turkish>Nişancı Mermi Türü</Turkish>
+            <Spanish>Tipo de munición de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoCount">
             <English>Gunner Ammo Count</English>
@@ -423,6 +430,7 @@
             <Chinese>砲手彈藥數量</Chinese>
             <Czech>Počet zásobníků zbraně vozidla</Czech>
             <Turkish>Nişancı Mermi Sayısı</Turkish>
+            <Spanish>Cantidad de munición de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
@@ -438,6 +446,7 @@
             <Chinese>砲手彈匣數量</Chinese>
             <Czech>Počet munice zbraně vozidla</Czech>
             <Turkish>Nişancı Şarjör Sayısı</Turkish>
+            <Spanish>Cantidad de cargadores de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
@@ -452,6 +461,7 @@
             <Chinesesimp>炮手发射物类型</Chinesesimp>
             <Chinese>砲手發射物類型</Chinese>
             <Czech>Typ odpalitelných granátů vozidla</Czech>
+            <Spanish>Tipo de lanzador de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableCount">
             <English>Gunner Launchable Count</English>
@@ -466,6 +476,7 @@
             <Chinesesimp>炮手发射物数量</Chinesesimp>
             <Chinese>砲手發射物數量</Chinese>
             <Czech>Počet odpalitelných granátů vozidla</Czech>
+            <Spanish>Cantidad de lanzadores de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerZeroing">
             <English>Gunner Zeroing</English>
@@ -480,6 +491,7 @@
             <Chinesesimp>炮手归零距离</Chinesesimp>
             <Chinese>砲手歸零距離</Chinese>
             <Czech>Náměr zbraně vozidla</Czech>
+            <Spanish>Calibracion de mira de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
@@ -494,6 +506,7 @@
             <Chinesesimp>炮手武器底部资讯栏背景</Chinesesimp>
             <Chinese>砲手武器底部資訊欄背景</Chinese>
             <Czech>Nižší pozadí panelu s informacemi o zbrani vozidla</Czech>
+            <Spanish>Fondo de información inferior de armamento de artillero</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
@@ -618,6 +631,7 @@
             <Italian>Richiede informazione Soldato/Veicolo/Arma.</Italian>
             <Chinesesimp>需要士兵/载具/武器的资讯.</Chinesesimp>
             <Chinese>需要士兵/載具/武器的資訊.</Chinese>
+            <Spanish>Requiere información de Soldado/Vehículo.</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_Disallowed">
             <English>Modifying User Interface is disabled.</English>
@@ -632,6 +646,7 @@
             <Italian>La modifica dell'Interfaccia Utente è disabilitata.</Italian>
             <Chinesesimp>自定使用者介面功能已关闭</Chinesesimp>
             <Chinese>自定使用者介面功能已關閉</Chinese>
+            <Spanish>La modificación de la interfaz de usuario está desactivada.</Spanish>
         </Key>
         <Key ID="STR_ACE_UI_Disabled">
             <English>Cannot modify a forced User Interface element.</English>
@@ -646,6 +661,7 @@
             <Chinesesimp>无法编辑已被锁定的使用者介面元件</Chinesesimp>
             <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
             <Czech>Nelze upravit prvek vynuceného uživatelského rozhraní.</Czech>
+            <Spanish>No se puede modificar un elemento forzado de la Interfaz del Usuario</Spanish>
         </Key>
     </Package>
 </Project>

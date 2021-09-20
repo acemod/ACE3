@@ -17,7 +17,7 @@ def getDefinedStrings(filepath):
     return modStrings
 
 def getStringUsage(filepath):
-    selfmodule = (re.search('addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
+    selfmodule = (re.search('(addons|optionals)[\W]*([_a-zA-Z0-9]*)', filepath)).group(2)
     # print("Checking {0} from {1}".format(filepath,selfmodule))
     fileStrings = []
 
@@ -51,23 +51,24 @@ def main(argv):
     allDefinedStrings = []
     allUsedStrings = []
 
-    # Allow running from root directory as well as from inside the tools directory
-    rootDir = "../addons"
-    if (os.path.exists("addons")):
-        rootDir = "addons"
+    for folder in ['addons', 'optionals']:
+        # Allow running from root directory as well as from inside the tools directory
+        rootDir = "../" + folder
+        if (os.path.exists(folder)):
+            rootDir = folder
 
-    for root, dirnames, filenames in os.walk(rootDir):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.cpp'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.hpp'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.h'):
-        sqf_list.append(os.path.join(root, filename))
+        for root, dirnames, filenames in os.walk(rootDir):
+          for filename in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.cpp'):
+            sqf_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.hpp'):
+            sqf_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.h'):
+            sqf_list.append(os.path.join(root, filename))
 
-      for filename in fnmatch.filter(filenames, '*.xml'):
-        xml_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.xml'):
+            xml_list.append(os.path.join(root, filename))
 
     for filename in xml_list:
         allDefinedStrings = allDefinedStrings + getDefinedStrings(filename)

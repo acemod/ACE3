@@ -37,7 +37,9 @@ The vehicle events will also have the following local variables available `_gunn
 |----------|---------|---------|---------|---------|---------|
 |`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed
 |`ace_placedInBodyBag` | [_target, _bodyBag] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted)
-|`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className] | Local | Listen | Treatment action is completed (local on the _caller)
+|`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has started (local on the _caller)
+|`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action is completed (local on the _caller)
+|`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has been interrupted (local on the _caller)
 
 ### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
@@ -60,7 +62,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
-|`ace_captiveStatusChanged` | [_unit, _state(BOOL), _reason ("SetHandcuffed" or "SetSurrendered")] | Global | Listen | Unit's captivity state changed
+|`ace_captiveStatusChanged` | [_unit, _state(BOOL), _reason ("SetHandcuffed" or "SetSurrendered"), _caller] | Global | Listen | Unit's captivity state changed
 |`ace_captives_setSurrendered` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop surrendering
 |`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed
 
@@ -105,6 +107,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_cookoff_cookOff` | _vehicle | Global | Listen | Vehicle cook off has started
 |`ace_cookoff_cookOffBox` | _box | Global | Listen | Ammo box cook off has started
 |`ace_cookoff_engineFire` | _vehicle | Global | Listen | Engine fire has started
+
+
+### 2.11 Attach (`ace_attach`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_attach_attached` | [_attachedObject, _itemClassname] | Local | Listen | After an item was attached to a unit/vehicle
+|`ace_attach_detaching` | [_attachedObject, _itemName] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

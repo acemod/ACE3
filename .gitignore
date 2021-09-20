@@ -4,6 +4,7 @@ release/*
 releases/*
 extensions/vcproj32/*
 extensions/vcproj64/*
+.vscode/*
 hemtt
 hemtt.exe
 tools/temp
@@ -16,3 +17,5 @@ texHeaders.bin
 Thumbs.db
 CHANGELOG.md
 sqfvm.exe
+ArmaScriptCompiler.exe
+*.sqfc

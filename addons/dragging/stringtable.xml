@@ -59,6 +59,7 @@
             <Polish>Nieś/Puść objekt</Polish>
             <Japanese>オブジェクトを運ぶ/離す</Japanese>
             <Turkish>Objeyi Taşı/Bırak</Turkish>
+            <Spanish>Arrastrar/Soltar Objeto</Spanish>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -103,6 +104,7 @@
             <Russian>Поднять/Опустить | (Ctrl + Скролл) Крутить</Russian>
             <Polish>Wyżej/niżej | (Ctrl + Kółko myszy) obracanie</Polish>
             <Turkish>Yükselt/Alçalt | (Ctrl + Tekerlek) Döndür</Turkish>
+            <Spanish>Subir/Bajar | (Ctrl + Scroll) Rotar</Spanish>
         </Key>
         <Key ID="STR_ACE_Dragging_SettingsName">
             <English>ACE Dragging</English>
@@ -110,6 +112,7 @@
             <German>ACE Ziehen</German>
             <Hungarian>ACE Húzás</Hungarian>
             <Russian>ACE Перетаскивание</Russian>
+            <Spanish>ACE Arrastrar</Spanish>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
@@ -117,6 +120,7 @@
             <German>Schießen während des Ziehens erlauben</German>
             <Hungarian>Húzás közbeni tüzelés engedélyezése</Hungarian>
             <Russian>Стрельба во время перетаскивания</Russian>
+            <Spanish>Permitir disparar mientras se arrastra</Spanish>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
@@ -124,6 +128,7 @@
             <German>Erlaubt dem Spieler während des Ziehens das Abfeuern der Waffe.</German>
             <Hungarian>Húzás közben a játékos elsütheti a fegyverét.</Hungarian>
             <Russian>Позволяет игроку стрелять во время перетаскивания</Russian>
+            <Spanish>Permite al jugador disparar mientras está arrastrando.</Spanish>
         </Key>
     </Package>
 </Project>

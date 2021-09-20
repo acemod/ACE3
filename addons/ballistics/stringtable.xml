@@ -171,30 +171,30 @@
             <Russian>#4 Картечь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_NameShort">
-            <English>#7 Birdshot</English>
-            <Spanish>Perdigones #7</Spanish>
-            <German>#7 Vogelschrot</German>
-            <Chinese>#7 鹿彈</Chinese>
-            <Italian>#7 Birdshot</Italian>
-            <Japanese>#7 バックショット</Japanese>
+            <English>#4 Birdshot</English>
+            <Spanish>Perdigones #4</Spanish>
+            <German>#4 Vogelschrot</German>
+            <Chinese>#4 鹿彈</Chinese>
+            <Italian>#4 Birdshot</Italian>
+            <Japanese>#4 バックショット</Japanese>
             <French>Grenaille No.4</French>
-            <Czech>#7 Broky malé</Czech>
-            <Polish>#7 Śrut Drobny</Polish>
-            <Turkish>#7 Küçük saçma</Turkish>
-            <Russian>#7 Дробь</Russian>
+            <Czech>#4 Broky malé</Czech>
+            <Polish>#4 Śrut Drobny</Polish>
+            <Turkish>#4 Küçük saçma</Turkish>
+            <Russian>#4 Дробь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No4_Bird_Description">
-            <English>#7 Birdshot</English>
-            <Spanish>Perdigones #7</Spanish>
-            <German>#7 Vogelschrot</German>
-            <Chinese>#7 鹿彈</Chinese>
-            <Italian>#7 Birdshot</Italian>
-            <Japanese>#7 バックショット</Japanese>
+            <English>#4 Birdshot</English>
+            <Spanish>Perdigones #4</Spanish>
+            <German>#4 Vogelschrot</German>
+            <Chinese>#4 鹿彈</Chinese>
+            <Italian>#4 Birdshot</Italian>
+            <Japanese>#4 バックショット</Japanese>
             <French>Grenaille No.4</French>
-            <Czech>#7 Broky malé - kalibr 2.54 mm</Czech>
-            <Polish>#7 Śrut Drobny (Birdshot)</Polish>
-            <Turkish>#7 Küçük saçma</Turkish>
-            <Russian>#7 Дробь</Russian>
+            <Czech>#4 Broky malé - kalibr 3.3 mm</Czech>
+            <Polish>#4 Śrut Drobny (Birdshot)</Polish>
+            <Turkish>#4 Küçük saçma</Turkish>
+            <Russian>#4 Дробь</Russian>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 2Rnd #00 Buckshot</English>
@@ -281,18 +281,18 @@
             <Turkish>12 kalibre 2 mermi #4 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_2Rnd_12Gauge_Pellets_No4_Bird_Name">
-            <English>12 Gauge 2Rnd #7 Birdshot</English>
-            <Spanish>2 Cartuchos de Perdigones Calibre 12 #7</Spanish>
-            <German>12 Gauge 2Schuss #7 Schrotmunition</German>
-            <Chinese>12鉛徑 2發  #7 鹿彈</Chinese>
-            <Italian>12 Gauge 2Rnd #7 Birdshot</Italian>
-            <Japanese>12 ゲージ 2 発入り #7 バックショット</Japanese>
+            <English>12 Gauge 2Rnd #4 Birdshot</English>
+            <Spanish>2 Cartuchos de Perdigones Calibre 12 #4</Spanish>
+            <German>12 Gauge 2Schuss #4 Schrotmunition</German>
+            <Chinese>12鉛徑 2發  #4 鹿彈</Chinese>
+            <Italian>12 Gauge 2Rnd #4 Birdshot</Italian>
+            <Japanese>12 ゲージ 2 発入り #4 バックショット</Japanese>
             <French>2 balles cal. 12 Grenaille No.4</French>
-            <Czech>2x #7 Broky malé (kalibr 2.54 mm)</Czech>
-            <Polish>12 Gauge 2 naboje #7 Śrut</Polish>
-            <Portuguese>Chumbo #7 Calibre Doze 2 Tiros</Portuguese>
-            <Russian>12 Калибр 2 патр. #7 Дробь</Russian>
-            <Turkish>12 kalibre 2 mermi #5 İrisaçma</Turkish>
+            <Czech>2x #4 Broky malé (kalibr 3.3 mm)</Czech>
+            <Polish>12 Gauge 2 naboje #4 Śrut</Polish>
+            <Portuguese>Chumbo #4 Calibre Doze 2 Tiros</Portuguese>
+            <Russian>12 Калибр 2 патр. #4 Дробь</Russian>
+            <Turkish>12 kalibre 2 mermi #4 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 6Rnd #00 Buckshot</English>
@@ -379,17 +379,17 @@
             <Turkish>12 kalibre 6 mermi #4 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_6Rnd_12Gauge_Pellets_No4_Bird_Name">
-            <English>12 Gauge 6Rnd #7 Birdshot</English>
-            <Spanish>6 Cartuchos de Perdigones Calibre 12 #7</Spanish>
-            <German>12 Gauge 6Schuss #7 Schrotmunition</German>
-            <Chinese>12鉛徑 6發  #7 鹿彈</Chinese>
-            <Italian>12 Gauge 6Rnd #7 Birdshot</Italian>
-            <Japanese>12 ゲージ 6 発入り #7 バックショット</Japanese>
+            <English>12 Gauge 6Rnd #4 Birdshot</English>
+            <Spanish>6 Cartuchos de Perdigones Calibre 12 #4</Spanish>
+            <German>12 Gauge 6Schuss #4 Schrotmunition</German>
+            <Chinese>12鉛徑 6發  #4 鹿彈</Chinese>
+            <Italian>12 Gauge 6Rnd #4 Birdshot</Italian>
+            <Japanese>12 ゲージ 6 発入り #4 バックショット</Japanese>
             <French>6 balles cal. 12 Grenaille No.4</French>
-            <Czech>6x #7 Broky malé (kalibr 2.54 mm)</Czech>
-            <Polish>12 Gauge 6 naboi #7 Śrut</Polish>
-            <Russian>12 Калибр 6 патр. #7 Дробь</Russian>
-            <Turkish>12 kalibre 6 mermi #7 İrisaçma</Turkish>
+            <Czech>6x #4 Broky malé (kalibr 3.3 mm)</Czech>
+            <Polish>12 Gauge 6 naboi #4 Śrut</Polish>
+            <Russian>12 Калибр 6 патр. #4 Дробь</Russian>
+            <Turkish>12 kalibre 6 mermi #4 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_15Rnd_12Gauge_Pellets_No00_Buck_Name">
             <English>12 Gauge 15Rnd #00 Buckshot</English>
@@ -1116,7 +1116,7 @@
             <Spanish>Calibre: .338 Norma Magnum trazadora&lt;br /&gt;Balas: 130&lt;br /&gt;Se usa en: SPMG</Spanish>
             <Russian>Калибр: .338 Norma Magnum трассирующие&lt;br /&gt;Патронов: 130&lt;br /&gt;Используются в: SPMG</Russian>
             <Italian>Calibro: .338 Norma Magnum Tracciante&lt;br /&gt;Munizioni: 130&lt;br /&gt;In uso su: SPMG</Italian>
-            <Czech>Ráže: .338 Noma Magnum Svítící&lt;br /&gt;Nábojů: 130&lt;br /&gt;Použití u: LWMMG</Czech>
+            <Czech>Ráže: .338 Norma Magnum Svítící&lt;br /&gt;Nábojů: 130&lt;br /&gt;Použití u: LWMMG</Czech>
             <Portuguese>Calibre: .338 Norma Magnum Traçante&lt;br /&gt;Cartuchos: 130&lt;br /&gt;Usado em: SPMG</Portuguese>
             <Hungarian>Kaliber: .338 Norma Magnum nyomkövető&lt;br /&gt;Lövedékek: 130&lt;br /&gt;Használható: SPMG</Hungarian>
             <Japanese>口径: .338 Norma Magnum 曳光弾&lt;br /&gt;装填数: 130&lt;br /&gt;次で使用: SPMG</Japanese>
@@ -1144,7 +1144,7 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_Tracer_DimNameShort">
             <English>.338 NM IR-DIM</English>
-            <German>.338 LM IR-DIM</German>
+            <German>.338 NM IR-DIM</German>
             <Polish>.338 NM IR-DIM</Polish>
             <Czech>.338 NM IR-DIM</Czech>
             <French>.338 NM IR-DIM</French>
@@ -2301,157 +2301,157 @@
             <Turkish>Kalibre: 7.62x51mm NATO (M993 AP)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
-            <English>7.62mm 20Rnd Mag (Mk248 Mod 0)</English>
-            <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 0)</Polish>
-            <French>Ch. 7,62mm 20Cps (Mk248 Mod 0)</French>
-            <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 0)</Spanish>
-            <Russian>Магазин из 20-ти 7,62 мм (Mk248 Mod 0)</Russian>
-            <German>7,62mm 20-Patronen-Magazin (Mk248 Mod 0)</German>
-            <Italian>7.62mm 20Rnd Mag (Mk248 Mod 0)</Italian>
-            <Czech>7.62mm 20náb. Zásobník (Mk248 Mod 0)</Czech>
-            <Portuguese>Carregador 7.62mm com 20 cartuchos (Mk248 Mod 0)</Portuguese>
-            <Hungarian>7,62mm 20-lövedékes tár (Mk248 Mod 0)</Hungarian>
-            <Japanese>7.62mm 20発入り 弾倉 (Mk248 Mod 0)</Japanese>
-            <Korean>20발들이 7.62mm 탄창 (Mk248 Mod 0)</Korean>
-            <Chinese>7.62毫米 20發 彈匣 (Mk248 Mod 0 狙擊專用彈)</Chinese>
-            <Chinesesimp>7.62mm 20发 弹匣 (Mk248 Mod 0 狙击专用弹)</Chinesesimp>
-            <Turkish>7.62mm 20Rnd Mag (Mk248 Mod 0)</Turkish>
+            <English>.300 WM 20Rnd Mag (Mk248 Mod 0)</English>
+            <Polish>Magazynek .300 WM 20rd (Mk248 Mod 0)</Polish>
+            <French>Ch. .300 WM 20Cps (Mk248 Mod 0)</French>
+            <Spanish>Cargador de 20 balas de .300 WM (Mk248 Mod 0)</Spanish>
+            <Russian>Магазин из 20-ти .300 WM (Mk248 Mod 0)</Russian>
+            <German>.300 WM 20-Patronen-Magazin (Mk248 Mod 0)</German>
+            <Italian>.300 WM 20Rnd Mag (Mk248 Mod 0)</Italian>
+            <Czech>.300 WM 20náb. Zásobník (Mk248 Mod 0)</Czech>
+            <Portuguese>Carregador .300 WM com 20 cartuchos (Mk248 Mod 0)</Portuguese>
+            <Hungarian>.300 WM 20-lövedékes tár (Mk248 Mod 0)</Hungarian>
+            <Japanese>.300 WM 20発入り 弾倉 (Mk248 Mod 0)</Japanese>
+            <Korean>20발들이 .300 WM 탄창 (Mk248 Mod 0)</Korean>
+            <Chinese>.300 萬能(WM) 20發 彈匣 (Mk248 Mod 0 狙擊專用彈)</Chinese>
+            <Chinesesimp>.300 WM 20发 弹匣 (Mk248 Mod 0 狙击专用弹)</Chinesesimp>
+            <Turkish>.300 WM 20Rnd Mag (Mk248 Mod 0)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
-            <English>7.62mm Mk248</English>
-            <Polish>7,62mm Mk248</Polish>
-            <French>7,62mm Mk248</French>
-            <Spanish>7.62mm Mk248</Spanish>
-            <Russian>7,62 мм Mk248</Russian>
-            <German>7,62mm Mk248</German>
-            <Italian>7.62mm Mk248</Italian>
-            <Czech>7.62mm Mk248</Czech>
-            <Portuguese>7.62mm Mk248</Portuguese>
-            <Hungarian>7,62mm Mk248</Hungarian>
-            <Japanese>7.62mm Mk248</Japanese>
-            <Korean>7.62mm Mk248</Korean>
-            <Chinese>7.62毫米 Mk248 狙擊專用彈</Chinese>
-            <Chinesesimp>7.62mm Mk248 狙击专用弹</Chinesesimp>
-            <Turkish>7.62mm Mk248</Turkish>
+            <English>.300 WM Mk248</English>
+            <Polish>.300 WM Mk248</Polish>
+            <French>.300 WM Mk248</French>
+            <Spanish>.300 WM Mk248</Spanish>
+            <Russian>.300 WM Mk248</Russian>
+            <German>.300 WM Mk248</German>
+            <Italian>.300 WM Mk248</Italian>
+            <Czech>.300 WM Mk248</Czech>
+            <Portuguese>.300 WM Mk248</Portuguese>
+            <Hungarian>.300 WM Mk248</Hungarian>
+            <Japanese>.300 WM Mk248</Japanese>
+            <Korean>.300 WM Mk248</Korean>
+            <Chinese>.300 西米 Mk248 狙擊專用彈</Chinese>
+            <Chinesesimp>.300 WM Mk248 狙击专用弹</Chinesesimp>
+            <Turkish>.300 WM Mk248</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
-            <English>Caliber: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7,62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
-            <Russian>Калибр: 7,62x67 мм NATO (Mk248 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
-            <German>Kaliber: 7,62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x67 mm NATO (Mk248 Mod 0)&lt;br /&gt;Munizioni: 20</Italian>
-            <Czech>Ráže: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Nábojů: 20</Czech>
-            <Portuguese>Calibre: 7.26x67mm NATO (Mk248 Mod 0)&lt;br/&gt;Cartuchos: 20</Portuguese>
-            <Hungarian>Kaliber: 7,62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;Lövedékek: 20</Hungarian>
-            <Japanese>口径: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;装填数: 20</Japanese>
-            <Korean>구경: 7.62x51mm NATO (Mk248 Mod 0)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x67毫米 NATO標準 (Mk248 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
-            <Chinesesimp>口径: 7.62x67mm NATO标准 (Mk248 Mod 0 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
-            <Turkish>Kalibre: 7.62x67mm NATO (Mk248 Mod 0)&lt;br /&gt;Mermi: 20</Turkish>
+            <English>Caliber: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Pociski: 20</Polish>
+            <French>Calibre: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Balas: 20</Spanish>
+            <Russian>Калибр: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Patronen: 20</German>
+            <Italian>Calibro: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Munizioni: 20</Italian>
+            <Czech>Ráže: .300 WM (Mk248 Mod 0)&lt;br /&gt;Nábojů: 20</Czech>
+            <Portuguese>Calibre: .300 WM NATO (Mk248 Mod 0)&lt;br/&gt;Cartuchos: 20</Portuguese>
+            <Hungarian>Kaliber: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Lövedékek: 20</Hungarian>
+            <Japanese>口径: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;装填数: 20</Japanese>
+            <Korean>구경: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;장탄수: 20</Korean>
+            <Chinese>口徑: .300 西米 NATO標準 (Mk248 Mod 0 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinesesimp>口径: .300 WM NATO标准 (Mk248 Mod 0 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: .300 WM NATO (Mk248 Mod 0)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_Name">
-            <English>7.62mm 20Rnd Mag (Mk248 Mod 1)</English>
-            <Polish>Magazynek 7,62mm 20rd (Mk248 Mod 1)</Polish>
-            <French>Ch. 7,62mm 20Cps (Mk248 Mod 1)</French>
-            <Spanish>Cargador de 20 balas de 7.62mm (Mk248 Mod 1)</Spanish>
-            <Russian>Магазин из 20-ти 7,62 мм (Mk248 Mod 1)</Russian>
-            <German>7,62mm 20-Patronen-Magazin (Mk248 Mod 1)</German>
-            <Italian>7.62mm 20Rnd Mag (Mk248 Mod 1)</Italian>
-            <Czech>7.62mm 20náb. Zásobník (Mk248 Mod 1)</Czech>
-            <Portuguese>Carregador 7.62mm com 20 cartuchos (Mk248 Mod 1)</Portuguese>
-            <Hungarian>7,62mm 20-lövedékes tár (Mk248 Mod 1)</Hungarian>
-            <Japanese>7.62mm 20発入り 弾倉 (Mk248 Mod 1)</Japanese>
-            <Korean>20발들이 7.62mm 탄창 (Mk248 Mod 1)</Korean>
-            <Chinese>7.62毫米 20發 彈匣 (Mk248 Mod 1 狙擊專用彈)</Chinese>
-            <Chinesesimp>7.62mm 20发 弹匣 (Mk248 Mod 1 狙击专用弹)</Chinesesimp>
-            <Turkish>7.62mm 20Rnd Mag (Mk248 Mod 1)</Turkish>
+            <English>.300 WM 20Rnd Mag (Mk248 Mod 1)</English>
+            <Polish>Magazynek .300 WM 20rd (Mk248 Mod 1)</Polish>
+            <French>Ch. .300 WM 20Cps (Mk248 Mod 1)</French>
+            <Spanish>Cargador de 20 balas de .300 WM (Mk248 Mod 1)</Spanish>
+            <Russian>Магазин из 20-ти .300 WM (Mk248 Mod 1)</Russian>
+            <German>.300 WM 20-Patronen-Magazin (Mk248 Mod 1)</German>
+            <Italian>.300 WM 20Rnd Mag (Mk248 Mod 1)</Italian>
+            <Czech>.300 WM 20náb. Zásobník (Mk248 Mod 1)</Czech>
+            <Portuguese>Carregador .300 WM com 20 cartuchos (Mk248 Mod 1)</Portuguese>
+            <Hungarian>.300 WM 20-lövedékes tár (Mk248 Mod 1)</Hungarian>
+            <Japanese>.300 WM 20発入り 弾倉 (Mk248 Mod 1)</Japanese>
+            <Korean>20발들이 .300 WM 탄창 (Mk248 Mod 1)</Korean>
+            <Chinese>.300 西米 20發 彈匣 (Mk248 Mod 1 狙擊專用彈)</Chinese>
+            <Chinesesimp>.300 WM 20发 弹匣 (Mk248 Mod 1 狙击专用弹)</Chinesesimp>
+            <Turkish>.300 WM 20Rnd Mag (Mk248 Mod 1)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_NameShort">
-            <English>7.62mm Mk248</English>
-            <Polish>7,62mm Mk248</Polish>
-            <French>7,62mm Mk248</French>
-            <Spanish>7.62mm Mk248</Spanish>
-            <Russian>7,62 мм Mk248</Russian>
-            <German>7,62mm Mk248</German>
-            <Italian>7.62mm Mk248</Italian>
-            <Czech>7.62mm Mk248</Czech>
-            <Portuguese>7.62mm Mk248</Portuguese>
-            <Hungarian>7,62mm Mk248</Hungarian>
-            <Japanese>7.62mm Mk248</Japanese>
-            <Korean>7.62mm Mk248</Korean>
-            <Chinese>7.62毫米 Mk248 狙擊專用彈</Chinese>
-            <Chinesesimp>7.62mm Mk248 狙击专用弹</Chinesesimp>
-            <Turkish>7.62mm Mk248</Turkish>
+            <English>.300 WM Mk248</English>
+            <Polish>.300 WM Mk248</Polish>
+            <French>.300 WM Mk248</French>
+            <Spanish>.300 WM Mk248</Spanish>
+            <Russian>.300 WM Mk248</Russian>
+            <German>.300 WM Mk248</German>
+            <Italian>.300 WM Mk248</Italian>
+            <Czech>.300 WM Mk248</Czech>
+            <Portuguese>.300 WM Mk248</Portuguese>
+            <Hungarian>.300 WM Mk248</Hungarian>
+            <Japanese>.300 WM Mk248</Japanese>
+            <Korean>.300 WM Mk248</Korean>
+            <Chinese>.300 西米 Mk248 狙擊專用彈</Chinese>
+            <Chinesesimp>.300 WM Mk248 狙击专用弹</Chinesesimp>
+            <Turkish>.300 WM Mk248</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Mk248_Mod_1_Mag_Description">
-            <English>Caliber: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7,62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 20</Spanish>
-            <Russian>Калибр: 7,62x67 мм NATO (Mk248 Mod 1)&lt;br /&gt;Патронов: 20</Russian>
-            <German>Kaliber: 7,62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x67 mm NATO (Mk248 Mod 1)&lt;br /&gt;Munizioni: 20</Italian>
-            <Czech>Ráže: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Nábojů: 20</Czech>
-            <Portuguese>Calibre: 7.26x67mm NATO (Mk248 Mod 1)&lt;br/&gt;Cartuchos: 20</Portuguese>
-            <Hungarian>Kaliber: 7,62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;Lövedékek: 20</Hungarian>
-            <Japanese>口径: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;装填数: 20</Japanese>
-            <Korean>구경: 7.62x51mm NATO (Mk248 Mod 1)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x67毫米 NATO標準 (Mk248 Mod 1 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
-            <Chinesesimp>口径: 7.62x67mm NATO标准 (Mk248 Mod 1 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
-            <Turkish>Kalibre: 7.62x67mm NATO (Mk248 Mod 1)&lt;br /&gt;Mermi: 20</Turkish>
+            <English>Caliber: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Pociski: 20</Polish>
+            <French>Calibre: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Balas: 20</Spanish>
+            <Russian>Калибр: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Patronen: 20</German>
+            <Italian>Calibro: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Munizioni: 20</Italian>
+            <Czech>Ráže: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Nábojů: 20</Czech>
+            <Portuguese>Calibre: .300 WM NATO (Mk248 Mod 1)&lt;br/&gt;Cartuchos: 20</Portuguese>
+            <Hungarian>Kaliber: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Lövedékek: 20</Hungarian>
+            <Japanese>口径: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;装填数: 20</Japanese>
+            <Korean>구경: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;장탄수: 20</Korean>
+            <Chinese>口徑: .300 西米 NATO標準 (Mk248 Mod 1 狙擊專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinesesimp>口径: .300 WM NATO标准 (Mk248 Mod 1 狙击专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: .300 WM NATO (Mk248 Mod 1)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name">
-            <English>7.62mm 20Rnd Mag (Berger Hybrid OTM)</English>
-            <Polish>Magazynek 7,62mm 20rd (Berger Hybrid OTM)</Polish>
-            <French>Ch. 7,62 20Cps (Berger Hybrid OTM)</French>
-            <Spanish>Cargador de 20 balas de 7.62mm (Berger Hybrid OTM)</Spanish>
-            <Russian>Магазин из 20-ти 7,62 мм (Berger Hybrid OTM)</Russian>
-            <German>7,62mm 20-Patronen-Magazin (Berger Hybrid OTM)</German>
-            <Italian>7.62mm 20Rnd Mag (Berger Hybrid OTM)</Italian>
-            <Czech>7.62mm 20náb. Zásobník (Berger Hybrid OTM)</Czech>
-            <Portuguese>Carregador 7.62mm com 20 cartuchos (Berger Hybrid OTM)</Portuguese>
-            <Hungarian>7,62mm 20-lövedékes tár (Berger Hybrid OTM)</Hungarian>
-            <Japanese>7.62mm 20発入り 弾倉 (Berger Hybrid OTM)</Japanese>
-            <Korean>20발들이 7.62mm 탄창 (Berger Hybrid OTM)</Korean>
-            <Chinese>7.62毫米 20發 彈匣 (Berger Hybrid 空尖比賽專用彈)</Chinese>
-            <Chinesesimp>7.62mm 20发 弹匣 (Berger Hybrid 空尖比赛专用弹)</Chinesesimp>
-            <Turkish>7.62mm 20Rnd Mag (Berger Hybrid OTM)</Turkish>
+            <English>.300 WM 20Rnd Mag (Berger Hybrid OTM)</English>
+            <Polish>Magazynek .300 WM 20rd (Berger Hybrid OTM)</Polish>
+            <French>Ch. .300 WM 20Cps (Berger Hybrid OTM)</French>
+            <Spanish>Cargador de 20 balas de .300 WM (Berger Hybrid OTM)</Spanish>
+            <Russian>Магазин из 20-ти .300 WM (Berger Hybrid OTM)</Russian>
+            <German>.300 WM 20-Patronen-Magazin (Berger Hybrid OTM)</German>
+            <Italian>.300 WM 20Rnd Mag (Berger Hybrid OTM)</Italian>
+            <Czech>.300 WM 20náb. Zásobník (Berger Hybrid OTM)</Czech>
+            <Portuguese>Carregador .300 WM com 20 cartuchos (Berger Hybrid OTM)</Portuguese>
+            <Hungarian>.300 WM 20-lövedékes tár (Berger Hybrid OTM)</Hungarian>
+            <Japanese>.300 WM 20発入り 弾倉 (Berger Hybrid OTM)</Japanese>
+            <Korean>20발들이 .300 WM 탄창 (Berger Hybrid OTM)</Korean>
+            <Chinese>.300 西米 20發 彈匣 (Berger Hybrid 空尖比賽專用彈)</Chinese>
+            <Chinesesimp>.300 WM 20发 弹匣 (Berger Hybrid 空尖比赛专用弹)</Chinesesimp>
+            <Turkish>.300 WM 20Rnd Mag (Berger Hybrid OTM)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort">
-            <English>7.62mm OTM</English>
-            <Polish>7,62mm OTM</Polish>
-            <French>7,62mm OTM</French>
-            <Spanish>7.62mm OTM</Spanish>
-            <Russian>7,62 мм OTM</Russian>
-            <German>7,62mm OTM</German>
-            <Italian>7.62mm OTM</Italian>
-            <Czech>7.62mm OTM</Czech>
-            <Portuguese>7.62mm OTM</Portuguese>
-            <Hungarian>7,62mm OTM</Hungarian>
-            <Japanese>7.62mm OTM</Japanese>
-            <Korean>7.62mm OTM</Korean>
-            <Chinese>7.62毫米  空尖比賽專用彈</Chinese>
-            <Chinesesimp>7.62mm 空尖比赛专用弹</Chinesesimp>
-            <Turkish>7.62mm OTM</Turkish>
+            <English>.300 WM OTM</English>
+            <Polish>.300 WM OTM</Polish>
+            <French>.300 WM OTM</French>
+            <Spanish>.300 WM OTM</Spanish>
+            <Russian>.300 WM OTM</Russian>
+            <German>.300 WM OTM</German>
+            <Italian>.300 WM OTM</Italian>
+            <Czech>.300 WM OTM</Czech>
+            <Portuguese>.300 WM OTM</Portuguese>
+            <Hungarian>.300 WM OTM</Hungarian>
+            <Japanese>.300 WM OTM</Japanese>
+            <Korean>.300 WM OTM</Korean>
+            <Chinese>.300 西米  空尖比賽專用彈</Chinese>
+            <Chinesesimp>.300 WM 空尖比赛专用弹</Chinesesimp>
+            <Turkish>.300 WM OTM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description">
-            <English>Caliber: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
-            <Polish>Kaliber: 7,62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Pociski: 20</Polish>
-            <French>Calibre: 7,62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Cartouches: 20</French>
-            <Spanish>Calibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 20</Spanish>
-            <Russian>Калибр: 7,62x67 мм NATO (Berger Hybrid OTM)&lt;br /&gt;Патронов: 20</Russian>
-            <German>Kaliber: 7,62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Patronen: 20</German>
-            <Italian>Calibro: 7.62x67 mm NATO (Berger Hybrid OTM)&lt;br /&gt;Munizioni: 20</Italian>
-            <Czech>Ráže: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Nábojů: 20</Czech>
-            <Portuguese>Calibre: 7.26x67mm NATO (Berger Hybrid OTM)&lt;br/&gt;Cartuchos: 20</Portuguese>
-            <Hungarian>Kaliber: 7,62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Lövedékek: 20</Hungarian>
-            <Japanese>口径: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;装填数: 20</Japanese>
-            <Korean>구경: 7.62x51mm NATO (Berger Hybrid OTM)&lt;br /&gt;장탄수: 20</Korean>
-            <Chinese>口徑: 7.62x67毫米 NATO標準 (Berger Hybrid 空尖比賽專用彈)&lt;br /&gt;發數: 20</Chinese>
-            <Chinesesimp>口径: 7.62x67mm NATO标准 (Berger Hybrid 空尖比赛专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
-            <Turkish>Kalibre: 7.62x67mm NATO (Berger Hybrid OTM)&lt;br /&gt;Mermi: 20</Turkish>
+            <English>Caliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Rounds: 20</English>
+            <Polish>Kaliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Pociski: 20</Polish>
+            <French>Calibre: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Balas: 20</Spanish>
+            <Russian>Калибр: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Патронов: 20</Russian>
+            <German>Kaliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Patronen: 20</German>
+            <Italian>Calibro: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Munizioni: 20</Italian>
+            <Czech>Ráže: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Nábojů: 20</Czech>
+            <Portuguese>Calibre: .300 WM OTM NATO (Berger Hybrid OTM)&lt;br/&gt;Cartuchos: 20</Portuguese>
+            <Hungarian>Kaliber: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Lövedékek: 20</Hungarian>
+            <Japanese>口径: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;装填数: 20</Japanese>
+            <Korean>구경: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;장탄수: 20</Korean>
+            <Chinese>口徑: .300 西米 NATO標準 (Berger Hybrid 空尖比賽專用彈)&lt;br /&gt;發數: 20</Chinese>
+            <Chinesesimp>口径: .300 WM NATO标准 (Berger Hybrid 空尖比赛专用弹)&lt;br /&gt;发数: 20</Chinesesimp>
+            <Turkish>Kalibre: .300 WM NATO (Berger Hybrid OTM)&lt;br /&gt;Mermi: 20</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47mm 30Rnd Mag (HPBT Scenar)</English>

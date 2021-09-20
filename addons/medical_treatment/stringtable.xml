@@ -57,6 +57,10 @@
             <Turkish>Genel Teşhis eylemi yerine Nabzı Kontrol Et, Kan Basıncını Kontrol Et ve Yanıtı Kontrol Et tedavi eylemlerini etkinleştirir. \ Devre dışı bırakıldığında, CPR eylemi yalnızca CPR gerçekleştirilmesi uygun olduğunda gösterilecektir.</Turkish>
             <Spanish>Habilita la comprobación del pulso, presión sanguinea y rsepuesta a las acciones del tratamiento en lugar de la acción de diagnóstico genérico. \n Cuando se deshabilita, la acción RCP solo se mostrará cuando realizar un RCP sea apropiado. \n Las acciones activadas de este ajuste son necesarias para determinar si una persona está inconsciente o en parada cardiaca.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
+            <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
+            <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
             <German>Erweiterte Medikation</German>
@@ -69,6 +73,7 @@
             <Italian>Medicazione avanzata</Italian>
             <Polish>Zaawansowane leki</Polish>
             <Turkish>Gelişmiş Ilaç</Turkish>
+            <Spanish>Medicación avanzada</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_Description">
             <English>Enables extended, more in-depth medication handling. Also, enables the use of Adenosine.</English>
@@ -81,6 +86,7 @@
             <Italian>Abilita una gestione della medicazione più estesa e approfondita. Permette inoltre l'utilizzo dell'Adenosina.</Italian>
             <German>Ermöglicht erweiterte, mehr tiefgründigere Anwendung von Medikationen. Ebenso ermöglicht es die Benutzung von Adenosin.</German>
             <Polish>Pozwala na zaawansowane uzycie leków. Pozwala na używanie Adenozyny.</Polish>
+            <Spanish>Habilita el manejo de la medicación más avanzada y en profundidad. Tambien permite el uso de Adenosina.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
@@ -118,6 +124,7 @@
             <Russian>Включено и может открыться заново</Russian>
             <Polish>Aktywne &amp; możliwe ponowne otwarcie</Polish>
             <Turkish>Etkinleştirildi ve Yeniden Açılabilir</Turkish>
+            <Spanish>Habilitada y pueden reabrirse</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_DisplayName">
             <English>Wound Reopening Coefficient</English>
@@ -128,6 +135,7 @@
             <Polish>Współczynnik ponownego otwierania ran</Polish>
             <Japanese>再開放係数</Japanese>
             <Turkish>Yara Yeniden Açılma Katsayısı</Turkish>
+            <Spanish>Coeficiente de reapertura de heridas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_Description">
             <English>Coefficient for controlling the wound reopening chance. The final reopening chance is determined by multiplying this value with the specific reopening chance for the wound type and bandage used.</English>
@@ -138,6 +146,7 @@
             <Polish>Współczynnik kontroluje szanse na ponowne otworzenie rany. Końcowa szansa na otworzenie jest ustalana przez pomnożenie tej wartości z wartością szansy na otworzenie rany dla typu rany oraz typu bandaża.</Polish>
             <Japanese>傷が再開放する確率の係数を設定できます。再開放は、この数値と傷の種類、そして使用した包帯に応じて左右されます。</Japanese>
             <Turkish>Yaranın yeniden açılma şansını kontrol etme katsayısı. Son yeniden açılma şansı, bu değerin kullanılan yara tipi ve bandaj için spesifik yeniden açılma şansı ile çarpılmasıyla belirlenir.</Turkish>
+            <Spanish>Coeficiente que controla la probabilidad de reapertura de heridas. La probabilidad final de reapertura de heridas queda determinada multiplicando este valor por la probabilidad específica del tipo de herida y venda usada.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTraumaAfterBandage_DisplayName">
             <English>Clear Trauma After Bandage</English>
@@ -255,59 +264,79 @@
             <English>Autoinjector Treatment Time</English>
             <French>Durée d'interaction - Auto-injecteurs</French>
             <Japanese>注射器の使用時間</Japanese>
+            <Spanish>Tiempo de tratamiento de autoinyección</Spanish>
+            <Russian>Время ввода автоинъектора</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
             <French>Définit le temps nécessaire à l'administration d'une substance auto-injectable (en secondes).</French>
             <Japanese>注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Spanish>Tiempo, en segundos, requerido para administrar medicación utilizando un autoinyectador.</Spanish>
+            <Russian>Время, необходимое для введения медикаментов автоинъектором (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
             <French>Durée d'interaction - Garrots</French>
             <German>Tourniquet-Behandlungszeit</German>
             <Japanese>止血帯の使用時間</Japanese>
+            <Spanish>Tiempo de tratamiento de torniquete</Spanish>
+            <Russian>Время наложения/снятия жгута</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
             <French>Définit le temps nécessaire à l'application ou au retrait d'un garrot (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
             <Japanese>止血帯の使用/排除に掛かる時間 (秒) を決定します。</Japanese>
+            <Spanish>Tiempo, en segundos, requerido para aplicar/quitar un torniquete.</Spanish>
+            <Russian>Время, необходимое для наложения/снятия жгута (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
             <French>Durée d'interaction - IVs</French>
             <German>IV Beutelbehandlungszeit</German>
             <Japanese>点滴の使用時間</Japanese>
+            <Spanish>Tiempo de tratamiento de bolsa de IV</Spanish>
+            <Russian>Время применения пакета внутривенного переливания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
             <French>Définit le temps nécessaire à la pose d'une perfusion IV (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
             <Japanese>点滴の投与に掛かる時間 (秒) を決定します。</Japanese>
+            <Spanish>Tiempo, en segundos, requerido para administrar una bolsa de IV.</Spanish>
+            <Russian>Время, необходимое для применения пакета внутривенного переливания (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
             <French>Durée d'interaction - Attelles</French>
             <German>Schienenbehandlungszeit</German>
             <Japanese>添え木の使用時間</Japanese>
+            <Spanish>TIempo de tratamiento de férula</Spanish>
+            <Russian>Время наложения шины</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
             <French>Définit le temps nécessaire à l'application d'une attelle (en secondes).</French>
             <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
             <Japanese>添え木の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Spanish>TIempo, en segundos, requerido para aplicar una férula.</Spanish>
+            <Russian>Время, необходимое для наложения шины (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
             <French>Durée d'interaction - Housses mortuaires</French>
             <German>Anwendungszeit für Leichensack</German>
             <Japanese>死体袋の使用時間</Japanese>
+            <Spanish>TIempo de uso de bolsa para cuerpos</Spanish>
+            <Russian>Время использования мешка для трупов</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
             <French>Définit le temps nécessaire à la mise en housse d'un corps (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
             <Japanese>死体袋の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Spanish>Tiempo, en segundos, requerido para poner a un paciente en una bolsa para cuerpos.</Spanish>
+            <Russian>Время, необходимое для того чтобы упаковать труп в мешок (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -470,6 +499,7 @@
             <Czech>Samo-použití osobní lékárničky (PAK)</Czech>
             <Russian>Использование аптечки на себе</Russian>
             <Turkish>Kendi PAK Kullanımı</Turkish>
+            <Spanish>Usar EPA sobre uno mismo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
@@ -482,6 +512,7 @@
             <Czech>Umožňuje použít osobní lékárničku (PAK) na sama sebe.</Czech>
             <Russian>Позволяют использовать аптечку на себе в одиночку.</Russian>
             <Turkish>Kendini iyileştirmek için PAK'ların kullanılmasını sağlar.</Turkish>
+            <Spanish>Habilita el uso de EPA para curarse a uno mismo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -623,11 +654,15 @@
             <English>Wound Stitch Time</English>
             <French>Durée d'interaction - Sutures</French>
             <Japanese>縫合時間</Japanese>
+            <Spanish>Tiempo de sutura de herida</Spanish>
+            <Russian>Время зашивания ран</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
             <French>Définit le temps nécessaire à la suture d'une plaie (en secondes).</French>
             <Japanese>縫合に掛かる時間 (秒) を決定します。</Japanese>
+            <Spanish>Tiempo, en segundos, requerido para suturar una única herida.</Spanish>
+            <Russian>Время, необходимое для зашивания одной раны (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -659,11 +694,15 @@
             <English>Allow Unconscious Body Bag</English>
             <French>Housse mortuaire - Autoriser patients inconscients</French>
             <Japanese>無意識者を死体袋に</Japanese>
+            <Spanish>Permitir bolsa para cuerpos inconsciente</Spanish>
+            <Russian>Разрешить упаковывать пациентов без сознания в мешки для трупов</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
             <French>Active la possibilité de placer des patients inconscients dans les housses mortuaires.\nAttention : le cas échéant cela provoquera la mort du patient.</French>
             <Japanese>気絶しているプレイヤーを死体袋へ入れられるかどうかを決定します。</Japanese>
+            <Spanish>Permitir colocar a un paciente inconsciente en una bolsa para cuerpos.</Spanish>
+            <Russian>Разрешает упаковывать пациентов без сознания в мешки для трупов.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -673,7 +712,8 @@
             <Chinese>允許操作點滴</Chinese>
             <Japanese>IV 輸血の制限</Japanese>
             <Czech>Povolit IV transfuzi</Czech>
-            <Russian>Разрешить переливание IV группы крови</Russian>
+            <Russian>Разрешить внутривенное переливание</Russian>
+            <Spanish>Permitir transfusión de IV</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
@@ -683,15 +723,22 @@
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Japanese>IV 輸血を行うのに訓練済レベルを要求とします。</Japanese>
             <Czech>Úroveň výcviku nutná pro IV transfuzi.</Czech>
-            <Russian>Уровень навыка требуемый для переливания крови IV группы.</Russian>
+            <Russian>Уровень навыка, требуемый для осуществления внутривенного переливания.</Russian>
+            <Spanish>Nivel de capacitación requerido para transfusiones de IV.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
             <English>Locations IV Transfusion</English>
             <Japanese>IV 輸血の場所制限</Japanese>
+            <Spanish>Ubicación para transfusiones IV</Spanish>
+            <French>Lieux perfusions IV</French>
+            <Russian>Места введения пакетов внутривенного переливания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
             <Japanese>IV 輸血を行える場所を決定できます。</Japanese>
+            <Spanish>Controla dónde pueden ser realizadas las transfusiones IV.</Spanish>
+            <French>Définit les lieux où la pose de perfusions est autorisée.</French>
+            <Russian>Определяет к каким частям тела разрешено применять пакеты внутренного переливания.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -887,43 +934,39 @@
             <Turkish>Araçlar ve Tesisler</Turkish>
             <Spanish>Vehículos e instalaciones médicas</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_DisplayName">
-            <English>CPR Success Chance</English>
-            <Japanese>心肺蘇生の成功率</Japanese>
-            <French>Chance de réussite de la RCP</French>
-            <Russian>Шанс успешной реанимации</Russian>
-            <Portuguese>Chance de ter sucesso com SBV</Portuguese>
-            <Chinese>心肺復甦術成功率</Chinese>
-            <Czech>Pravděpodobnost úspěchu CPR</Czech>
-            <Italian>Possibilità di successo della RCP</Italian>
-            <Polish>Szansa powodzenia RKO</Polish>
-            <German>HLW Erfolgsrate</German>
-            <Turkish>CPR Başarı Şansı</Turkish>
-            <Spanish>Probabilidad de éxito del RCP</Spanish>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_DisplayName">
+            <English>CPR Success Chance Minimum</English>
+            <French>RCP - Chance minimale de réussite</French>
+            <Russian>Минимальные шансы успеха СЛР</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChance_Description">
-            <English>Probability that CPR will be successful in restoring heart rhythm.</English>
-            <Japanese>心肺蘇生によって心拍を戻せる確率を決定できます。</Japanese>
-            <French>Probabilité de rétablir un rythme cardiaque suite à une RCP.</French>
-            <Russian>Вероятность успешного проведения сердечно-лёгочной реанимации (СЛР).</Russian>
-            <Portuguese>Probabilidade que um SBV restaurará o batimento cardíaco.</Portuguese>
-            <Chinese>心肺復甦術恢復心率的機率。</Chinese>
-            <Czech>Pravděpodobnost, že CPR obnoví srdeční tep.</Czech>
-            <Italian>E' probabile che la rianimazione RCP abbia successo nel ripristinare il ritmo cardiaco.</Italian>
-            <Polish>Prawdopodobieństwo przwyrócenia akcji serca poprzez wykonanie RKO</Polish>
-            <German>Wahrscheinlichkeit, dass HLW bei der Wiederherstellung des Herzrhythmus erfolgreich sein wird.</German>
-            <Turkish>Kalp ritmini geri kazanmada CPR'nin başarılı olma olasılığı.</Turkish>
-            <Spanish>Probabilidad de que el RCP sea exitoso restaurando el ritmo cardíaco.</Spanish>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
+            <English>CPR Success Chance Maximum</English>
+            <French>RCP - Chance maximale de réussite</French>
+            <Russian>Максимальные шансы успеха СЛР</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
+            <English>Minimum probability that performing CPR will restore heart rhythm.\nThis minimum value is used when the patient has at least "Lost a fatal amount of blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
+            <French>Probabilité minimale de rétablir un rythme cardiaque suite à une RCP.\nCette valeur minimale est définie pour un patient à l'état "A perdu une quantité critique de sang".\nUne interpolation est faite entre la chance minimale et maximale, en fonction du volume sanguin du patient.</French>
+            <Russian>Минимальная вероятность того, что выполнение искусственного дыхания восстановит сердечный ритм.\nЭто минимальное значение используется, когда пациент, по крайней мере, получил статус "Фатальная кровопотеря".\n Интерполированная вероятность используется, когда объем крови пациента находится между минимальным и максимальным порогами.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
+            <English>Maximum probability that performing CPR will restore heart rhythm.\nThis maximum value is used when the patient has at most "Lost some blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
+            <French>Probabilité maximale de rétablir un rythme cardiaque suite à une RCP.\nCette valeur maximale est définie pour un patient à l'état "A perdu une faible quantité de sang".\nUne interpolation est faite entre la chance minimale et maximale, en fonction du volume sanguin du patient.</French>
+            <Russian>Максимальная вероятность того, что выполнение искусственного дыхания восстановит сердечный ритм.\nЭто максимальное значение используется, когда пациент, по крайней мере, получил статус "Фатальная кровопотеря".\n Интерполированная вероятность используется, когда объем крови пациента находится между минимальным и максимальным порогами.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
-            <French>Durée d'interaction - RCP</French>
+            <French>RCP - Durée d'interaction</French>
             <Japanese>CPR の動作時間</Japanese>
+            <Spanish>Tiempo de tratamiento de RCP</Spanish>
+            <Russian>Время проведения СЛР</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
             <French>Définit le temps nécessaire à la mise en œuvre d'une RCP (en secondes).</French>
             <Japanese>心肺蘇生にかかる時間 (秒) を決定します。</Japanese>
+            <Spanish>Tiempo, en segundos, requerido para realizar RCP en un paciente.</Spanish>
+            <Russian>Время, необходимое для проведения сердечно-лёгочной реанимации (СЛР) (в секундах).</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
@@ -3699,6 +3742,14 @@
             <Chinese>%1 沒有反應</Chinese>
             <Turkish>%1 tepki vermiyor</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
+            <English>%1 is not responsive, taking shallow gasps and convulsing</English>
+            <French>%1 est inconscient, respire par intermittence et convulse.</French>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
+            <English>%1 is not responsive, motionless and cold</English>
+            <French>%1 est inconscient, inanimé et froid.</French>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
             <Russian>Вы осмотрели раненого %1</Russian>
@@ -4383,8 +4434,10 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
             <English>The body twitched and may not be dead!</English>
+            <Russian>Тело дернулось и, возможно, пациент жив!</Russian>
             <French>L'unité a bougé et n'est peut-être pas morte !</French>
             <Japanese>身体が動き死んでないようだ!</Japanese>
+            <Spanish>¡El cuerpo se retorció y puede que no esté muerto!</Spanish>
         </Key>
     </Package>
 </Project>

@@ -676,6 +676,7 @@
             <Russian>Порог урона</Russian>
             <Polish>Próg obrażeń jednostki</Polish>
             <Turkish>Birim Hasar Katsayısı</Turkish>
+            <Spanish>Umbral de daño de unidad</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_Description">
             <English>Sets the amount of damage a unit can receive before going unconscious. (0 for mission default)</English>
@@ -686,28 +687,35 @@
             <Russian>Устанавливает количество урона, которое может получить юнит перед тем, как потерять сознание. (0 для значения миссии)</Russian>
             <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
             <Turkish>Bilinçsiz duruma geçmeden önce bir birimin alabileceği hasar miktarını ayarlar. (Görev varsayılanı için 0)</Turkish>
+            <Spanish>Determina la cantidad de daño que puede recibir una unidad antes de quedar inconsciente (0 para predeterminado de misión)</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
             <English>Pain Unconscious Chance</English>
+            <Russian>Шанс потерять сознание от боли</Russian>
             <Polish>Szansa na nieprzytomność przez ból</Polish>
             <Japanese>気絶確立</Japanese>
+            <Spanish>Probabilidad de inconsciencia por dolor</Spanish>
+            <French>Douleur - Chance d'évanouissement</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
             <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
+            <Russian>Шанс, что человек потеряет сознание, когда его боль выше допустимого порога при получении травмы.</Russian>
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
             <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確立を設定します。</Japanese>
+            <Spanish>La probabilidad de que una persona caiga inconsciente cuando su dolor está por encima del umbral al haber recibido daño.</Spanish>
+            <French>La probabilité pour qu'une personne perde connaissance lorsque la douleur ressentie est supérieure à son seuil de tolérance.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
+            <Russian>Вероятность смерти от смертельной травмы</Russian>
+            <Spanish>Probabilidad de muerte por herida fatal</Spanish>
+            <French>Blessure mortelle - Chance de décès</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_DisplayName">
-            <English>Enable Vehicle Crash Damage</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_Description">
-            <English>Controls whether crew receives damage from vehicle collisions.</English>
+            <Russian>Шанс умереть от смертельной травмы.</Russian>
+            <Spanish>La probabilidad de morir a causa de una herida fatal.</Spanish>
+            <French>La probabilité de mourir lors d'une "blessure mortelle".\nUne blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
         </Key>
     </Package>
 </Project>

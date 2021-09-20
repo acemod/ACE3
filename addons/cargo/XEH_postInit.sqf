@@ -35,10 +35,6 @@
 
     [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
-    if (_unloaded) then {
-        // Invoke listenable event
-        ["ace_cargoUnloaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
-    };
 
     // TOOO maybe drag/carry the unloaded item?
 }] call CBA_fnc_addEventHandler;

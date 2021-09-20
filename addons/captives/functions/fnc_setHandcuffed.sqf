@@ -6,18 +6,19 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: True to take captive, false to release captive <BOOL>
+ * 2: Caller <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, true] call ACE_captives_fnc_setHandcuffed;
+ * [bob, true, dave] call ACE_captives_fnc_setHandcuffed;
  *
  * Public: No
  */
 
-params ["_unit","_state"];
-TRACE_2("params",_unit,_state);
+params ["_unit", "_state", ["_caller", objNull]];
+TRACE_3("params",_unit,_state,_caller);
 
 if (!local _unit) exitWith {
     WARNING("running setHandcuffed on remote unit");
@@ -103,4 +104,4 @@ if (_state) then {
 };
 
 //Global Event after changes:
-["ace_captiveStatusChanged", [_unit, _state, "SetHandcuffed"]] call CBA_fnc_globalEvent;
+["ace_captiveStatusChanged", [_unit, _state, "SetHandcuffed", _caller]] call CBA_fnc_globalEvent;

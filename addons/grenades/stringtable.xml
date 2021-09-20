@@ -166,6 +166,7 @@
             <Portuguese>Granada de Luz CTS 7290 9-Explosões</Portuguese>
             <Turkish>CTS 7290 9- Flaş Bombası</Turkish>
             <Russian>CTS 7290-9 Светошумовая граната</Russian>
+            <Spanish>Granada aturdidora CTS 7290 9-explosiones</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_CTS9_NameShort">
             <English>CTS 7290-9</English>
@@ -402,6 +403,7 @@
             <Portuguese>Granada Incendiária AN-M14</Portuguese>
             <Czech>AN-M14 zápalný granát</Czech>
             <Turkish>AN-M14 Yangın Bombası</Turkish>
+            <Spanish>Granada incendiaria AN-M14</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_NameShort">
             <English>AN-M14</English>
@@ -417,6 +419,7 @@
             <Portuguese>AN-M14</Portuguese>
             <Czech>AN-M14</Czech>
             <Turkish>AN-M14</Turkish>
+            <Spanish>AN-M14</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Description">
             <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
@@ -432,6 +435,7 @@
             <Portuguese>Granada Incendiária utilizada para destruir armas, munições e outros equipamentos.</Portuguese>
             <Czech>Zápalný granát používaný ke zničení zbraní, munice a další výbavy.</Czech>
             <Turkish>Yangın bombaları, cephaneleri ve diğer teçhizatı yok etmek için kullanılır</Turkish>
+            <Spanish>Granada incendiaria utilizada para destruir armamento, municiones y otros equipamientos</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_description">
             <English>Type: Star Parachute Flare</English>
@@ -445,6 +449,7 @@
             <French>Type : Fusée éclairante à parachute</French>
             <Czech>Typ: Světlice s padákem</Czech>
             <Turkish>Tür: Yıldız Paraşüt Fişeği</Turkish>
+            <Spanish>Tipo: Bengala de paracaidas</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_white">
             <English>M583 Illumination Flare (White)</English>
@@ -458,6 +463,7 @@
             <French>M583 Fusée éclairante (Blanche)</French>
             <Czech>M583 Světlice (Bílá)</Czech>
             <Turkish>M583 Aydınlatma Fişeği (Beyaz)</Turkish>
+            <Spanish>M583 Bengala de iluminación (Blanca)</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_red">
             <English>M662 Illumination Flare (Red)</English>
@@ -471,6 +477,7 @@
             <French>M662 Fusée éclairante (Rouge)</French>
             <Czech>M662 Světlice (Červená)</Czech>
             <Turkish>M662 Aydınlatma Fişeği (Kırmızı)</Turkish>
+            <Spanish>M662 Bengala de iluminación (Roja)</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_green">
             <English>M661 Illumination Flare (Green)</English>
@@ -484,6 +491,7 @@
             <French>M661 Fusée éclairante (Verte)</French>
             <Czech>M661 Světlice (Zelená)</Czech>
             <Turkish>M661 Aydınlatma Fişeği (Yeşil)</Turkish>
+            <Spanish>M661 Bengala de iluminación (Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_parachute_flare_ir_description">
             <English>Type: Parachute IR Flare</English>
@@ -497,6 +505,7 @@
             <French>Type : Fusée IR à parachute</French>
             <Czech>Typ: Infračervená světlice s padákem</Czech>
             <Turkish>Tip : Paraşüt IR Flare</Turkish>
+            <Spanish>Tipo: Bengala infrarroja de paracaidas</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
             <English>M992 Illumination IR Flare</English>
@@ -510,41 +519,56 @@
             <French>M992 Fusée IR</French>
             <Czech>M992 Infračervená světlice</Czech>
             <Turkish>M992 Illumination IR Flare</Turkish>
+            <Spanish>M992 Bengala de iluminación infrarroja</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Remote_Mag_Throwable">
             <English>Explosive Satchel (Throwable)</English>
+            <Russian>Ранец со взрывчаткой (Метательный)</Russian>
             <French>Charge en sacoche (lançable)</French>
             <Japanese>梱包爆薬 (投てき仕様)</Japanese>
+            <Spanish>Carga de mochila explosiva (Lanzable)</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
+            <Russian>Тип: Взрывчатка&lt;br /&gt;Боеприпасы 1&lt;br /&gt;Применение: На предметах, которые должны быть уничтожены</Russian>
             <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : à balancer sur des trucs qui doivent mourir</French>
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
+            <Spanish>Tipo: Carga&lt;br /&gt;Unidades: 1&lt;br /&gt;Usada: Cosas que necesitan morir</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
+            <Russian>Ранец со взрывчаткой. Детонация через 7 секунд</Russian>
             <French>Charge explosive lançable. Détonation après 7 secondes.</French>
             <Japanese>投げられる梱包爆薬。起爆までの時間は 7 秒間</Japanese>
+            <Spanish>Carga de mochila explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
+            <Russian>Заряд со взрывчаткой (Метательный)</Russian>
             <French>Charge explosive (lançable)</French>
             <Japanese>爆薬ブロック (投てき仕様)</Japanese>
+            <Spanish>Carga explosiva (Lanzable)</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
+            <Russian>Заряд со взрывчаткой. Детонация через 7 секунд</Russian>
             <French>Bloc explosif lançable. Détonation après 7 secondes.</French>
             <Japanese>投げられる爆薬ブロック。起爆までの時間は 7 秒間</Japanese>
+            <Spanish>Carga explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
+            <Russian>Применить фитиль</Russian>
             <French>Appliquer une mèche</French>
             <Japanese>短信管へ変更</Japanese>
+            <Spanish>Convertir a espoleta corta</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
+            <Russian>Убрать фитиль</Russian>
             <French>Retirer la mèche</French>
             <Japanese>短信管を削除</Japanese>
+            <Spanish>Quitar espoleta corta</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -564,13 +588,17 @@
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_DisplayName">
             <English>Allow Explosive Conversion</English>
+            <Russian>Разрешить фитили</Russian>
             <French>Autoriser les mèches (charges lançables)</French>
             <Japanese>爆薬変更を許可</Japanese>
+            <Spanish>Permitir conversión de explosivos</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
+            <Russian>Разрешает преобразовывать взрывчатку в метательные снаряды</Russian>
             <French>Cette option permet de rendre les charges explosives lançables, à la manière des grenades.\nPour celà, ouvrir l'inventaire et double-cliquer sur les charges, afin de leur appliquer une mèche.\nLa mèche peut se retirer en suivant la même procédure.</French>
             <Japanese>爆発物を投てき仕様へ交換できるようにします。</Japanese>
+            <Spanish>Permitir convertir explosivos a lanzables</Spanish>
         </Key>
     </Package>
 </Project>

@@ -15,6 +15,7 @@
             <French>ACE Verrouillage véhicule</French>
             <Czech>ACE Zamykání Vozidel</Czech>
             <Turkish>ACE Araç Kilidi</Turkish>
+            <Spanish>ACE Bloqueo de vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
@@ -278,6 +279,9 @@
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_RemoveAmbiguousLockState">
             <English>Remove Ambiguous Lock State</English>
+            <Spanish>Eliminar estado de bloqueo ambiguo</Spanish>
+            <French>Supprimer les états de verrouillage ambigus</French>
+            <Russian>Устранить неоднозначные состояния замков</Russian>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>

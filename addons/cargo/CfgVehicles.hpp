@@ -636,6 +636,15 @@ class CfgVehicles {
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
+    class Cargo_IDAP_base_F: Cargo_base_F {};
+    class Land_Cargo20_IDAP_F: Cargo_IDAP_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
+        GVAR(space) = 49;
+        GVAR(size) = 50;
+    };
 
     class Land_Cargo40_blue_F: Cargo_base_F {
         class EventHandlers {

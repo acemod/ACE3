@@ -357,9 +357,10 @@ class DAGR_Menu {
         sizeEx = 0.04;
     };
 
+//Waypoint adding and modification digits underline
     class DAGR_MENU_PSELECTION1 : DAGR_Menu_Pic {
         idc = 2668788;
-        x = 0.451;
+        x = 0.465;
         y = 0.352;
         w = 0.01;
         h = 0.003;
@@ -367,7 +368,7 @@ class DAGR_Menu {
 
     class DAGR_MENU_PSELECTION2 : DAGR_Menu_Pic {
         idc = 2668789;
-        x = 0.465;
+        x = 0.475;
         y = 0.352;
         w = 0.01;
         h = 0.003;
@@ -375,7 +376,7 @@ class DAGR_Menu {
 
     class DAGR_MENU_PSELECTION3 : DAGR_Menu_Pic {
         idc = 2668790;
-        x = 0.479;
+        x = 0.485;
         y = 0.352;
         w = 0.01;
         h = 0.003;
@@ -383,7 +384,7 @@ class DAGR_Menu {
 
     class DAGR_MENU_PSELECTION4 : DAGR_Menu_Pic {
         idc = 2668791;
-        x = 0.493;
+        x = 0.495;
         y = 0.352;
         w = 0.01;
         h = 0.003;
@@ -391,7 +392,7 @@ class DAGR_Menu {
 
     class DAGR_MENU_PSELECTION5 : DAGR_Menu_Pic {
         idc = 2668792;
-        x = 0.507;
+        x = 0.505;
         y = 0.352;
         w = 0.01;
         h = 0.003;
@@ -399,7 +400,7 @@ class DAGR_Menu {
 
     class DAGR_MENU_PSELECTION6 : DAGR_Menu_Pic {
         idc = 2668793;
-        x = 0.521;
+        x = 0.515;
         y = 0.352;
         w = 0.01;
         h = 0.003;
@@ -407,7 +408,7 @@ class DAGR_Menu {
 
     class DAGR_MENU_PSELECTION7 : DAGR_Menu_Pic {
         idc = 2668794;
-        x = 0.535;
+        x = 0.525;
         y = 0.352;
         w = 0.01;
         h = 0.003;
@@ -415,7 +416,7 @@ class DAGR_Menu {
 
     class DAGR_MENU_PSELECTION8 : DAGR_Menu_Pic {
         idc = 2668795;
-        x = 0.549;
+        x = 0.535;
         y = 0.352;
         w = 0.01;
         h = 0.003;

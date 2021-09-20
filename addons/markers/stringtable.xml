@@ -3,6 +3,9 @@
     <Package name="Markers">
         <Key ID="STR_ACE_Markers_MarkerScale">
             <English>Scale: %1</English>
+            <Spanish>Escala: %1</Spanish>
+            <French>Échelle : %1</French>
+            <Russian>Масштаб: %1</Russian>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
@@ -21,6 +24,11 @@
             <Chinese>方位: %1°</Chinese>
             <Turkish>Yön: %1°</Turkish>
         </Key>
+        <Key ID="STR_ACE_Markers_MarkerDirectionScaleSlider_Tooltip">
+            <English>Click RMB to reset</English>
+            <Russian>Нажми ПКМ чтобы сбросить</Russian>
+            <French>Clic droit pour réinitialiser</French>
+        </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
             <German>Markierungen</German>
@@ -35,6 +43,7 @@
             <French>Marqueurs</French>
             <Czech>Značky</Czech>
             <Turkish>Işaretleyiciler</Turkish>
+            <Spanish>Marcadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
@@ -49,6 +58,7 @@
             <Portuguese>Permitir que movam marcadores</Portuguese>
             <French>Permettre le déplacement des marqueurs pour</French>
             <Czech>Povolit pohyb se značkami pro</Czech>
+            <Spanish>Permitir marcadores en movimiento para</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Description">
             <English>Restricts which players are able to move markers while holding the Alt key.</English>
@@ -64,6 +74,7 @@
             <French>Définit quels joueurs peuvent déplacer des marqueurs en maintenant la touche Alt enfoncée.</French>
             <Czech>Omezuje kdo může pohybovat se značkami při podržení klávesy Alt.</Czech>
             <Turkish>Alt tuşunu basılı tutarken hangi işaretçilerin hareket edebileceğini sınırlar.</Turkish>
+            <Spanish>Reestringir qué jugadores son capaces de mover los marcadores manteniendo pulsada la tecla Alt.</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
             <English>Nobody</English>
@@ -79,6 +90,7 @@
             <French>Personne</French>
             <Czech>Nikdo</Czech>
             <Turkish>Hiçkimse</Turkish>
+            <Spanish>Ninguno</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_All">
             <English>All players</English>
@@ -94,6 +106,7 @@
             <French>Tous les joueurs</French>
             <Czech>Všichni hráči</Czech>
             <Turkish>Bütün Oyuncular</Turkish>
+            <Spanish>Todos los jugadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
@@ -109,6 +122,7 @@
             <French>Admins</French>
             <Czech>Administrátoři</Czech>
             <Turkish>Adminler</Turkish>
+            <Spanish>Admins</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
@@ -124,6 +138,7 @@
             <French>Chefs de groupe</French>
             <Czech>Velitelé jednotek</Czech>
             <Turkish>Grup Liderleri</Turkish>
+            <Spanish>Líderes de grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
@@ -139,6 +154,7 @@
             <French>Chefs de groupe et Admins</French>
             <Czech>Velitelé jednotek a Administrátoři</Czech>
             <Turkish>Grup Liderleri Ve Adminler</Turkish>
+            <Spanish>Líderes de grupo y administradores</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
             <English>Creator</English>
@@ -152,76 +168,105 @@
             <Italian>Creatore</Italian>
             <Czech>Tvůrce</Czech>
             <Turkish>Yaratıcı</Turkish>
+            <Spanish>Creador</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabled">
             <English>Allow Timestamps</English>
+            <Russian>Включить отображение времени на метках</Russian>
             <French>Permettre l'horodatage</French>
             <Japanese>タイムスタンプ許可</Japanese>
+            <Spanish>Permitir marcas de tiempo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
             <English>Whether to allow timestamps to be automatically applied to markers</English>
+            <Russian>Автоматическое отображение времени, когда поставлена метка</Russian>
             <French>Active une interface permettant d'apposer un horodatage sur les marqueurs.</French>
             <Japanese>マーカーへ自動的にタイムスタンプを付与するかどうかを設定できます。</Japanese>
+            <Spanish>Permitir que las marcas de tiempo sean automáticamente aplicadas a los marcadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_Timestamp">
             <English>Timestamp</English>
+            <Russian>Время постановки метки</Russian>
             <French>Horodatage</French>
             <Japanese>タイムスタンプ</Japanese>
+            <Spanish>Marca de tiempo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
             <English>Watch Required</English>
+            <Russian>Необходимы часы</Russian>
             <French>Une montre est requise.</French>
             <Japanese>時計の要求</Japanese>
+            <Spanish>Reloj requerido</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormat">
             <English>Timestamp Format</English>
+            <Russian>Формат времени</Russian>
             <French>Horodatage - Format</French>
             <Japanese>タイムスタンプ形式</Japanese>
+            <Spanish>Formato de marca de tiempo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
             <English>Changes the timestamp format</English>
+            <Russian>Изменение формата времени</Russian>
             <French>Modifie le format de l'horodatage.</French>
             <Japanese>タイムスタンプの形式を変更します</Japanese>
+            <Spanish>Cambia el formato de marca de tiempo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
             <English>"HH" - Hour</English>
+            <Russian>"ЧЧ" - Час</Russian>
             <French>"HH" - Heures</French>
             <Japanese>"HH" - 時間</Japanese>
+            <Spanish>"HH" - Hora</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
             <English>"MM" - Minute</English>
+            <Russian>"ММ" - Минута</Russian>
             <French>"MM" - Minutes</French>
             <Japanese>"MM" - 分</Japanese>
+            <Spanish>"MM" - Minuto</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
             <English>"SS" - Seconds</English>
+            <Russian>"СС" - Секунда</Russian>
             <French>"SS" - Secondes</French>
             <Japanese>"SS" - 秒</Japanese>
+            <Spanish>"SS" - Segundos</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
             <English>"MM" - Milliseconds</English>
-            <French>"MS" - Millisecondes</French>
+            <Russian>"МС" - Миллисекунда</Russian>
+            <French>"MM" - Millisecondes</French>
             <Japanese>"MM" - ミリ秒</Japanese>
+            <Spanish>"MM" - Milisegundos</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
+            <Russian>Часовой формат времени</Russian>
             <French>Horodatage - Système horaire</French>
             <Japanese>タイムスタンプ時刻形式</Japanese>
+            <Spanish>Formato de hora de marca de tiempo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat24">
             <English>24-Hour Clock</English>
+            <Russian>24 часовой формат</Russian>
             <French>Format 24 heures</French>
             <Japanese>24 時間表記</Japanese>
+            <Spanish>Reloj 24-Horas</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat12">
             <English>12-Hour Clock</English>
+            <Russian>12 часовой формат</Russian>
             <French>Format 12 heures</French>
             <Japanese>12 時間表記</Japanese>
+            <Spanish>Reloj 12-Horas</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
             <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
+            <Russian>Изменяет формат времени на маркере на 24 часовой, либо 12 часовой</Russian>
             <French>Permet de choisir le système d'horodatage souhaité, au format 12 ou 24 heures.</French>
             <Japanese>タイムスタンプの時刻を 24 時間か 12 時間表記のどちらかに変更できます。</Japanese>
+            <Spanish>Cambia que la marca de tiempo sea en formato de reloj 24-horas o 12-horas</Spanish>
         </Key>
     </Package>
 </Project>
