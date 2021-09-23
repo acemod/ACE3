@@ -17,7 +17,8 @@
 
 params ["_aircraft"];
 
-if !(_aircraft getVariable [QGVAR(enabled), false]) exitWith {};
+// Assume enabled by default
+if !(_aircraft getVariable [QGVAR(enabled), true]) exitWith {};
 
 private _config = configOf _aircraft;
 private _turretData = [_config] call FUNC(findTurret);
