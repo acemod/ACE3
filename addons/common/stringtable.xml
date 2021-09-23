@@ -1379,6 +1379,14 @@
             <Spanish>Permitir a los scripts de ACE reducir el volumen la música</Spanish>
             <Turkish>ACE scripti müziği kısmana izin verir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_EpilepsyFriendlyMode">
+            <English>Epilepsy friendly mode</English>
+            <German>Epilepsiefreundlicher Modus</German>
+        </Key>
+        <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
+            <English>Disables some flashing light effects to reduce seizure risk.</English>
+            <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
+        </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
             <German>Flagge (Ace - Schwarz)</German>
