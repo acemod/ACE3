@@ -17,7 +17,7 @@
             <English>Enable IR marking lasers for aircraft</English>
             <German>IR Markierungslaser für Luftfahrzeuge aktivieren</German>
         </Key>
-        <Key ID="STR_ACE_Markinglaser_Setting_Enabled_Tooltip">
+        <Key ID="STR_ACE_Markinglaser_Setting_Enabled_Description">
             <English>Enables the useage of IR marking lasers for aircraft.</English>
             <German>Ermöglicht die Nutzung von IR Markierungslasern für Luftfahrzeuge.</German>
         </Key>
