@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [plane] call ace_markinglaser_fnc_onLaserOn
+ * [plane] call ace_markinglaser_fnc_onLaserOff
  *
  * Public: No
  */

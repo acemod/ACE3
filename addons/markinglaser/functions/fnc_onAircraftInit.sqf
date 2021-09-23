@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [plane] call ace_markinglaser_fnc_equipLaser
+ * [plane] call ace_markinglaser_fnc_onAircraftInit
  *
  * Public: No
  */
