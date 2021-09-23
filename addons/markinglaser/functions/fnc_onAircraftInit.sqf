@@ -25,7 +25,7 @@ private _hasPilotCamera = getNumber (_config >> "PilotCamera" >> "controllable")
 
 if ((_turretData isEqualTo []) && {!_hasPilotCamera}) exitWith {
     _aircraft setVariable [QGVAR(enabled), false];
-    WARNING_1("Class %1 does not have a pilot camera nor a turret that could be equipped with an IR marking laser.");
+    WARNING_1("Class %1 does not have a pilot camera nor a turret that could be equipped with an IR marking laser.",configName _config);
 };
 
 _aircraft setVariable [QGVAR(enabled), true];
