@@ -24,7 +24,7 @@
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull], ["_ignoreObj2", objNull]];
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
@@ -79,7 +79,9 @@ private _finalOwner = objNull;
                 private _testPointVector = _posASL vectorFromTo _testPoint;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
                 if ((_testDotProduct > _seekerCos) && {(_testPoint vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
-                    _spots pushBack [_testPoint, _owner];
+                    if (_owner != _ignoreObj1 && {_owner != _ignoreObj2}) then {
+                        _spots pushBack [_testPoint, _owner];
+                    };
                 };
             } forEach _resultPositions;
         } else {
@@ -142,7 +144,7 @@ if ((count _spots) > 0) then {
         _bucketList = _finalBuckets select _index;
         {
             private _testPos = (_x select 0) vectorAdd [0,0,0.05];
-            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1];
+            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1, _ignoreObj2];
             if ([] isEqualTo _testIntersections) then {
                 _bucketList pushBack _x;
             };
