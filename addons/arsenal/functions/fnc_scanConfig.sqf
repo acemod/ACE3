@@ -186,4 +186,5 @@ private _cfgMagazines = configFile >> "CfgMagazines";
 } foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
 
 uiNamespace setVariable [QGVAR(configItems), _cargo];
+uiNamespace setVariable [QGVAR(configItemsFlat), flatten _cargo];
 uiNamespace setVariable [QGVAR(magazineGroups), _magazineGroups];

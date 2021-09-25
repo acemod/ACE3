@@ -45,7 +45,7 @@ private _fnc_fill_right_Container = {
     private _cacheNamespace = _ctrlPanel;
     private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_className, []];
 
-    if (!(_className in ALL_BOX_VIRTUAL_ITEMS)) then {
+    if (!(_className in GVAR(virtualItemsFlat))) then {
         _isUnique = true;
     };
 
