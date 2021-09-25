@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: esteldunedain
- * Removes a magazine from the unit that has an specific ammo count
+ * Removes a magazine from the unit or object that has a specific ammo count
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -9,7 +9,7 @@
  * 2: Ammo count <NUMBER>
  *
  * Return Value:
- * None
+ * Magazine Removed <BOOL>
  *
  * Example:
  * [bob, "magazine", 5] call ace_common_fnc_removeSpecificMagazine
@@ -21,62 +21,35 @@ params [["_unit", objNull, [objNull]], ["_magazineType", "", [""]], ["_ammoCount
 
 private _isRemoved = false;
 
-// Check uniform
-private _magazines = magazinesAmmoCargo uniformContainer _unit select {_x select 0 == _magazineType};
-private _index = _magazines find [_magazineType, _ammoCount];
+private _fnc_removeMagazine = {
+    params ["_container", "_magArray"];
+    _magArray params ["_magazineType", "_ammoCount"];
 
-if (_index > -1) exitWith {
-    {
-        _unit removeItemFromUniform (_x select 0);
-        false
-    } count _magazines;
+    private _allMagazines = magazinesAmmoCargo _container;
+    private _specificMagazineIndex = _allMagazines findIf {_x isEqualTo _magArray};
+    _allMagazines deleteAt _specificMagazineIndex;
 
-    {
-        if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
-            _isRemoved = true;
-        } else {
-            (uniformContainer _unit) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+    if (_specificMagazineIndex > -1) exitWith {
+        clearMagazineCargoGlobal _container;
+        private _containerType = typeOf _container;
+        if (_containerType in ["GroundWeaponHolder", "WeaponHolderSimulated"]) then {
+            _container = createVehicle [_containerType, getPosATL _container, [], 0, "CAN_COLLIDE"];
         };
-        false
-    } count _magazines;
+        {
+            _container addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+        } forEach _allMagazines;
+        true
+    };
+    false
 };
 
-// Check vest
-_magazines = magazinesAmmoCargo vestContainer _unit select {_x select 0 == _magazineType};
-_index = _magazines find [_magazineType, _ammoCount];
-
-if (_index > -1) exitWith {
-    {
-        _unit removeItemFromVest (_x select 0);
-        false
-    } count _magazines;
-
-    {
-        if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
-            _isRemoved = true;
-        } else {
-            (vestContainer _unit) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
-        };
-        false
-    } count _magazines;
+private _containerArray = [_unit];
+if (_unit isKindOf "CAManBase") then {
+    _containerArray = [uniformContainer _unit, vestContainer _unit, backpackContainer _unit];
 };
 
-// Check backpack
-_magazines = magazinesAmmoCargo backpackContainer _unit select {_x select 0 == _magazineType};
-_index = _magazines find [_magazineType, _ammoCount];
+{
+    if ([_x, [_magazineType, _ammoCount]] call _fnc_removeMagazine) exitWith {_isRemoved = true};
+} forEach _containerArray;
 
-if (_index > -1) exitWith {
-    {
-        _unit removeItemFromBackpack (_x select 0);
-        false
-    } count _magazines;
-
-    {
-        if (!_isRemoved && (_x isEqualTo [_magazineType,_ammoCount])) then {
-            _isRemoved = true;
-        } else {
-            (backpackContainer _unit) addMagazineAmmoCargo [_x select 0, 1, _x select 1];
-        };
-        false
-    } count _magazines;
-};
+_isRemoved
