@@ -17,8 +17,9 @@
 
 // Our method for adding left and right arm and leg armor. Uses those selections
 // that are used for animations and therefore exist in all third party units.
-// This used to take the armor values as parameters; it now inherits them from
-// the existing hitpoints instead.
+// This used to take the armor values as parameters; it now inherits the values
+// of `armor`, `passThrough` and `explosionShielding` from the existing hitpoints
+// for vanilla consistency.
 // "ACE_HDBracket" is a special hit point. It is designed in a way where the
 // "HandleDamage" event handler will compute it at the end of every damage
 // calculation step. This way we can figure out which hit point took the most
