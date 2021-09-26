@@ -6,7 +6,8 @@ class vn_air_uh1_01_base: vn_helicopter_base {
 
 // UH-1B - https://www.skytamer.com/Bell_H-1B(UH).html
 class vn_air_uh1c_01_base;
-class vn_air_uh1c_07_base: vn_air_uh1c_01_base {
+class vn_air_uh1c_doorguns_base;
+class vn_air_uh1c_07_base: vn_air_uh1c_doorguns_base {
     EGVAR(refuel,fuelCapacity) = 625;
 };
 
