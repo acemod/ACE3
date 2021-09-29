@@ -43,12 +43,12 @@ private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 private _vehCfg = configFile >> "CfgVehicles" >> _type;
 // Custom position can be defined via config for associated hitpoint
 private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
+// Get turret paths
 private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehicle, "commander", true])) apply {_x # 3};
 
 {
     private _selection = _x;
     private _hitpoint = toLower (_hitPoints select _forEachIndex);
-
     if (_selection in _wheelHitSelections) then {
         // Wheels should always be unique
         if (_selection in _processedSelections) exitWith {TRACE_3("Duplicate Wheel",_hitpoint,_forEachIndex,_selection);};
@@ -75,7 +75,6 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
         _processedSelections pushBack _selection;
     } else {
-
         // Skip ignored hitpoints
         if (_hitpoint in _hitPointsToIgnore) exitWith {
             TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
