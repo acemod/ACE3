@@ -921,7 +921,7 @@
         </Key>
         <!-- 7.62x51 mm -->
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_TracerName">
-            <English>7.62 mm 20rnd Tracer Mag</English>
+            <English>7.62 mm 20Rnd Mag (Tracer)</English>
             <Hungarian>7,62 mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
             <German>7,62 mm 20-Patronen-Magazin Leuchtspur</German>
             <Spanish>Cargador de 20 balas trazadores de 7,62 mm</Spanish>
@@ -935,7 +935,7 @@
             <Korean>20발들이 7.62 mm 예광탄 탄창</Korean>
             <Chinese>7.62毫米 20發 曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62 mm 20发 曳光弹 弹匣</Chinesesimp>
-            <Turkish>7.62 mm 20rnd Tracer Mag</Turkish>
+            <Turkish>7.62 mm 20Rnd Mag (Tracer)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_TracerNameShort">
             <English>7.62 mm Tracer</English>
@@ -972,7 +972,7 @@
             <Turkish>Kalibre: 7.62x51 mm Tracer&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_Tracer_DimName">
-            <English>7.62 mm 20rnd Tracer IR-DIM Mag</English>
+            <English>7.62 mm 20Rnd Mag (IR-DIM)</English>
             <Hungarian>7,62 mm Nyomjelző IR-DIM 20-as Tár</Hungarian>
             <German>7,62 mm 20-Patronen-Magazin Leuchtspur IR-DIM</German>
             <Spanish>Cargador de 20 balas trazadoras IR-DIM de 7,62 mm</Spanish>
@@ -986,7 +986,7 @@
             <Korean>20발들이 7.62 mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>7.62毫米 20發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>7.62 mm 20发 低视度红外线曳光弹 弹匣</Chinesesimp>
-            <Turkish>7.62 mm 20rnd Tracer IR-DIM Mag</Turkish>
+            <Turkish>7.62 mm 20Rnd Mag (IR-DIM)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_Tracer_DimNameShort">
             <English>7.62 mm IR-DIM</English>
@@ -1023,7 +1023,7 @@
             <Turkish>Kalibre: 7.62x51 mm Tracer IR-DIM&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_SDName">
-            <English>7.62 mm 20Rnd SD Mag</English>
+            <English>7.62 mm 20Rnd Mag (SD)</English>
             <Hungarian>7,62 mm Halk 20-as Tár</Hungarian>
             <German>7,62 mm 20-Patronen-Magazin SD</German>
             <Spanish>Cargador de 20 balas SD de 7,62 mm</Spanish>
@@ -1037,7 +1037,7 @@
             <Korean>20발들이 7.62 mm 아음속탄 탄창</Korean>
             <Chinese>7.62毫米 20發 消音彈 彈匣</Chinese>
             <Chinesesimp>7.62 mm 20发 消音弹 弹匣</Chinesesimp>
-            <Turkish>7.62 mm 20Rnd SD Mag</Turkish>
+            <Turkish>7.62 mm 20Rnd Mag (SD)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_SDNameShort">
             <English>7.62 mm SD</English>
@@ -1072,6 +1072,159 @@
             <Chinese>口徑: 7.62x51毫米 消音彈&lt;br /&gt;發數: 20&lt;br /&gt;使用於: Mk18 ABR</Chinese>
             <Chinesesimp>口径: 7.62x51 mm 消音弹&lt;br /&gt;发数: 20&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
             <Turkish>Kalibre: 7.62x51 mm SD&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_TracerName">
+            <English>7.62mm 10Rnd Mag (Tracer)</English>
+            <Hungarian>7,62mm Nyomjelző IR-DIM 10-as Tár</Hungarian>
+            <German>7,62mm 10-Patronen-Magazin Leuchtspur</German>
+            <Spanish>Cargador de 10 balas trazadores de 7,62mm</Spanish>
+            <French>Ch. 7,62mm 10Cps Traçantes </French>
+            <Polish>Magazynek 7,62mm 10rd Smugacz</Polish>
+            <Czech>7.62mm 10náb. Svítící Zásobník</Czech>
+            <Portuguese>Carregador de 10 projéteis traçantes de 7,62mm</Portuguese>
+            <Italian>Caricatore 7.62mm 10Rnd Traccianti</Italian>
+            <Russian>Магазин из 10-ти 7,62 мм трассирующих</Russian>
+            <Japanese>7.62mm 10発入り 曳光弾</Japanese>
+            <Korean>10발들이 7.62mm 예광탄 탄창</Korean>
+            <Chinese>7.62毫米 10發 曳光彈 彈匣</Chinese>
+            <Chinesesimp>7.62mm 10发 曳光弹 弹匣</Chinesesimp>
+            <Turkish>7.62mm 10Rnd Mag (Tracer)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_TracerNameShort">
+            <English>7.62mm Tracer</English>
+            <Hungarian>7,62mm Nyomjelző</Hungarian>
+            <German>7,62mm Leuchtspur</German>
+            <Spanish>7,62mm Trazadora</Spanish>
+            <French>7,62mm Traçante</French>
+            <Polish>7,62mm Smugacz</Polish>
+            <Czech>7.62mm Svítící</Czech>
+            <Portuguese>7,62mm Traçante</Portuguese>
+            <Italian>7.62mm Traccianti</Italian>
+            <Russian>7,62 мм трассирущие</Russian>
+            <Japanese>7.62mm 曳光弾</Japanese>
+            <Korean>7.62mm 예광탄</Korean>
+            <Chinese>7.62毫米 曳光彈</Chinese>
+            <Chinesesimp>7.62mm 曳光弹</Chinesesimp>
+            <Turkish>7.62mm İzli</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_TracerDescription">
+            <English>Caliber: 7.62x51mm Tracer&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Mk18 ABR</English>
+            <Hungarian>Kaliber: 7,62x51mm Nyomjelző&lt;br /&gt;Lövedékek: 10&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <German>Kaliber: 7,62x51mm Leuchtspur&lt;br /&gt;Patronen: 10&lt;br /&gt;Eingesetzt von: EBR</German>
+            <Spanish>Calibre: 7,62x51mm Trazadora&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
+            <French>Calibre: 7,62x51mm Traçante&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
+            <Polish>Kaliber: 7,62x51mm Smugacz&lt;br /&gt;Pociski: 10&lt;br /&gt;Używane w: Mk18 ABR</Polish>
+            <Czech>Ráže: 7.62x51mm Svítící&lt;br /&gt;Nábojů: 10&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
+            <Portuguese>Calibre: 7,62x51mm Traçante&lt;br /&gt;Projéteis: 10&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
+            <Italian>Calibro: 7.62x51mm Traccianti&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Russian>Калибр: 7,62x51 мм трассирующие&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Mk18 ABR</Russian>
+            <Japanese>口径: 7.62x51mm 曳光弾&lt;br /&gt;装填数: 10&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
+            <Korean>구경: 7.62x51mm 예광탄&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: Mk18 ABR</Korean>
+            <Chinese>口徑: 7.62x51毫米 曳光彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Mk18 ABR</Chinese>
+            <Chinesesimp>口径: 7.62x51mm 曳光弹&lt;br /&gt;发数: 10&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm Tracer&lt;br /&gt;Mermi: 10&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_Tracer_DimName">
+            <English>7.62mm 10Rnd Mag (IR-DIM)</English>
+            <Hungarian>7,62mm Nyomjelző IR-DIM 10-as Tár</Hungarian>
+            <German>7,62mm 10-Patronen-Magazin Leuchtspur IR-DIM</German>
+            <Spanish>Cargador de 10 balas trazadoras IR-DIM de 7,62mm</Spanish>
+            <French>Ch. 7,62mm 10Cps Traçantes IR-DIM</French>
+            <Polish>Magazynek 7,62mm 10rd Smugacz IR-DIM</Polish>
+            <Czech>7.62mm 10náb. Svítící IR-DIM Zásobník</Czech>
+            <Portuguese>Carregador de 10 projéteis IR-DIM de 7,62mm</Portuguese>
+            <Italian>Caricatore 7.62mm 10rnd Traccianti IR-DIM</Italian>
+            <Russian>Магазин из 10-ти 7,62 мм ИК-трассирующих</Russian>
+            <Japanese>7.62mm 10発入り IR-DIM曳光弾</Japanese>
+            <Korean>10발들이 7.62mm IR-DIM 예광탄 탄창</Korean>
+            <Chinese>7.62毫米 10發 低視度紅外線曳光彈 彈匣</Chinese>
+            <Chinesesimp>7.62mm 10发 低视度红外线曳光弹 弹匣</Chinesesimp>
+            <Turkish>7.62mm 10Rnd Mag (IR-DIM)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_Tracer_DimNameShort">
+            <English>7.62mm IR-DIM</English>
+            <Hungarian>7,62mm IR-DIM</Hungarian>
+            <German>7,62mm IR-DIM</German>
+            <Spanish>7,62mm IR-DIM</Spanish>
+            <French>7,62mm IR-DIM</French>
+            <Polish>7,62mm IR-DIM</Polish>
+            <Czech>7.62mm IR-DIM</Czech>
+            <Portuguese>7,62mm IR-DIM</Portuguese>
+            <Italian>7.62mm IR-DIM</Italian>
+            <Russian>7,62 мм ИК-трассирующие</Russian>
+            <Japanese>7.62mm IR-DIM曳光弾</Japanese>
+            <Korean>7.62mm IR-DIM 예광탄</Korean>
+            <Chinese>7.62毫米 低視紅外曳光彈</Chinese>
+            <Chinesesimp>7.62mm 低视红外曳光弹</Chinesesimp>
+            <Turkish>7.62mm IR-DIM</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_Tracer_DimDescription">
+            <English>Caliber: 7.62x51mm Tracer IR-DIM&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Mk18 ABR</English>
+            <Hungarian>Kaliber: 7,62x51mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 10&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <German>Kaliber: 7,62x51mm Leuchtspur IR-DIM&lt;br /&gt;Patronen: 10&lt;br /&gt;Eingesetzt von: EBR</German>
+            <Spanish>Calibre: 7,62x51mm Trazadoras IR-DIM&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
+            <French>Calibre: 7,62x51mm Traçante IR-DIM&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
+            <Polish>Kaliber: 7,62x51mm Smugacz IR-DIM&lt;br /&gt;Pociski: 10&lt;br /&gt;Używane w: Mk18 ABR</Polish>
+            <Czech>Ráže: 7.62x51mm Svítící IR-DIM&lt;br /&gt;Nábojů: 10&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
+            <Portuguese>Calibre: 7,62x51mm Traçante IR-DIM&lt;br /&gt;Projéteis: 10&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
+            <Italian>Calibro: 7.62x51mm Traccianti IR-DIM&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Russian>Калибр: 7,62x51 мм ИК-трассирующие&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Mk18 ABR</Russian>
+            <Japanese>口径: 7.62x51mm IR-DIM曳光弾&lt;br /&gt;装填数: 10&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
+            <Korean>구경: 7.62x51mm IR-DIM 예광탄&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: Mk18 ABR</Korean>
+            <Chinese>口徑: 7.62x51毫米 低視度紅外線曳光彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Mk18 ABR</Chinese>
+            <Chinesesimp>口径: 7.62x51mm 低视度红外线曳光弹&lt;br /&gt;发数: 10&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm Tracer IR-DIM&lt;br /&gt;Mermi: 10&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_SDName">
+            <English>7.62mm 10Rnd Mag (SD)</English>
+            <Hungarian>7,62mm Halk 10-as Tár</Hungarian>
+            <German>7,62mm 10-Patronen-Magazin SD</German>
+            <Spanish>Cargador de 10 balas SD de 7,62mm</Spanish>
+            <French>Ch. 7,62mm 10Cps SD</French>
+            <Polish>Magazynek 7,62mm 10rd SD</Polish>
+            <Czech>7.62mm 10náb. SD Zásobník</Czech>
+            <Portuguese>Carregador de 10 projéteis SD de 7,62mm</Portuguese>
+            <Italian>Caricatore 7.62mm 10Rnd Sil.</Italian>
+            <Russian>Магазин из 10-ти 7,62 мм дозвуковых</Russian>
+            <Japanese>7.62mm 10発入り 亜音速弾 弾倉</Japanese>
+            <Korean>10발들이 7.62mm 아음속탄 탄창</Korean>
+            <Chinese>7.62毫米 10發 消音彈 彈匣</Chinese>
+            <Chinesesimp>7.62mm 10发 消音弹 弹匣</Chinesesimp>
+            <Turkish>7.62mm 10Rnd Mag (SD)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_SDNameShort">
+            <English>7.62mm SD</English>
+            <Hungarian>7,62mm Halk</Hungarian>
+            <German>7,62mm SD</German>
+            <Spanish>7,62mm SD</Spanish>
+            <French>7,62mm SD</French>
+            <Polish>7,62mm SD</Polish>
+            <Czech>7.62mm SD</Czech>
+            <Portuguese>7,62mm SD</Portuguese>
+            <Italian>7.62mm Sil.</Italian>
+            <Russian>7,62 мм дозвуковые</Russian>
+            <Japanese>7.62mm 亜音速弾</Japanese>
+            <Korean>7.62mm 아음속탄</Korean>
+            <Chinese>7.62毫米 消音彈</Chinese>
+            <Chinesesimp>7.62 mm 消音弹</Chinesesimp>
+            <Turkish>7.62mm SD</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_10Rnd_762x51_mag_SDDescription">
+            <English>Caliber: 7.62x51mm SD&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Mk18 ABR</English>
+            <Hungarian>Kaliber: 7,62x51mm Halk&lt;br /&gt;Lövedékek: 10&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
+            <German>Kaliber: 7,62x51mm SD&lt;br /&gt;Patronen: 10&lt;br /&gt;Eingesetzt von: EBR</German>
+            <Spanish>Calibre: 7,62x51mm SD&lt;br /&gt;Balas: 10&lt;br /&gt;Se usa en: Mk18 ABR</Spanish>
+            <French>Calibre: 7,62x51mm SD&lt;br /&gt;Cartouches: 10&lt;br /&gt;Utilisé avec: Mk18 ABR</French>
+            <Polish>Kaliber: 7,62x51mm SD&lt;br /&gt;Pociski: 10&lt;br /&gt;Używane w: Mk18 ABR</Polish>
+            <Czech>Ráže: 7.62x51mm SD&lt;br /&gt;Nábojů: 10&lt;br /&gt;Použití u: Mk14 Mod 1 EBR</Czech>
+            <Portuguese>Calibre: 7,62x51mm SD&lt;br /&gt;Projéteis: 10&lt;br /&gt;Usado em: Mk18 ABR</Portuguese>
+            <Italian>Calibro: 7.62x51mm Sil.&lt;br /&gt;Munizioni: 10&lt;br /&gt;In uso su: Mk18 ABR</Italian>
+            <Russian>Калибр: 7,62x51 мм дозвуковые&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Mk18 ABR</Russian>
+            <Japanese>口径: 7.62x51mm 亜音速弾&lt;br /&gt;装填数: 10&lt;br /&gt;次で使用: Mk18 ABR</Japanese>
+            <Korean>구경: 7.62x51mm SD&lt;br /&gt;장탄수: 10&lt;br /&gt;사용처: Mk18 ABR</Korean>
+            <Chinese>口徑: 7.62x51毫米 消音彈&lt;br /&gt;發數: 10&lt;br /&gt;使用於: Mk18 ABR</Chinese>
+            <Chinesesimp>口径: 7.62x51mm 消音弹&lt;br /&gt;发数: 10&lt;br /&gt;使用于: Mk18 ABR</Chinesesimp>
+            <Turkish>Kalibre: 7.62x51mm SD&lt;br /&gt;Mermi: 10&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
         </Key>
         <!-- .338 Norma Magnum -->
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_TracerName">
@@ -1689,13 +1842,13 @@
             <Turkish>6.5 mm 100Rnd Tracer IR-DIM Mag&lt;br /&gt;Mermi: 100&lt;br /&gt;Kullanıyor: MX LSW</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimName">
-            <English>6.5 mm 200Rnd Tracer IR-DIM Belt</English>
+            <English>6.5 mm 200Rnd Belt Tracer (IR-DIM)</English>
             <Polish>Magazynek 6,5 mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6,5 mm 200Cps Traçantes IR-DIM</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5 mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5 mm 200-Patronen-Gurt IR-DIM Leuchtspur</German>
-            <Italian>6.5 mm 200Rnd Tracer IR-DIM Belt</Italian>
+            <Italian>6.5 mm 200Rnd Belt Tracer (IR-DIM)</Italian>
             <Czech>6.5 mm 200náb. Svítící IR-DIM Pás</Czech>
             <Portuguese>Cinto de munição traçante 6.5 mm IR-DIM com 200 cartuchos</Portuguese>
             <Hungarian>6,5 mm 200-lövedékes infravörös nyomkövető heveder</Hungarian>
@@ -1703,7 +1856,7 @@
             <Korean>200발들이 6.5 mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>6.5毫米 200發 低視度紅外線曳光彈 彈鏈</Chinese>
             <Chinesesimp>6.5 mm 200发 低视度红外线曳光弹 弹链</Chinesesimp>
-            <Turkish>6.5 mm 200Rnd Tracer IR-DIM Belt</Turkish>
+            <Turkish>6.5 mm 200Rnd Belt Tracer (IR-DIM)</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimNameShort">
             <English>6.5 mm IR-DIM</English>
@@ -1723,13 +1876,13 @@
             <Turkish>6.5 mm IR-DIM</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_200Rnd_65x39_cased_Box_Tracer_DimDescription">
-            <English>6.5 mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
+            <English>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
             <Polish>Magazynek 6,5 mm 200rd Smugacz IR-DIM</Polish>
             <French>Bande 6,5 mm 200Cps Traçantes IR-DIM&lt;br /&gt;Cartouches: 200&lt;br /&gt;Utilisé avec: Stoner 99 LMG</French>
             <Spanish>Cinta de 200 balas trazadoras IR-DIM de 6.5 mm</Spanish>
             <Russian>Магазин из 200-т 6,5 мм ИК-трассирующих</Russian>
             <German>6,5 mm 200-Patronen-Gurt IR-DIM Leuchtspur&lt;br /&gt;Patronen: 200&lt;br /&gt;Eingesetzt von: Stoner 99 LMG</German>
-            <Italian>6.5 mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Munizioni: 200&lt;br /&gt;In uso su: Stoner 99 LMG</Italian>
+            <Italian>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Munizioni: 200&lt;br /&gt;In uso su: Stoner 99 LMG</Italian>
             <Czech>6.5 mm 200náb. Svítící IR-DIM Pás&lt;br /&gt;Nábojů: 200&lt;br /&gt;Použití u: Stoner 99 LMG</Czech>
             <Portuguese>Cinto de munição traçante 6.5 mm IR-DIM com 200 cartuchos&lt;br /&gt;Cartuchos: 200&lt;br /&gt;Usado em: Stoner 99 LMG</Portuguese>
             <Hungarian>6.5 mm 200-lövedékes infravörös nyomkövető heveder&lt;br /&gt;Lövedékek: 200&lt;br /&gt;Használható: Stoner 99 LMG</Hungarian>
@@ -1737,7 +1890,7 @@
             <Korean>200발들이 6.5 mm IR-DIM 예광탄 벨트&lt;br /&gt;장탄수: 200&lt;br /&gt;사용처: Stoner 99 LMG</Korean>
             <Chinese>6.5毫米 200發 低視度紅外線曳光彈&lt;br /&gt;發數: 200&lt;br /&gt;使用於: Stoner 99 重機槍</Chinese>
             <Chinesesimp>6.5 mm 200发 低视度红外线曳光弹&lt;br /&gt;发数: 200&lt;br /&gt;使用于: Stoner 99 LMG</Chinesesimp>
-            <Turkish>6.5 mm 200Rnd Tracer IR-DIM Belt&lt;br /&gt;Mermi: 200&lt;br /&gt;Kullanıyor: Stoner 99 LMG</Turkish>
+            <Turkish>6.5 mm 200Rnd Belt Tracer (IR-DIM)&lt;br /&gt;Mermi: 200&lt;br /&gt;Kullanıyor: Stoner 99 LMG</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_Stanag_Mk262_mag_Name">
             <English>5.56 mm 30Rnd Mag (Mk262)</English>
