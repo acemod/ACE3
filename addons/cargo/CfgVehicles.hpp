@@ -356,8 +356,8 @@ class CfgVehicles {
 
      //Huron 20ft containers
     class Slingload_01_Base_F: Slingload_base_F {
-        GVAR(canLoad) = 0;
-        GVAR(size) = -1;
+        GVAR(canLoad) = 1;
+        GVAR(size) = 50; // Use same size value from 20ft containers for consistancy
     };
     class B_Slingload_01_Cargo_F: Slingload_01_Base_F { // Huron Cargo
         GVAR(space) = 20;

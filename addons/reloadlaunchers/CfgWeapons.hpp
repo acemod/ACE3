@@ -10,7 +10,7 @@ class CfgWeapons {
     class launch_MRAWS_base_F: Launcher_Base_F {
         GVAR(enabled) = 1;
     };
-    class launch_Vorona_base_F: Launcher_Base {
+    class launch_Vorona_base_F: Launcher_Base_F {
         GVAR(enabled) = 1;
     };
 };
