@@ -135,8 +135,12 @@ if (_consumeItems > 0) then {
 private _callbackProgress = getText (_config >> "callbackProgress");
 if (_callbackProgress == "") then {
     _callbackProgress = {
-        (_this select 0) params ["", "_target"];
-        (alive _target) && {(abs speed _target) < 1} // make sure vehicle doesn't drive off
+        (_this select 0) params ["_caller", "_target", "", "", "", "", "_claimObjectsAvailable"];
+        (
+            (alive _target) && 
+            {(abs speed _target) < 1} && // make sure vehicle doesn't drive off
+            {_claimObjectsAvailable findIf {!alive _x || {_x getVariable [QEGVAR(common,owner), objNull] isNotEqualTo _caller}} == -1} // make sure claim objects are still available
+        )
     };
 } else {
     if (isNil _callbackProgress) then {
