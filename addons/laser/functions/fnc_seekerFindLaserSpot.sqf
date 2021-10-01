@@ -154,7 +154,7 @@ if ((count _spots) > 0) then {
     } forEach _buckets;
 
     private _finalBucket = _finalBuckets select _largestIndex;
-    private _ownersHash = [] call CBA_fnc_hashCreate;
+    private _ownersHash = createHashMap;
 
     TRACE_2("",_finalBucket,_finalBuckets);
 
@@ -164,24 +164,20 @@ if ((count _spots) > 0) then {
         {
             _x params ["_xPos", "_owner"];
             _finalPos = _finalPos vectorAdd _xPos;
-            if ([_ownersHash, _owner] call CBA_fnc_hashHasKey) then {
-                private _count = [_ownersHash, _owner] call CBA_fnc_hashGet;
-                [_ownersHash, _owner, _count + 1] call CBA_fnc_hashSet;
-            } else {
-                [_ownersHash, _owner, 1] call CBA_fnc_hashSet;
-            };
+            private _count = _ownersHash getOrDefault [_owner, 0];
+            _ownersHash set [_owner, _count + 1];
         } forEach _finalBucket;
 
         _finalPos = _finalPos vectorMultiply (1 / (count _finalBucket));
 
         private _maxOwnerCount = -1;
 
-        [_ownersHash, {
-            //IGNORE_PRIVATE_WARNING ["_key", "_value"];
-            if (_value > _maxOwnerCount) then {
-                _finalOwner = _key;
+        {
+            //IGNORE_PRIVATE_WARNING ["_x", "_y"];
+            if (_y > _maxOwnerCount) then {
+                _finalOwner = _x;
             };
-        }] call CBA_fnc_hashEachPair;
+        } forEach _ownersHash;
     };
 };
 
