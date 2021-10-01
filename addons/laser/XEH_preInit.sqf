@@ -15,4 +15,6 @@ GVAR(laserEmitters) = [] call CBA_fnc_hashCreate;
 GVAR(trackedLaserTargets) = [];
 GVAR(pfehID) = -1;
 
+#include "initSettings.sqf"
+
 ADDON = true;

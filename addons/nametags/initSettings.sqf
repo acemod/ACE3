@@ -1,6 +1,78 @@
 // CBA Settings [ADDON: ace_nametags]:
 
 [
+    QGVAR(showPlayerNames), "LIST",
+    [LSTRING(ShowPlayerNames), LSTRING(ShowPlayerNames_Desc)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    [[0, 1, 2, 3, 4, 5], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(OnlyCursor), LSTRING(OnlyKeypress), LSTRING(OnlyCursorAndKeypress), LSTRING(FadeOnBorder)], 1],
+    0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showPlayerRanks), "CHECKBOX",
+    LSTRING(ShowPlayerRanks),
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    true,
+    0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showVehicleCrewInfo), "CHECKBOX",
+    [LSTRING(ShowVehicleCrewInfo), LSTRING(ShowVehicleCrewInfo_Desc)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    true,
+    0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showNamesForAI), "CHECKBOX",
+    [LSTRING(ShowNamesForAI), LSTRING(ShowNamesForAI_Desc)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    false,
+    0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showCursorTagForVehicles), "CHECKBOX",
+    [LSTRING(showCursorTagForVehicles_DisplayName), LSTRING(showCursorTagForVehicles_Description)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(showSoundWaves), "LIST",
+    [LSTRING(ShowSoundWaves), LSTRING(ShowSoundWaves_Desc)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    [0, 1, 2, [ELSTRING(common,Disabled), LSTRING(NameTagSettings), LSTRING(AlwaysShowAll)], 1],
+    0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(playerNamesViewDistance), "SLIDER",
+    [LSTRING(PlayerNamesViewDistance_DisplayName), LSTRING(PlayerNamesViewDistance_Description)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    [0, 50, 5, 1],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(playerNamesMaxAlpha), "SLIDER",
+    LSTRING(playerNamesMaxAlpha),
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    [0, 1, 0.8, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(tagSize), "LIST",
+    [LSTRING(TagSize_Name), LSTRING(TagSize_Description)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    [[0, 1, 2, 3, 4], ["str_very_small", "str_small", "str_medium", "str_large", "str_very_large"], 1],
+    0
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(defaultNametagColor), "COLOR",
     [LSTRING(DefaultNametagColor)],
     [format ["ACE %1", localize LSTRING(Module_DisplayName)], localize "str_a3_rscdisplaygameoptions_buttongui"],
