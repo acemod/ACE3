@@ -14,7 +14,8 @@
     LSTRING(ColorTextMax),
     format ["ACE %1", LLSTRING(Category_InteractionMenu)],
     [1, 1, 1, 1],
-    0
+    0,
+    {[QGVAR(colorTextMax), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -23,7 +24,8 @@
     LSTRING(ColorTextMin),
     format ["ACE %1", LLSTRING(Category_InteractionMenu)],
     [1, 1, 1, 0.25],
-    0
+    0,
+    {[QGVAR(colorTextMin), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -32,7 +34,8 @@
     LSTRING(ColorShadowMax),
     format ["ACE %1", LLSTRING(Category_InteractionMenu)],
     [0, 0, 0, 1],
-    0
+    0,
+    {[QGVAR(colorShadowMax), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -41,7 +44,8 @@
     LSTRING(ColorShadowMin),
     format ["ACE %1", LLSTRING(Category_InteractionMenu)],
     [0, 0, 0, 0.25],
-    0
+    0,
+    {[QGVAR(colorShadowMin), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -50,7 +54,8 @@
     LSTRING(textSize),
     format ["ACE %1", LLSTRING(Category_InteractionMenu)],
     [[0, 1, 2, 3, 4], ["str_very_small", "str_small", "str_medium", "str_large", "str_very_large"], 2],
-    0
+    0,
+    {[QGVAR(textSize), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -59,7 +64,8 @@
     [LSTRING(shadowSetting), LSTRING(shadowSettingDescription)],
     format ["ACE %1", LLSTRING(Category_InteractionMenu)],
     [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", "STR_A3_OPTIONS_ENABLED", LSTRING(shadowOutline)], 2],
-    0
+    0,
+    {[QGVAR(shadowSetting), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
 
 [
