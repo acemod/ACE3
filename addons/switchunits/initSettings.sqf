@@ -5,8 +5,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     LSTRING(EnableSwitchUnits_DisplayName),
     _category,
     false,
-    1,
-    {[QGVAR(enableSwitchUnits), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [

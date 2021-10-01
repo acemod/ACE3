@@ -36,7 +36,7 @@ GVAR(ParsedTextCached) = [];
     // Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Setting changed added here so color setup happens once at init
-    ["ace_settingChanged", {
+    ["CBA_SettingChanged", {
         params ["_name"];
         if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
             [] call FUNC(setupTextColors);
