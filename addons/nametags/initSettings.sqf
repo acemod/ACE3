@@ -44,7 +44,7 @@
     QGVAR(showSoundWaves), "LIST",
     [LSTRING(ShowSoundWaves), LSTRING(ShowSoundWaves_Desc)],
     format ["ACE %1", localize LSTRING(Module_DisplayName)],
-    [0, 1, 2, [ELSTRING(common,Disabled), LSTRING(NameTagSettings), LSTRING(AlwaysShowAll)], 1],
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(NameTagSettings), LSTRING(AlwaysShowAll)], 1],
     0
 ] call CBA_fnc_addSetting;
 
