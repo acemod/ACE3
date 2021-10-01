@@ -551,7 +551,7 @@
             <French>Charge explosive (lançable)</French>
             <Japanese>爆薬ブロック (投てき仕様)</Japanese>
             <Spanish>Carga explosiva (Lanzable)</Spanish>
-            <Polish>	Ładunek wybuchowy (Rzucany)</Polish>
+            <Polish>Ładunek wybuchowy (Rzucany)</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
