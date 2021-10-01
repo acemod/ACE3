@@ -225,7 +225,7 @@ private _category = format ["ACE %1", localize LSTRING(Category)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(vehicleName), "CHECKBOX"
+    QGVAR(vehicleName), "CHECKBOX",
     [LSTRING(VehicleName), LSTRING(RequiresSoldierVehicleWeaponInfo)],
     _category,
     true,
@@ -233,7 +233,7 @@ private _category = format ["ACE %1", localize LSTRING(Category)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(vehicleNameBackground), "CHECKBOX"
+    QGVAR(vehicleNameBackground), "CHECKBOX",
     [LSTRING(VehicleNameBackground), LSTRING(RequiresSoldierVehicleWeaponInfo)],
     _category,
     true,
