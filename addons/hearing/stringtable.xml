@@ -357,5 +357,13 @@
             <Czech>Hlasitost během ztráty vědomí.</Czech>
             <Spanish>Volumen durante la inconsciencia.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Hearing_singleUse_DisplayName">
+            <English>Single Use Earplugs</English>
+            <German>Einmalige Benutzung Ohrenstöpsel</German>
+        </Key>
+        <Key ID="STR_ACE_Hearing_singleUse_Description">
+            <English>Earplug won't be returned to inventory when removing them.</English>
+            <German>Ohrenstöpsel werden nicht zurückgegeben, wenn sie entfernt werden.</German>
+        </Key>
     </Package>
 </Project>
