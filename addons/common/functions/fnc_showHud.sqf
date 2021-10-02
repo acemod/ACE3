@@ -50,7 +50,7 @@ if (_reason != "") then {
     };
 };
 
-(toArray GVAR(showHudHash)) params ["_reasons", "_masks"];
+private _masks = values GVAR(showHudHash);
 private _resultMask = [];
 
 for "_index" from 0 to 9 do {
@@ -63,7 +63,7 @@ for "_index" from 0 to 9 do {
     _resultMask pushBack _set;
 };
 
-TRACE_2("showHud", _resultMask, _reasons);
+TRACE_2("showHud", _resultMask, keys GVAR(showHudHash));
 showHud _resultMask;
 
 _resultMask
