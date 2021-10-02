@@ -1330,6 +1330,7 @@
             <Turkish>M183 Demolition Charge (Throwable)</Turkish>
             <Spanish>Carga de demolición M183 (Lanzable)</Spanish>
             <Russian>M183 Комплектный подрывной заряд (Бросаемый)</Russian>
+            <Polish>Ładunek burzący M183 (Rzucany)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1355,6 +1356,7 @@
             <Turkish>M112 Demolition Charge (Throwable)</Turkish>
             <Spanish>Bloque de demolición M112 (Lanzable)</Spanish>
             <Russian>M112 подрывной заряд (Бросаемый)</Russian>
+            <Polish>Ładunek burzący M112 (Rzucany)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
