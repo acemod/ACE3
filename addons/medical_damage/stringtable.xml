@@ -710,12 +710,14 @@
             <Russian>Вероятность смерти от смертельной травмы</Russian>
             <Spanish>Probabilidad de muerte por herida fatal</Spanish>
             <French>Blessure mortelle - Chance de décès</French>
+            <Polish>Szana na śmierć przy śmiertelej ranie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
             <Russian>Шанс умереть от смертельной травмы.</Russian>
             <Spanish>La probabilidad de morir a causa de una herida fatal.</Spanish>
             <French>La probabilité de mourir lors d'une "blessure mortelle".\nUne blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
+            <Polish>Szansa na śmierć po otrzymaniu śmiertelnej rany.</Polish>
         </Key>
     </Package>
 </Project>
