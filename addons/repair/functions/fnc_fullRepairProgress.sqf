@@ -22,6 +22,8 @@
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_engineer", "_vehicle"];
 
+if !((alive _vehicle) && {(abs speed _vehicle) < 1}) exitWith {false}; // make sure vehicle doesn't drive off
+
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 _allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
