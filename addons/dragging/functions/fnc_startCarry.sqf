@@ -19,13 +19,14 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-// exempt from weight check if object has override variable set
-if (!GETVAR(_target,GVAR(ignoreWeightCarry),false) && {
+if (
+    GETMVAR(ACE_maxWeightCarry,1E11) != -1 // skip weight check if setting is set to infinite
+    && {!GETVAR(_target,GVAR(ignoreWeightCarry),false)} // or if target has override variable set
+) then {
     private _weight = [_target] call FUNC(getWeight);
-    _weight > GETMVAR(ACE_maxWeightCarry,1E11)
-}) exitWith {
-    // exit if object weight is over global var value
-    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
+    if (_weight > GETMVAR(ACE_maxWeightCarry,1E11)) exitWith {
+        [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
+    };
 };
 
 private _timer = CBA_missionTime + 5;

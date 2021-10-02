@@ -130,5 +130,17 @@
             <Russian>Позволяет игроку стрелять во время перетаскивания</Russian>
             <Spanish>Permite al jugador disparar mientras está arrastrando.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Dragging_maxWeightDrag_DisplayName">
+            <English>Max dragging weight</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_maxWeightDrag_Description">
+            <English>Max weight for draggable objects. Value is measured in 0.1lb (0.045kg). Set to -1 for no limit.</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_maxWeightCarry_DisplayName">
+            <English>Max carrying weight</English>
+        </Key>
+        <Key ID="STR_ACE_Dragging_maxWeightCarry_Description">
+            <English>Max weight for carryable objects. Value is measured in 0.1lb (0.045kg). Set to -1 for no limit.</English>
+        </Key>
     </Package>
 </Project>
