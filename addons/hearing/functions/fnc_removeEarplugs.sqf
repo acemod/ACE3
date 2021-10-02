@@ -25,7 +25,9 @@ if !([_player, "ACE_EarPlugs"] call CBA_fnc_canAddItem) exitWith { // inventory 
 };
 
 // Plugs already in and removing them.
-_player addItem "ACE_EarPlugs";
+if !(GVAR(singleUse)) then {
+    _player addItem "ACE_EarPlugs";
+};
 
 _player setVariable ["ACE_hasEarPlugsIn", false, true];
 
