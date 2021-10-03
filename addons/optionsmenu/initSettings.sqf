@@ -1,7 +1,7 @@
 [
     QGVAR(showNewsOnMainMenu), "CHECKBOX",
     LSTRING(showNewsOnMainMenu_name),
-    "ACE_Uncategorized",
+    "ACE Uncategorized",
     true,
     0
 ] call CBA_fnc_addSetting;
