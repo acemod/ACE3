@@ -106,7 +106,7 @@ class CfgVehicles {
         brightness = 10;
     };
 
-    class NVG_TargetBase : All {
+    class NVG_TargetBase: All {
         class NVGMarker {
             maxLifetime = "8 * 60 * 60";
         };
