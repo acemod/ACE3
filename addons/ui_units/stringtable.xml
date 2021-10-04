@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="Units">
+    <Package name="UI_Units">
         <Key ID="STR_ACE_UI_Units_Module_DisplayName">
             <English>Units</English>
             <German>Maßeinheiten</German>
