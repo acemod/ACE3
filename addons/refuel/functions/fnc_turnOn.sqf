@@ -21,7 +21,7 @@ params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_refue
 
 private "_maxFuel";
 private _sink = _nozzle getVariable QGVAR(sink);
-private _config = configFile >> "CfgVehicles" >> typeOf _sink;
+private _config = configOf _sink;
 
 if (_refuelContainer) then {
     _maxFuel = _sink getVariable [QGVAR(capacity), getNumber (_config >> QGVAR(fuelCargo))];

@@ -20,11 +20,11 @@
 
 params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
-private _rate = if (isNumber (configFile >> "CfgVehicles" >> typeOf _sink >> QGVAR(flowRate))) then {
-    getNumber (configFile >> "CfgVehicles" >> typeOf _sink >> QGVAR(flowRate)) * GVAR(rate)
-} else {
-    // Jerry cans for example have no flow rate defined, default to 1
-    GVAR(rate)
+private _rate = GVAR(rate); // Jerry cans for example have no flow rate defined, default to 1
+private _sinkRate = getNumber ((configOf _sink) >> QGVAR(flowRate));
+
+if (_sinkRate != 0) then {
+    _rate = _rate * _sinkRate;
 };
 
 [{

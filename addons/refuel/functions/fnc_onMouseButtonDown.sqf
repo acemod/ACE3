@@ -45,7 +45,7 @@ if (cameraView == "EXTERNAL") then {
 
 private _canReceive = _cursorObject getVariable [
     QGVAR(jerryCan), // Jerry cans can always be refueled
-    getNumber (configFile >> "CfgVehicles" >> (typeOf _cursorObject) >> QGVAR(canReceive)) == 1
+    getNumber ((configOf _cursorObject) >> QGVAR(canReceive)) == 1
 ];
 
 if (
