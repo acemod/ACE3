@@ -28,7 +28,7 @@ if (isNull _hook) exitWith {
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 
-private _ropeLength = _vehicle getVariable [QGVAR(ropeLength), 34.5];
+private _ropeLength = _vehicle getVariable [QGVAR(ropeLength), DEFAULT_ROPE_LENGTH];
 
 //Start fast roping
 if (getMass _dummy != 80) exitWith {

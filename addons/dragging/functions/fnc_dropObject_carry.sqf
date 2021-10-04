@@ -34,13 +34,13 @@ detach _target;
 // fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
     if (vehicle _unit == _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
-        [_unit, "", 2, true] call EFUNC(common,doAnimation);
+        [_unit, "", 2] call EFUNC(common,doAnimation);
     };
 
     if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+        [_target, "unconscious", 2] call EFUNC(common,doAnimation);
     } else {
-        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo
+        [_target, "", 2] call EFUNC(common,doAnimation);  //@todo
     };
 };
 
@@ -81,5 +81,8 @@ if (_target getVariable [QGVAR(isUAV), false]) then {
 private _mass = _target getVariable [QGVAR(originalMass), 0];
 
 if (_mass != 0) then {
-    [QEGVAR(common,setMass), [_target, _mass], _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,setMass), [_target, _mass]] call CBA_fnc_globalEvent; // force global sync
 };
+
+// reset temp direction
+_target setVariable [QGVAR(carryDirection_temp), nil];

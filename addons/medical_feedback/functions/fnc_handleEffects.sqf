@@ -5,7 +5,7 @@
  * Note: Heart beat sounds run in a different PFH - see fnc_effectHeartBeat.
  *
  * Arguments:
- * None
+ * 0: Manual, instant update (optional, default false) <BOOL>
  *
  * Return Value:
  * None
@@ -15,11 +15,13 @@
  *
  * Public: No
  */
+params [["_manualUpdate", false]];
 
 if (EGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
     [false, 0] call FUNC(effectUnconscious);
     [false]    call FUNC(effectPain);
     [false]    call FUNC(effectBloodVolume);
+    [false]    call FUNC(effectBloodVolumeIcon);
     [false]    call FUNC(effectBleeding);
 };
 
@@ -41,13 +43,19 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 // - Visual effects -----------------------------------------------------------
 [_unconscious, 2] call FUNC(effectUnconscious);
 [
-    true, linearConversion [BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE, _bloodVolume, 0, 1, true]
+    true,
+    linearConversion [BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE, _bloodVolume, 0, 1, true]
 ] call FUNC(effectBloodVolume);
+[
+    true,
+    ceil linearConversion [
+        BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE,
+        _bloodVolume,
+        ICON_BLOODVOLUME_IDX_MIN, ICON_BLOODVOLUME_IDX_MAX, true
+    ]
+] call FUNC(effectBloodVolumeIcon);
 
-if (!_unconscious) then {
-    [true, _pain] call FUNC(effectPain);
-};
-
-[true, _bleedingStrength] call FUNC(effectBleeding);
+[!_unconscious, _pain] call FUNC(effectPain);
+[!_unconscious, _bleedingStrength, _manualUpdate] call FUNC(effectBleeding);
 
 END_COUNTER(handleEffects);

@@ -104,6 +104,7 @@ private _rate = if (isNumber (configFile >> "CfgVehicles" >> typeOf _sink >> QGV
 
     // Reset variables when done
     if (_finished) exitWith {
+        [QGVAR(stopped), [_source, _sink]] call CBA_fnc_localEvent;
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
     };

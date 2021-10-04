@@ -18,18 +18,24 @@ PREP(getDown);
 PREP(sendAway);
 PREP(canJoinGroup);
 PREP(modifyJoinGroupAction);
+PREP(modifyTeamManagementAction);
 PREP(canJoinTeam);
 PREP(joinTeam);
 PREP(canPassMagazine);
 PREP(passMagazine);
 PREP(canBecomeLeader);
 PREP(doBecomeLeader);
+PREP(doRemoteControl);
 PREP(canTapShoulder);
 PREP(tapShoulder);
 PREP(canPardon);
 PREP(pardon);
 PREP(canPullOutBody);
 PREP(pullOutBody);
+
+// Weapon Attachments
+PREP(getWeaponAttachmentsActions);
+PREP(switchWeaponAttachment);
 
 // interaction with doors
 PREP(getDoor);

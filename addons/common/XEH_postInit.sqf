@@ -19,13 +19,14 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches"]] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, ["ace_advanced_fatigue", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 ["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -68,6 +69,20 @@
     } else {
         _vis = _object getVariable [QGVAR(oldVisibility), _vis];
         _object setUnitTrait ["camouflageCoef", _vis];
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(blockRadio), {
+    params ["_object", "_set"];
+    TRACE_2("blockRadio EH",_object,_set);
+    if (_object isEqualTo ACE_Player && {_set > 0}) then {
+        call FUNC(endRadioTransmission);
+    };
+    if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
+        _object setVariable ["tf_unable_to_use_radio", _set > 0, true];
+    };
+    if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
+        _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -121,8 +136,8 @@ if (isServer) then {
 [QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
 [QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
-["ace_loadPersonEvent", FUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
-["ace_unloadPersonEvent", FUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_loadPersonEvent", LINKFUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_unloadPersonEvent", LINKFUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
@@ -174,6 +189,7 @@ if (isServer) then {
     [QGVAR(setShotParents), {(_this select 0) setShotParents [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
     ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
+    [QGVAR(claimSafe), LINKFUNC(claimSafeServer)] call CBA_fnc_addEventHandler;
 };
 
 
@@ -204,7 +220,7 @@ if (isServer) then {
 // Check files, previous installed version etc.
 //////////////////////////////////////////////////
 
-private _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
+private _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "versionStr");
 private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 // check previous version number from profile
@@ -252,7 +268,7 @@ enableCamShake true;
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
     GVAR(showHudHash) params ["", "", "_masks"];
-    if !(_masks isEqualTo []) then {
+    if (_masks isNotEqualTo []) then {
         [] call FUNC(showHud);
     };
 }] call CBA_fnc_addEventHandler;
@@ -273,7 +289,7 @@ enableCamShake true;
     if (alive _oldPlayer) then {
         [FUNC(setName), [_oldPlayer]] call CBA_fnc_execNextFrame;
     };
-}] call CBA_fnc_addPlayerEventHandler;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 
 //////////////////////////////////////////////////
@@ -312,7 +328,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         if (isNull player) exitWith {true};
         private _UAV = getConnectedUAV player;
         if (!alive player) then {_UAV = objNull;};
-        private _position = (UAVControl _UAV) param [1, ""];
+        private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
         switch (toLower _position) do {
@@ -386,50 +402,68 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
 
+["isNotUnconscious", {
+    params ["_unit"];
+    lifeState _unit != "INCAPACITATED"
+}] call FUNC(addCanInteractWithCondition);
+
 //////////////////////////////////////////////////
 // Set up reload mutex
 //////////////////////////////////////////////////
 
 GVAR(isReloading) = false;
+GVAR(reloadMutex_lastMagazines) = [];
+// When reloading, the new magazine is removed from inventory, an animation plays and then the old magazine is added
+// If the animation is interrupted, the new magazine will be lost
+["loadout", {
+    params ["_unit", "_newLoadout"];
+    private _mags = magazines _unit;
+    // if our magazine count dropped by 1, we might be reloading
+    if ((count GVAR(reloadMutex_lastMagazines)) - (count _mags) == 1) then {
+        private _weapon = currentWeapon _unit;
+        private _muzzle = currentMuzzle _unit;
+        if (_weapon == "") exitWith {};
+        private _wpnMzlConfig = configFile >> "CfgWeapons" >> _weapon;
+        if (_muzzle != _weapon) then { _wpnMzlConfig = _wpnMzlConfig >> _muzzle; };
 
-["keyDown", {
-    if ((_this select 1) in actionKeys "ReloadMagazine" && {alive ACE_player}) then {
-        //Ignore mounted (except ffv)
-        if (!(player call CBA_fnc_canUseWeapon)) exitWith {};
-        private _weapon = currentWeapon ACE_player;
+        private _compatMags = [_wpnMzlConfig] call CBA_fnc_compatibleMagazines;
+        private _lastCompatMagCount = {_x in _compatMags} count GVAR(reloadMutex_lastMagazines);
+        private _curCompatMagCount = {_x in _compatMags} count _mags;
+        TRACE_3("",_wpnMzlConfig,_lastCompatMagCount,_curCompatMagCount);
+        if (_lastCompatMagCount - _curCompatMagCount != 1) exitWith {}; // check if magazines for our specific muzzle dropped by 1
 
-        if (_weapon != "") then {
-            private _muzzle = currentMuzzle ACE_player;
-            private _wpnConfig = configFile >> "CfgWeapons" >> _weapon;
-            private _gesture = getText ([_wpnConfig >> _muzzle, _wpnConfig] select (_weapon isEqualTo _muzzle) >> "reloadAction");
-            if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
-            private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
-            private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
-            private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
+        private _gesture = getText (_wpnMzlConfig >> "reloadAction");
+        if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
+        private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
+        private _duration = 0;
+        if (_isLauncher) then {
+            _duration = getNumber (configfile >> "CfgMovesMaleSdr" >> "States" >> _gesture >> "speed");
+        };
+        if (_duration == 0) then {
+            _duration = getNumber (configfile >> "CfgGesturesMale" >> "States" >> _gesture >> "speed");
+        };
 
-            if (_duration != 0) then {
-                _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
-            } else {
-                _duration = 3;
-            };
+        if (_duration != 0) then {
+            _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
+        } else {
+            _duration = 6;
+        };
 
-            TRACE_2("Reloading, blocking gestures",_weapon,_duration);
-            GVAR(reloadingETA) = CBA_missionTime + _duration;
+        TRACE_2("Reloading, blocking gestures",_weapon,_duration);
+        GVAR(reloadingETA) = CBA_missionTime + _duration;
 
-            if (!GVAR(isReloading)) then {
-                GVAR(isReloading) = true;
+        if (!GVAR(isReloading)) then {
+            GVAR(isReloading) = true;
 
-                [{
-                    CBA_missionTime > GVAR(reloadingETA)
-                },{
-                    GVAR(isReloading) = false;
-                }] call CBA_fnc_waitUntilAndExecute;
-            };
+            [{
+                CBA_missionTime > GVAR(reloadingETA)
+            },{
+                GVAR(isReloading) = false;
+            }] call CBA_fnc_waitUntilAndExecute;
         };
     };
-
-    false
-}] call CBA_fnc_addDisplayHandler;
+    GVAR(reloadMutex_lastMagazines) = _mags;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
@@ -458,14 +492,14 @@ GVAR(deviceKeyHandlingArray) = [];
 GVAR(deviceKeyCurrentIndex) = -1;
 
 // Register localizations for the Keybinding categories
-["ACE3 Equipment", localize LSTRING(ACEKeybindCategoryEquipment)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Common", localize LSTRING(ACEKeybindCategoryCommon)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Weapons", localize LSTRING(ACEKeybindCategoryWeapons)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Movement", localize LSTRING(ACEKeybindCategoryMovement)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Scope Adjustment", localize LSTRING(ACEKeybindCategoryScopeAdjustment)] call CBA_fnc_registerKeybindModPrettyName;
-["ACE3 Vehicles", localize LSTRING(ACEKeybindCategoryVehicles)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Equipment", LLSTRING(ACEKeybindCategoryEquipment)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Common", LLSTRING(ACEKeybindCategoryCommon)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Weapons", LLSTRING(ACEKeybindCategoryWeapons)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Movement", LLSTRING(ACEKeybindCategoryMovement)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Scope Adjustment", LLSTRING(ACEKeybindCategoryScopeAdjustment)] call CBA_fnc_registerKeybindModPrettyName;
+["ACE3 Vehicles", LLSTRING(ACEKeybindCategoryVehicles)] call CBA_fnc_registerKeybindModPrettyName;
 
-["ACE3 Equipment", QGVAR(openDevice), (localize "STR_ACE_Common_toggleHandheldDevice"), {
+["ACE3 Equipment", QGVAR(openDevice), LLSTRING(toggleHandheldDevice), {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 3);
@@ -474,7 +508,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, false, false]], false] call CBA_fnc_addKeybind;  //Home Key
 
-["ACE3 Equipment", QGVAR(closeDevice), (localize "STR_ACE_Common_closeHandheldDevice"), {
+["ACE3 Equipment", QGVAR(closeDevice), LLSTRING(closeHandheldDevice), {
     [] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     [] call ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 4);
@@ -483,7 +517,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [false, true, false]], false] call CBA_fnc_addKeybind;  //CTRL + Home Key
 
-["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"), {
+["ACE3 Equipment", QGVAR(cycleDevice), LLSTRING(cycleHandheldDevices), {
     [1] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
     private _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);

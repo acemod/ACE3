@@ -32,7 +32,7 @@ if (isNil {GVAR(allDamageTypesData) getVariable _typeOfDamage} ) then {
 };
 
 // Administration for open wounds and ids
-private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
+private _openWounds = GET_OPEN_WOUNDS(_unit);
 private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
 
 TRACE_4("extension call",_bodyPart,_damage,_typeOfDamage,_woundID);
@@ -40,10 +40,7 @@ private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWoun
 TRACE_1("",_extensionOutput);
 
 // these are default values and modified by _extensionOutput
-private _painToAdd = 0;
-private _woundsCreated = [];
-
-call compile _extensionOutput;
+(parseSimpleArray _extensionOutput) params ["_woundsCreated", "_painToAdd"];
 
 // todo: Make the pain and bleeding calculations part of the extension again
 private _woundDamage = _damage / ((count _woundsCreated) max 1); // If the damage creates multiple wounds
@@ -128,7 +125,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     };
 } forEach _woundsCreated;
 
-_unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+_unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
@@ -141,4 +138,4 @@ if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call FUNC(handleIncapacitation);
 };
 
-TRACE_5("exit",_unit,_painLevel,GET_PAIN(_unit),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
+TRACE_5("exit",_unit,_painLevel,GET_PAIN(_unit),GET_OPEN_WOUNDS(_unit),_woundsCreated);

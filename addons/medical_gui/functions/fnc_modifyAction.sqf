@@ -30,7 +30,7 @@ private _bloodLossOnBodyPart = 0;
     if (_bodyPartN == _partIndex) then {
         _bloodLossOnBodyPart = _bloodLossOnBodyPart + (_amountOf * _bleeding);
     };
-} forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
+} forEach GET_OPEN_WOUNDS(_target);
 
 private _frBL = 0 max (_bloodLossOnBodyPart / BLOOD_LOSS_RED_THRESHOLD) min 1;
 private _colorInt = ceil (_frBL * (BLOOD_LOSS_TOTAL_COLORS - 1)); // ceil because any bleeding more than zero shouldn't be white

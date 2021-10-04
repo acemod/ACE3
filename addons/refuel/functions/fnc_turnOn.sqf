@@ -42,3 +42,4 @@ _nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime];
 _nozzle setVariable [QGVAR(isRefueling), true, true];
 _nozzle setVariable [QGVAR(refuelContainer), _refuelContainer];
 [LSTRING(Hint_Started), 1.5, _unit] call EFUNC(common,displayTextStructured);
+[QGVAR(started), [_nozzle getVariable QGVAR(source), _nozzle getVariable QGVAR(sink)]] call CBA_fnc_localEvent;

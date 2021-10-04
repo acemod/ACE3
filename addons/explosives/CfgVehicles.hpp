@@ -78,6 +78,7 @@ class CfgVehicles {
         vehicleClass = "Cargo";
         class ACE_Actions {
             class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
                 selection = "";
                 distance = 1.5;
                 condition = "true";

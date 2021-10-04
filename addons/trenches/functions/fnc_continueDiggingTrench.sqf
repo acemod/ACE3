@@ -19,13 +19,13 @@
 params ["_trench", "_unit"];
 TRACE_2("continueDiggingTrench",_trench,_unit);
 
-private _actualProgress = _trench getVariable [QGVAR(progress), 0];
+private _actualProgress = _trench getVariable [QGVAR(progress), 1];
 if(_actualProgress == 1) exitWith {};
 
 // Mark trench as being worked on
 _trench setVariable [QGVAR(digging), true, true];
 
-private _digTime = getNumber (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(diggingDuration));
+private _digTime = missionNamespace getVariable [getText (configOf _trench >> QGVAR(diggingDuration)), 20];
 private _digTimeLeft = _digTime * (1 - _actualProgress);
 
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
@@ -63,7 +63,11 @@ private _fnc_onFailure = {
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);
 };
-[(_digTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench)] call EFUNC(common,progressBar);
+private _fnc_condition = {
+    (_this select 0) params ["_unit"];
+    "ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))
+};
+[(_digTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition] call EFUNC(common,progressBar);
 
 if(_actualProgress == 0) then {
     [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 1.0], _vecDirAndUp, _actualProgress] call FUNC(setTrenchPlacement);
@@ -75,7 +79,7 @@ if(_actualProgress == 0) then {
         _cutterPos set [2, getTerrainHeightASL _cutterPos];
         _trenchGrassCutter setPosASL _cutterPos;
         deleteVehicle _trenchGrassCutter;
-    } foreach getArray (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(grassCuttingPoints));
+    } foreach getArray (configOf _trench >> QGVAR(grassCuttingPoints));
 };
 
 private _progressLeft = (_actualProgress * 10) + 1;

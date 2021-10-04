@@ -42,3 +42,32 @@ if (GVAR(menuPFH) != -1) exitWith {
 };
 
 GVAR(menuPFH) = [FUNC(menuPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+
+// Hide categories if they don't have any actions (airway)
+private _list = [
+    [IDC_TRIAGE, true],
+    [IDC_EXAMINE, true],
+    [IDC_BANDAGE, "bandage"],
+    [IDC_MEDICATION, "medication"],
+    [IDC_AIRWAY, "airway"],
+    [IDC_ADVANCED, "advanced"],
+    [IDC_DRAG, "drag"],
+    [IDC_TOGGLE, true]
+];
+private _countEnabled = {
+    _x params ["", "_category"];
+    if (_category isEqualType "") then { _x set [1, (GVAR(actions) findIf {_category == _x select 1}) > -1]; };
+    _x select 1
+} count _list;
+private _offsetX = POS_X(1.5) + 0.5 * (POS_X(12) - POS_X(_countEnabled * 1.5));
+{
+    _x params ["_idc", "_enabled"];
+    private _ctrl = _display displayCtrl _idc;
+    if (_enabled) then {
+        _ctrl ctrlSetPositionX _offsetX;
+        _ctrl ctrlCommit 0;
+        _offsetX = _offsetX + POS_W(1.5);
+    } else {
+        _ctrl ctrlShow false;
+    };
+} forEach _list;

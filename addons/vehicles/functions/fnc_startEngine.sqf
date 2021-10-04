@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [vehicle player, false] call ace_vehicle_fnc_startEngine
+ * [vehicle player, false] call ace_vehicles_fnc_startEngine
  *
  * Public: No
  */
@@ -19,6 +19,9 @@
 params ["_vehicle", "_isEngineOn"];
 
 if (!_isEngineOn || {floor abs speed _vehicle > 0 || {!isNull isVehicleCargo _vehicle}}) exitWith {};
+
+private _startupDelay = _vehicle getVariable [QGVAR(engineStartDelay), getNumber (configOf _vehicle >> QGVAR(engineStartDelay))];
+if (_startupDelay <= 0) exitWith {};
 
 [{
     params ["_args", "_idPFH"];
@@ -29,4 +32,4 @@ if (!_isEngineOn || {floor abs speed _vehicle > 0 || {!isNull isVehicleCargo _ve
     _vehicle setVelocity [0, 0, 0];
     _vehicle setVectorDirAndUp _direction;
 
-} , 0, [_vehicle, CBA_missionTime + STARTUP_DELAY, [vectorDir _vehicle, vectorUp _vehicle]]] call CBA_fnc_addPerFrameHandler;
+} , 0, [_vehicle, CBA_missionTime + _startupDelay, [vectorDir _vehicle, vectorUp _vehicle]]] call CBA_fnc_addPerFrameHandler;

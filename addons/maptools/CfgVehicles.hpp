@@ -5,14 +5,14 @@ class CfgVehicles {
             class ACE_MapGpsShow {
                 displayName = CSTRING(MapGpsShow);
                 condition = QUOTE((!GVAR(mapGpsShow)) && {call FUNC(canUseMapGPS)});
-                statement = QUOTE(GVAR(mapGpsShow) = true; [GVAR(mapGpsShow)] call FUNC(openMapGps));
+                statement = QUOTE(GVAR(mapGpsShow) = true;);
                 exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                 showDisabled = 0;
             };
             class ACE_MapGpsHide {
                 displayName = CSTRING(MapGpsHide);
                 condition = QUOTE((GVAR(mapGpsShow)) && {call FUNC(canUseMapGPS)});
-                statement = QUOTE(GVAR(mapGpsShow) = false; [GVAR(mapGpsShow)] call FUNC(openMapGps));
+                statement = QUOTE(GVAR(mapGpsShow) = false;);
                 exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                 showDisabled = 0;
             };

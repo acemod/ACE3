@@ -53,7 +53,7 @@ private _continue = if (_item isEqualType objNull) then {
         };
     } forEach _loaded;
 
-    FILTER(_loaded,_x != nil);
+    FILTER(_loaded,!isNil "_x");
     true
 };
 

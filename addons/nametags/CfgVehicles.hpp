@@ -47,14 +47,14 @@ class CfgVehicles {
                 };
             };
             class playerNamesViewDistance {
-                displayName = CSTRING(PlayerNamesViewDistance_DisplayName);
-                description = CSTRING(PlayerNamesViewDistance_Description);
+                displayName = CSTRING(playerNamesViewDistance_DisplayName);
+                description = CSTRING(playerNamesViewDistance_Description);
                 typeName = "NUMBER";
                 defaultValue = 5;
             };
             class showNamesForAI {
-                displayName = CSTRING(showNamesForAI_DisplayName);
-                description = CSTRING(showNamesForAI_Description);
+                displayName = CSTRING(ShowNamesForAI);
+                description = CSTRING(ShowNamesForAI_Desc);
                 typeName = "NUMBER";
                 class values {
                     class DoNotForce {
@@ -73,8 +73,8 @@ class CfgVehicles {
                 };
             };
             class showVehicleCrewInfo {
-                displayName = CSTRING(showVehicleCrewInfo_DisplayName);
-                description = CSTRING(showVehicleCrewInfo_Description);
+                displayName = CSTRING(ShowVehicleCrewInfo);
+                description = CSTRING(ShowVehicleCrewInfo_Desc);
                 typeName = "NUMBER";
                 class values {
                     class DoNotForce {

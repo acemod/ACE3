@@ -17,22 +17,4 @@
 
 params ["_unit"];
 
-private _flashlights = [];
-private _cfgWeapons = configFile >> "CfgWeapons";
-
-{
-    private _weaponConfig = _cfgWeapons >> _x;
-    if (
-        -1 < [
-            _weaponConfig >> "ItemInfo" >> "FlashLight",
-            _weaponConfig >> "FlashLight"
-        ] findIf {
-            isText (_x >> "ACE_Flashlight_Colour")
-            || {!(getArray (_x >> "ambient") in [[], [0,0,0]])}
-        }
-    ) then {
-        _flashlights pushBack _x;
-    };
-} forEach ([_unit, true] call CBA_fnc_uniqueUnitItems);
-
-_flashlights
+([_unit, true] call CBA_fnc_uniqueUnitItems) select {_x call FUNC(isFlashlight)} // return

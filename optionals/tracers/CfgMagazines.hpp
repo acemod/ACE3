@@ -1,3 +1,4 @@
+//IGNORE_STRING_WARNING(str_ace_tracers_magazine);
 #define STRINGS(magazine) author = ECSTRING(common,ACETeam); displayName = CSTRING(magazine)
 
 class CfgMagazines {
@@ -82,7 +83,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(100Rnd_580x42_Drum_tracer_yellow_description);
     };
 
-	// 6.5mm Caseless MX
+    // 6.5mm Caseless MX
     class 30Rnd_65x39_caseless_mag;
     class ACE_30Rnd_65x39_mx_green : 30Rnd_65x39_caseless_mag {
         ammo = "B_65x39_Caseless_green";
@@ -224,22 +225,22 @@ class CfgMagazines {
     // 9.3x64
     class 150Rnd_93x64_Mag;
     class ACE_150Rnd_93x64_Mag_red : 150Rnd_93x64_Mag {
-        ammo = "ACE_93x64_tracer_red";
+        ammo = "ACE_93x64_Ball_tracer_red";
         STRINGS(150Rnd_93x64_Mag_red);
     };
     class ACE_150Rnd_93x64_Mag_yellow : 150Rnd_93x64_Mag {
-        ammo = "ACE_93x64_tracer_yellow";
+        ammo = "ACE_93x64_Ball_tracer_yellow";
         STRINGS(150Rnd_93x64_Mag_yellow);
     };
 
     // .338 NM
     class 130Rnd_338_Mag;
     class ACE_130Rnd_338_Mag_green : 130Rnd_338_Mag {
-        ammo = "ACE_338_NM_tracer_green";
+        ammo = "ACE_338_NM_Ball_green";
         STRINGS(130Rnd_338_Mag_green);
     };
     class ACE_130Rnd_338_Mag_yellow : 130Rnd_338_Mag {
-        ammo = "ACE_338_NM_tracer_yellow";
+        ammo = "ACE_338_NM_Ball_yellow";
         STRINGS(130Rnd_338_Mag_yellow);
     };
 };

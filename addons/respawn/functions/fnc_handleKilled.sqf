@@ -22,6 +22,7 @@ params ["_unit"];
 if (ACE_player == _unit && {GVAR(SavePreDeathGear)}) then {
     _unit setVariable [QGVAR(unitGear), getUnitLoadout _unit];
     _unit setVariable [QGVAR(activeWeaponAndMuzzle), [currentWeapon _unit, currentMuzzle _unit, currentWeaponMode _unit]];
+    [QGVAR(saveGear), _unit] call CBA_fnc_localEvent;
 };
 
 if (missionNamespace getVariable [QGVAR(showFriendlyFireMessage), false]) then {

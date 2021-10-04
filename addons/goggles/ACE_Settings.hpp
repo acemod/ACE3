@@ -6,7 +6,7 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 2;
         isClientSettable = 1;
-        values[] = {ECSTRING(common,Disabled), CSTRING(effects_tintOnly), CSTRING(enabled_tintAndEffects)};
+        values[] = {ECSTRING(common,Disabled), CSTRING(effects_tintOnly), CSTRING(enabled_tintAndEffects), CSTRING(effects_effectsOnly)};
     };
     class GVAR(showInThirdPerson) {
         category = CSTRING(DisplayName);

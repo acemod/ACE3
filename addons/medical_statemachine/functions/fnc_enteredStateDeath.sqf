@@ -16,10 +16,12 @@
  */
 
 params ["_unit"];
+if (isNull _unit) exitWith {};
 
-// TODO: Probably also needs additional logic to deal with edge cases
+//IGNORE_PRIVATE_WARNING ["_thisOrigin", "_thisTransition"]; // vars provided by CBA_statemachine
+TRACE_3("enteredStateDeath",_this,_thisOrigin,_thisTransition);
 
-// Send a local event before death
-[QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
+private _causeOfDeath = format ["%1:%2", _thisOrigin, _thisTransition];
 
-[_unit] call EFUNC(medical_status,setDead);
+// could delay a frame here to fix the double killed EH, but we lose it being a "native" kill (scoreboard / rating)
+[_unit, _causeOfDeath] call EFUNC(medical_status,setDead);

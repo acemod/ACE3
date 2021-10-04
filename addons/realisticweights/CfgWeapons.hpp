@@ -218,6 +218,18 @@ class CfgWeapons {
         };
     };
 
+    class ACE_launch_NLAW_ready_F: launch_NLAW_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 195; // 275 - 80
+        };
+    };
+
+    class ACE_launch_NLAW_used_F: launch_NLAW_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 195; // 275 - 80
+        };
+    };
+
     // - RPG-32 ---------------------------------------------------------------
     class launch_RPG32_F: Launcher_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {

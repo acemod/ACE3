@@ -25,6 +25,7 @@
     _args set [0, CBA_missionTime];
     private _isWind = (vectorMagnitude wind > 0);
 
+    private _deleted = false;
     {
         _x params ["_bullet", "_airFriction"];
 
@@ -32,7 +33,8 @@
         private _bulletSpeedSqr = vectorMagnitudeSqr _bulletVelocity;
 
         if ((!alive _bullet) || {(_bullet isKindOf "BulletBase") && {_bulletSpeedSqr < 10000}}) then {
-            GVAR(trackedBullets) deleteAt (GVAR(trackedBullets) find _x);
+            GVAR(trackedBullets) set [_forEachIndex, objNull];
+            _deleted = true;
         } else {
             if (_isWind) then {
                 private _trueVelocity = _bulletVelocity vectorDiff wind;
@@ -48,7 +50,11 @@
             };
             _bullet setVelocity _bulletVelocity;
         };
-        nil
-    } count +GVAR(trackedBullets);
+    } forEach GVAR(trackedBullets);
+
+    if (_deleted) then {
+        GVAR(trackedBullets) = GVAR(trackedBullets) - [objNull];
+    };
+
     // END_COUNTER(pfeh);
 }, GVAR(simulationInterval), [CBA_missionTime]] call CBA_fnc_addPerFrameHandler;

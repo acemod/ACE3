@@ -4,6 +4,7 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
         displayName = CSTRING(enabled_displayName);
+        description = CSTRING(enabled_description);
     };
     class GVAR(maxRange) {
         category = CSTRING(DisplayName);

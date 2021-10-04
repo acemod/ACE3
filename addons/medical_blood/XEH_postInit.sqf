@@ -10,33 +10,18 @@ if (isServer) then {
 
     [QGVAR(bloodDropCreated), {
         params ["_bloodDrop"];
-        // Add to created queue with format [expireTime, object]
-        private _index = GVAR(bloodDrops) pushBack [(CBA_missionTime + BLOOD_OBJECT_LIFETIME), _bloodDrop];
 
-        if (count GVAR(bloodDrops) >= MAX_BLOOD_OBJECTS) then {
+        // Add to created queue with format: [expire time, blood object]
+        private _index = GVAR(bloodDrops) pushBack [CBA_missionTime + GVAR(bloodLifetime), _bloodDrop];
+
+        if (count GVAR(bloodDrops) >= GVAR(maxBloodObjects)) then {
             (GVAR(bloodDrops) deleteAt 0) params ["", "_deletedBloodDrop"];
             deleteVehicle _deletedBloodDrop;
         };
 
-        if (_index == 1) then { // Start the waitAndExecute loop
-            [FUNC(serverCleanupBlood), [], BLOOD_OBJECT_LIFETIME] call CBA_fnc_waitAndExecute;
+        // Start the cleanup loop
+        if (_index == 0) then {
+            [FUNC(cleanupLoop), [], GVAR(bloodLifetime)] call CBA_fnc_waitAndExecute;
         };
     }] call CBA_fnc_addEventHandler;
 };
-
-["ace_settingsInitialized", {
-    TRACE_1("settingsInitialized", GVAR(enabledFor));
-    if (GVAR(enabledFor) == 0) exitWith {}; // 0: disabled
-    if ((GVAR(enabledFor) == 1) && {!hasInterface}) exitWith {}; // 1: enabledFor_OnlyPlayers
-
-    private _listcode = if (GVAR(enabledFor) == 1) then {
-        {if (alive ACE_player) then {[ACE_player]} else {[]}} // ace_player is only possible local player
-    } else {
-        EFUNC(common,getLocalUnits) // filter all local units
-    };
-
-    private _stateMachine = [_listcode, true] call CBA_statemachine_fnc_create;
-    [_stateMachine, LINKFUNC(onBleeding), {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
-
-    [QEGVAR(medical,woundReceived), FUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
-}] call CBA_fnc_addEventHandler;

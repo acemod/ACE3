@@ -1,79 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Statemachine">
-        <Container name="Settings">
-            <Key ID="STR_ACE_Medical_statemachine_subCategory">
-                <English>States</English>
-                <Japanese>状態</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_DisplayName">
-                <English>Fatal Injury Player</English>
-                <Japanese>致命傷プレイヤー</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_Description">
-                <English>Defines when Player can receive a fatal injury</English>
-                <Japanese>プレイヤーが致命傷から蘇生できるかどうか決定します</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_fatalInjuryConditionAI_DisplayName">
-                <English>Instant death AI</English>
-                <Japanese>AI の即死</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_fatalInjuryConditionAI_Description">
-                <English>Defines if AI will be able to die instantly</English>
-                <Japanese>AI が即死できるかどうか決定します</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_unconsciousConditionAI_DisplayName">
-                <English>Forbid unconscious AI</English>
-                <Japanese>AI の気絶を禁止</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_unconsciousConditionAI_Description">
-                <English>Defines if AI will be denied to go unconscious and will die instead</English>
-                <Japanese>AI が気絶すると、即時に死亡するかどうか決定します</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_fatalInjuryCondition_InCardiacArrest">
-                <English>In Cardiac Arrest</English>
-                <Japanese>心停止中</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_cardiacArrestTime_DisplayName">
-                <English>Cardiac Arrest time (seconds)</English>
-                <Japanese>心停止時間 (秒)</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_cardiacArrestTime_Description">
-                <English>Defines how long it takes to die from cardiac arrest?</English>
-                <Japanese>心停止がどのくらい続けば死亡するようにしますか?</Japanese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_enableUnconsciousnessAI_DisplayName">
-                <English>AI Unconsciousness</English>
-                <Russian>Потеря сознания ботами</Russian>
-                <Polish>Nieprzytomność AI</Polish>
-                <Spanish>Inconsciencia IA</Spanish>
-                <German>KI-Bewusstlosigkeit</German>
-                <Czech>Bezvědomí AI</Czech>
-                <Portuguese>Inconsciência da IA</Portuguese>
-                <French>Inconscience des IA</French>
-                <Hungarian>AI eszméletlenség</Hungarian>
-                <Italian>Incoscienza IA</Italian>
-                <Japanese>AI の気絶</Japanese>
-                <Korean>인공지능 기절</Korean>
-                <Chinesesimp>AI无意识</Chinesesimp>
-                <Chinese>AI無意識</Chinese>
-            </Key>
-            <Key ID="STR_ACE_Medical_statemachine_enableUnconsciousnessAI_Description">
-                <English>Allow AI to go unconscious</English>
-                <Russian>Позволить ботам терять сознание</Russian>
-                <Polish>Czy AI może być nieprzytomne od odniesionych obrażeń?</Polish>
-                <Spanish>Permita a la IA caer inconsciente</Spanish>
-                <German>KI kann bewusstlos werden</German>
-                <Czech>Umožňuje AI upadnout do bezvědomí</Czech>
-                <Portuguese>Permite IA ficar inconsciente</Portuguese>
-                <French>Autoriser les IA à tomber inconscients</French>
-                <Hungarian>Engedélyezi az AI eszméletének elvesztését</Hungarian>
-                <Italian>Permetti alle IA di diventare incoscienti</Italian>
-                <Japanese>AI が気絶をするようになります</Japanese>
-                <Korean>인공지능도 기절에 빠지게 합니다</Korean>
-                <Chinesesimp>允许AI进入无意识状态</Chinesesimp>
-                <Chinese>允許AI進入無意識狀態</Chinese>
-            </Key>
-        </Container>
+        <Key ID="STR_ACE_Medical_Statemachine_SubCategory">
+            <English>States</English>
+            <German>Zustände</German>
+            <Japanese>状態</Japanese>
+            <Russian>Состояния</Russian>
+            <French>États</French>
+            <Portuguese>Estados</Portuguese>
+            <Chinese>狀態</Chinese>
+            <Italian>Stato</Italian>
+            <Czech>Stavy</Czech>
+            <Polish>Stany</Polish>
+            <Turkish>Devletler</Turkish>
+            <Spanish>Estados</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_DisplayName">
+            <English>Player Fatal Injuries</English>
+            <Portuguese>Lesões Fatais do Jogador</Portuguese>
+            <Japanese>プレイヤーの致命傷</Japanese>
+            <Chinese>玩家致命傷</Chinese>
+            <French>Décès si blessure mortelle (joueurs)</French>
+            <Czech>Smrtelná zranění hráčů</Czech>
+            <Polish>Śmiertelne Obrażenia Gracza</Polish>
+            <Italian>Lesioni mortali del giocatore</Italian>
+            <Turkish>Oyuncu Ölümcül Yaralanmaları</Turkish>
+            <German>Tödliche Spielerverletzungen</German>
+            <Russian>Смертельные травмы игрока</Russian>
+            <Spanish>Heridas mortales del jugador</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesPlayer_Description">
+            <English>Controls when players can receive fatal injuries. A fatal injury is caused by significant damage to the head or torso.</English>
+            <Portuguese>Controla quando os jogadores podem receber lesões fatais. Uma lesão fatal é causada por um dano significante na cabeça ou tronco.</Portuguese>
+            <Japanese>プレイヤーが致命傷を受けた時の挙動を管理できます。頭部や胸部に受ける大きなダメージは致命傷になります。</Japanese>
+            <Chinese>控制當玩家受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。</Chinese>
+            <French>Détermine si les joueurs décèdent en cas de blessure mortelle. Une blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
+            <Turkish>Oyuncuların ölümcül yaralanmaları ne zaman alabileceğini kontrol eder. Ölümcül bir yaralanma, kafaya veya vücuda önemli hasar verir.</Turkish>
+            <Czech>Nastavuje zda hráči mohou utrpět smrtelné zranění. Smrtelné zranění je utrpěto významným poškozením hlavy nebo trupu.</Czech>
+            <Italian>Controlla quando i giocatori possono ricevere infortuni mortali. Una lesione mortale è causata da un danno significativo alla testa o al busto.</Italian>
+            <Polish>Definiuje, kiedy gracze mogą otrzymać śmiertelne obrażenia. Śmiertelne obrażenia są spowodowane znacznym uszkodzeniem głowy lub torsu.</Polish>
+            <German>Legt fest, wann Spieler tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Torso verursacht.</German>
+            <Russian>Определяет, могут ли игроки получить смертельные травмы. Смертельная травма вызывается значительным повреждением головы или туловища.</Russian>
+            <Spanish>Controla cuándo los jugadores pueden sufrir lesiones fatales. Una lesión fatal es causada por un daño significativo en la cabeza o el cuerpo.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
+            <English>AI Fatal Injuries</English>
+            <Portuguese>Lesões Fatais da IA</Portuguese>
+            <Japanese>AI の致命傷</Japanese>
+            <Chinese>AI致命傷</Chinese>
+            <French>Décès si blessure mortelle (IA)</French>
+            <Czech>Smrtelná zranění AI</Czech>
+            <Polish>Śmiertelne obrażenia AI.</Polish>
+            <Italian>AI Lesioni mortali</Italian>
+            <Turkish>AI Ölümcül Yaralanmaları</Turkish>
+            <German>Tödliche KI-Verletzungen</German>
+            <Russian>Смертельные травмы ИИ</Russian>
+            <Spanish>Heridas mortales IA</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_Description">
+            <English>Controls when AI can receive fatal injuries. A fatal injury is caused by significant damage to the head or troso.\nWhen set to "Always", this effectively produces "AI Instant Death" behaviour as AI will immediately die from any fatal injury.\nNOTE: Any mode other than "Always" requires AI Unconsciousness to be enabled.</English>
+            <Portuguese>Controla quando a IA pode receber lesões fatais. Uma lesão fatal é causada por um dano significante na cabeça ou tronco.\nQuando definido para "Sempre", isso efetivamente causa a "Morte Instantânea da IA", pois a IA irá imediatamente morrer para qualquer lesão fatal.\nNOTA: Qualquer opção além de "Sempre" requer que Inconsciência de IA esteja ativada.</Portuguese>
+            <Japanese>AI が致命傷を受けた時の挙動を管理できます。頭部や胸部に受ける大きなダメージは致命傷になります。\n"常に"に設定されていると、いかなる致命傷でも "AI の即死" 効果が生まれます。\n注: "常に"以外のモードでは AI の無意識化を有効化させる必要があります。</Japanese>
+            <Chinese>控制當AI受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。\n當設置為"總是"時，這會使其與"AI 瞬間死亡"同一個效果，在AI受到致命傷時瞬間死亡。\n備註：選了"總是"以外的選項的話必須開啟「AI無意識」的選項。</Chinese>
+            <French>Détermine si les unités IA décèdent en cas de blessure mortelle. Une blessure mortelle est définie par des dommages importants à la tête ou au cœur.\nSi réglé sur "Toujours", cela produit effectivement un comportement de "Mort instantanée" car les unités IA mourront immédiatement de toute blessure mortelle.\nNOTE : Tout mode autre que "Toujours" nécessite l'activation de l'option "Inconscience IA".</French>
+            <Turkish>AI'nın ölümcül yaralanmaları ne zaman alabileceğini kontrol eder. Ölümcül bir yaralanma, kafa veya vücudun önemli hasar görmesinden kaynaklanır. \"Her zaman" olarak ayarlandığında, AI herhangi bir ölümcül yaralanmadan hemen öleceği için bu etkili bir şekilde "AI Anında Ölüm" davranışı üretir.\ NOT: "Her zaman" "Yapay Zeka Bilinci'nin etkinleştirilmesini gerektirir.</Turkish>
+            <Czech>Nastavuje zda AI může utrpět smrtelné zranění. Smrtelné zranění je utrpěto významným poškozením hlavy nebo trupu.\nPokud je tato možnost nastavena na "Vždy", efektivně nastává stav "Povolit okamžitou smrt AI", protože AI okamžitě zemře při jakémkoliv smrtelném zranění.\nPOZNÁMKA: Jakýkoliv jiný stav než "Vždy" potřebuje zapnutou možnost "Bezvědomí AI".</Czech>
+            <Italian>Controlla quando l'IA può ricevere ferite mortali. Una lesione mortale è causata da un danno significativo alla testa o al torso.\nSe impostato su "Sempre", questo produce efficacemente il comportamento "Morte istantanea AI", poiché l'IA morirà immediatamente a causa di qualsiasi lesione mortale.\nNOTA: Qualsiasi modalità diversa da "Sempre" richiede l'attivazione dell'Incoscienza AI.</Italian>
+            <Polish>Definiuje, kiedy AI może otrzymać śmiertelne obrażenia. Śmiertelne obrażenia są spowodowane znacznym uszkodzeniem głowy lub torsu.\n Ustawienie "Zawsze" powoduje "Natychmiastową śmierć AI", ponieważ AI natychmiast umiera z powodu śmiertelnych obrażeń.\n UWAGA: Każdy inny tryb niż "Zawsze" wymaga włączenia nieprzytomności AI.</Polish>
+            <German>Legt fest, wann KI-Einheiten tödliche Verletzungen erleiden können. Eine tödliche Verletzung wird bei erheblichem Schaden an Kopf oder Körper verursacht.\nWenn "Immer" eingestellt ist, erzeugt diese Einstellung das "KI Sofort-Tod" Verhalten. KI-Einheiten sterben sofort durch jede tödliche Verletzung.\nBEACHTE: Eine andere Einstellung als "Immer" bedingt, dass "KI-Bewusstlosigkeit" verwendet wird.</German>
+            <Russian>Определяет могут ли игроки получить смертельные травмы. Смертельная травма вызывается значительным повреждением головы или туловища.\nКогда установлено «Всегда», это вызывает поведение «Мгновенной смерти ИИ», так как ИИ немедленно умрет от любой смертельной травмы.\nПРИМЕЧАНИЕ: Любой режим, кроме «Всегда», требует включения функции «Потеря сознания».</Russian>
+            <Spanish>Controla cuándo la IA puede sufrir lesiones fatales. Una lesión fatal es causada por un daño significativo en la cabeza o el cuerpo. \n Cuando se establece en "Siempre", esto produce efectivamente un comportamiento de "Muerte instantánea de IA", ya que la IA morirá inmediatamente por cualquier lesión fatal. \n NOTA: Cualquier modo que no sea "Siempre" requiere que la inconsciencia de la IA esté habilitada.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_DisplayName">
+            <English>AI Unconsciousness</English>
+            <Russian>Потеря сознания ботами</Russian>
+            <Polish>Nieprzytomność AI</Polish>
+            <Spanish>Inconsciencia IA</Spanish>
+            <German>KI-Bewusstlosigkeit</German>
+            <Czech>Bezvědomí AI</Czech>
+            <Portuguese>Inconsciência da IA</Portuguese>
+            <French>Inconscience IA</French>
+            <Hungarian>AI eszméletlenség</Hungarian>
+            <Italian>Incoscienza IA</Italian>
+            <Japanese>AI の気絶</Japanese>
+            <Korean>인공지능 기절</Korean>
+            <Chinesesimp>AI无意识</Chinesesimp>
+            <Chinese>AI無意識</Chinese>
+            <Turkish>Yapay Zeka Bilinci</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Description">
+            <English>Controls whether AI can go unconscious instead of immediately dying.\nThis setting works together with the "AI Fatal Injuries" setting since, going into cardiac arrest requires that the unit is able to go unconscious.\nHowever, these settings are separated because units can go unconscious from critical vitals resulting from non-fatal injuries.\nIn essence, this means that in order to enable cardiac arrest for AI units, this setting must be enabled.</English>
+            <Portuguese>Controla se a IA pode ficar inconsciente ao invés de morrer imediatamente.\nEssa configuração funciona com "Lesões Fatais de IA", pois para uma unidade ter uma parada cardíaca é necessário que a IA possa fica inconsciente.\nContudo, essas configurações são separadas pois unidades podem ficar inconscientes por vitais críticos causados por ferimentos não-fatais.\nEssencialmente, isso significa que para ativar uma parada cardíaca em IA, essa configuração precisa estar ativa.</Portuguese>
+            <Japanese>AI が即死する代わりに気絶するかどうかを決定できます。\nこれは "AI の致命傷" 設定と連動します。これは AI の進呈しを起こすにはユニットが気絶する必要がある為です。\nしかしながら、これらの設定はユニットが非致死性の負傷により重体となって気絶できるよう分離されています。\n本質的にはこの設定は AI ユニットの心停止を可能にするものであり、有効化されておくべきです。</Japanese>
+            <Chinese>控制AI是否能進入無意識狀態而非立刻原地死亡。\n這個選項會與「AI致命傷」的選項聯動，使單位心搏停止的話必須先讓其無意識。\n然而，兩個設定分開之原因是使單位能因從非致命傷的攻擊情況下進入生命危險的狀態。\n簡單來說，你想要讓AI單位有心搏停止可能的話，該選項必須啟用。</Chinese>
+            <French>Définit si les unités IA peuvent perdre connaissance au lieu de mourir immédiatement.\nCe paramètre fonctionne conjointement avec l'option "Décès si blessure mortelle (IA)" car, pour qu'une unité IA subisse un arrêt cardiaque, elle doit également pouvoir perdre connaissance.\nCependant, ces paramètres sont séparés car les unités peuvent s'évanouir suite à des signes vitaux critiques résultant de blessures non mortelles.\nEn résumé, cela signifie que ce paramètre doit absolument être activé pour qu'une unité IA puisse entrer en état d'arrêt cardiaque.</French>
+            <Czech>Nastavuje zda AI může upadnout do bezvědomí namísto okamžité smrti.\nToto nastavení funguje společně s "Smrtelná zranění AI" protože srdeční zástava potřebuje možnost upadnout do bezvědomí.\nTyto možnosti jsou separované, protože jednotky mohou upadnout do bezvědomí kvůli kritickému stavu způsobenému ne smrtelnými zraněními.\nV podstatě to znamená, že pokud chcete zapnout srdeční zástavu pro AI, tato možnost musí být zapnutá.</Czech>
+            <Polish>Definiuje, czy AI może stracić przytomność zamiast natychmiast zginąć.\n Ta opcja działa razem z ustawieniem "Śmiertelne urazy AI", ponieważ przejście do zatrzymania akcji serca wymaga, aby jednostka mogła stracić przytomność.\n Jednak te ustawienia są rozdzielone, ponieważ jednostki mogą stracić przytomność z powodu krytycznych czynności życiowych powstałych w wyniku urazów innych niż śmiertelne.\n W istocie oznacza to, że aby umożliwić zatrzymanie akcji serca dla jednostek AI, to ustawienie musi być włączone.</Polish>
+            <Italian>Controlla se l'IA può perdere i sensi invece di morire immediatamente. Questa impostazione funziona insieme all'impostazione "AI Fatal Injuries" poiché, per andare in arresto cardiaco, è necessario che l'unità sia in grado di perdere i sensi. Tuttavia, queste impostazioni sono separate perché le unità possono perdere i sensi da segni vitali critici derivanti da lesioni non mortali.</Italian>
+            <German>Kontrolliert, ob KI bewusstlos werden kann anstatt sofort zu sterben.\nDiese Einstellung funktioniert zusammen mit der Einstellung "Tödliche KI-Verletzungen". Denn wenn eine Einheit einen Herzstillstand erleiden soll, muss diese auch in der Lage sein, bewusstlos zu werden.\nDennoch sind diese beiden Einstellungen voneinander getrennt, da Einheiten auch durch kritische Vitalwerte bewusstlos werden können, die durch nicht tödliche Verletzungen aufgetreten sind.\nZusammengefasst bedeutet das, dass wenn KI-Einheiten einen Herzstillstand erleiden sollen, diese Einstellung aktiviert sein muss.</German>
+            <Russian>Управляет тем, может ли ИИ потерять сознание, вместо того, чтобы немедленно умереть.\nЭтот параметр работает вместе с параметром «Смертельные раны ИИ», поскольку при остановке сердца требуется, чтобы юнит мог потерять сознание.\nОднако эти настройки разделены, потому что юниты могут потерять сознание из-за критических ранений жизненно важных органов, полученных в результате несмертельных травм.\nВ сущности, это означает, что для включения остановки сердца для ИИ этот параметр должен быть включен.</Russian>
+            <Turkish>Yapay zekanın hemen ölmek yerine bilinçsiz duruma geçip geçemeyeceğini kontrol eder. \ Bu ayar, "Yapay Zeka Ölümcül Yaralanmalar" ayarı ile birlikte çalışır, çünkü kalp durması, ünitenin bilinçsiz duruma geçebilmesini gerektirir. \ Özünde, bunun anlamı şudur: AI birimleri için kalp durmasını etkinleştirirseniz, bu ayar etkinleştirilmelidir.</Turkish>
+            <Spanish>Controla si la IA puede quedar inconsciente en lugar de morir de inmediato. \n Esta configuración funciona junto con la configuración de "Heridas mortales IA", ya que, sufrir un paro cardíaco requiere que la unidad pueda quedar inconsciente. \n Sin embargo, estas configuraciones están separadas porque las unidades pueden perder el conocimiento de los signos vitales críticos como resultado de lesiones no mortales. \n En esencia, esto significa que para habilitar el paro cardíaco en las unidades de IA, esta configuración debe estar habilitada.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_DisplayName">
+            <English>Cardiac Arrest Time</English>
+            <German>Überlebenszeit im Herzstillstand</German>
+            <Japanese>心停止時間</Japanese>
+            <Russian>Длительность остановки сердца</Russian>
+            <French>Durée de l'arrêt cardiaque</French>
+            <Portuguese>Tempo de Parada Cardíaca</Portuguese>
+            <Chinese>心搏停止時間</Chinese>
+            <Italian>Tempo d'arresto cardiaco</Italian>
+            <Czech>Délka srdeční zástavy</Czech>
+            <Polish>Czas Zatrzymania Akcji Serca</Polish>
+            <Turkish>Kalp Durma Süresi</Turkish>
+            <Spanish>Tiempo de paro cardíaco</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_Description">
+            <English>Controls how long it takes to die from cardiac arrest.</English>
+            <Japanese>どのくらいの時間、心停止すると死亡するかを決定します。</Japanese>
+            <French>Définit le temps qu'il faut pour mourir d'un arrêt cardiaque.</French>
+            <Russian>Контролирует, сколько времени требуется, чтобы умереть от остановки сердца.</Russian>
+            <Portuguese>Controla o tempo necessário para morrer para uma parada cardíaca.</Portuguese>
+            <Chinese>控制心搏停止後多久死亡</Chinese>
+            <Italian>Controlla quanto tempo ci vuole per morire di arresto cardiaco.</Italian>
+            <Czech>Nastavuje po jak dlouhé době pacient zemře kvůli srdeční zástavě.</Czech>
+            <Polish>Definiuje czas potrzebny na śmierć z powodu zatrzymania akcji serca.</Polish>
+            <German>Bestimmt die Dauer bis zum Tod durch Herzstillstand.</German>
+            <Turkish>Ne kadar süre de kalbi durarak ölmesini belirleyin.</Turkish>
+            <Spanish>Controla cuanto tiempo dura el paro cardiaco antes de morir.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_InCardiacArrest">
+            <English>In Cardiac Arrest</English>
+            <German>Herzstillstand</German>
+            <Japanese>心停止中</Japanese>
+            <Russian>При остановке сердца</Russian>
+            <French>Provoquer un arrêt cardiaque</French>
+            <Portuguese>Em Parada Cardíaca</Portuguese>
+            <Chinese>心搏停止中</Chinese>
+            <Italian>In arresto cardiaco</Italian>
+            <Czech>V srdeční zástavě</Czech>
+            <Polish>Zatrzymanie Akcji Serca</Polish>
+            <Turkish>Kalbi Durdu</Turkish>
+            <Spanish>En parada cardíaca</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_DisplayName">
+            <English>Bleedout During Cardiac Arrest</English>
+            <Russian>Кровотечение во время остановки сердца</Russian>
+            <German>Ausbluten im Herzstillstand</German>
+            <French>Saignement durant l'arrêt cardiaque</French>
+            <Japanese>心停止中の失血</Japanese>
+            <Spanish>Desangrado durante parada cardíaca</Spanish>
+            <Polish>Wykrwawienie podczas zatrzymanej akcji serca</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_Description">
+            <English>Controls whether a person can die in cardiac arrest by blood loss before the cardiac arrest time runs out.</English>
+            <Russian>Определяет, можно ли умереть от потери крови во время остановки сердца, даже если время жизни при остановке сердца еще не истекло.</Russian>
+            <German>Legt fest, ob man während des Herzstillstands durch Blutverlust sterben kann, auch wenn die Überlebenszeit im Herzstillstand noch nicht ausgelaufen ist.</German>
+            <French>Définit si un joueur en arrêt cardiaque peut mourir par exsanguination, avant que la durée de l'arrêt cardiaque définie ci-dessus ne soit écoulée.</French>
+            <Japanese>心停止時間を超え死亡する前に、失血による心停止で死亡するかどうかを決定します。</Japanese>
+            <Spanish>COntrola si una persona puede morir en parada cardíaca por causa de pérdida de sangre antes de que se termine el contador de parada cardíaca</Spanish>
+            <Polish>Kontroluje czy śmierć osoby może nastąpić poprzez wykrwawienie zanim wyczerpię się Czas Zatrzymania Akcji Serca.</Polish>
+        </Key>
     </Package>
 </Project>

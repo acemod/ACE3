@@ -19,15 +19,18 @@
 params ["_trench", "_unit"];
 TRACE_2("removeTrench",_trench,_unit);
 
-private _actualProgress = _trench getVariable [QGVAR(progress), 0];
+private _actualProgress = _trench getVariable [QGVAR(progress), 1];
 if(_actualProgress == 0) exitWith {};
 
 // Mark trench as being worked on
 _trench setVariable [QGVAR(digging), true, true];
 
-private _removeTime = getNumber (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(removalDuration));
+private _removeTime = missionNamespace getVariable [getText (configOf _trench >> QGVAR(removalDuration)), 12];
 private _removeTimeLeft = _removeTime * _actualProgress;
 
+if (isNil {_trench getVariable QGVAR(placeData)}) then {
+    _trench setVariable [QGVAR(placeData), [getPosASL _trench, [vectorDir _trench, vectorUp _trench]], true];
+};
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
 _placeData params ["_basePos", "_vecDirAndUp"];
 
@@ -61,7 +64,11 @@ private _fnc_onFailure = {
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);
 };
-[(_removeTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench)] call EFUNC(common,progressBar);
+private _fnc_condition = {
+    (_this select 0) params ["_unit"];
+    "ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))
+};
+[(_removeTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(RemovingTrench), _fnc_condition] call EFUNC(common,progressBar);
 
 private _progressLeft = ((1 - _actualProgress) * 10) + 1;
 

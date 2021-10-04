@@ -9,13 +9,14 @@
             <German>Erweitertes Raketenlenksystem</German>
             <Czech>Pokročilé řízení střel</Czech>
             <Italian>Guida missili avanzata</Italian>
-            <Portuguese>Avançado Missile Guidance</Portuguese>
+            <Portuguese>Orientação avançada de Míssil</Portuguese>
             <Hungarian>Fejlett rakétairányító</Hungarian>
             <Russian>Продвинутое наведение ракет</Russian>
             <Japanese>高度なミサイルの誘導</Japanese>
             <Korean>고급 미사일 유도</Korean>
             <Chinesesimp>进阶飞弹制导</Chinesesimp>
             <Chinese>進階飛彈制導</Chinese>
+            <Turkish>Gelişmiş Füze Güdüm Sistemi</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Desc">
             <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
@@ -24,7 +25,7 @@
             <Russian>Продвинутое наведение ракет, или ПНР, обеспечивает множество усовершествований для наведения и стрельбы ракет. Также, это система, необходимая для всех ракетных типов оружия.</Russian>
             <Spanish>El guiado avanzado de misiles, o AMG en sus siglas en inglés, ofrece múltiples mejoras en el fijado y disparo de misiles. Es también un sistema requerido para armas de tipo misil.</Spanish>
             <German>Das Erweiterte Raketenlenksystem, auch ERls genannt, bietet viele Verbesserungen zum Aufschalten und Feuern mittels gelenkter Raketen. </German>
-            <French>Le guidage avancé de missile, ou AMG en anglais, apporte de multiples améliorations au verouillage et au tir de missiles. C'est aussi un framework requis pour tout arme de type missile.</French>
+            <French>Le guidage avancé de missile, ou AMG en anglais, apporte de multiples améliorations au verrouillage et au tir de missiles. C'est aussi un framework requis pour toute arme de type missile.</French>
             <Hungarian>A fejlett rakétairányító (vagy AMG) többféle módosítást tartalmaz a rakéták célkövetéséhez és tüzeléséhez. Ez egy szükséges keresztrendszer a rakéta-alapú fegyverekhez.</Hungarian>
             <Portuguese>Orientação avançada de mísseis ou OAM, fornece vários aprimoramentos para travamento de mísseis e disparos. Também é um sistema requerido para disparar armas que utilizem mísseis.</Portuguese>
             <Czech>Pokočilé navádění raket (AMG) poskytuje několik vylepšení pro lepší zaměření a následnou střelbu. Je to prvek vyžadovaný u typu zbraní jako jsou rakety.</Czech>
@@ -32,11 +33,12 @@
             <Korean>고급 미사일 유도 혹은 AMG 는 표적 획득 및 발사를 위한 여러 기능을 제공합니다. 미사일 종류에따라 체계가 필요합니다.</Korean>
             <Chinesesimp>进阶飞弹制导增强了多种导弹锁定和射击的能力。此系统适用于所有飞弹类型的武器。</Chinesesimp>
             <Chinese>進階飛彈制導增強了多種導彈鎖定和射擊的能力。此系統適用於所有飛彈類型的武器</Chinese>
+            <Turkish>Gelişmiş füze rehberliği veya AMG, füze kilitleme ve ateşleme için çoklu geliştirmeler sağlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
             <Spanish>Misil Hydra-70 DAGR</Spanish>
-            <French>Hydra-70 DAGR</French>
+            <French>Missile Hydra-70 DAGR</French>
             <Polish>Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR Rakete</German>
             <Czech>Hydra-70 DAGR</Czech>
@@ -48,6 +50,7 @@
             <Korean>Hydra-70 DAGR 미사일</Korean>
             <Chinesesimp>九头蛇-70 直接攻击导引飞弹</Chinesesimp>
             <Chinese>九頭蛇-70 直接攻擊導引飛彈</Chinese>
+            <Turkish>Hydra-70 DAGR Füze</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Short">
             <English>DAGR</English>
@@ -64,11 +67,12 @@
             <Korean>DAGR</Korean>
             <Chinesesimp>直接攻击制导火箭弹</Chinesesimp>
             <Chinese>直接攻擊導引飛彈</Chinese>
+            <Turkish>DAGR</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
             <Spanish>Misil guiado por láser Hydra-70 DAGR</Spanish>
-            <French>Missile à guidage laser Hydra-70 DAGR</French>
+            <French>Missile Hydra-70 DAGR, à guidage laser</French>
             <Polish>Laserowo naprowadzana rakieta Hydra-70 DAGR</Polish>
             <German>Hydra-70 DAGR lasergelenkte Rakete</German>
             <Czech>Hydra-70 DAGR laserem naváděná střela</Czech>
@@ -80,11 +84,12 @@
             <Korean>Hydra-70 DAGR 레이저 유도 미사일</Korean>
             <Chinesesimp>九头蛇-70mm 制导航空火箭弹</Chinesesimp>
             <Chinese>九頭蛇-70 直接攻擊雷射導引飛彈</Chinese>
+            <Turkish>Hydra-70 DAGR Lazer Güdümlü Füze</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
             <Spanish>Misil Hellfire II AGM-114K</Spanish>
-            <French>Hellfire II AGM-114K</French>
+            <French>Missile Hellfire II AGM-114K</French>
             <Polish>Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K</German>
             <Czech>Hellfire II AGM-114K</Czech>
@@ -96,6 +101,7 @@
             <Korean>Hellfire II AGM-114K 미사일</Korean>
             <Chinesesimp>地狱火II型AGM-114K空地制导破甲弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 導彈</Chinese>
+            <Turkish>Hellfire II AGM-114K Füze</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_Short">
             <English>AGM-114K</English>
@@ -112,11 +118,12 @@
             <Korean>AGM-114K</Korean>
             <Chinesesimp>AGM-114K制导破甲弹</Chinesesimp>
             <Chinese>AGM-114K</Chinese>
+            <Turkish>AGM-114K</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
             <Spanish>Misil guiado por láser Hellfire II AGM-114K</Spanish>
-            <French>Missile à guidage laser Hellfire II AGM-114K</French>
+            <French>Missile Hellfire II AGM-114K, à guidage laser</French>
             <Polish>Laserowo naprowadzana rakieta Hellfire II AGM-114K</Polish>
             <German>Hellfire II AGM-114K Lasergelenkte Rakete</German>
             <Czech>Hellfire II AGM-114K laserem naváděná střela</Czech>
@@ -128,6 +135,7 @@
             <Korean>Hellfire II AGM-114K 레이저 유도 미사일</Korean>
             <Chinesesimp>地狱火II型AGM-114K空地制导破甲弹</Chinesesimp>
             <Chinese>地獄火II型 AGM-114K 雷射導引飛彈</Chinese>
+            <Turkish>Hellfire II AGM-114K Lazer Güdümlü Füze</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Off">
             <English>Off</English>
@@ -136,7 +144,7 @@
             <German>Aus</German>
             <Czech>Vypnout</Czech>
             <Portuguese>Desligado</Portuguese>
-            <French>Eteint</French>
+            <French>Éteint</French>
             <Hungarian>Ki</Hungarian>
             <Russian>Выкл.</Russian>
             <Italian>Spento</Italian>
@@ -144,6 +152,7 @@
             <Korean>끄기</Korean>
             <Chinesesimp>关闭</Chinesesimp>
             <Chinese>關閉</Chinese>
+            <Turkish>Kapalı</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
@@ -160,6 +169,7 @@
             <Korean>오직 플레이어만</Korean>
             <Chinesesimp>只有玩家</Chinesesimp>
             <Chinese>只有玩家</Chinese>
+            <Turkish>Sadece Oyuncular</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
@@ -176,6 +186,7 @@
             <Chinesesimp>玩家和AI</Chinesesimp>
             <Chinese>玩家和AI</Chinese>
             <Korean>플레이어와 AI</Korean>
+            <Turkish>Oyuncular ve AI</Turkish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Cycle Fire Mode</English>
@@ -183,7 +194,7 @@
             <Russian>Переключение режимов огня</Russian>
             <Czech>Přepínání režimů palby</Czech>
             <Polish>Przełącz tryb ognia</Polish>
-            <French>Cycle mode de tir</French>
+            <French>Guidage missiles - Changer le mode de tir</French>
             <Hungarian>Tüzelési mód váltása</Hungarian>
             <Italian>Alterna le modalità di fuoco</Italian>
             <Spanish>Cambiar modo de disparo</Spanish>
@@ -192,6 +203,7 @@
             <Korean>발사 방식 순환</Korean>
             <Chinesesimp>循环切换开火模式</Chinesesimp>
             <Chinese>循環切換開火模式</Chinese>
+            <Turkish>Ateşleme Modunu Değiştir</Turkish>
         </Key>
     </Package>
 </Project>

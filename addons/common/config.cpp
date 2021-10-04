@@ -10,22 +10,21 @@ class CfgPatches {
         author = CSTRING(ACETeam);
         authors[] = {"KoffeinFlummi"};
         url = ECSTRING(main,URL);
-        VERSION_CONFIG_COMMON;
+        VERSION_CONFIG;
     };
 };
 
-#include "CfgEventHandlers.hpp"
-
-#include "CfgLocationTypes.hpp"
-#include "CfgSounds.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgMagazines.hpp"
-
-#include "CfgMoves.hpp"
-#include "CfgVoice.hpp"
-#include "CfgUnitInsignia.hpp"
 #include "CfgEden.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgLocationTypes.hpp"
+#include "CfgMagazines.hpp"
+#include "CfgMoves.hpp"
+#include "CfgSounds.hpp"
+#include "CfgUnitInsignia.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgVoice.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgWrapperUI.hpp"
 
 class ACE_Rsc_Display_Base {
     idd = -1;
@@ -61,15 +60,14 @@ class ACE_Rsc_Control_Base {
 
 #include "ACE_Settings.hpp"
 #include "define.hpp"
-#include <ProgressScreen.hpp>
-#include <HintConfig.hpp>
-#include <RscInfoType.hpp>
+#include "ProgressScreen.hpp"
+#include "DisableMouseDialog.hpp"
+#include "HintConfig.hpp"
+#include "RscInfoType.hpp"
 #include "CompassControl.hpp"
 #include "CfgUIGrids.hpp"
 
-class ACE_Extensions {
-    extensions[] = {};
-};
+class ACE_Extensions {};
 
 class ACE_Tests {
     vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);

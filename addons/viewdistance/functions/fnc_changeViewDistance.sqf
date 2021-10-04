@@ -29,9 +29,11 @@ if (_objectViewDistanceCoeff isEqualType 0) then {
     if (_objectViewDistanceCoeff > 0) then {
         setObjectViewDistance (_objectViewDistanceCoeff * viewDistance);
     } else {
-        // Restore correct view distance when changing from FoV Based to Off
-        // Restoring directly inside PFH's self-exit resulted in the need of selecting another option to take effect
-        setObjectViewDistance GVAR(fovBasedPFHminimalViewDistance);
+        if (!isNil QGVAR(fovBasedPFHminimalViewDistance)) then {
+            // Restore correct view distance when changing from FoV Based to Off
+            // Restoring directly inside PFH's self-exit resulted in the need of selecting another option to take effect
+            setObjectViewDistance GVAR(fovBasedPFHminimalViewDistance);
+        };
     };
 } else {
     if (isNil QGVAR(fovBasedPFHminimalViewDistance)) then {

@@ -60,7 +60,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     ] call EFUNC(common,progressBar);
     _return = true;
 } else {
-    private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
+    private _displayName = getText (configOf _object >> "displayName");
 
     [[LSTRING(LoadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };

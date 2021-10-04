@@ -61,7 +61,7 @@ if (_autoSeek) then {
 
     // Detonation
     private _nearObjects = (_unit nearObjects _activationRadius) select {side _x == _activationSide && {_x != _unit} && {alive _x}};
-    if !(_nearObjects isEqualTo []) then {
+    if (_nearObjects isNotEqualTo []) then {
         createVehicle [EXPLOSIVES select _explosionSize, _unit, [], 0, "CAN_COLLIDE"];
         [_pfhID] call CBA_fnc_removePerFrameHandler;
         LOG("Explosion created, PFH removed");
@@ -77,7 +77,7 @@ if (_autoSeek) then {
     private _nearestObjects = nearestObjects [_unit, [], _range] select {side _x == _activationSide && {_x != _unit} && {alive _x}};
 
     #ifdef DEBUG_MODE_FULL
-        if !(isNil "_lastMove") then {
+        if (!isNil "_lastMove") then {
             drawLine3D [_unit modelToWorldVisual [0, 0, 1], _lastMove, [1, 0, 0, 1]];
         };
         for "_i" from 0 to 35 do {

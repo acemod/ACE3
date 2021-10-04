@@ -19,11 +19,16 @@ GVAR(isSpeedLimiter) = false;
         // Conditions: specific
         if !(ACE_player == driver vehicle ACE_player &&
             {vehicle ACE_player isKindOf 'Car' ||
-            {vehicle ACE_player isKindOf 'Tank'}}) exitWith {false};
+            {vehicle ACE_player isKindOf 'Tank'} ||
+            {vehicle ACE_player isKindOf 'Plane'}}) exitWith {false};
 
             GVAR(isUAV) = false;
         // Statement
-        [ACE_player, vehicle ACE_player] call FUNC(speedLimiter);
+        if (vehicle ACE_player isKindOf 'Plane') then {
+            [ACE_player, vehicle ACE_player] call FUNC(autoThrottle);
+        } else {
+            [ACE_player, vehicle ACE_player] call FUNC(speedLimiter);
+        };
         true
     };
 
@@ -33,7 +38,7 @@ GVAR(isSpeedLimiter) = false;
 
 ["ACE3 Vehicles", QGVAR(scrollUp), localize LSTRING(IncreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
-        GVAR(speedLimit) = round (GVAR(speedLimit) + 1) max 5;
+        GVAR(speedLimit) = round (GVAR(speedLimit) + GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
         true
     };
@@ -41,7 +46,7 @@ GVAR(isSpeedLimiter) = false;
 
 ["ACE3 Vehicles", QGVAR(scrollDown), localize LSTRING(DecreaseSpeedLimit), {
     if (GVAR(isSpeedLimiter)) then {
-        GVAR(speedLimit) = round (GVAR(speedLimit) - 1) max 5;
+        GVAR(speedLimit) = round (GVAR(speedLimit) - GVAR(speedLimiterStep)) max (5 max GVAR(speedLimiterStep));
         [["%1: %2", LSTRING(SpeedLimit), GVAR(speedLimit)]] call EFUNC(common,displayTextStructured);
         true
     };

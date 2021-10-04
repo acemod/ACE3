@@ -44,6 +44,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         [_onAttachText, 2] call EFUNC(common,displayTextStructured);
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
+    [QGVAR(attached), [_attachedItem, _itemClassname]] call CBA_fnc_localEvent;
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
@@ -74,7 +75,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
         };
         private _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
-        private _lineInterection = lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player];
+        private _lineInterection = ((lineIntersectsSurfaces [eyePos ACE_player, _virtualPosASL, ACE_player]) isNotEqualTo []);
 
         //Don't allow placing in a bad position:
         if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};

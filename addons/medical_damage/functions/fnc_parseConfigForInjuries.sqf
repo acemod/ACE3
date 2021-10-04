@@ -38,7 +38,7 @@ private _classID = 0;
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0) == 1;
     private _causeFracture = GET_NUMBER(_entry >> "causeFracture",0) == 1;
 
-    if !(_causes isEqualTo []) then {
+    if (_causes isNotEqualTo []) then {
         GVAR(woundClassNames) pushBack _className;
         GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping, _causeFracture];
         {
@@ -50,6 +50,8 @@ private _classID = 0;
 
 // --- parse damage types
 GVAR(allDamageTypesData) = [] call CBA_fnc_createNamespace;
+// cache for ammunition -> damageType
+GVAR(damageTypeCache) = [] call CBA_fnc_createNamespace;
 
 // minimum lethal damage collection, mapped to damageTypes
 private _damageTypesConfig = _injuriesConfigRoot >> "damageTypes";
@@ -75,7 +77,10 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
     private _selectionSpecific = GET_NUMBER(_damageTypeSubClassConfig >> "selectionSpecific",_selectionSpecificDefault);
 
     GVAR(allDamageTypesData) setVariable [_className, [_thresholds, _selectionSpecific > 0, _woundTypes]];
+    GVAR(damageTypeCache) setVariable [_className, _className];
+    GVAR(damageTypeCache) setVariable ["#"+_className, _className];
 
+    /*
     // extension loading
     private _minDamageThresholds = (_thresholds apply {str (_x select 0)}) joinString ":";
     private _amountThresholds = (_thresholds apply {str (_x select 1)}) joinString ":";
@@ -93,8 +98,10 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 
     // private _extensionRes = "ace_medical" callExtension _extensionArgs;
     // TRACE_1("",_extensionRes);
+    */
 } forEach configProperties [_damageTypesConfig, "isClass _x"];
 
+/*
 // extension loading
 {
     _x params ["_classID", "_selections", "_bleedingRate", "_pain", "_damageExtrema", "_causes", "_displayName"];
@@ -128,3 +135,4 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 } forEach GVAR(woundsData);
 
 // "ace_medical" callExtension "ConfigComplete";
+*/

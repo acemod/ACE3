@@ -23,6 +23,8 @@ class CfgVehicles {
     class I_C_Soldier_Para_2_F;
     class I_G_Soldier_LAT2_F;
     class I_crew_F;
+    class O_R_Gorka_F;
+    class I_L_Soldier_Base_F;
 
     class Civilian_F: Civilian {
         modelSides[] = {6};
@@ -276,6 +278,9 @@ class CfgVehicles {
     class C_IDAP_Man_Base_F: Civilian_F {
         modelSides[] = {6};
     };
+    class C_Story_Mechanic_01_F: Civilian_F {
+        modelSides[] = {6};
+    };
     class O_A_soldier_base_F: O_officer_F {
         modelSides[] = {6};
     };
@@ -286,6 +291,36 @@ class CfgVehicles {
         modelSides[] = {6};
     };
     class I_Story_Crew_F: I_crew_F {
+        modelSides[] = {6};
+    };
+    class C_E_Man_Base_F: Civilian_F {
+        modelSides[] = {6};
+    };
+    class C_E_LooterJacket_01_F: C_E_Man_Base_F {
+        modelSides[] = {6};
+    };
+    class O_R_Gorka_black_F: O_R_Gorka_F {
+        modelSides[] = {6};
+    };
+    class B_CBRN_Man_Base_F: B_Soldier_F {
+        modelSides[] = {6};
+    };
+    class I_L_Uniform_01_camo_F: I_G_Soldier_LAT_F {
+        modelSides[] = {6};
+    };
+    class I_L_Uniform_01_deserter_F: I_G_Soldier_F {
+        modelSides[] = {6};
+    };
+    class I_L_Uniform_01_tshirt_skull_F: I_L_Soldier_Base_F {
+        modelSides[] = {6};
+    };
+    class I_L_Uniform_01_tshirt_black_F: I_L_Uniform_01_tshirt_skull_F {
+        modelSides[] = {6};
+    };
+    class I_L_Uniform_01_tshirt_sport_F: I_L_Uniform_01_tshirt_skull_F {
+        modelSides[] = {6};
+    };
+    class I_L_Uniform_01_tshirt_olive_F: I_L_Uniform_01_tshirt_skull_F {
         modelSides[] = {6};
     };
 };

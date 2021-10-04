@@ -24,62 +24,17 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
-        class ACE_Actions;
     };
     class Mortar_01_base_F: StaticMortar {
+        class ace_csw {
+            proxyWeapon = QFUNC(csw_getProxyWeapon);
+            magazineLocation = "_target selectionPosition 'usti hlavne'";
+        };
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
-            };
-        };
-        class ACE_Actions: ACE_Actions {
-            class GVAR(unloadMagazine) {
-                displayName = CSTRING(unloadMortar);
-                distance = 2;
-                condition = QUOTE(_this call FUNC(canUnloadMagazine));
-                statement = QUOTE([ARR_3(_target,_player,5)] call FUNC(unloadMagazineTimer));
-                icon = "";
-                selection = "usti hlavne";
-            };
-            class GVAR(LoadActions) {
-                displayName = CSTRING(loadMortar);
-                distance = 2;
-                condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                statement = "";
-                icon = "";
-                selection = "usti hlavne";
-                class GVAR(loadMagazine_HE_Guided) {
-                    displayName = CSTRING(loadMagazine_HE_Guided);
-                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(canLoadMagazine));
-                    statement = QUOTE([ARR_4(_target,_player,8,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(loadMagazineTimer));
-                    icon = "";
-                };
-                class GVAR(loadMagazine_HE_LaserGuided) {
-                    displayName = CSTRING(loadMagazine_HE_LaserGuided);
-                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(canLoadMagazine));
-                    statement = QUOTE([ARR_4(_target,_player,8,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(loadMagazineTimer));
-                    icon = "";
-                };
-                class GVAR(loadMagazine_Illum) {
-                    displayName = CSTRING(loadMagazine_Illum);
-                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(canLoadMagazine));
-                    statement = QUOTE([ARR_4(_target,_player,5,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(loadMagazineTimer));
-                    icon = "";
-                };
-                class GVAR(loadMagazine_Smoke) {
-                    displayName = CSTRING(loadMagazine_Smoke);
-                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(canLoadMagazine));
-                    statement = QUOTE([ARR_4(_target,_player,2.5,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(loadMagazineTimer));
-                    icon = "";
-                };
-                class GVAR(loadMagazine_HE) {
-                    displayName = CSTRING(loadMagazine_HE);
-                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(canLoadMagazine));
-                    statement = QUOTE([ARR_4(_target,_player,2.5,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(loadMagazineTimer));
-                    icon = "";
-                };
             };
         };
         class ACE_SelfActions {

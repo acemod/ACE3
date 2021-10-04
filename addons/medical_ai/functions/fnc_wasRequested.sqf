@@ -16,4 +16,4 @@
  */
 
 private _healQueue = _this getVariable [QGVAR(healQueue), []];
-!(_healQueue isEqualTo [])
+(_healQueue isNotEqualTo [])

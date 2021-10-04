@@ -27,9 +27,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     };
 
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
-            ["tank", _this] call FUNC(handleDamage);
-        };
+        ["tank", _this] call FUNC(handleDamage);
     }];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
@@ -53,9 +51,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     };
 
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
-            ["tank", _this] call FUNC(handleDamage);
-        };
+        ["tank", _this] call FUNC(handleDamage);
     }];
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
@@ -63,9 +59,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     params ["_vehicle"];
 
     _vehicle addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
-            ["car", _this] call FUNC(handleDamage);
-        };
+        ["car", _this] call FUNC(handleDamage);
     }];
 }, nil, ["Wheeled_APC_F"], true] call CBA_fnc_addClassEventHandler;
 
@@ -79,8 +73,11 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 // secondary explosions
 ["AllVehicles", "killed", {
-    params ["_vehicle"];
-    if (_vehicle getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
+    params ["_vehicle", "", "", "_useEffects"];
+    if (
+        _useEffects &&
+        _vehicle getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]
+    ) then {
         if (GVAR(ammoCookoffDuration) == 0) exitWith {};
         ([_vehicle] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
         [_vehicle, _mags, _total] call FUNC(detonateAmmunition);
@@ -89,9 +86,13 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 // blow off turret effect
 ["Tank", "killed", {
-    if ((_this select 0) getVariable [QGVAR(enable),GVAR(enable)]) then {
+    params ["_vehicle", "", "", "_useEffects"];
+    if (
+        _useEffects &&
+        _vehicle getVariable [QGVAR(enable), GVAR(enable)] in [1, 2, true]
+    ) then {
         if (random 1 < 0.15) then {
-            (_this select 0) call FUNC(blowOffTurret);
+            _vehicle call FUNC(blowOffTurret);
         };
     };
 }] call CBA_fnc_addClassEventHandler;
@@ -108,3 +109,13 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 };
+
+// init eject from destroyed vehicle
+{
+    [_x, "init", {
+        params ["_vehicle"];
+        if (!alive _vehicle) exitWith {};
+        TRACE_2("ejectIfDestroyed init",_vehicle,typeOf _vehicle);
+        _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectIfDestroyed)}];
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach EJECT_IF_DESTROYED_VEHICLES;

@@ -4,10 +4,16 @@
     [LSTRING(Enabled), LSTRING(Enabled_Description)],
     LSTRING(DisplayName),
     true,
-    true,
-    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true, {
+        if (!_this) then {
+            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+            _staminaBarContainer ctrlSetFade 1;
+            _staminaBarContainer ctrlCommit 0;
+        };
+        [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)
+    },
     true // Needs mission restart
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(enableStaminaBar),
@@ -22,7 +28,22 @@
             _staminaBarContainer ctrlCommit 0;
         };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(fadeStaminaBar),
+    "CHECKBOX",
+    [LSTRING(FadeStaminaBar), LSTRING(FadeStaminaBar_Description)],
+    LSTRING(DisplayName),
+    true,
+    false, {
+        if (!_this && GVAR(enabled) && GVAR(enableStaminaBar)) then {
+            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+            _staminaBarContainer ctrlSetFade 0;
+            _staminaBarContainer ctrlCommit 0;
+        };
+    }
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(performanceFactor),
@@ -31,7 +52,7 @@
     LSTRING(DisplayName),
     [0, 5, 1, 1],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(recoveryFactor),
@@ -40,7 +61,7 @@
     LSTRING(DisplayName),
     [0, 5, 1, 1],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(loadFactor),
@@ -49,7 +70,7 @@
     LSTRING(DisplayName),
     [0, 5, 1, 1],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(terrainGradientFactor),
@@ -58,7 +79,7 @@
     LSTRING(DisplayName),
     [0, 5, 1, 1],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(swayFactor),
@@ -67,4 +88,4 @@
     LSTRING(DisplayName),
     [0, 5, 1, 1],
     true
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
