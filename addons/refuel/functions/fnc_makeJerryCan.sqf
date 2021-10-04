@@ -100,3 +100,14 @@ _action = [QGVAR(Disconnect),
     [0, 0, 0],
     REFUEL_ACTION_DISTANCE] call EFUNC(interact_menu,createAction);
 [_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
+
+// Add check fuel
+_action = [QGVAR(CheckFuel),
+        localize LSTRING(CheckFuel),
+        QPATHTOF(ui\icon_refuel_interact.paa),
+        {[_player, _target] call FUNC(checkFuel)},
+        {[_player, _target] call FUNC(canCheckFuel)},
+        {}, [], [0,0,0],
+        REFUEL_ACTION_DISTANCE
+] call EFUNC(interact_menu,createAction);
+[_target, 0, ["ACE_MainActions", QGVAR(Refuel)], _action] call EFUNC(interact_menu,addActionToObject);
