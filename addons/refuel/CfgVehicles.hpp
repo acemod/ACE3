@@ -1,6 +1,3 @@
-#define MACRO_NOZZLE_ACTIONS \
-
-
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {

@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Nozzle <OBJECT>
- * 2: Refuel container (optional) <BOOL>
+ * 2: Refuel container <BOOL> (default: false)
  *
  * Return Value:
  * Can turn on <BOOL>
@@ -44,5 +44,5 @@ private _isFull = if (_refuelContainer) then {
     {[_source] call FUNC(getFuel) != 0} &&
     {!isNull _sink} &&
     {!_isFull} &&
-    {!(_refuelContainer && {_source == _sink})} && // No endless container ot itself loop
+    {!(_refuelContainer && {_source == _sink})} && // No endless container of itself loop
     {!_refuelContainer || _isContainer} // Container refueling only if it actually is one

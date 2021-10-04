@@ -4,7 +4,7 @@
  * Disconnect a fuel nozzle and make unit pick it up.
  *
  * Arguments:
- * 0: Unit <OBJECT> (optional)
+ * 0: Unit <OBJECT> (default: objNull - drop on floor)
  * 1: Nozzle <OBJECT>
  *
  * Return Value:
