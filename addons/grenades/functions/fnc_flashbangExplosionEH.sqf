@@ -54,10 +54,6 @@ _affected = _affected - [ACE_player];
 
         [_unit, true] call EFUNC(common,disableAI);
 
-        {
-            _unit setSkill [_x, ((_unit skill _x) / 50)];
-        } forEach SUBSKILLS;
-
         // Make AI try to look away
         private _dirToFlash = _unit getDir _grenadePosASL;
         _unit setDir (_dirToFlash + linearConversion [0.2, 1, _strength, 40, 135] * selectRandom [-1, 1]);
@@ -65,6 +61,9 @@ _affected = _affected - [ACE_player];
         private _reactionDebounce = _unit getVariable [QGVAR(reactionDebounce), 0];
         _unit setVariable [QGVAR(reactionDebounce), CBA_missionTime + (7 * _strength)];
         if (_reactionDebounce < CBA_missionTime) then {
+            {
+                _unit setSkill [_x, ((_unit skill _x) / 50)];
+            } forEach SUBSKILLS;
             [{
                 params ["_unit"];
                 CBA_missiontime >= _unit getVariable [QGVAR(reactionDebounce), 0]
