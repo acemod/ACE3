@@ -61,7 +61,7 @@ GVAR(statsPagesRight) =  [0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 
 // Add the items the player has to virtualItems
-for "_index" from 0 to 10 do {
+for "_index" from 0 to 14 do {
     switch (_index) do {
         // primary, secondary, handgun weapons
         case IDX_VIRT_WEAPONS: {
@@ -107,6 +107,16 @@ for "_index" from 0 to 10 do {
                     };
                 };
             } forEach _magsArray;
+        };
+
+        // Assigned items
+        case IDX_VIRT_MAP;
+        case IDX_VIRT_COMPASS;
+        case IDX_VIRT_RADIO;
+        case IDX_VIRT_WATCH;
+        case IDX_VIRT_COMMS: {
+            private _item = (assignedItems GVAR(center)) select (_index - 10);
+            (GVAR(virtualItems) select _index) pushBackUnique (_item);
         };
 
         // Inventory items
