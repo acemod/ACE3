@@ -23,6 +23,7 @@ if (isNull _unit ||
     {!local _unit} ||
     {!alive _object} ||
     {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} ||
+    {!isNull (_object getVariable [QGVAR(nozzle), objNull])} || // Doesn't have another nozzle attached (jerry cans)
     {typeOf _object == QGVAR(fuelNozzle) && {!isNull (attachedTo _object)}} || // Not carried by someone else
     {([_unit, _object] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
