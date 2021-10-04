@@ -173,11 +173,13 @@ for "_index" from 0 to 15 do {
 
 {
     private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
-
-    if !(_simulationType in ["NVGoggles", "Weapon"]) then {
-        private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
-        GVAR(currentItems) set [_index, _x];
+    if (_simulationType == "NVGoggles") then { continue };
+    if (_x isKindOf ["UavTerminal_base", configFile >> "CfgWeapons"]) then {
+        GVAR(currentItems) set [14, _x];
+        continue
     };
+    private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
+    GVAR(currentItems) set [_index, _x];
 } forEach (assignedItems GVAR(center));
 
 GVAR(currentWeaponType) = switch true do {
