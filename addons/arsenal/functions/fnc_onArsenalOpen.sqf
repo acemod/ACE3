@@ -114,7 +114,6 @@ for "_index" from 0 to 14 do {
         case IDX_VIRT_COMPASS: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 1) };
         case IDX_VIRT_WATCH: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 2) };
         case IDX_VIRT_RADIO: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 3) };
-
         case IDX_VIRT_COMMS: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 4) };
 
         // Inventory items
@@ -174,11 +173,13 @@ for "_index" from 0 to 15 do {
 {
     private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
     if (_simulationType == "NVGoggles") then { continue };
+    // UAV terminals need special handling because of _simulationType == "Weapon", but so do binos
     if (_x isKindOf ["UavTerminal_base", configFile >> "CfgWeapons"]) then {
         GVAR(currentItems) set [14, _x];
         continue
     };
     private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
+    // _index ends up being 9 for binos, so that gets set twice, but no harm done
     GVAR(currentItems) set [_index, _x];
 } forEach (assignedItems GVAR(center));
 
