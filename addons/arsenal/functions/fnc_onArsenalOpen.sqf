@@ -110,14 +110,12 @@ for "_index" from 0 to 14 do {
         };
 
         // Assigned items
-        case IDX_VIRT_MAP;
-        case IDX_VIRT_COMPASS;
-        case IDX_VIRT_RADIO;
-        case IDX_VIRT_WATCH;
-        case IDX_VIRT_COMMS: {
-            private _item = (assignedItems GVAR(center)) select (_index - 10);
-            (GVAR(virtualItems) select _index) pushBackUnique (_item);
-        };
+        case IDX_VIRT_MAP: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 0) };
+        case IDX_VIRT_COMPASS: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 1) };
+        case IDX_VIRT_WATCH: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 2) };
+        case IDX_VIRT_RADIO: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 3) };
+
+        case IDX_VIRT_COMMS: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 4) };
 
         // Inventory items
         case IDX_VIRT_ITEMS_ALL: {
