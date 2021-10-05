@@ -56,7 +56,9 @@ turnIn = "call cba_xeh_fnc_turnIn"; \
 turnOut = "call cba_xeh_fnc_turnOut"; \
 deleted = "call cba_xeh_fnc_deleted"; \
 disassembled = "call cba_xeh_fnc_disassembled"; \
-Suppressed = "call cba_xeh_fnc_Suppressed";
+Suppressed = "call cba_xeh_fnc_Suppressed"; \
+gestureChanged = "call cba_xeh_fnc_gestureChanged"; \
+gestureDone = "call cba_xeh_fnc_gestureDone";
 
 /*
    MACRO: DELETE_EVENTHANDLERS
@@ -111,4 +113,6 @@ turnIn = ""; \
 turnOut = ""; \
 deleted = ""; \
 disassembled = ""; \
-Suppressed = "";
+Suppressed = ""; \
+gestureChanged = ""; \
+gestureDone = ""
