@@ -93,9 +93,9 @@ GVAR(bloodTickCounter) = 0;
         [QUOTE(ADDON), _volume, _status] call EFUNC(common,setHearingCapability);
 
         ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
-    } else {
-        [false, _unit] call EFUNC(common,setVolume);
-        [QUOTE(ADDON), _volume, false] call EFUNC(common,setHearingCapability);
+    } else { // camera view
+        [true, _unit] call EFUNC(common,setVolume);
+        [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
