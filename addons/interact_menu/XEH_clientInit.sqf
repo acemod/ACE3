@@ -32,7 +32,7 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Setting changed added here so color setup happens once at init

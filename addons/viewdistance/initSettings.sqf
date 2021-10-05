@@ -14,7 +14,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     _category,
     [0, 10000, 0, -1],
     0,
-    {[QGVAR(viewDistanceOnFoot), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[true] call FUNC(adaptViewDistance)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -23,7 +23,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     _category,
     [0, 10000, 0, -1],
     0,
-    {[QGVAR(viewDistanceLandVehicle), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[true] call FUNC(adaptViewDistance)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -32,7 +32,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     _category,
     [0, 10000, 0, -1],
     0,
-    {[QGVAR(viewDistanceAirVehicle), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[true] call FUNC(adaptViewDistance)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -41,7 +41,7 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     _category,
     [500, 12000, 10000, -1],
     1,
-    {[QGVAR(limitViewDistance), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[true] call FUNC(adaptViewDistance)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -50,5 +50,5 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     _category,
     [[0, 1, 2, 3, 4, 5, 6], [LSTRING(object_off), LSTRING(object_verylow), LSTRING(object_low), LSTRING(object_medium),LSTRING(object_high), LSTRING(object_veryhigh), LSTRING(object_fovBased)], 0],
     0,
-    {[QGVAR(objectViewDistanceCoeff), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    {[true] call FUNC(adaptViewDistance)}
 ] call CBA_fnc_addSetting;

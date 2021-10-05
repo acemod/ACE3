@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Hold on a little bit longer to ensure anims will work
     [{
         GVAR(captivityEnabled) = true;

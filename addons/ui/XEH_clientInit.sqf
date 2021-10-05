@@ -11,7 +11,7 @@ call FUNC(compileConfigUI);
 GVAR(elementsSet) = call CBA_fnc_createNamespace;
 
 // Attach all event handlers where UI has to be updated
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Initial settings
     [false] call FUNC(setElements);
 

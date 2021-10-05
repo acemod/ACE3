@@ -12,7 +12,7 @@ GVAR(laserClassesCache) = [] call CBA_fnc_createNamespace;
 GVAR(redLaserUnits) = [];
 GVAR(greenLaserUnits) = [];
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // If not enabled, dont't add draw eventhandler or PFEH (for performance)
     if (!GVAR(enabled)) exitWith {
         ["CBA_attachmentSwitched", {
@@ -45,7 +45,7 @@ GVAR(greenLaserUnits) = [];
             GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
             GVAR(greenLaserUnits) deleteAt (GVAR(greenLaserUnits) find _unit);
         };
-        
+
         private _laser = [(_unit weaponAccessories _weapon) select 1] param [0, ""];
         if (_laser isEqualTo "") exitWith {
             GVAR(redLaserUnits) deleteAt (GVAR(redLaserUnits) find _unit);
