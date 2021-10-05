@@ -91,7 +91,7 @@ class CfgGlasses {
         ACE_Protection = 0;
         ACE_DustPath = QPATHTOEF(goggles,textures\fx\dust\%1.paa);
     };
-	class rhsusf_shemagh_base: G_Combat {
+    class rhsusf_shemagh_base: G_Combat {
         ACE_Overlay = "";
         ACE_OverlayDirt = "";
         ACE_OverlayCracked = "";

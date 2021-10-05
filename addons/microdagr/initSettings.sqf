@@ -8,7 +8,7 @@
     true, // isGlobal
     {[QGVAR(mapDataAvailable), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // require mission restart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(waypointPrecision), "LIST",
@@ -18,4 +18,4 @@
     true, // isGlobal
     {[QGVAR(waypointPrecision), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // require mission restart
-] call cba_settings_fnc_init;
+] call CBA_fnc_addSetting;

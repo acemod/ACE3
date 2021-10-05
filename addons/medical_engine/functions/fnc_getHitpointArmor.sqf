@@ -21,7 +21,7 @@ params ["_unit", "_hitpoint"];
 private _uniform = uniform _unit;
 // If unit is naked, use its underwear class instead
 if (_uniform isEqualTo "") then {
-    _uniform = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "nakedUniform");
+    _uniform = getText (configOf _unit >> "nakedUniform");
 };
 
 private _gear = [

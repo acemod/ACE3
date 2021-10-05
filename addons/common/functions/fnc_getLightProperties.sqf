@@ -22,7 +22,7 @@
 
 params ["_vehicle", "_light"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Reflectors" >> _light;
+private _config = configOf _vehicle >> "Reflectors" >> _light;
 
 private _intensity = getNumber (_config >> "intensity");
 private _position = getText (_config >> "position");

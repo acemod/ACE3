@@ -31,6 +31,9 @@ _unit setVariable [VAR_UNCON, _active, true];
 // Stop AI firing at unconscious units in most situations (global effect)
 [_unit, "setHidden", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
 
+// Block radio on unconsciousness for compatibility with captive module
+[_unit, "blockRadio", "ace_unconscious", _active] call EFUNC(common,statusEffect_set);
+
 if (_active) then {
     // Don't bother setting this if not used
     if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
@@ -52,9 +55,20 @@ if (_active) then {
         // Do "Unlock controls" user action, co-pilot will then have to do the "Take Controls" actions
         _unit action ["UnlockVehicleControl", vehicle _unit];
     };
+
+    // Disable AI aiming
+    if (!isPlayer _unit && {_unit checkAIFeature "WEAPONAIM"}) then {
+        _unit disableAI "WEAPONAIM";
+        _unit setVariable [QGVAR(reenableWeaponAim), true, true];
+    };
 } else {
     // Unit has woken up, no longer need to track this
     _unit setVariable [QEGVAR(medical,lastWakeUpCheck), nil];
+
+    // Reenable AI aiming
+    if (_unit getVariable [QGVAR(reenableWeaponAim), false]) then {
+        _unit enableAI "WEAPONAIM";
+    };
 };
 
 // This event doesn't correspond to unconscious in statemachine

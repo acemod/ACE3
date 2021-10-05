@@ -80,8 +80,7 @@ class CfgWeapons {
     };
 
     // M14
-    class DMR_06_base_F: Rifle_Long_Base_F {};
-    class srifle_DMR_06_camo_F: DMR_06_base_F {
+    class DMR_06_base_F: Rifle_Long_Base_F {
         ACE_barrelLength = 558.8;
         ACE_barrelTwist = 304.8;
         initSpeed = -0.999395;

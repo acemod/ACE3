@@ -111,6 +111,7 @@
             <Russian>Виртуальный предмет недоступен</Russian>
             <Portuguese>Nenhum item virtual disponível</Portuguese>
             <Czech>Není dostupný žádný virtuální předmět</Czech>
+            <Turkish>Kullanılabilir sanal öğe yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSaveText">
             <English>Save</English>
@@ -156,6 +157,7 @@
             <Chinese>[Shift+左鍵來保存至任務預設]</Chinese>
             <Italian>[Shift+Click per salvare la missione con gli equipaggiamenti predefiniti]</Italian>
             <Czech>[Shift+Klik pro uložení jako standardního vybavení pro misi]</Czech>
+            <Turkish>[Shift+Click varsayılan kıyafetlere kaydet]</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameText">
             <English>Rename</English>
@@ -315,6 +317,7 @@
             <Russian>Комплекты экипировки, предоставляемые создателем миссии</Russian>
             <Portuguese>Loadouts definidos pelo criador da missão</Portuguese>
             <Czech>Sady vybavení od autora mise</Czech>
+            <Turkish>Görevi hazırlayan kişi tarafından kullanıma sunulan teçhizatlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabSharedLoadoutsText">
             <English>Public loadouts</English>
@@ -385,30 +388,64 @@
             <German>Nach Tragelast sortieren</German>
             <French>Trier par capacité de chargement</French>
             <Japanese>容量で並び替え</Japanese>
+            <Spanish>Ordenar por capacidad</Spanish>
+            <Russian>Сортировка по вместимости</Russian>
+            <Polish>Sortuj po rozmiarze</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
             <English>Sort by accuracy</English>
             <German>Nach Genauigkeit sortieren</German>
             <French>Trier par précision</French>
             <Japanese>精度で並び替え</Japanese>
+            <Turkish>Isabet doğruluğuna göre sırala</Turkish>
+            <Spanish>Ordenar por precisión</Spanish>
+            <Russian>Сортировка по точности</Russian>
+            <Polish>Sortuj po celności</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
             <English>Sort by rate of fire</English>
             <German>Nach Schussrate sortieren</German>
             <French>Trier par cadence de tir</French>
             <Japanese>連射速度で並び替え</Japanese>
+            <Turkish>Atış hızına göre sırala</Turkish>
+            <Spanish>Ordenar por cadencia de tiro</Spanish>
+            <Russian>Сортировка по темпу стрельбы</Russian>
+            <Polish>Sortuj po szybkostrzelności</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
             <German>Nach Vergrößerung sortieren</German>
             <French>Trier par grossissement</French>
             <Japanese>倍率で並び替え</Japanese>
+            <Spanish>Ordenar por magnificación</Spanish>
+            <Russian>Сортировка по кратности приближения</Russian>
+            <Polish>Sortuj po przybliżeniu</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagCountText">
             <English>Sort by ammo count</English>
             <German>Nach Munitionszahl sortieren</German>
             <French>Trier par nombre de munitions</French>
             <Japanese>装弾数で並び替え</Japanese>
+            <Turkish>Mermi sayısına göre sırala</Turkish>
+            <Spanish>Ordenar por cantidad de munición</Spanish>
+            <Russian>Сортировка по количеству боеприпасов</Russian>
+            <Polish>Sortuj po ilości amunicji</Polish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
+            <English>Sort by ballistic protection</English>
+            <French>Trier par protection balistique</French>
+            <Japanese>防弾性能で並び替え</Japanese>
+            <Spanish>Ordenar por protección balística</Spanish>
+            <Russian>Сортировка по баллистической защите</Russian>
+            <Polish>Sortuj po ochronie balistycznej</Polish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
+            <English>Sort by explosive protection</English>
+            <French>Trier par résistance aux explosifs</French>
+            <Japanese>防爆性能で並び替え</Japanese>
+            <Spanish>Ordenar por protección de explosivos</Spanish>
+            <Russian>Сортировка по защите от взрывов</Russian>
+            <Polish>Sortuj po ochronie przeciw wybuchom</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -488,6 +525,7 @@
             <Russian>Список комплекта экипировки по умолчанию экспортирован в буфер</Russian>
             <Portuguese>A lista de loadouts padrões foi exportada pra área de transferência</Portuguese>
             <Czech>Seznam standardních sad vybavení byl exportován do schránky</Czech>
+            <Turkish>Varsayılan kıyafetler listesi panoya dışa aktar</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_exportCurrent">
             <English>Current loadout exported to clipboard</English>
@@ -503,6 +541,7 @@
             <Russian>Текущий список комплекта экипировки экспортирован в буфер</Russian>
             <Portuguese>Loadout atual foi exportado pra área de transferência</Portuguese>
             <Czech>Současná sada vybavení byla exportována do schránky</Czech>
+            <Turkish>Geçerli kıyafeti panoya dışa aktar</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_importFormatError">
             <English>Wrong format provided</English>
@@ -518,6 +557,7 @@
             <Russian>Неверный формат импорта</Russian>
             <Portuguese>Format incorreto fornecido</Portuguese>
             <Czech>Byl dodán špatný formát</Czech>
+            <Turkish>Yanlış format </Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_importedDefault">
             <English>Default loadouts list imported from clipboard</English>
@@ -533,6 +573,7 @@
             <Russian>Список комплекта экипировки по умолчанию импортирован из буфера</Russian>
             <Portuguese>A lista de loadouts padrões foi importada da área de transferência</Portuguese>
             <Czech>Seznam standardních sad vybavení byl importován ze schránky</Czech>
+            <Turkish>Varsayılan kıyafetler listesini içe aktar</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_importedCurrent">
             <English>Loadout imported from clipboard</English>
@@ -548,6 +589,7 @@
             <Russian>Список комплекта экипировки импортирован из буфера</Russian>
             <Portuguese>Loadout importado da área de transferência</Portuguese>
             <Czech>Sada vybavení byla importována ze schránky</Czech>
+            <Turkish>Kıyafetleri içe aktar</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutDeleted">
             <English>The following loadout was deleted:</English>
@@ -755,6 +797,7 @@
             <Russian>Разрешить комплекты по умолчанию</Russian>
             <Portuguese>Permitir loadouts padrões</Portuguese>
             <Czech>Povolit standardní sady vybavení</Czech>
+            <Turkish>Varsayılan kıyafetlere izin ver</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_allowSharingSetting">
             <English>Allow loadout sharing</English>
@@ -770,6 +813,7 @@
             <Russian>Разрешить публикацию комплектов</Russian>
             <Portuguese>Permitir compartilhar loadouts</Portuguese>
             <Czech>Povolit sdílení sad vybavení</Czech>
+            <Turkish>Kıyafet paylaşmaya izin ver</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_printToRPTSetting">
             <English>Log missing / unavailable items</English>
@@ -849,6 +893,7 @@
             <Russian>Разрешить использование вкладки комплектов экипировки по умолчанию</Russian>
             <Portuguese>Permite o uso da aba de loadouts padrões</Portuguese>
             <Czech>Povolit používání záložky standardních sad vybavení</Czech>
+            <Turkish>Varsayılan Kıyafetler sekmesinin kullanımına izin ver</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_modIconsTooltip">
             <English>Show / hide mod icons for the left panel</English>
@@ -958,6 +1003,7 @@
             <Russian>Нет комплектов для импорта</Russian>
             <Portuguese>Nenhum loadout para importar.</Portuguese>
             <Czech>Žádné sadz vybavení k importu.</Czech>
+            <Turkish>Hiç bir kıyafet içe aktarılmadı.</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_Mission">
             <English>ACE Arsenal</English>
@@ -1069,7 +1115,6 @@
             <Spanish>Niveles de potasio</Spanish>
             <German>Kaliumspiegel</German>
             <French>Taux de potassium</French>
-            <Japanese>カリウム レベル</Japanese>
             <Chinesesimp>钾水平</Chinesesimp>
             <Chinese>鉀水平</Chinese>
             <Italian>Ilvello di potassio</Italian>
@@ -1078,6 +1123,7 @@
             <Portuguese>Níveis de Potássio</Portuguese>
             <Czech>Úrovně draslíku</Czech>
             <Turkish>Potasyum seviyeleri</Turkish>
+            <Japanese>カリウム含有量</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
             <English>Magnification</English>
@@ -1355,6 +1401,7 @@
             <Russian>Задержка детонации</Russian>
             <Polish>Opoźnienie zapalnika</Polish>
             <Japanese>信管設定時間</Japanese>
+            <Spanish>Tiempo de espoleta</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
@@ -1363,6 +1410,7 @@
             <Russian>Детонация от удара</Russian>
             <Polish>Detonuj przy uderzeniu</Polish>
             <Japanese>着発信管</Japanese>
+            <Spanish>Detona mediante impacto</Spanish>
         </Key>
     </Package>
 </Project>

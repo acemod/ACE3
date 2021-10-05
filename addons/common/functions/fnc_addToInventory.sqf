@@ -24,26 +24,43 @@ params ["_unit", "_classname", ["_container", ""], ["_ammoCount", -1]];
 private _type = _classname call FUNC(getItemType);
 
 private _canAdd = false;
+private _canFitWeaponSlot = false;
 private _addedToUnit = false;
 
 switch (_container) do {
     case "vest": {
-        _canAdd = _unit canAddItemToVest _classname;
+        _canAdd = [_unit, _classname, 1, false, true, false] call CBA_fnc_canAddItem;
     };
     case "backpack": {
-        _canAdd = _unit canAddItemToBackpack _classname;
+        _canAdd = [_unit, _classname, 1, false, false, true] call CBA_fnc_canAddItem;
     };
     case "uniform": {
-        _canAdd = _unit canAddItemToUniform _classname;
+        _canAdd = [_unit, _classname, 1, true, false, false] call CBA_fnc_canAddItem;
     };
     default {
-        _canAdd = _unit canAdd _classname;
+        _canAdd = [_unit, _classname] call CBA_fnc_canAddItem;
+        if (_canAdd) then {
+            switch (_type select 1) do {
+                case "primary": {
+                    _canFitWeaponSlot = primaryWeapon _unit == "";
+                };
+                case "secondary": {
+                    _canFitWeaponSlot = secondaryWeapon _unit == "";
+                };
+                case "handgun": {
+                    _canFitWeaponSlot = handgunWeapon _unit == "";
+                };
+                case "binocular": {
+                    _canFitWeaponSlot = binocular _unit == "";
+                };
+            };
+        };
     };
 };
 
 switch (_type select 0) do {
     case "weapon": {
-        if (_canAdd) then {
+        if (_canAdd || {_canFitWeaponSlot}) then {
             _addedToUnit = true;
 
             switch (_container) do {
@@ -57,7 +74,21 @@ switch (_type select 0) do {
                     (uniformContainer _unit) addWeaponCargoGlobal [_classname, 1];
                 };
                 default {
-                    _unit addWeaponGlobal _classname;
+                    if (_canFitWeaponSlot) then {
+                        _unit addWeaponGlobal _classname;
+                    } else {
+                        {
+                            _x params ["_parameters", "_container"];
+
+                            if (_parameters call CBA_fnc_canAddItem) exitWith {
+                                _container addWeaponCargoGlobal [_classname, 1]; // addWeaponGlobal will replace the weapon currently in a slot
+                            };
+                        } forEach [
+                            [[_unit, _classname, 1, false, false, true], backpackContainer _unit],
+                            [[_unit, _classname, 1, false, true, false], vestContainer _unit],
+                            [[_unit, _classname, 1, true, false, false], uniformContainer _unit]
+                        ];
+                    };
                 };
             };
         } else {

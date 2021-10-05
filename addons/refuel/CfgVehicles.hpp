@@ -80,6 +80,7 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 1;
         model = QPATHTOF(data\nozzle.p3d);
+        destrType = "DestructNo";
     };
 
     class All;
