@@ -96,9 +96,6 @@ GVAR(bloodTickCounter) = 0;
     } else {
         [false, _unit] call EFUNC(common,setVolume);
         [QUOTE(ADDON), _volume, false] call EFUNC(common,setHearingCapability);
-
-        // Disable TFAR voice manually since setVolume will re-enable it
-        _unit setVariable ["tf_voiceVolume", 0, true];
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
