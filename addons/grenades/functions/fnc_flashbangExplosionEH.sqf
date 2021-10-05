@@ -58,19 +58,23 @@ _affected = _affected - [ACE_player];
         private _dirToFlash = _unit getDir _grenadePosASL;
         _unit setDir (_dirToFlash + linearConversion [0.2, 1, _strength, 40, 135] * selectRandom [-1, 1]);
 
-        private _reactionDebounce = _unit getVariable [QGVAR(reactionDebounce), 0];
-        _unit setVariable [QGVAR(reactionDebounce), CBA_missionTime + (7 * _strength)];
-        if (_reactionDebounce < CBA_missionTime) then {
+        private _flashReactionDebounce = _unit getVariable [QGVAR(flashReactionDebounce), 0];
+        _unit setVariable [QGVAR(flashReactionDebounce), CBA_missionTime + (7 * _strength)];
+        if (_flashReactionDebounce < CBA_missionTime) then {
+            // Not used interally but could be useful for other mods
+            _unit setVariable [QGVAR(flashStrength), _strength, true];
             {
                 _unit setSkill [_x, ((_unit skill _x) / 50)];
             } forEach SUBSKILLS;
             [{
                 params ["_unit"];
-                CBA_missiontime >= _unit getVariable [QGVAR(reactionDebounce), 0]
+                CBA_missiontime >= _unit getVariable [QGVAR(flashReactionDebounce), 0]
             },{
                 params ["_unit"];
 
-                //Make sure we don't enable AI for unconscious units
+                _unit setVariable [QGVAR(flashStrength), 0, true];
+
+                // Make sure we don't enable AI for unconscious units
                 if !(_unit getVariable ["ace_isUnconscious", false]) then {
                     [_unit, false] call EFUNC(common,disableAI);
                 };
