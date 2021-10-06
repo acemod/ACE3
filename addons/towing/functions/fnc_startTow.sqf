@@ -21,7 +21,7 @@ params ["_unit", "_target", "_ropeClass"];
 GVAR(attachHelper) = "Sign_Sphere10cm_F" createVehicleLocal [0, 0, 0];
 [_unit] call EFUNC(weaponselect,putWeaponAway);
 
-private _ropeLength = getNumber (configFile >> "CfgWeapons" >> _ropeClass >> QEGVAR(logistics_rope,ropeLength));
+private _ropeLength = getNumber (configFile >> "CfgWeapons" >> _ropeClass >> QEGVAR(logistics_rope,length));
 if (_ropeLength == 0) then {
     _ropeLength = 3;
 };
