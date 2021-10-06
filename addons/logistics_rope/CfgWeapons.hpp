@@ -1,4 +1,6 @@
 class CfgWeapons {
+	class CBA_MiscItem_ItemInfo;
+    class ACE_ItemCore;
     class ACE_ropeBase: ACE_ItemCore {
         scope = 1;
         picture = QPATHTOF(data\m_rope_ca);
