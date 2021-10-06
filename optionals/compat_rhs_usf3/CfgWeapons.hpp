@@ -157,6 +157,9 @@ class CfgWeapons {
         ACE_twistDirection = 0;
         ACE_barrelLength = 508.0;
     };
+    class rhs_weap_m32_Base_F : Rifle_Base_F {
+        ace_overheating_jamTypesAllowed = ["Fire","Dud"];
+    };
     class SMG_02_base_F;
     class rhsusf_weap_MP7A1_base_f: SMG_02_base_F {
         ACE_barrelLength = 180;
@@ -180,6 +183,10 @@ class CfgWeapons {
         ACE_barrelTwist = 248.92;
         ACE_barrelLength = 124.46;
     };
+    class rhs_weap_M320_Base_F: Pistol_Base_F {
+        ace_overheating_jamTypesAllowed = ["Fire","Dud"];
+    };
+
     // RHS sniper scopes
     class ItemCore;
     class InventoryOpticsItem_Base_F;
