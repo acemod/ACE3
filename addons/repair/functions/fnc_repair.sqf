@@ -137,15 +137,17 @@ if (_callbackProgress == "") then {
     _callbackProgress = {
         (_this select 0) params ["_caller", "_target", "", "", "", "", "_claimObjectsAvailable"];
         (
-            (alive _target) &&
-            // make sure vehicle doesn't drive off
-            {(abs speed _target) < 1} &&
-            // make sure claim objects are still available
-            {_claimObjectsAvailable findIf {!alive _x || {_x getVariable [QEGVAR(common,owner), objNull] isNotEqualTo _caller}} == -1}
+            (alive _target) && 
+            {(abs speed _target) < 1} && // make sure vehicle doesn't drive off
+            {_claimObjectsAvailable findIf {!alive _x || {_x getVariable [QEGVAR(common,owner), objNull] isNotEqualTo _caller}} == -1} // make sure claim objects are still available
         )
     };
 } else {
-    _callbackProgress = missionNamespace getVariable [_callbackProgress, compile _callbackProgress];
+    if (isNil _callbackProgress) then {
+        _callbackProgress = compile _callbackProgress;
+    } else {
+        _callbackProgress = missionNamespace getVariable _callbackProgress;
+    };
 };
 
 
