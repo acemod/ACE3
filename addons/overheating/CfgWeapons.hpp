@@ -6,6 +6,14 @@ class CfgWeapons {
         GVAR(closedBolt) = 1;
     };
 
+    class Pistol_Base_F : Pistol {};
+    class hgun_Pistol_heavy_02_F : Pistol_Base_F {
+        GVAR(jamTypesAllowed) = ["Fire","Dud"];
+    };
+   class hgun_Pistol_Signal_F : Pistol_Base_F {
+        GVAR(jamTypesAllowed) = ["Fire","Dud"];
+    };
+
     class RifleCore;
     class Rifle: RifleCore {
         //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
@@ -84,5 +92,6 @@ class CfgWeapons {
     };
     class sgun_HunterShotgun_01_base_F : Rifle_Long_Base_F {
         GVAR(closedBolt) = 1;
+        GVAR(jamTypesAllowed) = ["Fire","Dud"];
     };
 };

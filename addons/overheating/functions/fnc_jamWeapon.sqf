@@ -28,10 +28,29 @@ _jammedWeapons pushBack _weapon;
 
 _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 
-// Set jam type, cookoffs only happen on Fire and Dud, dud rounds are lost on jam clear.
+// Get jam types, select from available types
+// Cookoffs only happen on Fire and Dud, dud rounds are lost on jam clear.
 // Reduce chance of duds as temp increases (functionally increasing the chance of the others but with fewer commands)
 private _temp = 1 max (_unit getVariable [format [QGVAR(%1_temp), _weapon], 0]);
-private _jamType = selectRandomWeighted ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
+private _jamTypesAllowed = getArray (configFile >> 'CfgWeapons' >> currentWeapon _player >> QGVAR(jamTypesAllowed));
+
+if(_jamTypesAllowed == []) then {
+    _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
+} else {
+    for "_i" from count _jamTypesAllowed to 1 step -1 do {
+        if !(_i in ["Eject", "Extract", "Feed", "Fire", "Dud"]) exitWith { // check config values and switch to default values if unusual value found
+            diag_log text format ["[ACE] ERROR: Weapon '%1' has unexpected value %2 in GVAR(jamTypesAllowed). Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.", _weapon, _i];
+            _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
+        };
+        if (_jamTypesAllowed select _i == "Dud") then {
+            _jamTypesAllowed insert [_i, [5 / (_temp / 5)]];
+        } else {
+            _jamTypesAllowed insert [_i, [1]];
+        };
+    };
+};
+
+private _jamType = selectRandomWeighted _jamTypesAllowed;
 _unit setVariable [format [QGVAR(%1_jamType), _weapon], _jamType];
 
 // Stop current burst

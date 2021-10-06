@@ -24,7 +24,7 @@ Introduces weapon temperature simulation depending on weapon and bullet mass. Ho
 
 ### 1.3 Cookoff
 
-Hot weapons can also cause chambered ammunition to spontaneously ignite. The higher the temperature of the gun the sooner a cookoff can happen. Open bolt weapons (most machineguns) cannot cookoff unless jammed. Jammed weapons will not cookoff unless the jam is a failure to fire.
+Hot weapons can also cause chambered ammunition to spontaneously ignite. The higher the temperature of the weapon the sooner a cookoff can happen. Open bolt weapons (most machineguns) cannot cookoff unless jammed. Jammed weapons will not cookoff unless the jam is a failure to fire.
 
 ### 1.4 Spare barrels
 
