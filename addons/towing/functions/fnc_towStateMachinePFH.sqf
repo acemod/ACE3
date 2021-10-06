@@ -4,14 +4,14 @@
  * Called per frame. Handles current unit state for attaching a rope to two vehicles
  *
  * Arguments:
- * 0: Unit wanting to start towing <OBJECT>
- * 1: Vehicle to tow from <OBJECT>
+ * 0: PFEH Args <ARRAY>
+ * 1: PFID <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, cursorObject] call ace_towing_fnc_startTow
+ * [[],0]] call ace_towing_fnc_towStateMachinePFH
  *
  * Public: No
  */
