@@ -28,7 +28,7 @@ _jammedWeapons pushBack _weapon;
 
 _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 
-// Get jam types, select from available types
+// Get jam types, select one from available types
 // Cookoffs only happen on Fire and Dud, dud rounds are lost on jam clear.
 // Reduce chance of duds as temp increases (functionally increasing the chance of the others but with fewer commands)
 private _temp = 1 max (_unit getVariable [format [QGVAR(%1_temp), _weapon], 0]);
@@ -50,8 +50,7 @@ if(_jamTypesAllowed == []) then {
     };
 };
 
-private _jamType = selectRandomWeighted _jamTypesAllowed;
-_unit setVariable [format [QGVAR(%1_jamType), _weapon], _jamType];
+_unit setVariable [format [QGVAR(%1_jamType), _weapon], selectRandomWeighted _jamTypesAllowed];
 
 // Stop current burst
 _unit setAmmo [_weapon, 0];
