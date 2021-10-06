@@ -24,6 +24,22 @@ params ["_unit", "_fatigue", "_speed", "_overexhausted"];
     systemChat str vectorMagnitude velocity _unit;
 #endif
 
+private _fnc_getStanceFactor = {
+    params ["_unit", "_fatigue"];
+
+    switch (stance _unit) do {
+        case ("CROUCH"): {
+            (1.0 + _fatigue ^ 2 * 0.1)
+        };
+        case ("PRONE"): {
+            (1.0 + _fatigue ^ 2 * 2.0)
+        };
+        default {
+            (1.5 + _fatigue ^ 2 * 3.0)
+        };
+    };
+};
+
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
 if (_fatigue > 0.4 && {GVAR(lastBreath) > (_fatigue * -10 + 9)} && {!underwater _unit}) then {
@@ -70,6 +86,7 @@ if (GVAR(isSwimming)) exitWith {
         };
     };
 };
+
 if ((getAnimSpeedCoef _unit) != 1) then {
     if (GVAR(setAnimExclusions) isEqualTo []) then {
         TRACE_1("reset",getAnimSpeedCoef _unit);
@@ -95,5 +112,14 @@ if (_overexhausted) then {
 
 _unit setVariable [QGVAR(aimFatigue), _fatigue];
 
-private _aimCoef = [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult);
-_unit setCustomAimCoef _aimCoef;
+private _stanceFactor = [_unit, _fatigue] call _fnc_getStanceFactor;
+
+private _customAimCoef = (
+    if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {
+        [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult)
+    } else {
+        1
+    }
+);
+
+_unit setCustomAimCoef (_stanceFactor * _customAimCoef) * GVAR(swayFactor);
