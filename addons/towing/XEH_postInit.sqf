@@ -7,15 +7,6 @@ GVAR(mouseRight) = false;
 GVAR(cancel) = false;
 GVAR(canAttach) = false;
 
-[QGVAR(lockVehicle), {
-    params ["_vehicle", "_lock"];
-    if (_lock) then {
-        _vehicle lock 2;
-    } else {
-        _vehicle lock 0;
-    };
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(setTowParent), {
     params ["_parent", "_child"];
     _child setTowParent _parent;

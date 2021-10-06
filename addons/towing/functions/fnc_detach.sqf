@@ -35,7 +35,6 @@ if (_ropeClass isNotEqualTo "") then {
 };
 
 [QGVAR(setTowParent), [objNull, _child], _child] call CBA_fnc_targetEvent;
-[QGVAR(lockVehicle), [_child, false]] call CBA_fnc_globalEvent;
 
 _child setVariable [QGVAR(towing), false, true];
 _parent setVariable [QGVAR(towing), false, true];

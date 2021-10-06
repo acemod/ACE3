@@ -75,7 +75,6 @@ switch (_state) do {
         };
 
         [QGVAR(setTowParent), [_parent, _child], _parent] call CBA_fnc_targetEvent;
-        [QGVAR(lockVehicle), [_child, true]] call CBA_fnc_globalEvent;
 
         GVAR(attachHelper) ropeDetach _rope;
         [_child, _relativeAttachPos] ropeAttachTo _rope;
