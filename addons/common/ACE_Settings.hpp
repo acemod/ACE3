@@ -67,16 +67,6 @@ class ACE_Settings {
         description = CSTRING(SettingProgressbarLocationDesc);
         values[] = {ECSTRING(optionsmenu,Top), ECSTRING(optionsmenu,Bottom)};
     };
-    class GVAR(settingProgressBarInfo) {
-        category = CSTRING(DisplayName);
-        value = 0;
-        typeName = "SCALAR";
-        force = 0;
-        isClientSettable = 1;
-        displayName = CSTRING(SettingProgressBarInfoName);
-        description = CSTRING(SettingProgressBarInfoDesc);
-        values[] = {CSTRING(None),CSTRING(SettingProgressbarInfoPercentage),CSTRING(SettingProgressbarInfoTime)};
-    };
     class GVAR(displayTextColor) {
         category = CSTRING(DisplayName);
         value[] = {0,0,0,0.1};
