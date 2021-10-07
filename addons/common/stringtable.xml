@@ -1460,7 +1460,7 @@
             <English>Additional progress bar information</English>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarInfoDesc">
-            <English>Controls extra information shown in progress bar</English>
+            <English>Controls extra information shown in progress bar.</English>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarInfoPercentage">
             <English>Percentage</English>
