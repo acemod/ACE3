@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="logistics_rope">
+    <Package name="Logistics_Rope">
         <Key ID="STR_ACE_Logistics_Rope_descriptionShort">
             <English>A twisted braid of fibers. Usually used for rappelling or towing.</English>
         </Key>
