@@ -30,7 +30,7 @@ private _fnc_getActions = {
             private _action = [_x, _displayName, _picture, FUNC(checkDogtagItem), {true}, {}, _x] call EFUNC(interact_menu,createAction);
             _actions pushBack [_action, [], _player];
         };
-    } forEach (_player call EFUNC(common,uniqueItems));
+    } forEach (keys (_player call EFUNC(common,uniqueItems)));
 
     _actions
 };

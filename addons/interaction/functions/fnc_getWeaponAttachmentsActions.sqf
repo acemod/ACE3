@@ -27,7 +27,7 @@ params ["_unit"];
     private _actions = [];
 
     // "attach" actions
-    private _items = _unit call EFUNC(common,uniqueItems);
+    private _items = keys (_unit call EFUNC(common,uniqueItems));
     private _compatibleItems = _currentWeapon call CBA_fnc_compatibleItems;
     {
         private _config = _cfgWeapons >> _x;

@@ -19,10 +19,14 @@
 
 params [["_unit", objNull, [objNull]], ["_item", "", ["", [""]]], ["_checkAll", false, [false]]];
 
-private _unitItems = _unit call FUNC(uniqueItems);
+//private _unitItems = _unit call FUNC(uniqueItems);
 
-if (_item isEqualType "") exitWith { _item in _unitItems };
+if (_item isEqualType "") exitWith {
+    _item in GVAR(uniqueItemsCache)
+};
 
-if (_checkAll) exitWith { _item findIf {!(_x in _unitItems)} == -1 };
+if (_checkAll) exitWith {
+    _item findIf {!(_x in _unitItems)} == -1
+};
 
 _item findIf {_x in _unitItems} != -1

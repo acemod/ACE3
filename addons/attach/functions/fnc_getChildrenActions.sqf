@@ -43,6 +43,6 @@ private _magazines = magazines _player;
         private _action = [_x, _displayName, _picture, {[{_this call FUNC(attach)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _target];
     };
-} forEach (_player call EFUNC(common,uniqueItems));
+} forEach (keys (_player call EFUNC(common,uniqueItems)));
 
 _actions
