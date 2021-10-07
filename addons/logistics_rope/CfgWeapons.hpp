@@ -1,5 +1,5 @@
 class CfgWeapons {
-	class CBA_MiscItem_ItemInfo;
+    class CBA_MiscItem_ItemInfo;
     class ACE_ItemCore;
     class ACE_ropeBase: ACE_ItemCore {
         scope = 1;
