@@ -19,10 +19,10 @@
 
 params [["_unit", objNull, [objNull]], ["_item", "", ["", [""]]], ["_checkAll", false, [false]]];
 
-//private _unitItems = _unit call FUNC(uniqueItems);
+private _unitItems = _unit call FUNC(uniqueItems);
 
 if (_item isEqualType "") exitWith {
-    _item in GVAR(uniqueItemsCache)
+    _item in _unitItems
 };
 
 if (_checkAll) exitWith {

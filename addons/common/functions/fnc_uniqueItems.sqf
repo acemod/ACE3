@@ -20,7 +20,10 @@ params ["_unit"];
 
 // Use cached items list if unit is ACE_player
 if (_unit isEqualTo ACE_player) then {
-    missionNamespace getVariable [QGVAR(uniqueItemsCache), uniqueUnitItems _unit]; // only for iteration, NOT modification
+    if (isNil QGVAR(uniqueItemsCache)) then {
+        GVAR(uniqueItemsCache) = uniqueUnitItems ACE_player;
+    };
+    GVAR(uniqueItemsCache) // only for iteration, NOT modification
 } else {
     uniqueUnitItems _unit;
 };
