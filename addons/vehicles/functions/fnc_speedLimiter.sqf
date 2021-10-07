@@ -57,7 +57,4 @@ GVAR(speedLimit) = speed _vehicle max 5;
 
     private _speed = speed _vehicle;
 
-    if (_speed > GVAR(speedLimit)+2) then {
-        _vehicle setVelocity ((velocity _vehicle) vectorMultiply ((GVAR(speedLimit) / _speed) - 0.00001));  // fix 1.42-hotfix PhysX libraries applying force in previous direction when turning
-    };
 }, 0, [_driver, _vehicle]] call CBA_fnc_addPerFrameHandler;
