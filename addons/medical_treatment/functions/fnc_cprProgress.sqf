@@ -23,5 +23,5 @@ _args params ["_medic", "_patient"];
 // Cancel CPR if patient wakes up
 
 !(_patient call EFUNC(common,isAwake))
-&& {(GVAR(advancedDiagnose)) || {IN_CRDC_ARRST(_patient)}} // if basic diagnose, then only show action if appropriate (they can't tell difference between uncon/ca)
+&& {(GVAR(advancedDiagnose) != 0) || {IN_CRDC_ARRST(_patient)}} // if basic diagnose, then only show action if appropriate (they can't tell difference between uncon/ca)
 && {_medic == (_patient getVariable [QEGVAR(medical,CPR_provider), objNull])}

@@ -16,3 +16,12 @@
     true,
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(epilepsyFriendlyMode),
+    "CHECKBOX",
+    [LSTRING(EpilepsyFriendlyMode), LSTRING(EpilepsyFriendlyModeTooltip)],
+    format ["ACE %1", localize LSTRING(DisplayName)],
+    false,
+    2
+] call CBA_fnc_addSetting;

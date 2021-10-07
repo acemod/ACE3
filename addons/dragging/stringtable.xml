@@ -113,6 +113,7 @@
             <Hungarian>ACE Húzás</Hungarian>
             <Russian>ACE Перетаскивание</Russian>
             <Spanish>ACE Arrastrar</Spanish>
+            <Polish>ACE Przeciąganie</Polish>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_DisplayName">
             <English>Allow firing while dragging</English>
@@ -121,6 +122,7 @@
             <Hungarian>Húzás közbeni tüzelés engedélyezése</Hungarian>
             <Russian>Стрельба во время перетаскивания</Russian>
             <Spanish>Permitir disparar mientras se arrastra</Spanish>
+            <Polish>Pozwól na strzelanie podczas przeciągania</Polish>
         </Key>
         <Key ID="STR_ACE_Dragging_DragAndFire_Description">
             <English>Allow the player to fire their gun while dragging.</English>
@@ -129,6 +131,7 @@
             <Hungarian>Húzás közben a játékos elsütheti a fegyverét.</Hungarian>
             <Russian>Позволяет игроку стрелять во время перетаскивания</Russian>
             <Spanish>Permite al jugador disparar mientras está arrastrando.</Spanish>
+            <Polish>Pozwala graczom strzelać z broni podczas przeciągania obiektów.</Polish>
         </Key>
     </Package>
 </Project>

@@ -12,12 +12,18 @@ class CfgWeapons {
     class arifle_MX_Black_F: arifle_MX_F {
         displayName = CSTRING(arifle_MX_Black_Name);
     };
+    class arifle_MX_khk_F: arifle_MX_Black_F {
+        displayName = CSTRING(arifle_MX_Khaki_Name);
+    };
 
     class arifle_MXC_F: arifle_MX_Base_F {
         displayName = CSTRING(arifle_MXC_Name);
     };
     class arifle_MXC_Black_F: arifle_MXC_F {
         displayName = CSTRING(arifle_MXC_Black_Name);
+    };
+    class arifle_MXC_khk_F: arifle_MXC_Black_F {
+        displayName = CSTRING(arifle_MXC_Khaki_Name);
     };
 
     class arifle_MX_GL_F: arifle_MX_Base_F {
@@ -26,6 +32,9 @@ class CfgWeapons {
     class arifle_MX_GL_Black_F: arifle_MX_GL_F {
         displayName = CSTRING(arifle_MX_GL_Black_Name);
     };
+    class arifle_MX_GL_khk_F: arifle_MX_GL_Black_F {
+        displayName = CSTRING(arifle_MX_GL_Khaki_Name);
+    };
 
     class arifle_MX_SW_F: arifle_MX_Base_F {
         displayName = CSTRING(arifle_MX_SW_Name);
@@ -33,12 +42,18 @@ class CfgWeapons {
     class arifle_MX_SW_Black_F: arifle_MX_SW_F {
         displayName = CSTRING(arifle_MX_SW_Black_Name);
     };
+    class arifle_MX_SW_khk_F: arifle_MX_SW_Black_F {
+        displayName = CSTRING(arifle_MX_SW_Khaki_Name);
+    };
 
     class arifle_MXM_F: arifle_MX_Base_F {
         displayName = CSTRING(arifle_MXM_Name);
     };
     class arifle_MXM_Black_F: arifle_MXM_F {
         displayName = CSTRING(arifle_MXM_Black_Name);
+    };
+    class arifle_MXM_khk_F: arifle_MXM_Black_F {
+        displayName = CSTRING(arifle_MXM_Khaki_Name);
     };
 
     // Katiba
