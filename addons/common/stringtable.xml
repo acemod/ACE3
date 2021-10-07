@@ -1464,5 +1464,9 @@
             <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
             <Turkish>Kendi etkileşimim menüsünde animasyonları göster</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_both">
+            <English>Both</English>
+            <Turkish>İkisi de</Turkish>
+        </Key>
     </Package>
 </Project>
