@@ -416,8 +416,10 @@ GVAR(reloadMutex_lastGesture) = "";
     if (_unit isNotEqualTo ACE_Player) exitWith {};
     if (_gesture isEqualTo "" || {_gesture isNotEqualTo GVAR(reloadMutex_lastGesture)}) exitWith {};
 
-    GVAR(isReloading) = false;
-    GVAR(reloadMutex_lastGesture) = "";
+    if ((weaponState ACE_Player) select 6 == 0) exitWith {
+        GVAR(isReloading) = false;
+        GVAR(reloadMutex_lastGesture) = "";
+    };
 }] call CBA_fnc_addClassEventHandler;
 
 //////////////////////////////////////////////////
