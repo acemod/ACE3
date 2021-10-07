@@ -306,7 +306,7 @@ switch (_ctrlIDC) do {
             if (!isNil "_data") then {
                 private _items = _data select 0;
                 {
-                    ["CfgWeapons", _x, true] call _fnc_fill_right_Container;
+                    ["CfgWeapons", _x, false] call _fnc_fill_right_Container;
                 } foreach ((GVAR(virtualItems) select 17) select {(toLower _x) in _items});
 
                 {
@@ -362,8 +362,6 @@ if (GVAR(currentLeftPanel) in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBack
 // Sorting
 private _sortRightCtrl = _display displayCtrl IDC_sortRightTab;
 [_display, _control, _sortRightCtrl] call FUNC(fillSort);
-
-[_sortRightCtrl] call FUNC(sortPanel);
 
 // Select current data if not in a container
 if (_itemsToCheck isNotEqualTo []) then {
