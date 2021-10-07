@@ -107,6 +107,7 @@ GVAR(rightTabLnBFocus) = nil;
 
 GVAR(selectedWeaponType) = nil;
 GVAR(virtualItems) = nil;
+GVAR(virtualItemsFlat) = nil;
 GVAR(currentItems) = nil;
 GVAR(currentFace) = nil;
 GVAR(currentVoice) = nil;
