@@ -1470,6 +1470,19 @@
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
+            <Czech>Žádná</Czech>
+            <German>Keine</German>
+            <Russian>Нет</Russian>
+            <Polish>Brak</Polish>
+            <Italian>Nessuna</Italian>
+            <Spanish>Nada</Spanish>
+            <French>Aucune</French>
+            <Chinese>無</Chinese>
+            <Japanese>なし</Japanese>
+            <Korean>활성화 없음</Korean>
+            <Portuguese>Nenhuma</Portuguese>
+            <Chinesesimp>无</Chinesesimp>
+            <Turkish>Yok</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_TimeLeft">
             <English>Time left: %1s</English>
