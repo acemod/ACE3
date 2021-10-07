@@ -2,7 +2,7 @@
 <Project name="ACE">
     <Package name="logistics_rope">
         <Key ID="STR_ACE_logistics_rope_descriptionShort">
-            <English>A twisted braid of fibres. Usually used for rapelling or towing</English>
+            <English>A twisted braid of fibers. Usually used for rappelling or towing.</English>
         </Key>
         <Key ID="STR_ACE_logistics_rope_Rope_3_Display">
             <English>Rope 3.2 meters</English>
