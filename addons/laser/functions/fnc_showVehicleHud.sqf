@@ -91,10 +91,10 @@ GVAR(pfID) = [{
     // Do Laser Scan:
     private _ammo = getText (configFile >> "CfgMagazines" >> _vehicle currentMagazineTurret _turretPath >> "ammo");
     private _laserSource = AGLtoASL (_vehicle modelToWorld (_vehicle selectionPosition _seekerSource));
-    private _laserCode = _vehicle getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+    private _laserCode = _vehicle getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
     private _seekerAngle = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_missileguidance" >> "seekerAngle");
     private _seekerMaxRange = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_missileguidance" >> "seekerMaxRange");
-    private _laserResult = [_laserSource, vectorDir _vehicle, _seekerAngle, _seekerMaxRange, [ACE_DEFAULT_LASER_WAVELENGTH,ACE_DEFAULT_LASER_WAVELENGTH], _laserCode, _vehicle] call EFUNC(laser,seekerFindLaserSpot);
+    private _laserResult = [_laserSource, vectorDir _vehicle, _seekerAngle, _seekerMaxRange, [ACE_DEFAULT_LASER_WAVELENGTH,ACE_DEFAULT_LASER_WAVELENGTH], _laserCode, _vehicle] call FUNC(seekerFindLaserSpot);
     private _foundTargetPos = _laserResult select 0;
     private _haveLock = !isNil "_foundTargetPos";
 
