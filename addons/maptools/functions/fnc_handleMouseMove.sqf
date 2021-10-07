@@ -20,7 +20,7 @@ params ["_control", "_mousePosX", "_mousePosY"];
 TRACE_3("params",_control,_mousePosX,_mousePosY);
 
 // If have no map tools, then exit
-if (((isNull ACE_player) || {!([ACE_player, "ACE_MapTools"] call EFUNC(common,hasItem)))}) exitWith {
+if ((isNull ACE_player) || {!([ACE_player, "ACE_MapTools"] call EFUNC(common,hasItem))}) exitWith {
     false
 };
 
