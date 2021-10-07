@@ -27,21 +27,42 @@ private _stitchableWounds = _patient call FUNC(getStitchableWounds);
 // Stop treatment if there are no wounds that can be stitched remaining
 if (_stitchableWounds isEqualTo []) exitWith {false};
 
+// Get actual wound count
+private _woundCount = 0;
+{
+    _x params ["_woundID", "_bodyPartN", "_amountOf"];
+    _woundCount = _woundCount + (ceil _amountOf);
+} forEach _stitchableWounds;
+
 // Not enough time has elapsed to stitch a wound
-if (_totalTime - _elapsedTime > (count _stitchableWounds - 1) * GVAR(woundStitchTime)) exitWith {true};
+if (_totalTime - _elapsedTime > (_woundCount - 1) * GVAR(woundStitchTime)) exitWith {true};
 
 private _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);
 private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
 
-// Remove the first stitchable wound from the bandaged wounds
-private _treatedWound = _bandagedWounds deleteAt (_bandagedWounds find (_stitchableWounds select 0));
+/// Reduce stitched wound amount from bandaged wounds and delete when empty
+private _treatedWoundIndex = _bandagedWounds find (_stitchableWounds select 0);
+private _bandagedWound = (_bandagedWounds select _treatedWoundIndex);
+_bandagedWound params ["_bandagedID", "_bandagedBodyPartN", "_bandagedAmountOf"];
+private _treatedWound = +_bandagedWound; // need a copy so we don't alter the original
 _treatedWound params ["_treatedID", "_treatedBodyPartN", "_treatedAmountOf"];
+
+if (_bandagedAmountOf - 1 <= 0) then {
+    _bandagedWounds deleteAt _treatedWoundIndex;
+} else {
+    _bandagedWound set [2, _bandagedAmountOf - 1];
+    _bandagedWounds set [_treatedWoundIndex, _bandagedWound];
+};
+
+// Can be lazy here, _treatedWound is only used in its entirety when a new wound is being added
+_treatedAmountOf = _treatedAmountOf min 1;
+_treatedWound set [2, _treatedAmountOf];
 
 // Check if we need to add a new stitched wound or increase the amount of an existing one
 private _woundIndex = _stitchedWounds findIf {
     _x params ["_classID", "_bodyPartN"];
 
-    _classID == _treatedID && {_bodyPartN == _treatedBodyPartN}
+    [_classID, _bodyPartN] isEqualTo [_treatedID, _treatedBodyPartN]
 };
 
 if (_woundIndex == -1) then {
