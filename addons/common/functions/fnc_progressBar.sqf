@@ -100,7 +100,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
         switch (GVAR(settingProgressBarInfo)) do {
             case 0: {};
             case 1: {
-                (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText (_title + format [" (%1)", floor (_ratio * 100)] + "%");
+                (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText (_title + format [" (%1", floor (_ratio * 100)] + "%)");
             };
             case 2: {
                 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText (_title + " " + format [localize LSTRING(TimeLeft), ceil (_totalTime - _elapsedTime)]);
