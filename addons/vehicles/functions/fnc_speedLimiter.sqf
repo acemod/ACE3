@@ -53,7 +53,10 @@ GVAR(speedLimit) = speed _vehicle max 5;
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
-    _vehicle setCruiseControl [GVAR(speedLimit), false];
+    getCruiseControl _vehicle params ["_currentSpeedLimit"];
+    if (_currentSpeedLimit != GVAR(speedLimit)) then {
+        _vehicle setCruiseControl [GVAR(speedLimit), false];
+    };
 
     private _speed = speed _vehicle;
 
