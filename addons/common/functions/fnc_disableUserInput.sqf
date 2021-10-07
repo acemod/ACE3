@@ -66,7 +66,7 @@ if (_state) then {
                 _ctrl ctrlSetTooltip "Abort.";
 
                 _ctrl = _dlg displayctrl ([104, 1010] select isMultiplayer);
-                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
+                _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; if (["ace_medical"] call FUNC(isModLoaded)) then {[player, "respawn_button", player getVariable [QEGVAR(medical,lastInstigator), objNull]] call EFUNC(medical_status,setDead)} else {player setDamage 1}; [false] call DFUNC(disableUserInput);)];
                 _ctrl ctrlEnable (call {private _config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
                 _ctrl ctrlSetText "RESPAWN";
                 _ctrl ctrlSetTooltip "Respawn.";
