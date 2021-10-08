@@ -156,7 +156,6 @@ private _putList = [];
             ): {
             (_cargo select 2) pushBackUnique _className;
         };
-
     };
 } foreach configProperties [(configFile >> "CfgMagazines"), "isClass _x && {(if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal')} else {getNumber (_x >> 'scope')}) == 2} && {getNumber (_x >> 'ace_arsenal_hide') != 1}", true];
 
