@@ -283,6 +283,7 @@
             <French>Supprimer les états de verrouillage ambigus</French>
             <Russian>Устранить неоднозначные состояния замков</Russian>
             <Polish>Usuń niejednoznaczny stan blokady</Polish>
+            <Japanese>あいまいな鍵の状態を削除</Japanese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
