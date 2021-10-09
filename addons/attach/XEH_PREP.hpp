@@ -7,3 +7,4 @@ PREP(handleGetIn);
 PREP(handleGetOut);
 PREP(handleKilled);
 PREP(placeApprove);
+PREP(getSubChildrenActions);

@@ -105,6 +105,267 @@ class CfgVehicles {
         destrType = "DestructNo";
         brightness = 10;
     };
+    class ACE_IR_Strobe_one_Effect: All {
+        scope = 1;
+        displayName = "IR Strobe";
+        model = "\A3\Weapons_F\empty.p3d";
+        simulation = "nvmarker";
+
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.45;
+            name = "pozicni blik";
+            activeLight = 0;
+            blinking=1;
+            dayLight = 0;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {1,0.1};
+        };
+
+        side = 7;//-1=NO_SIDE yellow box,3=CIV grey box,4=NEUTRAL yellow box,6=FRIENDLY green box,7=LOGIC no radar signature
+        accuracy = 1000;
+        cost = 0;
+        armor = 500;
+        threat[] = {0,0,0};
+        nameSound = "";
+        type = 0;
+        weapons[] = {};
+        magazines[] = {};
+        nvTarget = 1;
+        destrType = "DestructNo";
+        brightness = 10;
+    };
+    class ACE_IR_Strobe_one_medium_Effect:ACE_IR_Strobe_one_Effect{
+        brightness = 6;
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.1;
+            name = "pozicni blik";
+            activeLight = 1;
+            blinking=1;
+            dayLight = 1;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {1,0.1};
+        };
+    };
+    class ACE_IR_Strobe_one_low_Effect:ACE_IR_Strobe_one_Effect{
+        brightness = 2;
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.05;
+            name = "pozicni blik";
+            activeLight = 0;
+            blinking=1;
+            dayLight = 0;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {1,0.1};
+        };
+    };
+    
+    class ACE_IR_Strobe_two_Effect: All {
+        scope = 1;
+        displayName = "IR Strobe";
+        model = "\A3\Weapons_F\empty.p3d";
+        simulation = "nvmarker";
+
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.45;
+            name = "pozicni blik";
+            activeLight = 0;
+            blinking=1;
+            dayLight = 0;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {1,0.1,0.1,0.1};
+        };
+
+        side = 7;//-1=NO_SIDE yellow box,3=CIV grey box,4=NEUTRAL yellow box,6=FRIENDLY green box,7=LOGIC no radar signature
+        accuracy = 1000;
+        cost = 0;
+        armor = 500;
+        threat[] = {0,0,0};
+        nameSound = "";
+        type = 0;
+        weapons[] = {};
+        magazines[] = {};
+        nvTarget = 1;
+        destrType = "DestructNo";
+        brightness = 10;
+    };
+    class ACE_IR_Strobe_two_medium_Effect:ACE_IR_Strobe_two_Effect{
+        brightness = 6;
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.1;
+            name = "pozicni blik";
+            activeLight = 1;
+            blinking=1;
+            dayLight = 1;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {1,0.1,0.1,0.1};
+        };
+    };
+    class ACE_IR_Strobe_two_low_Effect:ACE_IR_Strobe_two_Effect{
+        brightness = 2;
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.05;
+            name = "pozicni blik";
+            activeLight = 0;
+            blinking=1;
+            dayLight = 0;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {1,0.1,0.1,0.1};
+        };
+    };
+
+    
+    class ACE_IR_Strobe_three_Effect: All {
+        scope = 1;
+        displayName = "IR Strobe";
+        model = "\A3\Weapons_F\empty.p3d";
+        simulation = "nvmarker";
+
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.45;
+            name = "pozicni blik";
+            activeLight = 0;
+            blinking=1;
+            dayLight = 0;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {0.7,0.2,0.7,0.1,0.1,0.1};
+        };
+
+        side = 7;//-1=NO_SIDE yellow box,3=CIV grey box,4=NEUTRAL yellow box,6=FRIENDLY green box,7=LOGIC no radar signature
+        accuracy = 1000;
+        cost = 0;
+        armor = 500;
+        threat[] = {0,0,0};
+        nameSound = "";
+        type = 0;
+        weapons[] = {};
+        magazines[] = {};
+        nvTarget = 1;
+        destrType = "DestructNo";
+        brightness = 10;
+    };
+
+    class ACE_IR_Strobe_three_medium_Effect:ACE_IR_Strobe_three_Effect {
+        brightness = 6;
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.1;
+            name = "pozicni blik";
+            activeLight = 1;
+            blinking=1;
+            dayLight = 1;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {0.7,0.2,0.7,0.1,0.1,0.1};
+        };
+    };
+
+    class ACE_IR_Strobe_three_low_Effect: ACE_IR_Strobe_three_Effect {
+        brightness = 2;
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.05;
+            name = "pozicni blik";
+            activeLight = 0;
+            blinking=1;
+            dayLight = 0;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {0.7,0.2,0.7,0.1,0.1,0.1};
+        };
+    };
+
+    
+
+    
+    class ACE_IR_Strobe_four_Effect: All {
+        scope = 1;
+        displayName = "IR Strobe";
+        model = "\A3\Weapons_F\empty.p3d";
+        simulation = "nvmarker";
+
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.45;
+            name = "pozicni blik";
+            activeLight = 0;
+            blinking=1;
+            dayLight = 0;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {0.7,0.2,0.7,0.2,0.7,0.1,0.1,0.1};
+        };
+
+        side = 7;//-1=NO_SIDE yellow box,3=CIV grey box,4=NEUTRAL yellow box,6=FRIENDLY green box,7=LOGIC no radar signature
+        accuracy = 1000;
+        cost = 0;
+        armor = 500;
+        threat[] = {0,0,0};
+        nameSound = "";
+        type = 0;
+        weapons[] = {};
+        magazines[] = {};
+        nvTarget = 1;
+        destrType = "DestructNo";
+        brightness = 10;
+    };
+
+    class ACE_IR_Strobe_four_medium_Effect:ACE_IR_Strobe_four_Effect {
+        brightness = 6;
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.1;
+            name = "pozicni blik";
+            activeLight = 1;
+            blinking=1;
+            dayLight = 1;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {0.7,0.2,0.7,0.2,0.7,0.1,0.1,0.1};
+        };
+    };
+
+    class ACE_IR_Strobe_four_low_Effect: ACE_IR_Strobe_four_Effect {
+        brightness = 2;
+        class NVGMarker {
+            diffuse[]={0.015,0.015,0.015};
+            ambient[]={0.001,0.001,0.001};
+            brightness=0.05;
+            name = "pozicni blik";
+            activeLight = 0;
+            blinking=1;
+            dayLight = 0;
+            onlyInNvg = 1;
+            useFlare = 0;
+            blinkingPattern[] = {0.7,0.2,0.7,0.2,0.7,0.1,0.1,0.1};
+        };
+    };
+
+    
 
     class NVG_TargetBase: All {
         class NVGMarker {

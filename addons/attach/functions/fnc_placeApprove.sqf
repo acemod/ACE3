@@ -92,8 +92,16 @@ private _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vector
 _endPosTestOffset set [2, (_startingOffset select 2)];
 private _attachedObject = _itemVehClass createVehicle (getPos _unit);
 _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
+private _itemUsedClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_ItemUsed");
+
+if (_itemUsedClass == "") then {
+    _itemUsedClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_ItemUsed");
+};
 
 //Remove Item from inventory
+if (_itemUsedClass != "") then {
+    _itemClassname = _itemUsedClass;
+};
 _unit removeItem _itemClassname;
 
 //Add Object to attached array

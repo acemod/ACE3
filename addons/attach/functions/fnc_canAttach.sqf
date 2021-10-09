@@ -23,9 +23,11 @@ TRACE_3("params",_attachToVehicle,_player,_itemClassname);
 
 private _attachLimit = [6, 1] select (_player == _attachToVehicle);
 private _attachedObjects = _attachToVehicle getVariable [QGVAR(attached), []];
+private _itemUsedClass = getText (configFile >> "CfgWeapons" >> _itemName >> "ACE_ItemUsed");
 
-((_player == _attachToVehicle) || {canStand _player}) &&
-{(_attachToVehicle distance _player) < 10} &&
-{alive _attachToVehicle} &&
-{(count _attachedObjects) < _attachLimit} &&
-{_itemClassname in ((itemsWithMagazines _player) + [""])};
+if (_itemUsedClass == "") then {
+    _itemUsedClass = getText (configFile >> "CfgMagazines" >> _itemName >> "ACE_ItemUsed");
+};
+_canAttach = false;
+_canAttach =( ((_player == _attachToVehicle) || {canStand _player}) && {(_attachToVehicle distance _player) < 10} && {alive _attachToVehicle} && {(count _attachedObjects) < _attachLimit} && {(_itemClassname in ((itemsWithMagazines _player) + [""])) || (_itemUsedClass in ((itemsWithMagazines _player) + [""])) });
+_canAttach
