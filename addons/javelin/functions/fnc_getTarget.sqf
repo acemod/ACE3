@@ -35,7 +35,7 @@ if (!isNull _lastTarget) then {
     for "_xOffset" from -2.5 to 2.5 step 0.5 do {
         for "_yOffset" from -2 to 1 step 0.5 do {
             // Find test points in the model based on the angle that we are viewing it from (not true 3d projection, but not bad)
-            private _testPosASL = AGLtoASL (_lastTarget modelToWorld [_xOffset * - cos _relAngle, _xOffset * sin _relAngle, _yOffset]);
+            private _testPosASL = _lastTarget modelToWorldWorld [_xOffset * - cos _relAngle, _xOffset * sin _relAngle, _yOffset];
             private _intersectionsToCursorTarget = lineIntersectsSurfaces [_viewASL, _testPosASL, ace_player, vehicle ace_player, true, 1];
             // drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [[0,1,1,1], [1,0,1,1]] select (count _intersectionsToCursorTarget), (ASLtoAGL _testPosASL), 0.25, 0.25, 0, "", 0.5, 0.025, "TahomaB"];
             if (_intersectionsToCursorTarget isNotEqualTo []) then {
