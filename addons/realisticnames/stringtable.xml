@@ -3550,6 +3550,23 @@
             <Chinesesimp>P99半自动手枪 (卡其色)</Chinesesimp>
             <Turkish>P99 (Haki)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_hgun_P07_blk">
+            <English>P99 (Black)</English>
+            <Czech>P99 (Černá)</Czech>
+            <French>P99 (Noir)</French>
+            <Spanish>P99 (Negro)</Spanish>
+            <Russian>P99 (Чёрный)</Russian>
+            <Polish>P99 (czarny)</Polish>
+            <German>P99 (Schwarz)</German>
+            <Italian>P99 (Nero)</Italian>
+            <Hungarian>P99 (Fekete)</Hungarian>
+            <Portuguese>P99 (Preto)</Portuguese>
+            <Japanese>P99 (ブラック)</Japanese>
+            <Korean>P99 (검정)</Korean>
+            <Chinese>P99半自動手槍 (黑色)</Chinese>
+            <Chinesesimp>P99半自动手枪 (黑色)</Chinesesimp>
+            <Turkish>P99 (Siyah)</Turkish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
             <English>Makarov PM</English>
             <German>Makarov PM</German>
