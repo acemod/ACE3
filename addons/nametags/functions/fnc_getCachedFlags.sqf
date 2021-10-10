@@ -56,7 +56,7 @@ if (GVAR(ambientBrightnessAffectViewDist) != 0) then {
     if (currentVisionMode ace_player != 0) then {
         _ambientBrightness = _ambientBrightness + 0.4;
     };
-    _maxDistance = _maxDistance * linearConversion [0, 1, _ambientBrightness, (1 - GVAR(ambientBrightnessAffectViewDist)), 1, true];
+    _maxDistance = _maxDistance * linearConversion [0, 1, _ambientBrightness, 1 - GVAR(ambientBrightnessAffectViewDist), 1, true];
 };
 
 [_drawName, GVAR(showPlayerRanks),_enabledTagsNearby,_enabledTagsCursor,_maxDistance]
