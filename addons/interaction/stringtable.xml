@@ -1209,6 +1209,7 @@
             <Japanese>%1 を取り付け</Japanese>
             <Spanish>Acoplar %1</Spanish>
             <French>Fixer %1</French>
+            <Polish>Przyczep %1</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
             <English>Detach %1</English>
@@ -1216,6 +1217,7 @@
             <Japanese>%1 を外す</Japanese>
             <Spanish>Desacoplar %1</Spanish>
             <French>Retirer %1</French>
+            <Polish>Odczep %1</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1223,6 +1225,7 @@
             <Japanese>インタラクションから使用中の武器に対してのアタッチメント取り外しを可能にします。</Japanese>
             <Spanish>Activar acciones de acoplar/desacoplar accesorios para el arma actual.</Spanish>
             <French>Cette option permet de fixer/retirer des accessoires d'arme à partir du menu d'interaction personnel.</French>
+            <Polish>Włącza akcje przyczepienia/odczepienia dodatków dla obecnej broni</Polish>
         </Key>
     </Package>
 </Project>
