@@ -7,7 +7,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_explosives", "ace_javelin", "ace_rearm", "ace_refuel", "ace_repair", "ace_csw", "rhsusf_c_weapons", "rhsusf_c_troops", "rhsusf_c_m1a1", "rhsusf_c_m1a2", "RHS_US_A2_AirImport", "rhsusf_c_m109", "rhsusf_c_HEMTT_A4", "rhsusf_c_hmmwv", "rhsusf_c_rg33", "rhsusf_c_fmtv", "rhsusf_c_m113", "RHS_US_A2Port_Armor", "rhsusf_c_melb"};
+        requiredAddons[] = {"ace_explosives", "ace_javelin", "ace_rearm", "ace_refuel", "ace_repair", "ace_csw", "rhsusf_main_loadorder"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "Fyuran"};
         url = ECSTRING(main,URL);

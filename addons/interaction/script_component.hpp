@@ -30,6 +30,6 @@
 #define IDC_MOUSEHINT_EXTRA_NAME 2510
 #define IDC_MOUSEHINT_EXTRA_TEXT 2520
 
-#define MACRO_DOOR_REACH_DISTANCE (AGLToASL positionCameraToWorld [0,0,0] vectorDistance AGLToASL (ACE_player modelToWorld (ACE_player selectionPosition "Head"))) + 2
+#define MACRO_DOOR_REACH_DISTANCE (AGLToASL positionCameraToWorld [0,0,0] vectorDistance ACE_player modelToWorldWorld (ACE_player selectionPosition "Head")) + 2
 
 #define DISABLED_LAMP_DAMAGE 0.95
