@@ -90,8 +90,23 @@ class CfgWeapons {
     class LMG_Mk200_F : Rifle_Long_Base_F {
         GVAR(allowSwapBarrel) = 1;
     };
+    class LMG_03_Base_F: Rifle_Long_Base_F {
+        GVAR(allowSwapBarrel) = 1;
+    };
     class sgun_HunterShotgun_01_base_F : Rifle_Long_Base_F {
         GVAR(closedBolt) = 1;
         GVAR(jamTypesAllowed) = ["Fire","Dud"];
+    };
+    class ACE_ItemCore;
+    class CBA_MiscItem_ItemInfo;
+    class ACE_SpareBarrel_Item: ACE_ItemCore {
+        displayName = CSTRING(SpareBarrelName);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        descriptionshort = CSTRING(SpareBarrelDescription);
+        picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 60;
+        };
     };
 };
