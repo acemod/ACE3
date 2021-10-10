@@ -1,6 +1,5 @@
 [
-    QGVAR(enabled),
-    "CHECKBOX",
+    QGVAR(enabled), "CHECKBOX",
     LSTRING(DisplayName),
     localize ELSTRING(common,ACEKeybindCategoryWeapons),
     true,

@@ -1,6 +1,5 @@
 [
-    QGVAR(dispersionCount),
-    "SLIDER",
+    QGVAR(dispersionCount),  "SLIDER",
     LSTRING(dispersionCount_displayName),
     "ACE Uncategorized",
     [0, 5, 2, -1],

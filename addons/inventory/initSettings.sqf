@@ -1,6 +1,5 @@
 [
-    QGVAR(inventoryDisplaySize),
-    "LIST",
+    QGVAR(inventoryDisplaySize), "LIST",
     [LSTRING(SettingName), LSTRING(SettingDescription)],
     "ACE Uncategorized",
     [[0, 1, 2], ["str_medium", "str_large", "str_very_large"], 0],
