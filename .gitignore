@@ -2,6 +2,9 @@
 *.zip
 release/*
 releases/*
+extensions/vcproj32/*
+extensions/vcproj64/*
+.vscode/*
 hemtt
 hemtt.exe
 tools/temp
@@ -13,3 +16,6 @@ texHeaders.bin
 *.biprivatekey
 Thumbs.db
 CHANGELOG.md
+sqfvm.exe
+ArmaScriptCompiler.exe
+*.sqfc

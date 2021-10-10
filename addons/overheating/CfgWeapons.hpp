@@ -28,8 +28,8 @@ class CfgWeapons {
         //Closed Bolt, most weapons are closed bolt
         GVAR(closedBolt) = 1;
     };
-    class Rifle_Base_F : Rifle {};
-    class Rifle_Long_Base_F : Rifle_Base_F {
+    class Rifle_Base_F;
+    class Rifle_Long_Base_F: Rifle_Base_F {
         GVAR(dispersion) = 0.75;
 
         // Open Bolt, most machine guns are open bolt, which cannot normally cook off, and use this as a parent class
@@ -37,11 +37,11 @@ class CfgWeapons {
         GVAR(closedBolt) = 0;
     };
 
-    class arifle_MX_Base_F : Rifle_Base_F {
+    class arifle_MX_Base_F: Rifle_Base_F {
         // Custom jam clearing action. Default uses reload animation.
         ACE_clearJamAction = "GestureReloadMX";
     };
-    class arifle_MX_SW_F : arifle_MX_Base_F {
+    class arifle_MX_SW_F: arifle_MX_Base_F {
         // Custom jam clearing action. Use empty string to undefine.
         ACE_clearJamAction = "";
         // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
@@ -84,10 +84,10 @@ class CfgWeapons {
     class MMG_02_base_F: Rifle_Long_Base_F {
         GVAR(allowSwapBarrel) = 1;
     };
-    class LMG_Zafir_F : Rifle_Long_Base_F {
+    class LMG_Zafir_F: Rifle_Long_Base_F {
         GVAR(allowSwapBarrel) = 1;
     };
-    class LMG_Mk200_F : Rifle_Long_Base_F {
+    class LMG_Mk200_F: Rifle_Long_Base_F {
         GVAR(allowSwapBarrel) = 1;
     };
     class LMG_03_Base_F: Rifle_Long_Base_F {

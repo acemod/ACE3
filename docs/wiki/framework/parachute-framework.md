@@ -16,9 +16,21 @@ version:
 
 ```cpp
 class CfgVehicles {
-    class BananaParachute {
+    class ParachuteBase;
+    class BananaParachute: ParachuteBase {
         ace_hasReserveParachute = 1;  // Add reserve parachute (1-enabled, 0-disabled)
         ace_reserveParachute = "ACE_ReserveParachute";  // Classname of the reserve parachute
+    };
+};
+```
+
+## 2. Adding failure cut delay
+
+```cpp
+class CfgVehicles {
+    class ParachuteBase;
+    class BananaParachute: ParachuteBase {
+        ace_parachute_failureDelay = 2;  // Add delay before parachute fails (time in seconds)
     };
 };
 ```

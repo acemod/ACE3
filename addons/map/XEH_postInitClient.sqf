@@ -47,7 +47,7 @@ GVAR(flashlights) = [] call CBA_fnc_createNamespace;
                 private _unitLight = _player getVariable [QGVAR(flashlight), ["", objNull]];
                 _unitLight params ["_flashlight", "_glow"];
                 if (_mapOn) then {
-                    if (!(_flashlight isEqualTo "") && {isNull _glow}) then {
+                    if (_flashlight isNotEqualTo "" && {isNull _glow}) then {
                         [_player, _flashlight] call FUNC(flashlightGlow);
                         if ([_player, _flashlight] call FUNC(needPlaySound)) then {playSound QGVAR(flashlightClick)};
                     };
@@ -86,7 +86,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
 ["vehicle", {
     params ["_unit", "_vehicle"];
     if ((isNull _vehicle) || {_unit == _vehicle}) exitWith {};
-    private _cfg = configfile >> "CfgVehicles" >> (typeOf _vehicle);
+    private _cfg = configOf _vehicle;
     GVAR(vehicleExteriorTurrets) = getArray (_cfg >> QGVAR(vehicleExteriorTurrets));
     GVAR(vehicleLightColor) = [_cfg >> QGVAR(vehicleLightColor), "array", [1,1,1,0]] call CBA_fnc_getConfigEntry;
 

@@ -25,6 +25,8 @@ class CfgVehicles {
     class I_crew_F;
     class O_R_Gorka_F;
     class I_L_Soldier_Base_F;
+    class C_Uniform_ParadeUniform_01_base_F;
+    class C_Uniform_ParadeUniform_01_belt_base_F;
 
     class Civilian_F: Civilian {
         modelSides[] = {6};
@@ -323,5 +325,28 @@ class CfgVehicles {
     class I_L_Uniform_01_tshirt_olive_F: I_L_Uniform_01_tshirt_skull_F {
         modelSides[] = {6};
     };
+    class B_Uniform_ParadeUniform_01_US_F: C_Uniform_ParadeUniform_01_base_F {
+        modelSides[] = {6};
+    };
+    class B_Uniform_ParadeUniform_01_US_decorated_F: C_Uniform_ParadeUniform_01_base_F {
+        modelSides[] = {6};
+    };
+    class O_Uniform_ParadeUniform_01_CSAT_F: C_Uniform_ParadeUniform_01_belt_base_F {
+        modelSides[] = {6};
+    };
+    class O_Uniform_ParadeUniform_01_CSAT_decorated_F: C_Uniform_ParadeUniform_01_belt_base_F {
+        modelSides[] = {6};
+    };
+    class I_Uniform_ParadeUniform_01_AAF_F: C_Uniform_ParadeUniform_01_belt_base_F {
+        modelSides[] = {6};
+    };
+    class I_Uniform_ParadeUniform_01_AAF_decorated_F: C_Uniform_ParadeUniform_01_belt_base_F {
+        modelSides[] = {6};
+    };
+    class I_E_Uniform_ParadeUniform_01_LDF_F: C_Uniform_ParadeUniform_01_belt_base_F {
+        modelSides[] = {6};
+    };
+    class I_E_Uniform_ParadeUniform_01_LDF_decorated_F: C_Uniform_ParadeUniform_01_belt_base_F {
+        modelSides[] = {6};
+    };
 };
-

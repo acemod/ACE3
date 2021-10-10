@@ -36,7 +36,7 @@ if (_intersects isEqualTo []) then {
     };
 };
 
-if (!(_intersects isEqualTo [])) then {
+if (_intersects isNotEqualTo []) then {
     (_intersects select 0) params ["_intersectPosASL", "", "_intersectObject"];
     // Move back slightly to prevents issues with it going below terrain
     _distance = (_posASL vectorDistance _intersectPosASL) - 0.005;

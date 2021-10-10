@@ -49,23 +49,6 @@
             <Spanish>%1&lt;br/&gt;Preparado</Spanish>
             <Turkish>%1&lt;br/&gt; Hazırlandı</Turkish>
         </Key>
-        <Key ID="STR_ACE_Chemlights_Inventory_Full">
-            <English>No inventory space</English>
-            <German>Kein Platz im Inventar</German>
-            <Spanish>Sin espacio en inventario</Spanish>
-            <Polish>Brak miejsca w ekwipunku</Polish>
-            <French>Pas de place dans l'inventaire</French>
-            <Czech>Nedostatek místa v inventáři</Czech>
-            <Portuguese>Sem espaço no inventário</Portuguese>
-            <Italian>Nessuno spazio nell'inventario</Italian>
-            <Hungarian>Nincs több hely</Hungarian>
-            <Russian>В инвентаре нет места</Russian>
-            <Japanese>インベントリに空きがありません</Japanese>
-            <Korean>소지품 공간이 없음</Korean>
-            <Chinese>已無存放空間</Chinese>
-            <Chinesesimp>已无存放空间</Chinesesimp>
-            <Turkish>Envanter de alan yok</Turkish>
-        </Key>
         <Key ID="STR_ACE_Chemlights_Box_DisplayName">
             <English>[ACE] Chemlights</English>
             <Japanese>[ACE] ケミライト</Japanese>

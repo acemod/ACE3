@@ -196,7 +196,7 @@ private _vehicle = _position nearestObject "Car";
 
 if (!local _vehicle) exitWith {};
 
-private _config = _vehicle call CBA_fnc_getObjectConfig;
+private _config = configOf _vehicle;
 
 // --- burn tyres
 private _fnc_isWheelHitPoint = {

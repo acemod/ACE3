@@ -23,7 +23,7 @@ private _vehicle = vehicle _unit;
 if (_vehicle isEqualTo _unit) exitWith {""};
 
 // --- driver
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 if (_unit == driver _vehicle) exitWith {
     getText (configFile >> "CfgMovesBasic" >> "ManActions" >> getText (_config >> "driverAction")) // return
@@ -32,7 +32,7 @@ if (_unit == driver _vehicle) exitWith {
 // --- turret
 private _turret = _unit call CBA_fnc_turretPath;
 
-if !(_turret isEqualTo []) exitWith {
+if (_turret isNotEqualTo []) exitWith {
     private _turretConfig = [_vehicle, _turret] call CBA_fnc_getTurret;
 
     getText (configFile >> "CfgMovesBasic" >> "ManActions" >> getText (_turretConfig >> "gunnerAction")) // return
@@ -42,7 +42,9 @@ if !(_turret isEqualTo []) exitWith {
 private _cargoIndex = _vehicle getCargoIndex _unit;
 
 if (_cargoIndex != -1) exitWith {
-    getText (configFile >> "CfgMovesBasic" >> "ManActions" >> getArray (_config >> "cargoAction") select _cargoIndex) // return
+    private _cargoAction = getArray (_config >> "cargoAction");
+    _cargoIndex = _cargoIndex min (count _cargoAction - 1); // The array can be smaller than the max cargo index, just use last element
+    getText (configFile >> "CfgMovesBasic" >> "ManActions" >> (_cargoAction select _cargoIndex)) // return
 };
 
 // --- default

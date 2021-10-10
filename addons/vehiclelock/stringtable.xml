@@ -15,6 +15,7 @@
             <French>ACE Verrouillage véhicule</French>
             <Czech>ACE Zamykání Vozidel</Czech>
             <Turkish>ACE Araç Kilidi</Turkish>
+            <Spanish>ACE Bloqueo de vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_VehicleLock_Action_UnLock">
             <English>Unlock Vehicle</English>
@@ -262,7 +263,7 @@
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Description">
             <English>Set lock state for all vehicles (removes ambiguous lock states)</English>
-            <Polish>Ustawia początkowy stan blokady dla wszystkich pojazdów (usuwa dwuznaczne stany blokady)</Polish>
+            <Polish>Ustawia początkowy stan blokady dla wszystkich pojazdów (usuwa niejednoznaczny stan blokady)</Polish>
             <Spanish>Establece el estado de cierre para todos los vehículos (elimina estados de cierre ambiguos)</Spanish>
             <German>Setze Sperrstatus für alle Fahrzeuge (entfernt unklare Sperrzustände)</German>
             <Czech>Nastavit stav zámku u všech vozidel (odstraňuje nejednoznačné stavy zámků)</Czech>
@@ -275,6 +276,14 @@
             <Korean>모든 차량의 잠금 상태를 정합니다. (애매한 잠금 상태는 모두 없앱니다.)</Korean>
             <Chinesesimp>设定所有载具的初始上锁状态 (移除不明确的锁定状态)</Chinesesimp>
             <Chinese>設定所有載具的初始上鎖狀態 (移除不明確的鎖定狀態)</Chinese>
+        </Key>
+        <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_RemoveAmbiguousLockState">
+            <English>Remove Ambiguous Lock State</English>
+            <Spanish>Eliminar estado de bloqueo ambiguo</Spanish>
+            <French>Supprimer les états de verrouillage ambigus</French>
+            <Russian>Устранить неоднозначные состояния замков</Russian>
+            <Polish>Usuń niejednoznaczny stan blokady</Polish>
+            <Japanese>あいまいな鍵の状態を削除</Japanese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>

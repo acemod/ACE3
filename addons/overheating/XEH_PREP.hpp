@@ -14,6 +14,7 @@ PREP(getBarrelMass);
 PREP(getConsumableChildren);
 PREP(getWeaponData);
 PREP(handleTakeEH);
+PREP(handleRespawn);
 PREP(jamWeapon);
 PREP(loadCoolestSpareBarrel);
 PREP(overheat);

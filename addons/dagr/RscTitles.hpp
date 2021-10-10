@@ -32,7 +32,7 @@ class RscTitles {
 
     class DAGR_Display {
         idd = 266850;
-        movingEnable = false;
+        movingEnable = 0;
         duration = 100000;
         fadein = 0;
         fadeout = 0;

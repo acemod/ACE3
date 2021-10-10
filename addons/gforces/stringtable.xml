@@ -8,6 +8,7 @@
             <Russian>ACE Перегрузки</Russian>
             <Japanese>ACE G フォース</Japanese>
             <Turkish>ACE G-Kuvveti</Turkish>
+            <Spanish>ACE Fuerza G</Spanish>
         </Key>
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
@@ -63,6 +64,7 @@
             <Russian>Коэффициент перегрузки</Russian>
             <Japanese>G 効果係数</Japanese>
             <Turkish>G-Kuvvet Katsayısı</Turkish>
+            <Spanish>Coeficiente de Fuerza G</Spanish>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_Description">
             <English>Controls strength of G-Force affecting players.</English>
@@ -71,6 +73,7 @@
             <Russian>Определяет силу перегрузок, влияющих на игроков.</Russian>
             <Japanese>G 効果がプレイヤーに与える影響量を設定できます。</Japanese>
             <Turkish>Oyuncuları etkileyen G-Force'un gücünü kontrol eder.</Turkish>
+            <Spanish>Controla la intensidad de fuerza G que afecta a los jugadores.</Spanish>
         </Key>
     </Package>
 </Project>

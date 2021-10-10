@@ -10,4 +10,4 @@ private _category = ["ACE Uncategorized", LLSTRING(setting_categoryMenu_displayN
     true, // isGlobal
     {[QGVAR(requireRopeItems), _this] call EFUNC(common,cbaSettings_settingChanged)},
     false // needRestart
-] call CBA_settings_fnc_init;
+] call CBA_fnc_addSetting;

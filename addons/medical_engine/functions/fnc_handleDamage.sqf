@@ -94,7 +94,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // represents all incoming damage for selecting a non-selectionSpecific wound location, (used for selectRandomWeighted [value1,weight1,value2....])
     private _damageSelectionArray = [
-        HITPOINT_INDEX_HEAD, _damageHead select 1, HITPOINT_INDEX_BODY, _damageBody select 1, HITPOINT_INDEX_LARM, _damageLeftArm select 1, 
+        HITPOINT_INDEX_HEAD, _damageHead select 1, HITPOINT_INDEX_BODY, _damageBody select 1, HITPOINT_INDEX_LARM, _damageLeftArm select 1,
         HITPOINT_INDEX_RARM, _damageRightArm select 1, HITPOINT_INDEX_LLEG, _damageLeftLeg select 1, HITPOINT_INDEX_RLEG, _damageRightLeg select 1
     ];
 
@@ -204,14 +204,15 @@ if (
 // It does fire the EH multiple times, but this seems to scale with the intensity of the crash
 private _vehicle = vehicle _unit;
 if (
-    _hitPoint isEqualTo "#structural" &&
+    EGVAR(medical,enableVehicleCrashes) &&
+    {_hitPoint isEqualTo "#structural"} &&
     {_ammo isEqualTo ""} &&
     {_vehicle != _unit} &&
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
     private _damageSelectionArray = [
-        HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1, 
+        HITPOINT_INDEX_HEAD, 1, HITPOINT_INDEX_BODY, 1, HITPOINT_INDEX_LARM, 1,
         HITPOINT_INDEX_RARM, 1, HITPOINT_INDEX_LLEG, 1, HITPOINT_INDEX_RLEG, 1
     ];
     [QEGVAR(medical,woundReceived), [_unit, "Body", _newDamage, _unit, "vehiclecrash", _damageSelectionArray]] call CBA_fnc_localEvent;
