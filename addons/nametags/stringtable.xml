@@ -525,12 +525,12 @@
             <Turkish>Göstermeyi Yalnızca İmleç ve Tuşa Basmaya Zorla</Turkish>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_DisplayName">
-            <English>Ambient Brightness Affects View Distance</English>
-            <Russian>Освещение влияет на дальность отображения</Russian>
+            <English>Nametag Ambient Brightness Coefficient</English>
+            <Russian>Коэффициент окружающего освещения для меток игроков</Russian>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">
-            <English>Player name tags view distance depends on ambient brightness.</English>
-            <Russian>Дистанция отображения имен зависит от окружающего освещения.</Russian>
+            <English>Adjusts how strongly ambient brightness affects nametag view distance.</English>
+            <Russian>Определяет как сильно окружающее освещение влияет на дальность отображения меток игроков.</Russian>
         </Key>
     </Package>
 </Project>

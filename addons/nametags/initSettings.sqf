@@ -57,9 +57,9 @@
 
 [
     QGVAR(ambientBrightnessAffectViewDist),
-    "CHECKBOX",
+    "SLIDER",
     [LSTRING(AmbientBrightnessAffectsViewDist_DisplayName), LSTRING(AmbientBrightnessAffectsViewDist_Description)],
     format ["ACE %1", localize LSTRING(Module_DisplayName)],
-    true,
+    [0, 1, 1, 0, true],
     true
 ] call CBA_fnc_addSetting;
