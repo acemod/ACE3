@@ -32,7 +32,7 @@ if (hasInterface) then {
         publicVariable QGVAR(pseudoRandomList);
 
         // Keep track of the temperature of stored spare barrels
-        GVAR(storedSpareBarrels) = [] call CBA_fnc_hashCreate;
+        GVAR(storedSpareBarrels) = createHashMap;
 
         // Install event handlers for spare barrels
         [QGVAR(sendSpareBarrelTemperatureHint), FUNC(sendSpareBarrelsTemperaturesHint)] call CBA_fnc_addEventHandler;

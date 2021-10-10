@@ -8,7 +8,7 @@ if (!hasInterface) exitWith {};
     if (!GVAR(enabled)) exitWith {};
     
     GVAR(lastFPTime) = -1;
-    GVAR(fingersHash) = [] call CBA_fnc_hashCreate;
+    GVAR(fingersHash) = createHashMap;
     GVAR(pfeh_id) = -1;
     
     [QGVAR(fingered), {_this call FUNC(incomingFinger)}] call CBA_fnc_addEventHandler;

@@ -11,7 +11,7 @@ ACE_DEFAULT_LASER_CODE = 1111;
 ACE_DEFAULT_LASER_WAVELENGTH = 1550;
 ACE_DEFAULT_LASER_BEAMSPREAD = 1;
 
-GVAR(laserEmitters) = [] call CBA_fnc_hashCreate;
+GVAR(laserEmitters) = createHashMap;
 GVAR(trackedLaserTargets) = [];
 GVAR(pfehID) = -1;
 
