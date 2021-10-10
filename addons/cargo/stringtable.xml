@@ -392,7 +392,7 @@
             <Turkish>Kargo Menüsünü Tekrar Aç</Turkish>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
-            <English>Reopen the Cargo Menu after successfull unload.</English>
+            <English>Reopen the Cargo Menu after successful unload.</English>
             <Turkish>Başarılı bir yük indirmeden sonra Kargo Menüsünü tekrar göster.</Turkish>
         </Key>
     </Package>
