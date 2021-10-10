@@ -27,7 +27,7 @@
 
 // Try searching for lasers from a given vehicle position [BLUE]:
 private _seekerVehicle = vehicle ace_player;
-private _testSeekerPosASL = AGLtoASL (_seekerVehicle modelToWorldVisual [0,0,1]);
+private _testSeekerPosASL = _seekerVehicle modelToWorldVisualWorld [0,0,1];
 private _testSeekerDir = vectorDirVisual _seekerVehicle;
 {
     private _code = _x;
@@ -67,7 +67,7 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
     // Draw array weapon lasers [YELLOW]
     if ((_laserMethod isEqualType []) && {(count _laserMethod) == 2}) then {
         _laserMethod params ["_modelPosition", "_weaponName"];
-        private _laserPosASL = AGLtoASL (_obj modelToWorldVisual _modelPosition);
+        private _laserPosASL = _obj modelToWorldVisualWorld _modelPosition;
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,1,0,1], (ASLtoAGL _laserPosASL), 0.5, 0.5, 0, _weaponName, 0.5, 0.025, "TahomaB"];
         private _laserDir = _obj weaponDirection _weaponName;
         private _resultsRay = [_laserPosASL, _laserDir, _obj] call FUNC(shootRay);
