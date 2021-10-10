@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [newUnit, oldUnit] call acex_field_rations_fnc_handleRespawn
+ * [newUnit, oldUnit] call ace_field_rations_fnc_handleRespawn
  *
  * Public: No
  */

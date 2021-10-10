@@ -21,7 +21,7 @@ class Cfg3DEN {
                         path[] = {"ACEX_Fortify_Presets"};
                         localConfig = 1;
                         propertyText = "displayName";
-                        sort = true;
+                        sort = 1;
                     };
                 };
             };
