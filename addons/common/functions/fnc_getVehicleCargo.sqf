@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the vehicle cargo positions. Codrivers and ffv positions are not listed.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_vehicle", objNull, [objNull]]];
 

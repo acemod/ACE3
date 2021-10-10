@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Calculate the cooling down of a weapon over a time interval.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_temperature", "_barrelMass", "_totalTime"];
 

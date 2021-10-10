@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 and esteldunedain and Ruthberg
  * Updates and applies the current deafness. Called every 1 sec from a PFEH.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!alive ACE_player) exitWith {
     if (missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) exitWith {};
@@ -36,6 +36,7 @@ if (!_justUpdateVolume) then {
         if (CBA_missionTime - GVAR(time3) < 3) exitWith {};
         GVAR(time3) = CBA_missionTime;
 
+        if (!isGameFocused) exitWith {};
         if (GVAR(deafnessDV) > 19.75) then {
             playSound (["ACE_Combat_Deafness_Heavy", "ACE_Combat_Deafness_Heavy_NoRing"] select GVAR(DisableEarRinging));
         } else {

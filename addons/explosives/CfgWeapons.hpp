@@ -12,7 +12,7 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
 
     class ACE_ExplosiveItem: CBA_MiscItem_ItemInfo {
-        allowedSlots[] = {801,701,901};
+        allowedSlots[] = {TYPE_UNIFORM,TYPE_VEST,TYPE_BACKPACK};
         //type = 201;
     };
 

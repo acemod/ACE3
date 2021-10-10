@@ -1,13 +1,19 @@
 class ACE_Triggers {
-    /* onPlace parameters:
-0: OBJECT - unit placing
-1: OBJECT - Placed explosive
-2: STRING - Magazine classname
-3: ARRAY - vars
-Last Index: ACE_Triggers config of trigger type.
-onSetup parameters:
-0: STRING - Magazine Classname
- */
+    /* onPlace Parameters:
+     * 0: Unit placing <OBJECT>
+     * 1: Explosive <OBJECT>
+     * 2: Magazine classname <STRING>
+     * 3: Additional arguments <ARRAY>
+     *    - Same as those passed to FUNC(placeExplosive) for specific trigger type
+     *    - Last element is ACE_Triggers config of the trigger type <CONFIG>
+     *
+     * onSetup Parameters:
+     * 0: Explosive <OBJECT>
+     * 1: Magazine classname <STRING>
+     *
+     * For both, expected return type is BOOL.
+     * True indicates manual handling of explosive setup/placement.
+     */
     class Command {
         isAttachable = 1;
         displayName = CSTRING(clacker_displayName);
@@ -50,8 +56,8 @@ onSetup parameters:
         isAttachable = 1;
         displayName = CSTRING(timerName);
         picture = QPATHTOF(data\UI\Timer.paa);
-        onPlace = QUOTE([ARR_2(_this select 1,(_this select 3) select 0)] call FUNC(startTimer);false);
-        onSetup = QUOTE(_this call FUNC(openTimerSetUI);true);
+        onPlace = QUOTE([ARR_2(_this select 1, _this select 3 select 0)] call FUNC(startTimer); false);
+        onSetup = QUOTE(_this call FUNC(openTimerUI));
     };
     class Tripwire {
         isAttachable = 0;

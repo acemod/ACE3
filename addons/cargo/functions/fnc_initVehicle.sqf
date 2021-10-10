@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Initializes vehicle, adds open cargo menu action if available.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 TRACE_1("params", _vehicle);
@@ -76,7 +76,7 @@ if (_vehicle isKindOf "Air") then {
             private _turretPath = _player call CBA_fnc_turretPath;
             (_player == (driver _target)) || // pilot
             {(getNumber (([_target, _turretPath] call CBA_fnc_getTurret) >> "isCopilot")) == 1} || // coPilot
-            {_turretPath in (getArray (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(loadmasterTurrets)))}} // loadMaster turret from config
+            {_turretPath in (getArray (configOf _target >> QGVAR(loadmasterTurrets)))}} // loadMaster turret from config
     };
     private _statement = {
         //IGNORE_PRIVATE_WARNING ["_target", "_player"];

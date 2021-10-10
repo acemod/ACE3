@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Sniperwolf572
  * Checks if one of the following common feature cameras is active:
@@ -22,7 +23,8 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
+
+ACE_DEPRECATED(QFUNC(isFeatureCameraActive),"3.14.0","CBA_fnc_getActiveFeatureCamera");
 
 !(
     isNull curatorCamera && // Curator

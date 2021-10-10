@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="tacticalladder">
+    <Package name="TacticalLadder">
         <Key ID="STR_ACE_TacticalLadder_DisplayName">
             <English>Telescopic Ladder</English>
             <German>Teleskopleiter</German>
             <Russian>Телескопическая лестница</Russian>
             <Polish>Drabina teleskopowa</Polish>
             <Spanish>Escalera telescópica</Spanish>
-            <French>Echelle téléscopique</French>
+            <French>Echelle télescopique</French>
             <Czech>Teleskopický žebřík</Czech>
-            <Italian>Telescopic Ladder</Italian>
+            <Italian>Scala Telescopica</Italian>
             <Hungarian>Teleszkopikus létra</Hungarian>
             <Portuguese>Escada telescópica</Portuguese>
             <Japanese>タクティカル ラダー</Japanese>
             <Korean>로프 사다리</Korean>
             <Chinesesimp>伸缩梯子</Chinesesimp>
             <Chinese>伸縮梯子</Chinese>
+            <Turkish>Katlanabilir Merdiven</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Deploy">
             <English>Deploy ladder</English>
@@ -25,13 +26,14 @@
             <Spanish>Despelgar escalera</Spanish>
             <French>Déployer l'échelle</French>
             <Czech>Rozložit žebřík</Czech>
-            <Italian>Deploy ladder</Italian>
+            <Italian>Piazza scala</Italian>
             <Hungarian>Létra lerakása</Hungarian>
             <Portuguese>Implantar escada</Portuguese>
             <Japanese>ラダーを設置</Japanese>
             <Korean>사다리 배치</Korean>
             <Chinesesimp>布署梯子</Chinesesimp>
             <Chinese>佈署梯子</Chinese>
+            <Turkish>Merdiveni Konuşlandır</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Drop">
             <English>Drop ladder</English>
@@ -39,15 +41,16 @@
             <Russian>Положить лестницу</Russian>
             <Polish>Zostaw drabinę</Polish>
             <Spanish>Soltar escalera</Spanish>
-            <French>Lacher l'échelle</French>
+            <French>Lâcher l'échelle</French>
             <Czech>Položit žebřík</Czech>
-            <Italian>Drop ladder</Italian>
+            <Italian>Lascia scala</Italian>
             <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
             <Japanese>ラダーを落とす</Japanese>
             <Korean>사다리 놓기</Korean>
             <Chinesesimp>降下梯子</Chinesesimp>
             <Chinese>降下梯子</Chinese>
+            <Turkish>Merdiveni Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
             <English>Extend</English>
@@ -56,13 +59,14 @@
             <Portuguese>Extender</Portuguese>
             <Russian>Разложить</Russian>
             <Czech>Prodloužit</Czech>
-            <Italian>Estendi, +Ctrl ruota</Italian>
+            <Italian>Estendi</Italian>
             <Spanish>Extender</Spanish>
-            <French>Déployer</French>
+            <French>Ajuster</French>
             <Japanese>伸ばす</Japanese>
             <Korean>늘리기</Korean>
             <Chinesesimp>伸长梯子</Chinesesimp>
             <Chinese>伸長梯子</Chinese>
+            <Turkish>Uzat</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_AdjustTilt">
             <English>+Ctrl tilt</English>
@@ -87,13 +91,14 @@
             <Spanish>Colocar escalera</Spanish>
             <French>Positionner l'échelle</French>
             <Czech>Umístit žebřík</Czech>
-            <Italian>Position ladder</Italian>
+            <Italian>Posiziona scala</Italian>
             <Hungarian>Létra elhelyezése</Hungarian>
             <Portuguese>Posicionar escada</Portuguese>
             <Japanese>ラダーの位置</Japanese>
             <Korean>사다리 위치</Korean>
             <Chinesesimp>梯子位置</Chinesesimp>
             <Chinese>梯子位置</Chinese>
+            <Turkish>Merdiveni Taşı</Turkish>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Pickup">
             <English>Pickup ladder</English>
@@ -101,15 +106,16 @@
             <Russian>Взять лестницу</Russian>
             <Polish>Zabierz drabinę</Polish>
             <Spanish>Recoger escalera</Spanish>
-            <French>Prendre l'échelle</French>
+            <French>Récupérer l'échelle</French>
             <Czech>Vzít žebřík</Czech>
-            <Italian>Pickup ladder</Italian>
+            <Italian>Prendi scala</Italian>
             <Hungarian>Létra felvétele</Hungarian>
             <Portuguese>Pegar escada</Portuguese>
             <Japanese>ラダーを拾う</Japanese>
             <Korean>사다리 줍기</Korean>
             <Chinesesimp>捡起梯子</Chinesesimp>
             <Chinese>撿起梯子</Chinese>
+            <Turkish>Merdiveni Al</Turkish>
         </Key>
     </Package>
 </Project>

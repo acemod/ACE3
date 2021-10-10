@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
- * Handle object being destroyed. Only runs on server.
+ * Handle object being destroyed.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * [object] call ace_cargo_fnc_handleDestroyed
+ * [_object] call ace_cargo_fnc_handleDestroyed
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 TRACE_1("params",_vehicle);
@@ -24,9 +24,9 @@ if (_loaded isEqualTo []) exitWith {};
 {
     // TODO Do we want to be able to recover destroyed equipment?
     if (_x isEqualType objNull) then {
+        detach _x;
         deleteVehicle _x;
     };
-    nil
-} count _loaded;
+} forEach _loaded;
 
 [_vehicle] call FUNC(validateCargoSpace);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, SilentSpike
  * Moves the spectator camera to a position relative to the camera focus.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _focus = vehicle (param [0, objNull, [objNull]]);
 TRACE_1("cam_prepareTarget",_focus);
@@ -41,7 +40,7 @@ if !(isNull _focus) then {
     private _isMan = _focus isKindOf "Man";
     private _height = if !(_isMan) then { (_bbd select 2) / 3 } else { switch (stance _focus) do { case "STAND": {1.4}; case "CROUCH": {0.8}; default {0.4}; }; };
 
-    private _center = if (_isMan) then { AGLToASL (_focus modelToWorldVisual (_focus selectionPosition "Spine3")) } else { AGLToASL (_focus modelToWorldVisual [0,0,_height]) };
+    private _center = if (_isMan) then { _focus modelToWorldVisualWorld (_focus selectionPosition "Spine3") } else { _focus modelToWorldVisualWorld [0,0,_height] };
 
     // Set dummy location and rotation
     private _dummy = GVAR(camDummy);
@@ -50,6 +49,6 @@ if !(isNull _focus) then {
     [_dummy, [GVAR(camYaw), GVAR(camPitch), 0]] call BIS_fnc_setObjectRotation;
 
     // Apply location and rotation to camera
-    GVAR(camera) setPosASL (AGLToASL (_dummy modelToWorldVisual [0, -_distance, 0]));
+    GVAR(camera) setPosASL (_dummy modelToWorldVisualWorld [0, -_distance, 0]);
     GVAR(camera) setVectorDirAndUp [vectorDirVisual _dummy, vectorUpVisual _dummy];
 };

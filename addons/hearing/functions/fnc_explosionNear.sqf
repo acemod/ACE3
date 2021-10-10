@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2, Ruthberg
  * Handles deafness due to explosions going off near the player.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_damage"];
 

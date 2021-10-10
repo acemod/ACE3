@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Verify the provided loadout.
@@ -10,8 +12,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_loadout"];
 
@@ -19,8 +19,8 @@ private _weaponCfg = configFile >> "CfgWeapons";
 private _magCfg = configFile >> "CfgMagazines";
 private _vehcCfg = configFile >> "CfgVehicles";
 private _glassesCfg = configFile >> "CfgGlasses";
-private _weaponsArray = GVAR(virtualItems) select 0;
-private _accsArray = GVAR(virtualItems) select 1;
+private _weaponsArray = GVAR(virtualItems) select IDX_VIRT_WEAPONS;
+private _accsArray = GVAR(virtualItems) select IDX_VIRT_ATTACHEMENTS;
 
 private _nullItemsAmount = 0;
 private _unavailableItemsAmount = 0;
@@ -58,7 +58,7 @@ private _fnc_weaponCheck = {
                     private _mag = _x select 0;
 
                     if (isClass (_magCfg >> _mag)) then {
-                        if !(_mag in (GVAR(virtualItems) select 2)) then {
+                        if !(_mag in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL)) then {
 
                             _unavailableItemsList pushBackUnique _mag;
                             _dataPath set [_forEachIndex, []];
@@ -137,7 +137,7 @@ for "_dataIndex" from 0 to 9 do {
 
                                         if (isClass (_magCfg >> _item)) then {
                                             if !(
-                                                    _item in (GVAR(virtualItems) select 2) ||
+                                                    _item in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) ||
                                                     _item in (GVAR(virtualItems) select 15) ||
                                                     _item in (GVAR(virtualItems) select 16)
                                                 ) then {
@@ -173,7 +173,7 @@ for "_dataIndex" from 0 to 9 do {
 
                 if (isClass (_weaponCfg >> _item)) then {
 
-                    if !(_item in (GVAR(virtualItems) select 3)) then {
+                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_HEADGEAR)) then {
 
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
@@ -195,7 +195,7 @@ for "_dataIndex" from 0 to 9 do {
 
                 if (isClass (_glassesCfg >> _item)) then {
 
-                    if !(_item in (GVAR(virtualItems) select 7)) then {
+                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_GOGGLES)) then {
 
                         _unavailableItemsList pushBackUnique _item;
                         _loadout set [_dataIndex, ""];
@@ -211,7 +211,7 @@ for "_dataIndex" from 0 to 9 do {
         };
 
         case 9: {
-            for "_subIndex" from 0 to 4 do {
+            for "_subIndex" from 0 to 5 do {
                 private _item = (_loadout select _dataIndex) select _subIndex;
 
                 if (_item != "") then {

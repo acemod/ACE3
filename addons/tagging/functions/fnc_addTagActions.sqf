@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Compiles tags from ACE_Tags and returns children actions.
@@ -13,13 +14,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
 private _actions = [];
 {
-    _x params ["_class", "_displayName", "_requiredItem", "_textures", "_icon"];
+    _x params ["_class", "_displayName", "_requiredItem", "_textures", "_icon", "_materials"];
 
     _actions pushBack [
         [
@@ -27,16 +27,26 @@ private _actions = [];
             _displayName,
             _icon,
             {
-                (_this select 2) params ["_unit", "_class", "_textures"];
-                [_unit, selectRandom _textures] call FUNC(tag);
+                (_this select 2) params ["_unit", "_class", "_textures", "", "_materials"];
+
+                (
+                    if (count _textures == count _materials) then {
+                        private _textureIndex = floor random count _textures;
+                        [_textures select _textureIndex, _materials select _textureIndex]
+                    } else {
+                        [selectRandom _textures, selectRandom _materials]
+                    }
+                ) params ["_randomTexture", "_randomMaterial"];
+
+                [_unit, _randomTexture, _randomMaterial] call FUNC(tag);
                 _unit setVariable [QGVAR(lastUsedTag), _class];
             },
             {
                 (_this select 2) params ["_unit", "", "", "_requiredItem"];
-                _requiredItem in ((items _unit) apply {toLower _x})
+                _requiredItem in (_unit call EFUNC(common,uniqueItems))
             },
             {},
-            [_unit, _class, _textures, _requiredItem]
+            [_unit, _class, _textures, _requiredItem, _materials]
         ] call EFUNC(interact_menu,createAction),
         [],
         _unit

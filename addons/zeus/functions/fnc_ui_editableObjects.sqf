@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Fisher, SilentSpike, mharis001
  * Initializes the "Editable Objects" Zeus module display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_control"];
 
@@ -47,8 +47,17 @@ private _fnc_onConfirm = {
 
     private _radius = GETVAR(_display,GVAR(radius),100);
     private _editingMode = lbCurSel (_display displayCtrl 19181) > 0;
-    private _allCurators = [getAssignedCuratorLogic player, objNull] select (lbCurSel (_display displayCtrl 19182));
-    private _objects = nearestObjects [getPos _logic, ["All"], _radius];
+    private _allCurators = [getAssignedCuratorLogic player, objNull] select lbCurSel (_display displayCtrl 19182);
+    private _additionalObjects = lbCurSel (_display displayCtrl 19183);
+
+    private _objects = nearestObjects [_logic, ["All"], _radius];
+    if (_additionalObjects == 1) then {
+        _objects append call CBA_fnc_players;
+    } else {
+        if (_additionalObjects == 2) then {
+            _objects append (allUnits + allDeadMen select {!(_x isKindOf "HeadlessClient_F")});
+        };
+    };
 
     if (_editingMode) then {
         [QGVAR(addObjects), [_objects, _allCurators]] call CBA_fnc_serverEvent;

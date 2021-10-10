@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Returns an array of alive players in a given radius around a given location
@@ -14,16 +15,7 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_position", "_radius"];
 
-private _nearestPlayers = [];
-
-{
-    if ([_x] call EFUNC(common,isPlayer) && {alive _x}) then {
-        _nearestPlayers pushBack _x;
-    };
-} forEach (nearestObjects [_position, ["Man"], _radius]);
-
-_nearestPlayers
+ (nearestObjects [_position, ["Man"], _radius]) select {alive _x && {[_x] call EFUNC(common,isPlayer)}};

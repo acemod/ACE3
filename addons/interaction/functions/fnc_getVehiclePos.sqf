@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Return a suitable position for the action point for the given target vehicle
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_target);
 
 private _bb = boundingBoxReal _target;
@@ -56,7 +56,7 @@ if (_cameraPosASL select 2 >= 0) then {
     _pos set [2, (_pos select 2) min _dz];
 };
 
-TRACE_4("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
+TRACE_5("",_bb,_bbX,_relPos,_pos,_cameraPosASL);
 _pos
 
 ///////////////////
@@ -67,7 +67,7 @@ if (cursorObject isEqualTo _target) exitWith {
     private _dest = EGVAR(interact_menu,cameraPosASL) vectorAdd (EGVAR(interact_menu,cameraDir) vectorMultiply 50);
     private _origin = EGVAR(interact_menu,cameraPosASL);
     //private _origin = EGVAR(interact_menu,cameraPosASL) vectorAdd [0, 0, -0.35] vectorDiff (EGVAR(interact_menu,cameraDir) vectorMultiply 1.5);
-    //private _dest = AGLtoASL (_target modelToWorldVisual [0,0,0]);
+    //private _dest = _target modelToWorldVisualWorld [0,0,0];
     private _results = lineIntersectsSurfaces [_origin, _dest, ACE_player, objNull, true, 5];
     private _finalPos = [0,0,0];
     {

@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Dagr
+title: DAGR
 description: Defense Advanced GPS Receiver.
 group: feature
 category: equipment

@@ -390,11 +390,21 @@ class CfgMagazines {
     class DemoCharge_Remote_Mag: SatchelCharge_Remote_Mag {
         displayName = CSTRING(DemoCharge_Name);
     };
+    class ACE_SatchelCharge_Remote_Mag_Throwable: CA_Magazine {
+        displayName = CSTRING(SatchelChargeThrowable_Name);
+    };
+    class ACE_DemoCharge_Remote_Mag_Throwable: ACE_SatchelCharge_Remote_Mag_Throwable {
+        displayName = CSTRING(DemoChargeThrowable_Name);
+    };
 
     // hand grenades
     class HandGrenade: CA_Magazine {
         displayName = CSTRING(HandGrenade_Name);
         displayNameShort = "M67";
+    };
+    class MiniGrenade: CA_Magazine {
+        displayName = CSTRING(MiniGrenade_Name);
+        displayNameShort = "V40";
     };
     class SmokeShell: HandGrenade {
         displayName = CSTRING(SmokeShell_Name);
@@ -418,6 +428,10 @@ class CfgMagazines {
         displayName = CSTRING(SmokeShellYellow_Name);
     };
 
+    class 50Rnd_570x28_SMG_03: CA_Magazine {
+        displayName = CSTRING(P90_Mag_Name);
+        descriptionShort = CSTRING(P90_Mag_DescriptionShort);
+    };
 
     // 1.70 Pylon Magazines (Should Match Weapon Name)
     class 2Rnd_Missile_AA_04_F;
@@ -466,7 +480,7 @@ class CfgMagazines {
     };
     class PylonRack_7Rnd_Rocket_04_HE_F: 7Rnd_Rocket_04_HE_F {
         displayName = "Hydra 70 7x HE"; // [vanilla: Shrieker 7x HE - Rocket_04_HE_Plane_CAS_01_F]
-    }; 
+    };
     class PylonRack_7Rnd_Rocket_04_AP_F: 7Rnd_Rocket_04_AP_F {
         displayName = "Hydra 70 7x AP"; // [vanilla: Shrieker 7x AP - Rocket_04_AP_Plane_CAS_01_F]
     };

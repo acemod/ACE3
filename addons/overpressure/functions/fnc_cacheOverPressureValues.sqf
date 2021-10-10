@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: joko // Jonas
  * Cache the shot data for a given weapon/mag/ammo combination.
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_weapon", "_ammo", "_magazine"];
 TRACE_3("Parameter",_weapon,_magazine,_ammo);

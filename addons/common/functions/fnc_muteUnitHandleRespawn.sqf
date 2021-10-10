@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Applies speaker changes on respawn. Used because speaker is respawning breaks the speaker on non-local clients. Also resets the public object variable (broken for JIP clients, that join after respawn)
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 

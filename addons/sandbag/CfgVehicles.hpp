@@ -12,7 +12,6 @@ class CfgVehicles {
                 statement = QUOTE([ARR_2({_this call FUNC(deploy)},_this)] call CBA_fnc_execNextFrame);
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
-                priority = 4;
                 icon = QPATHTOF(UI\icon_sandbag_ca.paa);
             };
         };
@@ -92,7 +91,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };

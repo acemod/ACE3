@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2 PabstMirror
  * Fix, because captiveNum doesn't reset properly on respawn
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_dead"];
 TRACE_2("handleRespawn",_unit,_dead);

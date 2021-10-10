@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  *
@@ -17,11 +18,10 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 private _hitpoints = [];
 private _selections = [];

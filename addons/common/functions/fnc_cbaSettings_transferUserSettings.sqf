@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Transfers a client's old ace settings to cba
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
@@ -31,7 +31,7 @@ private _aceSettings = configProperties [configFile >> "ACE_Settings", "isClass 
 
     if (!isNil "_profileVar") then {
         private _currentValue = [_settingName, "client"] call CBA_settings_fnc_get;
-        if (_isClientSettable && {!(_currentValue isEqualTo _profileVar)}) then {
+        if (_isClientSettable && {_currentValue isNotEqualTo _profileVar}) then {
             // CBA_settings_fnc_set will do type checking for the old profile var
             private _ret = [_settingName, _profileVar, 0, "client", true] call CBA_settings_fnc_set;
             INFO_3("Transfering setting [%1: %2] returned %3", _settingName, _profileVar, _ret);

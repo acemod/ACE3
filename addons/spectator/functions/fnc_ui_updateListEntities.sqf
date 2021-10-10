@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Updates spectator UI list of units/groups
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _newUnits = [];
 private _newGroups = [];
@@ -36,7 +35,7 @@ private _entities = [true] call FUNC(getTargetEntities);
         // Include the group if it contains valid entities
         private _entitiesGroup = units _group arrayIntersect _entities;
 
-        if !(_entitiesGroup isEqualTo []) then {
+        if (_entitiesGroup isNotEqualTo []) then {
             // Cache the info of valid units in the group
             private _unitsInfo = [];
             {
@@ -82,7 +81,7 @@ private _entities = [true] call FUNC(getTargetEntities);
 } forEach allGroups;
 
 // Whether an update to the list is required (really only if something changed)
-if !(GVAR(curList) isEqualTo _newList) then {
+if (GVAR(curList) isNotEqualTo _newList) then {
     private _ctrl = CTRL_LIST;
 
     // Remove groups/units that are no longer there

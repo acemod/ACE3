@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-#include "\a3\editor_f\Data\Scripts\dikCodes.h"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 ["ace_settingsInitialized", {
     // Hold on a little bit longer to ensure anims will work
@@ -44,7 +44,7 @@ if (!hasInterface) exitWith {};
     if ((_target distance ACE_player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")) exitWith {false};
 
     if ([ACE_player, _target] call FUNC(canApplyHandcuffs)) exitWith {
-        [QGVAR(setHandcuffed), [_target, true], _target] call CBA_fnc_targetEvent;
+        [ACE_player, _target] call FUNC(doApplyHandcuffs);
         true
     };
     false

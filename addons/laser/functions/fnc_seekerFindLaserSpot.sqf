@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou
  * Searches for a laser spot given a seekers params.
@@ -20,8 +21,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
@@ -57,10 +56,10 @@ private _finalOwner = objNull;
 
                 if (IS_ARRAY(_laserMethod)) then {
                     if (count _laserMethod == 2) then { // [modelPosition, weaponName] for _obj
-                        _laser = [AGLtoASL (_obj modelToWorldVisual (_laserMethod select 0)), _obj weaponDirection (_laserMethod select 1)];
+                        _laser = [_obj modelToWorldVisualWorld (_laserMethod select 0), _obj weaponDirection (_laserMethod select 1)];
                     } else {
                         if (count _laserMethod == 3) then {
-                            _laser = [AGLtoASL (_obj modelToWorldVisual (_laserMethod select 0)), (AGLtoASL (_obj modelToWorldVisual (_laserMethod select 1))) vectorFromTo (AGLtoASL (_obj modelToWorldVisual (_laserMethod select 2)))];
+                            _laser = [_obj modelToWorldVisualWorld (_laserMethod select 0), (_obj modelToWorldVisualWorld (_laserMethod select 1)) vectorFromTo (_obj modelToWorldVisualWorld (_laserMethod select 2))];
                         };
                     };
                 };

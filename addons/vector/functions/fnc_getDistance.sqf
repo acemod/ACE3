@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  *
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 #define MIN_DISTANCE 10
 #define MAX_DISTANCE [6000, 9000] select GVAR(useFeet)

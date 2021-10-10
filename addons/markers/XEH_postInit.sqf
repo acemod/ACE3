@@ -15,8 +15,11 @@ if (isMultiplayer && {!isServer} && {hasInterface}) then {
 GVAR(mapDisplaysWithDrawEHs) = [];
 GVAR(currentMarkerPosition) = [];
 GVAR(currentMarkerAngle) = 0;
+GVAR(currentMarkerScale) = 1;
 GVAR(currentMarkerColorConfigName) = "";
 GVAR(currentMarkerConfigName) = "";
+
+GVAR(userPlacedMarkers) = [];
 
 // set marker pos local on every machine (prevent markers visible for everyone)
 [QGVAR(setMarkerPosLocal), {
@@ -28,7 +31,8 @@ GVAR(currentMarkerConfigName) = "";
         private _index = (GETGVAR(allMapMarkers,[])) find _marker; // case-sensitive, but should be fine
 
         if (_index < 0) exitWith {
-            ERROR_1("Could not find data for %1", _marker);
+            if (!isMultiplayer) exitWith {};
+            WARNING_1("Could not find data for %1", _marker);
         };
 
         private _data = GVAR(allMapMarkersProperties) select _index;

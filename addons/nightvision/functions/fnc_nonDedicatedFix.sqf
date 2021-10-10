@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the client who is the non-dedicated server turning on the fog effects.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 TRACE_1("Starting PFEH to handling non-dedicated server running effect",GVAR(serverPriorFog));
 

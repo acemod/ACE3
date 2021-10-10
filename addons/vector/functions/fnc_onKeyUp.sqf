@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handles releasing the special vector keys.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 private _fnc_setPFH = {
     if (GVAR(holdKeyHandler) > -1) then {

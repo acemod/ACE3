@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe, mharis001
  * Zeus module function to toggle flashlights.
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic", "_toggle", "_addGear", "_target"];
 TRACE_1("params",_this);
@@ -25,10 +25,10 @@ TRACE_1("params",_this);
 private _units = [];
 
 if (_target == -1) then {
-    _units = (units attachedTo _logic) select {alive _x && {!([_x] call EFUNC(common,isPlayer))} && {!(currentWeapon _x isEqualTo "")}};
+    _units = (units attachedTo _logic) select {alive _x && {!([_x] call EFUNC(common,isPlayer))} && {currentWeapon _x isNotEqualTo ""}};
 } else {
     private _side = [west, east, independent, civilian] select _target;
-    _units = allUnits select {alive _x && {side _x == _side} && {!([_x] call EFUNC(common,isPlayer))} && {!(currentWeapon _x isEqualTo "")}};
+    _units = allUnits select {alive _x && {side _x == _side} && {!([_x] call EFUNC(common,isPlayer))} && {currentWeapon _x isNotEqualTo ""}};
 };
 
 // Toggle flashlights for units
@@ -38,7 +38,7 @@ if (_toggle) then {
         private _weapon = currentWeapon _x;
         private _pointer = (_x weaponAccessories _weapon) select 1;
 
-        if (!(_pointer isEqualTo "") && {getNumber (_cfgWeapons >> _pointer >> "ItemInfo" >> "FlashLight" >> "size") > 0}) then {
+        if ((_pointer isNotEqualTo "") && {getNumber (_cfgWeapons >> _pointer >> "ItemInfo" >> "FlashLight" >> "size") > 0}) then {
             [QEGVAR(ai,enableGunLights), [_x, "forceOn"], _x] call CBA_fnc_targetEvent;
         } else {
             if (_addGear) then {

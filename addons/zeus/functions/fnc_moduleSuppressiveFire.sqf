@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux, PabstMirror
  * Commands the selected unit or group to start suppressive fire on the unit, group or location the module is placed on
@@ -16,7 +17,6 @@
  * Public: No
  */
 // #define DRAW_ZEUS_INFO
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {[FUNC(moduleSuppressiveFire), _this] call CBA_fnc_directCall;};
 
@@ -49,7 +49,7 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     private _targetASL = _mousePosASL vectorAdd [0,0,0.6]; // mouse pos is at ground level zero, raise up a bit;
     private _artilleryMag = "";
 
-    if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "artilleryScanner")) == 1) then {
+    if ((getNumber (configOf _vehicle >> "artilleryScanner")) == 1) then {
         // Artillery - Get mortar ammo type and verify in range
         if (isNull gunner _vehicle) exitWith {_targetASL = [];};
         {

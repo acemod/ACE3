@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the unit can prepare the helicopters FRIES.
@@ -13,11 +14,9 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_vehicle"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 ((getNumber (_config >> QGVAR(enabled)) == 1) || {!(isNull (_vehicle getVariable [QGVAR(FRIES), objNull]))}) &&
 {(_vehicle getVariable [QGVAR(deploymentStage), 0]) == 0} &&

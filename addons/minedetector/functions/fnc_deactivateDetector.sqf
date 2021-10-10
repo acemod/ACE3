@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Deactivate the mine detector
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 if (call FUNC(canDeactivateDetector)) then {
     [ACE_player, currentWeapon ACE_player] call FUNC(disableDetector);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ir0n1E
  * Put weapon into gunbag.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 

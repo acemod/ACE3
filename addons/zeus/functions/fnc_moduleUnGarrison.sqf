@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Un-garrison a garrisoned group.
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * [LOGIC] call ace_zeus_fnc_moduleUngarrison
+ * [LOGIC] call ace_zeus_fnc_moduleUnGarrison
  *
  * Public: No
 */
-#include "script_component.hpp"
 
 params ["_logic"];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Initializes the player
@@ -14,12 +15,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_playerUnit", "_sides"];
+params ["_playerUnit"];
 
 if (vehicle _playerUnit == _playerUnit) then {
-    [_sides] call FUNC(markAiOnMap);
+    [GVAR(switchableSides)] call FUNC(markAiOnMap);
 
     _playerUnit setVariable [QGVAR(IsPlayerUnit), true, true];
     _playerUnit allowDamage false;
@@ -32,14 +32,11 @@ if (vehicle _playerUnit == _playerUnit) then {
     removeAllWeapons _playerUnit;
     removeGoggles _playerUnit;
     removeHeadgear _playerUnit;
-    removeVest _playerUnit;
     removeAllAssignedItems _playerUnit;
-    clearAllItemsFromBackpack _playerUnit;
-    removeBackpack _playerUnit;
+    removeAllContainers _playerUnit;
     _playerUnit linkItem  "ItemMap";
-    removeUniform _playerUnit;
 
     [_playerUnit, "forceWalk", "ACE_SwitchUnits", true] call EFUNC(common,statusEffect_set);
 
-    [_playerUnit, _sides] call FUNC(addMapFunction);
+    [] call FUNC(addMapFunction);
 };

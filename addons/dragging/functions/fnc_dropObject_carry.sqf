@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Drop a carried object.
@@ -14,10 +15,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
-TRACE_2("params",_unit,_target);
+TRACE_1("params",_this);
 
 // remove drop action
 [_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
@@ -34,13 +34,13 @@ detach _target;
 // fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
     if (vehicle _unit == _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
-        [_unit, "", 2, true] call EFUNC(common,doAnimation);
+        [_unit, "", 2] call EFUNC(common,doAnimation);
     };
 
     if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+        [_target, "unconscious", 2] call EFUNC(common,doAnimation);
     } else {
-        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo
+        [_target, "", 2] call EFUNC(common,doAnimation);  //@todo
     };
 };
 
@@ -76,3 +76,13 @@ if !(_target isKindOf "CAManBase") then {
 if (_target getVariable [QGVAR(isUAV), false]) then {
     createVehicleCrew _target;
 };
+
+// reset mass
+private _mass = _target getVariable [QGVAR(originalMass), 0];
+
+if (_mass != 0) then {
+    [QEGVAR(common,setMass), [_target, _mass]] call CBA_fnc_globalEvent; // force global sync
+};
+
+// reset temp direction
+_target setVariable [QGVAR(carryDirection_temp), nil];

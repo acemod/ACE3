@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handles when a unit gets in to a vehicle.  Release escorted captive when entering a vehicle
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "","_unit"];
 TRACE_2("params",_vehicle,_unit);
@@ -36,7 +36,7 @@ if (local _unit) then {
             _x params ["_xUnit", "", "", "_xTurretPath"];
             if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};
         } forEach (fullCrew (vehicle _unit));
-        if (!(_turretPath isEqualTo [])) then {
+        if (_turretPath isNotEqualTo []) then {
             TRACE_1("Setting FFV Handcuffed Animation",_turretPath);
             [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
             [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);

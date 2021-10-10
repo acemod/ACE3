@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Return a suitable position for the action point for the current weapon
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_target);
 
 private _weaponDir = _target weaponDirection currentWeapon _target;

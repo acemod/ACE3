@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, SilentSpike
  * Updates spectator UI unit info widget
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 #define IMG_COMMANDER "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageCommander_ca.paa"
 #define IMG_DRIVER "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageDriver_ca.paa"
 #define IMG_GUNNER "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageGunner_ca.paa"
@@ -33,7 +32,7 @@ private _unitTypePicture = "";
 private _vehicleTypePicture = "";
 private _vehiclePositionPicture = "";
 if (_focus != vehicle _focus) then {
-    _vehicleTypePicture = getText (configFile >> "CfgVehicles" >> typeOf vehicle _focus >> "Picture");
+    _vehicleTypePicture = getText (configOf vehicle _focus >> "Picture");
 
     _vehiclePositionPicture = switch (_focus) do {
         case (commander vehicle _focus): {IMG_COMMANDER};

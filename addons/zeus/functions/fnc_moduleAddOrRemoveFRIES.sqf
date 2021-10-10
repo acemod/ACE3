@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Add/Removes FRIES from a helicopter.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic"];
 
@@ -32,7 +32,7 @@ if !(["ace_fastroping"] call EFUNC(common,isModLoaded)) then {
         if !(alive _mouseOverUnit) then {
             [LSTRING(OnlyAlive)] call FUNC(showMessage);
         } else {
-            private _config = configFile >> "CfgVehicles" >> typeOf _mouseOverUnit;
+            private _config = configOf _mouseOverUnit;
             private _displayName = getText (_config >> "displayName");
             if !(isNumber (_config >> QEGVAR(fastroping,enabled))) then {
                 [LSTRING(NotFastRopeCompatible), _displayName] call FUNC(showMessage);

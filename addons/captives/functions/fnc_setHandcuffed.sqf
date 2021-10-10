@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nic547, commy2
  * Handcuffs a unit.
@@ -5,19 +6,19 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: True to take captive, false to release captive <BOOL>
+ * 2: Caller <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, true] call ACE_captives_fnc_setHandcuffed;
+ * [bob, true, dave] call ACE_captives_fnc_setHandcuffed;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_unit","_state"];
-TRACE_2("params",_unit,_state);
+params ["_unit", "_state", ["_caller", objNull]];
+TRACE_3("params",_unit,_state,_caller);
 
 if (!local _unit) exitWith {
     WARNING("running setHandcuffed on remote unit");
@@ -41,6 +42,7 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
+    [_unit, "blockRadio", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
         [_unit, false] call FUNC(setSurrendered);
@@ -50,7 +52,7 @@ if (_state) then {
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
-        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
+        ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHud);
     };
 
     // fix anim on mission start (should work on dedicated servers)
@@ -73,7 +75,7 @@ if (_state) then {
             TRACE_1("removing animChanged EH",_animChangedEHID);
             _unit removeEventHandler ["AnimChanged", _animChangedEHID];
         };
-        _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedHandcuffed)];
+        _animChangedEHID = _unit addEventHandler ["AnimChanged", {call FUNC(handleAnimChangedHandcuffed)}];
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
 
@@ -81,6 +83,7 @@ if (_state) then {
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
+    [_unit, "blockRadio", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
@@ -103,4 +106,4 @@ if (_state) then {
 };
 
 //Global Event after changes:
-["ace_captiveStatusChanged", [_unit, _state, "SetHandcuffed"]] call CBA_fnc_globalEvent;
+["ace_captiveStatusChanged", [_unit, _state, "SetHandcuffed", _caller]] call CBA_fnc_globalEvent;

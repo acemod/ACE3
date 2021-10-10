@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Sets the structural damage of a vehicle without altering the hitPoints, requires local vehicle.
@@ -5,6 +6,7 @@
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
  * 1: Total Damage <NUMBER>
+ # 2: Use destruction effects <BOOL>
  *
  * Return Value:
  * None
@@ -14,9 +16,8 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_vehicle", "_damage"];
+params ["_vehicle", "_damage", ["_useEffects", false]];
 TRACE_2("params",_vehicle,_damage);
 
 // can't execute all commands if the vehicle isn't local. exit here.
@@ -26,7 +27,12 @@ if !(local _vehicle) exitWith {};
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // set damage of the vehicle
-_vehicle setDamage _damage;
+private _damageDisabled = !isDamageAllowed _vehicle;
+if (_damageDisabled) then {
+    _vehicle allowDamage true;
+};
+
+_vehicle setDamage [_damage, _useEffects];
 
 // restore original hitpoint damage values
 {
@@ -35,3 +41,7 @@ _vehicle setDamage _damage;
 
 // normalize hitpoints
 [_vehicle] call FUNC(normalizeHitPoints);
+
+if (_damageDisabled) then {
+    _vehicle allowDamage false;
+};

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, PabstMirror
  * Handles the "ace_unconscious" event
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit","_isUnconc"];
 

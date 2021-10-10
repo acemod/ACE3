@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut, 654wak654
  * Generates the CfgVehicles config to allow uniform usage on all sides.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 private _modifyClasses = [];
 private _baseClasses = [];
@@ -27,8 +27,8 @@ private _baseClasses = [];
 } count (
     ("!isNull (_x >> 'modelSides') &&" +
     "{(_x >> 'modelSides') in (configProperties [_x, 'true', false])} &&" +
-    "{!(getArray (_x >> 'modelSides') isEqualTo [6])} &&" +
-    "{!(getArray (_x >> 'modelSides') isEqualTo [0,1,2,3])}")
+    "{getArray (_x >> 'modelSides') isNotEqualTo [6]} &&" +
+    "{getArray (_x >> 'modelSides') isNotEqualTo [0,1,2,3]}")
     configClasses (configFile >> "CfgVehicles")
 );
 

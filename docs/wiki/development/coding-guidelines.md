@@ -126,7 +126,8 @@ These macros are allowed but are not enforced.
 |`GETVAR(player,MyVarName,false)` | `player getVariable ["MyVarName", false]` |
 |`GETMVAR(MyVarName,objNull)` | `missionNamespace getVariable ["MyVarName", objNull]` |
 |`GETUVAR(MyVarName,displayNull)` | `uiNamespace getVariable ["MyVarName", displayNull]` |
-|`SETVAR(player,MyVarName,127)` |  `player setVariable ["MyVarName", 127]  SETPVAR(player,MyVarName,127) player setVariable ["MyVarName", 127, true]` |
+|`SETVAR(player,MyVarName,127)` | `player setVariable ["MyVarName", 127]` |
+|`SETPVAR(player,MyVarName,127)` | `player setVariable ["MyVarName", 127, true]` |
 |`SETMVAR(MyVarName,player)` | `missionNamespace setVariable ["MyVarName", player]` |
 |`SETUVAR(MyVarName,_control)` | `uiNamespace setVariable ["MyVarName", _control]` |
 
@@ -134,14 +135,16 @@ These macros are allowed but are not enforced.
 Note that you need the strings in module `stringtable.xml` in the correct format:
 `STR_ACE_<module>_<string>`
 
-Example: `STR_Balls_Banana`
+Example: `STR_ACE_Balls_Banana`
 
-Script strings (still require `localize` to localize the string):
+Script strings:
 
 | Macro | Expands to |
 | -------|---------|
 |`LSTRING(banana)` | `"STR_ACE_balls_banana"` |
+|`LLSTRING(banana)` | `localize "STR_ACE_balls_banana"` |
 |`ELSTRING(leg,banana)` | `"STR_ACE_leg_banana"` |
+|`LELSTRING(leg,banana)` | `localize "STR_ACE_leg_banana"` |
 
 
 Config Strings (require `$` as first character):
@@ -165,10 +168,18 @@ The family of path macros define global paths to files for use within a module. 
 ## 3. Functions
 Functions shall be created in the `functions\` subdirectory, named `fnc_functionName.sqf` They shall then be indexed via the `PREP(functionName)` macro in the `XEH_preInit.sqf` file.
 
-The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_components.hpp"` include!**
+The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_component.hpp"` include!**
 
-### 3.1 Headers
-Every function should have a header of the following format as the start of their function file:
+### 3.1 Includes
+Every function includes the `script_component.hpp` file on the first line. Any additional includes or defines must be below this include.
+
+All code written must be below this include and any potential additional includes or defines.
+
+#### 3.1.1 Reasoning
+This ensures every function starts off in an uniform way and enforces function documentation. The include appears before the header to avoid incorrect line numbers in script errors.
+
+### 3.2 Headers
+Every function should have a header of the following format appear before any code:
 
 ```js
 /*
@@ -193,15 +204,7 @@ Every function should have a header of the following format as the start of thei
  */
 ```
 
-This is not the case for inline functions or functions not containing their own file.
-
-### 3.2 Includes
-Every function includes the `script_component.hpp` file just below the function header. Any additional includes or defines must be below this include.
-
-All scripts written must be below this include and any potential additional includes or defines.
-
-#### 3.2.1 Reasoning
-This ensures every function starts of in an uniform way and enforces function documentation.
+This is not the case for inline functions or functions not contained in their own file.
 
 
 ## 4. Global Variables
@@ -298,7 +301,7 @@ call {
         call {
         if (/* condition */) then {
             /* code */
-        };  
+        };
         };
 };
 ```
@@ -394,6 +397,23 @@ Magic numbers are any of the following:
 
 [Source](http://en.wikipedia.org/wiki/Magic_number_%28programming%29){:target="_blank"}
 
+### 5.7 Spaces between array elements
+When using array notation `[]`, always use a space between elements to improve code readability.
+
+Good:
+
+```js
+params ["_unit", "_vehicle"];
+private _pos = [0, 0, 0];
+```
+
+Bad:
+
+```js
+params ["_unit","_vehicle"];
+private _pos = [0,0,0];
+```
+
 
 ## 6. Code Standards
 
@@ -443,17 +463,17 @@ Good:
 
 ```js
 if (call FUNC(myCondition)) then {
-   private _areAllAboveTen = true; // <- smallest feasable scope
+    private _areAllAboveTen = true; // <- smallest feasable scope
 
-   {
-      if (_x >= 10) then {
-         _areAllAboveTen = false;
-      };
-   } forEach _anArray;
+    {
+        if (_x >= 10) then {
+            _areAllAboveTen = false;
+        };
+    } forEach _anArray;
 
-   if (_areAllAboveTen) then {
-       hint "all values are above ten!";
-   };
+    if (_areAllAboveTen) then {
+        hint "all values are above ten!";
+    };
 }
 ```
 
@@ -462,15 +482,15 @@ Bad:
 ```js
 private _areAllAboveTen = true; // <- this is bad, because it can be initialized in the if statement
 if (call FUNC(myCondition)) then {
-   {
-      if (_x >= 10) then {
-         _areAllAboveTen = false;
-      };
-   } forEach _anArray;
+    {
+        if (_x >= 10) then {
+            _areAllAboveTen = false;
+        };
+    } forEach _anArray;
 
-   if (_areAllAboveTen) then {
-       hint "all values are above ten!";
-   };
+    if (_areAllAboveTen) then {
+        hint "all values are above ten!";
+    };
 };
 ```
 
@@ -555,8 +575,8 @@ Good:
 
 ```js
 fnc_example = {
-   params ["_content"];
-   hint _content;
+    params ["_content"];
+    hint _content;
 };
 ```
 
@@ -603,14 +623,12 @@ Event handlers in ACE3 are implemented through the CBA event system (ACE3's own 
 
 More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events){:target="_blank"} pages.
 
-<div class="panel info">
-    <h5>Warning about BIS event handlers:</h5>
-    <p>BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.</p>
-    ```js
-    player addEventHandler ["Fired", FUNC(handleFired)]; // bad
-    player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
-    ```
-</div>
+**Warning about BIS event handlers:**
+BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.
+```js
+player addEventHandler ["Fired", FUNC(handleFired)]; // bad
+player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
+```
 
 ### 7.4 Hashes
 
@@ -701,7 +719,7 @@ _a pushBack _value;
 Also good:
 
 ```js
-_a append [1,2,3];
+_a append [1, 2, 3];
 ```
 
 Bad:

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Calculate cooldown of all the stored spare barrels.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 private _pairs = [];
 TRACE_1("updateSpareBarrelsTemperaturesThread1",GVAR(storedSpareBarrels));

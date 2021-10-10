@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Shows or hides the vectors center square thingy.
@@ -14,8 +15,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
-((GETUVAR(ACE_dlgVector,displayNull)) displayCtrl 1301) ctrlSetText (["", QPATHTOF(rsc\vector_center.paa)] select (_this select 0));
+((GETUVAR(ACE_dlgVector,displayNull)) displayCtrl IDC_CENTER) ctrlSetText (["", QPATHTOF(rsc\vector_center.paa)] select (_this select 0));
 
 [GVAR(illuminate)] call FUNC(illuminate);

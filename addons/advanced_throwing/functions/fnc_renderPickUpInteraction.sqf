@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, Jonpas
  * When interact_menu starts rendering (from "interact_keyDown" event).
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 [{
     params ["_args", "_idPFH"];
@@ -31,7 +31,7 @@
             _nearThrowables append (ACE_player nearObjects ["ACE_Chemlight_IR_Dummy", PICK_UP_DISTANCE]);
 
             {
-                if (!(_x in _throwablesHelped) &&
+                if (!(_x in _throwablesHelped) && {!((attachedTo _x) getVariable [QGVAR(disablePickUp), false])} &&
                     {!(_x isKindOf "SmokeShellArty")} && {!(_x isKindOf "G_40mm_Smoke")} && // All smokes inherit from "GrenadeHand" >> "SmokeShell"
                     {GVAR(enablePickUpAttached) || {!GVAR(enablePickUpAttached) && {isNull (attachedTo _x)}}}
                 ) then {

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Recieves the data packet from the vector rangefinder
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_slopeDistance", "_azimuth", "_inclination"];
 
 if (GVAR(currentWaypoint) != -2) exitWith {}; //Only take waypoint when "connected"

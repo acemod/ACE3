@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Returns pitch, bank, yaw for given vehicle in degrees.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 

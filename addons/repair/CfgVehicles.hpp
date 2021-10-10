@@ -7,7 +7,6 @@
                 statement = ""; \
                 runOnHover = 1; \
                 showDisabled = 0; \
-                priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
                 exceptions[] = {"isNotSwimming", "isNotOnLadder"}; \
@@ -101,7 +100,7 @@ class CfgVehicles {
                 defaultValue = 1;
             };
             class wheelRepairRequiredItems {
-                displayName = CSTRING(wheelRepairRequiredItems_name);
+                displayName = CSTRING(WheelRepairRequiredItems_DisplayName);
                 description = CSTRING(wheelRepairRequiredItems_description);
                 typeName = "NUMBER";
                 class values {
@@ -378,13 +377,14 @@ class CfgVehicles {
         // can not take damage individually though, because of limitations of the thingX simulation type
         class HitPoints {
             class HitBody {
-                armor = 0.6;
+                armor = 1;
                 material = -1;
                 name = "mat_rim";
                 visual = "mat_rim";
                 passThrough = 1;
                 radius = 0.1;
                 explosionShielding = 1;
+                minimalHit = 1;
             };
         };
 
@@ -408,12 +408,12 @@ class CfgVehicles {
     class ReammoBox_F;
     class Land_RepairDepot_01_base_F: ReammoBox_F { // TanksDLC - Repair Depo Thing
         GVAR(canRepair) = 1;
-        transportRepair = 0; 
+        transportRepair = 0;
     };
     class Van_02_base_F;
     class Van_02_service_base_F: Van_02_base_F { // OrangeDLC
         GVAR(canRepair) = 1;
-        transportRepair = 0;  
+        transportRepair = 0;
     };
 
     class Slingload_01_Base_F;
@@ -457,8 +457,7 @@ class CfgVehicles {
         GVAR(hitpointPositions)[] = {{"HitTurret", {0,-2,0}}};
     };
 
-    class Car_F;
-    class Offroad_01_base_F: Car_F {};
+    class Offroad_01_base_F;
     class Offroad_01_repair_base_F: Offroad_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
@@ -484,7 +483,25 @@ class CfgVehicles {
         GVAR(canRepair) = 0;
     };
 
-    class Truck_03_base_F;
+    class Car_F: Car {
+        class HitPoints;
+    };
+    class Truck_F: Car_F {
+        class HitPoints: HitPoints {
+            class HitLBWheel;
+            class HitRBWheel;
+        };
+    };
+    class Truck_03_base_F: Truck_F {
+        class HitPoints: HitPoints {
+            class HitLBWheel: HitLBWheel {
+                name = "wheel_1_4_steering"; // return original values back to fix double wheel hitpoint
+            };
+            class HitRBWheel: HitRBWheel {
+                name = "wheel_2_4_steering";
+            };
+        };
+    };
     class O_Truck_03_repair_F: Truck_03_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;

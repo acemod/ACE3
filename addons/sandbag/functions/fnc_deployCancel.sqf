@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
  * Cancels sandbag deployment
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_key"];
 

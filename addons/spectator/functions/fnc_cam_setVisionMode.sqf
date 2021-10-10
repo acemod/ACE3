@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Function used to select the camera vision mode
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_newVision"];
 

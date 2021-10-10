@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: aeroson
  * Checks if crew info can be shown.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 ((vehicle ACE_player) != ACE_player) &&
 {GVAR(ShowCrewInfo)} &&

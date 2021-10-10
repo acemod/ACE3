@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Recursively shows the progress bar for each configured pylon.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_pylonsToConfigure", "_currentPylon"];
 

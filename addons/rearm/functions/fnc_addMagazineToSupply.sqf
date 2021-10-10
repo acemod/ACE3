@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Adds magazines to the supply. [Global Effects]
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 if !(EGVAR(common,settingsInitFinished)) exitWith { // only run this after the settings are initialized
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addMagazineToSupply), _this];
@@ -49,7 +49,7 @@ if (GVAR(supply) == 2) then {
     private _magazineIdx = -1;
     {
         _x params ["_magazine", "_rounds"];
-        if ((_magazine isEqualTo _magazineClass)) exitWith {
+        if (_magazine isEqualTo _magazineClass) exitWith {
             _magazineIdx = _forEachIndex;
         };
     } forEach _magazineSupply;

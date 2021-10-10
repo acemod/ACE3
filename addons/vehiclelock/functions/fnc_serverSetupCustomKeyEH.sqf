@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * On the server: Adds a key (magazineDetail name) to approved keys for a vehicle.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_veh", "_key"];
 TRACE_2("params",_veh,_key);

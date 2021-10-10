@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nic547
  * Attaches a Captive to the _unit
@@ -11,11 +12,10 @@
  * The return value <BOOL>
  *
  * Example:
- * [player, bob, true] call ACE_captives_fnc_doEscorteCaptive;
+ * [player, bob, true] call ACE_captives_fnc_doEscortCaptive;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target","_state"];
 

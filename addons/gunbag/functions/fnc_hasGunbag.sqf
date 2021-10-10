@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: Ir0n1E
- * Switches gunbag full/empty for mass calculation.
+ * Check if unit has a gunbag.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -13,8 +14,7 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 
-(backpackContainer _unit) isKindOf QUOTE(ADDON)
+getNumber (configFile >> "CfgVehicles" >> (backpack _unit) >> QUOTE(ADDON)) == 1

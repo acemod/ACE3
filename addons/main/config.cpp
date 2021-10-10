@@ -6,13 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "A3_Data_F_Tank_Loadorder",
-            // CBA
-            "cba_ui",
-            "cba_xeh",
-            "cba_jr"
-        };
+        requiredAddons[] = {"cba_main"};
         author = ECSTRING(common,ACETeam);
         url = CSTRING(URL);
         VERSION_CONFIG;

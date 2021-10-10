@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns the name of the object. Used to prevent issues with the name command.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", ["_showEffective", false], ["_useRaw", false]];
 
@@ -27,7 +27,7 @@ if (_unit isKindOf "CAManBase") then {
     if (_showEffective) then {
         _name = [effectiveCommander _unit, false, _useRaw] call FUNC(getName);
     } else {
-        _name = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+        _name = getText (configOf _unit >> "displayName");
     };
 };
 

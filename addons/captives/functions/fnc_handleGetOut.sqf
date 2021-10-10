@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Handles when a captive unit gets out of a vehicle.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "", "_unit"];
 TRACE_2("params",_vehicle,_unit);

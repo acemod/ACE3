@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2
  * Make a unit start swapping it's barrel
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_assistant", "_gunner", "_weapon"];
 TRACE_3("params",_assistant,_gunner,_weapon);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Pushes a boat away from the player
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_boat", "_unit"];
 

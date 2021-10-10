@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: TheDrill, PabstMirror
  * The perFrameEventHandler to draw the icons
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!alive ACE_player) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 // Conditions: canInteract

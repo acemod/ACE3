@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Initalises the `group side` zeus module display
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 #define IDCs [31201,31200,31202,31203]
 
 params ["_control"];

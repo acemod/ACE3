@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: rocko
  * Fixes animation issues that may get you stuck
@@ -15,7 +16,6 @@
  *
  * Note: Has to be spawned not called
  */
-#include "script_component.hpp"
 
 private _unit = ACE_player;
 private _anim = animationState _unit;
@@ -24,6 +24,8 @@ private _anim = animationState _unit;
 [QGVAR(headbugFixUsed), [profileName, _anim]] call CBA_fnc_localEvent;
 
 if (_unit != vehicle _unit  || {!([_unit, objNull, ["isNotSitting"]] call FUNC(canInteractWith))}) exitWith {false};
+
+["ace_headBugFix", true] call FUNC(setDisableUserInputStatus);
 
 private _pos = getPosATL _unit;
 private _dir = getDir _unit;
@@ -47,4 +49,7 @@ deleteVehicle _dummy;
 
 [_unit, "headBugFix"] call FUNC(unhideUnit);
 titleCut ["", "PLAIN"];
+
+["ace_headBugFix", false] call FUNC(setDisableUserInputStatus);
+
 true

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Client: Recives a marker data from server.
@@ -15,17 +16,16 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_allMapMarkers", "_allMapMarkersProperties"];
-TRACE_3("params",_allMapMarkers,_allMapMarkersProperties);
+TRACE_2("params",_allMapMarkers,_allMapMarkersProperties);
 
 {
     private _index = _allMapMarkers find _x;
 
     if (_index != -1) then {
         private _data = _allMapMarkersProperties select _index;
-        _data params ["_markerClassname", "_colorClassname", "_pos", "_dir"];
+        _data params ["_markerClassname", "_colorClassname", "_pos", "_dir", "_scale"];
 
         private _config = (configfile >> "CfgMarkers") >> _markerClassname;
 
@@ -47,6 +47,7 @@ TRACE_3("params",_allMapMarkers,_allMapMarkersProperties);
 
         _x setMarkerPosLocal _pos;
         _x setMarkerDirLocal _dir;
+        _x setMarkerSizeLocal [_scale, _scale];
     };
     false
 } count allMapMarkers;

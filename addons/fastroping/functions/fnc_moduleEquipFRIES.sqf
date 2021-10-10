@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Equips synched helicopters with a FRIES.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_module"];
 
 private _synchedUnits = synchronizedObjects _module;

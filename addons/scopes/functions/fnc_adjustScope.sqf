@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, Ruthberg
  * Changes the adjustment for the current scope
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_turretAndDirection", "_majorStep"];
 TRACE_3("adjustScope",_unit,_turretAndDirection,_majorStep);

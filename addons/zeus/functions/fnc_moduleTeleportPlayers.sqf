@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Zeus module function to teleport players on dialog confirmation
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_logic","_uid","_group"];
 

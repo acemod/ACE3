@@ -1,24 +1,22 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Rearm an entire vehicle.
  *
  * Arguments:
- * 0: Rearm information <ARRAY>
- *   0: Ammo Truck <OBJECT>
- *   1: Vehicle <OBJECT>
+ * 0: Ammo Truck <OBJECT>
+ * 1: Vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[ammo_truck, tank]] call ace_rearm_fnc_rearmEntireVehicleSuccess
+ * [ammo_truck, tank] call ace_rearm_fnc_rearmEntireVehicleSuccess
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_args"];
-_args params ["_truck", "_vehicle"];
+params ["_truck", "_vehicle"];
 TRACE_2("rearmEntireVehicleSuccess",_truck,_vehicle);
 
 if (isServer) then {

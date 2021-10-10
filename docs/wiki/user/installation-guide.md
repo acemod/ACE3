@@ -65,7 +65,7 @@ Only use the optional components that correspond with your mod-pack.
 
 ### 6.1 Swifty
 
-[Swifty](http://getswifty.net/){:target="_blank"}
+[Swifty](https://getswifty.net/){:target="_blank"}
 - tbd
 
 ### 6.2 Arma3Sync
@@ -79,8 +79,3 @@ Only use the optional components that correspond with your mod-pack.
 <img src="{{ site.baseurl }}/img/wiki/user/installation2-a3s.jpg" width="529" height="222" alt="Arma3Sync Launcher" />
 - Click `Start Game`
 
-### 6.3 Play withSIX
-
-[Play withSIX](http://withsix.com/p){:target="_blank"}
-
-- tbd

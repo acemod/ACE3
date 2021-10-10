@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {"ACE_DebugPotato"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ACE_Interaction"};
+        requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror"};
         url = ECSTRING(main,URL);

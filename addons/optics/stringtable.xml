@@ -16,6 +16,7 @@
             <Korean>RCO (2D)</Korean>
             <Chinesesimp>步枪战斗光学瞄准镜(2D)</Chinesesimp>
             <Chinese>步槍戰鬥光學瞄準鏡(2D)</Chinese>
+            <Turkish>RCO (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_hamr_pip">
             <English>RCO (PIP)</English>
@@ -32,6 +33,7 @@
             <Korean>RCO (PIP)</Korean>
             <Chinesesimp>步枪战斗光学瞄准镜(拟真版)</Chinesesimp>
             <Chinese>步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
+            <Turkish>RCO (PIP)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_arco">
             <English>ARCO (2D)</English>
@@ -48,6 +50,7 @@
             <Korean>ARCO (2D)</Korean>
             <Chinesesimp>先进步枪战斗光学瞄准镜(2D)</Chinesesimp>
             <Chinese>先進步槍戰鬥光學瞄準鏡(2D)</Chinese>
+            <Turkish>ARCO (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_arco_pip">
             <English>ARCO (PIP)</English>
@@ -64,6 +67,7 @@
             <Korean>ARCO (PIP)</Korean>
             <Chinesesimp>先进步枪战斗光学瞄准镜(拟真版)</Chinesesimp>
             <Chinese>先進步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
+            <Turkish>ARCO (PIP)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_valdada">
             <English>MRCO (2D)</English>
@@ -80,6 +84,7 @@
             <Korean>MRCO (2D)</Korean>
             <Chinesesimp>多距离战斗瞄准镜(2D)</Chinesesimp>
             <Chinese>多距離戰鬥瞄準鏡(2D)</Chinese>
+            <Turkish>MRCO (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_valdada_pip">
             <English>MRCO (PIP)</English>
@@ -96,6 +101,7 @@
             <Korean>MRCO (PIP)</Korean>
             <Chinesesimp>多距离战斗瞄准镜(拟真版)</Chinesesimp>
             <Chinese>多距離戰鬥瞄準鏡(擬真版)</Chinese>
+            <Turkish>MRCO (PIP)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_sos">
             <English>MOS (2D)</English>
@@ -112,6 +118,7 @@
             <Korean>MOS (2D)</Korean>
             <Chinesesimp>精准光学瞄准镜(2D)</Chinesesimp>
             <Chinese>精準光學瞄準鏡(2D)</Chinese>
+            <Turkish>MOS (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_sos_pip">
             <English>MOS (PIP)</English>
@@ -128,6 +135,7 @@
             <Korean>MOS (PIP)</Korean>
             <Chinesesimp>精准光学瞄准镜(拟真版)</Chinesesimp>
             <Chinese>精準光學瞄準鏡(擬真版)</Chinese>
+            <Turkish>MOS (PIP)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_lrps">
             <English>LRPS (2D)</English>
@@ -144,6 +152,7 @@
             <Korean>LRPS (2D)</Korean>
             <Chinesesimp>长距离精确瞄准镜(2D)</Chinesesimp>
             <Chinese>長距離精確瞄準鏡(2D)</Chinese>
+            <Turkish>LRPS (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_lrps_pip">
             <English>LRPS (PIP)</English>
@@ -160,6 +169,7 @@
             <Korean>LRPS (PIP)</Korean>
             <Chinesesimp>长距离精确瞄准镜(拟真版)</Chinesesimp>
             <Chinese>長距離精確瞄準鏡(擬真版)</Chinese>
+            <Turkish>LRPS (PIP)</Turkish>
         </Key>
     </Package>
 </Project>

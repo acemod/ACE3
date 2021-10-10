@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Local PerFrameHandler during fast roping.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_arguments", "_pfhHandle"];
 _arguments params ["_unit", "", "_rope", "", "_timeToPlayRopeSound"];
 _rope params ["", "", "", "_dummy", "_hook"];

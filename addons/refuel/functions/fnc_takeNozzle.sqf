@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Take a fuel nozzle either from a fuel truck/station or from the ground.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params [
     ["_unit", objNull, [objNull]],
@@ -47,7 +47,7 @@ params [
             if !(_source isKindOf "AllVehicles") then {
                 private _helper = QGVAR(helper) createVehicle [0,0,0];
                 [QEGVAR(common,hideObjectGlobal), [_helper, true]] call CBA_fnc_serverEvent;
-                if ((getText (configFile >> "CfgVehicles" >> typeOf _source >> "simulation")) isEqualTo "thingX") then {
+                if ((getText (configOf _source >> "simulation")) isEqualTo "thingX") then {
                     _helper attachTo [_source, [0,0,0]];
                 } else {
                     _helper setPosWorld (getPosWorld _source);
@@ -57,7 +57,7 @@ params [
                 _nozzle setVariable [QGVAR(helper), _helper, true];
                 _ropeTarget = _helper;
             };
-            private _attachPos = _source getVariable [QGVAR(hooks), getArray (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(hooks))];
+            private _attachPos = _source getVariable [QGVAR(hooks), getArray (configOf _source >> QGVAR(hooks))];
             if (_attachPos isEqualTo []) then {
                 _attachPos = [[0,0,0]];
             };

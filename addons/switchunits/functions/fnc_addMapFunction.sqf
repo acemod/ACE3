@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Adds a mapClick Eventhandler
@@ -14,14 +15,10 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_unit", "_sides"];
-
-["theMapClick", "onMapSingleClick", {
-    // IGNORE_PRIVATE_WARNING(_pos,_shift,_alt)
+addMissionEventHandler ["MapSingleClick", {
+    params ["", "_pos"];
     if (alive ACE_player && {GVAR(OriginalUnit) getVariable ["ACE_CanSwitchUnits", false]}) then {
-        [_this, _pos, _shift, _alt] call FUNC(handleMapClick);
+        [GVAR(switchableSides), _pos] call FUNC(handleMapClick);
     };
-
-}, [_unit, _sides]] call BIS_fnc_addStackedEventHandler;
+}];

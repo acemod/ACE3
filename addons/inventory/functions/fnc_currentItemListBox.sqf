@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Returns the current item list box of given inventory display.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_display"];
 
@@ -30,4 +30,4 @@ scopeName "main";
     false
 } count [IDC_ITEMLIST_GROUND, IDC_ITEMLIST_SOLDIER, IDC_ITEMLIST_UNIFORM, IDC_ITEMLIST_VEST, IDC_ITEMLIST_BACKPACK];
 
--1
+controlNull

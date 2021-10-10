@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_vehicle", "_hitPointIndex"];
 TRACE_3("params",_unit,_vehicle,_hitPointIndex);
@@ -39,7 +39,7 @@ if (_hitPointNewDamage < _hitPointCurDamage) then {
 };
 
 // Get hitpoint groups if available
-private _hitpointGroupConfig = configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(hitpointGroups);
+private _hitpointGroupConfig = configOf _vehicle >> QGVAR(hitpointGroups);
 if (isArray _hitpointGroupConfig) then {
     // Retrieve hitpoint subgroup if current hitpoint is main hitpoint of a group
     {

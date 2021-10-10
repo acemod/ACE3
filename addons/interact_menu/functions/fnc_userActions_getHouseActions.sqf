@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Scans the buidling type for UserActions and Ladder mount points.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_typeOfBuilding"];
 
@@ -41,15 +41,34 @@ private _fnc_getMemPointOffset = {
 private _fnc_userAction_Statement = {
     params ["_target", "_player", "_variable"];
     _variable params ["_actionStatement", "_actionCondition"];
+
+    // Use global variable this for action condition and action code
+    private _savedThis = this;
     this = _target getVariable [QGVAR(building), objNull];
+
     call _actionStatement;
+
+    // Restore this variable
+    this = _savedThis;
 };
+
 private _fnc_userAction_Condition = {
     params ["_target", "_player", "_variable"];
     _variable params ["_actionStatement", "_actionCondition"];
+
+    private _building = _target getVariable [QGVAR(building), objNull];
+    if (isNull _building) exitWith {false};
+
+    // Use global variable this for action condition and action code
+    private _savedThis = this;
     this = _target getVariable [QGVAR(building), objNull];
-    if (isNull this) exitWith {false};
-    call _actionCondition;
+
+    private _result = call _actionCondition;
+
+    // Restore this variable
+    this = _savedThis;
+
+    _result
 };
 
 private _configPath = configFile >> "CfgVehicles" >> _typeOfBuilding >> "UserActions";
@@ -72,8 +91,7 @@ for "_index" from 0 to ((count _configPath) - 1) do {
     _actionCondition = compile _actionCondition;
     _actionMaxDistance = _actionMaxDistance + 0.1; //increase range slightly
 
-    //extension ~4x as fast:
-    private _iconImage =  "ace_parse_imagepath" callExtension _actionDisplayNameDefault;
+    private _iconImage = ((_actionDisplayNameDefault regexFind ["[\w\-\\\/]+.paa/gi", 0]) param [0, [""]]) select 0;
 
     private _actionOffset = [_actionPosition] call _fnc_getMemPointOffset;
     private _memPointIndex = _memPoints find _actionPosition;

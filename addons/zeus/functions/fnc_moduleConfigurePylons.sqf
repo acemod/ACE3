@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 654wak654
  * Opens the pylon configuration menu for the aircraft module is placed on.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (canSuspend) exitWith {[FUNC(moduleConfigurePylons), _this] call CBA_fnc_directCall;};
 

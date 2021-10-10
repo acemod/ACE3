@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Rocko, Ruthberg
  * Place down spotting scope
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_scopeClass"];
 

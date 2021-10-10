@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Simulates repacking a set of magazines.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_fullMagazineCount", "_arrayOfAmmoCounts", "_isBelt"];
 

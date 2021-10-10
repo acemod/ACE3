@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: GitHawk
  * Removes a magazine from the supply.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]], ["_numRounds", -1, [0]]];
 TRACE_3("removeMagazineFromSupply",_truck,_magazineClass,_numRounds);
@@ -57,7 +57,7 @@ if (GVAR(supply) == 2) then {
     private _magazineIdx = -1;
     {
         _x params ["_magazine"];
-        if ((_magazine isEqualTo _magazineClass)) exitWith {
+        if (_magazine isEqualTo _magazineClass) exitWith {
             _magazineIdx = _forEachIndex;
         };
     } forEach _magazineSupply;

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the truing drop data fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (GVAR(currentUnit) == 2) then {
     ctrlSetText [18011, Str(Round(GVAR(truingDropRangeData) select 0))];

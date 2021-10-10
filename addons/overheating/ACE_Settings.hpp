@@ -1,11 +1,10 @@
 class ACE_Settings {
-    class GVAR(displayTextOnJam) {
+    class GVAR(enabled) {
         category = CSTRING(DisplayName);
         typeName = "BOOL";
-        isClientSettable = 1;
         value = 1;
-        displayName = CSTRING(DisplayTextOnJam_displayName);
-        description = CSTRING(DisplayTextOnJam_description);
+        displayName = CSTRING(enabled_displayName);
+        description = CSTRING(enabled_description);
     };
     class GVAR(showParticleEffects) {
         category = CSTRING(DisplayName);
@@ -30,6 +29,14 @@ class ACE_Settings {
         displayName = CSTRING(overheatingDispersion_displayName);
         description = CSTRING(overheatingDispersion_description);
     };
+    class GVAR(displayTextOnJam) {
+        category = CSTRING(DisplayName);
+        typeName = "BOOL";
+        isClientSettable = 1;
+        value = 1;
+        displayName = CSTRING(DisplayTextOnJam_displayName);
+        description = CSTRING(DisplayTextOnJam_description);
+    };
     class GVAR(unJamOnreload) {
         category = CSTRING(DisplayName);
         typeName = "BOOL";
@@ -44,12 +51,5 @@ class ACE_Settings {
         displayName = CSTRING(unJamFailChance_displayName);
         description = CSTRING(unJamFailChance_description);
         sliderSettings[] = {0, 1, 0.1, 2};
-    };
-    class GVAR(enabled) {
-        category = CSTRING(DisplayName);
-        typeName = "BOOL";
-        value = 1;
-        displayName = CSTRING(enabled_displayName);
-        description = CSTRING(enabled_description);
     };
 };

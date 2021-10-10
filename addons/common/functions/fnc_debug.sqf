@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Print logging messages through the ACE framework.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 #define DEFAULT_LOGGING_LEVEL -1
 #define DEFAULT_TEXT_DISPLAY -1

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Garrison function used to garrison AI inside buildings.
@@ -19,13 +20,13 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_startingPos",[0,0,0], [[]], 3], ["_buildingTypes", ["Building"], [[]]], ["_unitsArray", [], [[]]], ["_fillingRadius", 50, [0]], ["_fillingType", 0, [0]], ["_topDownFilling", false, [true]], ["_teleport", false, [true]]];
 
 TRACE_6("fnc_garrison: Start",_startingPos,_buldingTypes,count _unitsArray,_fillingRadius,_fillingTYpe,_topDownFilling);
 
 _unitsArray = _unitsArray select {alive _x && {!isPlayer _x}};
+private _currentUnitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
 
 if (_startingPos isEqualTo [0,0,0]) exitWith {
     TRACE_1("fnc_garrison: StartingPos error",_startingPos);
@@ -79,11 +80,9 @@ if (_topDownFilling) then {
 
 //Remove positions units are already pathing to
 _buildingsIndex = _buildingsIndex apply {
-    private _testedBuilding = _x;
-
-    _testedBuilding select {
+    _x select {
         private _testedPos = _x;
-        (({(_x select 1) isEqualTo _testedPos} count (missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []])) == 0)
+        ({(_x select 1) isEqualTo _testedPos} count (missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []])) == 0
     }
 };
 
@@ -147,6 +146,8 @@ switch (_fillingType) do {
                             _unit setPosATL _pos;
                         };
 
+                        _currentUnitMoveList deleteAt (_currentUnitMoveList findIf {_x select 0 == _unit});
+
                     } else {
                         _unitMoveList pushBack [_unit,[_pos, AGLToASL _pos] select (_posSurface)];
                     };
@@ -194,6 +195,8 @@ switch (_fillingType) do {
                             _unit setPosATL _pos;
                         };
 
+                        _currentUnitMoveList deleteAt (_currentUnitMoveList findIf {_x select 0 == _unit});
+
                     } else {
                         _unitMoveList pushBack [_unit,[_pos, AGLToASL _pos] select (_posSurface)];
                     };
@@ -238,6 +241,8 @@ switch (_fillingType) do {
                         } else {
                             _unit setPosATL _pos;
                         };
+
+                        _currentUnitMoveList deleteAt (_currentUnitMoveList findIf {_x select 0 == _unit});
 
                     } else {
                         _unitMoveList pushBack [_unit,[_pos, AGLToASL _pos] select (_posSurface)];

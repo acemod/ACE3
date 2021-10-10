@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
- * Author: alganthe
- * Initalises the "Garrison" zeus module display.
+ * Author: alganthe, mharis001
+ * Initializes the "Garrison" Zeus module display.
  *
  * Arguments:
  * 0: Garrison controls group <CONTROL>
@@ -9,26 +10,23 @@
  * None
  *
  * Example:
- * onSetFocus = "_this call ace_zeus_fnc_ui_garrison"
+ * [CONTROL] call ace_zeus_fnc_ui_garrison
  *
  * Public: No
 */
-#include "script_component.hpp"
-
-disableSerialization;
 
 params ["_control"];
 
-//Generic Init:
-private _display = ctrlparent _control;
-private _ctrlButtonOK = _display displayctrl 1; //IDC_OK
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
-TRACE_1("logicObject",_logic);
+// Generic init
+private _display = ctrlParent _control;
+private _ctrlButtonOK = _display displayCtrl 1; // IDC_OK
+private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+TRACE_1("Logic Object",_logic);
 
-_control ctrlRemoveAllEventHandlers "setFocus";
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
-// Handles errors
-private _unit = effectiveCommander (attachedTo _logic);
+// Validate module target
+private _unit = effectiveCommander attachedTo _logic;
 
 scopeName "Main";
 private _fnc_errorAndClose = {
@@ -54,26 +52,9 @@ switch (false) do {
     };
 };
 
-//Specific on-load stuff:
-private _listbox = _display displayCtrl 73063;
-{
-    _listbox lbSetValue  [_listbox lbAdd (_x select 0), _x select 1];
-} forEach [
-    [localize LSTRING(ModuleGarrison_FillingModeEven), 0],
-    [localize LSTRING(ModuleGarrison_FillingModeBuilding), 1],
-    [localize LSTRING(ModuleGarrison_FillingModeRandom), 2]
-];
-
-_listbox lbSetCurSel 0;
-
-//Specific on-load stuff:
-(_display displayCtrl 73061) cbSetChecked (_logic getVariable ["TopDownFilling",false]);
-(_display displayCtrl 73062) cbSetChecked (_logic getVariable ["Teleport",false]);
-
+// Specific onLoad stuff
 private _fnc_onUnload = {
-    params ["_display"];
-
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
     deleteVehicle _logic;
@@ -82,22 +63,19 @@ private _fnc_onUnload = {
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
 
-    private _display = ctrlparent _ctrlButtonOK;
+    private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
-    private _lb = _display displayCtrl 73063;
-
     private _radius = GETVAR(_display,GVAR(radius),50);
-    private _position = GETVAR(_display,GVAR(position),getPos _logic);
-    private _mode = _lb lbValue (lbCurSel _lb);
-    private _TopDownFilling = cbChecked (_display displayCtrl 73061);
-    private _teleport = cbChecked (_display displayCtrl 73062);
+    private _teleport = lbCurSel (_display displayCtrl 73061) > 0;
+    private _topDown = lbCurSel (_display displayCtrl 73062) > 0;
+    private _fillingMode = lbCurSel (_display displayCtrl 73063);
 
-    [_logic, _position ,_radius, _mode, _TopDownFilling, _teleport] call FUNC(moduleGarrison);
+    [_logic, getPos _logic, _radius, _fillingMode, _topDown, _teleport] call FUNC(moduleGarrison);
 };
 
-_display displayAddEventHandler ["unload", _fnc_onUnload];
-_ctrlButtonOK ctrlAddEventHandler ["buttonclick", _fnc_onConfirm];
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

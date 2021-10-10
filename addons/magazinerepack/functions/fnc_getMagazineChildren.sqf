@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror, commy2, esteldunedain, Ruthberg
  * Gets magazine children for interaciton menu.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target", "_player"];
 
@@ -27,7 +27,7 @@ private _unitMagCounts = [];
     private _xFullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _xClassname >> "count");
 
     //for every partial magazine, that is either in inventory or can be moved there
-    if ((_xCount < _xFullMagazineCount) && {_xCount > 0} && {(!_xLoaded) || {_player canAdd _xClassname}}) then {
+    if ((_xCount < _xFullMagazineCount) && {_xCount > 0} && {(!_xLoaded) || {[_player, _xClassname] call CBA_fnc_canAddItem}}) then {
         private _index = _unitMagazines find _xClassname;
         if (_index == -1) then {
             _unitMagazines pushBack _xClassname;

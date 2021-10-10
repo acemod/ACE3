@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Adds a status effect that will be handled.
@@ -15,8 +16,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params [["_name", "", [""]], ["_isGlobal", false, [false]], ["_commonReasonsArray", [], [[]]]];
 TRACE_3("params",_name,_isGlobal,_commonReasonsArray);
@@ -28,7 +27,7 @@ GVAR(statusEffect_Names) pushBack _name;
 GVAR(statusEffect_isGlobal) pushBack _isGlobal;
 
 //We add reasons at any time, but more efficenet to add all common ones at one time during init
-if (isServer && {!(_commonReasonsArray isEqualTo [])}) then {
+if (isServer && {_commonReasonsArray isNotEqualTo []}) then {
     //Switch case to lower:
     _commonReasonsArray = _commonReasonsArray apply { toLower _x };
     missionNamespace setVariable [(format [QGVAR(statusEffects_%1), _name]), _commonReasonsArray, true];

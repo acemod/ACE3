@@ -34,9 +34,6 @@ Pilots and copilots of all helicopters can now eject.
 ### 1.6 Laser marker for Wildcat
 Adds a laser marker to the copilot seat of the Wildcat.
 
-### 1.7 HUD for AH-9
-Adds a HUD to the AH-9 based on the Comanche's HUD.
-
 ## 2. Usage
 
 ### 2.1 Switching flare modes

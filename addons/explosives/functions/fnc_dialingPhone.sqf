@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Performs the dial tones and detonation of explosive.
@@ -16,13 +17,13 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_args", "_pfID"];
 _args params ["_unit", "_i", "_arr", "_code"];
 
 if ((_i mod 4) == 0) then {
-    playSound3D [QUOTE(PATHTO_R(Data\Audio\DialTone.wss)), objNull, false, (_unit modelToWorldVisual [0,0.2,2]), 15,1,2.5];
+    private _pos = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");
+    playSound3D [QUOTE(PATHTO_R(Data\Audio\DialTone.wss)), objNull, false, _pos, 5, 1, 5];
 };
 ctrlSetText [1400,format["Calling%1",_arr select (_i - 4)]];
 

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  *
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_ballisticCoefficient", "_temperature"/*in C*/, "_pressure"/*in hPa*/, "_relativeHumidity"/*as ratio 0-1*/, "_atmosphereModel"/*"ICAO" or "ASM"*/];
 

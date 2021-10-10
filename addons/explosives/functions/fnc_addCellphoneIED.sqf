@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Adds an IED to the cellphone list
@@ -16,7 +17,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_explosive", "_magazineClass", "_extra"];
 TRACE_4("params",_unit,_explosive,_magazineClass,_extra);

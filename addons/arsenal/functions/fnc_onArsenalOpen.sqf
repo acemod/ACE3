@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * onLoad EH for arsenal.
@@ -12,8 +14,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["", "_args"];
 _args params ["_display"];
@@ -38,7 +38,7 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     if (is3DEN) then {
         GVAR(defaultLoadoutsList) = (QGVAR(DummyCategory) get3DENMissionAttribute QGVAR(DefaultLoadoutsListAttribute));
     } else {
-            GVAR(defaultLoadoutsList) = [];
+        GVAR(defaultLoadoutsList) = [];
     };
 };
 
@@ -64,24 +64,24 @@ GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 for "_index" from 0 to 10 do {
     switch (_index) do {
         // primary, secondary, handgun weapons
-        case 0: {
+        case IDX_VIRT_WEAPONS: {
             private _array = LIST_DEFAULTS select _index;
 
-            if !((_array select 0) isEqualTo "") then {
+            if ((_array select 0) isNotEqualTo "") then {
                 ((GVAR(virtualItems) select _index) select 0) pushBackUnique (_array select 0);
             };
 
-            if !((_array select 1) isEqualTo "") then {
+            if ((_array select 1) isNotEqualTo "") then {
                 ((GVAR(virtualItems) select _index) select 1) pushBackUnique (_array select 1);
             };
 
-            if !((_array select 2) isEqualTo "") then {
+            if ((_array select 2) isNotEqualTo "") then {
                  ((GVAR(virtualItems) select _index) select 2) pushBackUnique (_array select 2);
             };
         };
 
         // Accs for the weapons above
-        case 1: {
+        case IDX_VIRT_ATTACHEMENTS: {
             private _array = LIST_DEFAULTS select _index;
             _array params ["_accsArray", "_magsArray"];
 
@@ -96,28 +96,28 @@ for "_index" from 0 to 10 do {
             } forEach _accsArray;
 
             {
-                if !(_x isEqualTo []) then {
+                if (_x isNotEqualTo []) then {
 
                     if (_x select 0 != "") then {
-                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 0);
+                        (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 0);
                     };
 
                     if (count _x > 1 && {_x select 1 != ""}) then {
-                        (GVAR(virtualItems) select 2) pushBackUnique (_x select 1);
+                        (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) pushBackUnique (_x select 1);
                     };
                 };
             } forEach _magsArray;
         };
 
         // Inventory items
-        case 2: {
+        case IDX_VIRT_ITEMS_ALL: {
                 call FUNC(updateUniqueItemsList);
             };
 
         // The rest
         default {
-            private _array = (LIST_DEFAULTS select _index) select {!(_x isEqualTo "")};
-            if !(_array isEqualTo []) then {
+            private _array = (LIST_DEFAULTS select _index) select {_x isNotEqualTo ""};
+            if (_array isNotEqualTo []) then {
                 {(GVAR(virtualItems) select _index) pushBackUnique _x} forEach _array;
             };
         };
@@ -165,9 +165,16 @@ for "_index" from 0 to 15 do {
 
 {
     private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
-    private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
 
-    GVAR(currentItems) set [_index, _x];
+    if (_simulationType != "NVGoggles") then {
+        if (_simulationType == "ItemGps" || _simulationType == "Weapon") then {
+            GVAR(currentItems) set [14, _x];
+        } else {
+
+            private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch"] find (tolower _simulationType));
+            GVAR(currentItems) set [_index, _x];
+        };
+    };
 } forEach (assignedItems GVAR(center));
 
 GVAR(currentWeaponType) = switch true do {
@@ -231,7 +238,7 @@ showCommandingMenu "";
 
 GVAR(cameraView) = cameraView;
 GVAR(center) switchCamera "internal";
-showHUD false;
+[QUOTE(ADDON), [false, true, true, true, true, true, true, false, true, true]] call EFUNC(common,showHud);
 
 private _mouseAreaCtrl = _display displayCtrl IDC_mouseArea;
 ctrlSetFocus _mouseAreaCtrl;
@@ -281,13 +288,17 @@ if (is3DEN) then {
     } forEach [
         IDC_buttonFace,
         IDC_buttonVoice,
-        IDC_buttonInsigna
+        IDC_buttonInsignia
     ];
 
     _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 } else {
     GVAR(centerNotPlayer) = (GVAR(center) != player);
+
+    if (currentVisionMode ACE_Player == 1) then {
+        GVAR(center) action ["NVGogglesOff", GVAR(center)];
+    };
 
     {
         private _ctrl = _display displayCtrl _x;
@@ -297,7 +308,7 @@ if (is3DEN) then {
     } forEach [
         IDC_buttonFace,
         IDC_buttonVoice,
-        IDC_buttonInsigna
+        IDC_buttonInsignia
     ];
 };
 
@@ -321,6 +332,11 @@ GVAR(rightTabLnBFocus) = false;
 //--------------- Init camera
 if (isNil QGVAR(cameraPosition)) then {
     GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
+};
+
+// Save curator camera state so camera position and direction are not modified while using arsenal
+if (!isNull curatorCamera) then {
+    GVAR(curatorCameraData) = [getPosASL curatorCamera, [vectorDir curatorCamera, vectorUp curatorCamera]];
 };
 
 GVAR(cameraHelper) = createAgent ["Logic", position GVAR(center) ,[] ,0 ,"none"];

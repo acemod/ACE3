@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Compile the self action menu from config for an object's class
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_target"];
 
@@ -24,7 +24,7 @@ if (_target isEqualType objNull) then {
 private _namespace = GVAR(ActSelfNamespace);
 
 // Exit if the action menu is already compiled for this class
-if !(isNil {_namespace getVariable _objectType}) exitWith {};
+if (!isNil {_namespace getVariable _objectType}) exitWith {};
 
 
 private _recurseFnc = {
@@ -34,17 +34,22 @@ private _recurseFnc = {
 
     {
         private _entryCfg = _x;
-        if(isClass _entryCfg) then {
+        if (isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
 
-            private _icon = getText (_entryCfg >> "icon");
+            private _icon = if (isArray (_entryCfg >> "icon")) then {
+                getArray (_entryCfg >> "icon");
+            } else {
+                [getText (_entryCfg >> "icon"), "#FFFFFF"];
+            };
             private _statement = compile (getText (_entryCfg >> "statement"));
 
             private _condition = getText (_entryCfg >> "condition");
-            if (_condition == "") then {_condition = "true"};
 
             // Add canInteract (including exceptions) and canInteractWith to condition
-            _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            private _canInteractCondition = format [QUOTE([ARR_3(ACE_player,_target,%1)] call EFUNC(common,canInteractWith)), getArray (_entryCfg >> "exceptions")];
+            private _conditionFormatPattern = ["%1 && {%2}", "%2"] select (_condition isEqualTo "" || {_condition == "true"});
+            _condition = compile format [_conditionFormatPattern, _condition, _canInteractCondition];
 
             private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
             private _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
@@ -59,7 +64,6 @@ private _recurseFnc = {
                 _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
             };
 
-            _condition = compile _condition;
             private _children = [_entryCfg] call _recurseFnc;
 
             private _entry = [

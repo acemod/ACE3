@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Server: Recives a dummy logic, sends marker data back to the owner.
@@ -9,11 +10,10 @@
  * None
  *
  * Example:
- * [onUnloadEvent] call ace_markers_fnc_sendMarkerJIP;
+ * [onUnloadEvent] call ace_markers_fnc_sendMarkersJIP;
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_owner"];
 TRACE_1("params",_owner);

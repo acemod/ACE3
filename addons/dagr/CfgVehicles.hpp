@@ -8,15 +8,13 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player,'ACE_DAGR')] call EFUNC(common,hasItem));
                     statement = QUOTE(call FUNC(menuInit));
                     showDisabled = 0;
-                    priority = 0.1;
                     icon = QPATHTOF(UI\DAGR_Icon.paa);
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     class GVAR(toggle) {
                         displayName = CSTRING(ToggleDAGR);
                         condition = QUOTE([ARR_2(_player,'ACE_DAGR')] call EFUNC(common,hasItem));
                         statement = QUOTE(call FUNC(toggleOverlay));
                         showDisabled = 0;
-                        priority = 0.2;
                         icon = QPATHTOF(UI\DAGR_Icon.paa);
                         exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     };

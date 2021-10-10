@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Lets the unit fast rope.
@@ -14,9 +15,8 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 params ["_unit", "_vehicle"];
+TRACE_2("fastRope",_unit,_vehicle);
 
 //Select unoccupied rope
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];

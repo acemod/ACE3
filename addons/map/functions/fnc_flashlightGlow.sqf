@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Add or remove global flashlight glow for when player is looking at map.
@@ -16,8 +17,6 @@
  * Public: No
  */
 
-#include "script_component.hpp"
-
 params ["_unit", "_flashlightType", ["_set", true]];
 
 private _unitLight = _unit getVariable [QGVAR(flashlight), ["", objNull]];
@@ -28,7 +27,7 @@ if (!isNull _glow) then {
     deleteVehicle _glow;
 };
 
-if !(_flashlightType isEqualTo "") then {
+if (_flashlightType isNotEqualTo "") then {
     private _color = getText (configFile >> "CfgWeapons" >> _flashlightType >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour");
     if !(_color in ["white", "red", "green", "blue", "yellow", "orange"]) then {_color = "white"};
     private _class = format ["ACE_FlashlightProxy_%1", _color];

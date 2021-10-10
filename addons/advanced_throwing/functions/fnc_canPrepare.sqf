@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Jonpas
  * Checks if a throwable can be prepared.
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", ["_ignoreLastThrownTime", false]];
 
@@ -31,7 +31,7 @@ GVAR(enabled) &&
 {_unit getVariable [QGVAR(lastThrownTime), CBA_missionTime - 3] < CBA_missionTime - 2} && // Prevent throwing in quick succession
 #endif
 
-{!(call EFUNC(common,isFeatureCameraActive))} &&
+{(call CBA_fnc_getActiveFeatureCamera) isEqualTo ""} &&
 {[_unit, objNull, ["isNotInside", "isNotSwimming", "isNotSitting"/*, "isNotOnLadder"*/]] call EFUNC(common,canInteractWith)} && // Ladder needs positioning fixes on throw
 {_unit call CBA_fnc_canUseWeapon} && // Disable in non-FFV seats due to surface detection issues
 {"" == currentWeapon _unit || {currentWeapon _unit != secondaryWeapon _unit}} &&

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: voiper
  * Check if an ammo classname is an IR chemlight.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params [["_input", "", ["", objNull]]];
 

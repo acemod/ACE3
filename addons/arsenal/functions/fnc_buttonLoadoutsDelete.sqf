@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Delete / unshare loadout currently selected.
@@ -11,8 +13,6 @@
  *
  * Public: No
 */
-#include "script_component.hpp"
-#include "..\defines.hpp"
 
 params ["_display", "_control"];
 
@@ -37,6 +37,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     _contentPanelCtrl lnbSetCurSelRow (_contentPanelCursSel);
 
     [(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutDeleted), _loadoutName] joinString " "] call FUNC(message);
+    [QGVAR(onLoadoutDelete), [_loadoutName]] call CBA_fnc_localEvent;
 } else {
 
     private _profileName = profileName; // GVAR(center) could be a remote unit

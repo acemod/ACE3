@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * hint the Variable ACE_isUsedBy from the input Object every frame
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!isNil QGVAR(showUserPFH)) then {
     [GVAR(showUserPFH)] call CBA_fnc_removePerFrameHandler;

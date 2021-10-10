@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus / nou, PabstMirror
  * Do seeker search
@@ -11,12 +12,10 @@
  * Missile Aim PosASL <ARRAY>
  *
  * Example:
- * [[], [], []] call ace_missileguidance_fnc_seekerType_Optic;
+ * [[], [], []] call ace_missileguidance_fnc_doSeekerSearch;
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["", "_args", "", "_lastKnownPosState"];
 _args params ["", "_launchParams"];
@@ -28,7 +27,7 @@ private _seekerFunction = getText (configFile >> QGVAR(SeekerTypes) >> _seekerTy
 private _seekerTargetPos = _this call (missionNamespace getVariable _seekerFunction);
 
 if ((isNil "_seekerTargetPos") || {_seekerTargetPos isEqualTo [0,0,0]}) then { // A return of nil or [0,0,0] indicates the seeker has no target
-    if (_seekLastTargetPos && {!(_lastKnownPos isEqualTo [0,0,0])}) then { // if enabled for the ammo, use last known position if we have one stored
+    if (_seekLastTargetPos && {_lastKnownPos isNotEqualTo [0,0,0]}) then { // if enabled for the ammo, use last known position if we have one stored
         TRACE_2("seeker returned bad pos - using last known",_seekLastTargetPos,_lastKnownPos);
         _seekerTargetPos = _lastKnownPos;
         #ifdef DRAW_GUIDANCE_INFO

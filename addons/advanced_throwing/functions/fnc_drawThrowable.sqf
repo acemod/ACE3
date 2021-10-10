@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas, SilentSpike
  * Handles drawing the currently selected or cooked throwable.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player, true] call FUNC(canPrepare))}) exitWith {
     [ACE_player, "In dialog or no throwable in hand or cannot prepare throwable"] call FUNC(exitThrowMode);
@@ -118,7 +118,7 @@ if (abs _leanCoef < 0.15 || {vehicle ACE_player != ACE_player} || {weaponLowered
 
 private _posCameraWorld = AGLToASL (positionCameraToWorld [0, 0, 0]);
 _posHeadRel = _posHeadRel vectorAdd [-0.03, 0.01, 0.15]; // Bring closer to eyePos value
-private _posFin = AGLToASL (ACE_player modelToWorldVisual _posHeadRel);
+private _posFin = ACE_player modelToWorldVisualWorld _posHeadRel;
 
 private _throwType = ACE_player getVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
 

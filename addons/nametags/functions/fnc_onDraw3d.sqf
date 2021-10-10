@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: <N/A>
  * Draws names and icons.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 BEGIN_COUNTER(GVAR(onDraw3d));
 
@@ -113,7 +113,7 @@ if (_enabledTagsNearby) then {
             private _centerOffsetFactor = 1;
             if (GVAR(showPlayerNames) == 5) then {
                 private _screenPos = worldToScreen (_target modelToWorld (_target selectionPosition "head"));
-                if !(_screenPos isEqualTo []) then {
+                if (_screenPos isNotEqualTo []) then {
                     // Distance from center / half of screen width
                     _centerOffsetFactor = 1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3));
                 } else {

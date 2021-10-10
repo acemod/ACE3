@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Calculates the offsets for all weapons needed to hit the current target.
@@ -14,12 +15,11 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound", true]];
 TRACE_5("params",_vehicle,_turret,_distance,_showHint,_playSound);
 
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
 if (isNil "_distance") then {
     _distance = [

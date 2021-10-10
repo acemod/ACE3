@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Handles synced events being received. Server will log them, and server/client will execute them.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_name", "_args", "_ttl"];
 

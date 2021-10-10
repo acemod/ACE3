@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the gunner config of a vehicles turret.
@@ -13,11 +14,10 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 private _turret = _vehicle call FUNC(getTurretGunner);
 
 [_config, _turret] call FUNC(getTurretConfigPath) // return

@@ -18,6 +18,7 @@ class CfgPatches {
 #include "CfgCloudlets.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgMagazineWells.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "Dialog.hpp"

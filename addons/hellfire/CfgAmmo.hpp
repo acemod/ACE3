@@ -1,7 +1,7 @@
 class CfgAmmo {
-    class M_PG_AT;
+    class M_Scalpel_AT;
 
-    class ACE_Hellfire_AGM114K: M_PG_AT {
+    class ACE_Hellfire_AGM114K: M_Scalpel_AT {
         displayName = "AGM-114K";
         displayNameShort = "AGM-114K";
         description = "AGM-114K";
@@ -10,9 +10,6 @@ class CfgAmmo {
         model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
         proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
 
-        hit = 1400;
-        indirectHit = 71;
-        indirectHitRange = 4.5;
         effectsMissile = "missile2";
 
         irLock = 0;
@@ -47,7 +44,7 @@ class CfgAmmo {
             seekerAccuracy = 1;         // seeker accuracy multiplier
 
             seekerMinRange = 1;
-            seekerMaxRange = 5000;      // Range from the missile which the seeker can visually search
+            seekerMaxRange = 8000;      // Range from the missile which the seeker can visually search
 
             // Attack profile type selection
             defaultAttackProfile = "hellfire";
@@ -62,9 +59,71 @@ class CfgAmmo {
         hit = 200;
         indirectHit = 200;
         indirectHitRange = 12;
+        submunitionAmmo = "";
         explosionEffects = "BombExplosion";
         class ace_missileguidance: ace_missileguidance {
             enabled = 1; // Missile Guidance must be explicitly enabled
+        };
+    };
+    class ACE_Hellfire_AGM114L: ACE_Hellfire_AGM114K {
+        displayName = "AGM-114L";
+        displayNameShort = "AGM-114L";
+        description = "AGM-114L";
+        descriptionShort = "AGM-114L";
+        class ace_missileguidance: ace_missileguidance {
+            canVanillaLock = 1;
+            enabled = 1; // Missile Guidance must be explicitly enabled
+            seekLastTargetPos = 0;
+            defaultSeekerType = "ARH";
+            seekerTypes[] = { "ARH" };
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = { "LOBL" };
+
+            activeRadarEngageDistance = 1000;
+            seekerMaxRange = 2000; // distance that the hellfire internal radar can scan
+        };
+
+        // Vanilla lock system vars
+        weaponLockSystem = "8";
+        airLock = 1;
+        lockType = 0;
+        maneuvrability = 0; // no maneuvrability so that default guidance doesnt work
+
+        missileLockMaxDistance      = 8000;
+        missileLockMinDistance      = 250;
+        missileLockMaxSpeed         = 600;
+        missileKeepLockedCone       = 70;
+
+        flightProfiles[] = {};
+        class Components {
+            class SensorsManagerComponent {
+                class Components {
+                    class MillimeterWaveRadar {
+                        componentType = "ActiveRadarSensorComponent";
+                        class AirTarget {
+                            minRange = 0;
+                            maxRange = 8000;
+                            objectDistanceLimitCoef = -1;
+                            viewDistanceLimitCoef = -1;
+                        };
+                        class GroundTarget {
+                            minRange = 0;
+                            maxRange = 8000;
+                            objectDistanceLimitCoef = -1;
+                            viewDistanceLimitCoef = -1;
+                        };
+                        typeRecognitionDistance     = 4000;
+                        angleRangeHorizontal        = 70;
+                        angleRangeVertical          = 70;
+                        groundNoiseDistanceCoef     = 0; // relevant to AA missiles - not really for this
+                        maxGroundNoiseDistance      = 250;
+                        minSpeedThreshold           = 0;
+                        maxSpeedThreshold           = 600;
+                        nightRangeCoef = 1;
+                        maxFogSeeThrough = 0.8;
+                    };
+                };
+            };
         };
     };
 };

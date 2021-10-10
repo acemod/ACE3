@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Transforms a number to an string of the correspondending digits.
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 ACE_DEPRECATED(QFUNC(numberToDigitsString),"3.14.0","CBA_fnc_formatNumber");
 

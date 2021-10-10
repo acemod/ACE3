@@ -1,42 +1,38 @@
+#include "script_component.hpp"
 /*
- * Author: SzwedzikPL
- * Creates one action per dogtag.
+ * Author: SzwedzikPL, mharis001
+ * Returns children actions for checking dogtags in player's inventory.
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Player <OBJECT>
+ * 0: Player <OBJECT>
  *
  * Return Value:
- * Children actions <ARRAY>
+ * Actions <ARRAY>
  *
  * Example:
- * _childrenActions = [unit, player] call ace_dogtags_fnc_addDogtagActions
+ * [_player] call ace_dogtags_fnc_addDogtagActions
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_target", "_player"];
+params ["_player"];
 
-//Get all dogtags and their ids
-private _unitDogtags = [];
-private _unitDogtagIDs = [];
-{
-    private _id = getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(tagID));
-    if (_id > 0) then {
-        _unitDogtags pushBack _x;
-        _unitDogtagIDs pushBack _id;
-    };
-} forEach items _player;
+private _fnc_getActions = {
+    private _actions = [];
+    private _cfgWeapons = configFile >> "CfgWeapons";
 
-//Create action children for all dogtags
-private _actions = [];
-{
-    private _displayName = getText (configFile >> "CfgWeapons" >> _x >> "displayName");
-    private _picture = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+    {
+        private _config = _cfgWeapons >> _x;
+        if (getNumber (_config >> QGVAR(tagID)) > 0) then {
+            private _displayName = getText (_config >> "displayName");
+            private _picture = getText (_config >> "picture");
 
-    private _action = [_x, _displayName, _picture, {_this call FUNC(checkDogtagItem)}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
-    _actions pushBack [_action, [], _player];
-} forEach _unitDogtags;
+            private _action = [_x, _displayName, _picture, FUNC(checkDogtagItem), {true}, {}, _x] call EFUNC(interact_menu,createAction);
+            _actions pushBack [_action, [], _player];
+        };
+    } forEach (_player call EFUNC(common,uniqueItems));
 
-_actions
+    _actions
+};
+
+[[], _fnc_getActions, _player, QGVAR(actionsCache), 9999, "cba_events_loadoutEvent"] call EFUNC(common,cachedCall);

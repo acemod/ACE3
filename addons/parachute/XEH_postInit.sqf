@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Initialises the parachute system.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
@@ -38,3 +38,5 @@ if (!hasInterface) exitWith {};
 
 // Don't show vanilla speed and height when in expert mode
 ["ace_infoDisplayChanged", {_this call FUNC(handleInfoDisplayChanged)}] call CBA_fnc_addEventHandler;
+
+["vehicle", {_this call FUNC(handleFailureChance)}] call CBA_fnc_addPlayerEventHandler;

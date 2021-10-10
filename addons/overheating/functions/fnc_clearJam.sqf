@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Commy2
  * Make the unit clear the jam from a weapon
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit", "_weapon", ["_skipAnim", false]];
 TRACE_3("params",_unit,_weapon,_skipAnim);
@@ -36,7 +36,7 @@ if (_weapon in _jammedWeapons) then {
         if (_weapon == primaryWeapon _unit) then {
             playSound QGVAR(fixing_rifle);
         } else {
-            if (_weapon == secondaryWeapon _unit) then {
+            if (_weapon == handgunWeapon _unit) then {
                 playSound QGVAR(fixing_pistol);
             };
         };

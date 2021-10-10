@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: joko, Jonas, SilentSpike
  * Cache reserve parachute on player unit when their inventory changes and add it when they open their parachute
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 params ["_unit"];
 private _backpack = backpack _unit;

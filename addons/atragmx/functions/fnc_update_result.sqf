@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the result input and output fields
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 private _elevationAbs = GVAR(elevationOutput) select GVAR(currentTarget);
 private _elevationRel = 0;

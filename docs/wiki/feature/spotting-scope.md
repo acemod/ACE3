@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Spotting scope
+title: Spotting Scope
 description: Adds a deployable spotting scope.
 group: feature
 category: equipment

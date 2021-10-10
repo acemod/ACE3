@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
  * Stops simulation and opens a textbox with error message.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 disableSerialization;
 endLoadingScreen;

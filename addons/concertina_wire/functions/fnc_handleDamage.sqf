@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  *
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params ["_wire", "", "_damage", "_source", ""];
 if (_damage < 0.5) exitWith { 0 };
 

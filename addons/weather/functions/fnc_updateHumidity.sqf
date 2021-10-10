@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: ACE2 Team
  * Smoothly updates GVAR(currentHumidity) on the server (based on time of day and map data)
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if (rain > 0 && overcast > 0.7) then {
     GVAR(currentHumidity) = 1;

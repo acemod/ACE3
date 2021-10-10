@@ -1,10 +1,10 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Toggles the mortart to show mils or degrees
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Player <OBJECT>
  *
  * Return Value:
  * None
@@ -14,9 +14,9 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-params ["_mortarVeh", "_unit"];
+params ["_mortarVeh"];
+TRACE_1("toggleMils",_mortarVeh);
 
 private _currentSetting = _mortarVeh getVariable [QGVAR(useMils), true];
 _mortarVeh setVariable [QGVAR(useMils), (!_currentSetting)];

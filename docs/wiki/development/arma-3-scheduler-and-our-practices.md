@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Arma 3 Scheduler And Our Practices
+title: Arma 3 Scheduler and our Practices
 description: Explanation for certain ACE3 practices and rules regarding scheduled and unscheduled execution in Arma.
 group: development
 parent: wiki

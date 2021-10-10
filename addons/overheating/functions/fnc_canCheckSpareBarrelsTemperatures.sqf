@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Grey-Soldierman
  * Return true if player can check temperatures of spare barrels
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_player"];
 

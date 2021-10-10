@@ -27,17 +27,31 @@ class ACE_ChemlightEffect_HiYellow {
     };
 };
 
-class ACE_ChemlightEffect_HiOrange {
-    class Light1 {
-        simulation = "light";
-        type = "ACE_ChemlightLight_HiOrange";
-    };
-};
-
 class ACE_ChemlightEffect_HiWhite {
     class Light1 {
         simulation = "light";
         type = "ACE_ChemlightLight_HiWhite";
+    };
+};
+
+class ACE_ChemlightEffect_HiBlue {
+    class Light1 {
+        simulation = "light";
+        type = "ACE_ChemlightLight_HiBlue";
+    };
+};
+
+class ACE_ChemlightEffect_HiGreen {
+    class Light1 {
+        simulation = "light";
+        type = "ACE_ChemlightLight_HiGreen";
+    };
+};
+
+class ACE_ChemlightEffect_UltraHiOrange {
+    class Light1 {
+        simulation = "light";
+        type = "ACE_ChemlightLight_UltraHiOrange";
     };
 };
 

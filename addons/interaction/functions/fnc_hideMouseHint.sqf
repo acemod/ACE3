@@ -1,6 +1,7 @@
+#include "script_component.hpp"
 /*
  * Author: Garth de Wet (LH)
- * Hides the interaction helper text with the mouse buttons at the bottom middle of the screen
+ * Hides the interaction hint for mouse buttons.
  *
  * Arguments:
  * None
@@ -9,15 +10,12 @@
  * None
  *
  * Example:
- * call ace_interaction_fnc_hideMouseHint
+ * [] call ace_interaction_fnc_hideMouseHint
  *
  * Public: No
  */
-#include "script_component.hpp"
 
-if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith {};
-
-(QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+(QGVAR(RscMouseHint) call BIS_fnc_rscLayer) cutFadeOut 0.2;
 
 // Re-enable action menu
 inGameUISetEventHandler ["PrevAction", "false"];

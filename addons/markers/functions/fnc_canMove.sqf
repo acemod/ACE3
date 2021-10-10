@@ -1,19 +1,21 @@
+#include "script_component.hpp"
 /*
  * Author: chris579
  * Checks whether the player can move markers.
  *
  * Arguments:
- * None
+ * 0: Marker Name <STRING>
  *
  * Return Value:
  * Whether the player can move markers <BOOL>
  *
  * Example:
- * [] call ace_markers_fnc_canMove
+ * ["X"] call ace_markers_fnc_canMove
  *
  * Public: No
  */
-#include "script_component.hpp"
+
+params [["_marker",""]];
 
 switch (GVAR(moveRestriction)) do {
     case MOVE_RESTRICTION_NOBODY: {false};
@@ -24,6 +26,9 @@ switch (GVAR(moveRestriction)) do {
     };
     case MOVE_RESTRICTION_GROUP_LEADERS_ADMINS: {
         (leader ACE_player == ACE_player) || IS_ADMIN
+    };
+    case MOVE_RESTRICTION_OWNER: {
+        _marker in GVAR(userPlacedMarkers)
     };
     default {true};
 }; // return

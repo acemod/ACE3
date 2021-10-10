@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the coriolis and spin drift output on/off
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(showCoriolis) = !GVAR(showCoriolis);
 true call FUNC(show_main_page);

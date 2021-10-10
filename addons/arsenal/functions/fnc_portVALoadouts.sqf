@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: alganthe
  * Port VA loadouts to ACE Arsenal.
@@ -10,7 +11,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 private _VALoadouts = +(profilenamespace getvariable ["bis_fnc_saveInventory_data",[]]);
 private _aceLoadouts = +(profileNamespace getVariable [QGVAR(saved_loadouts),[]]);

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2, Jonpas
  * Fixes position of an object. E.g. moves object above ground and adjusts to terrain slope. Requires local object.
@@ -13,13 +14,12 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // setVectorUp requires local object
 if (!local _this) exitWith {};
 
 // Objects with disabled simulation and objects with simulation type "house" don't have gravity/physics, so make sure they are not floating
-private _hasGravity = simulationEnabled _this && {getText (configFile >> "CfgVehicles" >> typeOf _this >> "simulation") != "house"};
+private _hasGravity = simulationEnabled _this && {getText (configOf _this >> "simulation") != "house"};
 
 if (!_hasGravity) then {
     private _positionASL = getPosASL _this;

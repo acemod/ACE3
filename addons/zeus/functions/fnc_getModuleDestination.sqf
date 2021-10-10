@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Allows zeus to click to indicate a 3d position.
@@ -25,7 +26,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_object", "_code", ["_text", ""], ["_icon", "\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa"], ["_color", [1,0,0,1]], ["_angle", 0]];
 

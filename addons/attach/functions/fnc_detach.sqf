@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: eRazeri and esteldunedain
  * Detach an item from a unit
@@ -14,7 +15,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_attachToVehicle","_unit"],
 TRACE_2("params",_attachToVehicle,_unit);
@@ -46,9 +46,11 @@ if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find
 private _isChemlight = _attachedObject isKindOf "Chemlight_base";
 
 // Exit if can't add the item
-if (!(_unit canAdd _itemName) && {!_isChemlight}) exitWith {
-    [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
+if (!([_unit, _itemName] call CBA_fnc_canAddItem) && {!_isChemlight}) exitWith {
+    [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
+
+[QGVAR(detaching), [_attachedObject, _itemName, false]] call CBA_fnc_localEvent;
 
 // Add item to inventory (unless it's a chemlight)
 if (!_isChemlight) then {

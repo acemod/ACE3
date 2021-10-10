@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal, ViperMaul
  * Unload object from vehicle.
@@ -15,15 +16,12 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_item", "_vehicle", ["_unloader", objNull]];
 TRACE_3("params",_item,_vehicle,_unloader);
 
-private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
-
 //This covers testing vehicle stability and finding a safe position
-private _emptyPosAGL = [_vehicle, _itemClass, _unloader] call EFUNC(common,findUnloadPosition);
+private _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
 TRACE_1("findUnloadPosition",_emptyPosAGL);
 
 if ((count _emptyPosAGL) != 3) exitWith {
@@ -49,14 +47,19 @@ private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
-if (_item isEqualType objNull) then {
-    detach _item;
+private _object = _item;
+if (_object isEqualType objNull) then {
+    detach _object;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
+    [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
 } else {
-    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
-    _newItem setPosASL (AGLtoASL _emptyPosAGL);
+    _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
+    _object setPosASL (AGLtoASL _emptyPosAGL);
+    
+    [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
+    [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;
 };
-
+// Invoke listenable event
+["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;
 true

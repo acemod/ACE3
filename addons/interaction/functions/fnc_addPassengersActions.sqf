@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Create one action per passenger.
@@ -15,7 +16,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle", "_player"];
 
@@ -24,7 +24,7 @@ private _actions = [];
 {
     private _unit = _x;
 
-    if (_unit != _player && {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "UAVPilot"}) then {
+    if (_unit != _player && {getText (configOf _unit >> "simulation") != "UAVPilot"}) then {
         private _icon = [
             "",
             "A3\ui_f\data\IGUI\RscIngameUI\RscUnitInfo\role_driver_ca.paa",

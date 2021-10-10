@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Removes a duty factor.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 params [["_id", "", [""]]];
 
 GVAR(dutyList) params ["_idList", "_factorList"];

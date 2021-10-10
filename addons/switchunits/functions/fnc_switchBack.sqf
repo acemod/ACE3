@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: bux578
  * Switches back to the original player unit
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_originalPlayerUnit"];
 

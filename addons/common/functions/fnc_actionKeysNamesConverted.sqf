@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Reports same as actionKeysNames(Array) but in a format processable by "keyDown".
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define LAST_DIK 250
 #define PLACEHOLDER_PLUS "<PLUS>"

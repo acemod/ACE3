@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: commy2
  * Get the index of the weapon.
@@ -18,7 +19,6 @@
  *
  * Public: Yes
  */
- #include "script_component.hpp"
 
 params ["_unit", "_weapon"];
 

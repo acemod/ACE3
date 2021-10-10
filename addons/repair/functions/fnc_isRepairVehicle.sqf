@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Check if vehicle is a engineering vehicle.
@@ -13,7 +14,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 TRACE_1("params",_vehicle);
@@ -21,5 +21,5 @@ TRACE_1("params",_vehicle);
 if (_vehicle isKindOf "CAManBase") exitWith {false};
 
 // Value can be integer or boolean
-private _value = _vehicle getVariable ["ACE_isRepairVehicle", getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(canRepair))];
+private _value = _vehicle getVariable ["ACE_isRepairVehicle", getNumber (configOf _vehicle >> QGVAR(canRepair))];
 _value in [1, true] // return

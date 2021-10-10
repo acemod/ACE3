@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Initializes the "Search Area" Zeus module display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 // Generic init
 params ["_control"];

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Sets the spectator camera attributes as desired. Local effect.
@@ -32,8 +33,6 @@
  * Public: Yes
  */
 
-#include "script_component.hpp"
-
 params [
     ["_mode",nil,[0]],
     ["_focus",nil,[objNull,true]],
@@ -43,13 +42,13 @@ params [
 ];
 
 // Apply if camera exists
-if !(isNil QGVAR(camera)) then {
+if (!isNil QGVAR(camera)) then {
     // These functions are smart and handle unavailable inputs
-    if !(isNil "_focus") then {
+    if (!isNil "_focus") then {
         [_focus] call FUNC(setFocus);
     };
 
-    if !(isNil "_mode") then {
+    if (!isNil "_mode") then {
         // If mode not free and no focus, find focus
         if ((_mode != MODE_FREE) && {isNull GVAR(camFocus)}) then {
             [true] call FUNC(setFocus);
@@ -58,19 +57,19 @@ if !(isNil QGVAR(camera)) then {
         [_mode] call FUNC(cam_setCameraMode);
     };
 
-    if !(isNil "_vision") then {
+    if (!isNil "_vision") then {
         [_vision] call FUNC(cam_setVisionMode);
     };
 
-    if !(isNil "_position") then {
+    if (!isNil "_position") then {
         GVAR(camera) setPosATL _position;
     };
 
-    if !(isNil "_direction") then {
+    if (!isNil "_direction") then {
         GVAR(camera) setDir _direction;
     };
 } else {
-    if !(isNil "_focus") then {
+    if (!isNil "_focus") then {
         // If there are no entities this becomes nil, handled on camera startup
         if (_focus isEqualType true) then {
             _focus = ([] call FUNC(getTargetEntities)) select 0;
@@ -79,20 +78,20 @@ if !(isNil QGVAR(camera)) then {
         GVAR(camFocus) = _focus;
     };
 
-    if !(isNil "_mode") then {
+    if (!isNil "_mode") then {
         GVAR(camMode) = _mode;
     };
 
-    if !(isNil "_vision") then {
+    if (!isNil "_vision") then {
         GVAR(camVision) = _vision;
     };
 
     // GVARs exits purely for pre-setting of these attributes
-    if !(isNil "_position") then {
+    if (!isNil "_position") then {
         GVAR(camPos) = ATLtoASL _position;
     };
 
-    if !(isNil "_direction") then {
+    if (!isNil "_direction") then {
         GVAR(camDir) = _direction;
     };
 };

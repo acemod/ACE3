@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: jaynus
  * Returns whether the target position is within the maximum angle FOV of the provided seeker
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 params ["_seeker", "_targetPos", "_seekerMaxAngle"];
 

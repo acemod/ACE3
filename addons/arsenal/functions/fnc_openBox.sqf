@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Alganthe
  * Open arsenal.
@@ -15,7 +16,6 @@
  *
  * Public: Yes
 */
-#include "script_component.hpp"
 
 params [["_object", objNull, [objNull]], ["_center", objNull, [objNull]], ["_mode", false, [false]]];
 
@@ -41,12 +41,16 @@ if (isNil "_displayToUse" || {!isnil QGVAR(camera)}) exitWith {
     [localize LSTRING(CantOpenDisplay), false, 5, 1] call EFUNC(common,displayText);
 };
 
+GVAR(currentBox) = _object;
+
 if (_mode) then {
     GVAR(virtualItems) = +(uiNamespace getVariable QGVAR(configItems));
+    GVAR(virtualItemsFlat) = +(uiNamespace getVariable QGVAR(configItemsFlat));
 } else {
     GVAR(virtualItems) = +(_object getVariable [QGVAR(virtualItems), [
         [[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
     ]]);
+    GVAR(virtualItemsFlat) = flatten GVAR(virtualItems);
 };
 
 GVAR(center) = _center;

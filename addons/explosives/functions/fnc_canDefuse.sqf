@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Whether a unit can perform the defuse action
@@ -14,7 +15,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
@@ -24,7 +24,7 @@ if (isNull _explosive) exitWith {
     deleteVehicle _target;
     false
 };
-if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (items _unit))}) exitWith {false};
+if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (_unit call EFUNC(common,uniqueItems)))}) exitWith {false};
 
 if (GVAR(RequireSpecialist) && {!([_unit] call EFUNC(Common,isEOD))}) exitWith {false};
 

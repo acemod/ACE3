@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: esteldunedain
  * Check if headphones can be disconnected from the mine detector
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 (ACE_player getVariable [QGVAR(isUsingHeadphones), false]) &&
 {[ACE_player] call FUNC(hasDetector)};

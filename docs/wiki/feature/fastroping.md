@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Fastroping
+title: Fast-Roping
 description: System for adding fast roping capabilities to helicopters.
 group: feature
 category: realism

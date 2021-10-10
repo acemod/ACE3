@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Sends a near civilian crowd away with a chance of failure.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define SEND_DISTANCE 50
 #define SEND_RADIUS 10

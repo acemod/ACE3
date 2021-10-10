@@ -11,7 +11,6 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call EFUNC(common,hasItem));
                     statement = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call FUNC(place));
                     showDisabled = 0;
-                    priority = 2;
                     icon = QPATHTOF(UI\w_spottingscope_ca.paa);
                 };
             };
@@ -28,23 +27,16 @@ class CfgVehicles {
 
     class LandVehicle;
     class StaticWeapon: LandVehicle {
-        class Turrets;
+        class Turrets {
+            class MainTurret;
+        };
+
         class ACE_Actions {
             class ACE_MainActions;
         };
     };
 
-    class StaticATWeapon: StaticWeapon {
-        class Turrets: Turrets {
-            class MainTurret;
-        };
-
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions: ACE_MainActions {};
-        };
-    };
-
-    class ACE_SpottingScopeObject: StaticATWeapon {
+    class ACE_SpottingScopeObject: StaticWeapon {
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition)[] = {0,1,0};
         EGVAR(dragging,dragDirection) = 0;
@@ -60,7 +52,6 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 5;
                     icon = QPATHTOF(UI\w_spottingscope_ca.paa);
                 };
             };
@@ -69,6 +60,8 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
+
+        CBA_ScriptedOpticClass = "ACE_SpottingScopeOptic";
 
         author = ECSTRING(common,ACETeam);
         scope = 1;
@@ -86,6 +79,7 @@ class CfgVehicles {
         accuracy = 0.12;
         cost = 10000;
         icon = "\A3\Static_F_Gamma\data\UI\map_StaticTurret_AT_CA.paa";
+        attenuationEffectType = "";
 
         class SpeechVariants {
             class Default {
@@ -125,15 +119,15 @@ class CfgVehicles {
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    minFov = 0.0025;
-                    maxFov = 0.05;
-                    initFov= 0.05;
+                    minFov = "0.25/35"; // real one is 15x-45x, but max mag in game is 37x
+                    maxFov = "0.25/5";
+                    initFov= "0.25/5";
                 };
 
                 weapons[] = {};
                 magazines[] = {};
                 gunnerOpticsColor[] = {1,1,1,1};
-                gunnerOpticsModel = "\A3\Weapons_F\empty";
+                gunnerOpticsModel = "\A3\Weapons_F\empty.p3d";
                 gunnerOpticsEffect[] = {"OpticsCHAbera1","OpticsBlur2"};
                 gunnerOutOpticsShowCursor = 0;
                 gunnerOpticsShowCursor = 0;
@@ -142,7 +136,7 @@ class CfgVehicles {
                 gunnerGetOutAction = "PlayerProne";
                 gunnerForceOptics = 0;
                 ejectDeadGunner = 0;
-                turretInfoType = QGVAR(RscUnitInfo);
+                turretInfoType = "CBA_ScriptedOptic_zooming";
                 opticsDisablePeripherialVision = 1;
             };
         };

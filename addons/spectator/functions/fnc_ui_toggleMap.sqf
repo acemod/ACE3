@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO
  * Function used to toggle the map
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "script_component.hpp"
 
 if (GVAR(uiMapVisible)) then {
     CTRL_MAP ctrlShow false;

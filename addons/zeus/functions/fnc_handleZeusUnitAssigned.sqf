@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: SilentSpike
  * Contextually removes addons (given in ACE_Curator) from zeus based on their required addon(s)
@@ -19,7 +20,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 if !(isClass (configFile >> "ACE_Curator")) exitWith { ERROR("The ACE_Curator class does not exist") };
 

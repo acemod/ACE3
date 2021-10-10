@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the "Connect To" button from the menu application
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 GVAR(currentWaypoint) = [-2, -1] select (GVAR(currentWaypoint) == -2);
 GVAR(rangeFinderPositionASL) = [];

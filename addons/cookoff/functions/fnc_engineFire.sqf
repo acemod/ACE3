@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Start fire in engine block of a car.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_vehicle"];
 
@@ -21,7 +21,7 @@ if (_vehicle getVariable [QGVAR(isEngineSmoking), false]) exitWith {};
 _vehicle setVariable [QGVAR(isEngineSmoking), true];
 
 if (local _vehicle) then {
-    [QGVAR(engineFire), _vehicle] call CBA_fnc_remoteEvent;
+    [QGVAR(engineFire), _vehicle] call CBA_fnc_globalEvent;
 };
 
 private _offset = getArray (_vehicle call CBA_fnc_getObjectConfig >> QGVAR(engineSmokeOffset));

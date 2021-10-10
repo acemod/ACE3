@@ -1,0 +1,48 @@
+# Number of days of inactivity before an issue becomes stale
+daysUntilStale: 180
+
+# Number of days of inactivity before a stale issue is closed
+daysUntilClose: 14
+
+# Issues with these labels will never be considered stale
+exemptLabels:
+  - impact/large
+  - kind/critical bug
+  - kind/bug
+  - kind/Focus Feature
+  - status/accepting-pr
+  - status/cherrypick
+  - status/merge on release
+  - sticky
+  - help wanted
+
+# Label to use when marking an issue as stale
+staleLabel: status/stale
+
+# Comment to post when marking an issue as stale. Set to `false` to disable
+markComment: >
+  This issue has been automatically marked as stale because it has not had
+  recent activity. It will be closed if no further activity occurs. Thank you
+  for your contributions.
+# Comment to post when closing a stale issue. Set to `false` to disable
+closeComment: >
+  This issue has been automatically closed due to inactivity.
+  
+  If this is still an issue, please feel free to re-open this. If necessary, provide any additional details to help us solve this issue.
+  
+  If you wish to assist us resolving this issue, 
+  please re-open or create a new issue stating you wish to help us out.
+  
+  Thank you for your contributions.
+  
+# Limit the number of actions per hour, from 1-30. Default is 30
+limitPerRun: 30
+
+# Limit to only `issues` or `pulls`
+only: issues
+
+# Set to true to ignore issues in a project (defaults to false)
+exemptProjects: true
+
+# Set to true to ignore issues in a milestone (defaults to false)
+exemptMilestones: true

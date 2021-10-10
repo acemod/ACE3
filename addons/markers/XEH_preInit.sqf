@@ -17,11 +17,12 @@ if (isNil QGVAR(MarkersCache)) then {
     for "_a" from 0 to (count _config - 1) do {
         private _marker = _config select _a;
 
-        if (getNumber (_marker >> "scope") == 2) then {
+        if (getNumber (_marker >> "scope") isEqualTo 2) then {
+            private _class = configName _marker;
             private _name = getText (_marker >> "name");
             private _icon = getText (_marker >> "icon");
 
-            GVAR(MarkersCache) pushBack [_name, _a, _icon];
+            GVAR(MarkersCache) pushBack [_name, _a, _icon, _class];
         };
     };
 };
@@ -35,7 +36,8 @@ if (isNil QGVAR(MarkerColorsCache)) then {
     for "_a" from 0 to (count _config - 1) do {
         private _marker = _config select _a;
 
-        if (getNumber (_marker >> "scope") == 2) then {
+        if (getNumber (_marker >> "scope") isEqualTo 2) then {
+            private _class = configName _marker;
             private _name = getText (_marker >> "name");
             private _rgba = getArray (_marker >> "color");
 
@@ -48,7 +50,7 @@ if (isNil QGVAR(MarkerColorsCache)) then {
             _rgba params ["_red", "_green", "_blue", "_alpha"];
             private _icon = format ["#(argb,8,8,3)color(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
 
-            GVAR(MarkerColorsCache) pushBack [_name, _a, _icon];
+            GVAR(MarkerColorsCache) pushBack [_name, _a, _icon, _class];
         };
     };
 };

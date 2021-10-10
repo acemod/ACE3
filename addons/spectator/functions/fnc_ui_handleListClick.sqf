@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to handle list single/double clicks
@@ -18,7 +19,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_dblClick","_params"];
 _params params ["_list","_index"];

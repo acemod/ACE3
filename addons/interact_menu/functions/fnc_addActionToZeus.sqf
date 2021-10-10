@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Insert an ACE action to zeus.
@@ -15,8 +16,8 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
+if (!hasInterface) exitWith { [] };
 if (!params [["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {ERROR("Bad Params"); []};
 if ((_parentPath param [0, ""]) != "ACE_ZeusActions") exitWith {ERROR_1("Bad path %1 - should have ACE_ZeusActions as base", _parentPath); []};
 TRACE_2("addActionToZeus",_parentPath,_action);

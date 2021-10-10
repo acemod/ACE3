@@ -1,11 +1,12 @@
+#include "script_component.hpp"
 /*
  * Author: Glowbal
  * Handle set volume calls. Will use the lowest available volume setting.
  *
  * Arguments:
- * 0: id <STRING>
- * 1: settings <NUMBER>
- * 2: add [true] OR remove [false] (default: true) <BOOL>
+ * 0: ID <STRING>
+ * 1: Settings <NUMBER>
+ * 2: Add (true) or remove (false) <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "script_component.hpp"
 
 params ["_id", "_setting", ["_add", true]];
 

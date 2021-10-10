@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Throw selected throwable.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 TRACE_1("params",_unit);
@@ -40,7 +40,7 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 
     private _p2 = (eyePos _unit) vectorAdd (AGLToASL (positionCameraToWorld _direction)) vectorDiff (AGLToASL (positionCameraToWorld [0, 0, 0]));
-    private _p1 = AGLtoASL (_activeThrowable modelToWorldVisual [0, 0, 0]);
+    private _p1 = _activeThrowable modelToWorldVisualWorld [0, 0, 0];
 
     private _newVelocity = (_p1 vectorFromTo _p2) vectorMultiply _velocity;
 

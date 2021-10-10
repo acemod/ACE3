@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Adjusts the direction of a shell. Called from the unified fired EH only if the gunner is a player.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
@@ -39,7 +39,7 @@ private _initSpeed = 0;
 private _zeroDistance = currentZeroing _gunner;
 if (_zeroDistance > 0) then {
     private _weaponCombo = [_weapon, _magazine, _ammo, _zeroDistance];
-    if !(_weaponCombo isEqualTo (_gunner getVariable [QGVAR(lastWeaponCombo), []])) then {
+    if (_weaponCombo isNotEqualTo (_gunner getVariable [QGVAR(lastWeaponCombo), []])) then {
         private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
         private _antiOffset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, 0, _zeroDistance];
         _antiOffset = parseNumber _antiOffset;

@@ -65,6 +65,17 @@ class CfgMagazines {
         mass = 4;
     };
 
+    class ACE_CTS9: HandGrenade {
+        author = ECSTRING(common,ACETeam);
+        displayname = CSTRING(CTS9_Name);
+        descriptionShort = CSTRING(M84_Description);
+        displayNameShort = CSTRING(CTS9_NameShort);
+        model = QPATHTOF(models\ACE_CTS_9bang.p3d);
+        picture = QPATHTOF(UI\ace_cts9_x_ca.paa);
+        ammo = "ACE_G_CTS9";
+        mass = 4;
+    };
+
     class SmokeShell;
     class ACE_M14: SmokeShell {
         author = ECSTRING(common,ACETeam);
@@ -88,5 +99,77 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "F_40mm_Red";
         initSpeed = 120;
+    };
+
+    class UGL_FlareWhite_F;
+    class ACE_40mm_Flare_white: UGL_FlareWhite_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_white";
+        displayName = CSTRING(40mm_flare_white);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
+
+    class UGL_FlareRed_F;
+    class ACE_40mm_Flare_red: UGL_FlareRed_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_red";
+        displayName = CSTRING(40mm_flare_red);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
+
+    class UGL_FlareGreen_F;
+    class ACE_40mm_Flare_green: UGL_FlareGreen_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_green";
+        displayName = CSTRING(40mm_flare_green);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
+
+    class ACE_40mm_Flare_ir: UGL_FlareWhite_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_ir";
+        displayName = CSTRING(40mm_flare_ir);
+        descriptionShort = CSTRING(parachute_flare_ir_description);
+    };
+
+    class CA_Magazine;
+    class ACE_SatchelCharge_Remote_Mag_Throwable: CA_Magazine {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_SatchelCharge_Remote_Ammo_Thrown";
+        scope = 1;
+        picture = "\A3\Weapons_f\data\UI\gear_satchel_CA.paa";
+        model = "\A3\Weapons_F\Explosives\satchel_i";
+        displayName = CSTRING(SatchelCharge_Remote_Mag_Throwable);
+        displayNameShort = "$STR_A3_cfgMagazines_PipeBomb0";
+        descriptionShort = CSTRING(SatchelCharge_Description);
+        class Library {
+            libTextDesc = CSTRING(SatchelCharge_LibText);
+        };
+        type = "2*      256";
+        allowedSlots[] = {901};
+        value = 5;
+        mass = 80;
+        count = 1;
+        initSpeed = 7.5;
+        maxLeadSpeed = 0;
+        nameSound = "satchelcharge";
+        nameSoundWeapon = "satchelcharge";
+        sound[] = {"A3\sounds_f\dummysound", 0.000316228, 1, 10};
+        useAction = 0;
+    };
+
+    class ACE_DemoCharge_Remote_Mag_Throwable: ACE_SatchelCharge_Remote_Mag_Throwable {
+        ammo = "ACE_DemoCharge_Remote_Ammo_Thrown";
+        picture = "\A3\Weapons_F\Data\UI\gear_c4_charge_small_CA.paa";
+        model = "\A3\Weapons_F\explosives\c4_charge_small_d";
+        displayName = CSTRING(DemoCharge_Remote_Mag_Throwable);
+        displayNameShort = "$STR_A3_cfgMagazines_DemoCharge0";
+        descriptionShort = CSTRING(SatchelCharge_Description);
+        class Library {
+            libTextDesc = CSTRING(DemoCharge_LibText);
+        };
+        allowedSlots[] = {901, 701};
+        mass = 20;
+        initSpeed = 12.5;
     };
 };

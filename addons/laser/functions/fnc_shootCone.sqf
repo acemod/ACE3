@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Nou
  * Shoots multiple rays in a dispersion pattern.
@@ -17,8 +18,6 @@
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
-#include "script_component.hpp"
 
 BEGIN_COUNTER(shootCone);
 

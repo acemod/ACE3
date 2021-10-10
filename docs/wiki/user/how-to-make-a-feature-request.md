@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: How to make a feature request
+title: How to Make a Feature Request
 description: ACE3 requires a special procedure to make feature requests. Because due to our current work load, in the period of weeks prior and posterior to the first release, new feature requests are under embargo.
 group: user
 order: 11

@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: Dystopian
  * Clean variables on unit respawn.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_unit"];
 TRACE_1("respawn",_unit);
