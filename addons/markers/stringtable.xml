@@ -6,6 +6,7 @@
             <Spanish>Escala: %1</Spanish>
             <French>Échelle : %1</French>
             <Russian>Масштаб: %1</Russian>
+            <Japanese>スケール: %1</Japanese>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
@@ -28,6 +29,7 @@
             <English>Click RMB to reset</English>
             <Russian>Нажми ПКМ чтобы сбросить</Russian>
             <French>Clic droit pour réinitialiser</French>
+            <Japanese>右クリックでリセット</Japanese>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>

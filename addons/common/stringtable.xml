@@ -27,7 +27,7 @@
             <Portuguese>ACE-Team</Portuguese>
             <Hungarian>ACE-Team</Hungarian>
             <Italian>ACE-Team</Italian>
-            <Japanese>ACE-チーム</Japanese>
+            <Japanese>ACE チーム</Japanese>
             <Korean>ACE-Team</Korean>
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
@@ -1382,10 +1382,12 @@
         <Key ID="STR_ACE_Common_EpilepsyFriendlyMode">
             <English>Epilepsy friendly mode</English>
             <German>Epilepsiefreundlicher Modus</German>
+            <Japanese>けいれん回避モード</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
             <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
+            <Japanese>点滅する光エフェクトを無効化し、けいれんする恐れを低下させます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1464,16 +1466,20 @@
             <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
             <Turkish>Kendi etkileşimim menüsünde animasyonları göster</Turkish>
         </Key>
-        <Key ID="STR_ACE_Common_SettingProgressbarInfoName">
+        <Key ID="STR_ACE_Common_both">
+            <English>Both</English>
+            <Turkish>İkisi de</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_ProgressbarInfoName">
             <English>Additional progress bar information</English>
         </Key>
-        <Key ID="STR_ACE_Common_SettingProgressbarInfoDesc">
+        <Key ID="STR_ACE_Common_ProgressbarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
         </Key>
-        <Key ID="STR_ACE_Common_SettingProgressbarInfoPercentage">
+        <Key ID="STR_ACE_Common_ProgressbarInfoPercentage">
             <English>Percentage</English>
         </Key>
-        <Key ID="STR_ACE_Common_SettingProgressbarInfoTime">
+        <Key ID="STR_ACE_Common_ProgressbarInfoTime">
             <English>Time remaining</English>
         </Key>
         <Key ID="STR_ACE_Common_None">
