@@ -13,9 +13,3 @@ Note: Requires config setup in a mission's description.ext - has no effect if mi
         };
     };
 ```
-
-## Maintainers
-
-The people responsible for merging changes to this component or answering potential questions.
-
-- [PabstMirror](https://github.com/PabstMirror)
