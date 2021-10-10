@@ -97,7 +97,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
         //Update Progress Bar (ratio of elepased:total)
         private _ratio = _elapsedTime / _totalTime;
         (uiNamespace getVariable QGVAR(ctrlProgressBar)) progressSetPosition _ratio;
-        switch (GVAR(settingProgressBarInfo)) do {
+        switch (GVAR(progressBarInfo)) do {
             case 0: {};
             case 1: {
                 (uiNamespace getVariable QGVAR(ctrlProgressBarTitle)) ctrlSetText (_title + format [" (%1", floor (_ratio * 100)] + "%)");

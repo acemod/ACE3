@@ -1470,16 +1470,16 @@
             <English>Both</English>
             <Turkish>İkisi de</Turkish>
         </Key>
-        <Key ID="STR_ACE_Common_ProgressbarInfoName">
+        <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
         </Key>
-        <Key ID="STR_ACE_Common_ProgressbarInfoDesc">
+        <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
         </Key>
-        <Key ID="STR_ACE_Common_ProgressbarInfoPercentage">
+        <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
         </Key>
-        <Key ID="STR_ACE_Common_ProgressbarInfoTime">
+        <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
         </Key>
         <Key ID="STR_ACE_Common_None">
