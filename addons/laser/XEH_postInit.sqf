@@ -5,7 +5,7 @@ if (hasInterface) then {
 
     GVAR(pfID) = -1;
 
-    ["ace_settingsInitialized", {
+    ["CBA_settingsInitialized", {
         ["turret", LINKFUNC(showVehicleHud), false] call CBA_fnc_addPlayerEventHandler;
         ["vehicle", LINKFUNC(showVehicleHud), true] call CBA_fnc_addPlayerEventHandler; // only one of these needs the retro flag
 

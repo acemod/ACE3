@@ -10,7 +10,7 @@ call FUNC(determineZoom);
 
 GVAR(flashlights) = [] call CBA_fnc_createNamespace;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
         //Set the chat channel once the map has finished loading
         [{

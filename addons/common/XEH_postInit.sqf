@@ -237,7 +237,7 @@ call FUNC(checkFiles);
 // Set up ace_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     [
         GVAR(checkPBOsAction),
         GVAR(checkPBOsCheckAll),

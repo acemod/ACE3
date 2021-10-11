@@ -19,7 +19,7 @@ if (hasInterface) then {
     }, {false}, [19, [true, false, false]], false] call CBA_fnc_addKeybind; //SHIFT + R Key
 };
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_1("SettingsInitialized eh", GVAR(enabled));
     if (!GVAR(enabled)) exitWith {};
 
