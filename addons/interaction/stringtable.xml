@@ -1234,7 +1234,7 @@
             <French>Cette option permet de fixer/retirer des accessoires d'arme à partir du menu d'interaction personnel.</French>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
-            <English>Allow group renaming</English>
+            <English>Allow group rename</English>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>

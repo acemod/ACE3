@@ -31,7 +31,7 @@ private _nameAlreadyTaken = allGroups findIf {
 
 
 if (_nameAlreadyTaken) then {
-    hint LLSTRING(RenameGroupAlreadyExists);
+    [LLSTRING(RenameGroupAlreadyExists)] call EFUNC(common,displayTextStructured);
 } else {
     _group setGroupIdGlobal [_newName];
 };
