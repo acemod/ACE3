@@ -17,7 +17,7 @@
  */
 
 params [["_mine", objNull, [objNull]], ["_allow", true, [true]]];
-TRACE_1("params",_mine,_allow);
+TRACE_2("params",_mine,_allow);
 
 if !(_mine in allMines) exitWith {false};
 
