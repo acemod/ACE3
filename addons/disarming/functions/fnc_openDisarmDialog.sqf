@@ -48,7 +48,7 @@ GVAR(disarmTarget) = _target;
     };
 
     TRACE_2("Debug: Droping %1 from %2",_data,GVAR(disarmTarget));
-    [QGVAR(dropItems), [ACE_player, GVAR(disarmTarget), [_data], _textRight], [GVAR(disarmTarget)]] call CBA_fnc_targetEvent;
+    [QGVAR(dropItems), [ACE_player, GVAR(disarmTarget), [_data], parseNumber _textRight], [GVAR(disarmTarget)]] call CBA_fnc_targetEvent;
 
     false //not sure what this does
 }];
