@@ -54,3 +54,12 @@
     false, // isGlobal
     {[QGVAR(nametagColorYellow), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(ambientBrightnessAffectViewDist),
+    "SLIDER",
+    [LSTRING(AmbientBrightnessAffectsViewDist_DisplayName), LSTRING(AmbientBrightnessAffectsViewDist_Description)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    [0, 1, 1, 0, true],
+    true
+] call CBA_fnc_addSetting;
