@@ -50,7 +50,7 @@ GVAR(selfInteractionActions) = [];
                     _target =_intersectObject
                 };
             } forEach _intersections;
-            if !(_target isKindOf "CAManBase" && {[ACE_player, _target] call FUNC(canOpenMenu)}) then {
+            if (!(_target isKindOf "CAManBase") || {!([ACE_player, _target] call FUNC(canOpenMenu))}) then {
                 _target = ACE_player;
             };
         };
