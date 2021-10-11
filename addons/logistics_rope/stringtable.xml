@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="logistics_rope">
-        <Key ID="STR_ACE_logistics_rope_descriptionShort">
+    <Package name="Logistics_Rope">
+        <Key ID="STR_ACE_Logistics_Rope_descriptionShort">
             <English>A twisted braid of fibers. Usually used for rappelling or towing.</English>
         </Key>
-        <Key ID="STR_ACE_logistics_rope_Rope_3_Display">
+        <Key ID="STR_ACE_Logistics_Rope_Rope_3_Display">
             <English>Rope 3.2 meters</English>
             <German>3.2 Meter Seil</German>
             <French>Corde de 3,2 mètres</French>
@@ -16,7 +16,7 @@
             <Turkish>3.2 metre halat</Turkish>
             <Spanish>Cuerda de 3.2 metros</Spanish>
         </Key>
-        <Key ID="STR_ACE_logistics_rope_Rope_6_Display">
+        <Key ID="STR_ACE_Logistics_Rope_Rope_6_Display">
             <English>Rope 6.2 meters</English>
             <German>6.2 Meter Seil</German>
             <French>Corde de 6,2 mètres</French>
@@ -28,7 +28,7 @@
             <Turkish>6.2 metre halat</Turkish>
             <Spanish>Cuerda de 6.2 metros</Spanish>
         </Key>
-        <Key ID="STR_ACE_logistics_rope_Rope_12_Display">
+        <Key ID="STR_ACE_Logistics_Rope_Rope_12_Display">
             <English>Rope 12.2 meters</English>
             <German>12.2 Meter Seil</German>
             <French>Corde de 12,2 mètres</French>
@@ -42,7 +42,7 @@
             <Turkish>12.2 metre halat</Turkish>
             <Spanish>Cuerda de 12.2 metros</Spanish>
         </Key>
-        <Key ID="STR_ACE_logistics_rope_Rope_15_Display">
+        <Key ID="STR_ACE_Logistics_Rope_Rope_15_Display">
             <English>Rope 15.2 meters</English>
             <German>15.2 Meter Seil</German>
             <French>Corde de 15,2 mètres</French>
@@ -56,7 +56,7 @@
             <Turkish>15.2 metre halat</Turkish>
             <Spanish>Cuerda de 15.2 metros</Spanish>
         </Key>
-        <Key ID="STR_ACE_logistics_rope_Rope_18_Display">
+        <Key ID="STR_ACE_Logistics_Rope_Rope_18_Display">
             <English>Rope 18.3 meters</English>
             <German>18.3 Meter Seil</German>
             <French>Corde de 18,3 mètres</French>
@@ -70,7 +70,7 @@
             <Turkish>18.3 metre halat</Turkish>
             <Spanish>Cuerda de 18.3 metros</Spanish>
         </Key>
-        <Key ID="STR_ACE_logistics_rope_Rope_27_Display">
+        <Key ID="STR_ACE_Logistics_Rope_Rope_27_Display">
             <English>Rope 27.4 meters</English>
             <German>27.4 Meter Seil</German>
             <French>Corde de 27,4 mètres</French>
@@ -84,7 +84,7 @@
             <Turkish>27.4 metre halat</Turkish>
             <Spanish>Cuerda de 27.4 metros</Spanish>
         </Key>
-        <Key ID="STR_ACE_logistics_rope_Rope_36_Display">
+        <Key ID="STR_ACE_Logistics_Rope_Rope_36_Display">
             <English>Rope 36.6 meters</English>
             <German>36.6 Meter Seil</German>
             <French>Corde de 36,6 mètres</French>
