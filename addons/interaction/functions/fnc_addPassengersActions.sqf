@@ -58,7 +58,7 @@ private _actions = [];
                 {[0, 0, 0]},
                 2,
                 [false,false,false,true,false], //add run on hover (4th bit true)
-                {call EFUNC(medical_gui,modifyActionTriageLevel)}
+                {if (["ace_medical_gui"] call EFUNC(common,isModLoaded)) then {call EFUNC(medical_gui,modifyActionTriageLevel)}}
                 ] call EFUNC(interact_menu,createAction),
                 [],
                 _unit
