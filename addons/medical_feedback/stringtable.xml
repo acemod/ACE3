@@ -190,7 +190,7 @@
                 <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_enableHUDIndicators_DisplayName">
-                <English>Enable Fractures/Tourniquets Indicators</English>
+                <English>Enable Fracture/Tourniquet/Splint Indicators</English>
                 <Russian>Включить индикаторы переломов/жгутов</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_enableHUDIndicators_Description">
