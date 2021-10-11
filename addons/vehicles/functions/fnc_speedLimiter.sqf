@@ -58,6 +58,5 @@ GVAR(speedLimit) = speed _vehicle max 5;
         _vehicle setCruiseControl [GVAR(speedLimit), false];
     };
 
-    private _speed = speed _vehicle;
 
 }, 0, [_driver, _vehicle]] call CBA_fnc_addPerFrameHandler;
