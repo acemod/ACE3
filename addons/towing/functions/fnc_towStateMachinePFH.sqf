@@ -87,10 +87,44 @@ switch (_state) do {
         _child setVariable [QGVAR(rope), _rope, true];
         _child setVariable [QGVAR(hook), _hook, true];
 
+        _parent setVariable [QGVAR(hook), _hook, true];
+
         _hook setVariable [QGVAR(ropeClass), _ropeClass, true];
 
         _child setVariable [QGVAR(towing), true, true];
         _parent setVariable [QGVAR(towing), true, true];
+
+        _hook setVariable [QGVAR(parentDeleteEventHandler), _parent addEventHandler ["Deleted", {
+            params ["_entity"];
+
+            private _hook = _entity getVariable [QGVAR(hook), objNull];
+            private _child = _hook getVariable [QGVAR(child), objNull];
+            private _parent = _hook getVariable [QGVAR(parent), objNull];
+
+            _parent removeEventHandler ["Deleted", _hook getVariable QGVAR(parentDeleteEventHandler)];
+            _hook setVariable [QGVAR(parentDeleteEventHandler), -1];
+
+            _child removeEventHandler ["Deleted", _hook getVariable QGVAR(childDeleteEventHandler)];
+            _hook setVariable [QGVAR(childDeleteEventHandler), -1];
+
+            [objNull, _parent, _child] call FUNC(detach);
+        }], true];
+
+        _hook setVariable [QGVAR(childDeleteEventHandler), _child addEventHandler ["Deleted", {
+            params ["_entity"];
+
+            private _hook = _entity getVariable [QGVAR(hook), objNull];
+            private _child = _hook getVariable [QGVAR(child), objNull];
+            private _parent = _hook getVariable [QGVAR(parent), objNull];
+
+            _parent removeEventHandler ["Deleted", _hook getVariable QGVAR(parentDeleteEventHandler)];
+            _hook setVariable [QGVAR(parentDeleteEventHandler), -1];
+
+            _child removeEventHandler ["Deleted", _hook getVariable QGVAR(childDeleteEventHandler)];
+            _hook setVariable [QGVAR(childDeleteEventHandler), -1];
+
+            [objNull, _parent, _child] call FUNC(detach);
+        }], true];
 
         _parent setVariable [QGVAR(ropeBreakEventHandler), _parent addEventHandler ["RopeBreak", {
             params ["_parent", "_rope", "_child"];
