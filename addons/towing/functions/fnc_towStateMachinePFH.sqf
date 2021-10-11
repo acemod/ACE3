@@ -101,12 +101,6 @@ switch (_state) do {
             private _child = _hook getVariable [QGVAR(child), objNull];
             private _parent = _hook getVariable [QGVAR(parent), objNull];
 
-            _parent removeEventHandler ["Deleted", _hook getVariable QGVAR(parentDeleteEventHandler)];
-            _hook setVariable [QGVAR(parentDeleteEventHandler), -1];
-
-            _child removeEventHandler ["Deleted", _hook getVariable QGVAR(childDeleteEventHandler)];
-            _hook setVariable [QGVAR(childDeleteEventHandler), -1];
-
             [objNull, _parent, _child] call FUNC(detach);
         }], true];
 
@@ -116,12 +110,6 @@ switch (_state) do {
             private _hook = _entity getVariable [QGVAR(hook), objNull];
             private _child = _hook getVariable [QGVAR(child), objNull];
             private _parent = _hook getVariable [QGVAR(parent), objNull];
-
-            _parent removeEventHandler ["Deleted", _hook getVariable QGVAR(parentDeleteEventHandler)];
-            _hook setVariable [QGVAR(parentDeleteEventHandler), -1];
-
-            _child removeEventHandler ["Deleted", _hook getVariable QGVAR(childDeleteEventHandler)];
-            _hook setVariable [QGVAR(childDeleteEventHandler), -1];
 
             [objNull, _parent, _child] call FUNC(detach);
         }], true];

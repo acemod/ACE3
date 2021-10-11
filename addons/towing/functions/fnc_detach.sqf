@@ -18,13 +18,20 @@
 params ["_unit", "_parent", "_child"];
 TRACE_3("detach",_unit,_parent,_child);
 
+private _hook = _child getVariable [QGVAR(hook), objNull];
+
+_parent removeEventHandler ["Deleted", _hook getVariable QGVAR(parentDeleteEventHandler)];
+_hook setVariable [QGVAR(parentDeleteEventHandler), -1];
+
+_child removeEventHandler ["Deleted", _hook getVariable QGVAR(childDeleteEventHandler)];
+_hook setVariable [QGVAR(childDeleteEventHandler), -1];
+
 _parent removeEventHandler ["RopeBreak", _parent getVariable QGVAR(ropeBreakEventHandler)];
 _parent setVariable [QGVAR(ropeBreakEventHandler), -1];
 
 private _rope = _child getVariable [QGVAR(rope), objNull];
 ropeDestroy _rope;
 
-private _hook = _child getVariable [QGVAR(hook), objNull];
 private _ropeClass = _hook getVariable [QGVAR(ropeClass), ""];
 deleteVehicle _hook;
 
