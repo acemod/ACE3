@@ -8,6 +8,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     [[0, 1, 2], [LSTRING(CheckPBO_Action_WarnOnce), LSTRING(CheckPBO_Action_WarnPerm), LSTRING(CheckPBO_Action_Kick)], 0],
     1
 ] call CBA_fnc_addSetting;
+
 [
     QGVAR(checkPBOsCheckAll),
     "CHECKBOX",
@@ -16,6 +17,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     false,
     1
 ] call CBA_fnc_addSetting;
+
 [
     QGVAR(checkPBOsWhitelist),
     "EDITBOX",
@@ -24,6 +26,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     "[]",
     1
 ] call CBA_fnc_addSetting;
+
 [
     QGVAR(settingFeedbackIcons),
     "LIST",
@@ -32,6 +35,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     [[0, 1, 2, 3, 4], [ELSTRING(optionsmenu,Hide), ELSTRING(optionsmenu,TopRightDown), ELSTRING(optionsmenu,TopRightLeft), ELSTRING(optionsmenu,TopLeftDown), ELSTRING(optionsmenu,TopLeftRight)], 1],
     0
 ] call CBA_fnc_addSetting;
+
 [
     QGVAR(settingProgressBarLocation),
     "LIST",
@@ -40,6 +44,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     [[0, 1], [ELSTRING(optionsmenu,Top), ELSTRING(optionsmenu,Bottom)], 0],
     0
 ] call CBA_fnc_addSetting;
+
 [
     QGVAR(displayTextColor),
     "COLOR",
@@ -48,6 +53,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     [0, 0, 0, 0.1],
     0
 ] call CBA_fnc_addSetting;
+
 [
     QGVAR(displayTextFontColor),
     "COLOR",
@@ -56,6 +62,7 @@ private _category = localize LSTRING(ACEKeybindCategoryCommon);
     [1, 1, 1, 1],
     0
 ] call CBA_fnc_addSetting;
+
 [
     QGVAR(persistentLaserEnabled),
     "CHECKBOX",
