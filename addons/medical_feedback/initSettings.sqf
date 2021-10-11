@@ -43,7 +43,7 @@
 [
     QGVAR(enableHUDIndicators),
     "CHECKBOX",
-    [LSTRING(enableHUDIndicators_DisplayName), LSTRING(enableHUDIndicators_Description)],
+    [LSTRING(EnableHUDIndicators_DisplayName), LSTRING(EnableHUDIndicators_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory)],
     true,
     false,
