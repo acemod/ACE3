@@ -609,7 +609,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_127x99_API";
         displayName = CSTRING(5Rnd_127x99_API_Mag_Name);
-        displayNameShort = CSTRING(127x99_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_API_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_API_Mag_Description);
         initSpeed = 900;
     };
@@ -635,7 +635,7 @@ class CfgMagazines {
         count = 10;
         mass = 32;
         displayName = CSTRING(10Rnd_127x99_API_Mag_Name);
-        displayNameShort = CSTRING(127x99_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_API_Mag_NameShort);
         descriptionShort = CSTRING(10Rnd_127x99_API_Mag_Description);
     };
 
