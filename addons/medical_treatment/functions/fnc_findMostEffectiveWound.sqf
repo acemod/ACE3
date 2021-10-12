@@ -10,7 +10,7 @@
  * 3: Percentage of bandage remaining <NUMBER>
  *
  * Return Value:
- * [Wound, Index, Effectiveness] <ARRAY, NUMBER, NUMBER, NUMBER>
+ * [Wound, Index, Effectiveness] <ARRAY, NUMBER, NUMBER>
  *
  * Public: No
  */
