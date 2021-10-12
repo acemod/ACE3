@@ -11,7 +11,7 @@ GVAR(currentGrid) = 0;
 
 if (!hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     //If not enabled, dont't add PFEH
     if (!GVAR(enabled)) exitWith {};
 

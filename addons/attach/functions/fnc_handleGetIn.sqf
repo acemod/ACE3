@@ -25,9 +25,10 @@ if (!local _unit) exitWith {};
 private _attachedList = _unit getVariable [QGVAR(attached), []];
 if (_attachedList isEqualTo []) exitWith {};
 
-(_attachedList select 0) params ["_xObject"];
+(_attachedList select 0) params ["_xObject", "_xItemName"];
 if (!isNull _xObject) then {
     TRACE_1("detaching and moving attached light",_xObject);
+    [QGVAR(detaching), [_xObject, _xItemName, true]] call CBA_fnc_localEvent;
     detach _xObject;
     _xObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
     [{
