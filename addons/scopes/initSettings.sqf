@@ -74,7 +74,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 
 [
     QGVAR(simplifedZeroing), "CHECKBOX",
-    [LSTRING(simplifedZeroing_displayName), LSTRING(simplifedZeroing_description)],
+    [LSTRING(simplifiedZeroing_displayName), LSTRING(simplifiedZeroing_description)],
     _category,
     false,
     1
