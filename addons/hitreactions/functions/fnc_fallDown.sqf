@@ -22,6 +22,9 @@ params ["_unit", "_firer", "_damage"];
 // exit if system is disabled
 if (GVAR(minDamageToTrigger) == -1) exitWith {};
 
+// exit if damage is disabled on unit
+if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {};
+
 // don't fall after minor damage
 if (_damage < GVAR(minDamageToTrigger)) exitWith {};
 

@@ -19,11 +19,16 @@ GVAR(isSpeedLimiter) = false;
         // Conditions: specific
         if !(ACE_player == driver vehicle ACE_player &&
             {vehicle ACE_player isKindOf 'Car' ||
-            {vehicle ACE_player isKindOf 'Tank'}}) exitWith {false};
+            {vehicle ACE_player isKindOf 'Tank'} ||
+            {vehicle ACE_player isKindOf 'Plane'}}) exitWith {false};
 
             GVAR(isUAV) = false;
         // Statement
-        [ACE_player, vehicle ACE_player] call FUNC(speedLimiter);
+        if (vehicle ACE_player isKindOf 'Plane') then {
+            [ACE_player, vehicle ACE_player] call FUNC(autoThrottle);
+        } else {
+            [ACE_player, vehicle ACE_player] call FUNC(speedLimiter);
+        };
         true
     };
 

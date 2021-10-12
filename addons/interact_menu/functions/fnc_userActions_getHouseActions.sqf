@@ -91,8 +91,7 @@ for "_index" from 0 to ((count _configPath) - 1) do {
     _actionCondition = compile _actionCondition;
     _actionMaxDistance = _actionMaxDistance + 0.1; //increase range slightly
 
-    //extension ~4x as fast:
-    private _iconImage =  "ace_parse_imagepath" callExtension _actionDisplayNameDefault;
+    private _iconImage = ((_actionDisplayNameDefault regexFind ["[\w\-\\\/]+.paa/gi", 0]) param [0, [""]]) select 0;
 
     private _actionOffset = [_actionPosition] call _fnc_getMemPointOffset;
     private _memPointIndex = _memPoints find _actionPosition;
