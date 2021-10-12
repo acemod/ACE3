@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [cursorObject, player, [], []] call ace_interaction_fnc_modifyActionTriageLevel
+ * [cursorObject, player, [], []] call ace_medical_gui_fnc_modifyActionTriageLevel
  *
  * Public: No
  */

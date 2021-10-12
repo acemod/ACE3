@@ -122,8 +122,10 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
 
     // Blind player
     if (_strength > 0.1) then {
+        private _blend = [[1,1,1,0], [0.3,0.3,0.3,1]] select EGVAR(common,epilepsyFriendlyMode);
+
         GVAR(flashbangPPEffectCC) ppEffectEnable true;
-        GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,(0.8 + _strength) min 1,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
+        GVAR(flashbangPPEffectCC) ppEffectAdjust [1, 1, (0.8 + _strength) min 1, _blend, [0,0,0,1], [0,0,0,0]];
         GVAR(flashbangPPEffectCC) ppEffectCommit 0.01;
 
         //PARTIALRECOVERY - start decreasing effect over time

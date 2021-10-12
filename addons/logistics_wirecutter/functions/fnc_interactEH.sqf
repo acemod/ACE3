@@ -57,8 +57,8 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
                 && {[_player, _attachedFence, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
                 && {
                     // Custom LOS check for fence
-                    private _headPos = AGLtoASL (_player modelToWorldVisual (_player selectionPosition "pilot"));
-                    !lineIntersects [_headPos, AGLtoASL (_helper modelToWorldVisual [0, 0, 1.25]), _attachedFence, _player]
+                    private _headPos = _player modelToWorldVisualWorld (_player selectionPosition "pilot");
+                    !lineIntersects [_headPos, _helper modelToWorldVisualWorld [0, 0, 1.25], _attachedFence, _player]
                     || {!lineIntersects [_headPos, getPosASL _attachedFence, _attachedFence, _player]}
                 }
             };

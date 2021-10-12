@@ -76,7 +76,7 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 
 ## Getting started
 
-ACE3 requires Arma 3 and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. See the following pages for help and information on how to get started with ACE3: 
+ACE3 requires Arma 3 and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. See the following pages for help and information on how to get started with ACE3:
 
 - [Installation guide](https://ace3mod.com/wiki/user/installation-guide.html)
 - [Information center](https://ace3mod.com/wiki/user/information-center.html)
@@ -87,7 +87,7 @@ You can help out with the ongoing development by looking for potential bugs in o
 
 ### Contribution guidelines
 
-To contribute something to ACE3, simply fork this repository and submit your pull requests for review by other collaborators. Remember to add yourself to the author array of any PBO you will be editing and the [`AUTHORS.txt`](https://github.com/acemod/ACE3/blob/master/AUTHORS.txt) file; including a valid email address.
+To contribute something to ACE3, simply fork this repository and submit your pull requests for review by other collaborators. See [the pull request guidelines](https://ace3mod.com/wiki/development/merging-pull-requests.html) for further information on this process.
 
 ### Submitting issues and requesting features
 
@@ -121,7 +121,7 @@ To help us test the latest development changes, download our master branch ([dir
   <tr>
     <td><a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">Bohemia Forum</a></td>
     <td>We have a dedicated thread on the Bohemia Forums for the ACE3 project</td>
-  </tr>  
+  </tr>
 </table>
 
 ## License

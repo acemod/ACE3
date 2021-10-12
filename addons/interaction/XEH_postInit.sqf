@@ -128,7 +128,7 @@ GVAR(isOpeningDoor) = false;
 ["isNotSwimming", {!(_this call EFUNC(common,isSwimming))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (GVAR(disableNegativeRating)) then {
         player addEventHandler ["HandleRating", {
             (_this select 1) max 0

@@ -30,7 +30,15 @@ if (isNull _vehicle) then {
 };
 
 if (!isNull _vehicle) then {
-    [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
+    switch (true) do {
+        case ((crew _vehicle isEqualTo []) && {side group _caller != side group _unit}): {
+            [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
+        };
+        case (side group _vehicle != side group _unit): {
+            [_unit, true, GROUP_SWITCH_ID, side group _vehicle] call FUNC(switchToGroupSide);
+        };
+    };
+
     TRACE_3("sending ace_loadPersonEvent",_unit,_vehicle,_caller);
     ["ace_loadPersonEvent", [_unit, _vehicle, _caller], _unit] call CBA_fnc_targetEvent;
 };

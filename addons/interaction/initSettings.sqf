@@ -29,3 +29,11 @@
     format ["ACE %1", LLSTRING(DisplayName)],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableGroupRenaming), "CHECKBOX",
+    [LSTRING(EnableRenameGroup_DisplayName), LSTRING(EnableRenameGroup_Description)],
+    format ["ACE %1", LLSTRING(DisplayName)],
+    true,
+    true
+] call CBA_fnc_addSetting;

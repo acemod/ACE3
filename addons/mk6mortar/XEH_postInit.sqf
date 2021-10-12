@@ -4,8 +4,8 @@ if (hasInterface) then {
     ["ace_infoDisplayChanged", FUNC(turretDisplayLoaded)] call CBA_fnc_addEventHandler;
 };
 
-["ace_settingsInitialized", {
-    TRACE_4("ace_settingsInitialized",GVAR(airResistanceEnabled),GVAR(allowComputerRangefinder),GVAR(allowCompass),GVAR(useAmmoHandling));
+["CBA_settingsInitialized", {
+    TRACE_4("CBA_settingsInitialized",GVAR(airResistanceEnabled),GVAR(allowComputerRangefinder),GVAR(allowCompass),GVAR(useAmmoHandling));
 
     ["vehicle", FUNC(handlePlayerVehicleChanged), true] call CBA_fnc_addPlayerEventHandler;
 

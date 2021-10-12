@@ -32,6 +32,9 @@ PREP(canPardon);
 PREP(pardon);
 PREP(canPullOutBody);
 PREP(pullOutBody);
+PREP(canRenameGroup);
+PREP(renameGroupUI);
+PREP(renameGroup);
 
 // Weapon Attachments
 PREP(getWeaponAttachmentsActions);

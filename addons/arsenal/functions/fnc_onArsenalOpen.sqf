@@ -334,6 +334,11 @@ if (isNil QGVAR(cameraPosition)) then {
     GVAR(cameraPosition) = [5,0,0,[0,0,0.85]];
 };
 
+// Save curator camera state so camera position and direction are not modified while using arsenal
+if (!isNull curatorCamera) then {
+    GVAR(curatorCameraData) = [getPosASL curatorCamera, [vectorDir curatorCamera, vectorUp curatorCamera]];
+};
+
 GVAR(cameraHelper) = createAgent ["Logic", position GVAR(center) ,[] ,0 ,"none"];
 GVAR(cameraHelper) attachTo [GVAR(center), GVAR(cameraPosition) select 3, ""];
 

@@ -55,25 +55,25 @@ if (EGVAR(medical,limping) == 1 && {_partIndex > 3} && {_amountOf <= 0} && {_pat
     [_patient] call EFUNC(medical_engine,updateDamageEffects);
 };
 
-if (GVAR(clearTraumaAfterBandage)) then {
-    TRACE_2("clearTraumaAfterBandage - checking open wounds",_partIndex,_openWounds);
-    if ((_openWounds findIf {
-                    _x params ["", "_xBodyPartN", "_xAmountOf"];
-                    (_partIndex ==_xBodyPartN) && {_xAmountOf > 0}
-                }) == -1) then {
-
-        private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+if (GVAR(clearTrauma) == 2) then {
+    TRACE_2("clearTrauma - clearing trauma after bandage",_partIndex,_openWounds);
+    private _treatedDamageOf = (_wound select 4) * _impact;
+    private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+    private _newDam = (_bodyPartDamage select _partIndex) - _treatedDamageOf;
+    if (_newDam < 0.05) then { // Prevent obscenely small damage from lack of floating precision
         _bodyPartDamage set [_partIndex, 0];
-        _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
-        TRACE_2("fully healed",_partIndex,_bodyPartDamage);
+    } else {
+        _bodyPartDamage set [_partIndex, _newDam];
+    };
+    _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+    TRACE_2("clearTrauma - healed damage",_partIndex,_treatedDamageOf);
 
-        switch (_partIndex) do {
-            case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            case 2;
-            case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-            default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
-        };
+    switch (_partIndex) do {
+        case 0: { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        case 1: { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        case 2;
+        case 3: { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+        default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
     };
 };
 
