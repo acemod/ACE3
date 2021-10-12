@@ -269,7 +269,7 @@ class ACE_Medical_Injuries {
             thresholds[] = {{0, 1}};
             selectionSpecific = 0;
             class ThermalBurn {
-                weighting[] = {{0.01, 1}, {0.01, 0}};
+                weighting[] = {{0, 1}};
             };
         };
         class drowning {
