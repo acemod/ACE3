@@ -33,3 +33,12 @@
     false,
     {[QGVAR(openAfterUnload), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableRename), "CHECKBOX",
+    [LSTRING(ModuleSettings_enableRename), LSTRING(ModuleSettings_enableRename_Description)],
+    [LELSTRING(OptionsMenu,CategoryLogistics), LLSTRING(openMenu)],
+    true,
+    false,
+    {[QGVAR(enableRename), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_fnc_addSetting;
