@@ -17,7 +17,7 @@
  *
  * Public: No
  */
-params ["_unit", "_allDamages", "", "_ammo"];
+params ["_unit", "_allDamages", "_shooter", "_ammo"];
 
 private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
 if (_typeOfDamage in GVAR(damageTypeDetails)) then {
@@ -26,5 +26,5 @@ if (_typeOfDamage in GVAR(damageTypeDetails)) then {
     if (_selectionSpecific > 0) then {
         _allDamages = [_allDamages select 0];
     };
-    [_unit, _allDamages, _typeOfDamage] call _woundsHandler;
+    [_unit, _allDamages, _typeOfDamage, _shooter] call _woundsHandler;
 };

@@ -203,16 +203,17 @@ Custom wound handlers should follow the same spec as the built-in handler:
 0  | Unit that was hit | Object | Required
 1  | Array of damage dealt to each body part | Array | Required
 2  | Type of damage | String | Required
+3  | Person or vehicle that dealt the damage | Object | Optional (currently unused)
 **R** | None | None | Ignored
 
 The damage elements are sorted in descending order according to how much damage was dealt to each body part _before armor was taken into account_, but the actual damage values are _after armor_.
 If the damage type is configured as selection-specific, this array will be length 1.
 
 ### Example
-`[player, [[0.5, "Body"], [0.3, "Head"]], "grenade"] ace_medical_damage_fnc_woundsHandlerSQF`
+`[player, [[0.5, "Body", 1], [0.3, "Head", 0.6]], "grenade"] ace_medical_damage_fnc_woundsHandlerSQF`
 
    | Arguments | Explanation
 ---| --------- | -----------
 0  | `player` | Unit that was hit
-1  | `[[0.5, "Body"], [0.3, "Head"]]` | 0.5 damage to body, 0.3 damage to head
+1  | `[[0.5, "Body", 1], [0.3, "Head", 0.6]]` | 0.5 damage to body (was 1 before armor), 0.3 damage to head (was 0.6 before armor)
 2  | `"grenade"` | type grenade (non-selection-specific)

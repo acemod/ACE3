@@ -142,8 +142,8 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             };
         } else {
             // Anything else is almost guaranteed to be fire damage
-            _ammo = "burning";
-            TRACE_5("Burning",_unit,_shooter,_instigator,_damage,_allDamages);
+            _ammo = "fire";
+            TRACE_5("Fire Damage",_unit,_shooter,_instigator,_damage,_allDamages);
         };
     };
 

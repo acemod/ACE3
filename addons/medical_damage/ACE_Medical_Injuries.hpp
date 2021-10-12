@@ -53,7 +53,6 @@ class ACE_Medical_Injuries {
         };
         // Pain wound that is caused by making or being in contact with heat
         class ThermalBurn {
-            causes[] = {"burn"};
             bleeding = 0;
             pain = 0.7;
             minDamage = 0;
@@ -278,20 +277,16 @@ class ACE_Medical_Injuries {
             thresholds[] = {{0, 0}};
             woundsHandler = "{}";
         };
-        class burning {
-            //burning damage used to be type 'unknown' so this is a copy-paste of that
-            //TODO: proper burn wound
+        class fire {
+            // custom handling for environmental fire sources
+            // passes damage to "burn" so doesn't need its own wound stats
+            woundsHandler = QFUNC(woundsHandlerBurning);
+        };
+        class burn {
             thresholds[] = {{0.01, 1}, {0.01, 0}};
             selectionSpecific = 0;
-            woundsHandler = QFUNC(woundsHandlerBurning);
-            class Abrasion {
-                weighting[] = {{0.30, 0}, {0.30, 1}};
-            };
-            class Cut {
-                weighting[] = {{0.1, 1}, {0.1, 0}};
-            };
-            class VelocityWound {
-                weighting[] = {{0.35, 1}, {0.35, 0}};
+            class ThermalBurn {
+                weighting[] = {{0.01, 1}, {0.01, 0}};
             };
         };
         class unknown {

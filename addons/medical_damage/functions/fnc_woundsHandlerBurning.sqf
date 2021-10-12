@@ -32,14 +32,14 @@ params ["_unit", "_allDamages", "_typeOfDamage"];
     // the task resets stored damage to zero, so if it isn't currently zero that means there is a task already waiting
     if (_storedDamage == 0 && _newDamage > 0) then {
         [{
-            params ["_unit", "_typeOfDamage"];
+            params ["_unit"];
 
             _bodyPart = selectRandom ["body", "leftleg", "rightleg"];
             private _storedDamage = _unit getVariable [QGVAR(storedBurnDamage), 0];
-            [_unit, [[_storedDamage, _bodyPart, _storedDamage]], _typeOfDamage] call FUNC(defaultWoundHandler);
+            [QEGVAR(medical,woundReceived), [_unit, [[_storedDamage, _bodyPart, _storedDamage]], _unit, "burn"]] call CBA_fnc_localEvent;
             _unit setVariable [QGVAR(storedBurnDamage), 0, true];
         },
-        [_unit, _typeOfDamage], 1] call CBA_fnc_waitAndExecute;
+        [_unit], 1] call CBA_fnc_waitAndExecute;
     };
 
     _unit setVariable [QGVAR(storedBurnDamage), _newDamage];
