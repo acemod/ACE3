@@ -95,7 +95,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
     if (_vehicleLightCondition == "") then {
         private _userAction = toLower getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
         if (
-            isClass (_cfg >> "compartmentsLights")
+            false // isClass (_cfg >> "compartmentsLights")
             || {_userAction find "cabinlights_hide" > 0}
             || {_userAction find "cargolights_hide" > 0}
         ) then {
