@@ -162,22 +162,6 @@
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
             <English>After Stitch</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_DisplayName">
-            <English>Locations Boost Training</English>
-            <Czech>Zdravotnická místa zvyšují zdravotnickou úrovně</Czech>
-            <Italian>Sedi per potenziare la formazione</Italian>
-            <German>Örtliche Trainingssteigerung</German>
-            <Spanish>Ubicación mejora entrenamiento.</Spanish>
-            <Polish>Miejsca zwiększają wyszkolenie</Polish>
-            <Portuguese>Localização melhora treinamento</Portuguese>
-            <French>Le lieu améliore l'efficacité</French>
-            <Russian>Места ускоренного обучения</Russian>
-            <Japanese>衛生能力の上昇位置</Japanese>
-            <Korean>교육 증가 지역</Korean>
-            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
-            <Chinese>受所在位置影響提升醫療能力</Chinese>
-            <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
             <Japanese>衛生車両か施設では衛生能力を上昇します。未訓練では衛生兵に、衛生兵では医師になります。</Japanese>

@@ -47,7 +47,7 @@
 [
     QGVAR(locationsBoostTraining),
     "CHECKBOX",
-    [LSTRING(LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
+    [ELSTRING(common,LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     false,
     true
