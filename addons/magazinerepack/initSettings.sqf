@@ -23,3 +23,11 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [1, 10, 8, 1],
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(repackLoadedMagazines), "CHECKBOX",
+    LSTRING(repackLoadedMagazines),
+    _category,
+    true,
+    0
+] call CBA_fnc_addSetting;
