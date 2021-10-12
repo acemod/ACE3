@@ -1,8 +1,7 @@
 private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 
 [
-    QGVAR(timePerAmmo),
-    "SLIDER",
+    QGVAR(timePerAmmo), "SLIDER",
     LSTRING(timePerAmmo),
     _category,
     [1, 10, 1.5, 1],
@@ -10,8 +9,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(timePerMagazine),
-    "SLIDER",
+    QGVAR(timePerMagazine), "SLIDER",
     LSTRING(timePerMagazine),
     _category,
     [1, 10, 2, 1],
@@ -19,8 +17,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(timePerBeltLink),
-    "SLIDER",
+    QGVAR(timePerBeltLink), "SLIDER",
     LSTRING(timePerBeltLink),
     _category,
     [1, 10, 8, 1],

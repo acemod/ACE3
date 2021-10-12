@@ -1383,11 +1383,13 @@
             <English>Epilepsy friendly mode</English>
             <German>Epilepsiefreundlicher Modus</German>
             <Japanese>けいれん回避モード</Japanese>
+            <Polish>Tryb dla epileptyków</Polish>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
             <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
             <Japanese>点滅する光エフェクトを無効化し、けいれんする恐れを低下させます。</Japanese>
+            <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1469,6 +1471,37 @@
         <Key ID="STR_ACE_Common_both">
             <English>Both</English>
             <Turkish>İkisi de</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoName">
+            <English>Additional progress bar information</English>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoDesc">
+            <English>Controls extra information shown in progress bar.</English>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoPercentage">
+            <English>Percentage</English>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoTime">
+            <English>Time remaining</English>
+        </Key>
+        <Key ID="STR_ACE_Common_None">
+            <English>None</English>
+            <Czech>Žádná</Czech>
+            <German>Keine</German>
+            <Russian>Нет</Russian>
+            <Polish>Brak</Polish>
+            <Italian>Nessuna</Italian>
+            <Spanish>Nada</Spanish>
+            <French>Aucune</French>
+            <Chinese>無</Chinese>
+            <Japanese>なし</Japanese>
+            <Korean>활성화 없음</Korean>
+            <Portuguese>Nenhuma</Portuguese>
+            <Chinesesimp>无</Chinesesimp>
+            <Turkish>Yok</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_TimeLeft">
+            <English>Time left: %1s</English>
         </Key>
     </Package>
 </Project>

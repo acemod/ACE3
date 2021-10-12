@@ -42,10 +42,10 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
 
 
 // Draw all lasers
-[GVAR(laserEmitters), {
-    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
-    // TRACE_2("",_key,_value);
-    _value params ["_obj", "_owner", "_laserMethod", "_waveLength", "_laserCode", "_beamSpread"];
+{
+    //IGNORE_PRIVATE_WARNING ["_x", "_y];
+    // TRACE_2("",_x,_y);
+    _y params ["_obj", "_owner", "_laserMethod", "_waveLength", "_laserCode", "_beamSpread"];
 
     // Draw vanila lasers [RED]
     if (_laserMethod isEqualTo QFUNC(findLaserSource)) then { // Normal vanilla laserTarget func
@@ -53,7 +53,7 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
         private _targetPosASL = getPosASL _targetObject;
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], (ASLtoAGL _targetPosASL), 0.5, 0.5, 0, "", 0.5, 0.025, "TahomaB"];
 
-        (_value call FUNC(findLaserSource)) params ["_laserPosASL", "_laserDir"];
+        (_y call FUNC(findLaserSource)) params ["_laserPosASL", "_laserDir"];
         private _resultsRay = [_laserPosASL, _laserDir, _obj] call FUNC(shootRay);
 
         private _rayPos = _resultsRay select 0;
@@ -76,4 +76,4 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
             drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,1,0,1], (ASLtoAGL _rayPos), 2, 2, 0, _weaponName, 0.5, 0.025, "TahomaB"];
         };
     };
-}] call CBA_fnc_hashEachPair;
+} forEach GVAR(laserEmitters);

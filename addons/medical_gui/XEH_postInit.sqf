@@ -33,13 +33,26 @@ GVAR(selfInteractionActions) = [];
 }] call CBA_fnc_addEventHandler;
 
 ["ACE3 Common", QGVAR(openMedicalMenuKey), localize LSTRING(OpenMedicalMenu), {
-    // Get target (cursorTarget and cursorObject), if not valid then target is ACE_player
+    // Get target (cursorTarget, cursorObject, and lineIntersectsSurfaces along camera to maxDistance), if not valid then target is ACE_player
     TRACE_3("Open menu key",cursorTarget,cursorObject,ACE_player);
     private _target = cursorTarget;
     if !(_target isKindOf "CAManBase" && {[ACE_player, _target] call FUNC(canOpenMenu)}) then {
         _target = cursorObject;
         if !(_target isKindOf "CAManBase" && {[ACE_player, _target] call FUNC(canOpenMenu)}) then {
-            _target = ACE_player;
+            private _start = AGLToASL positionCameraToWorld [0, 0, 0];
+            private _end = AGLToASL positionCameraToWorld [0, 0, GVAR(maxDistance)];
+            private _intersections = lineIntersectsSurfaces [_start, _end, ACE_player, objNull, true, -1, "FIRE"];
+            {
+                _x params ["", "", "_intersectObject"];
+                // Only look "through" player and player's vehicle
+                if (!(_intersectObject isKindOf "CAManBase") && {_intersectObject != vehicle ACE_player}) exitWith {};
+                if (_intersectObject != ACE_player && {_intersectObject isKindOf "CAManBase" && {[ACE_player, _intersectObject] call FUNC(canOpenMenu)}}) exitWith {
+                    _target =_intersectObject
+                };
+            } forEach _intersections;
+            if (!(_target isKindOf "CAManBase") || {!([ACE_player, _target] call FUNC(canOpenMenu))}) then {
+                _target = ACE_player;
+            };
         };
     };
 
