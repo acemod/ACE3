@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Makes object catch fire. Only call from events.
+ * Checks if patient is still burning for medical progress to continue.
  *
  * Arguments:
  * 0: Arguments <ARRAY>

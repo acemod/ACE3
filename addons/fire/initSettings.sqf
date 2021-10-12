@@ -1,6 +1,6 @@
 [
     QGVAR(enabled), "CHECKBOX",
-    [LSTRING(setting_enable), LSTRING(setting_description)],
+    ["STR_A3_OPTIONS_ENABLED", LSTRING(setting_description)],
     LSTRING(category_displayName),
     true, // default value
     true, // isGlobal

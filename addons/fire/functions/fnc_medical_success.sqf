@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brandon (TCVM)
- * Makes object catch fire. Only call from events.
+ * Decreases burning intensity on successful medical action.
  *
  * Arguments:
  * 0: Medic <OBJECT>
