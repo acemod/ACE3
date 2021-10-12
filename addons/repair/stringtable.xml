@@ -261,22 +261,6 @@
             <Chinese>維修載具中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
-        <Key ID="STR_ACE_Repair_LocationsBoostTraining_DisplayName">
-            <English>Locations Boost Training</English>
-            <Czech>Zdravotnická místa zvyšují zdravotnickou úrovně</Czech>
-            <Italian>Sedi per potenziare la formazione</Italian>
-            <German>Örtliche Trainingssteigerung</German>
-            <Spanish>Ubicación mejora entrenamiento.</Spanish>
-            <Polish>Miejsca zwiększają wyszkolenie</Polish>
-            <Portuguese>Localização melhora treinamento</Portuguese>
-            <French>Le lieu améliore l'efficacité</French>
-            <Russian>Места ускоренного обучения</Russian>
-            <Japanese>衛生能力の上昇位置</Japanese>
-            <Korean>교육 증가 지역</Korean>
-            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
-            <Chinese>受所在位置影響提升醫療能力</Chinese>
-            <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
-        </Key>
         <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
             <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
         </Key>

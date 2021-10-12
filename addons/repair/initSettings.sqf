@@ -55,7 +55,7 @@
 [
     QGVAR(locationsBoostTraining),
     "CHECKBOX",
-    [LSTRING(LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
+    [ELSTRING(common,LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
     false,
     true
