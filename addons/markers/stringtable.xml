@@ -6,6 +6,8 @@
             <Spanish>Escala: %1</Spanish>
             <French>Échelle : %1</French>
             <Russian>Масштаб: %1</Russian>
+            <Japanese>スケール: %1</Japanese>
+            <Polish>Skala: %1</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
@@ -28,6 +30,8 @@
             <English>Click RMB to reset</English>
             <Russian>Нажми ПКМ чтобы сбросить</Russian>
             <French>Clic droit pour réinitialiser</French>
+            <Japanese>右クリックでリセット</Japanese>
+            <Polish>Naciśnij PPM żeby zresetować</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
@@ -176,6 +180,7 @@
             <French>Permettre l'horodatage</French>
             <Japanese>タイムスタンプ許可</Japanese>
             <Spanish>Permitir marcas de tiempo</Spanish>
+            <Polish>Zezwól na znaczniki czasu</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
             <English>Whether to allow timestamps to be automatically applied to markers</English>
@@ -183,6 +188,7 @@
             <French>Active une interface permettant d'apposer un horodatage sur les marqueurs.</French>
             <Japanese>マーカーへ自動的にタイムスタンプを付与するかどうかを設定できます。</Japanese>
             <Spanish>Permitir que las marcas de tiempo sean automáticamente aplicadas a los marcadores</Spanish>
+            <Polish>Zezwól na automatyczne stosowanie znaczników czasu do markerów</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_Timestamp">
             <English>Timestamp</English>
@@ -190,6 +196,7 @@
             <French>Horodatage</French>
             <Japanese>タイムスタンプ</Japanese>
             <Spanish>Marca de tiempo</Spanish>
+            <Polish>Znacznik czasu</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
             <English>Watch Required</English>
@@ -197,6 +204,7 @@
             <French>Une montre est requise.</French>
             <Japanese>時計の要求</Japanese>
             <Spanish>Reloj requerido</Spanish>
+            <Polish>Wymagany zegarek</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormat">
             <English>Timestamp Format</English>
@@ -204,6 +212,7 @@
             <French>Horodatage - Format</French>
             <Japanese>タイムスタンプ形式</Japanese>
             <Spanish>Formato de marca de tiempo</Spanish>
+            <Polish>Format znacznika czasu</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
             <English>Changes the timestamp format</English>
@@ -211,6 +220,7 @@
             <French>Modifie le format de l'horodatage.</French>
             <Japanese>タイムスタンプの形式を変更します</Japanese>
             <Spanish>Cambia el formato de marca de tiempo</Spanish>
+            <Polish>Zmienia format znacznika czasu</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
             <English>"HH" - Hour</English>
@@ -218,6 +228,7 @@
             <French>"HH" - Heures</French>
             <Japanese>"HH" - 時間</Japanese>
             <Spanish>"HH" - Hora</Spanish>
+            <Polish>"HH" - Godziny</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
             <English>"MM" - Minute</English>
@@ -225,6 +236,7 @@
             <French>"MM" - Minutes</French>
             <Japanese>"MM" - 分</Japanese>
             <Spanish>"MM" - Minuto</Spanish>
+            <Polish>"MM" - Minuty</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
             <English>"SS" - Seconds</English>
@@ -232,6 +244,7 @@
             <French>"SS" - Secondes</French>
             <Japanese>"SS" - 秒</Japanese>
             <Spanish>"SS" - Segundos</Spanish>
+            <Polish>"SS" - Sekundy</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
             <English>"MM" - Milliseconds</English>
@@ -239,6 +252,7 @@
             <French>"MM" - Millisecondes</French>
             <Japanese>"MM" - ミリ秒</Japanese>
             <Spanish>"MM" - Milisegundos</Spanish>
+            <Polish>"MM" - Milisekundy</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
@@ -246,6 +260,7 @@
             <French>Horodatage - Système horaire</French>
             <Japanese>タイムスタンプ時刻形式</Japanese>
             <Spanish>Formato de hora de marca de tiempo</Spanish>
+            <Polish>Format Godzinnych znaczników czasu</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat24">
             <English>24-Hour Clock</English>
@@ -253,6 +268,7 @@
             <French>Format 24 heures</French>
             <Japanese>24 時間表記</Japanese>
             <Spanish>Reloj 24-Horas</Spanish>
+            <Polish>Zegar 24-godzinny</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat12">
             <English>12-Hour Clock</English>
@@ -260,6 +276,7 @@
             <French>Format 12 heures</French>
             <Japanese>12 時間表記</Japanese>
             <Spanish>Reloj 12-Horas</Spanish>
+            <Polish>Zegar 12-godzinny</Polish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
             <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
@@ -267,6 +284,7 @@
             <French>Permet de choisir le système d'horodatage souhaité, au format 12 ou 24 heures.</French>
             <Japanese>タイムスタンプの時刻を 24 時間か 12 時間表記のどちらかに変更できます。</Japanese>
             <Spanish>Cambia que la marca de tiempo sea en formato de reloj 24-horas o 12-horas</Spanish>
+            <Polish>Zmienia znacznik czasu tak, aby używał formatu 24-godzinnego lub 12-godzinnego</Polish>
         </Key>
     </Package>
 </Project>

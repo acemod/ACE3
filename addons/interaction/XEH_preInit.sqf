@@ -17,6 +17,7 @@ DFUNC(repair_Statement) = { // moved from config because of build problems
 
 if (hasInterface) then {
     GVAR(initializedAnimClasses) = [];
+    GVAR(replaceTerrainModels) = createHashMapFromArray call (uiNamespace getVariable QGVAR(cacheReplaceTerrainModels));
 };
 
 ADDON = true;

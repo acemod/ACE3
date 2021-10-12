@@ -168,10 +168,18 @@ The family of path macros define global paths to files for use within a module. 
 ## 3. Functions
 Functions shall be created in the `functions\` subdirectory, named `fnc_functionName.sqf` They shall then be indexed via the `PREP(functionName)` macro in the `XEH_preInit.sqf` file.
 
-The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_components.hpp"` include!**
+The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_component.hpp"` include!**
 
-### 3.1 Headers
-Every function should have a header of the following format as the start of their function file:
+### 3.1 Includes
+Every function includes the `script_component.hpp` file on the first line. Any additional includes or defines must be below this include.
+
+All code written must be below this include and any potential additional includes or defines.
+
+#### 3.1.1 Reasoning
+This ensures every function starts off in an uniform way and enforces function documentation. The include appears before the header to avoid incorrect line numbers in script errors.
+
+### 3.2 Headers
+Every function should have a header of the following format appear before any code:
 
 ```js
 /*
@@ -196,15 +204,7 @@ Every function should have a header of the following format as the start of thei
  */
 ```
 
-This is not the case for inline functions or functions not containing their own file.
-
-### 3.2 Includes
-Every function includes the `script_component.hpp` file just below the function header. Any additional includes or defines must be below this include.
-
-All scripts written must be below this include and any potential additional includes or defines.
-
-#### 3.2.1 Reasoning
-This ensures every function starts of in an uniform way and enforces function documentation.
+This is not the case for inline functions or functions not contained in their own file.
 
 
 ## 4. Global Variables
@@ -463,17 +463,17 @@ Good:
 
 ```js
 if (call FUNC(myCondition)) then {
-   private _areAllAboveTen = true; // <- smallest feasable scope
+    private _areAllAboveTen = true; // <- smallest feasable scope
 
-   {
-      if (_x >= 10) then {
-         _areAllAboveTen = false;
-      };
-   } forEach _anArray;
+    {
+        if (_x >= 10) then {
+            _areAllAboveTen = false;
+        };
+    } forEach _anArray;
 
-   if (_areAllAboveTen) then {
-       hint "all values are above ten!";
-   };
+    if (_areAllAboveTen) then {
+        hint "all values are above ten!";
+    };
 }
 ```
 
@@ -482,15 +482,15 @@ Bad:
 ```js
 private _areAllAboveTen = true; // <- this is bad, because it can be initialized in the if statement
 if (call FUNC(myCondition)) then {
-   {
-      if (_x >= 10) then {
-         _areAllAboveTen = false;
-      };
-   } forEach _anArray;
+    {
+        if (_x >= 10) then {
+            _areAllAboveTen = false;
+        };
+    } forEach _anArray;
 
-   if (_areAllAboveTen) then {
-       hint "all values are above ten!";
-   };
+    if (_areAllAboveTen) then {
+        hint "all values are above ten!";
+    };
 };
 ```
 
@@ -575,8 +575,8 @@ Good:
 
 ```js
 fnc_example = {
-   params ["_content"];
-   hint _content;
+    params ["_content"];
+    hint _content;
 };
 ```
 
@@ -719,7 +719,7 @@ _a pushBack _value;
 Also good:
 
 ```js
-_a append [1,2,3];
+_a append [1, 2, 3];
 ```
 
 Bad:

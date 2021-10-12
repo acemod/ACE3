@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Towing">
+        <Key ID="STR_ACE_Towing_displayName">
+            <English>Towing</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_attach">
+            <English>Attach Tow Rope</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_canceled">
+            <English>Attaching Cancelled</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_start3">
+            <English>Attach Tow Rope (3.2m)</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_start6">
+            <English>Attach Tow Rope (6.2m)</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_start12">
+            <English>Attach Tow Rope (12.2m)</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_start15">
+            <English>Attach Tow Rope (15.2m)</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_start18">
+            <English>Attach Tow Rope (18.2m)</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_start27">
+            <English>Attach Tow Rope (27.2m)</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_start36">
+            <English>Attach Tow Rope (36.2m)</English>
+        </Key>
+        <Key ID="STR_ACE_Towing_detach">
+            <English>Detach Tow Rope</English>
+        </Key>
+    </Package>
+</Project>
