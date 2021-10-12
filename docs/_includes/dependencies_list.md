@@ -103,7 +103,7 @@
 {% endif %}
 
 {% if include.component == "fastroping" %}
-`ace_interaction`
+`ace_interaction`, `ace_logistics_rope`
 {% endif %}
 
 {% if include.component == "fcs" %}
@@ -195,6 +195,10 @@
 {% endif %}
 
 {% if include.component == "laserpointer" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "logistics_rope" %}
 `ace_common`
 {% endif %}
 
@@ -444,6 +448,10 @@
 
 {% if include.component == "thermals" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "towing" %}
+`ace_common`, `ace_logistics_rope`
 {% endif %}
 
 {% if include.component == "trenches" %}
