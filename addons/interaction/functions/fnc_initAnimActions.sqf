@@ -18,7 +18,7 @@
 params ["_object"];
 
 private _class = typeOf _object;
-if (!GVAR(animActionsEnabled) || {_class in GVAR(initializedAnimClasses)}) exitWith {};
+if (!GVAR(enableAnimActions) || {_class in GVAR(initializedAnimClasses)}) exitWith {};
 GVAR(initializedAnimClasses) pushBack _class;
 
 private _statement = {
@@ -80,7 +80,7 @@ private _condition = {
     params ["_target", "_player", "_params"];
     _params params ["_anim", "_phase"];
 
-    GVAR(animActionsEnabled)
+    GVAR(enableAnimActions)
     && {_target animationPhase _anim != _phase}
     && {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
 };

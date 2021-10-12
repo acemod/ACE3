@@ -31,7 +31,7 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(animActionsEnabled), "CHECKBOX",
+    QGVAR(enableAnimActions), "CHECKBOX",
     LSTRING(SettingAnimActionsName),
     format ["ACE %1", LLSTRING(DisplayName)],
     true,
