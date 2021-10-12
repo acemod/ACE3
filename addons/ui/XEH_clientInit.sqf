@@ -11,7 +11,7 @@ call FUNC(compileConfigUI);
 GVAR(elementsSet) = call CBA_fnc_createNamespace;
 
 // Attach all event handlers where UI has to be updated
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Initial settings
     [false] call FUNC(setElements);
 
@@ -35,9 +35,7 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     // On changing settings
     ["CBA_SettingChanged", {
         params ["_name", "_value"];
-
-        private _delimPos = count QUOTE(DOUBLES(ADDON,));
-        if (_name select [0, _delimPos] != QUOTE(DOUBLES(ADDON,))) exitWith {};
+        if (_name select [0, 7] != "ace_ui_") exitWith {};
 
         if (_name in ELEMENTS_BASIC) then {
             [true] call FUNC(setElements);
@@ -50,3 +48,5 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
         };
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
+
+["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;

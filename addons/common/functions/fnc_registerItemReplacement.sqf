@@ -28,15 +28,21 @@ private _fnc_replaceItems = {
     if (_items isEqualTo GVAR(oldItems)) exitWith {};
 
     private _newItems = _items - GVAR(oldItems);
+    _newItems = _newItems arrayIntersect _newItems; // Get unique items only
     if (_newItems isEqualTo []) exitWith {
         GVAR(oldItems) = _items;
     };
 
-    _newItems sort true; // Sort so all items of current class can be replaced at once
     private _cfgWeapons = configFile >> "CfgWeapons"; // Microoptimization
 
     for "_i" from 0 to count _newItems - 1 do {
         private _item = _newItems#_i;
+
+        // Get count of item in each container
+        private _containerCount = [];
+        {
+            _containerCount pushBack ({_x == _item} count _x)
+        } forEach [uniformItems _unit, vestItems _unit, backpackItems _unit];
 
         // Determine replacement items: direct replacements, ...
          private _replacements = GVAR(itemReplacements) getVariable [_item, []];
@@ -54,21 +60,24 @@ private _fnc_replaceItems = {
             };
         } forEach GVAR(inheritedReplacements);
 
-        // Skip lookup for all following items of this class
-        private _count = 1;
-        while {_newItems#(_i + 1) == _item} do { // (i+1) can be out of bounds, but should fail safely
-            _count = _count + 1;
-            _i = _i + 1;
-        };
-
         // Replace all items of current class in list
         if (_replacements isNotEqualTo []) then {
             TRACE_3("replace",_item,_count,_replacements);
             _unit removeItems _item;
 
-            for "_j" from 1 to _count do {
-                { [_unit, _x] call FUNC(addToInventory) } forEach _replacements;
-            };
+            {
+                if (_x == 0) then {continue};
+                private _container = ["uniform", "vest", "backpack"] select _forEachIndex;
+                for "_j" from 1 to _x do {
+                    {
+                        if ([_unit, _x, 1, _container == "uniform", _container == "vest", _container == "backpack"] call CBA_fnc_canAddItem) then {
+                            [_unit, _x, _container] call FUNC(addToInventory)  // add to specific container
+                        } else {
+                            [_unit, _x, ""] call FUNC(addToInventory) // no room, add anywhere
+                        }
+                    } forEach _replacements;
+                }
+            } forEach _containerCount;
         };
     };
 
@@ -98,7 +107,7 @@ if (_newItems isEqualType "") then {
 
 private _oldReplacements = GVAR(itemReplacements) getVariable [_oldItem, []];
 _oldReplacements append _newItems;
-GVAR(itemReplacements) setVariable [_oldItem, _newItems];
+GVAR(itemReplacements) setVariable [_oldItem, _oldReplacements];
 
 // Force item scan when new replacement was registered in PostInit
 if (!isNull ACE_player) then {

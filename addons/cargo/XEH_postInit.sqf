@@ -1,7 +1,17 @@
 #include "script_component.hpp"
 
 ["ace_addCargo", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
-[QGVAR(paradropItem), {_this call FUNC(paradropItem)}] call CBA_fnc_addEventHandler;
+[QGVAR(paradropItem), {
+    params ["_item", "_vehicle"];
+
+    private _unloaded = [_item, _vehicle] call FUNC(paradropItem);
+
+    if (_unloaded && {GVAR(openAfterUnload) in [2, 3]}) then {
+        GVAR(interactionVehicle) = _vehicle;
+        GVAR(interactionParadrop) = true;
+        createDialog QGVAR(menu);
+    };
+}] call CBA_fnc_addEventHandler;
 
 ["ace_loadCargo", {
     params ["_item", "_vehicle"];
@@ -35,6 +45,11 @@
 
     [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
+    if (_unloaded && {GVAR(openAfterUnload) in [1, 3]}) then {
+        GVAR(interactionVehicle) = _vehicle;
+        GVAR(interactionParadrop) = false;
+        createDialog QGVAR(menu);
+    };
 
     // TOOO maybe drag/carry the unloaded item?
 }] call CBA_fnc_addEventHandler;
