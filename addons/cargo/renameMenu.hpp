@@ -48,7 +48,7 @@ class GVAR(renameMenu) {
             w = "12.8 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "1.5 * (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
-        }
+        };
         class btnCancel: ACE_gui_buttonBase {
             text = "$STR_DISP_CANCEL";
             idc = 11;
