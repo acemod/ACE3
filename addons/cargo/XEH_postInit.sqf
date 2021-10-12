@@ -88,7 +88,7 @@ GVAR(vehicleAction) = [
 ] call EFUNC(interact_menu,createAction);
 
 GVAR(objectActions) = [
-    [QGVAR(renameObject), localize LSTRING(renameObject), "", //TODO: add icon, maybe a pencil couldn't find it before.
+    [QGVAR(renameObject), LELSTRING(common,rename), "", //TODO: add icon, maybe a pencil couldn't find it before.
         {
             GVAR(interactionVehicle) = _target;
             createDialog QGVAR(renameMenu);

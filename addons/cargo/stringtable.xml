@@ -33,9 +33,6 @@
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
         </Key>
-        <Key ID="STR_ACE_Cargo_renameObject">
-            <English>Rename</English>
-        </Key>
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
         </Key>

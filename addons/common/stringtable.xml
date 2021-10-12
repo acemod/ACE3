@@ -1500,6 +1500,22 @@
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Yok</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_Rename">
+            <English>Rename</English>
+            <Spanish>Renombrar</Spanish>
+            <French>Renommer</French>
+            <German>Umbenennen</German>
+            <Polish>Zmień nazwę</Polish>
+            <Japanese>改名</Japanese>
+            <Italian>Rinomina</Italian>
+            <Korean>이름바꾸기</Korean>
+            <Chinese>重新命名</Chinese>
+            <Chinesesimp>重新命名</Chinesesimp>
+            <Russian>Переименовать</Russian>
+            <Portuguese>Renomear</Portuguese>
+            <Czech>Přejmenovat</Czech>
+            <Turkish>Yeniden adlandır</Turkish>
+        </Key>
         <Key ID="STR_ACE_Common_TimeLeft">
             <English>Time left: %1s</English>
         </Key>
