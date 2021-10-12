@@ -3277,7 +3277,7 @@
             <Turkish>12.7 mm</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_127x99_API_Mag_NameShort">
-			<English>12.7mm API</English>
+            <English>12.7mm API</English>
             <French>12,7mm API</French>
             <Spanish>12.7mm API</Spanish>
             <Polish>12,7mm API</Polish>
@@ -3292,7 +3292,7 @@
             <Chinese>12.7毫米 穿甲燃燒彈</Chinese>
             <Chinesesimp>12.7mm 穿甲燃烧弹</Chinesesimp>
             <Turkish>12.7mm API</Turkish>
-		</Key>
+        </Key>
         <Key ID="STR_ACE_Ballistics_AmmoSupplyCrate_DisplayName">
             <English>[ACE] Ammo Supply Crate</English>
             <Polish>[ACE] Skrzynka z amunicją</Polish>
