@@ -194,7 +194,7 @@
                 <Russian>Включить индикаторы переломов/жгутов/шин</Russian>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
-                <English>Enables indicators for the fractures, applied tourniquets and splints over the Stance Indicator.</English>
+                <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
                 <Russian>Включает индикацию переломов, наложенных шин и жгутов поверх индикатора положения тела.</Russian>
             </Key>
         </Container>
