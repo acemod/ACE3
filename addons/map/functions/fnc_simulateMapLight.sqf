@@ -41,12 +41,15 @@ _lightLevel params ["_r", "_g", "_b", "_a"];
 private _colourAlpha = (_r + _g + _b) min _a;
 private _shadeAlpha = _a;
 
-private _colourList = [_r, _g, _b];
-_colourList sort false;
-private _maxColour = _colourList select 0;
+private _maxColour = selectMax [_r, _g, _b];
+private _ambientColor = if (_maxColour == 0) then {
+    [1, 1, 1, _colourAlpha];
+} else {
+    [_r / _maxColour, _g / _maxColour, _b / _maxColour, _colourAlpha];
+};
 
 //ambient colour fill
-_mapCtrl drawIcon ["#(rgb,8,8,3)color(1,1,1,1)", [_r / _maxColour, _g / _maxColour, _b / _maxColour, _colourAlpha], _mapCentre, _screenSize, _screenSize, 0, "", 0];
+_mapCtrl drawIcon ["#(rgb,8,8,3)color(1,1,1,1)", _ambientColor, _mapCentre, _screenSize, _screenSize, 0, "", 0];
 
 if (_flashlight == "") then {
     //ambient shade fill
