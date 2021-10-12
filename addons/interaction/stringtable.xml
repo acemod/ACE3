@@ -1242,5 +1242,9 @@
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
         </Key>
+        <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
+            <English>Warning: can cause some objects to collide with others.</English>
+            <Russian>Внимание: может вызвать отталкивание некоторых объектов друг от друга.</Russian>
+        </Key>
     </Package>
 </Project>
