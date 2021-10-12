@@ -60,6 +60,9 @@ GVAR(statsPagesLeft) =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(statsPagesRight) =  [0, 0, 0, 0, 0, 0, 0, 0];
 GVAR(statsInfo) = [true, 0, controlNull, nil, nil];
 
+// Cache assignedItems
+private _assignedItems = (getUnitLoadout GVAR(center)) select 9;
+
 // Add the items the player has to virtualItems
 for "_index" from 0 to 14 do {
     switch (_index) do {
@@ -110,11 +113,12 @@ for "_index" from 0 to 14 do {
         };
 
         // Assigned items
-        case IDX_VIRT_MAP: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 0) };
-        case IDX_VIRT_COMPASS: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 1) };
-        case IDX_VIRT_WATCH: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 2) };
-        case IDX_VIRT_RADIO: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 3) };
-        case IDX_VIRT_COMMS: { (GVAR(virtualItems) select _index) pushBackUnique ((assignedItems GVAR(center)) select 4) };
+        case IDX_VIRT_MAP: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 0) };
+        case IDX_VIRT_COMMS: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 1) };
+        case IDX_VIRT_RADIO: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 2) };
+        case IDX_VIRT_COMPASS: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 3) };
+        case IDX_VIRT_WATCH: { (GVAR(virtualItems) select _index) pushBackUnique (_assignedItems select 4) };
+
 
         // Inventory items
         case IDX_VIRT_ITEMS_ALL: {
@@ -171,17 +175,24 @@ for "_index" from 0 to 15 do {
 };
 
 {
-    private _simulationType = getText (configFile >> "CfgWeapons" >> _x >> "simulation");
-    if (_simulationType == "NVGoggles") then { continue };
-    // UAV terminals need special handling because of _simulationType == "Weapon", but so do binos
-    if (_x isKindOf ["UavTerminal_base", configFile >> "CfgWeapons"]) then {
-        GVAR(currentItems) set [14, _x];
-        continue
+    switch (_forEachIndex) do {
+        case 0: { // Map
+            GVAR(currentItems) set [10, _x];
+        };
+        case 1: { // GPS
+            GVAR(currentItems) set [14, _x];
+        };
+        case 2: { // Radio
+            GVAR(currentItems) set [12, _x];
+        };
+        case 3: { // Compass
+            GVAR(currentItems) set [11, _x];
+        };
+        case 4: { // Watch
+            GVAR(currentItems) set [13, _x];
+        };
     };
-    private _index = 10 + (["itemmap", "itemcompass", "itemradio", "itemwatch", "itemgps"] find (tolower _simulationType));
-    // _index ends up being 9 for binos, so that gets set twice, but no harm done
-    GVAR(currentItems) set [_index, _x];
-} forEach (assignedItems GVAR(center));
+} forEach _assignedItems;
 
 GVAR(currentWeaponType) = switch true do {
     case (currentWeapon GVAR(center) == GVAR(currentItems) select 0): {0};
