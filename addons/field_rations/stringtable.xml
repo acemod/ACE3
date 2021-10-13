@@ -67,6 +67,7 @@
             <Polish>Jeść/Pić</Polish>
             <Russian>Есть/Пить</Russian>
             <Turkish>Yeme / Içme</Turkish>
+            <Japanese>食べる/飲む</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Enabled_Description">
             <English>Enable/Disable Field Rations</English>
@@ -194,30 +195,35 @@
             <Russian>Действия с источником воды</Russian>
             <Polish>Akcje przy źrodle wody</Polish>
             <Turkish>Su Içme Animasyonu</Turkish>
+            <Japanese>水源動作</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_Description">
             <English>Controls what actions are available on water sources.</English>
             <Russian>Определяет какие действия будут доступны с источником воды.</Russian>
             <Polish>Kontroluje jakie akcje są dostępne przy źrodle wody.</Polish>
             <Turkish>Su içerken hangi animasyonu yapacağını belirler</Turkish>
+            <Japanese>水源で可能な動作を設定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RefillOnly">
             <English>Refill Only</English>
             <Russian>Только пополнить</Russian>
             <Polish>Tylko napełnij</Polish>
             <Turkish>Sadece içeceği iç</Turkish>
+            <Japanese>汲むだけ</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_DisplayName">
             <English>Terrain Object Actions</English>
             <Russian>Действия с объектами ландшафта</Russian>
             <Polish>Akcje Objektu terenu</Polish>
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
+            <Japanese>マップ オブジェクト動作</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_Description">
             <English>Enables water source actions for terrain objects.</English>
             <Russian>Включает действия с источниками воды для объектов ландшафта.</Russian>
             <Polish>Umożliwia akcje przy źrodle wody na obiektach terenu.</Polish>
             <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
+            <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
             <English>Affect Advanced Fatigue</English>
@@ -381,7 +387,7 @@
             <English>Checking remaining water...</English>
             <German>Überprüfe verbleibendes Wasser...</German>
             <Chinese>檢查剩下的飲用水...</Chinese>
-            <Japanese>残っている水の量を確認中です・・・</Japanese>
+            <Japanese>残っている水量を確認中です・・・</Japanese>
             <Polish>Sprawdzanie ilości wody</Polish>
             <Russian>Проверяется остаток воды...</Russian>
             <Turkish>Kalan Su Kontrol Ediliyor...</Turkish>
@@ -410,6 +416,7 @@
             <Russian>Выпить из источника</Russian>
             <Polish>Pij z źródła wody</Polish>
             <Turkish>Mataradan Iç</Turkish>
+            <Japanese>水源から飲む</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Refill">
             <English>Refill</English>
@@ -494,6 +501,7 @@
             <Russian>Выпивание из источника...</Russian>
             <Polish>Picie z źródła </Polish>
             <Turkish>Mataradan Içiliyor...</Turkish>
+            <Japanese>水源から飲んでいます・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterBottle_DisplayName">
             <English>Water Bottle</English>
@@ -555,7 +563,7 @@
             <German>Eine halbvolle Wasserflasche</German>
             <Hungarian>Fél-teljes vizes palack</Hungarian>
             <Italian>Una mezza bottiglia piena d'acqua</Italian>
-            <Japanese>水が半分入っているウォーター ボトル</Japanese>
+            <Japanese>半分入っているウォーター ボトル</Japanese>
             <Korean>반만 물병</Korean>
             <Polish>Pół butelki z wodą</Polish>
             <Portuguese>Uma garrafa de água meia cheia</Portuguese>
@@ -657,7 +665,7 @@
             <German>Eine Feldflasche zur Hälfte mit Wasser gefüllt</German>
             <Hungarian>A vízzel töltött kantin</Hungarian>
             <Italian>Una mensa riempita per metà di acqua</Italian>
-            <Japanese>水が半分入っている水筒</Japanese>
+            <Japanese>半分入っている水筒</Japanese>
             <Korean>물이 담긴 식당 절반</Korean>
             <Polish>Manierka w połowie wypełniona wodą</Polish>
             <Portuguese>Uma meia cantina cheia de água</Portuguese>
