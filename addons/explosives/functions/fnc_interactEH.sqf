@@ -47,7 +47,7 @@ if (
         if (_playerPos distanceSqr _setPosition > 25) then {
             private _cfgAmmo = configFile >> "CfgAmmo";
             {
-                if (_x distanceSqr _player < 225 && {!(_x in _minesHelped)} && {getModelInfo _x select 0 isNotEqualTo "empty.p3d"}) then {
+                if (_x distanceSqr _player < 225 && {!(_x in _minesHelped)} && {!(_x in GVAR(excludedMines))} && {getModelInfo _x select 0 isNotEqualTo "empty.p3d"}) then {
                     private _config = _cfgAmmo >> typeOf _x;
                     private _size = getNumber (_config >> QGVAR(size));
                     private _defuseClass = ["ACE_DefuseObject", "ACE_DefuseObject_Large"] select (_size == 1);

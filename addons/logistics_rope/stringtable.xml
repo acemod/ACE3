@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Logistics_Rope">
+        <Key ID="STR_ACE_Logistics_Rope_descriptionShort">
+            <English>A twisted braid of fibers. Usually used for rappelling or towing.</English>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_3_Display">
+            <English>Rope 3.2 meters</English>
+            <German>3.2 Meter Seil</German>
+            <French>Corde de 3,2 mètres</French>
+            <Polish>Lina, długość 3,2 m.</Polish>
+            <Russian>Канат 3.2 метров</Russian>
+            <Portuguese>Corda (3.2m)</Portuguese>
+            <Italian>Corda da 3.2 metri</Italian>
+            <Czech>Lano 3.2 metrů</Czech>
+            <Turkish>3.2 metre halat</Turkish>
+            <Spanish>Cuerda de 3.2 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_6_Display">
+            <English>Rope 6.2 meters</English>
+            <German>6.2 Meter Seil</German>
+            <French>Corde de 6,2 mètres</French>
+            <Polish>Lina, długość 6,2 m.</Polish>
+            <Russian>Канат 6.2 метров</Russian>
+            <Portuguese>Corda (6.2m)</Portuguese>
+            <Italian>Corda da 6.2 metri</Italian>
+            <Czech>Lano 6.2 metrů</Czech>
+            <Turkish>6.2 metre halat</Turkish>
+            <Spanish>Cuerda de 6.2 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_12_Display">
+            <English>Rope 12.2 meters</English>
+            <German>12.2 Meter Seil</German>
+            <French>Corde de 12,2 mètres</French>
+            <Japanese>ロープ (12.2 メートル)</Japanese>
+            <Polish>Lina, długość 12,2 m.</Polish>
+            <Russian>Канат 12.2 метров</Russian>
+            <Portuguese>Corda (12.2m)</Portuguese>
+            <Chinese>繩索（12.2公尺長）</Chinese>
+            <Italian>Corda da 12.2 metri</Italian>
+            <Czech>Lano 12.2 metrů</Czech>
+            <Turkish>12.2 metre halat</Turkish>
+            <Spanish>Cuerda de 12.2 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_15_Display">
+            <English>Rope 15.2 meters</English>
+            <German>15.2 Meter Seil</German>
+            <French>Corde de 15,2 mètres</French>
+            <Japanese>ロープ (15.2 メートル)</Japanese>
+            <Polish>Lina, długość 15,2 m.</Polish>
+            <Russian>Канат 15.2 метров</Russian>
+            <Portuguese>Corda (15.2m)</Portuguese>
+            <Chinese>繩索（15.2公尺長）</Chinese>
+            <Italian>Corda da 15.2 metri</Italian>
+            <Czech>Lano 15.2 metrů</Czech>
+            <Turkish>15.2 metre halat</Turkish>
+            <Spanish>Cuerda de 15.2 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_18_Display">
+            <English>Rope 18.3 meters</English>
+            <German>18.3 Meter Seil</German>
+            <French>Corde de 18,3 mètres</French>
+            <Japanese>ロープ (18.3 メートル)</Japanese>
+            <Polish>Lina, długość 18,3 m.</Polish>
+            <Russian>Канат 18.3 метров</Russian>
+            <Portuguese>Corda (18.3m)</Portuguese>
+            <Chinese>繩索（18.3公尺長）</Chinese>
+            <Italian>Corda da 18.3 metri</Italian>
+            <Czech>Lano 18.3 metrů</Czech>
+            <Turkish>18.3 metre halat</Turkish>
+            <Spanish>Cuerda de 18.3 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_27_Display">
+            <English>Rope 27.4 meters</English>
+            <German>27.4 Meter Seil</German>
+            <French>Corde de 27,4 mètres</French>
+            <Japanese>ロープ (27.4 メートル)</Japanese>
+            <Polish>Lina, długość 27,4 m.</Polish>
+            <Russian>Канат 27.4 метров</Russian>
+            <Portuguese>Corda (27.4m)</Portuguese>
+            <Chinese>繩索（27.4公尺長）</Chinese>
+            <Italian>Corda da 27.4 metri</Italian>
+            <Czech>Lano 27.4 metrů</Czech>
+            <Turkish>27.4 metre halat</Turkish>
+            <Spanish>Cuerda de 27.4 metros</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_36_Display">
+            <English>Rope 36.6 meters</English>
+            <German>36.6 Meter Seil</German>
+            <French>Corde de 36,6 mètres</French>
+            <Japanese>ロープ (36.6 メートル)</Japanese>
+            <Polish>Lina, długość 36,6 m.</Polish>
+            <Russian>Канат 36.6 метров</Russian>
+            <Portuguese>Corda (36.6m)</Portuguese>
+            <Chinese>繩索（36.6公尺長）</Chinese>
+            <Italian>Corda da 36.6 metri</Italian>
+            <Czech>Lano 36.6 metrů</Czech>
+            <Turkish>36.6 metre halat</Turkish>
+            <Spanish>Cuerda 36.6 metros</Spanish>
+        </Key>
+    </Package>
+</Project>

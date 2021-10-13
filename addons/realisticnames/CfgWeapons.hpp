@@ -12,12 +12,18 @@ class CfgWeapons {
     class arifle_MX_Black_F: arifle_MX_F {
         displayName = CSTRING(arifle_MX_Black_Name);
     };
+    class arifle_MX_khk_F: arifle_MX_Black_F {
+        displayName = CSTRING(arifle_MX_Khaki_Name);
+    };
 
     class arifle_MXC_F: arifle_MX_Base_F {
         displayName = CSTRING(arifle_MXC_Name);
     };
     class arifle_MXC_Black_F: arifle_MXC_F {
         displayName = CSTRING(arifle_MXC_Black_Name);
+    };
+    class arifle_MXC_khk_F: arifle_MXC_Black_F {
+        displayName = CSTRING(arifle_MXC_Khaki_Name);
     };
 
     class arifle_MX_GL_F: arifle_MX_Base_F {
@@ -26,6 +32,9 @@ class CfgWeapons {
     class arifle_MX_GL_Black_F: arifle_MX_GL_F {
         displayName = CSTRING(arifle_MX_GL_Black_Name);
     };
+    class arifle_MX_GL_khk_F: arifle_MX_GL_Black_F {
+        displayName = CSTRING(arifle_MX_GL_Khaki_Name);
+    };
 
     class arifle_MX_SW_F: arifle_MX_Base_F {
         displayName = CSTRING(arifle_MX_SW_Name);
@@ -33,12 +42,18 @@ class CfgWeapons {
     class arifle_MX_SW_Black_F: arifle_MX_SW_F {
         displayName = CSTRING(arifle_MX_SW_Black_Name);
     };
+    class arifle_MX_SW_khk_F: arifle_MX_SW_Black_F {
+        displayName = CSTRING(arifle_MX_SW_Khaki_Name);
+    };
 
     class arifle_MXM_F: arifle_MX_Base_F {
         displayName = CSTRING(arifle_MXM_Name);
     };
     class arifle_MXM_Black_F: arifle_MXM_F {
         displayName = CSTRING(arifle_MXM_Black_Name);
+    };
+    class arifle_MXM_khk_F: arifle_MXM_Black_F {
+        displayName = CSTRING(arifle_MXM_Khaki_Name);
     };
 
     // Katiba
@@ -93,7 +108,7 @@ class CfgWeapons {
     class arifle_Mk20_GL_plain_F: arifle_Mk20_GL_F {
         displayName = CSTRING(arifle_Mk20_GL_plain_Name);
     };
-    
+
     // P90 (1.86)
     class SMG_03_TR_BASE;
     class SMG_03_TR_black: SMG_03_TR_BASE {
@@ -145,8 +160,8 @@ class CfgWeapons {
     class SMG_03C_hex: SMG_03C_black {
         displayName = CSTRING(P90_Hex_Name);
     };
-    
-    
+
+
 
     // Vector
     class SMG_01_Base;
@@ -247,10 +262,10 @@ class CfgWeapons {
     };
 
     class launch_Vorona_base_F;
-    class launch_O_Vorona_brown_F : launch_Vorona_base_F {
+    class launch_O_Vorona_brown_F: launch_Vorona_base_F {
         displayName = CSTRING(launch_Vorona_brown);
     };
-    class launch_O_Vorona_green_F : launch_Vorona_base_F {
+    class launch_O_Vorona_green_F: launch_Vorona_base_F {
         displayName = CSTRING(launch_Vorona_green);
     };
 
@@ -418,7 +433,7 @@ class CfgWeapons {
     class Missile_AGM_01_Plane_CAS_02_F: Missile_AGM_02_Plane_CAS_01_F {
         displayName = "Kh-25MTP";
     };
-    class missiles_Vorona : MissileLauncher {
+    class missiles_Vorona: MissileLauncher {
         displayName = CSTRING(missiles_vorona);
     };
 
@@ -509,8 +524,8 @@ class CfgWeapons {
         };
     };
 
-    class HMG_127_APC : HMG_127 {};
-    class ACE_HMG_127_KORD : HMG_127_APC {
+    class HMG_127_APC: HMG_127 {};
+    class ACE_HMG_127_KORD: HMG_127_APC {
         displayName = "6P49 Kord";
     };
 
@@ -557,7 +572,7 @@ class CfgWeapons {
         displayName = "Mini-Spike";
     };
 
-    class missiles_SAAMI : MissileLauncher {
+    class missiles_SAAMI: MissileLauncher {
         displayName = "FIM-92F";
     };
 
@@ -596,8 +611,8 @@ class CfgWeapons {
     class cannon_125mm: CannonCore {
         displayName = "2A46";
     };
-    
-    class cannon_125mm_advanced : cannon_125mm {
+
+    class cannon_125mm_advanced: cannon_125mm {
         displayName = "2A82-1M";
     };
 
@@ -618,7 +633,7 @@ class CfgWeapons {
     class ACE_LMG_coax_ext_MG3: LMG_coax_ext {
         displayName = "Rheinmetall MG3";
     };
-    class ACE_LMG_coax_DenelMG4 : LMG_coax {
+    class ACE_LMG_coax_DenelMG4: LMG_coax {
         displayName = "Denel MG4";
     };
 
@@ -666,16 +681,16 @@ class CfgWeapons {
             displayName = "L21A1 RARDEN";
         };
     };
-    
-    class autocannon_30mm_RCWS : autocannon_Base_F {
+
+    class autocannon_30mm_RCWS: autocannon_Base_F {
         displayName = "2A42";
     };
 
-    class cannon_20mm : autocannon_Base_F {
-        class AP : autocannon_Base_F {};
-        class HE : autocannon_Base_F {};
+    class cannon_20mm: autocannon_Base_F {
+        class AP: autocannon_Base_F {};
+        class HE: autocannon_Base_F {};
     };
-    class ACE_cannon_20mm_Rh202 : cannon_20mm {
+    class ACE_cannon_20mm_Rh202: cannon_20mm {
         displayName = "MK20 Rh 202";
         class AP: AP {
             displayName = "MK20 Rh 202";
@@ -693,52 +708,76 @@ class CfgWeapons {
         displayName = "UTG Defender 126";
     };
 
-    class optic_hamr : ItemCore {
+    class optic_hamr: ItemCore {
         displayName = CSTRING(optic_hamr);
     };
-    class optic_Hamr_khk_F : optic_hamr {
+    class optic_Hamr_khk_F: optic_hamr {
         displayName = CSTRING(optic_hamr_khk);
     };
-    class ACE_optic_Hamr_2D : optic_Hamr {
+    class ACE_optic_Hamr_2D: optic_Hamr {
         displayName = CSTRING(optic_hamr_2d);
     };
+    class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
+        displayName = CSTRING(optic_hamr_pip);
+    };
 
-    class optic_Arco : ItemCore {
+    class optic_Arco: ItemCore {
         displayName = CSTRING(optic_arco);
     };
-    class optic_Arco_blk_F : optic_Arco {
+    class optic_Arco_blk_F: optic_Arco {
         displayName = CSTRING(optic_arco_blk);
     };
-    class optic_Arco_ghex_F : optic_Arco {
+    class optic_Arco_ghex_F: optic_Arco {
         displayName = CSTRING(optic_arco_ghex);
     };
-    class ACE_optic_Arco_2D : optic_Arco {
+    class ACE_optic_Arco_2D: optic_Arco {
         displayName = CSTRING(optic_arco_2d);
     };
+    class ACE_optic_Arco_PIP: ACE_optic_Arco_2D {
+        displayName = CSTRING(optic_arco_pip);
+    };
+    class optic_Arco_lush_F: optic_Arco {
+        displayName = CSTRING(optic_arco_lush);
+    };
+    class optic_Arco_arid_F: optic_Arco {
+        displayName = CSTRING(optic_arco_arid);
+    };
+    class optic_Arco_AK_blk_F: optic_Arco_blk_F {
+        displayName = CSTRING(optic_arco_ak_blk);
+    };
+    class optic_Arco_AK_lush_F: optic_Arco_lush_F {
+        displayName = CSTRING(optic_arco_ak_lush);
+    };
+    class optic_Arco_AK_arid_F: optic_Arco_arid_F {
+        displayName = CSTRING(optic_arco_ak_arid);
+    };
 
-    class optic_ERCO_blk_f : optic_Arco {
+    class optic_ERCO_blk_f: optic_Arco {
         displayName = CSTRING(optic_erco_blk);
     };
-    class optic_ERCO_khk_f : optic_ERCO_blk_f {
+    class optic_ERCO_khk_f: optic_ERCO_blk_f {
         displayName = CSTRING(optic_erco_khk);
     };
-    class optic_ERCO_snd_f : optic_ERCO_blk_f {
+    class optic_ERCO_snd_f: optic_ERCO_blk_f {
         displayName = CSTRING(optic_erco_snd);
     };
-    
-    class optic_LRPS : ItemCore {
+
+    class optic_LRPS: ItemCore {
         displayName = CSTRING(optic_lrps);
     };
-    class optic_LRPS_ghex_F : optic_LRPS {
+    class optic_LRPS_ghex_F: optic_LRPS {
         displayName = CSTRING(optic_lrps_ghex);
     };
-    class optic_LRPS_tna_F : optic_LRPS {
+    class optic_LRPS_tna_F: optic_LRPS {
         displayName = CSTRING(optic_lrps_tna);
     };
-    class ACE_optic_LRPS_2D : optic_LRPS {
+    class ACE_optic_LRPS_2D: optic_LRPS {
         displayName = CSTRING(optic_lrps_2d);
     };
-    
+    class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
+        displayName = CSTRING(optic_lrps_pip);
+    };
+
     class optic_AMS_base;
     class optic_AMS: optic_AMS_base {
         displayName = CSTRING(optic_ams);
@@ -749,7 +788,7 @@ class CfgWeapons {
     class optic_AMS_snd: optic_AMS {
         displayName = CSTRING(optic_ams_snd);
     };
-    
+
     class optic_KHS_base;
     class optic_KHS_blk: optic_KHS_base {
         displayName = CSTRING(optic_khs_blk);
@@ -763,54 +802,69 @@ class CfgWeapons {
     class optic_KHS_tan: optic_KHS_blk {
         displayName = CSTRING(optic_khs_tan);
     };
-    
-    class optic_DMS : ItemCore {
+
+    class optic_DMS: ItemCore {
         displayName = CSTRING(optic_dms);
     };
-    class optic_DMS_ghex_F : optic_DMS {
+    class optic_DMS_ghex_F: optic_DMS {
         displayName = CSTRING(optic_dms_ghex);
     };
+    class optic_DMS_weathered_F: optic_DMS {
+        displayName = CSTRING(optic_dms_weathered);
+    };
+    class optic_DMS_weathered_Kir_F: optic_DMS_weathered_F {
+        displayName = CSTRING(optic_dms_weathered_kir);
+    };
 
-    class optic_holosight : ItemCore {
+    class optic_holosight: ItemCore {
         displayName = CSTRING(optic_holosight);
     };
-    class optic_Holosight_blk_F : optic_holosight {
+    class optic_Holosight_blk_F: optic_holosight {
         displayName = CSTRING(optic_holosight_blk);
     };
-    class optic_Holosight_khk_F : optic_holosight {
+    class optic_Holosight_khk_F: optic_holosight {
         displayName = CSTRING(optic_holosight_khk);
     };
-    class optic_Holosight_smg : ItemCore {
+    class optic_Holosight_lush_F: optic_holosight {
+        displayName = CSTRING(optic_holosight_lush);
+    };
+    class optic_Holosight_arid_F: optic_holosight {
+        displayName = CSTRING(optic_holosight_arid);
+    };
+    class optic_Holosight_smg: ItemCore {
         displayName = CSTRING(optic_holosight_smg);
     };
-    class optic_Holosight_smg_blk_F : optic_Holosight_smg {
+    class optic_Holosight_smg_blk_F: optic_Holosight_smg {
         displayName = CSTRING(optic_holosight_smg_blk);
     };
-    class optic_Holosight_smg_khk_F : optic_Holosight_smg {
+    class optic_Holosight_smg_khk_F: optic_Holosight_smg {
         displayName = CSTRING(optic_holosight_smg_khk);
     };
 
-    class optic_MRCO : ItemCore {
+    class optic_MRCO: ItemCore {
         displayName = CSTRING(optic_MRCO);
     };
-    class ACE_optic_MRCO_2D : optic_MRCO {
+    class ACE_optic_MRCO_2D: optic_MRCO {
         displayName = CSTRING(optic_MRCO_2d);
     };
+    class ACE_optic_MRCO_PIP: ACE_optic_MRCO_2D {
+        displayName = CSTRING(optic_MRCO_pip);
+    };
 
-    class optic_Yorris : ItemCore {
+    class optic_Yorris: ItemCore {
         displayName = CSTRING(optic_Yorris);
     };
 
-    class optic_ACO : ItemCore {
+    class optic_ACO: ItemCore {
         displayName = CSTRING(optic_ACO);
     };
-    class optic_ACO_grn : ItemCore {
+    class optic_ACO_grn: ItemCore {
         displayName = CSTRING(optic_ACO_grn);
     };
-    class optic_ACO_smg : ItemCore {
+    class optic_ACO_smg: ItemCore {
         displayName = CSTRING(optic_ACO_smg);
     };
-    class optic_ACO_grn_smg : ItemCore {
+    class optic_ACO_grn_smg: ItemCore {
         displayName = CSTRING(optic_ACO_grn_smg);
     };
 
@@ -933,6 +987,9 @@ class CfgWeapons {
     // P99
     class hgun_P07_khk_F: hgun_P07_F {
         displayName = CSTRING(hgun_P07_khk);
+    };
+    class hgun_P07_blk_F: hgun_P07_F {
+        displayName = CSTRING(hgun_P07_blk);
     };
 
     // Makarov

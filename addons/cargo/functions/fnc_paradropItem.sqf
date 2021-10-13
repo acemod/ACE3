@@ -88,7 +88,7 @@ if (_showHint) then {
     [
         [
             LSTRING(UnloadedItem),
-            getText (configOf _object >> "displayName"),
+            [_itemObject, true] call FUNC(getNameItem),
             getText (configOf _vehicle >> "displayName")
         ],
         3

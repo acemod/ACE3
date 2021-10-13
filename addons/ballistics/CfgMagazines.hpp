@@ -130,6 +130,9 @@ class CfgMagazines {
     class 30Rnd_65x39_caseless_mag: CA_Magazine {
         initSpeed = 774;
     };
+    class 30Rnd_65x39_caseless_black_mag;
+    class 30Rnd_65x39_caseless_khaki_mag;
+    class 30Rnd_65x39_caseless_msbs_mag;
 
     class 30Rnd_65x39_caseless_green: 30Rnd_65x39_caseless_mag {
         initSpeed = 788;
@@ -260,6 +263,8 @@ class CfgMagazines {
         initSpeed = 827;
     };
 
+    class 10Rnd_Mk14_762x51_Mag;
+
     class 10Rnd_762x51_Mag: 20Rnd_762x51_Mag {
         initSpeed = 833;
     };
@@ -298,7 +303,33 @@ class CfgMagazines {
         initSpeed = 330;
     };
 
-    class ACE_10Rnd_762x51_M118LR_Mag: 10Rnd_762x51_Mag {
+    class ACE_10Rnd_762x51_Mag_Tracer: 10Rnd_Mk14_762x51_Mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "B_762x51_Tracer_Red";
+        displayName = CSTRING(10Rnd_762x51_mag_TracerName);
+        displayNameShort = CSTRING(10Rnd_762x51_mag_TracerNameShort);
+        descriptionShort = CSTRING(10Rnd_762x51_mag_TracerDescription);
+        tracersEvery = 1;
+    };
+
+    class ACE_10Rnd_762x51_Mag_Tracer_Dim: ACE_10Rnd_762x51_Mag_Tracer {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_B_762x51_Tracer_Dim";
+        displayName = CSTRING(10Rnd_762x51_mag_Tracer_DimName);
+        displayNameShort = CSTRING(10Rnd_762x51_mag_Tracer_DimNameShort);
+        descriptionShort = CSTRING(10Rnd_762x51_mag_Tracer_DimDescription);
+    };
+
+    class ACE_10Rnd_762x51_Mag_SD: 10Rnd_Mk14_762x51_Mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_762x51_Ball_Subsonic";
+        displayName = CSTRING(10Rnd_762x51_mag_SDName);
+        displayNameShort = CSTRING(10Rnd_762x51_mag_SDNameShort);
+        descriptionShort = CSTRING(10Rnd_762x51_mag_SDDescription);
+        initSpeed = 330;
+    };
+
+    class ACE_10Rnd_762x51_M118LR_Mag: 10Rnd_Mk14_762x51_Mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_762x51_Ball_M118LR";
         count = 10;
@@ -308,7 +339,7 @@ class CfgMagazines {
         initSpeed = 780;
     };
 
-    class ACE_10Rnd_762x51_Mk316_Mod_0_Mag: 10Rnd_762x51_Mag {
+    class ACE_10Rnd_762x51_Mk316_Mod_0_Mag: 10Rnd_Mk14_762x51_Mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_762x51_Ball_Mk316_Mod_0";
         count = 10;
@@ -318,7 +349,7 @@ class CfgMagazines {
         initSpeed = 790;
     };
 
-    class ACE_10Rnd_762x51_Mk319_Mod_0_Mag: 10Rnd_762x51_Mag {
+    class ACE_10Rnd_762x51_Mk319_Mod_0_Mag: 10Rnd_Mk14_762x51_Mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_762x51_Ball_Mk319_Mod_0";
         count = 10;
@@ -328,7 +359,7 @@ class CfgMagazines {
         initSpeed = 900;
     };
 
-    class ACE_10Rnd_762x51_M993_AP_Mag: 10Rnd_762x51_Mag {
+    class ACE_10Rnd_762x51_M993_AP_Mag: 10Rnd_Mk14_762x51_Mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_762x51_Ball_M993_AP";
         count = 10;
@@ -376,38 +407,27 @@ class CfgMagazines {
         initSpeed = 930;
     };
 
-    class ACE_20Rnd_762x67_Mk248_Mod_0_Mag: 20Rnd_762x51_Mag {
-        author = ECSTRING(common,ACETeam);
-        ammo = "ACE_762x67_Ball_Mk248_Mod_0";
-        displayName = CSTRING(20Rnd_762x67_Mk248_Mod_0_Mag_Name);
-        displayNameShort = CSTRING(20Rnd_762x67_Mk248_Mod_0_Mag_NameShort);
-        descriptionShort = CSTRING(20Rnd_762x67_Mk248_Mod_0_Mag_Description);
-        initSpeed = 865;
-    };
-
-    class ACE_20Rnd_762x67_Mk248_Mod_1_Mag: 20Rnd_762x51_Mag {
-        author = ECSTRING(common,ACETeam);
-        ammo = "ACE_762x67_Ball_Mk248_Mod_1";
-        displayName = CSTRING(20Rnd_762x67_Mk248_Mod_1_Mag_Name);
-        displayNameShort = CSTRING(20Rnd_762x67_Mk248_Mod_1_Mag_NameShort);
-        descriptionShort = CSTRING(20Rnd_762x67_Mk248_Mod_1_Mag_Description);
-        initSpeed = 847;
-    };
-
-    class ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag: 20Rnd_762x51_Mag {
-        author = ECSTRING(common,ACETeam);
-        ammo = "ACE_762x67_Ball_Berger_Hybrid_OTM";
-        displayName = CSTRING(20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name);
-        displayNameShort = CSTRING(20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort);
-        descriptionShort = CSTRING(20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description);
-        initSpeed = 800;
-    };
-
     class ACE_30Rnd_65x47_Scenar_mag: 30Rnd_65x39_caseless_mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_65x47_Ball_Scenar";
         initSpeed = 826;
         displayName = CSTRING(30Rnd_65x47_Scenar_mag_Name);
+        displayNameShort = CSTRING(30Rnd_65x47_Scenar_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_65x47_Scenar_mag_Description);
+    };
+    class ACE_30Rnd_65x47_Scenar_black_mag: 30Rnd_65x39_caseless_black_mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_65x47_Ball_Scenar";
+        initSpeed = 826;
+        displayName = CSTRING(30Rnd_65x47_Scenar_black_mag_Name);
+        displayNameShort = CSTRING(30Rnd_65x47_Scenar_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_65x47_Scenar_mag_Description);
+    };
+    class ACE_30Rnd_65x47_Scenar_khaki_mag: 30Rnd_65x39_caseless_khaki_mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_65x47_Ball_Scenar";
+        initSpeed = 826;
+        displayName = CSTRING(30Rnd_65x47_Scenar_khaki_mag_Name);
         displayNameShort = CSTRING(30Rnd_65x47_Scenar_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_65x47_Scenar_mag_Description);
     };
@@ -421,11 +441,36 @@ class CfgMagazines {
         descriptionShort = CSTRING(20Rnd_65x47_Scenar_mag_Description);
     };
 
+    class ACE_30Rnd_65x47_Scenar_msbs_mag: 30Rnd_65x39_caseless_msbs_mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_65x47_Ball_Scenar";
+        initSpeed = 826;
+        displayName = CSTRING(30Rnd_65x47_Scenar_msbs_mag_Name);
+        displayNameShort = CSTRING(30Rnd_65x47_Scenar_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_65x47_Scenar_msbs_mag_Description);
+    };
+
     class ACE_30Rnd_65_Creedmor_mag: 30Rnd_65x39_caseless_mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_65_Creedmor_Ball";
         initSpeed = 857;
         displayName = CSTRING(30Rnd_65_Creedmor_mag_Name);
+        displayNameShort = CSTRING(30Rnd_65_Creedmor_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_65_Creedmor_mag_Description);
+    };
+    class ACE_30Rnd_65_Creedmor_black_mag: 30Rnd_65x39_caseless_black_mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_65_Creedmor_Ball";
+        initSpeed = 857;
+        displayName = CSTRING(30Rnd_65_Creedmor_black_mag_Name);
+        displayNameShort = CSTRING(30Rnd_65_Creedmor_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_65_Creedmor_mag_Description);
+    };
+    class ACE_30Rnd_65_Creedmor_khaki_mag: 30Rnd_65x39_caseless_khaki_mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_65_Creedmor_Ball";
+        initSpeed = 857;
+        displayName = CSTRING(30Rnd_65_Creedmor_khaki_mag_Name);
         displayNameShort = CSTRING(30Rnd_65_Creedmor_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_65_Creedmor_mag_Description);
     };
@@ -437,6 +482,15 @@ class CfgMagazines {
         displayName = CSTRING(20Rnd_65_Creedmor_mag_Name);
         displayNameShort = CSTRING(20Rnd_65_Creedmor_mag_NameShort);
         descriptionShort = CSTRING(20Rnd_65_Creedmor_mag_Description);
+    };
+
+    class ACE_30Rnd_65_Creedmor_msbs_mag: 30Rnd_65x39_caseless_msbs_mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_65_Creedmor_Ball";
+        initSpeed = 857;
+        displayName = CSTRING(30Rnd_65_Creedmor_msbs_mag_Name);
+        displayNameShort = CSTRING(30Rnd_65_Creedmor_mag_NameShort);
+        descriptionShort = CSTRING(30Rnd_65_Creedmor_msbs_mag_Description);
     };
 
     class 10Rnd_338_Mag: CA_Magazine {
@@ -461,6 +515,69 @@ class CfgMagazines {
         initSpeed = 880;
     };
 
+    class ACE_20Rnd_762x67_Mk248_Mod_0_Mag: 10Rnd_338_Mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_762x67_Ball_Mk248_Mod_0";
+        count = 20;
+        scope = 1; // backwards compatibility only
+        mass = 28; // 10Rnd_338_Mag mass * 2
+        displayName = CSTRING(20Rnd_762x67_Mk248_Mod_0_Mag_Name);
+        displayNameShort = CSTRING(20Rnd_762x67_Mk248_Mod_0_Mag_NameShort);
+        descriptionShort = CSTRING(20Rnd_762x67_Mk248_Mod_0_Mag_Description);
+        initSpeed = 865;
+    };
+
+    class ACE_20Rnd_762x67_Mk248_Mod_1_Mag: 10Rnd_338_Mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_762x67_Ball_Mk248_Mod_1";
+        count = 20;
+        scope = 1;
+        mass = 28;
+        displayName = CSTRING(20Rnd_762x67_Mk248_Mod_1_Mag_Name);
+        displayNameShort = CSTRING(20Rnd_762x67_Mk248_Mod_1_Mag_NameShort);
+        descriptionShort = CSTRING(20Rnd_762x67_Mk248_Mod_1_Mag_Description);
+        initSpeed = 847;
+    };
+
+    class ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag: 10Rnd_338_Mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_762x67_Ball_Berger_Hybrid_OTM";
+        count = 20;
+        scope = 1;
+        mass = 28;
+        displayName = CSTRING(20Rnd_762x67_Berger_Hybrid_OTM_Mag_Name);
+        displayNameShort = CSTRING(20Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort);
+        descriptionShort = CSTRING(20Rnd_762x67_Berger_Hybrid_OTM_Mag_Description);
+        initSpeed = 800;
+    };
+
+    class ACE_10Rnd_762x67_Mk248_Mod_0_Mag: ACE_20Rnd_762x67_Mk248_Mod_0_Mag {
+        scope = 2;
+        count = 10;
+        mass = 14; // same as 10Rnd_338_Mag
+        displayName = CSTRING(10Rnd_762x67_Mk248_Mod_0_Mag_Name);
+        displayNameShort = CSTRING(10Rnd_762x67_Mk248_Mod_0_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_762x67_Mk248_Mod_0_Mag_Description);
+    };
+
+    class ACE_10Rnd_762x67_Mk248_Mod_1_Mag: ACE_20Rnd_762x67_Mk248_Mod_1_Mag {
+        scope = 2;
+        count = 10;
+        mass = 14;
+        displayName = CSTRING(10Rnd_762x67_Mk248_Mod_1_Mag_Name);
+        displayNameShort = CSTRING(10Rnd_762x67_Mk248_Mod_1_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_762x67_Mk248_Mod_1_Mag_Description);
+    };
+
+    class ACE_10Rnd_762x67_Berger_Hybrid_OTM_Mag: ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag {
+        scope = 2;
+        count = 10;
+        mass = 14;
+        displayName = CSTRING(10Rnd_762x67_Berger_Hybrid_OTM_Mag_Name);
+        displayNameShort = CSTRING(10Rnd_762x67_Berger_Hybrid_OTM_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_762x67_Berger_Hybrid_OTM_Mag_Description);
+    };
+
     class 7Rnd_408_Mag: CA_Magazine {
         initSpeed = 867;
     };
@@ -483,7 +600,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "B_127x99_Ball";
         displayName = CSTRING(5Rnd_127x99_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_Mag_Description);
         initSpeed = 900;
     };
@@ -492,7 +609,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_127x99_API";
         displayName = CSTRING(5Rnd_127x99_API_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_API_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_API_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_API_Mag_Description);
         initSpeed = 900;
     };
@@ -501,9 +618,33 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_127x99_Ball_AMAX";
         displayName = CSTRING(5Rnd_127x99_AMAX_Mag_Name);
-        displayNameShort = CSTRING(5Rnd_127x99_AMAX_Mag_NameShort);
+        displayNameShort = CSTRING(127x99_AMAX_Mag_NameShort);
         descriptionShort = CSTRING(5Rnd_127x99_AMAX_Mag_Description);
         initSpeed = 860;
+    };
+
+    class ACE_10Rnd_127x99_Mag: ACE_5Rnd_127x99_Mag {
+        count = 10;
+        mass = 32; // 5Rnd_127x108_Mag mass * 2
+        displayName = CSTRING(10Rnd_127x99_Mag_Name);
+        displayNameShort = CSTRING(127x99_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_127x99_Mag_Description);
+    };
+
+    class ACE_10Rnd_127x99_API_Mag: ACE_5Rnd_127x99_API_Mag {
+        count = 10;
+        mass = 32;
+        displayName = CSTRING(10Rnd_127x99_API_Mag_Name);
+        displayNameShort = CSTRING(127x99_API_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_127x99_API_Mag_Description);
+    };
+
+    class ACE_10Rnd_127x99_AMAX_Mag: ACE_5Rnd_127x99_AMAX_Mag {
+        count = 10;
+        mass = 32;
+        displayName = CSTRING(10Rnd_127x99_AMAX_Mag_Name);
+        displayNameShort = CSTRING(127x99_AMAX_Mag_NameShort);
+        descriptionShort = CSTRING(10Rnd_127x99_AMAX_Mag_Description);
     };
 
     class 30Rnd_9x21_Mag: CA_Magazine {

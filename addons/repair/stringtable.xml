@@ -261,6 +261,9 @@
             <Chinese>維修載具中...</Chinese>
             <Turkish>Tamir Ediliyor...</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
+            <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
+        </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
             <German>Möglichkeit zur vollständigen Reperatur</German>
