@@ -156,6 +156,21 @@
             <Russian>Показывать всегда</Russian>
             <Turkish>Her Zaman Göster</Turkish>
         </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMap">
+            <English>Create map markers</English>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMapDesc">
+            <English>Create map markers that look like terrain buildings when static fortifications are placed</English>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMapNone">
+            <English>Never</English>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMapFriendly">
+            <English>For units friendly to the placer</English>
+        </Key>
+        <Key ID="STR_ACE_Fortify_markObjectsOnMapEveryone">
+            <English>For everyone</English>
+        </Key>
         <Key ID="STR_ACE_Fortify_small">
             <English>Small</English>
             <Polish>Małe</Polish>

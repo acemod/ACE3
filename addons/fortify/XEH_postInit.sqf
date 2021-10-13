@@ -1,12 +1,24 @@
 #include "script_component.hpp"
 
 if (isServer) then {
+    GVAR(markerObjectHashmap) = createHashMap;
+    publicVariable QGVAR(markerObjectHashmap);
+
     [QGVAR(registerObjects), LINKFUNC(registerObjects)] call CBA_fnc_addEventHandler;
     [QGVAR(objectPlaced), {
         params ["_unit", "_side", "_object"];
         TRACE_3("objectPlaced",_unit,_side,_object);
         private _jipID = [QGVAR(addActionToObject), [_side, _object]] call CBA_fnc_globalEventJIP;
         [_jipID, _object] call CBA_fnc_removeGlobalEventJIP; // idealy this function should be called on the server
+
+        if (GVAR(markObjectsOnMap) isNotEqualTo 0 && {_object isKindOf "Static"}) then {
+            // Wait ensures correct marker pos/rot as object is moved into position after creation
+            [
+                {_this call FUNC(createObjectMarker)},
+                _object,
+                1
+            ] call CBA_fnc_waitAndExecute;
+        };
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -63,3 +75,30 @@ GVAR(objectRotationZ) = 0;
         [_object, 0, ["ACE_MainActions"], _removeAction] call EFUNC(interact_menu,addActionToObject);
     };
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(setMarkerVisible), {
+    params ["_object"];
+    [
+        {!isNull player},
+        {
+            params ["_object"];
+            private _currentUnit = call CBA_fnc_currentUnit;
+            private _objectSide = _object getVariable QGVAR(objectSide);
+            private _playerSide = side group _currentUnit;
+            private _marker = _object getVariable QGVAR(mapMarker);
+            // If enemy placed object, hide marker, else set visible
+            private _alpha = if (GVAR(markObjectsOnMap) isEqualTo 1 && {_objectSide getFriend _playerSide < 0.6}) then {0} else {1};
+            _marker setMarkerAlphaLocal _alpha;
+        },
+        _object
+    ] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_addEventHandler;
+
+
+// Reset map marker alphas when the side of the controlled unit changes.
+["group", {
+    {
+        private _object = _y;
+        [QGVAR(setMarkerVisible), _object] call CBA_fnc_localEvent;
+    } forEach GVAR(markerObjectHashmap);
+}] call CBA_fnc_addPlayerEventHandler;
