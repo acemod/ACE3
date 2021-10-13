@@ -41,6 +41,8 @@ if (_causeOfDeath != "#scripted") then {
         _this set [1, _killer];
         _this set [2, _instigator];
     };
+} else { // in that case, call setDead manually to prevent any issues
+    [_unit, "#scripted"] call FUNC(setDead);
 };
 TRACE_3("killer info",_killer,_instigator,_causeOfDeath);
 

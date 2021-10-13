@@ -189,6 +189,14 @@
                 <Chinese>啟用傷者的尖叫聲</Chinese>
                 <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
             </Key>
+            <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
+                <English>Enable Fracture/Tourniquet/Splint Indicators</English>
+                <Russian>Включить индикаторы переломов/жгутов/шин</Russian>
+            </Key>
+            <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
+                <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
+                <Russian>Включает индикацию переломов, наложенных шин и жгутов поверх индикатора положения тела.</Russian>
+            </Key>
         </Container>
     </Package>
 </Project>

@@ -166,5 +166,11 @@
             <Chinese>%1個滿的與%2個部分的</Chinese>
             <Turkish>%1 Dolu ve %2 Partial</Turkish>
         </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazines">
+            <English>Repack Loaded Magazines</English>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
+            <English>Repacking magazines, weapon unloaded</English>
+        </Key>
     </Package>
 </Project>

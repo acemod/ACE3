@@ -19,7 +19,7 @@ if (!hasInterface) exitWith {};
     };
 }] call EFUNC(common,arithmeticSetSource);
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
     // - Post process effect ------------------------------------------------------
