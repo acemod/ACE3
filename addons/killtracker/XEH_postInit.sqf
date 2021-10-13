@@ -2,31 +2,21 @@
 /*
  * Author: PabstMirror
  * Tracks deaths/kills and logs to the end mission disaplay
- * Attemps to log kills from ace_medical by using "ace_killed" event
+ * Attemps to log kills from Medical by using "ace_killed" event.
  *
  * Note: Requires config setup in a mission's description.ext
- * Has no effect if mission is not setup correctly
+ * Has no effect if mission is not setup correctly.
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */
 
-// place the following in a misison's description.ext:
-/*
-    class CfgDebriefingSections {
-        class acex_killTracker {
-            title = "ACEX Killed Events";
-            variable = "acex_killTracker_outputText";
-        };
-    };
- */
-
-if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QGVAR(outputText)) exitWith {
+if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
 
@@ -34,7 +24,7 @@ INFO("Running Kill Tracking");
 
 // Variables:
 GVAR(eventsArray) = [];
-GVAR(outputText) = format ["%1 0", LLSTRING(TotalKills)];
+XGVAR(outputText) = format ["%1 0", LLSTRING(TotalKills)];
 GVAR(killCount) = 0;
 
 // Add Event Handlers:
@@ -44,14 +34,14 @@ GVAR(killCount) = 0;
     // Increment kill counter
     GVAR(killCount) = GVAR(killCount) + 1;
     GVAR(eventsArray) pushBack format [LLSTRING(Kill), _name, _killInfo];
-    GVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
+    XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(death), {
     params ["_name", "_killInfo"];
     TRACE_2("death eh",_name,_killInfo);
     GVAR(eventsArray) pushBack format [LLSTRING(Killer), _name, _killInfo];
-    GVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
+    XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
 }] call CBA_fnc_addEventHandler;
 
 ["ace_killed", {
