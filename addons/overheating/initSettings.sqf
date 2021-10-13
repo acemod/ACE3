@@ -31,7 +31,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(showParticleEffectsForEveryone_displayName), LSTRING(showParticleEffectsForEveryone_description)],
     _category,
     false,
-    0
+    0,
     {},
     true
 ] call CBA_fnc_addSetting;
@@ -41,7 +41,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(overheatingDispersion_displayName), LSTRING(overheatingDispersion_description)],
     _category,
     true,
-    1
+    1,
     {},
     true
 ] call CBA_fnc_addSetting;
@@ -49,7 +49,6 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 [
     QGVAR(particleEffectsAndDispersionDistance), "SLIDER",
     [LSTRING(particleEffectsAndDispersionDistance_displayName), LSTRING(particleEffectsAndDispersionDistance_description)],
-    _category,
     _category,
     [1, 5000, 3000, 0],
     0
@@ -84,7 +83,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(unJamOnreload_displayName), LSTRING(unJamOnreload_description)],
     _category,
     false,
-    1
+    1,
     {},
     true
 ] call CBA_fnc_addSetting;
@@ -110,7 +109,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(cookoffCoef_displayName), LSTRING(cookoffCoef_description)],
     _category,
     [0, 5, 1, 2],
-    1
+    1,
     {},
     true
 ] call CBA_fnc_addSetting;
