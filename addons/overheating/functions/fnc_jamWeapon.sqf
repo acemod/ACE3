@@ -38,11 +38,12 @@ if(_jamTypesAllowed == []) then {
     _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
 } else {
     for "_i" from count _jamTypesAllowed to 1 step -1 do {
-        if !(_i in ["Eject", "Extract", "Feed", "Fire", "Dud"]) exitWith { // check config values and switch to default values if unusual value found
-            diag_log text format ["[ACE] ERROR: Weapon '%1' has unexpected value %2 in GVAR(jamTypesAllowed). Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.", _weapon, _i];
+        private _jamCurretType = _jamTypesAllowed select _i;
+        if !(_jamCurretType in ["Eject", "Extract", "Feed", "Fire", "Dud"]) exitWith { // check config values and switch to default values if unusual value found
+            diag_log text format ["[ACE] ERROR: Weapon '%1' has unexpected value %2 in GVAR(jamTypesAllowed). Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.", _weapon, _jamCurretType];
             _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
         };
-        if (_jamTypesAllowed select _i == "Dud") then {
+        if (_jamCurretType == "Dud") then {
             _jamTypesAllowed insert [_i, [5 / (_temp / 5)]];
         } else {
             _jamTypesAllowed insert [_i, [1]];
