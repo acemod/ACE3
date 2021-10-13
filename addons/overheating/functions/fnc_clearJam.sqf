@@ -43,7 +43,7 @@ if (_weapon in _jammedWeapons) then {
         };
     };
 
-    // Check if the jam will be successfull
+    // Check if the jam clearing will be successfull
     if (random 1 > GVAR(unJamFailChance)) then {
         // Success
 

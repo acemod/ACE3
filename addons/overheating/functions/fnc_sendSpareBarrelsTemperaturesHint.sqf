@@ -27,7 +27,7 @@ private _weapon = currentWeapon _player;
 //Get the classname of the spare barrel of that weapon
 private _weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> _weapon >> QGVAR(barrelClassname));
 //If the weapon has no defined classname then use the ACE one
-if(_weaponBarrelClass == "") then {
+if (_weaponBarrelClass == "") then {
     _weaponBarrelClass = "ACE_SpareBarrel";
 };
 private _allBarrels = [_unit, _weaponBarrelClass] call CBA_fnc_getMagazineIndex;
