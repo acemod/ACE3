@@ -38,8 +38,8 @@ private _actionID = _player addAction [
 
 // Read config
 private _configFile = configFile >> "CfgVehicles" >> typeOf _seat;
-private _sitDirection = (getDir _seat) + getNumber (_configFile >> QGVAR(sitDirection));
-private _sitPositionAll = getArray (_configFile >> QGVAR(sitPosition));
+private _sitDirection = (getDir _seat) + (_seat getVariable [QGVAR(sitDirection), getNumber (_configFile >> QGVAR(sitDirection))]);
+private _sitPositionAll = _seat getVariable [QGVAR(sitPosition), getArray (_configFile >> QGVAR(sitPosition))];
 private _multiSitting = (_sitPositionAll select 0) isEqualType [];
 
 private _sitPosition = _sitPositionAll;
