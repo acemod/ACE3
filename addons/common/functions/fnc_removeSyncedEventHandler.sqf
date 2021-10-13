@@ -17,13 +17,13 @@
 
 params ["_name"];
 
-if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
+if !(_name in GVAR(syncedEvents)) exitWith {
     ERROR_1("Synced event key [%1] not found (removeSyncedEventHandler).", _name);
     false
 };
 
-private _data = [GVAR(syncedEvents), _name] call CBA_fnc_hashGet;
+private _data = GVAR(syncedEvents) get _name;
 _data params ["", "", "", "_eventId"];
 
 [_eventId] call CBA_fnc_removeEventHandler;
-[GVAR(syncedEvents), _name] call CBA_fnc_hashRem;
+GVAR(syncedEvents) deleteAt _name;

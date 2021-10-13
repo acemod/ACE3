@@ -1005,8 +1005,8 @@ class GVAR(loadoutsDisplay) {
                 class buttonRename: buttonSave {
                     idc = IDC_buttonRename;
                     x = QUOTE(32.5 * GRID_W);
-                    text= CSTRING(buttonRenameText);
-                    tooltip= CSTRING(buttonRenameTooltip);
+                    text = ECSTRING(common,rename);
+                    tooltip = CSTRING(buttonRenameTooltip);
                     onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(buttonLoadoutsRename));
                 };
                 class buttonLoad: buttonSave {

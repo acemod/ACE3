@@ -67,7 +67,7 @@ if (cursorObject isEqualTo _target) exitWith {
     private _dest = EGVAR(interact_menu,cameraPosASL) vectorAdd (EGVAR(interact_menu,cameraDir) vectorMultiply 50);
     private _origin = EGVAR(interact_menu,cameraPosASL);
     //private _origin = EGVAR(interact_menu,cameraPosASL) vectorAdd [0, 0, -0.35] vectorDiff (EGVAR(interact_menu,cameraDir) vectorMultiply 1.5);
-    //private _dest = AGLtoASL (_target modelToWorldVisual [0,0,0]);
+    //private _dest = _target modelToWorldVisualWorld [0,0,0];
     private _results = lineIntersectsSurfaces [_origin, _dest, ACE_player, objNull, true, 5];
     private _finalPos = [0,0,0];
     {

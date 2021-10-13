@@ -18,35 +18,15 @@
 
 params ["_unit"];
 
-// Blend two colors
-private _fnc_blendColor = {
-    params ["_c1", "_c2", "_alpha"];
-    [(_c1 select 0) * (1 - _alpha) + (_c2 select 0) * _alpha,
-    (_c1 select 1) * (1 - _alpha) + (_c2 select 1) * _alpha,
-    (_c1 select 2) * (1 - _alpha) + (_c2 select 2) * _alpha,
-    (_c1 select 3) * (1 - _alpha) + (_c2 select 3) * _alpha]
-};
-
-// Ambient light tint depending on time of day
-private _lightTint = call {
-    if (sunOrMoon == 1.0) exitWith {[0.5,0.5,0.5,1]};
-    if (sunOrMoon > 0.80) exitWith {[[1.0 - overcast,0.2,0,1], [1,1,1,1],   (sunOrMoon - 0.8) / 0.2] call _fnc_blendColor};
-    if (sunOrMoon > 0.50) exitWith {[[0,0,0.1,1], [1.0 - overcast,0.2,0,1], (sunOrMoon - 0.5) / 0.3] call _fnc_blendColor};
-    if (sunOrMoon <= 0.5) exitWith {[0,0,0.1,1]};
-    [0,0,0,0]
-};
-
-private _lightLevel = 0.04 + (0.96 * call EFUNC(common,ambientBrightness));
-
-// Do not obscure the map if the ambient light level is above 0.95
-if (_lightLevel > 0.95) exitWith {
-    [false, [1,1,1,0]]
-};
-
 private _vehicle = vehicle _unit;
 
 // Do not obscure the map if the player is on a enclosed vehicle (assume internal illumination)
-if ((_vehicle != _unit) && {(!isTurnedOut _unit)} && GVAR(vehicleLightCondition) && {!((_unit call CBA_fnc_turretPath) in GVAR(vehicleExteriorTurrets))}) exitWith {
+if (
+    _vehicle != _unit
+    && {!isTurnedOut _unit}
+    && GVAR(vehicleLightCondition)
+    && {!((_unit call CBA_fnc_turretPath) in GVAR(vehicleExteriorTurrets))}
+) exitWith {
     TRACE_1("Player in a enclosed vehicle",GVAR(vehicleLightColor));
     [GVAR(vehicleLightColor) isNotEqualTo [1,1,1,0], GVAR(vehicleLightColor)]
 };
@@ -54,46 +34,29 @@ if ((_vehicle != _unit) && {(!isTurnedOut _unit)} && GVAR(vehicleLightCondition)
 // Player is not in a vehicle
 TRACE_1("Player is on foot or in an open vehicle","");
 
-// Check if player is near a campfires, streetlamps, units with flashlights, vehicles with lights on, etc. - 40m
+getLightingAt _unit params ["_ambientLightColor", "_ambientLightBrightness", "_dynamicLightColor", "_dynamicLightBrightness"];
+
+private _brightness = _ambientLightBrightness + _dynamicLightBrightness;
+if (_brightness > 3000) exitWith {[false, [1,1,1,0]]};
+
+private _alfa = switch (true) do {
+    case (_brightness <= 0.2): { 1 };
+    case (_brightness <= 2):    { linearConversion [0.2, 2, _brightness, 1, 0.86] };
+    case (_brightness <= 10):   { linearConversion [2, 10, _brightness, 0.86, 0.6] };
+    case (_brightness <= 100):  { linearConversion [10, 100, _brightness, 0.6, 0.3] };
+    case (_brightness <= 200):  { linearConversion [100, 200, _brightness, 0.3, 0.14] };
+    default                     { linearConversion [200, 3000, _brightness, 0.14, 0] };
+};
+
+private _finalLightColor = [];
 {
-    _lightLevel = _lightLevel max ([_unit, _x] call EFUNC(common,lightIntensityFromObject));
-} forEach nearestObjects [_unit, ["All"], 40];
-
-// @todo: Illumination flares (timed)
-
-// Using chemlights
-private _nearObjects = (_unit nearObjects ["Chemlight_base", 4]) select {alive _x};
-
-if (_nearObjects isNotEqualTo []) then {
-    private _nearestlight = _nearObjects select 0;
-    private _lightLevelTemp = (1 - ((((_unit distance _nearestlight) - 2) / 2) max 0)) * 0.4;
-    if (_lightLevelTemp > _lightLevel) then {
-        private _flareTint = getArray (configFile >> "CfgLights" >> (getText (configFile >> (getText (configFile >> "CfgAmmo" >> typeOf _nearestlight >> "EffectsSmoke")) >> "Light1" >> "type")) >> "color");
-        _lightTint = [_lightTint, _flareTint, (_lightLevelTemp - _lightLevel) / (1 - _lightLevel)] call _fnc_blendColor;
-        _lightLevel = _lightLevelTemp;
-        TRACE_1("player near chemlight","");
+    private _finalColor = (_ambientLightBrightness * _x + _dynamicLightBrightness * (_dynamicLightColor select _forEachIndex)) / _brightness;
+    if (_alfa > 0.5) then {
+        _finalColor = _finalColor * (1 - _alfa) / 3;
     };
-};
+    _finalLightColor pushBack _finalColor;
+} forEach _ambientLightColor;
 
-// Do not obscure the map if the ambient light level is above 0.95
-if (_lightLevel > 0.95) exitWith {
-    [false, [1,1,1,0]]
-};
+_finalLightColor pushBack _alfa;
 
-// Calculate resulting map color from tint and light level
-private _halfLight = _lightLevel / 0.5;
-
-private _finalLevel = if (_lightLevel < 0.5) then {
-    [(_lightTint select 0) * _halfLight,
-    (_lightTint select 1) * _halfLight,
-    (_lightTint select 2) * _halfLight,
-    (_lightTint select 3) * (1 - _lightLevel)]
-} else {
-    _halfLight = (_lightLevel - 0.5) / 0.5;
-    [(_lightTint select 0) * (1 - _halfLight) + _halfLight,
-    (_lightTint select 1) * (1 - _halfLight) + _halfLight,
-    (_lightTint select 2) * (1 - _halfLight) + _halfLight,
-    (_lightTint select 3) * (1 - _lightLevel)]
-};
-
-[true, _finalLevel]
+[true, _finalLightColor]

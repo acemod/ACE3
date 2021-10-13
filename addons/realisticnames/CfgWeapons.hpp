@@ -988,6 +988,9 @@ class CfgWeapons {
     class hgun_P07_khk_F: hgun_P07_F {
         displayName = CSTRING(hgun_P07_khk);
     };
+    class hgun_P07_blk_F: hgun_P07_F {
+        displayName = CSTRING(hgun_P07_blk);
+    };
 
     // Makarov
     class hgun_Pistol_01_F: Pistol_Base_F {

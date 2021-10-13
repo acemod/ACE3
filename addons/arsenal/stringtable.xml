@@ -159,22 +159,6 @@
             <Czech>[Shift+Klik pro uložení jako standardního vybavení pro misi]</Czech>
             <Turkish>[Shift+Click varsayılan kıyafetlere kaydet]</Turkish>
         </Key>
-        <Key ID="STR_ACE_Arsenal_buttonRenameText">
-            <English>Rename</English>
-            <Spanish>Renombrar</Spanish>
-            <French>Renommer</French>
-            <German>Umbenennen</German>
-            <Polish>Zmień nazwę</Polish>
-            <Japanese>改名</Japanese>
-            <Italian>Rinomina</Italian>
-            <Korean>이름바꾸기</Korean>
-            <Chinese>重新命名</Chinese>
-            <Chinesesimp>重新命名</Chinesesimp>
-            <Russian>Переименовать</Russian>
-            <Portuguese>Renomear</Portuguese>
-            <Czech>Přejmenovat</Czech>
-            <Turkish>Yeniden adlandır</Turkish>
-        </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
             <Spanish>Renombrar el equipamiento seleccionado</Spanish>

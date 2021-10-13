@@ -3550,6 +3550,23 @@
             <Chinesesimp>P99半自动手枪 (卡其色)</Chinesesimp>
             <Turkish>P99 (Haki)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_hgun_P07_blk">
+            <English>P99 (Black)</English>
+            <Czech>P99 (Černá)</Czech>
+            <French>P99 (Noir)</French>
+            <Spanish>P99 (Negro)</Spanish>
+            <Russian>P99 (Чёрный)</Russian>
+            <Polish>P99 (czarny)</Polish>
+            <German>P99 (Schwarz)</German>
+            <Italian>P99 (Nero)</Italian>
+            <Hungarian>P99 (Fekete)</Hungarian>
+            <Portuguese>P99 (Preto)</Portuguese>
+            <Japanese>P99 (ブラック)</Japanese>
+            <Korean>P99 (검정)</Korean>
+            <Chinese>P99半自動手槍 (黑色)</Chinese>
+            <Chinesesimp>P99半自动手枪 (黑色)</Chinesesimp>
+            <Turkish>P99 (Siyah)</Turkish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
             <English>Makarov PM</English>
             <German>Makarov PM</German>
@@ -3928,18 +3945,23 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
             <English>ELCAN SpecterOS (Lush)</English>
+            <Polish>ELCAN SpecterOS (Leśny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
+            <Polish>ELCAN SpecterOS (Jałowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Czarny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Leśny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Jałowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4185,9 +4207,11 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
             <English>Burris XTR II (Old)</English>
+            <Polish>Burris XTR II (Stary)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
+            <Polish>Burris XTR II (ASP-1 Kir)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4236,9 +4260,11 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_lush">
             <English>EOTech XPS3 (Lush)</English>
+            <Polish>EOTech XPS3 (Leśny)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
+            <Polish>EOTech XPS3 (Jałowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>

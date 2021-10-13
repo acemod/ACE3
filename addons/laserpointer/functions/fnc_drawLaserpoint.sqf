@@ -22,7 +22,7 @@ params ["_target", "_range", "_isGreen", "_brightness"];
 
 private _unit = ACE_player;
 
-private _p0 = AGLToASL (_target modelToWorldVisual (_target selectionPosition "righthand"));
+private _p0 = _target modelToWorldVisualWorld (_target selectionPosition "righthand");
 
 // Find a system of orthogonal reference vectors
 // _v1 points in the direction of the weapon
