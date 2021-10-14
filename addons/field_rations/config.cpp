@@ -51,7 +51,10 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 
-    class XADDON: ADDON {};
+    class XADDON: ADDON {
+        units[] = {};
+        weapons[] = {};
+    };
 };
 
 #include "CfgEventHandlers.hpp"
