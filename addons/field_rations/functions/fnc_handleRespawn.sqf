@@ -21,5 +21,5 @@ TRACE_2("Handle Respawn",_unit,_corpse);
 
 if !(local _unit) exitWith {};
 
-_unit setVariable [QGVAR(thirst), 0];
-_unit setVariable [QGVAR(hunger), 0];
+_unit setVariable [QXGVAR(thirst), 0];
+_unit setVariable [QXGVAR(hunger), 0];

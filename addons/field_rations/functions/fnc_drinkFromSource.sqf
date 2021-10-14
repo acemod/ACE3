@@ -29,8 +29,8 @@ private _fnc_onSuccess = {
     _args params ["_player", "_source"];
 
     // Reduce player thirst
-    private _thirst = _player getVariable [QGVAR(thirst), 0];
-    _player setVariable [QGVAR(thirst), (_thirst - (DRINK_FROM_SOURCE_QUENCHED * XGVAR(thirstQuenched))) max 0];
+    private _thirst = _player getVariable [QXGVAR(thirst), 0];
+    _player setVariable [QXGVAR(thirst), (_thirst - (DRINK_FROM_SOURCE_QUENCHED * XGVAR(thirstQuenched))) max 0];
     _player setVariable [QGVAR(previousAnim), nil];
 
     // Update remaining water in source
