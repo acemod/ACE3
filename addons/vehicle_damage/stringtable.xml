@@ -4,9 +4,6 @@
         <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Damage_setting_enable">
-            <English>Enable</English>
-        </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
         </Key>
@@ -21,6 +18,21 @@
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_enable">
             <English>Enable/Disable Ammo Removal During Cook-Off</English>
+        </Key>
+        <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
+            <English>Wreck (Turret)</English>
+            <French>Épave (tourelle)</French>
+            <Spanish>Restos (torreta)</Spanish>
+            <Italian>Rottami (torretta)</Italian>
+            <Polish>Wrak (wieżyczka)</Polish>
+            <Russian>Обломки (башня)</Russian>
+            <German>Wrack (Geschützturm)</German>
+            <Czech>Vrak (věž)</Czech>
+            <Portuguese>Ruínas (torre)</Portuguese>
+            <Korean>잔해(포탑)</Korean>
+            <Japanese>残骸 (砲塔)</Japanese>
+            <Chinese>殘骸 (砲塔)</Chinese>
+            <Chinesesimp>残骸 (炮塔)</Chinesesimp>
         </Key>
     </Package>
 </Project>
