@@ -110,6 +110,10 @@
 `ace_interaction`
 {% endif %}
 
+{% if include.component == "field_rations" %}
+`ace_interact_menu`
+{% endif %}
+
 {% if include.component == "finger" %}
 `ace_common`
 {% endif %}
@@ -124,6 +128,10 @@
 
 {% if include.component == "fonts" %}
 `ace_main`
+{% endif %}
+
+{% if include.component == "fortify" %}
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "frag" %}
@@ -150,6 +158,10 @@
 `ace_interaction`, `ace_movement`
 {% endif %}
 
+{% if include.component == "headless" %}
+`ace_common`
+{% endif %}
+
 {% if include.component == "hearing" %}
 `ace_interaction`
 {% endif %}
@@ -170,6 +182,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "intelitems" %}
+`ace_interact_menu`, `ace_zeus`
+{% endif %}
+
 {% if include.component == "interact_menu" %}
 `ace_common`
 {% endif %}
@@ -188,6 +204,10 @@
 
 {% if include.component == "kestrel4500" %}
 `ACE_common`, `ACE_weather`
+{% endif %}
+
+{% if include.component == "killtracker" %}
+`ace_medical`
 {% endif %}
 
 {% if include.component == "laser" %}
@@ -418,6 +438,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "sitting" %}
+`ace_interaction`
+{% endif %}
+
 {% if include.component == "slideshow" %}
 `ace_common`
 {% endif %}
@@ -479,6 +503,14 @@
 {% endif %}
 
 {% if include.component == "viewdistance" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "viewrestriction" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "volume" %}
 `ace_common`
 {% endif %}
 
