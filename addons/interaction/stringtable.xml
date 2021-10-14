@@ -1246,5 +1246,9 @@
             <English>Warning: can cause some objects to collide with others.</English>
             <Russian>Внимание: может вызвать отталкивание некоторых объектов друг от друга.</Russian>
         </Key>
+        <Key ID="STR_ACE_Interaction_SettingAnimActionsName">
+            <English>Interaction with animations</English>
+            <Russian>Взаимодействие с анимациями</Russian>
+        </Key>
     </Package>
 </Project>

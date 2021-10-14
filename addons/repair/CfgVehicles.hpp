@@ -410,11 +410,6 @@ class CfgVehicles {
         GVAR(canRepair) = 1;
         transportRepair = 0;
     };
-    class Van_02_base_F;
-    class Van_02_service_base_F: Van_02_base_F { // OrangeDLC
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
 
     class Slingload_01_Base_F;
     class B_Slingload_01_Repair_F: Slingload_01_Base_F {
@@ -457,10 +452,33 @@ class CfgVehicles {
         GVAR(hitpointPositions)[] = {{"HitTurret", {0,-2,0}}};
     };
 
+    class Tank_F;
+    class APC_Tracked_02_base_F: Tank_F {
+        class EGVAR(interaction,anims) {
+            class showTracks {
+                phase = 0;
+                positions[] = {{-1.7,-3.875,-0.7}, {1.7,-3.875,-0.7}};
+                items[] = {"ACE_Track", "ACE_Track", "ACE_Track"};
+            };
+        };
+    };
+
     class Offroad_01_base_F;
     class Offroad_01_repair_base_F: Offroad_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
+    };
+
+    class Car_F: Car {
+        class HitPoints;
+    };
+    class Offroad_02_base_F: Car_F {
+        class EGVAR(interaction,anims) {
+            class hideSpareWheel {
+                selections[] = {"spare_wheel"};
+                items[] = {"ACE_Wheel"};
+            };
+        };
     };
 
     class B_Truck_01_mover_F;
@@ -483,9 +501,6 @@ class CfgVehicles {
         GVAR(canRepair) = 0;
     };
 
-    class Car_F: Car {
-        class HitPoints;
-    };
     class Truck_F: Car_F {
         class HitPoints: HitPoints {
             class HitLBWheel;
@@ -512,5 +527,18 @@ class CfgVehicles {
     };
     class Hatchback_01_base_F: Car_F {
         GVAR(hitpointPositions)[] = {{"HitBody", {0, 0.7, -0.5}}, {"HitFuel", {0, -1.75, -0.75}}};
+    };
+
+    class Van_02_base_F: Truck_F {
+        class EGVAR(interaction,anims) {
+            class spare_tyre_hide {
+                positions[] = {{-0.45,-3.5,-0.4}};
+                items[] = {"ACE_Wheel"};
+            };
+        };
+    };
+    class Van_02_service_base_F: Van_02_base_F { // OrangeDLC
+        GVAR(canRepair) = 1;
+        transportRepair = 0;
     };
 };
