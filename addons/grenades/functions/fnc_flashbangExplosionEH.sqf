@@ -79,7 +79,7 @@ _affected = _affected - [ACE_player];
                     [_unit, false] call EFUNC(common,disableAI);
                 };
                 {
-                    _unit setSkill [_x, ((_unit skill _x) * 50)];
+                    _unit setSkill [_x, (_unit skill _x) * 50];
                 } forEach SUBSKILLS;
             }, [_unit]] call CBA_fnc_waitUntilAndExecute;
         };
