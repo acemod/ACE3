@@ -1245,6 +1245,7 @@
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
             <Russian>Внимание: может вызвать отталкивание некоторых объектов друг от друга.</Russian>
+            <French>Attention : certains objets peuvent entrer en collision avec d'autres.</French>
         </Key>
     </Package>
 </Project>
