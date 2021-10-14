@@ -1,5 +1,5 @@
-PREP(canChangeCamera);
-PREP(changeCamera);
-PREP(moduleInit);
-PREP(selectiveChangeCamera);
-PREP(switchPreserveView);
+ACEX_PREP(canChangeCamera);
+ACEX_PREP(changeCamera);
+ACEX_PREP(moduleInit);
+ACEX_PREP(selectiveChangeCamera);
+ACEX_PREP(switchPreserveView);
