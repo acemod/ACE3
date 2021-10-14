@@ -118,6 +118,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "fire" %}
+`ace_common`, `ace_medical_engine`
+{% endif %}
+
 {% if include.component == "flashlights" %}
 `ace_interaction`
 {% endif %}
