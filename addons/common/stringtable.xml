@@ -1384,12 +1384,14 @@
             <German>Epilepsiefreundlicher Modus</German>
             <Japanese>けいれん回避モード</Japanese>
             <Polish>Tryb dla epileptyków</Polish>
+            <French>Mode adapté à l'épilepsie</French>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
             <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
             <Japanese>点滅する光エフェクトを無効化し、けいれんする恐れを低下させます。</Japanese>
             <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
+            <French>Désactive certains effets de lumière clignotante afin de réduire les risques de crise d'épilepsie.</French>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
