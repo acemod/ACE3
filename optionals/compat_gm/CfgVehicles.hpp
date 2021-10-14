@@ -121,21 +121,6 @@ class CfgVehicles {
     };
 
 
-    class gm_ge_army_shelteraceI_medic_base;
-    class gm_ge_army_shelteraceI_medic: gm_ge_army_shelteraceI_medic_base {
-        EGVAR(medical,medicClass) = 1;
-    };
-
-    class gm_ge_army_shelteraceII_medic_base;
-    class gm_ge_army_shelteraceII_medic: gm_ge_army_shelteraceII_medic_base {
-        EGVAR(medical,medicClass) = 1;
-    };
-
-    class gm_gc_army_shelterlakII_medic_base;
-    class gm_gc_army_shelterlakII_medic: gm_gc_army_shelterlakII_medic_base {
-        EGVAR(medical,medicClass) = 1;
-    };
-
     // W H E E L E D
 
     class gm_wheeled_base;
