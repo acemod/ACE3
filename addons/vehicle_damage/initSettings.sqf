@@ -1,6 +1,6 @@
 [
     QGVAR(enabled), "CHECKBOX",
-    [LSTRING(setting_enable), LSTRING(setting_description)],
+    [ELSTRING(common,Enabled), LSTRING(setting_description)],
     LSTRING(category_displayName),
     true, // default value
     true, // isGlobal
