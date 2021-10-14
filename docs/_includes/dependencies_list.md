@@ -498,6 +498,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "vehicle_damage" %}
+`ace_common`, `ace_cookoff`
+{% endif %}
+
 {% if include.component == "vehiclelock" %}
 `ace_interaction`
 {% endif %}
