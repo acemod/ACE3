@@ -42,21 +42,6 @@
             <Czech>Změní poškození ovládání a efekty výbuchu veže</Czech>
             <Polish>Zmienia obsługę obrażeń podczas samozapłonu i eksplozji wieży</Polish>
         </Key>
-        <Key ID="STR_ACE_CookOff_generic_turret_wreck">
-            <English>Wreck (Turret)</English>
-            <French>Épave (tourelle)</French>
-            <Spanish>Restos (torreta)</Spanish>
-            <Italian>Rottami (torretta)</Italian>
-            <Polish>Wrak (wieżyczka)</Polish>
-            <Russian>Обломки (башня)</Russian>
-            <German>Wrack (Geschützturm)</German>
-            <Czech>Vrak (věž)</Czech>
-            <Portuguese>Ruínas (torre)</Portuguese>
-            <Korean>잔해(포탑)</Korean>
-            <Japanese>残骸 (砲塔)</Japanese>
-            <Chinese>殘骸 (砲塔)</Chinese>
-            <Chinesesimp>残骸 (炮塔)</Chinesesimp>
-        </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook off</English>
             <Spanish>Habilitar detonación inducida por calor en las cajas de munición</Spanish>
@@ -174,6 +159,12 @@
             <Russian>Множитель коэффициента вероятности возгорания. Чем выше значение, тем выше вероятность.</Russian>
             <Portuguese>Multiplicador para a chance de cozinhamento. Valores mais altos aumentam as chances de ocorrer.</Portuguese>
             <Czech>Multiplikátor pro pravděpodobnost vznícení munice. Vyšší hodnota znamená vyšší šanci vznícení munice.</Czech>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableFire_name">
+            <English>Enable Cook-Off Vehicle Fire</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableFire_tooltip">
+            <English>Whether or not vehicles will catch on fire during cook-off</English>
         </Key>
     </Package>
 </Project>

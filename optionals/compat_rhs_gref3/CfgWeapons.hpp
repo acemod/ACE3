@@ -107,6 +107,14 @@ class CfgWeapons {
         ACE_barrelLength = 610.0;
     };
 
+    class rhs_weap_Izh18 : Rifle_Base_F {
+        ace_overheating_jamTypesAllowed = ["Fire","Dud"];
+    };
+
+    class rhs_weap_m79 : Rifle_Base_F {
+        ace_overheating_jamTypesAllowed = ["Fire","Dud"];
+    };
+
     CREATE_CSW_PROXY(rhs_weap_DSHKM);
 
     class Launcher;

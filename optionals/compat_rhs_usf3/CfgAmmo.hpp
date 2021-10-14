@@ -210,6 +210,118 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {340, 370, 400};
         ACE_barrelLengths[] = {101.6, 127.0, 228.6};
     };
+    
+    class Sh_125mm_APFSDS;
+    class rhsusf_ammo_basic_penetrator: Sh_125mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    
+    class rhs_ammo_ap_penetrator: Sh_125mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+
+    class Sh_120mm_APFSDS;
+    class rhs_ammo_M829: Sh_120mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+    
+    class rhs_ammo_M830: Sh_120mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    
+    class B_30mm_HE;
+    class RHS_ammo_M792_HEI: B_30mm_HE {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    
+    class rhs_ammo_mk19m3_M384;
+    class rhs_ammo_mk19m3_M430I: rhs_ammo_mk19m3_M384 {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    
+    class rhs_ammo_mk19m3_M430I_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    
+    class B_30mm_APFSDS_Tracer_Red;
+    class rhs_ammo_PGU14B_API: B_30mm_APFSDS_Tracer_Red {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    
+    class M_Titan_AT;
+    class rhs_ammo_TOW_AT: M_Titan_AT {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+
+    class rhs_ammo_127x99_Ball;
+    class rhs_ammo_127x99_Ball_AI: rhs_ammo_127x99_Ball {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    
+    class rhs_ammo_127x99_Ball_Tracer_Red;
+    class rhs_ammo_127x99_Ball_Tracer_Red_AI: rhs_ammo_127x99_Ball_Tracer_Red {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    
+    class rhs_ammo_127x99_SLAP;
+    class rhs_ammo_127x99_SLAP_AI: rhs_ammo_127x99_SLAP {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    
+    class rhs_ammo_127x99_SLAP_Tracer_Red;
+    class rhs_ammo_127x99_SLAP_Tracer_Red_AI: rhs_ammo_127x99_SLAP_Tracer_Red {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+
+    class rhs_ammo_12gHEAP_penetrator: BulletBase {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+    class rhs_ammo_M136_rocket;
+    class rhs_ammo_M136_hp_rocket: rhs_ammo_M136_rocket {
+        EGVAR(vehicle_damage,incendiary) = 0.5;
+    };
+    class rhsusf_40mm_HE;
+    class rhsusf_40mm_HEDP: rhsusf_40mm_HE {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    
+    class rhs_ammo_M136_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_M136_hp_penetrator: rhs_ammo_M136_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.5;
+    };
+    class rhs_ammo_M136_hedp_penetrator: rhs_ammo_M136_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    class rhs_ammo_M_fgm148_AT_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_smaw_HEAA_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_maaws_HEAT_penetrator: rhsusf_ammo_basic_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class RocketBase;
+    class rhs_ammo_maaws_HEDP: RocketBase {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    class rhs_ammo_maaws_HEDP_penetrator: rhs_ammo_M136_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    class rhs_ammo_maaws_HE: RocketBase {
+        EGVAR(vehicle_damage,incendiary) = 0.5;
+    };
+    class rhs_ammo_maaws_SMOKE: RocketBase {
+        EGVAR(vehicle_damage,incendiary) = 0;
+    };
+    class rhs_ammo_maaws_ILLUM: RocketBase {
+        EGVAR(vehicle_damage,incendiary) = 0;
+    };
+    class rhs_ammo_40mmHEDP_penetrator: rhs_ammo_12gHEAP_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
 
     class MissileBase;
     class rhs_ammo_M_fgm148_AT: MissileBase {
@@ -281,8 +393,6 @@ class CfgAmmo {
         ace_frag_skip = 0;
         ace_frag_force = 1;
     };
-    class RocketBase;
-    class rhs_ammo_M136_rocket: RocketBase {};
     class rhs_ammo_M136_hedp_rocket: rhs_ammo_M136_rocket {
         ace_frag_enabled = 1;
         ace_frag_metal = 330;
@@ -292,6 +402,13 @@ class CfgAmmo {
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
+        EGVAR(vehicle_damage,incendiary) = 0.8;
+    };
+    class rhs_ammo_m72a7_rocket: rhs_ammo_M136_hedp_rocket {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+        ace_frag_enabled = 0;
+        ace_frag_skip = 1;
+        ace_frag_force = 0;
     };
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;

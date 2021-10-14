@@ -667,6 +667,18 @@
             <Turkish>Ikisinden biri</Turkish>
             <German>Beide</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn">
+            <English>Thermal Burn</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
+            <English>Minor Thermal Burn</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
+            <English>Medium Thermal Burn</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
+            <English>Major Thermal Burn</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>
             <German>Schwelle für Schaden</German>

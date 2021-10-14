@@ -27,12 +27,37 @@ class CfgWeapons {
 };
 ```
 
-### 1.2 Custom jam clearing animation
+### 1.2 Custom jam types
+
+```cpp
+class CfgWeapons {
+    class Pistol_Base_F;
+    class MyRevolver : Pistol_Base_F {
+        ace_overheating_jamTypesAllowed = ["Fire","Dud"]; //Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot to those values are removed.
+    };
+```
+### 1.3 Custom jam clearing animation
 
 ```cpp
 class CfgWeapons {
     class MyMG {
         ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
+    };
+};
+```
+
+### 1.4 Cook Off
+
+```cpp
+class CfgWeapons {
+    class Rifle_Long_Base_F ;
+
+    class MySniper : Rifle_Long_Base_F {
+        ace_overheating_closedBolt = 1; // Closed bolt, can cook off from barrel heat.
+    };
+
+    class MyMG : Rifle_Long_Base_F {
+        ace_overheating_closedBolt = 0; // Open bolt, can only cook off on failure to fire type jams.
     };
 };
 ```

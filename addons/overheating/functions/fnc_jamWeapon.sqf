@@ -21,24 +21,45 @@ TRACE_2("params",_unit,_weapon);
 
 // don't jam a weapon with no rounds left
 private _ammo = _unit ammo _weapon;
-if (_ammo == 0) exitWith {};
+if (_ammo < 1) exitWith {};
 
 private _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];
 _jammedWeapons pushBack _weapon;
 
 _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 
+// Get jam types, select one from available types
+// Cookoffs only happen on Fire and Dud, dud rounds are lost on jam clear.
+// Reduce chance of duds as temp increases (functionally increasing the chance of the others but with fewer commands)
+private _temp = 1 max (_unit getVariable [format [QGVAR(%1_temp), _weapon], 0]);
+private _jamTypesAllowed = getArray (configFile >> 'CfgWeapons' >> currentWeapon _player >> QGVAR(jamTypesAllowed));
 
+if (_jamTypesAllowed == []) then {
+    _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
+} else {
+    for "_i" from count _jamTypesAllowed to 1 step -1 do {
+        private _jamCurretType = _jamTypesAllowed select _i;
+        if !(_jamCurretType in ["Eject", "Extract", "Feed", "Fire", "Dud"]) exitWith { // check config values and switch to default values if unusual value found
+            ERROR_2("Weapon '%1' has unexpected value %2 in QQGVAR(jamTypesAllowed). Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.",_weapon,_jamCurretType);
+            _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
+        };
+        if (_jamCurretType == "Dud") then {
+            _jamTypesAllowed insert [_i, [5 / (_temp / 5)]];
+        } else {
+            _jamTypesAllowed insert [_i, [1]];
+        };
+    };
+};
+
+_unit setVariable [format [QGVAR(%1_jamType), _weapon], selectRandomWeighted _jamTypesAllowed];
 
 // Stop current burst
-if (_ammo > 0) then {
-    _unit setAmmo [_weapon, 0];
-    // this is to re-activate the 'DefaultAction', so you can jam a weapon while full auto shootin
-    [{
-        params ["_unit", "_weapon", "_ammo"];
-        _unit setAmmo [_weapon, _ammo];
-    }, [_unit, _weapon, _ammo]] call CBA_fnc_execNextFrame;
-};
+_unit setAmmo [_weapon, 0];
+// this is to re-activate the 'DefaultAction', so you can jam a weapon while full auto shooting
+[{
+    params ["_unit", "_weapon", "_ammo"];
+    _unit setAmmo [_weapon, _ammo];
+}, [_unit, _weapon, _ammo]] call CBA_fnc_execNextFrame;
 
 if (_weapon == primaryWeapon _unit) then {
     playSound QGVAR(jamming_rifle);
@@ -53,20 +74,32 @@ GVAR(knowAboutJam) = false;
 
 ["ace_weaponJammed", [_unit,_weapon]] call CBA_fnc_localEvent;
 
-
 if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
 
     private _condition = {
-        [_this select 1] call CBA_fnc_canUseWeapon
-        && {currentMuzzle (_this select 1) in ((_this select 1) getVariable [QGVAR(jammedWeapons), []])}
-        && {!(currentMuzzle (_this select 1) in ((_this select 1) getVariable [QEGVAR(safemode,safedWeapons), []]))}
+        private _unit = _this select 1;
+        [_unit] call CBA_fnc_canUseWeapon
+        && {currentMuzzle _unit in (_unit getVariable [QGVAR(jammedWeapons), []])}
+        && {!(currentMuzzle _unit in (_unit getVariable [QEGVAR(safemode,safedWeapons), []]))}
     };
 
     private _statement = {
-        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _this select 0, false, eyePos (_this select 0), 1, 1, 15];
+        params ["_zero","_one"];
 
-        if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {(_this select 1) ammo currentWeapon (_this select 1) > 0} && {GVAR(DisplayTextOnJam)}) then {
-            [localize LSTRING(WeaponJammed)] call EFUNC(common,displayTextStructured);
+        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _zero, false, eyePos _zero, 1, 1, 15];
+
+        if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {_one ammo currentWeapon _one > 0} && {GVAR(DisplayTextOnJam)}) then {
+            private _jamType = _one getVariable [format [QGVAR(%1_jamType), currentWeapon _one], "None"];
+            private _jamMessage = localize LSTRING(FailureToFire);
+            switch true do {
+                case (_jamType isEqualTo "Eject"): {_jamMessage = localize LSTRING(FailureToEject)};
+                case (_jamType isEqualTo "Extract"): {_jamMessage = localize LSTRING(FailureToExtract)};
+                case (_jamType isEqualTo "Feed"): {_jamMessage = localize LSTRING(FailureToFeed)};
+            };
+            [
+                [localize LSTRING(WeaponJammed)],
+                [_jamMessage]
+            ] call CBA_fnc_notify;
             GVAR(knowAboutJam) = true;
         };
     };
