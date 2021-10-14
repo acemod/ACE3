@@ -9,7 +9,7 @@ if !(hasInterface) exitWith {};
     // Add Advanced Fatigue duty factor
     if (XGVAR(affectAdvancedFatigue) && {missionNamespace getVariable [QEGVAR(advanced_fatigue,enabled), false]}) then {
         [QUOTE(ADDON), {
-            linearConversion [50, 100, _this getVariable [QGVAR(thirst), 0], 1, 1.4, true] * linearConversion [50, 100, _this getVariable [QGVAR(hunger), 0], 1, 1.1, true]
+            linearConversion [50, 100, _this getVariable [QXGVAR(thirst), 0], 1, 1.4, true] * linearConversion [50, 100, _this getVariable [QXGVAR(hunger), 0], 1, 1.1, true]
         }] call EFUNC(advanced_fatigue,addDutyFactor);
         TRACE_1("Added duty factor",XGVAR(affectAdvancedFatigue));
     };
@@ -136,7 +136,7 @@ if !(hasInterface) exitWith {};
     [FUNC(update), CBA_missionTime + MP_SYNC_INTERVAL, 1] call CBA_fnc_waitAndExecute;
 
     #ifdef DEBUG_MODE_FULL
-        ["ACE_player thirst", {ACE_player getVariable [QGVAR(thirst), 0]}, [true, 0, 100]] call EFUNC(common,watchVariable);
-        ["ACE_player hunger", {ACE_player getVariable [QGVAR(hunger), 0]}, [true, 0, 100]] call EFUNC(common,watchVariable);
+        ["ACE_player thirst", {ACE_player getVariable [QXGVAR(thirst), 0]}, [true, 0, 100]] call EFUNC(common,watchVariable);
+        ["ACE_player hunger", {ACE_player getVariable [QXGVAR(hunger), 0]}, [true, 0, 100]] call EFUNC(common,watchVariable);
     #endif
 }] call CBA_fnc_addEventHandler;

@@ -83,13 +83,13 @@ private _fnc_onSuccess = {
 
     // Handle thirst and hunger values
     if (_thirstQuenched > 0) then {
-        private _thirst = _player getVariable [QGVAR(thirst), 0];
-        _player setVariable [QGVAR(thirst), (_thirst - _thirstQuenched) max 0];
+        private _thirst = _player getVariable [QXGVAR(thirst), 0];
+        _player setVariable [QXGVAR(thirst), (_thirst - _thirstQuenched) max 0];
     };
 
     if (_hungerSatiated > 0) then {
-        private _hunger = _player getVariable [QGVAR(hunger), 0];
-        _player setVariable [QGVAR(hunger), (_hunger - _hungerSatiated) max 0];
+        private _hunger = _player getVariable [QXGVAR(hunger), 0];
+        _player setVariable [QXGVAR(hunger), (_hunger - _hungerSatiated) max 0];
     };
 
     ["acex_rationConsumed", [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated]] call CBA_fnc_localEvent;

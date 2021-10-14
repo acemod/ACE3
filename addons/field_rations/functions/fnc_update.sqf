@@ -30,8 +30,8 @@ if (!alive _player || {_player isKindOf "VirtualMan_F"}) exitWith {
 };
 
 // Get current thirst and hunger
-private _thirst = _player getVariable [QGVAR(thirst), 0];
-private _hunger = _player getVariable [QGVAR(hunger), 0];
+private _thirst = _player getVariable [QXGVAR(thirst), 0];
+private _hunger = _player getVariable [QXGVAR(hunger), 0];
 
 // Determine base change based on work multiplier
 private _currentWork = 1;
@@ -60,8 +60,8 @@ if (CBA_missionTime >= _nextMpSync) then {
 };
 
 // Set new thirst and hunger values
-_player setVariable [QGVAR(thirst), _thirst, _doSync];
-_player setVariable [QGVAR(hunger), _hunger, _doSync];
+_player setVariable [QXGVAR(thirst), _thirst, _doSync];
+_player setVariable [QXGVAR(hunger), _hunger, _doSync];
 
 // Handle any effects/consequences of high thirst or hunger
 [_player, _thirst, _hunger] call FUNC(handleEffects);

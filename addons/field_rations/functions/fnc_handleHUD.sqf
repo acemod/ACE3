@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params [["_thirst", ACE_player getVariable [QGVAR(thirst), 0]], ["_hunger", ACE_player getVariable [QGVAR(hunger), 0]]];
+params [["_thirst", ACE_player getVariable [QXGVAR(thirst), 0]], ["_hunger", ACE_player getVariable [QXGVAR(hunger), 0]]];
 
 private _display = uiNamespace getVariable [QGVAR(hudDisplay), displayNull];
 

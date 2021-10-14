@@ -1,8 +1,8 @@
-PREP(addSitActions);
-PREP(canSit);
-PREP(canStand);
-PREP(getRandomAnimation);
-PREP(handleInterrupt);
-PREP(moduleInit);
-PREP(sit);
-PREP(stand);
+ACEX_PREP(addSitActions);
+ACEX_PREP(canSit);
+ACEX_PREP(canStand);
+ACEX_PREP(getRandomAnimation);
+ACEX_PREP(handleInterrupt);
+ACEX_PREP(moduleInit);
+ACEX_PREP(sit);
+ACEX_PREP(stand);
