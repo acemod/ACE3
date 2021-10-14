@@ -35,18 +35,23 @@
         </Key>
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
+            <French>Renommé en :&lt;br/&gt;%1</French>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
+            <French>Le nom personnalisé a été supprimé.</French>
         </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
+            <French>Définir un nouveau nom :</French>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
+            <French>Possibilité de renommage</French>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
+            <French>Active la possibilité de donner un nom personnalisé aux objets transportables (si renommables).</French>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -256,9 +261,11 @@
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
+            <French>Nom personnalisé</French>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
+            <French>Définit un nom de fret personnalisé qui sera visible dans le menu de cargaison.</French>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
