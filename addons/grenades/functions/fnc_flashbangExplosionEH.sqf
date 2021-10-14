@@ -64,7 +64,7 @@ _affected = _affected - [ACE_player];
             // Not used interally but could be useful for other mods
             _unit setVariable [QGVAR(flashStrength), _strength, true];
             {
-                _unit setSkill [_x, ((_unit skill _x) / 50)];
+                _unit setSkill [_x, (_unit skill _x) / 50];
             } forEach SUBSKILLS;
             [{
                 params ["_unit"];
