@@ -534,6 +534,10 @@
 `ace_common`, `ace_ai`
 {% endif %}
 
+{% if include.component == "compat_gm" %}
+`ace_csw`, `ace_explosives`, `ace_rearm`, `ace_refuel`, `ace_repair`, `gm_core`
+{% endif %}
+
 {% if include.component == "compat_r3f" %}
 `r3f_armes_c`, `r3f_acc`, `R3F_G17_addons`, `R3F_G_SCAR`, `R3F_SCAR_H`, `R3F_SCAR_L`, `R3F_FN_MAG`
 {% endif %}
