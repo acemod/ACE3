@@ -59,7 +59,7 @@ layout: compress
         <section class="medium-8 medium-pull-4 small-12 columns">
             <h1>{{page.title}}</h1>
 
-            {% if page.mod == 'acex' %}
+            {% if page.mod == 'acex' and page.group == 'framework' %}
                 <div class="panel callout">
                     <p>Component may use <kbd>acex</kbd> prefix in certain variables, events and class names for backwards compatibility!</p>
                 </div>
