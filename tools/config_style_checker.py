@@ -130,7 +130,7 @@ def check_config_style(filepath):
                     print(f"WARNING: bad class colon {filepath} Line number: {lineNumber}")
                     # bad_count_file += 1
                 if not reClassSingleLine.match(line):
-                    print(f"ERROR: bad class braces placement {filepath} Line number: {lineNumber+1}")
+                    print(f"WARNING: bad class braces placement {filepath} Line number: {lineNumber+1}")
                     # bad_count_file += 1
 
     return bad_count_file
