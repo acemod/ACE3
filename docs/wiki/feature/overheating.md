@@ -34,7 +34,7 @@ Adds the ability to changes barrels on machine guns to compensate for those effe
 
 ### 2.1 Clearing a jammed weapon
 
-- Jams can be cleared in the following ways:
+Jams can be cleared in the following ways:
 - Press <kbd>SHIFT</kbd> + <kbd>R</kbd> (ACE3 default key bind `Clear jam`).
 - Press self interaction <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Self Interaction Key`), select `Equipment`, select 'Clear Jam'
 - Reload (setting dependant)
