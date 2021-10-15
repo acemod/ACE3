@@ -10,6 +10,7 @@ version:
   major: 3
   minor: 0
   patch: 0
+redirect_from: "/wiki/featurex/headless.html"
 ---
 
 ## 1. Overview
@@ -18,4 +19,4 @@ Enables automatic passing of AI groups to (up to 3) Headless Clients using round
 
 ## 2. Dependencies
 
-{% include dependenciesx_list.md component="headless" %}
+{% include dependencies_list.md component="headless" %}

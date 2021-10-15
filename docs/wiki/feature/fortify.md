@@ -10,6 +10,7 @@ version:
   major: 3
   minor: 3
   patch: 0
+redirect_from: "/wiki/featurex/fortify.html"
 ---
 
 ## 1. Overview
@@ -38,4 +39,4 @@ Please note that to use this function the Fortify module needs to be placed down
 
 ## 4. Dependencies
 
-{% include dependenciesx_list.md component="fortify" %}
+{% include dependencies_list.md component="fortify" %}
