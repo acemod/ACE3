@@ -73,7 +73,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(simplifedZeroing), "CHECKBOX",
+    QGVAR(simplifiedZeroing), "CHECKBOX",
     [LSTRING(simplifiedZeroing_displayName), LSTRING(simplifiedZeroing_description)],
     _category,
     false,
