@@ -11,7 +11,7 @@ class cfgMagazines {
     class rhs_mag_127x108mm_150: rhs_mag_127x108mm_50 {
         ace_isbelt = 0;
     };
-    class rhs_mag_127x108mm_1470 : rhs_mag_127x108mm_50 {
+    class rhs_mag_127x108mm_1470: rhs_mag_127x108mm_50 {
         ace_isbelt = 0;
     };
     class RHS_mag_VOG30_30: VehicleMagazine {
