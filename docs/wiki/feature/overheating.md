@@ -16,7 +16,7 @@ version:
 
 ### 1.1 Weapon Jamming
 
-Adds a probability to jam a weapon when firing. The hotter a weapon gets the more likely a jam is to occur.
+Adds a probability to jam a weapon when firing. The hotter a weapon gets, the more likely a jam is to occur.
 
 ### 1.2 Temperature simulation
 
