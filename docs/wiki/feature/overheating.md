@@ -28,7 +28,7 @@ Hot weapons can also cause chambered ammunition to spontaneously ignite. The hig
 
 ### 1.4 Spare barrels
 
-Adds the ability to changes barrels on machine guns to compensate for those effects. When a barrel is changed the coolest barrel avaialble is always selected.
+Adds the ability to change barrels on machine guns to compensate for those effects. When a barrel is changed, the coolest barrel available is always selected.
 
 ## 2. Usage
 
