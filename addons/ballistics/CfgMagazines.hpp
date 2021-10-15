@@ -671,7 +671,7 @@ class CfgMagazines {
         initSpeed = 254;
     };
 
-    class 6Rnd_45ACP_Cylinder : 11Rnd_45ACP_Mag {
+    class 6Rnd_45ACP_Cylinder: 11Rnd_45ACP_Mag {
         initSpeed = 254;
     };
 
