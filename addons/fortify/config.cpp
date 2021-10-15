@@ -2,8 +2,8 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
-        weapons[] = {};
+        units[] = {QXGVAR(setupModule), QXGVAR(buildLocationModule)};
+        weapons[] = {"ACE_Fortify"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
