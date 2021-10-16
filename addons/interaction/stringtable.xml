@@ -326,14 +326,17 @@
         <Key ID="STR_ACE_Interaction_RenameGroup">
             <English>Rename Group</English>
             <Japanese>グループ名変更</Japanese>
+            <French>Renommer le groupe</French>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
             <Japanese>このグループ名は既に使われています。</Japanese>
+            <French>Ce nom de groupe est déjà attribué.</French>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
             <Japanese>新しいグループ名:</Japanese>
+            <French>NOUVEAU NOM DE GROUPE :</French>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -1242,10 +1245,12 @@
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
             <English>Allow group rename</English>
             <Japanese>グループ名変更を許可</Japanese>
+            <French>Permettre le renommage de groupe</French>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
             <Japanese>グループ リーダーによるグループ名の変更を許可します。</Japanese>
+            <French>Cette option permet aux chefs de groupe de modifier le nom de leur groupe.</French>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
