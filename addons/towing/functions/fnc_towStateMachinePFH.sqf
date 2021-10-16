@@ -20,7 +20,7 @@ _args params ["_state", "_unit", "_parent", "_rope", "_length", "_ropeClass"];
 
 private _exitCondition = !(
     (alive GVAR(attachHelper)) &&
-    { alive _target } &&
+    { alive _parent } &&
     { alive _unit } &&
     { "" isEqualTo currentWeapon _unit || { _unit call EFUNC(common,isSwimming) }} &&
     { [_unit, objNull, [INTERACTION_EXCEPTIONS]] call EFUNC(common,canInteractWith) } &&
