@@ -28,9 +28,7 @@ private _closingVelocity = _targetVelocity vectorDiff velocity _projectile;
 private _targetAccelerationProjected = _attackProfileDirection vectorMultiply (_targetAcceleration vectorDotProduct _attackProfileDirection);
 _targetAcceleration = _targetAcceleration vectorDiff _targetAccelerationProjected;
 
-// the los rate is tiny, so we multiply by a constant of a power of ten to get more aggressive acceleration
-// this is just due to how we measure our LOS delta, the vectors involved are _tiny_
-private _losDelta = _attackProfileDirection vectorDiff _lastLineOfSight;
+private _losDelta = (vectorNormalized _attackProfileDirection) vectorDiff (vectorNormalized _lastLineOfSight);
 private _losRate = if (_timestep == 0) then {
     0
 } else {

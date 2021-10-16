@@ -146,7 +146,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         // bastardized version of direction stability https://en.wikipedia.org/wiki/Directional_stability#Steering_forces
         private _forceYaw = _stabilityCoefficient * _velocityAngleYaw + _clampedYaw;
         private _forcePitch = _stabilityCoefficient * _velocityAnglePitch + _clampedPitch;
-
+        
         _pitch = _pitch + _forcePitch * _timestep;
         _yaw = _yaw + _forceYaw * _timestep;
 
