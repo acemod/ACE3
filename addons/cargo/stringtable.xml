@@ -35,22 +35,27 @@
         </Key>
         <Key ID="STR_ACE_Cargo_renamedObject">
             <English>Renamed to:&lt;br/&gt;%1</English>
+            <Japanese>名前を次に変更:&lt;br/&gt;%1</Japanese>
             <French>Renommé en :&lt;br/&gt;%1</French>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
+            <Japanese>カスタム名が削除されました。</Japanese>
             <French>Le nom personnalisé a été supprimé.</French>
         </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
+            <Japanese>新しい名前:</Japanese>
             <French>Définir un nouveau nom :</French>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
+            <Japanese>名前変更を有効化</Japanese>
             <French>Possibilité de renommage</French>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
+            <Japanese>名前変更が可能なオブジェクトに対して、名前変更動作を有効化します。</Japanese>
             <French>Active la possibilité de donner un nom personnalisé aux objets transportables (si renommables).</French>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
@@ -261,10 +266,12 @@
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
+            <Japanese>カスタム名</Japanese>
             <French>Nom personnalisé</French>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
+            <Japanese>カーゴ欄で使われるカスタム名を設定します。</Japanese>
             <French>Définit un nom de fret personnalisé qui sera visible dans le menu de cargaison.</French>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
@@ -418,10 +425,12 @@
         <Key ID="STR_ACE_Cargo_openAfterUnload">
             <English>Reopen Cargo Menu</English>
             <Turkish>Kargo Menüsünü Tekrar Aç</Turkish>
+            <Japanese>カーゴ メニューを再度開く</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
             <English>Reopen the Cargo Menu after successful unload.</English>
             <Turkish>Başarılı bir yük indirmeden sonra Kargo Menüsünü tekrar göster.</Turkish>
+            <Japanese>カーゴを降ろした後に再びカーゴ メニューを開きます。</Japanese>
         </Key>
     </Package>
 </Project>

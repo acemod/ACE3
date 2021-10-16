@@ -157,7 +157,7 @@ class CfgWeapons {
         ACE_twistDirection = 0;
         ACE_barrelLength = 508.0;
     };
-    class rhs_weap_m32_Base_F : Rifle_Base_F {
+    class rhs_weap_m32_Base_F: Rifle_Base_F {
         ace_overheating_jamTypesAllowed = ["Fire","Dud"];
     };
     class SMG_02_base_F;

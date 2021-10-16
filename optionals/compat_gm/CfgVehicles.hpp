@@ -350,8 +350,7 @@ class CfgVehicles {
         EGVAR(fastroping,enabled) = 0;
 
         class UserActions {
-                class openDoor_L
-                {
+                class openDoor_L {
                     displayNameDefault = "Open left Door";
                     displayName = "Open left Door";
                     position = "";
@@ -361,16 +360,14 @@ class CfgVehicles {
                     statement = "this animateDoor ['door_2_1_source',1]";
                 };
 
-                class openDoor_R: openDoor_L
-                {
+                class openDoor_R: openDoor_L {
                     displayNameDefault = "Open right Door";
                     displayName = "Open right Door";
                     condition = QUOTE((this animationSourcePhase 'door_2_2_unhide' > 0.5) && (this doorPhase 'door_2_2_source' < 0.5) && {alive this} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});
                     statement = "this animateDoor ['door_2_2_source',1]";
                 };
 
-                class closeDoor_L
-                {
+                class closeDoor_L {
                     displayNameDefault = "Close left Door";
                     displayName = "Close left Door";
                     position = "";
@@ -380,8 +377,7 @@ class CfgVehicles {
                     statement = "this animateDoor ['door_2_1_source',0]";
                 };
 
-                class closeDoor_R: closeDoor_L
-                {
+                class closeDoor_R: closeDoor_L {
                     displayNameDefault = "Close right Door";
                     displayName = "Close right Door";
                     condition = QUOTE((this animationSourcePhase 'door_2_2_unhide' > 0.5) && (this doorPhase 'door_2_2_source' > 0.5) && {alive this} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});

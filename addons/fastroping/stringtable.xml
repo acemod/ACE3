@@ -167,6 +167,7 @@
             <Czech>Připravit 3m lana</Czech>
             <Turkish>3m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 3m</Spanish>
+            <Japanese>3m ロープを展開</Japanese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes6">
             <English>Deploy 6m ropes</English>
@@ -179,6 +180,7 @@
             <Czech>Připravit 6m lana</Czech>
             <Turkish>6m halat sal</Turkish>
             <Spanish>Desplegar cuerdas de 6m</Spanish>
+            <Japanese>6m ロープを展開</Japanese>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>

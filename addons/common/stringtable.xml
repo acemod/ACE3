@@ -1473,18 +1473,23 @@
         <Key ID="STR_ACE_Common_both">
             <English>Both</English>
             <Turkish>İkisi de</Turkish>
+            <Japanese>両方</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
+            <Japanese>プログレス バー詳細情報</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
+            <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
+            <Japanese>パーセンテージ</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
+            <Japanese>残り時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
@@ -1520,6 +1525,7 @@
         </Key>
         <Key ID="STR_ACE_Common_TimeLeft">
             <English>Time left: %1s</English>
+            <Japanese>残り時間: %1 秒</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
