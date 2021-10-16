@@ -192,10 +192,12 @@
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
                 <English>Enable Fracture/Tourniquet/Splint Indicators</English>
                 <Russian>Включить индикаторы переломов/жгутов/шин</Russian>
+                <Japanese>骨折/止血帯の表記を有効化</Japanese>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
                 <Russian>Включает индикацию переломов, наложенных шин и жгутов поверх индикатора положения тела.</Russian>
+                <Japanese>体勢インジケータに骨折や添え木、止血帯の有無を表示するかどうかを設定できます。</Japanese>
             </Key>
         </Container>
     </Package>
