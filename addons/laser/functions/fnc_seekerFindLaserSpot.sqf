@@ -95,7 +95,7 @@ private _finalOwner = objNull;
             };
         };
     };
-} forEach (GVAR(laserEmitters) select 2); // Go through all values in hash
+} forEach (values GVAR(laserEmitters)); // Go through all values in hash
 
 TRACE_2("",count _spots, _spots);
 
@@ -154,7 +154,7 @@ if ((count _spots) > 0) then {
     } forEach _buckets;
 
     private _finalBucket = _finalBuckets select _largestIndex;
-    private _ownersHash = createHashMap;
+    private _ownersHash = [] call CBA_fnc_hashCreate; // key is set as object, cant use engine hash map
 
     TRACE_2("",_finalBucket,_finalBuckets);
 
@@ -164,8 +164,12 @@ if ((count _spots) > 0) then {
         {
             _x params ["_xPos", "_owner"];
             _finalPos = _finalPos vectorAdd _xPos;
-            private _count = _ownersHash getOrDefault [_owner, 0];
-            _ownersHash set [_owner, _count + 1];
+            if ([_ownersHash, _owner] call CBA_fnc_hashHasKey) then {
+                private _count = [_ownersHash, _owner] call CBA_fnc_hashGet;
+                [_ownersHash, _owner, _count + 1] call CBA_fnc_hashSet;
+            } else {
+                [_ownersHash, _owner, 1] call CBA_fnc_hashSet;
+            };
         } forEach _finalBucket;
 
         _finalPos = _finalPos vectorMultiply (1 / (count _finalBucket));
