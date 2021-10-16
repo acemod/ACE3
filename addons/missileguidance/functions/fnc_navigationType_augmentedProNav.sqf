@@ -47,4 +47,4 @@ if (accTime > 0) then {
     _navigationParams set [0, [_seekerTargetPos, _targetVelocity, _attackProfileDirection]];
 };
 
-_commandedAcceleration
+_commandedAcceleration vectorMultiply _timestep
