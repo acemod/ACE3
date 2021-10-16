@@ -279,60 +279,79 @@
             <French>Affiche uniquement les pointages effectués par des unités qui sont du même camp, ou d'un camp allié.</French>
             <Japanese>友軍ユニットのみからジェスチャーを表示します。</Japanese>
             <Spanish>Muestra únicamente gestos de las unidades que son del mismo bando o de un bando aliado</Spanish>
+            <Polish>Pokazuj tylko Gesty od jednostek z tej samej lub sojuszniczej strony</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_displayName">
             <English>Max range Camera</English>
+            <Russian>Макс. дальность действия камеры</Russian>
             <French>Portée de la caméra</French>
             <Japanese>カメラ最大範囲</Japanese>
             <Spanish>Máximo alcance de cámara</Spanish>
+            <Polish>Maksymalny zasięg kamery</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_description">
             <English>Max range between a Camera and players to show the map gesture indicator</English>
+            <Russian>Устанавливает макс. дальность между игроком и камерой для отображения жестов на карте</Russian>
             <French>Définit le rayon au-delà duquel une caméra ne verra plus l'indicateur de pointage des autres joueurs.</French>
             <Japanese>プレイヤーが行うマップ ジェスチャーをカメラから確認できる最大範囲を設定します。</Japanese>
             <Spanish>Máxima distancia entre una cámara y los jugadores para mostrar el indicador de gestos en mapa</Spanish>
+            <Polish>Maksymalny zasięg pomiędzy kamerą a graczami do pokazania gestów na mapie</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_displayName">
             <English>Allow Spectator</English>
+            <Russian>Разрешить видеть в спектаторе</Russian>
             <French>Autoriser les spectateurs</French>
             <Japanese>スペクテイターに許可</Japanese>
             <Spanish>Permitir espectador</Spanish>
+            <Polish>Zezwól na Obserwatora</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_description">
             <English>Allows Spectator to See Map Gestures</English>
+            <Russian>Позволяет наблюдателю видеть жесты на карте</Russian>
             <French>Permet aux spectateurs de voir le pointage des autres joueurs.</French>
             <Japanese>スペクテイターからマップ ジェスチャーを表示できるようにします。</Japanese>
             <Spanish>Permitir al espectador ver los gestos de mapa</Spanish>
+            <Polish>Zezwól Obserwatorowi widzieć Gesty na mapie</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_displayName">
             <English>Allow Curator</English>
+            <Russian>Разрешить куратору</Russian>
             <French>Autoriser les curateurs</French>
             <Japanese>キュレーターに許可</Japanese>
             <Spanish>Permitir Curador</Spanish>
+            <Polish>Zezwól na Zeusa</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_description">
             <English>Allows Curator to See Map Gestures</English>
+            <Russian>Позволяет куратору видеть жесты на карте</Russian>
             <French>Permet aux curateurs de voir le pointage des autres joueurs.</French>
             <Japanese>キュレーターからマップ ジェスチャーを表示できるようにします。</Japanese>
             <Spanish>Permitir al Curador ver los gestos de mapa</Spanish>
+            <Polish>Zezwól Zeusowi widzieć gesty na mapie</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_displayName">
             <English>Briefing Mode</English>
+            <Russian>Режим брифинга</Russian>
             <French>Visibilité lors du briefing</French>
             <Japanese>ブリーフィング モード</Japanese>
             <Spanish>Modo de briefing</Spanish>
+            <Polish>Tryb Odprawy</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_description">
             <English>What player can see what</English>
+            <Russian>Определяет, какая группа игроков может видеть жесты на карте во время брифинга</Russian>
             <French>Définit quels pointages les joueurs peuvent voir lors du briefing.</French>
             <Japanese>プレイヤーが見ることができる対象を決定します。</Japanese>
             <Spanish>Qué puede ver cada jugador</Spanish>
+            <Polish>Co mogą widzieć gracze</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Disabled">
             <English>Disabled</English>
+            <Russian>Отключить</Russian>
             <French>Pointage désactivé</French>
             <Japanese>無効化</Japanese>
             <Spanish>Deshabilitado</Spanish>
+            <Polish>Zablokowany</Polish>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Group">
             <English>Group</English>
@@ -360,6 +379,7 @@
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_Proximity">
             <English>Proximity</English>
+            <Russian>Все, кто рядом</Russian>
             <French>Proximité</French>
             <Japanese>付近のみ</Japanese>
             <Spanish>Proximidad</Spanish>

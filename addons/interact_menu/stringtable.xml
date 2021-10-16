@@ -494,12 +494,14 @@
             <Russian>Объединять с единственным дочерним действием</Russian>
             <Japanese>サブ動作を統合</Japanese>
             <Spanish>Consolidar acciones hijo únicas</Spanish>
+            <French>Combiner les sous-actions uniques</French>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
             <English>Combines parent action with only one child action together.</English>
             <Russian>Объединять родительское действие с единственным дочерним действием в одно.</Russian>
             <Japanese>メインの動作とサブ動作一つを統合して表示します。</Japanese>
             <Spanish>Combina acciones padre con una única accion hijo de forma conjunta</Spanish>
+            <French>Lorsqu'un menu ne contient qu'une seule sous-action, elle est combinée avec son menu parent.</French>
         </Key>
     </Package>
 </Project>

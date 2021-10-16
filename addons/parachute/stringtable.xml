@@ -135,6 +135,10 @@
         </Key>
         <Key ID="STR_ACE_Parachute_FailureChance">
             <English>Parachute Failure Chance</English>
+            <Russian>Вероятность отказа парашюта</Russian>
+            <French>Chance de défaillance du parachute</French>
+            <Japanese>開傘失敗率</Japanese>
+            <Polish>Szansa na nieotwarcie się spadochronu</Polish>
         </Key>
     </Package>
 </Project>

@@ -303,6 +303,13 @@ class CfgVehicles {
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
+                class ACE_RenameGroup {
+                    displayName = CSTRING(RenameGroup);
+                    condition = QUOTE(_player call FUNC(canRenameGroup));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    statement = QUOTE(_player call FUNC(renameGroupUI));
+                    showDisabled =1;
+                };
             };
 
             class ACE_Equipment {
@@ -628,7 +635,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_OpenBox {
                     displayName = CSTRING(OpenBox);
-                    condition = QUOTE((alive _target) && {(getNumber (configOf _target >> 'disableInventory')) == 0});
+                    condition = QUOTE(alive _target && {!lockedInventory _target} && {getNumber (configOf _target >> 'disableInventory') == 0});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
                     showDisabled = 0;
                 };

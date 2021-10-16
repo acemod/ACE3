@@ -894,14 +894,8 @@
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName">
             <English>M6 SLAM Mine (Bottom Attack)</English>
-            <!-- <Czech>Mina M6 SLAM</Czech> -->
-            <French>/!\ Module obsolète /!\ - Mine M6 SLAM (par le bas)</French>
+            <French>Mine M6 SLAM (par le bas)</French>
             <German>M6-SLAM-Mine (Bodenangriff)</German>
-            <!-- <Italian>Mina M6 SLAM</Italian> -->
-            <!-- <Polish>Mina M6 SLAM</Polish> -->
-            <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
-            <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
-            <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od dołu)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Inferior)</Spanish>
             <Italian>Mina M6 SLAM (base)</Italian>
@@ -915,14 +909,8 @@
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
-            <!-- <Czech>Mina M6 SLAM</Czech> -->
-            <French>/!\ Module obsolète /!\ - Mine M6 SLAM (de flanc)</French>
+            <French>Mine M6 SLAM (de flanc)</French>
             <German>M6-SLAM-Mine (Seitenangriff)</German>
-            <!-- <Italian>Mina M6 SLAM</Italian> -->
-            <!-- <Polish>Mina M6 SLAM</Polish> -->
-            <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
-            <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
-            <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od boku)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
             <Italian>Mina M6 SLAM (Laterale)</Italian>
@@ -936,14 +924,8 @@
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
-            <!-- <Czech>Velká nálož (městská)</Czech> -->
-            <French>/!\ Module obsolète /!\ - Grand EEI (urbain, plaque de pression)</French>
+            <French>Grand EEI (urbain, plaque de pression)</French>
             <German>Große USBV (Stadt, Druckplatte)</German>
-            <!-- <Italian>IED grande (urbano)</Italian> -->
-            <!-- <Polish>Duży IED (miasto)</Polish> -->
-            <!-- <Portuguese>AEI grande (urbano)</Portuguese> -->
-            <!-- <Russian>Большое СВУ (городское)</Russian> -->
-            <!-- <Spanish>IED grande (Urbano)</Spanish> -->
             <Polish>Duży IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Urbano, Placa de presión)</Spanish>
             <Italian>IED grande (urbano, a pressione)</Italian>
@@ -957,14 +939,8 @@
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
-            <!-- <Czech>Velká nálož (zakopaná)</Czech> -->
-            <French>/!\ Module obsolète /!\ - Grand EEI (enterré, plaque de pression)</French>
+            <French>Grand EEI (enterré, plaque de pression)</French>
             <German>Große USBV (Eingegraben, Druckplatte)</German>
-            <!-- <Italian>IED grande (interrato)</Italian> -->
-            <!-- <Polish>Duży IED (zakopany)</Polish> -->
-            <!-- <Portuguese>AEI grande (entrincheirado)</Portuguese> -->
-            <!-- <Russian>Большое СВУ (зарытое)</Russian> -->
-            <!-- <Spanish>IED grande (Enterrado)</Spanish> -->
             <Polish>Duży IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Enterrado, Placa de presión)</Spanish>
             <Italian>IED grande (interrato, a pressione)</Italian>
@@ -978,14 +954,8 @@
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
-            <!-- <Czech>Malá nálož (městská)</Czech> -->
-            <French>/!\ Module obsolète /!\ - Petit EEI (Urbain, plaque de pression)</French>
+            <French>Petit EEI (Urbain, plaque de pression)</French>
             <German>Kleine USBV (Stadt, Druckplatte)</German>
-            <!-- <Italian>IED piccolo (urbano)</Italian> -->
-            <!-- <Polish>Mały IED (miasto)</Polish> -->
-            <!-- <Portuguese>AEI pequeno (urbano)</Portuguese> -->
-            <!-- <Russian>Малое СВУ (городское)</Russian> -->
-            <!-- <Spanish>IED pequeño (Urbano)</Spanish> -->
             <Polish>Mały IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Urbano, Placa de presión)</Spanish>
             <Italian>IED piccolo (urbano, a pressione)</Italian>
@@ -999,14 +969,8 @@
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
-            <!-- <Czech>Malá nálož (zakopaná)</Czech> -->
-            <French>/!\ Module obsolète /!\ - Petit EEI (Enterré, plaque de pression)</French>
+            <French>Petit EEI (Enterré, plaque de pression)</French>
             <German>Kleine USBV (Eingegraben, Druckplatte)</German>
-            <!-- <Italian>IED piccolo (interrato)</Italian> -->
-            <!-- <Polish>Mały IED (zakopany)</Polish> -->
-            <!-- <Portuguese>AEI pequeno (entrincheirado)</Portuguese> -->
-            <!-- <Russian>Малое СВУ (зарытое)</Russian> -->
-            <!-- <Spanish>IED pequeño (Enterrado)</Spanish> -->
             <Polish>Mały IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Enterrado, Placa de presión)</Spanish>
             <Italian>IED piccolo (interrato, a pressione)</Italian>
@@ -1120,39 +1084,51 @@
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
+            <Russian>Минимальное время</Russian>
             <French>Durée minimale</French>
             <Japanese>最短時間</Japanese>
             <Spanish>Tiempo mínimo</Spanish>
+            <Polish>Minimalny czas</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
+            <Russian>Максимальное время</Russian>
             <French>Durée maximale</French>
             <Japanese>最長時間</Japanese>
             <Spanish>Tiempo máximo</Spanish>
+            <Polish>Maksymalny czas</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
+            <Russian>Стандартное время</Russian>
             <French>Durée par défaut</French>
             <Japanese>標準時間</Japanese>
             <Spanish>Tiempo por defecto</Spanish>
+            <Polish>Domyślny czas</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
+            <Russian>Минимальное время до взрыва в секундах</Russian>
             <French>Définit la durée minimale paramétrable sur le minuteur.</French>
             <Japanese>起爆タイマーの最低時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
+            <Russian>Макисмальное время до взрыва в секундах</Russian>
             <French>Définit la durée maximale paramétrable sur le minuteur.</French>
             <Japanese>起爆タイマーの最長時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
+            <Russian>Стандартное время до взрыва в секундах</Russian>
             <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
             <Japanese>起爆タイマーの標準時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
         </Key>
     </Package>
 </Project>

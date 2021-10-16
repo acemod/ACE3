@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="KillTracker">
+        <Key ID="STR_ACE_KillTracker_Title">
+            <English>ACE Killed Events</English>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_TotalKills">
+            <English>Total Kills:</English>
+            <Russian>Всего убийств:</Russian>
+            <Polish>Liczba zabójstw:</Polish>
+            <Turkish>Toplam Öldürme:</Turkish>
+            <Japanese>総キル:</Japanese>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_Kill">
+            <English>Kill: %1 %2</English>
+            <Russian>Убил: %1 %2</Russian>
+            <Polish>Zabójstwo: %1 %2</Polish>
+            <Turkish>Öldürülen: %1 %2</Turkish>
+            <Japanese>キル: %1 %2</Japanese>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_Killer">
+            <English>Killer: %1 %2</English>
+            <Russian>Убийца: %1 %2</Russian>
+            <Polish>Zabójca: %1 %2</Polish>
+            <Turkish>Öldüren: %1 %2</Turkish>
+            <Japanese>キラー: %1 %2</Japanese>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_Vehicle">
+            <English>Vehicle: %1</English>
+            <Russian>Техника: %1</Russian>
+            <Polish>Pojazd: %1</Polish>
+            <Turkish>Araç :%1</Turkish>
+            <Japanese>車両: %1</Japanese>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_FriendlyFire">
+            <English>Friendly Fire</English>
+            <Chinese>誤擊友方</Chinese>
+            <French>Tir fratricide</French>
+            <Spanish>Fuego aliado</Spanish>
+            <Italian>Fuoco amico</Italian>
+            <Polish>Ostrzał sojuszniczy</Polish>
+            <Russian>Дружественный огонь</Russian>
+            <German>Teambeschuss</German>
+            <Czech>Střelba do vlastních!</Czech>
+            <Portuguese>Fogo amigo</Portuguese>
+            <Korean>아군 오인사격</Korean>
+            <Chinesesimp>友军误射</Chinesesimp>
+            <Japanese>同士討ち</Japanese>
+            <Turkish>Dost Atışı</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -667,6 +667,18 @@
             <Turkish>Ikisinden biri</Turkish>
             <German>Beide</German>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn">
+            <English>Thermal Burn</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
+            <English>Minor Thermal Burn</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
+            <English>Medium Thermal Burn</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
+            <English>Major Thermal Burn</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>
             <German>Schwelle für Schaden</German>
@@ -691,31 +703,35 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_DisplayName">
             <English>Pain Unconscious Chance</English>
+            <Russian>Шанс потерять сознание от боли</Russian>
             <Polish>Szansa na nieprzytomność przez ból</Polish>
-            <Japanese>気絶確立</Japanese>
+            <Japanese>気絶確率</Japanese>
             <Spanish>Probabilidad de inconsciencia por dolor</Spanish>
+            <French>Douleur - Chance d'évanouissement</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
             <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
+            <Russian>Шанс, что человек потеряет сознание, когда его боль выше допустимого порога при получении травмы.</Russian>
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
-            <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確立を設定します。</Japanese>
+            <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確率を設定します。</Japanese>
             <Spanish>La probabilidad de que una persona caiga inconsciente cuando su dolor está por encima del umbral al haber recibido daño.</Spanish>
+            <French>La probabilité pour qu'une personne perde connaissance lorsque la douleur ressentie est supérieure à son seuil de tolérance.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
+            <Russian>Вероятность смерти от смертельной травмы</Russian>
             <Spanish>Probabilidad de muerte por herida fatal</Spanish>
+            <French>Blessure mortelle - Chance de décès</French>
+            <Polish>Szana na śmierć przy śmiertelej ranie</Polish>
+            <Japanese>致命傷による死亡確率</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
+            <Russian>Шанс умереть от смертельной травмы.</Russian>
             <Spanish>La probabilidad de morir a causa de una herida fatal.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_DisplayName">
-            <English>Enable Vehicle Crash Damage</English>
-            <Spanish>Activar daño por accidente de vehículo</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Damage_EnableVehicleCrashes_Description">
-            <English>Controls whether crew receives damage from vehicle collisions.</English>
-            <Spanish>Controla si la tripulación recibe daño debido a colisiones en vehículo.</Spanish>
+            <French>La probabilité de mourir lors d'une "blessure mortelle".\nUne blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
+            <Polish>Szansa na śmierć po otrzymaniu śmiertelnej rany.</Polish>
+            <Japanese>致命傷による死亡確率を設定します。</Japanese>
         </Key>
     </Package>
 </Project>

@@ -33,6 +33,21 @@
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
         </Key>
+        <Key ID="STR_ACE_Cargo_renamedObject">
+            <English>Renamed to:&lt;br/&gt;%1</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_clearedCustomName">
+            <English>Custom name has been cleared.</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_renameObjectUI">
+            <English>Set New Name:</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
+            <English>Enable Rename Action</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
+            <English>Enables the rename action for renamable objects.</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
             <German>Fracht</German>
@@ -239,6 +254,12 @@
             <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
             <Turkish>%1&lt;br/&gt; kargo boşaltılamadı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Cargo_customName_edenName">
+            <English>Custom Name</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_customName_edenDesc">
+            <English>Set a custom cargo name used in the cargo interface.</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
             <German>Frachtraum</German>
@@ -386,6 +407,14 @@
             <Chinese>修改要花多長時間來裝載/卸載物品。\n時間，以秒為單位，而物品的大小數值與這個係數成比。</Chinese>
             <Czech>Upravuje jak dlouho nakládají/vykládání trvá.\nVýsledkem je čas v sekundách - velikost objektu vynásobená touto hodnotou.</Czech>
             <Spanish>Modifica el tiempo de carga/descarga de objetos.\n El Tiempo en segundos, es el tamño del objeto multiplicado por este valor.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Cargo_openAfterUnload">
+            <English>Reopen Cargo Menu</English>
+            <Turkish>Kargo Menüsünü Tekrar Aç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Cargo_openAfterUnload_description">
+            <English>Reopen the Cargo Menu after successful unload.</English>
+            <Turkish>Başarılı bir yük indirmeden sonra Kargo Menüsünü tekrar göster.</Turkish>
         </Key>
     </Package>
 </Project>

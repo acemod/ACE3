@@ -202,6 +202,8 @@
             <Japanese>添え木で治癒可能、駆け足できないように</Japanese>
             <Turkish>Ateller İyileştirir, Ama Koşu Yapamaz</Turkish>
             <Spanish>Las férulas sanan, pero no pueden trotar</Spanish>
+            <Russian>Шины вылечивают, но не дают бежать трусцой</Russian>
+            <Polish>Szyny leczą, ale uniemożliwiają trucht</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>

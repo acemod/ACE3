@@ -244,57 +244,75 @@
         </Key>
         <Key ID="STR_ACE_Trenches_Category">
             <English>ACE Trenches</English>
+            <Russian>ACE Окопы</Russian>
             <French>ACE Tranchées</French>
             <Japanese>ACE 塹壕</Japanese>
             <Spanish>ACETrincheras</Spanish>
+            <Polish>ACE Okopy</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
             <English>Small Trench Dig Duration</English>
+            <Russian>Продолжительность копания малого окопа</Russian>
             <French>Petites tranchées - durée d'excavation</French>
             <Japanese>小型塹壕の完成時間</Japanese>
             <Spanish>Tiempo de cavar trinchera pequeña</Spanish>
+            <Polish>Czas kopania małego okopu</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
             <English>Time, in seconds, required to dig a small trench.</English>
+            <Russian>Время в секундах, необходимое для рытья малого окопа</Russian>
             <French>Définit le temps nécessaire au déploiement des petites tranchées (en secondes).</French>
             <Japanese>小型塹壕が完成するまでの時間 (秒) を設定できます。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para cavar una trinchera pequeña.</Spanish>
+            <Polish>Czas, w sekundach wymagany do wykopania małego okopu</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
             <English>Small Trench Remove Duration</English>
+            <Russian>Продолжительность удаления малого окопа</Russian>
             <French>Petites tranchées - durée de retrait</French>
             <Japanese>小型塹壕の削除時間</Japanese>
             <Spanish>Tiempo de eliminar trinchera pequeña</Spanish>
+            <Polish>Czas usuwania małego okopu</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
             <English>Time, in seconds, required to remove a small trench.</English>
+            <Russian>Время в секундах, необходимое для удаления малого окопа</Russian>
             <French>Définit le temps nécessaire pour le retrait des petites tranchées (en secondes).</French>
             <Japanese>小型塹壕が削除されるまでの時間 (秒) を設定できます。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para eliminar una trinchera pequeña.</Spanish>
+            <Polish>Czas, w sekundach wymagany do usunięcia małego okopu</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
             <English>Big Trench Dig Duration</English>
+            <Russian>Продолжительность рытья большого окопа</Russian>
             <French>Grandes tranchées - durée d'excavation</French>
             <Japanese>大型塹壕の完成時間</Japanese>
             <Spanish>Tiempo de cavar trinchera grande</Spanish>
+            <Polish>Czas kopania dużego okopu</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_Description">
             <English>Time, in seconds, required to dig a big trench.</English>
+            <Russian>Время в секундах, необходимое для рытья большого окопа</Russian>
             <French>Définit le temps nécessaire au déploiement des grandes tranchées (en secondes).</French>
             <Japanese>大型塹壕が完成するまでの時間 (秒) を設定できます。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para cavar una trinchera grande</Spanish>
+            <Polish>Czas, w sekundach wymagany do wykopania dużego okopu</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
             <English>Big Trench Remove Duration</English>
+            <Russian>Продолжительность удаления большого окопа</Russian>
             <French>Grandes tranchées - durée de retrait</French>
             <Japanese>大型塹壕の削除時間</Japanese>
             <Spanish>Tiempo de eliminar trinchera grande</Spanish>
+            <Polish>Czas usuwania dużego okopu</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
             <English>Time, in seconds, required to remove a big trench.</English>
+            <Russian>Время в секундах, необходимое для удаления большого окопа</Russian>
             <French>Définit le temps nécessaire pour le retrait des grandes tranchées (en secondes).</French>
             <Japanese>大型塹壕が削除されるまでの時間 (秒) を設定できます。</Japanese>
             <Spanish>Tiempo, en segundos, requerido para eliminar una trinchera grande</Spanish>
+            <Polish>Czas, w sekundach wymagany do usunięcia dużego okopu</Polish>
         </Key>
     </Package>
 </Project>

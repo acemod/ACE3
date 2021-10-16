@@ -263,7 +263,7 @@
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_Description">
             <English>Set lock state for all vehicles (removes ambiguous lock states)</English>
-            <Polish>Ustawia początkowy stan blokady dla wszystkich pojazdów (usuwa dwuznaczne stany blokady)</Polish>
+            <Polish>Ustawia początkowy stan blokady dla wszystkich pojazdów (usuwa niejednoznaczny stan blokady)</Polish>
             <Spanish>Establece el estado de cierre para todos los vehículos (elimina estados de cierre ambiguos)</Spanish>
             <German>Setze Sperrstatus für alle Fahrzeuge (entfernt unklare Sperrzustände)</German>
             <Czech>Nastavit stav zámku u všech vozidel (odstraňuje nejednoznačné stavy zámků)</Czech>
@@ -280,6 +280,10 @@
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_RemoveAmbiguousLockState">
             <English>Remove Ambiguous Lock State</English>
             <Spanish>Eliminar estado de bloqueo ambiguo</Spanish>
+            <French>Supprimer les états de verrouillage ambigus</French>
+            <Russian>Устранить неоднозначные состояния замков</Russian>
+            <Polish>Usuń niejednoznaczny stan blokady</Polish>
+            <Japanese>あいまいな鍵の状態を削除</Japanese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>

@@ -36,6 +36,15 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
                 };
+                class GVAR(CoolWeaponWithItem) {
+                    displayName = CSTRING(CoolWeaponWithItem);
+                    condition = QUOTE(GVAR(enabled) && {isClass(configfile >> 'CfgPatches' >> 'acex_field_rations')});
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                    statement = "true";
+                    showDisabled = 0;
+                    insertChildren = QUOTE(_player call FUNC(getConsumableChildren));
+                    icon = QPATHTOF(UI\pour_water_ca.paa);
+                };
             };
         };
 
@@ -54,6 +63,15 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = QUOTE( [ARR_3(_player, _target, currentWeapon _target)] call FUNC(checkTemperature); );
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
+                };
+                class GVAR(CoolWeaponWithItem) {
+                    displayName = CSTRING(CoolWeaponWithItem);
+                    condition = QUOTE(GVAR(enabled) && {isClass(configfile >> 'CfgPatches' >> 'acex_field_rations')});
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                    statement = "true";
+                    showDisabled = 0;
+                    insertChildren = QUOTE(_player call FUNC(getConsumableChildren));
+                    icon = QPATHTOF(UI\pour_water_ca.paa);
                 };
             };
         };

@@ -39,6 +39,14 @@
 
 #define ARR_SELECT(ARRAY,INDEX,DEFAULT) (if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT})
 
+// ACEX Merge
+#define ACEX_PREFIX acex
+#define XADDON DOUBLES(ACEX_PREFIX,COMPONENT)
+#define XGVAR(var) DOUBLES(XADDON,var)
+#define QXGVAR(var) QUOTE(XGVAR(var))
+#define QQXGVAR(var) QUOTE(QXGVAR(var))
+#define ACEX_PREP(func) PREP(func); OBSOLETE_SYS(TRIPLES(XADDON,fnc,func),DFUNC(func))
+
 
 #define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
     weapon = #WEAPON; \

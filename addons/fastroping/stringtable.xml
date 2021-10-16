@@ -156,6 +156,30 @@
             <Czech>UMOŽNIT JEDNOTKÁM SLAŇOVAT</Czech>
             <Spanish>INDICAR A LAS UNIDADES DESCENDER POR LA CUERDA</Spanish>
         </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes3">
+            <English>Deploy 3m ropes</English>
+            <German>3m Seile einsetzen</German>
+            <French>Déployer les cordes de 3 m</French>
+            <Polish>Wysuń linę o długości 3 m.</Polish>
+            <Russian>Выпустить 3 м канат</Russian>
+            <Portuguese>Jogar cordar (3m)</Portuguese>
+            <Italian>Dispiegamento corde 3m</Italian>
+            <Czech>Připravit 3m lana</Czech>
+            <Turkish>3m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 3m</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes6">
+            <English>Deploy 6m ropes</English>
+            <German>6m Seile einsetzen</German>
+            <French>Déployer les cordes de 6 m</French>
+            <Polish>Wysuń linę o długości 6 m.</Polish>
+            <Russian>Выпустить 6 м канат</Russian>
+            <Portuguese>Jogar cordar (6m)</Portuguese>
+            <Italian>Dispiegamento corde 6m</Italian>
+            <Czech>Připravit 6m lana</Czech>
+            <Turkish>6m halat sal</Turkish>
+            <Spanish>Desplegar cuerdas de 6m</Spanish>
+        </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
             <English>Deploy 12m ropes</English>
             <German>12m Seile einsetzen</German>
@@ -239,90 +263,6 @@
             <Czech>[ACE] Bedna s lany</Czech>
             <Turkish>[ACE] Halat Sandığı</Turkish>
             <Spanish>[ACE] Caja de suministros - cuerdas</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Fastroping_descriptionShort">
-            <English>Used to do deploy ropes from a compatibile helicopter</English>
-            <German>Wird zum Bereitstellen von Seilen aus einem kompatiblen Hubschrauber verwendet</German>
-            <French>Utilisé pour déployer des cordes depuis un hélicoptère compatible.</French>
-            <Japanese>対応するヘリコプターからロープを展開する為に使用されます</Japanese>
-            <Polish>Używane do opuszczania lin z kompatybilnych smigłowców</Polish>
-            <Russian>Используется для выпуска канатов с совместимого вертолета</Russian>
-            <Portuguese>Usado para fazer descida rápida de corda em helicópteros compatíveis com FRIES</Portuguese>
-            <Chinese>在可相容的直升機上部屬繩索</Chinese>
-            <Italian>Utilizzato per distribuire corde da un elicottero compatibile</Italian>
-            <Czech>Používané na přípravu lan na slaňování z kompatibilních helikoptér</Czech>
-            <Spanish>Usar para desplegar cuerdas desde helicopteros compatibles</Spanish>
-            <Turkish>Halatları uyumlu helikopterlerden salmak için kullanır</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Fastroping_Rope_12_Display">
-            <English>Rope 12.2 meters</English>
-            <German>12.2 Meter Seil</German>
-            <French>Corde de 12,2 mètres</French>
-            <Japanese>ロープ (12.2 メートル)</Japanese>
-            <Polish>Lina, długość 12,2 m.</Polish>
-            <Russian>Канат 12.2 метров</Russian>
-            <Portuguese>Corda (12.2m)</Portuguese>
-            <Chinese>繩索（12.2公尺長）</Chinese>
-            <Italian>Corda da 12.2 metri</Italian>
-            <Czech>Lano 12.2 metrů</Czech>
-            <Turkish>12.2 metre halat</Turkish>
-            <Spanish>Cuerda de 12.2 metros</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Fastroping_Rope_15_Display">
-            <English>Rope 15.2 meters</English>
-            <German>15.2 Meter Seil</German>
-            <French>Corde de 15,2 mètres</French>
-            <Japanese>ロープ (15.2 メートル)</Japanese>
-            <Polish>Lina, długość 15,2 m.</Polish>
-            <Russian>Канат 15.2 метров</Russian>
-            <Portuguese>Corda (15.2m)</Portuguese>
-            <Chinese>繩索（15.2公尺長）</Chinese>
-            <Italian>Corda da 15.2 metri</Italian>
-            <Czech>Lano 15.2 metrů</Czech>
-            <Turkish>15.2 metre halat</Turkish>
-            <Spanish>Cuerda de 15.2 metros</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Fastroping_Rope_18_Display">
-            <English>Rope 18.3 meters</English>
-            <German>18.3 Meter Seil</German>
-            <French>Corde de 18,3 mètres</French>
-            <Japanese>ロープ (18.3 メートル)</Japanese>
-            <Polish>Lina, długość 18,3 m.</Polish>
-            <Russian>Канат 18.3 метров</Russian>
-            <Portuguese>Corda (18.3m)</Portuguese>
-            <Chinese>繩索（18.3公尺長）</Chinese>
-            <Italian>Corda da 18.3 metri</Italian>
-            <Czech>Lano 18.3 metrů</Czech>
-            <Turkish>18.3 metre halat</Turkish>
-            <Spanish>Cuerda de 18.3 metros</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Fastroping_Rope_27_Display">
-            <English>Rope 27.4 meters</English>
-            <German>27.4 Meter Seil</German>
-            <French>Corde de 27,4 mètres</French>
-            <Japanese>ロープ (27.4 メートル)</Japanese>
-            <Polish>Lina, długość 27,4 m.</Polish>
-            <Russian>Канат 27.4 метров</Russian>
-            <Portuguese>Corda (27.4m)</Portuguese>
-            <Chinese>繩索（27.4公尺長）</Chinese>
-            <Italian>Corda da 27.4 metri</Italian>
-            <Czech>Lano 27.4 metrů</Czech>
-            <Turkish>27.4 metre halat</Turkish>
-            <Spanish>Cuerda de 27.4 metros</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Fastroping_Rope_36_Display">
-            <English>Rope 36.6 meters</English>
-            <German>36.6 Meter Seil</German>
-            <French>Corde de 36,6 mètres</French>
-            <Japanese>ロープ (36.6 メートル)</Japanese>
-            <Polish>Lina, długość 36,6 m.</Polish>
-            <Russian>Канат 36.6 метров</Russian>
-            <Portuguese>Corda (36.6m)</Portuguese>
-            <Chinese>繩索（36.6公尺長）</Chinese>
-            <Italian>Corda da 36.6 metri</Italian>
-            <Czech>Lano 36.6 metrů</Czech>
-            <Turkish>36.6 metre halat</Turkish>
-            <Spanish>Cuerda 36.6 metros</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_categoryMenu_displayName">
             <English>Fast-roping</English>

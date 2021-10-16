@@ -26,6 +26,7 @@
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 ["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -68,6 +69,20 @@
     } else {
         _vis = _object getVariable [QGVAR(oldVisibility), _vis];
         _object setUnitTrait ["camouflageCoef", _vis];
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(blockRadio), {
+    params ["_object", "_set"];
+    TRACE_2("blockRadio EH",_object,_set);
+    if (_object isEqualTo ACE_Player && {_set > 0}) then {
+        call FUNC(endRadioTransmission);
+    };
+    if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
+        _object setVariable ["tf_unable_to_use_radio", _set > 0, true];
+    };
+    if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
+        _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -222,7 +237,7 @@ call FUNC(checkFiles);
 // Set up ace_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     [
         GVAR(checkPBOsAction),
         GVAR(checkPBOsCheckAll),
@@ -252,8 +267,7 @@ enableCamShake true;
 
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
-    GVAR(showHudHash) params ["", "", "_masks"];
-    if (_masks isNotEqualTo []) then {
+    if (GVAR(showHudHash) isNotEqualTo createHashMap) then {
         [] call FUNC(showHud);
     };
 }] call CBA_fnc_addEventHandler;
@@ -420,13 +434,18 @@ GVAR(reloadMutex_lastMagazines) = [];
         private _gesture = getText (_wpnMzlConfig >> "reloadAction");
         if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
         private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
-        private _animConfig = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
-        private _duration = getNumber (configfile >> _animConfig >> "States" >> _gesture >> "speed");
+        private _duration = 0;
+        if (_isLauncher) then {
+            _duration = getNumber (configfile >> "CfgMovesMaleSdr" >> "States" >> _gesture >> "speed");
+        };
+        if (_duration == 0) then {
+            _duration = getNumber (configfile >> "CfgGesturesMale" >> "States" >> _gesture >> "speed");
+        };
 
         if (_duration != 0) then {
             _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
         } else {
-            _duration = 3;
+            _duration = 6;
         };
 
         TRACE_2("Reloading, blocking gestures",_weapon,_duration);

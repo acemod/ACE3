@@ -1329,6 +1329,8 @@
             <Japanese>M183 梱包爆薬 (投てき仕様)</Japanese>
             <Turkish>M183 Demolition Charge (Throwable)</Turkish>
             <Spanish>Carga de demolición M183 (Lanzable)</Spanish>
+            <Russian>M183 Комплектный подрывной заряд (Бросаемый)</Russian>
+            <Polish>Ładunek burzący M183 (Rzucany)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1353,6 +1355,8 @@
             <Japanese>M112 爆薬ブロック (投てき仕様)</Japanese>
             <Turkish>M112 Demolition Charge (Throwable)</Turkish>
             <Spanish>Bloque de demolición M112 (Lanzable)</Spanish>
+            <Russian>M112 подрывной заряд (Бросаемый)</Russian>
+            <Polish>Ładunek burzący M112 (Rzucany)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -1855,6 +1859,22 @@
             <Chinesesimp>MX突击步枪 (黑色)</Chinesesimp>
             <Turkish>MX (Siyah)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MX_Khaki_Name">
+            <English>MX (Khaki)</English>
+            <German>MX (Khaki)</German>
+            <Chinese>MX（卡其）</Chinese>
+            <French>MX (Kaki)</French>
+            <Spanish>MX (Caqui)</Spanish>
+            <Italian>MX (Kaki)</Italian>
+            <Polish>MX (Khaki)</Polish>
+            <Russian>MX (хаки)</Russian>
+            <Czech>MX (Khaki)</Czech>
+            <Portuguese>MX (Cáqui)</Portuguese>
+            <Korean>MX (카키)</Korean>
+            <Chinesesimp>MX（卡其色）</Chinesesimp>
+            <Japanese>MX（カーキ）</Japanese>
+            <Turkish>MX (Haki)</Turkish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
             <German>MXC</German>
@@ -1888,6 +1908,22 @@
             <Chinese>MXC卡賓步槍 (黑色)</Chinese>
             <Chinesesimp>MXC卡宾步枪 (黑色)</Chinesesimp>
             <Turkish>MXC (Siyah)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MXC_Khaki_Name">
+            <English>MXC (Khaki)</English>
+            <German>MXC (Khaki)</German>
+            <Chinese>MXC（卡其）</Chinese>
+            <French>MXC (Kaki)</French>
+            <Spanish>MXC (Caqui)</Spanish>
+            <Italian>MXC (Kaki)</Italian>
+            <Polish>MXC (Khaki)</Polish>
+            <Russian>MXC (хаки)</Russian>
+            <Czech>MXC (Khaki)</Czech>
+            <Portuguese>MXC (Cáqui)</Portuguese>
+            <Korean>MXC (카키)</Korean>
+            <Chinesesimp>MXC（卡其色）</Chinesesimp>
+            <Japanese>MXC（カーキ）</Japanese>
+            <Turkish>MXC (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
@@ -1923,6 +1959,22 @@
             <Chinesesimp>MX突击步枪 (3连装榴弹-黑色)</Chinesesimp>
             <Turkish>MX 3GL (Siyah)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Khaki_Name">
+            <English>MX 3GL (Khaki)</English>
+            <German>MX 3GL (Khaki)</German>
+            <Chinese>MX 3GL（卡其）</Chinese>
+            <French>MX 3GL (Kaki)</French>
+            <Spanish>MX 3GL (Caqui)</Spanish>
+            <Italian>MX 3GL (Kaki)</Italian>
+            <Polish>MX 3GL (Khaki)</Polish>
+            <Russian>MX 3GL (хаки)</Russian>
+            <Czech>MX 3GL (Khaki)</Czech>
+            <Portuguese>MX 3GL (Cáqui)</Portuguese>
+            <Korean>MX 3GL (카키)</Korean>
+            <Chinesesimp>MX 3GL（卡其色）</Chinesesimp>
+            <Japanese>MX 3GL（カーキ）</Japanese>
+            <Turkish>MX 3GL (Haki)</Turkish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
             <German>MX LSW</German>
@@ -1957,6 +2009,22 @@
             <Chinesesimp>MX轻型机枪 (黑色)</Chinesesimp>
             <Turkish>MX LSW (Siyah)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Khaki_Name">
+            <English>MX LSW (Khaki)</English>
+            <German>MX LSW (Khaki)</German>
+            <Chinese>MX LSW（卡其）</Chinese>
+            <French>MX LSW (Kaki)</French>
+            <Spanish>MX LSW (Caqui)</Spanish>
+            <Italian>MX LSW (Kaki)</Italian>
+            <Polish>MX LSW (Khaki)</Polish>
+            <Russian>MX LSW (хаки)</Russian>
+            <Czech>MX LSW (Khaki)</Czech>
+            <Portuguese>MX LSW (Cáqui)</Portuguese>
+            <Korean>MX LSW (카키)</Korean>
+            <Chinesesimp>MX LSW（卡其色）</Chinesesimp>
+            <Japanese>MX LSW（カーキ）</Japanese>
+            <Turkish>MX LSW (Haki)</Turkish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
             <German>MXM</German>
@@ -1990,6 +2058,22 @@
             <Chinese>MXM精準步槍 (黑色)</Chinese>
             <Chinesesimp>MXM精准步枪 (黑色)</Chinesesimp>
             <Turkish>MXM (Siyah)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_MXM_Khaki_Name">
+            <English>MXM (Khaki)</English>
+            <German>MXM (Khaki)</German>
+            <Chinese>MXM（卡其）</Chinese>
+            <French>MXM (Kaki)</French>
+            <Spanish>MXM (Caqui)</Spanish>
+            <Italian>MXM (Kaki)</Italian>
+            <Polish>MXM (Khaki)</Polish>
+            <Russian>MXM (хаки)</Russian>
+            <Czech>MXM (Khaki)</Czech>
+            <Portuguese>MXM (Cáqui)</Portuguese>
+            <Korean>MXM (카키)</Korean>
+            <Chinesesimp>MXM（卡其色）</Chinesesimp>
+            <Japanese>MXM（カーキ）</Japanese>
+            <Turkish>MXM (Haki)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KH2002 Sama</English>
@@ -2501,13 +2585,13 @@
             <Chinesesimp>SIG 556精准步枪 (黑色)</Chinesesimp>
             <Turkish>SIG 556 (Siyah)</Turkish>
         </Key>
-        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
+        <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_Khaki">
             <English>SIG 556 (Khaki)</English>
             <Czech>SIG 556 (Khaki)</Czech>
             <French>SIG 556 (Kaki)</French>
             <Spanish>SIG 556 (Caqui)</Spanish>
             <Russian>SIG 556 (Хаки)</Russian>
-            <Polish>SIG 556 (khaki)</Polish>
+            <Polish>SIG 556 (Khaki)</Polish>
             <German>SIG 556 (Khaki)</German>
             <Italian>SIG 556 (Khaki)</Italian>
             <Hungarian>SIG 556 (Khaki)</Hungarian>
@@ -2665,7 +2749,7 @@
             <Italian>Cyrus (Hex)</Italian>
             <Hungarian>Cyrus (Hex)</Hungarian>
             <Portuguese>Cyrus (Hex)</Portuguese>
-            <Japanese>サイラス (蜂巣)</Japanese>
+            <Japanese>サイラス (ヘックス)</Japanese>
             <Korean>Cyrus (육각)</Korean>
             <Chinese>"居鲁士"狙擊步槍 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>"居鲁士"狙击步枪 (数位蜂巢迷彩)</Chinesesimp>
@@ -3251,7 +3335,7 @@
             <French>HK416A5 11" (Kaki)</French>
             <Spanish>HK416A5 11" (Caqui)</Spanish>
             <Russian>HK416A5 11" (Хаки)</Russian>
-            <Polish>HK416A5 11" (khaki)</Polish>
+            <Polish>HK416A5 11" (Khaki)</Polish>
             <German>HK416A5 11" (Khaki)</German>
             <Italian>HK416A5 11" (Khaki)</Italian>
             <Hungarian>HK416A5 11" (Khaki)</Hungarian>
@@ -3302,7 +3386,7 @@
             <French>HK416A5 11" GL (Kaki)</French>
             <Spanish>HK416A5 11" GL (Caqui)</Spanish>
             <Russian>HK416A5 11" GL (Хаки)</Russian>
-            <Polish>HK416A5 11" GL (khaki)</Polish>
+            <Polish>HK416A5 11" GL (Khaki)</Polish>
             <German>HK416A5 11" GL (Khaki)</German>
             <Italian>HK416A5 11" GL (Khaki)</Italian>
             <Hungarian>HK416A5 11" GL (Khaki)</Hungarian>
@@ -3353,7 +3437,7 @@
             <French>HK416A5 14.5" (Kaki)</French>
             <Spanish>HK416A5 14.5" (Caqui)</Spanish>
             <Russian>HK416A5 14.5" (Хаки)</Russian>
-            <Polish>HK416A5 14.5" (khaki)</Polish>
+            <Polish>HK416A5 14.5" (Khaki)</Polish>
             <German>HK416A5 14.5" (Khaki)</German>
             <Italian>HK416A5 14.5" (Khaki)</Italian>
             <Hungarian>HK416A5 14.5" (Khaki)</Hungarian>
@@ -3404,7 +3488,7 @@
             <French>HK417A2 20" (Kaki)</French>
             <Spanish>HK417A2 20" (Caqui)</Spanish>
             <Russian>HK417A2 20" (Хаки)</Russian>
-            <Polish>HK417A2 20" (khaki)</Polish>
+            <Polish>HK417A2 20" (Khaki)</Polish>
             <German>HK417A2 20" (Khaki)</German>
             <Italian>HK417A2 20" (Khaki)</Italian>
             <Hungarian>HK417A2 20" (Khaki)</Hungarian>
@@ -3455,7 +3539,7 @@
             <French>P99 (Kaki)</French>
             <Spanish>P99 (Caqui)</Spanish>
             <Russian>P99 (Хаки)</Russian>
-            <Polish>P99 (khaki)</Polish>
+            <Polish>P99 (Khaki)</Polish>
             <German>P99 (Khaki)</German>
             <Italian>P99 (Khaki)</Italian>
             <Hungarian>P99 (Khaki)</Hungarian>
@@ -3465,6 +3549,23 @@
             <Chinese>P99半自動手槍 (卡其色)</Chinese>
             <Chinesesimp>P99半自动手枪 (卡其色)</Chinesesimp>
             <Turkish>P99 (Haki)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_hgun_P07_blk">
+            <English>P99 (Black)</English>
+            <Czech>P99 (Černá)</Czech>
+            <French>P99 (Noir)</French>
+            <Spanish>P99 (Negro)</Spanish>
+            <Russian>P99 (Чёрный)</Russian>
+            <Polish>P99 (czarny)</Polish>
+            <German>P99 (Schwarz)</German>
+            <Italian>P99 (Nero)</Italian>
+            <Hungarian>P99 (Fekete)</Hungarian>
+            <Portuguese>P99 (Preto)</Portuguese>
+            <Japanese>P99 (ブラック)</Japanese>
+            <Korean>P99 (검정)</Korean>
+            <Chinese>P99半自動手槍 (黑色)</Chinese>
+            <Chinesesimp>P99半自动手枪 (黑色)</Chinesesimp>
+            <Turkish>P99 (Siyah)</Turkish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
             <English>Makarov PM</English>
@@ -3753,6 +3854,21 @@
             <Turkish>Leupold Mark 4 HAMR (2D)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (2D)</Spanish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_hamr_pip">
+            <English>Leupold Mark 4 HAMR (PIP)</English>
+            <German>Leupold Mark 4 HAMR (PIP)</German>
+            <Chinese>Leupold Mark 4 HAMR (PIP)</Chinese>
+            <Chinesesimp>Leupold Mark 4 HAMR (PIP)</Chinesesimp>
+            <Japanese>Leupold Mark 4 HAMR (PIP)</Japanese>
+            <Italian>Leupold Mark 4 HAMR (PIP)</Italian>
+            <Polish>Leupold Mark 4 HAMR (PIP)</Polish>
+            <Russian>Leupold Mark 4 HAMR (PIP)</Russian>
+            <Portuguese>Leupold Mark 4 HAMR (PIP)</Portuguese>
+            <French>Leupold Mark 4 HAMR (PIP)</French>
+            <Czech>Leupold Mark 4 HAMR (PIP)</Czech>
+            <Turkish>Leupold Mark 4 HAMR (PIP)</Turkish>
+            <Spanish>Leupold Mark 4 HAMR (PIP)</Spanish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
             <German>ELCAN SpecterOS (Beige)</German>
@@ -3811,6 +3927,41 @@
             <Czech>ELCAN SpecterOS (2D)</Czech>
             <Turkish>ELCAN SpecterOS (2D)</Turkish>
             <Spanish>ELCAN SpecterOS (2D)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_pip">
+            <English>ELCAN SpecterOS (PIP)</English>
+            <German>ELCAN SpecterOS (PIP)</German>
+            <Chinese>ELCAN SpecterOS (PIP)</Chinese>
+            <Chinesesimp>ELCAN SpecterOS (PIP)</Chinesesimp>
+            <Japanese>ELCAN SpecterOS (PIP)</Japanese>
+            <Italian>ELCAN SpecterOS (PIP)</Italian>
+            <Polish>ELCAN SpecterOS (PIP)</Polish>
+            <Russian>ELCAN SpecterOS (PIP)</Russian>
+            <Portuguese>ELCAN SpecterOS (PIP)</Portuguese>
+            <French>ELCAN SpecterOS (PIP)</French>
+            <Czech>ELCAN SpecterOS (PIP)</Czech>
+            <Turkish>ELCAN SpecterOS (PIP)</Turkish>
+            <Spanish>ELCAN SpecterOS (PIP)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
+            <English>ELCAN SpecterOS (Lush)</English>
+            <Polish>ELCAN SpecterOS (Leśny)</Polish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
+            <English>ELCAN SpecterOS (Arid)</English>
+            <Polish>ELCAN SpecterOS (Jałowy)</Polish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
+            <English>ELCAN SpecterOS 7.62 (Black)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Czarny)</Polish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
+            <English>ELCAN SpecterOS 7.62 (Lush)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Leśny)</Polish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
+            <English>ELCAN SpecterOS 7.62 (Arid)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Jałowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3913,6 +4064,20 @@
             <Czech>Nightforce NXS (2D)</Czech>
             <Turkish>Nightforce NXS (2D)</Turkish>
             <Spanish>Nightforce NXS (2D)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_lrps_pip">
+            <English>Nightforce NXS (PIP)</English>
+            <Chinese>Nightforce NXS (PIP)</Chinese>
+            <Chinesesimp>Nightforce NXS (PIP)</Chinesesimp>
+            <Japanese>Nightforce NXS (PIP)</Japanese>
+            <Italian>Nightforce NXS (PIP)</Italian>
+            <Polish>Nightforce NXS (PIP)</Polish>
+            <Russian>Nightforce NXS (PIP)</Russian>
+            <Portuguese>Nightforce NXS (PIP)</Portuguese>
+            <French>Nightforce NXS (PIP)</French>
+            <Czech>Nightforce NXS (PIP)</Czech>
+            <Turkish>Nightforce NXS (PIP)</Turkish>
+            <Spanish>Nightforce NXS (PIP)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -4040,6 +4205,14 @@
             <Turkish>Burris XTR II (Yeşil Hex)</Turkish>
             <Spanish>Burris XTR II (Verde Hex)</Spanish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
+            <English>Burris XTR II (Old)</English>
+            <Polish>Burris XTR II (Stary)</Polish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
+            <English>Burris XTR II (ASP-1 Kir)</English>
+            <Polish>Burris XTR II (ASP-1 Kir)</Polish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
             <German>EOTech XPS3 (Beige)</German>
@@ -4084,6 +4257,14 @@
             <Czech>EOTech XPS3 (Khaki)</Czech>
             <Turkish>EOTech XPS3 (Haki)</Turkish>
             <Spanish>EOTech XPS3 (Caqui)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_lush">
+            <English>EOTech XPS3 (Lush)</English>
+            <Polish>EOTech XPS3 (Leśny)</Polish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
+            <English>EOTech XPS3 (Arid)</English>
+            <Polish>EOTech XPS3 (Jałowy)</Polish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4157,6 +4338,20 @@
             <Czech>IOR-Valdada Pitbull 2 (2D)</Czech>
             <Turkish>IOR-Valdada Pitbull 2 (2D)</Turkish>
             <Spanish>IOR-Valdada Pitbull 2 (2D)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrco_pip">
+            <English>IOR-Valdada Pitbull 2 (PIP)</English>
+            <Chinese>IOR-Valdada Pitbull 2 (PIP)</Chinese>
+            <Chinesesimp>IOR-Valdada Pitbull 2 (PIP)</Chinesesimp>
+            <Japanese>IOR-Valdada ピットブル 2 (PIP)</Japanese>
+            <Italian>IOR-Valdada Pitbull 2 (PIP)</Italian>
+            <Polish>IOR-Valdada Pitbull 2 (PIP)</Polish>
+            <Russian>IOR-Valdada Pitbull 2 (PIP)</Russian>
+            <Portuguese>IOR-Valdada Pitbull 2 (PIP)</Portuguese>
+            <French>IOR-Valdada Pitbull 2 (PIP)</French>
+            <Czech>IOR-Valdada Pitbull 2 (PIP)</Czech>
+            <Turkish>IOR-Valdada Pitbull 2 (PIP)</Turkish>
+            <Spanish>IOR-Valdada Pitbull 2 (PIP)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -4255,7 +4450,7 @@
             <French>P90 TR (Kaki)</French>
             <Spanish>P90 TR (Caqui)</Spanish>
             <Russian>P90 TR (Хаки)</Russian>
-            <Polish>P90 TR (khaki)</Polish>
+            <Polish>P90 TR (Khaki)</Polish>
             <German>P90 TR (Khaki)</German>
             <Italian>P90 TR (Khaki)</Italian>
             <Hungarian>P90 TR (Khaki)</Hungarian>
@@ -4323,7 +4518,7 @@
             <French>P90 (Kaki)</French>
             <Spanish>P90 (Caqui)</Spanish>
             <Russian>P90 (Хаки)</Russian>
-            <Polish>P90 (khaki)</Polish>
+            <Polish>P90 (Khaki)</Polish>
             <German>P90 (Khaki)</German>
             <Italian>P90 (Khaki)</Italian>
             <Hungarian>P90 (Khaki)</Hungarian>
@@ -4391,7 +4586,7 @@
             <French>PS90 TR (Kaki)</French>
             <Spanish>PS90 TR (Caqui)</Spanish>
             <Russian>PS90 TR (Хаки)</Russian>
-            <Polish>PS90 TR (khaki)</Polish>
+            <Polish>PS90 TR (Khaki)</Polish>
             <German>PS90 TR (Khaki)</German>
             <Italian>PS90 TR (Khaki)</Italian>
             <Hungarian>PS90 TR (Khaki)</Hungarian>
@@ -4459,7 +4654,7 @@
             <French>PS90 (Kaki)</French>
             <Spanish>PS90 (Caqui)</Spanish>
             <Russian>PS90 (Хаки)</Russian>
-            <Polish>PS90 (khaki)</Polish>
+            <Polish>PS90 (Khaki)</Polish>
             <German>PS90 (Khaki)</German>
             <Italian>PS90 (Khaki)</Italian>
             <Hungarian>PS90 (Khaki)</Hungarian>

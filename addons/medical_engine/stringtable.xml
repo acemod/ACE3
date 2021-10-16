@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Medical_Engine">
+        <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_DisplayName">
+            <English>Enable Vehicle Crash Damage</English>
+            <Russian>Включить урон при аварии в транспортном средстве.</Russian>
+            <Spanish>Activar daño por accidente de vehículo</Spanish>
+            <French>Blessures de collision (véhicules)</French>
+            <Polish>Włącz obrażenia od kolizji pojazdu</Polish>
+            <Japanese>車両衝突ダメージを有効化</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_Description">
+            <English>Controls whether crew receives damage from vehicle collisions.</English>
+            <Russian>Контролирует, получает ли экипаж урон от столкновения транспортного средства.</Russian>
+            <Spanish>Controla si la tripulación recibe daño debido a colisiones en vehículo.</Spanish>
+            <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident.</French>
+            <Polish>Kontroluje czy załoga pojazdu otrzyma obrażenia podczas kolizji pojazdu.</Polish>
+            <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを決定します。</Japanese>
+        </Key>
+    </Package>
+</Project>

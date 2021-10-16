@@ -58,7 +58,7 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 4.3348;
     };
     class rhs_weap_rpk_base;
-    class rhs_weap_rpk74_base : rhs_weap_rpk_base {
+    class rhs_weap_rpk74_base: rhs_weap_rpk_base {
         ACE_barrelLength = 590.00;
         ACE_barrelTwist = 195.072;
     };
@@ -123,6 +123,10 @@ class CfgWeapons {
     #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0;
     class H_HelmetB;
     class rhs_tsh4: H_HelmetB {
+        HEARING_PROTECTION_VICCREW
+    };
+    
+    class rhs_6b48: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
 

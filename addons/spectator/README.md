@@ -7,8 +7,3 @@ Includes a public API for integration into custom respawn frameworks and a templ
 
 For more information, see: http://ace3mod.com/wiki/feature/spectator.html
 
-## Maintainers
-
-The people responsible for merging changes to this component or answering potential questions.
-
-- [SilentSpike](https://github.com/SilentSpike)

@@ -10,7 +10,7 @@
             <Chinesesimp>通用</Chinesesimp>
             <Korean>일반</Korean>
             <Polish>Ogólny</Polish>
-            <Russian>Общий</Russian>
+            <Russian>Общие</Russian>
             <Portuguese>Comum</Portuguese>
             <Spanish>Común</Spanish>
             <Czech>Obecné</Czech>
@@ -27,7 +27,7 @@
             <Portuguese>ACE-Team</Portuguese>
             <Hungarian>ACE-Team</Hungarian>
             <Italian>ACE-Team</Italian>
-            <Japanese>ACE-チーム</Japanese>
+            <Japanese>ACE チーム</Japanese>
             <Korean>ACE-Team</Korean>
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
@@ -1379,6 +1379,18 @@
             <Spanish>Permitir a los scripts de ACE reducir el volumen la música</Spanish>
             <Turkish>ACE scripti müziği kısmana izin verir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_EpilepsyFriendlyMode">
+            <English>Epilepsy friendly mode</English>
+            <German>Epilepsiefreundlicher Modus</German>
+            <Japanese>けいれん回避モード</Japanese>
+            <Polish>Tryb dla epileptyków</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
+            <English>Disables some flashing light effects to reduce seizure risk.</English>
+            <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
+            <Japanese>点滅する光エフェクトを無効化し、けいれんする恐れを低下させます。</Japanese>
+            <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
+        </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
             <German>Flagge (Ace - Schwarz)</German>
@@ -1455,6 +1467,73 @@
             <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
             <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
             <Turkish>Kendi etkileşimim menüsünde animasyonları göster</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_both">
+            <English>Both</English>
+            <Turkish>İkisi de</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoName">
+            <English>Additional progress bar information</English>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoDesc">
+            <English>Controls extra information shown in progress bar.</English>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoPercentage">
+            <English>Percentage</English>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoTime">
+            <English>Time remaining</English>
+        </Key>
+        <Key ID="STR_ACE_Common_None">
+            <English>None</English>
+            <Czech>Žádná</Czech>
+            <German>Keine</German>
+            <Russian>Нет</Russian>
+            <Polish>Brak</Polish>
+            <Italian>Nessuna</Italian>
+            <Spanish>Nada</Spanish>
+            <French>Aucune</French>
+            <Chinese>無</Chinese>
+            <Japanese>なし</Japanese>
+            <Korean>활성화 없음</Korean>
+            <Portuguese>Nenhuma</Portuguese>
+            <Chinesesimp>无</Chinesesimp>
+            <Turkish>Yok</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_Rename">
+            <English>Rename</English>
+            <Spanish>Renombrar</Spanish>
+            <French>Renommer</French>
+            <German>Umbenennen</German>
+            <Polish>Zmień nazwę</Polish>
+            <Japanese>改名</Japanese>
+            <Italian>Rinomina</Italian>
+            <Korean>이름바꾸기</Korean>
+            <Chinese>重新命名</Chinese>
+            <Chinesesimp>重新命名</Chinesesimp>
+            <Russian>Переименовать</Russian>
+            <Portuguese>Renomear</Portuguese>
+            <Czech>Přejmenovat</Czech>
+            <Turkish>Yeniden adlandır</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_TimeLeft">
+            <English>Time left: %1s</English>
+        </Key>
+        <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
+            <English>Locations Boost Training</English>
+            <Czech>Zdravotnická místa zvyšují zdravotnickou úrovně</Czech>
+            <Italian>Sedi per potenziare la formazione</Italian>
+            <German>Örtliche Trainingssteigerung</German>
+            <Spanish>Ubicación mejora entrenamiento.</Spanish>
+            <Polish>Miejsca zwiększają wyszkolenie</Polish>
+            <Portuguese>Localização melhora treinamento</Portuguese>
+            <French>Le lieu améliore l'efficacité</French>
+            <Russian>Места ускоренного обучения</Russian>
+            <Japanese>衛生能力の上昇位置</Japanese>
+            <Korean>교육 증가 지역</Korean>
+            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
+            <Chinese>受所在位置影響提升醫療能力</Chinese>
+            <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
         </Key>
     </Package>
 </Project>

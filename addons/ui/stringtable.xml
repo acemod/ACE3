@@ -161,6 +161,9 @@
             <English>Development Build Watermark</English>
             <Russian>Водяной знак Development Build</Russian>
             <Spanish>Marca de agua para compilación de desarrollo</Spanish>
+            <French>Filigrane version de développement</French>
+            <Polish>Znak wodny wersji deweloperskiej</Polish>
+            <Japanese>開発版ウォーターマーク</Japanese>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -661,6 +664,16 @@
             <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
             <Czech>Nelze upravit prvek vynuceného uživatelského rozhraní.</Czech>
             <Spanish>No se puede modificar un elemento forzado de la Interfaz del Usuario</Spanish>
+        </Key>
+        <Key ID="STR_ACE_UI_EnableSpeedIndicator">
+            <English>Enable movement speed indicator</English>
+            <Polish>Włącz wskaźnik prędkości poruszania</Polish>
+            <Japanese>移動速度インジケータを有効化</Japanese>
+        </Key>
+        <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
+            <English>Enables movement speed indicator for player character.</English>
+            <Polish>Włącza wskaźnik prędkości poruszania się dla postaci gracza.</Polish>
+            <Japanese>プレイヤー キャラの移動速度を表示します。</Japanese>
         </Key>
     </Package>
 </Project>

@@ -1,9 +1,9 @@
 class CfgAmmo {
     class MissileCore;
-    class MissileBase : MissileCore {
+    class MissileBase: MissileCore {
         class Components;
     };
-    class Missile_AGM_02_F : MissileBase {};
+    class Missile_AGM_02_F: MissileBase {};
 
     class GVAR(D): Missile_AGM_02_F {
         author = "Brandon (TCVM)";

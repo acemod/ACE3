@@ -1,10 +1,10 @@
 class CfgWeapons {
     class LauncherCore;
-    class RocketPods : LauncherCore {};
-    class weapon_AGM_65Launcher : RocketPods{};
+    class RocketPods: LauncherCore {};
+    class weapon_AGM_65Launcher: RocketPods{};
 
-    class MissileLauncher : LauncherCore {};
-    class Missile_AGM_02_Plane_CAS_01_F : MissileLauncher {};
+    class MissileLauncher: LauncherCore {};
+    class Missile_AGM_02_Plane_CAS_01_F: MissileLauncher {};
 
     class GVAR(D_Launcher): Missile_AGM_02_Plane_CAS_01_F {
         author = "Brandon (TCVM)";
@@ -42,7 +42,7 @@ class CfgWeapons {
         GVAR(enabled) = 1;
     };
 
-    class GVAR(L_Launcher_Plane) : Missile_AGM_02_Plane_CAS_01_F {
+    class GVAR(L_Launcher_Plane): Missile_AGM_02_Plane_CAS_01_F {
         author = "xrufix";
         displayname = CSTRING(L);
         magazines[] = {
@@ -62,8 +62,8 @@ class CfgWeapons {
         GVAR(enabled) = 1;
     };
 
-    class weapon_AGM_KH25Launcher : MissileLauncher {};
-    class ace_kh25ml_launcher : weapon_AGM_KH25Launcher {
+    class weapon_AGM_KH25Launcher: MissileLauncher {};
+    class ace_kh25ml_launcher: weapon_AGM_KH25Launcher {
         author = "xrufix";
         displayName = CSTRING(KH25ML);
         magazines[] = {

@@ -159,22 +159,6 @@
             <Czech>[Shift+Klik pro uložení jako standardního vybavení pro misi]</Czech>
             <Turkish>[Shift+Click varsayılan kıyafetlere kaydet]</Turkish>
         </Key>
-        <Key ID="STR_ACE_Arsenal_buttonRenameText">
-            <English>Rename</English>
-            <Spanish>Renombrar</Spanish>
-            <French>Renommer</French>
-            <German>Umbenennen</German>
-            <Polish>Zmień nazwę</Polish>
-            <Japanese>改名</Japanese>
-            <Italian>Rinomina</Italian>
-            <Korean>이름바꾸기</Korean>
-            <Chinese>重新命名</Chinese>
-            <Chinesesimp>重新命名</Chinesesimp>
-            <Russian>Переименовать</Russian>
-            <Portuguese>Renomear</Portuguese>
-            <Czech>Přejmenovat</Czech>
-            <Turkish>Yeniden adlandır</Turkish>
-        </Key>
         <Key ID="STR_ACE_Arsenal_buttonRenameTooltip">
             <English>Rename the selected loadout</English>
             <Spanish>Renombrar el equipamiento seleccionado</Spanish>
@@ -389,6 +373,8 @@
             <French>Trier par capacité de chargement</French>
             <Japanese>容量で並び替え</Japanese>
             <Spanish>Ordenar por capacidad</Spanish>
+            <Russian>Сортировка по вместимости</Russian>
+            <Polish>Sortuj po rozmiarze</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
             <English>Sort by accuracy</English>
@@ -397,6 +383,8 @@
             <Japanese>精度で並び替え</Japanese>
             <Turkish>Isabet doğruluğuna göre sırala</Turkish>
             <Spanish>Ordenar por precisión</Spanish>
+            <Russian>Сортировка по точности</Russian>
+            <Polish>Sortuj po celności</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByRateOfFireText">
             <English>Sort by rate of fire</English>
@@ -405,6 +393,8 @@
             <Japanese>連射速度で並び替え</Japanese>
             <Turkish>Atış hızına göre sırala</Turkish>
             <Spanish>Ordenar por cadencia de tiro</Spanish>
+            <Russian>Сортировка по темпу стрельбы</Russian>
+            <Polish>Sortuj po szybkostrzelności</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagnificationText">
             <English>Sort by magnification</English>
@@ -412,6 +402,8 @@
             <French>Trier par grossissement</French>
             <Japanese>倍率で並び替え</Japanese>
             <Spanish>Ordenar por magnificación</Spanish>
+            <Russian>Сортировка по кратности приближения</Russian>
+            <Polish>Sortuj po przybliżeniu</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByMagCountText">
             <English>Sort by ammo count</English>
@@ -420,18 +412,24 @@
             <Japanese>装弾数で並び替え</Japanese>
             <Turkish>Mermi sayısına göre sırala</Turkish>
             <Spanish>Ordenar por cantidad de munición</Spanish>
+            <Russian>Сортировка по количеству боеприпасов</Russian>
+            <Polish>Sortuj po ilości amunicji</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionBallistic">
             <English>Sort by ballistic protection</English>
             <French>Trier par protection balistique</French>
             <Japanese>防弾性能で並び替え</Japanese>
             <Spanish>Ordenar por protección balística</Spanish>
+            <Russian>Сортировка по баллистической защите</Russian>
+            <Polish>Sortuj po ochronie balistycznej</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
             <French>Trier par résistance aux explosifs</French>
             <Japanese>防爆性能で並び替え</Japanese>
             <Spanish>Ordenar por protección de explosivos</Spanish>
+            <Russian>Сортировка по защите от взрывов</Russian>
+            <Polish>Sortuj po ochronie przeciw wybuchom</Polish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>

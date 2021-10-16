@@ -16,8 +16,44 @@
             <French>Surchauffe</French>
             <Czech>Přehřívání</Czech>
         </Key>
+        <Key ID="STR_ACE_Overheating_enabled_displayName">
+            <English>Overheating Enabled</English>
+            <German>Überhitzung aktiviert</German>
+            <Spanish>Activado Sobrecalentamiento</Spanish>
+            <Portuguese>Superaquecimento ativado</Portuguese>
+            <French>Surchauffe activée</French>
+            <Russian>Перегрев включен</Russian>
+            <Czech>Přehřívání povoleno</Czech>
+            <Japanese>過熱を有効化</Japanese>
+            <Polish>Przegrzewanie włączone</Polish>
+            <Korean>과열 활성화</Korean>
+            <Italian>Surriscaldamento Abilitato</Italian>
+            <Chinesesimp>启用过热</Chinesesimp>
+            <Chinese>啟用過熱</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Overheating_enabled_description">
+            <English>Master enable for the overheating/jamming module</English>
+            <Spanish>Activación maestra para Sobrecalentamiento</Spanish>
+            <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
+            <French>Active le module de surchauffe/d'enrayement.</French>
+            <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
+            <Japanese>過熱と弾詰まりモジュールを全て有効化します</Japanese>
+            <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
+            <German>Hauptschalter, um die Überhitzung-/Ladehemmung-Module zu aktivieren</German>
+            <Korean>과열/탄걸림 최종 활성화</Korean>
+            <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
+            <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
+            <Chinese>啟用槍管過熱/干擾模塊</Chinese>
+            <Czech>Hlavní přepínač pro modul přehřívání/zasekávání</Czech>
+        </Key>
+        <Key ID="STR_ACE_Overheating_heatCoef_displayName">
+            <English>Heating Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_heatCoef_description">
+            <English>Coefficient for the amount of heat a weapon generates per shot.\nHigher value increases heat.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
-            <English>Display text on jam</English>
+            <English>Display Text on Jam</English>
             <German>Zeige Text bei Ladehemmung</German>
             <Spanish>Mostrar texto al encasquillarse</Spanish>
             <Russian>Показывать текст, когда клинит оружие</Russian>
@@ -81,7 +117,7 @@
             <Hungarian>Fegyvertúlmelegedést okozó részecskehatások mutatása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
-            <English>Overheating Particle Effects for everyone</English>
+            <English>Overheating Particle Effects for Everyone</English>
             <German>Zeige Partikeleffekt bei Überhitzung für jeden</German>
             <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
             <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
@@ -144,8 +180,26 @@
             <Chinese>過熱的武器將會有打不準和減少射擊初速的情況。適用於所有玩家</Chinese>
             <Hungarian>A túlmelegedett fegyverek kevésbé lesznek pontosak és csökkent a lövés sebessége. Minden játékosra vonatkozik.</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
-            <English>Unjam weapon on reload</English>
+        <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_displayName">
+            <English>Distance for Effects and Dispersion</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
+            <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
+            <English>Heat Increases Fire Rate</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingRateOfFire_description">
+            <English>As weapons heat up, their rate of fire increases by up to 10%.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
+            <English>Jam Chance Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
+            <English>Coefficient for the chance that a weapon will jam from overheating.\nHigher value make jams more likely.\nSet to 0 to disable jamming.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnReload_displayName">
+            <English>Unjam Weapon on Reload</English>
             <German>Behebt Ladehemmung beim Nachladen</German>
             <Spanish>Desencasquillar el arma al recargar.</Spanish>
             <Polish>Usuń zacięcie przy przeładowaniu</Polish>
@@ -160,7 +214,7 @@
             <Chinese>重裝彈匣以解決卡彈</Chinese>
             <Hungarian>Távolítsa el az akadályt újratöltéskor</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Overheating_unJamOnreload_description">
+        <Key ID="STR_ACE_Overheating_unJamOnReload_description">
             <English>Reloading clears a weapon jam.</English>
             <German>Nachladen behebt eine Ladehemmung.</German>
             <Spanish>Recargar el arma la desencasquilla.</Spanish>
@@ -176,8 +230,14 @@
             <Chinese>利用重裝彈匣來解決卡彈</Chinese>
             <Hungarian>Az újratöltés megszünteti a fegyver elakadását.</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_displayName">
+            <English>Unjam on Barrel Swap</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
+            <English>Controls whether swapping barrels clears a weapon jam.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
-            <English>Chance of unjam failing</English>
+            <English>Chance of Unjam Failing</English>
             <German>Wahrscheinlichkeit, dass Ladehemmung nicht behoben wird</German>
             <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
             <Polish>Szansa na porażkę usuw. zacięcia</Polish>
@@ -207,6 +267,12 @@
             <Chinesesimp>清除卡弹时有可能会失败，需要反覆进行清枪。</Chinesesimp>
             <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
             <Hungarian>Valószínűsége annak, hogy egy akadály eltávolítás művelet kudarcot vall, megismétlést igényel.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_cookoffCoef_displayName">
+            <English>Overheating Cookoff Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_cookoffCoef_description">
+            <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -255,6 +321,21 @@
             <Korean>탄걸림!</Korean>
             <Chinesesimp>武器卡弹!</Chinesesimp>
             <Chinese>武器卡彈!</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Overheating_WeaponCookedOff">
+            <English>Weapon cooked off!</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToEject">
+            <English>Failure to eject.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToExtract">
+            <English>Failure to extract.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToFeed">
+            <English>Failure to feed.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToFire">
+            <English>Failure to fire.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_UnjamWeapon">
             <English>Clear jam</English>
@@ -429,6 +510,24 @@
             <Chinesesimp>正在检查枪管温度...</Chinesesimp>
             <Chinese>檢查槍管溫度中...</Chinese>
         </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponWithItem">
+            <English>Cool weapon with...</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolingWeaponWithItem">
+            <English>Cooling %1 with %2.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponWithWaterSource">
+            <English>Cool weapon in water source.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolingWeaponWithWaterSource">
+            <English>Cooling weapon in water source.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponNotEnoughWater">
+            <English>Container doesn't have enough water.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponIsCool">
+            <English>Weapon is cool enough the water has stopped boiling.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
             <German>Temperatur</German>
@@ -519,36 +618,6 @@
             <Italian>Canna/e di Ricambio Rovente</Italian>
             <Chinesesimp>备用枪管温度超级热</Chinesesimp>
             <Chinese>備用槍管溫度超級熱</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_enabled_displayName">
-            <English>Overheating Enabled</English>
-            <German>Überhitzung aktiviert</German>
-            <Spanish>Activado Sobrecalentamiento</Spanish>
-            <Portuguese>Superaquecimento ativado</Portuguese>
-            <French>Surchauffe activée</French>
-            <Russian>Перегрев включен</Russian>
-            <Czech>Přehřívání povoleno</Czech>
-            <Japanese>過熱を有効化</Japanese>
-            <Polish>Przegrzewanie włączone</Polish>
-            <Korean>과열 활성화</Korean>
-            <Italian>Surriscaldamento Abilitato</Italian>
-            <Chinesesimp>启用过热</Chinesesimp>
-            <Chinese>啟用過熱</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_enabled_description">
-            <English>Master enable for the overheating/jamming module</English>
-            <Spanish>Activación maestra para Sobrecalentamiento</Spanish>
-            <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
-            <French>Active le module de surchauffe/d'enrayement.</French>
-            <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
-            <Japanese>過熱と弾詰まりモジュールを全て有効化します</Japanese>
-            <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
-            <German>Hauptschalter, um die Überhitzung-/Ladehemmung-Module zu aktivieren</German>
-            <Korean>과열/탄걸림 최종 활성화</Korean>
-            <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
-            <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
-            <Chinese>啟用槍管過熱/干擾模塊</Chinese>
-            <Czech>Hlavní přepínač pro modul přehřívání/zasekávání</Czech>
         </Key>
     </Package>
 </Project>

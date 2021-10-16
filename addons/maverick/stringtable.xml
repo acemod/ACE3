@@ -69,6 +69,10 @@
             <Key ID="STR_ACE_Maverick_l_mag_short">
                 <English>MAVL</English>
                 <Spanish>MAVL</Spanish>
+                <French>MAVL</French>
+                <Russian>MAVL</Russian>
+                <Polish>MAVL</Polish>
+                <Japanese>MAVL</Japanese>
             </Key>
             <Key ID="STR_ACE_Maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>

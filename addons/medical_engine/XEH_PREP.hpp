@@ -1,9 +1,10 @@
-PREP(handleDamage);
+PREP(applyAnimAfterRagdoll);
 PREP(damageBodyPart);
-PREP(updateBodyPartVisuals);
-PREP(updateDamageEffects);
-PREP(setStructuralDamage);
-PREP(setUnconsciousAnim);
+PREP(disableThirdParty);
 PREP(getHitpointArmor);
 PREP(getItemArmor);
-PREP(applyAnimAfterRagdoll);
+PREP(handleDamage);
+PREP(setStructuralDamage);
+PREP(setUnconsciousAnim);
+PREP(updateBodyPartVisuals);
+PREP(updateDamageEffects);

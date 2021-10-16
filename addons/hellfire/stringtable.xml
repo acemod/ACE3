@@ -19,15 +19,27 @@
         </Key>
         <Key ID="STR_ACE_Hellfire_KDescriptionShort">
             <English>Semi-active laser homing missile with high explosive anti-tank warhead</English>
+            <Russian>Самонаводящаяся Ракета с фугасной противотанковой боевой частью и полуактивной лазерной системой наведения</Russian>
             <Spanish>Misil de guiado láser semi-activo con cabeza de alto explosivo anti-tanque</Spanish>
+            <French>Missile antichar à guidage laser semi-actif (charge HEAT)</French>
+            <Japanese>セミ アクティブ レーダー誘導の対戦車弾頭</Japanese>
+            <Polish>Rakieta naprowadzana laserowo z głowicą przeciwpancerną</Polish>
         </Key>
         <Key ID="STR_ACE_Hellfire_LDescriptionShort">
             <English>Millimeter-wave radar guided missile with high explosive anti-tank warhead</English>
+            <Russian>Радиолокационная управляемая ракета миллиметрового диапазона с фугасной противотанковой боевой частью</Russian>
             <Spanish>Misil guiado por radar de onda milimétrica con cabeza de alto explosivo anti-tanque</Spanish>
+            <French>Missile antichar à guidage radar à ondes courtes (charge HEAT)</French>
+            <Japanese>ミリ波レーダー誘導の対戦車弾頭</Japanese>
+            <Polish>Rakieta namierzana radarowo z głowicą przeciwpancerną</Polish>
         </Key>
         <Key ID="STR_ACE_Hellfire_NDescriptionShort">
             <English>Semi-active laser homing missile with metal augmented charge anti-personnel warhead</English>
+            <Russian>Самонаводящаяся ракета с металлической увеличенной зарядной противопехотной боевой частью и полуактивной лазерной системой наведения</Russian>
             <Spanish>Misil guiado por láser semi-activo con cabeza de carga de metal aumentada anti-persona</Spanish>
+            <French>Missile antipersonnel thermobarique à guidage laser semi-actif</French>
+            <Japanese>セミ アクティブ レーダー誘導の対人弾</Japanese>
+            <Polish>Rakieta naprowadzana laserowo z głowicą odłamkową</Polish>
         </Key>
     </Package>
 </Project>

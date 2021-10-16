@@ -37,6 +37,7 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
     _contentPanelCtrl lnbSetCurSelRow (_contentPanelCursSel);
 
     [(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutDeleted), _loadoutName] joinString " "] call FUNC(message);
+    [QGVAR(onLoadoutDelete), [_loadoutName]] call CBA_fnc_localEvent;
 } else {
 
     private _profileName = profileName; // GVAR(center) could be a remote unit

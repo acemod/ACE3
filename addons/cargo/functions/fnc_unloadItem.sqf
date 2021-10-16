@@ -56,6 +56,9 @@ if (_object isEqualType objNull) then {
 } else {
     _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
     _object setPosASL (AGLtoASL _emptyPosAGL);
+    
+    [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
+    [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;
 };
 // Invoke listenable event
 ["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;

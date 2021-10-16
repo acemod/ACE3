@@ -146,17 +146,21 @@
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_DisplayName">
             <English>Bleedout During Cardiac Arrest</English>
+            <Russian>Кровотечение во время остановки сердца</Russian>
             <German>Ausbluten im Herzstillstand</German>
             <French>Saignement durant l'arrêt cardiaque</French>
             <Japanese>心停止中の失血</Japanese>
             <Spanish>Desangrado durante parada cardíaca</Spanish>
+            <Polish>Wykrwawienie podczas zatrzymanej akcji serca</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_Description">
             <English>Controls whether a person can die in cardiac arrest by blood loss before the cardiac arrest time runs out.</English>
+            <Russian>Определяет, можно ли умереть от потери крови во время остановки сердца, даже если время жизни при остановке сердца еще не истекло.</Russian>
             <German>Legt fest, ob man während des Herzstillstands durch Blutverlust sterben kann, auch wenn die Überlebenszeit im Herzstillstand noch nicht ausgelaufen ist.</German>
             <French>Définit si un joueur en arrêt cardiaque peut mourir par exsanguination, avant que la durée de l'arrêt cardiaque définie ci-dessus ne soit écoulée.</French>
             <Japanese>心停止時間を超え死亡する前に、失血による心停止で死亡するかどうかを決定します。</Japanese>
             <Spanish>COntrola si una persona puede morir en parada cardíaca por causa de pérdida de sangre antes de que se termine el contador de parada cardíaca</Spanish>
+            <Polish>Kontroluje czy śmierć osoby może nastąpić poprzez wykrwawienie zanim wyczerpię się Czas Zatrzymania Akcji Serca.</Polish>
         </Key>
     </Package>
 </Project>

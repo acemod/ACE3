@@ -58,10 +58,19 @@ private _pylonConfigs = configProperties [configOf _vehicle >> "Components" >> "
 private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
 {
     private _turretPath = _x;
-    private _magazines = [_vehicle, _turretPath] call FUNC(getTurretConfigMagazines);
+    private _magazineClasses = [];
 
-    // _magazines without duplicates
-    private _magazineClasses = _magazines arrayIntersect _magazines;
+    if (_vehicle getVariable [QGVAR(scriptedLoadout), false]) then {
+        {
+            _x params ["_className", "_turretCurrent"];
+            if (_turretPath isEqualTo _turretCurrent) then {
+                _magazineClasses pushBackUnique _className;
+            };
+        } forEach (magazinesAllTurrets _vehicle); 
+    } else {
+        _magazineClasses = [_vehicle, _turretPath] call FUNC(getTurretConfigMagazines);
+        _magazineClasses = _magazineClasses arrayIntersect _magazineClasses;
+    };
 
     {
         private _magazineClass = _x;

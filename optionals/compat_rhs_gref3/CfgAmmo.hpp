@@ -113,4 +113,15 @@ class CfgAmmo {
     class rhs_charge_M2tet_x2_ammo: DemoCharge_Remote_Ammo {
         ace_explosives_defuseObjectPosition[] = {0.095, 0, 0.055};
     };
+    
+    class rhs_ammo_3bk12_penetrator;
+    class rhsgref_ammo_rkg3em_penetrator: rhs_ammo_3bk12_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_rpg75_penetrator: rhs_ammo_3bk12_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_panzerfaust60_penetrator: rhs_ammo_3bk12_penetrator {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
 };
