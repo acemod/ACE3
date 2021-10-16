@@ -84,25 +84,25 @@ if (hasInterface) then {
     // Add an action to allow hot weapons to be cooled off in AceX Field Rations water sources
     if (isClass(configfile >> "CfgPatches" >> "acex_field_rations")) then {
         [
-            {acex_field_rations_enabled || CBA_missionTime > 1},
+            {EXGVAR(field_rations,enabled) || CBA_missionTime > 1},
             {
-                if (!acex_field_rations_enabled) exitWith {};
+                if (!EXGVAR(field_rations,enabled)) exitWith {};
 
                 _CoolWeaponWithWaterSourceAction = [
                     QGVAR(CoolWeaponWithWaterSource),
                     LLSTRING(CoolWeaponWithWaterSource),
                     QPATHTOEF(field_rations,ui\icon_water_tap.paa),
                     {
-                        private _waterSource = _target getVariable ["acex_field_rations_waterSource", objNull];
+                        private _waterSource = _target getVariable [QEXGVAR(field_rations,waterSource), objNull];
                         [_player, _waterSource] call FUNC(coolWeaponWithWaterSource);
                     },
                     {
-                        private _waterSource = _target getVariable ["acex_field_rations_waterSource", objNull];
+                        private _waterSource = _target getVariable [QEXGVAR(field_rations,waterSource), objNull];
                         [_player, _waterSource] call acex_field_rations_fnc_canDrinkFromSource;
                     }
                 ] call EFUNC(interact_menu,createAction);
 
-                ["acex_field_rations_helper", 0, ["acex_field_rations_waterSource"], _CoolWeaponWithWaterSourceAction] call EFUNC(interact_menu,addActionToClass);
+                [QEGVAR(field_rations,helper), 0, [QGVAR(field_rations,waterSource)], _CoolWeaponWithWaterSourceAction] call EFUNC(interact_menu,addActionToClass);
             },
             []
         ] call CBA_fnc_waitUntilAndExecute;
