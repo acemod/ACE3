@@ -91,7 +91,7 @@ if (hasInterface) then {
                 _CoolWeaponWithWaterSourceAction = [
                     QGVAR(CoolWeaponWithWaterSource),
                     LLSTRING(CoolWeaponWithWaterSource),
-                    "\z\acex\addons\field_rations\ui\icon_water_tap.paa",
+                    "\z\ace\addons\field_rations\ui\icon_water_tap.paa",
                     {
                         private _waterSource = _target getVariable ["acex_field_rations_waterSource", objNull];
                         [_player, _waterSource] call FUNC(coolWeaponWithWaterSource);
