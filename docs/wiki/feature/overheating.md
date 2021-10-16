@@ -16,7 +16,7 @@ version:
 
 ### 1.1 Weapon Jamming
 
-Adds a probability to jam a weapon when firing. The hotter a weapon gets the more likely a jam is to occur.
+Adds a probability to jam a weapon when firing. The hotter a weapon gets, the more likely a jam is to occur.
 
 ### 1.2 Temperature simulation
 
@@ -28,7 +28,7 @@ Hot weapons can also cause chambered ammunition to spontaneously ignite. The hig
 
 ### 1.4 Spare barrels
 
-Adds the ability to changes barrels on machine guns to compensate for those effects. When a barrel is changed the coolest barrel avaialble is always selected.
+Adds the ability to change barrels on machine guns to compensate for those effects. When a barrel is changed, the coolest barrel available is always selected.
 
 ## 2. Usage
 
