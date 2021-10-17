@@ -88,21 +88,21 @@ if (hasInterface) then {
             {
                 if (!EXGVAR(field_rations,enabled)) exitWith {};
 
-                _CoolWeaponWithWaterSourceAction = [
+                private _coolWeaponWithWaterSourceAction = [
                     QGVAR(CoolWeaponWithWaterSource),
                     LLSTRING(CoolWeaponWithWaterSource),
                     QPATHTOEF(field_rations,ui\icon_water_tap.paa),
                     {
-                        private _waterSource = _target getVariable [QEXGVAR(field_rations,waterSource), objNull];
+                        private _waterSource = _target getVariable [QEGVAR(field_rations,waterSource), objNull];
                         [_player, _waterSource] call FUNC(coolWeaponWithWaterSource);
                     },
                     {
-                        private _waterSource = _target getVariable [QEXGVAR(field_rations,waterSource), objNull];
-                        [_player, _waterSource] call acex_field_rations_fnc_canDrinkFromSource;
+                        private _waterSource = _target getVariable [QEGVAR(field_rations,waterSource), objNull];
+                        [_player, _waterSource] call EFUNC(field_rations,canDrinkFromSource);
                     }
                 ] call EFUNC(interact_menu,createAction);
 
-                [QEGVAR(field_rations,helper), 0, [QGVAR(field_rations,waterSource)], _CoolWeaponWithWaterSourceAction] call EFUNC(interact_menu,addActionToClass);
+                [QEGVAR(field_rations,helper), 0, [QEGVAR(field_rations,waterSource)], _coolWeaponWithWaterSourceAction] call EFUNC(interact_menu,addActionToClass);
             },
             []
         ] call CBA_fnc_waitUntilAndExecute;

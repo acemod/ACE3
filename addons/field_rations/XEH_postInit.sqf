@@ -21,7 +21,7 @@ if !(hasInterface) exitWith {};
         QPATHTOF(ui\icon_water_tap.paa),
         {true},
         {
-            private _waterSource = _target getVariable [QXGVAR(waterSource), objNull];
+            private _waterSource = _target getVariable [QGVAR(waterSource), objNull];
 
             alive _waterSource
             && {XGVAR(waterSourceActions) != 0}
@@ -29,7 +29,7 @@ if !(hasInterface) exitWith {};
             && {[_player, _waterSource] call EFUNC(common,canInteractWith)}
         },
         {
-            private _waterSource = _target getVariable [QXGVAR(waterSource), objNull];
+            private _waterSource = _target getVariable [QGVAR(waterSource), objNull];
             [_waterSource, _player] call FUNC(getRefillChildren);
         },
         [],
@@ -44,11 +44,11 @@ if !(hasInterface) exitWith {};
             LLSTRING(CheckWater),
             QPATHTOF(ui\icon_water_tap.paa),
             {
-                private _waterSource = _target getVariable [QXGVAR(waterSource), objNull];
+                private _waterSource = _target getVariable [QGVAR(waterSource), objNull];
                 [_player, _waterSource] call FUNC(checkWater);
             },
             {
-                private _waterSource = _target getVariable [QXGVAR(waterSource), objNull];
+                private _waterSource = _target getVariable [QGVAR(waterSource), objNull];
                 (_waterSource call FUNC(getRemainingWater)) != REFILL_WATER_INFINITE
             }
         ] call EFUNC(interact_menu,createAction),
@@ -57,11 +57,11 @@ if !(hasInterface) exitWith {};
             LLSTRING(DrinkFromSource),
             QPATHTOF(ui\icon_water_tap.paa),
             {
-                private _waterSource = _target getVariable [QXGVAR(waterSource), objNull];
+                private _waterSource = _target getVariable [QGVAR(waterSource), objNull];
                 [_player, _waterSource] call FUNC(drinkFromSource);
             },
             {
-                private _waterSource = _target getVariable [QXGVAR(waterSource), objNull];
+                private _waterSource = _target getVariable [QGVAR(waterSource), objNull];
                 [_player, _waterSource] call FUNC(canDrinkFromSource);
             }
         ] call EFUNC(interact_menu,createAction)
@@ -70,7 +70,7 @@ if !(hasInterface) exitWith {};
     // Add water source actions to helper
     [QGVAR(helper), 0, [], _mainAction] call EFUNC(interact_menu,addActionToClass);
     {
-        [QGVAR(helper), 0, [QXGVAR(waterSource)], _x] call EFUNC(interact_menu,addActionToClass);
+        [QGVAR(helper), 0, [QGVAR(waterSource)], _x] call EFUNC(interact_menu,addActionToClass);
     } forEach _subActions;
 
     // Add inventory context menu option to consume items
