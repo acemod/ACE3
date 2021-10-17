@@ -214,17 +214,19 @@ class CfgVehicles {
         EGVAR(medical,medicClass) = 1;
     };
 
-    class gm_kat1_base;
-    class gm_kat1_451_base: gm_kat1_base {
+    class gm_kat1_base: gm_wheeled_truck_base {
         EGVAR(refuel,fuelCapacity) = 270;
     };
+
+    class gm_kat1_451_base;
     class gm_kat1_451_refuel_base: gm_kat1_451_base {
         gm_InsigniasDefaultHazardSign = "gm_insignia_hazard_fuelF54_wht";
         EGVAR(refuel,fuelCargo) = 4600;
         EGVAR(refuel,hooks)[] = {{-0.60,-3.44,-0.919689},{0.60,-3.44,-0.919689}};
     };
 
-    class gm_kat1_454_cargo_base: gm_kat1_451_base {
+    class gm_kat1_454_base;
+    class gm_kat1_454_cargo_base: gm_kat1_454_base {
         EGVAR(cargo,space) = 10;
     };
 
@@ -280,7 +282,7 @@ class CfgVehicles {
         EGVAR(cookoff,cookoffSelections)[] = {"mainturret_hatch","commanderturret_hatch"};
     };
 
-    class gm_pt76_base: gm_tracked_APC_base {
+    class gm_pt76_base: gm_tracked_Tank_base {
         EGVAR(refuel,fuelCapacity) = 250;
     };
 
