@@ -17,7 +17,7 @@
 
 params ["", "_units", "_activated"];
 
-if !(_activated) exitWith {};
+if (!_activated || {GVAR(epilepsyFriendlyMode)}) exitWith {};
 
 if (isNil QGVAR(LSD_Vehicles)) then {
     GVAR(LSD_Vehicles) = [];

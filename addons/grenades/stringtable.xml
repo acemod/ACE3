@@ -527,6 +527,7 @@
             <French>Charge en sacoche (lançable)</French>
             <Japanese>梱包爆薬 (投てき仕様)</Japanese>
             <Spanish>Carga de mochila explosiva (Lanzable)</Spanish>
+            <Polish>Pakiet ładunków wybuchowych (Rzucany)</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
@@ -534,6 +535,7 @@
             <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : à balancer sur des trucs qui doivent mourir</French>
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
             <Spanish>Tipo: Carga&lt;br /&gt;Unidades: 1&lt;br /&gt;Usada: Cosas que necesitan morir</Spanish>
+            <Polish>Typ: Ładunek&lt;br/&gt;Naboje: 1&lt;br/&gt;Użycie: Na rzeczach które mają zginąć</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
@@ -541,6 +543,7 @@
             <French>Charge explosive lançable. Détonation après 7 secondes.</French>
             <Japanese>投げられる梱包爆薬。起爆までの時間は 7 秒間</Japanese>
             <Spanish>Carga de mochila explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
+            <Polish>Rzucany pakiet ładunków wybuchowych. 7 sekundowy zapalnik</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
@@ -548,6 +551,7 @@
             <French>Charge explosive (lançable)</French>
             <Japanese>爆薬ブロック (投てき仕様)</Japanese>
             <Spanish>Carga explosiva (Lanzable)</Spanish>
+            <Polish>Ładunek wybuchowy (Rzucany)</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
@@ -555,6 +559,7 @@
             <French>Bloc explosif lançable. Détonation après 7 secondes.</French>
             <Japanese>投げられる爆薬ブロック。起爆までの時間は 7 秒間</Japanese>
             <Spanish>Carga explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
+            <Polish>Rzucany ładunkek wybuchowy. 7 sekundowy zapalnik</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
@@ -562,6 +567,7 @@
             <French>Appliquer une mèche</French>
             <Japanese>短信管へ変更</Japanese>
             <Spanish>Convertir a espoleta corta</Spanish>
+            <Polish>Konwertuj na krótki zapalnik</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
@@ -569,6 +575,7 @@
             <French>Retirer la mèche</French>
             <Japanese>短信管を削除</Japanese>
             <Spanish>Quitar espoleta corta</Spanish>
+            <Polish>Usuń krótki zapalnik</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -592,6 +599,7 @@
             <French>Autoriser les mèches (charges lançables)</French>
             <Japanese>爆薬変更を許可</Japanese>
             <Spanish>Permitir conversión de explosivos</Spanish>
+            <Polish>Pozwól na konwersję ładunków wybuchowych</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
@@ -599,6 +607,7 @@
             <French>Cette option permet de rendre les charges explosives lançables, à la manière des grenades.\nPour celà, ouvrir l'inventaire et double-cliquer sur les charges, afin de leur appliquer une mèche.\nLa mèche peut se retirer en suivant la même procédure.</French>
             <Japanese>爆発物を投てき仕様へ交換できるようにします。</Japanese>
             <Spanish>Permitir convertir explosivos a lanzables</Spanish>
+            <Polish>Zezwala na konwersje ładunków wybuchowych na rzucane wersje</Polish>
         </Key>
     </Package>
 </Project>

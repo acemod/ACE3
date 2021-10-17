@@ -40,7 +40,7 @@ private _actions = [];
             [
                 format ["%1", _unit],
                 [_unit, true] call EFUNC(common,getName),
-                _icon,
+                [_icon, "#FFFFFF"],
                 { 
                     //statement (Run on hover) - reset the cache so we will insert actions immedietly when hovering over new unit
                     TRACE_2("Cleaning Cache",_target,vehicle _target);
@@ -57,7 +57,8 @@ private _actions = [];
                 [_unit],
                 {[0, 0, 0]},
                 2,
-                [false,false,false,true,false] //add run on hover (4th bit true)
+                [false,false,false,true,false], //add run on hover (4th bit true)
+                {if (["ace_medical_gui"] call EFUNC(common,isModLoaded)) then {call EFUNC(medical_gui,modifyActionTriageLevel)}}
                 ] call EFUNC(interact_menu,createAction),
                 [],
                 _unit

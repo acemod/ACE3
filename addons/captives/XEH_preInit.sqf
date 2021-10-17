@@ -8,4 +8,6 @@ PREP_RECOMPILE_END;
 
 GVAR(captivityEnabled) = false;
 
+#include "initSettings.sqf"
+
 ADDON = true;

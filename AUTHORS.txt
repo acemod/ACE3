@@ -31,9 +31,10 @@ VKing <kauestad@gmail.com>
 Walter Pearce <jaynus@gmail.com>
 
 # CONTRIBUTORS
-[BIG]Bull
+10Dozen a.k.a Dusin
 11RDP-LoupVert <loupvert@11rdp.fr>
 654wak654 <ozanegitmen@gmail.com>
+[BIG]Bull
 ACCtomeek <tomeek99@gmail.com>
 adam3adam <br.ada@seznam.cz>
 Adanteh
@@ -44,8 +45,8 @@ Aleksey EpMAK Yermakov <epmak777@gmail.com>
 Alganthe <alganthe@live.fr>
 Andrea "AtixNeon" Verano <veranoandrea88@gmail.com>
 Anthariel <Contact@storm-simulation.com>
-Arcanum417 <lubos.len@gmail.com>
 Anton
+Arcanum417 <lubos.len@gmail.com>
 Arkhir <wonsz666@gmail.com >
 ARV187 aka Spark23
 Asgar Serran <piechottaf@web.de>
@@ -60,13 +61,14 @@ Brett Mayson
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>
+C0kkie
 chris579 <github@klemm.one>
 classicarma
 Clon1998 <ps.patti1998@gmail.com>
 Codingboy
 Coren <coren4@gmail.com>
 Crusty
-C0kkie
+dabako <dabako@dabakoworld.de>
 dgibso29 <gibson@earringpranks.com>
 Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
 Dimaslg <dimaslg@telecable.es>
@@ -74,9 +76,9 @@ diwako
 dixon13 <dixonbegay@gmail.com>
 Drift_91
 Drill <drill87@gmail.com>
-Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Drofseh <drofseh@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
+Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Eclipser <jms@modeemi.fi>
 Elgin675
 ElTyranos
@@ -91,7 +93,9 @@ FFAAMOD <modffaa@gmail.com>
 Filip Basara <filip.basara93@googlemail.com>
 fr89k <kaschitoku@web.de>
 Fragment
+Frank <frankplow@protonmail.com>
 FreeZbe <freeseb@gmail.com>
+Fyuran <dankemedic@hotmail.com>
 geraldbolso1899
 Ghost
 Gianmarco Varriale (TeamNuke) <admin@forhost.org>
@@ -106,6 +110,7 @@ havena <silveredenis@gmail.com>
 Hawkins
 Head <brobergsebastian@gmail.com>
 Hybrid V
+JasperRab <jasper@jasperrab.eu>
 john681611 <john681611@hotmail.com>
 JoramD
 Karneck <dschultz26@hotmail.com>
@@ -133,8 +138,8 @@ Orbis2358 <mgkid3310@naver.com>
 oscarmolinadev
 Panisher (Tushino Serious Games) <panisher333@gmail.com>
 PaxJaromeMalues <seemax1991@gmail.com>
-PiZZADOX <509thParachuteInfantry@gmail.com>
 Phyma <sethramstrom@gmail.com>
+PiZZADOX <509thParachuteInfantry@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
 Pterolatypus <pterolatypus@gmail.com>
@@ -167,10 +172,7 @@ voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
 Walthzer <walthzer.69@gmail.com>
 Winter <simon@agius-muscat.net>
+wizpig64
 xrufix
 Zakant <Zakant@gmx.de>
 zGuba
-Fyuran <dankemedic@hotmail.com>
-dabako <dabako@dabakoworld.de>
-Frank <frankplow@protonmail.com>
-10Dozen a.k.a Dusin

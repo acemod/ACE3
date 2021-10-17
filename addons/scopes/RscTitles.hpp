@@ -14,7 +14,7 @@ class RscTitles {
         fadeout = 0;
         name = QGVAR(Zeroing);
         class controls {
-            class ACE_Scopes_Zeroing_BG : RscPicture {
+            class ACE_Scopes_Zeroing_BG: RscPicture {
                 idc = 11;
                 type = 0;
                 text = QPATHTOF(UI\scopes_bg.paa);
@@ -31,7 +31,7 @@ class RscTitles {
                 w = 0.4 * safezoneW;
                 h = 0.3 * safezoneH;
             };
-            class ACE_Scopes_Zeroing_Vertical : RscText {
+            class ACE_Scopes_Zeroing_Vertical: RscText {
                 idc = 12;
                 type = 0;
                 style = 2;
@@ -48,7 +48,7 @@ class RscTitles {
                 w = 0.04 * safezoneW;
                 h = 0.025 * safezoneH;
             };
-            class ACE_Scopes_Zeroing_Horizontal : RscText {
+            class ACE_Scopes_Zeroing_Horizontal: RscText {
                 idc = 13;
                 type = 0;
                 style = 2;

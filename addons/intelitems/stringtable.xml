@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="IntelItems">
+        <Key ID="STR_ACE_IntelItems_Category">
+            <English>ACE Intel Items</English>
+            <German>ACE Aufklärungsgegenstände</German>
+            <Chinese>ACE 情報物品</Chinese>
+            <Japanese>ACE 機密アイテム</Japanese>
+            <Russian>ACE Предметы с данными</Russian>
+            <Polish>ACE Przedmioty Wywiadu</Polish>
+            <Turkish>ACE Istihbarat Eşyaları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_DisplayName">
+            <English>Intel Items</English>
+            <German>Aufklärungsgegenstände</German>
+            <Chinese>情報物品</Chinese>
+            <Japanese>機密アイテム</Japanese>
+            <Russian>Предметы с данными</Russian>
+            <Polish>Przedmioty Wywiadu</Polish>
+            <Turkish>Istihbarat Eşyaları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Notepad_DisplayName">
+            <English>Notepad</English>
+            <German>Notizblock</German>
+            <Chinese>筆記本</Chinese>
+            <Japanese>メモ</Japanese>
+            <Russian>Блокнот</Russian>
+            <Polish>Notes</Polish>
+            <Turkish>Not Defteri</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Notepad_Description">
+            <English>Notepad - Can access from the map screen</English>
+            <German>Notizblock - Über die Karte abrufbar</German>
+            <Chinese>筆記本 - 可以透過地圖界面來存取</Chinese>
+            <Japanese>メモ - マップ画面から確認可能</Japanese>
+            <Russian>Блокнот - Можно получить доступ с экрана карты</Russian>
+            <Polish>Notes - Dostępne z mapy</Polish>
+            <Turkish>Not Defteri - Haritadan erişim sağlanabilinir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Document_DisplayName">
+            <English>Document</English>
+            <German>Dokument</German>
+            <Chinese>文件</Chinese>
+            <Japanese>資料</Japanese>
+            <Russian>Документ</Russian>
+            <Polish>Dokument</Polish>
+            <Turkish>Döküman</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Document_Description">
+            <English>Printed Document - Can access from the map screen</English>
+            <German>Bedrucktes Dokument - Über die Karte abrufbar</German>
+            <Chinese>影印文件 - 可以透過地圖界面來存取</Chinese>
+            <Japanese>メモ - マップ画面から確認可能</Japanese>
+            <Russian>Распечатанный документ - Можно получить доступ с экрана карты</Russian>
+            <Polish>Wydrukowane Dokumenty - Dostępne z mapy</Polish>
+            <Turkish>Yazılı Döküman - Haritadan erişim sağlanabilinir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Photo_DisplayName">
+            <English>Photo</English>
+            <German>Foto</German>
+            <Chinese>相片</Chinese>
+            <Japanese>写真</Japanese>
+            <Russian>Фотография</Russian>
+            <Polish>Zdjęcie</Polish>
+            <Turkish>Fotoğraf</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Photo_Description">
+            <English>Photo - Can access from the map screen</English>
+            <German>Foto - Über die Karte abrufbar</German>
+            <Chinese>相片  - 可以透過地圖界面來存取</Chinese>
+            <Japanese>写真 - マップ画面から確認可能</Japanese>
+            <Russian>Фотография - Можно получить доступ с экрана карты</Russian>
+            <Polish>Zdjęcie - Dostępne z mapy</Polish>
+            <Turkish>Fotoğraf - Haritadan erişim sağlanabilinir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Text">
+            <English>Text</English>
+            <Czech>Text</Czech>
+            <French>Texte</French>
+            <German>Text</German>
+            <Italian>Testo</Italian>
+            <Polish>Tekst</Polish>
+            <Portuguese>Texto</Portuguese>
+            <Russian>Текст</Russian>
+            <Spanish>Texto</Spanish>
+            <Chinese>文字</Chinese>
+            <Japanese>テキスト</Japanese>
+            <Turkish>Yazı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Photo_Filename">
+            <English>Photo Filename</English>
+            <German>Foto-Dateiname</German>
+            <Chinese>相片名稱</Chinese>
+            <Japanese>写真名</Japanese>
+            <Russian>Имя файла фотографии</Russian>
+            <Polish>Zdjęcie Nazwa Pliku</Polish>
+            <Turkish>Fotoğraf Dosya Adı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Pickup">
+            <English>Pick Up</English>
+            <Czech>Vyzvednout</Czech>
+            <French>Ramasser</French>
+            <German>Aufnehmen</German>
+            <Italian>Prelevare</Italian>
+            <Polish>Podnieś</Polish>
+            <Portuguese>Pegar</Portuguese>
+            <Russian>Подобрать</Russian>
+            <Spanish>Recoger</Spanish>
+            <Chinese>撿起</Chinese>
+            <Japanese>拾う</Japanese>
+            <Turkish>Al</Turkish>
+        </Key>
+    </Package>
+</Project>

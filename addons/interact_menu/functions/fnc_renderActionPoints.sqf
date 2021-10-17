@@ -29,6 +29,8 @@ private _fnc_renderNearbyActions = {
     GVAR(foundActions) = [];
     GVAR(lastTimeSearchedActions) = diag_tickTime;
 
+    QGVAR(renderNearbyActions) call CBA_fnc_localEvent;
+
     private _numInteractObjects = 0;
     private _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
     {

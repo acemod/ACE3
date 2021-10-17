@@ -463,17 +463,17 @@ Good:
 
 ```js
 if (call FUNC(myCondition)) then {
-   private _areAllAboveTen = true; // <- smallest feasable scope
+    private _areAllAboveTen = true; // <- smallest feasable scope
 
-   {
-      if (_x >= 10) then {
-         _areAllAboveTen = false;
-      };
-   } forEach _anArray;
+    {
+        if (_x >= 10) then {
+            _areAllAboveTen = false;
+        };
+    } forEach _anArray;
 
-   if (_areAllAboveTen) then {
-       hint "all values are above ten!";
-   };
+    if (_areAllAboveTen) then {
+        hint "all values are above ten!";
+    };
 }
 ```
 
@@ -482,15 +482,15 @@ Bad:
 ```js
 private _areAllAboveTen = true; // <- this is bad, because it can be initialized in the if statement
 if (call FUNC(myCondition)) then {
-   {
-      if (_x >= 10) then {
-         _areAllAboveTen = false;
-      };
-   } forEach _anArray;
+    {
+        if (_x >= 10) then {
+            _areAllAboveTen = false;
+        };
+    } forEach _anArray;
 
-   if (_areAllAboveTen) then {
-       hint "all values are above ten!";
-   };
+    if (_areAllAboveTen) then {
+        hint "all values are above ten!";
+    };
 };
 ```
 
@@ -575,8 +575,8 @@ Good:
 
 ```js
 fnc_example = {
-   params ["_content"];
-   hint _content;
+    params ["_content"];
+    hint _content;
 };
 ```
 
@@ -719,7 +719,7 @@ _a pushBack _value;
 Also good:
 
 ```js
-_a append [1,2,3];
+_a append [1, 2, 3];
 ```
 
 Bad:

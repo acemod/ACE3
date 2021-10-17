@@ -20,31 +20,43 @@
             <English>NV Goggles (Gen1, Brown)</English>
             <French>JVN (Gen1, marron)</French>
             <Russian>ПНВ (Gen1, Коричневый)</Russian>
+            <Japanese>暗視装置 (第1世代、ブラウン)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 1, Brązowe)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_black">
             <English>NV Goggles (Gen1, Black)</English>
             <French>JVN (Gen1, noires)</French>
             <Russian>ПНВ (Gen1, Чёрный)</Russian>
+            <Japanese>暗視装置 (第1世代、ブラック)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 1, Czarne)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_green">
             <English>NV Goggles (Gen1, Green)</English>
             <French>JVN (Gen1, vertes)</French>
             <Russian>ПНВ (Gen1, Зелёный)</Russian>
+            <Japanese>暗視装置 (第1世代、グリーン)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 1, Zielone)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_brown">
             <English>NV Goggles (Gen2, Brown)</English>
             <French>JVN (Gen2, marron)</French>
             <Russian>ПНВ (Gen2, Коричневый)</Russian>
+            <Japanese>暗視装置 (第2世代、ブラウン)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 2, Brązowe)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_black">
             <English>NV Goggles (Gen2, Black)</English>
             <French>JVN (Gen2, noires)</French>
             <Russian>ПНВ (Gen2, Чёрный)</Russian>
+            <Japanese>暗視装置 (第2世代、ブラック)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 2, Czarne)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_green">
             <English>NV Goggles (Gen2, Green)</English>
             <French>NV Goggles (Gen2, vertes)</French>
             <Russian>ПНВ (Gen2, Зелёный)</Russian>
+            <Japanese>暗視装置 (第2世代、グリーン)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 2, Zielone)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -118,31 +130,43 @@
             <English>NV Goggles (Gen4, Brown)</English>
             <French>JVN (Gen4, marron)</French>
             <Russian>ПНВ (Gen4, Коричневый)</Russian>
+            <Japanese>暗視装置 (第4世代、ブラウン)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 4, Brązowe)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
             <English>NV Goggles (Gen4, Black)</English>
             <French>JVN (Gen4, noires)</French>
             <Russian>ПНВ (Gen4, Чёрный)</Russian>
+            <Japanese>暗視装置 (第3世代、ブラック)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 4, Czarne)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
             <English>NV Goggles (Gen4, Green)</English>
             <French>JVN (Gen4, vertes)</French>
             <Russian>ПНВ (Gen4, Зелёный)</Russian>
+            <Japanese>暗視装置 (第3世代、グリーン)</Japanese>
+            <Polish>Gogle noktowizyjne (Gen 4, Zielone)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
             <English>NV Goggles (Wide, Brown)</English>
             <French>JVN (Large, marron)</French>
             <Russian>ПНВ (Широкий, Коричневый)</Russian>
+            <Japanese>暗視装置 (ワイド、ブラウン)</Japanese>
+            <Polish>Gogle noktowizyjne (Szerokie, Brązowe)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
             <English>NV Goggles (Wide, Black)</English>
             <French>JVN (Large, noires)</French>
             <Russian>ПНВ (Широкий, Чёрный)</Russian>
+            <Japanese>暗視装置 (ワイド、ブラック)</Japanese>
+            <Polish>Gogle noktowizyjne (Szerokie, Czarne)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
             <English>NV Goggles (Wide, Green)</English>
             <French>JVN (Large, vertes)</French>
             <Russian>ПНВ (Широкий, Зелёный)</Russian>
+            <Japanese>暗視装置 (ワイド、グリーン)</Japanese>
+            <Polish>Gogle noktowizyjne (Szerokie, Zielone)</Polish>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>

@@ -303,6 +303,13 @@ class CfgVehicles {
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
+                class ACE_RenameGroup {
+                    displayName = CSTRING(RenameGroup);
+                    condition = QUOTE(_player call FUNC(canRenameGroup));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    statement = QUOTE(_player call FUNC(renameGroupUI));
+                    showDisabled =1;
+                };
             };
 
             class ACE_Equipment {
