@@ -17,10 +17,10 @@
  */
 
 params ["_apparent_temperature", "_bias"];
-TRACE_2("params",_temperature, _bias);
+TRACE_2("displayAirTemp",_apparent_temperature, _bias);
 
-_temperature1 = floor(_temperature + (_bias select 0) - (random 2));
-_temperature2 = floor(_temperature + (_bias select 1) + (random 2));
+private _temperature1 = floor(_apparent_temperature + (_bias select 0) - (random 2));
+private _temperature2 = floor(_apparent_temperature + (_bias select 1) + (random 2));
 
 private _color1 = [
 // Colors obtained by quartic regression formula of RGB values at corresponding temperatures as marked on advanced_ballistics rangecard
@@ -40,8 +40,6 @@ private _color2 = [
 ];
 
  _text = composeText [_text, [format ["%1C", _temperature2], _color2] call EFUNC(common,stringToColoredText)];
-
-[_text, QPATHTOF(UI\temp_ca.paa),_color, ACE_player, 2] call EFUNC(common,displayTextPicture);
 
 /*
 for "_i" from -40 to 40 step 4 do {
