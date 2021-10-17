@@ -1,5 +1,5 @@
 
-PREP(handleDamage);
+PREP(handleDamageBox);
 PREP(engineFire);
 PREP(cookOff);
 PREP(smoke);
