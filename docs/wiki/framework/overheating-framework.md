@@ -34,7 +34,7 @@ class CfgWeapons {
 ```cpp
 class CfgWeapons {
     class Pistol_Base_F;
-    class MyRevolver : Pistol_Base_F {
+    class MyRevolver: Pistol_Base_F {
         ace_overheating_jamTypesAllowed = ["Fire","Dud"]; //Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
     };
 };
@@ -55,11 +55,11 @@ class CfgWeapons {
 class CfgWeapons {
     class Rifle_Long_Base_F ;
 
-    class MySniper : Rifle_Long_Base_F {
+    class MySniper: Rifle_Long_Base_F {
         ace_overheating_closedBolt = 1; // Closed bolt, can cook off from barrel heat.
     };
 
-    class MyMG : Rifle_Long_Base_F {
+    class MyMG: Rifle_Long_Base_F {
         ace_overheating_closedBolt = 0; // Open bolt, can only cook off on failure to fire type jams.
     };
 };

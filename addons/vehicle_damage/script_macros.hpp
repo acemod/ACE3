@@ -24,4 +24,4 @@
 #define EJECT_IF_DESTROYED_VEHICLES ["Boat_Transport_02_base_F", "Rubber_duck_base_F"]
 
 
-#define CREATE_INCENDIARY_AMMO(ammo,base,inc) class ammo : base { GVAR(incendiary) = inc; }
+#define CREATE_INCENDIARY_AMMO(ammo,base,inc) class ammo: base { GVAR(incendiary) = inc; }
