@@ -48,7 +48,7 @@
 #define QEXGVAR(var1,var2) QUOTE(EXGVAR(var1,var2))
 #define QQXGVAR(var) QUOTE(QXGVAR(var))
 #define QQEXGVAR(var1,var2) QUOTE(QEXGVAR(var1,var2))
-#define ACEX_PREP(func) PREP(func); OBSOLETE_SYS(TRIPLES(XADDON,fnc,func),DFUNC(func))
+#define ACEX_PREP(func) PREP(func); TRIPLES(XADDON,fnc,func) = DFUNC(func)
 
 
 #define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
