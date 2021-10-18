@@ -2,7 +2,7 @@
 
 if (isServer) then {
     [QGVAR(registerObjects), LINKFUNC(registerObjects)] call CBA_fnc_addEventHandler;
-    [QGVAR(objectPlaced), {
+    [QXGVAR(objectPlaced), {
         params ["_unit", "_side", "_object"];
         TRACE_3("objectPlaced",_unit,_side,_object);
         private _jipID = [QGVAR(addActionToObject), [_side, _object]] call CBA_fnc_globalEventJIP;
@@ -49,7 +49,7 @@ GVAR(objectRotationZ) = 0;
                 params ["_target", "_player", "_params"];
                 _params params ["_side"];
                 TRACE_2("deleting placed object",_target,_params);
-                [QGVAR(objectDeleted), [_player, _side, _target]] call CBA_fnc_globalEvent;
+                [QXGVAR(objectDeleted), [_player, _side, _target]] call CBA_fnc_globalEvent;
                 deleteVehicle _target;
                 _params call FUNC(updateBudget);
             },
