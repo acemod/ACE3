@@ -41,7 +41,7 @@ class CfgWeapons {
     };
     
     class gm_ge_headgear_sph4_base;
-    class gm_ge_headgear_sph4_oli: gm_ge_headgear_sph4_base{
+    class gm_ge_headgear_sph4_oli: gm_ge_headgear_sph4_base {
         HEARING_PROTECTION_PELTOR
     };
     

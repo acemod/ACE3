@@ -397,7 +397,7 @@ class CfgVehicles {
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
     };
 
-    class gm_ch53_base:gm_helicopter_base {
+    class gm_ch53_base: gm_helicopter_base {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{0.6, -5.2, -0.8},{-0.6, -5.2, -0.8}};
@@ -411,7 +411,7 @@ class CfgVehicles {
     };
 
     // EAST
-    class gm_mi2_base:gm_helicopter_base {
+    class gm_mi2_base: gm_helicopter_base {
         EGVAR(map,vehicleLightColor)[] = {1,0,0,0.1};
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{-1.17969,0.0205078,-0.178533}};
@@ -433,7 +433,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 1076;
     };
 
-    class gm_mi2platan_base: gm_mi2_base{
+    class gm_mi2platan_base: gm_mi2_base {
         EGVAR(refuel,fuelCapacity) = 1076;
     };
 
