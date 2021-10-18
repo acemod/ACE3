@@ -40,7 +40,7 @@ class CfgWeapons {
     
     // GRENADE LAUNCHERS
     class gm_hk69a1_base: gm_rifle_base {
-        ace_overheating_jamTypesAllowed = ["Fire","Dud"];
+        EGVAR(overheating,jamTypesAllowed) = ["Fire","Dud"];
     };
     class gm_pallad_d_base: gm_rifle_base {
         ace_overheating_jamTypesAllowed = ["Fire","Dud"];
