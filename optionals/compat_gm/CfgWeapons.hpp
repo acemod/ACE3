@@ -35,7 +35,7 @@ class CfgWeapons {
         EGVAR(overheating,closedBolt) = 0;
     };
     class gm_pm63_base: gm_rifle_base {
-        GVAR(closedBolt) = 0;
+        EGVAR(overheating,closedBolt) = 0;
     };
     
     // GRENADE LAUNCHERS
