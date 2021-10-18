@@ -7,3 +7,4 @@ Allows quick placement of fortifications.
 - **Some** settings
 - CfgVehicles Module Classnames
 - `ACEX_Fortify_Presets` config
+- Events (`acex_fortify_objectPlaced`, `acex_fortify_objectDeleted`, `acex_fortify_onDeployStart`)
