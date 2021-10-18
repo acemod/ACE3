@@ -10,7 +10,7 @@ class CfgWeapons {
     };
     class gm_rifle_base;
     class gm_machineGun_base: gm_rifle_base {
-        GVAR(closedBolt) = 0;
+        EGVAR(overheating,closedBolt) = 0;
     };
     class gm_mg3_base: gm_machineGun_base {
         EGVAR(overheating,mrbs) = 3000;
