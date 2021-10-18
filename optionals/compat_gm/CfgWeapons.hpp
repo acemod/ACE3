@@ -32,7 +32,7 @@ class CfgWeapons {
     
     // SUB MACHINE GUNS
     class gm_mp2_base: gm_rifle_base {
-        GVAR(closedBolt) = 0;
+        EGVAR(overheating,closedBolt) = 0;
     };
     class gm_pm63_base: gm_rifle_base {
         GVAR(closedBolt) = 0;
