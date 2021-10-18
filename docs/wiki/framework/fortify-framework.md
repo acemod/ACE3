@@ -89,6 +89,6 @@ To verify that an object isn't above a certain terrain height we can check the h
 
 Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
-`ace_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
-`ace_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted
-`ace_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object
+`acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
+`acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted
+`acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object
