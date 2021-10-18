@@ -49,7 +49,7 @@ class CfgWeapons {
     // FLARE GUNS
     class gm_pistol_base;
     class gm_lp1_base: gm_pistol_base {
-        ace_overheating_jamTypesAllowed = ["Fire","Dud"];
+        EGVAR(overheating,jamTypesAllowed) = ["Fire","Dud"];
     };
     class gm_p2a1_base: gm_pistol_base {
         ace_overheating_jamTypesAllowed = ["Fire","Dud"];
