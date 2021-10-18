@@ -8,10 +8,10 @@ class CfgWeapons {
 
     class Pistol_Base_F: Pistol {};
     class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-        GVAR(jamTypesAllowed) = ["Fire","Dud"];
+        GVAR(jamTypesAllowed)[] = {"Fire", "Dud"};
     };
    class hgun_Pistol_Signal_F: Pistol_Base_F {
-        GVAR(jamTypesAllowed) = ["Fire","Dud"];
+        GVAR(jamTypesAllowed)[] = {"Fire", "Dud"};
     };
 
     class RifleCore;
@@ -95,7 +95,7 @@ class CfgWeapons {
     };
     class sgun_HunterShotgun_01_base_F: Rifle_Long_Base_F {
         GVAR(closedBolt) = 1;
-        GVAR(jamTypesAllowed) = ["Fire","Dud"];
+        GVAR(jamTypesAllowed)[] = {"Fire", "Dud"};
     };
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;

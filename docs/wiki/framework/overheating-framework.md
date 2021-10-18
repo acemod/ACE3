@@ -35,7 +35,7 @@ class CfgWeapons {
 class CfgWeapons {
     class Pistol_Base_F;
     class MyRevolver: Pistol_Base_F {
-        ace_overheating_jamTypesAllowed = ["Fire","Dud"]; //Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+        ace_overheating_jamTypesAllowed[] = {"Fire", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
     };
 };
 ```
