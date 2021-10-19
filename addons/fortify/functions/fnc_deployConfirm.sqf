@@ -31,7 +31,6 @@ private _vectorDir = vectorDir _object;
 deleteVehicle _object;
 
 private _newObject = _typeOf createVehicle _posASL;
-_newObject setVariable [QGVAR(objectSide), _side, true];
 _newObject setPosASL _posASL;
 _newObject setVectorDirAndUp [_vectorDir, _vectorUp];
 
