@@ -2,14 +2,14 @@
 
 class vn_pistol;
 class vn_m79_p: vn_pistol {
-	EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
+    EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
 };
 class vn_mk22;
 class vn_m10: vn_mk22 {
-	EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
+    EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
 };
 class vn_m1895: vn_mk22 {
-	EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
+    EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
 };
 
 class vn_pm;
