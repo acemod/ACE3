@@ -98,7 +98,7 @@ class CfgVehicles {
 
     class Item_Base_F;
     class ACE_WaterBottle_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(WaterBottle_DisplayName);
@@ -108,7 +108,7 @@ class CfgVehicles {
         };
     };
     class ACE_WaterBottle_Half_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(WaterBottleHalf_DisplayName);
@@ -118,7 +118,7 @@ class CfgVehicles {
         };
     };
     class ACE_WaterBottle_Empty_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(WaterBottleEmpty_DisplayName);
@@ -128,7 +128,7 @@ class CfgVehicles {
         };
     };
     class ACE_Canteen_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(Canteen_DisplayName);
@@ -138,7 +138,7 @@ class CfgVehicles {
         };
     };
     class ACE_Canteen_Half_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(CanteenHalf_DisplayName);
@@ -148,7 +148,7 @@ class CfgVehicles {
         };
     };
     class ACE_Canteen_Empty_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(CanteenEmpty_DisplayName);
@@ -158,7 +158,7 @@ class CfgVehicles {
         };
     };
     class ACE_Can_Spirit_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = "$STR_a3_cfgvehicles_land_can_v1_f0";
@@ -168,7 +168,7 @@ class CfgVehicles {
         };
     };
     class ACE_Can_Franta_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = "$STR_a3_cfgvehicles_land_can_v2_f0";
@@ -178,7 +178,7 @@ class CfgVehicles {
         };
     };
     class ACE_Can_RedGull_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = "$STR_a3_cfgvehicles_land_can_v3_f0";
@@ -188,7 +188,7 @@ class CfgVehicles {
         };
     };
     class ACE_MRE_LambCurry_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(MRE_LambCurry_DisplayName);
@@ -198,7 +198,7 @@ class CfgVehicles {
         };
     };
     class ACE_MRE_BeefStew_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(MRE_BeefStew_DisplayName);
@@ -208,7 +208,7 @@ class CfgVehicles {
         };
     };
     class ACE_MRE_CreamTomatoSoup_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(MRE_CreamTomatoSoup_DisplayName);
@@ -218,7 +218,7 @@ class CfgVehicles {
         };
     };
     class ACE_MRE_CreamChickenSoup_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(MRE_CreamChickenSoup_DisplayName);
@@ -228,7 +228,7 @@ class CfgVehicles {
         };
     };
     class ACE_MRE_ChickenTikkaMasala_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(MRE_ChickenTikkaMasala_DisplayName);
@@ -238,7 +238,7 @@ class CfgVehicles {
         };
     };
     class ACE_MRE_SteakVegetables_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(MRE_SteakVegetables_DisplayName);
@@ -248,7 +248,7 @@ class CfgVehicles {
         };
     };
     class ACE_MRE_MeatballsPasta_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(MRE_MeatballsPasta_DisplayName);
@@ -258,7 +258,7 @@ class CfgVehicles {
         };
     };
     class ACE_MRE_ChickenHerbDumplings_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(MRE_ChickenHerbDumplings_DisplayName);
@@ -268,7 +268,7 @@ class CfgVehicles {
         };
     };
     class ACE_Humanitarian_Ration_Item: Item_Base_F {
-        author = ACECSTRING(common,ACETeam);
+        author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
         displayName = CSTRING(Humanitarian_Ration_DisplayName);

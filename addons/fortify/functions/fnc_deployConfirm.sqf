@@ -36,7 +36,7 @@ _newObject setPosASL _posASL;
 _newObject setVectorDirAndUp [_vectorDir, _vectorUp];
 
 // Server will use this event to run the jip compatible QGVAR(addActionToObject) event and create the related map marker.
-[QGVAR(objectPlaced), [_unit, _side, _newObject]] call CBA_fnc_globalEvent;
+[QXGVAR(objectPlaced), [_unit, _side, _newObject]] call CBA_fnc_globalEvent;
 
 if (cba_events_control) then {
     // Re-run if ctrl key held

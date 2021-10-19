@@ -65,6 +65,14 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(deduceBarometricPressureFromTerrainAltitude), "CHECKBOX",
+    [LSTRING(deduceBarometricPressureFromTerrainAltitude_displayName), LSTRING(deduceBarometricPressureFromTerrainAltitude_description)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(useLegacyUI), "CHECKBOX",
     [LSTRING(useLegacyUI_displayName), LSTRING(useLegacyUI_description)],
     _category,
@@ -73,7 +81,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(simplifedZeroing), "CHECKBOX",
+    QGVAR(simplifiedZeroing), "CHECKBOX",
     [LSTRING(simplifiedZeroing_displayName), LSTRING(simplifiedZeroing_description)],
     _category,
     false,

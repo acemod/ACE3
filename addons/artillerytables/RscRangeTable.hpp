@@ -42,7 +42,7 @@ class GVAR(rangeTableDialog) {
             colorSelectBackground[] = {0, 0, 0, 0.025};
             colorSelectBackground2[] = {0, 0, 0, 0.025};
             colorScrollbar[] = {0.95,0,0.95,1};
-            class ListScrollBar: ScrollBar{
+            class ListScrollBar: ScrollBar {
                 color[] = {0,0,0,0.6};
             };
         };

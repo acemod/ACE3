@@ -26,6 +26,7 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {900};
         ACE_barrelLengths[] = {736.6};
+        EGVAR(vehicle_damage,incendiary) = 1.0; // Raufoss Mk 211 HEIAP (high-explosive, incendiary, armor-piercing)
     };
     class B_762x54_Ball;
     class rhsusf_B_300winmag: B_762x54_Ball { // ACE_762x67_Ball_Mk248_Mod_1 (ballistics/CfgAmmo.hpp)

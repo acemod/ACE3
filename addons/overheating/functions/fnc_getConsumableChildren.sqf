@@ -25,7 +25,7 @@ private _fnc_getActions = {
 
     {
         private _config = _cfgWeapons >> _x;
-        if (getNumber (_config >> "acex_field_rations_thirstQuenched") > 0) then {
+        if (getNumber (_config >> QEXGVAR(field_rations,thirstQuenched)) > 0) then {
             private _displayName = getText (_config >> "displayName");
             private _picture = getText (_config >> "picture");
 
