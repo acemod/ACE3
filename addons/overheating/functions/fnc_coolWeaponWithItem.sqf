@@ -25,8 +25,8 @@ private _config = configFile >> "CfgWeapons" >> _item;
 private _weapon = currentWeapon _target;
 private _tempVarName = format [QGVAR(%1_temp), _weapon];
 private _temperature = _target getVariable [_tempVarName, 0];
-private _replacementItem = getText (_config >> "acex_field_rations_replacementItem");
-private _liquidAmount = getNumber (_config >> "acex_field_rations_thirstQuenched");
+private _replacementItem = getText (_config >> QEXGVAR(field_rations,replacementItem));
+private _liquidAmount = getNumber (_config >> QEXGVAR(field_rations,thirstQuenched));
 private _consumeText = format [LLSTRING(CoolingWeaponWithItem), getText (configFile >> "CfgWeapons" >> _weapon >> "displayName"), getText (_config >> "displayName")];
 
 /* // to be added when licence compatible audio can be found or recorded

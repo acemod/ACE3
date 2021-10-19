@@ -42,7 +42,7 @@ class CfgGlasses {
         ACE_Protection = 1;
     };
 
-    class G_Combat:None {
+    class G_Combat: None {
         COMBAT_GOGGLES
     };
 
@@ -57,135 +57,135 @@ class CfgGlasses {
         ACE_Protection = 1;
     };
 
-    class G_Lowprofile:None {
+    class G_Lowprofile: None {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 2;
         ACE_Protection = 1;
     };
 
-    class G_Shades_Black:None {
+    class G_Shades_Black: None {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 1;
     };
 
-    class G_Shades_Blue:None{
+    class G_Shades_Blue: None {
         ACE_Color[] = {0,0,1};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Shades_Green:None{
+    class G_Shades_Green: None {
         ACE_Color[] = {0,1,0};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Shades_Red:None{
+    class G_Shades_Red: None {
         ACE_Color[] = {1,0,0};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Spectacles:None{
+    class G_Spectacles: None {
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Spectacles_Tinted:None{
+    class G_Spectacles_Tinted: None {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 1;
     };
 
-    class G_Sport_Blackred:None{
+    class G_Sport_Blackred: None {
         ACE_Color[] = {1,0,0};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Sport_BlackWhite:None{
+    class G_Sport_BlackWhite: None {
         ACE_Color[] = {0,0,1};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Sport_Blackyellow:None{
+    class G_Sport_Blackyellow: None {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 1;
     };
 
-    class G_Sport_Checkered:None{
+    class G_Sport_Checkered: None {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 1;
     };
 
-    class G_Sport_Greenblack:None{
+    class G_Sport_Greenblack: None {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 1;
     };
 
-    class G_Sport_Red:None{
+    class G_Sport_Red: None {
         ACE_TintAmount=COLOUR*2;
         ACE_Color[] = {0,0,0};
         ACE_Resistance = 1;
     };
 
-    class G_Squares:None{
+    class G_Squares: None {
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Squares_Tinted:None{
+    class G_Squares_Tinted: None {
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Tactical_Black:None{
+    class G_Tactical_Black: None {
         ACE_TintAmount=COLOUR;
         ACE_Color[] = {0,0,-1.5};
         ACE_Resistance = 1;
     };
 
-    class G_Tactical_Clear:None{
+    class G_Tactical_Clear: None {
         ACE_TintAmount=COLOUR;
         ACE_Color[] = {0,0,-1};
         ACE_Resistance = 1;
     };
 
-    class G_Aviator:None{
+    class G_Aviator: None {
         ACE_Color[] = {0,0,-1};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Lady_Blue:None{
+    class G_Lady_Blue: None {
         ACE_Color[] = {0,0,1};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Lady_Red:None{
+    class G_Lady_Red: None {
         ACE_Color[] = {1,0,0};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
-    class G_Lady_Dark:None{
+    class G_Lady_Dark: None {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 1;
     };
 
-    class G_Lady_Mirror:None{
+    class G_Lady_Mirror: None {
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
     };
 
     class G_Balaclava_blk;
 
-    class G_Balaclava_combat:G_Balaclava_blk {
+    class G_Balaclava_combat: G_Balaclava_blk {
         COMBAT_GOGGLES
     };
 
-    class G_Balaclava_lowprofile:G_Balaclava_blk {
+    class G_Balaclava_lowprofile: G_Balaclava_blk {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 2;
         ACE_Protection = 1;
@@ -202,7 +202,7 @@ class CfgGlasses {
     };
 
     class G_Bandanna_blk;
-    class G_Bandanna_shades:G_Bandanna_blk {
+    class G_Bandanna_shades: G_Bandanna_blk {
         ACE_TintAmount=COLOUR*2;
         ACE_Resistance = 1;
         ACE_Protection = 1;
@@ -265,13 +265,13 @@ class CfgGesturesMale {
 class CfgWeapons {
     class H_HelmetB;
 
-    class H_CrewHelmetHeli_B:H_HelmetB {
+    class H_CrewHelmetHeli_B: H_HelmetB {
         ACE_Protection = 1;
     };
-    class H_PilotHelmetHeli_B:H_HelmetB {
+    class H_PilotHelmetHeli_B: H_HelmetB {
         ACE_Protection = 1;
     };
-    class H_PilotHelmetFighter_B:H_HelmetB {
+    class H_PilotHelmetFighter_B: H_HelmetB {
         ACE_Protection = 1;
     };
 };
@@ -290,7 +290,7 @@ class SniperCloud {
 
 class CfgCloudlets {
     class Default;
-    class ACERainEffect:Default {
+    class ACERainEffect: Default {
         interval = 0.001;
         particleShape = "\A3\data_f\ParticleEffects\Universal\Refract";
         particleFSNtieth = 1;

@@ -40,7 +40,7 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
         if (_name in ELEMENTS_BASIC) then {
             [true] call FUNC(setElements);
         } else {
-            private _nameNoPrefix = toLower (_name select [_delimPos]);
+            private _nameNoPrefix = toLower (_name select [7]);
             private _cachedElement = GVAR(configCache) getVariable _nameNoPrefix;
             if (!isNil "_cachedElement") then {
                 [_nameNoPrefix, _value, true] call FUNC(setAdvancedElement);

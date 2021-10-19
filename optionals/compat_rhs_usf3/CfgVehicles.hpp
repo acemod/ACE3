@@ -273,7 +273,7 @@ class CfgVehicles {
 
     class Wheeled_APC_F;
     class APC_Tracked_03_base_F;
-    class RHS_M2A2_Base : APC_Tracked_03_base_F {
+    class RHS_M2A2_Base: APC_Tracked_03_base_F {
         EGVAR(refuel,fuelCapacity) = 746;
         EGVAR(vehicle_damage,canHaveFireRing) = 1;
         EGVAR(vehicle_damage,hullDetonationProb) = 0.2;
@@ -284,7 +284,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,engineFireProb) = 0.8;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
     };
-    class rhsusf_M1117_base : Wheeled_APC_F {
+    class rhsusf_M1117_base: Wheeled_APC_F {
         EGVAR(vehicle_damage,hullDetonationProb) = 0.2;
         EGVAR(vehicle_damage,turretDetonationProb) = 0.2;
         EGVAR(vehicle_damage,engineDetonationProb) = 0;
@@ -302,7 +302,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,engineFireProb) = 0.7;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
     };
-    class rhsusf_m1a1tank_base : MBT_01_base_F {
+    class rhsusf_m1a1tank_base: MBT_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1909;
         EGVAR(vehicle_damage,hullDetonationProb) = 0;
         EGVAR(vehicle_damage,turretDetonationProb) = 0;

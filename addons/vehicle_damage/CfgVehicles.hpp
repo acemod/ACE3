@@ -79,7 +79,7 @@ class CfgVehicles {
         };
     };
     class B_APC_Wheeled_01_base_F: APC_Wheeled_01_base_F {};
-    class B_APC_Wheeled_01_cannon_F : B_APC_Wheeled_01_base_F {
+    class B_APC_Wheeled_01_cannon_F: B_APC_Wheeled_01_base_F {
         GVAR(hullDetonationProb) = 0.2;
         GVAR(turretDetonationProb) = 0.2;
         GVAR(engineDetonationProb) = 0;
@@ -155,7 +155,7 @@ class CfgVehicles {
         GVAR(canHaveFireRing) = 1;
     };
     
-    class APC_Tracked_02_base_F : Tank_F {
+    class APC_Tracked_02_base_F: Tank_F {
         GVAR(hullDetonationProb) = 0;
         GVAR(turretDetonationProb) = 0;
         GVAR(engineDetonationProb) = 0;
@@ -171,7 +171,7 @@ class CfgVehicles {
         };
         GVAR(canHaveFireRing) = 1;
     };
-    class O_APC_Tracked_02_base_F : APC_Tracked_02_base_F {};
+    class O_APC_Tracked_02_base_F: APC_Tracked_02_base_F {};
     class O_APC_Tracked_02_AA_F: O_APC_Tracked_02_base_F {
         GVAR(hullDetonationProb) = 0.4;
         GVAR(turretDetonationProb) = 0.4;

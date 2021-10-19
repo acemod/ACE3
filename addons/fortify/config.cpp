@@ -2,8 +2,8 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
-        weapons[] = {};
+        units[] = {QXGVAR(setupModule), QXGVAR(buildLocationModule)};
+        weapons[] = {"ACE_Fortify"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
@@ -12,7 +12,7 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 
-    class XADDON: ADDON {};
+    BWC_CONFIG(XADDON);
 };
 
 #include "Cfg3DEN.hpp"

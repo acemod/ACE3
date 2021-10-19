@@ -23,7 +23,7 @@ class CfgAmmo {
     
     class ACE_G_40mm_HE;
     
-    CREATE_INCENDIARY_AMMO(BulletBase,                      BulletCore,             0.5);
+    CREATE_INCENDIARY_AMMO(BulletBase,                      BulletCore,             0.1);
     CREATE_INCENDIARY_AMMO(ShellBase,                       ShellCore,              1.0);
     CREATE_INCENDIARY_AMMO(ammo_Penetrator_Base,            ShellBase,              1.0);
     CREATE_INCENDIARY_AMMO(MissileBase,                     MissileCore,            1.0);

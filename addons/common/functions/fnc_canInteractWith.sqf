@@ -21,10 +21,11 @@ params ["_unit", "_target", ["_exceptions", []]];
 
 _exceptions = _exceptions apply {toLower _x};
 
-private _owner = _target getVariable [QGVAR(owner), objNull];
-
 // exit if the target is not free to interact
-if (!isNull _owner && {_unit != _owner}) exitWith {false};
+if ((!isNull _target) && {
+    private _owner = _target getVariable [QGVAR(owner), objNull];
+    (!isNull _owner) && {_unit != _owner}}
+) exitWith {false};
 
 // check general conditions
 private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];

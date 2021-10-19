@@ -24,8 +24,7 @@ class CfgVehicles {
     class Wheeled_APC_F: Car_F {
         class NewTurret;
         class Turrets {
-            class MainTurret: NewTurret
-            {
+            class MainTurret: NewTurret {
                 class ViewOptics;
             };
         };

@@ -75,7 +75,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(jamChanceCoef_displayName), LSTRING(jamChanceCoef_description)],
     _category,
     [0, 5, 1, 2],
-    0
+    1
 ] call CBA_fnc_addSetting;
 
 [

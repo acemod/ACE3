@@ -13,7 +13,7 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 
-    class XADDON: ADDON {};
+    BWC_CONFIG(XADDON);
 };
 
 #include "ACE_Settings.hpp"
