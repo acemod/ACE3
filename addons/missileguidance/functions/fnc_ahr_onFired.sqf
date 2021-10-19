@@ -30,7 +30,7 @@ if !(_target isKindOf "AllVehicles") then {
 _launchParams set [0, _target];
 _projectile setMissileTarget objNull; // to emulate a no launch warning
 
-private _projectileConfig = [_projectile] call CBA_fnc_getObjectConfig;
+private _projectileConfig = configOf _projectile;
 private _config = _projectileConfig >> "ace_missileguidance";
 
 private _isActive = false;

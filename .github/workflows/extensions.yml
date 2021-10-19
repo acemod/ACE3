@@ -3,11 +3,7 @@ name: Extensions
 on:
   pull_request:
     paths:
-    - 'extensions/*'
-    - 'extensions/*/*'
-    - 'extensions/*/*/*'
-    - 'extensions/*/*/*/*'
-    - 'extensions/*/*/*/*/*'
+    - 'extensions/**'
 
 jobs:
   build:
@@ -22,7 +18,9 @@ jobs:
     - name: Build
       shell: cmd
       run: |
-        cd extensions/build
+        cd extensions
+        mkdir build
+        cd build
         cmake .. && cmake --build .
     - name: Upload Artifact
       uses: actions/upload-artifact@master

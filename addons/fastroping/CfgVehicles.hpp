@@ -48,6 +48,16 @@ class CfgVehicles {
                 condition = QUOTE([_target] call FUNC(canStowFRIES));
                 statement = QUOTE([_target] call FUNC(stowFRIES));
             };
+            class ACE_deployRopes3 {
+                displayName = CSTRING(Interaction_deployRopes3);
+                condition = QUOTE([ARR_3(_target,_player,'ACE_rope3')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope3')])] call CBA_fnc_serverEvent);
+            };
+            class ACE_deployRopes6 {
+                displayName = CSTRING(Interaction_deployRopes6);
+                condition = QUOTE([ARR_3(_target,_player,'ACE_rope6')] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope6')])] call CBA_fnc_serverEvent);
+            };
             class ACE_deployRopes12 {
                 displayName = CSTRING(Interaction_deployRopes12);
                 condition = QUOTE([ARR_3(_target,_player,'ACE_rope12')] call FUNC(canDeployRopes));
@@ -75,8 +85,9 @@ class CfgVehicles {
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = QUOTE(true);
-                statement = "";
+                condition = QUOTE([_target] call FUNC(canCutRopes));
+                // should not be empty to work with EGVAR(interact_menu,consolidateSingleChild) setting
+                statement = QUOTE(true);
                 class confirmCutRopes {
                     displayName = ECSTRING(common,confirm);
                     condition = QUOTE([_target] call FUNC(canCutRopes));

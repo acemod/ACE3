@@ -23,7 +23,7 @@ GVAR(ppeffectBlur) = -1;
 
 GVAR(isUsingMagnification) = false;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_5("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling),GVAR(scotopicEffects));
 
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;

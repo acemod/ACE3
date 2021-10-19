@@ -26,5 +26,5 @@ private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
 
 (magazinesAmmoFull _player) findIf {
     _x params ["_className", "", "_loaded"];
-    (_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}
+    (_className in _compatibleMags) && {!_loaded} && {[_target, _className] call CBA_fnc_canAddItem}
 } > -1

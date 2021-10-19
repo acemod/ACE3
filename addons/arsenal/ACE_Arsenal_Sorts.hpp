@@ -4,6 +4,7 @@ class GVAR(sorts) {
         displayName = "";
         tabs[] = {{}, {}};
         statement = "";
+        condition = "true";
     };
 
     class ACE_alphabetically: sortBase {
@@ -27,11 +28,19 @@ class GVAR(sorts) {
         statement = QUOTE(_this call FUNC(sortStatement_mass));
     };
 
+    class ACE_amount: sortBase {
+        scope = 2;
+        displayName = CSTRING(sortByAmountText);
+        tabs[] = {{}, {0,1,2,3,4,5,6,7}};
+        statement = QUOTE(_this call FUNC(sortStatement_amount));
+        condition = QUOTE(_this select 0); // Only show for containers
+    };
+
     class ACE_load: sortBase {
         scope = 2;
         displayName = CSTRING(sortByLoadText);
         tabs[] = {{3,4,5}, {}};
-        statement = QUOTE(getContainerMaxLoad configName _this);
+        statement = QUOTE(getContainerMaxLoad (_this select 1));
     };
 
     class ACE_accuracy: sortBase {
@@ -60,5 +69,17 @@ class GVAR(sorts) {
         displayName = CSTRING(sortByMagCountText);
         tabs[] = {{}, {4}};
         statement = QUOTE(_this call FUNC(sortStatement_magCount));
+    };
+
+    class ACE_protectionBallistic: sortBase {
+        scope = 2;
+        displayName = CSTRING(sortByProtectionBallistic);
+        tabs[] = {{3,4,6}, {}};
+        statement = QUOTE([ARR_3(_this, 1000000, 1000)] call FUNC(sortStatement_protection));
+    };
+
+    class ACE_protectionExplosive: ACE_protectionBallistic {
+        displayName = CSTRING(sortByProtectionExplosive);
+        statement = QUOTE([ARR_3(_this, 1000, 1000000)] call FUNC(sortStatement_protection));
     };
 };

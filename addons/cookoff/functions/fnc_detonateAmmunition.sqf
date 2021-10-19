@@ -18,9 +18,11 @@
  *
  * Public: No
  */
-#define MAX_TIME_BETWEEN_AMMO_DET 25
 
 params ["_vehicle", "_magazines", "_totalAmmo"];
+
+if (GVAR(enable) == 0) exitWith {};
+if !(GVAR(enableAmmoCookoff)) exitWith {};
 
 if (isNull _vehicle) exitWith {}; // vehicle got deleted
 if (_magazines isEqualTo []) exitWith {}; // nothing to detonate anymore

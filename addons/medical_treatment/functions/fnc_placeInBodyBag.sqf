@@ -4,7 +4,7 @@
  * Places a dead body inside a body bag.
  *
  * Arguments:
- * 0: Medic (not used) <OBJECT>
+ * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
  *
  * Return Value:
@@ -16,8 +16,13 @@
  * Public: No
  */
 
-params ["", "_patient"];
+params ["_medic", "_patient"];
 TRACE_1("placeInBodyBag",_patient);
+
+if ((alive _patient) && {!GVAR(allowBodyBagUnconscious)}) exitWith {
+    [_medic, "ACE_bodyBag"] call EFUNC(common,addToInventory); // re-add slighly used bodybag?
+    [LSTRING(bodybagWhileStillAlive)] call EFUNC(common,displayTextStructured);
+};
 
 if (!local _patient) exitWith {
     TRACE_1("Calling where local",local _patient);

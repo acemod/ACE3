@@ -80,4 +80,19 @@ class CfgVehicles {
     class Land_BackAlley_01_l_1m_F: Wall_F {
         GVAR(isFence) = 1;
     };
+    class Land_GameProofFence_01_l_5m_F: Wall_F {
+        GVAR(isFence) = 1;
+    };
+    class Land_NetFence_03_m_3m_F: Wall_F {
+        GVAR(isFence) = 1;
+    };
+    class Land_NetFence_03_m_3m_corner_F: Wall_F {
+        GVAR(isFence) = 1;
+    };
+    class Land_NetFence_03_m_3m_hole_F: Wall_F {
+        GVAR(isFence) = 1;
+    };
+    class Land_NetFence_03_m_9m_F: Wall_F {
+        GVAR(isFence) = 1;
+    };
 };

@@ -22,7 +22,7 @@ if (isNull _source) exitWith {0};
 private _fuel = _source getVariable QGVAR(currentFuelCargo);
 
 if (isNil "_fuel") then {
-    _fuel = getNumber (configFile >> "CfgVehicles" >> typeOf _source >> QGVAR(fuelCargo));
+    _fuel = getNumber (configOf _source >> QGVAR(fuelCargo));
     _source setVariable [QGVAR(currentFuelCargo), _fuel, true];
 };
 

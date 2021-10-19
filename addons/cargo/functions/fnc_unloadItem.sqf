@@ -47,14 +47,19 @@ private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
 private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
-if (_item isEqualType objNull) then {
-    detach _item;
+private _object = _item;
+if (_object isEqualType objNull) then {
+    detach _object;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
+    [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
 } else {
-    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
-    _newItem setPosASL (AGLtoASL _emptyPosAGL);
+    _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
+    _object setPosASL (AGLtoASL _emptyPosAGL);
+    
+    [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
+    [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;
 };
-
+// Invoke listenable event
+["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;
 true

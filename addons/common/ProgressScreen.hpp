@@ -1,6 +1,6 @@
 class GVAR(ProgressBar_Dialog) {
     idd = -1;
-    movingEnable = false;
+    movingEnable = 0;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBG)),(_this select 0) displayCtrl 1)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBar)),(_this select 0) displayCtrl 2)]; uiNamespace setVariable [ARR_2(QUOTE(QGVAR(ctrlProgressBarTitle)),(_this select 0) displayCtrl 3)];);
     objects[] = {};
 
@@ -46,32 +46,6 @@ class GVAR(ProgressBar_Dialog) {
         class TitleText: TitleBackground {
             idc = 3;
             colorBackground[] = {0, 0, 0, 0};
-        };
-    };
-};
-
-class GVAR(DisableMouse_Dialog) {
-    idd = -1;
-    movingEnable = false;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),_this select 0)];);
-    objects[] = {};
-    class controlsBackground {
-        class Background {
-            idc = -1;
-            moving = 0;
-            font = "TahomaB";
-            text = "";
-            sizeEx = 0;
-            lineSpacing = 0;
-            type = 0;
-            style = 0;
-            size = 1;
-            colorBackground[] = {0, 0, 0, 0};//0.5
-            colorText[] = {0, 0, 0, 0};
-            x = "safezoneX";
-            y = "safezoneY";
-            w = "safezoneW";
-            h = "safezoneH";
         };
     };
 };

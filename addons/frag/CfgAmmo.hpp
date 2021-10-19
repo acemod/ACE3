@@ -87,6 +87,7 @@ class CfgAmmo {
     class ACE_G_40mm_Practice: ACE_G_40mm_HE {
         GVAR(skip) = 1;
         GVAR(force) = 0;
+        EGVAR(vehicle_damage,incendiary) = 0;
     };
     class ACE_G40mm_HE_VOG25P: G_40mm_HE {
         GVAR(skip) = 0;

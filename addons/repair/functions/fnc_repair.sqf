@@ -99,7 +99,7 @@ if (!("All" in _repairLocations)) then {
 
 private _requiredObjects = getArray (_config >> "claimObjects");
 private _claimObjectsAvailable = [];
-if (!(_requiredObjects isEqualTo [])) then {
+if (_requiredObjects isNotEqualTo []) then {
     _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
     if (_claimObjectsAvailable isEqualTo []) then {
         TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
@@ -135,8 +135,12 @@ if (_consumeItems > 0) then {
 private _callbackProgress = getText (_config >> "callbackProgress");
 if (_callbackProgress == "") then {
     _callbackProgress = {
-        (_this select 0) params ["", "_target"];
-        (alive _target) && {(abs speed _target) < 1} // make sure vehicle doesn't drive off
+        (_this select 0) params ["_caller", "_target", "", "", "", "", "_claimObjectsAvailable"];
+        (
+            (alive _target) && 
+            {(abs speed _target) < 1} && // make sure vehicle doesn't drive off
+            {_claimObjectsAvailable findIf {!alive _x || {_x getVariable [QEGVAR(common,owner), objNull] isNotEqualTo _caller}} == -1} // make sure claim objects are still available
+        )
     };
 } else {
     if (isNil _callbackProgress) then {
@@ -176,12 +180,12 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     };
 };
 
-private _soundPosition = AGLToASL (_caller modelToWorldVisual (_caller selectionPosition "RightHand"));
+private _soundPosition = _caller modelToWorldVisualWorld (_caller selectionPosition "RightHand");
 ["Acts_carFixingWheel", _soundPosition, nil, 50] call EFUNC(common,playConfigSound3D);
 
 // Get repair time
 private _repairTime = [
-    configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
+    configOf _target >> QGVAR(repairTimes) >> configName _config,
     "number",
     -1
 ] call CBA_fnc_getConfigEntry;

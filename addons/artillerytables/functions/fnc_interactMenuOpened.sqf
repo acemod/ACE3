@@ -26,7 +26,7 @@ private _rangeTablesShown = ace_player getVariable [QGVAR(rangeTablesShown), []]
 TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
 
 {
-    private _vehicleCfg = configFile >> "CfgVehicles" >> typeOf _x;
+    private _vehicleCfg = configOf _x;
     // config "ace_artillerytables_showRangetable" [0 disabled, 1 enabled] falls back to artilleryScanner
     private _showRangetable = if (isNumber (_vehicleCfg >> QGVAR(showRangetable))) then {
         getNumber (_vehicleCfg >> QGVAR(showRangetable))
