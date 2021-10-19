@@ -21,6 +21,8 @@ GVAR(ppeffectRadialBlur) = -1;
 GVAR(ppeffectColorCorrect) = -1;
 GVAR(ppeffectBlur) = -1;
 
+GVAR(scotopicCC) = -1;
+
 GVAR(isUsingMagnification) = false;
 
 ["CBA_settingsInitialized", {
@@ -45,19 +47,22 @@ GVAR(isUsingMagnification) = false;
             [false] call FUNC(setupDisplayEffects);
             [true] call FUNC(setupDisplayEffects);
         };
+        if (GVAR(scotopicCC) > -1) then {
+            ppEffectDestroy GVAR(scotopicCC);
+            GVAR(scotopicCC) = ppEffectCreate ["colorCorrections", 1502];
+            GVAR(scotopicCC) ppEffectForceInNVG false;
+        };
     }];
 
     if (GVAR(scotopicEffects)) then {
-
-GVAR(scoTestToggle) = true;
-["test", "test", "test", {
-    GVAR(scoTestToggle) = !GVAR(scoTestToggle);
-}, {false}, [0x21, [false, false, false]], false] call CBA_fnc_addKeybind; // F Key
-
+        GVAR(scoTestToggle) = true;
+        ["test", "test", "test", {
+            GVAR(scoTestToggle) = !GVAR(scoTestToggle);
+        }, {false}, [0x21, [false, false, false]], false] call CBA_fnc_addKeybind; // F Key
 
         GVAR(scotopicCC) = ppEffectCreate ["colorCorrections", 1502];
         GVAR(scotopicCC) ppEffectForceInNVG false;
-        [FUNC(scotopicEffects), [], 1] call CBA_fnc_waitAndExecute;
+        [0] call FUNC(scotopicEffects); // self-loops
     };
 }] call CBA_fnc_addEventHandler;
 
