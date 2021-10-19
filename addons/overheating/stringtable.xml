@@ -296,7 +296,7 @@
         <Key ID="STR_ACE_Overheating_cookoffCoef_description">
             <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
             <Japanese>過熱によって誘爆が起きる確立係数を設定します。\n高い値では誘爆までに必要な過熱量が増加し、0 で誘爆が無効化されます。</Japanese>
-            <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment.\nPlus la valeur est élevée, plus la température doit être élevée pour auto-inflammer les munitions.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
+            <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment dans la chambre de l'arme.\nPlus la valeur est élevée, plus l'arme doit être chaude pour que les munitions s'auto-inflamment.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
