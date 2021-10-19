@@ -426,11 +426,13 @@
             <English>Reopen Cargo Menu</English>
             <Turkish>Kargo Menüsünü Tekrar Aç</Turkish>
             <Japanese>カーゴ メニューを再度開く</Japanese>
+            <French>Rouvrir le menu de cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
             <English>Reopen the Cargo Menu after successful unload.</English>
             <Turkish>Başarılı bir yük indirmeden sonra Kargo Menüsünü tekrar göster.</Turkish>
             <Japanese>カーゴを降ろした後に再びカーゴ メニューを開きます。</Japanese>
+            <French>Réouvre le menu de cargaison après un déchargement réussi.</French>
         </Key>
     </Package>
 </Project>
