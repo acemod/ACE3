@@ -16,8 +16,6 @@
  * Public: No
  */
 
-if (!GVAR(enabled)) exitWith {};
-
 params ["_player", "_vehicle"];
 TRACE_2("enterVehicle",_player,_vehicle);
 
@@ -28,6 +26,7 @@ if (GVAR(pfeh) != -1) then {
     call FUNC(viewCleanup);
 };
 
+if (!GVAR(enabled)) exitWith {};
 if (_player == _vehicle) exitWith {};
 
 private _viewports = [_vehicle] call FUNC(getViewports);

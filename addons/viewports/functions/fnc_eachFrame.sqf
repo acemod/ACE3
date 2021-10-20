@@ -4,9 +4,12 @@
 * Runs each frame while inside of a vehicle with viewports
 *
 * Arguments:
-* 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
-* 1: unit doing the attach (player) <OBJECT>
-* 2: Array containing a string of the attachable item <ARRAY>
+* 0: PFEH Args <ARRAY>
+*   0: Player <OBJECT>
+*   1: Vehicle <OBJECT>
+*   2: Viewport configuration <ARRAY>
+*   3: Viewport index showwn (-1 for none) <NUMBER>
+*   4: Last visionmode <NUMBER>
 *
 * Return Value:
 * None
@@ -39,12 +42,14 @@ if (cba_events_control) then {
     private _eyesPosASL = AGLtoASL (positionCameraToWorld [0, 0, 0]);
     private _eyesDir = (AGLtoASL (positionCameraToWorld [0, 0, 1])) vectorDiff _eyesPosASL;
     {
-        _x params ["", "", "", "", "_screenLocation", "_maxDistance", "_compartments", "_roles"];
+        _x params ["", "", "_camLocation", "", "_screenLocation", "_maxDistance", "_compartments", "_roles"];
 
         private _viewASL = AGLtoASL (_vehicle modelToWorldVisual _screenLocation);
         private _viewDiff = _viewASL vectorDiff _eyesPosASL;
         private _viewAngle = acos (_viewDiff vectorCos _eyesDir);
+        #ifdef DEBUG_MODE_FULL
         systemChat format ["%1: %2 @ %3",_forEachIndex,round _viewAngle, vectorMagnitude _viewDiff];
+        #endif
         if (
             (_viewAngle < _newIndexAngle) 
             && {(_compartments isEqualTo []) || {(toLower _comparment) in _compartments}}

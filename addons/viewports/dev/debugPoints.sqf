@@ -22,9 +22,7 @@ z # 0 set [4, m];
     [] call ACE_PREP_RECOMPILE;
     [] call ace_common_fnc_dumpPerformanceCounters;
     private _end = diag_tickTime;
-
     systemChat format ["[recompile took %1 ms]", (1000 * (_end - _start)) toFixed 1];
-
     false
 }, {false}, [0x21, [false, false, false]], false] call CBA_fnc_addKeybind; // F Key
 
@@ -76,7 +74,7 @@ z # 0 set [4, m];
             {
                 _x params ["_name", "", "_camLocation", "_camAttach"];
                 _out pushBack format ['            class %1 {', _name]; 
-                _out pushBack format ['                camLocation[] = {%1, %2, %3};', _camLocation#0, _camLocation#1, _camLocation#2]; 
+                _out pushBack format ['                camLocation[] = {%1, %2, %3};', _camLocation # 0, _camLocation # 1, _camLocation # 2]; 
                 _out pushBack format ['                camAttach = %1;', _camAttach]; 
                 // _out pushBack format ['                type = "%1";', _type]; 
                 // _out pushBack format ['                screenLocation[] = {};']; 
@@ -143,6 +141,10 @@ addMissionEventHandler ["Draw3D", {
 
     {
         _x params ["_name", "_type", "_camLocation", "_camAttach", "_screenLocation", "_maxDistance", "_compartments", "_roles"];
+
+        if (_camLocation isEqualType "") then {
+            _camLocation = _vehicle selectionPosition [_camLocation, "Memory"];
+        };
 
         private _screenAGL = _vehicle modelToWorldVisual _screenLocation;
         drawIcon3D ["#(argb,8,8,3)color(0,0,1,1)", [1,0.5,1,1], _screenAGL, 0.05, 0.05, 0, format ["%1:%2",_forEachIndex,_compartments], 1, 0.03, "TahomaB"];

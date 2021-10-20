@@ -28,7 +28,7 @@ private _compartment = "#";
 
 switch (_role) do {
     case "driver": {
-        _compartment = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;;
+        _compartment = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;
     };
     case "cargo": {
         // note: cargoNumber is different from the cargoIndex from fullCrew...

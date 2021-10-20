@@ -19,25 +19,50 @@ params ["_vehicle"];
 
 private _viewports = _vehicle getVariable [QGVAR(viewports), nil];
 
-if (isNil {_viewports}) then {
+if (isNil "_viewports") then {
     private _configs = "true" configClasses ((configOf _vehicle) >> "ace_viewports");
     _viewports = _configs apply {
         private _name = configName _x;
+        // type [STRING] - Optional
         private _type = getText (_x >> "type");
-        private _camLocation = getArray (_x >> "camLocation");
-        private _camAttach = getArray (_x >> "camAttach");
-        if (_camAttach isEqualTo []) then { 
-            _camAttach = getNumber (_x >> "camAttach");
+        // camLocation [ARRAY or STRING] - Required
+        private _camLocation = if (isArray (_x >> "camLocation")) then {
+            getArray (_x >> "camLocation")
+        } else {
+            getText (_x >> "camLocation")
         };
-        private _screenLocation = getArray (_x >> "screenLocation");
-        if (_screenLocation isEqualTo []) then {
-            _screenLocation =_camLocation vectorAdd [0,0,-0.175] // generic periscope drop height from cam
+        // camAttach [ARRAY or NUMBER] - Required
+        private _camAttach = if (isArray (_x >> "camAttach")) then {
+            getArray (_x >> "camAttach")
+        } else {
+            getNumber (_x >> "camAttach")
         };
-        private _maxDistance = getNumber (_x  >> "maxDistance");
+        // screenLocation [ARRAY or STRING] - Optional (will be converted to ARRAY here)
+        private _screenLocation = if (isArray (_x >> "screenLocation")) then {
+            getArray (_x >> "screenLocation")
+        } else {
+            getText (_x >> "screenLocation")
+        };
+        if (_screenLocation isEqualType "") then {
+            // screens should be on the hull (IE non-animated) so we can do all the mem-point calculations here
+            if (_screenLocation == "") exitWith { // use generic periscope drop height from cam
+                private _camLocArray = if (_camLocation isEqualType []) then { 
+                    _camLocation
+                } else {
+                    _vehicle selectionPosition [_camLocation, "Memory"];
+                };
+                _screenLocation =_camLocArray vectorAdd [0,0,-0.175] 
+            };
+            _screenLocation = _vehicle selectionPosition [_screenLocation, "Memory"];
+        };
+        // maxDistance [NUMBER] - Optional
+        private _maxDistance = getNumber (_x >> "maxDistance");
         if (_maxDistance == 0) then {
             _maxDistance = 0.75;
         };
+        // compartments [ARRAY] - Optional
         private _compartments = (getArray (_x >> "compartments")) apply {toLower _x};
+        // roles [ARRAY] - Optional
         private _roles = (getArray (_x >> "roles")) apply {toLower _x};
 
         [_name, _type, _camLocation, _camAttach, _screenLocation, _maxDistance, _compartments, _roles]

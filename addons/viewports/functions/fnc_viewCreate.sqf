@@ -23,6 +23,11 @@ TRACE_5("camCreate",_vehicle,_name,_type,_camLocation,_camAttach);
 
 private _usingGoggles = _visionMode > 0;
 
+if (_camLocation isEqualType "") then {
+    _camLocation = _vehicle selectionPosition [_camLocation, "Memory"];
+    if (_camLocation isEqualTo [0,0,0]) then { WARNING_2("probably bad cam location %1:%2",typeOf _vehicle,_viewport); }
+};
+
 // Create Cam and attach it to vic
 GVAR(camera) = "camera" camCreate getPos _vehicle;
 if (_camAttach isEqualType 0) then {
@@ -54,14 +59,14 @@ private _camFov = 0.75;
 
 switch (true) do {
     case (_type == "screen"): {
-        // Generic computer screen
+        // Generic "Squad Leader's Display" monitor showing turret cam
         private _desiredAR = 1.25;
-        private _stretch = (_desiredAR / _screenAR) max 0.8 min 1.25; // define max stretch factor of pip texture
+        private _stretch = (_desiredAR / _screenAR) max 0.8 min 1.25; // define max stretch factor of pip texture (don't stretch more or less than this)
 
         private _viewHeight = 0.3 * safeZoneH;
         private _viewWidth = _stretch * _viewHeight * _screenAR / 1.3333333333333;
 
-        _ctrlRender = _display ctrlCreate ["RscPicture", -1];
+        private _ctrlRender = _display ctrlCreate ["RscPicture", -1];
         _ctrlRender ctrlSetText _renderTexture;
         _ctrlRender ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
         _ctrlRender ctrlCommit 0;
@@ -99,7 +104,7 @@ switch (true) do {
         };
         private _viewWidth = _stretch * _viewHeight * _screenAR / 1.3333333333333;
 
-        _ctrlRender = _display ctrlCreate ["RscPicture", -1];
+        private _ctrlRender = _display ctrlCreate ["RscPicture", -1];
         _ctrlRender ctrlSetText _renderTexture;
         _ctrlRender ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
         _ctrlRender ctrlCommit 0;
