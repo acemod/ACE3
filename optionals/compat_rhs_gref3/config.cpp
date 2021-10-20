@@ -5,9 +5,9 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {QGVAR(dshkm_carry)};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_explosives", "ace_csw", "rhsgref_main", "rhsgref_c_weapons"};
+        requiredAddons[] = {"ace_explosives", "ace_csw", "rhsgref_main_loadorder"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror", "Ruthberg", "Anton"};
         url = ECSTRING(main,URL);

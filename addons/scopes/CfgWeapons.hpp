@@ -6,61 +6,61 @@ class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
     
-    class optic_Yorris : ItemCore {
+    class optic_Yorris: ItemCore {
         ACE_ScopeHeightAboveRail = 2.77224;
     };
     
-    class optic_MRD : ItemCore {
+    class optic_MRD: ItemCore {
         ACE_ScopeHeightAboveRail = 2.8;
     };
     
-    class optic_Aco : ItemCore {
+    class optic_Aco: ItemCore {
         ACE_ScopeHeightAboveRail = 3.69248;
     };
     
-    class optic_ACO_grn : ItemCore {
+    class optic_ACO_grn: ItemCore {
         ACE_ScopeHeightAboveRail = 3.69248;
     };
     
-    class optic_ACO_grn_smg : ItemCore {
+    class optic_ACO_grn_smg: ItemCore {
         ACE_ScopeHeightAboveRail = 3.69248;
     };
     
-    class optic_ACO_smg : ItemCore {
+    class optic_ACO_smg: ItemCore {
         ACE_ScopeHeightAboveRail = 3.69248;
     };
     
-    class optic_Holosight : ItemCore {
+    class optic_Holosight: ItemCore {
         ACE_ScopeHeightAboveRail = 4.66933;
     };
     
-    class optic_Holosight_smg : ItemCore {
+    class optic_Holosight_smg: ItemCore {
         ACE_ScopeHeightAboveRail = 4.66933;
     };
     
-    class optic_Arco : ItemCore {
+    class optic_Arco: ItemCore {
         ACE_ScopeHeightAboveRail = 4.89287;
     };
     
-    class optic_ERCO_blk_F : optic_Arco {
+    class optic_ERCO_blk_F: optic_Arco {
         ACE_ScopeHeightAboveRail = 3.48836;
     };
     
-    class optic_Hamr : ItemCore {
+    class optic_Hamr: ItemCore {
         ACE_ScopeHeightAboveRail = 4.48584;
     };
     
-    class optic_MRCO : ItemCore {
+    class optic_MRCO: ItemCore {
         ACE_ScopeHeightAboveRail = 3.88405;
     };
     
-    class optic_Nightstalker : ItemCore {
+    class optic_Nightstalker: ItemCore {
         ACE_ScopeHeightAboveRail = 5.54325;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
         ACE_ScopeAdjust_Horizontal[] = {-6, 6};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class NCTALKEP {
                     discreteDistance[] = {200};
@@ -70,13 +70,13 @@ class CfgWeapons {
         };
     };
     
-    class optic_NVS : ItemCore {
+    class optic_NVS: ItemCore {
         ACE_ScopeHeightAboveRail = 5.54325;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
         ACE_ScopeAdjust_Horizontal[] = {-6, 6};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class NVS {
                     discreteDistance[] = {300};
@@ -86,13 +86,13 @@ class CfgWeapons {
         };
     };
     
-    class optic_TWS : ItemCore {
+    class optic_TWS: ItemCore {
         ACE_ScopeHeightAboveRail = 5.52874;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
         ACE_ScopeAdjust_Horizontal[] = {-6, 6};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class TWS {
                     discreteDistance[] = {300};
@@ -102,13 +102,13 @@ class CfgWeapons {
         };
     };
     
-    class optic_LRPS : ItemCore {
+    class optic_LRPS: ItemCore {
         ACE_ScopeHeightAboveRail = 4.2098;
         ACE_ScopeAdjust_Vertical[] = {0, 27};
         ACE_ScopeAdjust_Horizontal[] = {-8, 8};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
                     opticsZoomMin = 0.011;
@@ -122,13 +122,13 @@ class CfgWeapons {
         };
     };
 
-    class optic_SOS : ItemCore {
+    class optic_SOS: ItemCore {
         ACE_ScopeHeightAboveRail = 4.41328;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
         ACE_ScopeAdjust_Horizontal[] = {-6, 6};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
                     discreteDistance[] = {100};
@@ -138,13 +138,13 @@ class CfgWeapons {
         };
     };
 
-    class optic_DMS : ItemCore {
+    class optic_DMS: ItemCore {
         ACE_ScopeHeightAboveRail = 3.86253;
         ACE_ScopeAdjust_Vertical[] = {-4, 20};
         ACE_ScopeAdjust_Horizontal[] = {-6, 6};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
                     discreteDistance[] = {100};
@@ -154,13 +154,13 @@ class CfgWeapons {
         };
     };
 
-    class optic_AMS_base : ItemCore {
+    class optic_AMS_base: ItemCore {
         ACE_ScopeHeightAboveRail = 3.8933;
         ACE_ScopeAdjust_Vertical[] = {0, 16};
         ACE_ScopeAdjust_Horizontal[] = {-11, 11};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class AMS {
                     opticsZoomMin = 0.0285;
@@ -174,13 +174,13 @@ class CfgWeapons {
         };
     };
 
-    class optic_KHS_base : ItemCore {
+    class optic_KHS_base: ItemCore {
         ACE_ScopeHeightAboveRail = 4.30723;
         ACE_ScopeAdjust_Vertical[] = {0, 19};
         ACE_ScopeAdjust_Horizontal[] = {-9, 9};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
                     opticsZoomMin = 0.026;
@@ -194,13 +194,13 @@ class CfgWeapons {
         };
     };
 
-    class optic_KHS_old : ItemCore {
+    class optic_KHS_old: ItemCore {
         ACE_ScopeHeightAboveRail = 4.30723;
         ACE_ScopeAdjust_Vertical[] = {0, 19};
         ACE_ScopeAdjust_Horizontal[] = {-9, 9};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
                     opticsZoomMin = 0.026;

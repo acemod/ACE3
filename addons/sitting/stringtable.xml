@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Sitting">
+        <Key ID="STR_ACE_Sitting_Sit">
+            <English>Sit Down</English>
+            <German>Hinsetzen</German>
+            <Polish>Usiądź</Polish>
+            <Portuguese>Sentar</Portuguese>
+            <Czech>Sednout si</Czech>
+            <Spanish>Sentarse</Spanish>
+            <French>S'asseoir</French>
+            <Hungarian>Leülés</Hungarian>
+            <Russian>Сесть</Russian>
+            <Italian>Siediti</Italian>
+            <Japanese>座る</Japanese>
+            <Korean>앉기</Korean>
+            <Chinesesimp>坐下</Chinesesimp>
+            <Chinese>坐下</Chinese>
+            <Turkish>Otur</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Sitting_Stand">
+            <English>Stand Up</English>
+            <German>Aufstehen</German>
+            <Polish>Wstań</Polish>
+            <Portuguese>Levantar</Portuguese>
+            <Czech>Vstát</Czech>
+            <Spanish>Levantarse</Spanish>
+            <French>Se lever</French>
+            <Hungarian>Felállás</Hungarian>
+            <Russian>Встать</Russian>
+            <Italian>Alzati</Italian>
+            <Japanese>立つ</Japanese>
+            <Korean>일어서기</Korean>
+            <Chinesesimp>站起来</Chinesesimp>
+            <Chinese>站起來</Chinese>
+            <Turkish>Kalk</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Sitting_Enable">
+            <English>Enable Sitting</English>
+            <German>Sitzen ermöglichen</German>
+            <Portuguese>Habilitar opção para sentar</Portuguese>
+            <Polish>Aktywuj siadanie</Polish>
+            <Czech>Povolit sezení</Czech>
+            <Spanish>Activar asiento</Spanish>
+            <French>Permettre de s'asseoir</French>
+            <Hungarian>Ülés engedélyezése</Hungarian>
+            <Russian>Разрешить сидение</Russian>
+            <Italian>Abilita seduta</Italian>
+            <Japanese>座るのを有効化</Japanese>
+            <Korean>앉기 사용</Korean>
+            <Chinesesimp>开启坐下功能</Chinesesimp>
+            <Chinese>開啟坐下功能</Chinese>
+            <Turkish>Oturmayı Aktik Et</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Sitting_ModuleDisplayName">
+            <English>Sitting</English>
+            <German>Hinsetzen</German>
+            <Portuguese>Sentado</Portuguese>
+            <Polish>Siadanie</Polish>
+            <Czech>Sezení</Czech>
+            <Spanish>Sentarse</Spanish>
+            <French>S'asseoir</French>
+            <Hungarian>Ülés</Hungarian>
+            <Russian>Сидение</Russian>
+            <Italian>Sedersi</Italian>
+            <Japanese>着座</Japanese>
+            <Korean>앉기</Korean>
+            <Chinesesimp>坐下功能</Chinesesimp>
+            <Chinese>坐下功能</Chinese>
+            <Turkish>Oturma</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Sitting_ModuleDescription">
+            <English>This module allows you to disable the ability to sit on chairs.</English>
+            <German>Dieses Modul eröffnet die Möglichkeit, sich auf Stühlen hinzusetzen.</German>
+            <Portuguese>Este módulo permite que você desabilite a capacidade de sentar-se em cadeiras e banheiros.</Portuguese>
+            <Polish>Moduł ten pozwala na włączenie lub wyłączenie możliwości siadania na krzesłach i toaletach.</Polish>
+            <Czech>Tento modul dovoluje zakázat možnost sedět na židlých a toaletách.</Czech>
+            <Spanish>Este módulo te permite desactivar la capacidad de sentarse en sillas.</Spanish>
+            <French>Ce module contrôle la capacité de s'asseoir sur des chaises.</French>
+            <Hungarian>Ez a modul lehetővé teszi a székekre és toalettekre való leülés letiltását.</Hungarian>
+            <Russian>Этот модуль позволяет вам запретить возможность садиться на стулья и туалеты.</Russian>
+            <Italian>Questo modulo ti permette di disabilitare la possibilità di sederti sulle sedie.</Italian>
+            <Japanese>モジュールでは椅子に着席するのを無効化できます。</Japanese>
+            <Korean>이 모듈을 사용하여 의자에 앉을 수 있는 기능을 비활성 할 수 있습니다.</Korean>
+            <Chinesesimp>此模块可以让你开关在椅子上坐下的能力。</Chinesesimp>
+            <Chinese>此模塊可以讓你開關在椅子上坐下的能力。</Chinese>
+            <Turkish>Bu modül, sandalyelere oturma özelliğini devre dışı bırakmanıza izin verir.</Turkish>
+        </Key>
+    </Package>
+</Project>
