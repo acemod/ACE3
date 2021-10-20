@@ -56,8 +56,8 @@ Your weapon will be even more prone to jams, and it'll get worse if you don't le
 
 - Weapons and spare barrels will cool off over time.
 - Cooling speed of weapons in increased in windy or rainy weather, and when swimming.
-- If ACE Field Rations are loaded then weapons can be cooled with canteens, water bottles, or other beverage items. This does not require the Field Rations system to be enabled.
-- If ACE Field Rations are enabled then weapons can also be cooled with the same water sources used to refill canteens and water bottles.
+- If ACE Field Rations is loaded then weapons can be cooled with canteens, water bottles, or other beverage items. This does not require the Field Rations system to be enabled.
+- If ACE Field Rations is enabled then weapons can also be cooled with the same water sources used to refill canteens and water bottles.
 
 ### 2.5 Avoiding cookoffs
 
