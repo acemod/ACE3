@@ -1,7 +1,7 @@
 class CfgVehicles {
     class B_MBT_01_base_F;
     class B_MBT_01_cannon_F: B_MBT_01_base_F { // Merkel
-        class ADDON {
+        class ace_viewports {
             class SLD_backLeftUpper {
                 type = "screen";
                 camLocation[] = {0,0,0.05};
@@ -13,7 +13,7 @@ class CfgVehicles {
         };
     };
     class B_MBT_01_TUSK_F: B_MBT_01_cannon_F { // Merkel TUSK
-        class ADDON {
+        class ace_viewports {
             class SLD_backLeftUpper {
                 type = "screen";
                 camLocation[] = {0,0,0.05};
