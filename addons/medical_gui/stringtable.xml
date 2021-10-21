@@ -1129,26 +1129,38 @@
         <Key ID="STR_ACE_Medical_GUI_BloodLossColors">
             <English>Blood Loss Colors</English>
             <Russian>Цвета кровопотери</Russian>
+            <Japanese>失血量カラー</Japanese>
+            <French>Couleurs des hémorragies</French>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColor_Description">
             <English>Blood Loss Colors, That Used in Medical GUI. 10 Color Gradient.</English>
             <Russian>Цвета кровопотери, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
+            <Japanese>医療 GUI 内で失血量を 10 段階のカラーで表します。</Japanese>
+            <French>Couleurs utilisées pour afficher les hémorragies dans l'interface médicale. Dégradé de 10 couleurs.</French>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColorX_DisplayName">
             <English>Blood Loss Color %1</English>
             <Russian>Цвет кровопотери %1</Russian>
+            <Japanese>失血量カラー %1</Japanese>
+            <French>Hémorragies - couleur %1</French>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColors">
             <English>Damage Colors</English>
             <Russian>Цвета урона</Russian>
+            <Japanese>負傷カラー</Japanese>
+            <French>Couleur des dégâts</French>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
             <English>Damage Colors, That Used in Medical GUI. 10 Color Gradient.</English>
             <Russian>Цвета урона, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
+            <Japanese>医療 GUI 内で負傷を 10 段階のカラーで表します。</Japanese>
+            <French>Couleurs utilisées pour afficher les dégâts dans l'interface médicale. Dégradé de 10 couleurs.</French>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColorX_DisplayName">
             <English>Damage Color %1</English>
             <Russian>Цвет урона %1</Russian>
+            <Japanese>負傷カラー %1</Japanese>
+            <French>Dégâts - couleur %1</French>
         </Key>
     </Package>
 </Project>

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * player call acex_sitting_fnc_stand
+ * player call ace_sitting_fnc_stand
  *
  * Public: No
  */

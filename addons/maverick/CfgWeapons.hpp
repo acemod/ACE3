@@ -1,7 +1,7 @@
 class CfgWeapons {
     class LauncherCore;
     class RocketPods: LauncherCore {};
-    class weapon_AGM_65Launcher: RocketPods{};
+    class weapon_AGM_65Launcher: RocketPods {};
 
     class MissileLauncher: LauncherCore {};
     class Missile_AGM_02_Plane_CAS_01_F: MissileLauncher {};

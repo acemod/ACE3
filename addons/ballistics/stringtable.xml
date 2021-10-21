@@ -2761,15 +2761,23 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47 mm 30Rnd Sand Mag (HPBT Scenar)</English>
+            <Japanese>6.5x47 mm 30発入り サンド 弾倉 (HPBT Scenar)</Japanese>
+            <French>Ch. 6,5x47 mm 30Cps Sable (HPBT Scenar)</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_msbs_mag_Name">
             <English>6.5x47 mm 30Rnd Promet Mag (HPBT Scenar)</English>
+            <Japanese>6.5x47 mm 30発入り プロメット 弾倉 (HPBT Scenar)</Japanese>
+            <French>Ch. 6,5x47 mm 30Cps Promet (HPBT Scenar)</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_black_mag_Name">
             <English>6.5x47 mm 30Rnd Black Mag (HPBT Scenar)</English>
+            <Japanese>6.5x47 mm 30発入り ブラック 弾倉 (HPBT Scenar)</Japanese>
+            <French>Ch. 6,5x47 mm 30Cps Noir (HPBT Scenar)</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_khaki_mag_Name">
             <English>6.5x47 mm 30Rnd Khaki Mag (HPBT Scenar)</English>
+            <Japanese>6.5x47 mm 30発入り カーキ 弾倉 (HPBT Scenar)</Japanese>
+            <French>Ch. 6,5x47 mm 30Cps Kaki (HPBT Scenar)</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5 mm Lapua</English>
@@ -2824,15 +2832,23 @@
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Sand Mag</English>
+            <Japanese>6.5 mm クリードモア 30発入り サンド 弾倉</Japanese>
+            <French>Ch. 6,5 mm Creedmor 30Cps Sable</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_msbs_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Promet Mag</English>
+            <Japanese>6.5 mm クリードモア 30発入り プロメット 弾倉</Japanese>
+            <French>Ch. 6,5 mm Creedmor 30Cps Promet</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_black_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Black Mag</English>
+            <Japanese>6.5 mm クリードモア 30発入り ブラック 弾倉</Japanese>
+            <French>Ch. 6,5 mm Creedmor 30Cps Noir</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_khaki_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Khaki Mag</English>
+            <Japanese>6.5 mm クリードモア 30発入り カーキ 弾倉</Japanese>
+            <French>Ch. 6,5 mm Creedmor 30Cps Kaki</French>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5 mm CM</English>
@@ -3277,21 +3293,21 @@
             <Turkish>12.7 mm</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_127x99_API_Mag_NameShort">
-            <English>12.7mm API</English>
-            <French>12,7mm API</French>
-            <Spanish>12.7mm API</Spanish>
-            <Polish>12,7mm API</Polish>
-            <Italian>12.7mm API</Italian>
+            <English>12.7 mm API</English>
+            <French>12,7 mm API</French>
+            <Spanish>12.7 mm API</Spanish>
+            <Polish>12,7 mm API</Polish>
+            <Italian>12.7 mm API</Italian>
             <Russian>12.7 мм бронебойно-зажигательные</Russian>
-            <German>12,7mm API</German>
-            <Czech>12.7mm API</Czech>
-            <Portuguese>12.7mm API</Portuguese>
-            <Hungarian>12,7mm páncéltörő-gyújtó</Hungarian>
-            <Japanese>12.7mm 焼夷徹甲弾</Japanese>
-            <Korean>12.7mm 철갑소이탄</Korean>
+            <German>12,7 mm API</German>
+            <Czech>12.7 mm API</Czech>
+            <Portuguese>12.7 mm API</Portuguese>
+            <Hungarian>12,7 mm páncéltörő-gyújtó</Hungarian>
+            <Japanese>12.7 mm 焼夷徹甲弾</Japanese>
+            <Korean>12.7 mm 철갑소이탄</Korean>
             <Chinese>12.7毫米 穿甲燃燒彈</Chinese>
-            <Chinesesimp>12.7mm 穿甲燃烧弹</Chinesesimp>
-            <Turkish>12.7mm API</Turkish>
+            <Chinesesimp>12.7 mm 穿甲燃烧弹</Chinesesimp>
+            <Turkish>12.7 mm API</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_AmmoSupplyCrate_DisplayName">
             <English>[ACE] Ammo Supply Crate</English>

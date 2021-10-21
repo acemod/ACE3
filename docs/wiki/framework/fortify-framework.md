@@ -10,6 +10,7 @@ version:
   major: 3
   minor: 3
   patch: 0
+redirect_from: "/wiki/frameworkx/fortify-framework.html"
 ---
 
 ## 1. Overview
@@ -31,7 +32,7 @@ If the Fortify module is present in the mission, server admins can use chat comm
 
 There are two ways of adding custom presets to your mission, either via code or through desciption.ext.
 
-To add a preset via code you use the function `call acex_fortify_fnc_registerObjects`. Also enables Fortify.
+To add a preset via code you use the function `call ace_fortify_fnc_registerObjects`. Also enables Fortify.
 
 ```cpp
 * Registers the given objects in the given side's player interaction menu.
@@ -48,7 +49,7 @@ To add a preset via code you use the function `call acex_fortify_fnc_registerObj
 * None
 *
 * Example:
-* [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call acex_fortify_fnc_registerObjects
+* [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call ace_fortify_fnc_registerObjects
 ```
 
 Adding it through `description.ext` you use:
@@ -78,7 +79,7 @@ To verify that an object isn't above a certain terrain height we can check the h
     params ["_unit", "_object", "_cost"];
     private _return = (getPosATL _object) select 2 < 1;
     _return
-}] call acex_fortify_fnc_addDeployHandler;
+}] call ace_fortify_fnc_addDeployHandler;
 ```
 
 

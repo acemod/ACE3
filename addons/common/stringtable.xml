@@ -1384,12 +1384,14 @@
             <German>Epilepsiefreundlicher Modus</German>
             <Japanese>けいれん回避モード</Japanese>
             <Polish>Tryb dla epileptyków</Polish>
+            <French>Mode adapté à l'épilepsie</French>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
             <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
             <Japanese>点滅する光エフェクトを無効化し、けいれんする恐れを低下させます。</Japanese>
             <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
+            <French>Désactive certains effets de lumière clignotante afin de réduire les risques de crise d'épilepsie.</French>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1471,18 +1473,33 @@
         <Key ID="STR_ACE_Common_both">
             <English>Both</English>
             <Turkish>İkisi de</Turkish>
+            <Japanese>両方</Japanese>
+            <French>Les deux</French>
+            <Russian>Оба</Russian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
+            <Japanese>プログレス バー詳細情報</Japanese>
+            <French>Infos supplémentaires de la barre de progression</French>
+            <Russian>Дополнительная информация прогресс-бара</Russian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
+            <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
+            <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
+            <Russian>Устанавливает дополнительную информацию в прогресс-баре.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
+            <Japanese>パーセンテージ</Japanese>
+            <French>Pourcentage</French>
+            <Russian>Процент выполнения</Russian>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
+            <Japanese>残り時間</Japanese>
+            <French>Temps restant</French>
+            <Russian>Времени осталось</Russian>
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
@@ -1518,6 +1535,9 @@
         </Key>
         <Key ID="STR_ACE_Common_TimeLeft">
             <English>Time left: %1s</English>
+            <Japanese>残り時間: %1 秒</Japanese>
+            <French>Temps restant : %1 s</French>
+            <Russian>Оставшееся время: %1s</Russian>
         </Key>
         <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>

@@ -7,3 +7,8 @@ Adds automatic passing of AI groups to (up to 3) Headless Clients.
 - Round-robin transferring when more than 1 Headless Client is present
 - Mission makers can use the following to prevent a group from transferring to a Headless Client:
     `this setVariable ["acex_headless_blacklist", true, true];`
+
+## ACEX Conversion - things still using acex prefix
+- All settings
+- 3DEN attribute config name
+- Object SetVar (`acex_headless_blacklist`)

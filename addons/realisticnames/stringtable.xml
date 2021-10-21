@@ -1656,7 +1656,7 @@
             <Portuguese>FNX-45 Tactical (Verde)</Portuguese>
             <Italian>FNX-45 Tactical (Verde)</Italian>
             <Turkish>FNX-45 Tactical (Yeşil)</Turkish>
-            <Japanese>FNX-45 タクティカル (緑)</Japanese>
+            <Japanese>FNX-45 タクティカル (グリーン)</Japanese>
             <Korean>FNX-45 Tactical (초록)</Korean>
             <Chinese>FNX-45戰術型手槍 (綠色)</Chinese>
             <Chinesesimp>FNX-45战术型手枪 (绿色)</Chinesesimp>
@@ -1741,7 +1741,7 @@
             <Portuguese>RPG-32 (Verde)</Portuguese>
             <Italian>RPG-32 (Verde)</Italian>
             <Turkish>RPG-32 (Yeşil)</Turkish>
-            <Japanese>RPG-32 (緑)</Japanese>
+            <Japanese>RPG-32 (グリーン)</Japanese>
             <Korean>RPG-32 (초록)</Korean>
             <Chinese>RPG-32"哈希姆"火箭發射器 (綠色)</Chinese>
             <Chinesesimp>RPG-32"哈希姆"火箭发射器 (绿色)</Chinesesimp>
@@ -1803,7 +1803,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈(棕色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(棕色)</Chinesesimp>
             <Italian>Metis-M (Marrone)</Italian>
-            <Japanese>メチス-M (茶)</Japanese>
+            <Japanese>メチス-M (ブラウン)</Japanese>
             <Polish>Metis-M (Brązowy)</Polish>
             <Portuguese>Metis-M (Marrom)</Portuguese>
             <Czech>Metis-M (hnědý)</Czech>
@@ -1818,7 +1818,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈(綠色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(绿色)</Chinesesimp>
             <Italian>Metis-M (Verde)</Italian>
-            <Japanese>メチス-M (緑)</Japanese>
+            <Japanese>メチス-M (グリーン)</Japanese>
             <Polish>Metis-M (Zielony)</Polish>
             <Portuguese>Metis-M (Verde)</Portuguese>
             <Czech>Metis-M (zelený)</Czech>
@@ -1853,7 +1853,7 @@
             <Russian>MX (Чёрный)</Russian>
             <Portuguese>MX (Preto)</Portuguese>
             <Italian>MX (Nero)</Italian>
-            <Japanese>MX (黒)</Japanese>
+            <Japanese>MX (ブラック)</Japanese>
             <Korean>MX (검정)</Korean>
             <Chinese>MX突擊步槍 (黑色)</Chinese>
             <Chinesesimp>MX突击步枪 (黑色)</Chinesesimp>
@@ -1903,7 +1903,7 @@
             <Russian>MXC (Чёрный)</Russian>
             <Portuguese>MXC (Preto)</Portuguese>
             <Italian>MXC (Nero)</Italian>
-            <Japanese>MXC (黒)</Japanese>
+            <Japanese>MXC (ブラック)</Japanese>
             <Korean>MXC (검정)</Korean>
             <Chinese>MXC卡賓步槍 (黑色)</Chinese>
             <Chinesesimp>MXC卡宾步枪 (黑色)</Chinesesimp>
@@ -1953,7 +1953,7 @@
             <Russian>MX 3GL (Чёрный)</Russian>
             <Portuguese>MX 3GL (Preto)</Portuguese>
             <Italian>MX 3GL (Nero)</Italian>
-            <Japanese>MX 3GL (黒)</Japanese>
+            <Japanese>MX 3GL (ブラック)</Japanese>
             <Korean>MX 3GL (검정)</Korean>
             <Chinese>MX突擊步槍 (3連裝榴彈-黑色)</Chinese>
             <Chinesesimp>MX突击步枪 (3连装榴弹-黑色)</Chinesesimp>
@@ -2003,7 +2003,7 @@
             <Russian>MX LSW (Чёрный)</Russian>
             <Portuguese>MX LSW (Preto)</Portuguese>
             <Italian>MX LSW (Nero)</Italian>
-            <Japanese>MX LSW (黒)</Japanese>
+            <Japanese>MX LSW (ブラック)</Japanese>
             <Korean>MX LSW (검정)</Korean>
             <Chinese>MX輕型機槍 (黑色)</Chinese>
             <Chinesesimp>MX轻型机枪 (黑色)</Chinesesimp>
@@ -2171,7 +2171,7 @@
             <Russian>F2000 Tactical (Камо)</Russian>
             <Portuguese>F2000 Tactical (Camo)</Portuguese>
             <Italian>F2000 Tactical (Camo)</Italian>
-            <Japanese>F2000 タクティカル (迷彩)</Japanese>
+            <Japanese>F2000 タクティカル (カモフラージュ)</Japanese>
             <Korean>F2000 Tactical (위장)</Korean>
             <Chinese>F2000戰術型突擊步槍 (迷彩)</Chinese>
             <Chinesesimp>F2000战术型突击步枪 (迷彩)</Chinesesimp>
@@ -3946,22 +3946,32 @@
         <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
             <English>ELCAN SpecterOS (Lush)</English>
             <Polish>ELCAN SpecterOS (Leśny)</Polish>
+            <French>ELCAN SpecterOS (Forêt)</French>
+            <Japanese>ELCAN SpecterOS (緑地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
             <Polish>ELCAN SpecterOS (Jałowy)</Polish>
+            <French>ELCAN SpecterOS (Désert)</French>
+            <Japanese>ELCAN SpecterOS (乾燥地帯)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
             <Polish>ELCAN SpecterOS 7.62 (Czarny)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Noire)</French>
+            <Japanese>ELCAN SpecterOS 7.62 (ブラック)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
             <Polish>ELCAN SpecterOS 7.62 (Leśny)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Forêt)</French>
+            <Japanese>ELCAN SpecterOS 7.62 (緑地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
             <Polish>ELCAN SpecterOS 7.62 (Jałowy)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Désert)</French>
+            <Japanese>ELCAN SpecterOS 7.62 (乾燥地帯)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4208,10 +4218,14 @@
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
             <English>Burris XTR II (Old)</English>
             <Polish>Burris XTR II (Stary)</Polish>
+            <French>Burris XTR II (Usée)</French>
+            <Japanese>Burris XTR II (使い古し)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
             <Polish>Burris XTR II (ASP-1 Kir)</Polish>
+            <French>Burris XTR II (ASP-1 Kir)</French>
+            <Japanese>Burris XTR II (ASP-1 Kir)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4261,10 +4275,14 @@
         <Key ID="STR_ACE_RealisticNames_optic_holosight_lush">
             <English>EOTech XPS3 (Lush)</English>
             <Polish>EOTech XPS3 (Leśny)</Polish>
+            <French>EOTech XPS3 (Forêt)</French>
+            <Japanese>EOTech XPS3 (緑地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
             <Polish>EOTech XPS3 (Jałowy)</Polish>
+            <French>EOTech XPS3 (Désert)</French>
+            <Japanese>EOTech XPS3 (乾燥地帯)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4372,7 +4390,7 @@
             <German>C-More Railway (Rot)</German>
             <Chinese>C-More Railway (紅色)</Chinese>
             <Chinesesimp>C-More Railway (红色)</Chinesesimp>
-            <Japanese>C-More レイルウェイ (赤)</Japanese>
+            <Japanese>C-More レイルウェイ (レッド)</Japanese>
             <Italian>C-More Railway (Rosso)</Italian>
             <Polish>C-More Railway (Czerwony)</Polish>
             <Russian>C-More Railway (Красный)</Russian>
@@ -4387,7 +4405,7 @@
             <German>C-More Railway (Grün)</German>
             <Chinese>C-More Railway (綠色)</Chinese>
             <Chinesesimp>C-More Railway (绿色)</Chinesesimp>
-            <Japanese>C-More レイルウェイ (緑)</Japanese>
+            <Japanese>C-More レイルウェイ (グリーン)</Japanese>
             <Italian>C-More Railway (Verde)</Italian>
             <Polish>C-More Railway (Zielony)</Polish>
             <Russian>C-More Railway (Зеленый)</Russian>
@@ -4402,7 +4420,7 @@
             <German>C-More Railway SMG (Rot)</German>
             <Chinese>C-More Railway SMG (紅色)</Chinese>
             <Chinesesimp>C-More Railway SMG (红色)</Chinesesimp>
-            <Japanese>C-More レイルウェイ SMG (赤)</Japanese>
+            <Japanese>C-More レイルウェイ SMG (レッド)</Japanese>
             <Italian>C-More Railway SMG (Rosso)</Italian>
             <Polish>C-More Railway SMG (Czerwony)</Polish>
             <Russian>C-More Railway SMG (Красный)</Russian>
@@ -4417,7 +4435,7 @@
             <German>C-More Railway SMG (Grün)</German>
             <Chinese>C-More Railway SMG (綠色)</Chinese>
             <Chinesesimp>C-More Railway SMG (绿色)</Chinesesimp>
-            <Japanese>C-More レイルウェイ SMG (緑)</Japanese>
+            <Japanese>C-More レイルウェイ SMG (グリーン)</Japanese>
             <Italian>C-More Railway SMG (Verde)</Italian>
             <Polish>C-More Railway SMG (Zielony)</Polish>
             <Russian>C-More Railway SMG (Зеленый)</Russian>
@@ -5018,7 +5036,7 @@
             <Portuguese>MSBS Grot</Portuguese>
             <Korean>MSBS Grot</Korean>
             <Chinesesimp>MSBS Grot</Chinesesimp>
-            <Japanese>MSBS Grot</Japanese>
+            <Japanese>MSBS グロート</Japanese>
             <Turkish>MSBS Grot</Turkish>
             <Hungarian>MSBS Grot</Hungarian>
         </Key>
@@ -5035,7 +5053,7 @@
             <Portuguese>MSBS Grot (Preto)</Portuguese>
             <Korean>MSBS Grot (검정)</Korean>
             <Chinesesimp>MSBS Grot(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot(ブラック)</Japanese>
+            <Japanese>MSBS グロート (ブラック)</Japanese>
             <Turkish>MSBS Grot (Siyah)</Turkish>
             <Hungarian>MSBS Grot (Fekete)</Hungarian>
         </Key>
@@ -5052,7 +5070,7 @@
             <Portuguese>MSBS Grot (Camo)</Portuguese>
             <Korean>MSBS Grot (위장)</Korean>
             <Chinesesimp>MSBS Grot(迷彩)</Chinesesimp>
-            <Japanese>MSBS Grot (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート (カモフラージュ)</Japanese>
             <Turkish>MSBS Grot (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot (Terepmintás)</Hungarian>
         </Key>
@@ -5069,7 +5087,7 @@
             <Portuguese>MSBS Grot (Deserto)</Portuguese>
             <Korean>MSBS Grot (모래)</Korean>
             <Chinesesimp>MSBS Grot(沙色)</Chinesesimp>
-            <Japanese>MSBS Grot (サンド)</Japanese>
+            <Japanese>MSBS グロート (サンド)</Japanese>
             <Turkish>MSBS Grot (Kum)</Turkish>
             <Hungarian>MSBS Grot (Homok)</Hungarian>
         </Key>
@@ -5086,7 +5104,7 @@
             <Portuguese>MSBS Grot GL</Portuguese>
             <Korean>MSBS Grot GL</Korean>
             <Chinesesimp>MSBS Grot GL</Chinesesimp>
-            <Japanese>MSBS Grot GL</Japanese>
+            <Japanese>MSBS グロート GL</Japanese>
             <Turkish>MSBS Grot GL</Turkish>
             <Hungarian>MSBS Grot GL</Hungarian>
         </Key>
@@ -5103,7 +5121,7 @@
             <Portuguese>MSBS Grot GL (Preto)</Portuguese>
             <Korean>MSBS Grot GL (검정)</Korean>
             <Chinesesimp>MSBS Grot GL(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot GL(ブラック)</Japanese>
+            <Japanese>MSBS グロート GL(ブラック)</Japanese>
             <Turkish>MSBS Grot GL (Siyah)</Turkish>
             <Hungarian>MSBS Grot GL (Fekete)</Hungarian>
         </Key>
@@ -5120,7 +5138,7 @@
             <Portuguese>MSBS Grot GL (Camo)</Portuguese>
             <Korean>MSBS Grot GL (위장)</Korean>
             <Chinesesimp>MSBS Grot GL(迷彩)</Chinesesimp>
-            <Japanese>MSBS Grot GL (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート GL (カモフラージュ)</Japanese>
             <Turkish>MSBS Grot GL (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot GL (Terepmintás)</Hungarian>
         </Key>
@@ -5137,7 +5155,7 @@
             <Portuguese>MSBS Grot GL (Deserto)</Portuguese>
             <Korean>MSBS Grot GL (모래)</Korean>
             <Chinesesimp>MSBS Grot GL(沙色)</Chinesesimp>
-            <Japanese>MSBS Grot GL (サンド)</Japanese>
+            <Japanese>MSBS グロート GL (サンド)</Japanese>
             <Turkish>MSBS Grot GL (Kum)</Turkish>
             <Hungarian>MSBS Grot GL (Homok)</Hungarian>
         </Key>
@@ -5154,7 +5172,7 @@
             <Portuguese>MSBS Grot MR</Portuguese>
             <Korean>MSBS Grot MR</Korean>
             <Chinesesimp>MSBS Grot MR</Chinesesimp>
-            <Japanese>MSBS Grot MR</Japanese>
+            <Japanese>MSBS グロート MR</Japanese>
             <Turkish>MSBS Grot MR</Turkish>
             <Hungarian>MSBS Grot MR</Hungarian>
         </Key>
@@ -5171,7 +5189,7 @@
             <Portuguese>MSBS Grot MR (Preto)</Portuguese>
             <Korean>MSBS Grot MR (검정)</Korean>
             <Chinesesimp>MSBS Grot MR(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot MR (ブラック)</Japanese>
+            <Japanese>MSBS グロート MR (ブラック)</Japanese>
             <Turkish>MSBS Grot MR (Siyah)</Turkish>
             <Hungarian>MSBS Grot MR (Fekete)</Hungarian>
         </Key>
@@ -5188,7 +5206,7 @@
             <Portuguese>MSBS Grot MR (Camo)</Portuguese>
             <Korean>MSBS Grot MR (위장)</Korean>
             <Chinesesimp>MSBS Grot MR(迷彩)</Chinesesimp>
-            <Japanese>MSBS Grot MR (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート MR (カモフラージュ)</Japanese>
             <Turkish>MSBS Grot MR (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot MR (Terepmintás)</Hungarian>
         </Key>
@@ -5205,7 +5223,7 @@
             <Portuguese>MSBS Grot MR (Deserto)</Portuguese>
             <Korean>MSBS Grot MR (모래)</Korean>
             <Chinesesimp>MSBS Grot MR(沙色)</Chinesesimp>
-            <Japanese>MSBS Grot MR (サンド)</Japanese>
+            <Japanese>MSBS グロート MR (サンド)</Japanese>
             <Turkish>MSBS Grot MR (Kum)</Turkish>
             <Hungarian>MSBS Grot MR (Homok)</Hungarian>
         </Key>
@@ -5222,7 +5240,7 @@
             <Portuguese>MSBS Grot SG</Portuguese>
             <Korean>MSBS Grot SG</Korean>
             <Chinesesimp>MSBS Grot SG</Chinesesimp>
-            <Japanese>MSBS Grot SG</Japanese>
+            <Japanese>MSBS グロート SG</Japanese>
             <Turkish>MSBS Grot SG</Turkish>
             <Hungarian>MSBS Grot SG</Hungarian>
         </Key>
@@ -5239,7 +5257,7 @@
             <Portuguese>MSBS Grot SG (Preto)</Portuguese>
             <Korean>MSBS Grot SG (검정)</Korean>
             <Chinesesimp>MSBS Grot SG(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot SG(ブラック)</Japanese>
+            <Japanese>MSBS グロート SG (ブラック)</Japanese>
             <Turkish>MSBS Grot SG (Siyah)</Turkish>
             <Hungarian>MSBS Grot SG (Fekete)</Hungarian>
         </Key>
@@ -5256,7 +5274,7 @@
             <Portuguese>MSBS Grot SG (Camo)</Portuguese>
             <Korean>MSBS Grot SG (위장)</Korean>
             <Chinesesimp>MSBS Grot SG(迷彩)</Chinesesimp>
-            <Japanese>MSBS Grot SG (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート SG (カモフラージュ)</Japanese>
             <Turkish>MSBS Grot SG (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot SG (Terepmintás)</Hungarian>
         </Key>
@@ -5273,7 +5291,7 @@
             <Portuguese>MSBS Grot SG (Deserto)</Portuguese>
             <Korean>MSBS Grot SG (모래)</Korean>
             <Chinesesimp>MSBS Grot SG(沙色)</Chinesesimp>
-            <Japanese>MSBS Grot SG (サンド)</Japanese>
+            <Japanese>MSBS グロート SG (サンド)</Japanese>
             <Turkish>MSBS Grot SG (Kum)</Turkish>
             <Hungarian>MSBS Grot SG (Homok)</Hungarian>
         </Key>

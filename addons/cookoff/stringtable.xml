@@ -162,9 +162,15 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>
+            <Japanese>誘爆火災を有効化</Japanese>
+            <French>Véhicules - Feu durant l'auto-inflammation</French>
+            <Russian>Включить возгорание поеприпасов</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
             <English>Whether or not vehicles will catch on fire during cook-off</English>
+            <Japanese>誘爆により車両が炎上するかどうかを設定します。</Japanese>
+            <French>Définit si les véhicules prennent feu durant l'auto-inflammation de leurs munitions.</French>
+            <Russian>Будет ли техника возгораться при подрыве боеприпасов</Russian>
         </Key>
     </Package>
 </Project>

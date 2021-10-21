@@ -62,6 +62,7 @@
             <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
             <Polish>Włączone i pozwala zdiagnozować Śmierć/Zatrzymanie Akcji Serca</Polish>
             <Japanese>死亡/心停止状態でも診断許可</Japanese>
+            <Russian>Включено &amp; Может диагностировать смерть/остановку сердца</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -152,15 +153,27 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_DisplayName">
             <English>Clear Trauma</English>
+            <Japanese>外傷の削除</Japanese>
+            <French>Soigner les blessures</French>
+            <Russian>Очистить рану</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_Description">
             <English>Controls when hitpoint damage from wounds is healed.</English>
+            <Japanese>治療後に負傷箇所にある外傷の状態を決定できます。</Japanese>
+            <French>Définit à quel moment les blessures sont entièrement soignées.</French>
+            <Russian>Определяет, когда исцеляется урон от ран.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterBandage">
             <English>After Bandage</English>
+            <Japanese>包帯を巻いた後</Japanese>
+            <French>Après bandage</French>
+            <Russian>После перевязки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
             <English>After Stitch</English>
+            <Japanese>縫合後</Japanese>
+            <French>Après suture</French>
+            <Russian>После наложения швов</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>

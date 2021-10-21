@@ -3,6 +3,7 @@
     <Package name="KillTracker">
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
+            <Japanese>ACE キルトラッカー</Japanese>
         </Key>
         <Key ID="STR_ACE_KillTracker_TotalKills">
             <English>Total Kills:</English>

@@ -16,7 +16,7 @@ version:
 
 ### 1.1 Weapon Jamming
 
-Adds a probability to jam a weapon when firing. Jams can be cleared by reloading, using the clear jam-key, or using the self interaction menu.
+Adds a probability to jam a weapon when firing. The hotter a weapon gets, the more likely a jam is to occur.
 
 ### 1.2 Temperature simulation
 
@@ -28,13 +28,17 @@ Hot weapons can also cause chambered ammunition to spontaneously ignite. The hig
 
 ### 1.4 Spare barrels
 
-Adds the ability to changes barrels on machine guns to compensate for those effects. Changing the barrel can also unjam the gun.
+Adds the ability to change barrels on machine guns to compensate for those effects. When a barrel is changed, the coolest barrel available is always selected.
 
 ## 2. Usage
 
 ### 2.1 Clearing a jammed weapon
 
-- To clear a jammed weapon, press <kbd>SHIFT</kbd> + <kbd>R</kbd> (ACE3 default key bind `Clear jam`).
+Jams can be cleared in the following ways:
+- Press <kbd>SHIFT</kbd> + <kbd>R</kbd> (ACE3 default key bind `Clear jam`).
+- Press self interaction <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Self Interaction Key`), select `Equipment`, select 'Clear Jam'
+- Reload (setting dependant)
+- Swap barrels (setting dependant)
 
 ### 2.2 Swapping barrels
 
@@ -56,8 +60,8 @@ Your weapon will be even more prone to jams, and it'll get worse if you don't le
 
 - Weapons and spare barrels will cool off over time.
 - Cooling speed of weapons in increased in windy or rainy weather, and when swimming.
-- If AceX Field Rations is loaded then weapons can be cooled with canteens, water bottles, or other beverage items. This does not require the Field Rations system to be enabled.
-- If AceX Field Rations is enabled then weapons can also be cooled with the same water sources used to refill canteens and water bottles.
+- If ACE Field Rations is loaded then weapons can be cooled with canteens, water bottles, or other beverage items. This does not require the Field Rations system to be enabled.
+- If ACE Field Rations is enabled then weapons can also be cooled with the same water sources used to refill canteens and water bottles.
 
 ### 2.5 Avoiding cookoffs
 

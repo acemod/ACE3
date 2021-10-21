@@ -669,15 +669,27 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn">
             <English>Thermal Burn</English>
+            <Japanese>熱傷</Japanese>
+            <French>Brûlure thermique</French>
+            <Russian>Термический ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
             <English>Minor Thermal Burn</English>
+            <Japanese>小さな熱傷</Japanese>
+            <French>Légère brûlure thermique</French>
+            <Russian>Незначительный термический ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
             <English>Medium Thermal Burn</English>
+            <Japanese>中くらいの熱傷</Japanese>
+            <French>Brûlure thermique modérée</French>
+            <Russian>Средний термический ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
             <English>Major Thermal Burn</English>
+            <Japanese>大きな熱傷</Japanese>
+            <French>Sévère brûlure thermique</French>
+            <Russian>Сильный термический ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>

@@ -669,11 +669,15 @@
             <English>Enable movement speed indicator</English>
             <Polish>Włącz wskaźnik prędkości poruszania</Polish>
             <Japanese>移動速度インジケータを有効化</Japanese>
+            <French>Indicateur de vitesse de déplacement</French>
+            <Russian>Включить индикатор скорости передвижения</Russian>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
             <Polish>Włącza wskaźnik prędkości poruszania się dla postaci gracza.</Polish>
             <Japanese>プレイヤー キャラの移動速度を表示します。</Japanese>
+            <French>Affiche un indicateur permettant de visualiser la vitesse de déplacement du personnage.</French>
+            <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
         </Key>
     </Package>
 </Project>

@@ -90,6 +90,7 @@ GVAR(vehicleAction) = [
 GVAR(objectActions) = [
     [QGVAR(renameObject), LELSTRING(common,rename), "", //TODO: add icon, maybe a pencil couldn't find it before.
         {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             GVAR(interactionVehicle) = _target;
             createDialog QGVAR(renameMenu);
         },

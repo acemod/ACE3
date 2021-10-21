@@ -10,10 +10,8 @@ version:
   major: 3
   minor: 0
   patch: 0
-redirect_from: "/wiki/feature/sitting.html"
+redirect_from: "/wiki/featurex/sitting.html"
 ---
-
-_Sitting has been moved from ACE3 (in v3.8.0) to ACEX._
 
 ## 1. Overview
 Adds the ability to sit on chairs.
@@ -28,4 +26,4 @@ Please note that to be able to use this function the sitting module need to be p
 
 ## 3. Dependencies
 
-{% include dependenciesx_list.md component="sitting" %}
+{% include dependencies_list.md component="sitting" %}

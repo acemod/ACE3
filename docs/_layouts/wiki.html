@@ -31,14 +31,10 @@ layout: compress
 
             {% elsif page.mod == 'acex' %}
 
-                {% if page.version.major > site.acex.version.major %}
-                    <em>Will be {{type}} in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
-                {% elsif page.version.major == site.acex.version.major and page.version.minor > site.acex.version.minor %}
-                    <em>Will be {{type}} in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
-                {% elsif page.version.major == site.acex.version.major and page.version.minor == site.acex.version.minor and page.version.patch > site.acex.version.patch %}
-                    <em>Will be {{type}} in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% if page.version.removed %}
+                    <em>Removed in ACE3 v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
                 {% else %}
-                    <em>{{typeCapital}} in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                    <em>Moved to ACE3 in v3.14.0 (originally added in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}})</em>
                 {% endif %}
 
             {% endif %}
@@ -62,6 +58,12 @@ layout: compress
         </aside>
         <section class="medium-8 medium-pull-4 small-12 columns">
             <h1>{{page.title}}</h1>
+
+            {% if page.mod == 'acex' and page.group == 'framework' %}
+                <div class="panel callout">
+                    <p>Component may use <kbd>acex</kbd> prefix in certain variables, events and class names for backwards compatibility!</p>
+                </div>
+            {% endif %}
 
             <div id="content">{{ content }}</div>
         </section>

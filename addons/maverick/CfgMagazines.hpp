@@ -8,7 +8,7 @@ class CfgMagazines {
     
     class 6Rnd_Missile_AGM_02_F: VehicleMagazine {};
     class PylonRack_1Rnd_Missile_AGM_02_F: 6Rnd_Missile_AGM_02_F {};
-    class PylonRack_3Rnd_Missile_AGM_02_F: PylonRack_1Rnd_Missile_AGM_02_F{};
+    class PylonRack_3Rnd_Missile_AGM_02_F: PylonRack_1Rnd_Missile_AGM_02_F {};
     
     class PylonRack_Missile_AGM_02_x1: magazine_Missile_AGM_02_x1 {};
     class PylonRack_Missile_AGM_02_x2: magazine_Missile_AGM_02_x1 {};

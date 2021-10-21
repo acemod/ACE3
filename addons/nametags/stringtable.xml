@@ -527,10 +527,14 @@
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_DisplayName">
             <English>Nametag Ambient Brightness Coefficient</English>
             <Russian>Коэффициент окружающего освещения для меток игроков</Russian>
+            <Japanese>環境名札明るさ係数</Japanese>
+            <French>Coefficient de luminosité ambiante</French>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">
             <English>Adjusts how strongly ambient brightness affects nametag view distance.</English>
             <Russian>Определяет как сильно окружающее освещение влияет на дальность отображения меток игроков.</Russian>
+            <Japanese>環境光の強さによって名札の描画距離を調整します。</Japanese>
+            <French>Définit à quel point le manque de lumière ambiante abaisse la distance de visibilité du nom des joueurs.</French>
         </Key>
     </Package>
 </Project>

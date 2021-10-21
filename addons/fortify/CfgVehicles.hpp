@@ -28,7 +28,7 @@ class CfgVehicles {
     class ACE_Module: Module_F {};
     class XGVAR(setupModule): ACE_Module {
         author = ECSTRING(common,ACETeam);
-        category = "ACEX";
+        category = "ACE";
         displayName = CSTRING(Fortify);
         function = QFUNC(setupModule);
         scope = 2;
@@ -86,7 +86,7 @@ class CfgVehicles {
 
     class XGVAR(buildLocationModule): ACE_Module {
         author = ECSTRING(common,ACETeam);
-        category = "ACEX";
+        category = "ACE";
         displayName = CSTRING(buildLocationModule);
         scope = 2;
         isGlobal = 1;

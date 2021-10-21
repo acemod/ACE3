@@ -263,6 +263,9 @@
         </Key>
         <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
             <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
+            <French>Améliore les compétences en ingénierie des unités en fonction du lieu où elles se trouvent ; notamment dans les véhicules de réparation ou les ateliers.\nUn soldat non formé devient ingénieur, un ingénieur devient ingénieur avancé.</French>
+            <Japanese>修理車両か施設内では工兵能力を上昇させます。兵士は工兵になり、工兵は上級工兵になります。</Japanese>
+            <Russian>Повысьте подготовку инженеров при ремонте транспортных средств или объектов. Нетренированный становится инженером, инженер становится продвинутым инженером.</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>

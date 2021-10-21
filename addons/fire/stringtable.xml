@@ -3,21 +3,39 @@
     <Package name="Fire">
         <Key ID="STR_ACE_Fire_category_displayName">
             <English>ACE Fire</English>
+            <Japanese>ACE 火災</Japanese>
+            <French>ACE Feu</French>
+            <Russian>ACE Возгорание</Russian>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PatDown">
             <English>Pat Down Fire</English>
+            <Japanese>火を叩き消す</Japanese>
+            <French>Éteindre le feu</French>
+            <Russian>Потушить</Russian>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PerformingPatDown">
             <English>Patting Down Fire</English>
+            <Japanese>火を叩き消しています</Japanese>
+            <French>Feu en cours d'extinction...</French>
+            <Russian>Тушение</Russian>
         </Key>
         <Key ID="STR_ACE_Fire_setting_description">
             <English>Allow units to catch fire</English>
+            <Japanese>ユニットへ着火を許可</Japanese>
+            <French>Définit si les unités peuvent prendre feu ou non.</French>
+            <Russian>Включает возгорание</Russian>
         </Key>
         <Key ID="STR_ACE_Fire_setting_flareEnable">
             <English>Enable fire-flare at night</English>
+            <Japanese>夜間にフレア効果を有効化</Japanese>
+            <French>Halo lumineux la nuit</French>
+            <Russian>Включает сверкание пламени</Russian>
         </Key>
         <Key ID="STR_ACE_Fire_setting_flareDescription">
             <English>Uses a flare effect to increase fire intensity at night</English>
+            <Japanese>夜間に火災の強さを上昇させるフレア効果を有効化します。</Japanese>
+            <French>Ajoute un effet de halo lumineux afin d'accroitre l'intensité du feu durant la nuit.</French>
+            <Russian>Включает ореол пламени для большей интенсивности ночью</Russian>
         </Key>
     </Package>
 </Project>
