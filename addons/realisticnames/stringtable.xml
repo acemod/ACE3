@@ -3946,26 +3946,31 @@
         <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
             <English>ELCAN SpecterOS (Lush)</English>
             <Polish>ELCAN SpecterOS (Leśny)</Polish>
+            <French>ELCAN SpecterOS (Forêt)</French>
             <Japanese>ELCAN SpecterOS (緑地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
             <Polish>ELCAN SpecterOS (Jałowy)</Polish>
+            <French>ELCAN SpecterOS (Désert)</French>
             <Japanese>ELCAN SpecterOS (乾燥地帯)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
             <Polish>ELCAN SpecterOS 7.62 (Czarny)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Noire)</French>
             <Japanese>ELCAN SpecterOS 7.62 (ブラック)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
             <Polish>ELCAN SpecterOS 7.62 (Leśny)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Forêt)</French>
             <Japanese>ELCAN SpecterOS 7.62 (緑地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
             <Polish>ELCAN SpecterOS 7.62 (Jałowy)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Désert)</French>
             <Japanese>ELCAN SpecterOS 7.62 (乾燥地帯)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
@@ -4213,11 +4218,13 @@
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
             <English>Burris XTR II (Old)</English>
             <Polish>Burris XTR II (Stary)</Polish>
+            <French>Burris XTR II (Usée)</French>
             <Japanese>Burris XTR II (使い古し)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
             <Polish>Burris XTR II (ASP-1 Kir)</Polish>
+            <French>Burris XTR II (ASP-1 Kir)</French>
             <Japanese>Burris XTR II (ASP-1 Kir)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
@@ -4268,11 +4275,13 @@
         <Key ID="STR_ACE_RealisticNames_optic_holosight_lush">
             <English>EOTech XPS3 (Lush)</English>
             <Polish>EOTech XPS3 (Leśny)</Polish>
+            <French>EOTech XPS3 (Forêt)</French>
             <Japanese>EOTech XPS3 (緑地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
             <Polish>EOTech XPS3 (Jałowy)</Polish>
+            <French>EOTech XPS3 (Désert)</French>
             <Japanese>EOTech XPS3 (乾燥地帯)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
