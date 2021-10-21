@@ -118,6 +118,24 @@ if (random 1 <= _reopeningChance * GVAR(woundReopenChance)) then {
 
                 [_target] call EFUNC(medical_status,updateWoundBloodLoss);
 
+                // Re-add trauma and damage visuals
+                if (GVAR(clearTrauma) == 2) then {
+                    private _injuryDamage = (_selectedInjury select 4) * _impact;
+                    private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+                    private _newDam = (_bodyPartDamage select _selBodyPart) + _injuryDamage;
+                    _bodyPartDamage set [_selBodyPart, _newDam];
+
+                    _target setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
+
+                    switch (_selBodyPart) do {
+                        case 0: { [_target, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+                        case 1: { [_target, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+                        case 2;
+                        case 3: { [_target, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
+                        default { [_target, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
+                    };
+                };
+
                 // Check if we gained limping from this wound re-opening
                 if ((EGVAR(medical,limping) == 1) && {_bodyPartN > 3}) then {
                     [_target] call EFUNC(medical_engine,updateDamageEffects);

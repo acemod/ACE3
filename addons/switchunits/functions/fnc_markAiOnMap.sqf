@@ -54,7 +54,7 @@ GVAR(AllMarkerNames) = [];
                     _markerName setMarkerTextLocal (_x getVariable [QGVAR(PlayerControlledName), ""]);
                 } else {
                     _markerName setMarkerColorLocal _markerColor;
-                    _markerName setMarkerTextLocal (getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName"));
+                    _markerName setMarkerTextLocal (getText (configOf _x >> "displayName"));
                 };
 
                 GVAR(AllMarkerNames) pushBack _markerName;

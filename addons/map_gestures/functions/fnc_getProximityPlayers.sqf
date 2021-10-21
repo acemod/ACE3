@@ -37,7 +37,7 @@ switch (_this) do {
         _proximityPlayers append allUnits;
     };
     case (1): { // Players in Group
-        _proximityPlayers append group ace_player;
+        _proximityPlayers append units ace_player;
     };
     case (2): { // Players on Side
         _proximityPlayers append (allUnits select {side (group _x) == side (group ace_player)});

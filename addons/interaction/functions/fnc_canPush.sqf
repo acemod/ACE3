@@ -18,5 +18,5 @@
 params ["_target"];
 
 alive _target &&
-{getMass _target <= 2600 || getNumber (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(canPush)) == 1} &&
+{getMass _target <= 2600 || getNumber (configOf _target >> QGVAR(canPush)) == 1} &&
 {vectorMagnitude velocity _target < 3}

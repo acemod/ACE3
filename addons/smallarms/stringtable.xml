@@ -20,6 +20,7 @@
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Name">
             <English>.45 ACP 25Rnd Mag</English>
             <Polish>25-nab. mag. .45 ACP </Polish>
+            <Russian>Магазин, 25 патр. .45 ACP</Russian>
             <French>Mag. 25 balles .45 ACP</French>
             <Spanish>Cargador de 25 proyectiles de .45 ACP</Spanish>
             <German>25-Schuss-.45-ACP-Magazin</German>
@@ -30,6 +31,7 @@
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Green_Name">
             <English>.45 ACP 25Rnd Tracers (Green) Mag</English>
             <Polish>25-nab. mag. .45 ACP (zielony smugacz)</Polish>
+            <Russian>Магазин, 25 патр. .45 ACP (зелёные трассеры)</Russian>
             <French>Mag. 25 traçantes (vertes) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (verde) de .45 ACP</Spanish>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Leuchtspur Grün)</German>
@@ -40,6 +42,7 @@
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Red_Name">
             <English>.45 ACP 25Rnd Tracers (Red) Mag</English>
             <Polish>25-nab. mag. .45 ACP (czerwony smugacz)</Polish>
+            <Russian>Магазин, 25 патр. .45 ACP (красные трассеры)</Russian>
             <French>Mag. 25 traçantes (rouges) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (rojo) de .45 ACP</Spanish>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Leuchtspur Rot)</German>
@@ -50,6 +53,7 @@
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Yellow_Name">
             <English>.45 ACP 25Rnd Tracers (Yellow) Mag</English>
             <Polish>25-nab. mag. .45 ACP (żółty smugacz)</Polish>
+            <Russian>Магазин, 25 патр. .45 ACP (жёлтые трассеры)</Russian>
             <French>Mag. 25 traçantes (jaunes) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (amarillo) de .45 ACP</Spanish>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Nachlade-Leuchtspur Gelb)</German>
@@ -60,12 +64,24 @@
         <Key ID="STR_ACE_SmallArms_8Rnd_45_Name">
             <English>.45 ACP 8Rnd Mag</English>
             <Polish>8-nab. mag. .45 ACP </Polish>
+            <Russian>Магазин, 8 патр. .45 ACP</Russian>
             <French>Mag. 8 balles .45 ACP</French>
             <Spanish>Cargador de 8 proyectiles de .45 ACP</Spanish>
             <German>8-Schuss-.45-ACP-Magazin</German>
             <Czech>.45 ACP, 8ks zásobník</Czech>
             <Turkish>.45 ACP 8 Merm. Şarjör</Turkish>
             <Japanese>.45 ACP 8Rnd マガジン</Japanese>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_15Rnd_45_Name">
+            <English>.45 ACP 15Rnd Mag</English>
+            <Polish>15-nab. mag. .45 ACP </Polish>
+            <Russian>Магазин, 15 патр. .45 ACP</Russian>
+            <French>Mag. 15 balles .45 ACP</French>
+            <Spanish>Cargador de 15 proyectiles de .45 ACP</Spanish>
+            <German>15-Schuss-.45-ACP-Magazin</German>
+            <Czech>.45 ACP, 15ks zásobník</Czech>
+            <Turkish>.45 ACP 15 Merm. Şarjör</Turkish>
+            <Japanese>.45 ACP 15Rnd マガジン</Japanese>
         </Key>
     </Package>
 </Project>

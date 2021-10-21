@@ -24,22 +24,17 @@ private _return = [];
 
 {
     private _requiredList = _x; //eg ["ace_track", "ace_track"]
-    private _ableToAquire = []; //will be array of ojbects
+    private _ableToAquire = []; //will be array of objects
     {
-        private _nearObjects = nearestObjects [_unit, [_x], _maxRange];
-        private _canClaimObject = objNull;
+        private _nearObjects =  _unit nearEntities [_x, _maxRange];
         {
-            if ((!(_x in _ableToAquire))
-                    && {[_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)}
-                    &&{(damage _x) < 1}
-                    ) exitWith { _canClaimObject = _x; };
+            if (!(_x in _ableToAquire) && {(_x getVariable [QEGVAR(common,owner), objNull]) in [objNull, _unit]}) exitWith { // skip claimed objects
+                _ableToAquire pushBack _x
+            };
         } forEach _nearObjects;
-        if (isNull _canClaimObject) exitWith {};
-        _ableToAquire pushBack _canClaimObject;
-    } forEach _x;
+    } forEach _requiredList;
     TRACE_2("Check required equals available",_requiredList,_ableToAquire);
     if ((count _ableToAquire) == (count _requiredList)) exitWith {_return = _ableToAquire};
-    false
-} count _objectsToClaim;
+} forEach _objectsToClaim;
 
 _return

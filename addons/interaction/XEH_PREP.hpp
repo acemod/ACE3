@@ -32,6 +32,13 @@ PREP(canPardon);
 PREP(pardon);
 PREP(canPullOutBody);
 PREP(pullOutBody);
+PREP(canRenameGroup);
+PREP(renameGroupUI);
+PREP(renameGroup);
+
+// Weapon Attachments
+PREP(getWeaponAttachmentsActions);
+PREP(switchWeaponAttachment);
 
 // interaction with doors
 PREP(getDoor);
@@ -44,4 +51,6 @@ PREP(openDoor);
 PREP(canPush);
 PREP(push);
 
+// misc
 PREP(canFlip);
+PREP(replaceTerrainObject);

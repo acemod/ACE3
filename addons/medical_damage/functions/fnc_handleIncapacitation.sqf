@@ -32,6 +32,6 @@ _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightA
 
 private _damageThreshold = GET_DAMAGE_THRESHOLD(_unit);
 
-if ((_headDamage > _damageThreshold / 2) || {_bodyDamage > _damageThreshold} || {(_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < 0.1}}) then {
+if ((_headDamage > _damageThreshold / 2) || {_bodyDamage > _damageThreshold} || {(_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < EGVAR(medical,painUnconsciousChance)}}) then {
     [QEGVAR(medical,CriticalInjury), _unit] call CBA_fnc_localEvent;
 };

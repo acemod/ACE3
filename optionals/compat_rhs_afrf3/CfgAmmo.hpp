@@ -179,11 +179,13 @@ class CfgAmmo {
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
+        EGVAR(vehicle_damage,incendiary) = 0.1;
     };
     class rhs_rpg7v2_tbg7v: rhs_rpg7v2_pg7vl {
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;
+        EGVAR(vehicle_damage,incendiary) = 0.7;
     };
     class rhs_rshg2_rocket: rhs_rpg7v2_tbg7v {
         ace_frag_enabled = 0;
@@ -253,5 +255,46 @@ class CfgAmmo {
 
     class rhs_mine_ozm72_c_ammo: rhs_mine_ozm72_a_ammo {
         ace_explosives_defuseObjectPosition[] = {0, -0.015, 0.12};
+    };
+    class Sh_125mm_APFSDS;
+    class Sh_125mm_HE;
+    class rhs_ammo_bm_base: Sh_125mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+    class rhs_ammo_bk_base: rhs_ammo_bm_base {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_3bm_base: rhs_ammo_bm_base {};
+    class rhs_ammo_of_base: Sh_125mm_HE {
+        EGVAR(vehicle_damage,incendiary) = 0.30;
+    };
+    class rhs_ammo_base_penetrator: rhs_ammo_3bm_base {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_ap_penetrator: Sh_125mm_APFSDS {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+    
+    class M_Titan_AT;
+    class rhs_ammo_atgmCore_base: M_Titan_AT {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    class rhs_ammo_atgmBase_base: M_Titan_AT {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
+    };
+    
+    class rhs_ammo_rpgShell_base;
+    class rhs_ammo_og9v: rhs_ammo_rpgShell_base {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+    
+    class rhs_ammo_rpg15Shell_base;
+    class rhs_ammo_og15v: rhs_ammo_rpg15Shell_base {
+        EGVAR(vehicle_damage,incendiary) = 0.1;
+    };
+    
+    class B_30mm_AP;
+    class rhs_ammo_30x165mm_base: B_30mm_AP {
+        EGVAR(vehicle_damage,incendiary) = 0.2;
     };
 };

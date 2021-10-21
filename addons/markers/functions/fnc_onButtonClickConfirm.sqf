@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#include "\a3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: Freddo
  * When the confirm button is pressed.
@@ -21,22 +20,34 @@ private _display = ctrlParent _buttonOk;
 private _description = _display displayctrl IDC_INSERT_MARKER;
 private _aceTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
 
-// Handle timestamp
-if (cbChecked _aceTimestamp && {[ACE_player] call FUNC(canTimestamp)}) then {
+// handle timestamp
+if (cbChecked _aceTimestamp && {ACE_player call FUNC(canTimestamp)}) then {
     private _time = daytime;
-    private _ampm = switch (true) do {
-        case (GVAR(timestampHourFormat) == 24): {""};
-        case (_time < 12): {" am"};
-        case (_time > 12): {SUB(_time,12); " pm"};
+
+    // add timestamp suffix
+    private _periodPostfix = "";
+    if (GVAR(timestampHourFormat) == 12) then {
+        if (floor _time == 0) exitWith {
+            _time = _time + 12;
+            _periodPostfix = " am";
+        };
+
+        if (floor _time == 12) exitWith {
+            _periodPostfix = " pm";
+        };
+
+        if (_time < 12) then {
+            _periodPostfix = " am";
+        } else {
+            _time = _time - 12;
+            _periodPostfix = " pm";
+        };
     };
 
-    _description ctrlSetText format [ // Add timestamp suffix
-        "%1%2[%2%3]",
+    _description ctrlSetText format [
+        "%1 [%2%3]",
         ctrlText _description,
-        TIMESTAMP_SPACE,
         [_time, GVAR(timestampFormat)] call BIS_fnc_timeToString,
-        _ampm
+        _periodPostfix
     ];
 };
-
-nil

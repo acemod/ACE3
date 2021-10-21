@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, SynixeBrett
+ * Author: Alganthe, Brett Mayson
  * Fill right panel.
  *
  * Arguments:

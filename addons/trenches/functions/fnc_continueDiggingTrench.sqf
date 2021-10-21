@@ -25,7 +25,7 @@ if(_actualProgress == 1) exitWith {};
 // Mark trench as being worked on
 _trench setVariable [QGVAR(digging), true, true];
 
-private _digTime = missionNamespace getVariable [getText (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(diggingDuration)), 20];
+private _digTime = missionNamespace getVariable [getText (configOf _trench >> QGVAR(diggingDuration)), 20];
 private _digTimeLeft = _digTime * (1 - _actualProgress);
 
 private _placeData = _trench getVariable [QGVAR(placeData), [[], []]];
@@ -75,11 +75,11 @@ if(_actualProgress == 0) then {
     //Remove grass
     {
         private _trenchGrassCutter = createVehicle ["Land_ClutterCutter_medium_F", [0, 0, 0], [], 0, "NONE"];
-        private _cutterPos = AGLToASL (_trench modelToWorld _x);
+        private _cutterPos = _trench modelToWorldWorld _x;
         _cutterPos set [2, getTerrainHeightASL _cutterPos];
         _trenchGrassCutter setPosASL _cutterPos;
         deleteVehicle _trenchGrassCutter;
-    } foreach getArray (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(grassCuttingPoints));
+    } foreach getArray (configOf _trench >> QGVAR(grassCuttingPoints));
 };
 
 private _progressLeft = (_actualProgress * 10) + 1;

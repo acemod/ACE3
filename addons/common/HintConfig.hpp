@@ -23,7 +23,7 @@ class RscTitles {
     class ACE_RscHint {
         idd = -1;
         onLoad = "uiNamespace setVariable ['ACE_ctrlHint', (_this select 0) displayCtrl 1];";
-        movingEnable = false;
+        movingEnable = 0;
         duration = 4;
         fadeIn = 0.2;
         fadeOut = 0.2;
@@ -48,7 +48,7 @@ class RscTitles {
     class ACE_RscErrorHint {
         idd = -1;
         onLoad = "uiNamespace setVariable ['ACE_ctrlErrorHint', (_this select 0) displayCtrl 1];";
-        movingEnable = false;
+        movingEnable = 0;
         duration = 999999;
         fadeIn = 0.2;
         fadeOut = 0.2;

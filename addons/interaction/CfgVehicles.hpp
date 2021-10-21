@@ -303,6 +303,13 @@ class CfgVehicles {
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
+                class ACE_RenameGroup {
+                    displayName = CSTRING(RenameGroup);
+                    condition = QUOTE(_player call FUNC(canRenameGroup));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    statement = QUOTE(_player call FUNC(renameGroupUI));
+                    showDisabled =1;
+                };
             };
 
             class ACE_Equipment {
@@ -312,6 +319,14 @@ class CfgVehicles {
                 statement = "";
                 showDisabled = 1;
                 icon = "";  // @todo
+
+                class GVAR(weaponAttachments) {
+                    displayName = "$STR_A3_CfgEditorSubcategories_EdSubcat_SideSlot0";
+                    condition = QGVAR(enableWeaponAttachments);
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                    insertChildren = QUOTE(call DFUNC(getWeaponAttachmentsActions));
+                    modifierFunction = QUOTE(_this select 3 set [ARR_2(2, getText (configFile >> 'CfgWeapons' >> currentWeapon (_this select 0) >> 'picture'))];);
+                };
             };
         };
     };
@@ -350,7 +365,7 @@ class CfgVehicles {
         };
     };
 
-    class Car_F: Car{};
+    class Car_F: Car {};
     class Quadbike_01_base_F: Car_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -620,7 +635,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_OpenBox {
                     displayName = CSTRING(OpenBox);
-                    condition = QUOTE((alive _target) && {(getNumber (configFile >> 'CfgVehicles' >> (typeOf _target) >> 'disableInventory')) == 0});
+                    condition = QUOTE(alive _target && {!lockedInventory _target} && {getNumber (configOf _target >> 'disableInventory') == 0});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
                     showDisabled = 0;
                 };

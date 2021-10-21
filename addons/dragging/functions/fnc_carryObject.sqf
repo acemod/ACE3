@@ -27,8 +27,8 @@ private _direction = _target getVariable [QGVAR(carryDirection), 0];
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
 
-    [_unit, "AcinPercMstpSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
-    [_target, "AinjPfalMstpSnonWnonDf_carried_dead", 2, true] call EFUNC(common,doAnimation);
+    [_unit, "AcinPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+    [_target, "AinjPfalMstpSnonWnonDf_carried_dead", 2] call EFUNC(common,doAnimation);
 
     // attach person
     _target attachTo [_unit, _position, "LeftShoulder"];
@@ -75,7 +75,7 @@ GVAR(currentHeightChange) = 0;
 // prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
-if !(_UAVCrew isEqualTo []) then {
+if (_UAVCrew isNotEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;
     _target setVariable [QGVAR(isUAV), true, true];
 };

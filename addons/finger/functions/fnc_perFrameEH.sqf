@@ -15,20 +15,20 @@
  * Public: No
  */
 
-if (!alive ACE_player) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
+if (!alive ACE_player) then {GVAR(fingersHash) = createHashMap};
 // Conditions: canInteract
-if !([ACE_player, ACE_player, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
+if !([ACE_player, ACE_player, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = createHashMap};
 // Make sure player is dismounted or in a static weapon:
-if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
+if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = createHashMap};
 
 private _iconSize = BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
 
-[+GVAR(fingersHash), {
-    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
-    _value params ["_lastTime", "_pos", "_name"];
+{
+    //IGNORE_PRIVATE_WARNING ["_x", "_y"];
+    _y params ["_lastTime", "_pos", "_name"];
     private _timeLeftToShow = _lastTime + FP_TIMEOUT - diag_tickTime;
     if (_timeLeftToShow <= 0) then {
-        [GVAR(fingersHash), _key] call CBA_fnc_hashRem;
+        GVAR(fingersHash) deleteAt _x;
     } else {
         private _drawColor = + GVAR(indicatorColor);
         // Fade out:
@@ -36,9 +36,9 @@ private _iconSize = BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
 
         drawIcon3D [QPATHTOF(UI\fp_icon2.paa), _drawColor, ASLtoAGL _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "RobotoCondensed"];
     };
-}] call CBA_fnc_hashEachPair;
+} forEach GVAR(fingersHash);
 
-if ((GVAR(fingersHash) select 1) isEqualTo []) then {
+if (GVAR(fingersHash) isEqualTo createHashMap) then {
     TRACE_1("Ending PFEH", GVAR(pfeh_id));
     [GVAR(pfeh_id)] call CBA_fnc_removePerFrameHandler;
     GVAR(pfeh_id) = -1;

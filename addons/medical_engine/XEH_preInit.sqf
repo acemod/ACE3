@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+#include "initSettings.sqf"
+
 // Define "Constants" variables (both are macros defined in script_macros_medical.hpp, look there for actual variable names)
 if (isNil QUOTE(HEAD_DAMAGE_THRESHOLD)) then {HEAD_DAMAGE_THRESHOLD = HEAD_DAMAGE_THRESHOLD_DEFAULT};
 if (isNil QUOTE(ORGAN_DAMAGE_THRESHOLD)) then {ORGAN_DAMAGE_THRESHOLD = ORGAN_DAMAGE_THRESHOLD_DEFAULT};
@@ -77,5 +79,7 @@ addMissionEventHandler ["Loaded", {
         };
     };
 }] call CBA_fnc_addEventhandler;
+
+[] call FUNC(disableThirdParty);
 
 ADDON = true;
