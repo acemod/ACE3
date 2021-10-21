@@ -503,6 +503,12 @@ def backup_config(module):
     global prefix
 
     try:
+        shutil.copyfile(os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.backup"))
+        os.chdir(work_drive)
+    except:
+        print_error("Error creating backup of config.cpp for module {}.".format(module))
+
+    try:
         configpath = os.path.join(work_drive, prefix, module, "$PBOPREFIX$")
         if os.path.isfile(configpath):
             shutil.copyfile(configpath, os.path.join(work_drive, prefix, module, "$PBOPREFIX$.backup"))
@@ -514,9 +520,33 @@ def backup_config(module):
 
     return True
 
+def convert_config(module):
+    try:
+        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-bin", "-dst", os.path.join(work_drive, prefix, module, "config.bin"), os.path.join(work_drive, prefix, module, "config.cpp")]
+        ret = subprocess.call(cmd)
+        if ret != 0:
+            raise Exception(f" -bin return code == {ret}. Usually means there is a syntax error within the config.cpp file.")
+        cmd = [os.path.join(arma3tools_path, "CfgConvert", "CfgConvert.exe"), "-txt", "-dst", os.path.join(work_drive, prefix, module, "config.cpp"), os.path.join(work_drive, prefix, module, "config.bin")]
+        ret = subprocess.call(cmd)
+        if ret != 0:
+            raise Exception(f" -txt return code == {ret}. Usually means there is a syntax error within the config.cpp file.")
+    except Exception as e:
+        print_error(f"convert_config: {e}")
+        return False
+
+    return True
+
 def addon_restore(modulePath):
     #restore original $PBOPREFIX$
     try:
+        if os.path.isfile(os.path.join(modulePath, "config.bin")):
+            os.remove(os.path.join(modulePath, "config.bin"))
+        if os.path.isfile(os.path.join(modulePath, "config.cpp")):
+            os.remove(os.path.join(modulePath, "config.cpp"))
+        if os.path.isfile(os.path.join(modulePath, "config.backup")):
+            os.rename(os.path.join(modulePath, "config.backup"), os.path.join(modulePath, "config.cpp"))
+        if os.path.isfile(os.path.join(modulePath, "texHeaders.bin")):
+            os.remove(os.path.join(modulePath, "texHeaders.bin"))
         if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$.backup")):
             if os.path.isfile(os.path.join(modulePath, "$PBOPREFIX$")):
                 os.remove(os.path.join(modulePath, "$PBOPREFIX$"))
@@ -1294,6 +1324,9 @@ See the make.cfg file for additional build options.
                     nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
 
+                    if (not os.path.isfile(nobinFilePath)):
+                        convert_config(module)
+
                     version_stamp_pboprefix(module,commit_id)
 
                     if os.path.isfile(nobinFilePath):
@@ -1301,7 +1334,7 @@ See the make.cfg file for additional build options.
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
 
                     else:
-                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
+                        cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
                     color("grey")
                     if quiet:
