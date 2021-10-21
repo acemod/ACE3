@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Field Rations Framework
-description: Explains how to set-up ACEX Field Rations.
+description: Explains how to set-up ACE Field Rations.
 group: framework
 parent: wiki
 mod: acex
@@ -9,6 +9,7 @@ version:
   major: 3
   minor: 4
   patch: 0
+redirect_from: "/wiki/frameworkx/field-rations-framework.html"
 ---
 
 ## 1. Config Values
@@ -51,7 +52,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 
 ### 3.1 Getting water supply
 
-`acex_field_rations_fnc_getRemainingWater`
+`ace_field_rations_fnc_getRemainingWater`
 
 ```cpp
 * Returns the remaining water in a source.
@@ -63,12 +64,12 @@ Event Name | Passed Parameter(s) | Locality | Description
 * Remaining water <NUMBER>
 *
 * Example:
-* [_source] call acex_field_rations_fnc_getRemainingWater
+* [_source] call ace_field_rations_fnc_getRemainingWater
 ```
 
 ### 3.2 Setting water supply
 
-`acex_field_rations_fnc_setRemainingWater`
+`ace_field_rations_fnc_setRemainingWater`
 
 ```cpp
 * Sets the remaining water supply for given water source.
@@ -81,12 +82,12 @@ Event Name | Passed Parameter(s) | Locality | Description
 * None
 *
 * Example:
-* [_source, 1000] call acex_field_rations_fnc_setRemainingWater
+* [_source, 1000] call ace_field_rations_fnc_setRemainingWater
 ```
 
 ### 3.3 Adding a status modifier
 
-`acex_field_rations_fnc_addStatusModifier`
+`ace_field_rations_fnc_addStatusModifier`
 
 ```cpp
 * Adds a status modifier. Should be called on all machines.
@@ -100,5 +101,5 @@ Event Name | Passed Parameter(s) | Locality | Description
 * None
 *
 * Example:
-* [0, {random 1}] call acex_field_rations_fnc_addStatusModifier
+* [0, {random 1}] call ace_field_rations_fnc_addStatusModifier
 ```

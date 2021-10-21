@@ -1,10 +1,11 @@
 ---
 layout: wiki
-title: ACE3 Installation Guide
+title: Installation Guide
 description: Step-by-step guide for installing ACE3
 group: user
 order: 1
 parent: wiki
+redirect_from: "/wiki/user/installation-guide-acex.html"
 ---
 
 ## 1. Overview

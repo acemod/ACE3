@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Sitting Framework
-description: Explains how to set-up sitting objects (eg. chairs) with ACEX sitting system.
+description: Explains how to set-up sitting objects (eg. chairs) with ACE sitting system.
 group: framework
 order: 5
 parent: wiki
@@ -10,11 +10,8 @@ version:
   major: 3
   minor: 2
   patch: 0
-redirect_from: "/wiki/framework/sitting-framework.md"
+redirect_from: "/wiki/frameworkx/sitting-framework.md"
 ---
-
-_Sitting has been moved from ACE3 (in v3.8.0) to ACEX._
-
 
 ## 1. Requirements
 

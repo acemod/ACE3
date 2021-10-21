@@ -10,6 +10,7 @@ version:
   major: 3
   minor: 0
   patch: 0
+redirect_from: "/wiki/frameworkx/headless-framework.html"
 ---
 
 ## 1. Overview
@@ -22,9 +23,9 @@ A server admin or mission maker can also define the minimal delay between transf
 
 ### 1.1 End Mission
 
-Since ACEX v3.1.0 Headless component supports automatic ending of mission when Headless Clients are connencted but no players are present. It is basically `server.cfg` setting `persistent = 1;` with Headless Client support.
+Since ACEX v3.1.0 _(before merge into ACE3)_ Headless component supports automatic ending of mission when Headless Clients are connencted but no players are present. It is basically `server.cfg` setting `persistent = 1;` with Headless Client support.
 
-As of ACEX v3.2.0 this feature can also be enabled without enabling AI distribution (overall setting).
+As of ACEX v3.2.0 _(before merge into ACE3)_ this feature can also be enabled without enabling AI distribution (overall setting).
 
 
 ## 2. Scripting
@@ -46,4 +47,4 @@ Some Arma 3 features are incompatible, this is up to BI to add support. Disable 
 
 Additionally, groups will not be transferred due to lack of support if they:
 
-- Have waypoints with synchronized triggers (waypoint would not change status based on trigger condition) (added in ACEX v3.2.0)
+- Have waypoints with synchronized triggers (waypoint would not change status based on trigger condition) (added in ACEX v3.2.0 - _before merge into ACE3_)
