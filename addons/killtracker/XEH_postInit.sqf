@@ -20,7 +20,8 @@ if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "
     TRACE_1("no mission debriefing config",_this);
 };
 
-INFO("Running Kill Tracking");
+private _global = missionNamespace getVariable [QGVAR(globalSync), false];  // Global Sync (e.g. for spectator)
+INFO_1("Running Kill Tracking [Global: %1]",_global); 
 
 // Variables:
 GVAR(eventsArray) = [];
@@ -35,6 +36,9 @@ GVAR(killCount) = 0;
     GVAR(killCount) = GVAR(killCount) + 1;
     GVAR(eventsArray) pushBack format [LLSTRING(Kill), _name, _killInfo];
     XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
+    if (missionNamespace getVariable [QGVAR(globalSync), false]) then {
+        ACE_player setVariable [QGVAR(output), XGVAR(outputText), true];
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(death), {
@@ -42,6 +46,9 @@ GVAR(killCount) = 0;
     TRACE_2("death eh",_name,_killInfo);
     GVAR(eventsArray) pushBack format [LLSTRING(Killer), _name, _killInfo];
     XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
+    if (missionNamespace getVariable [QGVAR(globalSync), false]) then {
+        ACE_player setVariable [QGVAR(output), XGVAR(outputText), true];
+    };
 }] call CBA_fnc_addEventHandler;
 
 ["ace_killed", {
