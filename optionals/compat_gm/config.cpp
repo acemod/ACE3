@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_csw", "ace_explosives", "ace_rearm", "ace_refuel", "ace_repair", "gm_core"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"nomisum"};
+        authors[] = {"sancron", "nomisum"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
