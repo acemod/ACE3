@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Headless">
+        <Key ID="STR_ACE_Headless_Module">
+            <English>Headless</English>
+            <German>Headless</German>
+            <Polish>Headless</Polish>
+            <Korean>헤드리스</Korean>
+            <Japanese>ヘッドレス</Japanese>
+            <French>Headless</French>
+            <Chinesesimp>无头客户端</Chinesesimp>
+            <Chinese>無頭客戶端</Chinese>
+            <Italian>Headless</Italian>
+            <Russian>Headless клиент</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_ModuleDesc">
+            <English>This module allows you to setup automatic transferring of AI to Headless Clients. (Default: No)</English>
+            <German>Dieses Modul erlaubt es dir, die KI automatisch auf einen Headless Client zu transferieren. (Standard: Nein) </German>
+            <Polish>Ten moduł zezwala na automatyczny transfer AI do Headless Cient. (Domyślnie: Nie)</Polish>
+            <Korean>이 모듈을 사용하면 헤드리스 클라이언트에 AI 자동 전송을 설정할 수 있습니다. (기본값 : No)</Korean>
+            <Japanese>モジュールは AI を自動的にヘッドレス クライアントへ移行します。(標準: 無効)</Japanese>
+            <French>Ce module permet de mettre en place un transfert aotmatique de l'IA vers le Headless Clients. (Défaut: Non)</French>
+            <Chinesesimp>此模块能让你自动转换AI的控制权给其他无头客户端。(预设:关闭)</Chinesesimp>
+            <Chinese>此模塊能讓你自動轉換AI的控制權給其他無頭客戶端。(預設:關閉)</Chinese>
+            <Italian>Questo modulo ti consente di impostare il trasferimento automatico delle AI su dei Client Headless. (Default: No)</Italian>
+            <Russian>Этот модуль позволяет настроить автоматическую передачу управления ИИ Headless клиентам. (По умолчанию: Откл)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_EnabledDesc">
+            <English>Enables transferring of AI to Headless Clients.</English>
+            <German>Aktiviert den Transfer der KI auf die Headless Clients.</German>
+            <Polish>Włącza transfer AI do Headless Client.</Polish>
+            <Korean>AI를 헤드리스 클라이언트로 전송할 수 있습니다.</Korean>
+            <Japanese>AI をヘッドレス クライアントへ移行を有効化</Japanese>
+            <French>Permet le transfert des IA au Headless Clients.</French>
+            <Chinesesimp>开启转换AI控制权给无头客户端。</Chinesesimp>
+            <Chinese>開啟轉換AI控制權給無頭客戶端。</Chinese>
+            <Italian>Abilita il trasferimento delle AI sugli Headless Client.</Italian>
+            <Russian>Передает управление ИИ Headless клиентам.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_Delay">
+            <English>Delay</English>
+            <German>Verzögerung</German>
+            <Polish>Opóźnienie</Polish>
+            <Korean>지연</Korean>
+            <Japanese>遅延</Japanese>
+            <French>Délai</French>
+            <Chinesesimp>延迟</Chinesesimp>
+            <Chinese>延遲</Chinese>
+            <Italian>Latenza</Italian>
+            <Russian>Задержка</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_DelayDesc">
+            <English>Minimal delay between transfers, in seconds. (Default: 15)</English>
+            <German>Minimale Verzögerung zwischen Transfers in Sekunden. (Standard: 15)</German>
+            <Polish>Minimalny odstęp pomiędzy transferami w sekundach. (Domyślnie: 15)</Polish>
+            <Korean>전송 간 최소 지연 시간, 초당. (기본값: 15)</Korean>
+            <Japanese>移行する際の最低遅延を秒数で設定します。(標準: 15)</Japanese>
+            <French>Délai minimum entres les transferts, en secondes. (Défaut: 15)</French>
+            <Chinesesimp>设定每次转换间隔多少秒。(预设:15秒)</Chinesesimp>
+            <Chinese>設定每次轉換間隔多少秒。(預設:15秒)</Chinese>
+            <Italian>Latenza minima tra i trasferimenti, in secondi. (Default: 15)</Italian>
+            <Russian>Минимальная задержка в секундах между передачами. (По умолчанию: 15)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_EndMission">
+            <English>End Mission</English>
+            <German>Beende Mission</German>
+            <Korean>미션 종료</Korean>
+            <Japanese>ミッション終了</Japanese>
+            <French>Termine la Mission</French>
+            <Chinesesimp>结束任务</Chinesesimp>
+            <Chinese>結束任務</Chinese>
+            <Italian>Termina Missione</Italian>
+            <Polish>Koniec misji</Polish>
+            <Russian>Завершать миссию</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_EndMissionDesc">
+            <English>End mission when there are no players connected (same as 'persistent = 0' in server configuration but with Headless Client support).</English>
+            <German>Beende die Mission, wenn keine Spieler mehr verbunden sind (das gleiche wie 'persitent = 0' in den Serverkonfigurationen aber mit Headless Client Unterstützung).</German>
+            <Korean>연결된 플레이어가 없을 때 임무 종료. (서버 구성에서는 'persistent = 0'과 같지만 Headless Client는 지원함)</Korean>
+            <Japanese>プレイヤーが接続していない場合はミッション終了します。(サーバ設定の'presistent =0'と同じですが、ヘッドレス クライアントは適用されます)</Japanese>
+            <French>Termine la mission lorsqu'il n'y a plus de joueur connecté (idem que 'persistent = 0' dans la config serveur mais avec la gestion du Headless Client).</French>
+            <Chinesesimp>当伺服器里没有任何玩家还连线时自动结束任务(效果同于伺服器设定的'persistent = 0'，但支援无头客户端)。</Chinesesimp>
+            <Chinese>當伺服器裡沒有任何玩家還連線時自動結束任務(效果同於伺服器設定的'persistent = 0'，但支援無頭客戶端)。</Chinese>
+            <Italian>Termina la missione quando non ci sono più giocatori connessi (come 'persistent = 0' nella configurazione dei server ma con il supporto dell'Headless Client).</Italian>
+            <Polish>Kończy misje kiedy nie ma połączonych graczy(tak samo jak 'persistent = 0' w konfiguracji serwer ale z wsparciem Headless Client</Polish>
+            <Russian>Завершает миссию, если нет присоединенных игроков (аналогично 'persistent = 0' в настройках сервера, но с включенной поддержкой Headless клиентов).</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_Instant">
+            <English>Instant</English>
+            <German>Sofort</German>
+            <Korean>즉시</Korean>
+            <Japanese>即座</Japanese>
+            <French>Instantané</French>
+            <Chinesesimp>立即</Chinesesimp>
+            <Chinese>立即</Chinese>
+            <Italian>Istantaneo</Italian>
+            <Polish>Natychmiastowy</Polish>
+            <Russian>Мгновенно</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_Delayed">
+            <English>Delayed (60s)</English>
+            <German>Verzögert (60s)</German>
+            <Korean>지연 (60초)</Korean>
+            <Japanese>遅延 (60秒)</Japanese>
+            <French>Retardé (60s)</French>
+            <Chinesesimp>延迟 (60秒)</Chinesesimp>
+            <Chinese>延遲 (60秒)</Chinese>
+            <Italian>Ritardato (60s)</Italian>
+            <Polish>Opóźniony (60s)</Polish>
+            <Russian>С задержкой (60 с)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_Log">
+            <English>Log</English>
+            <German>Protokolldatei anlegen</German>
+            <Polish>Dziennik zdarzeń</Polish>
+            <Korean>로그</Korean>
+            <Japanese>ログ</Japanese>
+            <French>Archive</French>
+            <Chinesesimp>日志</Chinesesimp>
+            <Chinese>日誌</Chinese>
+            <Italian>Registra</Italian>
+            <Russian>Журнал</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_LogDesc">
+            <English>Log transfer statistics and Headless Client (dis)connections to RPT. (Default: No)</English>
+            <German>Zeichnet Transferstatistiken, Verbindungen und Verbindungsabbrüche in einer RPT-Datei auf. (Standard: Nein)</German>
+            <Polish>Zapisz statystyki transferu i status połączenia Headless Clienta do RPT. (Domyślnie: Tak)</Polish>
+            <Korean>전송 통계 및 헤드리스 클라이언트 연결(해제) 로그 RPT. (기본값: No)</Korean>
+            <Japanese>統計とヘッドレス クライアントの接続有無を PRT へ記録します。(標準: 無効)</Japanese>
+            <French>Archive les statistiques de transfert et de (dé)connections du Headless Client dans le RPT. (Défaut: Non)</French>
+            <Chinesesimp>记录无头客户端间的转换数量与连线/断线等记录到RPT报告档中。(预设:关闭)</Chinesesimp>
+            <Chinese>記錄無頭客戶端間的轉換數量與連線/斷線等記錄到RPT報告檔中。(預設:關閉)</Chinese>
+            <Italian>Registra le statistiche del trasferimento e delle (dis)connessioni dell'Headless Clienti su RPT. (Default: No)</Italian>
+            <Russian>Вести журнал передач и подключений Headless клиентов в файл RPT. (По умолчанию: Откл)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_TransferLoadout">
+            <English>Transfer Loadout</English>
+            <German>Transferiere Ausrüstung</German>
+            <Japanese>装備の移送</Japanese>
+            <Chinese>裝備傳輸</Chinese>
+            <Russian>Передавать снаряжение</Russian>
+            <Polish>Transfer Wyposażenia</Polish>
+        </Key>
+        <Key ID="STR_ACE_Headless_TransferLoadoutDesc">
+            <English>Transfer loadout of units attempts to work around an issue where units appear naked after transferring to a Headless Client.</English>
+            <German>Transferiere die Ausrüstung einer Einheit, um einen Fehler zu umgehen, bei welchem Einheiten nach dem Transfer auf einen Headless Client nackt erscheinen.</German>
+            <Japanese>装備の移送はヘッドレス クライアントへの移行後にユニットが裸で出現する問題の回避を試みます。</Japanese>
+            <Russian>Передача снаряжения юнитов позволяет обходить проблему, при которой юниты оказываются без снаряжения после передачи управления Headless клиенту.</Russian>
+            <Chinese>裝備傳輸用於試著暫時應付單位透過無頭客戶端傳輸時所導致裸裝之問題。</Chinese>
+            <Polish>Transfer Wyposażenia jednostek usiłuje uniknąć problemu z nagimi jednostkami po transferze do Headless Clienta</Polish>
+        </Key>
+        <Key ID="STR_ACE_Headless_TransferLoadoutCurrent">
+            <English>Current Loadout</English>
+            <German>Derzeitige Ausrüstung</German>
+            <Japanese>現在の装備</Japanese>
+            <Chinese>目前裝備</Chinese>
+            <Russian>Текущее снаряжение</Russian>
+            <Polish>Obecne wyposażenie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Headless_TransferLoadoutConfig">
+            <English>Config Loadout</English>
+            <German>Konfiguriere Ausrüstung</German>
+            <Japanese>コンフィグの装備</Japanese>
+            <Chinese>設置裝備</Chinese>
+            <Russian>Снаряжение из настроек</Russian>
+            <Polish>Konfiguracja Wyposażenia</Polish>
+        </Key>
+        <Key ID="STR_ACE_Headless_BlacklistEden">
+            <English>Headless Blacklist</English>
+            <German>Headless Blacklist</German>
+            <Japanese>ヘッドレス ブラックリスト</Japanese>
+            <French>Liste noire Headless</French>
+            <Chinesesimp>无头客户端黑名单</Chinesesimp>
+            <Chinese>無頭客戶端黑名單</Chinese>
+            <Italian>Lista Nera Headless</Italian>
+            <Korean>헤드리스 블랙리스트</Korean>
+            <Polish>Czarna lista Headless</Polish>
+            <Russian>Черный список Headless</Russian>
+        </Key>
+        <Key ID="STR_ACE_Headless_BlacklistEdenDesc">
+            <English>Disables transferring of this AI unit/group to Headless Clients. No effect on player units.</English>
+            <German>Schaltet das Übertragen dieser KI Einheit/Gruppe zu einem Headless Client aus. Hat keinen Effekt auf Spielereinheiten.</German>
+            <Japanese>ヘッドレス クライアントへ移行させない AI ユニット/グループを指定します。プレイヤー ユニットへ効果はありません。</Japanese>
+            <French>Désactive le transfert de ce(tte) unité/groupe au Headless Clients. Sans effet sur les unités des joueurs.</French>
+            <Chinesesimp>禁止转换黑名单中的AI单位/群组到无头客户端上。此功能对玩家单位无用。</Chinesesimp>
+            <Chinese>禁止轉換黑名單中的AI單位/群組到無頭客戶端上。此功能對玩家單位無用。</Chinese>
+            <Italian>Disabilita il trasferimento di questa unità/gruppo di AI negli Headless Client. Non ha effetto sui giocatori.</Italian>
+            <Korean>이 AI 유닛 / 그룹을 헤드리스 클라이언트로 전송하지 못하도록합니다. 플레이어 유닛에는 영향을주지 않습니다.</Korean>
+            <Polish>Wyłącza transfer tych jednostek/grup AI do Headless Clients. Bez efektu na jednostkach gracza.</Polish>
+            <Russian>Отключает передачу управления этого юнита/группы Headless клиентам. Не влияет на юниты игроков.</Russian>
+        </Key>
+    </Package>
+</Project>

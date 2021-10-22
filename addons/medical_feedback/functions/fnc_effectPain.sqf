@@ -19,10 +19,10 @@
 params ["_enable", "_intensity"];
 
 if (!_enable || {_intensity == 0}) exitWith {
-    GVAR(ppPain) ppEffectEnable false;
+    if (GVAR(ppPain) != -1) then { GVAR(ppPain) ppEffectEnable false; };
     GVAR(ppPainBlur) ppEffectEnable false;
 };
-GVAR(ppPain) ppEffectEnable true;
+if (GVAR(ppPain) != -1) then { GVAR(ppPain) ppEffectEnable true; };
 GVAR(ppPainBlur) ppEffectEnable true;
 
 // Trigger effect every 2s

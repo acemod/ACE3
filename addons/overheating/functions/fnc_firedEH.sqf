@@ -20,7 +20,7 @@ TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectil
 
 BEGIN_COUNTER(firedEH);
 
-if ((_unit distance ACE_player) > 3000
+if ((_unit distance ACE_player) > GVAR(particleEffectsAndDispersionDistance)
     || {(_muzzle != (primaryWeapon _unit)) && {_muzzle != (handgunWeapon _unit)}}) exitWith { // Only rifle or pistol muzzles (ignore grenades / GLs)
     END_COUNTER(firedEH);
 };
@@ -54,12 +54,12 @@ if (_scaledTemperature > 0.1) then {
         [_projectile, _dispersionX * _dispersion, _dispersionY * _dispersion, _slowdownFactor * vectorMagnitude (velocity _projectile)] call EFUNC(common,changeProjectileDirection);
         TRACE_PROJECTILE_INFO(_projectile);
     };
-    
+
     // Particle Effects
     if (GVAR(showParticleEffects)
         && {GVAR(showParticleEffectsForEveryone) || {_unit == ACE_player} || {_unit distance ACE_player <= 20}}
         && {CBA_missionTime > (_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40}) then {
-        
+
         _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
 
         private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
@@ -94,9 +94,24 @@ if ((_unit ammo _weapon) % 3 == 0) then {
     _this call FUNC(overheat);
 };
 
+// reset cookoff heat
+if (GVAR(cookoffCoef) > 0) then {
+    _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];
+    [_unit, _weapon, _temperature] call FUNC(updateAmmoTemperature);
+};
+
+// decrease time to next shot as heat increases, value is a coef where 1 is unchanged and 0 is instant, 0.8 is a 25% faster ROF.
+// this could be filtered by weapon type, but I think the heat gain and rate of fire on non-automatic weapons is low enough not to bother
+if (GVAR(overheatingRateOfFire)) then {
+    _unit setWeaponReloadingTime [_unit, _muzzle, linearConversion [0, 0.5, _scaledTemperature, 1, 0.909, true]];
+};
+
+// Don't bother with jamming if coef makes the chance 0.
+if (GVAR(jamChanceCoef) == 0) exitWith {END_COUNTER(firedEH);};
+
 private _value = 5 * _scaledTemperature;
 private _array = [0.5, 1, 2, 8, 20, 150];
-_jamChance = _jamChance * linearConversion [0, 1, _value % 1, _array select floor _value, _array select ceil _value];
+_jamChance = _jamChance * GVAR(jamChanceCoef) * linearConversion [0, 1, _value % 1, _array select floor _value, _array select ceil _value];
 
 TRACE_3("check for random jam",_unit,_weapon,_jamChance);
 

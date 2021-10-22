@@ -211,7 +211,7 @@ force ace_medical_fractures = 0; // Disabled Fractures
 force ace_medical_limping = 0; // Disabled Limping
 force ace_medical_statemachine_fatalInjuriesPlayer = 2; // Disabled fatal injuries by damage to head or torso
 force ace_medical_treatment_advancedBandages = 0; // Disabled advanced bandages
-force ace_medical_treatment_advancedDiagnose = false; // Disabled advanced diagnose
+force ace_medical_treatment_advancedDiagnose = 0; // Disabled advanced diagnose
 force ace_medical_treatment_advancedMedication = false; // Disabled advanced medication
 ```
 
@@ -224,7 +224,7 @@ force ace_medical_spontaneousWakeUpChance = 0.15; // 15% chance of waking up fro
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 1; // Epinephrine boosts wake up chance
 force ace_medical_statemachine_fatalInjuriesPlayer = 1; // Fatal injuries only occur in Cardiac Arrest
 force ace_medical_treatment_advancedBandages = 2; // Wounds can re-open until stitched.
-force ace_medical_treatment_advancedDiagnose = true; // Enabled Advanced Diagnosis
+force ace_medical_treatment_advancedDiagnose = 1; // Enabled Advanced Diagnosis
 force ace_medical_treatment_advancedMedication = true; // Enabled Advanced Medication
 force ace_medical_treatment_allowSelfIV = 1; // Medics can Self-IV
 force ace_medical_treatment_allowSelfPAK = 1; // Medics can Self-PAK

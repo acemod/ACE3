@@ -28,3 +28,7 @@
 #define CAN_CREATE_ADMIN    0
 #define CAN_CREATE_CONSOLE  1
 #define CAN_CREATE_ALL      2
+
+#define MINE_REVEAL_NONE 0
+#define MINE_REVEAL_TO_SIDE 1
+#define MINE_REVEAL_FULL 2

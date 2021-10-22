@@ -42,13 +42,13 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
         GVAR(loadTimeCoefficient) * _size,
         [_object, _vehicle],
         {
-            TRACE_1("load finish",_this); 
+            TRACE_1("load finish",_this);
             [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
             ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
         },
         {
             TRACE_1("load fail",_this);
-            [objNull, _this select 0 select 0, true] call EFUNC(common,claim)
+            [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
         },
         localize LSTRING(LoadingItem),
         {
@@ -60,8 +60,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     ] call EFUNC(common,progressBar);
     _return = true;
 } else {
-    private _displayName = getText (configOf _object >> "displayName");
-
+    private _displayName = [_object, true] call FUNC(getNameItem);
     [[LSTRING(LoadingFailed), _displayName], 3] call EFUNC(common,displayTextStructured);
 };
 

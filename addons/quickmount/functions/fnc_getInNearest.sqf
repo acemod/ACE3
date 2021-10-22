@@ -25,7 +25,7 @@ if (!GVAR(enabled) ||
 params [["_interactionTarget", objNull, [objNull]]];
 TRACE_1("getInNearest",_interactionTarget);
 
-private _start = AGLtoASL (ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot"));
+private _start = ACE_player modelToWorldVisualWorld (ACE_player selectionPosition "pilot");
 private _end = (_start vectorAdd (getCameraViewDirection ACE_player vectorMultiply GVAR(distance)));
 private _objects = lineIntersectsSurfaces [_start, _end, ACE_player];
 private _target = (_objects param [0, []]) param [2, objNull];
