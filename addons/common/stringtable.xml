@@ -1440,6 +1440,10 @@
             <Chinese>只限玩家</Chinese>
             <Turkish>Sadece oyuncular</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_aiOnly">
+            <English>AI only</English>
+            <Polish>Tylko dla AI</Polish>
+        </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
             <Russian>Игроков и ботов</Russian>

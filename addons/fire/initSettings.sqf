@@ -24,7 +24,7 @@
     LSTRING(Category_DisplayName),
     [
         [0,1,2],
-        [localize "STR_A3_OPTIONS_DISABLED", LSTRING(Setting_DropWeapon_AI), LSTRING(Setting_DropWeapon_All)],
+        [localize "STR_A3_OPTIONS_DISABLED", ELSTRING(common,aiOnly), ELSTRING(common,playersAndAI)],
         1
     ],
     true // isGlobal
