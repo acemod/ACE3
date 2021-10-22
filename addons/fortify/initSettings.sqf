@@ -11,7 +11,7 @@
 ] call CBA_fnc_addSetting;
 
 [
-    GVAR(timeCostCoefficient),
+    QGVAR(timeCostCoefficient),
     "SLIDER",
     [LLSTRING(settingHint_timeCostCoefficient), LLSTRING(settingHintDesc_timeCostCoefficient)],
     LLSTRING(settingsCategory),
@@ -19,7 +19,7 @@
 ] call CBA_fnc_addSetting;
 
 [
-    GVAR(timeMin),
+    QGVAR(timeMin),
     "SLIDER",
     [LLSTRING(settingHint_timeMin), LLSTRING(settingHintDesc_timeMin)],
     LLSTRING(settingsCategory),

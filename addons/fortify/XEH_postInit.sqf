@@ -66,7 +66,8 @@ GVAR(objectRotationZ) = 0;
 
 // Place object event handler
 [QGVAR(deployFinished), {
-    params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp"];
+    params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp"];
 
     private _newObject = _typeOf createVehicle _posASL;
     _newObject setPosASL _posASL;
