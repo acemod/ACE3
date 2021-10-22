@@ -37,5 +37,21 @@
             <French>Ajoute un effet de halo lumineux afin d'accroitre l'intensité du feu durant la nuit.</French>
             <Russian>Включает ореол пламени для большей интенсивности ночью</Russian>
         </Key>
+        <Key ID="STR_ACE_Fire_Setting_DropWeapon">
+            <English>Enable droping of weapons when on fire</English>
+            <Polish>Włącz wyrzucanie broni podczas płonięcia</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
+            <English>Makes units throw their weapon out when they're burning.</English>
+            <Polish>Powoduje że jednostki wyrzucają swoją broń gdy płoną.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_DropWeapon_AI">
+            <English>AI</English>
+            <Polish>AI</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_DropWeapon_All">
+            <English>AI and Players</English>
+            <Polish>AI oraz Gracze</Polish>
+        </Key>
     </Package>
 </Project>

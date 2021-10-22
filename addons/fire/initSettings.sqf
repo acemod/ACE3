@@ -17,3 +17,15 @@
     {[QGVAR(flareEnabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(dropWeapon), "LIST",
+    [LSTRING(Setting_DropWeapon), LSTRING(Setting_DropWeapon_Description)],
+    LSTRING(Category_DisplayName),
+    [
+        [0,1,2],
+        [localize "STR_A3_OPTIONS_DISABLED", LSTRING(Settings_DropWeapon_AI), LSTRING(Settings_DropWeapon_All)],
+        1
+    ],
+    true // isGlobal
+] call CBA_fnc_addSetting;
