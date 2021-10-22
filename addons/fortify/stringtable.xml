@@ -156,6 +156,21 @@
             <Russian>Показывать всегда</Russian>
             <Turkish>Her Zaman Göster</Turkish>
         </Key>
+        <Key ID="STR_ACE_Fortify_settingHint_timeCostCoefficient">
+            <English>Time-Cost Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHintDesc_timeCostCoefficient">
+            <English>Coefficient used to determine time to build structure.&lt;br/&gt;A in Ax + b where x is cost of object</English>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHint_timeMin">
+            <English>Minimum Build Time</English>
+        </Key>
+        <Key ID="STR_ACE_Fortify_settingHintDesc_timeMin">
+            <English>Minimum time to build any structure.&lt;br/&gt;b in Ax + b where x is cost of object</English>
+        </Key>
+        <Key ID="STR_ACE_Fortify_progressBarTitle">
+            <English>Building</English>
+        </Key>
         <Key ID="STR_ACE_Fortify_small">
             <English>Small</English>
             <Polish>Małe</Polish>

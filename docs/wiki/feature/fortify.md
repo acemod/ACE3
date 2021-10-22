@@ -15,7 +15,7 @@ redirect_from: "/wiki/featurex/fortify.html"
 
 ## 1. Overview
 
-Enable players to place down fortifications. Budget enables mission makers / admin to restrict the amount of resources available.
+Enable players to place down fortifications. Budget enables mission makers / admin to restrict the amount of resources available and how long it will take to construct the fortifications.
 
 ## 2. Usage
 
