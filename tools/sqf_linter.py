@@ -20,7 +20,8 @@ def get_files_to_process(basePath):
     for (root, _dirs, files) in os.walk(basePath):
         for file in files:
             if file.endswith(".sqf"):
-                if file.lower() in files_to_ignore_lower: continue
+                if file.lower() in files_to_ignore_lower:
+                    continue
                 filePath = os.path.join(root, file)
                 arma_files.append(filePath)
     return arma_files
@@ -32,7 +33,8 @@ def process_file(filePath):
     try:
         with open(filePath, "r", encoding="utf-8", errors="ignore") as file:
             content = file.read()
-            if "#ASC_ignoreFile" in content: return (filePath, errors, warnings)
+            if "#ASC_ignoreFile" in content:
+                return (filePath, errors, warnings)
         sqfLintParse = parse(content)
         exceptions = sqf.analyzer.analyze(sqfLintParse).exceptions
         if (exceptions):
@@ -71,8 +73,10 @@ def main():
             if errors or warnings:
                 error_count += 1
                 print(f"{filePath}")
-                for e in errors: print(f"  {e}")
-                for e in warnings: print(f"  {e}")
+                for e in errors:
+                    print(f"  {e}")
+                for e in warnings:
+                    print(f"  {e}")
 
     print("Errors: {}".format(error_count))
     return error_count
