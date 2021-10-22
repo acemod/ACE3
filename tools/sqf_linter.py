@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Requires: https://github.com/LordGolias/sqf
 
 import os
