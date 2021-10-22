@@ -44,9 +44,7 @@
             [QGVAR(addTurretToEditable), {
                 params ["_vehicle", "_turret"];
 
-                if (objectCurators _vehicle isNotEqualTo []) then {
-                    {_x addCuratorEditableObjects [_turret, false]} forEach (objectCurators _vehicle);
-                };
+                {_x addCuratorEditableObjects [_turret, false]} forEach (objectCurators _vehicle);
             }] call CBA_fnc_addEventHandler;
         };
     };
