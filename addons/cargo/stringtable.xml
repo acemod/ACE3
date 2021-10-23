@@ -66,7 +66,7 @@
             <Japanese>名前変更が可能なオブジェクトに対して、名前変更動作を有効化します。</Japanese>
             <French>Active la possibilité de donner un nom personnalisé aux objets transportables (si renommables).</French>
             <Russian>Включает переименование для объектов, допускающих переименование.</Russian>
-            <German>Aktiviert die umbenennung Aktion für neu bennenbare Objekte.</German>
+            <German>Aktiviert die Umbenennungs-Aktion für neu benennbare Objekte.</German>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
