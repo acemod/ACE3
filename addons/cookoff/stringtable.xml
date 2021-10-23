@@ -165,7 +165,7 @@
             <Japanese>誘爆火災を有効化</Japanese>
             <French>Véhicules - Feu durant l'auto-inflammation</French>
             <Russian>Включить возгорание поеприпасов</Russian>
-            <German>Aktiviert Fahrzeugfeuer während des Durchzündens</German>
+            <German>Aktiviert Fahrzeug Feuer während des Durchzündens</German>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
             <English>Whether or not vehicles will catch on fire during cook-off</English>
