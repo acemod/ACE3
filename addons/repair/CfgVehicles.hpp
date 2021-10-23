@@ -106,6 +106,7 @@ class CfgVehicles {
                 class values {
                     class None { name = "None"; value = 0;  default = 1;};
                     class ToolKit { name = "ToolKit"; value = 1; };
+                    class gm_repairkit_01 { name = "GM Repair Kit"; value = 1; };
                 };
             };
         };

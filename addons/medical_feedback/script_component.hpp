@@ -55,3 +55,7 @@
 #define ICON_BLOODVOLUME_COLOR_WHITE [1, 1, 1, 1]
 #define ICON_BLOODVOLUME_COLOR_ORANGE [1, 0.6, 0, 1]
 #define ICON_BLOODVOLUME_COLOR_RED [0.8, 0.2, 0, 1]
+
+#define ICON_TOURNIQUET_PATH QPATHTOF(data\tourniquet.paa)
+#define ICON_SPLINT_PATH QPATHTOF(data\splint.paa)
+#define ICON_FRACTURE_PATH QPATHTOF(data\fracture.paa)

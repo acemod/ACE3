@@ -13,7 +13,7 @@ class CfgWeapons {
     class R3F_Famas_F1_M203: R3F_Famas_F1 {
         muzzles[] = {"this","Lance_Grenades"};
     };
-    class R3F_Famas_surb: R3F_Famas_F1 { // R3F FAMAS Surbaissé, should be FAMAS Valorisé : http://narval34.free.fr/fiche_tech_famas.pdf
+    class R3F_Famas_surb: R3F_Famas_F1 { // R3F FAMAS Surbaissé, should be FAMAS Valorisé: http://narval34.free.fr/fiche_tech_famas.pdf
         ACE_RailHeightAboveBore = 5.08219;
         ACE_barrelTwist = 177.8; // 1:7" FAMAS Valorisé
         ACE_barrelLength = 450.0; // 3D model with Beretta barrel : FAMAS Valorisé

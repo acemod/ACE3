@@ -59,8 +59,8 @@ class CfgVehicles {
         editorSubcategory = "EdSubcat_InventoryItems";
         vehicleClass = "Items";
 
-        class TransportItems {
-            MACRO_ADDITEM(ACE_Flashlight_Maglite_ML300L,1);
+        class TransportWeapons {
+            MACRO_ADDWEAPON(ACE_Flashlight_Maglite_ML300L,1);
         };
     };
 
@@ -97,7 +97,9 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Flashlight_MX991,12);
             MACRO_ADDITEM(ACE_Flashlight_KSF1,12);
             MACRO_ADDITEM(ACE_Flashlight_XL50,12);
-            MACRO_ADDITEM(ACE_Flashlight_Maglite_ML300L,2);
+        };
+        class TransportWeapons {
+            MACRO_ADDWEAPON(ACE_Flashlight_Maglite_ML300L,2);
         };
     };
 };

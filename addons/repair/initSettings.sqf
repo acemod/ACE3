@@ -53,6 +53,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(locationsBoostTraining),
+    "CHECKBOX",
+    [ELSTRING(common,LocationsBoostTraining_DisplayName), LSTRING(LocationsBoostTraining_Description)],
+    [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],
+    false,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(fullRepairLocation), "LIST",
     [LSTRING(fullRepairLocation), LSTRING(fullRepairLocation_description)],
     [localize ELSTRING(OptionsMenu,CategoryLogistics), localize "str_state_repair"],

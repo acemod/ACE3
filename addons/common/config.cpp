@@ -72,4 +72,5 @@ class ACE_Extensions {};
 class ACE_Tests {
     vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
     mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
+    cfgPatches = QPATHTOF(dev\test_cfgPatches.sqf);
 };

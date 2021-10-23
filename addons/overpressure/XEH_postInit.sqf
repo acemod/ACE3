@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_1("settingsInit eh",GVAR(distanceCoefficient));
     if (GVAR(distanceCoefficient) <= 0) exitWith {};
 

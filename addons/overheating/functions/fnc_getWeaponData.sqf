@@ -65,8 +65,16 @@ if (isArray _property) then {
     };
 };
 
+// for cookoff
+private _modes = getArray (configFile >> "CfgWeapons" >> _weapon >> "modes");
+private _muzzle = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles") select 0;
+if (_muzzle == "this") then {
+    _muzzle = _weapon;
+};
+private _reloadTime = getNumber (configfile >> "CfgWeapons" >> _weapon >> (_modes select 0) >> "reloadTime");
+
 // Cache the values
-_weaponData = [_dispersion, _slowdownFactor, _jamChance];
+_weaponData = [_dispersion, _slowdownFactor, _jamChance, _modes, _muzzle, _reloadTime];
 TRACE_2("building cache",_weapon,_weaponData);
 GVAR(cacheWeaponData) setVariable [_weapon, _weaponData];
 
