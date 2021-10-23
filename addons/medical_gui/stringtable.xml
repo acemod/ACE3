@@ -1129,7 +1129,7 @@
             <Japanese>患者情報</Japanese>
             <Turkish>Hasta Bilgileri</Turkish>
             <Spanish>Información de paciente</Spanish>
-            <German>Patienten Information</German>
+            <German>Patienteninformation</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColors">
             <English>Blood Loss Colors</English>
