@@ -498,7 +498,7 @@
             <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
             <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
             <Russian>Определяет, какое действие будет предпринято, если игрок не имеет корректные PBO.</Russian>
-            <German>Definiert, was passieren soll, wenn ein Spieler nicht korrekte PBOs nutz.</German>
+            <German>Definiert, was passieren soll, wenn ein Spieler nicht korrekte PBOs nutzt.</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
