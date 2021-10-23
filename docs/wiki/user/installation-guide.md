@@ -20,12 +20,12 @@ This guide will explain how to get ACE3 up and running.
 
 ## 3. Manual Installation
 
-### 2. Prerequisites
+### 1. Prerequisites
 
 - Download [CBA](https://github.com/CBATeam/CBA_A3/releases/latest).
 - Download [ACE3]({{site.ace.githubUrl}}/releases/latest).
 
-### 3. Install ACE3
+### 2. Install ACE3
 
 - Extract both CBA and ACE3 .zip files into your Arma 3 folder. By default it is located in:
     - 32-Bit - `C:/Program Files/Steam/Steamapps/Common/Arma 3/`
