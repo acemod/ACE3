@@ -19,6 +19,10 @@
 params ["_unit", "_items"];
 TRACE_2("params",_unit,_items);
 
+if (_items isEqualTo [ANY_TOOLKIT_FAKECLASS]) exitWith {
+    GVAR(allToolKits) findIf {[_unit, _x] call EFUNC(common,hasItem)} != -1 // return
+};
+
 private _return = true;
 {
     if ((_x isEqualType []) && {({[_unit, _x] call EFUNC(common,hasItem)} count _x == 0)}) exitWith {
@@ -29,4 +33,4 @@ private _return = true;
     };
 } forEach _items;
 
-_return;
+_return
