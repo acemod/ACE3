@@ -59,7 +59,7 @@
             <Japanese>名前変更を有効化</Japanese>
             <French>Possibilité de renommage</French>
             <Russian>Включить возможность переименования</Russian>
-            <German>Aktiviere Umbenennungs Aktion</German>
+            <German>Aktiviere Umbenennungs-Aktion</German>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
