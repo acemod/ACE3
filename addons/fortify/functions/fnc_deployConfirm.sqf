@@ -33,10 +33,26 @@ deleteVehicle _object;
 // Create progress bar to place object
 private _totalTime = _cost * GVAR(timeCostCoefficient) + GVAR(timeMin); // time = Ax + b
 
+private _perframeCheck = {
+    params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp"];
+
+    // Animation loop (required for longer constructions)
+    if (animationState _unit isNotEqualTo "AinvPknlMstpSnonWnonDnon_medic4") then {
+        // Perform animation
+        [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);
+    };
+
+    // Return true always
+    true
+};
+
 [
     _totalTime,
     [_unit, _side, _typeOf, _posASL, _vectorDir, _vectorUp],
     QGVAR(deployFinished),
     QGVAR(deployCanceled),
-    LLSTRING(progressBarTitle)
+    LLSTRING(progressBarTitle),
+    _perframeCheck
 ] call EFUNC(common,progressBar);
+

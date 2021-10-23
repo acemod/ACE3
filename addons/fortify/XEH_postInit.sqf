@@ -80,4 +80,15 @@ GVAR(objectRotationZ) = 0;
         // Re-run if ctrl key held
         [_unit, _unit, [_side, _typeOf, [GVAR(objectRotationX), GVAR(objectRotationY), GVAR(objectRotationZ)]]] call FUNC(deployObject);
     };
+
+    // Reset animation
+    [_unit, "", 1] call EFUNC(common,doAnimation);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(deployCanceled), {
+    params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp"];
+
+    // Reset animation
+    [_unit, "", 1] call EFUNC(common,doAnimation);
 }] call CBA_fnc_addEventHandler;
