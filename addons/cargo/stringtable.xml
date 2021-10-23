@@ -52,7 +52,7 @@
             <Japanese>新しい名前:</Japanese>
             <French>Définir un nouveau nom :</French>
             <Russian>Задать новое название:</Russian>
-            <German>Neuen Namen setzten:</German>
+            <German>Neuen Namen setzen:</German>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
