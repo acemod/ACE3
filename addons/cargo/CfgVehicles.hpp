@@ -428,6 +428,12 @@ class CfgVehicles {
         GVAR(canLoad) = 1;
     };
 
+    // Flexible Fuel tanks, 300L
+    class FlexibleTank_base_F: ThingX {
+        ace_cargo_size = 3;
+        ace_cargo_canLoad = 1;
+    };
+
     // objects
     class RoadCone_F: ThingX {
         GVAR(size) = 1;

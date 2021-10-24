@@ -246,6 +246,12 @@ class CfgVehicles {
         GVAR(dragPosition)[] = {0,0.7,0};
     };
 
+    // Flexible Fuel tanks, 300L
+    class FlexibleTank_base_F: ThingX {
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition)[] = {0,1,0};
+    };
+
     // some terrain objects
 
     class Land_CampingTable_F: ThingX {
