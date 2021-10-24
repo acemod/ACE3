@@ -31,6 +31,7 @@ if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }
 if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1", _this); false};
 if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]", _this, local _unit); false};
 if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this); false};
+if (!GVAR(allowInvulnDamage) && {!(isDamageAllowed _unit)} && {!(_unit getVariable [QEGVAR(medical,allowDamage), true])}) exitWith {ERROR_1("addDamageToUnit - unit invulnerable %1", _this); false};
 
 // Extension is case sensitive and expects this format (different from ALL_BODY_PARTS)
 _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;
