@@ -27,7 +27,7 @@
             <Japanese>ユニットへ着火を許可</Japanese>
             <French>Définit si les unités peuvent prendre feu ou non.</French>
             <Russian>Включает возгорание</Russian>
-            <Polish>Zezwól jednostką na zapalenie się</Polish>
+            <Polish>Zezwól jednostkom na zapalenie się</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_setting_flareEnable">
             <English>Enable fire-flare at night</English>
