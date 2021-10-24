@@ -34,7 +34,7 @@
             <Japanese>夜間にフレア効果を有効化</Japanese>
             <French>Halo lumineux la nuit</French>
             <Russian>Включает сверкание пламени</Russian>
-            <Polish>Włącze efekt flary od ognia w nocy</Polish>
+            <Polish>Włącza efekt flary od ognia w nocy</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_setting_flareDescription">
             <English>Uses a flare effect to increase fire intensity at night</English>

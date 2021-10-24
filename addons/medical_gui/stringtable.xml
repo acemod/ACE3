@@ -1152,7 +1152,7 @@
             <Russian>Цвета урона</Russian>
             <Japanese>負傷カラー</Japanese>
             <French>Couleur des dégâts</French>
-            <Polish>Kolor obrażeń</Polish>
+            <Polish>Kolory obrażeń</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
             <English>Damage Colors, That Used in Medical GUI. 10 Color Gradient.</English>
