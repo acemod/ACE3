@@ -36,7 +36,7 @@ This guide will explain how to get ACE3 up and running.
 
 - Launch Arma 3 to start the official game launcher.
 - Click `Mods` and make sure the checkboxes next to `ace` and `CBA_A3` are ticked.
-<img src="{{ site.baseurl }}/img/wiki/user/installation1-launcher.jpg" width="869" height="665" alt="Arma 3 Vanilla Launcher" />
+<img src="{{ site.baseurl }}/img/wiki/user/installation1-launcher.webp" width="869" height="665" alt="Arma 3 Vanilla Launcher" />
 - Click `Play`
 
 ## 5. Install ACE3 Optional components
