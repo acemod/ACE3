@@ -573,4 +573,8 @@ class CfgVehicles {
         displayName = "M49A1 (10m)";
         model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_c_e";
     };
+    
+    class rhsusf_props_JerryCan_Base: Items_base_F {
+        EGVAR(cargo,size) = 1;
+    };    
 };
