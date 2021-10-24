@@ -89,8 +89,10 @@ if (_scaledTemperature > 0.1) then {
 // Only compute jamming for the local player
 if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
+private _ammoCount = _unit ammo _weapon;
+
 // Compute new temperature once every 3 bullets
-if ((_unit ammo _weapon) % 3 == 0) then {
+if (_ammoCount % 3 == 0) then {
     _this call FUNC(overheat);
 };
 
@@ -102,7 +104,8 @@ if (GVAR(cookoffCoef) > 0) then {
 
 // decrease time to next shot as heat increases, value is a coef where 1 is unchanged and 0 is instant, 0.8 is a 25% faster ROF.
 // this could be filtered by weapon type, but I think the heat gain and rate of fire on non-automatic weapons is low enough not to bother
-if (GVAR(overheatingRateOfFire)) then {
+// do not set when empty to prevent animation glitches
+if (GVAR(overheatingRateOfFire) && {_ammoCount > 0}) then {
     _unit setWeaponReloadingTime [_unit, _muzzle, linearConversion [0, 0.5, _scaledTemperature, 1, 0.909, true]];
 };
 
