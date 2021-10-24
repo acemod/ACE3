@@ -1476,30 +1476,35 @@
             <Japanese>両方</Japanese>
             <French>Les deux</French>
             <Russian>Оба</Russian>
+            <Polish>Oba</Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
             <Japanese>プログレス バー詳細情報</Japanese>
             <French>Infos supplémentaires de la barre de progression</French>
             <Russian>Дополнительная информация прогресс-бара</Russian>
+            <Polish>Dodatkowe informacje na pasku postępu </Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
             <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
             <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
             <Russian>Устанавливает дополнительную информацию в прогресс-баре.</Russian>
+            <Polish>Kontroluje dodatkowe informacje na pasku postępu.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
             <Japanese>パーセンテージ</Japanese>
             <French>Pourcentage</French>
             <Russian>Процент выполнения</Russian>
+            <Polish>Procent</Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
             <Japanese>残り時間</Japanese>
             <French>Temps restant</French>
             <Russian>Времени осталось</Russian>
+            <Polish>Pozostały czas</Polish>
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
@@ -1538,6 +1543,7 @@
             <Japanese>残り時間: %1 秒</Japanese>
             <French>Temps restant : %1 s</French>
             <Russian>Оставшееся время: %1s</Russian>
+            <Polish>Pozostały czas: %1s</Polish>
         </Key>
         <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>

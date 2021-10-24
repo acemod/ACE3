@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
             <Japanese>ACE キルトラッカー</Japanese>
+            <Polish>ACE Licznik Zabójstw</Polish>
         </Key>
         <Key ID="STR_ACE_KillTracker_TotalKills">
             <English>Total Kills:</English>
