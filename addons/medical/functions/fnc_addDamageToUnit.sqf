@@ -9,8 +9,8 @@
  * 2: Body part ("Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg") <STRING>
  * 3: Projectile Type <STRING>
  * 4: Source <OBJECT>
- * 5: Non-directional damage source array (Optional) <ARRAY>
- * 6: Override Invulnerability (Optional, Default: true) <BOOLEAN>
+ * 5: Non-directional damage source array <ARRAY> (default: [])
+ * 6: Override Invulnerability <BOOLEAN> (default: true)
  *
  * Return Value:
  * Successful <BOOL>
