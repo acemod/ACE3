@@ -285,7 +285,7 @@
             <Japanese>カーゴ欄で使われるカスタム名を設定します。</Japanese>
             <French>Définit un nom de fret personnalisé qui sera visible dans le menu de cargaison.</French>
             <Russian>Установить пользовательское имя груза, используемое в интерфейсе погрузки.</Russian>
-            <Polish>Ustaw własną nazwę ładunku, używaną w menu ładunku. </Polish>
+            <Polish>Ustaw własną nazwę ładunku, używaną w menu ładunku.</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
