@@ -4,5 +4,11 @@
         <Key ID="STR_ACE_HunterKiller_displayName">
             <English>Hunter Killer</English>
         </Key>
+        <Key ID="STR_ACE_HunterKiller_commanderOverride">
+            <English>Commander Override</English>
+        </Key>
+        <Key ID="STR_ACE_HunterKiller_commanderOverride_description">
+            <English>From command turret, slews gunner turret onto your target</English>
+        </Key>
     </Package>
 </Project>
