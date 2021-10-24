@@ -47,10 +47,6 @@ Fatal damage is now controlled by either "Large hits to vital organs", "Sum of t
 
 Two sliders that dictate how much damage players and ai can take before going unconscious or dying if Sum of Trauma is enabled. Set to higher values to make units stronger, lower to make them weaker.
 
-##### 1.1.1.6 Allow Damage to Invulnerable Units
-
-Checkbox that enables scripts to apply ACE medical damage types to units which are invulnerable via calling the "ace_medical_fnc_addDamageToUnit" function. Units need to be made invulnerable via both the "allowDamage" command and "ace_medical_allowDamage" variable on the unit in order to prevent script-induced damage.
-
 #### 1.1.2 AI
 
 ##### 1.1.2.1 Medic AI

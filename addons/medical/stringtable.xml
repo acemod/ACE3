@@ -76,12 +76,6 @@
             <Russian>Увеличивает частоту проверок на спонтанное пробуждение, когда пациент под действием адреналина.</Russian>
             <Turkish>Hastanın sisteminde Epinefrin olduğunda rasgele uyanma kontrollerinin ne sıklıkla gerçekleştiğini artırır.</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_allowInvulnDamage_DisplayName">
-            <English>Allow Damage to Invulnerable Units</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_allowInvulnDamage_Description">
-            <English>Allows scripts to damage to invulnerable units</English>
-        </Key>
         <Key ID="STR_ACE_Medical_Limping_DisplayName">
             <English>Limping</English>
             <Russian>Хромота</Russian>

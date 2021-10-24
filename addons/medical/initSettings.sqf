@@ -46,11 +46,3 @@
     [1, 30, 1, 1],
     true
 ] call CBA_fnc_addSetting;
-
-[
-    QGVAR(allowInvulnDamage),
-    "CHECKBOX",
-    [LSTRING(allowInvulnDamage_DisplayName), LSTRING(allowInvulnDamage_Description)],
-    LSTRING(Category),
-    true
-] call CBA_fnc_addSetting;

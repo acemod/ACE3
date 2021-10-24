@@ -10,6 +10,7 @@
  * 3: Projectile Type <STRING>
  * 4: Source <OBJECT>
  * 5: Non-directional damage source array (Optional) <ARRAY>
+ * 6: Override Invulnerability (Optional, Default: true) <BOOLEAN>
  *
  * Return Value:
  * Successful <BOOL>
@@ -22,7 +23,7 @@
  */
 // #define DEBUG_TESTRESULTS
 
-params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_bodyPart", "", [""]], ["_typeOfDamage", "", [""]], ["_instigator", objNull, [objNull]], ["_damageSelectionArray", [], [[]]]];
+params [["_unit", objNull, [objNull]], ["_damageToAdd", -1, [0]], ["_bodyPart", "", [""]], ["_typeOfDamage", "", [""]], ["_instigator", objNull, [objNull]], ["_damageSelectionArray", [], [[]]], ["_overrideInvuln", true]];
 TRACE_6("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray);
 
 _bodyPart = toLower _bodyPart;
@@ -31,7 +32,7 @@ if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }
 if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1", _this); false};
 if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]", _this, local _unit); false};
 if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this); false};
-if (!GVAR(allowInvulnDamage) && {!(isDamageAllowed _unit)} && {!(_unit getVariable [QEGVAR(medical,allowDamage), true])}) exitWith {ERROR_1("addDamageToUnit - unit invulnerable %1", _this); false};
+if (!_overrideInvuln && {!(isDamageAllowed _unit)} && {!(_unit getVariable [QEGVAR(medical,allowDamage), true])}) exitWith {ERROR_1("addDamageToUnit - unit invulnerable %1", _this); false};
 
 // Extension is case sensitive and expects this format (different from ALL_BODY_PARTS)
 _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;
