@@ -23,7 +23,7 @@ _args params ["_player", "_playerTurret", "_vehicle", "_masterTurret", "_puppetT
 private _puppetLookAt = _vehicle getVariable [QGVAR(puppetLookAt), []];
 if ((_puppetLookAt isEqualTo []) && {_lookDirLast isNotEqualTo []}) then {
     _lookDirLast = [];
-    _args set [5, _puppetLookAt];
+    _args set [5, _lookDirLast];
     QGVAR(text) cutText ["", "PLAIN"];
 };
 
