@@ -248,6 +248,9 @@ class CfgVehicles {
 
     // Flexible Fuel tanks, 300L
     class FlexibleTank_base_F: ThingX {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition)[] = {0,0.65,0};
+
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,1,0};
     };
