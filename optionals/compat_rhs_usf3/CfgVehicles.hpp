@@ -577,5 +577,5 @@ class CfgVehicles {
     class rhsusf_props_JerryCan_Base: Items_base_F {
         EGVAR(cargo,canLoad) = 1;
         EGVAR(cargo,size) = 1;
-    };    
+    };
 };
