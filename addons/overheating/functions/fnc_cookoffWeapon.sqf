@@ -10,7 +10,7 @@
  * 3: Type of Jam <STRING>
  *
  * Return Value:
- * Current ammunition temperature <NUMBER>
+ * None
  *
  * Example:
  * [player, currentWeapon player, true, "Fire"] call ace_overheating_fnc_cookoffWeapon
