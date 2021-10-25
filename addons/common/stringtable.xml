@@ -1488,7 +1488,7 @@
             <Japanese>プログレス バー詳細情報</Japanese>
             <French>Infos supplémentaires de la barre de progression</French>
             <Russian>Дополнительная информация прогресс-бара</Russian>
-            <German>Informationen des zusätzlicher fortschrittsbalken</German>
+            <German>Informationen des zusätzlichen Fortschrittsbalkens</German>
             <Polish>Dodatkowe informacje na pasku postępu </Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
@@ -1496,7 +1496,7 @@
             <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
             <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
             <Russian>Устанавливает дополнительную информацию в прогресс-баре.</Russian>
-            <German>Kontrolliert zusätzliche Informationen des fortschrittsbalken</German>
+            <German>Kontrolliert zusätzliche Informationen des Fortschrittsbalkens</German>
             <Polish>Kontroluje dodatkowe informacje na pasku postępu.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
