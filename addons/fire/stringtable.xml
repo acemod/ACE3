@@ -38,7 +38,7 @@
             <Russian>Включает ореол пламени для большей интенсивности ночью</Russian>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
-            <English>Enable droping of weapons when on fire</English>
+            <English>Drop Weapons When on Fire</English>
             <Polish>Włącz wyrzucanie broni podczas płonięcia</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
