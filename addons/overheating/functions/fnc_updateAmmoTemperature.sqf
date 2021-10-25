@@ -32,12 +32,13 @@ if (
     // open bolt, and not jammed, or jammed and type not failure to fire
     || {_closedBolt == 0 && {!_canUnjam || {_canUnjam && {!(_jamType in ["Fire","Dud"])}}}}
 ) exitWith {
-    _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];
-    0
+    private _ambientTemperature = ambientTemperature select 0;
+    _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], _ambientTemperature];
+    _ambientTemperature
 };
 
 private _ammoTempVarName = format [QGVAR(%1_ammoTemp), _weapon];
-private _ammoTemperature = _unit getVariable [_ammoTempVarName, 0];
+private _ammoTemperature = _unit getVariable [_ammoTempVarName, ambientTemperature select 0];
 
 // heat or cool the ammo
 if (_ammoTemperature < _barrelTemperature) then {
@@ -52,8 +53,8 @@ if (_ammoTemperature < _barrelTemperature) then {
 if (_ammoTemperature > (GUNPOWDER_IGNITION_TEMP * GVAR(cookoffCoef))) then {
     [_unit, _weapon, _canUnjam, _jamType] call ace_overheating_fnc_cookoffWeapon;
 
-    // since a cookoff happened then the next round should start at 0
-    _ammoTemperature = 0;
+    // since a cookoff happened then the next round should start at the ambient temperature.
+    _ammoTemperature = ambientTemperature select 0;
 };
 
 _unit setVariable [_ammoTempVarName, _ammoTemperature];
