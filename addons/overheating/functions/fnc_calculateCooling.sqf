@@ -54,7 +54,7 @@ while {true} do {
         _convectionRate * _barrelSurface * _temperature
         // Radiative cooling
         + 0.4 * 5.67e-8 * _barrelSurface * ((_temperature + 273.15) ^ 4 - 273.15 ^ 4)
-    ) * _deltaTime / (_barrelMass * 466);
+    ) * GVAR(coolingCoef) * _deltaTime / (_barrelMass * 466);
 
     if (_temperature <= _ambientTemperature) exitWith {_ambientTemperature};
 
