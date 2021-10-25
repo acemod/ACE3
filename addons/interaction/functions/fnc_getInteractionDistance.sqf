@@ -26,7 +26,7 @@ if (!((_target isKindOf "Car") || {_target isKindOf "Tank"} || {_target isKindOf
 
 private _unitEyeASL = eyePos _unit;
 private _targetModelPos = [_target, _unitEyeASL] call FUNC(getVehiclePosComplex);
-private _distance = _unitEyeASL distance (AGLtoASL (_target modelToWorld _targetModelPos));
+private _distance = _unitEyeASL distance (_target modelToWorldWorld _targetModelPos);
 
 TRACE_2("",_targetModelPos,_distance);
 

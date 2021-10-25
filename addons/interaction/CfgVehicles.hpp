@@ -303,6 +303,13 @@ class CfgVehicles {
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
+                class ACE_RenameGroup {
+                    displayName = CSTRING(RenameGroup);
+                    condition = QUOTE(_player call FUNC(canRenameGroup));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    statement = QUOTE(_player call FUNC(renameGroupUI));
+                    showDisabled =1;
+                };
             };
 
             class ACE_Equipment {
@@ -358,7 +365,7 @@ class CfgVehicles {
         };
     };
 
-    class Car_F: Car{};
+    class Car_F: Car {};
     class Quadbike_01_base_F: Car_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {

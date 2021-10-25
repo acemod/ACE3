@@ -103,15 +103,23 @@
 {% endif %}
 
 {% if include.component == "fastroping" %}
-`ace_interaction`
+`ace_interaction`, `ace_logistics_rope`
 {% endif %}
 
 {% if include.component == "fcs" %}
 `ace_interaction`
 {% endif %}
 
+{% if include.component == "field_rations" %}
+`ace_interact_menu`
+{% endif %}
+
 {% if include.component == "finger" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "fire" %}
+`ace_common`, `ace_medical_engine`
 {% endif %}
 
 {% if include.component == "flashlights" %}
@@ -124,6 +132,10 @@
 
 {% if include.component == "fonts" %}
 `ace_main`
+{% endif %}
+
+{% if include.component == "fortify" %}
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "frag" %}
@@ -150,6 +162,10 @@
 `ace_interaction`, `ace_movement`
 {% endif %}
 
+{% if include.component == "headless" %}
+`ace_common`
+{% endif %}
+
 {% if include.component == "hearing" %}
 `ace_interaction`
 {% endif %}
@@ -168,6 +184,10 @@
 
 {% if include.component == "huntir" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "intelitems" %}
+`ace_interact_menu`, `ace_zeus`
 {% endif %}
 
 {% if include.component == "interact_menu" %}
@@ -190,11 +210,19 @@
 `ACE_common`, `ACE_weather`
 {% endif %}
 
+{% if include.component == "killtracker" %}
+`ace_medical`
+{% endif %}
+
 {% if include.component == "laser" %}
 `ace_common`
 {% endif %}
 
 {% if include.component == "laserpointer" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "logistics_rope" %}
 `ace_common`
 {% endif %}
 
@@ -414,6 +442,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "sitting" %}
+`ace_interaction`
+{% endif %}
+
 {% if include.component == "slideshow" %}
 `ace_common`
 {% endif %}
@@ -446,6 +478,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "towing" %}
+`ace_common`, `ace_logistics_rope`
+{% endif %}
+
 {% if include.component == "trenches" %}
 `ace_interaction`
 {% endif %}
@@ -462,6 +498,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "vehicle_damage" %}
+`ace_common`, `ace_cookoff`
+{% endif %}
+
 {% if include.component == "vehiclelock" %}
 `ace_interaction`
 {% endif %}
@@ -471,6 +511,14 @@
 {% endif %}
 
 {% if include.component == "viewdistance" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "viewrestriction" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "volume" %}
 `ace_common`
 {% endif %}
 
@@ -492,6 +540,10 @@
 
 {% if include.component == "zeus" %}
 `ace_common`, `ace_ai`
+{% endif %}
+
+{% if include.component == "compat_gm" %}
+`ace_csw`, `ace_explosives`, `ace_rearm`, `ace_refuel`, `ace_repair`, `gm_core`
 {% endif %}
 
 {% if include.component == "compat_r3f" %}

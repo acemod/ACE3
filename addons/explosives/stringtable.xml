@@ -1088,6 +1088,7 @@
             <French>Durée minimale</French>
             <Japanese>最短時間</Japanese>
             <Spanish>Tiempo mínimo</Spanish>
+            <Polish>Minimalny czas</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
             <English>Maximum Time</English>
@@ -1095,6 +1096,7 @@
             <French>Durée maximale</French>
             <Japanese>最長時間</Japanese>
             <Spanish>Tiempo máximo</Spanish>
+            <Polish>Maksymalny czas</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
             <English>Default Time</English>
@@ -1102,6 +1104,7 @@
             <French>Durée par défaut</French>
             <Japanese>標準時間</Japanese>
             <Spanish>Tiempo por defecto</Spanish>
+            <Polish>Domyślny czas</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
@@ -1109,6 +1112,7 @@
             <French>Définit la durée minimale paramétrable sur le minuteur.</French>
             <Japanese>起爆タイマーの最低時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
@@ -1116,6 +1120,7 @@
             <French>Définit la durée maximale paramétrable sur le minuteur.</French>
             <Japanese>起爆タイマーの最長時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
@@ -1123,6 +1128,7 @@
             <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
             <Japanese>起爆タイマーの標準時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
+            <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
         </Key>
     </Package>
 </Project>

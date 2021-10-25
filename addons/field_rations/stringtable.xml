@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Field_Rations">
+        <Key ID="STR_ACE_Field_Rations_DisplayName">
+            <English>ACE Field Rations</English>
+            <Chinese>ACE 戰地口糧</Chinese>
+            <Chinesesimp>ACE 干粮</Chinesesimp>
+            <Czech>ACE Poměrové pole</Czech>
+            <French>ACE Rations sur le terrain</French>
+            <German>ACE Feld Rationen</German>
+            <Hungarian>ACE Terepi adagok</Hungarian>
+            <Italian>ACE Razioni di campo</Italian>
+            <Japanese>ACE フィールド レーション</Japanese>
+            <Korean>ACE 필드 식량</Korean>
+            <Polish>ACE Racje polowe</Polish>
+            <Portuguese>ACE Rações de campo</Portuguese>
+            <Russian>ACE Полевые рационы</Russian>
+            <Spanish>ACE Raciones de campo</Spanish>
+            <Turkish>ACE Gıda Ihtiyaçları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_IGUI_DisplayName">
+            <English>ACE Field Rations HUD</English>
+            <German>ACE Feldrationen HUD</German>
+            <Chinese>ACE 戰地口糧界面</Chinese>
+            <Japanese>ACE フィールド レーション HUD</Japanese>
+            <Polish>ACE HUD Racji Polowych</Polish>
+            <Russian>Индикаторы жажды и голода</Russian>
+            <Turkish>ACE Gıda Göstergesi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_IGUI_Description">
+            <English>Indicates current hunger and thirst status.</English>
+            <Chinese>顯示目前的飲食需求程度。</Chinese>
+            <Chinesesimp>指示当前的饥饿和渴望状态。</Chinesesimp>
+            <Czech>Označuje aktuální stav hladovění a žízní.</Czech>
+            <French>Indique l'état actuel de la faim et de la soif.</French>
+            <German>Zeigt den aktuellen Hunger- und Durststatus an.</German>
+            <Hungarian>Jelzi az éhínség és a szomjúság állapotát.</Hungarian>
+            <Italian>Indica lo stato attuale di fame e sete.</Italian>
+            <Japanese>現在の空腹感と渇きの状態を示します。</Japanese>
+            <Korean>현재의 굶주림과 갈증 상태를 나타냅니다.</Korean>
+            <Polish>Wskazuje bieżący status głodu i pragnienia.</Polish>
+            <Portuguese>Indica o status atual de fome e sede.</Portuguese>
+            <Russian>Указывают на текущий статус жажды и голода.</Russian>
+            <Spanish>Indica el estado actual de hambre y sed.</Spanish>
+            <Turkish>Mevcut açlık ve susuzluk durumunu gösterir.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MainInteractionText">
+            <English>Survival</English>
+            <Chinese>生存</Chinese>
+            <Chinesesimp>生存</Chinesesimp>
+            <Czech>Přežití</Czech>
+            <French>Survie</French>
+            <German>Überleben</German>
+            <Hungarian>Túlélés</Hungarian>
+            <Italian>Sopravvivenza</Italian>
+            <Japanese>サバイバル</Japanese>
+            <Korean>활착</Korean>
+            <Polish>Przetrwanie</Polish>
+            <Portuguese>Sobrevivência</Portuguese>
+            <Russian>Выживание</Russian>
+            <Spanish>Supervivencia</Spanish>
+            <Turkish>Hayatta kalma</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_EatDrink">
+            <English>Eat/Drink</English>
+            <German>Essen/Trinken</German>
+            <Polish>Jeść/Pić</Polish>
+            <Russian>Есть/Пить</Russian>
+            <Turkish>Yeme / Içme</Turkish>
+            <Japanese>食べる/飲む</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Enabled_Description">
+            <English>Enable/Disable Field Rations</English>
+            <Chinese>啟用/禁用戰地口糧。</Chinese>
+            <Chinesesimp>启用/禁用字段口粮</Chinesesimp>
+            <Czech>Povolit / zakázat příděly v polích</Czech>
+            <French>Activer / désactiver les rations de champ</French>
+            <German>Feldrationen aktivieren / deaktivieren</German>
+            <Hungarian>Terepi adagok engedélyezése / letiltása</Hungarian>
+            <Italian>Abilita / disabilita le razioni di campo</Italian>
+            <Japanese>フィールド レーションを有効/無効化します</Japanese>
+            <Korean>필드 배급량 활성화 / 비활성화</Korean>
+            <Polish>Włącz / wyłącz racje polowe</Polish>
+            <Portuguese>Ativar / Desativar rações de campo</Portuguese>
+            <Russian>Включение/отключение жажды и голода</Russian>
+            <Spanish>Habilitar / deshabilitar las raciones de campo</Spanish>
+            <Turkish>Gıda Ihtiyaçlarını Etkinleştir/Devre Dışı Bırak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_TimeWithoutWater_DisplayName">
+            <English>Time Without Water</English>
+            <Chinese>水份需時</Chinese>
+            <Chinesesimp>没有水的时候</Chinesesimp>
+            <Czech>Czas bez wody</Czech>
+            <French>Temps sans eau</French>
+            <German>Zeit ohne Wasser</German>
+            <Hungarian>Víz nélküli idő</Hungarian>
+            <Italian>Tempo senza acqua</Italian>
+            <Japanese>水なしの時間</Japanese>
+            <Korean>물없는 시간</Korean>
+            <Polish>Czas bez wody</Polish>
+            <Portuguese>Tempo sem água</Portuguese>
+            <Russian>Время без воды</Russian>
+            <Spanish>Tiempo sin agua</Spanish>
+            <Turkish>Susuz Kalma Süresi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_TimeWithoutWater_Description">
+            <English>How long should a person be able to go without water (hours).</English>
+            <Chinese>一個單位脫水之前能支撐多久（單位為小時）。</Chinese>
+            <Chinesesimp>一个单位能够没有水的时间多少（小时）</Chinesesimp>
+            <Czech>Jak dlouho by měla jednotka jít bez vody (hodiny)</Czech>
+            <French>Combien de temps une unité devrait-elle pouvoir se passer d'eau (heures)?</French>
+            <German>Wie lange sollte eine Einheit ohne Wasser auskommen (Stunden)?</German>
+            <Hungarian>Mennyi ideig kell egy egység víz nélkül (óra)</Hungarian>
+            <Italian>Mennyi ideig kell egy egység víz nélkül (óra)</Italian>
+            <Japanese>ユニットが水なしでどれくらい時間を過ごすことができるか (一時間単位)</Japanese>
+            <Korean>한 유닛이 물없이 얼마나 오래 갈 수 있어야 하는가? (시간)</Korean>
+            <Polish>Jak długo jednostka powinna przetrwać bez wody (godziny)</Polish>
+            <Portuguese>Quanto tempo uma unidade pode passar sem água (horas)</Portuguese>
+            <Russian>Как долго персонаж может обходиться без воды (часы)</Russian>
+            <Spanish>¿Cuánto tiempo debería una unidad ir sin agua (horas)?</Spanish>
+            <Turkish>Bir kişi susuz ne kadar süre dayanabilir (saat).</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_TimeWithoutFood_DisplayName">
+            <English>Time Without Food</English>
+            <Chinese>飢餓需時</Chinese>
+            <Chinesesimp>没有食物的时间</Chinesesimp>
+            <Czech>Čas bez jídla</Czech>
+            <French>Temps sans nourriture</French>
+            <German>Zeit ohne Essen</German>
+            <Hungarian>Élelmiszer nélkül</Hungarian>
+            <Italian>Tempo senza cibo</Italian>
+            <Japanese>食べ物なしの時間</Japanese>
+            <Korean>음식없는 시간</Korean>
+            <Polish>Czas bez jedzenia</Polish>
+            <Portuguese>Tempo sem comida</Portuguese>
+            <Russian>Время без еды</Russian>
+            <Spanish>Tiempo sin comida</Spanish>
+            <Turkish>Aç Kalma Süresi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_TimeWithoutFood_Description">
+            <English>How long should a person be able to go without food (hours).</English>
+            <Chinese>一個單位挨餓之前能支撐多久（單位為小時）。</Chinese>
+            <Chinesesimp>一个单位能够没有食物的时间多少（小时）</Chinesesimp>
+            <Czech>Jak dlouho by měla jednotka jít bez jídla (hodiny)</Czech>
+            <French>Combien de temps une unité doit-elle pouvoir se passer de nourriture (heures)?</French>
+            <German>Wie lange sollte eine Einheit ohne Essen gehen können (Stunden)?</German>
+            <Hungarian>Mennyi ideig kell egy egység élni nélkül (óra)</Hungarian>
+            <Italian>Per quanto tempo un'unità dovrebbe essere in grado di andare senza cibo (ore)</Italian>
+            <Japanese>ユニットが食糧なしでどれくらい時間を過ごすことができるか (一時間単位)</Japanese>
+            <Korean>한 음식물이 음식 없이도 갈 수있는 시간 (시간)</Korean>
+            <Polish>Jak długo jednostka powinna przetrwać bez jedzenia (godziny)</Polish>
+            <Portuguese>Quanto tempo uma unidade pode ir sem alimentos (horas)</Portuguese>
+            <Russian>Как долго персонаж может обходиться без пищи (часы)</Russian>
+            <Spanish>¿Cuánto tiempo debería una unidad ir sin comida (horas)?</Spanish>
+            <Turkish>Bir kişi aç ne kadar süre dayanabilir (saat).</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_ThirstQuenched_DisplayName">
+            <English>Thirst Quenched</English>
+            <German>Durst gestillt</German>
+            <Chinese>止渴程度</Chinese>
+            <Japanese>乾きの満たし</Japanese>
+            <Russian>Утоление жажды</Russian>
+            <Polish>Pragnienie zaspokojone</Polish>
+            <Turkish>Susuzluk Giderme Katsayısı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_ThirstQuenched_Description">
+            <English>Coefficient for the amount of thirst quenched from drinking.</English>
+            <German>Koeffizient für die Menge des Dursts, der durch Trinken gestillt wird.</German>
+            <Chinese>從飲用中能夠攝取多少水份。</Chinese>
+            <Japanese>飲むことによって得られる乾きの満たし量の係数を設定します</Japanese>
+            <Russian>Коэффициент утоления жажды от питья</Russian>
+            <Polish>Współczynnik ilości zaspokojnego pragnienia od picia</Polish>
+            <Turkish>Bir şey içince, susuzluğunun ne kadar giderileceğini belirler.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_HungerSatiated_DisplayName">
+            <English>Hunger Satiated</English>
+            <German>Hunger gesättigt</German>
+            <Chinese>飽足感</Chinese>
+            <Japanese>満腹感</Japanese>
+            <Russian>Утоление голода</Russian>
+            <Polish>Głód Zaspokojony</Polish>
+            <Turkish>Açlık Giderme Katsayısı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_HungerSatiated_Description">
+            <English>Coefficient for the amount of hunger satiated from eating.</English>
+            <German>Koeffizient für die Menge des Hungers, der durch essen gesättigt wird.</German>
+            <Chinese>從飲食中獲取多少飽食感。</Chinese>
+            <Japanese>食べることによって得られる満腹感の量の係数を設定します</Japanese>
+            <Russian>Коэффициент утоления голода от принятия пищи</Russian>
+            <Polish>Współczynnik ilosci zaspokojnego głodu od jedzenia</Polish>
+            <Turkish>Bir şey yiyince, açlığın ne kadar giderileceğini belirler.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterSourceActions_DisplayName">
+            <English>Water Source Actions</English>
+            <Russian>Действия с источником воды</Russian>
+            <Polish>Akcje przy źrodle wody</Polish>
+            <Turkish>Su Içme Animasyonu</Turkish>
+            <Japanese>水源動作</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterSourceActions_Description">
+            <English>Controls what actions are available on water sources.</English>
+            <Russian>Определяет какие действия будут доступны с источником воды.</Russian>
+            <Polish>Kontroluje jakie akcje są dostępne przy źrodle wody.</Polish>
+            <Turkish>Su içerken hangi animasyonu yapacağını belirler</Turkish>
+            <Japanese>水源で可能な動作を設定します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_RefillOnly">
+            <English>Refill Only</English>
+            <Russian>Только пополнить</Russian>
+            <Polish>Tylko napełnij</Polish>
+            <Turkish>Sadece içeceği iç</Turkish>
+            <Japanese>汲むだけ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_DisplayName">
+            <English>Terrain Object Actions</English>
+            <Russian>Действия с объектами ландшафта</Russian>
+            <Polish>Akcje Objektu terenu</Polish>
+            <Turkish>Varsayılan Nesne Animasyonu</Turkish>
+            <Japanese>マップ オブジェクト動作</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_Description">
+            <English>Enables water source actions for terrain objects.</English>
+            <Russian>Включает действия с источниками воды для объектов ландшафта.</Russian>
+            <Polish>Umożliwia akcje przy źrodle wody na obiektach terenu.</Polish>
+            <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
+            <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
+            <English>Affect Advanced Fatigue</English>
+            <German>Beeinflusst die erweiterte Ausdauer</German>
+            <Chinese>與進階疲勞聯動</Chinese>
+            <Japanese>アドバンスド ファティーグへの影響</Japanese>
+            <Russian>Влияние на продвинутую усталость</Russian>
+            <Polish>Wpływ na zaawansowane zmęczenie</Polish>
+            <Turkish>Gelişmiş Yorgunluk</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_Description">
+            <English>Controls if thirst and hunger should affect ACE Advanced Fatigue.</English>
+            <German>Bestimmt, ob Durst und Hunger ACE Erweiterte Ausdauer beeinflussen sollen.</German>
+            <Chinese>是否讓飲食影響到ACE的進階疲勞。</Chinese>
+            <Japanese>喉の渇きと空腹感が ACE アドバンスド ファティーグへ与える影響を決定します</Japanese>
+            <Russian>Определяет, будет ли жажда и голод влиять на продвинутую усталость ACE.</Russian>
+            <Polish>Kontroluje czy pragnienie i głód mają wpływ na zaawansowane zmęczenie ACE.</Polish>
+            <Turkish>Acıkınca veya susayınca kişinin yorulup yorulmayacağını belirler.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_HudType_DisplayName">
+            <English>HUD Type</English>
+            <German>HUD Typ</German>
+            <Chinese>界面類型</Chinese>
+            <Japanese>HUD タイプ</Japanese>
+            <Polish>Typ HUD</Polish>
+            <Russian>Тип индикаторов</Russian>
+            <Turkish>HUD Tipi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_HudType_Description">
+            <English>Selects which HUD style will be used.</English>
+            <German>Wählt, welcher HUD Stil benutzt wird.</German>
+            <Chinese>選擇妳想使用的界面類型。</Chinese>
+            <Japanese>使用する HUD のタイプを選択できます</Japanese>
+            <Polish>Wybierz który styl HUD będzie używany</Polish>
+            <Russian>Выберите какой стиль индикаторов будет использован.</Russian>
+            <Turkish>Hangi HUD sitilini kullanılacağını seçer.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_ColoredIcons">
+            <English>Colored Icons</English>
+            <German>Farbige Icons</German>
+            <Chinese>顏色化圖示</Chinese>
+            <Japanese>色付きアイコン</Japanese>
+            <Polish>Kolorowe ikony</Polish>
+            <Russian>Цветные иконки</Russian>
+            <Turkish>Renkli Ikonlar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_DrainingIcons">
+            <English>Draining Icons</English>
+            <German>Farblose Icons</German>
+            <Chinese>增減化圖示</Chinese>
+            <Japanese>ドレイン アイコン</Japanese>
+            <Polish>Ubywające ikony</Polish>
+            <Russian>Исчезающие иконки</Russian>
+            <Turkish>Içi Boşalan Ikonlar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_HudShowLevel_DisplayName">
+            <English>HUD Show Level</English>
+            <German>HUD zeigen Level</German>
+            <Chinese>界面顯示程度</Chinese>
+            <Japanese>HUD 表示レベル</Japanese>
+            <Polish>Widok HUD</Polish>
+            <Russian>Уровень для отображения иконок</Russian>
+            <Turkish>HUD Gösterilme Seviyesi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_HudShowLevel_Description">
+            <English>Automatically show the HUD when either thirst or hunger are above this level.</English>
+            <German>Zeigt automatisch das HUD an, sobald Durst oder Hunger über diesem Level sind.</German>
+            <Chinese>在飲食低於多少程度時顯示界面。</Chinese>
+            <Japanese>この値以上に空腹感か乾きを感じると自動的に HUD を表示します</Japanese>
+            <Polish>Automatycznie pokaż HUD kiedy pragnienie albo głód przekroczy ten poziom</Polish>
+            <Russian>Автоматически отображает иконки при достижении определенных уровней голода и жажды.</Russian>
+            <Turkish>Susuzluk veya açlık belli bir seviyenin altına inince otomatik olarak HUD u göster.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Always">
+            <English>Always</English>
+            <Chinese>總是</Chinese>
+            <Chinesesimp>总是</Chinesesimp>
+            <Czech>Vždy</Czech>
+            <French>Toujours</French>
+            <German>Immer</German>
+            <Hungarian>Mindig</Hungarian>
+            <Italian>Sempre</Italian>
+            <Japanese>常に</Japanese>
+            <Korean>항상</Korean>
+            <Polish>Zawsze</Polish>
+            <Portuguese>Sempre</Portuguese>
+            <Russian>Всегда</Russian>
+            <Spanish>Siempre</Spanish>
+            <Turkish>Her Zaman</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_HudTransparency_DisplayName">
+            <English>Colored Icons - Transparency</English>
+            <German>Farbige Icons - Transparenz</German>
+            <Chinese>顏色化圖示 - 透明度</Chinese>
+            <Japanese>色付きアイコン - 透明度</Japanese>
+            <Polish>Kolorowe ikony - transparentność</Polish>
+            <Russian>Прозрачность цветных иконок</Russian>
+            <Turkish>Renkli Ikonlar -  Şeffaflaşan</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_HudTransparency_Description">
+            <English>Controls the transparency of the Colored Icons HUD. Dynamic setting makes the HUD less transparent as thirst or hunger increase.</English>
+            <German>Bestimmt die Tranzparenz der farbigen HUD Icons. Die Dynamische Einstellung macht das HUD weniger transparent, wenn Hunger oder Durst steigen.</German>
+            <Chinese>控制顏色化圖示的透明度。設定為動態使其界面透明度與飲食需求一樣，越透明越需要。</Chinese>
+            <Polish>Kontroluje transparentność kolorowych ikon HUD. Dynamiczne ustawienie zmniejsza przejrzystość wraz z zwiększeniem głodu czy pragnienia.</Polish>
+            <Japanese>色付きアイコンの透明度を決定できます。動的に設定されると、喉の渇きや空腹感が増すにつれて、アイコンの透明度を下げます。</Japanese>
+            <Russian>Настраивает прозрачность цветных иконок. «Динамическая» делает иконки менее прозрачными при увеличении жажды и голода.</Russian>
+            <Turkish>Renkli Simgeler Gösterge Paneli'nin şeffaflığını kontrol eder. Dinamik ayar, susuzluk veya açlık arttıkça HUD'yi daha az şeffaf hale getirir.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Dynamic">
+            <English>Dynamic</English>
+            <Chinese>動態</Chinese>
+            <Chinesesimp>动态</Chinesesimp>
+            <Czech>Dynamický</Czech>
+            <French>Dynamique</French>
+            <German>Dynamisch</German>
+            <Hungarian>Dinamikus</Hungarian>
+            <Italian>Dinamico</Italian>
+            <Japanese>動的</Japanese>
+            <Korean>동적</Korean>
+            <Polish>Dynamiczny</Polish>
+            <Portuguese>Dinâmico</Portuguese>
+            <Russian>Динамическая</Russian>
+            <Spanish>Dinámica</Spanish>
+            <Turkish>Dinamik</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterSupply_3DEN_DisplayName">
+            <English>Water Supply</English>
+            <German>Wasservorrat</German>
+            <Chinese>飲用水補給</Chinese>
+            <Japanese>水資源</Japanese>
+            <Russian>Водные ресурсы</Russian>
+            <Polish>Źródło wody</Polish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterSupply_3DEN_Description">
+            <English>The amount of water available for ACE Field Rations water source actions (-1 disabled, -10 infinite)</English>
+            <German>Die Menge des für ACE Feldrationen Wasserquellenaktionen verfügbaren Wassers (-1 ausgeschaltet, -10 unendlich)</German>
+            <Chinese>水源可供補充飲用水的次數（-1為關閉，-10為無限次）。</Chinese>
+            <Japanese>ACE フィールド レーションで利用できる水源の量を設定できます。(-1で無効化、-10で無限)</Japanese>
+            <Russian>Количество воды, доступной для использования в ACE Полевые рационы. (-1 - отключено, -10 - бесконечно)</Russian>
+            <Polish>Ilość wody dostępnej dla Akcji ACE Źródła wody (-1 wyłączone, -10 nieskończone)</Polish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterSource">
+            <English>Water Source</English>
+            <German>Wasserquelle</German>
+            <Chinese>水源</Chinese>
+            <Japanese>水源</Japanese>
+            <Polish>Źródło wody</Polish>
+            <Russian>Источник воды</Russian>
+            <Turkish>Matara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_CheckWater">
+            <English>Check Remaining Water</English>
+            <German>Überprüfe verbleibendes Wasser</German>
+            <Chinese>檢查剩餘飲用水</Chinese>
+            <Japanese>残っている水を確認</Japanese>
+            <Polish>Sprawdź ilość wody</Polish>
+            <Russian>Проверить остаток воды</Russian>
+            <Turkish>Kalan Suyu Kontrol Et</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_CheckingWater">
+            <English>Checking remaining water...</English>
+            <German>Überprüfe verbleibendes Wasser...</German>
+            <Chinese>檢查剩下的飲用水...</Chinese>
+            <Japanese>残っている水量を確認中です・・・</Japanese>
+            <Polish>Sprawdzanie ilości wody</Polish>
+            <Russian>Проверяется остаток воды...</Russian>
+            <Turkish>Kalan Su Kontrol Ediliyor...</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_RemainingWater">
+            <English>There are %1 litres left.</English>
+            <German>Es sind %1 Liter übrig.</German>
+            <Chinese>那還有 %1 公升</Chinese>
+            <Japanese>残り %1 リットル残っています。</Japanese>
+            <Polish>Pozostało %1 litrów.</Polish>
+            <Russian>Осталось %1 л воды</Russian>
+            <Turkish>%1 Litre kaldı.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
+            <English>There is no water left.</English>
+            <German>Es ist kein Wasser mehr übrig.</German>
+            <Chinese>水已經用完了</Chinese>
+            <Japanese>水はもうありません。</Japanese>
+            <Polish>Nie ma wody</Polish>
+            <Russian>Воды больше не осталось</Russian>
+            <Turkish>Hiç su kalmadı.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_DrinkFromSource">
+            <English>Drink From Source</English>
+            <German>Trinke direkt</German>
+            <Russian>Выпить из источника</Russian>
+            <Polish>Pij z źródła wody</Polish>
+            <Turkish>Mataradan Iç</Turkish>
+            <Japanese>水源から飲む</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Refill">
+            <English>Refill</English>
+            <Chinese>重新補充</Chinese>
+            <Chinesesimp>笔芯</Chinesesimp>
+            <Czech>Doplňte</Czech>
+            <French>Recharge</French>
+            <German>Nachfüllung</German>
+            <Hungarian>Utántöltés</Hungarian>
+            <Italian>Ricarica</Italian>
+            <Japanese>汲む</Japanese>
+            <Korean>다시 채우다</Korean>
+            <Polish>Uzupełnij</Polish>
+            <Portuguese>Recarga</Portuguese>
+            <Russian>Наполнить ёмкость</Russian>
+            <Spanish>Rellenar</Spanish>
+            <Turkish>Yeniden Doldur</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Refilling">
+            <English>Refilling...</English>
+            <Chinese>補充中...</Chinese>
+            <Chinesesimp>加...</Chinesesimp>
+            <Czech>Doplňování...</Czech>
+            <French>Remplissage ...</French>
+            <German>Nachfüllen...</German>
+            <Hungarian>Utántöltés ...</Hungarian>
+            <Italian>Ricarica ...</Italian>
+            <Japanese>汲んでいます・・・</Japanese>
+            <Korean>리필 중 ...</Korean>
+            <Polish>Uzupełnianie ...</Polish>
+            <Portuguese>Recarga ...</Portuguese>
+            <Russian>Наполнение...</Russian>
+            <Spanish>Rellenar ...</Spanish>
+            <Turkish>Yeniden Dolduruluyor...</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_ItemRefilled">
+            <English>Item Refilled</English>
+            <Chinese>物品重新補充</Chinese>
+            <Chinesesimp>项目重新填充</Chinesesimp>
+            <Czech>Položka je vyplněna</Czech>
+            <French>Article rechargé</French>
+            <German>Artikel nachgefüllt</German>
+            <Hungarian>Újratöltött tétel</Hungarian>
+            <Italian>Articolo riempito</Italian>
+            <Japanese>中身がいっぱいになりました</Japanese>
+            <Korean>리필 품목</Korean>
+            <Polish>Przedmiot uzupełniony</Polish>
+            <Portuguese>Item Recarregado</Portuguese>
+            <Russian>Ёмкость наполнена</Russian>
+            <Spanish>Artículo Rellenado</Spanish>
+            <Turkish>Eşya Yeniden Dolduruldu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_EatingX">
+            <English>Eating %1...</English>
+            <German>Esse %1...</German>
+            <Chinese>食用 %1...</Chinese>
+            <Japanese>%1を食べています・・・</Japanese>
+            <Polish>Jedzenie %1...</Polish>
+            <Russian>Поедание %1...</Russian>
+            <Turkish>%1 Yeniyor...</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_DrinkingX">
+            <English>Drinking %1...</English>
+            <German>Trinke %1...</German>
+            <Chinese>飲用自 %1...</Chinese>
+            <Japanese>%1を飲んでいます・・・</Japanese>
+            <Polish>Picie %1...</Polish>
+            <Russian>Выпивание %1...</Russian>
+            <Turkish>%1 Içiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_DrinkingFromX">
+            <English>Drinking from %1...</English>
+            <German>Trinke von %1...</German>
+            <Chinese>飲用%1的水中...</Chinese>
+            <Japanese>%1から飲んでいます・・・</Japanese>
+            <Polish>Picie z %1...</Polish>
+            <Russian>Выпивание из %1...</Russian>
+            <Turkish>%1 den içiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_DrinkingFromSource">
+            <English>Drinking from source...</English>
+            <Russian>Выпивание из источника...</Russian>
+            <Polish>Picie z źródła </Polish>
+            <Turkish>Mataradan Içiliyor...</Turkish>
+            <Japanese>水源から飲んでいます・・・</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterBottle_DisplayName">
+            <English>Water Bottle</English>
+            <Chinese>飲用水</Chinese>
+            <Chinesesimp>水瓶</Chinesesimp>
+            <Czech>Láhev na vodu</Czech>
+            <French>Bouteille d'eau</French>
+            <German>Wasserflasche</German>
+            <Hungarian>Vizesüveg</Hungarian>
+            <Italian>Bottiglia d'acqua</Italian>
+            <Japanese>ウォーターボトル</Japanese>
+            <Korean>물 병</Korean>
+            <Polish>Butelka wody</Polish>
+            <Portuguese>Garrafa de agua</Portuguese>
+            <Russian>Бутылка воды (полная)</Russian>
+            <Spanish>Botella de agua</Spanish>
+            <Turkish>Su Şişesi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterBottle_Description">
+            <English>A water bottle</English>
+            <Chinese>一罐裝滿水的寶特瓶</Chinese>
+            <Chinesesimp>一个水瓶</Chinesesimp>
+            <Czech>Láhev s vodou</Czech>
+            <French>Une bouteille d'eau</French>
+            <German>Eine Wasserflasche</German>
+            <Hungarian>Egy vizes palackot</Hungarian>
+            <Italian>Una bottiglia d'acqua</Italian>
+            <Japanese>ウォーター ボトル</Japanese>
+            <Korean>물병</Korean>
+            <Polish>Butelka wody</Polish>
+            <Portuguese>Uma garrafa de água</Portuguese>
+            <Russian>Полная бутылка с водой</Russian>
+            <Spanish>Una botella de agua</Spanish>
+            <Turkish>Bir Su Şişesi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterBottleHalf_DisplayName">
+            <English>Water Bottle (Half)</English>
+            <Chinese>飲用水（半罐）</Chinese>
+            <Chinesesimp>水瓶（一半）</Chinesesimp>
+            <Czech>Vodní láhev (poloviční)</Czech>
+            <French>Bouteille d'eau (la moitié)</French>
+            <German>Wasserflasche (Hälfte)</German>
+            <Hungarian>Vízpalack (fél)</Hungarian>
+            <Italian>Bottiglia d'acqua (metà)</Italian>
+            <Japanese>ウォーター ボトル (半分)</Japanese>
+            <Korean>Garrafa de água (meio)</Korean>
+            <Polish>Butelka wody (połowa)</Polish>
+            <Portuguese>Garrafa de água (meio)</Portuguese>
+            <Russian>Бутылка воды (половина)</Russian>
+            <Spanish>Botella de agua (mitad)</Spanish>
+            <Turkish>Su Şişesi (Yarım)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterBottleHalf_Description">
+            <English>A half full water bottle</English>
+            <Chinese>一罐裝滿半罐水的寶特瓶</Chinese>
+            <Chinesesimp>半满水瓶</Chinesesimp>
+            <Czech>Polní plná láhev s vodou</Czech>
+            <French>Une bouteille d'eau à moitié pleine</French>
+            <German>Eine halbvolle Wasserflasche</German>
+            <Hungarian>Fél-teljes vizes palack</Hungarian>
+            <Italian>Una mezza bottiglia piena d'acqua</Italian>
+            <Japanese>半分入っているウォーター ボトル</Japanese>
+            <Korean>반만 물병</Korean>
+            <Polish>Pół butelki z wodą</Polish>
+            <Portuguese>Uma garrafa de água meia cheia</Portuguese>
+            <Russian>Половина бутылки с водой</Russian>
+            <Spanish>Una botella de agua media llena</Spanish>
+            <Turkish>Yarım dolu Su Şişesi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterBottleEmpty_DisplayName">
+            <English>Water Bottle (Empty)</English>
+            <Chinese>空寶特瓶</Chinese>
+            <Chinesesimp>水瓶（空）</Chinesesimp>
+            <Czech>Láhev s vodou (prázdné)</Czech>
+            <French>Bouteille d'eau (vide)</French>
+            <German>Wasserflasche (leer)</German>
+            <Hungarian>Vízpalack (üres)</Hungarian>
+            <Italian>Bottiglia d'acqua (vuota)</Italian>
+            <Japanese>ウォーター ボトル (空)</Japanese>
+            <Korean>물병 (비어 있음)</Korean>
+            <Polish>Butelka na wodę (pusta)</Polish>
+            <Portuguese>Garrafa de água (vazia)</Portuguese>
+            <Russian>Бутылка воды (пустая)</Russian>
+            <Spanish>Botella de agua (vacía)</Spanish>
+            <Turkish>Su Şişesi (Boş)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_WaterBottleEmpty_Description">
+            <English>An empty water bottle</English>
+            <Chinese>一個空寶特瓶</Chinese>
+            <Chinesesimp>一个空的水瓶</Chinesesimp>
+            <Czech>Prázdná láhev s vodou</Czech>
+            <French>Une bouteille d'eau vide</French>
+            <German>Eine leere Wasserflasche</German>
+            <Hungarian>Egy üres palack</Hungarian>
+            <Italian>Una bottiglia d'acqua vuota</Italian>
+            <Japanese>空のウォーター ボトル</Japanese>
+            <Korean>빈 물병</Korean>
+            <Polish>Pusta butelka wody</Polish>
+            <Portuguese>Uma garrafa de água vazia</Portuguese>
+            <Russian>Пустая бутылка</Russian>
+            <Spanish>Una botella de agua vacía</Spanish>
+            <Turkish>Boş Su Şişesi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Canteen_DisplayName">
+            <English>Canteen</English>
+            <Chinese>水壺</Chinese>
+            <Chinesesimp>食堂</Chinesesimp>
+            <Czech>Jídelna</Czech>
+            <French>Cantine</French>
+            <German>Feldflasche</German>
+            <Hungarian>Kantin</Hungarian>
+            <Italian>Mensa</Italian>
+            <Japanese>水筒</Japanese>
+            <Korean>반합</Korean>
+            <Polish>Manierka</Polish>
+            <Portuguese>Cantina</Portuguese>
+            <Russian>Фляга (полная)</Russian>
+            <Spanish>Cantina</Spanish>
+            <Turkish>Matara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Canteen_Description">
+            <English>A canteen filled with water</English>
+            <Chinese>一個裝滿水的水壺</Chinese>
+            <Chinesesimp>一个装满水的食堂</Chinesesimp>
+            <Czech>Jídelna naplněná vodou</Czech>
+            <French>Une cantine remplie d'eau</French>
+            <German>Eine Feldflasche mit Wasser gefüllt</German>
+            <Hungarian>Vízzel töltött kantin</Hungarian>
+            <Italian>Una mensa piena d'acqua</Italian>
+            <Japanese>水で一杯の水筒</Japanese>
+            <Korean>물이 채워진 식당</Korean>
+            <Polish>Manierka wypełniona wodą</Polish>
+            <Portuguese>Uma cantina cheia de água</Portuguese>
+            <Russian>Фляга с водой</Russian>
+            <Spanish>Una cantina llena de agua</Spanish>
+            <Turkish>Su Dolu Matara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_CanteenHalf_DisplayName">
+            <English>Canteen (Half)</English>
+            <Chinese>水壺（半罐）</Chinese>
+            <Chinesesimp>食堂（一半）</Chinesesimp>
+            <Czech>Jídelna (poloviční)</Czech>
+            <French>Cantine (Demi)</French>
+            <German>Feldflasche (halb)</German>
+            <Hungarian>Étkezés (fél)</Hungarian>
+            <Italian>Mensa (metà)</Italian>
+            <Japanese>水筒 (半分)</Japanese>
+            <Korean>캔틴 (하프)</Korean>
+            <Polish>Manierka (połowa)</Polish>
+            <Portuguese>Cantina (meio)</Portuguese>
+            <Russian>Фляга (половина)</Russian>
+            <Spanish>Cantina (Mitad)</Spanish>
+            <Turkish>Matara (Yarım)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_CanteenHalf_Description">
+            <English>A canteen half filled with water</English>
+            <Chinese>剩下一半水的水壺</Chinese>
+            <Chinesesimp>食堂一半装满了水</Chinesesimp>
+            <Czech>Jídelna naplněná vodou</Czech>
+            <French>Une cantine à moitié remplie d'eau</French>
+            <German>Eine Feldflasche zur Hälfte mit Wasser gefüllt</German>
+            <Hungarian>A vízzel töltött kantin</Hungarian>
+            <Italian>Una mensa riempita per metà di acqua</Italian>
+            <Japanese>半分入っている水筒</Japanese>
+            <Korean>물이 담긴 식당 절반</Korean>
+            <Polish>Manierka w połowie wypełniona wodą</Polish>
+            <Portuguese>Uma meia cantina cheia de água</Portuguese>
+            <Russian>Наполовину заполненая водой фляга</Russian>
+            <Spanish>Una cantina medio llena de agua</Spanish>
+            <Turkish>Yarım Dolu Matara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_CanteenEmpty_DisplayName">
+            <English>Canteen (Empty)</English>
+            <Chinese>水壺（空）</Chinese>
+            <Chinesesimp>食堂（空）</Chinesesimp>
+            <Czech>Jídelna (prázdné)</Czech>
+            <French>Cantine (Vide)</French>
+            <German>Feldflasche (leer)</German>
+            <Hungarian>Étkezde (üres)</Hungarian>
+            <Italian>Mensa (vuota)</Italian>
+            <Japanese>水筒 (空)</Japanese>
+            <Korean>캔틴 (비어 있음)</Korean>
+            <Polish>Manierka (pusta)</Polish>
+            <Portuguese>Cantina (vazia)</Portuguese>
+            <Russian>Фляга (пустая)</Russian>
+            <Spanish>Cantina (Vacío)</Spanish>
+            <Turkish>Matara (Boş)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_CanteenEmpty_Description">
+            <English>An empty canteen</English>
+            <Chinese>一個空的水壺</Chinese>
+            <Chinesesimp>一个空的食堂</Chinesesimp>
+            <Czech>Prázdná jídelna</Czech>
+            <French>Une cantine vide</French>
+            <German>Eine leere Feldflasche</German>
+            <Hungarian>Egy üres kantin</Hungarian>
+            <Italian>Una mensa vuota</Italian>
+            <Japanese>空の水筒</Japanese>
+            <Korean>빈 수통</Korean>
+            <Polish>Pusta manierka</Polish>
+            <Portuguese>Uma cantina vazia</Portuguese>
+            <Russian>Пустая фляга</Russian>
+            <Spanish>Una cantina vacía</Spanish>
+            <Turkish>Boş Matara</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Can_Spirit_Description">
+            <English>Refreshing lemon and lime flavored soft drink</English>
+            <German>Ein erfrischender Softdrink mit Zitronen- und Limettengeschmack.</German>
+            <Chinese>清新檸檬以及有著酸橙味的汽水</Chinese>
+            <Japanese>新鮮なレモンとライムの風味を味わえるソフト ドリンク</Japanese>
+            <Polish>Odświeżający napój cytronowo-limonkowy</Polish>
+            <Russian>Освежающий напиток со вкусом лимона и лайма</Russian>
+            <Turkish>Limon Ve Yeşil Limondan Yapılmış Gazlı Bir Içecek</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Can_Franta_Description">
+            <English>Orange flavored soft drink with a tingly, fruity taste</English>
+            <German>Ein nach Orange schmeckender Softdrink mit einem prickelndem und fruchtigem Geschmack</German>
+            <Chinese>有著微微的橘子水果味的汽水</Chinese>
+            <Japanese>口いっぱいに果物を感じるオレンジ風味のソフト ドリンク</Japanese>
+            <Polish>Napój pomarańczowy</Polish>
+            <Russian>Напиток с апельсиновым вкусом</Russian>
+            <Turkish>Gazlı Portakallı Bir Içecek</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Can_RedGull_Description">
+            <English>Red Gull gives you wings</English>
+            <German>Red Gull verleiht Flügel</German>
+            <Chinese>紅鷹讓你猛虎添翼</Chinese>
+            <Japanese>レッドガルは翼をさずける</Japanese>
+            <Polish>Red Gull doda ci skrzydeł</Polish>
+            <Russian>Рэд Гулл окрыляет!</Russian>
+            <Turkish>Red Gull kanatlandırrrrr</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_DisplayName">
+            <English>MRE Lamb Curry</English>
+            <Chinese>軍糧 羊肉咖哩</Chinese>
+            <Chinesesimp>MRE羊肉咖喱</Chinesesimp>
+            <Czech>MRE jehněčí kari</Czech>
+            <French>MRE Curry d'agneau</French>
+            <German>EPA Lamm Curry</German>
+            <Hungarian>MRE bárány Curry</Hungarian>
+            <Italian>MRE Curry di agnello</Italian>
+            <Japanese>MRE 羊カレー</Japanese>
+            <Korean>MRE 양고기 카레</Korean>
+            <Polish>MRE jagnięcina Curry</Polish>
+            <Portuguese>MRE cordeiro ao Curry</Portuguese>
+            <Russian>ИРП Ягненок карри</Russian>
+            <Spanish>MRE cordero Curry</Spanish>
+            <Turkish>MRE Kuzu Köri</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_LambCurry_Description">
+            <English>An MRE containing Lamb Curry. Heat for best effect</English>
+            <Chinese>含有羊肉咖哩的軍用口糧。加熱以達到最佳效果</Chinese>
+            <Chinesesimp>含有羊肉咖喱的MRE。加热以达到最佳效果</Chinesesimp>
+            <Czech>MRE obsahující Lamb Curry. Teplo pro nejlepší efekt</Czech>
+            <French>Un MRE contenant du Curry d'agneau. Chaleur pour le meilleur effet</French>
+            <German>Eine EPA mit Lamm Curry. Für den besten Geschmack erhitzen.</German>
+            <Hungarian>Egy MRE, amely Lamb Curry-t tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
+            <Italian>Un MRE contenente Lamb Curry. Calore per il miglior effetto</Italian>
+            <Japanese>羊カレーの MRE。温めるとなお美味しい</Japanese>
+            <Korean>램 카레가 들어있는 MRE. 효과를 극대화하기위한 열기</Korean>
+            <Polish>MRE zawierające jagnięcine Curry. Podgrzej dla najlepszego efektu</Polish>
+            <Portuguese>Um MRE contendo Lamb Curry. Calor para melhor efeito</Portuguese>
+            <Russian>Сухой паёк, содержащий ягнятину карри. Перед употреблением рекомендуется разогреть</Russian>
+            <Spanish>Un MRE que contiene cordero al curry. Calor para el mejor efecto</Spanish>
+            <Turkish>Kuzu Köri içeren bir MRE.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_BeefStew_DisplayName">
+            <English>MRE Beef Stew</English>
+            <German>EPA Rindereintopf</German>
+            <Chinese>軍糧 牛肉燉湯</Chinese>
+            <Japanese>MRE ビーフ シチュー</Japanese>
+            <Polish>MRE Gulasz wołowy</Polish>
+            <Russian>ИРП Тушеная говядина</Russian>
+            <Turkish>MRE Dana Yahni</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_BeefStew_Description">
+            <English>An MRE containing Beef Stew. Heat for best effect</English>
+            <German>Eine EPA, welche Rindereintopf beeinhaltet. Für den besten Geschmack erhitzen.</German>
+            <Chinese>含有牛肉燉湯的軍用口糧。加熱以達到最佳效果</Chinese>
+            <Japanese>ビーフ シチューの MRE。温めるとなお美味しい</Japanese>
+            <Polish>MRE zawierające gulasz wołowy. Podgrzej dla najlepszego efektu</Polish>
+            <Russian>Сухой паёк, содержащий тушеную говядину. Перед употреблением рекомендуется разогреть</Russian>
+            <Turkish>Sığır Yahni içeren bir MRE.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_CreamTomatoSoup_DisplayName">
+            <English>MRE Cream Tomato Soup</English>
+            <Chinese>軍糧 奶油番茄湯</Chinese>
+            <Chinesesimp>MRE奶油西红柿汤</Chinesesimp>
+            <Czech>MRE krémová rajská polévka</Czech>
+            <French>MRE Soupe de tomate crème</French>
+            <German>EPA Cremige Tomatensuppe</German>
+            <Hungarian>MRE krémes paradicsomleves</Hungarian>
+            <Italian>MRE Crema di pomodoro</Italian>
+            <Japanese>MRE クリーム トマト スープ</Japanese>
+            <Korean>MRE 크림 토마토 수프</Korean>
+            <Polish>MRE Kremowa Zupa Pomidorowa</Polish>
+            <Portuguese>MRE Sopa de creme de tomate</Portuguese>
+            <Russian>ИРП Томатный крем-суп</Russian>
+            <Spanish>MRE Sopa de tomate crema</Spanish>
+            <Turkish>MRE Kremalı Domates Çorbası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_CreamTomatoSoup_Description">
+            <English>An MRE containing Cream Tomato Soup. Mix with water and heat for best effect</English>
+            <Chinese>含有奶油番茄湯的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
+            <Chinesesimp>含有奶油番茄汤的MRE。 用水和热混合以获得最佳效果</Chinesesimp>
+            <Czech>MRE obsahující krémovou rajčatovou polévku. Směs s vodou a teplem pro nejlepší efekt</Czech>
+            <French>Un MRE contenant de la soupe à la tomate et à la crème. Mélanger avec de l'eau et chauffer pour obtenir le meilleur effet</French>
+            <German>Eine EPA mit Creme Tomatensuppe. Für beste Wirkung mit Wasser und Hitze mischen.</German>
+            <Hungarian>Egy krémes paradicsomleveset tartalmazó MRE. Keverjük össze vízzel és hővel a legjobb hatás érdekében</Hungarian>
+            <Italian>Un MRE contenente zuppa di pomodoro crema. Mescolare con acqua e calore per ottenere il massimo effetto</Italian>
+            <Japanese>クリーム トマト スープの MRE。水と混ぜて温めるとなお美味しい</Japanese>
+            <Korean>크림 토마토 수프가 들어있는 MRE. 최상의 효과를 위해 물과 열을 함께 섞으십시오.</Korean>
+            <Polish>MRE zawierające śmietanową zupę pomidorową. Wymieszaj z wodą i podgrzej, aby uzyskać najlepszy efekt</Polish>
+            <Portuguese>Uma MRE contendo Cream Tomato Soup. Misture com água e calor para melhor efeito</Portuguese>
+            <Russian>Сухой паёк, содержащий сублимированный томатный крем-суп. Перед употреблением растворить в воде и разогреть</Russian>
+            <Spanish>Una MRE que contiene Sopa de Tomate Crema. Mezcle con agua y calor para un mejor efecto</Spanish>
+            <Turkish>Kremalı Domates Çorbası içeren bir MRE.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_CreamChickenSoup_DisplayName">
+            <English>MRE Cream Chicken Soup</English>
+            <Chinese>軍糧 奶油雞湯</Chinese>
+            <Chinesesimp>MRE奶油鸡汤</Chinesesimp>
+            <Czech>MRE krémová kuřecí polévka</Czech>
+            <French>MRE Soupe à la crème au poulet</French>
+            <German>EPA Cream Hühnersuppe</German>
+            <Hungarian>MRE krémes csirke leves</Hungarian>
+            <Italian>MRE Zuppa di pollo crema</Italian>
+            <Japanese>MRE クリーム チキン スープ</Japanese>
+            <Korean>MRE 크림 치킨 스프</Korean>
+            <Polish>MRE Kremowy Rosół</Polish>
+            <Portuguese>MRE Sopa de creme de galinha</Portuguese>
+            <Russian>ИРП Куриный крем-суп</Russian>
+            <Spanish>MRE Sopa de pollo crema</Spanish>
+            <Turkish>MRE Kremalı Tavuk Çorbası</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_CreamChickenSoup_Description">
+            <English>An MRE containing Chicken Soup. Mix with water and heat for best effect</English>
+            <Chinese>含有雞湯的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
+            <Chinesesimp>含有鸡汤的MRE。 用水和热混合以获得最佳效果</Chinesesimp>
+            <Czech>MRE obsahující kuřecí polévku. Směs s vodou a teplem pro nejlepší efekt</Czech>
+            <French>Un MRE contenant une soupe au poulet. Mélanger avec de l'eau et chauffer pour obtenir le meilleur effet</French>
+            <German>Eine EPA mit Hühnersuppe. Für beste Wirkung mit Wasser und Hitze mischen.</German>
+            <Hungarian>A csirke leves tartalmú MRE. Keverjük össze vízzel és hővel a legjobb hatás érdekében</Hungarian>
+            <Italian>Un MRE contenente zuppa di pollo. Mescolare con acqua e calore per ottenere il massimo effetto</Italian>
+            <Japanese>チキン スープの MRE。水と混ぜて温めるとなお美味しい</Japanese>
+            <Korean>치킨 수프를 포함한 MRE. 최상의 효과를 위해 물과 열을 섞으십시오.</Korean>
+            <Polish>MRE zawierające rosół. Wymieszaj z wodą i podgrzej, aby uzyskać najlepszy efekt</Polish>
+            <Portuguese>Um MRE contendo Sopa de Frango. Misture com água e calor para melhor efeito</Portuguese>
+            <Russian>Сухой паёк, содержащий сублимированный куриный крем-суп. Перед употреблением растворить в воде и разогреть</Russian>
+            <Spanish>Un MRE que contiene sopa de pollo. Mezcle con agua y calor para un mejor efecto</Spanish>
+            <Turkish>Tavuk Çorbası içeren bir MRE.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_ChickenTikkaMasala_DisplayName">
+            <English>MRE Chicken Tikka Masala</English>
+            <Chinese>軍糧 瑪撒拉雞</Chinese>
+            <Chinesesimp>MRE鸡蒂卡Masala</Chinesesimp>
+            <Czech>MRE Kuře Tikka Masala</Czech>
+            <French>MRE Poulet Tikka Masala</French>
+            <German>EPA Huhn Tikka Masala</German>
+            <Hungarian>MRE csirke Tikka Masala</Hungarian>
+            <Italian>MRE pollo Tikka Masala</Italian>
+            <Japanese>MRE チキン ティッカ マサラ</Japanese>
+            <Korean>MRE 치킨 티카 마샬 라</Korean>
+            <Polish>MRE kurczak Tikka Masala</Polish>
+            <Portuguese>MRE frango Tikka Masala</Portuguese>
+            <Russian>ИРП Курица Тикка Масала</Russian>
+            <Spanish>MRE Pollo Tikka Masala</Spanish>
+            <Turkish>MRE Tikka Masala Soslu Tavuk</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_ChickenTikkaMasala_Description">
+            <English>An MRE with Chicken Tikka Masala. Heat for best effect</English>
+            <Chinese>含有瑪撒拉雞的軍用口糧。 用水和熱混合以獲得最佳效果</Chinese>
+            <Chinesesimp>与鸡Tikka马萨拉MRE。 加热以达到最佳效果</Chinesesimp>
+            <Czech>MRE s kuřecím masem Tikka Masala. Teplo pro nejlepší efekt</Czech>
+            <French>Un MRE avec du poulet Tikka Masala. Chaleur pour le meilleur effet</French>
+            <German>Eine EPA mit Hühnchen Tikka Masala. Für den besten Geschmack erhitzen.</German>
+            <Hungarian>Egy MRE csirkével Tikka Masala. Hő a legjobb hatás érdekében</Hungarian>
+            <Italian>Un MRE con pollo Tikka Masala. Calore per effetto migliore</Italian>
+            <Japanese>チキン ティッカ マサラの MRE。温めるとなお美味しい</Japanese>
+            <Korean>치킨 티 카 Masala와 MRE입니다. 최고의 효과 대 한 열</Korean>
+            <Polish>MRE z kurczakiem Tikka Masala. Podgrzej dla najlepszego efektu</Polish>
+            <Portuguese>Um MRE com Frango Tikka Masala. Calor para melhor efeito</Portuguese>
+            <Russian>Сухой паёк, содержащий Курицу Тикка Масала. Перед употреблением рекомендуется разогреть</Russian>
+            <Spanish>Un ERM con Pollo Tikka Masala. Calor para un mejor efecto</Spanish>
+            <Turkish>Tikka Masala Soslu Tavuk içeren bir MRE.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_SteakVegetables_DisplayName">
+            <English>MRE Steak Vegetables</English>
+            <Chinese>軍糧 牛排蔬菜</Chinese>
+            <Chinesesimp>MRE牛排蔬菜</Chinesesimp>
+            <Czech>MRE Steak zelenina</Czech>
+            <French>MRE Steak légumes</French>
+            <German>EPA Steak Gemüse</German>
+            <Hungarian>MRE Steak zöldségek</Hungarian>
+            <Italian>MRE Verdura di bistecca</Italian>
+            <Japanese>MRE 野菜添えステーキ</Japanese>
+            <Korean>MRE 스테이크 야채</Korean>
+            <Polish>MRE Stek Warzywny</Polish>
+            <Portuguese>MRE bife legumes</Portuguese>
+            <Russian>ИРП Стейк с овощами</Russian>
+            <Spanish>ERM de ternera verduras</Spanish>
+            <Turkish>MRE Sebzeli Biftek</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_SteakVegetables_Description">
+            <English>An MRE containing Steak and Vegetables. Heat for best effect</English>
+            <Chinese>包含牛排和蔬菜的軍用口糧。 加熱以達到最佳效果</Chinese>
+            <Chinesesimp>包含牛排和蔬菜的MRE。 加热以达到最佳效果</Chinesesimp>
+            <Czech>MRE obsahující steak a zeleninu. Teplo pro nejlepší efekt</Czech>
+            <French>Un MRE contenant du bifteck et des légumes. Chaleur pour le meilleur effet</French>
+            <German>Eine EPA mit Steak und Gemüse. Für den besten Geschmack erhitzen.</German>
+            <Hungarian>Egy MRE, amely Steak és Zöldségeket tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
+            <Italian>Un MRE contenente bistecche e verdure. Calore per il miglior effetto</Italian>
+            <Japanese>野菜とステーキの MRE。温めるとなお美味しい</Japanese>
+            <Korean>스테이크와 채소가 들어있는 MRE. 효과를 극대화하기위한 열기</Korean>
+            <Polish>MRE zawierający stek i warzywa. Podgrzej dla najlepszego efektu</Polish>
+            <Portuguese>Um MRE contendo Bife e Legumes. Calor para melhor efeito</Portuguese>
+            <Russian>Сухой паёк, содержащий стейк с овощами. Перед употреблением рекомендуется разогреть</Russian>
+            <Spanish>Un MRE que contiene carne y verduras. Calor para el mejor efecto</Spanish>
+            <Turkish>Sebzeli Biftek içeren bir MRE.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_MeatballsPasta_DisplayName">
+            <English>MRE Meatballs and Pasta</English>
+            <Chinese>軍糧 肉丸和意大利麵</Chinese>
+            <Chinesesimp>MRE肉丸和意大利面</Chinesesimp>
+            <Czech>MRE karbanátky a těstoviny</Czech>
+            <French>MRE Pâtes aux boulettes de viande</French>
+            <German>EPA Frikadellen und Pasta</German>
+            <Hungarian>MRE húsgombóc és tészta</Hungarian>
+            <Italian>MRE Pasta e polpette</Italian>
+            <Japanese>MRE ミートボールとパスタ</Japanese>
+            <Korean>MRE 미트볼과 파스타</Korean>
+            <Polish>MRE Klopsiki i makaron</Polish>
+            <Portuguese>MRE Macarrão com almôndegas</Portuguese>
+            <Russian>ИРП Макароны с фрикадельками</Russian>
+            <Spanish>MRE Albóndigas y pastas</Spanish>
+            <Turkish>MRE Köfte Ve Makarna</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_MeatballsPasta_Description">
+            <English>An MRE containing Meatballs and Pasta. Heat for best effect</English>
+            <Chinese>含有肉丸和意大利麵的軍用口糧。 加熱以達到最佳效果</Chinese>
+            <Chinesesimp>含有肉丸和意大利面的MRE。 加热以达到最佳效果</Chinesesimp>
+            <Czech>MRE obsahující maso a těstoviny. Teplo pro nejlepší efekt</Czech>
+            <French>Un MRE contenant des boulettes de viande et des pâtes. Chaleur pour le meilleur effet</French>
+            <German>Eine EPA mit Fleischbällchen und Pasta. Für den besten Geschmack erhitzen.</German>
+            <Hungarian>Húsgombócokat és tésztát tartalmazó MRE. Hő a legjobb hatás érdekében</Hungarian>
+            <Italian>Un MRE contenente polpette e pasta. Calore per il miglior effetto</Italian>
+            <Japanese>ミートボールとパスタの MRE。温めるとなお美味しい</Japanese>
+            <Korean>미트볼과 파스타를 포함한 MRE. 효과를 극대화하기위한 열기</Korean>
+            <Polish>MRE zawierające klopsiki i makaron. Podgrzej dla najlepszego efektu</Polish>
+            <Portuguese>Um MRE contendo Meatballs e Pasta. Calor para melhor efeito</Portuguese>
+            <Russian>Сухой паёк, содержащий макароны с фрикадельками. Перед употреблением рекомендуется разогреть</Russian>
+            <Spanish>Un MRE que contiene albóndigas y pasta. Calor para el mejor efecto</Spanish>
+            <Turkish>Köfte ve makarnadan oluşan bir MRE.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_ChickenHerbDumplings_DisplayName">
+            <English>MRE Chicken with Herb Dumplings</English>
+            <Chinese>軍糧 雞肉香草餃子</Chinese>
+            <Chinesesimp>MRE鸡肉香草饺子</Chinesesimp>
+            <Czech>MRE kuře s bylinkovým knedlíkem</Czech>
+            <French>MRE de poulet avec des boulettes aux herbes</French>
+            <German>EPA Huhn mit Kraut Knödel</German>
+            <Hungarian>MRE csirke Herb galuskával</Hungarian>
+            <Italian>MRE pollo con gnocchi alle erbe</Italian>
+            <Japanese>MRE 鶏肉団子</Japanese>
+            <Korean>MRE 치킨 약초만 두</Korean>
+            <Polish>MRE kurczak z pierogami ziołowymi.</Polish>
+            <Portuguese>MRE Frango com Dumplings de ervas</Portuguese>
+            <Russian>ИРП Курица с клёцками</Russian>
+            <Spanish>MRE pollo con bolas de masa hervida</Spanish>
+            <Turkish>MRE Tavuk ve Herb Mantısı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_MRE_ChickenHerbDumplings_Description">
+            <English>An MRE containing Chicken with Herb Dumplings. Heat for best effect</English>
+            <Chinese>含有雞肉和香草餃子的軍用口糧。 加熱以達到最佳效果</Chinese>
+            <Chinesesimp>含有鸡肉和香草饺子的MRE。 加热以达到最佳效果</Chinesesimp>
+            <Czech>MRE obsahující kuře s bylinkovými knedlíky. Teplo pro nejlepší efekt</Czech>
+            <French>Un MRE contenant du poulet et des dumplings aux fines herbes. Chaleur pour le meilleur effet</French>
+            <German>Eine EPA mit Hühnchen mit Kräuterknödeln. Für den besten Geschmack erhitzen.</German>
+            <Hungarian>Egy MRE, amely csirkét és fűszeres gombócokat tartalmaz. Hő a legjobb hatás érdekében</Hungarian>
+            <Italian>Un MRE contenente pollo con gnocchi alle erbe. Calore per il miglior effetto</Italian>
+            <Japanese>鶏肉を団子で包んだ MRE。温めるとなお美味しい</Japanese>
+            <Korean>치킨과 허브 만두가 포함 된 MRE. 효과를 극대화하기위한 열기</Korean>
+            <Polish>MRE z kurczakiem i pierogamii ziołowymi. Podgrzej dla najlepszego efektu</Polish>
+            <Portuguese>Uma MRE que contém Bolinhos De Frango Com Erva. Calor para melhor efeito</Portuguese>
+            <Russian>Сухой паёк, содержащий курицу с клёцками. Перед употреблением рекомендуется разогреть</Russian>
+            <Spanish>Un MRE que contiene pollo con bolas de masa hervida. Calor para el mejor efecto</Spanish>
+            <Turkish>Tavuk ve Herb Mantısı içeren bir MRE.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Humanitarian_Ration_DisplayName">
+            <English>Humanitarian Ration</English>
+            <Chinese>人道主義口糧</Chinese>
+            <Chinesesimp>人道主义配给</Chinesesimp>
+            <Czech>Humanitární poměr</Czech>
+            <French>Ration humanitaire</French>
+            <German>Humanitäre Ration</German>
+            <Hungarian>Humanitárius értelemben</Hungarian>
+            <Italian>Razione umanitaria</Italian>
+            <Japanese>人道支援配給レーション</Japanese>
+            <Korean>인도주의 배급</Korean>
+            <Polish>Racja humanitarna</Polish>
+            <Portuguese>Ração Humanitária</Portuguese>
+            <Russian>Гуманитарный сухой паёк</Russian>
+            <Spanish>Ración humanitaria</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_Humanitarian_Ration_Description">
+            <English>A Humanitarian Ration intended to serve as a person's food supply during crises</English>
+            <Chinese>人道主義口糧意圖在危機期間充當人的食物供應</Chinese>
+            <Chinesesimp>人道主义配额意图在危机期间充当人的食物供应</Chinesesimp>
+            <Czech>Humanitární rada, která má sloužit jako zásobování potravinami během krizí</Czech>
+            <French>Une ration humanitaire destinée à servir d'approvisionnement alimentaire en cas de crise</French>
+            <German>Eine humanitäre Ration, die dazu bestimmt ist, in Krisenzeiten als Nahrung für eine Person zu dienen</German>
+            <Hungarian>Humanitárius eloszlás, amelynek célja az ember élelmezési ellátottsága a válság idején</Hungarian>
+            <Italian>Una razione umanitaria destinata a servire come riserva di cibo di una persona durante le crisi</Italian>
+            <Japanese>人道危機を救う為に配布された食料品</Japanese>
+            <Korean>위기 상황에서 식량 공급을위한 인도 주의적 식량 배급</Korean>
+            <Polish>Racja humanitarna, która ma służyć jako żywność dla danej osoby podczas kryzysów</Polish>
+            <Portuguese>Uma Ração Humanitária destinada a servir como alimento alimentar de uma pessoa durante as crises</Portuguese>
+            <Russian>Суточный рацион питания для обеспечения населения районов, охваченных гуманитарной катастрофой или стоящих на ее грани</Russian>
+            <Spanish>Una ración humanitaria destinada a servir como el suministro de alimentos de una persona durante las crisis</Spanish>
+        </Key>
+    </Package>
+</Project>

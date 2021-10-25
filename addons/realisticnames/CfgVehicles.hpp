@@ -183,14 +183,14 @@ class CfgVehicles {
     };
 
     class APC_Wheeled_02_base_F;
-    class O_APC_Wheeled_02_base_F : APC_Wheeled_02_base_F {
+    class O_APC_Wheeled_02_base_F: APC_Wheeled_02_base_F {
         displayName = CSTRING(APC_Wheeled_02_rcws_Name);
     };
     class APC_Wheeled_02_base_v2_F;
-    class O_APC_Wheeled_02_rcws_v2_F : APC_Wheeled_02_base_v2_F {
+    class O_APC_Wheeled_02_rcws_v2_F: APC_Wheeled_02_base_v2_F {
         displayName = CSTRING(APC_Wheeled_02_rcws_Name);
     };
-    class O_T_APC_Wheeled_02_rcws_v2_ghex_F : APC_Wheeled_02_base_v2_F {
+    class O_T_APC_Wheeled_02_rcws_v2_ghex_F: APC_Wheeled_02_base_v2_F {
         displayName = CSTRING(APC_Wheeled_02_rcws_Name);
     };
 
@@ -421,7 +421,7 @@ class CfgVehicles {
     };
 
     class Plane_Fighter_04_Base_F;
-    class I_Plane_Fighter_04_F : Plane_Fighter_04_Base_F {
+    class I_Plane_Fighter_04_F: Plane_Fighter_04_Base_F {
         displayName = CSTRING(Plane_Fighter_04_Name);
     };
 
@@ -777,78 +777,78 @@ class CfgVehicles {
 
     // Polaris DAGOR (Prowler)
     class LSV_01_base_F;
-    class LSV_01_armed_base_F : LSV_01_base_F {
+    class LSV_01_armed_base_F: LSV_01_base_F {
         displayName = CSTRING(lsv_01_armed);
     };
-    class LSV_01_unarmed_base_F : LSV_01_base_F {
+    class LSV_01_unarmed_base_F: LSV_01_base_F {
         displayName = CSTRING(lsv_01_unarmed);
     };
-    class LSV_01_light_base_F : LSV_01_base_F {
+    class LSV_01_light_base_F: LSV_01_base_F {
         displayName = CSTRING(lsv_01_light);
     };
-    class LSV_01_AT_base_F : LSV_01_base_F {
+    class LSV_01_AT_base_F: LSV_01_base_F {
         displayName = CSTRING(lsv_01_at);
     };
 
     // Light Strike Vehicle Mk. II (Qilin)
     class LSV_02_base_F;
-    class LSV_02_armed_base_F : LSV_02_base_F {
+    class LSV_02_armed_base_F: LSV_02_base_F {
         displayName = CSTRING(lsv_02_armed);
     };
-    class LSV_02_unarmed_base_F : LSV_02_base_F {
+    class LSV_02_unarmed_base_F: LSV_02_base_F {
         displayName = CSTRING(lsv_02_unarmed);
     };
-    class LSV_02_AT_base_F : LSV_02_base_F {
+    class LSV_02_AT_base_F: LSV_02_base_F {
         displayName = CSTRING(lsv_02_at);
     };
 
     // Rooikat 120 (Rhino MGS)
     class AFV_Wheeled_01_base_F;
-    class B_AFV_Wheeled_01_cannon_F : AFV_Wheeled_01_base_F {
+    class B_AFV_Wheeled_01_cannon_F: AFV_Wheeled_01_base_F {
         displayName = CSTRING(afv_wheeled_01);
     };
-    class B_T_AFV_Wheeled_01_cannon_F : AFV_Wheeled_01_base_F {
+    class B_T_AFV_Wheeled_01_cannon_F: AFV_Wheeled_01_base_F {
         displayName = CSTRING(afv_wheeled_01);
     };
     class AFV_Wheeled_01_up_base_F;
-    class B_AFV_Wheeled_01_up_cannon_F : AFV_Wheeled_01_up_base_F {
+    class B_AFV_Wheeled_01_up_cannon_F: AFV_Wheeled_01_up_base_F {
         displayName = CSTRING(afv_wheeled_01_up);
     };
-    class B_T_AFV_Wheeled_01_up_cannon_F : AFV_Wheeled_01_up_base_F {
+    class B_T_AFV_Wheeled_01_up_cannon_F: AFV_Wheeled_01_up_base_F {
         displayName = CSTRING(afv_wheeled_01_up);
     };
 
     // T-14 Armata (T-140 Angara)
     class MBT_04_cannon_base_F;
-    class O_MBT_04_cannon_F : MBT_04_cannon_base_F {
+    class O_MBT_04_cannon_F: MBT_04_cannon_base_F {
         displayName = CSTRING(MBT_04_cannon);
     };
-    class O_T_MBT_04_cannon_F : MBT_04_cannon_base_F {
+    class O_T_MBT_04_cannon_F: MBT_04_cannon_base_F {
         displayName = CSTRING(MBT_04_cannon);
     };
     class MBT_04_command_base_F; // Keep "K" designation for command variant.
-    class O_MBT_04_command_F : MBT_04_command_base_F {
+    class O_MBT_04_command_F: MBT_04_command_base_F {
         displayName = CSTRING(MBT_04_command);
     };
-    class O_T_MBT_04_command_F : MBT_04_command_base_F {
+    class O_T_MBT_04_command_F: MBT_04_command_base_F {
         displayName = CSTRING(MBT_04_command);
     };
 
     // Wiesel 2 (AWC 302 Nyx)
     class LT_01_AA_base_F;
-    class I_LT_01_AA_F : LT_01_AA_base_F {
+    class I_LT_01_AA_F: LT_01_AA_base_F {
         displayName = CSTRING(LT_01_AA);
     };
     class LT_01_AT_base_F;
-    class I_LT_01_AT_F : LT_01_AT_base_F {
+    class I_LT_01_AT_F: LT_01_AT_base_F {
         displayName = CSTRING(LT_01_AT);
     };
     class LT_01_cannon_base_F;
-    class I_LT_01_cannon_F : LT_01_cannon_base_F {
+    class I_LT_01_cannon_F: LT_01_cannon_base_F {
         displayName = CSTRING(LT_01_cannon);
     };
     class LT_01_scout_base_F;
-    class I_LT_01_scout_F : LT_01_scout_base_F {
+    class I_LT_01_scout_F: LT_01_scout_base_F {
         displayName = CSTRING(LT_01_scout);
     };
 

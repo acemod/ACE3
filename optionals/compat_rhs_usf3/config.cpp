@@ -5,7 +5,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {QGVAR(m252_carry), QGVAR(m2_carry), QGVAR(mk19_carry), QGVAR(tow_carry)};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_explosives", "ace_javelin", "ace_rearm", "ace_refuel", "ace_repair", "ace_csw", "rhsusf_main_loadorder"};
         author = ECSTRING(common,ACETeam);

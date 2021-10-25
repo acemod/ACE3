@@ -74,6 +74,10 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {780};
         ACE_barrelLengths[] = {700};
+        EGVAR(vehicle_damage,incendiary) = 0.2;
+    };
+    class R3F_127x99_PEI: R3F_127x99_Ball {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
     };
     class R3F_127x99_Ball2: BulletBase { // BARRETT M107 M33 https://github.com/acemod/ACE3/blob/master/addons/ballistics/CfgAmmo.hpp#L635
         airFriction = -0.000618; // ACE3 value, default -0.00086
@@ -88,6 +92,10 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {850};
         ACE_barrelLengths[] = {736.6};
+        EGVAR(vehicle_damage,incendiary) = 0.2;
+    };
+    class R3F_127x99_PEI2: R3F_127x99_Ball2 {
+        EGVAR(vehicle_damage,incendiary) = 1.0;
     };
     class R3F_127x99_Ball3: BulletBase { //  McMillan TAC-50 AMAX https://web.archive.org/web/20080527201619/http://mcmfamily.com/pdfs/Tac-50%20Technical%20Data.pdf
         typicalSpeed = 823; // R3F default value 820
@@ -103,5 +111,6 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {831}; // at 21°C, at 15°C 823 m/s (2700 fps) according with the R3F_TAC50 initSpeed
         ACE_barrelLengths[] = {736.6};
+        EGVAR(vehicle_damage,incendiary) = 0.2;
     };
 };

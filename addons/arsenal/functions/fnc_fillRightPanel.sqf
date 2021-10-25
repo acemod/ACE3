@@ -45,6 +45,10 @@ private _fnc_fill_right_Container = {
     private _cacheNamespace = _ctrlPanel;
     private _cachedItemInfo = _cacheNamespace getVariable [_configCategory+_className, []];
 
+    if (!(_className in GVAR(virtualItemsFlat))) then {
+        _isUnique = true;
+    };
+
     // Not in cache. So get info and put into cache
     if (_cachedItemInfo isEqualTo []) then {
         private _configPath = configFile >> _configCategory >> _className;
@@ -86,7 +90,7 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
             // Magazine groups
             {
                 private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups),["#CBA_HASH#",[],[],[]]];
-                private _magArray = [_magazineGroups, toLower _x] call CBA_fnc_hashGet;
+                private _magArray = _magazineGroups get (toLower _x);
                 {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
             } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
 

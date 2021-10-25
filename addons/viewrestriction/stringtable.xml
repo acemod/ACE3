@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="ViewRestriction">
+        <Key ID="STR_ACE_ViewRestriction_ModuleDisplayName">
+            <English>View Restriction</English>
+            <Polish>Ograniczenie widoczności</Polish>
+            <German>Sichteinschränkungen</German>
+            <Hungarian>Korlátozások</Hungarian>
+            <Japanese>視点制限</Japanese>
+            <Korean>시점 제한</Korean>
+            <French>Restriction Vue</French>
+            <Chinesesimp>视野限制</Chinesesimp>
+            <Chinese>視野限制</Chinese>
+            <Italian>Visualizza Restrizione</Italian>
+            <Russian>Ограничение обзора</Russian>
+            <Turkish>Görüntüyü Kısıtla</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModuleDescription">
+            <English>View restriction settings to limit the usage of 1st or 3rd person views globally or per vehicle type.</English>
+            <Polish>Ograniczenie widoczności ze względu na użycie 1. lub 3. os. globalnie, lub z uwzględnieniem typu pojazdu.</Polish>
+            <German>Einstellungen um Egoperspektive und Third-Person-Perspektive global oder pro Fahrzeugtyp zu limitieren.</German>
+            <Japanese>全体や車両ごとで使える視点を1人称か3人称視点のどちらかに制限します。</Japanese>
+            <Korean>차량 유형별, 혹은 전체적으로 1,3인칭 시점 사용 제한 설정</Korean>
+            <French>La restriction de la vue limite l'usage de la vue à la 1ère/3ème personne globalement ou par type de véhicule.</French>
+            <Chinesesimp>视野限制可以设定在全局或是局部状况下能用的视野模式。</Chinesesimp>
+            <Chinese>視野限制可以設定在全局或是局部狀況下能用的視野模式。</Chinese>
+            <Italian>Visualizza le impostazioni di restrizione per limitare l'utilizzo di prima e terza persona a livello globale o per tipologia di veicolo.</Italian>
+            <Russian>Настройки ограничения обзора при виде от 1-го или 3-го лица. Общие для всех, или Выборочные, в зависимости от техники.</Russian>
+            <Turkish>1. veya 3. kişi görünümlerinin kullanımını genel olarak veya araç türüne göre sınırlamak için kısıtlama ayarlarını görüntüleyin.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_Mode">
+            <English>Mode</English>
+            <Polish>Tryb</Polish>
+            <German>Modus</German>
+            <Hungarian>Mód</Hungarian>
+            <Japanese>モード</Japanese>
+            <Korean>모드</Korean>
+            <French>Mode</French>
+            <Chinesesimp>模式</Chinesesimp>
+            <Chinese>模式</Chinese>
+            <Italian>Modalità</Italian>
+            <Russian>Режим установок</Russian>
+            <Turkish>Mod</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeDesc">
+            <English>Sets global mode. Default: Disabled</English>
+            <Polish>Zmienia tryb globalny. (Domyślnie: Wyłączony)</Polish>
+            <German>Globaler Modus. (Standard: Deaktiviert)</German>
+            <Hungarian>Globális mód beállítása. Alapértelmeyett: Kikapcsolva</Hungarian>
+            <Japanese>グローバル モードの設定。(標準: 無効)</Japanese>
+            <Korean>전체 모드를 사용합니다. 기본값: 사용 안 함</Korean>
+            <French>Mode global. Défaut: Désactivé</French>
+            <Chinesesimp>设定全局的视野模式。预设:关闭</Chinesesimp>
+            <Chinese>設定全局的視野模式。預設:關閉</Chinese>
+            <Italian>Imposta modalità globale. Default: Disabilitato</Italian>
+            <Russian>Общие установки для всех. По умолчанию: Отключено.</Russian>
+            <Turkish>Global modu ayarlar. Varsayılan: Devre Dışı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFoot">
+            <English>(Selective) Foot</English>
+            <Polish>(Tryb selektywny) Piechota</Polish>
+            <German>(Selektiv) zu Fuß</German>
+            <Hungarian>(Szelektív) Gyalogos</Hungarian>
+            <Japanese>(選択性) 地上</Japanese>
+            <Korean>(선택) 보병</Korean>
+            <French>(Sélectif) A pied</French>
+            <Chinesesimp>(可选) 步行</Chinesesimp>
+            <Chinese>(可選) 步行</Chinese>
+            <Italian>(Selettiva) Piedi</Italian>
+            <Russian>(Выборочные) Пешком</Russian>
+            <Turkish>(Seçilebilir) Ayakta</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFootDesc">
+            <English>Selective mode on Foot. Default: Disabled (Requires Mode: Selective)</English>
+            <Polish>Tryb selektywny piechoty. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
+            <German>Selektiver Modus zu Fuß. (Standard: Deaktiviert, Benötigt Modus: Selektiv)</German>
+            <Hungarian>Szelektív mód Gyalogosan. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Japanese>地上でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Korean>보병 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
+            <French>Mode sélectif hors des véhicules. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
+            <Chinesesimp>设定在步行的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinese>設定在步行的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
+            <Italian>Modalità selettiva su Piedi. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
+            <Russian>Выборочные установки без техники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
+            <Turkish>Ayakta iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveLand">
+            <English>(Selective) Land Vehicles</English>
+            <Polish>(Tryb selektywny) Pojazdy</Polish>
+            <German>(Selektiv) Landfahrzeuge</German>
+            <Hungarian>(Szelektív) Szárazföldi Járművek</Hungarian>
+            <Japanese>(選択性) 地上車両</Japanese>
+            <Korean>(선택) 지상 차량</Korean>
+            <French>(Sélectif) Véhicules terrestres</French>
+            <Chinesesimp>(可选) 陆上载具</Chinesesimp>
+            <Chinese>(可選) 陸上載具</Chinese>
+            <Italian>(Selettiva) Veicoli Terrestri</Italian>
+            <Russian>(Выборочные) Наземная техника</Russian>
+            <Turkish>(Seçilebilir) Kara Araçları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveLandDesc">
+            <English>Selective mode in Land Vehicles. Default: Disabled (Requires Mode: Selective)</English>
+            <Polish>Tryb selektywny pojazdów. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
+            <German>Selektiver Modus in Landfahrzeugen. (Standard: Deaktiviert, Benötigt Modus: Selektiv)</German>
+            <Hungarian>Szelektív mód a Szárazföldi Járművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Japanese>地上車両でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Korean>차량 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
+            <French>Mode sélectif dans les véhicules terrestres. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
+            <Chinesesimp>设定在搭乘陆上载具的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinese>設定在搭乘陸上載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
+            <Italian>Modalità selettiva su Veicoli Terrestri. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
+            <Russian>Выборочные установки для наземной техники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
+            <Turkish>Kara araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAir">
+            <English>(Selective) Air Vehicles</English>
+            <Polish> (Tryb selektywny) Lotnictwo</Polish>
+            <German>(Selektiv) Luftfahrzeuge</German>
+            <Hungarian>(Szelektív) Légijárművek</Hungarian>
+            <Japanese>(選択性) 航空機</Japanese>
+            <Korean>(선택) 항공기</Korean>
+            <French>(Sélectif) Véhicules aériens</French>
+            <Chinesesimp>(可选) 空中载具</Chinesesimp>
+            <Chinese>(可選) 空中載具</Chinese>
+            <Italian>(Selettiva) Veicolo Aerei</Italian>
+            <Russian>(Выборочные) Авиатехника</Russian>
+            <Turkish>(Seçilebilir) Hava Araçları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAirDesc">
+            <English>Selective mode in Air Vehicles. Default: Disabled (Requires Mode: Selective)</English>
+            <Polish>Tryb selektywny lotnictwa. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
+            <German>Selektiver Modus in Luftfahrzeugen. (Standard: Deaktiviert, Benötigt Modus: Selektiv)</German>
+            <Hungarian>Szelektív mód a Légijárművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Japanese>航空機でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Korean>항공기 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
+            <French>Mode sélectif dans les véhicules aériens. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
+            <Chinesesimp>设定在搭乘空中载具的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinese>設定在搭乘空中載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
+            <Italian>Modalità selettiva su Veicoli Aerei. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
+            <Russian>Выборочные установки для авиатехники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
+            <Turkish>Hava araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveSea">
+            <English>(Selective) Sea Vehicles</English>
+            <Polish>(Tryb selektywny) Jednostki pływające</Polish>
+            <German>(Selektiv) Wasserfahrzeuge</German>
+            <Hungarian>(Szelektív) Vízi Járművek</Hungarian>
+            <Japanese>(選択性) 船舶</Japanese>
+            <Korean>(선택) 함선</Korean>
+            <French>(Sélectif) Véhicules marins</French>
+            <Chinesesimp>(可选) 水上载具</Chinesesimp>
+            <Chinese>(可選) 水上載具</Chinese>
+            <Italian>(Selettiva) Veicoli Marittimi</Italian>
+            <Russian>(Выборочные) Водный транспорт</Russian>
+            <Turkish>(Seçilebilir) Deniz Araçları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveSeaDesc">
+            <English>Selective mode in Sea Vehicles. Default: Disabled (Requires Mode: Selective)</English>
+            <Polish>Tryb selektywny jednostek pływających. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
+            <German>Selektiver Modus zu Fuß. (Standard: Deaktiviert, Benötigt Modus: Selektiv)</German>
+            <Hungarian>Szelektív mód a Vízi Járművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Japanese>船舶でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Korean>함선 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
+            <French>Mode sélectif dans les véhicules marins. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
+            <Chinesesimp>设定在搭乘水上载具的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinese>設定在搭乘水上載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
+            <Italian>Modalità selettiva su Veicoli Marittimi. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
+            <Russian>Выборочные установки для водного транспорта. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
+            <Turkish>Deniz araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAV">
+            <English>(Selective) UAVs</English>
+            <Polish> (Tryb selektywny) UAV</Polish>
+            <German>(Selektiv) Unbemannte Luftfahrzeuge</German>
+            <Hungarian>(Szelektív) Pilóta Nélüli Légijárművek</Hungarian>
+            <Japanese>(選択性) 無人機</Japanese>
+            <Korean>(선택) 무인기</Korean>
+            <French>(Sélectif) Drones</French>
+            <Chinesesimp>(可选) 无人载具</Chinesesimp>
+            <Chinese>(可選) 無人載具</Chinese>
+            <Italian>(Selettiva) UAV</Italian>
+            <Russian>(Выборочные) Беспиплотники</Russian>
+            <Turkish>(Seçilebilir) IHA'lar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAVDesc">
+            <English>Selective mode in UAVs. Default: Disabled (Requires Mode: Selective)</English>
+            <Polish>Tryb selektywny UAV. Domyślnie: Wyłączony (Wymagany tryb globalny: Selektywny)</Polish>
+            <German>Selektiver Modus in unbemannten Luftfahrzeugen. (Standard: Deaktiviert, Benötigt Modus: Selektiv</German>
+            <Hungarian>Szelektív mód a Pilóta Nélküli Légijárművekben. Alapértelmezett: Kikapcsolva (Mód: Szelektív szükséges)</Hungarian>
+            <Japanese>無人機でのモードを選択します。(標準: 無効化 (要求モード: 選択性)</Japanese>
+            <Korean>무인기 시점. 기본값: 사용 안 함 (모드-선택 필요)</Korean>
+            <French>Mode sélectif dans les drones. Défaut: Désactivé (Nécessite Mode: Sélectif)</French>
+            <Chinesesimp>设定在搭乘无人载具的状况下能使用的视野模式。预设:关闭(需在全局设定中先选择'使用可选设定')</Chinesesimp>
+            <Chinese>設定在搭乘無人載具的狀況下能使用的視野模式。預設:關閉(需在全局設定中先選擇'使用可選設定')</Chinese>
+            <Italian>Modalità selettiva su UAVi. Default: Disabilitato (Necessita della Modalità: Selettiva)</Italian>
+            <Russian>Выборочные установки для беспилотников. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
+            <Turkish>IHA araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_Disabled">
+            <English>Disabled</English>
+            <Polish>Wyłączony</Polish>
+            <German>Deaktiviert</German>
+            <Hungarian>Kikapcsolva</Hungarian>
+            <Japanese>無効</Japanese>
+            <Korean>사용 안 함</Korean>
+            <French>Désactivé</French>
+            <Chinesesimp>关闭</Chinesesimp>
+            <Chinese>關閉</Chinese>
+            <Russian>Отключено</Russian>
+            <Turkish>Devre Dışı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_FirstPerson">
+            <English>Forced 1st Person</English>
+            <Polish>Wymuś 1. osobę</Polish>
+            <German>Erzwungene Egoperspektive</German>
+            <Japanese>1人称視点に強制</Japanese>
+            <Korean>강제 1인칭</Korean>
+            <French>Impose la 1ère personne</French>
+            <Chinesesimp>强制使用第一人称</Chinesesimp>
+            <Chinese>強制使用第一人稱</Chinese>
+            <Russian>От 1-го лица (принудительно)</Russian>
+            <Turkish>1. Kişi Görüşüne Zorla</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_ThirdPerson">
+            <English>Forced 3rd Person</English>
+            <Polish>Wymuś 3. osobę</Polish>
+            <German>Erzwungene Third-Person-Perspektive</German>
+            <Japanese>3人称視点に強制</Japanese>
+            <Korean>강제 3인칭</Korean>
+            <French>Impose la 3ème personne</French>
+            <Chinesesimp>强制使用第三人称</Chinesesimp>
+            <Chinese>強制使用第三人稱</Chinese>
+            <Russian>От 3-го лица (принудительно)</Russian>
+            <Turkish>3. Kişi Görüşüne Zorla</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_Selective">
+            <English>Selective</English>
+            <Polish>Selektywny</Polish>
+            <German>Selektiv</German>
+            <Hungarian>Szelektív</Hungarian>
+            <Japanese>選択性</Japanese>
+            <Korean>선택</Korean>
+            <French>Sélectif</French>
+            <Chinesesimp>使用可选设定</Chinesesimp>
+            <Chinese>使用可選設定</Chinese>
+            <Russian>Выборочный</Russian>
+            <Turkish>Seçilebilinir</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewName">
+            <English>Preserve view for vehicle types</English>
+            <German>Behalte die Ansicht bei Fahrzeugtypen bei</German>
+            <Russian>Запоминать вид для типов техники</Russian>
+            <Japanese>車両の種類により視点を変更</Japanese>
+            <Chinese>保留載具的視野模式</Chinese>
+            <Chinesesimp>保留载具的视野模式</Chinesesimp>
+            <Polish>Zachowaj ustawienie widoku dla pojazdów</Polish>
+            <Turkish>Araç türleri için görünümü koru</Turkish>
+        </Key>
+        <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewDesc">
+            <English>Switch view on vehicle change to last used in this vehicle type (Requires Mode: Disabled)</English>
+            <German>Wechsel die Ansicht bei Fahrzeugwechsel zu der zuletzt genutzen in diesen Fahrzeugtyp. (Benötigt Modus: Ausgeschaltet)</German>
+            <Russian>Переключать вид при смене техники на последний использованный в данном типе техники (требуется режим: Отключено)</Russian>
+            <Japanese>車両の種類により最後に使用した視点へ切り替え (無効モードでのみ有効)</Japanese>
+            <Chinese>切換到載具時自動切換到上次最後使用的視野模式(需求模式:關閉)</Chinese>
+            <Chinesesimp>切换到载具时自动切换到上次最后使用的视野模式(需求模式:关闭)</Chinesesimp>
+            <Polish>Zmień widok podczas zmiany pojazdu na ustawienie widoku z ostatniego używanego pojazdu tego typu (Wymaga Tryb: Wyłączony</Polish>
+            <Turkish>Araçlar için en son kullanılan bakış  türünü kaydet.</Turkish>
+        </Key>
+    </Package>
+</Project>

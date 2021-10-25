@@ -28,7 +28,7 @@ if (surfaceIsWater _targetPos && {(_targetPos select 2) < 0}) then {
     _targetPos set [2, 0.25];
 };
 
-private _povPos = AGLtoASL (_vehicle modelToWorldVisual (_vehicle selectionPosition _ownerSelection));
+private _povPos = _vehicle modelToWorldVisualWorld (_vehicle selectionPosition _ownerSelection);
 private _povDir = _povPos vectorFromTo _targetPos;
 
 TRACE_4("",_vehicle,_targetObject,_povPos,_povDir);

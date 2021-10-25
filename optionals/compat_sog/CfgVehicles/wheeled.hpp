@@ -16,7 +16,7 @@ class vn_wheeled_m151_base: vn_wheeled_car_base {
 };
 
 // ZIL-157
-class vn_wheeled_z157_base : vn_wheeled_truck_base {
+class vn_wheeled_z157_base: vn_wheeled_truck_base {
     EGVAR(refuel,fuelCapacity) = 150;
 };
 class vn_wheeled_z157_fuel_base: vn_wheeled_z157_base {

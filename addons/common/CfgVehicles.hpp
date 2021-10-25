@@ -121,6 +121,7 @@ class CfgVehicles {
     class Land_HelipadEmpty_F;
     class ACE_LogicDummy: Land_HelipadEmpty_F {
         scope = 1;
+        scopeCurator = 0;
         SLX_XEH_DISABLED = 1;
         author = CSTRING(ACETeam);
         class EventHandlers {

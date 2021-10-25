@@ -23,4 +23,9 @@ class EGVAR(medical,facilities) {
         "RU_WarfareBFieldhHospital",
         "USMC_WarfareBFieldhHospital"
     };
+    GM[] = {
+        "gm_ge_army_shelteraceI_medic",
+        "gm_ge_army_shelteraceII_medic",
+        "gm_gc_army_shelterlakII_medic"
+    };
 };
