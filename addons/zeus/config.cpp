@@ -25,6 +25,7 @@ class CfgPatches {
             QGVAR(moduleTeleportPlayers),
             QGVAR(moduleHeal),
             QGVAR(moduleSuicideBomber),
+            QGVAR(moduleBurn),
             QGVAR(AddFullAceArsenal),
             QGVAR(RemoveFullAceArsenal)
         };
