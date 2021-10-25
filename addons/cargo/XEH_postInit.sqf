@@ -101,8 +101,7 @@ GVAR(objectActions) = [
             {(_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad))]) in [true, 1]} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-            {!((typeOf _target) in ["ACE_Wheel", "ACE_Track"])} && // Exclude Wheel and Track
-            {!(_target iskindOf "Land_CanisterFuel_F")} // Exclude Fuel Canisters
+            {(getNumber ((configOf _target) >> QGVAR(noRename))) == 0}
         }
     ] call EFUNC(interact_menu,createAction),
     [QGVAR(load), localize LSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",

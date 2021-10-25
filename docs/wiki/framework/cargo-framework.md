@@ -32,6 +32,7 @@ class staticBananaLauncher {
     class yourVehicleBaseClass {
         ace_cargo_size = 4;  // Cargo space the object takes
         ace_cargo_canLoad = 1;  // Enables the object to be loaded (1-yes, 0-no)
+        ace_cargo_noRename = 1;  // Blocks renaming object (1-blocked, 0-allowed)
     };
 };
 ```
