@@ -1107,7 +1107,7 @@
             <Japanese>標準時間</Japanese>
             <Spanish>Tiempo por defecto</Spanish>
             <Polish>Domyślny czas</Polish>
-            <German>Standard Zeit</German>
+            <German>Standardmäßige Zeit</German>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_Description">
             <English>Minimum time value (in seconds) for the explosive timer.</English>
