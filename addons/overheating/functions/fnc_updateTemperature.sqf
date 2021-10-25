@@ -35,7 +35,7 @@ _temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUN
 TRACE_1("cooledTo",_temperature);
 // Calculate heating
 // Steel Heat Capacity = 466 J/(Kg.K)
-_temperature = _temperature + _heatIncrement * GVAR(heatCoef) / (_barrelMass * 466);
+_temperature = _temperature + _heatIncrement / (_barrelMass * 466);
 
 // Publish the temperature variable
 [_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
