@@ -22,6 +22,8 @@ if (
     [_unit] call EFUNC(hitreactions,throwWeapon);
 };
 
-private _soundID = floor (1 + random 15);
-private _sound = format [QGVAR(scream_%1), _soundID];
-[QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
+if (_unit isKindOf "CAManBase") then {
+    private _soundID = floor (1 + random 15);
+    private _sound = format [QGVAR(scream_%1), _soundID];
+    [QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
+};
