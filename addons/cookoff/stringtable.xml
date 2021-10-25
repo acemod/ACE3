@@ -166,6 +166,7 @@
             <French>Véhicules - Feu durant l'auto-inflammation</French>
             <Russian>Включить возгорание поеприпасов</Russian>
             <German>Aktiviert Fahrzeug Feuer während des Durchzündens</German>
+            <Polish>Włącz pożar pojazdu podczas samozapłonu</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
             <English>Whether or not vehicles will catch on fire during cook-off</English>
@@ -173,6 +174,7 @@
             <French>Définit si les véhicules prennent feu durant l'auto-inflammation de leurs munitions.</French>
             <Russian>Будет ли техника возгораться при подрыве боеприпасов</Russian>
             <German>Ob Fahrzeuge anfangen zu brennen, während Sie Durchzünden</German>
+            <Polish>Określa, czy pojazdy zapalą się podczas samozapłonu ich amunicji.</Polish>
         </Key>
     </Package>
 </Project>

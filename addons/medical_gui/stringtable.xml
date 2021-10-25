@@ -1137,6 +1137,7 @@
             <Japanese>失血量カラー</Japanese>
             <French>Couleurs des hémorragies</French>
             <German>Farben des Blutverlusstes</German>
+            <Polish>Kolory utraty krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColor_Description">
             <English>Blood Loss Colors, That Used in Medical GUI. 10 Color Gradient.</English>
@@ -1144,6 +1145,7 @@
             <Japanese>医療 GUI 内で失血量を 10 段階のカラーで表します。</Japanese>
             <French>Couleurs utilisées pour afficher les hémorragies dans l'interface médicale. Dégradé de 10 couleurs.</French>
             <German>Blutverlustfarben, die in dem Medizinischen Menü verwendet werden. 10 Farbverlauf.</German>
+            <Polish>Kolory używane do wyświetlania krwawienia w interfejsie medycznym. Gradient 10 kolorów.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColorX_DisplayName">
             <English>Blood Loss Color %1</English>
@@ -1151,6 +1153,7 @@
             <Japanese>失血量カラー %1</Japanese>
             <French>Hémorragies - couleur %1</French>
             <German>Blutverlustfarbe %1</German>
+            <Polish>Krwawienie - kolor %1</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColors">
             <English>Damage Colors</English>
@@ -1158,6 +1161,7 @@
             <Japanese>負傷カラー</Japanese>
             <French>Couleur des dégâts</French>
             <German>Schadensfarben</German>
+            <Polish>Kolory obrażeń</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
             <English>Damage Colors, That Used in Medical GUI. 10 Color Gradient.</English>
@@ -1165,6 +1169,7 @@
             <Japanese>医療 GUI 内で負傷を 10 段階のカラーで表します。</Japanese>
             <French>Couleurs utilisées pour afficher les dégâts dans l'interface médicale. Dégradé de 10 couleurs.</French>
             <German>Schadensfarben, die in dem medizinischen Menü verwendet werden. 10 Farbverlauf.</German>
+            <Polish>Kolory używane do wyświetlania obrażeń w interfejsie medycznym. Gradient 10 kolorów.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColorX_DisplayName">
             <English>Damage Color %1</English>
@@ -1172,6 +1177,7 @@
             <Japanese>負傷カラー %1</Japanese>
             <French>Dégâts - couleur %1</French>
             <German>Schadensfarbe %1</German>
+            <Polish>Obrażenia - kolor %1</Polish>
         </Key>
     </Package>
 </Project>

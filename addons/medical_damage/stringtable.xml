@@ -673,6 +673,7 @@
             <French>Brûlure thermique</French>
             <Russian>Термический ожог</Russian>
             <German>Thermische Verbrennung</German>
+            <Polish>Oparzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
             <English>Minor Thermal Burn</English>
@@ -680,6 +681,7 @@
             <French>Légère brûlure thermique</French>
             <Russian>Незначительный термический ожог</Russian>
             <German>Leichte thermische Verbrennung</German>
+            <Polish>Pomniejsze oparzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
             <English>Medium Thermal Burn</English>
@@ -687,6 +689,7 @@
             <French>Brûlure thermique modérée</French>
             <Russian>Средний термический ожог</Russian>
             <German>Mittlere thermische Verbrennung</German>
+            <Polish>Średnie oparzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
             <English>Major Thermal Burn</English>
@@ -694,6 +697,7 @@
             <French>Sévère brûlure thermique</French>
             <Russian>Сильный термический ожог</Russian>
             <German>Schwere thermische Verbrennung</German>
+            <Polish>Duże oparzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>

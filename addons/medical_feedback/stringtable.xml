@@ -200,6 +200,7 @@
                 <Japanese>骨折/止血帯の表記を有効化</Japanese>
                 <French>Indicateurs de fractures/garrots/attelles</French>
                 <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
+                <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
@@ -207,6 +208,7 @@
                 <Japanese>体勢インジケータに骨折や添え木、止血帯の有無を表示するかどうかを設定できます。</Japanese>
                 <French>Affiche des icônes au niveau de l'indicateur de posture, indiquant si le personnage souffre de fractures ou si des garrots ou des attelles sont appliqués.</French>
                 <German>Aktiviert Indikatoren für Frakturen und angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
+                <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
             </Key>
         </Container>
     </Package>

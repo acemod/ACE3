@@ -7,6 +7,7 @@
             <French>ACE Feu</French>
             <Russian>ACE Возгорание</Russian>
             <German>ACE Feuer</German>
+            <Polish>ACE Ogień</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PatDown">
             <English>Pat Down Fire</English>
@@ -14,6 +15,7 @@
             <French>Éteindre le feu</French>
             <Russian>Потушить</Russian>
             <German>Feuer löschen</German>
+            <Polish>Zgaś ogień</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PerformingPatDown">
             <English>Patting Down Fire</English>
@@ -21,6 +23,7 @@
             <French>Feu en cours d'extinction...</French>
             <Russian>Тушение</Russian>
             <German>Feuer wird gelöscht...</German>
+            <Polish>Gaszenie ognia</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_setting_description">
             <English>Allow units to catch fire</English>
@@ -28,6 +31,7 @@
             <French>Définit si les unités peuvent prendre feu ou non.</French>
             <Russian>Включает возгорание</Russian>
             <German>Erlaubt, dass Einheiten Feuer fangen können</German>
+            <Polish>Zezwól jednostkom na zapalenie się</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_setting_flareEnable">
             <English>Enable fire-flare at night</English>
@@ -35,6 +39,7 @@
             <French>Halo lumineux la nuit</French>
             <Russian>Включает сверкание пламени</Russian>
             <German>Aktiviert Feuerschein bei Nacht.</German>
+            <Polish>Włącza efekt flary od ognia w nocy</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_setting_flareDescription">
             <English>Uses a flare effect to increase fire intensity at night</English>
@@ -42,6 +47,7 @@
             <French>Ajoute un effet de halo lumineux afin d'accroitre l'intensité du feu durant la nuit.</French>
             <Russian>Включает ореол пламени для большей интенсивности ночью</Russian>
             <German>Benutzt einen Leuchtfackel Effekt um die Intensität des Feuers bei Nacht zu verstärken.</German>
+            <Polish>Używa efektu flary, aby zwiększyć jasność w nocy</Polish>
         </Key>
     </Package>
 </Project>

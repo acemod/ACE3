@@ -1481,6 +1481,7 @@
             <French>Les deux</French>
             <Russian>Оба</Russian>
             <German>Beide</German>
+            <Polish>Oba</Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
@@ -1488,6 +1489,7 @@
             <French>Infos supplémentaires de la barre de progression</French>
             <Russian>Дополнительная информация прогресс-бара</Russian>
             <German>Informationen des zusätzlicher fortschrittsbalken</German>
+            <Polish>Dodatkowe informacje na pasku postępu </Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
@@ -1495,6 +1497,7 @@
             <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
             <Russian>Устанавливает дополнительную информацию в прогресс-баре.</Russian>
             <German>Kontrolliert zusätzliche Informationen des fortschrittsbalken</German>
+            <Polish>Kontroluje dodatkowe informacje na pasku postępu.</Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
@@ -1502,6 +1505,7 @@
             <French>Pourcentage</French>
             <Russian>Процент выполнения</Russian>
             <German>Prozent</German>
+            <Polish>Procent</Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
@@ -1509,6 +1513,7 @@
             <French>Temps restant</French>
             <Russian>Времени осталось</Russian>
             <German>Zeit verbleibend</German>
+            <Polish>Pozostały czas</Polish>
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
@@ -1548,6 +1553,7 @@
             <French>Temps restant : %1 s</French>
             <Russian>Оставшееся время: %1s</Russian>
             <German>Zeit übrig %1s</German>
+            <Polish>Pozostały czas: %1s</Polish>
         </Key>
         <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>

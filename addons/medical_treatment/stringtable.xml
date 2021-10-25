@@ -159,6 +159,7 @@
             <French>Soigner les blessures</French>
             <Russian>Очистить рану</Russian>
             <German>Traumata entfernen</German>
+            <Polish>Leczenie ran</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_Description">
             <English>Controls when hitpoint damage from wounds is healed.</English>
@@ -166,6 +167,7 @@
             <French>Définit à quel moment les blessures sont entièrement soignées.</French>
             <Russian>Определяет, когда исцеляется урон от ран.</Russian>
             <German>Steuert, wann Trefferpunktschaden von Wunden geheilt wird.</German>
+            <Polish>Kontroluje kiedy punkty obrażeń od odniesionych ran są w pełni wyleczone.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterBandage">
             <English>After Bandage</English>
@@ -173,6 +175,7 @@
             <French>Après bandage</French>
             <Russian>После перевязки</Russian>
             <German>Nach dem Bandagieren</German>
+            <Polish>Po zabandażowaniu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
             <English>After Stitch</English>
@@ -180,6 +183,7 @@
             <French>Après suture</French>
             <Russian>После наложения швов</Russian>
             <German>Nach dem Nähen</German>
+            <Polish>Po zszyciu</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>

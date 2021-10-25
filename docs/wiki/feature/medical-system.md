@@ -189,7 +189,7 @@ Feel free to tweak the values of the settings to adjust it to your likings.
 
 #### 2.1.1 Preset 1
 
-```c++
+```cpp
 force ace_medical_fatalDamageSource = 1; // Sum of Trauma death condition
 force ace_medical_AIDamageThreshold = 0.2; // Decreased AI damage threshold so AI dies in single headshot and few torso taps depending on vest
 force ace_medical_playerDamageThreshold = 3.5; // Increased damage threshold for players, high caliber weapons should still be fatal
@@ -202,7 +202,7 @@ force ace_medical_statemachine_cardiacArrestTime = 630;
 
 #### 2.1.2 "Basic" Preset
 
-```c++
+```cpp
 force ace_medical_AIDamageThreshold = 0.2; // Decreased AI damage threshold so AI dies in single headshot and few torso taps depending on vest
 force ace_medical_playerDamageThreshold = 3.5; // Increased damage threshold for players, high caliber weapons should still be fatal
 force ace_medical_bleedingCoefficient = 0.25;
@@ -217,7 +217,7 @@ force ace_medical_treatment_advancedMedication = false; // Disabled advanced med
 
 #### 2.1.3 "Advanced" Preset
 
-```c++
+```cpp
 force ace_medical_fractures = 1; // Splints Fully Heal Fractures - set to "2" to keep sprinting disabled after fracture
 force ace_medical_limping = 1; // Limp on Open Wounds
 force ace_medical_spontaneousWakeUpChance = 0.15; // 15% chance of waking up from unconscious after stable
@@ -245,7 +245,7 @@ force ace_medical_treatment_medicSurgicalKit = 1; // Medics can stitch
 
 #### 2.2.1 Preset 1
 
-```c++
+```cpp
 force ace_medical_fatalDamageSource = 1; // Sum of Trauma death condition
 force ace_medical_feedback_painEffectType = 2; // Forced pain effect type to ensure that everyone is handicapped in the same way
 force ace_medical_spontaneousWakeUpChance = 0.15; // don't let players wake up too fast
