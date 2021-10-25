@@ -10,6 +10,7 @@
     "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-sass": "^3.0.2"
+    "grunt-sass": "^3.0.2",
+    "node-sass": "^6.0.1"
   }
 }
