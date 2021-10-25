@@ -42,7 +42,7 @@
             <Polish>Włącz wyrzucanie broni podczas płonięcia</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
-            <English>Makes units throw their weapon out when they're burning.</English>
+            <English>Controls whether units drop their weapons when on fire.</English>
             <Polish>Powoduje że jednostki wyrzucają swoją broń gdy płoną.</Polish>
         </Key>
     </Package>
