@@ -38,6 +38,7 @@ if (_abort) then {
         } else {
             _vanillaInitialSpeed * getNumber(configFile >> "CfgAmmo" >> _ammo >> "tracerEndTime")
         };
+        _maxRange = _maxRange * 1.3; // Adding 30% more to range just to be safe
         uiNamespace setVariable [format[QGVAR(maxRange_%1), _ammo], _maxRange];
     };
     if (ACE_player distance _unit > _maxRange && {ACE_player distance ((getPosASL _unit) vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply _maxRange)) > _maxRange}) exitWith {};
