@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
     // - Post process effect ------------------------------------------------------

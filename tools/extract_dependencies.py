@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
 # Author: Jonpas
-# Extracts dependencies to "docs/_includes/dependencies_list.md" and "docs/_includes/dependenciesx_list.md" for use with Jekyll include statement.
+# Extracts dependencies to "docs/_includes/dependencies_list.md" for use with Jekyll include statement.
 # Use the following line to add dependencies to an ACE3 feature page: {% include dependencies_list.md component="<component>" %}
-# Use the following line to add dependencies to an ACEX feature page: {% include dependenciesx_list.md component="<component>" %}
 
 
 import os
@@ -20,11 +19,10 @@ def main():
     if "--markdown" not in sys.argv:
         print("""
         #############################################
-        # Extract ACE3 and ACEX Module Dependencies #
+        #     Extract ACE3 Module Dependencies      #
         #           (for Jekyll include)            #
         #############################################
         """)
-
 
     # Mod paths
     script_path = os.path.realpath(__file__)
@@ -32,16 +30,9 @@ def main():
     addons_path = os.path.join(project_path, "addons")
     optionals_path = os.path.join(project_path, "optionals")
 
-    if "--acex" in sys.argv:
-        projectx_path = sys.argv[sys.argv.index("--acex") + 1]
-        addonsx_path = os.path.join(projectx_path, "addons")
-        optionalsx_path = os.path.join(projectx_path, "optionals")
-
     # Documentation paths
     include_path = os.path.join(project_path, "docs", "_includes")
     dependencies_path = os.path.join(include_path, "dependencies_list.md")
-    dependenciesx_path = os.path.join(include_path, "dependenciesx_list.md")
-
 
     # Prepare files and paths list
     if not os.path.exists(include_path):
@@ -57,13 +48,6 @@ def main():
     dependencies_path_current = dependencies_path
     addons_path_current = addons_path
 
-    if "--acex" in sys.argv:
-        open(dependenciesx_path, "w", newline="\n").close()
-        if os.path.exists(addonsx_path):
-            addons += [".."] + sorted(next(os.walk(addonsx_path))[1])
-            if os.path.exists(optionalsx_path):
-                addons += ["."] + sorted(next(os.walk(optionalsx_path))[1])
-
     # Iterate through folders in the addons directories
     for folder in addons:
         # Ignore "main" component
@@ -74,14 +58,6 @@ def main():
         if folder == ".":
             if addons_path_current == addons_path:
                 addons_path_current = optionals_path
-            else:
-                addons_path_current = optionalsx_path
-            continue
-
-        # Change to ACEX list on ".." separator
-        if folder == "..":
-            dependencies_path_current = dependenciesx_path
-            addons_path_current = addonsx_path
             continue
 
         # Open config.cpp file and extract dependencies
@@ -126,7 +102,7 @@ def main():
                 file.writelines([jekyll_statement, "\n"])
 
             if "--markdown" not in sys.argv:
-                print("{}: {}".format(folder,data))
+                print("{}: {}".format(folder, data))
             else:
                 print(jekyll_statement)
 

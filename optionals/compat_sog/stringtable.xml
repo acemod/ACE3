@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_SOG">
+        <Key ID="STR_ACE_Compat_SOG_Action_DigIn">
+            <English>Dig in</English>
+            <Polish>Zakop</Polish>
+            <German>Eingraben</German>
+            <Japanese>掘る</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_HE">
+            <English>M49A2 60mm HE</English>
+            <German>M49A2 60mm HE</German>
+            <Japanese>M49A2 60mm りゅう弾</Japanese>
+            <Polish>M49A2 60mm HE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_WP">
+            <English>M302 60mm WP</English>
+            <German>M302 60mm Weißer Phosphor</German>
+            <Japanese>M302 60mm 白リン弾</Japanese>
+            <Polish>M302 60mm WP</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_Lume">
+            <English>M83 60mm Lume</English>
+            <German>M83 60mm Leuchtpatrone</German>
+            <Japanese>M83 60mm 照明弾</Japanese>
+            <Polish>M83 60mm ILUM</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_HE">
+            <English>M374 81mm HE</English>
+            <German>M374 81mm HE</German>
+            <Japanese>M374 81mm りゅう弾</Japanese>
+            <Polish>M374 81mm HE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_WP">
+            <English>M375 81mm WP</English>
+            <German>M375 81mm Weißer Phosphor</German>
+            <Japanese>M375 81mm 白リン弾</Japanese>
+            <Polish>M375 81mm WP</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Lume">
+            <English>M301A3 81mm Lume</English>
+            <German>M301A3 81mm Leuchtpatrone</German>
+            <Japanese>M301A3 81mm 照明弾</Japanese>
+            <Polish>M301A3 81mm ILUM</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Smoke">
+            <English>M57 81mm Smoke</English>
+            <German>M57 81mm Nebelpatrone</German>
+            <Japanese>M57 81mm 発煙弾</Japanese>
+            <Polish>M57 81mm Dymny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_HE">
+            <English>O-832D 82mm HE</English>
+            <German>O-832D 82mm HE</German>
+            <Japanese>O-832D 82mm りゅう弾</Japanese>
+            <Polish>O-832D 82mm HE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_WP">
+            <English>D-832 82mm WP</English>
+            <German>D-832 82mm Weißer Phosphor</German>
+            <Japanese>D-832 82mm 白リン弾</Japanese>
+            <Polish>D-832 82mm WP</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_Lume">
+            <English>S-832S 82mm Lume</English>
+            <German>S-832S 82mm Leuchtpatrone</German>
+            <Japanese>S-832S 82mm 照明弾</Japanese>
+            <Polish>S-832S 82mm ILUM</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_HE">
+            <English>[ACE] M49A2 60mm HE Box</English>
+            <German>[ACE] M49A2 60mm HE Box</German>
+            <Japanese>[ACE] M49A2 60mm りゅう弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia M49A2 60mm HE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_WP">
+            <English>[ACE] M302 60mm WP Box</English>
+            <German>[ACE] M302 60mm Weißer Phosphor Box</German>
+            <Japanese>[ACE] M302 60mm 白リン弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia M302 60mm WP</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_Lume">
+            <English>[ACE] M83 60mm Lume Box</English>
+            <German>[ACE] M83 60mm Leuchtpatrone Box</German>
+            <Japanese>[ACE] M83 60mm 照明弾弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia ILUM M83 60mm</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_HE">
+            <English>[ACE] M374 81mm HE Box</English>
+            <German>[ACE] M374 81mm HE Box</German>
+            <Japanese>[ACE] M374 81mm りゅう弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia M374 81mm HE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_WP">
+            <English>[ACE] M375 81mm WP Box</English>
+            <German>[ACE] M375 81mm Weißer Phosphor Box</German>
+            <Japanese>[ACE] M375 81mm 白リン弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia M375 81mm WP</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_Lume">
+            <English>[ACE] M301A3 81mm Lume Box</English>
+            <German>[ACE] M301A3 81mm Leuchtpatrone Box</German>
+            <Japanese>[ACE] M301A1 81mm 照明弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia M301A3 81mm ILUM</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_Smoke">
+            <English>[ACE] M57 81mm Smoke Box</English>
+            <German>[ACE] M57 81mm Nebelpatrone Box</German>
+            <Japanese>[ACE] M57 81mm 煙幕弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia M57 81mm Dymny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_HE">
+            <English>[ACE] O-832D 82mm HE Box</English>
+            <German>[ACE] O-832D 82mm HE Box</German>
+            <Japanese>[ACE] O-832D 82mm りゅう弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia O-832D 82mm HE</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_WP">
+            <English>[ACE] D-832 82mm WP Box</English>
+            <German>[ACE] D-832 82mm Weißer Phosphor Box</German>
+            <Japanese>[ACE] D-832 82mm 白リン弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia D-832 82mm WP</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_Lume">
+            <English>[ACE] S-832S 82mm Lume Box</English>
+            <German>[ACE] S-832S 82mm Leuchtpatrone Box</German>
+            <Japanese>[ACE] S-832S 82mm 照明弾入り弾薬箱</Japanese>
+            <Polish>[ACE] Skrzynia S-832S 82mm ILUM</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderhole">
+            <English>Dig Spiderhole</English>
+            <German>Schützenloch graben</German>
+            <Japanese>蛸壺壕を掘る</Japanese>
+            <Polish>Wykop Lisią Norę</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeAngled">
+            <English>Dig Spiderhole (Angled Cover)</English>
+            <German>Schützenloch graben (Abgeschrägte Abdeckung)</German>
+            <Japanese>蛸壺壕 (屋根) を掘る</Japanese>
+            <Polish>Wykop Lisią Norę (z dachem)</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeDual">
+            <English>Dig Spiderhole (Dual)</English>
+            <German>Großes Schützenloch graben</German>
+            <Japanese>蛸壺壕 (2人用) を掘る</Japanese>
+            <Polish>Wykop Lisią Norę (podwójną)</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M1919A4">
+            <English>[CSW] M1919A4 Gun Bag</English>
+            <German>[CSW] M1919A4 Waffentasche</German>
+            <Japanese>[CSW] M1919A4 ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na M1919A4</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M1919A6">
+            <English>[CSW] M1919A6 Gun Bag</English>
+            <German>[CSW] M1919A6 Waffentasche</German>
+            <Japanese>[CSW] M1919A6 ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na M1919A6</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M60">
+            <English>[CSW] M60 Gun Bag</English>
+            <German>[CSW] M60 Waffentasche</German>
+            <Japanese>[CSW] M60 ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na M60</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_Shield">
+            <English>[CSW] DShK (Shield) Gun Bag</English>
+            <German>[CSW] DShK (Schutzschild) Waffentasche</German>
+            <Japanese>[CSW] DShK (防盾) ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na DShK (z tarczą) </Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_AA">
+            <English>[CSW] DShK (AA) Gun Bag</English>
+            <German>[CSW] DShK (AA) Waffentasche</German>
+            <Japanese>[CSW] DShK (対空) ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na DShK (AA) </Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_RPD">
+            <English>[CSW] RPD Gun Bag</English>
+            <German>[CSW] RPD Waffentasche</German>
+            <Japanese>[CSW] RPD ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na RPD</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_PK">
+            <English>[CSW] PK Gun Bag</English>
+            <German>[CSW] PK Waffentasche</German>
+            <Japanese>[CSW] PK ガン バッグ</Japanese>
+            <Polish>[CSW] Torba na PK</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M29">
+            <English>[CSW] M29 Mortar Tube</English>
+            <German>[CSW] M29 Mörserrohr</German>
+            <Japanese>[CSW] M29 発射筒</Japanese>
+            <Polish>[CSW] M29 Rura od moździerza</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M2">
+            <English>[CSW] M2 Mortar Tube</English>
+            <German>[CSW] M2 Mörserrohr</German>
+            <Japanese>[CSW] M2 底盤</Japanese>
+            <Polish>[CSW] M2 Rura od moździerza</Polish>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_Type53">
+            <English>[CSW] Type 53 Mortar Tube</English>
+            <German>[CSW] Typ 53 Mörserrohr</German>
+            <Japanese>[CSW] 53 式 発射筒</Japanese>
+            <Polish>[CSW] Type 53 Rura od moździerza</Polish>
+        </Key>
+    </Package>
+</Project>

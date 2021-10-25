@@ -27,7 +27,7 @@ private _timeVarName = format [QGVAR(%1_time), _weapon];
 private _temperature = _unit getVariable [_tempVarName, 0];
 private _lastTime = _unit getVariable [_timeVarName, 0];
 
-private _barrelMass = METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+private _barrelMass = _weapon call FUNC(getBarrelMass);
 
 // Calculate cooling
 _temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUNC(calculateCooling);
@@ -35,7 +35,7 @@ _temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUN
 TRACE_1("cooledTo",_temperature);
 // Calculate heating
 // Steel Heat Capacity = 466 J/(Kg.K)
-_temperature = _temperature + _heatIncrement / (_barrelMass * 466);
+_temperature = _temperature + _heatIncrement * GVAR(heatCoef) / (_barrelMass * 466);
 
 // Publish the temperature variable
 [_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);

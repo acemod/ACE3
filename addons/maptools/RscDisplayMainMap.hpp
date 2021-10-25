@@ -51,7 +51,7 @@ class RscDisplayMainMap {
                             shadow = 0;
                             sizeEx = 0.18;
                         };
-                        class altitude: RscText{
+                        class altitude: RscText {
                             idc = 913591;
                             x = 0.5;
                             y = 0;
@@ -66,7 +66,7 @@ class RscDisplayMainMap {
                             shadow = 0;
                             sizeEx = 0.18;
                         };
-                        class coordinates: RscText{
+                        class coordinates: RscText {
                             idc = 913592;
                             x = 0;
                             y = 0.225;

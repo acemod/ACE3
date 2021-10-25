@@ -5,6 +5,7 @@ group: subNav
 order: 1
 short: wiki
 parent: wiki
+redirect_from: "/wiki/featurex"
 ---
 
     <div class="row">
@@ -19,7 +20,6 @@ parent: wiki
             <nav>
                 <ul>
                     {% assign feature_list = site.pages | sort: "title" %}
-                    {% assign mod = 'ace' %}
                     {% assign group = 'feature' %}
                     {% assign category = 'general' %}
                     {% include feature_list %}
@@ -31,7 +31,6 @@ parent: wiki
             <nav>
                 <ul>
                     {% assign feature_list = site.pages | sort: "title" %}
-                    {% assign mod = 'ace' %}
                     {% assign group = 'feature' %}
                     {% assign category = 'interaction' %}
                     {% include feature_list %}
@@ -43,7 +42,6 @@ parent: wiki
             <nav>
                 <ul>
                     {% assign feature_list = site.pages | sort: "title" %}
-                    {% assign mod = 'ace' %}
                     {% assign group = 'feature' %}
                     {% assign category = 'realism' %}
                     {% include feature_list %}
@@ -55,7 +53,6 @@ parent: wiki
             <nav>
                 <ul>
                     {% assign feature_list = site.pages | sort: "title" %}
-                    {% assign mod = 'ace' %}
                     {% assign group = 'feature' %}
                     {% assign category = 'equipment' %}
                     {% include feature_list %}
