@@ -228,7 +228,7 @@
             <Polish>Umożliwia akcje przy źrodle wody na obiektach terenu.</Polish>
             <Turkish>Varsayılan nesneler için animasyonu etkinleştir</Turkish>
             <Japanese>マップに存在するオブジェクトを水源として動作するよう設定できます。</Japanese>
-            <German>Aktiviert Wasserquellen aktionen für Geländeobjekte.</German>
+            <German>Aktiviert Wasserquellen-Aktionen für Geländeobjekte.</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_AffectAdvancedFatigue_DisplayName">
             <English>Affect Advanced Fatigue</English>
