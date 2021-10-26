@@ -113,7 +113,7 @@
             <Polish>Efekt po utracie znacznej ilości krwi</Polish>
             <Turkish>Düşük Kan Efekt Türü</Turkish>
             <Spanish>Tipo de efecto por volumen bajo de sangre</Spanish>
-            <German>Niedriges Blutvolumen Effekt Typ</German>
+            <German>Effektart für "Niedriges Blutvolumen"</German>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
             <English>Selects the used low blood volume effect type.</English>
