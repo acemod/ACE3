@@ -40,7 +40,7 @@
             <English>Enable/Disable Ammo Removal During Cook-Off</English>
             <Japanese>誘爆後の弾薬処理</Japanese>
             <French>Retirer les munitions durant l'auto-inflammation</French>
-            <German>Aktiviert/Deaktiviert Munitionsentfernung beim Durchzünden</German>
+            <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
             <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
