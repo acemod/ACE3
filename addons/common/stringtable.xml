@@ -550,7 +550,7 @@
             <Japanese>許可するアドオンを定義します。</Japanese>
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
             <Russian>Задать список непроверяемых аддонов.</Russian>
-            <German>Definiert eine Liste von immer erlaubten erweiterungen.</German>
+            <German>Ermöglicht das Erstellen einer Liste von immer erlaubten Erweiterungen.</German>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
