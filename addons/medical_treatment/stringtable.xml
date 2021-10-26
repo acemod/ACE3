@@ -262,7 +262,7 @@
             <Spanish>Tiempo de tratamiento de autoinyección</Spanish>
             <Russian>Время ввода автоинъектора</Russian>
             <Polish>Czas aplikacji autostrzykawki</Polish>
-            <German>Autoinjektor Behandlungszeit</German>
+            <German>Behandlungszeit des Autoinjektors</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
@@ -271,7 +271,7 @@
             <Spanish>Tiempo, en segundos, requerido para administrar medicación utilizando un autoinyectador.</Spanish>
             <Russian>Время, необходимое для введения медикаментов автоинъектором (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny do aplikacji medykamentów za pomocą autostrzykawki.</Polish>
-            <German>Zeit in Sekunden, die Benötigt wird, um Medikamente mittels Autoinjektor zu verabreichen.</German>
+            <German>Zeit in Sekunden, die benötigt wird, um Medikamente mittels Autoinjektor zu verabreichen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
@@ -673,7 +673,7 @@
             <Spanish>Tiempo, en segundos, requerido para suturar una única herida.</Spanish>
             <Russian>Время, необходимое для зашивания одной раны (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na zaszycie pojedyńczej rany.</Polish>
-            <German>Zeit in Sekunden, um eine einzelne Wunde zu Nähen.</German>
+            <German>Zeit in Sekunden, um eine einzelne Wunde zu nähen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -708,7 +708,7 @@
             <Spanish>Permitir bolsa para cuerpos inconsciente</Spanish>
             <Russian>Разрешить упаковывать пациентов без сознания в мешки для трупов</Russian>
             <Polish>Nieprzytomni w worku na ciało</Polish>
-            <German>Erlaube benutzung des Leichensackes auf Bewusstlosen Personen</German>
+            <German>Erlaube Benutzung des Leichensackes mit bewusstlosen Personen</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
@@ -748,7 +748,7 @@
             <French>Lieux perfusions IV</French>
             <Russian>Места введения пакетов внутривенного переливания</Russian>
             <Polish>Miejsca do transfuzji IV</Polish>
-            <German>Orte an denen IV Transfusionen angelegt werden können</German>
+            <German>Orte an denen IV-Transfusionen angelegt werden können</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
@@ -757,7 +757,7 @@
             <French>Définit les lieux où la pose de perfusions est autorisée.</French>
             <Russian>Определяет к каким частям тела разрешено применять пакеты внутренного переливания.</Russian>
             <Polish>Kontroluje w jakich miejscach można robić transfuzje IV.</Polish>
-            <German>Kontrolliert, wo IV Transfusionen durchgeführt werden können.</German>
+            <German>Kontrolliert, wo IV-Transfusionen durchgeführt werden können.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>

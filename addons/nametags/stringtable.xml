@@ -529,7 +529,7 @@
             <Russian>Коэффициент окружающего освещения для меток игроков</Russian>
             <Japanese>環境名札明るさ係数</Japanese>
             <French>Coefficient de luminosité ambiante</French>
-            <German>Spielernamen Hintergrundhelligkeitskoeffizient</German>
+            <German>Spielernamen Umgebungshelligkeitskoeffizient</German>
             <Polish>Współczynnik jasności otoczenia </Polish>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_Description">

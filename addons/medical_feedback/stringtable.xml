@@ -124,7 +124,7 @@
             <Polish>Wybiera efekt ktory będzie pokazywany po utracie znacznej ilości krwi.</Polish>
             <Turkish>Kullanılan düşük kan hacmi efekt türünü seçer.</Turkish>
             <Spanish>Selecciona el tipo de efecto a causa de un volumen bajo de sangre.</Spanish>
-            <German>Wählt den verwendeten Effekttyp für niedriges Blutvolumen. </German>
+            <German>Wählt die verwendete Effektart für niedriges Blutvolumen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
             <English>Color Fading</English>
@@ -207,7 +207,7 @@
                 <Russian>Включает индикацию переломов, наложенных шин и жгутов поверх индикатора положения тела.</Russian>
                 <Japanese>体勢インジケータに骨折や添え木、止血帯の有無を表示するかどうかを設定できます。</Japanese>
                 <French>Affiche des icônes au niveau de l'indicateur de posture, indiquant si le personnage souffre de fractures ou si des garrots ou des attelles sont appliqués.</French>
-                <German>Aktiviert Indikatoren für Frakturen und angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
+                <German>Aktiviert Indikatoren für Frakturen mit angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
                 <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
             </Key>
         </Container>

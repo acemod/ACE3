@@ -672,7 +672,7 @@
             <Japanese>移動速度インジケータを有効化</Japanese>
             <French>Indicateur de vitesse de déplacement</French>
             <Russian>Включить индикатор скорости передвижения</Russian>
-            <German>Aktiviere Bewegungsgeschwindigkeits Indikator</German>
+            <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
