@@ -336,7 +336,7 @@
             <Japanese>このグループ名は既に使われています。</Japanese>
             <French>Ce nom de groupe est déjà attribué.</French>
             <Russian>Данное имя группы уже используется.</Russian>
-            <German>Dieser Gruppenname ist bereits in verwendung.</German>
+            <German>Dieser Gruppenname ist bereits in Verwendung.</German>
             <Polish>Ta nazwa grupy jest już w użyciu.</Polish>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
