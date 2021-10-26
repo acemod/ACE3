@@ -1125,7 +1125,7 @@
             <Japanese>起爆タイマーの最長時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
-            <German>Maximale Zeit (in sekunden) für den Zeitzünder.</German>
+            <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_Description">
             <English>Default time value (in seconds) for the explosive timer.</English>
