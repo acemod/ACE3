@@ -334,6 +334,7 @@ if (_isBurning) exitWith {};
         };
     };
     _unit setVariable [QGVAR(burning), false];
+    _unit setVariable [QGVAR(burnCounter), 0];
 }, {
     // run condition
     true
