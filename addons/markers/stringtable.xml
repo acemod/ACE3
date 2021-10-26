@@ -228,7 +228,7 @@
             <Japanese>タイムスタンプの形式を変更します</Japanese>
             <Spanish>Cambia el formato de marca de tiempo</Spanish>
             <Polish>Zmienia format znacznika czasu</Polish>
-            <German>Zeitstempel Format anpassen</German>
+            <German>Zeitstempel-Format anpassen</German>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
             <English>"HH" - Hour</English>
