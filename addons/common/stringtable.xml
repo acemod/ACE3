@@ -1488,7 +1488,7 @@
             <Japanese>プログレス バー詳細情報</Japanese>
             <French>Infos supplémentaires de la barre de progression</French>
             <Russian>Дополнительная информация прогресс-бара</Russian>
-            <German>Informationen des zusätzlichen Fortschrittsbalkens</German>
+            <German>Zusätzliche Informationen beim Fortschrittsbalken</German>
             <Polish>Dodatkowe informacje na pasku postępu </Polish>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
