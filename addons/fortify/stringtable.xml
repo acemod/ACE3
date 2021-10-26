@@ -51,7 +51,7 @@
             <Russian>Инициализирует систему фортификации с некоторыми базовыми параметрами.&lt;br/&gt;Предустановки взяты из configFile и missionConfigFile, формат смотри на wiki.</Russian>
             <Turkish>Inşa etme sistemini bazı temel parametrelerle başlatır. &lt;br/&gt; Ön ayarlar configFile ve missionConfigFile'dan alınır, format için wiki'ye bakın.</Turkish>
             <Japanese>要塞システムを初期設定に戻します。&lt;br/&gt;プリセットは configfile と missionConfigFile から参照されます。詳細は wiki を参照してください。</Japanese>
-            <German>Initialisiert das Verstärken, mit Grundlegenden Einstellungen &lt;br/&gt;Vorseinstellungen werden aus dem configFile und dem missionConfigFile gezogen, für mehr Informationen: siehe das ACE Wiki.</German>
+            <German>Initialisiert das Verstärken-System, mit grundlegenden Einstellungen &lt;br/&gt;Vorseinstellungen werden aus der configFile und der missionConfigFile gezogen, für mehr Informationen: siehe das ACE Wiki.</German>
         </Key>
         <Key ID="STR_ACE_Fortify_rotate">
             <English>Rotate</English>
