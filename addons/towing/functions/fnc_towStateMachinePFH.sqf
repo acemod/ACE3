@@ -25,10 +25,11 @@ private _exitCondition = !(
     { "" isEqualTo currentWeapon _unit || { _unit call EFUNC(common,isSwimming) }} &&
     { [_unit, objNull, [INTERACTION_EXCEPTIONS]] call EFUNC(common,canInteractWith) } &&
     { "unconscious" isNotEqualTo toLower animationState _unit } &&
-    { !(_unit getVariable ["ACE_isUnconscious", false]) }
+    { !(_unit getVariable ["ACE_isUnconscious", false]) } &&
+    { ACE_player == _unit }
 );
 
-if (_exitCondition && _state < TOW_STATE_CANCEL) then {
+if (_exitCondition && {_state < TOW_STATE_CANCEL}) then {
     _state = TOW_STATE_CANCEL;
 };
 

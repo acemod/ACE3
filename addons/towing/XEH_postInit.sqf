@@ -7,13 +7,6 @@ GVAR(mouseRight) = false;
 GVAR(cancel) = false;
 GVAR(canAttach) = false;
 
-if (hasInterface) then {
-    // Cancel rope attachment on certain conditions
-    ["unit", { GVAR(cancel) = true; }] call CBA_fnc_addPlayerEventHandler;
-    ["vehicle", { GVAR(cancel) = true; }] call CBA_fnc_addPlayerEventHandler;
-    ["ace_unconscious", { GVAR(cancel) = true; }] call CBA_fnc_addEventHandler;
-};
-
 [QGVAR(setTowParent), {
     params ["_parent", "_child"];
     _child setTowParent _parent;
