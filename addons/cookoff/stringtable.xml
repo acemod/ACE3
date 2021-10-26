@@ -173,7 +173,7 @@
             <Japanese>誘爆により車両が炎上するかどうかを設定します。</Japanese>
             <French>Définit si les véhicules prennent feu durant l'auto-inflammation de leurs munitions.</French>
             <Russian>Будет ли техника возгораться при подрыве боеприпасов</Russian>
-            <German>Ob Fahrzeuge anfangen zu brennen, während Sie Durchzünden</German>
+            <German>Ob Fahrzeuge in Brand gesetzt werden, während deren Munition durchzündet.</German>
             <Polish>Określa, czy pojazdy zapalą się podczas samozapłonu ich amunicji.</Polish>
         </Key>
     </Package>
