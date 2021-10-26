@@ -219,7 +219,7 @@
             <Japanese>タイムスタンプ形式</Japanese>
             <Spanish>Formato de marca de tiempo</Spanish>
             <Polish>Format znacznika czasu</Polish>
-            <German>Zeitstempel Format</German>
+            <German>Format des Zeitstempels</German>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
             <English>Changes the timestamp format</English>
