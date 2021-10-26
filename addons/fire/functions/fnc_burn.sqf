@@ -162,7 +162,7 @@ if (_isBurning) exitWith {};
                         [QGVAR(burn), [ace_player, _intensity * (7 / 8), _instigator]] call CBA_fnc_globalEvent;
                     };
                 } else {
-                    if ((ace_player isKindOf "Man") && { !(_unit isEqualTo ace_player) }) then {
+                    if ((ace_player isKindOf "Man") && { !(_unit isEqualTo ace_player) } && isDamageAllowed ace_player) then {
                         private _burnCounter = ace_player getVariable [QGVAR(burnCounter), 0];
                         if (_distanceToUnit < BURN_PROPOGATE_DISTANCE) then {
                             if (_burnCounter < BURN_PROPOGATE_COUNTER_MAX) then {
