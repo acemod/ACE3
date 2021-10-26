@@ -33,7 +33,7 @@
             <English>Removes all vehicle ammo after cook-off</English>
             <Japanese>誘爆後は車両から全ての弾薬を削除します。</Japanese>
             <French>Retire toutes les munitions des véhicules après une auto-inflammation.</French>
-            <German>Entfernt die gesammte Munition nach Durchzünden des Fahrzeuges.</German>
+            <German>Entfernt die gesamte Munition nach dem Durchzünden der Munition eines Fahrzeuges.</German>
             <Polish>Usuwa całą amunicję z pojazdu po samozapłonie</Polish>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_enable">
