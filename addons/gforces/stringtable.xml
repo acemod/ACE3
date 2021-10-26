@@ -76,7 +76,7 @@
             <Japanese>G 効果がプレイヤーに与える影響量を設定できます。</Japanese>
             <Turkish>Oyuncuları etkileyen G-Force'un gücünü kontrol eder.</Turkish>
             <Spanish>Controla la intensidad de fuerza G que afecta a los jugadores.</Spanish>
-            <German>Bestimmt die Stärke der G-Kräfte Beinflussung von Spielern. </German>
+            <German>Bestimmt, wie stark G-Kräfte Spieler beeinflussen.</German>
         </Key>
     </Package>
 </Project>
