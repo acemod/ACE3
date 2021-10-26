@@ -299,7 +299,7 @@
             <Japanese>プレイヤーが行うマップ ジェスチャーをカメラから確認できる最大範囲を設定します。</Japanese>
             <Spanish>Máxima distancia entre una cámara y los jugadores para mostrar el indicador de gestos en mapa</Spanish>
             <Polish>Maksymalny zasięg pomiędzy kamerą a graczami do pokazania gestów na mapie</Polish>
-            <German>Maximale Reichweite, in der eine Kamera das Kartenzeigen der Spieler zeigt</German>
+            <German>Maximale Reichweite, in der eine Kamera das Kartenzeichen der Spieler zeigt</German>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowSpectator_displayName">
             <English>Allow Spectator</English>
