@@ -281,7 +281,7 @@
             <Japanese>友軍ユニットのみからジェスチャーを表示します。</Japanese>
             <Spanish>Muestra únicamente gestos de las unidades que son del mismo bando o de un bando aliado</Spanish>
             <Polish>Pokazuj tylko Gesty od jednostek z tej samej lub sojuszniczej strony</Polish>
-            <German>Nur Gesten von Einheiten der Selben oder einer Verbündeten Seite zeigen.</German>
+            <German>Nur Gesten von Einheiten der selben oder einer verbündeten Seite zeigen.</German>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_displayName">
             <English>Max range Camera</English>
