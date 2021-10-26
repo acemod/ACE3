@@ -317,7 +317,7 @@
             <Japanese>スペクテイターからマップ ジェスチャーを表示できるようにします。</Japanese>
             <Spanish>Permitir al espectador ver los gestos de mapa</Spanish>
             <Polish>Zezwól Obserwatorowi widzieć Gesty na mapie</Polish>
-            <German>Erlaube, dass Zuschauer das Kartenzeigen sehen können</German>
+            <German>Erlaube, dass Zuschauer das Kartenzeichen sehen können</German>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_allowCurator_displayName">
             <English>Allow Curator</English>
