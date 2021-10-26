@@ -335,7 +335,7 @@
             <Japanese>キュレーターからマップ ジェスチャーを表示できるようにします。</Japanese>
             <Spanish>Permitir al Curador ver los gestos de mapa</Spanish>
             <Polish>Zezwól Zeusowi widzieć gesty na mapie</Polish>
-            <German>Erlaube Zeus, das Kartenzeigen zu sehen</German>
+            <German>Erlaube, dass Zeus das Kartenzeichen sehen kann</German>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_displayName">
             <English>Briefing Mode</English>
