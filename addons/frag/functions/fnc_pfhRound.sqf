@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params ["_round", "_lastPos", "_lastVel", "_shellType", "_firedFrame", "_gun", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
+params ["_round", "_lastPos", "_lastVel", "_shellType", "_firedFrame", "_gunPos", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
 
 if (_round in GVAR(blackList)) exitWith {
     false
@@ -28,9 +28,9 @@ if (!alive _round) exitWith {
                 // shotbullet, shotShell don't seem to explode when touching water, so don't create frags
                 if (((_lastPos select 2) < 0) && {(toLower getText (configFile >> "CfgAmmo" >> _shellType >> "simulation")) in ["shotbullet", "shotshell"]}) exitWith {};
                 private _isArmed = true;
-                if (!isNil "_gun") then {
+                if (!isNil "_gunPos") then {
                     private _fuseDist = getNumber(configFile >> "CfgAmmo" >> _shellType >> "fuseDistance");
-                    _isArmed = ((getPosASL _gun) distance _lastPos > _fuseDist);
+                    _isArmed =  (_gunPos distance _lastPos > _fuseDist);
                     TRACE_2("",_fuseDist,_isArmed);
                 };
                 if (!_isArmed) exitWith {TRACE_1("round not armed",_this);};
