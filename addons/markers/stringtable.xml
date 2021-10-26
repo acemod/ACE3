@@ -273,7 +273,7 @@
             <Japanese>タイムスタンプ時刻形式</Japanese>
             <Spanish>Formato de hora de marca de tiempo</Spanish>
             <Polish>Format Godzinnych znaczników czasu</Polish>
-            <German>Zeitstempel Stundenformat</German>
+            <German>Zeitstempel-Stundenformat</German>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat24">
             <English>24-Hour Clock</English>
