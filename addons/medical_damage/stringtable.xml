@@ -746,7 +746,7 @@
             <French>Blessure mortelle - Chance de décès</French>
             <Polish>Szana na śmierć przy śmiertelej ranie</Polish>
             <Japanese>致命傷による死亡確率</Japanese>
-            <German>Todeswahrscheinlichkeit bei tödlichen Verletzungen</German>
+            <German>Tödliche Verletzung - Wahrscheinlichkeit des Todes</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
