@@ -163,7 +163,7 @@ if (_isBurning) exitWith {};
                     };
                 } else {
                     if ((ace_player isKindOf "Man") && { !(_unit isEqualTo ace_player) } && isDamageAllowed ace_player) then {
-                        private _burnCounter = ace_player getVariable [QGVAR(burnCounter), 0];
+                        private _burnCounter = _unit getVariable [QGVAR(burnCounter), 0];
                         if (_distanceToUnit < BURN_PROPOGATE_DISTANCE) then {
                             if (_burnCounter < BURN_PROPOGATE_COUNTER_MAX) then {
                                 _burnCounter = _burnCounter + 1;
@@ -173,7 +173,7 @@ if (_isBurning) exitWith {};
                         } else {
                             _burnCounter = 0;
                         };
-                        ace_player setVariable [QGVAR(burnCounter), _burnCounter];
+                        _unit setVariable [QGVAR(burnCounter), _burnCounter];
                     };
                 };
             };
