@@ -196,7 +196,7 @@
             <Polish>Akcje przy źrodle wody</Polish>
             <Turkish>Su Içme Animasyonu</Turkish>
             <Japanese>水源動作</Japanese>
-            <German>Wasserquellen Aktion</German>
+            <German>Wasserquellen-Aktionen</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_Description">
             <English>Controls what actions are available on water sources.</English>
