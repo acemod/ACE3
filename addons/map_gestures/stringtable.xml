@@ -344,7 +344,7 @@
             <Japanese>ブリーフィング モード</Japanese>
             <Spanish>Modo de briefing</Spanish>
             <Polish>Tryb Odprawy</Polish>
-            <German>Briefing Modus</German>
+            <German>Briefing-Modus</German>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_briefingMode_description">
             <English>What player can see what</English>
