@@ -204,7 +204,7 @@
             <Polish>Kontroluje jakie akcje są dostępne przy źrodle wody.</Polish>
             <Turkish>Su içerken hangi animasyonu yapacağını belirler</Turkish>
             <Japanese>水源で可能な動作を設定します。</Japanese>
-            <German>Bestimmt, welche Aktionen auf Wasserquellen verfügbar sind.</German>
+            <German>Bestimmt, welche Aktionen an Wasserquellen verfügbar sind.</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RefillOnly">
             <English>Refill Only</English>
