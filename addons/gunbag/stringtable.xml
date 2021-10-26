@@ -93,7 +93,7 @@
             <Japanese>持っている武器とガンバッグ内の武器を交換できるようにします。</Japanese>
             <Turkish>Etkileşimin doğrudan birincil silahı ve depolanan silahı değiştirmesine izin verir.</Turkish>
             <Spanish>Permitir interacción para intercambiar el arma principal y el arma guardada.</Spanish>
-            <German>Erlaube den direkten wechsel von Primärer und verstauter Waffe über das Interaktionsmenü.</German>
+            <German>Erlaube den direkten Wechsel von Primärer und verstauter Waffe über das Interaktionsmenü.</German>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
