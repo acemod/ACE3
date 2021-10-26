@@ -6,6 +6,7 @@ PREP(canCheckSpareBarrelsTemperatures);
 PREP(checkSpareBarrelsTemperatures);
 PREP(checkTemperature);
 PREP(clearJam);
+PREP(cookoffWeapon);
 PREP(coolWeaponWithItem);
 PREP(coolWeaponWithWaterSource);
 PREP(displayTemperature);
