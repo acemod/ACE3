@@ -8,7 +8,7 @@
             <French>Blessures de collision (véhicules)</French>
             <Polish>Włącz obrażenia od kolizji pojazdu</Polish>
             <Japanese>車両衝突ダメージを有効化</Japanese>
-            <German>Aktiviere verletzungen durch Fahrzeugunfälle</German>
+            <German>Aktiviere Verletzungen durch Fahrzeugunfälle</German>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_Description">
             <English>Controls whether crew receives damage from vehicle collisions.</English>
