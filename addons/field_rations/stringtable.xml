@@ -220,7 +220,7 @@
             <Polish>Akcje Objektu terenu</Polish>
             <Turkish>Varsayılan Nesne Animasyonu</Turkish>
             <Japanese>マップ オブジェクト動作</Japanese>
-            <German>Geländeobjekt Aktionen</German>
+            <German>Geländeobjekt-Aktionen</German>
         </Key>
         <Key ID="STR_ACE_Field_Rations_TerrainObjectActions_Description">
             <English>Enables water source actions for terrain objects.</English>
