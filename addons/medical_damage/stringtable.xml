@@ -755,7 +755,7 @@
             <French>La probabilité de mourir lors d'une "blessure mortelle".\nUne blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
             <Polish>Szansa na śmierć po otrzymaniu śmiertelnej rany.</Polish>
             <Japanese>致命傷による死亡確率を設定します。</Japanese>
-            <German>Die Wahrscheinlichkeit, an einer tödlichen Verletzung zu sterben.</German>
+            <German>Die Wahrscheinlichkeit, an einer eigentlich tödlichen Verletzung zu sterben.</German>
         </Key>
     </Package>
 </Project>
