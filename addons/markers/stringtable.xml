@@ -33,7 +33,7 @@
             <French>Clic droit pour réinitialiser</French>
             <Japanese>右クリックでリセット</Japanese>
             <Polish>Naciśnij PPM żeby zresetować</Polish>
-            <German>Rechte Maustaste zum Zurücksetzten</German>
+            <German>Rechte Maustaste zum Zurücksetzen</German>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
