@@ -616,7 +616,7 @@
             <Japanese>爆発物を投てき仕様へ交換できるようにします。</Japanese>
             <Spanish>Permitir convertir explosivos a lanzables</Spanish>
             <Polish>Zezwala na konwersje ładunków wybuchowych na rzucane wersje</Polish>
-            <German>Erlaube die Umwandlung von Sprengstoffen in Werfbare Ladungen</German>
+            <German>Erlaube die Umwandlung von Sprengstoffen in werfbare Ladungen</German>
         </Key>
     </Package>
 </Project>
