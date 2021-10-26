@@ -290,7 +290,7 @@
             <Japanese>カメラ最大範囲</Japanese>
             <Spanish>Máximo alcance de cámara</Spanish>
             <Polish>Maksymalny zasięg kamery</Polish>
-            <German>Maximale Reichweite Kamera</German>
+            <German>Maximale Kamerareichweite</German>
         </Key>
         <Key ID="STR_ACE_Map_Gestures_maxRangeCamera_description">
             <English>Max range between a Camera and players to show the map gesture indicator</English>
