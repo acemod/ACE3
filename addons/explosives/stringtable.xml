@@ -1116,7 +1116,7 @@
             <Japanese>起爆タイマーの最低時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
-            <German>Minimale Zeit (in sekunden) für den Zeitzünder.</German>
+            <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
             <English>Maximum time value (in seconds) for the explosive timer.</English>
