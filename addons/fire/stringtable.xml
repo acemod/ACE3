@@ -46,7 +46,7 @@
             <Japanese>夜間に火災の強さを上昇させるフレア効果を有効化します。</Japanese>
             <French>Ajoute un effet de halo lumineux afin d'accroitre l'intensité du feu durant la nuit.</French>
             <Russian>Включает ореол пламени для большей интенсивности ночью</Russian>
-            <German>Benutzt einen Leuchtfackel Effekt um die Intensität des Feuers bei Nacht zu verstärken.</German>
+            <German>Benutzt einen Feuerschein-Effekt um die Intensität des Feuers bei Nacht zu verstärken.</German>
             <Polish>Używa efektu flary, aby zwiększyć jasność w nocy</Polish>
         </Key>
     </Package>
