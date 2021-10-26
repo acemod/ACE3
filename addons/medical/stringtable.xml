@@ -228,7 +228,7 @@
             <Polish>Prawdopodobieństwo złamania kości w wyniku rany mogącej powodować złamania.</Polish>
             <Turkish>Yaraya neden olan bir kırığın kırılma olasılığı.</Turkish>
             <Spanish>La probabilidad de que una herida que pueda provocar una fractura, provoque una fractura.</Spanish>
-            <German>Die Wahrscheinlichkeit, dass eine Fraktur eine Wunde verursacht, die zu einer Fraktur führt.</German>
+            <German>Die Wahrscheinlichkeit, dass eine Wunde, die eine Fraktur verursachen würde, tatsächlich zu einer Fraktur führt.</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
