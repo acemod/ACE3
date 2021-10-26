@@ -45,10 +45,8 @@
                 params ["_vehicle", "_turret"];
 
                 {
-                    if (_vehicle in curatorEditableObjects _x) then {
-                        _x addCuratorEditableObjects [[_turret], false];
-                    };
-                } forEach allCurators;
+                    _x addCuratorEditableObjects [[_turret], false];
+                } forEach (objectCurators _vehicle);
             }] call CBA_fnc_addEventHandler;
         };
     };
