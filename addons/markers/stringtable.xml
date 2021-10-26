@@ -192,7 +192,7 @@
             <Japanese>マーカーへ自動的にタイムスタンプを付与するかどうかを設定できます。</Japanese>
             <Spanish>Permitir que las marcas de tiempo sean automáticamente aplicadas a los marcadores</Spanish>
             <Polish>Zezwól na automatyczne stosowanie znaczników czasu do markerów</Polish>
-            <German>Ob Zeitstempel Automatisch auf Maker angewendet werden sollen.</German>
+            <German>Ob Zeitstempel automatisch auf Maker angewendet werden sollen.</German>
         </Key>
         <Key ID="STR_ACE_Markers_Timestamp">
             <English>Timestamp</English>
