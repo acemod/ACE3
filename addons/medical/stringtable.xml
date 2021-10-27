@@ -204,7 +204,7 @@
             <Spanish>Las férulas sanan, pero no pueden trotar</Spanish>
             <Russian>Шины вылечивают, но не дают бежать трусцой</Russian>
             <Polish>Szyny leczą, ale uniemożliwiają trucht</Polish>
-            <German>Schiene heilen, aber deaktivieren das Sprinten</German>
+            <German>Schiene heilt, aber verhindert Sprinten</German>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
