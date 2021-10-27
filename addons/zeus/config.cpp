@@ -88,6 +88,11 @@ class CfgPatches {
             QGVAR(RemoveFullAceArsenal)
         };
     };
+    class GVAR(fire): ADDON {
+        units[] = {
+            QGVAR(moduleBurn)
+        };
+    };
 };
 
 class ACE_Curator {
@@ -99,6 +104,7 @@ class ACE_Curator {
     GVAR(fastroping) = "ace_fastroping";
     GVAR(pylons) = "ace_pylons";
     GVAR(arsenal) = "ace_arsenal";
+    GVAR(fire) = "ace_fire";
 };
 
 #include "CfgFactionClasses.hpp"
