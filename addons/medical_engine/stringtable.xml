@@ -17,7 +17,7 @@
             <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident.</French>
             <Polish>Kontroluje czy załoga pojazdu otrzyma obrażenia podczas kolizji pojazdu.</Polish>
             <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを決定します。</Japanese>
-            <German>Kontrolliert, ob Besatzung Schaden durch Unfälle erleiden soll</German>
+            <German>Kontrolliert, ob Besatzung eines Fahrzeugs Schaden durch Unfälle erleiden soll</German>
         </Key>
     </Package>
 </Project>
