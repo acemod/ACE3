@@ -66,7 +66,7 @@
             <Japanese>G 効果係数</Japanese>
             <Turkish>G-Kuvvet Katsayısı</Turkish>
             <Spanish>Coeficiente de Fuerza G</Spanish>
-            <German>G-Kräfte Koeffizient</German>
+            <German>G-Kräfte-Koeffizient</German>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_Description">
             <English>Controls strength of G-Force affecting players.</English>
