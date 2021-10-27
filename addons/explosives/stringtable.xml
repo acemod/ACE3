@@ -1134,7 +1134,7 @@
             <Japanese>起爆タイマーの標準時間 (秒) を設定します。</Japanese>
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
-            <German>Standardmäßige Zeit (in sekunden) für den Zeitzünder.</German>
+            <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>
         </Key>
     </Package>
 </Project>
