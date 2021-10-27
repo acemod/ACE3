@@ -428,17 +428,5 @@
             <Chinese>ACE 地圖指示器</Chinese>
             <Turkish>ACE Harita Hareketleri</Turkish>
         </Key>
-        <Key ID="STR_ACE_Map_Gestures_mapGestures_subcategory_colors">
-            <English>Colors</English>
-            <Czech>Barvy</Czech>
-            <French>Couleurs</French>
-            <German>Farben</German>
-            <Italian>Colori</Italian>
-            <Polish>Kolory</Polish>
-            <Portuguese>Cores</Portuguese>
-            <Russian>Цвета</Russian>
-            <Spanish>Colores</Spanish>
-            <Japanese>色</Japanese>
-        </Key>
     </Package>
 </Project>

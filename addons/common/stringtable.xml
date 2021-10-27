@@ -677,6 +677,18 @@
             <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色</Chinese>
             <Chinesesimp>设定ACE提示文字的颜色。若提示字体并无指定其他颜色，将会自动选用ACE系统的预设颜色。</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Common_subcategory_colors">
+            <English>Colors</English>
+            <Czech>Barvy</Czech>
+            <French>Couleurs</French>
+            <German>Farben</German>
+            <Italian>Colori</Italian>
+            <Polish>Kolory</Polish>
+            <Portuguese>Cores</Portuguese>
+            <Russian>Цвета</Russian>
+            <Spanish>Colores</Spanish>
+            <Japanese>色</Japanese>
+        </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
             <English>Persistent weapon laserpointer/flashlight</English>
             <Russian>Автоматический ЛЦУ/тактический фонарь</Russian>
@@ -1280,6 +1292,9 @@
             <Chinese>ACE 載具按鍵</Chinese>
             <Chinesesimp>ACE 载具按键</Chinesesimp>
             <Turkish>ACE Araçlar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_categoryUncategorized">
+            <English>ACE Uncategorized</English>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>

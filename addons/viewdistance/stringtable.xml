@@ -118,6 +118,9 @@
             <Chinesesimp>玩家的视距限制可在此设定，也可透过模块改写</Chinesesimp>
             <Chinese>玩家的視距限制可在此設定，也可透過模塊改寫</Chinese>
         </Key>
+        <Key ID="STR_ACE_ViewDistance_sliderExtraDescription">
+            <English>Setting to 0 will use default video settings</English>
+        </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
             <Polish>Zasięg widzenia (piechota)</Polish>

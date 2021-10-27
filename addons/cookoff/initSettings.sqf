@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_cookoff]:
-
 [
     QGVAR(enable), "LIST",
     [LSTRING(enable_hd_name), LSTRING(enable_hd_tooltip)],
