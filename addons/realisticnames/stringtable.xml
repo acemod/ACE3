@@ -1331,6 +1331,7 @@
             <Spanish>Carga de demolición M183 (Lanzable)</Spanish>
             <Russian>M183 Комплектный подрывной заряд (Бросаемый)</Russian>
             <Polish>Ładunek burzący M183 (Rzucany)</Polish>
+            <German>M183 Geballte Sprengladung (Werfbar)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1357,6 +1358,7 @@
             <Spanish>Bloque de demolición M112 (Lanzable)</Spanish>
             <Russian>M112 подрывной заряд (Бросаемый)</Russian>
             <Polish>Ładunek burzący M112 (Rzucany)</Polish>
+            <German>M112 Sprengladung (Werfbar)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -3912,6 +3914,7 @@
             <Czech>ELCAN SpecterOS (Zelený Hex)</Czech>
             <Turkish>ELCAN SpecterOS (Yeşil Hex)</Turkish>
             <Spanish>ELCAN SpecterOS (Verde Hex)</Spanish>
+            <German>ELCAN SpecterOS (Hex Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_2d">
             <English>ELCAN SpecterOS (2D)</English>
@@ -3948,30 +3951,35 @@
             <Polish>ELCAN SpecterOS (Leśny)</Polish>
             <French>ELCAN SpecterOS (Forêt)</French>
             <Japanese>ELCAN SpecterOS (緑地)</Japanese>
+            <German>ELCAN SpecterOS (Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
             <Polish>ELCAN SpecterOS (Jałowy)</Polish>
             <French>ELCAN SpecterOS (Désert)</French>
             <Japanese>ELCAN SpecterOS (乾燥地帯)</Japanese>
+            <German>ELCAN SpecterOS (Trocken)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
             <Polish>ELCAN SpecterOS 7.62 (Czarny)</Polish>
             <French>ELCAN SpecterOS 7.62 (Noire)</French>
             <Japanese>ELCAN SpecterOS 7.62 (ブラック)</Japanese>
+            <German>ELCAN SpecterOS 7.62 (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
             <Polish>ELCAN SpecterOS 7.62 (Leśny)</Polish>
             <French>ELCAN SpecterOS 7.62 (Forêt)</French>
             <Japanese>ELCAN SpecterOS 7.62 (緑地)</Japanese>
+            <German>ELCAN SpecterOS 7.62 (Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
             <Polish>ELCAN SpecterOS 7.62 (Jałowy)</Polish>
             <French>ELCAN SpecterOS 7.62 (Désert)</French>
             <Japanese>ELCAN SpecterOS 7.62 (乾燥地帯)</Japanese>
+            <German>ELCAN SpecterOS 7.62 (Trocken)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4031,6 +4039,7 @@
             <Czech>Nightforce NXS</Czech>
             <Turkish>Nightforce NXS</Turkish>
             <Spanish>Nightforce NXS</Spanish>
+            <German>Nightforce NXS</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
@@ -4045,6 +4054,7 @@
             <Czech>Nightforce NXS (Zelený Hex)</Czech>
             <Turkish>Nightforce NXS (Yeşil Hex)</Turkish>
             <Spanish>Nightforce NXS (Verde Hex)</Spanish>
+            <German>Nightforce NXS (Hex Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -4074,6 +4084,7 @@
             <Czech>Nightforce NXS (2D)</Czech>
             <Turkish>Nightforce NXS (2D)</Turkish>
             <Spanish>Nightforce NXS (2D)</Spanish>
+            <German>Nightforce NXS (2D)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_pip">
             <English>Nightforce NXS (PIP)</English>
@@ -4088,6 +4099,7 @@
             <Czech>Nightforce NXS (PIP)</Czech>
             <Turkish>Nightforce NXS (PIP)</Turkish>
             <Spanish>Nightforce NXS (PIP)</Spanish>
+            <German>Nightforce NXS (BIB)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -4102,6 +4114,7 @@
             <Czech>US Optics MR-10 (Černá)</Czech>
             <Turkish>US Optics MR-10 (Siyah)</Turkish>
             <Spanish>US Optics MR-10 (Negra)</Spanish>
+            <German>US Optics MR-10 (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -4116,6 +4129,7 @@
             <Czech>US Optics MR-10 (Khaki)</Czech>
             <Turkish>US Optics MR-10 (Haki)</Turkish>
             <Spanish>US Optics MR-10 (Caqui)</Spanish>
+            <German>US Optics MR-10 (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -4130,6 +4144,7 @@
             <Czech>US Optics MR-10 (Písková)</Czech>
             <Turkish>US Optics MR-10 (Kum)</Turkish>
             <Spanish>US Optics MR-10 (Arena)</Spanish>
+            <German>US Optics MR-10 (Sand)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -4144,6 +4159,7 @@
             <Czech>KAHLES Helia (Černá)</Czech>
             <Turkish>KAHLES Helia (Siyah)</Turkish>
             <Spanish>KAHLES Helia (Negra)</Spanish>
+            <German>KAHLES Helia (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -4158,6 +4174,7 @@
             <Czech>KAHLES Helia (Hex)</Czech>
             <Turkish>KAHLES Helia (Hex)</Turkish>
             <Spanish>KAHLES Helia (Hex)</Spanish>
+            <German>KAHLES Helia (Hex)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -4172,6 +4189,7 @@
             <Czech>KAHLES Helia (Stará)</Czech>
             <Turkish>KAHLES Helia (Eski)</Turkish>
             <Spanish>KAHLES Helia (Vieja)</Spanish>
+            <German>KAHLES Helia (Alt)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -4186,6 +4204,7 @@
             <Czech>KAHLES Helia (Žlutohnědá)</Czech>
             <Turkish>KAHLES Helia (Tan)</Turkish>
             <Spanish>KAHLES Helia (Tan)</Spanish>
+            <German>KAHLES Helia (Tan)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
@@ -4200,6 +4219,7 @@
             <Czech>Burris XTR II</Czech>
             <Turkish>Burris XTR II</Turkish>
             <Spanish>Burris XTR II</Spanish>
+            <German>Burris XTR II</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
@@ -4214,18 +4234,21 @@
             <Czech>Burris XTR II (Zelený Hex)</Czech>
             <Turkish>Burris XTR II (Yeşil Hex)</Turkish>
             <Spanish>Burris XTR II (Verde Hex)</Spanish>
+            <German>Burris XTR II (Hex Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
             <English>Burris XTR II (Old)</English>
             <Polish>Burris XTR II (Stary)</Polish>
             <French>Burris XTR II (Usée)</French>
             <Japanese>Burris XTR II (使い古し)</Japanese>
+            <German>Burris XTR II (Alt)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
             <Polish>Burris XTR II (ASP-1 Kir)</Polish>
             <French>Burris XTR II (ASP-1 Kir)</French>
             <Japanese>Burris XTR II (ASP-1 Kir)</Japanese>
+            <German>Burris XTR II (ASP-1 Kir)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4277,12 +4300,14 @@
             <Polish>EOTech XPS3 (Leśny)</Polish>
             <French>EOTech XPS3 (Forêt)</French>
             <Japanese>EOTech XPS3 (緑地)</Japanese>
+            <German>EOTech XPS3 (Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
             <Polish>EOTech XPS3 (Jałowy)</Polish>
             <French>EOTech XPS3 (Désert)</French>
             <Japanese>EOTech XPS3 (乾燥地帯)</Japanese>
+            <German>EOTech XPS3 (Trocken)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4342,6 +4367,7 @@
             <Czech>IOR-Valdada Pitbull 2</Czech>
             <Turkish>IOR-Valdada Pitbull 2</Turkish>
             <Spanish>IOR-Valdada Pitbull 2</Spanish>
+            <German>IOR-Valdada Pitbull 2</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_2d">
             <English>IOR-Valdada Pitbull 2 (2D)</English>
@@ -4356,6 +4382,7 @@
             <Czech>IOR-Valdada Pitbull 2 (2D)</Czech>
             <Turkish>IOR-Valdada Pitbull 2 (2D)</Turkish>
             <Spanish>IOR-Valdada Pitbull 2 (2D)</Spanish>
+            <German>IOR-Valdada Pitbull 2 (2D)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_pip">
             <English>IOR-Valdada Pitbull 2 (PIP)</English>
@@ -4370,6 +4397,7 @@
             <Czech>IOR-Valdada Pitbull 2 (PIP)</Czech>
             <Turkish>IOR-Valdada Pitbull 2 (PIP)</Turkish>
             <Spanish>IOR-Valdada Pitbull 2 (PIP)</Spanish>
+            <German>IOR-Valdada Pitbull 2 (BIB)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -4384,6 +4412,7 @@
             <Czech>Burris FastFire 2</Czech>
             <Turkish>Burris FastFire 2</Turkish>
             <Spanish>Burris FastFire 2</Spanish>
+            <German>Burris FastFire 2</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>

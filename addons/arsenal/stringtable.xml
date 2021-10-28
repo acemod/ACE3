@@ -422,6 +422,7 @@
             <Spanish>Ordenar por protección balística</Spanish>
             <Russian>Сортировка по баллистической защите</Russian>
             <Polish>Sortuj po ochronie balistycznej</Polish>
+            <German>Nach ballistischem Schutz sortieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByProtectionExplosive">
             <English>Sort by explosive protection</English>
@@ -430,6 +431,7 @@
             <Spanish>Ordenar por protección de explosivos</Spanish>
             <Russian>Сортировка по защите от взрывов</Russian>
             <Polish>Sortuj po ochronie przeciw wybuchom</Polish>
+            <German>Nach Explosionsschutz sortieren</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonShareTooltip">
             <English>Share or stop sharing the selected loadout</English>
@@ -1386,6 +1388,7 @@
             <Polish>Opoźnienie zapalnika</Polish>
             <Japanese>信管設定時間</Japanese>
             <Spanish>Tiempo de espoleta</Spanish>
+            <German>Detonationsverzögerung</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
