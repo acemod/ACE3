@@ -26,8 +26,8 @@ private _memPointsActions = [];
 //Get the offset for a memory point:
 private _fnc_getMemPointOffset = {
     params ["_memoryPoint"];
-    _memPointIndex = _memPoints find _memoryPoint;
-    _actionOffset = [0,0,0];
+    private _memPointIndex = _memPoints find _memoryPoint;
+    private _actionOffset = [0,0,0];
     if (_memPointIndex == -1) then {
         _memPoints pushBack _memoryPoint;
         _memPointsActions pushBack [];
@@ -82,7 +82,7 @@ for "_index" from 0 to ((count _configPath) - 1) do {
     private _actionStatement = getText (_actionPath >> "statement");
     private _actionMaxDistance = getNumber (_actionPath >> "radius");
 
-    if (_actionDisplayName == "") then {_actionDisplayName = (configName _x);};
+    if (_actionDisplayName == "") then {_actionDisplayName = configName _actionPath;};
     if (_actionPosition == "") then {ERROR("Bad Position");};
     if (_actionCondition == "") then {_actionCondition = "true";};
     if (_actionStatement == "") then {ERROR("No Statement");};
@@ -91,12 +91,12 @@ for "_index" from 0 to ((count _configPath) - 1) do {
     _actionCondition = compile _actionCondition;
     _actionMaxDistance = _actionMaxDistance + 0.1; //increase range slightly
 
-    private _iconImage = ((_actionDisplayNameDefault regexFind ["[\w\-\\\/]+.paa/gi", 0]) param [0, [""]]) select 0;
+    private _iconImage = ((_actionDisplayNameDefault regexFind ["[\w\-\\\/]+.paa/gi", 0]) param [0, []]) param [0, []] param [0, ""];
 
     private _actionOffset = [_actionPosition] call _fnc_getMemPointOffset;
     private _memPointIndex = _memPoints find _actionPosition;
 
-    _action = [(configName _actionPath), _actionDisplayName, _iconImage, _fnc_userAction_Statement, _fnc_userAction_Condition, {}, [_actionStatement, _actionCondition], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
+    private _action = [(configName _actionPath), _actionDisplayName, _iconImage, _fnc_userAction_Statement, _fnc_userAction_Condition, {}, [_actionStatement, _actionCondition], _actionOffset, _actionMaxDistance, [false,false,false,false,true]] call EFUNC(interact_menu,createAction);
     (_memPointsActions select _memPointIndex) pushBack _action;
 };
 
