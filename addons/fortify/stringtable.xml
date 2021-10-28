@@ -51,6 +51,7 @@
             <Russian>Инициализирует систему фортификации с некоторыми базовыми параметрами.&lt;br/&gt;Предустановки взяты из configFile и missionConfigFile, формат смотри на wiki.</Russian>
             <Turkish>Inşa etme sistemini bazı temel parametrelerle başlatır. &lt;br/&gt; Ön ayarlar configFile ve missionConfigFile'dan alınır, format için wiki'ye bakın.</Turkish>
             <Japanese>要塞システムを初期設定に戻します。&lt;br/&gt;プリセットは configfile と missionConfigFile から参照されます。詳細は wiki を参照してください。</Japanese>
+            <German>Initialisiert das Verstärken-System, mit grundlegenden Einstellungen &lt;br/&gt;Vorseinstellungen werden aus der configFile und der missionConfigFile gezogen, für mehr Informationen: siehe das ACE Wiki.</German>
         </Key>
         <Key ID="STR_ACE_Fortify_rotate">
             <English>Rotate</English>
@@ -162,6 +163,7 @@
             <Russian>Малый</Russian>
             <Turkish>Küçük</Turkish>
             <Japanese>小型</Japanese>
+            <German>Klein</German>
         </Key>
         <Key ID="STR_ACE_Fortify_smallGreen">
             <English>Small (Green)</English>
@@ -169,6 +171,7 @@
             <Polish>Małe (Zielone)</Polish>
             <Turkish>Küçük (Yeşil)</Turkish>
             <Japanese>小型 (グリーン)</Japanese>
+            <German>Klein (Grün)</German>
         </Key>
         <Key ID="STR_ACE_Fortify_medium">
             <English>Medium</English>
@@ -176,6 +179,7 @@
             <Russian>Средний</Russian>
             <Turkish>Orta</Turkish>
             <Japanese>中型</Japanese>
+            <German>Mittel</German>
         </Key>
         <Key ID="STR_ACE_Fortify_mediumGreen">
             <English>Medium (Green)</English>
@@ -183,6 +187,7 @@
             <Polish>Średnie (Zielone)</Polish>
             <Turkish>Orta (Yeşil)</Turkish>
             <Japanese>中型 (グリーン)</Japanese>
+            <German>Mittel (Grün)</German>
         </Key>
         <Key ID="STR_ACE_Fortify_big">
             <English>Big</English>
@@ -190,6 +195,7 @@
             <Russian>Большой</Russian>
             <Turkish>Büyük</Turkish>
             <Japanese>大型</Japanese>
+            <German>Groß</German>
         </Key>
         <Key ID="STR_ACE_Fortify_bigGreen">
             <English>Big (Green)</English>
@@ -197,6 +203,7 @@
             <Russian>Большой (Зеленый)</Russian>
             <Turkish>Büyük (Yeşil)</Turkish>
             <Japanese>大型 (グリーン)</Japanese>
+            <German>Groß (Grün)</German>
         </Key>
     </Package>
 </Project>

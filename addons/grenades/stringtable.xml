@@ -528,6 +528,7 @@
             <Japanese>梱包爆薬 (投てき仕様)</Japanese>
             <Spanish>Carga de mochila explosiva (Lanzable)</Spanish>
             <Polish>Pakiet ładunków wybuchowych (Rzucany)</Polish>
+            <German>Rucksackladung (Werfbar)</German>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
@@ -536,6 +537,7 @@
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
             <Spanish>Tipo: Carga&lt;br /&gt;Unidades: 1&lt;br /&gt;Usada: Cosas que necesitan morir</Spanish>
             <Polish>Typ: Ładunek&lt;br/&gt;Naboje: 1&lt;br/&gt;Użycie: Na rzeczach które mają zginąć</Polish>
+            <German>Typ: Ladung &lt;br/&gt;Patronen:1&lt;br/&gt;Benutzt für: Dinge die Sterben müssen</German>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
@@ -544,6 +546,7 @@
             <Japanese>投げられる梱包爆薬。起爆までの時間は 7 秒間</Japanese>
             <Spanish>Carga de mochila explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
             <Polish>Rzucany pakiet ładunków wybuchowych. 7 sekundowy zapalnik</Polish>
+            <German>Werfbare Rucksackladung. 7 Sekunden Zeitzünder</German>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
@@ -552,6 +555,7 @@
             <Japanese>爆薬ブロック (投てき仕様)</Japanese>
             <Spanish>Carga explosiva (Lanzable)</Spanish>
             <Polish>Ładunek wybuchowy (Rzucany)</Polish>
+            <German>Sprengladung (Werfbar)</German>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
@@ -560,6 +564,7 @@
             <Japanese>投げられる爆薬ブロック。起爆までの時間は 7 秒間</Japanese>
             <Spanish>Carga explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
             <Polish>Rzucany ładunkek wybuchowy. 7 sekundowy zapalnik</Polish>
+            <German>Werfbare Sprengladung. 7 Sekunden Zeitzünder</German>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
@@ -568,6 +573,7 @@
             <Japanese>短信管へ変更</Japanese>
             <Spanish>Convertir a espoleta corta</Spanish>
             <Polish>Konwertuj na krótki zapalnik</Polish>
+            <German>Zündschnur verkürzen</German>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
@@ -576,6 +582,7 @@
             <Japanese>短信管を削除</Japanese>
             <Spanish>Quitar espoleta corta</Spanish>
             <Polish>Usuń krótki zapalnik</Polish>
+            <German>Kurze Zündschnur entfernen</German>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -600,6 +607,7 @@
             <Japanese>爆薬変更を許可</Japanese>
             <Spanish>Permitir conversión de explosivos</Spanish>
             <Polish>Pozwól na konwersję ładunków wybuchowych</Polish>
+            <German>Erlaube die Umwandlung von Sprengstoffen</German>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
@@ -608,6 +616,7 @@
             <Japanese>爆発物を投てき仕様へ交換できるようにします。</Japanese>
             <Spanish>Permitir convertir explosivos a lanzables</Spanish>
             <Polish>Zezwala na konwersje ładunków wybuchowych na rzucane wersje</Polish>
+            <German>Erlaube die Umwandlung von Sprengstoffen in werfbare Ladungen</German>
         </Key>
     </Package>
 </Project>
