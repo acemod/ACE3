@@ -24,6 +24,6 @@ TRACE_3("Starting timer",_explosive,_delay,_trigger);
     params ["_explosive", "_trigger"];
     TRACE_1("Explosive detonating from timer",_explosive);
     if (!isNull _explosive) then {
-        [_explosive, -1, [_explosive, 0], _trigger] call FUNC(detonateExplosive);
+        [player, -1, [_explosive, 0], _trigger] call FUNC(detonateExplosive);
     };
 }, [_explosive, _trigger], _delay] call CBA_fnc_waitAndExecute;
