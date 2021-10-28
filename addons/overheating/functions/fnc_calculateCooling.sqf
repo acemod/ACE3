@@ -19,7 +19,7 @@
 
 params ["_temperature", "_barrelMass", "_totalTime"];
 
-// The lowest temperaure a weapon can reach is the ambient air temperature.
+// The lowest temperature a weapon can reach is the ambient air temperature.
 private _ambientTemperature = ambientTemperature select 0;
 
 // If a long time passed since the last shot, there's no need to calculate anything; the weapon should be cool
