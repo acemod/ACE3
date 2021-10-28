@@ -32,7 +32,7 @@ if (_speedLimit != 0) exitWith { TRACE_1("speed limit set by external source",_s
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
-GVAR(speedLimit) = speed _vehicle max 5;
+GVAR(speedLimit) = round (speed _vehicle max 5);
 
 [{
     params ["_args", "_idPFH"];
@@ -57,7 +57,7 @@ GVAR(speedLimit) = speed _vehicle max 5;
     };
 
     getCruiseControl _vehicle params ["_currentSpeedLimit"];
-    if (_currentSpeedLimit != GVAR(speedLimit)) then {
+    if (round _currentSpeedLimit != GVAR(speedLimit)) then {
         _vehicle setCruiseControl [GVAR(speedLimit), false];
     };
 
