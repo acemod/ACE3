@@ -26,8 +26,11 @@ private _tempVarName = format [QGVAR(%1_temp), _weapon];
 private _timeVarName = format [QGVAR(%1_time), _weapon];
 private _temperature = _unit getVariable [_tempVarName, 0];
 private _lastTime = _unit getVariable [_timeVarName, 0];
-
 private _barrelMass = _weapon call FUNC(getBarrelMass);
+
+// keep track of weapons that have heat, so they can be set to ambient temperaure on killed/respawn
+private _trackedWeapons = _unit getVariable [QGVAR(trackedWeapons), []];
+_unit setVariable [QGVAR(trackedWeapons), _trackedWeapons pushBackUnique _tempVarName];
 
 // Calculate cooling
 _temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUNC(calculateCooling);
@@ -39,6 +42,7 @@ _temperature = _temperature + _heatIncrement / (_barrelMass * 466);
 
 // Publish the temperature variable
 [_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
+
 // Store the update time locally
 _unit setVariable [_timeVarName, CBA_missionTime];
 
