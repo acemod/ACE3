@@ -42,11 +42,13 @@ GVAR(speedLimit) = round (speed _vehicle max 5);
         private _uavControll = UAVControl _vehicle;
         if ((_uavControll select 0) != _driver || _uavControll select 1 != "DRIVER") then {
             GVAR(isSpeedLimiter) = false;
+            TRACE_1("UAV driver changed, disabling speedlimit",_vehicle);
             _vehicle setCruiseControl [0, false];
         };
     } else {
         if (_driver != driver _vehicle) then {
             GVAR(isSpeedLimiter) = false;
+            TRACE_3("Vehicle driver changed, disabling speedlimit",_driver,driver _vehicle,_vehicle);
             _vehicle setCruiseControl [0, false];
         };
     };
@@ -58,6 +60,7 @@ GVAR(speedLimit) = round (speed _vehicle max 5);
 
     getCruiseControl _vehicle params ["_currentSpeedLimit"];
     if (round _currentSpeedLimit != GVAR(speedLimit)) then {
+        TRACE_2("Updating speed limit",GVAR(speedLimit),_vehicle);
         _vehicle setCruiseControl [GVAR(speedLimit), false];
     };
 
