@@ -29,7 +29,7 @@ TRACE_9("cooking off",_vehicle,_intensity,_instigator,_smokeDelayEnabled,_ammoDe
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _vehicle setVariable [QGVAR(isCookingOff), true, true];
 
-// limit maximum value of intensity
+// limit maximum value of intensity to prevent very long cook-off times
 _intensity = _intensity min _maxIntensity;
 
 private _config = _vehicle call CBA_fnc_getObjectConfig;
