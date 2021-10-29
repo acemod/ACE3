@@ -127,7 +127,6 @@ GVAR(objectActions) = [
     ] call EFUNC(interact_menu,createAction)
 ];
 
-private _unloadAllVehiclesAction = configFile >> "CfgActions" >> "UnloadAllVehicles";
 {
     [_x, "InitPost", {
         params ["_vehicle"];
@@ -136,13 +135,13 @@ private _unloadAllVehiclesAction = configFile >> "CfgActions" >> "UnloadAllVehic
             "",
             FUNC(unloadAllVehicles),
             nil,
-            getNumber (_unloadAllVehiclesAction >> "priority"),
+            3,
             false,
             true,
-            getText (_unloadAllVehiclesAction >> "shortcut"),
+            "",
             '[_target, _this] call FUNC(canShowUnloadAllVehicles)'
         ];
-        _vehicle setUserActionText [_actionID, localize "STR_A3_ACTION_UNLOAD_ALL_VEHICLES", getText (_unloadAllVehiclesAction >>  "textDefault")];
+        _vehicle setUserActionText [_actionID, localize "STR_A3_ACTION_UNLOAD_ALL_VEHICLES", "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\unloadAllVehicles_ca.paa' size='1.8' shadow=2 />"];
         _vehicle setVariable [QGVAR(unloadAllVehiclesAction), _actionID];
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 } forEach ["LandVehicle", "Ship", "Air"];
