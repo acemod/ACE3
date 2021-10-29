@@ -80,7 +80,7 @@ if (_ammoTemperature > (GUNPOWDER_IGNITION_TEMP * GVAR(cookoffCoef))) then {
         {
             params ["_unit", "_muzzleCache", "_mode", "_muzzle"];
 
-            // fire the cookoff 
+            // fire the cookoff
             _unit forceWeaponFire [_muzzle, _mode];
 
             // switch back to the cached muzzle if required

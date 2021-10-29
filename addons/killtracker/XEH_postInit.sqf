@@ -21,7 +21,7 @@ if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "
 };
 
 private _global = missionNamespace getVariable [QGVAR(globalSync), false];  // Global Sync (e.g. for spectator)
-INFO_1("Running Kill Tracking [Global: %1]",_global); 
+INFO_1("Running Kill Tracking [Global: %1]",_global);
 
 // Variables:
 GVAR(eventsArray) = [];

@@ -88,7 +88,7 @@ private _damageColors = [
 
 {
     [
-        format ["%1_%2", QGVAR(bloodLossColor), _forEachIndex], 
+        format ["%1_%2", QGVAR(bloodLossColor), _forEachIndex],
         "COLOR",
         [format [localize LSTRING(BloodLossColorX_DisplayName), _forEachIndex], LSTRING(BloodLossColor_Description)],
         [ELSTRING(medical,Category), LSTRING(BloodLossColors)],

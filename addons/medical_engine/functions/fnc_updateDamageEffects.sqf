@@ -35,8 +35,8 @@ if (EGVAR(medical,fractures) > 0) then {
     if (EGVAR(medical,fractures) in [2, 3]) then { // the limp with a splint will still cause effects
         // Block sprint / force walking based on fracture setting and leg splint status
         private _hasLegSplint = (_fractures select 4) == -1 || {(_fractures select 5) == -1};
-        if (EGVAR(medical,fractures) == 2) then { 
-            [_unit, "blockSprint", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set); 
+        if (EGVAR(medical,fractures) == 2) then {
+            [_unit, "blockSprint", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
         } else {
             [_unit, "forceWalk", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
         };

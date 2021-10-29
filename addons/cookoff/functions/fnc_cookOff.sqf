@@ -39,7 +39,7 @@ if (_positions isEqualTo []) then {
         if (_pos isEqualTo [0, 0, 0]) exitWith {};
         _positions pushBack _x;
     } forEach DEFAULT_COMMANDER_HATCHES;
-    
+
     if (_positions isEqualTo []) then {
         _positions pushBack "#noselection";
     };
@@ -64,15 +64,15 @@ if (_smokeDelayEnabled) then {
             [QGVAR(cleanupEffects), [_vehicle, _smokeEffects]] call CBA_fnc_globalEvent;
             _vehicle setVariable [QGVAR(isCookingOff), false, true];
             [_pfh] call CBA_fnc_removePerFrameHandler;
-            
+
             if (_detonateAfterCookoff) then {
                 _vehicle setDamage 1;
             };
         };
-        
+
         private _lastFlameTime = _vehicle getVariable [QGVAR(lastFlame), 0];
         private _nextFlameTime = _vehicle getVariable [QGVAR(nextFlame), 0];
-        
+
         // Wait until we are ready for the next flame
         // dt = Tcurrent - Tlast
         // dt >= Tnext
@@ -81,39 +81,39 @@ if (_smokeDelayEnabled) then {
             if (!_ring && _intensity >= 2) then {
                 _ring = (0.7 > random 1);
             };
-            
+
             if !(_canRing) then {
                 _ring = false;
             };
-        
+
             private _time = linearConversion [0, 10, _intensity, 3, 20] + random COOKOFF_TIME;
-            
+
             if (_fireSource isEqualTo "") then {
                 _fireSource = selectRandom _positions;
             };
-            
+
             [QGVAR(cookOffEffect), [_vehicle, true, _ring, _time, _fireSource]] call CBA_fnc_globalEvent;
-            
+
             _intensity = _intensity - (0.5 max random 1);
             _vehicle setVariable [QGVAR(intensity), _intensity];
             _vehicle setVariable [QGVAR(lastFlame), CBA_missionTime];
             _vehicle setVariable [QGVAR(nextFlame), _time + (MIN_TIME_BETWEEN_FLAMES max random MAX_TIME_BETWEEN_FLAMES)];
-            
+
             {
                 [QEGVAR(fire,burn), [_x, _intensity * 1.5, _instigator]] call CBA_fnc_globalEvent;
             } forEach crew _vehicle
         };
-        
+
         if (_ammoDetonationChance > random 1) then {
             private _lastExplosiveDetonationTime = _vehicle getVariable [QGVAR(lastExplosiveDetonation), 0];
             private _nextExplosiveDetonation = _vehicle getVariable [QGVAR(nextExplosiveDetonation), 0];
-                        
+
             if ((CBA_missionTime - _lastExplosiveDetonationTime) > _nextExplosiveDetonation) then {
                 if (_fireSource isEqualTo "") then {
                     _fireSource = selectRandom _positions;
                 };
                 createVehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld (_vehicle selectionPosition _fireSource)), [], 0 , "CAN_COLLIDE"];
-                
+
                 _vehicle setVariable [QGVAR(lastExplosiveDetonation), CBA_missionTime];
                 _vehicle setVariable [QGVAR(nextExplosiveDetonation), random 60];
             };

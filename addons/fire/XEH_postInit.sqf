@@ -22,7 +22,7 @@
 
             [GVAR(fireSources), _key, [_fireLogic, _radius, _intensity, _condition, _conditionArgs]] call CBA_fnc_hashSet;
         }] call CBA_fnc_addEventHandler;
-        
+
         [QGVAR(removeFireSource), {
             params ["_key"];
             [GVAR(fireSources), _key] call CBA_fnc_hashRem;

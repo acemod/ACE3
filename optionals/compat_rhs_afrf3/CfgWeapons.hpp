@@ -125,7 +125,7 @@ class CfgWeapons {
     class rhs_tsh4: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
-    
+
     class rhs_6b48: H_HelmetB {
         HEARING_PROTECTION_VICCREW
     };
@@ -337,7 +337,7 @@ class CfgWeapons {
         modes[] = {};
         picture = "\rhsafrf\addons\rhs_heavyweapons\data\ico\rhs_Kornet_9M133_2_msv_ca.paa";
     };
-    
+
     class rhs_uniform_flora;
     class rhs_uniform_df15: rhs_uniform_flora {
         ACE_GForceCoef = 0.8;

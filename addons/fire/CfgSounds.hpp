@@ -6,7 +6,7 @@ class GVAR(DOUBLES(scream,no)) { \
     sound[] = {QUOTE(PATHTOF(CONCAT(sounds\scream,no).ogg)), db + 8, 1};\
     titles[] = {}; \
 }
-    
+
 class CfgSounds {
     CREATE_SCREAM(1);
     CREATE_SCREAM(2);
