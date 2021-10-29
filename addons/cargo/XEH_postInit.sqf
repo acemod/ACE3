@@ -127,20 +127,24 @@ GVAR(objectActions) = [
     ] call EFUNC(interact_menu,createAction)
 ];
 
-GVAR(unloadAllVehiclesAction) = [
-    QGVAR(unloadAllvehicles), localize "STR_A3_ACTION_UNLOAD_ALL_VEHICLES", "\A3\Ui_f\data\IGUI\Cfg\Actions\unloadAllVehicles_ca.paa",
-    {
-        params ["_target"];
-        [_target] call FUNC(unloadAllVehicles);
-    },
-    {
-        params ["_target", "_player"];
-        [_target, _player] call FUNC(canShowUnloadAllVehicles);
-    }
-] call EFUNC(interact_menu,createAction);
-
+private _unloadAllVehiclesAction = configFile >> "CfgActions" >> "UnloadAllVehicles";
 {
-    [_x, 1, ["ACE_SelfActions"], GVAR(unloadAllVehiclesAction), true] call EFUNC(interact_menu,addActionToClass);
+    [_x, "InitPost", {
+        params ["_vehicle"];
+
+        private _actionID = _vehicle addAction [
+            "",
+            FUNC(unloadAllVehicles),
+            nil,
+            getNumber (_unloadAllVehiclesAction >> "priority"),
+            false,
+            true,
+            getText (_unloadAllVehiclesAction >> "shortcut"),
+            '[_target, _this] call FUNC(canShowUnloadAllVehicles)'
+        ];
+        _vehicle setUserActionText [_actionID, localize "STR_A3_ACTION_UNLOAD_ALL_VEHICLES", getText (_unloadAllVehiclesAction >>  "textDefault")];
+        _vehicle setVariable [QGVAR(unloadAllVehiclesAction), _actionID];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 } forEach ["LandVehicle", "Ship", "Air"];
 
 // find all remaining configured classes and init them, see XEH_preStart.sqf
