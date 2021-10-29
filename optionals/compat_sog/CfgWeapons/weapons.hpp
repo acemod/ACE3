@@ -1,11 +1,19 @@
 
 class vn_rifle;
+class vn_m63a_lmg: vn_rifle {
+    EGVAR(overheating,closedBolt) = 0;
+    EGVAR(overheating,allowSwapBarrel) = 1;
+};
 class vn_lmg: vn_rifle {
     EGVAR(overheating,closedBolt) = 0;
 };
-class vn_m63a_lmg: vn_rifle {
-    EGVAR(overheating,closedBolt) = 0;
+class vn_pk: vn_lmg {
+    EGVAR(overheating,allowSwapBarrel) = 1;
 };
+class vn_m60: vn_lmg {
+    EGVAR(overheating,allowSwapBarrel) = 1;
+};
+
 class vn_smg: vn_rifle {
     EGVAR(overheating,closedBolt) = 0;
 };

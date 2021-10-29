@@ -204,6 +204,7 @@
             <Spanish>Las férulas sanan, pero no pueden trotar</Spanish>
             <Russian>Шины вылечивают, но не дают бежать трусцой</Russian>
             <Polish>Szyny leczą, ale uniemożliwiają trucht</Polish>
+            <German>Schiene heilt, aber verhindert Sprinten</German>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_DisplayName">
             <English>Fracture Chance</English>
@@ -215,6 +216,7 @@
             <Polish>Szansa na złamanie</Polish>
             <Turkish>Kırılma Şansı</Turkish>
             <Spanish>Probabilidad de fractura</Spanish>
+            <German>Wahrscheinlichkeit einer Fraktur</German>
         </Key>
         <Key ID="STR_ACE_Medical_FractureChance_Description">
             <English>The probability of a fracture causing wound resulting in a fracture.</English>
@@ -226,6 +228,7 @@
             <Polish>Prawdopodobieństwo złamania kości w wyniku rany mogącej powodować złamania.</Polish>
             <Turkish>Yaraya neden olan bir kırığın kırılma olasılığı.</Turkish>
             <Spanish>La probabilidad de que una herida que pueda provocar una fractura, provoque una fractura.</Spanish>
+            <German>Die Wahrscheinlichkeit, dass eine Wunde, die eine Fraktur verursachen würde, tatsächlich zu einer Fraktur führt.</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>

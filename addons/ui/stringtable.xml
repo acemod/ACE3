@@ -164,6 +164,7 @@
             <French>Filigrane version de développement</French>
             <Polish>Znak wodny wersji deweloperskiej</Polish>
             <Japanese>開発版ウォーターマーク</Japanese>
+            <German>Wasserzeichen für Entwicklungsversion</German>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -671,6 +672,7 @@
             <Japanese>移動速度インジケータを有効化</Japanese>
             <French>Indicateur de vitesse de déplacement</French>
             <Russian>Включить индикатор скорости передвижения</Russian>
+            <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
@@ -678,6 +680,7 @@
             <Japanese>プレイヤー キャラの移動速度を表示します。</Japanese>
             <French>Affiche un indicateur permettant de visualiser la vitesse de déplacement du personnage.</French>
             <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
+            <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
         </Key>
     </Package>
 </Project>

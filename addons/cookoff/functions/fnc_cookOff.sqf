@@ -20,6 +20,9 @@ params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled
 
 if (GVAR(enable) == 0) exitWith {};
 if !(GVAR(enableFire)) exitWith {};
+if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] in [0, false]) exitWith {};
+if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] isEqualTo 2 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} == -1}) exitWith {};
+
 
 TRACE_8("cooking off",_vehicle,_intensity,_instigator,_smokeDelayEnabled,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing);
 

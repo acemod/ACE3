@@ -38,30 +38,40 @@
             <Japanese>名前を次に変更:&lt;br/&gt;%1</Japanese>
             <French>Renommé en :&lt;br/&gt;%1</French>
             <Russian>Переименовано в:</Russian>
+            <German>Neu Bewaffnet: &lt;br/&gt;%1</German>
+            <Polish>Nazwa zmieniona na:&lt;br/&gt;%1</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
             <Japanese>カスタム名が削除されました。</Japanese>
             <French>Le nom personnalisé a été supprimé.</French>
             <Russian>Пользовательское название удалено.</Russian>
+            <German>Eigener Name wurde gelöscht.</German>
+            <Polish>Własna nazwa została usunięta</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_renameObjectUI">
             <English>Set New Name:</English>
             <Japanese>新しい名前:</Japanese>
             <French>Définir un nouveau nom :</French>
             <Russian>Задать новое название:</Russian>
+            <German>Neuen Namen setzen:</German>
+            <Polish>Ustaw nową nazwę:</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename">
             <English>Enable Rename Action</English>
             <Japanese>名前変更を有効化</Japanese>
             <French>Possibilité de renommage</French>
             <Russian>Включить возможность переименования</Russian>
+            <German>Aktiviere Umbenennungs-Aktion</German>
+            <Polish>Włącz możliwość zmiany nazwy</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enableRename_Description">
             <English>Enables the rename action for renamable objects.</English>
             <Japanese>名前変更が可能なオブジェクトに対して、名前変更動作を有効化します。</Japanese>
             <French>Active la possibilité de donner un nom personnalisé aux objets transportables (si renommables).</French>
             <Russian>Включает переименование для объектов, допускающих переименование.</Russian>
+            <German>Aktiviert die Umbenennungs-Aktion für neu benennbare Objekte.</German>
+            <Polish>Włącza akcję zmiany nazwy dla obiektów z możliwością zmiany nazwy.</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -273,12 +283,16 @@
             <English>Custom Name</English>
             <Japanese>カスタム名</Japanese>
             <French>Nom personnalisé</French>
+            <German>Eigener Name</German>
+            <Polish>Własna nazwa</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenDesc">
             <English>Set a custom cargo name used in the cargo interface.</English>
             <Japanese>カーゴ欄で使われるカスタム名を設定します。</Japanese>
             <French>Définit un nom de fret personnalisé qui sera visible dans le menu de cargaison.</French>
             <Russian>Установить пользовательское имя груза, используемое в интерфейсе погрузки.</Russian>
+            <German>Definiere eigenen Frachtnamen, welcher im Frachtraum genutzt wird.</German>
+            <Polish>Ustaw własną nazwę ładunku, używaną w menu ładunku.</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
@@ -434,6 +448,8 @@
             <Japanese>カーゴ メニューを再度開く</Japanese>
             <French>Rouvrir le menu de cargaison</French>
             <Russian>Переоткрыть меню погрузки</Russian>
+            <German>Frachtmenü erneut öffnen</German>
+            <Polish>Ponownie otwórz menu załadunku</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_openAfterUnload_description">
             <English>Reopen the Cargo Menu after successful unload.</English>
@@ -441,6 +457,8 @@
             <Japanese>カーゴを降ろした後に再びカーゴ メニューを開きます。</Japanese>
             <French>Réouvre le menu de cargaison après un déchargement réussi.</French>
             <Russian>Переоткрыть меню погрузки после успешной выгрузки.</Russian>
+            <German>Frachtmenü erneut öffnen, nach erfolgreichen Entladen.</German>
+            <Polish>Ponownie otwórz menu załadunku po udanym wyładowaniu.</Polish>
         </Key>
     </Package>
 </Project>

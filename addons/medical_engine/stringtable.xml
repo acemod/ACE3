@@ -8,6 +8,7 @@
             <French>Blessures de collision (véhicules)</French>
             <Polish>Włącz obrażenia od kolizji pojazdu</Polish>
             <Japanese>車両衝突ダメージを有効化</Japanese>
+            <German>Aktiviere Verletzungen durch Fahrzeugunfälle</German>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_Description">
             <English>Controls whether crew receives damage from vehicle collisions.</English>
@@ -16,6 +17,7 @@
             <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident.</French>
             <Polish>Kontroluje czy załoga pojazdu otrzyma obrażenia podczas kolizji pojazdu.</Polish>
             <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを決定します。</Japanese>
+            <German>Kontrolliert, ob Besatzung eines Fahrzeugs Schaden durch Unfälle erleiden soll</German>
         </Key>
     </Package>
 </Project>

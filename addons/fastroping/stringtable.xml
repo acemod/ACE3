@@ -276,6 +276,7 @@
             <Turkish>Halatla Kayma</Turkish>
             <Czech>Slaňování</Czech>
             <Russian>Спуск по канату</Russian>
+            <German>Schnelles-Abseilen</German>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
