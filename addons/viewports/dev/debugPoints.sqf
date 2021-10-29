@@ -1,20 +1,22 @@
 #include "\z\ace\addons\viewports\script_component.hpp"
 /*
-This is mostly just for placing the mem points in threeden
-left-click to place and adjust current point
-alt+left-click to place next point
-alt+right-click to output
-shift+right-click to reset
+    [] call compileScript ["\z\ace\addons\viewports\dev\debugPoints.sqf"];
 
-// Tweak:
-z = (vehicle player) getVariable "ace_viewports_viewports";
-p = z # 0 # 4; z # 0 set [4, p vectorAdd [0,0.1,0]];
+    This is mostly just for placing the mem points in threeden
+    left-click to place and adjust current point
+    alt+left-click to place next point
+    alt+right-click to output
+    shift+right-click to reset
 
-// Place by view:
-v = (positionCameraToWorld [0,0,0.4]);
-m = (vehicle player) worldToModel v;
-z = (vehicle player) getVariable "ace_viewports_viewports";
-z # 0 set [4, m];
+    // Tweak:
+    z = (vehicle player) getVariable "ace_viewports_viewports";
+    p = z # 0 # 4; z # 0 set [4, p vectorAdd [0,0.1,0]];
+
+    // Place by view:
+    v = (positionCameraToWorld [0,0,0.4]);
+    m = (vehicle player) worldToModel v;
+    z = (vehicle player) getVariable "ace_viewports_viewports";
+    z # 0 set [4, m];
 */
 
 ["recompile", "recompile", "recompile", {
@@ -135,7 +137,7 @@ addMissionEventHandler ["Draw3D", {
 
     {
         private _pos = _vehicle modelToWorldVisual (_vehicle selectionPosition [_x, "Memory"]);
-        drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,0,1,0.333], _pos, 0.05, 0.05, 0, _x, 1, 0.02, "TahomaB"];
+        drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,0,1,0.2], _pos, 0.05, 0.05, 0, _x, 1, 0.02, "TahomaB"];
     } forEach (_vehicle selectionNames "Memory");
 
 
@@ -172,6 +174,5 @@ addMissionEventHandler ["Draw3D", {
             private _target = _vehicle modelToWorldVisual (_camLocation vectorAdd ([0.2, _camAttach-90, 0] call CBA_fnc_polar2vect));
             drawLine3D [_camAGL, _target, [1,0,1.2,1]];
         };
-
     } forEach _viewports;
 }];

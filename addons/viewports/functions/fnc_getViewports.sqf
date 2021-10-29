@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
 * Author: PabstMirror
-* Gets viewports for a vehicle. Caches results to a setVar on the vic.
+* Gets viewports for a vehicle from config. Caches results to a setVar on the vic.
 *
 * Arguments:
 * 0: vehicle <OBJECT>
@@ -20,28 +20,28 @@ params ["_vehicle"];
 private _viewports = _vehicle getVariable [QGVAR(viewports), nil];
 
 if (isNil "_viewports") then {
-    private _configs = "true" configClasses ((configOf _vehicle) >> "ace_viewports");
-    _viewports = _configs apply {
+    _viewports = ("true" configClasses ((configOf _vehicle) >> "ace_viewports")) apply {
+        // name [STRING] is just used for debug
         private _name = configName _x;
         // type [STRING] - Optional
         private _type = getText (_x >> "type");
         // camLocation [ARRAY or STRING] - Required
         private _camLocation = if (isArray (_x >> "camLocation")) then {
-            getArray (_x >> "camLocation")
+            getArray (_x >> "camLocation") // modelOffset
         } else {
-            getText (_x >> "camLocation")
+            getText (_x >> "camLocation") // memPoint
         };
         // camAttach [ARRAY or NUMBER] - Required
         private _camAttach = if (isArray (_x >> "camAttach")) then {
-            getArray (_x >> "camAttach")
+            getArray (_x >> "camAttach") // turret
         } else {
-            getNumber (_x >> "camAttach")
+            getNumber (_x >> "camAttach") // angle
         };
-        // screenLocation [ARRAY or STRING] - Optional (will be converted to ARRAY here)
+        // screenLocation [ARRAY or STRING] - Optional (will be converted to ARRAY here!)
         private _screenLocation = if (isArray (_x >> "screenLocation")) then {
-            getArray (_x >> "screenLocation")
+            getArray (_x >> "screenLocation") // modelOffset
         } else {
-            getText (_x >> "screenLocation")
+            getText (_x >> "screenLocation") // memPoint
         };
         if (_screenLocation isEqualType "") then {
             // screens should be on the hull (IE non-animated) so we can do all the mem-point calculations here
@@ -67,7 +67,7 @@ if (isNil "_viewports") then {
 
         [_name, _type, _camLocation, _camAttach, _screenLocation, _maxDistance, _compartments, _roles]
     };
-    TRACE_2("getViewports",typeOf _vehicle,count _viewports);
+    TRACE_3("getViewports",_vehicle,typeOf _vehicle,count _viewports);
     _vehicle setVariable [QGVAR(viewports), _viewports];
 };
 

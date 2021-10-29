@@ -24,22 +24,20 @@ private _vehicleConfig = configOf _vehicle;
 private _fullCrew = fullCrew [_vehicle, "", false];
 (_fullCrew select (_fullCrew findIf {_unit == _x select 0})) params ["", "_role", "_cargoIndex", "_turretPath"];
 
-private _compartment = "#";
-
-switch (_role) do {
+private _compartment = switch (_role) do {
     case "driver": {
-        _compartment = (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData;
+        (_vehicleConfig >> "driverCompartments") call BIS_fnc_getCfgData
     };
     case "cargo": {
         // note: cargoNumber is different from the cargoIndex from fullCrew...
         private _cargoNumber = fullCrew [_vehicle, "cargo", true] findIf {_unit == _x select 0};
         private _cargoCompartments = getArray (_vehicleConfig >> "cargoCompartments");
         private _cargoCompartmentsLast = count _cargoCompartments - 1;
-        _compartment = _cargoCompartments select (_cargoNumber min _cargoCompartmentsLast);
+        _cargoCompartments select (_cargoNumber min _cargoCompartmentsLast)
     };
     default {
         private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
-        _compartment = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
+        (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData
     };
 };
 

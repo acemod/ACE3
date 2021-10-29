@@ -25,12 +25,11 @@ class CfgVehicles {
         };
     };
 
-
-
+/* 
     class Wheeled_APC_F;
     class Tank_F;
 
-     // 80 and 80A p3ds both use same modelPos
+    // 80 and 80A p3ds both use same modelPos
     #if __has_include("\CUP\WheeledVehicles\CUP_WheeledVehicles_BTR80\CUP_BTR_80.p3d")
     class CUP_BTR80_Common_Base: Wheeled_APC_F {
         class ace_viewports {
@@ -166,4 +165,5 @@ class CfgVehicles {
         };
     };
     #endif
+    */
 };
