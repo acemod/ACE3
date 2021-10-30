@@ -30,7 +30,8 @@ private _barrelMass = _weapon call FUNC(getBarrelMass);
 
 // keep track of weapons that have heat, so they can be set to ambient temperaure on killed/respawn
 private _trackedWeapons = _unit getVariable [QGVAR(trackedWeapons), []];
-_unit setVariable [QGVAR(trackedWeapons), _trackedWeapons pushBackUnique _tempVarName];
+_trackedWeapons pushBackUnique _tempVarName;
+_unit setVariable [QGVAR(trackedWeapons), _trackedWeapons];
 
 // Calculate cooling
 _temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUNC(calculateCooling);
