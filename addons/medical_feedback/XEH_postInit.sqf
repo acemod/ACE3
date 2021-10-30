@@ -89,13 +89,12 @@ GVAR(bloodTickCounter) = 0;
     if (_newCamera == "") then { // switched back to player view
         private _status = IS_UNCONSCIOUS(_unit);
         [!_status, _unit] call EFUNC(common,setVolume);
-
         [QUOTE(ADDON), _volume, _status] call EFUNC(common,setHearingCapability);
-
         ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
     } else { // camera view
         [true, _unit] call EFUNC(common,setVolume);
         [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
+        ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
