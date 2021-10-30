@@ -17,4 +17,6 @@
 
 params ["_weapon"];
 
-METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+([_weapon] call FUNC(getWeaponData)) params ["", "", "", "", "", "", "", "_barrelMass"];
+
+_barrelMass

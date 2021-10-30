@@ -46,7 +46,7 @@ if !(_mode in _modes) then {
 // delay cookoff to ensure any previous animation from a fired event is finished
 [
     {
-        params ["_unit", "_muzzleCache", "_mode", "_muzzle"];
+        params ["_unit", "_mode", "_muzzle", "_muzzleCache"];
 
         // fire the cookoff
         _unit forceWeaponFire [_muzzle, _mode];
@@ -61,6 +61,6 @@ if !(_mode in _modes) then {
             true // allows the hint to be overwritten by another hint, such as a jam or another cookoff
         ] call CBA_fnc_notify;
     },
-    [_unit, _muzzleCache, _mode, _muzzle],
+    [_unit, _mode, _muzzle, _muzzleCache],
     _reloadTime
 ] call CBA_fnc_waitAndExecute;
