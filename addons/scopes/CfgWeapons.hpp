@@ -5,55 +5,55 @@ class Mode_FullAuto;
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
-    
+
     class optic_Yorris: ItemCore {
         ACE_ScopeHeightAboveRail = 2.77224;
     };
-    
+
     class optic_MRD: ItemCore {
         ACE_ScopeHeightAboveRail = 2.8;
     };
-    
+
     class optic_Aco: ItemCore {
         ACE_ScopeHeightAboveRail = 3.69248;
     };
-    
+
     class optic_ACO_grn: ItemCore {
         ACE_ScopeHeightAboveRail = 3.69248;
     };
-    
+
     class optic_ACO_grn_smg: ItemCore {
         ACE_ScopeHeightAboveRail = 3.69248;
     };
-    
+
     class optic_ACO_smg: ItemCore {
         ACE_ScopeHeightAboveRail = 3.69248;
     };
-    
+
     class optic_Holosight: ItemCore {
         ACE_ScopeHeightAboveRail = 4.66933;
     };
-    
+
     class optic_Holosight_smg: ItemCore {
         ACE_ScopeHeightAboveRail = 4.66933;
     };
-    
+
     class optic_Arco: ItemCore {
         ACE_ScopeHeightAboveRail = 4.89287;
     };
-    
+
     class optic_ERCO_blk_F: optic_Arco {
         ACE_ScopeHeightAboveRail = 3.48836;
     };
-    
+
     class optic_Hamr: ItemCore {
         ACE_ScopeHeightAboveRail = 4.48584;
     };
-    
+
     class optic_MRCO: ItemCore {
         ACE_ScopeHeightAboveRail = 3.88405;
     };
-    
+
     class optic_Nightstalker: ItemCore {
         ACE_ScopeHeightAboveRail = 5.54325;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
@@ -69,7 +69,7 @@ class CfgWeapons {
             };
         };
     };
-    
+
     class optic_NVS: ItemCore {
         ACE_ScopeHeightAboveRail = 5.54325;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
@@ -85,7 +85,7 @@ class CfgWeapons {
             };
         };
     };
-    
+
     class optic_TWS: ItemCore {
         ACE_ScopeHeightAboveRail = 5.52874;
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
@@ -101,7 +101,7 @@ class CfgWeapons {
             };
         };
     };
-    
+
     class optic_LRPS: ItemCore {
         ACE_ScopeHeightAboveRail = 4.2098;
         ACE_ScopeAdjust_Vertical[] = {0, 27};
@@ -308,7 +308,7 @@ class CfgWeapons {
     };
 
     class arifle_katiba_Base_F: Rifle_Base_F {};
-    
+
     class arifle_Katiba_F: arifle_katiba_Base_F {
         ACE_RailHeightAboveBore = 5.75468;
         ACE_IronSightBaseAngle = 0.011459;
@@ -337,7 +337,7 @@ class CfgWeapons {
     };
 
     class SDAR_base_F: Rifle_Base_F {};
-    
+
     class arifle_SDAR_F: SDAR_base_F {
         ACE_RailHeightAboveBore = 0;
         ACE_IronSightBaseAngle = -0.042972;
@@ -448,7 +448,7 @@ class CfgWeapons {
     class MMG_01_hex_F: MMG_01_base_F {
         ACE_RailHeightAboveBore = 4.73961;
         ACE_IronSightBaseAngle = -0.003438;
-    };    
+    };
     class MMG_02_camo_F: MMG_02_base_F {
         ACE_RailHeightAboveBore = 5.01913;
         ACE_IronSightBaseAngle = 0.010886;
