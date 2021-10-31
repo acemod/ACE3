@@ -32,7 +32,7 @@ params [
     ["_damageSelectionArray", [], [[]]],
     ["_overrideInvuln", true, [true]]
 ];
-TRACE_6("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray,_overrideInvuln);
+TRACE_7("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray,_overrideInvuln);
 
 _bodyPart = toLower _bodyPart;
 private _bodyPartIndex = ALL_BODY_PARTS find _bodyPart;
