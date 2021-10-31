@@ -2,7 +2,7 @@
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
-    
+
     class iansky_nfbeast: ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -0.9, 34 };
         ACE_ScopeAdjust_Horizontal[] = { -11, 11 };

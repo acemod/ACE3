@@ -313,10 +313,10 @@ class CfgVehicles {
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0;
         EGVAR(vehicle_damage,hitpointAlias)[] = { { "hull", { "hitammohull", "hitammo" } } };
     };
-    
+
     class RHS_M2A2;
     class RHS_M2A2_BUSKI: RHS_M2A2 {
-        EGVAR(vehicle_damage,eraHitpoints)[] = { 
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
             "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
             "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
@@ -331,7 +331,7 @@ class CfgVehicles {
     };
     class RHS_M2A3;
     class RHS_M2A3_BUSKI: RHS_M2A3 {
-        EGVAR(vehicle_damage,eraHitpoints)[] = { 
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
             "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
             "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
@@ -345,7 +345,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };
     class RHS_M2A3_BUSKIII: RHS_M2A3_BUSKI {
-        EGVAR(vehicle_damage,eraHitpoints)[] = { 
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
             "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
             "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
@@ -361,7 +361,7 @@ class CfgVehicles {
         };
     };
     class rhsusf_m1a1aim_tuski_wd: rhsusf_m1a1tank_base {
-        EGVAR(vehicle_damage,eraHitpoints)[] = { 
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
             "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
             "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
@@ -374,7 +374,7 @@ class CfgVehicles {
     };
     class rhsusf_m1a2tank_base;
     class rhsusf_m1a2sep1tuskid_usarmy: rhsusf_m1a2tank_base {
-        EGVAR(vehicle_damage,eraHitpoints)[] = { 
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
             "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
             "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
@@ -386,7 +386,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,slatHitpoints)[] = { "SLAT_1_hitpoint" };
     };
     class rhsusf_m1a2sep1tuskiiwd_usarmy: rhsusf_m1a2sep1tuskid_usarmy {
-        EGVAR(vehicle_damage,eraHitpoints)[] = { 
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint",
             "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint",
             "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint",
@@ -399,7 +399,7 @@ class CfgVehicles {
             "era_46_hitpoint"
         };
     };
-    
+
     class Plane_CAS_01_base_F;
     class RHS_A10: Plane_CAS_01_base_F {
         EGVAR(refuel,fuelCapacity) = 6223;
@@ -572,5 +572,10 @@ class CfgVehicles {
     class ACE_Explosives_Place_rhsusf_mine_m49a1_10m: ACE_Explosives_Place_rhsusf_mine_m49a1_3m {
         displayName = "M49A1 (10m)";
         model = "\rhsusf\addons\rhsusf_weapons\mines\rhsusf_m49a1_c_e";
+    };
+
+    class rhsusf_props_JerryCan_Base: Items_base_F {
+        EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,size) = 1;
     };
 };

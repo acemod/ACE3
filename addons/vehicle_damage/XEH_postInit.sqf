@@ -24,7 +24,7 @@
 
         ["Tank", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
         ["Wheeled_APC_F", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
-        
+
         if (GVAR(enableCarDamage)) then {
             ["Car", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
         };
@@ -45,10 +45,8 @@
                 params ["_vehicle", "_turret"];
 
                 {
-                    if (_vehicle in curatorEditableObjects _x) then {
-                        _x addCuratorEditableObjects [[_turret], false];
-                    };
-                } forEach allCurators;
+                    _x addCuratorEditableObjects [[_turret], false];
+                } forEach (objectCurators _vehicle);
             }] call CBA_fnc_addEventHandler;
         };
     };

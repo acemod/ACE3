@@ -410,6 +410,7 @@
             <Polish>[CSW] Statyczny karabin maszynowy M2 z tarczą</Polish>
             <Russian>[CSW] Станковый M2 со щитом</Russian>
             <Japanese>[CSW] 設置型 防盾付き M2</Japanese>
+            <German>[CSW] Statisches M2 mit Schild</German>
         </Key>
         <Key ID="STR_ACE_CSW_StaticAutoHMGBag_displayName">
             <English>[CSW] Static XM312 Gun (Autonomous)</English>

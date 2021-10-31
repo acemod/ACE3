@@ -69,7 +69,7 @@ if (isNil "_multHit") then {
     private _withinTime = (CBA_missionTime <= (_multHit select 0) + CONST_TIME) && { _injurer == (_multHit select 1) };
     if (_hitPointInOldArray && _withinTime) then {
         _ignoreHit = true;
-    } else {   
+    } else {
         // If the hitpoint isnt in the old array then that means that the time expired and a new array should be generated
         if !(_hitPointInOldArray) then {
             private _oldHitPoints = _multHit select 2;
