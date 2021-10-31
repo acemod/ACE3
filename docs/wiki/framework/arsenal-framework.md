@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Arsenal Framework
+title: ACE Arsenal Framework
 description: Explains how to interact with the ACE Arsenal API.
 group: framework
 parent: wiki
