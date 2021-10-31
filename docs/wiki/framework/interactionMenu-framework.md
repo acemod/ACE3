@@ -74,7 +74,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
 
 `ace_interact_menu_fnc_createAction`
 
-```cpp
+```sqf
 /*
  * Argument:
  * 0: Action name <STRING>
@@ -95,7 +95,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
 
 `ace_interact_menu_fnc_addActionToClass`
 
-```cpp
+```sqf
 /*
  * Argument:
  * 0: TypeOf of the class <STRING>
@@ -111,7 +111,7 @@ By default this function will not use inheritance, so actions will only be added
 
 `ace_interact_menu_fnc_addActionToObject`
 
-```cpp
+```sqf
 /*
  * Argument:
  * 0: Object the action should be assigned to <OBJECT>
@@ -125,7 +125,7 @@ By default this function will not use inheritance, so actions will only be added
 
 `ace_interact_menu_fnc_addActionToZeus`
 
-```cpp
+```sqf
 /*
  * Argument:
  * 0: Parent path of the new action <ARRAY> (Example: `["ACE_ZeusActions"]`)
@@ -137,14 +137,14 @@ By default this function will not use inheritance, so actions will only be added
 
 External:
 
-```cpp
+```sqf
 _action = ["VulcanPinch","Vulcan Pinch","",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
 [cursorTarget, 0, ["ACE_TapShoulderRight"], _action] call ace_interact_menu_fnc_addActionToObject;
 ```
 
 Self:
 
-```cpp
+```sqf
 _condition = {
     (!pabst_radioFinder_on) && {(backpack _player) in pabst_radioFinder_backpacks} && {[_player, _target, []] call ace_common_fnc_canInteractWith}
 };
@@ -157,7 +157,7 @@ _action = ["Open RDF","Radio Direction Finder","pabst\RDF.jpg",_statement,_condi
 
 Using `addActionToClass` inheritance:
 
-```cpp
+```sqf
 // Adds action to check fuel levels for all land vehicles
 _action = ["CheckFuel", "Check Fuel", "", {hint format ["Fuel: %1", fuel _target]}, {true}] call ace_interact_menu_fnc_createAction;
 ["LandVehicle", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
@@ -169,7 +169,7 @@ _action = ["CheckExtTank","Check External Tank","",{hint format ["Ext Tank: %1",
 
 Zeus:
 
-```cpp
+```sqf
 _statement = {
     playSound3D ["alarm.ogg", theBase]
 };
@@ -185,7 +185,7 @@ This adds an interaction to a unit that allows passing items that the player is 
 - The parent action's display name is modified based on the item count.
 - When hovering on the action, a hint text is sent to the target.
 
-```cpp
+```sqf
 _condition = {
     true
 };
@@ -227,7 +227,7 @@ _action = ["GiveItems", "?","",_statement,_condition,_insertChildren,[123],"",4,
 CBA event `ace_interact_menu_newControllableObject` fires only once the first time the player controls a new object (new man, vehicle or controlled UAV)
 This is the ideal way to add self interaction actions, as adding them via `addActionToClass` will force self interaction actions to be compiled for classes that may never be used.
 
-```cpp
+```sqf
 // Example: Add radio self-action to all civilian cars
 ["ace_interact_menu_newControllableObject", {
     params ["_type"]; // string of the object's classname
