@@ -20,31 +20,23 @@ params ["_logic"];
 if !(local _logic) exitWith {};
 
 private _unit = attachedTo _logic;
-
-// Validate module target
-scopeName "Main";
-private _fnc_errorAndClose = {
-    params ["_msg"];
-    deleteVehicle _logic;
-    [_msg] call FUNC(showMessage);
-    breakOut "Main";
-};
+deleteVehicle _logic;
 
 switch (false) do {
     case !(isNull _unit): {
-        [LSTRING(NothingSelected)] call _fnc_errorAndClose;
+        [LSTRING(NothingSelected)] call FUNC(showMessage);
     };
     case (_unit isKindOf "CAManBase"): {
-        [LSTRING(OnlyInfantry)] call _fnc_errorAndClose;
+        [LSTRING(OnlyInfantry)] call FUNC(showMessage);
     };
     case (alive _unit): {
-        [LSTRING(OnlyAlive)] call _fnc_errorAndClose;
+        [LSTRING(OnlyAlive)] call FUNC(showMessage);
     };
     case (["ace_fire"] call EFUNC(common,isModLoaded)): {
-        [LSTRING(RequiresAddon)] call _fnc_errorAndClose;
+        [LSTRING(RequiresAddon)] call FUNC(showMessage);
+    };
+    default {
+        [QEGVAR(fire,burn), [_unit, 5]] call CBA_fnc_globalEvent;
     };
 };
 
-[QEGVAR(fire,burn), [_unit, 5]] call CBA_fnc_globalEvent;
-
-deleteVehicle _logic;
