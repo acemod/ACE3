@@ -26,6 +26,6 @@ The module settings define which side a player can control or how big the radius
 
 To enable a player to control AI execute the following on it:
 
-```cpp
+```sqf
 this setVariable ["ACE_CanSwitchUnits", true];
 ```

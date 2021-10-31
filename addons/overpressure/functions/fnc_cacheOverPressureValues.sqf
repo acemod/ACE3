@@ -15,7 +15,7 @@
  *  1: Range <Number>
  *  2: Damage <Number>
  *
- * Example: 
+ * Example:
  * ["cannon_125mm","Sh_125mm_APFSDS_T_Green","24Rnd_125mm_APFSDS_T_Green"] call ace_overpressure_fnc_cacheOverPressureValues
  *
  * Public: No

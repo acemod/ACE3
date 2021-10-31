@@ -54,7 +54,7 @@ This and the attack profile used will effect missile's flight and max altitude.
 ### 3.2 Script Example
 - Adding hellfires to the Cessna Civilian Plane:
 
-```
+```sqf
 if (local this) then {
     this addWeaponTurret ["ace_hellfire_launcher", [-1]];
     this addMagazineTurret ["6Rnd_ACE_Hellfire_AGM114K", [-1]];
