@@ -9,7 +9,7 @@
  * 2: Heat increment (J) <NUMBER>
  *
  * Return Value:
- * Current temperature <NUMBER>
+ * New temperature <NUMBER>
  *
  * Example:
  * [player, currentWeapon player, 2000] call ace_overheating_fnc_updateTemperature

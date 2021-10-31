@@ -9,7 +9,7 @@
  * 2: Barrel Temperature <STRING>
  *
  * Return Value:
- * Current ammunition temperature <NUMBER>
+ * New temperature <NUMBER>
  *
  * Example:
  * [player, currentWeapon player, 600] call ace_overheating_fnc_updateAmmoTemperature
