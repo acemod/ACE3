@@ -47,7 +47,7 @@ To enable other units to move them reference [Scripting](#allow-units-to-move-ra
 
 To change the texture of the flag use the following line on the rally point object:
 
-```cpp
+```sqf
 this setFlagTexture 'path\to\my\texture\my_awesome_clan_logo.paa';
 ```
 
@@ -55,6 +55,6 @@ this setFlagTexture 'path\to\my\texture\my_awesome_clan_logo.paa';
 
 To enable other units to move rally points, such as JIP units, use the following line on the units:
 
-```cpp
+```sqf
 _unit setVariable ["ACE_canMoveRallypoint", true, true];
 ```

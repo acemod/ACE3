@@ -54,7 +54,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 
 `ace_field_rations_fnc_getRemainingWater`
 
-```cpp
+```sqf
 * Returns the remaining water in a source.
 *
 * Arguments:
@@ -71,7 +71,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 
 `ace_field_rations_fnc_setRemainingWater`
 
-```cpp
+```sqf
 * Sets the remaining water supply for given water source.
 *
 * Arguments:
@@ -89,7 +89,7 @@ Event Name | Passed Parameter(s) | Locality | Description
 
 `ace_field_rations_fnc_addStatusModifier`
 
-```cpp
+```sqf
 * Adds a status modifier. Should be called on all machines.
 * Code must return a NUMBER which will be applied additively with other status changes.
 *

@@ -15,6 +15,6 @@ version:
 
 Pick-up interaction can be disabled for ammo (e.g. chemlights) attached to an object.
 
-```cpp
+```sqf
 OBJECT setVariable ["ace_advanced_throwing_disablePickUp", true, true];
 ```
