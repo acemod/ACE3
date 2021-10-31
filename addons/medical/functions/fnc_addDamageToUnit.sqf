@@ -9,8 +9,8 @@
  * 2: Body part ("Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg") <STRING>
  * 3: Projectile Type <STRING>
  * 4: Source <OBJECT>
- * 5: Non-directional damage source array (Optional) <ARRAY>
- * 6: Override Invulnerability (Optional, Default: true) <BOOLEAN>
+ * 5: Non-directional damage source array <ARRAY> (default: [])
+ * 6: Override Invulnerability <BOOLEAN> (default: true)
  *
  * Return Value:
  * Successful <BOOL>
@@ -40,7 +40,8 @@ if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }
 if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1", _this); false};
 if (isNull _unit || {!local _unit} || {!alive _unit}) exitWith {ERROR_2("addDamageToUnit - badUnit %1 [local %2]", _this, local _unit); false};
 if (_damageToAdd < 0) exitWith {ERROR_1("addDamageToUnit - bad damage %1", _this); false};
-if (!_overrideInvuln && {!(isDamageAllowed _unit)} && {!(_unit getVariable [QEGVAR(medical,allowDamage), true])}) exitWith {
+
+if (!_overrideInvuln && {!((isDamageAllowed _unit) && {_unit getVariable [QEGVAR(medical,allowDamage), true]})}) exitWith {
     ERROR_1("addDamageToUnit - unit invulnerable %1", _this); false
 };
 
