@@ -1,5 +1,17 @@
 #define MX991_FLASHLIGHT_SIZE 1.75
 
+class vn_pistol;
+class vn_m79_p: vn_pistol {
+    EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
+};
+class vn_mk22;
+class vn_m10: vn_mk22 {
+    EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
+};
+class vn_m1895: vn_mk22 {
+    EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
+};
+
 class vn_pm;
 class vn_fkb1_pm: vn_pm {
     ACE_Flashlight_Colour = "white";

@@ -3,8 +3,8 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {"ACE_Item_Sandbag", "ACE_Item_Sandbag_empty"};
-        weapons[] = {"ACE_Sandbag", "ACE_Sandbag_empty"};
+        units[] = {"ACE_Item_Sandbag_empty"};
+        weapons[] = {"ACE_Sandbag_empty"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);

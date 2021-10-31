@@ -95,7 +95,7 @@ private _finalOwner = objNull;
             };
         };
     };
-} forEach (GVAR(laserEmitters) select 2); // Go through all values in hash
+} forEach (values GVAR(laserEmitters)); // Go through all values in hash
 
 TRACE_2("",count _spots, _spots);
 
@@ -164,8 +164,8 @@ if ((count _spots) > 0) then {
         {
             _x params ["_xPos", "_owner"];
             _finalPos = _finalPos vectorAdd _xPos;
-            private _count = _ownersHash getOrDefault [_owner, 0];
-            _ownersHash set [_owner, _count + 1];
+            private _count = _ownersHash getOrDefault [hashValue _owner, 0];
+            _ownersHash set [hashValue _owner, _count + 1];
         } forEach _finalBucket;
 
         _finalPos = _finalPos vectorMultiply (1 / (count _finalBucket));

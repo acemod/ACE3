@@ -3,6 +3,11 @@
     <Package name="Logistics_Rope">
         <Key ID="STR_ACE_Logistics_Rope_descriptionShort">
             <English>A twisted braid of fibers. Usually used for rappelling or towing.</English>
+            <Japanese>組み紐されたロープ。ラペリングやけん引に使用されます。</Japanese>
+            <French>Une corde en fibres torsadées. Généralement utilisée pour la descente en rappel ou le remorquage.</French>
+            <Russian>Витой канат. ООбычно используется для спуска или буксирования.</Russian>
+            <German>Ein verdrehtes Geflecht aus Fasern. Wird normalerweise zum Abseilen oder Abschleppen verwendet.</German>
+            <Polish>Lina skręcona z włókien. Zwykle używana do zjazdów lub holowania.</Polish>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_3_Display">
             <English>Rope 3.2 meters</English>
@@ -15,6 +20,7 @@
             <Czech>Lano 3.2 metrů</Czech>
             <Turkish>3.2 metre halat</Turkish>
             <Spanish>Cuerda de 3.2 metros</Spanish>
+            <Japanese>ロープ (3.2 メートル)</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_6_Display">
             <English>Rope 6.2 meters</English>
@@ -27,6 +33,7 @@
             <Czech>Lano 6.2 metrů</Czech>
             <Turkish>6.2 metre halat</Turkish>
             <Spanish>Cuerda de 6.2 metros</Spanish>
+            <Japanese>ロープ (6.2 メートル)</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_12_Display">
             <English>Rope 12.2 meters</English>

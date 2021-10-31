@@ -24,7 +24,7 @@ class RscTitles {
         onUnload = "with uiNameSpace do { ACE_RscYardage450 = displayNull; };";
 
         class Controls {
-            class ACE_Yardage450_RscTarget : ACE_Yardage450_RscText {
+            class ACE_Yardage450_RscTarget: ACE_Yardage450_RscText {
                 idc = 720041;
                 style = ST_CENTER;
                 x = "0.5 - (0.18 * SafeZoneH)";
@@ -34,7 +34,7 @@ class RscTitles {
                 sizeEx = "0.05 * SafeZoneH";
                 text = "TARGET ACQUIRED";
             };
-            class ACE_Yardage450_RscLaser : ACE_Yardage450_RscTarget {
+            class ACE_Yardage450_RscLaser: ACE_Yardage450_RscTarget {
                 idc = 720042;
                 x = "0.5 - (0.14 * SafeZoneH)";
                 y = "0.5 - (0.18 * SafeZoneH)";
@@ -45,7 +45,7 @@ class RscTitles {
                 colorBackground[] = {0, 0, 0, 1};
                 text = "LASER";
             };
-            class ACE_Yardage450_RscRange : ACE_Yardage450_RscTarget {
+            class ACE_Yardage450_RscRange: ACE_Yardage450_RscTarget {
                 idc = 720043;
                 style = ST_RIGHT;
                 x = "0.5 - (0.02 * SafeZoneH)";
@@ -55,7 +55,7 @@ class RscTitles {
                 sizeEx = "0.06 * SafeZoneH";
                 text = "---";
             };
-            class ACE_Yardage450_RscMeters : ACE_Yardage450_RscLaser {
+            class ACE_Yardage450_RscMeters: ACE_Yardage450_RscLaser {
                 idc = 720044;
                 x = "0.5 + (0.06 * SafeZoneH)";
                 y = "0.5 + (0.19 * SafeZoneH)";
@@ -64,7 +64,7 @@ class RscTitles {
                 sizeEx = "0.018 * SafeZoneH";
                 text = "METERS";
             };
-            class ACE_Yardage450_RscYards : ACE_Yardage450_RscMeters {
+            class ACE_Yardage450_RscYards: ACE_Yardage450_RscMeters {
                 idc = 720045;
                 y = "0.5 + (0.21 * SafeZoneH)";
                 w = "0.0417 * SafeZoneH";

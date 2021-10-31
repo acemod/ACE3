@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Fire">
+        <Key ID="STR_ACE_Fire_Category_DisplayName">
+            <English>ACE Fire</English>
+            <Japanese>ACE 火災</Japanese>
+            <French>ACE Feu</French>
+            <Russian>ACE Возгорание</Russian>
+            <German>ACE Feuer</German>
+            <Polish>ACE Ogień</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Actions_PatDown">
+            <English>Pat Down Fire</English>
+            <Japanese>火を叩き消す</Japanese>
+            <French>Éteindre le feu</French>
+            <Russian>Потушить</Russian>
+            <German>Feuer löschen</German>
+            <Polish>Zgaś ogień</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Actions_PerformingPatDown">
+            <English>Patting Down Fire</English>
+            <Japanese>火を叩き消しています</Japanese>
+            <French>Feu en cours d'extinction...</French>
+            <Russian>Тушение</Russian>
+            <German>Feuer wird gelöscht...</German>
+            <Polish>Gaszenie ognia</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_Description">
+            <English>Allow units to catch fire</English>
+            <Japanese>ユニットへ着火を許可</Japanese>
+            <French>Définit si les unités peuvent prendre feu ou non.</French>
+            <Russian>Включает возгорание</Russian>
+            <German>Erlaubt, dass Einheiten Feuer fangen können</German>
+            <Polish>Zezwól jednostkom na zapalenie się</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_FlareEnable">
+            <English>Enable fire-flare at night</English>
+            <Japanese>夜間にフレア効果を有効化</Japanese>
+            <French>Halo lumineux la nuit</French>
+            <Russian>Включает сверкание пламени</Russian>
+            <German>Aktiviert Feuerschein bei Nacht.</German>
+            <Polish>Włącza efekt flary od ognia w nocy</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_FlareDescription">
+            <English>Uses a flare effect to increase fire intensity at night</English>
+            <Japanese>夜間に火災の強さを上昇させるフレア効果を有効化します。</Japanese>
+            <French>Ajoute un effet de halo lumineux afin d'accroitre l'intensité du feu durant la nuit.</French>
+            <Russian>Включает ореол пламени для большей интенсивности ночью</Russian>
+            <German>Benutzt einen Feuerschein-Effekt um die Intensität des Feuers bei Nacht zu verstärken.</German>
+            <Polish>Używa efektu flary, aby zwiększyć jasność w nocy</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_DropWeapon">
+            <English>Drop Weapons When on Fire</English>
+            <Polish>Włącz wyrzucanie broni podczas płonięcia</Polish>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
+            <English>Controls whether units drop their weapons when on fire.</English>
+            <Polish>Powoduje że jednostki wyrzucają swoją broń gdy płoną.</Polish>
+        </Key>
+    </Package>
+</Project>

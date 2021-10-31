@@ -48,22 +48,64 @@ if (hasInterface) then {
     GVAR(cacheAmmoData) = call CBA_fnc_createNamespace;
     GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
 
-    //Add Take EH (for reload)
-    ["CAManBase", "Take", {_this call FUNC(handleTakeEH);}] call CBA_fnc_addClassEventHandler;
+    //Add Take EH if required
+    if (GVAR(unJamOnReload) || {GVAR(cookoffCoef) > 0}) then {
+        ["CAManBase", "Take", {_this call FUNC(handleTakeEH);}] call CBA_fnc_addClassEventHandler;
+    };
 
     // Register fire event handler
     ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
     // Only add eh to non local players if dispersion is enabled
-    if (GVAR(overheatingDispersion)) then {
+    if (GVAR(overheatingDispersion) || {GVAR(showParticleEffectsForEveryone)}) then {
         ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
     };
 
     // Schedule cool down calculation of player weapons at (infrequent) regular intervals
     [] call FUNC(updateTemperatureThread);
 
+    //Add event handlers and start ammo heating loop for cookoff
+    if (GVAR(cookoffCoef) > 0) then {
+        [] call FUNC(updateAmmoTemperatureThread);
+
+        // Reset ammo temperature on reload, unless the reload is a second muzzle.
+        ["CAManBase", "Reloaded", {
+            params ["_unit", "_weapon", "_muzzle"];
+            if (_muzzle == _weapon) then {
+                _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];
+            };
+        }] call CBA_fnc_addClassEventHandler;
+    };
+
     // Install event handler to display temp when a barrel was swapped
     [QGVAR(showWeaponTemperature), DFUNC(displayTemperature)] call CBA_fnc_addEventHandler;
     // Install event handler to initiate an assisted barrel swap
     [QGVAR(initiateSwapBarrelAssisted), DFUNC(swapBarrel)] call CBA_fnc_addEventHandler;
+
+    // Add an action to allow hot weapons to be cooled off in AceX Field Rations water sources
+    if (isClass (configfile >> "CfgPatches" >> "acex_field_rations")) then {
+        [
+            {EXGVAR(field_rations,enabled) || CBA_missionTime > 1},
+            {
+                if (!EXGVAR(field_rations,enabled)) exitWith {};
+
+                private _coolWeaponWithWaterSourceAction = [
+                    QGVAR(CoolWeaponWithWaterSource),
+                    LLSTRING(CoolWeaponWithWaterSource),
+                    QPATHTOEF(field_rations,ui\icon_water_tap.paa),
+                    {
+                        private _waterSource = _target getVariable [QEGVAR(field_rations,waterSource), objNull];
+                        [_player, _waterSource] call FUNC(coolWeaponWithWaterSource);
+                    },
+                    {
+                        private _waterSource = _target getVariable [QEGVAR(field_rations,waterSource), objNull];
+                        [_player, _waterSource] call EFUNC(field_rations,canDrinkFromSource);
+                    }
+                ] call EFUNC(interact_menu,createAction);
+
+                [QEGVAR(field_rations,helper), 0, [QEGVAR(field_rations,waterSource)], _coolWeaponWithWaterSourceAction] call EFUNC(interact_menu,addActionToClass);
+            },
+            []
+        ] call CBA_fnc_waitUntilAndExecute;
+    };
 
 }] call CBA_fnc_addEventHandler;

@@ -30,6 +30,15 @@ if (_totalTime > 1800) exitWith {0};
 //So Area = 210 * 1.1 * (mass / 7850) = mass * 0.029427 (for steel near that diameter)
 
 private _barrelSurface = _barrelMass * 0.029427;
+private _convectionRate = 25;
+
+//provide additional cooling if swimming or raining or windy
+if (ACE_player call EFUNC(common,isSwimming)) then {
+    _convectionRate = 500;
+} else {
+    // this will give a convection rate between 25 (no wind or rain) and 125 (max rain and >=50 m/s wind)
+    _convectionRate = _convectionRate * ((linearConversion [0,1,rain,1,5,true] + (5 min (vectorMagnitude wind / 10))) / 2);
+};
 
 TRACE_4("cooling",_temperature,_totalTime,_barrelMass,_barrelSurface);
 
@@ -38,13 +47,10 @@ while {true} do {
     private _deltaTime = (_totalTime - _time) min 20;
 
     _temperature = _temperature - (
-    // Convective cooling
-    25 * _barrelSurface * _temperature
-    // Radiative cooling
-    + 0.4 * 5.67e-8 * _barrelSurface *
-    ( (_temperature + 273.15)*(_temperature + 273.15)
-    * (_temperature + 273.15)*(_temperature + 273.15)
-    - 273.15 * 273.15 * 273.15 *273.15 )
+        // Convective cooling
+        _convectionRate * _barrelSurface * _temperature
+        // Radiative cooling
+        + 0.4 * 5.67e-8 * _barrelSurface * ((_temperature + 273.15) ^ 4 - 273.15 ^ 4)
     ) * _deltaTime / (_barrelMass * 466);
 
     if (_temperature < 1) exitWith {0};

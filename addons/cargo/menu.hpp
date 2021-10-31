@@ -6,7 +6,7 @@ class GVAR(menu) {
     onLoad = QUOTE([_this select 0] call FUNC(onMenuOpen));
     onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(menuDisplay)),nil)];);
     class controlsBackground {
-        class HeaderBackground: ACE_gui_backgroundBase{
+        class HeaderBackground: ACE_gui_backgroundBase {
             idc = -1;
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             x = "13 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";

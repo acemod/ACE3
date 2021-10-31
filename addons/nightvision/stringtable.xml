@@ -22,6 +22,7 @@
             <Russian>ПНВ (Gen1, Коричневый)</Russian>
             <Japanese>暗視装置 (第1世代、ブラウン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 1, Brązowe)</Polish>
+            <German>NS-Brille (1. Gen., braun)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_black">
             <English>NV Goggles (Gen1, Black)</English>
@@ -29,6 +30,7 @@
             <Russian>ПНВ (Gen1, Чёрный)</Russian>
             <Japanese>暗視装置 (第1世代、ブラック)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 1, Czarne)</Polish>
+            <German>NS-Brille (1. Gen., schwarz)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen1_green">
             <English>NV Goggles (Gen1, Green)</English>
@@ -36,6 +38,7 @@
             <Russian>ПНВ (Gen1, Зелёный)</Russian>
             <Japanese>暗視装置 (第1世代、グリーン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 1, Zielone)</Polish>
+            <German>NS-Brille (1. Gen., grün)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_brown">
             <English>NV Goggles (Gen2, Brown)</English>
@@ -43,6 +46,7 @@
             <Russian>ПНВ (Gen2, Коричневый)</Russian>
             <Japanese>暗視装置 (第2世代、ブラウン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 2, Brązowe)</Polish>
+            <German>NS-Brille (2. Gen., braun)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_black">
             <English>NV Goggles (Gen2, Black)</English>
@@ -50,6 +54,7 @@
             <Russian>ПНВ (Gen2, Чёрный)</Russian>
             <Japanese>暗視装置 (第2世代、ブラック)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 2, Czarne)</Polish>
+            <German>NS-Brille (2. Gen., schwarz)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2_green">
             <English>NV Goggles (Gen2, Green)</English>
@@ -57,6 +62,7 @@
             <Russian>ПНВ (Gen2, Зелёный)</Russian>
             <Japanese>暗視装置 (第2世代、グリーン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 2, Zielone)</Polish>
+            <German>NS-Brille (2. Gen., grün)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -132,6 +138,7 @@
             <Russian>ПНВ (Gen4, Коричневый)</Russian>
             <Japanese>暗視装置 (第4世代、ブラウン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 4, Brązowe)</Polish>
+            <German>NS-Brille (4. Gen., braun)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_black">
             <English>NV Goggles (Gen4, Black)</English>
@@ -139,6 +146,7 @@
             <Russian>ПНВ (Gen4, Чёрный)</Russian>
             <Japanese>暗視装置 (第3世代、ブラック)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 4, Czarne)</Polish>
+            <German>NS-Brille (4. Gen., schwarz)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4_green">
             <English>NV Goggles (Gen4, Green)</English>
@@ -146,6 +154,7 @@
             <Russian>ПНВ (Gen4, Зелёный)</Russian>
             <Japanese>暗視装置 (第3世代、グリーン)</Japanese>
             <Polish>Gogle noktowizyjne (Gen 4, Zielone)</Polish>
+            <German>NS-Brille (4. Gen., grün)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_brown">
             <English>NV Goggles (Wide, Brown)</English>
@@ -153,6 +162,7 @@
             <Russian>ПНВ (Широкий, Коричневый)</Russian>
             <Japanese>暗視装置 (ワイド、ブラウン)</Japanese>
             <Polish>Gogle noktowizyjne (Szerokie, Brązowe)</Polish>
+            <German>NS-Brille (Weit, braun)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_black">
             <English>NV Goggles (Wide, Black)</English>
@@ -160,6 +170,7 @@
             <Russian>ПНВ (Широкий, Чёрный)</Russian>
             <Japanese>暗視装置 (ワイド、ブラック)</Japanese>
             <Polish>Gogle noktowizyjne (Szerokie, Czarne)</Polish>
+            <German>NS-Brille (Weit, schwarz)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Wide_green">
             <English>NV Goggles (Wide, Green)</English>
@@ -167,6 +178,7 @@
             <Russian>ПНВ (Широкий, Зелёный)</Russian>
             <Japanese>暗視装置 (ワイド、グリーン)</Japanese>
             <Polish>Gogle noktowizyjne (Szerokie, Zielone)</Polish>
+            <German>NS-Brille (Weit, grün)</German>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
