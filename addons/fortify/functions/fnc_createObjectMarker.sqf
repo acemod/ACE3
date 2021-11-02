@@ -4,7 +4,7 @@
  * Creates a map marker for a created static object but only for sides friendly to the creator side.
  *
  * Arguments:
- * 0: Unit placig <OBJECT>
+ * 0: Unit placing <OBJECT>
  * 1: Created fortify object <OBJECT>
  *
  * Return Value:
