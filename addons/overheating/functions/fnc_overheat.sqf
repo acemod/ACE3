@@ -51,7 +51,7 @@ private _suppressor = switch (_weapon) do {
     case (handgunWeapon _unit) : {(handgunItems _unit) select 0};
     default {""};
 };
-if (_suppressor != "") then {
+if (_suppressor != "" && {GVAR(suppressorCoef) > 0}) then {
     private _suppressorCoef = GVAR(cacheSilencerData) getVariable _suppressor;
     if (isNil "_suppressorCoef") then {
         private _config = configFile >> "CfgWeapons" >> _suppressor >> "ItemInfo" >> "AmmoCoef";
