@@ -51,7 +51,7 @@ if (_ammoTemperature < _barrelTemperature) then {
 
 // cookoff if too hot
 if (_ammoTemperature > (GUNPOWDER_IGNITION_TEMP * GVAR(cookoffCoef))) then {
-    [_unit, _weapon, _canUnjam, _jamType] call ace_overheating_fnc_cookoffWeapon;
+    [_unit, _weapon, _canUnjam, _jamType] call FUNC(cookoffWeapon);
 
     // since a cookoff happened then the next round should start at the ambient temperature.
     _ammoTemperature = ambientTemperature select 0;
