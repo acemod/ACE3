@@ -1308,10 +1308,16 @@ See the make.cfg file for additional build options.
             except:
                 pass
 
+            # Detect $FORCE_ADDONMAKER$ and do not binarize if found. (This overrides build_tool choice!)
+            if os.path.isfile(os.path.join(work_drive, prefix, module, "$FORCE_ADDONMAKER$")):
+                force_addonmaker = True
+                print("$FORCE_ADDONMAKER$ file found in module, packing only with Addon Maker")
+            else:
+                force_addonmaker = False
 
             # Run build tool
             build_successful = False
-            if build_tool == "pboproject":
+            if build_tool == "pboproject" and not force_addonmaker:
                 try:
                     nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
@@ -1378,7 +1384,7 @@ See the make.cfg file for additional build options.
                 finally:
                     addon_restore(os.path.join(work_drive, prefix, module))
 
-            elif build_tool== "addonbuilder":
+            elif build_tool== "addonbuilder" or force_addonmaker:
                 # Detect $NOBIN$ and do not binarize if found.
                 if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                     do_binarize = False
@@ -1403,10 +1409,10 @@ See the make.cfg file for additional build options.
                     else:
                         previousDirectory = os.getcwd()
                         os.chdir(arma3tools_path)
-                        print_error("Current directory - {}".format(os.getcwd()))
+                        print("Current directory - {}".format(os.getcwd()))
                         ret = subprocess.call(cmd)
                         os.chdir(previousDirectory)
-                        print_error("Current directory - {}".format(os.getcwd()))
+                        print("Current directory - {}".format(os.getcwd()))
                     color("reset")
                     print_green("completed")
                     # Prettyprefix rename the PBO if requested.
