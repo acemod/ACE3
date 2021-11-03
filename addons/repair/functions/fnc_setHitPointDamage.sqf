@@ -8,7 +8,7 @@
  * 0: Local Vehicle to Damage <OBJECT>
  * 1: Selected hitpoint INDEX <NUMBER>
  * 2: Total Damage <NUMBER>
- * 3: Skip destruction effects <BOOL>
+ * 3: Use destruction effects <BOOL>
  *
  * Return Value:
  * None
@@ -19,7 +19,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", true]];
+params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", false]];
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
 // can't execute all commands if the vehicle isn't local. exit here.

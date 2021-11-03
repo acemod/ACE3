@@ -1330,6 +1330,8 @@
             <Turkish>M183 Demolition Charge (Throwable)</Turkish>
             <Spanish>Carga de demolición M183 (Lanzable)</Spanish>
             <Russian>M183 Комплектный подрывной заряд (Бросаемый)</Russian>
+            <Polish>Ładunek burzący M183 (Rzucany)</Polish>
+            <German>M183 Geballte Sprengladung (Werfbar)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1355,6 +1357,8 @@
             <Turkish>M112 Demolition Charge (Throwable)</Turkish>
             <Spanish>Bloque de demolición M112 (Lanzable)</Spanish>
             <Russian>M112 подрывной заряд (Бросаемый)</Russian>
+            <Polish>Ładunek burzący M112 (Rzucany)</Polish>
+            <German>M112 Sprengladung (Werfbar)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -1654,7 +1658,7 @@
             <Portuguese>FNX-45 Tactical (Verde)</Portuguese>
             <Italian>FNX-45 Tactical (Verde)</Italian>
             <Turkish>FNX-45 Tactical (Yeşil)</Turkish>
-            <Japanese>FNX-45 タクティカル (緑)</Japanese>
+            <Japanese>FNX-45 タクティカル (グリーン)</Japanese>
             <Korean>FNX-45 Tactical (초록)</Korean>
             <Chinese>FNX-45戰術型手槍 (綠色)</Chinese>
             <Chinesesimp>FNX-45战术型手枪 (绿色)</Chinesesimp>
@@ -1739,7 +1743,7 @@
             <Portuguese>RPG-32 (Verde)</Portuguese>
             <Italian>RPG-32 (Verde)</Italian>
             <Turkish>RPG-32 (Yeşil)</Turkish>
-            <Japanese>RPG-32 (緑)</Japanese>
+            <Japanese>RPG-32 (グリーン)</Japanese>
             <Korean>RPG-32 (초록)</Korean>
             <Chinese>RPG-32"哈希姆"火箭發射器 (綠色)</Chinese>
             <Chinesesimp>RPG-32"哈希姆"火箭发射器 (绿色)</Chinesesimp>
@@ -1801,7 +1805,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈(棕色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(棕色)</Chinesesimp>
             <Italian>Metis-M (Marrone)</Italian>
-            <Japanese>メチス-M (茶)</Japanese>
+            <Japanese>メチス-M (ブラウン)</Japanese>
             <Polish>Metis-M (Brązowy)</Polish>
             <Portuguese>Metis-M (Marrom)</Portuguese>
             <Czech>Metis-M (hnědý)</Czech>
@@ -1816,7 +1820,7 @@
             <Chinese>"麥士蒂索人"-M型反坦克導彈(綠色)</Chinese>
             <Chinesesimp>"麦士蒂索人"-M型反坦克导弹(绿色)</Chinesesimp>
             <Italian>Metis-M (Verde)</Italian>
-            <Japanese>メチス-M (緑)</Japanese>
+            <Japanese>メチス-M (グリーン)</Japanese>
             <Polish>Metis-M (Zielony)</Polish>
             <Portuguese>Metis-M (Verde)</Portuguese>
             <Czech>Metis-M (zelený)</Czech>
@@ -1851,7 +1855,7 @@
             <Russian>MX (Чёрный)</Russian>
             <Portuguese>MX (Preto)</Portuguese>
             <Italian>MX (Nero)</Italian>
-            <Japanese>MX (黒)</Japanese>
+            <Japanese>MX (ブラック)</Japanese>
             <Korean>MX (검정)</Korean>
             <Chinese>MX突擊步槍 (黑色)</Chinese>
             <Chinesesimp>MX突击步枪 (黑色)</Chinesesimp>
@@ -1901,7 +1905,7 @@
             <Russian>MXC (Чёрный)</Russian>
             <Portuguese>MXC (Preto)</Portuguese>
             <Italian>MXC (Nero)</Italian>
-            <Japanese>MXC (黒)</Japanese>
+            <Japanese>MXC (ブラック)</Japanese>
             <Korean>MXC (검정)</Korean>
             <Chinese>MXC卡賓步槍 (黑色)</Chinese>
             <Chinesesimp>MXC卡宾步枪 (黑色)</Chinesesimp>
@@ -1951,7 +1955,7 @@
             <Russian>MX 3GL (Чёрный)</Russian>
             <Portuguese>MX 3GL (Preto)</Portuguese>
             <Italian>MX 3GL (Nero)</Italian>
-            <Japanese>MX 3GL (黒)</Japanese>
+            <Japanese>MX 3GL (ブラック)</Japanese>
             <Korean>MX 3GL (검정)</Korean>
             <Chinese>MX突擊步槍 (3連裝榴彈-黑色)</Chinese>
             <Chinesesimp>MX突击步枪 (3连装榴弹-黑色)</Chinesesimp>
@@ -2001,7 +2005,7 @@
             <Russian>MX LSW (Чёрный)</Russian>
             <Portuguese>MX LSW (Preto)</Portuguese>
             <Italian>MX LSW (Nero)</Italian>
-            <Japanese>MX LSW (黒)</Japanese>
+            <Japanese>MX LSW (ブラック)</Japanese>
             <Korean>MX LSW (검정)</Korean>
             <Chinese>MX輕型機槍 (黑色)</Chinese>
             <Chinesesimp>MX轻型机枪 (黑色)</Chinesesimp>
@@ -2169,7 +2173,7 @@
             <Russian>F2000 Tactical (Камо)</Russian>
             <Portuguese>F2000 Tactical (Camo)</Portuguese>
             <Italian>F2000 Tactical (Camo)</Italian>
-            <Japanese>F2000 タクティカル (迷彩)</Japanese>
+            <Japanese>F2000 タクティカル (カモフラージュ)</Japanese>
             <Korean>F2000 Tactical (위장)</Korean>
             <Chinese>F2000戰術型突擊步槍 (迷彩)</Chinese>
             <Chinesesimp>F2000战术型突击步枪 (迷彩)</Chinesesimp>
@@ -2747,7 +2751,7 @@
             <Italian>Cyrus (Hex)</Italian>
             <Hungarian>Cyrus (Hex)</Hungarian>
             <Portuguese>Cyrus (Hex)</Portuguese>
-            <Japanese>サイラス (蜂巣)</Japanese>
+            <Japanese>サイラス (ヘックス)</Japanese>
             <Korean>Cyrus (육각)</Korean>
             <Chinese>"居鲁士"狙擊步槍 (數位蜂巢迷彩)</Chinese>
             <Chinesesimp>"居鲁士"狙击步枪 (数位蜂巢迷彩)</Chinesesimp>
@@ -3548,6 +3552,23 @@
             <Chinesesimp>P99半自动手枪 (卡其色)</Chinesesimp>
             <Turkish>P99 (Haki)</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_hgun_P07_blk">
+            <English>P99 (Black)</English>
+            <Czech>P99 (Černá)</Czech>
+            <French>P99 (Noir)</French>
+            <Spanish>P99 (Negro)</Spanish>
+            <Russian>P99 (Чёрный)</Russian>
+            <Polish>P99 (czarny)</Polish>
+            <German>P99 (Schwarz)</German>
+            <Italian>P99 (Nero)</Italian>
+            <Hungarian>P99 (Fekete)</Hungarian>
+            <Portuguese>P99 (Preto)</Portuguese>
+            <Japanese>P99 (ブラック)</Japanese>
+            <Korean>P99 (검정)</Korean>
+            <Chinese>P99半自動手槍 (黑色)</Chinese>
+            <Chinesesimp>P99半自动手枪 (黑色)</Chinesesimp>
+            <Turkish>P99 (Siyah)</Turkish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
             <English>Makarov PM</English>
             <German>Makarov PM</German>
@@ -3835,6 +3856,21 @@
             <Turkish>Leupold Mark 4 HAMR (2D)</Turkish>
             <Spanish>Leupold Mark 4 HAMR (2D)</Spanish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_hamr_pip">
+            <English>Leupold Mark 4 HAMR (PIP)</English>
+            <German>Leupold Mark 4 HAMR (PIP)</German>
+            <Chinese>Leupold Mark 4 HAMR (PIP)</Chinese>
+            <Chinesesimp>Leupold Mark 4 HAMR (PIP)</Chinesesimp>
+            <Japanese>Leupold Mark 4 HAMR (PIP)</Japanese>
+            <Italian>Leupold Mark 4 HAMR (PIP)</Italian>
+            <Polish>Leupold Mark 4 HAMR (PIP)</Polish>
+            <Russian>Leupold Mark 4 HAMR (PIP)</Russian>
+            <Portuguese>Leupold Mark 4 HAMR (PIP)</Portuguese>
+            <French>Leupold Mark 4 HAMR (PIP)</French>
+            <Czech>Leupold Mark 4 HAMR (PIP)</Czech>
+            <Turkish>Leupold Mark 4 HAMR (PIP)</Turkish>
+            <Spanish>Leupold Mark 4 HAMR (PIP)</Spanish>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco">
             <English>ELCAN SpecterOS (Tan)</English>
             <German>ELCAN SpecterOS (Beige)</German>
@@ -3878,6 +3914,7 @@
             <Czech>ELCAN SpecterOS (Zelený Hex)</Czech>
             <Turkish>ELCAN SpecterOS (Yeşil Hex)</Turkish>
             <Spanish>ELCAN SpecterOS (Verde Hex)</Spanish>
+            <German>ELCAN SpecterOS (Hex Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_2d">
             <English>ELCAN SpecterOS (2D)</English>
@@ -3893,6 +3930,56 @@
             <Czech>ELCAN SpecterOS (2D)</Czech>
             <Turkish>ELCAN SpecterOS (2D)</Turkish>
             <Spanish>ELCAN SpecterOS (2D)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_pip">
+            <English>ELCAN SpecterOS (PIP)</English>
+            <German>ELCAN SpecterOS (PIP)</German>
+            <Chinese>ELCAN SpecterOS (PIP)</Chinese>
+            <Chinesesimp>ELCAN SpecterOS (PIP)</Chinesesimp>
+            <Japanese>ELCAN SpecterOS (PIP)</Japanese>
+            <Italian>ELCAN SpecterOS (PIP)</Italian>
+            <Polish>ELCAN SpecterOS (PIP)</Polish>
+            <Russian>ELCAN SpecterOS (PIP)</Russian>
+            <Portuguese>ELCAN SpecterOS (PIP)</Portuguese>
+            <French>ELCAN SpecterOS (PIP)</French>
+            <Czech>ELCAN SpecterOS (PIP)</Czech>
+            <Turkish>ELCAN SpecterOS (PIP)</Turkish>
+            <Spanish>ELCAN SpecterOS (PIP)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_lush">
+            <English>ELCAN SpecterOS (Lush)</English>
+            <Polish>ELCAN SpecterOS (Leśny)</Polish>
+            <French>ELCAN SpecterOS (Forêt)</French>
+            <Japanese>ELCAN SpecterOS (緑地)</Japanese>
+            <German>ELCAN SpecterOS (Grün)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
+            <English>ELCAN SpecterOS (Arid)</English>
+            <Polish>ELCAN SpecterOS (Jałowy)</Polish>
+            <French>ELCAN SpecterOS (Désert)</French>
+            <Japanese>ELCAN SpecterOS (乾燥地帯)</Japanese>
+            <German>ELCAN SpecterOS (Trocken)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
+            <English>ELCAN SpecterOS 7.62 (Black)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Czarny)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Noire)</French>
+            <Japanese>ELCAN SpecterOS 7.62 (ブラック)</Japanese>
+            <German>ELCAN SpecterOS 7.62 (Schwarz)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
+            <English>ELCAN SpecterOS 7.62 (Lush)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Leśny)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Forêt)</French>
+            <Japanese>ELCAN SpecterOS 7.62 (緑地)</Japanese>
+            <German>ELCAN SpecterOS 7.62 (Grün)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
+            <English>ELCAN SpecterOS 7.62 (Arid)</English>
+            <Polish>ELCAN SpecterOS 7.62 (Jałowy)</Polish>
+            <French>ELCAN SpecterOS 7.62 (Désert)</French>
+            <Japanese>ELCAN SpecterOS 7.62 (乾燥地帯)</Japanese>
+            <German>ELCAN SpecterOS 7.62 (Trocken)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -3952,6 +4039,7 @@
             <Czech>Nightforce NXS</Czech>
             <Turkish>Nightforce NXS</Turkish>
             <Spanish>Nightforce NXS</Spanish>
+            <German>Nightforce NXS</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_ghex">
             <English>Nightforce NXS (Green Hex)</English>
@@ -3966,6 +4054,7 @@
             <Czech>Nightforce NXS (Zelený Hex)</Czech>
             <Turkish>Nightforce NXS (Yeşil Hex)</Turkish>
             <Spanish>Nightforce NXS (Verde Hex)</Spanish>
+            <German>Nightforce NXS (Hex Grün)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_lrps_tna">
             <English>Nightforce NXS (Jungle)</English>
@@ -3995,6 +4084,22 @@
             <Czech>Nightforce NXS (2D)</Czech>
             <Turkish>Nightforce NXS (2D)</Turkish>
             <Spanish>Nightforce NXS (2D)</Spanish>
+            <German>Nightforce NXS (2D)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_lrps_pip">
+            <English>Nightforce NXS (PIP)</English>
+            <Chinese>Nightforce NXS (PIP)</Chinese>
+            <Chinesesimp>Nightforce NXS (PIP)</Chinesesimp>
+            <Japanese>Nightforce NXS (PIP)</Japanese>
+            <Italian>Nightforce NXS (PIP)</Italian>
+            <Polish>Nightforce NXS (PIP)</Polish>
+            <Russian>Nightforce NXS (PIP)</Russian>
+            <Portuguese>Nightforce NXS (PIP)</Portuguese>
+            <French>Nightforce NXS (PIP)</French>
+            <Czech>Nightforce NXS (PIP)</Czech>
+            <Turkish>Nightforce NXS (PIP)</Turkish>
+            <Spanish>Nightforce NXS (PIP)</Spanish>
+            <German>Nightforce NXS (BIB)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams">
             <English>US Optics MR-10 (Black)</English>
@@ -4009,6 +4114,7 @@
             <Czech>US Optics MR-10 (Černá)</Czech>
             <Turkish>US Optics MR-10 (Siyah)</Turkish>
             <Spanish>US Optics MR-10 (Negra)</Spanish>
+            <German>US Optics MR-10 (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_khk">
             <English>US Optics MR-10 (Khaki)</English>
@@ -4023,6 +4129,7 @@
             <Czech>US Optics MR-10 (Khaki)</Czech>
             <Turkish>US Optics MR-10 (Haki)</Turkish>
             <Spanish>US Optics MR-10 (Caqui)</Spanish>
+            <German>US Optics MR-10 (Khaki)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ams_snd">
             <English>US Optics MR-10 (Sand)</English>
@@ -4037,6 +4144,7 @@
             <Czech>US Optics MR-10 (Písková)</Czech>
             <Turkish>US Optics MR-10 (Kum)</Turkish>
             <Spanish>US Optics MR-10 (Arena)</Spanish>
+            <German>US Optics MR-10 (Sand)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_blk">
             <English>KAHLES Helia (Black)</English>
@@ -4051,6 +4159,7 @@
             <Czech>KAHLES Helia (Černá)</Czech>
             <Turkish>KAHLES Helia (Siyah)</Turkish>
             <Spanish>KAHLES Helia (Negra)</Spanish>
+            <German>KAHLES Helia (Schwarz)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_hex">
             <English>KAHLES Helia (Hex)</English>
@@ -4065,6 +4174,7 @@
             <Czech>KAHLES Helia (Hex)</Czech>
             <Turkish>KAHLES Helia (Hex)</Turkish>
             <Spanish>KAHLES Helia (Hex)</Spanish>
+            <German>KAHLES Helia (Hex)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_old">
             <English>KAHLES Helia (Old)</English>
@@ -4079,6 +4189,7 @@
             <Czech>KAHLES Helia (Stará)</Czech>
             <Turkish>KAHLES Helia (Eski)</Turkish>
             <Spanish>KAHLES Helia (Vieja)</Spanish>
+            <German>KAHLES Helia (Alt)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_khs_tan">
             <English>KAHLES Helia (Tan)</English>
@@ -4093,6 +4204,7 @@
             <Czech>KAHLES Helia (Žlutohnědá)</Czech>
             <Turkish>KAHLES Helia (Tan)</Turkish>
             <Spanish>KAHLES Helia (Tan)</Spanish>
+            <German>KAHLES Helia (Tan)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms">
             <English>Burris XTR II</English>
@@ -4107,6 +4219,7 @@
             <Czech>Burris XTR II</Czech>
             <Turkish>Burris XTR II</Turkish>
             <Spanish>Burris XTR II</Spanish>
+            <German>Burris XTR II</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_ghex">
             <English>Burris XTR II (Green Hex)</English>
@@ -4121,6 +4234,21 @@
             <Czech>Burris XTR II (Zelený Hex)</Czech>
             <Turkish>Burris XTR II (Yeşil Hex)</Turkish>
             <Spanish>Burris XTR II (Verde Hex)</Spanish>
+            <German>Burris XTR II (Hex Grün)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_dms_weathered">
+            <English>Burris XTR II (Old)</English>
+            <Polish>Burris XTR II (Stary)</Polish>
+            <French>Burris XTR II (Usée)</French>
+            <Japanese>Burris XTR II (使い古し)</Japanese>
+            <German>Burris XTR II (Alt)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
+            <English>Burris XTR II (ASP-1 Kir)</English>
+            <Polish>Burris XTR II (ASP-1 Kir)</Polish>
+            <French>Burris XTR II (ASP-1 Kir)</French>
+            <Japanese>Burris XTR II (ASP-1 Kir)</Japanese>
+            <German>Burris XTR II (ASP-1 Kir)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4166,6 +4294,20 @@
             <Czech>EOTech XPS3 (Khaki)</Czech>
             <Turkish>EOTech XPS3 (Haki)</Turkish>
             <Spanish>EOTech XPS3 (Caqui)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_lush">
+            <English>EOTech XPS3 (Lush)</English>
+            <Polish>EOTech XPS3 (Leśny)</Polish>
+            <French>EOTech XPS3 (Forêt)</French>
+            <Japanese>EOTech XPS3 (緑地)</Japanese>
+            <German>EOTech XPS3 (Grün)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
+            <English>EOTech XPS3 (Arid)</English>
+            <Polish>EOTech XPS3 (Jałowy)</Polish>
+            <French>EOTech XPS3 (Désert)</French>
+            <Japanese>EOTech XPS3 (乾燥地帯)</Japanese>
+            <German>EOTech XPS3 (Trocken)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
@@ -4225,6 +4367,7 @@
             <Czech>IOR-Valdada Pitbull 2</Czech>
             <Turkish>IOR-Valdada Pitbull 2</Turkish>
             <Spanish>IOR-Valdada Pitbull 2</Spanish>
+            <German>IOR-Valdada Pitbull 2</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrco_2d">
             <English>IOR-Valdada Pitbull 2 (2D)</English>
@@ -4239,6 +4382,22 @@
             <Czech>IOR-Valdada Pitbull 2 (2D)</Czech>
             <Turkish>IOR-Valdada Pitbull 2 (2D)</Turkish>
             <Spanish>IOR-Valdada Pitbull 2 (2D)</Spanish>
+            <German>IOR-Valdada Pitbull 2 (2D)</German>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrco_pip">
+            <English>IOR-Valdada Pitbull 2 (PIP)</English>
+            <Chinese>IOR-Valdada Pitbull 2 (PIP)</Chinese>
+            <Chinesesimp>IOR-Valdada Pitbull 2 (PIP)</Chinesesimp>
+            <Japanese>IOR-Valdada ピットブル 2 (PIP)</Japanese>
+            <Italian>IOR-Valdada Pitbull 2 (PIP)</Italian>
+            <Polish>IOR-Valdada Pitbull 2 (PIP)</Polish>
+            <Russian>IOR-Valdada Pitbull 2 (PIP)</Russian>
+            <Portuguese>IOR-Valdada Pitbull 2 (PIP)</Portuguese>
+            <French>IOR-Valdada Pitbull 2 (PIP)</French>
+            <Czech>IOR-Valdada Pitbull 2 (PIP)</Czech>
+            <Turkish>IOR-Valdada Pitbull 2 (PIP)</Turkish>
+            <Spanish>IOR-Valdada Pitbull 2 (PIP)</Spanish>
+            <German>IOR-Valdada Pitbull 2 (BIB)</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_Yorris">
             <English>Burris FastFire 2</English>
@@ -4253,13 +4412,14 @@
             <Czech>Burris FastFire 2</Czech>
             <Turkish>Burris FastFire 2</Turkish>
             <Spanish>Burris FastFire 2</Spanish>
+            <German>Burris FastFire 2</German>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_ACO">
             <English>C-More Railway (Red)</English>
             <German>C-More Railway (Rot)</German>
             <Chinese>C-More Railway (紅色)</Chinese>
             <Chinesesimp>C-More Railway (红色)</Chinesesimp>
-            <Japanese>C-More レイルウェイ (赤)</Japanese>
+            <Japanese>C-More レイルウェイ (レッド)</Japanese>
             <Italian>C-More Railway (Rosso)</Italian>
             <Polish>C-More Railway (Czerwony)</Polish>
             <Russian>C-More Railway (Красный)</Russian>
@@ -4274,7 +4434,7 @@
             <German>C-More Railway (Grün)</German>
             <Chinese>C-More Railway (綠色)</Chinese>
             <Chinesesimp>C-More Railway (绿色)</Chinesesimp>
-            <Japanese>C-More レイルウェイ (緑)</Japanese>
+            <Japanese>C-More レイルウェイ (グリーン)</Japanese>
             <Italian>C-More Railway (Verde)</Italian>
             <Polish>C-More Railway (Zielony)</Polish>
             <Russian>C-More Railway (Зеленый)</Russian>
@@ -4289,7 +4449,7 @@
             <German>C-More Railway SMG (Rot)</German>
             <Chinese>C-More Railway SMG (紅色)</Chinese>
             <Chinesesimp>C-More Railway SMG (红色)</Chinesesimp>
-            <Japanese>C-More レイルウェイ SMG (赤)</Japanese>
+            <Japanese>C-More レイルウェイ SMG (レッド)</Japanese>
             <Italian>C-More Railway SMG (Rosso)</Italian>
             <Polish>C-More Railway SMG (Czerwony)</Polish>
             <Russian>C-More Railway SMG (Красный)</Russian>
@@ -4304,7 +4464,7 @@
             <German>C-More Railway SMG (Grün)</German>
             <Chinese>C-More Railway SMG (綠色)</Chinese>
             <Chinesesimp>C-More Railway SMG (绿色)</Chinesesimp>
-            <Japanese>C-More レイルウェイ SMG (緑)</Japanese>
+            <Japanese>C-More レイルウェイ SMG (グリーン)</Japanese>
             <Italian>C-More Railway SMG (Verde)</Italian>
             <Polish>C-More Railway SMG (Zielony)</Polish>
             <Russian>C-More Railway SMG (Зеленый)</Russian>
@@ -4905,7 +5065,7 @@
             <Portuguese>MSBS Grot</Portuguese>
             <Korean>MSBS Grot</Korean>
             <Chinesesimp>MSBS Grot</Chinesesimp>
-            <Japanese>MSBS Grot</Japanese>
+            <Japanese>MSBS グロート</Japanese>
             <Turkish>MSBS Grot</Turkish>
             <Hungarian>MSBS Grot</Hungarian>
         </Key>
@@ -4922,7 +5082,7 @@
             <Portuguese>MSBS Grot (Preto)</Portuguese>
             <Korean>MSBS Grot (검정)</Korean>
             <Chinesesimp>MSBS Grot(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot(ブラック)</Japanese>
+            <Japanese>MSBS グロート (ブラック)</Japanese>
             <Turkish>MSBS Grot (Siyah)</Turkish>
             <Hungarian>MSBS Grot (Fekete)</Hungarian>
         </Key>
@@ -4939,7 +5099,7 @@
             <Portuguese>MSBS Grot (Camo)</Portuguese>
             <Korean>MSBS Grot (위장)</Korean>
             <Chinesesimp>MSBS Grot(迷彩)</Chinesesimp>
-            <Japanese>MSBS Grot (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート (カモフラージュ)</Japanese>
             <Turkish>MSBS Grot (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot (Terepmintás)</Hungarian>
         </Key>
@@ -4956,7 +5116,7 @@
             <Portuguese>MSBS Grot (Deserto)</Portuguese>
             <Korean>MSBS Grot (모래)</Korean>
             <Chinesesimp>MSBS Grot(沙色)</Chinesesimp>
-            <Japanese>MSBS Grot (サンド)</Japanese>
+            <Japanese>MSBS グロート (サンド)</Japanese>
             <Turkish>MSBS Grot (Kum)</Turkish>
             <Hungarian>MSBS Grot (Homok)</Hungarian>
         </Key>
@@ -4973,7 +5133,7 @@
             <Portuguese>MSBS Grot GL</Portuguese>
             <Korean>MSBS Grot GL</Korean>
             <Chinesesimp>MSBS Grot GL</Chinesesimp>
-            <Japanese>MSBS Grot GL</Japanese>
+            <Japanese>MSBS グロート GL</Japanese>
             <Turkish>MSBS Grot GL</Turkish>
             <Hungarian>MSBS Grot GL</Hungarian>
         </Key>
@@ -4990,7 +5150,7 @@
             <Portuguese>MSBS Grot GL (Preto)</Portuguese>
             <Korean>MSBS Grot GL (검정)</Korean>
             <Chinesesimp>MSBS Grot GL(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot GL(ブラック)</Japanese>
+            <Japanese>MSBS グロート GL(ブラック)</Japanese>
             <Turkish>MSBS Grot GL (Siyah)</Turkish>
             <Hungarian>MSBS Grot GL (Fekete)</Hungarian>
         </Key>
@@ -5007,7 +5167,7 @@
             <Portuguese>MSBS Grot GL (Camo)</Portuguese>
             <Korean>MSBS Grot GL (위장)</Korean>
             <Chinesesimp>MSBS Grot GL(迷彩)</Chinesesimp>
-            <Japanese>MSBS Grot GL (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート GL (カモフラージュ)</Japanese>
             <Turkish>MSBS Grot GL (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot GL (Terepmintás)</Hungarian>
         </Key>
@@ -5024,7 +5184,7 @@
             <Portuguese>MSBS Grot GL (Deserto)</Portuguese>
             <Korean>MSBS Grot GL (모래)</Korean>
             <Chinesesimp>MSBS Grot GL(沙色)</Chinesesimp>
-            <Japanese>MSBS Grot GL (サンド)</Japanese>
+            <Japanese>MSBS グロート GL (サンド)</Japanese>
             <Turkish>MSBS Grot GL (Kum)</Turkish>
             <Hungarian>MSBS Grot GL (Homok)</Hungarian>
         </Key>
@@ -5041,7 +5201,7 @@
             <Portuguese>MSBS Grot MR</Portuguese>
             <Korean>MSBS Grot MR</Korean>
             <Chinesesimp>MSBS Grot MR</Chinesesimp>
-            <Japanese>MSBS Grot MR</Japanese>
+            <Japanese>MSBS グロート MR</Japanese>
             <Turkish>MSBS Grot MR</Turkish>
             <Hungarian>MSBS Grot MR</Hungarian>
         </Key>
@@ -5058,7 +5218,7 @@
             <Portuguese>MSBS Grot MR (Preto)</Portuguese>
             <Korean>MSBS Grot MR (검정)</Korean>
             <Chinesesimp>MSBS Grot MR(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot MR (ブラック)</Japanese>
+            <Japanese>MSBS グロート MR (ブラック)</Japanese>
             <Turkish>MSBS Grot MR (Siyah)</Turkish>
             <Hungarian>MSBS Grot MR (Fekete)</Hungarian>
         </Key>
@@ -5075,7 +5235,7 @@
             <Portuguese>MSBS Grot MR (Camo)</Portuguese>
             <Korean>MSBS Grot MR (위장)</Korean>
             <Chinesesimp>MSBS Grot MR(迷彩)</Chinesesimp>
-            <Japanese>MSBS Grot MR (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート MR (カモフラージュ)</Japanese>
             <Turkish>MSBS Grot MR (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot MR (Terepmintás)</Hungarian>
         </Key>
@@ -5092,7 +5252,7 @@
             <Portuguese>MSBS Grot MR (Deserto)</Portuguese>
             <Korean>MSBS Grot MR (모래)</Korean>
             <Chinesesimp>MSBS Grot MR(沙色)</Chinesesimp>
-            <Japanese>MSBS Grot MR (サンド)</Japanese>
+            <Japanese>MSBS グロート MR (サンド)</Japanese>
             <Turkish>MSBS Grot MR (Kum)</Turkish>
             <Hungarian>MSBS Grot MR (Homok)</Hungarian>
         </Key>
@@ -5109,7 +5269,7 @@
             <Portuguese>MSBS Grot SG</Portuguese>
             <Korean>MSBS Grot SG</Korean>
             <Chinesesimp>MSBS Grot SG</Chinesesimp>
-            <Japanese>MSBS Grot SG</Japanese>
+            <Japanese>MSBS グロート SG</Japanese>
             <Turkish>MSBS Grot SG</Turkish>
             <Hungarian>MSBS Grot SG</Hungarian>
         </Key>
@@ -5126,7 +5286,7 @@
             <Portuguese>MSBS Grot SG (Preto)</Portuguese>
             <Korean>MSBS Grot SG (검정)</Korean>
             <Chinesesimp>MSBS Grot SG(黑色)</Chinesesimp>
-            <Japanese>MSBS Grot SG(ブラック)</Japanese>
+            <Japanese>MSBS グロート SG (ブラック)</Japanese>
             <Turkish>MSBS Grot SG (Siyah)</Turkish>
             <Hungarian>MSBS Grot SG (Fekete)</Hungarian>
         </Key>
@@ -5143,7 +5303,7 @@
             <Portuguese>MSBS Grot SG (Camo)</Portuguese>
             <Korean>MSBS Grot SG (위장)</Korean>
             <Chinesesimp>MSBS Grot SG(迷彩)</Chinesesimp>
-            <Japanese>MSBS Grot SG (カモフラージュ)</Japanese>
+            <Japanese>MSBS グロート SG (カモフラージュ)</Japanese>
             <Turkish>MSBS Grot SG (Kamuflaj)</Turkish>
             <Hungarian>MSBS Grot SG (Terepmintás)</Hungarian>
         </Key>
@@ -5160,7 +5320,7 @@
             <Portuguese>MSBS Grot SG (Deserto)</Portuguese>
             <Korean>MSBS Grot SG (모래)</Korean>
             <Chinesesimp>MSBS Grot SG(沙色)</Chinesesimp>
-            <Japanese>MSBS Grot SG (サンド)</Japanese>
+            <Japanese>MSBS グロート SG (サンド)</Japanese>
             <Turkish>MSBS Grot SG (Kum)</Turkish>
             <Hungarian>MSBS Grot SG (Homok)</Hungarian>
         </Key>

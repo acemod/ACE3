@@ -30,7 +30,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         _seekerStateParams set [6, true];
         TRACE_1("Missile Pitbull",_seekerStateParams);
     };
-    
+
     // Internal radar homing
     // For performance reasons only poll for target every so often instead of each frame
     if ((_lastTargetPollTime + ACTIVE_RADAR_POLL_FREQUENCY) - CBA_missionTime < 0) then {
@@ -83,7 +83,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
                 _target = _x;
             };
         } forEach _nearestObjects;
-        
+
         _expectedTargetPos = _searchPos;
     };
 

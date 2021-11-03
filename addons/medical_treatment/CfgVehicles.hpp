@@ -18,6 +18,7 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {QPATHTOEF(apl,data\bodybag_co.paa)};
         class ACE_Actions {

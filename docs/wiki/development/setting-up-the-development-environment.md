@@ -125,7 +125,7 @@ class CfgSettings {
 
 - To only disable caching for a single module, hence greatly improving mission restart time, add the following line to the `script_component.hpp` file of said module (prepared in each ACE3 component, simply uncomment):
 
-```cpp
+```sqf
 #define DISABLE_COMPILE_CACHE
 ```
 

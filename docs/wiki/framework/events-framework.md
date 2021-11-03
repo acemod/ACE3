@@ -83,6 +83,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
+|`ace_allowDefuse` | [_mine, _allow] | Global or Target | Callable | Set allowance of the dynamic defusal action on a mine
 |`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered
 |`ace_explosives_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive
 
@@ -113,8 +114,8 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
-|`ace_attach_attached` | [_attachedObject, _itemClassname] | Local | Listen | After an item was attached to a unit/vehicle
-|`ace_attach_detaching` | [_attachedObject, _itemName] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle
+|`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle
+|`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle.
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
@@ -227,7 +228,7 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 ### 3.4 Example
 
-```js
+```sqf
 // Event handler added on a target machine
 ["ace_interact_tapShoulder", ace_example_fnc_onTapShoulder] call CBA_fnc_addEventHandler;
 

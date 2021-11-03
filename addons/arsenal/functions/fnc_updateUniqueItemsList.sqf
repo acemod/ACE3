@@ -33,8 +33,8 @@ private _configGlasses = configFile >> "CfgGlasses";
     switch true do {
         // Weapon mag
         case (
-                isClass (_configMagazines >> _x) && 
-                {_x in (_itemsCache select 2)} && 
+                isClass (_configMagazines >> _x) &&
+                {_x in (_itemsCache select 2)} &&
                 {!(_x in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL))}
             ): {
             (GVAR(virtualItems) select 19) pushBackUnique _x;
@@ -42,7 +42,7 @@ private _configGlasses = configFile >> "CfgGlasses";
 
         // Mag throw
         case (
-                isClass (_configMagazines >> _x) && 
+                isClass (_configMagazines >> _x) &&
                 {_x in (_itemsCache select 15)} &&
                 {!(_x in (GVAR(virtualItems) select 15))}
             ): {
@@ -51,7 +51,7 @@ private _configGlasses = configFile >> "CfgGlasses";
 
         // Mag put
         case (
-                isClass (_configMagazines >> _x) && 
+                isClass (_configMagazines >> _x) &&
                 {_x in (_itemsCache select 16)} &&
                 {!(_x in (GVAR(virtualItems) select 16))}
             ): {
@@ -100,13 +100,13 @@ private _configGlasses = configFile >> "CfgGlasses";
                 {!(_x in ((_itemsCache select 1) select 0))} &&
                 {!(_x in ((_itemsCache select 1) select 1))} &&
                 {!(_x in ((_itemsCache select 1) select 2))} &&
-                {!(_x in ((_itemsCache select 1) select 3))} 
+                {!(_x in ((_itemsCache select 1) select 3))}
             ): {
             (GVAR(virtualItems) select 18) pushBackUnique _x;
         };
 
         // Backpacks
-        case (isClass (_configVehicles >> _x)): {
+        case (getNumber (_configVehicles >> _x >> "isBackpack") == 1): {
             (GVAR(virtualItems) select 23) pushBackUnique _x;
         };
 

@@ -18,6 +18,7 @@
 params ["_config"];
 
 private _varName = configName _config;
+INFO_1("Loading ace_setting from config [%1] - consider updating to native cba_settings",_varName);
 private _typeName = toUpper getText (_config >> "typeName");
 if (_typeName == "") then {
     WARNING_1("Setting [%1] Has no typeName",_varName);
