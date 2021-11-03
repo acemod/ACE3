@@ -68,6 +68,12 @@
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
         </Key>
+        <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
+            <English>Suppressor Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_suppressorCoef_description">
+            <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>
             <German>Zeige Text bei Ladehemmung</German>

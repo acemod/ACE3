@@ -46,22 +46,19 @@ if (isNil "_energyIncrement") then {
 // Increase overheating depending on how obstrusive is the current supressor,
 // if any. Typical arma supressors have visibleFire=0.5 and audibleFire=0.3,
 // so they produce x2.1 overheating
-private _silencer = switch (_weapon) do {
+private _suppressor = switch (_weapon) do {
     case (primaryWeapon _unit) : {(primaryWeaponItems _unit) select 0};
     case (handgunWeapon _unit) : {(handgunItems _unit) select 0};
     default {""};
 };
-if (_silencer != "") then {
-    private _silencerCoef = GVAR(cacheSilencerData) getVariable _silencer;
-    if (isNil "_silencerCoef") then {
-        _silencerCoef = 1 + (
-            1 - getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire")
-        ) + (
-            1 - getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "visibleFire")
-        );
-        GVAR(cacheSilencerData) setVariable [_silencer, _silencerCoef];
+if (_suppressor != "") then {
+    private _suppressorCoef = GVAR(cacheSilencerData) getVariable _suppressor;
+    if (isNil "_suppressorCoef") then {
+        private _config = configFile >> "CfgWeapons" >> _suppressor >> "ItemInfo" >> "AmmoCoef";
+        _suppressorCoef = GVAR(suppressorCoef) * (1 + (1 - getNumber (_config >> "audibleFire")) + (1 - getNumber (_config >> "visibleFire")));
+        GVAR(cacheSilencerData) setVariable [_suppressor, _suppressorCoef];
     };
-    _energyIncrement = _energyIncrement * _silencerCoef;
+    _energyIncrement = _energyIncrement * _suppressorCoef;
 };
 
 TRACE_1("heat",_energyIncrement);
