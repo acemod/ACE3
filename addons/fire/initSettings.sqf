@@ -37,3 +37,4 @@
     true,
     false // isGlobal
 ] call CBA_fnc_addSetting;
+
