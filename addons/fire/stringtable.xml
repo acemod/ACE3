@@ -52,7 +52,7 @@
         <Key ID="STR_ACE_Fire_Setting_EnableScreams">
             <English>Enable screams by units on fire</English>
         </Key>
-        <Key ID="STR_ACE_Fire_Setting_EnableScreamsDescription">
+        <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
             <English>Enables if units on fire will play the screaming sound</English>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">

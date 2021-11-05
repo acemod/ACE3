@@ -32,7 +32,7 @@
 
 [
     QGVAR(enableScreams), "CHECKBOX",
-    [LSTRING(Setting_EnableScreams), LSTRING(Setting_EnableScreamsDescription)],
+    [LSTRING(Setting_EnableScreams), LSTRING(Setting_EnableScreams_Description)],
     LSTRING(Category_DisplayName),
     true,
     false // isGlobal
