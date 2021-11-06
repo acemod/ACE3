@@ -19,18 +19,7 @@
 params ["_player", "_unit"];
 TRACE_2("_player, _unit",_player, _unit);
 
-private _return = false;
-
-if (
-    GVAR(enabled)
-    && {isClass (configfile >> "CfgPatches" >> "acex_field_rations")}
-    && {[_unit, currentWeapon _unit] call FUNC(getWeaponTemperature) > (ambientTemperature select 0)}
-) then {
-    {
-        if (getNumber (configFile >> "CfgWeapons" >> _x >> QEXGVAR(field_rations,thirstQuenched)) > 0) exitWith {
-            _return = true;
-        };
-    } forEach (_player call EFUNC(common,uniqueItems));
-};
-
-_return
+GVAR(enabled)
+&& {isClass (configfile >> "CfgPatches" >> "acex_field_rations")}
+&& {[_unit, currentWeapon _unit] call FUNC(getWeaponTemperature) > (ambientTemperature select 0)}
+&& {(((_player call EFUNC(common,uniqueItems)) findIf {getNumber (configFile >> "CfgWeapons" >> _x >> QEXGVAR(field_rations,thirstQuenched)) > 0}) != -1}
