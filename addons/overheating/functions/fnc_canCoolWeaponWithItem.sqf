@@ -22,4 +22,4 @@ TRACE_2("_player, _unit",_player, _unit);
 GVAR(enabled)
 && {isClass (configfile >> "CfgPatches" >> "acex_field_rations")}
 && {[_unit, currentWeapon _unit] call FUNC(getWeaponTemperature) > (ambientTemperature select 0)}
-&& {(((_player call EFUNC(common,uniqueItems)) findIf {getNumber (configFile >> "CfgWeapons" >> _x >> QEXGVAR(field_rations,thirstQuenched)) > 0}) != -1}
+&& {((_player call EFUNC(common,uniqueItems)) findIf {getNumber (configFile >> "CfgWeapons" >> _x >> QEXGVAR(field_rations,thirstQuenched)) > 0}) != -1}
