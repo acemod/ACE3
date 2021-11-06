@@ -19,6 +19,10 @@
 if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
+if (!(["ACE_Medical"] call EFUNC(common,isModLoaded))) exitWith {
+    WARNING("No ACE-Medical");
+    XGVAR(outputText) = "No ACE-Medical";
+};
 
 private _global = missionNamespace getVariable [QGVAR(globalSync), false];  // Global Sync (e.g. for spectator)
 INFO_1("Running Kill Tracking [Global: %1]",_global);
