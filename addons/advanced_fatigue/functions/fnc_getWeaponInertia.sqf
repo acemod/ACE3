@@ -19,10 +19,7 @@ params [["_unit", ACE_player, [objNull]]];
 private _cache = GVAR(inertiaCache);
 private _weapon = currentWeapon _unit;
 private _accessories = _unit weaponAccessories _weapon;
-private _key = _weapon + "$";
-{
-    _key = _key + "+" + _x;
-} forEach _accessories;
+private _key = format (["%1$%2+%3+%4+%5", _weapon] + _accessories);
 
 private _inertia = _cache get _key;
 if (isNil "_inertia") then {
