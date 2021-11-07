@@ -1,7 +1,7 @@
 [
     QGVAR(enabled), "CHECKBOX",
-    [LELSTRING(common,Enabled), LLSTRING(addon_displayname)],
-    [ELSTRING(common,ACEKeybindCategoryVehicles), LSTRING(setting_enabled_description)],
+    [LELSTRING(common,Enabled), LLSTRING(setting_enabled_description)],
+    [ELSTRING(common,ACEKeybindCategoryVehicles), LSTRING(addon_displayname)],
     true,
     true,
     {},

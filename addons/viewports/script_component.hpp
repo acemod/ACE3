@@ -2,10 +2,10 @@
 #define COMPONENT_BEAUTIFIED Viewports
 #include "\z\ace\addons\main\script_mod.hpp"
 
-#define DEBUG_MODE_FULL
-#define DISABLE_COMPILE_CACHE
-#define ENABLE_PERFORMANCE_COUNTERS
-#define POINT_CONFIG_DEBUG
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
+// #define POINT_CONFIG_DEBUG
 
 #ifdef DEBUG_ENABLED_VIEWPORTS
     #define DEBUG_MODE_FULL
