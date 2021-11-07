@@ -38,7 +38,7 @@ class CfgVehicles {
                 };
                 class GVAR(CoolWeaponWithItem) {
                     displayName = CSTRING(CoolWeaponWithItem);
-                    condition = QUOTE(GVAR(enabled) && {[ARR_2(_player, _player)] call FUNC(canCoolWeaponWithItem)});
+                    condition = QUOTE(call FUNC(canCoolWeaponWithItem));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = "true";
                     showDisabled = 0;
@@ -66,7 +66,7 @@ class CfgVehicles {
                 };
                 class GVAR(CoolWeaponWithItem) {
                     displayName = CSTRING(CoolWeaponWithItem);
-                    condition = 'GVAR(enabled) && {[_player, _target] call FUNC(canCoolWeaponWithItem)} && {!(_target getVariable [QEGVAR(captives,isSurrendering), false])} && {!(_target getVariable [QEGVAR(captives,isHandcuffed), false])}';
+                    condition = QUOTE(call FUNC(canCoolWeaponWithItem));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                     statement = "true";
                     showDisabled = 0;
