@@ -82,7 +82,7 @@ GVAR(objectRotationZ) = 0;
     _newObject setPosASL _posASL;
     _newObject setVectorDirAndUp [_vectorDir, _vectorUp];
 
-    // Server will use this event to run the jip compatible QGVAR(addActionToObject) event
+    // Server will use this event to run the jip compatible QGVAR(addActionToObject) event and create the related map marker
     [QXGVAR(objectPlaced), [_unit, _side, _newObject]] call CBA_fnc_globalEvent;
 
     if (cba_events_control) then {
