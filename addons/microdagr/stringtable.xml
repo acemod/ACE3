@@ -590,6 +590,8 @@
             <Spanish>MicroDAGR - Modo anterior</Spanish>
             <French>MicroDAGR - Mode précédent</French>
             <Japanese>MicroDAGR - 前のモードに</Japanese>
+            <German>MicroDAGR - vorheriger Modus</German>
+            <Polish>MicroDAGR - Poprzedni Tryb</Polish>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_nextMode">
             <English>MicroDAGR - Next Mode</English>
@@ -597,6 +599,8 @@
             <Spanish>MicroDAGR - Modo siguiente</Spanish>
             <French>MicroDAGR - Mode suivant</French>
             <Japanese>MicroDAGR - 次のモードに</Japanese>
+            <German>MicroDAGR - nächster Modus</German>
+            <Polish>MicroDAGR - Kolejny Tryb</Polish>
         </Key>
     </Package>
 </Project>

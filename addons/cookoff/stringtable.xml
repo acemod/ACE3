@@ -165,12 +165,16 @@
             <Japanese>誘爆火災を有効化</Japanese>
             <French>Véhicules - Feu durant l'auto-inflammation</French>
             <Russian>Включить возгорание поеприпасов</Russian>
+            <German>Aktiviert das in Brand setzen des Fahrzeugs während des Durchzündens der Munition</German>
+            <Polish>Włącz pożar pojazdu podczas samozapłonu</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
             <English>Whether or not vehicles will catch on fire during cook-off</English>
             <Japanese>誘爆により車両が炎上するかどうかを設定します。</Japanese>
             <French>Définit si les véhicules prennent feu durant l'auto-inflammation de leurs munitions.</French>
             <Russian>Будет ли техника возгораться при подрыве боеприпасов</Russian>
+            <German>Ob Fahrzeuge in Brand gesetzt werden, während deren Munition durchzündet.</German>
+            <Polish>Określa, czy pojazdy zapalą się podczas samozapłonu ich amunicji.</Polish>
         </Key>
     </Package>
 </Project>

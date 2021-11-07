@@ -34,7 +34,7 @@ There are two ways of adding custom presets to your mission, either via code or 
 
 To add a preset via code you use the function `call ace_fortify_fnc_registerObjects`. Also enables Fortify.
 
-```cpp
+```sqf
 * Registers the given objects in the given side's player interaction menu.
 * Players on that side must have the `Fortify Tool` item in their inventory to access the menu.
 * Classnames must be in the format [<classname>, <cost>]
@@ -74,7 +74,7 @@ A custom deploy handler allows missions makers to decide if an object can be pla
 
 To verify that an object isn't above a certain terrain height we can check the height of the object before it is confirmed as placed. Returning `false` from the code block means that placement is not allowed.
 
-```cpp
+```sqf
 [{
     params ["_unit", "_object", "_cost"];
     private _return = (getPosATL _object) select 2 < 1;

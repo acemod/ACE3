@@ -101,8 +101,7 @@ GVAR(objectActions) = [
             {(_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad))]) in [true, 1]} &&
             {alive _target} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-            {!((typeOf _target) in ["ACE_Wheel", "ACE_Track"])} && // Exclude Wheel and Track
-            {!(_target iskindOf "Land_CanisterFuel_F")} // Exclude Fuel Canisters
+            {(getNumber ((configOf _target) >> QGVAR(noRename))) == 0}
         }
     ] call EFUNC(interact_menu,createAction),
     [QGVAR(load), localize LSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
@@ -153,3 +152,10 @@ private _objectClassesAddClassEH = call (uiNamespace getVariable [QGVAR(objectCl
 {
     [_x, "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
 } forEach _objectClassesAddClassEH;
+
+if (isServer) then {
+    ["ace_placedInBodyBag", {
+        params ["_target", "_bodyBag"];
+        _bodyBag setVariable [QGVAR(customName), [_target, false, true] call EFUNC(common,getName), true];
+    }] call CBA_fnc_addEventHandler;
+};

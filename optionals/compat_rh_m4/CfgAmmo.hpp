@@ -7,7 +7,7 @@ class CfgAmmo {
     class B_556x45_Ball;
     class B_65x39_Caseless;
     class B_762x51_Ball;
-    
+
     class RH_9x19_B_M822: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
@@ -103,7 +103,7 @@ class CfgAmmo {
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={700, 732, 750, 780};
         ACE_barrelLengths[]={304.8, 406.4, 508.0, 609.6};
-    };  
+    };
     class RH_762x35_B_FMJ: B_65x39_Caseless {
         ACE_caliber=7.823;
         ACE_bulletLength=28.397;

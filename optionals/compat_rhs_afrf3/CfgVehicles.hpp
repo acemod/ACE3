@@ -39,7 +39,7 @@ class CfgVehicles {
             class MainTurret;
         };
     };
-    
+
     class rhs_tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
         EGVAR(vehicle_damage,hullDetonationProb) = 0.8;
@@ -320,7 +320,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,engineFireProb) = 0.5;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0;
     };
-    
+
     class rhs_t14_base: Tank_F {
         EGVAR(vehicle_damage,hullDetonationProb) = 0;
         EGVAR(vehicle_damage,turretDetonationProb) = 0;
@@ -344,7 +344,7 @@ class CfgVehicles {
         };
         EGVAR(vehicle_damage,canHaveFireRing) = 1;
     };
-    
+
     class rhs_t72bb_tv: rhs_a3t72tank_base {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint",
@@ -356,7 +356,7 @@ class CfgVehicles {
             "era_37_hitpoint",
         };
     };
-    
+
     class rhs_t72bc_tv: rhs_a3t72tank_base {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint",
@@ -378,8 +378,8 @@ class CfgVehicles {
             "era_31_hitpoint", "era_32_hitpoint"
         };
         EGVAR(vehicle_damage,slatHitpoints)[] = {
-            "SLAT_51_hitpoint", "SLAT_52_hitpoint", "SLAT_53_hitpoint", 
-            "SLAT_54_hitpoint", "SLAT_55_hitpoint", "SLAT_56_hitpoint", 
+            "SLAT_51_hitpoint", "SLAT_52_hitpoint", "SLAT_53_hitpoint",
+            "SLAT_54_hitpoint", "SLAT_55_hitpoint", "SLAT_56_hitpoint",
             "SLAT_57_hitpoint", "SLAT_68_hitpoint", "SLAT_69_hitpoint",
             "SLAT_70_hitpoint"
         };
@@ -439,7 +439,7 @@ class CfgVehicles {
             "SLAT_57_hitpoint"
         };
     };
-    
+
     class rhs_t80bv: rhs_t80b {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
             "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint",

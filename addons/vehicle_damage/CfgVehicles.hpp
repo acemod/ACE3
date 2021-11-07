@@ -16,7 +16,7 @@ class CfgVehicles {
         model = "\A3\Structures_F\Wrecks\Wreck_T72_turret_F.p3d";
         icon = "\A3\armor_f_gamma\MBT_02\Data\UI\map_MBT_02_ca.paa";
     };
-    
+
     class Tank;
     class Car_F;
     class Tank_F: Tank {
@@ -148,13 +148,13 @@ class CfgVehicles {
             "HitERA_Top_Front", "HitERA_Top_Left", "HitERA_Top_Right"
         };
     };
-    
+
     class O_MBT_02_base_F;
     class O_MBT_02_cannon_F: O_MBT_02_base_F {
         GVAR(turret)[] = { QGVAR(Turret_MBT_02), {0, -1, 0} };
         GVAR(canHaveFireRing) = 1;
     };
-    
+
     class APC_Tracked_02_base_F: Tank_F {
         GVAR(hullDetonationProb) = 0;
         GVAR(turretDetonationProb) = 0;
@@ -227,7 +227,7 @@ class CfgVehicles {
         GVAR(engineFireProb) = 0.7;
         GVAR(detonationDuringFireProb) = 0.9;
         GVAR(slatHitpoints)[] = {
-            "HitSLAT_Left_1", "HitSLAT_Left_2", "HitSLAT_Left_3", 
+            "HitSLAT_Left_1", "HitSLAT_Left_2", "HitSLAT_Left_3",
             "HitSLAT_Right_1", "HitSLAT_Right_2", "HitSLAT_Right_3",
             "HitSLAT_back",
             "HitSLAT_front"
@@ -267,7 +267,7 @@ class CfgVehicles {
         GVAR(engineFireProb) = 0.7;
         GVAR(detonationDuringFireProb) = 0.5;
         GVAR(slatHitpoints)[] = {
-            "HitSLAT_Left_1", "HitSLAT_Left_2", "HitSLAT_Left_3", 
+            "HitSLAT_Left_1", "HitSLAT_Left_2", "HitSLAT_Left_3",
             "HitSLAT_Right_1", "HitSLAT_Right_2", "HitSLAT_Right_3",
             "HitSLAT_back",
             "HitSLAT_front"
@@ -282,7 +282,7 @@ class CfgVehicles {
         GVAR(engineFireProb) = 0.5;
         GVAR(detonationDuringFireProb) = 0.7;
         GVAR(slatHitpoints)[] = {
-            "HitSLAT_Left", "HitSLAT_Right", "HitSLAT_back", 
+            "HitSLAT_Left", "HitSLAT_Right", "HitSLAT_back",
             "HitSLAT_top_left", "HitSLAT_top_right", "HitSLAT_top_back"
         };
         GVAR(canHaveFireRing) = 1;

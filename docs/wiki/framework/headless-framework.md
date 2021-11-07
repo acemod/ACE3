@@ -34,7 +34,7 @@ As of ACEX v3.2.0 _(before merge into ACE3)_ this feature can also be enabled wi
 
 To prevent a group from transferring to a Headless Client use the following line on a group leader (or every unit in a group in case group leader may not spawn):
 
-```cpp
+```sqf
 this setVariable ["acex_headless_blacklist", true];
 ```
 

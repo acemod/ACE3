@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_nametags]:
-
 [
     QGVAR(showPlayerNames), "LIST",
     [LSTRING(ShowPlayerNames), LSTRING(ShowPlayerNames_Desc)],

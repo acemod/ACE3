@@ -9,6 +9,7 @@
             <Japanese>ACE G フォース</Japanese>
             <Turkish>ACE G-Kuvveti</Turkish>
             <Spanish>ACE Fuerza G</Spanish>
+            <German>ACE G-Kräfte</German>
         </Key>
         <Key ID="STR_ACE_GForces_enabledFor_displayName">
             <English>Gforces Effects</English>
@@ -65,6 +66,7 @@
             <Japanese>G 効果係数</Japanese>
             <Turkish>G-Kuvvet Katsayısı</Turkish>
             <Spanish>Coeficiente de Fuerza G</Spanish>
+            <German>G-Kräfte-Koeffizient</German>
         </Key>
         <Key ID="STR_ACE_GForces_Coefficient_Description">
             <English>Controls strength of G-Force affecting players.</English>
@@ -74,6 +76,7 @@
             <Japanese>G 効果がプレイヤーに与える影響量を設定できます。</Japanese>
             <Turkish>Oyuncuları etkileyen G-Force'un gücünü kontrol eder.</Turkish>
             <Spanish>Controla la intensidad de fuerza G que afecta a los jugadores.</Spanish>
+            <German>Bestimmt, wie stark G-Kräfte Spieler beeinflussen.</German>
         </Key>
     </Package>
 </Project>

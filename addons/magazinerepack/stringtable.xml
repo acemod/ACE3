@@ -171,12 +171,16 @@
             <Japanese>装填済み弾倉を詰め替え</Japanese>
             <French>Remplir le chargeur engagé</French>
             <Russian>Перепаковать загруженные магазины</Russian>
+            <German>Geladene Magazine umpacken</German>
+            <Polish>Przepakuj załadowane magazynki</Polish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
             <English>Repacking magazines, weapon unloaded</English>
             <Japanese>弾倉を詰め替えし、&lt;br /&gt;非装填状態です</Japanese>
             <French>Remplissage des chargeurs, arme déchargée.</French>
             <Russian>Перепаковка магазинов, оружие разряжено</Russian>
+            <German>Magazin umgepackt, Waffe entladen</German>
+            <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
         </Key>
     </Package>
 </Project>

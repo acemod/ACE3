@@ -50,7 +50,7 @@ if (_intersections isNotEqualTo []) then {
 
         GVAR(attachHelper) setVariable [QGVAR(object), _intersectObject];
     };
-    
+
 };
 
 if (_source isNotEqualTo [0, 0, 0]) then {

@@ -55,7 +55,7 @@ if (XGVAR(hudType) == 0) then {
     ];
 } else {
     // Reposition controls group and icon to create draining effect
-    private _defaultY = profileNamespace getVariable [QUOTE(TRIPLES(IGUI,GVAR(grid),Y)), safeZoneY + safeZoneH - 2.2 * GUI_GRID_H];
+    private _defaultY = profileNamespace getVariable [QUOTE(TRIPLES(IGUI,XGVAR(grid),Y)), safeZoneY + safeZoneH - 2.2 * GUI_GRID_H];
     {
         _x params ["_status", "_groupIDC", "_iconIDC"];
 

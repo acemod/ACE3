@@ -1,5 +1,3 @@
-// CBA Settings [ADDON: ace_rearm]:
-
 [
     QGVAR(level), "LIST",
     [LSTRING(RearmSettings_level_DisplayName), LSTRING(RearmSettings_level_Description)],
