@@ -16,8 +16,12 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     [0, 5, 1, 2],
     1,
-    {},
-    true
+    {
+        if (!GVAR(enabled)) exitWith {};
+        TRACE_2("reseting cache",GVAR(heatCoef),count GVAR(cacheAmmoData));
+        GVAR(cacheAmmoData) = createHashMap;
+    },
+    false
 ] call CBA_fnc_addSetting;
 
 [
@@ -36,8 +40,12 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     [0, 5, 1, 2],
     1,
-    {},
-    true
+    {
+        if (!GVAR(enabled)) exitWith {};
+        TRACE_2("reseting cache",GVAR(suppressorCoef),count GVAR(cacheSilencerData));
+        GVAR(cacheSilencerData) = createHashMap;
+    },
+    false
 ] call CBA_fnc_addSetting;
 
 [

@@ -26,7 +26,7 @@ TRACE_4("params",_unit,_weapon,_ammo,_projectile);
 BEGIN_COUNTER(overheat);
 
 // Get bullet parameters
-private _energyIncrement = GVAR(cacheAmmoData) getVariable _ammo;
+private _energyIncrement = GVAR(cacheAmmoData) get _ammo;
 if (isNil "_energyIncrement") then {
     private _bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
     if (_bulletMass == 0) then {
@@ -40,7 +40,7 @@ if (isNil "_energyIncrement") then {
     // Multiple by 3 becase we only calc every 3rd bullet: (3 * 1/2 * 0.001) = 0.0015
     _energyIncrement = GVAR(heatCoef) * 0.0015 * _bulletMass * (vectorMagnitudeSqr velocity _projectile);
 
-    GVAR(cacheAmmoData) setVariable [_ammo, _energyIncrement];
+    GVAR(cacheAmmoData) set [_ammo, _energyIncrement];
 };
 
 // Increase overheating depending on how obstrusive is the current supressor,
@@ -52,11 +52,11 @@ private _suppressor = switch (_weapon) do {
     default {""};
 };
 if (_suppressor != "" && {GVAR(suppressorCoef) > 0}) then {
-    private _suppressorCoef = GVAR(cacheSilencerData) getVariable _suppressor;
+    private _suppressorCoef = GVAR(cacheSilencerData) get _suppressor;
     if (isNil "_suppressorCoef") then {
         private _config = configFile >> "CfgWeapons" >> _suppressor >> "ItemInfo" >> "AmmoCoef";
         _suppressorCoef = GVAR(suppressorCoef) * (1 + (1 - getNumber (_config >> "audibleFire")) + (1 - getNumber (_config >> "visibleFire")));
-        GVAR(cacheSilencerData) setVariable [_suppressor, _suppressorCoef];
+        GVAR(cacheSilencerData) set [_suppressor, _suppressorCoef];
     };
     _energyIncrement = _energyIncrement * _suppressorCoef;
 };

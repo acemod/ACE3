@@ -44,9 +44,9 @@ if (hasInterface) then {
 
     if !(hasInterface) exitWith {};
 
-    GVAR(cacheWeaponData) = call CBA_fnc_createNamespace;
-    GVAR(cacheAmmoData) = call CBA_fnc_createNamespace;
-    GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
+    GVAR(cacheWeaponData) = createHashMap;
+    GVAR(cacheAmmoData) = createHashMap;
+    GVAR(cacheSilencerData) = createHashMap;
 
     //Add Take EH if required
     if (GVAR(unJamOnReload) || {GVAR(cookoffCoef) > 0}) then {

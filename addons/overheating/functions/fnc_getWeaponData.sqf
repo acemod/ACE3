@@ -25,7 +25,7 @@
 params ["_weapon"];
 
 // Look in the cache first
-private _weaponData = GVAR(cacheWeaponData) getVariable _weapon;
+private _weaponData = GVAR(cacheWeaponData) get _weapon;
 if (!isNil "_weaponData") exitWith {_weaponData};
 
 // Search the config
@@ -86,6 +86,6 @@ private _barrelMass = METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" 
 // Cache the values
 _weaponData = [_dispersion, _slowdownFactor, _jamChance, _modes, _muzzle, _reloadTime, _closedBolt, _barrelMass];
 TRACE_2("building cache",_weapon,_weaponData);
-GVAR(cacheWeaponData) setVariable [_weapon, _weaponData];
+GVAR(cacheWeaponData) set [_weapon, _weaponData];
 
 _weaponData
