@@ -10,7 +10,7 @@
  * 3: Projectile Type <STRING>
  * 4: Source <OBJECT>
  * 5: Non-directional damage source array <ARRAY> (default: [])
- * 6: Override Invulnerability <BOOLEAN> (default: true)
+ * 6: Override Invulnerability <BOO> (default: true)
  *
  * Return Value:
  * Successful <BOOL>
