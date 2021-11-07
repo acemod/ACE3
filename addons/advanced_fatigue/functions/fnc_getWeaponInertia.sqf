@@ -18,18 +18,20 @@ params [["_unit", ACE_player, [objNull]]];
 
 private _cache = GVAR(inertiaCache);
 private _weapon = currentWeapon _unit;
-private _accessories = _unit weaponAccessories _weapon;
-private _key = format (["%1$%2+%3+%4+%5", _weapon] + _accessories);
+private _weaponAndItems = [_weapon] + (_unit weaponAccessories _weapon);
 
-private _inertia = _cache get _key;
+private _inertia = _cache get _weaponAndItems;
 if (isNil "_inertia") then {
     _inertia = 0;
+    private _cfgWeapons = configFile >> "CfgWeapons";
     {
-        if (isNumber (configFile >> "CfgWeapons" >> _x >> "inertia")) then {
-            _inertia = _inertia + getNumber (configFile >> "CfgWeapons" >> _x >> "inertia");
-        };
-    } forEach [_weapon] + _accessories;
-    _cache set [_key, _inertia];
+        // if item is "" or inertia property is undefined, just ignore it
+        private _itemInertia = getNumber (_cfgWeapons >> _x >> "inertia");
+        if (isNil "_itemInertia") then { continue };
+
+        _inertia = _inertia + _itemInertia;
+    } forEach _weaponAndItems;
+    _cache set [_weaponAndItems, _inertia];
 };
 
 GVAR(inertia) = _inertia;
