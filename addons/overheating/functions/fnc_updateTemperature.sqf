@@ -33,7 +33,7 @@ _trackedWeapons pushBackUnique _tempVarName;
 _unit setVariable [QGVAR(trackedWeapons), _trackedWeapons];
 
 // Calculate cooling
-([_weapon] call FUNC(getWeaponData)) params ["", "", "", "", "", "", "", "_barrelMass"];
+private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
 _temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUNC(calculateCooling);
 
 TRACE_1("cooledTo",_temperature);

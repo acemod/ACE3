@@ -17,6 +17,6 @@
 
 params ["_weapon"];
 
-([_weapon] call FUNC(getWeaponData)) params ["", "", "", "", "", "", "", "_barrelMass"];
+private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
 
 _barrelMass

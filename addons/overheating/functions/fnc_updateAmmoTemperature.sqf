@@ -20,7 +20,7 @@
 params ["_unit", "_weapon", "_barrelTemperature"];
 TRACE_3("params",_unit,_weapon,_barrelTemperature);
 
-([_weapon] call FUNC(getWeaponData)) params ["", "", "", "", "", "", "_closedBolt"];
+private _closedBolt = ([_weapon] call FUNC(getWeaponData)) select 6;
 private _canUnjam = [_unit] call FUNC(canUnjam);
 private _jamType = _unit getVariable [format [QGVAR(%1_jamType), _weapon], "None"];
 
