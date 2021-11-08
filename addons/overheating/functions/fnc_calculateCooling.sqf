@@ -19,9 +19,12 @@
 
 params ["_temperature", "_barrelMass", "_totalTime"];
 
-if (_temperature < 1) exitWith {0};
+// The lowest temperature a weapon can reach is the ambient air temperature.
+private _ambientTemperature = ambientTemperature select 0;
+
 // If a long time passed since the last shot, there's no need to calculate anything; the weapon should be cool
-if (_totalTime > 1800) exitWith {0};
+if (_totalTime > 1800) exitWith {_ambientTemperature};
+if (_temperature <= _ambientTemperature) exitWith {_ambientTemperature};
 
 //AR-15 (0.00570m bullet diameter) (barrel diameter usually 0.75" or 0.008255m radius)
 //Steel Denisty = 7850 m^3 / kg
@@ -51,9 +54,9 @@ while {true} do {
         _convectionRate * _barrelSurface * _temperature
         // Radiative cooling
         + 0.4 * 5.67e-8 * _barrelSurface * ((_temperature + 273.15) ^ 4 - 273.15 ^ 4)
-    ) * _deltaTime / (_barrelMass * 466);
+    ) * GVAR(coolingCoef) * _deltaTime / (_barrelMass * 466);
 
-    if (_temperature < 1) exitWith {0};
+    if (_temperature <= _ambientTemperature) exitWith {_ambientTemperature};
 
     if (isNil "_temperature") exitWith {
         diag_log text format ["[ACE] ERROR: _totalTime = %1; _time = %2; _deltaTime = %3;", _totalTime, _time, _deltaTime];
@@ -61,5 +64,5 @@ while {true} do {
     };
 
     _time = _time + _deltaTime;
-    if (_time >= _totalTime) exitWith { _temperature max 0 };
+    if (_time >= _totalTime) exitWith {_temperature max _ambientTemperature};
 };

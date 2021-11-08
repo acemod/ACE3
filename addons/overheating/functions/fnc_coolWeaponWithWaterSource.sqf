@@ -59,7 +59,7 @@ private _fnc_condition = {
         };
 
         //Cool the weapon down
-        private _barrelMass = _weapon call FUNC(getBarrelMass);
+        ([_weapon] call FUNC(getWeaponData)) params ["", "", "", "", "", "", "", "_barrelMass"];
         _temperature = [_temperature, _barrelMass, 20] call FUNC(calculateCooling);
         [_player, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 

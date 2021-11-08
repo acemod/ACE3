@@ -62,6 +62,18 @@
             <German>Koeffizient für die Menge an Hitze, die eine Waffe pro Schuss erzeugt.\nHöhere Werte beschleunigen die Erhitzung.</German>
             <Polish>Współczynnik wpływający na ilość ciepła generowanego przez broń przy każdym strzale.</Polish>
         </Key>
+        <Key ID="STR_ACE_Overheating_coolingCoef_displayName">
+            <English>Cooling Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_coolingCoef_description">
+            <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
+            <English>Suppressor Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_suppressorCoef_description">
+            <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>
             <German>Zeige Text bei Ladehemmung</German>
@@ -274,8 +286,7 @@
             <English>Unjam on Barrel Swap</English>
             <Japanese>銃身交換で弾詰まり解消</Japanese>
             <French>Désenrayer l'arme au changement de canon</French>
-            <Russian>Замена ствола устраняет заклинивание оружия.</Russian> 
-            <German>Ladehemmungen bei Lauf-Wechsel beheben</German>
+            <Russian>Замена ствола устраняет заклинивание оружия.</Russian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
