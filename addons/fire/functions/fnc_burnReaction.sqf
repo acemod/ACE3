@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Should unit throw its current weapon <BOOL>
  *
  * Return Value:
  * None
@@ -12,10 +13,11 @@
  * Public: No
  */
 
-params ["_unit"];
+params ["_unit", ["_throwWeapon", true]];
 
 if (
-    GVAR(dropWeapon) > 0
+    _throwWeapon
+    && {GVAR(dropWeapon) > 0}
     && {_unit in _unit && { !(currentWeapon _unit isEqualTo "") }}
     && {!isPlayer _unit || GVAR(dropWeapon >= 2)}
 ) then {
