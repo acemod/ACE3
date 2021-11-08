@@ -22,7 +22,7 @@
 ["recompile", "recompile", "recompile", {
     private _start = diag_tickTime;
     [] call ACE_PREP_RECOMPILE;
-    [] call ace_common_fnc_dumpPerformanceCounters;
+    [] call EFUNC(common,dumpPerformanceCounters);
     private _end = diag_tickTime;
     systemChat format ["[recompile took %1 ms]", (1000 * (_end - _start)) toFixed 1];
     false
