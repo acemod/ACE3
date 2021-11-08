@@ -48,7 +48,7 @@
             if ((supportInfo "u:diag_mergeConfigFile") isNotEqualTo []) then {
                 call compile 'diag_mergeConfigFile ["P:\z\ace\addons\viewports\config.cpp"]';
             };
-            { _x setVariable ["ace_viewports_viewports", nil] } forEach vehicles;
+            { _x setVariable [QGVAR(viewports), nil] } forEach vehicles;
             GVAR(3denIndex) = 0;
             GVAR(3denViewports) = [];
             true
