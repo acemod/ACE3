@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: drofseh
- * Get current temperaure of weapon's ammo.
+ * Get current temperature of weapon's ammo.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -20,4 +20,4 @@ params ["_unit", "_weapon"];
 
 private _ammoTempVarName = format [QGVAR(%1_ammoTemp), _weapon];
 
-_unit getVariable [_ammoTempVarName, ambientTemperature select 0];
+_unit getVariable [_ammoTempVarName, ambientTemperature select 0]

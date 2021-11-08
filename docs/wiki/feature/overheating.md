@@ -53,7 +53,7 @@ Jams can be cleared in the following ways:
 - Select `Equipment`.
 - Select `Check weapon temperature`.
 
-**NOTE** Each section on the bar represents 100°c. When the bar reaches 2 sections weapons can start to cookoff. When it is half full (yellow) it means the barrel is around 500°c. Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
+**NOTE** Each section on the bar represents 100°C. When the bar reaches 2 sections weapons can start to cookoff. When it is half full (yellow) it means the barrel is around 500°C. Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
 
 ### 2.4 Cooling your weapon
 

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: drofseh
- * Get current temperaure of weapon.
+ * Get current temperature of weapon.
  *
  * Arguments:
  * 0: Unit <OBJECT>

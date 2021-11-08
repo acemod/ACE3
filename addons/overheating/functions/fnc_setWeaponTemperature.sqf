@@ -22,5 +22,3 @@ params ["_unit", "_weapon", "_temp"];
 private _ammoTempVarName = format [QGVAR(%1_ammoTemp), _weapon];
 
 _unit setVariable [_ammoTempVarName, _temp];
-
-nil
