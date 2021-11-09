@@ -19,24 +19,17 @@
     z # 0 set [4, m];
 */
 
-["recompile", "recompile", "recompile", {
-    private _start = diag_tickTime;
-    [] call ACE_PREP_RECOMPILE;
-    [] call EFUNC(common,dumpPerformanceCounters);
-    private _end = diag_tickTime;
-    systemChat format ["[recompile took %1 ms]", (1000 * (_end - _start)) toFixed 1];
-    false
-}, {false}, [0x21, [false, false, false]], false] call CBA_fnc_addKeybind; // F Key
+#define IDD_3DEN 313
 
 [] spawn {
-    INFO_2("Pre-Init [is3den %1][3den display: %2]", is3den, !isNull findDisplay 313);
+    INFO_2("Pre-Init [is3den %1][3den display: %2]", is3den, !isNull findDisplay IDD_3DEN);
     if (!is3den) exitWith {};
 
     GVAR(3denIndex) = 0;
     GVAR(3denViewports) = [];
 
     disableSerialization;
-    private _3den = findDisplay 313;    
+    private _3den = findDisplay IDD_3DEN;    
     if (_3den getVariable [QGVAR(setup), false]) exitWith {};
     _3den setVariable [QGVAR(setup), true];
 
@@ -135,10 +128,10 @@ addMissionEventHandler ["Draw3D", {
     drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], aslToAGL eyepos player, 0.1, 0.1, 0, "eye", 1, 0.02, "TahomaB"];
     drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], player modelToWorldVisual (player selectionPosition "pilot"), 0.1, 0.1, 0, "pilot", 1, 0.02, "TahomaB"];
 
-    {
-        private _pos = _vehicle modelToWorldVisual (_vehicle selectionPosition [_x, "Memory"]);
-        drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,0,1,0.2], _pos, 0.05, 0.05, 0, _x, 1, 0.02, "TahomaB"];
-    } forEach (_vehicle selectionNames "Memory");
+    // {
+    //     private _pos = _vehicle modelToWorldVisual (_vehicle selectionPosition [_x, "Memory"]);
+    //     drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,0,1,0.2], _pos, 0.05, 0.05, 0, _x, 1, 0.02, "TahomaB"];
+    // } forEach (_vehicle selectionNames "Memory");
 
 
     {

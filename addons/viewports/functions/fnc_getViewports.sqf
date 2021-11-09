@@ -20,7 +20,7 @@ params ["_vehicle"];
 private _viewports = _vehicle getVariable [QGVAR(viewports), nil];
 
 if (isNil "_viewports") then {
-    _viewports = ("true" configClasses ((configOf _vehicle) >> "ace_viewports")) apply {
+    _viewports = (configProperties [(configOf _vehicle) >> "ace_viewports", "isClass _x", true]) apply {
         // name [STRING] is just used for debug
         private _name = configName _x;
         // type [STRING] - Optional
