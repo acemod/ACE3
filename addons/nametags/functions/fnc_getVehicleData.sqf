@@ -69,7 +69,7 @@ private _fnc_addTurretUnit = {
         _role = FFV;
     };
 
-    _data pushBack [_path, _role];  
+    _data pushBack [_path, _role];
 };
 
 
@@ -84,7 +84,7 @@ private _fnc_addTurret = {
     for "_index" from 0 to (_count - 1) do {
         private _turretPath = _path + [_index - _offset];
         private _turretConfig = _config select _index;
-        if (isClass _turretConfig) then {           
+        if (isClass _turretConfig) then {
             [_turretConfig, _turretPath] call _fnc_addTurretUnit;
             [_turretConfig, _turretPath] call _fnc_addTurret;
         } else {

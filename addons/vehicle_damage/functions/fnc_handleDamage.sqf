@@ -42,7 +42,7 @@ if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
                     private _frameHash = _vehicle getVariable [QGVAR(hitHash), nil];
                     private _hitArray = [_frameHash, _processingFrame] call CBA_fnc_hashGet;
                     if (_hitArray isEqualTo []) exitWith {};
-                    
+
                     reverse _hitArray;
                     TRACE_3("processing data from old frame",diag_frameNo,_processingFrame,_hitArray);
                     {
@@ -52,9 +52,9 @@ if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
                             LOG_2("cancelling rest of vehicle damage queue ( [%1] items left out of [%2] )",(count (_hitArray#1)) - _forEachIndex,count (_hitArray#1))
                         };
                     } forEach _hitArray;
-                    
+
                     [_frameHash, _processingFrame] call CBA_fnc_hashRem;
-                    
+
                 }, [_vehicle, diag_frameNo]] call CBA_fnc_execNextFrame;
             };
             _currentFrameArray pushBack _this;

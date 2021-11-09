@@ -30,14 +30,29 @@ private _vectorDir = vectorDir _object;
 
 deleteVehicle _object;
 
-private _newObject = _typeOf createVehicle _posASL;
-_newObject setPosASL _posASL;
-_newObject setVectorDirAndUp [_vectorDir, _vectorUp];
+// Create progress bar to place object
+private _totalTime = _cost * GVAR(timeCostCoefficient) + GVAR(timeMin); // time = Ax + b
 
-// Server will use this event to run the jip compatible QGVAR(addActionToObject) event
-[QXGVAR(objectPlaced), [_unit, _side, _newObject]] call CBA_fnc_globalEvent;
+private _perframeCheck = {
+    params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp"];
 
-if (cba_events_control) then {
-    // Re-run if ctrl key held
-    [_unit, _unit, [_side, _typeOf, [GVAR(objectRotationX), GVAR(objectRotationY), GVAR(objectRotationZ)]]] call FUNC(deployObject);
+    // Animation loop (required for longer constructions)
+    if (animationState _unit isNotEqualTo "AinvPknlMstpSnonWnonDnon_medic4") then {
+        // Perform animation
+        [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);
+    };
+
+    // Return true always
+    true
 };
+
+[
+    _totalTime,
+    [_unit, _side, _typeOf, _posASL, _vectorDir, _vectorUp],
+    QGVAR(deployFinished),
+    QGVAR(deployCanceled),
+    LLSTRING(progressBarTitle),
+    _perframeCheck
+] call EFUNC(common,progressBar);
+

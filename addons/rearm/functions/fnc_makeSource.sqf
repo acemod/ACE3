@@ -30,7 +30,7 @@ params [
         ["_addToCurrent", false, [false]]
     ];
 TRACE_3("makeSource",_source,_rearmCargo,_addToCurrent);
-    
+
 if (isNull _source) exitWith {};
 
 private _currentSupply = if (_addToCurrent) then {

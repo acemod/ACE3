@@ -49,6 +49,12 @@
             <German>Benutzt einen Feuerschein-Effekt um die Intensität des Feuers bei Nacht zu verstärken.</German>
             <Polish>Używa efektu flary, aby zwiększyć jasność w nocy</Polish>
         </Key>
+        <Key ID="STR_ACE_Fire_Setting_EnableScreams">
+            <English>Enable screams by units on fire</English>
+        </Key>
+        <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
+            <English>Enables if units on fire will play the screaming sound</English>
+        </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
             <English>Drop Weapons When on Fire</English>
             <Polish>Włącz wyrzucanie broni podczas płonięcia</Polish>

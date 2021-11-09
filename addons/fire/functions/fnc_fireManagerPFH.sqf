@@ -31,7 +31,7 @@ params ["_args", "_handle"];
     if !(_attachedObject isEqualTo objNull) then {
         _sourcePos = getPosATL _attachedObject;
     };
-    
+
     private _nearEntities = _sourcePos nearEntities ["Man", _radius];
     {
         private _burning = [_x] call FUNC(isBurning);

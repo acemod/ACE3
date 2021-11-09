@@ -32,7 +32,7 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
 
     private _delayWithSmoke = _chanceOfFire < random 1;
     private _detonateAfterCookoff = (_fireDetonateChance / 4) > random 1;
-    
+
     private _source = "";
     if (toLower _hitPart isEqualTo "engine") then {
         _source = ["hit_engine_point", "HitPoints"];
@@ -43,7 +43,7 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     LOG_4("Cooking-off [%1] with a chance-of-fire [%2] - Delayed Smoke | Detonate after cookoff [%3 | %4]",_vehicle,_chanceOfFire,_delayWithSmoke,_detonateAfterCookoff);
     [_vehicle] spawn FUNC(abandon);
     LOG_1("[%1] is on fire is bailing",_vehicle);
-    
+
     // cant setVehicleAmmo 0 here because it removes FFV unit's ammo
     if (GVAR(removeAmmoDuringCookoff)) then {
         private _ammo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);

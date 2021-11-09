@@ -66,7 +66,7 @@ private _turrets = [_vehicle] call FUNC(getAllRearmTurrets);
             if (_turretPath isEqualTo _turretCurrent) then {
                 _magazineClasses pushBackUnique _className;
             };
-        } forEach (magazinesAllTurrets _vehicle); 
+        } forEach (magazinesAllTurrets _vehicle);
     } else {
         _magazineClasses = [_vehicle, _turretPath] call FUNC(getTurretConfigMagazines);
         _magazineClasses = _magazineClasses arrayIntersect _magazineClasses;
