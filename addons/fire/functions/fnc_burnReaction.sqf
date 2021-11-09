@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Should unit throw its current weapon <BOOL>
  *
  * Return Value:
  * None
@@ -12,16 +13,19 @@
  * Public: No
  */
 
-params ["_unit"];
+params ["_unit", ["_throwWeapon", true]];
 
 if (
-    GVAR(dropWeapon) > 0
+    _throwWeapon
+    && {GVAR(dropWeapon) > 0}
     && {_unit in _unit && { !(currentWeapon _unit isEqualTo "") }}
     && {!isPlayer _unit || GVAR(dropWeapon >= 2)}
 ) then {
     [_unit] call EFUNC(hitreactions,throwWeapon);
 };
 
-private _soundID = floor (1 + random 15);
-private _sound = format [QGVAR(scream_%1), _soundID];
-[QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
+if (_unit isKindOf "CAManBase") then {
+    private _soundID = floor (1 + random 15);
+    private _sound = format [QGVAR(scream_%1), _soundID];
+    [QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
+};

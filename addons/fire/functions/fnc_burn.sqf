@@ -302,9 +302,7 @@ if (_isBurning) exitWith {};
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
 
-        private _soundID = floor (1 + random 15);
-        private _sound = format [QGVAR(scream_%1), _soundID];
-        [QGVAR(playScream), [_sound, _unit]] call CBA_fnc_globalEvent;
+        [_unit, false] call FUNC(burnReaction);
     };
 
     _lastIntensityUpdate = 0;
