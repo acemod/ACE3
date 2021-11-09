@@ -8,7 +8,7 @@
 *   0: Player <OBJECT>
 *   1: Vehicle <OBJECT>
 *   2: Viewport configuration <ARRAY>
-*   3: Viewport index showwn (-1 for none) <NUMBER>
+*   3: Viewport index shown (-1 for none) <NUMBER>
 *   4: Last visionmode <NUMBER>
 *
 * Return Value:
