@@ -43,12 +43,7 @@ if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWi
     false
 };
 
-// Items can be an array of required items or a string to a missionNamespace variable
-private _items = if (isArray (_config >> "items")) then {
-    getArray (_config >> "items");
-} else {
-    missionNamespace getVariable [getText (_config >> "items"), []]
-};
+private _items = _config call FUNC(getRepairItems);
 if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
 private _return = true;
@@ -137,7 +132,7 @@ if (_callbackProgress == "") then {
     _callbackProgress = {
         (_this select 0) params ["_caller", "_target", "", "", "", "", "_claimObjectsAvailable"];
         (
-            (alive _target) && 
+            (alive _target) &&
             {(abs speed _target) < 1} && // make sure vehicle doesn't drive off
             {_claimObjectsAvailable findIf {!alive _x || {_x getVariable [QEGVAR(common,owner), objNull] isNotEqualTo _caller}} == -1} // make sure claim objects are still available
         )
