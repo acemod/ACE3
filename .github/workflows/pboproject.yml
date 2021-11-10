@@ -15,7 +15,7 @@ jobs:
       with:
         toolsUrl: ${{ secrets.ARMA3_TOOLS_URL }}
     - name: Install Mikero Tools
-      uses: arma-actions/mikero-tools@2021-04-10
+      uses: arma-actions/mikero-tools@2021-11-06
     - name: Download game data
       run: |
         Invoke-WebRequest "$env:ARMA3_DATA_URL" -OutFile arma3.zip
