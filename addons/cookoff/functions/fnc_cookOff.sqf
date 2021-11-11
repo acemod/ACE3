@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false], ["_fireSource", ""], ["_canRing", true]];
+params ["_vehicle", "_intensity", ["_instigator", objNull], ["_smokeDelayEnabled", true], ["_ammoDetonationChance", 0], ["_detonateAfterCookoff", false], ["_fireSource", ""], ["_canRing", true], ["_maxIntensity", MAX_COOKOFF_INTENSITY, [0]]];
 
 if (GVAR(enable) == 0) exitWith {};
 if !(GVAR(enableFire)) exitWith {};
@@ -25,10 +25,13 @@ if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] in [0, false]) exitWith {
 if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] isEqualTo 1 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} == -1}) exitWith {};
 
 
-TRACE_8("cooking off",_vehicle,_intensity,_instigator,_smokeDelayEnabled,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing);
+TRACE_9("cooking off",_vehicle,_intensity,_instigator,_smokeDelayEnabled,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing,_maxIntensity);
 
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _vehicle setVariable [QGVAR(isCookingOff), true, true];
+
+// limit maximum value of intensity to prevent very long cook-off times
+_intensity = _intensity min _maxIntensity;
 
 private _config = _vehicle call CBA_fnc_getObjectConfig;
 private _positions = getArray (_config >> QGVAR(cookoffSelections)) select {!((_vehicle selectionPosition _x) isEqualTo [0,0,0])};
