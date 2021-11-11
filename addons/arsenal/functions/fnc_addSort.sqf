@@ -10,10 +10,10 @@
  * 1: Sort Class (a unique string for each algorithm) <STRING>
  * 2: Display Name <STRING>
  * 3: Algorithm <CODE>
- * 4: Condition (Optional)<CODE>
+ * 4: Condition <CODE> (default: true)
  *
  * Return Value:
- * 0: Array of IDs (ARRAY of STRINGS)
+ * 0: Array of IDs <ARRAY of STRINGS>
  *
  * Example:
  *  [[[0, 1], []], "fireRateSort", "Sort by fire rate", {

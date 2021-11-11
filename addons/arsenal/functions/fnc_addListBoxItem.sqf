@@ -12,8 +12,12 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["CfgWeapons", "launch_NLAW_F", _ctrl, "icon"] call ace_arsenal_fnc_addListBoxItem
+ *
  * Public: Yes
-*/
+ */
+
 params ["_configCategory", "_className", "_ctrlPanel", ["_pictureEntryName", "picture", [""]]];
 
 private _cacheNamespace = _ctrlPanel; //For better readability.
