@@ -24,7 +24,7 @@ if !(IS_UNCONSCIOUS(_unit) &&                   // do not run if unit is conscio
     {isNull objectParent _unit}}) exitWith {};  // do not run if unit in any vehicle
 
 private _animsArray = GVAR(animations) getVariable [_anim, [""]];
-private _random = ((toArray (hashValue _unit)) param [0, 0]);
+private _random = (toArray (hashValue _unit)) param [0, 0];
 private _index = _random % (count _animsArray);
 private _unconsciousAnimation = _animsArray select _index;
 
