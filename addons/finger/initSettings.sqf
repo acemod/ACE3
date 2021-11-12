@@ -20,7 +20,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     QGVAR(sizeCoef), "SLIDER",
     [LSTRING(sizeCoef_displayName), LSTRING(sizeCoef_description)],
     _category,
-    [0.1, 5, 1, 0.1],
+    [0.1, 5, 1, 2],
     1
 ] call CBA_fnc_addSetting;
 
