@@ -15,7 +15,7 @@
  */
 
 params ["_unit", ["_reason", "#setDead"], ["_instigator", objNull]];
-TRACE_2("setDead",_unit,_reason);
+TRACE_3("setDead",_unit,_reason,_instigator);
 
 // No heart rate or blood pressure to measure when dead
 _unit setVariable [VAR_HEART_RATE, 0, true];

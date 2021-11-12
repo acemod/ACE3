@@ -32,13 +32,12 @@ _unit setVariable [QGVAR(killed), _unit];
 private _causeOfDeath = _unit getVariable [QEGVAR(medical,causeOfDeath), "#scripted"];
 private _modifyKilledArray = missionNamespace getVariable [QEGVAR(medical,modifyKilledArray), true]; // getVar so this can be disabled
 
-// if undefined then it's a death not caused by ace's setDead (mission setDamage, disconnect, forced respawn)
-if (_causeOfDeath != "#scripted" || {IS_UNCONSCIOUS(_unit)}) then { // forced respawn while uncon
+// if undefined then it's a death not caused by ace's setDead (mission setDamage, disconnect, forced respawn while conscious)
+if (_causeOfDeath != "#scripted") then {
     _killer = _unit getVariable [QEGVAR(medical,lastDamageSource), _killer]; // vehicle
     _instigator = _unit getVariable [QEGVAR(medical,lastInstigator), _instigator]; // unit in the turret
-};
-
-if (_causeOfDeath == "#scripted") then { // call setDead manually to prevent any issues
+} else {
+    // call setDead manually to prevent any issues
     [_unit, "#scripted"] call FUNC(setDead);
 };
 
