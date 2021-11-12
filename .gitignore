@@ -17,3 +17,5 @@ texHeaders.bin
 Thumbs.db
 CHANGELOG.md
 sqfvm.exe
+ArmaScriptCompiler.exe
+*.sqfc

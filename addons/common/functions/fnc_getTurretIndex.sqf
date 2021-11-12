@@ -20,7 +20,7 @@ params [["_unit", objNull, [objNull]]];
 private _vehicle = vehicle _unit;
 if (_unit == _vehicle) exitWith {[]};
 
-scopeName "main"; 
+scopeName "main";
 
 {
     if (_unit == (_vehicle turretUnit _x)) then {_x breakOut "main"};

@@ -190,7 +190,7 @@ CODE will be passed `[Unit<OBJECT>, MaxRange <NUMBER>, Explosive <OBJECT>, FuzeT
 
 Jammer that blocks RF triggers:
 
-```cpp
+```sqf
 [{
     params ["_unit", "_range", "_explosive", "_fuzeTime", "_triggerItem"];
     if (_triggerItem == "ace_cellphone") exitWith { systemChat "Blocking Cell Phone"; false };  // always block cell phones

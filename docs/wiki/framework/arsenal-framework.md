@@ -17,86 +17,25 @@ version:
     <p>Units and objects that can have ACE Arsenal added to them will be called "Boxes" in this documentation.</p>
 </div>
 
-```cpp
-// To quickly add a full ACE Arsenal to a box for all clients
+To quickly add a full ACE Arsenal to a box for all clients use the following code:
+
+```sqf
 [_box, true] call ace_arsenal_fnc_initBox;
 ```
 
-`_box` being the object you wish to add ACE Arsenal to. (or `this` when called from the box's init field)
+`_box` being the object you wish to add ACE Arsenal to (or `this` when called from the box's init field).
 
-## 1. Virtual items
+## 1. Access to ACE Arsenal
 
-### 1.1 Adding virtual items
-
-`ace_arsenal_fnc_addVirtualItems`
-```cpp
- * Arguments:
- * 0: Box <OBJECT>
- * 1: Items <ARRAY of strings> or <BOOL>
- * 2: Add globally <BOOL> (optional)
-```
-
-Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup).
-
-Examples:
-- `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
-- `[_box, true, false] call ace_arsenal_fnc_addVirtualItems`
-
-### 1.2 Removing virtual items
-
-```cpp
- * 0: Box <OBJECT>
- * 1: Items <ARRAY of strings> <BOOL>
- * 2: Add globally <BOOL> (optional)
- ```
-
-Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal.
-
-Examples:
-- `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_removeVirtualItems`
-- `[_box, true, false] call ace_arsenal_fnc_removeVirtualItems`
-
-### 1.3 Arsenal only with items from default loadouts (See section 4)
-
-```cpp
- * 0: Box <OBJECT>
- * 1: Items <ARRAY of strings> <BOOL>
- * 2: Add globally <BOOL> (optional)
- ```
-
-Built upon the function of section 1.1, this can be used to make an Arsenal only with the items from your precreated loadouts. This is the best choice if you do not want to make a full arsenal available to have your Loadouts spawnable.
-
-```cpp
- I. Spawn the same amount of units as you have loadouts, give each unit one of them
- II. Start the mission then press ESC once loaded
- III. Clear the debug console then enter the following:
-
-
-private _items = allUnits apply {getUnitLoadout _x};
-_items = str _items splitString "[]," joinString ",";
-_items = parseSimpleArray ("[" + _items + "]");
-_items = _items arrayIntersect _items select {_x isEqualType "" && {_x != ""}};
-copyToClipboard str _items;
-
-IV. Paste the created array from your clipboard into the space where the items are listed CTRL+V. The array is created with brackets.
- ```
-
-Examples:
-
-For a new Box: - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_initBox`
-
-For an existing Box: - `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
-
-## 2. Access to ACE Arsenal
-
-### 2.1 Adding ACE Arsenal to a box
+### 1.1 Adding ACE Arsenal to a box
 
 `ace_arsenal_fnc_initBox`
-```cpp
- * 0: Box <OBJECT>
- * 1: Items <BOOL> or <ARRAY>
- * 2: Initialize globally <BOOL> (optional)
-```
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Box | Object | Required
+1  | Items | Array of strings or boolean | Required
+2  | Initialize globally | Boolean | Optional (default: `false`)
 
 This will add the virtual items passed as arguments and add an ACE interaction to open ACE Arsenal.
 
@@ -108,14 +47,15 @@ Examples:
 Passing an empty array or `false` will still add an interaction but no additional virtual items will be added.  
 Please note that at least one virtual item needs to be added otherwise ACE Arsenal will not open.
 
-if you wish to open a full ACE Arsenal on yourself or open ACE Arsenal via a custom action you can use `ace_arsenal_fnc_openBox`.
+### 1.2 Opening an arsenal box manually
 
 `ace_arsenal_fnc_openBox`
-```cpp
- * 0: Box <OBJECT>
- * 1: Unit to open ACE Arsenal on <OBJECT>
- * 2: Ignore virtual items and fill ACE Arsenal <BOOL> (optional)
-```
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Box | Object | Required
+1  | Unit to open ACE Arsenal on | Object | Required
+2  | Ignore virtual items and fill ACE Arsenal | Boolean | Optional (default: `false`)
 
 Examples:
 - `[_box, player] call ace_arsenal_fnc_openBox`
@@ -123,18 +63,72 @@ Examples:
 
 In the second example a full ACE Arsenal will be opened on the player.
 
-### 2.2 Removing the ACE Arsenal interaction
-
-In order to remove the ACE interaction added by `ace_arsenal_fnc_initBox` you need to either use `ace_arsenal_fnc_removeBox` or remove all virtual items, since we saw how to [remove all virtual items](#12-removing-virtual-items) above we'll be focusing on `ace_arsenal_fnc_removeBox`.
+### 1.3 Removing the ACE Arsenal interaction
 
 `ace_arsenal_fnc_removeBox`
-```cpp
- * 0: Box <OBJECT>
- * 1: Remove globally <BOOL> (optional)
-```
 
-Example:  
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Box | Object | Required
+2  | Remove globally | Boolean | Optional (default: `false`)
+
+Example:
 `[_box, true] call ace_arsenal_fnc_removeBox`
+
+## 2. Virtual items
+
+### 2.1 Adding virtual items
+
+`ace_arsenal_fnc_addVirtualItems`
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Box | Object | Required
+1  | Items | Array of strings or boolean | Required
+2  | Add globally | Boolean | Optional (default: `false`)
+
+Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup).
+
+Examples:
+- `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
+- `[_box, true, false] call ace_arsenal_fnc_addVirtualItems`
+
+### 2.2 Removing virtual items
+
+`ace_arsenal_fnc_removeVirtualItems`
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Box | Object | Required
+1  | Items | Array of strings or boolean | Required
+2  | Remove globally | Boolean | Optional (default: `false`)
+
+Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal.
+
+Examples:
+- `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_removeVirtualItems`
+- `[_box, true, false] call ace_arsenal_fnc_removeVirtualItems`
+
+### 2.3 Arsenal only with items from default loadouts (See section 4)
+
+Built upon the function of section 2.1, this can be used to make an Arsenal only with the items from your precreated loadouts. This is the best choice if you do not want to make a full arsenal available to have your loadouts spawnable.
+
+1. Spawn the same amount of units as you have loadouts, give each unit one of them
+2. Start the mission then press ESC once loaded
+3. Clear the debug console then enter the following:
+   ```sqf
+   private _items = flatten (allUnits apply {getUnitLoadout _x});
+   _items = _items arrayIntersect _items select {_x isEqualType "" && {_x != ""}};
+   copyToClipboard str _items;
+   ```
+
+4. Paste the created array from your clipboard into the space where the items are listed using <kbd>Ctrl</kbd> + <kbd>V</kbd>. The array is created with brackets.
+
+Examples:
+- For a new box:  
+  `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_initBox`
+- For an existing box:  
+  `[_box, ["item1", "item2", "itemN"]] call ace_arsenal_fnc_addVirtualItems`
 
 ## 3. Config entries
 
@@ -156,15 +150,16 @@ To do so:
 - Click on the "Default Loadouts" tab.
 - Enter a loadout name and save.
 
-This loadout list can be exported to the clipboard by using <kbd>Shift</kbd>. + <kbd>LMB</kbd>. on the export button, doing the same on the import button will import the list currently in the clipboard.
+This loadout list can be exported to the clipboard by using <kbd>Shift</kbd> + <kbd>LMB</kbd>. on the export button, doing the same on the import button will import the list currently in the clipboard.
 
 ### 4.2 Adding default loadouts via script
 
-Since 3.13.0, you can also add default loadouts with the `ace_arsenal_fnc_addDefaultLoadout` function.
-```cpp
- * 0: Name of loadout <STRING>
- * 1: getUnitLoadout array <ARRAY>
-```
+`ace_arsenal_fnc_addDefaultLoadout`
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Name of loadout | String | Required
+1  | getUnitLoadout array | Array | Required
 
 Example:
 `["Squad Leader", getUnitLoadout sql1] call ace_arsenal_fnc_addDefaultLoadout`
@@ -202,48 +197,44 @@ The arguments passed to the bar, text and condition statements are:
 
 ### 5.2 Adding stats via a function
 
-To add a stat simply call `ace_arsenal_fnc_addStat`
-```cpp
-/*
- * Author: Alganthe
- * Add a stat to ACE Arsenal.
- *
- * Arguments:
- * 0: Tabs to add the stat to (ARRAY of ARRAYS)
-   * 0.1: Left tab indexes (ARRAY of NUMBERS)
-   * 0.2 Right tab indexes (ARRAY of NUMBERS)
- * 1: Stat class (STRING) (A unique string for each stat)
- * 2: Config entries to pass (ARRAY of STRINGS)
- * 3: Title (STRING)
- * 4: Show bar / show text bools (ARRAY of BOOLS)
-   * 4.1 Show bar (BOOL)
-   * 4.2 Show text (BOOL)
- * 5: Array of statements (ARRAY of ARRAYS)
-   * 5.1: Bar code (CODE)
-   * 5.2 Text code (CODE)
-   * 5.3 Condition code (CODE)
- * 6: Priority (NUMBER) (Optional)
- *
- * Return Value:
- * 0: Array of IDs (ARRAY of STRINGS)
- *
- * Example:
- * [[[0,1,2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {
-        params ["_statsArray", "_itemCfg"];
-        getNumber (_itemCfg >> _statsArray select 0)
-    }, {true}]] call ACE_arsenal_fnc_addStat
- *
- * Public: Yes
-*/
+`ace_arsenal_fnc_addStat`
+
+|   | Argument | Type | Optional (default value)
+--- | -------- | ---- | ------------------------
+0   | Tabs to add the stat to | Array of arrays | Required
+0.1 | Left tab indexes | Array of numbers | Required
+0.2 | Right tab indexes | Array of numbers | Required
+1   | Stat class ID | String | Required
+2   | Config entries to pass | Array of strings | Required
+3   | Title | String | Required
+4   | Show bar / show text bools | Array of booleans | Required
+4.1 | Show bar | Boolean | Required
+4.2 | Show text | Boolean | Required
+5   | Array of statements | Array of arrays | Required
+5.1 | Bar code | Code | Required
+5.2 | Text code | Code | Required
+5.3 | Condition | Code | Required
+6   | Priority | Number | Optional (default: `0`)
+
+Example:
+```sqf
+[[[0,1,2], [7]], "scopeStat", ["scope"], "Scope", [false, true], [{}, {
+    params ["_statsArray", "_itemCfg"];
+    getNumber (_itemCfg >> _statsArray select 0)
+}, {true}]] call ACE_arsenal_fnc_addStat;
 ```
 
 ### 5.3 Removing stats via a function
 
-Removing a stat is as simple as adding one, call `ace_arsenal_fnc_removeStat`
+`ace_arsenal_fnc_removeStat`
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Array of IDs | Array | Required
 
 Stats IDs are unique, IDs are generated as follows:
 
-`Class + side +  tab`
+`Class + side + tab`
 
 For example: `testClassL03`
 - Class: `testClass`
@@ -251,24 +242,6 @@ For example: `testClassL03`
 - Tab: `03` for the 3rd tab
 
 For config added stats the classname is used, for function added ones the string provided is used.
-
-```cpp
-/*
- * Author: Alganthe
- * Remove a stat from ACE Arsenal.
- *
- * Arguments:
- * 0: Array of IDs (ARRAY)
- *
- * Return Value:
- * None
- *
- * Example:
- * [["scopeStatL00","scopeStatL01","scopeStatL02","scopeStatR07"]] call ace_arsenal_fnc_removeStat;
- *
- * Public: Yes
-*/
-```
 
 ### 5.4 Stat tab numbers
 

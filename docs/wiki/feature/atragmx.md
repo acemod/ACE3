@@ -44,7 +44,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 - Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the cartridge, the zeroed distance, the rifle twist, the muzzle velocity at 15°C and the bore height.
 
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx1.png" width="1400" height="600" alt="Range card" /> 
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx1.webp" width="1400" height="600" alt="Range card" /> 
 
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
 - `Open Gun` the 7.62x51mm M80 in the `GunList`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=25)
@@ -75,13 +75,13 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - *The Drag Coefficient Table will be automatically updated.* [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.png" width="1127" height="600" alt="Calculation" />
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.webp" width="1127" height="600" alt="Calculation" />
  
 - If a new `Target Range` is applied in the `Target` column, the ballistic coefficient `C1` and the elevation `Elev` will be automatically recalculated.
  
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx31.png" width="1123" height="600" alt="Interpolation" />
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx31.webp" width="1123" height="600" alt="Interpolation" />
 
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx31a.png" width="1123" height="600" alt="Extrapolation" />
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx31a.webp" width="1123" height="600" alt="Extrapolation" />
 
 ### 3.4 Example with overwritten zero distance
 
@@ -90,7 +90,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
  
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx41.png" width="1400" height="600" alt="Zero distance 300m" />
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx41.webp" width="1400" height="600" alt="Zero distance 300m" />
 
 ### 3.5 Example with `Add New Gun` in `GunList`
 
@@ -118,7 +118,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 > Example direct conversion with .408 Cheytac 305 grains G7 BC 0.279 at 2000 meters 15°C:
 
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx5.png" width="1400" height="600" alt="Conversion G7/G1 BC" />
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx5.webp" width="1400" height="600" alt="Conversion G7/G1 BC" />
 
 ### 3.6 Adding ATragMX Presets
 

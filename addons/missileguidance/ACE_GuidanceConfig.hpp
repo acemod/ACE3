@@ -86,7 +86,7 @@ class GVAR(SeekerTypes) {
         name = "";
         visualName = "";
         description = "";
-        
+
         functionName = QFUNC(seekerType_ARH);
         onFired = QFUNC(ahr_onFired);
     };

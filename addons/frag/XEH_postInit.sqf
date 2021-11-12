@@ -5,7 +5,7 @@ if (isServer) then {
     [QGVAR(frag_eh), {_this call FUNC(frago);}] call CBA_fnc_addEventHandler;
 };
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
     // Register fire event handler

@@ -24,10 +24,14 @@ TRACE_1("getVehicleAmmo",_vehicle);
 private _ammoToDetonate = [];
 private _totalAmmo = 0;
 
+// from ace_common, tweaked becasue command is busted
+private _ffvTurrets = fullCrew [_vehicle, "", true] select {_x select 4} apply {_x select 3};
+
 // Get ammo from turrets
 {
-    _x params ["_mag", "", "_count"];
-    if (_count > 0) then {
+    _x params ["_mag", "_turret", "_count"];
+    // if the turret is an FFV seat, it takes magazines from the soldier
+    if (!(_turret in _ffvTurrets) && {_count > 0}) then {
         private _ammo = getText (configFile >> "CfgMagazines" >> _mag >> "ammo");
         private _model = getText (configFile >> "CfgAmmo" >> _ammo >> "model");
         if (_model == "\A3\weapons_f\empty") exitWith {TRACE_3("skipping",_mag,_ammo,_model);};
@@ -43,7 +47,7 @@ private _totalAmmo = 0;
         _ammoToDetonate pushBack [_mag, _count];
         _totalAmmo = _totalAmmo + _count;
     };
-} forEach (magazinesAmmoCargo  _vehicle);
+} forEach (magazinesAmmoCargo _vehicle);
 
 // Get ammo from transportAmmo / ace_rearm
 private _vehCfg = configOf _vehicle;
@@ -56,6 +60,8 @@ if (_vehicle getVariable [QEGVAR(rearm,isSupplyVehicle), (_configSupply > 0)]) t
     _totalAmmo = _totalAmmo + 2000;
     _ammoToDetonate pushBack ["20Rnd_105mm_HEAT_MP", 100];
     _totalAmmo = _totalAmmo + 100;
+    _ammoToDetonate pushBack ["SatchelCharge_Remote_Mag", 10];
+    _totalAmmo = _totalAmmo + 10;
 };
 
 [_ammoToDetonate, _totalAmmo]

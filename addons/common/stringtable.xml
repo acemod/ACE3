@@ -27,7 +27,7 @@
             <Portuguese>ACE-Team</Portuguese>
             <Hungarian>ACE-Team</Hungarian>
             <Italian>ACE-Team</Italian>
-            <Japanese>ACE-チーム</Japanese>
+            <Japanese>ACE チーム</Japanese>
             <Korean>ACE-Team</Korean>
             <Chinese>ACE-製作團隊</Chinese>
             <Chinesesimp>ACE-制作团队</Chinesesimp>
@@ -498,6 +498,7 @@
             <Japanese>プレイヤーが不正規の PBO を所持している場合の動作を決定します。</Japanese>
             <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
             <Russian>Определяет, какое действие будет предпринято, если игрок не имеет корректные PBO.</Russian>
+            <German>Definiert, was passieren soll, wenn ein Spieler nicht die korrekten PBOs nutzt.</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsCheckAll">
             <English>Check PBO All</English>
@@ -523,6 +524,7 @@
             <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
             <Spanish>Comprueba todos los complementos, no sólo los de ACE</Spanish>
             <Russian>Проверять все аддоны, а не только ACE.</Russian>
+            <German>Überprüft alle Erweiterungen, nicht nur die von ACE.</German>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBOsWhitelist">
             <English>Check PBO Whitelist</English>
@@ -548,6 +550,7 @@
             <Japanese>許可するアドオンを定義します。</Japanese>
             <Spanish>Comprueba la lista de PBOs permitidos</Spanish>
             <Russian>Задать список непроверяемых аддонов.</Russian>
+            <German>Ermöglicht das Erstellen einer Liste von immer erlaubten Erweiterungen.</German>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -676,6 +679,18 @@
             <Korean>ACE 힌트에 쓰이는 글씨 색입니다. 힌트 글씨의 색이 정해지지 않을경우 모든 힌트의 색은 기본으로 설정됩니다.</Korean>
             <Chinese>設定ACE提示文字的顏色。若提示字體並無指定其他顏色，將會自動選用ACE系統的預設顏色</Chinese>
             <Chinesesimp>设定ACE提示文字的颜色。若提示字体并无指定其他颜色，将会自动选用ACE系统的预设颜色。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_subcategory_colors">
+            <English>Colors</English>
+            <Czech>Barvy</Czech>
+            <French>Couleurs</French>
+            <German>Farben</German>
+            <Italian>Colori</Italian>
+            <Polish>Kolory</Polish>
+            <Portuguese>Cores</Portuguese>
+            <Russian>Цвета</Russian>
+            <Spanish>Colores</Spanish>
+            <Japanese>色</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
             <English>Persistent weapon laserpointer/flashlight</English>
@@ -1281,6 +1296,9 @@
             <Chinesesimp>ACE 载具按键</Chinesesimp>
             <Turkish>ACE Araçlar</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_categoryUncategorized">
+            <English>ACE Uncategorized</English>
+        </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
             <German>Kein Platz zum Entladen</German>
@@ -1379,6 +1397,20 @@
             <Spanish>Permitir a los scripts de ACE reducir el volumen la música</Spanish>
             <Turkish>ACE scripti müziği kısmana izin verir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_EpilepsyFriendlyMode">
+            <English>Epilepsy friendly mode</English>
+            <German>Epilepsiefreundlicher Modus</German>
+            <Japanese>けいれん回避モード</Japanese>
+            <Polish>Tryb dla epileptyków</Polish>
+            <French>Mode adapté à l'épilepsie</French>
+        </Key>
+        <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
+            <English>Disables some flashing light effects to reduce seizure risk.</English>
+            <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
+            <Japanese>点滅する光エフェクトを無効化し、けいれんする恐れを低下させます。</Japanese>
+            <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
+            <French>Désactive certains effets de lumière clignotante afin de réduire les risques de crise d'épilepsie.</French>
+        </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
             <German>Flagge (Ace - Schwarz)</German>
@@ -1426,6 +1458,10 @@
             <Chinese>只限玩家</Chinese>
             <Turkish>Sadece oyuncular</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_aiOnly">
+            <English>AI only</English>
+            <Polish>Tylko dla AI</Polish>
+        </Key>
         <Key ID="STR_ACE_Common_playersAndAI">
             <English>Players and AI</English>
             <Russian>Игроков и ботов</Russian>
@@ -1455,6 +1491,104 @@
             <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
             <Russian>Показывать действие в меню взаимодействия с собой.</Russian>
             <Turkish>Kendi etkileşimim menüsünde animasyonları göster</Turkish>
+            <German>Zeigt die Aktion im Selbstinteraktionsmenü</German>
+        </Key>
+        <Key ID="STR_ACE_Common_both">
+            <English>Both</English>
+            <Turkish>İkisi de</Turkish>
+            <Japanese>両方</Japanese>
+            <French>Les deux</French>
+            <Russian>Оба</Russian>
+            <German>Beide</German>
+            <Polish>Oba</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoName">
+            <English>Additional progress bar information</English>
+            <Japanese>プログレス バー詳細情報</Japanese>
+            <French>Infos supplémentaires de la barre de progression</French>
+            <Russian>Дополнительная информация прогресс-бара</Russian>
+            <German>Zusätzliche Informationen beim Fortschrittsbalken</German>
+            <Polish>Dodatkowe informacje na pasku postępu </Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoDesc">
+            <English>Controls extra information shown in progress bar.</English>
+            <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
+            <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
+            <Russian>Устанавливает дополнительную информацию в прогресс-баре.</Russian>
+            <German>Kontrolliert zusätzliche Informationen beim Fortschrittsbalkens</German>
+            <Polish>Kontroluje dodatkowe informacje na pasku postępu.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoPercentage">
+            <English>Percentage</English>
+            <Japanese>パーセンテージ</Japanese>
+            <French>Pourcentage</French>
+            <Russian>Процент выполнения</Russian>
+            <German>Prozent</German>
+            <Polish>Procent</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_progressBarInfoTime">
+            <English>Time remaining</English>
+            <Japanese>残り時間</Japanese>
+            <French>Temps restant</French>
+            <Russian>Времени осталось</Russian>
+            <German>Zeit verbleibend</German>
+            <Polish>Pozostały czas</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_None">
+            <English>None</English>
+            <Czech>Žádná</Czech>
+            <German>Keine</German>
+            <Russian>Нет</Russian>
+            <Polish>Brak</Polish>
+            <Italian>Nessuna</Italian>
+            <Spanish>Nada</Spanish>
+            <French>Aucune</French>
+            <Chinese>無</Chinese>
+            <Japanese>なし</Japanese>
+            <Korean>활성화 없음</Korean>
+            <Portuguese>Nenhuma</Portuguese>
+            <Chinesesimp>无</Chinesesimp>
+            <Turkish>Yok</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_Rename">
+            <English>Rename</English>
+            <Spanish>Renombrar</Spanish>
+            <French>Renommer</French>
+            <German>Umbenennen</German>
+            <Polish>Zmień nazwę</Polish>
+            <Japanese>改名</Japanese>
+            <Italian>Rinomina</Italian>
+            <Korean>이름바꾸기</Korean>
+            <Chinese>重新命名</Chinese>
+            <Chinesesimp>重新命名</Chinesesimp>
+            <Russian>Переименовать</Russian>
+            <Portuguese>Renomear</Portuguese>
+            <Czech>Přejmenovat</Czech>
+            <Turkish>Yeniden adlandır</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_TimeLeft">
+            <English>Time left: %1s</English>
+            <Japanese>残り時間: %1 秒</Japanese>
+            <French>Temps restant : %1 s</French>
+            <Russian>Оставшееся время: %1s</Russian>
+            <German>Zeit übrig %1s</German>
+            <Polish>Pozostały czas: %1s</Polish>
+        </Key>
+        <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
+            <English>Locations Boost Training</English>
+            <Czech>Zdravotnická místa zvyšují zdravotnickou úrovně</Czech>
+            <Italian>Sedi per potenziare la formazione</Italian>
+            <German>Örtliche Trainingssteigerung</German>
+            <Spanish>Ubicación mejora entrenamiento.</Spanish>
+            <Polish>Miejsca zwiększają wyszkolenie</Polish>
+            <Portuguese>Localização melhora treinamento</Portuguese>
+            <French>Le lieu améliore l'efficacité</French>
+            <Russian>Места ускоренного обучения</Russian>
+            <Japanese>衛生能力の上昇位置</Japanese>
+            <Korean>교육 증가 지역</Korean>
+            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
+            <Chinese>受所在位置影響提升醫療能力</Chinese>
+            <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
         </Key>
     </Package>
 </Project>

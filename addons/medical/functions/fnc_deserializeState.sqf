@@ -96,3 +96,5 @@ private _targetState = _state getVariable [QGVAR(statemachineState), "Default"];
 if (_currentState in ["Unconscious", "CardiacArrest"] && {_targetState in ["Default", "Injured"]}) then {
     [_unit, false] call EFUNC(medical_status,setUnconsciousState);
 };
+
+_state call CBA_fnc_deleteNamespace;

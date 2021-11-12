@@ -4,7 +4,7 @@
  * Sets the player's current view distance according to allowed values.
  *
  * Arguments:
- * 0: View Distance setting INDEX <NUMBER>
+ * 0: View Distance setting <NUMBER>
  * 1: Show Prompt <BOOL>
  *
  * Return Value:
@@ -16,14 +16,17 @@
  * Public: No
  */
 
-params ["_indexRequested", "_showPrompt"];
+params ["_viewDistance", "_showPrompt"];
 
-private _newViewDistance = [_indexRequested] call FUNC(returnValue); // changes the setting index into an actual view distance value
+if (_viewDistance == 0) then { // Video Settings
+    _viewDistance = viewDistance;
+};
+
 private _objectViewDistanceCoeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.
 private _viewDistanceLimit = GVAR(limitViewDistance); // Grab the limit
 
-TRACE_3("Limit",_newViewDistance,_viewDistanceLimit,_showPrompt);
-setViewDistance (_newViewDistance min _viewDistanceLimit);
+TRACE_3("Limit",_viewDistance,_viewDistanceLimit,_showPrompt);
+setViewDistance (_viewDistance min _viewDistanceLimit);
 
 if (_objectViewDistanceCoeff isEqualType 0) then {
     if (_objectViewDistanceCoeff > 0) then {
@@ -52,7 +55,7 @@ if (_showPrompt) then {
             _text = [
                 format ["<t align='center'>%1 %2m", localize LSTRING(invalid), viewDistance],
                 format ["<t align='center'>%1 %2m", localize LSTRING(infotext), viewDistance]
-            ] select (_newViewDistance <= _viewDistanceLimit);
+            ] select (_viewDistance <= _viewDistanceLimit);
             _text = _text + format ["<br/><t align='center'>%1 %2%3</t>", localize LSTRING(objectinfotext), _objectViewDistanceCoeff * 100, "%"];
         };
         [parseText _text, 2] call EFUNC(common,displayTextStructured);
