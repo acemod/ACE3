@@ -280,7 +280,7 @@ class CfgAmmo {
     class B_762x51_Ball: BulletBase {
         airFriction=-0.00103711;
         tracerScale = 1.2; //0.6;
-        tracerStartTime=0.073;  // Based on the British L5A1 which burns out to 1000m 
+        tracerStartTime=0.073;  // Based on the British L5A1 which burns out to 1000m
         tracerEndTime=2.15957;  // Time in seconds calculated with ballistics calculator
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
@@ -365,20 +365,30 @@ class CfgAmmo {
         ACE_barrelLengths[]={330.2, 406.4, 508.0};
     };
     class ACE_762x51_Ball_Subsonic: B_762x51_Ball {
-        airFriction=-0.00060194;
-        caliber=1;
-        hit=6;
-        typicalSpeed=320;
-        ACE_caliber=7.823;
-        ACE_bulletLength=34.036;
-        ACE_bulletMass=12.96;
-        ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
-        ACE_ballisticCoefficients[]={0.235};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ICAO";
-        ACE_dragModel=7;
-        ACE_muzzleVelocities[]={305, 325, 335, 340};
-        ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
+        airFriction = -0.00060194;
+        caliber = 1;
+        hit = 6;
+        typicalSpeed = 320;
+        visibleFire = 1; // B_762x51_Ball: 3
+        audibleFire = 5; // B_762x51_Ball: 45
+        dangerRadiusBulletClose = 4; // B_762x51_Ball: 8
+        suppressionRadiusBulletClose = 2; // B_762x51_Ball: 6
+        ACE_caliber = 7.823;
+        ACE_bulletLength = 34.036;
+        ACE_bulletMass = 12.96;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[] = {0.235};
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = {305, 325, 335, 340};
+        ACE_barrelLengths[] = {406.4, 508.0, 609.6, 660.4};
+        class CamShakeExplode {
+            power = 2.2360699; // B_762x51_Ball: 2.8284299
+            duration = 0.4; // B_762x51_Ball: 0.6
+            frequency = 20; // B_762x51_Ball: 20
+            distance = 6.7082; // B_762x51_Ball: 8.48528
+        };
     };
     class ACE_762x67_Ball_Mk248_Mod_0: B_762x51_Ball {
         airFriction=-0.00072468;

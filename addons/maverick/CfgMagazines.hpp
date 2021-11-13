@@ -1,15 +1,15 @@
 class CfgMagazines {
     class CA_Magazine;
     class VehicleMagazine: CA_Magazine {};
-    
+
     class magazine_Missile_AGM_02_x1: VehicleMagazine {};
     class PylonMissile_Missile_AGM_02_x1: magazine_Missile_AGM_02_x1 {};
     class PylonMissile_Missile_AGM_02_x2: magazine_Missile_AGM_02_x1 {};
-    
+
     class 6Rnd_Missile_AGM_02_F: VehicleMagazine {};
     class PylonRack_1Rnd_Missile_AGM_02_F: 6Rnd_Missile_AGM_02_F {};
     class PylonRack_3Rnd_Missile_AGM_02_F: PylonRack_1Rnd_Missile_AGM_02_F {};
-    
+
     class PylonRack_Missile_AGM_02_x1: magazine_Missile_AGM_02_x1 {};
     class PylonRack_Missile_AGM_02_x2: magazine_Missile_AGM_02_x1 {};
     
@@ -32,44 +32,44 @@ class CfgMagazines {
         pylonWeapon = QGVAR(D_Launcher);
     };
 
-    class GVAR(G_magazine_x1) : magazine_Missile_AGM_02_x1 {
+    class GVAR(G_magazine_x1): magazine_Missile_AGM_02_x1 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
         displayName = CSTRING(g_mag_x1);
     };
-    class GVAR(G_pylonmissile_x1) : PylonMissile_Missile_AGM_02_x1 {
+    class GVAR(G_pylonmissile_x1): PylonMissile_Missile_AGM_02_x1 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
         displayName = CSTRING(g_mag_x1);
         pylonWeapon = QGVAR(G_Launcher);
     };
-    class GVAR(G_pylonmissile_x2) : PylonMissile_Missile_AGM_02_x2 {
+    class GVAR(G_pylonmissile_x2): PylonMissile_Missile_AGM_02_x2 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
         displayName = CSTRING(g_mag_x2);
         pylonWeapon = QGVAR(G_Launcher);
     };
 
-    class GVAR(G_pylonRack_1Rnd) : PylonRack_1Rnd_Missile_AGM_02_F {
+    class GVAR(G_pylonRack_1Rnd): PylonRack_1Rnd_Missile_AGM_02_F {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
         displayName = CSTRING(g_mag_x1);
         pylonWeapon = QGVAR(G_Launcher);
     };
-    class GVAR(G_PylonRack_3Rnd) : PylonRack_3Rnd_Missile_AGM_02_F {
+    class GVAR(G_PylonRack_3Rnd): PylonRack_3Rnd_Missile_AGM_02_F {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
         displayName = CSTRING(g_mag_x3);
         pylonWeapon = QGVAR(G_Launcher);
     };
     
-    class GVAR(G_PylonRack_x1) : PylonRack_Missile_AGM_02_x1 {
+    class GVAR(G_PylonRack_x1): PylonRack_Missile_AGM_02_x1 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
         displayName = CSTRING(g_mag_x1);
         pylonWeapon = QGVAR(G_Launcher);
     };
-    class GVAR(G_PylonRack_x2) : PylonRack_Missile_AGM_02_x2 {
+    class GVAR(G_PylonRack_x2): PylonRack_Missile_AGM_02_x2 {
         ammo = QGVAR(G);
         author = "Brandon (TCVM)";
         displayName = CSTRING(g_mag_x2);
@@ -77,7 +77,7 @@ class CfgMagazines {
     };
 
     // Laser Mavericks
-    class GVAR(L_magazine_x1) : magazine_Missile_AGM_02_x1 {
+    class GVAR(L_magazine_x1): magazine_Missile_AGM_02_x1 {
         ammo = QGVAR(L);
         author = "xrufix";
         descriptionShort = CSTRING(L_MAG_DESCR);
@@ -118,7 +118,7 @@ class CfgMagazines {
         displayNameShort = CSTRING(L_MAG_short);
         pylonWeapon = QGVAR(L_Launcher_Plane);
     };
-    
+
     class GVAR(L_PylonRack_x1): PylonRack_Missile_AGM_02_x1 {
         ammo = QGVAR(L);
         author = "xrufix";

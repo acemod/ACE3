@@ -27,6 +27,7 @@
 #define MIN_TIME_BETWEEN_FLAMES 5
 #define MAX_TIME_BETWEEN_FLAMES 15
 #define MAX_TIME_BETWEEN_AMMO_DET 25
+#define MAX_COOKOFF_INTENSITY 10
 
 // Delay between flame effect for players in a cooking off vehicle
 #define FLAME_EFFECT_DELAY 0.4

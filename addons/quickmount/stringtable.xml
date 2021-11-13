@@ -75,6 +75,7 @@
             <Czech>Tato možnost umožňuje rychle nastoupit do vozidla na které se díváte.</Czech>
             <Russian>Эта опция разрешает быстро залезть в транспорт, на который вы смотрите.</Russian>
             <Spanish>Esta opción permite entrar rápidamente al vehículo al que estás mirando</Spanish>
+            <German>Diese Option erlaubt es, schnell in das Fahrzeug, auf das der Spieler gerade zeigt, einzusteigen.</German>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>

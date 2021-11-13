@@ -672,24 +672,32 @@
             <Japanese>熱傷</Japanese>
             <French>Brûlure thermique</French>
             <Russian>Термический ожог</Russian>
+            <German>Thermische Verbrennung</German>
+            <Polish>Oparzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Minor">
             <English>Minor Thermal Burn</English>
             <Japanese>小さな熱傷</Japanese>
             <French>Légère brûlure thermique</French>
             <Russian>Незначительный термический ожог</Russian>
+            <German>Leichte thermische Verbrennung</German>
+            <Polish>Pomniejsze oparzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Medium">
             <English>Medium Thermal Burn</English>
             <Japanese>中くらいの熱傷</Japanese>
             <French>Brûlure thermique modérée</French>
             <Russian>Средний термический ожог</Russian>
+            <German>Mittlere thermische Verbrennung</German>
+            <Polish>Średnie oparzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_ThermalBurn_Large">
             <English>Major Thermal Burn</English>
             <Japanese>大きな熱傷</Japanese>
             <French>Sévère brûlure thermique</French>
             <Russian>Сильный термический ожог</Russian>
+            <German>Schwere thermische Verbrennung</German>
+            <Polish>Duże oparzenie</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Eden_threshold_DisplayName">
             <English>Unit Damage Threshold</English>
@@ -720,6 +728,7 @@
             <Japanese>気絶確率</Japanese>
             <Spanish>Probabilidad de inconsciencia por dolor</Spanish>
             <French>Douleur - Chance d'évanouissement</French>
+            <German>Chance für Bewusslosigkeit durch Schmerz</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousChance_Description">
             <English>The probability of a person falling unconscious when their pain is above the tolerance threshold upon receiving damage.</English>
@@ -728,6 +737,7 @@
             <Japanese>ユニットがダメージを受けた時に痛みが許容しきい値を超えた場合、気絶をする確率を設定します。</Japanese>
             <Spanish>La probabilidad de que una persona caiga inconsciente cuando su dolor está por encima del umbral al haber recibido daño.</Spanish>
             <French>La probabilité pour qu'une personne perde connaissance lorsque la douleur ressentie est supérieure à son seuil de tolérance.</French>
+            <German>Die Wahrscheinlichkeit, dass eine Person bewusstlos wird, wenn ihre Schmerzen bei einer Verwundung über der Toleranzschwelle liegen.</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
@@ -736,6 +746,7 @@
             <French>Blessure mortelle - Chance de décès</French>
             <Polish>Szana na śmierć przy śmiertelej ranie</Polish>
             <Japanese>致命傷による死亡確率</Japanese>
+            <German>Tödliche Verletzung - Wahrscheinlichkeit des Todes</German>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_Description">
             <English>The chance of dying to a fatal injury.</English>
@@ -744,6 +755,7 @@
             <French>La probabilité de mourir lors d'une "blessure mortelle".\nUne blessure mortelle est définie par des dommages importants à la tête ou au cœur.</French>
             <Polish>Szansa na śmierć po otrzymaniu śmiertelnej rany.</Polish>
             <Japanese>致命傷による死亡確率を設定します。</Japanese>
+            <German>Die Wahrscheinlichkeit, an einer eigentlich tödlichen Verletzung zu sterben.</German>
         </Key>
     </Package>
 </Project>

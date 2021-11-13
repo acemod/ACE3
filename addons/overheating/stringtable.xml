@@ -51,12 +51,28 @@
             <Japanese>過熱係数</Japanese>
             <French>Coefficient de surchauffe</French>
             <Russian>Коэффициент нагрева</Russian>
+            <German>Erhitzungs-Koeffizient</German>
+            <Polish>Współczynnik nagrzewania</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_heatCoef_description">
             <English>Coefficient for the amount of heat a weapon generates per shot.\nHigher value increases heat.</English>
             <Japanese>射撃毎に武器が生み出す熱量の係数を設定します。\n高い値であるほど熱量が増加します。</Japanese>
             <French>Coefficient impactant la quantité de chaleur générée par l'arme à chaque tir.</French>
             <Russian>Коэффициент количества тепла, выделяемого оружием за выстрел. \nБольшие значения увеличивают нагрев.</Russian>
+            <German>Koeffizient für die Menge an Hitze, die eine Waffe pro Schuss erzeugt.\nHöhere Werte beschleunigen die Erhitzung.</German>
+            <Polish>Współczynnik wpływający na ilość ciepła generowanego przez broń przy każdym strzale.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Overheating_coolingCoef_displayName">
+            <English>Cooling Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_coolingCoef_description">
+            <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
+            <English>Suppressor Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_suppressorCoef_description">
+            <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>
@@ -191,36 +207,48 @@
             <Japanese>エフェクトと分散用距離</Japanese>
             <French>Distance des effets et de la dispersion</French>
             <Russian>Дистанция для Еффектов и Разброса</Russian>
+            <German>Abstand für Effekte und Dispersion</German>
+            <Polish>Odległość efektów i rozproszenia</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
             <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
             <Japanese>プレイヤーが過熱パーティクル エフェクトと分散を見えるようになる距離 (m) を設定します。</Japanese>
             <French>Définit la distance en mètres, jusqu'à laquelle les effets de particules et la dispersion sont visibles.</French>
             <Russian>Дистанция в метрах, с которой видны эффекты частиц и разброса при перегреве.</Russian>
+            <German>Der Abstand in Metern vom Spieler, in dem Überhitzungspartikeleffekte und Dispersion sichtbar sind.</German>
+            <Polish>Określa odległość w metrach, do której widoczne są efekty cząsteczkowe i rozproszenie.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
             <English>Heat Increases Fire Rate</English>
             <Japanese>熱による連射速度上昇</Japanese>
             <French>La chaleur augmente la cadence de tir</French>
             <Russian>Нагрев увеличивает темп стрельбы</Russian>
+            <German>Hitze erhöht die Feuerrate</German>
+            <Polish>Ciepło zwiększa szybkostrzelność</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_description">
             <English>As weapons heat up, their rate of fire increases by up to 10%.</English>
             <Japanese>武器が熱を帯び始めると、連射速度が 10% 上昇します。</Japanese>
             <French>Lorsqu'une arme chauffe, sa cadence de tir peut augmenter jusqu'à 10%.</French>
             <Russian>При нареве орудия, его темп стрельбы увеличивается до 10%.</Russian>
+            <German>Wenn sich Waffen erhitzen, erhöht sich ihre Feuerrate um bis zu 10%.</German>
+            <Polish>Gdy broń się nagrzewa, jej szybkostrzelność może wzrosnąć nawet o 10%.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
             <English>Jam Chance Coefficient</English>
             <Japanese>弾詰まり係数</Japanese>
             <French>Coefficient du risque d'enrayement</French>
             <Russian>Шанс заклинивания оружия</Russian>
+            <German>Koeffizient für Ladehemmung</German>
+            <Polish>Szansa na zacięcie</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
             <English>Coefficient for the chance that a weapon will jam from overheating.\nHigher value make jams more likely.\nSet to 0 to disable jamming.</English>
             <Japanese>武器が過熱によって弾詰まりする確立係数を設定します。\n高い値では弾詰まりが起こりやすくなり、0 で弾詰まりが無効化されます。</Japanese>
             <French>Coefficient modifiant les chances qu'une arme s'enraye à cause de la surchauffe.\nPlus la valeur est élevée, plus grand est le risque que l'arme s'enraye.\nDéfinir à 0 pour désactiver l'enrayement des armes.</French>
             <Russian>Шанс заклинивания оружия от перегрева.\nБольшие значения повышают шанс заклинивания.\nУстановите 0 для отключения заклинивания.</Russian>
+            <German>Koeffizient für die Wahrscheinlichkeit, dass eine Waffe eine Ladehemmung hat.\Höhere Werte erhöhen die Wahrscheinlichkeit.\Auf 0 setzen, um Ladehemmungen zu deaktivieren.</German>
+            <Polish>Współczynnik zmieniający szansę na zacięcie się broni z powodu przegrzania.\nIm wyższa wartość, tym większe ryzyko zacięcia się broni.\nUstaw na 0, aby wyłączyć zacinanie się broni.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnReload_displayName">
             <English>Unjam Weapon on Reload</English>
@@ -258,13 +286,16 @@
             <English>Unjam on Barrel Swap</English>
             <Japanese>銃身交換で弾詰まり解消</Japanese>
             <French>Désenrayer l'arme au changement de canon</French>
-            <Russian>Замена ствола устраняет заклинивание оружия.</Russian> 
+            <Russian>Замена ствола устраняет заклинивание оружия.</Russian>
+            <Polish>Usuń zacięcie przy wymianie lufy</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
             <English>Controls whether swapping barrels clears a weapon jam.</English>
             <Japanese>銃身を交換して弾詰まりの解消をできるようにします。</Japanese>
             <French>Les armes se désenrayent lors d'un remplacement de canon.</French>
             <Russian>Определяет, устраняет ли замена ствола заклинивание оружия.</Russian>
+            <German>Bestimmt, ob das Wechseln des Laufes eine Ladehemmung behebt.</German>
+            <Polish>Określa, czy wymiana lufy usuwa zacięcie się broni.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of Unjam Failing</English>
@@ -303,12 +334,16 @@
             <Japanese>過熱誘爆係数</Japanese>
             <French>Coefficient de l'auto-inflammation</French>
             <Russian>Коеффициент возгорания при перегреве</Russian>
+            <German>Selbstzündungskoeffizient bei Überhitzung</German>
+            <Polish>Współczynnik samozapłonu</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_description">
             <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
             <Japanese>過熱によって誘爆が起きる確立係数を設定します。\n高い値では誘爆までに必要な過熱量が増加し、0 で誘爆が無効化されます。</Japanese>
             <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment dans la chambre de l'arme.\nPlus la valeur est élevée, plus l'arme doit être chaude pour que les munitions s'auto-inflamment.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
             <Russian>Коеффициент нагрева, при котором возникает возгорание.</Russian>
+            <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
+            <Polish>Współczynnik modyfikujący ilość ciepła wymaganego do samozapłonu amunicji w komorze broni.\nIm wyższa wartość, tym gorętsza musi być broń, aby amunicja uległa samozapłonowi\nUstaw 0, aby wyłączyć samozapłon.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -363,30 +398,40 @@
             <Japanese>武器が誘爆した!</Japanese>
             <French>Auto-inflammation des munitions !</French>
             <Russian>Оружие сдетонировало!</Russian>
+            <German>Munition durchgezündet!</German>
+            <Polish>Samozapłon amunicji!</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToEject">
             <English>Failure to eject.</English>
             <Japanese>排莢に失敗しました。</Japanese>
             <French>Défaut d'éjection.</French>
             <Russian>Не удалось достать.</Russian>
+            <German>Hülse wurde nicht ausgeworfen.</German>
+            <Polish>Nie udało się wyrzucić łuski.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToExtract">
             <English>Failure to extract.</English>
             <Japanese>排出に失敗しました。</Japanese>
             <French>Défaut d'extraction.</French>
             <Russian>Не удалось извлечь.</Russian>
+            <German>Hülse wurde nicht ausgezogen.</German>
+            <Polish>Nie udało się wyjąć łuski.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFeed">
             <English>Failure to feed.</English>
             <Japanese>給弾に失敗しました。</Japanese>
             <French>Défaut d'alimentation.</French>
             <Russian>Не удалось подать.</Russian>
+            <German>Patrone wurde nicht zugeführt.</German>
+            <Polish>Nie udało się załadować naboju.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFire">
             <English>Failure to fire.</English>
             <Japanese>撃発に失敗しました。</Japanese>
             <French>Défaut de tir.</French>
             <Russian>Не удалось выстрелить.</Russian>
+            <German>Patrone wurde nicht gezündet!</German>
+            <Polish>Nie udało się strzelić.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_UnjamWeapon">
             <English>Clear jam</English>
@@ -566,36 +611,48 @@
             <Japanese>次で武器を冷ます・・・</Japanese>
             <French>Refroidir l'arme avec...</French>
             <Russian>Охладить оружие с...</Russian>
+            <German>Waffe mit... kühlen</German>
+            <Polish>Schłódź broń za pomocą...</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolingWeaponWithItem">
             <English>Cooling %1 with %2.</English>
             <Japanese>%1 を %2 で冷ましています。</Japanese>
             <French>Refroidissement du %1 avec %2...</French>
             <Russian>Охлаждение %1 с %2.</Russian>
+            <German>Kühle %1 mit %2.</German>
+            <Polish>Chłodzenie %1 za pomocą %2.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponWithWaterSource">
             <English>Cool weapon in water source.</English>
             <Japanese>水源で武器を冷ます</Japanese>
             <French>Refroidir l'arme dans la source d'eau.</French>
             <Russian>Охладить оружие в воде.</Russian>
+            <German>Kühle Waffe aus Wasserquelle.</German>
+            <Polish>Schłódź broń wodą.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolingWeaponWithWaterSource">
             <English>Cooling weapon in water source.</English>
             <Japanese>水源で武器を冷ましています・・・</Japanese>
             <French>Refroidissement de l'arme dans la source d'eau...</French>
             <Russian>Охлаждение оружия в воде.</Russian>
+            <German>Waffe wird aus Wasserquelle gekühlt.</German>
+            <Polish>Chłodzenie broni wodą.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponNotEnoughWater">
             <English>Container doesn't have enough water.</English>
             <Japanese>水源には十分な水量がありません。</Japanese>
             <French>Le récipient ne contient pas suffisamment d'eau.</French>
             <Russian>Воды недостаточно для охлаждения.</Russian>
+            <German>Behälter beinhaltet nicht genug Wasser.</German>
+            <Polish>Zbiornik nie ma wystarczającej ilości wody</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponIsCool">
             <English>Weapon is cool enough the water has stopped boiling.</English>
             <Japanese>武器が冷まりきり、水が沸騰していません。</Japanese>
             <French>L'arme est suffisamment froide pour que l'eau ait cessé de bouillir.</French>
             <Russian>Оружие достаточно холодное для прекращения кипения воды.</Russian>
+            <German>Waffe ist kalt genug, dass Wasser hat aufgehört zu kochen.</German>
+            <Polish>Broń jest wystarczająco schłodzona. Woda przestała się gotować.</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>

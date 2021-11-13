@@ -35,11 +35,11 @@ Please not that the following key combinations are ACE3 default key binds.
 
 ### 2.3 Scopes Options
 
-<img src="{{ site.baseurl }}/img/wiki/feature/scope_module1.jpg" width="800" height="484" alt="CBA Settings scopes module" />
+<img src="{{ site.baseurl }}/img/wiki/feature/scope_module1.webp" width="800" height="484" alt="CBA Settings scopes module" />
 
 ### 2.4 Simplified Zeroing
 
-<img src="{{ site.baseurl }}/img/wiki/feature/simplified_zeroing.jpg" width="800" height="484" alt="Simplified zeroing" />
+<img src="{{ site.baseurl }}/img/wiki/feature/simplified_zeroing.webp" width="800" height="484" alt="Simplified zeroing" />
 
 
 ## 3. Dependencies

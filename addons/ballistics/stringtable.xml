@@ -2763,21 +2763,29 @@
             <English>6.5x47 mm 30Rnd Sand Mag (HPBT Scenar)</English>
             <Japanese>6.5x47 mm 30発入り サンド 弾倉 (HPBT Scenar)</Japanese>
             <French>Ch. 6,5x47 mm 30Cps Sable (HPBT Scenar)</French>
+            <German>6.5x47 mm 30-Patronen-Magazin Sandfarben (HPBT Scenar)</German>
+            <Polish>Magazynek 6.5x47 mm 30rd Piaskowy (HPBT Scenar)</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_msbs_mag_Name">
             <English>6.5x47 mm 30Rnd Promet Mag (HPBT Scenar)</English>
             <Japanese>6.5x47 mm 30発入り プロメット 弾倉 (HPBT Scenar)</Japanese>
             <French>Ch. 6,5x47 mm 30Cps Promet (HPBT Scenar)</French>
+            <German>6.5x47 mm 30-Patronen-Magazin für Promet (HPBT Scenar)</German>
+            <Polish>Magazynek 6.5x47 mm 30rd Promet (HPBT Scenar)</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_black_mag_Name">
             <English>6.5x47 mm 30Rnd Black Mag (HPBT Scenar)</English>
             <Japanese>6.5x47 mm 30発入り ブラック 弾倉 (HPBT Scenar)</Japanese>
             <French>Ch. 6,5x47 mm 30Cps Noir (HPBT Scenar)</French>
+            <German>6.5x47 mm 30-Patronen-Magazin Schwarz (HPBT Scenar)</German>
+            <Polish>Magazynek 6.5x47 mm 30rd Czarny (HPBT Scenar)</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_khaki_mag_Name">
             <English>6.5x47 mm 30Rnd Khaki Mag (HPBT Scenar)</English>
             <Japanese>6.5x47 mm 30発入り カーキ 弾倉 (HPBT Scenar)</Japanese>
             <French>Ch. 6,5x47 mm 30Cps Kaki (HPBT Scenar)</French>
+            <German>6.5x47 mm 30-Patronen-Magazin Khaki (HPBT Scenar)</German>
+            <Polish>Magazynek 6.5x47 mm 30rd Khaki (HPBT Scenar)</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65x47_Scenar_mag_NameShort">
             <English>6.5 mm Lapua</English>
@@ -2834,21 +2842,29 @@
             <English>6.5 mm Creedmor 30Rnd Sand Mag</English>
             <Japanese>6.5 mm クリードモア 30発入り サンド 弾倉</Japanese>
             <French>Ch. 6,5 mm Creedmor 30Cps Sable</French>
+            <German>6.5 mm Creedmor 30-Patronen-Magazin Sandfarben</German>
+            <Polish>Magazynek 6.5 mm Creedmor 30Rnd Piaskowy</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_msbs_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Promet Mag</English>
             <Japanese>6.5 mm クリードモア 30発入り プロメット 弾倉</Japanese>
             <French>Ch. 6,5 mm Creedmor 30Cps Promet</French>
+            <German>6.5 mm Creedmor 30-Patronen-Magazin für Promet</German>
+            <Polish>Magazynek 6.5 mm Creedmor 30Rnd Promet</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_black_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Black Mag</English>
             <Japanese>6.5 mm クリードモア 30発入り ブラック 弾倉</Japanese>
             <French>Ch. 6,5 mm Creedmor 30Cps Noir</French>
+            <German>6.5 mm Creedmor 30-Patronen-Magazin Schwarz</German>
+            <Polish>Magazynek 6.5 mm Creedmor 30Rnd Czarny</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_khaki_mag_Name">
             <English>6.5 mm Creedmor 30Rnd Khaki Mag</English>
             <Japanese>6.5 mm クリードモア 30発入り カーキ 弾倉</Japanese>
             <French>Ch. 6,5 mm Creedmor 30Cps Kaki</French>
+            <German>6.5 mm Creedmor 30-Patronen-Magazin Khaki</German>
+            <Polish>Magazynek 6.5 mm Creedmor 30Rnd Khaki</Polish>
         </Key>
         <Key ID="STR_ACE_Ballistics_30Rnd_65_Creedmor_mag_NameShort">
             <English>6.5 mm CM</English>

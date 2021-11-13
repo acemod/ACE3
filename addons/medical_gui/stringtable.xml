@@ -196,6 +196,7 @@
             <Spanish>Mostrar nivel de triado en menú de interacción</Spanish>
             <Russian>Показывать группу триажа в меню взаимодействий</Russian>
             <Polish>Pokaż poziom Triażu w menu interakcji</Polish>
+            <German>Zeige Triage-Einstufung im Interaktionsmenü</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_Description">
             <English>Shows the patient's triage level by changing the color of the main and medical menu actions.</English>
@@ -204,6 +205,7 @@
             <Spanish>Mostrar el nivel de triado en el paciente cambiando el color de acciones de menú principales y médicas </Spanish>
             <Russian>Отображает установленную группу карты медицинской сортировки (триажа), изменяя цвет действий основного и медицинского меню.</Russian>
             <Polish>Pokazuje poziom Triażu pacjenta poprzez zmianę koloru ikony w menu interakcji.</Polish>
+            <German>Zeigt die Triage-Einstufung des Patienten durch Ändern der Farbe der Aktionen des Hauptmenüs und des medizinischen Menüs an.</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -974,6 +976,7 @@
             <Spanish>Fracturada</Spanish>
             <Chinesesimp>骨折</Chinesesimp>
             <Turkish>Kırık</Turkish>
+            <German>Gebrochen</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Status_SplintApplied">
             <English>Splint Applied</English>
@@ -988,6 +991,7 @@
             <Spanish>Tablilla aplicada</Spanish>
             <Chinesesimp>已用夹板固定</Chinesesimp>
             <Turkish>Atel Uygulandı</Turkish>
+            <German>Schiene angelegt</German>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1125,42 +1129,55 @@
             <Japanese>患者情報</Japanese>
             <Turkish>Hasta Bilgileri</Turkish>
             <Spanish>Información de paciente</Spanish>
+            <German>Patienteninformation</German>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColors">
             <English>Blood Loss Colors</English>
             <Russian>Цвета кровопотери</Russian>
             <Japanese>失血量カラー</Japanese>
             <French>Couleurs des hémorragies</French>
+            <German>Farben für Blutverlust</German>
+            <Polish>Kolory utraty krwi</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColor_Description">
             <English>Blood Loss Colors, That Used in Medical GUI. 10 Color Gradient.</English>
             <Russian>Цвета кровопотери, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
             <Japanese>医療 GUI 内で失血量を 10 段階のカラーで表します。</Japanese>
             <French>Couleurs utilisées pour afficher les hémorragies dans l'interface médicale. Dégradé de 10 couleurs.</French>
+            <German>Farben für Blutverlust, die in dem Medizinischen Menü verwendet werden. 10-Farben Farbverlauf.</German>
+            <Polish>Kolory używane do wyświetlania krwawienia w interfejsie medycznym. Gradient 10 kolorów.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColorX_DisplayName">
             <English>Blood Loss Color %1</English>
             <Russian>Цвет кровопотери %1</Russian>
             <Japanese>失血量カラー %1</Japanese>
             <French>Hémorragies - couleur %1</French>
+            <German>Blutverlustfarbe %1</German>
+            <Polish>Krwawienie - kolor %1</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColors">
             <English>Damage Colors</English>
             <Russian>Цвета урона</Russian>
             <Japanese>負傷カラー</Japanese>
             <French>Couleur des dégâts</French>
+            <German>Farben für Schaden</German>
+            <Polish>Kolory obrażeń</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
             <English>Damage Colors, That Used in Medical GUI. 10 Color Gradient.</English>
             <Russian>Цвета урона, которые используются в Медицинском интерфейсе. Градиент из 10 цветов.</Russian>
             <Japanese>医療 GUI 内で負傷を 10 段階のカラーで表します。</Japanese>
             <French>Couleurs utilisées pour afficher les dégâts dans l'interface médicale. Dégradé de 10 couleurs.</French>
+            <German>Farben für Schaden, die in dem medizinischen Menü verwendet werden. 10-Farben Farbverlauf.</German>
+            <Polish>Kolory używane do wyświetlania obrażeń w interfejsie medycznym. Gradient 10 kolorów.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColorX_DisplayName">
             <English>Damage Color %1</English>
             <Russian>Цвет урона %1</Russian>
             <Japanese>負傷カラー %1</Japanese>
             <French>Dégâts - couleur %1</French>
+            <German>Schadensfarbe %1</German>
+            <Polish>Obrażenia - kolor %1</Polish>
         </Key>
     </Package>
 </Project>

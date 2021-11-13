@@ -16,7 +16,7 @@
  */
 
 // delay a frame so we don't overlap with interaction-menu as it closes
-[{ 
+[{
     params [["_unit", objNull, [objNull]]];
 
     private _display = findDisplay 46 createDisplay QGVAR(groupNameDisplay);
@@ -27,7 +27,7 @@
         params ["_display", "_exitCode"];
 
         if !(_exitCode isEqualTo 1) exitWith {};
-        
+
         private _group = _display getVariable QGVAR(renamedGroup);
         private _textCtrl = _display displayCtrl 451;
         private _newName = ctrlText _textCtrl;
