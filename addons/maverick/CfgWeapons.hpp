@@ -22,7 +22,7 @@ class CfgWeapons {
         weaponLockSystem = 2;
     };
 
-    class GVAR(L_Launcher) : weapon_AGM_65Launcher {
+    class GVAR(L_Launcher): weapon_AGM_65Launcher {
         author = "xrufix";
         displayname = CSTRING(L);
         magazines[] = {
