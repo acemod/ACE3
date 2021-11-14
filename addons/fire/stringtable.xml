@@ -8,6 +8,7 @@
             <Russian>ACE Возгорание</Russian>
             <German>ACE Feuer</German>
             <Polish>ACE Ogień</Polish>
+            <Spanish>Fuego ACE</Spanish>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PatDown">
             <English>Pat Down Fire</English>
@@ -16,6 +17,7 @@
             <Russian>Потушить</Russian>
             <German>Feuer löschen</German>
             <Polish>Zgaś ogień</Polish>
+            <Spanish>Extingir el fuego</Spanish>
         </Key>
         <Key ID="STR_ACE_Fire_Actions_PerformingPatDown">
             <English>Patting Down Fire</English>
@@ -24,6 +26,7 @@
             <Russian>Тушение</Russian>
             <German>Feuer wird gelöscht...</German>
             <Polish>Gaszenie ognia</Polish>
+            <Spanish>Extinguiendo el Fuego</spanish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_Description">
             <English>Allow units to catch fire</English>
@@ -32,6 +35,7 @@
             <Russian>Включает возгорание</Russian>
             <German>Erlaubt, dass Einheiten Feuer fangen können</German>
             <Polish>Zezwól jednostkom na zapalenie się</Polish>
+            <Spanish>Permitir que las unidades se incendien</Spanish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_FlareEnable">
             <English>Enable fire-flare at night</English>
@@ -40,6 +44,7 @@
             <Russian>Включает сверкание пламени</Russian>
             <German>Aktiviert Feuerschein bei Nacht.</German>
             <Polish>Włącza efekt flary od ognia w nocy</Polish>
+            <Spanish>Habilitar bengalas de fuego por la noche</Spanish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_FlareDescription">
             <English>Uses a flare effect to increase fire intensity at night</English>
@@ -48,19 +53,24 @@
             <Russian>Включает ореол пламени для большей интенсивности ночью</Russian>
             <German>Benutzt einen Feuerschein-Effekt um die Intensität des Feuers bei Nacht zu verstärken.</German>
             <Polish>Używa efektu flary, aby zwiększyć jasność w nocy</Polish>
+            <Spanish>Utiliza un efecto de bengala para aumentar la intensidad del fuego por la noche</Spanish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams">
             <English>Enable screams by units on fire</English>
+            <Spanish>Habilitar los gritos de las unidades en llamas</Spanish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_EnableScreams_Description">
             <English>Enables if units on fire will play the screaming sound</English>
+            <Spanish>Habilita si las unidades en llamas reproducirán el sonido de los gritos</Spanish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon">
             <English>Drop Weapons When on Fire</English>
+            <Spanish>Soltar armas cuando esté en llamas</Spanish>
             <Polish>Włącz wyrzucanie broni podczas płonięcia</Polish>
         </Key>
         <Key ID="STR_ACE_Fire_Setting_DropWeapon_Description">
             <English>Controls whether units drop their weapons when on fire.</English>
+            <Spanish>Controla si las unidades dejan caer sus armas cuando están en llamas</Spanish>
             <Polish>Powoduje że jednostki wyrzucają swoją broń gdy płoną.</Polish>
         </Key>
     </Package>
