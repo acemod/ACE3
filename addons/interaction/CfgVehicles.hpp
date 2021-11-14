@@ -644,7 +644,8 @@ class CfgVehicles {
         class ACE_SelfActions {};
     };
 
-    class PlasticCase_01_base_F: ThingX {
+    class Items_base_F;
+    class PlasticCase_01_base_F: Items_base_F {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
