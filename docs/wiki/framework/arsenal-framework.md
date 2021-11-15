@@ -300,3 +300,40 @@ All are local.
 | ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+
+## 7. Custom sub item categories
+
+### 7.1 Adding a sub item category
+
+`ace_arsenal_fnc_addRightPanelButton`
+
+|  | Argument | Type | Optional (default value)
+---| -------- | ---- | ------------------------
+0  | Misc. items | Array of strings | Required
+1  | Tooltip | String | Optional (default: `""`)
+2  | Picture path | String | Optional (default: `"\z\ace\addons\arsenal\data\iconCustom.paa"`)
+3  | Override a specific button | Number | Optional (default: `-1`)
+
+Return Value:
+- successful: number of the slot (0-9)
+- error: -1
+
+This function creates a sub category under misc items in the ACE Arsenal.
+Only items that are listed under 'Misc Items' are available for sub categories. 
+If the 'Override a specific button' argument is not used, the button will added at the bottom of the rest.
+
+Examples:
+- `[["ACE_bloodIV_500", "ACE_fieldDressing"], "MedicalStuff"] call ace_arsenal_fnc_addRightPanelButton`
+- `[["ACE_Banana"], "Fruits", "\path\to\a\picture.paa"] call ace_arsenal_fnc_addRightPanelButton`
+
+Override Examples:
+``` sqf
+// a category 'Explosives' is created at the bottom (last possible location)
+[["ACE_Clacker", "ACE_M26_Clacker"], "Explosives", nil, 9] call ace_arsenal_fnc_addRightPanelButton;
+```
+``` sqf
+// a category 'Flashlights' is created and the buttonId is saved
+private _buttonId = [["ACE_Flashlight_MX991", "ACE_Flashlight_KSF1"], "Flashlights", "\path\to\a\pictureWithAFlashlight.paa"] call ace_arsenal_fnc_addRightPanelButton;
+// now the category 'better flashlight' is replacing the category 'Flashlights' because it is set on the same button index
+[["ACE_Flashlight_XL50"], "better flashlight", "\path\to\a\pictureWithAFlashlight.paa", _buttonId] call ace_arsenal_fnc_addRightPanelButton
+```
