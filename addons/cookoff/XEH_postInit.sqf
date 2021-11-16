@@ -20,6 +20,11 @@
     };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(setTIPars), {
+    params ["_vehicle", "_tiPars"];
+    _vehicle setVehicleTIPars _tiPars;
+}] call CBA_fnc_addEventHandler;
+
 GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 ["ReammoBox_F", "init", {
