@@ -125,7 +125,13 @@ if (_smokeDelayEnabled) then {
             };
         };
         
-        [_vehicle, [((_tiPars select 0) + (_intensity * 0.01))/1.005, ((_tiPars select 1) + (_intensity * 0.004))/1.002, ((_tiPars select 2) + (_intensity * 0.01)/1.005)]] call CBA_fnc_globalEvent;
+        [QGVAR(setTIPars), [
+            _vehicle, [
+                ((_tiPars select 0) + (_intensity * 0.01))/1.005, 
+                ((_tiPars select 1) + (_intensity * 0.004))/1.002, 
+                ((_tiPars select 2) + (_intensity * 0.01))/1.005
+            ]
+        ]] call CBA_fnc_globalEvent;
         
     }, 0.25, [_vehicle, _positions, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing, _smokeEffects]] call CBA_fnc_addPerFrameHandler
 }, [_vehicle, _positions, _intensity, _ammoDetonationChance, _detonateAfterCookoff, _instigator, _fireSource, _canRing], _delay] call CBA_fnc_waitAndExecute;
