@@ -195,5 +195,5 @@ if (isServer) then {
     ]] call CBA_fnc_globalEvent;
 
     
-}, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound]] call cba_fnc_addPerFrameHandler;
+}, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound, _intensity]] call cba_fnc_addPerFrameHandler;
 
