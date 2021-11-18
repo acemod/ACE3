@@ -9,6 +9,7 @@
  * 2: Spawn fire ring <Boolean>
  * 3: How long effect will last (Max 20 seconds) <Number>
  * 4: What selection will fire originate from <String>
+ * 5: Intensity value passed by ace_cookoff_fnc_cookOff <Number>
  *
  * Return Value:
  * None
@@ -19,7 +20,7 @@
  * Public: No
  */
 
-params ["_obj", "_jet", "_ring", "_time", "_fireSelection"];
+params ["_obj", "_jet", "_ring", "_time", "_fireSelection", "_intensity"];
 private _light = "#lightpoint" createVehicleLocal [0,0,0];
 _light setLightBrightness 5;
 _light setLightAmbient [0.8, 0.6, 0.2];
@@ -43,7 +44,7 @@ if (isServer) then {
 
 [{
     params ["_args", "_pfh"];
-    _args params ["_obj", "_jet", "_ring", "_time", "_startTime", "_light", "_fireSelection", "_sound"];
+    _args params ["_obj", "_jet", "_ring", "_time", "_startTime", "_light", "_fireSelection", "_sound", "_intensity"];
     private _elapsedTime = CBA_missionTime - _startTime;
     if (_elapsedTime >= _time) exitWith {
         deleteVehicle _light;
@@ -183,5 +184,16 @@ if (isServer) then {
             [2 + random 1], 1, 0, "", "", _obj
         ];
     };
+    
+    private _tiPars = getVehicleTIPars _obj; 
+    [QGVAR(setTIPars), [
+        _obj, [
+            ((_tiPars select 0) + (_intensity * 0.01))/1.005, 
+            ((_tiPars select 1) + (_intensity * 0.004))/1.002, 
+            ((_tiPars select 2) + (_intensity * 0.01))/1.005
+        ]
+    ]] call CBA_fnc_globalEvent;
+
+    
 }, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound]] call cba_fnc_addPerFrameHandler;
 
