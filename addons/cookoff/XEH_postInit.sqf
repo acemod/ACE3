@@ -1,3 +1,4 @@
+
 #include "script_component.hpp"
 
 [QGVAR(engineFire), FUNC(engineFire)] call CBA_fnc_addEventHandler;
@@ -18,11 +19,6 @@
     if !(_effects isEqualTo []) then {
          { deleteVehicle _x } count _effects;
     };
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(setTIPars), {
-    params ["_vehicle", "_tiPars"];
-    _vehicle setVehicleTIPars _tiPars;
 }] call CBA_fnc_addEventHandler;
 
 GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
