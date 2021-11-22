@@ -186,14 +186,11 @@ if (isServer) then {
     };
     
     private _tiPars = getVehicleTIPars _obj; 
-    [QGVAR(setTIPars), [
-        _obj, [
-            ((_tiPars select 0) + (_intensity * 0.01))/1.005, 
-            ((_tiPars select 1) + (_intensity * 0.004))/1.002, 
-            ((_tiPars select 2) + (_intensity * 0.01))/1.005
-        ]
-    ]] call CBA_fnc_globalEvent;
-
+    _obj setVehicleTIPars [
+        ((_tiPars select 0) + (_intensity * 0.01))/1.005, 
+        ((_tiPars select 1) + (_intensity * 0.004))/1.002, 
+        ((_tiPars select 2) + (_intensity * 0.01))/1.005
+    ];
     
 }, 0, [_obj, _jet, _ring, _time, CBA_missionTime, _light, _fireSelection, _sound, _intensity]] call cba_fnc_addPerFrameHandler;
 
