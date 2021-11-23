@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Marker_Flags">
+        <Key ID="STR_ACE_Marker_Flags_actionPlace">
+            <English>Place Flag</English>
+            <German>Flagge platzieren</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_actionPickUp">
+            <English>Pick up</English>
+            <German>Aufheben</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_white">
+            <English>Marker Flag (White)</English>
+            <German>Markierungsfahne (Weiß)</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_black">
+            <English>Marker Flag (Black)</English>
+            <German>Markierungsfahne (Schwarz)</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_red">
+            <English>Marker Flag (Red)</English>
+            <German>Markierungsfahne (Rot)</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_green">
+            <English>Marker Flag (Green)</English>
+            <German>Markierungsfahne (Grün)</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_blue">
+            <English>Marker Flag (Blue)</English>
+            <German>Markierungsfahne (Blau)</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_yellow">
+            <English>Marker Flag (Yellow)</English>
+            <German>Markierungsfahne (Gelb)</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_orange">
+            <English>Marker Flag (Orange)</English>
+            <German>Markierungsfahne (Orange)</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_purple">
+            <English>Marker Flag (Purple)</English>
+            <German>Markierungsfahne (Lila)</German>
+        </Key>
+    </Package>
+</Project>
