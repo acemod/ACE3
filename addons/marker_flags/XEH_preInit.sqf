@@ -7,6 +7,5 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(weaponCache) = createHashMap;
-GVAR(vehicleCache) = createHashMap;
 
 ADDON = true;

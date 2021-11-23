@@ -6,7 +6,6 @@ private _weapons = configProperties [configfile >> "CfgWeapons", QUOTE(isClass _
     private _name = configName _x;
     private _vehicle = getText (_x >> QGVAR(vehicle));
     GVAR(weaponCache) set [_name, _vehicle];
-    GVAR(vehicleCache) set [_vehicle, _name];
 
     private _action = [
         _name,
