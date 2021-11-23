@@ -20,11 +20,12 @@ params ["_unit"];
 private _actions = [];
 
 {
+    private _config = configFile >> "CfgWeapons" >> _x;
     _actions pushBack ([
         [
             _x,
-            getText (configFile >> "CfgWeapons" >> _x >> "displayName"),
-            "",
+            getText (_config >> "displayName"),
+            getText (_config >> "picture"),
             {[_this select 0, _this select 2] call FUNC(placeFlag)},
             {true},
             {},
