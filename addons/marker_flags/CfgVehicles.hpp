@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ADDON {
                     displayName = CSTRING(actionPlace);
-                    condition = "true";
+                    condition = QUOTE(_player call FUNC(canPlace));
                     insertChildren = QUOTE(_this call FUNC(addActions));
                     statement = "";
                     exceptions[] = {};

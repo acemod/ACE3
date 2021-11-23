@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Marker_Flags">
+        <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
+            <English>Marker Flag</English>
+            <German>Markierungsfahnen</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_placeAnywhere_DisplayName">
+            <English>Place Anywhere</English>
+            <German>Überall platzieren</German>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_placeAnywhere_Description">
+            <English>Place marker flag anywhere regardless of surface</English>
+        </Key>
         <Key ID="STR_ACE_Marker_Flags_actionPlace">
             <English>Place Flag</English>
             <German>Flagge platzieren</German>

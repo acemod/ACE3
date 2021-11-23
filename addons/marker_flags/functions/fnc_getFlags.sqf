@@ -4,7 +4,7 @@
  * Get the placeable flags in the player's inventory
  *
  * Arguments:
- * None
+ * 0: Player <OBJECT>
  *
  * Return Value:
  * flags <ARRAY>
@@ -15,4 +15,6 @@
  * Public: No
  */
 
-(items player) arrayIntersect keys GVAR(weaponCache)
+params [["_unit", ace_player, [objNull]]];
+
+(items _unit) arrayIntersect keys GVAR(weaponCache)

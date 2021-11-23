@@ -34,6 +34,6 @@ private _actions = [];
         [],
         _unit
     ]);
-} forEach (call FUNC(getFlags));
+} forEach ([_unit] call FUNC(getFlags));
 
 _actions
