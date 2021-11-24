@@ -37,7 +37,7 @@ private _hitPointsAddedAmount = [];
 private _processedSelections = [];
 private _icon = ["a3\ui_f\data\igui\cfg\actions\repair_ca.paa", "#FFFFFF"];
 
-private _vehCfg = configFile >> "CfgVehicles" >> _type;
+private _vehCfg = configOf _vehicle;
 // Custom position can be defined via config for associated hitpoint
 private _hitpointPositions = getArray (_vehCfg >> QGVAR(hitpointPositions));
 // Associated hitpoints can be grouped via config to produce a single repair action
@@ -94,12 +94,18 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
                 private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
                 if (_hitpointsCfg isNotEqualTo []) exitWith {
                     TRACE_2("turret hitpoint configFound",_hitpoint,_x);
-                     // only do turret hitpoints for now or we get some weird stuff
-                    if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1}) then {
+                     // only do turret hitpoints or stuff linked to visuals for now or we apparently get some weird stuff
+                    if ((_hitpoint in ["hitturret", "hitgun"]) || {(getNumber (_hitpointsCfg # 0 >> "isGun")) == 1} || {(getNumber (_hitpointsCfg # 0 >> "isTurret")) == 1} || {(getText (_hitpointsCfg # 0 >> "visual")) != ""}) then {
                         _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
                     };
                 };
             } forEach _turretPaths;
+            if (_armorComponent == "") then {
+                private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
+                if ((getText (_hitpointsCfg # 0 >> "visual")) != "") then {
+                    _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
+                };
+            };
             if (_armorComponent != "") then { INFO_3("%1: %2 no selection: using armorComponent %3",_type,_hitpoint,_armorComponent); };
         };
         if ((_selection == "") && {_armorComponent == ""}) exitWith { TRACE_3("Skipping no selection OR armor component",_hitpoint,_forEachIndex,_selection); };

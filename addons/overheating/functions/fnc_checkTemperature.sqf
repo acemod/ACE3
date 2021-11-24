@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, currentWeapon player] call ace_overheating_fnc_checkTemperature
+ * [player, player, currentWeapon player] call ace_overheating_fnc_checkTemperature
  *
  * Public: No
  */

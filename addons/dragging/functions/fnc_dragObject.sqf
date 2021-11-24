@@ -36,7 +36,7 @@ _target attachTo [_unit, _position];
 [QEGVAR(common,setDir), [_target, _direction], _target] call CBA_fnc_targetEvent;
 
 if (_target isKindOf "CAManBase") then {
-    [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);
+    [_target, "AinjPpneMrunSnonWnonDb_still", 0] call EFUNC(common,doAnimation);
 };
 
 _unit setVariable [QGVAR(isDragging), true, true];

@@ -57,7 +57,7 @@ class RscACE_SelectAnItem {
             h = 0.71;
             colorBackground[] = {0, 0, 0, 0.2};
         };
-        class header: RscText{
+        class header: RscText {
             idc = 8870;
             x = X_OFFSET + 0.005;
             y = 0.005;

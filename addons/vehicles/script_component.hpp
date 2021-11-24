@@ -20,4 +20,3 @@
 #define MOUSE_SCROLL_DOWN 0xF9
 
 #define FUEL_FACTOR 0.165    // fuel capacity = range in km * FUEL_FACTOR
-#define STARTUP_DELAY 1.3

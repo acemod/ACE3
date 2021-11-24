@@ -9,7 +9,7 @@
  * 2: Heat increment (J) <NUMBER>
  *
  * Return Value:
- * Current temperature <NUMBER>
+ * New temperature <NUMBER>
  *
  * Example:
  * [player, currentWeapon player, 2000] call ace_overheating_fnc_updateTemperature
@@ -27,9 +27,13 @@ private _timeVarName = format [QGVAR(%1_time), _weapon];
 private _temperature = _unit getVariable [_tempVarName, 0];
 private _lastTime = _unit getVariable [_timeVarName, 0];
 
-private _barrelMass = METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+// keep track of weapons that have heat, so they can be set to ambient temperaure on killed/respawn
+private _trackedWeapons = _unit getVariable [QGVAR(trackedWeapons), []];
+_trackedWeapons pushBackUnique _tempVarName;
+_unit setVariable [QGVAR(trackedWeapons), _trackedWeapons];
 
 // Calculate cooling
+private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
 _temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUNC(calculateCooling);
 
 TRACE_1("cooledTo",_temperature);
@@ -39,6 +43,7 @@ _temperature = _temperature + _heatIncrement / (_barrelMass * 466);
 
 // Publish the temperature variable
 [_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
+
 // Store the update time locally
 _unit setVariable [_timeVarName, CBA_missionTime];
 

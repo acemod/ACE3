@@ -16,7 +16,9 @@ class CfgVehicles {
         class CommanderOptics;//: NewTurret {};
     };
 
-    class Car: LandVehicle {};
+    class Car: LandVehicle {
+        GVAR(engineStartDelay) = 1.3;
+    };
 
     class Tank: LandVehicle {
         class Turrets {
@@ -110,14 +112,14 @@ class CfgVehicles {
             };
         };
     };
-    
-    
-    
+
+
+
     class MBT_02_base_F: Tank_F {
         fuelCapacity = 600 * FUEL_FACTOR; // again, couldn't find proper data
     };
 
-    
+
     // Change boat minigun ammo to 7.62
 
     class Ship_F: Ship {};
@@ -152,7 +154,7 @@ class CfgVehicles {
     class MRAP_02_base_F: Car_F {
         fuelCapacity = 500 * FUEL_FACTOR; // couldn't find any data for the punisher
     };
-    
+
     class MRAP_03_base_F: Car_F {
         fuelCapacity = 860 * FUEL_FACTOR;
         smokeLauncherGrenadeCount = 3;
@@ -231,14 +233,14 @@ class CfgVehicles {
     };
 
     // Tanks DLC Wiesel 2
-    class LT_01_base_F : Tank_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {};
+    class LT_01_base_F: Tank_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {};
         };
     };
-    class LT_01_cannon_base_F : LT_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
+    class LT_01_cannon_base_F: LT_01_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 weapons[] = {
                     "SmokeLauncher",
                     "ACE_LMG_coax_ext_MG3",
@@ -249,8 +251,8 @@ class CfgVehicles {
     };
 
     // Tanks DLC Rooikat 120
-    class AFV_Wheeled_01_base_F : wheeled_APC_F {
-        class Turrets : Turrets {
+    class AFV_Wheeled_01_base_F: wheeled_APC_F {
+        class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"ACE_cannon_120mm_GT12","ACE_LMG_coax_DenelMG4"};
                 magazines[] = {"12Rnd_120mm_APFSDS_shells_Tracer_Red","8Rnd_120mm_HE_shells_Tracer_Red","8Rnd_120mm_HEAT_MP_T_Red","4Rnd_120mm_LG_cannon_missiles","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red","200Rnd_762x51_Belt_T_Red"};
@@ -259,19 +261,19 @@ class CfgVehicles {
     };
 
     // Tanks DLC Armata
-    class MBT_04_base_F : Tank_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
-                class Turrets : Turrets {
+    class MBT_04_base_F: Tank_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {};
                 };
             };
         };
     };
-    class MBT_04_cannon_base_F : MBT_04_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
-                class Turrets : Turrets {
+    class MBT_04_cannon_base_F: MBT_04_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {
                         weapons[] = {"ACE_HMG_127_KORD","SmokeLauncher"};
                     };

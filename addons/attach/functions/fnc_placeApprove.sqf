@@ -100,6 +100,6 @@ _unit removeItem _itemClassname;
 private _attachList = _attachToVehicle getVariable [QGVAR(attached), []];
 _attachList pushBack [_attachedObject, _itemClassname];
 _attachToVehicle setVariable [QGVAR(attached), _attachList, true];
-[QGVAR(attached), [_attachedObject, _itemClassname]] call CBA_fnc_localEvent;
+[QGVAR(attached), [_attachedObject, _itemClassname, false]] call CBA_fnc_localEvent;
 
 [_onAttachText, 2] call EFUNC(common,displayTextStructured);

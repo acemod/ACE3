@@ -86,13 +86,13 @@ class CfgMagazines {
         GVAR(SetupObject) = "ACE_Explosives_Place_SLAM";
         class ACE_Triggers {
             SupportedTriggers[] = {"IRSensor", "PressurePlate", "Timer", "Command", "MK16_Transmitter"};
-            class PressurePlate{
+            class PressurePlate {
                 displayName = CSTRING(SLAME_Magnetic);
                 digDistance = 0;
                 ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
                 pitch = 90;
             };
-            class IRSensor{
+            class IRSensor {
                 displayName = CSTRING(SLAME_IRSensor);
             };
             class Timer {

@@ -4,13 +4,13 @@
  * On map draw, updates the effects
  *
  * Arguments:
- * None
+ * 0: Map control <CONTROL>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ACE_map_fnc_updateMapEffects
+ * _mapControl call ACE_map_fnc_updateMapEffects
  *
  * Public: No
  */

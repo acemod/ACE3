@@ -23,7 +23,7 @@ When any unit is bleeding, this component will spawn blood drops on the ground. 
 
 ## 2. In game
 
-<img src="{{ site.baseurl }}/img/wiki/feature/ace_blood_screen.jpg" width="500" height="160" alt="ACE Blood in game" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ace_blood_screen.webp" width="500" height="160" alt="ACE Blood in game" />
 
 ## 3. Dependencies
 

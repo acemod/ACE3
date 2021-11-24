@@ -27,6 +27,7 @@ ACE Arsenal has a pretty large number of improvements over BI Virtual Arsenal, h
 - A setting to disable mod icons to increase performance even further.
 - An other setting to invert horizontal camera controls.
 - Settings to disable the "Default loadouts" and "Public loadouts" tabs.
+- Custom sub item categories for misc items
 
 <sup>*</sup> Items not currently available in ACE Arsenal but in the unit's inventory, unique items will be omitted when loading loadouts and they can only be removed from containers.
 

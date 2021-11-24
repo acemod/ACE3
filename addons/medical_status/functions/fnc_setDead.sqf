@@ -6,6 +6,7 @@
  * Arguments:
  * 0: The unit <OBJECT>
  * 1: Reason for death <STRING>
+ * 2: Killer <OBJECT>
  *
  * Return Value:
  * None
@@ -13,8 +14,8 @@
  * Public: No
  */
 
-params ["_unit", ["_reason", "#setDead"]];
-TRACE_2("setDead",_unit,_reason);
+params ["_unit", ["_reason", "#setDead"], ["_instigator", objNull]];
+TRACE_3("setDead",_unit,_reason,_instigator);
 
 // No heart rate or blood pressure to measure when dead
 _unit setVariable [VAR_HEART_RATE, 0, true];
@@ -26,4 +27,8 @@ _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
 [QEGVAR(medical,death), [_unit]] call CBA_fnc_localEvent;
 
 // Kill the unit without changing visual apperance
-[_unit, 1] call EFUNC(medical_engine,setStructuralDamage);
+private _prevDamage = _unit getHitPointDamage "HitHead";
+
+_unit setHitPointDamage ["HitHead", 1, true, _instigator];
+
+_unit setHitPointDamage ["HitHead", _prevDamage];

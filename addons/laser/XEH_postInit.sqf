@@ -5,7 +5,7 @@ if (hasInterface) then {
 
     GVAR(pfID) = -1;
 
-    ["ace_settingsInitialized", {
+    ["CBA_settingsInitialized", {
         ["turret", LINKFUNC(showVehicleHud), false] call CBA_fnc_addPlayerEventHandler;
         ["vehicle", LINKFUNC(showVehicleHud), true] call CBA_fnc_addPlayerEventHandler; // only one of these needs the retro flag
 
@@ -26,22 +26,20 @@ if (hasInterface) then {
 ["ace_laserOn", {
     params ["_uuid", "_args"];
     TRACE_2("ace_laserOn eh",_uuid,_args);
-    [GVAR(laserEmitters), _uuid, _args] call CBA_fnc_hashSet;
+    GVAR(laserEmitters) set [_uuid, _args];
 }] call CBA_fnc_addEventHandler;
 
 ["ace_laserOff", {
     params ["_uuid"];
     TRACE_1("ace_laserOn eh",_uuid);
-    if ([GVAR(laserEmitters), _uuid] call CBA_fnc_hashHasKey) then {
-        [GVAR(laserEmitters), _uuid] call CBA_fnc_hashRem;
-    };
+    GVAR(laserEmitters) deleteAt _uuid;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(updateCode), {
     params ["_uuid", "_newCode"];
     TRACE_2("ace_laser_updateCode eh",_uuid,_newCode);
-    if ([GVAR(laserEmitters), _uuid] call CBA_fnc_hashHasKey) then {
-        private _laserArray = [GVAR(laserEmitters), _uuid] call CBA_fnc_hashGet;
+    if (_uuid in GVAR(laserEmitters)) then {
+        private _laserArray = GVAR(laserEmitters) get _uuid;
         TRACE_2("updating",_newCode,_laserArray select 4);
         _laserArray set [4, _newCode];
     };

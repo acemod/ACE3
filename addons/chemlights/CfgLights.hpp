@@ -99,7 +99,7 @@ class CfgLights {
 
     class ACE_ChemlightLight_UltraHiOrange: ACE_ChemlightLight_Orange {
         intensity = 12000;
-        
+
         ULTRA_HI_ATTENUATION
     };
 

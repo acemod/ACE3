@@ -2,14 +2,14 @@
 
 GVAR(hardpointGroupsCache) = [] call CBA_fnc_createNamespace;
 GVAR(configTypesAdded) = [];
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_2("settingsInit",GVAR(level),GVAR(supply));
     ["LandVehicle", "Init", {_this call FUNC(initSupplyVehicle)}, true, ["StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
     ["ReammoBox_F", "Init", {_this call FUNC(initSupplyVehicle)}, true, [], true] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
-[QGVAR(initSupplyVehicle), { 
+[QGVAR(initSupplyVehicle), {
     TRACE_1("initSupplyVehicle EH",_this);   // Warning: this can run before settings are init
     [FUNC(initSupplyVehicle), _this] call EFUNC(common,runAfterSettingsInit);
 }] call CBA_fnc_addEventHandler;

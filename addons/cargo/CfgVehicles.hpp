@@ -356,8 +356,8 @@ class CfgVehicles {
 
      //Huron 20ft containers
     class Slingload_01_Base_F: Slingload_base_F {
-        GVAR(canLoad) = 0;
-        GVAR(size) = -1;
+        GVAR(canLoad) = 1;
+        GVAR(size) = 50; // Use same size value from 20ft containers for consistancy
     };
     class B_Slingload_01_Cargo_F: Slingload_01_Base_F { // Huron Cargo
         GVAR(space) = 20;
@@ -426,12 +426,20 @@ class CfgVehicles {
     class Land_CanisterFuel_F: Items_base_F {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
+    };
+
+    // Flexible Fuel tanks, 300L
+    class FlexibleTank_base_F: ThingX {
+        GVAR(size) = 3;
+        GVAR(canLoad) = 1;
     };
 
     // objects
     class RoadCone_F: ThingX {
         GVAR(size) = 1;
         GVAR(canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
     };
     class RoadBarrier_F: RoadCone_F {
         GVAR(size) = 2;
@@ -441,15 +449,18 @@ class CfgVehicles {
     class Land_PortableLight_single_F: Lamps_base_F {
         GVAR(size) = 2;
         GVAR(canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
     };
     class FloatingStructure_F;
     class Land_Camping_Light_F: FloatingStructure_F {
         GVAR(size) = 0.2;
         GVAR(canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
     };
     class Land_Camping_Light_off_F: ThingX {
         GVAR(size) = 0.2;
         GVAR(canLoad) = 1;
+        EGVAR(cargo,noRename) = 1;
     };
 
 
@@ -629,6 +640,15 @@ class CfgVehicles {
         GVAR(size) = 50;
     };
     class Land_Cargo20_yellow_F: Cargo_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
+        GVAR(space) = 49;
+        GVAR(size) = 50;
+    };
+    class Cargo_IDAP_base_F: Cargo_base_F {};
+    class Land_Cargo20_IDAP_F: Cargo_IDAP_base_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
