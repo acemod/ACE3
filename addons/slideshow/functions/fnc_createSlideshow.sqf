@@ -84,7 +84,7 @@ if (_duration == 0) then {
             {},
             {true},
             {(_this select 2) call FUNC(addSlideActions)},
-            [_objects, _images, _names, _x, _currentSlideshow],
+            [_objects, _images, _names, _x, _currentSlideshow, _selection],
             [0, 0, 0],
             2
         ] call EFUNC(interact_menu,createAction);

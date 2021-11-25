@@ -39,7 +39,7 @@ private _actions = [];
             },
             {true},
             {},
-            [_objects, _x, _currentSlideshow]
+            [_objects, _x, _currentSlideshow, _selection]
         ] call EFUNC(interact_menu,createAction),
         [],
         _controller
