@@ -20,7 +20,7 @@
  * Public: No
  */
 
-params ["_objects", "_images", "_names", "_controller", "_currentSlideshow", "_selection"];
+params ["_objects", "_images", "_names", "_controller", "_currentSlideshow", ["_selection", 0]];
 
 private _actions = [];
 {
