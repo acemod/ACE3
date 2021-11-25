@@ -19,7 +19,7 @@
  * Public: No
  */
 
-params ["_objects", "_images", "_varString", "_currentSlideshow", "_duration"];
+params ["_objects", "_images", "_varString", "_currentSlideshow", "_duration", "_selection"];
 
 // Get current slide number of this slideshow
 private _currentSlide = missionNamespace getVariable [_varString, 0];
@@ -34,11 +34,11 @@ private _image = _images select _currentSlide;
 
 // Set slide
 {
-    _x setObjectTextureGlobal [0, _image];
+    _x setObjectTextureGlobal [_selection, _image];
 } count _objects;
 
 [QGVAR(slideChanged), [_image, _currentSlideshow]] call CBA_fnc_localEvent;
 
 // Log current slide and execute Next slide
 TRACE_4("Auto-transition",_image,_currentSlide,count _images,_duration);
-[FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration], _duration] call CBA_fnc_waitAndExecute;
+[FUNC(autoTransition), [_objects, _images, _varString, _currentSlideshow, _duration, _selection], _duration] call CBA_fnc_waitAndExecute;

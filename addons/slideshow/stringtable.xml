@@ -244,5 +244,11 @@
             <Chinesesimp>幻灯片</Chinesesimp>
             <Turkish>Slaytlar</Turkish>
         </Key>
+        <Key ID="STR_ACE_Slideshow_Selection_DisplayName">
+            <English>Texture Selection</English>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Selection_Description">
+            <English>Description</English>
+        </Key>
     </Package>
 </Project>
