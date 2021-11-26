@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: ACE Arsenal
+component: arsenal
 description: Adds an interface that allow player to edit their loadouts.
 group: feature
 category: general
@@ -94,6 +95,3 @@ You can import loadouts from Virtual Arsenal into ACE Arsenal, face, voice, insi
 - <kbd>RMB</kbd> clears the text field.
 - Arrow keys can be used to move the caret.
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> switches which search bar is selected.
-
-
-{% include dependencies_list.md component="arsenal" %}
