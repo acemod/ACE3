@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Advanced Throwing
+component: advanced_throwing
 description: Precise system for throwing grenades and other throwable items.
 group: feature
 category: interaction
@@ -72,8 +73,3 @@ Make sure to use different keybinds for Advanced Throwing or unbind vanilla thro
 - Interact with the item <kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Pick Up`.
 - Item will be placed in your hands, but you may not cancel the throw.
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="advanced_throwing" %}

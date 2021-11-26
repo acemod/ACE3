@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Refuel
+component: refuel
 description: Adds the option to refuel vehicles.
 group: feature
 category: interaction
@@ -64,7 +65,3 @@ There is a global setting that will effect all vehicles and static pumps. To onl
 ```sqf
 this setVariable ["ace_refuel_hoseLength", 30];
 ```
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="refuel" %}

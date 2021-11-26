@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: ATragMX
+component: atragmx
 description: Handheld ballistics calculator.
 group: feature
 category: equipment
@@ -134,8 +135,3 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 ## 4. Official References
 
 - [Official Manual]({{ site.ace.githubUrl }}/blob/master/extras/manual_Horus_ATrag-v385.pdf)
-
-
-## 5. Dependencies
-
-{% include dependencies_list.md component="atragmx" %}

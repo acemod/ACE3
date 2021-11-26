@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Interaction Menu
+component: interact_menu
 description: Base framework for interaction menu.
 group: feature
 category: interaction
@@ -15,9 +16,3 @@ version:
 ## 1. Overview
 
 This handles the interaction layer of ACE3.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="interact_menu" %}
-
-*Note: The Interact Menu module is required by most of the other modules. Do NOT remove it!*

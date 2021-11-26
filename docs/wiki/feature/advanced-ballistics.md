@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Advanced Ballistics
+component: advanced_ballistics
 description: The advanced ballistics module improves internal and external ballistics.
 group: feature
 category: realism
@@ -50,8 +51,3 @@ The Advanced Ballistics module improves internal and external ballistics.
 - Press <kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>K</kbd>.
 - Red line indicates the current inclination angle in degrees.
 - Protractor will disappear if you lower or holster your weapon.
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="advanced_ballistics" %}
