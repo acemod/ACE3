@@ -27,5 +27,8 @@ Because `ace_zeus` is being removed you must also remove any components that req
         ### {{ page.title }}
         {% capture component %}{{ page.component }}{% endcapture %}
         {% include dependencies_list.md component=component %}
+        {% if page.component == "common" or page.component == "main" or page.component == "interaction" or page.component == "interact_menu" %}
+            _Note: This module is required by nearly all other modules. Do NOT remove it!_
+        {% endif %}
     {%- endif -%}
 {% endfor %}
