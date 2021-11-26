@@ -45,7 +45,7 @@ Because `ace_zeus` is being removed you must also then remove any components tha
 - `ace_interaction`
 
 ### AtragMX
-- `ace_advanced_ballistics
+- `ace_advanced_ballistics`
 - `ace_common`
 - `ace_weather`
 
