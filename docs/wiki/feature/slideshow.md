@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Slideshow
+component: slideshow
 description: Ability to have automatic or controllable slide-shows.
 group: feature
 category: interaction
@@ -26,7 +27,3 @@ Also if no remotes are defined the "screen" object itself becomes the remote.
 
 - Look at the object used as a remote and use the interaction menu <kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select the action that correspond to the image you want (the name of the action depends on the mission maker).
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="slideshow" %}

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Fast-Roping
+component: fastroping
 description: System for adding fast roping capabilities to helicopters.
 group: feature
 category: realism
@@ -24,7 +25,3 @@ If you are sitting in the back of a helicopter that has fast roping capabilities
 You can safely prepare the FRIES in base or during flight to speed up the insertion.
 
 Not all helicopters are equipped with a FRIES by default and need to be synchronized with the "Equip FRIES" module in the editor. If the helicopter cannot carry a FRIES, an error message will appear.
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="fastroping" %}
