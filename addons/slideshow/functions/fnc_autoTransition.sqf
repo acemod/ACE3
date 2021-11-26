@@ -9,12 +9,13 @@
  * 2: State Variable Name <ARRAY>
  * 3: Current Slideshow <NUMBER>
  * 4: Duration <NUMBER> (0 disables automatic transitions)
+ * 5: Texture Selection <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [objects, images, "ace_slideshow_slideshow1", duration] call ace_slideshow_fnc_autoTransition
+ * [objects, images, "ace_slideshow_slideshow1", duration, selection] call ace_slideshow_fnc_autoTransition
  *
  * Public: No
  */
