@@ -82,7 +82,7 @@
         _object setVariable ["tf_unable_to_use_radio", _set > 0, true];
     };
     if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
-        _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
+        _object setVariable ["acre_sys_core_isDisabledRadio", _set > 0, true];
     };
 }] call CBA_fnc_addEventHandler;
 
