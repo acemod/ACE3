@@ -231,7 +231,7 @@
             <English>Texture Selection</English>
         </Key>
         <Key ID="STR_ACE_Slideshow_Selection_Description">
-            <English>Object Texture selection. Default: 0</English>
+            <English>Object texture selection. Default: 0</English>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
