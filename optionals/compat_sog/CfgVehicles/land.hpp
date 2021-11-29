@@ -1,8 +1,6 @@
 
 // fuel pumps
-class Land_vn_building_base;
-class Land_vn_commercial_base : Land_vn_building_base {};
-
+class Land_vn_commercial_base;
 class Land_vn_fuelstation_01_pump_f : Land_vn_commercial_base {
     transportFuel = 0;
     EGVAR(refuel,hooks)[] = {{0, 0.4, -0.5}, {0, -0.4, -0.5}};
@@ -20,7 +18,7 @@ class Land_vn_fuelstation_feed_f : Land_vn_commercial_base {
 };
 
 // fuel objects
-class Land_vn_building_b_base : Land_vn_building_base {};
+class Land_vn_building_b_base;
 class Land_vn_usaf_fueltank_75_01 : Land_vn_building_b_base {
     transportFuel = 0;
     EGVAR(refuel,hooks)[] = {{0, -0.4, -0.5}};
