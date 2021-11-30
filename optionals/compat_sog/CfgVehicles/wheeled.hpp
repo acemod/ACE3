@@ -35,12 +35,12 @@ class vn_wheeled_z157_fuel_base: vn_wheeled_z157_base {
     EGVAR(refuel,hooks)[] = {{-1.36, -3.575, -0.4}};
     EGVAR(refuel,fuelCargo) = 4000;
 };
-class vn_wheeled_z157_repair_base : vn_wheeled_z157_base {
+class vn_wheeled_z157_repair_base: vn_wheeled_z157_base {
     transportRepair = 0;
     EGVAR(repair,canRepair) = 1;
 };
 class vn_wheeled_z157_01_base;
-class vn_wheeled_z157_ammo_base : vn_wheeled_z157_01_base {
+class vn_wheeled_z157_ammo_base: vn_wheeled_z157_01_base {
     transportAmmo = 0;
     EGVAR(rearm,defaultSupply) = 1200;
 };
