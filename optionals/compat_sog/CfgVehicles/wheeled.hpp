@@ -15,7 +15,7 @@ class vn_wheeled_m54_repair_base : vn_wheeled_m54_03_base {
     EGVAR(repair,canRepair) = 1;
 };
 class vn_wheeled_m54_01_base;
-class vn_wheeled_m54_ammo_base : vn_wheeled_m54_01_base {
+class vn_wheeled_m54_ammo_base: vn_wheeled_m54_01_base {
     transportAmmo = 0;
     EGVAR(rearm,defaultSupply) = 1200;
 };
