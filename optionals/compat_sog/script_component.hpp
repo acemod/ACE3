@@ -7,4 +7,4 @@
 
 #define EXPLOSIVES_PLACE(CLASS) EGVAR(explosives,DOUBLES(Place,CLASS))
 #define QEXPLOSIVES_PLACE(CLASS) QUOTE(EXPLOSIVES_PLACE(CLASS))
-#define REFUEL_INFINITE_FUEL -10
+#include "\z\ace\addons\refuel\script_component.hpp"
