@@ -10,7 +10,7 @@ class vn_wheeled_m54_fuel_base: vn_wheeled_m54_cab_base {
     EGVAR(refuel,fuelCargo) = 4542;
 };
 class vn_wheeled_m54_03_base;
-class vn_wheeled_m54_repair_base : vn_wheeled_m54_03_base {
+class vn_wheeled_m54_repair_base: vn_wheeled_m54_03_base {
     transportRepair = 0;
     EGVAR(repair,canRepair) = 1;
 };
