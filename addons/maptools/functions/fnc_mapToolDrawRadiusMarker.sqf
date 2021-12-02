@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ACE_maptools_fnc_mapToolDrawRadiusMarker
+ * call ace_maptools_fnc_mapToolDrawRadiusMarker
  *
  * Public: No
  */
