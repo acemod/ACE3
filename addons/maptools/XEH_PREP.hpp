@@ -2,6 +2,7 @@ PREP(calculateMapScale);
 PREP(canUseMapGPS);
 PREP(canUseMapTools);
 PREP(drawLinesOnRoamer);
+PREP(drawRadiusMarker);
 PREP(handleMouseButton);
 PREP(handleMouseMove);
 PREP(isInsideMapTool);
