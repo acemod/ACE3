@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: Seb
+ * Creates a display that allows a maptool user to mark a radius of x around the 0 point of their maptool
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_maptools_fnc_mapToolDrawRadiusMarker
+ *
+ * Public: No
+ */
 
 if (GVAR(mapTool_Shown) == 0) exitWith {};
 [{
