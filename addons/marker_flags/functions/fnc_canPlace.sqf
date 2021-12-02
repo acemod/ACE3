@@ -1,20 +1,20 @@
 #include "script_component.hpp"
 /*
  * Authors: Brett Mayson
- * Checks if a flag can be placed by a unit
+ * Checks if a flag can be placed by a unit.
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * Can place <BOOLEAN>
+ * Can place <BOOL>
  *
  * Example:
- * ace_player call ace_marker_flags_canPlace
+ * player call ace_marker_flags_fnc_canPlace
  *
  * Public: No
  */
 
 params ["_unit"];
 
-GVAR(placeAnywhere) || { _unit call EFUNC(common,canDig) }
+GVAR(placeAnywhere) || {_unit call EFUNC(common,canDig)}

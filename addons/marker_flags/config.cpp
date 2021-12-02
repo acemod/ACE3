@@ -24,7 +24,7 @@ class CfgPatches {
             QGVAR(purple)
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_interact_menu"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Brett Mayson"};
         url = ECSTRING(main,URL);

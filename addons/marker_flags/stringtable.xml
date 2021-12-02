@@ -2,21 +2,21 @@
 <Project name="ACE">
     <Package name="Marker_Flags">
         <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
-            <English>Marker Flag</English>
+            <English>Marker Flags</English>
             <German>Markierungsfahnen</German>
         </Key>
-        <Key ID="STR_ACE_Marker_Flags_placeAnywhere_DisplayName">
+        <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
             <English>Place Anywhere</English>
             <German>Überall platzieren</German>
         </Key>
-        <Key ID="STR_ACE_Marker_Flags_placeAnywhere_Description">
-            <English>Place marker flag anywhere regardless of surface</English>
+        <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
+            <English>Place marker flag anywhere regardless of surface.</English>
         </Key>
-        <Key ID="STR_ACE_Marker_Flags_actionPlace">
+        <Key ID="STR_ACE_Marker_Flags_ActionPlace">
             <English>Place Flag</English>
             <German>Flagge platzieren</German>
         </Key>
-        <Key ID="STR_ACE_Marker_Flags_actionPickUp">
+        <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick up</English>
             <German>Aufheben</German>
         </Key>

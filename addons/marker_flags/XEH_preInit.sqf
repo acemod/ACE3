@@ -8,6 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.sqf"
 
-GVAR(weaponCache) = createHashMap;
+GVAR(flagCache) = createHashMap;
 
 ADDON = true;

@@ -2,7 +2,7 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(DisplayNa
 
 [
     QGVAR(placeAnywhere), "CHECKBOX",
-    [LSTRING(placeAnywhere_DisplayName), LSTRING(placeAnywhere_Description)],
+    [LSTRING(PlaceAnywhere_DisplayName), LSTRING(PlaceAnywhere_Description)],
     _category,
     false, // default value
     true // isGlobal

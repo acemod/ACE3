@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: Brett Mayson
- * Adds the child actions for placing flags
+ * Adds the child actions for placing flags.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -10,7 +10,7 @@
  * Actions <ARRAY>
  *
  * Example:
- * [player] call ace_marker_flags_addActions
+ * [player] call ace_marker_flags_fnc_addActions
  *
  * Public: No
  */
@@ -21,7 +21,7 @@ private _actions = [];
 
 {
     private _config = configFile >> "CfgWeapons" >> _x;
-    _actions pushBack ([
+    _actions pushBack [
         [
             _x,
             getText (_config >> "displayName"),
@@ -33,7 +33,7 @@ private _actions = [];
         ] call EFUNC(interact_menu,createAction),
         [],
         _unit
-    ]);
+    ];
 } forEach ([_unit] call FUNC(getFlags));
 
 _actions

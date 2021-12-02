@@ -1,20 +1,20 @@
 #include "script_component.hpp"
 /*
  * Authors: Brett Mayson
- * Get the placeable flags in the player's inventory
+ * Get the placeable flags in the unit's inventory.
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * flags <ARRAY>
  *
  * Example:
- * call ace_marker_flags_getFlags
+ * [_unit] call ace_marker_flags_fnc_getFlags
  *
  * Public: No
  */
 
-params [["_unit", ace_player, [objNull]]];
+params ["_unit"];
 
-(items _unit) arrayIntersect keys GVAR(weaponCache)
+(_unit call EFUNC(common,uniqueItems)) arrayIntersect keys GVAR(flagCache)
