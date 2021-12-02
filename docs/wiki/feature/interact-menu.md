@@ -2,6 +2,7 @@
 layout: wiki
 title: Interaction Menu
 component: interact_menu
+core_component: true
 description: Base framework for interaction menu.
 group: feature
 category: interaction

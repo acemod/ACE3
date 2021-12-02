@@ -2,6 +2,7 @@
 layout: wiki
 title: Interaction
 component: interaction
+core_component: true
 description: Provides basic interaction options.
 group: feature
 category: interaction

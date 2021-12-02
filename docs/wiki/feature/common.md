@@ -2,6 +2,7 @@
 layout: wiki
 title: Common
 component: common
+core_component: true
 description: Common functions and systems used by most other components.
 group: feature
 category: general

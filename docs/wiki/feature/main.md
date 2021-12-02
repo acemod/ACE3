@@ -2,6 +2,7 @@
 layout: wiki
 title: Main
 component: main
+core_component: true
 description: Main module.
 group: feature
 category: general
