@@ -21,7 +21,7 @@ class GVAR(drawRadiusDisplay) {
             w = QUOTE(TOTAL_W);
             h = QUOTE(FONT_H * 1.2);
             sizeEx = QUOTE(FONT_H * 1.2);
-            text = "Draw Radius";
+            text = CSTRING(DrawRadius);
         };
         class Background: ctrlStatic {
             colorBackground[] = {0, 0, 0, 0.8};
@@ -59,7 +59,7 @@ class GVAR(drawRadiusDisplay) {
             w = QUOTE(FONT_W * 6);
             h = QUOTE(ELEMENT_HEIGHT - FONT_W);
             sizeEx = QUOTE(FONT_H);
-            text = "Cancel";
+            text = CSTRING(Cancel);
         };
     };
 };

@@ -252,5 +252,31 @@
             <Turkish>Düz çizgiler çizmek için maptools'un kenarına çizin. Not: Silmek için orta noktada fareyle üzerine gelmeniz gerekir.</Turkish>
             <Spanish>Dibujar sobre el borde de las herramientas de mapa para dibujar líneas rectas. Nota: Debe situarse en el punto intermedio para eliminarla.</Spanish>
         </Key>
+        <Key ID="STR_ACE_MapTools_DrawRadius">
+            <English>Draw radius</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_InvalidRadius">
+            <English>Invalid radius</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_Cancel">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+            <Spanish>Cancelar</Spanish>
+            <Polish>Anuluj</Polish>
+            <French>Annuler</French>
+            <Czech>Zrušit</Czech>
+            <Italian>Annulla</Italian>
+            <Russian>Отменить</Russian>
+            <Portuguese>Cancelar</Portuguese>
+            <Hungarian>Mégse</Hungarian>
+            <Japanese>中止</Japanese>
+            <Korean>취소</Korean>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
+            <Turkish>Iptal</Turkish>
+        </Key>
+        <Key ID="STR_ACE_MapTools_Draw">
+            <English>Draw</English>
+        </Key>
     </Package>
 </Project>

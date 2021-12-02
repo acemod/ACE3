@@ -12,7 +12,7 @@ if (GVAR(mapTool_Shown) == 0) exitWith {};
         private _radiusStr = ctrlText _textCtrl;
         private _radius = parseNumber _radiusStr;
         if (_radius isEqualTo 0) exitWith {
-            systemChat "invalid radius";
+            [LLSTRING(InvalidRadius)] call EFUNC(common,displayTextStructured);
         };
         private _textureWidth = [TEXTURE_WIDTH_IN_M, TEXTURE_WIDTH_IN_M / 2] select (GVAR(mapTool_Shown) - 1);
         private _bottomOffset = [40, 20] select (GVAR(mapTool_Shown) - 1); // Distance from bottom of texture to "0" notch on maptool

@@ -58,9 +58,9 @@ class CfgVehicles {
                     showDisabled = 1;
                 };
                 class ACE_MapToolsDrawRadiusMarker {
-                    displayName = "Draw radius";
+                    displayName = CSTRING(DrawRadius);
                     condition = QUOTE((GVAR(mapTool_Shown) != 0));
-                    statement = QUOTE(call FUNC(drawRadiusMarker));
+                    statement = QUOTE(call FUNC(mapToolDrawRadiusMarker));
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     showDisabled = 1;
                 };
