@@ -15,7 +15,7 @@
  * Public: No
  */
 
-if (GVAR(mapTool_Shown) == 0) exitWith {};
+if (GVAR(mapTool_Shown) isEqualTo 0) exitWith {};
 [{
     private _display = findDisplay 12 createDisplay QGVAR(drawRadiusDisplay);
     private _textCtrl = _display displayCtrl 451;
