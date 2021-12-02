@@ -16,7 +16,6 @@ if (GVAR(mapTool_Shown) == 0) exitWith {};
         };
         private _textureWidth = [TEXTURE_WIDTH_IN_M, TEXTURE_WIDTH_IN_M / 2] select (GVAR(mapTool_Shown) - 1);
         private _bottomOffset = [40, 20] select (GVAR(mapTool_Shown) - 1); // Distance from bottom of texture to "0" notch on maptool
-        private _halfTexture = _textureWidth/2;
         private _zeroposition = (GVAR(mapTool_pos) vectorAdd [
             // Offset Y
             (_textureWidth / 4) * sin (GVAR(mapTool_angle) + 90) * (1 + CENTER_OFFSET_Y_PERC),
