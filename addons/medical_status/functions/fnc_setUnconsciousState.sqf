@@ -44,7 +44,7 @@ if (_active) then {
 
     // Player drop weapon chanse
     if (EGVAR(medical,dropWeaponUnconsciousChanse) != 0 && {_unit == ACE_player && {random 1 <= EGVAR(medical,dropWeaponUnconsciousChanse)}}) then {
-        _unit call EFUNC(hitreactions,throwWeapon);
+        _unit call EFUNC(common,throwWeapon);
     };
 
     if (_unit == ACE_player) then {
