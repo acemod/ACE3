@@ -115,7 +115,7 @@
             <English>Chance to Drop Weapon On Loss of Consciousness</English>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChanse_Description">
-            <English>The probability of a person of dropping their weapon on loss of concussion.</English>
+            <English>The probability of a person of dropping their weapon on loss of consciousness.</English>
         </Key>
     </Package>
 </Project>
