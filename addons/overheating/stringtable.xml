@@ -53,6 +53,7 @@
             <Russian>Коэффициент нагрева</Russian>
             <German>Erhitzungs-Koeffizient</German>
             <Polish>Współczynnik nagrzewania</Polish>
+            <Chinesesimp>过热系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_heatCoef_description">
             <English>Coefficient for the amount of heat a weapon generates per shot.\nHigher value increases heat.</English>
@@ -61,18 +62,23 @@
             <Russian>Коэффициент количества тепла, выделяемого оружием за выстрел. \nБольшие значения увеличивают нагрев.</Russian>
             <German>Koeffizient für die Menge an Hitze, die eine Waffe pro Schuss erzeugt.\nHöhere Werte beschleunigen die Erhitzung.</German>
             <Polish>Współczynnik wpływający na ilość ciepła generowanego przez broń przy każdym strzale.</Polish>
+            <Chinesesimp>武器每次射击产生的热量系数。\n数值越高，热量越高。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_displayName">
             <English>Cooling Coefficient</English>
+            <Chinesesimp>冷却系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
+            <Chinesesimp>武器冷却速度系数。\n数值越高，冷却速度越快。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
             <English>Suppressor Coefficient</English>
+            <Chinesesimp>消音器系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
+            <Chinesesimp>附加了消音器后，产生的额外热量系数。\n数值越高，热量越高，0意味着消音器不产生额外热量。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
             <English>Display Text on Jam</English>
@@ -209,6 +215,7 @@
             <Russian>Дистанция для Еффектов и Разброса</Russian>
             <German>Abstand für Effekte und Dispersion</German>
             <Polish>Odległość efektów i rozproszenia</Polish>
+            <Chinesesimp>效果和扩散距离</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
             <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
@@ -217,6 +224,7 @@
             <Russian>Дистанция в метрах, с которой видны эффекты частиц и разброса при перегреве.</Russian>
             <German>Der Abstand in Metern vom Spieler, in dem Überhitzungspartikeleffekte und Dispersion sichtbar sind.</German>
             <Polish>Określa odległość w metrach, do której widoczne są efekty cząsteczkowe i rozproszenie.</Polish>
+            <Chinesesimp>距离玩家的距离(米)，在这个距离内可以看到过热的粒子效应和扩散。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
             <English>Heat Increases Fire Rate</English>
@@ -225,6 +233,7 @@
             <Russian>Нагрев увеличивает темп стрельбы</Russian>
             <German>Hitze erhöht die Feuerrate</German>
             <Polish>Ciepło zwiększa szybkostrzelność</Polish>
+            <Chinesesimp>过热增加射速</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingRateOfFire_description">
             <English>As weapons heat up, their rate of fire increases by up to 10%.</English>
@@ -233,6 +242,7 @@
             <Russian>При нареве орудия, его темп стрельбы увеличивается до 10%.</Russian>
             <German>Wenn sich Waffen erhitzen, erhöht sich ihre Feuerrate um bis zu 10%.</German>
             <Polish>Gdy broń się nagrzewa, jej szybkostrzelność może wzrosnąć nawet o 10%.</Polish>
+            <Chinesesimp>随着武器的过热，其射速最多增加10%。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
             <English>Jam Chance Coefficient</English>
@@ -241,6 +251,7 @@
             <Russian>Шанс заклинивания оружия</Russian>
             <German>Koeffizient für Ladehemmung</German>
             <Polish>Szansa na zacięcie</Polish>
+            <Chinesesimp>卡弹概率系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
             <English>Coefficient for the chance that a weapon will jam from overheating.\nHigher value make jams more likely.\nSet to 0 to disable jamming.</English>
@@ -249,6 +260,7 @@
             <Russian>Шанс заклинивания оружия от перегрева.\nБольшие значения повышают шанс заклинивания.\nУстановите 0 для отключения заклинивания.</Russian>
             <German>Koeffizient für die Wahrscheinlichkeit, dass eine Waffe eine Ladehemmung hat.\Höhere Werte erhöhen die Wahrscheinlichkeit.\Auf 0 setzen, um Ladehemmungen zu deaktivieren.</German>
             <Polish>Współczynnik zmieniający szansę na zacięcie się broni z powodu przegrzania.\nIm wyższa wartość, tym większe ryzyko zacięcia się broni.\nUstaw na 0, aby wyłączyć zacinanie się broni.</Polish>
+            <Chinesesimp>武器因过热而卡弹的概率系数。\n数值越高，卡住的可能性越大。\n设置为0以禁用卡弹。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnReload_displayName">
             <English>Unjam Weapon on Reload</English>
@@ -288,6 +300,7 @@
             <French>Désenrayer l'arme au changement de canon</French>
             <Russian>Замена ствола устраняет заклинивание оружия.</Russian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
+            <Chinesesimp>更换枪管清除卡弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
             <English>Controls whether swapping barrels clears a weapon jam.</English>
@@ -296,6 +309,7 @@
             <Russian>Определяет, устраняет ли замена ствола заклинивание оружия.</Russian>
             <German>Bestimmt, ob das Wechseln des Laufes eine Ladehemmung behebt.</German>
             <Polish>Określa, czy wymiana lufy usuwa zacięcie się broni.</Polish>
+            <Chinesesimp>通过更换枪管，以便清除卡弹。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of Unjam Failing</English>
@@ -336,6 +350,7 @@
             <Russian>Коеффициент возгорания при перегреве</Russian>
             <German>Selbstzündungskoeffizient bei Überhitzung</German>
             <Polish>Współczynnik samozapłonu</Polish>
+            <Chinesesimp>过热炸膛系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_cookoffCoef_description">
             <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
@@ -344,6 +359,7 @@
             <Russian>Коеффициент нагрева, при котором возникает возгорание.</Russian>
             <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
             <Polish>Współczynnik modyfikujący ilość ciepła wymaganego do samozapłonu amunicji w komorze broni.\nIm wyższa wartość, tym gorętsza musi być broń, aby amunicja uległa samozapłonowi\nUstaw 0, aby wyłączyć samozapłon.</Polish>
+            <Chinesesimp>发生炸膛的过热系数。\n数值越高，炸膛所需要的过热值越高。\n设置为0禁用炸膛。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -400,6 +416,7 @@
             <Russian>Оружие сдетонировало!</Russian>
             <German>Munition durchgezündet!</German>
             <Polish>Samozapłon amunicji!</Polish>
+            <Chinesesimp>武器炸膛！</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToEject">
             <English>Failure to eject.</English>
@@ -408,6 +425,7 @@
             <Russian>Не удалось достать.</Russian>
             <German>Hülse wurde nicht ausgeworfen.</German>
             <Polish>Nie udało się wyrzucić łuski.</Polish>
+            <Chinesesimp>弹出失败。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToExtract">
             <English>Failure to extract.</English>
@@ -416,6 +434,7 @@
             <Russian>Не удалось извлечь.</Russian>
             <German>Hülse wurde nicht ausgezogen.</German>
             <Polish>Nie udało się wyjąć łuski.</Polish>
+            <Chinesesimp>未能抽出。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFeed">
             <English>Failure to feed.</English>
@@ -424,6 +443,7 @@
             <Russian>Не удалось подать.</Russian>
             <German>Patrone wurde nicht zugeführt.</German>
             <Polish>Nie udało się załadować naboju.</Polish>
+            <Chinesesimp>未能进食。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_FailureToFire">
             <English>Failure to fire.</English>
@@ -432,6 +452,7 @@
             <Russian>Не удалось выстрелить.</Russian>
             <German>Patrone wurde nicht gezündet!</German>
             <Polish>Nie udało się strzelić.</Polish>
+            <Chinesesimp>未能开火。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_UnjamWeapon">
             <English>Clear jam</English>
@@ -613,6 +634,7 @@
             <Russian>Охладить оружие с...</Russian>
             <German>Waffe mit... kühlen</German>
             <Polish>Schłódź broń za pomocą...</Polish>
+            <Chinesesimp>冷却武器...</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolingWeaponWithItem">
             <English>Cooling %1 with %2.</English>
@@ -621,6 +643,7 @@
             <Russian>Охлаждение %1 с %2.</Russian>
             <German>Kühle %1 mit %2.</German>
             <Polish>Chłodzenie %1 za pomocą %2.</Polish>
+            <Chinesesimp>冷却 %1 至 %2。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponWithWaterSource">
             <English>Cool weapon in water source.</English>
@@ -629,6 +652,7 @@
             <Russian>Охладить оружие в воде.</Russian>
             <German>Kühle Waffe aus Wasserquelle.</German>
             <Polish>Schłódź broń wodą.</Polish>
+            <Chinesesimp>用水源冷却武器。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolingWeaponWithWaterSource">
             <English>Cooling weapon in water source.</English>
@@ -637,6 +661,7 @@
             <Russian>Охлаждение оружия в воде.</Russian>
             <German>Waffe wird aus Wasserquelle gekühlt.</German>
             <Polish>Chłodzenie broni wodą.</Polish>
+            <Chinesesimp>在水源中冷却武器。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponNotEnoughWater">
             <English>Container doesn't have enough water.</English>
@@ -645,6 +670,7 @@
             <Russian>Воды недостаточно для охлаждения.</Russian>
             <German>Behälter beinhaltet nicht genug Wasser.</German>
             <Polish>Zbiornik nie ma wystarczającej ilości wody</Polish>
+            <Chinesesimp>容器里的水不够。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponIsCool">
             <English>Weapon is cool enough the water has stopped boiling.</English>
@@ -653,6 +679,7 @@
             <Russian>Оружие достаточно холодное для прекращения кипения воды.</Russian>
             <German>Waffe ist kalt genug, dass Wasser hat aufgehört zu kochen.</German>
             <Polish>Broń jest wystarczająco schłodzona. Woda przestała się gotować.</Polish>
+            <Chinesesimp>武器已经冷却，水已经停止沸腾了。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
