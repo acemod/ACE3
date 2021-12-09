@@ -165,6 +165,7 @@
             <Polish>Znak wodny wersji deweloperskiej</Polish>
             <Japanese>開発版ウォーターマーク</Japanese>
             <German>Wasserzeichen für Entwicklungsversion</German>
+            <Chinesesimp>开发建设水印</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -673,6 +674,7 @@
             <French>Indicateur de vitesse de déplacement</French>
             <Russian>Включить индикатор скорости передвижения</Russian>
             <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
+            <Chinesesimp>启用移动速度指示器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
@@ -681,6 +683,7 @@
             <French>Affiche un indicateur permettant de visualiser la vitesse de déplacement du personnage.</French>
             <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
             <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
+            <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
         </Key>
     </Package>
 </Project>
