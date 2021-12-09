@@ -46,6 +46,7 @@
             <Spanish>Límite de velocidad</Spanish>
             <Czech>Rychlostní omezení</Czech>
             <Chinese>速限</Chinese>
+            <Chinesesimp>限速</Chinesesimp>
             <French>Vitesse limite</French>
             <Turkish>Hız Limiti</Turkish>
         </Key>
@@ -77,6 +78,7 @@
             <Spanish>Aumentar límite de velocidad</Spanish>
             <Czech>Zvyš rychlostní limit</Czech>
             <Chinese>增加速限</Chinese>
+            <Chinesesimp>提高限速</Chinesesimp>
             <French>Augmenter la vitesse limite</French>
             <Turkish>Hız Limitini Arttır</Turkish>
         </Key>
@@ -91,6 +93,7 @@
             <Spanish>Disminuir límite de velocidad</Spanish>
             <Czech>Sniž rychlostní limit</Czech>
             <Chinese>降低速限</Chinese>
+            <Chinesesimp>降低限速</Chinesesimp>
             <French>Diminuer la vitesse limite</French>
             <Turkish>Hız Limitini Azalt</Turkish>
         </Key>
@@ -103,6 +106,7 @@
             <Spanish>Desactivar apagado automático del motor</Spanish>
             <Czech>Vypni automatické vypnutí motoru</Czech>
             <Chinese>關閉引擎自動熄火</Chinese>
+            <Chinesesimp>关闭引擎自动熄火</Chinesesimp>
             <French>Désactiver l'arrêt automatique du moteur</French>
             <Polish>Wyłącz automatyczne wyłączanie silnika</Polish>
             <Italian>Disattivare lo spegnimento automatico del motore</Italian>
@@ -117,6 +121,7 @@
             <Spanish>Desactivar el apagado automático del motor al salir de los vehículos.</Spanish>
             <Czech>Zabraň automatickému vypnutí motoru při opuštění vozidla.</Czech>
             <Chinese>避免離開載具時自動熄火。</Chinese>
+            <Chinesesimp>避免离开载具时自动熄火。</Chinesesimp>
             <Italian>Impedire lo spegnimento automatico del motore quando si esce dai veicoli.</Italian>
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
             <Turkish>Araçtan inerken motorun otomatik kapatılmasını engelleyin.</Turkish>
@@ -131,6 +136,7 @@
             <Portuguese>Ocultar opção de Ejetar</Portuguese>
             <Spanish>Ocultar acción de expulsión</Spanish>
             <Chinese>隱藏逃脫動作</Chinese>
+            <Chinesesimp>隐藏下车选项</Chinesesimp>
             <French>Masquer l'action d'éjection</French>
             <Italian>Nascondi azione di espulsione</Italian>
             <Czech>Schovat vyskočení z vozidla</Czech>
@@ -144,6 +150,7 @@
             <Portuguese>Oculta a opção de interação para ejetar. Requer que o jogo seja reiniciado.</Portuguese>
             <Spanish>Oculta la entrada Expulsar del menú de acciones. Requiere un reinicio del juego.</Spanish>
             <Chinese>隱藏在動作選單中逃脫動作的選項。要求遊戲重新啟動。</Chinese>
+            <Chinesesimp>隐藏鼠标滚轮菜单中的下车选项。需要重新启动游戏。</Chinesesimp>
             <French>Masque l'entrée "Éjection" du menu Action. Nécessite un redémarrage du jeu.</French>
             <Italian>Nasconde la voce Espelli dal menu azione. Richiede il riavvio del gioco.</Italian>
             <Czech>Schová akci vyskošení z vozidla z akčního menu. Vyžaduje restart hry.</Czech>
@@ -157,6 +164,7 @@
             <Czech>Krokování omezovače rychlosti</Czech>
             <Russian>Шаг ограничителя скорости</Russian>
             <Spanish>Salto de limitador de vehículo</Spanish>
+            <Chinesesimp>限速器步长</Chinesesimp>
         </Key>
     </Package>
 </Project>
