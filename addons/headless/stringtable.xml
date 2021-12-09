@@ -138,6 +138,7 @@
             <German>Transferiere Ausrüstung</German>
             <Japanese>装備の移送</Japanese>
             <Chinese>裝備傳輸</Chinese>
+            <Chinesesimp>装备转移</Chinesesimp>
             <Russian>Передавать снаряжение</Russian>
             <Polish>Transfer Wyposażenia</Polish>
         </Key>
@@ -147,6 +148,7 @@
             <Japanese>装備の移送はヘッドレス クライアントへの移行後にユニットが裸で出現する問題の回避を試みます。</Japanese>
             <Russian>Передача снаряжения юнитов позволяет обходить проблему, при которой юниты оказываются без снаряжения после передачи управления Headless клиенту.</Russian>
             <Chinese>裝備傳輸用於試著暫時應付單位透過無頭客戶端傳輸時所導致裸裝之問題。</Chinese>
+            <Chinesesimp>装备转移用于试着暂时应付单位透过无头客户端传输时所导致裸装之问题。</Chinesesimp>
             <Polish>Transfer Wyposażenia jednostek usiłuje uniknąć problemu z nagimi jednostkami po transferze do Headless Clienta</Polish>
         </Key>
         <Key ID="STR_ACE_Headless_TransferLoadoutCurrent">
@@ -154,6 +156,7 @@
             <German>Derzeitige Ausrüstung</German>
             <Japanese>現在の装備</Japanese>
             <Chinese>目前裝備</Chinese>
+            <Chinesesimp>当前装备</Chinesesimp>
             <Russian>Текущее снаряжение</Russian>
             <Polish>Obecne wyposażenie</Polish>
         </Key>
@@ -162,6 +165,7 @@
             <German>Konfiguriere Ausrüstung</German>
             <Japanese>コンフィグの装備</Japanese>
             <Chinese>設置裝備</Chinese>
+            <Chinesesimp>设置装备</Chinesesimp>
             <Russian>Снаряжение из настроек</Russian>
             <Polish>Konfiguracja Wyposażenia</Polish>
         </Key>
