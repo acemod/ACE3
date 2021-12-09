@@ -15,7 +15,7 @@
     params ["_vehicle", ["_effects", []]];
 
     _effects = _effects + (_vehicle getVariable [QGVAR(effects), []]);
-    if !(_effects isEqualTo []) then {
+    if (_effects isNotEqualTo []) then {
          { deleteVehicle _x } count _effects;
     };
 }] call CBA_fnc_addEventHandler;

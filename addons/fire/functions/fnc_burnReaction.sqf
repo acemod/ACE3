@@ -18,7 +18,7 @@ params ["_unit", ["_throwWeapon", true]];
 if (
     _throwWeapon
     && {GVAR(dropWeapon) > 0}
-    && {_unit in _unit && { !(currentWeapon _unit isEqualTo "") }}
+    && {_unit in _unit && {(currentWeapon _unit) isNotEqualTo ""}}
     && {!isPlayer _unit || GVAR(dropWeapon >= 2)}
 ) then {
     [_unit] call EFUNC(hitreactions,throwWeapon);

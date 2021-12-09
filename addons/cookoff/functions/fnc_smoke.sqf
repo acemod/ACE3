@@ -31,7 +31,7 @@ private _effects = [_smokeBarrel];
 {
     private _position = [0, -2, 0];
 
-    if !(_x isEqualTo "#noselection") then {
+    if (_x isNotEqualTo "#noselection") then {
         _position = _vehicle selectionPosition _x;
     };
 
