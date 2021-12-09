@@ -8,6 +8,7 @@
             <Russian>Витой канат. ООбычно используется для спуска или буксирования.</Russian>
             <German>Ein verdrehtes Geflecht aus Fasern. Wird normalerweise zum Abseilen oder Abschleppen verwendet.</German>
             <Polish>Lina skręcona z włókien. Zwykle używana do zjazdów lub holowania.</Polish>
+            <Chinesesimp>编织绳。通常用于索降和牵引拖曳。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_3_Display">
             <English>Rope 3.2 meters</English>
@@ -21,6 +22,7 @@
             <Turkish>3.2 metre halat</Turkish>
             <Spanish>Cuerda de 3.2 metros</Spanish>
             <Japanese>ロープ (3.2 メートル)</Japanese>
+            <Chinesesimp>绳索（3.2米）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_6_Display">
             <English>Rope 6.2 meters</English>
@@ -34,6 +36,7 @@
             <Turkish>6.2 metre halat</Turkish>
             <Spanish>Cuerda de 6.2 metros</Spanish>
             <Japanese>ロープ (6.2 メートル)</Japanese>
+            <Chinesesimp>绳索（6.2米）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_12_Display">
             <English>Rope 12.2 meters</English>
@@ -44,6 +47,7 @@
             <Russian>Канат 12.2 метров</Russian>
             <Portuguese>Corda (12.2m)</Portuguese>
             <Chinese>繩索（12.2公尺長）</Chinese>
+            <Chinesesimp>绳索（12.2米）</Chinesesimp>
             <Italian>Corda da 12.2 metri</Italian>
             <Czech>Lano 12.2 metrů</Czech>
             <Turkish>12.2 metre halat</Turkish>
@@ -58,6 +62,7 @@
             <Russian>Канат 15.2 метров</Russian>
             <Portuguese>Corda (15.2m)</Portuguese>
             <Chinese>繩索（15.2公尺長）</Chinese>
+            <Chinesesimp>绳索（15.2米）</Chinesesimp>
             <Italian>Corda da 15.2 metri</Italian>
             <Czech>Lano 15.2 metrů</Czech>
             <Turkish>15.2 metre halat</Turkish>
@@ -72,6 +77,7 @@
             <Russian>Канат 18.3 метров</Russian>
             <Portuguese>Corda (18.3m)</Portuguese>
             <Chinese>繩索（18.3公尺長）</Chinese>
+            <Chinesesimp>绳索（18.3米）</Chinesesimp>
             <Italian>Corda da 18.3 metri</Italian>
             <Czech>Lano 18.3 metrů</Czech>
             <Turkish>18.3 metre halat</Turkish>
@@ -86,6 +92,7 @@
             <Russian>Канат 27.4 метров</Russian>
             <Portuguese>Corda (27.4m)</Portuguese>
             <Chinese>繩索（27.4公尺長）</Chinese>
+            <Chinesesimp>绳索（27.4米）</Chinesesimp>
             <Italian>Corda da 27.4 metri</Italian>
             <Czech>Lano 27.4 metrů</Czech>
             <Turkish>27.4 metre halat</Turkish>
@@ -100,6 +107,7 @@
             <Russian>Канат 36.6 метров</Russian>
             <Portuguese>Corda (36.6m)</Portuguese>
             <Chinese>繩索（36.6公尺長）</Chinese>
+            <Chinesesimp>绳索（36.6米）</Chinesesimp>
             <Italian>Corda da 36.6 metri</Italian>
             <Czech>Lano 36.6 metrů</Czech>
             <Turkish>36.6 metre halat</Turkish>
