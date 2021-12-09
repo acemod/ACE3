@@ -510,6 +510,7 @@
             <Portuguese>MicroDAGR - Precisão de Waypoint</Portuguese>
             <French>Précision des points de passage</French>
             <Chinese>微型軍用GPS接收器 - 導航精確度</Chinese>
+            <Chinesesimp>微型军用GPS接收器 - 航点精度</Chinesesimp>
             <Czech>MicroDAGR - přesnost Waypointů</Czech>
             <Spanish>Micro DAGR - precisión del waypoint</Spanish>
         </Key>
@@ -523,6 +524,7 @@
             <Portuguese>Controla o quão preciso pode exibir o waypoint de distância</Portuguese>
             <French>Définit la précision d'affichage des points de passage.</French>
             <Chinese>控制顯示的導航點精確度為多少</Chinese>
+            <Chinesesimp>控制显示航点距离的精确程度。</Chinesesimp>
             <Czech>Nastavuje jak přesně je vzdálenost waypointů zobrazena.</Czech>
             <Spanish>Controla cómo de precisa se mostrará la distancia al waypoint</Spanish>
         </Key>
@@ -536,6 +538,7 @@
             <Portuguese>100m</Portuguese>
             <French>100 m</French>
             <Chinese>一百公尺</Chinese>
+            <Chinesesimp>100米</Chinesesimp>
             <Czech>100 m</Czech>
             <Turkish>100m</Turkish>
             <Spanish>100m</Spanish>
@@ -550,6 +553,7 @@
             <Portuguese>10m</Portuguese>
             <French>10 m</French>
             <Chinese>十公尺</Chinese>
+            <Chinesesimp>10米</Chinesesimp>
             <Czech>10 m</Czech>
             <Turkish>10m</Turkish>
             <Spanish>10m</Spanish>
@@ -564,6 +568,7 @@
             <Portuguese>1m</Portuguese>
             <French>1 m</French>
             <Chinese>一公尺</Chinese>
+            <Chinesesimp>1米</Chinesesimp>
             <Czech>1 m</Czech>
             <Turkish>1m</Turkish>
             <Spanish>1m</Spanish>
@@ -592,6 +597,7 @@
             <Japanese>MicroDAGR - 前のモードに</Japanese>
             <German>MicroDAGR - vorheriger Modus</German>
             <Polish>MicroDAGR - Poprzedni Tryb</Polish>
+            <Chinesesimp>微型GPS接收器 - 上一个模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_nextMode">
             <English>MicroDAGR - Next Mode</English>
@@ -601,6 +607,7 @@
             <Japanese>MicroDAGR - 次のモードに</Japanese>
             <German>MicroDAGR - nächster Modus</German>
             <Polish>MicroDAGR - Kolejny Tryb</Polish>
+            <Chinesesimp>微型GPS接收器 - 下一个模式</Chinesesimp>
         </Key>
     </Package>
 </Project>
