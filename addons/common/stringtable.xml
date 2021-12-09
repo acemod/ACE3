@@ -47,6 +47,7 @@
             <Japanese>アドバンスド</Japanese>
             <Korean>고급</Korean>
             <Chinese>進階</Chinese>
+            <Chinesesimp>进阶</Chinesesimp>
             <Turkish>Gelişmiş</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Save">
@@ -455,6 +456,7 @@
             <Japanese>通常</Japanese>
             <Korean>보통</Korean>
             <Chinese>普通</Chinese>
+            <Chinesesimp>正常</Chinesesimp>
             <Turkish>Normal</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
@@ -519,6 +521,7 @@
             <English>Check all addons, not only those of ACE.</English>
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE.</French>
             <Chinese>檢查全部的插件而非只有ACE。</Chinese>
+            <Chinesesimp>检查全部插件而非只有ACE。</Chinesesimp>
             <Czech>Zkontrolovat všechny addony a ne jenom ACE.</Czech>
             <Polish>Sprawdź wszystkie dodatki, nie tylko ACE.</Polish>
             <Japanese>ACE のみならず、全てのアドオンを検査します。</Japanese>
@@ -545,6 +548,7 @@
             <English>Define a list of regardless allowed addons.</English>
             <French>Permet de définir une liste d'addons autorisés systématiquement.</French>
             <Chinese>定義哪些插件是允許使用的。</Chinese>
+            <Chinesesimp>定义哪些插件是允许使用的。</Chinesesimp>
             <Czech>Nastavte seznam addonů, které jsou povolené.</Czech>
             <Polish>Zdefiniuj listę niezależnie od dozwolonych dodatków.</Polish>
             <Japanese>許可するアドオンを定義します。</Japanese>
@@ -691,6 +695,7 @@
             <Russian>Цвета</Russian>
             <Spanish>Colores</Spanish>
             <Japanese>色</Japanese>
+            <Chinesesimp>颜色</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingPersistentLaserName">
             <English>Persistent weapon laserpointer/flashlight</English>
@@ -768,7 +773,7 @@
             <Japanese>PBO を検査</Japanese>
             <Korean>PBO 검사</Korean>
             <Chinese>檢查PBO檔</Chinese>
-            <Chinesesimp>检查PBO档</Chinesesimp>
+            <Chinesesimp>检查PBO</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
             <English>Check addon integrity with server and do selected action if an addon is missing.</English>
@@ -1058,6 +1063,7 @@
             <Czech>Vždy</Czech>
             <Polish>Zawsze</Polish>
             <Turkish>Her Zaman</Turkish>
+            <Chinesesimp>总是</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_Anywhere">
             <English>Anywhere</English>
@@ -1073,6 +1079,7 @@
             <Japanese>どこでも</Japanese>
             <Korean>어디서나</Korean>
             <Chinese>任何地方</Chinese>
+            <Chinesesimp>任何地方</Chinesesimp>
             <Turkish>Herhangi bir yer</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Basic">
@@ -1089,6 +1096,7 @@
             <Japanese>ベーシック</Japanese>
             <Korean>기본</Korean>
             <Chinese>基礎</Chinese>
+            <Chinesesimp>基础</Chinesesimp>
             <Turkish>Basit</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Vehicle">
@@ -1105,6 +1113,7 @@
             <Japanese>医療車両のみ</Japanese>
             <Korean>의료차량</Korean>
             <Chinese>醫療載具</Chinese>
+            <Chinesesimp>医疗载具</Chinesesimp>
             <Turkish>Medikal Araçlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_Yes">
@@ -1150,6 +1159,7 @@
             <Spanish>Confirmar</Spanish>
             <French>Confirmer</French>
             <Chinese>確認</Chinese>
+            <Chinesesimp>确认</Chinesesimp>
             <Italian>Conferma</Italian>
             <Czech>Potvrdit</Czech>
             <Polish>Potwierdź</Polish>
@@ -1164,6 +1174,7 @@
             <Spanish>Nunca</Spanish>
             <French>Jamais</French>
             <Chinese>從不</Chinese>
+            <Chinesesimp>从不</Chinesesimp>
             <Italian>Mai</Italian>
             <Czech>Nikdy</Czech>
             <Polish>Nigdy</Polish>
@@ -1298,6 +1309,7 @@
         </Key>
         <Key ID="STR_ACE_Common_categoryUncategorized">
             <English>ACE Uncategorized</English>
+            <Chinesesimp>未分类的ACE </Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1403,6 +1415,7 @@
             <Japanese>けいれん回避モード</Japanese>
             <Polish>Tryb dla epileptyków</Polish>
             <French>Mode adapté à l'épilepsie</French>
+            <Chinesesimp>癫痫病友好模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
@@ -1410,6 +1423,7 @@
             <Japanese>点滅する光エフェクトを無効化し、けいれんする恐れを低下させます。</Japanese>
             <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
             <French>Désactive certains effets de lumière clignotante afin de réduire les risques de crise d'épilepsie.</French>
+            <Chinesesimp>禁用一些闪烁的灯光效果，以降低癫痫发作的风险。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_FlagBlack">
             <English>Flag (ACE - Black)</English>
@@ -1483,6 +1497,7 @@
             <English>Show the action in the self-interaction menu</English>
             <French>Affiche l'action dans le menu d'interaction personnel.</French>
             <Chinese>在自我互動選單內顯示動作</Chinese>
+            <Chinesesimp>在自我互动选单内显示动作</Chinesesimp>
             <Polish>Pokaż akcje w menu interakcji własnej</Polish>
             <Portuguese>Mostra a ação no menu de auto-interação</Portuguese>
             <Japanese>セルフ インタラクションに動作を表示</Japanese>
@@ -1501,6 +1516,7 @@
             <Russian>Оба</Russian>
             <German>Beide</German>
             <Polish>Oba</Polish>
+            <Chinesesimp>两方</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoName">
             <English>Additional progress bar information</English>
@@ -1509,6 +1525,7 @@
             <Russian>Дополнительная информация прогресс-бара</Russian>
             <German>Zusätzliche Informationen beim Fortschrittsbalken</German>
             <Polish>Dodatkowe informacje na pasku postępu </Polish>
+            <Chinesesimp>额外的进度条信息</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
@@ -1517,6 +1534,7 @@
             <Russian>Устанавливает дополнительную информацию в прогресс-баре.</Russian>
             <German>Kontrolliert zusätzliche Informationen beim Fortschrittsbalkens</German>
             <Polish>Kontroluje dodatkowe informacje na pasku postępu.</Polish>
+            <Chinesesimp>控制进度条中显示的额外信息。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoPercentage">
             <English>Percentage</English>
@@ -1525,6 +1543,7 @@
             <Russian>Процент выполнения</Russian>
             <German>Prozent</German>
             <Polish>Procent</Polish>
+            <Chinesesimp>百分比</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoTime">
             <English>Time remaining</English>
@@ -1533,6 +1552,7 @@
             <Russian>Времени осталось</Russian>
             <German>Zeit verbleibend</German>
             <Polish>Pozostały czas</Polish>
+            <Chinesesimp>剩余时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
@@ -1573,6 +1593,7 @@
             <Russian>Оставшееся время: %1s</Russian>
             <German>Zeit übrig %1s</German>
             <Polish>Pozostały czas: %1s</Polish>
+            <Chinesesimp>剩余时间: %1秒</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_LocationsBoostTraining_DisplayName">
             <English>Locations Boost Training</English>
