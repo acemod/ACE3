@@ -173,6 +173,7 @@
             <Russian>Перепаковать загруженные магазины</Russian>
             <German>Geladene Magazine umpacken</German>
             <Polish>Przepakuj załadowane magazynki</Polish>
+            <Chinesesimp>重新整理已上膛的弹夹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
             <English>Repacking magazines, weapon unloaded</English>
@@ -181,6 +182,7 @@
             <Russian>Перепаковка магазинов, оружие разряжено</Russian>
             <German>Magazin umgepackt, Waffe entladen</German>
             <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
+            <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
         </Key>
     </Package>
 </Project>
