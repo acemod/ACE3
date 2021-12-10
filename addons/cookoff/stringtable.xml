@@ -160,6 +160,12 @@
             <Portuguese>Multiplicador para a chance de cozinhamento. Valores mais altos aumentam as chances de ocorrer.</Portuguese>
             <Czech>Multiplikátor pro pravděpodobnost vznícení munice. Vyšší hodnota znamená vyšší šanci vznícení munice.</Czech>
         </Key>
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
+            <English>Destroy Vehicles After Cook-Off</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip	">
+            <English>Vehicles will be destroyed after cooking off</English>
+        </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>
             <Japanese>誘爆火災を有効化</Japanese>

@@ -69,8 +69,8 @@ if (_smokeDelayEnabled) then {
             _vehicle setVariable [QGVAR(isCookingOff), false, true];
             [_pfh] call CBA_fnc_removePerFrameHandler;
 
-            if (_detonateAfterCookoff) then {
-                _vehicle setDamage 1;
+            if (GVAR(destroyVehicleAfterCookoff) || _detonateAfterCookoff) then {
+                _vehicle setDamage [1, _detonateAfterCookoff];
             };
         };
 
