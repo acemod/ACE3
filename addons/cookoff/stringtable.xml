@@ -163,7 +163,7 @@
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
             <English>Destroy Vehicles After Cook-Off</English>
         </Key>
-        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip	">
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
             <English>Vehicles will be destroyed after cooking off</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
