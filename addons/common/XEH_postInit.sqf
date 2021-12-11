@@ -527,4 +527,21 @@ GVAR(deviceKeyCurrentIndex) = -1;
 {false},
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
 
+
+["ACE3 Weapons", QGVAR(unloadWeapon), localize LSTRING(unloadWeapon), {
+    // Conditions:
+    if !([ACE_player, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
+
+    private _currentWeapon = currentWeapon ACE_player;
+    if !(_currentWeapon != primaryWeapon _unit && {_currentWeapon != handgunWeapon _unit} && {_currentWeapon != secondaryWeapon _unit}) exitWith {false};
+
+    private _currentMuzzle = currentMuzzle ACE_player;
+    private _currentAmmoCount = ACE_player ammo _currentMuzzle;
+    if (_currentAmmoCount < 1) exitWith {false};
+
+    // Statement:
+    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount, false] call FUNC(unloadWeaponMan);
+    true
+}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; //ALT + R Key
+
 GVAR(commonPostInited) = true;

@@ -1590,5 +1590,8 @@
             <Chinese>受所在位置影響提升醫療能力</Chinese>
             <Turkish>Konumlar Tedaviyi Hızlandırır</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_unloadWeapon">
+            <English>Unload Weapon</English>
+        </Key>
     </Package>
 </Project>
