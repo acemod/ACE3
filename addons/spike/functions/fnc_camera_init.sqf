@@ -8,7 +8,7 @@
  * 1: PFID <NUMBER>
  *
  * Return Value:
- * None
+ * The camera <OBJECT>
  *
  * Example:
  * [[], 0] call ace_missileguidance_fnc_guidancePFH;
@@ -94,8 +94,6 @@ if (_preTrack) then {
     _activeCameraNamespace setVariable [QGVAR(logic), _logic];
     _activeCameraNamespace setVariable [QGVAR(missile), objNull];
     _activeCameraNamespace setVariable [QGVAR(logicPos), _shooter worldToModelVisual _logicPosition];
-
-    [GVAR(projectileCameraHash), _shooter, _activeCameraNamespace] call CBA_fnc_hashSet;
 } else {
     private _pos = getPosASL _projectile;
 
@@ -127,10 +125,10 @@ if (_preTrack) then {
     _activeCameraNamespace setVariable [QGVAR(missile), _projectile];
     _activeCameraNamespace setVariable [QGVAR(logicPos), _projectile vectorModelToWorldVisual _logicPosition];
 
-    [GVAR(projectileCameraHash), _projectile, _activeCameraNamespace] call CBA_fnc_hashSet;
-
     if (_switchOnFire) then {
         [_activeCameraNamespace] call FUNC(camera_switchTo);
     };
 };
+
+_activeCameraNamespace
 

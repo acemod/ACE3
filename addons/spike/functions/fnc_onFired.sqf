@@ -67,19 +67,21 @@ if (!(_cameraConfig isEqualTo configNull) && { (getNumber (_cameraConfig >> "ena
     _cameraArray set [12, (getNumber (_cameraConfig >> "canStopDesignating")) == 1];
 };
 
-[_projectile, _cameraArray, _shooter, false] call FUNC(camera_init);
+private _camera = [_projectile, _cameraArray, _shooter, false] call FUNC(camera_init);
+GVAR(projectileHashMap) set [hashValue _projectile, _camera];
 [{
     params ["_args", "_pfID"];
-    _args params ["_firedEH", "_cameraArray", "_lastUpdate"];
+    _args params ["_firedEH", "_cameraArray", "_lastUpdate", "_camera", "_projectileHash"];
 
     _firedEH params ["_shooter","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
 
     if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
-        [[_projectile] call FUNC(camera_getCameraNamespaceFromProjectile)] call FUNC(camera_destroy);
+        GVAR(projectileHashMap) deleteAt _projectileHash;
+        [_camera] call FUNC(camera_destroy);
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
-    [_cameraArray, _projectile, CBA_missionTime - _lastUpdate] call FUNC(camera_update);
+    [_cameraArray, _projectile, CBA_missionTime - _lastUpdate, _camera] call FUNC(camera_update);
 
     _args set [2, CBA_missionTime];
-}, 0, [_this, _cameraArray, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_this, _cameraArray, CBA_missionTime, _camera, hashValue _projectile]] call CBA_fnc_addPerFrameHandler;

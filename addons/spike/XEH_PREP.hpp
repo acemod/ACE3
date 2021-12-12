@@ -1,7 +1,6 @@
 PREP(camera_changeZoom);
 PREP(camera_cycleViewMode);
 PREP(camera_destroy);
-PREP(camera_getCameraNamespaceFromProjectile);
 PREP(camera_handleKeyPress);
 PREP(camera_init);
 PREP(camera_preTrack);

@@ -19,6 +19,7 @@ params ["_cameraNamespace"];
 
 private _userInThisCamera = [_cameraNamespace] call FUNC(camera_userInCamera);
 private _userCamera = ACE_PLAYER getVariable [QGVAR(missileCamera), objNull];
+
 if (_userInThisCamera || { _userCamera isEqualTo _cameraNamespace }) then {
     ACE_PLAYER setVariable [QGVAR(missileCamera), objNull];
 };

@@ -23,7 +23,7 @@ _launchParams params ["", "_targetParams"];
 _targetParams params ["_target"];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
 
-private _cameraNamespace = [_projectile] call FUNC(camera_getCameraNamespaceFromProjectile);
+private _cameraNamespace = GVAR(projectileHashMap) get hashValue _projectile;
 private _seekerTargetPos = _cameraNamespace getVariable [QGVAR(seekerTargetPos), [0, 0, 0]];
 private _cameraPos = _cameraNamespace getVariable [QGVAR(cameraPos), [0, 0, 0]];
 private _logicPos = _cameraNamespace getVariable [QGVAR(logicPos), [0, 0, 0]];

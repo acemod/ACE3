@@ -21,7 +21,7 @@ if (hasInterface) then {
     }*/] call EFUNC(interact_menu,createAction);
     ["CAManBase", 1, ["ACE_SelfActions"], _switchToCameraAction, true] call EFUNC(interact_menu,addActionToClass);
     
-    GVAR(projectileCameraHash) = [[], objNull] call CBA_fnc_hashCreate;
     GVAR(activeCamera) = objNull;
+    GVAR(projectileHashMap) = createHashMap; // used in the seeker to get the namespace for the associated projectile
 };
 

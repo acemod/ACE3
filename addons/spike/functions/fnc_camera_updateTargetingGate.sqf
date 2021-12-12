@@ -48,6 +48,9 @@ if (_seekerTargetPos isEqualTo [0, 0, 0]) then {
     
     if (_reticleMovesWithTrack) then {
         _seekerPositionScreen = worldToScreen ASLtoAGL _seekerTargetPos;
+        if (_seekerPositionScreen isEqualTo []) then {
+            _seekerPositionScreen = [0, 0];
+        };
         _seekerPositionScreen set [0, _seekerPositionScreen#0 - 0.5];
         _seekerPositionScreen set [1, _seekerPositionScreen#1 - 0.5];
     };

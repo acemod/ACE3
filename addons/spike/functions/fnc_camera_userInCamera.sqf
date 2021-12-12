@@ -19,5 +19,5 @@ params [["_cameraNamespace", objNull]];
 
 if (isNil QGVAR(activeCamera)) exitWith { false };
 
-(!(GVAR(activeCamera) isEqualTo objNull)) && { (_cameraNamespace isEqualTo objNull) || (_cameraNamespace isEqualTo GVAR(activeCamera)) };
+(GVAR(activeCamera) isNotEqualTo objNull) && { (_cameraNamespace isEqualTo objNull) || (_cameraNamespace isEqualTo GVAR(activeCamera)) };
 
